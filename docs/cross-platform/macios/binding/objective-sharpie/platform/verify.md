@@ -1,0 +1,64 @@
+---
+title: Verificare gli attributi
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 107FBCEA-266B-4295-B7AA-40A881B82B7B
+ms.technology: xamarin-cross-platform
+author: asb3993
+ms.author: amburns
+ms.date: 01/15/2016
+ms.openlocfilehash: cda523cd9d762c3a3c1570e2abd0acb8a264d5dd
+ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/27/2018
+---
+# <a name="verify-attributes"></a>Verificare gli attributi
+
+
+È spesso che associazioni prodotte dall'obiettivo Sharpie verranno annotate con il `[Verify]` attributo. Questi attributi indicano che è necessario _verificare_ che Sharpie obiettivo è la cosa corretta confrontando l'associazione con la dichiarazione originale di C/Objective-C (che verrà fornita in un commento sopra la dichiarazione di associazione).
+
+Verifica è consigliata per _tutti_ associato dichiarazioni, ma è più probabile _obbligatorio_ per le dichiarazioni annotate con il `[Verify]` attributo. Infatti, in molti casi, non c'è sufficiente metadati nel codice sorgente nativo originale per dedurre come produrre più di un'associazione. Potrebbe essere necessario fare riferimento a documentazione o commenti del codice all'interno dei file di intestazione per prendere la decisione migliore di associazione.
+
+Dopo avere verificato che il binding è correggere o correzione in modo che sia corretto, _rimuovere_ il `[Verify]` attributo dell'associazione.
+
+> [!IMPORTANT]
+> `[Verify]` attributi causano intenzionalmente errori di compilazione c# in modo che è necessario verificare l'associazione. È necessario rimuovere il `[Verify]` attributo dopo avere esaminato (e possibilmente corretti) il codice.
+
+## <a name="verify-hints-reference"></a>Verificare il riferimento a hint
+
+L'argomento hint fornito all'attributo può essere incrociato a cui fa riferimento alla documentazione riportata di seguito. Documentazione per qualsiasi prodotto `[Verify]` attributi verranno forniti nella console anche dopo l'associazione è stata completata.
+
+<table>
+  <thead>
+  <tr>
+    <th>Verificare l'Hint</th>
+    <th>Descrizione</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>InferredFromPreceedingTypedef</td>
+    <td>Il nome di questa dichiarazione è stata dedotta per convenzione comune dall'immediatamente precedente <code>typedef</code> nel codice sorgente nativo originale. Verificare che il nome derivato sia corretto di questa convenzione è ambigua.</td>
+  </tr>
+  <tr>
+    <td>ConstantsInterfaceAssociation</td>
+    <td>Non è piuttosto complesso per determinare con quale interfaccia Objective-C può essere associata una dichiarazione di variabile extern. Le istanze di questi elementi vengono associate come <code>[Field]</code> proprietà in un'interfaccia parziale in un'interfaccia concreta quasi by per produrre un'API intuitiva, probabilmente eliminando 'Costanti' interfaccia completamente.</td>
+  </tr>
+  <tr>
+    <td>MethodToProperty</td>
+    <td>Un metodo Objective-C associato come una proprietà c# a causa di convenzione, ad esempio che non accettano parametri e restituisce un valore (restituito non void). Spesso i metodi come questi devono essere associati come proprietà per esporre un'API coloro, ma in alcuni casi in cui possono verificarsi falsi positivi e l'associazione deve essere effettivamente un metodo.</td>
+  </tr>
+  <tr>
+    <td>StronglyTypedNSArray</td>
+    <td>Nativo <code>NSArray*</code> associati come <code>NSObject[]</code>. È possibile digitare più fortemente matrice nell'associazione in base alle aspettative impostato tramite la documentazione dell'API (ad esempio, i commenti nel file di intestazione) o esaminando il contenuto della matrice tramite il test. Ad esempio, un NSArray * contenente solo NSNumber * instancescan associati come <code>NSNumber[]</code> anziché <code>NSObject[]</code>.</td>
+  </tr>
+  </tbody>
+</table>
+
+È possibile ricevere rapidamente la documentazione per l'utilizzo di hint di `sharpie verify-docs` strumento, ad esempio:
+
+```csharp
+sharpie verify-docs InferredFromPreceedingTypedef
+```
+
