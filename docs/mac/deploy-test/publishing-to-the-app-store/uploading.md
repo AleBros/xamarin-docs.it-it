@@ -1,0 +1,106 @@
+---
+title: Caricamento in Mac App Store
+description: Questa guida descrive come caricare un'app Xamarin.Mac per la pubblicazione in Mac App Store.
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 30cd0e47-1b2e-47ef-93f6-4bed20b15c03
+ms.technology: xamarin-mac
+author: bradumbaugh
+ms.author: brumbaug
+ms.date: 03/14/2017
+ms.openlocfilehash: 533031016af68b1eb95a198e28ac40f445ff1579
+ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/28/2018
+---
+# <a name="upload-to-mac-app-store"></a>Caricamento in Mac App Store
+
+_Questa guida descrive come caricare un'app Xamarin.Mac per la pubblicazione in Mac App Store._
+
+Le applicazioni vengono inviate per l'approvazione in Mac App Store tramite [iTunes Connect](http://itunesconnect.apple.com/).
+
+1. Scegliere un'**app macOS** da creare: 
+
+    [ ![](uploading-images/image65.png "iTunes Connect")](uploading-images/image65.png)
+
+2. Immettere il nome dell'applicazione e altri dettagli. Lo sviluppatore può scegliere solo da un **Bundle ID** (ID bundle) esistente creato in precedenza: 
+
+    [ ![](uploading-images/image66.png "Selezione dell'ID bundle")](uploading-images/image66.png)
+
+3. Selezionare la data di disponibilità e il prezzo. Indipendentemente dalla data di disponibilità selezionata dallo sviluppatore, l'app sarà disponibile per la vendita solo dopo l'approvazione. Se lo sviluppatore desidera maggiore controllo sulla data di disponibilità effettiva, è possibile impostare questo valore su una data futura: 
+
+    [ ![](uploading-images/image67.png "Impostazione della data di disponibilità e del prezzo")](uploading-images/image67.png)
+
+4. Immettere le informazioni relative all'app, inclusa la categoria a cui appartiene nell'App Store: 
+
+    [ ![](uploading-images/image68.png "Immissione delle informazioni relative all'app")](uploading-images/image68.png) 
+
+    Selezionare le classificazioni applicabili: 
+
+    [ ![](uploading-images/image69.png "Impostazione delle classificazioni dell'app")](uploading-images/image69.png) 
+
+    Descrizione, parole chiave e URL di contatto: 
+
+    [ ![](uploading-images/image70.png "Modifica di descrizione, parole chiave e URL di contatto")](uploading-images/image70.png) 
+
+    Informazioni di contatto e consigli per i revisori dell'App Store: 
+
+    [ ![](uploading-images/image71.png "Modifica delle informazioni di contatto e consigli per i revisori dell'App Store")](uploading-images/image71.png) 
+
+    E infine gli screenshot: 
+
+    [ ![](uploading-images/image72.png "Aggiunta degli screenshot necessari")](uploading-images/image72.png) 
+
+    Gli screenshot devono essere in formato JPG, TIF o PNG con dimensioni di 1280x800, 1440x900, 2880x1800 o 2560x1600 pixel. Premere **Save** (Salva) per completare la procedura.
+
+5. Le informazioni relative all'app vengono presentate per la revisione. Fare clic su **View Details** (Visualizza dettagli) per modificare lo stato: 
+
+    [ ![](uploading-images/image73.png "Visualizzazione dei dettagli dell'app")](uploading-images/image73.png)
+
+6. Nella visualizzazione dei dettagli, fare clic su Ready to Upload Binary (Pronto per caricare il file binario) per inviare il file del pacchetto dell'applicazione: 
+
+    [ ![](uploading-images/image74.png "Selezione di Ready to Upload Binary (Pronto per caricare il file binario)")](uploading-images/image74.png)
+
+7. Rispondere alla domanda sulla crittografia: 
+
+    [ ![](uploading-images/image75.png "Risposta alla domanda sulla crittografia")](uploading-images/image75.png)
+
+8. Quando il sito è pronto ad accettare il file del pacchetto dell'applicazione viene visualizzato un avviso: 
+
+    [ ![](uploading-images/image76.png "Notifica di accettazione")](uploading-images/image76.png)
+
+9. Avviare Application Loader e verificare di aver eseguito l'accesso con l'ID Apple.
+Scegliere **Deliver Your App** (Invia l'app) per continuare: 
+
+    [ ![](uploading-images/image77.png "Interfaccia di Application Loader")](uploading-images/image77.png)
+
+10. Selezionare l'applicazione dall'elenco delle applicazioni il cui stato è **Ready to Upload Binary** (Pronto per caricare il file binario) e fare clic su **Next** (Avanti): 
+
+    [ ![](uploading-images/image78.png "Selezione dell'app da caricare")](uploading-images/image78.png)
+
+11. Esaminare i metadati dell'applicazione e fare clic su **Choose...**  (Scegli...) per individuare il file del pacchetto: 
+
+    [ ![](uploading-images/image79.png "Revisione dei metadati dell'app")](uploading-images/image79.png)
+
+12. Individuare il file del pacchetto creato in Visual Studio per Mac usando la configurazione della build dell'App Store: 
+
+    [ ![](uploading-images/image80.png "Selezione del file da caricare")](uploading-images/image80.png)
+
+13. Fare clic su **Send** (Invia): 
+
+    [ ![](uploading-images/image81.png "Invio dell'app")](uploading-images/image81.png)
+
+14. Il pacchetto verrà convalidato ed eventuali errori verranno segnalati. Correggere gli errori e ricaricare il pacchetto. Al termine del caricamento, l'app verrà automaticamente inviata per la revisione da parte del team dell'App Store: 
+
+    [ ![](uploading-images/image82.png "Esempio di errori di caricamento")](uploading-images/image82.png)
+
+Dopo l'approvazione, l'applicazione sarà disponibile per il download o l'acquisto da Mac App Store.
+
+## <a name="related-links"></a>Collegamenti correlati
+
+- [Installazione](~//mac/get-started/installation.md)
+- [Esempio Hello, Mac](~//mac/get-started/hello-mac.md)
+- [Distribuire le app in Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
+- [Guida degli strumenti: firma del codice dell'app](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
+- [ID sviluppatore e GateKeeper](https://developer.apple.com/resources/developer-id/)
