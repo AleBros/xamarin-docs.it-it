@@ -10,7 +10,7 @@ ms.author: dabritch
 ms.date: 01/12/2016
 ms.openlocfilehash: ecea0f55360fcde7a50c52bb33c45a2c5fff5eeb
 ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/28/2018
 ---
@@ -22,7 +22,7 @@ _Layout di xamarin. Forms vengono utilizzati per creare i controlli dell'interfa
 
 ## <a name="layouts"></a>Layout
 
-Il [ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout) classe in xamarin. Forms è un sottotipo di visualizzazione, che funge da contenitore per altri layout o visualizzazioni specializzato. In genere contiene la logica necessaria per impostare la posizione e le dimensioni degli elementi figlio nelle applicazioni di xamarin. Forms.
+Il [`Layout`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout) classe in xamarin. Forms è un sottotipo di visualizzazione, che funge da contenitore per altri layout o visualizzazioni specializzato. In genere contiene la logica necessaria per impostare la posizione e le dimensioni degli elementi figlio nelle applicazioni di xamarin. Forms.
 
  [ ![](layouts-images/layouts-sml.png "Tipi di Layout di xamarin. Forms")](layouts-images/layouts.png "tipi di Layout di xamarin. Forms")
 
