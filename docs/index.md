@@ -112,7 +112,7 @@ ms.lasthandoff: 02/27/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Nozioni di base sulle applicazioni</h3>
+                                                    <h3>Nozioni fondamentali sulle applicazioni</h3>
                                                     <p>Informazioni sui concetti di base della scrittura di codice condivisibile per attività di base come gestione dei file, immagini e così via.</p>
                                                 </div>
                                             </div>
@@ -231,7 +231,7 @@ ms.lasthandoff: 02/27/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Nozioni di base sulle applicazioni</h3>
+                                                    <h3>Nozioni fondamentali sulle applicazioni</h3>
                                                     <p>Tutto quello che serve sapere per creare app, come l'utilizzo di file, immagini, database e altri elementi.</p>
                                                 </div>
                                             </div>
@@ -407,7 +407,7 @@ ms.lasthandoff: 02/27/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Nozioni di base sulle applicazioni</h3>
+                                                    <h3>Nozioni fondamentali sulle applicazioni</h3>
                                                     <p>Tutto quello che serve sapere per creare app, come l'utilizzo di file, immagini, database e altri elementi.</p>
                                                 </div>
                                             </div>
@@ -602,7 +602,7 @@ ms.lasthandoff: 02/27/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Nozioni di base sulle applicazioni</h3>
+                                                    <h3>Nozioni fondamentali sulle applicazioni</h3>
                                                     <p>Tutto quello che serve sapere per creare app, come l'utilizzo di file, immagini, database e altri elementi.</p>
                                                 </div>
                                             </div>
@@ -740,7 +740,7 @@ ms.lasthandoff: 02/27/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Nozioni di base sulle applicazioni</h3>
+                                                    <h3>Nozioni fondamentali sulle applicazioni</h3>
                                                     <p>Tutto quello che serve sapere per creare app, come l'utilizzo di file, immagini, database e altri elementi.</p>
                                                 </div>
                                             </div>
