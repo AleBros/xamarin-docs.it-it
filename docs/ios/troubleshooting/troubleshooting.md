@@ -9,7 +9,7 @@ ms.author: brumbaug
 ms.date: 05/22/0201
 ms.openlocfilehash: d9859f4e705f74e490b50443870f71f049adeaf8
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/27/2018
 ---
@@ -207,7 +207,7 @@ Questo problema è molto rari ed estremamente difficili da riprodurre: in genere
 
 
 
-Allegare i registri XS, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}. log**, e * *. log componenti-{TIMESTAMP} * * (nelle versioni precedenti di XS / MonoDevelop, appena inviato **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**).
+Allegare i registri XS, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}. log**, e **. log componenti-{TIMESTAMP}** (nelle versioni precedenti di XS / MonoDevelop, appena inviato **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**).
 
  **Nota: Il problema sopra indicato è stato corretto in XS 2.2 finale**
 
