@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 3990b226b74c17fb5cccc907dd50b46578c3ef6b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d8f805d8a3fcadd9c2a6758f1dc5592c03fe3ed4
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Creazione di un progetto UWP MonoGame
 
@@ -45,15 +45,11 @@ Una volta tutte le risorse necessarie sono state installate e la modalità svilu
 1. Selezionare **File** > **nuova** > **progetto...**
 1. Selezionare il **installato** > **modelli** > **Visual c#** > **MonoGame** categoria: 
 
-
     ![](uwp-images/image1.png "Categoria MonoGame")
-
 
 1. Selezionare il **MonoGame Windows 10 Universal progetto** opzione: 
 
-
     ![](uwp-images/image2.png "Selezionare l'opzione MonoGame Windows 10 Universal progetto")
-
 
 1. Immettere un nome per il nuovo progetto e fare clic su **OK**.
 Se Visual Studio vengono visualizzati eventuali errori fare clic su OK, verificare che siano installati gli strumenti di Windows 10 e che il dispositivo è in modalità sviluppatore. 
