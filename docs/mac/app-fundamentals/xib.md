@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ms.openlocfilehash: 8ca187b86126c9a0f2d9931f63d75e99ac4d2b23
 ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/28/2018
 ---
@@ -136,7 +136,7 @@ Per passare a usando un .xib basata su interfaccia utente, effettuare le operazi
     [![Connette il delegato App](xib-images/setup08.png "connessione delegato App")](xib-images/setup08-large.png)
 16. Salvare le modifiche e tornare a Visual Studio per Mac.
 
-Con tutte queste modifiche sul posto, modificare il **appdelegate. cs** file e renderlo simile al seguente:
+Con tutte queste modifiche sul posto, modificare il **AppDelegate.cs** file e renderlo simile al seguente:
 
 ```csharp
 using AppKit;
@@ -453,7 +453,7 @@ Per aggiungere una nuova finestra, eseguire le operazioni seguenti:
     [![Progettare il layout di windows](xib-images/new03.png "progettare il layout di windows")](xib-images/new03-large.png)
 6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
-Aggiungere il seguente codice al **appdelegate. cs** per visualizzare la nuova finestra:
+Aggiungere il seguente codice al **AppDelegate.cs** per visualizzare la nuova finestra:
 
 ```csharp
 [Export("applicationPreferences:")]
