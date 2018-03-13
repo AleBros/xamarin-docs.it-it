@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: eb7189226e4f5d7eb2b55bf61728e65db44ba57b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 737c55aea087094ceb5e6070261d0a3d724e8a01
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-xaml-markup-extensions"></a>Creazione di estensioni di Markup XAML
 
@@ -117,7 +117,7 @@ Il **HSL colore Demo** pagina mostra vari modi `HslColorExtension` possono esser
 
 Si noti che quando `HslColorExtension` è un tag XML, le quattro proprietà vengono impostate come attributi, ma quando viene visualizzato tra parentesi graffe, le quattro proprietà sono separate da virgole senza virgolette. I valori predefiniti di `H`, `S`, e `L` sono 0 e il valore predefinito di `A` è 1, pertanto tali proprietà possono essere omesso se si desidera impostare valori predefiniti. Nell'ultimo esempio viene illustrato un esempio in cui la luminosità è 0, che comporta normalmente in nero, ma il canale alfa è 0,5, tale metà trasparente e viene visualizzato grigio contro lo sfondo della pagina:
 
-[![Demo di colore HSL](creating-images/hslcolordemo-small.png "HSL colore Demo")](creating-images/hslcolordemo-large.png "HSL colore Demo")
+[![Demo di colore HSL](creating-images/hslcolordemo-small.png "HSL colore Demo")](creating-images/hslcolordemo-large.png#lightbox "HSL colore Demo")
 
 ## <a name="a-markup-extension-for-accessing-bitmaps"></a>Un'estensione di Markup per l'accesso di bitmap
 
@@ -180,7 +180,7 @@ Sebbene `ImageResourceExtension` richiede il `Source` proprietà viene impostata
 
 Di seguito è riportato il programma in esecuzione in tutti e tre le piattaforme:
 
-[![Demo di risorsa immagine](creating-images/imageresourcedemo-small.png "immagine risorsa Demo")](creating-images/imageresourcedemo-large.png "immagine Demo di risorse")
+[![Demo di risorsa immagine](creating-images/imageresourcedemo-small.png "immagine risorsa Demo")](creating-images/imageresourcedemo-large.png#lightbox "immagine Demo di risorse")
 
 ## <a name="service-providers"></a>Provider di servizi
 

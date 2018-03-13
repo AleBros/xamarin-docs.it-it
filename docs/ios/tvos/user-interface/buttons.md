@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/07/2017
-ms.openlocfilehash: 05a162dab3b427ec345f22818b6c6d9df82c498b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4b2a470d7fe2a1f9d4b8df40836c934547adf614
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-buttons"></a>Utilizzo di pulsanti
 
@@ -21,7 +21,7 @@ _Questo articolo descrive la progettazione e l'utilizzo di pulsanti all'interno 
 
 Utilizzare un'istanza di `UIButton` classe per creare un pulsante con stato attivabile, selezionabile in una finestra tvOS. Quando l'utente seleziona un pulsante, invia un messaggio di azione per l'oggetto di destinazione consentono la risposta di app Xamarin.tvOS all'utente di input.
 
-[ ![](buttons-images/buttons01.png "Pulsanti di esempio")](buttons-images/buttons01.png)
+[![](buttons-images/buttons01.png "Pulsanti di esempio")](buttons-images/buttons01.png#lightbox)
 
 Per ulteriori informazioni sull'uso dello stato attivo e spostarsi con Siri remoto, vedere il nostro [utilizzo di navigazione e lo stato attivo](~/ios/tvos/app-fundamentals/navigation-focus.md) e [Siri remoto e i controller Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) documentazione.
 
@@ -31,7 +31,7 @@ Per ulteriori informazioni sull'uso dello stato attivo e spostarsi con Siri remo
 
 In tvOS, i pulsanti vengono utilizzati per azioni specifiche dell'applicazione e possono contenere un titolo, un'icona o entrambi. Mentre l'utente passa tramite interfaccia utente dell'applicazione di [Siri remoto](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote), lo stato attivo passa al pulsante specificato, rendendolo di modificare i colori di sfondo e di testo. Un'ombreggiatura viene applicata anche al pulsante di aggiunta di un effetto 3D, facendola apparire a salire sopra il resto dell'interfaccia utente.
 
-[ ![](buttons-images/buttons01.png "Pulsanti di esempio")](buttons-images/buttons01.png)
+[![](buttons-images/buttons01.png "Pulsanti di esempio")](buttons-images/buttons01.png#lightbox)
 
 Apple ha i seguenti suggerimenti per l'utilizzo di pulsanti:
 
@@ -70,19 +70,19 @@ Il modo più semplice per utilizzare i pulsanti in un'app Xamarin.tvOS è per ag
 1. Nel **Esplora**, fare doppio clic su di `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **pulsante** dal **libreria** e rilasciarla sulla vista: 
 
-    [ ![](buttons-images/storyboard01.png "Un pulsante")](buttons-images/storyboard01.png)
+    [![](buttons-images/storyboard01.png "Un pulsante")](buttons-images/storyboard01.png#lightbox)
 1. Nel **Esplora proprietà**, è possibile modificare diverse proprietà del pulsante, ad esempio il **titolo** e **colore del testo**: 
 
-    [ ![](buttons-images/storyboard02.png "Proprietà dei pulsanti")](buttons-images/storyboard02.png)
+    [![](buttons-images/storyboard02.png "Proprietà dei pulsanti")](buttons-images/storyboard02.png#lightbox)
 1. Successivamente, passare al **scheda eventi** associazione e un **evento** dal **pulsante** e chiamarlo `ButtonPressed`: 
 
-    [ ![](buttons-images/storyboard03.png "Nella scheda eventi")](buttons-images/storyboard03.png)
+    [![](buttons-images/storyboard03.png "Nella scheda eventi")](buttons-images/storyboard03.png#lightbox)
 1. Passa automaticamente al `ViewController.cs` vista in cui è possibile inserire la nuova azione nel codice utilizzando il **backup** e **verso il basso** tasti: 
 
-    [ ![](buttons-images/storyboard04.png "Inserimento di una nuova azione nel codice")](buttons-images/storyboard04.png)
+    [![](buttons-images/storyboard04.png "Inserimento di una nuova azione nel codice")](buttons-images/storyboard04.png#lightbox)
 1. Premere il **invio** per selezionare il percorso: 
 
-    [ ![](buttons-images/storyboard05.png "L'editor di codice")](buttons-images/storyboard05.png)
+    [![](buttons-images/storyboard05.png "L'editor di codice")](buttons-images/storyboard05.png#lightbox)
 1. Salvare le modifiche a tutti i file.
 
 
@@ -91,13 +91,13 @@ Il modo più semplice per utilizzare i pulsanti in un'app Xamarin.tvOS è per ag
 1. Nel **Esplora**, fare doppio clic su di `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **pulsante** dal **libreria** e rilasciarla sulla vista: 
 
-    [ ![](buttons-images/storyboard01vs.png "Un pulsante")](buttons-images/storyboard01vs.png)
+    [![](buttons-images/storyboard01vs.png "Un pulsante")](buttons-images/storyboard01vs.png#lightbox)
 1. Nel **Esplora proprietà**, è possibile modificare diverse proprietà del pulsante, ad esempio il **titolo** e **colore del testo**: 
 
-    [ ![](buttons-images/storyboard02vs.png "Esplora risorse di proprietà")](buttons-images/storyboard02vs.png)
+    [![](buttons-images/storyboard02vs.png "Esplora risorse di proprietà")](buttons-images/storyboard02vs.png#lightbox)
 1. Successivamente, passare al **scheda eventi** associazione e un **evento** dal **pulsante** e chiamarlo `ButtonPressed`: 
 
-    [ ![](buttons-images/storyboard03vs.png "Nella scheda eventi")](buttons-images/storyboard03vs.png)
+    [![](buttons-images/storyboard03vs.png "Nella scheda eventi")](buttons-images/storyboard03vs.png#lightbox)
 1. Salvare le modifiche a tutti i file.
 
 

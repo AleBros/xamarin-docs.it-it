@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: d2298cf3edcadcc8a4d781e3e121852886fbf1d2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 05443bb341b2355c9e7a72f46b70214fb169e598
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="garbage-collection"></a>Garbage Collection
 
@@ -21,7 +21,7 @@ Xamarin utilizza del Mono [semplice generazionale garbage collector](http://www.
 -   Raccolte principali (raccoglie Gen1 e oggetti di grandi dimensioni spazio heap). 
 
 > [!NOTE]
-> **Nota:** In assenza di una raccolta esplicita tramite [GC. Collect](https://developer.xamarin.com/api/member/System.GC.Collect/) le raccolte sono *su richiesta*, in base al momento le allocazioni di heap. *Non si tratta di un sistema di conteggio dei riferimenti*; oggetti *non appena non sono presenti riferimenti in sospeso non verranno raccolti*, o quando è stato terminato un ambito. Il Garbage Collector viene eseguito quando l'heap secondario ha esaurito la memoria per nuove allocazioni. Se sono non presenti allocazioni, non verrà eseguito.
+> In assenza di una raccolta esplicita tramite [GC. Collect](https://developer.xamarin.com/api/member/System.GC.Collect/) le raccolte sono *su richiesta*, in base al momento le allocazioni di heap. *Non si tratta di un sistema di conteggio dei riferimenti*; oggetti *non appena non sono presenti riferimenti in sospeso non verranno raccolti*, o quando è stato terminato un ambito. Il Garbage Collector viene eseguito quando l'heap secondario ha esaurito la memoria per nuove allocazioni. Se sono non presenti allocazioni, non verrà eseguito.
 
 
 Raccolte secondarie sono semplici e frequenti e vengono utilizzate per raccogliere gli oggetti allocati e messaggi non recapitabili di recente. Raccolte secondarie vengono eseguite dopo ogni MB alcuni degli oggetti allocati. Raccolte secondarie possono essere eseguite manualmente tramite la chiamata [GC. Raccogliere (0)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32/) 
@@ -29,7 +29,6 @@ Raccolte secondarie sono semplici e frequenti e vengono utilizzate per raccoglie
 Insiemi principali sono meno frequenti e costoso e vengono utilizzati per recuperare tutti gli oggetti inutilizzati. Raccolte principali vengono eseguite dopo l'esaurimento di memoria per le dimensioni dell'heap corrente (prima del ridimensionamento dell'heap). Raccolte principale possono essere eseguite manualmente tramite la chiamata [GC. Raccogliere ()](https://developer.xamarin.com/api/member/System.GC.Collect/) o chiamando [GC. Raccogliere (int)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32) con l'argomento [GC. MaxGeneration](https://developer.xamarin.com/api/property/System.GC.MaxGeneration/). 
 
 
-<a name="Cross-VM_Object_Collections" />
 
 ## <a name="cross-vm-object-collections"></a>Raccolte di oggetti tra VM
 
@@ -67,7 +66,6 @@ Raccolte mono sono in cui viene eseguita fun. Gli oggetti gestiti vengono raccol
 
 Il risultato finale di tutto un'istanza di un oggetto Peer risiederanno, purché vi fa riferimento il codice gestito (ad esempio, archiviate in un `static` variabile) o a cui fa riferimento il codice Java. Inoltre, la durata del peer nativo verrà estesa oltre a ciò che accadrebbe in caso contrario in tempo reale, come peer nativo non potrà più essere ritirabile fino a quando non sia peer nativo e gestito peer ritirabile.
 
-<a name="Object_Cycles" />
 
 ## <a name="object-cycles"></a>Cicli di oggetti
 
@@ -77,7 +75,6 @@ Tutti gli oggetti che dispongono di rappresentazione in entrambe le macchine vir
 
 Per abbreviare la durata degli oggetti, [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/) deve essere richiamato. Questo manuale "interromperà" la connessione per l'oggetto tra le due macchine virtuali per liberare il riferimento globale, consentendo in tal modo gli oggetti da raccogliere più velocemente. 
 
-<a name="Automatic_Collections" />
 
 ## <a name="automatic-collections"></a>Raccolte automatico
 
@@ -135,7 +132,6 @@ L'impostazione predefinita è **Tarjan**. Se si rileva una regressione, potrebbe
 Esistono più modi per consentire il Garbage Collector per ridurre i tempi di utilizzo e raccolta di memoria.
 
 
-<a name="Disposing_of_Peer_instances" />
 
 ### <a name="disposing-of-peer-instances"></a>Eliminazione di istanze di Peer
 
@@ -148,7 +144,7 @@ Ad esempio, un'istanza di un [lang](https://developer.xamarin.com/api/type/Java.
 
 
 > [!NOTE]
-> **Nota:** è necessario essere *estremamente* attenzione durante l'eliminazione di `Java.Lang.Object` istanze sottoclasse.
+> È necessario essere *estremamente* attenzione durante l'eliminazione di `Java.Lang.Object` istanze sottoclasse.
 
 Per ridurre al minimo la possibilità di danneggiamento della memoria, osservare le linee guida seguenti quando si chiama `Dispose()`.
 
@@ -243,7 +239,6 @@ class MyClass : Java.Lang.Object, ISomeInterface
 }
 ```
 
-<a name="Reduce_Referenced_Instances" />
 
 ### <a name="reduce-referenced-instances"></a>Ridurre le istanze di cui si fa riferimento
 
@@ -316,7 +311,6 @@ class BetterActivity : Activity {
 }
 ```
 
-<a name="Minor_Collections" />
 
 ## <a name="minor-collections"></a>Raccolte secondarie
 
@@ -329,7 +323,6 @@ Se l'applicazione dispone di un "ciclo di servizio" in cui la stessa operazione 
 -  Un gruppo di richieste di rete per l'aggiornamento e sincronizzazione dati delle app.
 
 
-<a name="Major_Collections" />
 
 ## <a name="major-collections"></a>Raccolte principali
 
@@ -344,14 +337,12 @@ Raccolte principali devono solo essere richiamate manualmente, mai:
 -   All'interno di un override [Android.App.Activity.OnLowMemory()](https://developer.xamarin.com/api/member/Android.App.Activity.OnLowMemory/) metodo. 
 
 
-<a name="Diagnostics" />
 
 ## <a name="diagnostics"></a>Diagnostica
 
 Per visualizzare i riferimenti globali vengono creati ed eliminati, è possibile impostare il [debug.mono.log](~/android/troubleshooting/index.md) proprietà di sistema per contenere [ *gref* ](~/android/troubleshooting/index.md) e/o [ *gc*](~/android/troubleshooting/index.md). 
 
 
-<a name="Configuration" />
 
 ## <a name="configuration"></a>Configurazione
 

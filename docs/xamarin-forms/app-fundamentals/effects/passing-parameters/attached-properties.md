@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: df1287d2389d7645ee3f17b166af790f79aa70e1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 585d0422b4dc2b35fc8ba50ed82d2d34e53a784e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passaggio di parametri effetto come proprietà associate
 
@@ -29,7 +29,7 @@ Il processo di creazione dei parametri di effetto che rispondono alle modifiche 
 Parametri possono essere passati all'effetto aggiungendo le proprietà associate e i valori delle proprietà per il controllo appropriato. Inoltre, i parametri possono essere modificati in fase di esecuzione specificando un nuovo valore della proprietà associata.
 
 > [!NOTE]
-> **Nota**: una proprietà associata è un tipo speciale di proprietà associabile, definito in una classe ma collegato ad altri oggetti e che sia riconoscibile in XAML come attributi che contengono una classe e un nome di proprietà separati da un punto. Per ulteriori informazioni, vedere [collegato proprietà](~/xamarin-forms/xaml/attached-properties.md).
+> Una proprietà associata è un tipo speciale di proprietà associabile, definito in una classe ma collegato ad altri oggetti e che sia riconoscibile in XAML come attributi che contengono una classe e un nome di proprietà separati da un punto. Per ulteriori informazioni, vedere [collegato proprietà](~/xamarin-forms/xaml/attached-properties.md).
 
 L'applicazione di esempio viene illustrato un `ShadowEffect` che aggiunge un'ombreggiatura al testo visualizzato da un [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) controllo. Inoltre, il colore dell'ombreggiatura può essere modificato in fase di esecuzione. Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, con le relazioni tra di essi:
 

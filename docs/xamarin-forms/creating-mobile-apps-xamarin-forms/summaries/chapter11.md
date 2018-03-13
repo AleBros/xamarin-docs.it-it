@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 11. L'infrastruttura associabile
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 3e3cfb55f7b96751979d14b489e892bc07817780
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6e0f1abf04695dfb5348b631a9fbdbd2c81bc431
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Riepilogo del capitolo 11. L'infrastruttura associabile
 
@@ -22,7 +23,7 @@ Xamarin. Forms definisce una definizione di proprietà avanzate chiamata un *pro
 
 Il [ **ClassHierarchy** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) esempio utilizza la reflection per visualizzare una gerarchia di classi di xamarin. Forms e dimostrare fondamentale ruolo svolto da `BindableObject` in questa gerarchia. `BindableObject` deriva da `Object` ed è la classe padre da [ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/) da cui [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/) deriva. Questa è la classe padre per [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) e [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/), che è la classe padre da [ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/):
 
-[![Schermata di triplo della gerarchia di classi di condivisione](images/ch11fg01-small.png "classe gerarchia condivisione")](images/ch11fg01-large.png "condivisione gerarchia di classe")
+[![Schermata di triplo della gerarchia di classi di condivisione](images/ch11fg01-small.png "classe gerarchia condivisione")](images/ch11fg01-large.png#lightbox "condivisione gerarchia di classe")
 
 ## <a name="a-peek-into-bindableobject-and-bindableproperty"></a>Una visualizzazione in BindableObject e BindableProperty
 

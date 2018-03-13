@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/17/2017
-ms.openlocfilehash: 0c2765551c16be605bc78d9ef32a91fd2c4ead8c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9602e4d99e8f5c004fe75ab724bb3746aca46003
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="resource-dictionaries"></a>Dizionari delle risorse
 
@@ -83,10 +83,10 @@ Ogni risorsa è una chiave specificata utilizzando il `x:Key` attributo, che for
 
 Il primo [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) istanza recupera e utilizza il `LabelPageHeadingStyle` risorse definite nel livello di applicazione [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), con il secondo `Label` istanza il recupero e l'utilizzo di `LabelNormalStyle` risorse definite nel livello di controllo `ResourceDictionary`. Analogamente, il [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) istanza recupera e utilizza il `NormalTextColor` risorse definite nel livello di applicazione `ResourceDictionary`e `MediumBoldText` risorse definite nel livello di controllo `ResourceDictionary`. Ciò comporta l'aspetto illustrato nelle schermate seguenti:
 
-[![](resource-dictionaries-images/screenshots-sml.png "Utilizzo risorse ResourceDictionary")](resource-dictionaries-images/screenshots.png "ResourceDictionary risorse")
+[![](resource-dictionaries-images/screenshots-sml.png "Utilizzo risorse ResourceDictionary")](resource-dictionaries-images/screenshots.png#lightbox "ResourceDictionary risorse")
 
 > [!NOTE]
-> **Nota**: le risorse specifiche di una singola pagina non devono essere incluse in un dizionario di risorse a livello di applicazione, in quanto tali risorse verranno quindi analizzate all'avvio dell'applicazione anziché quando richiesto da una pagina. Per ulteriori informazioni, vedere [ridurre le dimensioni di dizionario risorse dell'applicazione](~/xamarin-forms/deploy-test/performance.md).
+> Risorse specifiche di una singola pagina non devono essere incluso in un'applicazione livello dizionario risorse, in quanto tali risorse verranno quindi analizzate all'avvio dell'applicazione anziché quando richiesto da una pagina. Per ulteriori informazioni, vedere [ridurre le dimensioni di dizionario risorse dell'applicazione](~/xamarin-forms/deploy-test/performance.md).
 
 ## <a name="overriding-resources"></a>Si esegue l'override di risorse
 
@@ -118,7 +118,7 @@ Quando [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.F
 
 Originale `PageBackgroundColor` e `NormalTextColor` istanze, definite a livello di applicazione, vengono sostituite dal `PageBackgroundColor` e `NormalTextColor` istanze definite a livello di pagina. Di conseguenza, il colore di sfondo della pagina diventa blu, e il testo nella pagina diventa giallo, come illustrato nelle schermate seguenti:
 
-[![](resource-dictionaries-images/overridding-screenshots-sml.png "Si esegue l'override delle risorse di ResourceDictionary")](resource-dictionaries-images/overridding-screenshots.png "risorse ResourceDictionary viene sottoposto a override")
+[![](resource-dictionaries-images/overridding-screenshots-sml.png "Si esegue l'override delle risorse di ResourceDictionary")](resource-dictionaries-images/overridding-screenshots.png#lightbox "risorse ResourceDictionary viene sottoposto a override")
 
 Si noti tuttavia che la barra di sfondo del [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) è ancora giallo, perché il [ `BarBackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.NavigationPage.BarBackgroundColor/) proprietà è impostata sul valore del `PageBackgroundColor` risorsa definita nell'applicazione livello [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/).
 
@@ -175,7 +175,7 @@ Quando unite [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xam
 1. Le risorse contenute nei dizionari risorse che sono stati uniti tramite il `MergedDictionaries` insieme, nell'ordine in cui sono elencati il `MergedDictionaries` proprietà.
 
 > [!NOTE]
-> **Nota**: la ricerca di dizionari delle risorse può essere un'attività complesse se un'applicazione contiene più dizionari risorse di grandi dimensioni. Pertanto, verificare che ogni pagina in un'applicazione utilizza solo i dizionari delle risorse appropriate per la pagina, per evitare di ricerche non necessarie.
+> La ricerca di dizionari delle risorse può essere un'attività complesse se un'applicazione contiene più dizionari risorse di grandi dimensioni. Pertanto, verificare che ogni pagina in un'applicazione utilizza solo i dizionari delle risorse appropriate per la pagina, per evitare di ricerche non necessarie.
 
 ## <a name="summary"></a>Riepilogo
 

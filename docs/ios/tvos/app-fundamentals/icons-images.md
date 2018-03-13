@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 670c990fb4f2e4d2a01ada83ea98e8e589b5c473
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d1052695bb7337a18d1a2f1f7015e9079f86f6f5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-icons-and-images"></a>Utilizzo di immagini e icone
 
@@ -67,13 +67,13 @@ Per impostare l'immagine di avvio per il progetto tvOS, eseguire le operazioni s
 
 1. Nel **Esplora**, fare doppio clic su `Assets.xcassets` per aprirlo e modificarlo: 
 
-    [ ![](icons-images-images/asset01.png "Il file Assets.xcassets")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "Il file Assets.xcassets")](icons-images-images/asset01.png#lightbox)
 2. Nel **Asset Editor**, fare clic su di `LaunchImages` asset: 
 
-    [ ![](icons-images-images/asset02.png "L'asset LaunchImages")](icons-images-images/asset02.png)
+    [![](icons-images-images/asset02.png "L'asset LaunchImages")](icons-images-images/asset02.png#lightbox)
 3. Fare clic su di **1 x Apple TV** voce e selezionare l'immagine di avvio o eventualmente trascinare una nuova immagine dal file system: 
 
-    [ ![](icons-images-images/asset03.png "Selezionare un'immagine di avvio")](icons-images-images/asset03.png)
+    [![](icons-images-images/asset03.png "Selezionare un'immagine di avvio")](icons-images-images/asset03.png#lightbox)
 4. Salvare le modifiche.
 
 <a name="Layered-Images" />
@@ -84,7 +84,7 @@ Nuovo per Apple TV, immagini a più livelli di lavoro con l'effetto di parallass
 
 Immagini a più livelli contengono da due (2) a cinque (5) separare i livelli che vengono combinati per formare un'immagine completa. Fatta eccezione per il livello di sfondo, ogni livello utilizza il relativo ordine Z con trasparenza per creare un effetto ottico di profondità. Quando l'utente interagisce con un'immagine a più livelli, livelli superiori ordinati Z di ridimensionamento e sovrapposta per creare questo effetto.
 
-[ ![](icons-images-images/layered01.png "Diagramma ordinati Z immagini a più livelli")](icons-images-images/layered01.png)
+[![](icons-images-images/layered01.png "Diagramma ordinati Z immagini a più livelli")](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
 > **Nota:** immagini su più livelli sono necessari per le icone dell'app e sono facoltative per altri [elementi con stato attivabile](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (ad esempio, l'immagine di scaffale superiore). Tuttavia, Apple suggerisce l'utilizzo di immagini a più livelli per le immagini che è possono ottenere lo stato attivo nell'app.
@@ -109,7 +109,7 @@ Quando possibile, utilizzare sempre incorporati `UIKit` controlli per visualizza
 
 È importante ricordare di includere un _l'area di sicurezza_ bordo in ogni livello che costituiranno l'immagine a più livelli. Poiché i singoli livelli possono essere ridimensionati e ritagliati durante l'effetto di parallasse, il contenuto dei livelli può ritagliato se risulta troppo vicino al bordo del livello:
 
-[ ![](icons-images-images/layered02.png "bordo 35 pixel")](icons-images-images/layered02.png)
+[![](icons-images-images/layered02.png "bordo 35 pixel")](icons-images-images/layered02.png#lightbox)
 
 <a name="Creating-Layered-Images" />
 
@@ -128,7 +128,7 @@ tvOS funziona con immagini a più livelli nei formati seguenti:
 
 Apple creato il [anteprima parallasse](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) anteprima e immagini create a più livelli necessaria per le icone di App e gli elementi con stato attivabile facoltativi. L'anteprima Mostra ogni livello che costituisce l'immagine a più livelli completata:
 
-[ ![](icons-images-images/layered03.png "Il Visualizzatore di parallasse")](icons-images-images/layered03.png)
+[![](icons-images-images/layered03.png "Il Visualizzatore di parallasse")](icons-images-images/layered03.png#lightbox)
 
 Durante l'anteprima di un'immagine a più livelli, è possibile utilizzare il mouse per ruotare l'immagine e visualizzare in anteprima l'effetto di parallasse. Utilizzare il  **+**  (più) e  **-**  (pulsanti per aggiungere e rimuovere i livelli meno).
 
@@ -142,7 +142,7 @@ Per ulteriori informazioni sulla creazione e visualizzazione in anteprima le imm
 
 L'app Xamarin.tvOS richiederà non solo un'icona di App per la schermata Home Apple TV, ma anche un'icona per l'archivio di App. L'icona dell'App è il la prima modifica per rendere una grande impressione potenziali utenti e deve comunicare scopo dell'applicazione a colpo d'occhio.
 
-[ ![](icons-images-images/icon01.png "L'icona dell'App")](icons-images-images/icon01.png)
+[![](icons-images-images/icon01.png "L'icona dell'App")](icons-images-images/icon01.png#lightbox)
 
 Ogni app è necessario specificare sia una piccola e una versione ingrandita della relativa icona di App. Nella schermata Home Apple TV verrà utilizzato l'icona di piccole dimensioni quando l'app viene installata. Dall'App Store viene utilizzata la versione di grandi dimensioni. Icona di grandi dimensioni App deve simulare l'aspetto della versione dell'icona piccola.
 
@@ -202,16 +202,16 @@ Per impostare le icone dell'App necessarie per il progetto tvOS, eseguire le ope
 
 1. Nel **Esplora**, fare doppio clic su `Assets.xcassets` per aprirlo e modificarlo: 
 
-    [ ![](icons-images-images/asset01.png "Il fileg Assets.xcassets")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "Il fileg Assets.xcassets")](icons-images-images/asset01.png#lightbox)
 2. Nel **Asset Editor**, espandere il `App Icon & Top Shelf Image` asset: 
 
-    [ ![](icons-images-images/asset04.png "Espandere l'asset immagine scaffale superiore")](icons-images-images/asset04.png)
+    [![](icons-images-images/asset04.png "Espandere l'asset immagine scaffale superiore")](icons-images-images/asset04.png#lightbox)
 3. Espandere quindi la `App Icon - Small` asset: 
 
-    [ ![](icons-images-images/asset05.png "Espandere l'icona di App - asset di piccole dimensioni")](icons-images-images/asset05.png)
+    [![](icons-images-images/asset05.png "Espandere l'icona di App - asset di piccole dimensioni")](icons-images-images/asset05.png#lightbox)
 4. Espandere quindi la `Back` asset e fare clic su di `Contents` voce: 
 
-    [ ![](icons-images-images/asset06.png "Espandere quindi la risorsa Back")](icons-images-images/asset06.png)
+    [![](icons-images-images/asset06.png "Espandere quindi la risorsa Back")](icons-images-images/asset06.png#lightbox)
 5. Fare clic su di **1 x voce Apple TV** e selezionare un file di immagine.
 6. Ripetere i passaggi precedenti per il `Front` e `Middle` asset.
 7. Ripetere gli stessi passaggi per definire il `App Icon - Large` asset.
@@ -223,7 +223,7 @@ Per impostare le icone dell'App necessarie per il progetto tvOS, eseguire le ope
 
 Se l'utente ha effettuato l'app Xamarin.tvOS sulla riga superiore nella schermata Home Apple TV, un'immagine di scaffale superiore grande verrà visualizzata quando l'app viene selezionato dall'utente. Questa immagine deve evidenziare le funzionalità dell'app o forniscono collegamenti diretti al relativo contenuto.
 
-[ ![](icons-images-images/topshelf01.png "Esempio di immagine scaffale superiore")](icons-images-images/topshelf01.png)
+[![](icons-images-images/topshelf01.png "Esempio di immagine scaffale superiore")](icons-images-images/topshelf01.png#lightbox)
 
 È possibile specificare l'immagine di scaffale superiore come singolo statico `.png` o `.lsr` file (vedere [creazione di immagini a più livelli](#Creating-Layered-Images)) o può essere creato dinamicamente in fase di esecuzione come una singola riga di elementi con stato attivabile (vedere [ Contenuto dinamico scaffale superiore](#Dynamic-Top-Shelf-Content) sotto).
 
@@ -253,13 +253,13 @@ Per impostare l'immagine di scaffale superiore necessari per il progetto tvOS, e
 
 1. Nel **Esplora**, fare doppio clic su `Assets.xcassets` per aprirlo e modificarlo: 
 
-    [ ![](icons-images-images/asset01.png "Il file Assets.xcassets")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "Il file Assets.xcassets")](icons-images-images/asset01.png#lightbox)
 2. Nel **Asset Editor**, espandere il `App Icon & Top Shelf Image` asset: 
 
-    [ ![](icons-images-images/asset04.png "Espandere l'asset immagine scaffale superiore")](icons-images-images/asset04.png)
+    [![](icons-images-images/asset04.png "Espandere l'asset immagine scaffale superiore")](icons-images-images/asset04.png#lightbox)
 3. Fare clic su di `Top Shelf Image` asset: 
 
-    [ ![](icons-images-images/asset07.png "L'asset immagine scaffale superiore")](icons-images-images/asset07.png)
+    [![](icons-images-images/asset07.png "L'asset immagine scaffale superiore")](icons-images-images/asset07.png#lightbox)
 5. Fare clic su di **1 x voce Apple TV** e selezionare un file di immagine.
 6. Salvare le modifiche.
 
@@ -423,10 +423,10 @@ Seguire questa procedura:
 
 1. Nel **Esplora**, fare doppio clic su di `Info.plist` per aprirlo e modificarlo: 
 
-    [ ![](icons-images-images/info01.png "Il file Info. plist")](icons-images-images/info01.png)
+    [![](icons-images-images/info01.png "Il file Info. plist")](icons-images-images/info01.png#lightbox)
 2. Nel **Editor Info. plist**, selezionare il catalogo di asset (configurato in precedenza nel [impostando le icone dell'App](#Setting-the-App-Icons) sezione) per il **icone App**: 
 
-    [ ![](icons-images-images/info02.png "L'Editor di Info. plist")](icons-images-images/info02.png)
+    [![](icons-images-images/info02.png "L'Editor di Info. plist")](icons-images-images/info02.png#lightbox)
 3. Successivamente, selezionare il catalogo di asset (configurato in precedenza nel [l'impostazione dell'immagine di avvio](#Setting-the-Launch-Image) sezione) per il **immagini di avvio**.
 4. Salvare le modifiche.
 

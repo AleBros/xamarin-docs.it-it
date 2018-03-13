@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 53e972211ce506b6bf32ee4785c853982528d92e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e90f49ba9aa217659e20d4bef1fc826fe085fa7f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="multi-touch-finger-tracking"></a>Rilevamento di multi-Touch dito
 
@@ -192,7 +192,7 @@ public override bool OnTouchEvent(MotionEvent args)
 
 Questo tipo di elaborazione consente di [Pittura con le dita](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint) programma per tenere traccia delle dita singoli e tracciare i risultati sullo schermo:
 
-[![Schermata di esempio dall'esempio Pittura con le dita](touch-tracking-images/image01.png)](touch-tracking-images/image01.png)
+[![Schermata di esempio dall'esempio Pittura con le dita](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
 
 Abbiamo visto come è possibile tenere traccia delle singole dita sullo schermo e distinguere tra di essi.
 

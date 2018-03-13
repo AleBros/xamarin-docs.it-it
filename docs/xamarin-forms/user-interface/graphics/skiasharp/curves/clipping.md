@@ -4,14 +4,15 @@ description: Utilizzare i percorsi di grafica di ritaglio per aree specifiche e 
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: b1c5b64725a163e15f07d2aecaea4e56b7ecec2e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bb99984f93f494cfb5ad3d37ccb25f0b91d0b489
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="clipping-with-paths-and-regions"></a>Ritaglio e percorsi
 
@@ -98,7 +99,7 @@ canvas.ClipPath(keyholePath);
 
 Il `PaintSurface` gestore reimposta quindi le trasformazioni con una chiamata a `ResetMatrix` e disegna l'immagine bitmap per estendere all'altezza dello schermo. Questo codice si presuppone che la mappa di bit quadrato, ovvero questa bitmap particolare. La bitmap viene eseguito il rendering solo all'interno dell'area definita dal tracciato di ritaglio:
 
-[![](clipping-images/monkeythroughkeyhole-small.png "Schermata triplo del Monkey tramite pagina microchirurgia")](clipping-images/monkeythroughkeyhole-large.png "tripla schermata della pagina microchirurgia il Monkey")
+[![](clipping-images/monkeythroughkeyhole-small.png "Schermata triplo del Monkey tramite pagina microchirurgia")](clipping-images/monkeythroughkeyhole-large.png#lightbox "tripla schermata della pagina microchirurgia il Monkey")
 
 Tracciato di ritaglio è soggetto alle trasformazioni attivo quando il `ClipPath` metodo viene chiamato e non per le trasformazioni attiva quando un oggetto grafico (ad esempio, una bitmap) viene visualizzato. Tracciato di ritaglio è parte dello stato dell'area di disegno che viene salvato con il `Save` metodo e ripristinati con il `Restore` metodo.
 
@@ -165,7 +166,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Ciò che resta è l'intersezione di questi quattro cerchi:
 
-[![](clipping-images//fourcircleintersectclip-small.png "Schermata triplo della pagina quattro cerchio si intersecano Clip")](clipping-images/fourcircleintersectclip-large.png "tripla schermata della pagine dei quattro cerchio si intersecano Clip")
+[![](clipping-images//fourcircleintersectclip-small.png "Schermata triplo della pagina quattro cerchio si intersecano Clip")](clipping-images/fourcircleintersectclip-large.png#lightbox "tripla schermata della pagine dei quattro cerchio si intersecano Clip")
 
 Il [ `SKClipOperation` ](https://developer.xamarin.com/api/type/SkiaSharp.SKClipOperation/) enumerazione presenta solo due membri:
 
@@ -175,13 +176,13 @@ Il [ `SKClipOperation` ](https://developer.xamarin.com/api/type/SkiaSharp.SKClip
 
 Se si sostituisce le quattro `SKClipOperation.Intersect` gli argomenti di `FourCircleIntersectClipPage` classe con `SKClipOperation.Difference`, si noterà quanto segue:
 
-[![](clipping-images//fourcircledifferenceclip-small.png "Schermata triplo della pagina quattro cerchio si intersecano Clip con l'operazione di differenza")](clipping-images/fourcircledifferenceclip-large.png "tripla schermata della pagine dei quattro cerchio si intersecano Clip con l'operazione di differenza")
+[![](clipping-images//fourcircledifferenceclip-small.png "Schermata triplo della pagina quattro cerchio si intersecano Clip con l'operazione di differenza")](clipping-images/fourcircledifferenceclip-large.png#lightbox "tripla schermata della pagine dei quattro cerchio si intersecano Clip con l'operazione di differenza")
 
 Quattro cerchi sovrapposti sono state rimosse dall'area di ritaglio.
 
 Il **operazioni di ritaglio** pagina viene illustrata la differenza tra queste due operazioni con solo una coppia di cerchi. Il primo cerchio a sinistra viene aggiunto all'area di ritaglio con l'operazione di ritaglio predefinita di `Intersect`, mentre il secondo cerchio sulla destra viene aggiunto all'area di ritaglio con l'operazione di ritaglio indicata dall'etichetta di testo:
 
-[![](clipping-images//clipoperations-small.png "Schermata di triplo della pagina operazioni di ritaglio")](clipping-images/clipoperations-large.png "tripla schermata della pagina operazioni di ritaglio")
+[![](clipping-images//clipoperations-small.png "Schermata di triplo della pagina operazioni di ritaglio")](clipping-images/clipoperations-large.png#lightbox "tripla schermata della pagina operazioni di ritaglio")
 
 Il [ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs) classe definisce due `SKPaint` oggetti come campi e quindi suddivide la schermata in due aree rettangolari. Queste aree sono diverse a seconda se il telefono è in modalità verticale o orizzontale. Il `DisplayClipOp` classe visualizza il testo e le chiamate `ClipPath` con i percorsi di due cerchio per illustrare ogni operazione di ritaglio:
 
@@ -282,7 +283,7 @@ public void ClipRegion(SKRegion region, SKClipOperation operation = SKClipOperat
 
 La schermata seguente mostra in base alle operazioni sei area aree di ritaglio. Il cerchio a sinistra è l'area che il `Op` metodo viene chiamato su, e il cerchio destro è l'area passato per il `Op` metodo:
 
-[![](clipping-images//regionoperations-small.png "Schermata triplo della pagina operazioni sulle aree")](clipping-images/regionoperations-large.png "tripla schermata della pagina operazioni sulle aree")
+[![](clipping-images//regionoperations-small.png "Schermata triplo della pagina operazioni sulle aree")](clipping-images/regionoperations-large.png#lightbox "tripla schermata della pagina operazioni sulle aree")
 
 Sono tali tutte le possibilità di combinare questi due cerchi? Prendere in considerazione l'immagine risultante come una combinazione di tre componenti, che da soli è visibili nel `Difference`, `Intersect`, e `ReverseDifference` operazioni. Il numero totale di combinazioni è 2 alla potenza di 3 o otto. I due mancanti sono l'area originale (risultante dalla chiamata non `Op` affatto) e un'area vuota completamente.
 
@@ -423,7 +424,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Il `DrawRegion` chiamata riempie l'area di colore arancione, mentre il `DrawPath` chiamata tracce il percorso originale in blu per il confronto:
 
-[![](clipping-images//regionpaint-small.png "Schermata triplo della pagina di disegno area")](clipping-images/regionpaint-large.png "tripla schermata della pagina di disegno di area")
+[![](clipping-images//regionpaint-small.png "Schermata triplo della pagina di disegno area")](clipping-images/regionpaint-large.png#lightbox "tripla schermata della pagina di disegno di area")
 
 L'area è chiaramente una serie di coordinate discrete.
 
@@ -509,7 +510,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Davvero non sembra un trifoglio foglia – di quattro, ma è un'immagine che altrimenti sarebbero difficile da eseguire il rendering senza ritaglio:
 
-[![](clipping-images//fourleafclover-small.png "La schermata della pagine dei quattro – foglia trifoglio")](clipping-images/fourleafclover-large.png "tripla schermata della pagine dei quattro – foglia trifoglio")
+[![](clipping-images//fourleafclover-small.png "La schermata della pagine dei quattro – foglia trifoglio")](clipping-images/fourleafclover-large.png#lightbox "tripla schermata della pagine dei quattro – foglia trifoglio")
 
 
 ## <a name="related-links"></a>Collegamenti correlati

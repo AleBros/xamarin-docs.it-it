@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 28. Percorso e mappe
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 7361f65fecfed9d61b9df7088f9021ffa0192ad8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0968270f657d3195855a752da311b4855283e971
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Riepilogo del capitolo 28. Percorso e mappe
 
@@ -215,7 +216,7 @@ Il [ `PositionExtensions` ](https://github.com/xamarin/xamarin-forms-book-sample
 
 Viene utilizzato per il [LocalMuseumsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml) file e [LocalMuseumsPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml.cs) file code-behind per visualizzare anche la distanza di museo dalla posizione dell'utente:
 
-[![Schermata triplo della pagina musei locale](images/ch28fg28-small.png "distanza a una posizione")](images/ch28fg28-large.png "distanza a una posizione")
+[![Schermata triplo della pagina musei locale](images/ch28fg28-small.png "distanza a una posizione")](images/ch28fg28-large.png#lightbox "distanza a una posizione")
 
 Il programma viene inoltre illustrato come limitare in modo dinamico il numero di pin in base alla posizione della mappa.
 

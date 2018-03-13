@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 11a7c9dcbe9481209d2eb90ff9d981f7437a1c99
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1b970432d7cd5b6a84b8af72ab616493f3cd36a7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="limitations"></a>Limitazioni
 
@@ -19,13 +19,11 @@ Poiché le applicazioni in Android richiedono la generazione di tipi di proxy de
 
 Queste sono le limitazioni di xamarin rispetto al desktop Mono:
 
-<a name="Limited_Dynamic_Language_Support" />
 
 ## <a name="limited-dynamic-language-support"></a>Supporto limitato Dynamic Language
 
  [Android callable wrapper](~/android/platform/java-integration/android-callable-wrappers.md) sono necessari ogni volta che il runtime Android è necessario richiamare il codice gestito. Android callable wrapper vengono generati in fase di compilazione, in base alle analisi statica del linguaggio intermedio. Il risultato di questo: si *Impossibile* utilizzare linguaggi dinamici (IronPython, IronRuby, e così via) in qualsiasi scenario in cui sottoclassi di tipi Java obbligatorio (incluse le sottoclassi indiretta), poiché non è in alcun modo di estrazione di questi tipi dinamici in fase di compilazione per generare i wrapper richiamabili Android necessari.
 
-<a name="Limited_Java_Generation_Support" />
 
 ## <a name="limited-java-generation-support"></a>Supporto per la generazione di Java limitato
 
@@ -88,7 +86,6 @@ class MyIntentService : IntentService {
 }
 ```
 
-<a name="Generic_Csharp_classes" />
 
 ### <a name="generic-c-classes"></a>Classi generiche in c#
 
@@ -150,7 +147,6 @@ Classi generiche in c# sono supportate solo parzialmente. Esistono le limitazion
     }
     ```
 
-<a name="Partial_Java_Generics_Support" />
 
 ## <a name="partial-java-generics-support"></a>Supporto dei Generics Java parziale
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 12314e6ec5951a5a094ed8b0a5536b450853c5fb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4a3f8ca8f4502b9585536815aef81f66cacd214f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-tables-appearance"></a>Personalizzazione dell'aspetto di una tabella
 
@@ -29,7 +29,7 @@ Esistono quattro stili predefiniti:
 
 Questi screenshot mostrano come viene visualizzato ogni stile:
 
- [ ![](customizing-table-appearance-images/image7.png "Questi screenshot mostrano come viene visualizzato ogni stile")](customizing-table-appearance-images/image7.png)
+ [![](customizing-table-appearance-images/image7.png "Questi screenshot mostrano come viene visualizzato ogni stile")](customizing-table-appearance-images/image7.png#lightbox)
 
 L'esempio **CellDefaultTable** contiene il codice per generare queste schermate vengono visualizzate. Lo stile di cella è impostato `UITableViewCell` costruttore, analogo al seguente:
 
@@ -60,7 +60,7 @@ Le celle possono essere i seguenti Accessori aggiunti a destra della vista:
 
 Questo è l'aspetto:
 
- [ ![](customizing-table-appearance-images/image8.png "Accessori di esempio")](customizing-table-appearance-images/image8.png)
+ [![](customizing-table-appearance-images/image8.png "Accessori di esempio")](customizing-table-appearance-images/image8.png#lightbox)
 
 Per visualizzare uno di questi accessori è possibile impostare il `Accessory` proprietà il `GetCell` metodo:
 
@@ -119,7 +119,7 @@ Per modificare lo stile di visualizzazione di una tabella, che è necessario for
 
 Nell'esempio CellCustomTable viene implementato un `UITableViewCell` sottoclasse che definisce un layout personalizzato di `UILabel`s e un `UIImage` con diversi tipi di carattere e colori. Le celle risultante è simile al seguente:
 
- [ ![](customizing-table-appearance-images/image9.png "Layout di cella personalizzato")](customizing-table-appearance-images/image9.png)
+ [![](customizing-table-appearance-images/image9.png "Layout di cella personalizzato")](customizing-table-appearance-images/image9.png#lightbox)
 
 La classe di cella personalizzato è costituita da tre metodi:
 

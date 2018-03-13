@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: 053696ebf37e73e3b121e2aa52b80b7ea1b8ed64
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f870cda73625197fb15bf19be1cdabbd675124d6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Layout per le applicazioni Desktop e Tablet
 
@@ -41,7 +41,7 @@ Per fornire un'esperienza di avvio piacevole e verificare la risoluzione dello s
 Prima di iOS 9 tutte le app richiedeva l'intero schermo nel dispositivo, ma ora è possibile eseguire alcune iPad [dividere il multitasking schermata](~/ios/platform/multitasking.md).
 Ciò significa che l'app potrebbe richiedere una semplice colonna sottile lato dello schermo, 50% della larghezza della schermata o l'intero schermo.
 
-[ ![](tablet-images/ipad-sml.png "iPad esempio schermata Split")](tablet-images/ipad.png "iPad esempio schermata Split")
+[![](tablet-images/ipad-sml.png "iPad esempio schermata Split")](tablet-images/ipad.png#lightbox "iPad esempio schermata Split")
 
 Funzionalità con schermo diviso significa che è necessario progettare l'app per funzionare bene con meno di 320 pixel wide o quanto 1366 pixel di larghezza.
 
@@ -63,7 +63,7 @@ Per supportare i Tablet e computer desktop che eseguono Windows, è necessario u
 
 App in esecuzione su computer desktop e i Tablet Windows può essere ridimensionata alle dimensioni arbitrari inoltre a schermo intero in esecuzione.
 
-[ ![](tablet-images/splitscreen-sml.png "Windows dividere schermata esempio")](tablet-images/splitscreen.png "Windows dividere l'esempio di schermata")
+[![](tablet-images/splitscreen-sml.png "Windows dividere schermata esempio")](tablet-images/splitscreen.png#lightbox "Windows dividere l'esempio di schermata")
 
 
 <a name="optimize" />

@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 21. Trasformazioni
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 378ce3fb39cfb5c42d5ec7611415f5420146a9cc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: afb8e2fff58583dc8648c55839649c96cb68b6ba
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Riepilogo del capitolo 21. Trasformazioni
 
@@ -49,7 +50,7 @@ Il [ **TranslationDemo** ](https://github.com/xamarin/xamarin-forms-book-samples
 
 Un utilizzo comune di proprietà di conversione è fino all'offset leggermente il rendering del testo. Questa funzionalità viene illustrata la [ **TextOffsets** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/TextOffsets) esempio:
 
-[![Schermata di testo viene eseguito l'offset di tripla](images/ch21fg03-small.png "testo viene eseguito l'offset")](images/ch21fg03-large.png "testo viene eseguito l'offset")
+[![Schermata di testo viene eseguito l'offset di tripla](images/ch21fg03-small.png "testo viene eseguito l'offset")](images/ch21fg03-large.png#lightbox "testo viene eseguito l'offset")
 
 Un altro effetto consiste nell'eseguire il rendering di più copie di un `Label` simile a quella di un blocco 3D, come illustrato nel [ **BlockText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BlockText) esempio.
 
@@ -101,7 +102,7 @@ Il [ **MinimalBoxViewClock** ](https://github.com/xamarin/xamarin-forms-book-sam
 
 Il [ **BoxViewClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BoxViewClock) utilizza `BoxView` per più molti elementi grafici, inclusi i segni di graduazione quadrante dell'orologio tra virgolette e consegna che ruota una distanza minima da loro estremità:
 
-[![Schermata tripla dell'orologio BoxView](images/ch21fg17-small.png "quadrante dell'orologio analogico")](images/ch21fg17-large.png "quadrante dell'orologio analogico")
+[![Schermata tripla dell'orologio BoxView](images/ch21fg17-small.png "quadrante dell'orologio analogico")](images/ch21fg17-large.png#lightbox "quadrante dell'orologio analogico")
 
 Inoltre un [ `SecondBackEaseConverter` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondBackEaseConverter.cs) classe **Xamarin.FormsBook.Toolkit** fa sì che l'icona della mano secondo da visualizzare per il pull back un po' prima di passare rapidamente e quindi di tornare nella posizione corretta.
 

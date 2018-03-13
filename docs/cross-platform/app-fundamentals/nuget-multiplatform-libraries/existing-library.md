@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2017
-ms.openlocfilehash: 44a97114e7d325a1fa196d2c9828855ad1a30c94
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ef34b1be5f993a3be819cd4ae1a9dcd5dfc27715
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>Creazione di un NuGet da progetti di libreria esistente
 
@@ -21,7 +21,7 @@ Librerie PCL esistente o .NET Standard possono essere trasformate in NuGets tram
 
 2. Passare al **pacchetto NuGet > metadati** sezione e immettere tutte le [le informazioni necessarie](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) nel **generale** scheda:
 
-  [ ![](existing-library-images/existing-metadata-sml.png "Immettere i metadati necessari")](existing-library-images/existing-metadata.png)
+  [![](existing-library-images/existing-metadata-sml.png "Immettere i metadati necessari")](existing-library-images/existing-metadata.png#lightbox)
 
 3. Facoltativamente, [aggiungere metadati aggiuntivi](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) nel **dettagli** scheda.
 
@@ -31,7 +31,7 @@ Librerie PCL esistente o .NET Standard possono essere trasformate in NuGets tram
 
 5. Per creare il pacchetto NuGet in _ogni_ compilare o distribuire, visitare il **pacchetto NuGet > compilare** sezione e segni di graduazione **creare un pacchetto NuGet durante la compilazione del progetto**:
 
-    [ ![](existing-library-images/existing-tickbox-sml.png "Segno di spunta per creare un pacchetto NuGet")](existing-library-images/existing-tickbox.png)
+    [![](existing-library-images/existing-tickbox-sml.png "Segno di spunta per creare un pacchetto NuGet")](existing-library-images/existing-tickbox.png#lightbox)
 
 > [!NOTE]
 > Compilazione di NuGet pacchetto può rallentare il processo di compilazione. Se questa casella non è selezionata, è comunque possibile generare un pacchetto NuGet a manualmente in qualsiasi momento da scelta rapida del progetto (indicato nel passaggio 4 sopra).
@@ -47,4 +47,4 @@ Questa schermata è riportato il contenuto di un NuGet basata sulla libreria di 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Guida di metadati](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)
+- [Guida ai metadati](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)

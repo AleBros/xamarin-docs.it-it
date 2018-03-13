@@ -6,17 +6,13 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 165313fb0150c2d9832566d5bc32842722b0a039
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6ca5b4d70669909b952752f7d600fcac37e9f557
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>Quali opzioni di supporto sono disponibili per Xamarin?
-
-## <a name="overview"></a>Panoramica
-- [Riepilogo delle opzioni di supporto](#Summary_of_Support_Options)
-- [Indicazioni dettagliate](#Detailed_Recommendations)
 
 ## <a name="summary-of-support-options"></a>Riepilogo delle opzioni di supporto
 
@@ -46,6 +42,8 @@ Come mostrato nella figura il [pagina supporto Xamarin](https://www.xamarin.com/
 </table>
 
 Il team di supporto Xamarin consente di monitorare ognuna di queste opzioni.  Che incoraggia la collaborazione tutti gli utenti per contribuire a quesiti con attenzione e report per poter sfruttare e aumentare la community degli sviluppatori di Xamarin esperto.  Per i difetti sospette, assicurarsi di inviare segnalazioni di bug, quando possibile, per garantire che i problemi sono rilevati formalmente dal team di progettazione di Xamarin.
+
+<a name="Visual_Studio_email_support_incidents_for_Xamarin_topics"/>
 
 ### <a name="visual-studio-email-support-incidents-for-xamarin-topics"></a>Posta elettronica di Visual Studio supporta gli eventi imprevisti per gli argomenti di Xamarin
 
@@ -95,7 +93,7 @@ Xamarin è [ora una parte integrante delle sottoscrizioni di Visual Studio](http
 
 Per informazioni sulle community sui problemi noti e soluzioni alternative possibili, è possibile pubblicare una domanda nel forum di anteprima corrispondente:
 
--   [Xamarin Player in tempo reale](https://forums.xamarin.com/categories/live-player)
+-   [Xamarin Live Player](https://forums.xamarin.com/categories/live-player)
 -   Per le anteprime di associazioni SDK per le nuove versioni di Android, iOS e macOS SDK, trovare l'annuncio di versione corrispondente di anteprima nel [xamarin](http://forums.xamarin.com/categories/android), [xamarin](http://forums.xamarin.com/categories/ios), o [Xamarin.Mac ](http://forums.xamarin.com/categories/mac) forum.
 -   Per altre funzionalità di anteprima, cercare un annuncio di versione corrispondente nel [versione provvisoria & versioni Beta](http://forums.xamarin.com/categories/xamarin-prerelease) forum.  O se non è presente nessun annuncio corrispondente, è possibile generare la domanda nel proprio thread del forum.
 

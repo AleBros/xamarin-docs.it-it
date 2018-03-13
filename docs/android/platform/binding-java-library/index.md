@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: 01708f12340ec57bf1cb0e2bd076b680c99dff39
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f336767cb6aea8bd8c7ce44f6479850a63d473a6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-a-java-library"></a>Associazione di una libreria di Java
 
@@ -30,7 +30,7 @@ Questa guida viene illustrata la prima opzione: come creare un *libreria associa
 
 Xamarin implementa associazioni tramite *Callable Wrapper gestiti* (*MCW*). MCW è bridge JNI che viene utilizzato quando è necessario richiamare il codice Java codice gestito. Callable wrapper gestito fornisce anche il supporto per la creazione di sottoclassi tipi Java e per eseguire l'override di metodi virtuali su tipi Java. Allo stesso modo, ogni volta che si desidera richiamare il codice gestito codice runtime Android (ART), non tramite un altro bridge JNI noto come Android Callable Wrapper (ACW). Questo [architettura](~/android/internals/architecture.md) è illustrato nel diagramma seguente:
 
-[ ![Architettura di bridge Android JNI](images/architecture.png)](images/architecture.png)
+[![Architettura di bridge Android JNI](images/architecture.png)](images/architecture.png#lightbox)
 
 Una raccolta di associazioni è un assembly contenente Callable Wrapper gestiti per i tipi Java. Ad esempio, di seguito è un tipo Java, `MyClass`, che si desidera eseguire il wrapping in una raccolta di associazioni:
 
@@ -74,7 +74,6 @@ Quando si associa una libreria Android esistente, è necessario tenere presente 
 
 * **La versione di JDK è stata utilizzata per compilare la libreria?** &ndash; Errori di associazione possono verificarsi se la libreria Android xamarin è stata compilata con una versione diversa di JDK più in uso. Se possibile, ricompilare la libreria Android utilizzando la stessa versione di JDK che viene utilizzato per l'installazione di xamarin.
 
-<a name="BUILD_ACTIONS" />
 
 ## <a name="build-actions"></a>Azioni di compilazione
 
@@ -127,7 +126,6 @@ Il generatore di xamarin Binding verrà modificato alcune idiomi Java e i patter
 -   Un _classe interna_ in Java è un _le classi annidate_ con un costruttore di istanza in c#.
 
 
-<a name="BINDING_SCENARIOS" />
 
 ## <a name="binding-scenarios"></a>Scenari di associazione
 

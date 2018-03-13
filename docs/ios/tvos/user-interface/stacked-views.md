@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 2b16fd970e724228215fd0dd1c9022227ab84435
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c40e9291e81770435535de7b0c83d6c865cbed58
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-stacked-view"></a>Utilizzo di visualizzazione in pila
 
@@ -23,7 +23,7 @@ Controllo di visualizzazione dello Stack (`UIStackView`) si avvale di Layout aut
 
 In base alle proprietà di sviluppatore definiti, ad esempio asse, distribuzione, l'allineamento e spaziatura gestire il layout di tutti i sottoviste associata a una visualizzazione dello Stack:
 
-[ ![](stacked-views-images/stacked01.png "Diagramma del layout visualizzazione secondaria")](stacked-views-images/stacked01.png)
+[![](stacked-views-images/stacked01.png "Diagramma del layout visualizzazione secondaria")](stacked-views-images/stacked01.png#lightbox)
 
 Quando si utilizza un `UIStackView` in un'app Xamarin.tvOS, lo sviluppatore può definire sottoviste sia all'interno di uno Storyboard nella finestra di progettazione iOS o aggiungendo e rimuovendo sottoviste nel codice c#.
 
@@ -103,21 +103,21 @@ Il modo più semplice per utilizzare le visualizzazioni dello Stack in un'app Xa
 1. Nel **soluzione riempimento**, facendo doppio clic su di `Main.storyboard` e aprirlo per la modifica.
 1. Progettare il layout dei singoli elementi che si desidera aggiungere alla visualizzazione dello Stack: 
 
-    [ ![](stacked-views-images/layout01.png "Esempio di layout di elemento")](stacked-views-images/layout01.png)
+    [![](stacked-views-images/layout01.png "Esempio di layout di elemento")](stacked-views-images/layout01.png#lightbox)
 1. Aggiungere gli elementi per garantire che scalabilità correttamente tutti i vincoli necessari. Questo passaggio è importante dopo l'elemento viene aggiunto alla visualizzazione dello Stack.
 1. Verificare il numero necessario di copie (quattro in questo caso): 
 
-    [ ![](stacked-views-images/layout02.png "Il numero necessario di copie")](stacked-views-images/layout02.png)
+    [![](stacked-views-images/layout02.png "Il numero necessario di copie")](stacked-views-images/layout02.png#lightbox)
 1. Trascinare un **visualizzazione Stack** dal **della casella degli strumenti** e rilasciarla sulla vista: 
 
-    [ ![](stacked-views-images/layout03.png "Una visualizzazione dello Stack")](stacked-views-images/layout03.png)
+    [![](stacked-views-images/layout03.png "Una visualizzazione dello Stack")](stacked-views-images/layout03.png#lightbox)
 1. Selezionare la visualizzazione dello Stack, nel **scheda Widget** del **proprietà riempimento** selezionare **riempimento** per il **allineamento**, **riempimento Ugualmente** per il **distribuzione** e immettere `25` per il **spaziatura**: 
 
-    [ ![](stacked-views-images/layout04.png "La scheda Widget")](stacked-views-images/layout04.png)
+    [![](stacked-views-images/layout04.png "La scheda Widget")](stacked-views-images/layout04.png#lightbox)
 1. Posizionare la vista Stack sullo schermo in cui si desidera e aggiungere vincoli per mantenerla nella posizione desiderata.
 1. Selezionare i singoli elementi e trascinarli nella vista dello Stack: 
 
-    [ ![](stacked-views-images/layout05.png "I singoli elementi nella visualizzazione dello Stack")](stacked-views-images/layout05.png)
+    [![](stacked-views-images/layout05.png "I singoli elementi nella visualizzazione dello Stack")](stacked-views-images/layout05.png#lightbox)
 1. Il layout verrà regolato e disposti gli elementi nella visualizzazione dello Stack in base agli attributi che è impostato in precedenza.
 1. Assegnare **nomi** nel **scheda Widget** del **Esplora proprietà** per lavorare con i controlli dell'interfaccia utente in codice c#.
 1. Salvare le modifiche.
@@ -127,21 +127,21 @@ Il modo più semplice per utilizzare le visualizzazioni dello Stack in un'app Xa
 1. Nel **Esplora**, facendo doppio clic su di `Main.storyboard` e aprirlo per la modifica.
 1. Progettare il layout dei singoli elementi che si desidera aggiungere alla visualizzazione dello Stack: 
 
-    [ ![](stacked-views-images/layout01.png "Layout di elemento di esempio")](stacked-views-images/layout01.png)
+    [![](stacked-views-images/layout01.png "Layout di elemento di esempio")](stacked-views-images/layout01.png#lightbox)
 1. Aggiungere gli elementi per garantire che scalabilità correttamente tutti i vincoli necessari. Questo passaggio è importante dopo l'elemento viene aggiunto alla visualizzazione dello Stack.
 1. Verificare il numero necessario di copie (quattro in questo caso): 
 
-    [ ![](stacked-views-images/layout02.png "Il numero necessario di copie")](stacked-views-images/layout02.png)
+    [![](stacked-views-images/layout02.png "Il numero necessario di copie")](stacked-views-images/layout02.png#lightbox)
 1. Trascinare un **visualizzazione Stack** dal **della casella degli strumenti** e rilasciarla sulla vista: 
 
-    [ ![](stacked-views-images/layout03-vs.png "Una visualizzazione dello Stack")](stacked-views-images/layout03-vs.png)
+    [![](stacked-views-images/layout03-vs.png "Una visualizzazione dello Stack")](stacked-views-images/layout03-vs.png#lightbox)
 1. Selezionare la visualizzazione dello Stack, nel **scheda Widget** del **Esplora proprietà** selezionare **riempimento** per il **allineamento**, **riempimento Ugualmente** per il **distribuzione** e immettere `25` per il **spaziatura**: 
 
-    [ ![](stacked-views-images/layout04-vs.png "La scheda Widget")](stacked-views-images/layout04-vs.png)
+    [![](stacked-views-images/layout04-vs.png "La scheda Widget")](stacked-views-images/layout04-vs.png#lightbox)
 1. Posizionare la vista Stack sullo schermo in cui si desidera e aggiungere vincoli per mantenerla nella posizione desiderata.
 1. Selezionare i singoli elementi e trascinarli nella vista dello Stack: 
 
-    [ ![](stacked-views-images/layout05-vs.png "I singoli elementi nella visualizzazione dello Stack")](stacked-views-images/layout05-vs.png)
+    [![](stacked-views-images/layout05-vs.png "I singoli elementi nella visualizzazione dello Stack")](stacked-views-images/layout05-vs.png#lightbox)
 1. Il layout verrà regolato e disposti gli elementi nella visualizzazione dello Stack in base agli attributi che è impostato in precedenza.
 1. Assegnare **nomi** nel **scheda Widget** del **Esplora proprietà** per lavorare con i controlli dell'interfaccia utente in codice c#.
 1. Salvare le modifiche.
@@ -190,11 +190,11 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 
 Quando si esegue l'app, i quattro elementi verranno distribuiti equamente la visualizzazione dello Stack:
 
-[ ![](stacked-views-images/layout06.png "Quando si esegue l'app, i quattro elementi verranno distribuiti equamente la visualizzazione dello Stack")](stacked-views-images/layout06.png)
+[![](stacked-views-images/layout06.png "Quando si esegue l'app, i quattro elementi verranno distribuiti equamente la visualizzazione dello Stack")](stacked-views-images/layout06.png#lightbox)
 
 Se è diminuito il numero di lettori, le viste non utilizzate sono nascosti e la visualizzazione Stack di adattare il layout in base a:
 
-[ ![](stacked-views-images/layout07.png "Se è diminuito il numero di lettori, vengono nascoste le viste non utilizzate e la visualizzazione Stack di adattare il layout in base a")](stacked-views-images/layout07.png)
+[![](stacked-views-images/layout07.png "Se è diminuito il numero di lettori, vengono nascoste le viste non utilizzate e la visualizzazione Stack di adattare il layout in base a")](stacked-views-images/layout07.png#lightbox)
 
 <a name="Populate-a-Stack-View-from-Code" />
 

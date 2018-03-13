@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: d18cf055bb206099eecea0d9f417af571f3819e0
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 8b266640bb0e1aa2bc584197e5fd7cbf4ab48e88
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="device-orientation"></a>Orientamento del dispositivo
 
@@ -31,7 +31,7 @@ In questo articolo verrà illustrata la creazione di applicazioni che sfruttano 
 Quando si usa xamarin. Forms, il metodo supportato per il controllo dell'orientamento del dispositivo è di utilizzare le impostazioni per ogni singolo progetto.
 
 > [!NOTE]
-> **Nota**: a partire da xamarin. Forms 1.5.0 è presente un bug che impedisce tentativi di basata sul renderer personalizzati per controllare l'orientamento esito negativo. Vedere [questa discussione](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)questa discussione nei forum di Xamarin per ulteriori informazioni.
+> A partire da xamarin. Forms 1.5.0 è presente un bug che impedisce personalizzato basato su renderer tenta di controllare l'orientamento esito negativo. Vedere [questa discussione](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)questa discussione nei forum di Xamarin per ulteriori informazioni.
 
 ### <a name="ios"></a>iOS
 
@@ -123,7 +123,7 @@ Si noti che Windows Phone supporta viste orizzontale in entrambi (come illustrat
 Xamarin. Forms non offre tutti gli eventi nativi per la notifica dell'app di modifiche di orientamento in codice condiviso. Tuttavia, il `SizeChanged` evento del `Page` viene generato quando la larghezza o altezza il `Page` modifiche. Quando la larghezza del `Page` è maggiore rispetto all'altezza, il dispositivo è in modalità orizzontale. Per ulteriori informazioni, vedere [visualizzare un'immagine basata su orientamento dello schermo](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/).
 
 > [!NOTE]
-> **Nota**: è un pacchetto NuGet gratuito, esistente per la ricezione di notifiche di modifiche di orientamento nel codice condiviso. Vedere il [repository GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) per ulteriori informazioni.
+> È un pacchetto NuGet gratuito, esistente per la ricezione di notifiche di modifiche di orientamento nel codice condiviso. Vedere il [repository GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) per ulteriori informazioni.
 
 In alternativa, è possibile eseguire l'override di [ `OnSizeAllocated` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnSizeAllocated(System.Double,System.Double)/) metodo su un `Page`, l'inserimento di qualsiasi layout modifica qui la logica. Il `OnSizeAllocated` metodo viene chiamato ogni volta che un `Page` viene allocata una nuova dimensione che si verifica il dispositivo viene ruotato whenver. Si noti che l'implementazione di base di `OnSizeAllocated` esegue le funzioni di layout importante, pertanto è importante chiamare l'implementazione di base nell'override:
 
@@ -176,7 +176,7 @@ Si noti che le app sfruttano lo spazio disponibile tramite l'aggiunta di ulterio
 Le regole precedenti si applicano anche quando l'implementazione di interfacce per più dimensioni dello schermo e sono in genere considerati procedure consigliate. Il resto di questa Guida verrà descritti esempi specifici di layout reattivo utilizzando tutti i layout primari in xamarin. Forms.
 
 > [!NOTE]
-> **Nota**: per maggiore chiarezza, nelle sezioni seguenti viene illustrato come implementare layout risponde con un solo tipo di `Layout` alla volta. In pratica, è spesso più semplice combinare `Layout`s per ottenere un layout desiderato utilizzando le più semplici e più intuitiva `Layout` per ogni componente.
+> Per maggiore chiarezza, nelle sezioni seguenti viene illustrato come implementare layout risponde con un solo tipo di `Layout` alla volta. In pratica, è spesso più semplice combinare `Layout`s per ottenere un layout desiderato utilizzando le più semplici e più intuitiva `Layout` per ogni componente.
 
 ### <a name="stacklayout"></a>StackLayout
 

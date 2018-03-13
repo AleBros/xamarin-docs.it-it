@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 83ba2df0c50d37476ae5c06b4234cdc0ad063332
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 174d1cf974c39420b932d494d5b28c62d7fd1eb1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="troubleshooting"></a>Risoluzione dei problemi
 
@@ -22,7 +22,7 @@ Le operazioni di firma del codice e provisioning con iOS possono essere compless
 
 * I team di grandi dimensioni dovrebbero evitare di usare il pulsante "Fix issue" (Correggi problema), illustrato di seguito:
 
-    [![](troubleshooting-images/fixissue.png "Pulsante Fix issue (Correggi problema)")](troubleshooting-images/fixissue.png)
+    [![](troubleshooting-images/fixissue.png "Pulsante Fix issue (Correggi problema)")](troubleshooting-images/fixissue.png#lightbox)
 
     In questo modo vengono infatti creati nuovi profili di provisioning e certificati. Nella migliore delle ipotesi, viene creato un profilo di provisioning ogni volta che un membro del team fa clic sul pulsante, causando una disorganizzazione dei profili. Nella peggiore, vengono revocati i certificati per tutte le altre persone in azienda, le cui app smetteranno quindi di funzionare.
 

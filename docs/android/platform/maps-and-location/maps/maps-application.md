@@ -7,21 +7,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/05/2017
-ms.openlocfilehash: a6bfebb5272da3fd50f4f165fc25bb75574a0b63
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4bcbd14b88f19dc48dc9d0694fb30aed31708153
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="maps-application"></a>Applicazione di mappe
 
 Il modo più semplice per lavorare con le mappe di xamarin è di sfruttare l'applicazione esegue il mapping predefinito indicato di seguito:
 
-[![Schermata di esempio di app di Google mappe predefinite](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png)
+[![Schermata di esempio di app di Google mappe predefinite](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
 
 Quando si utilizza l'applicazione esegue il mapping, la mappa non farà parte dell'applicazione. Al contrario, l'applicazione verrà avviare l'applicazione esegue il mapping e caricare la mappa esternamente. La sezione successiva viene illustrato come utilizzare xamarin per avviare mappe simile a quello precedente.
 
-<a name="Creating_the_Intent" />
 
 ## <a name="creating-the-intent"></a>Lo scopo di creazione
 
@@ -35,7 +34,6 @@ StartActivity (mapIntent);
 
 Questo codice è tutto ciò che serve per avviare il mapping mostrato nella schermata precedente. Oltre a specificare latitudine e longitudine, lo schema URI per le mappe supporta numerose altre opzioni.
 
-<a name="Geo_Uri_Scheme" />
 
 ## <a name="geo-uri-scheme"></a>Schema URI geografica
 
@@ -52,10 +50,9 @@ Il codice precedente usato la combinazione di area geografica per creare un URI.
 
 Le versioni dell'URI che accettano una query (vale a dire la via indirizzo o ricerca termini) usare il servizio di geocoder Google per recuperare il percorso che viene quindi visualizzato nella mappa. Ad esempio, l'URI `geo:0,0?q=coop+Cambridge` comporta la mappa illustrata di seguito:
 
-[![Schermata di esempio che illustra il Google Maps con un termine di ricerca](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png)
+[![Schermata di esempio che illustra il Google Maps con un termine di ricerca](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
 
 
-<a name="Street_View" />
 
 Per ulteriori informazioni su schemi URI geografica, vedere [Mostra un percorso in una mappa](http://developer.android.com/guide/components/intents-common.html#Maps).
 
@@ -64,7 +61,7 @@ Per ulteriori informazioni su schemi URI geografica, vedere [Mostra un percorso 
 
 Oltre la combinazione di area geografica, Android inoltre supporta il caricamento street viste da una finalità. Seguito è riportato un esempio dell'applicazione vista street avviata da xamarin:
 
-[![Schermata di esempio di una vista via](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png)
+[![Schermata di esempio di una vista via](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png#lightbox)
 
 Per avviare una vista via, utilizzare semplicemente la `google.streetview` schema URI, come illustrato nel codice seguente:
 

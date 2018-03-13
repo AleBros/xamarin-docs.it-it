@@ -7,18 +7,17 @@ ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 91e27fcaef0ef1b262eceecd4d3c71bac34e328d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: edf25ebd089994c01b2fa45e77b35fad9a51e350
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="java-bindings-metadata"></a>Metadati di binding di linguaggio
 
 _Codice c# di xamarin chiama librerie Java le associazioni, che sono un meccanismo che estrae i dettagli di basso livello che sono specificati in JNI Java Native Interface (). Xamarin offre uno strumento che genera le associazioni. Questo strumento consente il controllo dello sviluppatore come viene creata un'associazione usando i metadati, che consente alle procedure, ad esempio spazi dei nomi di modifica e ridenominazione di membri. Questo documento illustra il funzionamento di metadati, riepiloga gli attributi dei metadati supporta e viene spiegato come risolvere i problemi di associazione modificando questi metadati._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -74,7 +73,6 @@ Il **MetaData.xml** file è più l'importazione di questi file, come le modifich
 
 Consente di spostarsi discutere **Metadata.xml** in modo più dettagliato.
 
-<a name="Metadata.xml_Transform_File" />
 
 ## <a name="metadataxml-transform-file"></a>Metadata.xml Transform File
 
@@ -114,7 +112,6 @@ Di seguito sono elencati alcuni degli elementi di XPath usati più comunemente p
 -   `parameter` &ndash; Identificare un parametro per un metodo. Ad esempio `/parameter[@name='p0']`
 
 
-<a name="ADDING_TYPES" />
 
 ### <a name="adding-types"></a>Aggiunta di tipi
 
@@ -129,7 +126,6 @@ Il `add-node` elemento indicherà il progetto di associazione di xamarin per agg
 </add-node>
 ```
 
-<a name="REMOVING_TYPES" />
 
 ### <a name="removing-types"></a>Rimozione dei tipi
 
@@ -138,8 +134,6 @@ Il `add-node` elemento indicherà il progetto di associazione di xamarin per agg
 ```xml
 <remove-node path="/api/package[@name='{package_name}']/class[@name='{name}']" />
 ```
-
-<a name="Renaming_Members" />
 
 ### <a name="renaming-members"></a>Ridenominazione di membri
 
@@ -169,6 +163,8 @@ Per modificare correttamente il nome gestito di un tipo sottoposto a wrapping (o
     name="managedName">NewName</attr>
 ```
 
+<a name="Renaming_EventArg_Wrapper_Classes" />
+
 #### <a name="renaming-eventarg-wrapper-classes"></a>Ridenominazione `EventArg` classi Wrapper
 
 Quando il generatore di associazione xamarin identifica un `onXXX` metodo di impostazione di un _tipo di listener_, un evento in c# e `EventArgs` sottoclasse verrà generata per supportare .NET al API per il listener basato su Java modello. Ad esempio, si consideri la seguente classe Java e il metodo:
@@ -193,7 +189,6 @@ Questo non è un nome di classe c# valido. Per risolvere il problema, è necessa
 ```
 
  
-<a name="Supported_Attributes" />
 
 ## <a name="supported-attributes"></a>Attributi supportati
 
@@ -342,7 +337,6 @@ Con tutte le modifiche sul posto, è possibile utilizzare il codice seguente in 
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 ```
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 

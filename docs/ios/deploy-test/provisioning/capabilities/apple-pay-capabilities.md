@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 88db45135104f14ca3a4b18e466e95288853a6df
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cc2c12ce2826f0b66cdf49a9a4df84d7f67f7713
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="apple-pay-capabilities"></a>Funzionalità di Apple Pay
 
@@ -79,8 +79,8 @@ Un ID esercente viene usato per comunicare ad Apple Pay che è possibile accetta
 7.  Scorrere fino alla fine di questa sezione espansa e fare clic su **Edit** (Modifica).
 8.  Scorrere l'elenco verso il basso fino ad Apple Pay e fare clic sul pulsante **Edit** (Modifica):  
     
-    
     ![Modificare i dettagli dell'ID app di Apple Pay](apple-pay-capabilities-images/image39.png)
+
 9.  Selezionare l'ID esercente da usare con questo ID app e fare clic su **Continue** (Continua):  
     
     ![Selezionare l'ID esercente da usare per l'ID app](apple-pay-capabilities-images/image40.png)

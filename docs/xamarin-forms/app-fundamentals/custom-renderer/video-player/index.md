@@ -2,16 +2,16 @@
 title: Implementazione di un lettore video
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
+ms.assetid: 0CE9BEE7-4F81-4A00-B9B3-5E2535CD3050
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e818bc3fa9793f093c10ac2617c5a822d08213d4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a889be5ee31f667117d2c36859e667980f0e6610
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="implementing-a-video-player"></a>Implementazione di un lettore video
 
@@ -27,7 +27,7 @@ Nel [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms
 
 Lettori video richiedono *controlli di trasporto*, quali sono i pulsanti per la riproduzione e la sospensione del video, e un posizionamento barre che mostra lo stato di avanzamento tramite il video e consente all'utente di passare rapidamente a un percorso diverso. `VideoPlayer` può utilizzare entrambi i controlli di trasporto e posizionamento barra fornita per la piattaforma (come illustrato di seguito), oppure è possibile fornire controlli di trasporto personalizzato e una barra di posizionamento. Di seguito è riportato il programma in esecuzione in iOS, Android e la piattaforma Windows universale:
 
-[![Riprodurre Video Web](web-videos-images/playwebvideo-small.png "riprodurre Video Web")](web-videos-images/playwebvideo-large.png "riprodurre Video Web")
+[![Riprodurre Video Web](web-videos-images/playwebvideo-small.png "riprodurre Video Web")](web-videos-images/playwebvideo-large.png#lightbox "riprodurre Video Web")
 
 Naturalmente, è possibile attivare il telefono lateralmente per una visualizzazione più grande.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 29b405c61b745c26c74318243f75e5809ecfdd7d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a33993bdef16191b66127dcc68c57661636c0f8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="native-references"></a>Riferimenti nativi
 
@@ -78,13 +78,13 @@ Eseguire i passaggi sono necessari per incorporare un framework in un progetto x
 1. Creare un nuovo o aprire un progetto xamarin. IOS, Xamarin.Mac o associazione esistente.
 2. Nel **Esplora**del mouse sul nome del progetto e scegliere **Aggiungi** > **Aggiungi riferimento nativo**: 
 
-    [ ![](native-references-images/ref01.png "In Esplora soluzioni, fare clic sul nome del progetto e selezionare Aggiungi riferimento nativo")](native-references-images/ref01.png)
+    [![](native-references-images/ref01.png "In Esplora soluzioni, fare clic sul nome del progetto e selezionare Aggiungi riferimento nativo")](native-references-images/ref01.png#lightbox)
 3. Dal **aprire** finestra di dialogo, selezionare il nome di Framework nativo che si desidera incorporare e fare clic su di **aprire** pulsante: 
 
-    [ ![](native-references-images/ref02.png "Selezionare il nome del Framework nativo per incorporare e fare clic sul pulsante aprirlo")](native-references-images/ref02.png)
+    [![](native-references-images/ref02.png "Selezionare il nome del Framework nativo per incorporare e fare clic sul pulsante aprirlo")](native-references-images/ref02.png#lightbox)
 4. Il framework verrà aggiunte alla struttura ad albero del progetto: 
 
-    [ ![](native-references-images/ref03.png "Il framework verrà aggiunto alla struttura di progetti")](native-references-images/ref03.png)
+    [![](native-references-images/ref03.png "Il framework verrà aggiunto alla struttura di progetti")](native-references-images/ref03.png#lightbox)
 
 Quando viene compilato il progetto, il Framework nativo verrà incorporato nel pacchetto dell'App.
 

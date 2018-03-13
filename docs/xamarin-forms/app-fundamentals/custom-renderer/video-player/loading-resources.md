@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 4556c053eec4b28ea863743720fe346a57da8997
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 08d07a82651887c9d87b908acd82296a3d80e43f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="loading-application-resource-videos"></a>Il caricamento di applicazione risorse video
 
@@ -174,7 +174,7 @@ Se la risorsa iOS viene archiviata nel **risorse** cartella, e se la risorsa UWP
 
 Di seguito è in esecuzione in tre piattaforme pagina:
 
-[![Riprodurre Video risorsa](loading-resources-images/playvideoresource-small.png "riprodurre Video risorsa")](loading-resources-images/playvideoresource-large.png "riprodurre risorse Video")
+[![Riprodurre Video risorsa](loading-resources-images/playvideoresource-small.png "riprodurre Video risorsa")](loading-resources-images/playvideoresource-large.png#lightbox "riprodurre risorse Video")
 
 Abbiamo visto come [caricare video da un URI Web](web-videos.md) e illustrato come riprodurre le risorse incorporate. È inoltre possibile [caricare video dalla libreria video del dispositivo](accessing-library.md).
 

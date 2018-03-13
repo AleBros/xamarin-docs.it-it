@@ -4,14 +4,15 @@ description: Creare prospettive ed effetti conici con la terza colonna della mat
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 3fda8524b824042aa4aba07853da2801baf47027
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2e2e83404bc93bd07885008b868c51eba2ff7140
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="non-affine-transforms"></a>Trasformazioni non affini.
 
@@ -226,7 +227,7 @@ public partial class TestPerspectivePage : ContentPage
 
 Ecco alcune immagini di esempio:
 
-[![](non-affine-images/testperspective-small.png "Schermata di triplo della pagina prospettiva Test")](non-affine-images/testperspective-large.png "tripla schermata della pagina prospettiva Test")
+[![](non-affine-images/testperspective-small.png "Schermata di triplo della pagina prospettiva Test")](non-affine-images/testperspective-large.png#lightbox "tripla schermata della pagina prospettiva Test")
 
 Mentre si sperimentano i dispositivi di scorrimento, sono disponibili che valori oltre 0.0066 o di sotto di –0.0066 causare l'immagine risulti improvvisamente fractured e incoerenti. La mappa di bit vengono trasformato è 300 pixel. Trasformato rispetto al centro, pertanto le coordinate della mappa di bit compreso tra –150 e 150. Tenere presente che il valore di z' è:
 
@@ -390,13 +391,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Ecco alcuni esempi:
 
-[![](non-affine-images/tapertransform-small.png "Schermata triplo della pagina trasformare conica")](non-affine-images/tapertransform-large.png "tripla schermata della pagina trasformare conica")
+[![](non-affine-images/tapertransform-small.png "Schermata triplo della pagina trasformare conica")](non-affine-images/tapertransform-large.png#lightbox "tripla schermata della pagina trasformare conica")
 
 Un altro tipo di trasformazioni non affini generalizzate è rotazione 3D, come illustrata nell'articolo successivo, [rotazioni 3D](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md).
 
 La trasformazione non affini può trasformare un rettangolo in qualsiasi quadrilatero convessa. Ciò viene dimostrata la **Mostra matrice Non affini** pagina. È molto simile al **Mostra matrice Affine** pagina dal [Trasforma una matrice](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md) articolo ad eccezione del fatto che disponga di un quarto `TouchPoint` oggetto per modificare l'angolo dell'immagine bitmap della quarta:
 
-[![](non-affine-images/shownonaffinematrix-small.png "Schermata triplo della pagina Mostra matrice Non affini")](non-affine-images/shownonaffinematrix-large.png "tripla schermata della pagina Mostra matrice Non affini")
+[![](non-affine-images/shownonaffinematrix-small.png "Schermata triplo della pagina Mostra matrice Non affini")](non-affine-images/shownonaffinematrix-large.png#lightbox "tripla schermata della pagina Mostra matrice Non affini")
 
 Purché si non tenta di creare un angolo interno di uno degli angoli della bitmap maggiore di 180 gradi oppure creare due lati di incrociarsi, viene calcolato correttamente la trasformazione usando il metodo di [ `ShowNonAffineMatrixPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) classe:
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 015bce612f369797f0540a0cb55f71f420f007a2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d5a8baec164eb5c70f6dae5b2fa4fd5271afbd1c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>Procedura dettagliata: utilizzo di NSURLSession e il servizio di trasferimento in Background
 
@@ -20,7 +20,7 @@ _In questa procedura dettagliata, è utilizzare il servizio trasferimento in Bac
 
 Viene avviato un trasferimento in background tramite la configurazione di uno sfondo `NSURLSession` e caricare o scaricare operazioni di Accodamento. Se il completamento di attività durante l'applicazione è backgrounded, sospeso o terminato, iOS avviserà l'applicazione chiamando il gestore di completamento dell'applicazione *AppDelegate*. Nel diagramma seguente illustra questo processo in azione:
 
- [ ![](background-transfer-walkthrough-images/transfer.png "Viene avviato un trasferimento in background tramite la configurazione di uno sfondo NSURLSession e Accodamento caricare o scaricare attività")](background-transfer-walkthrough-images/transfer.png)
+ [![](background-transfer-walkthrough-images/transfer.png "Viene avviato un trasferimento in background tramite la configurazione di uno sfondo NSURLSession e Accodamento caricare o scaricare attività")](background-transfer-walkthrough-images/transfer.png#lightbox)
 
 Di seguito viene illustrato questo aspetto nel codice.
 

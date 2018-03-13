@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
-ms.openlocfilehash: 03089e4760ebf19849cd4d34cafb7047d8915a4d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ee0625f22062fef3c27a697ce33488274abc24d9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="2d-drawing"></a>Disegno 2D
 
 SkiaSharp fornisce un'API di potenti c# per l'esecuzione di grafica 2D. È alimentato dalle [libreria Skia Google](http://skia.org), la stessa libreria che alimenta stack grafico Google Chrome, Firefox e di Android.
 
-[ ![](images/ide-sml.png "SkiaSharp fornisce un'API di potenti c# per l'esecuzione di grafica 2D")](images/ide.png)
+[![](images/ide-sml.png "SkiaSharp fornisce un'API di potenti c# per l'esecuzione di grafica 2D")](images/ide.png#lightbox)
 
 È una libreria portabile SkiaSharp e viene fornita per praticità come un [pacchetto NuGet multipiattaforma](https://www.nuget.org/packages/SkiaSharp)e supporta le seguenti piattaforme predefinita: macOS, Desktop di Windows, xamarin. IOS e xamarin.
 
@@ -32,7 +32,7 @@ Acquisire familiarità con cross platform grafica che eseguono il rendering in x
 
 - [Nozioni fondamentali di disegno](~/xamarin-forms/user-interface/graphics/skiasharp/basics/index.md)
   * [Disegnare un cerchio semplice](~/xamarin-forms/user-interface/graphics/skiasharp/basics/circle.md)
-  * [L'integrazione con xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md)
+  * [Integrazione con Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md)
   * [Pixel e unità indipendenti dal dispositivo](~/xamarin-forms/user-interface/graphics/skiasharp/basics/pixels.md)
   * [Animazione di base](~/xamarin-forms/user-interface/graphics/skiasharp/basics/animation.md)
   * [L'integrazione di testo e grafica](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md)
@@ -43,7 +43,7 @@ Acquisire familiarità con cross platform grafica che eseguono il rendering in x
   * [I tipi di riempimento del percorso](~/xamarin-forms/user-interface/graphics/skiasharp/paths/fill-types.md)
   * [Polilinea ed equazioni parametriche](~/xamarin-forms/user-interface/graphics/skiasharp/paths/polylines.md)
   * [Punti e trattini](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md)
-  * [Disegno di un dito](~/xamarin-forms/user-interface/graphics/skiasharp/paths/finger-paint.md)
+  * [Disegno con le dita](~/xamarin-forms/user-interface/graphics/skiasharp/paths/finger-paint.md)
 - [Trasformazioni](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/index.md)
   * [La trasformazione di conversione](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/translate.md)
   * [La trasformazione di scala](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/scale.md)
@@ -54,13 +54,13 @@ Acquisire familiarità con cross platform grafica che eseguono il rendering in x
   * [Trasformazioni affini non](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md)
   * [Rotazione 3D](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md)
 - [Curve e percorsi](~/xamarin-forms/user-interface/graphics/skiasharp/curves/index.md)
-  * [Tre metodi per disegnare un arco](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md)
+  * [Tre modi per disegnare un arco](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md)
   * [Tre tipi di curve di Bézier](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md)
-  * [Dati del percorso SVG](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md)
-  * [Ritaglio e percorsi](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md)
-  * [Effetti di percorso](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md)
-  * [I percorsi e testo](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)
-  * [Informazioni sul percorso e enumerazione](~/xamarin-forms/user-interface/graphics/skiasharp/curves/information.md)
+  * [Dati del tracciato SVG](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md)
+  * [Ritaglio con tracciati e aree](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md)
+  * [Effetti per il tracciato](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md)
+  * [Tracciati e testo](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)
+  * [Informazioni sui tracciati ed enumerazione](~/xamarin-forms/user-interface/graphics/skiasharp/curves/information.md)
 
 ## <a name="platform-specific-notesgraphics-gamesskiasharpplatformmd"></a>[Note specifiche della piattaforma](~/graphics-games/skiasharp/platform.md)
 

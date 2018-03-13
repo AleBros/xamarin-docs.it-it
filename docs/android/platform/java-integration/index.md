@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/18/2017
-ms.openlocfilehash: 88e8c66d36956649f0a996046f038d89a7267cf5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 213702d289adefe966f07c3ad0174156cbc69ee1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="java-integration-overview"></a>Panoramica dell'integrazione con Java
 
 _L'ecosistema di Java include una raccolta di diverse e un'enorme dei componenti. Molti di questi componenti può essere utilizzati per ridurre il tempo che necessario per sviluppare un'applicazione Android. Questo documento verrà introdurre e fornire una panoramica di alcuni metodi che gli sviluppatori possono utilizzare questi componenti Java esistenti per migliorare l'esperienza di sviluppo dell'applicazione di xamarin._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -41,7 +40,6 @@ La seconda tecnica, utilizzando JNI, funziona con un altro livello inferiore, ma
 La terza tecnica è completamente diversa da due precedenti: porting di codice da Java a c#. Porting di codice da una lingua a altra può essere un processo molto complesso, tendente al, ma è possibile ridurre che con l'aiuto di uno strumento chiamato *l'aumento della nitidezza*. Nitidezza è uno strumento open source che è un linguaggio-a-C# convertitore. 
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 

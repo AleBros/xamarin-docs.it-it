@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/02/2018
-ms.openlocfilehash: c02ad78cc15f2d71f19d605f7a4d6889bbe3ca01
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ec8d000f235a8e0da5198e425f9f1e630b2c662a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---using-touch-in-android"></a>Procedura dettagliata: utilizzo di tocco in Android
 
 Possiamo vedere come utilizzare i concetti della sezione precedente in un'applicazione funzionante. Si creerà un'applicazione con quattro attività. La prima attività sarà un menu o un pannello comandi che si desidera visualizzare le altre attività per illustrare le varie API. Nella schermata seguente mostra l'attività principale:
 
-[![Schermata di esempio con Touch Me pulsante](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png)
+[![Schermata di esempio con Touch Me pulsante](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png#lightbox)
 
 La prima attività, esempio tocco, viene illustrato come utilizzare i gestori eventi per modificare le visualizzazioni. L'attività riconoscitore di movimento verrà illustrato come sottoclasse `Android.View.Views` e la gestione degli eventi, nonché illustrano come gestire i movimenti zoom indietro. La terza e ultima attività, **movimenti personalizzato**, Mostra come utilizzerà movimenti personalizzati. Per semplificare la procedura da seguire e assorbire, di interruzione in questa procedura dettagliata sezioni, con ogni sezione porre l'attenzione su una delle attività.
 
@@ -25,7 +25,7 @@ La prima attività, esempio tocco, viene illustrato come utilizzare i gestori ev
 
 -   Aprire il progetto **TouchWalkthrough\_avviare**. Il **MainActivity** tutte è impostato su go &ndash; spetta per implementare il comportamento di tocco nell'attività. Se si esegue l'applicazione e fare clic su **esempio tocco**, deve avviare l'attività seguente:
 
-    [![Schermata di attività con Touch inizia visualizzato](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png)
+    [![Schermata di attività con Touch inizia visualizzato](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 -   Ora che è stata confermata che l'attività di avvio, aprire il file **TouchActivity.cs** e aggiungere un gestore per il `Touch` evento del `ImageView`:
 
@@ -63,11 +63,11 @@ Si noti che nel codice precedente che si considera il `Move` e `Down` azione ste
 
 Ogni volta che l'utente ultimi ritocchi il `ImageView`, `Touch` verrà generato l'evento e il gestore verrà visualizzato il messaggio **tocco inizia** sullo schermo, come illustrato nella schermata seguente:
 
-[![Schermata di attività con Touch inizia](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png)
+[![Schermata di attività con Touch inizia](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 Fino a quando l'utente tocca il `ImageView`, **tocco inizia** verrà visualizzato nel `TextView`. Quando l'utente non è più tocca il `ImageView`, il messaggio **tocco termina** verrà visualizzato nel `TextView`, come illustrato nella schermata seguente:
 
-[![Schermata di attività con Touch termina](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png)
+[![Schermata di attività con Touch termina](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png#lightbox)
 
 
 ## <a name="gesture-recognizer-activity"></a>Attività riconoscitore di movimento
@@ -234,11 +234,11 @@ Ora consente di implementare l'attività riconoscitore di movimento. Questa atti
 -   Esegui l'applicazione e avviare l'attività riconoscitore di movimento.
     Quando viene avviata la schermata dovrebbe essere simile di schermata seguente:
 
-    [![Schermata iniziale di riconoscitore di movimento con icona di Android](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png)
+    [![Schermata iniziale di riconoscitore di movimento con icona di Android](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png#lightbox)
 
 -   Ora toccare l'icona e trascinarla sullo schermo. Provare il movimento zoom con avvicinamento delle dita. A un certo punto dello schermo potrebbe risultare simile cattura di schermata seguente:
 
-    [![Icona di spostamento i movimenti sullo schermo](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png)
+    [![Icona di spostamento i movimenti sullo schermo](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png#lightbox)
 
 A questo punto è necessario assegnare manualmente un pat sul retro: è stato implementato solo a zoom indietro-avanti di un'applicazione Android. Una pausa veloce e consente di passare alla terza e ultima attività in questa procedura dettagliata &ndash; tramite movimenti personalizzati.
 
@@ -341,17 +341,17 @@ Ai fini di questa procedura dettagliata, la libreria di movimenti già creata ut
 
 -   Eseguire l'applicazione e avviare l'attività personalizzata riconoscitore di movimento. Dovrebbe essere simile al seguente nella schermata seguente:
 
-    [![Schermata con verificare Me immagine](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png)
+    [![Schermata con verificare Me immagine](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png#lightbox)
 
     Disegna un segno di spunta nella schermata e la bitmap viene visualizzata dovrebbe apparire simile a quello illustrato nelle schermate Avanti:
 
-    [![Segno di spunta disegnato](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png)
-    [![Recognized segno di spunta](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png)
+    [![Segno di spunta disegnato](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
+    [![Recognized segno di spunta](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
     Infine, disegnare un scribble sullo schermo. La casella di controllo deve ripristinare l'immagine originale come illustrato in queste schermate:
 
-    [![Scribble sullo schermo](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png)
-    [![viene visualizzata l'immagine originale](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png)
+    [![Scribble sullo schermo](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png#lightbox)
+    [![viene visualizzata l'immagine originale](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png#lightbox)
 
 È ora la comprensione della modalità di integrazione di tocco e i movimenti in un'applicazione Android usando xamarin.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 5a5072d7f07fa7e426a14d3ac841e775d872acff
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: cb87593b63e28c01beacdea479cc9d6ec4aceb9b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="validation"></a>Convalida
 
@@ -19,7 +19,7 @@ Qualsiasi app che accetta l'input dell'utente è necessario assicurarsi che l'in
 
 Nel contesto del modello-modello ViewModel (MVVM) di schema, un modello di visualizzazione o modello sarà spesso necessario per eseguire la convalida dei dati e segnalare gli errori di convalida per la visualizzazione in modo che l'utente può correggere questi ultimi. L'app mobile eShopOnContainers esegue la convalida lato client sincrona visualizzazione delle proprietà del modello e notifica all'utente eventuali errori di convalida per evidenziare il controllo che contiene i dati non validi e visualizzando i messaggi di errore che informano l'utente del motivo per cui i dati non sono validi. Figura 6-1 vengono illustrate le classi necessarie per l'esecuzione di convalida nell'app mobile eShopOnContainers.
 
-[![](validation-images/validation.png "Classi di convalida nell'app mobile eShopOnContainers")](validation-images/validation-large.png "classi di convalida nell'app mobile eShopOnContainers")
+[![](validation-images/validation.png "Classi di convalida nell'app mobile eShopOnContainers")](validation-images/validation-large.png#lightbox "classi di convalida nell'app mobile eShopOnContainers")
 
 **Figura 6-1**: le classi di convalida nell'app mobile eShopOnContainers
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2016
-ms.openlocfilehash: d68d84671028ded14b4b885f2c134656fc639f9e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b5e9a4c449bc99bd88fc415f5ebb969d2c2a08a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-platform-features"></a>Funzionalità della piattaforma Android
 
@@ -28,14 +28,14 @@ Per aggiungere i temi di progettazione di materiale al progetto Android di xamar
 
 Ecco il **Todo** esempio con il valore predefinito `FormsApplicationActivity`:
 
-[ ![](images/before-appcompat-sml.png "Applicazione di esempio di attività senza delle applicazioni")](images/before-appcompat.png "l'applicazione di esempio di attività senza delle applicazioni")
+[![](images/before-appcompat-sml.png "Applicazione di esempio di attività senza delle applicazioni")](images/before-appcompat.png#lightbox "l'applicazione di esempio di attività senza delle applicazioni")
 
 E questo è lo stesso codice dopo l'aggiornamento del progetto per utilizzare `FormsAppCompatActivity` (e aggiungere le informazioni sul tema aggiuntivi):
 
-[ ![](images/post-appcompat-sml.png "Applicazione di esempio di attività con delle applicazioni e i temi")](images/post-appcompat.png "applicazione di esempio di attività con delle applicazioni e i temi")
+[![](images/post-appcompat-sml.png "Applicazione di esempio di attività con delle applicazioni e i temi")](images/post-appcompat.png#lightbox "applicazione di esempio di attività con delle applicazioni e i temi")
 
 > [!NOTE]
-> **Nota**: quando si utilizza `FormsAppCompatActivity`, [classi di base per alcuni renderer personalizzati Android](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) sarà diverso.
+> Quando si utilizza `FormsAppCompatActivity`, [classi di base per alcuni renderer personalizzati Android](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) sarà diverso.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

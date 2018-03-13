@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 80fe298f3dd24aac7f84213aee96499dd369d16d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f0cb4e00abffead854c2590bde6df45c200ff0bb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="core-animation"></a>Animazione di base
 
@@ -23,12 +23,16 @@ Tutte le animazioni accurate in iOS, ad esempio lo scorrimento delle tabelle e i
 
 I framework Core animazione e grafica di base possono essere usati insieme per creare efficaci, grafica 2D animata. In realtà animazione Core può anche trasformare la grafica 2D nello spazio 3D, la creazione di esperienze cinematografiche sorprendenti. Tuttavia, per creare la grafica 3D true, è necessario utilizzare un elemento come OpenGL ES, oppure per giochi attiva a un'API, ad esempio MonoGame, sebbene 3D non rientra nell'ambito di questo articolo.
 
+<a name="Using_Core_Animation" />
+
 ## <a name="core-animation"></a>Animazione di base
 
 iOS utilizza il framework di animazione di base per creare effetti di animazione, ad esempio la transizione tra le visualizzazioni, scorrere i menu e lo scorrimento effetti per citarne alcune. Esistono due modi per lavorare con animazione:
 
--  [Tramite UIKit](#Using_UIKit_Animation), che include le animazioni basate sulla visualizzazione, nonché transizioni animate tra i controller.
--   [Tramite l'animazione Core](#Using_Core_Animation), quali livelli direttamente, consentendo di controllo più preciso.
+- [Tramite UIKit](#Using_UIKit_Animation), che include le animazioni basate sulla visualizzazione, nonché transizioni animate tra i controller.
+- [Tramite l'animazione Core](#Using_Core_Animation), quali livelli direttamente, consentendo di controllo più preciso.
+
+<a name="Using_UIKit_Animation" />
 
 ## <a name="using-uikit-animation"></a>Utilizzo dell'animazione UIKit
 
@@ -237,6 +241,6 @@ In questo articolo è stato esaminato le funzionalità di animazione fornite tra
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempio di animazione core](https://developer.xamarin.com/samples/monotouch/GraphicsAndAnimation/)
-- [Grafica di base](~/ios/platform/graphics-animation-ios/core-graphics.md)
+- [Core Graphics](~/ios/platform/graphics-animation-ios/core-graphics.md)
 - [Grafica e animazione di questa procedura dettagliata](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
-- [Animazione di base](https://developer.xamarin.com/recipes/ios/animation/coreanimation)
+- [Core Animation](https://developer.xamarin.com/recipes/ios/animation/coreanimation)

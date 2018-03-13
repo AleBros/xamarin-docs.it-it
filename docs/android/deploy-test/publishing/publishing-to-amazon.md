@@ -7,21 +7,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: 6b4958c6a82b824f19cc041b124e79034eba4c86
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9bae3c56c5f6c445618f41d877c3188a86167be1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-amazon-app-store"></a>Pubblicazione in Amazon Appstore
 
 Il programma Amazon per la distribuzione di app per dispositivi mobili consente agli sviluppatori di pubblicare le proprie applicazioni in Amazon. Questa sezione illustra brevemente Amazon Appstore per Android. 
 
-[![Schermata di Amazon Appstore](publishing-to-amazon-images/amazon-app-store.png)](publishing-to-amazon-images/amazon-app-store.png)
+[![Schermata di Amazon Appstore](publishing-to-amazon-images/amazon-app-store.png)](publishing-to-amazon-images/amazon-app-store.png#lightbox)
 
 Amazon non applica limiti alla dimensione degli APK. Tuttavia, se un APK supera i 30 MB la distribuzione avverrà tramite FTP anziché tramite il portale Amazon di distribuzione delle app per dispositivi mobili.
 
-<a name="Submitting_Apps:_Binary_Info" />
 
 ## <a name="submitting-apps-binary-info"></a>Invio delle app: informazioni sul file binario
 
@@ -34,7 +33,6 @@ Il processo di invio di un'applicazione in Amazon Appstore è simile a quello di
 -  È possibile inviare aggiornamenti per cinque video.
 
 
-<a name="Approval_Process" />
 
 ## <a name="approval-process"></a>Processo di approvazione
 

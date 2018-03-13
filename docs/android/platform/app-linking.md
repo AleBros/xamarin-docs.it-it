@@ -3,16 +3,16 @@ title: Collegamento App in Android
 description: "Questa guida illustra come Android 6.0 supporta l'app e il collegamento, una tecnica che consente di App per dispositivi mobili a rispondere a URL nei siti Web. Parlerà quali app per il collegamento viene illustrato come implementare il collegamento app in un'applicazione Android 6.0 e come configurare un sito Web per concedere le autorizzazioni per l'app mobile per un dominio."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
+ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 726890e48407dd26f52c5aeaecf4eab51dcc5182
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 78fef780728ba1c2a3b9978504058f7a386b0e7d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="app-linking-in-android"></a>Collegamento App in Android
 
@@ -84,7 +84,7 @@ Android verificherà ogni host che è identificato dai filtri preventivi nel fil
 Android 6.0 collegamento app richiede che Android verificare l'associazione tra l'applicazione e il sito Web prima di impostare l'applicazione come gestore predefinito per l'URI. Questa verifica verrà eseguita durante l'installazione iniziale dell'applicazione. Il *collegamenti a risorse digitali* file è un file JSON che è ospitato dal webdomain(s) pertinente.
 
 > [!NOTE]
-> **Nota:** il `android:autoVerify` attributo deve essere impostato dal filtro preventivo &ndash; in caso contrario Android non eseguirà la verifica.
+> Il `android:autoVerify` attributo deve essere impostato dal filtro preventivo &ndash; in caso contrario Android non eseguirà la verifica.
 
 Il file si trova da webmaster del dominio in corrispondenza della posizione **https://domain/.well-known/assetlinks.json**.
 

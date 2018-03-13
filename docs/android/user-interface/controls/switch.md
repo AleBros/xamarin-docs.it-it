@@ -7,19 +7,18 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 8bfa599ce0a85897ecaf655c1d4da00fe898bc68
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0cf1c4d749eb85a7e0f4c035e10e2e7a40e0c711
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="switch"></a>Opzione
 
 Il `Switch` widget (mostrato sotto) consente agli utenti di passare tra due stati, ad esempio come in o OFF. Il `Switch` valore predefinito è OFF. Il widget è illustrato di seguito in entrambi gli stati ON e OFF:
 
-[ ![Schermate di un widget commutatore e stati](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png)
+[![Schermate di un widget commutatore e stati](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png#lightbox)
 
-<a name="Creating_a_Switch" />
 
 ## <a name="creating-a-switch"></a>Creazione di un commutatore
 
@@ -32,9 +31,8 @@ Per creare un commutatore, è sufficiente dichiarare un `Switch` elemento nello 
 
 Verrà creato un commutatore di base, come illustrato di seguito:
 
-[ ![Schermata dell'app demo la visualizzazione di un commutatore in questo stato](switch-images/07-switch.png)](switch-images/07-switch.png)
+[![Schermata dell'app demo la visualizzazione di un commutatore in questo stato](switch-images/07-switch.png)](switch-images/07-switch.png#lightbox)
 
-<a name="Changing_Default_Values" />
 
 ## <a name="changing-default-values"></a>Modificare i valori predefiniti
 
@@ -48,7 +46,6 @@ Sia il testo visualizzato dal controllo per il ON e OFF gli Stati e il valore pr
         android:textOff="NO" />
 ```
 
- <a name="Providing_a_Title" />
 
 
 ## <a name="providing-a-title"></a>Indicazione di un titolo
@@ -66,7 +63,7 @@ Il `Switch` widget supporta anche l'inserimento di un'etichetta di testo imposta
 
 In questo markup produce la schermata riportata di seguito in fase di esecuzione:
 
-[![Schermata dell'app demo con testo in senso orizzontale che precede il widget commutatore](switch-images/08-switch.png)](switch-images/08-switch.png)
+[![Schermata dell'app demo con testo in senso orizzontale che precede il widget commutatore](switch-images/08-switch.png)](switch-images/08-switch.png#lightbox)
 
 Quando un `Switch`del valore viene modificato, viene generato un `CheckedChange` evento.
 Ad esempio, nel codice seguente è acquisire questo evento e presentare un `Toast` widget con un messaggio in base al `isChecked` valore `Switch`, che viene passato al gestore dell'evento come parte del `CompoundButton.CheckedChangeEventArg` argomento.

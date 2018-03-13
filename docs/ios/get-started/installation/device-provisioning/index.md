@@ -8,21 +8,21 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/15/2017
-ms.openlocfilehash: 1a5120f088fca6997eef3a1bc27126b442380cac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b54adc28e318b263052bb6073390556a198cffe7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="device-provisioning"></a>Provisioning dei dispositivi
 
-_Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo nello sviluppo iOS consiste nell'eseguire il provisioning del dispositivo iOS. In questa guida vengono illustrati la richiesta di certificati e profili di sviluppo, l'uso dei servizi app e la distribuzione di un'app nel dispositivo._
+_Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo per lo sviluppo iOS consiste nell'eseguire il provisioning del dispositivo iOS. Questa guida esplora la richiesta di certificati e profili di sviluppo, l'uso di servizi app e la distribuzione di un'app nel dispositivo._
 
 Durante lo sviluppo di un'applicazione Xamarin.iOS è molto importante testare l'app distribuendola in un dispositivo fisico oltre che nel simulatore. I bug specifici del dispositivo e i problemi di prestazioni possono emergere solo quando l'app viene eseguita in un dispositivo, a causa dei limiti dell'hardware, ad esempio la memoria o la connettività di rete. Per eseguire il test in un dispositivo fisico, il dispositivo deve essere *sottoposto a provisioning* ed è necessario informare Apple che tale dispositivo sarà usato a scopo di test.
 
 Le sezioni evidenziate nell'immagine seguente illustrano i passaggi necessari per configurare il provisioning iOS:
 
-[![](images/provisioningdiagram.png "Le sezioni evidenziate in questa immagine illustrano i passaggi necessari per configurare il provisioning iOS")](images/provisioningdiagram.png)
+[![](images/provisioningdiagram.png "Le sezioni evidenziate in questa immagine illustrano i passaggi necessari per configurare il provisioning iOS")](images/provisioningdiagram.png#lightbox)
 
 Il passaggio successivo prevede la distribuzione dell'applicazione. Per altre informazioni sulla distribuzione, vedere la guida [App Distribution](~/ios/deploy-test/app-distribution/index.md) (Distribuzione dell'app)
 

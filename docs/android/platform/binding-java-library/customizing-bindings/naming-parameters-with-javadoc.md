@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/20/2017
-ms.openlocfilehash: 84dfe88e912241eb0024143bca568ae75e5bfa28
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d83135aa9c101e06a680b458cce8c12dcdddd947
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="naming-parameters-with-javadoc"></a>Denominazione dei parametri con Javadoc
 
 _In questo articolo viene illustrato come recuperare i nomi dei parametri in un progetto di associazione Java utilizzando Javadoc generato dal progetto Java._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -38,9 +37,8 @@ Al termine, i nomi dei parametri di Java originale deve essere presente nelle AP
 
 
 > [!NOTE]
-> **Nota:** è notevoli differenze nell'output JavaDoc. Il file con estensione File JAR associazione toolchain non supporta ogni permutazione possibili singolo e di conseguenza alcuni parametri potrebbero non essere denominati in modo corretto.
+> È un notevole della varianza nell'output JavaDoc. Il file con estensione File JAR associazione toolchain non supporta ogni permutazione possibili singolo e di conseguenza alcuni parametri potrebbero non essere denominati in modo corretto.
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 

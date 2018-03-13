@@ -3,16 +3,16 @@ title: Introduzione a tvOS 9
 description: "Questo articolo descrive tutte le nuove e modificate le API e le funzionalità disponibili in tvOS 9 per gli sviluppatori Xamarin.tvOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
+ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c1fafe85fb7f5c30dca0dff6fe3dff5172e0b9aa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55e83658e09bc7e5c12bb3ef3f508497651ec46c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-tvos-9"></a>Introduzione a tvOS 9
 
@@ -91,7 +91,7 @@ Siri remoto è attualmente disponibile in paesi seguenti:
 
 Tutti gli altri paesi riceverà l'Apple TV remoto che sostituisce il pulsante di Siri con un pulsante di ricerca che consente di visualizzare la schermata di ricerca predefinita con un input di testo per la ricerca:
 
-[ ![](tvos9-images/remote02.png "Siri remoto")](tvos9-images/remote02.png)
+[![](tvos9-images/remote02.png "Siri remoto")](tvos9-images/remote02.png#lightbox)
 
 Per ulteriori informazioni, vedere il nostro [Siri remoto e i controller Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) documentazione.
 
@@ -155,7 +155,7 @@ Per ulteriori informazioni, vedere il nostro [utilizzo di navigazione e lo stato
 
 La schermata Home Apple TV Mostra tutte le applicazioni che vengono installate e fornisce un modo per accedere alle preferenze dell'utente:
 
-[ ![](tvos9-images/home01.png "La schermata iniziale")](tvos9-images/home01.png)
+[![](tvos9-images/home01.png "La schermata iniziale")](tvos9-images/home01.png#lightbox)
 
 L'utente passa a una griglia delle icone di app con i movimenti tocco in remoto Siri utilizzando lo stato attivo per selezionare un'app e avviare il programma. L'icona dell'App è il la prima possibilità di effettuare un'ottima impressione potenziali utenti e deve comunicare scopo dell'applicazione a colpo d'occhio.
 
@@ -169,7 +169,7 @@ Per ulteriori informazioni, vedere il nostro [utilizzo di immagini e icone](~/io
 
 Se l'utente ha effettuato l'app Xamarin.tvOS sulla riga superiore nella schermata Home Apple TV, un'immagine di scaffale superiore grande verrà visualizzata quando l'app viene selezionato dall'utente. Questa immagine deve evidenziare le funzionalità dell'app o forniscono collegamenti diretti al relativo contenuto.
 
-[ ![](tvos9-images/topshelf01.png "Scaffale superiore")](tvos9-images/topshelf01.png)
+[![](tvos9-images/topshelf01.png "Scaffale superiore")](tvos9-images/topshelf01.png#lightbox)
 
 È possibile specificare l'immagine di scaffale superiore come singolo statico `.png` o `.lsr` file o può essere creato dinamicamente in fase di esecuzione come una singola riga di elementi con stato attivabile.
 

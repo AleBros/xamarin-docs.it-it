@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 14abb7a4b85b493bb0ab96a982d989fad783fabd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: afaa02168dcac54115e8fca53683725926e4baed
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Layout a schede con il ActionBar
 
 _Questa guida vengono presentati e come usare le APIs ActionBar per creare un'interfaccia utente a schede in un'applicazione di xamarin._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -27,7 +26,6 @@ La barra delle azioni è un modello di interfaccia utente di Android che viene u
 Si noti che `Toolbar` è un componente di barra più recenti e più generalizzato di azione che è necessario utilizzare invece di `ActionBar` (`Toolbar` è stato progettato per sostituire `ActionBar`). Per ulteriori informazioni, vedere [barra degli strumenti](~/android/user-interface/controls/tool-bar/index.md). 
 
 
-<a name="Requirements" />
 
 ## <a name="requirements"></a>Requisiti
 
@@ -36,7 +34,6 @@ Qualsiasi applicazione xamarin destinata a livello dell'API 11 (Android 3.0) o v
 Alcune delle APIs ActionBar sono stati trasferiti nuovamente a livello di API 7 (Android 2.1) e sono disponibili tramite il [V7 delle applicazioni libreria](http://developer.android.com/tools/support-library/features.html#v7-appcompat), che viene reso disponibile per le app xamarin mediante i [Xamarin Android libreria di supporto - V7 ](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) pacchetto.
 
 
-<a name="Introducing_tabs_in_the_ActionBar" />
 
 ## <a name="introducing-tabs-in-the-actionbar"></a>Introduzione a schede dell'ActionBar
 
@@ -63,7 +60,6 @@ Xamarin esegue il wrapping di `ActionBar.ITabListener` con gli eventi nella `Act
 -  TabUnselected
 
 
-<a name="Adding_Tabs_to_the_ActionBar" />
 
 ### <a name="adding-tabs-to-the-actionbar"></a>Aggiunta di schede di ActionBar
 
@@ -111,7 +107,6 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-<a name="Event_Handlers_vs_ActionBar.ITabListener" />
 
 #### <a name="event-handlers-vs-actionbaritablistener"></a>I gestori di eventi e ActionBar.ITabListener
 
@@ -120,7 +115,6 @@ Le applicazioni devono utilizzare i gestori eventi e `ActionBar.ITabListener` pe
 Quando si lavora con molte schede, o condivisione funzionalità comuni tra le schede ActionBar, può essere più efficiente in termini di memoria e prestazioni per creare una classe personalizzata che implementa `ActionBar.ITabListener`e la condivisione di una singola istanza della classe. Ciò riduce il numero di GREF che utilizza un'applicazione di xamarin. 
 
 
-<a name="Backwards_Compatibility_for_Older_Devices" />
 
 ### <a name="backwards-compatibility-for-older-devices"></a>La compatibilità per i dispositivi meno recenti
 
@@ -177,7 +171,6 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 }
 ```
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 

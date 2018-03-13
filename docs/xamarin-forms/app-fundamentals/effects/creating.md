@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 84450527a1301cf95c93a5dc2796a2cf76f4ae2b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3a66ec9f935159e4854a12584a6c9f70ab805abb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-an-effect"></a>Creazione di un effetto
 
@@ -29,7 +29,7 @@ Il processo per la creazione di un effetto in ogni progetto specifico della piat
 L'effetto può quindi essere usato da collegarlo al controllo appropriato.
 
 > [!NOTE]
-> **Nota**: è facoltativo per fornire un effetto in ogni progetto della piattaforma. Tentativo di utilizzare un effetto di quando uno non è registrato, restituirà un valore non null che non esegue alcuna operazione.
+> È facoltativo per fornire un effetto in ogni progetto della piattaforma. Tentativo di utilizzare un effetto di quando uno non è registrato, restituirà un valore non null che non esegue alcuna operazione.
 
 L'applicazione di esempio viene illustrato un `FocusEffect` che modifica il colore di sfondo di un controllo quando ottiene lo stato attivo. Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, con le relazioni tra di essi:
 
@@ -195,7 +195,7 @@ Il processo per l'utilizzo di un effetto da una libreria di xamarin. Forms class
 1. Collegare l'effetto del controllo aggiungendola al controllo [ `Effects` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/) insieme.
 
 > [!NOTE]
-> **Nota**: un'istanza di effetto può essere associata solo a un singolo controllo. Pertanto, è necessario risolvere un effetto due volte per utilizzarlo in due controlli.
+> Un'istanza effettiva può essere collegata solo a un singolo controllo. Pertanto, è necessario risolvere un effetto due volte per utilizzarlo in due controlli.
 
 ## <a name="consuming-the-effect-in-xaml"></a>Utilizzo l'effetto in XAML
 

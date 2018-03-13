@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: e85bc98b5da4c6e529f150c6e7945a8556e2c60f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 887dc3cf710fb75d05d02af179bc218c15d31f97
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-mode"></a>Modalità di associazione
 
@@ -45,7 +45,7 @@ Inizialmente potrebbe sembrare con le versioni precedenti: ora il `Label` è l'o
 
 Come prevedibile, la `Slider` viene inizializzato sul valore 1 da iniziale `Opacity` valore `Label`. Come illustrato nella schermata iOS a sinistra:
 
-[![Annullare l'associazione](binding-mode-images/reversebinding-small.png "inversa associazione")](binding-mode-images/reversebinding-large.png "associazione inversa")
+[![Annullare l'associazione](binding-mode-images/reversebinding-small.png "inversa associazione")](binding-mode-images/reversebinding-large.png#lightbox "associazione inversa")
 
 Ma potrebbe essere sorprendente che il `Slider` continua a funzionare, come illustrano le schermate di Android e UWP. Può sembrare un passo per indicare che l'associazione dati funziona meglio se il `Slider` è la destinazione del binding anziché `Label` perché l'inizializzazione opera come prevedibile.
 
@@ -250,7 +250,7 @@ Il `Value` proprietà del `Slider`, tuttavia, è `TwoWay`. In questo modo ogni `
 
 Quando il programma viene eseguito prima, la `BoxView`, `Label`e tre `Slider` elementi sono tutti impostati dal ViewModel di base iniziale `Color` impostata quando l'elemento ViewModel è stata creata un'istanza. Come illustrato nella schermata iOS a sinistra:
 
-[![Selettore colori semplice](binding-mode-images/simplecolorselector-small.png "selettore colori semplice")](binding-mode-images/simplecolorselector-large.png "selettore colori semplice")
+[![Selettore colori semplice](binding-mode-images/simplecolorselector-small.png "selettore colori semplice")](binding-mode-images/simplecolorselector-large.png#lightbox "selettore colori semplice")
 
 Come si modificano i dispositivi di scorrimento, il `BoxView` e `Label` vengono aggiornati di conseguenza, come illustrato per le schermate di Android e UWP.
 
@@ -661,7 +661,7 @@ public partial class SampleSettingsPage : ContentPage
 
 La schermata di iOS a sinistra mostra il programma alla prima esecuzione. Il costruttore in `SampleSettingsViewModel` Inizializza il colore di sfondo sul bianco e che è l'elemento selezionato nel `ListView`:
 
-[![Le impostazioni di esempio](binding-mode-images/samplesettings-small.png "le impostazioni di esempio")](binding-mode-images/samplesettings-large.png "le impostazioni di esempio")
+[![Le impostazioni di esempio](binding-mode-images/samplesettings-small.png "le impostazioni di esempio")](binding-mode-images/samplesettings-large.png#lightbox "le impostazioni di esempio")
 
 Due schermate mostrano le impostazioni modificate. Quando si provano a questa pagina, ricordare di inserire il programma allo stato di sospensione o interruzione del dispositivo o un emulatore in esecuzione. Terminare il programma dal debugger di Visual Studio non comporterà la `OnSleep` esegue l'override nel `App` classe da chiamare.
 

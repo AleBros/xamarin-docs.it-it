@@ -8,23 +8,22 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: ebb53398edba64e255f1a534556836df8734ba6f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2ed67eac51f6edcfda16caf73e4667c49124082c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-with-fragments"></a>Implementazione di frammenti
 
 _Android 3.0 sono state introdotte frammenti. I frammenti sono componenti indipendenti e modulari usati per semplificare la scrittura di applicazioni che possono essere eseguite su schermi di dimensioni diverse. Questo articolo descrive come utilizzare i frammenti per sviluppare applicazioni di xamarin e come supportare i frammenti nei 3.0 dispositivi pre-Android._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Panoramica
 
 In questa sezione verrà esaminato come creare un'applicazione che consente di visualizzare un elenco di riproduzione di considerato e un'offerta da ogni riproduzione selezionato. L'applicazione utilizzerà frammenti in modo che è possibile definire i componenti dell'interfaccia utente in un'unica posizione, ma quindi utilizzarli in diversi fattori di forma. Ad esempio, le schermate seguenti mostrano l'applicazione in esecuzione su un tablet 10", nonché su un telefono:
 
-[![Schermate dell'app di esempio in esecuzione sul telefono e tablet](images/intro-screenshot-sml.png)](images/intro-screenshot.png)
+[![Schermate dell'app di esempio in esecuzione sul telefono e tablet](images/intro-screenshot-sml.png)](images/intro-screenshot.png#lightbox)
 
 In questa sezione verrà trattati i seguenti argomenti:
 
@@ -34,13 +33,11 @@ In questa sezione verrà trattati i seguenti argomenti:
 
 - **Mediante il pacchetto di supporto Android** &ndash; implementa il pacchetto di supporto Android, quindi apporta alcune modifiche minori per le attività nell'applicazione, consentendo l'esecuzione in versioni precedenti di Android.
 
-<a name="Requirements" />
 
 ## <a name="requirements"></a>Requisiti
 
 Questa procedura dettagliata richiede xamarin 4.0 o versione successiva. Inoltre sarà necessario installare il pacchetto di supporto Android, come descritto nella documentazione di frammenti.
 
-<a name="Introduction" />
 
 ## <a name="introduction"></a>Introduzione
 

@@ -2,27 +2,29 @@
 title: Using SQLite.NET
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 3447B7EE-A320-489E-AF02-E5721097760A
+ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/18/2018
-ms.openlocfilehash: d18fe5960a44153626fbf0bda30e3485faf5b9fe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2b29826f1a7acc6bb8dcd0594c69a5cb7ff6db42
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="using-sqlitenet"></a>Using SQLite.NET
 
 La libreria di SQLite.NET in cui si consiglia di Xamarin è una base ORM che consente di archiviare e recuperare gli oggetti nel database SQLite locale in un dispositivo iOS.
 ORM è l'acronimo di oggetti relazionali Mapping: un'API che consente di salvare e recuperare "oggetti" da un database senza scrivere istruzioni SQL.
 
-## <a name="using-sqlitenet"></a>Using SQLite.NET
+<a name="Usage"/>
+
+## <a name="usage"></a>Utilizzo
 
 Aggiungere il [pacchetto NuGet PCL SQLite.net](https://www.nuget.org/packages/sqlite-net-pcl/), al progetto - supporta un'ampia gamma di piattaforme, tra cui iOS, Android e Windows.
 
-  [ ![](using-sqlite-orm-images/image1a-sml.png "Pacchetto SQLite.NET NuGet")](using-sqlite-orm-images/image1a.png)
+  [![](using-sqlite-orm-images/image1a-sml.png "Pacchetto SQLite.NET NuGet")](using-sqlite-orm-images/image1a.png#lightbox)
 
 Dopo aver creato la libreria SQLite.NET disponibile, eseguire la tre procedura usarlo per accedere a un database:
 
@@ -68,7 +70,7 @@ Esempio di codice seguente mostra un'interazione intero database utilizzando la 
 using SQLite; // from the github SQLite.cs class
 ```
 
-Questa operazione richiede che si è aggiunti SQLite al progetto, come evidenziato [qui](#Using_SQLite.NET). Si noti che la tabella di database SQLite è definita tramite l'aggiunta di attributi a una classe (il `Stock` classe) anziché un comando CREATE TABLE.
+Questa operazione richiede che si è aggiunti SQLite al progetto, come evidenziato [qui](#Usage). Si noti che la tabella di database SQLite è definita tramite l'aggiunta di attributi a una classe (il `Stock` classe) anziché un comando CREATE TABLE.
 
 ```csharp
 [Table("Items")]

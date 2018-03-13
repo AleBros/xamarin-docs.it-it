@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fdd4311072efd5571724fbe00d12a96921054fa2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4c5b9fcbfaabbfc78da1064396dc3fec2d3fde8d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="deployment-and-testing"></a>Distribuzione e test
 
@@ -23,7 +23,7 @@ Se si desidera distribuire a un test delle espressioni di controllo o caricare l
 - Nel **iOS Dev Center**:
   - [ID dell'app](#App_IDs) sono stati creati.
   - [Gruppi di app](#App_Groups) configurata (se richiesto).
-  - [*Distribuzione* profili di Provisioning](#Provisioning_Profiles) creato.
+  - Profili di Provisioning distribuzione creato
 
 - Nella soluzione:
 
@@ -36,6 +36,7 @@ Se si desidera distribuire a un test delle espressioni di controllo o caricare l
   - [Distribuire un Apple Watch per il testing](~/ios/watchos/deploy-test/device.md), o
   - [Caricare nell'App Store](~/ios/watchos/deploy-test/appstore.md).
 
+<a name="App_IDs"/>
 
 ## <a name="app-ids"></a>ID dell'App
 
@@ -65,7 +66,7 @@ Si noti che alcune funzionalità possono essere utilizzate con un carattere joll
 
 Per la distribuzione, è solo necessario creare una distribuzione profilo di Provisioning per il carattere jolly ID App.
 
-<a name="app-groups" />
+<a name="App_Groups" />
 
 ## <a name="app-groups"></a>Gruppi di app
 
@@ -102,8 +103,6 @@ Fare doppio clic per modificare il **Entitlements.plist** file in questi progett
 .![L'editor Entitlements.plist](images/entitlements-plist-sml.png)
 
 Eseguire **non** abilitare i diritti nel progetto di applicazione delle espressioni di controllo. Non è necessario attivare questa opzione nel controllo stesso.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 3b54ed876857f0cd04d7a304ff05b9710fbd9e04
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 6735e9c03bee981f048231b53539c3b239f64484
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="string-formatting"></a>Formattazione di stringhe
 
@@ -121,7 +121,7 @@ L'ultimo gruppo di sezione di `BindingContext` al valore di `Math.PI` e lo visua
 
 Di seguito è riportato il programma in esecuzione in tutti e tre le piattaforme:
 
-[![Stringa di formattazione](string-formatting-images/stringformatting-small.png "stringa di formattazione")](string-formatting-images/stringformatting-large.png "la formattazione di stringhe")
+[![Stringa di formattazione](string-formatting-images/stringformatting-small.png "stringa di formattazione")](string-formatting-images/stringformatting-large.png#lightbox "la formattazione di stringhe")
 
 ## <a name="viewmodels-and-string-formatting"></a>ViewModel e formattazione di stringhe
 
@@ -174,7 +174,7 @@ Questo approccio viene illustrato nel **colori migliori** un esempio che utilizz
 
 Esistono tre coppie di `Slider` e `Label` negli elementi associati alla stessa proprietà di origine di `HslColorViewModel` oggetto. L'unica differenza è che `Label` ha un `StringFormat` proprietà per visualizzare ogni `Slider` valore.
 
-[![Selettore di colore meglio](string-formatting-images/bettercolorselector-small.png "selettore di colore meglio")](string-formatting-images/bettercolorselector-large.png "meglio selettore di colore")
+[![Selettore di colore meglio](string-formatting-images/bettercolorselector-small.png "selettore di colore meglio")](string-formatting-images/bettercolorselector-large.png#lightbox "meglio selettore di colore")
 
 È possibile chiedersi come è possibile visualizzare i valori RGB (rossi, verdi e blu) in formato esadecimale a due cifre tradizionali. Tali valori integer non sono disponibili direttamente il `Color` struttura. Una soluzione, è possibile calcolare valori integer con i componenti di colore all'interno di ViewModel ed esporli come proprietà. È possibile quindi formattare utilizzando il `X2` formattazione specifica.
 

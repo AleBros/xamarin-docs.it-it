@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: f1f420641691e700894687fef8ea3bd44fd60ff2
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d7f7e031d91cd1505ee255bbf0d25198bd9ae82a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-contentpage"></a>Personalizzazione di un ContentPage
 
@@ -99,7 +99,7 @@ Il processo di creazione della classe renderer personalizzato è come segue:
 1. Aggiungere un `ExportRenderer` attributo alla classe renderer pagina per specificare che verrà usata per il rendering della pagina di xamarin. Forms. Questo attributo viene utilizzato per registrare il renderer personalizzato con xamarin. Forms.
 
 > [!NOTE]
-> **Nota**: è facoltativo per fornire un renderer di pagine in ogni progetto della piattaforma. Se non è registrato un renderer di pagine, verrà utilizzato il programma di rendering predefinito per la pagina.
+> È facoltativo per fornire un renderer di pagine in ogni progetto della piattaforma. Se non è registrato un renderer di pagine, verrà utilizzato il programma di rendering predefinito per la pagina.
 
 Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, con la relazione tra di essi:
 
@@ -248,7 +248,7 @@ Nella piattaforma Windows Phone, un riferimento tipizzato a pagina nativo utiliz
 Quando si implementa un renderer personalizzato che deriva da `PageRenderer` in Windows Runtime, il `ArrangeOverride` metodo deve essere implementato anche per disporre i controlli della pagina, in quanto il renderer di base non sa cosa farne. In caso contrario, risultati di una pagina vuota. Pertanto, in questo esempio il `ArrangeOverride` chiamate al metodo di `Arrange` metodo sul `Page` istanza.
 
 > [!NOTE]
-> **Nota**: è importante arrestare ed eliminare oggetti che forniscono l'accesso alla camera in un'applicazione Windows Phone 8.1 WinRT. In caso contrario, può interferire con altre applicazioni che tentano di accedere la fotocamera del dispositivo. Per ulteriori informazioni, vedere il `CleanUpCaptureResourcesAsync` metodo nel progetto nella soluzione di esempio, Windows Phone e [Guida introduttiva: acquisizione video tramite l'API MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx).
+> È importante arrestare ed eliminare oggetti che forniscono l'accesso alla camera in un'applicazione Windows Phone 8.1 WinRT. In caso contrario, può interferire con altre applicazioni che tentano di accedere la fotocamera del dispositivo. Per ulteriori informazioni, vedere il `CleanUpCaptureResourcesAsync` metodo nel progetto nella soluzione di esempio, Windows Phone e [Guida introduttiva: acquisizione video tramite l'API MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx).
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>Creazione di Renderer di pagine in UWP
 
@@ -297,7 +297,7 @@ La chiamata per la classe base `OnElementChanged` metodo crea un `FrameworkEleme
 Quando si implementa un renderer personalizzato che deriva da `PageRenderer` in UWP, il `ArrangeOverride` metodo deve essere implementato anche per disporre i controlli della pagina, in quanto il renderer di base non sa cosa farne. In caso contrario, risultati di una pagina vuota. Pertanto, in questo esempio il `ArrangeOverride` chiamate al metodo di `Arrange` metodo sul `Page` istanza.
 
 > [!NOTE]
-> **Nota**: è importante arrestare ed eliminare oggetti che forniscono l'accesso alla camera in un'applicazione UWP. In caso contrario, può interferire con altre applicazioni che tentano di accedere la fotocamera del dispositivo. Per ulteriori informazioni, vedere [visualizzare l'anteprima della fotocamera](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access).
+> È importante arrestare ed eliminare oggetti che forniscono l'accesso alla camera in un'applicazione UWP. In caso contrario, può interferire con altre applicazioni che tentano di accedere la fotocamera del dispositivo. Per ulteriori informazioni, vedere [visualizzare l'anteprima della fotocamera](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access).
 
 ## <a name="summary"></a>Riepilogo
 

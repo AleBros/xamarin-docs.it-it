@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 726c65746b1282223c403b08c54c400ea32a6324
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 62ac3ab4b3114447f0c67d86c601a688bb8ff1a7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cell-appearance"></a>Aspetto delle celle
 
@@ -230,7 +230,7 @@ Il [ `OnBindingContextChanged` ](https://developer.xamarin.com/api/member/Xamari
 In alternativa, cui è possibile associare i controlli dell'interfaccia utente di [ `BindableProperty` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) istanze per visualizzare i relativi valori, che elimina la necessità di eseguire l'override di `OnBindingContextChanged` metodo.
 
 > [!NOTE]
-> **Nota**: quando si esegue l'override `OnBindingContextChanged`, assicurarsi che la classe base `OnBindingContextChanged` metodo viene chiamato in modo che i delegati registrati ricevano il `BindingContextChanged` evento.
+> Quando si esegue l'override `OnBindingContextChanged`, assicurarsi che la classe base `OnBindingContextChanged` metodo viene chiamato in modo che i delegati registrati ricevano il `BindingContextChanged` evento.
 
 In XAML, il tipo di cella personalizzato di associazione ai dati può essere ottenuto come illustrato nell'esempio di codice seguente:
 

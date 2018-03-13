@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: fd31413b777e1179e7f4faf6f91f91bc6c41e82b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6561ff70997af05ed4df6b7bfe0ba6345fb44d9d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-segmented-controls"></a>Utilizzo dei controlli segmentati
 
@@ -21,7 +21,7 @@ _Questo articolo descrive la progettazione e utilizzo dei controlli segmentata a
 
 Un controllo segmentata fornisce un set di elementi lineari, ognuno dei quali può contenere testo o un'icona e viene utilizzata per fornire un set di opzioni correlate all'utente.
 
-[ ![](segmented-controls-images/segment01.png "Controlli di segmento di esempio")](segmented-controls-images/segment01.png)
+[![](segmented-controls-images/segment01.png "Controlli di segmento di esempio")](segmented-controls-images/segment01.png#lightbox)
 
 Apple ha i seguenti suggerimenti per l'utilizzo di controlli segmentati:
 
@@ -57,36 +57,36 @@ Nuovamente, è possibile combinare testo e icone in un determinato segmento ed e
 
 Il modo più semplice per utilizzare i controlli di segmento in un'app Xamarin.tvOS è per aggiungerli all'interfaccia utente dell'applicazione utilizzando la finestra di progettazione iOS.
 
-[[ide name="xs"]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 1. Nel **soluzione riempimento**, fare doppio clic su di `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **segmento controllo** dal **della casella degli strumenti** e rilasciarla sulla vista: 
 
-    [ ![](segmented-controls-images/segment02.png "Un segmento di controllo")](segmented-controls-images/segment02.png)
+    [![](segmented-controls-images/segment02.png "Un segmento di controllo")](segmented-controls-images/segment02.png#lightbox)
 1. Nel **scheda Widget** del **proprietà riempimento**, è possibile modificare diverse proprietà del controllo di segmento, ad esempio il **stile** e **stato**: 
 
-    [ ![](segmented-controls-images/segment03.png "La scheda Widget")](segmented-controls-images/segment03.png)
+    [![](segmented-controls-images/segment03.png "La scheda Widget")](segmented-controls-images/segment03.png#lightbox)
 1. Utilizzare il **segmenti** campo per controllare il numero di segmenti nel controller.
 1. Selezionare un determinato segmento dal **elenco a discesa segmento** per modificarne le proprietà singole, ad esempio **titolo** o **immagine** e per controllare se un determinato segmento  **Abilitato** o **selezionati** quando il controllo viene visualizzato.
 1. Infine, assegnare **nomi** ai controlli in modo che è possibile rispondere ad essi nel codice c#. Ad esempio: 
 
-    [ ![](segmented-controls-images/segment04.png "Assegnare un nome")](segmented-controls-images/segment04.png)
+    [![](segmented-controls-images/segment04.png "Assegnare un nome")](segmented-controls-images/segment04.png#lightbox)
 1. Salvare le modifiche.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
     
 1. Nel **Esplora**, fare doppio clic su di `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **segmento controllo** dal **della casella degli strumenti** e rilasciarla sulla vista: 
 
-    [ ![](segmented-controls-images/segment02-vs.png "Un segmento di controllo")](segmented-controls-images/segment02-vs.png)
+    [![](segmented-controls-images/segment02-vs.png "Un segmento di controllo")](segmented-controls-images/segment02-vs.png#lightbox)
 1. Nel **scheda Widget** del **Esplora proprietà**, è possibile modificare diverse proprietà del controllo di segmento, ad esempio il **stile** e **stato**: 
 
-    [ ![](segmented-controls-images/segment03-vs.png "La scheda Widget")](segmented-controls-images/segment03-vs.png)
+    [![](segmented-controls-images/segment03-vs.png "La scheda Widget")](segmented-controls-images/segment03-vs.png#lightbox)
 1. Utilizzare il **segmenti** campo per controllare il numero di segmenti nel controller.
 1. Selezionare un determinato segmento dal **elenco a discesa segmento** per modificarne le proprietà singole, ad esempio **titolo** o **immagine** e per controllare se un determinato segmento  **Abilitato** o **selezionati** quando il controllo viene visualizzato.
 1. Infine, assegnare **nomi** ai controlli in modo che è possibile rispondere ad essi nel codice c#. Ad esempio: 
 
-    [ ![](segmented-controls-images/segment04-vs.png "Assegnare un nome")](segmented-controls-images/segment04-vs.png)
+    [![](segmented-controls-images/segment04-vs.png "Assegnare un nome")](segmented-controls-images/segment04-vs.png#lightbox)
 1. Salvare le modifiche.
     
 -----

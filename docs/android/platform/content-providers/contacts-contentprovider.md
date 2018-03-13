@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/22/2018
-ms.openlocfilehash: 677d672b3f00d4c3f3505ab2adf977f16fca4de5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 730cc1f815641d79350784790e3b33b743d1aebe
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-the-contacts-contentprovider"></a>Tramite il provider di contenuti di contatti
 
@@ -40,7 +40,6 @@ Ognuno di questi metodi ha lo stesso set di base di input:
 -  **SortOrder** &ndash; colonne da ordinare.
 
 
-<a name="Creating_Inputs_for_a_Query" />
 
 ## <a name="creating-inputs-for-a-query"></a>Creazione di input per una Query
 
@@ -60,14 +59,12 @@ string[] projection = {
 Per questo esempio, il `selection`, `selectionArgs` e `sortOrder` verranno ignorati, impostarli su `null`.
 
 
-<a name="Creating_a_Cursor_from_a_Content_Provider_Uri" />
 
 ## <a name="creating-a-cursor-from-a-content-provider-uri"></a>Creazione di un cursore da un Uri del Provider di contenuti
 
 Dopo avere creati gli oggetti parametro, possono essere utilizzati in uno dei tre modi seguenti:
 
 
-<a name="Using_a_Managed_Query" />
 
 ### <a name="using-a-managed-query"></a>Utilizzo di una Query gestita
 
@@ -80,7 +77,6 @@ var cursor = activity.ManagedQuery(uri, projection, null, null, null);
 Questo cursore verrà gestito da Android in modo non è necessario chiuderlo.
 
 
-<a name="Using_ContentResolver" />
 
 ### <a name="using-contentresolver"></a>Utilizzando ContentResolver
 
@@ -100,7 +96,6 @@ cursor.Close();
 In alternativa, è possibile chiamare `StartManagingCursor()` e `StopManagingCursor()` per gestire il cursore. I cursori gestiti sono disattivati e nuovamente eseguita una query quando le attività sono arrestate e riavviate automaticamente.
 
 
-<a name="Using_CursorLoader" />
 
 ### <a name="using-cursorloader"></a>Utilizzando CursorLoader
 
@@ -116,7 +111,6 @@ Il `CursorLoader` assicura che tutte le operazioni del cursore vengono eseguite 
 Inoltre è possono utilizzare le versioni precedenti di Android di `CursorLoader` classe utilizzando il [v4 supporto librerie](http://developer.android.com/tools/support-library/index.html).
 
 
-<a name="Displaying_the_Cursor_Data_with_a_Custom_Adapter" />
 
 ## <a name="displaying-the-cursor-data-with-a-custom-adapter"></a>La visualizzazione dei dati di cursore con un Adapter personalizzato
 
@@ -189,13 +183,12 @@ public override View GetView (int position, View convertView, ViewGroup parent)
 
 (Se presente), viene visualizzata l'immagine usando l'Uri del file di immagine nel dispositivo. L'applicazione è simile al seguente:
 
-[![Schermata dell'app la visualizzazione dei contatti in un controllo ListView; viene visualizzata un'immagine a sinistra di una voce](contacts-contentprovider-images/contactsprovider.png)](contacts-contentprovider-images/contactsprovider.png)
+[![Schermata dell'app la visualizzazione dei contatti in un controllo ListView; viene visualizzata un'immagine a sinistra di una voce](contacts-contentprovider-images/contactsprovider.png)](contacts-contentprovider-images/contactsprovider.png#lightbox)
 
 Usando un modello di codice simile, l'applicazione può accedere a un'ampia gamma di dati di sistema, tra cui l'utente foto, video e musica.
 Alcuni tipi di dati richiedono autorizzazioni speciali a essere richiesti del progetto **AndroidManifest.xml**.
 
 
-<a name="Displaying_the_Cursor_Data_with_a_SimpleCursorAdapter" />
 
 ## <a name="displaying-the-cursor-data-with-a-simplecursoradapter"></a>La visualizzazione dei dati di cursore con un SimpleCursorAdapter
 

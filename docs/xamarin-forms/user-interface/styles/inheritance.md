@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 482358b0ccbedf926cd9182065a1eb8f4c12683c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e57f19d1eb66e22badb418d4584f5654904c7ade
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="style-inheritance"></a>Ereditarietà degli stili
 
@@ -62,10 +62,10 @@ Il codice seguente illustra *esplicita* stile ereditarietà in una pagina XAML:
 
 Il `baseStyle` destinazioni [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) le istanze e imposta il [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) e [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) proprietà. Il `baseStyle` non è impostato direttamente su tutti i controlli. In alternativa, `labelStyle` e `buttonStyle` ereditano da essa, i valori di proprietà associabile aggiuntive. Il `labelStyle` e `buttonStyle` vengono quindi applicati al [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) istanze e [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) istanza, impostando i relativi [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) proprietà. Ciò comporta l'aspetto illustrato nelle schermate seguenti:
 
-[![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png)
+[![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
 
 > [!NOTE]
-> **Nota**: uno stile implicito può essere derivato da un stile esplicito, ma un stile esplicito non può essere derivato da uno stile implicito.
+> Uno stile implicito può essere derivato da un stile esplicito, ma un stile esplicito non può essere derivato da uno stile implicito.
 
 ### <a name="respecting-the-inheritance-chain"></a>Rispettando la catena di ereditarietà
 
@@ -106,7 +106,7 @@ Questa catena di ereditarietà è illustrata nell'esempio di codice seguente:
 
 In questo esempio, `labelStyle` e `buttonStyle` è risorse a livello di controllo mentre `baseStyle` è una risorsa di livello di pagina. Tuttavia, se `labelStyle` e `buttonStyle` ereditare `baseStyle`, non è possibile per `baseStyle` da cui ereditare `labelStyle` o `buttonStyle`, a causa di nelle rispettive posizioni nella gerarchia della visualizzazione.
 
-## <a name="style-inheritance-in-c35"></a>Ereditarietà degli stili in C &#35;
+## <a name="style-inheritance-in-c35"></a>Ereditarietà degli stili in C&#35;
 
 Equivalente in c# pagina, in cui [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) istanze sono assegnate direttamente al [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) proprietà dei controlli necessari, è illustrato nell'esempio di codice seguente:
 

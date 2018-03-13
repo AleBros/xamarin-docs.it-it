@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 8afce6021c2816f354e26ccecd7d0c40ceb2a9bd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: babbe0344130dc0ce38023eabe7479d2b464276b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="editing-nuget-metadata"></a>Modifica dei metadati di NuGet
 
@@ -26,7 +26,7 @@ Il **metadati** sezione Configura i valori utilizzati per il [ **. nuspec** file
 
 Il **generale** scheda contiene quattro campi che devono essere immessi per generare un pacchetto NuGet:
 
-[ ![](metadata-images/metadata-general-sml.png "Finestra metadati richiesti del pacchetto NuGet")](metadata-images/metadata-general.png)
+[![](metadata-images/metadata-general-sml.png "Finestra metadati richiesti del pacchetto NuGet")](metadata-images/metadata-general.png#lightbox)
 
 - **ID** : l'identificatore del pacchetto, che deve essere univoco all'interno di Nuget.org (o punto in cui verrà distribuito il pacchetto). Seguire questo [indicazioni](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) e usare solo caratteri validi in un URL (senza spazi ed evitare i caratteri speciali).
 - **Versione** : scegliere un numero di versione coerenza con [le regole di controllo delle versioni di NuGet](https://docs.microsoft.com/en-us/nuget/create-packages/dependency-versions).
@@ -45,7 +45,7 @@ Per ulteriori informazioni, vedere il [richiesto riferimento agli elementi](http
 
 Il **dettagli** scheda contiene i campi facoltativi da includere nel file di manifesto del pacchetto NuGet.
 
-[ ![](metadata-images/metadata-detail-sml.png "Finestra di metadati facoltative del pacchetto NuGet")](metadata-images/metadata-detail.png)
+[![](metadata-images/metadata-detail-sml.png "Finestra di metadati facoltative del pacchetto NuGet")](metadata-images/metadata-detail.png#lightbox)
 
 Consultare il [riferimenti a elementi facoltativi](https://docs.microsoft.com/en-us/nuget/schema/nuspec#optional-metadata-elements) per ulteriori informazioni sui campi obbligatori e facoltativi.
 

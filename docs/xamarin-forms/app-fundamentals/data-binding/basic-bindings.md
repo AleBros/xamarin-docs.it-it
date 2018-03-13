@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 500ad02d79cea79f59b1aca91b0312c9a9d6bac3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b82c0471985306962133c3bf7b084b49d5588bb6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="basic-bindings"></a>Associazioni di base
 
@@ -94,7 +94,7 @@ Tuttavia, incluso il nome di classe è un buon promemoria dell'oggetto di destin
 
 Come modificare il `Slider`, `Label` ruota conseguenza:
 
-[![Codice Basice associazione](basic-bindings-images/basiccodebinding-small.png "codice base associazione")](basic-bindings-images/basiccodebinding-large.png "associazione di base di codice")
+[![Codice Basice associazione](basic-bindings-images/basiccodebinding-small.png "codice base associazione")](basic-bindings-images/basiccodebinding-large.png#lightbox "associazione di base di codice")
 
 Il **associazione Xaml di base** è identica alla pagina **associazione di base codice** ad eccezione del fatto che definisce l'associazione di tutti i dati in XAML:
 
@@ -190,7 +190,7 @@ Il `Binding` costruttore ha 6 parametri, pertanto la `source` viene specificato 
 
 Eseguire il programma potrebbe essere leggermente sorprendente:
 
-[![Codice alternativo associazione](basic-bindings-images/alternativecodebinding-small.png "codice alternativo associazione")](basic-bindings-images/alternativecodebinding-large.png "associazione codice alternativo")
+[![Codice alternativo associazione](basic-bindings-images/alternativecodebinding-small.png "codice alternativo associazione")](basic-bindings-images/alternativecodebinding-large.png#lightbox "associazione codice alternativo")
 
 La schermata di iOS a sinistra mostra la schermata aspetto quando viene visualizzata la prima pagina. Dove è il `Label`? 
 
@@ -319,7 +319,7 @@ Il **ereditarietà di contesto di associazione** esempio è una dimostrazione de
 
 Il `BindingContext` proprietà del `StackLayout` è impostato sul `slider` oggetto. Questo contesto di associazione viene ereditato da entrambi il `Label` e `BoxView`, entrambi privi di loro `Rotation` impostate in modo che il `Value` proprietà del `Slider`: 
 
-[![Ereditarietà del contesto di associazione](basic-bindings-images/bindingcontextinheritance-small.png "ereditarietà del contesto di associazione")](basic-bindings-images/bindingcontextinheritance-large.png "ereditarietà del contesto di associazione")
+[![Ereditarietà del contesto di associazione](basic-bindings-images/bindingcontextinheritance-small.png "ereditarietà del contesto di associazione")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "ereditarietà del contesto di associazione")
 
 Nel [articolo successivo](binding-mode.md), si noterà come la *modalità di associazione* possibile modificare il flusso di dati tra oggetti di origine e destinazione.
 

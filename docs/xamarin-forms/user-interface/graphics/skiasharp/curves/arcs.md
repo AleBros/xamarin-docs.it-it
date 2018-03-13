@@ -4,14 +4,15 @@ description: Informazioni su come usare SkiaSharp per definire gli archi in tre 
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: 236f5da78022d6f6482ed66ffd439c4cd15766a3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 390c8f4634ea38ecb93e3f21175db00fef27b8e4
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Tre metodi per disegnare un arco
 
@@ -100,7 +101,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Come si può notare, sia l'angolo iniziale e l'angolo di apertura può assumere i valori negativi:
 
-[![](arcs-images/anglearc-small.png "Schermata triplo della pagina arco angolo")](arcs-images/anglearc-large.png "tripla schermata della pagina angolo arco")
+[![](arcs-images/anglearc-small.png "Schermata triplo della pagina arco angolo")](arcs-images/anglearc-large.png#lightbox "tripla schermata della pagina angolo arco")
 
 Questo approccio per la generazione di un arco è modo algoritmico la più semplice e facile derivare le equazioni parametriche che descrivono l'arco. Conoscere le dimensioni e posizione dei puntini di sospensione e gli angoli di inizio e di apertura, i punti iniziale e finale dell'arco può essere calcolati con trigonometria semplice:
 
@@ -205,11 +206,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Un nuovo `SKPath` viene creato l'oggetto per ogni sezione della torta. Il percorso è costituito da una riga dal centro, quindi un `ArcTo` per tracciare l'arco e un'altra riga nuovamente i risultati center il `Close` chiamare. Questo programma consente di visualizzare le sezioni "esploso" spostandoli tutte le risorse dal centro di 50 pixel. L'attività richiede un vettore di direzione del punto centrale dell'angolo di apertura per ogni sezione:
 
-[![](arcs-images/explodedpiechart-small.png "Schermata di triplo della pagina del grafico a torta esplosa")](arcs-images/explodedpiechart-large.png "tripla schermata della pagina del grafico a torta esplosa")
+[![](arcs-images/explodedpiechart-small.png "Schermata di triplo della pagina del grafico a torta esplosa")](arcs-images/explodedpiechart-large.png#lightbox "tripla schermata della pagina del grafico a torta esplosa")
 
 Per visualizzare l'aspetto senza "esplosione", è sufficiente impostare come commento il `Translate` chiamare:
 
-[![](arcs-images/explodedpiechartunexploded-small.png "Schermata triplo della pagina di grafico a torta esplosa senza l'esplosione")](arcs-images/explodedpiechartunexploded-large.png "tripla schermata della pagina senza l'esplosione grafico a torta esplosa")
+[![](arcs-images/explodedpiechartunexploded-small.png "Schermata triplo della pagina di grafico a torta esplosa senza l'esplosione")](arcs-images/explodedpiechartunexploded-large.png#lightbox "tripla schermata della pagina senza l'esplosione grafico a torta esplosa")
 
 ## <a name="the-tangent-arc"></a>L'arco tangente
 
@@ -413,7 +414,7 @@ public partial class TangentArcPage : InteractivePage
 
 Ecco il **arco tangente** in esecuzione in tutti e tre le piattaforme di pagina:
 
-[![](arcs-images/tangentarc-small.png "Schermata triplo della pagina arco tangente")](arcs-images/tangentarc-large.png "tripla schermata della pagina arco tangente")
+[![](arcs-images/tangentarc-small.png "Schermata triplo della pagina arco tangente")](arcs-images/tangentarc-large.png#lightbox "tripla schermata della pagina arco tangente")
 
 Nel dispositivo Windows Mobile, i tre punti sono collineari quasi e l'arco è molto piccolo.
 
@@ -490,7 +491,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Di seguito è riportato il programma in esecuzione su tre piattaforme:
 
-[![](arcs-images/roundedheptagon-small.png "Schermata triplo della pagina arrotondato Heptagon")](arcs-images/roundedheptagon-large.png "tripla schermata della pagina Heptagon arrotondato")
+[![](arcs-images/roundedheptagon-small.png "Schermata triplo della pagina arrotondato Heptagon")](arcs-images/roundedheptagon-large.png#lightbox "tripla schermata della pagina Heptagon arrotondato")
 
 ## <a name="the-elliptical-arc"></a>Arco ellittico
 
@@ -585,7 +586,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Qui è in esecuzione su tre piattaforme:
 
-[![](arcs-images/ellipticalarc-small.png "Schermata di triplo della pagina arco ellittico")](arcs-images/ellipticalarc-large.png "tripla schermata della pagina arco ellittico")
+[![](arcs-images/ellipticalarc-small.png "Schermata di triplo della pagina arco ellittico")](arcs-images/ellipticalarc-large.png#lightbox "tripla schermata della pagina arco ellittico")
 
 Il **arco infinito** pagina utilizza l'arco ellittico per disegnare un simbolo di infinito. Il simbolo di infinito si basa su due cerchi con un raggio di 100 unità separati da 100 unità:
 
@@ -653,7 +654,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Il codice Usa il `Bounds` proprietà `SKPath` per determinare le dimensioni del seno infinito per ridimensionarlo per le dimensioni dell'area di disegno:
 
-[![](arcs-images/arcinfinity-small.png "Schermata triplo della pagina arco infinito")](arcs-images/arcinfinity-large.png "tripla schermata della pagina infinito arco")
+[![](arcs-images/arcinfinity-small.png "Schermata triplo della pagina arco infinito")](arcs-images/arcinfinity-large.png#lightbox "tripla schermata della pagina infinito arco")
 
 Il risultato appare un po' di piccole dimensioni, che suggerisce che il `Bounds` proprietà `SKPath` è di dimensioni maggiori rispetto al percorso di reporting.
 
@@ -661,7 +662,7 @@ Internamente, Skia all'incirca l'arco con più di Bézier quadratica. Queste cur
 
 Per ottenere un migliore adattamento, utilizzare il `TightBounds` proprietà, che consente di escludere i punti di controllo. Ecco il programma in esecuzione in modalità orizzontale e l'utilizzo di `TightBounds` proprietà per ottenere i limiti di percorso:
 
-[![](arcs-images/arcinfinitytightbounds-small.png "Schermata triplo della pagina arco infinito con limiti di una stretta")](arcs-images/arcinfinitytightbounds-large.png "tripla schermata della pagina arco infinito con limiti di una stretta")
+[![](arcs-images/arcinfinitytightbounds-small.png "Schermata triplo della pagina arco infinito con limiti di una stretta")](arcs-images/arcinfinitytightbounds-large.png#lightbox "tripla schermata della pagina arco infinito con limiti di una stretta")
 
 Anche se le connessioni tra l'archi e linee rette sono matematicamente smooth, la modifica da arco linea retta potrebbe sembrare poco improvvisa. Nella pagina successiva, viene visualizzato un simbolo di infinito migliorato.
 

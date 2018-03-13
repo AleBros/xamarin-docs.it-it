@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e10a34bc5de16c19f48fa1b869daca9670f37804
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 53c2c3e3866cb782eea0cc9514c0c35379e48b5c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="apple-pay-on-watchos"></a>Apple Pay su watchOS
 
@@ -31,7 +31,7 @@ In iOS 10, il framework PassKit è stato ampliato per supportare Apple Pay all'e
 
 ### <a name="supporting-apple-pay-outside-of-uikit"></a>Supporto di pagamento in base di fuori di UIKit Apple
 
-Utilizzando [PKPaymentAuthorizationController](https://developer.apple.com/reference/passkit/pkpaymentauthorizationcontroller) e [PKPaymentAuthorixationControllerDelegate](https://developer.apple.com/reference/passkit/pkpaymentauthorizationcontrollerdelegate), un'applicazione può supportare le stesse funzionalità fornite da [ PKPaymentAuthorizationViewController](https://developer.apple.com/reference/passkit/pkpaymentauthorizationviewcontroller) senza utilizzare UIKit. Anche se questa nuova API è necessaria per supportare Apple Pay l'Apple Watch (e in specifici scopi nonché), è facoltativo negli altri casi (ad esempio le app esistenti). Tuttavia, Apple suggerisce lo spostamento alla nuova API appena possibile per fornire un ampio supporto Apple Pay in tutte le app dello sviluppatore con una sola codebase. Per ulteriori informazioni sui tipi e l'integrazione di Siri, consultare il nostro [Introduzione a SiriKit](/~/ios/platform/sirikit/index.md) documentazione.
+Utilizzando [PKPaymentAuthorizationController](https://developer.apple.com/reference/passkit/pkpaymentauthorizationcontroller) e [PKPaymentAuthorixationControllerDelegate](https://developer.apple.com/reference/passkit/pkpaymentauthorizationcontrollerdelegate), un'applicazione può supportare le stesse funzionalità fornite da [ PKPaymentAuthorizationViewController](https://developer.apple.com/reference/passkit/pkpaymentauthorizationviewcontroller) senza utilizzare UIKit. Anche se questa nuova API è necessaria per supportare Apple Pay l'Apple Watch (e in specifici scopi nonché), è facoltativo negli altri casi (ad esempio le app esistenti). Tuttavia, Apple suggerisce lo spostamento alla nuova API appena possibile per fornire un ampio supporto Apple Pay in tutte le app dello sviluppatore con una sola codebase. Per ulteriori informazioni sui tipi e l'integrazione di Siri, consultare il nostro [Introduzione a SiriKit](~/ios/platform/sirikit/index.md) documentazione.
 
 ### <a name="presenting-issuer-cards-from-within-apps"></a>Presentazione delle schede dell'autorità di certificazione da all'interno di applicazioni
 

@@ -3,14 +3,15 @@ title: "Riepilogo del capitolo 1. La modalità di utilizzo xamarin. Forms"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c0f3313fa3c4d1075be7deeb871e303006c533e8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b60a45cc998743d34d5cadb7750f35e7b965579
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Riepilogo del capitolo 1. La modalità di utilizzo xamarin. Forms
 
@@ -44,7 +45,7 @@ I modelli di soluzioni xamarin. Forms correnti includono modelli di progetti per
 
 La maggior parte di un programma xamarin. Forms esiste in una libreria di classi Portabile o a un SAP. Ognuna delle piattaforme è costituito da uno stub di piccola applicazione che chiama la libreria di classi Portabile. Eseguire il mapping le APIs Xamarin.Forms in controlli nativi in ciascuna piattaforma, in modo che ogni piattaforma mantiene il relativo aspetto caratteristica:
 
-[![Schermata tripla degli oggetti visivi di piattaforma condivisione](images/ch01fg03-small.png "xamarin. Forms Controls on Each Platform")](images/ch01fg03-large.png "xamarin. Forms Controls on Each Platform")
+[![Schermata tripla degli oggetti visivi di piattaforma condivisione](images/ch01fg03-small.png "xamarin. Forms Controls on Each Platform")](images/ch01fg03-large.png#lightbox "xamarin. Forms Controls on Each Platform")
 
 Le schermate da sinistra a destra mostrano un iPhone, un telefono Android e un telefono Windows 10 Mobile. In ogni schermata, la pagina contiene un xamarin. Forms [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) per la visualizzazione di testo, un [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) per l'inizializzazione di azioni, un [ `Switch` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) per scelta di un valore di attivazione/disattivazione e un [ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) per specificare un valore all'interno di un intervallo continuo. Tutti e quattro le visualizzazioni sono elementi figlio di un [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) su un [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/).
 

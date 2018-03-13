@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 234bd79754ae7f328d3207757156089441fc588c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0d418786a7364946e4e20100157fa0907b66deeb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="web-view"></a>Visualizzazione Web
 
@@ -96,7 +96,7 @@ Inizializza il membro [ `WebView` ](https://developer.xamarin.com/api/type/Andro
 
 Compilare ed eseguire l'app. App Visualizzatore di una semplice pagina web dovrebbe essere come quello illustrato nella schermata seguente:
 
-[![Esempio di app la visualizzazione di WebView](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png)
+[![Esempio di app la visualizzazione di WebView](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png#lightbox)
 
 Per gestire il **nuovamente** pulsante pressione di tasto, aggiungere la seguente istruzione using:
 
@@ -122,7 +122,7 @@ Questo [ `OnKeyDown(int, KeyEvent)` ](https://developer.xamarin.com/api/member/A
 
 Eseguire di nuovo l'applicazione. A questo punto dovrebbe essere in grado di seguire i collegamenti e spostarsi indietro nella cronologia della pagina:
 
-[![Schermate di esempio del pulsante Indietro in azione](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png)
+[![Schermate di esempio del pulsante Indietro in azione](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
 
 
 *Parti di questa pagina sono modifiche basate sul lavoro creati e condivisi per il progetto Android di origine aprire e usare in base alle condizioni descritte nel*

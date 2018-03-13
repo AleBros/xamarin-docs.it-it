@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 20b18cd79eeaabab8019c367e241a4975dc37b0e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b7db9082f05ea4db41ddb84d34be2ec9113f2ad5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-with-core-spotlight"></a>Ricerca con Core Spotlight
 
@@ -46,7 +46,7 @@ CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, 
 
 Questa informazione sarà simile alla seguente nei risultati di ricerca:
 
-[ ![](corespotlight-images/corespotlight01.png "Informazioni generali sul risultato di ricerca Spotlight di base")](corespotlight-images/corespotlight01.png)
+[![](corespotlight-images/corespotlight01.png "Informazioni generali sul risultato di ricerca Spotlight di base")](corespotlight-images/corespotlight01.png#lightbox)
 
 ## <a name="restoring-an-item"></a>Il ripristino di un elemento
 
@@ -80,7 +80,7 @@ Si noti che questo tempo è controllo per l'attività con un `ActivityType` di `
 Talvolta potrebbe essere quando un elemento di indice viene creati con Spotlight Core è necessario modificare, ad esempio una modifica nel titolo o immagine di anteprima è obbligatoria. Per apportare questa modifica, è utilizzare lo stesso metodo utilizzato per creare l'indice.
 Si crea un nuovo `CSSearchableItem` utilizzando lo stesso ID utilizzato per creare l'elemento e collegare un nuovo `CSSearchableItemAttributeSet` contenente attributi modificati:
 
-[ ![](corespotlight-images/corespotlight02.png "L'aggiornamento a una panoramica di elemento")](corespotlight-images/corespotlight02.png)
+[![](corespotlight-images/corespotlight02.png "L'aggiornamento a una panoramica di elemento")](corespotlight-images/corespotlight02.png#lightbox)
 
 Quando questo elemento viene scritto l'indice di ricerca, l'elemento esistente viene aggiornato con le nuove informazioni.
 

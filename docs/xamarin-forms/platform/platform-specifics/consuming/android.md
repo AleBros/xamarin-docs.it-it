@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/17/2017
-ms.openlocfilehash: e26fcb81bb99e5a49d16731777171b4efa4163c6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 739ee4ebeb3176d23ab1eb911baaab31a26252c4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-platform-specifics"></a>Specifiche di piattaforma Android
 
@@ -54,7 +54,7 @@ Il `Application.On<Android>` metodo specifica che questo specifico della piattaf
 
 Il risultato è che la tastiera area modalità operativa può essere impostata quando un controllo di input ha lo stato attivo di input:
 
-[![](android-images/pan-resize.png "Tastiera software specifico della piattaforma modalità operative")](android-images/pan-resize-large.png "Soft Keyboard Operating Mode Plaform-Specific")
+[![](android-images/pan-resize.png "Tastiera software specifico della piattaforma modalità operative")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
 
 <a name="fastscroll" />
 
@@ -98,7 +98,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 Il risultato è che lo scorrimento rapido attraverso i dati in un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) può essere abilitato, che modifica la dimensione del cursore di scorrimento:
 
-[![](android-images/fastscroll.png "ListView FastScroll specifico della piattaforma")](android-images/fastscroll-large.png "ListView FastScroll Plaform-Specific")
+[![](android-images/fastscroll.png "ListView FastScroll specifico della piattaforma")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
 
 <a name="enable_swipe_paging" />
 
@@ -244,7 +244,7 @@ Il `Application.Current.On<Android>` metodo specifica che questo specifico della
 
 Il risultato è che il [ `Disappearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) e [ `Appearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) gli eventi di pagina non verranno generati in pausa applicazione e riprendere rispettivamente, e la tastiera che, se è stato visualizzato quando l'applicazione è stato sospeso, verrà inoltre visualizzato quando l'applicazione riprende:
 
-[![](android-images/keyboard-on-resume.png "Ciclo di vita eventi specifici per la piattaforma")](android-images/keyboard-on-resume-large.png "specifico della piattaforma gli eventi del ciclo di vita")
+[![](android-images/keyboard-on-resume.png "Ciclo di vita eventi specifici per la piattaforma")](android-images/keyboard-on-resume-large.png#lightbox "specifico della piattaforma gli eventi del ciclo di vita")
 
 ## <a name="summary"></a>Riepilogo
 
@@ -253,7 +253,7 @@ In questo articolo viene illustrato come utilizzare la piattaforma-specifiche An
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Creazione di piattaforma specifiche](~/xamarin-forms/platform/platform-specifics/creating.md)
+- [Creazione di funzionalità specifiche della piattaforma](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (esempio)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 - [AndroidSpecific](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific/)
 - [AndroidSpecific.AppCompat](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat/)

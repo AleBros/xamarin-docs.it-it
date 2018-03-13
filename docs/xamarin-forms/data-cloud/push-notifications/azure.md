@@ -5,32 +5,35 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1EF400F-73F4-43E9-A0C3-1569A0F34A3B
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: cccbe64f69b926ced77403bcf85540ef1060dbac
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f0f767179a9280d7a6c6d7ce8125696d5e664cba
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sending-push-notifications-from-azure-mobile-apps"></a>Invio di notifiche Push da App per dispositivi mobili di Azure
 
 _Hub di notifica di Azure forniscono un'infrastruttura push scalabile per l'invio di notifiche push da qualsiasi back-end per qualsiasi piattaforma mobile, eliminando la complessità di un back-end la necessità di comunicare con sistemi di notifica tramite piattaforma diversa. In questo articolo viene illustrato come utilizzare gli hub di notifica di Azure per inviare notifiche push da un'istanza di App mobili di Azure a un'applicazione di xamarin. Forms._
 
-## <a name="overview"></a>Panoramica
+> [!VIDEO https://youtube.com/embed/le2lDY22xwM]
+
+**Azure Push da Hub di notifica e xamarin. Forms, [University Xamarin](https://university.xamarin.com/)**
 
 Una notifica push viene utilizzata per inviare le informazioni, ad esempio, un messaggio da un sistema back-end in un'applicazione in un dispositivo mobile per aumentare l'utilizzo e il coinvolgimento dell'applicazione. Può essere inviata la notifica in qualsiasi momento, anche quando l'utente non usa attivamente l'applicazione di destinazione.
 
 I sistemi back-end di inviare notifiche push ai dispositivi mobili tramite piattaforma notifica sistemi PNS (), come illustrato nel diagramma seguente:
 
-[![](azure-images/pns.png "Sistemi di notifica tramite piattaforma")](azure-images/pns-large.png "sistemi di notifica tramite piattaforma")
+[![](azure-images/pns.png "Sistemi di notifica tramite piattaforma")](azure-images/pns-large.png#lightbox "sistemi di notifica tramite piattaforma")
 
 Per inviare una notifica push, il sistema back-end contatta il PNS specifici della piattaforma per inviare una notifica a un'istanza dell'applicazione client. Questo aumenta significativamente la complessità del back-end quando sono necessari, le notifiche push multipiattaforma poiché il back-end deve usare ogni API PNS specifici della piattaforma e protocollo.
 
 Hub di notifica di Azure per eliminare questa complessità, astraendo i dettagli dei sistemi di notifica piattaforma diversa, consentendo una notifica multipiattaforma venga inviato con una singola chiamata API, come illustrato nel diagramma seguente:
 
-[![](azure-images/notification-hub.png)](azure-images/notification-hub-large.png)
+[![](azure-images/notification-hub.png)](azure-images/notification-hub-large.png#lightbox)
 
 Per inviare una notifica push, i contatti solo Azure Hub di notifica, che a sua volta comunica con i sistemi di notifica piattaforma diversa, riducendo pertanto la complessità del back-end del sistema di back-end del codice che invia le notifiche push.
 
@@ -44,7 +47,7 @@ Azure App per dispositivi mobili con un supporto predefinito per le notifiche pu
 
 L'applicazione di esempio viene illustrata un'applicazione di elenco di attività i cui dati vengono archiviati in un'istanza di App mobili di Azure. Ogni volta che un nuovo elemento viene aggiunto all'istanza di App mobili di Azure, viene inviata una notifica di push per l'applicazione di xamarin. Forms. La schermata seguente mostra ogni piattaforma per visualizzare la notifica push ricevuto:
 
-[![](azure-images/screenshots.png "Esempio di applicazione che riceve una notifica Push")](azure-images/screenshots-large.png "applicazione che riceve una notifica Push di esempio")
+[![](azure-images/screenshots.png "Esempio di applicazione che riceve una notifica Push")](azure-images/screenshots-large.png#lightbox "applicazione che riceve una notifica Push di esempio")
 
 Per ulteriori informazioni sugli hub di notifica di Azure, vedere [gli hub di notifica di Azure](https://azure.microsoft.com/documentation/articles/notification-hubs-push-notification-overview/) e [aggiungere notifiche push all'app xamarin. Forms](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push/).
 
@@ -118,7 +121,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 Quando si registra un'applicazione iOS con il servizio APN deve specificare i tipi di notifiche push da ricevere. Il `RegisterUserNotificationSettings` metodo registra i tipi di notifiche, l'applicazione può ricevere, con la `RegisterForRemoteNotifications` metodo di registrazione per ricevere le notifiche push da APNS.
 
 > [!NOTE]
-> **Nota**: la mancata chiamata di `RegisterUserNotificationSettings` genererà notifiche push automaticamente ricevute dall'applicazione.
+> La mancata chiamata di `RegisterUserNotificationSettings` genererà notifiche push automaticamente ricevute dall'applicazione.
 
 <a name="ios_registration_response" />
 
@@ -146,7 +149,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
 Questo metodo crea un modello di messaggio di notifica semplice come JSON e registra il dispositivo per ricevere una notifica modello dall'hub di notifica.
 
 > [!NOTE]
-> **Nota**: il `FailedToRegisterForRemoteNotifications` override deve essere implementato per gestire le situazioni, ad esempio alcuna connessione di rete. Questo è importante perché gli utenti potrebbero avviare l'applicazione durante offline.
+> Il `FailedToRegisterForRemoteNotifications` override deve essere implementato per gestire le situazioni, ad esempio alcuna connessione di rete. Questo è importante perché gli utenti potrebbero avviare l'applicazione durante offline.
 
 <a name="ios_process_incoming" />
 
@@ -177,7 +180,7 @@ public override void DidReceiveRemoteNotification(
 Il `userInfo` dizionario contiene la `aps` chiave, il cui valore è il `alert` dizionario con i dati rimanenti di notifica. Il dizionario viene recuperato, con la `string` messaggio di notifica visualizzato in una finestra di dialogo.
 
 > [!NOTE]
-> **Nota**: se un'applicazione non è in esecuzione quando si riceve una notifica push, l'applicazione verrà avviata ma la `DidReceiveRemoteNotification` metodo non elabora la notifica. In alternativa, ottenere il payload di notifica e rispondere in modo appropriato dal `WillFinishLaunching` o `FinishedLaunching` esegue l'override.
+> Se un'applicazione non è in esecuzione quando si riceve una notifica push, l'applicazione verrà avviata ma la `DidReceiveRemoteNotification` metodo non elabora la notifica. In alternativa, ottenere il payload di notifica e rispondere in modo appropriato dal `WillFinishLaunching` o `FinishedLaunching` esegue l'override.
 
 Per ulteriori informazioni su APN, vedere [le notifiche Push in iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md).
 
@@ -330,7 +333,7 @@ public class FirebaseNotificationService : FirebaseMessagingService
         intent.AddFlags(ActivityFlags.ClearTop);
         var pendingIntent = PendingIntent.GetActivity(this, 0, intent, PendingIntentFlags.OneShot);
 
-        var notificationBuilder = new Notification.Builder(this)
+        var notificationBuilder = new NotificationCompat.Builder(this)
             .SetSmallIcon(Resource.Drawable.ic_stat_ic_notification)
             .SetContentTitle("New Todo Item")
             .SetContentText(messageBody)

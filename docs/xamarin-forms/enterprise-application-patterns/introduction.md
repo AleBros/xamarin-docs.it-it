@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: b8d8aed397f72df53fdca7e455b8ef723e48e0a3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5334465905817336df91f5816596dc5723071811
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction"></a>Introduzione
 
@@ -88,7 +88,7 @@ Per informazioni sull'implementazione dei servizi back-end, vedere [Microservizi
 
 Questa guida è incentrata sulla creazione di applicazioni enterprise multipiattaforma con xamarin. Forms e Usa l'app mobile eShopOnContainers come esempio. Figura 1-2 mostra le pagine dall'app mobile eShopOnContainers che forniscono le funzionalità descritte in precedenza.
 
-[![](introduction-images/screenshots.png "L'app mobile eShopOnContainers")](introduction-images/screenshots-large.png "l'app mobile eShopOnContainers")
+[![](introduction-images/screenshots.png "L'app mobile eShopOnContainers")](introduction-images/screenshots-large.png#lightbox "l'app mobile eShopOnContainers")
 
 **Figura 1-2**: l'app mobile eShopOnContainers
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 83e01bba82713b55a0a69858c2a83aa243f71588
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 70703797792a2f667a2eb20cbc45d1736e5e6b9d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="web-views"></a>Visualizzazioni Web
 
@@ -40,7 +40,7 @@ webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 
 Ciò produce la visualizzazione web seguenti:
 
-[ ![](uiwebview-images/webview.png "L'effetto di ScalesPagesToFit")](uiwebview-images/webview.png)
+[![](uiwebview-images/webview.png "L'effetto di ScalesPagesToFit")](uiwebview-images/webview.png#lightbox)
 
 Per ulteriori informazioni sull'utilizzo `UIWebView`, fare riferimento per le soluzioni seguenti:
 
@@ -68,7 +68,7 @@ Il codice seguente consente di avviare un `WKWebView` nell'app xamarin:
 
 Ciò produce la visualizzazione web seguenti:
 
-[ ![](uiwebview-images/wkwebview.png "Una visualizzazione web di esempio senza ScalesPagesToFit")](uiwebview-images/wkwebview.png)
+[![](uiwebview-images/wkwebview.png "Una visualizzazione web di esempio senza ScalesPagesToFit")](uiwebview-images/wkwebview.png#lightbox)
 
 È importante notare che `WKWebView` è nello spazio dei nomi WebKit, pertanto è necessario aggiungere questa direttiva all'inizio della classe using.
 
@@ -98,7 +98,7 @@ PresentViewController(sfViewController, true, null);
 
 Ciò produce la visualizzazione web seguenti:
 
-[ ![](uiwebview-images/sfsafariviewcontroller.png "Una visualizzazione web di esempio con SFSafariViewController")](uiwebview-images/sfsafariviewcontroller.png)
+[![](uiwebview-images/sfsafariviewcontroller.png "Una visualizzazione web di esempio con SFSafariViewController")](uiwebview-images/sfsafariviewcontroller.png#lightbox)
 
 ## <a name="safari"></a>Safari
 
@@ -113,7 +113,7 @@ UIApplication.SharedApplication.OpenUrl(url);
 
 Ciò produce la visualizzazione web seguenti:
 
-[ ![](uiwebview-images/safari.png "Una pagina web presentata in Safari")](uiwebview-images/safari.png)
+[![](uiwebview-images/safari.png "Una pagina web presentata in Safari")](uiwebview-images/safari.png#lightbox)
 
 Spostamento da app in Safari utenti deve sempre essere generalmente evitato. La maggior parte degli utenti non previsti spostamento all'esterno dell'applicazione, pertanto se si esce dall'applicazione, gli utenti possono non restituire, essenzialmente la terminazione di engagement.
 

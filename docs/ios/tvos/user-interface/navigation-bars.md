@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 3d5b4b0d3e6e9388906efa3bff2db0ea38fa8605
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9c6bbf27d4c8227d96e372e91e1ccf2c9e841ff8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-navigation-controllers"></a>Utilizzo di controller di navigazione
 
@@ -20,7 +20,7 @@ _Questo articolo descrive la progettazione e l'utilizzo di barre di navigazione 
 
 È possibile aggiungere barre di navigazione nella parte superiore delle visualizzazioni per visualizzare un titolo e i pulsanti della barra di spostamento facoltativo. In genere vengono utilizzati quando l'utente è passato da una pagina principale, ad esempio una tabella, raccolta o una vista Menu per una visualizzazione secondaria che mostra i dettagli dell'elemento selezionato.
 
-[ ![](navigation-bars-images/navbar01.png "Barra di spostamento di esempio")](navigation-bars-images/navbar01.png)
+[![](navigation-bars-images/navbar01.png "Barra di spostamento di esempio")](navigation-bars-images/navbar01.png#lightbox)
 
 Inoltre al titolo (che viene visualizzato al centro), barre di navigazione può contenere uno o più pulsanti della barra di spostamento (`UIBarButtonItem`) a sinistra e a destra della barra.
 
@@ -42,16 +42,16 @@ Il modo più semplice per utilizzare le barre di navigazione in un'app Xamarin.t
 1. Nel **soluzione riempimento**, fare doppio clic su `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **barra di spostamento** dal **della casella degli strumenti** e rilasciarla nella vista nella parte superiore dello schermo: 
 
-    [ ![](navigation-bars-images/navbar02.png "Una barra di navigazione")](navigation-bars-images/navbar02.png)
+    [![](navigation-bars-images/navbar02.png "Una barra di navigazione")](navigation-bars-images/navbar02.png#lightbox)
 1. Fare doppio clic su di **barra di spostamento** per selezionare questa opzione per **elemento di navigazione**. Nel **Widget** scheda della finestra di **proprietà riempimento**, è possibile impostare il **titolo**: 
 
-    [ ![](navigation-bars-images/navbar03.png "Impostare il titolo")](navigation-bars-images/navbar03.png)
+    [![](navigation-bars-images/navbar03.png "Impostare il titolo")](navigation-bars-images/navbar03.png#lightbox)
 1. Successivamente, è possibile aggiungere uno o più **elementi pulsante della barra** a delle estremità della barra di: 
 
-    [ ![](navigation-bars-images/navbar04.png "Un elemento pulsante della barra")](navigation-bars-images/navbar04.png)
+    [![](navigation-bars-images/navbar04.png "Un elemento pulsante della barra")](navigation-bars-images/navbar04.png#lightbox)
 1. Infine transito per il **elementi pulsante della barra** alle azioni nel **eventi** scheda della finestra il **Esplora proprietà**: 
 
-    [ ![](navigation-bars-images/navbar05.png "Un pulsante elemento azione a barre")](navigation-bars-images/navbar05.png)
+    [![](navigation-bars-images/navbar05.png "Un pulsante elemento azione a barre")](navigation-bars-images/navbar05.png#lightbox)
 1. Salvare le modifiche.
 
 
@@ -61,16 +61,16 @@ Il modo più semplice per utilizzare le barre di navigazione in un'app Xamarin.t
 1. Nel **Esplora**, fare doppio clic su `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **barra di spostamento** dal **della casella degli strumenti** e rilasciarla nella vista nella parte superiore dello schermo: 
 
-    [ ![](navigation-bars-images/navbar02-vs.png "Una barra di navigazione")](navigation-bars-images/navbar02-vs.png)
+    [![](navigation-bars-images/navbar02-vs.png "Una barra di navigazione")](navigation-bars-images/navbar02-vs.png#lightbox)
 1. Fare doppio clic su di **barra di spostamento** per selezionare questa opzione per **elemento di navigazione**. Nel **Widget** scheda della finestra di **Esplora proprietà**, è possibile impostare il **titolo**: 
 
-    [ ![](navigation-bars-images/navbar03-vs.png "Impostare il titolo")](navigation-bars-images/navbar03-vs.png)
+    [![](navigation-bars-images/navbar03-vs.png "Impostare il titolo")](navigation-bars-images/navbar03-vs.png#lightbox)
 1. Successivamente, è possibile aggiungere uno o più **elementi pulsante della barra** a delle estremità della barra di: 
 
-    [ ![](navigation-bars-images/navbar04-vs.png "Un pulsante elementi a barre")](navigation-bars-images/navbar04-vs.png)
+    [![](navigation-bars-images/navbar04-vs.png "Un pulsante elementi a barre")](navigation-bars-images/navbar04-vs.png#lightbox)
 1. Infine transito per il **elementi pulsante della barra** alle azioni nel **eventi** scheda della finestra il **Esplora proprietà**: 
 
-    [ ![](navigation-bars-images/navbar05-vs.png "Un elemento azioni a barre")](navigation-bars-images/navbar05-vs.png)
+    [![](navigation-bars-images/navbar05-vs.png "Un elemento azioni a barre")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. Salvare le modifiche.
 
 

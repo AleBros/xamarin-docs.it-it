@@ -3,16 +3,16 @@ title: Introduzione ai suggerimenti attiva
 description: "In questo articolo viene illustrato come utilizzare i suggerimenti attiva nell'app xamarin al coinvolgimento di unità, consentendo al sistema di presentare in modo proattivo automaticamente informazioni utili all'utente."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 2762487d25befd15d8b57a002c5da4e9dcb15bb8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 15f649440b2a855189acff33afcef5e8272a0769
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-proactive-suggestions"></a>Introduzione ai suggerimenti attiva
 
@@ -63,7 +63,7 @@ Consente all'app contatti e informazioni correlate vengono visualizzati di **con
 
 ## <a name="ride-sharing-based-suggestions"></a>Sostituire la condivisione di suggerimenti in base
 
-Se un'app di condivisione marcia Usa il [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API iOS 10 presenterà come un'opzione di selezione del tipo di app quando l'utente è presumibile che si desideri una corsa. L'app deve essere registrato come un'applicazione di condivisione marcia anche specificando il `MKDirectionsModeRideShare` per il [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW33) chiave nel relativo `Info.plist` file.
+Se un'app di condivisione marcia Usa il [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API iOS 10 presenterà come un'opzione di selezione del tipo di app quando l'utente è presumibile che si desideri una corsa. L'app deve essere registrato come un'applicazione di condivisione marcia anche specificando il `MKDirectionsModeRideShare` per il [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) chiave nel relativo `Info.plist` file.
 
 Se l'app supporta solo il marcia condivisione, il suggerimento di sistema si inizierebbe con *"Ottenere un interscambio per..."*, se sono supportati altri tipi di routing direzione (ad esempio Walking o biciclette), il sistema utilizzerà *"Stradali..."*
 
@@ -95,7 +95,7 @@ Tutte queste funzionalità hanno una cosa in comune, tutte utilizzano `NSUserAct
 
 Come descritto in precedenza, `NSUserActivity` consente il sistema di comprendere le informazioni che l'utente sta attualmente utilizzando sullo schermo. `NSUserActivity` è stato un leggero la memorizzazione nella cache meccanismo per acquisire l'attività dell'utente così come si spostano l'app. Esaminare, ad esempio, un'applicazione ristorante:
 
-[ ![](proactive-suggestions-images/activity02.png "Lo stato di leggera NSUserActivity meccanismo di memorizzazione nella cache")](proactive-suggestions-images/activity02.png)
+[![](proactive-suggestions-images/activity02.png "Lo stato di leggera NSUserActivity meccanismo di memorizzazione nella cache")](proactive-suggestions-images/activity02.png#lightbox)
 
 Con le interazioni seguente:
 
@@ -105,7 +105,7 @@ Con le interazioni seguente:
 
 Esaminare più vicino all'ultima pagina:
 
-[ ![](proactive-suggestions-images/activity03.png "I dettagli di NSUserActivity")](proactive-suggestions-images/activity03.png)
+[![](proactive-suggestions-images/activity03.png "I dettagli di NSUserActivity")](proactive-suggestions-images/activity03.png#lightbox)
 
 Qui è la creazione di app un `NSUserActivity` ed è stato popolato con informazioni per ricreare lo stato in un secondo momento. L'app è incluso anche alcuni metadati, ad esempio nome e l'indirizzo della sede. Con questa attività di creazione, l'app informa iOS che rappresenta lo stato dell'utente corrente.
 
@@ -324,7 +324,7 @@ Interazioni di contatto vengono implementate in cui l'app mediante `NSUserActivi
 
 Esaminare la modalità l'app può donare interazioni:
 
-[ ![](proactive-suggestions-images/activity04.png "Panoramica di interazioni donatrice")](proactive-suggestions-images/activity04.png)
+[![](proactive-suggestions-images/activity04.png "Panoramica di interazioni donatrice")](proactive-suggestions-images/activity04.png#lightbox)
 
 L'applicazione crea un `INInteraction` oggetto che contiene un **finalità** (`INIntent`), **partecipanti** e **metadati**. Il **finalità** rappresenta un'azione dell'utente, ad esempio una chiamata di video o l'invio di un messaggio di testo. Il **partecipanti** includono le persone che ricevono la comunicazione. Il **metadati** definisce informazioni aggiuntive, ad esempio inviare correttamente il messaggio e così via.
 
@@ -334,7 +334,7 @@ Una volta completata l'interazione è completamente popolato, chiamare il `Donat
 
 Quando l'utente interagisce con l'app dalla scheda contatto, l'interazione ottiene in bundle con un `NSUserActivity`, che viene quindi usato per avviare l'app:
 
-[ ![](proactive-suggestions-images/activity05.png "L'interazione ottiene in bundle con un NSUserActivity utilizzato per avviare l'app")](proactive-suggestions-images/activity05.png)
+[![](proactive-suggestions-images/activity05.png "L'interazione ottiene in bundle con un NSUserActivity utilizzato per avviare l'app")](proactive-suggestions-images/activity05.png#lightbox)
 
 Esaminare l'esempio seguente di un scopo del messaggio di trasmissione:
 
@@ -449,7 +449,7 @@ Alcuni concetti di base Schema.org:
 - Sono disponibili oltre 500 schemi che rappresentano vari concetti disponibili.
 - Da implementare nel sito Web, lo sviluppatore può acquisire alcuni dei vantaggi dell'utilizzo di `NSUserActivity` in un'applicazione nativa.
 
-Gli schemi vengono disposte in una struttura ad albero come struttura, in cui i tipi di specifiche, ad esempio *ristorante*, ereditare da tipi più generici come *aziendale locale*. Per ulteriori informazioni, vedere [Schema.org](#http://schema.org).
+Gli schemi vengono disposte in una struttura ad albero come struttura, in cui i tipi di specifiche, ad esempio *ristorante*, ereditare da tipi più generici come *aziendale locale*. Per ulteriori informazioni, vedere [Schema.org](http://schema.org).
 
 Ad esempio, se la pagina web inclusi i seguenti dati:
 

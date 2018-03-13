@@ -6,12 +6,12 @@ ms.assetid: 405A1FA0-4EFA-4AEB-B672-F36307B9CF16
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 83997018f4e08567a9150bf1e21374a98c8ddb4e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 1d9cf345aa971c40f4132cc7970ed1244640da14
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="touch-in-android"></a>Input tocco in Android
 
@@ -33,7 +33,7 @@ Il `MotionEvent` oggetto verrà passato a un metodo appropriato in un'applicazio
 
 
 > [!NOTE]
-> **Nota:** non tutti i dispositivi Android supportano touch screen. 
+> Non tutti i dispositivi Android supportano touch screen. 
 
 Aggiungendo il seguente tag al file di manifesto comporta Google Play visualizzato solo l'app per i dispositivi di tocco abilitato:
 
@@ -90,11 +90,11 @@ I movimenti sono un ottimo modo per gli utenti di interagire con un'applicazione
 
 Poiché Android 1.6, Android SDK viene fornito con un'applicazione di pre-installata in un emulatore denominato movimenti generatore. Questa applicazione consente agli sviluppatori di creare i movimenti predefiniti che possono essere incorporati in un'applicazione. La schermata seguente viene illustrato un esempio di generatore movimenti:
 
-[![Schermata di movimenti generatore con i movimenti di esempio](touch-in-android-images/image11.png)](touch-in-android-images/image11.png)
+[![Schermata di movimenti generatore con i movimenti di esempio](touch-in-android-images/image11.png)](touch-in-android-images/image11.png#lightbox)
 
 Una versione migliorata di questa applicazione denominata strumento di movimento è reperibile Google Play. Strumento di movimento è molto simile a Generatore movimenti ad eccezione del fatto che consente di testare i movimenti dopo che sono state create. In questo screenshot successivo illustra i movimenti generatore:
 
-[![Schermata di movimento strumento con i movimenti di esempio](touch-in-android-images/image12.png)](touch-in-android-images/image12.png)
+[![Schermata di movimento strumento con i movimenti di esempio](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
 
 Strumento di movimento è un po' più utile per la creazione di movimenti personalizzati, in quanto consente di movimenti da sottoporre a test come la creazione ed è facilmente disponibile tramite Google Play.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/10/2017
-ms.openlocfilehash: 978985c4e9803fad33760e4b40ab73d57f3ec420
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a2aa143d5aeb801cd753dd99718ca9cf6dd72353
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layoutoptions"></a>LayoutOptions
 
@@ -91,7 +91,7 @@ Content = new StackLayout
 
 Il codice comporta il layout mostrato nelle schermate seguenti:
 
-[![](layout-options-images/alignment.png "Opzioni di Layout di allineamento")](layout-options-images/alignment-large.png "opzioni di Layout di allineamento")
+[![](layout-options-images/alignment.png "Opzioni di Layout di allineamento")](layout-options-images/alignment-large.png#lightbox "opzioni di Layout di allineamento")
 
 <a name="expansion" />
 
@@ -146,7 +146,7 @@ Content = new StackLayout
 
 Il codice comporta il layout mostrato nelle schermate seguenti:
 
-[![](layout-options-images/expansion.png "Opzioni di Layout di espansione")](layout-options-images/expansion-large.png "opzioni di Layout di espansione")
+[![](layout-options-images/expansion.png "Opzioni di Layout di espansione")](layout-options-images/expansion-large.png#lightbox "opzioni di Layout di espansione")
 
 Ogni [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) occupa la stessa quantità di spazio all'interno di [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/). Tuttavia, solo gli ultimi `Label`, che imposta il relativo [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) proprietà [ `FillAndExpand` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/) ha una dimensione diversa. Inoltre, ogni `Label` è separato da una piccola rossa [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/), che consente lo spazio di `Label` occupa per essere facilmente visualizzati.
 

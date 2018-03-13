@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/05/2017
-ms.openlocfilehash: f7e511d7f0a933ab7f29369e5e5f0aa46607c8f8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c423c9bf49c735673793f8e61134f7e705816d54
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installation"></a>Installazione
 
@@ -55,19 +55,19 @@ Non è possibile creare una nuova "Watch soluzione"... ma è possibile aggiunger
 
 1. Se non si dispone di un progetto esistente, scegliere **File > nuova soluzione** e creare un'app iOS (ad esempio, un **singola vista App**):
 
-    [ ![](installation-images/cycle8-2-sml.png "Scegliere File > nuova soluzione e creare un'app iOS")](installation-images/cycle8-2.png)
+    [![](installation-images/cycle8-2-sml.png "Scegliere File > nuova soluzione e creare un'app iOS")](installation-images/cycle8-2.png#lightbox)
 
 2. Una volta creato l'app iOS (o si prevede di usare app iOS esistente), pulsante destro del mouse sulla soluzione e scegliere **Aggiungi > Aggiungi nuovo progetto...** . Nel **nuovo progetto** finestra selezionare **watchOS > App > App WatchKit**:
 
-    [ ![](installation-images/cycle8-6-sml.png "Selezionare watchOS > App > WatchKit App")](installation-images/cycle8-6.png)
+    [![](installation-images/cycle8-6-sml.png "Selezionare watchOS > App > WatchKit App")](installation-images/cycle8-6.png#lightbox)
 
 3. Nella schermata successiva consente di scegliere il progetto di app iOS deve includere l'applicazione di espressioni di controllo:
 
-    [ ![](installation-images/cycle8-7-sml.png "Scegliere il progetto di app iOS deve includere l'applicazione di espressioni di controllo")](installation-images/cycle8-7.png)
+    [![](installation-images/cycle8-7-sml.png "Scegliere il progetto di app iOS deve includere l'applicazione di espressioni di controllo")](installation-images/cycle8-7.png#lightbox)
 
 4. Infine, scegliere il percorso in cui salvare il progetto (e facoltativamente abilitato controllo del codice sorgente):
 
-    [ ![](installation-images/cycle8-8-sml.png "Scegliere il percorso in cui salvare il progetto")](installation-images/cycle8-8.png)
+    [![](installation-images/cycle8-8-sml.png "Scegliere il percorso in cui salvare il progetto")](installation-images/cycle8-8.png#lightbox)
 
 5. Visual Studio per Mac configura automaticamente [i riferimenti al progetto e **Info. plist** impostazioni](~/ios/watchos/get-started/project-references.md) automaticamente.
 
@@ -81,11 +81,11 @@ Fare doppio clic sul controllo dell'app **Interface.storyboard** modificare util
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[![](installation-images/iosdesigner-sml.png "Nella finestra di progettazione dello storyboard")](installation-images/iosdesigner.png)
+[![](installation-images/iosdesigner-sml.png "Nella finestra di progettazione dello storyboard")](installation-images/iosdesigner.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](installation-images/iosdesigner-sml-vs.png "Nella finestra di progettazione dello storyboard")](installation-images/iosdesigner-vs.png)
+[![](installation-images/iosdesigner-sml-vs.png "Nella finestra di progettazione dello storyboard")](installation-images/iosdesigner-vs.png#lightbox)
 
 -----
 
@@ -152,7 +152,7 @@ Sono disponibili due modalità per l'avvio di un'app WatchKit:
 Una volta Xcode 8 (o versione successiva) installato, simulatori Apple Watch sono separati da iOS simulatori (a differenza di [Xcode 6](#xcode6), in cui vengono visualizzati come un *display esterno*).
 Quando si seleziona progetto di applicazione delle espressioni di controllo e verificare il progetto di avvio, verrà visualizzato l'elenco dei simulatori *iOS simulatori* da selezionare (come illustrato di seguito).
 
-[ ![](installation-images/xs-xcode8-watchos3-sml.png "Selezione del tipo di simulatore")](installation-images/xs-xcode8-watchos3.png)
+[![](installation-images/xs-xcode8-watchos3-sml.png "Selezione del tipo di simulatore")](installation-images/xs-xcode8-watchos3.png#lightbox)
 
 Quando si avvia il debug, *due* simulatori deve iniziare - simulatore iOS *e* il simulatore di Apple Watch. Utilizzare **comando + MAIUSC + H** per spostarsi verso l'espressione di controllo menu e l'orologio; e utilizzare il **Hardware** menu per impostare il **Force tocco pressione**. Lo scorrimento lungo il mouse o la trackpad simulerà utilizzando il chioma digitale.
 
@@ -195,13 +195,13 @@ Visual Studio per Mac è possibile avviare l'applicazione di espressioni di cont
 Fare clic sul progetto di applicazione delle espressioni di controllo e scegliere **eseguire con > configurazione personalizzata...** :
 
 
-[![](installation-images/runwith-customparams-sml.png "Esecuzione di una configurazione personalizzata")](installation-images/runwith-customparams.png)
+[![](installation-images/runwith-customparams-sml.png "Esecuzione di una configurazione personalizzata")](installation-images/runwith-customparams.png#lightbox)
 
 
 Verrà visualizzata la **parametri personalizzati** finestra in cui è possibile selezionare **notifica** e fornire un payload JSON, quindi premere **eseguire** per avviare l'applicazione di espressioni di controllo nel simulatore:
 
 
-[![](installation-images/runwith-execargs-sml.png "Impostazione di notifica e un Payload")](installation-images/runwith-execargs.png)
+[![](installation-images/runwith-execargs-sml.png "Impostazione di notifica e un Payload")](installation-images/runwith-execargs.png#lightbox)
 
 
 

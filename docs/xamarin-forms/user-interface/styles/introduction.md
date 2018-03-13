@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 6b4d63637eae7c1719f3f6e525327d416ddff59d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce5a7976f5bac68ca01b30a8d437aa83b8360580
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-styles"></a>Introduzione agli stili
 
@@ -84,7 +84,7 @@ public class NoStylesPageCS : ContentPage
 
 Ogni [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) istanza dispone di valori delle proprietà identici per controllare l'aspetto del testo visualizzato per il `Label`. Ciò comporta l'aspetto illustrato nelle schermate seguenti:
 
-[![](introduction-images/no-styles.png "Etichetta aspetto senza stili")](introduction-images/no-styles-large.png "etichetta aspetto senza gli stili")
+[![](introduction-images/no-styles.png "Etichetta aspetto senza stili")](introduction-images/no-styles-large.png#lightbox "etichetta aspetto senza gli stili")
 
 Impostare l'aspetto di ogni singolo controllo può essere ricorrenti e soggetta a errori. Al contrario, un stile può essere creato che definisce l'aspetto e quindi applicate ai controlli necessari.
 

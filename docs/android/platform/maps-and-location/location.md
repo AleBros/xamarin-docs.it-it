@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: beb690fe495d142bb4b0424ad752101fc46da590
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 28cfb4cda27446b914c23a2ce4e8e9f845876107
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="location-services"></a>Servizi di posizione
 
@@ -54,7 +54,7 @@ Per le app destinate API versione 21 (Android 5.0 simbolo) o versioni successive
 
 Per impostare le autorizzazioni, espandere il **proprietà** cartella la **soluzione riempimento** fare doppio clic su **AndroidManifest.xml**. Le autorizzazioni saranno elencate sotto **autorizzazioni obbligatorie**:
 
-[![Schermata delle impostazioni Android manifesto autorizzazioni necessarie](location-images/location-01-xs.png)](location-images/location-01-xs.png)
+[![Schermata delle impostazioni Android manifesto autorizzazioni necessarie](location-images/location-01-xs.png)](location-images/location-01-xs.png#lightbox)
 
 Impostazione di queste autorizzazioni indica che l'applicazione necessita di autorizzazioni per accedere ai provider di percorso per l'utente Android. I dispositivi che eseguire livello API 22 (Android 5.1) o inferiore utente verrà chiesto di concedere queste autorizzazioni ogni volta che viene installata l'app. Nei dispositivi che eseguono API livello 23 (Android 6.0) o versioni successive, l'app deve eseguire un controllo di autorizzazione in fase di esecuzione prima di effettuare una richiesta del provider di posizione. 
 
@@ -334,11 +334,11 @@ else
 > [!NOTE]
 >  Se l'utente abbia disabilitato tutti i provider di percorso, `GetBestProvider` restituirà `null`. Per verificare il funzionamento del codice in un dispositivo reale, assicurarsi di abilitare GPS, Wi-Fi e reti cellulare in **le impostazioni di Google > percorso > modalità** come illustrato in questo screenshot:
 
-[![Schermata di modalità di localizzazione delle impostazioni in un telefono Android](location-images/location-02.png)](location-images/location-02.png)
+[![Schermata di modalità di localizzazione delle impostazioni in un telefono Android](location-images/location-02.png)](location-images/location-02.png#lightbox)
 
 La schermata riportata di seguito viene illustrato il percorso dell'applicazione in esecuzione utilizzando `GetBestProvider`:
 
-[![App GetBestProvider visualizzazione latitudine, longitudine e provider](location-images/location-03.png)](location-images/location-03.png)
+[![App GetBestProvider visualizzazione latitudine, longitudine e provider](location-images/location-03.png)](location-images/location-03.png#lightbox)
 
 Tenere presente che `GetBestProvider` non modifica il provider in modo dinamico. Ma determina il miglior provider una volta durante il ciclo di vita di attività. Se lo stato del provider viene modificata dopo che è stata impostata, l'applicazione richiede codice aggiuntivo nel `ILocationListener` metodi &ndash; `OnProviderEnabled`, `OnProviderDisabled`, e `OnStatusChanged` &ndash; per gestire tutte le possibilità correlate per il opzione di provider.
 

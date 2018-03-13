@@ -3,16 +3,16 @@ title: Framework di notifiche utente
 description: "Questo articolo vengono illustrate tutte le modalità che notifica gli utenti sono stata migliorata da iOS 10 e sul loro utilizzo in un'app xamarin. IOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/01/2016
-ms.openlocfilehash: 473f9b4d4fa2a034c7f39ce309fb3f921d809a10
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1ab0a4add92db21c352dbaeadc71a3ff1e3d0cf9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="user-notifications-framework"></a>Framework di notifiche utente
 
@@ -25,11 +25,11 @@ Inoltre, l'app o l'estensione può ricevere (e potenzialmente modificare) le not
 Il nuovo framework di interfaccia utente di notifica utente consente l'app o l'estensione dell'App per personalizzare l'aspetto delle notifiche locali e remote quando sono presentati all'utente.
 
 
-## <a name="enhanced-user-notificationsiosplatformuser-notificationsenhanced-user-notificationsmd"></a>[Notifiche utente migliorata](~/ios/platform/user-notifications/enhanced-user-notifications.md)
+## <a name="enhanced-user-notificationsiosplatformuser-notificationsenhanced-user-notificationsmd"></a>[Notifiche utente migliorate](~/ios/platform/user-notifications/enhanced-user-notifications.md)
 
 Questo articolo descrive tutte le modalità che le notifiche utente sono state migliorate per iOS 10 e consente una rapida introduzione alla relativa implementazione utilizzando il nuovo framework di notifica all'utente.
 
-## <a name="advanced-user-notificationsiosplatformuser-notificationsadvanced-user-notificationsmd"></a>[Notifiche utente avanzato](~/ios/platform/user-notifications/advanced-user-notifications.md)
+## <a name="advanced-user-notificationsiosplatformuser-notificationsadvanced-user-notificationsmd"></a>[Notifiche utente avanzate](~/ios/platform/user-notifications/advanced-user-notifications.md)
 
 In questo articolo richiede un'analisi approfondita relativa al nuovo framework notifiche utente e le modalità di usufruire appieno di esso in un'app xamarin.
 

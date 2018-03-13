@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 3a7d89d9b0f383d365b18364e5d902ee0642f395
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c28ddc09b07066de67f5c974cf5c2128726c6932
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="integrating-azure-active-directory-b2c-with-azure-mobile-apps"></a>L'integrazione di Azure Active Directory B2C con le App per dispositivi mobili di Azure
 
@@ -21,7 +21,7 @@ _Azure Active B2C di Directory è una soluzione di gestione di identità cloud p
 ![](~/media/shared/preview.png "Questa API è attualmente pre-release.")
 
 > [!NOTE]
-> **Nota**: il [libreria di autenticazione Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client) è ancora in anteprima, ma è adatto per l'uso in un ambiente di produzione. Tuttavia, vi può essere modifiche di rilievo per l'API, il formato della cache interna e altri meccanismi della libreria, che può rallentare l'applicazione.
+> Il [libreria di autenticazione Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client) è ancora in anteprima, ma è adatto per l'uso in un ambiente di produzione. Tuttavia, vi può essere modifiche di rilievo per l'API, il formato della cache interna e altri meccanismi della libreria, che può rallentare l'applicazione.
 
 ## <a name="overview"></a>Panoramica
 
@@ -72,7 +72,7 @@ Per un flusso di lavoro di autenticazione client gestito, il tenant di Azure Act
 
 Nella schermata seguente viene illustrata questa configurazione:
 
-[![](azure-ad-b2c-mobile-app-images/client-flow-config-sml.png "Configurazione di Azure Active Directory B2C")](azure-ad-b2c-mobile-app-images/client-flow-config.png "configurazione di Azure Active Directory B2C")
+[![](azure-ad-b2c-mobile-app-images/client-flow-config-sml.png "Configurazione di Azure Active Directory B2C")](azure-ad-b2c-mobile-app-images/client-flow-config.png#lightbox "configurazione di Azure Active Directory B2C")
 
 I criteri usati in Azure Active Directory B2C tenant deve inoltre essere configurato in modo che l'URL di risposta è impostato lo stesso schema URL personalizzato, seguito da `://auth/`. Nella schermata seguente viene illustrata questa configurazione:
 
@@ -158,7 +158,7 @@ Per un flusso di lavoro di autenticazione server gestito, il tenant di Azure Act
 
 Nella schermata seguente viene illustrata questa configurazione:
 
-[![](azure-ad-b2c-mobile-app-images/server-flow-config-sml.png "Configurazione di Azure Active Directory B2C")](azure-ad-b2c-mobile-app-images/server-flow-config.png "configurazione di Azure Active Directory B2C")
+[![](azure-ad-b2c-mobile-app-images/server-flow-config-sml.png "Configurazione di Azure Active Directory B2C")](azure-ad-b2c-mobile-app-images/server-flow-config.png#lightbox "configurazione di Azure Active Directory B2C")
 
 I criteri usati in Azure Active Directory B2C tenant deve inoltre essere configurato in modo che l'URL di risposta è impostato per l'indirizzo dell'App Mobile Azure, seguito da `/.auth/login/aad/callback`. Nella schermata seguente viene illustrata questa configurazione:
 

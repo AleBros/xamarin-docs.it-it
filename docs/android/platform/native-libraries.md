@@ -6,11 +6,12 @@ ms.assetid: 7AA6CEC8-C09E-BBDA-FDD6-E40559143548
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.openlocfilehash: 8d7e03582571939b8cd3ae89fc2deff3b5603d36
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 7bd9a64ab7ea775688225ff5496773647174ebf8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="using-native-libraries"></a>Utilizzo di librerie Native
 
@@ -21,13 +22,13 @@ Per distribuire una libreria nativa con un'applicazione di xamarin, aggiungere l
 Per distribuire una libreria nativa con un progetto libreria di xamarin, aggiungere la libreria binaria al progetto e impostare il relativo **azione di compilazione** a **EmbeddedNativeLibrary**.
 
 Si noti che poiché Android supporta più Application Binary Interface (ABIs), xamarin deve conoscere quali ABI è stata compilata per la libreria nativa.
-Esistono due modi, a tale scopo:
+Esistono due modi per farlo:
 
 1.  Percorso "analisi"
 1.  Utilizzando un `AndroidNativeLibrary/Abi` elemento all'interno del file di progetto
 
 
-Con lo sniffing percorso, il nome della directory padre della libreria nativa viene utilizzato per specificare l'interfaccia ABI che le destinazioni di libreria. Pertanto, se si aggiungono `lib/armeabi/libfoo.so` al progetto, quindi l'ABI verrà essere "rilevata" come `armeabi`.
+Con l'analisi del percorso, il nome della directory padre della libreria nativa viene usato per specificare l'ABI di destinazione della libreria. Pertanto, se si aggiungono `lib/armeabi/libfoo.so` al progetto, quindi l'ABI verrà essere "rilevata" come `armeabi`.
 
 In alternativa, è possibile modificare il file di progetto per specificare in modo esplicito l'interfaccia ABI da usare:
 

@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 227a636db370b2dd3d132c49ad7c39ef42c5f30c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 90f1394103b5a3996029355a8ef260817b14a697
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="absolutelayout"></a>AbsoluteLayout
 
 [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) posizione e dimensioni proporzionale alle dimensioni e posizione o valori assoluti di elementi figlio. Visualizzazioni figlio possono essere posizionato e dimensioni utilizzando valori proporzionali o statico e proporzionale e valori statici possono essere combinati.
 
-[ ![](absolute-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](absolute-layout-images/layouts.png "Xamarin.Forms Layouts")
+[![](absolute-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](absolute-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 In questo articolo illustra:
 

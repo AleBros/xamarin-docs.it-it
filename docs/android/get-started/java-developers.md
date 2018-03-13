@@ -7,17 +7,17 @@ ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.openlocfilehash: fb74e0efd62c6347534e6f301953325bd4d378d2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 240fc917a154085a459c6612f68c8b71e3ef01bb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin per sviluppatori Java
 
 _Gli sviluppatori Java possono sfruttare le competenze e il codice esistente nella piattaforma Xamarin con i vantaggi che derivano dal riutilizzare il codice C#. La sintassi C# è molto simile alla sintassi Java ed entrambi i linguaggi offrono funzionalità analoghe. Ci sono inoltre funzionalità specifiche di C# che semplificano notevolmente lo sviluppo._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -91,17 +91,15 @@ Infine, Xamarin consente di [sfruttare le risorse Java esistenti](#interop) tram
 Le sezioni seguenti descrivono le differenze di base tra C# e Java. Una sezione successiva descrive le differenze orientate a oggetti tra questi linguaggi.
 
 
-<a name="assemblies" />
 
-### <a name="libraries-vs-assemblies"></a>Confronto tra librerie e assembly
+### <a name="libraries-vs-assemblies"></a>Confronto tra librerie e Assembly
 
 In Java in genere vengono creati pacchetti di classi correlate in file **JAR**. In C# e .NET, tuttavia, i bit riutilizzabili di codice precompilato vengono raccolti in *assembly*, che sono in genere file *DLL*. Un assembly è un'unità di distribuzione per il codice C#/.NET e ogni assembly è in genere associato a un progetto C#. Gli assembly contengono codice intermedio (IL) che è codice JIT compilato nel runtime.
 
 Per altre informazioni sugli assembly, vedere l'argomento [Assembly e Global Assembly Cache](https://msdn.microsoft.com/en-us/library/ms173099.aspx) in MSDN.
 
-<a name="namespaces" />
 
-### <a name="packages-vs-namespaces"></a>Confronto tra pacchetti e spazi dei nomi
+### <a name="packages-vs-namespaces"></a>Confronto tra pacchetti e Spazi dei nomi
 
 C# usa la parola chiave `namespace` per raggruppare i tipi correlati, in modo analogo alla parola chiave `package` Java. In genere, un'app Xamarin.Android si trova in uno spazio dei nomi creato per l'app. Il codice C# seguente, ad esempio, dichiara il wrapper dello spazio dei nomi `WeatherApp` per un'app meteo:
 
@@ -111,7 +109,6 @@ namespace WeatherApp
     ...
 ```
 
-<a name="imports" />
 
 ### <a name="importing-types"></a>Importazione di tipi
 
@@ -146,7 +143,6 @@ using System.Threading.Tasks;
 Queste istruzioni importano funzionalità dagli spazi dei nomi `System`, `Android.App`, `Android.Content` e così via.
 
 
-<a name="generics" />
 
 ### <a name="generics"></a>Generics
 
@@ -197,7 +193,6 @@ Ci sono tuttavia alcune importanti differenze:
 -   C# usa la sintassi dei distruttori di tipo C++ per esprimere i finalizzatori. La sintassi è diversa dal metodo Java `finalize`, ma la semantica è quasi la stessa. Si noti che in C# i distruttori chiamano automaticamente il distruttore della classe di base, mentre in Java viene usata una chiamata esplicita a `super.finalize`.
 
 
-<a name="inheritance" />
 
 ### <a name="class-inheritance"></a>Ereditarietà di classe
 
@@ -251,7 +246,6 @@ L'accesso alle proprietà può essere in lettura/scrittura, di sola lettura o di
 Per altre informazioni sulle proprietà C#, vedere l'argomento [Proprietà](https://msdn.microsoft.com/en-us/library/x9fsa0sw.aspx) in MSDN.
 
 
-<a name="basemethods" />
 
 ### <a name="calling-base-class-methods"></a>Chiamata dei metodi di una classe di base
 
@@ -287,7 +281,6 @@ public class MainActivity : Activity
 In questo caso, il metodo `OnCreate` definito dalla classe derivata (`MainActivity`) chiama il metodo `OnCreate` della classe di base (`Activity`).
 
 
-<a name="accessmodifiers" />
 
 ### <a name="access-modifiers"></a>Modificatori di accesso
 
@@ -300,7 +293,6 @@ Java e C# supportano entrambi i modificatori di accesso `public`, `private` e `p
 Per altre informazioni sui modificatori di accesso C#, vedere l'argomento [Modificatori di accesso](https://msdn.microsoft.com/en-us/library/ms173121.aspx) in MSDN.
 
 
-<a name="virtualoverride" />
 
 ### <a name="virtual-and-override-methods"></a>Metodi virtuali e di override
 
@@ -351,7 +343,7 @@ Per altre informazioni su C# e sulle espressioni lambda, vedere l'argomento [Esp
 
 <a name="events" />
 
-## <a name="event-handling"></a>Gestione degli eventi
+## <a name="event-handling"></a>Gestione di eventi
 
 Un *evento* è un modo in cui un oggetto notifica ai sottoscrittori registrati il verificarsi di un'attività di interesse sull'oggetto stesso. A differenza di Java, in cui un sottoscrittore in genere implementa un'interfaccia `Listener` che contiene un metodo di callback, C# fornisce il supporto a livello di linguaggio per la gestione degli eventi tramite *delegati*. Un *delegato* è simile a un puntatore a funzione indipendente dai tipi e orientato a oggetti e incapsula un riferimento all'oggetto e un token di metodo. Se un oggetto client vuole sottoscrivere un evento, crea un delegato e lo passa all'oggetto che invia la notifica.
 Quando si verifica l'evento, l'oggetto che invia la notifica richiama il metodo rappresentato dall'oggetto delegato, notificando l'evento all'oggetto client che ha eseguito la sottoscrizione. In C# i gestori eventi essenzialmente non sono altro che metodi richiamati tramite delegati.
@@ -492,7 +484,7 @@ Precede la classe e le interfacce da cui ereditare.
         <code>import</code>
       </td>
       <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/zhdeatwt.aspx">using</a>
+        <a href="https://msdn.microsoft.com/en-us/library/zhdeatwt.aspx">uso</a>
       </td>
       <td valign="top">
 Importa i tipi di uno spazio dei nomi ed è usata anche per creare un alias dello spazio dei nomi.
@@ -792,7 +784,6 @@ Se si hanno funzionalità Java esistenti che non si vuole convertire in C#, è p
 Per altre informazioni su queste tecniche, vedere [Java Integration Overview](~/android/platform/java-integration/index.md) (Panoramica dell'integrazione di Java).
 
 
-<a name="further" />
 
 ## <a name="for-further-reading"></a>Ulteriori informazioni
 
@@ -803,7 +794,6 @@ Analogamente alla conoscenza di Java che si basa sulla familiarità con le libre
 Quando si è pronti per creare il primo progetto Xamarin.Android in C#, la serie [Hello, Android](~/android/get-started/hello-android/index.md) può aiutare a creare la prima applicazione Xamarin.Android e approfondire maggiormente la conoscenza delle nozioni fondamentali dello sviluppo di applicazioni Android con Xamarin.
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>Riepilogo
 

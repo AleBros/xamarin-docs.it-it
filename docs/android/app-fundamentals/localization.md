@@ -7,12 +7,12 @@ ms.assetid: D1277939-A1E8-468E-B136-820D816AF853
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: adfc0da404c6b9df79c3b2be51f8cafa302a6bc3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: c4800c1fe844a03c20b28079640a5ddab8046b1f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-localization"></a>Localizzazione di Android
 
@@ -81,7 +81,7 @@ La maggior parte degli sviluppatori hanno già familiari con l'utilizzo di **dpi
 ![Schermata di cartelle di risorse/drawable e risorse di valori per gli identificatori di lingua più](localization-images/resources.png)
 
 > [!NOTE]
-> **Nota:** quando si specifica un linguaggio di livello superiore come `es` solo due caratteri sono obbligatori; tuttavia, quando si specifica una completo delle impostazioni locali, il formato del nome directory richiede un trattino e una minuscola **r** per separare i due parti, ad esempio **pt rBR** o **zh-salti riga**. Confrontando questo funzionamento con il valore restituito nel codice, che è un carattere di sottolineatura (ad es. `pt_BR`). Entrambi sono diverse per il valore .NET `CultureInfo` , utilizzato dalla classe che dispone di un trattino solo (ad es. `pt-BR`). Tenere presente queste differenze quando si utilizzano piattaforme Xamarin.
+> Quando si specifica un linguaggio di livello superiore come `es` solo due caratteri sono obbligatori; tuttavia, quando si specifica una completo delle impostazioni locali, il formato del nome directory richiede un trattino e una minuscola **r** per separare le due parti, ad esempio **pt rBR** o **zh-salti riga**. Confrontando questo funzionamento con il valore restituito nel codice, che è un carattere di sottolineatura (ad es. `pt_BR`). Entrambi sono diverse per il valore .NET `CultureInfo` , utilizzato dalla classe che dispone di un trattino solo (ad es. `pt-BR`). Tenere presente queste differenze quando si utilizzano piattaforme Xamarin.
 
 #### <a name="stringsxml-file-format"></a>Formato di file Strings
 
@@ -164,13 +164,13 @@ Nel **Strings**
 
 ```xml
 <plurals name="numberOfTasks">
-         <!--
-                    As a developer, you should always supply "one" and "other"
-                    strings. Your translators will know which strings are actually
-                    needed for their language.
-             -->
-         <item quantity="one">There is %d task left.</item>
-         <item quantity="other">There are %d tasks still to do.</item>
+   <!--
+      As a developer, you should always supply "one" and "other"
+      strings. Your translators will know which strings are actually
+      needed for their language.
+    -->
+   <item quantity="one">There is %d task left.</item>
+   <item quantity="other">There are %d tasks still to do.</item>
  </plurals>
 ```
 
@@ -229,15 +229,13 @@ Quando si usa Android 4.2 (livello API 17) e aligment più recente, è possibile
 
 La schermata seguente mostra il [localizzata **Tasky** esempio](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in arabo:
 
-[![Schermata dell'app Tasky in arabo](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png) 
+[![Schermata dell'app Tasky in arabo](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
 
 Illustrato nella schermata successiva il [localizzata **Tasky** esempio](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) (versione ebraica):
 
-[![Schermata dell'app Tasky (versione ebraica)](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png)
+[![Schermata dell'app Tasky (versione ebraica)](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
 
 Testo da destra a sinistra è localizzato mediante **Strings** file nello stesso modo come testo LTR.
-
-<a name="testing" />
 
 ## <a name="testing"></a>Test
 

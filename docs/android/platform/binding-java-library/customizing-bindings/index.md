@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 09/25/2017
-ms.openlocfilehash: e71d497201cc2d8f2b3e2b8b252e5f963806a75b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 14372c3ca42d1ba4a8ade1248f3c5f3210cc7e46
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-bindings"></a>Personalizzazione delle associazioni
 
 _È possibile personalizzare un'associazione xamarin modificando i metadati che controlla il processo di associazione. Queste modifiche manuali sono spesso necessarie per la risoluzione di errori di compilazione e per il data shaping l'API risulta in modo che risulti più coerenza con c# o .NET. Queste guide vengono illustrate la struttura dei metadati, come modificare i metadati e come utilizzare JavaDoc per recuperare i nomi dei parametri del metodo._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Panoramica
  
@@ -34,7 +33,6 @@ Xamarin consente di automatizzare gran parte del processo di associazione. Tutta
 
 È possibile apportare alcuni o tutti questi cambiamenti modificando i metadati che controlla il processo di associazione.
 
-<a name="guides" />
 
 ## <a name="guides"></a>Guide
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fab2092837f9b9ca8ada53274c9644f131fb5659
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 211f8c7066e86dac3a8351b913da0185093dcb70
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="testing-on-watch-devices"></a>Test nei dispositivi di espressioni di controllo
 
@@ -32,7 +32,7 @@ Test di App iOS in un reale iPhone o iPad ha sempre richiesto il dispositivo sia
 
 Le espressioni di controllo non sono diversi, è ora necessario aggiungere il dispositivo di Apple Watch prima di distribuire le app. Ricerca di espressioni di controllo UDID utilizzando **Xcode** (**Windows > dispositivi** elenco). Quando è connesso il telefono associato verranno visualizzate anche le informazioni dell'orologio:
 
-[ ![](device-images/xcode-devices-sml.png "Informazioni di controllo associati")](device-images/xcode-devices.png)
+[![](device-images/xcode-devices-sml.png "Informazioni di controllo associati")](device-images/xcode-devices.png#lightbox)
 
 Quando si conosce l'orologio UDID, aggiungerlo all'elenco di dispositivo nel centro per sviluppatori:
 
@@ -99,12 +99,12 @@ Ciò può verificarsi durante la compilazione in modalità di DEBUG per distribu
 
 Per *temporaneamente* risolvere questo problema, disabilitare **compilazioni incrementali** nell'estensione Watch **opzioni progetto > compilare > watchOS compilazione** finestra:
 
-[ ![](device-images/disable-incremental-sml.png "La casella di controllo compilazioni incrementali")](device-images/disable-incremental.png)
+[![](device-images/disable-incremental-sml.png "La casella di controllo compilazioni incrementali")](device-images/disable-incremental.png#lightbox)
 
 Questo problema verrà risolto in una versione futura, dopo il quale le compilazioni incrementali possono essere riabilitate per sfruttare i tempi di compilazione.
 
 
-#<a name="3-watch-app-fails-to-start-while-debugging-on-device"></a>Ha esito negativo App watch # 3 avviare durante il debug nel dispositivo
+### <a name="watch-app-fails-to-start-while-debugging-on-device"></a>Applicazione delle espressioni di controllo non viene avviato durante il debug nel dispositivo
 
 Quando vengono visualizzati il tentativo di eseguire il debug di un'applicazione di espressioni di controllo in un dispositivo fisico, solo l'icona & caricamento spinner (e infine timeout). Questo verrà risolti nelle versioni future. una soluzione alternativa consiste nell'eseguire una build di rilascio (che non consente il debug).
 

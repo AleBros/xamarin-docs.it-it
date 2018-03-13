@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 9c9032b3206fa35d264bd69c94b7882e877b334f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce850b7890265b82774534ca0daaf25bed7e0c2d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="watchos-troubleshooting"></a>watchOS risoluzione dei problemi
 
@@ -61,7 +61,7 @@ Questa pagina contiene informazioni aggiuntive e soluzioni alternative per le fu
 - Non è possibile aggiungere due `WKNotificationControllers` di uno storyboard.
     Soluzione alternativa: Il `notificationCategory` viene sempre inserito elemento dello storyboard XML con lo stesso `id`. Per risolvere questo problema, è possibile aggiungere due (o più) controller di notifica, aprire il file storyboard in un editor di testo e modificare manualmente il `id` elemento sia univoco.
 
-    [ ![](troubleshooting-images/duplicate-id-sml.png "Aprire lo storyboard di file in un editor di testo e modificare manualmente l'elemento id per essere univoco")](troubleshooting-images/duplicate-id.png)
+    [![](troubleshooting-images/duplicate-id-sml.png "Aprire lo storyboard di file in un editor di testo e modificare manualmente l'elemento id per essere univoco")](troubleshooting-images/duplicate-id.png#lightbox)
 
 - Potrebbe essere visualizzato un errore "l'applicazione non è stato compilato" durante il tentativo di avviare l'app. Questo errore si verifica dopo un **Pulisci** quando il progetto di avvio è impostato per il progetto di estensione delle espressioni di controllo.
     Per risolvere il problema consiste nel selezionare **compilazione > Ricompila tutto** e quindi avviare nuovamente l'app.

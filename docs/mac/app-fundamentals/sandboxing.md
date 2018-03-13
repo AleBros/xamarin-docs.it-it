@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9e64f1962e35372a6058f4b515efa5a61c1c9e45
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9cf9cb2e4773b90ecdd9321c6627003be3fa1b8b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Un'app Xamarin.Mac sandboxing
 
@@ -22,7 +22,7 @@ _Questo articolo descrive il sandboxing un'applicazione Xamarin.Mac per la versi
 
 Quando si lavora con c# e .NET in un'applicazione Xamarin.Mac, è la stessa capacità di sandbox un'applicazione come avviene quando si lavora con Objective-C o Swift.
 
-[![Un esempio di app in esecuzione](sandboxing-images/intro01.png "un esempio di app in esecuzione")](sandboxing-images/intro01-large.png)
+[![Un esempio di app in esecuzione](sandboxing-images/intro01.png "un esempio di app in esecuzione")](sandboxing-images/intro01-large.png#lightbox)
 
 In questo articolo verranno descritte le nozioni di base dell'utilizzo di sandboxing in un'applicazione Xamarin.Mac e tutti gli elementi che costituiscono il sandboxing: directory contenitore, i diritti, determinato dall'utente, la separazione dei privilegi e autorizzazioni imposizione del kernel. È altamente consigliabile che il [Hello, Mac](~/mac/get-started/hello-mac.md) articolo prima di tutto, in particolare il [Introduzione a Xcode e interfaccia generatore](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [punti vendita e le azioni](~/mac/get-started/hello-mac.md#Outlets_and_Actions) le sezioni, come illustra i concetti chiave e le tecniche che verrà usato in questo articolo.
 
@@ -70,19 +70,19 @@ Di seguito, eseguire il comando seguente per creare il progetto di esempio:
 1. Avviare Visual Studio per Mac e fare clic su di **nuova soluzione...** account".
 2. Dal **nuovo progetto** nella finestra di dialogo **Mac** > **App** > **Cocoa App**: 
 
-    [![Creazione di una nuova App Cocoa](sandboxing-images/sample01.png "la creazione di una nuova App Cocoa")](sandboxing-images/sample01-large.png)
+    [![Creazione di una nuova App Cocoa](sandboxing-images/sample01.png "la creazione di una nuova App Cocoa")](sandboxing-images/sample01-large.png#lightbox)
 3. Fare clic su di **Avanti** pulsante, immettere `MacSandbox` per il nome del progetto e fare clic su di **crea** pulsante: 
 
-    [![Immettere il nome dell'app](sandboxing-images/sample02.png "immettendo il nome dell'app")](sandboxing-images/sample02-large.png)
+    [![Immettere il nome dell'app](sandboxing-images/sample02.png "immettendo il nome dell'app")](sandboxing-images/sample02-large.png#lightbox)
 4. Nel **soluzione riempimento**, fare doppio clic su di **Main** file per aprirlo e modificarlo in Xcode: 
 
-    [![La modifica di storyboard principale](sandboxing-images/sample03.png "la modifica di storyboard principale")](sandboxing-images/sample03-large.png)
+    [![La modifica di storyboard principale](sandboxing-images/sample03.png "la modifica di storyboard principale")](sandboxing-images/sample03-large.png#lightbox)
 5. Trascinare un **visualizzazione Web** nella finestra, ridimensionarlo per riempire l'area di contenuto e impostarlo in modo da aumentare e ridurre con la finestra: 
 
-    [![Aggiunta di una visualizzazione web](sandboxing-images/sample04.png "aggiunta di una visualizzazione web")](sandboxing-images/sample04-large.png)
+    [![Aggiunta di una visualizzazione web](sandboxing-images/sample04.png "aggiunta di una visualizzazione web")](sandboxing-images/sample04-large.png#lightbox)
 6. Creare una presa di corrente per la visualizzazione web chiamata `webView`: 
 
-    [![Creazione di nuovi punti vendita](sandboxing-images/sample05.png "la creazione di nuovi punti vendita")](sandboxing-images/sample05-large.png)
+    [![Creazione di nuovi punti vendita](sandboxing-images/sample05.png "la creazione di nuovi punti vendita")](sandboxing-images/sample05-large.png#lightbox)
 7. Tornare a Visual Studio per Mac e fare doppio clic su di **ViewController.cs** file nel **soluzione riempimento** per aprirlo e modificarlo.
 8. Aggiungere la seguente istruzione using: `using WebKit;`
 9. Rendere il `ViewDidLoad` metodo aspetto simile al seguente: 
@@ -99,7 +99,7 @@ public override void AwakeFromNib ()
 
 Eseguire l'applicazione si e verificare che il sito Web Apple viene visualizzato nella finestra come segue:
 
-[![Visualizzazione di un'applicazione di esempio esecuzione](sandboxing-images/sample06.png "che mostra un'app di esempio esecuzione")](sandboxing-images/sample06-large.png)
+[![Visualizzazione di un'applicazione di esempio esecuzione](sandboxing-images/sample06.png "che mostra un'app di esempio esecuzione")](sandboxing-images/sample06-large.png#lightbox)
 
 <a name="Signing_and_Provisioning_the_App" />
 
@@ -111,34 +111,34 @@ Consente di eseguire le operazioni seguenti:
 
 1. Accedere al portale per sviluppatori di Apple: 
 
-    [![Registrazione al portale per sviluppatori Apple](sandboxing-images/sign01.png "registrazione al portale per sviluppatori di Apple")](sandboxing-images/sign01-large.png)
+    [![Registrazione al portale per sviluppatori Apple](sandboxing-images/sign01.png "registrazione al portale per sviluppatori di Apple")](sandboxing-images/sign01-large.png#lightbox)
 2. Selezionare **certificati, profili & identificatori**: 
 
-    [![Selezione di certificati, profili & identificatori](sandboxing-images/sign02.png "la selezione di certificati, gli identificatori e i profili")](sandboxing-images/sign02-large.png)
+    [![Selezione di certificati, identificatori e profili](sandboxing-images/sign02.png "Selezione di certificati, identificatori e profili")](sandboxing-images/sign02-large.png#lightbox)
 3. In **App Mac**selezionare **identificatori**: 
 
-    [![Selezione di identificatori](sandboxing-images/sign03.png "selezionando gli identificatori")](sandboxing-images/sign03-large.png)
+    [![Selezione di identificatori](sandboxing-images/sign03.png "selezionando gli identificatori")](sandboxing-images/sign03-large.png#lightbox)
 4. Creare un nuovo ID per l'applicazione: 
 
-    [![Creazione di un nuovo ID di App](sandboxing-images/sign04.png "la creazione di un nuovo ID di App")](sandboxing-images/sign04-large.png)
+    [![Creazione di un nuovo ID di App](sandboxing-images/sign04.png "la creazione di un nuovo ID di App")](sandboxing-images/sign04-large.png#lightbox)
 5. In **i profili di Provisioning**selezionare **sviluppo**: 
 
-    [![Selezione di sviluppo](sandboxing-images/sign05.png "selezionando sviluppo")](sandboxing-images/sign05-large.png)
+    [![Selezione di sviluppo](sandboxing-images/sign05.png "selezionando sviluppo")](sandboxing-images/sign05-large.png#lightbox)
 6. Creare un nuovo profilo e selezionare **lo sviluppo di App Mac**: 
 
-    [![Creazione di un nuovo profilo](sandboxing-images/sign06.png "la creazione di un nuovo profilo")](sandboxing-images/sign06-large.png)
+    [![Creazione di un nuovo profilo](sandboxing-images/sign06.png "la creazione di un nuovo profilo")](sandboxing-images/sign06-large.png#lightbox)
 7. Selezionare l'ID dell'App creati in precedenza: 
 
-    [![Selezionare l'ID App](sandboxing-images/sign07.png "selezionando l'ID dell'App")](sandboxing-images/sign07-large.png)
+    [![Selezionare l'ID App](sandboxing-images/sign07.png "selezionando l'ID dell'App")](sandboxing-images/sign07-large.png#lightbox)
 8. Selezionare gli sviluppatori per questo profilo: 
 
-    [![Gli sviluppatori di aggiungere](sandboxing-images/sign08.png "agli sviluppatori di aggiunta")](sandboxing-images/sign08-large.png)
+    [![Gli sviluppatori di aggiungere](sandboxing-images/sign08.png "agli sviluppatori di aggiunta")](sandboxing-images/sign08-large.png#lightbox)
 9. Selezionare i computer per questo profilo: 
 
-    [![Selezionare i computer consentiti](sandboxing-images/sign09.png "selezionato i computer consentiti")](sandboxing-images/sign09-large.png)
+    [![Selezionare i computer consentiti](sandboxing-images/sign09.png "selezionato i computer consentiti")](sandboxing-images/sign09-large.png#lightbox)
 10. Assegnare un nome di profilo: 
 
-    [![Assegnando un nome di profilo](sandboxing-images/sign10.png "assegnando un nome di profilo")](sandboxing-images/sign10-large.png)
+    [![Assegnando un nome di profilo](sandboxing-images/sign10.png "assegnando un nome di profilo")](sandboxing-images/sign10-large.png#lightbox)
 11. Fare clic su di **eseguita** pulsante.
 
 > [!IMPORTANT]
@@ -160,10 +160,10 @@ Successivamente, è necessario selezionare il nuovo ID App e profilo di Provisio
 1. Nel **soluzione riempimento**, fare doppio clic su di **Info. plist** file per aprirlo e modificarlo.
 2. Verificare che il **identificatore Bundle** corrisponde l'ID App creato in precedenza (esempio: `com.appracatappra.MacSandbox`): 
 
-    [![Modifica l'identificatore Bundle](sandboxing-images/sign13.png "modifica l'identificatore Bundle")](sandboxing-images/sign13-large.png)
+    [![Modifica l'identificatore Bundle](sandboxing-images/sign13.png "modifica l'identificatore Bundle")](sandboxing-images/sign13-large.png#lightbox)
 3. Successivamente, fare doppio clic sul **Entitlements.plist** file e verificare il nostro **iCloud archivio chiave-valore** e **iCloud contenitori** corrispondono l'ID App creato in precedenza (esempio: `com.appracatappra.MacSandbox`): 
 
-    [![Modifica del file Entitlements.plist](sandboxing-images/sign17.png "la modifica del file Entitlements.plist")](sandboxing-images/sign17-large.png)
+    [![Modifica del file Entitlements.plist](sandboxing-images/sign17.png "la modifica del file Entitlements.plist")](sandboxing-images/sign17-large.png#lightbox)
 3. Salvare le modifiche.
 4. Nel **soluzione riempimento**, fare doppio clic sul file di progetto per aprire le relative opzioni per la modifica:  
 
@@ -180,7 +180,7 @@ Successivamente, è necessario selezionare il nuovo ID App e profilo di Provisio
 
 A questo punto è consigliabile eseguire l'applicazione e assicurarsi che tutto ciò che viene firmato e configurato in modo corretto. Se l'app continui a essere eseguita come prima, tutto ciò che è valido. In caso di errore, è possibile che venga visualizzato una finestra di dialogo simile a quello seguente:
 
-[![Un esempio di finestra di dialogo problema di provisioning](sandboxing-images/sign16.png "un esempio di finestra di dialogo problema di provisioning")](sandboxing-images/sign16-large.png)
+[![Un esempio di finestra di dialogo problema di provisioning](sandboxing-images/sign16.png "un esempio di finestra di dialogo problema di provisioning")](sandboxing-images/sign16-large.png#lightbox)
 
 Ecco le cause più comuni di provisioning e la firma di problemi:
 
@@ -197,12 +197,12 @@ Per attivare Sandbox dell'App, selezionando la casella di controllo nelle opzion
 1. Nel **soluzione riempimento**, fare doppio clic su di **Entitlements.plist** file per aprirlo e modificarlo.
 2. Controllare gli **abilitare i diritti** e **abilitare Sandboxing App**: 
 
-    [![Modifica i diritti e l'abilitazione di sandboxing](sandboxing-images/sign17.png "i diritti di modifica e l'abilitazione di sandboxing")](sandboxing-images/sign17-large.png)
+    [![Modifica i diritti e l'abilitazione di sandboxing](sandboxing-images/sign17.png "i diritti di modifica e l'abilitazione di sandboxing")](sandboxing-images/sign17-large.png#lightbox)
 3. Salvare le modifiche.
 
 A questo punto, è stata attivata la Sandbox di App, ma non è stato fornito l'accesso di rete necessarie per la visualizzazione Web. Se si esegue ora l'applicazione, è necessario ottenere una finestra vuota:
 
-[![Visualizzazione stato bloccato l'accesso a Internet](sandboxing-images/sample08.png "visualizzazione stato bloccato l'accesso a Internet")](sandboxing-images/sample08-large.png)
+[![Visualizzazione stato bloccato l'accesso a Internet](sandboxing-images/sample08.png "visualizzazione stato bloccato l'accesso a Internet")](sandboxing-images/sample08-large.png#lightbox)
 
 ### <a name="verifying-that-the-app-is-sandboxed"></a>Verifica che l'applicazione è in modalità sandbox
 
@@ -210,25 +210,25 @@ A parte la risorsa di blocco, sono disponibili tre modi principali per stabilire
 
 1. In Finder, verificare i contenuti del `~/Library/Containers/` cartella - se l'applicazione è in modalità sandbox, sarà presente una cartella denominata come identificatore Bundle dell'app (esempio: `com.appracatappra.MacSandbox`): 
 
-    [![Aprire il bundle dell'app](sandboxing-images/sample09.png "apertura bundle dell'app")](sandboxing-images/sample09-large.png)
+    [![Aprire il bundle dell'app](sandboxing-images/sample09.png "apertura bundle dell'app")](sandboxing-images/sample09-large.png#lightbox)
 2. Il sistema visualizza l'app come creata mediante sandbox in Monitoraggio attività:
     - Avviare Monitoraggio attività (in `/Applications/Utilities`). 
     - Scegliere **vista** > **colonne** e assicurarsi che il **Sandbox** voce di menu selezionata.
     - Verificare che la colonna Sandbox legge `Yes` per l'applicazione: 
 
-    [![L'app in Monitoraggio attività di verifica](sandboxing-images/sample10.png "l'app in Monitoraggio attività di controllo")](sandboxing-images/sample10-large.png)
+    [![L'app in Monitoraggio attività di verifica](sandboxing-images/sample10.png "l'app in Monitoraggio attività di controllo")](sandboxing-images/sample10-large.png#lightbox)
 3. Verificare che l'applicazione binaria è in modalità sandbox:
     - Avviare l'app Terminal.
     - Passare alle applicazioni `bin` directory.
     - Eseguire questo comando: `codesign -dvvv --entitlements :- executable_path` (dove `executable_path` è il percorso all'applicazione): 
 
-    [![Verifica l'app nella riga di comando](sandboxing-images/sample11.png "verifica l'app nella riga di comando")](sandboxing-images/sample11-large.png)
+    [![Verifica l'app nella riga di comando](sandboxing-images/sample11.png "verifica l'app nella riga di comando")](sandboxing-images/sample11-large.png#lightbox)
 
 ### <a name="debugging-a-sandboxed-app"></a>Debug di un'app creata mediante sandbox
 
 Il debugger si connette alle App Xamarin.Mac tramite TCP, il che significa che per impostazione predefinita quando si abilita il sandboxing, non è in grado di connettersi all'app, pertanto se si tenta di eseguire l'app senza le autorizzazioni appropriate abilitate, viene visualizzato un errore *"Impossibile connettersi a il debugger"*. 
 
-[![Impostare le opzioni necessarie](sandboxing-images/debug01.png "impostando le opzioni necessarie")](sandboxing-images/debug01-large.png)
+[![Impostare le opzioni necessarie](sandboxing-images/debug01.png "impostando le opzioni necessarie")](sandboxing-images/debug01-large.png#lightbox)
 
 Il **consentire connessioni in uscita rete (Client)** autorizzazione è necessaria per il debugger, l'abilitazione di questo consente il debug normalmente. Poiché non è possibile eseguire il debug senza di esso, è stata aggiornata la `CompileEntitlements` di destinazione per `msbuild` per aggiungere automaticamente l'autorizzazione per i diritti per qualsiasi applicazione in cui è in modalità sandbox per il debug solo le compilazioni. Build di rilascio devono usare i diritti specificati nel file dei diritti, senza modificato.
 
@@ -248,7 +248,7 @@ Seguire questa procedura:
 2. Aprire il **Console** applicazione (da `/Applications/Utilties/`).
 3. Selezionare **tutti i messaggi** nella barra laterale e immettere `sandbox` nella ricerca: 
 
-    [![Un esempio di un problema di sandboxing nella console di](sandboxing-images/resolve01.png "un esempio di un problema di sandboxing nella console di")](sandboxing-images/resolve01-large.png)
+    [![Un esempio di un problema di sandboxing nella console di](sandboxing-images/resolve01.png "un esempio di un problema di sandboxing nella console di")](sandboxing-images/resolve01-large.png#lightbox)
 
 Per l'applicazione di esempio precedente, è possibile vedere che sta bloccando il Kernal il `network-outbound` traffico a causa della Sandbox di App, poiché non è stato richiesto tale diritto.
 
@@ -261,7 +261,7 @@ Seguire questa procedura:
 1. Nel **soluzione riempimento**, fare doppio clic su di **Entitlements.plist** file per aprirlo e modificarlo.
 2. Nel **diritti** sezione controllo di **consentire connessioni in uscita rete (Client)** casella di controllo: 
 
-    [![Modifica i diritti](sandboxing-images/sign17.png "i diritti di modifica")](sandboxing-images/sign17-large.png)
+    [![Modifica i diritti](sandboxing-images/sign17.png "i diritti di modifica")](sandboxing-images/sign17-large.png#lightbox)
 3. Salvare le modifiche all'applicazione.
 
 Se è eseguire le operazioni precedenti per l'applicazione di esempio, quindi compilare ed eseguirlo, il contenuto web a questo punto verrà visualizzato come previsto.
@@ -284,7 +284,7 @@ Abilitando la Sandbox di App, rimuovere tutto tranne un set minimo di privilegi,
 
 Modificare le risorse dell'applicazione App Sandbox modificando il relativo **Entitlements.plist** file e selezionando o selezionando i diritti richiesti dalle caselle a discesa Editor:
 
-[![Modifica i diritti](sandboxing-images/sign17.png "i diritti di modifica")](sandboxing-images/sign17-large.png)
+[![Modifica i diritti](sandboxing-images/sign17.png "i diritti di modifica")](sandboxing-images/sign17-large.png#lightbox)
 
 ### <a name="container-directories-and-file-system-access"></a>La directory contenitore e l'accesso al file system
 

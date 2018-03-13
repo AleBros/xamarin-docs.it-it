@@ -7,11 +7,11 @@ ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 19e20015d1872cbaea21dd8b8e5431981e463c33
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 19e1ab4000e473aa773bf75015ff520a1f9a96d8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---creating-an-application-using-the-elements-api"></a>Procedura dettagliata: creazione di un'applicazione tramite l'API di elementi
 
@@ -19,7 +19,7 @@ _Questo articolo si basa sulle informazioni presentate nell'introduzione di arti
 
 In questa procedura dettagliata, verrà usato il MT D elementi API per creare uno stile master-dettagli dell'applicazione che visualizza un elenco di attività. Quando l'utente seleziona il <span class="ui"> + </span> pulsante nella barra di spostamento, verrà aggiunto una nuova riga alla tabella per l'attività. Selezionando la riga verrà visualizzata la schermata di dettaglio che consente di aggiornare la descrizione dell'attività e la data di scadenza, come illustrato di seguito:
 
- [ ![](elements-api-walkthrough-images/01-task-list-app.png "Selezionando la riga verrà visualizzata la schermata di dettaglio che consente di aggiornare la descrizione dell'attività e la data di scadenza")](elements-api-walkthrough-images/01-task-list-app.png)
+ [![](elements-api-walkthrough-images/01-task-list-app.png "Selezionando la riga verrà visualizzata la schermata di dettaglio che consente di aggiornare la descrizione dell'attività e la data di scadenza")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
  <a name="Elements_API_Walkthrough" />
 
@@ -72,7 +72,7 @@ public override bool FinishedLaunching (UIApplication app,
 
 Il codice precedente crea un'istanza di un `RootElement` e passa nel `DialogViewController`. Il `DialogViewController` ha sempre un `RootElement` nella parte superiore della gerarchia. In questo esempio, il `RootElement` viene creato con la stringa "Elenco attività," che funge da titolo nella barra di navigazione del controller di navigazione. A questo punto, l'esecuzione dell'applicazione verrebbero presentate la schermata illustrata di seguito:
 
- [ ![](elements-api-walkthrough-images/02-to-do-list-screen-.png "Esecuzione dell'applicazione presenta la schermata visualizzata qui")](elements-api-walkthrough-images/02-to-do-list-screen-.png)
+ [![](elements-api-walkthrough-images/02-to-do-list-screen-.png "Esecuzione dell'applicazione presenta la schermata visualizzata qui")](elements-api-walkthrough-images/02-to-do-list-screen-.png#lightbox)
 
 Di seguito viene illustrato come utilizzare gerarchica del MonoTouch.Dialog di `Sections` e `Elements` per aggiungere altre schermate.
 
@@ -148,11 +148,11 @@ L'attività `Name` proprietà viene utilizzata per creare il `RootElement`della 
 
 La schermata Dettagli attività stessa è costituita da due sezioni. ognuna di queste sezioni contiene un singolo elemento. Il primo elemento viene creato da un `EntryElement` per fornire una riga modificabile per l'attività `Description` proprietà. Se l'elemento è selezionata, una tastiera per modificare il testo viene visualizzata come illustrato di seguito:
 
- [ ![](elements-api-walkthrough-images/03-create-task.png "Se l'elemento è selezionata, una tastiera per modificare il testo viene visualizzata come illustrato")](elements-api-walkthrough-images/03-create-task.png)
+ [![](elements-api-walkthrough-images/03-create-task.png "Se l'elemento è selezionata, una tastiera per modificare il testo viene visualizzata come illustrato")](elements-api-walkthrough-images/03-create-task.png#lightbox)
 
 La seconda sezione contiene un `DateElement` che consente di gestire l'attività `DueDate` proprietà. Selezione data caricamento automatico di un controllo selezione data come illustrato:
 
- [ ![](elements-api-walkthrough-images/04-date-picker.png "Selezione data caricamento automatico di un controllo selezione data come")](elements-api-walkthrough-images/04-date-picker.png)
+ [![](elements-api-walkthrough-images/04-date-picker.png "Selezione data caricamento automatico di un controllo selezione data come")](elements-api-walkthrough-images/04-date-picker.png#lightbox)
 
 In entrambi i `EntryElement` e `DateElement` casi (o per qualsiasi elemento di immissione di dati in MonoTouch.Dialog), le modifiche ai valori vengono mantenute automaticamente. È possibile dimostrare questo modificando la data e spostarsi avanti e indietro tra la schermata principale e i vari dettagli attività, in cui vengono mantenuti i valori nelle schermate di dettaglio.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 37c0b3f1f826893bef5c1a7ffb5d422c1c8c5c78
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fc9765b3f6a77f47fdce32dbc3805dd7bd70a08a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-tab-bar-controller"></a>Utilizzo di Controller barra delle schede
 
@@ -20,7 +20,7 @@ _Questo articolo descrive la progettazione e l'utilizzo di Controller barra sche
 
 Per molti tipi di App tvOS, navigazione primario viene presentato come una barra delle schede in esecuzione nella parte superiore della schermata. L'utente passa a sinistra e destra tra l'elenco di categorie possibili e l'area del contenuto di sotto le modifiche in modo da riflettere la selezione dell'utente.
 
-[ ![](tab-bars-images/tab01.png "Barra delle schede di esempio")](tab-bars-images/tab01.png)
+[![](tab-bars-images/tab01.png "Barra delle schede di esempio")](tab-bars-images/tab01.png#lightbox)
 
 Barra della scheda è trasparente per impostazione predefinita e viene sempre visualizzata nella parte superiore della schermata. Quando è in stato attivo, una barra delle schede verranno illustrate le 140 pixel superiore dello schermo ma rapidamente diapositiva immediatamente quando lo stato attivo passa all'area del contenuto.
 
@@ -64,22 +64,22 @@ Il modo più semplice per utilizzare le barre di scheda in un'app Xamarin.tvOS �
     
 1. Avviare una nuova app Xamarin.tvOS e selezionare **tvOS** > **App** > **schede App**: 
 
-    [ ![](tab-bars-images/tab02.png "Selezionare l'App a schede")](tab-bars-images/tab02.png)
+    [![](tab-bars-images/tab02.png "Selezionare l'App a schede")](tab-bars-images/tab02.png#lightbox)
 1. Seguire tutti i prompt per creare una nuova soluzione Xamarin.tvOS.
 1. Nel **soluzione riempimento**, fare doppio clic su di `Main.storyboard` e aprirlo per la modifica.
 1. Per modificare il **icona** o **titolo** per una determinata categoria, selezionare il **barra TabItem** per il **View Controller** nel  **Struttura documento**:
 
-    [ ![](tab-bars-images/tab03a.png "La barra delle schede di elemento per il Controller di visualizzazione nella struttura del documento")](tab-bars-images/tab03a.png)
+    [![](tab-bars-images/tab03a.png "La barra delle schede di elemento per il Controller di visualizzazione nella struttura del documento")](tab-bars-images/tab03a.png#lightbox)
 1. Impostare quindi le proprietà obbligatorie **scheda Widget** del **Esplora proprietà**: 
 
-    [ ![](tab-bars-images/tab03.png "La scheda Widget")](tab-bars-images/tab03.png)
+    [![](tab-bars-images/tab03.png "La scheda Widget")](tab-bars-images/tab03.png#lightbox)
 1. Per aggiungere una nuova categoria (scheda), eliminare un **View Controller** nell'area di progettazione: 
 
-    [ ![](tab-bars-images/tab04.png "Un Controller di visualizzazione")](tab-bars-images/tab04.png)
+    [![](tab-bars-images/tab04.png "Un Controller di visualizzazione")](tab-bars-images/tab04.png#lightbox)
 1. CTRL + clic e trascinare il **scheda View Controller** al nuovo **View Controller**.
 1. Selezionare la finestra popup, **visualizzare controller** per aggiungere la nuova vista come una scheda (categoria): 
 
-    [ ![](tab-bars-images/tab05.png "Seleziona il tasto Tab")](tab-bars-images/tab05.png)
+    [![](tab-bars-images/tab05.png "Seleziona il tasto Tab")](tab-bars-images/tab05.png#lightbox)
 1. Progettare il layout dell'interfaccia utente per ogni area del contenuto Caterogies normalmente, tramite l'aggiunta di elementi dell'interfaccia utente nella finestra di progettazione iOS.
 1. Esporre gli eventi necessari per lavorare con i controlli dell'interfaccia utente in codice c#.
 1. Nome di tutti i controlli dell'interfaccia utente che si desidera esporre nel codice c#.
@@ -89,22 +89,22 @@ Il modo più semplice per utilizzare le barre di scheda in un'app Xamarin.tvOS �
     
 1. Avviare una nuova app Xamarin.tvOS e selezionare **tvOS** > **App** > **schede App**: 
 
-    [ ![](tab-bars-images/tab02vs.png "Selezionare l'App a schede")](tab-bars-images/tab02vs.png)
+    [![](tab-bars-images/tab02vs.png "Selezionare l'App a schede")](tab-bars-images/tab02vs.png#lightbox)
 1. Seguire tutti i prompt per creare una nuova soluzione Xamarin.tvOS.
 1. Nel **Esplora**, fare doppio clic su di `Main.storyboard` e aprirlo per la modifica.
 1. Per modificare il **icona** o **titolo** per una determinata categoria, selezionare il **barra TabItem** per il **View Controller** nel  **Struttura documento**:
 
-    [ ![](tab-bars-images/tab03avs.png "Il Controller di visualizzazione nella struttura del documento")](tab-bars-images/tab03avs.png)
+    [![](tab-bars-images/tab03avs.png "Il Controller di visualizzazione nella struttura del documento")](tab-bars-images/tab03avs.png#lightbox)
 1. Impostare quindi le proprietà obbligatorie **scheda Widget** del **Esplora proprietà**: 
 
-    [ ![](tab-bars-images/tab03vs.png "La scheda Widget")](tab-bars-images/tab03vs.png)
+    [![](tab-bars-images/tab03vs.png "La scheda Widget")](tab-bars-images/tab03vs.png#lightbox)
 1. Per aggiungere una nuova categoria (scheda), trascinare un **View Controller** dal **della casella degli strumenti** e rilasciarlo nell'area di progettazione: 
 
-    [ ![](tab-bars-images/tab04vs.png "Un Controller di visualizzazione")](tab-bars-images/tab04vs.png)
+    [![](tab-bars-images/tab04vs.png "Un Controller di visualizzazione")](tab-bars-images/tab04vs.png#lightbox)
 1. CTRL + clic e trascinare il **scheda View Controller** al nuovo **View Controller**.
 1. Selezionare la finestra popup, **visualizzare controller** per aggiungere la nuova vista come una scheda (categoria): 
 
-    [ ![](tab-bars-images/tab05vs.png "Seleziona il tasto Tab")](tab-bars-images/tab05vs.png)
+    [![](tab-bars-images/tab05vs.png "Seleziona il tasto Tab")](tab-bars-images/tab05vs.png#lightbox)
 1. Progettare il layout dell'interfaccia utente per ogni area del contenuto Caterogies normalmente, tramite l'aggiunta di elementi dell'interfaccia utente nella finestra di progettazione iOS.
 1. Esporre gli eventi necessari per lavorare con i controlli dell'interfaccia utente in codice c#.
 1. Nome di tutti i controlli dell'interfaccia utente che si desidera esporre nel codice c#.
@@ -137,7 +137,7 @@ TabBar.Items [2].BadgeValue = "10";
 
 Che produca i risultati seguenti quando esegue:
 
-[ ![](tab-bars-images/tab06.png "Un elemento della barra della scheda con badge")](tab-bars-images/tab06.png)
+[![](tab-bars-images/tab06.png "Un elemento della barra della scheda con badge")](tab-bars-images/tab06.png#lightbox)
 
 Utilizzare il `Title` proprietà del `UITabBarItem` per modificare il titolo e `Image` proprietà per modificare l'icona.
 

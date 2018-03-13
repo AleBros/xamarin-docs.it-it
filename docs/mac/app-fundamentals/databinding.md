@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 2c01a36eabb15fbe9b975c91328dfa7cfd651896
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: b7ffd069a8c99c2cdfd0ecb58fe7ef762e5a46f3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="data-binding-and-key-value-coding"></a>Data binding e la generazione di codice chiave-valore
 
@@ -24,7 +24,7 @@ Quando si utilizza c# e .NET in un'applicazione Xamarin.Mac, è possibile accede
 
 Tramite chiave-valore di codifica di data binding e le tecniche Xamarin.Mac nell'applicazione in uso, è possibile ridurre notevolmente la quantità di codice che è necessario scrivere e mantenere per popolare e lavorare con gli elementi dell'interfaccia utente. È inoltre il vantaggio di separazione ulteriormente i dati di backup (_modello di dati_) la parte anteriore terminare l'interfaccia utente (_Model-View-Controller_), i punti iniziali per più semplici da gestire, più flessibile dell'applicazione progettazione.
 
-[![Un esempio di app in esecuzione](databinding-images/intro01.png "un esempio di app in esecuzione")](databinding-images/intro01-large.png)
+[![Un esempio di app in esecuzione](databinding-images/intro01.png "un esempio di app in esecuzione")](databinding-images/intro01-large.png#lightbox)
 
 In questo articolo verranno descritte le nozioni di base dell'utilizzo chiave-valore di codifica e l'associazione di dati in un'applicazione Xamarin.Mac. È altamente consigliabile che il [Hello, Mac](~/mac/get-started/hello-mac.md) articolo prima di tutto, in particolare il [Introduzione a Xcode e interfaccia generatore](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [punti vendita e le azioni](~/mac/get-started/hello-mac.md#Outlets_and_Actions) le sezioni, come illustra i concetti chiave e le tecniche che verrà usato in questo articolo.
 
@@ -421,7 +421,7 @@ Con il modello di dati definito, esaminiamo un esempio semplice di associazione 
 
 In primo luogo, aggiungere un nuovo **View Controller** per il nostro **Main** interfaccia generatore di file e denominare la classe `SimpleViewController`: 
 
-[![Aggiunge un nuovo controller di visualizzazione](databinding-images/simple01.png "aggiunge un nuovo controller di visualizzazione")](databinding-images/simple01-large.png)
+[![Aggiunge un nuovo controller di visualizzazione](databinding-images/simple01.png "aggiunge un nuovo controller di visualizzazione")](databinding-images/simple01-large.png#lightbox)
 
 Successivamente, tornare a Visual Studio per Mac, modificare il **SimpleViewController.cs** file (che è stato aggiunto automaticamente al progetto) ed esporre un'istanza di `PersonModel` che sarà il form di associazione dati. Aggiungere il codice seguente:
 
@@ -461,27 +461,27 @@ public override void ViewDidLoad ()
 
 Ora è necessario creare il form, fare doppio clic su di **Main** file per aprirlo e modificarlo in Generatore di interfaccia. Layout del form per un aspetto simile a quanto segue:
 
-[![Modifica lo storyboard in Xcode](databinding-images/simple02.png "modifica lo storyboard in Xcode")](databinding-images/simple02-large.png)
+[![Modifica lo storyboard in Xcode](databinding-images/simple02.png "modifica lo storyboard in Xcode")](databinding-images/simple02-large.png#lightbox)
 
 Form per associare ai dati di `PersonModel` esposti tramite il `Person` chiave, eseguire le operazioni seguenti:
 
 1. Selezionare il **nome dipendente** campo di testo e passare al **associazioni controllo**.
 2. Controllare il **associare** e selezionare **Controller visualizzazione semplice** nell'elenco a discesa. Quindi immettere `self.Person.Name` per il **il percorso della chiave**: 
 
-    [![Immettere il percorso della chiave](databinding-images/simple03.png "immettendo il percorso della chiave")](databinding-images/simple03-large.png)
+    [![Immettere il percorso della chiave](databinding-images/simple03.png "immettendo il percorso della chiave")](databinding-images/simple03-large.png#lightbox)
 3. Selezionare il **occupazione** campo di testo e verificare il **associare** e selezionare **Controller visualizzazione semplice** nell'elenco a discesa. Quindi immettere `self.Person.Occupation` per il **il percorso della chiave**:  
 
-    [![Immettere il percorso della chiave](databinding-images/simple04.png "immettendo il percorso della chiave")](databinding-images/simple04-large.png)
+    [![Immettere il percorso della chiave](databinding-images/simple04.png "immettendo il percorso della chiave")](databinding-images/simple04-large.png#lightbox)
 4. Selezionare il **dipendente è una gestione** casella di controllo e verificare il **associare** e selezionare **Controller visualizzazione semplice** nell'elenco a discesa. Quindi immettere `self.Person.isManager` per il **il percorso della chiave**:  
 
-    [![Immettere il percorso della chiave](databinding-images/simple05.png "immettendo il percorso della chiave")](databinding-images/simple05-large.png)
+    [![Immettere il percorso della chiave](databinding-images/simple05.png "immettendo il percorso della chiave")](databinding-images/simple05-large.png#lightbox)
 5. Selezionare il **numero di dipendenti gestito** campo di testo e verificare il **associare** e selezionare **Controller visualizzazione semplice** nell'elenco a discesa. Quindi immettere `self.Person.NumberOfEmployees` per il **il percorso della chiave**:  
 
-    [![Immettere il percorso della chiave](databinding-images/simple06.png "immettendo il percorso della chiave")](databinding-images/simple06-large.png)
+    [![Immettere il percorso della chiave](databinding-images/simple06.png "immettendo il percorso della chiave")](databinding-images/simple06-large.png#lightbox)
 6. Se il dipendente non è una gestione, è necessario nascondere l'etichetta del numero di dipendenti gestiti e un campo di testo.
 7. Selezionare il **numero di dipendenti gestito** etichetta, espandere il **Hidden** turndown e controllare il **associare** e selezionare **Controller visualizzazione semplice** nell'elenco a discesa. Quindi immettere `self.Person.isManager` per il **il percorso della chiave**:  
 
-    [![Immettere il percorso della chiave](databinding-images/simple07.png "immettendo il percorso della chiave")](databinding-images/simple07-large.png)
+    [![Immettere il percorso della chiave](databinding-images/simple07.png "immettendo il percorso della chiave")](databinding-images/simple07-large.png#lightbox)
 8. Selezionare `NSNegateBoolean` dal **valore Transformer** elenco a discesa:  
 
     ![Selezionando la trasformazione chiave NSNegateBoolean](databinding-images/simple08.png "selezionando la trasformazione chiave NSNegateBoolean")
@@ -491,11 +491,11 @@ Form per associare ai dati di `PersonModel` esposti tramite il `Person` chiave, 
 
 Se si esegue l'applicazione, i valori di `Person` proprietà popola automaticamente il form:
 
-[![Visualizzazione di un modulo compilato automaticamente](databinding-images/simple09.png "che mostra un modulo compilato automaticamente")](databinding-images/simple09-large.png)
+[![Visualizzazione di un modulo compilato automaticamente](databinding-images/simple09.png "che mostra un modulo compilato automaticamente")](databinding-images/simple09-large.png#lightbox)
 
 Tutte le modifiche apportate al modulo gli utenti verranno scritte per il `Person` proprietà nel Controller di visualizzazione. Ad esempio, se si deseleziona **dipendente è una gestione** aggiornamenti il `Person` istanza nostri `PersonModel` e il **numero di dipendenti gestito** etichetta e il campo di testo sono nascosti automaticamente (tramite associazione di dati):
 
-[![Nascondere il numero di dipendenti per non responsabili](databinding-images/simple10.png "nascondere il numero di dipendenti per non responsabili")](databinding-images/simple10-large.png)
+[![Nascondere il numero di dipendenti per non responsabili](databinding-images/simple10.png "nascondere il numero di dipendenti per non responsabili")](databinding-images/simple10-large.png#lightbox)
 
 <a name="Table_View_Data_Binding" />
 
@@ -505,7 +505,7 @@ Ora che è disponibile, i concetti fondamentali dell'associazione di dati, verr�
 
 In primo luogo, aggiungere un nuovo **View Controller** per il nostro **Main** interfaccia generatore di file e denominare la classe `TableViewController`:
 
-[![Aggiunge un nuovo controller di visualizzazione](databinding-images/table01.png "aggiunge un nuovo controller di visualizzazione")](databinding-images/table01-large.png)
+[![Aggiunge un nuovo controller di visualizzazione](databinding-images/table01.png "aggiunge un nuovo controller di visualizzazione")](databinding-images/table01-large.png#lightbox)
 
 Successivamente, si modifica il **TableViewController.cs** file (che è stato aggiunto automaticamente al progetto) e esporre una matrice (`NSArray`) di `PersonModel` classi che sarà il form di associazione dati. Aggiungere il codice seguente:
 
@@ -572,7 +572,7 @@ public override void AwakeFromNib ()
 
 Ora è necessario creare la tabella, vista, fare doppio clic su di **Main** file per aprirlo e modificarlo in Generatore di interfaccia. Layout di tabella per la ricerca simile al seguente:
 
-[![Layout di una nuova visualizzazione tabella](databinding-images/table02.png "layout di una nuova visualizzazione tabella")](databinding-images/table02-large.png)
+[![Layout di una nuova visualizzazione tabella](databinding-images/table02.png "layout di una nuova visualizzazione tabella")](databinding-images/table02-large.png#lightbox)
 
 È necessario aggiungere un **Controller Array** per fornire i dati associati a una tabella, eseguire le operazioni seguenti:
 
@@ -581,7 +581,7 @@ Ora è necessario creare la tabella, vista, fare doppio clic su di **Main** file
     ![Selezione di un Controller dell'Array dalla libreria](databinding-images/table03.png "la selezione di un Controller dell'Array dalla libreria")
 2. Selezionare **Controller Array** nel **interfaccia gerarchia** e passare al **attributo controllo**:  
 
-    [![Selezionare il controllo degli attributi](databinding-images/table04.png "selezionando il controllo degli attributi")](databinding-images/table04-large.png)
+    [![Selezionare il controllo degli attributi](databinding-images/table04.png "selezionando il controllo degli attributi")](databinding-images/table04-large.png#lightbox)
 3. Immettere `PersonModel` per il **nome classe**, fare clic su di **più** pulsante e aggiungere tre chiavi. Denominarle `Name`, `Occupation` e `isManager`:  
 
     ![Aggiunta di percorsi chiavi necessari](databinding-images/table05.png "aggiungendo i percorsi di chiave richiesti")
@@ -595,22 +595,22 @@ Ora è necessario associare la tabella vista al Controller di Array, eseguire le
 
 1. Selezionare la visualizzazione della tabella e **associazione controllo**:  
 
-    [![Selezionare il controllo con associazione](databinding-images/table07.png "selezionando il controllo con associazione")](databinding-images/table07-large.png)
+    [![Selezionare il controllo con associazione](databinding-images/table07.png "selezionando il controllo con associazione")](databinding-images/table07-large.png#lightbox)
 2. Sotto il **sommario** turndown, selezionare **associare** e **Controller Array**. Immettere `arrangedObjects` per il **chiave Controller** campo:  
 
     ![La definizione della chiave controller](databinding-images/table08.png "che definisce la chiave del controller")
 3. Selezionare il **cella di visualizzazione tabella** sotto il **dipendente** colonna. Nel **controllo associazioni** sotto il **valore** turndown, selezionare **associare** e **cella tabella vista**. Immettere `objectValue.Name` per il **il percorso della chiave del modello**:  
 
-    [![Impostare il percorso della chiave del modello](databinding-images/table09.png "impostando il percorso della chiave del modello")](databinding-images/table09-large.png)
+    [![Impostare il percorso della chiave del modello](databinding-images/table09.png "impostando il percorso della chiave del modello")](databinding-images/table09-large.png#lightbox)
 4. `objectValue` è il numero corrente `PersonModel` nella matrice viene gestita dal Controller di matrice.
 5. Selezionare il **cella di visualizzazione tabella** sotto il **occupazione** colonna. Nel **controllo associazioni** sotto il **valore** turndown, selezionare **associare** e **cella tabella vista**. Immettere `objectValue.Occupation` per il **il percorso della chiave del modello**:  
 
-    [![Impostare il percorso della chiave del modello](databinding-images/table10.png "impostando il percorso della chiave del modello")](databinding-images/table10-large.png)
+    [![Impostare il percorso della chiave del modello](databinding-images/table10.png "impostando il percorso della chiave del modello")](databinding-images/table10-large.png#lightbox)
 6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
 Se si esegue l'applicazione, la tabella verrà popolata con la matrice di `PersonModels`:
 
-[![Esecuzione dell'applicazione](databinding-images/table11.png "esecuzione dell'applicazione")](databinding-images/table11-large.png)
+[![Esecuzione dell'applicazione](databinding-images/table11.png "esecuzione dell'applicazione")](databinding-images/table11-large.png#lightbox)
 
 <a name="Outline_View_Data_Binding" />
 
@@ -620,7 +620,7 @@ associazione dati in base a una visualizzazione struttura è molto simile per as
 
 In primo luogo, aggiungere un nuovo **View Controller** per il nostro **Main** interfaccia generatore di file e denominare la classe `OutlineViewController`: 
 
-[![Aggiunge un nuovo controller di visualizzazione](databinding-images/outline01.png "aggiunge un nuovo controller di visualizzazione")](databinding-images/outline01-large.png)
+[![Aggiunge un nuovo controller di visualizzazione](databinding-images/outline01.png "aggiunge un nuovo controller di visualizzazione")](databinding-images/outline01-large.png#lightbox)
 
 Successivamente, si modifica il **OutlineViewController.cs** file (che è stato aggiunto automaticamente al progetto) e esporre una matrice (`NSArray`) di `PersonModel` classi che sarà il form di associazione dati. Aggiungere il codice seguente:
 
@@ -690,7 +690,7 @@ public override void AwakeFromNib ()
 
 Ora è necessario creare la visualizzazione struttura, fare doppio clic su di **Main** file per aprirlo e modificarlo in Generatore di interfaccia. Layout di tabella per la ricerca simile al seguente:
 
-[![Creazione della visualizzazione struttura](databinding-images/outline02.png "creazione della visualizzazione struttura")](databinding-images/outline02-large.png)
+[![Creazione della visualizzazione struttura](databinding-images/outline02.png "creazione della visualizzazione struttura")](databinding-images/outline02-large.png#lightbox)
 
 È necessario aggiungere un **Controller albero** per fornire i dati associati a questo profilo, eseguire le operazioni seguenti:
 
@@ -699,7 +699,7 @@ Ora è necessario creare la visualizzazione struttura, fare doppio clic su di **
     ![Selezione di un Controller di struttura ad albero dalla libreria](databinding-images/outline03.png "selezionando un Controller di struttura ad albero dalla libreria")
 2. Selezionare **albero Controller** nel **interfaccia gerarchia** e passare al **controllo attributo**:  
 
-    [![Selezionare il controllo di attributo](databinding-images/outline04.png "selezionando il controllo di attributo")](databinding-images/outline04-large.png)
+    [![Selezionare il controllo di attributo](databinding-images/outline04.png "selezionando il controllo di attributo")](databinding-images/outline04-large.png#lightbox)
 3. Immettere `PersonModel` per il **nome classe**, fare clic su di **più** pulsante e aggiungere tre chiavi. Denominarle `Name`, `Occupation` e `isManager`:  
 
     ![Aggiunta di percorsi chiavi necessari](databinding-images/outline05.png "aggiungendo i percorsi di chiave richiesti")
@@ -717,22 +717,22 @@ Ora è necessario associare la visualizzazione della struttura per il Controller
 
 1. Selezionare la visualizzazione struttura e il **controllo associazione** selezionare:  
 
-    [![Selezionare il controllo con associazione](databinding-images/outline07.png "selezionando il controllo con associazione")](databinding-images/outline07-large.png)
+    [![Selezionare il controllo con associazione](databinding-images/outline07.png "selezionando il controllo con associazione")](databinding-images/outline07-large.png#lightbox)
 2. Sotto il **struttura Visualizza contenuto** turndown, selezionare **associare** e **Controller albero**. Immettere `arrangedObjects` per il **chiave Controller** campo:  
 
     ![Impostazione della chiave controller](databinding-images/outline08.png "l'impostazione della chiave del controller")
 3. Selezionare il **cella di visualizzazione tabella** sotto il **dipendente** colonna. Nel **controllo associazioni** sotto il **valore** turndown, selezionare **associare** e **cella tabella vista**. Immettere `objectValue.Name` per il **il percorso della chiave del modello**:  
 
-    [![Immettere il percorso della chiave del modello](databinding-images/outline09.png "immettendo il percorso della chiave del modello")](databinding-images/outline09-large.png)
+    [![Immettere il percorso della chiave del modello](databinding-images/outline09.png "immettendo il percorso della chiave del modello")](databinding-images/outline09-large.png#lightbox)
 4. `objectValue` è il numero corrente `PersonModel` nella matrice viene gestita dal Controller di struttura ad albero.
 5. Selezionare il **cella di visualizzazione tabella** sotto il **occupazione** colonna. Nel **controllo associazioni** sotto il **valore** turndown, selezionare **associare** e **cella tabella vista**. Immettere `objectValue.Occupation` per il **il percorso della chiave del modello**:  
 
-    [![Immettere il percorso della chiave del modello](databinding-images/outline10.png "immettendo il percorso della chiave del modello")](databinding-images/outline10-large.png)
+    [![Immettere il percorso della chiave del modello](databinding-images/outline10.png "immettendo il percorso della chiave del modello")](databinding-images/outline10-large.png#lightbox)
 6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
 Se si esegue l'applicazione, la struttura verrà popolata con la matrice di `PersonModels`:
 
-[![Esecuzione dell'applicazione](databinding-images/outline11.png "esecuzione dell'applicazione")](databinding-images/outline11-large.png)
+[![Esecuzione dell'applicazione](databinding-images/outline11.png "esecuzione dell'applicazione")](databinding-images/outline11-large.png#lightbox)
 
 ### <a name="collection-view-data-binding"></a>Associazione di dati visualizzazione raccolta
 
@@ -860,7 +860,7 @@ For more information on working with Collection Views, please see our [Collectio
 
 Commettere delle associazioni di dati può comportare un _Native di arresto anomalo_ in codice non gestito e rallentare l'applicazione Xamarin.Mac completamente generando un `SIGABRT` errore:
 
-[![Esempio di una finestra di dialogo di arresto anomalo del sistema nativo](databinding-images/debug01.png "esempio di una finestra di dialogo di arresto anomalo del sistema nativo")](databinding-images/debug01-large.png)
+[![Esempio di una finestra di dialogo di arresto anomalo del sistema nativo](databinding-images/debug01.png "esempio di una finestra di dialogo di arresto anomalo del sistema nativo")](databinding-images/debug01-large.png#lightbox)
 
 Durante l'associazione dati sono in genere sono quattro cause principali di arresti anomali del sistema nativo:
 
@@ -873,15 +873,15 @@ Durante l'associazione dati sono in genere sono quattro cause principali di arre
 
 Si provocare un arresto anomalo del sistema nativo nell'associazione di dati è possibile visualizzare come individuare e risolvere il problema. In Generatore di interfaccia, è necessario modificare l'associazione della prima etichetta nell'esempio di visualizzazione della raccolta da `Name` a `Title`:
 
-[![Modifica la chiave di associazione](databinding-images/debug02.png "modifica la chiave di associazione")](databinding-images/debug02-large.png)
+[![Modifica la chiave di associazione](databinding-images/debug02.png "modifica la chiave di associazione")](databinding-images/debug02-large.png#lightbox)
 
 Consente di salvare le modifiche, tornare a Visual Studio per Mac per la sincronizzazione con Xcode ed eseguire l'applicazione. Quando viene visualizzata la visualizzazione della raccolta, l'applicazione arresterà temporaneamente con un `SIGABRT` errore (come illustrato nel **Output dell'applicazione** in Visual Studio per Mac) poiché il `PersonModel` non espone una proprietà con la chiave `Title`:
 
-[![Esempio di un errore di associazione](databinding-images/debug03.png "ad esempio un errore di associazione")](databinding-images/debug03-large.png)
+[![Esempio di un errore di associazione](databinding-images/debug03.png "ad esempio un errore di associazione")](databinding-images/debug03-large.png#lightbox)
 
 Se si scorre all'inizio dell'errore nella **Output dell'applicazione** si noterà che la chiave per risolvere il problema:
 
-[![Individuare il problema nel log degli errori](databinding-images/debug04.png "individuare il problema nel log degli errori")](databinding-images/debug04-large.png)
+[![Individuare il problema nel log degli errori](databinding-images/debug04.png "individuare il problema nel log degli errori")](databinding-images/debug04-large.png#lightbox)
 
 Questa riga si rivelano che la chiave `Title` non esiste per l'oggetto che viene eseguita l'associazione. Se si modifica l'associazione nuovamente `Name` in Generatore di interfaccia, salvataggio, la sincronizzazione, ricompilare ed eseguire, l'applicazione verrà eseguita come previsto senza problemi.
 

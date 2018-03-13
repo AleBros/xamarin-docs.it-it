@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 99b9ed9e3c71766f483f7b00996137aae7a247d1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 26ac42e4b7acbe19dee746130fc335fdf18ffc46
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-debug-log"></a>Log di debug Android
 
@@ -36,7 +36,6 @@ Dopo che la finestra dello strumento è stata visualizzata, il dispositivo fisic
 La finestra dello strumento offre una tabella di voci di log, una casella combinata per la selezione dei dispositivi, la possibilità di cancellare le voci di log, una casella di ricerca e pulsanti di riproduzione/arresto/sospensione. 
 
 
-<a name="Accessing_from_the_Command_Line" />
 
 ## <a name="accessing-from-the-command-line"></a>Accesso dalla riga di comando
 
@@ -52,7 +51,6 @@ Se sono collegati più dispositivi, sarà necessario identificare il dispositivo
 
 Altri comandi sono disponibili eseguendo semplicemente **adb**.
 
-<a name="Writing_to_the_Debug_Log" />
 
 
 ## <a name="writing-to-the-debug-log"></a>Scrittura nel log di debug
@@ -75,7 +73,6 @@ W/myapp   (11103): this is a warning message
 E/myapp   (11103): this is an error message
 ```
 
-<a name="Interesting_Messages" />
 
 ## <a name="interesting-messages"></a>Messaggi interessanti
 

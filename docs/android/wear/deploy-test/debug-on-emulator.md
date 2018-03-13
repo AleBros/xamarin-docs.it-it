@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1ad3c193261bf22b7ee344aa1ccabb226533b907
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dc6146670c4b5f7d29491335b4719e032487dcce
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Eseguire il debug di Android usura in un emulatore
 
@@ -28,14 +28,14 @@ Per eseguire l'app usura in un emulatore, è necessario installare l'emulatore d
 
 Quando si crea un dispositivo virtuale usura, selezionare un profilo di dispositivo, usare Android (ad esempio **Android usura quadrato**). Per migliorare le prestazioni, utilizzare l'usura **x86** CPU/ABI, come illustrato in questo esempio:
 
-[![Configurazione di esempio usura dispositivo virtuale](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png)
+[![Configurazione di esempio usura dispositivo virtuale](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png#lightbox)
 
 
 ## <a name="launch-the-wear-virtual-device"></a>Avviare il dispositivo virtuale usura 
 
 Dopo aver creato un dispositivo virtuale Android accenti, puoi scegliere dal menu a discesa dispositivo nell'IDE prima di iniziare il debug. Se il dispositivo virtuale non è disponibile nel menu a discesa del dispositivo, verificare che il progetto è un Android *accenti* il progetto di app (non un progetto di app Android) e che il livello API di destinazione viene impostata la stessa API a livello di dispositivo virtuale. Ad esempio:
 
-[ ![Scelta di un AVD accenti nel menu dispositivo di Visual Studio](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png)
+[![Scelta di un AVD accenti nel menu dispositivo di Visual Studio](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
 
 Una volta avviato l'emulatore Android, xamarin distribuirà usura app nell'emulatore. L'emulatore esegue l'app con l'immagine del dispositivo virtuale configurato.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: cbabaf36ba8bfaa74ec17b0af0cd97e29f72d270
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 996723db83a1f972cce26090d1253f97b6c818d3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="contacts-and-contactsui"></a>Contatti e ContactsUI
 
@@ -27,7 +27,7 @@ I due nuovi Framework contengono le funzionalità seguenti:
 
 - [**ContactsUI** ](#contactsui) -fornisce xamarin elementi dell'interfaccia utente da visualizzare, modificare, selezionare e creare contatti nei dispositivi iOS.
 
-[ ![](contacts-images/add01.png "Un esempio di foglio di contatto in un dispositivo iOS")](contacts-images/add01.png)
+[![](contacts-images/add01.png "Un esempio di foglio di contatto in un dispositivo iOS")](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
 > **Nota:** esistente `AddressBook` e `AddressBookUI` Framework utilizzato da iOS 8 (e versioni precedenti) sono deprecati in iOS 9 e deve essere sostituiti con il nuovo `Contacts` e `ContactsUI` Framework appena possibile per qualsiasi xamarin esistente app. Nuove app deve essere scritto con il nuovo Framework.
@@ -43,11 +43,13 @@ Nelle sezioni seguenti, si verrà esaminato un nuovo Framework e come implementa
 
 Il Framework di contatti xamarin accedere alle informazioni di contatto dell'utente. Poiché la maggior parte delle applicazioni richiedono solo accesso in sola lettura, questo framework è stato ottimizzato per l'accesso thread-safe di sola lettura.
 
+<a name="Contact_Objects" />
+
 ### <a name="contact-objects"></a>Oggetti contatto
 
 La `CNContact` classe accesso thread-safe di sola lettura alle proprietà di un contatto, ad esempio nome, indirizzo o numeri di telefono. `CNContact` funziona come un `NSDictionary` e contiene più raccolte di sola lettura di proprietà (ad esempio indirizzi o numeri di telefono):
 
-[ ![](contacts-images/contactobjects.png "Panoramica di oggetti contatto")](contacts-images/contactobjects.png)
+[![](contacts-images/contactobjects.png "Panoramica di oggetti contatto")](contacts-images/contactobjects.png#lightbox)
 
 Per qualsiasi proprietà che possono avere più valori (ad esempio i numeri di telefono o di indirizzo di posta elettronica), sarà rappresentati come una matrice di `NSLabeledValue` oggetti. `NSLabeledValue` è thread-safe tupla costituita da un set di sola lettura di etichette e i valori in cui l'etichetta definisce il valore per l'utente (ad esempio posta elettronica di domestica o aziendale). Il framework di contatti fornisce una selezione delle etichette predefinite (tramite il `CNLabelKey` e `CNLabelPhoneNumberKey` le classi statiche) che è possibile usare nell'app o è possibile definire le etichette personalizzate per le proprie esigenze.
 
@@ -111,7 +113,7 @@ else
 
 Se questo codice viene eseguito in un dispositivo iOS 9, un nuovo contatto verrà aggiunto alla raccolta dell'utente. Ad esempio:
 
-[ ![](contacts-images/add01.png "Un nuovo contatto aggiunto alla raccolta dell'utente")](contacts-images/add01.png)
+[![](contacts-images/add01.png "Un nuovo contatto aggiunto alla raccolta dell'utente")](contacts-images/add01.png#lightbox)
 
 ### <a name="contact-formatting-and-localization"></a>Formattazione di contatto e la localizzazione
 
@@ -194,7 +196,7 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 
 Un utente può avere diverse fonti di informazioni di contatto per un singolo utente nel corrispondente database contatto (ad esempio iCloud, Facebook o Google posta). In iOS e OS X App, le informazioni di contatto verranno automaticamente collegate tra loro e visualizzate all'utente come una singola _unificata contattare_:
 
-[ ![](contacts-images/unified01.png "Panoramica di contatti unificata")](contacts-images/unified01.png)
+[![](contacts-images/unified01.png "Panoramica di contatti unificata")](contacts-images/unified01.png#lightbox)
 
 Contattare questo unificata è una vista temporanea in memoria il collegamento informazioni di contatto che verranno assegnate un identificatore univoco (che deve essere utilizzato per il contatto recupera di nuovo se necessario). Per impostazione predefinita, il framework di contatti restituirà un contatto unificata laddove possibile.
 
@@ -259,11 +261,11 @@ Ogni volta che viene modificato un contatto, l'archivio di contatto invia un `CN
 
 Contatti di un utente può essere presente o in locale nel dispositivo dell'utente come contatti sincronizzati con il dispositivo da uno o più account di server (ad esempio Facebook o Google). Ogni pool di contatti ha il proprio _contenitore_ e un contatto specificato è disponibile solo in un contenitore.
 
-[ ![](contacts-images/containers01.png "Panoramica di contenitori e gruppi")](contacts-images/containers01.png)
+[![](contacts-images/containers01.png "Panoramica di contenitori e gruppi")](contacts-images/containers01.png#lightbox)
 
 Consentano alcuni contenitori per i contatti devono essere disposti in una o più _gruppi_ o _sottogruppi_. Questo comportamento dipende dall'archivio di backup per un contenitore specificato. Ad esempio, iCloud ha un solo contenitore, ma può avere molti gruppi (ma non gruppi). Microsoft Exchange, invece, non supporta gruppi, ma possono essere presenti più contenitori (uno per ogni cartella di Exchange).
 
-[ ![](contacts-images/containers02.png "Sovrapposta all'interno di contenitori e i gruppi")](contacts-images/containers02.png)
+[![](contacts-images/containers02.png "Sovrapposta all'interno di contenitori e i gruppi")](contacts-images/containers02.png#lightbox)
 
 <a name="contactsui" />
 

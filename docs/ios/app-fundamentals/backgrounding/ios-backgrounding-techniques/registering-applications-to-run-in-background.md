@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: dddd1ad4ae70b97f17ba71a7e96b553759e35695
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5fcb41f4f60adc8ca5be761c2b9a7449387a89d0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="registering-applications-to-run-in-the-background"></a>Registrazione delle applicazioni per l'esecuzione in Background
 
@@ -34,7 +34,7 @@ App registrata può rientrano in diverse categorie:
 
 Le applicazioni possono essere registrate mediante l'impostazione di **la modalità di Background necessarie** proprietà dell'applicazione *Info. plist*. Un'applicazione può registrare in tutte le categorie richiede:
 
- [ ![](registering-applications-to-run-in-background-images/bgmodes.png "Impostare la modalità di background")](registering-applications-to-run-in-background-images/bgmodes.png)
+ [![](registering-applications-to-run-in-background-images/bgmodes.png "Impostare la modalità di background")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
 
 Per una Guida dettagliata alla registrazione di un'applicazione per gli aggiornamenti di percorso in background, vedere il [procedura dettagliata percorso Background](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md).
 
@@ -42,7 +42,7 @@ Per una Guida dettagliata alla registrazione di un'applicazione per gli aggiorna
 
 Un'altra proprietà che può essere impostata nella *Info. plist* è il *applicazione non viene eseguito in background*, o `UIApplicationExitsOnSuspend` proprietà:
 
- [ ![](registering-applications-to-run-in-background-images/plist.png "La disabilitazione di Background in esecuzione")](registering-applications-to-run-in-background-images/plist.png)
+ [![](registering-applications-to-run-in-background-images/plist.png "La disabilitazione di Background in esecuzione")](registering-applications-to-run-in-background-images/plist.png#lightbox)
 
 Questo ha lo stesso effetto esattamente come l'impostazione aggiornamento App sfondo su off in iOS 7 +, ad eccezione del fatto che può essere modificata solo sul lato di sviluppatore ed è disponibile per iOS 4 e versioni successive. L'applicazione verrà sospeso immediatamente dopo l'immissione di background e non sarà in grado di eseguire qualsiasi elaborazione.
 

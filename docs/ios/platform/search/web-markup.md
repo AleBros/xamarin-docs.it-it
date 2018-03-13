@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 63bc1f0ed13fe65b36e95978da9ccc2ea8d4481c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8812c6a234e05e4d651effbeb83a7bcad38dc683
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-with-web-markup"></a>Ricerca con Markup Web
 
@@ -20,12 +20,12 @@ Per le applicazioni che forniscono l'accesso ai contenuti tramite un sito web (n
 
 Se l'app iOS già supporta il collegamento di complete per dispositivi mobili e il sito Web presentati collegamenti diretti al contenuto all'interno, Apple dell'app _Applebot_ crawler web verrà indicizzare il contenuto e aggiungere automaticamente al relativo indice Cloud:
 
-[ ![](web-markup-images/webmarkup01.png "Panoramica del cloud indice")](web-markup-images/webmarkup01.png)
+[![](web-markup-images/webmarkup01.png "Panoramica del cloud indice")](web-markup-images/webmarkup01.png#lightbox)
 
 Apple esporrà i risultati nei risultati della ricerca Spotlight e Safari.
 Se l'utente tocca su uno di questi risultati (e hanno installato app), quindi verranno adottate per il contenuto dell'App:
 
-[ ![](web-markup-images/webmarkup02.png "Completa il collegamento da un sito Web nei risultati della ricerca")](web-markup-images/webmarkup02.png)
+[![](web-markup-images/webmarkup02.png "Completa il collegamento da un sito Web nei risultati della ricerca")](web-markup-images/webmarkup02.png#lightbox)
 
 ## <a name="enabling-web-content-indexing"></a>Abilitazione dell'indicizzazione del contenuto Web
 
@@ -154,7 +154,7 @@ Le stesse informazioni possono essere rappresentate in formato JSON LD del schem
 
 L'esempio seguente mostra dei metadati dal sito Web che fornisce i risultati della ricerca avanzata per l'utente finale:
 
-[ ![](web-markup-images/deeplink01.png "Risultati tramite Markup dati strutturati completi.")](web-markup-images/deeplink01.png)
+[![](web-markup-images/deeplink01.png "Risultati tramite Markup dati strutturati completi.")](web-markup-images/deeplink01.png#lightbox)
 
 Apple supporta attualmente i seguenti tipi di schema da schema.org:
 

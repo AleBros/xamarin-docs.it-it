@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 848db0af436ad43e07e68de4d278f641ab83136d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c806eb51be5f585f2c94b438f6ca31a70aaa7551
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough--using-touch-in-ios"></a>Procedura dettagliata: utilizzo tocco in iOS
 
@@ -24,9 +24,11 @@ Questa procedura dettagliata viene illustrato come scrivere codice che risponde 
 Ogni sezione contiene istruzioni per scrivere il codice da zero.
 Il [avvio codice di esempio](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start) include già una schermata di storyboard e i menu completa:
 
- [ ![](ios-touch-walkthrough-images/image3.png "L'esempio include una schermata di menu")](ios-touch-walkthrough-images/image3.png)
+ [![](ios-touch-walkthrough-images/image3.png "L'esempio include una schermata di menu")](ios-touch-walkthrough-images/image3.png#lightbox)
 
 Seguire le istruzioni seguenti per aggiungere codice per lo storyboard e ottenere informazioni sui diversi tipi di eventi tocco disponibili in iOS. In alternativa, aprire il [esempio completata](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final) per visualizzare tutti gli elementi di lavoro.
+
+<a name="Touch_Samples"/>
 
 ## <a name="touch-samples"></a>Esempi di tocco
 
@@ -35,7 +37,7 @@ In questo esempio, illustra alcune delle API il tocco. Seguire questi passaggi p
 
 1. Aprire il progetto **Touch_Start**. Prima di eseguire il progetto per assicurarsi che tutto sia corretto e il tocco di **tocco esempi** pulsante. Vedrai una schermata simile alla seguente (anche se nessuno dei pulsanti funzionerà):
     
-    [![](ios-touch-walkthrough-images/image4.png "App di esempio, eseguire con i pulsanti non funzionante")](ios-touch-walkthrough-images/image4.png)
+    [![](ios-touch-walkthrough-images/image4.png "App di esempio, eseguire con i pulsanti non funzionante")](ios-touch-walkthrough-images/image4.png#lightbox)
 
 
 1. Modificare il file **TouchViewController.cs** e aggiungere le variabili di due istanza seguenti alla classe `TouchViewController`:
@@ -166,9 +168,9 @@ In questo esempio, illustra alcune delle API il tocco. Seguire questi passaggi p
 
 1. A questo punto la schermata toccare esempi è completata. Si noti come la schermata cambia mentre si interagisce con ognuna delle immagini, come illustrato nella schermata seguente:
         
-    [![](ios-touch-walkthrough-images/image4.png "La schermata iniziale dell'app")](ios-touch-walkthrough-images/image4.png)
+    [![](ios-touch-walkthrough-images/image4.png "La schermata iniziale dell'app")](ios-touch-walkthrough-images/image4.png#lightbox)
     
-    [![](ios-touch-walkthrough-images/image5.png "La schermata dopo che l'utente trascina un pulsante")](ios-touch-walkthrough-images/image5.png)
+    [![](ios-touch-walkthrough-images/image5.png "La schermata dopo che l'utente trascina un pulsante")](ios-touch-walkthrough-images/image5.png#lightbox)
  
 
 <a name="Gesture_Recognizer_Samples" />
@@ -183,7 +185,7 @@ In questa sezione è verrà eliminare gli eventi di tocco e viene illustrato com
 
 Se si esegue il [avvio codice di esempio](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start) e fare clic su di **esempi riconoscitore di movimento** pulsante, viene visualizzata la schermata seguente:
 
- [ ![](ios-touch-walkthrough-images/image6.png "Fare clic sul pulsante esempi riconoscitore di movimento Visualizza questa schermata")](ios-touch-walkthrough-images/image6.png)
+ [![](ios-touch-walkthrough-images/image6.png "Fare clic sul pulsante esempi riconoscitore di movimento Visualizza questa schermata")](ios-touch-walkthrough-images/image6.png#lightbox)
 
 Seguire questi passaggi per implementare i riconoscitori di movimento:
 
@@ -305,15 +307,17 @@ Si noti che viene assegnato una destinazione per l'azione nel formato del metodo
 1. Eseguire l'applicazione e interagire con le due immagini.
 Nella schermata seguente è un esempio di tali interazioni:
     
-    [![](ios-touch-walkthrough-images/image7.png "Questa schermata mostra un'interazione di trascinamento")](ios-touch-walkthrough-images/image7.png)
+    [![](ios-touch-walkthrough-images/image7.png "Questa schermata mostra un'interazione di trascinamento")](ios-touch-walkthrough-images/image7.png#lightbox)
 
 
+
+<a name="Custom_Gesture_Recognizer"/>
 
 ## <a name="custom-gesture-recognizer"></a>Riconoscitore di movimento personalizzato
 
 In questa sezione si applicherà i concetti delle sezioni precedenti per generare un riconoscimento di movimenti personalizzati. Il riconoscitore di movimento personalizzato verrà sottoclassi `UIGestureRecognizer`, verrà riconoscere quando l'utente disegna "V" sullo schermo e attivare o disattivare una bitmap. Nella schermata riportata di seguito è riportato un esempio di questa schermata:
 
- [ ![](ios-touch-walkthrough-images/image8.png "L'app riconoscerà quando l'utente disegna "V" sullo schermo")](ios-touch-walkthrough-images/image8.png)
+ [![](ios-touch-walkthrough-images/image8.png "L'app riconoscerà quando l'utente disegna "V" sullo schermo")](ios-touch-walkthrough-images/image8.png#lightbox)
 
 Seguire questi passaggi per creare un riconoscimento di movimenti personalizzati:
 
@@ -490,9 +494,9 @@ La classe può ora iniziare successivo che l'utente interagisce con l'applicazio
 
 1. Eseguire l'applicazione, quindi riprovare a "V" di disegno sullo schermo. Dovrebbe essere visualizzato l'immagine da modificare, come illustrato nelle schermate seguenti:
     
-    [![](ios-touch-walkthrough-images/image9.png "Pulsante selezionato")](ios-touch-walkthrough-images/image9.png)
+    [![](ios-touch-walkthrough-images/image9.png "Pulsante selezionato")](ios-touch-walkthrough-images/image9.png#lightbox)
     
-    [![](ios-touch-walkthrough-images/image10.png "Il pulsante non è selezionato")](ios-touch-walkthrough-images/image10.png)
+    [![](ios-touch-walkthrough-images/image10.png "Il pulsante non è selezionato")](ios-touch-walkthrough-images/image10.png#lightbox)
 
 
 

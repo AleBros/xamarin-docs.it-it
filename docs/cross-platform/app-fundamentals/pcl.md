@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e3701960f246a8f627d991edf244656b5fd8958e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e81ecd10f4dfc101cf63ba9d052d15b51a367ee5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>Introduzione alle librerie di classi portabile
 
@@ -29,10 +29,6 @@ Sono disponibili tre approcci principali per la condivisione del codice che cons
 
 
 Questa pagina viene illustrato come creare un **PCL** progetto destinato a un profilo specifico, che è possibile fare riferimento da più progetti specifici della piattaforma.
-
-## <a name="requirements"></a>Requisiti
-
-Progetti libreria portabile vengono abilitati automaticamente in Visual Studio per Mac su macOS e sono incorporati a Visual Studio 2013 e versioni successive.
 
 
 ## <a name="what-is-a-portable-class-library"></a>Che cos'è una libreria di classi portabile?
@@ -132,7 +128,7 @@ Y </td>
   </tbody>
 </table>
 
-La colonna Xamarin è dovuto al fatto che xamarin. IOS e xamarin supporta tutti i profili forniti con Visual Studio 2013 e versioni successive e la disponibilità di funzionalità nelle librerie create sarà limitata solo da altre piattaforme, di che si sceglie supporto.
+La colonna Xamarin dovuto al fatto che xamarin. IOS e xamarin supporta tutti i profili forniti con Visual Studio e la disponibilità di funzionalità nelle librerie create sarà limitata solo da altre piattaforme, che si sceglie di supportare.
 
 Sono inclusi i profili di combinazioni di:
 
@@ -170,7 +166,7 @@ Questo diagramma illustra l'architettura di un'applicazione e multipiattaforma u
 
 
 
-[![](pcl-images/image1.png "Questo diagramma mostra l'architettura di un'applicazione e multipiattaforma usando una libreria di classi portabile per condividere codice, ma anche le opzioni di inserimento di dipendenze di passare la funzionalità dipendente dalla piattaforma")](pcl-images/image1.png)
+[![](pcl-images/image1.png "Questo diagramma mostra l'architettura di un'applicazione e multipiattaforma usando una libreria di classi portabile per condividere codice, ma anche le opzioni di inserimento di dipendenze di passare la funzionalità dipendente dalla piattaforma")](pcl-images/image1.png#lightbox)
 
 
 
@@ -212,7 +208,7 @@ Per visualizzare e modificare le impostazioni di libreria di classi Portabile pe
 
 
 
-[![](pcl-images/image4.png "Per visualizzare e modificare le impostazioni di libreria di classi Portabile per questo progetto, fare clic sul progetto e scegliere le opzioni di compilazione generale per visualizzare la schermata visualizzata qui")](pcl-images/image4.png)
+[![](pcl-images/image4.png "Per visualizzare e modificare le impostazioni di libreria di classi Portabile per questo progetto, fare clic sul progetto e scegliere le opzioni di compilazione generale per visualizzare la schermata visualizzata qui")](pcl-images/image4.png#lightbox)
 
 
 
@@ -224,7 +220,7 @@ Modificare qualsiasi il `Target Framework` Aggiorna automaticamente le opzioni d
 
 
 
-[![](pcl-images/image5.png "Modificando le opzioni Framework di destinazione viene automaticamente aggiornato il profilo corrente la schermata verrà inoltre visualizzato un avviso se si selezionano le opzioni incompatibili")](pcl-images/image5.png)
+[![](pcl-images/image5.png "Modificando le opzioni Framework di destinazione viene automaticamente aggiornato il profilo corrente la schermata verrà inoltre visualizzato un avviso se si selezionano le opzioni incompatibili")](pcl-images/image5.png#lightbox)
 
 
 
@@ -238,7 +234,7 @@ Quando il codice è scritto in una libreria PCL, Visual Studio per editor Mac ri
 
 
 
-[![](pcl-images/image6.png "IO che utilizzano il profilo predefinito Profile136 utilizzata in Visual Studio per Mac si noti la barra di scorrimento indica circa la metà delle classi disponibili sono visualizzata in realtà sono solo 14 classi disponibili")](pcl-images/image6.png)
+[![](pcl-images/image6.png "IO che utilizzano il profilo predefinito Profile136 utilizzata in Visual Studio per Mac si noti la barra di scorrimento indica circa la metà delle classi disponibili sono visualizzata in realtà sono solo 14 classi disponibili")](pcl-images/image6.png#lightbox)
 
 
 
@@ -246,7 +242,7 @@ Confrontare con il System.IO completamento automatico in un progetto xamarin. IO
 
 
 
-[![](pcl-images/image7.png "Esistono 40 utilizzate comunemente disponibili tra cui classi come File e Directory che non si trovano in un profilo della libreria di classi Portabile")](pcl-images/image7.png)
+[![](pcl-images/image7.png "Esistono 40 utilizzate comunemente disponibili tra cui classi come File e Directory che non si trovano in un profilo della libreria di classi Portabile")](pcl-images/image7.png#lightbox)
 
 
 
@@ -261,7 +257,7 @@ Dopo aver creato un progetto libreria di classi Portabile, è possibile aggiunge
 
 
 
-[![](pcl-images/image8.png "In Visual Studio per Mac, fare doppio clic sul nodo Riferimenti e scegliere Modifica riferimenti, quindi passare alla scheda progetti, come illustrato")](pcl-images/image8.png)
+[![](pcl-images/image8.png "In Visual Studio per Mac, fare doppio clic sul nodo Riferimenti e scegliere Modifica riferimenti, quindi passare alla scheda progetti, come illustrato")](pcl-images/image8.png#lightbox)
 
 
 
@@ -269,7 +265,7 @@ La schermata seguente mostra il riquadro di soluzione per l'applicazione di esem
 
 
 
-[![](pcl-images/image9.png "Il riquadro di soluzione per l'applicazione di esempio TaskyPortable")](pcl-images/image9.png)
+[![](pcl-images/image9.png "Il riquadro di soluzione per l'applicazione di esempio TaskyPortable")](pcl-images/image9.png#lightbox)
 
 
 
@@ -325,7 +321,7 @@ Le impostazioni della libreria di classi Portabile possono essere visualizzate e
 
 
 
-[![](pcl-images/image13.png "Le impostazioni della libreria di classi Portabile possono essere visualizzate e modificate facendo clic sul progetto e scegliendo Proprietà libreria, come illustrato in questa schermata")](pcl-images/image13.png)
+[![](pcl-images/image13.png "Le impostazioni della libreria di classi Portabile possono essere visualizzate e modificate facendo clic sul progetto e scegliendo Proprietà libreria, come illustrato in questa schermata")](pcl-images/image13.png#lightbox)
 
 
 
@@ -340,7 +336,7 @@ Quando il codice è scritto in una libreria PCL, Visual Studio riconoscerà le l
 
 
 
-[![](pcl-images/image14.png "IO che utilizzano il profilo predefinito Profile136")](pcl-images/image14.png)
+[![](pcl-images/image14.png "IO che utilizzano il profilo predefinito Profile136")](pcl-images/image14.png#lightbox)
 
 
 
@@ -348,7 +344,7 @@ Confrontare con il System.IO completamento automatico in un progetto regolari: s
 
 
 
-[![](pcl-images/image15.png "Completamento automatico in un progetto regolari")](pcl-images/image15.png)
+[![](pcl-images/image15.png "Completamento automatico in un progetto regolari")](pcl-images/image15.png#lightbox)
 
 
 
@@ -363,7 +359,7 @@ Dopo aver creato un progetto libreria di classi Portabile, è possibile aggiunge
 
 
 
-[![](pcl-images/image16.png "Scheda progetti come mostrato")](pcl-images/image16.png)
+[![](pcl-images/image16.png "Scheda progetti come mostrato")](pcl-images/image16.png#lightbox)
 
 
 
@@ -371,7 +367,7 @@ Nella schermata seguente mostra il riquadro di soluzione per l'app di esempio Ta
 
 
 
-[![](pcl-images/image17.png "Riquadro della soluzione per l'app di esempio TaskyPortable")](pcl-images/image17.png)
+[![](pcl-images/image17.png "Riquadro della soluzione per l'app di esempio TaskyPortable")](pcl-images/image17.png#lightbox)
 
 
 
@@ -393,7 +389,7 @@ Ecco alcune schermate delle App risultante in esecuzione su iOS, Android e Windo
 
 
 
-[![](pcl-images/image18.png "Ecco alcune schermate delle App risultante in esecuzione su iOS, Android e Windows Phone")](pcl-images/image18.png)
+[![](pcl-images/image18.png "Ecco alcune schermate delle App risultante in esecuzione su iOS, Android e Windows Phone")](pcl-images/image18.png#lightbox)
 
 
 
@@ -406,7 +402,7 @@ Di seguito è riportata la struttura della soluzione (in Visual Studio per Mac e
 
 
 
-[![](pcl-images/image19.png "La struttura della soluzione è illustrata di seguito in Visual Studio per Mac e Visual Studio rispettivamente")](pcl-images/image19.png)
+[![](pcl-images/image19.png "La struttura della soluzione è illustrata di seguito in Visual Studio per Mac e Visual Studio rispettivamente")](pcl-images/image19.png#lightbox)
 
 
 

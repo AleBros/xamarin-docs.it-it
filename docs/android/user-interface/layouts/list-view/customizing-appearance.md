@@ -7,21 +7,19 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 18c53ed6428eff911420c696d45b341d8e0fa5c1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1bf481e4999365f4afc52cb9dda83c6e627950e1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-listviews-appearance"></a>Personalizzazione dell'aspetto di un controllo ListView
 
-<a name="overview" />
 
 ## <a name="overview"></a>Panoramica
 
 L'aspetto di un controllo ListView è determinato dal layout delle righe viene visualizzato. Per modificare l'aspetto di un `ListView`, utilizzare un layout di riga diversi.
 
-<a name="Built-in_Row_Views" />
 
 ## <a name="built-in-row-views"></a>Viste di riga predefinito
 
@@ -53,11 +51,11 @@ Sono disponibili dodici visualizzazioni predefinite che è possono farvi riferim
 
 Ogni vista di riga predefinito con uno stile predefinito associato. Queste schermate mostrano l'aspetto di ogni visualizzazione:
 
-[![Schermate di TestListItem, SimpleSelectableListItem, SimpleListitem1 e SimpleListItem2](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png)
+[![Schermate di TestListItem, SimpleSelectableListItem, SimpleListitem1 e SimpleListItem2](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png#lightbox)
 
-[![Schermate di SimpleListItemActivated1, SimpleListItemActivated2, SimpleListItemChecked e SimpleListItemMultipleChecked](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png)
+[![Schermate di SimpleListItemActivated1, SimpleListItemActivated2, SimpleListItemChecked e SimpleListItemMultipleChecked](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png#lightbox)
 
-[![Schermate di SimpleListItemSingleChoice, TwoLineListItem, ActivityListItem e SimpleExpandableListItem](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png)
+[![Schermate di SimpleListItemSingleChoice, TwoLineListItem, ActivityListItem e SimpleExpandableListItem](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png#lightbox)
 
 Il **BuiltInViews/HomeScreenAdapter.cs** file di esempio (nel **BuiltInViews** soluzione) contiene il codice per produrre le schermate di elemento di elenco non espandibile. La visualizzazione è impostata `GetView` metodo simile al seguente:
 
@@ -88,7 +86,6 @@ view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableLi
 Quindi impostare le proprietà per la visualizzazione del gruppo e della visualizzazione figlio facendo riferimento allo standard `Text1` e `Text2` gli identificatori di controllo, come illustrato in precedenza. Nella schermata di SimpleExpandableListItem (illustrata in precedenza) fornisce un esempio di una vista di una sola riga gruppo (SimpleExpandableListItem1) e una visualizzazione di due righe figlio (SimpleExpandableListItem2). In alternativa, la visualizzazione del gruppo può essere configurata per due righe (SimpleExpandableListItem2) e della visualizzazione figlio può essere configurata per una riga (SimpleExpandableListItem1), o entrambi gruppo Vista e visualizzazione figlio può avere lo stesso numero di righe. 
 
 
-<a name="Accessories" />
 
 ## <a name="accessories"></a>Accessori
 
@@ -102,7 +99,7 @@ Le righe possono avere Accessori aggiunti a destra della vista per indicare lo s
 
 Accessori menzionati in precedenza sono illustrati nelle schermate riportate di seguito, nel rispettivo ordine:
 
-[![Schermate di SimpleListItemChecked SimpleListItemSingleChoice e SimpleListItemMultipleChoice con accessori](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png)
+[![Schermate di SimpleListItemChecked SimpleListItemSingleChoice e SimpleListItemMultipleChoice con accessori](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png#lightbox)
 
 Per visualizzare uno di questi passaggio accessori l'ID di risorsa di layout obbligatorie per l'adapter quindi imposta manualmente lo stato di selezione per le righe necessarie. Questa riga di codice viene illustrato come creare e assegnare un `Adapter` utilizzando uno di questi layout:
 
@@ -112,7 +109,6 @@ ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListI
 
 Il `ListView` stesso supporta diverse modalità di selezione, indipendentemente dalla funzione di accesso viene visualizzato. Per evitare confusione, utilizzare `Single` la modalità di selezione con `Checked` e `SingleChoice` accessori e `Multiple` la modalità con la `MultipleChoice` stile. La modalità di selezione è controllata dal `ChoiceMode` proprietà del `ListView`.
 
-<a name="Handling_API_Level" />
 
 ### <a name="handling-api-level"></a>Livello dell'API di gestione
 
@@ -137,7 +133,6 @@ lv.ChoiceMode = Android.Widget.ChoiceMode.Single; // Single
 */
 ```
 
-<a name="Selecting_Items_Programmatically" />
 
 ### <a name="selecting-items-programmatically"></a>Selezione di elementi a livello di codice
 
@@ -165,7 +160,6 @@ for (var i = 0; i < sparseArray.Size(); i++ )
 Console.WriteLine();
 ```
 
-<a name="Creating_Custom_Row_Layouts" />
 
 ## <a name="creating-custom-row-layouts"></a>Creazione di layout di riga personalizzato
 
@@ -188,7 +182,6 @@ In questo esempio è diverso da negli esempi precedenti in diversi modi:
 
 Queste modifiche sono descritte di seguito, a partire dalla creazione di visualizzazione dell'attività e la visualizzazione di riga personalizzato e quindi illustrando le modifiche per l'Adapter e il funzionamento per eseguirne il rendering.
 
-<a name="Adding_a_ListView_to_an_Activity_Layout" />
 
 ### <a name="adding-a-listview-to-an-activity-layout"></a>Aggiunta di un controllo ListView a un Layout di attività
 
@@ -220,7 +213,6 @@ Poiché `HomeScreen` non erediti più da `ListActivity` non ha una visualizzazio
 
 Il vantaggio di utilizzare un `Activity` con un layout personalizzato (anziché un `ListActivity`) consiste nella capacità di aggiungere ulteriori controlli sullo schermo, ad esempio l'intestazione `TextView` in questo esempio.
 
-<a name="Creating_a_Custom_Row_Layout" />
 
 ### <a name="creating-a-custom-row-layout"></a>Creazione di un Layout di riga personalizzato
 
@@ -267,7 +259,6 @@ Un altro file di layout AXML è necessaria per contenere il layout personalizzat
 
 Mentre un layout di riga personalizzato può contenere molti diversi controlli, lo scorrimento delle prestazioni può essere influenzato da strutture complesse e con immagini (in particolare se devono essere caricati in rete). Vedere l'articolo di Google per ulteriori informazioni sull'indirizzamento di problemi relativi alle prestazioni di scorrimento.
 
-<a name="Referencing_a_Custom_Row_View" />
 
 ### <a name="referencing-a-custom-row-view"></a>Riferimento a una vista personalizzata riga
 
@@ -309,7 +300,6 @@ public class HomeScreenAdapter : BaseAdapter<TableItem> {
 }
 ```
 
-<a name="Referencing_the_Custom_ListView_in_the_Activity" />
 
 ### <a name="referencing-the-custom-listview-in-the-activity"></a>ListView personalizzato nell'attività di riferimento
 
@@ -343,10 +333,9 @@ void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 
 La schermata risultante è simile al seguente:
 
-[![Schermata del CustomRowView risultante](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png)
+[![Schermata del CustomRowView risultante](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png#lightbox)
 
 
-<a name="Customizing_the_Row_Selector_Color" />
 
 ### <a name="customizing-the-row-selector-color"></a>Personalizzare il colore di selettore di riga
 
@@ -386,10 +375,9 @@ android:background="@drawable/CustomSelector"
 
 Una riga selezionata e i corrispondenti `Toast` messaggio avrà l'aspetto seguente:
 
-[![Una riga selezionata in arancione, con il messaggio di tipo avviso popup visualizzazione nome della riga selezionata](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png)
+[![Una riga selezionata in arancione, con il messaggio di tipo avviso popup visualizzazione nome della riga selezionata](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png#lightbox)
 
 
-<a name="Preventing_Flickering_on_Custom_Layouts" />
 
 ### <a name="preventing-flickering-on-custom-layouts"></a>Evitare lo sfarfallio dei layout personalizzati
 

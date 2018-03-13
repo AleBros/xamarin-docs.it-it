@@ -5,18 +5,25 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 1fe290983bf7b130dee6f1a1878a32dce3efc4c4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0ede9bbb47f398a82d6eae5d827122f469ad6ea4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layouts"></a>Layout
 
-Xamarin. Forms dispone di diversi layout e le funzionalità nell'organizzazione del contenuto sullo schermo. Ogni controllo di layout è descritta di seguito, nonché informazioni dettagliate su come gestire le modifiche di orientamento dello schermo:
+Xamarin. Forms dispone di diversi layout e le funzionalità nell'organizzazione del contenuto sullo schermo. 
+
+> [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
+
+**Layout di xamarin. Forms, da [University Xamarin](https://university.xamarin.com/)**
+
+Ogni controllo di layout è descritta di seguito, nonché informazioni dettagliate su come gestire le modifiche di orientamento dello schermo:
 
 * **[StackLayout](stack-layout.md)**  &ndash; usato per disporre le visualizzazioni in modo lineare, orizzontalmente o verticalmente. Visualizzazioni in un StackLayout possono essere allineate al centro, a sinistro o a destro del layout.
 * **[AbsoluteLayout](absolute-layout.md)**  &ndash; utilizzato per disporre le visualizzazioni impostando coordinate & dimensioni in termini di valori assoluti o rapporti. AbsoluteLayout utilizzabile per le visualizzazioni di livello, nonché ancorarli a sinistra, destra o al centro.
@@ -35,7 +42,7 @@ Controlli di piattaforma inoltre possono essere utilizzati direttamente nel layo
 
 Nella figura seguente mostra i controlli di layout:
 
-[ ![](images/layouts-sml.png "Xamarin.Forms Layouts")](images/layouts.png "Xamarin.Forms Layouts")
+[![](images/layouts-sml.png "Xamarin.Forms Layouts")](images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 ## <a name="choosing-the-right-layout"></a>Scegliere il Layout di destra
 
@@ -176,11 +183,11 @@ Xamarin. Forms e il layout predefinito sono in grado di gestire le modifiche in 
 
 iOS, Android e Windows piattaforme supportano dimensioni dello schermo più grande sul tablet dispositivi (nonché portatili e desktop per Windows). Xamarin. Forms consente di ottimizzare l'app per schermi di dimensioni maggiori rilevare il tipo di dispositivo e una modifica del layout di pagina o utilizzando una pagina diversa completamente completamente per schermi di dimensioni maggiori.
 
-### <a name="creating-a-custom-layoutcustommd"></a>[Creazione di un Layout personalizzato](custom.md)
+### <a name="creating-a-custom-layoutcustommd"></a>[Creazione di un layout personalizzato](custom.md)
 
 Xamarin. Forms definisce quattro classi layout - [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), [ `AbsoluteLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/), [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/), e [ `Grid` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), e ognuno dispone i relativi elementi figlio in modo diverso. Tuttavia, talvolta il necessario per organizzare il contenuto di pagina utilizzando un layout non forniti da xamarin. Forms. In questo articolo viene illustrato come scrivere una classe di layout personalizzato e viene illustrato un orientamento sensibili `WrapLayout` classe che dispone i relativi elementi figlio orizzontalmente attraverso la pagina e quindi esegue il wrapping la visualizzazione di elementi figlio successivi a righe aggiuntive.
 
-### <a name="layout-compressionlayout-compressionmd"></a>[Compressione di layout](layout-compression.md)
+### <a name="layout-compressionlayout-compressionmd"></a>[Compressione del layout](layout-compression.md)
 
 La compressione di layout rimuove layout specificato dall'albero visuale nel tentativo di migliorare le prestazioni per il rendering della pagina. Il miglioramento delle prestazioni offerto varia in base alla complessità di una pagina, alla versione del sistema operativo in uso e al dispositivo in cui viene eseguita l'applicazione. Tuttavia, le prestazioni miglioreranno in modo più evidente nei dispositivi meno recenti.
 

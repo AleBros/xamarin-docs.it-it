@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 12. Stili
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 168ad0bc2f59f0afd5b457dba38ae39cfa148c89
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9563bc811250038e8932067280a8e5292a379077
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-12-styles"></a>Riepilogo del capitolo 12. Stili
 
@@ -30,7 +31,7 @@ In XAML il `Property` impostazione corrisponde al nome di una proprietà CLR (ad
 
 Il [ **BasicStyle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyle) programma illustra la sintassi di base e Mostra come fare riferimento il `Style` con un `StaticResource` estensione di markup:
 
-[![La schermata di stile di base](images/ch12fg01-small.png "stili di base")](images/ch12fg01-large.png "stili di base")
+[![La schermata di stile di base](images/ch12fg01-small.png "stili di base")](images/ch12fg01-large.png#lightbox "stili di base")
 
 Il `Style` oggetto e tutti gli oggetti creati nel `Style` oggetto come un `Value` impostazione vengono condivisi tra tutte le viste che fanno riferimento a che `Style`. Il `Style` non può contenere qualsiasi elemento che non possono essere condivisi, ad esempio un `View` derivato.
 

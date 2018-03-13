@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9073d64c43c6817b45dca02b870fcfe093ebf46d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 446db5c04849ac6fa320f3fe3b7e22b3d10bf9cf
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="building-modern-macos-apps"></a>Compilazione di moderne macOS App
 
@@ -24,7 +24,7 @@ _Questo articolo vengono descritti alcuni suggerimenti, funzionalità e tecniche
 
 Un aspetto moderno includerà un aspetto moderno finestra e barra degli strumenti, ad esempio l'applicazione di esempio illustrato di seguito:
 
-[ ![](modern-cocoa-apps-images/content08.png "Un esempio di una moderna app Mac dell'interfaccia utente")](modern-cocoa-apps-images/content08.png)
+[![](modern-cocoa-apps-images/content08.png "Un esempio di una moderna app Mac dell'interfaccia utente")](modern-cocoa-apps-images/content08.png#lightbox)
 
 <a name="Enabling-Full-Sized-Content-Views" />
 
@@ -64,7 +64,7 @@ namespace MacModern
 
 Questa funzionalità può inoltre essere abilitata in interfaccia generatore del Xcode selezionando la finestra e controllo **dimensioni contenuto la visualizzazione completa**:
 
-[ ![](modern-cocoa-apps-images/content01.png "La modifica di storyboard principale in Generatore del Xcode di interfaccia")](modern-cocoa-apps-images/content01.png)
+[![](modern-cocoa-apps-images/content01.png "La modifica di storyboard principale in Generatore del Xcode di interfaccia")](modern-cocoa-apps-images/content01.png#lightbox)
 
 Quando si usa una visualizzazione di contenuto completa di dimensioni, lo sviluppatore potrebbe essere necessario compensare il contenuto sotto le aree di barra del titolo e lo strumento in modo che il contenuto specifico (ad esempio etichette) non diapositiva sotto di essi.
 
@@ -145,11 +145,11 @@ topConstraint.Active = true;
 
 Una normale macOS finestra include standard che barra del titolo lungo il bordo superiore della finestra. Se la finestra include anche una barra degli strumenti, verrà visualizzato in questa area della barra del titolo:
 
-[ ![](modern-cocoa-apps-images/content02.png "Una barra degli strumenti standard di Mac")](modern-cocoa-apps-images/content02.png)
+[![](modern-cocoa-apps-images/content02.png "Una barra degli strumenti standard di Mac")](modern-cocoa-apps-images/content02.png#lightbox)
 
 Quando si utilizza una semplice barra degli strumenti, l'Area del titolo viene chiusa e la barra degli strumenti Sposta verso l'alto nella posizione della barra del titolo, in linea con il pulsante Chiudi finestra ridotta a icona e Ingrandisci:
 
-[ ![](modern-cocoa-apps-images/content03.png "Una semplice barra degli strumenti Mac")](modern-cocoa-apps-images/content03.png)
+[![](modern-cocoa-apps-images/content03.png "Una semplice barra degli strumenti Mac")](modern-cocoa-apps-images/content03.png#lightbox)
 
 È abilitata la barra degli strumenti semplificato eseguendo l'override di `ViewWillAppear` metodo il `NSViewController` e rendendolo aspetto simile alla seguente:
 
@@ -171,7 +171,7 @@ Questo effetto viene generalmente utilizzato per _applicazioni raccolta immagini
 
 A seconda della progettazione dell'app, lo sviluppatore potrebbe essere necessario anche integrare la barra del titolo area con un Controller di visualizzazione accessori visualizzata di sotto dell'area di barra del titolo o strumenti per fornire sensibile al contesto controlli per l'utente in base all'attività sono attualmente occupato in:
 
-[ ![](modern-cocoa-apps-images/content04.png "Un esempio accessori View Controller")](modern-cocoa-apps-images/content04.png)
+[![](modern-cocoa-apps-images/content04.png "Un esempio accessori View Controller")](modern-cocoa-apps-images/content04.png#lightbox)
 
 Il controller di accessori vista verrà automaticamente Sfocatura e ridimensionato dal sistema senza l'intervento di uno sviluppatore.
 
@@ -180,13 +180,13 @@ Per aggiungere un Controller di visualizzazione di accessori, eseguire le operaz
 1. In **Esplora soluzioni** fare doppio clic sul file `Main.storyboard` per aprirlo e modificarlo.
 2. Trascinare un **Custom View Controller** nella gerarchia della finestra: 
 
-    [ ![](modern-cocoa-apps-images/content05.png "Aggiunge un nuovo Controller di visualizzazione personalizzata")](modern-cocoa-apps-images/content05.png)
+    [![](modern-cocoa-apps-images/content05.png "Aggiunge un nuovo Controller di visualizzazione personalizzata")](modern-cocoa-apps-images/content05.png#lightbox)
 3. Del layout della visualizzazione degli accessori interfaccia utente: 
 
-    [ ![](modern-cocoa-apps-images/content06.png "La nuova vista di progettazione")](modern-cocoa-apps-images/content06.png)
+    [![](modern-cocoa-apps-images/content06.png "La nuova vista di progettazione")](modern-cocoa-apps-images/content06.png#lightbox)
 4. Visualizzazione degli accessori come esporre un **presa** e qualsiasi altro **azioni** o **prese** per la relativa interfaccia utente: 
 
-    [ ![](modern-cocoa-apps-images/content07.png "Aggiunta di uscita obbligatorio")](modern-cocoa-apps-images/content07.png)
+    [![](modern-cocoa-apps-images/content07.png "Aggiunta di uscita obbligatorio")](modern-cocoa-apps-images/content07.png#lightbox)
 5. Salvare le modifiche.
 6. Tornare a Visual Studio per Mac sincronizzare le modifiche.
 
@@ -248,7 +248,7 @@ Poiché macOS ora completamente localizzata, la `Left` e `Right` `NSLayoutAttrib
 
 Inoltre, il sistema macOS potrebbe aggiungere controller di visualizzazione accessori per la finestra dell'app. Ad esempio, per creare finestre a schede in cui diverse di Windows dell'App vengono unite in una finestra virtuale:
 
-[ ![](modern-cocoa-apps-images/content08.png "Un esempio di una finestra a schede Mac")](modern-cocoa-apps-images/content08.png)
+[![](modern-cocoa-apps-images/content08.png "Un esempio di una finestra a schede Mac")](modern-cocoa-apps-images/content08.png#lightbox)
 
 In genere, lo sviluppatore dovrà richiedere l'uso di azioni limitate a schede di Windows nelle proprie App Xamarin.Mac, il sistema li gestirà automaticamente come indicato di seguito:
 
@@ -430,7 +430,7 @@ Inoltre, Apple suggerisce l'utilizzo di viste stato eseguito il livello rispetto
 
 Livello di esecuzione del backup può essere abilitata impostando il `WantsLayer` di un `NSView` per `true` o all'interno di generatore del Xcode di interfaccia nel **vista effetti controllo** controllando **il livello di animazione principale**:
 
-[ ![](modern-cocoa-apps-images/content09.png "Il controllo di effetti di visualizzazione")](modern-cocoa-apps-images/content09.png)
+[![](modern-cocoa-apps-images/content09.png "Il controllo di effetti di visualizzazione")](modern-cocoa-apps-images/content09.png#lightbox)
 
 <a name="Redrawing-Views-with-Layers" />
 
@@ -792,7 +792,7 @@ Apple vengono indicate le operazioni seguenti:
 
 Apple fornisce diverse funzionalità in interfaccia generatore del Xcode che lo sviluppatore può utilizzare durante la progettazione o la modifica dell'interfaccia utente di un'app per supportare la localizzazione. Il **direzione del testo** sezione del **controllo attributo** consente allo sviluppatore di fornire suggerimenti in modalità di utilizzo e di aggiornamento in un'istruzione select visualizzazione basata su testo direzione (ad esempio `NSTextField`):
 
-[ ![](modern-cocoa-apps-images/content10.png "Le opzioni di direzione del testo")](modern-cocoa-apps-images/content10.png)
+[![](modern-cocoa-apps-images/content10.png "Le opzioni di direzione del testo")](modern-cocoa-apps-images/content10.png#lightbox)
 
 Esistono tre possibili valori per il **direzione del testo**:
 
@@ -851,7 +851,7 @@ var button2 = NSButton.CreateButton (myTitle, myImage, () => {
 
 App moderne macOS può adottare un nuovo aspetto dell'interfaccia scuro che funziona per le applicazioni di creazione, modifica o una presentazione di immagine:
 
-[ ![](modern-cocoa-apps-images/content11.png "Un esempio di un'interfaccia utente finestra Mac scuro")](modern-cocoa-apps-images/content11.png)
+[![](modern-cocoa-apps-images/content11.png "Un esempio di un'interfaccia utente finestra Mac scuro")](modern-cocoa-apps-images/content11.png#lightbox)
 
 Questa operazione può essere eseguita mediante l'aggiunta di una riga di codice prima che la finestra viene visualizzata. Ad esempio:
 
@@ -898,7 +898,7 @@ Gli storyboard consentono allo sviluppatore di non solo i singoli elementi che c
 
 Controller consentire allo sviluppatore di raccolta di elementi in un'unità di composizione e Segues astratta e rimuovere il tipico "associare codice" necessario per spostare in tutta la gerarchia di visualizzazione:
 
-[ ![](modern-cocoa-apps-images/content12.png "L'interfaccia utente in Generatore di interfaccia del Xcode di modifica")](modern-cocoa-apps-images/content12.png)
+[![](modern-cocoa-apps-images/content12.png "L'interfaccia utente in Generatore di interfaccia del Xcode di modifica")](modern-cocoa-apps-images/content12.png#lightbox)
 
 Per ulteriori informazioni, vedere il nostro [Introduzione agli storyboard](~/mac/platform/storyboards/index.md) documentazione.
 

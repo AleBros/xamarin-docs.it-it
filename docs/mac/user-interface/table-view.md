@@ -3,16 +3,16 @@ title: Viste delle tabelle
 description: In questo articolo viene descritto l'utilizzo con le visualizzazioni di tabella in un'applicazione Xamarin.Mac. Vengono descritte la creazione di viste di tabella in Xcode e il generatore di interfaccia e l'interazione con essi nel codice.
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: dfac551bbb7e6fd9214fe488170455c5916318ae
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 4764a4babc9f6b06c7a9299feab1320971b0bf75
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="table-views"></a>Viste delle tabelle
 
@@ -22,7 +22,7 @@ Quando si utilizza c# e .NET in un'applicazione Xamarin.Mac, è possibile accede
 
 Visualizzazione di una tabella sono riportati i dati in un formato tabulare che contiene uno o più colonne di informazioni in più righe. In base al tipo di vista di tabella viene creato, l'utente può ordinare per colonna, riorganizzare le colonne, aggiungere colonne, rimuovere le colonne o modificare i dati contenuti all'interno della tabella.
 
-[ ![](table-view-images/intro01.png "Una tabella di esempio")](table-view-images/intro01.png)
+[![](table-view-images/intro01.png "Una tabella di esempio")](table-view-images/intro01.png#lightbox)
 
 In questo articolo verranno descritte le nozioni di base dell'utilizzo di viste delle tabelle in un'applicazione Xamarin.Mac. È altamente consigliabile che il [Hello, Mac](~/mac/get-started/hello-mac.md) articolo prima di tutto, in particolare il [Introduzione a Xcode e interfaccia generatore](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [punti vendita e le azioni](~/mac/get-started/hello-mac.md#Outlets_and_Actions) le sezioni, come illustra i concetti chiave e le tecniche che verrà usato in questo articolo.
 
@@ -51,23 +51,23 @@ Per ulteriori informazioni, vedere il [viste contenuto](https://developer.apple.
 
 Quando si crea una nuova applicazione Xamarin.Mac Cocoa, per impostazione predefinita è ottenere una finestra vuota, standard. Questo windows è definito in un `.storyboard` file automaticamente incluso nel progetto. Per modificare la progettazione di windows, nel **Esplora**, fare doppio clic il `Main.storyboard` file:
 
-[ ![](table-view-images/edit01.png "Selezione storyboard principale")](table-view-images/edit01.png)
+[![](table-view-images/edit01.png "Selezione storyboard principale")](table-view-images/edit01.png#lightbox)
 
 La progettazione della finestra verrà aperta in Generatore del Xcode di interfaccia:
 
-[ ![](table-view-images/edit02.png "Modifica l'interfaccia utente in Xcode")](table-view-images/edit02.png)
+[![](table-view-images/edit02.png "Modifica l'interfaccia utente in Xcode")](table-view-images/edit02.png#lightbox)
 
 Tipo `table` nel **libreria Ispettore** casella di ricerca per renderne più semplice trovare i controlli di visualizzazione di tabella:
 
-[ ![](table-view-images/edit03.png "Selezione di visualizzazione di una tabella dalla libreria")](table-view-images/edit03.png)
+[![](table-view-images/edit03.png "Selezione di visualizzazione di una tabella dalla libreria")](table-view-images/edit03.png#lightbox)
 
 Trascinare il Controller di visualizzazione di una visualizzazione tabella il **Editor dell'interfaccia**, renderlo riempire l'area del contenuto del Controller di visualizzazione e impostarlo su dove compatta e aumenta con la finestra nel **Editor vincoli di**:
 
-[ ![](table-view-images/edit04.png "La modifica di vincoli")](table-view-images/edit04.png)
+[![](table-view-images/edit04.png "La modifica di vincoli")](table-view-images/edit04.png#lightbox)
 
 Selezionare la visualizzazione tabella nel **interfaccia gerarchia** e le proprietà seguenti sono disponibili nel **controllo attributo**:
 
-[ ![](table-view-images/edit05.png "Il controllo di attributo")](table-view-images/edit05.png)
+[![](table-view-images/edit05.png "Il controllo di attributo")](table-view-images/edit05.png#lightbox)
 
 - **Modalità di contenuto** -consente di utilizzare entrambe le visualizzazioni (`NSView`) o le celle (`NSCell`) per visualizzare i dati in righe e colonne. A partire da macOS 10.7, è consigliabile utilizzare le visualizzazioni.
 - **Scorre le righe del gruppo** - se `true`, la visualizzazione della tabella verrà disegnato celle raggruppate come se si sono a virgola mobile.
@@ -97,7 +97,7 @@ Selezionare la visualizzazione tabella nel **interfaccia gerarchia** e le propri
 
 Selezionare una colonna della tabella nel **interfaccia gerarchia** e le proprietà seguenti sono disponibili nel **controllo attributo**:
 
-[ ![](table-view-images/edit06.png "Il controllo di attributo")](table-view-images/edit06.png)
+[![](table-view-images/edit06.png "Il controllo di attributo")](table-view-images/edit06.png#lightbox)
 
 - **Titolo** -imposta il titolo della colonna.
 - **Allineamento** -impostare l'allineamento del testo all'interno delle celle.
@@ -115,19 +115,19 @@ Di seguito selezionare ogni colonna nella visualizzazione delle tabelle e assegn
 
 Selezionare una visualizzazione di cella di tabella (`NSTableViewCell`) nel **interfaccia gerarchia** e le proprietà seguenti sono disponibili nel **controllo attributo**:
 
-[ ![](table-view-images/edit07.png "Il controllo di attributo")](table-view-images/edit07.png)
+[![](table-view-images/edit07.png "Il controllo di attributo")](table-view-images/edit07.png#lightbox)
 
 Si tratta di tutte le proprietà di una vista standard. È inoltre l'opzione di ridimensionamento delle righe per questa colonna qui.
 
 Selezionare una cella di visualizzazione della tabella (per impostazione predefinita, si tratta di un `NSTextField`) nei **interfaccia gerarchia** e le proprietà seguenti sono disponibili nel **attributo controllo**:
 
-[ ![](table-view-images/edit08.png "Il controllo di attributo")](table-view-images/edit08.png)
+[![](table-view-images/edit08.png "Il controllo di attributo")](table-view-images/edit08.png#lightbox)
 
 È necessario che tutte le proprietà di un campo di testo standard per impostare qui. Per impostazione predefinita, un campo di testo standard viene utilizzato per visualizzare i dati per una cella in una colonna.
 
 Selezionare una visualizzazione di cella di tabella (`NSTableFieldCell`) nel **interfaccia gerarchia** e le proprietà seguenti sono disponibili nel **controllo attributo**:
 
-[ ![](table-view-images/edit09.png "Il controllo di attributo")](table-view-images/edit09.png)
+[![](table-view-images/edit09.png "Il controllo di attributo")](table-view-images/edit09.png#lightbox)
 
 Le impostazioni di più importanti sono:
 
@@ -141,7 +141,7 @@ Le impostazioni di più importanti sono:
 
 Selezionare la visualizzazione di cella di tabella (`NSTableFieldCell`) nella parte inferiore di una colonna di tabella nel **interfaccia gerarchia**:
 
-[ ![](table-view-images/edit10.png "Selezione di visualizzazione della cella di tabella")](table-view-images/edit10.png)
+[![](table-view-images/edit10.png "Selezione di visualizzazione della cella di tabella")](table-view-images/edit10.png#lightbox)
 
 Ciò consente di modificare la visualizzazione di cella di tabella usata come base _modello_ per tutte le celle create per la colonna specificata.
 
@@ -155,14 +155,14 @@ Il processo è lo stesso per qualsiasi elemento di visualizzazione tabella che s
 
 1. Passare al **Assistente Editor** e assicurarsi che il `ViewController.h` è selezionato il file: 
 
-    [ ![](table-view-images/edit11.png "L'Editor Assistente")](table-view-images/edit11.png)
+    [![](table-view-images/edit11.png "L'Editor Assistente")](table-view-images/edit11.png#lightbox)
 2. Selezionare la visualizzazione della tabella dal **interfaccia gerarchia**, CTRL + clic e trascinare il `ViewController.h` file.
 3. Creare un **presa** per la visualizzazione tabella denominata `ProductTable`: 
 
-    [ ![](table-view-images/edit13.png "Configurazione di una presa di corrente")](table-view-images/edit13.png)
+    [![](table-view-images/edit13.png "Configurazione di una presa di corrente")](table-view-images/edit13.png#lightbox)
 4. Creare **prese** per le colonne di tabelle anche chiamato `ProductColumn` e `DetailsColumn`: 
 
-    [ ![](table-view-images/edit14.png "Configurazione di una presa di corrente")](table-view-images/edit14.png)
+    [![](table-view-images/edit14.png "Configurazione di una presa di corrente")](table-view-images/edit14.png#lightbox)
 5. Per salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
 Successivamente, si scriverà la visualizzazione di codice alcuni dati per la tabella quando l'applicazione viene eseguita.
@@ -175,7 +175,7 @@ Con la visualizzazione tabella progettata in Generatore di interfaccia e vengono
 
 Innanzitutto, creare un nuovo `Product` classe per contenere le informazioni per le singole righe. Nel **Esplora**, fare clic sul progetto e selezionare **Aggiungi** > **nuovo File...** Selezionare **generale** > **classe vuota**, immettere `Product` per il **nome** e fare clic su di **New** pulsante:
 
-[ ![](table-view-images/populate01.png "Creazione di una classe vuota")](table-view-images/populate01.png)
+[![](table-view-images/populate01.png "Creazione di una classe vuota")](table-view-images/populate01.png#lightbox)
 
 Rendere il `Product.cs` file aspetto simile al seguente:
 
@@ -333,7 +333,7 @@ public override void AwakeFromNib ()
 
 Se si esegue l'applicazione, viene visualizzato il seguente:
 
-[ ![](table-view-images/populate02.png "Eseguire un'app di esempio")](table-view-images/populate02.png)
+[![](table-view-images/populate02.png "Eseguire un'app di esempio")](table-view-images/populate02.png#lightbox)
 
 <a name="Sorting_by_Column" />
 
@@ -341,11 +341,11 @@ Se si esegue l'applicazione, viene visualizzato il seguente:
 
 Di seguito consente all'utente di ordinare i dati nella tabella facendo clic su un'intestazione di colonna. In primo luogo, fare doppio clic su di `Main.storyboard` file per aprirlo e modificarlo in Generatore di interfaccia. Selezionare il `Product` colonna, immettere `Title` per il **chiave di ordinamento**, `compare:` per il **selettore** e selezionare `Ascending` per il **ordine**:
 
-[ ![](table-view-images/sort01.png "Impostazione della chiave di ordinamento")](table-view-images/sort01.png)
+[![](table-view-images/sort01.png "Impostazione della chiave di ordinamento")](table-view-images/sort01.png#lightbox)
 
 Selezionare il `Details` colonna, immettere `Description` per il **chiave di ordinamento**, `compare:` per il **selettore** e selezionare `Ascending` per il **ordine**:
 
-[ ![](table-view-images/sort02.png "Impostazione della chiave di ordinamento")](table-view-images/sort02.png)
+[![](table-view-images/sort02.png "Impostazione della chiave di ordinamento")](table-view-images/sort02.png#lightbox)
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
@@ -395,7 +395,7 @@ Il `Sort` metodo consente di ordinare i dati nell'origine dati in base a un dete
 
 Se si esegue l'applicazione e fare clic su nelle intestazioni di colonna, le righe verranno ordinate in base alla colonna:
 
-[ ![](table-view-images/sort03.png "Eseguire un'app di esempio")](table-view-images/sort03.png)
+[![](table-view-images/sort03.png "Eseguire un'app di esempio")](table-view-images/sort03.png#lightbox)
 
 <a name="Row_Selection" />
 
@@ -403,7 +403,7 @@ Se si esegue l'applicazione e fare clic su nelle intestazioni di colonna, le rig
 
 Se si desidera consentire all'utente di selezionare una singola riga, fare doppio clic su di `Main.storyboard` file per aprirlo e modificarlo in Generatore di interfaccia. Selezionare la visualizzazione tabella nel **interfaccia gerarchia** e deselezionare il **più** nella casella di controllo di **controllo attributo**:
 
-[ ![](table-view-images/select01.png "Il controllo di attributo")](table-view-images/select01.png)
+[![](table-view-images/select01.png "Il controllo di attributo")](table-view-images/select01.png#lightbox)
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
@@ -432,7 +432,7 @@ Visualizzazione della tabella (`NSTableView`) contiene i metodi seguenti per l'u
 
 Se si desidera consentire all'utente di selezionare un più righe, fare doppio clic su di `Main.storyboard` file per aprirlo e modificarlo in Generatore di interfaccia. Selezionare la visualizzazione tabella nel **interfaccia gerarchia** e controllare il **più** nella casella di controllo di **attributo controllo**:
 
-[ ![](table-view-images/select02.png "Il controllo di attributo")](table-view-images/select02.png)
+[![](table-view-images/select02.png "Il controllo di attributo")](table-view-images/select02.png#lightbox)
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
@@ -466,7 +466,7 @@ Visualizzazione della tabella (`NSTableView`) contiene i metodi seguenti per l'u
 
 Se si desidera consentire all'utente di digitare un carattere con la visualizzazione della tabella selezionata e selezionare la prima riga con tale carattere, fare doppio clic su di `Main.storyboard` file per aprirlo e modificarlo in Generatore di interfaccia. Selezionare la visualizzazione tabella nel **interfaccia gerarchia** e controllare il **tipo selezionare** nella casella di controllo di **attributo controllo**:
 
-[ ![](table-view-images/type01.png "Impostare il tipo di selezione")](table-view-images/type01.png)
+[![](table-view-images/type01.png "Impostare il tipo di selezione")](table-view-images/type01.png#lightbox)
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
@@ -492,7 +492,7 @@ Il `GetNextTypeSelectMatch` metodo accetta il determinato `searchString` e resti
 
 Se si esegue l'applicazione e digitare un carattere, è selezionata una riga:
 
-[ ![](table-view-images/type02.png "Eseguire un'app di esempio")](table-view-images/type02.png)
+[![](table-view-images/type02.png "Eseguire un'app di esempio")](table-view-images/type02.png#lightbox)
 
 <a name="Reordering_Columns" />
 
@@ -500,7 +500,7 @@ Se si esegue l'applicazione e digitare un carattere, è selezionata una riga:
 
 Se si desidera consentire all'utente di trascinare riordinare le colonne nella visualizzazione tabella, fare doppio clic su di `Main.storyboard` file per aprirlo e modificarlo in Generatore di interfaccia. Selezionare la visualizzazione tabella nel **interfaccia gerarchia** e controllare il **riordinamento** nella casella di controllo di **attributo controllo**:
 
-[ ![](table-view-images/reorder01.png "Il controllo di attributo")](table-view-images/reorder01.png)
+[![](table-view-images/reorder01.png "Il controllo di attributo")](table-view-images/reorder01.png#lightbox)
 
 Se si assegna un valore per il **salvataggio** proprietà e selezionare il **informazioni sulla colonna** campo, eventuali modifiche apportate al layout della tabella verranno salvate automaticamente a Microsoft e ripristino la volta successiva che l'applicazione viene eseguito.
 
@@ -519,7 +519,7 @@ Il `ShouldReorder` metodo dovrebbe restituire `true` per qualsiasi colonna che d
 
 Se si esegue l'applicazione, è possibile trascinare le intestazioni di colonna intorno riordinamento delle colonne:
 
-[ ![](table-view-images/reorder02.png "Un esempio delle colonne riordinati")](table-view-images/reorder02.png)
+[![](table-view-images/reorder02.png "Un esempio delle colonne riordinati")](table-view-images/reorder02.png#lightbox)
 
 <a name="Editing_Cells" />
 
@@ -575,7 +575,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 
 Ora se si esegue l'applicazione, l'utente può modificare le celle nella visualizzazione tabella:
 
-[ ![](table-view-images/editing01.png "Un esempio di modifica di una cella")](table-view-images/editing01.png)
+[![](table-view-images/editing01.png "Un esempio di modifica di una cella")](table-view-images/editing01.png#lightbox)
 
 <a name="Using_Images_in_Table_Views" />
 
@@ -650,7 +650,7 @@ In base ai requisiti dell'app, è possibile che in cui è necessario fornire un 
 
 In primo luogo, modificare il `Main.storyboard` in Generatore del Xcode di interfaccia, selezionare la visualizzazione della tabella e aumentare il numero di colonne da tre (3). Successivamente, modificare il **titolo** della nuova colonna `Action`:
 
-[ ![](table-view-images/delete01.png "Modifica il nome della colonna")](table-view-images/delete01.png)
+[![](table-view-images/delete01.png "Modifica il nome della colonna")](table-view-images/delete01.png#lightbox)
 
 Salvare le modifiche allo Storyboard e tornare a Visual Studio per Mac sincronizzare le modifiche.
 
@@ -897,15 +897,15 @@ Per il **azione** colonna, tutte le visualizzazioni Sub viene eseguita l'analisi
 
 Con queste modifiche sul posto, quando l'app viene eseguita ogni riga conterrà un **eliminare** pulsante:
 
-[ ![](table-view-images/delete02.png "Visualizzazione della tabella con i pulsanti di eliminazione")](table-view-images/delete02.png)
+[![](table-view-images/delete02.png "Visualizzazione della tabella con i pulsanti di eliminazione")](table-view-images/delete02.png#lightbox)
 
 Quando l'utente fa clic su un **eliminare** pulsante, verrà visualizzato un avviso che richiede di eliminare la riga specificata:
 
-[ ![](table-view-images/delete03.png "Un avviso di eliminazione riga")](table-view-images/delete03.png)
+[![](table-view-images/delete03.png "Un avviso di eliminazione riga")](table-view-images/delete03.png#lightbox)
 
 Se l'utente sceglie Elimina, la riga verrà rimossa e verrà ridisegnata nella tabella:
 
-[ ![](table-view-images/delete04.png "La tabella dopo la riga viene eliminata")](table-view-images/delete04.png)
+[![](table-view-images/delete04.png "La tabella dopo la riga viene eliminata")](table-view-images/delete04.png#lightbox)
 
 <a name="Data_Binding_Table_Views" />
 
@@ -926,12 +926,12 @@ In questo articolo è stato applicato l'utilizzo delle visualizzazioni di tabell
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [MacTables (esempio)](https://developer.xamarin.com/samples/mac/MacTables/)
-- [MacImages (esempio)](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages (sample)](https://developer.xamarin.com/samples/mac/MacImages/) (MacImages - Esempio)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Outline Views](~/mac/user-interface/outline-view.md) (Visualizzazioni struttura)
 - [Source Lists](~/mac/user-interface/source-list.md) (Elenchi di risorse)
 - [Data binding e codifica di chiave-valore](~/mac/app-fundamentals/databinding.md)
-- [Linee guida sull'interfaccia umane di OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [NSTableView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSTableView_Class/index.html#//apple_ref/doc/uid/TP40004125)
 - [NSTableViewDelegate](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/NSTableViewDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40008622)
 - [NSTableViewDataSource](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSTableDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40004178)

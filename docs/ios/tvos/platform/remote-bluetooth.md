@@ -3,16 +3,16 @@ title: Siri remoto e i controller Bluetooth
 description: Questo articolo descrive il supporto di nuovi controller di gioco Siri remoto e Bluetooth nelle App Xamarin.tvOS.
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
+ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5d74479e995c5c6ba6f6fd9fd23fbca78718ee31
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cef717a727b3b018b9eec3e8a402ae4f927f7cb8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="siri-remote-and-bluetooth-controllers"></a>Siri remoto e i controller Bluetooth
 
@@ -23,7 +23,7 @@ Gli utenti dell'app Xamarin.tvOS verranno non essere interazione con relativa in
 
 Se l'app è un gioco, è possibile, facoltativamente, compilare il supporto per 3rd party, apportate per iOS (IFM) [gioco Bluetooth](#Bluetooth-Game-Controllers) nonché dell'app.
 
-[ ![](remote-bluetooth-images/intro01.png "Il remoto Bluetooth e gioco")](remote-bluetooth-images/intro01.png)
+[![](remote-bluetooth-images/intro01.png "Il remoto Bluetooth e gioco")](remote-bluetooth-images/intro01.png#lightbox)
 
 Questo articolo viene descritto il [Siri remoto](#The-Siri-Remote), [movimenti tocco di superficie](#Touch-Surface-Gestures) e [pulsanti remoto Siri](#Siri-Remote-Buttons) e viene illustrato come utilizzarle tramite [i movimenti e Gli storyboard](#Gestures-and-Storyboards), [i movimenti e codice](#Gestures-and-Code) e [la gestione degli eventi di basso livello](#Low-Level-Event-Handling). Infine, viene [utilizzo di gioco](#Working-with-Game-Controllers) in un'app Xamarin.tvOS.
 
@@ -35,7 +35,7 @@ Il modo principale che gli utenti verranno interazione Apple TV e app Xamarin.tv
 
 Il compito, uno sviluppatore di app tvOS è la creazione di un'interfaccia utente rapido, semplice da utilizzare e visivamente accattivanti che sfrutta area tocco di Siri Remote, l'accelerometro, Giroscopio e pulsanti.
 
-[ ![](remote-bluetooth-images/remote01.png "Siri remoto")](remote-bluetooth-images/remote01.png)
+[![](remote-bluetooth-images/remote01.png "Siri remoto")](remote-bluetooth-images/remote01.png#lightbox)
 
 Siri remoto presenta le seguenti funzionalità e dei relativi utilizzi previsto all'interno dell'app tvOS:
 
@@ -128,14 +128,14 @@ Per aggiungere un riconoscimento movimenti, eseguire le operazioni seguenti:
 1. Nel **Esplora**, fare doppio clic su di `Main.storyboard` e aprirlo per la finestra di progettazione dell'interfaccia di modifica.
 2. Trascinare un **toccare riconoscitore di movimento** dal **libreria** e rilasciarla sulla vista: 
 
-    [ ![](remote-bluetooth-images/storyboard01.png "Un riconoscimento di movimento Tap")](remote-bluetooth-images/storyboard01.png)
+    [![](remote-bluetooth-images/storyboard01.png "Un riconoscimento di movimento Tap")](remote-bluetooth-images/storyboard01.png#lightbox)
 3. Controllare **selezionare** nel **pulsante** sezione la **attributo controllo**: 
 
-    [ ![](remote-bluetooth-images/storyboard02.png "Selezionare")](remote-bluetooth-images/storyboard02.png)
+    [![](remote-bluetooth-images/storyboard02.png "Selezionare")](remote-bluetooth-images/storyboard02.png#lightbox)
 4. **Selezionare** significa che il movimento risponderà utente facendo clic di **area tocco** in remoto Siri. È anche possibile scegliere di rispondere al **Menu**, **Riproduci/Pausa**, **backup**, **verso il basso**, **sinistra** e **Destra** pulsanti.
 5. Successivamente, associare un **azione** dal **toccare riconoscitore di movimento** e chiamarlo `TouchSurfaceClicked`: 
 
-    [ ![](remote-bluetooth-images/storyboard03.png "Un'azione dal riconoscitore di movimento Tap")](remote-bluetooth-images/storyboard03.png)
+    [![](remote-bluetooth-images/storyboard03.png "Un'azione dal riconoscitore di movimento Tap")](remote-bluetooth-images/storyboard03.png#lightbox)
 6. Salvare le modifiche e tornare a Visual Studio per Mac.
 
 Modificare il Controller di visualizzazione (esempio `FirstViewController.cs`) file e aggiungere il codice seguente per gestire l'azione venga attivata:
@@ -314,7 +314,7 @@ Come con `UITouch` eventi, se è necessario implementare qualsiasi il `UIPress` 
 
 Oltre a standard Siri remoto fornito con l'apportate per iOS Apple TV, 3rd party periferiche di gioco Bluetooth (IFM) può essere abbinato a Apple TV e utilizzato per controllare l'app Xamarin.tvOS.
 
-[ ![](remote-bluetooth-images/game01.png "Gioco Bluetooth")](remote-bluetooth-images/game01.png)
+[![](remote-bluetooth-images/game01.png "Gioco Bluetooth")](remote-bluetooth-images/game01.png#lightbox)
 
 Gioco consente di migliorare la modalità di gioco e fornire una stima realistica delle immersion in un gioco. Possono inoltre essere utilizzati per controllare l'interfaccia Apple TV standard, pertanto l'uso non è necessario passare tra il computer remoto e il controller.
 
@@ -425,7 +425,7 @@ Apple ha diversi requisiti specifici che devono essere soddisfatte se supportati
 
 Per abilitare il supporto di gioco nell'app Xamarin.tvOS, fare doppio clic su di `Info.plist` file nel **Esplora** per aprirlo e modificarlo:
 
-[ ![](remote-bluetooth-images/game02.png "L'editor di Info. plist")](remote-bluetooth-images/game02.png)
+[![](remote-bluetooth-images/game02.png "L'editor di Info. plist")](remote-bluetooth-images/game02.png#lightbox)
 
 Sotto il **gioco** sezione, inserire un segno di spunta da **abilitare gioco**, quindi verificare tutti i tipi di gioco che saranno supportati dall'app.
 

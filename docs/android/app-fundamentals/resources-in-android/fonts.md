@@ -2,20 +2,19 @@
 title: Tipi di carattere
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA$
+ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 01/30/2018
-ms.openlocfilehash: 3b7c45a50ffb0748b5f63edfd444cb02af3fdc67
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
+ms.openlocfilehash: 7cde19a153585a6f9739aa02f3ea69dc4f09be58
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fonts"></a>Tipi di carattere
 
-<a name="overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -60,7 +59,6 @@ Come tipi di carattere forniti da un'applicazione Android in modo corretto, può
 
 Questa Guida verrà innanzitutto illustrato come utilizzare i tipi di carattere come risorsa di Android e passare quindi illustrato come scaricare i tipi di carattere in fase di esecuzione.
 
-<a name="fonts_as_a_resource" />
 
 ## <a name="fonts-as-a-resource"></a>Tipi di carattere come una risorsa
 
@@ -139,7 +137,6 @@ Dopo avere definita una famiglia di caratteri, può essere utilizzato in modo di
     />
 ```
 
-<a name="programatically_assigning_fonts" />
 
 ### <a name="programmatically-assigning-fonts"></a>Assegnazione a livello di programmazione di tipi di carattere
 
@@ -158,7 +155,6 @@ var typeface = Typeface.Create("<FONT FAMILY NAME>", Android.Graphics.TypefaceSt
 textView1.Typeface = typeface;
 ```
 
-<a name="downloading_fonts" />
 
 ## <a name="downloading-fonts"></a>Download di tipi di carattere
 
@@ -202,7 +198,6 @@ Il `font-family` elemento contiene i seguenti attributi, le informazioni che è 
 
 Una volta definiti i tipi di carattere, potrebbe essere necessario fornire informazioni di _i certificati di tipo di carattere_ coinvolti con il download.
 
-<a name="font_certificates" />
 
 ### <a name="font-certificates"></a>Certificati di tipo di carattere
 
@@ -232,7 +227,6 @@ Ad esempio, il seguente codice XML è denominato **Resources/values/fonts_cert.x
 
 Questi file di risorse sul posto, l'applicazione è in grado di scaricare i tipi di carattere.
 
-<a name="downloadable_font_resource_declaration" />
 
 ### <a name="declaring-downloadable-fonts-as-resources"></a>Dichiarazione di tipi di carattere trasferibili come risorse
 
@@ -253,7 +247,6 @@ Per scaricare questi tipi di carattere, essi devono essere dichiarati **AndroidM
 <meta-data android:name="downloadable_fonts" android:resource="@array/downloadable_fonts" />
 ```
 
-<a name="programatically_downloading_fonts" />
 
 ### <a name="downloading-a-font-with-the-font-apis"></a>Download di un tipo di carattere con le API di tipo di carattere
 
@@ -326,10 +319,6 @@ public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
     }
 }
 
-
-/// <summary>
-/// EventArg when a font has been downloaded. 
-/// </summary>
 public class FontDownloadEventArg : EventArgs
 {
     public FontDownloadEventArg(Android.Graphics.Typeface typeface)
@@ -360,7 +349,6 @@ fontHelper.FontDownloaded += (object sender, FontDownloadEventArg e) =>
 fontHelper.DownloadFonts(this); // this is an Android Context instance.
 ```
 
-<a name="summary" />
 
 ## <a name="summary"></a>Riepilogo
 

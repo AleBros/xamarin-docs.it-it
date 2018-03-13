@@ -7,18 +7,17 @@ ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
-ms.openlocfilehash: 84ef87f5ed84fcd0a9aa2504c52a0fec17404e1f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 6d31e2a22c63f8d46893dd1928b561e1a06b19b4
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="troubleshooting-bindings"></a>Risoluzione dei problemi di associazioni
 
 _In questo articolo riepiloga vari errori comuni che possono verificarsi durante la generazione di associazioni, insieme alle possibili cause e suggeriti i metodi per risolverli._
 
-<a name="OVERVIEW" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -38,7 +37,6 @@ Dopo aver abilitato l'output della diagnostica, ricompilare il progetto di assoc
 
 Può inoltre risultare utile decompilare la libreria Android ed esaminare i tipi e metodi che xamarin sta tentando di associare. Questo aspetto è illustrato in dettaglio più avanti in questa Guida.
 
-<a name="DECOMPILING_AN_ANDROID_LIBRARY" />
 
 ## <a name="decompiling-an-android-library"></a>Decompilare una libreria Android
 
@@ -59,9 +57,8 @@ Una volta che si è decompilato libreria Android, esaminare il codice sorgente. 
 - **`import` istruzioni per le raccolte senza riferimenti** &ndash; identificare la libreria senza riferimento e aggiungere tali dipendenze al progetto xamarin associazione con un **azione di compilazione** di **ReferenceJar**  o **EmbedddedReferenceJar**.
 
 > [!NOTE]
-> **Nota:** decompilare una libreria di Java può essere consentito o soggetti a limitazioni legali in base alle leggi locali o la licenza in cui è stata pubblicata la libreria di Java. Se necessario, è possibile integrare i servizi di un legale prima di tentare di decompilare una libreria di Java e controllare il codice sorgente.
+> Decompilare una libreria di Java sia consentito o soggetti a limitazioni legali in base alle leggi locali o la licenza in cui è stata pubblicata la libreria di Java. Se necessario, è possibile integrare i servizi di un legale prima di tentare di decompilare una libreria di Java e controllare il codice sorgente.
 
-<a name="INSPECTING_API_XML" />
 
 ## <a name="inspect-apixml"></a>Controllare l'API. XML
 
@@ -71,19 +68,16 @@ Come parte della creazione di un progetto di associazione, xamarin genererà un 
 
 Questo file fornisce un elenco di tutte le API Java che xamarin sta tentando di associazione. Il contenuto di questo file consente di identificare i tipi o i metodi mancante, duplicato dell'associazione. Sebbene l'ispezione di questo file è noiosa e richiedere tempo, può fornire per indicazioni su ciò che potrebbero causare problemi di associazione. Ad esempio, **api.xml** potrebbe rivelare che una proprietà restituisce un tipo appropriato, o che sono disponibili due tipi che condividono lo stesso nome gestito.
 
-<a name="KNOWN_ISSUES" />
 
 ## <a name="known-issues"></a>Problemi noti
 
 In questa sezione elenca alcuni messaggi di errore comuni o i sintomi che la si verificano durante il tentativo di associare una libreria Android.
 
-<a name="PROBLEM_JAVA_VERSION_MISMATCH" />
 
 ### <a name="problem-java-version-mismatch"></a>Problema: Mancata corrispondenza tra versione di Java
 
 In alcuni casi i tipi non verranno generati o arresti anomali del sistema imprevisto possono verificarsi se si utilizza una versione più recente o versioni precedente di Java rispetto a ciò che è stata compilata con la libreria. Ricompilare la libreria Android con la stessa versione di JDK che utilizza il progetto xamarin.
 
-<a name="PROBLEM_AT_LEAST_ONE_JAVA_LIBRARY_IS_REQUIRED" />
 
 ### <a name="problem-at-least-one-java-library-is-required"></a>Problema: è necessaria almeno una libreria di Java
 
@@ -93,7 +87,6 @@ Viene visualizzato l'errore "è obbligatoria, almeno una libreria di Java" anche
 
 Verificare che l'azione di compilazione è impostata su `EmbeddedJar`. Poiché sono presenti più azioni di compilazione per. File JAR (ad esempio `InputJar`, `EmbeddedJar`, `ReferenceJar` e `EmbeddedReferenceJar`), il generatore di associazione non può dedurre automaticamente quello da utilizzare per impostazione predefinita. Per ulteriori informazioni sulle azioni di compilazione, vedere [azioni di compilazione](~/android/platform/binding-java-library/index.md).
 
-<a name="PROBLEM_BINDING_TOOLS_CANNOT_LOAD_THE_JAR_LIBRARY" />
 
 ### <a name="problem-binding-tools-cannot-load-the-jar-library"></a>Problema: Gli strumenti di associazione non è possibile caricare il. Libreria JAR
 
@@ -104,7 +97,6 @@ Il generatore di librerie di associazione non riesce a caricare il. Libreria JAR
 Alcuni. Impossibile caricare il file JAR librerie che utilizzano l'offuscamento codice (tramite strumenti quali Proguard) dagli strumenti di linguaggio. Poiché lo strumento di uso della reflection Java e il codice byte ASM libreria di progettazione, questi strumenti dipendenti potrebbero rifiutare le librerie offuscate anche se potrebbero passare runtime Android degli strumenti. La soluzione alternativa per questo oggetto è per eseguire l'associazione manualmente queste librerie anziché utilizzare il generatore di associazione.
 
 
-<a name="PROBLEM_MISSING_C_TYPES_IN_GENERATED_OUTPUT_" />
 
 ### <a name="problem-missing-c-types-in-generated-output"></a>Problema: Contiene i tipi c# nell'output generato.
 
@@ -253,8 +245,6 @@ La correzione per questo consiste nel caricare manualmente il **. so** libreria 
 ```csharp
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 ```
-
-<a name=summary />
 
 ## <a name="summary"></a>Riepilogo
 

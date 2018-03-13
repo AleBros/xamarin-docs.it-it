@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4887b9a42c5a855353b5a4e422559aafcdc68173
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0b8d8d08db15959a47093f255a891605a089ea00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="table-control"></a>Controllo della tabella
 
@@ -24,7 +24,7 @@ Il watchOS `WKInterfaceTable` controllo è molto più semplice rispetto alla con
 
 Trascinare il **tabella** controllo in una scena. Per impostazione predefinita sarà simile al seguente (con un layout di riga non specificato):
 
-[ ![](table-images/add-table-sml.png "Aggiunta di una tabella")](table-images/add-table.png)
+[![](table-images/add-table-sml.png "Aggiunta di una tabella")](table-images/add-table.png#lightbox)
 
 Assegna un nome di tabella nel **proprietà** pad **nome** casella, in modo che sia possibile farvi riferimento nel codice.
 
@@ -34,7 +34,7 @@ La tabella include automaticamente una sola riga, rappresentata da un controller
 
 Per impostare il **classe** per il controller di riga, selezionare la riga nel **struttura documento** e digitare un nome di classe nel **proprietà** riempimento:
 
-[ ![](table-images/add-row-controller-sml.png "Immettere un nome di classe nel riquadro proprietà")](table-images/add-row-controller.png)
+[![](table-images/add-row-controller-sml.png "Immettere un nome di classe nel riquadro proprietà")](table-images/add-row-controller.png#lightbox)
 
 Dopo aver impostata la classe per il controller della riga, l'IDE creerà un file c# corrispondente nel progetto. Trascinare i controlli (ad esempio etichette) nella riga e fornire loro i nomi in modo è possibile farvi riferimento nel codice.
 

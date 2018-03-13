@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d37c2c9dbb12668680b5813e9e083d2ebb184c66
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: HT
+ms.openlocfilehash: b0d871068f42a03b2aba3c1482a9236b19fe0db9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="custom-video-transport-controls"></a>Controlli di trasporto personalizzato di video
 
@@ -646,11 +646,11 @@ namespace VideoPlayerDemos
 
 Poiché `AutoPlay` è impostato su `false` nel **CustomTransport.xaml** file, sarà necessario premere il **riprodurre** pulsante quando viene abilitato per iniziare il video. I pulsanti sono definiti in modo che i caratteri Unicode in precedenza sono accompagnati da equivalenti di testo. I pulsanti sono un aspetto coerente in ogni piattaforma per la riproduzione del video:
 
-[![Riproduzione di trasporto personalizzato](custom-transport-images/customtransportplaying-small.png "la riproduzione di trasporto personalizzato")](custom-transport-images/customtransportplaying-large.png "la riproduzione di trasporto personalizzato")
+[![Riproduzione di trasporto personalizzato](custom-transport-images/customtransportplaying-small.png "la riproduzione di trasporto personalizzato")](custom-transport-images/customtransportplaying-large.png#lightbox "la riproduzione di trasporto personalizzato")
 
 Ma in Android e UWP, il **riprodurre** pulsante è molto diverso se il video è stato sospeso:
 
-[![Trasporto personalizzato sospeso](custom-transport-images/customtransportpaused-small.png "trasporto personalizzato sospeso")](custom-transport-images/customtransportpaused-large.png "sospesa di trasporto personalizzato")
+[![Trasporto personalizzato sospeso](custom-transport-images/customtransportpaused-small.png "trasporto personalizzato sospeso")](custom-transport-images/customtransportpaused-large.png#lightbox "sospesa di trasporto personalizzato")
 
 In un'applicazione di produzione, è opportuno utilizzare le proprie immagini bitmap per i pulsanti per raggiungere l'uniformità.
 

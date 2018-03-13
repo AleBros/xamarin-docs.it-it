@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 2904a7da73f5bf6e8960f65239d1f8dc52ab1aba
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d66d8cd722aa9a7b6fe27db3f6128ee24309a1de
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="visual-design-updates"></a>Aggiornamenti di progettazione visiva
 
@@ -51,7 +51,7 @@ iOS 11 ha reso più semplice aggiungere un controller di ricerca direttamente al
 NavigationItem.SearchController = searchController;
 ```
 
-[![Titolo di navigazione di grandi dimensioni con barra di ricerca](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png)
+[![Titolo di navigazione di grandi dimensioni con barra di ricerca](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png#lightbox)
 
 A seconda della funzionalità dell'app, è possibile o potrebbe non desidera che la barra di ricerca deve essere nascosto quando l'utente scorre un elenco. È possibile modificare questo utilizzando il `HidesSearchBarWhenScrolling` proprietà.
 
@@ -75,7 +75,7 @@ iOS 7 [introdotto](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen) `t
 
 Area di sicurezza è un nuovo modo di concepire area visibile dell'applicazione e come l'aggiunta di vincoli tra una vista e una visualizzazione con privilegi avanzata. Si consideri ad esempio l'immagine seguente:
 
-[![Area di sicurezza vs Top e Guida layout inferiore](visual-design-images/image10-sml.png)](visual-design-images/image10.png)
+[![Area di sicurezza vs Top e Guida layout inferiore](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
 In precedenza, è stato aggiunto a una vista e desiderato non sia visibile nell'area di colore verde precedente, si limita al _inferiore_ del `TopLayoutGuide` e _top_ del `BottomLayoutGuide`. In iOS 11, è invece necessario vincolare per il _top_ e _inferiore_ dell'Area di sicurezza. Vedere l'esempio seguente:
 

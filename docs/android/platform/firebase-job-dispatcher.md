@@ -7,12 +7,12 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 6b55e525849d57f2ad9e40ea64b75cfc65ef0727
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: fd5b2f8c758d8e1e9bb9276da96a410c61478d4a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Dispatcher processo firebase
 
@@ -138,7 +138,7 @@ Il `Job.Builder` esegue alcuni controlli di convalida di base sui valori di inpu
 * A `Job`del _durata_ (quanto tempo verrà pianificata per l'esecuzione) è solo fino a quando il dispositivo viene riavviato &ndash; dopo che il dispositivo viene riavviato il `Job` viene perso.
 * Oggetto `Job` non sia ricorrente &ndash; funzionerà solo una volta.
 * Oggetto `Job` verrà pianificato per l'esecuzione appena possibile.
-* La strategia di tentativi predefinito per un `Job` consiste nell'usare un _backoff esponenziale_ (descritti in modo dettagliato più avanti nella sezione [impostando un RetryStrategy](#Setting_a_RestryStrategy))
+* La strategia di tentativi predefinito per un `Job` consiste nell'usare un _backoff esponenziale_ (descritti in modo dettagliato più avanti nella sezione [impostando un RetryStrategy](#Setting_a_RetryStrategy))
 
 ### <a name="scheduling-a-job"></a>Pianificazione di un `Job`
 
@@ -164,12 +164,14 @@ Il valore restituito da `FirebaseJobDispatcher.Schedule` sarà uno dei valori in
 
 È possibile personalizzare un processo. Esempi di come un processo può essere personalizzato includono:
 
-* [Passare parametri a un processo](#Passing_Parameters_to_a_Job) &ndash; A `Job` potrebbe richiedere valori aggiuntivi per eseguire il lavoro, ad esempio download di un file.
+* [Passaggio di parametri a un processo](#Passing_Parameters_to_a_Job) &ndash; A `Job` potrebbe richiedere valori aggiuntivi per eseguire il lavoro, ad esempio download di un file.
 * [Impostare vincoli](#Setting_Constraints) &ndash; potrebbe essere necessario eseguire un processo solo quando vengono soddisfatte determinate condizioni. Ad esempio, eseguire solo un `Job` carica quando il dispositivo. 
 * [Specificare quando un `Job` deve essere eseguito](#Setting_Job_Triggers) &ndash; il Dispatcher di processo Firebase consente alle applicazioni di specificare un'ora quando si desidera eseguire il processo.  
 * [Dichiarare una strategia di ripetizione per i processi non riusciti](#Setting_a_RetryStrategy) &ndash; A _della strategia di tentativi_ vengono fornite indicazioni per la `FirebaseJobDispatcher` sulle operazioni da eseguire con `Jobs` che non riescono a completare. 
 
 Ognuno di questi argomenti verrà descritte più nelle sezioni seguenti.
+
+<a name="Passing_Parameters_to_a_Job" />
 
 #### <a name="passing-parameters-to-a-job"></a>Passaggio di parametri a un processo
 
@@ -197,6 +199,7 @@ public override bool OnStartJob(IJobParameters jobParameters)
 } 
 ```
 
+<a name="Setting_Constraints" />
 
 #### <a name="setting-constraints"></a>Impostazione dei vincoli
 
@@ -215,6 +218,8 @@ Job myJob = dispatcher.NewJobBuilder()
                       .Build();
 ```
 
+<a name="Setting_Job_Triggers" />
+
 #### <a name="setting-job-triggers"></a>Trigger di processo di impostazione
 
 Il `JobTrigger` vengono fornite indicazioni per il sistema operativo sull'inizio del processo. A `JobTrigger` ha un _esecuzione finestra_ che definisce un'ora pianificata per quando il `Job` deve essere eseguito. La finestra di esecuzione ha un _avvia finestra_ valore e un _finestra finale_ valore. Finestra di avvio è il numero di secondi che il dispositivo deve attendere prima di eseguire il processo e il valore di finestra finale è il numero massimo di secondi di attesa prima di eseguire il `Job`. 
@@ -230,6 +235,8 @@ Job myJob = dispatcher.NewJobBuilder()
 ```
 
 Il valore predefinito `JobTrigger` per un processo è rappresentato dal valore `Trigger.Now`, che consente di eseguire un processo appena possibile dopo la pianificazione...
+
+<a name="Setting_a_RetryStrategy" />
 
 #### <a name="setting-a-retrystrategy"></a>L'impostazione di un RetryStrategy
 

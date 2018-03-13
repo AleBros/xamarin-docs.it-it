@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 19. Viste di raccolta
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 37afa3a54fd20745a65312fb5a24d958c8ec405f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: HT
+ms.openlocfilehash: 73b3ec3e60a8fca5c48f515eab2cbb8359618dbb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>Riepilogo del capitolo 19. Viste di raccolta
 
@@ -97,7 +98,7 @@ Il [ **TextCellListXaml** ](https://github.com/xamarin/xamarin-forms-book-sample
 
 In XAML è possibile impostare un [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) per il `DataTemplate` e quindi definire un struttura ad albero visuale personalizzato come il [ `View` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ViewCell.View/) proprietà di `ViewCell`. (`View` è la proprietà content del `ViewCell` pertanto `ViewCell.View` tag non sono necessari.) Il [ **CustomNamedColorList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/CustomNamedColorList) illustra questa tecnica:
 
-[![Schermata tripla dell'elenco dei colori personalizzata denominata](images/ch19fg11-small.png "personalizzato denominato elenco di colore")](images/ch19fg11-large.png "personalizzato denominato elenco di colori")
+[![Schermata tripla dell'elenco dei colori personalizzata denominata](images/ch19fg11-small.png "personalizzato denominato elenco di colore")](images/ch19fg11-large.png#lightbox "personalizzato denominato elenco di colori")
 
 Ottenere il ridimensionamento di destra per tutte le piattaforme, può essere complessa. Il [ `RowHeight` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.RowHeight/) proprietà è utile, ma in alcuni casi sarà necessario ricorrere al [ `HasUnevenRows` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.HasUnevenRows/) proprietà, è meno efficiente, ma impone il `ListView` di ridimensionare le righe. Per iOS e Android, è necessario utilizzare una di queste due proprietà per ottenere il ridimensionamento delle righe appropriato.
 
@@ -127,7 +128,7 @@ Il [ `Student` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/mast
 
 Il [ **StudentList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/StudentList) programma utilizza una `ImageCell` per visualizzare gli studenti e le immagini in un `ListView`:
 
-[![La schermata dell'elenco di studenti](images/ch19fg18-small.png "elenco studente")](images/ch19fg18-large.png "studente elenco")
+[![La schermata dell'elenco di studenti](images/ch19fg18-small.png "elenco studente")](images/ch19fg18-large.png#lightbox "studente elenco")
 
 Il [ **ListViewHeader** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ListViewHeader) esempio aggiunge un [ `Header` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.Header/) proprietà ma vengono visualizzati solo i in Android.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: beff54d2b2bb72b2adf1e77819c56004b92e13f7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 279b5bc1188c973fddc033f9b592e9acec703a59
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="passkit"></a>PassKit
 
@@ -22,7 +22,7 @@ Portafoglio è un'app per iPhone e iPod tocca con iOS 6. Archivia e visualizza i
 
 Questo documento introduce Wallet, tramite l'API di Kit passare con xamarin. IOS e viene illustrato come implementare i passaggi nel server.
 
- [ ![](passkit-images/image1.png "Il portafoglio archivia e organizza tutti i passaggi su un telefono")](passkit-images/image1.png)
+ [![](passkit-images/image1.png "Il portafoglio archivia e organizza tutti i passaggi su un telefono")](passkit-images/image1.png#lightbox)
 
 
 ## <a name="requirements"></a>Requisiti
@@ -55,7 +55,7 @@ In sostanza, passare Kit fornisce un modo semplice e pratico per archiviare e vi
 
 Kit di passaggio non è semplicemente un'API in CocoaTouch, ma fa parte di un ecosistema di App, dati e servizi che semplificano la condivisione protetta e la gestione di codici a barre e altri dati più grande. Questo diagramma di alto livello mostra le diverse entità che possono essere coinvolti nella creazione e utilizzo di passaggi:
 
- [ ![](passkit-images/image2.png "Questo diagramma di alto livello mostra le entità coinvolte nella creazione e utilizzo di sessioni")](passkit-images/image2.png)
+ [![](passkit-images/image2.png "Questo diagramma di alto livello mostra le entità coinvolte nella creazione e utilizzo di sessioni")](passkit-images/image2.png#lightbox)
 
 Ogni parte dell'ecosistema dispone di un ruolo definito chiaramente:
 
@@ -86,7 +86,7 @@ Attualmente cinque tipi supportati, che possono essere distinti nell'app portafo
 
 In questa schermata vengono visualizzati i tipi di cinque passaggio (nell'ordine: buono, generico, archiviare card, il passaggio di salita a bordo e il ticket eventi):
 
- [ ![](passkit-images/image3.png "In questa schermata vengono visualizzati i tipi di cinque passaggio")](passkit-images/image3.png)
+ [![](passkit-images/image3.png "In questa schermata vengono visualizzati i tipi di cinque passaggio")](passkit-images/image3.png#lightbox)
 
 ### <a name="file-structure"></a>Struttura dei file
 
@@ -103,7 +103,7 @@ Un file di sessione è effettivamente un archivio ZIP con un **.pkpass** estensi
 
 Struttura di directory di un file di passaggio è illustrato di seguito (si tratta del contenuto dell'archivio ZIP):
 
- [ ![](passkit-images/image4.png "Qui viene mostrata la struttura di directory di un file di sessione")](passkit-images/image4.png)
+ [![](passkit-images/image4.png "Qui viene mostrata la struttura di directory di un file di sessione")](passkit-images/image4.png#lightbox)
 
 ### <a name="passjson"></a>pass.json
 
@@ -238,9 +238,9 @@ Per creare le operazioni seguenti a non passare tipo ID.
 
 Il primo passaggio consiste nell'impostare un ID di tipo passato per ogni diversi _tipo_ della sessione devono essere supportati. L'ID passa (o identificatore di tipo passato) crea un identificatore univoco per il passaggio. Si utilizzerà questo ID per il passaggio di collegamento con l'account sviluppatore utilizza un certificato.
 
-1. Nel [sezione certificati, gli identificatori e i profili del portale di Provisioning iOS](https://developer.apple.com/account/overview.action), passare a **identificatori** e selezionare **passare gli ID di tipo** . Selezionare quindi il  **+**  pulsante per creare un nuovo tipo di passaggio: [ ![ ] (passkit-images/passid.png "creare un nuovo tipo di passaggio")](passkit-images/passid.png)
+1. Nel [sezione certificati, gli identificatori e i profili del portale di Provisioning iOS](https://developer.apple.com/account/overview.action), passare a **identificatori** e selezionare **passare gli ID di tipo** . Selezionare quindi il  **+**  pulsante per creare un nuovo tipo di passaggio: [ ![ ] (passkit-images/passid.png "creare un nuovo tipo di passaggio")](passkit-images/passid.png#lightbox)
 
-2.   Fornire un **descrizione** (nome) e **identificatore** (stringa univoca) per il passaggio. Si noti che tutti gli ID tipo passato deve iniziare con la stringa `pass.` In questo esempio viene utilizzata `pass.com.xamarin.coupon.banana` : [ ![ ] (passkit-images/register.png "fornire una descrizione e un identificatore")](passkit-images/register.png)
+2.   Fornire un **descrizione** (nome) e **identificatore** (stringa univoca) per il passaggio. Si noti che tutti gli ID tipo passato deve iniziare con la stringa `pass.` In questo esempio viene utilizzata `pass.com.xamarin.coupon.banana` : [ ![ ] (passkit-images/register.png "fornire una descrizione e un identificatore")](passkit-images/register.png#lightbox)
 
 
 3.   Confermare l'ID passaggio premendo il **registrare** pulsante.
@@ -252,11 +252,11 @@ Il primo passaggio consiste nell'impostare un ID di tipo passato per ogni divers
 
 Per creare un nuovo certificato per l'ID di tipo passato, eseguire le operazioni seguenti:
 
-1.  Selezionare l'ID appena creato di passare dall'elenco e fare clic su **modifica** : [ ![ ] (passkit-images/pass-done.png "selezionare il nuovo ID di passare dall'elenco")](passkit-images/pass-done.png)
+1.  Selezionare l'ID appena creato di passare dall'elenco e fare clic su **modifica** : [ ![ ] (passkit-images/pass-done.png "selezionare il nuovo ID di passare dall'elenco")](passkit-images/pass-done.png#lightbox)
 
     Selezionare quindi **Create Certificate...** :
 
-    [ ![](passkit-images/cert-dist.png "Selezionare Crea certificato")](passkit-images/cert-dist.png)
+    [![](passkit-images/cert-dist.png "Selezionare Crea certificato")](passkit-images/cert-dist.png#lightbox)
 
 
 2.  Seguire i passaggi per creare una firma richiesta certificato (CSR).
@@ -286,7 +286,7 @@ Ora che abbiamo creato il tipo passato è possibile creare manualmente un passag
 
 Esistono alcuni file di origine nel codice di esempio per l'articolo che può essere utilizzato per generare un passaggio. Utilizzare i file nel `CouponBanana.raw` directory della directory CreateAPassManually. I seguenti file sono presenti:
 
- [ ![](passkit-images/image18.png "Questi file sono presenti")](passkit-images/image18.png)
+ [![](passkit-images/image18.png "Questi file sono presenti")](passkit-images/image18.png#lightbox)
 
 Aprire pass.json e modificare la stringa JSON. È necessario aggiornare almeno il `passTypeIdentifier` e `teamIdentifer` in modo che corrisponda all'account per sviluppatori di Apple.
 
@@ -330,11 +330,11 @@ Nell'esempio di codice per questo articolo si è un progetto denominato `signpas
 
 Se fosse necessario esaminare l'output di questi strumenti (per impostare il nome del file con estensione zip e quindi aprirlo), si vedrà i file seguenti (si noti l'aggiunta del `manifest.json` e `signature` file):
 
- [ ![](passkit-images/image19.png "Esaminare l'output di questi strumenti")](passkit-images/image19.png)
+ [![](passkit-images/image19.png "Esaminare l'output di questi strumenti")](passkit-images/image19.png#lightbox)
 
 Dopo aver effettuato l'accesso, ZIP e rinominare il file (ad es. per `BananaCoupon.pkpass`) è possibile trascinarlo nel simulatore per testare o inviare tramite posta elettronica all'utente di recuperare in un dispositivo reale. Verrà visualizzata una schermata per **Aggiungi** il passaggio, simile al seguente:
 
- [ ![](passkit-images/image20.png "Aggiungere la schermata di passaggio")](passkit-images/image20.png)
+ [![](passkit-images/image20.png "Aggiungere la schermata di passaggio")](passkit-images/image20.png#lightbox)
 
 In genere tale processo potrebbe essere automatizzato in un server, creazione di passaggio manuale, tuttavia potrebbe essere un'opzione per le piccole aziende che creano solo coupon che non richiedono il supporto di un server back-end.
 
@@ -344,7 +344,7 @@ In genere tale processo potrebbe essere automatizzato in un server, creazione di
 
 Portafoglio è la parte centrale dell'ecosistema di Kit passare. Questa schermata è riportato il portafoglio vuoto e aspetto l'elenco di passaggio e i singoli passaggi:
 
- [ ![](passkit-images/image21.png "Questa schermata è riportato il portafoglio vuoto e aspetto l'elenco di passaggio e i singoli passaggi")](passkit-images/image21.png)
+ [![](passkit-images/image21.png "Questa schermata è riportato il portafoglio vuoto e aspetto l'elenco di passaggio e i singoli passaggi")](passkit-images/image21.png#lightbox)
 
 Le funzionalità di portafoglio includono:
 
@@ -377,9 +377,9 @@ Le applicazioni di canale sono App intermedia che potrebbe essere visualizzato p
 
 Questa schermata è riportato come **posta** in iOS 6 riconosce un allegato di passaggio e (quando interessate) offre ai **Aggiungi** a portafoglio.
 
- [ ![](passkit-images/image22.png "Questa schermata è riportato come posta elettronica in iOS 6 riconosce un allegato di passaggio")](passkit-images/image22.png)
+ [![](passkit-images/image22.png "Questa schermata è riportato come posta elettronica in iOS 6 riconosce un allegato di passaggio")](passkit-images/image22.png#lightbox)
 
- [ ![](passkit-images/image23.png "Questa schermata è riportato come posta elettronica sono disponibili aggiungere un allegato di passare a portafoglio")](passkit-images/image23.png)
+ [![](passkit-images/image23.png "Questa schermata è riportato come posta elettronica sono disponibili aggiungere un allegato di passare a portafoglio")](passkit-images/image23.png#lightbox)
 
 Se si compila un'applicazione che può essere un canale per le sessioni, possono essere riconosciuti da:
 
@@ -400,7 +400,7 @@ Applicazioni complementare non tentare di duplicare le funzionalità di portafog
 
 Il resto di questa sezione viene descritto come compilare un' complementare App di base che interagisce con il Kit di passare.
 
-### <a name="provisioning"></a>provisioning
+### <a name="provisioning"></a>Provisioning
 
 Poiché portafoglio è una tecnologia di archivio, l'applicazione è necessario eseguire il provisioning separatamente e non è possibile utilizzare il profilo di Provisioning Team o Wildcard App ID. Fare riferimento al [utilizzo con funzionalità](~/ios/deploy-test/provisioning/capabilities/wallet-capabilities.md) Guida per creare un profilo di Provisioning e un ID App univoci per l'applicazione portafoglio.
 
@@ -498,7 +498,7 @@ var passes = library.GetPasses ();  // returns PKPass[]
 
 Si noti che il simulatore non filtrare l'elenco di passa restituito, pertanto questo metodo deve sempre essere testato nei dispositivi reali. Dopo essere stati aggiunti due coupon, questo elenco può essere visualizzato in un UITableView, l'esempio app un aspetto simile al seguente:
 
- [ ![](passkit-images/image29.png "L'aspetto di app di esempio come segue dopo essere stati aggiunti due coupon")](passkit-images/image29.png)
+ [![](passkit-images/image29.png "L'aspetto di app di esempio come segue dopo essere stati aggiunti due coupon")](passkit-images/image29.png#lightbox)
 
 
 ### <a name="displaying-passes"></a>La visualizzazione passa
@@ -520,7 +520,7 @@ string passInfo =
 
 Questa stringa viene visualizzata come un avviso nell'esempio:
 
- [ ![](passkit-images/image30.png "Nell'esempio di avviso Coupon selezionato")](passkit-images/image30.png)
+ [![](passkit-images/image30.png "Nell'esempio di avviso Coupon selezionato")](passkit-images/image30.png#lightbox)
 
 È inoltre possibile utilizzare il `LocalizedValueForFieldKey()` metodo per recuperare dati da campi nei passaggi è stata progettata (poiché si conosceranno i campi devono essere presenti). Nell'esempio di codice non viene visualizzato questo.
 
@@ -541,7 +541,7 @@ NavigationController.PresentModalViewController (pkapvc, true);
 
 Viene visualizzato il passaggio di **Aggiungi** e **Annulla** opzioni:
 
- [ ![](passkit-images/image20.png "Il passaggio di visualizzate le opzioni Aggiungi e Annulla")](passkit-images/image20.png)
+ [![](passkit-images/image20.png "Il passaggio di visualizzate le opzioni Aggiungi e Annulla")](passkit-images/image20.png#lightbox)
 
 ### <a name="replace-an-existing-pass"></a>Sostituire un passaggio esistente
 

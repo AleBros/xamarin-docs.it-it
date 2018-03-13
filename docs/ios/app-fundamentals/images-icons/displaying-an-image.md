@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c54cb71b0cab653eee52e3773a5233d536412e7b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1ca537ef47f48886483e99bb33b0d524d16593f8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="displaying-an-image"></a>Visualizzazione di un'immagine
 
@@ -135,11 +135,11 @@ Per ottenere facilmente questo effetto, passare il _modalità rendering_ dell'As
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[ ![](displaying-an-image-images/templateimage01.png "Impostare la modalità di rendering immagine modello")](displaying-an-image-images/templateimage01.png)
+[![](displaying-an-image-images/templateimage01.png "Impostare la modalità di rendering immagine modello")](displaying-an-image-images/templateimage01.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](displaying-an-image-images/templateimage01vs.png "La modalità di rendering è impostata su modello")](displaying-an-image-images/templateimage01vs.png)
+[![](displaying-an-image-images/templateimage01vs.png "La modalità di rendering è impostata su modello")](displaying-an-image-images/templateimage01vs.png#lightbox)
 
 -----
 
@@ -147,11 +147,11 @@ La finestra di progettazione IOS, assegnare l'Asset di immagine a un controllo d
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[ ![](displaying-an-image-images/templateimage03.png "Impostare la tonalità per colorare l'immagine")](displaying-an-image-images/templateimage03.png)
+[![](displaying-an-image-images/templateimage03.png "Impostare la tonalità per colorare l'immagine")](displaying-an-image-images/templateimage03.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](displaying-an-image-images/templateimage03vs.png "Impostare la tonalità per colorare l'immagine")](displaying-an-image-images/templateimage03vs.png)
+[![](displaying-an-image-images/templateimage03vs.png "Impostare la tonalità per colorare l'immagine")](displaying-an-image-images/templateimage03vs.png#lightbox)
 
 -----
 

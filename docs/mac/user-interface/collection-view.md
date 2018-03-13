@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/24/2017
-ms.openlocfilehash: d8fa54f23dfea063fa25f6e26e2df2c2ed82101e
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9aa66a531b723f176b940ba35ee4e86eae711f7d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="collection-views"></a>Viste di raccolta
 
@@ -22,7 +22,7 @@ Quando l'utilizzo di c# e .NET in un'app Xamarin.Mac, lo sviluppatore ha accesso
 
 Oggetto `NSCollectionView` viene visualizzata una griglia sottoviste organizzate mediante un `NSCollectionViewLayout`. Ogni visualizzazione secondaria nella griglia è rappresentato da un `NSCollectionViewItem` che gestisce il caricamento di contenuto della visualizzazione di un `.xib` file.
 
-[ ![Eseguire un'app di esempio](collection-view-images/intro01.png)](collection-view-images/intro01.png)
+[![Eseguire un'app di esempio](collection-view-images/intro01.png)](collection-view-images/intro01.png#lightbox)
 
 Questo articolo vengono illustrate le nozioni di base dell'utilizzo di viste di raccolta in un'app Xamarin.Mac. È altamente consigliabile che il [Hello, Mac](~/mac/get-started/hello-mac.md) articolo prima di tutto, in particolare il [Introduzione a Xcode e interfaccia generatore](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [punti vendita e le azioni](~/mac/get-started/hello-mac.md#Outlets_and_Actions) le sezioni, come illustra i concetti chiave e le tecniche utilizzate in questo articolo.
 
@@ -821,4 +821,4 @@ In questo articolo è stato applicato l'utilizzo delle visualizzazioni di raccol
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Data binding e codifica di chiave-valore](~/mac/app-fundamentals/databinding.md)
 - [NSCollectionView](https://developer.apple.com/reference/appkit/nscollectionview)
-- [Linee guida sull'interfaccia umane di OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

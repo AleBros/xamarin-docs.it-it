@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/23/2017
-ms.openlocfilehash: 582fcbacbf1959e05773babb1219817ba319a937
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e14cfb8d3c09d17bdee4b60786f434ff94ef31dc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="custom-document-icons"></a>Icone personalizzate del documento
 
@@ -20,7 +20,7 @@ _Questo articolo viene illustrato come inclusi e la gestione di un asset di imma
 
 Se un'app xamarin supporta il caricamento di un particolare tipo di documento, lo sviluppatore può specificare le icone che verrà utilizzata dal sistema quando rileva tale tipo di documento, ad esempio quando un utente tiene premuto un allegato nel *applicazione di posta elettronica* come illustrato di seguito:
 
- [ ![](custom-document-types-images/17.png "Un esempio delle icone del tipo di documento")](custom-document-types-images/17.png)
+ [![](custom-document-types-images/17.png "Un esempio delle icone del tipo di documento")](custom-document-types-images/17.png#lightbox)
 
 Lo sviluppatore può aggiungere informazioni sul tipo di documento per un formato di file dell'app è in grado di apertura con l'inclusione di voci del dizionario per la `CFBundleTypeName` stringa e `LSItemContentTypes` matrice dell'app `Info.plist`. Le icone per il tipo di documento passare il `CFBundleTypeIconFiles` matrice. Se non viene fornita un'icona di documento, iOS verrà derivare dall'icona dell'app.
 È possibile fornire le icone per diverse dimensioni, ottimizzate per le varie risoluzioni di dispositivo. 
@@ -29,7 +29,7 @@ Lo sviluppatore può aggiungere informazioni sul tipo di documento per un format
 
 Per assegnare i valori sono i seguenti in Visual Studio per Mac, usare il **tipi di documento** sezione sotto il **avanzate** scheda il `Info.plist` editor per aggiungere il tipo di documento e assegnare le icone di immagine. Ad esempio, ecco una schermata che illustra la registrazione per il supporto PDF:
 
- [ ![](custom-document-types-images/18.png "La sezione tipi di documento nella scheda avanzata l'editor 'Info. plist'")](custom-document-types-images/18.png)
+ [![](custom-document-types-images/18.png "La sezione tipi di documento nella scheda avanzata l'editor 'Info. plist'")](custom-document-types-images/18.png#lightbox)
  
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 

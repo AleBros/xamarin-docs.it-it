@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/18/2017
-ms.openlocfilehash: 54b6809b7e27dc87be6d510e4a4b6071e4ae22e7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f976d798ae1b1279fc8f82d3cf1d738bb2c93911
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="popup-menu"></a>Menu di scelta rapida
 
 La `PopupMenu` classe aggiunge il supporto per visualizzare il menu di scelta rapida associati a una vista specifica. La figura seguente mostra un menu di scelta rapida visualizzato da un pulsante, il secondo elemento evidenziato solo quando viene selezionata:
 
- [ ![Esempio di un PopopMenu con tre tre elementi](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png)
+ [![Esempio di un PopopMenu con tre tre elementi](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png#lightbox)
 
 Android 4 aggiunte un paio di nuove funzionalità per `PopupMenu` che rendere un po' più semplice da usare, vale a dire:
 
@@ -26,9 +26,8 @@ Android 4 aggiunte un paio di nuove funzionalità per `PopupMenu` che rendere un
 
 Esaminiamo questi miglioramenti. In questo esempio è disponibile una singola attività che contiene un pulsante. Quando l'utente fa clic sul pulsante, viene visualizzato un menu popup come illustrato di seguito:
 
- [ ![Esempio di app in esecuzione in un emulatore con pulsante e menu a comparsa 3-elemento](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png)
+ [![Esempio di app in esecuzione in un emulatore con pulsante e menu a comparsa 3-elemento](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png#lightbox)
 
-<a name="Creating_a_Popup_Menu" />
 
 ## <a name="creating-a-popup-menu"></a>Creazione di un Menu di scelta rapida
 
@@ -62,7 +61,6 @@ showPopupMenu.Click += (s, arg) => {
 
 Nel codice precedente, dopo il menu eccessi nella misurazione è sufficiente chiamare `menu.Show` per la visualizzazione sullo schermo.
 
-<a name="Handling_Menu_Events" />
 
 ## <a name="handling-menu-events"></a>Gestione degli eventi di Menu
 

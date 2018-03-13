@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: bac9402df544a57cceb98e816e268eb2dcb99c72
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8eed2d6b825a6e6dd7e956bf901246b9a630081a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-wear"></a>Hello, usura
 
@@ -30,11 +30,11 @@ Creare un nuovo **applicazione Android accenti**:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Creazione di una nuova applicazione Android di usare nella finestra di dialogo Nuovo progetto](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png)
+[![Creazione di una nuova applicazione Android di usare nella finestra di dialogo Nuovo progetto](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[![Creazione di una nuova applicazione Android di usare nella finestra di dialogo nuova soluzione](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png)
+[![Creazione di una nuova applicazione Android di usare nella finestra di dialogo nuova soluzione](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
@@ -47,13 +47,13 @@ Questo modello include automaticamente il **libreria indossabile Android di Xama
 
 Verificare che **minimo Android di destinazione** è impostato su **Android 5.0 (simbolo)** o versione successiva: 
 
-[![L'impostazione del Framework di destinazione su Android 5.0 in Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png)
+[![L'impostazione del Framework di destinazione su Android 5.0 in Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 Verificare che il framework di destinazione è impostato su **Android 5.0 (simbolo)** o versione successiva:
 
-[ ![Impostare il Framework di destinazione Android 5.0 in Visual Studio per Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png)
+[![Impostare il Framework di destinazione Android 5.0 in Visual Studio per Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
@@ -144,11 +144,11 @@ Il dispositivo Android con accenti compariranno nel menu a discesa dispositivo. 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Scelta di un AVD accenti nel menu dispositivo di Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png)
+[![Scelta di un AVD accenti nel menu dispositivo di Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[ ![Scelta di un AVD accenti in Visual Studio per menu dispositivo Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png)
+[![Scelta di un AVD accenti in Visual Studio per menu dispositivo Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
@@ -160,11 +160,11 @@ Se si utilizza un emulatore di espressioni di controllo, può richiedere qualche
 
 Dopo l'app viene distribuito correttamente, la schermata del dispositivo usura deve visualizzare una schermata simile alla seguente:
 
-[![Schermata iniziale dell'app usura](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png)
+[![Schermata iniziale dell'app usura](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
 Toccare il **CLICK ME!** pulsante sul dispositivo usura e vedere l'incremento di conteggio con ogni scelta:
 
-[![Schermata di usare app dopo 3 fa clic su](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png)
+[![Schermata di usare app dopo 3 fa clic su](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 
 ## <a name="next-steps"></a>Passaggi successivi

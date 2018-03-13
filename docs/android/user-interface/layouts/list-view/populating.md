@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/21/2017
-ms.openlocfilehash: 74d8533d0a757a307d88125701a482dfefd5eec2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 12197d238ddc6ddc2bd8f48f77aa15f5eff22a0a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="populating-a-listview-with-data"></a>Popolamento di un controllo ListView con dati
 
-<a name="overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -23,7 +22,6 @@ Per aggiungere righe a un `ListView` è necessario aggiungerla al layout e imple
 
 Adattatori incorporati accettano un ID di risorsa vista come un parametro che viene utilizzato per ogni riga. È possibile utilizzare le risorse predefinite, ad esempio quelli in `Android.Resource.Layout` è necessario scrivere la propria.
 
-<a name="Using_ListActivity_and_ArrayAdapterString" />
 
 ## <a name="using-listactivity-and-arrayadapterltstringgt"></a>Utilizzo di ListActivity e ArrayAdapter&lt;stringa&gt;
 
@@ -43,13 +41,12 @@ public class HomeScreen : ListActivity {
 }
 ```
 
-<a name="Handling_Row_Clicks" />
 
 ### <a name="handling-row-clicks"></a>Gestione delle righe fa clic su
 
 In genere un `ListView` anche consentire all'utente di toccare una riga per eseguire un'azione (ad esempio la riproduzione di un brano, la chiamata di un contatto o con un'altra schermata). Per rispondere a ritocchi utente deve essere un ulteriore metodo implementato nel `ListActivity` &ndash; `OnListItemClick` &ndash; come segue:
 
-[![Schermata di un SimpleListItem](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png)
+[![Schermata di un SimpleListItem](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
 
 ```csharp
 protected override void OnListItemClick(ListView l, View v, int position, long id)
@@ -61,9 +58,8 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 
 Ora l'utente può toccare una riga e un `Toast` verrà visualizzato l'avviso:
 
-[![Schermata di tipo avviso popup che viene visualizzato quando una riga è interessata dal](populating-images/basictable2.png)](populating-images/basictable2.png)
+[![Schermata di tipo avviso popup che viene visualizzato quando una riga è interessata dal](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
 
-<a name="Implementing_a_ListAdapter" />
 
 ## <a name="implementing-a-listadapter"></a>Implementazione di un ListAdapter
 
@@ -110,7 +106,6 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 }
 ```
 
-<a name="Using_a_Custom_Adapter" />
 
 ### <a name="using-a-custom-adapter"></a>Utilizza un Adapter personalizzato
 
@@ -122,7 +117,6 @@ ListAdapter = new HomeScreenAdapter(this, items);
 
 Poiché questo esempio viene utilizzato lo stesso layout di riga (`SimpleListItem1`) dell'applicazione risultante sarà identico all'esempio precedente.
 
-<a name="Row_View_Re-Use" />
 
 ### <a name="row-view-re-use"></a>Riutilizzo dei visualizzazione riga
 
@@ -147,13 +141,12 @@ Implementazioni dell'adattatore personalizzato devono *sempre* riutilizzare il `
 
 Alcune implementazioni dell'adattatore (ad esempio il `CursorAdapter`) non dispone di un `GetView` metodo, piuttosto che richiedono due metodi diversi `NewView` e `BindView` riutilizza la riga che applicare la separazione delle responsabilità di `GetView` in due metodi. È presente un `CursorAdapter` riportato più avanti nel documento.
 
-<a name="Enabling_Fast_Scrolling" />
 
 ## <a name="enabling-fast-scrolling"></a>Abilitare lo scorrimento rapido
 
 Scorrimento rapido consente all'utente di scorrere lunghi elenchi fornendo un 'handle' aggiuntivo che si comporta come una barra di scorrimento per accedere direttamente a una parte dell'elenco. Questa schermata mostra l'handle di scorrimento rapido:
 
-[![Schermata di scorrimento rapido con un handle di scorrimento](populating-images/fastscroll.png)](populating-images/fastscroll.png)
+[![Schermata di scorrimento rapido con un handle di scorrimento](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
 
 Causando il quadratino scorrimento rapido è semplice come l'impostazione di `FastScrollEnabled` proprietà `true`:
 
@@ -161,13 +154,12 @@ Causando il quadratino scorrimento rapido è semplice come l'impostazione di `Fa
 ListView.FastScrollEnabled = true;
 ```
 
-<a name="Adding_a_Section_Index" />
 
 ### <a name="adding-a-section-index"></a>Aggiunta di un indice della sezione
 
 Un indice di sezione offre ulteriori commenti e suggerimenti per gli utenti quando sono fast-scorrere un lungo elenco &ndash; Mostra la sezione è stato effettuato lo scorrimento. Affinché l'indice della sezione vengono visualizzate la sottoclasse dell'Adapter deve implementare il `ISectionIndexer` interfaccia per fornire il testo di indice in base a righe visualizzato:
 
-[![Schermata di H visualizzato sopra la sezione che inizia con H](populating-images/sectionindex.png)](populating-images/sectionindex.png)
+[![Schermata di H visualizzato sopra la sezione che inizia con H](populating-images/sectionindex.png)](populating-images/sectionindex.png#lightbox)
 
 Per implementare `ISectionIndexer` è necessario aggiungere i tre metodi a un adattatore:
 

@@ -1,5 +1,5 @@
 ---
-title: Usura Android
+title: Android Wear
 description: Creazione di applicazioni per dispositivi Android di indossabile.
 ms.topic: article
 ms.prod: xamarin
@@ -8,15 +8,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1dad5e859efdf69e7003b45724f718b16faffd62
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ac83b74f39497333de7aa80079784adf61bf2e65
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="android-wear"></a>Usura Android
-
-## <a name="android-wear"></a>Usura Android
+# <a name="android-wear"></a>Android Wear
 
 Usura Android è una versione di Android è progettato per i dispositivi indossabile, ad esempio le espressioni di controllo smart. In questa sezione include le istruzioni su come installare e configurare gli strumenti necessari per lo sviluppo di scadenza, una procedura dettagliata per la creazione del primo dispositivo usura e un elenco di esempi che è possibile fare riferimento per l'App, usare per la creazione di propri.
 
@@ -41,7 +39,6 @@ Visualizzare in anteprima e ottimizzare l'interfaccia utente per le dimensioni d
 Viene illustrato come distribuire l'app, usare Android a un dispositivo Android con accenti o all'emulatore Android configurato per la scadenza. Include inoltre il debug di suggerimenti e informazioni su come configurare una connessione Bluetooth tra il computer di sviluppo e un dispositivo Android.
 
 
-<a name="Samples" />
 
 ## <a name="samples"></a>Esempi
 
@@ -137,21 +134,21 @@ Controllare i collegamenti che trattano xamarin con usura supportano i video.
 <table align="center" border="0" cellpadding="1" cellspacing="1">
     <tr>
         <td>
-        <a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/"><img src="Images/video-android-l.png" border="0"/ /></td>
+        <a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/"><img src="Images/video-android-l.png" border="0" /></td>
         <td><a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/">L Android e molto altro ancora</a>
         <br />
 L'anteprima per sviluppatori di L Android introdotto moltissime nuove API per gli sviluppatori di sfruttare, tra cui progettazione materiale, notifiche e le nuove animazioni, per citarne alcune.</td>
     </tr>
     <tr>
         <td>
-        <a href="https://www.youtube.com/watch?v=80H8tXByZQc"><img src="Images/video-eyes-ears.png" border="0" / /></td>
+        <a href="https://www.youtube.com/watch?v=80H8tXByZQc"><img src="Images/video-eyes-ears.png" border="0" /></td>
         <td><a href="https://www.youtube.com/watch?v=80H8tXByZQc">C# è in auguri e il punto di vista: Google Glass e accenti Android</a>
         <br />
 Calcolo indossabile potrebbe sembrare un elemento da futuro (o un episodio di controllo Gadget), ma molti utenti sono già adottando futuro oggi. Gli sviluppatori c# conoscono e dispongono già di strumenti e le competenze di sfruttare le potenzialità di dispositivi indossabile (da Evolve 2014).</td>
     </tr>
     <tr>
         <td>
-        <a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU"><img src="Images/video-whats-new.png" border="0" / /></td>
+        <a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU"><img src="Images/video-whats-new.png" border="0" /></td>
         <td><a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU">Novità di xamarin</a>
         <br />
         <i>L Android, usura Android, Android TV, Auto Android, progettazione materiali e arte; cosa significa all'utente gli sviluppatori Xamarin? </i> da evolvere 2014.</td>

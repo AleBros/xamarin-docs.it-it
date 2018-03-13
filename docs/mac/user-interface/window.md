@@ -3,16 +3,16 @@ title: WINDOWS
 description: In questo articolo viene descritto l'utilizzo con windows e i pannelli in un'applicazione Xamarin.Mac. Descrive la creazione di windows e pannelli in Xcode e interfaccia generatore, caricarli dallo storyboard e i file .xib e l'utilizzo a livello di codice.
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
+ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: bcf95bf481d58f21e4adce6039c3eb02ce24b938
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f483fcfa9dfca1eb476ceab2b67e7a03bf4b6354
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="windows"></a>WINDOWS
 
@@ -29,7 +29,7 @@ Windows può essere utilizzato in uno stato non modale (ad esempio un editor di 
 
 I pannelli sono un tipo speciale di finestra (una sottoclasse della base `NSWindow` classe), utilizzati in genere per una funzione ausiliaria in un'applicazione, ad esempio windows utilità quali controlli di formato di testo e alla selezione dei colori di sistema.
 
-[ ![](window-images/intro01.png "La modifica di una finestra in Xcode")](window-images/intro01.png)
+[![](window-images/intro01.png "La modifica di una finestra in Xcode")](window-images/intro01.png#lightbox)
 
 In questo articolo verranno descritte le nozioni di base dell'utilizzo di Windows e i pannelli in un'applicazione Xamarin.Mac. È altamente consigliabile che il [Hello, Mac](~/mac/get-started/hello-mac.md) articolo prima di tutto, in particolare il [Introduzione a Xcode e interfaccia generatore](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [punti vendita e le azioni](~/mac/get-started/hello-mac.md#Outlets_and_Actions) le sezioni, come illustra i concetti chiave e le tecniche che verrà usato in questo articolo.
 
@@ -96,7 +96,7 @@ Per ulteriori informazioni, vedere il [schermo Windows](https://developer.apple.
 
 Un pannello è una finestra ausiliaria che contiene i controlli e le opzioni che influiscono sulla selezione (ad esempio, alla selezione dei colori di sistema) o il documento attivo:
 
-[ ![](window-images/panel01.png "Un pannello del colore")](window-images/panel01.png)
+[![](window-images/panel01.png "Un pannello del colore")](window-images/panel01.png#lightbox)
 
 Possono essere pannelli _specifico dell'App_ o _a livello di sistema_. Pannelli specifico dell'App mobile nella parte superiore delle finestre di documento dell'applicazione e scompaiono quando l'applicazione è in background. Pannelli a livello di sistema (ad esempio il **tipi di carattere** pannello), float, nella parte superiore di tutte le finestre aperte indipendentemente dall'applicazione. 
 
@@ -112,7 +112,7 @@ Apple suggerisce le linee guida seguenti:
 
 Più moderne applicazioni macOS presentano ausiliari controlli e le opzioni che influiscono sul documento attivo o la selezione come _controlli_ che fanno parte della finestra principale (ad esempio il **pagine** app mostrata sotto), anziché utilizzare pannello Windows:
 
-[ ![](window-images/panel02.png "Un controllo di esempio")](window-images/panel02.png)
+[![](window-images/panel02.png "Un controllo di esempio")](window-images/panel02.png#lightbox)
 
 Per ulteriori informazioni, vedere il [pannelli](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) sezione di Apple [OS X umano linee guida sull'interfaccia](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) e nel [MacInspector](https://developer.xamarin.com/samples/mac/MacInspector/) app di esempio per un'implementazione completa di un **Controllo interfaccia** in un'app Xamarin.Mac.
 
@@ -122,11 +122,11 @@ Per ulteriori informazioni, vedere il [pannelli](https://developer.apple.com/lib
 
 Quando si crea una nuova applicazione Xamarin.Mac Cocoa, per impostazione predefinita è ottenere una finestra vuota, standard. Questo windows è definito in un `.storyboard` file automaticamente incluso nel progetto. Per modificare la progettazione di windows, nel **Esplora**, fare doppio clic il `Main.storyboard` file:
 
-[ ![](window-images/edit01.png "Selezione storyboard principale")](window-images/edit01.png)
+[![](window-images/edit01.png "Selezione storyboard principale")](window-images/edit01.png#lightbox)
 
 La progettazione della finestra verrà aperta in Generatore del Xcode di interfaccia:
 
-[ ![](window-images/edit02.png "Modifica l'interfaccia utente in Xcode")](window-images/edit02.png)
+[![](window-images/edit02.png "Modifica l'interfaccia utente in Xcode")](window-images/edit02.png#lightbox)
 
 Nel **controllo attributo**, esistono diverse proprietà che è possibile utilizzare per definire e controllare la finestra:
 
@@ -160,7 +160,7 @@ Vedere Apple [Introduzione a Windows](https://developer.apple.com/library/mac/do
 
 Per impostare la posizione iniziale della finestra e della dimensione del controllo, passare il **dimensioni controllo**:
 
-[ ![](window-images/edit07.png "Le dimensioni e posizione predefinite")](window-images/edit07.png)
+[![](window-images/edit07.png "Le dimensioni e posizione predefinite")](window-images/edit07.png#lightbox)
 
 Da qui è possibile impostare le dimensioni iniziali della finestra, assegnargli una dimensione minima e massima, impostare il percorso iniziale sullo schermo e i bordi intorno alla finestra di controllo.
 
@@ -176,15 +176,15 @@ Seguire questa procedura:
 2. Selezionare il `NSWindowController` nell'area di progettazione.
 3. Passare il **controllo di identità** consente di visualizzare e `WindowController` come il **nome classe**: 
 
-    [ ![](window-images/windowcontroller01.png "L'impostazione del nome di classe")](window-images/windowcontroller01.png)
+    [![](window-images/windowcontroller01.png "L'impostazione del nome di classe")](window-images/windowcontroller01.png#lightbox)
 4. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione.
 5. Oggetto `WindowController.cs` file verrà aggiunto al progetto nel **Esplora** in Visual Studio per Mac: 
 
-    [ ![](window-images/windowcontroller02.png "Selezionare il controller di windows")](window-images/windowcontroller02.png)
+    [![](window-images/windowcontroller02.png "Selezionare il controller di windows")](window-images/windowcontroller02.png#lightbox)
 6. Riaprire lo Storyboard in Generatore di interfaccia del Xcode.
 7. Il `WindowController.h` file sarà disponibile per l'utilizzo: 
 
-    [ ![](window-images/windowcontroller03.png "Modifica del file WindowController.h")](window-images/windowcontroller03.png)
+    [![](window-images/windowcontroller03.png "Modifica del file WindowController.h")](window-images/windowcontroller03.png#lightbox)
 
 <a name="Adding_UI_Elements" />
 
@@ -194,21 +194,21 @@ Per definire il contenuto di una finestra, trascinare i controlli dal **controll
 
 Ad esempio, trascinare una barra degli strumenti dal **controllo libreria** nella finestra nel **Editor dell'interfaccia**:
 
-[ ![](window-images/edit03.png "Selezione di una barra degli strumenti dalla libreria")](window-images/edit03.png)
+[![](window-images/edit03.png "Selezione di una barra degli strumenti dalla libreria")](window-images/edit03.png#lightbox)
 
 Trascinare quindi un **visualizzazione testo** e ridimensionarlo per riempire l'area sotto la barra degli strumenti:
 
-[ ![](window-images/edit04.png "Aggiunta di una visualizzazione di testo")](window-images/edit04.png)
+[![](window-images/edit04.png "Aggiunta di una visualizzazione di testo")](window-images/edit04.png#lightbox)
 
 Poiché si desidera che il **visualizzazione testo** per compattare e man mano che le modifiche delle dimensioni della finestra, si passa al **Editor vincoli di** e aggiungere i vincoli seguenti:
 
-[ ![](window-images/edit05.png "La modifica di vincoli")](window-images/edit05.png)
+[![](window-images/edit05.png "La modifica di vincoli")](window-images/edit05.png#lightbox)
 
 Facendo clic il per **rossi si-raggi di** nella parte superiore dell'editor e facendo clic su **aggiungere vincoli 4**, si definiranno la visualizzazione del testo soffermeremo coordinate determinato X, Y ed espansione o riduzione orizzontalmente e verticalmente come la finestra viene ridimensionata.
 
 Infine, si espongono i **visualizzazione testo** al codice che usa un **presa** (assicurandosi di selezionare il `ViewController.h` file):
 
-[ ![](window-images/edit06.png "Configurazione di una presa di corrente")](window-images/edit06.png)
+[![](window-images/edit06.png "Configurazione di una presa di corrente")](window-images/edit06.png#lightbox)
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
@@ -237,17 +237,17 @@ Ora che è disponibile una finestra di base creata, vedremo durante i processi t
 
 Per impostazione predefinita, una nuova applicazione Xamarin.Mac visualizzerà automaticamente la finestra definita nel `MainWindow.xib` file quando viene avviata:
 
-[ ![](window-images/display01.png "Una finestra di esempio in esecuzione")](window-images/display01.png)
+[![](window-images/display01.png "Una finestra di esempio in esecuzione")](window-images/display01.png#lightbox)
 
 Poiché è stata modificata la progettazione di tale finestra precedente, ora include un valore predefinito della barra degli strumenti e **visualizzazione testo** controllo. La seguente sezione di `Info.plist` file è responsabile per la visualizzazione di questa finestra:
 
-[ ![](window-images/display00.png "Modifica Info. plist")](window-images/display00.png)
+[![](window-images/display00.png "Modifica Info. plist")](window-images/display00.png#lightbox)
 
 Il **interfaccia principale** elenco a discesa consente di selezionare lo Storyboard che verrà utilizzato come l'app principale dell'interfaccia utente (in questo caso `Main.storyboard`).
 
 Un Controller di visualizzazione viene automaticamente aggiunto al progetto per controllare Windows principale che viene visualizzato (insieme alla relativa visualizzazione primaria). In cui è definito il `ViewController.cs` file e collegato al **proprietario del File** in Generatore di interfaccia nel **controllo di identità**:
 
-[ ![](window-images/display02.png "Impostare il proprietario del file")](window-images/display02.png)
+[![](window-images/display02.png "Impostare il proprietario del file")](window-images/display02.png#lightbox)
 
 Per la finestra, si desidera venga dispone di un titolo di `untitled` quando dell'apertura andiamo sostituzione il `ViewWillAppear` metodo il `ViewController.cs` per essere simile al seguente:
 
@@ -313,11 +313,11 @@ Per chiudere la `MyWindow` `NSWindow` istanza.
 
 In macOS, Apple ha fornito un modo per informare l'utente che il contenuto di una finestra (`NSWindow`) è stato modificato dall'utente e deve essere salvata. Se la finestra contiene contenuto modificato, verrà visualizzato un piccolo punto nero nel relativo **Chiudi** widget:
 
-[ ![](window-images/close01.png "Una finestra con il marcatore modificato")](window-images/close01.png)
+[![](window-images/close01.png "Una finestra con il marcatore modificato")](window-images/close01.png#lightbox)
 
 Se l'utente tenta di chiudere la finestra o uscire dall'App Mac mentre sono presenti modifiche non salvate modifiche al contenuto della finestra, è necessario presentare un [la finestra di dialogo](~/mac/user-interface/dialog.md) o [foglio modale](~/mac/user-interface/dialog.md) e consentire all'utente di salvare le modifiche prima:
 
-[ ![](window-images/close02.png "Salvataggio foglio viene visualizzato quando la finestra è chiusa")](window-images/close02.png)
+[![](window-images/close02.png "Salvataggio foglio viene visualizzato quando la finestra è chiusa")](window-images/close02.png#lightbox)
 
 ### <a name="marking-a-window-as-modified"></a>Contrassegno di una finestra come modificata
 
@@ -485,11 +485,11 @@ void NewDocument (NSObject sender) {
 
 Questo codice crea una nuova versione di questo Controller di finestra, carica la nuova finestra, rende della serie principale e finestra chiave e imposta il titolo. Se si esegue l'applicazione e selezionare **New** dal **File** menu una nuova finestra dell'editor verrà aperto e visualizzata:
 
-[ ![](window-images/display04.png "È stata aggiunta una nuova finestra senza nome")](window-images/display04.png)
+[![](window-images/display04.png "È stata aggiunta una nuova finestra senza nome")](window-images/display04.png#lightbox)
 
 Se si apre il **Windows** menu, è possibile visualizzare l'applicazione viene automaticamente rilevamento e la gestione di nostri finestre aperte:
 
-[ ![](window-images/display05.png "Il menu di Windows")](window-images/display05.png)
+[![](window-images/display05.png "Il menu di Windows")](window-images/display05.png#lightbox)
 
 Per ulteriori informazioni sull'utilizzo dei menu in un'applicazione Xamarin.Mac, consultare il nostro [uso dei menu](~/mac/user-interface/menu.md) documentazione.
 
@@ -559,7 +559,7 @@ Talvolta potrebbe essere in cui è necessario monitorare le modifiche in dimensi
 
 Per monitorare le modifiche delle dimensioni, assicurarsi innanzitutto di avere assegnato una classe personalizzata per il Controller di finestra in Generatore del Xcode di interfaccia. Ad esempio, `MasterWindowController` nell'esempio seguente:
 
-[ ![](window-images/resize01.png "Il controllo di identità")](window-images/resize01.png)
+[![](window-images/resize01.png "Il controllo di identità")](window-images/resize01.png#lightbox)
 
 Successivamente, modificare la classe Controller finestra personalizzati e il monitor di `DidResize` eventi nella finestra del Controller per ricevere notifica delle modifiche delle dimensioni in tempo reale. Ad esempio:
 
@@ -643,11 +643,11 @@ public override void AwakeFromNib ()
 
 Ci stiamo anche il monitoraggio di `WillClose` evento nella finestra e verificare lo stato del `DocumentEdited` proprietà. Se è `true` è necessario consentire all'utente la possibilità di salvare le modifiche al file. Se si esegue l'app e immettere del testo, verrà visualizzato il punto:
 
-[ ![](window-images/file01.png "Una finestra di modifica")](window-images/file01.png)
+[![](window-images/file01.png "Una finestra di modifica")](window-images/file01.png#lightbox)
 
 Se si tenta di chiudere la finestra, è visualizzato un avviso:
 
-[ ![](window-images/file02.png "Visualizzazione di un salvataggio finestra di dialogo")](window-images/file02.png)
+[![](window-images/file02.png "Visualizzazione di un salvataggio finestra di dialogo")](window-images/file02.png#lightbox)
 
 Se si sta caricando un documento da un file è possibile impostare il titolo della finestra per il file denominato utilizzando il `window.SetTitleWithRepresentedFilename (Path.GetFileName(path));` metodo (dato che `path` è una stringa che rappresenta il file viene aperto). Inoltre, è possibile impostare l'URL del file utilizzando il `window.RepresentedUrl = url;` metodo.
 
@@ -690,11 +690,11 @@ void OpenDialog (NSObject sender)
 
 Se Esegui l'app, selezionare **Apri...**  dal **File** menu, seleziona un file di testo dal **aprire** finestra di dialogo casella e aprirlo:
 
-[ ![](window-images/file03.png "La finestra di dialogo Apri")](window-images/file03.png)
+[![](window-images/file03.png "La finestra di dialogo Apri")](window-images/file03.png#lightbox)
 
 Verrà visualizzato il file e il titolo verrà impostato con l'icona del file:
 
-[ ![](window-images/file04.png "Il contenuto di un file caricato")](window-images/file04.png)
+[![](window-images/file04.png "Il contenuto di un file caricato")](window-images/file04.png#lightbox)
 
 <a name="Adding_a_New_Window_to_a_Project" />
 
@@ -707,22 +707,22 @@ Per aggiungere una nuova finestra, eseguire le operazioni seguenti:
 1. Nel **Esplora**, fare doppio clic su di `Main.storyboard` file per aprirlo e modificarlo in Generatore del Xcode di interfaccia.
 2. Trascinare una nuova **finestra Controller** dal **libreria** e rilasciarla sul **area di progettazione**:
 
-    [ ![](window-images/new01.png "Selezione di un nuovo Controller di finestra nella libreria")](window-images/new01.png)
+    [![](window-images/new01.png "Selezione di un nuovo Controller di finestra nella libreria")](window-images/new01.png#lightbox)
 3. Nel **controllo di identità**, immettere `PreferencesWindow` per il **ID Storyboard**: 
 
-    [ ![](window-images/new02.png "Impostazione dell'ID di storyboard")](window-images/new02.png)
+    [![](window-images/new02.png "Impostazione dell'ID di storyboard")](window-images/new02.png#lightbox)
 5. Progettare l'interfaccia: 
 
-    [ ![](window-images/new03.png "Progettazione dell'interfaccia utente")](window-images/new03.png)
+    [![](window-images/new03.png "Progettazione dell'interfaccia utente")](window-images/new03.png#lightbox)
 6. Aprire il Menu di App (`MacWindows`), selezionare **preferenze...** , CTRL + clic e trascinare la nuova finestra: 
 
-    [ ![](window-images/new05.png "Creazione di un segue")](window-images/new05.png)
+    [![](window-images/new05.png "Creazione di un segue")](window-images/new05.png#lightbox)
 7. Selezionare **Mostra** dal menu di scelta rapida.
 6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
 Se si esegue il codice e selezionare il **preferenze...**  dal **Menu applicazione**, verrà visualizzata la finestra:
 
-[ ![](window-images/new04.png "Un menu Preferenze di esempio")](window-images/new04.png)
+[![](window-images/new04.png "Un menu Preferenze di esempio")](window-images/new04.png#lightbox)
 
 <a name="Working_with_Panels" />
 
@@ -742,7 +742,7 @@ Analogamente a qualsiasi altro tipo di finestra è creare e utilizzare Xamarin.M
 
 Nel **controllo attributo**, sono disponibili le opzioni seguenti specifiche ai pannelli:
 
-[ ![](window-images/panel03.png "Il controllo di attributo")](window-images/panel03.png)
+[![](window-images/panel03.png "Il controllo di attributo")](window-images/panel03.png#lightbox)
 
 - **Stile** -consente di modificare lo stile del pannello da: pannello normale (simile a una finestra standard), utilità pannello (include una barra del titolo più piccolo), pannello HUD (è semitrasparente e la barra del titolo fa parte dello sfondo).
 - **Non attivare** -determina il pannello diventa la finestra di chiave.
@@ -754,20 +754,20 @@ Per aggiungere un nuovo pannello, eseguire le operazioni seguenti:
 1. Nel **Esplora**del mouse sul progetto e scegliere **Aggiungi** > **nuovo File...** .
 2. Nella finestra di dialogo Nuovo File, selezionare **Xamarin.Mac** > **Cocoa finestra con Controller**:
 
-    [ ![](window-images/panels00.png "Aggiunge un nuovo controller di finestra")](window-images/panels00.png)
+    [![](window-images/panels00.png "Aggiunge un nuovo controller di finestra")](window-images/panels00.png#lightbox)
 3. Immettere `DocumentPanel` in **Nome** e fare clic sul pulsante **Nuovo**.
 4. Fare doppio clic su di `DocumentPanel.xib` file per aprirlo e modificarlo in Generatore di interfaccia: 
 
-    [ ![](window-images/new02.png "Modifica il pannel")](window-images/new02.png)
+    [![](window-images/new02.png "Modifica il pannel")](window-images/new02.png#lightbox)
 5. Eliminare la finestra esistente e trascinare un pannello dal **controllo libreria** nell'il **Editor dell'interfaccia**: 
 
-    [ ![](window-images/panels01.png "Eliminare la finestra esistente")](window-images/panels01.png)
+    [![](window-images/panels01.png "Eliminare la finestra esistente")](window-images/panels01.png#lightbox)
 6. Collegare il pannello fino al **proprietario del File*-**finestra*- **presa**: 
 
-    [ ![](window-images/panels02.png "Trascinamento in transito verso l'alto")](window-images/panels02.png)
+    [![](window-images/panels02.png "Trascinamento in transito verso l'alto")](window-images/panels02.png#lightbox)
 7. Passare il **controllo di identità** e impostare la classe del pannello `DocumentPanel`: 
 
-    [ ![](window-images/panels03.png "L'impostazione di classe del pannello")](window-images/panels03.png)
+    [![](window-images/panels03.png "L'impostazione di classe del pannello")](window-images/panels03.png#lightbox)
 6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 7. Modificare il `DocumentPanel.cs` file e modificare la definizione di classe per le operazioni seguenti: 
 
@@ -788,7 +788,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 Se si esegue l'applicazione, verrà visualizzato il pannello:
 
-[ ![](window-images/panels04.png "Il pannello in un'app in esecuzione")](window-images/panels04.png)
+[![](window-images/panels04.png "Il pannello in un'app in esecuzione")](window-images/panels04.png#lightbox)
 
 > [!IMPORTANT]
 > Pannello di Windows sono state deprecate da Apple e deve essere sostituito con **interfacce di controllo**. Per un esempio completo di creazione di un **controllo** in un'app Xamarin.Mac, consultare il nostro [MacInspector](https://developer.xamarin.com/samples/mac/MacInspector/) app di esempio.
@@ -805,5 +805,5 @@ In questo articolo è stato applicato l'utilizzo di Windows e i pannelli in un'a
 - [MacInspector (esempio)](https://developer.xamarin.com/samples/mac/MacInspector/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Uso dei menu](~/mac/user-interface/menu.md)
-- [Linee guida sull'interfaccia umane di OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introduzione a Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

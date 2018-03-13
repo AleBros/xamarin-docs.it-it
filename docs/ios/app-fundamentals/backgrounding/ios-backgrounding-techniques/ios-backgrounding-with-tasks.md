@@ -6,11 +6,11 @@ ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0be4e7f1d8719fdd174d51399178eb1bc000c4b3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e05cf0f13512478b3957070e7fa6329ea84337f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding con attività
 
@@ -114,11 +114,11 @@ La più importante modifica di iOS 7 per quanto riguarda le attività in backgro
 
 Tenere presente che pre-iOS 7, un'attività in esecuzione in background di stato 600 secondi per il completamento. Uno dei motivi per questo limite è che un'attività in esecuzione in background manterrebbe dispositivo attivi per tutta la durata dell'attività:
 
- [ ![](ios-backgrounding-with-tasks-images/ios6.png "Grafico dell'attività mantenendo l'app pre-iOS attivi 7")](ios-backgrounding-with-tasks-images/ios6.png)
+ [![](ios-backgrounding-with-tasks-images/ios6.png "Grafico dell'attività mantenendo l'app pre-iOS attivi 7")](ios-backgrounding-with-tasks-images/ios6.png#lightbox)
 
 l'elaborazione in background iOS 7 è ottimizzato per la durata della batteria. In iOS 7, backgrounding diventa opportunistico: invece di mantenere attivo il dispositivo, attività rispettano a quando il dispositivo passa alla sospensione ed eseguire invece l'elaborazione in blocchi quando il dispositivo viene riattivato per gestire chiamate telefoniche, notifiche, in ingresso messaggi di posta elettronica e altro interruzioni comuni. Nel diagramma seguente fornisce informazioni approfondite come un'attività potrebbe essere interrotta backup:
 
- [ ![](ios-backgrounding-with-tasks-images/ios7.png "Grafico dell'attività verrà suddiviso in blocchi di post-iOS 7")](ios-backgrounding-with-tasks-images/ios7.png)
+ [![](ios-backgrounding-with-tasks-images/ios7.png "Grafico dell'attività verrà suddiviso in blocchi di post-iOS 7")](ios-backgrounding-with-tasks-images/ios7.png#lightbox)
 
 Poiché l'esecuzione di attività non è più continua, le attività che eseguono i trasferimenti di rete devono essere gestite in modo diverso in iOS 7. Gli sviluppatori sono invitati a utilizzare il `NSURlSession` API per gestire i trasferimenti di rete. La sezione successiva viene fornita una panoramica dei trasferimenti in background.
 

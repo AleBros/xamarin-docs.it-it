@@ -3,16 +3,16 @@ title: Specifiche delle piattaforme di Windows
 description: "Le specifiche di piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare un renderer personalizzato o effetti. In questo articolo viene illustrato come utilizzare la piattaforma-specifiche di Windows che vengono compilate in xamarin. Forms."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
+ms.assetid: 22B403C0-FE6D-498A-AE53-095E6C4B527C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: da9279939af8dc4033cd89769a7add60a745ac85
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 01b32d1ca5356ed69480dff0d31c210a8c460417
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="windows-platform-specifics"></a>Specifiche delle piattaforme di Windows
 
@@ -52,7 +52,7 @@ Il `Page.On<Windows>` metodo specifica che questo specifico della piattaforma ve
 
 Il risultato è che la posizione della barra degli strumenti specificata viene applicata al [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) istanza:
 
-[![](windows-images/toolbar-placement.png "Barra degli strumenti posizione specifica della piattaforma")](windows-images/toolbar-placement-large.png "specifico della piattaforma posizionamento della barra degli strumenti")
+[![](windows-images/toolbar-placement.png "Barra degli strumenti posizione specifica della piattaforma")](windows-images/toolbar-placement-large.png#lightbox "specifico della piattaforma posizionamento della barra degli strumenti")
 
 <a name="collapsable_navigation_bar" />
 
@@ -84,7 +84,7 @@ Il `MasterDetailPage.On<Windows>` metodo specifica che questo specifico della pi
 
 Il risultato è che un oggetto specificato [ `CollapseStyle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle/) è collegato il [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) istanza, con la larghezza specificata anche:
 
-[![](windows-images/collapsed-navigation-bar.png "Specifico della piattaforma barra di spostamento compressa")](windows-images/collapsed-navigation-bar-large.png "compresso specifico della piattaforma barra di spostamento")
+[![](windows-images/collapsed-navigation-bar.png "Specifico della piattaforma barra di spostamento compressa")](windows-images/collapsed-navigation-bar-large.png#lightbox "compresso specifico della piattaforma barra di spostamento")
 
 ## <a name="summary"></a>Riepilogo
 
@@ -93,6 +93,6 @@ In questo articolo viene illustrato come utilizzare la piattaforma-specifiche di
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Creazione di piattaforma specifiche](~/xamarin-forms/platform/platform-specifics/creating.md)
+- [Creazione di funzionalità specifiche della piattaforma](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (esempio)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 - [WindowsSpecific](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.WindowsSpecific/)

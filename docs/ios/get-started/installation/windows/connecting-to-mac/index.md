@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d0234cad243e523716d95f467e3fe44c50a182d5
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c60927593f062c8ac9694d889ffbf581c09bab82
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="connecting-to-the-mac"></a>Connessione al Mac
 
@@ -36,7 +36,7 @@ La connessione al Mac è costituita da più processi per le diverse parti del su
 
 Il diagramma seguente offre una semplice panoramica del flusso di lavoro di sviluppo di Xamarin.iOS:
 
-[![Flusso di lavoro di sviluppo di iOS](images/xma2.png)](images/xma2.png)
+[![Flusso di lavoro di sviluppo di iOS](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
 >  Visual Studio avvia un processo MSBuild separato per compilare i progetti. Questo processo crea una nuova connessione al Mac, quindi esistono effettivamente due connessioni SSH da Windows a Mac durante la compilazione di Visual Studio. La compilazione dalla [riga di comando](#commandline) crea un unico processo MSBuild. Per semplificare il diagramma, tutte le connessioni sono rappresentate da una sola freccia.
@@ -70,11 +70,11 @@ Per configurare l'host Mac è necessario abilitare la comunicazione tra l'estens
 
 1. Aprire *Spotlight* (**⌘-BARRA SPAZIATRICE**), cercare *Login remoto* e selezionare il risultato *Condivisione*. Verrà aperta la finestra *Preferenze di Sistema* con il riquadro *Condivisione*:
 
-   [![Ricerca di Login remoto in Spotlight](images/spotlight.png)](images/spotlight.png)
+   [![Ricerca di Login remoto in Spotlight](images/spotlight.png)](images/spotlight.png#lightbox)
 
 2. Selezionare l'opzione *Login remoto* nell'elenco *Servizio* sulla sinistra per consentire a Xamarin per Visual Studio di connettersi al Mac:
 
-   [![Selezionare l'opzione Login remoto nell'elenco Servizio](images/sharing.png)](images/sharing.png)
+   [![Selezionare l'opzione Login remoto nell'elenco Servizio](images/sharing.png)](images/sharing.png#lightbox)
 
 3. Assicurarsi che *Login remoto* sia impostato per consentire l'accesso a *Tutti gli utenti* oppure che il nome utente o il gruppo Mac sia incluso nell'elenco di utenti consentiti sulla destra.
 
@@ -94,21 +94,21 @@ Assicurarsi di [installare](~/ios/get-started/installation/windows/index.md) gli
 
 Sulla barra degli strumenti iOS:
 
-[![Barra degli strumenti iOS](images/image1.png)](images/image1.png)
+[![Barra degli strumenti iOS](images/image1.png)](images/image1.png#lightbox)
 
 Oppure passando a **Strumenti > Opzioni** in Visual Studio, selezionando **Xamarin > Impostazioni iOS** e facendo clic sul pulsante **Trova Xamarin Mac Agent**:
 
-[![Trova Xamarin Mac Agent](images/image2.png)](images/image2.png)
+[![Trova Xamarin Mac Agent](images/image2.png)](images/image2.png#lightbox)
 
 In entrambi i modi si passerà alla finestra di dialogo **Xamarin Mac Agent**, illustrata di seguito:
 
-[![Finestra di dialogo Xamarin Mac Agent](images/image3.png)](images/image3.png)
+[![Finestra di dialogo Xamarin Mac Agent](images/image3.png)](images/image3.png#lightbox)
 
 La finestra di dialogo contiene un elenco di tutti i computer che sono stati precedentemente connessi e sono memorizzati come computer noti o dei computer che sono disponibili per *Login remoto*.
 
 Selezionare un Mac facendo doppio clic su di esso per stabilire la connessione. La prima volta che ci si connette a un Mac, viene chiesto di immettere le credenziali utente del Mac per consentire la connessione remota:
 
-[![Immettere le credenziali utente del Mac](images/image4.png)](images/image4.png)
+[![Immettere le credenziali utente del Mac](images/image4.png)](images/image4.png#lightbox)
 
 L'agente userà queste credenziali per creare una nuova connessione SSH al Mac. Se la connessione riesce, viene creata una chiave SSH, che viene [registrata](#commandline) nel file `authorized_keys` nel Mac. Per le connessioni successive l'agente userà il nome utente e il file della chiave per connettersi all'host di compilazione noto a cui è stata stabilita la connessione più recente.
 
@@ -119,13 +119,13 @@ L'agente userà queste credenziali per creare una nuova connessione SSH al Mac. 
 
 Quando una connessione viene stabilita correttamente, viene visualizzata nella finestra di dialogo Selezione host con un'icona **connesso** accanto, come illustrato nella figura seguente:
 
-[![Finestra di dialogo Selezione host con un'icona connesso accanto](images/image6.png)](images/image6.png)
+[![Finestra di dialogo Selezione host con un'icona connesso accanto](images/image6.png)](images/image6.png#lightbox)
 
 È possibile connettere un solo Mac alla volta.
 
 Facendo clic con il pulsante destro del mouse su un qualsiasi computer nell'elenco, che sia connesso o meno, viene visualizzato un menu di scelta rapida in cui è possibile scegliere **Connetti**, **Disconnetti** o **Rimuovi questo Mac** in base alle esigenze:
 
-[![Comandi Connetti, Disconnetti e Rimuovi questo Mac del menu di scelta rapida](images/image7.png)](images/image7.png)
+[![Comandi Connetti, Disconnetti e Rimuovi questo Mac del menu di scelta rapida](images/image7.png)](images/image7.png#lightbox)
 
 Se si sceglie **Rimuovi questo Mac**, sarà necessario immettere di nuovo le credenziali per riconnettersi.
 
@@ -137,23 +137,23 @@ In alcune circostanze si può avere l'esigenza di aggiungere manualmente un Mac,
 
 1. Individuare l'indirizzo IP del Mac selezionando **Preferenze di Sistema > Condivisione > Login remoto** nel Mac:
 
-   [![Indirizzo IP del Mac in Preferenze di Sistema](images/image8.png)](images/image8.png)
+   [![Indirizzo IP del Mac in Preferenze di Sistema](images/image8.png)](images/image8.png#lightbox)
 
    Oppure, se si preferisce usare la riga di comando, è possibile trovare l'indirizzo IP immettendo `ipconfig getifaddr en0` in Terminale (si noti che a seconda del tipo di connessione la variabile potrebbe essere `en1`, `en2` e così via):
 
-   [![Indirizzo IP nell'app Terminale](images/image9.png)](images/image9.png)
+   [![Indirizzo IP nell'app Terminale](images/image9.png)](images/image9.png#lightbox)
 
 2. Tornare a Visual Studio, quindi nella finestra di dialogo Selezione host selezionare **Aggiungi Mac**:
 
-   [![Finestra di dialogo Selezione host](images/image10.png)](images/image10.png)
+   [![Finestra di dialogo Selezione host](images/image10.png)](images/image10.png#lightbox)
 
 3. Immettere l'indirizzo IP del Mac nella finestra di dialogo Aggiungi Mac e fare clic su **Aggiungi**:
 
-   [![Immettere l'indirizzo IP del Mac nella finestra di dialogo Aggiungi Mac](images/image11.png)](images/image11.png)
+   [![Immettere l'indirizzo IP del Mac nella finestra di dialogo Aggiungi Mac](images/image11.png)](images/image11.png#lightbox)
 
 4. Infine, immettere il nome utente (non il nome e cognome) dell'account amministratore del Mac e la password corrispondente:
 
-   [![Immettere nome utente e password](images/image12.png)](images/image12.png)
+   [![Immettere nome utente e password](images/image12.png)](images/image12.png#lightbox)
 
 Dopo aver fatto clic su **Accedi**, Visual Studio si connette al Mac tramite SSH e lo aggiunge come computer noto.
 

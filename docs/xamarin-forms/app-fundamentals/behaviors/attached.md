@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 9751b39987819428f93e09d4bfb6bee261604bb5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 84e60e8ce698e3d87db3e1bdc61613325ad831c8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="attached-behaviors"></a>Comportamenti collegati
 
@@ -101,10 +101,10 @@ NumericValidationBehavior.SetAttachBehavior (entry, true);
 
 In fase di esecuzione, il comportamento risponderà all'interazione con il controllo, in base all'implementazione di comportamento. Le seguenti catture illustrano il comportamento associato risponde all'input non valido:
 
-[ ![](attached-images/screenshots-sml.png "Esempio di applicazione con comportamento collegato")](attached-images/screenshots.png "applicazione con il comportamento associato di esempio")
+[![](attached-images/screenshots-sml.png "Esempio di applicazione con comportamento collegato")](attached-images/screenshots.png#lightbox "applicazione con il comportamento associato di esempio")
 
 > [!NOTE]
-> **Nota**: comportamenti collegati vengono scritti per un tipo di controllo specifico (o una superclasse che è possibile applicare a molti controlli) e devono essere aggiunti solo a un controllo compatibile. Il tentativo di associare un comportamento a un controllo incompatibile determineranno un comportamento sconosciuto e dipende dall'implementazione di comportamento.
+> I comportamenti collegati vengono scritti per un tipo di controllo specifico (o una superclasse che è possibile applicare a molti controlli) e devono essere aggiunti solo a un controllo compatibile. Il tentativo di associare un comportamento a un controllo incompatibile determineranno un comportamento sconosciuto e dipende dall'implementazione di comportamento.
 
 ### <a name="removing-an-attached-behavior-from-a-control"></a>Rimozione di un comportamento collegato da un controllo
 

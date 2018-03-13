@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/03/2017
-ms.openlocfilehash: a13de7fbb4b6e1f9fa2853ce599f3a038a5e4040
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: affe58d9276bd0b687089fb42a14ca964c570c9c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="complications"></a>Complessità
 
@@ -24,7 +24,7 @@ Si noti che ogni applicazione watchOS può avere solo una complicazione.
 
 Iniziare leggendo [documenti Apple](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ManagingComplications.html) per determinare se l'app è adatto per una complicazione. Sono disponibili 5 `CLKComplicationFamily` tipi di visualizzazione per scegliere tra:
 
-[ ![](complications-images/all-complications-sml.png "I tipi di CLKComplicationFamily 5 disponibili: circolare piccola, modulare Small, modulare, funzionali piccoli e grandi dimensioni funzionali grandi")](complications-images/all-complications.png)
+[![](complications-images/all-complications-sml.png "I tipi di CLKComplicationFamily 5 disponibili: circolare piccola, modulare Small, modulare, funzionali piccoli e grandi dimensioni funzionali grandi")](complications-images/all-complications.png#lightbox)
 
 App è possono implementare solo uno stile o tutti e cinque, a seconda dei dati visualizzati.
 È inoltre possibile supportare spostamento cronologico, inserendo i valori specificati per ultime e/o futuri volte l'utente attiva il chioma digitale.
@@ -83,7 +83,7 @@ Seguire il [scrittura una complicazione](#writing) istruzioni per aggiungere il 
 
 L'estensione di espressioni di controllo **Info. plist** specifica il nome del file di `CLKComplicationDataSource` e quali famiglie complicazione che si desidera supportare:
 
-[ ![](complications-images/complications-config-sml.png "I tipi di famiglia complicazione")](complications-images/complications-config.png)
+[![](complications-images/complications-config-sml.png "I tipi di famiglia complicazione")](complications-images/complications-config.png#lightbox)
 
 Il **classe dell'origine dati** voce elenco verranno visualizzati i nomi delle classi di tale sottoclasse `CLKComplicationDataSource` sottoclasse che include la logica di complicazione.
 

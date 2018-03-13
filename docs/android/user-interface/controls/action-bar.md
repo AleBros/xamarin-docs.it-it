@@ -7,28 +7,26 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: cdbdf7195daf9add01052df8fc0f0cf4c7a0cb0e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64a5ac7e0c448205da66f9790a506ca34a944140
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="actionbar"></a>ActionBar
 
-<a name="overview" />
 
 ## <a name="overview"></a>Panoramica
 
 Quando si utilizza `TabActivity`, il codice per creare le icone di scheda non ha alcun effetto quando eseguita in framework Android 4.0. Anche se il livello funzionale funziona come accadeva nelle versioni precedenti di Android 2.3, la `TabActivity` classe stessa è stata deprecata in 4.0. È stato introdotto un nuovo modo per creare un'interfaccia a schede che utilizza la barra delle azioni, che verranno successivamente.
 
-<a name="Action_Bar_Tabs" />
 
 ## <a name="action-bar-tabs"></a>Schede sulla barra delle azioni
 
 La barra delle azioni include il supporto per l'aggiunta di schede di interfacce in Android 4.0.
 Nella schermata seguente viene illustrato un esempio di tale interfaccia.
 
-[![Schermata dell'app in esecuzione in un emulatore; vengono visualizzate due schede](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png)
+[![Schermata dell'app in esecuzione in un emulatore; vengono visualizzate due schede](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
 
 Per creare le schede nella barra delle azioni, è innanzitutto necessario impostare il relativo `NavigationMode` proprietà per supportare le schede. Android 4, un `ActionBar` proprietà è disponibile nella classe di attività, è possibile utilizzare per impostare il `NavigationMode` come segue:
 
@@ -84,26 +82,23 @@ this.ActionBar.AddTab (tab);
 
 Per un esempio completo, vedere il *HelloTabsICS* progetto nell'esempio di codice per questo documento.
 
-<a name="ShareActionProvider" />
 
 ## <a name="shareactionprovider"></a>ShareActionProvider
 
 La `ShareActionProvider` classe consente a un'azione da eseguire sul posto da una barra di azione di condivisione. Si occupa di creare una vista di azione con un elenco di App che è in grado di gestire un intento di condivisione e mantiene una cronologia delle applicazioni usate in precedenza per facilitare l'accesso a essi in un secondo momento dalla barra delle azioni. Ciò consente alle applicazioni di condividere i dati tramite un'esperienza utente coerenza in Android.
 
-<a name="Image_Sharing_Example" />
 
 ### <a name="image-sharing-example"></a>Esempio di immagine di condivisione
 
 Ad esempio, di seguito è una schermata di una barra delle azioni con una voce di menu per condividere un'immagine (ricavato il [ShareActionProvider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/) esempio). Quando l'utente tocca la voce di menu sulla barra delle azioni, il ShareActionProvider carica l'applicazione per gestire un intento di cui è associato il `ShareActionProvider`. In questo esempio, l'applicazione di messaggistica è stato precedentemente utilizzato, pertanto viene visualizzato sulla barra delle azioni.
 
-[![Schermata dell'icona nella barra delle azioni di applicazione di messaggistica](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png)
+[![Schermata dell'icona nella barra delle azioni di applicazione di messaggistica](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
 
 Quando l'utente fa clic sull'elemento nella barra delle azioni, viene avviata l'app di messaggistica che contiene l'immagine condivisa, come illustrato di seguito:
 
-[![Schermata dell'app messaggistica visualizzazione monkey immagine](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png)
+[![Schermata dell'app messaggistica visualizzazione monkey immagine](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
 
-<a name="Specifying_the_action_Provider_Class" />
 
 ### <a name="specifying-the-action-provider-class"></a>Specifica l'azione di classe del Provider
 
@@ -119,7 +114,6 @@ Utilizzare il `ShareActionProvider`, impostare il `android:actionProviderClass` 
 </menu>
 ```
 
-<a name="Inflating_the_Menu" />
 
 ### <a name="inflating-the-menu"></a>Il Menu eccessi nella misurazione
 
@@ -137,7 +131,6 @@ public override bool OnCreateOptionsMenu (IMenu menu)
 }
 ```
 
-<a name="Creating_the_Intent" />
 
 ### <a name="creating-the-intent"></a>Lo scopo di creazione
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 0486b9e4371a1bcab02921da42bcb929f00a782f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8595ecb63e49a4768120e98f41826b74c2dd43e4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="fragments"></a>Frammenti
 
@@ -28,13 +28,13 @@ Pacchetti di supporto sono stati originariamente chiamati *compatibilità librer
 
 Ad esempio, l'immagine seguente viene illustrato come una singola applicazione usa i frammenti in diversi fattori di forma dispositivo.
 
-[![Diagramma dell'utilizzo di frammenti in Tablet e ricevitori](images/00.png)](images/00.png)
+[![Diagramma dell'utilizzo di frammenti in Tablet e ricevitori](images/00.png)](images/00.png#lightbox)
 
 *Frammento A* contiene un elenco, mentre *frammento B* contiene i dettagli per un elemento selezionato nell'elenco. Quando l'applicazione viene eseguita su un tablet, è possibile visualizzare entrambi i frammenti nella stessa attività. Quando la stessa applicazione viene eseguita in un ricevitore (con le dimensioni dello schermo più piccolo), i frammenti sono ospitati in due attività distinte. Frammento di A e B frammento sono gli stessi in entrambi i fattori di forma, ma le attività che li ospitano sono diverse.
 
 Per facilitare un impegno di coordinare e gestire tutti i frammenti, Android ha introdotto una nuova classe denominata la *FragmentManager*. Ogni attività dispone della propria istanza di un `FragmentManager` per l'aggiunta, eliminazione e individuazione di frammenti ospitato. Il diagramma seguente illustra la relazione tra frammenti e attività:
 
-[![Diagramma che illustra le relazioni tra attività, gestione di frammento e frammenti](images/01.png)](images/01.png)
+[![Diagramma che illustra le relazioni tra attività, gestione di frammento e frammenti](images/01.png)](images/01.png#lightbox)
 
 Alcuni relativamente, frammenti possono essere considerati come controlli compositi o come attività di formattazione rapida. Essi aggregare le parti dell'interfaccia utente in moduli riutilizzabili che possono quindi essere utilizzati indipendentemente dagli sviluppatori di attività. Un frammento dispone di una gerarchia di visualizzazione, come un'attività, ma, a differenza di un'attività, può essere condivise tra le schermate. Viste differiscono dai frammenti in frammenti hanno i propri ciclo di vita; viste non.
 
@@ -51,11 +51,11 @@ Questa guida contiene una descrizione dettagliata su come usare i frammenti, tra
 
 I frammenti sono disponibili nel SDK Android a partire da livello API 11 (Android 3.0), come illustrato nella schermata seguente:
 
-[![Selezionare il livello di API di Android SDK Manager](images/02.png)](images/02.png)
+[![Selezionare il livello di API di Android SDK Manager](images/02.png)](images/02.png#lightbox)
 
 I frammenti sono disponibili in xamarin 4.0 e versioni successive. Un'applicazione di xamarin destinazione deve essere almeno il livello di API 11 (Android 3.0) o versione successiva per poter utilizzare i frammenti. Il Framework di destinazione può essere impostato nelle opzioni del progetto, come illustrato di seguito:
 
-[![Impostazione del livello di API di Framework di destinazione nelle opzioni di progetto](images/03.png)](images/03.png)
+[![Impostazione del livello di API di Framework di destinazione nelle opzioni di progetto](images/03.png)](images/03.png#lightbox)
 
 È possibile utilizzare frammenti nelle versioni precedenti di Android utilizzando il pacchetto di supporto Android e xamarin 4.2 o versioni successive. Come eseguire questa operazione viene illustrata più dettagliatamente nei documenti di questa sezione.
 

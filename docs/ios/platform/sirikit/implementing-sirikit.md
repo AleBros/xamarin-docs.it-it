@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: a891e5bf797742ceb1bb45bb8144fa77dec99b2c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0e271fb78cfd225f9ccdae9a515685e89bfd7ac2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-sirikit"></a>Implementazione SiriKit
 
@@ -35,7 +35,7 @@ Quando l'utente effettua una richiesta di Siri che include uno dei servizi dell'
 
 Questa guida verranno presentate riportato un esempio di incluso il supporto di SiriKit in un'app di esistente. Ai fini di questo esempio, verrà usato l'app MonkeyChat fittizio:
 
-[ ![](implementing-sirikit-images/monkeychat01.png "L'icona MonkeyChat")](implementing-sirikit-images/monkeychat01.png)
+[![](implementing-sirikit-images/monkeychat01.png "L'icona MonkeyChat")](implementing-sirikit-images/monkeychat01.png#lightbox)
 
 MonkeyChat mantiene il proprio contatto della Rubrica di amici dell'utente, ognuno associato a un nome di schermata (ad esempio Bobo ad esempio) e consente all'utente di inviare ogni amico chat di testo in base al nome della schermata.
 
@@ -43,7 +43,7 @@ MonkeyChat mantiene il proprio contatto della Rubrica di amici dell'utente, ognu
 
 Come illustrato nel [SiriKit informazioni sui concetti](~/ios/platform/sirikit/understanding-sirikit.md) Guida, sono coinvolti in un'app con SiriKit estensione tre parti principali:
 
-[ ![](implementing-sirikit-images/elements01.png "Estensione dell'App con SiriKit diagramma")](implementing-sirikit-images/elements01.png)
+[![](implementing-sirikit-images/elements01.png "Estensione dell'App con SiriKit diagramma")](implementing-sirikit-images/elements01.png#lightbox)
 
 Sono inclusi:
 
@@ -75,20 +75,20 @@ Seguire questa procedura:
 1. Avviare Visual Studio per Mac e aprire l'app MonkeyChat.
 2. Fare clic sul nome della soluzione nel **soluzione riempimento** e selezionare **Aggiungi** > **nuovo progetto...** : 
 
-    [ ![](implementing-sirikit-images/prep01.png "Aggiungere un nuovo progetto")](implementing-sirikit-images/prep01.png)
+    [![](implementing-sirikit-images/prep01.png "Aggiungere un nuovo progetto")](implementing-sirikit-images/prep01.png#lightbox)
 3. Selezionare **iOS** > **libreria** > **libreria di classi** e fare clic su di **Avanti** pulsante: 
 
-    [ ![](implementing-sirikit-images/prep02.png "Selezionare una libreria di classi")](implementing-sirikit-images/prep02.png)
+    [![](implementing-sirikit-images/prep02.png "Selezionare una libreria di classi")](implementing-sirikit-images/prep02.png#lightbox)
 4. Immettere `MonkeyChatCommon` per il **nome** e fare clic su di **crea** pulsante: 
 
-    [ ![](implementing-sirikit-images/prep03.png "Immettere il nome MonkeyChatCommon")](implementing-sirikit-images/prep03.png)
+    [![](implementing-sirikit-images/prep03.png "Immettere il nome MonkeyChatCommon")](implementing-sirikit-images/prep03.png#lightbox)
 5. Fare clic su di **riferimenti** cartella dell'applicazione principale nel **Esplora** e selezionare **Modifica riferimenti...** . Controllare il **MonkeyChatCommon** sul progetto e scegliere il **OK** pulsante: 
 
-    [ ![](implementing-sirikit-images/prep05.png "Archiviare il progetto MonkeyChatCommon")](implementing-sirikit-images/prep05.png)
+    [![](implementing-sirikit-images/prep05.png "Archiviare il progetto MonkeyChatCommon")](implementing-sirikit-images/prep05.png#lightbox)
 6. Nel **Esplora**, trascinare il codice condiviso comune dell'applicazione principale per la libreria nativa.
 7. Nel caso di MonkeyChat, trascinare il **DataModels** e **processori** cartelle dall'app principale nella libreria nativa: 
 
-    [ ![](implementing-sirikit-images/prep06.png "Le cartelle DataModels e processori in Esplora soluzioni")](implementing-sirikit-images/prep06.png)
+    [![](implementing-sirikit-images/prep06.png "Le cartelle DataModels e processori in Esplora soluzioni")](implementing-sirikit-images/prep06.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -96,11 +96,11 @@ Seguire questa procedura:
 2. Fare clic sul nome della soluzione nel **Esplora** e selezionare **Aggiungi** > **nuovo progetto...** .
 3. Selezionare **Visual c#** > **progetto condiviso** e fare clic su di **Avanti** pulsante: 
 
-    [ ![](implementing-sirikit-images/prep02w.png "Selezionare una libreria di classi")](implementing-sirikit-images/prep02w.png)
+    [![](implementing-sirikit-images/prep02w.png "Selezionare una libreria di classi")](implementing-sirikit-images/prep02w.png#lightbox)
 4. Immettere `MonkeyChatCommon` per il **nome** e fare clic su di **crea** pulsante.
 5. Fare clic su di **riferimenti** cartella dell'applicazione principale nel **Esplora** e selezionare **Modifica riferimenti...** . Controllare il **MonkeyChatCommon** sul progetto e scegliere il **OK** pulsante: 
 
-    [ ![](implementing-sirikit-images/prep05w.png "Archiviare il progetto MonkeyChatCommon")](implementing-sirikit-images/prep05w.png)
+    [![](implementing-sirikit-images/prep05w.png "Archiviare il progetto MonkeyChatCommon")](implementing-sirikit-images/prep05w.png#lightbox)
 6. Nel **Esplora**, trascinare il codice condiviso comune dell'applicazione principale per il progetto condiviso.
 7. Nel caso di MonkeyChat, trascinare il **DataModels** e **processori** cartelle dall'app principale nella libreria nativa.
 
@@ -172,12 +172,12 @@ Seguire questa procedura:
 2. Passare il **origine** scheda.
 3. Aggiungere il `com.apple.developer.siri` **proprietà**, impostare il **tipo** a `Boolean` e **valore** a `Yes`: 
 
-    [ ![](implementing-sirikit-images/setup01.png "Aggiungere la proprietà com.apple.developer.siri")](implementing-sirikit-images/setup01.png)
+    [![](implementing-sirikit-images/setup01.png "Aggiungere la proprietà com.apple.developer.siri")](implementing-sirikit-images/setup01.png#lightbox)
 4. Salvare le modifiche apportate al file.
 5. Fare doppio clic su di **File di progetto** nel **Esplora** per aprirlo e modificarlo.
 6. Selezionare **firma Bundle iOS** e assicurarsi che il `Entitlements.plist` è selezionato un file nel **i diritti personalizzati** campo: 
 
-    [ ![](implementing-sirikit-images/setup02.png "Selezionare il file Entitlements.plist nel campo dei diritti personalizzato")](implementing-sirikit-images/setup02.png)
+    [![](implementing-sirikit-images/setup02.png "Selezionare il file Entitlements.plist nel campo dei diritti personalizzato")](implementing-sirikit-images/setup02.png#lightbox)
 7. Fare clic su **OK** per salvare le modifiche.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -185,7 +185,7 @@ Seguire questa procedura:
 1. Fare doppio clic su di `Entitlements.plist` file nel **Esplora** per aprirlo e modificarlo.
 3. Aggiungere il `com.apple.developer.siri` **proprietà**, impostare il **tipo** a `Boolean` e **valore** a `Yes`: 
 
-    [ ![](implementing-sirikit-images/setup01w.png "Aggiungere la proprietà com.apple.developer.siri")](implementing-sirikit-images/setup01w.png)
+    [![](implementing-sirikit-images/setup01w.png "Aggiungere la proprietà com.apple.developer.siri")](implementing-sirikit-images/setup01w.png#lightbox)
 4. Salvare le modifiche apportate al file.
 5. Fare doppio clic su di **File di progetto** nel **Esplora** per aprirlo e modificarlo.
 6. Selezionare **firma Bundle iOS** e assicurarsi che il `Entitlements.plist` è selezionato un file nel **i diritti personalizzati** campo.
@@ -218,7 +218,7 @@ Eseguire le operazioni seguenti nel Mac:
 5. Immettere un **ID Bundle** seguente Apple denominazione raccomandazione.
 6. Scorrere verso il basso il **servizi App** selezionare **SiriKit** e fare clic su di **continua** pulsante: 
 
-    [ ![](implementing-sirikit-images/setup03.png "Selezionare SiriKit")](implementing-sirikit-images/setup03.png)
+    [![](implementing-sirikit-images/setup03.png "Selezionare SiriKit")](implementing-sirikit-images/setup03.png#lightbox)
 7. Verificare tutte le impostazioni, quindi **Invia** ID. l'App
 8. Selezionare **i profili di Provisioning** > **sviluppo**, fare clic su di  **+**  pulsante, selezionare il **ID Apple**, quindi fare clic su **continua**.
 9. Fare clic su Seleziona **tutti**, quindi fare clic su **continua**.
@@ -228,21 +228,21 @@ Eseguire le operazioni seguenti nel Mac:
 13. Selezionare il menu di Xcode **preferenze...**
 14. Selezionare **account**, quindi fare clic su di **visualizzare i dettagli...** pulsante: 
 
-    [ ![](implementing-sirikit-images/setup04.png "Selezionare gli account")](implementing-sirikit-images/setup04.png)
+    [![](implementing-sirikit-images/setup04.png "Selezionare gli account")](implementing-sirikit-images/setup04.png#lightbox)
 15. Fare clic su di **scaricare tutti i profili** pulsante nell'angolo inferiore sinistro: 
 
-    [ ![](implementing-sirikit-images/setup05.png "Scaricare tutti i profili")](implementing-sirikit-images/setup05.png)
+    [![](implementing-sirikit-images/setup05.png "Scaricare tutti i profili")](implementing-sirikit-images/setup05.png#lightbox)
 16. Verificare che il **profilo di Provisioning** creato precedentemente è stato installato in Xcode.
 17. Aprire il progetto per aggiungere il supporto di SiriKit per Visual Studio per Mac.
 18. Fare doppio clic su di `Info.plist` file nel **Esplora**.
 18. Verificare che il **identificatore Bundle** corrisponde a quello creato nel portale per sviluppatori di Apple precedente: 
 
-    [ ![](implementing-sirikit-images/setup06.png "L'identificatore Bundle")](implementing-sirikit-images/setup06.png)
+    [![](implementing-sirikit-images/setup06.png "L'identificatore Bundle")](implementing-sirikit-images/setup06.png#lightbox)
 18. Nel **Esplora**, selezionare il **progetto**.
 19. Fare clic sul progetto e selezionare **opzioni**.
 21. Selezionare **firma Bundle iOS**, selezionare il **identità di firma** e **profilo di Provisioning** creato in precedenza: 
 
-    [ ![](implementing-sirikit-images/setup07.png "Selezionare le identità di firma e profilo di Provisioning")](implementing-sirikit-images/setup07.png)
+    [![](implementing-sirikit-images/setup07.png "Selezionare le identità di firma e profilo di Provisioning")](implementing-sirikit-images/setup07.png#lightbox)
 22. Fare clic su **OK** per salvare le modifiche.
 
 > [!IMPORTANT]
@@ -256,13 +256,13 @@ Prima che l'applicazione aggiunge i termini specifici di utente o le estensioni 
 
 Modifica dell'app `Info.plist` file, passare al **origine** consente di visualizzare e aggiungere il `NSSiriUsageDescription` chiave con un valore stringa che descrive l'utilizzo dell'app Siri e quali tipi di dati verranno inviati. Ad esempio, è possibile che l'app MonkeyChat "contatti MonkeyChat verranno inviati a Siri":
 
-[ ![](implementing-sirikit-images/request01.png "NSSiriUsageDescription nell'editor di Info. plist")](implementing-sirikit-images/request01.png)
+[![](implementing-sirikit-images/request01.png "NSSiriUsageDescription nell'editor di Info. plist")](implementing-sirikit-images/request01.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Modifica dell'app `Info.plist` file e aggiungere il `NSSiriUsageDescription` chiave con un valore stringa che descrive l'utilizzo dell'app Siri e quali tipi di dati verranno inviati. Ad esempio, è possibile che l'app MonkeyChat "contatti MonkeyChat verranno inviati a Siri":
 
-[ ![](implementing-sirikit-images/request01w.png "NSSiriUsageDescription nell'editor di Info. plist")](implementing-sirikit-images/request01w.png)
+[![](implementing-sirikit-images/request01w.png "NSSiriUsageDescription nell'editor di Info. plist")](implementing-sirikit-images/request01w.png#lightbox)
 
 -----
 
@@ -460,128 +460,128 @@ Per aggiungere un `AppIntentVocabulary.plist` file al progetto di app, eseguire 
 
 1. Fare doppio clic sul nome del progetto nel **Esplora** e selezionare **Aggiungi** > **nuovo File...**   >  **iOS**:
 
-    [ ![](implementing-sirikit-images/plist01.png "Aggiungere un elenco di proprietà")](implementing-sirikit-images/plist01.png) 
+    [![](implementing-sirikit-images/plist01.png "Aggiungere un elenco di proprietà")](implementing-sirikit-images/plist01.png#lightbox) 
 2. Fare doppio clic su di `AppIntentVocabulary.plist` file nel **Esplora** per aprirlo e modificarlo.
 3. Fare clic su di  **+**  per aggiungere una chiave, impostare il **nome** a `ParameterVocabularies` e **tipo** per `Array`:
 
-    [ ![](implementing-sirikit-images/plist02.png "Impostare il nome su ParameterVocabularies e il tipo di matrice")](implementing-sirikit-images/plist02.png)
+    [![](implementing-sirikit-images/plist02.png "Impostare il nome su ParameterVocabularies e il tipo di matrice")](implementing-sirikit-images/plist02.png#lightbox)
 4. Espandere `ParameterVocabularies` e fare clic su di  **+**  pulsante e impostarne il **tipo** a `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist03.png "Impostare il tipo di dizionario")](implementing-sirikit-images/plist03.png)
+    [![](implementing-sirikit-images/plist03.png "Impostare il tipo di dizionario")](implementing-sirikit-images/plist03.png#lightbox)
 5. Fare clic su di  **+**  per aggiungere una nuova chiave, impostare il **nome** a `ParameterNames` e **tipo** per `Array`:
 
-    [ ![](implementing-sirikit-images/plist04.png "Impostare il nome su ParameterNames e il tipo di matrice")](implementing-sirikit-images/plist04.png)
+    [![](implementing-sirikit-images/plist04.png "Impostare il nome su ParameterNames e il tipo di matrice")](implementing-sirikit-images/plist04.png#lightbox)
 6. Fare clic su di  **+**  per aggiungere una nuova chiave con il **tipo** di `String` e il valore come uno dei nomi di parametro disponibili. Ad esempio, `INStartWorkoutIntent.workoutName`:
 
-    [ ![](implementing-sirikit-images/plist05.png "La chiave INStartWorkoutIntent.workoutName")](implementing-sirikit-images/plist05.png)
+    [![](implementing-sirikit-images/plist05.png "La chiave INStartWorkoutIntent.workoutName")](implementing-sirikit-images/plist05.png#lightbox)
 7. Aggiungere il `ParameterVocabulary` chiave per la `ParameterVocabularies` chiave con il **tipo** di `Array`:
 
-    [ ![](implementing-sirikit-images/plist06.png "Aggiungere la chiave ParameterVocabulary alla chiave ParameterVocabularies con il tipo di matrice")](implementing-sirikit-images/plist06.png)
+    [![](implementing-sirikit-images/plist06.png "Aggiungere la chiave ParameterVocabulary alla chiave ParameterVocabularies con il tipo di matrice")](implementing-sirikit-images/plist06.png#lightbox)
 8. Aggiungere una nuova chiave con il **tipo** di `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist07.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist07.png)
+    [![](implementing-sirikit-images/plist07.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist07.png#lightbox)
 9. Aggiungere il `VocabularyItemIdentifier` chiave con il **tipo** di `String` e specificare un ID univoco per il termine:
 
-    [ ![](implementing-sirikit-images/plist08.png "Aggiungere la chiave VocabularyItemIdentifier con il tipo di stringa e specificare un ID univoco")](implementing-sirikit-images/plist08.png)
+    [![](implementing-sirikit-images/plist08.png "Aggiungere la chiave VocabularyItemIdentifier con il tipo di stringa e specificare un ID univoco")](implementing-sirikit-images/plist08.png#lightbox)
 10. Aggiungere il `VocabularyItemSynonyms` chiave con il **tipo** di `Array`:
 
-    [ ![](implementing-sirikit-images/plist09.png "Aggiungere la chiave VocabularyItemSynonyms con il tipo di matrice")](implementing-sirikit-images/plist09.png)
+    [![](implementing-sirikit-images/plist09.png "Aggiungere la chiave VocabularyItemSynonyms con il tipo di matrice")](implementing-sirikit-images/plist09.png#lightbox)
 11. Aggiungere una nuova chiave con il **tipo** di `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist10.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist10.png)
+    [![](implementing-sirikit-images/plist10.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist10.png#lightbox)
 12. Aggiungere il `VocabularyItemPhrase` chiave con il **tipo** di `String` e il termine sta definendo l'app:
 
-    [ ![](implementing-sirikit-images/plist11.png "Aggiungere la chiave VocabularyItemPhrase con il tipo di stringa e il termine sta definendo l'app")](implementing-sirikit-images/plist11.png)
+    [![](implementing-sirikit-images/plist11.png "Aggiungere la chiave VocabularyItemPhrase con il tipo di stringa e il termine sta definendo l'app")](implementing-sirikit-images/plist11.png#lightbox)
 13. Aggiungere il `VocabularyItemPronunciation` chiave con il **tipo** di `String` e la pronuncia fonetica del termine:
 
-    [ ![](implementing-sirikit-images/plist12.png "Aggiungere la chiave VocabularyItemPronunciation con il tipo di stringa e la pronuncia fonetica del termine")](implementing-sirikit-images/plist12.png)
+    [![](implementing-sirikit-images/plist12.png "Aggiungere la chiave VocabularyItemPronunciation con il tipo di stringa e la pronuncia fonetica del termine")](implementing-sirikit-images/plist12.png#lightbox)
 14. Aggiungere il `VocabularyItemExamples` chiave con il **tipo** di `Array`:
 
-    [ ![](implementing-sirikit-images/plist13.png "Aggiungere la chiave VocabularyItemExamples con il tipo di matrice")](implementing-sirikit-images/plist13.png)
+    [![](implementing-sirikit-images/plist13.png "Aggiungere la chiave VocabularyItemExamples con il tipo di matrice")](implementing-sirikit-images/plist13.png#lightbox)
 15. Aggiungere alcuni `String` chiavi con esempi di utilizzo del termine:
 
-    [ ![](implementing-sirikit-images/plist14.png "Aggiungere alcune chiavi di stringa con esempi di utilizzo del termine")](implementing-sirikit-images/plist14.png)
+    [![](implementing-sirikit-images/plist14.png "Aggiungere alcune chiavi di stringa con esempi di utilizzo del termine")](implementing-sirikit-images/plist14.png#lightbox)
 16. Ripetere i passaggi precedenti per altri termini personalizzati, è necessario definire l'app.
 17. Comprimere il `ParameterVocabularies` chiave.
 18. Aggiungere il `IntentPhrases` chiave con il **tipo** di `Array`:
 
-    [ ![](implementing-sirikit-images/plist15.png "Aggiungere la chiave IntentPhrases con il tipo di matrice")](implementing-sirikit-images/plist15.png)
+    [![](implementing-sirikit-images/plist15.png "Aggiungere la chiave IntentPhrases con il tipo di matrice")](implementing-sirikit-images/plist15.png#lightbox)
 19. Aggiungere una nuova chiave con il **tipo** di `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist16.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist16.png)
+    [![](implementing-sirikit-images/plist16.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist16.png#lightbox)
 20. Aggiungere il `IntentName` chiave con il **tipo** di `String` e finalità dell'esempio:
 
-    [ ![](implementing-sirikit-images/plist17.png "Aggiungere la chiave IntentName con il tipo di stringa e lo scopo dell'esempio")](implementing-sirikit-images/plist17.png)
+    [![](implementing-sirikit-images/plist17.png "Aggiungere la chiave IntentName con il tipo di stringa e lo scopo dell'esempio")](implementing-sirikit-images/plist17.png#lightbox)
 21. Aggiungere il `IntentExamples` chiave con il **tipo** di `Array`:
 
-    [ ![](implementing-sirikit-images/plist18.png "Aggiungere la chiave IntentExamples con il tipo di matrice")](implementing-sirikit-images/plist18.png)
+    [![](implementing-sirikit-images/plist18.png "Aggiungere la chiave IntentExamples con il tipo di matrice")](implementing-sirikit-images/plist18.png#lightbox)
 22. Aggiungere alcuni `String` chiavi con esempi di utilizzo del termine:
 
-    [ ![](implementing-sirikit-images/plist19.png "Aggiungere alcune chiavi di stringa con esempi di utilizzo del termine")](implementing-sirikit-images/plist19.png)
+    [![](implementing-sirikit-images/plist19.png "Aggiungere alcune chiavi di stringa con esempi di utilizzo del termine")](implementing-sirikit-images/plist19.png#lightbox)
 23. Ripetere i passaggi precedenti per qualsiasi intenti l'app dovrà fornire l'esempio di utilizzo di.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Fare doppio clic sul nome del progetto nel **Esplora** e selezionare **Aggiungi** > **nuovo File...**   >  **iOS**:
 
-    [ ![](implementing-sirikit-images/plist01w.png "Aggiungere un nuovo file Info. plist")](implementing-sirikit-images/plist01w.png) 
+    [![](implementing-sirikit-images/plist01w.png "Aggiungere un nuovo file Info. plist")](implementing-sirikit-images/plist01w.png#lightbox) 
 2. Fare doppio clic su di `AppIntentVocabulary.plist` file nel **Esplora** per aprirlo e modificarlo.
 3. Fare clic su di  **+**  per aggiungere una chiave, impostare il **nome** a `ParameterVocabularies` e **tipo** per `Array`:
 
-    [ ![](implementing-sirikit-images/plist02w.png "Impostare il nome su ParameterVocabularies e il tipo di matrice")](implementing-sirikit-images/plist02w.png)
+    [![](implementing-sirikit-images/plist02w.png "Impostare il nome su ParameterVocabularies e il tipo di matrice")](implementing-sirikit-images/plist02w.png#lightbox)
 4. Espandere `ParameterVocabularies` e fare clic su di  **+**  pulsante e impostarne il **tipo** a `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist03w.png "Impostare il tipo di dizionario")](implementing-sirikit-images/plist03w.png)
+    [![](implementing-sirikit-images/plist03w.png "Impostare il tipo di dizionario")](implementing-sirikit-images/plist03w.png#lightbox)
 5. Fare clic su di  **+**  per aggiungere una nuova chiave, impostare il **nome** a `ParameterNames` e **tipo** per `Array`:
 
-    [ ![](implementing-sirikit-images/plist04w.png "Impostare il nome su ParameterNames e il tipo di matrice")](implementing-sirikit-images/plist04w.png)
+    [![](implementing-sirikit-images/plist04w.png "Impostare il nome su ParameterNames e il tipo di matrice")](implementing-sirikit-images/plist04w.png#lightbox)
 6. Fare clic su di  **+**  per aggiungere una nuova chiave con il **tipo** di `String` e il valore come uno dei nomi di parametro disponibili. Ad esempio, `INStartWorkoutIntent.workoutName`:
 
-    [ ![](implementing-sirikit-images/plist05w.png "La chiave INStartWorkoutIntent.workoutName")](implementing-sirikit-images/plist05w.png)
+    [![](implementing-sirikit-images/plist05w.png "La chiave INStartWorkoutIntent.workoutName")](implementing-sirikit-images/plist05w.png#lightbox)
 7. Aggiungere il `ParameterVocabulary` chiave per la `ParameterVocabularies` chiave con il **tipo** di `Array`:
 
-    [ ![](implementing-sirikit-images/plist06w.png "Aggiungere la chiave ParameterVocabulary alla chiave ParameterVocabularies con il tipo di matrice")](implementing-sirikit-images/plist06w.png)
+    [![](implementing-sirikit-images/plist06w.png "Aggiungere la chiave ParameterVocabulary alla chiave ParameterVocabularies con il tipo di matrice")](implementing-sirikit-images/plist06w.png#lightbox)
 8. Aggiungere una nuova chiave con il **tipo** di `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist07w.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist07w.png)
+    [![](implementing-sirikit-images/plist07w.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist07w.png#lightbox)
 9. Aggiungere il `VocabularyItemIdentifier` chiave con il **tipo** di `String` e specificare un ID univoco per il termine:
 
-    [ ![](implementing-sirikit-images/plist08w.png "Aggiungere la chiave VocabularyItemIdentifier con il tipo di stringa e specificare un ID univoco per il termine")](implementing-sirikit-images/plist08w.png)
+    [![](implementing-sirikit-images/plist08w.png "Aggiungere la chiave VocabularyItemIdentifier con il tipo di stringa e specificare un ID univoco per il termine")](implementing-sirikit-images/plist08w.png#lightbox)
 10. Aggiungere il `VocabularyItemSynonyms` chiave con il **tipo** di `Array`:
 
-    [ ![](implementing-sirikit-images/plist09w.png "Aggiungere la chiave VocabularyItemSynonyms con il tipo di matrice")](implementing-sirikit-images/plist09w.png)
+    [![](implementing-sirikit-images/plist09w.png "Aggiungere la chiave VocabularyItemSynonyms con il tipo di matrice")](implementing-sirikit-images/plist09w.png#lightbox)
 11. Aggiungere una nuova chiave con il **tipo** di `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist10w.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist10w.png)
+    [![](implementing-sirikit-images/plist10w.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist10w.png#lightbox)
 12. Aggiungere il `VocabularyItemPhrase` chiave con il **tipo** di `String` e il termine sta definendo l'app:
 
-    [ ![](implementing-sirikit-images/plist11w.png "Aggiungere la chiave VocabularyItemPhrase con il tipo di stringa e il termine sta definendo l'app")](implementing-sirikit-images/plist11w.png)
+    [![](implementing-sirikit-images/plist11w.png "Aggiungere la chiave VocabularyItemPhrase con il tipo di stringa e il termine sta definendo l'app")](implementing-sirikit-images/plist11w.png#lightbox)
 13. Aggiungere il `VocabularyItemPronunciation` chiave con il **tipo** di `String` e la pronuncia fonetica del termine:
 
-    [ ![](implementing-sirikit-images/plist12w.png "Aggiungere la chiave VocabularyItemPronunciation con il tipo di stringa e la pronuncia fonetica del termine")](implementing-sirikit-images/plist12w.png)
+    [![](implementing-sirikit-images/plist12w.png "Aggiungere la chiave VocabularyItemPronunciation con il tipo di stringa e la pronuncia fonetica del termine")](implementing-sirikit-images/plist12w.png#lightbox)
 14. Aggiungere il `VocabularyItemExamples` chiave con il **tipo** di `Array`:
 
-    [ ![](implementing-sirikit-images/plist13w.png "Aggiungere la chiave VocabularyItemExamples con il tipo di matrice")](implementing-sirikit-images/plist13w.png)
+    [![](implementing-sirikit-images/plist13w.png "Aggiungere la chiave VocabularyItemExamples con il tipo di matrice")](implementing-sirikit-images/plist13w.png#lightbox)
 15. Aggiungere alcuni `String` chiavi con esempi di utilizzo del termine:
 
-    [ ![](implementing-sirikit-images/plist14w.png "Aggiungere alcune chiavi di stringa con esempi di utilizzo del termine")](implementing-sirikit-images/plist14w.png)
+    [![](implementing-sirikit-images/plist14w.png "Aggiungere alcune chiavi di stringa con esempi di utilizzo del termine")](implementing-sirikit-images/plist14w.png#lightbox)
 16. Ripetere i passaggi precedenti per altri termini personalizzati, è necessario definire l'app.
 17. Comprimere il `ParameterVocabularies` chiave.
 18. Aggiungere il `IntentPhrases` chiave con il **tipo** di `Array`:
 
-    [ ![](implementing-sirikit-images/plist15w.png "Aggiungere la chiave IntentPhrases con il tipo di matrice")](implementing-sirikit-images/plist15w.png)
+    [![](implementing-sirikit-images/plist15w.png "Aggiungere la chiave IntentPhrases con il tipo di matrice")](implementing-sirikit-images/plist15w.png#lightbox)
 19. Aggiungere una nuova chiave con il **tipo** di `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist16w.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist16w.png)
+    [![](implementing-sirikit-images/plist16w.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist16w.png#lightbox)
 20. Aggiungere il `IntentName` chiave con il **tipo** di `String` e finalità dell'esempio:
 
-    [ ![](implementing-sirikit-images/plist17w.png "Aggiungere la chiave IntentName con il tipo di stringa e lo scopo dell'esempio")](implementing-sirikit-images/plist17w.png)
+    [![](implementing-sirikit-images/plist17w.png "Aggiungere la chiave IntentName con il tipo di stringa e lo scopo dell'esempio")](implementing-sirikit-images/plist17w.png#lightbox)
 21. Aggiungere il `IntentExamples` chiave con il **tipo** di `Array`:
 
-    [ ![](implementing-sirikit-images/plist18w.png "Aggiungere la chiave IntentExamples con il tipo di matrice")](implementing-sirikit-images/plist18w.png)
+    [![](implementing-sirikit-images/plist18w.png "Aggiungere la chiave IntentExamples con il tipo di matrice")](implementing-sirikit-images/plist18w.png#lightbox)
 22. Aggiungere alcuni `String` chiavi con esempi di utilizzo del termine:
 
-    [ ![](implementing-sirikit-images/plist19w.png "Aggiungere alcune chiavi di stringa con esempi di utilizzo del termine")](implementing-sirikit-images/plist19w.png)
+    [![](implementing-sirikit-images/plist19w.png "Aggiungere alcune chiavi di stringa con esempi di utilizzo del termine")](implementing-sirikit-images/plist19w.png#lightbox)
 23. Ripetere i passaggi precedenti per qualsiasi intenti l'app dovrà fornire l'esempio di utilizzo di.
 
 -----
@@ -612,27 +612,27 @@ Per aggiungere un'estensione di tipi per la soluzione, eseguire le operazioni se
 1. Fare clic su di **Nome soluzione** nel **soluzione riempimento** e selezionare **Aggiungi** > **Aggiungi nuovo progetto...** .
 2. Nella finestra di dialogo selezionare **iOS** > **estensioni** > **estensione finalità** e fare clic su di **Avanti** pulsante: 
 
-    [ ![](implementing-sirikit-images/intents05.png "Selezionare l'estensione preventivo")](implementing-sirikit-images/intents05.png)
+    [![](implementing-sirikit-images/intents05.png "Selezionare l'estensione preventivo")](implementing-sirikit-images/intents05.png#lightbox)
 3. Quindi immettere un **nome** la finalità dell'estensione e fare clic su di **Avanti** pulsante: 
 
-    [ ![](implementing-sirikit-images/intents06.png "Immettere un nome per l'estensione preventivo")](implementing-sirikit-images/intents06.png)
+    [![](implementing-sirikit-images/intents06.png "Immettere un nome per l'estensione preventivo")](implementing-sirikit-images/intents06.png#lightbox)
 4. Infine, fare clic su di **crea** pulsante per aggiungere l'estensione finalità per la soluzione di App: 
 
-    [ ![](implementing-sirikit-images/intents07.png "Aggiungere l'estensione finalità per la soluzione di App")](implementing-sirikit-images/intents07.png)
+    [![](implementing-sirikit-images/intents07.png "Aggiungere l'estensione finalità per la soluzione di App")](implementing-sirikit-images/intents07.png#lightbox)
 5. Nel **Esplora**, fare clic su di **riferimenti** cartella dell'estensione finalità appena creato. Verificare il nome del progetto di libreria codice condiviso comune (che l'app è stato creato in precedenza) e fare clic su di **OK** pulsante: 
 
-    [ ![](implementing-sirikit-images/intents08.png "Selezionare il nome del progetto di libreria di codice condiviso comune")](implementing-sirikit-images/intents08.png)
+    [![](implementing-sirikit-images/intents08.png "Selezionare il nome del progetto di libreria di codice condiviso comune")](implementing-sirikit-images/intents08.png#lightbox)
     
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Fare clic su di **Nome soluzione** nel **Esplora** e selezionare **Aggiungi** > **Aggiungi nuovo progetto...** .
 2. Nella finestra di dialogo selezionare **iOS** > **estensioni** > **estensione finalità** e fare clic su di **Avanti** pulsante: 
 
-    [ ![](implementing-sirikit-images/intents05w.png "Selezionare l'estensione preventivo")](implementing-sirikit-images/intents05w.png)
+    [![](implementing-sirikit-images/intents05w.png "Selezionare l'estensione preventivo")](implementing-sirikit-images/intents05w.png#lightbox)
 3. Quindi immettere un **nome** la finalità dell'estensione e fare clic su di **OK** pulsante.
 5. Nel **Esplora**, fare clic su di **riferimenti** cartella dell'estensione finalità appena creato. Verificare il nome del progetto di libreria codice condiviso comune (che l'app è stato creato in precedenza) e fare clic su di **OK** pulsante: 
 
-    [ ![](implementing-sirikit-images/intents08w.png "Selezionare il nome del progetto di libreria di codice condiviso comune")](implementing-sirikit-images/intents08w.png)
+    [![](implementing-sirikit-images/intents08w.png "Selezionare il nome del progetto di libreria di codice condiviso comune")](implementing-sirikit-images/intents08w.png#lightbox)
     
 -----
 
@@ -644,7 +644,7 @@ Per ognuna delle estensioni di tipi aggiunti alla soluzione dell'app, deve esser
 
 Analogamente a qualsiasi estensione App tipica, l'app avrà le chiavi esistenti di `NSExtension` e `NSExtensionAttributes`. Per un'estensione di tipi sono disponibili due nuovi attributi che devono essere configurati:
 
-[ ![](implementing-sirikit-images/intents01.png "I due nuovi attributi che devono essere configurati")](implementing-sirikit-images/intents01.png)
+[![](implementing-sirikit-images/intents01.png "I due nuovi attributi che devono essere configurati")](implementing-sirikit-images/intents01.png#lightbox)
 
 - **IntentsSupported** : È obbligatorio e che è costituito da una matrice di nomi di classe finalità che intende supportare dall'estensione finalità dell'applicazione.
 - **IntentsRestrictedWhileLocked** -è una chiave facoltativa per l'app specificare il comportamento di schermata di blocco dell'estensione. È costituito da una matrice di nomi di classe finalità che l'app desidera richiedere all'utente di eseguire l'accesso da utilizzare dall'estensione finalità.
@@ -653,11 +653,11 @@ Per configurare l'estensione di finalità `Info.plist` file, fare doppio clic su
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[ ![](implementing-sirikit-images/intents02.png "Le chiavi NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents02.png)
+[![](implementing-sirikit-images/intents02.png "Le chiavi NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents02.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](implementing-sirikit-images/intents02w.png "Le chiavi NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents02w.png)
+[![](implementing-sirikit-images/intents02w.png "Le chiavi NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents02w.png#lightbox)
 
 -----
 
@@ -665,11 +665,11 @@ Espandere il `IntentsSupported` chiave e aggiungere il nome di una classe con fi
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[ ![](implementing-sirikit-images/intents09.png "La chiave INSendMessageIntent")](implementing-sirikit-images/intents09.png)
+[![](implementing-sirikit-images/intents09.png "La chiave INSendMessageIntent")](implementing-sirikit-images/intents09.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](implementing-sirikit-images/intents09w.png "La chiave INSendMessageIntent")](implementing-sirikit-images/intents09w.png)
+[![](implementing-sirikit-images/intents09w.png "La chiave INSendMessageIntent")](implementing-sirikit-images/intents09w.png#lightbox)
 
 -----
 
@@ -677,11 +677,11 @@ Se l'app, facoltativamente, richiede che l'utente è essere connesso al disposit
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[ ![](implementing-sirikit-images/intents10.png "La chiave INSendMessageIntent aggiunta")](implementing-sirikit-images/intents10.png)
+[![](implementing-sirikit-images/intents10.png "La chiave INSendMessageIntent aggiunta")](implementing-sirikit-images/intents10.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](implementing-sirikit-images/intents10w.png "La chiave INSendMessageIntent aggiunta")](implementing-sirikit-images/intents10w.png)
+[![](implementing-sirikit-images/intents10w.png "La chiave INSendMessageIntent aggiunta")](implementing-sirikit-images/intents10w.png#lightbox)
 
 -----
 
@@ -857,7 +857,7 @@ Per ulteriori informazioni, vedere il nostro [al riferimento fase gestire](~/ios
 
 L'estensione dell'interfaccia utente intenti facoltativa l'opportunità di portare l'interfaccia utente dell'applicazione e personalizzazione di un'esperienza di Siri e rendere gli utenti a cui è connesso all'app. Con questa estensione per l'app può portare al marchio, nonché informazioni visual e altri nella trascrizione.
 
-[ ![](implementing-sirikit-images/intentsui01.png "Un esempio di estensione dell'interfaccia utente dei tipi di output")](implementing-sirikit-images/intentsui01.png)
+[![](implementing-sirikit-images/intentsui01.png "Un esempio di estensione dell'interfaccia utente dei tipi di output")](implementing-sirikit-images/intentsui01.png#lightbox)
 
 Analogamente all'estensione intenti, lo sviluppatore eseguirà il passaggio seguente per l'estensione dell'interfaccia utente per scopi:
 
@@ -876,16 +876,16 @@ Per aggiungere un'estensione di tipi di interfaccia utente alla soluzione, esegu
 1. Fare clic su di **Nome soluzione** nel **soluzione riempimento** e selezionare **Aggiungi** > **Aggiungi nuovo progetto...** .
 2. Nella finestra di dialogo selezionare **iOS** > **estensioni** > **estensione dell'interfaccia utente con finalità di** e fare clic su di **Avanti** pulsante: 
 
-    [ ![](implementing-sirikit-images/intents11.png "Selezionare l'estensione dell'interfaccia utente preventivo")](implementing-sirikit-images/intents11.png)
+    [![](implementing-sirikit-images/intents11.png "Selezionare l'estensione dell'interfaccia utente preventivo")](implementing-sirikit-images/intents11.png#lightbox)
 3. Quindi immettere un **nome** la finalità dell'estensione e fare clic su di **Avanti** pulsante: 
 
-    [ ![](implementing-sirikit-images/intents12.png "Immettere un nome per l'estensione preventivo")](implementing-sirikit-images/intents12.png)
+    [![](implementing-sirikit-images/intents12.png "Immettere un nome per l'estensione preventivo")](implementing-sirikit-images/intents12.png#lightbox)
 4. Infine, fare clic su di **crea** pulsante per aggiungere l'estensione finalità per la soluzione di App: 
 
-    [ ![](implementing-sirikit-images/intents13.png "Aggiungere l'estensione finalità per la soluzione di App")](implementing-sirikit-images/intents13.png)
+    [![](implementing-sirikit-images/intents13.png "Aggiungere l'estensione finalità per la soluzione di App")](implementing-sirikit-images/intents13.png#lightbox)
 5. Nel **Esplora**, fare clic su di **riferimenti** cartella dell'estensione finalità appena creato. Verificare il nome del progetto di libreria codice condiviso comune (che l'app è stato creato in precedenza) e fare clic su di **OK** pulsante: 
 
-    [ ![](implementing-sirikit-images/intents14.png "Selezionare il nome del progetto di libreria di codice condiviso comune")](implementing-sirikit-images/intents14.png)
+    [![](implementing-sirikit-images/intents14.png "Selezionare il nome del progetto di libreria di codice condiviso comune")](implementing-sirikit-images/intents14.png#lightbox)
     
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -902,7 +902,7 @@ Configurare l'estensione dell'interfaccia utente intenti `Info.plist` file da ut
 
 Analogamente a qualsiasi estensione App tipica, l'app avrà le chiavi esistenti di `NSExtension` e `NSExtensionAttributes`. Per un'estensione di tipi è un nuovo attributo che deve essere configurato:
 
-[ ![](implementing-sirikit-images/intents03.png "Un nuovo attributo che deve essere configurato")](implementing-sirikit-images/intents03.png)
+[![](implementing-sirikit-images/intents03.png "Un nuovo attributo che deve essere configurato")](implementing-sirikit-images/intents03.png#lightbox)
 
 **IntentsSupported** è obbligatorio ed è costituito da una matrice di nomi di classe finalità che desidera supportare dall'estensione finalità dell'applicazione.
 
@@ -910,13 +910,13 @@ Analogamente a qualsiasi estensione App tipica, l'app avrà le chiavi esistenti 
 
 Per configurare l'estensione dell'interfaccia utente con finalità di `Info.plist` file, fare doppio clic su esso nel **Esplora** per aprirlo e modificarlo. Successivamente, passare al **origine** consente di visualizzare, quindi espandere il `NSExtension` e `NSExtensionAttributes` chiavi nell'editor:
 
-[ ![](implementing-sirikit-images/intents04.png "Le chiavi NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents04.png)
+[![](implementing-sirikit-images/intents04.png "Le chiavi NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents04.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Per configurare l'estensione dell'interfaccia utente con finalità di `Info.plist` file, fare doppio clic su esso nel **Esplora** per aprirlo e modificarlo. Espandere il `NSExtension` e `NSExtensionAttributes` chiavi nell'editor:
 
-[ ![](implementing-sirikit-images/intents04w.png "Chiavi Tthe NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents04w.png)
+[![](implementing-sirikit-images/intents04w.png "Chiavi Tthe NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents04w.png#lightbox)
 
 -----
 
@@ -924,11 +924,11 @@ Espandere il `IntentsSupported` chiave e aggiungere il nome di una classe con fi
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[ ![](implementing-sirikit-images/intents15.png "La chiave INSendMessageIntent")](implementing-sirikit-images/intents15.png)
+[![](implementing-sirikit-images/intents15.png "La chiave INSendMessageIntent")](implementing-sirikit-images/intents15.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](implementing-sirikit-images/intents15w.png "La chiave INSendMessageIntent")](implementing-sirikit-images/intents15w.png)
+[![](implementing-sirikit-images/intents15w.png "La chiave INSendMessageIntent")](implementing-sirikit-images/intents15w.png#lightbox)
 
 -----
 

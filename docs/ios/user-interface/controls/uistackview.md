@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 4555906512ecc36e3387f1b2483753e7f50a51ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 82bcd29a201be01bc8123e313e5a76b82668cb85
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="stack-view"></a>Visualizzazione dello stack
 
@@ -25,11 +26,15 @@ Controllo di visualizzazione dello Stack (`UIStackView`) si avvale di Layout aut
 
 In base alle proprietà di sviluppatore definiti, ad esempio asse, distribuzione, l'allineamento e spaziatura gestire il layout di tutti i sottoviste associata a una visualizzazione dello Stack:
 
-[ ![](uistackview-images/stacked01.png "Diagramma di layout visualizzazione stack")](uistackview-images/stacked01.png)
+[![](uistackview-images/stacked01.png "Diagramma di layout visualizzazione stack")](uistackview-images/stacked01.png#lightbox)
 
 Quando si utilizza un `UIStackView` in un'app xamarin. IOS, lo sviluppatore può definire sottoviste sia all'interno di uno Storyboard nella finestra di progettazione iOS o aggiungendo e rimuovendo sottoviste nel codice c#.
 
 Questo documento è costituito da due parti: un avvio rapido per visualizzare lo stack prima di implementare e quindi alcuni altri dettagli tecnici sul suo funzionamento.
+
+> [!VIDEO https://youtube.com/embed/p3po6507Ip8]
+
+**UIStackView, da [University Xamarin](https://university.xamarin.com/)**
 
 ## <a name="uistackview-quickstart"></a>Guida introduttiva UIStackView
 
@@ -39,11 +44,11 @@ Come una rapida introduzione al `UIStackView` (controllo), occorre creare una se
 
 Avviare un nuovo progetto xamarin e modificare il **Main** file in Generatore del Xcode di interfaccia. In primo luogo, trascinare un singolo **visualizzazione Stack verticale** sul **View Controller**:
 
-[ ![](uistackview-images/quick01.png "Trascinare una singola visualizzazione verticale dello Stack nel Controller di visualizzazione")](uistackview-images/quick01.png)
+[![](uistackview-images/quick01.png "Trascinare una singola visualizzazione verticale dello Stack nel Controller di visualizzazione")](uistackview-images/quick01.png#lightbox)
 
 Nel **controllo attributo**, impostare le opzioni seguenti:
 
-[ ![](uistackview-images/quick02.png "Impostare le opzioni di visualizzazione dello Stack")](uistackview-images/quick02.png)
+[![](uistackview-images/quick02.png "Impostare le opzioni di visualizzazione dello Stack")](uistackview-images/quick02.png#lightbox)
 
 Dove:
 
@@ -61,17 +66,17 @@ Quando si lavora con una visualizzazione dello Stack, è possibile considerare i
 
 Continuare a layout dell'interfaccia dell'app aggiungendo un'etichetta, ImageView, due pulsanti e una visualizzazione Stack orizzontale in modo che risulti simile al seguente:
 
-[ ![](uistackview-images/quick03.png "Layout dell'interfaccia utente visualizzazione Stack")](uistackview-images/quick03.png)
+[![](uistackview-images/quick03.png "Layout dell'interfaccia utente visualizzazione Stack")](uistackview-images/quick03.png#lightbox)
 
 Configurare la visualizzazione Stack orizzontale con le opzioni seguenti:
 
-[ ![](uistackview-images/quick04.png "Configurare le opzioni di visualizzazione Stack orizzontale")](uistackview-images/quick04.png)
+[![](uistackview-images/quick04.png "Configurare le opzioni di visualizzazione Stack orizzontale")](uistackview-images/quick04.png#lightbox)
 
 Poiché non vogliamo l'icona che rappresenta ogni punto"" nella valutazione estensione quando questo viene aggiunto alla visualizzazione Stack orizzontale, è stato impostato il **allineamento** a **Center** e  **Distribuzione** a **riempimento ugualmente**.
 
 Infine, associare le operazioni seguenti **prese** e **azioni**:
 
-[ ![](uistackview-images/quick05.png "Le prese visualizzazione Stack e le azioni")](uistackview-images/quick05.png)
+[![](uistackview-images/quick05.png "Le prese visualizzazione Stack e le azioni")](uistackview-images/quick05.png#lightbox)
 
 ### <a name="populate-a-uistackview-from-code"></a>Popolare un UIStackView dal codice
 
@@ -168,7 +173,7 @@ Con tutte le necessarie elementi dell'interfaccia utente e codice nella posizion
 
 Quando l'utente tocca il **aumenta classificazione** pulsante, un altro a "stella" viene aggiunto alla schermata (fino a un massimo di 5):
 
-[ ![](uistackview-images/intro01.png "Eseguire l'app di esempio")](uistackview-images/intro01.png)
+[![](uistackview-images/intro01.png "Eseguire l'app di esempio")](uistackview-images/intro01.png#lightbox)
 
 Verranno automaticamente centrate e distribuite uniformemente in visualizzazione Stack orizzontale "Stelle". Quando l'utente tocca il **Riduci classificazione** pulsante, a "stella" viene rimosso (fino a quando non sono a sinistra).
 

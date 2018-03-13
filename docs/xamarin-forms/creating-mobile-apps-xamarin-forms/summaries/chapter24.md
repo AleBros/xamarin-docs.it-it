@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 24. Navigazione tra le pagine
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b8eac45c52093dea23c08a19d219fa0bbd8d55ab
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3390a298cd8d9967f0aea2bd9fb5a90830714ba5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Riepilogo del capitolo 24. Navigazione tra le pagine
 
@@ -99,7 +100,7 @@ Se una particolare pagina modale possa essere passata a più volte, è necessari
 
 Il [ **ViewGalleryType** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryType) esempio viene illustrato come utilizzare un `TableView` per elencare gli elementi di menu. Ogni elemento è associato un `Type` oggetto per una pagina particolare. Quando tale elemento è selezionato, il programma crea un'istanza della pagina e passa a esso.
 
-[![La schermata di raccolta del tipo di vista](images/ch24fg21-small.png "TableView elenco di voci di Menu")](images/ch24fg21-large.png "TableView elenco di voci di Menu")
+[![La schermata di raccolta del tipo di vista](images/ch24fg21-small.png "TableView elenco di voci di Menu")](images/ch24fg21-large.png#lightbox "TableView elenco di voci di Menu")
 
 Il [ **ViewGalleryInst** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryInst) esempio è leggermente diversa in quanto il menu contiene istanze di ogni pagina anziché di tipi. Ciò consente di conservare le informazioni da ogni pagina, ma devono essere creata un'istanza di tutte le pagine all'avvio del programma.
 
@@ -174,4 +175,4 @@ Il [ **NoteTaker** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/
 - [Capitolo 24 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch24-Apr2016.pdf)
 - [Esempi di capitolo 24](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)
 - [Navigazione gerarchica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md)
-- [Pagine modale](~/xamarin-forms/app-fundamentals/navigation/modal.md)
+- [Pagine modali](~/xamarin-forms/app-fundamentals/navigation/modal.md)

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b5d3a03324e73b06bd3defe7e6610163c3d1b26d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c021550e17cf8206d59102856a11c72000ad06aa
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-progress-indicators"></a>Utilizzo di indicatori di stato di avanzamento
 
@@ -21,7 +21,7 @@ _Questo articolo descrive la progettazione e utilizzo di indicatori di stato di 
 
 Talvolta potrebbe essere quando l'app Xamarin.tvOS deve caricare nuovo contenuto o eseguire un'operazione di lunga durata di elaborazione. Durante tali periodi, si deve presentare un indicatore di attività o indicatore di stato per informare l'utente che l'app è ancora in esecuzione e per consentire loro alcune indicazioni in merito alla durata dell'attività in esecuzione.
 
-[ ![](progress-indicators-images/intro01.png "Indicatori di stato di esempio")](progress-indicators-images/intro01.png)
+[![](progress-indicators-images/intro01.png "Indicatori di stato di esempio")](progress-indicators-images/intro01.png#lightbox)
 
 <a name="About-Activity-Indicators" />
 
@@ -57,19 +57,19 @@ Il modo più semplice per lavorare con indicatore di stato in un'app Xamarin.tvO
 1. Nel **soluzione riempimento**, fare doppio clic su di `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **indicatore di attività** dal **della casella degli strumenti** e rilasciarla sulla vista: 
 
-    [ ![](progress-indicators-images/activity01.png "Un indicatore di attività")](progress-indicators-images/activity01.png)
+    [![](progress-indicators-images/activity01.png "Un indicatore di attività")](progress-indicators-images/activity01.png#lightbox)
 1. Nel **scheda Widget** del **proprietà riempimento**, è possibile modificare diverse proprietà dell'indicatore di attività, ad esempio il **stile** e **comportamento**: 
 
-    [ ![](progress-indicators-images/activity02.png "La scheda Widget ")](progress-indicators-images/activity02.png)
+    [![](progress-indicators-images/activity02.png "La scheda Widget ")](progress-indicators-images/activity02.png#lightbox)
 1. Trascinare un **Visualizza lo stato di avanzamento** dal **della casella degli strumenti** e rilasciarla sulla vista: 
 
-    [ ![](progress-indicators-images/activity03.png "Una vista stato")](progress-indicators-images/activity03.png)
+    [![](progress-indicators-images/activity03.png "Una vista stato")](progress-indicators-images/activity03.png#lightbox)
 1. Nel **scheda Widget** del **Esplora proprietà**, è possibile modificare diverse proprietà della vista di stato di avanzamento, ad esempio il **stile** e **corso**(percentuale di completamento): 
 
-    [ ![](progress-indicators-images/activity04.png "La scheda Widget")](progress-indicators-images/activity04.png)
+    [![](progress-indicators-images/activity04.png "La scheda Widget")](progress-indicators-images/activity04.png#lightbox)
 1. Infine, assegnare **nomi** ai controlli in modo che è possibile rispondere ad essi nel codice c#. Ad esempio: 
 
-    [ ![](progress-indicators-images/activity05.png "Assegnare un nome")](progress-indicators-images/activity05.png)
+    [![](progress-indicators-images/activity05.png "Assegnare un nome")](progress-indicators-images/activity05.png#lightbox)
 1. Salvare le modifiche.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -77,19 +77,19 @@ Il modo più semplice per lavorare con indicatore di stato in un'app Xamarin.tvO
 1. Nel **Esplora**, fare doppio clic su di `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **indicatore di attività** dal **della casella degli strumenti** e rilasciarla sulla vista: 
 
-    [ ![](progress-indicators-images/activity01-vs.png "Un indicatore di attività")](progress-indicators-images/activity01-vs.png)
+    [![](progress-indicators-images/activity01-vs.png "Un indicatore di attività")](progress-indicators-images/activity01-vs.png#lightbox)
 1. Nel **scheda Widget** del **Esplora proprietà**, è possibile modificare diverse proprietà dell'indicatore di attività, ad esempio il **stile** e **comportamento**: 
 
-    [ ![](progress-indicators-images/activity02-vs.png "La scheda Widget")](progress-indicators-images/activity02-vs.png)
+    [![](progress-indicators-images/activity02-vs.png "La scheda Widget")](progress-indicators-images/activity02-vs.png#lightbox)
 1. Trascinare un **Visualizza lo stato di avanzamento** dal **della casella degli strumenti** e rilasciarla sulla vista: 
 
-    [ ![](progress-indicators-images/activity03-vs.png "Una vista stato")](progress-indicators-images/activity03-vs.png)
+    [![](progress-indicators-images/activity03-vs.png "Una vista stato")](progress-indicators-images/activity03-vs.png#lightbox)
 1. Nel **scheda Widget** del **Esplora proprietà**, è possibile modificare diverse proprietà della vista di stato di avanzamento, ad esempio il **stile** e **corso**(percentuale di completamento): 
 
-    [ ![](progress-indicators-images/activity04-vs.png "La scheda Widget")](progress-indicators-images/activity04-vs.png)
+    [![](progress-indicators-images/activity04-vs.png "La scheda Widget")](progress-indicators-images/activity04-vs.png#lightbox)
 1. Infine, assegnare **nomi** ai controlli in modo che è possibile rispondere ad essi nel codice c#. Ad esempio: 
 
-    [ ![](progress-indicators-images/activity05-vs.png "Assegnare un nome")](progress-indicators-images/activity05-vs.png)
+    [![](progress-indicators-images/activity05-vs.png "Assegnare un nome")](progress-indicators-images/activity05-vs.png#lightbox)
 1. Salvare le modifiche.
 
 -----

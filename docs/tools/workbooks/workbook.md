@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: bd53074fcde25736d37544efc719ecef1110c364
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c111d2f873270eab78eee92edc3d884d1e92fdd8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="interactive-workbooks"></a>Cartelle di lavoro interattive
 
@@ -30,7 +30,7 @@ Le cartelle di lavoro può essere salvati ed è aperto in un secondo momento all
 
 Finestra di modifica del codice fornisce il completamento del codice, la colorazione della sintassi, inline live-diagnostica e supporto di istruzione su più righe.
 
-[ ![](workbook-images/inspector-0.6.0-repl-small.png "Finestra di modifica del codice fornisce il completamento del codice, la colorazione della sintassi, inline live-diagnostica e supporto di istruzione su più righe")](workbook-images/inspector-0.6.0-repl.png)
+[ ![](workbook-images/inspector-0.6.0-repl-small.png "Finestra di modifica del codice fornisce il completamento del codice, la colorazione della sintassi, inline live-diagnostica e supporto di istruzione su più righe")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
 Xamarin le cartelle di lavoro vengono salvati in un `.workbook` file, ovvero un file CommonMark con alcuni metadati nella parte superiore (vedere [tipi di File di cartelle di lavoro](#Workbooks_Files_Types) per ulteriori informazioni su come è possibile salvare le cartelle di lavoro).
 

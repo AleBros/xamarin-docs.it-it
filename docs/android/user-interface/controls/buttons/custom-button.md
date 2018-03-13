@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: f77a9b8d3bb69bb47d973a56aed5ad1d49f9a02d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5131b4d09f01af6a6e8bed28a2df27bc801dfb80
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="custom-button"></a>Pulsante personalizzato
 
@@ -19,7 +19,7 @@ In questa sezione si creerà un pulsante con un'immagine personalizzata invece d
 
 Fare doppio clic su e scaricare i seguenti tre immagini, quindi copiarli il **risorse/drawable** directory del progetto. Saranno usati per i diversi stati.
 
- [![Icona verde Android per lo stato normale](custom-button-images/android-normal.png)](custom-button-images/android-normal.png) [ ![icona Android arancione per lo stato attivo](custom-button-images/android-focused.png)](custom-button-images/android-focused.png) [ ![Android giallo sull'icona stato pressed](custom-button-images/android-pressed.png)](custom-button-images/android-pressed.png)
+ [![Icona verde Android per lo stato normale](custom-button-images/android-normal.png)](custom-button-images/android-normal.png#lightbox) [ ![icona Android arancione per lo stato attivo](custom-button-images/android-focused.png)](custom-button-images/android-focused.png#lightbox) [ ![Android giallo sull'icona stato pressed](custom-button-images/android-pressed.png)](custom-button-images/android-pressed.png#lightbox)
 
 Creare un nuovo file di **risorse/drawable** directory denominata **android_button.xml**. Inserire il codice XML seguente:
 
@@ -38,7 +38,7 @@ Definisce una singola risorsa drawable, che modificherà l'immagine in base allo
 
 
 > [!NOTE]
-> **Nota:** l'ordine dei `<item>` elementi è importante. Quando si fa riferimento questo drawable, il `<item>`s vengono attraversati per determinare quale sia appropriato per lo stato del pulsante corrente.
+> L'ordine dei `<item>` elementi è importante. Quando si fa riferimento questo drawable, il `<item>`s vengono attraversati per determinare quale sia appropriato per lo stato del pulsante corrente.
 > Poiché l'immagine "normale" ultima, viene applicata solo quando le condizioni `android:state_pressed` e `android:state_focused` sono valutate false.
 
 Aprire il **Resources/layout/Main.axml** file e aggiungere il [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) elemento:

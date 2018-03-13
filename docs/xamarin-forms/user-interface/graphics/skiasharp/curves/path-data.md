@@ -4,14 +4,15 @@ description: Definire i percorsi di utilizzo delle stringhe di testo nel formato
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: feb4c5f4c7e7ad3fc5f762786001be9aa57ae718
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: cc21f789d96f9375655766916f80c6f3f524c29d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="svg-path-data"></a>Dati del percorso SVG
 
@@ -216,7 +217,7 @@ public class PathDataHelloPage : ContentPage
 
 Il percorso riempie l'area di disegno, è più ragionevole quando viene visualizzato in modalità orizzontale:
 
-[![](path-data-images/pathdatahello-small.png "Schermata della pagina Hello di percorso dati di tripla")](path-data-images/pathdatahello-large.png "tripla schermata della pagina Hello di percorso dati")
+[![](path-data-images/pathdatahello-small.png "Schermata della pagina Hello di percorso dati di tripla")](path-data-images/pathdatahello-large.png#lightbox "tripla schermata della pagina Hello di percorso dati")
 
 Il **percorso dati Cat** pagina è simile. Entrambi gli oggetti di percorso e di disegno sono definiti come campi di [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe:
 
@@ -287,7 +288,7 @@ public class PathDataCatPage : ContentPage
 
 Di seguito è riportato il programma in esecuzione in tutti e tre le piattaforme:
 
-[![](path-data-images/pathdatacat-small.png "Schermata triplo della pagina percorso dati Cat")](path-data-images/pathdatacat-large.png "tripla schermata della pagina percorso dati Cat")
+[![](path-data-images/pathdatacat-small.png "Schermata triplo della pagina percorso dati Cat")](path-data-images/pathdatacat-large.png#lightbox "tripla schermata della pagina percorso dati Cat")
 
 In genere, quando un `SKPath` oggetto viene definito come un campo, le distribuzioni del percorso devono essere definite nel costruttore o un altro metodo. Quando si utilizzano dati del percorso SVG, tuttavia, si è visto che è possibile specificare il percorso completamente nella definizione del campo.
 
@@ -424,7 +425,7 @@ public class PrettyAnalogClockPage : ContentPage
 
 Un'operazione particolare viene eseguita con le lancette, tuttavia. Perché l'orologio viene aggiornato ogni 16 millisecondi, di `Millisecond` proprietà del `DateTime` valore potenzialmente può essere usato per animare secondo manualmente uno sweep anziché a uno che consente di spostare in collegamenti discreti dal secondo al secondo. Ma questo codice consente lo spostamento da smooth. Utilizza invece di xamarin. Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/) e [ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/) animazione interpolazione funzioni per un tipo diverso di spostamento. Queste funzioni di interpolazione causano le lancette spostare in un modo di più a scatti & #x 2014; ritirare un poco prima che lo spostamento e quindi leggermente aumenti la destinazione, un effetto che purtroppo non possano essere riprodotti in queste schermate statiche:
 
-[![](path-data-images/prettyanalogclock-small.png "Schermata di triplo della pagina piuttosto l'orologio analogico")](path-data-images/prettyanalogclock-large.png "tripla schermata della pagina piuttosto l'orologio analogico")
+[![](path-data-images/prettyanalogclock-small.png "Schermata di triplo della pagina piuttosto l'orologio analogico")](path-data-images/prettyanalogclock-large.png#lightbox "tripla schermata della pagina piuttosto l'orologio analogico")
 
 
 ## <a name="related-links"></a>Collegamenti correlati

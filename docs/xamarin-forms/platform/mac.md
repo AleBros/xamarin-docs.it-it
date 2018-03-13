@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: EEC549E0-F182-4F9C-B2BA-B31D19569AA5
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: bda207796d1019f8188176acce055d782cb9e32d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e8487dc06b3512a0ec0bb1b30393faeab506df60
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="mac-platform-setup"></a>Installazione di piattaforma Mac
 
@@ -20,6 +21,10 @@ ms.lasthandoff: 02/27/2018
 
 Prima di iniziare, creare (o utilizzare un'esistente) progetto xamarin. Forms.
 È possibile aggiungere solo le app Mac usando Visual Studio per Mac.
+
+> [!VIDEO https://youtube.com/embed/mvQ7jzaNseM]
+
+**L'aggiunta di un progetto macOS a xamarin. Forms, da [University Xamarin](https://university.xamarin.com/)**
 
 ## <a name="adding-a-mac-app"></a>Aggiunta di un'App Mac
 
@@ -92,7 +97,7 @@ Seguire queste istruzioni per aggiungere un'app Mac che verrà eseguito su macOS
 
 9. Fare doppio clic su **Main** per modificare in Xcode. Selezionare il **finestra** e _deselezionare_ il **Controller iniziale è** casella di controllo (in questo modo il codice precedente crea una finestra):
 
-  [ ![Deselezionare la casella di controllo è iniziale Controller in Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png)
+  [![Deselezionare la casella di controllo è iniziale Controller in Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
 
   È possibile modificare il sistema di menu dello storyboard per rimuovere gli elementi indesiderati.
 

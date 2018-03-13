@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: cddf3c58020b534abdc1541d967a9a7f5a4d891a
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 440ee997b075b5c89504dcf20171fa3c8713e1ce
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="images"></a>Immagini
 
@@ -79,7 +79,7 @@ var image = new Image { Source = "waterfront.jpg" };
 
 Le schermate seguenti mostrano il risultato della visualizzazione di un'immagine locale in ogni piattaforma:
 
-[ ![ImageSource locale](images-images/local-sml.png "visualizzare un'immagine locale applicazione di esempio")](images-images/local.png "visualizzare un'immagine locale applicazione di esempio")
+[![ImageSource locale](images-images/local-sml.png "visualizzare un'immagine locale applicazione di esempio")](images-images/local.png#lightbox "visualizzare un'immagine locale applicazione di esempio")
 
 Per una maggiore flessibilità di `Device.RuntimePlatform` proprietà può essere utilizzata per selezionare un file di immagine diverso o un percorso per alcune o tutte le piattaforme, come illustrato nell'esempio di codice:
 
@@ -102,7 +102,7 @@ Prima di iOS 9, versioni retina dell'immagine è possibile posizionare il **riso
 
 Immagini Android risoluzione alternativo devono essere inserite in [directory speciale denominata](http://developer.android.com/guide/practices/screens_support.html) nel progetto Android, come illustrato nella schermata seguente:
 
-[![Percorso dell'immagine di risoluzione più Android](images-images/xs-highdpisolution-sml.png "percorso dell'immagine di risoluzione più Android")](images-images/xs-highdpisolution.png "percorso dell'immagine di risoluzione più Android")
+[![Percorso dell'immagine di risoluzione più Android](images-images/xs-highdpisolution-sml.png "percorso dell'immagine di risoluzione più Android")](images-images/xs-highdpisolution.png#lightbox "percorso dell'immagine di risoluzione più Android")
 
 ### <a name="additional-controls-that-display-images"></a>Controlli aggiuntivi che consentono di visualizzare immagini
 
@@ -159,7 +159,7 @@ Non è attualmente presente alcuna conversione implicita per gli identificatori 
 
 Le schermate seguenti mostrano il risultato della visualizzazione di un'immagine incorporata in ogni piattaforma:
 
-[ ![ResourceImageSource](images-images/resource-sml.png "la visualizzazione di un'immagine incorporata di applicazione di esempio")](images-images/resource.png "la visualizzazione di un'immagine incorporata di applicazione di esempio")
+[![ResourceImageSource](images-images/resource-sml.png "la visualizzazione di un'immagine incorporata di applicazione di esempio")](images-images/resource.png#lightbox "la visualizzazione di un'immagine incorporata di applicazione di esempio")
 
 <a name="Embedded_Images_in_Xaml" />
 
@@ -261,7 +261,7 @@ webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.pn
 
 Le schermate seguenti mostrano il risultato della visualizzazione di un'immagine remota in ogni piattaforma:
 
-[![Scaricato ImageSource](images-images/download-sml.png "la visualizzazione di un'immagine scaricata applicazione di esempio")](images-images/download.png "la visualizzazione di un'immagine scaricata applicazione di esempio")
+[![Scaricato ImageSource](images-images/download-sml.png "la visualizzazione di un'immagine scaricata applicazione di esempio")](images-images/download.png#lightbox "la visualizzazione di un'immagine scaricata applicazione di esempio")
 
 <a name="Image_Caching" />
 

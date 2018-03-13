@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/30/2017
-ms.openlocfilehash: bbf20155fe097f0229aa28c1f0d046cb3ef31a63
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 83e58625438a0b50d89ca8dac3e940c8742e5aec
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-android-assets"></a>Utilizzo risorse Android
 
@@ -20,7 +20,6 @@ _Asset_ offrono un modo per includere file arbitrari come testo, xml, i tipi di 
 Asset aggiunti al progetto verrà visualizzato come un file system in grado di leggere da tramite l'applicazione [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/).
 In questo video dimostrativo semplice, per aggiungere un asset di file di testo al progetto, verrà letto tramite `AssetManager`e visualizzarli in un oggetto TextView.
 
-<a name="Add_Asset_to_Project" />
 
 ## <a name="add-asset-to-project"></a>Aggiungere risorse al progetto
 
@@ -36,13 +35,12 @@ Visual Studio deve avere impostato la **azione di compilazione** per il file **A
 
 Visual Studio per Mac necessario impostare il **azione di compilazione** per il file **AndroidAsset**:
 
-[![Impostazione dell'azione di compilazione per AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png)
+[![Impostazione dell'azione di compilazione per AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
 
 -----
 
 Selezionando il corretto **BuildAction** assicura che il file verrà inserito nel file APK in fase di compilazione.
 
-<a name="Reading_Assets" />
 
 ## <a name="reading-assets"></a>La lettura delle risorse
 
@@ -71,7 +69,6 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-<a name="Running_the_Application" />
 
 ## <a name="running-the-application"></a>Esecuzione dell'applicazione
 

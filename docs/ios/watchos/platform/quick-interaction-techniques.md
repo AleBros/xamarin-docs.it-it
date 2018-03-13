@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 75a8e807a68a3fccfa76fc7ba1f260818b25174d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bf93744914a0caf4f6599fc333ae200468d66e48
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quick-interaction-techniques-for-watchos-3"></a>Rapido tecniche di interazione per watchOS 3
 
@@ -77,7 +77,7 @@ Nel codice, risposta all'azione di riconoscimento per gestire l'azione viene att
 
 Per i movimenti discreti, l'azione viene chiamato quando l'azione viene riconosciuto e uno stato (`WKGestureRecognizerState`) viene assegnato come:
 
-[ ![](quick-interaction-techniques-images/quick01.png "Stati di movimento discreti")](quick-interaction-techniques-images/quick01.png)
+[![](quick-interaction-techniques-images/quick01.png "Stati di movimento discreti")](quick-interaction-techniques-images/quick01.png#lightbox)
 
 Tutti i movimenti discreti inizia `Possible` lo stato e transizione in uno di `Failed` o `Recognized` stato. Quando si utilizzano i movimenti discreti, lo sviluppatore in genere non gestione direttamente lo stato. Al contrario, si basano sull'azione di cui viene chiamato quando l'azione viene riconosciuto solo.
 
@@ -85,7 +85,7 @@ Tutti i movimenti discreti inizia `Possible` lo stato e transizione in uno di `F
 
 I movimenti continui sono leggermente diversi dai movimenti discreta, in cui l'azione viene chiamato più volte come viene riconosciuta la combinazione di:
 
-[ ![](quick-interaction-techniques-images/quick02.png "Stati di movimento continua")](quick-interaction-techniques-images/quick02.png)
+[![](quick-interaction-techniques-images/quick02.png "Stati di movimento continua")](quick-interaction-techniques-images/quick02.png#lightbox)
 
 Nuovamente, i movimenti continua viene avviata nel `Possible` sullo stato dello stato, ma il numero degli aggiornamenti. In questo caso lo sviluppatore dovrà prendere in considerazione lo stato del sistema di riconoscimento e l'aggiornamento dell'interfaccia utente dell'applicazione durante la `Changed` fase fino a quando il movimento è infine `Recognized` o `Canceled`.
 
@@ -168,7 +168,7 @@ Apple ha lasciato il compito dello sviluppatore per determinare come i conteggi 
 
 Il segno (`+/-`) del Delta rotazione indica la direzione che l'utente è attivato il chioma digitale:
 
-[ ![](quick-interaction-techniques-images/quick03.png "Il segno del Delta rotazione indica la direzione che l'utente è attivato il chioma digitale")](quick-interaction-techniques-images/quick03.png)
+[![](quick-interaction-techniques-images/quick03.png "Il segno del Delta rotazione indica la direzione che l'utente è attivato il chioma digitale")](quick-interaction-techniques-images/quick03.png#lightbox)
 
 
 Se l'utente scorre backup, verrà restituito WatchKit delta positivo e se lo scorrimento verso il basso, quindi delta negativo viene restituito, indipendentemente da quali orientamento l'utente è che l'orologio in.
@@ -189,15 +189,15 @@ Spetta allo sviluppatore di determinare quando il relativo elemento di interfacc
 
 È la modalità standard che un utente si sposta una visualizzazione tabella in un'app watchOS per scorrere i dati desiderati, toccare su una riga specifica per visualizzare la visualizzazione dettagliata, toccare il pulsante Indietro al termine di visualizzazione dei dettagli e ripetere il processo per qualsiasi altra informazione che il y sono interessati all'interno della tabella:
 
-[ ![](quick-interaction-techniques-images/quick04.png "Lo spostamento tra una tabella e la visualizzazione dettagli")](quick-interaction-techniques-images/quick04.png)
+[![](quick-interaction-techniques-images/quick04.png "Lo spostamento tra una tabella e la visualizzazione dettagli")](quick-interaction-techniques-images/quick04.png#lightbox)
 
 Nuovo per watchOS 3, lo sviluppatore può attivare il Paging verticale sui controlli di visualizzazione tabella. Con questa funzionalità è abilitata, l'utente può scorrere per individuare una riga di tabella e scegliere la riga per visualizzare il dettaglio come prima. Tuttavia, è possibile ora scorrere rapidamente per selezionare la riga successiva nella tabella o in basso per selezionare la riga precedente (oppure utilizzare il chioma digitale), tutto senza dover tornare alla visualizzazione tabella innanzitutto:
 
-[ ![](quick-interaction-techniques-images/quick05.png "Lo spostamento tra una tabella e la visualizzazione di dettaglio e scorrimento rapido su e giù per spostarsi tra le altre righe")](quick-interaction-techniques-images/quick05.png)
+[![](quick-interaction-techniques-images/quick05.png "Lo spostamento tra una tabella e la visualizzazione di dettaglio e scorrimento rapido su e giù per spostarsi tra le altre righe")](quick-interaction-techniques-images/quick05.png#lightbox)
 
 Per abilitare questa modalità, aprire Storyboard dell'app watchOS in Xcode per la modifica, selezionare la visualizzazione della tabella e controllare il **Paging dettaglio verticale** casella di controllo:
 
-[ ![](quick-interaction-techniques-images/quick06.png "Selezionare la casella di controllo Paging dettaglio verticale")](quick-interaction-techniques-images/quick06.png)
+[![](quick-interaction-techniques-images/quick06.png "Selezionare la casella di controllo Paging dettaglio verticale")](quick-interaction-techniques-images/quick06.png#lightbox)
 
 Verificare che la tabella utilizza Segues per visualizzare la visualizzazione dettagliata e salvare le modifiche allo Storyboard e tornare a Visual Studio per Mac per la sincronizzazione.
 
@@ -313,7 +313,7 @@ Un'esperienza di interazione rapido ben progettata assegnare all'utente il livel
 
 Dove in particolare, questo diventa un problema è quando l'applicazione di espressioni di controllo è eseguire qualsiasi tipo di connessione di rete o condividere informazioni con app iPhone complementare. Questo spesso può causare un indicatore di attesa durante la transazione, che non è auspicabile durante un'interazione rapida. Vedere l'esempio seguente:
 
-[ ![](quick-interaction-techniques-images/quick07.png "Diagramma dell'espressione di controllo app esegue una connessione di rete e condivisione di informazioni con app iPhone complementare")](quick-interaction-techniques-images/quick07.png)
+[![](quick-interaction-techniques-images/quick07.png "Diagramma dell'espressione di controllo app esegue una connessione di rete e condivisione di informazioni con app iPhone complementare")](quick-interaction-techniques-images/quick07.png#lightbox)
 
 1. L'utente sceglie un elemento per l'acquisto nell'orologio.
 2. Essi toccare il pulsante di acquisto.
@@ -325,7 +325,7 @@ Dal momento in cui che l'utente tocca il pulsante di acquisto fino a quando la t
 
 Utilizza modello suggerito di Apple, esaminare nuovamente la stessa interazione rapido:
 
-[ ![](quick-interaction-techniques-images/quick08.png "Diagramma del modello suggerito mele")](quick-interaction-techniques-images/quick08.png)
+[![](quick-interaction-techniques-images/quick08.png "Diagramma del modello suggerito mele")](quick-interaction-techniques-images/quick08.png#lightbox)
 
 1. L'utente sceglie un elemento per l'acquisto nell'orologio.
 2. Essi toccare il pulsante di acquisto.

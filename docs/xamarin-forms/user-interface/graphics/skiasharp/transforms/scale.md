@@ -4,14 +4,15 @@ description: Individuare la trasformazione di scala SkiaSharp per ridimensionare
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 3ea498b3672c0b9ef4efeff7ec5981dca5a36912
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: feecfc923903a20332bf3a1a188ab9d7cd2ce1c0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-scale-transform"></a>La trasformazione di scala
 
@@ -103,7 +104,7 @@ Ci si potrebbe chiedere: come i fattori di scala influiscono sul valore restitui
 
 Come si può notare, tutti gli elementi creato dopo il `Scale` chiamare aumenta proporzionalmente:
 
-[![](scale-images/basicscale-small.png "Schermata di triplo della pagina base scala")](scale-images/basicscale-large.png "tripla schermata della pagina per la scalabilità di base")
+[![](scale-images/basicscale-small.png "Schermata di triplo della pagina base scala")](scale-images/basicscale-large.png#lightbox "tripla schermata della pagina per la scalabilità di base")
 
 Il testo, la larghezza della linea tratteggiata, la lunghezza dei trattini in tale riga, l'arrotondamento degli angoli e il margine di 10 pixel tra i bordi superiore e sinistro dell'area di disegno e il rettangolo arrotondato sottoposte tutti i fattori di scala stesso.
 
@@ -165,7 +166,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 È posizionato nell'angolo superiore sinistro del rettangolo arrotondato `margin` pixel dal bordo sinistro dell'area di disegno e `margin` pixel dal bordo superiore. Gli ultimi due argomenti per il `Scale` metodo impostati per tali valori oltre la larghezza e altezza del testo, che è anche la larghezza e altezza del rettangolo arrotondato. Ciò significa che tutte è rispetto al centro del rettangolo:
 
-[![](scale-images/centeredscale-small.png "Schermata triplo della pagina centrata scala")](scale-images/centeredscale-large.png "tripla schermata della pagina scala centrata")
+[![](scale-images/centeredscale-small.png "Schermata triplo della pagina centrata scala")](scale-images/centeredscale-large.png#lightbox "tripla schermata della pagina scala centrata")
 
 Il `Slider` elementi in questo programma dispongono di un intervallo di & #x 2013; 10 a 10. Come si può notare, i valori negativi (ad esempio in di Android schermata al centro) la scalabilità verticale provocare capovolgere intorno all'asse orizzontale che passa attraverso il centro della scala degli oggetti. I valori negativi di (ad esempio la schermata di Windows a destra) la scalabilità orizzontale che gli oggetti da capovolgere intorno all'asse verticale che passa attraverso il centro della scala.
 
@@ -246,7 +247,7 @@ using (SKPaint strokePaint = new SKPaint
 
 Il `pathBounds` rettangolo viene ottenuto nella parte superiore di questo codice e quindi utilizzato in un secondo momento con la larghezza e l'altezza dell'area di disegno nel `Scale` chiamare. Che chiamata autonomamente ridimensionerà le coordinate del percorso quando è sottoposto a rendering per il `DrawPath` verrà centrata chiamata ma stella nell'angolo superiore destro dell'area di disegno. Deve essere spostato verso il basso e a sinistra. Si tratta del processo della `Translate` chiamare. Queste due proprietà di `pathBounds` sono circa -100, pertanto i fattori di conversione sono circa 100. Poiché il `Translate` viene chiamata dopo il `Scale` chiama, tali valori vengono ridimensionati in modo efficace per i fattori di scala, in modo spostare il centro della stella il centro dell'area di disegno:
 
-[![](scale-images/anisotropicscaling-small.png "Schermata triplo della pagina scalabilità anisotropico")](scale-images/anisotropicscaling-large.png "tripla schermata della pagina scalabilità anisotropico")
+[![](scale-images/anisotropicscaling-small.png "Schermata triplo della pagina scalabilità anisotropico")](scale-images/anisotropicscaling-large.png#lightbox "tripla schermata della pagina scalabilità anisotropico")
 
 Un altro modo, si pensi di `Scale` e `Translate` chiamate consiste nel determinare l'effetto in sequenza inversa: il `Translate` chiamata passa il percorso in modo che diventi completamente visibile ma orientato nell'angolo superiore sinistro dell'area di disegno. Il `Scale` metodo quindi effettua tale stella maggiore rispetto all'angolo superiore sinistro.
 
@@ -289,7 +290,7 @@ using (SKPaint textPaint = new SKPaint
 
 Si tratta di una logica simile, e il testo viene espanso alle dimensioni della pagina di base del rettangolo di limiti di testo restituiti da `MeasureText` (che è leggermente maggiore il testo effettivo):
 
-[![](scale-images/anisotropictext-small.png "Schermata triplo della pagina di prova anisotropico")](scale-images/anisotropictext-large.png "tripla schermata della pagina di prova anisotropico")
+[![](scale-images/anisotropictext-small.png "Schermata triplo della pagina di prova anisotropico")](scale-images/anisotropictext-large.png#lightbox "tripla schermata della pagina di prova anisotropico")
 
 Se si desidera mantenere le proporzioni degli oggetti grafici, sarà possibile utilizzare il ridimensionamento isotropico. Il **scalabilità isotropico** viene illustrata questa pagina per la stella a cui punta 11. Concettualmente, i passaggi per la visualizzazione di un oggetto grafico al centro della pagina con scalabilità isotropico sono:
 
@@ -338,7 +339,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Il codice visualizza anche la stella dieci volte, ogni volta diminuendo il ridimensionamento fattori 10% e progressivamente modificando il colore da rosso a blu:
 
-[![](scale-images/isotropicscaling-small.png "Schermata triplo della pagina scalabilità isotropico")](scale-images/isotropicscaling-large.png "tripla schermata della pagina scalabilità isotropico")
+[![](scale-images/isotropicscaling-small.png "Schermata triplo della pagina scalabilità isotropico")](scale-images/isotropicscaling-large.png#lightbox "tripla schermata della pagina scalabilità isotropico")
 
 
 ## <a name="related-links"></a>Collegamenti correlati

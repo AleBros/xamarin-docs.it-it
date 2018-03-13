@@ -6,11 +6,11 @@ ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 4a83afca753d1131e3486004443f9c4a895f6fbc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a0873c6b902e29174da5e27a09e8f580d6d69eb7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="debugging-integrations"></a>Integrazioni debug
 
@@ -43,11 +43,11 @@ defaults write com.xamarin.Inspector WebKitDeveloperExtras -bool true
 
 e quindi riavviare le cartelle di lavoro di Xamarin. Una volta eseguita questa operazione, dovrebbe essere **controllare elemento** visualizzato il menu di scelta rapida e un nuovo **Developer** riquadro sarà disponibile nelle preferenze di cartelle di lavoro. Questa opzione consente di scegliere se si desidera che gli strumenti di sviluppo aperti all'avvio:
 
-[![Riquadro Developer](debugging-images/developer-pane-small.png)](debugging-images/developer-pane.png)
+[![Riquadro Developer](debugging-images/developer-pane-small.png)](debugging-images/developer-pane.png#lightbox)
 
 Questa preferenza viene anche solo il riavvio, sarà necessario riavviare il client di cartelle di lavoro affinché abbia effetto sulle nuove cartelle di lavoro. Gli strumenti di sviluppo tramite il menu di scelta rapida o le preferenze per l'attivazione verrà visualizzata l'interfaccia utente familiare di Safari:
 
-[![Strumenti di sviluppo Safari](debugging-images/mac-dev-tools.png)](debugging-images/mac-dev-tools.png)
+[![Strumenti di sviluppo Safari](debugging-images/mac-dev-tools.png)](debugging-images/mac-dev-tools.png#lightbox)
 
 Per informazioni sull'utilizzo di strumenti di sviluppo di Safari, vedere il [documentazione controllo WebKit][webkit-docs].
 
@@ -61,6 +61,6 @@ C:\Windows\System32\F12\F12Chooser.exe
 
 Selezione F12 esecuzione e si dovrebbe essere l'istanza incorporata che alimenta area client di cartelle di lavoro nell'elenco. Scegliere e la familiarità F12 verranno visualizzati gli strumenti di debug di Internet Explorer, collegata al client:
 
-[![Strumenti F12](debugging-images/windows-dev-tools.png)](debugging-images/windows-dev-tools.png)
+[![Strumenti F12](debugging-images/windows-dev-tools.png)](debugging-images/windows-dev-tools.png#lightbox)
 
 [webkit-docs]: https://trac.webkit.org/wiki/WebInspector

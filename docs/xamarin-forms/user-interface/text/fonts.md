@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 22a0b0f5df5a44f2409a59b26eb841b97c920d8b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 771e1607bc4e6be8f0991e159b5d34f6d4ea9c02
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="fonts"></a>Tipi di carattere
 
@@ -181,7 +181,7 @@ Quando si specifica un tipo di carattere personalizzato, è sempre consigliabile
 
 Utilizza un carattere diverso da caratteri tipografici predefiniti richiede alcune specifiche della piattaforma di codifica. Questa schermata mostra il tipo di carattere personalizzato **astice** da [tipi di carattere open source di Google](https://www.google.com/fonts) sottoposti a rendering in iOS, Android e Windows Phone con xamarin. Forms.
 
- [ ![Tipo di carattere personalizzato in iOS e Android](fonts-images/custom-sml.png "esempio tipi di carattere personalizzato")](fonts-images/custom.png "esempio tipi di carattere personalizzato")
+ [![Tipo di carattere personalizzato in iOS e Android](fonts-images/custom-sml.png "esempio tipi di carattere personalizzato")](fonts-images/custom.png#lightbox "esempio tipi di carattere personalizzato")
 
 Di seguito sono descritti i passaggi necessari per ogni piattaforma. Quando si includono i file di tipo di carattere personalizzato con un'applicazione, assicurarsi di verificare che il tipo di carattere licenza per la distribuzione.
 
@@ -229,7 +229,7 @@ new Label
 > [!NOTE]
 > Si noti che il nome di file di tipo di carattere e carattere potrebbe essere diversi. Per individuare il nome del carattere in Windows, il file ttf e scegliere **anteprima**. Il nome del carattere può quindi essere determinato dalla finestra di anteprima.
 
-Il codice comune per l'applicazione è stato completato. Il codice di composizione telefonica specifico della piattaforma verrà ora implementato come oggetto [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
+Il codice comune per l'applicazione è ora completo. Il codice di composizione telefonica specifico della piattaforma verrà ora implementato come oggetto [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
 ### <a name="xaml"></a>XAML
 

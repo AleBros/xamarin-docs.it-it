@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: cc4407be9dee7e19dbf1f3cc03b3b88191717e6f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0c68d2cfd43eb535fe2e02b5662250cb6e453ddd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilizzo di estensioni di Markup XAML
 
@@ -137,7 +137,7 @@ Nell'esempio finale viene visualizzato il `Device.RuntimePlatform` valore. Il `E
 
 Di seguito è riportato l'esempio in esecuzione in tutti e tre le piattaforme:
 
-[![x:Static Demo](consuming-images/staticdemo-small.png "x:Static Demo")](consuming-images/staticdemo-large.png "x:Static Demo")
+[![x:Static Demo](consuming-images/staticdemo-small.png "x:Static Demo")](consuming-images/staticdemo-large.png#lightbox "x:Static Demo")
 
 <a name="reference" />
 
@@ -181,7 +181,7 @@ Il **X:Reference Demo** pagina mostra due usi di `x:Reference` con le associazio
 
 Entrambi `x:Reference` espressioni utilizzano la versione abbreviata del `ReferenceExtension` nome della classe ed eliminare il `Name=` fa parte dell'espressione. Nel primo esempio, il `x:Reference` estensione di markup è incorporato nel `Binding` estensione di markup. Si noti che il `Source` e `StringFormat` impostazioni sono separate da virgole. Di seguito è riportato il programma in esecuzione in tutti e tre le piattaforme:
 
-[![X:Reference Demo](consuming-images/referencedemo-small.png "Demo X:Reference")](consuming-images/referencedemo-large.png "X:Reference Demo")
+[![X:Reference Demo](consuming-images/referencedemo-small.png "Demo X:Reference")](consuming-images/referencedemo-large.png#lightbox "X:Reference Demo")
 
 <a name="type" />
 
@@ -236,7 +236,7 @@ Si tratta come menu di navigazione `MainPage` nel **le estensioni di Markup** fu
 
 Di seguito è la pagina principale di apertura **le estensioni di Markup**:
 
-[![Main pagina](consuming-images/mainpage-small.png "Main pagina")](consuming-images/mainpage-large.png "Main pagina")
+[![Main pagina](consuming-images/mainpage-small.png "Main pagina")](consuming-images/mainpage-large.png#lightbox "Main pagina")
 
 Ogni `CommandParameter` è impostata su un `x:Type` estensione di markup che fa riferimento a una delle altre pagine. Il `Command` proprietà è associata a una proprietà denominata `NavigateCommand`. Questa proprietà è definita nel `MainPage` file code-behind:
 
@@ -319,7 +319,7 @@ public partial class TypeDemoPage : ContentPage
 
 Il metodo che viene eseguita quando un `Button` viene premuto crea una nuova istanza dell'argomento, imposta relativo `VerticalOptions` proprietà e lo aggiunge al `StackLayout`. I tre `Button` elementi condividono quindi la pagina con le viste create in modo dinamico:
 
-[![X:Type Demo](consuming-images/typedemo-small.png "X:Type Demo")](consuming-images/typedemo-large.png "X:Type Demo")
+[![X:Type Demo](consuming-images/typedemo-small.png "X:Type Demo")](consuming-images/typedemo-large.png#lightbox "X:Type Demo")
 
 <a name="array" />
 
@@ -376,7 +376,7 @@ Il **X:Array Demo** pagina viene illustrato come utilizzare `x:Array` per aggiun
 
 Il `ViewCell` creato un semplice `BoxView` per ogni voce di colore:
 
-[![X:Array Demo](consuming-images/arraydemo-small.png "X:Array Demo")](consuming-images/arraydemo-large.png "X:Array Demo")
+[![X:Array Demo](consuming-images/arraydemo-small.png "X:Array Demo")](consuming-images/arraydemo-large.png#lightbox "X:Array Demo")
 
 Esistono diversi modi per specificare i singoli `Color` elementi di questa matrice. È possibile utilizzare un `x:Static` estensione di markup:
 
@@ -449,7 +449,7 @@ Quindi si scopre che per uno del `Label` elementi, si desidera che tutte le impo
 
 Di seguito è riportato il programma in esecuzione su tre piattaforme:
 
-[![Demo di x: Null](consuming-images/nulldemo-small.png "x: Null Demo")](consuming-images/nulldemo-large.png "Demo x: Null")
+[![Demo di x: Null](consuming-images/nulldemo-small.png "x: Null Demo")](consuming-images/nulldemo-large.png#lightbox "Demo x: Null")
 
 Si noti che quattro del `Label` elementi hanno un tipo di carattere serif, ma il centro `Label` ha il tipo di carattere sans-serif predefinito.
 
@@ -462,6 +462,6 @@ Se è stato riscontrato necessità di un'estensione di markup XAML che non è di
 
 - [Estensioni di markup (esempio)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 - [Capitolo di estensioni di markup XAML di libro xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
-- [Dizionari delle risorse](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Dizionari di risorse](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Stili dinamici](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Data binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)

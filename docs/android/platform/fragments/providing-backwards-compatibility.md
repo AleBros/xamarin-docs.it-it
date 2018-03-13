@@ -7,32 +7,31 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/12/2017
-ms.openlocfilehash: f1567815ec342a958b48ec4801e2918f2981de3d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 670ec465843bbe819b41a53fff71b01ab78b0059
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Fornisce la compatibilità con il pacchetto di supporto Android
 
 L'utilità dei frammenti sarà limitato con le versioni precedenti senza la compatibilità con pre-Android dispositivi (API livello 11) 3.0. Per fornire questa funzionalità, introdotta Google il [libreria di supporto](http://developer.android.com/sdk/compatibility-library.html) (denominato originariamente il *Android Compatibility Library* quando è stato rilasciato) quale backports alcune delle API di versioni più recenti di Android alle versioni precedenti di Android. È il pacchetto di supporto Android che consente ai dispositivi che eseguono Android 2.3.3 1.6 Android (API livello 4). (Livello API 10).
 
 > [!NOTE]
-> **Nota**: solo il `ListFragment` e `DialogFragment` sono disponibili tramite il pacchetto di supporto Android. Nessuno degli altri frammenti sottoclassi, ad esempio il `PreferenceFragment,` sono supportati nel pacchetto di supporto Android. Non funzionerà in 3.0 applicazioni pre-Android. 
+> Solo il `ListFragment` e `DialogFragment` sono disponibili tramite il pacchetto di supporto Android. Nessuno degli altri frammenti sottoclassi, ad esempio il `PreferenceFragment,` sono supportati nel pacchetto di supporto Android. Non funzionerà in 3.0 applicazioni pre-Android. 
 
-<a name="Adding_the_Support_Package" /> 
 
 ## <a name="adding-the-support-package"></a>Aggiunta del pacchetto di supporto
 
 Il pacchetto di supporto Android non viene aggiunto automaticamente a un'applicazione di xamarin. Xamarin offre il [pacchetto NuGet di libreria di supporto Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) per semplificare l'aggiunta di raccolte di supporto per un'applicazione di xamarin. Per includere i pacchetti di supporto del xamarin applicazione includono il [libreria di supporto Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) componente nel progetto xamarin, come illustrato nella schermata seguente: 
 
-[![Pacchetto di schermata della libreria di supporto Android v4 da aggiungere al progetto](providing-backwards-compatibility-images/02.png)](providing-backwards-compatibility-images/02.png)
+[![Pacchetto di schermata della libreria di supporto Android v4 da aggiungere al progetto](providing-backwards-compatibility-images/02.png)](providing-backwards-compatibility-images/02.png#lightbox)
 
 Questi passaggi sono stati eseguiti, diventa possibile utilizzare frammenti nelle versioni precedenti di Android. Le API di frammento funzionerà ora la stessa in queste versioni precedenti, con le eccezioni seguenti: 
 
 -   **Modificare la versione minima di Android** &ndash; l'applicazione non richiede più la destinazione Android 3.0 o versione successiva, come illustrato di seguito: 
 
-    [![Schermata di minimo Android destinazione viene impostata nella proprietà dell'applicazione](providing-backwards-compatibility-images/03.png)](providing-backwards-compatibility-images/03.png)
+    [![Schermata di minimo Android destinazione viene impostata nella proprietà dell'applicazione](providing-backwards-compatibility-images/03.png)](providing-backwards-compatibility-images/03.png#lightbox)
 
 -   **Estendere FragmentActivity** &ndash; l'attività che ospitano frammenti ora deve ereditare da `Android.Support.V4.App.FragmentActivity` e non da `Android.App.Activity` . 
 

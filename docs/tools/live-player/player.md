@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 6ae0439566387e22d939ede83e6b4cb5c1a5a8fe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6b0d62a9026c1248a66166e75ed41bb0148547a6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarin-live-player-app"></a>App di Windows Media Player in tempo reale di Xamarin
 
@@ -20,9 +20,15 @@ ms.lasthandoff: 02/27/2018
 
 ## <a name="get-the-app"></a>Ottenere l'App
 
-Xamarin Player in tempo reale sono disponibili da iOS App Store e Google Play:
+### <a name="xamarin-live-player-for-android"></a>Xamarin Player in tempo reale per Android
+Xamarin Player in tempo reale è disponibile per Android da Google Play:
 
-[ ![Scaricare l'App Store IOS](player-images/app-store-badge.svg)](https://itunes.apple.com/us/app/xamarin-live-player/id1228841832?ls=1&mt=8) [ ![disponibile in Google Play](player-images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
+[ ![Disponibile su Google Play](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
+
+Per i dispositivi Android senza Google Play Live Xamarin Player è disponibile tramite [HockeyApp](https://aka.ms/xlp-hockeyapp) distribuzione. Inoltre, l'anteprima compilazioni per Android possono essere installati direttamente da Google Play dalla scelta di utilizzare il [programma beta aperto](https://play.google.com/apps/testing/com.xamarin.live)
+
+### <a name="xamarin-live-player-for-ios"></a>Xamarin Player in tempo reale per iOS
+Che incoraggia la collaborazione agli utenti di creare un join di [app Xamarin Player Live _iOS anteprima_ ](https://aka.ms/liveplayeralpha) per accedere rapidamente ai miglioramenti più aggiornati tramite TestFlight.
 
 
 

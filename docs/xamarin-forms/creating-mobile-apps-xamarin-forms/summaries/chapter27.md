@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 27. Renderer personalizzato
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0c1dc9ba5cf382551a1142110c68d16421db07e4
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 6d7c2b17e9596b7d2dd26aaf77cf13f7f8086cd5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>Riepilogo del capitolo 27. Renderer personalizzato
 
@@ -66,7 +67,7 @@ Il [ `HelloViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples
 
 Tutti i `ViewRenderer` derivati contengono un `ExportRenderer` attributo a livello di assembly che associa il `HelloView` classe con la particolare `HelloViewRenderer` classe. Ecco come xamarin. Forms individua renderer nei progetti per piattaforma:
 
-[![Schermata di triplo della vista Hello](images/ch27fg02-small.png "renderer personalizzati")](images/ch27fg02-large.png "renderer personalizzati")
+[![Schermata di triplo della vista Hello](images/ch27fg02-small.png "renderer personalizzati")](images/ch27fg02-large.png#lightbox "renderer personalizzati")
 
 ## <a name="renderers-and-properties"></a>Renderer e proprietà
 
@@ -89,7 +90,7 @@ Il `OnElementPropertyChanged` override, pertanto è possibile trasferire il `Col
 
 Il [ **EllipseDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/EllipseDemo) classe Visualizza alcuni di questi `EllipseView` oggetti:
 
-[![Schermata triplo della Demo ellisse](images/ch27fg03-small.png "renderer personalizzati EllipseView")](images/ch27fg03-large.png "renderer personalizzati EllipseView")
+[![Schermata triplo della Demo ellisse](images/ch27fg03-small.png "renderer personalizzati EllipseView")](images/ch27fg03-large.png#lightbox "renderer personalizzati EllipseView")
 
 Il [ **BouncingBall** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/BouncingBall) aperture un `EllipseView` off i lati della schermata.
 
@@ -113,4 +114,4 @@ Il [ **StepSliderDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/
 
 - [Capitolo 27 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf)
 - [Esempi di capitolo 27](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27)
-- [Renderer personalizzato](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
+- [Renderer personalizzati](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 040a5979339ed12f212f932f3b7e51cf48a9d382
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d9e38f055414ff0eca70df4a4e38aa959b7d7237
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automatico con la finestra di progettazione Xamarin iOS
 
@@ -54,7 +54,7 @@ Per impostazione predefinita, vincoli non vengono creati o visibile nell'area di
 
 ## <a name="constraints-toolbar"></a>I vincoli sulla barra degli strumenti
 
- [ ![](designer-auto-layout-images/toolbarnew.png "I comandi di Menu di scelta")](designer-auto-layout-images/toolbarnew.png)
+ [![](designer-auto-layout-images/toolbarnew.png "I comandi di Menu di scelta")](designer-auto-layout-images/toolbarnew.png#lightbox)
 
 La barra degli strumenti vincoli è stata aggiornata e ora è costituito da due parti principali:
 
@@ -83,7 +83,7 @@ Definiscono gli handle a forma di T 4 su ciascun lato dell'elemento di *top*, *d
 
 Per creare un vincolo, scegliere un handle e trascinarlo in un punto qualsiasi nell'area di progettazione. Quando si avvia l'operazione di trascinamento, una serie di linee o caselle verdi verrà visualizzato nell'area di indica ciò che è possibile vincolare. Nella schermata seguente, ad esempio, si sta vincolare il lato superiore del pulsante centrale:
 
- [ ![](designer-auto-layout-images/image07.png "Vincolare il lato superiore del pulsante centrale")](designer-auto-layout-images/image07.png)
+ [![](designer-auto-layout-images/image07.png "Vincolare il lato superiore del pulsante centrale")](designer-auto-layout-images/image07.png#lightbox)
 
 Si noti tre linee tratteggiate verde tra gli altri due pulsanti. Linee verdi indicano *aree di rilascio*, o gli attributi di altri elementi a cui è possibile vincolare. Nella schermata precedente, gli altri due pulsanti offrono 3 aree di rilascio verticale ( *inferiore*, *centerY*, *top*) per vincolare il pulsante. Visualizzazione controller offre un vincolo nella parte superiore della visualizzazione e la casella di colore verde a tinta unita significa che il controller Vista offre un vincolo sulla Guida superiore di sotto, significa che la linea tratteggiata verde nella parte superiore della visualizzazione.
 
@@ -98,13 +98,13 @@ Tre sezioni introducono utilizzo dei diversi tipi di vincoli.
 
 Con i vincoli di dimensione - *altezza* e *larghezza* -sono disponibili due opzioni. La prima consiste nel trascinare il quadratino per limitare a dimensioni di un elemento adiacente, come illustrato nell'esempio precedente. L'altra opzione è necessario fare doppio clic sull'handle per creare un vincolo di self. Ciò consente di specificare un valore di dimensione costante, come illustrato nella schermata riportata di seguito:
 
- [ ![](designer-auto-layout-images/sizec.png "Trascinare il quadratino per limitare a dimensioni di un elemento adiacente, come illustrato di seguito")](designer-auto-layout-images/sizec.png)
+ [![](designer-auto-layout-images/sizec.png "Trascinare il quadratino per limitare a dimensioni di un elemento adiacente, come illustrato di seguito")](designer-auto-layout-images/sizec.png#lightbox)
 
 ### <a name="center-constraints"></a>Vincoli Center
 
 L'handle quadrato creerà un *centerX* o *centerY* vincolo, a seconda del contesto. Trascinare il quadratino si illuminerà gli altri elementi di offrire entrambe le aree di rilascio verticale e orizzontale, come illustrato nella schermata riportata di seguito:
 
- [ ![](designer-auto-layout-images/centerc.png "Vincoli Center")](designer-auto-layout-images/centerc.png)
+ [![](designer-auto-layout-images/centerc.png "Vincoli Center")](designer-auto-layout-images/centerc.png#lightbox)
 
 Se si sceglie un'area di rilascio verticale, un *centerY* vincolo verrà creato. Se si sceglie un'area di rilascio orizzontale, il vincolo verrà basato su *centerX*.
 
@@ -112,17 +112,17 @@ Se si sceglie un'area di rilascio verticale, un *centerY* vincolo verrà creato.
 
 Per creare sia l'allineamento e vincoli relativi alle dimensioni l'uguaglianza tra due elementi, è possibile selezionare gli elementi da una barra degli strumenti superiore per specificare - nell'ordine: l'allineamento orizzontale, l'allineamento verticale e predicati di uguaglianza di dimensioni, come illustrato nella schermata riportata di seguito:
 
- [ ![](designer-auto-layout-images/image06.png "Vincoli combinational")](designer-auto-layout-images/image06.png)
+ [![](designer-auto-layout-images/image06.png "Vincoli combinational")](designer-auto-layout-images/image06.png#lightbox)
 
 ### <a name="visualizing-and-editing-constraints"></a>Visualizzazione e la modifica di vincoli
 
 Quando si aggiunge un vincolo, che verrà visualizzato nella finestra di progettazione come una linea blu quando si seleziona un elemento:
 
- [ ![](designer-auto-layout-images/image09.png "Visualizzazione dei vincoli")](designer-auto-layout-images/image09.png)
+ [![](designer-auto-layout-images/image09.png "Visualizzazione dei vincoli")](designer-auto-layout-images/image09.png#lightbox)
 
 È possibile selezionare un vincolo facendo clic su una riga blu e la modifica dei valori di vincolo direttamente nel Pannello proprietà. In alternativa, fare doppio clic su una linea blu verrà visualizzata una popover che consente di modificare i valori direttamente nella finestra di progettazione:
 
- [ ![](designer-auto-layout-images/image08.png "La modifica di vincoli")](designer-auto-layout-images/image08.png)
+ [![](designer-auto-layout-images/image08.png "La modifica di vincoli")](designer-auto-layout-images/image08.png#lightbox)
 
 ## <a name="constraint-issues"></a>Problemi di vincolo
 
@@ -139,27 +139,27 @@ In questa sezione vengono illustrati i tre problemi elencati in precedenza e for
 
 I vincoli in conflitto vengono contrassegnati in rosso e un sono di avviso. Passaggio del mouse sui simboli di avviso viene visualizzata una popover con informazioni sul conflitto:
 
- [ ![](designer-auto-layout-images/image11.png "I vincoli in conflitto avviso")](designer-auto-layout-images/image11.png)
+ [![](designer-auto-layout-images/image11.png "I vincoli in conflitto avviso")](designer-auto-layout-images/image11.png#lightbox)
 
 ### <a name="underconstrained-items"></a>Elementi definendo alcuni vincoli
 
 Definendo alcuni vincoli, gli elementi vengono visualizzati in arancione e attivano l'aspetto di un'icona marcatore arancione nella barra di oggetto del controller di visualizzazione:
 
- [ ![](designer-auto-layout-images/image02.png "Definendo alcuni vincoli, gli elementi vengono visualizzati in arancione")](designer-auto-layout-images/image02.png)
+ [![](designer-auto-layout-images/image02.png "Definendo alcuni vincoli, gli elementi vengono visualizzati in arancione")](designer-auto-layout-images/image02.png#lightbox)
 
 Se si fa clic sull'icona tale marcatore, è possibile ottenere informazioni sugli elementi definendo alcuni vincoli nella scena e risolvere i problemi mediante uno completamente vincoli li o rimuovendo i vincoli, come illustrato nella schermata riportata di seguito:
 
- [ ![](designer-auto-layout-images/image10.png "Correzione elementi definendo alcuni vincoli")](designer-auto-layout-images/image10.png)
+ [![](designer-auto-layout-images/image10.png "Correzione elementi definendo alcuni vincoli")](designer-auto-layout-images/image10.png#lightbox)
 
 ### <a name="frame-misplacement"></a>Frame Misplacement
 
 Misplacement frame Usa lo stesso codice colore come elementi definendo alcuni vincoli. L'elemento verrà sempre rappresentato nell'area dell'utilizzando il relativo frame nativo, ma nel caso di un misplacement frame un rettangolo rosso contrassegnerà in cui l'elemento terminerà quando viene eseguita l'applicazione, come illustrato nella schermata riportata di seguito:
 
- [ ![](designer-auto-layout-images/image05.png "Visualizzazione di Frame Misplacement di esempio")](designer-auto-layout-images/image05.png)
+ [![](designer-auto-layout-images/image05.png "Visualizzazione di Frame Misplacement di esempio")](designer-auto-layout-images/image05.png#lightbox)
 
 Per risolvere errori di frame misplacement, selezionare il **aggiornamento frame in base ai vincoli** pulsante nella barra degli strumenti vincoli (pulsante a destra):
 
- [ ![](designer-auto-layout-images/image03.png "Aggiornare i fotogrammi basati sul pulsante della barra degli strumenti di vincoli")](designer-auto-layout-images/image03.png)
+ [![](designer-auto-layout-images/image03.png "Aggiornare i fotogrammi basati sul pulsante della barra degli strumenti di vincoli")](designer-auto-layout-images/image03.png#lightbox)
 
 Questo regolerà automaticamente il frame di elemento per corrispondenza delle posizioni definite dai controlli.
 
@@ -174,10 +174,10 @@ Per accedere a un vincolo nel codice, è innanzitutto necessario esporre quest'u
 1. Creare il vincolo normalmente (utilizzando uno dei metodi elencati in precedenza).
 2. Nel **struttura Document Explorer**, trovare il vincolo desiderato e selezionarla:
 
-    [ ![](designer-auto-layout-images/modify01.png "Lo struttura Document Explorer")](designer-auto-layout-images/modify01.png)
+    [![](designer-auto-layout-images/modify01.png "Lo struttura Document Explorer")](designer-auto-layout-images/modify01.png#lightbox)
 3. Successivamente, assegnare un **nome** per il vincolo nel **Widget** scheda della finestra il **Esplora proprietà**:
 
-    [ ![](designer-auto-layout-images/modify02.png "La scheda Widget")](designer-auto-layout-images/modify02.png)
+    [![](designer-auto-layout-images/modify02.png "La scheda Widget")](designer-auto-layout-images/modify02.png#lightbox)
 4. Salvare le modifiche.
 
 Con le suddette modifiche sul posto, è possibile accedere al vincolo nel codice e modificarne le proprietà. Ad esempio, è possibile utilizzare le operazioni seguenti per impostare l'altezza della vista associata a zero:
@@ -188,7 +188,7 @@ ViewInfoHeight.Constant = 0;
 
 Data la seguente impostazione per il vincolo nella finestra di progettazione iOS:
 
-[ ![](designer-auto-layout-images/modify03.png "Modifica di un vincolo in Esplora risorse di proprietà")](designer-auto-layout-images/modify03.png)
+[![](designer-auto-layout-images/modify03.png "Modifica di un vincolo in Esplora risorse di proprietà")](designer-auto-layout-images/modify03.png#lightbox)
 
 ### <a name="the-deferred-layout-pass"></a>Il passaggio di Layout posticipata
 

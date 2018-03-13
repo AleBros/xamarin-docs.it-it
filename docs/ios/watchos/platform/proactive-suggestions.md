@@ -3,16 +3,16 @@ title: Suggerimenti attiva
 description: "In questo articolo viene illustrato come utilizzare i suggerimenti attiva in un'app watchOS 3 al coinvolgimento di unità, consentendo al sistema di presentare in modo proattivo automaticamente informazioni utili all'utente."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ca2476eef120c7d86b939934ec4b286e871d6a78
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f9711cc39662a7e77d926551a0d2b49363d8ec4d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="proactive-suggestions"></a>Suggerimenti attiva
 
@@ -61,7 +61,7 @@ Tutte queste funzionalità hanno una cosa in comune, tutte utilizzano `NSUserAct
 
 Come descritto in precedenza, `NSUserActivity` consente il sistema di comprendere le informazioni che l'utente sta attualmente utilizzando sullo schermo. `NSUserActivity` è stato un leggero la memorizzazione nella cache meccanismo per acquisire l'attività dell'utente così come si spostano l'app. Ad esempio, esaminare l'app ristorante:
 
-[ ![](proactive-suggestions-images/activity02.png "L'app ristorante")](proactive-suggestions-images/activity02.png)
+[![](proactive-suggestions-images/activity02.png "L'app ristorante")](proactive-suggestions-images/activity02.png#lightbox)
 
 Con le interazioni seguente:
 
@@ -71,7 +71,7 @@ Con le interazioni seguente:
 
 Esaminare più vicino all'ultima pagina:
 
-[ ![](proactive-suggestions-images/activity03.png "Il payload NSUserActivity")](proactive-suggestions-images/activity03.png)
+[![](proactive-suggestions-images/activity03.png "Il payload NSUserActivity")](proactive-suggestions-images/activity03.png#lightbox)
 
 Qui è la creazione di app un `NSUserActivity` ed è stato popolato con informazioni per ricreare lo stato in un secondo momento. L'app è incluso anche alcuni metadati, ad esempio nome e l'indirizzo della sede. Con questa attività di creazione, l'app informa iOS che rappresenta lo stato dell'utente corrente.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: fc44b2a6080832d11c610661244172ad4a6a0716
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f4345e107a32c3a583c246fe5dbe24590960c870
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="native-views-in-xaml"></a>Visualizzazioni native in XAML
 
@@ -51,13 +51,13 @@ Esempio di codice seguente viene illustrato l'utilizzo di viste native per ogni 
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:win="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
             Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         x:Class="NativeViews.NativeViewDemo">
     <StackLayout Margin="20">
         <ios:UILabel Text="Hello World" TextColor="{x:Static ios:UIColor.Red}" View.HorizontalOptions="Start" />
-        <androidWidget:TextView Text="Hello World" x:Arguments="{x:Static formsandroid:Forms.Context}" />
+        <androidWidget:TextView Text="Hello World" x:Arguments="{x:Static androidLocal:MainActivity.Instance}" />
         <win:TextBlock Text="Hello World" />
     </StackLayout>
 </ContentPage>
@@ -72,7 +72,7 @@ Proprietà associabili e le proprietà associabili associate anche impostare vis
 > [!NOTE]
 > Si noti che gli stili possono essere utilizzati con visualizzazioni native, perché gli stili possono avere come destinazione solo le proprietà che sono supportate da `BindableProperty` oggetti.
 
-Costruttori di widget Android richiedono in genere di Android `Context` oggetto come argomento e questo è disponibile attraverso il `Xamarin.Forms.Platform.Android.Forms.Context` oggetto. Pertanto, quando si crea un widget di Android in XAML, il `Context` oggetto in genere deve essere passato al costruttore del widget utilizzando la `x:Arguments` attributo con un `x:Static` estensione di markup. Per ulteriori informazioni, vedere [il passaggio di argomenti da visualizzazioni Native](#passing_arguments).
+Costruttori di widget Android richiedono in genere di Android `Context` oggetto come argomento e questo può essere resi disponibili tramite una proprietà statica nel `MainActivity` classe. Pertanto, quando si crea un widget di Android in XAML, il `Context` oggetto in genere deve essere passato al costruttore del widget utilizzando la `x:Arguments` attributo con un `x:Static` estensione di markup. Per ulteriori informazioni, vedere [il passaggio di argomenti da visualizzazioni Native](#passing_arguments).
 
 > [!NOTE]
 > Si noti che una vista nativa con denominazione `x:Name` non è possibile in un progetto libreria di classe portabile (PCL) o in un progetto Asset condiviso (SAP). In questo modo genererà una variabile del tipo nativo, che provoca un errore di compilazione. Tuttavia, le visualizzazioni native possono essere incluso in `ContentView` istanze e recuperato nel file code-behind, condizione che venga utilizzato un SAP. Per ulteriori informazioni, vedere [che fa riferimento a una visualizzazione Native da codice](#native_view_code).
@@ -90,7 +90,7 @@ Proprietà delle viste native è inoltre possibile utilizzare l'associazione dat
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:win="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
             Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:local="clr-namespace:NativeSwitch"
@@ -101,7 +101,7 @@ Proprietà delle viste native è inoltre possibile utilizzare l'associazione dat
         <ios:UISwitch On="{Binding Path=IsSwitchOn, Mode=TwoWay, UpdateSourceEventName=ValueChanged}"
             OnTintColor="{x:Static ios:UIColor.Red}"
             ThumbTintColor="{x:Static ios:UIColor.Blue}" />
-        <androidWidget:Switch x:Arguments="{x:Static formsAndroid:Forms.Context}"
+        <androidWidget:Switch x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
             Checked="{Binding Path=IsSwitchOn, Mode=TwoWay, UpdateSourceEventName=CheckedChange}"
             Text="Enable Entry?" />
         <win:ToggleSwitch Header="Enable Entry?"
@@ -135,7 +135,7 @@ L'esempio di codice seguente illustra entrambe le tecniche:
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
         xmlns:androidGraphics="clr-namespace:Android.Graphics;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:winMedia="clr-namespace:Windows.UI.Xaml.Media;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:winText="clr-namespace:Windows.UI.Text;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
@@ -151,7 +151,7 @@ L'esempio di codice seguente illustra entrambe le tecniche:
                 </ios:UIFont>
             </ios:UILabel.Font>
         </ios:UILabel>
-        <androidWidget:TextView x:Arguments="{x:Static formsAndroid:Forms.Context}"
+        <androidWidget:TextView x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
                     Text="Simple Native Color Picker"
                     TextSize="24"
                     View.HorizontalOptions="Center">
@@ -187,7 +187,7 @@ Il [ `Typeface.Create` ](https://developer.xamarin.com/api/member/Android.Graphi
 Il [ `FontFamily` ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.fontfamily) costruttore viene utilizzato per impostare il [ `TextBlock.FontFamily` ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.fontfamily) proprietà a un nuovo `FontFamily` sulla piattaforma UWP (Universal Windows). Il `FontFamily` nome è specificato dall'argomento del metodo è un figlio di `x:Arguments` attributo.
 
 > [!NOTE]
-> **Nota**: argomenti devono corrispondere i tipi necessari per il costruttore o metodo factory.
+> Gli argomenti devono corrispondere ai tipi richiesti dal costruttore o metodo.
 
 Le schermate seguenti mostrano il risultato della specifica gli argomenti del costruttore e del metodo factory per impostare il tipo di carattere in diverse visualizzazioni native:
 
@@ -211,7 +211,7 @@ L'API nativa può quindi essere richiamata nella vista nativa per eseguire le op
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
             Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:local="clr-namespace:NativeViewInsideContentView"
@@ -219,20 +219,19 @@ L'API nativa può quindi essere richiamata nella vista nativa per eseguire le op
     <StackLayout Margin="20">
         <ContentView x:Name="contentViewTextParent" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
             <ios:UILabel Text="Text in a UILabel" TextColor="{x:Static ios:UIColor.Red}" />
-            <androidWidget:TextView x:Arguments="{x:Static formsAndroid:Forms.Context}"
+            <androidWidget:TextView x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
                 Text="Text in a TextView" />
             <winControls:TextBlock Text="Text in a TextBlock" />
         </ContentView>
         <ContentView x:Name="contentViewButtonParent" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
             <ios:UIButton TouchUpInside="OnButtonTap" View.HorizontalOptions="Center" View.VerticalOptions="Center" />
-            <androidWidget:Button x:Arguments="{x:Static formsAndroid:Forms.Context}"
+            <androidWidget:Button x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
                 Text="Scale and Rotate Text"
                 Click="OnButtonTap" />
             <winControls:Button Content="Scale and Rotate Text" />
         </ContentView>
     </StackLayout>
 </ContentPage>
-
 ```
 
 Nell'esempio precedente, le visualizzazioni native per ogni piattaforma sono elementi figlio di [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) controlli, con la `x:Name` valore dell'attributo utilizzato per recuperare il `ContentView` nel code-behind:
@@ -297,7 +296,7 @@ Esempio di codice riportato di seguito viene illustrato come sottoclasse di una 
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:iosLocal="clr-namespace:SubclassedNativeControls.iOS;assembly=SubclassedNativeControls.iOS;targetPlatform=iOS"
         xmlns:android="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:androidLocal="clr-namespace:SubclassedNativeControls.Droid;assembly=SubclassedNativeControls.Droid;targetPlatform=Android"
         xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
             Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
@@ -311,7 +310,7 @@ Esempio di codice riportato di seguito viene illustrato come sottoclasse di una 
         </StackLayout>
         <iosLocal:MyUIPickerView ItemsSource="{Binding Fruits}"
             SelectedItem="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=SelectedItemChanged}" />
-        <androidLocal:MySpinner x:Arguments="{x:Static formsAndroid:Forms.Context}"
+        <androidLocal:MySpinner x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
             ItemsSource="{Binding Fruits}"
             SelectedObject="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=ItemSelected}" />
         <winControls:ComboBox ItemsSource="{Binding Fruits}"

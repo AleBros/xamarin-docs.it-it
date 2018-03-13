@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: a5711b5ac8332ac518ba5b639f05de557229af6e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1491e6ec36a9ced9460e083769b2148386d1d518
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-and-mac"></a>iOS e Mac
 
@@ -56,7 +56,7 @@ Xamarin consente di rendere le app librerie native con associazioni. Questa sezi
 
 Per supportare 32 e 64 bit di codice in modo trasparente da c# e F #, Microsoft sta introducendo nuovi tipi di dati.   Informazioni su di essi qui.
 
-##  <a name="building-32-and-64-bit-apps32-and-64md"></a>[Compilazione di applicazioni a 32 e 64 bit](32-and-64.md)
+##  <a name="building-32-and-64-bit-apps32-and-64indexmd"></a>[Compilazione di applicazioni a 32 e 64 bit](32-and-64/index.md)
 
 Cosa è necessario conoscere per supportare applicazioni a 32 e 64 bit.
 

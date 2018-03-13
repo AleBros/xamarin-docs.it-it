@@ -7,19 +7,17 @@ ms.assetid: 22EE5FBD-3240-4308-AF76-EF45D72936DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/22/2018
-ms.openlocfilehash: cf2211a572d45b7c29018d00f36cb8408484483f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 30b1cb280c2817f55d73e10ff8b4d7942011bf2c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="toolbar"></a>ToolBar
 
 _La barra degli strumenti è un componente di barra di azione che garantisce una maggiore flessibilità rispetto a barra delle azioni predefinite: può essere collocato ovunque nell'app, la dimensione può essere modificata e può utilizzare una combinazione di colori che è diversa dal tema dell'app. Inoltre, ogni schermata dell'app può avere più barre degli strumenti._
 
-
-<a name="overview" />
  
 ## <a name="overview"></a>Panoramica
 
@@ -27,7 +25,7 @@ Un elemento chiave della progettazione di qualsiasi attività Android è un *bar
 
 Il `Toolbar` widget, introdotto in Android 5.0 simbolo, può essere considerato come una generalizzazione dell'interfaccia barra azione &ndash; è destinato a sostituire la barra delle azioni. Il `Toolbar` possono essere utilizzate ovunque in un layout dell'app ed è molto più personalizzabile rispetto a una barra di azione. Nella schermata seguente viene illustrata la versione personalizzata `Toolbar` esempio creato in questa guida: 
 
-[![Schermata di esempio di una barra degli strumenti con modificare, salvare e voci di menu di overflow](images/01-toolbar-sml.png)](images/01-toolbar.png)
+[![Schermata di esempio di una barra degli strumenti con modificare, salvare e voci di menu di overflow](images/01-toolbar-sml.png)](images/01-toolbar.png#lightbox)
 
 Esistono alcune importanti differenze tra il `Toolbar` e la barra delle azioni: 
 
@@ -72,7 +70,6 @@ Questa guida illustra l'uso frequente `Toolbar` scenari:
 -   Utilizzando il **delle applicazioni di libreria di supporto Android v7** libreria (detto *delle applicazioni* nella parte restante di questa Guida) per distribuire `Toolbar` nelle versioni precedenti di Android. 
 
  
-<a name="requirements" />
  
 ## <a name="requirements"></a>Requisiti
 

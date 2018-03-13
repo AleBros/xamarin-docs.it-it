@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: fb0e4341d8d8ad0719f35c691add9bad1d3f85a8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fe62b917946dda4cf669f5b15c91a5e3b596a0fc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="populating-a-table-with-data"></a>Popolamento di una tabella con dati
 
@@ -88,7 +88,7 @@ public override void ViewDidLoad ()
 
 La tabella risultante è simile al seguente:
 
- [ ![](populating-a-table-with-data-images/image3.png "Tabella di esempio in esecuzione")](populating-a-table-with-data-images/image3.png)
+ [![](populating-a-table-with-data-images/image3.png "Tabella di esempio in esecuzione")](populating-a-table-with-data-images/image3.png#lightbox)
 
 La maggior parte delle tabelle consentono all'utente di toccare una riga per selezionarla, quindi eseguire un'altra azione (ad esempio la riproduzione di un brano, la chiamata di un contatto o con un'altra schermata). A tale scopo, esistono alcuni aspetti, che è necessario eseguire. In primo luogo, creare un AlertController per visualizzare un messaggio quando l'utente fa clic su una riga, aggiungendo il comando seguente per il `RowSelected` metodo:
 
@@ -140,7 +140,7 @@ A questo punto l'utente può toccare una riga e verrà visualizzato un avviso:
 
 
 
- [ ![](populating-a-table-with-data-images/image4.png "L'avviso selezionato di riga")](populating-a-table-with-data-images/image4.png)
+ [![](populating-a-table-with-data-images/image4.png "L'avviso selezionato di riga")](populating-a-table-with-data-images/image4.png#lightbox)
 
 
 ## <a name="cell-reuse"></a>Riutilizzo di cella
@@ -220,7 +220,7 @@ public class MyCell : UITableViewCell
 
 Un indice consente all'utente di scorrere lunghi elenchi, in genere ordinati alfabeticamente anche se è possibile indicizzare da qualsiasi criterio desiderato. Il **BasicTableIndex** esempio carica un elenco molto più lungo di elementi da un file per dimostrare l'indice. Ogni elemento in corrispondenza dell'indice corrisponde a una sezione della tabella.
 
- [ ![](populating-a-table-with-data-images/image5.png "La visualizzazione dell'indice")](populating-a-table-with-data-images/image5.png)
+ [![](populating-a-table-with-data-images/image5.png "La visualizzazione dell'indice")](populating-a-table-with-data-images/image5.png#lightbox)
 
 Per supportare i dati sottostanti la tabella devono essere raggruppati, quindi crea il codice di esempio BasicTableIndex ' sections' un `Dictionary<>` dalla matrice di stringhe tramite la prima lettera di ogni elemento come chiave del dizionario:
 
@@ -270,7 +270,7 @@ Gli indici sono in genere utilizzati solo con lo stile di tabella normale.
 Per raggruppare visivamente le righe in una tabella è possibile utilizzare le intestazioni e piè di pagina. La struttura di dati richiesta è molto simile all'aggiunta di un indice: un `Dictionary<>` funziona particolarmente bene. Anziché utilizzare l'alfabeto per raggruppare le celle, in questo esempio raggruppa il verdura dal tipo botanico.
 L'output sarà analogo al seguente:
 
- [ ![](populating-a-table-with-data-images/image6.png "Esempio intestazioni e piè di pagina")](populating-a-table-with-data-images/image6.png)
+ [![](populating-a-table-with-data-images/image6.png "Esempio intestazioni e piè di pagina")](populating-a-table-with-data-images/image6.png#lightbox)
 
 Per visualizzare le intestazioni e piè di pagina il `UITableViewSource` sottoclasse richiede questi metodi aggiuntivi:
 

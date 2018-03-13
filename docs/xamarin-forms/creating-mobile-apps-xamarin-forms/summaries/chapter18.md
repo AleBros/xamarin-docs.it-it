@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 18. MVVM
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: fa62ff952a4a8916a0c9603157d14948119d243d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cadab2432d0b6c29ead9cde1f4220bb64e1e1886
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>Riepilogo del capitolo 18. MVVM
 
@@ -50,7 +51,7 @@ Le proprietà in un elemento ViewModel possono essere più interattive, come ill
 
 Il [ `ColorViewModel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorViewModel.cs) nel [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) libreria integra i modelli di colore RGB e HSL. Viene illustrata la [ **HslSliders** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/HslSliders) esempio:
 
-[![La schermata di TK](images/ch18fg08-small.png "colore HSL")](images/ch18fg08-large.png "colore HSL")
+[![La schermata di TK](images/ch18fg08-small.png "colore HSL")](images/ch18fg08-large.png#lightbox "colore HSL")
 
 ### <a name="streamlining-the-viewmodel"></a>Semplificando il ViewModel
 

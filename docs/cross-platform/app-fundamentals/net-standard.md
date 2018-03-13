@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: 294d28c57978218986d62d1ee6579e8d283b8f72
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f448a3ee9c018aa475775a5ac2c614f3e7ddc324
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -29,12 +29,12 @@ Può considerare come una rappresentazione semplificata di nuova generazione [li
 
 È possibile creare progetti di libreria standard di .NET in Xamarin Studio 6.2, creando innanzitutto un progetto libreria portabile:
 
-[ ![](net-standard-images/xs01-sml.png "Creare un nuovo progetto libreria portabile")](net-standard-images/xs01.png)
+[![](net-standard-images/xs01-sml.png "Creare un nuovo progetto libreria portabile")](net-standard-images/xs01.png#lightbox)
 
 Dopo aver creato il progetto, fare doppio clic e aprire il **opzioni progetto** finestra.
 Nel **generale** sezione progetto può essere convertito in .NET Standard e impostato per l'utilizzo di una versione specifica nel **piattaforma** elenco a discesa:
 
-[ ![](net-standard-images/xs02-sml.png "Convertire in generale a .NET Standard opzioni")](net-standard-images/xs02.png)
+[![](net-standard-images/xs02-sml.png "Convertire in generale a .NET Standard opzioni")](net-standard-images/xs02.png#lightbox)
 
 È quindi possibile [creare un pacchetto NuGet](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/existing-library.md) la condivisione di libreria con altri sviluppatori.
 

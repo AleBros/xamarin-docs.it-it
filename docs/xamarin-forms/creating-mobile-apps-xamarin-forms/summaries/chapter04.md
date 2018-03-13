@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 4. Lo stack di scorrimento
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 59d51c48cee30a242f5e1adcb1c886169334e9b2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5ad53d7bc8c4ee54a47c4b327fb6f07bc1906ab9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Riepilogo del capitolo 4. Lo stack di scorrimento
 
@@ -94,7 +95,7 @@ Spesso, verrà impostata l'il [ `WidthRequest` ](https://developer.xamarin.com/a
 
 È possibile usare istanze diverse di `StackLayout` per combinare un `BoxView` e diversi `Label` le istanze in un `Frame` per visualizzare un determinato colore e quindi inserire ciascuna di queste visualizzazioni in un `StackLayout` in un `ScrollView` per creare l'interessante elenco di colori visualizzato nella finestra di [ **ColorBlocks** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) esempio:
 
-[![Schermata di triplo dei blocchi di colore](images/ch04fg11-small.png "elenco di colori")](images/ch04fg11-large.png "elenco di colori")
+[![Schermata di triplo dei blocchi di colore](images/ch04fg11-small.png "elenco di colori")](images/ch04fg11-large.png#lightbox "elenco di colori")
 
 ## <a name="a-scrollview-in-a-stacklayout"></a>Un elemento ScrollView in un StackLayout?
 

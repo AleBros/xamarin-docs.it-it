@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 21e35b056293e422b577b0ee8b51e8c43dbbf07d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ccee60b5d953987e858ef592d005cec9803b8b96
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-storyboards"></a>Introduzione agli storyboard
 
@@ -20,7 +20,7 @@ _In questo articolo viene fornita un'introduzione all'utilizzo in un'app Xamarin
 
 Gli storyboard consentono di sviluppare un'interfaccia utente per l'app Xamarin.Mac che include non solo i controlli e le definizioni di finestra, ma contiene inoltre i collegamenti tra finestre diverse (tramite segues) e gli stati di visualizzazione.
 
-[ ![](images/intro01.png "Un esempio dell'interfaccia utente in Xcode")](images/intro01.png)
+[![](images/intro01.png "Un esempio dell'interfaccia utente in Xcode")](images/intro01.png#lightbox)
 
 In questo articolo verrà forniscono un'introduzione all'utilizzo di storyboard per definire l'interfaccia utente dell'applicazione un Xamarin.Mac.
 
@@ -36,11 +36,11 @@ Con storyboard, tutti di interfaccia utente dell'applicazione un Xamarin.Mac pos
 
 Come descritto in precedenza, uno Storyboard definisce l'interfaccia utente per un'applicazione specificata suddivisa in una panoramica delle funzionalità del relativo _visualizzazione controller_. In Generatore di interfaccia di Xcode, ognuno di questi controller si trova nella propria _scena_.
 
-[ ![](images/intro02.png "Un controller di visualizzazione di esempio")](images/intro02.png)
+[![](images/intro02.png "Un controller di visualizzazione di esempio")](images/intro02.png#lightbox)
 
 Ogni scena rappresenta un oggetto vista e visualizzazione Controller coppia con un set di righe (denominato Segues) che si connettono ogni scena nell'interfaccia utente, mostrando in tal modo le relative relazioni. Alcuni Segues definire come una visualizzazione Controller contiene uno o più visualizzazioni figlio o controller di visualizzazione. Altri Segues, definiscono le transizioni tra Controller di visualizzazione (ad esempio visualizzazione della finestra di dialogo o popover). 
 
-[ ![](images/intro03.png "Segue un esempio")](images/intro03.png)
+[![](images/intro03.png "Segue un esempio")](images/intro03.png#lightbox)
 
 La cosa più importante da notare è che ogni Segue rappresenta il flusso di un tipo di dati tra l'elemento dell'interfaccia utente dell'applicazione specificato.
 
@@ -50,7 +50,7 @@ La cosa più importante da notare è che ogni Segue rappresenta il flusso di un 
 
 Visualizzazione controller definiscono le relazioni tra una determinata visualizzazione di informazioni all'interno di un'app Mac e il modello di dati che fornisce le informazioni. Ogni scena di primo livello dello storyboard rappresenta un Controller di visualizzazione nel codice dell'app Xamarin.Mac.
 
-[ ![](images/intro04.png "Un esempio di visualizzazione controller vengono ignorati")](images/intro04.png)
+[![](images/intro04.png "Un esempio di visualizzazione controller vengono ignorati")](images/intro04.png#lightbox)
 
 In questo modo, ogni Controller di visualizzazione è un'associazione indipendente e riutilizzabile di rappresentazione visiva dell'informazione (visualizzazione) e la logica per consentire di controllare le informazioni.
 
@@ -115,8 +115,8 @@ In questo articolo è stato applicato un rapido controllo di gestione di storybo
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Hello, Mac (esempio)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
+- [Hello, Mac (sample)](https://developer.xamarin.com/samples/mac/Hello_Mac/) (Hello, Mac - Esempio)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Utilizzo di Windows](~/mac/user-interface/window.md)
-- [Linee guida sull'interfaccia umane di OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introduzione a Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

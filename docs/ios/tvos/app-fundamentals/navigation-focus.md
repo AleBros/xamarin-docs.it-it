@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 82151599b92094b816f4763c533ed7746db37920
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 489f3bd43ff4515000127ac29de197435493d5a9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-navigation-and-focus"></a>Utilizzo di navigazione e lo stato attivo
 
@@ -21,7 +21,7 @@ _Questo articolo descrive il concetto di messa a fuoco e come viene utilizzato p
 
 Questo articolo descrive il concetto di [messa a fuoco](#Focus-and-Selection) e come viene utilizzata per gestire [navigazione](#Navigation) nell'interfaccia utente dell'applicazione un Xamarin.tvOS. Verrà esaminato il tvOS predefinito dei controlli di spostamento come utilizzare lo stato attivo, evidenziazione e selezione per lo spostamento di interfaccia utente dell'applicazione Xamarin.tvOS.
 
-[ ![](navigation-focus-images/intro01.png "App tvOS navigazione dell'interfaccia utente")](navigation-focus-images/intro01.png)
+[![](navigation-focus-images/intro01.png "App tvOS navigazione dell'interfaccia utente")](navigation-focus-images/intro01.png#lightbox)
 
 Successivamente, si verrà esaminato un utilizzo con lo stato attivo [parallasse](#Focus-and-Parallax) e *immagini a più livelli* per fornire indizio visivo per lo stato di navigazione corrente per l'utente finale.
 
@@ -35,7 +35,7 @@ Gli utenti dell'app Xamarin.tvOS verranno non essere interazione con relativa in
 
 Un'app tvOS ha esito positivo implementa navigazione in modo che supporti agevolmente lo scopo dell'app e la struttura dei dati che si presenta senza richiamare l'attenzione sulle stesso riquadro di spostamento. Progettare l'esplorazione del sito in modo che sembra naturale e familiare senza che dominano l'interfaccia utente o lo stato attivo dal contenuto e l'esperienza utente di App di disegno.
 
-[ ![](navigation-focus-images/nav01.png "L'app impostazioni tvOS")](navigation-focus-images/nav01.png)
+[![](navigation-focus-images/nav01.png "L'app impostazioni tvOS")](navigation-focus-images/nav01.png#lightbox)
 
 Durante l'utilizzo in genere un Apple TV, l'utente si sposta attraverso una serie in pila di schermate, ogni presentazione di un determinato set di contenuto. A sua volta, ogni nuova schermata può causare uno o più schermi secondari del contenuto con i controlli dell'interfaccia utente standard, ad esempio [pulsanti](~/ios/tvos/user-interface/buttons.md), [scheda barre](~/ios/tvos/user-interface/tab-bars.md), tabelle, [viste di raccolta](~/ios/tvos/user-interface/collection-views.md) o [ Doppia visualizzazione](~/ios/tvos/user-interface/split-views.md).
 
@@ -58,7 +58,7 @@ Apple suggerisce tenendo presente quanto segue quando si progetta la navigazione
 
 In Apple TV, un'immagine, pulsante o altri elementi dell'interfaccia utente viene considerato _attivo_ quando è la destinazione della navigazione corrente.
 
-[ ![](navigation-focus-images/focus01.png "Esempio di selezione e lo stato attivo")](navigation-focus-images/focus01.png)
+[![](navigation-focus-images/focus01.png "Esempio di selezione e lo stato attivo")](navigation-focus-images/focus01.png#lightbox)
 
 A differenza di, i dispositivi iOS in cui l'utente è interagire direttamente con gli elementi su touchscreen del dispositivo, gli utenti interagiscono con tvOS gli elementi da parte della stanza utilizzando remoto Siri. Per gestire questa interazione utente presenti, Apple TV utilizza un _messa a fuoco_ basato sul modello.
 
@@ -138,7 +138,7 @@ Tuttavia, potrebbe esserci volte, a causa di qualsiasi cosa per il di progettazi
 
 Eseguire il layout dell'interfaccia utente di seguenti per un esempio:
 
- [ ![](navigation-focus-images/guide01.png "Utilizzo di esempio guide lo stato attivo")](navigation-focus-images/guide01.png)
+ [![](navigation-focus-images/guide01.png "Utilizzo di esempio guide lo stato attivo")](navigation-focus-images/guide01.png#lightbox)
  
 Poiché il **informazioni** pulsante non rientra in una griglia orizzontale e verticale con il **acquistare** pulsante non sarebbe accessibile all'utente. Tuttavia, questo può essere facilmente corretto utilizzando un _Guida messa a fuoco_ di fornire suggerimenti di spostamento al motore di stato attivo. 
 
@@ -170,7 +170,7 @@ Innanzitutto, un nuovo `UIFocusGuide` viene creato e aggiunto alla raccolta dell
 
 Successivamente, la Guida di messa a fuoco Top, Left, larghezza e altezza ancoraggi vengono modificati rispetto al **informazioni** e **acquistare** pulsanti per posizionarla tra di essi. Vedere:
 
-[ ![](navigation-focus-images/guide02.png "Guida di esempio lo stato attivo")](navigation-focus-images/guide02.png)
+[![](navigation-focus-images/guide02.png "Guida di esempio lo stato attivo")](navigation-focus-images/guide02.png#lightbox)
 
 È inoltre importante notare che i nuovi vincoli attivati quando vengono create impostando i relativi `Active` proprietà `true`:
 

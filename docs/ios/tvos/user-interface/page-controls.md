@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d4da50dac901628b9baf10a07650d232a977a653
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f77eac8179f9e368e767bb4b586ccaa3f93e40a3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-page-control"></a>Utilizzo di controllo pagina
 
@@ -20,7 +20,7 @@ _Questo articolo descrive la progettazione e l'utilizzo di controllo pagina all'
 
 In alcuni casi potrebbe essere necessario visualizzare una serie di immagini o pagine nell'app Xamarin.tvOS. Un controllo pagina è stato progettato per mostrare con chiarezza la pagina di un utente rientra nel numero massimo di pagine. Un controllo pagina consente di visualizzare una serie di punti contro scuro, oval a forma di sfondo. Nella pagina corrente verrà visualizzato un pallino, tutte le altre pagine mostrano come punti vuoti. Il controllo pagina ridurrà la maggior parte dei punti esterni se vi sono troppi per le dimensioni dell'area di sfondo.
 
-[ ![](page-controls-images/page01.png "Esempio di controllo pagina")](page-controls-images/page01.png)
+[![](page-controls-images/page01.png "Esempio di controllo pagina")](page-controls-images/page01.png#lightbox)
 
 Controllo pagina in un elemento interattivo progettato per fornire commenti e suggerimenti solo all'utente. È necessario aggiungere altri controlli per modificare il numero di pagina corrente (ad esempio i movimenti o i pulsanti).
 
@@ -41,14 +41,14 @@ Il modo più semplice per utilizzare i controlli di pagina in un'app Xamarin.tvO
 1. Nel **soluzione riempimento**, fare doppio clic su di `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **controllo pagina** dal **della casella degli strumenti** e rilasciarla sulla vista: 
 
-    [ ![](page-controls-images/page02.png "Un controllo pagina")](page-controls-images/page02.png)
+    [![](page-controls-images/page02.png "Un controllo pagina")](page-controls-images/page02.png#lightbox)
 1. Nel **scheda Widget** del **proprietà riempimento**, è possibile modificare diverse proprietà del controllo pagina come relativo **pagina corrente** e **# di pagine**: 
 
-    [ ![](page-controls-images/page03.png "La scheda Widget")](page-controls-images/page03.png)
+    [![](page-controls-images/page03.png "La scheda Widget")](page-controls-images/page03.png#lightbox)
 1. Successivamente, è possibile aggiungere controlli o i movimenti alla visualizzazione per spostarsi avanti e indietro attraverso la raccolta di pagine.
 1. Infine, assegnare **nomi** ai controlli in modo che è possibile rispondere ad essi nel codice c#. Ad esempio: 
 
-    [ ![](page-controls-images/page04.png "Nome del controllo")](page-controls-images/page04.png)
+    [![](page-controls-images/page04.png "Nome del controllo")](page-controls-images/page04.png#lightbox)
 1. Salvare le modifiche.
     
 
@@ -58,14 +58,14 @@ Il modo più semplice per utilizzare i controlli di pagina in un'app Xamarin.tvO
 1. Nel **Esplora**, fare doppio clic su di `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **controllo pagina** dal **della casella degli strumenti** e rilasciarla sulla vista: 
 
-    [ ![](page-controls-images/page02-vs.png "Un controllo pagina")](page-controls-images/page02-vs.png)
+    [![](page-controls-images/page02-vs.png "Un controllo pagina")](page-controls-images/page02-vs.png#lightbox)
 1. Nel **scheda Widget** del **Esplora proprietà**, è possibile modificare diverse proprietà del controllo pagina come relativo **pagina corrente** e **# di pagine**: 
 
-    [ ![](page-controls-images/page03-vs.png "La scheda Widget")](page-controls-images/page03-vs.png)
+    [![](page-controls-images/page03-vs.png "La scheda Widget")](page-controls-images/page03-vs.png#lightbox)
 1. Successivamente, è possibile aggiungere controlli o i movimenti alla visualizzazione per spostarsi avanti e indietro attraverso la raccolta di pagine.
 1. Infine, assegnare **nomi** ai controlli in modo che è possibile rispondere ad essi nel codice c#. Ad esempio: 
 
-    [ ![](page-controls-images/page04-vs.png "Nome del controllo")](page-controls-images/page04-vs.png)
+    [![](page-controls-images/page04-vs.png "Nome del controllo")](page-controls-images/page04-vs.png#lightbox)
 1. Salvare le modifiche.
     
 

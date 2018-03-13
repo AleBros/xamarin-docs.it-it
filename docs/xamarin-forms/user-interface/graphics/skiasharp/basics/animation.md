@@ -4,14 +4,15 @@ description: Per scoprire come animare la grafica SkiaSharp
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: c91cb064ea3973294c3a9dd8e07f3c4b0627fe34
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e18ef7c77c1d5c93d53882233c65a56e5567fcd7
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="basic-animation"></a>Animazione di base
 
@@ -141,7 +142,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Il metodo calcola un raggio massimo in base alla dimensione dell'area di visualizzazione e un raggio minimo in base al raggio massimo. Il `scale` valore animato compreso tra 0 e 1 e reimpostarlo su 0, pertanto il metodo che usa per calcolare un `xRadius` e `yRadius` che è compreso tra `minRadius` e `maxRadius`. Questi valori vengono utilizzati per tracciare e riempire un'ellisse:
 
-[![](animation-images/pulsatingellipse-small.png "Schermata triplo della pagina ellisse raffigurante")](animation-images/pulsatingellipse-large.png "tripla schermata della pagina raffigurante ellisse")
+[![](animation-images/pulsatingellipse-small.png "Schermata triplo della pagina ellisse raffigurante")](animation-images/pulsatingellipse-large.png#lightbox "tripla schermata della pagina raffigurante ellisse")
 
 Si noti che il `SKPaint` oggetto viene creato un `using` blocco. Come molte classi SkiaSharp `SKPaint` deriva da `SKObject`, che deriva da `SKNativeObject`, che implementa il [ `IDisposable` ](https://developer.xamarin.com/api/type/System.IDisposable/) interfaccia. `SKPaint` esegue l'override di `Dispose` metodo per rilasciare le risorse non gestite.
 
@@ -244,7 +245,7 @@ public class ExpandingCirclesPage : ContentPage
 
 Il risultato è che l'immagine esamina gli stessi quando `t` è uguale a 0, come quando `t` è uguale a 1 e i cerchi sembrano continuare a espandere forever:
 
-[![](animation-images/expandingcircles-small.png "Schermata triplo della pagina espandendo cerchi")](animation-images/expandingcircles-large.png "tripla schermata della pagine dei cerchi di espansione")
+[![](animation-images/expandingcircles-small.png "Schermata triplo della pagina espandendo cerchi")](animation-images/expandingcircles-large.png#lightbox "tripla schermata della pagine dei cerchi di espansione")
 
 
 ## <a name="related-links"></a>Collegamenti correlati

@@ -8,13 +8,15 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5ae7753fe7d12fd41b39f9429fa4a3ee97a22a5d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f781e0ad889415d75f22e7dd5fb3eae75d080a8f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="app-distributioniostvosdeploy-testapp-distributionindexmd"></a>[Distribuzione di app](~/ios/tvos/deploy-test/app-distribution/index.md)
+# <a name="deployment-and-testing"></a>Distribuzione e test
+
+## <a name="app-distributioniostvosdeploy-testapp-distributionindexmd"></a>[Distribuzione di app](~/ios/tvos/deploy-test/app-distribution/index.md)
 
 In questo articolo viene illustrato come configurare, compilare e pubblicare un'app Xamarin.tvOS per la distribuzione in diversi modi diversi, tra cui:
 
@@ -23,8 +25,6 @@ In questo articolo viene illustrato come configurare, compilare e pubblicare un'
 - Distribuzione di ad Hoc.
 
 Se si sono verificati problemi di invio dell'app Xamarin.tvOS per App Store di Apple TV, consultare il nostro [Troubleshooting](~/ios/tvos/troubleshooting.md) Guida. Contiene diversi problemi che potrebbero verificarsi e come risolverli nel Xamarin.tvOS.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

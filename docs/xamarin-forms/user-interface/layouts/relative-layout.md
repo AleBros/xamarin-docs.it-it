@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: ad621fa093379d5ad2dd81c81ce42dcaaa9bd923
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3d915191e24b5238d5165237f6ede74635b31e08
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="relativelayout"></a>RelativeLayout
 
 `RelativeLayout` viene utilizzato per posizione e le viste di dimensioni rispetto alla proprietà delle viste layout o di pari livello. A differenza di `AbsoluteLayout`, `RelativeLayout` non hanno il concetto di ancoraggio mobile e non dispone di funzionalità per il posizionamento di elementi rispetto alla parte inferiore o bordi a destra del layout. `RelativeLayout` supporta il posizionamento di elementi di fuori di un proprio limiti.
 
-[ ![](relative-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](relative-layout-images/layouts.png "Xamarin.Forms Layouts")
+[![](relative-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 ## <a name="purpose"></a>Scopo
 
@@ -76,7 +76,7 @@ Tenere presente i seguenti aspetti di layout precedente:
 - La casella `y` coordinata è definita come metà dell'altezza dell'elemento padre, -100.
 
 > [!NOTE]
-> **Nota**: a causa della modalità sono definiti vincoli, è possibile creare layout più complessi in c# che può essere specificato con XAML.
+> A causa della modalità sono definiti vincoli, è possibile creare layout più complessi in c# che può essere specificato con XAML.
 
 Entrambi gli esempi precedenti definiscono i vincoli come `RelativeToParent` &ndash; , ovvero i relativi valori sono relativa all'elemento padre. È inoltre possibile definire vincoli rispetto alla visualizzazione di un altro. In questo modo per layout più intuitivo (developer) e può rendere più immediatamente evidente lo scopo del codice di layout.
 

@@ -1,5 +1,5 @@
 ---
-title: Localizzazione
+title: Localizzazione di interfaccia utente dell'applicazione
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 38b74c9f50ac0b61eecaa952367d41ef6242e8ac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 510e8a6b0b2839a1a191538e7fb4e49bd005b450
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="localization"></a>Localizzazione
 
@@ -60,7 +60,7 @@ Cinese e giapponese stringhe possono essere molto breve, a volte uno o due carat
 
 Confrontare le lunghezze di stringa per alcuni elementi nella schermata iniziale iOS in inglese, tedesco e giapponese.
 
-[ ![](localization-images/language-compare-sml.png "Lunghezza della stringa giapponesi in tedesco di Visual Studio")](localization-images/language-compare.png)
+[![](localization-images/language-compare-sml.png "Lunghezza della stringa giapponesi in tedesco di Visual Studio")](localization-images/language-compare.png#lightbox)
 
 Si noti che **impostazioni** in lingua inglese (8 caratteri) richiede 13 caratteri per la traduzione in lingua tedesca, ma solo 2 caratteri in giapponese.
 
@@ -264,13 +264,16 @@ O, in modo più accurato, evitare di riutilizzare le stringhe solo perché sono 
 
 Ad esempio: supponga disporre di un'opzione di attivazione/disattivazione nell'app e il controllo commutatore richiede il testo per 'on' e 'off' deve essere localizzata. È inoltre visualizzare il valore di tale impostazione altrove nell'app in un'etichetta di testo. Utilizzare stringhe diverse per la visualizzazione del commutatore e lo stato dell'opzione (anche se sono la stessa stringa di lingua predefinita), ad esempio:
 
-• "On" – visualizzato sullo stesso commutatore • "Off" – visualizzato sullo stesso commutatore • "On" – visualizzati in un • etichetta "Off" – visualizzati in un'etichetta
+-   "On" – visualizzato sullo stesso commutatore
+-   "Off": visualizzato sullo stesso commutatore
+-   "On" – visualizzati in un'etichetta
+-   "Off": visualizzati in un'etichetta
 
 Questo offre la massima flessibilità per la funzione di conversione:
 
-• Per motivi legati alla progettazione, ad esempio lo switch stesso utilizza minuscole "on" e "off", ma l'etichetta di visualizzazione utilizza lettere maiuscole "On" e "Off".
-• Alcune lingue potrebbe essere necessario il valore dell'opzione deve essere abbreviato per adattare il controllo dell'interfaccia utente, mentre la parola completa (tradotta) può essere visualizzato nell'etichetta.
-• In alternativa, per alcune lingue potrebbe essere il rendering del commutatore utilizzare "I" e "O" per conoscenza relative alla lingua, ma è comunque possibile l'etichetta da lettura "On" o "Off".
+-   Per motivi legati alla progettazione, è forse lo switch stesso utilizza minuscolo "on" e "off" ma l'etichetta di visualizzazione utilizza lettere maiuscole "On" e "Off".
+-   Alcune lingue potrebbe essere necessario il valore dell'opzione deve essere abbreviato per adattare il controllo dell'interfaccia utente, mentre la parola completa (tradotta) può essere visualizzato nell'etichetta.
+-   In alternativa, per alcune lingue potrebbe essere il rendering del commutatore usare "I" e "O" per conoscenza relative alla lingua, ma è comunque possibile l'etichetta da lettura "On" o "Off".
 
 <!--
 # Testing
@@ -307,28 +310,24 @@ or
 
 When you are testing on the emulator, you can navigate using the settings app as above, or you can reset the locale using the ADB tool command. Using Command Prompt on Windows or Terminal on OS X, start `adb shell` then send commands to set the emulator’s locale. **adb** can usually be found on the Mac in `/Users/YOURNAME/Library/Developer/Xamarin/android-sdk-mac_x86/platform-tools/adb`
 
-###Spanish (Mexico)
+### Spanish (Mexico)
 setprop persist.sys.language es;setprop persist.sys.country MX;stop;sleep 5;start
 
-###French (France)
+### French (France)
 setprop persist.sys.language fr;setprop persist.sys.country FR;stop;sleep 5;start
 
-###Japanese (Japan)
+### Japanese (Japan)
 setprop persist.sys.language ja;setprop persist.sys.country JP;stop;sleep 5;start
 
-###Portuguese (Brazil)
+### Portuguese (Brazil)
 setprop persist.sys.language pt;setprop persist.sys.country BR;stop;sleep 5;start
 
-###English (USA)
+### English (USA)
 setprop persist.sys.language en;setprop persist.sys.country US;stop;sleep 5;start
 
 **TIP:** the default location of ADB on Mac OS X is
 `/Users/[USERNAME]/Library/Developer/Xamarin/android-sdk-mac_x86/platform-tools/adb shell`
 
-
-## Windows Phone
-
-Refer to Microsoft’s instructions for [How to test region settings for Windows Phone Emulator](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh394014(v=vs.105).aspx).
 -->
 
 
@@ -336,13 +335,16 @@ Refer to Microsoft’s instructions for [How to test region settings for Windows
 
 #### <a name="machine-translation"></a>Traduzione
 
-Per il test che è consente di utilizzare uno dei numerosi strumenti di traduzione online per includere testo localizzato in app durante lo sviluppo.
+Per compilare le funzionalità di conversione in un'applicazione, prendere in considerazione il [Azure traduttore testo API](https://azure.microsoft.com/en-au/services/cognitive-services/translator-text-api/).
 
-- [Bing Translator](https://www.bing.com/translator/) <!--Microsoft's Multilingual Application Toolkit helps you automatically translate strings, and is demonstrated with Xamarin.Forms in [this sample]().-->
+A scopo di test è possibile utilizzare uno dei numerosi strumenti di traduzione online per includere testo localizzato in app durante lo sviluppo:
 
-- [Conversione di Google](http://translate.google.com)
+- [Bing Translator](https://www.bing.com/translator/)
+- [Conversione di Google](http://translate.google.com/)
 
 Esistono molti altri disponibili. La qualità del servizio di traduzione automatica non è in genere considerata adeguata rilasciare un'applicazione senza prima esaminare e testati da traduttori o madrelingua.
+
+ <!--Microsoft's Multilingual Application Toolkit helps you automatically translate strings, and is demonstrated with Xamarin.Forms in [this sample]().-->
 
 #### <a name="professional-translation"></a>Traduzione professionale
 

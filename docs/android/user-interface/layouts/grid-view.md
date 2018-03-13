@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: c28296af43f0091443eda0364fc0c28a938a7760
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2fb3133833dbaa0b174c4611d204f6c8ceb42a2b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="gridview"></a>GridView
 
@@ -145,11 +145,10 @@ Tutto ciò che resta consiste nel definire il `thumbIds` matrice di risorse draw
 
 Eseguire l'applicazione. Il layout di griglia dovrebbe essere simile al seguente:
 
-[![Schermata di esempio di visualizzazione di 15 immagini GridView](grid-view-images/helloviews4.png)](grid-view-images/helloviews4.png)
+[![Schermata di esempio di visualizzazione di 15 immagini GridView](grid-view-images/helloviews4.png)](grid-view-images/helloviews4.png#lightbox)
 
 Provare a sperimentare con i comportamenti del [ `GridView` ](https://developer.xamarin.com/api/type/Android.Widget.GridView/) e [ `ImageView` ](https://developer.xamarin.com/api/type/Android.Widget.ImageView/) elementi regolando le relative proprietà. Ad esempio, anziché utilizzare [ `LayoutParams` ](https://developer.xamarin.com/api/property/Android.Views.View.LayoutParameters/) provare a utilizzare [ `SetAdjustViewBounds()` ](https://developer.xamarin.com/api/member/Android.Widget.ImageView.SetAdjustViewBounds/).
 
-<a name="References" />
 
 ## <a name="references"></a>Riferimenti
 

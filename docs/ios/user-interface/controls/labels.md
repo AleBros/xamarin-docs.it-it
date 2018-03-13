@@ -7,19 +7,15 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: 695d02c5fa0477053cd95d73e1b738332d14f0f9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0fdeecc4465aa5709b452ef0b591ec4e5c262e3d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="labels"></a>Etichette
 
-Il `UILabel` controllo viene utilizzato per visualizzare uno o più righe, testo di sola lettura. In questo articolo vengono illustrati gli argomenti seguenti:
-
-- [Implementazione di un'etichetta](#Implementing_a_Label)
-- [Il troncamento e ritorno a capo](#Truncating_and_Wrapping)
-- [Etichetta e la formattazione del testo](#Formatting_Text_and_Label)
+Il `UILabel` controllo viene utilizzato per visualizzare uno o più righe, testo di sola lettura. 
 
 ## <a name="implementing-a-label"></a>Implementazione di un'etichetta
 
@@ -52,6 +48,8 @@ Nel riquadro proprietà consente di effettuare le seguenti proprietà:
 ## <a name="truncating-and-wrapping"></a>Il troncamento e ritorno a capo
 
 Per informazioni sull'utilizzo della riga si interrompe in iOS, vedere il [Tronca e testo a capo](https://developer.xamarin.com/recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text/) recipe.
+
+<a name="Formatting_Text_and_Label"/>
 
 ## <a name="formatting-text-and-label"></a>Etichetta e la formattazione del testo
 

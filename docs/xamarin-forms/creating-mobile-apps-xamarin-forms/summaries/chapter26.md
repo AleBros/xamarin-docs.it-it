@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 26. Layout personalizzati
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: dbddaaf2f4a5ad9d7161013f2ae11466b953e20c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9447f9fb47a3de0f278a89d45d657158be9b70b9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>Riepilogo del capitolo 26. Layout personalizzati
 
@@ -98,9 +99,9 @@ Tale metodo è ora obsoleto e sostituito con:
 Ogni classe che deriva da `Layout` o `Layout<T>` deve eseguire l'override `OnSizeRequest` o `OnMeasure`. Si tratta in una classe di layout determina relative dimensioni, che sono in genere in base alle dimensioni dei relativi elementi figlio, ottenuto chiamando `GetSizeRequest` o `Measure` sugli elementi figlio. Prima e dopo la chiamata `OnSizeRequest` o `OnMeasure`, `GetSizeRequest` o `Measure` consente regolazioni in incrementi in base alle proprietà seguenti:
 
 - [`WidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/)di tipo `double`, interessa la `Request` proprietà di `SizeRequest`
-- [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/)di tipo `double`, interessa la `Request` proprietà di `SizeRequest`
-- [`MinimumWidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumWidthRequest/)di tipo `double`, interessa la `Minimum` proprietà di `SizeRequest`
-- [`MinimumHeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumHeightRequest/)di tipo `double`, interessa la `Minimum` proprietà di `SizeRequest`
+- [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) di tipo `double`, interessa la `Request` proprietà di `SizeRequest`
+- [`MinimumWidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumWidthRequest/) di tipo `double`, interessa la `Minimum` proprietà di `SizeRequest`
+- [`MinimumHeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumHeightRequest/) di tipo `double`, interessa la `Minimum` proprietà di `SizeRequest`
 
 ### <a name="infinite-constraints"></a>Vincoli infiniti
 
@@ -159,7 +160,7 @@ Il [ `UniformGridLayout` ](https://github.com/xamarin/xamarin-forms-book-samples
 
 Il [ **PhotoGrid** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/PhotoGrid) illustra `UniformGridLayout`:
 
-[![Schermata triplo della griglia di foto](images/ch26fg08-small.png "il Layout di griglia uniforme")](images/ch26fg08-large.png "il Layout di griglia uniforme")
+[![Schermata triplo della griglia di foto](images/ch26fg08-small.png "il Layout di griglia uniforme")](images/ch26fg08-large.png#lightbox "il Layout di griglia uniforme")
 
 ### <a name="overlapping-children"></a>Sovrapposizione di elementi figlio
 
@@ -174,7 +175,7 @@ Per gli elementi figlio sovrapposti, elementi figlio alla fine della raccolta ve
 
 Il [ `OverlapLayout` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/OverlapLayout.cs) classe il [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) libreria definisce una proprietà associata per indicare l'ordine di rendering e consentono quindi uno dei relativi elementi figlio da visualizzare nella parte superiore di altri utenti. Il [ **StudentCardFile** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/StudentCardFile) esempio viene illustrato questo:
 
-[![Schermata triplo della griglia di Student scheda File](images/ch26fg10-small.png "sovrapposti figli Layout")](images/ch26fg10-large.png "sovrapposti figli di Layout")
+[![Schermata triplo della griglia di Student scheda File](images/ch26fg10-small.png "sovrapposti figli Layout")](images/ch26fg10-large.png#lightbox "sovrapposti figli di Layout")
 
 ### <a name="more-attached-bindable-properties"></a>Più collegare proprietà associabili
 

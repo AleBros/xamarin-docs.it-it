@@ -7,21 +7,19 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: b471742ae9fb365d75e8dd3ca0f93f5e55208f19
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 343694163c79ab4d7e8b78875282e7077db979e5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="adding-a-second-toolbar"></a>Aggiunta di una seconda barra degli strumenti
 
-<a name="overview" />
 
 ## <a name="overview"></a>Panoramica 
 
 Il `Toolbar` può eseguire altre operazioni di sostituzione sulla barra delle azioni &ndash; e può essere utilizzato più volte all'interno di un'attività, può essere personalizzato per la selezione in un punto qualsiasi sullo schermo, e può essere configurato per coprire solo una parziale larghezza dello schermo. Gli esempi seguenti viene illustrato come creare un secondo `Toolbar` e inserirlo nella parte inferiore della schermata. Questo `Toolbar` implementa **copia**, **Taglia**, e **Incolla** voci di menu. 
 
-<a name="define_second" />
 
 ## <a name="define-the-second-toolbar"></a>Definire la seconda barra degli strumenti 
 
@@ -78,10 +76,9 @@ Modifica **Resources/values/styles.xml** e aggiungere il seguente colore alla de
 
 In questo modo la barra degli strumenti nella parte inferiore di colore giallo scuro. Compilazione ed esecuzione dell'applicazione consente di visualizzare una barra degli strumenti secondo vuoto nella parte inferiore dello schermo: 
 
-[![Schermata dell'app con giallo seconda barra degli strumenti nella parte inferiore della schermata](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png)
+[![Schermata dell'app con giallo seconda barra degli strumenti nella parte inferiore della schermata](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
 
 
-<a name="second_menus" />
  
 ## <a name="add-edit-menu-items"></a>Aggiungere voci di Menu Modifica 
 
@@ -100,7 +97,6 @@ Per aggiungere voci di menu a un database secondario `Toolbar`:
 Nelle sezioni seguenti illustrano in dettaglio il processo: **Taglia**, **copia**, e **Incolla** vengono aggiunte voci di menu nella parte inferiore `Toolbar`. 
 
 
-<a name="second_resource" />
 
 ### <a name="define-the-edit-menu-resource"></a>Definire la risorsa di Menu Modifica
 
@@ -130,7 +126,6 @@ Nel **risorse/menu** sottodirectory, creare un nuovo file XML denominato **edit_
 Questo codice XML crea il **Taglia**, **copia**, e **Incolla** voci di menu (utilizzando le icone che sono stati aggiunti al `mipmap-` cartelle in [sostituendo la barra delle azioni ](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
 
 
-<a name="inflate_menus" />
 
 ### <a name="inflate-the-menus"></a>I menu di ingrandimento
 
@@ -149,18 +144,17 @@ Questo codice consente di individuare il `edit_toolbar` le viste definite in **a
 
 Compilare ed eseguire l'app. Quando si esegue l'app, verranno visualizzato il testo e icone aggiunte in precedenza come illustrato di seguito: 
 
-[![Diagramma della parte inferiore della barra degli strumenti con icone di Taglia, copia e Incolla](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png)
+[![Diagramma della parte inferiore della barra degli strumenti con icone di Taglia, copia e Incolla](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png#lightbox)
 
 Toccando il **Taglia** sull'icona del menu fa sì che il seguente avviso popup da visualizzare: 
 
-[![Schermata di tipo avviso popup che indica che è stato toccato l'icona del menu Taglia](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png)
+[![Schermata di tipo avviso popup che indica che è stato toccato l'icona del menu Taglia](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png#lightbox)
 
 Toccare le voci di menu su una barra degli strumenti Visualizza l'avvisi popup risultante: 
 
-[![Schermate di avvisi popup per salvare, copia e Incolla vengano utilizzate le voci di menu](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png)
+[![Schermate di avvisi popup per salvare, copia e Incolla vengano utilizzate le voci di menu](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
 
 
-<a name="up_button" />
 
 ## <a name="the-up-button"></a>Pulsante 
 
@@ -187,7 +181,7 @@ SupportActionBar.SetHomeButtonEnabled (true);
 
 Quando l'utente passa da `MainActivity` a `DetailActivity`, `DetailActivity` consente di visualizzare un **backup** pulsante (freccia rivolta verso sinistra), come illustrato nella schermata:
 
-[![Schermata di esempio di una pulsante a sinistra freccia nella barra degli strumenti](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png)
+[![Schermata di esempio di una pulsante a sinistra freccia nella barra degli strumenti](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
 
 Se si tocca questo **backup** pulsante causa l'applicazione tornare alla `MainActivity`. In un'applicazione più complessa con più livelli della gerarchia, toccare il pulsante restituirà l'utente al successivo livello più elevato nell'app anziché alla schermata precedente. 
 

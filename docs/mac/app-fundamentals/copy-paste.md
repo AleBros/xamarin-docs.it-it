@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 115f3340c5678c0ead06cf773e193fbdc4ba3d07
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ba937a6eae7f0f74bcf044f1248d49a421e82de5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="copy-and-paste"></a>Copiare e incollare
 
@@ -27,7 +27,7 @@ In questo articolo è verranno illustrati i due modi principali per utilizzare t
 1. **Tipi di dati standard** -poiché tavolo di montaggio sono in genere eseguite operazioni tra due applicazioni non correlate, nessuna delle due app conosce i tipi di dati che supporta l'altro. Per ottimizzare il potenziale per la condivisione, tavolo può contenere più rappresentazioni di un elemento specificato (utilizzando un set standard di tipi di dati), in questo modo l'app dispendiosa in termini di scegliere la versione più adatta per le esigenze.
 2. **Dati personalizzati** : per supportare la copia e Incolla di dati complessi all'interno del Xamarin.Mac è possibile definire un tipo di dati personalizzato che verrà gestito dal tavolo. Ad esempio, un'applicazione di disegno vettoriale che consente all'utente di copiare e incollare forme complesse costituite da più tipi di dati e i punti.
 
-[![Esempio di app in esecuzione](copy-paste-images/intro01.png "esempio di app in esecuzione")](copy-paste-images/intro01-large.png)
+[![Esempio di app in esecuzione](copy-paste-images/intro01.png "esempio di app in esecuzione")](copy-paste-images/intro01-large.png#lightbox)
 
 In questo articolo verranno descritte le nozioni di base dell'utilizzo in un'applicazione Xamarin.Mac per supportare la copia e Incolla operazioni tavolo. È altamente consigliabile che il [Hello, Mac](~/mac/get-started/hello-mac.md) articolo prima di tutto, in particolare il [Introduzione a Xcode e interfaccia generatore](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [punti vendita e le azioni](~/mac/get-started/hello-mac.md#Outlets_and_Actions) le sezioni, come illustra i concetti chiave e le tecniche che verrà usato in questo articolo.
 
@@ -50,14 +50,14 @@ Seguire questa procedura:
 1. Avviare Visual Studio per Mac e fare clic su di **nuovo progetto...**  collegamento.
 2. Selezionare **Mac** > **App** > **Cocoa App**, quindi fare clic su di **Avanti** pulsante: 
 
-    [![Crea un nuovo progetto di app Cocoa](copy-paste-images/sample01.png "creando un nuovo progetto di app Cocoa")](copy-paste-images/sample01-large.png)
+    [![Crea un nuovo progetto di app Cocoa](copy-paste-images/sample01.png "creando un nuovo progetto di app Cocoa")](copy-paste-images/sample01-large.png#lightbox)
 3. Immettere `MacCopyPaste` per il **nome progetto** e mantenere tutto il resto come predefinito. Fare clic su Avanti: 
 
-    [![L'impostazione del nome del progetto](copy-paste-images/sample01a.png "l'impostazione del nome del progetto")](copy-paste-images/sample01a-large.png)
+    [![L'impostazione del nome del progetto](copy-paste-images/sample01a.png "l'impostazione del nome del progetto")](copy-paste-images/sample01a-large.png#lightbox)
 
 4. Fare clic su di **crea** pulsante: 
 
-    [![Per confermare le nuove impostazioni di progetto](copy-paste-images/sample02.png "per confermare le nuove impostazioni di progetto")](copy-paste-images/sample02-large.png)
+    [![Per confermare le nuove impostazioni di progetto](copy-paste-images/sample02.png "per confermare le nuove impostazioni di progetto")](copy-paste-images/sample02-large.png#lightbox)
 
 ### <a name="add-an-nsdocument"></a>Aggiungere un NSDocument
 
@@ -265,7 +265,7 @@ Con questo documento sul posto, si creerà l'interfaccia utente per l'app Xamari
 
 Fare doppio clic su di **Main** file per aprirlo in Xcode. Successivamente, aggiungere una barra degli strumenti e un'immagine anche e configurarli come illustrato di seguito:
 
-[![Modifica la barra degli strumenti](copy-paste-images/sample04.png "la barra degli strumenti di modifica")](copy-paste-images/sample04-large.png)
+[![Modifica la barra degli strumenti](copy-paste-images/sample04.png "la barra degli strumenti di modifica")](copy-paste-images/sample04-large.png#lightbox)
 
 Aggiungere una copia e Incolla **immagine della barra degli strumenti** sul lato sinistro della barra degli strumenti. Verrà usato come tasti di scelta rapida per copiare e incollare dal menu Modifica. Successivamente, aggiungere quattro **immagine della barra degli strumenti elementi** sul lato destro della barra degli strumenti. Questi verrà utilizzata per popolare l'immagine con alcune immagini predefinite.
 
@@ -273,7 +273,7 @@ Per ulteriori informazioni sull'utilizzo di barre degli strumenti, vedere il nos
 
 Successivamente, si espongono anche le prese e le azioni per il nostro gli elementi della barra degli strumenti e l'immagine seguente:
 
-[![Creazione di azioni e prese](copy-paste-images/sample05.png "la creazione di punti vendita e azioni")](copy-paste-images/sample05-large.png)
+[![Creazione di azioni e prese](copy-paste-images/sample05.png "la creazione di punti vendita e azioni")](copy-paste-images/sample05-large.png#lightbox)
 
 Per ulteriori informazioni sull'utilizzo dei punti vendita e le azioni, vedere il [punti vendita e le azioni](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sezione del nostro [Hello, Mac](~/mac/get-started/hello-mac.md) documentazione.
 

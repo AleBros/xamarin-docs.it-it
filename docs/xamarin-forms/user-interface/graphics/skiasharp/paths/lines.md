@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9a3090873569db2466db9ab25cc105ea59401df3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: abcda680f6cfbde802f7b666cf2aade2c6e11093
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="lines-and-stroke-caps"></a>Le righe e maiuscole tratto
 
@@ -92,7 +92,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Per ogni membro del `SKStrokeCap` enumerazione, il gestore crea due righe, una con uno spessore del tratto di 50 pixel e un'altra riga posizionata nella parte superiore con uno spessore del tratto di 2 pixel. Questa seconda riga è destinata a illustrare geometrica inizio e alla fine della riga indipendente di spessore della linea e un'estremità della traccia:
 
-[![](lines-images/strokecaps-small.png "Schermata triplo della pagina maiuscole tratto")](lines-images/strokecaps-large.png "tripla schermata della pagina maiuscole tratto")
+[![](lines-images/strokecaps-small.png "Schermata triplo della pagina maiuscole tratto")](lines-images/strokecaps-large.png#lightbox "tripla schermata della pagina maiuscole tratto")
 
 Come si può notare, la `Square` e `Round` maiuscole tratto estendono in modo efficace la lunghezza della riga per metà larghezza del tratto all'inizio della riga e di nuovo alla fine. Questa estensione diventa importante quando è necessario determinare le dimensioni di un oggetto graphics sottoposto a rendering.
 
@@ -230,7 +230,7 @@ T GetPickerItem<T>(Picker picker)
 
 Nella schermata mostra una vasta gamma di `Picker` selezioni nelle tre piattaforme:
 
-[![](lines-images/multiplelines-small.png "Schermata di triplo della pagina più righe")](lines-images/multiplelines-large.png "tripla schermata della pagina più righe")
+[![](lines-images/multiplelines-small.png "Schermata di triplo della pagina più righe")](lines-images/multiplelines-large.png#lightbox "tripla schermata della pagina più righe")
 
 L'iPhone a sinistra illustra il modo in `SKPointMode.Points` fa sì che il membro di enumerazione `DrawPoints` per eseguire il rendering di ognuno dei punti di `SKPoint` matrice come un quadrato, se la terminazione di riga è `Butt` o `Square`. Cerchi rendering vengono eseguiti se la terminazione di riga è `Round`.
 

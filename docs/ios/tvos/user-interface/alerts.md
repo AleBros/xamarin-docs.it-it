@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 593e17096d92d9a9764545149991817fa616e2fc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6dabba30c5242d6e7e9ef42a4025f87826a5b89e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-alerts"></a>Utilizzo degli avvisi
 
@@ -21,7 +21,7 @@ _In questo articolo viene descritto l'utilizzo con UIAlertController per visuali
 
 Se è necessario ottenere l'attenzione dell'utente tvOS o richiedere l'autorizzazione per eseguire un'azione distruttiva (ad esempio l'eliminazione di un file), è possibile presentare un messaggio di avviso utilizzando il `UIAlertViewController`:
 
-[ ![](alerts-images/alert01.png "Un esempio UIAlertViewController")](alerts-images/alert01.png)
+[![](alerts-images/alert01.png "Un esempio UIAlertViewController")](alerts-images/alert01.png#lightbox)
 
 Se oltre a visualizzare un messaggio, è possibile aggiungere i pulsanti e i campi di testo a un avviso per consentire all'utente di rispondere alle azioni e fornire commenti e suggerimenti.
 
@@ -31,7 +31,7 @@ Se oltre a visualizzare un messaggio, è possibile aggiungere i pulsanti e i cam
 
 Come descritto in precedenza, gli avvisi vengono utilizzati per ottenere l'attenzione dell'utente e di informarli dello stato dell'app o richiesta di commenti e suggerimenti. Gli avvisi devono presentare un titolo, essi possono disporre di un messaggio e uno o più pulsanti o i campi di testo.
 
-[ ![](alerts-images/alert04.png "Un avviso di esempio")](alerts-images/alert04.png)
+[![](alerts-images/alert04.png "Un avviso di esempio")](alerts-images/alert04.png#lightbox)
 
 Apple ha i seguenti suggerimenti per l'utilizzo degli avvisi:
 
@@ -118,11 +118,11 @@ Il `AddAction` metodo aggiunge l'azione specificata per il `UIAlertViewControlle
 
 Oltre ad aggiungere azioni (pulsanti) per l'avviso, è possibile aggiungere i campi di testo dell'avviso per consentire all'utente di inserire informazioni quali ID utente e password:
 
-[ ![](alerts-images/alert02.png "Campo di testo in un avviso")](alerts-images/alert02.png)
+[![](alerts-images/alert02.png "Campo di testo in un avviso")](alerts-images/alert02.png#lightbox)
 
 Se l'utente seleziona il campo di testo, verrà visualizzata la tastiera standard tvOS consentendo loro di immettere un valore per il campo:
 
-[ ![](alerts-images/alert03.png "Immissione di testo")](alerts-images/alert03.png)
+[![](alerts-images/alert03.png "Immissione di testo")](alerts-images/alert03.png#lightbox)
 
 Il codice seguente viene visualizzato un avviso di annullamento/OK con un singolo campo di testo per l'immissione di un valore:
 

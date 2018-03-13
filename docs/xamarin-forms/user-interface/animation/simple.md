@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: d1d91804c11d2e944bb618fadb3d659b512c5905
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb7ca216978e4c890349a44b07d5a383e9ca2384
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="simple-animations"></a>Animazioni semplice
 
@@ -130,7 +130,7 @@ La schermata seguente mostra la conversione in corso in ogni piattaforma:
 ![](simple-images/translateto.png "Animazione di traduzione")
 
 > [!NOTE]
-> **Nota**: se un elemento è inizialmente disposti fuori dello schermo e quindi convertito sullo schermo, dopo la conversione dell'elemento di input del layout rimane fuori dello schermo e l'utente non può interagire con esso. Pertanto, è consigliabile che una vista deve essere disposto in una posizione finale, e quindi le necessarie conversioni eseguite.
+> Se un elemento è inizialmente disposti fuori dello schermo e quindi convertito sullo schermo, dopo la conversione di input il layout dell'elemento rimane fuori dello schermo e l'utente non può interagire con esso. Pertanto, è consigliabile che una vista deve essere disposto in una posizione finale, e quindi le necessarie conversioni eseguite.
 
 ### <a name="fading"></a>Dissolvenza
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017
-ms.openlocfilehash: 15f198465c544989b347fe534978956741478ed2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e03acbbac737bffd21ee3b592ab017d227f822ad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layout-compression"></a>Compressione del layout
 
@@ -60,7 +60,7 @@ La gerarchia della visualizzazione nidificata risultante può essere esaminata c
 La compressione di layout, che è disponibile per le applicazioni di xamarin. Forms in cui le piattaforme iOS e Android, mira a rendere flat la nidificazione rimuovendo layout specificato dall'albero visuale, che può migliorare le prestazioni di rendering della pagina di visualizzazione. Il miglioramento delle prestazioni che viene recapitato varia a seconda della complessità di una pagina, la versione del sistema operativo in uso e il dispositivo in cui è in esecuzione l'applicazione. Tuttavia, le prestazioni miglioreranno in modo più evidente nei dispositivi meno recenti.
 
 > [!NOTE]
-> **Nota**: Sebbene questo articolo illustra i risultati dell'applicazione la compressione di layout in Android, è ugualmente applicabile a iOS.
+> Sebbene questo articolo illustra i risultati dell'applicazione la compressione di layout in Android, è ugualmente applicabile a iOS.
 
 ## <a name="layout-compression"></a>Compressione del layout
 

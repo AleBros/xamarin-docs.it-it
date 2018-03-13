@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: 2acaef5fd42b867e88fb9b81d401ea752480124a
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 81d4aec3153a4cb7bbb0f3577c5a67acd430f279
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="listview-performance"></a>Prestazioni di ListView
 
@@ -45,7 +45,7 @@ public enum ListViewCachingStrategy
 ```
 
 > [!NOTE]
-> **Nota**: la piattaforma UWP (Universal Windows) ignora il [ `RetainElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/) strategia, la memorizzazione nella cache perché utilizza sempre la memorizzazione nella cache per migliorare le prestazioni. Pertanto, per impostazione predefinita si comporta come se il [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) strategia di memorizzazione nella cache viene applicato.
+> Ignora la piattaforma UWP (Universal Windows) di [ `RetainElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/) strategia, la memorizzazione nella cache perché utilizza sempre la memorizzazione nella cache per migliorare le prestazioni. Pertanto, per impostazione predefinita si comporta come se il [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) strategia di memorizzazione nella cache viene applicato.
 
 ### <a name="retainelement"></a>RetainElement
 
@@ -101,14 +101,14 @@ In iOS e Android, se le celle renderer personalizzato, è necessario assicurarsi
 Quando un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) utilizza un [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) per selezionare un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/), [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) la memorizzazione nella cache strategia di non memorizzare nella cache `DataTemplate`s. Al contrario, un `DataTemplate` è selezionato per ogni elemento di dati nell'elenco.
 
 > [!NOTE]
-> **Nota**: il [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) strategia di memorizzazione nella cache è un prerequisito, introdotto in 2.4 xamarin. Forms, che, quando un [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) viene chiesto di selezionare un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) che ogni `DataTemplate` deve restituire lo stesso [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) tipo. Si consideri, ad esempio, un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) con un `DataTemplateSelector` che possono restituire `MyDataTemplateA` (dove `MyDataTemplateA` restituisce un `ViewCell` di tipo `MyViewCellA`), o `MyDataTemplateB` (dove `MyDataTemplateB`restituisce un `ViewCell` di tipo `MyViewCellB`), quando `MyDataTemplateA` restituito deve essere restituito `MyViewCellA` oppure verrà generata un'eccezione.
+> Il [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) strategia di memorizzazione nella cache è un prerequisito, introdotto in 2.4 xamarin. Forms, che, quando un [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) viene chiesto di selezionare un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)che ogni `DataTemplate` deve restituire lo stesso [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) tipo. Si consideri, ad esempio, un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) con un `DataTemplateSelector` che possono restituire `MyDataTemplateA` (dove `MyDataTemplateA` restituisce un `ViewCell` di tipo `MyViewCellA`), o `MyDataTemplateB` (dove `MyDataTemplateB`restituisce un `ViewCell` di tipo `MyViewCellB`), quando `MyDataTemplateA` restituito deve essere restituito `MyViewCellA` oppure verrà generata un'eccezione.
 
 ### <a name="recycleelementanddatatemplate"></a>RecycleElementAndDataTemplate
 
 Il [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/) strategia di memorizzazione nella cache si basa sul [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) strategia di memorizzazione nella cache garantendo inoltre che quando un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) utilizza un [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) per selezionare un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/), `DataTemplate`s vengono memorizzati nella cache dal tipo di elemento nell'elenco. Pertanto, `DataTemplate`s viene selezionata una volta per ogni tipo di elemento, anziché una volta per ogni istanza dell'elemento.
 
 > [!NOTE]
-> **Nota**: il [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/) strategia di memorizzazione nella cache è un prerequisito che il `DataTemplate`restituiti dal [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) deve utilizzare il [ `DataTemplate` ](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/) costruttore che accetta un `Type`.
+> Il [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/) strategia di memorizzazione nella cache è un prerequisito che il `DataTemplate`restituiti dal [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) deve utilizzare il [ `DataTemplate` ](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/) costruttore che accetta un `Type`.
 
 ### <a name="setting-the-caching-strategy"></a>Impostazione della strategia di memorizzazione nella cache
 

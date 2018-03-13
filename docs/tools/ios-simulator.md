@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/07/2017
-ms.openlocfilehash: 707ba5874c939fbd25f4e25a7cefd3dc5fc75131
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0ea6528ce3523ab5d829342e99ccf35ca3d69aa2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Remoti simulatore iOS (per Windows)
 
 _Test e debug di App iOS completamente all'interno di Visual Studio in Windows_
 
-[ ![](ios-simulator-images/hero-sml.png "Simulatore iOS in esecuzione in Windows")](ios-simulator-images/hero.png)
+[![](ios-simulator-images/hero-sml.png "Simulatore iOS in esecuzione in Windows")](ios-simulator-images/hero.png#lightbox)
 
 ## <a name="download-and-install"></a>Scaricare e installare
 
@@ -36,7 +36,7 @@ Per usare il simulatore iOS remota:
 
 È possibile disabilitare il simulatore iOS remota da **strumenti > Opzioni > Xamarin > Impostazioni iOS** deselezionando la casella per **simulatore remoto a Windows** illustrato di seguito:
 
-[ ![](ios-simulator-images/options-sml.png "casella di controllo per utilizzare simulatore")](ios-simulator-images/options.png)
+[![](ios-simulator-images/options-sml.png "casella di controllo per utilizzare simulatore")](ios-simulator-images/options.png#lightbox)
 
 Il simulatore iOS verrà quindi aperto nel computer connesso a Mac. Selezionare questa opzione per attivare il simulatore iOS remota.
 
@@ -54,14 +54,14 @@ Barra degli strumenti finestra include una serie di pulsanti per interagire con 
 - [**Impostazioni** ](#settings) : configurare la tastiera e il percorso.
  - Altri [ **opzioni** ](#options) : sono disponibile, ad esempio agitazione ruota, un'ampia gamma di opzioni simulatore o richiamare altri stati nel simulatore. Quando alcune opzioni sono nascosti, sono accessibili dall'icona di puntini di sospensione che viene visualizzata nella barra degli strumenti oppure facendo clic sulla finestra.
 
-    [ ![](ios-simulator-images/maps-app-sml.png "simulatore iOS esegue il mapping di esempio")](ios-simulator-images/maps-app.png)
+    [![](ios-simulator-images/maps-app-sml.png "simulatore iOS esegue il mapping di esempio")](ios-simulator-images/maps-app.png#lightbox)
 
 
 ### <a name="settings"></a>Impostazioni
 
 Verrà visualizzata l'icona "ingranaggio" il **impostazioni** finestra:
 
-[ ![](ios-simulator-images/settings-sml.png "impostazioni di simulatore iOS")](ios-simulator-images/settings.png)
+[![](ios-simulator-images/settings-sml.png "impostazioni di simulatore iOS")](ios-simulator-images/settings.png#lightbox)
 
 Ciò consente di abilitare la tastiera hardware nel simulatore e scegliere il percorso in cui viene segnalato al dispositivo (incluso un percorso statico o altre opzioni di posizione mobile).
 
@@ -71,7 +71,7 @@ Ciò consente di abilitare la tastiera hardware nel simulatore e scegliere il pe
 
 Fare doppio clic in un punto qualsiasi nella finestra del simulatore per visualizzare tutte le opzioni disponibili nel simulatore, ad esempio la rotazione, l'attivazione di un movimento di agitazione e riavviare il simulatore:
 
-[ ![](ios-simulator-images/more-sml.png "impostazioni aggiuntive di simulatore iOS")](ios-simulator-images/more.png)
+[![](ios-simulator-images/more-sml.png "impostazioni aggiuntive di simulatore iOS")](ios-simulator-images/more.png#lightbox)
 
 ### <a name="touchscreen-support"></a>Supporto touchscreen
 

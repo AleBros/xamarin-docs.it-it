@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 79277d412b87e6ac44557122fa06d4d5d873fd38
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4b70bce90fbfb3c43934dcef10320a2c0886bff1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-navigation"></a>Utilizzo di navigazione
 
@@ -21,6 +21,8 @@ Per scene più espressioni di controllo App vi sono due paradigmi di navigazione
 
 - [Navigazione gerarchica](#Hierarchical_Navigation)
 - [Interfacce basate su pagina](#Page-Based_Interfaces)
+
+<a name="modal"/>
 
 ## <a name="modal-interfaces"></a>Interfacce modale
 
@@ -40,6 +42,7 @@ DismissController();
 
 Schermate modale possono essere un singolo scena oppure utilizzare un layout di pagina.
 
+<a name="Hierarchical_Navigation"/>
 
 ## <a name="hierarchical-navigation"></a>Navigazione gerarchica
 
@@ -84,6 +87,7 @@ public override NSObject GetContextForSegue (string segueIdentifier)
   return base.GetContextForSegue (segueIdentifier);
 }
 ```
+<a name="Page-Based_Interfaces"/>
 
 ## <a name="page-based-interfaces"></a>Interfacce basate su pagina
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: e599c56f732f918d2a9c82255bc01182651d506c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 74b22f31fabf70885eca732ef021232124df71bb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-dependencyservice"></a>Introduzione a DependencyService
 
@@ -129,13 +129,13 @@ DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
 
 Il [UsingDependencyService soluzione di esempio](https://developer.xamarin.com/samples/UsingDependencyService/) è illustrato di seguito per iOS e Android, con le modifiche al codice illustrati in precedenza evidenziata.
 
- [ ![iOS e Android soluzione](introduction-images/solution-sml.png "struttura soluzione di esempio DependencyService")](introduction-images/solution.png "DependencyService struttura di soluzione di esempio")
+ [![iOS e Android soluzione](introduction-images/solution-sml.png "struttura soluzione di esempio DependencyService")](introduction-images/solution.png#lightbox "DependencyService struttura di soluzione di esempio")
 
 > [!NOTE]
-> **Nota:** si **deve** fornire un'implementazione in ogni progetto della piattaforma. Se non viene registrata alcuna implementazione dell'interfaccia, il `DependencyService` sarà in grado di risolvere il `Get<T>()` metodo in fase di esecuzione.
+> Si **deve** fornire un'implementazione in ogni progetto della piattaforma. Se non viene registrata alcuna implementazione dell'interfaccia, il `DependencyService` sarà in grado di risolvere il `Get<T>()` metodo in fase di esecuzione.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [DependencyServiceSample](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
-- [Esempi di xamarin. Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Esempi di Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)

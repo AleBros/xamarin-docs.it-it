@@ -4,14 +4,15 @@ description: Vedere come la trasformazione di inclinazione creare gli oggetti gr
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: b8bb4db49d3800d694724d6be8fe949b55060c21
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a18b60d486a911e4a76298fd20a70f16ac392881
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-skew-transform"></a>La trasformazione di inclinazione
 
@@ -69,7 +70,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 I valori del `xSkew` argomento shift a fondo il testo a destra per i valori positivi o a sinistra per i valori negativi. I valori di `ySkew` spostare destra del testo verso il basso per i valori positivi o a valori negativi:
 
-[![](skew-images/skewexperiment-small.png "Schermata triplo della pagina di sfasamento dell'esperimento")](skew-images/skewexperiment-large.png "tripla schermata della pagina di sfasamento dell'esperimento")
+[![](skew-images/skewexperiment-small.png "Schermata triplo della pagina di sfasamento dell'esperimento")](skew-images/skewexperiment-large.png#lightbox "tripla schermata della pagina di sfasamento dell'esperimento")
 
 Se `xSkew` è il corrispondente negativo del `ySkew`, il risultato è la rotazione, ma anche scalata più o meno come le finestre di visualizzazione indica.
 
@@ -152,7 +153,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 Con un angolo avvicinarsi positivi o negativi di 90 gradi, la tangente si avvicina a infinito, ma gli angoli fino a circa 80 gradi o scopo possono essere usati:
 
-[![](skew-images/skewangleexperiment-small.png "Schermata di triplo della pagina esperimento angolo di inclinazione")](skew-images/skewangleexperiment-large.png "tripla schermata della pagina esperimento angolo di inclinazione")
+[![](skew-images/skewangleexperiment-small.png "Schermata di triplo della pagina esperimento angolo di inclinazione")](skew-images/skewangleexperiment-large.png#lightbox "tripla schermata della pagina esperimento angolo di inclinazione")
 
 Una piccola inclinazione orizzontale negativo può simulare testo in corsivo o obliquo, come il **testo obliquo** illustra come. Il [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) classe illustra come farlo:
 
@@ -188,7 +189,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 Il `TextAlign` proprietà di `SKPaint` è impostato su `Center`. Senza le eventuali trasformazioni, il `DrawText` chiamare con coordinate (0, 0) posiziona il testo con il centro orizzontale della linea di base nell'angolo superiore sinistro. Il `SkewDegrees` inclina il testo orizzontalmente 20 gradi rispetto alla linea di base. Il `Translate` chiamata viene spostata al centro orizzontale della linea di base del testo al centro dell'area di disegno:
 
-[![](skew-images/obliquetext-small.png "Schermata triplo della pagina di testo obliquo")](skew-images/obliquetext-large.png "tripla schermata della pagina di testo obliquo")
+[![](skew-images/obliquetext-small.png "Schermata triplo della pagina di testo obliquo")](skew-images/obliquetext-large.png#lightbox "tripla schermata della pagina di testo obliquo")
 
 Il **inclinare testo Shadow** pagina viene illustrato come utilizzare una combinazione di una scala verticale e inclinazione di 45 gradi per creare un'ombreggiatura del testo che inclina dal testo. Di seguito è la parte pertinente la `PaintSurface` gestore:
 
@@ -221,11 +222,11 @@ using (SKPaint textPaint = new SKPaint())
 
 L'ombreggiatura viene innanzitutto visualizzato e quindi il testo:
 
-[![](skew-images/skewshadowtext1-small.png "Schermata triplo della pagina inclinare testo Shadow")](skew-images/skewshadowtext1-large.png "tripla schermata della pagina inclinare il testo con ombreggiatura")
+[![](skew-images/skewshadowtext1-small.png "Schermata triplo della pagina inclinare testo Shadow")](skew-images/skewshadowtext1-large.png#lightbox "tripla schermata della pagina inclinare il testo con ombreggiatura")
 
 Coordinata verticale passato per il `DrawText` metodo indica la posizione del testo rispetto alla linea di base. Che rappresenta la coordinata verticale stesso utilizzata per il centro di inclinazione. Questa tecnica non funzionerà se la stringa di testo contiene tratti discendenti. Ad esempio, sostituire la parola "complessa" per "Shadow" e 's il risultato:
 
-[![](skew-images/skewshadowtext2-small.png "Schermata triplo della pagina inclinare Shadow testo con una parola alternativa con tratti discendenti")](skew-images/skewshadowtext2-large.png "tripla schermata della pagina inclinare Shadow testo con una parola alternativa con tratti discendenti")
+[![](skew-images/skewshadowtext2-small.png "Schermata triplo della pagina inclinare Shadow testo con una parola alternativa con tratti discendenti")](skew-images/skewshadowtext2-large.png#lightbox "tripla schermata della pagina inclinare Shadow testo con una parola alternativa con tratti discendenti")
 
 L'ombreggiatura e il testo sono sempre allineati alla linea di base, ma solo l'effetto è errato. Per risolvere il problema è necessario ottenere i limiti di testo:
 
@@ -245,7 +246,7 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 
 Ora l'ombreggiatura si estende dal livello inferiore i tratti discendenti:
 
-[![](skew-images/skewshadowtext3-small.png "Schermata triplo della pagina inclinare testo Shadow rettifiche destinato ai tratti discendenti")](skew-images/skewshadowtext3-large.png "tripla schermata della pagina inclinare testo Shadow rettifiche destinato ai tratti discendenti")
+[![](skew-images/skewshadowtext3-small.png "Schermata triplo della pagina inclinare testo Shadow rettifiche destinato ai tratti discendenti")](skew-images/skewshadowtext3-large.png#lightbox "tripla schermata della pagina inclinare testo Shadow rettifiche destinato ai tratti discendenti")
 
 
 ## <a name="related-links"></a>Collegamenti correlati

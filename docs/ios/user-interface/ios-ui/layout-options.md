@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 1e3139eb4c94264c91307f6f8a69b183f3bf7fa6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4917eafff020bb0e2d14a27d3c1a44d1d4087d7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layout-options"></a>Opzioni di layout
 
@@ -25,11 +25,11 @@ Sono disponibili due meccanismi diversi per controllare il layout quando una vis
 
 Quando un utente ridimensiona una finestra, ad esempio quando il dispositivo viene ruotato e le modifiche di orientamento, il sistema verrà ridimensionato automaticamente le visualizzazioni all'interno di tale finestra secondo le regole di ridimensionamento automatico. Queste regole possono essere impostate in c# tramite la `AutoresizingMask` proprietà del `UIView` o nel **proprietà riempimento** di iOS progettazione, come illustrato di seguito:
 
- [ ![](layout-options-images/image41.png "Visual Studio per Mac finestra di progettazione")](layout-options-images/image41.png)
+ [![](layout-options-images/image41.png "Visual Studio per Mac finestra di progettazione")](layout-options-images/image41.png#lightbox)
 
 Se un controllo è selezionato, consente di specificare manualmente il percorso e le dimensioni del controllo, nonché scegliere **ridimensionamento automatico** comportamento. Come illustrato nella schermata seguente, è possibile utilizzare il springs e un strutture nel controllo di ridimensionamento automatico per definire la relazione della vista selezionata padre:
 
- [ ![](layout-options-images/image42.png "Visual Studio per Mac finestra di progettazione")](layout-options-images/image42.png)
+ [![](layout-options-images/image42.png "Visual Studio per Mac finestra di progettazione")](layout-options-images/image42.png#lightbox)
 
 Modifica un *spring* causerà la visualizzazione ridimensionare in base alla larghezza o altezza della visualizzazione padre. Modifica un *strut* renderà la visualizzazione di mantenere una distanza costante tra l'elemento e della visualizzazione padre, per il bordo particolare.
 
@@ -43,7 +43,7 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAut
 
 Per verificare le impostazioni di ridimensionamento automatico, abilitare diversi **orientamenti di dispositivi supportati** nelle opzioni del progetto:
 
- [ ![](layout-options-images/image43a.png "Impostazioni di ridimensionamento automatico")](layout-options-images/image43a.png)
+ [![](layout-options-images/image43a.png "Impostazioni di ridimensionamento automatico")](layout-options-images/image43a.png#lightbox)
 
 Nel code-behind è possibile utilizzare il codice seguente, che fa sì che i controlli di testo da ridimensionare in orizzontale:
 
@@ -56,11 +56,11 @@ imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutor
 
 È inoltre possibile regolare i controlli usando la finestra di progettazione. La selezione di strutture come illustrato di seguito provocherà l'immagine di rimanere allineato a destra senza essere troncata dalla parte inferiore della visualizzazione:
 
- [ ![](layout-options-images/autoresize.png "Rotazione automatica")](layout-options-images/autoresize.png)
+ [![](layout-options-images/autoresize.png "Rotazione automatica")](layout-options-images/autoresize.png#lightbox)
 
 Questi screenshot mostrano come i controlli ridimensionare o si riposizionano quando viene ruotata la schermata:
 
- [ ![](layout-options-images/image44a.png "Rotazione automatica")](layout-options-images/image44a.png)
+ [![](layout-options-images/image44a.png "Rotazione automatica")](layout-options-images/image44a.png#lightbox)
 
 Si noti che la visualizzazione di testo e il campo di testo sia adattata per mantenere lo stesso a sinistra e destra i margini, a causa di `FlexibleWidth` impostazione. L'immagine include il superiore e sinistro margine flessibile, il che significa che consente di preservare i margini inferiore e destro: mantenendo l'immagine visualizzata quando viene ruotata la schermata. Layout complessi richiedono in genere una combinazione di queste impostazioni in tutti i controlli visibili per mantenere la coerenza l'interfaccia utente e per impedire che i controlli sovrapposti quando i limiti della visualizzazione della modifica (a causa di rotazione o un altro evento ridimensionamento).
 

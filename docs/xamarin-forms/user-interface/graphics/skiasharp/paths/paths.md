@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f02c5cfd75fd9d9cd97d28ca276b32808f7a45ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f1ce6b62ef13d24148048253700d7b3bff805fad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="path-basics"></a>Nozioni fondamentali di percorso
 
@@ -99,7 +99,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Il primo contorno è costituito da una chiamata a [ `MoveTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.MoveTo/p/System.Single/System.Single/) usando le coordinate X e Y anziché un' `SKPoint` valore, seguita da tre chiamate al [ `LineTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.LineTo/p/System.Single/System.Single/) per disegnare i lati di tre il triangolo. Il secondo contorno ha solo due chiamate a `LineTo` ma viene completata la distribuzione con una chiamata a [ `Close` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Close()/), che chiude il contorno. La differenza è significativa.
 
-[![](paths-images/twotrianglecontours-small.png "La schermata della pagine dei contorni triangolo due")](paths-images/twotrianglecontours-large.png "tripla schermata della pagine dei contorni triangolo due")
+[![](paths-images/twotrianglecontours-small.png "La schermata della pagine dei contorni triangolo due")](paths-images/twotrianglecontours-large.png#lightbox "tripla schermata della pagine dei contorni triangolo due")
 
 Come si può notare, il primo contorno ovviamente è una serie di tre righe collegate, ma la fine non connettersi con l'inizio. Le due righe si sovrappongono nella parte superiore. Il secondo contorno ovviamente viene chiusa ed è stato ottenuto con uno meno `LineTo` chiama perché il `Close` metodo aggiunge automaticamente una riga finale per chiudere il contorno.
 
@@ -189,7 +189,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Di seguito è riportato il programma in esecuzione su tre piattaforme:
 
-[![](paths-images/strokejoins-small.png "Schermata triplo della pagina tratto join")](paths-images/strokejoins-large.png "tripla schermata della pagine dei join tratto")
+[![](paths-images/strokejoins-small.png "Schermata triplo della pagina tratto join")](paths-images/strokejoins-large.png#lightbox "tripla schermata della pagine dei join tratto")
 
 La giunzione è costituito da un punto acuto in cui le righe di connettono. Quando un piccolo angolo unito in join due righe, la giunzione può diventare piuttosto lunga. Per evitare l'angolo acuto eccessivamente lunghe join, la lunghezza di giunzione è limitata dal valore della [ `StrokeMiter` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeMiter/) proprietà `SKPaint`. Una giunzione che supera la lunghezza viene troncata per diventare un join della smussatura.
 

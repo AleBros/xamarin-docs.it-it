@@ -6,11 +6,11 @@ ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 38a2e8b8cd5932bf96c1e0032a6f47627c3ea592
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 98cd780a29abdbeaab02483e4b6ed01a218f88e5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-icons"></a>Utilizzo di icone
 
@@ -97,7 +97,7 @@ Una volta il [app padre](~/ios/watchos/app-fundamentals/parent-app.md) ha config
 
 3. Aggiungere tutte le immagini watchOS, come illustrato in questo screenshot:
 
-  [ ![](icons-images/appicons-sml.png "Aggiungere tutte le immagini watchOS, come illustrato in questa schermata")](icons-images/appicons.png)
+  [![](icons-images/appicons-sml.png "Aggiungere tutte le immagini watchOS, come illustrato in questa schermata")](icons-images/appicons.png#lightbox)
 
   Fare riferimento a [linee guida sull'icona di Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/IconandImageSizes.html) per le dimensioni necessarie (le dimensioni vengono visualizzate anche nella schermata). Tenere presente che queste icone verranno troncate automaticamente per il rendering in un cerchio.
 

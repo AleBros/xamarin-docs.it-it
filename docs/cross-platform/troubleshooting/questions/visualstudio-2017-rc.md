@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 745e532a9543029f13e5fdffcc15153d780278ec
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6144a422b9c01279ce345eccf9830bcd335597a7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="can-i-use-visual-studio-2017-release-candidate-with-xamarin"></a>È possibile utilizzare Visual Studio 2017 versione finale candidata con Xamarin?
 
@@ -30,7 +30,7 @@ Mentre il team esegue attualmente la ricerca in modi per evitare questo comporta
 
 * Selezionare il **Xamarin** componente come parte del nuovo **programma di installazione di Visual Studio**
 
-  [ ![](visualstudio-2017-rc-images/install1-sml.png "Schermata di installazione RC di Visual Studio 2017")](visualstudio-2017-rc-images/install1-orig.png)
+  [![](visualstudio-2017-rc-images/install1-sml.png "Schermata di installazione RC di Visual Studio 2017")](visualstudio-2017-rc-images/install1-orig.png#lightbox)
 
 Verrà installato estensione di Visual Studio per lo sviluppo di xamarin. IOS e xamarin.
 
@@ -40,26 +40,26 @@ Verrà installato estensione di Visual Studio per lo sviluppo di xamarin. IOS e 
 
 1. Cercare l'applicazione del programma di installazione di Visual Studio
 
-  [ ![](visualstudio-2017-rc-images/reinstall1-sml.png "Risultati della ricerca per l'applicazione di installazione di Visual Studio")](visualstudio-2017-rc-images/reinstall1-orig.png)
+  [![](visualstudio-2017-rc-images/reinstall1-sml.png "Risultati della ricerca per l'applicazione di installazione di Visual Studio")](visualstudio-2017-rc-images/reinstall1-orig.png#lightbox)
 
 2. Selezionare: una. **Sviluppo per dispositivi mobile con .NET (anteprima)** nella scheda carichi di lavoro, o
 
-  [ ![](visualstudio-2017-rc-images/reinstall2-sml.png "Scheda carichi di lavoro di Visual Studio Installer") ](visualstudio-2017-rc-images/reinstall2-orig.png) b. **Xamarin** nel **singoli componenti** scheda
+  [![](visualstudio-2017-rc-images/reinstall2-sml.png "Scheda carichi di lavoro di Visual Studio Installer") ](visualstudio-2017-rc-images/reinstall2-orig.png#lightbox) b. **Xamarin** nel **singoli componenti** scheda
 
-  [ ![](visualstudio-2017-rc-images/reinstall3-sml.png "Scheda componenti del programma di installazione di Visual Studio")](visualstudio-2017-rc-images/reinstall3-orig.png)
+  [![](visualstudio-2017-rc-images/reinstall3-sml.png "Scheda componenti del programma di installazione di Visual Studio")](visualstudio-2017-rc-images/reinstall3-orig.png#lightbox)
 
 #### <a name="using-the-visual-studio-installer-within-visual-studio"></a>Tramite il programma di installazione di Visual Studio in Visual Studio:
 1. Passare alla pagina iniziale di Visual Studio 2017
 2. Fare clic su **più modelli di progetto** sotto il **nuovo progetto** sezione
 
-    [ ![](visualstudio-2017-rc-images/reinstall4-sml.png "Pagina iniziale di Visual Studio")](visualstudio-2017-rc-images/reinstall4-orig.png)
+    [![](visualstudio-2017-rc-images/reinstall4-sml.png "Pagina iniziale di Visual Studio")](visualstudio-2017-rc-images/reinstall4-orig.png#lightbox)
 3. Fare clic su `Open Visual Studio Installer` nel riquadro a sinistra
 
-    [ ![](visualstudio-2017-rc-images/reinstall5-sml.png "Schermata del nuovo progetto")](visualstudio-2017-rc-images/reinstall5-orig.png)
+    [![](visualstudio-2017-rc-images/reinstall5-sml.png "Schermata del nuovo progetto")](visualstudio-2017-rc-images/reinstall5-orig.png#lightbox)
 4. Selezionare:
     
     a. **Sviluppo per dispositivi mobile con .NET (anteprima)** nella scheda carichi di lavoro, o
 
-    [ ![](visualstudio-2017-rc-images/reinstall2-sml.png "Scheda carichi di lavoro di Visual Studio Installer") ](visualstudio-2017-rc-images/reinstall2-orig.png) b. **Xamarin** nel **singoli componenti** scheda
+    [![](visualstudio-2017-rc-images/reinstall2-sml.png "Scheda carichi di lavoro di Visual Studio Installer") ](visualstudio-2017-rc-images/reinstall2-orig.png#lightbox) b. **Xamarin** nel **singoli componenti** scheda
 
-    [ ![](visualstudio-2017-rc-images/reinstall3-sml.png "Scheda componenti del programma di installazione di Visual Studio")](visualstudio-2017-rc-images/reinstall3-orig.png)
+    [![](visualstudio-2017-rc-images/reinstall3-sml.png "Scheda componenti del programma di installazione di Visual Studio")](visualstudio-2017-rc-images/reinstall3-orig.png#lightbox)

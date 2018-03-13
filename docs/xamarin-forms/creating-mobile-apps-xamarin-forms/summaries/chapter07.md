@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 7. XAML e codice
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 1263328a748ac0bacd368da361aeaff57c4cfa20
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1104f7576cabfed9988154f3b6a8beb429136fb3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>Riepilogo del capitolo 7. XAML e codice
 
@@ -68,7 +69,7 @@ Il [ **TextVariations** ](https://github.com/xamarin/xamarin-forms-book-samples/
 
  Quando una stringa su più righe è impostata sul `Text` proprietà, i caratteri di fine della riga vengono convertiti in caratteri di spazio, ma i caratteri di fine della riga vengono mantenuti quando una stringa su più righe viene visualizzata come contenuto del `Label` o `Label.Text` tag:
 
- [![Schermata triplo delle variazioni di testo condivisione](images/ch07fg03-small.png "variazioni di testo formattato")](images/ch07fg03-large.png "variazioni di testo formattato")
+ [![Schermata triplo delle variazioni di testo condivisione](images/ch07fg03-small.png "variazioni di testo formattato")](images/ch07fg03-large.png#lightbox "variazioni di testo formattato")
 
 
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: 396ed31cba336976342a8dfb26f31eeda20cf494
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fe76c93afc149553e44b5e8fa29a21767becf5c5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="navigation-bar"></a>Barra di spostamento
 
 Android 4 introdotta una nuova funzionalità interfaccia utente di sistema denominata un *barra di spostamento*, che fornisce i controlli per la navigazione nei dispositivi che non includono i pulsanti hardware **Home**, **indietro** , e **Menu**.
 La schermata seguente mostra la barra di spostamento da un dispositivo Nexus primi:
 
- [ ![Esempio di una barra di spostamento Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png)
+ [![Esempio di una barra di spostamento Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
 
 Sono disponibili numerosi nuovi flag che controllano la visibilità della barra di spostamento e i relativi controlli, nonché la visibilità della barra di sistema che è stata introdotta in Android 3. I flag sono definiti nella `Android.View.View` classe e sono elencati di seguito:
 
@@ -31,7 +31,7 @@ Questi flag è applicabile a qualsiasi visualizzazione nella gerarchia di visual
 
 L'esempio seguente mostra una semplice applicazione in cui viene modificato facendo clic su uno dei pulsanti di `SystemUiVisibility`:
 
- [ ![Screenshot che illustra Visible ridotto e SystemUiVisibility nascosto](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png)
+ [![Screenshot che illustra Visible ridotto e SystemUiVisibility nascosto](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
 
 Il codice per modificare il `SystemUiVisibility` imposta la proprietà su un `TextView` da ogni pulsante gestore dell'evento click come indicato di seguito:
 

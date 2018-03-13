@@ -4,14 +4,15 @@ description: Utilizzare le trasformazioni non affini per ruotare gli oggetti 2D 
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 1341cde32778358fbeb7b65045616d5d81623d37
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: HT
+ms.openlocfilehash: a959278b5de72792b23e46372b1333362bed91c8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="3d-rotations"></a>Rotazioni 3D
 
@@ -27,7 +28,7 @@ Questa attività comporta l'utilizzo di rotazioni tridimensionali e quindi la de
 
 Un sistema di coordinate tridimensionale aggiunge un terzo asse Z. concettualmente chiamato, l'asse Z ad angolo retto sullo schermo. Punti di coordinate nello spazio 3D sono indicati con tre numeri: (x, y, z). In 3D sistema di coordinate utilizzato in questo articolo, aumentare i valori di X a destra e a incremento dei valori di Y visitare verso il basso, analogamente a due dimensioni. Aumentare i valori Z positivo provengono dallo schermo. L'origine è l'angolo superiore sinistro, come nei grafici 2D. La schermata è possibile considerare come un piano XY con l'asse Z ad angolo retto a questo piano.
 
-Si tratta di un sistema di coordinate a sinistra. Se si posiziona il indice per il lato sinistro nella direzione x positivo coordinate coordinate (a destra), e il dito intermedio nella direzione di incremento Y (punti verso il basso), quindi il casella di scorrimento nella direzione di aumentare le coordinate Z &#x2014; estensione fuori dallo schermo.
+Si tratta di un sistema di coordinate a sinistra. Se si posiziona il indice per il lato sinistro nella direzione di positivo X coordinate (a destra) e coordina il dito intermedio nella direzione crescente Y (in basso), il cursore fa riferimento nella direzione di aumentare le coordinate Z, che si estende fuori dal la schermata.
 
 In grafica 3D, le trasformazioni sono basate su una matrice 4 per 4. Di seguito è riportata la matrice di identità da 4-4:
 
@@ -109,7 +110,7 @@ La rotazione intorno all'asse Z è uguale a quello di grafica 2D:
 |    0       0     0  1  |
 </pre>
 
-Il lato operativo del sistema di coordinate è implicita la direzione di rotazione. Si tratta di un sistema a mano, pertanto se si posiziona il cursore di mano sinistra per aumentare i valori per un asse particolare &#x2014; a destra per la rotazione intorno all'asse X, verso il basso per la rotazione intorno all'asse Y e verso il basso per la rotazione intorno l'asse Z &#x2014; quindi la curva delle altre dita indica la direzione di rotazione per angoli positivi.
+Il lato operativo del sistema di coordinate è implicita la direzione di rotazione. Si tratta di un sistema a mano, pertanto se si posiziona il cursore di mano sinistra per aumentare i valori per un asse particolare, a destra per la rotazione intorno all'asse X, verso il basso per la rotazione intorno all'asse Y e verso il basso per la rotazione intorno all'asse Z, quindi la curva di, le altre dita indica la direzione di rotazione per angoli positivi.
 
 `SKMatrix44` è generalizzato statico [ `CreateRotation` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/) e [ `CreateRotationDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/) metodi che consentono di specificare l'asse intorno al quale si verifica la rotazione:
 
@@ -408,7 +409,7 @@ public partial class Rotation3DPage : ContentPage
 
 Quando si utilizza il dispositivo di scorrimento quarto, si noterà che le impostazioni di diversi profondità non spostare ulteriormente l'oggetto dal visualizzatore, ma invece modificano l'estensione della prospettiva effetto:
 
-[![](3d-rotation-images/rotation3d-small.png "Schermata triplo della rotazione 3D pagina")](3d-rotation-images/rotation3d-large.png "tripla schermata della pagina rotazione 3D")
+[![](3d-rotation-images/rotation3d-small.png "Schermata triplo della rotazione 3D pagina")](3d-rotation-images/rotation3d-large.png#lightbox "tripla schermata della pagina rotazione 3D")
 
 Il **aggiungendo un'animazione di rotazione 3D** utilizza inoltre `SKMatrix44` per aggiungere un'animazione a una stringa di testo nello spazio 3D. Il `textPaint` oggetto impostato come un campo viene usato nel costruttore per determinare i limiti del testo:
 
@@ -442,7 +443,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-Il `OnAppearing` override definisce tre xamarin. Forms `Animation` oggetti da cui iniziare l'animazione di `xRotationDegrees`, `yRotationDegrees`, e `zRotationDegrees` campi a velocità diverse. Si noti che i periodi di tali animazioni sono impostati su numeri primi &#x2014; 5 secondi, 7 secondi e 11 secondi &#x2014; pertanto la combinazione globale si ripete solo ogni 385 secondi o più di 10 minuti:
+Il `OnAppearing` override definisce tre xamarin. Forms `Animation` oggetti da cui iniziare l'animazione di `xRotationDegrees`, `yRotationDegrees`, e `zRotationDegrees` campi a velocità diverse. Si noti che i periodi di tali animazioni siano impostati su numeri primi, ovvero 5 secondi, 7 secondi e secondi 11, pertanto la combinazione globale ripete solo ogni 385 secondi o più di 10 minuti:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -532,7 +533,7 @@ public class AnimatedRotation3DPage : ContentPage
 
 Questa rotazione 3D è racchiuso tra più trasformazioni 2D per spostare il centro di rotazione al centro dello schermo e ridimensionare le dimensioni della stringa di testo in modo che sia la stessa larghezza schermo:
 
-[![](3d-rotation-images/animatedrotation3d-small.png "Schermata di triplo della pagina aggiungendo un'animazione di rotazione 3D")](3d-rotation-images/animatedrotation3d-large.png "tripla schermata della pagina aggiungendo un'animazione di rotazione 3D")
+[![](3d-rotation-images/animatedrotation3d-small.png "Schermata di triplo della pagina aggiungendo un'animazione di rotazione 3D")](3d-rotation-images/animatedrotation3d-large.png#lightbox "tripla schermata della pagina aggiungendo un'animazione di rotazione 3D")
 
 
 ## <a name="related-links"></a>Collegamenti correlati

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: eb1602a96b304919fe563d1bb9ea0a15722e436b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8d23211e28cb1b1dae13d67e32462888c66ff065
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>Utilizzo di Jenkins con Xamarin
 
@@ -34,7 +34,7 @@ Una volta Jenkins è configurato e sono stati installati tutti i plug-in necessa
 
 Questa guida viene illustrato come configurare un server Jenkins relativi a ognuno di questi punti. Entro la fine di esso, è dovrebbe avere una buona conoscenza di come impostare e configurare Jenkins per creare file IPA e del file APK per ai progetti per dispositivi mobili con Xamarin.
 
-# <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti
 
 Il server di compilazione ideale è un computer autonomo dedicato per il solo scopo di compilazione e probabilmente il test dell'applicazione. Un computer dedicato assicura che gli elementi che potrebbero essere necessari per altri ruoli (ad esempio quelle di un server web) non danneggiare la compilazione. Ad esempio, se il server di compilazione viene utilizzata anche come un server web, il server di web potrebbe richiedere una versione di alcuni libreria comune in conflitto. A causa di questo conflitto, il server web potrebbe non funzionare correttamente o Jenkins può creare compilazioni che non funzionano quando distribuiti agli utenti.
 
@@ -42,7 +42,7 @@ Il server di compilazione Xamarin App per dispositivi mobili è configurato molt
 
 Il diagramma seguente illustra tutti questi elementi in un server di compilazione Jenkins tipico:
 
- [ ![](jenkins-walkthrough-images/image1.png "Questo diagramma vengono illustrati tutti questi elementi in un server di compilazione Jenkins tipico")](jenkins-walkthrough-images/image1.png)
+ [![](jenkins-walkthrough-images/image1.png "Questo diagramma vengono illustrati tutti questi elementi in un server di compilazione Jenkins tipico")](jenkins-walkthrough-images/image1.png#lightbox)
 
 le applicazioni iOS possono solo essere compilate e firmate in un computer che eseguono Mac OS X. Un Mini Mac è un'opzione a basso costo ragionevole, ma qualsiasi computer in grado di eseguire OS X 10.10 (Yosemite) o versione successiva è sufficiente.
 
@@ -50,7 +50,7 @@ Se TFS è in uso per controllo del codice sorgente, è possibile installare [Tea
 
 [!include[](~/tools/ci/includes/firewall-information.md)]
 
-# <a name="installing-jenkins"></a>L'installazione di Jenkins
+## <a name="installing-jenkins"></a>L'installazione di Jenkins
 
 La prima attività per l'utilizzo di Jenkins è per installarlo. Esistono tre modi per eseguire Jenkins in OS x:
 
@@ -63,57 +63,57 @@ Eseguire più tradizionali applicazioni di integrazione continua in background, 
 
 Jenkins.App è un modo utile per installare Jenkins. Questo è un wrapper AppleScript che semplifica l'avvio e arresto di un server Jenkins. Anziché eseguire una shell bash, Jenkins viene eseguito come un'app con icona di ancoraggio, come illustrato nella schermata seguente:
 
- [ ![](jenkins-walkthrough-images/image2.png "Anziché eseguire una shell bash, Jenkins viene eseguito come un'app con icona di ancoraggio, come illustrato in questa schermata")](jenkins-walkthrough-images/image2.png)
+ [![](jenkins-walkthrough-images/image2.png "Anziché eseguire una shell bash, Jenkins viene eseguito come un'app con icona di ancoraggio, come illustrato in questa schermata")](jenkins-walkthrough-images/image2.png#lightbox)
 
 Avvio e arresto di Jenkins è semplice come l'avvio o arresto Jenkins.App.
 
 Per installare Jenkins.App, scaricare la versione più recente dalla pagina di download del progetto, illustrata nella schermata riportata di seguito:
 
- [ ![](jenkins-walkthrough-images/image3.png "App, scaricare la versione più recente dai progetti di pagina, illustrato in questa schermata di download")](jenkins-walkthrough-images/image3.png)
+ [![](jenkins-walkthrough-images/image3.png "App, scaricare la versione più recente dai progetti di pagina, illustrato in questa schermata di download")](jenkins-walkthrough-images/image3.png#lightbox)
 
 Estrarre il file zip per il `/Applications` le cartelle nel server di compilazione, avvio esattamente come qualsiasi altra applicazione di OS X.
 La prima volta che all'avvio di Jenkins.App, presenta una finestra di dialogo che informa che verrà scaricato Jenkins:
 
- [ ![](jenkins-walkthrough-images/image4.png "App, presenta una finestra di dialogo che informa che verrà scaricato Jenkins")](jenkins-walkthrough-images/image4.png)
+ [![](jenkins-walkthrough-images/image4.png "App, presenta una finestra di dialogo che informa che verrà scaricato Jenkins")](jenkins-walkthrough-images/image4.png#lightbox)
 
 Una volta Jenkins.App ha completato il download, verrà visualizzato un'altra finestra di dialogo che chiede se si desidera personalizzare l'avvio di Jenkins, come illustrato nella schermata seguente:
 
- [ ![](jenkins-walkthrough-images/image5.png "App ha completato il download, verrà visualizzata un'altra finestra di dialogo che chiede se si desidera personalizzare l'avvio di Jenkins, come illustrato in questa schermata")](jenkins-walkthrough-images/image5.png)
+ [![](jenkins-walkthrough-images/image5.png "App ha completato il download, verrà visualizzata un'altra finestra di dialogo che chiede se si desidera personalizzare l'avvio di Jenkins, come illustrato in questa schermata")](jenkins-walkthrough-images/image5.png#lightbox)
 
 Personalizzazione di Jenkins è facoltativa e non deve essere eseguita ogni volta che viene avviata l'app: le impostazioni predefinite di Jenkins funzionerà per la maggior parte dei casi.
 
 Se è necessario personalizzare Jenkins, fare clic su di **modificare le impostazioni predefinite** pulsante. Verrà visualizzata con due finestre di dialogo consecutivi: uno che richiede i parametri della riga di comando Java e l'altro in cui viene richiesto per i parametri della riga di comando Jenkins. Le due schermate seguenti mostrano queste due finestre di dialogo:
 
- [ ![](jenkins-walkthrough-images/image6.png "Questa schermata mostra le finestre di dialogo")](jenkins-walkthrough-images/image6.png)
+ [![](jenkins-walkthrough-images/image6.png "Questa schermata mostra le finestre di dialogo")](jenkins-walkthrough-images/image6.png#lightbox)
 
- [ ![](jenkins-walkthrough-images/image7.png "Questa schermata mostra le finestre di dialogo")](jenkins-walkthrough-images/image7.png)
+ [![](jenkins-walkthrough-images/image7.png "Questa schermata mostra le finestre di dialogo")](jenkins-walkthrough-images/image7.png#lightbox)
 
 Una volta Jenkins è in esecuzione, si desidera impostare come elemento di un account di accesso in modo che venga avviata ogni volta che l'account di accesso utente nel computer. È possibile farlo facendo clic sull'icona di Jenkins ancoraggio e scegliendo **opzioni... Apri in accesso**, come illustrato nella schermata seguente:
 
- [ ![](jenkins-walkthrough-images/image8.png "È possibile farlo facendo clic sull'icona di Jenkins ancoraggio e scegliendo OptionsOpen all'accesso, come illustrato in questa schermata")](jenkins-walkthrough-images/image8.png)
+ [![](jenkins-walkthrough-images/image8.png "È possibile farlo facendo clic sull'icona di Jenkins ancoraggio e scegliendo OptionsOpen all'accesso, come illustrato in questa schermata")](jenkins-walkthrough-images/image8.png#lightbox)
 
 In questo modo Jenkins.App avviare automaticamente ogni volta che l'utente accede, ma non quando il computer viene avviato. È possibile specificare un account utente che userà OS X per l'accesso automaticamente in fase di avvio. Aprire il **preferenze di sistema**e selezionare il **& gruppi di utenti** icona come illustrato in questo screenshot:
 
- [ ![](jenkins-walkthrough-images/image9.png "Aprire le preferenze di sistema e selezionare l'icona di gruppi di utenti, come illustrato in questa schermata")](jenkins-walkthrough-images/image9.png)
+ [![](jenkins-walkthrough-images/image9.png "Aprire le preferenze di sistema e selezionare l'icona di gruppi di utenti, come illustrato in questa schermata")](jenkins-walkthrough-images/image9.png#lightbox)
 
 Fare clic su di **opzioni di accesso** e quindi scegliere l'account che verrà utilizzato OS X per l'accesso in fase di avvio.
 
 A questo punto è stato installato Jenkins. Tuttavia, se si desidera compilare applicazioni per dispositivi mobili Xamarin, è necessario installare alcuni plug-in.
 
 
-## <a name="installing-plugins"></a>L'installazione di plug-in
+### <a name="installing-plugins"></a>L'installazione di plug-in
 
 Al termine, il programma di installazione Jenkins.App date di inizio Jenkins e avviare il browser con URL http://localhost:8080, come illustrato nella schermata seguente:
 
- [ ![](jenkins-walkthrough-images/image10.png "8080, come illustrato in questa schermata")](jenkins-walkthrough-images/image10.png)
+ [![](jenkins-walkthrough-images/image10.png "8080, come illustrato in questa schermata")](jenkins-walkthrough-images/image10.png#lightbox)
 
 In questa pagina, selezionare **Jenkins > gestire Jenkins > plug-in di gestione** dal menu nell'angolo superiore sinistro, come illustrato nella schermata seguente:
 
- [ ![](jenkins-walkthrough-images/image11.png "In questa pagina, selezionare Jenkins gestire Jenkins gestire i plug-in dal menu nell'angolo superiore sinistro")](jenkins-walkthrough-images/image11.png)
+ [![](jenkins-walkthrough-images/image11.png "In questa pagina, selezionare Jenkins gestire Jenkins gestire i plug-in dal menu nell'angolo superiore sinistro")](jenkins-walkthrough-images/image11.png#lightbox)
 
 Verrà visualizzata la **Jenkins plug-in Gestione** pagina. Se si fa clic sulla scheda disponibile, si verrà visualizzato un elenco dei plug-in più di 600 che può essere scaricato e installato. Ciò è illustrato nella schermata riportata di seguito:
 
- [ ![](jenkins-walkthrough-images/image12.png "Se si fa clic sulla scheda disponibile, verrà visualizzato un elenco dei plug-in più di 600 che può essere scaricato e installato")](jenkins-walkthrough-images/image12.png)
+ [![](jenkins-walkthrough-images/image12.png "Se si fa clic sulla scheda disponibile, verrà visualizzato un elenco dei plug-in più di 600 che può essere scaricato e installato")](jenkins-walkthrough-images/image12.png#lightbox)
 
 Scorrimento di tutti i plug-in per trovare che alcune possono rivelarsi noiosa e soggetta a errori di 600. Jenkins fornisce un campo di ricerca di filtro nell'angolo superiore destro dell'interfaccia. Utilizzo di questo campo di filtro per la ricerca semplificherà l'individuazione e installato uno o tutti i plug-in seguenti:
 
@@ -125,22 +125,22 @@ Jenkins supporta Git senza eventuali altri plug-in.
 
 Dopo l'installazione di tutti i plug-in, è opportuno riavviare Jenkins e configurare le impostazioni globali per ogni plug-in. Le impostazioni globali per un plug-in disponibili selezionando **Jenkins > gestire Jenkins > Configura sistema** dall'angolo superiore sinistro, come illustrato nella schermata seguente:
 
- [ ![](jenkins-walkthrough-images/image13.png "Le impostazioni globali per un plug-in disponibili selezionando Jenkins / gestire Jenkins / di configurazione di sistema dall'angolo superiore sinistro passare angolo")](jenkins-walkthrough-images/image13.png)
+ [![](jenkins-walkthrough-images/image13.png "Le impostazioni globali per un plug-in disponibili selezionando Jenkins / gestire Jenkins / di configurazione di sistema dall'angolo superiore sinistro passare angolo")](jenkins-walkthrough-images/image13.png#lightbox)
 
 Quando si seleziona questa opzione, verrà visualizzata per il **configurazione sistema [Jenkins]** pagina. Questa pagina contiene le sezioni per configurare Jenkins stesso e impostare alcuni valori globali plug-in.  La schermata riportata di seguito viene illustrato un esempio di questa pagina:
 
- [ ![](jenkins-walkthrough-images/image14.png "Questa schermata viene illustrato un esempio di questa pagina")](jenkins-walkthrough-images/image14.png)
+ [![](jenkins-walkthrough-images/image14.png "Questa schermata viene illustrato un esempio di questa pagina")](jenkins-walkthrough-images/image14.png#lightbox)
 
 
-### <a name="configuring-the-msbuild-plugin"></a>Configurare il plug-in MSBuild
+#### <a name="configuring-the-msbuild-plugin"></a>Configurare il plug-in MSBuild
 
 Il plug-in di MSBuild deve essere configurato per utilizzare **/Library/Frameworks/Mono.framework/Commands/xbuild** per la compilazione di Visual Studio per i file di soluzione e progetto Mac. Scorrere verso il basso il **configurazione sistema [Jenkins]** pagina fino a quando il **aggiungere MSBuild** pulsante viene visualizzato, come illustrato nella schermata seguente:
 
- [ ![](jenkins-walkthrough-images/image15.png "Scorrere verso il basso la pagina Configura sistema Jenkins fino a quando non viene visualizzato il pulsante di aggiunta di MSBuild")](jenkins-walkthrough-images/image15.png)
+ [![](jenkins-walkthrough-images/image15.png "Scorrere verso il basso la pagina Configura sistema Jenkins fino a quando non viene visualizzato il pulsante di aggiunta di MSBuild")](jenkins-walkthrough-images/image15.png#lightbox)
 
 Fare clic su questo pulsante e compilare il **nome** e **percorso** a **MSBuild** i campi del modulo che viene visualizzato. Il nome del **MSBuild** installazione deve essere un nome significativo, mentre il **percorso MSBuild** deve essere il percorso `xbuild`, che è in genere **/Library Framework / Mono.framework/Commands/xbuild**. Dopo le modifiche è stato salvato facendo clic su Salva o sul pulsante Applica nella parte inferiore della pagina, Jenkins sarà in grado di utilizzare `xbuild` per compilare le soluzioni.
 
-### <a name="configuring-the-tfs-plugin"></a>Configurare il plug-in TFS
+#### <a name="configuring-the-tfs-plugin"></a>Configurare il plug-in TFS
 
 In questa sezione è obbligatoria se si prevede di usare TFS per il controllo del codice sorgente.
 
@@ -160,34 +160,34 @@ Affinché una workstation di OS X interagire con un server TFS, Team Explorer Ev
 
 Dopo aver installato il client della riga di comando per TFS, Jenkins deve essere configurato con il percorso completo di `tf` client della riga di comando. Scorrere verso il basso il **configurazione sistema [Jenkins]** pagina fino a individuare la sezione di Team Foundation Server, come illustrato nella schermata seguente:
 
- [ ![](jenkins-walkthrough-images/image17.png "Scorrere verso il basso la pagina Configura sistema Jenkins fino a individuare la sezione di Team Foundation Server")](jenkins-walkthrough-images/image17.png)
+ [![](jenkins-walkthrough-images/image17.png "Scorrere verso il basso la pagina Configura sistema Jenkins fino a individuare la sezione di Team Foundation Server")](jenkins-walkthrough-images/image17.png#lightbox)
 
 Immettere il percorso completo per il `tf` , fare clic su, il **salvare** pulsante.
 
-## <a name="configure-jenkins-security"></a>Configurare la protezione di Jenkins
+### <a name="configure-jenkins-security"></a>Configurare la protezione di Jenkins
 
 Durante l'installazione iniziale Jenkins sicurezza è disabilitata, pertanto è possibile per tutti gli utenti configurare ed eseguire qualsiasi tipo di processo in modo anonimo. In questa sezione viene descritto come configurare la sicurezza mediante il database utente di Jenkins per configurare l'autenticazione e autorizzazione.
 
 Sono disponibili le impostazioni di sicurezza selezionando **Jenkins > gestire Jenkins > configurare la sicurezza globale**, come illustrato in questo screenshot:
 
- [ ![](jenkins-walkthrough-images/image18.png "Le impostazioni di sicurezza sono reperibile selezionando Jenkins / gestire Jenkins / configurare la sicurezza globale")](jenkins-walkthrough-images/image18.png)
+ [![](jenkins-walkthrough-images/image18.png "Le impostazioni di sicurezza sono reperibile selezionando Jenkins / gestire Jenkins / configurare la sicurezza globale")](jenkins-walkthrough-images/image18.png#lightbox)
 
 Nel **configurare la sicurezza globale** controllo pagina il **Attiva protezione** casella di controllo e **controllo di accesso** form dovrebbe apparire simile alla schermata successiva:
 
- [ ![](jenkins-walkthrough-images/image19.png "Nella pagina Configurazione di protezione globale, controllare la sicurezza di abilitare la casella di controllo e il modulo di controllo di accesso dovrebbe apparire simile a questo screenshot")](jenkins-walkthrough-images/image19.png)
+ [![](jenkins-walkthrough-images/image19.png "Nella pagina Configurazione di protezione globale, controllare la sicurezza di abilitare la casella di controllo e il modulo di controllo di accesso dovrebbe apparire simile a questo screenshot")](jenkins-walkthrough-images/image19.png#lightbox)
 
 Attivare o disattivare il pulsante di opzione per **database utente di Jenkins** nel **sezione dell'area di autenticazione di sicurezza**e assicurarsi che **consentire agli utenti di effettuare l'iscrizione** è selezionata, come illustrato di cattura di schermata seguente:
 
- [ ![](jenkins-walkthrough-images/image20.png "Attivare o disattivare il pulsante di opzione per database di un utente di Jenkins nella sezione sicurezza dell'area di autenticazione e assicurarsi che viene inoltre verificato se consentire agli utenti di effettuare l'iscrizione")](jenkins-walkthrough-images/image20.png)
+ [![](jenkins-walkthrough-images/image20.png "Attivare o disattivare il pulsante di opzione per database di un utente di Jenkins nella sezione sicurezza dell'area di autenticazione e assicurarsi che viene inoltre verificato se consentire agli utenti di effettuare l'iscrizione")](jenkins-walkthrough-images/image20.png#lightbox)
 
 Infine, riavviare Jenkins e creare un nuovo account. Il primo account creato è l'account radice e questo account verrà automaticamente alzata di livello a un amministratore. Tornare al **configurare la sicurezza globale** pagina e spuntare la **sicurezza basata su una matrice** pulsante di opzione. L'account radice deve essere concesso l'accesso completo e l'account anonimo deve avere accesso in sola lettura, come illustrato nella schermata seguente:
 
- [ ![](jenkins-walkthrough-images/image21.png "L'account radice deve essere concesso l'accesso completo e l'account anonimo deve avere accesso in sola lettura")](jenkins-walkthrough-images/image21.png)
+ [![](jenkins-walkthrough-images/image21.png "L'account radice deve essere concesso l'accesso completo e l'account anonimo deve avere accesso in sola lettura")](jenkins-walkthrough-images/image21.png#lightbox)
 
 Quando queste impostazioni vengono salvate e Jenkins viene riavviato, verrà attivata sicurezza.
 
 
-### <a name="disabling-security"></a>La disabilitazione della sicurezza
+#### <a name="disabling-security"></a>La disabilitazione della sicurezza
 
 In caso di una password dimenticata o un blocco a livello di Jenkins, è possibile disabilitare sicurezza attenendosi alla procedura seguente:
 
@@ -199,7 +199,7 @@ In caso di una password dimenticata o un blocco a livello di Jenkins, è possibi
 4. Eliminare il `<authorizationstrategy></authorizationstrategy>` e `<securityrealm></securityrealm>` elementi dal file.
 5. Riavviare Jenkins.
 
-# <a name="setting-up-a-job"></a>Impostazione di un processo
+## <a name="setting-up-a-job"></a>Impostazione di un processo
 
 Al livello superiore, Jenkins possono essere gestite tutte le varie attività necessarie per compilare software in un *processo*. Un processo contiene anche i metadati associati, che fornisce informazioni relative alla compilazione, ad esempio come ottenere il codice sorgente, la frequenza con cui deve essere eseguita la compilazione, tutte le variabili speciali che sono necessari per la compilazione e come inviare notifiche agli sviluppatori se la compilazione non riesce.
 
@@ -226,11 +226,11 @@ Dopo aver creato il processo iniziale, deve essere configurata con uno o più de
  - Uno o più *le operazioni di compilazione* deve essere aggiunto al progetto. Questi sono i passaggi o le attività necessarie per compilare l'applicazione.
  - Il processo deve essere assegnato uno *trigger di compilazione* : un set di istruzioni che indicano la frequenza con cui Jenkins per recuperare il codice e compilare il progetto finale.
 
-## <a name="configuring-source-code-control"></a>Configurazione di controllo del codice sorgente
+### <a name="configuring-source-code-control"></a>Configurazione di controllo del codice sorgente
 
 La prima attività Jenkins è recuperare il codice sorgente dal sistema di gestione del codice sorgente. Jenkins supporta molti dei comuni origine codice sistemi di gestione attualmente disponibili. Questa sezione descrive due sistemi più diffusi, Git e Team Foundation Server. Ciascuno di questi sistemi di gestione del codice sorgente è descritto in dettaglio nelle sezioni riportate di seguito.
 
-### <a name="using-git-for-source-code-control"></a>Uso di Git per controllo del codice sorgente
+#### <a name="using-git-for-source-code-control"></a>Uso di Git per controllo del codice sorgente
 
 Se si usa TFS per controllo del codice sorgente, [ignorare](#Using_TFS_for_Source_Code_Management) questa sezione e passare alla sezione successiva con TFS.
 
@@ -240,7 +240,7 @@ Jenkins supporta Git predefinita: nessuna altri plug-in sono necessari. Per util
 
 Dopo aver salvato le modifiche, configurazione di Git è stata completata.
 
-### <a name="using-tfs-for-source-code-management"></a>Utilizzo di TFS per gestione del codice sorgente
+#### <a name="using-tfs-for-source-code-management"></a>Utilizzo di TFS per gestione del codice sorgente
 
 In questa sezione si applica solo agli utenti TFS.
 
@@ -253,7 +253,7 @@ Fornire le informazioni necessarie per TFS. Nella schermata seguente viene illus
 
 ![](jenkins-walkthrough-images/image27.png "Questa schermata è riportato un esempio di modulo completato")
 
-### <a name="testing-the-source-code-control-configuration"></a>Test di configurazione del controllo del codice sorgente
+#### <a name="testing-the-source-code-control-configuration"></a>Test di configurazione del controllo del codice sorgente
 
 Una volta configurato il controllo del codice sorgente appropriato, fare clic su **salvare** per salvare le modifiche. Questo per tornare alla home page per il processo, che sarà simile nella schermata seguente:
 
@@ -273,7 +273,7 @@ Per facilitare la risoluzione dei problemi che potrebbero verificarsi come parte
 
 ![](jenkins-walkthrough-images/image31.png "Questa schermata è riportato il collegamento di Output della Console, nonché alcuni dell'output da un processo ha esito positivo")
 
-### <a name="location-of-build-artifacts"></a>Posizione degli elementi di compilazione
+#### <a name="location-of-build-artifacts"></a>Posizione degli elementi di compilazione
 
 Jenkins recupererà l'intero codice sorgente in una cartella speciale denominata un *dell'area di lavoro*. Questa directory può trovarsi all'interno della cartella nel percorso seguente:
 
@@ -285,7 +285,7 @@ Il percorso di area di lavoro verrà archiviato in una variabile di ambiente den
 
 ![](jenkins-walkthrough-images/image32.png "Questa schermata è riportato un esempio di area di lavoro per un processo denominato HelloWorld")
 
-## <a name="build-triggers"></a>I trigger di compilazione
+### <a name="build-triggers"></a>I trigger di compilazione
 
 Sono disponibili diverse strategie diversi per avviare le compilazioni in Jenkins: questi sono conosciuti come *trigger di compilazione*. Un trigger di compilazione consente di Jenkins decidere quando avviare un processo e compilare il progetto. Due dei trigger di compilazione più comuni sono:
 
@@ -297,7 +297,7 @@ Polling SCM è un trigger comune perché fornisce un feedback rapido quando uno 
 Compilazioni periodiche vengono spesso utilizzate per creare una versione dell'applicazione che può essere distribuito ai tester. Ad esempio, una compilazione periodica potrebbe essere pianificata per venerdì sera in modo che i membri del team QA possono verificare il lavoro della settimana precedente.
 
 
-## <a name="compiling-a-xamarinios-applications"></a>La compilazione di applicazioni di xamarin
+### <a name="compiling-a-xamarinios-applications"></a>La compilazione di applicazioni di xamarin
 Progetti di xamarin. IOS possono essere compilati nella riga di comando mediante `xbuild` o `msbuild`. Il comando di shell verrà eseguito nel contesto dell'account utente che esegue Jenkins. È importante che l'account utente disponga dell'accesso per il profilo di provisioning in modo che l'applicazione può essere inserito correttamente per la distribuzione. È possibile aggiungere questo comando di shell per la pagina Configurazione del processo.
 
 Scorrere verso il basso il **compilare** sezione. Fare clic su di **istruzione di compilazione Aggiungi** e selezionare **eseguire shell**, come illustrato nella schermata seguente:
@@ -307,7 +307,7 @@ Scorrere verso il basso il **compilare** sezione. Fare clic su di **istruzione d
 
 [!include[](~/tools/ci/includes/commandline-compile-of-xamarin-ios-ipa.md)]
 
-## <a name="building-a-xamarinandroid-project"></a>Compilazione di un progetto xamarin
+### <a name="building-a-xamarinandroid-project"></a>Compilazione di un progetto xamarin
 
 Compilazione di un progetto xamarin è concettualmente molto simile alla creazione di un progetto xamarin. IOS. Per creare un file APK da un progetto xamarin, Jenkins deve essere configurato per eseguire i due passaggi seguenti:
 
@@ -316,7 +316,7 @@ Compilazione di un progetto xamarin è concettualmente molto simile alla creazio
 
 Questi due passaggi verranno descritta più dettagliatamente nelle prossime due sezioni.
 
-## <a name="creating-the-apk"></a>Creazione di file APK
+### <a name="creating-the-apk"></a>Creazione di file APK
 
 Fare clic su di **istruzione di compilazione Aggiungi** e selezionare **compilare un progetto di Visual Studio o di una soluzione utilizzando MSBuild**, come illustrato nella schermata seguente:
 
@@ -337,7 +337,7 @@ Nella schermata seguente viene illustrato un esempio di questo file APK:
 
 Questo file APK non è pronta per la distribuzione, perché non è stato firmato con un keystore privato e deve essere allineato zip.
 
-### <a name="signing-and-zipaligning-the-apk-for-release"></a>Firma e il file APK per la versione Zipaligning
+#### <a name="signing-and-zipaligning-the-apk-for-release"></a>Firma e il file APK per la versione Zipaligning
 
 Firma e il file APK zipaligning sono tecnicamente due operazioni distinte eseguite da due strumenti da riga di comando separato da Android SDK. Tuttavia, è utile eseguire tali operazioni nell'azione di compilazione. Per ulteriori informazioni sulla firma e un file APK zipaligning, vedere la documentazione di Xamarin sulla preparazione di un'applicazione Android per il rilascio.
 
@@ -410,12 +410,12 @@ Nella schermata seguente viene illustrato un esempio su come specificare il `jar
 
 Una volta tutte le azioni di compilazione, è consigliabile attivare una compilazione manuale per verificare che il funzionamento. Se la compilazione non riesce, il **Output di Console** deve essere esaminato per informazioni su ciò che ha causato l'errore di compilazione.
 
-## <a name="submitting-tests-to-test-cloud"></a>Invio di test per Test Cloud
+### <a name="submitting-tests-to-test-cloud"></a>Invio di test per Test Cloud
 
 Test automatizzati possono essere inviati a Test Cloud tramite i comandi della shell. Per ulteriori informazioni sull'impostazione di esecuzione dei Test in Xamarin Test Cloud, disponiamo Guide per l'utilizzo di [UITest](https://developer.xamarin.com/guides/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/) o [Calabash](https://developer.xamarin.com/guides/testcloud/calabash/working-with/submitting-tests-to-xamarin-test-cloud/).
 
 
-#<a name="summary"></a>Riepilogo
+## <a name="summary"></a>Riepilogo
 
 In questa guida è introdotto Jenkins come un server di compilazione in Mac OS X e configurato in modo da compilare e preparare le applicazioni mobili di Xamarin per il rilascio. Jenkins è installato in un computer Mac OS X con alcuni plug-in per supportare il processo di compilazione. Viene creato e configurato un processo che pull codice da Git o TFS, quindi compilare il codice in un'applicazione pronto di rilascio. È inoltre sono stati illustrati due modi diversi per la pianificazione dei processi devono essere eseguiti.
 

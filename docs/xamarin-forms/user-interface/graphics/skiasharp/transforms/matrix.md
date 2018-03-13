@@ -4,14 +4,15 @@ description: Esaminare i SkiaSharp trasformazioni con la matrice di trasformazio
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 85402768990869a2121cdea5ab7d232d80d64ed2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9d5e65abe675ded48e9239f2cd10ceed4a7c3a52
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="matrix-transforms"></a>Trasformazioni di matrice
 
@@ -401,7 +402,7 @@ public class PathTransformPage : ContentPage
 
 Viene visualizzato nell'angolo superiore sinistro dell'area di disegno:
 
-[![](matrix-images/pathtransform-small.png "Schermata triplo della pagina percorso trasformare")](matrix-images/pathtransform-large.png "tripla schermata della pagina percorso Transform")
+[![](matrix-images/pathtransform-small.png "Schermata triplo della pagina percorso trasformare")](matrix-images/pathtransform-large.png#lightbox "tripla schermata della pagina percorso Transform")
 
 Il costruttore di questo programma si applica la matrice per il percorso con la chiamata seguente:
 
@@ -588,7 +589,7 @@ public partial class ShowAffineMatrixPage : ContentPage
 
 La schermata di iOS seguente mostra la bitmap quando la pagina viene caricata, mentre le altre due schermate viene visualizzato dopo alcuni modifica:
 
-[![](matrix-images/showaffinematrix-small.png "Schermata di triplo della pagina Mostra matrice Affine")](matrix-images/showaffinematrix-large.png "tripla schermata della pagina Mostra matrice Affine")
+[![](matrix-images/showaffinematrix-small.png "Schermata di triplo della pagina Mostra matrice Affine")](matrix-images/showaffinematrix-large.png#lightbox "tripla schermata della pagina Mostra matrice Affine")
 
 Anche se sembra come se i punti di tocco trascinare gli angoli dell'immagine bitmap, che è solo un effetto ottico. La matrice calcolata dai punti di tocco Trasforma la bitmap in modo che gli angoli coincidano con i punti di tocco.
 

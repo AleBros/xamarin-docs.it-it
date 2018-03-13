@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: bea8480c66a2ecf499375636c98511ca55ce7693
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e9936bb523db8ba8777df94a03bf12f9fa718fca
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-beam"></a>Trasmetti Android
 
 Trasmetti Android sono una nuova tecnologia di comunicazione (prossimità) 4 di Android che consente alle applicazioni di condividere informazioni tramite NFC in stretta vicinanza.
 
-[![Diagramma che illustra due dispositivi in prossimità di condivisione delle informazioni](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png)
+[![Diagramma che illustra due dispositivi in prossimità di condivisione delle informazioni](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 
 Trasmetti Android funziona effettuando il push dei messaggi su NFC quando due dispositivi si trovano nell'intervallo. Dispositivi di circa 4cm tra loro possono condividere dati con raggio Android. Crea un messaggio di un'attività in un dispositivo e specifica un'attività (o attività) in grado di gestire il push. Quando l'attività specificata è in primo piano e i dispositivi si trovano nell'intervallo, per il secondo dispositivo Android Trasmetti determinerà il messaggio. Sul dispositivo di ricezione, l'intento viene richiamato contenente i dati del messaggio.
 
@@ -30,7 +30,6 @@ Android supporta due tipi di messaggi di impostazione con raggio Android:
 
 In entrambi i casi, per l'invio di dati con raggio Android, un'applicazione di invia un `NdefMessage`, creazione di pacchetti di dati in diversi `NdefRecords`. Esaminiamo ora i punti chiave che devono essere risolti prima di è possibile attivare Trasmetti Android. In primo luogo, è possibile utilizzare con lo stile di callback di creazione di un `NdefMessage`.
 
-<a name="Creating_a_Message" />
 
 ## <a name="creating-a-message"></a>Creazione di un messaggio
 
@@ -66,7 +65,6 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 }
 ```
 
-<a name="Receiving_a_Message" />
 
 ## <a name="receiving-a-message"></a>Ricezione di un messaggio
 
@@ -79,7 +77,7 @@ NdefMessage msg = (NdefMessage) rawMsgs [0];
 
 Per un esempio di codice completo che usa Android raggio, illustrato in esecuzione nella schermata riportata di seguito, vedere il [demo Trasmetti Android](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/) nella raccolta di esempio.
 
-[![Schermate di esempio dalla demo Trasmetti Android](android-beam-images/24.png)](android-beam-images/24.png)
+[![Schermate di esempio dalla demo Trasmetti Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
 
 

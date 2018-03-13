@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: d258d993d8452c0c93c53d875d81683a294f80d3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dc728e5817a7d1d61d7745120bca7f05641ce76f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="global-styles"></a>Stili globali
 
@@ -60,7 +60,7 @@ L'esempio di codice seguente mostra una pagina XAML l'applicazione di `buttonSty
 
 Ciò comporta l'aspetto illustrato nelle schermate seguenti:
 
-[![](application-images/application-styles-1.png "Gli stili globali esempio")](application-images/application-styles-1-large.png "esempio stili globali")
+[![](application-images/application-styles-1.png "Gli stili globali esempio")](application-images/application-styles-1-large.png#lightbox "esempio stili globali")
 
 Per informazioni sulla creazione di stili in una pagina [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), vedere [stili esplicita](~/xamarin-forms/user-interface/styles/explicit.md) e [stili impliciti](~/xamarin-forms/user-interface/styles/implicit.md).
 
@@ -98,9 +98,9 @@ Gli stili di livello inferiori nella gerarchia di visualizzazione hanno la prece
 
 Originale `buttonStyle`, definiti a livello di applicazione, viene sottoposto a override di `buttonStyle` istanza definita a livello di pagina. Inoltre, lo stile di livello di pagina viene sottoposta a override dal livello di controllo `buttonStyle`. Pertanto, il [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) istanze vengono visualizzate con testo blu, come illustrato nelle schermate seguenti:
 
-[![](application-images/application-styles-2.png "Si esegue l'override degli stili esempio")](application-images/application-styles-2-large.png "si esegue l'override di esempio di stili")
+[![](application-images/application-styles-2.png "Si esegue l'override degli stili esempio")](application-images/application-styles-2-large.png#lightbox "si esegue l'override di esempio di stili")
 
-## <a name="creating-a-global-style-in-c35"></a>Creazione di uno stile globale in C &#35;
+## <a name="creating-a-global-style-in-c35"></a>Creazione di uno stile globale in C&#35;
 
 [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) le istanze possono essere aggiunte all'applicazione [ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) raccolta in c# tramite la creazione di un nuovo [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)e quindi aggiungendo il `Style` istanze per il `ResourceDictionary`, come Nell'esempio di codice seguente:
 

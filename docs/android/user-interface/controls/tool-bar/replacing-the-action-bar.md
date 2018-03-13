@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 91d5612991c2297418cf7003c499c1a1bbfc7558
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e71c6ea816b8b732d21148db32fd9395732dd4c0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="replacing-the-action-bar"></a>Sostituire la barra delle azioni
 
-<a name="overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -36,16 +35,14 @@ Per sostituire una barra di azione predefinito di un'app con un `Toolbar`:
 Le sezioni seguenti illustrano in dettaglio il processo. Viene creata una semplice app e la barra delle azioni viene sostituito con un oggetto personalizzato `Toolbar`. 
 
 
-<a name="start_project" />
 
 ## <a name="start-an-app-project"></a>Avviare un progetto di App
 
 Creare un nuovo progetto Android denominato **ToolbarFun** (vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) per ulteriori informazioni sulla creazione di un nuovo progetto Android). Dopo aver creato il progetto, impostare i livelli di API Android minimo e di destinazione **Android 5.0 (API livello 21 - simbolo)**. Per ulteriori informazioni sull'impostazione dei livelli di versione di Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md). Quando l'app viene compilato ed eseguito, come illustrato in questa schermata viene visualizzato sulla barra delle azioni predefinite: 
 
-[![Schermata della barra delle azioni predefinite](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png)
+[![Schermata della barra delle azioni predefinite](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
 
 
-<a name="custom_theme" />
 
 ## <a name="create-a-custom-theme"></a>Creare un tema personalizzato
 
@@ -89,7 +86,6 @@ Modifica **Properties/AndroidManifest.xml** e aggiungere le seguenti `android:th
 Per ulteriori informazioni sull'applicazione di un tema personalizzato a un'app, vedere [temi personalizzati utilizzando](~/android/user-interface/material-theme.md#customtheme). 
 
 
-<a name="toolbar_layout" />
 
 ## <a name="define-a-toolbar-layout"></a>Definire un Layout della barra degli strumenti
 
@@ -127,7 +123,6 @@ android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
 Questa impostazione viene utilizzata in modo che le voci di menu si differenzia il colore di sfondo scuro.
 
 
-<a name="include_layout" />
 
 ## <a name="include-the-toolbar-layout"></a>Includere il Layout della barra degli strumenti
 
@@ -153,7 +148,6 @@ Modificare il file di layout **Resources/layout/Main.axml** e sostituirne il con
 Questo layout è inclusa la `Toolbar` definito in **toolbar.xml** e utilizza un `RelativeLayout` per specificare che il `Toolbar` deve essere inserito nella parte superiore dell'interfaccia utente (sopra il pulsante). 
 
 
-<a name="activate_toolbar" />
 
 ## <a name="find-and-activate-the-toolbar"></a>Trovare e attivare la barra degli strumenti
 
@@ -173,12 +167,11 @@ ActionBar.Title = "My Toolbar";
 
 Questo codice viene cercato il `Toolbar` e chiama `SetActionBar` in modo che il `Toolbar` accetterà le caratteristiche della barra di azione predefinito. Il titolo della barra degli strumenti viene modificato in **personale sulla barra degli strumenti**. Come illustrato nell'esempio di codice, il `ToolBar` può fare riferimento direttamente come una barra di azione. Compilare ed eseguire questa app &ndash; personalizzata `Toolbar` viene visualizzato al posto di barra delle azioni predefinite: 
 
-[![Schermata della barra degli strumenti personalizzata con lo schema di colore verde](replacing-the-action-bar-images/02-after-sml.png)](replacing-the-action-bar-images/02-after.png)
+[![Schermata della barra degli strumenti personalizzata con lo schema di colore verde](replacing-the-action-bar-images/02-after-sml.png)](replacing-the-action-bar-images/02-after.png#lightbox)
 
 Si noti che il `Toolbar` stile in modo indipendente dal `Theme.Material.Light.DarkActionBar` applicato al resto dell'app. 
 
 
-<a name="main_menus" />
  
 ## <a name="add-menu-items"></a>Aggiungere voci di Menu 
 
@@ -197,13 +190,11 @@ Per aggiungere i menu per il `Toolbar`:
 Nelle sezioni seguenti illustrano in dettaglio il processo aggiungendo **modifica** e **salvare** voci di menu personalizzata `Toolbar`. 
 
 
-<a name="menu_icons" />
 
 ### <a name="install-menu-icons"></a>Installare le icone di Menu
 
 Continuare con la `ToolbarFun` applicazione di esempio, aggiungere le icone di menu al progetto di app. Scaricare [barra degli strumenti icons.zip](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons.zip?raw=true) e decomprimerlo. Copiare il contenuto dell'estratto *mipmap -* cartelle al progetto *mipmap -* cartelle **ToolbarFun/risorse** e includere ogni file di icona aggiunto nel progetto.
 
-<a name="menu_resource" />
 
 ### <a name="define-a-menu-resource"></a>Definire una risorsa di Menu
 
@@ -239,7 +230,6 @@ Questo codice XML crea tre voci di menu:
 
 Il `showAsAction` gli attributi del **modifica** e **salvare** voci di menu sono impostate su `ifRoom` &ndash; questa impostazione, queste voci di menu da visualizzare nel `Toolbar` se è presente spazio sufficiente per poter essere visualizzato. Il **preferenze** voce di menu imposta `showAsAction` per `never` &ndash; in questo modo il **preferenze** menu viene visualizzato nel *overflow* (tre menu punti verticali). 
 
-<a name="on_create_options_menu" />
 
 ### <a name="implement-oncreateoptionsmenu"></a>Implementare OnCreateOptionsMenu
 
@@ -256,7 +246,6 @@ public override bool OnCreateOptionsMenu(IMenu menu)
 Chiamate Android di `OnCreateOptionsMenu` metodo in modo che l'app può specificare la risorsa di menu per un'attività. In questo metodo, il **top_menus.xml** risorse viene ingrandita in passato `menu`. Questo codice genera il nuovo **modifica**, **salvare**, e **preferenze** voci di menu da visualizzare nel `Toolbar`. 
 
 
-<a name="on_options_item_selected" />
 
 ### <a name="implement-onoptionsitemselected"></a>Implementare OnOptionsItemSelected
 
@@ -275,15 +264,15 @@ Quando un utente digita una voce di menu, Android chiama il `OnOptionsItemSelect
 
 Compilare ed eseguire `ToolbarFun` per visualizzare le nuove voci di menu nella barra degli strumenti. Il `Toolbar` ora visualizza tre icone del menu come illustrato in questo screenshot: 
 
-[![Diagramma che illustra i percorsi di modifica, Salva e voci di menu di Overflow](replacing-the-action-bar-images/04-menu-items-sml.png)](replacing-the-action-bar-images/04-menu-items.png)
+[![Diagramma che illustra i percorsi di modifica, Salva e voci di menu di Overflow](replacing-the-action-bar-images/04-menu-items-sml.png)](replacing-the-action-bar-images/04-menu-items.png#lightbox)
 
 Quando un'utente le scelte di **modifica** voce di menu, un avviso popup visualizzata per indicare che il `OnOptionsItemSelected` chiamata al metodo: 
 
-[![Schermata di tipo avviso popup visualizzata quando verrà scelti modificare un elemento](replacing-the-action-bar-images/05-toast-displayed-sml.png)](replacing-the-action-bar-images/05-toast-displayed.png)
+[![Schermata di tipo avviso popup visualizzata quando verrà scelti modificare un elemento](replacing-the-action-bar-images/05-toast-displayed-sml.png)](replacing-the-action-bar-images/05-toast-displayed.png#lightbox)
 
 Quando un utente tocca il menu di overflow, il **preferenze** voce di menu viene visualizzata. In genere, meno comune azioni devono risiedere nel menu di overflow &ndash; questo esempio viene utilizzato il menu di overflow per **preferenze** perché non è più spesso utilizzato come **modifica** e  **Salvare**: 
 
-[![Schermata di preferenze menu che viene visualizzato nel menu di Overflow](replacing-the-action-bar-images/06-preferences-sml.png)](replacing-the-action-bar-images/06-preferences.png)
+[![Schermata di preferenze menu che viene visualizzato nel menu di Overflow](replacing-the-action-bar-images/06-preferences-sml.png)](replacing-the-action-bar-images/06-preferences.png#lightbox)
 
 Per ulteriori informazioni sui menu Android, vedere Android Developer [menu](https://developer.android.com/guide/topics/ui/menus.html) argomento. 
  

@@ -8,17 +8,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: c0b5fa3e7eacb9f7fd8aa133a290d0e7654972ce
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9c1797398fba580ab7f34526b10e1da455eb2dc5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="material-design-features"></a>Funzionalità di progettazione materiale
 
 _Questo argomento descrive le funzionalità di progettazione che rendono più semplice per gli sviluppatori creare layout di progettazione conformi materiale. In questa sezione vengono presentati e come utilizzare la griglia di materiale, la tavolozza dei colori di materiale, la scala tipografica e l'Editor del tema._
 
-<a name="overview" />
+
+> [!Video https://youtube.com/embed/E3_ZjIOzVzY]
+
+**Evoluzione 2016: Tutti gli utenti possono creare efficaci App con progettazione materiale**
 
 ## <a name="overview"></a>Panoramica
 
@@ -37,7 +40,6 @@ In questa Guida, è necessario esaminare le funzionalità di progettazione segue
 È verranno esaminati ognuna di queste funzionalità e vengono forniti esempi di come utilizzarli.
 
 
-<a name="material_grid" />
 
 ## <a name="material-design-grid"></a>Griglia di progettazione materiale
 
@@ -45,11 +47,11 @@ Il menu di griglia di progettazione di materiale è disponibile nella barra degl
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Materiale della griglia di progettazione](material-design-features-images/vs/01-material-design-grid-sml.png)](material-design-features-images/vs/01-material-design-grid.png)
+[![Materiale della griglia di progettazione](material-design-features-images/vs/01-material-design-grid-sml.png)](material-design-features-images/vs/01-material-design-grid.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[![Materiale della griglia di progettazione](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png)
+[![Materiale della griglia di progettazione](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png#lightbox)
 
 -----
 
@@ -65,11 +67,11 @@ Questi elementi possono essere visualizzati nella schermata seguente:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Cornice e Spaziatura griglia](material-design-features-images/vs/02-grid-and-keylines-sml.png)](material-design-features-images/vs/02-grid-and-keylines.png)
+[![Cornice e Spaziatura griglia](material-design-features-images/vs/02-grid-and-keylines-sml.png)](material-design-features-images/vs/02-grid-and-keylines.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[![Cornice e Spaziatura griglia](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png)
+[![Cornice e Spaziatura griglia](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png#lightbox)
 
 -----
 
@@ -89,7 +91,7 @@ Quando si modificano i valori di configurazione, vengono salvate nel file XML di
 
 Ognuno di questi elementi di sovrapposizione è configurabile. Quando si fa clic sul triangolo verso il basso accanto al menu di griglia di progettazione di materiale, viene visualizzata popover una finestra di dialogo che consente di disabilitare o abilitare la griglia, configurare la posizione di attivare e impostare spaziature l'avanzamento. Si noti che tutti i valori sono espressi in `dp` (densità independent pixel):
 
-[![Griglia, cornice e la configurazione di spaziatura](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png)
+[![Griglia, cornice e la configurazione di spaziatura](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png#lightbox)
 
 Per aggiungere una nuova cornice, immettere un nuovo valore di offset nella **Offset** , selezionare un percorso (**sinistro**, **top**, **destra**, o  **nella parte inferiore**) e fare clic sull'icona + per aggiungere la nuova cornice.
 
@@ -102,20 +104,20 @@ Quando si modificano i valori di configurazione, vengono salvate nel file XML di
 
 Ogni elemento del Pannello proprietà che accetta un colore ora presenta un'icona aggiuntiva che è possibile utilizzare per aprire la tavolozza dei colori di progettazione di materiale, come illustrato in questa schermata:
 
-[![Icona di colore](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png)
+[![Icona di colore](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png#lightbox)
 
 Quando si fa clic su questa icona, viene visualizzata popover una finestra di dialogo che consente di configurare il colore di tale proprietà dalla tavolozza dei colori materiale progettazione:
 
-[![Materiale tavolozza dei colori di progettazione](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png)
+[![Materiale tavolozza dei colori di progettazione](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png#lightbox)
 
 La parte superiore della tavolozza dei colori Visualizza colori materiale progettazione primari mentre nella parte inferiore del riquadro viene visualizzato un intervallo di tonalità del colore primario selezionato. Ad esempio, quando si seleziona **Indigo**, una raccolta di **Indigo** tonalità viene visualizzato nella parte inferiore della finestra di dialogo.
 Quando si seleziona una tonalità, il colore della proprietà viene modificato in tonalità selezionata. Nell'esempio seguente, il `Background Tint` del pulsante viene modificato in *500 Indigo*:
 
-[![Scegliere Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png)
+[![Scegliere Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
 
 `Background Tint` è impostato per il codice per il colore *500 Indigo* (`#ff3f51b5`), e la finestra di progettazione aggiorna il colore di sfondo del pulsante per riflettere la modifica:
 
-[![Modifiche di tonalità di sfondo](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png)
+[![Modifiche di tonalità di sfondo](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png#lightbox)
 
 Per ulteriori informazioni sulla tavolozza dei colori materiale progettazione, vedere la progettazione di materiale [Guida tavolozza di colori](http://www.google.com/design/spec/style/color.html#color-color-palette).
 
@@ -123,24 +125,23 @@ Per ulteriori informazioni sulla tavolozza dei colori materiale progettazione, v
 
 Il **aspetto del testo** sezione del **proprietà** riempimento **stile** scheda contiene un'icona che consente di selezionare da un `TextAppearance` stile conforme alla progettazione materiale specifica:
 
-[![Scheda stili](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png)
+[![Scheda stili](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png#lightbox)
 
 Quando si fa clic su questa icona, viene aperto il **scala tipografica** popover finestra di dialogo, che presenta un elenco degli stili di testo configurati in precedenza che è possibile scegliere tra:
 
-[![Selezione di stile di testo](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png)
+[![Selezione di stile di testo](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png#lightbox)
 
 Nell'esempio seguente, fare clic su **schermo 1** viene modificato il testo del pulsante per il tipo di carattere maggiore di **schermo 1**:
 
-[![Stile di visualizzazione 1](material-design-features-images/xs/10-display-1-sml.png)](material-design-features-images/xs/10-display-1.png)
+[![Stile di visualizzazione 1](material-design-features-images/xs/10-display-1-sml.png)](material-design-features-images/xs/10-display-1.png#lightbox)
 
 Lo stile del testo nel **scala tipografica** finestra di dialogo segue il **tema** impostazione. Ad esempio, se il **luce** tema viene scelto nella finestra di progettazione, l'elenco di testo disponibile stili mirror il **luce** tema:
 
-[![Tema chiaro](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png)
+[![Tema chiaro](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png#lightbox)
 
 -----
 
 
-<a name="theme_editor" />
 
 ## <a name="theme-editor"></a>Editor del tema
 
@@ -152,7 +153,7 @@ Il **Editor del tema** consente di personalizzare le informazioni di colore per 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[ ![Icona Editor del tema](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png)
+[![Icona Editor del tema](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png#lightbox)
 
 -----
 
@@ -162,11 +163,11 @@ Il pannello sinistro del **Editor del tema** consente di visualizzare l'elenco d
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Editor del tema](material-design-features-images/vs/05-theme-editor-sml.png)](material-design-features-images/vs/05-theme-editor.png)
+[![Editor del tema](material-design-features-images/vs/05-theme-editor-sml.png)](material-design-features-images/vs/05-theme-editor.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[![Editor del tema](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png)
+[![Editor del tema](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png#lightbox)
 
 -----
 
@@ -183,7 +184,6 @@ Quando si seleziona un colore a sinistra, nel riquadro destro sono disponibili l
 Esaminare ognuna di queste schede in modo dettagliato.
 
 
-<a name="theme_edit_inherit_tab" />
 
 ### <a name="inherit-tab"></a>Ereditare scheda
 
@@ -191,11 +191,11 @@ Come illustrato nell'esempio seguente, il **eredita** Elenca l'ereditarietà di 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Ereditare scheda](material-design-features-images/vs/06-inherit-tab-sml.png)](material-design-features-images/vs/06-inherit-tab.png)
+[![Ereditare scheda](material-design-features-images/vs/06-inherit-tab-sml.png)](material-design-features-images/vs/06-inherit-tab.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[![Ereditare scheda](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png)
+[![Ereditare scheda](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
 
 -----
 
@@ -203,7 +203,6 @@ In questo esempio, il **tema predefinito** eredita da uno stile che utilizza `@c
 Per ulteriori informazioni sull'ereditarietà degli stili, vedere [stili e temi](http://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 
-<a name="theme_edit_color_picker" />
 
 ### <a name="color-picker"></a>Selezione dei colori
 
@@ -211,11 +210,11 @@ Nella schermata seguente viene illustrato il **selezione colori**:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Selezione dei colori](material-design-features-images/vs/07-color-picker-sml.png)](material-design-features-images/vs/07-color-picker.png)
+[![Selezione dei colori](material-design-features-images/vs/07-color-picker-sml.png)](material-design-features-images/vs/07-color-picker.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[![Selezione dei colori](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png)
+[![Selezione dei colori](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
 
 -----
 
@@ -229,7 +228,6 @@ In questo esempio, il **Background** colore può essere modificato per qualsiasi
 
 È il colore scelto nella selezione colori *non* limitato alle linee guida di progettazione di materiale o per il set di risorse di colore disponibili.
 
-<a name="theme_edit_resources" />
 
 ### <a name="resources"></a>Risorse
 
@@ -237,18 +235,17 @@ Il **risorse** scheda offre un elenco di risorse di colore che sono già present
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Risorse](material-design-features-images/vs/08-resources-sml.png)](material-design-features-images/vs/08-resources.png)
+[![Risorse](material-design-features-images/vs/08-resources-sml.png)](material-design-features-images/vs/08-resources.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[![Risorse](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png)
+[![Risorse](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png#lightbox)
 
 -----
 
 Utilizzo di **risorse** scheda vincola le scelte effettuate a questo elenco di colori. Tenere presente che se si sceglie una risorsa colore che è già assegnata a un'altra parte del tema, due elementi adiacenti dell'interfaccia utente possono "eseguire insieme" (perché hanno lo stesso colore) e diventare difficile distinguere all'utente.
 
 
-<a name="theme_edit_material_pallette" />
 
 ### <a name="material-palette"></a>Tavolozza materiale
 
@@ -256,7 +253,7 @@ Utilizzo di **risorse** scheda vincola le scelte effettuate a questo elenco di c
 
 Il **tavolozza materiale** verrà visualizzata la scheda di **tavolozza dei colori di progettazione di materiale**. Scelta di un valore di colore dalla tavolozza a questo vincola la scelta di colori in modo che sia coerenza con le linee guida di progettazione di materiale.
 
-[![Tavolozza materiale](material-design-features-images/vs/09-material-palette-sml.png)](material-design-features-images/vs/09-material-palette.png)
+[![Tavolozza materiale](material-design-features-images/vs/09-material-palette-sml.png)](material-design-features-images/vs/09-material-palette.png#lightbox)
 
 La parte superiore della tavolozza dei colori Visualizza colori materiale progettazione primari mentre nella parte inferiore del riquadro viene visualizzato un intervallo di tonalità del colore primario selezionato. Ad esempio, quando si seleziona **Indigo**, una raccolta di **Indigo** tonalità viene visualizzato nella parte inferiore della finestra di dialogo.
 Quando si seleziona una tonalità, il colore della proprietà viene modificato in tonalità selezionata. Nell'esempio seguente, il `Background Tint` del pulsante viene modificato in *500 Indigo*:
@@ -265,7 +262,7 @@ Quando si seleziona una tonalità, il colore della proprietà viene modificato i
 
 `Background Tint` è impostato per il codice per il colore *500 Indigo* (`#ff3f51b5`), e la finestra di progettazione aggiorna il colore di sfondo per riflettere la modifica:
 
-[![Tint background modificato](material-design-features-images/vs/11-background-tint-sml.png)](material-design-features-images/vs/11-background-tint.png)
+[![Tint background modificato](material-design-features-images/vs/11-background-tint-sml.png)](material-design-features-images/vs/11-background-tint.png#lightbox)
 
 Per ulteriori informazioni sulla tavolozza dei colori materiale progettazione, vedere la progettazione di materiale [Guida tavolozza di colori](http://www.google.com/design/spec/style/color.html#color-color-palette).
 
@@ -273,12 +270,11 @@ Per ulteriori informazioni sulla tavolozza dei colori materiale progettazione, v
 
 Il **tavolozza materiale** verrà visualizzata la scheda di **tavolozza dei colori di progettazione di materiale** descritto [precedenti](#material_palette). Scelta di un valore di colore dalla tavolozza a questo vincola la scelta di colori in modo che sia coerenza con le linee guida di progettazione di materiale.
 
-[![Tavolozza materiale](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png)
+[![Tavolozza materiale](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
 
 -----
 
 
-<a name="theme_create" />
 
 ### <a name="creating-a-new-theme"></a>Creazione di un nuovo tema
 
@@ -290,7 +286,7 @@ Nell'esempio seguente, la tavolozza materiale useremo per creare un nuovo tema p
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[![Impostare sfondo su blu 900](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png)
+[![Impostare sfondo su blu 900](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png#lightbox)
 
 -----
 
@@ -299,11 +295,11 @@ Quando viene modificata una risorsa di colore, un messaggio viene visualizzata c
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Modifiche non salvate avviso](material-design-features-images/vs/13-unsaved-changes-sml.png)](material-design-features-images/vs/13-unsaved-changes.png)
+[![Modifiche non salvate avviso](material-design-features-images/vs/13-unsaved-changes-sml.png)](material-design-features-images/vs/13-unsaved-changes.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[![Modifiche non salvate avviso](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png)
+[![Modifiche non salvate avviso](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png#lightbox)
 
 -----
 
@@ -327,18 +323,17 @@ Continuare l'esempio precedente, fare clic su **Crea nuovo tema** comporta la cr
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Tema personalizzato aggiunto](material-design-features-images/vs/14-custom-theme-sml.png)](material-design-features-images/vs/14-custom-theme.png)
+[![Tema personalizzato aggiunto](material-design-features-images/vs/14-custom-theme-sml.png)](material-design-features-images/vs/14-custom-theme.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[![Tema personalizzato aggiunto](material-design-features-images/xs/19-custom-theme-sml.png)](material-design-features-images/xs/19-custom-theme.png)
+[![Tema personalizzato aggiunto](material-design-features-images/xs/19-custom-theme-sml.png)](material-design-features-images/xs/19-custom-theme.png#lightbox)
 
 -----
 
 
 Poiché il tema attualmente selezionato non è un tema di progetto, non vi è nessuna finestra di dialogo per aggiornare il tema selezionato o per specificare un nuovo percorso.
 
-<a name="summary" />
 
 ## <a name="summary"></a>Riepilogo
 

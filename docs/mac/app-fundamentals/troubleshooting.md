@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f7ded8fdc1274f7c98d8f7134f6a87c7ba767646
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b0d757c951f9244beb093a0a9b13ac1d069b507
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="reporting-bugs"></a>Segnalazione dei bug
 
@@ -70,7 +70,7 @@ Le sezioni seguenti illustrano i problemi noti e le relative soluzioni.
 
 Il debugger si connette alle App Xamarin.Mac tramite TCP, il che significa che per impostazione predefinita quando si abilita il sandboxing, non è in grado di connettersi all'app, pertanto se si tenta di eseguire l'app senza le autorizzazioni appropriate abilitate, viene visualizzato un errore *"Impossibile connettersi a il debugger"*. 
 
-[![Modifica i diritti](troubleshooting-images/debug01.png "i diritti di modifica")](troubleshooting-images/debug01-large.png)
+[![Modifica i diritti](troubleshooting-images/debug01.png "i diritti di modifica")](troubleshooting-images/debug01-large.png#lightbox)
 
 Il **consentire connessioni in uscita rete (Client)** autorizzazione è necessaria per il debugger, l'abilitazione di questo consente il debug normalmente. Poiché non è possibile eseguire il debug senza di esso, è stata aggiornata la `CompileEntitlements` di destinazione per `msbuild` per aggiungere automaticamente l'autorizzazione per i diritti per qualsiasi applicazione in cui è in modalità sandbox per il debug solo le compilazioni. Build di rilascio devono usare i diritti specificati nel file dei diritti, senza modificato.
 
@@ -80,7 +80,7 @@ Quando nell'app Xamarin.Mac, incluse le librerie di terze parti 3rd, potrebbe es
 
 Questo può essere risolto, aprire le opzioni per il progetto Xamarin.Mac, verrà **Mac compilare** > **internazionalizzazione** e controllando il **occidentale** internazionalizzazione:
 
-[![Modifica le opzioni di compilazione](troubleshooting-images/issue01.png "modificando le opzioni di compilazione")](troubleshooting-images/issue01-large.png)
+[![Modifica delle opzioni di compilazione](troubleshooting-images/issue01.png "Modifica delle opzioni di compilazione")](troubleshooting-images/issue01-large.png#lightbox)
 
 ### <a name="failed-to-compile-mm5103"></a>Errori di compilazione (mm5103)
 
@@ -100,7 +100,7 @@ Con il nuovo Visual Studio per Mac è stato installato, quando si crea un nuovo 
 
 Se si fa doppio clic il **Entitlements.plist** verrà visualizzati i file, l'Editor dei diritti:
 
-[![Modifica i diritti](troubleshooting-images/entitlements02.png "i diritti di modifica")](troubleshooting-images/entitlements02-large.png)
+[![Modifica i diritti](troubleshooting-images/entitlements02.png "i diritti di modifica")](troubleshooting-images/entitlements02-large.png#lightbox)
 
 Per i progetti Xamarin.Mac esistenti, è necessario creare manualmente il **Entitlements.plist** file facendo clic sul progetto nel **soluzione riempimento** e selezionando **Aggiungi**  >  **Nuovo File...** . Selezionare quindi **Xamarin.Mac** > **elenco proprietà vuoto**:
 
@@ -108,7 +108,7 @@ Per i progetti Xamarin.Mac esistenti, è necessario creare manualmente il **Enti
 
 Immettere `Entitlements` per il nome e fare clic su di **New** pulsante. Se il progetto è incluso in precedenza un file dei diritti, verrà richiesto di aggiungerlo al progetto anziché creare un nuovo file:
 
-[![Verifica per determinare se la sovrascrittura di un file](troubleshooting-images/entitlements04.png "verifica per determinare se la sovrascrittura di un file")](troubleshooting-images/entitlements04-large.png)
+[![Verifica per determinare se la sovrascrittura di un file](troubleshooting-images/entitlements04.png "verifica per determinare se la sovrascrittura di un file")](troubleshooting-images/entitlements04-large.png#lightbox)
 
 ## <a name="contacting-support-business-or-enterprise-licenses"></a>Contattare il supporto tecnico (licenze aziendale)
 
@@ -124,14 +124,14 @@ La community degli sviluppatori che utilizzano i prodotti di Xamarin è straordi
 
 Commenti e suggerimenti sono importanti per Microsoft. Se i problemi di Xamarin.Mac:
 
-- Ricerca di [repository problema](https://github.com/xamarin/xamarin-macios/issues) 
-- Prima di passare a problemi di GitHub, Xamarin problemi rilevati in [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Per la ricerca per la corrispondenza di problemi.
-- Se non si trova un problema di corrispondenza, inviare un nuovo problema di [repository di GitHub problema](https://github.com/xamarin/xamarin-macios/issues/new).
+- Cercare nel [repository di problemi](https://github.com/xamarin/xamarin-macios/issues) 
+- Prima di passare ai problemi di GitHub, si è tenuta traccia dei problemi di Xamarin in [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi), dove è possibile cercare i problemi corrispondenti.
+- Se non si riesce a trovare un problema corrispondente, inserirne uno nuovo nel [repository di problemi GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Problemi di GitHub sono tutte pubblici. Non è possibile nascondere i commenti o allegati. 
+I problemi di GitHub sono tutti pubblici. Non è possibile nascondere commenti o allegati. 
 
-Includere la maggior parte delle operazioni seguenti come possibili:                                                                                                                                          
+Includere tutte le informazioni disponibili seguenti:                                                                                                                                          
 
-- Un esempio semplice di riprodurre il problema. Si tratta di **preziose** laddove possibile. 
-- Completo dello stack dell'arresto anomalo.
-- Il codice c# che circonda l'arresto anomalo del sistema. 
+- Un esempio semplice che riproduce il problema. Questo è **molto importante**, ove possibile. 
+- L'analisi dello stack completa dell'arresto anomalo.
+- Il codice C# relativo all'arresto anomalo. 

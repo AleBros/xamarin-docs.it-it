@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 0f1d968dcee0cb9b6cd0cee8fa60be4f4dbb2833
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 600d651eae1f470f17511afaf9bc86c80ffc1a75
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="notifications"></a>Notifiche
 
@@ -99,17 +99,17 @@ Si *deve* forniscono un payload JSON test durante il test in modalità di notifi
 Visual Studio per Mac visualizzerà le opzioni aggiuntive quando un'estensione di espressioni di controllo è impostata come il **progetto di avvio**.
 Fare clic sul progetto di estensione delle espressioni di controllo e scegliere **eseguire con > parametri personalizzato...** :
     
-[![](notifications-images/runwith-customparams-sml.png "In esecuzione con le proprietà personalizzate")](notifications-images/runwith-customparams.png)
+[![](notifications-images/runwith-customparams-sml.png "In esecuzione con le proprietà personalizzate")](notifications-images/runwith-customparams.png#lightbox)
     
 Verrà visualizzata la **argomenti esecuzione** finestra che contiene un **WatchKit** scheda. Selezionare **notifica** e fornire un payload JSON, quindi premere **Execute** per avviare l'applicazione di espressioni di controllo nel simulatore:
     
-[![](notifications-images/runwith-execargs-sml.png "Selezionare l'impostazione predefinita di Payload di notifica")](notifications-images/runwith-execargs.png)
+[![](notifications-images/runwith-execargs-sml.png "Selezionare l'impostazione predefinita di Payload di notifica")](notifications-images/runwith-execargs.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Per impostare l'estensione di espressioni di controllo per modificare il payload di notifica di prova rapida di Visual Studio il **le proprietà del progetto**. Passare al **Debug** sezione e selezionare un file JSON notifiche nell'elenco (verranno automaticamente visualizzate tutti i file JSON inclusi nel progetto).
     
-[![](notifications-images/runwith-execargs-sml-vs.png "Selezionare un file JSON di notifiche")](notifications-images/runwith-execargs-vs.png)
+[![](notifications-images/runwith-execargs-sml-vs.png "Selezionare un file JSON di notifiche")](notifications-images/runwith-execargs-vs.png#lightbox)
 
 Quando l'estensione di espressioni di controllo è il **progetto di avvio**, Visual Studio visualizzerà le opzioni aggiuntive, come illustrato di seguito. Scegliere una del **notifica** opzioni per avviare l'applicazione di espressioni di controllo **notifica** modalità (utilizzando il file JSON selezionato nella finestra proprietà):
     

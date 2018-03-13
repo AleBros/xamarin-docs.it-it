@@ -3,16 +3,16 @@ title: "modalità di gioco API iOS"
 description: "In questo articolo vengono illustrati i nuovi miglioramenti di gioco forniti da iOS 9 che può essere utilizzato per migliorare le funzionalità audio e grafica di un gioco di xamarin. IOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
+ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 6c735c68ee61032d8dfe3a74e6858bc058c6fa47
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d0a66d4cfdb3050c7ad791d24e24d6917a031ee1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="ios-gaming-apis"></a>modalità di gioco API iOS
 
@@ -21,7 +21,7 @@ _In questo articolo vengono illustrati i nuovi miglioramenti di gioco forniti da
 Apple ha diversi miglioramenti tecnologici per i giochi le API di iOS 9 che rendono più semplice implementare grafica di giochi e audio in un'app xamarin. IOS.
 Questi includono entrambi semplicità di sviluppo tramite il framework di alto livello e sfruttare le potenzialità di GPU del dispositivo iOS per una migliore velocità e le capacità grafiche.
 
-[ ![](images/flocking01.png "Un esempio di un'app in esecuzione floccaggio")](images/flocking01.png)
+[![](images/flocking01.png "Un esempio di un'app in esecuzione floccaggio")](images/flocking01.png#lightbox)
 
 Insieme a nuove funzionalità migliorate di metallo, SceneKit e SpriteKit inclusi GameplayKit, ReplayKit, i/o del modello, MetalKit e Metal prestazioni shader.
 
@@ -56,7 +56,7 @@ Ad esempio, un nemico 2D individuazione giungere in un labirinto o un carattere 
 
 Si consideri la mappa seguente:
 
-[ ![](images/gkpathfindpath.png "Un esempio di mapping di pathfinding")](images/gkpathfindpath.png)
+[![](images/gkpathfindpath.png "Un esempio di mapping di pathfinding")](images/gkpathfindpath.png#lightbox)
 
 Pathfinding utilizzando il codice c# può individuare un modo tramite la mappa:
 
@@ -367,7 +367,7 @@ public override void ViewWillLayoutSubviews ()
 
 Quando viene eseguita, l'animazione leggermente _"Boids"_ verrà esaminato intorno scelte il dito:
 
-[ ![](images/flocking01.png "Il Boids leggermente animata verrà esaminato intorno le scelte dito")](images/flocking01.png)
+[![](images/flocking01.png "Il Boids leggermente animata verrà esaminato intorno le scelte dito")](images/flocking01.png#lightbox)
 
 ### <a name="other-apple-examples"></a>Altri esempi di Apple
 

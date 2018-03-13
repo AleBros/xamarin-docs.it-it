@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 6d2a454665691c028fe8307940a5662a98ab9c98
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f35256529d6d72a3f5e563dc88b9d5883a9724d4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="appearance-api"></a>Aspetto API
 
@@ -32,7 +32,7 @@ Esistono due diversi modi per applicare un aspetto personalizzato:
 
 L'applicazione di esempio aspetto illustra tutte e tre i metodi, come illustrato in queste schermate:
 
- [ ![](introduction-to-the-appearance-api-images/appearance01.png "L'applicazione di esempio aspetto illustra tutte e tre i metodi")](introduction-to-the-appearance-api-images/appearance01.png)
+ [![](introduction-to-the-appearance-api-images/appearance01.png "L'applicazione di esempio aspetto illustra tutte e tre i metodi")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
 
 A partire da iOS 8, il proxy di aspetto è stato esteso per TraitCollections.
  `AppearanceForTraitCollection` Consente di impostare l'aspetto predefinito per un insieme specifico di tratto. È possibile leggere altre informazioni di [Introduzione agli storyboard](~/ios/user-interface/storyboards/unified-storyboards.md) Guida.
@@ -87,11 +87,11 @@ sg1.TintColor = UIColor.Magenta;
 
 In alternativa, è possibile impostare il valore nel riquadro proprietà della finestra di progettazione: 
 
-[ ![](introduction-to-the-appearance-api-images/propertiespadtint.png "Proprietà riempimento Tint")](introduction-to-the-appearance-api-images/propertiespadtint.png)
+[![](introduction-to-the-appearance-api-images/propertiespadtint.png "Proprietà riempimento Tint")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
 
 Nell'immagine seguente viene illustrato che consente di impostare la tonalità sul controllo denominato 'sg1'.
 
- [ ![](introduction-to-the-appearance-api-images/image53.png "Impostare la tonalità singolo controllo")](introduction-to-the-appearance-api-images/image53.png)
+ [![](introduction-to-the-appearance-api-images/image53.png "Impostare la tonalità singolo controllo")](introduction-to-the-appearance-api-images/image53.png#lightbox)
 
 Per impostare molti controlli in questo modo sarebbe completamente inefficiente, in modo che è invece possibile impostare statica `Appearance` proprietà sulla classe stessa. Come illustrato nel codice seguente:
 
@@ -101,7 +101,7 @@ UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
 
 Nell'immagine seguente illustra ora entrambi i controlli segmentati con l'aspetto impostato su Magenta:
 
- [ ![](introduction-to-the-appearance-api-images/image54.png "Impostare la tonalità di controllo di aspetto")](introduction-to-the-appearance-api-images/image54.png)
+ [![](introduction-to-the-appearance-api-images/image54.png "Impostare la tonalità di controllo di aspetto")](introduction-to-the-appearance-api-images/image54.png#lightbox)
 
 `Appearance` proprietà devono essere impostate nelle prime fasi del ciclo di vita dell'applicazione, ad esempio nel AppDelegate `FinishedLaunching` evento, o in un ViewController prima che vengano visualizzati i controlli interessati.
 

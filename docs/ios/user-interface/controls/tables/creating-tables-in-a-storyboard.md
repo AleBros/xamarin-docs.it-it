@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c59ddde44b0e47122865c55a7964707f106d2691
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e46038b21327fe8847d2c04ee1ba16960f6a059b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Utilizzo di tabelle nella finestra di progettazione iOS
 
@@ -40,7 +40,7 @@ Oggetto `UITableView` con prototipo contenuto in genere consente di visualizzare
 
 L'esempio StoryboardTable contiene una semplice applicazione master-dettagli che usa entrambi i tipi di UITableView in uno Storyboard. Nella parte restante di questa sezione viene descritto come creare un esempio di elenco attività di piccole dimensioni che sarà simile al seguente al termine dell'operazione:
 
- [ ![Schermate di esempio](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png)
+ [![Schermate di esempio](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png#lightbox)
 
 Utilizzano un UITableView entrambi gli schermi l'interfaccia utente verrà compilato con uno storyboard. La schermata principale Usa *contenuto prototipo* e il layout di riga, i dettagli sullo schermo utilizza *contenuto statico* per creare un form di immissione di dati utilizzando i layout di cella personalizzato.
 
@@ -48,7 +48,7 @@ Utilizzano un UITableView entrambi gli schermi l'interfaccia utente verrà compi
 
 Creare una nuova soluzione in Visual Studio usando **(Create) nuovo progetto > singola vista App(C#)**e lo chiama _StoryboardTables_.
 
- [ ![Creare una finestra di dialogo Nuovo progetto](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png)
+ [![Creare una finestra di dialogo Nuovo progetto](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png#lightbox)
 
 Verrà aperta la soluzione con alcuni file c# e un `Main.storyboard` file già creata. Fare doppio clic su di `Main.storyboard` file per aprirlo nella finestra di progettazione iOS.
 
@@ -75,24 +75,24 @@ La prima modifica allo storyboard è eliminazione della visualizzazione di detta
 2.  Trascinare un **navigazione Controller** e **tabella View Controller** nello Storyboard dalla casella degli strumenti. 
 3.  Creare un segue dal Controller di visualizzazione principale per il secondo Controller di visualizzazione di tabella che è stato appena aggiunto. Per creare la segue, controllo e trascinare *dalla cella dettaglio* per il UITableViewController appena aggiunto. Scegliere l'opzione **Mostra*** in **selezione definire**. 
 4.  Selezionare il nuovo definire creato e assegnargli un identificatore per questo definire nel codice di riferimento. Fare clic su di segue e immettere `TaskSegue` per il **identificatore** nel **proprietà riempimento**, come segue:    
-  [ ![Definire i nomi nel Pannello proprietà](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png) 
+  [![Definire i nomi nel Pannello proprietà](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
 5. Configurare quindi le due visualizzazioni di tabella, selezionarli e utilizzare il riquadro proprietà. Assicurarsi di selezionare una visualizzazione e non i Controller di visualizzazione, è possibile utilizzare la struttura del documento per facilitare la selezione.
 
 6.  Modificare il Controller di visualizzazione principale **contenuto: prototipi dinamica** (la visualizzazione nell'area di progettazione dicitura **prototipo contenuto** ):
 
-    [ ![Imposta la proprietà di contenuto dinamici prototipi](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png)
+    [![Imposta la proprietà di contenuto dinamici prototipi](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
 7.  Modificare il nuovo **UITableViewController** da **contenuto: celle statico**. 
 
 
 8. Il nuovo UITableViewController deve avere il nome della classe e l'identificatore impostato. Selezionare il Controller di visualizzazione e il tipo _TaskDetailViewController_ per il **classe** nel **proprietà riempimento** : verrà creato un nuovo `TaskDetailViewController.cs` file della soluzione Riempimento. Immettere il **StoryboardID** come _dettaglio_, come illustrato nell'esempio riportato di seguito. Verrà utilizzato in un secondo momento per caricare la visualizzazione nel codice c#:  
 
-    [ ![Impostazione dell'ID di Storyboard](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png)
+    [![Impostazione dell'ID di Storyboard](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png#lightbox)
 
 9. Nella finestra di progettazione dello storyboard a questo punto dovrebbe essere simile al seguente (titolo elemento di navigazione del Controller di visualizzazione principale è stato modificato in "Utente doveva avere discussioni"):
 
-    [ ![Area di progettazione](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png)  
+    [![Area di progettazione](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
 
 
 
@@ -106,11 +106,11 @@ Ora che le viste e segues sono configurati, gli elementi dell'interfaccia utente
 
 Innanzitutto, selezionare la cella prototipo nel Controller di visualizzazione Master e imposta il **identificatore** come _taskcell_, come illustrato di seguito. Per recuperare un'istanza di questo UITableViewCell, questo verrà utilizzato in un secondo momento nel codice:
 
- [ ![impostare l'identificatore della cella](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png)
+ [![impostare l'identificatore della cella](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png#lightbox)
 
 Successivamente, è necessario creare un pulsante di aggiunta di nuove attività, come illustrato di seguito:
 
-[ ![elemento pulsante nella barra di spostamento della barra](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png)
+[![elemento pulsante nella barra di spostamento della barra](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png#lightbox)
 
 Seguire questa procedura: 
 
@@ -123,7 +123,7 @@ Seguire questa procedura:
 
 Nel riquadro Visualizzazione dettagli richiede molto più lavoro. Visualizzazione delle celle devono essere trascinato la visualizzazione e quindi popolato con le etichette, visualizzazioni di testo e i pulsanti. La schermata seguente mostra l'interfaccia utente completato con due sezioni. Una sezione ha tre celle, tre etichette, uno e due campi di testo, mentre la seconda sezione ha una cella con due pulsanti:
 
- [ ![visualizzazione dettagli](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png)
+ [![visualizzazione dettagli](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png#lightbox)
 
 I passaggi per compilare il layout completo sono:
 
@@ -137,7 +137,7 @@ Selezionare la visualizzazione della tabella e aprire il **proprietà riempiment
 Selezionare la sezione superiore e in **proprietà > sezione visualizzazione tabella** modificare **righe** a _3_, come illustrato di seguito:
 
 
- [ ![l'impostazione nella sezione superiore a tre righe](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png)
+ [![l'impostazione nella sezione superiore a tre righe](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png#lightbox)
 
 Per ogni cella aprire il **proprietà riempimento** e impostare:
 
@@ -152,7 +152,7 @@ Nella seconda sezione, impostare **righe** a _1_ e trascinare il quadratino di r
 -  **Impostare lo sfondo**: _cancellare il colore_ .
 -  Trascinare due pulsanti nella cella e impostare il titolo in modo appropriato (ad esempio _salvare_ e _eliminare_), come illustrato di seguito:
 
-   [ ![configurare due pulsanti nella parte inferiore](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png)
+   [![configurare due pulsanti nella parte inferiore](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
 
 A questo punto si può inoltre si desidera impostare vincoli per le celle e i controlli per garantire un layout adattivo.
 
@@ -342,7 +342,7 @@ AddButton.Clicked += (sender, e) => CreateTask ();
 
 Che consente di completare l'esempio di Storyboard: l'applicazione finita ha un aspetto simile al seguente:
 
-[ ![Applicazione finita](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png)
+[![Applicazione finita](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png#lightbox)
 
 Nell'esempio viene illustrato:
 

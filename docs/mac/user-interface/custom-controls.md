@@ -3,16 +3,16 @@ title: Creare controlli personalizzati
 description: In questo articolo viene descritto come creare controlli personalizzati e utilizzarli in Generatore di interfaccia.
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f3d6301bc2c0237a268669fff437801bfb2657d1
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 3ea88810384dfe8b1a08080953db19caddf25d6a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-custom-controls"></a>Creazione di controlli personalizzati
 
@@ -22,7 +22,7 @@ Quando si utilizza c# e .NET in un'applicazione Xamarin.Mac, è possibile accede
 
 MacOS offre un'ampia gamma di controlli utente predefiniti, potrebbero esserci di volte in cui è necessario creare un controllo personalizzato per fornire funzionalità fornita non di dialogo o un tema personalizzato dell'interfaccia utente (ad esempio, un'interfaccia di gioco).
 
-[ ![](custom-controls-images/intro01.png "Esempio di controllo dell'interfaccia utente personalizzato")](custom-controls-images/intro01.png)
+[![](custom-controls-images/intro01.png "Esempio di controllo dell'interfaccia utente personalizzato")](custom-controls-images/intro01.png#lightbox)
 
 In questo articolo verranno descritte le nozioni di base della creazione di un controllo di interfaccia utente personalizzata riutilizzabile in un'applicazione Xamarin.Mac. È altamente consigliabile che il [Hello, Mac](~/mac/get-started/hello-mac.md) articolo prima di tutto, in particolare il [Introduzione a Xcode e interfaccia generatore](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [punti vendita e le azioni](~/mac/get-started/hello-mac.md#Outlets_and_Actions) le sezioni, come illustra i concetti chiave e le tecniche che verrà usato in questo articolo.
 
@@ -50,7 +50,7 @@ Poiché il controllo personalizzato che si sta creando una risponderà all'input
 
 In Visual Studio per Mac, aprire il progetto Xamarin.Mac che si desidera creare un controllo di interfaccia utente personalizzata per (o crearne uno nuovo). Aggiungere una nuova classe e chiamarlo `NSFlipSwitch`:
 
-[ ![](custom-controls-images/custom01.png "Aggiunta di una nuova classe")](custom-controls-images/custom01.png)
+[![](custom-controls-images/custom01.png "Aggiunta di una nuova classe")](custom-controls-images/custom01.png#lightbox)
 
 Successivamente, modificare il `NSFlipSwitch.cs` classe e renderlo simile al seguente:
 
@@ -336,19 +336,19 @@ Con il controllo personalizzato definito completamente, è possibile aggiungere,
 
 Per aggiungere il controllo utilizzando il generatore di interfaccia, dapprima eseguire una compilazione pulita del progetto Xamarin.Mac, quindi fare doppio clic su di `Main.storyboard` file per aprirlo in Generatore di interfaccia per la modifica:
 
-[ ![](custom-controls-images/custom02.png "Modifica lo storyboard in Xcode")](custom-controls-images/custom02.png)
+[![](custom-controls-images/custom02.png "Modifica lo storyboard in Xcode")](custom-controls-images/custom02.png#lightbox)
 
 Successivamente, trascinare un `Custom View` la progettazione dell'interfaccia utente:
 
-[ ![](custom-controls-images/custom03.png "Selezione di una visualizzazione personalizzata dalla libreria")](custom-controls-images/custom03.png)
+[![](custom-controls-images/custom03.png "Selezione di una visualizzazione personalizzata dalla libreria")](custom-controls-images/custom03.png#lightbox)
 
 Con la vista personalizzata ancora selezionato, attivare il **controllo di identità** e modificare la visualizzazione **classe** a `NSFlipSwitch`:
 
-[ ![](custom-controls-images/custom04.png "Impostare la classe della visualizzazione")](custom-controls-images/custom04.png)
+[![](custom-controls-images/custom04.png "Impostare la classe della visualizzazione")](custom-controls-images/custom04.png#lightbox)
 
 Passare il **Assistente Editor** e creare un **presa** per il controllo personalizzato (assicurandosi di associarlo nel `ViewControler.h` file e non il `.m` file):
 
-[ ![](custom-controls-images/custom05.png "Configurazione di nuovi punti vendita")](custom-controls-images/custom05.png)
+[![](custom-controls-images/custom05.png "Configurazione di nuovi punti vendita")](custom-controls-images/custom05.png#lightbox)
 
 Salvare le modifiche, tornare a Visual Studio per Mac e consentire le modifiche per la sincronizzazione. Modificare il `ViewController.cs` file e verificare il `ViewDidLoad` metodo aspetto simile al seguente:
 
@@ -369,7 +369,7 @@ In questo caso, risposta per il `ValueChanged` evento è definiti in precedenza 
 
 Facoltativamente, è possibile tornare al generatore di interfaccia e definire un **azione** sul controllo:
 
-[ ![](custom-controls-images/custom06.png "Configurazione di una nuova azione")](custom-controls-images/custom06.png)
+[![](custom-controls-images/custom06.png "Configurazione di una nuova azione")](custom-controls-images/custom06.png#lightbox)
 
 Modificare nuovamente il `ViewController.cs` file e aggiungere il metodo seguente:
 
@@ -394,5 +394,5 @@ In questo articolo ha richiesto la creazione di un controllo di interfaccia uten
 - [MacCustomControl (esempio)](https://developer.xamarin.com/samples/mac/MacCustomControl/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Data binding e codifica di chiave-valore](~/mac/app-fundamentals/databinding.md)
-- [Linee guida sull'interfaccia umane di OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Gestione degli eventi del Mouse](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/EventOverview/HandlingMouseEvents/HandlingMouseEvents.html)

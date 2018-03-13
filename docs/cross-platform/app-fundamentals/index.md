@@ -3,22 +3,22 @@ title: Nozioni fondamentali sulle applicazioni
 description: Concetti di base dell'applicazione
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
+ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 9e4e7705e1ca29b6abf716a48ae3fa0e7c1a19ec
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c5b823370e5b65fbcf9ba366cb89c05e003b1a89
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="application-fundamentals"></a>Nozioni fondamentali sulle applicazioni
 
 In questa sezione viene fornita una Guida su alcune delle più comuni attività di cose o concetti che gli sviluppatori devono tenere conto durante lo sviluppo di applicazioni per dispositivi mobili.
 
-##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[Compilazione incrociata piattaforma applicazioni](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[Creazione di applicazioni multipiattaforma](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 
 Scegliendo Xamarin e tenendo in considerazione alcuni aspetti quando si progettano e sviluppano applicazioni per dispositivi mobili, è possibile realizzare notevole codice condiviso tra le piattaforme per dispositivi mobili, ridurre il tempo di immissione sul mercato, sfruttare le competenze esistenti, soddisfare le esigenze per l'accesso mobile, e ridurre la complessità e multipiattaforma. &nbsp;Questo documento descrive linee guida fondamentali per comprendere i vantaggi per le applicazioni di utilità e produttività.
 

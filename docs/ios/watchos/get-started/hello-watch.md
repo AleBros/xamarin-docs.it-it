@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/14/2016
-ms.openlocfilehash: 88f9a86173756738d44f099b13177489226fa0e1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 732fd9808ded4bf97e99e7ab0e6ab63b989452d1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-watch"></a>Hello, espressioni di controllo
 
@@ -150,7 +150,7 @@ Se non è già il progetto di avvio
 
 1. Premere il **Debug** pulsante per attivare il lancio di un simulatore e di compilazione.
 
-    [ ![](hello-watch-images/readytodebug-sml.png "Elementi dell'interfaccia di Visual Studio")](hello-watch-images/readytodebug.png)
+    [![](hello-watch-images/readytodebug-sml.png "Elementi dell'interfaccia di Visual Studio")](hello-watch-images/readytodebug.png#lightbox)
 
 Quando viene avviata nel simulatore, premere il pulsante per incrementare l'etichetta.
 Complimenti, hai manualmente un'applicazione di espressioni di controllo.

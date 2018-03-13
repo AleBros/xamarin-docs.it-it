@@ -8,25 +8,24 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 99a35705c408d16f5b4b0e71e53dd453ae377341
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2dd397e824ce7735be4421c3f258852de3f77ecb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="walkthrough---creating-a-tabbed-ui-with-tabhost"></a>Procedura dettagliata: creazione di un'interfaccia a schede con TabHost
 
 _In questo articolo verrà illustrata la creazione di un'interfaccia a schede in tramite l'API TabHost xamarin._
 
 > [!NOTE]
-> **Nota:** `TabHost` è un'API precedente che è stata deprecata da Google. Gli sviluppatori sono invitati a compilare le applicazioni a schede utilizzando il [ActionBar](~/android/user-interface/controls/action-bar.md). Il `ActionBar` è disponibile in tutte le versioni di Android. È stata introdotta in Android 3.0 (livello API 11) e nuovamente è stato trasferito per Android 2.2 (livello API 8) e Android 2.3 (livello API 10) nei [V7 delle applicazioni libreria](http://developer.android.com/tools/support-library/features.html#v7-appcompat), che è disponibile per xamarin tramite il [Xamarin Libreria di supporto Android - V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) pacchetto.
+> `TabHost` è un'API precedente che è stata deprecata da Google. Gli sviluppatori sono invitati a compilare le applicazioni a schede utilizzando il [ActionBar](~/android/user-interface/controls/action-bar.md). Il `ActionBar` è disponibile in tutte le versioni di Android. È stata introdotta in Android 3.0 (livello API 11) e nuovamente è stato trasferito per Android 2.2 (livello API 8) e Android 2.3 (livello API 10) nei [V7 delle applicazioni libreria](http://developer.android.com/tools/support-library/features.html#v7-appcompat), che è disponibile per xamarin tramite il [Xamarin Libreria di supporto Android - V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) pacchetto.
 
 In questo articolo verrà illustrata la creazione di un'interfaccia a schede in xamarin utilizzando il `TabHost` API. Si tratta di un'API precedente è disponibile in tutte le versioni di Android. In questo esempio verrà creata un'applicazione con tre schede, con la logica per ogni scheda incapsulata in un'attività.
 Nella schermata riportata di seguito è riportato un esempio dell'applicazione che verrà creato:
 
 ![Schermata di esempio dell'app con più schede](creating-a-tabbed-ui-images/image02.png)
 
-<a name="Creating_the_Application" />
 
 ## <a name="creating-the-application"></a>Creare l'applicazione
 
@@ -61,7 +60,7 @@ Primo consente di aggiornare il file di layout **Resources/Layout/Main.axml** ch
 
 Nella schermata seguente viene mostrato il layout nella finestra di progettazione di Xamarin:
 
-[![Schermata del layout TabHost nella finestra di progettazione di Xamarin](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png)
+[![Schermata del layout TabHost nella finestra di progettazione di Xamarin](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png#lightbox)
 
 Il TabHost deve avere due visualizzazioni figlio all'interno: un `TabWidget` e `FrameLayout`. Posizione il `TabWidget` e `FrameLayout` verticalmente all'interno di `TabHost`, un `LinearLayout` viene utilizzato. Il FrameLayout è in cui il contenuto per ogni scheda viene, che è vuota perché il `TabHost` incorporeranno automaticamente ogni attività in fase di esecuzione. Sono disponibili diverse regole che devono essere osservate quando si tratta di creazione del layout per le interfacce utente a schede:
 
@@ -203,7 +202,6 @@ Eseguire l'applicazione. L'applicazione dovrebbe essere simile al seguente nella
 La procedura è terminata. È stata creata un'applicazione a schede che consente all'utente di passare in modo semplice a diverse parti di un'applicazione.
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 

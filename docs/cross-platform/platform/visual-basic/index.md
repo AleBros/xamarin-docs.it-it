@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: c8f66ac8532d6926fe8280b5687135dc3df53289
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 978d9e569825e20b40e963f590049eaab1d4e752
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="portable-visual-basicnet"></a>Visual Basic.NET portabile
 
@@ -24,7 +24,8 @@ Supporto libreria di classi portabile è stato aggiunto in xamarin 4.10.1, 7.0.4
 
 Per creare e compilare librerie di classi portabili Visual Basic è necessario utilizzare Visual Studio in Windows (Visual Studio 2012 o versione successiva).
 
-> ℹ️ **Nota:** librerie di Visual Basic possono essere create solo e compilato con Visual Studio. Xamarin. IOS e xamarin non supportano il linguaggio Visual Basic.
+> [!NOTE]
+> Librerie di Visual Basic possono essere create solo e compilato con Visual Studio. Xamarin. IOS e xamarin non supportano il linguaggio Visual Basic.
 >
 > Se si lavora esclusivamente in Visual Studio è possibile fare riferimento il progetto di Visual Basic dai progetti di xamarin. IOS e xamarin.
 >
@@ -44,15 +45,15 @@ I passaggi per creare una libreria di classi Portabile e scegliere il profilo so
 
 1.  Nel **nuovo progetto** selezionare il **Visual Basic > libreria di classi (portabile)** opzione:
 
-  [ ![](images/image1-sml.png "Creare una nuova libreria portabile Visual Basic")](images/image1.png)
+    [![](images/image1-sml.png "Creare una nuova libreria portabile Visual Basic")](images/image1.png#lightbox)
 
 1.  Visual Studio richiederà immediatamente con il codice seguente **Aggiungi libreria di classi portabile** finestra di dialogo in modo che sia possibile configurare il profilo. Seleziona le piattaforme, è necessario per supportare e premere **OK**.
 
-  [ ![](images/image2-sml.png "Selezionare il profilo PCL scegliendo piattaforme")](images/image2.png)
+    [![](images/image2-sml.png "Selezionare il profilo PCL scegliendo piattaforme")](images/image2.png#lightbox)
 
 1.  Il progetto PCL Visual Basic verrà visualizzati come mostrato nel **Esplora** come segue:
 
-  [ ![](images/image3-sml.png "Progetto di Visual Studio PCL vuoto")](images/image3.png)
+    [![](images/image3-sml.png "Progetto di Visual Studio PCL vuoto")](images/image3.png#lightbox)
 
 
 Libreria di classi Portabile è ora pronto per il codice di Visual Basic da aggiungere. Progetti libreria di classi Portabile possono fare riferimento da altri progetti (progetti di applicazione, i progetti di libreria e anche altri progetti libreria di classi Portabile).
@@ -61,7 +62,7 @@ Libreria di classi Portabile è ora pronto per il codice di Visual Basic da aggi
 
 Il profilo della libreria di classi Portabile (che controlla quali piattaforme è compatibile con la libreria di classi Portabile) possono essere visualizzato e modificato facendo clic sul progetto e scegliendo **proprietà > Libreria > Modifica...** . La finestra di dialogo risulta è illustrato in questo screenshot:
 
- [ ![](images/image4-sml.png "Modificare il profilo PCL nelle proprietà del progetto")](images/image4.png)
+ [![](images/image4-sml.png "Modificare il profilo PCL nelle proprietà del progetto")](images/image4.png#lightbox)
 
 Se il profilo viene modificato dopo il codice è già stato aggiunto a una libreria di classi Portabile, è possibile che la libreria non verrà più compilato se il codice fa riferimento a funzionalità che non fanno parte del profilo selezionato.
 

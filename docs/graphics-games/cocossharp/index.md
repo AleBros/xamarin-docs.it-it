@@ -6,11 +6,11 @@ ms.assetid: 5E72869D-3541-408B-AB64-D34C777AFB79
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 2801fd74e9f5f8f2927b06dc7b68cdf004faa104
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a1e28bc9a8a17b4b06ec45746a6ce60ddd129ad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cocossharp"></a>CocosSharp
 
@@ -22,7 +22,7 @@ CocosSharp è una libreria facile da usare per i giochi 2D con c# e F #. È una 
 
 In questo video di esercitazione viene illustrato come creare un semplice CocosSharp multipiattaforma gioco.
 
-<iframe src="//channel9.msdn.com/Shows/Visual-Studio-Toolbox/Developing-Cross-platform-2D-Games-in-C-and-CocosSharp/player" width="800" height="450" allowFullScreen frameBorder="0"></iframe>
+> [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Developing-Cross-platform-2D-Games-in-C-and-CocosSharp/player]
 
 ###  <a name="introduction-to-game-development-with-cocossharpgraphics-gamescocossharpfirst-gameindexmd"></a>[Introduzione allo sviluppo di giochi con CocosSharp](~/graphics-games/cocossharp/first-game/index.md)
 
@@ -32,7 +32,7 @@ In questa procedura dettagliata multiparte viene illustrato come creare un sempl
 
 
 
-##  <a name="fruity-falls-game-detailsgraphics-gamescocossharpfruity-fallsmd"></a>[Rientra fruity gioco dettagli](~/graphics-games/cocossharp/fruity-falls.md)
+##  <a name="fruity-falls-game-detailsgraphics-gamescocossharpfruity-fallsmd"></a>[Dettagli del gioco Fruity Falls](~/graphics-games/cocossharp/fruity-falls.md)
 
 ![](images/fruity-falls.png "Questa guida esamina il gioco cade Fruity")
 
@@ -56,7 +56,7 @@ CCDrawNode fornisce metodi per oggetti primitivi, ad esempio linee, cerchi e tri
 
 
 
-## <a name="animating-with-ccactiongraphics-gamescocossharpccactionmd"></a>[Animazione di CCAction](~/graphics-games/cocossharp/ccaction.md)
+## <a name="animating-with-ccactiongraphics-gamescocossharpccactionmd"></a>[Animazione con CCAction](~/graphics-games/cocossharp/ccaction.md)
 
 ![](images/ccaction.png "CCAction è una classe di base che può essere usata per animare oggetti CocosSharp")
 
@@ -64,7 +64,7 @@ CCDrawNode fornisce metodi per oggetti primitivi, ad esempio linee, cerchi e tri
 
 
 
-## <a name="using-tiled-with-cocossharpgraphics-gamescocossharptiledmd"></a>[Utilizzo affiancato con CocosSharp](~/graphics-games/cocossharp/tiled.md)
+## <a name="using-tiled-with-cocossharpgraphics-gamescocossharptiledmd"></a>[Uso di Tiled con CocosSharp](~/graphics-games/cocossharp/tiled.md)
 
 ![](images/tiled.png "Affiancato è una potente, flessibile e applicazione obsoleta per la creazione di riquadro ortogonale e l'effetto viene eseguito il mapping per i giochi") affiancato è una potente, flessibile e applicazione obsoleta per la creazione di riquadro ortogonale e l'effetto viene eseguito il mapping per i giochi. CocosSharp fornisce integrazione incorporata per il formato di file nativi dell'affiancato.
 
@@ -78,7 +78,7 @@ Il modello di entità è un metodo efficace per organizzare codice del gioco. Mi
 
 
 
-##  <a name="handling-multiple-resolutions-in-cocossharpgraphics-gamescocossharpresolutionsmd"></a>[La gestione di più risoluzioni in CocosSharp](~/graphics-games/cocossharp/resolutions.md)
+##  <a name="handling-multiple-resolutions-in-cocossharpgraphics-gamescocossharpresolutionsmd"></a>[Gestione di più risoluzioni in CocosSharp](~/graphics-games/cocossharp/resolutions.md)
 
 ![](images/resolutions.png "Questa guida viene illustrato l'utilizzo con CocosSharp per lo sviluppo di giochi visualizzati correttamente nei dispositivi di risoluzioni diverse")
 
@@ -86,7 +86,7 @@ Questa guida viene illustrato come utilizzare CocosSharp per lo sviluppo di gioc
 
 
 
-##  <a name="cocossharp-content-pipelinegraphics-gamescocossharpcontent-pipelineindexmd"></a>[Pipeline CocosSharp contenuto](~/graphics-games/cocossharp/content-pipeline/index.md)
+##  <a name="cocossharp-content-pipelinegraphics-gamescocossharpcontent-pipelineindexmd"></a>[Pipeline di contenuto CocosSharp](~/graphics-games/cocossharp/content-pipeline/index.md)
 
 ![](images/content-pipeline.png "Pipeline di contenuto vengono spesso usate nello sviluppo di gioco per ottimizzare il contenuto e formato")
 
@@ -110,7 +110,7 @@ Classe CCTextureCache del CocosSharp fornisce un modo standard per organizzare, 
 
 
 
-## <a name="2d-math-with-cocossharpgraphics-gamescocossharpmathmd"></a>[Matematiche 2D con CocosSharp](~/graphics-games/cocossharp/math.md)
+## <a name="2d-math-with-cocossharpgraphics-gamescocossharpmathmd"></a>[Matematica 2D con CocosSharp](~/graphics-games/cocossharp/math.md)
 
 ![](images/math.png "Questa guida illustra 2D matematica per lo sviluppo di gioco")
 

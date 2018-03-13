@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 14. Layout assoluto
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: ac4c41ebd70b58e95a3fa4fa7a391a473361b1db
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 394e1722c79bac5f034e9ad88eb1fed7e5090f8c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Riepilogo del capitolo 14. Layout assoluto
 
@@ -91,7 +92,7 @@ Il [ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 Il [ **DotMatrixClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/DotMatrixClock) esempio consente di visualizzare l'ora corrente con un display simulato ad aghi 5 / 7. Ogni punto rappresenta un `BoxView` (esistono 228 di essi) ridimensionato e posizionato in corrispondenza di `AbsoluteLayout`.
 
-[![Tripla schermata dell'orologio aghi](images/ch14fg08-small.png "aghi Clock")](images/ch14fg08-large.png "aghi Clock")
+[![Tripla schermata dell'orologio aghi](images/ch14fg08-small.png "aghi Clock")](images/ch14fg08-large.png#lightbox "aghi Clock")
 
 Il [ **BouncingText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/BouncingText) programma aggiunge un'animazione due `Label` oggetti bounce orizzontalmente e verticalmente sullo schermo.
 

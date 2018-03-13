@@ -3,16 +3,16 @@ title: Mappa
 description: Xamarin. Forms Usa mappa API native in ciascuna piattaforma.
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
+ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 98e6cade952e656046c6c0981a0b73ff0894c9d6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 2f0ad800ed1ab3a336f10dd4431e234ac4ff9675
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="map"></a>Mappa
 
@@ -28,7 +28,7 @@ Una volta configurato, il `Map` controllo funziona in modo analogo a qualsiasi a
 
 Il controllo mappa è stato utilizzato nel [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/) esempio, in cui è illustrato di seguito.
 
- [ ![Nell'esempio MobileCRM mappe](map-images/maps-zoom-sml.png "esempio controllo mappa")](map-images/maps-zoom.png "esempio controllo mappa")
+ [![Nell'esempio MobileCRM mappe](map-images/maps-zoom-sml.png "esempio controllo mappa")](map-images/maps-zoom.png#lightbox "esempio controllo mappa")
 
 Funzionalità di mapping può essere ulteriormente migliorata creando un [mapping renderer personalizzato](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
 
@@ -103,7 +103,7 @@ Dopo aver seguito le istruzioni, incollare la chiave API di **Properties/Android
 Senza una chiave API valida il controllo esegue il mapping verrà visualizzato come una casella di colore grigia in Android.
 
 > [!NOTE]
-> **Nota**: È necessario generare un'altra chiave utilizzando il file keystore che verrà utilizzato per firmare la versione di qualsiasi applicazione che viene caricato nell'archivio Google Play. La chiave è generare per lo sviluppo e debug non potrà funzionare e verrà interrotto l'app scaricata da Google Play visualizzazione della mappa. Ricordare inoltre di rigenerare la chiave se l'app **nome pacchetto** le modifiche.
+> Ricordarsi di generare un'altra chiave utilizzando il file keystore che verrà utilizzato per firmare la versione di qualsiasi applicazione che viene caricato nell'archivio Google Play. La chiave è generare per lo sviluppo e debug non potrà funzionare e verrà interrotto l'app scaricata da Google Play visualizzazione della mappa. Ricordare inoltre di rigenerare la chiave se l'app **nome pacchetto** le modifiche.
 
 È necessario anche abilitare le autorizzazioni appropriate facendo clic sul progetto Android e selezionando **Opzioni > compilare > applicazione Android** e scattare le operazioni seguenti:
 
@@ -185,7 +185,7 @@ slider.ValueChanged += (sender, e) => {
 };
 ```
 
- [ ![Mappe con zoom](map-images/maps-zoom-sml.png "mappa controllo Zoom")](map-images/maps-zoom.png "mappa controllo Zoom")
+ [![Mappe con zoom](map-images/maps-zoom-sml.png "mappa controllo Zoom")](map-images/maps-zoom.png#lightbox "mappa controllo Zoom")
 
 ### <a name="map-pins"></a>Eseguire il mapping di pin
 

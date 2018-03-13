@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 2727d83e55e305af1372ece35bdf22abfc653fe7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d82a1391feca9187cf2aca4394509447aeac6a18
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior riutilizzabili
 
@@ -182,7 +182,7 @@ Il `Command` proprietà del comportamento è associato a dati di `OutputAgeComma
 
 In fase di esecuzione, il comportamento risponderà all'interazione con il controllo. Quando è selezionato un elemento nel [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/), [ `ItemSelected` ](https://developer.xamarin.com/api/event/Xamarin.Forms.ListView.ItemSelected/) viene generato l'evento, che verrà eseguito il `OutputAgeCommand` nel ViewModel. Aggiorna a sua volta il ViewModel `SelectedItemText` proprietà che la [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) associa, come illustrato nelle schermate seguenti:
 
-[ ![](event-to-command-behavior-images/screenshots-sml.png "Esempio di applicazione con EventToCommandBehavior")](event-to-command-behavior-images/screenshots.png "applicazione con EventToCommandBehavior di esempio")
+[![](event-to-command-behavior-images/screenshots-sml.png "Esempio di applicazione con EventToCommandBehavior")](event-to-command-behavior-images/screenshots.png#lightbox "applicazione con EventToCommandBehavior di esempio")
 
 Il vantaggio dell'utilizzo di questo comportamento per eseguire un comando quando viene generato un evento, è che i comandi possono essere associati ai controlli che non sono stati progettati per interagire con i comandi. Inoltre, per rimuovere il codice di gestione degli eventi, stampa o editoriale dal file code-behind.
 

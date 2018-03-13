@@ -7,11 +7,11 @@ ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 63faa0c46abfb509a6834efa647f23ad0ed7f454
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1a5e4ab73c9090cbb743dc8cb339d6f50c5ff527
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough-using-a-json-element-to-create-a-user-interface"></a>Procedura dettagliata: Utilizzo di un elemento di JSON per creare un'interfaccia utente
 
@@ -22,7 +22,7 @@ MT D supporta la creazione di interfacce utente dichiarata in JSON. Quando gli e
 
 MT D supporta una vasta gamma di funzionalità che sono disponibili nell'API di elementi quando si utilizza JSON. Ad esempio, l'applicazione nella schermata seguente è completamente dichiarata mediante JSON:
 
-[ ![](json-element-walkthrough-images/01-load-from-file.png "Ad esempio, l'applicazione in questa schermata è completamente dichiarato usando JSON") ](json-element-walkthrough-images/01-load-from-file.png) [ ![ ] (json-element-walkthrough-images/02-load-from-file-details.png ", ad esempio, l'applicazione in questa schermata è completamente dichiarata mediante JSON")](json-element-walkthrough-images/02-load-from-file-details.png)
+[![](json-element-walkthrough-images/01-load-from-file.png "Ad esempio, l'applicazione in questa schermata è completamente dichiarato usando JSON") ](json-element-walkthrough-images/01-load-from-file.png#lightbox) [ ![ ] (json-element-walkthrough-images/01-load-from-file.png ", ad esempio, l'applicazione in questa schermata è completamente dichiarata mediante JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
 Verrà nuovamente l'esempio dal [elementi API Walkthrough](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) esercitazione che illustra come aggiungere una schermata Dettagli attività usando JSON.
 
@@ -30,7 +30,7 @@ Verrà nuovamente l'esempio dal [elementi API Walkthrough](~/ios/user-interface/
 
 Nell'esempio relativo a questa procedura dettagliata consente la creazione di attività. Quando un'attività è stata selezionata nella prima schermata, viene visualizzata una schermata di dettaglio come illustrato:
 
- [ ![](json-element-walkthrough-images/03-task-list.png "Quando un'attività è stata selezionata nella prima schermata, viene visualizzata una schermata di dettaglio, come illustrato")](json-element-walkthrough-images/03-task-list.png)
+ [![](json-element-walkthrough-images/03-task-list.png "Quando un'attività è stata selezionata nella prima schermata, viene visualizzata una schermata di dettaglio, come illustrato")](json-element-walkthrough-images/03-task-list.png#lightbox)
 
 ## <a name="creating-the-json"></a>Creazione di JSON
 
@@ -166,7 +166,7 @@ _rootElement = new RootElement ("Json Example"){
 
 In fase di esecuzione, il file verrà recuperato e analizzato da MT D quando l'utente passa alla seconda visualizzazione, come illustrato nella schermata seguente:
 
- [ ![](json-element-walkthrough-images/04-json-web-example.png "Il file verrà recuperato e analizzato da MT D quando l'utente passa alla seconda visualizzazione")](json-element-walkthrough-images/04-json-web-example.png)
+ [![](json-element-walkthrough-images/04-json-web-example.png "Il file verrà recuperato e analizzato da MT D quando l'utente passa alla seconda visualizzazione")](json-element-walkthrough-images/04-json-web-example.png#lightbox)
 
  <a name="Summary" />
 

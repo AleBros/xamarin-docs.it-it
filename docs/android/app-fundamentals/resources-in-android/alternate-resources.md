@@ -6,12 +6,12 @@ ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: e421a52b1ae97b0beef59352a756401ed661051e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 7ebbf2a9215c8472ae2f286728cb2f819e8331cb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="alternate-resources"></a>Risorse alternative
 
@@ -142,7 +142,7 @@ Android determina le risorse di base eseguendo l'iterazione tra il test delle re
 
 Queste regole sono inoltre illustrate nel diagramma di flusso seguente:
 
-[![Diagramma di flusso di risorse](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png)
+[![Diagramma di flusso di risorse](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png#lightbox)
 
 Quando il sistema esegue la ricerca di risorse specifiche della densità e non è possibile trovarli, tenterà di individuare altre risorse specifiche di densità e scalabilità li. Android non necessariamente deve contenere le risorse predefinite.
 Ad esempio, quando si cerca una risorsa bassa densità e non è disponibile, Android possono selezionare versione ad alta densità della risorsa le risorse predefinite o Media densità. Ciò avviene perché la risorsa ad alta densità possibile scalabilità verso il basso di un fattore pari a 0,5, che produrrà meno problemi di visibilità di ridimensionamento verso il basso di una risorsa di densità di supporto che richiederebbe un fattore 0,75.
@@ -196,4 +196,4 @@ Di seguito è riportato il qualificatore per la densità, `ldpi`, che comporta l
 In seguito a questo processo, Android utilizzerà le risorse drawable nella directory delle risorse `drawable-en-port-ldpi` per il dispositivo.
 
 > [!NOTE]
-> **Nota:** i qualificatori di dimensioni dello schermo forniscono un'unica eccezione a questo processo di selezione. È possibile per Android selezionare le risorse che sono progettate per una schermata inferiori rispetto a sui quali il dispositivo corrente. Ad esempio, un dispositivo di schermi di grandi dimensioni può usare le risorse prevedere una schermata di dimensione normale. Tuttavia non è vero il contrario di questo: stesso dispositivo schermi di grandi dimensioni non utilizzerà le risorse fornite per una schermata xlarge. Se Android non è possibile trovare un set di risorse che corrisponde a una dimensione dello schermo specificate, verificherà un arresto anomalo dell'applicazione.
+> I qualificatori di dimensioni dello schermo forniscono un'unica eccezione a questo processo di selezione. È possibile per Android selezionare le risorse che sono progettate per una schermata inferiori rispetto a sui quali il dispositivo corrente. Ad esempio, un dispositivo di schermi di grandi dimensioni può usare le risorse prevedere una schermata di dimensione normale. Tuttavia non è vero il contrario di questo: stesso dispositivo schermi di grandi dimensioni non utilizzerà le risorse fornite per una schermata xlarge. Se Android non è possibile trovare un set di risorse che corrisponde a una dimensione dello schermo specificate, verificherà un arresto anomalo dell'applicazione.

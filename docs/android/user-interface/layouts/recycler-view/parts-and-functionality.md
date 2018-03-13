@@ -6,12 +6,12 @@ ms.assetid: 54F999BE-2732-4BC7-A466-D17373961C48
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: b1ddcca25fd83a806e8383a5717462b518b46d0b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 89679f7d825422ab34dd77b31a7a3fde60f36e99
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="recyclerview-parts-and-functionality"></a>Funzionalità e le parti RecyclerView
 
@@ -57,7 +57,7 @@ Se non si estende `ItemDecoration` e `ItemAnimator`, `RecyclerView` utilizza le 
 
 `RecyclerView` non alloca un'elemento di visualizzazione per ogni elemento nell'origine dati. Invece di allocare solo il numero di viste di elemento che lo schermo e riutilizza i layout di elementi come l'utente scorre. Quando la vista prima scorre non è più visualizzata, passano attraverso il processo di riciclo illustrato nella figura seguente:
 
-[ ![Diagramma che illustra i sei passaggi di riciclo di visualizzazione](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png)
+[![Diagramma che illustra i sei passaggi di riciclo di visualizzazione](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png#lightbox)
 
 1.  Quando una vista eseguito lo scorrimento non è più visualizzata e non viene più visualizzata, diventa un *scarto vista*.
 
@@ -75,7 +75,6 @@ Se non si estende `ItemDecoration` e `ItemAnimator`, `RecyclerView` utilizza le 
 Oltre a riutilizzare visualizzazione elemento `RecyclerView` Usa anche un'altra ottimizzazione dell'efficienza: visualizzare i titolari. Oggetto *titolare visualizzazione* è una classe semplice che memorizza nella cache consente di visualizzare i riferimenti. Ogni volta che l'adapter ingrandisce un file di layout dell'elemento, viene inoltre creato un contenitore di visualizzazione corrispondente. Il titolare della vista utilizza `FindViewById` per ottenere i riferimenti alle viste all'interno del file di layout di elemento ingrandita. Questi riferimenti vengono utilizzati per caricare le viste di nuovi dati ogni volta che il layout viene riciclato per visualizzare i nuovi dati.
  
 
-<a name="layoutmanager" />
 
 ### <a name="the-layout-manager"></a>Il gestore di Layout
 
@@ -96,7 +95,6 @@ Per specificare il gestore di layout, il gestore del layout scelto di creare un'
 
 Per ulteriori informazioni sulla gestione di layout, vedere il [riferimento alla classe RecyclerView.LayoutManager](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html).
 
-<a name="viewholder" />
 
 ### <a name="the-view-holder"></a>Il titolare della visualizzazione
 
@@ -109,7 +107,6 @@ Il titolare della vista è una classe definita per la memorizzazione nella cache
 Un esempio dettagliato di un `ViewHolder` implementazione è presentata in [A base RecyclerView esempio](~/android/user-interface/layouts/recycler-view/recyclerview-example.md).
 Per ulteriori informazioni su `RecyclerView.ViewHolder`, vedere il [riferimento alla classe RecyclerView.ViewHolder](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
 
-<a name="adapter" />
 
 ### <a name="the-adapter"></a>L'Adapter
 
@@ -118,7 +115,7 @@ Poiché l'origine dati è specifico dell'applicazione, è necessario implementar
 
 Nel disegno seguente viene illustrato come l'adapter esegue il mapping del contenuto in un'origine dati tramite i titolari di visualizzazione viste singole all'interno di ogni elemento di riga di `RecyclerView`:
 
-[ ![Diagramma che illustra scheda Connessione origine dati alla ViewHolders](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png)
+[![Diagramma che illustra scheda Connessione origine dati alla ViewHolders](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png#lightbox)
 
 L'adapter carica ogni `RecyclerView` riga con dati di un elemento di riga specifico. Per la posizione riga *P*, ad esempio, l'adapter consente di individuare i dati associati nella posizione *P* all'interno dell'origine dati e le copie di questi dati alla riga di elemento nella posizione *P* nel `RecyclerView` insieme.
 Nel disegno precedente, ad esempio, l'adapter utilizza il titolare della vista per cercare i riferimenti per il `ImageView` e `TextView` in tale posizione, in modo da non dover chiamare ripetutamente `FindViewById` per tali visualizzazioni come l'utente scorre la raccolta e Riutilizza viste.
@@ -134,7 +131,6 @@ Quando si implementa un adapter, è necessario eseguire l'override seguente `Rec
 Il gestore di layout chiama questi metodi mentre è posizionamento di elementi all'interno di `RecyclerView`. 
 
 
-<a name="datachanges" />
 
 ### <a name="notifying-recyclerview-of-data-changes"></a>RecyclerView notifica delle modifiche ai dati
 

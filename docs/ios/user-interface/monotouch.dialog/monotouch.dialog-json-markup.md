@@ -6,11 +6,11 @@ ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: f784497173db6bc3ffa87617765e63fc8d904e5f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 843e66a7979fc1aaa86371a3406c89af3f9ba967
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json Markup
 
@@ -75,7 +75,7 @@ Segnalare il problema, iniziare con un esempio. Di seguito è un file Json compl
 
 Il codice precedente produce l'interfaccia utente di seguente:
 
- [ ![](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png "L'interfaccia utente creato per il markup specifico")](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png)
+ [![](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png "L'interfaccia utente creato per il markup specifico")](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png#lightbox)
 
 Ogni elemento nell'albero può contenere la proprietà `"id"`. È in fase di esecuzione è possibile fare riferimento a singole sezioni o elementi utilizzando l'indicizzatore JsonElement. analogamente a quanto segue:
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: c276352bc0ef1478c5145089277183b774bd9bff
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 55d13589e4241e9f4e29aea9a55346a8f514f208
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="text"></a>Testo
 
@@ -26,6 +26,8 @@ Xamarin. Forms presenta tre visualizzazioni principali per l'utilizzo di testo:
 
 Aspetto del testo può essere modificato utilizzando incorporato o personalizzato [stili](#Styles) e alcuni controlli supportano personalizzato [tipi di carattere](#Fonts).
 
+<a name="Label" />
+
 ## <a name="labellabelmd"></a>[Etichetta](label.md)
 
 Il `Label` vista viene usata per visualizzare il testo. Consente di visualizzare più righe di testo o una singola riga di testo. `Label` può presentare un testo con più opzioni di formattazione utilizzati in linea. La visualizzazione dell'etichetta possa eseguire il wrapping o il troncamento di testo quando non rientrano in una sola riga.
@@ -35,6 +37,8 @@ Il `Label` vista viene usata per visualizzare il testo. Consente di visualizzare
 Vedere il [etichetta](label.md) articolo per informazioni più dettagliate.
 
 Per informazioni sulla personalizzazione di tipo di carattere utilizzato in un'etichetta, vedere [tipi di carattere](fonts.md).
+
+<a name="Entry" />
 
 ## <a name="entryentrymd"></a>[Entry](entry.md)
 
@@ -46,6 +50,8 @@ Vedere il [voce](entry.md) per ulteriori informazioni.
 
 Si noti che, a differenza di `Label`, `Entry` non può avere impostazioni del tipo di carattere personalizzato.
 
+<a name="Editor" />
+
 ## <a name="editoreditormd"></a>[Editor](editor.md)
 
 `Editor` è possibile accettare l'input di testo multilinea. `Editor` può avere un colore di sfondo personalizzato, ma il colore del testo e tipo di carattere non può essere modificato.
@@ -54,9 +60,13 @@ Si noti che, a differenza di `Label`, `Entry` non può avere impostazioni del ti
 
 Vedere il [Editor](editor.md) per ulteriori informazioni.
 
+<a name="Fonts" />
+
 ## <a name="fontsfontsmd"></a>[Tipi di carattere](fonts.md)
 
 Il `Label` controllo supporta le impostazioni di diverso tipo di carattere utilizzando i tipi di carattere incorporati in ogni piattaforma o tipi di carattere personalizzati inclusi con l'app. Vedere il [caratteri](fonts.md) articolo per informazioni più dettagliate.
+
+<a name="Styles" />
 
 ## <a name="stylesstylesmd"></a>[Stili](styles.md)
 

@@ -7,18 +7,16 @@ ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/24/2018
-ms.openlocfilehash: 5f583fa78674b1b07d362e5171877e4ec3c861a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 012f563dcdaa70e33d641a4d8fb52df1622c260a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="setup-and-installation"></a>Installazione e configurazione
 
 _In questo articolo vengono illustrati i passaggi di installazione e i dettagli di configurazione necessari per preparare il computer e dispositivi per lo sviluppo, usare Android. Alla fine di questo articolo, è necessario un lavoro di installazione di xamarin usura integrati in Visual Studio per Mac e/o Microsoft Visual Studio, e sarà possibile iniziare a creare la prima applicazione usura xamarin._
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>Requisiti
 
@@ -35,9 +33,7 @@ Per creare applicazioni basate su Xamarin Android accenti è necessario quanto s
 È possibile continuare a utilizzare [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) lo sviluppo in modo specifico per il livello API 23 o precedenti.
 
 > [!IMPORTANT]
-> **Nota:** xamarin non supporta JDK 9.
-
-<a name="installation" />
+> Xamarin non supporta JDK 9.
 
 ## <a name="installation"></a>Installazione
 
@@ -49,7 +45,6 @@ Dopo aver installato xamarin, eseguire la procedura seguente in modo che si è p
 
 Questi passaggi sono descritti nelle sezioni seguenti.
 
-<a name="sdktools" />
 
 ### <a name="install-android-sdk-and-tools"></a>Installare Android SDK e strumenti 
 

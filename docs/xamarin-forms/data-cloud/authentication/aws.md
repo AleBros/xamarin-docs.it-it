@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 85413cf223e794ad2fda093601f9221d0261af39
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ac4c788b4bd48991d7628d892ad1ece3d2451228
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authenticating-users-with-an-amazon-simpledb-service"></a>L'autenticazione degli utenti con un servizio SimpleDB Amazon
 
@@ -61,7 +61,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 Il `SelectAsync` metodo restituisce una risposta contenente una raccolta di elementi e attributi associati che corrispondono all'espressione di query. L'espressione di query garantisce che solo gli elementi che corrispondono a indirizzi di posta elettronica dell'utente verranno recuperati. Per ulteriori informazioni sulle espressioni di query, vedere [utilizzando selezionare questa opzione per creare query di Amazon SimpleDB](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/UsingSelect.html) nel sito Web di Amazon.
 
 > [!NOTE]
-> **Nota**: prestare attenzione a seguire le regole di delimitazione quando si crea l'espressione di query. Per ulteriori informazioni, vedere [selezionare regole di citazione](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html) nel sito Web di Amazon.
+> Assicurarsi di seguire le regole di delimitazione quando si crea l'espressione di query. Per ulteriori informazioni, vedere [selezionare regole di citazione](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html) nel sito Web di Amazon.
 
 ## <a name="summary"></a>Riepilogo
 

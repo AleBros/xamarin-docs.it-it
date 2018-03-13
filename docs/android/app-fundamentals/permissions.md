@@ -4,18 +4,17 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3C440714-43E3-4D31-946F-CA59DAB303E8
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: d20b2aa7df17f2000e2de9cb67f091c52989719b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
+ms.openlocfilehash: 39ee7f826d4c775ead679a09ce56a7c0f92b60ed
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="permissions-in-xamarinandroid"></a>Autorizzazioni di xamarin
 
-<a name="overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -42,7 +41,7 @@ Prima di richiedere una o più autorizzazioni, è consigliabile fornire una spie
 
 Intero flusso di lavoro di controllo e la richiesta di autorizzazioni è noto come un _autorizzazioni in fase di esecuzione_ controllare e può essere riepilogato nel diagramma seguente: 
 
-[ ![Diagramma di flusso di controllo dell'autorizzazione in fase di esecuzione](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png)
+[![Diagramma di flusso di controllo dell'autorizzazione in fase di esecuzione](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
 
 Backports la libreria di supporto Android per alcune delle nuove API per le autorizzazioni per le versioni precedenti di Android. Queste API backported controlla automaticamente la versione di Android nel dispositivo, pertanto non è necessario eseguire un controllo a livello di API ogni volta.  
 
@@ -50,7 +49,7 @@ Questo documento verrà illustrate le procedure aggiungere autorizzazioni a un'a
 
 
 > [!NOTE]
-> **Nota:** è possibile che le autorizzazioni per l'hardware possono influire sulle modalità di filtro l'app da Google Play. Ad esempio, se l'applicazione richiede l'autorizzazione per la fotocamera, quindi Google Play non visualizzerà l'app in Google Play Store su un dispositivo che non è installata una webcam.
+> È possibile che le autorizzazioni per l'hardware possono influire sulle modalità di filtro l'app da Google Play. Ad esempio, se l'applicazione richiede l'autorizzazione per la fotocamera, quindi Google Play non visualizzerà l'app in Google Play Store su un dispositivo che non è installata una webcam.
 
 
 <a name="requirements" />
@@ -59,7 +58,6 @@ Questo documento verrà illustrate le procedure aggiungere autorizzazioni a un'a
 
 È consigliabile che i progetti di xamarin includono le [Xamarin.Android.Support.Compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) pacchetto NuGet. Questa autorizzazione di backport pacchetto verrà API specifiche per le versioni precedenti di Android, garantendo una interfaccia costantemente senza la necessità di controllare la versione di Android che è in esecuzione l'app.
 
-<a name="requesting_permissions" />
 
 ## <a name="requesting-system-permissions"></a>La richiesta di autorizzazioni di sistema
 
@@ -68,9 +66,8 @@ Utilizzo delle autorizzazioni Android il primo passaggio consiste nel dichiarare
 App di destinazione Android 6.0 o successiva non è possibile presupporre che perché l'utente dell'autorizzazione a un certo punto in passato, che l'autorizzazione saranno valido al successivo. Un'app destinate a Android 6.0 è necessario effettuare sempre un controllo di autorizzazione di runtime. Le app destinate a Android 5.1 o versione precedente non è necessario eseguire un controllo di autorizzazione in fase di esecuzione.
 
 > [!NOTE]
-> **Nota:** applicazioni dovrebbero richiedere solo le autorizzazioni necessarie.
+> Le applicazioni devono richiedere solo le autorizzazioni necessarie.
 
-<a name="declaring_permissions_in_the_manifest" />
 
 ### <a name="declaring-permissions-in-the-manifest"></a>Dichiarazione di autorizzazioni nel manifesto
 
@@ -87,15 +84,15 @@ Vengono aggiunte le autorizzazioni per il **AndroidManifest.xml** con il `uses-p
 
 1. Fare doppio clic su **proprietà** nel **Esplora** e selezionare il **manifesto Android** scheda nella finestra Proprietà:
 
-    [![Autorizzazioni necessarie nella scheda manifesto Android](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png)
+    [![Autorizzazioni necessarie nella scheda manifesto Android](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png#lightbox)
 
 2. Se l'applicazione non ha già un AndroidManifest.xml, fare clic su **AndroidManifest.xml non trovato. Fare clic per aggiungere uno** come illustrato di seguito:
 
-    [![Nessun messaggio AndroidManifest.xml](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png)
+    [![Nessun messaggio AndroidManifest.xml](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png#lightbox)
 
 3. Selezionare l'applicazione necessita di autorizzazioni di **delle autorizzazioni necessarie** elenco e salvare:
 
-    [![Autorizzazioni di fotocamera esempio selezionate](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png)
+    [![Autorizzazioni di fotocamera esempio selezionate](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -103,15 +100,15 @@ Vengono aggiunte le autorizzazioni per il **AndroidManifest.xml** con il `uses-p
 
 1. Fare doppio clic sul progetto nel **soluzione riempimento** e selezionare **Opzioni > compilare > applicazione Android**:
 
-    [![Sezione di autorizzazioni richiesti mostrato](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png)
+    [![Sezione di autorizzazioni richiesti mostrato](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png#lightbox)
 
 2. Fare clic su di **aggiungere manifesto Android** se il progetto non dispone già di un **AndroidManifest.xml**:
 
-    [![Il manifesto Android del progetto è mancante](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png)
+    [![Il manifesto Android del progetto è mancante](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png#lightbox)
 
 3. Selezionare l'applicazione necessita di autorizzazioni di **delle autorizzazioni necessarie** elenco e fare clic su **OK**:
 
-    [![Autorizzazioni di fotocamera esempio selezionate](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png)
+    [![Autorizzazioni di fotocamera esempio selezionate](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
     
 -----
 
@@ -119,7 +116,6 @@ Xamarin aggiungerà automaticamente alcune autorizzazioni in fase di compilazion
 
 Per le app destinate a Android 5.1 (livello API 22) o un livello inferiore, non vi sono altre che deve essere eseguita. App eseguibili in Android 6.0 (livello API 23 23) o versione successiva è possibile procedere alla sezione successiva su come eseguire i controlli delle autorizzazioni di fase di esecuzione. 
 
-<a name="run_time_permission_checks" />
 
 ### <a name="runtime-permission-checks-in-android-60"></a>Controlli delle autorizzazioni di runtime in Android 6.0
 
@@ -213,7 +209,6 @@ public override void OnRequestPermissionsResult(int requestCode, string[] permis
 }
 ```  
 
-<a name="summary" />
 
 ## <a name="summary"></a>Riepilogo
 

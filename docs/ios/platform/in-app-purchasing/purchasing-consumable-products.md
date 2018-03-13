@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7366a4ce5cbb6a3026a7445a03f03b45d89d9210
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e5875249d7a84412b1c30580c3a8038cb53892f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="purchasing-consumable-products"></a>Acquisto di prodotti di consumo
 
@@ -21,7 +21,7 @@ I prodotti utilizzabili sono più semplici da implementare, poiché non c'è Nes
 
 Il codice di esempio che accompagna questo documento illustra i prodotti incorporati: gli ID prodotto sono hardcoded nell'applicazione in quanto essi sono strettamente collegate al codice che sblocca le funzionalità dopo il pagamento. Il processo di acquisto può essere visualizzato come segue:   
    
-[ ![La visualizzazione di processo di acquisto](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png)     
+[![La visualizzazione di processo di acquisto](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
    
  Il flusso di lavoro di base è:   
    
@@ -49,7 +49,7 @@ Il [InAppPurchaseSample codice](https://developer.xamarin.com/samples/monotouch/
    
    
    
- [ ![Ogni fornitore aggiunge ulteriori crediti monkey al saldo di utenti](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png)   
+ [![Ogni fornitore aggiunge ulteriori crediti monkey al saldo di utenti](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
    
    
    
@@ -57,7 +57,7 @@ Il [InAppPurchaseSample codice](https://developer.xamarin.com/samples/monotouch/
    
    
    
- [ ![Le interazioni tra le classi personalizzate, StoreKit e App Store](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png)
+ [![Le interazioni tra le classi personalizzate, StoreKit e App Store](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
 &nbsp;
 
@@ -214,7 +214,7 @@ public void CompleteTransaction (SKPaymentTransaction transaction)
 
 Quando l'utente acquista più, l'avviso di conferma StoreKit rifletterà la quantità, il prezzo unitario e il prezzo totale che verrà addebitati essi, come illustrato nella schermata seguente:
 
-[ ![Conferma acquisto](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png)
+[![Conferma acquisto](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png#lightbox)
 
 ## <a name="handling-network-outages"></a>Gestione delle interruzioni della rete
 
@@ -328,7 +328,7 @@ Per testare questo metodo, utilizzare il **restrizioni** funzionalità di iOS pe
    
    
    
- [ ![Utilizzare la funzionalità di restrizioni di iOS per disabilitare gli acquisti In-App](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png)   
+ [![Utilizzare la funzionalità di restrizioni di iOS per disabilitare gli acquisti In-App](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)   
    
    
    
@@ -352,7 +352,7 @@ L'applicazione simile a questa operazione quando il **acquisti In-App** funziona
    
    
    
- [ ![L'applicazione è simile al seguente quando gli acquisti In-App è limitato all'acquisto pulsanti sono disabilitati](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png)   
+ [![L'applicazione è simile al seguente quando gli acquisti In-App è limitato all'acquisto pulsanti sono disabilitati](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
    
    
    
@@ -361,7 +361,7 @@ Informazioni sul prodotto può essere ancora richiesto quando `CanMakePayments` 
    
    
    
- [ ![Acquisti in-app non sono consentiti.](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png)   
+ [![Acquisti in-app non sono consentiti.](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
    
    
    

@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 13. Bitmap
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 2e511f2ebf75b065469a9051ee5797ac58c147f3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 74e5e47a481d02fe11be4b770b818d2c88b517f7
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Riepilogo del capitolo 13. Bitmap
 
@@ -76,7 +77,7 @@ L'approccio migliore consiste nell'iniziare con una bitmap maggiore della larghe
 
 Il [ **MadTeaParty** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/MadTeaParty) Visualizza capitolo 7 di Lewis Carroll *operazioni di Alice in meraviglie* con le illustrazioni originale da John Tenniel:
 
-[![Tripla schermata dell'entità di tè mad](images/ch13fg16-small.png "Mad testo del libro tè entità Hatters")](images/ch13fg16-large.png "Mad testo del libro tè entità Hatters")
+[![Tripla schermata dell'entità di tè mad](images/ch13fg16-small.png "Mad testo del libro tè entità Hatters")](images/ch13fg16-large.png#lightbox "Mad testo del libro tè entità Hatters")
 
 ### <a name="browsing-and-waiting"></a>Esplorazione e in attesa
 

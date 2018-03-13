@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 4d074dce06d5737bd6589efbc559c611425e5f19
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 18df6082f634d633d3f1ca8ea1e8d3f493532f47
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="grid"></a>Grid
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) supporta la disposizione delle viste in righe e colonne. Dimensioni proporzionale o dimensioni assolute, è possono impostare le righe e colonne. Il `Grid` layout non deve essere confuso con tabelle tradizionali e non deve presentare i dati tabulari. `Grid` non ha il concetto di riga, colonna o cella formattazione. A differenza delle tabelle HTML, `Grid` è destinato esclusivamente per definire il layout del contenuto.
 
-[ ![](grid-images/layouts-sml.png "Xamarin.Forms Layouts")](grid-images/layouts.png "Xamarin.Forms Layouts")
+[![](grid-images/layouts-sml.png "Xamarin.Forms Layouts")](grid-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 In questo articolo illustra:
 
@@ -54,7 +54,7 @@ Informazioni di riga e di colonna vengono archiviate in `Grid`del `RowDefinition
 - **Assoluto** &ndash; ridimensiona le colonne e righe con valori di altezza e larghezza fissi di specifici. Specifica un valore e `GridUnitType.Absolute` in c# e come `#` in XAML, con `#` il valore desiderato.
 
 > [!NOTE]
-> **Nota**: I valori di larghezza per le colonne vengono impostati come ' * ' per impostazione predefinita in xamarin. Forms, che assicura che la colonna verrà riempire lo spazio disponibile.
+> I valori di larghezza per le colonne vengono impostati come ' * ' per impostazione predefinita in xamarin. Forms, che assicura che la colonna verrà riempire lo spazio disponibile.
 
 Si consideri un'applicazione che richiede tre righe e due colonne. La riga inferiore deve essere esattamente 200px altezza e la riga superiore deve essere due volte la stessa altezza riga centrale. La colonna a sinistra deve essere sufficientemente ampio per adattarle al contenuto e la colonna di destra deve riempire lo spazio rimanente.
 

@@ -7,12 +7,12 @@ ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 36cabddc2439d64ad2d1135bbd0d453a7f411750
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: d8b44fb7f0e60db407271fd84899489bf8e65694
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>Procedura dettagliata: salvataggio dello stato attività
 
@@ -22,7 +22,7 @@ _Sono stati illustrati teoria di salvataggio dello stato nel manuale dell'attivi
 
 Aprire il **ActivityLifecycle_Start** progetto (nel [ActivityLifecycle](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle) esempio), compilarlo ed eseguirlo. Si tratta di un progetto molto semplice che contiene due attività per illustrare il ciclo di vita di attività e la modalità in cui vengono chiamati i diversi metodi del ciclo di vita. Quando si avvia l'applicazione, la schermata di `MainActivity` viene visualizzato: 
 
-[ ![Schermata di attività A](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png)
+[![Schermata di attività A](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png#lightbox)
 
 ### <a name="viewing-state-transitions"></a>Transizioni di stato di visualizzazione
 
@@ -48,7 +48,7 @@ Quando si fa clic su di **avviare attività B** pulsante, è possibile notare *a
 
 Di conseguenza, *attività B* viene avviato e visualizzato al posto di *attività A*: 
 
-[ ![Schermata di attività B](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png)
+[![Schermata di attività B](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png#lightbox)
 
 Quando si fa clic su di **nuovamente** pulsante *attività B* viene eliminato definitivamente e *attività A* viene ripreso: 
 
@@ -62,7 +62,7 @@ Quando si fa clic su di **nuovamente** pulsante *attività B* viene eliminato de
 ```
 ### <a name="adding-a-click-counter"></a>Aggiunta di un contatore di fare clic su
 
-Successivamente, si intende modificare l'applicazione in modo che si dispone di un pulsante che calcola e visualizza il numero di volte in cui che si fa clic. In primo luogo, aggiungere un `_counter` variabile di istanza per `MainActivity`: 
+Successivamente, si intende modificare l'applicazione in modo che si dispone di un pulsante che calcola e visualizza il numero di volte in cui che si fa clic. In primo luogo, aggiungere un `_counter` variabile di istanza per `MainActivity`:
 
 ```csharp
 int _counter = 0;
@@ -105,11 +105,11 @@ clickbutton.Click += (object sender, System.EventArgs e) =>
 
 Quando si compila e si esegue nuovamente l'app, nuovo viene visualizzato un pulsante che aumenta e visualizza il valore di `_counter` , fare clic su ogni:
 
-[![Aggiungere il numero di tocco](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png)
+[![Aggiungere il numero di tocco](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png#lightbox)
 
 Tuttavia, quando si ruota il dispositivo in modalità orizzontale, questo numero viene perso:
 
-[ ![Rotazione per landscape imposta il conteggio su zero](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png)
+[![Rotazione per landscape imposta il conteggio su zero](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png#lightbox)
 
 Esaminare l'output dell'applicazione, è possibile vedere che *attività A* è stato sospeso, arrestato, eliminato, ricreato, riavviare, quindi ripresa durante la rotazione da verticale in orizzontale: 
 
@@ -152,7 +152,7 @@ if (bundle != null)
 
 Creare ed eseguire di nuovo l'app, quindi fare clic sul secondo pulsante più volte. Quando si ruota il dispositivo in modalità orizzontale, viene mantenuto il conteggio.
 
-[ ![Rotazione schermo Mostra il numero di quattro mantenuto](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png)
+[![Rotazione schermo Mostra il numero di quattro mantenuto](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png#lightbox)
 
 
 Esaminiamo ora la finestra di output per vedere cosa è successo:

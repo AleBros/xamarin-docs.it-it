@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ce20322b576b12ff9dfe56ef0bc9d2e1ca27792
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 530e53230e9f0dea165b083fa6795558025a293f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinmac-extension-support"></a>Supporto delle estensioni Xamarin.Mac
 
@@ -42,7 +42,7 @@ I suggerimenti seguenti possono essere utili quando si lavora con le estensioni 
 - Eventuali eccezioni non rilevate verranno un arresto anomalo del processo di estensione e avere solo una piccola quantità di informazioni utili nel **Registro di sistema**. Wrapping codice problematico in un `try/catch` (eccezione) che blocca `NSLog`del precedente potrebbe essere utile generare nuovamente.
 - Il **Registro di sistema** è possibile accedere dal **Console** app in **applicazioni** > **utilità**:
 
-    [ ![](extensions-images/extension02.png "Il Registro di sistema")](extensions-images/extension02.png)
+    [![](extensions-images/extension02.png "Il Registro di sistema")](extensions-images/extension02.png#lightbox)
 - Come indicato in precedenza, in esecuzione l'applicazione host di estensione verrà registrato con il sistema. Eliminare il pacchetto di applicazione con annullamento della registrazione. 
 - Se sono registrate "errate" versioni delle estensioni di un'app, è possibile utilizzare il comando seguente per individuarli (in modo da poter essere eliminati): `plugin kit -mv`
 
@@ -65,4 +65,4 @@ In questo articolo è stato applicato un rapido controllo di utilizzo di estensi
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
-- [Linee guida sull'interfaccia umane di OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

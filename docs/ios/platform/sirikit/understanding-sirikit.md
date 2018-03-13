@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 36d8e27ce06e38e1cf652558bfb5a83f572e4403
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 202df615f1b35504f1fe5c9fd64c9c4b4db77a2d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="understanding-sirikit-concepts"></a>Informazioni sui concetti SiriKit
 
@@ -57,7 +57,7 @@ Siri sia mappe gestire tutte le interazioni dell'utente e visualizzare i risulta
 
 Questa sezione viene fornita una panoramica delle modalità SiriKit consente all'utente di interagire con l'app usando Siri. Ai fini di questo esempio, verrà usato l'app MonkeyChat fittizio:
 
-[ ![](understanding-sirikit-images/monkeychat01.png "L'icona MonkeyChat")](understanding-sirikit-images/monkeychat01.png)
+[![](understanding-sirikit-images/monkeychat01.png "L'icona MonkeyChat")](understanding-sirikit-images/monkeychat01.png#lightbox)
 
 MonkeyChat mantiene il proprio contatto della Rubrica di amici dell'utente, ognuno associato a un nome di schermata (ad esempio Bobo ad esempio) e consente all'utente di inviare ogni amico chat di testo in base al nome della schermata.
 
@@ -179,7 +179,7 @@ Indipendentemente dal modo in cui viene effettuata una richiesta o come Siri ris
 
 Quando l'utente effettua una richiesta di Siri verbale, ecco i passaggi successivi Siri:
 
-[ ![](understanding-sirikit-images/monkeychat02.png "I passaggi successivi Siri")](understanding-sirikit-images/monkeychat02.png)
+[![](understanding-sirikit-images/monkeychat02.png "I passaggi successivi Siri")](understanding-sirikit-images/monkeychat02.png#lightbox)
 
 1. In primo luogo, Siri accetta l'audio dell'utente **vocale** e lo converte in testo.
 2. Successivamente, il testo viene convertito in un **finalità**, un oggetto strutturato rappresentazione della richiesta dell'utente.
@@ -188,7 +188,7 @@ Quando l'utente effettua una richiesta di Siri verbale, ecco i passaggi successi
 
 Esistono tre modi principali che l'app può essere incluse nella conversazione dell'utente con Siri:
 
-[ ![](understanding-sirikit-images/monkeychat03.png "I tre modi principali che l'app può partecipare alla conversazione gli utenti con Siri")](understanding-sirikit-images/monkeychat03.png)
+[![](understanding-sirikit-images/monkeychat03.png "I tre modi principali che l'app può partecipare alla conversazione gli utenti con Siri")](understanding-sirikit-images/monkeychat03.png#lightbox)
 
 1. **Vocabolario** -si tratta di come l'app indica Siri le parole, è necessario sapere per interagire con esso.
 2. **Logica app** : queste sono le azioni e le risposte che verrà eseguita l'app in base a determinati tipi.
@@ -219,7 +219,7 @@ Specificato le informazioni sopra riportate, esaminare l'interazione della conve
 
 Il primo ruolo che accetta l'app nella conversazione è illustrare Siri vocale dell'utente:
 
-[ ![](understanding-sirikit-images/monkeychat04.png "Aiutare a Siri di comprendere il riconoscimento vocale utenti")](understanding-sirikit-images/monkeychat04.png)
+[![](understanding-sirikit-images/monkeychat04.png "Aiutare a Siri di comprendere il riconoscimento vocale utenti")](understanding-sirikit-images/monkeychat04.png#lightbox)
 
 Siri non ha il nome "Bobo" nel proprio database, ma l'app, quindi ha condiviso queste informazioni con Siri tramite il relativo vocabolario. L'app consente anche Siri riconoscere che Bobo è un destinatario, perché ha specificato li a Siri come un *contatto*.
 
@@ -227,7 +227,7 @@ Siri sa che è necessario eseguire altre per inviare un messaggio rispetto a un 
 
 Nell'esempio precedente, l'utente ha risposto, *"Inviare ulteriori banane"*, che verrà aggregare Siri in un tipo strutturato **finalità**:
 
-[ ![](understanding-sirikit-images/monkeychat05.png "Siri verrà aggregare la risposta dell'utente in un intento strutturato")](understanding-sirikit-images/monkeychat05.png)
+[![](understanding-sirikit-images/monkeychat05.png "Siri verrà aggregare la risposta dell'utente in un intento strutturato")](understanding-sirikit-images/monkeychat05.png#lightbox)
 
 Lo scopo strutturato conterrà le informazioni seguenti:
 
@@ -248,7 +248,7 @@ Siri creerà automaticamente un appropriato `NSUserActivity` per avviare l'app e
 
 Dopo che l'app ha elaborato la finalità e ha restituito una risposta a Siri, quindi presenta i risultati all'utente (verbalmente e visivamente):
 
-[ ![](understanding-sirikit-images/monkeychat06.png "I risultati presentati all'utente verbalmente sia visivamente")](understanding-sirikit-images/monkeychat06.png)
+[![](understanding-sirikit-images/monkeychat06.png "I risultati presentati all'utente verbalmente sia visivamente")](understanding-sirikit-images/monkeychat06.png#lightbox)
 
 Siri ha risposta predefinita diverse interfacce utente per tutti i domini disponibili per l'app. Tuttavia, poiché MonkeyChat ha fornito un'estensione dell'interfaccia utente finalità facoltativa, viene utilizzato per presentare i risultati della conversazione all'utente nell'esempio precedente.
 
@@ -256,7 +256,7 @@ Siri ha risposta predefinita diverse interfacce utente per tutti i domini dispon
 
 Esistono tre attività principali che dovranno eseguire quando si lavora con tipi di estensione dell'App:
 
-[ ![](understanding-sirikit-images/monkeychat07.png "Il ciclo di vita preventivo")](understanding-sirikit-images/monkeychat07.png)
+[![](understanding-sirikit-images/monkeychat07.png "Il ciclo di vita preventivo")](understanding-sirikit-images/monkeychat07.png#lightbox)
 
 1. L'app deve **risolvere** ogni parametro di un evento. Di conseguenza, l'app chiama risolvere più volte (una volta per ogni parametro), talvolta più volte per lo stesso parametro fino a quando l'app e l'utente concordano quali viene richiesto.
 2. L'app deve **conferma** che può gestire lo scopo di richiesto e informare Siri il risultato previsto.
@@ -329,7 +329,7 @@ Con SiriKit in iOS 10, Apple ha creato i due nuovi punti di estensione:
 
 L'estensione di tipi è responsabile della gestione delle interazioni tra l'applicazione e Siri principale come indicato di seguito:
 
-[ ![](understanding-sirikit-images/intents01.png "L'estensione di tipi")](understanding-sirikit-images/intents01.png)
+[![](understanding-sirikit-images/intents01.png "L'estensione di tipi")](understanding-sirikit-images/intents01.png#lightbox)
 
 L'estensione finalità può supportare uno o più tipi, è compito dello sviluppatore per decidere come si desidera implementare SiriKit nell'app. Lo sviluppatore può inoltre aggiungere un'estensione finalità separato per ogni scopo che devono essere gestiti.  Ciò premesso, Apple richiede che lo sviluppatore di limitare il numero di estensioni con finalità di in modo che non sia Siri già aperto con l'app, che richiedono più memoria e tempo per gestire più processi.
 
@@ -355,7 +355,7 @@ Uno dei problemi comuni che verranno eseguite dagli utenti è "verbify" nome del
 
 L'estensione dell'interfaccia utente intenti l'opportunità di portare l'interfaccia utente dell'applicazione e personalizzazione di un'esperienza di Siri e rendere gli utenti a cui è connesso all'app. Con questa estensione, l'app può portare al marchio, nonché informazioni visual e altri nella trascrizione.
 
-[ ![](understanding-sirikit-images/intents02.png "Output di esempio di estensione dell'interfaccia utente di tipi")](understanding-sirikit-images/intents02.png)
+[![](understanding-sirikit-images/intents02.png "Output di esempio di estensione dell'interfaccia utente di tipi")](understanding-sirikit-images/intents02.png#lightbox)
 
 L'estensione dell'interfaccia utente intenti restituirà sempre un `UIViewController` e l'applicazione può aggiungere qualsiasi operazione all'interno di controller di visualizzazione, ad esempio che mostra le informazioni aggiuntive che vanno oltre la risposta iniziale. L'interfaccia utente intenti inoltre possibile aggiornare l'utente con lo stato di un evento di esecuzione prolungata, ad esempio la quantità più richiederà una corsa automobile per raggiungere il percorso di condivisione.
 

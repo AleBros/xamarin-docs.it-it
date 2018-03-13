@@ -5,20 +5,24 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2016
-ms.openlocfilehash: b2decf1331764ed6b1696126d8b23318e329e0c7
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 38d3b6da0dd33e038f2d50209280f2983faf6013
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-indexing-and-deep-linking"></a>L'indicizzazione di applicazione e il collegamento completo
 
 _L'indicizzazione dell'applicazione consente alle applicazioni che, in caso contrario, verrebbero dimenticate dopo qualche utilizza rimanere rilevanti da visualizzati nei risultati della ricerca. Il collegamento completo consente alle applicazioni rispondere a un risultato di ricerca che contiene i dati dell'applicazione, in genere passando a una pagina a cui fa riferimento da un collegamento diretto. In questo articolo viene illustrato come utilizzare l'indicizzazione di applicazione e il collegamento completo per eseguire la ricerca nei dispositivi Android iOS e xamarin. Forms contenuto dell'applicazione._
 
-## <a name="overview"></a>Panoramica
+> [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
+
+**Profondità di collegamento con xamarin. Forms e Azure, da [University Xamarin](https://university.xamarin.com/)**
+
 
 L'indicizzazione di xamarin. Forms applicazione e il collegamento completo forniscono un'API per la pubblicazione di metadati per l'indicizzazione di applicazione di navigazione degli utenti nelle applicazioni. Contenuto indicizzato è quindi possibile cercare per ricerca Spotlight, nella ricerca di Google o in una ricerca sul web. Selezionando un risultato di ricerca che contiene un collegamento diretto verrà generato un evento che può essere gestito da un'applicazione e viene in genere utilizzato per passare alla pagina a cui fa riferimento il collegamento diretto.
 
@@ -31,7 +35,7 @@ Ogni `TodoItem` istanza creata dall'utente viene indicizzato. Ricerca specifici 
 Per ulteriori informazioni sull'utilizzo di un database SQLite, vedere [utilizzo di un Database locale](~/xamarin-forms/app-fundamentals/databases.md).
 
 > [!NOTE]
-> **Nota**: applicazione di xamarin. Forms l'indicizzazione e collegamento deep funzionalità disponibile solo nelle piattaforme Android e iOS e richiede rispettivamente iOS 9 e API 23.
+> L'indicizzazione di applicazione di xamarin. Forms e completo di funzionalità di collegamento è disponibile solo nelle piattaforme iOS e Android e richiede iOS 9 e API 23 rispettivamente.
 
 ## <a name="setup"></a>Configurazione
 
@@ -106,7 +110,7 @@ Application.Current.AppLinks.RegisterLink (appLink);
 Aggiunge il [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) istanza per l'applicazione [ `AppLinks` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) insieme.
 
 > [!NOTE]
-> **Nota**: il `RegisterLink` metodo può essere utilizzato anche per aggiornare il contenuto che è stato indicizzato per una pagina.
+> Il `RegisterLink` metodo può essere utilizzato anche per aggiornare il contenuto che è stato indicizzato per una pagina.
 
 Una volta un [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) istanza è stata registrata per l'indicizzazione, può essere visualizzato nei risultati della ricerca. La schermata seguente mostra il contenuto indicizzato visualizzati nei risultati della ricerca nella piattaforma iOS:
 
@@ -123,7 +127,7 @@ Application.Current.AppLinks.DeregisterLink (appLink);
 Questa operazione rimuove il [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) istanza dell'applicazione [ `AppLinks` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) insieme.
 
 > [!NOTE]
-> **Nota**: in Android non è possibile rimuovere il contenuto indicizzato dai risultati della ricerca.
+> In Android non è possibile rimuovere contenuto indicizzato dai risultati della ricerca.
 
 <a name="responding" />
 
@@ -211,7 +215,7 @@ Inoltre, i valori per le chiavi seguenti possono essere specificati:
 - `shouldAddToPublicIndex` -un `string` tra `true` o `false` che controlla se aggiungere il contenuto indicizzato all'indice di cloud pubblico di Apple, che può quindi essere visualizzati agli utenti che non hanno installato l'applicazione nel proprio dispositivo iOS o meno. Tuttavia, solo perché il contenuto è stato impostato per l'indicizzazione pubblico, non significa che verrà automaticamente aggiunto all'indice di cloud pubblico di Apple. Per ulteriori informazioni, vedere [pubblica l'indicizzazione di ricerca](~/ios/platform/search/nsuseractivity.md). Si noti che questa chiave deve essere impostata su `false` durante l'aggiunta dei dati personali di [ `KeyValues` ](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.KeyValues/) insieme.
 
 > [!NOTE]
-> **Nota**: il `KeyValues` raccolta non viene utilizzata con la piattaforma Android.
+> Il `KeyValues` raccolta non viene utilizzata con la piattaforma Android.
 
 Per ulteriori informazioni sul passaggio di consegne, vedere [Introduzione a Handoff](~/ios/platform/handoff.md).
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ef016d963f710ff54fc57b5e6e57181df030c8f6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e67646e5072f703af71fc3f0a7901fd8485f9710
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementazione di un HybridWebView
 
@@ -151,7 +151,7 @@ Il processo di creazione della classe renderer personalizzato è come segue:
 1. Aggiungere un `ExportRenderer` attributo alla classe renderer personalizzato per specificare che verrà usata per il rendering del controllo personalizzato di xamarin. Forms. Questo attributo viene utilizzato per registrare il renderer personalizzato con xamarin. Forms.
 
 > [!NOTE]
-> **Nota**: per la maggior parte degli elementi di xamarin. Forms, è facoltativo fornire un renderer personalizzato in ogni progetto della piattaforma. Se non è registrato un renderer personalizzato, verrà utilizzato il renderer predefinito per la classe di base del controllo. Un renderer personalizzato è tuttavia necessarie in ogni progetto della piattaforma per il rendering di un [vista](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) elemento.
+> Per la maggior parte degli elementi di xamarin. Forms, è facoltativo per fornire un renderer personalizzato in ogni progetto della piattaforma. Se non è registrato un renderer personalizzato, verrà utilizzato il renderer predefinito per la classe di base del controllo. Un renderer personalizzato è tuttavia necessarie in ogni progetto della piattaforma per il rendering di un [vista](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) elemento.
 
 Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, con le relazioni tra di essi:
 
@@ -316,7 +316,7 @@ Questa funzionalità viene ottenuta nel modo seguente:
   - Le risorse vengono rilasciate.
 
 > [!NOTE]
-> **Nota**: la `WKWebView` classe è supportata solo in iOS 8 e versioni successive.
+> La `WKWebView` classe è supportata solo in iOS 8 e versioni successive.
 
 ### <a name="creating-the-custom-renderer-on-android"></a>Creazione di Renderer personalizzato in Android
 
@@ -411,7 +411,7 @@ public class JSBridge : Java.Lang.Object
 La classe deve derivare da `Java.Lang.Object`, e metodi esposti a JavaScript devono essere provvisto di `[JavascriptInterface]` e `[Export]` gli attributi. Pertanto, quando il `invokeCSharpAction` funzione JavaScript viene inserito nella pagina web e viene eseguito, verrà chiamato il `JSBridge.InvokeAction` metodo a causa di essere decorata con il `[JavascriptInterface]` e `[Export("invokeAction")]` gli attributi. A sua volta, il `InvokeAction` metodo richiama il `HybridWebView.InvokeAction` metodo che verrà richiamato l'azione registrato per visualizzare la finestra popup.
 
 > [!NOTE]
-> **Nota**: i progetti che utilizzano il `[Export]` attributo deve includere un riferimento a `Mono.Android.Export`, o si verificherà un errore del compilatore.
+> I progetti che utilizzano il `[Export]` attributo deve includere un riferimento a `Mono.Android.Export`, o si verificherà un errore del compilatore.
 
 Si noti che il `JSBridge` classe mantiene una `WeakReference` per la `HybridWebViewRenderer` classe. Questo permette di evitare la creazione di un riferimento circolare tra le due classi. Per ulteriori informazioni vedere [riferimenti deboli](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx) su MSDN.
 

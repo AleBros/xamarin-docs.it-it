@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 22. Animazione
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0ee99881a43b625cc8a70fb59e54710705c2d07a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: df0647e869fcf37a3a1dfdeb6f3dbf1e7d07ad95
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-22-animation"></a>Riepilogo del capitolo 22. Animazione
 
@@ -110,7 +111,7 @@ Il [ **CopterAnimation** ](https://github.com/xamarin/xamarin-forms-book-samples
 
 [**RotatingSpokes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotatingSpokes) deve affrontare `BoxView` raggi attorno al centro dello schermo e quindi Ruota ogni spoke per creare modelli interessanti:
 
-[![Schermata triplo della rotazione raggi](images/ch22fg21-small.png "rotazione raggi")](images/ch22fg21-large.png "rotazione raggi")
+[![Schermata triplo della rotazione raggi](images/ch22fg21-small.png "rotazione raggi")](images/ch22fg21-large.png#lightbox "rotazione raggi")
 
 Tuttavia, aumentando progressivamente il `Rotation` proprietà di un elemento potrebbe non funzionare a lungo termine, come il [ **RotationBreakdown** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotationBreakdown) esempio viene illustrato.
 
@@ -124,7 +125,7 @@ Il `LayoutTo` metodo deve essere limitato a scopi specifici. Il [ **BouncingBox*
 
 Il [ **XamagonXuzzle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle) Usa `LayoutTo` per spostare i riquadri in un'implementazione di classica puzzle 15-16 che consente di visualizzare un'immagine codificata anziché numerati riquadri:
 
-[![La schermata di Xamarin Xuzzle](images/ch22fg26-small.png "Xuzzle Puzzle gioco")](images/ch22fg26-large.png "Xuzzle Puzzle gioco")
+[![La schermata di Xamarin Xuzzle](images/ch22fg26-small.png "Xuzzle Puzzle gioco")](images/ch22fg26-large.png#lightbox "Xuzzle Puzzle gioco")
 
 ### <a name="your-own-awaitable-animations"></a>Animazioni awaitable
 

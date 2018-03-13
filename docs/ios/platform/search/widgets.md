@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: a6749ca9d8a793372ec088433780d622f2f05b41
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7ca863b92d8d7af46f4ce18f5d088347b9ca04ee
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-and-home-screen-widget-enhancements"></a>Ricerca e miglioramenti di Widget schermata iniziale
 
@@ -25,7 +25,7 @@ Widget (noto anche come oggi estensioni) sono un tipo speciale di iOS estensione
 
 Widget sono altamente personalizzabili e possono contenere elementi dell'interfaccia utente, ad esempio testo, immagini, pulsanti, e così via. Inoltre, lo sviluppatore è possibile personalizzare ulteriormente il layout di loro widget.
 
-[ ![](widgets-images/widgets01.png "Widget di esempio")](widgets-images/widgets01.png)
+[![](widgets-images/widgets01.png "Widget di esempio")](widgets-images/widgets01.png#lightbox)
 
 Esistono due posizioni principali che un utente può visualizzare e interagire con i widget di un'app:
 

@@ -3,16 +3,16 @@ title: Distribuzione e test
 description: Guide per la stabilizzazione e la distribuzione
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: 2DBF3BF9-79E7-4E24-AF26-E34C972B0169
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 0c152c389a6aa62512882863cd2830b436587475
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f051e855c9d32f5c9667dc70c7cb9cf9ba8105fb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="deployment-and-testing"></a>Distribuzione e test
 
@@ -65,7 +65,7 @@ Questo articolo illustra l'uso di Instruments su qualsiasi dispositivo iOS e in 
 
 Questo articolo illustra in dettaglio l'uso di Apple Instruments per diagnosticare problemi di memoria in un'applicazione iOS compilata con Xamarin. Illustra come avviare Instruments, come creare snapshot dell'heap e come analizzare la crescita della memoria. Descrive anche come usare Instruments per visualizzare ed evidenziare le righe di codice specifiche che causano il problema di memoria.
 
-##  <a name="linking-on-ioslinkermd"></a>[Collegamenti in iOS](linker.md)
+##  <a name="linking-on-ioslinkermd"></a>[Collegamento in iOS](linker.md)
 
 Illustra il funzionamento del linker per assicurare le dimensioni minime del pacchetto dell'applicazione e come modificarne le impostazioni e l'utilizzo.
 

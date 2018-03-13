@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 55d692fa92dd08dd9c0887ed10013589afc98ec6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2276b67fc29f2752e4b178168a12e6e980b788d0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-watchos"></a>Introduzione a watchOS
 
@@ -29,11 +29,11 @@ Una soluzione di app watchOS è 3 progetti:
 
 Nelle App watchOS 1, il codice dell'estensione viene eseguito su iPhone: l'Apple Watch è effettivamente un display esterno. le app watchOS 2 e 3 vengono eseguite interamente nel Apple Watch. Questa differenza è illustrata nel diagramma seguente:
 
-[ ![](intro-to-watchos-images/arch-sml.png "La differenza tra watchOS 1 e 2 (e versioni successive) di watchOS è illustrata in questo diagramma")](intro-to-watchos-images/arch.png)
+[ ![](intro-to-watchos-images/arch-sml.png "La differenza tra watchOS 1 e 2 (e versioni successive) di watchOS è illustrata in questo diagramma")](intro-to-watchos-images/arch.png#lightbox)
 
 Indipendentemente dalla versione di watchOS, di destinazione in Visual Studio per il riempimento di soluzione del Mac una soluzione completa avrà un aspetto simile al seguente:
 
-[ ![](intro-to-watchos-images/projectstructure-sml.png "Il riquadro soluzione")](intro-to-watchos-images/projectstructure.png)
+[![](intro-to-watchos-images/projectstructure-sml.png "Il riquadro soluzione")](intro-to-watchos-images/projectstructure.png#lightbox)
 
 Il *App padre* in un watchOS soluzione è un'app iOS regolare. Si tratta del progetto nella soluzione che è visibile solo **sul telefono**. Casi d'uso per questa app includono esercitazioni, schermate di amministrazione e applicazione di filtri e così via cacheing di livello intermedio. Tuttavia, è possibile che l'utente di installare ed eseguire l'app/estensione di espressioni di controllo senza **mai** avere aperto l'app padre, pertanto se è necessario l'app padre per l'esecuzione di un'inizializzazione una tantum o amministrazione, è necessario per le espressioni di controllo del programma / estensione dell'App per informare l'utente che.
 

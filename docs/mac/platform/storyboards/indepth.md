@@ -8,21 +8,21 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: effa527b330fb6ca75800392e557289a326f17aa
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 388744d48799e84587a4f554a4eb67cd677d8c9a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="storyboards"></a>Storyboard
 
 Uno storyboard definisce l'interfaccia utente per un'applicazione specificata suddivisa in una panoramica dei controller di vista funzionale. In Generatore di interfaccia di Xcode, ognuno di questi controller si trova nella propria scena.
 
-[ ![](indepth-images/intro01.png "Uno storyboard in Generatore del Xcode di interfaccia")](indepth-images/intro01.png)
+[![](indepth-images/intro01.png "Uno storyboard in Generatore del Xcode di interfaccia")](indepth-images/intro01.png#lightbox)
 
 Lo storyboard è un file di risorse (con le estensioni di `.storyboard`) che ottiene incluso nel bundle dell'app Xamarin.Mac quando viene compilato e spedito. Per definire lo Storyboard inizio per l'app, modificarlo del `Info.plist` file e selezionare il **interfaccia principale** dalla casella a discesa: 
 
-[ ![](indepth-images/sb01.png "L'editor di Info. plist")](indepth-images/sb01.png)
+[![](indepth-images/sb01.png "L'editor di Info. plist")](indepth-images/sb01.png#lightbox)
 
 <a name="Loading-from-Code" />
 
@@ -41,11 +41,11 @@ controller.ShowWindow(this);
 
 Il `FromName` carica il file di Storyboard con il nome specificato che è stato incluso nel bundle dell'app. Il `InstantiateControllerWithIdentifier` crea un'istanza del Controller di visualizzazione con l'identità specificata. È consigliabile impostare l'identità in interfaccia generatore del Xcode quando si progetta l'interfaccia utente:
 
-[ ![](indepth-images/sb02.png "Impostazione dell'ID di Storyboard")](indepth-images/sb02.png)
+[![](indepth-images/sb02.png "Impostazione dell'ID di Storyboard")](indepth-images/sb02.png#lightbox)
 
 Facoltativamente, è possibile utilizzare il `InstantiateInitialController` per caricare il Controller di visualizzazione che è stato assegnato il Controller iniziale nel generatore di interfaccia:
 
-[ ![](indepth-images/sb03.png "Impostazione del controller di iniziale")](indepth-images/sb03.png)
+[![](indepth-images/sb03.png "Impostazione del controller di iniziale")](indepth-images/sb03.png#lightbox)
 
 Perché è contrassegnato come il **punto di ingresso Storyboard** e freccia open è terminata.
 
@@ -76,7 +76,7 @@ Sono stati aggiunti numerosi nuovi metodi per la `NSViewController` classe per s
 
 Inoltre, `NSViewControllers` fanno ora parte della finestra _risponditore catena_:
 
-[ ![](indepth-images/vc01.png "La catena di risponditore")](indepth-images/vc01.png)
+[![](indepth-images/vc01.png "La catena di risponditore")](indepth-images/vc01.png#lightbox)
 
 E pertanto sono cablate fino a ricevere e rispondere agli eventi, ad esempio Taglia, copia e Incolla voci di menu selezionate. Questo automatico View Controller transito verticale si verifica solo su App in esecuzione su macOS Sierra (10.12) e versioni successive.
 
@@ -86,13 +86,13 @@ E pertanto sono cablate fino a ricevere e rispondere agli eventi, ad esempio Tag
 
 In storyboard, visualizzazione controller (ad esempio il Controller di visualizzazione di divisione e la scheda View Controller) ora è possibile implementare _contenimento_, in modo che sia possibile "contengono" altri sub, visualizzazione controller:
 
-[ ![](indepth-images/vc02.png "Un esempio di contenimento di Controller di visualizzazione")](indepth-images/vc02.png)
+[![](indepth-images/vc02.png "Un esempio di contenimento di Controller di visualizzazione")](indepth-images/vc02.png#lightbox)
 
 Controller di visualizzazione figlio contengono i metodi e proprietà collegarli il backup per il Controller di visualizzazione padre e di utilizzare la visualizzazione e rimozione di viste dalla schermata.
 
 Tutti i controller di visualizzazione contenitore incorporata macOS presentano un layout specifico che Apple è consigliabile seguire se creare la propria visualizzazione controller di contenitore personalizzato:
 
-[ ![](indepth-images/vc03.png "Il layout View Controller")](indepth-images/vc03.png)
+[![](indepth-images/vc03.png "Il layout View Controller")](indepth-images/vc03.png#lightbox)
 
 Il Controller di visualizzazione di raccolta contiene una matrice di visualizzazione di elementi della raccolta, ognuno dei quali contiene uno o più controller di visualizzazione che contengono le visualizzazioni.
 
@@ -131,7 +131,7 @@ PerformSegue("MyNamedSegue", this);
 
 L'ID definire è definito all'interno interfaccia generatore di Xcode layout dell'interfaccia utente dell'applicazione quando si:
 
-[ ![](indepth-images/sg02.png "Immettere un nome di definire")](indepth-images/sg02.png)
+[![](indepth-images/sg02.png "Immettere un nome di definire")](indepth-images/sg02.png#lightbox)
 
 Nel Controller di visualizzazione che funge da origine della Segue, è necessario eseguire l'override di `PrepareForSegue` (metodo) e di effettuare qualsiasi inizializzazione necessaria prima che venga eseguita la Segue e il Controller di visualizzazione specificato viene visualizzato:
 
@@ -215,7 +215,7 @@ Un paio di aspetti da notare:
 
 Per usare questo nuovo tipo Segue in Generatore del Xcode di interfaccia, è necessario compilare l'app in primo luogo, quindi passare a Xcode e aggiungere un nuovo Segue tra i due scene. Impostare il **stile** a **personalizzato** e **classe definire** a `ReplaceViewSegue` (il nome di questa classe Segue personalizzata):
 
-[ ![](indepth-images/sg01.png "L'impostazione della classe Segue")](indepth-images/sg01.png)
+[![](indepth-images/sg01.png "L'impostazione della classe Segue")](indepth-images/sg01.png#lightbox)
 
 <a name="Triggered-Segues" />
 
@@ -271,21 +271,21 @@ Per aggiungere un riferimento a uno Storyboard esterno, eseguire le operazioni s
 
 1. Nel **Esplora**del mouse sul nome del progetto e scegliere **Aggiungi** > **nuovo File...**   >  **Mac** > **Storyboard**. Immettere un **nome** per fare clic su Nuovo Storyboard la **New** pulsante: 
 
-    [ ![](indepth-images/ref01.png "Aggiunta di un nuovo Storyboard")](indepth-images/ref01.png)
+    [![](indepth-images/ref01.png "Aggiunta di un nuovo Storyboard")](indepth-images/ref01.png#lightbox)
 2. Nel **Esplora**, fare doppio clic sul nuovo nome di uno Storyboard per aprirlo e modificarlo in Generatore del Xcode di interfaccia.
 2. Progettare il layout delle scene del nuovo Storyboard normalmente verrebbe e salvare le modifiche: 
 
-    [ ![](indepth-images/ref02.png "Progettazione dell'interfaccia")](indepth-images/ref02.png)
+    [![](indepth-images/ref02.png "Progettazione dell'interfaccia")](indepth-images/ref02.png#lightbox)
 3. Passare allo Storyboard che si sta per essere aggiunto il riferimento nel generatore di interfaccia.
 4. Trascinare un **Storyboard riferimento** dal **oggetto libreria** nell'area di progettazione: 
 
-    [ ![](indepth-images/ref03.png "Selezione di un riferimento di Storyboard nella libreria")](indepth-images/ref03.png)
+    [![](indepth-images/ref03.png "Selezione di un riferimento di Storyboard nella libreria")](indepth-images/ref03.png#lightbox)
 5. Nel **controllo attributo**, selezionare il nome del **Storyboard** appena creato: 
 
-    [ ![](indepth-images/ref04.png "Configurazione di riferimento")](indepth-images/ref04.png)
+    [![](indepth-images/ref04.png "Configurazione di riferimento")](indepth-images/ref04.png#lightbox)
 6. Controllo fare clic su un Widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo Segue per il **riferimento Storyboard** appena creato.  Dal menu di scelta rapida selezionare **Mostra** per completare la Segue: 
 
-    [ ![](indepth-images/ref06.png "L'impostazione del tipo Segue")](indepth-images/ref06.png) 
+    [![](indepth-images/ref06.png "L'impostazione del tipo Segue")](indepth-images/ref06.png#lightbox) 
 8. Salvare le modifiche allo Storyboard.
 9. Tornare a Visual Studio per Mac sincronizzare le modifiche.
 
@@ -300,20 +300,20 @@ Per aggiungere un riferimento a una scena specifica uno Storyboard esterno (e no
 1. Nel **Esplora**, fare doppio clic sullo Storyboard esterno per aprirlo e modificarlo in Generatore del Xcode di interfaccia.
 2. Aggiungere una nuova scena e progettare il layout in modo analogo: 
 
-    [ ![](indepth-images/ref07.png "Progettare il layout in Xcode")](indepth-images/ref07.png)
+    [![](indepth-images/ref07.png "Progettare il layout in Xcode")](indepth-images/ref07.png#lightbox)
 3. Nel **controllo di identità**, immettere un **ID Storyboard** per finestra Controller della scena nuova: 
 
-    [ ![](indepth-images/ref08.png "Impostazione dell'ID di Storyboard")](indepth-images/ref08.png)
+    [![](indepth-images/ref08.png "Impostazione dell'ID di Storyboard")](indepth-images/ref08.png#lightbox)
 3. Aprire lo Storyboard che si sta per essere aggiunta del riferimento a nel generatore di interfaccia.
 4. Trascinare un **Storyboard riferimento** dal **oggetto libreria** nell'area di progettazione: 
 
-    [ ![](indepth-images/ref03.png "Selezione di un riferimento di Storyboard dalla libreria")](indepth-images/ref03.png)
+    [![](indepth-images/ref03.png "Selezione di un riferimento di Storyboard dalla libreria")](indepth-images/ref03.png#lightbox)
 5. Nel **controllo di identità**, selezionare il nome del **Storyboard** e **ID riferimento** (Storyboard ID) della scena appena creato: 
 
-    [ ![](indepth-images/ref09.png "Impostazione dell'ID di riferimento")](indepth-images/ref09.png)
+    [![](indepth-images/ref09.png "Impostazione dell'ID di riferimento")](indepth-images/ref09.png#lightbox)
 6. Controllo fare clic su un Widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo Segue per il **riferimento Storyboard** appena creato. Dal menu di scelta rapida selezionare **Mostra** per completare la Segue: 
 
-    [ ![](indepth-images/ref06.png "L'impostazione del tipo Segue")](indepth-images/ref06.png) 
+    [![](indepth-images/ref06.png "L'impostazione del tipo Segue")](indepth-images/ref06.png#lightbox) 
 8. Salvare le modifiche allo Storyboard.
 9. Tornare a Visual Studio per Mac sincronizzare le modifiche.
 
@@ -328,19 +328,19 @@ Per aggiungere un riferimento a una scena specifica lo stesso Storyboard, esegui
 1. Nel **Esplora**, fare doppio clic sullo Storyboard per aprirlo e modificarlo.
 2. Aggiungere una nuova scena e progettare il layout in modo analogo: 
 
-    [ ![](indepth-images/ref11.png "Modifica lo storyboard in Xcode")](indepth-images/ref11.png)
+    [![](indepth-images/ref11.png "Modifica lo storyboard in Xcode")](indepth-images/ref11.png#lightbox)
 3. Nel **controllo di identità**, immettere un **ID Storyboard** per finestra Controller della scena nuova: 
 
-    [ ![](indepth-images/ref12.png "Impostazione dell'ID di Storyboard")](indepth-images/ref12.png)
+    [![](indepth-images/ref12.png "Impostazione dell'ID di Storyboard")](indepth-images/ref12.png#lightbox)
 3. Trascinare un **Storyboard riferimento** dal **della casella degli strumenti** nell'area di progettazione: 
 
-    [ ![](indepth-images/ref03.png "Selezione di un riferimento di Storyboard dalla libreria")](indepth-images/ref03.png)
+    [![](indepth-images/ref03.png "Selezione di un riferimento di Storyboard dalla libreria")](indepth-images/ref03.png#lightbox)
 5. In **controllo attributo**selezionare **ID riferimento** (Storyboard ID) della scena appena creato: 
 
-    [ ![](indepth-images/ref13.png "Impostazione dell'ID di riferimento")](indepth-images/ref13.png)
+    [![](indepth-images/ref13.png "Impostazione dell'ID di riferimento")](indepth-images/ref13.png#lightbox)
 6. Controllo fare clic su un Widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo Segue per il **riferimento Storyboard** appena creato. Dal menu di scelta rapida selezionare **Mostra** per completare la Segue: 
 
-    [ ![](indepth-images/ref06.png "Selezione del tipo Segue")](indepth-images/ref06.png) 
+    [![](indepth-images/ref06.png "Selezione del tipo Segue")](indepth-images/ref06.png#lightbox) 
 8. Salvare le modifiche allo Storyboard.
 9. Tornare a Visual Studio per Mac sincronizzare le modifiche.
 
@@ -359,5 +359,5 @@ Il codice SourceWriter include tutti i commenti e, dove possibile, sono stati in
 - [MacStoryboard (esempio)](https://developer.xamarin.com/samples/mac/MacStoryboard/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Utilizzo di Windows](~/mac/user-interface/window.md)
-- [Linee guida sull'interfaccia umane di OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introduzione a Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 9579acc6c070bf692b0db1bd444a31c9ea4aa7ca
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 47f90af1ed68e6c3aea5710b7181b4787fc0895c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="architecture"></a>Architettura
 
@@ -22,15 +22,14 @@ Questa esecuzione ambiente viene eseguito side-by-side con la macchina virtuale 
 
 La maggior parte delle strutture di sistema come Audio, immagini, OpenGL e telefonia in Android, non disponibili direttamente alle applicazioni native, sono visibili solo tramite le API di Java Runtime Android che si trovano in uno del [Java](https://developer.xamarin.com/api/namespace/Java.Lang/). * spazi dei nomi o [Android](https://developer.xamarin.com/api/namespace/Android/). * spazi dei nomi. L'architettura è quasi simile al seguente:
 
-[![Diagramma di Mono ed elementi grafici di sopra del kernel e sotto .NET/Java + associazioni](architecture-images/architecture1.png)](architecture-images/architecture1.png)
+[![Diagramma di Mono ed elementi grafici di sopra del kernel e sotto .NET/Java + associazioni](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
 
 Gli sviluppatori di xamarin accedere le varie funzionalità nel sistema operativo chiama le API .NET che sappiano (per l'accesso di basso livello) o utilizzando le classi esposte negli spazi dei nomi Android che fornisce un ponte per le API Java che sono esposte da il Runtime di Android.
 
 Per ulteriori informazioni sulla modalità di comunicazione con le classi di Runtime Android le classi per Android, vedere il [progettazione API](~/android/internals/api-design.md) documento.
 
-<a name="Application_Packages" />
 
-## <a name="application-packages"></a>Pacchetti di applicazioni
+## <a name="application-packages"></a>Pacchetti dell'applicazione
 
 Pacchetti di applicazioni Android sono contenitori ZIP con un *apk* estensione di file. Pacchetti di applicazioni xamarin avere la stessa struttura e layout come pacchetti Android normale, con le seguenti aggiunte:
 
@@ -44,7 +43,6 @@ Pacchetti di applicazioni Android sono contenitori ZIP con un *apk* estensione d
 Le applicazioni di xamarin contengono anche *Android Callable Wrapper* per consentire di Android per effettuare chiamate nel codice gestito.
 
 
-<a name="Android_Callable_Wrappers" />
 
 ## <a name="android-callable-wrappers"></a>Android Callable Wrapper
 
@@ -67,7 +65,6 @@ I riferimenti globali possono essere liberati in modo esplicito chiamando [Java.
 Attenzione deve far funzionare durante l'eliminazione di Callable Wrapper gestiti, se l'istanza può essere inavvertitamente condivisa tra thread, come l'istanza di eliminazione avrà un impatto riferimenti da qualsiasi altro thread. Per la massima sicurezza, solo `Dispose()` di istanze che sono state allocate tramite `new` *o* dai metodi che si *conoscere* sempre allocare nuove istanze e le istanze non memorizzati nella cache che è possibile causare istanza accidentale di condivisione tra thread.
 
 
-<a name="Managed_Callable_Wrapper_Subclasses" />
 
 ## <a name="managed-callable-wrapper-subclasses"></a>Le sottoclassi Callable Wrapper gestiti
 
@@ -76,7 +73,6 @@ Wrapper richiamabili gestito sottoclassi sono tutta la logica specifica dell'app
 Come gestiti callable wrapper, gestito sottoclassi callable wrapper inoltre contengano un riferimento globale, accessibile tramite il [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/) proprietà. Come con callable wrapper gestito, i riferimenti globali possono essere liberati in modo esplicito chiamando [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/).
 A differenza di callable wrapper gestito, *molta attenzione* deve essere eseguita prima dell'eliminazione di tali istanze, come *Dispose*sta eseguendo un'operazione dell'istanza interromperà il mapping tra l'istanza di Java (un'istanza di un Android Callable Wrapper) e l'istanza gestita.
 
-<a name="Java_Activation" />
 
 ### <a name="java-activation"></a>Attivazione di Java
 
@@ -182,7 +178,6 @@ I/mono-stdout( 2993): [Managed: Value=]
 Solo *Dispose* di gestiti sottoclassi callable wrapper, quando si è certi che l'oggetto Java non verrà più utilizzato, o la sottoclasse non contiene alcun dato di istanza e un *(IntPtr, JniHandleOwnership)* costruttore è stato specificato.
 
 
-<a name="Application_Startup" />
 
 ## <a name="application-startup"></a>Avvio dell'applicazione
 

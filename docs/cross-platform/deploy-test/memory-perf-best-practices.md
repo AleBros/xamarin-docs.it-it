@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 56d868f64de009d01930ec34ee2cb436276006ef
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 287f564ba74050aa8a06e5a582ae8db6657e440e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cross-platform-performance"></a>Prestazioni multipiattaforma
 
@@ -20,23 +20,6 @@ _Sono disponibili molte tecniche per migliorare le prestazioni delle applicazion
 
 Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, assicurarsi che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
 
-Esistono diverse tecniche per migliorare le prestazioni, e le prestazioni percepite, delle applicazioni compilate con la piattaforma Xamarin e comprendono:
-
-- [Uso del Profiler](#profiler)
-- [Rilascio delle risorse IDisposable](#idisposable)
-- [Annullamento delle sottoscrizioni agli eventi](#events)
-- [Esclusione dell'immortalità degli oggetti tramite riferimenti deboli](#weakreferences)
-- [Ritardo del costo della creazione di oggetti](#lazy)
-- [Implementazione di operazioni asincrone](#async)
-- [Uso del Garbage Collector SGen](#sgen)
-- [Riduzione delle dimensioni dell'applicazione](#linker)
-- [Ottimizzazione delle risorse immagine](#optimizeimages)
-- [Riduzione del periodo di attivazione dell'applicazione](#activationperiod)
-- [Riduzione della comunicazione con i servizi Web](#webservicecommunication)
-
-Questo [video di Xamarin University](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps) contiene anche suggerimenti utili per la progettazione di app Xamarin.
-
-[ ![](memory-perf-best-practices-images/clancey-sml.png "Video di Xamarin University gratuito su come evitare problemi comuni")](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)
 
 <a name="profiler" />
 

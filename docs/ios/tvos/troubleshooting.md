@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 278b9e782073a26dc04bac9418613ea4c09db445
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7b6d0901f8b01668626fc3b6a70a091e99e2287e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="troubleshooting"></a>Risoluzione dei problemi
 
@@ -46,7 +46,7 @@ Per risolvere questo problema, effettuare le operazioni seguenti:
 1. In Visual Studio per Mac, fare clic sul File di progetto Xamarin.tvOS nel **Esplora** e selezionare **opzioni**.
 2. Selezionare **tvOS compilazione** e verificare che trovino nel **versione** configurazione: 
 
-    [ ![](troubleshooting-images/ts01.png "Selezionare le opzioni di compilazione tvOS")](troubleshooting-images/ts01.png)
+    [![](troubleshooting-images/ts01.png "Selezionare le opzioni di compilazione tvOS")](troubleshooting-images/ts01.png#lightbox)
 3. Aggiungere `--bitcode=asmonly` per il **mtouch ulteriori argomenti** campo e fare clic su di **OK** pulsante.
 4. Ricompilare l'app nel **versione** configurazione.
 
@@ -124,7 +124,7 @@ Ricompilare l'app per il rilascio e inviare di nuovo a iTunes Connect.
 
 Se si utilizza una libreria di terze parti 3rd (ad esempio MonoGame) e la compilazione di rilascio non riuscito con una lunga serie di messaggi di errore che terminano con `Task "MTouch" execution -- FAILED`, provare ad aggiungere `-gcc_flags="-framework OpenAL"` per il **tocco ulteriori argomenti**:
 
-[ ![](troubleshooting-images/mtouch01.png "Esecuzione dell'attività MTouch")](troubleshooting-images/mtouch01.png)
+[![](troubleshooting-images/mtouch01.png "Esecuzione dell'attività MTouch")](troubleshooting-images/mtouch01.png#lightbox)
 
 È necessario includere anche `--bitcode=asmonly` nel **tocco ulteriori argomenti**, configurato le opzioni del linker per **collegamento tutti** ed eseguire una compilazione pulita.
 

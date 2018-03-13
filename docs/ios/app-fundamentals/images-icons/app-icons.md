@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/2017
-ms.openlocfilehash: 6de57e9523ff336c2e06e39903280db9c9ab95fa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: df9059b0e64b4a05b554f25b5f9d7f6031406633
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-icons"></a>Icone applicazioni
 
@@ -32,13 +32,13 @@ Nello stesso modo che un'app xamarin. IOS è possibile utilizzare gli asset dell
 
 - **Icona dell'applicazione** -tutte le applicazioni iOS è necessario definire un'icona dell'applicazione. Questa è l'icona che l'utente verrà toccare dalla schermata iniziale di iOS per avviare l'app. Inoltre, questa icona viene utilizzata da Game Center, se applicabile. Esempio: 
 
-    [ ![](app-icons-images/000.png "Icona dell'applicazione")](app-icons-images/000-full.png)
+    [![](app-icons-images/000.png "Icona dell'applicazione")](app-icons-images/000-full.png#lightbox)
 - **Icona riflettore** : ogni volta che l'utente immette il nome di un'app in una ricerca Spotlight, questa icona viene visualizzata. Esempio: 
 
-    [ ![](app-icons-images/000a.png "Icona Spotlight")](app-icons-images/000a-full.png)
+    [![](app-icons-images/000a.png "Icona Spotlight")](app-icons-images/000a-full.png#lightbox)
 - **Icona impostazioni** : se l'utente immette il **impostazioni** app sul proprio dispositivo iOS, questa icona verrà visualizzata alla fine del **impostazioni** elenco per l'app. Esempio: 
 
-    [ ![](app-icons-images/000b.png "Icona impostazioni")](app-icons-images/000b-full.png)
+    [![](app-icons-images/000b.png "Icona impostazioni")](app-icons-images/000b-full.png#lightbox)
 
 La seguente immagine asset risoluzioni e dimensioni saranno necessarie per supportare tutti i tipi di icona richiesto da un'app xamarin destinazione iOS 5 tramite iOS 9 (o versione successiva):
 

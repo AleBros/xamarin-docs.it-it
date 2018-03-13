@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 2088ae055fb18b3b00712f063d2178f759021088
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9710e322460058902d89ec1a57c374b93beb82fb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="dynamic-styles"></a>Stili dinamici
 
@@ -81,8 +81,8 @@ public partial class DynamicStylesPage : ContentPage
 
 Quando il `OnButtonClicked` esecuzione del gestore eventi, `searchBarStyle` passerà tra `blueSearchBarStyle` e `greenSearchBarStyle`. Ciò comporta l'aspetto illustrato nelle schermate seguenti:
 
-[![](dynamic-images/dynamic-style-blue.png "Blu stile dinamico esempio")](dynamic-images/dynamic-style-blue-large.png "blu stile dinamico esempio")
-[![](dynamic-images/dynamic-style-green.png "verde esempio stile dinamico") ] (dynamic-images/dynamic-style-green-large.png "Verde esempio stile dinamico")
+[![](dynamic-images/dynamic-style-blue.png "Blu stile dinamico esempio")](dynamic-images/dynamic-style-blue-large.png#lightbox "blu stile dinamico esempio")
+[![](dynamic-images/dynamic-style-green.png "verde esempio stile dinamico") ] (dynamic-images/dynamic-style-green-large.png#lightbox "Verde esempio stile dinamico")
 
 L'esempio di codice seguente illustra la pagina di equivalente in c#:
 
@@ -162,8 +162,8 @@ Il [ `SearchBar` ](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBa
 
 Nel file code-behind, il costruttore crea un [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) voce con la chiave `searchBarStyle`secondo l'esempio precedente illustrato stili dinamici. Quando il `OnButtonClicked` esecuzione del gestore eventi, `searchBarStyle` passerà tra `blueSearchBarStyle` e `greenSearchBarStyle`. Ciò comporta l'aspetto illustrato nelle schermate seguenti:
 
-[![](dynamic-images/dynamic-style-inheritance-blue.png "Blu stile dinamico ereditarietà esempio")](dynamic-images/dynamic-style-inheritance-blue-large.png "blu stile dinamico ereditarietà esempio")
-[![](dynamic-images/dynamic-style-inheritance-green.png "verde stile dinamico Esempio di ereditarietà")](dynamic-images/dynamic-style-inheritance-green-large.png "verde stile dinamico di esempio di ereditarietà")
+[![](dynamic-images/dynamic-style-inheritance-blue.png "Blu stile dinamico ereditarietà esempio")](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox "blu stile dinamico ereditarietà esempio")
+[![](dynamic-images/dynamic-style-inheritance-green.png "verde stile dinamico Esempio di ereditarietà")](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox "verde stile dinamico di esempio di ereditarietà")
 
 L'esempio di codice seguente illustra la pagina di equivalente in c#:
 

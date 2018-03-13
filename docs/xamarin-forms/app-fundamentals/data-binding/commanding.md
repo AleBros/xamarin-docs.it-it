@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 0bc039385a6b2077c3b5fa5114b35b586a14a150
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b75bc7e4ccf53e82ff107c867c5ba01813960ea5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="the-command-interface"></a>L'interfaccia di comando
 
@@ -279,7 +279,7 @@ Ecco come funziona: l'utente preme prima il **New** pulsante. Ciò consente al f
 
 La schermata di iOS a sinistra viene mostrato il layout prima dell'immissione di una data valida. Di Android e UWP schermate Mostra il **Invia** pulsante abilitato dopo aver impostata un'età:
 
-[![Voce di persona](commanding-images/personentry-small.png "voce persona")](commanding-images/personentry-large.png "voce contatto")
+[![Voce di persona](commanding-images/personentry-small.png "voce persona")](commanding-images/personentry-large.png#lightbox "voce contatto")
 
 Il programma non dispone di una qualsiasi struttura per la modifica delle voci esistenti e le voci non vengono salvate quando si esce dalla pagina.
 
@@ -531,7 +531,7 @@ I 11 pulsanti per 10 cifre e la virgola decimale condividono un'associazione a `
 
 Ecco il programma in azione:
 
-[![Tastiera decimale](commanding-images/decimalkeyboard-small.png "tastiera decimale")](commanding-images/decimalkeyboard-large.png "tastiera decimale")
+[![Tastiera decimale](commanding-images/decimalkeyboard-small.png "tastiera decimale")](commanding-images/decimalkeyboard-large.png#lightbox "tastiera decimale")
 
 Si noti che il pulsante per il separatore decimale in tutte e tre le schermate è disabilitato perché il numero immesso contiene già un separatore decimale. 
 

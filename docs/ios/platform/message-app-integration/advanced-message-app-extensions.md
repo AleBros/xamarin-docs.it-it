@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7e6621dc580e478873ce2db7139b04284bee355c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fcfd1fd2ec9271bb5e8d9e09b43b7dc4cf3b3f12
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="advanced-message-app-extensions"></a>Estensioni App messaggio avanzate
 
@@ -50,11 +50,11 @@ Estensioni per App i messaggi sono supportate solo in iOS 10, tuttavia, il conte
 
 I messaggi interattivi presentano una bolla di messaggio personalizzata e vengono forniti da un'estensione di App di messaggio. Essi consentono all'utente di creare messaggio contenuto interattivo, inserirla nel campo di Input del messaggio e inviarlo.
 
-[ ![](advanced-message-app-extensions-images/interactive01.png "Creazione di contenuto del messaggio interattivo")](advanced-message-app-extensions-images/interactive01.png)
+[![](advanced-message-app-extensions-images/interactive01.png "Creazione di contenuto del messaggio interattivo")](advanced-message-app-extensions-images/interactive01.png#lightbox)
 
 Utente ricevente può rispondere a un messaggio interattiva se si tocca la bolla messaggio nella cronologia di messaggio per caricare l'estensione di App di messaggio che li ha creati. L'estensione verrà avviato a schermo intero e consentire all'utente di creare una risposta e inviarlo all'utente di origine.
 
-[ ![](advanced-message-app-extensions-images/interactive02.png "L'estensione avviata a schermo intero")](advanced-message-app-extensions-images/interactive02.png)
+[![](advanced-message-app-extensions-images/interactive02.png "L'estensione avviata a schermo intero")](advanced-message-app-extensions-images/interactive02.png#lightbox)
 
 
 Verranno trattati i seguenti argomenti in dettaglio di seguito:
@@ -68,7 +68,7 @@ Verranno trattati i seguenti argomenti in dettaglio di seguito:
 
 Quando viene richiamato dall'utente, verrà visualizzata un messaggio dell'estensione App nella parte inferiore della cronologia del messaggio nella modalità di visualizzazione compatta:
 
-[ ![](advanced-message-app-extensions-images/interactive03.png "Panoramica dell'API messaggi")](advanced-message-app-extensions-images/interactive03.png)
+[![](advanced-message-app-extensions-images/interactive03.png "Panoramica dell'API messaggi")](advanced-message-app-extensions-images/interactive03.png#lightbox)
 
 1. Il `MSMessageAppViewController` dell'oggetto nell'estensione App messaggio è la classe principale che viene chiamata quando viene aperta la visualizzazione dell'estensione per l'utente.
 2. La conversazione viene presentata all'utente come un `MSConversation` istanza dell'oggetto.
@@ -80,7 +80,7 @@ Quando viene richiamato dall'utente, verrà visualizzata un messaggio dell'esten
 
 Esaminiamo il processo di un messaggio dell'estensione dell'App diventa attiva:
 
-[ ![](advanced-message-app-extensions-images/interactive04.png "Il processo di un messaggio dell'estensione dell'App diventa attiva")](advanced-message-app-extensions-images/interactive04.png)
+[![](advanced-message-app-extensions-images/interactive04.png "Il processo di un messaggio dell'estensione dell'App diventa attiva")](advanced-message-app-extensions-images/interactive04.png#lightbox)
 
 1. All'avvio di un'estensione (ad esempio dal cassetto della App), l'app messaggio avvierà un processo.
 2. Il `DidBecomeActive` metodo viene chiamato e passato un `MSConversation` che rappresenta la conversazione a cui il messaggio dell'estensione App è in esecuzione in.
@@ -88,7 +88,7 @@ Esaminiamo il processo di un messaggio dell'estensione dell'App diventa attiva:
 
 Successivamente, esaminiamo il processo di un messaggio dell'estensione dell'App diventando disattivato:
 
-[ ![](advanced-message-app-extensions-images/interactive05.png "Il processo di un messaggio dell'estensione dell'App diventando disattivato")](advanced-message-app-extensions-images/interactive05.png)
+[![](advanced-message-app-extensions-images/interactive05.png "Il processo di un messaggio dell'estensione dell'App diventando disattivato")](advanced-message-app-extensions-images/interactive05.png#lightbox)
 
 1. Quando viene disattivata l'estensione di App di messaggio, il `ViewWillDisappear` metodo verrà chiamato prima di tutto.
 2. Il `ViewDidDisappear` metodo verrà chiamato.
@@ -128,7 +128,7 @@ Se l'utente fa clic su una bolla messaggio nella conversazione in macOS, Mac ten
 
 Il `AccessibilityLabel` proprietà è utilizzata dalle utilità per la trascrizione della conversazione all'utente. Il `Layout` proprietà specifica come il messaggio verrà visualizzato, attualmente solo il `MSMessageTemplateLayout` è supportato e simile al seguente:
 
-[ ![](advanced-message-app-extensions-images/interactive06.png "Il modello MSMessageTemplateLayout")](advanced-message-app-extensions-images/interactive06.png)
+[![](advanced-message-app-extensions-images/interactive06.png "Il modello MSMessageTemplateLayout")](advanced-message-app-extensions-images/interactive06.png#lightbox)
 
 Il `Image` proprietà del `MSMessageTemplateLayout` fornisce il contenuto del corpo principale del MessageBubble sullo schermo. Il `MediaFileUrl` proprietà inoltre fornisce il contenuto del corpo del messaggio bolla, ma consente per il contenuto che non è supportato da `UIImage` (ad esempio un file video che verrebbe ciclo in background). Se entrambi i `Image` e `MediaFileUrl` vengono fornite proprietà, il `Image` proprietà avrà la precedenza. Il `MediaFileUrl` supporta PNG, JPEG, GIF e video (in qualsiasi formato che possa essere riprodotto dal framework di Media Player) formati di file multimediali.
 
@@ -140,7 +140,7 @@ Il `ImageTitle` e `ImageSubtitle` proprietà forniscono una descrizione per il s
 
 Il `Caption`, `SubCaption`, `TrailingCaption` e `TrailingSubcaption` proprietà ulteriormente descrivono l'immagine e verrà eseguito il rendering in una sezione sotto l'immagine. Tutte queste proprietà per l'impostazione `null` creerà una bolla messaggio senza Area della didascalia:
 
-[ ![](advanced-message-app-extensions-images/interactive07.png "Una bolla messaggio senza Area della didascalia")](advanced-message-app-extensions-images/interactive07.png)
+[![](advanced-message-app-extensions-images/interactive07.png "Una bolla messaggio senza Area della didascalia")](advanced-message-app-extensions-images/interactive07.png#lightbox)
 
 L'ultima operazione da notare è che l'app messaggi verrà disegnato sull'icona dell'estensione App messaggio nell'angolo superiore sinistro della bolla messaggio.
 
@@ -181,7 +181,7 @@ Una volta il nuovo contenuto del campo di Input, l'utente è in grado di inviare
 
 Estensione dell'App un messaggio può essere visualizzata in una delle due modalità di visualizzazione diverse:
 
-[ ![](advanced-message-app-extensions-images/interactive08.png "Estensione dell'App un messaggio visualizzato in due modalità di visualizzazione diverse: Compact & espansa")](advanced-message-app-extensions-images/interactive08.png)
+[![](advanced-message-app-extensions-images/interactive08.png "Estensione dell'App un messaggio visualizzato in due modalità di visualizzazione diverse: Compact & espansa")](advanced-message-app-extensions-images/interactive08.png#lightbox)
 
 - **Compact** -questa è la modalità predefinita in cui il messaggio dell'estensione App occupa il 25% della visualizzazione dei messaggi. In modalità ridotta, l'applicazione non ha accesso alla tastiera, lo scorrimento orizzontale o scorrere i riconoscitori di movimento. L'app abbiano accesso al campo di Input e le chiamate a `InsertMessage` verrà immediatamente visualizzata all'utente non esiste.
 - **Espanso** -l'estensione dell'App messaggio riempie l'intera vista di messaggio. Non ha accesso al campo di Input, ma dispone dell'accesso alla tastiera, lo scorrimento orizzontale e scorrere i riconoscitori di movimento.
@@ -384,7 +384,7 @@ Facoltativamente, l'app sarebbe possibile utilizzare il `WillTransition` metodo 
 
 Esistono due casi che dovrà gestire quando si risponde a un messaggio di un messaggio dell'estensione App:
 
-[ ![](advanced-message-app-extensions-images/interactive09.png "L'estensione dell'App messaggio nelle modalità inattiva e attivo")](advanced-message-app-extensions-images/interactive09.png)
+[![](advanced-message-app-extensions-images/interactive09.png "L'estensione dell'App messaggio nelle modalità inattiva e attivo")](advanced-message-app-extensions-images/interactive09.png#lightbox)
 
 - **L'estensione è inattivo** -è presente uno di bolle di messaggio dell'estensione App messaggio nella trascrizione messaggio che l'utente può toccare per attivare le estensioni e continuare la conversazione interattiva.
 - **L'estensione è attivo** -l'utente può toccare a bolle di messaggio dell'estensione App messaggio nella trascrizione messaggio per attivare la modalità di visualizzazione espansa e continuare il processo interattivo da in cui sono stati interrotti.
@@ -393,7 +393,7 @@ Esistono due casi che dovrà gestire quando si risponde a un messaggio di un mes
 
 Quando una bolla di messaggio vengono scelti dall'utente nella trascrizione del messaggio e l'estensione dell'App messaggio non è attivo, verrà eseguito il processo seguente:
 
-[ ![](advanced-message-app-extensions-images/interactive10.png "La gestione di una bolla messaggio inattivo")](advanced-message-app-extensions-images/interactive10.png)
+[![](advanced-message-app-extensions-images/interactive10.png "La gestione di una bolla messaggio inattivo")](advanced-message-app-extensions-images/interactive10.png#lightbox)
 
 1. L'utente tocca a bolle di messaggio dell'estensione.
 2. Quando viene avviata un'estensione, l'app messaggio avvierà un processo.
@@ -406,7 +406,7 @@ Una volta completato il processo, l'estensione dell'App messaggio verrà visuali
 
 Quando una bolla di messaggio vengono scelti dall'utente nella trascrizione del messaggio e l'estensione dell'App messaggio sia attivo, verrà eseguito il processo seguente:
 
-[ ![](advanced-message-app-extensions-images/interactive11.png "La gestione di una bolla messaggio active")](advanced-message-app-extensions-images/interactive11.png)
+[![](advanced-message-app-extensions-images/interactive11.png "La gestione di una bolla messaggio active")](advanced-message-app-extensions-images/interactive11.png#lightbox)
 
 1. L'utente tocca a bolle di messaggio dell'estensione.
 2. Poiché il messaggio dell'estensione App è già attivo, il `WillTransition` metodo il `MSMessagesAppViewController` viene chiamato per gestire il passaggio da .NET Compact Framework per la modalità di visualizzazione espansa.
@@ -457,11 +457,11 @@ Il messaggio selezionato deve essere visualizzato nell'interfaccia utente dell'e
 
 Durante l'invio di diversi passaggi di una conversazione interattiva tra l'utente due nella conversazione, è possibile avviare le bolle messaggio parzialmente completato di riempire la trascrizione del messaggio:
 
-[ ![](advanced-message-app-extensions-images/interactive12.png "Le bolle messaggio completata parzialmente può occupare la trascrizione del messaggio")](advanced-message-app-extensions-images/interactive12.png)
+[![](advanced-message-app-extensions-images/interactive12.png "Le bolle messaggio completata parzialmente può occupare la trascrizione del messaggio")](advanced-message-app-extensions-images/interactive12.png#lightbox)
 
 Al contrario, il messaggio dell'estensione App deve comprimere le bolle messaggio precedente in un breve commento nella trascrizione messaggio:
 
-[ ![](advanced-message-app-extensions-images/interactive13.png "Comprimere il precedente messaggio passa nella trascrizione messaggio")](advanced-message-app-extensions-images/interactive13.png)
+[![](advanced-message-app-extensions-images/interactive13.png "Comprimere il precedente messaggio passa nella trascrizione messaggio")](advanced-message-app-extensions-images/interactive13.png#lightbox)
 
 Questa operazione viene gestita utilizzando un `MSSession` per comprimere tutti i passaggi esistenti. Pertanto la `DidSelectMessage` metodo la `MSMessagesAppViewController` classe potrebbe essere modificata per essere simile al seguente:
 
@@ -516,7 +516,7 @@ Estensione dell'App un messaggio può essere utilizzata mentre gli utenti coinvo
 
 Esaminare l'interazione seguente in una conversazione di gruppo con tre utenti:
 
-[ ![](advanced-message-app-extensions-images/interactive14.png "Interazione di una conversazione di gruppo con tre utenti")](advanced-message-app-extensions-images/interactive14.png)
+[![](advanced-message-app-extensions-images/interactive14.png "Interazione di una conversazione di gruppo con tre utenti")](advanced-message-app-extensions-images/interactive14.png#lightbox)
 
 1. 1 utente invia un messaggio interattiva di gruppo in cui viene chiesto utente 2 e 3 utente di scegliere un cliente rimane arriva al massimo.
 2. L'utente 2 sceglie tomatoes.
@@ -531,7 +531,7 @@ Quando l'utente invia un messaggio, un token di sessione viene generato e inseri
 
 Per discutere l'identificatore del mittente di un messaggio di accesso, eseguire l'esempio di una conversazione di gruppo specificata in precedenza:
 
-[ ![](advanced-message-app-extensions-images/interactive15.png "L'invio di identificatori di conversazione di gruppo")](advanced-message-app-extensions-images/interactive15.png)
+[![](advanced-message-app-extensions-images/interactive15.png "L'invio di identificatori di conversazione di gruppo")](advanced-message-app-extensions-images/interactive15.png#lightbox)
 
 1. Nuovamente, 1 utente invia un messaggio interattiva di gruppo in cui viene chiesto utente 2 e 3 utente di scegliere un cliente rimane arriva al massimo.
 2. Utente 3 sceglie pickles.

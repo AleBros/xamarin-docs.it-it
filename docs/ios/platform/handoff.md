@@ -7,11 +7,11 @@ ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0b3471f607bbde6560af597b6b901e6fbd1ec0b0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 25220f37433037b55f13c4de5a07c0c09173a269
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="handoff"></a>Handoff
 
@@ -19,7 +19,7 @@ _In questo articolo viene illustrato l'uso di passaggio di consegne in un'app xa
 
 Apple ha introdotto il passaggio di consegne in iOS 8 e OS X Yosemite (10.10) per fornire un meccanismo per l'utente da trasferire avviata in uno dei propri dispositivi, attività comune in un altro dispositivo che esegue la stessa applicazione o un'altra applicazione che supporta la stessa attività.
 
-[ ![](handoff-images/handoff02.png "Un esempio di esecuzione di un'operazione di passaggio di consegne")](handoff-images/handoff02.png)
+[![](handoff-images/handoff02.png "Un esempio di esecuzione di un'operazione di passaggio di consegne")](handoff-images/handoff02.png#lightbox)
 
 In questo articolo verrà un rapido controllo di attivazione di attività in un'app xamarin di condivisione e riguardano il framework Handoff in dettaglio:
 
@@ -45,7 +45,7 @@ Passaggio di consegne passa il livello minimo di informazioni per definire l'att
 
 Sul dispositivo di ricezione, l'utente riceverà una notifica che un'attività è disponibile per la continuazione. Se l'utente sceglie di continuare l'attività del nuovo dispositivo, viene avviata l'app specificato (se non è già in esecuzione) e il payload dal `NSUserActivity` consente di riavviare l'attività.
 
-[ ![](handoff-images/handoffinteractions.png "Una panoramica delle attività di continuazione utente")](handoff-images/handoffinteractions.png)
+[![](handoff-images/handoffinteractions.png "Una panoramica delle attività di continuazione utente")](handoff-images/handoffinteractions.png#lightbox)
 
 Solo le app che condividono lo stesso sviluppatore ID Team e rispondano a un determinato _tipo di attività_ idonei per la continuazione. Un'applicazione definisce i tipi di attività che supporta sotto il `NSUserActivityTypes` la chiave di relativo **Info. plist** file. Pertanto, un dispositivo continuo sceglie l'app per eseguire la continuazione in base all'ID Team, il tipo di attività e, facoltativamente, il _titolo attività_.
 
@@ -114,21 +114,21 @@ Seguire questa procedura:
 3. Se non già stato fatto, fare clic su **identificatori** e creare un ID per l'applicazione (ad esempio `com.company.appname`), in caso contrario, modificare l'ID esistente.
 4. Verificare che il **iCloud** servizio è stato verificato per l'ID specificato: 
 
-    [ ![](handoff-images/provision01.png "Abilitare il servizio iCloud per l'ID specificato")](handoff-images/provision01.png)
+    [![](handoff-images/provision01.png "Abilitare il servizio iCloud per l'ID specificato")](handoff-images/provision01.png#lightbox)
 5. Salvare le modifiche.
 4. Fare clic su **i profili di Provisioning** > **sviluppo** e creare un nuovo profilo di provisioning per l'utente di sviluppo di app: 
 
-    [ ![](handoff-images/provision02.png "Creare un nuovo profilo di provisioning per l'app di sviluppo")](handoff-images/provision02.png)
+    [![](handoff-images/provision02.png "Creare un nuovo profilo di provisioning per l'app di sviluppo")](handoff-images/provision02.png#lightbox)
 5. Scaricare e installare il nuovo profilo di provisioning o utilizzare Xcode per scaricare e installare il profilo.
 6. Modificare le opzioni di progetto xamarin e assicurarsi che si sta utilizzando il profilo di provisioning appena creato: 
 
-    [ ![](handoff-images/provision03.png "Selezionare il profilo di provisioning appena creato")](handoff-images/provision03.png)
+    [![](handoff-images/provision03.png "Selezionare il profilo di provisioning appena creato")](handoff-images/provision03.png#lightbox)
 7. Successivamente, modificare il **Info. plist** e assicurarsi che si sta utilizzando l'ID dell'App che è stato utilizzato per creare il profilo di provisioning: 
 
-    [ ![](handoff-images/provision04.png "Impostare l'ID App")](handoff-images/provision04.png)
+    [![](handoff-images/provision04.png "Impostare l'ID App")](handoff-images/provision04.png#lightbox)
 8. Scorrere verso il **modalità di Background** sezione e controllare gli elementi seguenti: 
 
-    [ ![](handoff-images/provision05.png "Abilitare la modalità di background obbligatorio")](handoff-images/provision05.png)
+    [![](handoff-images/provision05.png "Abilitare la modalità di background obbligatorio")](handoff-images/provision05.png#lightbox)
 9. Salvare le modifiche a tutti i file.
 
 Con queste impostazioni, l'applicazione è ora possibile accedere alle API Handoff Framework. Per informazioni dettagliate sul provisioning, vedere il nostro [Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) e [Provisioning dell'App](~/ios/get-started/installation/device-provisioning/index.md) Guide.
@@ -155,7 +155,7 @@ Ad esempio, occorre creare un'app di esempio denominata **MonkeyBrowser** ([scar
 
 Per creare gli identificatori di tipo attività necessarie per supportare questo comportamento, modificare il **Info. plist** file e passare il **origine** visualizzazione. Aggiungere un `NSUserActivityTypes` chiave e creare gli identificatori seguenti:
 
-[ ![](handoff-images/type01.png "Il NSUserActivityTypes chiave e gli identificatori necessari nell'editor plist")](handoff-images/type01.png)
+[![](handoff-images/type01.png "Il NSUserActivityTypes chiave e gli identificatori necessari nell'editor plist")](handoff-images/type01.png#lightbox)
 
 Abbiamo creato quattro nuove attività gli identificatori dei tipi, uno per ogni scheda nell'esempio **MonkeyBrowser** app. Quando si crea la propria App, sostituire il contenuto del `NSUserActivityTypes` matrice con gli identificatori di tipo di attività specifiche per le attività, l'app supporta.
 
@@ -610,15 +610,15 @@ Ad esempio dell'utilizzo Handoff in un'app xamarin. IOS, è stato incluso il [ *
 
 Scheda quando l'utente immette un nuovo URL e le scelte di **passare** pulsante, un nuovo `NSUserActivity` viene creata per tale scheda che contiene l'URL a cui l'utente è attualmente visualizzato:
 
-[ ![](handoff-images/handoff01.png "Applicazione di esempio Handoff")](handoff-images/handoff01.png)
+[![](handoff-images/handoff01.png "Applicazione di esempio Handoff")](handoff-images/handoff01.png#lightbox)
 
 Se un altro dispositivi dell'utente ha il **MonkeyBrowser** app installata, viene eseguito l'accesso a iCloud utilizzando lo stesso account utente, è nella stessa rete e in prossimità del dispositivo precedente, verranno visualizzate le attività il passaggio di consegne in home schermata (nell'angolo inferiore sinistro):
 
-[ ![](handoff-images/handoff02.png "L'attività Handoff visualizzata nella schermata iniziale nell'angolo inferiore sinistro")](handoff-images/handoff02.png)
+[![](handoff-images/handoff02.png "L'attività Handoff visualizzata nella schermata iniziale nell'angolo inferiore sinistro")](handoff-images/handoff02.png#lightbox)
 
 Se l'utente trascina verso l'alto nell'icona Handoff, verrà avviata l'app e l'attività dell'utente specificato nella `NSUserActivity` sulla nuova periferica verrà estesa:
 
-[ ![](handoff-images/handoff03.png "L'attività dell'utente ha continuato sulla nuova periferica")](handoff-images/handoff03.png)
+[![](handoff-images/handoff03.png "L'attività dell'utente ha continuato sulla nuova periferica")](handoff-images/handoff03.png#lightbox)
 
 Quando l'attività dell'utente è stata inviata correttamente a un altro dispositivo Apple, il dispositivo di invio `NSUserActivity` riceverà una chiamata al `UserActivityWasContinued` metodo relativo `NSUserActivityDelegate` per informarlo che l'attività dell'utente è stato trasferito a un altro dispositivo.
 

@@ -7,17 +7,17 @@ ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.openlocfilehash: c06dab9bf280a2543585d36147c7c3311f6445ad
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 90dc37612f36eb914c3aaa140200762945ac4516
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="android-designer"></a>Android Designer
 
 _In questo articolo riguarda le funzionalità della finestra di progettazione di xamarin. Illustra i concetti di base della finestra di progettazione che mostra come utilizzare la finestra di progettazione per il layout visivo widget e come modificare le proprietà. Viene inoltre illustrato come utilizzare la finestra di progettazione per operare con interfacce utente e le risorse in configurazioni diverse, ad esempio i temi, lingue e le configurazioni del dispositivo, nonché sulla progettazione per le visualizzazioni alternative come verticale e orizzontale._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -37,7 +37,6 @@ In questo articolo sondaggi molte funzionalità della finestra di progettazione 
 9.  Come utilizzare gli strumenti di progettazione di materiale per compilare App materiale progettazione conformi.
 
 
-<a name="Sections" />
 
 ## <a name="sections"></a>Sezioni
 
@@ -52,7 +51,6 @@ In questo articolo sondaggi molte funzionalità della finestra di progettazione 
  [Funzionalità di Material Design](~/android/user-interface/android-designer/material-design-features.md)
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 

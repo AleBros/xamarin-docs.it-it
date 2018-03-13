@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 8f9294c10f8d3287a2985ede9aadf84ce663c38a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0bc64d0b03aa4f80b19ea098904dc1e2155313f6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="mac-app-configuration"></a>Configurazione di app Mac
 
@@ -32,7 +32,7 @@ Per modificare le impostazioni di un'applicazione Xamarin.Mac, fare doppio clic 
 
 In questo modo verranno visualizzate le opzioni disponibili per l'app:
 
- [![Modifica del file Info.plist](app-configuration-images/config01.png "Modifica del file Info.plist")](app-configuration-images/config01-large.png)
+ [![Modifica del file Info.plist](app-configuration-images/config01.png "Modifica del file Info.plist")](app-configuration-images/config01-large.png#lightbox)
 
 Per eseguire le applicazioni Mac create con Xamarin.Mac sono necessari i requisiti di sistema seguenti:
 
@@ -43,7 +43,7 @@ Per eseguire le applicazioni Mac create con Xamarin.Mac sono necessari i requisi
 
 La sezione **Firma Mac** della finestra di dialogo **Opzioni progetto** consente allo sviluppatore di firmare un'app Xamarin.Mac per il test, il rilascio o il rilascio automatico tramite l'App Store Apple:
 
-[![Editor Firma Mac](app-configuration-images/config02.png "Finestra Firma Mac")](app-configuration-images/config02-large.png)
+[![Editor Firma Mac](app-configuration-images/config02.png "Finestra Firma Mac")](app-configuration-images/config02-large.png#lightbox)
 
 Da qui selezionare Identità, Profilo di provisioning e tutti i diritti personalizzati usati per firmare l'app quando viene compilata. Lo sviluppatore può facoltativamente firmare il programma di installazione usato per installare l'app in un altro Mac.
 
@@ -52,7 +52,7 @@ Da qui selezionare Identità, Profilo di provisioning e tutti i diritti personal
 
 La sezione **Compilazione Mac** della finestra di dialogo **Opzioni progetto** consente allo sviluppatore di selezionare l'architettura per un'app Xamarin.Mac, di controllare quale versione di macOS verrà supportata dall'app e, facoltativamente, di creare un pacchetto di installazione quando l'app è stata compilata correttamente:
 
- [![Modifica delle impostazioni di compilazione](app-configuration-images/config03.png "Modifica delle impostazioni di compilazione")](app-configuration-images/config03-large.png)
+ [![Modifica delle impostazioni di compilazione](app-configuration-images/config03.png "Modifica delle impostazioni di compilazione")](app-configuration-images/config03-large.png#lightbox)
 
 
 ## <a name="related-links"></a>Collegamenti correlati

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: d5f9f86447886e2cea46a6317d05506cdbed90bb
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 30ee40272b5f7a6f5863dccf4dcae7431f6f536f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-a-view"></a>Implementazione di una vista
 
@@ -115,7 +115,7 @@ Il processo di creazione della classe renderer personalizzato è come segue:
 1. Aggiungere un `ExportRenderer` attributo alla classe renderer personalizzato per specificare che verrà usata per il rendering del controllo personalizzato di xamarin. Forms. Questo attributo viene utilizzato per registrare il renderer personalizzato con xamarin. Forms.
 
 > [!NOTE]
-> **Nota**: per la maggior parte degli elementi di xamarin. Forms, è facoltativo fornire un renderer personalizzato in ogni progetto della piattaforma. Se non è registrato un renderer personalizzato, verrà utilizzato il renderer predefinito per la classe di base del controllo. Un renderer personalizzato è tuttavia necessarie in ogni progetto della piattaforma per il rendering di un [vista](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) elemento.
+> Per la maggior parte degli elementi di xamarin. Forms, è facoltativo per fornire un renderer personalizzato in ogni progetto della piattaforma. Se non è registrato un renderer personalizzato, verrà utilizzato il renderer predefinito per la classe di base del controllo. Un renderer personalizzato è tuttavia necessarie in ogni progetto della piattaforma per il rendering di un [vista](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) elemento.
 
 Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, con le relazioni tra di essi:
 
@@ -318,7 +318,7 @@ namespace CustomRenderer.WinPhone81
 Purché il `Control` proprietà è `null`, un nuovo `CaptureElement` viene creata un'istanza e `InitializeAsync` metodo viene chiamato, che utilizza il `MediaCapture` API per fornire il flusso di anteprima tra la camera. Il `SetNativeControl` viene quindi chiamato il metodo per assegnare un riferimento al `CaptureElement` istanza per il `Control` proprietà. Il `CaptureElement` controllo espone un `Tapped` evento che viene gestita dal `OnCameraPreviewTapped` metodo per interrompere e avviare l'anteprima video quando verrà scelti. Il `Tapped` evento sottoscritto quando renderer personalizzato è collegato a un nuovo elemento di xamarin. Forms e ha annullato la sottoscrizione da solo quando l'elemento del renderer è associato alle modifiche.
 
 > [!NOTE]
-> **Nota**: è importante arrestare ed eliminare oggetti che forniscono l'accesso alla camera in un'applicazione Windows Phone o UWP. In caso contrario, può interferire con altre applicazioni che tentano di accedere la fotocamera del dispositivo. Per ulteriori informazioni, vedere e [Guida introduttiva: acquisizione video tramite l'API MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) per le applicazioni di Windows Runtime, e [visualizzare l'anteprima della fotocamera](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) per le applicazioni UWP.
+> È importante arrestare ed eliminare oggetti che forniscono l'accesso alla fotocamera in un Windows Phone o un'applicazione UWP. In caso contrario, può interferire con altre applicazioni che tentano di accedere la fotocamera del dispositivo. Per ulteriori informazioni, vedere e [Guida introduttiva: acquisizione video tramite l'API MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) per le applicazioni di Windows Runtime, e [visualizzare l'anteprima della fotocamera](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) per le applicazioni UWP.
 
 ## <a name="summary"></a>Riepilogo
 

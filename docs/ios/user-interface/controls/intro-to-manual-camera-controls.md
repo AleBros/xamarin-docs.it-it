@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e5ff4e3732476415ff32e98b8281f3cb6e03e332
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7111c1716ef3a8869f8b2401a7653d9e9941977b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="manual-camera-controls"></a>Controlli della fotocamera manuale
 
@@ -26,7 +26,7 @@ Questi controlli possono rivelarsi utili quando si sviluppano applicazioni di sc
 
 Se l'esecuzione di video o ancora immagini utilizzando la fotocamera in un dispositivo iOS, il processo utilizzato per acquisire tali immagini è in gran parte lo stesso. Questo vale per le applicazioni che utilizzano i controlli di fotocamera automatizzata predefinito o quelle che sfruttano i nuovi controlli fotocamera manuale:
 
- [ ![](intro-to-manual-camera-controls-images/image1.png "Panoramica sugli oggetti acquisire AVFoundation")](intro-to-manual-camera-controls-images/image1.png)
+ [![](intro-to-manual-camera-controls-images/image1.png "Panoramica sugli oggetti acquisire AVFoundation")](intro-to-manual-camera-controls-images/image1.png#lightbox)
 
 Input viene eseguito da un `AVCaptureDeviceInput` in un `AVCaptureSession` per mezzo di un `AVCaptureConnection`. Il risultato è l'output come immagine fissa o come un flusso video. L'intero processo è controllato da un `AVCaptureDevice`.
 
@@ -280,11 +280,11 @@ Consentendo di eseguire controlli dell'elemento attivo direttamente all'utente f
 
 Ad esempio, una fotografia professionale possibile attenuare lo stato attivo di un'immagine per ottenere un [Bokeh effetto](http://en.wikipedia.org/wiki/Bokeh):
 
-[ ![](intro-to-manual-camera-controls-images/image2.png "Un effetto Bokeh")](intro-to-manual-camera-controls-images/image2.png)
+[![](intro-to-manual-camera-controls-images/image2.png "Un effetto Bokeh")](intro-to-manual-camera-controls-images/image2.png#lightbox)
 
 In alternativa, creare un [lo stato attivo per effettuare il Pull effetto](http://www.mediacollege.com/video/camera/focus/pull.html), ad esempio:
 
-[ ![](intro-to-manual-camera-controls-images/image3.png "L'effetto di Pull lo stato attivo")](intro-to-manual-camera-controls-images/image3.png)
+[![](intro-to-manual-camera-controls-images/image3.png "L'effetto di Pull lo stato attivo")](intro-to-manual-camera-controls-images/image3.png#lightbox)
 
 Per un writer di applicazioni mediche o gli esperti, l'applicazione potrebbe voler a livello di codice spostarsi obiettivo per esperimenti. In entrambi i casi la nuova API consente all'utente finale o l'applicazione per assumere il controllo dello stato attivo al momento l'immagine viene eseguita.
 
@@ -292,7 +292,7 @@ Per un writer di applicazioni mediche o gli esperti, l'applicazione potrebbe vol
 
 Prima di esaminare i dettagli di controllare lo stato attivo in un'applicazione IOS 8. Esaminiamo un rapido funzionamento lo stato attivo in un dispositivo iOS:
 
-[ ![](intro-to-manual-camera-controls-images/image4.png "Il funzionamento dello stato attivo in un dispositivo iOS")](intro-to-manual-camera-controls-images/image4.png)
+[![](intro-to-manual-camera-controls-images/image4.png "Il funzionamento dello stato attivo in un dispositivo iOS")](intro-to-manual-camera-controls-images/image4.png#lightbox)
 
 Chiaro immette l'obiettivo della fotocamera del dispositivo iOS e stato attivo si trova in un sensore. La distanza dell'obiettivo del sensore controlla dove è il punto focale (l'area in cui l'immagine verrà visualizzata la straordinarie), in relazione al sensore. Distanza l'obiettivo è il sensore, gli oggetti di distanza sembrano straordinarie e sembra straordinarie più vicina, accanto agli oggetti.
 
@@ -358,7 +358,7 @@ Come illustrato nel codice precedente, è necessario bloccare il dispositivo di 
 
 Con il codice di installazione di acquisire AV generale sul posto, un `UIViewController` possono essere aggiunti allo Storyboard dell'applicazione e a cui è configurata come segue:
 
-[ ![](intro-to-manual-camera-controls-images/image5.png "Un UIViewController possono essere aggiunti alle applicazioni Storyboard e configurate come illustrato di seguito")](intro-to-manual-camera-controls-images/image5.png)
+[![](intro-to-manual-camera-controls-images/image5.png "Un UIViewController possono essere aggiunti alle applicazioni Storyboard e configurate come illustrato di seguito")](intro-to-manual-camera-controls-images/image5.png#lightbox)
 
 La vista contiene gli elementi principali seguenti:
 
@@ -491,10 +491,10 @@ Eseguire il comando seguente per transito per il controller di visualizzazione p
   
 1. Con la fotocamera in modalità automatica, il dispositivo di scorrimento verrà spostati automaticamente quando la fotocamera consente di modificare lo stato attivo:
 
-    [![](intro-to-manual-camera-controls-images/image6.png "Il dispositivo di scorrimento verrà spostati automaticamente quando la fotocamera consente di modificare lo stato attivo in questa app di esempio")](intro-to-manual-camera-controls-images/image6.png)
+    [![](intro-to-manual-camera-controls-images/image6.png "Il dispositivo di scorrimento verrà spostati automaticamente quando la fotocamera consente di modificare lo stato attivo in questa app di esempio")](intro-to-manual-camera-controls-images/image6.png#lightbox)
 1. Toccare il segmento bloccato e trascinare il cursore di posizione per regolare la posizione dell'obiettivo manualmente:
 
-    [![](intro-to-manual-camera-controls-images/image7.png "Modificare manualmente la posizione dell'obiettivo")](intro-to-manual-camera-controls-images/image7.png)
+    [![](intro-to-manual-camera-controls-images/image7.png "Modificare manualmente la posizione dell'obiettivo")](intro-to-manual-camera-controls-images/image7.png#lightbox)
 1. Arrestare l'applicazione.
 
 
@@ -506,7 +506,7 @@ L'esposizione si intende la luminosità di un'immagine relativo alla luminosità
 
 Utilizzo dei controlli di esposizione manuale, l'utente può richiedere un'immagine da estremamente chiaro a scuro e moody:
 
-[ ![](intro-to-manual-camera-controls-images/image8.png "Un esempio di un'immagine che mostra esposizione estremamente chiaro a scuro e moody")](intro-to-manual-camera-controls-images/image8.png)
+[![](intro-to-manual-camera-controls-images/image8.png "Un esempio di un'immagine che mostra esposizione estremamente chiaro a scuro e moody")](intro-to-manual-camera-controls-images/image8.png#lightbox)
 
 Nuovamente, questa operazione può essere eseguita automaticamente utilizzando il controllo a livello di codice per le applicazioni di scientifiche o tramite i controlli manuali forniti dall'interfaccia utente di applicazioni. In entrambi i casi, nuovo iOS 8 esposizione API offrono un controllo granulare sulle impostazioni di esposizione della camera.
 
@@ -514,7 +514,7 @@ Nuovamente, questa operazione può essere eseguita automaticamente utilizzando i
 
 Prima di esaminare i dettagli per il controllo dell'esposizione in un'applicazione IOS 8. Esaminiamo un rapido funzionamento esposizione:
 
-[ ![](intro-to-manual-camera-controls-images/image9.png "Funzionamento di esposizione")](intro-to-manual-camera-controls-images/image9.png)
+[![](intro-to-manual-camera-controls-images/image9.png "Funzionamento di esposizione")](intro-to-manual-camera-controls-images/image9.png#lightbox)
 
 I tre elementi di base che collaborano per controllare l'esposizione sono:
 
@@ -527,7 +527,7 @@ I tre elementi di base che collaborano per controllare l'esposizione sono:
 
 Prima di apprendimento come funziona l'esposizione manuale, è una buona idea per comprendere come continua esposizione automatica funziona in un dispositivo iOS.
 
-[ ![](intro-to-manual-camera-controls-images/image10.png "Come funziona l'esposizione continua automaticamente in un dispositivo iOS")](intro-to-manual-camera-controls-images/image10.png)
+[![](intro-to-manual-camera-controls-images/image10.png "Come funziona l'esposizione continua automaticamente in un dispositivo iOS")](intro-to-manual-camera-controls-images/image10.png#lightbox)
 
 Per primo è il blocco di esposizione automatica, è il processo di calcolo esposizione ideale e continuamente alimentata analisi delle statistiche. Usa queste informazioni per calcolare la combinazione ottimale di ISO e velocità per ottenere la scena anche accesa. Questo ciclo viene considerato il ciclo AE.
 
@@ -535,7 +535,7 @@ Per primo è il blocco di esposizione automatica, è il processo di calcolo espo
 
 Successivamente, si esamineranno bloccato come funziona l'esposizione nei dispositivi iOS.
 
-[ ![](intro-to-manual-camera-controls-images/image11.png "Come bloccato esposizione funziona in dispositivi iOS")](intro-to-manual-camera-controls-images/image11.png)
+[![](intro-to-manual-camera-controls-images/image11.png "Come bloccato esposizione funziona in dispositivi iOS")](intro-to-manual-camera-controls-images/image11.png#lightbox)
 
 Nuovamente, è necessario il blocco di esposizione automatica che sta tentando di calcolare i valori di durata e di iOS ottimale. In questa modalità, tuttavia, il blocco AE è disconnesso dal motore di analisi delle statistiche.
 
@@ -589,7 +589,7 @@ Come illustrato nel codice precedente, è necessario bloccare il dispositivo di 
 
 Con il codice di installazione di acquisire AV generale sul posto, un `UIViewController` possono essere aggiunti allo Storyboard dell'applicazione e a cui è configurata come segue:
 
-[ ![](intro-to-manual-camera-controls-images/image12.png "Un UIViewController possono essere aggiunti alle applicazioni Storyboard e configurate come illustrato di seguito")](intro-to-manual-camera-controls-images/image12.png)
+[![](intro-to-manual-camera-controls-images/image12.png "Un UIViewController possono essere aggiunti alle applicazioni Storyboard e configurate come illustrato di seguito")](intro-to-manual-camera-controls-images/image12.png#lightbox)
 
 La vista contiene gli elementi principali seguenti:
 
@@ -791,13 +791,13 @@ Eseguire il comando seguente per transito per il controller di visualizzazione p
   
 1. Con la fotocamera in modalità Auto, i dispositivi di scorrimento vengono spostati automaticamente quando la fotocamera consente di regolare l'esposizione:
 
-    [![](intro-to-manual-camera-controls-images/image13.png "I dispositivi di scorrimento vengono spostati automaticamente quando la fotocamera consente di regolare l'esposizione")](intro-to-manual-camera-controls-images/image13.png)
+    [![](intro-to-manual-camera-controls-images/image13.png "I dispositivi di scorrimento vengono spostati automaticamente quando la fotocamera consente di regolare l'esposizione")](intro-to-manual-camera-controls-images/image13.png#lightbox)
 1. Toccare il segmento bloccato e trascinare il cursore di distorsione per regolare manualmente la distorsione dell'esposizione automatico:
 
-    [![](intro-to-manual-camera-controls-images/image14.png "Modificare manualmente la distorsione dell'esposizione automatico")](intro-to-manual-camera-controls-images/image14.png)
+    [![](intro-to-manual-camera-controls-images/image14.png "Modificare manualmente la distorsione dell'esposizione automatico")](intro-to-manual-camera-controls-images/image14.png#lightbox)
 1. Toccare il segmento personalizzato e trascinare i dispositivi di scorrimento per controllare manualmente l'esposizione durata e ISO:
 
-    [![](intro-to-manual-camera-controls-images/image15.png "Trascinare i cursori di durata e ISO manualmente l'esposizione di controllo")](intro-to-manual-camera-controls-images/image15.png)
+    [![](intro-to-manual-camera-controls-images/image15.png "Trascinare i cursori di durata e ISO manualmente l'esposizione di controllo")](intro-to-manual-camera-controls-images/image15.png#lightbox)
 1. Arrestare l'applicazione.
 
 
@@ -807,7 +807,7 @@ Il codice precedente ha illustrato come monitorare le impostazioni di esposizion
 
 Bilanciamento controlli consentono di bilanciare i colosr in un'immagine per renderle più realistica. Sorgenti di luce diversi hanno temperature di colore diverso, ed è necessario modificare le impostazioni di fotocamera usate per acquisire un'immagine per compensare le differenze. Nuovamente, consentendo il controllo utente tramite il bilanciamento del bianco possono apportare modifiche professionale che le routine automatiche sono in grado di ottenere effetti artistici.
 
-[ ![](intro-to-manual-camera-controls-images/image16.png "Un'immagine di esempio che mostra le regolazioni manuali bilanciamento")](intro-to-manual-camera-controls-images/image16.png)
+[![](intro-to-manual-camera-controls-images/image16.png "Un'immagine di esempio che mostra le regolazioni manuali bilanciamento")](intro-to-manual-camera-controls-images/image16.png#lightbox)
 
 Legale è, ad esempio, un cast rossi, mentre le luci incandescente tungsteno hanno una tonalità per la preparazione, -giallo. (Confusione, "a freddi" colori hanno temperature superiori di colore maggiore dei colori "medio". Colore temperature sono una misura fisica, non uno percettiva).
 
@@ -821,7 +821,7 @@ Prima di esaminare i dettagli del controllo del bianco in un'applicazione IOS 8.
 
 Nello studio di percezione di colore, la [CIE 1931 RGB dei colori spazio e lo spazio colore CIE 1931 XYZ](http://en.wikipedia.org/wiki/CIE_1931_color_space) sono il primo definito matematicamente spazi colore. Sono stati creati dalla Commissione internazionale in illuminazione (CIE) in 1931.
 
-[ ![](intro-to-manual-camera-controls-images/image17.png "La spazio colori RGB CIE 1931 e CIE 1931 XYZ spazio colore")](intro-to-manual-camera-controls-images/image17.png)
+[![](intro-to-manual-camera-controls-images/image17.png "La spazio colori RGB CIE 1931 e CIE 1931 XYZ spazio colore")](intro-to-manual-camera-controls-images/image17.png#lightbox)
 
 Il grafico sopra riportato mostra tutti i colori visibili all'occhio umano, da blu a verde brillante in colore rosso scuro. Qualsiasi punto del diagramma può essere tracciato con un valore di X e Y, come illustrato nel grafico precedente.
 
@@ -900,7 +900,7 @@ Il dispositivo di acquisizione deve essere bloccato per la configurazione prima 
 
 Con il codice di installazione di acquisire AV generale sul posto, un `UIViewController` possono essere aggiunti allo Storyboard dell'applicazione e a cui è configurata come segue:
 
-[ ![](intro-to-manual-camera-controls-images/image18.png "Un UIViewController possono essere aggiunti alle applicazioni Storyboard e configurate come illustrato di seguito")](intro-to-manual-camera-controls-images/image18.png)
+[![](intro-to-manual-camera-controls-images/image18.png "Un UIViewController possono essere aggiunti alle applicazioni Storyboard e configurate come illustrato di seguito")](intro-to-manual-camera-controls-images/image18.png#lightbox)
 
 La vista contiene gli elementi principali seguenti:
 
@@ -1111,13 +1111,13 @@ Eseguire il comando seguente per transito per il controller di visualizzazione p
 1. Salvare le modifiche di codice ed eseguire l'applicazione.
 1. Con la fotocamera in modalità Auto, i dispositivi di scorrimento vengono spostati automaticamente quando la fotocamera regola bilanciamento bianco:
 
-    [![](intro-to-manual-camera-controls-images/image19.png "I dispositivi di scorrimento vengono spostati automaticamente quando la fotocamera regola di bilanciamento del bianco")](intro-to-manual-camera-controls-images/image19.png)
+    [![](intro-to-manual-camera-controls-images/image19.png "I dispositivi di scorrimento vengono spostati automaticamente quando la fotocamera regola di bilanciamento del bianco")](intro-to-manual-camera-controls-images/image19.png#lightbox)
 1. Toccare il segmento bloccato e trascinare i dispositivi di scorrimento per regolare manualmente il saldo bianco Temp e Tint:
 
-    [![](intro-to-manual-camera-controls-images/image20.png "Trascinare i dispositivi di scorrimento per regolare manualmente il saldo bianco Temp e Tint")](intro-to-manual-camera-controls-images/image20.png)
+    [![](intro-to-manual-camera-controls-images/image20.png "Trascinare i dispositivi di scorrimento per regolare manualmente il saldo bianco Temp e Tint")](intro-to-manual-camera-controls-images/image20.png#lightbox)
 1. Con il segmento bloccato ancora selezionato, posizionare una scheda fisica grigio in primo piano della fotocamera e toccare il pulsante di Smart Card grigio per regolare del bianco al mondo grigio:
 
-    [![](intro-to-manual-camera-controls-images/image21.png "Toccare il pulsante di Smart Card grigio per regolare del bianco al mondo grigio")](intro-to-manual-camera-controls-images/image21.png)
+    [![](intro-to-manual-camera-controls-images/image21.png "Toccare il pulsante di Smart Card grigio per regolare del bianco al mondo grigio")](intro-to-manual-camera-controls-images/image21.png#lightbox)
 1. Arrestare l'applicazione.
 
 Il codice precedente è stato illustrato come monitorare le impostazioni del bianco quando la fotocamera è in modalità automatica oppure utilizzare dispositivi di scorrimento per controllare il saldo bianco quando è in modalità bloccato.
@@ -1128,7 +1128,7 @@ Racchiusi tra parentesi quadre di acquisizione è basato sulle impostazioni dai 
 
 Per acquisire racchiusi tra parentesi quadre è un burst di immagini scattate con una serie di impostazioni dall'immagine in immagine.
 
-[ ![](intro-to-manual-camera-controls-images/image22.png "Funzionamento di acquisire racchiusi tra parentesi quadre")](intro-to-manual-camera-controls-images/image22.png)
+[![](intro-to-manual-camera-controls-images/image22.png "Funzionamento di acquisire racchiusi tra parentesi quadre")](intro-to-manual-camera-controls-images/image22.png#lightbox)
 
 Utilizza racchiusi tra parentesi quadre di acquisizione in iOS 8, un'applicazione può predefinito di una serie di controlli della fotocamera manuale, eseguire un unico comando e avere la scena corrente restituire una serie di immagini per ognuno dei set di impostazioni manuali.
 
@@ -1187,7 +1187,7 @@ Con queste informazioni in considerazione, diamo un'occhiata a un esempio di uti
 
 Con il codice di installazione di acquisire AV generale sul posto, un `UIViewController` possono essere aggiunti allo Storyboard dell'applicazione e a cui è configurata come segue:
 
-[ ![](intro-to-manual-camera-controls-images/image23.png "Un UIViewController possono essere aggiunti alle applicazioni Storyboard e configurate come illustrato di seguito")](intro-to-manual-camera-controls-images/image23.png)
+[![](intro-to-manual-camera-controls-images/image23.png "Un UIViewController possono essere aggiunti alle applicazioni Storyboard e configurate come illustrato di seguito")](intro-to-manual-camera-controls-images/image23.png#lightbox)
 
 La vista contiene gli elementi principali seguenti:
 
@@ -1345,10 +1345,10 @@ Eseguire il comando seguente per transito per il controller di visualizzazione p
 1. Salvare le modifiche di codice ed eseguire l'applicazione.
 1. Frame una scena e toccare il pulsante di acquisizione tra parentesi quadre:
 
-    [![](intro-to-manual-camera-controls-images/image24.png "Frame una scena e toccare il pulsante di acquisizione tra parentesi quadre")](intro-to-manual-camera-controls-images/image24.png)
+    [![](intro-to-manual-camera-controls-images/image24.png "Frame una scena e toccare il pulsante di acquisizione tra parentesi quadre")](intro-to-manual-camera-controls-images/image24.png#lightbox)
 1. Scorri rapidamente verso destra a sinistra per visualizzare le tre immagini scattate da Capture racchiusi tra parentesi quadre:
 
-    [![](intro-to-manual-camera-controls-images/image25.png "Scorri rapidamente verso destra a sinistra per visualizzare le tre immagini adottate racchiusi tra parentesi quadre di acquisizione")](intro-to-manual-camera-controls-images/image25.png)
+    [![](intro-to-manual-camera-controls-images/image25.png "Scorri rapidamente verso destra a sinistra per visualizzare le tre immagini adottate racchiusi tra parentesi quadre di acquisizione")](intro-to-manual-camera-controls-images/image25.png#lightbox)
 1. Arrestare l'applicazione.
 
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: edc724eb73b314c0accd3e8775b9b26b6eac16d9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fc1aaffe4e31b596d57b5de30c87217ffba3772e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="picker"></a>Selezione
 
@@ -20,11 +20,11 @@ _La visualizzazione di selezione è un controllo per la selezione di un elemento
 
 Oggetto [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) Visualizza un breve elenco di elementi, da cui l'utente può selezionare. Tuttavia, un [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) non Mostra tutti i dati alla prima visualizzazione. Al contrario, il valore della relativa [ `Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Title/) proprietà viene visualizzata come segnaposto nelle piattaforme Android e iOS:
 
-[![](images/picker-initial.png "Selezione visualizzazione iniziale")](images/picker-initial-large.png "selezione visualizzazione iniziale")
+[![](images/picker-initial.png "Selezione visualizzazione iniziale")](images/picker-initial-large.png#lightbox "selezione visualizzazione iniziale")
 
 Quando il [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) riceve lo stato attivo, i dati viene visualizzato e l'utente può selezionare un elemento:
 
-[![](images/picker-selection.png "Selezione di un elemento di selezione")](images/picker-selection-large.png "selezione selezione di un elemento")
+[![](images/picker-selection.png "Selezione di un elemento di selezione")](images/picker-selection-large.png#lightbox "selezione selezione di un elemento")
 
 Dopo la selezione, viene visualizzato l'elemento selezionato per il [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/):
 

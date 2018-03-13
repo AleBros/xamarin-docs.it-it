@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 2a636a5ee2b027a2b2889c375f1fef5be67c379b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bafada037f912007201fd5e81b17302b21de3092
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="store-kit-overview-and-retrieving-product-information"></a>Archiviare una panoramica di Kit e il recupero delle informazioni di prodotto
 
@@ -19,7 +19,7 @@ L'interfaccia utente per un acquisto in-app viene visualizzato nelle schermate r
 Prima di qualsiasi transazione viene eseguita, l'applicazione deve recuperare prezzo del prodotto e la descrizione per la visualizzazione. Quindi quando l'utente preme **acquistare**, l'applicazione effettua una richiesta a StoreKit che gestisce la finestra di dialogo di conferma e account di accesso ID Apple. Presupponendo che la transazione ha esito positivo, StoreKit notifica al codice dell'applicazione, che deve memorizzare il risultato della transazione e fornire all'utente l'accesso per l'acquisto.   
 
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image14.png "StoreKit notifica al codice dell'applicazione, che è necessario archiviare il risultato della transazione e fornire all'utente l'accesso per l'acquisto")](store-kit-overview-and-retreiving-product-information-images/image14.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image14.png "StoreKit notifica al codice dell'applicazione, che è necessario archiviare il risultato della transazione e fornire all'utente l'accesso per l'acquisto")](store-kit-overview-and-retreiving-product-information-images/image14.png#lightbox)
 
 ## <a name="classes"></a>Classi
 
@@ -41,7 +41,7 @@ Il diagramma seguente mostra le relazioni tra le varie classi StoreKit (classi a
    
    
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image15.png "Le relazioni tra le varie classi astratte di classi StoreKit devono essere implementate nell'app")](store-kit-overview-and-retreiving-product-information-images/image15.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image15.png "Le relazioni tra le varie classi astratte di classi StoreKit devono essere implementate nell'app")](store-kit-overview-and-retreiving-product-information-images/image15.png#lightbox)   
    
    
    
@@ -64,7 +64,7 @@ Se si tenta di accedere all'archivio reale con un account di prova, verrà autom
 
 Per testare il codice StoreKit è necessario disconnettersi l'account di prova iTunes regolare e un account di accesso con un account di prova speciale (creato in iTunes Connect) che è collegato per l'archivio dei test. Per disconnettersi da visitare l'account corrente **Impostazioni > iTunes App Store e** come illustrato di seguito:
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image16.png "Per disconnettersi dalle visitare account corrente impostazioni iTunes App Store")](store-kit-overview-and-retreiving-product-information-images/image16.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image16.png "Per disconnettersi dalle visitare account corrente impostazioni iTunes App Store")](store-kit-overview-and-retreiving-product-information-images/image16.png#lightbox)
  
 quindi accedere con un account di prova *quando richiesto da StoreKit all'interno dell'app*:
 
@@ -72,19 +72,19 @@ quindi accedere con un account di prova *quando richiesto da StoreKit all'intern
 
 Per creare gli utenti di test in iTunes Connect fare clic su **utenti e ruoli** nella pagina principale.
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image17.png "Per creare gli utenti di test in iTunes Connect fare clic su utenti e ruoli nella pagina principale")](store-kit-overview-and-retreiving-product-information-images/image17.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image17.png "Per creare gli utenti di test in iTunes Connect fare clic su utenti e ruoli nella pagina principale")](store-kit-overview-and-retreiving-product-information-images/image17.png#lightbox)
 
 Selezionare **tester Sandbox**
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image18.png "Se si seleziona tester Sandbox")](store-kit-overview-and-retreiving-product-information-images/image18.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image18.png "Se si seleziona tester Sandbox")](store-kit-overview-and-retreiving-product-information-images/image18.png#lightbox)
 
 Viene visualizzato l'elenco di utenti esistenti. È possibile aggiungere un nuovo utente o eliminare un record esistente. Il portale non (attualmente) consentono di visualizzazione o modifica esistente verificare gli utenti, è consigliabile mantenere un record di ogni utente test creato (in particolare la password assegnata) valido. Quando si elimina un utente di prova l'indirizzo di posta elettronica non può essere riutilizzato per un altro account di prova.  
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image19.png "Viene visualizzato l'elenco di utenti esistenti")](store-kit-overview-and-retreiving-product-information-images/image19.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image19.png "Viene visualizzato l'elenco di utenti esistenti")](store-kit-overview-and-retreiving-product-information-images/image19.png#lightbox)   
    
  Nuovi utenti di test dispongono di attributi simili a un ID Apple reale (ad esempio nome, una password, domanda e risposta). Mantenere un record di tutti i dettagli immesso. Il **selezionare iTunes Store** campo determinerà la valuta e verrà acquisti in-app la lingua da utilizzare quando registrato in come tale utente.
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image20.png "Il campo selezionare iTunes Store determinerà valuta dell'utente e la lingua loro acquisti in-app")](store-kit-overview-and-retreiving-product-information-images/image20.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image20.png "Il campo selezionare iTunes Store determinerà valuta dell'utente e la lingua loro acquisti in-app")](store-kit-overview-and-retreiving-product-information-images/image20.png#lightbox)
 
 ## <a name="retrieving-product-information"></a>Durante il recupero delle informazioni sul prodotto
 
@@ -102,7 +102,7 @@ Viene visualizzato il primo passaggio nella vendita di un prodotto di acquisto i
 
 L'interazione complessivo è simile al seguente ( **StoreKit** è incorporato in iOS e **App Store** rappresenta i server Apple):
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image21.png "Grafico di durante il recupero delle informazioni sul prodotto")](store-kit-overview-and-retreiving-product-information-images/image21.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image21.png "Grafico di durante il recupero delle informazioni sul prodotto")](store-kit-overview-and-retreiving-product-information-images/image21.png#lightbox)
 
 ### <a name="displaying-product-information-example"></a>Esempio di informazioni sulla visualizzazione del prodotto
 
@@ -110,7 +110,7 @@ Il [InAppPurchaseSample](https://developer.xamarin.com/samples/monotouch/StoreKi
    
    
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image23.png "La schermata principale Visualizza prodotti informazioni recuperati dall'App Store")](store-kit-overview-and-retreiving-product-information-images/image23.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image23.png "La schermata principale Visualizza prodotti informazioni recuperati dall'App Store")](store-kit-overview-and-retreiving-product-information-images/image23.png#lightbox)   
    
    
    
@@ -235,7 +235,7 @@ public override void RequestFailed (SKRequest request, NSError error)
 
 Questa schermata mostra l'applicazione di esempio immediatamente dopo il caricamento (quando è disponibile alcuna informazione di prodotto):
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image24.png "L'app di esempio immediatamente dopo il caricamento quando è disponibile alcuna informazione di prodotto")](store-kit-overview-and-retreiving-product-information-images/image24.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image24.png "L'app di esempio immediatamente dopo il caricamento quando è disponibile alcuna informazione di prodotto")](store-kit-overview-and-retreiving-product-information-images/image24.png#lightbox)
 
 ## <a name="invalid-products"></a>Prodotti non validi
 
@@ -296,7 +296,7 @@ Utilizzo di due account di test diversi iTunes (uno per l'archivio American) e u
    
    
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image25.png "Due iTunes diversi test che mostra linguaggio risultati specifici dell'account")](store-kit-overview-and-retreiving-product-information-images/image25.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image25.png "Due iTunes diversi test che mostra linguaggio risultati specifici dell'account")](store-kit-overview-and-retreiving-product-information-images/image25.png#lightbox)   
    
    
    

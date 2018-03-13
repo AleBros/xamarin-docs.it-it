@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 8e5bb4747811729adf5363b0a893b0f85108b220
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 39c699b10280218223b6f6022d419f77aba875dc
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="multitasking-for-ipad"></a>Multitasking per iPad
 
@@ -35,6 +36,11 @@ Esistono diversi aspetti da considerare quando [supporto multitasking nell'app](
 Uno sviluppatore di app è anche possibile [rifiutare esplicitamente il multitasking](#Opting-Out-of-Multitasking), tra cui [la disabilitazione di riproduzione Video PIP](#Disabling-PIP-Video-Playback).
 
 In questo articolo illustra i passaggi necessari per garantire che venga eseguita correttamente l'app xamarin. IOS in un ambiente multitasking o come rifiutare esplicitamente il multitasking, se non è una buona base per l'app.
+
+> [!VIDEO https://youtube.com/embed/GctYAozoLr8]
+
+**Il multitasking per iPad, da [University Xamarin](https://university.xamarin.com)**
+
 
 <a name="Multitasking-QuickStart" />
 
@@ -59,7 +65,7 @@ iOS 9 offre nuove capacità multitasking su iPad con l'introduzione di _diaposit
 
 La funzionalità di scorrimento su consente all'utente di selezionare un'app secondo e visualizzarli in un piccolo pannello scorrevole per fornire l'interazione rapido. Il Pannello diapositiva su è temporaneo e viene chiusa quando l'utente torna a funzionare di nuovo con l'app principale.
 
-[ ![](multitasking-images/about01.png "Il pannello Sposta su")](multitasking-images/about01.png)
+[![](multitasking-images/about01.png "Il pannello Sposta su")](multitasking-images/about01.png#lightbox)
 
 È importante ricordare che l'utente decide quali due App verrà eseguito side-by-side e che lo sviluppatore non ha alcun controllo su questo processo. Di conseguenza, esistono alcuni aspetti che è necessario per garantire che l'app xamarin venga eseguita correttamente in un pannello diapositiva su:
 
@@ -74,7 +80,7 @@ Sposta su è disponibile solo in un iPad Pro, iPad Air, iPad 2 aria, iPad 2 Mini
 
 Sull'hardware supportato iPad (iPad aria 2, 4 Mini iPad e iPad Pro solo), l'utente può selezionare un'app secondo ed eseguito side-by-side con l'app in esecuzione in modalità a schermo intero una divisione. L'utente può controllare la percentuale della schermata principale che ogni app occupa trascinando sullo schermo divisore.
 
-[ ![](multitasking-images/about02.png "La visualizzazione suddivisa")](multitasking-images/about02.png)
+[![](multitasking-images/about02.png "La visualizzazione suddivisa")](multitasking-images/about02.png#lightbox)
 
 Come diapositiva su, l'utente decide quali due App eseguirà side-by-side e nuovamente, lo sviluppatore non ha alcun controllo su questo processo. Di conseguenza, la visualizzazione suddivisa inserisce requisiti simili in un'app xamarin:
 
@@ -89,7 +95,7 @@ Per ulteriori informazioni sulla preparazione dell'app per la doppia visualizzaz
 
 La nuova immagine di funzionalità di immagine (noto anche come _PIP_) consente all'utente di guardare un video in una piccola finestra mobile che l'utente è possibile posizionare in un punto qualsiasi nella schermata sopra le altre applicazioni in esecuzione.
 
-[ ![](multitasking-images/about03.png "Un esempio di immagine nella finestra mobile immagine")](multitasking-images/about03.png)
+[![](multitasking-images/about03.png "Un esempio di immagine nella finestra mobile immagine")](multitasking-images/about03.png#lightbox)
 
 Come con Sposta su e la doppia visualizzazione, l'utente ha il controllo completo su guardare un video in modalità immagine dell'immagine. Se la funzione principale dell'applicazione è guardare video, è necessario apportare alcune modifiche per funzionare correttamente in modalità PIP. In caso contrario, non sono necessarie modifiche per supportare PIP.
 
@@ -111,44 +117,27 @@ Per supportare il multitasking di iOS 9 in qualsiasi nuova app xamarin. IOS, nuo
 
 ### <a name="screen-size-and-orientation-considerations"></a>Considerazioni di orientamento e dimensioni dello schermo
 
-Prima di iOS 9, è possibile progettare le dimensioni dello schermo di dispositivi specifici agains app e gli orientamenti. Poiché è possibile eseguire un'app in un pannello diapositiva Out o in modalità di visualizzazione suddivisa, è possibile trovare in esecuzione in una classe regolare o compact dimensione orizzontale su iPad, indipendentemente dalle dimensioni di orientamento o dello schermo fisica del dispositivo.
+Prima di iOS 9, è possibile progettare l'app su orientamenti e dimensioni dello schermo di dispositivi specifici. Poiché è possibile eseguire un'app in un pannello diapositiva Out o in modalità di visualizzazione suddivisa, è possibile trovare in esecuzione in una classe regolare o compact dimensione orizzontale su iPad, indipendentemente dalle dimensioni di orientamento o dello schermo fisica del dispositivo.
 
-[ ![](multitasking-images/sizeclasses01.png "Considerazioni di orientamento e dimensioni dello schermo")](multitasking-images/sizeclasses01.png)
+[![](multitasking-images/sizeclasses01.png "Considerazioni di orientamento e dimensioni dello schermo")](multitasking-images/sizeclasses01.png#lightbox)
 
 In un iPad, un'app a schermo intero è classi normali di dimensioni orizzontali e verticali. Tutti i dispositivi iPhone ma iPhone 6 Plus e iPhone 6s Plus, dispongono di classi di dimensione compatta in entrambe le direzioni in qualsiasi posizione. IPhone 6 Plus e iPhone 6s Plus in modalità orizzontale disporre di una classe di dimensioni regolari orizzontale e una classe di dimensione verticale Compact (molto simile a un iPad Mini).
 
 Su iPad che supportano Sposta su e la doppia visualizzazione, possono finire con le combinazioni seguenti:
 
-<table width=100% border="1px">
-    <tr>
-        <td><b>Orientamento</b></td>
-        <td><b>App primario</b></td>
-        <td><b>App secondario</b></td>
-    </tr>
-    <tr>
-        <td><b>Verticale</b></td>
-        <td>75% della schermata<br/>Compact orizzontale<br/>Regolare verticale</td>
-        <td>25% dello schermo<br/>Compact orizzontale<br/>Regolare verticale</td>
-    </tr>
-    <tr>
-        <td><b>Orizzontale</b></td>
-        <td>75% della schermata<br/>Regolare orizzontale<br/>Regolare verticale</td>
-        <td>25% dello schermo<br/>Compact orizzontale<br/>Regolare verticale</td>
-    </tr>
-    <tr>
-        <td><b>Orizzontale</b></td>
-        <td>50% della schermata<br/>Compact orizzontale<br/>Regolare verticale</td>
-        <td>50% della schermata<br/>Compact orizzontale<br/>Regolare verticale</td>
-    </tr>
-</table>
+| **Orientamento** | **App primario** | **App secondario** |
+|--- |--- |--- |
+| **Verticale** |75% della schermata<br />Compact orizzontale<br />Regolare verticale|25% dello schermo<br />Compact orizzontale<br />Regolare verticale|
+| **Orizzontale** |75% della schermata<br />Regolare orizzontale<br />Regolare verticale|25% dello schermo<br />Compact orizzontale<br />Regolare verticale|
+| **Orizzontale** |50% della schermata<br />Compact orizzontale<br />Regolare verticale|50% della schermata<br />Compact orizzontale<br />Regolare verticale|
 
 Nell'esempio [MuliTask](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) app, se viene eseguito a schermo intero in un iPad in modalità orizzontale, presenta l'elenco e la visualizzazione dettagli contemporaneamente:
 
-[ ![](multitasking-images/sizeclasses03.png "L'elenco e la visualizzazione di dettaglio visualizzato allo stesso tempo")](multitasking-images/sizeclasses03.png)
+[![](multitasking-images/sizeclasses03.png "L'elenco e la visualizzazione di dettaglio visualizzato allo stesso tempo")](multitasking-images/sizeclasses03.png#lightbox)
 
 Se la stessa applicazione viene eseguita in un pannello diapositiva su, disposti come classe Compact dimensioni orizzontali e lo visualizza solo l'elenco:
 
-[ ![](multitasking-images/sizeclasses04.png "Solo l'elenco visualizzato quando il dispositivo è orizzontale")](multitasking-images/sizeclasses04.png)
+[![](multitasking-images/sizeclasses04.png "Solo l'elenco visualizzato quando il dispositivo è orizzontale")](multitasking-images/sizeclasses04.png#lightbox)
 
 Per garantire che l'app si comporta correttamente in questi casi, è consigliabile adottare le raccolte di tratto con classi di dimensione e conforme al `IUIContentContainer` e `IUITraitEnvironment` interfacce. Vedere Apple [riferimento alla classe UITraitCollection](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITraitCollection_ClassReference/index.html#//apple_ref/doc/uid/TP40014202) e nel [Introduzione agli storyboard unificata](~/ios/user-interface/storyboards/unified-storyboards.md) Guida per ulteriori informazioni.
 
@@ -166,11 +155,11 @@ A questo punto, con iOS 9, le applicazioni possono creare le proprie scelte rapi
 
 **Scheda comando** verrà visualizzata una selezione di app che consente all'utente di spostarsi rapidamente tra le app dalla tastiera, analogamente al sistema operativo Mac:
 
-[ ![](multitasking-images/keyboard01.png "La selezione di app")](multitasking-images/keyboard01.png)
+[![](multitasking-images/keyboard01.png "La selezione di app")](multitasking-images/keyboard01.png#lightbox)
 
 Se un'app per iOS 9 include i tasti di scelta rapida, l'utente può tenere premuto **comando**, **opzione** o **controllo** chiavi per visualizzarli in una finestra popup:
 
-[ ![](multitasking-images/keyboard02.png "La finestra popup di scelta rapida da tastiera")](multitasking-images/keyboard02.png)
+[![](multitasking-images/keyboard02.png "La finestra popup di scelta rapida da tastiera")](multitasking-images/keyboard02.png#lightbox)
 
 #### <a name="defining-custom-keyboard-shortcuts"></a>Definizione di tasti di scelta rapida
 
@@ -206,7 +195,7 @@ Successivamente, viene eseguito l'override di `KeyCommands` proprietà e creare 
 
 Se Esegui questa app in un iPad con una tastiera hardware collegati e i tipi di utente **comando-N**, verrà aggiunta una nuova voce all'elenco. Se l'utente tiene premuto **comando** chiave, verrà visualizzato l'elenco di tasti di scelta rapida:
 
-[ ![](multitasking-images/keyboard03.png "La finestra popup di scelta rapida da tastiera")](multitasking-images/keyboard03.png)
+[![](multitasking-images/keyboard03.png "La finestra popup di scelta rapida da tastiera")](multitasking-images/keyboard03.png#lightbox)
 
 Vedere l'esempio [MultiTask app](http://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) per un esempio di implementazione.
 
@@ -240,7 +229,7 @@ Sebbene Apple suggerisce che tutte le app di iOS 9 supportano il multitasking, p
 
 Per l'app xamarin rifiutare esplicitamente l'esecuzione in entrambi un pannello diapositiva Out o in modalità di visualizzazione suddivisa, modificare il progetto **Info. plist** file e verificare **richiede schermo**:
 
-[ ![](multitasking-images/fullscreen01.png "Acconsentito esplicitamente il Multitasking")](multitasking-images/fullscreen01.png)
+[![](multitasking-images/fullscreen01.png "Acconsentito esplicitamente il Multitasking")](multitasking-images/fullscreen01.png#lightbox)
 
 > [!IMPORTANT]
 > **Nota:** mentre Opting-Out di multitasking impedisce l'esecuzione nella diapositiva Out o doppia visualizzazione dell'app, accade **non** impedire l'esecuzione in una diapositiva Out o di un'immagine video di immagine da visualizzare insieme a un'altra app del app.

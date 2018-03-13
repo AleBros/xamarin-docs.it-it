@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: d81776dcb48d33927ffde4087ceb3f408b38d16f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 036e1ddc95f8eabec3e87c13c25cad972c29a5d1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-macos-sierra"></a>Introduzione a macOS Sierra
 
@@ -52,7 +52,7 @@ Per ulteriori informazioni, vedere Apple [ApplePay JS Framework](https://develop
 
 App moderne macOS quali browser web Safari di Apple, pagine elaboratore di testo e numeri molto foglio utilizzate numerose nuove tecnologie per presentare un'interfaccia utente sensibile al contesto unificato che consente agli elementi dell'interfaccia utente tradizionali, ad esempio pannelli mobili e più aprire Windows.
 
-[ ![Un esempio di una finestra a schede Mac](images/content08.png)](images/content08.png)
+[![Un esempio di una finestra a schede Mac](images/content08.png)](images/content08.png#lightbox)
 
 Il nostro [macOS compilazione di moderne app](~/mac/platform/introduction-to-macos-sierra/modern-cocoa-apps.md) nella Guida sono illustrati alcuni suggerimenti, funzionalità e tecniche di uno sviluppatore può utilizzare per compilare un'app moderne macOS in Xamarin.Mac.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: a219a5ed4045bff639f29fd49ef5288139140135
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0eec51a6c95894482a57bfe3bb1f95aec2045af4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="accessing-remote-data"></a>Accesso ai dati remoti
 
@@ -52,7 +52,7 @@ La `CatalogService` classe viene utilizzata per gestire il processo di recupero 
 
 Nella figura 10-1 viene illustrata l'interazione tra le classi che leggono i dati del catalogo da microservizio il catalogo per la visualizzazione per il `CatalogView`.
 
-[![](accessing-remote-data-images/catalogdata.png "Recupero di dati da microservizio il catalogo")](accessing-remote-data-images/catalogdata-large.png "il recupero dei dati da microservizio il catalogo")
+[![](accessing-remote-data-images/catalogdata.png "Recupero di dati da microservizio il catalogo")](accessing-remote-data-images/catalogdata-large.png#lightbox "il recupero dei dati da microservizio il catalogo")
 
 **Nella figura 10-1**: recupero di dati da microservizio il catalogo
 
@@ -157,7 +157,7 @@ La `BasketService` classe viene utilizzata per gestire il recupero di dati e pro
 
 Figura 10-2 viene illustrata l'interazione delle classi che inviano i dati del carrello visualizzati il `BasketView`, per microservizio il carrello.
 
-[![](accessing-remote-data-images/basketdata.png "L'invio di dati microservizio il carrello")](accessing-remote-data-images/basketdata-large.png "l'invio di dati microservizio il carrello")
+[![](accessing-remote-data-images/basketdata.png "L'invio di dati microservizio il carrello")](accessing-remote-data-images/basketdata-large.png#lightbox "l'invio di dati microservizio il carrello")
 
 **Figura 10-2**: invio di dati microservizio il carrello
 

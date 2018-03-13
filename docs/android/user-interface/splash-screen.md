@@ -7,18 +7,17 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
-ms.openlocfilehash: 9acb1ad6ab1425edb98b938e8c03edc3704f50ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 9f88899d390f7f268f1b2f435617dc952f9eb205
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="splash-screen"></a>Schermata iniziale
 
 _Un'app Android richiede del tempo di avvio, in particolare quando viene avviata l'app prima in un dispositivo. La schermata iniziale visualizzi inizio fino all'utente o per indicare di branding lo stato di avanzamento._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -32,10 +31,8 @@ Questa guida viene illustrata una tecnica per implementare una schermata in un'a
 
 3.  Aggiunta di una nuova attività all'applicazione che verrà utilizzato come schermata iniziale definita dal tema creato nel passaggio precedente.
 
-[![Schermata di esempio Xamarin logo iniziale seguita da una schermata dell'app](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png)
+[![Schermata di esempio Xamarin logo iniziale seguita da una schermata dell'app](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>Requisiti
 
@@ -43,7 +40,6 @@ Questa guida si presuppone che l'applicazione è destinata API Android livello 1
 
 Tutto il codice e XML in questa guida sono disponibili nel [SplashScreen](https://developer.xamarin.com/samples/monodroid/SplashScreen) progetto di esempio di questa Guida.
 
-<a name="implement" />
 
 ## <a name="implementing-a-splash-screen"></a>Implementazione di una schermata iniziale
 
@@ -51,7 +47,6 @@ Il modo più rapido per eseguire il rendering e visualizzare la schermata inizia
 
 La schermata viene implementata come un'attività che consente di visualizzare il marchio drawable, esegue le inizializzazioni e tutte le attività di avvio. Dopo l'applicazione ha avviato automaticamente, la schermata iniziale di attività viene avviata l'attività principale e viene rimosso dallo stack indietro dell'applicazione.
 
-<a name="drawable" />
 
 ### <a name="creating-a-drawable-for-the-splash-screen"></a>Creazione di un Drawable per la schermata iniziale
 
@@ -79,7 +74,6 @@ Inserire il file nel **risorse/drawable** cartella (ad esempio, **Resources/draw
 
 Dopo aver creata la schermata iniziale drawable, il passaggio successivo consiste nel creare un tema per la schermata iniziale.
 
-<a name="theme" />
 
 ### <a name="implementing-a-theme"></a>Implementazione di un tema
 
@@ -103,7 +97,6 @@ Per creare un tema personalizzato per la schermata di attività, modificare (o a
 
 **MyTheme.Splash** è molto spartan &ndash; dichiara lo sfondo della finestra, in modo esplicito la barra del titolo verrà rimossa dalla finestra e dichiara di essere a schermo intero. Se si desidera creare una schermata che emula l'interfaccia utente dell'app prima che l'attività ingrandisce il primo layout, è possibile utilizzare `windowContentOverlay` anziché `windowBackground` nella definizione di stile. In questo caso, è necessario modificare anche il **splash_screen.xml** drawable in modo che venga visualizzato un'emulazione dell'interfaccia utente.
 
-<a name="activity" />
 
 ### <a name="create-a-splash-activity"></a>Creare un'attività iniziale
 
@@ -161,7 +154,6 @@ public class MainActivity : AppCompatActivity
 }
 ```
 
-<a name="summary" />
 
 ## <a name="summary"></a>Riepilogo
 

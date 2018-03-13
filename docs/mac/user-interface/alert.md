@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 73b0a3292d7b1681b4086e8366e8b813194969a9
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 8901bb57ace4f05e8c26fdc43dfe8c476927903a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="alerts"></a>Avvisi
 
@@ -22,7 +22,7 @@ Quando si utilizza c# e .NET in un'applicazione Xamarin.Mac, è possibile accede
 
 Un avviso è un tipo speciale di finestra di dialogo visualizzata quando si verifica un problema grave (ad esempio un errore) o come un avviso (ad esempio, la preparazione dell'eliminazione di un file). Poiché un avviso è una finestra di dialogo, è necessario inoltre una risposta dell'utente prima di chiuderla.
 
-[ ![](alert-images/alert06.png "Un avviso di esempio")](alert-images/alert06.png)
+[![](alert-images/alert06.png "Un avviso di esempio")](alert-images/alert06.png#lightbox)
 
 In questo articolo verranno descritte le nozioni fondamentali sull'utilizzo degli avvisi in un'applicazione Xamarin.Mac. 
 
@@ -60,7 +60,7 @@ alert.RunModal ();
 
 Il codice precedente viene visualizzato un avviso con l'icona di applicazioni sovrapposta l'icona di avviso, un titolo, un messaggio di avviso e un singolo **OK** pulsante:
 
-[ ![](alert-images/alert01.png "Un avviso con un pulsante OK.")](alert-images/alert01.png)
+[![](alert-images/alert01.png "Un avviso con un pulsante OK.")](alert-images/alert01.png#lightbox)
 
 Apple fornisce diverse proprietà che possono essere utilizzate per personalizzare un avviso:
 
@@ -92,7 +92,7 @@ alert.RunModal ();
 ```
 Se viene eseguito questo codice, viene visualizzato il seguente:
 
-[ ![](alert-images/alert02.png "Un avviso semplice")](alert-images/alert02.png)
+[![](alert-images/alert02.png "Un avviso semplice")](alert-images/alert02.png#lightbox)
 
 Il codice seguente consente di visualizzare lo stesso avviso come un foglio di:
 
@@ -107,7 +107,7 @@ alert.BeginSheet (this);
 
 Se viene eseguito questo codice, di seguito verrà visualizzato:
 
-[ ![](alert-images/alert03.png "Un avviso visualizzato come un foglio")](alert-images/alert03.png)
+[![](alert-images/alert03.png "Un avviso visualizzato come un foglio")](alert-images/alert03.png#lightbox)
 
 
 <a name="Working_with_Alert_Buttons" />
@@ -136,7 +136,7 @@ Il primo pulsante aggiunto sarà il _pulsante predefinito_ che verrà attivata s
 
 Se si esegue il codice, di seguito verrà visualizzato:
 
-[ ![](alert-images/alert04.png "Un avviso con tre opzioni pulsante")](alert-images/alert04.png)
+[![](alert-images/alert04.png "Un avviso con tre opzioni pulsante")](alert-images/alert04.png#lightbox)
 
 Di seguito è riportato il codice per lo stesso avviso come un foglio di:
 
@@ -155,7 +155,7 @@ alert.BeginSheetForResponse (this, (result) => {
 ```
 Se viene eseguito questo codice, di seguito verrà visualizzato:
 
-[ ![](alert-images/alert05.png "Un avviso di tre pulsante visualizzato come un foglio")](alert-images/alert05.png)
+[![](alert-images/alert05.png "Un avviso di tre pulsante visualizzato come un foglio")](alert-images/alert05.png#lightbox)
 
 > [!IMPORTANT]
 > Non aggiungere mai più di tre pulsanti a un avviso.
@@ -184,7 +184,7 @@ Se il valore di `alert.SuppressionButton.State` è `NSCellStateValue.On`, l'uten
 
 Se viene eseguito il codice, di seguito verrà visualizzato:
 
-[ ![](alert-images/alert06.png "Un avviso con un pulsante Elimina")](alert-images/alert06.png)
+[![](alert-images/alert06.png "Un avviso con un pulsante Elimina")](alert-images/alert06.png#lightbox)
 
 Di seguito è riportato il codice per lo stesso avviso come un foglio di:
 
@@ -205,7 +205,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 Se viene eseguito questo codice, di seguito verrà visualizzato:
 
-[ ![](alert-images/alert07.png "Visualizzare un avviso con un pulsante Elimina come foglio")](alert-images/alert07.png)
+[![](alert-images/alert07.png "Visualizzare un avviso con un pulsante Elimina come foglio")](alert-images/alert07.png#lightbox)
 
 <a name="Adding_a_Custom_SubView" />
 
@@ -235,7 +235,7 @@ Le righe di chiave sono `var input = new NSTextField (new CGRect (0, 0, 300, 20)
 
 Se si esegue il codice, di seguito verrà visualizzato:
 
-[ ![](alert-images/alert08.png "Se si esegue il codice, di seguito verrà visualizzato")](alert-images/alert08.png)
+[![](alert-images/alert08.png "Se si esegue il codice, di seguito verrà visualizzato")](alert-images/alert08.png#lightbox)
 
 Di seguito è riportato lo stesso avviso come un foglio di:
 
@@ -260,7 +260,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 Se si esegue questo codice, di seguito verrà visualizzato:
 
-[ ![](alert-images/alert09.png "Un avviso con una visualizzazione personalizzata")](alert-images/alert09.png)
+[![](alert-images/alert09.png "Un avviso con una visualizzazione personalizzata")](alert-images/alert09.png#lightbox)
 
 <a name="Summary" />
 
@@ -273,6 +273,6 @@ In questo articolo è stato applicato l'utilizzo degli avvisi in un'applicazione
 - [MacWindows (esempio)](https://developer.xamarin.com/samples/mac/MacWindows/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Utilizzo di Windows](~/mac/user-interface/window.md)
-- [Linee guida sull'interfaccia umane di OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introduzione a Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)
 - [NSAlert](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSAlert_Class/index.html#//apple_ref/doc/uid/TP40004001)

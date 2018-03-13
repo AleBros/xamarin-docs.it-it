@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 0600a4ca1f26fd034679619c1427821e9c7a12b8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b96b306c882eb30aaf8c81604afb9b6a547d715b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implicit-styles"></a>Stili impliciti
 
@@ -51,7 +51,7 @@ Nell'esempio di codice riportato di seguito viene illustrato un *implicita* stil
 
 Il [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) definisce una singola *implicita* stile applicato alla pagina [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) istanze. Il `Style` viene utilizzato per visualizzare testo blu su uno sfondo giallo, durante l'impostazione anche altre opzioni di visualizzazione. Il `Style` viene aggiunto alla pagina [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) senza specificare un `x:Key` attributo. Pertanto, il `Style` viene applicata a tutti il `Entry` istanze in modo implicito come corrispondano il [ `TargetType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/) proprietà del `Style` esattamente. Tuttavia, il `Style` non viene applicato al `CustomEntry` istanza, che è una sottoclasse `Entry`. Ciò comporta l'aspetto illustrato nelle schermate seguenti:
 
-[![](implicit-images/implicit-styles.png "Esempio degli stili impliciti")](implicit-images/implicit-styles-large.png "esempio degli stili impliciti")
+[![](implicit-images/implicit-styles.png "Esempio degli stili impliciti")](implicit-images/implicit-styles-large.png#lightbox "esempio degli stili impliciti")
 
 Inoltre, il quarto [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) esegue l'override di [ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/) e [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.TextColor/) proprietà dello stile implicito da diversi `Color`valori.
 
@@ -82,7 +82,7 @@ In questo esempio, il *implicita* [ `Style` ](https://developer.xamarin.com/api/
 
 Per informazioni sulla creazione di stili in un'applicazione [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), vedere [stili globali](~/xamarin-forms/user-interface/styles/application.md).
 
-## <a name="creating-an-implicit-style-in-c35"></a>Creazione di uno stile implicito in C &#35;
+## <a name="creating-an-implicit-style-in-c35"></a>Creazione di uno stile implicito in C&#35;
 
 [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) le istanze possono essere aggiunte a una pagina [ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) raccolta in c# tramite la creazione di un nuovo [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)e quindi aggiungendo il `Style` istanze per il `ResourceDictionary`, come illustrato di esempio di codice seguente:
 

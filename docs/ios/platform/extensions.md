@@ -5,18 +5,23 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: f6e80b21c76089c0f3f7ac655584b7e18400307e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 017f3c1b5fc14bf22a5ad85d1017bc8125b04038
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-extensions"></a>le estensioni iOS
 
 _Introdotta in iOS 8, le estensioni sono widget che vengono presentati da iOS in contesti standard, ad esempio all'interno del centro di notifica, quando l'utente richiede una tastiera personalizzata o quando sono foto di modifica. Tutte le estensioni vengono installate insieme a un'applicazione contenitore e vengono attivate da un determinato punto dell'estensione in un'applicazione Host._
+
+> [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
+
+**Creazione di estensioni in iOS, da [University Xamarin](https://university.xamarin.com/)**
 
 Le estensioni, come è stato introdotto in iOS 8, sono specializzate `UIViewControllers` che vengono presentati dalla iOS all'interno di contesti standard, ad esempio all'interno di **centro notifiche**, come richiesti dall'utente per eseguire i tipi di tasti specializzato input o altri contesti, come la modifica di una foto in cui l'estensione può fornire filtri effetto speciale.
 
@@ -183,7 +188,7 @@ Tipi specifici di estensioni possono prevedere requisiti aggiuntivi. Ad esempio,
 
 Nella seguente procedura dettagliata, si creerà un esempio **oggi** widget che calcola il giorno e il numero di giorni rimanenti nell'anno:
 
-[ ![](extensions-images/carpediemscreenshot-sm.png "Un widget di oggi di esempio che calcola il giorno e il numero di giorni rimanenti dell'anno")](extensions-images/carpediemscreenshot.png)
+[![](extensions-images/carpediemscreenshot-sm.png "Un widget di oggi di esempio che calcola il giorno e il numero di giorni rimanenti dell'anno")](extensions-images/carpediemscreenshot.png#lightbox)
 
 <a name="Creating-the-Solution" />
 
@@ -193,26 +198,26 @@ Per creare la soluzione richiesta, eseguire le operazioni seguenti:
 
 1. Innanzitutto, creare un nuovo iOS, **singola vista App** sul progetto e scegliere il **Avanti** pulsante: 
 
-    [ ![](extensions-images/today01.png "Innanzitutto, creare un nuovo iOS, un progetto di singola vista App e fare clic sul pulsante Avanti")](extensions-images/today01.png)
+    [![](extensions-images/today01.png "Innanzitutto, creare un nuovo iOS, un progetto di singola vista App e fare clic sul pulsante Avanti")](extensions-images/today01.png#lightbox)
 2. Denominare il progetto `TodayContainer` e fare clic su di **Avanti** pulsante: 
 
-    [ ![](extensions-images/today02.png "Denominare il progetto TodayContainer e fare clic sul pulsante Avanti")](extensions-images/today02.png)
+    [![](extensions-images/today02.png "Denominare il progetto TodayContainer e fare clic sul pulsante Avanti")](extensions-images/today02.png#lightbox)
 3. Verificare il **nome progetto** e **SolutionName** e fare clic su di **crea** pulsante per creare la soluzione: 
 
-    [ ![](extensions-images/today03.png "Verificare il nome del progetto e SolutionName e fare clic sul pulsante Crea per creare la soluzione")](extensions-images/today03.png)
+    [![](extensions-images/today03.png "Verificare il nome del progetto e SolutionName e fare clic sul pulsante Crea per creare la soluzione")](extensions-images/today03.png#lightbox)
 4. Successivamente, nel **Esplora**, pulsante destro del mouse sulla soluzione e aggiungere un nuovo **iOS estensione** dal progetto di **oggi estensione** modello: 
 
-    [ ![](extensions-images/today04.png "Successivamente, in Esplora soluzioni, pulsante destro del mouse sulla soluzione e aggiungere un nuovo progetto di estensione iOS dal modello di estensione oggi")](extensions-images/today04.png)
+    [![](extensions-images/today04.png "Successivamente, in Esplora soluzioni, pulsante destro del mouse sulla soluzione e aggiungere un nuovo progetto di estensione iOS dal modello di estensione oggi")](extensions-images/today04.png#lightbox)
 5. Denominare il progetto `DaysRemaining` e fare clic su di **Avanti** pulsante: 
 
-    [ ![](extensions-images/today05.png "Denominare il progetto DaysRemaining e fare clic sul pulsante Avanti")](extensions-images/today05.png)
+    [![](extensions-images/today05.png "Denominare il progetto DaysRemaining e fare clic sul pulsante Avanti")](extensions-images/today05.png#lightbox)
 6. Esaminare il progetto e scegliere il **crea** pulsante per crearla: 
 
-    [ ![](extensions-images/today06.png "Esaminare il progetto e fare clic sul pulsante Crea per crearla")](extensions-images/today06.png)
+    [![](extensions-images/today06.png "Esaminare il progetto e fare clic sul pulsante Crea per crearla")](extensions-images/today06.png#lightbox)
 
 La soluzione risultante deve ora dispone di due progetti, come illustrato di seguito:
 
-[ ![](extensions-images/today07.png "La soluzione risultante deve ora dispone di due progetti, come illustrato di seguito")](extensions-images/today07.png)
+[![](extensions-images/today07.png "La soluzione risultante deve ora dispone di due progetti, come illustrato di seguito")](extensions-images/today07.png#lightbox)
 
 <a name="Creating-the-Extension-User-Interface" />
 
@@ -228,10 +233,10 @@ Per compilare l'interfaccia utente con uno Storyboard, eseguire le operazioni se
 
 1. Nel **Esplora**, fare doppio clic sul progetto di estensione `Main.storyboard` file per aprirlo e modificarlo: 
 
-    [ ![](extensions-images/today08.png "Doppio clic sul file Main progetti di estensione per aprirlo e modificarlo")](extensions-images/today08.png)
+    [![](extensions-images/today08.png "Doppio clic sul file Main progetti di estensione per aprirlo e modificarlo")](extensions-images/today08.png#lightbox)
 2. Selezionare l'etichetta che è stato aggiunto automaticamente all'interfaccia utente dal modello e assegnargli il **nome** `TodayMessage` nel **Widget** scheda della finestra di **Esplora proprietà**: 
 
-    [ ![](extensions-images/today09.png "Selezionare l'etichetta che è stato aggiunto automaticamente all'interfaccia utente dal modello e assegnargli il nome di TodayMessage nella scheda Widget del Visualizzatore proprietà")](extensions-images/today09.png)
+    [![](extensions-images/today09.png "Selezionare l'etichetta che è stato aggiunto automaticamente all'interfaccia utente dal modello e assegnargli il nome di TodayMessage nella scheda Widget del Visualizzatore proprietà")](extensions-images/today09.png#lightbox)
 3. Salvare le modifiche allo Storyboard.
 
 <a name="Using-Code" />
@@ -242,16 +247,16 @@ Per compilare l'interfaccia utente nel codice, eseguire le operazioni seguenti:
 
 1. Nel **Esplora**, selezionare il **DaysRemaining** del progetto, aggiungere una nuova classe e chiamarlo `CodeBasedViewController`: 
 
-    [ ![](extensions-images/code01.png "Aelect DaysRemaining progetto, aggiungere una nuova classe e chiamarlo CodeBasedViewController")](extensions-images/code01.png)
+    [![](extensions-images/code01.png "Aelect DaysRemaining progetto, aggiungere una nuova classe e chiamarlo CodeBasedViewController")](extensions-images/code01.png#lightbox)
 2. Ripetere l'operazione, il **Esplora**, fare doppio clic su dell'estensione `Info.plist` file per aprirlo e modificarlo: 
 
-    [ ![](extensions-images/code02.png "Fare doppio clic sul file Info. plist estensioni per aprirlo e modificarlo")](extensions-images/code02.png)
+    [![](extensions-images/code02.png "Fare doppio clic sul file Info. plist estensioni per aprirlo e modificarlo")](extensions-images/code02.png#lightbox)
 3. Selezionare il **visualizzazione origine** (dalla parte inferiore dello schermo) e aprire il `NSExtension` nodo: 
 
-    [ ![](extensions-images/code03.png "Selezionare la vista di origine dalla parte inferiore dello schermo e aprire il nodo NSExtension")](extensions-images/code03.png)
+    [![](extensions-images/code03.png "Selezionare la vista di origine dalla parte inferiore dello schermo e aprire il nodo NSExtension")](extensions-images/code03.png#lightbox)
 4. Rimuovere il `NSExtensionMainStoryboard` chiave e aggiungere un `NSPrincipalClass` con il valore `CodeBasedViewController`: 
 
-    [ ![](extensions-images/code04.png "Rimuovere la chiave NSExtensionMainStoryboard e aggiungere un NSPrincipalClass con il valore CodeBasedViewController")](extensions-images/code04.png)
+    [![](extensions-images/code04.png "Rimuovere la chiave NSExtensionMainStoryboard e aggiungere un NSPrincipalClass con il valore CodeBasedViewController")](extensions-images/code04.png#lightbox)
 5. Salvare le modifiche.
 
 Successivamente, modificare il `CodeBasedViewController.cs` file e renderlo simile al seguente:
@@ -327,7 +332,7 @@ Si noti la similitudine questo processo per il normale processo di scrittura di 
 
 Questa procedura dettagliata, l'applicazione contenitore viene usato semplicemente come un metodo per fornire e installare l'estensione e non fornisce funzionalità di un proprio. Modificare il TodayContainer `Main.storyboard` file e aggiungere il testo che definisce la funzione dell'estensione e modalità di installazione:
 
-[ ![](extensions-images/today10.png "Modificare il file TodayContainers Main e aggiungere il testo che definisce la funzione di estensioni e modalità di installazione")](extensions-images/today10.png)
+[![](extensions-images/today10.png "Modificare il file TodayContainers Main e aggiungere il testo che definisce la funzione di estensioni e modalità di installazione")](extensions-images/today10.png#lightbox)
 
 Salvare le modifiche allo Storyboard.
 
@@ -337,19 +342,19 @@ Salvare le modifiche allo Storyboard.
 
 Per testare l'estensione nel simulatore iOS, eseguire il **TodayContainer** app. Verrà visualizzata la visualizzazione principale del contenitore:
 
-[ ![](extensions-images/run01.png "Verrà visualizzata la vista principale di contenitori")](extensions-images/run01.png)
+[![](extensions-images/run01.png "Verrà visualizzata la vista principale di contenitori")](extensions-images/run01.png#lightbox)
 
 Successivamente, è stato raggiunto il **Home** pulsante nel simulatore, scorrere verso il basso dalla parte superiore della schermata per aprire il **centro notifiche**, selezionare il **oggi** scheda e scegliere il **Modifica** pulsante:
 
-[ ![](extensions-images/run02.png "Fare clic sul pulsante Home nel simulatore, scorrere verso il basso dalla parte superiore della schermata per aprire il centro notifiche, selezionare la scheda di oggi e fare clic sul pulsante Modifica")](extensions-images/run02.png)
+[![](extensions-images/run02.png "Fare clic sul pulsante Home nel simulatore, scorrere verso il basso dalla parte superiore della schermata per aprire il centro notifiche, selezionare la scheda di oggi e fare clic sul pulsante Modifica")](extensions-images/run02.png#lightbox)
 
 Aggiungere il **DaysRemaining** estensione per il **oggi** consente di visualizzare e fare clic su di **eseguita** pulsante:
 
-[ ![](extensions-images/run03.png "Aggiungere l'estensione DaysRemaining alla visualizzazione oggi e fare clic sul pulsante Chiudi")](extensions-images/run03.png)
+[![](extensions-images/run03.png "Aggiungere l'estensione DaysRemaining alla visualizzazione oggi e fare clic sul pulsante Chiudi")](extensions-images/run03.png#lightbox)
 
 Verrà aggiunto il nuovo widget per il **oggi** Vista e i risultati verranno visualizzati:
 
-[ ![](extensions-images/run04.png "Verrà aggiunto il nuovo widget per visualizzare la vista Today e verranno visualizzati i risultati")](extensions-images/run04.png)
+[![](extensions-images/run04.png "Verrà aggiunto il nuovo widget per visualizzare la vista Today e verranno visualizzati i risultati")](extensions-images/run04.png#lightbox)
 
 <a name="Communicating-with-the-Host-App" />
 

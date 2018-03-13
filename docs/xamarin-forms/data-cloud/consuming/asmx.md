@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 3362744d0d201ef82c846c80b0e1a87426953c85
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 3ddf481a2356d49f11b96f5a8a6b7f7a492fefc9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>Utilizzo di un servizio Web ASP.NET (ASMX)
 
@@ -74,7 +74,7 @@ Il servizio ASMX fornisce le seguenti operazioni:
 Per ulteriori informazioni sul modello di data utilizzato nell'applicazione, vedere [modellazione dati](~/xamarin-forms/data-cloud/walkthrough.md).
 
 > [!NOTE]
-> **Nota**: l'applicazione di esempio utilizza il servizio ospitato Xamarin ASMX che fornisce l'accesso in sola lettura per il servizio web. Le operazioni di creano, aggiornano ed eliminare dati, pertanto, non eliminerà i dati utilizzati nell'applicazione. È tuttavia disponibile in una versione eseguibile del servizio ASMX il **TodoASMXService** cartella nell'applicazione di esempio associato. Questa versione di pesca servizio ASMX completo eseguibile creare, aggiornare, leggere ed elimina l'accesso ai dati.
+> L'applicazione di esempio utilizza il servizio ospitato Xamarin ASMX che fornisce l'accesso in sola lettura per il servizio web. Le operazioni di creano, aggiornano ed eliminare dati, pertanto, non eliminerà i dati utilizzati nell'applicazione. È tuttavia disponibile in una versione eseguibile del servizio ASMX il **TodoASMXService** cartella nell'applicazione di esempio associato. Questa versione di pesca servizio ASMX completo eseguibile creare, aggiornare, leggere ed elimina l'accesso ai dati.
 
 Oggetto *proxy* deve essere generato per utilizzare il servizio ASMX, che consente all'applicazione di connettersi al servizio. Il proxy viene costruito mediante dispendiosa in termini di metadati del servizio che definisce i metodi e la configurazione del servizio associato. I metadati vengono esposti nel formato di un documento Web Services Description Language (WSDL) che viene generato dal servizio web. Il proxy viene compilato mediante l'aggiunta di un riferimento web per il servizio web per i progetti specifici della piattaforma.
 

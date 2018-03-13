@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 67bd1caf26c441e2a89def41ce3189b0dd67d7b1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dc41c70495e40235d7acffa56c1255bfd074ca0a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="advanced-manual-real-world-example"></a>Avanzate (manuale) esempio reale
 
@@ -130,7 +130,7 @@ Si noterà la `-scope` argomento è spesso facoltativo per le librerie implement
 
 Inoltre, è specificato `-c -Ibuild/headers`. Prima di tutto il `-c` argomento indica Sharpie obiettivo per arrestare l'interpretazione degli argomenti della riga di comando e passare argomenti successivi _direttamente al compilatore clang_. Pertanto, `-Ibuild/Headers` è include un argomento del compilatore clang indica clang per la ricerca in `build/Headers`, ovvero in cui le intestazioni POP in tempo reale. Senza questo argomento, clang non sarà possibile sapere dove posizionare i file che `POP.h` è `#import`sta eseguendo un'operazione. _Quasi tutti i "problemi" con l'obiettivo Sharpie riducono a capire cosa da passare per clang_.
 
-###<a name="completing-the-binding"></a>L'associazione di completamento
+### <a name="completing-the-binding"></a>L'associazione di completamento
 
 Obiettivo Sharpie ora ha generato `Binding/ApiDefinitions.cs` e `Binding/StructsAndEnums.cs` file.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d878f922b74ea3e95fd0e1ebce9e7445063a2946
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4a18bf8f35d1a6c615c819ea90433d1eb123422
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="updating-an-application-in-the-background"></a>Aggiornamento di un'applicazione in Background
 
@@ -44,7 +44,7 @@ In iOS 6, un'applicazione di immissione di primo piano la necessità di esecuzio
 
 Per implementare il recupero in background, modificare *Info. plist* e controllare il **abilitare la modalità di Background** e **recupero in Background** caselle di controllo:
 
- [ ![](updating-an-application-in-the-background-images/fetch.png "Modificare il file Info. plist e selezionare le caselle di controllo Abilita modalità di Background e il recupero in Background")](updating-an-application-in-the-background-images/fetch.png)
+ [![](updating-an-application-in-the-background-images/fetch.png "Modificare il file Info. plist e selezionare le caselle di controllo Abilita modalità di Background e il recupero in Background")](updating-an-application-in-the-background-images/fetch.png#lightbox)
 
 Successivamente, nel `AppDelegate`, eseguire l'override di `FinishedLaunching` metodo per impostare l'intervallo di recupero minimo. In questo esempio, si lascia il sistema operativo decidere la frequenza con cui recuperare il nuovo contenuto:
 
@@ -106,7 +106,7 @@ In iOS 6, una notifica push in ingresso indica al sistema per avvisare l'utente 
 
 Per implementare le notifiche remote, modificare *Info. plist* e controllare il **abilitare la modalità di Background** e **notifiche Remote** caselle di controllo:
 
- [ ![](updating-an-application-in-the-background-images/remote.png "Modalità di sfondo impostato su notifiche Remote e abilitare la modalità di Background")](updating-an-application-in-the-background-images/remote.png)
+ [![](updating-an-application-in-the-background-images/remote.png "Modalità di sfondo impostato su notifiche Remote e abilitare la modalità di Background")](updating-an-application-in-the-background-images/remote.png#lightbox)
 
 Successivamente, impostare il `content-available` flag di notifica push su 1. In questo modo l'applicazione conosce recuperare il nuovo contenuto prima di visualizzare l'avviso:
 
@@ -153,7 +153,7 @@ La differenza principale tra normale e invisibile all'utente per le notifiche da
 
 Tuttavia, APN consentirà di notifiche invisibile all'utente "piggyback" insieme a una normale notifica remota o una risposta keep-alive. Poiché non notifiche periodiche sono frequenza limitata, possono essere utilizzati stored backup invisibile all'utente invio delle notifiche push da APNs il dispositivo, come illustrato nel diagramma seguente:
 
- [ ![](updating-an-application-in-the-background-images/silent.png "Notifiche periodiche utilizzabile stored invisibile all'utente invio delle notifiche push da APNs il dispositivo, come illustrato in questo diagramma")](updating-an-application-in-the-background-images/silent.png)
+ [![](updating-an-application-in-the-background-images/silent.png "Notifiche periodiche utilizzabile stored invisibile all'utente invio delle notifiche push da APNs il dispositivo, come illustrato in questo diagramma")](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
 > **Nota**: Apple invita gli sviluppatori per inviare notifiche push invisibile all'utente ogni volta che richiede l'applicazione e servizio APN consentono di pianificare il recapito.

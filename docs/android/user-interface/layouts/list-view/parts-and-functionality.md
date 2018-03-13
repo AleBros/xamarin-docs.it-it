@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/21/2017
-ms.openlocfilehash: a963922dfdc07164b7c20f84be4f0b87440bff13
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4a7947c40d80c0ff8cb35dab54a11907280335d9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="listview-parts-and-functionality"></a>Funzionalità e le parti di ListView
 
-<a name="overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -31,41 +30,36 @@ Oggetto `ListView` costituita dalle parti seguenti:
 
 Queste schermate usano un basic `ListView` controllo per mostrare la modalità di rendering scorrimento rapido e l'indice di sezioni:
 
-[![Schermate dell'App con le righe meno recenti semplice, veloce lo scorrimento e l'indice di sezioni](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png)
+[![Schermate dell'App con le righe meno recenti semplice, veloce lo scorrimento e l'indice di sezioni](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png#lightbox)
 
 Gli elementi che costituiscono un `ListView` sono descritti in dettaglio più avanti:
 
-<a name="Rows" />
 
 ## <a name="rows"></a>Righe
 
 Ogni riga ha il proprio `View`. La vista può essere una delle visualizzazioni predefinite definite `Android.Resources`, o una vista personalizzata. Ogni riga è possibile utilizzare lo stesso layout visualizzazione o possono essere tutti diversi. Sono disponibili esempi in questo documento dell'utilizzo di layout predefinito e altri utenti che descrivono come definire un layout personalizzato.
 
-<a name="Adapter" />
 
 ## <a name="adapter"></a>Adattatore
 
 Il `ListView` controllo richiede un `Adapter` per fornire il formato `View` per ogni riga. Android è incorporato schede e viste che possono essere utilizzate o è possibile creare classi personalizzate.
 
-<a name="Fast_Scrolling" />
 
 ## <a name="fast-scrolling"></a>Scorrimento rapido
 
 Quando un `ListView` contiene molte righe di dati lo scorrimento rapido può essere abilitato per consentire all'utente di passare a qualsiasi parte dell'elenco. Fast-allo scorrimento 'barra di scorrimento' può essere facoltativamente abilitato (e personalizzati nel livello API 11 e versioni successive).
 
-<a name="Section_Index" />
 
 ## <a name="section-index"></a>Indice di sezioni
 
 Durante lo scorrimento lunghi elenchi, l'indice della sezione facoltativa fornisce all'utente con commenti e suggerimenti su quale parte dell'elenco da cui sta attualmente visualizzando. È solo appropriato in lunghi elenchi, in genere in combinazione con scorrimento rapido.
 
-<a name="Classes_Overview" />
 
 ## <a name="classes-overview"></a>Cenni preliminari sulle classi
 
 Classi principali utilizzate per visualizzare `ListViews` riportati di seguito:
 
-[![Diagramma UML che illustrano le relazioni tra ListView e classi associate](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png)
+[![Diagramma UML che illustrano le relazioni tra ListView e classi associate](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png#lightbox)
 
 Lo scopo di ogni classe è descritta di seguito:
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 6e8a37816e28120392f550376807e91fb3b5d458
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cee93f082386e78a643b8c07dd48d0196e8ecd6c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="the-path-fill-types"></a>I tipi di riempimento del percorso
 
@@ -164,7 +164,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Il tipo di riempimento del percorso deve riguardano in genere, solo operazioni di inserimento e non i tratti, ma i due `Inverse` influiscono sulla modalità sia riempimenti e tracce. Per operazioni di inserimento, i due `Inverse` tipi riempire le aree oppositely in modo che l'area di fuori di stella viene riempita. Per i tratti, i due `Inverse` tipi colore tutto ad eccezione del tratto. Uso di questi tipi di riempimento inverso può produrre alcuni effetti dispari, come illustrato nella schermata di iOS:
 
-[![](fill-types-images/fivepointedstar-small.png "Schermata triplo della pagina a stella Five-Pointed")](fill-types-images/fivepointedstar-large.png "tripla schermata della pagina Five-Pointed stella")
+[![](fill-types-images/fivepointedstar-small.png "Schermata triplo della pagina a stella Five-Pointed")](fill-types-images/fivepointedstar-large.png#lightbox "tripla schermata della pagina Five-Pointed stella")
 
 Le schermate di dispositivi mobili Android e Windows visualizza gli effetti di coppie e culling tipico, ma l'ordine del tratto e riempimento influisce inoltre sui risultati.
 
@@ -217,7 +217,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 È un'immagine interessano creata con un minimo di codice:
 
-[![](fill-types-images/overlappingcircles-small.png "Schermata di triplo della pagina cerchi sovrapposti")](fill-types-images/overlappingcircles-large.png "tripla schermata della pagine dei cerchi sovrapposti")
+[![](fill-types-images/overlappingcircles-small.png "Schermata di triplo della pagina cerchi sovrapposti")](fill-types-images/overlappingcircles-large.png#lightbox "tripla schermata della pagine dei cerchi sovrapposti")
 
 
 ## <a name="related-links"></a>Collegamenti correlati

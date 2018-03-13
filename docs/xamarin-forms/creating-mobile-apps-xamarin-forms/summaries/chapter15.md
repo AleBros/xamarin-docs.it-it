@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 15. L'interfaccia interattiva
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: e6c61f9a6ba66db2b9a5c7b217c7da952607e709
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 37bbbf2b89048db175ddc1b3b1a24cea92b898a7
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Riepilogo del capitolo 15. L'interfaccia interattiva
 
@@ -105,7 +106,7 @@ Il `ValueChanged` evento non viene attivato durante `Slider` inizializzazione, a
 
 Il [ **RgbSliders** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/RgbSliders) programma contiene tre `Slider` gli elementi che consentono di selezionare in modo interattivo un colore specificando i relativi valori RGB:
 
-[![Schermata di triplo dei cursori R G B](images/ch15fg03-small.png "RGB cursori")](images/ch15fg03-large.png "RGB cursori")
+[![Schermata di triplo dei cursori R G B](images/ch15fg03-small.png "RGB cursori")](images/ch15fg03-large.png#lightbox "RGB cursori")
 
 Il [ **TextFade** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/TextFade) esempio vengono utilizzati due `Slider` elementi da spostare due `Label` elementi attraverso un `AbsoluteLayout` e dissolvenza uno in altro.
 
@@ -266,5 +267,5 @@ Il [ **SetTimer** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/m
 
 - [Capitolo 15 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf)
 - [Capitolo 15 esempi](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
-- [Voce](~/xamarin-forms/user-interface/text/entry.md)
+- [Entry](~/xamarin-forms/user-interface/text/entry.md)
 - [Editor](~/xamarin-forms/user-interface/text/editor.md)

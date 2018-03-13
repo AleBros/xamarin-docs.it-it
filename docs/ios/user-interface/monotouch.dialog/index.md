@@ -7,11 +7,11 @@ ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: b279f3e643e008e88b8ad086c400d992427c6df4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b9bf4c5ee803aa60a2730703e64fcf73d07efdb5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-monotouchdialog"></a>Introduzione a MonoTouch.Dialog
 
@@ -20,7 +20,7 @@ _MonoTouch.Dialog (MT D) toolkit è un framework indispensabile per lo sviluppo 
 
 MonoTouch.Dialog, detto MT D in breve, è un rapido sviluppo toolkit dell'interfaccia che consente agli sviluppatori di creare schermate dell'applicazione e di navigazione utilizzando le informazioni, anziché la necessità di creazione di controller di visualizzazione, le tabelle e così via. Di conseguenza, offre una notevole semplificazione della riduzione di sviluppo e il codice dell'interfaccia utente. Si consideri, ad esempio, nella schermata seguente:
 
- [ ![](images/image1.png "Si consideri ad esempio questa schermata")](images/image1.png)
+ [![](images/image1.png "Si consideri ad esempio questa schermata")](images/image1.png#lightbox)
 
 Il codice seguente è stato usato per definire questo schermo intero:
 
@@ -57,7 +57,7 @@ Ad esempio, ogni volta che è necessaria una tabella, un'origine dati è necessa
 MT D che semplifica incapsulando tutto il codice in un'API generica per la creazione della tabella. Quindi, fornisce un'astrazione di sopra di tale API che consente di un oggetto dichiarativo sintassi che rende ancora più semplice di associazione. Di conseguenza, sono disponibili due API in MT UNITÀ D:
 
 -   **API di basso livello elementi** : *elementi API* basato sulla creazione di una struttura ad albero gerarchico di elementi che rappresentano le schermate e i relativi componenti. L'API di elementi offre agli sviluppatori la massima flessibilità e controllo per la creazione di interfacce utente. Inoltre, l'API di elementi con supporto avanzato per definizione dichiarativa tramite JSON, che consente di sia dichiarazione molto veloci, nonché la generazione dell'interfaccia utente dinamica da un server. 
--   **API di Reflection di alto livello** : anche noto come il *associazione**API* , in cui le classi che vengono annotate con l'hint dell'interfaccia utente e quindi MT D automaticamente consente di creare schermate basate sugli oggetti e fornisce un'associazione tra ciò che viene visualizzata (e facoltativamente modificare) sullo schermo e l'oggetto sottostante il backup.   Nell'esempio precedente viene illustrato l'utilizzo dell'API di Reflection. Questa API non forniscono il controllo con granularità fine che esegue gli elementi API, ma riduce ulteriormente la complessità di costruire automaticamente la gerarchia degli elementi in base agli attributi di classe. 
+-   **API di Reflection di alto livello** : anche noto come il *associazione**API* , in cui le classi che vengono annotate con l'hint dell'interfaccia utente e quindi MT D automaticamente consente di creare schermate basate sugli oggetti e fornisce un'associazione tra ciò che viene visualizzata (e facoltativamente modificare) sullo schermo e l'oggetto sottostante il backup. Nell'esempio precedente viene illustrato l'utilizzo dell'API di Reflection. Questa API non forniscono il controllo con granularità fine che esegue gli elementi API, ma riduce ulteriormente la complessità di costruire automaticamente la gerarchia degli elementi in base agli attributi di classe. 
 
 
 MT D sono un ampio set di elementi dell'interfaccia utente per la creazione della schermata incorporati, ma anche riconosce la necessità di elementi personalizzati e layout dello schermo avanzate. Di conseguenza, l'estendibilità è caratterizzato da un costrutto sfornato nell'API. Gli sviluppatori possono estendere gli elementi esistenti o crearne di nuovi e quindi si integrano perfettamente.
@@ -94,13 +94,13 @@ Oggetto *RootElement* è il contenitore di primo livello per gli elementi che co
 
 Una sezione è un gruppo di celle in una tabella. Come con una sezione normale tabella, può facoltativamente includere un'intestazione e piè di pagina che può essere testo o visualizzazioni anche personalizzate, come illustrato nella schermata seguente:
 
- [ ![](images/image2.png "Come con una sezione normale tabella, può facoltativamente includere un'intestazione e piè di pagina che possono essere di testo o visualizzazioni anche personalizzate, come in questa schermata")](images/image2.png)
+ [![](images/image2.png "Come con una sezione normale tabella, può facoltativamente includere un'intestazione e piè di pagina che possono essere di testo o visualizzazioni anche personalizzate, come in questa schermata")](images/image2.png#lightbox)
 
 ### <a name="element"></a>Elemento
 
 Un elemento rappresenta una cella nella tabella effettiva. MT D viene compresso con un'ampia gamma di elementi che rappresentano diversi tipi di dati o di input diversi. Ad esempio, le schermate seguenti illustrano alcuni degli elementi disponibili:
 
- [ ![](images/image3.png "Ad esempio, questo schermate illustrano alcuni degli elementi disponibili")](images/image3.png)
+ [![](images/image3.png "Ad esempio, questo schermate illustrano alcuni degli elementi disponibili")](images/image3.png#lightbox)
 
 ## <a name="more-on-sections-and-rootelements"></a>Altre sezioni e RootElements
 
@@ -112,7 +112,7 @@ Per avviare il processo MonoTouch.Dialog, è necessario almeno RootElement.
 
 Se un RootElement viene inizializzata con un valore di sezione o elemento questo valore viene utilizzato per individuare un elemento che fornisce un riepilogo della configurazione, che viene eseguito il rendering sul lato destro della visualizzazione figlio. Ad esempio, la schermata seguente mostra una tabella a sinistra con una cella contenente il titolo della schermata Dettagli a destra "Qui", insieme al valore del desert selezionato.
 
- [ ![](images/image4.png "Questa schermata mostra una tabella a sinistra con una cella contenente il titolo della schermata Dettagli a destra, qui, insieme al valore del desert selezionato") ](images/image4.png) [ ![ ] (images/image5.png "questo schermata riportata di seguito è illustrata una tabella a sinistra con una cella contenente il titolo della schermata Dettagli a destra, qui, insieme al valore del desert selezionato")](images/image5.png)
+ [![](images/image4.png "Questa schermata mostra una tabella a sinistra con una cella contenente il titolo della schermata Dettagli a destra, qui, insieme al valore del desert selezionato") ](images/image4.png#lightbox) [ ![ ] (images/image5.png "questo schermata riportata di seguito è illustrata una tabella a sinistra con una cella contenente il titolo della schermata Dettagli a destra, qui, insieme al valore del desert selezionato")](images/image5.png#lightbox)
 
 Elementi radice anche possono essere utilizzati all'interno di sezioni per attivare il caricamento di una nuova pagina di configurazione annidati, come illustrato in precedenza. Quando usato in questa modalità la didascalia fornita durante il rendering all'interno di una sezione e viene usata anche come titolo per la pagina secondaria. Ad esempio:
 
@@ -195,7 +195,7 @@ var taskElement = new RootElement (task.Name){
 
 Questo codice crea un'interfaccia utente, come illustrato di seguito. Per una descrizione completa di questo esempio, vedere il [elementi API Walkthrough](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) esercitazione.
 
- [ ![](images/image6.png "In combinazione con la proprietà Element.Value, il callback può recuperare il valore impostato in altri elementi")](images/image6.png)
+ [![](images/image6.png "In combinazione con la proprietà Element.Value, il callback può recuperare il valore impostato in altri elementi")](images/image6.png#lightbox)
 
 Quando l'utente preme la cella della tabella nella parte inferiore, viene eseguito il codice nella funzione anonima scrivendo il valore dal `element` istanza per il **Output dell'applicazione** riempimento in Visual Studio per Mac.
 
@@ -216,7 +216,7 @@ Si tratta del comportamento per tutti gli elementi che fanno parte di MonoTouch.
 
 Oggetto `StringElement` Mostra una didascalia sul lato sinistro di una cella della tabella e il valore di stringa sul lato destro della cella.
 
- [ ![](images/image7.png "Un StringElement Mostra una didascalia sul lato sinistro di una cella della tabella e il valore di stringa sul lato destro della cella")](images/image7.png)
+ [![](images/image7.png "Un StringElement Mostra una didascalia sul lato sinistro di una cella della tabella e il valore di stringa sul lato destro della cella")](images/image7.png#lightbox)
 
 Per utilizzare un `StringElement` come un pulsante, viene fornito un delegato.
 
@@ -227,25 +227,25 @@ new StringElement (
 , null, "ok", null).Show(); })
 ```
 
- [ ![](images/image8.png "Per utilizzare un StringElement come un pulsante, viene fornito un delegato")](images/image8.png)
+ [![](images/image8.png "Per utilizzare un StringElement come un pulsante, viene fornito un delegato")](images/image8.png#lightbox)
 
 ### <a name="styled-string-element"></a>Elemento di stringa con stile
 
 Oggetto `StyledStringElement` consente di essere presentati utilizzando entrambi stili di cella di tabella stringhe o con formattazione personalizzata.
 
- [ ![](images/image9.png "Un StyledStringElement consente di essere presentati utilizzando entrambi stili di cella di tabella stringhe o con formattazione personalizzata")](images/image9.png)
+ [![](images/image9.png "Un StyledStringElement consente di essere presentati utilizzando entrambi stili di cella di tabella stringhe o con formattazione personalizzata")](images/image9.png#lightbox)
 
 Il `StyledStringElement` deriva dalla classe `StringElement`, ma consente agli sviluppatori di personalizzare un numero limitato di proprietà quali il tipo di carattere, colore del testo, colore di sfondo, modalità di interruzione di riga, il numero di righe da visualizzare, e se deve essere visualizzato un accessorio.
 
 ### <a name="multiline-element"></a>Elemento su più righe
 
- [ ![](images/image10.png "Elemento su più righe")](images/image10.png)
+ [![](images/image10.png "Elemento su più righe")](images/image10.png#lightbox)
 
 ### <a name="entry-element"></a>Elemento Entry
 
 Il `EntryElement`, come il nome implica, viene utilizzato per ottenere l'input dell'utente. Supporta stringhe regolari o password, in cui vengono nascosti i caratteri.
 
- [ ![](images/image11.png "Il EntryElement viene usata per ottenere l'input dell'utente")](images/image11.png)
+ [![](images/image11.png "Il EntryElement viene usata per ottenere l'input dell'utente")](images/image11.png#lightbox)
 
 Viene inizializzato con tre valori:
 
@@ -268,11 +268,11 @@ Inoltre il `KeyboardType` proprietà può essere impostata in fase di creazione 
 
 ### <a name="boolean-element"></a>Elemento Boolean
 
- [ ![](images/image12.png "Elemento Boolean")](images/image12.png)
+ [![](images/image12.png "Elemento Boolean")](images/image12.png#lightbox)
 
 ### <a name="checkbox-element"></a>Elemento casella di controllo
 
- [ ![](images/image13.png "Elemento casella di controllo")](images/image13.png)
+ [![](images/image13.png "Elemento casella di controllo")](images/image13.png#lightbox)
 
 ### <a name="radio-element"></a>Elemento di opzione
 
@@ -282,7 +282,7 @@ A `RadioElement` richiede un `RadioGroup` specifichi il `RootElement`.
 mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0))
 ```
 
- [ ![](images/image14.png "Un RadioElement richiede un RadioGroup specifichi il RootElement")](images/image14.png)
+ [![](images/image14.png "Un RadioElement richiede un RadioGroup specifichi il RootElement")](images/image14.png#lightbox)
 
  `RootElements` vengono inoltre utilizzati per coordinare gli elementi di opzione. Il `RadioElement` membri possono estendersi su più sezioni (ad esempio implementare un comportamento simile per il selettore di tono circolare e suonerie personalizzato separato dal sistema suonerie). La visualizzazione di riepilogo visualizzerà l'elemento di opzione attualmente selezionato. Per usare questo, creare il `RootElement` con il costruttore di gruppo, simile al seguente:
 
@@ -294,15 +294,15 @@ Il nome del gruppo in `RadioGroup` viene utilizzato per visualizzare il valore s
 
 ### <a name="badge-element"></a>Elemento badge
 
- [ ![](images/image15.png "Elemento badge")](images/image15.png)
+ [![](images/image15.png "Elemento badge")](images/image15.png#lightbox)
 
 ### <a name="float-element"></a>Elemento float
 
- [ ![](images/image16.png "Elemento float")](images/image16.png)
+ [![](images/image16.png "Elemento float")](images/image16.png#lightbox)
 
 ### <a name="activity-element"></a>Elemento di attività
 
- [ ![](images/image17.png "Elemento di attività")](images/image17.png)
+ [![](images/image17.png "Elemento di attività")](images/image17.png#lightbox)
 
 ### <a name="date-element"></a>Elemento data
 
@@ -310,35 +310,35 @@ Il nome del gruppo in `RadioGroup` viene utilizzato per visualizzare il valore s
 
 Se la cella corrispondente il DateElement è selezionata, viene visualizzata un controllo selezione data come illustrato di seguito:
 
- [ ![](images/image19.png "Se la cella corrispondente il DateElement è selezionata, viene visualizzata un controllo selezione data come mostrato")](images/image19.png)
+ [![](images/image19.png "Se la cella corrispondente il DateElement è selezionata, viene visualizzata un controllo selezione data come mostrato")](images/image19.png#lightbox)
 
 ### <a name="time-element"></a>Elemento Time
 
- [ ![](images/image20.png "Elemento Time")](images/image20.png)
+ [![](images/image20.png "Elemento Time")](images/image20.png#lightbox)
 
 Se la cella corrispondente il TimeElement è selezionata, viene visualizzato un controllo selezione ora come illustrato di seguito:
 
- [ ![](images/image21.png "Quando la cella corrispondente il TimeElement è selezionata, una selezione di tempo viene presentata come illustrato")](images/image21.png)
+ [![](images/image21.png "Quando la cella corrispondente il TimeElement è selezionata, una selezione di tempo viene presentata come illustrato")](images/image21.png#lightbox)
 
 ### <a name="datetime-element"></a>Elemento DateTime
 
- [ ![](images/image22.png "Elemento DateTime")](images/image22.png)
+ [![](images/image22.png "Elemento DateTime")](images/image22.png#lightbox)
 
 Se la cella corrispondente il DateTimeElement è selezionata, viene visualizzato un controllo selezione data/ora come illustrato di seguito:
 
- [ ![](images/image23.png "Se la cella corrispondente il DateTimeElement è selezionata, viene visualizzato un controllo selezione data/ora come mostrato")](images/image23.png)
+ [![](images/image23.png "Se la cella corrispondente il DateTimeElement è selezionata, viene visualizzato un controllo selezione data/ora come mostrato")](images/image23.png#lightbox)
 
 ### <a name="html-element"></a>Elemento HTML
 
- [ ![](images/image24.png "Elemento HTML")](images/image24.png)
+ [![](images/image24.png "Elemento HTML")](images/image24.png#lightbox)
 
 Il `HTMLElement` Visualizza il valore della relativa `Caption` proprietà nella cella della tabella. Quando è selezionata, il `Url` assegnato all'elemento viene caricato in un `UIWebView` controllare come illustrato di seguito:
 
- [ ![](images/image25.png "Quando selezionata, l'Url assegnato all'elemento viene caricato in un controllo UIWebView, come illustrato di seguito")](images/image25.png)
+ [![](images/image25.png "Quando selezionata, l'Url assegnato all'elemento viene caricato in un controllo UIWebView, come illustrato di seguito")](images/image25.png#lightbox)
 
 ### <a name="message-element"></a>Elemento del messaggio
 
- [ ![](images/image26.png "Elemento del messaggio")](images/image26.png)
+ [![](images/image26.png "Elemento del messaggio")](images/image26.png#lightbox)
 
 ### <a name="load-more-element"></a>Caricare più elemento
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: b606773b44d32b724fe7f4dfa2ef18fe34b85cae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 170131a2449b37acfa411eeca54f7aa921b0d9e4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-text-input"></a>Utilizzo di Input di testo
 
@@ -62,7 +62,7 @@ Quando è impostata la modalità semplice, l'utente può scegliere:
 - Scribble, o
 - da un elenco predefinito che fornisce l'applicazione.
 
-[ ![](text-input-images/plain-scribble-sml.png "Dettatura, Scribble, o da un elenco che fornisce l'app")](text-input-images/plain-scribble.png)
+[![](text-input-images/plain-scribble-sml.png "Dettatura, Scribble, o da un elenco che fornisce l'app")](text-input-images/plain-scribble.png#lightbox)
 
 Il risultato viene restituito sempre come un `NSObject` che può essere convertito in un `string`.
 

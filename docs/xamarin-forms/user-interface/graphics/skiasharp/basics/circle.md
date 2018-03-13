@@ -4,14 +4,15 @@ description: Nozioni di base del disegno SkiaSharp, tra cui aree e paint
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 63314efdd29c8da0273459de2d12f7b807968a04
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5b09621f1d3a24f8061e5cd6551dd85ce93e36e3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="drawing-a-simple-circle"></a>Disegnare un cerchio semplice
 
@@ -139,7 +140,7 @@ Questa volta il `DrawCircle` chiamata riempie il cerchio utilizzando le propriet
 
 Di seguito è riportato il programma in esecuzione su iOS, Android e la piattaforma Windows universale:
 
-[![](circle-images/simplecircle-small.png "Schermata di triplo della pagina cerchio semplice")](circle-images/simplecircle-large.png "tripla schermata della pagina cerchio semplice")
+[![](circle-images/simplecircle-small.png "Schermata di triplo della pagina cerchio semplice")](circle-images/simplecircle-large.png#lightbox "tripla schermata della pagina cerchio semplice")
 
 Quando si esegue il programma, è possibile attivare il telefono o il simulatore lateralmente per vedere come l'immagine viene ridisegnato. Ogni volta che l'immagine deve essere ridisegnato il `PaintSurface` gestore eventi viene chiamato nuovamente.
 

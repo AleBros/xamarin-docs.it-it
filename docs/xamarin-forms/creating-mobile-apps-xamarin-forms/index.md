@@ -8,15 +8,15 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/03/2016
-ms.openlocfilehash: b6054b4037b14a73cb5bfe50b619e805fdcf1737
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: caee0d685838f7c0a54e19611fdf72df5730c037
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book-first-edition"></a>Creazione di App per dispositivi mobili con xamarin. Forms libro prima edizione
 
-<p><img src="Images/Cover-sml.png" title="Creazione di App per dispositivi mobili con xamarin. Forms libro" align="left"/>Ultimo libro Petzolds - <i>la creazione di App per dispositivi mobili con xamarin. Forms</i> - è stata inviata a premere (electronic) ed è ora disponibile per il download.</p>
+<p><img src="Images/Cover-sml.png" title="Creazione di App per dispositivi mobili con xamarin. Forms libro" align="left" />Ultimo libro Petzolds - <i>la creazione di App per dispositivi mobili con xamarin. Forms</i> - è stata inviata a premere (electronic) ed è ora disponibile per il download.</p>
 
 Questo *prima edizione* con 27 capitoli e descrive le xamarin. Forms&nbsp;2. x inclusi animazione, MVVM, trigger, comportamenti, layout personalizzati, renderer personalizzati e molto altro ancora.
 Capitolo 28 ora è disponibile anche online tra i singoli capitoli elencati di seguito.

@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 90a2eb219ae1189e7a48e60cde9761e3e9e93e0b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce51511c58d7d0f5a14e487b57897bfa0e0b20b3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="graphics-and-animation"></a>Grafica e animazione
 
 _Android fornisce un framework molto avanzato e diverse per il supporto grafica 2D e le animazioni. In questo argomento introduce questi Framework e viene illustrato come creare grafici personalizzati e le animazioni per l'utilizzo in un'applicazione di xamarin._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -61,7 +60,6 @@ Le app sono più facilmente utilizzabili in questi casi, se sono stati progettat
 Fare riferimento a [Guida di accessibilità di Google](http://developer.android.com/guide/topics/ui/accessibility/) per ulteriori informazioni su come utilizzare l'accessibilità di Android API.
 
 
-<a name="2D_Graphics" />
 
 ## <a name="2d-graphics"></a>Grafica 2D
 
@@ -71,7 +69,6 @@ La tecnica, utilizzando il [area di disegno](https://developer.xamarin.com/api/t
 
 Esaminiamo innanzitutto Drawable risorse. Sono più semplici e coprono il maggior parte dei casi di disegnati personalizzati.
 
-<a name="Drawable Resources" />
 
 ### <a name="drawable-resources"></a>Risorse drawable
 
@@ -153,7 +150,6 @@ Per visualizzare questo aspetto, eseguire il *AnimationsDemo* del progetto e sel
 
 Per ulteriori informazioni sugli elementi XML e sintassi di risorse Drawable, consultare [documentazione di Google](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
 
-<a name="Using the Canvas Drawing API" />
 
 ### <a name="using-the-canvas-drawing-api"></a>Tramite l'API di disegno di area di disegno
 
@@ -183,7 +179,6 @@ La classe di area di disegno espone metodi per fornire a livello di codice le is
 -   [Canvas.DrawText](https://developer.xamarin.com/api/member/Android.Graphics.Canvas.DrawText/p/System.String/System.Single/System.Single/Android.Graphics.Paint/) &ndash; disegna il testo nell'area di disegno con il colore specificato. Il testo viene disegnato nella posizione `x,y` .
 
 
-<a name="Drawing with the Canvas API" />
 
 #### <a name="drawing-with-the-canvas-api"></a>Disegno con l'API di disegno
 
@@ -218,7 +213,6 @@ Questo codice è possibile creare prima un disegno rossa e un oggetto di colore 
 
 ![Schermata con colore rosso e gli oggetti di colore verde](graphics-and-animation-images/image3.png)
 
-<a name="Animation" />
 
 ## <a name="animation"></a>Animazione
 
@@ -232,7 +226,6 @@ Gli utenti come elementi che si spostano nelle proprie applicazioni. Le animazio
 
 In generale, animazione di proprietà è il sistema preferito da utilizzare come è più flessibile e offre ulteriori funzionalità.
 
-<a name="View Animations" />
 
 ### <a name="view-animations"></a>Animazioni di visualizzazione
 
@@ -319,7 +312,6 @@ myImage.StartAnimation(myAnimation);
 
 Ora che è disponibile una comprensione di base del funzionamento delle animazioni di visualizzazione, consente di spostare le animazioni di proprietà.
 
-<a name="Property Animations" />
 
 ### <a name="property-animations"></a>Proprietà animazioni
 
@@ -397,7 +389,6 @@ animator.Start();
 
 Come si può notare dal frammento di codice precedente, `ObjectAnimator` può ridurre e semplificare il codice che è necessario aggiungere un'animazione a un oggetto.
 
-<a name="Drawable Animations" />
 
 ### <a name="drawable-animations"></a>Animazioni drawable
 
@@ -442,7 +433,6 @@ protected override void OnCreate(Bundle bundle)
 
 A questo punto sono stati illustrati funzionalità alla base dell'animazione API disponibili in un'applicazione Android.
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 

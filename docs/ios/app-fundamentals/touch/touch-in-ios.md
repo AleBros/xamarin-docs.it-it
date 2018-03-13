@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 4e640979305a568649c59f6c75033296153b99de
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 838a11f078d735759eda1d45a082ccbad51e2779
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="touch-in-ios"></a>Touch con iOS
 
@@ -23,7 +23,7 @@ Controlli in `UIKit` – tali sottoclassato da UIControl – dipendono pertanto 
 
 Tuttavia, molte delle visualizzazioni della `UIKit` non dispone di tocco abilitato per impostazione predefinita. Esistono due modi per abilitare tocco su un controllo. La prima consiste nel controllare la casella di controllo abilitato interazione dell'utente nel riquadro proprietà della finestra di progettazione, iOS come illustrato nella schermata seguente:
 
- [ ![](touch-in-ios-images/image1.png "Selezionare la casella di controllo interazione utente è abilitato nel riquadro proprietà della finestra di progettazione iOS")](touch-in-ios-images/image1.png)
+ [![](touch-in-ios-images/image1.png "Selezionare la casella di controllo interazione utente è abilitato nel riquadro proprietà della finestra di progettazione iOS")](touch-in-ios-images/image1.png#lightbox)
 
 È inoltre possibile utilizzare un controller per impostare il `UserInteractionEnabled` proprietà su true in un `UIView` classe. Ciò è necessario se l'interfaccia utente viene creato nel codice.
 
@@ -81,7 +81,7 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 
 Multi-touch non è abilitato per impostazione predefinita, i controlli. Multi-touch può essere abilitato nella finestra di progettazione, iOS, come illustrato nella schermata seguente:
 
- [ ![](touch-in-ios-images/image2.png "Multi-touch abilitata nella finestra di progettazione iOS")](touch-in-ios-images/image2.png)
+ [![](touch-in-ios-images/image2.png "Multi-touch abilitata nella finestra di progettazione iOS")](touch-in-ios-images/image2.png#lightbox)
 
 È anche possibile impostare a livello di programmazione Multi-touch impostando il `MultipleTouchEnabled` proprietà come illustrato nella riga di codice seguente:
 

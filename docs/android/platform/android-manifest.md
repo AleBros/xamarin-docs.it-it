@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 0f270111ad4e10f035a3cb695564d789f40097fd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: aa2d2ce6cabe9c394b9807ca3d6328da5b4ba311
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-the-android-manifest"></a>Utilizzo con il manifesto Android
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -24,7 +23,6 @@ ms.lasthandoff: 02/27/2018
 **AndroidManifest.xml** viene generato come parte del processo di compilazione e il codice XML trovato all'interno di **Properties/AndroidManifest.xml** viene unito con il XML generato dagli attributi personalizzati. Risultante unito **AndroidManifest.xml** si trova nel **obj** sottodirectory; ad esempio si trova in **obj/Debug/android/AndroidManifest.xml** per le compilazioni di Debug . Il processo di unione è semplice: attributi personalizzati all'interno del codice utilizzato per generare gli elementi XML, e *inserisce* gli elementi in **AndroidManifest.xml**. 
 
 
-<a name="The_Basics" />
 
 ## <a name="the-basics"></a>Nozioni di base
 
@@ -60,7 +58,6 @@ L'esempio seguente genera il seguente frammento xml da aggiungere alla **Android
 Il `[Activity]` attributo non ha alcun effetto `abstract` tipi; `abstract` tipi vengono ignorati.
 
 
-<a name="Activity_Name" />
 
 ### <a name="activity-name"></a>Nome attività
 
@@ -83,7 +80,6 @@ Questo esempio produce il seguente frammento xml:
 
 *Nota*: si consiglia di utilizzare il `Name` proprietà solo per motivi di compatibilità con le versioni precedenti, pertanto la ridenominazione può rallentare la ricerca del tipo in fase di esecuzione. Se si dispone di codice legacy che prevede che il nome del tipo predefinito dell'attività sia basata sullo spazio dei nomi lowercased e il nome della classe, vedere [Android Callable Wrapper denominazione](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Android_Callable_Wrapper_Naming) per suggerimenti sulla compatibilità di gestione. 
 
-<a name="Activity_Title_Bar" />
 
 ### <a name="activity-title-bar"></a>Sulla barra del titolo di attività
 
@@ -104,7 +100,6 @@ Questo esempio produce il seguente frammento xml:
           android:name="md5a7a3c803e481ad8926683588c7e9031b.MainActivity" />
 ```
 
-<a name="Launchable_from_Application_Chooser" />
 
 ### <a name="launchable-from-application-chooser"></a>Avviabili da selezione applicazione
 
@@ -130,7 +125,6 @@ Questo esempio produce il seguente frammento xml:
 ```
 
 
-<a name="Activity_Icon" />
 
 ### <a name="activity-icon"></a>Icona attività
 
@@ -155,7 +149,6 @@ Questo esempio produce il seguente frammento xml:
 </activity>
 ```
 
-<a name="Permissions" />
 
 ### <a name="permissions"></a>Autorizzazioni
 
@@ -178,11 +171,9 @@ Nella versione di versione del manifesto di compilazione (in **obj/Debug/android
 
 
 
-<a name="Advanced_Features" />
 
 ## <a name="advanced-features"></a>Funzionalità avanzate
 
-<a name="Intent_Actions_and_Features" />
 
 ### <a name="intent-actions-and-features"></a>Funzionalità e le azioni preventivo
 
@@ -214,7 +205,6 @@ Questo esempio produce il seguente frammento xml:
 </activity>
 ```
 
-<a name="Application_Element" />
 
 ### <a name="application-element"></a>Elemento dell'applicazione
 
@@ -243,7 +233,6 @@ Il `Application` elemento non è l'unico modo per configurare `<application>` at
 Esistono numerosi attributi a livello di applicazione che è possibile configurare nel `<application>` elemento; per ulteriori informazioni su queste impostazioni, vedere il [proprietà pubbliche](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/#Public_Properties) sezione [ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/). 
 
 
-<a name="List_of_Custom_Attributes" />
 
 ## <a name="list-of-custom-attributes"></a>Elenco di attributi personalizzati
 

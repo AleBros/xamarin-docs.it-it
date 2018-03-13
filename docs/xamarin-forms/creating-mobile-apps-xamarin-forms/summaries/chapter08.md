@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 8. Codice e XAML nel armonia
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: e95d6a20e828c92deb0e03fe1bcbcf18aac9e508
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 452a7835bcb54501edffe7a2467544c6677616ba
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-8-code-and-xaml-in-harmony"></a>Riepilogo del capitolo 8. Codice e XAML nel armonia
 
@@ -69,7 +70,7 @@ Qualsiasi `View` oggetto può ottenere l'input tocco e generare gli eventi da qu
 
 Il [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) genera [ `Tapped` ](https://developer.xamarin.com/api/event/Xamarin.Forms.TapGestureRecognizer.Tapped/) eventi. Il [ **MonkeyTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/MonkeyTap) programma illustra come collegare `TapGestureRecognizer` quattro oggetti `BoxView` elementi per creare un gioco le:
 
-[![Schermata di triplo della scelta monkey](images/ch08fg07-small.png "gioco imitazione")](images/ch08fg07-large.png "imitazione gioco")
+[![Schermata di triplo della scelta monkey](images/ch08fg07-small.png "gioco imitazione")](images/ch08fg07-large.png#lightbox "imitazione gioco")
 
 Ma la **MonkeyTap** suono effettivamente necessari al programma. (Vedere [capitolo successivo](chapter09.md).)
 

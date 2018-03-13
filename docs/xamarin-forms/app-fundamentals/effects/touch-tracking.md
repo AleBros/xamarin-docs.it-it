@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: 89d3b56a15110d0c106c43ce227f11f86bbdf404
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0fd037e62bcdb1b2be4c93dc0d32ca76f4e1ba8e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="invoking-events-from-effects"></a>Richiamo di eventi da effetti
 
@@ -448,7 +448,7 @@ Il `Moved` si sposta la logica di `BoxView` modificando il `LayoutBounds` propri
 
 È possibile spostare più `BoxView` elementi contemporaneamente utilizzando dita diverse.
 
-[![](touch-tracking-images/boxviewdragging-small.png "Schermata triplo della pagina BoxView trascinando")](touch-tracking-images/boxviewdragging-large.png "tripla schermata della pagina BoxView trascinando")
+[![](touch-tracking-images/boxviewdragging-small.png "Schermata triplo della pagina BoxView trascinando")](touch-tracking-images/boxviewdragging-large.png#lightbox "tripla schermata della pagina BoxView trascinando")
 
 ### <a name="subclassing-the-view"></a>La visualizzazione di creazione di sottoclassi
 
@@ -511,7 +511,7 @@ Le due dimostrazioni richiedono grafica e usano SkiaSharp a questo scopo. Si pot
 
 Il **disegno ellisse** pagina consente di disegnare un'ellisse scorrendo rapidamente verso il dito sullo schermo. A seconda di come si sposta il dito, è possibile disegnare l'ellisse da alto a sinistra in basso a destra o da qualsiasi altro angolo nell'angolo opposto. L'ellisse viene disegnata con un colore casuale e opacità.
 
-[![](touch-tracking-images/ellipsedrawing-small.png "Schermata triplo della pagina di disegno ellisse")](touch-tracking-images/ellipsedrawing-large.png "tripla schermata della pagina di disegno ellisse")
+[![](touch-tracking-images/ellipsedrawing-small.png "Schermata triplo della pagina di disegno ellisse")](touch-tracking-images/ellipsedrawing-large.png#lightbox "tripla schermata della pagina di disegno ellisse")
 
 Se si tocca quindi uno dei puntini di sospensione, è possibile trascinarlo in un'altra posizione. Questa operazione richiede una tecnica nota come "hit testing," che prevede la ricerca per l'oggetto grafico in un momento specifico. I puntini di sospensione SkiaSharp non sono elementi di xamarin. Forms, pertanto non possono eseguire le proprie `TouchEffect` l'elaborazione. Il `TouchEffect` deve applicare all'intero `SKCanvasView` oggetto.
 
@@ -683,7 +683,7 @@ case TouchActionType.Pressed:
 
 Un altro esempio SkiaSharp è il **Paint dito** pagina. È possibile selezionare un colore di traccia e spessore del tratto da due `Picker` Visualizza e quindi disegnare con le dita di una o più:
 
-[![](touch-tracking-images/fingerpaint-small.png "Schermata triplo della pagina di disegno con un dito")](touch-tracking-images/fingerpaint-large.png "tripla schermata della pagina di disegno con un dito")
+[![](touch-tracking-images/fingerpaint-small.png "Schermata triplo della pagina di disegno con un dito")](touch-tracking-images/fingerpaint-large.png#lightbox "tripla schermata della pagina di disegno con un dito")
 
 In questo esempio richiede inoltre una classe separata per rappresentare ogni riga disegnato sullo schermo:
 
@@ -791,7 +791,7 @@ Il `AddToList` e `RemoveFromList` entrambi i metodi controllano se il `List` è 
 
 I vari `WhiteKey` e `BlackKey` gli elementi sono disposti della pagina [file XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/SilentKeyboardPage.xaml), che ha un aspetto migliore quando il telefono viene mantenuto in modalità orizzontale:
 
-[![](touch-tracking-images/silentkeyboard-small.png "Schermata triplo della pagina tastiera")](touch-tracking-images/silentkeyboard-large.png "tripla schermata della pagina tastiera invisibile all'utente")
+[![](touch-tracking-images/silentkeyboard-small.png "Schermata triplo della pagina tastiera")](touch-tracking-images/silentkeyboard-large.png#lightbox "tripla schermata della pagina tastiera invisibile all'utente")
 
 Se si durante lo sweep dito tra le chiavi, verrà visualizzato per le piccole modifiche a colori che gli eventi tocco vengono trasferiti da una chiave a un altro.
 

@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1625fe15d76ffe2bd3712d9126d9bd217bf60085
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f47fded9c09849f6d5f1329a4efd652df80816d5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="manually-signing-the-apk"></a>Firma manuale del file APK
 
-<a name="signing_legacy" />
 
 Dopo la compilazione dell'applicazione per il rilascio e prima della distribuzione, il file APK deve essere firmato, in modo che possa essere eseguito in un dispositivo Android. Questo processo viene gestito in genere con l'ambiente IDE. In alcune situazioni, tuttavia, è necessario firmare il file APK manualmente dalla riga di comando. La firma di un file APK prevede i passaggi seguenti:
 
@@ -29,7 +28,6 @@ Dopo la compilazione dell'applicazione per il rilascio e prima della distribuzio
 L'ordine dei passaggi è importante e dipende dallo strumento usato per firmare il file APK. Quando si usa **apksigner**, è importante prima eseguire **Zipalign** per l'applicazione e quindi firmare quest'ultima con **apksigner**.  Se per firmare il file APK è necessario usare **jarsigner**, è importante prima firmare il file APK e quindi eseguire **Zipalign**. 
 
 
-<a name="Prerequisites" />
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -38,7 +36,6 @@ Questa guida descrive principalmente l'uso dell'utilità **apksigner** presente 
 Le applicazioni compilate con una versione precedente degli strumenti di compilazione di Android SDK devono usare **jarsigner** come descritto in [Firmare il file APK con jarsigner](#Sign_the_APK_with_jarsigner) più avanti.
 
 
-<a name="Creating_a_Private_Keystore" />
 
 ## <a name="create-a-private-keystore"></a>Creare un archivio chiavi privato
 
@@ -53,7 +50,6 @@ Per questo motivo, per la firma delle applicazioni è necessario creare e usare 
 L'unica soluzione al problema causato dallo smarrimento dell'archivio chiavi è la creazione di un nuovo archivio chiavi che consenta di firmare nuovamente il file APK con una nuova chiave. Sarà quindi necessario inviare una nuova applicazione. La vecchia applicazione dovrà essere rimossa da Google Play. Analogamente, se il nuovo archivio chiavi viene compromesso o distribuito pubblicamente, è possibile che vengano distribuite versioni non ufficiali o dannose di un'applicazione.
 
 
-<a name="Create_a_New_Keystore" />
 
 ### <a name="create-a-new-keystore"></a>Creare un nuovo archivio chiavi
 
@@ -99,7 +95,6 @@ Per elencare le chiavi archiviate in un archivio chiavi, usare **keytool** con l
 $ keytool -list -keystore xample.keystore
 ```
 
-<a name="Zipalign_the_APK" />
 
 ## <a name="zipalign-the-apk"></a>Eseguire Zipalign per il file APK
 
@@ -111,7 +106,6 @@ Il comando seguente usa il file APK firmato e genera l'APK **helloworld.apk** fi
 $ zipalign -f -v 4 mono.samples.helloworld-unsigned.apk helloworld.apk
 ```
 
-<a name="Manually_Signing_the_APK" />
 
 ## <a name="sign-the-apk"></a>Firmare il pacchetto APK
 

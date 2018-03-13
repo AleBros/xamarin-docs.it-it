@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 30b7e322d618492164fac5e439c5187616d61717
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 32326eb472b1bb8b4fbaf4066edc36255f5948ca
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="dots-and-dashes"></a>Punti e trattini
 
@@ -155,7 +155,7 @@ float[] GetPickerArray(Picker picker)
 
 Nelle schermate seguenti, la schermata di iOS all'estrema sinistra mostra una linea punteggiata:
 
-[![](dots-images/dotsanddashes-small.png "La schermata della pagine dei punti e trattini")](dots-images/dotsanddashes-large.png "tripla schermata della pagine dei punti e trattini")
+[![](dots-images/dotsanddashes-small.png "La schermata della pagine dei punti e trattini")](dots-images/dotsanddashes-large.png#lightbox "tripla schermata della pagine dei punti e trattini")
 
 Tuttavia, la schermata Android dovrebbe anche per visualizzare una linea punteggiata usando la matrice {10, 10} ma invece la riga è a tinta unita. Cosa è successo? Il problema è che la schermata di Android include anche un'impostazione maiuscole tratto di `Square`. Estende a tutti i trattini per metà larghezza del tratto, provocando riempire i gap.
 
@@ -213,7 +213,7 @@ protected override void OnAppearing()
 
 Naturalmente, è necessario eseguire effettivamente il programma per visualizzare l'animazione:
 
-[![](dots-images/animatedspiral-small.png "Schermata triplo della pagina spirale animato")](dots-images/animatedspiral-large.png "tripla schermata della pagina spirale animato")
+[![](dots-images/animatedspiral-small.png "Schermata triplo della pagina spirale animato")](dots-images/animatedspiral-large.png#lightbox "tripla schermata della pagina spirale animato")
 
 Abbiamo visto come per disegnare linee e curve utilizzando equazioni parametriche. Una sezione per la pubblicazione in un secondo momento illustra i vari tipi di curve che `SKPath` supporta.
 

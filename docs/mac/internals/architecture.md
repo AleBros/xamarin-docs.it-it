@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 4e4392a52035c8285bc746da75e93fcb8e7c7695
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e32a06499d68c58bedbe88b24dc40b6c86ee8d0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinmac-architecture"></a>Architettura Xamarin.Mac
 
@@ -24,7 +24,7 @@ Xamarin.Mac applicazioni eseguite all'interno dell'ambiente di esecuzione Mono e
 
 Il diagramma seguente mostra una panoramica dell'architettura di base:
 
-[![Diagramma che mostra una panoramica dell'architettura di base](architecture-images/mac-arch.png "diagramma che mostra una panoramica dell'architettura di base")](architecture-images/mac-arch-large.png)
+[![Diagramma che mostra una panoramica dell'architettura di base](architecture-images/mac-arch.png "diagramma che mostra una panoramica dell'architettura di base")](architecture-images/mac-arch-large.png#lightbox)
 
 ### <a name="native-and-managed-code"></a>Codice gestito e nativo
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: c8f6832f618c37b3593f28c8efaeb87e4df5df03
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fba8412c53597260744bdce443a7e993a6990672
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-resource-basics"></a>Nozioni fondamentali sulla risorsa Android
 
@@ -39,7 +39,6 @@ I cinque file che costituiscono le risorse predefinite sono stati creati nella c
 
 -  **Cs** &ndash; questo file viene automaticamente generato e gestito da xamarin e univoci contiene gli ID assegnati a ogni risorsa. Questo è molto simile e scopo identico al file R.java che potrebbe avere un'applicazione Android scritta in Java. Viene creata automaticamente dagli strumenti di xamarin e verrà rigenerato nel tempo.
 
-<a name="Creating_and_Accessing_Resources" />
 
 ## <a name="creating-and-accessing-resources"></a>Creazione e l'accesso alle risorse
 
@@ -62,7 +61,6 @@ Inoltre, è importante notare che mentre Android supporta solo nomi file lettere
 
 Una volta le risorse sono stati aggiunti a un progetto, sono disponibili due modalità di utilizzo in un'applicazione &ndash; a livello di codice (all'interno di codice) o dai file XML.
 
-<a name="Referencing_Resources_Programmatically" />
 
 ## <a name="referencing-resources-programmatically"></a>Riferimento alle risorse a livello di codice
 
@@ -108,7 +106,6 @@ Quando si fa riferimento alle risorse a livello di codice (nel codice), è possi
 
 -  **Nome della risorsa** &ndash; questo è il nome del file della risorsa (senza estensione) o il valore dell'attributo android: name per le risorse presenti in un elemento XML.
 
-<a name="Referencing_Resources_from_XML" />
 
 ## <a name="referencing-resources-from-xml"></a>Riferimento alle risorse da XML
 

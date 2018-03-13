@@ -4,14 +4,15 @@ description: Informazioni su come utilizzare la trasformazione di conversione da
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 491c82406dafceb876ddbb4a0a7204447b95f57d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cac2479af2778af6043a85583f9d7b518748d7da
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-translate-transform"></a>La trasformazione di conversione
 
@@ -68,7 +69,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 I rettangoli successivi inserimento in basso nella pagina:
 
-[![](translate-images/accumulatedtranslate-small.png "Schermata triplo della pagina accumulati tradurre")](translate-images/accumulatedtranslate-large.png "tripla schermata della pagina accumulati tradurre")
+[![](translate-images/accumulatedtranslate-small.png "Schermata triplo della pagina accumulati tradurre")](translate-images/accumulatedtranslate-large.png#lightbox "tripla schermata della pagina accumulati tradurre")
 
 Se sono i fattori di conversione accumulato `dx` e `dy`, e il punto specificato in una funzione di disegno (`x`, `y`), quindi il rendering dell'oggetto grafico in corrispondenza del punto (`x'`, `y'`), dove:
 
@@ -125,7 +126,7 @@ using (SKPaint textPaint = new SKPaint())
 
 In ognuno dei tre esempi, `Translate` viene chiamato per visualizzare il testo per eseguire l'offset dal percorso specificato per il `x` e `y` variabili. Quindi, il testo viene visualizzato nuovamente in un altro colore senza alcun effetto di conversione:
 
-[![](translate-images/translatetexteffects-small.png "Schermata di triplo della pagina tradurre gli effetti del testo")](translate-images/translatetexteffects-large.png "tripla schermata della pagina tradurre gli effetti del testo")
+[![](translate-images/translatetexteffects-small.png "Schermata di triplo della pagina tradurre gli effetti del testo")](translate-images/translatetexteffects-large.png#lightbox "tripla schermata della pagina tradurre gli effetti del testo")
 
 Ciascuno dei tre esempi viene illustrato un modo diverso per la negazione di `Translate` chiamare:
 
@@ -209,7 +210,7 @@ public class HendecagramArrayPage : ContentPage
 
 Di seguito è riportato il risultato:
 
-[![](translate-images/hendecagramarray-small.png "Schermata triplo della pagina matrice Hendecagram")](translate-images/hendecagramarray-large.png "tripla schermata della pagina Hendecagram matrice")
+[![](translate-images/hendecagramarray-small.png "Schermata triplo della pagina matrice Hendecagram")](translate-images/hendecagramarray-large.png#lightbox "tripla schermata della pagina Hendecagram matrice")
 
 Le animazioni comportano spesso le trasformazioni. Il **Hendecagram animazione** pagina si sposta la stella 11 dei checkpoint in un cerchio. Il [ `HendecagramAnimationPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/HendecagramAnimationPage.cs) classe inizia con alcuni campi ed esegue l'override del `OnAppearing` e `OnDisappearing` metodi per avviare e arrestare un timer di xamarin. Forms:
 
@@ -294,7 +295,7 @@ public class HendecagramAnimationPage : ContentPage
 
 Il `PaintSurface` chiamate del gestore di `Translate` metodo due volte, per eseguire la conversione al centro dell'area di disegno, quindi per tradurre la circonferenza del cerchio centrata (0, 0). Il raggio del cerchio viene impostato per essere più grande possibile mantenendo comunque la stella entro confini della pagina:
 
-[![](translate-images/hendecagramanimation-small.png "Schermata triplo della pagina animazione Hendecagram")](translate-images/hendecagramanimation-large.png "tripla schermata della pagina Hendecagram animazione")
+[![](translate-images/hendecagramanimation-small.png "Schermata triplo della pagina animazione Hendecagram")](translate-images/hendecagramanimation-large.png#lightbox "tripla schermata della pagina Hendecagram animazione")
 
 Si noti che la stella mantenga lo stesso orientamento come che ruota intorno al centro della pagina. Non è possibile ruotare affatto. Che è un processo per una trasformazione rotativa.
 

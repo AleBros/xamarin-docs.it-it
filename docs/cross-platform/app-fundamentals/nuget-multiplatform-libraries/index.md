@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2017
-ms.openlocfilehash: 66bf9c215e3d30687fa8037220b8b35409ca285d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 49e7c00feb697d25d61a5e09b051c41945c260c6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="nuget-projects-nugetizer-3000"></a>Progetti di NuGet (Nugetizer 3000)
 
@@ -21,14 +21,18 @@ _Creare automaticamente i pacchetti NuGet per condividere il codice tra piattafo
 È possibile creare automaticamente i pacchetti NuGet per condividere il codice tra piattaforme che utilizzano il _Nugetizer 3000_. In questo modo è possibile creare pacchetti NuGet da progetti di libreria esistente o creando un nuovo **il progetto di libreria multipiattaforma**.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+
 Il 3000 Nugetizer è incluso in Visual Studio per Mac 6.2.
+
+[![](images/mulitplatform-library-sml.png "Creare finestra nuova libreria multipiattaforma")](images/mulitplatform-library.png#lightbox)
+
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-<a name="to-use-the-nugetizer-3000-in-visual-studio-please-download-and-run-the-vsix-installerhttpbitlynugetizer-2017"></a>Per utilizzare il 3000 Nugetizer in Visual Studio, eseguire [scaricare ed eseguire il programma di installazione VSIX](http://bit.ly/nugetizer-2017).
+
+Per utilizzare il 3000 Nugetizer in Visual Studio, eseguire [scaricare ed eseguire il programma di installazione VSIX](http://bit.ly/nugetizer-2017).
+
 -----
 
-
-
-[ ![](images/mulitplatform-library-sml.png "Creare finestra nuova libreria multipiattaforma")](images/mulitplatform-library.png)
+## <a name="building-nuget-packages"></a>Pacchetti NuGet di compilazione
 
 Una volta configurato, ogni compilazione del progetto genera un pacchetto NuGet completato, che può essere usato per condividere codice internamente con altre App o caricato in [NuGet.org](https://www.nuget.org).
 

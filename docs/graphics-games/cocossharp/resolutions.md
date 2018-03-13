@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 0c79e982e7f6543c6dc34885b0afcd7056989a96
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b76376bdbcf10bf35768cfdb79b6823388e303c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>La gestione di più risoluzioni in CocosSharp
 
@@ -22,33 +22,12 @@ CocosSharp fornisce metodi per la standardizzazione di dimensioni di oggetto del
 
 Il comportamento di risoluzione predefinito di CocosSharp è per trovare la corrispondenza con le coordinate di gioco pixel fisici. Nella tabella seguente viene illustrato come vari dispositivi renderebbe sprite ambiente sfondo con larghezza e altezza di 368 x 240. La prima riga è tecnicamente non un dispositivo reale, ma piuttosto il rendering previsto di sprite, indipendentemente dalla risoluzione di dispositivo:
 
-<table>
-    <thead>
-        <tr>
-            <th>Dispositivo</th>
-            <th>Risoluzione dello schermo</th>
-            <th>Schermata di esempio</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Visualizzazione desiderato</td>
-            <td>368 x 240 (con barre nere per proporzioni)</td>
-            <td><img src="resolutions-images/image1.png" title="368 x 240 (con barre nere per proporzioni)" /></td>
-        </tr>
-        <tr>
-            <td>iPhone 4s</td>
-            <td>960x640</td>
-            <td><img src="resolutions-images/image2.png" title="iPhone 4s 960x640" /></td>
-        </tr>
-        <tr>
-            <td>iPhone 6 Plus</td>
-            <td>1920x1080</td>
-            <td><img src="resolutions-images/image3.png" title="iPhone 6 Plus 1920x1080" /></td>
-        </tr>
-    </tbody>
-</table>
 
+| **Dispositivo** | **Risoluzione dello schermo** | **Schermata di esempio** |
+|--- | --- |--- |
+|Visualizzazione desiderato|368 x 240 (con barre nere per proporzioni)| ![368 x 240 (con barre nere per proporzioni)](resolutions-images/image1.png) |
+|iPhone 4s|960x640| ![iPhone 4s 960x640](resolutions-images/image2.png) |
+|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920x1080](resolutions-images/image3.png) |
 
 Questo documento viene illustrato come utilizzare CocosSharp per risolvere il problema, illustrato nella tabella precedente. Vale a dire, trattati come rendere qualsiasi dispositivo di rendering, come illustrato nella prima riga, indipendentemente dalla risoluzione dello schermo.
 

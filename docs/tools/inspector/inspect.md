@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: bd6d47f98435cc68ecf4156423526c31dbac09da
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c923208b7ca4d41914504b4b0aa0687db1d49f01
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="inspecting-live-applications"></a>Controllo delle applicazioni in tempo reale
 
@@ -27,11 +27,11 @@ L'ispezione applicazione in tempo reale è disponibile per i clienti aziendali.
 
 
 
-[ ![](inspect-images/mac-heres-the-button.png "Fare clic sul pulsante Controlla sulla barra degli strumenti dell'IDE")](inspect-images/mac-heres-the-button.png)
+[![](inspect-images/mac-heres-the-button.png "Fare clic sul pulsante Controlla sulla barra degli strumenti dell'IDE")](inspect-images/mac-heres-the-button.png#lightbox)
 
 Verrà aperta una nuova finestra di client di controllo di Xamarin, con una nuova richiesta REPL.
 
-[ ![](inspect-images/inspector-0.7.0-map-inspect-small.png "Verrà visualizzata una nuova finestra del client Xamarin controllo con una nuova richiesta REPL")](inspect-images/inspector-0.7.0-map-inspect.png)
+[![](inspect-images/inspector-0.7.0-map-inspect-small.png "Verrà visualizzata una nuova finestra del client Xamarin controllo con una nuova richiesta REPL")](inspect-images/inspector-0.7.0-map-inspect.png#lightbox)
 
 Una volta che viene visualizzata questa finestra, è necessario un prompt c# interattivo che è possibile utilizzare per eseguire e valutare espressioni e istruzioni di c#. Ciò che rende unico è che il codice viene valutato nel contesto del processo di destinazione. In questo caso, viene mostrato il codice in esecuzione per l'applicazione iOS visualizzato.
 

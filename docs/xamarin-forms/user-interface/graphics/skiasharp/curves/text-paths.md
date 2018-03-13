@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 08/01/2017
-ms.openlocfilehash: bf382f380876e85db46226fb3586382f20d630f2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b22cebf8ca5804884c559da687fe90236c7af44d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="paths-and-text"></a>I percorsi e testo
 
@@ -44,7 +44,7 @@ Il `GetTextPath` metodo è inutile se si desidera semplicemente compilare o trac
 
 Una di queste attività è ritaglio. Il **il ritaglio di testo** pagina Crea un tracciato di ritaglio sulla base delle strutture di carattere della parola "CODE". Questo percorso viene estesa per le dimensioni della pagina per una bitmap che contiene un'immagine di ritagliare il **ritaglio testo** codice sorgente:
 
-[![](text-paths-images/clippingtext-small.png "Schermata triplo della pagina di testo di ritaglio")](text-paths-images/clippingtext-large.png "tripla schermata della pagina di testo di ritaglio")
+[![](text-paths-images/clippingtext-small.png "Schermata triplo della pagina di testo di ritaglio")](text-paths-images/clippingtext-large.png#lightbox "tripla schermata della pagina di testo di ritaglio")
 
 Il [ `ClippingTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) costruttore della classe carica la bitmap che verrà archiviata come una risorsa incorporata nel **Media** cartella della soluzione:
 
@@ -125,7 +125,7 @@ Dopo aver impostato il tracciato di ritaglio, la mappa di bit può essere visual
 
 Il **effetto di testo percorso** pagina converte un carattere e commerciale singola in un percorso per creare un effetto di percorso 1 D. Un oggetto di disegno con effetto in questo percorso viene quindi utilizzato per tracciare la struttura di una versione più grande di tale carattere stesso:
 
-[![](text-paths-images/textpatheffect-small.png "Schermata triplo della pagina di testo percorso effetto")](text-paths-images/textpatheffect-large.png "tripla schermata della pagina di testo percorso effetto")
+[![](text-paths-images/textpatheffect-small.png "Schermata triplo della pagina di testo percorso effetto")](text-paths-images/textpatheffect-large.png#lightbox "tripla schermata della pagina di testo percorso effetto")
 
 Quantità di lavoro nel [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) classe viene generata nei campi e il costruttore. I due `SKPaint` oggetti definiti come campi sono utilizzati per scopi diversi due: il primo (denominato `textPathPaint`) viene utilizzato per convertire la e commerciale con un `TextSize` di 50 a un percorso per l'effetto di percorso 1 D. Il secondo (`textPaint`) viene utilizzato per visualizzare la versione più grande della e commerciale con effetto tale percorso. Per questo motivo, il `Style` di questo disegno secondo oggetto è impostato su `Stroke`, ma la `StrokeWidth` non è impostata in quanto tale proprietà non è necessaria quando si usa un effetto di percorso 1D:
 
@@ -270,7 +270,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Il `PaintSurface` gestore crea quindi un nuovo percorso denominato `outlinePath`. Questo valore diventa il percorso di destinazione nella chiamata a `GetFillPath`. Il `StrokeWidth` proprietà 25 cause `outlinePath` per descrivere la struttura di un percorso di larghezza di 25 pixel che traccia i caratteri di testo. Questo percorso viene quindi visualizzato in rosso con un valore pari a 5:
 
-[![](text-paths-images/characteroutlineoutlines-small.png "Tripla schermata della pagine dei contorni struttura caratteri")](text-paths-images/characteroutlineoutlines-large.png "tripla schermata della pagine dei contorni struttura caratteri")
+[![](text-paths-images/characteroutlineoutlines-small.png "Tripla schermata della pagine dei contorni struttura caratteri")](text-paths-images/characteroutlineoutlines-large.png#lightbox "tripla schermata della pagine dei contorni struttura caratteri")
 
 Prestare particolare attenzione, si noterà sovrapposizioni in cui la struttura del percorso rende un angolo acuto. Questi valori sono elementi normale di questo processo.
 
@@ -323,7 +323,7 @@ public class CircularTextPage : ContentPage
 
 Il `TextSize` proprietà `textPaint` quindi viene regolato in modo che la larghezza corrisponda la circonferenza del cerchio:
 
-[![](text-paths-images/circulartext-small.png "Schermata triplo della pagina di testo circolare")](text-paths-images/circulartext-large.png "tripla schermata della pagina di testo circolare")
+[![](text-paths-images/circulartext-small.png "Schermata triplo della pagina di testo circolare")](text-paths-images/circulartext-large.png#lightbox "tripla schermata della pagina di testo circolare")
 
 Il testo è stata scelta per essere in qualche modo circolare: la parola "circle" è l'oggetto della frase sia l'oggetto di una frase preposizionali. 
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d4446d30491ee796ca93eadf2e107fc9d74748df
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e7f2ad9e94d68007b1b7d0cca212cd51515a0108
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="custom-video-positioning"></a>Il posizionamento video personalizzato
 
@@ -472,7 +472,7 @@ Pertanto, il `Position` proprietà del `VideoPlayer` può essere associato al `P
 
 Nasconde i puntini di sospensione (···) prima di `ActivityIndicator`; è uguale a quello precedente **trasporto Custom** pagina. Notare i due `Label` la visualizzazione di elementi di `Position` e `TimeToEnd` proprietà. I puntini di sospensione tra questi due `Label` elementi nasconde i due `Button` elementi mostrati nel **trasporto Custom** pagina per la riproduzione, pausa e arresto. La logica code-behind equivale inoltre il **trasporto Custom** pagina.
 
-[![Il posizionamento personalizzato](custom-positioning-images/custompositioning-small.png "il posizionamento personalizzato")](custom-positioning-images/custompositioning-large.png "il posizionamento personalizzato")
+[![Il posizionamento personalizzato](custom-positioning-images/custompositioning-small.png "il posizionamento personalizzato")](custom-positioning-images/custompositioning-large.png#lightbox "il posizionamento personalizzato")
 
 Questa operazione conclude la discussione relativa la `VideoPlayer`.
 

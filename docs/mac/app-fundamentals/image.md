@@ -3,16 +3,16 @@ title: Immagini
 description: In questo articolo viene descritto l'utilizzo di immagini e icone in un'applicazione Xamarin.Mac. Descrive la creazione e la manutenzione delle immagini necessarie per creare l'icona dell'applicazione e l'utilizzo di immagini nel codice c# e nel generatore di interfaccia di Xcode.
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: f12b2af0c9325796db63fcd65af135f54277ece0
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d8098afea87765166db8318b76adf250818a0a6f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="images"></a>Immagini
 
@@ -34,7 +34,7 @@ Esistono diversi modi quell'immagine asset vengono utilizzati all'interno di un'
 
 Inoltre, macOS fornisce un set di immagini predefinite che possono essere usate nell'applicazione.
 
-[![Eseguire un esempio dell'app](image-images/intro01.png "eseguire un esempio dell'app")](image-images/intro01-large.png)
+[![Eseguire un esempio dell'app](image-images/intro01.png "eseguire un esempio dell'app")](image-images/intro01-large.png#lightbox)
 
 In questo articolo verranno descritte le nozioni fondamentali sull'utilizzo di immagini e icone in un'applicazione Xamarin.Mac. È altamente consigliabile che il [Hello, Mac](~/mac/get-started/hello-mac.md) articolo prima di tutto, in particolare il [Introduzione a Xcode e interfaccia generatore](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [punti vendita e le azioni](~/mac/get-started/hello-mac.md#Outlets_and_Actions) le sezioni, come illustra i concetti chiave e le tecniche che verrà usato in questo articolo.
 
@@ -59,18 +59,18 @@ Come descritto in precedenza, un **Asset cataloghi immagine set** contengono tut
     ![Selezione di Assets.xcassets](image-images/imageset01.png "selezionando il Assets.xcassets")
 2. Fare clic su di **elenco risorse** e selezionare **nuova immagine impostata**: 
 
-    [![Aggiunta di un nuovo set di immagini](image-images/imageset02.png "aggiunta di un nuovo set di immagini")](image-images/imageset02-large.png)
+    [![Aggiunta di un nuovo set di immagini](image-images/imageset02.png "aggiunta di un nuovo set di immagini")](image-images/imageset02-large.png#lightbox)
 3. Selezionare il nuovo set di immagini e verrà visualizzato l'editor: 
 
-    [![Selezionare il nuovo set di immagini](image-images/imageset03.png "selezionando il nuovo set di immagini")](image-images/imageset03-large.png)
+    [![Selezionare il nuovo set di immagini](image-images/imageset03.png "selezionando il nuovo set di immagini")](image-images/imageset03-large.png#lightbox)
 4. Da qui è possibile trascinare le immagini per ciascuno dei diversi dispositivi e risoluzioni necessarie. 
 5. Fare doppio clic sul nuovo set di immagini **nome** nel **elenco risorse** modificarla: 
 
-    [![Nome del set di modifica dell'immagine](image-images/imageset04.png "nome del set di modifica dell'immagine")](image-images/imageset04-large.png)
+    [![Nome del set di modifica dell'immagine](image-images/imageset04.png "nome del set di modifica dell'immagine")](image-images/imageset04-large.png#lightbox)
     
 Una speciale **vettore** come è stato aggiunto a **set immagine** che consente di includere un _PDF_ formato immagine vettore di casset invece inclusi file bitmap singoli le diverse risoluzioni. Questo metodo è fornire un file singolo vettore per il  **@1x**  risoluzione (formattata come file PDF vettore) e  **@2x**  e  **@3x**  versioni del file verranno generate in fase di compilazione e inclusi nel bundle dell'applicazione.
 
-[![Interfaccia dell'editor di impostare l'immagine](image-images/imageset05.png "l'immagine di imposta l'interfaccia dell'editor")](image-images/imageset05-large.png)
+[![Interfaccia dell'editor di impostare l'immagine](image-images/imageset05.png "l'immagine di imposta l'interfaccia dell'editor")](image-images/imageset05-large.png#lightbox)
 
 Ad esempio, se si include un `MonkeyIcon.pdf` file come vettore di un catalogo di Asset con una risoluzione di 150 px x 150px, la mappa di bit seguente asset sono incluso nel bundle di app finale durante la compilazione:
 
@@ -115,7 +115,7 @@ Prima di poter usare un file di immagine Xamarin.Mac nell'applicazione in uso (n
     ![Aggiunta di un file](image-images/add01.png "aggiunta di un file")
 2. Dal **Aggiungi file** la finestra di dialogo, seleziona le immagini di file da aggiungere al progetto, selezionare `BundleResource` per il **Override azione di compilazione** e fare clic su di **aprire** pulsante:
 
-    [![Selezionando i file da aggiungere](image-images/add02.png "selezionando i file da aggiungere")](image-images/add02-large.png)
+    [![Selezionando i file da aggiungere](image-images/add02.png "selezionando i file da aggiungere")](image-images/add02-large.png#lightbox)
 3. Se i file non sono già nel **risorse** cartella, verrà chiesto se si desidera **copia**, **spostare** o **collegamento** i file. Scegliere quale ogni tute le esigenze, in genere che saranno **copia**:
 
     ![Selezionando l'azione Aggiungi](image-images/add04.png "selezionando l'azione Aggiungi")
@@ -164,13 +164,13 @@ Per utilizzare un'immagine in Generatore di interfaccia, eseguire le operazioni 
      ![Una risorsa immagine nel riquadro soluzione](image-images/ib00.png "una risorsa immagine nel riquadro soluzione")
 2. Fare doppio clic su di **Main** file per aprirlo e modificarlo in Generatore di interfaccia: 
 
-     [![La modifica di storyboard principale](image-images/ib01.png "la modifica di storyboard principale")](image-images/ib01-large.png)
+     [![La modifica di storyboard principale](image-images/ib01.png "la modifica di storyboard principale")](image-images/ib01-large.png#lightbox)
 3. Trascinare un elemento dell'interfaccia utente che accetta le immagini nell'area di progettazione (ad esempio, un **immagine della barra degli strumenti**): 
 
      ![Modifica di un elemento della barra degli strumenti](image-images/ib02.png "modifica di un elemento della barra degli strumenti")
 4. Selezionare l'immagine che è stato aggiunto per il **risorse** cartella la **nome immagine** elenco a discesa: 
 
-     [![Selezione di un'immagine per un elemento della barra degli strumenti](image-images/ib03.png "selezionando un'immagine per un elemento della barra degli strumenti")](image-images/ib03-large.png)
+     [![Selezione di un'immagine per un elemento della barra degli strumenti](image-images/ib03.png "selezionando un'immagine per un elemento della barra degli strumenti")](image-images/ib03-large.png#lightbox)
 5. L'immagine selezionata verrà visualizzato nell'area di progettazione: 
 
      ![L'immagine viene visualizzata nell'editor barra degli strumenti](image-images/ib04.png "l'immagine viene visualizzata nell'editor barra degli strumenti")
@@ -205,7 +205,7 @@ In base alla struttura dell'app macOS, potrebbero esserci casi è necessario per
 
 Per ottenere questo effetto, passare il _modalità rendering_ nell'asset di immagine per **immagine modello**:
 
-[![Impostazione di un'immagine modello](image-images/templateimage01.png "impostazione di un'immagine modello")](image-images/templateimage01-large.png)
+[![Impostazione di un'immagine modello](image-images/templateimage01.png "impostazione di un'immagine modello")](image-images/templateimage01-large.png#lightbox)
 
 Da Generatore di interfaccia di Xcode, assegnare l'Asset di immagine a un controllo dell'interfaccia utente:
 
@@ -337,7 +337,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 Output di esempio:
 
-[![Un esempio di visualizzazione di un'immagine in un'app](image-images/tables01.png "un esempio di visualizzazione di un'immagine in un'app")](image-images/tables01-large.png)
+[![Un esempio di visualizzazione di un'immagine in un'app](image-images/tables01.png "un esempio di visualizzazione di un'immagine in un'app")](image-images/tables01-large.png#lightbox)
 
 Per ulteriori informazioni sull'utilizzo di viste di tabella, vedere il nostro [viste delle tabelle](~/mac/user-interface/table-view.md) documentazione.
 
@@ -440,7 +440,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 Output di esempio:
 
-[![Un esempio di un'immagine viene visualizzata in una visualizzazione struttura](image-images/outline01.png "un esempio di un'immagine viene visualizzata in una visualizzazione struttura")](image-images/outline01-large.png)
+[![Un esempio di un'immagine viene visualizzata in una visualizzazione struttura](image-images/outline01.png "un esempio di un'immagine viene visualizzata in una visualizzazione struttura")](image-images/outline01-large.png#lightbox)
 
 Per ulteriori informazioni sull'utilizzo di visualizzazioni della struttura, consultare il nostro [visualizzazioni della struttura](~/mac/user-interface/outline-view.md) documentazione.
 
@@ -453,9 +453,9 @@ In questo articolo è stato applicato l'utilizzo di immagini e icone in un'appli
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [MacImages (esempio)](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages (sample)](https://developer.xamarin.com/samples/mac/MacImages/) (MacImages - Esempio)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Viste delle tabelle](~/mac/user-interface/table-view.md)
 - [Visualizzazioni della struttura](~/mac/user-interface/outline-view.md)
 - [macOS X linee guida dell'interfaccia umana](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
-- [Informazioni sulla risoluzione elevata per OS X](https://developer.apple.com/library/content/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Introduction/Introduction.html)
+- [About High Resolution for OS X](https://developer.apple.com/library/content/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Introduction/Introduction.html) (Informazioni sulla risoluzione elevata per OS X)

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 42ef3e6c82763831b5114f3de7603bba8f59eac6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c582e0306bdc69570e3f8e8d35c7fa15b30523da
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="custom-animations"></a>Animazioni personalizzate
 
@@ -54,7 +54,7 @@ Gli argomenti seguenti vengono specificati nel `Commit` metodo:
 L'effetto generale consiste nel creare un'animazione che aumenta la [ `Scale` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Scale/) proprietà di un [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) compreso tra 1 e 2, maggiore di 2 secondi (2000 millisecondi), utilizzando il [ `Linear` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.Linear/) la funzione di interpolazione. Ogni volta che il completamento dell'animazione, il relativo `Scale` viene reimpostata su 1 e la ripetizione dell'animazione.
 
 > [!NOTE]
-> **Nota**: animazioni simultanee, eseguiti indipendentemente uno da altro possono essere costruite creando un `Animation` per ogni animazione dell'oggetto e chiamando quindi il `Commit` metodo su ogni animazione.
+> Le animazioni simultanee, eseguiti indipendentemente uno da altro possono essere costruite creando un `Animation` per ogni animazione dell'oggetto e chiamando quindi il `Commit` metodo su ogni animazione.
 
 <a name="child" />
 

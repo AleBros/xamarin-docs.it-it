@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: f0201e114f55e0610aceb68f98fae60a801afc68
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f943d6b88d2fd7f38759fb32ecb612e102266657
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-collection-views"></a>Utilizzo delle visualizzazioni di raccolta
 
@@ -20,7 +20,7 @@ _Questo articolo descrive la progettazione e l'utilizzo di viste di raccolta all
 
 Viste di raccolta consentono di un gruppo di contenuto deve essere visualizzato utilizzando layout arbitrario. Con il supporto incorporato, consentono i layout di griglia o lineare semplice creazione, supporta i layout personalizzati.
 
-[ ![](collection-views-images/collection01.png "Visualizzazione di raccolta di esempio")](collection-views-images/collection01.png)
+[![](collection-views-images/collection01.png "Visualizzazione di raccolta di esempio")](collection-views-images/collection01.png#lightbox)
 
 La visualizzazione raccolta gestisce una raccolta di elementi tramite un delegato e un'origine dati per fornire l'interazione dell'utente e il contenuto della raccolta. Poiché la visualizzazione della raccolta è basata su un sottosistema di Layout che è indipendente dalla vista stessa, che fornisce un Layout diverso è possibile modificare facilmente la presentazione di dati di volo della vista di raccolta.
 
@@ -103,36 +103,36 @@ Di seguito, eseguire le operazioni seguenti:
 1. Nel **Esplora**, fare doppio clic su di `Main.storyboard` e aprirlo nella finestra di progettazione iOS.
 1. Aggiungere una visualizzazione di immagini, un'etichetta e un pulsante per la vista esistente e configurarli in modo simile al seguente: 
 
-    [ ![](collection-views-images/collection02.png "Layout di esempio")](collection-views-images/collection02.png)
+    [![](collection-views-images/collection02.png "Layout di esempio")](collection-views-images/collection02.png#lightbox)
 1. Assegnare un **nome** per la visualizzazione di immagini e l'etichetta nel **scheda Widget** del **Esplora proprietà**. Ad esempio: 
 
-    [ ![](collection-views-images/collection03.png "L'impostazione del nome")](collection-views-images/collection03.png)
+    [![](collection-views-images/collection03.png "L'impostazione del nome")](collection-views-images/collection03.png#lightbox)
 1. Successivamente, trascinare un Controller di visualizzazione di raccolta dello Storyboard: 
 
-    [ ![](collection-views-images/collection04.png "Un Controller di visualizzazione di raccolta")](collection-views-images/collection04.png)
+    [![](collection-views-images/collection04.png "Un Controller di visualizzazione di raccolta")](collection-views-images/collection04.png#lightbox)
 1. Trascinamento del controllo pulsante al Controller di visualizzazione di raccolta e selezionare **Push** nel popup: 
 
-    [ ![](collection-views-images/collection05.png "Selezionare la finestra popup di Push")](collection-views-images/collection05.png)
+    [![](collection-views-images/collection05.png "Selezionare la finestra popup di Push")](collection-views-images/collection05.png#lightbox)
 1. Quando si esegue l'app, in questo modo la visualizzazione della raccolta da visualizzare quando l'utente fa clic sul pulsante.
 1. Selezionare la visualizzazione di raccolta e immettere i valori seguenti nel **scheda Layout** del **Esplora proprietà**: 
 
-    [ ![](collection-views-images/collection06.png "Esplora risorse di proprietà")](collection-views-images/collection06.png)
+    [![](collection-views-images/collection06.png "Esplora risorse di proprietà")](collection-views-images/collection06.png#lightbox)
 1. Controlla le dimensioni delle singole celle e i bordi tra le celle e il bordo esterno della visualizzazione di raccolta.
 1. Selezionare il Controller di visualizzazione di raccolta e impostare la relativa classe `CityCollectionViewController` nel **scheda Widget**: 
 
-    [ ![](collection-views-images/collection07.png "Impostare la classe su CityCollectionViewController")](collection-views-images/collection07.png)
+    [![](collection-views-images/collection07.png "Impostare la classe su CityCollectionViewController")](collection-views-images/collection07.png#lightbox)
 1. Selezionare la visualizzazione di raccolta e impostare la relativa classe `CityCollectionView` nel **scheda Widget**: 
 
-    [ ![](collection-views-images/collection08.png "Impostare la classe su CityCollectionView")](collection-views-images/collection08.png)
+    [![](collection-views-images/collection08.png "Impostare la classe su CityCollectionView")](collection-views-images/collection08.png#lightbox)
 1. Selezionare la cella di visualizzazione di raccolta e impostare la relativa classe `CityCollectionViewCell` nel **scheda Widget**: 
 
-    [ ![](collection-views-images/collection09.png "Impostare la classe su CityCollectionViewCell")](collection-views-images/collection09.png)
+    [![](collection-views-images/collection09.png "Impostare la classe su CityCollectionViewCell")](collection-views-images/collection09.png#lightbox)
 1. Nel **scheda Widget** assicurarsi che il **Layout** è `Flow` e **direzione di scorrimento** è `Vertical` per la visualizzazione di raccolta: 
 
-    [ ![](collection-views-images/collection10.png "La scheda Widget")](collection-views-images/collection10.png)
+    [![](collection-views-images/collection10.png "La scheda Widget")](collection-views-images/collection10.png#lightbox)
 1. Selezionare la cella di visualizzazione di raccolta e impostare il relativo **identità** a `CityCell` nel **scheda Widget**: 
 
-    [ ![](collection-views-images/collection11.png "Impostare l'identità su CityCell")](collection-views-images/collection11.png)
+    [![](collection-views-images/collection11.png "Impostare l'identità su CityCell")](collection-views-images/collection11.png#lightbox)
 1. Salvare le modifiche.
     
 
@@ -143,34 +143,34 @@ Di seguito, eseguire le operazioni seguenti:
 1. Nel **Esplora**, fare doppio clic su di `Main.storyboard` e aprirlo nella finestra di progettazione iOS.
 1. Aggiungere una visualizzazione di immagini, un'etichetta e un pulsante per la vista esistente e configurarli in modo simile al seguente: 
 
-    [ ![](collection-views-images/collection02vs.png "Configurare il layout")](collection-views-images/collection02vs.png)
+    [![](collection-views-images/collection02vs.png "Configurare il layout")](collection-views-images/collection02vs.png#lightbox)
 1. Assegnare un **nome** per la visualizzazione di immagini e l'etichetta nel **scheda Widget** del **Esplora proprietà**. Ad esempio: 
 
-    [ ![](collection-views-images/collection03vs.png "Esplora risorse di proprietà")](collection-views-images/collection03vs.png)
+    [![](collection-views-images/collection03vs.png "Esplora risorse di proprietà")](collection-views-images/collection03vs.png#lightbox)
 1. Successivamente, trascinare un Controller di visualizzazione di raccolta dello Storyboard: 
 
-    [ ![](collection-views-images/collection04vs.png "Un Controller di visualizzazione di raccolta")](collection-views-images/collection04vs.png)
+    [![](collection-views-images/collection04vs.png "Un Controller di visualizzazione di raccolta")](collection-views-images/collection04vs.png#lightbox)
 1. Trascinamento del controllo pulsante al Controller di visualizzazione di raccolta e selezionare **Push** nel popup: 
 
-    [ ![](collection-views-images/collection05vs.png "Selezionare la finestra popup di Push")](collection-views-images/collection05vs.png)
+    [![](collection-views-images/collection05vs.png "Selezionare la finestra popup di Push")](collection-views-images/collection05vs.png#lightbox)
 1. Quando si esegue l'app, in questo modo la visualizzazione della raccolta da visualizzare quando l'utente fa clic sul pulsante.
 1. Selezionare la visualizzazione di raccolta e il **scheda Layout** del **Esplora proprietà** immettere il **larghezza** come _361_ e  **Altezza** come _256_ 
 1. Controlla le dimensioni delle singole celle e i bordi tra le celle e il bordo esterno della visualizzazione di raccolta.
 1. Selezionare il Controller di visualizzazione di raccolta e impostare la relativa classe `CityCollectionViewController` nel **scheda Widget**: 
 
-    [ ![](collection-views-images/collection07vs.png "Impostare la classe su CityCollectionViewController")](collection-views-images/collection07vs.png)
+    [![](collection-views-images/collection07vs.png "Impostare la classe su CityCollectionViewController")](collection-views-images/collection07vs.png#lightbox)
 1. Selezionare la visualizzazione di raccolta e impostare la relativa classe `CityCollectionView` nel **scheda Widget**: 
 
-    [ ![](collection-views-images/collection08vs.png "Impostare la classe su CityCollectionView")](collection-views-images/collection08vs.png)
+    [![](collection-views-images/collection08vs.png "Impostare la classe su CityCollectionView")](collection-views-images/collection08vs.png#lightbox)
 1. Selezionare la cella di visualizzazione di raccolta e impostare la relativa classe `CityCollectionViewCell` nel **scheda Widget**: 
 
-    [ ![](collection-views-images/collection09vs.png "Impostare la classe su CityCollectionViewCell")](collection-views-images/collection09vs.png)
+    [![](collection-views-images/collection09vs.png "Impostare la classe su CityCollectionViewCell")](collection-views-images/collection09vs.png#lightbox)
 1. Nel **scheda Widget** assicurarsi che il **Layout** è `Flow` e **direzione di scorrimento** è `Vertical` per la visualizzazione di raccolta: 
 
-    [ ![](collection-views-images/collection10vs.png "Scheda TImpossibile Widget")](collection-views-images/collection10vs.png)
+    [![](collection-views-images/collection10vs.png "Scheda TImpossibile Widget")](collection-views-images/collection10vs.png#lightbox)
 1. Selezionare la cella di visualizzazione di raccolta e impostare il relativo **identità** a `CityCell` nel **scheda Widget**: 
 
-    [ ![](collection-views-images/collection11vs.png "Impostare l'identità su CityCell")](collection-views-images/collection11vs.png)
+    [![](collection-views-images/collection11vs.png "Impostare l'identità su CityCell")](collection-views-images/collection11vs.png#lightbox)
 1. Salvare le modifiche.
     
 
@@ -806,17 +806,17 @@ public override void ViewWillAppear (bool animated)
 
 Con tutti gli elementi sul posto, se si compila e si esegue l'app, la visualizzazione principale viene visualizzata con la città predefinito:
 
-[ ![](collection-views-images/run01.png "La schermata principale")](collection-views-images/run01.png)
+[![](collection-views-images/run01.png "La schermata principale")](collection-views-images/run01.png#lightbox)
 
 Se l'utente sceglie il **selezionare una visualizzazione** pulsante, la visualizzazione della raccolta verrà visualizzati:
 
-[ ![](collection-views-images/run02.png "La visualizzazione della raccolta")](collection-views-images/run02.png)
+[![](collection-views-images/run02.png "La visualizzazione della raccolta")](collection-views-images/run02.png#lightbox)
 
 Qualsiasi città con relativo `CanSelect` proprietà impostata su `false` verrà visualizzato in grigio e l'utente non sarà in grado di impostare lo stato attivo. Quando l'utente evidenziato un elemento (renderlo messa a fuoco) viene visualizzato il titolo e usano l'effetto di parallasse per inclinazione abbastanza particolare l'immagine in 3D.
 
 Quando l'utente sceglie di selezionare l'immagine, la visualizzazione della raccolta viene chiusa e la visualizzazione principale viene visualizzata nuovamente con la nuova immagine:
 
-[ ![](collection-views-images/run03.png "Una nuova immagine nella schermata iniziale")](collection-views-images/run03.png)
+[![](collection-views-images/run03.png "Una nuova immagine nella schermata iniziale")](collection-views-images/run03.png#lightbox)
 
 <a name="Creating-Custom-Layout-and-Reordering-Items" />
 

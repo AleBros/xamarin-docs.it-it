@@ -4,14 +4,15 @@ description: "Le estensioni di markup XAML costituiscono una caratteristica impo
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 7aea7b1536efc952378c6a1df63640af191f1ebe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1c5c4c30a7e506e19fc4dc0728fb55851ec4911f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Estensioni di Markup XAML
 
@@ -298,7 +299,7 @@ Ecco il file XAML completo finale con tre pulsanti, l'accesso a sei valori condi
 
 Le schermate verificare gli stili coerenti e gli stili dipendente dalla piattaforma:
 
-[ ![](xaml-markup-extensions-images/sharedresources.png "Controlli")](xaml-markup-extensions-images/sharedresources-large.png "concepito controlli")
+[![](xaml-markup-extensions-images/sharedresources.png "Controlli")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "concepito controlli")
 
 Sebbene sia più comune per definire il `Resources` insieme nella parte superiore della pagina, tenere presente che il `Resources` proprietà è definita da `VisualElement`, ed è possibile disporre `Resources` raccolte su altri elementi nella pagina. Ad esempio, provare ad aggiungere uno per il `StackLayout` in questo esempio:
 
@@ -436,7 +437,7 @@ Entrambe queste dichiarazioni dello spazio dei nomi inclusi nel **StaticConstant
 
 Le dimensioni di risultante `BoxView` rispetto allo schermo è dipendente dalla piattaforma:
 
- [ ![](xaml-markup-extensions-images/staticconstants.png "I controlli usando l'estensione di Markup X:Static")](xaml-markup-extensions-images/staticconstants-large.png "controlli utilizzando l'estensione di Markup X:Static")
+ [![](xaml-markup-extensions-images/staticconstants.png "I controlli usando l'estensione di Markup X:Static")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "controlli utilizzando l'estensione di Markup X:Static")
 
 ## <a name="other-standard-markup-extensions"></a>Altre estensioni di Markup Standard
 
@@ -552,7 +553,7 @@ Ad esempio la lezione più importante da prendere da questo esempio è riportata
 
 Di seguito è riportato il programma in esecuzione:
 
-[ ![](xaml-markup-extensions-images/relativelayout.png "Layout relativo utilizzando vincoli")](xaml-markup-extensions-images/relativelayout-large.png "Layout relativo utilizzo di vincoli")
+[![](xaml-markup-extensions-images/relativelayout.png "Layout relativo utilizzando vincoli")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "Layout relativo utilizzo di vincoli")
 
 ## <a name="summary"></a>Riepilogo
 

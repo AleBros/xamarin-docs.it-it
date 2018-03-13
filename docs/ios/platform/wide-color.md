@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ab6124e2b11d26d4c10330e7b824e4761ebf4603
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 95098cd5c97ccc8357531feb79e55600f53a4be5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="wide-color"></a>Colore Wide
 
@@ -38,19 +38,19 @@ I seguenti concetti di colore di base devono essere considerati prima di eseguir
 
 Spazio colore è un ambiente in cui i colori possono essere rappresentati e confrontati. Può trattarsi di uno spazio di quota da una a quattro definito dall'intensità dei componenti di colore. 
 
-[ ![](wide-color-images/color00.png "Uno spazio colore")](wide-color-images/color00.png)
+[![](wide-color-images/color00.png "Uno spazio colore")](wide-color-images/color00.png#lightbox)
 
 ### <a name="color-channels"></a>I canali di colore
 
 I componenti di colore possono anche essere detto canali di colore. Alcune rappresentazioni familiarità sarebbe spazi RGB, spazi di grigio, CMYK, spazi o spazi indipendente dal dispositivo. 
 
-[ ![](wide-color-images/color02.png "I componenti di colore possono anche essere indicati come canali di colore")](wide-color-images/color02.png)
+[![](wide-color-images/color02.png "I componenti di colore possono anche essere indicati come canali di colore")](wide-color-images/color02.png#lightbox)
 
 ### <a name="color-primaries"></a>Colori primari
 
 Colori primari forniscono il sistema di coordinate utilizzato per confrontare e calcolare i colori. Colori primari rientrano in genere versione più intenso il colore specificato che può essere generato all'interno del canale di colore.
 
-[ ![](wide-color-images/color01.png "Colori primari forniscono il sistema di coordinate utilizzato per confrontare e i colori di calcolo")](wide-color-images/color01.png)
+[![](wide-color-images/color01.png "Colori primari forniscono il sistema di coordinate utilizzato per confrontare e i colori di calcolo")](wide-color-images/color01.png#lightbox)
 
 Nel caso lo spazio colore RGB rappresentato in precedenza, i colori primari sono dove il `1.0` le coordinate sono ancorate (ad esempio `[1.0, 0.0, 0.0]` del rosso).
 
@@ -58,7 +58,7 @@ Nel caso lo spazio colore RGB rappresentato in precedenza, i colori primari sono
 
 Gamma di colori fa riferimento a tutti i colori che possono essere definiti come una combinazione dei canali di colore singoli all'interno di un offrono spazio colore.
 
-[ ![](wide-color-images/color03.png "Esempio di colore scala")](wide-color-images/color03.png)
+[![](wide-color-images/color03.png "Esempio di colore scala")](wide-color-images/color03.png#lightbox)
 
 ## <a name="what-is-wide-color"></a>Che cos'è ampia colore
 
@@ -80,7 +80,7 @@ Gli utenti che acquisizione di immagini digitali in formato non ELABORATO posson
 
 2015, Apple ha rilasciato nuovi prodotti (iMac e iPad Pro 9.7") che forniscono lo spazio di visualizzazione P3 colore nuovo per gestire i problemi di spazio colore sRGB.
 
-[ ![](wide-color-images/color04.png "Lo spazio colore di nuovo visualizzato P3")](wide-color-images/color04.png)
+[![](wide-color-images/color04.png "Lo spazio colore di nuovo visualizzato P3")](wide-color-images/color04.png#lightbox)
 
 Lo spazio colore P3 di visualizzazione dispone delle proprietà seguenti:
 
@@ -112,7 +112,7 @@ Per consentire per i valori minori di zero e maggiore di uno, sRGB intervallo es
 
 Per visualizzare il funzionano di valori di fuori di zero e uno in spazio di colore sRGB intervallo esteso, eseguire l'esempio seguente del di rosso più saturo disponibile nello spazio colore P3 di visualizzazione:
 
-[ ![](wide-color-images/color05.png "Modalità di funzionamento di valori di fuori di zero e uno in intervallo esteso sRGB spazio colore")](wide-color-images/color05.png)
+[![](wide-color-images/color05.png "Modalità di funzionamento di valori di fuori di zero e uno in intervallo esteso sRGB spazio colore")](wide-color-images/color05.png#lightbox)
 
 In visualizzazione P3, questo colore viene rappresentato come `[1.0, 0.0, 0.0]` e di intervallo esteso sRGB sarebbe `[1.358, -0.074, -0.012]`. Poiché valori sRGB sono pieni contenuti all'interno di visualizzazione P3 e i valori di visualizzazione P3 disporre "esterno" degli intervalli di sRGB.
 

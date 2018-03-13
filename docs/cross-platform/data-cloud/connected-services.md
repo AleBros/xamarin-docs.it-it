@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: cc2deb11d544bc4e933e690d6089eb001a186c79
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5c9ae8d65a2bfdd035cccb6b911448ea047f8c40
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="connected-services-walkthrough"></a>Procedura dettagliata di servizi connessi
 
@@ -24,22 +24,22 @@ Questa procedura dettagliata viene illustrato come aggiungere un servizio back-e
 1.  Avviare facendo doppio clic su di **servizi connessi** nodo della soluzione, verrà visualizzata la **raccolta Services**.
   Questo è un elenco di tutti i servizi disponibili per questo tipo di applicazione. Selezionare un servizio (ad esempio **back-end per dispositivi mobili con Azure App Service**) facendo clic su di esso.
 
-  [ ![](connected-services-images/image001-sml.png "Connesso il nodo servizi in Visual Studio per Mac")](connected-services-images/image001.png)
+  [![](connected-services-images/image001-sml.png "Connesso il nodo servizi in Visual Studio per Mac")](connected-services-images/image001.png#lightbox)
 
 2. Pagina dei dettagli del servizio contiene una descrizione del servizio e le dipendenze da installare.
   Fare clic su di **Aggiungi** pulsante per aggiungere le dipendenze per l'app:
 
-  [ ![](connected-services-images/image002-sml.png "Back-end per dispositivi mobili con Azure")](connected-services-images/image002.png)
+  [![](connected-services-images/image002-sml.png "Back-end per dispositivi mobili con Azure")](connected-services-images/image002.png#lightbox)
 
 3. Le dipendenze necessarie da aggiungere alla libreria di classi Portabile e i progetti specifici della piattaforma per funzionare.
   Selezionare le caselle di controllo per aggiungere il servizio a ogni progetto che farà riferimento (direttamente o indirettamente):
 
-  [ ![](connected-services-images/image003-sml.png "Controllare tutti i progetti che devono fare riferimento al servizio")](connected-services-images/image003.png)
+  [![](connected-services-images/image003-sml.png "Controllare tutti i progetti che devono fare riferimento al servizio")](connected-services-images/image003.png#lightbox)
 
 4. Scegliere **Accept** sul **dell'accettazione della licenza** finestre di dialogo per i pacchetti NuGet.
   Potrebbero essere presenti due finestre di dialogo per accettare, uno per il MobileClient e le dipendenze e l'altro per SQLiteStore, che è necessario per la sincronizzazione dati non in linea:
 
-  [ ![](connected-services-images/image004-sml.png "Accettare i contratti di licenza")](connected-services-images/image004.png)
+  [![](connected-services-images/image004-sml.png "Accettare i contratti di licenza")](connected-services-images/image004.png#lightbox)
 
   ![](connected-services-images/image005.png "Finestra di accettazione licenza")
 
@@ -48,7 +48,7 @@ Questa procedura dettagliata viene illustrato come aggiungere un servizio back-e
 
 6. Selezionare un servizio app dall'elenco. Questo compilerà il codice del modello per il `MobileServiceClient` oggetto con l'URL corrispondente del servizio app in Azure:
 
-  [ ![](connected-services-images/image006-sml.png "Selezionare il servizio app dall'elenco")](connected-services-images/image006.png)
+  [![](connected-services-images/image006-sml.png "Selezionare il servizio app dall'elenco")](connected-services-images/image006.png#lightbox)
 
   Se non è elencato alcun servizio, scegliere il **New** pulsante (vedere il passaggio 9).
 
@@ -59,12 +59,12 @@ Questa procedura dettagliata viene illustrato come aggiungere un servizio back-e
 
 8. Seguire la documentazione nel **passaggi successivi** per aggiungere dati, la sincronizzazione non in linea, l'autenticazione e le notifiche push all'App:
 
-  [ ![](connected-services-images/image008-sml.png "Rivedere le istruzioni della procedura successiva")](connected-services-images/image008.png)
+  [![](connected-services-images/image008-sml.png "Rivedere le istruzioni della procedura successiva")](connected-services-images/image008.png#lightbox)
 
 10. Se non si dispone di qualsiasi servizio app esistente, è possibile creare nuovi servizi dall'interno di Visual Studio per Mac.
   Fare clic su di **New** pulsante nella parte inferiore sinistra dell'elenco di servizi per aprire la **nuovo servizio App** finestra di dialogo:
 
-  [ ![](connected-services-images/image009-sml.png "Creare un nuovo servizio app in Visual Studio per Mac")](connected-services-images/image009.png)
+  [![](connected-services-images/image009-sml.png "Creare un nuovo servizio app in Visual Studio per Mac")](connected-services-images/image009.png#lightbox)
 
 Un nuovo servizio richiede i seguenti parametri:
 

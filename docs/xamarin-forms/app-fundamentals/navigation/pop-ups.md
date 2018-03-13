@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 957db750b852b40daf1556e8dc8f7ba18e022dba
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 87b20dfd8882bf7da58b1bd078930fb69c46a79d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="displaying-pop-ups"></a>Visualizzazione popup
 
@@ -42,7 +42,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 }
 ```
 
-[ ![DisplayAlert](pop-ups-images/alert2-sml.png "avviso finestra di dialogo con due pulsanti")](pop-ups-images/alert2.png "con due pulsanti nella finestra di dialogo di avviso")
+[![DisplayAlert](pop-ups-images/alert2-sml.png "avviso finestra di dialogo con due pulsanti")](pop-ups-images/alert2.png#lightbox "con due pulsanti nella finestra di dialogo di avviso")
 
 ## <a name="guiding-users-through-tasks"></a>Guida agli utenti tramite le attività
 
@@ -70,7 +70,7 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 }
 ```
 
-[ ![DisplayActionSheet](pop-ups-images/action2-sml.png "azione di finestra con il pulsante Elimina")](pop-ups-images/action2.png "azione di finestra con pulsante di eliminazione")
+[![DisplayActionSheet](pop-ups-images/action2-sml.png "azione di finestra con il pulsante Elimina")](pop-ups-images/action2.png#lightbox "azione di finestra con pulsante di eliminazione")
 
 ## <a name="summary"></a>Riepilogo
 

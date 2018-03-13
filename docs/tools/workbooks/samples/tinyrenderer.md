@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 1689736ce3f2a8e20ceaa23edf410d3892038522
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e5422d3f0a68f99790617fe534b30389aae2563c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tinyrenderer-workbooks"></a>Cartelle di lavoro TinyRenderer
 
@@ -30,7 +30,7 @@ Una serie di cartelle di lavoro che illustrano il funzionamento di OpenGL, cui v
 -    [Lezione 7: Mapping di ombreggiatura](https://developer.xamarin.com/workbooks/graphics/tiny-renderer/lesson7.workbook)
 -    [Lezione 8: Ambiente occlusione](https://developer.xamarin.com/workbooks/graphics/tiny-renderer/lesson8.workbook)
 
-[ ![](tinyrenderer-images/tinyrenderer-sml.png "Esempio di rendering di wireframe")](tinyrenderer-images/tinyrenderer.png)
+[![](tinyrenderer-images/tinyrenderer-sml.png "Esempio di rendering di wireframe")](tinyrenderer-images/tinyrenderer.png#lightbox)
 
 Il codice c# in queste cartelle di lavoro si basa su questa origine aprire [codice C++](https://github.com/ssloy/tinyrenderer) e il testo è da questo [wiki](https://github.com/ssloy/tinyrenderer/wiki/). Grazie per il lavoro originale disponibile con una licenza che consente di trasformarlo in un set di cartelle di lavoro.
 

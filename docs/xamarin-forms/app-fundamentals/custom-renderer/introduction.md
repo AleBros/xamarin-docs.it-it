@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: a9908429994f4575a9e41936d500bfd8906a843b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 837d75bd4ecde92d4c375c680a5f5e7ff231f825
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>Introduzione a un renderer personalizzato
 
@@ -52,7 +52,7 @@ Il `MyEntry` controllo è un `Entry` consentono di controllare il `BackgroundCol
 Il `local` prefisso dello spazio dei nomi può essere qualsiasi carattere. Tuttavia, il `namespace` e `assembly` i valori devono corrispondere i dettagli del controllo personalizzato. Dopo aver dichiarato lo spazio dei nomi, il prefisso viene utilizzato per fare riferimento al controllo personalizzato.
 
 > [!NOTE]
-> **Nota**: la definizione di `xmlns` è molto più semplice in PCLs rispetto ai progetti condivisi. Una libreria di classi Portabile viene compilato in un assembly in modo semplice determinare il tipo è il `assembly=CustomRenderer` valore deve essere. Quando si usano progetti condivisi, tutte le risorse condivise (incluso il codice XAML) vengono compilate in ognuno di questi riferimenti, il che significa che se il iOS, Android e Windows Phone progetti hanno i propri *i nomi degli assembly* non è possibile per scrivere il `xmlns` dichiarazione perché il valore deve essere diverso per ogni applicazione. Controlli personalizzati in XAML per i progetti condivisi richiederà ogni progetto di applicazione deve essere configurato con lo stesso nome di assembly.
+> La definizione di `xmlns` è molto più semplice in PCLs rispetto ai progetti condivisi. Una libreria di classi Portabile viene compilato in un assembly in modo semplice determinare il tipo è il `assembly=CustomRenderer` valore deve essere. Quando si usano progetti condivisi, tutte le risorse condivise (incluso il codice XAML) vengono compilate in ognuno di questi riferimenti, il che significa che se il iOS, Android e Windows Phone progetti hanno i propri *i nomi degli assembly* non è possibile per scrivere il `xmlns` dichiarazione perché il valore deve essere diverso per ogni applicazione. Controlli personalizzati in XAML per i progetti condivisi richiederà ogni progetto di applicazione deve essere configurato con lo stesso nome di assembly.
 
 Il `MyEntry` controllo personalizzato viene quindi eseguito il rendering in ogni piattaforma, con uno sfondo grigio, come illustrato nelle schermate seguenti:
 
@@ -69,7 +69,7 @@ Il processo per la creazione di una classe renderer personalizzato è come segue
 1. Aggiungere un `ExportRenderer` attributo alla classe renderer personalizzato per specificare che verrà usata per il rendering del controllo di xamarin. Forms. Questo attributo viene utilizzato per registrare il renderer personalizzato con xamarin. Forms.
 
 > [!NOTE]
-> **Nota**: per la maggior parte degli elementi di xamarin. Forms, è facoltativo fornire un renderer personalizzato in ogni progetto della piattaforma. Se non è registrato un renderer personalizzato, verrà utilizzato il renderer predefinito per la classe di base del controllo. Un renderer personalizzato è tuttavia necessarie in ogni progetto della piattaforma per il rendering di un [vista](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) o [ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) elemento.
+> Per la maggior parte degli elementi di xamarin. Forms, è facoltativo per fornire un renderer personalizzato in ogni progetto della piattaforma. Se non è registrato un renderer personalizzato, verrà utilizzato il renderer predefinito per la classe di base del controllo. Un renderer personalizzato è tuttavia necessarie in ogni progetto della piattaforma per il rendering di un [vista](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) o [ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) elemento.
 
 Negli argomenti di questa serie fornirà dimostrazioni e una spiegazione di questo processo per diversi elementi di xamarin. Forms.
 

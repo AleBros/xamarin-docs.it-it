@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: c1dd3495b0d7f76197126094cfd10e50d0ca760d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 415c3a5e9446c5db545b62272f3b90a9ac73e401
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-a-fragment"></a>Creazione di un frammento
 
@@ -28,7 +28,7 @@ Il codice sopra riportato aumenteranno la vista `Resource.Layout.Example_Fragmen
 
 
 > [!NOTE]
-> **Nota:** sottoclassi frammento non devono avere valore predefinito è pubblico costruttore argomenti.
+> Le sottoclassi di frammento non devono avere valore predefinito è pubblico costruttore argomenti.
 
 ## <a name="adding-a-fragment-to-an-activity"></a>Aggiunta di un frammento a un'attività
 
@@ -108,7 +108,7 @@ OR
 Frammenti hanno i propri ciclo di vita indipendente dei, ma ancora interessati da, il [ciclo di vita dell'attività hosting](~/android/app-fundamentals/activity-lifecycle/index.md).
 Ad esempio, quando un'attività viene sospesa, tutti i relativi frammenti associati sono in pausa. Nel diagramma seguente illustra il ciclo di vita del frammento.
 
-[![Diagramma di flusso che illustra il ciclo di vita di frammento](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png)
+[![Diagramma di flusso che illustra il ciclo di vita di frammento](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
 
 
 ### <a name="fragment-creation-lifecycle-methods"></a>Metodi di frammento per la creazione del ciclo di vita
@@ -238,4 +238,4 @@ public override void OnCreate(Bundle savedState)
 
 La schermata seguente è illustrata in questo menu:
 
-[![Schermata di esempio di app personali trip la visualizzazione di voci di menu](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png)
+[![Schermata di esempio di app personali trip la visualizzazione di voci di menu](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png#lightbox)
