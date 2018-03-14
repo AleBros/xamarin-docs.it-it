@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 5. Gestione delle dimensioni
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 4454150b4caad86eb063ab7fcf8a721cbab9b5ec
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1df1751c55c6a031bf9f26d774b739f4ca83fa91
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Riepilogo del capitolo 5. Gestione delle dimensioni
 
@@ -62,7 +63,7 @@ Il [ **caratteri del testo** ](https://github.com/xamarin/xamarin-forms-book-sam
 
 Il [ **EstimatedFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EstimatedFontSize) illustra questa tecnica. Questo programma è stato scritto prima il [ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) proprietà è disponibile, quindi viene utilizzato un [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) con un [ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) impostazione per simulare un margine.
 
-[![Schermata di triplo della dimensione del carattere stimato](images/ch05fg07-small.png "testo adatta alle dimensioni disponibili")](images/ch05fg07-large.png "testo adatta alle dimensioni disponibili")
+[![Schermata di triplo della dimensione del carattere stimato](images/ch05fg07-small.png "testo adatta alle dimensioni disponibili")](images/ch05fg07-large.png#lightbox "testo adatta alle dimensioni disponibili")
 
 ## <a name="a-fit-to-size-clock"></a>Un clock adatta per dimensioni
 

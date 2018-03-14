@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8787913c04b11a84828cd98960407f0cc27aa391
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 86a7690d4cf7291a4e44507a6250e3469c8f7ed2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-split-view-controllers"></a>Utilizzo di controller di visualizzazione divisa
 
@@ -21,7 +21,7 @@ _Questo articolo descrive la progettazione e l'utilizzo di visualizzazione contr
 
 Un Controller di visualizzazione di suddivisione presenta e gestisce un Master e il Controller di visualizzazione di dettaglio side-by-side, sullo schermo contemporaneamente. Divisione visualizzazione controller sono usato per presentare contenuto persistente, attivabile nella visualizzazione Master (sezione inferiore a sinistra) e relativi dettagli nella vista di dettaglio (sezione più grande a destra).
 
-[ ![](split-views-images/intro01.png "Esempio doppia visualizzazione")](split-views-images/intro01.png)
+[![](split-views-images/intro01.png "Esempio doppia visualizzazione")](split-views-images/intro01.png#lightbox)
 
 <a name="About-Split-View-Controllers" />
 
@@ -31,7 +31,7 @@ Come descritto in precedenza, una divisione View Controller gestisce un Master e
 
 Inoltre, può Master View Controller è stato nascosto o visualizzato in base alle necessità: 
 
-[ ![](split-views-images/intro02.png "Il Controller di visualizzazione Master nascosto")](split-views-images/intro02.png)
+[![](split-views-images/intro02.png "Il Controller di visualizzazione Master nascosto")](split-views-images/intro02.png#lightbox)
 
 Divisione viste controller sono spesso usano per presentare un elenco del contenuto filtrabile, con le categorie nella visualizzazione schema e i risultati filtrati nella vista di dettaglio. Ciò in genere viene presentato come una visualizzazione tabella a sinistra e un [visualizzazione raccolta](~/ios/tvos/user-interface/collection-views.md) a destra.
 
@@ -54,18 +54,18 @@ Il modo più semplice per utilizzare visualizzazione controller di suddivisione 
 1. Nel **soluzione riempimento**, fare doppio clic su di `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **Split visualizzazione controller** dal **della casella degli strumenti** e rilasciarla sulla vista: 
 
-    [ ![](split-views-images/activity01.png "Un Controller di visualizzazione divisa")](split-views-images/activity01.png)
+    [![](split-views-images/activity01.png "Un Controller di visualizzazione divisa")](split-views-images/activity01.png#lightbox)
 1. Per impostazione predefinita, la finestra di progettazione iOS verrà installato un Controller di navigazione e un Controller di visualizzazione della visualizzazione Master. Se ciò non corrispondente requisiti dell'applicazione, è sufficiente eliminarli.
 1. Se si rimuove il valore predefinito di visualizzazione Master, trascinare un nuovo Controller di visualizzazione nella finestra di progettazione: 
 
-    [ ![](split-views-images/activity02.png "Un Controller di visualizzazione")](split-views-images/activity02.png)
+    [![](split-views-images/activity02.png "Un Controller di visualizzazione")](split-views-images/activity02.png#lightbox)
 1. CTRL + clic e trascinare dal Controller di visualizzazione divisa per il nuovo Controller di visualizzazione Master. 
 1. Selezionare **Master** dal **Menu Popup**: 
 
-    [ ![](split-views-images/activity03.png "Selezionare Master dal Menu di scelta rapida")](split-views-images/activity03.png)
+    [![](split-views-images/activity03.png "Selezionare Master dal Menu di scelta rapida")](split-views-images/activity03.png#lightbox)
 1. Progettare il contenuto del Master e visualizzazioni Dettagli: 
 
-    [ ![](split-views-images/activity04.png "Layout di esempio")](split-views-images/activity04.png)
+    [![](split-views-images/activity04.png "Layout di esempio")](split-views-images/activity04.png#lightbox)
 1. Assegnare **nomi** nel **scheda Widget** del **proprietà riempimento** per lavorare con i controlli dell'interfaccia utente in codice c#.
 1. Salvare le modifiche e tornare a Visual Studio per Mac.
 
@@ -74,18 +74,18 @@ Il modo più semplice per utilizzare visualizzazione controller di suddivisione 
 1. Nel **Esplora**, fare doppio clic su di `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **Split visualizzazione controller** dal **della casella degli strumenti** e rilasciarla sulla vista: 
 
-    [ ![](split-views-images/activity01-vs.png "Un Controller di visualizzazione divisa")](split-views-images/activity01-vs.png)
+    [![](split-views-images/activity01-vs.png "Un Controller di visualizzazione divisa")](split-views-images/activity01-vs.png#lightbox)
 1. Per impostazione predefinita, la finestra di progettazione iOS aggiungerà un Controller di navigazione e un Controller di visualizzazione della visualizzazione Master. Se ciò non corrispondente requisiti dell'applicazione, è sufficiente eliminarli.
 1. Se si rimuove il valore predefinito di visualizzazione Master, trascinare un nuovo Controller di visualizzazione nella finestra di progettazione: 
 
-    [ ![](split-views-images/activity02-vs.png "Un Controller di visualizzazione")](split-views-images/activity02-vs.png)
+    [![](split-views-images/activity02-vs.png "Un Controller di visualizzazione")](split-views-images/activity02-vs.png#lightbox)
 1. CTRL + clic e trascinare dal Controller di visualizzazione divisa per il nuovo Controller di visualizzazione Master. 
 1. Selezionare **Master** dal **Menu Popup**: 
 
-    [ ![](split-views-images/activity03-vs.png "Selezionare Master dal Menu di scelta rapida")](split-views-images/activity03-vs.png)
+    [![](split-views-images/activity03-vs.png "Selezionare Master dal Menu di scelta rapida")](split-views-images/activity03-vs.png#lightbox)
 1. Progettare il contenuto del Master e visualizzazioni Dettagli: 
 
-    [ ![](split-views-images/activity04.png "Layout del contenuto")](split-views-images/activity04.png)
+    [![](split-views-images/activity04.png "Layout del contenuto")](split-views-images/activity04.png#lightbox)
 1. Assegnare **nomi** nel **scheda Widget** del **Esplora proprietà** per lavorare con i controlli dell'interfaccia utente in codice c#.
 1. Salvare le modifiche.
     

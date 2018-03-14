@@ -3,14 +3,15 @@ title: Riepilogo del capitolo 9. Chiamate API specifiche della piattaforma
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 637096d3ebb7fb90321f7f459e0ca9e51572d935
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 84650c930445172d27520129123d493253851642
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Riepilogo del capitolo 9. Chiamate API specifiche della piattaforma
 
@@ -20,7 +21,7 @@ In alcuni casi è necessario eseguire il codice che varia in base alla piattafor
 
 Un progetto Asset condiviso di xamarin. Forms possono eseguire codice diverso per ogni piattaforma che utilizza le direttive del preprocessore c# `#if`, `#elif`, e `endif`. Come illustrato nel [ **PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1):
 
-[![Schermata triplo della variabile formattato paragrafo](images/ch09fg01-small.png "modello di dispositivo e del sistema operativo")](images/ch09fg01-large.png "modello di dispositivo e del sistema operativo")
+[![Schermata triplo della variabile formattato paragrafo](images/ch09fg01-small.png "modello di dispositivo e del sistema operativo")](images/ch09fg01-large.png#lightbox "modello di dispositivo e del sistema operativo")
 
 Tuttavia, il codice risulta può essere difficoltosa e difficili da leggere.
 

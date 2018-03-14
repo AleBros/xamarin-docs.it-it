@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 0117364f02302add1f8788de1a79e4c4210fd07b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 4363258a9047ee4e2de4f53595a6eedc5dfe5861
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="accessibility-on-macos"></a>Accessibilità in macOS
 
@@ -30,7 +30,7 @@ AppKit utilizza il `NSAccessibility` protocollo per l'esposizione di API che con
 Xamarin.Mac utilizza il generatore di interfaccia Xcode per modificare i file di storyboard.
 Informazioni sull'accessibilità possono essere modificate nella **controllo di identità** quando un controllo è selezionato nella finestra di progettazione (come illustrato nella schermata seguente):
 
-[![Aggiunta di accessibilità in interfaccia generatore del Xcode](accessibility-images/xcode.png "aggiunta di accessibilità in Generatore del Xcode di interfaccia")](accessibility-images/xcode-large.png)
+[![Aggiunta di accessibilità in interfaccia generatore del Xcode](accessibility-images/xcode.png "aggiunta di accessibilità in Generatore del Xcode di interfaccia")](accessibility-images/xcode-large.png#lightbox)
 
 ### <a name="code"></a>Codice
 
@@ -80,7 +80,7 @@ Sbloccare la schermata Impostazioni (se richiesto, in basso a sinistra) e i segn
 
 Una volta abilitato, il controllo viene visualizzato come una finestra mobile che può essere spostata sullo schermo. La schermata riportata di seguito viene illustrato il controllo in esecuzione accanto a un'app di esempio Mac. Quando il cursore viene spostato sopra la finestra, il controllo Mostra tutte le proprietà di ogni controllo accessibile:
 
-[![Esempio di esecuzione di controllo di accesso facilitato](accessibility-images/accessibility-example.png "esecuzione di esempio di controllo di accesso facilitato")](accessibility-images/accessibility-example-large.png)
+[![Esempio di esecuzione di controllo di accesso facilitato](accessibility-images/accessibility-example.png "esecuzione di esempio di controllo di accesso facilitato")](accessibility-images/accessibility-example-large.png#lightbox)
 
 Per ulteriori informazioni, leggere la [testare l'accessibilità della Guida di OS X](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html).
 

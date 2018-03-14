@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d84473ee4379cd9a39315635017b81a2714da162
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2a8ae55f9cc3e2dd4818dec96a35017c76cc9623
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="notifications-in-xamarinios"></a>Notifiche di xamarin
 
@@ -44,7 +44,7 @@ var settings = UIUserNotificationSettings.GetSettingsForTypes(
 UIApplication.SharedApplication.RegisterUserNotificationSettings (settings);
 ```
 
-  [ ![](local-notifications-in-ios-images/image0-sml.png "Per confermare la possibilità di inviare una notifica locale")](local-notifications-in-ios-images/image0.png)
+  [![](local-notifications-in-ios-images/image0-sml.png "Per confermare la possibilità di inviare una notifica locale")](local-notifications-in-ios-images/image0.png#lightbox)
 
 Per pianificare una notifica locale si crea un `UILocalNotification` dell'oggetto, impostare il `FireDate`e di pianificarne tramite il `ScheduleLocalNotification` metodo il `UIApplication.SharedApplication` oggetto. Frammento di codice seguente viene illustrato come pianificare una notifica che verrà generato un minuto in futuro e visualizzare un avviso con un messaggio:
 
@@ -59,7 +59,7 @@ UIApplication.SharedApplication.ScheduleLocalNotification(notification);
 
 Nella schermata seguente mostra l'aspetto di questo avviso:
 
-  [ ![](local-notifications-in-ios-images/image2-sml.png "Un avviso di esempio")](local-notifications-in-ios-images/image2.png)
+  [![](local-notifications-in-ios-images/image2-sml.png "Un avviso di esempio")](local-notifications-in-ios-images/image2.png#lightbox)
 
 Si noti che se l'utente ha scelto di *non consentire* notifiche nulla verrà visualizzata.
 

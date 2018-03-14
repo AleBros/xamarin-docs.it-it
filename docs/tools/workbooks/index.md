@@ -3,16 +3,16 @@ title: Xamarin Workbooks
 description: "Le cartelle di lavoro di Xamarin forniscono una combinazione di codice che è ideale per la sperimentazione, e la documentazione dell'apprendimento, nonché la creazione di guide e insegnamento facilita."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
+ms.assetid: 04275482-0488-4F1C-8808-D03A8E21BE62
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 3d01d157fde1e69c7180c07adfd52e259cdddf14
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 04d6110ea9d0f2c10cf0c3d17182cd06b88e7708
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarin-workbooks"></a>Xamarin Workbooks
 
@@ -26,9 +26,9 @@ Cartelle di lavoro di Xamarin è software open source. Lo sviluppo avviene Apri 
 
 Vale la pena provarlo e segnalarlo si ritiene, o se si [in qualsiasi bug](~/tools/workbooks/install.md#reporting-bugs). Abbiamo un [forum](https://forums.xamarin.com/categories/inspector) troppo!
 
-[ ![](images/interactive-1.0.0-urho-planet-earth-small.png "Una cartella di lavoro di esempio UrhoSharp basato su")](images/interactive-1.0.0-urho-planet-earth.png)
+[![](images/interactive-1.0.0-urho-planet-earth-small.png "Una cartella di lavoro di esempio UrhoSharp basato su")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
 
-## <a name="installation-and-requirementsinstallmd"></a>[Requisiti di installazione e](install.md)
+## <a name="installation-and-requirementsinstallmd"></a>[Installazione e requisiti](install.md)
 
 Informazioni su come ottenere le cartelle di lavoro installati nel computer Mac o Windows.
 
@@ -40,7 +40,7 @@ Introduzione a come utilizzare le cartelle di lavoro di Xamarin.
 
 Sono disponibili un'ampia gamma di [le cartelle di lavoro di esempio](https://developer.xamarin.com/workbooks/) disponibili, tra cui quelli evidenziato [qui](samples/index.md).
 
-## <a name="integration-sdksdkindexmd"></a>[Integrazione di SDK](sdk/index.md)
+## <a name="integration-sdksdkindexmd"></a>[SDK per le integrazioni](sdk/index.md)
 
 È possibile estendere le cartelle di lavoro di Xamarin con renderer e rappresentazioni di dati personalizzati. Integrazioni vengono scritti con c# e TypeScript/JavaScript.
 

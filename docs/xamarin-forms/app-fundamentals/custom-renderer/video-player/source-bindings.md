@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d0842a54f725e5a9504668f977ba06648a96ee6d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 209b301c44da9bbb52ad8bf7fe867811a9b7617f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-video-sources-to-the-player"></a>Associazione origini video al lettore
 
@@ -72,7 +72,7 @@ namespace VideoPlayerDemos
 
 Quando il primo caricamento della pagina, in è stato selezionato alcun elemento di `ListView`, pertanto è necessario selezionarne una per il video iniziare la riproduzione:
 
-[![Selezionare Video Web](source-bindings-images/selectwebvideo-small.png "selezionare Web Video")](source-bindings-images/selectwebvideo-large.png "selezionare Web Video")
+[![Selezionare Video Web](source-bindings-images/selectwebvideo-small.png "selezionare Web Video")](source-bindings-images/selectwebvideo-large.png#lightbox "selezionare Web Video")
 
 Il `Source` proprietà `VideoPlayer` è supportato da una proprietà associabile, il che significa che può essere la destinazione di un'associazione dati. Ciò viene dimostrata la **associare VideoPlayer** pagina. Il markup di **BindToVideoPlayer.xaml** file è supportata dalla classe seguente che incapsula un titolo di un video e un oggetto corrispondente `VideoSource` oggetto:
 

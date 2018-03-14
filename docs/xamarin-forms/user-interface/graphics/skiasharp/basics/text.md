@@ -4,14 +4,15 @@ description: Come determinare le dimensioni della stringa di testo viene eseguit
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9a8cfac8911b1a8a13a4b6f149d02cd2f2c78453
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1cb6b6fcd8a9d02910842eb3eba966fce281d977
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="integrating-text-and-graphics"></a>L'integrazione di testo e grafica
 
@@ -113,7 +114,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Successivamente, il resto del metodo è semplice. Crea un altro `SKPaint` oggetto per i bordi e chiamate `DrawRoundRect` due volte. La seconda chiamata viene utilizzato un rettangolo ingrandito in base a un altro 10 pixel. La prima chiamata specifica un raggio dell'angolo di 20 pixel. il secondo è un raggio dell'angolo di 30 pixel, in modo sembrano essere parallela:
 
- [![](text-images/framedtext-small.png "Schermata triplo della pagina di testo racchiuse")](text-images/framedtext-large.png "tripla schermata della pagina di testo racchiusi")
+ [![](text-images/framedtext-small.png "Schermata triplo della pagina di testo racchiuse")](text-images/framedtext-large.png#lightbox "tripla schermata della pagina di testo racchiusi")
 
 È possibile attivare il telefono o il simulatore lateralmente per visualizzare il testo e l'aumento delle dimensioni di frame.
 
@@ -121,7 +122,7 @@ Se è necessario solo per allineare al centro del testo sullo schermo, è possib
 
 Testo stesso può essere considerato molto simile a un'opzione grafica. Semplice è possibile visualizzare la struttura di caratteri di testo, anziché la normale visualizzazione piena:
 
-[![](text-images/outlinedtext-small.png "Tripla cattura di schermata della pagina di testo descritte")](text-images/outlinedtext-large.png "tripla cattura di schermata della pagina descritte testo")
+[![](text-images/outlinedtext-small.png "Tripla cattura di schermata della pagina di testo descritte")](text-images/outlinedtext-large.png#lightbox "tripla cattura di schermata della pagina descritte testo")
 
 Questa operazione viene eseguita semplicemente modificando la normale `Style` proprietà del `SKPaint` l'impostazione predefinita dell'oggetto `SKPaintStyle.Fill` a `SKPaintStyle.Stroke` e specificando un valore. Il `PaintSurface` gestore del **descritte testo** pagina vengono visualizzati come farlo:
 

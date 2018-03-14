@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 004f7c815a1629310ba4c0f4c6f4219581a12366
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb3a2a9e60bda2a99a719bf75d23c29d42a94bdb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-watch-face"></a>Creazione di un tipo di carattere di controllo
 
@@ -22,11 +22,11 @@ _Questa guida illustra come implementare un servizio faccia espressioni di contr
 
 In questa procedura dettagliata viene creato un servizio di tipo di carattere di base espressioni di controllo per illustrare gli aspetti principali di creazione di un'immagine personalizzata, usare Android di espressioni di controllo. Il servizio di tipo di carattere iniziale di espressioni di controllo consente di visualizzare un'espressione di controllo digitale semplice che visualizza l'ora corrente in ore e minuti: 
 
-[![Quadrante watch digitale](creating-a-watchface-images/01-initial-face.png "schermata di esempio del tipo di carattere iniziale di espressioni di controllo digitale")](creating-a-watchface-images/01-initial-face.png)
+[![Quadrante watch digitale](creating-a-watchface-images/01-initial-face.png "schermata di esempio del tipo di carattere iniziale di espressioni di controllo digitale")](creating-a-watchface-images/01-initial-face.png#lightbox)
 
 Dopo questa faccia digitale espressioni di controllo è sviluppata e testata, viene aggiunto altro codice per l'aggiornamento a una più sofisticate quadrante di orologio analogico con tre mani: 
 
-[ ![Quadrante orologio analogico](creating-a-watchface-images/02-example-watchface.png "schermata di esempio del tipo di carattere finale analogico espressioni di controllo")](creating-a-watchface-images/02-example-watchface.png)
+[![Quadrante orologio analogico](creating-a-watchface-images/02-example-watchface.png "schermata di esempio del tipo di carattere finale analogico espressioni di controllo")](creating-a-watchface-images/02-example-watchface.png#lightbox)
 
 Espressioni di controllo faccia servizi sono inclusi e installati come parte di un'app di scadenza. Negli esempi seguenti, `MainActivity` contiene semplicemente il codice del modello di app usura in modo che il servizio faccia espressioni di controllo può essere incluso nel pacchetto e le espressioni di controllo smart distribuito come parte dell'applicazione. In effetti, questa app verrà utilizzato esclusivamente come mezzo per ottenere il servizio di controllo faccia caricato il dispositivo usura (o l'emulatore) per il debug e test. 
 
@@ -47,11 +47,11 @@ Creare un nuovo progetto, usare Android denominato **WatchFace** (per ulteriori 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Finestra di dialogo Nuovo progetto](creating-a-watchface-images/03-wear-project-vs-sml.png "selezionare accenti App nella finestra di dialogo Nuovo progetto")](creating-a-watchface-images/03-wear-project-vs.png)
+[![Finestra di dialogo Nuovo progetto](creating-a-watchface-images/03-wear-project-vs-sml.png "selezionare accenti App nella finestra di dialogo Nuovo progetto")](creating-a-watchface-images/03-wear-project-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[ ![Finestra di dialogo Nuovo progetto](creating-a-watchface-images/03-wear-project-xs-sml.png "selezionare accenti App nella finestra di dialogo Nuovo progetto")](creating-a-watchface-images/03-wear-project-xs.png)
+[![Finestra di dialogo Nuovo progetto](creating-a-watchface-images/03-wear-project-xs-sml.png "selezionare accenti App nella finestra di dialogo Nuovo progetto")](creating-a-watchface-images/03-wear-project-xs.png#lightbox)
 
 -----
 
@@ -60,11 +60,11 @@ Impostare il nome del pacchetto `com.xamarin.watchface`:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Impostazione del nome del pacchetto](creating-a-watchface-images/04-package-name-vs.png "impostare il nome del pacchetto com.xamarin.watchface")](creating-a-watchface-images/04-package-name-vs.png)
+[![Impostazione del nome del pacchetto](creating-a-watchface-images/04-package-name-vs.png "impostare il nome del pacchetto com.xamarin.watchface")](creating-a-watchface-images/04-package-name-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[ ![Impostazione del nome del pacchetto](creating-a-watchface-images/04-package-name-xs.png "impostare il nome del pacchetto com.xamarin.watchface")](creating-a-watchface-images/04-package-name-xs.png)
+[![Impostazione del nome del pacchetto](creating-a-watchface-images/04-package-name-xs.png "impostare il nome del pacchetto com.xamarin.watchface")](creating-a-watchface-images/04-package-name-xs.png#lightbox)
 
 -----
 
@@ -72,13 +72,13 @@ Impostare il nome del pacchetto `com.xamarin.watchface`:
 
 Inoltre, scorrere verso il basso e abilitare il **INTERNET** e **WAKE_LOCK** autorizzazioni: 
 
-[ ![Autorizzazioni necessarie per](creating-a-watchface-images/05-required-permissions-vs.png "abilitare INTERNET e WAKE_LOCK autorizzazioni")](creating-a-watchface-images/05-required-permissions-vs.png)
+[![Autorizzazioni necessarie per](creating-a-watchface-images/05-required-permissions-vs.png "abilitare INTERNET e WAKE_LOCK autorizzazioni")](creating-a-watchface-images/05-required-permissions-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 Impostare la versione minima di Android **Android 5.1 (livello API 22)**. Inoltre, abilitare il **Internet** e **WakeLock** autorizzazioni:
 
-[ ![Autorizzazioni necessarie per](creating-a-watchface-images/05-required-permissions-xs.png "abilitare Internet e WakeLock autorizzazioni")](creating-a-watchface-images/05-required-permissions-xs.png)
+[![Autorizzazioni necessarie per](creating-a-watchface-images/05-required-permissions-xs.png "abilitare Internet e WakeLock autorizzazioni")](creating-a-watchface-images/05-required-permissions-xs.png#lightbox)
 
 -----
 
@@ -91,24 +91,24 @@ Successivamente, scaricare [preview.png](creating-a-watchface-images/preview.png
 
 Avviare Gestione pacchetti NuGet (in Visual Studio, fare doppio clic su **riferimenti** nel **Esplora** e selezionare **Gestisci pacchetti NuGet...** ). Aggiornare il progetto per l'ultima versione stabile di **Xamarin.Android.Wear**: 
 
-[ ![Aggiungere pacchetti NuGet](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "aggiungere il pacchetto Xamarin.Android.Wear")](creating-a-watchface-images/06-add-wear-pkg-vs.png)
+[![Aggiungere pacchetti NuGet](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "aggiungere il pacchetto Xamarin.Android.Wear")](creating-a-watchface-images/06-add-wear-pkg-vs.png#lightbox)
 
 Successivamente, se **Xamarin.Android.Support.v13** è installato, disinstallarlo:
 
-[ ![Rimozione di gestione pacchetti NuGet](creating-a-watchface-images/07-uninstall-v13-sml.png "Xamarin.Support.v13 rimuovere")](creating-a-watchface-images/07-uninstall-v13.png)
+[![Rimozione di gestione pacchetti NuGet](creating-a-watchface-images/07-uninstall-v13-sml.png "Xamarin.Support.v13 rimuovere")](creating-a-watchface-images/07-uninstall-v13.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 Avviare Gestione pacchetti NuGet (in Visual Studio per Mac, fare doppio clic su **pacchetti** nel **riquadro soluzione** e selezionare **Aggiungi pacchetti** ). Aggiornare il progetto per l'ultima versione stabile di **Xamarin.Android.Wear**: 
 
-[ ![Aggiungere pacchetti NuGet](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "aggiungere il pacchetto Xamarin.Android.Wear")](creating-a-watchface-images/06-add-wear-pkg-xs.png)
+[![Aggiungere pacchetti NuGet](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "aggiungere il pacchetto Xamarin.Android.Wear")](creating-a-watchface-images/06-add-wear-pkg-xs.png#lightbox)
 
 -----
 
 
 Compilare ed eseguire l'app in un emulatore o il dispositivo usura (per ulteriori informazioni su come eseguire questa operazione, vedere il [Introduzione](~/android/wear/get-started/index.md) Guida). La seguente schermata dell'app verrà visualizzato nel dispositivo usura:
 
-[ ![Schermata di app](creating-a-watchface-images/08-app-screen.png "schermata dell'App sul dispositivo usura")](creating-a-watchface-images/08-app-screen.png)
+[![Schermata di app](creating-a-watchface-images/08-app-screen.png "schermata dell'App sul dispositivo usura")](creating-a-watchface-images/08-app-screen.png#lightbox)
 
 A questo punto, l'app usura base non dispone di funzionalità faccia espressioni di controllo perché non fornisce ancora un'implementazione del servizio faccia espressioni di controllo. Questo servizio verrà aggiunti successivamente. 
 
@@ -117,7 +117,7 @@ A questo punto, l'app usura base non dispone di funzionalità faccia espressioni
 
 Implementa usura Android Guarda i caratteri tipografici tramite la `CanvasWatchFaceService` classe. `CanvasWatchFaceService` derivato da `WatchFaceService`, che a sua volta è derivato da `WallpaperService` come illustrato nel diagramma seguente: 
 
-[ ![Diagramma di ereditarietà](creating-a-watchface-images/09-inheritance-diagram-sml.png "CanvasWatchFaceService diagramma di ereditarietà")](creating-a-watchface-images/09-inheritance-diagram.png)
+[![Diagramma di ereditarietà](creating-a-watchface-images/09-inheritance-diagram-sml.png "CanvasWatchFaceService diagramma di ereditarietà")](creating-a-watchface-images/09-inheritance-diagram.png#lightbox)
 
 `CanvasWatchFaceService` include un tipo annidato `CanvasWatchFaceService.Engine`; crea un'istanza di un `CanvasWatchFaceService.Engine` oggetto che esegue il lavoro effettivo di disegno il quadrante dell'orologio. `CanvasWatchFaceService.Engine` derivato da `WallpaperService.Engine` come illustrato nel diagramma sopra riportato. 
 
@@ -317,11 +317,11 @@ Impostare l'azione di compilazione di questo file **AndroidResource**:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Azione di compilazione](creating-a-watchface-images/10-android-resource-vs.png "Set compila azione AndroidResource")](creating-a-watchface-images/10-android-resource-vs.png)
+[![Azione di compilazione](creating-a-watchface-images/10-android-resource-vs.png "Set compila azione AndroidResource")](creating-a-watchface-images/10-android-resource-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-[ ![Azione di compilazione](creating-a-watchface-images/10-android-resource-xs.png "Set compila azione AndroidResource")](creating-a-watchface-images/10-android-resource-xs.png)
+[![Azione di compilazione](creating-a-watchface-images/10-android-resource-xs.png "Set compila azione AndroidResource")](creating-a-watchface-images/10-android-resource-xs.png#lightbox)
 
 -----
 
@@ -342,13 +342,13 @@ Compilare e distribuire l'app al dispositivo usura. Visualizzata la schermata ap
 
 4.  Selezionare il **esempio Xamarin** guardare faccia (illustrato a destra): 
 
-    [ ![Selezione Watchface](creating-a-watchface-images/11-watchface-picker.png "scorrere per individuare quadrante watch esempio Xamarin")](creating-a-watchface-images/11-watchface-picker.png)
+    [![Selezione Watchface](creating-a-watchface-images/11-watchface-picker.png "scorrere per individuare quadrante watch esempio Xamarin")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
 
 5.  Toccare il **esempio Xamarin** guardare faccia per selezionarlo. 
 
 Questa operazione modificherà il quadrante dell'orologio del dispositivo per utilizzare il servizio faccia espressioni di controllo personalizzati implementato usura: 
 
-[ ![Quadrante watch digitale](creating-a-watchface-images/12-digital-watchface.png "espressioni di digitale controllo personalizzato in esecuzione sul dispositivo usura")](creating-a-watchface-images/12-digital-watchface.png)
+[![Quadrante watch digitale](creating-a-watchface-images/12-digital-watchface.png "espressioni di digitale controllo personalizzato in esecuzione sul dispositivo usura")](creating-a-watchface-images/12-digital-watchface.png#lightbox)
 
 Si tratta di un tipo di carattere relativamente essenziale è costituita dall'espressione di controllo perché l'implementazione di app non è pertanto minimo (ad esempio, non include uno sfondo faccia espressioni di controllo e questo non chiamare `Paint` metodi di anti-alias per migliorare l'aspetto). Tuttavia, implementa la funzionalità di base che è necessaria creare un tipo di carattere del controllo personalizzato. 
 
@@ -476,7 +476,7 @@ Application.Context.UnregisterReceiver (timeZoneReceiver);
 
 Compilare e distribuire nuovamente l'app al dispositivo usura. Selezionare il tipo di carattere di controllo dalla selezione faccia espressioni di controllo come prima. Viene visualizzata l'anteprima nel selettore di espressioni di controllo a sinistra e il nuovo stile di espressioni di controllo viene visualizzato sulla destra:
 
-[ ![Quadrante orologio analogico](creating-a-watchface-images/13-analog-watchface.png "migliorata faccia analogico nella selezione e sul dispositivo")](creating-a-watchface-images/13-analog-watchface.png)
+[![Quadrante orologio analogico](creating-a-watchface-images/13-analog-watchface.png "migliorata faccia analogico nella selezione e sul dispositivo")](creating-a-watchface-images/13-analog-watchface.png#lightbox)
 
 In questa schermata si spostano le lancette una volta al secondo. Quando si esegue questo codice in un dispositivo di scadenza, l'icona della mano secondo scompare quando il controllo passa alla modalità di ambiente.
 

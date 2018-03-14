@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 1c24b1faf7b108466d6e93ffae8112d0dea6d844
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 282a4cb59545703c5172f8747cb5b633e7b648dc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sliders-switches-and-segmented-controls"></a>Dispositivi di scorrimento, commutatori e controlli segmentati
 
@@ -22,11 +22,11 @@ ms.lasthandoff: 02/27/2018
 
 Il dispositivo di scorrimento consente di selezione semplice di un valore numerico in un intervallo. Il controllo predefinito per un valore compreso tra 0 e 1, ma questi limiti possono essere personalizzati.
 
- [ ![](slider-switch-segmented-controls-images/image25a.png "Slider")](slider-switch-segmented-controls-images/image25a.png)
+ [![](slider-switch-segmented-controls-images/image25a.png "Slider")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
 Nella schermata seguente vengono illustrate le proprietà che possono essere modificate nella finestra di progettazione:
 
- [ ![](slider-switch-segmented-controls-images/image26a.png "Proprietà dispositivo di scorrimento")](slider-switch-segmented-controls-images/image25a.png)
+ [![](slider-switch-segmented-controls-images/image26a.png "Proprietà dispositivo di scorrimento")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
 È possibile impostare questi valori nel codice, come illustrato di seguito, inclusi il collegamento di un gestore per visualizzare il valore attualmente selezionato in un `UILabel` controllo:
 
@@ -47,7 +47,7 @@ slider1.MaximumTrackTintColor = UIColor.Green;
 
 Il dispositivo di scorrimento personalizzato è simile al seguente:
 
- [ ![](slider-switch-segmented-controls-images/image27a.png "Dispositivo di scorrimento personalizzato")](slider-switch-segmented-controls-images/image28a.png)
+ [![](slider-switch-segmented-controls-images/image27a.png "Dispositivo di scorrimento personalizzato")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
 > Al momento è presente un [bug](http://stackoverflow.com/a/19496179) causando il `ThumbTint` per non eseguire il rendering in fase di esecuzione come previsto. È possibile aggiungere la seguente riga di codice **prima** al codice precedente come soluzione alternativa. [[Origine](http://stackoverflow.com/a/21396794)]:
@@ -62,11 +62,11 @@ Il dispositivo di scorrimento personalizzato è simile al seguente:
 
 iOS utilizza il `UISwitch` come input di un valore booleano che può essere rappresentato da un pulsante di opzione in altre piattaforme. L'utente può modificare il controllo spostando il *thumb* tra il **On/Off** posizioni.
 
- [ ![](slider-switch-segmented-controls-images/image28a.png "commutatore")](slider-switch-segmented-controls-images/image28a.png)
+ [![](slider-switch-segmented-controls-images/image28a.png "commutatore")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 L'aspetto del commutatore può essere personalizzato nel **proprietà riempimento** della finestra di progettazione, che consentirà di controllare lo stato predefinito, **On/Off tint** colori e un **on/off immagine**. Come illustrato nell'immagine riportata di seguito:
 
- [ ![](slider-switch-segmented-controls-images/image29a.png "Proprietà del commutatore")](slider-switch-segmented-controls-images/image29a.png)
+ [![](slider-switch-segmented-controls-images/image29a.png "Proprietà del commutatore")](slider-switch-segmented-controls-images/image29a.png#lightbox)
 
 Le proprietà del commutatore possono essere impostate anche nel codice, ad esempio il codice riportato di seguito verrà mostrato un interruttore con il valore predefinito di `On`:
 
@@ -81,15 +81,15 @@ switch1.On = true;
 
 Un controllo segmentata è un modo organizzato per consentire agli utenti di interagire con un numero ridotto di opzioni. È disposto orizzontalmente e ogni segmento funziona come un pulsante separato. Quando si utilizza la finestra di progettazione, il controllo segmentata è reperibile nella **della casella degli strumenti > controlli**e dovrebbe essere come nell'immagine seguente:
 
- [ ![](slider-switch-segmented-controls-images/segmentedcontrol.png "Controllo segmentato")](slider-switch-segmented-controls-images/segmentedcontrol.png)
+ [![](slider-switch-segmented-controls-images/segmentedcontrol.png "Controllo segmentato")](slider-switch-segmented-controls-images/segmentedcontrol.png#lightbox)
 
 Consente di una caratteristica unica della finestra di progettazione per ogni segmento di essere selezionate singolarmente nella finestra di progettazione, come illustrato di seguito:
 
- [ ![](slider-switch-segmented-controls-images/segmentedcontrolselection.png "Controllo segmentato")](slider-switch-segmented-controls-images/segmentedcontrolselection.png)
+ [![](slider-switch-segmented-controls-images/segmentedcontrolselection.png "Controllo segmentato")](slider-switch-segmented-controls-images/segmentedcontrolselection.png#lightbox)
 
 In questo modo il riquadro proprietà da utilizzare per controllare in modo più preciso le proprietà di ogni segmento. È possibile visualizzare le proprietà modificabili nella schermata seguente:
 
- [ ![](slider-switch-segmented-controls-images/segmentedcontrolproperties.png "Controllo segmentato")](slider-switch-segmented-controls-images/segmentedcontrolproperties.png)
+ [![](slider-switch-segmented-controls-images/segmentedcontrolproperties.png "Controllo segmentato")](slider-switch-segmented-controls-images/segmentedcontrolproperties.png#lightbox)
 
 Si noti che lo stile del controllo segmentata sono deprecato in iOS7, e quindi modificare le opzioni per l'oggetto in un'applicazione IOS 7 non avranno effetto.
 

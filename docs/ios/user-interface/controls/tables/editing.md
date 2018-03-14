@@ -7,30 +7,22 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 1ea4489cd6f9839d5d32c97aa7ded41e4f15538a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: eb8bae676a4b5c682cdb204c6d38ffc1112b483a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="editing"></a>Modifica
 
 Funzionalità di modifica nella tabella sono abilitate per l'override dei metodi in un `UITableViewSource` sottoclasse. Il comportamento di modifica più semplice è il movimento di scorrere rapidamente per eliminare che può essere implementato con un override del metodo singolo.
 La modifica più complesso (incluso lo spostamento di righe) può essere eseguita con la tabella in modalità di modifica.
 
-Questa guida esamina le operazioni seguenti:
-
-- [Scorrere rapidamente per eliminare](#Swipe_to_Delete)
-- [Modalità di modifica](#Edit_Mode)
-- [Stile di modifica di inserimento riga](#row_insertion_editing_style)
-
-<a name="Swipe_to_delete" />
-
 ## <a name="swipe-to-delete"></a>Scorrere rapidamente per eliminazione
 
 Scorrere per eliminare una funzione è un movimento naturale in iOS che gli utenti. 
 
- [ ![](editing-images/image10.png "Esempio di scorrere di eliminazione")](editing-images/image10.png)
+ [![](editing-images/image10.png "Esempio di scorrere di eliminazione")](editing-images/image10.png#lightbox)
 
 Esistono tre override dei metodi che interessano il movimento di scorrere per visualizzare un **eliminare** pulsante in una cella:
 
@@ -68,14 +60,13 @@ public override string TitleForDeleteConfirmation (UITableView tableView, NSInde
 
 Per questo esempio il `UITableViewSource` è stato aggiornato per utilizzare un `List<TableItem>` (anziché una matrice di stringhe) come origine dati, poiché supporta aggiunta ed eliminazione di elementi dalla raccolta.
 
-<a name="Edit_mode" />
 
 ## <a name="edit-mode"></a>Modalità di modifica
 
 Quando una tabella è in modalità di modifica l'utente visualizza un widget rosso 'stop' in ogni riga, che rivela un pulsante Elimina quando interessate. Nella tabella visualizza anche un'icona di "handle" per indicare che è possibile trascinare la riga per modificare l'ordine.
 Il **TableEditMode** esempio implementa queste funzionalità, come illustrato.
 
- [ ![](editing-images/image11.png "L'esempio TableEditMode implementa queste funzionalità, come illustrato")](editing-images/image11.png)
+ [![](editing-images/image11.png "L'esempio TableEditMode implementa queste funzionalità, come illustrato")](editing-images/image11.png#lightbox)
 
 Non sono presenti in una serie di metodi diversi `UITableViewSource` che influiscono sul comportamento di modalità di modifica di una tabella:
 
@@ -136,13 +127,12 @@ e quando l'utente termina la modifica, il **eseguita** pulsante necessario disat
 table.SetEditing (false, true);
 ```
 
-<a name="Edit_mode_–_row_insertion_editing_style" />
 
 ## <a name="row-insertion-editing-style"></a>Stile di modifica di inserimento riga
 
 Inserimento di righe all'interno della tabella è un'interfaccia utente comune: l'esempio in applicazioni iOS standard principale è il **Modifica contatto** dello schermo. Questa schermata viene illustrato il funzionamento della funzionalità di inserimento di righe: in modalità di modifica modalità è presente un'ulteriore riga che (quando si fa clic) inserisce righe aggiuntive nei dati. Quando la modifica è stata completata, il file temporaneo **(aggiungere)** riga viene rimossa.
 
- [ ![](editing-images/image12.png "Quando la modifica è stata completata, il file temporaneo Aggiungi nuova riga viene rimossa")](editing-images/image12.png)
+ [![](editing-images/image12.png "Quando la modifica è stata completata, il file temporaneo Aggiungi nuova riga viene rimossa")](editing-images/image12.png#lightbox)
 
 Non sono presenti in una serie di metodi diversi `UITableViewSource` che influiscono sul comportamento di modalità di modifica di una tabella. Questi metodi sono stati implementati come indicato di seguito nel codice di esempio:
 

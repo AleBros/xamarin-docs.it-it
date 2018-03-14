@@ -4,14 +4,15 @@ description: Esplorare le differenze tra coordinate SkiaSharp e xamarin. Forms
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: 2643e06474ffe0fd60830db3f315bf525c2f84eb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e07377584996694aa8597af79317957c51050ec
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>Pixel e unità indipendenti dal dispositivo
 
@@ -98,7 +99,7 @@ Il metodo inizia la prima riga di testo con una coordinata X di 20 (per un picco
 
 Di seguito è riportato il programma in esecuzione in tutti e tre le piattaforme:
 
-[![](pixels-images/surfacesize-small.png "Schermata triplo della pagina area dimensioni")](pixels-images/surfacesize-large.png "schermata triplo della dimensione di area")
+[![](pixels-images/surfacesize-small.png "Schermata triplo della pagina area dimensioni")](pixels-images/surfacesize-large.png#lightbox "schermata triplo della dimensione di area")
 
 Come si può notare, la `CanvasSize` proprietà del `SKCanvasView` e `Size` proprietà del `SKImageInfo` valore siano consistenti nei report le dimensioni in pixel. Il `Height` e `Width` le proprietà del `SKCanvasView` proprietà xamarin. Forms e segnalare le dimensioni della visualizzazione nell'unità indipendenti dal dispositivo definite dalla piattaforma.
 
@@ -141,7 +142,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Qui è in esecuzione su tre piattaforme:
 
-[![](pixels-images/ellipsefill-small.png "Schermata triplo della pagina area dimensioni")](pixels-images/ellipsefill-large.png "schermata triplo della dimensione di area")
+[![](pixels-images/ellipsefill-small.png "Schermata triplo della pagina area dimensioni")](pixels-images/ellipsefill-large.png#lightbox "schermata triplo della dimensione di area")
 
 Il [altri `DrawOval` metodo](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawOval/p/SkiaSharp.SKRect/SkiaSharp.SKPaint/) ha un [ `SGRect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRect/) argomento, costituito da un rettangolo definito in termini di coordinate X e Y del relativo angolo superiore sinistro e l'angolo inferiore destro. Ovale riempie il rettangolo, che suggerisce che è possibile utilizzarla nel **riempimento ellisse** pagina simile al seguente:
 
