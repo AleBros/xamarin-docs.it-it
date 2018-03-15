@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: f448a3ee9c018aa475775a5ac2c614f3e7ddc324
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ab22881f383e00a67fda8d3e8ffc5d9a4f7f993e
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -25,20 +25,7 @@ Può considerare come una rappresentazione semplificata di nuova generazione [li
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-## <a name="xamarin-studio"></a>Xamarin Studio
-
-È possibile creare progetti di libreria standard di .NET in Xamarin Studio 6.2, creando innanzitutto un progetto libreria portabile:
-
-[![](net-standard-images/xs01-sml.png "Creare un nuovo progetto libreria portabile")](net-standard-images/xs01.png#lightbox)
-
-Dopo aver creato il progetto, fare doppio clic e aprire il **opzioni progetto** finestra.
-Nel **generale** sezione progetto può essere convertito in .NET Standard e impostato per l'utilizzo di una versione specifica nel **piattaforma** elenco a discesa:
-
-[![](net-standard-images/xs02-sml.png "Convertire in generale a .NET Standard opzioni")](net-standard-images/xs02.png#lightbox)
-
-È quindi possibile [creare un pacchetto NuGet](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/existing-library.md) la condivisione di libreria con altri sviluppatori.
-
-## <a name="visual-studio-for-mac-walkthrough"></a>Procedura dettagliata per Visual Studio per Mac
+## <a name="visual-studio-for-mac"></a>Visual Studio per Mac
 
 In questa sezione illustra in dettaglio come creare e usare una libreria Standard di .NET in Visual Studio per Mac. Vedere la sezione di esempio della libreria Standard di .NET per un'implementazione completa.
 
@@ -68,7 +55,7 @@ In cui è possibile modificare la versione di `netstandard` modificando il `Targ
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-## <a name="visual-studio-windows-walkthrough"></a>Procedura dettagliata di Visual Studio (Windows)
+## <a name="visual-studio-2017-windows"></a>Visual Studio 2017 (Windows)
 
 In questa sezione illustra in dettaglio come creare e usare una libreria Standard di .NET in Visual Studio. Vedere la sezione di esempio della libreria Standard di .NET per un'implementazione completa.
 
@@ -104,7 +91,3 @@ Dopo aver creata una libreria Standard di .NET, è possibile aggiungere un rifer
 
 -----
 
-
-## <a name="related-links"></a>Collegamenti correlati
-
-- [Note sulla versione](https://developer.xamarin.com/releases/studio/xamarin.studio_6.2/xamarin.studio_6.2/#.NET_Standard_Support)

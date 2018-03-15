@@ -7,11 +7,11 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0968270f657d3195855a752da311b4855283e971
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d7a75ce0303030d53315b5e698fc604a910c969c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Riepilogo del capitolo 28. Percorso e mappe
 
@@ -29,7 +29,7 @@ Angolo espresso Nord o sud dell'equatore dall'area dei segni di terra linee dell
 
 ### <a name="longitude-and-meridians"></a>Longitudine e meridiani
 
-Metà dei cerchi eccellente dal polo nord al polo sud sono righe di longitudine uguale, noto anche come *i meridiani*. Questi sono relativi del primo meridiano Greenwich, in Inghilterra. Per convenzione, longitudine est del meridiano sono valori positivi da 0 a 180 gradi e longitudine a ovest del primo meridiano sono valori negativi da 0 gradi per & #x 2013; 180 gradi.
+Metà dei cerchi eccellente dal polo nord al polo sud sono righe di longitudine uguale, noto anche come *i meridiani*. Questi sono relativi del primo meridiano Greenwich, in Inghilterra. Per convenzione, longitudine est del meridiano sono valori positivi da 0 a 180 gradi e longitudine a ovest del primo meridiano sono valori negativi da 0 a &ndash;180 gradi.
 
 ### <a name="the-equirectangular-projection"></a>La proiezione equirettangolare
 

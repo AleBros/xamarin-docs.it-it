@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: 3f30a77975a9f42380ecf7efd73426763ec83ef0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b044cb849f9a8e591a8db5907211a55f77d6e45f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xaml-standard-preview-controls"></a>Controlli XAML Standard (anteprima)
 
@@ -24,36 +24,34 @@ Questa pagina elenca i controlli XAML Standard disponibili in anteprima, insieme
 
 ## <a name="controls"></a>Controlli
 
-<table style="width:300px">
-  <tr><th>Xamarin.Forms</th><th>Sintassi XAML per gli Standard</th></tr>
-  <tr><td>Frame</td><td>Bordo</td></tr>
-  <tr><td>Selezione</td><td>ComboBox</td></tr>
-  <tr><td>ActivityIndicator</td><td>ProgressRing</td></tr>
-  <tr><td>StackLayout</td><td>StackPanel</td></tr>
-  <tr><td>Label</td><td>TextBlock</td></tr>
-  <tr><td>Voce</td><td>TextBox</td></tr>
-  <tr><td>Opzione</td><td>ToggleSwitch</td></tr>
-  <tr><td>ContentView</td><td>UserControl</td></tr>
-</table>
+|Xamarin.Forms|Sintassi XAML per gli Standard|
+|--- |--- |
+|Frame|Bordo|
+|Selezione|ComboBox|
+|ActivityIndicator|ProgressRing|
+|StackLayout|StackPanel|
+|Label|TextBlock|
+|Voce|TextBox|
+|Opzione|ToggleSwitch|
+|ContentView|UserControl|
+
 
 ## <a name="properties-and-enumerations"></a>Proprietà ed enumerazioni
 
-<table>
-  <tr><th>Xamarin.Forms<br/>Controlli con le proprietà aggiornate</th><th>Xamarin.Forms<br/>Proprietà o Enum</th><th>Sintassi XAML per gli Standard<br/>Equivalente</th></tr>
-  <tr><td>Pulsante, voce, etichetta, DatePicker, Editor, SearchBar, TimePicker</td><td>TextColor</td><td>Primo piano</td></tr>
-  <tr><td>VisualElement</td><td>BackgroundColor</td><td><i>Sfondo *</i></td></tr>
-  <tr><td>Strumento di selezione, pulsante</td><td>BorderColor, OutlineColor</td><td>BorderBrush</td></tr>
-  <tr><td>Button</td><td>BorderWidth</td><td>BorderThickness</td></tr>
-  <tr><td>ProgressBar</td><td>Stato</td><td>Valore</td></tr>
-  <tr><td>Pulsante, voce, etichetta, Editor, SearchBar, intervallo, tipo di carattere</td><td>FontAttributes<br/>Grassetto, corsivo, nessuno</td><td>FontStyle<br/>Corsivo, normale</td></tr>
-  <tr><td>Pulsante, voce, etichetta, Editor, SearchBar, intervallo, tipo di carattere</td><td>FontAttributes</td><td><i>FontWeights *</i><br/>Normale, grassetto</td></tr>
-  <tr><td>InputView</td><td>Tastiera<br/>Impostazione predefinita, l'Url, numero, telefono, testo, Chat, posta elettronica</td><td><i>InputScopeNameValue *</i><br/>Impostazione predefinita, l'Url, numero, TelephoneNumber, testo, Chat, EmailNameOrAddress</td></tr>
-  <tr><td>StackPanel</td><td>StackOrientation</td><td><i>Orientamento *</i></td></tr>
-</table>
+|Xamarin.FormsControls con le proprietà aggiornate|Xamarin.FormsProperty o Enum|StandardEquivalent XAML|
+|--- |--- |--- |
+|Pulsante, voce, etichetta, DatePicker, Editor, SearchBar, TimePicker|TextColor|Primo piano|
+|VisualElement|BackgroundColor|Sfondo *|
+|Strumento di selezione, pulsante|BorderColor, OutlineColor|BorderBrush|
+|Button|BorderWidth|BorderThickness|
+|ProgressBar|Stato|Valore|
+|Pulsante, voce, etichetta, Editor, SearchBar, intervallo, tipo di carattere|FontAttributesBold, corsivo, nessuno|FontStyleItalic, Normal|
+|Pulsante, voce, etichetta, Editor, SearchBar, intervallo, tipo di carattere|FontAttributes|FontWeights * grassetto, Normal|
+|InputView|KeyboardDefault, Url, numero, telefono, testo, Chat, inviare tramite posta elettronica|InputScopeNameValue * predefinito, Url, numero, TelephoneNumber, testo, Chat, EmailNameOrAddress|
+|StackPanel|StackOrientation|Orientamento *|
 
 > [!IMPORTANT]
 > Le voci contrassegnate con * sono incompleti nell'anteprima corrente
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

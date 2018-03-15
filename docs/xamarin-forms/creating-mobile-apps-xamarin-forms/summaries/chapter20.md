@@ -7,11 +7,11 @@ ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 86ae56fc2baac3eab0fbf375c5f67f7b2327721a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 0ac316bc2cef04a80958c047427845dbdcc4137f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Riepilogo del capitolo 20. / O asincrono e file
 
@@ -65,7 +65,7 @@ In genere, .NET [ `System.IO` ](https://developer.xamarin.com/api/namespace/Syst
 
 ### <a name="good-news-and-bad-news"></a>Buone notizie e cattive
 
-Tutte le piattaforme supportate da archiviazione locale dell'applicazione di supporto xamarin. Forms & #x 2014; spazio di archiviazione privato dell'applicazione.
+Tutte le piattaforme supportate da archiviazione locale di xamarin. Forms supporto applicazione &mdash; spazio di archiviazione privato dell'applicazione.
 
 Le librerie di xamarin. IOS e xamarin includono una versione di .NET che Xamarin è espressamente progettato per queste due piattaforme. Tra le classi da `System.IO` che è possibile utilizzare per eseguire i/o file con l'archiviazione locale dell'applicazione in queste due piattaforme.
 
@@ -117,7 +117,7 @@ Il [ **TextFileAsync** ](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 ### <a name="keeping-it-in-the-background"></a>Mantenendo in background
 
-Metodi che effettuano chiamate a più metodi asincroni & #x 2014; ad esempio il `WriteFileAsync` e `ReadFileASync` metodi in Windows Runtime [ `FileHelper` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/FileHelper.cs) classe & #x 2014; è possibile eseguire in modo leggermente più efficiente utilizzando il [ `ConfigureAwait` ](https://developer.xamarin.com/api/member/System.Threading.Tasks.Task%3CTResult%3E.ConfigureAwait/p/System.Boolean/) metodo evitare di passare al thread dell'interfaccia utente.
+I metodi che effettuano chiamate a più metodi asincroni &mdash; , ad esempio il `WriteFileAsync` e `ReadFileASync` metodi in Windows Runtime [ `FileHelper` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/FileHelper.cs) classe &mdash; può essere effettuato qualche tempo più efficiente utilizzando la [ `ConfigureAwait` ](https://developer.xamarin.com/api/member/System.Threading.Tasks.Task%3CTResult%3E.ConfigureAwait/p/System.Boolean/) metodo per evitare di passare al thread dell'interfaccia utente.
 
 ### <a name="dont-block-the-ui-thread"></a>Non bloccare il thread dell'interfaccia utente.
 

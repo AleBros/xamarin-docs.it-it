@@ -7,11 +7,11 @@ ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 6e0f1abf04695dfb5348b631a9fbdbd2c81bc431
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ccae97021e86eb1375f948c5ad126253c6088037
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Riepilogo del capitolo 11. L'infrastruttura associabile
 
@@ -47,9 +47,9 @@ In effetti, il `Text` proprietà CLR è interamente implementato mediante la `Se
 
 Ogni volta che una proprietà che è supportata da modifica una proprietà associabile, `BindableObject` viene attivato un [ `PropertyChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.BindableObject.PropertyChanged/) evento che identifica la proprietà che è stato modificato. Questo evento non viene generato quando la proprietà è impostata sullo stesso valore.
 
-Alcune proprietà non sono supportate da proprietà associabili e alcune classi di xamarin. Forms & #x 2014; ad esempio `Span` & #x 2014; non derivano da `BindableObject`. Solo una classe che deriva da `BindableObject` può supportare le proprietà associabili perché `BindableObject` definisce il `SetValue` e `GetValue` metodi.
+Alcune proprietà non sono supportate da proprietà associabili e alcune classi di xamarin. Forms &mdash; , ad esempio `Span` &mdash; non derivano da `BindableObject`. Solo una classe che deriva da `BindableObject` può supportare le proprietà associabili perché `BindableObject` definisce il `SetValue` e `GetValue` metodi.
 
-Poiché `Span` non deriva da `BindableObject`, nessuno dei relativi proprietà & #x 2014; ad esempio `Text` & #x 2014; sono supportate da una proprietà associabile. Perché un `DynamicResource` impostazione il `Text` proprietà di `Span` genera un'eccezione nel [ **DynamicVsStatic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic) sample nel capitolo precedente. Il [ **DynamicVsStaticCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode) esempio viene illustrato come impostare una risorsa dinamica nel codice utilizzando il [ `SetDynamicResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Element.SetDynamicResource/p/Xamarin.Forms.BindableProperty/System.String/) definito dal metodo `Element`. Il primo argomento è un oggetto di tipo `BindableProperty`.
+Poiché `Span` non deriva da `BindableObject`, nessuna delle proprietà &mdash; , ad esempio `Text` &mdash; sono supportate da una proprietà associabile. Perché un `DynamicResource` impostazione il `Text` proprietà di `Span` genera un'eccezione nel [ **DynamicVsStatic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic) sample nel capitolo precedente. Il [ **DynamicVsStaticCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode) esempio viene illustrato come impostare una risorsa dinamica nel codice utilizzando il [ `SetDynamicResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Element.SetDynamicResource/p/Xamarin.Forms.BindableProperty/System.String/) definito dal metodo `Element`. Il primo argomento è un oggetto di tipo `BindableProperty`.
 
 Analogamente, il [ `SetBinding` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/) definito dal metodo `BindableObject` è un primo argomento di tipo `BindableProperty`.
 

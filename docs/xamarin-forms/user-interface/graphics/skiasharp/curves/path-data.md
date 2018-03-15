@@ -8,11 +8,11 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: cc21f789d96f9375655766916f80c6f3f524c29d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 7d50e5a33020de822f96a8bf2f713a8c5b9d3020
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="svg-path-data"></a>Dati del percorso SVG
 
@@ -423,7 +423,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-Un'operazione particolare viene eseguita con le lancette, tuttavia. Perché l'orologio viene aggiornato ogni 16 millisecondi, di `Millisecond` proprietà del `DateTime` valore potenzialmente può essere usato per animare secondo manualmente uno sweep anziché a uno che consente di spostare in collegamenti discreti dal secondo al secondo. Ma questo codice consente lo spostamento da smooth. Utilizza invece di xamarin. Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/) e [ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/) animazione interpolazione funzioni per un tipo diverso di spostamento. Queste funzioni di interpolazione causano le lancette spostare in un modo di più a scatti & #x 2014; ritirare un poco prima che lo spostamento e quindi leggermente aumenti la destinazione, un effetto che purtroppo non possano essere riprodotti in queste schermate statiche:
+Un'operazione particolare viene eseguita con le lancette, tuttavia. Perché l'orologio viene aggiornato ogni 16 millisecondi, di `Millisecond` proprietà del `DateTime` valore potenzialmente può essere usato per animare secondo manualmente uno sweep anziché a uno che consente di spostare in collegamenti discreti dal secondo al secondo. Ma questo codice consente lo spostamento da smooth. Utilizza invece di xamarin. Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/) e [ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/) animazione interpolazione funzioni per un tipo diverso di spostamento. Queste funzioni di interpolazione causare le lancette spostare in modo più a scatti &mdash; ritirare un poco prima che lo spostamento e quindi leggermente aumenti la destinazione, un effetto che purtroppo non possano essere riprodotti in queste schermate statiche:
 
 [![](path-data-images/prettyanalogclock-small.png "Schermata di triplo della pagina piuttosto l'orologio analogico")](path-data-images/prettyanalogclock-large.png#lightbox "tripla schermata della pagina piuttosto l'orologio analogico")
 

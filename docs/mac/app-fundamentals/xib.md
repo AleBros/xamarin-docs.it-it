@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a4b8ac68da7bcb25ea55906e8fe060b7c7fdee9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 92ca65409dd82806278885bb03efd7b04ab1827d
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xib-files"></a>file .xib
 
@@ -67,7 +67,7 @@ Il **Editor dell'interfaccia** sezione fornisce l'area in cui si graficamente di
 
 #### <a name="properties--utilities"></a>Proprietà & utilità
 
-Il **proprietà & utilità** sezione è devided in due sezioni principali che verrà utilizzato con, **proprietà** (detto anche controlli) e **libreria**:
+Il **proprietà & utilità** sezione è suddivisa in due sezioni principali che verrà utilizzato con, **proprietà** (detto anche controlli) e **libreria**:
 
 ![Il controllo proprietà](xib-images/xcode04.png "di ispezione")
 
@@ -375,7 +375,7 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 Questo codice collega all'azione creata in Xcode e il generatore di interfaccia e verrà chiamata ogni volta che l'utente fa clic sul pulsante.
 
-Alcuni elementi dell'interfaccia utente sono create automaticamente nel riquadro azioni, ad esempio, gli elementi della barra dei Menu predefinito, ad esempio il **Apri...**  voce di menu (`openDocument:`). Nel **riempimento soluzione**, fare doppio clic sul `AppDelegate.CS` file per aprirlo e modificarlo e aggiungere il seguente codice di `DidFinishLaunching` metodo:
+Alcuni elementi dell'interfaccia utente sono create automaticamente nel riquadro azioni, ad esempio, gli elementi della barra dei Menu predefinito, ad esempio il **Apri...**  voce di menu (`openDocument:`). Nel **riempimento soluzione**, fare doppio clic sul **appdelegate. cs** file per aprirlo e modificarlo e aggiungere il seguente codice di `DidFinishLaunching` metodo:
 
 ```csharp
 [Export ("openDocument:")]

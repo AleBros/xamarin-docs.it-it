@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e81ecd10f4dfc101cf63ba9d052d15b51a367ee5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5dd77232dc992880b18393c740b54c7784e4d049
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>Introduzione alle librerie di classi portabile
 
@@ -39,94 +39,13 @@ Quando si crea una libreria di classi portabile, tuttavia, è possibile sceglier
 
 Nella tabella seguente vengono illustrate alcune delle funzionalità che variano in base alla piattaforma .NET. Per scrivere un assembly libreria di classi Portabile che è sicuramente eseguito su dispositivi/piattaforme specifiche, è sufficiente scegliere cui supporto è obbligatorio quando si crea il progetto.
 
-<table border="1" cellpadding="1" cellspacing="1">
-  <tbody>
-    <tr>
-      <td>
-Funzionalità </td>
-      <td>
-.NET Framework </td>
-      <td>
-App UWP </td>
-      <td>
-Silverlight </td>
-      <td>
-Windows Phone </td>
-      <td>
-Xamarin </td>
-    </tr>
-    <tr>
-      <td>
-Base </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-LINQ </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-IQueryable </td>
-       <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-7.5 + </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-Serializzazione </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-Annotazioni dei dati </td>
-      <td>
-4.0.3 + </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-      </td>
-      <td>
-Y </td>
-    </tr>
-  </tbody>
-</table>
+|Funzionalità|.NET Framework|App UWP|Silverlight|Windows Phone|Xamarin|
+|---|---|---|---|---|---|
+|Base|Y|Y|Y|Y|Y|
+|LINQ|Y|Y|Y|Y|Y|
+|IQueryable|Y|Y|Y|7.5 +|Y|
+|Serializzazione|Y|Y|Y|Y|Y|
+|Annotazioni dei dati|4.0.3 +|Y|Y||Y|
 
 La colonna Xamarin dovuto al fatto che xamarin. IOS e xamarin supporta tutti i profili forniti con Visual Studio e la disponibilità di funzionalità nelle librerie create sarà limitata solo da altre piattaforme, che si sceglie di supportare.
 

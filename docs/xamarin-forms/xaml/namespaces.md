@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/10/2017
-ms.openlocfilehash: b0afba90dab5cba4bad385f8d6447d8b83c1de3d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55b83151e9c345096aeb0bfdd686d50c5fde62fd
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xaml-namespaces"></a>Spazi dei nomi XAML
 
@@ -38,40 +38,14 @@ XAML Usa i prefissi per dichiarare spazi dei nomi non predefinito, con il prefis
 
 Nella tabella seguente vengono illustrati il `x` attributi dello spazio dei nomi supportati da xamarin. Forms:
 
-<table>
- <thead>
-   <tr>
-     <td><strong>Costrutto</strong></td>
-     <td><strong>Descrizione</strong></td>
-   </tr>
- </thead>
- <tbody>
-   <tr>
-     <td><code>x:Arguments</code></td>
-     <td>Specifica gli argomenti del costruttore per un costruttore non predefinito, o per una dichiarazione di oggetto del metodo factory.</td>
-   </tr>
-   <tr>
-     <td><code>x:Class</code></td>
-     <td>Specifica lo spazio dei nomi e il nome di una classe definita in XAML. Il nome della classe deve corrispondere al nome di classe di file code-behind. Si noti che questo costrutto può apparire solo nell'elemento radice di un file XAML.</td>
-   </tr>
-   <tr>
-     <td><code>x:FactoryMethod</code></td>
-     <td>Specifica un metodo factory che può essere utilizzato per inizializzare un oggetto.</td>
-   </tr>
-   <tr>
-     <td><code>x:Key</code></td>
-     <td>Specifica una chiave univoca definito dall'utente per ogni risorsa in un <code>ResourceDictionary</code>. Il valore della chiave viene utilizzato per recuperare la risorsa XAML e viene in genere utilizzato come argomento per il <code>StaticResource</code> estensione di markup.</td>
-   </tr>
-   <tr>
-     <td><code>x:Name</code></td>
-     <td>Specifica il nome di un oggetto di runtime per l'elemento XAML. Impostazione <code>x:Name</code> è simile alla dichiarazione di una variabile nel codice.</td>
-   </tr>
-   <tr>
-     <td><code>x:TypeArguments</code></td>
-     <td>Specifica gli argomenti di tipo generico per il costruttore di un tipo generico.</td>
-   </tr>
- </tbody>
-</table>
+|Costrutto|Descrizione|
+|--- |--- |
+|`x:Arguments`|Specifica gli argomenti del costruttore per un costruttore non predefinito, o per una dichiarazione di oggetto del metodo factory.|
+|`x:Class`|Specifica lo spazio dei nomi e il nome di una classe definita in XAML. Il nome della classe deve corrispondere al nome di classe di file code-behind. Si noti che questo costrutto può apparire solo nell'elemento radice di un file XAML.|
+|`x:FactoryMethod`|Specifica un metodo factory che può essere utilizzato per inizializzare un oggetto.|
+|`x:Key`|Specifica una chiave univoca definito dall'utente per ogni risorsa in un `ResourceDictionary`. Il valore della chiave viene utilizzato per recuperare la risorsa XAML e viene in genere utilizzato come argomento per il `StaticResource` estensione di markup.|
+|`x:Name`|Specifica il nome di un oggetto di runtime per l'elemento XAML. Impostazione `x:Name` è simile alla dichiarazione di una variabile nel codice.|
+|`x:TypeArguments`|Specifica gli argomenti di tipo generico per il costruttore di un tipo generico.|
 
 Per ulteriori informazioni sul `x:Arguments`, `x:FactoryMethod`, e `x:TypeArguments` gli attributi, vedere [il passaggio di argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md).
 

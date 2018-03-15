@@ -7,11 +7,11 @@ ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 3390a298cd8d9967f0aea2bd9fb5a90830714ba5
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: db950915decd2bba216c7dcd6031797037a7c8e0
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Riepilogo del capitolo 24. Navigazione tra le pagine
 
@@ -118,7 +118,7 @@ Il [ **BuildAPage** ](https://github.com/xamarin/xamarin-forms-book-samples/tree
 
 ## <a name="patterns-of-data-transfer"></a>Modelli di trasferimento dei dati
 
-È spesso necessario condividere dati tra pagine & #x 2014; per trasferire i dati a una pagina di navigazione e per una pagina restituire i dati per la pagina che lo ha richiamato. Sono disponibili diverse tecniche per raggiungere questo obiettivo.
+È spesso necessario condividere dati tra le pagine &mdash; per trasferire i dati a una pagina di navigazione e per una pagina restituire i dati per la pagina che lo ha richiamato. Sono disponibili diverse tecniche per raggiungere questo obiettivo.
 
 ### <a name="constructor-arguments"></a>Argomenti del costruttore
 

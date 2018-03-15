@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 5cf194dce9bf4d0af23ba663ab00cf94a8a1766c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a02627d5e5b40fe9e7b2fdbd3a6995a2d96fbf03
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>Utilizzo di un servizio Web di Windows Communication Foundation (WCF)
 
@@ -41,37 +41,12 @@ Istruzioni sull'impostazione del servizio WCF sono reperibile nel file Leggimi c
 
 Il servizio WCF fornisce le seguenti operazioni:
 
-<table>
-  <thead>
-    <tr>
-      <th>Operazione</th>
-      <th>Descrizione</th>
-      <th>Parametri</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>GetTodoItems</td>
-      <td>Ottenere un elenco di elementi di attività da eseguire</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>CreateTodoItem</td>
-      <td>Creare un nuovo elemento di attività da eseguire</td>
-      <td>Una serializzazione XML <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>EditTodoItem</td>
-      <td>Aggiornare un elemento di attività</td>
-      <td>Una serializzazione XML <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>DeleteTodoItem</td>
-      <td>Eliminare un elemento di attività</td>
-      <td>Una serializzazione XML <code>TodoItem</code></td>
-    </tr>
-  </tbody>
-</table>
+|Operazione|Descrizione|Parametri|
+|--- |--- |--- |
+|GetTodoItems|Ottenere un elenco di elementi di attività da eseguire|
+|CreateTodoItem|Creare un nuovo elemento di attività da eseguire|Un codice XML serializzato TodoItem|
+|EditTodoItem|Aggiornare un elemento di attività|Un codice XML serializzato TodoItem|
+|DeleteTodoItem|Eliminare un elemento di attività|Un codice XML serializzato TodoItem|
 
 Per ulteriori informazioni sul modello di data utilizzato nell'applicazione, vedere [modellazione dati](~/xamarin-forms/data-cloud/walkthrough.md).
 

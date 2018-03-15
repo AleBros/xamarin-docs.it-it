@@ -8,11 +8,11 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: 2b48667d90bf994deca5c41080e002974b0ded91
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dcfcf43c89f26b4e721c9752b9cbad1f4a30cfc2
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>Tre tipi di curve di Bézier
 
@@ -20,7 +20,7 @@ _Imparare a utilizzare SkiaSharp per eseguire il rendering di Bézier cubica, qu
 
 Pierre Bézier (1910: 1999), un tecnico presso il settore automobilistico Renault, che utilizzano la curva per la progettazione assistita da computer dei corpi dei car francese denominata la curva di Bézier.
 
-Curve di Bézier sono noti per essere particolarmente adatta alla finestra di progettazione interattiva: essi sono anche se si comportassero & #x 2014; in altre parole, non ci siano singolarità che causano la curva per diventare difficile da gestire o infinito & #x 2014; e sono in genere del piacevole. Strutture di un carattere di tipi di carattere basata sul computer sono in genere definite con curve di Bézier:
+Curve di Bézier sono noti per essere particolarmente adatta alla finestra di progettazione interattiva: sono bene &mdash; in altre parole, non ci siano singolarità che causano la curva diventare difficile da gestire o infinito &mdash; e sono in genere esteticamente . Strutture di un carattere di tipi di carattere basata sul computer sono in genere definite con curve di Bézier:
 
 ![](beziers-images/beziersample.png "Una curva di Bezier di esempio")
 
@@ -411,7 +411,7 @@ Tuttavia, la forma di una curva di Bézier quadratica non ellittica, motivo per 
 
 ## <a name="the-conic-bzier-curve"></a>La curva di Bézier conica
 
-La curva di Bézier conica & #x 2014; noto anche come la curva di Bézier quadratica razionale & #x 2014; è un'aggiunta relativamente più recente per la famiglia di curve di Bézier. Ad esempio la curva di Bézier quadratica, la curva di Bézier quadratica razionale implica un punto di inizio, un punto finale e un punto di controllo. Ma richiede anche la curva di Bézier quadratica razionale un *peso* valore. Viene chiamato un *razionale* quadratica perché le formule parametriche prevedono l'uso di rapporti.
+La curva di Bézier conica &mdash; noto anche come il razionale curva di Bézier quadratica &mdash; costituisce un'aggiunta relativamente più recente per la famiglia di curve di Bézier. Ad esempio la curva di Bézier quadratica, la curva di Bézier quadratica razionale implica un punto di inizio, un punto finale e un punto di controllo. Ma richiede anche la curva di Bézier quadratica razionale un *peso* valore. Viene chiamato un *razionale* quadratica perché le formule parametriche prevedono l'uso di rapporti.
 
 Le equazioni parametriche per X e Y sono rapporti che condividono il denominatore stesso. Ecco l'equazione per il denominatore *t* compreso tra 0 a 1 e un valore di peso di *w*:
 
@@ -425,7 +425,7 @@ x(t) = ((1 – t)²x₀ + 2wt(1 – t)x₁ + t²x₂)) ÷ d(t)
 
 y(t) = ((1 – t) ²y₀ 2wt + (1 – t) y₁ t²y₂ +)) ÷ Ät
 
-Sono detti anche razionale di Bézier quadratica *coniche* perché possono rappresentare esattamente i segmenti di qualsiasi sezione conica & #x 2014; hyperbolas, parabolas, puntini di sospensione e cerchi.
+Sono detti anche razionale di Bézier quadratica *coniche* perché possono rappresentare esattamente i segmenti di ogni sezione conica &mdash; hyperbolas, parabolas, puntini di sospensione e cerchi.
 
 Per aggiungere una curva di Bézier quadratica razionale a un percorso, utilizzare il [ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/) metodo o [ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/) overload con separato `x` e `y` coordinate:
 

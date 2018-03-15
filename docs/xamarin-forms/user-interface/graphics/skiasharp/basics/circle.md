@@ -8,11 +8,11 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 5b09621f1d3a24f8061e5cd6551dd85ce93e36e3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 10f741e853603ef22cd45004a6c726ae579f3675
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="drawing-a-simple-circle"></a>Disegnare un cerchio semplice
 
@@ -146,7 +146,7 @@ Quando si esegue il programma, è possibile attivare il telefono o il simulatore
 
 Un `SKPaint` oggetto è poco più di una raccolta di proprietà di disegno delle immagini. Questi oggetti sono molto semplici. È possibile riutilizzare `SKPaint` oggetti come di questo programma, oppure è possibile creare più `SKPaint` gli oggetti per diverse combinazioni di proprietà di disegno. È possibile creare e inizializzare questi oggetti di fuori del `PaintSurface` un gestore eventi ed è possibile salvarli come campi nella classe della pagina.
 
-Anche se la larghezza del contorno del cerchio è specificata come 25 pixel & #x 2014; un quarto del raggio del cerchio & #x 2014; o risulta essere sottili ed è un buon motivo per cui: metà della larghezza della riga è nascosto dal cerchio blu. Gli argomenti per il `DrawCircle` il metodo per definire le coordinate geometriche astratte di un cerchio. L'area interna di blu viene ridimensionato per tale dimensione per il pixel più vicino, ma la struttura del livello di pixel 25 attraversata dal cerchio geometrica & #x 2014; metà all'interno e metà all'esterno.
+Anche se la larghezza del contorno del cerchio è specificata come 25 pixel &mdash; o un quarto del raggio del cerchio &mdash; risulta essere sottili ed è un buon motivo per cui: metà della larghezza della riga è nascosto dal cerchio blu. Gli argomenti per il `DrawCircle` il metodo per definire le coordinate geometriche astratte di un cerchio. L'area interna di blu viene ridimensionato per tale dimensione per il pixel più vicino, ma la struttura del livello di pixel 25 attraversata dalla cerchio geometrico &mdash; metà all'interno e metà all'esterno.
 
 Nell'esempio successivo nel [l'integrazione con xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) articolo viene illustrata questa visivamente.
 

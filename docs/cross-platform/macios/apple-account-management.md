@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/05/2017
-ms.openlocfilehash: 465ba4822a1004100160703f1607d99199f28a16
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: c0d328e784b0a12b0df1a6b2bf5b990ffa461da5
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="apple-account-management"></a>Gestione degli Account di Apple
 
@@ -41,7 +41,7 @@ Gestione degli account Apple è disponibile in Visual Studio per Mac. Non è att
 
 - Assicurarsi di che essere connessi a internet. Questo avviene perché fastlane comunica direttamente con il portale per sviluppatori di Apple.
 - Verificare di aver [installati gli strumenti fastlane](~/ios/deploy-test/provisioning/fastlane/index.md#Installation).
-- Verificare di aver gli strumenti più recenti fastlane da [https://download.fastlane.tools](https://download.fastlane.tools).
+- Verificare di aver gli strumenti più recenti fastlane da [ https://download.fastlane.tools ](https://download.fastlane.tools).
 - Prima di iniziare, assicurarsi di eventuali contratti di licenza utente di accettare il [portale per sviluppatori](https://developer.apple.com/account/).
 
 ## <a name="adding-an-apple-developer-account"></a>Aggiunta di un account per sviluppatori di Apple
@@ -69,8 +69,7 @@ Gestione degli account Apple è disponibile in Visual Studio per Mac. Non è att
     ![](apple-account-management-images/image6.png)
 
 
-<a name="managing"/>
-    
+<a name="managing" />
 
 
 ## <a name="managing-signing-identities-and-provisioning-profiles"></a>La gestione delle identità di firma e profili di Provisioning

@@ -7,11 +7,11 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 5ad53d7bc8c4ee54a47c4b327fb6f07bc1906ab9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 5559f9e6a4baf9d3f82701b5e3f341900ba83bae
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Riepilogo del capitolo 4. Lo stack di scorrimento
 
@@ -67,9 +67,9 @@ Per un oggetto verticale `StackLayout`, `HorizontalOptions` determina come un el
 
 Per un oggetto verticale `StackLayout`, ogni elemento figlio non è vincolata verticalmente e ottiene un oggetto verticale slot a seconda di altezza del bambino, nel qual caso il `VerticalOptions` impostazione non è rilevante.
 
-Se verticale `StackLayout` stesso non è vincolata & #x 2014; è se relativo `VerticalOptions` impostazione `Start`, `Center`, o `End`, quindi l'altezza del `StackLayout` è l'altezza totale dei relativi elementi figlio.
+Se verticale `StackLayout` stesso non è vincolata&mdash;vale a dire se relativo `VerticalOptions` impostazione è `Start`, `Center`, o `End`, quindi l'altezza del `StackLayout` è l'altezza totale dei relativi elementi figlio.
 
-Tuttavia, se verticale `StackLayout` verticalmente è vincolato & #x 2014; se il relativo `VerticalOptions` impostazione è `Fill`& #x 2014; quindi l'altezza del `StackLayout` sarà l'altezza del contenitore, potrebbe essere maggiore rispetto all'altezza totale del nei relativi elementi figlio. Se è questo il caso e se almeno un elemento figlio è un `VerticalOptions` impostazione con un `Expands` flag di `true`, quindi lo spazio aggiuntivo nel `StackLayout` viene allocato in modo uniforme tra tutti gli elementi figlio con un `Expands` flag di `true`. L'altezza totale degli elementi figlio verrà quindi uguale all'altezza del `StackLayout`e `Alignment` in parte il `VerticalOptions` determina come elemento figlio in senso verticale è posizionato nello slot.
+Tuttavia, se verticale `StackLayout` verticalmente è vincolato&mdash;se relativo `VerticalOptions` è `Fill` &mdash;quindi l'altezza del `StackLayout` sarà l'altezza del contenitore, potrebbe essere maggiore del totale altezza dei relativi elementi figlio. Se è questo il caso e se almeno un elemento figlio è un `VerticalOptions` impostazione con un `Expands` flag di `true`, quindi lo spazio aggiuntivo nel `StackLayout` viene allocato in modo uniforme tra tutti gli elementi figlio con un `Expands` flag di `true`. L'altezza totale degli elementi figlio verrà quindi uguale all'altezza del `StackLayout`e `Alignment` in parte il `VerticalOptions` determina come elemento figlio in senso verticale è posizionato nello slot.
 
 Questa funzionalità viene illustrata la [ **VerticalOptionsDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/VerticalOptionsDemo) esempio.
 

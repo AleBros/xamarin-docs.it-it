@@ -7,11 +7,11 @@ ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: afb8e2fff58583dc8648c55839649c96cb68b6ba
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a40b4f00fd2a0dd3f61c4882a2ef25b8eb68a3a5
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Riepilogo del capitolo 21. Trasformazioni
 
@@ -19,9 +19,9 @@ Verrà visualizzata una visualizzazione di xamarin. Forms sullo schermo in una p
 
 Xamarin. Forms supporta tre tipi di base di trasformazioni:
 
-- *Conversione* & #x 2014; spostare un elemento orizzontalmente o verticalmente
-- *Scala* & #x 2014; modifica le dimensioni di un elemento
-- *Rotazione* & #x 2014; attivare un elemento intorno a un punto o un asse
+- *Conversione* &mdash; spostare un elemento orizzontalmente o verticalmente
+- *Scala* &mdash; modificare le dimensioni di un elemento
+- *Rotazione* &mdash; attivare un elemento intorno a un punto o un asse
 
 In xamarin. Forms, il ridimensionamento è isotropico; influisce su larghezza e altezza in modo uniforme. La rotazione è supportata sia nella superficie bidimensionale dello schermo e nello spazio 3D. Non vi è alcuna trasformazione di inclinazione (o determinato dal) e Nessuna trasformazione di matrice generalizzato.
 

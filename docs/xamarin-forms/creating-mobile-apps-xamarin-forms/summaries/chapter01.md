@@ -7,11 +7,11 @@ ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9b60a45cc998743d34d5cadb7750f35e7b965579
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e1d246ea65e88bde07c3d527c18b7850aa09e08b
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Riepilogo del capitolo 1. La modalità di utilizzo xamarin. Forms
 
@@ -21,7 +21,7 @@ Uno dei processi più spiacevoli nella programmazione consiste nel porting di un
 
 Questo problema è comune quando la destinazione delle piattaforme per dispositivi mobili. Attualmente, esistono due principali piattaforme mobili, la famiglia di Apple iPhone e iPad che eseguono il sistema operativo iOS e il sistema operativo Android che viene eseguito su una vasta gamma di telefoni e Tablet. Un'altra piattaforma significativa è Microsoft Windows della piattaforma UWP (Universal), che consente a un singolo programma di destinazione sia Windows 10 e Windows 10 Mobile.
 
-Un fornitore di software che si desidera questi tre le piattaforme di destinazione deve affrontare paradigmi di interfaccia utente diversa, tre gli ambienti di sviluppo diversi, tre interfacce di programmazione diversi, e & #x 2014 e probabilmente la maggior parte le & #x 2014; tre diversi linguaggi di programmazione: Objective-C per l'iPhone e iPad, Java per Android e in c# per Windows.
+Un fornitore di software che si desidera questi tre le piattaforme di destinazione deve affrontare paradigmi di interfaccia utente diversa, tre gli ambienti di sviluppo diversi, tre interfacce di programmazione diversi, e&mdash;probabilmente più considerato&mdash; tre diversi linguaggi di programmazione: Objective-C per l'iPhone e iPad, Java per Android e in c# per Windows.
 
 ## <a name="the-c-and-net-solution"></a>La soluzione c# e .NET
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 650f8dceebb088b3601c21c1f5373fc4ae8c76dc
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c309fb6936296dc181e499c91770ab8891121e9c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="adding-intelligence-with-cognitive-services"></a>Aggiunta di funzionalità con servizi cognitivi
 
@@ -52,51 +52,20 @@ Il `RateAppPage` consente all'utente di richiedere una foto del loro tipo di car
 
 Il progetto libreria di classe portabile (PCL) per l'applicazione di esempio è costituito da cinque cartelle principali:
 
-<table>
-    <thead>
-        <tr><td><strong>Cartella</strong></td><td><strong>Scopo</strong></td></tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>Modelli</strong></td>
-            <td>Contiene le classi del modello di dati per l'applicazione. Ciò include la <code>TodoItem</code> classe, che modella un singolo elemento di dati utilizzati dall'applicazione. La cartella contiene inoltre le classi utilizzate per le risposte JSON modello restituite dall'API dei servizi cognitivi Microsoft diverso.</td>
-        </tr>
-        <tr>
-            <td><strong>Repository</strong></td>
-                        <td>Contiene il <code>ITodoItemRepository</code> interfaccia e <code>TodoItemRepository</code> classe utilizzata per eseguire operazioni di database.</td>
-        </tr>
-        <tr>
-            <td><strong>Servizi</strong></td>
-                        <td>Contiene le interfacce e classi che consentono di accedere a diversi cognitivi servizio API di Microsoft, insieme alle interfacce utilizzate per la <code>DependencyService</code> per individuare le classi che implementano le interfacce nei progetti di piattaforma.</td>
-        </tr>
-        <tr>
-            <td><strong>Utils</strong></td>
-            <td>Contiene il <code>Timer</code> (classe), che viene utilizzato il <code>AuthenticationService</code> classe per rinnovare un token di accesso JWT 9 minuti.</td>
-        </tr>
-        <tr>
-            <td><strong>Visualizzazioni</strong></td>
-            <td>Contiene le pagine dell'applicazione.</td>
-        </tr>
-    </tbody>
-</table>
+|Cartella|Scopo|
+|--- |--- |
+|Modelli|Contiene le classi del modello di dati per l'applicazione. Ciò include la `TodoItem` classe, che modella un singolo elemento di dati utilizzati dall'applicazione. La cartella contiene inoltre le classi utilizzate per le risposte JSON modello restituite dall'API dei servizi cognitivi Microsoft diverso.|
+|Repository|Contiene il `ITodoItemRepository` interfaccia e `TodoItemRepository` classe utilizzata per eseguire operazioni di database.|
+|Servizi|Contiene le interfacce e classi che consentono di accedere a diversi cognitivi servizio API di Microsoft, insieme alle interfacce utilizzate per la `DependencyService` per individuare le classi che implementano le interfacce nei progetti di piattaforma.|
+|Utils|Contiene il `Timer` (classe), che viene utilizzato il `AuthenticationService` classe per rinnovare un token di accesso JWT 9 minuti.|
+|Visualizzazioni|Contiene le pagine dell'applicazione.|
 
 Il progetto di libreria di classi Portabile contiene anche alcuni file importanti:
 
-<table>
-    <thead>
-      <tr><td><strong>File</strong></td><td><strong>Scopo</strong></td></tr>
-    <thead>
-    <tbody>
-        <tr>
-            <td><strong>Constants.cs</strong></td>
-            <td>Il <code>Constants</code> (classe), che specifica le chiavi API e gli endpoint per le API del servizio Microsoft cognitivi che vengono richiamati. Le costanti di chiave API devono essere aggiornati per accedere alle API servizio cognitivi diversi.
-        </tr>
-        <tr>
-          <td><strong>App.xaml.cs</strong></td>
-          <td>Il <code>App</code> è responsabile della creazione di un'istanza sia la prima pagina che verrà visualizzata dall'applicazione in ogni piattaforma, e <code>TodoManager</code> classe utilizzata per richiamare le operazioni di database.</td>
-        </tr>
-    </tbody>
-</table>
+|File|Scopo|
+|--- |--- |
+|Constants.cs|Il `Constants` (classe), che specifica le chiavi API e gli endpoint per le API del servizio Microsoft cognitivi che vengono richiamati. Le costanti di chiave API devono essere aggiornati per accedere alle API servizio cognitivi diversi.|
+|App.xaml.cs|Il `App` è responsabile della creazione di un'istanza sia la prima pagina che verrà visualizzata dall'applicazione in ogni piattaforma, e `TodoManager` classe utilizzata per richiamare le operazioni di database.|
 
 ### <a name="nuget-packages"></a>Pacchetti NuGet
 

@@ -8,11 +8,11 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: bb99984f93f494cfb5ad3d37ccb25f0b91d0b489
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e84bce5d4280ded801ed58999a2570d3c6bd327e
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="clipping-with-paths-and-regions"></a>Ritaglio e percorsi
 
@@ -267,7 +267,7 @@ Tuttavia, gli overload di `ClipPath` e `ClipRect` con `SKRegionOperation` i para
 
 È comunque possibile usare il `SKRegionOperation` enumerazione ma che è necessario definire un'area di visualizzazione in termini di un [ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) oggetto.
 
-Oggetto appena creato `SKRegion` descrive un'area vuota. In genere la prima chiamata per l'oggetto è [ `SetRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/) in modo che l'area descrivere un'area rettangolare. Il parametro `SetRect` è un un `SKRectI` valore & #x 2014; il valore del rettangolo con le proprietà di tipo integer. È quindi possibile chiamare [ `SetPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/) con un `SKPath` oggetto. Crea un'area che corrisponde all'interno del percorso, ma l'area rettangolare iniziale troncato.
+Oggetto appena creato `SKRegion` descrive un'area vuota. In genere la prima chiamata per l'oggetto è [ `SetRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/) in modo che l'area descrivere un'area rettangolare. Il parametro `SetRect` è un un `SKRectI` valore &mdash; il valore del rettangolo con le proprietà di tipo integer. È quindi possibile chiamare [ `SetPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/) con un `SKPath` oggetto. Crea un'area che corrisponde all'interno del percorso, ma l'area rettangolare iniziale troncato.
 
 Il `SKRegionOperation` enumerazione solo entra in gioco quando si chiama uno del [ `Op` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.Op/p/SkiaSharp.SKRegion/SkiaSharp.SKRegionOperation/) , ad esempio l'overload del metodo:
 

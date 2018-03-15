@@ -8,11 +8,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: feecfc923903a20332bf3a1a188ab9d7cd2ce1c0
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 39e2084bf9ca888d6e39fc5f02a455d3500e568c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="the-scale-transform"></a>La trasformazione di scala
 
@@ -44,7 +44,7 @@ Il `SKCanvas` classe definisce quattro `Scale` metodi. Il primo [ `Scale` ](http
 public void Scale (Single s)
 ```
 
-Questo è noto come *isotropico* scalabilità & #x 2014; la scala che è la stessa in entrambe le direzioni. Scalabilità isotropico mantiene le proporzioni dell'oggetto.
+Questo è noto come *isotropico* scalabilità &mdash; scalabilità che è la stessa in entrambe le direzioni. Scalabilità isotropico mantiene le proporzioni dell'oggetto.
 
 Il secondo [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/) metodo consente di specificare valori diversi per la scalabilità orizzontale e verticale:
 
@@ -168,7 +168,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](scale-images/centeredscale-small.png "Schermata triplo della pagina centrata scala")](scale-images/centeredscale-large.png#lightbox "tripla schermata della pagina scala centrata")
 
-Il `Slider` elementi in questo programma dispongono di un intervallo di & #x 2013; 10 a 10. Come si può notare, i valori negativi (ad esempio in di Android schermata al centro) la scalabilità verticale provocare capovolgere intorno all'asse orizzontale che passa attraverso il centro della scala degli oggetti. I valori negativi di (ad esempio la schermata di Windows a destra) la scalabilità orizzontale che gli oggetti da capovolgere intorno all'asse verticale che passa attraverso il centro della scala.
+Il `Slider` elementi in questo programma sono un intervallo di &ndash;10 a 10. Come si può notare, i valori negativi (ad esempio in di Android schermata al centro) la scalabilità verticale provocare capovolgere intorno all'asse orizzontale che passa attraverso il centro della scala degli oggetti. I valori negativi di (ad esempio la schermata di Windows a destra) la scalabilità orizzontale che gli oggetti da capovolgere intorno all'asse verticale che passa attraverso il centro della scala.
 
 Questa versione di quarto di `Scale` metodo è effettivamente un collegamento. Si potrebbe voler vedere il funzionamento sostituendo il `Scale` metodo in questo codice con quanto segue:
 

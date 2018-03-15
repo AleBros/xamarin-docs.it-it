@@ -1,5 +1,6 @@
 ---
-title: Requisiti di installazione e
+title: Requisiti e l'installazione di controllo
+description: Come scaricare, installare e utilizzare il controllo di Xamarin.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
@@ -7,35 +8,28 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: a587935e35882ed1dc68817fbbe1ae3e91200f29
-ms.sourcegitcommit: 0bdcd00b64d581d4c5179bc39ded4018c9374229
+ms.openlocfilehash: a2e6f254c77ac099b5700543db5763b8bbb44fef
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="installation-and-requirements"></a>Requisiti di installazione e
-
-<script> var inspectorOnLoad = funzione () {var primaryTextBase = "Le cartelle di lavoro di Xamarin e controllo per"; var secondaryTextBase = "o scaricare per"; var inspectorDownloadUrlMac = "https://dl.xamarin.com/interactive/XamarinInteractive.pkg"; var inspectorDownloadUrlWin = "https://dl.xamarin.com/interactive/XamarinInteractive.msi";
-
-  var aPrimary = document.getElementById("inspector-download-primary"); var aSecondary = document.getElementById("inspector-download-secondary");
-
-  var aMac = aPrimary; var aWin = aSecondary; var macTextBase = primaryTextBase; var winTextBase = secondaryTextBase;
-
-  if (/win/i.test(navigator.platform.toLowerCase())) { aMac = aSecondary; aWin = aPrimary; macTextBase = secondaryTextBase; winTextBase = primaryTextBase; }
-
-  aMac.href = inspectorDownloadUrlMac; aMac.text = macTextBase + " Mac"; aWin.href = inspectorDownloadUrlWin; aWin.text = winTextBase + " Windows"; };
-
-document.addEventListener("DOMContentLoaded", inspectorOnLoad);
-</script>
+# <a name="inspector-installation-and-requirements"></a>Requisiti e l'installazione di controllo
 
 ## <a name="download-and-installation"></a>Download e installazione
 
-<ol>
-  <li>Scaricare e installare <a href="https://dl.xamarin.com/interactive/XamarinInteractive.pkg" id="inspector-download-primary">Xamarin le cartelle di lavoro e controllo per Mac</a> (<a href="https://dl.xamarin.com/interactive/XamarinInteractive.msi" id="inspector-download-secondary">o di download per Windows</a>).
-  </li>
-  <li><a href="~/tools/inspector/inspect.md"> Controllare la propria app.</a>
-    </li>
-</ol>
+
+# <a name="windowstabvswin"></a>[Windows](#tab/vswin)
+
+1. Scaricare e installare [Xamarin le cartelle di lavoro e controllo per Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
+2. [Controllare la propria app.](~/tools/inspector/inspect.md)
+
+# <a name="macostabvsmac"></a>[macOS](#tab/vsmac)
+
+1. Scaricare e installare [Xamarin le cartelle di lavoro e controllo per Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
+2. [Controllare la propria app.](~/tools/inspector/inspect.md)
+
+-----
 
 ## <a name="requirements"></a>Requisiti
 
@@ -57,43 +51,13 @@ L'ispezione applicazione in tempo reale è disponibile per i clienti aziendali.
 
 ### <a name="supported-app-platforms"></a>Piattaforme di App supportate
 
-<table>
-<thead>
-  <tr>
-    <th>App della piattaforma</th>
-    <th>Supporto IDE</th>
-    <th>Note</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Mac (unificata)</td>
-    <td>Supportato solo su Mac</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>iOS (unificato)</td>
-    <td>Supportato in Visual Studio e XS</td>
-    <td>Esaminare le app iOS da Windows richiede la stessa versione di controllo per essere installato anche nell'host di compilazione Mac.</td>
-  </tr>
-  <tr>
-    <td>Android</td>
-    <td>Supportato in Visual Studio e XS</td>
-    <td>
-      <ul>
-        <li>Deve avere come destinazione Android > = 4.0.3</li>
-        <li>Deve essere abilitata fastdev</li>
-        <li>È necessario usare gli emulatori di Google, Visual Studio o Xamarin Android. Gli emulatori Android di 7 potrebbero non consentire l'ispezione in questo momento.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>WPF</td>
-    <td>Supportato solo in Visual Studio in Windows</td>
-    <td/>
-  </tr>
-</tbody>
-</table>
+|App della piattaforma|Supporto IDE|Note|
+|--- |--- |--- |
+|Mac (unificata)|Supportato solo su Mac|
+|iOS (unificato)|Supportato in Visual Studio e XS|Esaminare le app iOS da Windows richiede la stessa versione di controllo per essere installato anche nell'host di compilazione Mac.|
+|Android|Supportato in Visual Studio e XS|Deve avere come destinazione Android > = 4.0.3, con **fastdev** abilitato.<br />È necessario usare gli emulatori di Google, Visual Studio o Xamarin Android. Gli emulatori Android di 7 potrebbero non consentire l'ispezione in questo momento.|
+|WPF|Supportato solo in Visual Studio in Windows|
+
 
 <a name="reporting-bugs" />
 
@@ -101,7 +65,7 @@ L'ispezione applicazione in tempo reale è disponibile per i clienti aziendali.
 
 I bug devono essere segnalati direttamente tramite Visual Studio:
 
-- **Guida in linea → Invia commenti e suggerimenti → segnala un problema**
+- **Guida > inviare commenti e suggerimenti > segnala un problema**
 
 Includere tutte le informazioni seguenti:
 
@@ -111,12 +75,12 @@ Queste informazioni sono essenziale.
 
 Visual Studio per Mac
 
-- **Visual Studio → su Visual Studio → Mostra dettagli → copia informazioni**
+- **Visual Studio > su Visual Studio > Mostra dettagli > Copia informazioni**
 - Incollare in report di bug
 
 Xamarin Studio
 
-- **Xamarin Studio, → informazioni su Xamarin Studio → Mostra dettagli → copia informazioni**
+- **Xamarin Studio > informazioni su Xamarin Studio > Mostra dettagli > Copia informazioni**
 - Incollare in report di bug
 
 Visual Studio
@@ -135,7 +99,7 @@ Client di controllo
 
 1.4.x offre inoltre la possibilità di selezionare il file di log in Finder (macOS) o Esplora risorse (Windows) direttamente dal menu principale:
 
-- **File di Log Mostra Guida →**
+- **Guida > Visualizza File di Log**
 
 Visual Studio per Mac
 
@@ -148,11 +112,11 @@ Xamarin Studio
 Visual Studio
 
 - `%LOCALAPPDATA%\Xamarin\Logs\{VS version}\Inspector {date}.log`
-- Il contenuto di Visual Studio `Output` riquadro può anche essere informativo.
+- Il contenuto di Visual Studio **Output** riquadro può anche essere informativo.
 
 ### <a name="project-settings"></a>Impostazioni progetto
 
-Se è possibile collegare il `.csproj` per il progetto che si sta tentando di controllare, sarebbe molto utile. Questo è più semplice che richiede informazioni sulle singole impostazioni.
+Se è possibile collegare il **csproj** per il progetto che si sta tentando di controllare, sarebbe molto utile. Questo è più semplice che richiede informazioni sulle singole impostazioni.
 
 Verificare inoltre che si trova in una configurazione di Debug.
 
@@ -177,13 +141,13 @@ A seconda di come è stato acquistato le cartelle di lavoro e controllo, è poss
 
 #### <a name="visual-studio-installer"></a>Programma di installazione di Visual Studio
 
-Se si dispone di Visual Studio 2017, aprire "Programma di installazione di Visual Studio" e cercare "Xamarin le cartelle di lavoro" in "Singoli componenti". Se è selezionata, deselezionarla e quindi fare clic su "Modifica" per disinstallare.
+Se si dispone di Visual Studio 2017, aprire **programma di installazione di Visual Studio**ed esaminare **singoli componenti** per **Xamarin le cartelle di lavoro**. Se è selezionata, deselezionarla e quindi fare clic su "Modifica" per disinstallare.
 
 #### <a name="system-uninstall"></a>Disinstallazione di sistema
 
 Se è installato cartelle di lavoro di & controllo manualmente con un programma di installazione scaricato, dovranno essere disinstallate tramite le **App e funzionalità** pagina Impostazioni di sistema in Windows 10 o tramite **Aggiungi/Rimuovi programmi**nel Pannello di controllo nelle versioni precedenti di Windows.
 
-> **Impostazioni → avvio → sistema → app & funzionalità**
+> **Start > Impostazioni > sistema > app & funzionalità**
 
 ![](install-images/windows-remove.png "Cartelle di lavoro di Xamarin e controllo elencato nella 'App e funzionalità'")
 

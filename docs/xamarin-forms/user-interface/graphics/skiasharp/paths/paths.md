@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f1ce6b62ef13d24148048253700d7b3bff805fad
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6d2e600ccc85f6e72e7f913e7ffb501bf62ff69a
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="path-basics"></a>Nozioni fondamentali di percorso
 
@@ -115,7 +115,7 @@ Come si può notare, il primo contorno ovviamente è una serie di tre righe coll
 - `AddPath` Per aggiungere un altro percorso per il percorso corrente
 - [`AddPathReverse`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddPathReverse/p/SkiaSharp.SKPath/) Per aggiungere un altro percorso in ordine inverso
 
-Tenere presente che un `SKPath` oggetto definisce solo una geometria & #x 2014; una serie di punti e le connessioni. Solo quando un `SKPath` viene combinato con un `SKPaint` oggetto è il percorso in cui il rendering di un determinato colore, spessore e così via. Inoltre, tenere presente che il `SKPaint` oggetto passato per il `DrawPath` metodo consente di definire le caratteristiche dell'intero percorso. Se si desidera creare un elemento che richiedono vari colori, è necessario utilizzare un percorso separato per ogni colore.
+Tenere presente che un `SKPath` oggetto definisce solo una geometria &mdash; una serie di punti e le connessioni. Solo quando un `SKPath` viene combinato con un `SKPaint` oggetto è il percorso in cui il rendering di un determinato colore, spessore e così via. Inoltre, tenere presente che il `SKPaint` oggetto passato per il `DrawPath` metodo consente di definire le caratteristiche dell'intero percorso. Se si desidera creare un elemento che richiedono vari colori, è necessario utilizzare un percorso separato per ogni colore.
 
 Come l'aspetto di inizio e alla fine di una riga è definito da un'estremità della traccia, l'aspetto della connessione tra due linee è definito da un *join tratto*. Specificare impostando il [ `StrokeJoin` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeJoin/) proprietà di `SKPaint` a un membro del [ `SKStrokeJoin` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeJoin/) enumerazione:
 

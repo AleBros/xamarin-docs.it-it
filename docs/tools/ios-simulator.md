@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/07/2017
-ms.openlocfilehash: 0ea6528ce3523ab5d829342e99ccf35ca3d69aa2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 20e8d843b73fca5eb49da21a7f834ebbb52f4aa9
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Remoti simulatore iOS (per Windows)
 
@@ -52,7 +52,7 @@ Barra degli strumenti finestra include una serie di pulsanti per interagire con 
 - **Blocco** – blocca il simulatore (è possibile scorrere rapidamente per sbloccare).
 - **Schermata di** – una schermata del simulatore viene salvato su disco.
 - [**Impostazioni** ](#settings) : configurare la tastiera e il percorso.
- - Altri [ **opzioni** ](#options) : sono disponibile, ad esempio agitazione ruota, un'ampia gamma di opzioni simulatore o richiamare altri stati nel simulatore. Quando alcune opzioni sono nascosti, sono accessibili dall'icona di puntini di sospensione che viene visualizzata nella barra degli strumenti oppure facendo clic sulla finestra.
+- Altri [ **opzioni** ](#options) : sono disponibile, ad esempio agitazione ruota, un'ampia gamma di opzioni simulatore o richiamare altri stati nel simulatore. Quando alcune opzioni sono nascosti, sono accessibili dall'icona di puntini di sospensione che viene visualizzata nella barra degli strumenti oppure facendo clic sulla finestra.
 
     [![](ios-simulator-images/maps-app-sml.png "simulatore iOS esegue il mapping di esempio")](ios-simulator-images/maps-app.png#lightbox)
 

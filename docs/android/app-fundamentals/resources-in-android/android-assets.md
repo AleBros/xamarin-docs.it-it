@@ -6,12 +6,12 @@ ms.assetid: 70ECDDC9-FA40-03B4-BF04-E7CFFFE4260D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/30/2017
-ms.openlocfilehash: 83e58625438a0b50d89ca8dac3e940c8742e5aec
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: e1890575f5c3a5bd2e0c0de0712ba459607e6139
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-android-assets"></a>Utilizzo risorse Android
 
@@ -44,7 +44,7 @@ Selezionando il corretto **BuildAction** assicura che il file verrà inserito ne
 
 ## <a name="reading-assets"></a>La lettura delle risorse
 
-Gli asset vengono letti utilizzando un [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/). Un'istanza del `AssetManager` è disponibile per l'accesso di [asset](https://developer.xamarin.com/api/property/Android.Content.Context.Assets/) proprietà in un `Android.Contet.Context`, ad esempio un'attività.
+Gli asset vengono letti utilizzando un [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/). Un'istanza del `AssetManager` è disponibile tramite l'accesso di [asset](https://developer.xamarin.com/api/property/Android.Content.Context.Assets/) proprietà in un `Android.Content.Context`, ad esempio un'attività.
 Nel codice seguente, si apre il nostro **read_asset.txt** asset, leggere il contenuto e visualizzarlo in un oggetto TextView.
 
 ```csharp

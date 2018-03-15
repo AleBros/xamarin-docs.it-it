@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: 6625edc1f661e5f9769de82ec48367e9f900e567
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ab44cb7a065164bb5b7501ac63bd0321b612b7ca
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="understanding-the-sample"></a>La comprensione dell'esempio
 
@@ -38,47 +38,19 @@ Ogni argomento di questa guida fornisce un collegamento di download per un *dive
 
 Il progetto libreria di classi Portabile per ogni applicazione di esempio è costituito da tre cartelle principali:
 
-<table>
-    <thead>
-        <tr><td><strong>Cartella</strong></td><td><strong>Scopo</strong></td></tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>Dati</strong></td>
-                        <td>Contiene le classi e interfacce utilizzate per gestire gli elementi di dati e comunicare con il servizio web. Come minimo, inclusi il <code>TodoItemManager</code> (classe), che viene esposto tramite una proprietà nel <code>App</code> classe per richiamare operazioni del servizio web.</td>
-        </tr>
-        <tr>
-            <td><strong>Modelli</strong></td>
-                        <td>Contiene le classi del modello di dati per l'applicazione. Come minimo, inclusi il <code>TodoItem</code> (classe), che modella un singolo elemento di dati utilizzati dall'applicazione. La cartella è inoltre possibile includere qualsiasi classi aggiuntive utilizzate per modellare i dati utente.</td>
-        </tr>
-        <tr>
-            <td><strong>Visualizzazioni</strong></td>
-                        <td>Contiene le pagine dell'applicazione. Ciò in genere è costituito il <code>TodoListPage</code> e <code>TodoItemPage</code> classi e le classi aggiuntive utilizzate per scopi di autenticazione.</td>
-                </tr>
-    </tbody>
-</table>
+|Cartella|Scopo|
+|--- |--- |
+|Dati|Contiene le classi e interfacce utilizzate per gestire gli elementi di dati e comunicare con il servizio web. Come minimo, inclusi il `TodoItemManager` (classe), che viene esposto tramite una proprietà nel `App` classe per richiamare operazioni del servizio web.|
+|Modelli|Contiene le classi del modello di dati per l'applicazione. Come minimo, inclusi il `TodoItem` (classe), che modella un singolo elemento di dati utilizzati dall'applicazione. La cartella è inoltre possibile includere qualsiasi classi aggiuntive utilizzate per modellare i dati utente.|
+|Visualizzazioni|Contiene le pagine dell'applicazione. Ciò in genere è costituito il `TodoListPage` e `TodoItemPage` classi e le classi aggiuntive utilizzate per scopi di autenticazione.|
 
 Inoltre, il progetto libreria di classi Portabile per ogni applicazione è costituito da un numero di file importanti:
 
-<table>
-    <thead>
-      <tr><td><strong>File</strong></td><td><strong>Scopo</strong></td></tr>
-    <thead>
-    <tbody>
-        <tr>
-            <td><strong>Constants.cs</strong></td>
-            <td>Il <code>Constants</code> (classe), che specifica le costanti usate dall'applicazione per comunicare con il servizio web. Queste costanti richiedono l'aggiornamento per accedere al servizio back-end personale creato su un provider.
-        </tr>
-        <tr>
-            <td><strong>ITextToSpeech.cs</strong></td>
-            <td>Il <code>ITextToSpeech</code> interfaccia, che specifica che il <code>Speak</code> metodo deve essere fornito dalle classi di implementazione.</td>
-        </tr>
-        <tr>
-          <td><strong>Todo.cs</strong></td>
-          <td>Il <code>App</code> classe responsabile per la creazione di un'istanza sia la prima pagina che verrà visualizzata dall'applicazione in ogni piattaforma, e <code>TodoItemManager</code> classe che viene utilizzato per richiamare operazioni del servizio web.</td>
-        </tr>
-    </tbody>
-</table>
+|File|Scopo|
+|--- |--- |
+|Constants.cs|Il `Constants` (classe), che specifica le costanti usate dall'applicazione per comunicare con il servizio web. Queste costanti richiedono l'aggiornamento per accedere al servizio back-end personale creato su un provider.|
+|ITextToSpeech.cs|Il `ITextToSpeech` interfaccia, che specifica che il `Speak` metodo deve essere fornito dalle classi di implementazione.|
+|Todo.cs|Il `App` classe responsabile per la creazione di un'istanza sia la prima pagina che verrà visualizzata dall'applicazione in ogni piattaforma, e `TodoItemManager` classe che viene utilizzato per richiamare operazioni del servizio web.|
 
 ### <a name="viewing-pages"></a>Visualizzazione delle pagine
 

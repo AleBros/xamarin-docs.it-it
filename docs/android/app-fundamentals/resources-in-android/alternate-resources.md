@@ -6,12 +6,12 @@ ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 7ebbf2a9215c8472ae2f286728cb2f819e8331cb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: 230c26c2537987f7ca09e28e05ec96186e5f7882
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="alternate-resources"></a>Risorse alternative
 
@@ -44,7 +44,7 @@ Le regole seguenti si applicano quando si aggiungono i qualificatori a un tipo d
 I qualificatori possibili sono elencati di seguito per riferimento:
 
 - **MCC e MNC** &ndash; il [codice paese mobili](http://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) e, facoltativamente, il [codice rete mobile](http://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). La scheda SIM fornirà MCC, mentre il dispositivo è connesso alla rete fornirà il MNC. Sebbene sia possibile alle impostazioni locali di destinazione utilizzando il codice paese per dispositivi mobili, l'approccio consigliato consiste nell'utilizzare il qualificatore della lingua indicato di seguito. Ad esempio, per le risorse di destinazione per la Germania, il qualificatore sarebbe `mcc262`. Le risorse di destinazione per T-Mobile negli Stati Uniti, il qualificatore è `mcc310-mnc026`.
-  Per un elenco completo dei codici mobili paese e rete mobile vedere <http://mcclist.com/>.
+  Per un elenco completo dei codici mobili paese e rete mobile vedere <http://mcc-mnc.com/>.
 
 - **Lingua** &ndash; due lettere [codice ISO 639-1 language di](http://en.wikipedia.org/wiki/ISO_639-1) e, facoltativamente, seguito da due lettere [indicativo di paese ISO 3166-alpha 2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
   Se entrambi i qualificatori vengono forniti e sono separati da un `-r`. Ad esempio, per le impostazioni locali di destinazione francese quindi il qualificatore di `fr` viene utilizzato. Applicare le impostazioni locali del francese canadese li, il `fr-rCA` verrà utilizzato. Per un elenco completo dei codici di area e di codici di lingua, vedere [codici per la rappresentazione di nomi di lingue](http://www.loc.gov/standards/iso639-2/php/English_list.php) e [i nomi di paese e gli elementi di codice](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm).

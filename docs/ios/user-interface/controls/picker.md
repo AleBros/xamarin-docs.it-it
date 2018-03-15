@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/02/2017
-ms.openlocfilehash: 3418d0b7946e1da68380512d64bdfc8b13d1d784
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b92bdc365cae524cee1f586b293c4638225c6178
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="picker"></a>Selezione
 
@@ -22,7 +22,7 @@ Un utente specifico del case per controlli di selezione per impostare la data e 
 
 L'articolo illustra l'implementazione e utilizzo di [selezione](#picker) e [selezione data](#datepicker) controlli.
 
-<a name="picker"/>
+<a name="picker" />
 
 ## <a name="picker"></a>Selezione
 
@@ -143,7 +143,7 @@ Il valore restituito indica il numero di quadranti che avrà la selezione.
 L'aspetto del `UIPickerView` può essere personalizzato tramite la `UIPickerView.UIPickerViewAppearance` classe o da sottoporre a override la `UIPickerViewModel.GetView` e `UIPickerViewModel.GetRowHeight` metodi il `UIPickerViewModel`.
 
 
-<a name="datepicker"/>
+<a name="datepicker" />
 
 ## <a name="date-picker"></a>Selezione data
 

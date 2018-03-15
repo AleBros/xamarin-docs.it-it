@@ -8,11 +8,11 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 16e9423c84e591e15a703b4d5bb204a8b642bb40
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 90be80d42c20ca7509037b5f59b34cc1bddde6de
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="touch-manipulations"></a>Manipolazioni tocco
 
@@ -193,7 +193,7 @@ public partial class TouchManipulationPage : ContentPage
 }
 ```
 
-Se il `HitTest` restituisce `true` & #x 2014; indica che un dito ha modificato la schermata all'interno dell'area occupata dalla bitmap & #x 2014; quindi viene aggiunto l'ID tocco per il `TouchIds` insieme. L'ID rappresenta la sequenza di eventi di tocco per tale dito fino a quando non solleva il dito dallo schermo. Se più dita toccano bitmap, il `touchIds` raccolta contiene un ID tocco per ogni dito.
+Se il `HitTest` restituisce `true` &mdash; vale a dire che la schermata all'interno dell'area occupata dal bitmap è interessate da un dito &mdash; viene quindi aggiunto l'ID tocco per il `TouchIds` insieme. L'ID rappresenta la sequenza di eventi di tocco per tale dito fino a quando non solleva il dito dallo schermo. Se più dita toccano bitmap, il `touchIds` raccolta contiene un ID tocco per ogni dito.
 
 Il `TouchAction` gestore chiama anche il `ProcessTouchEvent` classe `TouchManipulationBitmap`. Questa opzione è quando alcuni, ma non tutte, del tocco reale si verifica l'elaborazione.
 
@@ -404,7 +404,7 @@ class TouchManipulationManager
 
 Ogni volta che è stata selezionata la rotazione, entrambi i metodi di modifica di un dito uno e due dita gestiscono in primo luogo la rotazione. Se viene rilevata alcuna rotazione, viene rimosso in modo efficace il componente di rotazione. Il valore restante viene interpretato come panoramica e scalabilità.
 
-Ecco il `OneFingerManipulate` metodo. Se un dito una rotazione non è stata abilitata, quindi la logica è semplice e #x 2014; Usa semplicemente il punto precedente e nuovo per creare un vettore denominato `delta` che corrisponde esattamente alla conversione. Con un dito rotazione abilitata, il metodo Usa gli angoli dal punto pivot (ovvero il centro della bitmap) per il punto precedente e nuovo per costruire una matrice di rotazione:
+Ecco il `OneFingerManipulate` metodo. Se un dito una rotazione non è stata abilitata, quindi la logica è semplice &mdash; utilizza semplicemente il punto precedente e nuovo per creare un vettore denominato `delta` che corrisponde esattamente alla conversione. Con un dito rotazione abilitata, il metodo Usa gli angoli dal punto pivot (ovvero il centro della bitmap) per il punto precedente e nuovo per costruire una matrice di rotazione:
 
 ```csharp
 class TouchManipulationManager

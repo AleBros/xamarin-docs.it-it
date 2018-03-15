@@ -6,12 +6,12 @@ ms.assetid: 762572F0-173A-D994-0510-8F36BEF3D487
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 3d9c747cdf8e43f33b9310ac1156550066b400eb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: 5cf5bd38612f0f763e30456b0dd42198a3c0ff06
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="default-resources"></a>Risorse predefinite
 
@@ -31,7 +31,7 @@ Un elenco completo dei tipi di risorse riportato di seguito:
 -  **anim** &ndash; file XML che descrivono *interpolazione* animazioni. Interpolazioni sono una serie di istruzioni di animazione per l'esecuzione di trasformazioni al contenuto di una rotazione di oggetto, o un esempio, visualizza un'immagine o l'aumento delle dimensioni del testo. Interpolazioni sono limitati a visualizzare solo gli oggetti.
 
 -  **colore** &ndash; file XML che descrivono un elenco di stato di colori. Per comprendere gli elenchi di stato di colore, considerare un widget dell'interfaccia utente, ad esempio un pulsante.
-   Può avere diversi stati, ad esempio premuto o disattivato e il pulsante potrebbe cambiare colore a ogni modifica di stato. L'elenco è espresso in un elenco di stato.
+   Possono avere stati diversi, ad esempio premuto o disattivato e il pulsante potrebbe cambiare colore a ogni modifica di stato. L'elenco è espresso in un elenco di stato.
 
 -  **drawable** &ndash; Drawable risorse sono un concetto generale per gli elementi grafici che possono essere compilati nell'applicazione e quindi accedere tramite chiamate API o a cui fa riferimento ad altre risorse XML.
    Alcuni esempi di drawables sono file bitmap (con estensione png, GIF, jpg), le bitmap di ridimensionabile speciale note come [nove patch](https://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch), elenca lo stato, forme generiche definite in XML e così via.
