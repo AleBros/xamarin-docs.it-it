@@ -7,18 +7,17 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 10cfb790fca30b67faaa8f7720a358ec34c25663
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 7cf21e75c9ae2f3c27b07cb20f1044779b42b06b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="windows-installation"></a>Installazione di Windows
 
 _Questa guida descrive le operazioni necessarie per l'installazione di Xamarin.Android per Visual Studio in Windows e illustra come configurare Xamarin.Android per compilare la prima applicazione Xamarin.Android._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -39,7 +38,6 @@ Al completamento di questa guida, sarà stata messa in funzione un'installazione
 
 Per informazioni dettagliate sull'installazione di Xamarin per l'uso con Visual Studio in Windows, vedere la guida per l'[installazione di Windows](~/cross-platform/get-started/installation/windows.md).
 
-<a name="configuration" />
 
 ## <a name="configuration"></a>Configurazione
 
@@ -52,16 +50,15 @@ La maggior parte degli utenti potrà usare questi percorsi predefiniti senza app
 Xamarin.Android usa [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), la versione necessaria per le attività di sviluppo per il livello API 24 o un livello superiore (JDK 8 supporta anche i livelli API precedenti al livello 24). È possibile continuare a usare [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) per attività di sviluppo specifiche per il livello API 23 o un livello precedente.
 
 > [!IMPORTANT]
-> **Nota:** Xamarin.Android non supporta JDK 9.
+> Xamarin.Android non supporta JDK 9.
 
-<a name="sdk_manager" />
 
 ### <a name="android-sdk-manager"></a>Android SDK Manager
 
 Android usa più impostazioni dei livelli API di Android per determinare la compatibilità dell'app tra le diverse versioni di Android. Per altre informazioni sui livelli API di Android, vedere [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md) (Informazioni sui livelli API di Android).
 A seconda del livello API di Android di destinazione, potrebbe essere necessario scaricare e installare componenti aggiuntivi di Android SDK. Inoltre, potrebbe essere necessario installare gli strumenti facoltativi e le immagini dell'emulatore disponibili in Android SDK. A tale scopo, usare **Android SDK Manager**. È possibile avviare **Android SDK Manager** facendo clic su **Strumenti > Android > Android SDK Manager**:
 
-[![Come avviare Android SDK Manager](windows-images/08-sdk-manager-sml.png)](windows-images/08-sdk-manager.png)
+[![Come avviare Android SDK Manager](windows-images/08-sdk-manager-sml.png)](windows-images/08-sdk-manager.png#lightbox)
 
 Per impostazione predefinita, Visual Studio installa Google Android SDK Manager:
 
@@ -71,7 +68,6 @@ Per impostazione predefinita, Visual Studio installa Google Android SDK Manager:
 
 Per altre informazioni sull'uso di Xamarin Android SDK Manager, vedere [Installazione di Android SDK](~/android/get-started/installation/android-sdk.md).
 
-<a name="emulator" />
 
 ### <a name="android-emulator"></a>Emulatore Android
 
@@ -94,8 +90,6 @@ Poiché la CPU di un computer di sviluppo può supportare una sola tecnologia di
 Se si dispone di un dispositivo Android fisico da usare per il test, è il momento di configurarlo per il processo di sviluppo. Vedere [Configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md) per configurare il dispositivo Android per lo sviluppo e quindi connetterlo al computer per l'esecuzione e il debug di applicazioni Xamarin.Android.
 
 
-<a name="create_app" />
-
 ## <a name="create-an-application"></a>Creare un'applicazione
 
 Dopo avere installato Xamarin.Android, è possibile avviare Visual Studio per creare un nuovo progetto. Fare clic su **File > Nuovo > Progetto** per iniziare a creare l'app:
@@ -104,12 +98,10 @@ Dopo avere installato Xamarin.Android, è possibile avviare Visual Studio per cr
 
 Nella finestra di dialogo **Nuovo progetto** selezionare **Android** in **Modelli** e fare clic su **App vuota (Android)** nel riquadro di destra. Immettere un nome per l'app (nella schermata seguente l'app è chiamata **MyApp**) e quindi fare clic su **OK**:
 
-[![Finestra di dialogo Nuovo progetto per la creazione di un'app Android vuota](windows-images/11-first-app-sml.png)](windows-images/11-first-app.png)
+[![Finestra di dialogo Nuovo progetto per la creazione di un'app Android vuota](windows-images/11-first-app-sml.png)](windows-images/11-first-app.png#lightbox)
 
 La procedura è terminata. A questo punto si è pronti per usare Xamarin.Android per creare applicazioni Android.
 
-
-<a name="summary" />
 
 ## <a name="summary"></a>Riepilogo
 
@@ -124,5 +116,5 @@ Il passaggio successivo consiste nel seguire le esercitazioni [Hello, Android](~
 - [Installazione degli strumenti di Visual Studio per Xamarin](~/cross-platform/get-started/installation/windows.md)
 - [Requisiti di sistema](~/cross-platform/get-started/requirements.md)
 - [Installazione di Android SDK](~/android/get-started/installation/android-sdk.md)
-- [Android SDK Emulator](~/android/get-started/installation/android-emulator/index.md) (Emulatore di Android SDK)
+- [Emulatore di Android SDK](~/android/get-started/installation/android-emulator/index.md)
 - [Configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md)

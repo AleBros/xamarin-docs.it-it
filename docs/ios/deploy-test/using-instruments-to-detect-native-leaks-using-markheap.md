@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 9fec6fca0bf7930a59a6927557786a3ed7a412da
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9a5dc7839b1669e51e79efc0f02111eae8987b95
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Profilatura delle applicazioni Xamarin.iOS con Instruments
 
@@ -38,13 +38,13 @@ Selezionare il dispositivo ed eseguire l'app Instruments:
 
 L'app Instruments viene aperta e visualizza la finestra di dialogo seguente:
 
- [ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Scelta di un modello di profilo")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png)
+ [![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Scelta di un modello di profilatura")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)
 
 Fare clic per selezionare il modello **Allocazioni**. Anche gli altri modelli sono validi, ma questo articolo riguarda solo il modello di profilo **Allocazioni**.
 
 Quindi selezionare il dispositivo e l'applicazione mediante il menu nella parte superiore della finestra:
 
-[ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Selezionare il dispositivo e l'applicazione")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Selezionare il dispositivo e l'applicazione")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png#lightbox)
 
 Il dispositivo iOS deve essere selezionato nel menu nella parte superiore della finestra e l'applicazione da profilare deve essere selezionata nel menu contiguo (nella schermata precedente l'applicazione è **MemoryDemo**).
 
@@ -52,13 +52,13 @@ Se il dispositivo non è elencato nel menu, controllare nella **Console** di Vis
 
 Fare clic sul pulsante **Scegli** per visualizzare la schermata seguente:
 
-[ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "Interfaccia di profilatura")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "Interfaccia di profilatura")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
 
 Fare clic sul pulsante di registrazione (cerchio rosso in alto a sinistra) per avviare la profilatura.
 
 Lo screenshot seguente visualizza un esempio di profilatura mediante **Instruments**:
 
-[ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "Esempio di profilatura mediante Instruments")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "Esempio di profilatura mediante Instruments")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
 
 ## <a name="summary"></a>Riepilogo
 

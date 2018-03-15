@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 7ce674ea38bc847bc9064a5a61113900a45b991d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 434a12c26a5823b082751c95c2090b22c39cf081
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Guida introduttiva di Xamarin.Forms
 
 Questa procedura dettagliata illustra come creare un'applicazione che converte un numero di telefono alfanumerico immesso dall'utente in un numero di telefono numerico e lo chiama. Il risultato è riportato di seguito:
 
-[![](quickstart-images/intro-app-examples-sml.png "Applicazione Phoneword")](quickstart-images/intro-app-examples.png "Applicazione Phoneword")
+[![](quickstart-images/intro-app-examples-sml.png "Applicazione Phoneword")](quickstart-images/intro-app-examples.png#lightbox "Applicazione Phoneword")
 
 Creare l'applicazione Phoneword come indicato di seguito:
 
@@ -113,7 +113,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
         }
 
   > [!NOTE]
-> **Nota**: se si tenta di compilare l'applicazione a questo punto, si verificano errori che verranno risolti in un secondo momento.
+  > Se si prova a compilare l'applicazione a questo punto, si verificano errori che verranno risolti in un secondo momento.
 
   Salvare le modifiche apportate a **MainPage.xaml.cs** premendo **CTRL+S** e chiudere il file.
 
@@ -565,7 +565,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
         }
 
   > [!NOTE]
-> **Nota**: se si tenta di compilare l'applicazione a questo punto, si verificano errori che verranno risolti in un secondo momento.
+  > Se si prova a compilare l'applicazione a questo punto, si verificano errori che verranno risolti in un secondo momento.
 
   Salvare le modifiche apportate a **MainPage.xaml.cs** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 

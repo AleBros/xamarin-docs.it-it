@@ -6,23 +6,20 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 68ddb9baa008ec8222b4399a5ab25330fda2afd1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 51caebb86cb72b11ced70522fc253e608f5ccab0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="build-process"></a>Processo di compilazione
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Panoramica
 
 Il processo di compilazione di Xamarin.Android è responsabile della gestione delle diverse operazioni: [generazione di `Resource.designer.cs`](~/android/internals/api-design.md), supporto di `AndroidAsset`, `AndroidResource` e altre [azioni di compilazione](#Build_Actions), generazione di [wrapper disponibili per la chiamata tramite Android](~/android/platform/java-integration/android-callable-wrappers.md) e generazione di un file `.apk` da eseguire sui dispositivi Android.
 
-<a name="App_Packaging" />
-<a name="Application_Packages" />
 
 ## <a name="application-packages"></a>Pacchetti dell'applicazione
 
@@ -34,7 +31,6 @@ In senso lato, esistono due tipi di pacchetti dell'applicazione Android (file `.
 
 Non a caso corrispondono all'elemento `Configuration` MSBuild che genera il pacchetto.
 
-<a name="Shared_Runtime" />
 
 ### <a name="shared-runtime"></a>Runtime condiviso
 
@@ -53,7 +49,6 @@ Il runtime condiviso può essere disabilitato nelle build di debug impostando la
 Fast Deployment è abilitato per impostazione predefinita e può essere disabilitato nelle build di debug impostando la proprietà `$(EmbedAssembliesIntoApk)` su `True`.
 
 
-<a name="MSBuild_Projects" />
 
 ## <a name="msbuild-projects"></a>Progetti MSBuild
 
@@ -81,7 +76,6 @@ Per i progetti Xamarin.Android vengono definite le destinazioni di compilazione 
 
 -   **UpdateAndroidResources**: aggiorna il file `Resource.designer.cs`. Questa destinazione viene in genere chiamata dall'IDE quando vengono aggiunte nuove risorse al progetto.
 
-<a name="Build_Properties" />
 
 ## <a name="build-properties"></a>Proprietà di compilazione
 
@@ -116,7 +110,6 @@ Le proprietà di installazione controllano il comportamento delle destinazioni `
     MSBuild /t:Install ProjectName.csproj /p:AdbTarget=-e
     ```
 
-<a name="App_Packaging" />
 
 ### <a name="packaging-properties"></a>Proprietà per la creazione di pacchetti
 
@@ -146,7 +139,7 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 
     Per impostazione predefinita, il valore della proprietà è `False`.
 
--   **AndroidFastDeploymentType**: elenco di valori separati da `:` (due punti) per controllare quali tipi possono essere distribuiti nella [directory Fast Deployment](#Fast_Deployment) sul dispositivo di destinazione quando la proprietà MSBuild [`$(EmbedAssembliesIntoApk)`](#EmbedAssembliesIntoApk) è `False`. Se una risorsa viene distribuita con Fast Deployment, *non* viene incorporata nel file `.apk` generato, con la possibilità di accelerare i tempi di distribuzione. Maggiore è la velocità di distribuzione, meno spesso sarà necessario ricompilare il file `.apk` e il processo di installazione potrà essere più rapido. I valori validi includono:
+-   **AndroidFastDeploymentType**: elenco di valori separati da `:` (due punti) che consente di controllare quali tipi possono essere distribuiti nella [directory Fast Deployment](#Fast_Deployment) sul dispositivo di destinazione quando la proprietà MSBuild `$(EmbedAssembliesIntoApk)` è `False`. Se una risorsa viene distribuita con Fast Deployment, *non* viene incorporata nel file `.apk` generato, con la possibilità di accelerare i tempi di distribuzione. Maggiore è la velocità di distribuzione, meno spesso sarà necessario ricompilare il file `.apk` e il processo di installazione potrà essere più rapido. I valori validi includono:
 
     - `Assemblies`: distribuisce gli assembly dell'applicazione.
 
@@ -158,7 +151,7 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 
 -   **AndroidApplicationJavaClass**: nome della classe Java completo da usare invece di `android.app.Application` quando una classe eredita da [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/).
 
-    Questa proprietà viene in genere impostata da *altre* proprietà, ad esempio la proprietà MSBuild [`$(AndroidEnableMultiDex)`](#AndroidEnableMultiDex).
+    Questa proprietà viene in genere impostata da *altre* proprietà, ad esempio la proprietà MSBuild `$(AndroidEnableMultiDex)`.
 
     Aggiunto in Xamarin.Android 6.1.
 
@@ -285,7 +278,7 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 
 -   **MonoSymbolArchive**: proprietà booleana che controlla se vengono creati elementi `.mSYM` da usare in seguito con `mono-symbolicate`, per estrarre le informazioni &ldquo;effettive&rdquo; su nome file e numero di riga dalle analisi dello stack Release.
 
-    Per impostazione predefinita, è True per le app &ldquo;Release&rdquo; con i simboli di debug abilitati: [`$(EmbedAssembliesIntoApk)`](#EmbedAssembliesIntoApk) è True, `$(DebugSymbols)` è True e `$(Optimize)` è True.
+    Per impostazione predefinita, è True per le app &ldquo;Release&rdquo; con i simboli di debug abilitati: `$(EmbedAssembliesIntoApk)` è True, `$(DebugSymbols)` è True e `$(Optimize)` è True.
 
     Aggiunto in Xamarin.Android 7.1.
 
@@ -312,13 +305,11 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 
     -   **versionCode**: usa il codice della versione direttamente da `Properties\AndroidManifest.xml`.
 
-    È possibile definire elementi personalizzati usando la proprietà [AndroidVersionCodeProperties](#AndroidVersionCodeProperties).
+    È possibile definire gli elementi personalizzati usando la proprietà `AndroidVersionCodeProperties` (definita successivamente).
 
     Aggiunto in Xamarin.Android 7.2.
 
--   **AndroidVersionCodeProperties**: proprietà stringa che consente allo sviluppatore di definire elementi personalizzati con [AndroidVersionCodePattern](#AndroidVersionCodePattern),
-    sotto forma di coppia `key=value`. Tutti gli elementi in `value` devono essere valori interi. Ad esempio: `screen=23;target=$(_SupportedApiLevel)`.
-    Come si può osservare, è possibile usare nella stringa proprietà MSBuild esistenti o personalizzate.
+-   **AndroidVersionCodeProperties**: proprietà stringa che consente allo sviluppatore di definire elementi personalizzati con `AndroidVersionCodePattern`, sotto forma di coppia `key=value`. Tutti gli elementi in `value` devono essere valori interi. Ad esempio: `screen=23;target=$(_SupportedApiLevel)`. Come si può osservare, è possibile usare nella stringa proprietà MSBuild esistenti o personalizzate.
 
     Aggiunto in Xamarin.Android 7.2.
 
@@ -365,8 +356,6 @@ Le proprietà MSBuild seguenti vengono usate con i [progetti di binding](~/andro
     Il valore predefinito cambierà in una versione futura.
 
 
-<a name="Resgen" />
-<a name="Resource_Properties" />
 
 ### <a name="resource-properties"></a>Proprietà risorsa
 
@@ -385,7 +374,6 @@ Le proprietà risorsa controllano la generazione del file `Resource.designer.cs`
     **Sperimentale**. Aggiunto in Xamarin.Android 7.0.
 
 
-<a name="Signing" />
 <a name="Signing_Properties" />
 
 ### <a name="signing-properties"></a>Proprietà di firma
@@ -446,21 +434,16 @@ Le *azioni di compilazione* vengono [applicate ai file](http://msdn.microsoft.co
 I file con un'azione di compilazione `AndroidEnvironment` vengono usati per [inizializzare le variabili di ambiente e le proprietà di sistema durante l'avvio del processo](~/android/deploy-test/environment.md).
 L'azione di compilazione `AndroidEnvironment` può essere applicata a più file che verranno valutati in ordine casuale, quindi non specificare la stessa variabile di ambiente o proprietà di sistema in più file.
 
-<a name="Java_Interop_Support" />
-<a name="AndroidJavaSource" />
 
 ### <a name="androidjavasource"></a>AndroidJavaSource
 
 I file con un'azione di compilazione `AndroidJavaSource` sono codice sorgente Java che verrà incluso nel pacchetto Android finale.
 
-<a name="AndroidJavaLibrary" />
 
 ### <a name="androidjavalibrary"></a>AndroidJavaLibrary
 
 I file con un'azione di compilazione `AndroidJavaLibrary` sono archivi Java (file `.jar`) che verranno inclusi nel pacchetto Android finale.
 
-<a name="Resources" />
-<a name="AndroidResource" />
 
 ### <a name="androidresource"></a>AndroidResource
 
@@ -499,8 +482,6 @@ Gli utenti più avanzati potrebbero aver bisogno di usare risorse diverse a seco
 </ItemGroup>
 ```
 
-<a name="Native_Library_Support" />
-<a name="AndroidNativeLibrary" />
 
 ### <a name="androidnativelibrary"></a>AndroidNativeLibrary
 
@@ -546,7 +527,6 @@ I file con un'azione di compilazione *ProguardConfiguration* contengono opzioni 
 Questi file vengono ignorati a meno che la proprietà MSBuild `$(EnableProguard)` non sia `True`.
 
 
-<a name="Target_Definitions" />
 
 ## <a name="target-definitions"></a>Definizioni delle destinazioni
 

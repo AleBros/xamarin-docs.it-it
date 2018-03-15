@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 0fff4de7420bceda8c15ae33b03886eb6b332aeb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 430b07918b13878e3561b55ff841a64855183fa7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-package-size"></a>Dimensioni del pacchetto dell'applicazione
 
@@ -28,13 +28,13 @@ Xamarin.Android usa svariati meccanismi per ridurre al minimo le dimensioni del 
 
 Per fornire un'applicazione completamente indipendente, il pacchetto deve includere l'applicazione, le librerie associate, il contenuto, il runtime Mono e gli assembly di librerie di classi base necessari. Se ad esempio si usa il modello "Hello World" predefinito, il contenuto di una compilazione completa del pacchetto sarà simile al seguente:
 
-[ ![Dimensioni del pacchetto prima del linker](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png)
+[![Dimensioni del pacchetto prima del linker](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png#lightbox)
 
 15,8 MB è una dimensione troppo grande per il download. Il problema è dato dalle librerie di classi base, perché includono mscorlib, System e Mono.Android, che forniscono molti componenti necessari per eseguire l'applicazione, ma anche funzionalità che forse non vengono usate nell'applicazione, quindi potrebbe essere preferibile escludere questi componenti.
 
 Quando si compila un'applicazione per la distribuzione, viene eseguito un processo, noto come collegamento, che esamina l'applicazione e rimuove il codice non usato direttamente. Questo processo è simile alla funzionalità fornita da [Garbage Collection](~/android/internals/garbage-collection.md) per la memoria con allocazione dell'heap, ma invece di operare sugli oggetti, il collegamento agisce sul codice. In System.dll, ad esempio, è presente un intero spazio dei nomi per inviare e ricevere posta elettronica, ma, se l'applicazione non usa questa funzionalità, tale codice spreca spazio inutilmente. Dopo aver eseguito il linker sull'applicazione Hello World, il pacchetto è ora simile al seguente:
 
-[ ![Dimensioni del pacchetto dopo il linker](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png)
+[![Dimensioni del pacchetto dopo il linker](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png#lightbox)
 
 Come si può vedere, viene rimossa una quantità significativa di librerie di classi base non è in uso. Si noti che le dimensioni finali delle librerie di classi base dipendono da ciò che l'applicazione usa effettivamente. Se ad esempio si esamina un'applicazione di esempio più significativa, denominata ApiDemo, si noterà che le dimensioni del componente della libreria di classi base sono aumentate perché ApiDemo usa la libreria di classi base più di Hello, World:
 
@@ -51,7 +51,7 @@ In Android la copia e l'installazione di un pacchetto sono relativamente lente, 
 
 La prima volta che si esegue il debug nel dispositivo, vengono copiati due pacchetti di grandi dimensioni denominati *Runtime condiviso* e *Piattaforma condivisa*. Runtime condiviso contiene il runtime Mono e la libreria di classi base, mentre Piattaforma condivisa contiene gli assembly specifici del livello API di Android:
 
-[ ![Dimensioni del pacchetto Runtime condiviso](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png)
+[![Dimensioni del pacchetto Runtime condiviso](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png#lightbox)
 
 La copia di questi componenti principali viene eseguita solo una volta perché richiede molto tempo, ma consente alle applicazioni successive in esecuzione in modalità di debug di utilizzarli. Viene infine copiata l'applicazione effettiva, che è piccola e veloce:
 

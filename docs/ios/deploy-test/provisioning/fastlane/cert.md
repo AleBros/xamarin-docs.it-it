@@ -2,16 +2,16 @@
 title: 'fastlane per iOS: cert'
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: 900FA6FF-F3C9-4D35-993E-B0D88E6B1883
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: b98375f8a526cd08f7d11f4ea6bb3498db87009c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a37b0dc1418fd9dda5c59723a96c20855c1c3e1b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fastlane-for-ios--cert"></a>fastlane per iOS: cert
 
@@ -60,7 +60,7 @@ Per impostazione predefinita, verrà creato un certificato di distribuzione. Per
 
 Poiché cert chiederà l'ID e la password Apple, immetterli ora:
 
-[ ![](cert-images/fastlane-image1.png "cert chiederà l'ID e la password Apple")](cert-images/fastlane-image1.png)
+[![](cert-images/fastlane-image1.png "cert chiederà l'ID e la password Apple")](cert-images/fastlane-image1.png#lightbox)
 
 > [!IMPORTANT]
 > La prima volta che viene immessa, la password viene salvata nel keychain di macOS locale. In alternativa, si possono usare variabili di ambiente per archiviare il nome utente e la password oppure è possibile usare `export fastlane_DONT_STORE_PASSWORD=1` se non si vuole archiviare la password nel keychain. Per altre informazioni sulla gestione delle credenziali con fastlane, vedere la [guida a CredentialsManager](https://github.com/fastlane/fastlane/blob/master/credentials_manager/README.md) di fastlane.
@@ -71,7 +71,7 @@ L'ID Apple può anche essere passato come argomento usando il comando seguente:
 
 Se l'ID Apple è connesso a più team, questi verranno visualizzati qui. Selezionare il numero corrispondente al team che si vuole usare:
 
-[ ![](cert-images/fastlane-image2.png "Selezionare il team che si vuole usare")](cert-images/fastlane-image2.png)
+[![](cert-images/fastlane-image2.png "Selezionare il team che si vuole usare")](cert-images/fastlane-image2.png#lightbox)
 
 È possibile passare l'ID team anche usando il flag seguente:
 

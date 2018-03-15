@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 6bb712da5becbe9c19dddf3deb393f0d50cd726b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4da96f3119fb46fbeb22ad3d6c68b3099f6d0698
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="in-house-distribution"></a>Distribuzione interna
 
@@ -56,15 +56,15 @@ I certificati del programma Apple Developer Enterprise saranno validi per tre an
 3. Fare clic sul pulsante **+** per creare un nuovo certificato.
 4. Nell'intestazione *Production* (Produzione) selezionare **App Store and Ad Hoc** (Interna e ad hoc):
 
-   [ ![](in-house-distribution-images/createcertmanually01.png "Selezionare In-House and Ad Hoc (Interna e ad hoc)")](in-house-distribution-images/createcertmanually01.png)
+   [![](in-house-distribution-images/createcertmanually01.png "Selezionare In-House and Ad Hoc (Interna e ad hoc)")](in-house-distribution-images/createcertmanually01.png#lightbox)
 
 5. Fare clic su Continue (Continua) e seguire le istruzioni per creare una richiesta di firma del certificato tramite l'accesso keychain:
 
-   [ ![](in-house-distribution-images/createcertmanually02.png "Creare una richiesta di firma del certificato tramite l'accesso keychain")](in-house-distribution-images/createcertmanually02.png)
+   [![](in-house-distribution-images/createcertmanually02.png "Creare una richiesta di firma del certificato tramite l'accesso keychain")](in-house-distribution-images/createcertmanually02.png#lightbox)
 
 6. Dopo avere creato la richiesta di firma del certificato in base alle istruzioni, fare clic su Continue (Continua) e caricarla in Member Center:
 
-   [ ![](in-house-distribution-images/createcertmanually03.png "Caricare la richiesta di firma del certificato in Member Center")](in-house-distribution-images/createcertmanually03.png)
+   [![](in-house-distribution-images/createcertmanually03.png "Caricare la richiesta di firma del certificato in Member Center")](in-house-distribution-images/createcertmanually03.png#lightbox)
 
 7. Fare clic su Generate (Genera) per creare il certificato.
 8. Scaricare il certificato completato e fare doppio clic sul file per installarlo.
@@ -74,15 +74,15 @@ In alternativa, è possibile richiedere un certificato tramite la finestra di di
 
 1. Selezionare il proprio team e fare clic su *View Details...* (Visualizza dettagli):
 
-    [ ![](in-house-distribution-images/selectteam.png "Selezionare il team")](in-house-distribution-images/selectteam.png)
+    [![](in-house-distribution-images/selectteam.png "Selezionare il team")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Fare quindi clic sul pulsante **Create** (Crea) accanto a **iOS Distribution Certificate** (Certificato di distribuzione iOS):
 
-   [ ![](in-house-distribution-images/selectcert.png "Creare il certificato di distribuzione iOS")](in-house-distribution-images/selectcert.png)
+   [![](in-house-distribution-images/selectcert.png "Creare il certificato di distribuzione iOS")](in-house-distribution-images/selectcert.png#lightbox)
 
 2.   Fare quindi clic sul pulsante con il segno **più (+)** e selezionare **iOS App Store** (App Store iOS):
 
-   [ ![](in-house-distribution-images/selectcert.png "Selezionare iOS App Store (App Store iOS)")](in-house-distribution-images/selectcert.png)
+   [![](in-house-distribution-images/selectcert.png "Selezionare iOS App Store (App Store iOS)")](in-house-distribution-images/selectcert.png#lightbox)
 
 <a name="profile" />
 
@@ -105,23 +105,23 @@ Quando i componenti necessari per la creazione di un profilo di distribuzione so
 
 1. Tornare al portale di provisioning Apple e selezionare **Provisioning** > **Distribution** (Distribuzione):
 
-   [![](in-house-distribution-images/distribute01.png "Selezionare Provisioning > Distribution (Distribuzione)")](in-house-distribution-images/distribute01.png)
+   [![](in-house-distribution-images/distribute01.png "Selezionare Provisioning > Distribution (Distribuzione)")](in-house-distribution-images/distribute01.png#lightbox)
 
 2. Fare clic sul pulsante **+** e selezionare il tipo di profilo di distribuzione che si vuole creare come **In-House** (Interna):
 
-   [![](in-house-distribution-images/distribute02.png "Creare un profilo di distribuzione interna")](in-house-distribution-images/distribute02.png)
+   [![](in-house-distribution-images/distribute02.png "Creare un profilo di distribuzione interna")](in-house-distribution-images/distribute02.png#lightbox)
 
 3. Fare clic sul pulsante **Continue** (Continua) e selezionare un ID app nell'elenco a discesa per il quale si vuole creare un profilo di distribuzione:
 
-   [![](in-house-distribution-images/distribute03.png "Selezionare un ID app dall'elenco a discesa")](in-house-distribution-images/distribute03.png)
+   [![](in-house-distribution-images/distribute03.png "Selezionare un ID app dall'elenco a discesa")](in-house-distribution-images/distribute03.png#lightbox)
 
 4. Fare clic sul pulsante **Continue** (Continua) e selezionare il certificato di distribuzione necessario per firmare l'applicazione:
 
-   [![](in-house-distribution-images/distribute04.png "Selezionare il certificato di distribuzione necessario per firmare l'applicazione")](in-house-distribution-images/distribute04.png)
+   [![](in-house-distribution-images/distribute04.png "Selezionare il certificato di distribuzione necessario per firmare l'applicazione")](in-house-distribution-images/distribute04.png#lightbox)
 
 6. Fare clic sul pulsante **Continue** (Continua) e immettere un **nome** per il nuovo profilo di distribuzione:
 
-   [![](in-house-distribution-images/distribute06.png "Immettere un nome per il nuovo profilo di distribuzione")](in-house-distribution-images/distribute06.png)
+   [![](in-house-distribution-images/distribute06.png "Immettere un nome per il nuovo profilo di distribuzione")](in-house-distribution-images/distribute06.png#lightbox)
 
 7. Fare clic sul pulsante **Generate** (Genera) per creare il nuovo profilo e finalizzare il processo.
 

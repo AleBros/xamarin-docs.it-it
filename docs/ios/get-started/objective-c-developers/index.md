@@ -7,11 +7,11 @@ ms.assetid: 9F3C86A3-403E-4025-99CA-99FCA86DC828
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 7e26c11f71b446baf89ca11effe30bc1e041f951
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 275cce891801cd542d202960efc3da668fa8f07b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarin-for-objective-c-developers"></a>Xamarin per sviluppatori Objective-C
 
@@ -21,7 +21,7 @@ Xamarin consente agli sviluppatori che scelgono iOS di spostare il codice non di
 
 Xamarin consente anche di sfruttare le risorse Objective-C esistenti tramite una tecnologia nota come binding. È sufficiente creare una libreria statica in Objective-C ed esporla a C# tramite un binding, come illustrato nel diagramma seguente:
 
- [ ![](images/01-bindings.png "Libreria statica in Objective-C esposta a C# tramite un binding")](images/01-bindings.png)
+ [![](images/01-bindings.png "Libreria statica in Objective-C esposta a C# tramite un binding")](images/01-bindings.png#lightbox)
 
 Questo non si limita necessariamente al codice non di interfaccia utente. I binding possono esporre anche il codice dell'interfaccia utente sviluppato in Objective-C.
 

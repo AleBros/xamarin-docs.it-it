@@ -3,16 +3,16 @@ title: Introduzione a fastlane per iOS
 description: Questa guida illustra i vari strumenti fastlane che possono essere usati per firmare il codice delle applicazioni iOS.
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 084be16b55650f607d71f6eb3baf86b6f968aa35
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 15ee039fbfa339a9246b2a4234f37caf685c80c6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>Introduzione a fastlane per iOS
 
@@ -87,12 +87,12 @@ I contenuti forniti possono essere usati come aiuto per la distribuzione di app,
 
 fastlane è un progetto open source molto attivo che rilascia regolarmente nuove versioni. Quando è disponibile una nuova versione di fastlane, si viene avvisati quando si esegue un qualsiasi comando fastlane:
 
-[ ![](images/fastlane-image0.png "Richiesta di aggiornamento di fastlane")](images/fastlane-image0.png)
+[![](images/fastlane-image0.png "Richiesta di aggiornamento di fastlane")](images/fastlane-image0.png#lightbox)
 
 
 Per eseguire l'aggiornamento a una nuova versione di fastlane, scaricare il pacchetto più recente da [qui](https://download.fastlane.tools) e fare doppio clic sul pacchetto di installazione per eseguirlo:
 
-[ ![](images/fastlane-image0a.png "Esecuzione del pacchetto di installazione")](images/fastlane-image0a.png)
+[![](images/fastlane-image0a.png "Esecuzione del pacchetto di installazione")](images/fastlane-image0a.png#lightbox)
 
 
 ## <a name="contents"></a>Sommario
@@ -111,7 +111,7 @@ Dopo aver creato e firmato i profili di identità e provisioning con fastlane, l
 
 Per impostare le opzioni di firma del codice per un'applicazione Xamarin.iOS, fare clic con il pulsante destro del mouse sul nome del progetto, scegliere **Opzioni progetto > Compilazione > Firma del bundle iOS**, quindi impostare l'identità di firma e il profilo di provisioning in modo esplicito, come illustrato di seguito:
 
-[ ![](images/fastlane-image11.png "Impostare l'identità di firma e il profilo di provisioning in modo esplicito")](images/fastlane-image11.png)
+[![](images/fastlane-image11.png "Impostare l'identità di firma e il profilo di provisioning in modo esplicito")](images/fastlane-image11.png#lightbox)
 
 ## <a name="related-links"></a>Collegamenti correlati
 

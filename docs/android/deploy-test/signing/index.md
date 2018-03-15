@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/26/2018
-ms.openlocfilehash: 20a28d475e58a58a98abe21203e9841b7824fe48
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 56d6eea891de3aef8efbe1a971ce3af96ffd8fab
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="signing-the-android-application-package"></a>Firma del pacchetto dell'applicazione Android
 
@@ -22,7 +22,7 @@ Il pacchetto dell'applicazione Android (APK) risultante può essere trasferito l
 
 In [Archivia per la pubblicazione](~/android/deploy-test/release-prep/index.md#archive), la finestra di dialogo **Canale di distribuzione** offre due opzioni di distribuzione. Selezionare **Ad hoc**:
 
-[ ![Finestra di dialogo Canale di distribuzione](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png)
+[![Finestra di dialogo Canale di distribuzione](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -30,7 +30,7 @@ In questa sezione, per la firma dell'APK verrà usato il flusso di lavoro di pub
 
 In [Archivia per la pubblicazione](~/android/deploy-test/release-prep/index.md#archive), la finestra di dialogo **Firma e distribuisci** offre due opzioni di distribuzione. Selezionare **Ad hoc** e fare clic su **Avanti**:
 
-[ ![Finestra di dialogo Firma e distribuisci](images/xs/01-select-ad-hoc-sml.png)](images/xs/01-select-ad-hoc.png)
+[![Finestra di dialogo Firma e distribuisci](images/xs/01-select-ad-hoc-sml.png)](images/xs/01-select-ad-hoc.png#lightbox)
 
 -----
 
@@ -46,15 +46,15 @@ Dopo la selezione di **Ad hoc**, Visual Studio apre la pagina **Identità di fir
 
 È possibile usare un certificato esistente facendo clic sul pulsante **Importa** e quindi passando a [Firma APK](#signapkvs). In alternativa, fare clic sul pulsante **+** per creare un nuovo certificato:
 
-[ ![Identità di firma ad hoc](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png)
+[![Identità di firma ad hoc](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png#lightbox)
 
 Verrà visualizzata la finestra di dialogo **Create Android Key Store** (Crea archivio chiavi Android). Usare questa finestra di dialogo per creare un nuovo certificato di firma utilizzabile per firmare applicazioni Android. Immettere le informazioni obbligatorie (evidenziate in rosso) come illustrato in questa finestra di dialogo:
 
-[ ![Finestra di dialogo Create Android Key Store (Crea archivio chiavi Android)](images/vs/03-create-android-key-store-vs-sml.png)](images/vs/03-create-android-key-store-vs.png)
+[![Finestra di dialogo Create Android Key Store (Crea archivio chiavi Android)](images/vs/03-create-android-key-store-vs-sml.png)](images/vs/03-create-android-key-store-vs.png#lightbox)
 
 L'esempio seguente illustra il tipo di informazioni che è necessario specificare. Fare clic su **Crea** per creare il nuovo certificato:
 
-[ ![Creazione di un nuovo certificato](images/vs/04-key-store-example-vs-sml.png)](images/vs/04-key-store-example-vs.png)
+[![Creazione di un nuovo certificato](images/vs/04-key-store-example-vs-sml.png)](images/vs/04-key-store-example-vs.png#lightbox)
 
 L'archivio chiavi risultante si trova nel percorso seguente:
 
@@ -65,7 +65,7 @@ I passaggi precedenti, ad esempio, consentono di creare una nuova chiave di firm
 **C:\\Utenti\\*NOMEUTENTE*\\AppData\\Local\\Xamarin\\Mono for Android\\chimp\\chimp.keystore**
 
 > [!NOTE]
-> **Nota:** assicurarsi di eseguire il backup del file dell'archivio chiavi risultante in un luogo sicuro, perché non è incluso nella soluzione. Se si perde il file dell'archivio chiavi, ad esempio a causa dello spostamento in un altro computer o della reinstallazione di Windows, non sarà possibile firmare l'app con lo stesso certificato delle versioni precedenti.
+> Assicurarsi di eseguire il backup del file dell'archivio chiavi risultante in un luogo sicuro, perché non è incluso nella soluzione. Se si perde il file dell'archivio chiavi, ad esempio a causa dello spostamento in un altro computer o della reinstallazione di Windows, non sarà possibile firmare l'app con lo stesso certificato delle versioni precedenti.
 
 Per altre informazioni sull'archivio chiavi, vedere [Ricerca della firma SHA1 o MD5 dell'archivio chiavi](~/android/deploy-test/signing/keystore-signature.md).
 
@@ -73,11 +73,11 @@ Per altre informazioni sull'archivio chiavi, vedere [Ricerca della firma SHA1 o 
 
 Dopo che si è fatto clic su **Ad hoc**, Visual Studio per Mac apre la finestra di dialogo **Identità di firma Android**, come illustrato nel prossimo screenshot. Perché possa essere pubblicato, il file con estensione APK deve prima essere firmato con una chiave di firma (detta anche certificato). Se un certificato esiste già, fare clic sul pulsante **Importa una chiave esistente** per importarlo e quindi passare a [Firma APK](#signapkxs). In alternativa, fare clic sul pulsante **Crea una nuova chiave** per creare un nuovo certificato: 
 
-[ ![Finestra di dialogo Identità di firma Android](images/xs/02-android-signing-identity-sml.png)](images/xs/02-android-signing-identity.png)
+[![Finestra di dialogo Identità di firma Android](images/xs/02-android-signing-identity-sml.png)](images/xs/02-android-signing-identity.png#lightbox)
 
 La finestra di dialogo **Crea nuovo certificato** viene usata per creare un nuovo certificato di firma utilizzabile per firmare applicazioni Android. Dopo aver immesso le informazioni necessarie, fare clic su **OK**:
 
-[![Finestra di dialogo Crea nuovo certificato](images/xs/03-create-new-certificate-sml.png)](images/xs/03-create-new-certificate.png)
+[![Finestra di dialogo Crea nuovo certificato](images/xs/03-create-new-certificate-sml.png)](images/xs/03-create-new-certificate.png#lightbox)
 
 L'archivio chiavi risultante si trova nel percorso seguente:
 
@@ -89,14 +89,13 @@ I passaggi precedenti, ad esempio, consentono di creare una nuova chiave di firm
 
 
 > [!NOTE]
-> **Nota:** assicurarsi di eseguire il backup del file dell'archivio chiavi risultante in un luogo sicuro, perché non è incluso nella soluzione. Se si perde il file dell'archivio chiavi, ad esempio a causa del passaggio a un altro computer o della reinstallazione del Mac, non sarà possibile firmare l'app con lo stesso certificato delle versioni precedenti.
+> Assicurarsi di eseguire il backup del file dell'archivio chiavi risultante in un luogo sicuro, perché non è incluso nella soluzione. Se si perde il file dell'archivio chiavi, ad esempio a causa del passaggio a un altro computer o della reinstallazione del Mac, non sarà possibile firmare l'app con lo stesso certificato delle versioni precedenti.
 
 Per altre informazioni sull'archivio chiavi, vedere [Ricerca della firma SHA1 o MD5 dell'archivio chiavi](~/android/deploy-test/signing/keystore-signature.md).
 
 -----
 
 <a name="signapkvs" />
-<a name="signingxs" />
 
 ## <a name="sign-the-apk"></a>Firmare il pacchetto APK
 
@@ -105,24 +104,24 @@ Per altre informazioni sull'archivio chiavi, vedere [Ricerca della firma SHA1 o 
 Quando si fa clic su **Crea**, un nuovo archivio chiavi, contenente un nuovo certificato, viene salvato ed elencato in **Identità di firma**, come illustrato nel prossimo screenshot. Per pubblicare un'app in Google Play, fare clic su **Annulla** e passare a [Pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).
 Per eseguire la pubblicazione *ad hoc* e pubblicare l'app per la distribuzione indipendente, selezionare l'identità di firma da usare e fare clic su **Salva con nome**. In questo screenshot, ad esempio, è selezionata l'identità di firma **chimp** creata in precedenza:
 
-[ ![Esempio di identità di firma](images/vs/05-save-as-vs-sml.png)](images/vs/05-save-as-vs.png)
+[![Esempio di identità di firma](images/vs/05-save-as-vs-sml.png)](images/vs/05-save-as-vs.png#lightbox)
 
 **Gestione archivi** visualizza quindi lo stato della pubblicazione. Al termine del processo di pubblicazione, viene visualizzata la finestra di dialogo **Salva con nome** in cui specificare il percorso in cui deve essere archiviato il file con estensione APK generato:
 
-[![Finestra di dialogo Salva con nome](images/vs/06-save-as-dialog-vs-sml.png)](images/vs/06-save-as-dialog-vs.png)
+[![Finestra di dialogo Salva con nome](images/vs/06-save-as-dialog-vs-sml.png)](images/vs/06-save-as-dialog-vs.png#lightbox)
 
 Passare al percorso desiderato e fare clic su **Salva**. Se la password della chiave non è nota, viene visualizzata la finestra di dialogo **Password per la firma**, che richiede la password per il certificato selezionato:
 
-[ ![Finestra di dialogo Password per la firma](images/vs/07-signing-password-vs-sml.png)](images/vs/07-signing-password-vs.png)
+[![Finestra di dialogo Password per la firma](images/vs/07-signing-password-vs-sml.png)](images/vs/07-signing-password-vs.png#lightbox)
 
 Dopo il completamento del processo di firma, fare clic su **Apri cartella**:
 
-[ ![Pulsante Apri cartella](images/vs/08-open-folder-vs-sml.png)](images/vs/08-open-folder-vs.png)
+[![Pulsante Apri cartella](images/vs/08-open-folder-vs-sml.png)](images/vs/08-open-folder-vs.png#lightbox)
 
 Esplora risorse aprirà la cartella contenente il file APK generato. A questo punto, Visual Studio ha compilato l'applicazione Xamarin.Android in un file APK pronto per la distribuzione.
 Lo screenshot seguente illustra un esempio di app pronta per la pubblicazione, **MyApp.MyApp.apk**:
 
-[ ![APK visualizzato in Esplora risorse](images/vs/09-generated-app-vs-sml.png)](images/vs/09-generated-app-vs.png)
+[![APK visualizzato in Esplora risorse](images/vs/09-generated-app-vs-sml.png)](images/vs/09-generated-app-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -130,11 +129,11 @@ Lo screenshot seguente illustra un esempio di app pronta per la pubblicazione, *
 Come si è visto, all'archivio chiavi è stato aggiunto un nuovo certificato. Per pubblicare un'app in Google Play, fare clic su **Annulla** e passare a [Pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).
 In alternativa, fare clic su **Avanti** per pubblicare l'app *ad hoc* (per la distribuzione indipendente), come illustrato in questo esempio:
 
-[ ![Finestra di dialogo Firma e distribuisci](images/xs/04-select-identity-sml.png)](images/xs/04-select-identity.png)
+[![Finestra di dialogo Firma e distribuisci](images/xs/04-select-identity-sml.png)](images/xs/04-select-identity.png#lightbox)
 
 La finestra di dialogo **Pubblica come ad hoc** visualizza un riepilogo dell'app firmata prima della pubblicazione. Se queste informazioni sono corrette, fare clic su **Pubblica**.
 
-[ ![Pubblica come ad hoc](images/xs/05-publish-ad-hoc-sml.png)](images/xs/05-publish-ad-hoc.png)
+[![Pubblica come ad hoc](images/xs/05-publish-ad-hoc-sml.png)](images/xs/05-publish-ad-hoc.png#lightbox)
 
 La finestra di dialogo **File APK di output** salva il pacchetto APK nel percorso specificato. Fare clic su **Salva**.
 
@@ -146,18 +145,17 @@ Immettere quindi la password per il certificato (la password usata nella finestr
 
 Il file APK viene firmato con il certificato e salvato nel percorso specificato. Fare clic su **Visualizza in Finder**:
 
-[ ![Finestra di dialogo Publication Succeeded (Pubblicazione completata)](images/xs/08-app-is-ready-sml.png)](images/xs/08-app-is-ready.png)
+[![Finestra di dialogo Publication Succeeded (Pubblicazione completata)](images/xs/08-app-is-ready-sml.png)](images/xs/08-app-is-ready.png#lightbox)
 
 Finder si aprirà in corrispondenza del percorso del file APK firmato:
 
-[![APK visualizzato in Finder](images/xs/09-show-in-finder-sml.png)](images/xs/09-show-in-finder.png)
+[![APK visualizzato in Finder](images/xs/09-show-in-finder-sml.png)](images/xs/09-show-in-finder.png#lightbox)
 
 È ora possibile copiare il pacchetto APK da Finder e inviarlo alla destinazione finale. È consigliabile installare il pacchetto APK in un dispositivo Android e provarlo prima della distribuzione. Vedere [Pubblicazione indipendente](~/android/deploy-test/publishing/publishing-independently.md) per altre informazioni sulla pubblicazione di un APK *ad hoc*.
 
 -----
 
 
-<a name="nextsteps" />
 
 ## <a name="next-steps"></a>Passaggi successivi
 

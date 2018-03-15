@@ -2,16 +2,16 @@
 title: 'fastlane per iOS: match'
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: C4A2A67E-0643-4CED-B1A9-79D65054F3CA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 435ba4c3799288724625ca06016770b3ecad56a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d92f820e22277148b4de3ff87e3fdaca0f573f52
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fastlane-for-ios---match"></a>fastlane per iOS: match
 
@@ -56,15 +56,15 @@ Usando il terminale, sostituire la directory con la directory del progetto ed es
 
 Quando richiesto, immettere l'URL del repository git:
 
- [ ![](match-images/fastlane-image7.png "Immettere l'URL del repository git")](match-images/fastlane-image7.png)
+ [![](match-images/fastlane-image7.png "Immettere l'URL del repository git")](match-images/fastlane-image7.png#lightbox)
 
 Per trovare e copiare l'URL, fare clic sul pulsante **Clone or Download** (Clona o scarica) in github.com, come illustrato sotto:
 
-[ ![](match-images/fastlane-image6.png "URL sotto il pulsante Clone or Download (Clona o scarica) in github.com")](match-images/fastlane-image6.png)
+[![](match-images/fastlane-image6.png "URL sotto il pulsante Clone or Download (Clona o scarica) in github.com")](match-images/fastlane-image6.png#lightbox)
 
 Con l'inizializzazione del progetto viene creato un matchfile, un file di testo che può essere modificato per passare le variabili di ambiente allo strumento match. Di seguito è illustrato un esempio di matchfile:
 
-[ ![](match-images/fastlane-image8.png "Esempio di matchfile")](match-images/fastlane-image8.png)
+[![](match-images/fastlane-image8.png "Esempio di matchfile")](match-images/fastlane-image8.png#lightbox)
 
 <a name="running" />
 
@@ -88,7 +88,7 @@ Oltre a creare nuovi certificati e profili, usando uno di questi comandi verrann
 - Un file leggimi con le istruzioni di base
 - Una versione di match
 
-[ ![](match-images/fastlane-image9.png "Struttura del progetto nel repository git")](match-images/fastlane-image9.png)
+[![](match-images/fastlane-image9.png "Struttura del progetto nel repository git")](match-images/fastlane-image9.png#lightbox)
 
 I profili di provisioning vengono installati in `~/Library/MobileDevice/Provisioning Profiles`. I certificati e le chiavi private vengono installati direttamente nel keychain.
 

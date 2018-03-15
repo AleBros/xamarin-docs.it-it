@@ -7,12 +7,12 @@ ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/24/2018
-ms.openlocfilehash: 66ed0965f1ed01be129f22996e50bdea89a95287
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 585bcac193d6824bc7c96092c14e40fd7971b0e2
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="android-sdk-setup"></a>Installazione di Android SDK
 
@@ -30,7 +30,7 @@ Questa guida illustra come installare e usare Xamarin Android SDK Manager per Vi
 Questa guida illustra come installare e usare Xamarin Android SDK Manager per Visual Studio per Mac (o [per Windows](?tabs=vswin)).
 
 > [!NOTE]
-> **Nota:** questa guida si applica solo a Visual Studio 2017 e Visual Studio per Mac.  
+> Questa guida si applica solo a Visual Studio 2017 e Visual Studio per Mac.  
 
 -----
 
@@ -38,8 +38,6 @@ Xamarin Android SDK Manager consente di scaricare i componenti Android più rece
 Sostituisce lo strumento autonomo SDK Manager di Google, che è stato deprecato.
 
 Perché usare Xamarin Android SDK Manager anziché SDK Manager incluso in Android SDK? Nella versione 25.2.3 del pacchetto Android SDK Tools Google introduce un nuovo strumento per gestire Android SDK. Questo nuovo strumento è **[sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)**, un'utilità della riga di comando che sostituisce la gestione autonoma dell'interfaccia utente per Android SDK. Se si esegue l'aggiornamento alla versione di 26.0.1 di SDK Tools (obbligatorio per Android 8.0) o versione successiva e si vuole gestire Android SDK ancora tramite un'interfaccia dell'interfaccia utente, è quindi necessario usare Xamarin Android SDK Manager.
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>Requisiti
 
@@ -64,10 +62,8 @@ In Xamarin Android SDK Manager è anche necessario Java Development Kit, che vie
 Xamarin.Android usa [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), la versione necessaria per sviluppare il livello API 24 o un livello superiore. JDK 8 supporta anche i livelli API precedenti al livello 24. È possibile continuare a usare [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) per attività di sviluppo specifiche per il livello API 23 o un livello precedente.
 
 > [!IMPORTANT]
-> **Nota:** Xamarin.Android non supporta JDK 9.
+> Xamarin.Android non supporta JDK 9.
 
-
-<a name="installation" />
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -86,7 +82,6 @@ Selezionando **Strumenti > Android > Android SDK Manager** (come descritto di se
  
 -----
 
-<a name="sdk-manager" /> 
  
 ## <a name="sdk-manager"></a>SDK Manager 
 
@@ -94,11 +89,11 @@ Selezionando **Strumenti > Android > Android SDK Manager** (come descritto di se
 
 Per avviare SDK Manager in Visual Studio, selezionare **Strumenti -> Android -> Android SDK Manager**:
 
-[![Percorso della voce di menu Android SDK Manager](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png)
+[![Percorso della voce di menu Android SDK Manager](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
 
 **Xamarin Android SDK Manager** si apre nella schermata **Android SDK e strumenti Android**, in cui sono disponibili due schede &ndash; **Piattaforme** e **Strumenti**:
 
-[![Screenshot di Android SDK Manager aperto nella scheda Piattaforme](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png)
+[![Screenshot di Android SDK Manager aperto nella scheda Piattaforme](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png#lightbox)
 
 La schermata **Android SDK e strumenti Android** viene descritta più nel dettaglio nelle sezioni seguenti.
 
@@ -117,7 +112,6 @@ Le schede di Xamarin Android SDK Manager sono descritte nelle sezioni seguenti.
 -----
 
 
-<a name="sdkmanager-locations" /> 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -151,7 +145,6 @@ In genere, si usa la scheda **Percorsi** per modificare il percorso di Android S
 
 -----
 
-<a name="sdkmanager-tools" /> 
 
 ### <a name="tools-tab"></a>Scheda Strumenti
 
@@ -162,7 +155,7 @@ Nella scheda **Strumenti** viene visualizzato un elenco di _strumenti_ e _funzio
 
 Ad esempio, per scaricare il pacchetto relativo all'emulatore Android di Google, selezionare il segno di spunta accanto a **Emulatore Android** e fare clic sul pulsante **Applica modifiche**:
 
-[![Installazione dell'emulatore Android dalla scheda Strumenti](android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png)
+[![Installazione dell'emulatore Android dalla scheda Strumenti](android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -188,7 +181,6 @@ Potrebbe essere visualizzata una finestra di dialogo contenente il messaggio, _�
 Selezionare **Accetto** se si accettano i termini e le condizioni. L'indicatore di stato nella parte inferiore della finestra indica lo stato del download e dell'installazione. Al termine dell'installazione, nella scheda **Strumenti** saranno visualizzati gli strumenti e le funzionalità aggiuntive installati.
 
 
-<a name="xvs-platforms" /> 
 
 ### <a name="platforms-tab"></a>Scheda Piattaforme
 
@@ -196,7 +188,7 @@ Nella scheda **Piattaforme** viene visualizzato un elenco delle versioni SDK del
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Schermata del riquadro Piattaforme](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png)
+[![Schermata del riquadro Piattaforme](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -224,7 +216,7 @@ Per aggiungere un'altra piattaforma a SDK, selezionare la casella accanto alla p
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Esempio di aggiunta dei componenti di Android Nougat 7.1 ad Android SDK](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png)
+[![Esempio di aggiunta dei componenti di Android Nougat 7.1 ad Android SDK](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -236,7 +228,7 @@ Per installare solo SDK fare clic una sola volta sulla casella accanto alla piat
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Esempio di aggiunta di alcuni componenti di Android 7.1](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png)
+[![Esempio di aggiunta di alcuni componenti di Android 7.1](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -270,7 +262,6 @@ Selezionare **Accetto** se si accettano i termini e le condizioni. È possibile 
 A questo punto è possibile iniziare a sviluppare l'app per il livello API Android più recente e più elevato.
 
 
-<a name="summary" />
  
 ## <a name="summary"></a>Riepilogo
 

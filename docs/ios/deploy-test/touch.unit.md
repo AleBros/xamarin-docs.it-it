@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a113a386f1312253fda8913cea3cb608a65e1061
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f7c743bab2a6acb3dcd57ebca207957f983e0c0f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="unit-testing"></a>Testing unità
 
@@ -119,15 +119,15 @@ Per eseguire questo progetto all'interno della soluzione, fare clic su di esso c
 
 Il test runner consente di vedere quali test sono registrati e di selezionare singolarmente i test che possono essere eseguiti.
 
-[ ![](touch.unit-images/02.png "Elenco dei test registrati")](touch.unit-images/02.png) 
+[![](touch.unit-images/02.png "Elenco dei test registrati")](touch.unit-images/02.png#lightbox) 
 
-[ ![](touch.unit-images/03.png "Un singolo test")](touch.unit-images/03.png) 
+[![](touch.unit-images/03.png "Un singolo test")](touch.unit-images/03.png#lightbox) 
 
-[ ![](touch.unit-images/04.png "Risultati dell'esecuzione")](touch.unit-images/04.png)
+[![](touch.unit-images/04.png "Risultati dell'esecuzione")](touch.unit-images/04.png#lightbox)
 
 È possibile eseguire singole fixture di test selezionandone una dalle visualizzazioni annidate oppure eseguire tutti i test scegliendo "Run Everything" (Esegui tutto). Se si esegue il test predefinito, che dovrebbe includere un test superato, un test non superato e un test ignorato, il report ha un aspetto simile al seguente ed è possibile eseguire il drill-down direttamente al test non superato e trovare maggiori informazioni sull'errore:
 
-[ ![](touch.unit-images/05.png "Report di esempio")](touch.unit-images/05.png) [ ![](touch.unit-images/06.png "Report di esempio")](touch.unit-images/06.png) [ ![](touch.unit-images/07.png "Report di esempio")](touch.unit-images/07.png)
+[![](touch.unit-images/05.png "Report di esempio")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "Report di esempio")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "Report di esempio")](touch.unit-images/05.png#lightbox)
 
 Si può anche consultare la finestra Output applicazione nell'IDE per verificare quali test sono in esecuzione e qual è il loro stato corrente.
 

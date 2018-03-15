@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 3bc53a8230b66b88319f729d7effe8ed75f0176b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cf2f62929df63d08add76b7fb6de404d2780b2b3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="building-abi-specific-apks"></a>Compilazione di APK specifici di ABI
 
@@ -42,7 +42,6 @@ Questa guida illustra come creare lo script di compilazione di più APK per un'a
 Alla fine di questa guida è disponibile una procedura dettagliata che illustra come creare lo script di questi passaggi usando [Rake](http://martinfowler.com/articles/rake.html).
 
 
-<a name="Setting_android_versionCode" />
 
 ### <a name="creating-the-version-code-for-the-apk"></a>Creazione del codice versione per l'APK
 
@@ -67,7 +66,7 @@ Espandendo a otto cifre questo schema del codice versione, è possibile includer
 
 Il diagramma seguente illustra la posizione di ogni codice descritto nell'elenco precedente:
 
-[![Diagramma del formato del codice versione a otto cifre, codificato in base al colore](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png)
+[![Diagramma del formato del codice versione a otto cifre, codificato in base al colore](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png#lightbox)
 
 
 Google Play verificherà che al dispositivo venga distribuito l'APK corretto in base a `versionCode` e alla configurazione dell'APK. Il file APK con il codice versione più alto verrà distribuito al dispositivo. Ad esempio, un'applicazione può includere tre APK con i codici versione seguenti:
@@ -88,7 +87,6 @@ Si supponga ora che la versione x86 riceva alcuni aggiornamenti o correzioni des
 La gestione manuale di questi codici versione può comportare un carico notevole per lo sviluppatore. Il processo per calcolare l'elemento `android:versionCode` corretto e quindi compilare gli APK dovrebbe essere automatizzato.
 Un esempio di come eseguire questa operazione verrà descritto nella procedura dettagliata alla fine di questo documento.
 
-<a name="CreatingAndroidManifest" />
 
 ### <a name="create-a-temporary-androidmanifestxml"></a>Creare un file AndroidManifest.XML temporaneo
 
@@ -123,7 +121,6 @@ L'elenco seguente descrive ogni parametro della riga di comando:
 -   `<CS_PROJ FILE>`: percorso del file `.csproj` per il progetto Xamarin.Android.
 
 
-<a name="SignAndZipAlign" />
 
 ### <a name="sign-and-zipalign-the-apk"></a>Firmare ed eseguire Zipalign per il file APK
 
@@ -139,7 +136,6 @@ Tutte le applicazioni Xamarin.Android devono essere allineate con zipaling prima
 zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 ```
 
-<a name="Automating_APK_Creation_With_Rake" />
 
 ## <a name="automating-apk-creation-with-rake"></a>Automazione della creazione di file APK con Rake
 
@@ -174,11 +170,11 @@ $ rake build
 
 Al termine dell'attività di Rake, saranno disponibili tre cartelle `bin` con il file `xamarin.helloworld.apk`. Lo screenshot seguente illustra ognuna di queste cartelle con il relativo contenuto:
 
-[![Posizioni delle cartelle specifiche della piattaforma contenenti xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png)
+[![Posizioni delle cartelle specifiche della piattaforma contenenti xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
 
 > [!NOTE]
-> **Nota:** il processo di compilazione illustrato in questa guida può essere implementato in uno dei numerosi sistemi di compilazione. Anche se non è disponibile un esempio già scritto, dovrebbe essere possibile eseguirlo anche con [Powershell](http://technet.microsoft.com/en-ca/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) o [Fake](http://fsharp.github.io/FAKE/).
+> Il processo di compilazione illustrato in questa guida può essere implementato in uno dei numerosi sistemi di compilazione. Anche se non è disponibile un esempio già scritto, dovrebbe essere possibile eseguirlo anche con [Powershell](http://technet.microsoft.com/en-ca/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) o [Fake](http://fsharp.github.io/FAKE/).
 
 
 ## <a name="summary"></a>Riepilogo

@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 99f66fd0d23f14224bcd915ef7d1c6d81367f173
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 412e65e074a171666a0ed9b61e347c4a16ec366b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-an-application"></a>Pubblicazione di un'applicazione
 
 Quando viene creata un'ottima applicazione, tutti vogliono usarla. Questa sezione illustra i passaggi necessari per la distribuzione pubblica di un'applicazione creata con Xamarin.Android tramite canali quali la posta elettronica, un server Web privato, Google Play o Amazon Appstore per Android.
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Panoramica
 
@@ -29,7 +28,7 @@ Il passaggio finale dello sviluppo di un'applicazione Xamarin.Android è la pubb
 
 Il diagramma seguente illustra i passaggi relativi alla pubblicazione di un'applicazione Xamarin.Android:
 
-[ ![Diagramma di flusso di compilazione e distribuzione](images/build-and-deploy-steps.png)](images/build-and-deploy-steps.png)
+[![Diagramma di flusso di compilazione e distribuzione](images/build-and-deploy-steps.png)](images/build-and-deploy-steps.png#lightbox)
 
 Come si può notare dal diagramma precedente, la preparazione è la stessa indipendentemente dal metodo di distribuzione usato. Per rilasciare un'applicazione Android agli utenti sono disponibili diversi metodi:
 
@@ -49,7 +48,7 @@ Il programma Amazon per la distribuzione di app per dispositivi mobili consente 
 
 Google Play è probabilmente il marketplace più completo e famoso per le applicazioni Android. Google Play consente agli utenti di individuare, scaricare, valutare e acquistare le applicazioni con un clic su una sola icona, dal dispositivo o dal computer. Google Play mette anche a disposizione alcuni strumenti che semplificano l'analisi delle vendite e le tendenze di mercato e che consentono di determinare i dispositivi e gli utenti autorizzati a scaricare l'applicazione. Di seguito è riportato uno screenshot di Google Play in esecuzione in un dispositivo Android:
 
-[![Screenshot di Google Play](images/google-play-app.png)](images/google-play-app.png)
+[![Screenshot di Google Play](images/google-play-app.png)](images/google-play-app.png#lightbox)
 
 Questa sezione illustra come caricare l'applicazione in uno store, ad esempio in Google Play, insieme al materiale promozionale appropriato. La sezione descrive anche i file di espansione APK, con una panoramica concettuale di che cosa sono e di come funzionano, e i servizi di gestione delle licenze Google. Vengono infine presentati metodi di distribuzione alternativi, ad esempio l'uso di un server Web HTTP, della semplice distribuzione tramite posta elettronica e di Amazon Appstore per Android.
 

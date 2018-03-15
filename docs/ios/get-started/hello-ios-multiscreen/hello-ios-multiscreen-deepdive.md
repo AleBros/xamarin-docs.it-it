@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 8e36548e0d9926a28c133f8f1dc688fcbfa9f78e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a7d4af1563cb5fe5166c289c4ee5dca6ad3ffb00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-ios-multiscreen-deep-dive"></a>Approfondimento su Hello, iOS Multiscreen
 
@@ -27,7 +27,7 @@ Approfondiremo quindi il controller di spostamento e spiegheremo come offrire un
 
 Nell'esercitazione [Hello, iOS](~/ios/get-started/hello-ios/index.md) abbiamo appreso che le applicazioni iOS hanno una sola *finestra* e che i controller di visualizzazione sono responsabili del caricamento delle rispettive *gerarchie di visualizzazione del contenuto* nella finestra. Nella seconda procedura dettagliata relativa a Phoneword abbiamo aggiunto una seconda schermata all'applicazione e passato alcuni dati (un elenco di numeri di telefono) tra le due schermate, come illustrato nella figura seguente:
 
- [ ![](hello-ios-multiscreen-deepdive-images/08.png "Questa figura illustra il passaggio dei dati tra le due schermate")](hello-ios-multiscreen-deepdive-images/08.png)
+ [![](hello-ios-multiscreen-deepdive-images/08.png "Questa figura illustra il passaggio dei dati tra le due schermate")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
 Nel nostro esempio, i dati sono stati raccolti nella prima schermata, passati dal primo controller di visualizzazione al secondo e visualizzati dalla seconda schermata. Questa separazione di schermate, controller di visualizzazione e dati segue lo schema *MCV (Model, View, Controller)*. Nelle prossime sezioni esamineremo i vantaggi dello schema, i suoi componenti e spiegheremo come vengono usati nell'applicazione Phoneword.
 
@@ -35,7 +35,7 @@ Nel nostro esempio, i dati sono stati raccolti nella prima schermata, passati da
 
 MVC è uno *schema progettuale*, vale a dire una soluzione di architettura riutilizzabile per un problema comune o un caso d'uso nel codice. MVC è un'architettura per applicazioni con un'*interfaccia utente grafica (GUI)*. Assegna agli oggetti nell'applicazione uno dei tre ruoli *Modello* (logica di dati o applicazione), *Visualizzazione* (interfaccia utente) e *Controller* (code-behind). La figura seguente illustra le relazioni tra le tre parti dello schema MVC e l'utente:
 
- [ ![](hello-ios-multiscreen-deepdive-images/00.png "Questa figura illustra le relazioni tra le tre parti dello schema MVC e l'utente")](hello-ios-multiscreen-deepdive-images/00.png)
+ [![](hello-ios-multiscreen-deepdive-images/00.png "Questa figura illustra le relazioni tra le tre parti dello schema MVC e l'utente")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 
 Lo schema MVC è utile perché consente la separazione logica tra diverse parti di un'applicazione GUI e rende più semplice per noi riusare il codice e le visualizzazioni. Passiamo ora a osservare in modo più dettagliato ognuno dei tre ruoli.
 
@@ -71,23 +71,23 @@ Nell'applicazione Phoneword abbiamo usato un *controller di spostamento* per ges
 
 Il controller di spostamento è comune nelle applicazioni iOS e offre funzioni di navigazione per le applicazioni iOS di base come l'app **Settings** (Impostazioni), come illustrato nella schermata seguente:
 
- [ ![](hello-ios-multiscreen-deepdive-images/01.png "Il controller di spostamento offre funzioni di navigazione per le applicazioni iOS come l'app Settings (Impostazioni) visualizzata qui")](hello-ios-multiscreen-deepdive-images/01.png)
+ [![](hello-ios-multiscreen-deepdive-images/01.png "Il controller di spostamento offre funzioni di navigazione per le applicazioni iOS come l'app Settings (Impostazioni) visualizzata qui")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
 
 Il controller di spostamento svolge tre funzioni principali:
 
 -  **Offre hook per la navigazione in avanti**: il controller di spostamento usa una metafora di navigazione gerarchica in cui le gerarchie di visualizzazione del contenuto vengono *inviate* su uno *stack di navigazione*. Lo stack di navigazione può essere considerato come un mazzo di carte impilato in cui è visibile solo la carta situata più in alto, come illustrato nella figura seguente:  
 
-    [ ![](hello-ios-multiscreen-deepdive-images/02.png "Questa figura illustra la navigazione come un mazzo di carte")](hello-ios-multiscreen-deepdive-images/02.png)
+    [![](hello-ios-multiscreen-deepdive-images/02.png "Questa figura illustra la navigazione come un mazzo di carte")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
 
 -  **Facoltativamente, offre un pulsante Indietro**: quando si inserisce un nuovo elemento nello stack di navigazione, la barra del titolo può visualizzare automaticamente un *pulsante Indietro* che consente all'utente di spostarsi all'indietro. Premendo il pulsante Indietro, il controller di navigazione corrente viene *estratto* dallo stack di navigazione e viene caricata la gerarchia di visualizzazione del contenuto precedente nella finestra:  
 
-    [ ![](hello-ios-multiscreen-deepdive-images/03.png "Questa figura illustra l'estrazione di una carta dal mazzo")](hello-ios-multiscreen-deepdive-images/03.png)
+    [![](hello-ios-multiscreen-deepdive-images/03.png "Questa figura illustra l'estrazione di una carta dal mazzo")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
 -  **Include una barra del titolo**: la parte superiore del **controller di spostamento** viene chiamata *barra del titolo*. È responsabile della visualizzazione del titolo del controller di spostamento, come illustrato nella figura seguente:  
 
-    [ ![](hello-ios-multiscreen-deepdive-images/04.png "La barra del titolo è responsabile della visualizzazione del titolo del controller di spostamento")](hello-ios-multiscreen-deepdive-images/04.png)
+    [![](hello-ios-multiscreen-deepdive-images/04.png "La barra del titolo è responsabile della visualizzazione del titolo del controller di spostamento")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
 
 
@@ -97,11 +97,11 @@ Il controller di spostamento svolge tre funzioni principali:
 Un **controller di spostamento** non gestisce una gerarchia di visualizzazione del contenuto, pertanto non ha nulla da visualizzare di per sé.
 Un **controller di spostamento** è invece associato a un *controller visualizzazione radice*:
 
- [ ![](hello-ios-multiscreen-deepdive-images/05.png "Un controller di spostamento è associato a un controller visualizzazione radice")](hello-ios-multiscreen-deepdive-images/05.png)
+ [![](hello-ios-multiscreen-deepdive-images/05.png "Un controller di spostamento è associato a un controller visualizzazione radice")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
 Il controller visualizzazione radice rappresenta il primo controller di visualizzazione nello stack del **controller di spostamento** e la gerarchia di visualizzazione del contenuto del controller visualizzazione radice è la prima gerarchia di visualizzazione del contenuto a essere caricata nella finestra. Se si intende inserire l'intera applicazione nello stack del controller di spostamento, è possibile spostare l'elemento Sourceless Segue nel **controller di spostamento** e impostare il controller di visualizzazione della prima schermata come controller visualizzazione radice, come abbiamo fatto nell'app Phoneword:
 
- [ ![](hello-ios-multiscreen-deepdive-images/06.png "L'elemento Sourceless Segue imposta il controller di visualizzazione delle prime schermate come controller visualizzazione radice")](hello-ios-multiscreen-deepdive-images/06.png)
+ [![](hello-ios-multiscreen-deepdive-images/06.png "L'elemento Sourceless Segue imposta il controller di visualizzazione delle prime schermate come controller visualizzazione radice")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>Opzioni di navigazione aggiuntive
 
@@ -115,7 +115,7 @@ Nella procedura dettagliata relativa a Phoneword è stata gestita la transizione
 
 Quando si aggiunge un elemento Segue con un'azione **Show** (Mostra) allo storyboard, indicare a iOS di inserire il secondo controller di visualizzazione nello stack del controller di spostamento:
 
- [ ![](hello-ios-multiscreen-deepdive-images/09.png "Impostazione del tipo di elemento Segue da un elenco a discesa")](hello-ios-multiscreen-deepdive-images/09.png)
+ [![](hello-ios-multiscreen-deepdive-images/09.png "Impostazione del tipo di elemento Segue da un elenco a discesa")](hello-ios-multiscreen-deepdive-images/09.png#lightbox)
 
 L'aggiunta di un elemento Segue allo storyboard è sufficiente a creare una semplice transizione tra le schermate. Se si intende passare i dati tra i controller di visualizzazione, è necessario eseguire l'override del metodo `PrepareForSegue` e gestire i dati direttamente:
 

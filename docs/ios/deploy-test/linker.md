@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/24/2017
-ms.openlocfilehash: c4ad69890b7f50478e44d59cd37e7b6ac96a87ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2ee5da1b2c5d4c8fbf405c7f28ed280a3286a025
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="linking-on-ios"></a>Collegamento in iOS
 
@@ -29,7 +29,7 @@ Poiché il linker è uno strumento statico, non può contrassegnare per l'inclus
 
 Il processo di collegamento può essere personalizzato tramite l'elenco a discesa Comportamento del linker in **Opzioni progetto**. Per accedere a questo elenco, fare doppio clic sul progetto iOS e passare a **Compilazione iOS > Opzioni linker**, come mostrato di seguito:
 
-[ ![](linker-images/image1.png "Opzioni linker")](linker-images/image1.png)
+[![](linker-images/image1.png "Opzioni linker")](linker-images/image1.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 

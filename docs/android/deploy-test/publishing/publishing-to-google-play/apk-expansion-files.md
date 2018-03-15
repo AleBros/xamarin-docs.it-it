@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: d118eb5e9f875c5480105d1596ef1318112fb53e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3431791d51858df2013634e1594ee960a10728da
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="apk-expansion-files"></a>File di espansione APK
 
@@ -33,7 +33,6 @@ I file di espansione sono considerati come *BLOB binari opachi (OBB, Opaque Bina
 I file di espansione devono essere caricati insieme all'APK.
 Google Play non consente il caricamento di un file di espansione in un APK esistente o per APK esistenti da aggiornare. Se è necessario aggiornare un file di espansione, è necessario caricare un nuovo APK con il valore `versionCode` aggiornato.
 
-<a name="Expansion_File_Storage" />
 
 ## <a name="expansion-file-storage"></a>Archiviazione dei file di espansione
 
@@ -51,7 +50,6 @@ Se è necessario decomprimere un file di espansione, i file decompressi devono e
 
 Un'alternativa all'estrazione dei file da un file di espansione è la lettura di asset o risorse direttamente dal file di espansione. Il file di espansione è semplicemente un file ZIP che può essere usato con un `ContentProvider` appropriato. [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary) contiene un assembly, [System.IO.Compression.Zip](https://github.com/mattleibow/Android.Play.ExpansionLibrary/tree/master/System.IO.Compression.Zip), che include un `ContentProvider` che consente l'accesso diretto ai file per alcuni file multimediali. Se i file multimediali sono compressi in un file ZIP, le chiamate per la riproduzione di elementi multimediali potrebbero usare direttamente i file nel file ZIP senza doverlo decomprimere. I file multimediali non devono essere compressi quando vengono aggiunti al file ZIP. 
 
-<a name="FileName_Format" />
 
 ### <a name="filename-format"></a>Formato del nome di file
 
@@ -68,13 +66,12 @@ I tre componenti di questo schema sono:
 
 Ad esempio, se la versione dell'APK è 21 e il nome del pacchetto è `mono.samples.helloworld`, il file di espansione principale sarà denominato **main.21.mono.samples.helloworld**.
 
-<a name="Download_Process" />
 
 ## <a name="download-process"></a>Processo di download
 
 Quando un'applicazione viene installata da Google Play, i file di espansione devono essere scaricati e salvati insieme all'APK. In alcuni casi ciò potrebbe non verificarsi o può succedere che i file di espansione vengano eliminati. Per gestire questa condizione, un'app deve verificare se i file di espansione esistono e quindi eseguirne il download, se necessario. Il diagramma di flusso seguente mostra il flusso di lavoro consigliato per questo processo:
 
-[ ![Diagramma di flusso dell'espansione dell'APK](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png)
+[![Diagramma di flusso dell'espansione dell'APK](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png#lightbox)
 
 All'avvio, un'applicazione deve controllare se i file di espansione appropriati esistono nel dispositivo corrente. Se non sono disponibili, l'applicazione deve effettuare una richiesta dal [servizio di licenza per le applicazioni](http://developer.android.com/google/play/licensing/index.html) di Google Play. Questo controllo viene eseguito tramite la *libreria LVL (License Verification Library)* e deve essere eseguito sia per le applicazioni gratuite che per quelle con licenza. La libreria LVL viene usata principalmente dalle applicazioni a pagamento per applicare restrizioni di licenza. Tuttavia, Google ha esteso la libreria LVL in modo che possa essere usata anche con le librerie di espansione. Anche le applicazioni gratuite devono eseguire il controllo LVL, ma possono ignorare le restrizioni di licenza. La richiesta LVL deve fornire le informazioni seguenti relative ai file di espansione richieste dall'applicazione: 
 
@@ -92,7 +89,6 @@ Dopo aver eseguito il controllo LVL, l'applicazione deve scaricare i file di esp
 -  Gli errori che si verificano durante il download devono essere gestiti in modo regolare e ripristinabili.
 
 
-<a name="Architectural_Overview" />
 
 ## <a name="architectural-overview"></a>Panoramica dell'architettura
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: bc89450a5c9a00ab9f088ca9fff345ebbf7b6c4c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d7a458a0a0c2da1dbb40ae7222fcd35cf7172953
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Hello, iOS: approfondimenti
 
@@ -102,7 +102,7 @@ Prima che un'applicazione iOS possa caricare un'interfaccia utente, è necessari
 
 Questa sezione studia le relazioni illustrate nel diagramma seguente:
 
-[ ![](hello-ios-deepdive-images/image32.png "In questo diagramma sono illustrate le relazioni dei concetti fondamentali dell'architettura e delle app")](hello-ios-deepdive-images/image32.png)
+[![](hello-ios-deepdive-images/image32.png "In questo diagramma sono illustrate le relazioni dei concetti fondamentali dell'architettura e delle app")](hello-ios-deepdive-images/image32.png#lightbox)
 
 La trattazione inizia dalle operazioni che vengono eseguite all'avvio dell'applicazione.
 
@@ -197,7 +197,7 @@ La _visualizzazione_ può essere selezionata facendo clic all'interno della part
 
 A sinistra della scena si trova una freccia grigia con l'icona della bandierina, come illustrato nello screenshot seguente:
 
- [ ![](hello-ios-deepdive-images/image37.png "Freccia grigia con l'icona della bandierina")](hello-ios-deepdive-images/image37.png)
+ [![](hello-ios-deepdive-images/image37.png "Freccia grigia con l'icona della bandierina")](hello-ios-deepdive-images/image37.png#lightbox)
 
 La freccia grigia rappresenta una transizione dello Storyboard denominata *Segue*. Poiché questa transizione non ha origine, viene detta *Sourceless Segue*(Segue senza origine). Un Sourceless Segue punta alla prima scena le cui visualizzazioni vengono caricate nella finestra dell'applicazione all'avvio di quest'ultima. Tale scena e le visualizzazioni all'interno di questa sono i primi elementi che l'utente vede quando l'applicazione viene caricata.
 
@@ -243,7 +243,7 @@ La prossima sezione analizza la gerarchia di visualizzazione del contenuto rappr
 
 Una _gerarchia di visualizzazione del contenuto_ è una serie di visualizzazioni e visualizzazioni secondarie disposte in pila e gestite da un unico controller di visualizzazione, come illustrato nel diagramma riportato di seguito:
 
- [![](hello-ios-deepdive-images/image41.png "Gerarchia di visualizzazione del contenuto")](hello-ios-deepdive-images/image41.png)
+ [![](hello-ios-deepdive-images/image41.png "Gerarchia di visualizzazione del contenuto")](hello-ios-deepdive-images/image41.png#lightbox)
 
 È possibile facilitare la visualizzazione della gerarchia di visualizzazione del contenuto di `ViewController` modificando temporaneamente in giallo il colore di sfondo della visualizzazione radice nella sezione di visualizzazione del **riquadro delle proprietà**, come illustrato nello screenshot seguente:
 
@@ -259,7 +259,7 @@ Una _gerarchia di visualizzazione del contenuto_ è una serie di visualizzazioni
 
 Il diagramma seguente illustra le relazioni tra la finestra, le visualizzazioni, le visualizzazioni secondarie e il controller di visualizzazione che visualizzano l'interfaccia utente sullo schermo del dispositivo:
 
- [ ![](hello-ios-deepdive-images/image43.png "Relazioni tra la finestra, le visualizzazioni, le visualizzazioni secondarie e il controller di visualizzazione")](hello-ios-deepdive-images/image43.png)
+ [![](hello-ios-deepdive-images/image43.png "Relazioni tra la finestra, le visualizzazioni, le visualizzazioni secondarie e il controller di visualizzazione")](hello-ios-deepdive-images/image43.png#lightbox)
 
 La prossima sezione illustra come usare le visualizzazioni nel codice e come creare un programma per l'interazione utente usando i controller di visualizzazione e il ciclo di vita della visualizzazione.
 
@@ -331,7 +331,7 @@ Il ruolo più importante del controller di visualizzazione è rispondere all'int
 Ora che si è acquisita una comprensione più approfondita delle visualizzazioni e dei controller di visualizzazione, è possibile esaminarne il funzionamento.
 Nel progetto `Phoneword_iOS`, è stato aggiunto il pulsante `TranslateButton` alla gerarchia di visualizzazione del contenuto:
 
- [ ![](hello-ios-deepdive-images/image1.png "È stato aggiunto il pulsante TranslateButton alla gerarchia di visualizzazione del contenuto")](hello-ios-deepdive-images/image1.png)
+ [![](hello-ios-deepdive-images/image1.png "È stato aggiunto il pulsante TranslateButton alla gerarchia di visualizzazione del contenuto")](hello-ios-deepdive-images/image1.png#lightbox)
 
 Quando viene assegnato un **Nome** al controllo **Pulsante** nel **riquadro delle proprietà**, iOS Designer ne esegue automaticamente il mapping a un controllo in  **ViewController.designer.cs**, rendendo disponibile il pulsante `TranslateButton` all'interno della classe `ViewController`. I controlli diventano disponibili a partire dalla fase `ViewDidLoad` del ciclo di vita della visualizzazione. Per rispondere al tocco dell'utente viene quindi usato questo metodo del ciclo di vita:
 
@@ -432,7 +432,7 @@ Dopo il provisioning del dispositivo, per usare il dispositivo stesso come desti
 
 L'app verrà distribuita nel dispositivo iOS:
 
-[![](hello-ios-deepdive-images/image1.png "L'app verrà distribuita nel dispositivo iOS ed eseguita")](hello-ios-deepdive-images/image1.png)
+[![](hello-ios-deepdive-images/image1.png "L'app verrà distribuita nel dispositivo iOS ed eseguita")](hello-ios-deepdive-images/image1.png#lightbox)
 
 ### <a name="generate-custom-icons-and-launch-images"></a>Generare icone e immagini di avvio personalizzate
 

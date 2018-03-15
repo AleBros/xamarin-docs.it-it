@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: e19949c3a2efa4a5ddb17393d58c4430662254eb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2ee98b48feb8bc1e3431d796a7ca07a6c2e74790
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-store-distribution"></a>Distribuzione tramite l'App Store
 
@@ -48,13 +48,13 @@ Indipendentemente da come si prevede di rilasciare un'applicazione Xamarin.iOS, 
 3. Fare clic sul pulsante **+** per creare un nuovo certificato.
 4. Nell'intestazione *Production* (Produzione) selezionare **App Store and Ad Hoc** (App Store e ad hoc):
 
-    [ ![](images/createcertmanually01.png "Selezionare App Store and Ad Hoc (App Store e ad hoc)")](images/createcertmanually01.png)
+    [![](images/createcertmanually01.png "Selezionare App Store and Ad Hoc (App Store e ad hoc)")](images/createcertmanually01.png#lightbox)
 5. Fare clic su **Continue** (Continua) e seguire le istruzioni per creare una richiesta di firma del certificato tramite l'accesso keychain:
 
-    [ ![](images/createcertmanually02.png "Creare una richiesta di firma del certificato tramite l'accesso keychain")](images/createcertmanually02.png)
+    [![](images/createcertmanually02.png "Creare una richiesta di firma del certificato tramite l'accesso keychain")](images/createcertmanually02.png#lightbox)
 6. Dopo avere creato la richiesta di firma del certificato in base alle istruzioni, fare clic su **Continue** (Continua) e caricarla in Member Center:
 
-    [ ![](images/createcertmanually03.png "Caricare la richiesta di firma del certificato in Member Center")](images/createcertmanually03.png)
+    [![](images/createcertmanually03.png "Caricare la richiesta di firma del certificato in Member Center")](images/createcertmanually03.png#lightbox)
 
 7. Fare clic su **Generate** (Genera) per creare il certificato.
 8. **Scaricare** infine il certificato completato e fare doppio clic sul file per installarlo.
@@ -62,11 +62,11 @@ Indipendentemente da come si prevede di rilasciare un'applicazione Xamarin.iOS, 
 
 In alternativa, è possibile richiedere un certificato tramite la finestra di dialogo Preferences (Preferenze) in Xcode. A tale scopo, seguire questa procedura:
 
-1.   Selezionare il team e fare clic su **Manage Certificates…** (Gestisci certificati): [ ![](images/selectteam.png "Selezionare il team e visualizzare i dettagli")](images/selectteam.png)
+1.   Selezionare il team e fare clic su **Manage Certificates…** (Gestisci certificati): [![](images/selectteam.png "Selezionare il team e visualizzare i dettagli")](images/selectteam.png#lightbox)
 
-2.   Fare quindi clic sul pulsante **Create** (Crea) accanto a **iOS Distribution Certificate** (Certificato di distribuzione iOS): [ ![](images/selectcert.png "Creare un certificato di distribuzione iOS")](images/selectcert.png)
+2.   Fare quindi clic sul pulsante **Create** (Crea) accanto a **iOS Distribution Certificate** (Certificato di distribuzione iOS): [![](images/selectcert.png "Creare un certificato di distribuzione iOS")](images/selectcert.png#lightbox)
 
-3.   A seconda dei privilegi del team, verrà generata l'identità di firma, come illustrato sotto, o potrebbe essere necessario attendere l'approvazione di un agente o dell'amministratore del team: [ ![](images/generated.png "L'identità di firma verrà generata e verrà visualizzata una finestra di dialogo")](images/generated.png)
+3.   A seconda dei privilegi del team, verrà generata l'identità di firma, come illustrato sotto, o potrebbe essere necessario attendere l'approvazione di un agente o dell'amministratore del team: [![](images/generated.png "L'identità di firma verrà generata e verrà visualizzata una finestra di dialogo")](images/generated.png#lightbox)
 
 
 <a name="creatingprofile" />
@@ -95,27 +95,27 @@ Quando i componenti necessari per la creazione di un profilo di distribuzione so
 
 1. Tornare al portale di provisioning Apple e selezionare **Provisioning** > **Distribution** (Distribuzione):
 
-    [ ![](images/distribute01.png "Selezionare Provisioning > Distribution (Distribuzione)")](images/distribute01.png)
+    [![](images/distribute01.png "Selezionare Provisioning > Distribution (Distribuzione)")](images/distribute01.png#lightbox)
 
 2. Fare clic sul pulsante **+** e selezionare il tipo di profilo di distribuzione che si vuole creare come **App Store**:
 
-    [ ![](images/distribute02.png "Creare un profilo di distribuzione tramite App Store")](images/distribute02.png)
+    [![](images/distribute02.png "Creare un profilo di distribuzione tramite App Store")](images/distribute02.png#lightbox)
 
 3. Fare clic sul pulsante **Continue** (Continua) e selezionare un ID app nell'elenco a discesa per il quale si vuole creare un profilo di distribuzione:
 
-    [ ![](images/distribute03.png "Selezionare un ID app dall'elenco a discesa")](images/distribute03.png)
+    [![](images/distribute03.png "Selezionare un ID app dall'elenco a discesa")](images/distribute03.png#lightbox)
 
 4. Fare clic sul pulsante **Continue** (Continua) e selezionare il certificato necessario per firmare l'applicazione:
 
-    [ ![](images/distribute04.png "Selezionare il certificato necessario per firmare l'applicazione")](images/distribute04.png)
+    [![](images/distribute04.png "Selezionare il certificato necessario per firmare l'applicazione")](images/distribute04.png#lightbox)
 
 5. Fare clic sul pulsante **Continue** (Continua) e selezionare i dispositivi iOS in cui sarà consentito eseguire l'applicazione Xamarin.iOS:
 
-    [ ![](images/distribute05.png "Selezionare i dispositivi iOS in cui sarà consentito eseguire l'app")](images/distribute05.png)
+    [![](images/distribute05.png "Selezionare i dispositivi iOS in cui sarà consentito eseguire l'app")](images/distribute05.png#lightbox)
 
 6. Fare clic sul pulsante **Continue** (Continua) e immettere un **nome** per il nuovo profilo di distribuzione:
 
-    [ ![](images/distribute06.png "Immettere un nome per il nuovo profilo di distribuzione")](images/distribute06.png)
+    [![](images/distribute06.png "Immettere un nome per il nuovo profilo di distribuzione")](images/distribute06.png#lightbox)
 
 7. Fare clic sul pulsante **Generate** (Genera) per creare il nuovo profilo e finalizzare il processo.
 

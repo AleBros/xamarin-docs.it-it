@@ -3,16 +3,16 @@ title: Provisioning manuale
 description: Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo nello sviluppo iOS consiste nell'eseguire il provisioning del dispositivo iOS. In questa guida vengono illustrati la richiesta di certificati e profili di sviluppo, l'uso dei servizi app e la distribuzione di un'app nel dispositivo.
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
+ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/15/2017
-ms.openlocfilehash: 46d2f9f9f1a22ef13e994c91255f0fb29c52ca5d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2ad3bd55ae0abc44b0c9757bd79c2711eddf171d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="manual-provisioning"></a>Provisioning manuale
 
@@ -38,37 +38,37 @@ Per generare un'identità di firma, eseguire le operazioni seguenti:
 
 1. Accedere alla [sezione Certificates, Identifiers, and Profiles section (Certificati, identificatori e profili) del portale per sviluppatori](https://developer.apple.com/account/overview.action) e selezionare la sezione **Certificates** (Certificati) nella colonna **iOS Apps** (App iOS). Toccare **+** per creare un nuovo certificato:
 
-    [ ![](manual-provisioning-images/cert-plus.png "Fare clic su + per creare un nuovo certificato")](manual-provisioning-images/cert-plus.png)
+    [![](manual-provisioning-images/cert-plus.png "Fare clic su + per creare un nuovo certificato")](manual-provisioning-images/cert-plus.png#lightbox)
 
 2. Selezionare l'opzione **iOS App Development** (Sviluppo di app iOS) per il tipo di certificato e fare clic su **Continue** (Continua). Questa schermata potrebbe essere diversa a seconda dei privilegi dell'account:
 
-    [ ![](manual-provisioning-images/cert-first.png "Selezionare l'opzione per lo sviluppo di app iOS per il tipo di certificato")](manual-provisioning-images/cert-first.png)
+    [![](manual-provisioning-images/cert-first.png "Selezionare l'opzione per lo sviluppo di app iOS per il tipo di certificato")](manual-provisioning-images/cert-first.png#lightbox)
 
 3. Richiedere una richiesta di firma del certificato, che verrà caricata per generare manualmente un certificato. A tale scopo, avviare **Keychain Access** (Accesso portachiavi) su un computer Mac. Passare al menu principale e selezionare **Certificate Assistant** (Assistente certificato) e **Request a Certificate from a Certificate Authority...** (Richiedi un certificato da un'autorità di certificazione), come illustrato di seguito:
 
-      [ ![](manual-provisioning-images/key-first.png "Richiedere una richiesta di firma del certificato")](manual-provisioning-images/key-first.png)
+      [![](manual-provisioning-images/key-first.png "Richiedere una richiesta di firma del certificato")](manual-provisioning-images/key-first.png#lightbox)
 
 4. Immettere le informazioni e selezionare l'opzione che consente di **salvare su disco**:
 
-    [ ![](manual-provisioning-images/key-second.png "Immettere le informazioni")](manual-provisioning-images/key-second.png)
+    [![](manual-provisioning-images/key-second.png "Immettere le informazioni")](manual-provisioning-images/key-second.png#lightbox)
 
 5. Salvare la richiesta di firma del certificato in una posizione in cui possa essere facilmente trovata:
 
-    [ ![](manual-provisioning-images/cert-third.png "Salvare la richiesta di firma del certificato")](manual-provisioning-images/cert-third.png)
+    [![](manual-provisioning-images/cert-third.png "Salvare la richiesta di firma del certificato")](manual-provisioning-images/cert-third.png#lightbox)
 
 6. Tornare al portale di provisioning, caricare il certificato nel portale e inviarlo:
 
-    [ ![](manual-provisioning-images/cert-second.png "Caricare il certificato nel portale")](manual-provisioning-images/cert-second.png)
+    [![](manual-provisioning-images/cert-second.png "Caricare il certificato nel portale")](manual-provisioning-images/cert-second.png#lightbox)
 
     Se non si possiedono i privilegi amministrativi, il certificato deve essere approvato da un amministratore o agente del team.
 
 7. Dopo che il certificato è stato approvato, scaricarlo dal portale di provisioning:
 
-    [ ![](manual-provisioning-images/status-dev.png "Scaricare il certificato dal portale di provisioning")](manual-provisioning-images/status-dev.png)
+    [![](manual-provisioning-images/status-dev.png "Scaricare il certificato dal portale di provisioning")](manual-provisioning-images/status-dev.png#lightbox)
 
 8. Fare doppio clic sul certificato scaricato per avviare Keychain Access (Accesso portachiavi) e aprire il pannello **My Certificates** (I miei certificati), nel quale sono visualizzati i nuovi certificati e le chiavi private associate:
 
-    [ ![](manual-provisioning-images/keychain.png "Certificato in Keychain Access (Accesso portachiavi)")](manual-provisioning-images/keychain.png)
+    [![](manual-provisioning-images/keychain.png "Certificato nell'accesso keychain")](manual-provisioning-images/keychain.png#lightbox)
 
 <a name="keypairs" />
 
@@ -103,34 +103,34 @@ Quando si crea un profilo di provisioning per lo sviluppo, è necessario indicar
 2. Connettere il dispositivo per il quale eseguire il provisioning al compuer Mac con il cavo USB in dotazione.
 2. Dal menu **Windows** (Finestre) selezionare **Devices** (Dispositivi):
 
-  [ ![](manual-provisioning-images/add01.png "Dal menu Windows (Finestre) selezionare Devices (Dispositivi)")](manual-provisioning-images/add01.png)
+  [![](manual-provisioning-images/add01.png "Dal menu Windows (Finestre) selezionare Devices (Dispositivi)")](manual-provisioning-images/add01.png#lightbox)
 
 3. Selezionare il dispositivo iOS necessario dall'elenco **DEVICES** (DISPOSITIVI) sul lato sinistro della finestra Devices (Dispositivi).
 4. Evidenziare la stringa **Identifier** (Identificatore) e copiarla negli appunti:
 
-  [ ![](manual-provisioning-images/add02.png "Evidenziare la stringa dell'identificatore")](manual-provisioning-images/add02.png)
+  [![](manual-provisioning-images/add02.png "Evidenziare la stringa dell'identificatore")](manual-provisioning-images/add02.png#lightbox)
 
 5. In Safari, individuare [Apple Developer Center](https://developer.apple.com/membercenter/index.action) ed eseguire l'accesso.
 6. Fare clic sul collegamento **Certificates, Identifiers & Profiles** (Certificati, identificatori e profili):
 
-  [ ![](manual-provisioning-images/add03.png "Fare clic sul collegamento Certificates, Identifiers  Profiles (Certificati, identificatori e profili)")](manual-provisioning-images/add03.png)
+  [![](manual-provisioning-images/add03.png "Fare clic sul collegamento Certificates, Identifiers and Profiles (Certificati, identificatori e profili)")](manual-provisioning-images/add03.png#lightbox)
 
 7. Fare clic sul collegamento **Devices** (Dispositivi):
 
-  [ ![](manual-provisioning-images/add04.png "Fare clic sul collegamento Devices (Dispositivi)")](manual-provisioning-images/add04.png)
+  [![](manual-provisioning-images/add04.png "Fare clic sul collegamento Devices (Dispositivi)")](manual-provisioning-images/add04.png#lightbox)
 
 8. Fare clic sul pulsante **+**:
 
-  [ ![](manual-provisioning-images/add05.png "Fare clic sul pulsante+")](manual-provisioning-images/add05.png)
+  [![](manual-provisioning-images/add05.png "Fare clic sul pulsante +")](manual-provisioning-images/add05.png#lightbox)
 
 9. Specificare un nome per il nuovo dispositivo e incollare l'**identificatore** del dispositivo copiato in precedenza nel campo **UUID**:
 
-  [ ![](manual-provisioning-images/add06.png "Specificare un nome per il nuovo dispositivo e l'identificatore del dispositivo")](manual-provisioning-images/add06.png)
+  [![](manual-provisioning-images/add06.png "Specificare un nome per il nuovo dispositivo e l'identificatore del dispositivo")](manual-provisioning-images/add06.png#lightbox)
 
 10. Fare clic sul pulsante **Continue** (Continua).
 11. Esaminare infine le informazioni e fare clic sul pulsante **Register** (Registra):
 
-  [ ![](manual-provisioning-images/add07.png "Esaminare le informazioni")](manual-provisioning-images/add07.png)
+  [![](manual-provisioning-images/add07.png "Esaminare le informazioni")](manual-provisioning-images/add07.png#lightbox)
 
 Ripetere i passaggi precedenti per tutti i dispositivi iOS che verranno usati per testare o eseguire il debug di un'applicazione Xamarin.iOS.
 
@@ -150,10 +150,10 @@ Prima di creare un profilo di provisioning, è necessario creare un *App ID* (ID
 1. Nel [portale per sviluppatori](https://developer.apple.com/account/overview.action) passare alla sezione *Certificate, Identifiers and Profiles* (Certificati, identificatori e profili) di Apple Developer Center. Selezionare **App IDs** (ID app) in **Identifiers** (Identificatori).
 2. Fare clic sul pulsante **+** e specificare un **Name** (Nome):
 
-    [ ![](manual-provisioning-images/appid05a.png "Specificare un nome")](manual-provisioning-images/appid05a.png)
+    [![](manual-provisioning-images/appid05a.png "Specificare un nome")](manual-provisioning-images/appid05a.png#lightbox)
 3. Il prefisso app deve essere preimpostato. Selezionare **Wildcard App ID** (ID app con caratteri jolly) per il suffisso app. Immettere un ID bundle nel formato `com.[DomainName].*`:
 
-  [ ![](manual-provisioning-images/appid05b.png "Immettere un ID bundle")](manual-provisioning-images/appid05b.png)
+  [![](manual-provisioning-images/appid05b.png "Immettere un ID bundle")](manual-provisioning-images/appid05b.png#lightbox)
 
 3. Fare clic sul pulsante **Continue** (Continua) e seguire le istruzioni visualizzate sullo schermo per creare il nuovo ID app.
 
@@ -167,25 +167,25 @@ Per creare manualmente un profilo di provisioning per lo sviluppo, procedere com
 2. Fare clic sul pulsante **+** nell'angolo in alto a destra per creare un nuovo profilo.
 3. Nella sezione **Development** (Sviluppo), selezionare il pulsante di opzione accanto a **iOS App Development** (Sviluppo di app iOs) e premere **Continue** (Continua):
 
-    [ ![](manual-provisioning-images/provisioning-profile01.png "Selezionare il tipo di profilo da creare")](manual-provisioning-images/provisioning-profile01.png)
+    [![](manual-provisioning-images/provisioning-profile01.png "Selezionare il tipo di profilo da creare")](manual-provisioning-images/provisioning-profile01.png#lightbox)
 4. Selezionare l'ID app da usare nel menu a discesa:
 
-    [ ![](manual-provisioning-images/provisioning-profile02.png "Selezionare l'ID app da usare")](manual-provisioning-images/provisioning-profile02.png)
+    [![](manual-provisioning-images/provisioning-profile02.png "Selezionare l'ID app da usare")](manual-provisioning-images/provisioning-profile02.png#lightbox)
 5. Selezionare uno o più certificati da includere nel profilo di provisioning e premere **Continue** (Continua):
 
-    [ ![](manual-provisioning-images/provisioning-profile03.png "Selezionare i certificati da includere nel profilo di provisioning")](manual-provisioning-images/provisioning-profile03.png)
+    [![](manual-provisioning-images/provisioning-profile03.png "Selezionare i certificati da includere nel profilo di provisioning")](manual-provisioning-images/provisioning-profile03.png#lightbox)
 6. Selezionare tutti i dispositivi sui quali verrà installata l'app.
 
-    [ ![](manual-provisioning-images/provisioning-profile04.png "Selezionare tutti i dispositivi sui quali verrà installata l'app")](manual-provisioning-images/provisioning-profile04.png)
+    [![](manual-provisioning-images/provisioning-profile04.png "Selezionare tutti i dispositivi nei quali verrà installata l'app")](manual-provisioning-images/provisioning-profile04.png#lightbox)
 7. Assegnare al profilo di provisioning un nome identificabile e premere **Continue** (Continua) per creare il profilo:
 
-    [ ![](manual-provisioning-images/provisioning-profile05.png "Assegnare al profilo di provisioning un nome identificabile")](manual-provisioning-images/provisioning-profile05.png)
+    [![](manual-provisioning-images/provisioning-profile05.png "Assegnare al profilo di provisioning un nome identificabile")](manual-provisioning-images/provisioning-profile05.png#lightbox)
 8. Premere **Download** (Scarica) per scaricare il profilo di provisioning in un computer Mac:
 
-    [ ![](manual-provisioning-images/provisioning-profile06.png "Scaricare il profilo di provisioning")](manual-provisioning-images/provisioning-profile06.png)
+    [![](manual-provisioning-images/provisioning-profile06.png "Scaricare il profilo di provisioning")](manual-provisioning-images/provisioning-profile06.png#lightbox)
 9. Fare doppio clic sul file per installare il profilo di provisioning in Xcode. Si noti che Xcode potrebbe non visualizzare tracce visive che indicano l'installazione del profilo, tranne che per l'apertura. È possibile verificarlo passando a **Xcode > Preferenze > Account**. Selezionare il proprio ID Apple e fare clic su **Visualizza dettagli**. Il nuovo profilo di provisioning viene elencato come illustrato di seguito:
 
-      [ ![](manual-provisioning-images/provisioning-profile07.png "Visualizzazione del profilo in Xcode")](manual-provisioning-images/provisioning-profile07.png)
+      [![](manual-provisioning-images/provisioning-profile07.png "Visualizzazione del profilo in Xcode")](manual-provisioning-images/provisioning-profile07.png#lightbox)
 
 Dopo che è stato creato correttamente il profilo di provisioning, potrebbe essere necessario aggiornare Xcode in modo che tutti i certificati di sviluppo siano disponibili per Visual Studio per Mac e Visual Studio.
 
@@ -199,7 +199,7 @@ I certificati e i profili di provisioning che sono stati creati nel portale Appl
 2.   Avviare Xcode.
 3.   Scegliere **Menu Xcode > Preferenze**
 4.   Fare clic sulla scheda **Account**.
-5.   Selezionare un team e fare clic sul pulsante **Download Manual Profiles** (Scarica profili manuali): [ ![](manual-provisioning-images/selectteam1.png "Download di profili manuali")](manual-provisioning-images/selectteam1.png)
+5.   Selezionare un team e fare clic sul pulsante **Download Manual Profiles** (Scarica profili manuali): [![](manual-provisioning-images/selectteam1.png "Download di profili manuali")](manual-provisioning-images/selectteam1.png#lightbox)
 
 6.   Uscire da Xcode.
 7.  Avviare Visual Studio per Mac o Visual Studio.
