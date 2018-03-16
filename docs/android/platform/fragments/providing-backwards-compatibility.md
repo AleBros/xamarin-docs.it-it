@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/12/2017
-ms.openlocfilehash: 670ec465843bbe819b41a53fff71b01ab78b0059
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f09aae1445cfcf9f4225af3de37b65ebb5a1b6b2
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Fornisce la compatibilità con il pacchetto di supporto Android
 
@@ -25,13 +25,13 @@ L'utilità dei frammenti sarà limitato con le versioni precedenti senza la comp
 
 Il pacchetto di supporto Android non viene aggiunto automaticamente a un'applicazione di xamarin. Xamarin offre il [pacchetto NuGet di libreria di supporto Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) per semplificare l'aggiunta di raccolte di supporto per un'applicazione di xamarin. Per includere i pacchetti di supporto del xamarin applicazione includono il [libreria di supporto Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) componente nel progetto xamarin, come illustrato nella schermata seguente: 
 
-[![Pacchetto di schermata della libreria di supporto Android v4 da aggiungere al progetto](providing-backwards-compatibility-images/02.png)](providing-backwards-compatibility-images/02.png#lightbox)
+[![Pacchetto di schermata della libreria di supporto Android v4 da aggiungere al progetto](providing-backwards-compatibility-images/02-sml.png)](providing-backwards-compatibility-images/02.png#lightbox)
 
 Questi passaggi sono stati eseguiti, diventa possibile utilizzare frammenti nelle versioni precedenti di Android. Le API di frammento funzionerà ora la stessa in queste versioni precedenti, con le eccezioni seguenti: 
 
 -   **Modificare la versione minima di Android** &ndash; l'applicazione non richiede più la destinazione Android 3.0 o versione successiva, come illustrato di seguito: 
 
-    [![Schermata di minimo Android destinazione viene impostata nella proprietà dell'applicazione](providing-backwards-compatibility-images/03.png)](providing-backwards-compatibility-images/03.png#lightbox)
+    [![Schermata di minimo Android destinazione viene impostata nel manifesto Android](providing-backwards-compatibility-images/03-sml.png)](providing-backwards-compatibility-images/03.png#lightbox)
 
 -   **Estendere FragmentActivity** &ndash; l'attività che ospitano frammenti ora deve ereditare da `Android.Support.V4.App.FragmentActivity` e non da `Android.App.Activity` . 
 

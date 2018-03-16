@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/22/2017
-ms.openlocfilehash: 9b801af77eceaf94b0ede98b6af51d55d6029fe6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ddc16dc1faaf623098aad5bca340c15f943223ba
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Programma di installazione di Xamarin Player in tempo reale
 
@@ -68,7 +68,7 @@ Xamarin Player in tempo reale, è necessario:
 
   Se nessuna periferica viene abbinata, verrà visualizzato un codice a matrice con istruzioni su come per l'associazione di un dispositivo:
 
-    ![Coppia di una finestra del dispositivo](install-images/manage-empty-windows.png)
+  ![Coppia di una finestra del dispositivo](install-images/manage-empty-windows.png)
 
   Se non è possibile contattare il dispositivo per l'associazione, potrebbe verificarsi un errore.
 
@@ -111,11 +111,11 @@ Xamarin Player in tempo reale, è necessario:
 
   Se non è associato alcun dispositivo, verrà visualizzato un codice a matrice con istruzioni su come associare un dispositivo:
 
-    ![Coppia di una finestra del dispositivo](install-images/manage-empty.png)
+  ![Coppia di una finestra del dispositivo](install-images/manage-empty.png)
 
   Se il dispositivo non può essere contattato per l'associazione, verrà visualizzato un errore:
 
-    ![Impossibile connettersi al messaggio di errore dispositivo](install-images/error-cannot-connect.png)
+  ![Impossibile connettersi al messaggio di errore dispositivo](install-images/error-cannot-connect.png)
 
 
 -----

@@ -8,20 +8,20 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c4b2a103821bb18da4878cd37335faa899e910be
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ee79c79d7b3226f23851a3157e5a609d7cfc4cf4
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="working-with-user-defaults"></a>Utilizzo di impostazioni predefinite dell'utente
 
-_In questo articolo viene descritto l'utilizzo con NSUserDefault per salvare le impostazioni predefinite in un iOS Xamarin App o un'estensione._
+_In questo articolo viene descritto l'utilizzo con NSUserDefault per salvare le impostazioni predefinite in un'App Xamarin.iOS o un'estensione._
 
 
-La `NSUserDefaults` classe fornisce un modo per iOS App e le estensioni per interagire a livello di codice con il sistema predefinito a livello di sistema. Tramite il sistema per impostazione predefinita, l'utente può configurare il comportamento di un'app o gli stili per soddisfare le proprie preferenze (in base alla struttura dell'app). Ad esempio, per presentare i dati in Visual Studio metrica misurazioni imperiale o selezionare un tema dell'interfaccia utente specificato.
+Il `NSUserDefaults` classe fornisce un modo per iOS App e le estensioni per l'interazione a livello di codice con il sistema di impostazioni predefinite a livello di sistema. Tramite il sistema per impostazione predefinita, l'utente può configurare il comportamento di un'app o gli stili per soddisfare le proprie preferenze (in base alla struttura dell'app). Ad esempio, per presentare i dati in Visual Studio metrica misurazioni imperiale o selezionare un tema dell'interfaccia utente specificato.
 
-Quando utilizzare gruppi di App, `NSUserDefaults` fornisce inoltre un modo per la comunicazione tra le App (o estensioni) all'interno di un gruppo specifico.
+Se usato con i gruppi di App, `NSUserDefaults` fornisce inoltre un modo per le comunicazioni tra le App (o le estensioni) all'interno di un determinato gruppo.
 
 <a name="About-User-Defaults" />
 
@@ -32,7 +32,7 @@ Come descritto in precedenza, impostazioni predefinite dell'utente (`NSUserDefau
 Quando si esegue prima l'app, `NSUserDefaults` legge le chiavi e valori da Database di impostazioni predefinite dell'applicazione utente e li memorizza nella cache in memoria per evitare di apertura e la lettura del database ogni volta che è necessario specificare un valore. 
 
 > [!IMPORTANT]
-> **Nota**: Apple non è più consigliabile che lo sviluppatore di chiamare il `Synchronize` metodo per la sincronizzazione direttamente nella cache in memoria con il database. Al contrario, verrà automaticamente chiamato a intervalli regolari per mantenere sincronizzati con un database dell'utente predefinite nella cache in memoria.
+> **Nota**: Apple non consiglia non è più la chiamata di sviluppatore di `Synchronize` metodo per la sincronizzazione direttamente la cache in memoria con il database. Al contrario, verrà automaticamente chiamato a intervalli regolari per mantenere sincronizzati con un database dell'utente predefinite nella cache in memoria.
 
 La `NSUserDefaults` classe contiene vari metodi pratici per leggere e scrivere i valori delle preferenze per i tipi di dati comuni, ad esempio: string, integer, float, boolean e URL. Altri tipi di dati possono essere archiviati usando `NSData`, quindi leggere o scrivere al Database per impostazione predefinita. Per ulteriori informazioni, vedere Apple [preferenze e impostazioni di Guida per programmatori](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i).
 
@@ -46,7 +46,7 @@ L'istanza di impostazioni predefinite condiviso utente fornisce l'accesso per le
 - Dominio identificatore Bundle dell'app.
 - Un `NSGlobalDomain` costituito le impostazioni predefinite condivise da tutte le app.
 - Un dominio distinto per ognuna delle lingue preferite dell'utente.
-- Un `NSRegistationDomain` con un set di impostazioni predefinite temporanei che possono essere modificate dall'app per verificare le ricerche sono sempre esito positivo.
+- Un `NSRegistrationDomain` con un set di impostazioni predefinite temporanei che possono essere modificate dall'app per verificare le ricerche sono sempre esito positivo.
 
 Per accedere all'istanza del valore predefinito è condiviso utente, utilizzare il codice seguente:
 
@@ -59,11 +59,11 @@ var plist = NSUserDefaults.StandardUserDefaults;
 
 ## <a name="accessing-an-app-group-nsuserdefaults-instance"></a>Accesso a un'istanza di gruppo App NSUserDefaults
 
-Come descritto in precedenza, tramite i gruppi di App, `NSUserDefaults` può essere utilizzato per la comunicazione tra le App (o estensioni) all'interno di un gruppo specifico. In primo luogo, è necessario verificare che il gruppo dell'applicazione e l'ID dell'App necessarie siano state configurate correttamente nel **certificati, profili & identificatori** sezione [iOS Dev Center](https://developer.apple.com/devcenter/ios/) e sono stati installati Nell'ambiente di sviluppo.
+Come descritto in precedenza, tramite i gruppi di App, `NSUserDefaults` può essere utilizzato per la comunicazione tra le App (o estensioni) all'interno di un gruppo specifico. In primo luogo, è necessario assicurarsi che il gruppo dell'applicazione e gli ID dell'App necessarie sono stati configurati correttamente nel **certificati, profili & identificatori** sezione [iOS Dev Center](https://developer.apple.com/devcenter/ios/) e sono stati installati Nell'ambiente di sviluppo.
 
-Successivamente, i progetti di App e/o estensione dovrà essere uno degli ID App valido creato in precedenza, che il `Entitlements.plist` file contiene i gruppi di App abilitata ed è specificato e che ottengano del inclusi nel Bundle di App.
+Successivamente, i progetti di App e/o estensione necessario disporre di uno degli ID App valido creato in precedenza e il `Entitlements.plist` file deve essere incluso nel Bundle di App con i gruppi di App abilitata ed è specificato.
 
-Con questa operazione sul posto, le impostazioni predefinite dell'utente gruppo App condivise è possibile accedere tramite il codice seguente:
+Con questo all posto, condiviso App gruppo utente impostazioni predefinite del è possibile accedere tramite il codice seguente:
 
 ```csharp
 // Get App Group User Defaults

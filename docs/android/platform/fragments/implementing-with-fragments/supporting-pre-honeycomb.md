@@ -6,38 +6,33 @@ ms.assetid: DACD0C14-5DDF-7BDE-6844-80550D301307
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 242adc94f04b3bda40238370ca924c1807a0c787
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: 109c1e0f16d3a288160b64ec6ff833e5b31c4efd
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="supporting-pre-honeycomb-android-using-support-packages"></a>Supporto pre-Nido d'API Android tramite pacchetti di supporto
 
 Il *pacchetto di supporto Android* è costituito da librerie che porta indietro tra la nuova API &ndash; , ad esempio frammenti &ndash; alle versioni precedenti di Android. Aggiungendo il pacchetto di supporto Android, è possibile eseguire l'applicazione nei dispositivi Android 2.3, come illustrato da schermate riportate di seguito:
 
-![Schermata della procedura dettagliata frammenti](supporting-pre-honeycomb-images/00.png)
-
-![Schermata dei dettagli attività](supporting-pre-honeycomb-images/01.png)
-
+[![Procedura dettagliata e dettagli attività schermate di frammenti](supporting-pre-honeycomb-images/01-sml.png)](supporting-pre-honeycomb-images/01.png#lightbox)
 
 ## <a name="adding-the-support-package"></a>Aggiunta del pacchetto di supporto
 
 Il pacchetto di supporto Android non viene aggiunto automaticamente a un'applicazione di xamarin. Xamarin offre il [pacchetto NuGet di libreria di supporto Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) per semplificare l'aggiunta di raccolte di supporto per un'applicazione di xamarin.
 Per includere i pacchetti di supporto del xamarin applicazione includono il [libreria di supporto Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) componente nel progetto xamarin, come illustrato nella schermata seguente:
 
-![Aggiunta del pacchetto di libreria di supporto Android v4](supporting-pre-honeycomb-images/02.png)
+[![Aggiunta del pacchetto di libreria di supporto Android v4](supporting-pre-honeycomb-images/02-sml.png)](supporting-pre-honeycomb-images/02.png#lightbox)
 
 Dopo aver aggiunto il pacchetto, modificare il framework di destinazione per Android 2.2 o versione successiva:
 
-![Schermata di modifica del livello di API di Framework di destinazione](supporting-pre-honeycomb-images/03.png)
+[![Schermata di modifica del livello di API di Framework di destinazione](supporting-pre-honeycomb-images/03-sml.png)](supporting-pre-honeycomb-images/03.png#lightbox)
 
 Inoltre, assicurarsi che la versione minima di Android è destinato lo stesso livello di API:
 
-![Schermata di impostazione della versione minima di Android](supporting-pre-honeycomb-images/04.png)
-
-
+[![Schermata di impostazione della versione minima di Android](supporting-pre-honeycomb-images/04-sml.png)](supporting-pre-honeycomb-images/04.png#lightbox)
 
 ### <a name="change-mainactivity-to-derive-from-fragmentactivity"></a>Modificare MainActivity da cui derivare FragmentActivity
 

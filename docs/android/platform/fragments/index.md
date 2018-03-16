@@ -7,12 +7,12 @@ ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 8595ecb63e49a4768120e98f41826b74c2dd43e4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: 0a9a1f41810fe113ac3d88d2533411ac537840ab
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="fragments"></a>Frammenti
 
@@ -53,9 +53,9 @@ I frammenti sono disponibili nel SDK Android a partire da livello API 11 (Androi
 
 [![Selezionare il livello di API di Android SDK Manager](images/02.png)](images/02.png#lightbox)
 
-I frammenti sono disponibili in xamarin 4.0 e versioni successive. Un'applicazione di xamarin destinazione deve essere almeno il livello di API 11 (Android 3.0) o versione successiva per poter utilizzare i frammenti. Il Framework di destinazione può essere impostato nelle opzioni del progetto, come illustrato di seguito:
+I frammenti sono disponibili in xamarin 4.0 e versioni successive. Un'applicazione di xamarin destinazione deve essere almeno il livello di API 11 (Android 3.0) o versione successiva per poter utilizzare i frammenti. Il Framework di destinazione può essere impostato nel progetto di proprietà come illustrato di seguito:
 
-[![Impostazione del livello di API di Framework di destinazione nelle opzioni di progetto](images/03.png)](images/03.png#lightbox)
+[![Impostazione del livello di API di Framework di destinazione nelle opzioni di progetto](images/03-sml.png)](images/03.png#lightbox)
 
 È possibile utilizzare frammenti nelle versioni precedenti di Android utilizzando il pacchetto di supporto Android e xamarin 4.2 o versioni successive. Come eseguire questa operazione viene illustrata più dettagliatamente nei documenti di questa sezione.
 

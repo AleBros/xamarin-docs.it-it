@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 8bebc24ee62d7b5a6f2b9df6e33b6f2b9dbe2431
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c5cca8e6fceb9aef82fc6543adc6dc5e7399d839
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="user-interface"></a>Interfaccia utente
 
@@ -37,6 +37,10 @@ Questo documento è un riferimento rapido alle viste dell'interfaccia utente che
 ## <a name="datapagesdatapagesindexmd"></a>[DataPages](datapages/index.md)
 
 DataPages forniscono un'API per rapidamente e facilmente associare un'origine dati per le visualizzazioni predefinite. Gli elementi dell'elenco e pagine dettagli verranno automaticamente eseguito il rendering dei dati e personalizzare tramite i temi.
+
+## <a name="datepickerdatepickermd"></a>[DatePicker](datepicker.md)
+
+Il `DatePicker` consente a un utente di selezionare una data in un intervallo specificato. Viene implementato mediante il selettore di date supportato dal particolare piattaforma in cui il programma viene eseguito in.
 
 ## <a name="graphicsgraphicsindexmd"></a>[Grafica](graphics/index.md)
 

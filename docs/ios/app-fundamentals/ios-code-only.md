@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b50c4bbef1510b739c4f7da7d732a4f4c66f13f3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d53dea1a46c6b42f901beb217eb00b3a3fa0fd92
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>Creazione di interfacce utente iOS nel codice
 
@@ -69,7 +69,7 @@ Il modello di progetto vuoto aggiunge 4 file al progetto:
 ## <a name="ios-templates"></a>Modelli di iOS
 
 
-Visual Studio per Mac non fornisce un modello vuoto. Tutti i modelli forniti con il supporto dello Storyboard, Apple consiglia come la modalità principale per creare un'interfaccia utente. Tuttavia, è possibile creare l'interfaccia utente nella completamente nel codice. 
+Visual Studio per Mac non fornisce un modello vuoto. Tutti i modelli forniti con il supporto dello Storyboard, Apple consiglia come la modalità principale per creare un'interfaccia utente. Tuttavia, è possibile creare l'interfaccia utente completamente nel codice. 
 
 I passaggi seguenti consentono di eseguire la rimozione dello Storyboard da un'applicazione: 
 
@@ -316,7 +316,7 @@ Nell'esempio precedente, è iniziato a creare un'interfaccia utente nel codice t
 
 interfacce utente iOS sono costituite da una gerarchia di visualizzazione. Visualizzazioni aggiuntive, ad esempio etichette, i pulsanti, i dispositivi di scorrimento e così via vengono aggiunti come sottoviste di alcuni visualizzazione padre.
 
-Ad esempio, modifica per il `CustomViewController` per creare una schermata di accesso in cui l'utente può immettere un nome utente e password. La schermata sarà costituito da due campi di testo e un pulsante.
+Ad esempio, si modifica il `CustomViewController` per creare una schermata di accesso in cui l'utente può immettere un nome utente e una password. La schermata sarà costituito da due campi di testo e un pulsante.
 
 ### <a name="adding-the-text-fields"></a>Aggiunta di campi di testo
 
@@ -433,7 +433,7 @@ View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 
 ## <a name="adding-button-functionality"></a>Aggiunta di funzionalità di pulsante
 
-Quando un pulsante, agli utenti previsti di un intervento se il problema, un avviso o passare a un'altra schermata. 
+Quando viene scelto un pulsante, gli utenti previsti di un intervento. Ad esempio, viene visualizzato un avviso o spostamento viene eseguito a un'altra schermata. 
 
 Aggiungere codice per inserire un secondo controller di visualizzazione nello stack di navigazione.
 
@@ -497,7 +497,7 @@ Oltre a utilizzare i controlli che fanno parte di UIKit, visualizzazioni persona
 
 ### <a name="inheriting-from-uiview"></a>Eredita da UIView
 
-La prima cosa da fare è creare una classe per la visualizzazione personalizzata. Faremo questa utilizzando il **classe** modello in Visual Studio per aggiungere una classe vuota denominata `CircleView`. La classe di base deve essere impostata su `UIView`, che viene richiamato nel `UIKit` dello spazio dei nomi. È necessario anche il `System.Drawing` anche lo spazio dei nomi. Diversi altri `System.*` gli spazi dei nomi non potrà più essere utilizzato in questo esempio, pertanto è possibile rimuoverli.
+La prima cosa da fare è creare una classe per la visualizzazione personalizzata. Faremo questa utilizzando il **classe** modello in Visual Studio per aggiungere una classe vuota denominata `CircleView`. La classe di base deve essere impostata su `UIView`, che si richiama il `UIKit` dello spazio dei nomi. È necessario anche il `System.Drawing` anche lo spazio dei nomi. Diversi altri `System.*` gli spazi dei nomi non potrà più essere utilizzato in questo esempio, pertanto è possibile rimuoverli.
 
 La classe dovrebbe essere simile al seguente:
 
