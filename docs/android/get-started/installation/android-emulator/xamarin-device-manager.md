@@ -7,12 +7,12 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 447657d6f8509623272f37c48c7aecbdfd4cbaad
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/13/2018
+ms.openlocfilehash: c38a0a7f6897cd90f81c92348280539b33524b9c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xamarin-android-device-manager"></a>Gestione dispositivi di Xamarin Android
 
@@ -458,7 +458,7 @@ Le proprietà del profilo hardware (ad esempio `hw.ramSize` e `hw.accelerometer`
 
 La tabella seguente spiega in dettaglio le proprietà elencate nelle schermate **New Device** (Nuovo dispositivo) e **Device Editor** (Editor dispositivi):
 
-[!include[](~/android/includes/table.html)]
+[!include[](~/android/includes/emulator-properties.md)]
 
 Per altre informazioni su queste proprietà, vedere [Hardware Profile Properties](https://developer.android.com/studio/run/managing-avds.html#hpproperties) (Proprietà del profilo hardware).
 
