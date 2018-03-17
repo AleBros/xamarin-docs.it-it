@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: 2c48ae5386fda63aed43c24c09c10cfb87b93637
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e231043b1c4b0fa7ba72f2a371545036ffb21164
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -147,40 +147,12 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 
 Di seguito sono le differenze tra i tipi di database:
 
-<table cellpadding="1" cellspacing="1" border="1" width="100%">
-<thead>
-<tr>
-<td></td>
-<td>Database Public</td>
-<td>Database privato</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Tipo di dati</td>
-<td>Dati condivisi</td>
-<td>Dati dell'utente corrente</td>
-</tr>
-
-<tr>
-<td>Quota</td>
-<td>Presi in considerazione in Quota dello sviluppatore</td>
-<td>Considerare per la Quota dell'utente</td>
-</tr>
-
-<tr>
-<td>Autorizzazioni predefinite</td>
-<td>World leggibile</td>
-<td>Utente leggibile</td>
-</tr>
-
-<tr>
-<td>Modifica delle autorizzazioni</td>
-<td>iCloud Dashboard ruoli tramite un livello di classe di record</td>
-<td>N/D</td>
-</tr>
-</tbody>
-</table>
+||Database Public|Database privato|
+|---|--- |--- |
+|**Tipo di dati**|Dati condivisi|Dati dell'utente corrente|
+|**Quota**|Presi in considerazione in Quota dello sviluppatore|Considerare per la Quota dell'utente|
+|**Autorizzazioni predefinite**|World leggibile|Utente leggibile|
+|**Modifica delle autorizzazioni**|iCloud Dashboard ruoli tramite un livello di classe di record|N/D|
 
 ### <a name="records"></a>Record
 

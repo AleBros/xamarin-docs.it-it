@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 39c699b10280218223b6f6022d419f77aba875dc
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 34b51f784b549caa0dda2eeda066bb39dfc13020
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="multitasking-for-ipad"></a>Multitasking per iPad
 
@@ -260,7 +260,7 @@ In questo articolo è illustrati i passaggi necessari per garantire che un'app x
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempi di iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
-- [Multitasking (esempio)](http://developer.xamarin.comhttps://developer.xamarin.com/samples/monotouch/ios9/MultiTask/)
+- [Multitasking (esempio)](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/)
 - [Introduzione agli storyboard unificato](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [iOS 9 per gli sviluppatori](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

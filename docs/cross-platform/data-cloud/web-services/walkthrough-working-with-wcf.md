@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: b076c7a71d81a474ca80ac32771d5512c21c167c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b4705bc9c8fdb1a671c7de2453ea088bf2afe424
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>Procedura dettagliata: utilizzo di WCF
 
@@ -394,37 +394,12 @@ Il proxy del servizio WCF può essere utilizzato da un'applicazione di xamarin. 
 1. Nel `HelloWorld.iOS` del progetto, aggiungere un riferimento al `HelloWorldServiceProxy` progetto e un riferimento di `System.ServiceModel` dello spazio dei nomi.
 1. In **Esplora**, fare doppio clic su `Main.storyboard` per aprire il file nella finestra di progettazione iOS. Aggiungere il seguente `UIButton` e `UITextView` controlli:
 
-    <table>
-        <thead>
-            <tr>
-                <td></td>
-                <td>nome</td>
-                <td>Titolo</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><code>UIButton</code></td>
-                <td><code>sayHelloWorldButton</code></td>
-                <td>Ad esempio "Hello, World"</td>
-            </tr>
-            <tr>
-                <td><code>UITextView</code></td>
-                <td><code>sayHelloWorldText</code></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><code>UIButton</code></td>
-                <td><code>getHelloWorldDataButton</code></td>
-                <td>"Hello, World" di ottenere dati</td>
-            </tr>
-            <tr>
-                <td><code>UITextView</code></td>
-                <td><code>getHelloWorldDataText</code></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+    ||nome|Titolo|
+    |--- |--- |--- |
+    |`UIButton`|`sayHelloWorldButton`|Ad esempio "Hello, World"|
+    |`UITextView`|`sayHelloWorldText`||
+    |`UIButton`|`getHelloWorldDataButton`|"Hello, World" di ottenere dati|
+    |`UITextView`|`getHelloWorldDataText`||
 
     Dopo aver aggiunto i controlli, l'interfaccia utente dovrebbe essere simile a nella schermata seguente:
 

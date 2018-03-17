@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: f6d19f0f6573b17dfb3feb6bf131686413d4e68f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 047f7d7497a114bf4b7c94e50bdf09862b882794
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="objective-c-support"></a>Supporto di Objective-C
 
@@ -201,13 +201,11 @@ A causa di `NSDate` fanno riferimento a data, tutte le conversioni tra questo e 
 
 Durante la conversione da `DateTime` a `NSDate` il valore DateTime `Kind` proprietà viene preso in considerazione.
 
-<table>
-<tr><th> Kind         </th><th> Risultati                                                                                            </th></tr>
-<!--tr><td> ------------ </td><td> -------------------------------------------------------------------------------------------------- </td></tr-->
-<tr><td> Ora UTC          </td><td> La conversione viene eseguita utilizzando l'oggetto DateTime fornito come.                                  </td></tr>
-<tr><td> Locale        </td><td> Il risultato della chiamata `ToUniversalTime ()` in DateTime fornito l'oggetto viene utilizzato per la conversione. </td></tr>
-<tr><td> Non specificato  </td><td> Si presuppone che l'oggetto DateTime fornito sia UTC, in modo analogo a tipo = = Utc.                </td></tr>
-</table>
+|Kind|Risultati                                                                                            |
+|---|---|
+|Ora UTC|La conversione viene eseguita utilizzando l'oggetto fornito `DateTime` dell'oggetto come.|
+|Locale|Il risultato della chiamata al metodo `ToUniversalTime()` nell'oggetto fornito `DateTime` oggetto viene utilizzato per la conversione.|
+|Non specificato|L'oggetto fornito `DateTime` oggetto presuppone che sia un'ora UTC, in modo analogo a tipo = = (UTC).|
 
 La conversione viene eseguita utilizzando la formula seguente:
 

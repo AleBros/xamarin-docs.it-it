@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 36c793e7a9b7b30bcb0cdf2c7959fd2df36c8775
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: fd6aa66a7e5e788babc0df3e94b8f3677a7625f0
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="working-with-the-file-system"></a>Utilizzo di File System
 
@@ -238,78 +238,14 @@ Queste directory e le relative funzioni sono elencati di seguito:
 
 &nbsp;
 
-<table>
-  <tbody>
-    <tr>
-      <td>
-Directory </td>
-      <td>
-Descrizione </td>
-    </tr>
-    <tr>
-      <td>
-        <p>[ApplicationName].app/</p>
-      </td>
-      <td>
-        <p><b>In iOS 7 e versioni precedenti</b> si tratta di <code>ApplicationBundle</code> directory in cui è archiviato nel file eseguibile dell'applicazione. La struttura di directory creati nell'applicazione esiste in questa directory (ad esempio, immagini e altri tipi di file contrassegnati come risorse di Visual Studio per il progetto Mac).</p>
-        <p>Se si desidera accedere ai file di contenuto all'interno del pacchetto di applicazione, il percorso di questa directory è disponibile tramite il <code>NSBundle.MainBundle.BundlePath</code> proprietà.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Documenti /</p>
-      </td>
-      <td>
-        <p>Utilizzare questa directory per archiviare i documenti degli utenti e i file di dati dell'applicazione.</p>
-        <p>Il contenuto di questa directory può essere offerti all'utente tramite file iTunes condivisione (anche se è disabilitato per impostazione predefinita). Aggiungere un <code>UIFileSharingEnabled</code> booleano chiave per il file Info. plist per consentire agli utenti di accedere a tali file.</p>
-        <p>Anche se un'applicazione non attiva immediatamente la condivisione di file, è consigliabile evitare di inserire i file che devono essere nascosto agli utenti in questa directory (ad esempio i file di database, a meno che non si desidera condividerli). Finché i file riservati rimangono nascosti, questi file verranno non esposti (e potenzialmente spostati, modificati o eliminati da iTunes) se è attivata la condivisione file in una versione futura.</p>
-        <p>È possibile utilizzare il <code>Environment.GetFolderPath
-(Environment.SpecialFolder.MyDocuments)</code> metodo per ottenere il percorso della directory documenti per l'applicazione.</p>
-        <p>Il contenuto di questa directory viene eseguito il backup da iTunes.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Libreria /</p>
-      </td>
-      <td>
-        <p>La directory di libreria è un ottimo strumento per archiviare i file che non vengono creati direttamente dall'utente, ad esempio database o altri file generati dall'applicazione.
-Il contenuto di questa directory non è mai esposte all'utente tramite iTunes.</p>
-        <p>È possibile creare la propria sottodirectory nella libreria. Tuttavia, sono già presenti alcune creato dal sistema Directory qui che occorre conoscere, tra cui le preferenze e memorizza nella cache.</p>
-        <p>Il contenuto della directory (ad eccezione della sottodirectory della cache) viene eseguito il backup da iTunes. Directory personalizzate creati nella raccolta verranno sottoposti a backup.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Preferenze/libreria /</p>
-      </td>
-      <td>
-        <p>In questa directory vengono archiviati i file di preferenze specifiche dell'applicazione. Non creare direttamente i file. Utilizzare invece la <code>NSUserDefaults</code> classe.</p>
-        <p>Il contenuto di questa directory viene eseguito il backup da iTunes.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Libreria/cache /</p>
-      </td>
-      <td>
-        <p>La directory cache è un ottimo strumento per archiviare i file di dati che consentono l'applicazione eseguita, ma che può essere ricreata facilmente se necessario. L'applicazione deve creare e questi file eliminati in base alle esigenze ed essere in grado di ricreare questi file, se necessario. iOS 5 può inoltre eliminare questi file (in situazioni di memoria estremamente bassa), ma non verrà eseguita questa operazione mentre è in esecuzione l'applicazione.</p>
-        <p>Il contenuto di questa directory non sottoposti a backup da iTunes, ovvero che non sarà presente se si ripristina un dispositivo e potrebbe non essere presente dopo avere installata una versione aggiornata dell'applicazione.</p>
-        <p>Ad esempio, nel caso in cui l'applicazione non è possibile connettersi alla rete, è possibile utilizzare la directory cache per archiviare i file di dati o per fornire un'esperienza ottimale offline. L'applicazione è possibile salvare e recuperare rapidamente i dati durante l'attesa di risposte di rete, ma non è necessario eseguire il backup e può facilmente essere recuperato o ricreato dopo l'aggiornamento di una versione o il ripristino.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>tmp/</p>
-      </td>
-      <td>
-        <p>Le applicazioni possono archiviare i file temporanei che sono necessari solo per un breve periodo in questa directory. Per risparmiare spazio, i file devono essere eliminati quando non sono più necessari. Quando un'applicazione non è in esecuzione, il sistema operativo può inoltre eliminare file da questa directory.</p>
-        <p>Il contenuto di questa directory non viene eseguito il backup da iTunes.</p>
-        <p>Ad esempio, la directory di tmp potrebbe essere utilizzata per archiviare i file temporanei che vengono scaricati da visualizzare all'utente (ad esempio Twitter avatar o allegati di posta elettronica), ma che può essere eliminato dopo che è stati visualizzati (e scaricati di nuovo se sono necessarie in futuro ).</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+|Directory|Descrizione|
+|---|---|
+|[ApplicationName].app/|**In iOS 7 e versioni precedenti** si tratta di `ApplicationBundle` directory in cui è archiviato nel file eseguibile dell'applicazione. La struttura di directory creati nell'applicazione esiste in questa directory (ad esempio, immagini e altri tipi di file contrassegnati come risorse di Visual Studio per il progetto Mac).<br /><br />Se si desidera accedere ai file di contenuto all'interno del pacchetto di applicazione, il percorso di questa directory è disponibile tramite il `NSBundle.MainBundle.BundlePath` proprietà.|
+|Documenti /|Utilizzare questa directory per archiviare i documenti degli utenti e i file di dati dell'applicazione.<br /><br />Il contenuto di questa directory può essere offerti all'utente tramite file iTunes condivisione (anche se è disabilitato per impostazione predefinita). Aggiungere un `UIFileSharingEnabled` booleano chiave per il file Info. plist per consentire agli utenti di accedere a tali file.<br /><br />Anche se un'applicazione non attiva immediatamente la condivisione di file, è consigliabile evitare di inserire i file che devono essere nascosto agli utenti in questa directory (ad esempio i file di database, a meno che non si desidera condividerli). Finché i file riservati rimangono nascosti, questi file verranno non esposti (e potenzialmente spostati, modificati o eliminati da iTunes) se è attivata la condivisione file in una versione futura.<br /><br /> È possibile utilizzare il `Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)` metodo per ottenere il percorso della directory documenti per l'applicazione.<br /><br />Il contenuto di questa directory viene eseguito il backup da iTunes.|
+|Libreria /|La directory di libreria è un ottimo strumento per archiviare i file che non vengono creati direttamente dall'utente, ad esempio database o altri file generati dall'applicazione. Il contenuto di questa directory non è mai esposte all'utente tramite iTunes.<br /><br />È possibile creare la propria sottodirectory nella libreria. Tuttavia, sono già presenti alcune creato dal sistema Directory qui che occorre conoscere, tra cui le preferenze e memorizza nella cache.<br /><br />Il contenuto della directory (ad eccezione della sottodirectory della cache) viene eseguito il backup da iTunes. Directory personalizzate creati nella raccolta verranno sottoposti a backup.|
+|Preferenze/libreria /|In questa directory vengono archiviati i file di preferenze specifiche dell'applicazione. Non creare direttamente i file. Utilizzare invece la `NSUserDefaults` classe.<br /><br />Il contenuto di questa directory viene eseguito il backup da iTunes.|
+|Libreria/cache /|La directory cache è un ottimo strumento per archiviare i file di dati che consentono l'applicazione eseguita, ma che può essere ricreata facilmente se necessario. L'applicazione deve creare e questi file eliminati in base alle esigenze ed essere in grado di ricreare questi file, se necessario. iOS 5 può inoltre eliminare questi file (in situazioni di memoria estremamente bassa), ma non verrà eseguita questa operazione mentre è in esecuzione l'applicazione.<br /><br />Il contenuto di questa directory non sottoposti a backup da iTunes, ovvero che non sarà presente se si ripristina un dispositivo e potrebbe non essere presente dopo avere installata una versione aggiornata dell'applicazione.<br /><br />Ad esempio, nel caso in cui l'applicazione non è possibile connettersi alla rete, è possibile utilizzare la directory cache per archiviare i file di dati o per fornire un'esperienza ottimale offline. L'applicazione è possibile salvare e recuperare rapidamente i dati durante l'attesa di risposte di rete, ma non è necessario eseguire il backup e può facilmente essere recuperato o ricreato dopo l'aggiornamento di una versione o il ripristino.|
+|tmp/|Le applicazioni possono archiviare i file temporanei che sono necessari solo per un breve periodo in questa directory. Per risparmiare spazio, i file devono essere eliminati quando non sono più necessari. Quando un'applicazione non è in esecuzione, il sistema operativo può inoltre eliminare file da questa directory.<br /><br />Il contenuto di questa directory non viene eseguito il backup da iTunes.<br /><br />Ad esempio, la directory di tmp potrebbe essere utilizzata per archiviare i file temporanei che vengono scaricati da visualizzare all'utente (ad esempio Twitter avatar o allegati di posta elettronica), ma che può essere eliminato dopo che è stati visualizzati (e scaricati di nuovo se sono necessarie in futuro ).|
 
 Questa schermata mostra la struttura di directory in una finestra di ricerca:
 

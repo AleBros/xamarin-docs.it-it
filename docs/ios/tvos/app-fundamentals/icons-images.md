@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d1052695bb7337a18d1a2f1f7015e9079f86f6f5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3e3d1663e07b16721d1aa7253e7d0150a609718e
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="working-with-icons-and-images"></a>Utilizzo di immagini e icone
 
@@ -40,17 +40,9 @@ L'immagine di avvio viene visualizzato rapidamente e fornisce l'impressione che 
 
 Le immagini di avvio non sono un'opportunità per gli annunci o espressione artistico, esistono solo per dare l'impressione che l'app consente di avviare rapidamente ed è pronto a utilizzare.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Immagine di avvio</b></td>
-</tr>
-<tr>
-    <td><b>Dimensione</b></td>
-    <td>1920px x 1080px
-
-    Non-layered `.png` files only</td>
-</tr>
-</table>
+|Dimensioni dell'immagine di avvio|Note|
+|---|---|
+|1920x1080px|Solo i file con estensione PNG a più livelli non|
 
 Apple rende i suggerimenti seguenti per la progettazione di immagine di avvio dell'app:
 
@@ -146,39 +138,15 @@ L'app Xamarin.tvOS richiederà non solo un'icona di App per la schermata Home Ap
 
 Ogni app è necessario specificare sia una piccola e una versione ingrandita della relativa icona di App. Nella schermata Home Apple TV verrà utilizzato l'icona di piccole dimensioni quando l'app viene installata. Dall'App Store viene utilizzata la versione di grandi dimensioni. Icona di grandi dimensioni App deve simulare l'aspetto della versione dell'icona piccola.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Icona di piccole dimensioni</b></td>
-    <td colspan="2"><b>Icone grandi</b></td>
-</tr>
-<tr>
-    <td><b>Dimensioni effettive</b></td>
-    <td>400px x 240px</td>
-    <td><b>Dimensione</b></td>
-    <td>1280px x 768px</td>
-</tr>
-<tr>
-    <td><b>L'area di sicurezza dimensioni</b></td>
-    <td>370px x 222px</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td><b>Dimensioni con stato non attivo</b></td>
-    <td>300px x 180px</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td><b>Dimensione con lo stato attivo</b></td>
-    <td>370px x 222px</td>
-    <td></td>
-    <td></td>
-</tr>
-</table>
+|Icona di piccole dimensioni||Icone grandi||
+|---|---|---|---|
+|Dimensioni effettive|400x240px|Dimensione|1280x768px|
+|L'area di sicurezza dimensioni|370x222px|||
+|Dimensioni con stato non attivo|300x180px|||
+|Dimensione con lo stato attivo|370x222px|||
 
 > [!IMPORTANT]
-> **Nota:** le icone dell'App deve essere fornite come **immagini a più livelli**. Vedere il [immagine a più livelli](#Layered-Images) precedente sezione per ulteriori dettagli.
+> Le icone di App deve essere fornite come **immagini a più livelli**. Vedere il [immagine a più livelli](#Layered-Images) precedente sezione per ulteriori dettagli.
 
 
 
@@ -227,17 +195,9 @@ Se l'utente ha effettuato l'app Xamarin.tvOS sulla riga superiore nella schermat
 
 È possibile specificare l'immagine di scaffale superiore come singolo statico `.png` o `.lsr` file (vedere [creazione di immagini a più livelli](#Creating-Layered-Images)) o può essere creato dinamicamente in fase di esecuzione come una singola riga di elementi con stato attivabile (vedere [ Contenuto dinamico scaffale superiore](#Dynamic-Top-Shelf-Content) sotto).
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Immagine di scaffale superiore</b></td>
-</tr>
-<tr>
-    <td><b>Dimensione</b></td>
-    <td>1920px x 720px
-
-    Static `.png` or layered `.lsr` file</td>
-</tr>
-</table>
+|Dimensioni dell'immagine scaffale superiore|Note|
+|---|---|
+|1920x720px|File PNG statico o file .lsr su più livelli|
 
 Apple fornisce i seguenti suggerimenti per la creazione di immagini scaffale superiore:
 
@@ -279,38 +239,12 @@ Il contenuto viene visualizzato un elenco a scorrimento singolo e orizzontale de
 
 Sono necessarie le seguenti dimensioni del contenuto:
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>&nbsp;</b></td>
-    <td><b>Poster (2:3)</b></td>
-    <td><b>Square (1:1)</b></td>
-    <td><b>HDTV (16:9)</b></td>
-</tr>
-<tr>
-    <td><b>Dimensioni effettive</b></td>
-    <td>404px x 608px</td>
-    <td>608px x 608px</td>
-    <td>908px x 512px</td>
-</tr>
-<tr>
-    <td><b>L'area di sicurezza dimensioni</b></td>
-    <td>380px x 570px</td>
-    <td>570px x 570px</td>
-    <td>852px x 479px</td>
-</tr>
-<tr>
-    <td><b>Dimensioni con stato non attivo</b></td>
-    <td>333px x 500px</td>
-    <td>500px x 500px</td>
-    <td>782px x 440px</td>
-</tr>
-<tr>
-    <td><b>Dimensione con lo stato attivo</b></td>
-    <td>380px x 570px</td>
-    <td>570px x 570px</td>
-    <td>852px x 479px</td>
-</tr>
-</table>
+||Poster (2:3)|Square (1:1)|HDTV (16:9)|
+|---|---|---|---|
+|Dimensioni effettive|404x608px|608x608px|908x512px|
+|L'area di sicurezza dimensioni|380x570px|570x570px|852x479px|
+|Dimensioni con stato non attivo|333x500px|500x500px|782x440px|
+|Dimensione con lo stato attivo|380x570px|570x570px|852x479px|
 
 Apple fornisce i seguenti suggerimenti per la riga sezionato contenuto:
 
@@ -325,27 +259,14 @@ Facoltativamente, l'app Xamarin.tvOS può presentare il contenuto in scaffale su
 
 Oltre a scorrimento automatico, l'utente può assumere il controllo di testo e scorrere in entrambe le direzioni utilizzando remoto Siri. Apportare una piccola, movimento circolare in remoto Siri quando lo stato attivo un banner verrà attivato l'effetto di parallasse per tale intestazione.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Immagine del banner (grandi dimensioni)</b></td>
-</tr>
-<tr>
-    <td><b>Dimensioni effettive</b></td>
-    <td>1940px x 624px</td>
-</tr>
-<tr>
-    <td><b>L'area di sicurezza dimensioni</b></td>
-    <td>1740px x 620px</td>
-</tr>
-<tr>
-    <td><b>Dimensioni con stato non attivo</b></td>
-    <td>1740px x 560px</td>
-</tr>
-<tr>
-    <td><b>Dimensione con lo stato attivo</b></td>
-    <td>1740px x 620px</td>
-</tr>
-</table>
+**Immagine del banner (grandi dimensioni)**
+
+|   |   |
+|---|---|
+|Dimensioni effettive|1940x624px|
+|L'area di sicurezza dimensioni|1740x620px|
+|Dimensioni con stato non attivo|1740x560px|
+|Dimensione con lo stato attivo|1740x620px|
 
 Banner di margine di scorrimento possono essere fornite come statico `.png` o a più livelli `.lsr` file.
 
@@ -366,44 +287,13 @@ Se l'app Xamarin.tvOS è un gioco e di aver inserito il supporto Game Center, so
 - **Disegno dashboard** -può essere un'immagine facoltativa, a condizione che verrà visualizzato nella parte superiore del dashboard dell'app Game Center. Queste immagini sono non attivabili.
 - **Classifica grafica** -è necessario fornire tra uno (1) a tre (3) le immagini proporzioni 16:9 per ogni classifica che supporta l'applicazione. Queste possono essere statici `.png` o a più livelli `.lsr` file. Il disegno classifica è con stato attivabile.
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>&nbsp;</b></td>
-    <td><b>Icone di successo</b></td>
-    <td><b>Disegno di dashboard</b></td>
-    <td><b>Classifica grafica</b></td>
-</tr>
-<tr>
-    <td><b>Dimensione visibile</b></td>
-    <td>200px x 200px</td>
-    <td>923px x 150px</td>
-    <td>N/D</td>
-</tr>
-<tr>
-    <td><b>Dimensioni effettive</b></td>
-    <td>320px x 320px</td>
-    <td>N/D</td>
-    <td>659px x 371px</td>
-</tr>
-<tr>
-    <td><b>L'area di sicurezza dimensioni</b></td>
-    <td>N/D</td>
-    <td>N/D</td>
-    <td>618px x 348px</td>
-</tr>
-<tr>
-    <td><b>Dimensioni con stato non attivo</b></td>
-    <td>N/D</td>
-    <td>N/D</td>
-    <td>548px x 309px</td>
-</tr>
-<tr>
-    <td><b>Dimensione con lo stato attivo</b></td>
-    <td>N/D</td>
-    <td>N/D</td>
-    <td>618px x 348px</td>
-</tr>
-</table>
+||Icone di successo|Disegno di dashboard|Classifica grafica|
+|---|---|---|---|
+|Dimensione visibile|200x200px|923x150px|N/D|
+|Dimensioni effettive|320x320px|N/D|659x371px|
+|L'area di sicurezza dimensioni|N/D|N/D|618x348px|
+|Dimensioni con stato non attivo|N/D|N/D|548x309px|
+|Dimensione con lo stato attivo|N/D|N/D|618x348px|
 
 Per ulteriori informazioni sull'utilizzo di Game Center, vedere Apple [Guida per programmatori Game Center](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html).
 

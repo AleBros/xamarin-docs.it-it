@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 8d23211e28cb1b1dae13d67e32462888c66ff065
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ff754a690627e7e2f0a5cd39dd669a4c9ddd47fb
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>Utilizzo di Jenkins con Xamarin
 
@@ -343,40 +343,14 @@ Firma e il file APK zipaligning sono tecnicamente due operazioni distinte esegui
 
 Entrambi questi comandi richiedono parametri della riga di comando che possono variare da progetto a progetto. Inoltre, alcuni di questi parametri della riga di comando sono le password che non devono essere visualizzati nell'output della console quando la compilazione è in esecuzione. Alcuni di questi parametri della riga di comando, viene verrà memorizzato in variabili di ambiente. Le variabili di ambiente necessarie per la firma e/o zip di allineamento sono descritti nella tabella seguente:
 
-<table>
-    <thead>
-        <tr>
-            <td>Variabile di ambiente</td>
-            <td>Descrizione</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>KEYSTORE_FILE</td>
-            <td>Questo è il percorso dell'archivio chiavi per firmare il file APK</td>
-        </tr>
-        <tr>
-            <td>KEYSTORE_ALIAS</td>
-            <td>La chiave nell'archivio che verrà utilizzato per firmare il file APK.</td>
-        </tr>
-        <tr>
-            <td>INPUT_APK</td>
-            <td>Il file APK creato da `xbuild`.</td>
-        </tr>
-        <tr>
-            <td>SIGNED_APK</td>
-            <td>Il file APK firmato prodotti da `jarsigner`.</td>
-        </tr>
-        <tr>
-            <td>FINAL_APK</td>
-            <td>Questo è il file zip allineato APK prodotto da `zipalign`.</td>
-        </tr>
-        <tr>
-            <td>STORE_PASS</td>
-            <td>Si tratta della password utilizzata per accedere al contenuto di keystore per singing il file.</td>
-        </tr>
-    </tbody>
-</table>
+|Variabile di ambiente|Descrizione|
+|--- |--- |
+|KEYSTORE_FILE|Questo è il percorso dell'archivio chiavi per firmare il file APK|
+|KEYSTORE_ALIAS|La chiave nell'archivio che verrà utilizzato per firmare il file APK.|
+|INPUT_APK|Il file APK creato da `xbuild`.|
+|SIGNED_APK|Il file APK firmato prodotti da `jarsigner`.|
+|FINAL_APK|Questo è il file zip allineato APK prodotto da `zipalign`.|
+|STORE_PASS|Si tratta della password utilizzata per accedere al contenuto di keystore per singing il file.|
 
 Come descritto nella sezione requisiti, è possono impostare queste variabili di ambiente durante la compilazione usando il plug-in EnvInject. Il processo è necessario definire una nuova compilazione passaggio aggiunto in base alle variabili di ambiente di inserimento, come illustrato nella schermata successiva:
 

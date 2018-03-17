@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: f0e8dabc47352213d18d079ee9f8abb3e557b868
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 8674a8b846573c27e54660ae3bc065e07561f411
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="binding-objective-c-libraries"></a>Associazione di raccolte Objective-C
 
@@ -1021,155 +1021,31 @@ Questa sezione descrive la modalità di mapping dei tipi Objective-C ai tipi c#.
 
 Nella tabella seguente viene illustrato come è necessario eseguire il mapping tipi dal Objective-C e world CocoaTouch all'ambiente di xamarin:
 
-<table border="1" cellpadding="1" cellspacing="1" width="80%">
-      <caption> Mapping dei tipi </caption>
-      <tbody>
-        <tr>
-          <td>
-Nome del tipo Objective-C </td>
-          <td>
-Tipo di Unified API xamarin </td>
-        </tr>
-        <tr>
-          <td>
-BOOL, GLboolean </td>
-          <td>
-bool </td>
-        </tr>
-        <tr>
-          <td>
-NSInteger </td>
-          <td>
-nint </td>
-        </tr>
-        <tr>
-          <td>
-NSUInteger </td>
-          <td>
-nuint </td>
-        </tr>
-        <tr>
-          <td>
-CFTimeInterval / NSTimeInterval </td>
-          <td>
-double </td>
-        </tr>
-        <tr>
-          <td>
-NSString (<a href="~/ios/internals/api-design/nsstring.md">altre informazioni sul binding NSString</a>) </td>
-          <td>
-stringa </td>
-        </tr>
-        <tr>
-          <td>
-Char * </td>
-          <td>
-            <a href="~/cross-platform/macios/binding/binding-types-reference.md#plainstring"> [PlainString] </a> stringa </td>
-        </tr>
-        <tr>
-          <td>
-CGRect </td>
-          <td>
-CGRect </td>
-        </tr>
-        <tr>
-          <td>
-CGPoint </td>
-          <td>
-CGPoint </td>
-        </tr>
-        <tr>
-          <td>
-CGSize </td>
-          <td>
-CGSize </td>
-        </tr>
-        <tr>
-          <td>
-CGFloat, GLfloat </td>
-          <td>
-nfloat </td>
-        </tr>
-        <tr>
-          <td>
-Tipi di CoreFoundation (CF *) </td>
-          <td>
-CoreFoundation.CF* </td>
-        </tr>
-        <tr>
-          <td>
-Riflesso </td>
-          <td>
-nint </td>
-        </tr>
-        <tr>
-          <td>
-GLfloat </td>
-          <td>
-nfloat </td>
-        </tr>
-        <tr>
-          <td>
-Tipi di base (NS *) </td>
-          <td>
-Foundation.NS* </td>
-        </tr>
-        <tr>
-          <td>
-ID </td>
-          <td>
-Foundation.NSObject </td>
-        </tr>
-        <tr>
-          <td>
-NSGlyph </td>
-          <td>
-nint </td>
-        </tr>
-        <tr>
-          <td>
-NSSize </td>
-          <td>
-CGSize </td>
-        </tr>
-        <tr>
-          <td>
-NSTextAlignment </td>
-          <td>
-UITextAlignment </td>
-        </tr>
-        <tr>
-          <td>
-SEL </td>
-          <td>
-ObjCRuntime.Selector </td>
-        </tr>
-        <tr>
-          <td>
-dispatch_queue_t </td>
-          <td>
-CoreFoundation.DispatchQueue </td>
-        </tr>
-        <tr>
-          <td>
-CFTimeInterval </td>
-          <td>
-double </td>
-        </tr>
-        <tr>
-          <td>
-CFIndex </td>
-          <td>
-nint </td>
-        </tr>
-        <tr>
-          <td>
-NSGlyph </td>
-          <td>
-nuint </td>
-        </tr>
-      </tbody>
-    </table>
+|Nome del tipo Objective-C|Tipo di Unified API xamarin|
+|---|---|
+|`BOOL`, `GLboolean`|`bool`|
+|`NSInteger`|`nint`|
+|`NSUInteger`|`nuint`|
+|`CFTimeInterval` / `NSTimeInterval`|`double`|
+|`NSString` ([altre informazioni sul binding `NSString` ](~/ios/internals/api-design/nsstring.md))|`string`|
+|`char *`|`string` (vedere anche: [attributo PlainString](~/cross-platform/macios/binding/binding-types-reference.md#plainstring))|
+|`CGRect`|`CGRect`|
+|`CGPoint`|`CGPoint`|
+|`CGSize`|`CGSize`|
+|`CGFloat`, `GLfloat`|`nfloat`|
+|Tipi di CoreFoundation (`CF*`)|`CoreFoundation.CF*`|
+|`GLint`|`nint`|
+|`GLfloat`|`nfloat`|
+|Tipi di base (`NS*`)|`Foundation.NS*`|
+|`id`|`Foundation`.`NSObject`|
+|`NSGlyph`|`nint`|
+|`NSSize`|`CGSize`|
+|`NSTextAlignment`|`UITextAlignment`|
+|`SEL`|`ObjCRuntime.Selector`|
+|`dispatch_queue_t`|`CoreFoundation.DispatchQueue`|
+|`CFTimeInterval`|`double`|
+|`CFIndex`|`nint`|
+|`NSGlyph`|`nuint`|
 
  <a name="Arrays" />
 

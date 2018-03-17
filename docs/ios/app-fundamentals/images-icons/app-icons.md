@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/2017
-ms.openlocfilehash: df9059b0e64b4a05b554f25b5f9d7f6031406633
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 68372d90b0567c662f0ae43e315663832f1f769b
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="application-icons"></a>Icone applicazioni
 
@@ -42,104 +42,66 @@ Nello stesso modo che un'app xamarin. IOS è possibile utilizzare gli asset dell
 
 La seguente immagine asset risoluzioni e dimensioni saranno necessarie per supportare tutti i tipi di icona richiesto da un'app xamarin destinazione iOS 5 tramite iOS 9 (o versione successiva):
 
-<table cellpadding="7" cellspacing="0" width="100%">
-    <tr valign="top">
-        <td width="200" style="border-width: 0px;"></td>
-        <td colspan="5" align="center" bgcolor="#F0F0F0"><b>iPhone</b></td>
-    </tr>
-    <tr valign="center">
-        <td width="200" style="border-width: 0px;"></td>
-        <td colspan="2" align="center" bgcolor="#F9F9F9"><b>iOS 5 & 6</b></td>
-        <td colspan="2" align="center" bgcolor="#F9F9F9"><b>iOS 7 & 8</b></td>
-        <td align="center" bgcolor="#F9F9F9"><b>iOS 9 & 10<b><br/><i>(iPhone 6 e 7 più)</i></td>
-    </tr>
-    <tr valign="top" bgcolor="#F0F0F0">
-        <td width="200" align="center"><b>Tipo di icona</b></td>
-        <td align="center"><b>1x</b></td>
-        <td align="center"><b>2x</b></td>
-        <td align="center"><b>1x</b></td>
-        <td align="center"><b>2x</b></td>
-        <td align="center"><b>3x</b></td>
-    </tr>
-    <tr valign="top">
-        <td width="200" bgcolor="#F9F9F9" align="right">Icona dell'applicazione</td>
-        <td align="center">57x57</td>
-        <td align="center">114x114</td>
-        <td align="center" style="color:#BBBBBB;">60x60<sup>(1)</sup></td>
-        <td align="center">120x120</td>
-        <td align="center">180x180</td>
-    </tr>
-    <tr valign="top">
-        <td width="200" bgcolor="#F9F9F9" align="right">In primo piano</td>
-        <td align="center">29x29</td>
-        <td align="center">58x58</td>
-        <td align="center" style="color:#BBBBBB;">40x40<sup>(2)</sup></td>
-        <td align="center">80x80</td>
-        <td align="center">120x120</td>
-    </tr>
-    <tr valign="top">
-        <td width="200" bgcolor="#F9F9F9" align="right">Impostazioni</td>
-        <td align="center" style="color:#BBBBBB;">29x29<sup>(3)(4)</sup></td>
-        <td align="center" style="color:#BBBBBB;">58x58<sup>(3)(4)</sup></td>
-        <td align="center">-</td>
-        <td align="center">-</td>
-        <td align="center">87x87</td>
-    </tr>
-</table>
+### <a name="iphone-icon-sizes"></a>Dimensioni dell'icona iPhone
 
-<table cellpadding="7" cellspacing="0" width="100%">
-    <tr valign="top">
-        <td width="200" style="border-width: 0px;"></td>
-        <td colspan="5" align="center" bgcolor="#F0F0F0"><b>iPad</b></td>
-    </tr>
-    <tr valign="center">
-        <td width="200" style="border-width: 0px;"></td>
-        <td colspan="2" align="center" bgcolor="#F9F9F9"><b>iOS 5 & 6</b></td>
-        <td colspan="2" align="center" bgcolor="#F9F9F9"><b>iOS 7 & 8</b></td>
-        <td colspan="1" align="center" bgcolor="#F9F9F9"><b>iOS&nbsp;9 & 10</b></td>
-    </tr>
-    <tr valign="top" bgcolor="#F0F0F0">
-        <td width="200" align="center"><b>Tipo di icona</b></td>
-        <td align="center"><b>1x</b></td>
-        <td align="center"><b>2x</b></td>
-        <td align="center"><b>1x</b></td>
-        <td align="center"><b>2x</b></td>
-        <td align="center"><b>2x<br/>iPad&nbsp;Pro</b></td>
-    </tr>
-    <tr valign="top">
-        <td width="200" bgcolor="#F9F9F9" align="right">Icona dell'applicazione</td>
-        <td align="center">72x72</td>
-        <td align="center">144x144</td>
-        <td align="center">76x76</td>
-        <td align="center">152x152</td>
-        <td align="center">167x167<sup>(6)</sup></td>
-    </tr>
-    <tr valign="top">
-        <td width="200" bgcolor="#F9F9F9" align="right">In primo piano</td>
-        <td align="center">50x50</td>
-        <td align="center">100x100</td>
-        <td align="center">40x40</td>
-        <td align="center">80x80</td>
-        <td align="center" style="color:#BBBBBB;">120x120<sup>(5)</sup></td>
-    </tr>
-    <tr valign="top">
-        <td width="200" bgcolor="#F9F9F9" align="right">Impostazioni</td>
-        <td align="center" style="color:#BBBBBB;">29x29<sup>(3)(5)</sup></td>
-        <td align="center" style="color:#BBBBBB;">58x58<sup>(3)(5)</sup></td>
-        <td align="center">-</td>
-        <td align="center">-</td>
-        <td align="center" style="color:#BBBBBB;">58x58<sup>(5)</sup></td>
-    </tr>
-</table>
+- **iPhone: iOS 9 e 10 (iPhone 6 e 7 più)**
 
-1. _Sia Visual Studio per Mac e Xcode non supporta più l'impostazione 1 immagine x per iOS 7._
-2. _Impostazione di un'immagine di 1 x per iOS 7 non è supportato quando si utilizza Asset cataloghi._
-3. _iOS 7 e 8 di usare le stesse dimensioni dell'immagine come iOS 5 e 6._
-4. _Utilizza lo stesso immagini e le dimensioni dell'icona in primo piano._
-5. _Usa le stesse icone di dimensioni come iPhone._
-6. _Supportato solo con set di immagini di catalogo di Asset._
+    ||3x|
+    |---|---|
+    |Icona dell'applicazione|180x180|
+    |In primo piano|120x120|
+    |Impostazioni|87x87|
 
-Per ulteriori informazioni sulle icone, vedere Apple [icona e dimensioni delle immagini](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) documentazione.
+- **iPhone: iOS 7 e 8**
+
+    ||1x|2x|
+    |---|---|---|
+    |Icona dell'applicazione|60x60<sup>1</sup>|120x120|
+    |In primo piano|40x40<sup>2</sup>|80x80|
+    |Impostazioni|-|-|
+
+- **iPhone: iOS 5 e 6**
+
+    ||1x|2x|
+    |---|---|---|
+    |Icona dell'applicazione|57x57|114x114|
+    |In primo piano|29x29|58x58|
+    |Impostazioni|29x29<sup>3, 4</sup>|58x58<sup>3, 4</sup>|
+
+### <a name="ipad-icon-sizes"></a>Dimensioni dell'icona iPad
+
+- **iPad: iOS 9 & 10**
+
+    ||2 x (iPad Pro)|
+    |---|---|
+    |Icona dell'applicazione|167x167<sup>6</sup>|
+    |In primo piano|120x120<sup>6</sup>|
+    |Impostazioni|58x58<sup>5</sup>|
+
+- **iPad: iOS 7 & 8**
+
+    ||1x|2x|
+    |---|---|---|
+    |Icona dell'applicazione|76x76|152x152|
+    |In primo piano|40x40|80x80|
+    |Impostazioni|-|-|
+
+- **iPad: iOS 5 & 6**
+
+    ||1x|2x|
+    |---|---|---|
+    |Icona dell'applicazione|72x72|144x144|
+    |In primo piano|50x50|100x100|
+    |Impostazioni|29x29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
+
+ 1. Sia Visual Studio per Mac e Xcode non supporta più l'impostazione 1 immagine x per iOS 7.
+ 2. Impostazione di un'immagine di 1 x per iOS 7 non è supportato quando si utilizza Asset cataloghi.
+ 3. iOS 7 e 8 di usare le stesse dimensioni dell'immagine come iOS 5 e 6.
+ 4. Utilizza lo stesso immagini e le dimensioni dell'icona in primo piano.
+ 5. Usa le stesse icone di dimensioni come iPhone.
+ 6. Supportato solo con set di immagini di catalogo di Asset.
+ 
+ Per ulteriori informazioni sulle icone, vedere Apple [icona e dimensioni delle immagini](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) documentazione.
 
 <a name="managing" />
 

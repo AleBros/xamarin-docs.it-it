@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: cda523cd9d762c3a3c1570e2abd0acb8a264d5dd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 10fb2e2824a05954e19f9b483884061b217be683
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="verify-attributes"></a>Verificare gli attributi
 
@@ -29,32 +29,12 @@ Dopo avere verificato che il binding è correggere o correzione in modo che sia 
 
 L'argomento hint fornito all'attributo può essere incrociato a cui fa riferimento alla documentazione riportata di seguito. Documentazione per qualsiasi prodotto `[Verify]` attributi verranno forniti nella console anche dopo l'associazione è stata completata.
 
-<table>
-  <thead>
-  <tr>
-    <th>Verificare l'Hint</th>
-    <th>Descrizione</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>InferredFromPreceedingTypedef</td>
-    <td>Il nome di questa dichiarazione è stata dedotta per convenzione comune dall'immediatamente precedente <code>typedef</code> nel codice sorgente nativo originale. Verificare che il nome derivato sia corretto di questa convenzione è ambigua.</td>
-  </tr>
-  <tr>
-    <td>ConstantsInterfaceAssociation</td>
-    <td>Non è piuttosto complesso per determinare con quale interfaccia Objective-C può essere associata una dichiarazione di variabile extern. Le istanze di questi elementi vengono associate come <code>[Field]</code> proprietà in un'interfaccia parziale in un'interfaccia concreta quasi by per produrre un'API intuitiva, probabilmente eliminando 'Costanti' interfaccia completamente.</td>
-  </tr>
-  <tr>
-    <td>MethodToProperty</td>
-    <td>Un metodo Objective-C associato come una proprietà c# a causa di convenzione, ad esempio che non accettano parametri e restituisce un valore (restituito non void). Spesso i metodi come questi devono essere associati come proprietà per esporre un'API coloro, ma in alcuni casi in cui possono verificarsi falsi positivi e l'associazione deve essere effettivamente un metodo.</td>
-  </tr>
-  <tr>
-    <td>StronglyTypedNSArray</td>
-    <td>Nativo <code>NSArray*</code> associati come <code>NSObject[]</code>. È possibile digitare più fortemente matrice nell'associazione in base alle aspettative impostato tramite la documentazione dell'API (ad esempio, i commenti nel file di intestazione) o esaminando il contenuto della matrice tramite il test. Ad esempio, un NSArray * contenente solo NSNumber * instancescan associati come <code>NSNumber[]</code> anziché <code>NSObject[]</code>.</td>
-  </tr>
-  </tbody>
-</table>
+|Verificare l'Hint|Descrizione|
+|---|---|
+|InferredFromPreceedingTypedef|Il nome di questa dichiarazione è stata dedotta per convenzione comune dall'immediatamente precedente `typedef` nel codice sorgente nativo originale. Verificare che il nome derivato sia corretto di questa convenzione è ambigua.|
+|ConstantsInterfaceAssociation|Non è piuttosto complesso per determinare con quale interfaccia Objective-C può essere associata una dichiarazione di variabile extern. Le istanze di questi elementi vengono associate come `[Field]` proprietà in un'interfaccia parziale in un'interfaccia concreta quasi by per produrre un'API intuitiva, probabilmente eliminando 'Costanti' interfaccia completamente.|
+|MethodToProperty|Un metodo Objective-C associato come una proprietà c# a causa di convenzione, ad esempio che non accettano parametri e restituisce un valore (restituito non void). Spesso i metodi come questi devono essere associati come proprietà per esporre un'API coloro, ma in alcuni casi in cui possono verificarsi falsi positivi e l'associazione deve essere effettivamente un metodo.|
+|StronglyTypedNSArray|Nativo `NSArray*` associati come `NSObject[]`. È possibile digitare più fortemente matrice nell'associazione in base alle aspettative impostato tramite la documentazione dell'API (ad esempio, i commenti nel file di intestazione) o esaminando il contenuto della matrice tramite il test. Ad esempio, un NSArray * contenente solo NSNumber * instancescan associati come `NSNumber[]` anziché `NSObject[]`.|
 
 È possibile ricevere rapidamente la documentazione per l'utilizzo di hint di `sharpie verify-docs` strumento, ad esempio:
 

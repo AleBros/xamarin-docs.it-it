@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: cef717a727b3b018b9eec3e8a402ae4f927f7cb8
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ca3dd71c3da316e467d8c388efbbded3d9778bf0
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="siri-remote-and-bluetooth-controllers"></a>Siri remoto e i controller Bluetooth
 
@@ -39,43 +39,14 @@ Il compito, uno sviluppatore di app tvOS è la creazione di un'interfaccia utent
 
 Siri remoto presenta le seguenti funzionalità e dei relativi utilizzi previsto all'interno dell'app tvOS:
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>Funzionalità</b></td>
-    <td><b>Utilizzo delle App generale</b></td>
-    <td><b>Utilizzo delle App di gioco</b></td>
-</tr>
-<tr>
-    <td valign="top"><b>Area tocco</b><br/>Scorrere rapidamente per spostarsi, premere per selezionare e tenere premuto per i menu di scelta rapida.</td>
-    <td valign="top"><b>Scelta/scorrere:</b><br/>Navigazione nell'interfaccia utente tra gli elementi con stato attivabili.<br/><br/><b>Fare clic su:</b><br/>Attiva selezionato (attivo).</td>
-    <td valign="top"><b>Scelta/scorrere:</b><br/>Dipende dalla progettazione di gioco e può essere utilizzato come blocchetto D toccando sui bordi.<br/><br/><b>Fare clic su:</b><br/>Eseguire la funzione del pulsante primario.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Menu</b><br/>Premere per tornare alla schermata precedente o dal menu.</td>
-    <td valign="top">Restituisce alla schermata precedente e termina alla schermata Home Apple TV, dalla schermata principale di un'app.</td>
-    <td valign="top">Sospendere e riprendere il gioco, consente di tornare alla schermata precedente e viene chiusa alla schermata Home Apple TV dalla schermata principale di un'app.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Siri/ricerca</b><br/>In alcuni paesi con Siri, tenere premuto per il controllo voce, tutti gli altri paesi, consente di visualizzare la schermata di ricerca.</td>
-    <td valign="top">N/D</td>
-    <td valign="top">N/D</td>
-</tr>
-<tr>
-    <td valign="top"><b>Riproduci/Pausa</b><br/>Riprodurre e sospendere media o fornisce una funzione secondaria in App.</td>
-    <td valign="top">Avvia la riproduzione multimediale e la riproduzione di sospendere o riprendere.</td>
-    <td valign="top">Esegue la funzione del pulsante secondario o Ignora video di introduzione (se presente).</td>
-</tr>
-<tr>
-    <td valign="top"><b>Home</b><br/>Premere per tornare alla schermata Home, fare doppio clic per visualizzare le applicazioni in esecuzione, premere e tenere premuto sospensione dispositivo.</td>
-    <td valign="top">N/D</td>
-    <td valign="top">N/D</td>
-</tr>
-<tr>
-    <td valign="top"><b>Volume</b><br/>I controlli associati a volume apparecchiature audio e video.</td>
-    <td valign="top">N/D</td>
-    <td valign="top">N/D</td>
-</tr>
-</table>
+|Funzionalità|Utilizzo delle App generale|Utilizzo delle App di gioco|
+|---|---|---|
+|**Area tocco**<br />Scorrere rapidamente per spostarsi, premere per selezionare e tenere premuto per i menu di scelta rapida.|**Scelta/Scorri rapidamente verso**<br />Navigazione nell'interfaccia utente tra gli elementi con stato attivabili.<br /><br />**Fare clic su**<br />Attiva selezionato (attivo).|**Scelta/Scorri rapidamente verso**<br />Dipende dalla progettazione di gioco e può essere utilizzato come blocchetto D toccando sui bordi.<br /><br />**Fare clic su**<br />Eseguire la funzione del pulsante primario.|
+|**Menu**<br />Premere per tornare alla schermata precedente o dal menu.|Restituisce alla schermata precedente e termina alla schermata Home Apple TV, dalla schermata principale di un'app.|Sospendere e riprendere il gioco, consente di tornare alla schermata precedente e viene chiusa alla schermata Home Apple TV dalla schermata principale di un'app.|
+|**Siri/ricerca**<br />In alcuni paesi con Siri, tenere premuto per il controllo voce, tutti gli altri paesi, consente di visualizzare la schermata di ricerca.|N/D|N/D|
+|**Riproduci/Pausa**<br />Riprodurre e sospendere media o fornisce una funzione secondaria in App.|Avvia la riproduzione multimediale e la riproduzione di sospendere o riprendere.|Esegue la funzione del pulsante secondario o Ignora video di introduzione (se presente).|
+|**Home**<br />Premere per tornare alla schermata Home, fare doppio clic per visualizzare le applicazioni in esecuzione, premere e tenere premuto sospensione dispositivo.|N/D|N/D|
+|**Volume**<br />I controlli associati a volume apparecchiature audio e video.|N/D|N/D|
 
 <a name="Touch-Surface-Gestures" />
 
@@ -83,18 +54,10 @@ Siri remoto presenta le seguenti funzionalità e dei relativi utilizzi previsto 
 
 Area tocco di Siri Remote è in grado di rilevare un'ampia gamma di un singolo dito movimenti che è possibile rispondere nell'app Xamarin.tvOS:
 
-<table width="100%">
-<tr>
-    <td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture01.png"></td>
-    <td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture02.png"></td>
-    <td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture03.png"></td>
-</tr>
-<tr>
-    <td valign="top"><b>Scorrere rapidamente:</b><br/>Selezione (attivo) viene spostata tra gli elementi dell'interfaccia utente sullo schermo (verso l'alto, verso il basso a sinistra, destra). Passaggio consente di scorrere gli elenchi di grandi dimensioni del contenuto con rapidamente inerzia.</td>
-    <td valign="top"><b>Fare clic su:</b><br/>Attiva l'elemento selezionato (attivo) o funge da pulsante primario in un gioco. Facendo clic e tenendo possibile attivare i menu contestuali o funzioni secondarie.</td>
-    <td valign="top"><b>Toccare:</b><br/>Toccando leggermente la superficie tocco sui bordi funziona come pulsanti direzionali D-blocchetto, spostare lo stato attivo su, giù, sinistra o destra, a seconda dell'area di scelte. A seconda dell'app, può essere utilizzato per visualizzare i controlli nascosti.</td>
-</tr>
-</table>
+|Scorri rapidamente verso|Clic|Toccare|
+|---|---|---|
+|![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
+|Selezione (attivo) viene spostata tra gli elementi dell'interfaccia utente sullo schermo (verso l'alto, verso il basso a sinistra, destra). Passaggio consente di scorrere gli elenchi di grandi dimensioni del contenuto con rapidamente inerzia.|Attiva l'elemento selezionato (attivo) o funge da pulsante primario in un gioco. Facendo clic e tenendo possibile attivare i menu contestuali o funzioni secondarie.|Toccando leggermente la superficie tocco sui bordi funziona come pulsanti direzionali D-blocchetto, spostare lo stato attivo su, giù, sinistra o destra, a seconda dell'area di scelte. A seconda dell'app, può essere utilizzato per visualizzare i controlli nascosti.|
 
 Apple fornisce i seguenti suggerimenti per lavorare con i movimenti tocco area:
 
@@ -112,7 +75,7 @@ Oltre ai movimenti nell'area di tocco, l'app può rispondere all'utente facendo 
 Inoltre, pulsanti di menu possono essere rilevati tramite un riconoscimento di movimento con standard `UIKit` elementi. Se è intercettare la pressione del pulsante di Menu, si sarà responsabile per chiudere la visualizzazione e i Controller di visualizzazione corrente e tornare a quello precedente.
 
 > [!IMPORTANT]
-> **Nota:** occorre **sempre** una funzione di assegnare al pulsante Riproduci/pausa in remoto. Con un pulsante non funzionale può rendere l'app interrotto all'utente finale. Se non si dispone di una funzione valida per questo pulsante, assegnare la stessa funzione del pulsante primario (tocco area fare clic su).
+> È necessario **sempre** assegnare una funzione al pulsante Play/Pausa in remoto. Con un pulsante non funzionale può rendere l'app interrotto all'utente finale. Se non si dispone di una funzione valida per questo pulsante, assegnare la stessa funzione del pulsante primario (tocco area fare clic su).
 
 
 
@@ -319,77 +282,24 @@ Oltre a standard Siri remoto fornito con l'apportate per iOS Apple TV, 3rd party
 Gioco consente di migliorare la modalità di gioco e fornire una stima realistica delle immersion in un gioco. Possono inoltre essere utilizzati per controllare l'interfaccia Apple TV standard, pertanto l'uso non è necessario passare tra il computer remoto e il controller.
 
 > [!IMPORTANT]
-> **Nota:** gioco Bluetooth sono un acquisto facoltativo che potrebbe rendere gli utenti finali, l'app non può forzare l'utente per l'acquisto di uno. Se l'app supporta gioco deve supportare anche Siri remoto in modo che il gioco è utilizzabile da tutti gli utenti di Apple TV.
-
+> Gioco Bluetooth sono un acquisto facoltativo che potrebbe rendere gli utenti finali, l'app non è possibile forzare l'utente a acquistarne uno. Se l'app supporta gioco deve supportare anche Siri remoto in modo che il gioco è utilizzabile da tutti gli utenti di Apple TV.
 
 Un Controller di gioco presenta le seguenti funzionalità e dei relativi utilizzi previsto all'interno dell'app tvOS:
-<table width="100%" border="1px">
-<tr>
-    <td><b>Funzionalità</b></td>
-    <td><b>Utilizzo delle App generale</b></td>
-    <td><b>Utilizzo delle App di gioco</b></td>
-</tr>
-<tr>
-    <td valign="top"><b>D-Pad</b></td>
-    <td valign="top">Consente di spostarsi tra gli elementi dell'interfaccia utente (sposta lo stato attivo).</td>
-    <td valign="top">Dipende dal gioco.</td>
-</tr>
-<tr>
-    <td valign="top"><b>A</b></td>
-    <td valign="top">Attiva l'elemento selezionato (attivo).</td>
-    <td valign="top">Esegue una funzione principale del pulsante e azioni di finestra di dialogo di conferma.</td>
-</tr>
-<tr>
-    <td valign="top"><b>B</b></td>
-    <td valign="top">Restituisce alla schermata precedente o viene chiuso alla schermata Home se nella schermata principale dell'applicazione.</td>
-    <td valign="top">Esegue la funzione del pulsante secondario o restituisce alla schermata precedente.</td>
-</tr>
-<tr>
-    <td valign="top"><b>X</b></td>
-    <td valign="top">Avvia riproduzione o la riproduzione di sospensione/ripresa.</td>
-    <td valign="top">Dipende dal gioco.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Y</b></td>
-    <td valign="top">N/D</td>
-    <td valign="top">Dipende dal gioco.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Menu</b></td>
-    <td valign="top">Restituisce alla schermata precedente o viene chiuso alla schermata Home se nella schermata principale dell'applicazione.</td>
-    <td valign="top">Sospendere o riprendere il gioco, consente di tornare alla schermata precedente o si chiude la schermata Home se nella schermata principale dell'applicazione.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Pulsante sinistro Shoulder</b></td>
-    <td valign="top">Consente di spostarsi a sinistra.</td>
-    <td valign="top">Dipende dal gioco.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Trigger a sinistra</b></td>
-    <td valign="top">Consente di spostarsi a sinistra.</td>
-    <td valign="top">Dipende dal gioco.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Pulsante destro Shoulder</b></td>
-    <td valign="top">Si sposta a destra.</td>
-    <td valign="top">Dipende dal gioco.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Trigger destro</b></td>
-    <td valign="top">Si sposta a destra</td>
-    <td valign="top">Dipende dal gioco.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Thumbstick sinistro</b></td>
-    <td valign="top">Consente di spostarsi tra gli elementi dell'interfaccia utente (sposta lo stato attivo).</td>
-    <td valign="top">Dipende dal gioco.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Thumbstick destra</b></td>
-    <td valign="top">N/D</td>
-    <td valign="top">Dipende dal gioco.</td>
-</tr>
-</table>
+
+|Funzionalità|Utilizzo delle App generale|Utilizzo delle App di gioco|
+|---|---|---|
+|**D-Pad**|Consente di spostarsi tra gli elementi dell'interfaccia utente (sposta lo stato attivo).|Dipende dal gioco.|
+|**A**|Attiva l'elemento selezionato (attivo).|Esegue una funzione principale del pulsante e azioni di finestra di dialogo di conferma.|
+|**B**|Restituisce alla schermata precedente o viene chiuso alla schermata Home se nella schermata principale dell'applicazione.|Esegue la funzione del pulsante secondario o restituisce alla schermata precedente.|
+|**X**|Avvia riproduzione o la riproduzione di sospensione/ripresa.|Dipende dal gioco.|
+|**Y**|N/D|Dipende dal gioco.|
+|**Menu**|Restituisce alla schermata precedente o viene chiuso alla schermata Home se nella schermata principale dell'applicazione.|Sospendere o riprendere il gioco, consente di tornare alla schermata precedente o si chiude la schermata Home se nella schermata principale dell'applicazione.|
+|**Pulsante sinistro Shoulder**|Consente di spostarsi a sinistra.|Dipende dal gioco.|
+|**Trigger a sinistra**|Consente di spostarsi a sinistra.|Dipende dal gioco.|
+|**Pulsante destro Shoulder**|Si sposta a destra.|Dipende dal gioco.|
+|**Trigger destro**|Si sposta a destra|Dipende dal gioco.|
+|**Thumbstick sinistro**|Consente di spostarsi tra gli elementi dell'interfaccia utente (sposta lo stato attivo).|Dipende dal gioco.|
+|**Thumbstick destra**|N/D|Dipende dal gioco.|
 
 Apple fornisce i suggerimenti seguenti per l'utilizzo di gioco:
 

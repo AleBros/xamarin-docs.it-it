@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 7819201e76e268ea84bf2cc5d49a5a07b20a04e3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4a3450026eff06555723b16093c7a0daf3d12ae7
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="programmatic-layout-constraints"></a>Vincoli di Layout a livello di codice
 
@@ -79,32 +79,15 @@ PurpleView.LeadingAnchor.ConstraintEqualTo (OrangeView.TrailingAnchor, 10).Activ
 
 In cui le parti del codice c# corrispondono alle parti dell'equazione specificate come indicato di seguito:
 
-<table width="100%" border="1">
-<tr>
-<td width="50%"><b>Equazione</b></td><td><b>Codice</b></td>
-</tr>
-<tr>
-<td width="50%">Elemento 1</td><td>PurpleView</td>
-</tr>
-<tr>
-<td width="50%">Attributo 1</td><td>LeadingAnchor</td>
-</tr>
-<tr>
-<td width="50%">Relationship</td><td>ConstraintEqualTo</td>
-</tr>
-<tr>
-<td width="50%">Moltiplicatore</td><td>Valore predefinito è 1.0 in modo non specificato</td>
-</tr>
-<tr>
-<td width="50%">Elemento 2</td><td>OrangeView</td>
-</tr>
-<tr>
-<td width="50%">Attributo 2</td><td>TrailingAnchor</td>
-</tr>
-<tr>
-<td width="50%">Costante</td><td>10.0</td>
-</tr>
-</table>
+|Equazione|Codice|
+|---|---|
+|Elemento 1|PurpleView|
+|Attributo 1|LeadingAnchor|
+|Relationship|ConstraintEqualTo|
+|Moltiplicatore|Valore predefinito è 1.0 in modo non specificato|
+|Elemento 2|OrangeView|
+|Attributo 2|TrailingAnchor|
+|Costante|10.0|
 
 Oltre a fornire solo i parametri necessari per risolvere un'equazione di vincolo layout specificato, ciascuno dei metodi di ancoraggio Layout imporre l'indipendenza dai tipi dei parametri passati a essi. Vincolo in modo orizzontale consente di limitare, ad esempio `LeadingAnchor` o `TrailingAnchor` può essere utilizzato solo con altri ancoraggio orizzontale tipi e i moltiplicatori vengono forniti solo per i vincoli di dimensioni.
 

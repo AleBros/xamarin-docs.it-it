@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: a2378cb439ceed94751e61fd44b54aae3a65bebd
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3564b4f7d41822fdd9ab167fb3e756f26678a17b
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="touch-id"></a>ID tocco
 
@@ -39,11 +39,8 @@ Il portachiavi: Impossibile decrittografare l'elemento keychain. al contrario vi
 
 Prima dell'applicazione deve eseguire una query in Keychain per verificare l'esistenza di una password. Se non esiste, si potrebbe essere necessario richiedere una password l'utente non è sempre richiesta. Se la password deve essere aggiornata, richiedere all'utente una nuova password e passare il valore aggiornato per il portachiavi.
 
-
-> ℹ️ **Nota**: con alcun dato segreto ricevuti dal database, non è consigliata solo, ma previsto che i segreti non verranno mantenuti in memoria. È consigliabile mantenere un segreto per solo come fino a quando è necessario e assolutamente non assegnarlo a una variabile globale.
-
-
-
+> [!NOTE]
+> Dopo che tramite un segreto recuperato dal Keychain, tutti i riferimenti ai dati devono essere eliminati dalla memoria. Mai assegnarlo a una variabile globale.
 
 ## <a name="keychain-acl-and-touch-id"></a>ID portachiavi ACL e il tocco
 
@@ -53,32 +50,11 @@ Elenco di controllo di accesso è un nuovo attributo dell'elemento keychain in i
 
 A partire da iOS 8, è ora disponibile un nuovo criterio di presenza di utente, `SecAccessControl`, che viene applicata con il enclave protetta in un iPhone 5s e versioni successive. Si noterà nella tabella seguente, solo come la configurazione del dispositivo può influenzare la valutazione dei criteri:
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Configurazione del dispositivo</td>
-    <td>Valutazione dei criteri</td>
-    <td>Meccanismo di backup</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>Dispositivo senza Passcode</td>
-    <td>Nessun accesso</td>
-    <td>nessuno</td>
-</tr>
-<tr>
-    <td>Dispositivo con Passcode</td>
-    <td>Richiede Passcode</td>
-    <td>nessuno</td>
-</tr>
-<tr>
-    <td>Dispositivo con ID tocco</td>
-    <td>Preferisce ID tocco</td>
-    <td>Consente di Passcode</td>
-</tr>
-</tbody>
-</table>
+|Configurazione del dispositivo|Valutazione dei criteri|Meccanismo di backup|
+|--- |--- |--- |
+|Dispositivo senza Passcode|Nessun accesso|Nessuno|
+|Dispositivo con Passcode|Richiede Passcode|Nessuno|
+|Dispositivo con ID tocco|Preferisce ID tocco|Consente di Passcode|
 
 Tutte le operazioni all'interno di Enclave Secure possano considerano attendibili reciprocamente. Ciò significa che è possibile utilizzare il risultato dell'autenticazione ID tocco per autorizzare la decrittografia di elemento Keychain. Il Enclave Secure mantiene anche un contatore di corrispondenze non riuscite di Touch ID, in cui sarà necessario tornare a utilizzare il passcode caso un utente.
 Un nuovo framework iOS 8, chiamato _autenticazione locale_, supporta questo processo di autenticazione all'interno del dispositivo. Nella sezione successiva verrà illustrato questo.

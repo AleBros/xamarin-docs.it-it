@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 342e8189d9dec6eaa60a999d56a7891da845d247
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a0b0ca9857e706a9a84f1c661f7f6ff294e112c1
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="introduction-to-storyboards"></a>Introduzione agli storyboard
 
@@ -84,32 +84,12 @@ Qualsiasi applicazione che utilizza le classi di dimensioni useranno anche il nu
 
 [![](images/adaptivesegue.png "L'elenco a discesa Segues adattivo")](images/adaptivesegue.png#lightbox)
 
-<table>
-    <thead>
-        <tr>
-            <th>Definire i</th>
-            <th>Descrizione</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Mostra</td>
-            <td>È molto simile a definire un Push, ma tiene in considerazione il contenuto della schermata. </td>
-        </tr>
-        <tr>
-            <td>Visualizzare i dettagli</td>
-            <td>Se l'applicazione è presente una visualizzazione master e di dettaglio (ad esempio, in un controller di visualizzazione di divisione su un iPAd), il contenuto sostituisce la visualizzazione dettagli. Se l'app viene visualizzato solo lo schema <strong>o</strong> dettaglio, il contenuto sostituirà l'inizio dello stack di controller di visualizzazione.</td>
-        </tr>
-        <tr>
-            <td>Presentazione</td>
-            <td>Ciò è simile al segue modale e consente la selezione di stili di presentazione e di transizione.</td>
-        </tr>
-        <tr>
-            <td>Popover presentazione</td>
-            <td>Questo presenta il contenuto come un popover</td>
-        </tr>
-    </tbody>
-</table>
+|Definire i|Descrizione|
+|--- |--- |
+|Mostra|È molto simile a definire un Push, ma tiene in considerazione il contenuto della schermata.|
+|Visualizzare i dettagli|Se l'app è presente una visualizzazione master e di dettaglio (ad esempio, in un controller di visualizzazione di divisione su un iPad), il contenuto sostituirà la vista Dettagli. Se l'app viene visualizzato solo il database master o dettaglio, il contenuto sostituirà l'inizio dello stack di controller di visualizzazione.|
+|Presentazione|Ciò è simile al segue modale e consente la selezione di stili di presentazione e di transizione.|
+|Popover presentazione|Questo presenta il contenuto come un popover|
 
 ### <a name="transferring-data-with-segues"></a>Il trasferimento dei dati con Segues
 

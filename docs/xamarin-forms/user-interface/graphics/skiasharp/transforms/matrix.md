@@ -8,11 +8,11 @@ ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 9d5e65abe675ded48e9239f2cd10ceed4a7c3a52
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: b54e5258c76892620947d0a7ce673b4ff61f09f3
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="matrix-transforms"></a>Trasformazioni di matrice
 
@@ -410,7 +410,7 @@ Il costruttore di questo programma si applica la matrice per il percorso con la 
 transformedPath.Transform(matrix);
 ```
 
-Il percorso non *non* mantenere questa matrice come proprietà. Al contrario, la trasformazione si applica a tutte le coordinate del percorso. Se `Transform` viene chiamato nuovamente, la trasformazione viene applicata nuovamente, senza che sia l'unico modo è possibile tornare applicando un'altra matrice che annulla la trasformazione. Fortunatamente, la `SKMatrix` struttura definisce un [ `TryInverse` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.TryInvert/p/SkiaSharp.SKMatrix@/) metodo che ottiene la matrice che inverte una matrice specificata:
+Il percorso non *non* mantenere questa matrice come proprietà. Al contrario, la trasformazione si applica a tutte le coordinate del percorso. Se `Transform` viene chiamato nuovamente, la trasformazione viene applicata nuovamente, senza che sia l'unico modo è possibile tornare applicando un'altra matrice che annulla la trasformazione. Fortunatamente, la `SKMatrix` struttura definisce un [ `TryInverse` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.TryInvert/p/SkiaSharp.SKMatrix/) metodo che ottiene la matrice che inverte una matrice specificata:
 
 ```csharp
 SKMatrix inverse;

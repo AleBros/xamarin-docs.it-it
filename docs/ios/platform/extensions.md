@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 017f3c1b5fc14bf22a5ad85d1017bc8125b04038
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6e0eebef2404ce3f117fe897d456f3ef78a8f585
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="ios-extensions"></a>le estensioni iOS
 
@@ -44,63 +44,14 @@ In questo articolo vengono illustrati gli argomenti seguenti:
 
 ## <a name="extension-points"></a>Punti di estensione
 
-Esistono diversi tipi di estensione che possono essere creati in iOS 8 (e versioni successive):
-
-<table>
-<colgroup>
-<col />
-<col />
-<col />
-</colgroup>
-
-<thead>
-<tr>
-    <th >Tipo</th>
-    <th >Descrizione</th>
-    <th >Punto di estensione</th>
-    <th >Host applicazione</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-    <td >Operazione</td>
-    <td >Editor specializzato o un visualizzatore per un determinato tipo di supporto</td>
-    <td ><code>com.apple.ui-services</code></td>
-    <td >Qualsiasi</td>
-</tr>
-<tr>
-    <td >Provider di documenti</td>
-    <td >Consente di app di usare un archivio remoto</td>
-    <td ><code>com.apple.fileprovider-ui</code></td>
-    <td >Le app usando un <a href="https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/">UIDocumentPickerViewController</a></td>
-</tr>
-<tr>
-    <td >Tastiera</td>
-    <td >Tastiere alternative</td>
-    <td ><code>com.apple.keyboard-service</code></td>
-    <td >Qualsiasi</td>
-</tr>
-<tr>
-    <td >Modifica di foto</td>
-    <td >La modifica di foto e modifica</td>
-    <td ><code>com.apple.photo-editing</code></td>
-    <td >Photos.app editor</td>
-</tr>
-<tr>
-    <td >Condividi</td>
-    <td >Condivide dati con i social network, messaggistica di servizi e così via.</td>
-    <td ><code>com.apple.share-services</code></td>
-    <td >Qualsiasi</td>
-</tr>
-<tr>
-    <td >Oggi</td>
-    <td >"Widget" che vengono visualizzati nella schermata Oggi o centro notifiche</td>
-    <td ><code>com.apple.widget-extensions</code></td>
-    <td >Centro notifiche e attuali</td>
-</tr>
-</tbody>
-</table>
+|Tipo|Descrizione|Punto di estensione|Host applicazione|
+|--- |--- |--- |--- |
+|Operazione|Editor specializzato o un visualizzatore per un determinato tipo di supporto|`com.apple.ui-services`|Qualsiasi|
+|Provider di documenti|Consente di app di usare un archivio remoto|`com.apple.fileprovider-ui`|Le app usando un [UIDocumentPickerViewController](https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/)|
+|Tastiera|Tastiere alternative|`com.apple.keyboard-service`|Qualsiasi|
+|Modifica di foto|La modifica di foto e modifica|`com.apple.photo-editing`|Photos.app editor|
+|Condividi|Condivide dati con i social network, messaggistica di servizi e così via.|`com.apple.share-services`|Qualsiasi|
+|Oggi|"Widget" che vengono visualizzati nella schermata Oggi o centro notifiche|`com.apple.widget-extensions`|Centro notifiche e attuali|
 
 [Punti di estensione aggiuntivi](~/ios/platform/introduction-to-ios10/index.md#app-extensions) sono state aggiunte in iOS 10.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/12/2018
-ms.openlocfilehash: d47499c1e309fbc67c85b55cacbbba3942188f54
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 5c214fe4124b900ea63399b97084d1ce0e181d4a
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="using-datepicker"></a>Utilizzo del controllo DatePicker
 
@@ -48,7 +48,7 @@ DatePicker datePicker = new DatePicker
 };
 ```
 
-Quando un `DateTime` valore specificato in XAML, il parser XAML utilizza il `DateTime.Parse` metodo con un `CultureInfo.InvariantCulture` argomento per convertire la stringa a un `DateTime` valore. È necessario specificare le date in un formato preciso: mesi a due cifre, a due cifre giorni e anni a quattro cifre separati da barre:
+Quando un `DateTime` valore è espresso in XAML, il parser XAML utilizza il `DateTime.Parse` metodo con un `CultureInfo.InvariantCulture` argomento per convertire la stringa a un `DateTime` valore. È necessario specificare le date in un formato preciso: mesi a due cifre, a due cifre giorni e anni a quattro cifre separati da barre:
 
 ```xaml
 <DatePicker MinimumDate="01/01/2018"
@@ -78,7 +78,7 @@ Se il `DatePicker` non contiene un'associazione nel relativo `Date` proprietà, 
             ··· />
 ```
 
-Tuttavia, questa operazione è sconsigliata. A seconda dell'impostazione del `Format` proprietà, selezionata le date possono richiedere larghezza di visualizzazione diverse. Ad esempio, la stringa di formato "D" causa `DateTime` per visualizzare le date in un formato esteso e "Mercoledì 12 settembre 2018" richiede una larghezza di visualizzazione maggiore rispetto a "Venerdì 4 maggio 2018". A seconda della piattaforma, questa differenza potrebbe causare il `DateTime` vista per modificare larghezza nel layout, o per la visualizzazione può essere troncato.
+Tuttavia, questa operazione è sconsigliata. A seconda dell'impostazione del `Format` proprietà, selezionata le date possono richiedere larghezza di visualizzazione diverse. Ad esempio, la stringa di formato "D" causa `DateTime` per visualizzare le date in un formato esteso e "Mercoledì 12 settembre 2018" richiede una larghezza di visualizzazione maggiore rispetto a "Venerdì, maggio 4, 2018." A seconda della piattaforma, questa differenza potrebbe causare il `DateTime` vista per modificare larghezza nel layout, o per la visualizzazione può essere troncato.
 
 > [!TIP]
 > È consigliabile utilizzare il valore predefinito `HorizontalOptions` impostazione di `Fill` con `DatePicker`e non deve usare una larghezza pari a `Auto` quando si inserisce `DatePicker` in un `Grid` cella.
@@ -139,7 +139,7 @@ Ecco il file XAML:
 </ContentPage>
 ```
 
-Ogni `DatePicker` viene assegnato un `Format` proprietà "D" per un formato di data estesa. Si noti inoltre che il `endDatePicker` oggetto ha un binding che ha come destinazione il `MinimumDate` proprietà. Origine del binding è selezionato `Date` proprietà del `startDatePicker` oggetto. Ciò garantisce che la data di fine è sempre successiva o uguale alla data di inizio. Oltre ai due `DatePicker` oggetti, un `Switch` con etichetta "Include entrambi giorno in totale". 
+Ogni `DatePicker` viene assegnato un `Format` proprietà "D" per un formato di data estesa. Si noti inoltre che il `endDatePicker` oggetto ha un binding che ha come destinazione il `MinimumDate` proprietà. Origine del binding è selezionato `Date` proprietà del `startDatePicker` oggetto. Ciò garantisce che la data di fine è sempre successiva o uguale alla data di inizio. Oltre ai due `DatePicker` oggetti, un `Switch` con etichetta "Includono entrambi i giorni in totale". 
 
 I due `DatePicker` viste hanno gestori associati al `DateSelected` evento e il `Switch` è associato un gestore per il relativo `Toggled` evento. Questi gestori eventi sono nel file code-behind e attivano un nuovo calcolo dei giorni tra due date:
 

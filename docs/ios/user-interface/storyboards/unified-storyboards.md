@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 30a952bf0df4db34c749de3d6198877b7a9766b9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 77808ae03f5801dd3628b8966e05a574b8501f37
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="unified-storyboards"></a>Storyboard unificati
 
@@ -116,63 +116,23 @@ In questa sezione illustra i tipi di raccolte di tratto che si verifica quando s
 
 Di seguito è una raccolta di tratto tipico che lo sviluppatore può vedere in un iPhone:
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Proprietà</td>
-    <td>Valore</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>HorizontalSizeClass</code></td>
-    <td>Compact</td>
-</tr>
-<tr>
-    <td><code>VerticalSizeClass</code></td>
-    <td>Regular</td>
-</tr>
-<tr>
-    <td><code>UserInterfaceIdom</code></td>
-    <td>Telefono</td>
-</tr>
-<tr>
-    <td><code>DisplayScale</code></td>
-    <td>2.0</td>
-</tr>
-</tbody>
-</table>
+|Proprietà|Valore|
+|--- |--- |
+|`HorizontalSizeClass`|Compact|
+|`VerticalSizeClass`|Regular|
+|`UserInterfaceIdom`|Telefono|
+|`DisplayScale`|2.0|
 
 Il set precedente rappresenterebbe una completamente completo tratto di raccolta, perché contiene i valori per tutte le relative proprietà tratto.
 
 È anche possibile disporre di una raccolta di tratto che mancano alcuni dei relativi valori (che si intende Apple come *Unspecified*):
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Proprietà</td>
-    <td>Valore</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>HorizontalSizeClass</code></td>
-    <td>Compact</td>
-</tr>
-<tr>
-    <td><code>VerticalSizeClass</code></td>
-    <td>{non viene specificato}</td>
-</tr>
-<tr>
-    <td><code>UserInterfaceIdom</code></td>
-    <td>{non viene specificato}</td>
-</tr>
-<tr>
-    <td><code>DisplayScale</code></td>
-    <td>{non viene specificato}</td>
-</tr>
-</tbody>
-</table>
+|Proprietà|Valore|
+|--- |--- |
+|`HorizontalSizeClass`|Compact|
+|`VerticalSizeClass`|Non specificato|
+|`UserInterfaceIdom`|Non specificato|
+|`DisplayScale`|Non specificato|
 
 In genere, tuttavia, quando lo sviluppatore richiede il tratto di ambiente per la relativa raccolta tratto, verrà restituito un insieme completo come illustrato nell'esempio precedente.
 
@@ -216,7 +176,6 @@ Un'altra funzione che uno sviluppatore può eseguire sulle raccolte tratto è pe
 
 Come descritto in precedenza, se uno qualsiasi dei tratti non è specificato in una delle raccolte tratto e viene specificato in un altro, il valore verrà impostato per la versione specificata. Tuttavia, se sono presenti più versioni di un valore specificato, il valore dall'ultima raccolta tratto sarà il valore che viene utilizzato.
 
-
 ## <a name="adaptive-view-controllers"></a>Visualizzazione adattivo controller
 
 In questa sezione illustra i dettagli della modalità iOS visualizzazione e controller di visualizzazione hanno adottato i concetti di tratti e classi di dimensione per essere automaticamente più adattiva in applicazioni dello sviluppatore.
@@ -259,58 +218,11 @@ In primo luogo, iOS 8 esegue un programma di installazione per preparare per la 
 
 iOS 8 fornisce diversi callback che lo sviluppatore può utilizzare per partecipare la modifica tratto, come illustrato nella tabella seguente:
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Phase</td>
-    <td>Callback</td>
-    <td>Descrizione</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>Configurazione</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        <li><code>TraitCollectionDidChange</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>Questo metodo viene chiamato all'inizio di una modifica tratto prima di un tratto Ottiene set di raccolta per il nuovo valore.</li>
-        <li>Il metodo viene chiamato quando viene modificato il valore della raccolta tratto ma prima che qualsiasi animazione viene eseguita.</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td>Animazione</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>Il coordinatore di transizione che viene passato a questo metodo è un <code>AnimateAlongside</code> proprietà che consente allo sviluppatore di aggiungere le animazioni che verranno eseguite con le animazioni predefinito.</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td>Pulizia</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>Fornisce un metodo per gli sviluppatori di includere il proprio codice di pulizia dopo la transizione.</li>
-        </ul>
-    </td>
-</tr>
-</tbody>
-</table>
+|Phase|Callback|Descrizione|
+|--- |--- |--- |
+|Configurazione|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Questo metodo viene chiamato all'inizio di una modifica tratto prima di un tratto Ottiene set di raccolta per il nuovo valore.</li><li>Il metodo viene chiamato quando viene modificato il valore della raccolta tratto ma prima che qualsiasi animazione viene eseguita.</li></ul>|
+|Animazione|`WillTransitionToTraitCollection`|Il coordinatore di transizione che viene passato a questo metodo è un `AnimateAlongside` proprietà che consente allo sviluppatore di aggiungere le animazioni che verranno eseguite con le animazioni predefinito.|
+|Pulizia|`WillTransitionToTraitCollection`|Fornisce un metodo per gli sviluppatori di includere il proprio codice di pulizia dopo la transizione.|
 
 Il `WillTransitionToTraitCollection` metodo è molto utile per l'animazione di controller di visualizzazione insieme di modifiche di raccolte di tratto. Il `WillTransitionToTraitCollection` metodo è disponibile solo nei controller di visualizzazione ( `UIViewController`) e non su altri ambienti di tratto, ad esempio `UIViews`.
 

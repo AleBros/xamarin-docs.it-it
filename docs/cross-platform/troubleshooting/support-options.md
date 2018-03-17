@@ -6,11 +6,11 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 6ca5b4d70669909b952752f7d600fcac37e9f557
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 68b420f98461ee42862726a658d721b36326c203
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>Quali opzioni di supporto sono disponibili per Xamarin?
 
@@ -18,28 +18,13 @@ ms.lasthandoff: 03/09/2018
 
 Come mostrato nella figura il [pagina supporto Xamarin](https://www.xamarin.com/support), sono disponibili diverse opzioni.  Ecco alcuni suggerimenti iniziali rapidi [ispirato Overflow dello Stack](http://stackoverflow.com/help/product-support) su come selezionare l'opzione migliore:
 
-<table>
-    <tr>
-        <td>"L'errore cosa?" o "Ricerca per categorie...."</td>
-        <td><a href="http://stackoverflow.com/questions/ask?tags=xamarin">Overflow dello stack</a> sotto il <em>xamarin</em> tag</td>
-    </tr>
-    <tr>
-        <td>Credo che questo problema è causato da un difetto del codice sorgente Xamarin.</td>
-        <td><a href="https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html">Xamarin Bugzilla</a></td>
-    </tr>
-    <tr>
-        <td>Hai un'idea, una richiesta di funzionalità o una nuova richiesta di documentazione.</td>
-        <td><a href="https://xamarin.uservoice.com">Pagina Xamarin UserVoice</a></td>
-    </tr>
-    <tr>
-        <td>Quali risorse, Framework o strumenti di altri utenti preferibile per...? (e altri discussioni aperte)</td>
-        <td><a href="https://forums.xamarin.com/">Forum di Xamarin</a></td>
-    </tr>
-    <tr>
-        <td>Ho una domanda sulle sottoscrizioni, contratti di licenza o sui prezzi.</td>
-        <td>Posta elettronica o chiamare usando le informazioni di contatto nel <a href="https://www.xamarin.com/faq">domande frequenti</a></td>
-    </tr>
-</table>
+|   |   |
+|---|---|
+|"L'errore cosa?" o "Ricerca per categorie...."|[Overflow dello stack](http://stackoverflow.com/questions/ask?tags=xamarin) sotto il *xamarin* tag|
+|Credo che questo problema è causato da un difetto del codice sorgente Xamarin.|[Xamarin Bugzilla](https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html)|
+|Hai un'idea, una richiesta di funzionalità o una nuova richiesta di documentazione.|[Pagina Xamarin UserVoice](https://xamarin.uservoice.com)|
+|Quali risorse, Framework o strumenti di altri utenti preferibile per...? (e altri discussioni aperte)|[Forum di Xamarin](https://forums.xamarin.com)|
+|Ho una domanda sulle sottoscrizioni, contratti di licenza o sui prezzi.|Posta elettronica o chiamare usando le informazioni di contatto nel [domande frequenti](https://www.xamarin.com/faq)|
 
 Il team di supporto Xamarin consente di monitorare ognuna di queste opzioni.  Che incoraggia la collaborazione tutti gli utenti per contribuire a quesiti con attenzione e report per poter sfruttare e aumentare la community degli sviluppatori di Xamarin esperto.  Per i difetti sospette, assicurarsi di inviare segnalazioni di bug, quando possibile, per garantire che i problemi sono rilevati formalmente dal team di progettazione di Xamarin.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: ce51511c58d7d0f5a14e487b57897bfa0e0b20b3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25a10fdcfc612d85875ba684fced3f188400b71e
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="graphics-and-animation"></a>Grafica e animazione
 
@@ -445,7 +445,7 @@ In questo articolo introdotti molti nuovi concetti e dell'API consentono di aggi
 - [Demo di animazione (esempio)](https://developer.xamarin.com/samples/monodroid/AnimationDemo)
 - [Grafica e animazione](http://developer.android.com/guide/topics/graphics/index.html)
 - [Utilizzo di animazioni per portare l'App per dispositivi mobili a vita](http://youtu.be/ikSk_ILg3d0)
-- [AnimationDrawable](https://developer.xamarin.comhttps://developer.xamarin.com/api/type/Android.Graphics.Drawables.AnimationDrawable/)
-- [Canvas](https://developer.xamarin.comhttps://developer.xamarin.com/api/type/Android.Graphics.Canvas/)
-- [Oggetto animatore](https://developer.xamarin.comhttps://developer.xamarin.com/api/type/Android.Animation.ObjectAnimator/)
-- [Valore animatore](https://developer.xamarin.comhttps://developer.xamarin.com/api/type/Android.Animation.ValueAnimator/)
+- [AnimationDrawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.AnimationDrawable/)
+- [Canvas](https://developer.xamarin.com/api/type/Android.Graphics.Canvas/)
+- [Oggetto animatore](https://developer.xamarin.com/api/type/Android.Animation.ObjectAnimator/)
+- [Valore animatore](https://developer.xamarin.com/api/type/Android.Animation.ValueAnimator/)
