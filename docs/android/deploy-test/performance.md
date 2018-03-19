@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 3871955f723d1b3aec6245bba0502ca4f955d64c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 825b566ed45e8c337a1a452ec2c76a23e6a16462
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="xamarinandroid-performance"></a>Prestazioni di Xamarin.Android
 
@@ -156,7 +156,7 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 
 Mentre l'utente scorre, [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/) chiama l'override di `GetView` per richiedere nuove visualizzazioni da mostrare. Se disponibili, passa una visualizzazione inutilizzata nel parametro `convertView`. Se questo valore è `null`, il codice crea una nuova istanza di [`View`](https://developer.xamarin.com/api/type/Android.Views.View/). In caso contrario, le proprietà `convertView` possono essere reimpostate e riutilizzate.
 
-Per altre informazioni, vedere [Row View Re-Use](~/android/user-interface/layouts/list-view/populating.md) (Riutilizzo della visualizzazione delle righe) in [Populating a ListView with Data](~/android/user-interface/layouts/list-view/populating.md) (Popolamento dei dati in ListView).
+Per altre informazioni, vedere [Row View Re-Use](~/android/user-interface/layouts/list-view/populating.md#row-view-re-use) (Riutilizzo della visualizzazione delle righe) in [Populating a ListView with Data](~/android/user-interface/layouts/list-view/populating.md) (Popolamento dei dati in ListView).
 
 <a name="removeeventhandlers" />
 

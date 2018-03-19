@@ -1,6 +1,6 @@
 ---
 title: Distribuzione wireless
-description: "Questa funzionalità di anteprima consente la distribuzione in dispositivi iOS o Apple TV tramite una connessione di rete"
+description: "Questa funzionalità consente la distribuzione in dispositivi iOS o Apple TV tramite una connessione di rete"
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
@@ -8,47 +8,40 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/09/2018
-ms.openlocfilehash: 11961a21a7c4188c505c822a35531036fd953405
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7566669fb7d607ca6616b88cb32b770537146c94
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="wireless-deployment"></a>Distribuzione wireless
 
-_Questa funzionalità di anteprima consente la distribuzione in dispositivi iOS o Apple TV tramite una connessione di rete_
-
-![Versione di anteprima](~/media/shared/preview.png)
-
-Una parte importante del flusso di lavoro di uno sviluppatore è la distribuzione in un dispositivo. In Xcode 9 è stata introdotta l'opzione per la distribuzione in un dispositivo iOS o in Apple TV tramite una rete, invece di dover collegare i dispositivi ogni volta che si vuole distribuire l'app ed eseguirne il debug. Questa funzionalità è stata introdotta in Visual Studio per Mac e Visual Studio versione 15.6, che è attualmente in anteprima.
+Una parte importante del flusso di lavoro di uno sviluppatore è la distribuzione in un dispositivo. In Xcode 9 è stata introdotta l'opzione per la distribuzione in un dispositivo iOS o in Apple TV tramite una rete, invece di dover collegare i dispositivi ogni volta che si vuole distribuire l'app ed eseguirne il debug. Questa funzionalità è stata introdotta in Visual Studio per Mac 7.4 e Visual Studio 15.6.
 
 In questa guida viene illustrato come eseguire l'associazione e la distribuzione in un dispositivo in rete.
 
 ## <a name="requirements"></a>Requisiti
 
-La distribuzione wireless è disponibile come funzionalità di **anteprima** sia in Visual Studio per Mac che in Visual Studio.
-
+La distribuzione wireless è disponibile come funzionalità sia in Visual Studio per Mac che in Visual Studio.
 
 Per usare la distribuzione wireless, è necessario quanto segue:
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 - macOS 10.12.4
-- Ultima versione di anteprima di Visual Studio per Mac 
-    - Per installarla, passare al [canale alfa o beta](https://docs.microsoft.com/en-us/visualstudio/mac/update) in Visual Studio per Mac.
+- Ultima versione di Visual Studio per Mac
 - Xcode 9.0 o versione successiva
 - Un dispositivo con iOS 11.0 o tvOS 11.0 e versioni successive
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-- Ultima [versione di anteprima](https://www.visualstudio.com/vs/preview/) di Visual Studio
+- Ultima versione di Visual Studio
 - Un dispositivo con iOS 11.0 o tvOS 11.0 e versioni successive
 
 Nell'host di compilazione Mac devono essere installati i componenti seguenti:
 
 - macOS 10.12.4
-- Anteprima di Visual Studio per Mac
-    - Per installarla, passare al [canale alfa o beta](https://docs.microsoft.com/en-us/visualstudio/mac/update) in Visual Studio per Mac.
+- Visual Studio per Mac
 - Xcode 9.0 o versione successiva
 
 -----

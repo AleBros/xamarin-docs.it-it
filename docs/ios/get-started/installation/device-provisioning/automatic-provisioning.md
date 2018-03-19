@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: asb3993
+ms.author: amburns
 ms.date: 11/17/2017
-ms.openlocfilehash: d7532d052c57ad46caca0cd6d6ce26d0e77dc05f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a411c214e35f78ff9d3dd8d4e9122702d66a2156
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="automatic-provisioning"></a>Provisioning automatico
 
@@ -34,23 +34,15 @@ Per firmare automaticamente l'app per la distribuzione in un dispositivo iOS, se
 
 1. Aprire un progetto iOS in Visual Studio per Mac.
 
-2. Aprire il file **Info.plist**:
+2. Aprire il file **Info.plist**.
 
-    ![File Info.plist](automatic-provisioning-images/image1.png)
-
-3. Nella sezione **Firma** selezionare il proprio team nell'elenco a discesa **Team**:
+3. Nella sezione **Firma** selezionare **Provisioning automatico**:
 
     ![Elenco a discesa per la selezione del team](automatic-provisioning-images/image2.png)
 
-4. Selezionare la casella di controllo **Automatically manage signing** (Gestisci automaticamente la firma), come illustrato nella figura seguente. Viene avviato il processo di firma automatica, in cui Visual Studio per Mac tenta di generare un ID app, un profilo di provisioning e un'identità di firma e di impostare l'uso di questi elementi per la firma. La selezione della casella di controllo disabilita i controlli manuali per la selezione delle identità di firma.
+4. Selezionare il team nell'elenco a discesa **Team**.
 
-    ![Opzione Automatically manage signing (Gestisci automaticamente la firma)](automatic-provisioning-images/image3.png)
-
-5. Si apre la finestra di dialogo seguente, che informa che il file di progetto verrà modificato in modo da usare il certificato e il profilo di provisioning appena generati:
-
-    ![Finestra di dialogo che informa che il file di progetto verrà modificato](automatic-provisioning-images/image4.png)
-
-6. Dopo alcuni secondi vengono creati e visualizzati un certificato di firma e un profilo di provisioning:
+6. Dopo alcuni secondi verranno creati un certificato di firma e un profilo di provisioning:
 
     ![Certificato e profilo creati correttamente](automatic-provisioning-images/image5.png)
 
