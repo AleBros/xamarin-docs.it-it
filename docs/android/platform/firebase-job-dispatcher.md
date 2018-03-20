@@ -7,12 +7,12 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: fd5b2f8c758d8e1e9bb9276da96a410c61478d4a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: c542237523b934cb8616fda6cefdcd969b7700bd
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Dispatcher processo firebase
 
@@ -27,7 +27,7 @@ Ad esempio, un processo in background può eseguire il polling un sito Web ogni 
 Android fornisce già diverse API per agevolare l'esecuzione di lavoro in background, ma nessuna di queste è una soluzione completa:
 
 * **[Servizi preventivi](~/android/app-fundamentals/services/creating-a-service/intent-services.md)**  &ndash; con finalità di servizi sono ideali per l'esecuzione del lavoro, ma non consentono di pianificare il lavoro.
-* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager)**  &ndash; queste API consente solo di lavoro pianificare, ma non consentono di eseguire effettivamente il lavoro. Inoltre, il AlarmManager consente solo limiti di tempo in base che si intende generare un avviso a una determinata ora o una volta trascorso un determinato periodo di tempo. 
+* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)**  &ndash; queste API consente solo di lavoro pianificare, ma non consentono di eseguire effettivamente il lavoro. Inoltre, il AlarmManager consente solo limiti di tempo in base che si intende generare un avviso a una determinata ora o una volta trascorso un determinato periodo di tempo. 
 * **[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)**  &ndash; JobSchedule il è un'API grande che funziona con il sistema operativo per pianificare i processi. Tuttavia è disponibile solo per tali App Android destinati a livello API 21 o superiore. 
 * **[Trasmissione ricevitori](~/android/app-fundamentals/broadcast-receivers.md)**  &ndash; app di Android è possibile configurare broadcast ricevitori per eseguire operazioni in risposta a eventi di sistema wide o tipi. Tuttavia, ricevitori broadcast non forniscono alcun controllo dell'esecuzione del processo deve essere. Limitano inoltre le modifiche nel sistema operativo Android quando è funzionerà ricevitori broadcast o i tipi di lavoro in grado di rispondere a. 
 * **Gestione di rete di Google Cloud messaggi** &ndash; per un lungo periodo senza dubbio, questo è il modo migliore per intelligente in background di pianificazione di lavoro. Tuttavia, il GCMNetworkManager poiché è stato deprecato. 

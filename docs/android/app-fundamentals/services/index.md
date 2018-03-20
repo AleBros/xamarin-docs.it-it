@@ -7,12 +7,12 @@ ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/16/2018
-ms.openlocfilehash: 5dc1fb0fb02014e123b3a161394155bde725f288
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: 08392872037783e0caaef4f2b19127adbe95151b
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="creating-android-services"></a>Creazione di servizi di Android
 
@@ -43,7 +43,7 @@ Operazioni in background possono essere suddivisi in due ampie classificazioni:
 
 Esistono quattro tipi diversi di servizi Android:
 
-* **Servizio associato** &ndash; A _associato servizio_ è un servizio che dispone di un altro componente (in genere un'attività) a esso associato. Un servizio associato fornisce un'interfaccia che consente al servizio di interagire tra loro e il componente associato. Una volta non sono presenti più client associato al servizio, Android verrà arrestato il servizio.
+* **Servizio associato** &ndash; A _associato servizio_ è un servizio che dispone di un altro componente (in genere un'attività) a esso associato. Un servizio associato fornisce un'interfaccia che consente al servizio di interagire tra loro e il componente associato. Una volta non sono presenti più client associato al servizio, Android verrà arrestato il servizio. 
 
 * **`IntentService`** &ndash; Un  _`IntentService`_  è una sottoclasse specializzata della `Service` classe che semplifica la creazione del servizio e l'utilizzo. Un `IntentService` è progettato per gestire singole chiamate autonome. A differenza di un servizio, che può gestire contemporaneamente più chiamate, un `IntentService` è più simile a un _processore della coda di lavoro_ &ndash; lavoro viene messo in coda e un `IntentService` elabora ogni processo uno alla volta in un singolo thread di lavoro. In genere, un`IntentService` non è associato a un'attività o un frammento. 
 
@@ -57,4 +57,26 @@ Mentre la maggior parte dei servizi vengono eseguiti in background, è una sotto
 
 È anche possibile eseguire un servizio nel proprio processo sullo stesso dispositivo, questa talvolta detta un _servizio remoto_ o come un _servizio out-of-process_. Questo richiede ulteriori operazioni per creare, ma può essere utile per quando un'applicazione deve condividere funzionalità con altre applicazioni e può, in alcuni casi, migliorare l'esperienza utente di un'applicazione. 
 
-Ognuno di questi servizi presenta caratteristiche e comportamenti e pertanto verrà trattato in modo più dettagliato nelle proprie Guide.
+### <a name="background-execution-limits-in-android-80"></a>Limiti di esecuzione in background in Android 8.0
+
+Avvio in Android 8.0 (livello API 26), non è più un'applicazione Android hanno la possibilità di eseguire liberamente in background. In primo piano, un'app può avviare ed eseguire servizi senza alcuna restrizione. Quando si sposta un'applicazione in background, Android concederà l'app un determinato periodo di tempo per avviare e utilizzare i servizi. Una volta trascorso tale tempo, l'app non è più possibile avviare qualsiasi servizio e tutti i servizi che sono stati avviati verranno terminati. In questo punto non è possibile per l'app eseguire le operazioni. Android prende in considerazione un'applicazione può essere in primo piano, se viene soddisfatta una delle condizioni seguenti:
+
+* È un'attività visibile (avviato o sospeso).
+* L'app ha avviato un servizio di primo piano.
+* Un'altra app in primo piano e utilizza i componenti da un'app che sarebbe altrimenti in background. Un esempio di ciò è se un'applicazione, che è in primo piano, è associata a un servizio fornito da applicazione B. applicazione B quindi anche sarebbe considerato in primo piano e non è stata terminata da Android per in background.
+
+Esistono alcune situazioni in cui, anche se un'app è in background, Android verrà riattivare l'app e ridurre le restrizioni per alcuni minuti, consentendo all'app di eseguire alcune operazioni:
+* Una priorità alta Firebase Cloud messaggio viene ricevuta dall'app.
+* L'app riceve una trasmissione, ad esempio 
+* L'applicazione riceve un viene eseguito un `PendingIntent` in risposta a una notifica.
+
+Le applicazioni di xamarin. Android esistenti potrebbero essere necessario modificare la modalità eseguono operazioni in background per evitare eventuali problemi che potrebbero verificarsi in Android 8.0. Ecco alcuni alterantives pratiche a un servizio Android:
+
+* **Pianificare il lavoro eseguito in background tramite il pianificatore di processi Android o il [Firebase processo Dispatcher](~/android/platform/firebase-job-dispatcher.md)**  &ndash; queste due librerie forniscono un framework per le applicazioni di separare attività in background per _processi_, un'unità di lavoro discreta. Le app possono quindi pianificare il processo con il sistema operativo e alcuni criteri su quando è possibile eseguire i processi.
+* **Avviare il servizio in primo piano** &ndash; un servizio di primo piano è utile quando l'app deve eseguire alcune attività in background e l'utente potrebbe essere necessario periodicamente interagire con tale attività. Il servizio di primo piano verrà visualizzato un avviso permanente in modo che l'utente è a conoscenza che l'app è in esecuzione un'attività in background e fornisce inoltre un modo per monitorare o interagire con l'attività. Un esempio di questo oggetto può essere un'app il podcast riproduzione di un podcast all'utente o forse scaricato un episodio di podcast in modo che è in uso in un secondo momento. 
+* **Utilizzare una priorità alta Firebase Cloud messaggio (FCM)** &ndash; Android quando riceve una priorità alta FCM per un'app, consentirà di tale app eseguire i servizi in background per un breve periodo di tempo. Potrebbe trattarsi di una valida alternativa alla disponibilità di un servizio in background che esegue il polling di un'applicazione in background. 
+* **Rinviare per quando l'app passa in primo piano** &ndash; se nessuna delle soluzioni precedente sia valida, quindi App necessario sviluppare le proprie possibilità di sospendere e riprendere il lavoro quando l'app passa in primo piano.
+
+## <a name="related-links"></a>Collegamenti correlati
+
+* [Consente di limitare l'esecuzione in Background Oreo Android](https://www.youtube.com/watch?v=Pumf_4yjTMc)

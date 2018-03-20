@@ -7,26 +7,26 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c98d4100a758e624c851ed2294cfe0c6b7f16fdd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7d320b3fc40c852c337e5fd1e9bda4e90920cf70
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="xib-code-generation"></a>Generazione di codice .xib
 
 > [!IMPORTANT]
 >  Questo documento viene illustrato Visual Studio per l'integrazione del Mac con generatore del Xcode di interfaccia a solo come azioni e prese non vengono utilizzate nella finestra di progettazione di Xamarin per iOS. Per ulteriori informazioni sulla finestra di progettazione iOS, consultare il [iOS progettazione](~/ios/user-interface/designer/index.md) documento.
 
-Lo strumento generatore di interfaccia di Apple ("b") può essere utilizzato per progettare visivamente interfacce utente. Le definizioni di interfaccia create da IB vengono salvate in **.xib** file. Widget e altri oggetti nel **.xib** file possono essere assegnati a una "classe identity", che può essere un tipo personalizzato definito dall'utente. Ciò consente personalizzare il comportamento di widget e per scrivere widget personalizzati.
+Lo strumento generatore di interfaccia di Apple ("b") può essere utilizzato per progettare visivamente interfacce utente. Le definizioni di interfaccia create da IB vengono salvate in **.xib** file. Widget e altri oggetti nel **.xib** file possono essere assegnati a una "classe identity", che può essere un tipo personalizzato definito dall'utente. In questo modo è possibile personalizzare il comportamento di widget e scrivere widget personalizzati.
 
-Queste classi utente sono in genere sottoclassi delle classi controller dell'interfaccia utente. Questi ultimi includono *prese* (analoghe alle proprietà) e *azioni* (analoghi agli eventi) che può essere connesso a oggetti dell'interfaccia. In fase di esecuzione, quando viene caricato il file IB, vengono creati gli oggetti e i punti vendita e le azioni sono connessi in modo dinamico ai vari oggetti dell'interfaccia utente. Quando si definiscono le classi gestite, è necessario definire tutte le azioni e le prese a corrispondano a quelli che IB prevista. Visual Studio per Mac utilizza un modello simile CodeBehind per semplificare l'operazione. Questa operazione è simile a ciò che esegue Xcode per Objective-C, ma il modello di generazione del codice e le convenzioni sono stata modificate per essere più note agli sviluppatori di .NET.
+Queste classi utente sono in genere sottoclassi delle classi controller dell'interfaccia utente. Hanno *prese* (analoghe alle proprietà) e *azioni* (analoghi agli eventi) che può essere connesso a oggetti dell'interfaccia. In fase di esecuzione, quando viene caricato il file IB, vengono creati gli oggetti e i punti vendita e le azioni sono connessi in modo dinamico ai vari oggetti dell'interfaccia utente. Quando si definiscono le classi gestite, è necessario definire tutte le azioni e le prese a corrispondano a quelli che IB prevista. Visual Studio per Mac utilizza un modello simile CodeBehind per semplificare l'operazione. Questa operazione è simile a ciò che esegue Xcode per Objective-C, ma il modello di generazione del codice e le convenzioni sono stata modificate per essere più note agli sviluppatori di .NET.
 
 Utilizzo di **.xib** file non è attualmente supportato in xamarin per Visual Studio.
 
 ## <a name="xib-files-and-custom-classes"></a>.xib file e le classi personalizzate
 
-Nonché utilizza tipi esistenti da Cocoa tocco, è possibile definire tipi personalizzati in **.xib** file. È inoltre possibile utilizzare i tipi definiti in altre **.xib** file oppure definito esclusivamente nel codice c#. Attualmente, il generatore di interfaccia non è compatibile con i dettagli dei tipi definiti all'esterno di corrente **.xib** file, in modo non elencarli o Mostra le prese personalizzate. Rimozione di questa limitazione è pianificata in futuro.
+Nonché utilizza tipi esistenti da Cocoa tocco, è possibile definire tipi personalizzati in **.xib** file. È inoltre possibile utilizzare i tipi definiti in altre **.xib** file oppure definito esclusivamente nel codice c#. Attualmente, non è compatibile con il dettaglio dei tipi definiti all'esterno di corrente interfaccia generatore **.xib** file, in modo non verrà elencarli né mostra le prese personalizzate e le azioni. Rimozione di questa limitazione è pianificata in futuro.
 
 Le classi personalizzate possono essere definite in un **.xib** file utilizzando il comando "Aggiungere sottoclasse" nella scheda "Classi" del generatore di interfaccia. Viene fatto riferimento a queste classi "CodeBehind". Se il **.xib** file ha un ". xib.designer.cs" file controparte nel progetto, quindi Visual Studio per Mac verrà automaticamente riempirla con definizioni di classi parziali per tutte le classi personalizzate presenti il **.xib**. Viene fatto riferimento a queste classi parziali come "classi della finestra di progettazione".
 
@@ -42,7 +42,7 @@ Visual Studio per Mac genera le classi della finestra di progettazione utilizza 
 
 Per rendere visibile la classe dal runtime Objective-C, Visual Studio per Mac si applica un `[Register (name)]` attributo alla classe. Sebbene xamarin registra automaticamente `NSObject`-classi derivate, vengono utilizzati i nomi di .NET completo. L'attributo applicato da Visual Studio per Mac esegue l'override di questa opzione per verificare che ogni classe è registrato con il nome utilizzato nella **.xib** file. Se si utilizzano le classi personalizzate in IB senza utilizzare Visual Studio per Mac per generare i file della finestra di progettazione, è necessario applicare manualmente per rendere le classi gestite corrispondano ai nomi di classe Objective-C previsto.
 
-Le classi non possono essere definite in più di un **.xib**, o sono in conflitto.
+Le classi non possono essere definite in più di una **.xib**, o sono in conflitto.
 
 ## <a name="non-designer-class-parts"></a>Parti di classe non è una finestra di progettazione
 
@@ -60,9 +60,9 @@ Nella finestra di progettazione classi parziali, Visual Studio per Mac genera pr
 
 ### <a name="outlet-properties"></a>Proprietà di uscita
 
-Classi della finestra di progettazione che contengono le proprietà corrispondenti a tutte le altre definite nella classe personalizzata. Il fatto che si tratta di proprietà è un dettaglio di implementazione di xamarin. IOS Bridge Objective C, per consentire l'associazione differita. È consigliabile che siano equivalenti campi privati, deve essere utilizzata solo dalla classe CodeBehind. Se si desidera renderli pubblici, aggiungere le proprietà della funzione di accesso per la parte di classe non è una finestra di progettazione come si farebbe per qualsiasi altro campo privato.
+Classi della finestra di progettazione che contengono le proprietà corrispondenti a tutte le altre definite nella classe personalizzata. Il fatto che si tratta di proprietà è un dettaglio di implementazione di xamarin. IOS Bridge Objective C, per consentire l'associazione differita. È consigliabile che siano equivalenti ai campi privati, dovrà essere utilizzato solo dalla classe CodeBehind. Se si desidera renderli pubblici, aggiungere le proprietà delle funzioni di accesso per la parte di classe non è una finestra di progettazione, come si farebbe per qualsiasi altro campo privato.
 
-Se per un tipo di sono definite proprietà presa **id** (equivalente a `NSObject`), quindi il generatore di codice della finestra di progettazione attualmente determina il tipo di possibili più attendibili in base a oggetti collegati a tale punto, per motivi di praticità.
+Se le proprietà presa sono definite per un tipo di `id` (equivalente a `NSObject`), quindi il generatore di codice della finestra di progettazione attualmente determina il tipo di possibili più attendibili in base a oggetti collegati a quel punto, per praticità.
 Tuttavia, questo potrebbe non essere supportato nelle versioni future, pertanto si consiglia di tipo in modo esplicito fortemente prese durante la definizione di classe personalizzata.
 
 ### <a name="action-properties"></a>Proprietà azione
@@ -70,12 +70,12 @@ Tuttavia, questo potrebbe non essere supportato nelle versioni future, pertanto 
 Progettazione classi contengono metodi parziali corrispondenti a tutte le azioni definite nella classe personalizzata. Questi sono metodi senza alcuna implementazione. Lo scopo dei metodi parziali è duplice:
 
 1.  Se si digita `partial` nel corpo della classe della parte di classe non è una finestra di progettazione, Visual Studio per Mac sarà disponibile per il completamento automatico le firme di tutti i metodi parziali non implementato.
-1.  Le firme del metodo parziale hanno un attributo applicato che espone al mondo Objective-C, in modo possono ottenere gestiti per l'azione corrispondente.
+2.  Le firme del metodo parziale avere un attributo applicato che li espone con il mondo Objective-C, in modo che vengono gestiti come l'azione corrispondente.
 
 
 Se si desidera, si può ignorare il metodo parziale e implementare l'azione applicando l'attributo a un metodo diverso o si lascia passare a una classe di base.
 
-Se le azioni definite per un tipo di mittente di `id` (equivalente a `NSObject`), quindi il generatore di codice della finestra di progettazione attualmente determina il tipo di possibili più attendibili in base a oggetti collegati a tale azione. Tuttavia, questo potrebbe non essere supportato nelle versioni future, pertanto si consiglia di tipo in modo esplicito fortemente le azioni quando si definisce la classe personalizzata.
+Se le azioni vengono definite per un tipo di mittente di `id` (equivalente a `NSObject`), quindi il generatore di codice della finestra di progettazione attualmente determina il tipo di possibili più attendibili in base a oggetti collegati a tale azione. Tuttavia, questo potrebbe non essere supportato nelle versioni future, pertanto si consiglia di tipo in modo esplicito fortemente le azioni quando si definisce la classe personalizzata.
 
 Si noti che questi metodi parziali vengono creati solo per c#, perché CodeDOM non supporta i metodi parziali, in modo che non vengono generati per le altre lingue.
 
@@ -83,10 +83,10 @@ Si noti che questi metodi parziali vengono creati solo per c#, perché CodeDOM n
 
 In alcuni casi, gli utenti desiderano fare riferimento alla stessa classe da più **.xib** file, ad esempio con i controller di scheda. Questa operazione può essere eseguita da esplicitamente la definizione della classe di riferimento da un altro **.xib** file o definendo lo stesso nome di classe tra il secondo **.xib**.
 
-Quest'ultimo caso può risultare problematico. Si tratta fino a Visual Studio per l'elaborazione Mac **.xib** file singolarmente. Impossibile e rileva automaticamente merge definizioni duplicate, pertanto si rischia di con conflitti applicando l'attributo di registro più volte quando nella stessa classe parziale è definita in più file di progettazione. Le versioni recenti di Visual Studio per Mac tentano di risolvere il problema, ma ciò potrebbe non funzionare come previsto. In futuro è probabile che diventi non supportato e invece Visual Studio per Mac renderà tutti i tipi definiti in tutte **.xib** file e codice gestito nel progetto direttamente visibile da tutti **.xib** file.
+Quest'ultimo caso può essere problematico a causa di Visual Studio per l'elaborazione Mac **.xib** file singolarmente. Impossibile e rileva automaticamente merge definizioni duplicate, pertanto si rischia di con conflitti applicando l'attributo di registro più volte quando nella stessa classe parziale è definita in più file di progettazione. Le versioni recenti di Visual Studio per Mac tentano di risolvere il problema, ma potrebbe non funzionare come previsto. In futuro è probabile che diventi non supportato e invece Visual Studio per Mac renderà tutti i tipi definiti in tutte le **.xib** file e codice gestito nel progetto direttamente visibile da tutti **.xib** file.
 
 ## <a name="type-resolution"></a>Risoluzione del tipo
 
-Tipi usati nel IB sono i nomi dei tipi di Objective-C. Questi sono mappati a tipi CLR tramite l'utilizzo di attributi di registrazione. Durante la generazione di codice di uscita e l'azione, Visual Studio per Mac risolvere i tipi CLR corrispondenti per tutti i tipi di Objective-C racchiuso tra i principali di xamarin. IOS e i relativi nomi di tipo completi.
+Tipi usati nel IB sono i nomi dei tipi di Objective-C. Questi vengono mappati ai tipi CLR tramite l'utilizzo di attributi di registro. Durante la generazione di codice di uscita e l'azione, Visual Studio per Mac risolvere i tipi CLR corrispondenti per tutti i tipi di Objective-C racchiuso tra i principali di xamarin. IOS e i relativi nomi di tipo completi.
 
 Il generatore di codice, tuttavia, non è possibile risolvere i tipi CLR dai nomi di tipo Objective-C nel codice utente o in librerie, attualmente pertanto in tali casi viene restituito il nome del tipo verbatim. Ciò significa che il tipo CLR corrispondente deve avere lo stesso nome del tipo Objective-C e stesso spazio dei nomi del codice che lo usa. Questo prevista con è il momento in futuro considerando tutti i tipi di Objective-C nel progetto durante la generazione di codice.

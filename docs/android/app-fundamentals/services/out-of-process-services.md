@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: 0f018aa666f08792a1693a79e22da150f82712f6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ebbb4b527b27b87bb6357723978e730304658720
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="running-android-services-in-remote-processes"></a>Servizi in esecuzione Android nei processi remoti
 
@@ -415,7 +415,7 @@ Un esempio semplificato di creazione di un oggetto personalizzato `normal` autor
 
 Per utilizzare un'autorizzazione personalizzata, viene dichiarato dal servizio mentre il client richiede in modo esplicito l'autorizzazione.
 
-Per creare un'autorizzazione nel servizio file, APK un `permission` elemento viene aggiunto al `manifest` elemento**AndroidManifest.xml**. Questa autorizzazione deve avere il `name`, `protectionLevel`, e `label` set di attributi. Il `name` attributo deve essere impostato su una stringa che identifica in modo univoco l'autorizzazione. Il nome verrà visualizzato nel **App Info** visualizzare il **impostazioni Android** (come illustrato nella sezione successiva).
+Per creare un'autorizzazione nel servizio file APK, un `permission` elemento viene aggiunto per il `manifest` elemento **androidmanifest. XML**. Questa autorizzazione deve avere il `name`, `protectionLevel`, e `label` set di attributi. Il `name` attributo deve essere impostato su una stringa che identifica in modo univoco l'autorizzazione. Il nome verrà visualizzato nel **App Info** visualizzare il **impostazioni Android** (come illustrato nella sezione successiva).
 
 Il `protectionLevel` attributo deve essere impostato su uno dei valori di stringa di quattro descritta in precedenza.  Il `label` e `description` deve fare riferimento alle risorse stringa e vengono utilizzati per fornire un nome descrittivo e una descrizione per l'utente.
 
