@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: edf25ebd089994c01b2fa45e77b35fad9a51e350
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 70f17b6bc8dc991534cdf4dd065c813aa0e27e96
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="java-bindings-metadata"></a>Metadati di binding di linguaggio
 
@@ -314,7 +314,7 @@ Il **EnumFields.xml** file contiene il mapping tra Java `int` costanti e c# `enu
 </mapping>
 ```
 
-Qui abbiamo adottato la classe Java `SKRealReachSettings` e definita un'enumerazione c# denominata `SKRealReachSettings` nello spazio dei nomi `Skobbler.Ngx.Map.RealReach`. Il `field` voci definisce il nome della costante Java (esempio `UNIT\_SECOND`), il nome della voce enum (esempio `Second`) e il valore intero rappresentato da entrambe le entità (esempio `0`). 
+Qui abbiamo adottato la classe Java `SKRealReachSettings` e definita un'enumerazione c# denominata `SKMeasurementUnit` nello spazio dei nomi `Skobbler.Ngx.Map.RealReach`. Il `field` voci definisce il nome della costante Java (esempio `UNIT_SECOND`), il nome della voce enum (esempio `Second`) e il valore intero rappresentato da entrambe le entità (esempio `0`). 
 
 ### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>Definire i metodi di Getter/Setter usando EnumMethods.xml
 
@@ -329,7 +329,7 @@ Dato il `SKRealReachSettings` enum definiti in precedenza, le operazioni seguent
 </mapping>
 ```
 
-Il primo `method` riga esegue il mapping il valore restituito di Java `getMeasurementUnit` metodo il `SKRealReachSettings` enum. Il secondo `method` viene eseguito il mapping il primo parametro della riga di `setMeasurementUnit` all'enumerazione stessa.
+Il primo `method` riga esegue il mapping il valore restituito di Java `getMeasurementUnit` metodo il `SKMeasurementUnit` enum. Il secondo `method` viene eseguito il mapping il primo parametro della riga di `setMeasurementUnit` all'enumerazione stessa.
 
 Con tutte le modifiche sul posto, è possibile utilizzare il codice seguente in xamarin per impostare il `MeasurementUnit`: 
 

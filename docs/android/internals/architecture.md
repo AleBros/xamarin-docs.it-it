@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 47f90af1ed68e6c3aea5710b7181b4787fc0895c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9834da444032622cc3547e7c99ca3de0e41bb603
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="architecture"></a>Architettura
 
@@ -33,7 +33,7 @@ Per ulteriori informazioni sulla modalità di comunicazione con le classi di Run
 
 Pacchetti di applicazioni Android sono contenitori ZIP con un *apk* estensione di file. Pacchetti di applicazioni xamarin avere la stessa struttura e layout come pacchetti Android normale, con le seguenti aggiunte:
 
--   Gli assembly dell'applicazione (contenente IL) sono *archiviati* non compressa all'interno di *assembly* cartella. Durante il processo di avvio in versione compila il *apk* è *mmap()* ed in processo e gli assembly vengono caricati dalla memoria. In tal modo l'avvio più rapido delle app, come gli assembly non devono necessariamente essere estratto prima dell'esecuzione. - *Nota:* le informazioni sul percorso di Assembly, ad esempio [Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/) e [Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
+-   Gli assembly dell'applicazione (contenente IL) sono *archiviati* non compressa all'interno di *assembly* cartella. Durante il processo di avvio in versione compila il *apk* è *mmap()* ed in processo e gli assembly vengono caricati dalla memoria. In tal modo avvio più rapido delle app, come gli assembly non devono essere estratti prima dell'esecuzione. - *Nota:* le informazioni sul percorso di Assembly, ad esempio [Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/) e [Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
     *non può essere ritenuto affidabile* nella versione compilazioni. Non sono disponibili come voci filesystem distinti e non dispongono di alcun percorso utilizzabile.
 
 

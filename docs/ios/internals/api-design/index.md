@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 9bebc33affef4a1a25667039dfcdbe345dbd2cd6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8c336799a4d46359a78432837101dad43b572aea
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="api-design"></a>Progettazione delle API
 
@@ -494,6 +494,7 @@ I nomi in c# per i metodi non sono importanti, tutto ciò che è importante sono
 
 Quando si utilizza questo stile di programmazione, assicurarsi che i parametri c# corrispondono i tipi effettivi che verrà passati il motore di runtime.
 
+<a name="Models" />
 
 #### <a name="models"></a>Modelli
 

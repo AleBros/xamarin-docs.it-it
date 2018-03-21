@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: ffde89558495c4b9ccb9ec41761b5fc7ca53db38
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e04ea24883bdf1e29a538aaff92c555df8e1755f
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="localization"></a>Localizzazione
 
@@ -21,22 +21,6 @@ _App xamarin. Forms possono essere localizzate mediante i file di risorse .NET._
 ## <a name="overview"></a>Panoramica
 
 Il meccanismo predefinito per la localizzazione di applicazioni .NET viene utilizzato [file RESX](http://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx) e le classi di `System.Resources` e `System.Globalization` spazi dei nomi. I file RESX che contiene le stringhe tradotte sono incorporati nell'assembly xamarin. Forms, insieme a una classe generata dal compilatore che fornisce accesso fortemente tipizzato per le traduzioni. Il testo di conversione può essere recuperato nel codice.
-
-Questo documento contiene le seguenti sezioni:
-
-**Globalizzazione di xamarin. Forms**
-
-* Aggiunta e l'utilizzo di risorse di tipo stringa in un'app xamarin. Forms PCL.
-* Abilitazione del rilevamento di lingua in ognuna delle App native.
-
-**Localizzazione XAML**
-
-* Localizzazione XAML utilizzando un `IMarkupExtension`.
-* Abilitazione dell'estensione di markup in App native.
-
-**Localizzazione di elementi specifici della piattaforma**
-
-* La localizzazione di immagini e il nome dell'applicazione in App native.
 
 ### <a name="sample-code"></a>Codice di esempio
 
@@ -651,15 +635,17 @@ using Xamarin.Forms.Xaml;
 
 namespace UsingResxLocalization
 {
-    // You exclude the 'Extension' suffix when using in Xaml markup
-    [ContentProperty ("Text")]
+    // You exclude the 'Extension' suffix when using in XAML
+    [ContentProperty("Text")]
     public class TranslateExtension : IMarkupExtension
     {
-        readonly CultureInfo ci;
+        readonly CultureInfo ci = null;
         const string ResourceId = "UsingResxLocalization.Resx.AppResources";
 
-        private static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(()=> new ResourceManager(ResourceId
-                                                                                                                  , typeof(TranslateExtension).GetTypeInfo().Assembly));
+        static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(
+            () => new ResourceManager(ResourceId, IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly));
+
+        public string Text { get; set; }
 
         public TranslateExtension()
         {
@@ -669,24 +655,21 @@ namespace UsingResxLocalization
             }
         }
 
-        public string Text { get; set; }
-
-        public object ProvideValue (IServiceProvider serviceProvider)
+        public object ProvideValue(IServiceProvider serviceProvider)
         {
             if (Text == null)
-                return "";
+                return string.Empty;
 
             var translation = ResMgr.Value.GetString(Text, ci);
-
             if (translation == null)
             {
-                #if DEBUG
+#if DEBUG
                 throw new ArgumentException(
-                    String.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
+                    string.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
                     "Text");
-                #else
-                translation = Text; // returns the key, which GETS DISPLAYED TO THE USER
-                #endif
+#else
+                translation = Text; // HACK: returns the key, which GETS DISPLAYED TO THE USER
+#endif
             }
             return translation;
         }
@@ -699,7 +682,7 @@ L'elenco riportato di seguito illustrano gli elementi importanti nel codice prec
 * La classe è denominata `TranslateExtension`, ma per convenzione, è possibile fare riferimento a è come **Traduci** nel nostro codice.
 * La classe implementa `IMarkupExtension`, richiesto dal xamarin. Forms per il funzionamento.
 * `"UsingResxLocalization.Resx.AppResources"` è l'identificatore di risorsa per le risorse RESX. È costituito il nostro spazio dei nomi predefinito, la cartella in cui si trovano i file di risorse e il nome del file RESX predefinito.
-* Il `ResourceManager` classe viene creata utilizzando `typeof(TranslateExtension)` per determinare l'assembly dal quale caricare risorse corrente.
+* Il `ResourceManager` classe viene creata utilizzando `IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)` per determinare l'assembly corrente per caricare le risorse e memorizzati nella cache in statica `ResMgr` campo. Viene creata come un `Lazy` tipo in modo che la sua creazione viene posticipata finché non si utilizza innanzitutto nel `ProvideValue` metodo.
 * `ci` Usa il servizio di dipendenza per ottenere la lingua dell'utente scelto dal sistema operativo nativo.
 * `GetString` il metodo che recupera la stringa tradotta effettiva dal file delle risorse. In Windows Phone 8.1 e la piattaforma Windows universale, `ci` sarà null perché il `ILocalize` interfaccia non è implementata in tali piattaforme. Questo è equivalente alla chiamata di `GetString` metodo solo con il primo parametro. Al contrario, il framework di risorse riconoscerà automaticamente le impostazioni locali e recupererà la stringa tradotta dal file RESX appropriato.
 * Gestione degli errori è stato incluso per facilitare il debug delle risorse mancanti generando un'eccezione (in `DEBUG` solo in modalità).
