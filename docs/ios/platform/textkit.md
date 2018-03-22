@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 7ae41e99d20f0e8f3cad6b933e415002903a3294
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d3a370c3a8d930c817d38422b249b496532fa33f
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="text-kit"></a>Text Kit
 
@@ -143,7 +143,7 @@ public class ExclusionPathView : UITextView
 Questo codice aggiunge il supporto per il disegno nella visualizzazione di testo con grafica di base. Poiché la `UITextView` classe è ora compilata per usare il Kit di testo per il rendering del testo e layout, è possibile utilizzare tutte le funzionalità del Kit di testo, ad esempio l'impostazione dei percorsi di esclusione.
 
 > [!IMPORTANT]
->   Nota: Questo esempio le sottoclassi `UITextView` per aggiungere il supporto di disegno tocco. Creazione di sottoclassi `UITextView` non è necessario per ottenere le funzionalità del Kit di testo.
+> Le sottoclassi questo esempio `UITextView` per aggiungere il supporto di disegno tocco. Creazione di sottoclassi `UITextView` non è necessario per ottenere le funzionalità del Kit di testo.
 
 
 

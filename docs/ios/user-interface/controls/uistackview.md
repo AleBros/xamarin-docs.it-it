@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 82bcd29a201be01bc8123e313e5a76b82668cb85
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b8d3fc920610b357520dfebddb79492c44d4781c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="stack-view"></a>Visualizzazione dello stack
 
@@ -62,7 +62,7 @@ Dove:
 Quando si lavora con una visualizzazione dello Stack, è possibile considerare il **allineamento** come il **X** e **Y** sede la visualizzazione secondaria e **distribuzione** come il **Altezza** e **larghezza**.
 
 > [!IMPORTANT]
-> **Nota:** `UIStackView` è progettato come una visualizzazione del contenitore non per il rendering e di conseguenza, non viene disegnato nell'area di lavoro come le altre sottoclassi di `UIView`. Pertanto l'impostazione di proprietà, ad esempio `BackgroundColor` o si esegue l'override `DrawRect` non avrà alcun effetto visivo.
+> `UIStackView` è progettato come una visualizzazione del contenitore non per il rendering e di conseguenza, non viene disegnato all'area di disegno, ad esempio altri sottoclassi di `UIView`. Pertanto l'impostazione di proprietà, ad esempio `BackgroundColor` o si esegue l'override `DrawRect` non avrà alcun effetto visivo.
 
 Continuare a layout dell'interfaccia dell'app aggiungendo un'etichetta, ImageView, due pulsanti e una visualizzazione Stack orizzontale in modo che risulti simile al seguente:
 
@@ -209,7 +209,7 @@ Se il `BaselineRelativeArrangement` proprietà `true`, le sottoviste verranno di
  - Una visualizzazione Stack orizzontale utilizzerà la più alta secondaria per la base e il cognome. Se la vista più alta è anche una visualizzazione dello Stack, utilizzerà la più alta secondaria come linea di base.
 
 > [!IMPORTANT]
-> **Nota:** l'allineamento della linea di base non funziona sulle dimensioni di visualizzazione secondaria allungato o compresso come verrà calcolata la linea di base in posizione errata. Per l'allineamento della linea di base, verificare che la visualizzazione secondaria **altezza** corrisponde la visualizzazione contenuto intrinseco **altezza**.
+> Allineamento della linea di base non funziona sulle dimensioni di visualizzazione secondaria allungato o compresso come verrà calcolata la linea di base in posizione errata. Per l'allineamento della linea di base, verificare che la visualizzazione secondaria **altezza** corrisponde la visualizzazione contenuto intrinseco **altezza**.
 
 ### <a name="common-stack-view-uses"></a>Utilizzi comuni di vista dello Stack
 

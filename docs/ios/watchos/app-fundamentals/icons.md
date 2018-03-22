@@ -6,11 +6,11 @@ ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 6d80ef6bdac7f35b282f6347a0356453a413b39c
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 2961eb4726b9f313d01f8bc075e5ca362d708e92
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-icons"></a>Utilizzo di icone
 
@@ -79,7 +79,7 @@ Una volta il [app padre](~/ios/watchos/app-fundamentals/parent-app.md) ha config
 È possibile verificare le icone vengono configurate corretto controllando il [Apple Watch impostazioni app](~/ios/watchos/app-fundamentals/settings.md) il simulatore di iPhone o generando un [notifica](~/ios/watchos/platform/notifications.md) e conferma l'icona verrà visualizzata la notifica schermata.
 
 > [!NOTE]
-> **Nota**: icone non possono avere un canale alfa (l'app verrà rifiutato durante l'invio allo Store di App se è presente un canale alfa). È possibile verificare se un canale alfa di rimuoverlo [tramite l'app di anteprima in Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
+> Le icone non possono avere un canale alfa (l'app verrà rifiutato durante l'invio allo Store di App se è presente un canale alfa). È possibile verificare se un canale alfa di rimuoverlo [tramite l'app di anteprima in Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
 
 
 ## <a name="related-links"></a>Collegamenti correlati

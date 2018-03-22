@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 77bad4c31ad0cb11476c656aa495707d2a94aa8f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2282a340811d9932f9df3a1343b22ffc35247e54
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="workout-apps"></a>App allenamenti
 
@@ -472,7 +472,7 @@ Anche nuovi watchOS 3, sono il movimento in pausa (`HKWorkoutEventType.MotionPau
 Quando l'app riceve un evento sospeso di movimento, è necessario arrestare la raccolta dei dati fino a quando l'utente riprende movimento e viene ricevuto l'evento movimento riprende. App per le app non sospendere la sessione allenamenti in risposta a un evento sospeso di movimento.
 
 > [!IMPORTANT]
-> **Nota:** gli eventi di movimento sospesa e ripresa di movimento sono supportati solo per il tipo di attività RunningWorkout (`HKWorkoutActivityType.Running`).
+> Gli eventi di movimento sospesa e ripresa di movimento sono supportati solo per il tipo di attività RunningWorkout (`HKWorkoutActivityType.Running`).
 
 Nuovamente, questi eventi possono essere gestiti eseguendo l'override di `DidGenerateEvent` metodo il `HKWorkoutSessionDelegate`:
 
@@ -649,7 +649,7 @@ Esaminare il funzionamento di questo processo:
 3. Utilizza il valore passato nella configurazione allenamenti, una nuova sessione allenamenti di avvio dell'app watchOS 3 (`HKWorkoutSession`).
 
 > [!IMPORTANT]
-> **Nota:** affinché l'app iPhone padre per l'avvio accinge nel Apple Watch, l'app watchOS 3 deve essere in Background in esecuzione abilitato. Vedere [attivazione in esecuzione in Background](#Enabling-Background-Running) sopra per altri dettagli.
+> Affinché l'app iPhone padre avviare accinge nel Apple Watch, l'app watchOS 3 deve essere in esecuzione in Background abilitate. Vedere [attivazione in esecuzione in Background](#Enabling-Background-Running) sopra per altri dettagli.
 
 Questo processo è molto simile al processo di avvio di una sessione di allenamenti nell'app watchOS 3 direttamente. In un iPhone, utilizzare il codice seguente:
 
@@ -764,7 +764,7 @@ Richiede tutte le informazioni contenute nel presente documento, un'app di base 
 3. **watchOS 3 `OutdoorRunDelegate.cs`**  -personalizzato `HKWorkoutSessionDelegate` per gestire gli eventi per l'allenamenti.
 
 > [!IMPORTANT]
-> **Nota:** il codice illustrato nelle sezioni seguenti sono incluse solo le parti necessarie per implementare le funzionalità nuove e migliorate fornite alle App allenamenti in watchOS 3. Tutto il codice di supporto e il codice per presentare e aggiornare l'interfaccia utente non è inclusi, ma possono essere creati facilmente seguendo a altra documentazione watchOS.<p/>
+> Il codice illustrato nelle sezioni seguenti sono incluse solo le parti necessarie per implementare le funzionalità nuove e migliorate fornite alle App allenamenti in watchOS 3. Tutto il codice di supporto e il codice per presentare e aggiornare l'interfaccia utente non è inclusi, ma possono essere creati facilmente seguendo a altra documentazione watchOS.<p/>
 
 
 

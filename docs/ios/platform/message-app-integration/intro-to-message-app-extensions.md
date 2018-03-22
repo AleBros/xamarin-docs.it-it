@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d9b6b5a778e0e4d5092d1036109f82896acf639b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 083920aba3c8dc83b157b591e194c43935dcc566
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="message-app-extension-basics"></a>Nozioni di base dell'estensione App messaggio
 
@@ -87,7 +87,7 @@ Per un'immagine da includere in un pacchetto di codice, deve soddisfare i requis
 - Le immagini non possono essere inferiore a 100 x 100 punti o superiori che punta 206 x 206.
 
 > [!IMPORTANT]
-> **Nota:** immagini adesivo devono sempre essere specificate nel `@3x` risoluzione nell'intervallo 300 x 300 per 618 x 618 pixel. Il sistema genera automaticamente il `@2x` e `@1x` versioni in fase di esecuzione in base alle esigenze.
+> Le immagini adesivo devono sempre essere fornite al `@3x` risoluzione nell'intervallo 300 x 300 a 618 x 618 pixel. Il sistema genera automaticamente il `@2x` e `@1x` versioni in fase di esecuzione in base alle esigenze.
 
 Apple suggerisce gli asset di immagini adesivo contro varie sfondi diversi (ad esempio bianco, nero, rosso, giallo e multi-colorate) e su foto, per garantire che vengano visualizzate le migliori in tutte le possibili situazioni di test.
 

@@ -7,11 +7,11 @@ ms.assetid: 951713CD-D6AD-981C-A09E-4F2C98588D8B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: d6e9dc47f2610fbc1e84cc74880ced13d4c99dce
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 00e5d84cd39312cdf6ac0107b4c7ffedcd82f3c0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-advanced-concepts-and-internals"></a>Concetti avanzati e meccanismi interni di iOS
 
@@ -39,7 +39,7 @@ Elenca le classi dalla libreria di classi .NET Base (BCL) e gli assembly disponi
 Descrive inoltre come Visual Studio per Mac e il generatore di interfaccia di Xcode consente di utilizzare il generatore di interfaccia di progettazione dell'interfaccia utente.
 
 > [!IMPORTANT]
-> **Nota**: questo documento viene illustrato Visual Studio per l'integrazione del Mac con interfaccia generatore del Xcode solo. Per ulteriori informazioni sulla finestra di progettazione iOS, consultare il [iOS progettazione](~/ios/user-interface/designer/index.md) documento.
+> Questo documento illustra Visual Studio per l'integrazione del Mac con interfaccia generatore del Xcode solo. Per ulteriori informazioni sulla finestra di progettazione iOS, consultare il [iOS progettazione](~/ios/user-interface/designer/index.md) documento.
 
 
 

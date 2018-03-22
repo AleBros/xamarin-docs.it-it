@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d53dea1a46c6b42f901beb217eb00b3a3fa0fd92
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 24fc64d1bd04cb1ebefb9bf9a359efb395b45074
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>Creazione di interfacce utente iOS nel codice
 
@@ -620,7 +620,7 @@ Per ulteriori informazioni sulla creazione di una schermata di avvio, vedere la 
 - [La gestione delle schermate di avvio con storyboard](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 > [!IMPORTANT]
-> **Nota:** a partire da iOS 9, Apple consiglia che storyboard devono essere utilizzati come metodo principale di creazione di una schermata di avvio.
+> A partire da iOS 9, Apple consiglia storyboard devono essere utilizzati come il metodo principale di creazione di una schermata di avvio.
 
 ### <a name="creating-a-launch-image-for-pre-ios-8-applications"></a>Creazione di un'immagine di avvio per pre-iOS 8 applicazioni
 
@@ -629,7 +629,7 @@ Se l'applicazione è destinata alle versioni precedenti a iOS 8, è possibile ut
 Nel file Info. plist o come un catalogo di Asset (per iOS 7) nell'applicazione, è possibile impostare questa immagine statica. È necessario fornire immagini separate per ogni dimensione di dispositivo (320 x 480, 640 x 960, 640 x 1136) che è possibile eseguire l'applicazione in. Per ulteriori informazioni sulle dimensioni di una schermata di avvio, visualizzare il [immagini della schermata avvio](~/ios/app-fundamentals/images-icons/launch-screens.md) Guida.
 
 > [!IMPORTANT]
-> **Nota:** se l'applicazione non ha alcuna schermata di avvio, è possibile notare che non rientrano completamente la schermata. In questo caso, accertarsi di includere almeno un'immagine di 640 x 1136 denominata `Default-568@2x.png` per il file Info. plist. 
+> Se l'applicazione non ha alcuna schermata di avvio, è possibile riscontrare che non rientrano completamente la schermata. In questo caso, accertarsi di includere almeno un'immagine di 640 x 1136 denominata `Default-568@2x.png` per il file Info. plist. 
 
 
 

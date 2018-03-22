@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/07/2017
-ms.openlocfilehash: 4b2a470d7fe2a1f9d4b8df40836c934547adf614
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5da834e7e77fb8ab080c124bd09653bc840be3b0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-buttons"></a>Utilizzo di pulsanti
 
@@ -130,7 +130,7 @@ namespace tvRemote
 Fino a quando un pulsante `Enabled` proprietà `true` e non è coperto da un altro controllo o una vista, può essere resa di Siri remoto utilizzando l'elemento di messa a fuoco. Se l'utente seleziona il pulsante e fa clic sull'area di tocco, la `ButtonPressed` azione definita in precedenza sarebbe stato eseguito.
 
 > [!IMPORTANT]
-> **Nota:** mentre è possibile assegnare azioni, ad esempio `TouchUpInside` per un `UIButton` in iOS progettazione durante la creazione di un **gestore dell'evento**, non verrà mai chiamato perché Apple TV non ha un touch-screen o il supporto eventi di tocco. È consigliabile utilizzare sempre il valore predefinito **tipo di azione** durante la creazione di **azioni** per tvOS elementi dell'interfaccia utente.
+> Sebbene sia possibile assegnare le azioni, ad esempio `TouchUpInside` a un `UIButton` in iOS progettazione durante la creazione di un' **gestore dell'evento**, non verrà mai chiamato perché Apple TV non ha un tocco supportano eventi tocco o sullo schermo. È consigliabile utilizzare sempre il valore predefinito **tipo di azione** durante la creazione di **azioni** per tvOS elementi dell'interfaccia utente.
 
 
 
@@ -191,7 +191,7 @@ View.AddSubview (button);
 ```
 
 > [!IMPORTANT]
-> **Nota:** mentre è possibile assegnare azioni, ad esempio `TouchUpInside` per un `UIButton`, non verrà mai chiamato perché non dispone di un tocco Apple TV a schermo intero o supportare eventi tocco. È necessario utilizzare sempre gli eventi, ad esempio **AllEvents** o **PrimaryActionTriggered**.
+> Sebbene sia possibile assegnare le azioni, ad esempio `TouchUpInside` a un `UIButton`, non verrà mai chiamato perché Apple TV non ha un tocco supportano eventi tocco o sullo schermo. È necessario utilizzare sempre gli eventi, ad esempio **AllEvents** o **PrimaryActionTriggered**.
 
 
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 53c2c3e3866cb782eea0cc9514c0c35379e48b5c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 591f6f53c9e787ee9499b2a1a3cc812f7e72749a
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="apple-pay-on-watchos"></a>Apple Pay su watchOS
 
@@ -58,7 +58,8 @@ Per abilitare il nuovo ambiente di test, eseguire le operazioni seguenti:
 3. Impostare la regione desiderata per testare l'app in.
 4. Utilizzare una delle schede di pagamento di test dal [Guida di Apple pagare](https://developer.apple.com/apple-pay/) per effettuare i pagamenti.
 
-> ⚠️ **Nota:** passando l'account iCloud, il dispositivo passerà automaticamente al nuovo ambiente di testing. Tuttavia, è ancora Apple **richiede** schede dell'applicazione da testare con reale in un ambiente di produzione prima dell'invio a iTunes App Store.
+> [!NOTE]
+> Passando account iCloud, il dispositivo si passerà automaticamente al nuovo ambiente di testing. Tuttavia, è ancora Apple **richiede** schede dell'applicazione da testare con reale in un ambiente di produzione prima dell'invio a iTunes App Store.
 
 ## <a name="summary"></a>Riepilogo
 

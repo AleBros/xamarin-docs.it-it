@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 1fea2e2f7210e282fa1e27ad3a1203da2216791e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c636e706e702afa23c36a3d6c618f3e02c2582f1
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="xamarin-live-player"></a>Xamarin Live Player
 
@@ -20,8 +20,8 @@ Xamarin Player in tempo reale consente di apportare modifiche in tempo reale all
 
 [![Xamarin Player in tempo reale: Codice, eseguire la scansione, Test](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
-1. Abilitare il *Xamarin Player Live* in **preferenze**, quindi selezionare il **dispositivi** elenco.
-2. Eseguire il debug o eseguire e quindi la coppia QRCodeto la scansione del dispositivo.
+1. Abilitare il *Xamarin Player in tempo reale* in **preferenze**, quindi selezionare il dispositivo dal **dispositivi** elenco.
+2. Eseguire il debug o eseguire e quindi eseguire un'analisi del codice a matrice per associare il dispositivo.
 3. L'app viene eseguita direttamente dal proprio telefono o tablet.
 
 ## <a name="xamarin-live-player-setupinstallmd"></a>[Programma di installazione di Xamarin Player in tempo reale](install.md)

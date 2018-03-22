@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b53f98206c100ed76f601937844bf182a6dc146c
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 8d7c942e0be52ed12fc20bc838e693af81dd989f
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="using-adonet"></a>Utilizzo di ADO.NET
 
@@ -43,7 +43,7 @@ Si utilizzerà il `Mono.Data.Sqlite.SqliteConnection` classe per creare un file 
     `Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);`
 
     > [!NOTE]
-> **Nota:** dbPath variabile deve essere determinata in base a regole illustrate in precedenza in questo documento.
+    > Il `dbPath` variabile deve essere determinata in base alla regole illustrate in precedenza in questo documento.
 
 2. **Creazione di una connessione di Database** - dopo aver creato il file di database SQLite è possibile creare un oggetto di connessione per accedere ai dati. La connessione è stata creata con una stringa di connessione sotto forma di `Data Source=file_path`, come illustrato di seguito:
 

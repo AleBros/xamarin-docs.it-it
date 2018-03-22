@@ -8,68 +8,72 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 8c336799a4d46359a78432837101dad43b572aea
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: c333fd18e306c50bbfd41377638470cb45954883
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="api-design"></a>Progettazione delle API
 
 Oltre alle librerie di classi di Base che fanno parte di Mono, il nucleo [xamarin](http://www.xamarin.com/iOS) viene fornito con le associazioni per iOS diverse API per consentire agli sviluppatori di creare applicazioni native per iOS con Mono.
 
-La base di xamarin. IOS, è un motore di interoperabilità che colma il mondo con il mondo Objective-C come c#, nonché le associazioni per iOS API basate su C come CoreGraphics e [OpenGLES](#OpenGLES).
+Un elemento fondamentale di xamarin. IOS, è un motore di interoperabilità che colma il mondo c# con il mondo Objective-C, nonché le associazioni per le API basate su C, ad esempio CoreGraphics iOS e [OpenGL ES](#OpenGLES).
 
-Il runtime di basso livello per comunicare con il codice Objective-C è nel [MonoTouch.ObjCRuntime](#MonoTouch.ObjCRuntime). Nella parte superiore di questa operazione, le associazioni per [Foundation](#MonoTouch.Foundation), CoreFoundation e [UIKit](#MonoTouch.UIKit) forniti.
+Il runtime di basso livello per comunicare con codice Objective-C è in [MonoTouch.ObjCRuntime](#MonoTouch.ObjCRuntime). Nella parte superiore di questa operazione, le associazioni per [Foundation](#MonoTouch.Foundation), CoreFoundation, e [UIKit](#MonoTouch.UIKit) forniti.
 
 ## <a name="design-principles"></a>Principi di progettazione
 
-Questi sono alcuni dei nostri principi di progettazione per l'associazione di xamarin. IOS (queste sono applicabili anche a Xamarin.Mac, le associazioni Mono per Objective-C su OS X):
+Questi sono alcuni dei nostri principi di progettazione per le associazioni di xamarin. IOS (si applicano anche a Xamarin.Mac, le associazioni Mono per Objective-C sulla macOS):
 
-- Seguire le linee guida
+- Seguire il [Framework linee guida di progettazione](https://docs.microsoft.com/dotnet/standard/design-guidelines)
 - Consentono agli sviluppatori di classi sottoclasse Objective-C:
 
   - Derivare una classe esistente
   - Chiamare il costruttore base a catena
   - È necessario eseguire l'override dei metodi con il sistema di sostituzione #
+  - Creazione di una sottoclasse dovrebbero funzionare con costrutti di linguaggio c# standard
 
-- Sottoclasse dovrebbe funzionare con i costrutti di linguaggio c# standard
 - Non esporre agli sviluppatori di selettori Objective-C
 - Forniscono un meccanismo per chiamare arbitrarie librerie Objective-C
-- Rendono le comuni attività di Objective-C semplice e disco rigido possibili attività Objective-C
+- Rendono le comuni Objective-C attività facile e disco rigido possibili attività Objective-C
 - Esporre le proprietà di Objective-C come proprietà in c#
-- Esporre un'API fortemente tipizzata:
-- Aumentare l'indipendenza dai tipi
-- Ridurre al minimo gli errori di runtime
-- È possibile ottenere intellisense IDE in tipi restituiti
-- Consente la documentazione di popup IDE
+- Espongono un'API fortemente tipizzato:
+
+  - Aumentare l'indipendenza
+  - Ridurre al minimo gli errori di runtime
+  - Ottenere IntelliSense IDE in tipi restituiti
+  - Consente la documentazione di popup IDE
+
 - Incoraggiare l'esplorazione nell'IDE di API:
+
+  - Ad esempio, anziché esporre una matrice con tipizzazione debole simile al seguente:
+    
+    ```objc
+    NSArray *getViews
+    ```
+    Esporre un tipo sicuro, simile al seguente:
+    
+    ```csharp
+    NSView [] Views { get; set; }
+    ```
+    
+    Questa operazione consente a Visual Studio per Mac di eseguire operazioni di completamento automatico durante l'esplorazione di API, rende tutti il `System.Array` le operazioni disponibili nel valore restituito e consente il valore restituito deve far parte di LINQ.
+
 - Tipi c# nativi:
 
-    - Esempio: anziché esporre la matrice con tipizzazione debole simile al seguente:
-        ```
-        NSArray *getViews
-        ```
-        è necessario esporre li con tipi sicuri, simile al seguente:
-    
-        ```
-        NSView [] Views { get; set; }
-        ```
-    
-    Questo consente di Visual Studio per Mac la possibilità di eseguire il completamento automatico durante l'esplorazione di API e consente anche a tutti i `System.Array` operazioni siano disponibili nel valore restituito e consente il valore restituito deve far parte di LINQ
+  - [`NSString` diventa `string`](~/ios/internals/api-design/nsstring.md)
+  - Attivare `int` e `uint` parametri che avrebbe dovuto essere enumerazioni in c# le enumerazioni e le enumerazioni di c# con `[Flags]` gli attributi
+  - Anziché indipendente dal tipo `NSArray` oggetti, l'esposizione di matrici come matrici fortemente tipizzata.
+  - Per gli eventi e notifiche, consentire agli utenti di scegliere tra:
 
-- [NSString diventa stringa](~/ios/internals/api-design/nsstring.md)
-- Attivare i parametri di tipo int e uint che avrebbe dovuto essere enumerazioni come c# enumerazioni e le enumerazioni di c# con attributi [Flags]
-- Anziché oggetti NSArray indipendente dal tipo deve esporre matrici come matrice fortemente tipizzata.
-- Eventi e notifiche, consentire agli utenti di scegliere tra:
-
-    - Il valore predefinito è la versione fortemente tipizzata
-    - Versione con tipizzazione per casi di utilizzo avanzato
+    - Una versione fortemente tipizzata per impostazione predefinita
+    - Una versione con tipizzazione debole per i casi di utilizzo avanzato
 
 - Supportare il pattern di delegato Objective-C:
 
     - Sistema di eventi del linguaggio c#
-    - Esporre c# delegati (espressioni lambda, metodi anonimi e System. Delegate) alle API Objective-C come "blocchi"
+    - Esporre c# delegati (espressioni lambda, metodi anonimi, e `System.Delegate`) per le API di Objective-C come blocchi
 
 ### <a name="assemblies"></a>Assembly
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d544647a2718d6b511551f4341dee51b2c68941f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c5cd2671bb66aa89117012fe394bb724f7e22e1a
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-3d-touch"></a>Introduzione a 3D Touch
 
@@ -65,7 +65,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 Il `MaximumPossibleForce` proprietà restituisce il valore massimo possibile per il `Force` proprietà del [UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/) in base al dispositivo iOS che è in esecuzione l'app.
 
 > [!IMPORTANT]
-> **Nota:** cambia nell'utilizzo di `TouchesMoved` dell'evento, anche se X / coordinate Y non sono stati modificati. A causa di questa modifica nel comportamento, le app iOS devono essere preparate per il `TouchesMoved` evento da richiamare più spesso e per X / Y coordinate deve per corrispondere all'ultimo `TouchesMoved` chiamare.
+> Le modifiche in pressione causeranno la `TouchesMoved` evento da generare, anche se X / coordinate Y non sono stati modificati. A causa di questa modifica nel comportamento, le app iOS devono essere preparate per il `TouchesMoved` evento da richiamare più spesso e per X / Y coordinate deve per corrispondere all'ultimo `TouchesMoved` chiamare.
 
 
 
@@ -281,7 +281,7 @@ Di seguito viene definita la due elementi azione rapida statici con le chiavi se
 * `UIApplicationShortcutItemType` -È un valore stringa che verrà utilizzato per identificare l'elemento nella nostra app. Per altre informazioni, vedere la sezione successiva.
 
 > [!IMPORTANT]
-> **Nota:** rapido scelta rapida azioni che vengono impostate nel `Info.plist` file non è accessibile con la `Application.ShortcutItems` proprietà. Vengono passati solo per il `HandleShortcutItem` gestore dell'evento. 
+> Rapido scelta rapida azioni che vengono impostate nel `Info.plist` non è possibile accedere al file con il `Application.ShortcutItems` proprietà. Vengono passati solo per il `HandleShortcutItem` gestore dell'evento. 
 
 
 

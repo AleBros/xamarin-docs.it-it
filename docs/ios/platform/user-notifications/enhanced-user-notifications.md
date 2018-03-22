@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: a5dbd65cc32ed63c0fa6f8abe3a13ffee4e9df63
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 50553cb1dc5f7ea782c0f13e32f60d7b6ce3e181
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="enhanced-user-notifications"></a>Notifiche utente migliorata
 
@@ -558,7 +558,7 @@ Per implementare un'estensione del servizio in un'app xamarin. IOS, eseguire le 
 -----
 
 > [!IMPORTANT]
-> Nota: L'identificatore Bundle per l'estensione del servizio deve corrispondere all'identificatore di Bundle dell'app principale con `.appnameserviceextension` aggiunto alla fine. Ad esempio, se l'app principale contiene un identificatore Bundle di `com.xamarin.monkeynotify`, l'estensione del servizio deve avere un identificatore Bundle di `com.xamarin.monkeynotify.monkeynotifyserviceextension`. Questo deve essere impostato automaticamente quando l'estensione viene aggiunta alla soluzione. 
+> L'identificatore Bundle per l'estensione del servizio deve corrispondere all'identificatore Bundle dell'app principale con `.appnameserviceextension` aggiunto alla fine. Ad esempio, se l'app principale contiene un identificatore Bundle di `com.xamarin.monkeynotify`, l'estensione del servizio deve avere un identificatore Bundle di `com.xamarin.monkeynotify.monkeynotifyserviceextension`. Questo deve essere impostato automaticamente quando l'estensione viene aggiunta alla soluzione. 
 
 L'estensione del servizio di notifica che dovrà essere modificato per fornire la funzionalità richiesta è una classe principale. Ad esempio:
 

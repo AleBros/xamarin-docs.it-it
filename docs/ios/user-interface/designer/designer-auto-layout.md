@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: d9e38f055414ff0eca70df4a4e38aa959b7d7237
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ff19048504ee76db614306adebb71b7237139091
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automatico con la finestra di progettazione Xamarin iOS
 
@@ -88,7 +88,7 @@ Per creare un vincolo, scegliere un handle e trascinarlo in un punto qualsiasi n
 Si noti tre linee tratteggiate verde tra gli altri due pulsanti. Linee verdi indicano *aree di rilascio*, o gli attributi di altri elementi a cui è possibile vincolare. Nella schermata precedente, gli altri due pulsanti offrono 3 aree di rilascio verticale ( *inferiore*, *centerY*, *top*) per vincolare il pulsante. Visualizzazione controller offre un vincolo nella parte superiore della visualizzazione e la casella di colore verde a tinta unita significa che il controller Vista offre un vincolo sulla Guida superiore di sotto, significa che la linea tratteggiata verde nella parte superiore della visualizzazione.
 
 > [!IMPORTANT]
-> **Nota**: guide sono tipi speciali di destinazioni di vincoli che consentono di creare vincoli superiore e inferiore che prendono in considerazione la presenza di barre di sistema, ad esempio le barre di stato o le barre degli strumenti. Uno degli usi principali è dispongono di un'app compatibile tra iOS 6 e iOS 7 poiché la versione più recente è la visualizzazione del contenitore estende di sotto la barra di stato. Per ulteriori informazioni sulla Guida di layout superiore, consultare il [documentazione Apple](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
+> Le guide sono tipi speciali di destinazioni di vincoli che consentono di creare top e vincoli inferiore che prendono in considerazione la presenza di barre di sistema, ad esempio le barre di stato o le barre degli strumenti. Uno degli usi principali è dispongono di un'app compatibile tra iOS 6 e iOS 7 poiché la versione più recente è la visualizzazione del contenitore estende di sotto la barra di stato. Per ulteriori informazioni sulla Guida di layout superiore, consultare il [documentazione Apple](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
 
 
 

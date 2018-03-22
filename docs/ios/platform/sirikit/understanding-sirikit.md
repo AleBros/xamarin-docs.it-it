@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 67635b6a04579246467184cdff8d9f277b36ecc4
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 0c1253391673e48f81c12b80719db485d276013d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="understanding-sirikit-concepts"></a>Informazioni sui concetti SiriKit
 
@@ -274,7 +274,7 @@ L'estensione dell'interfaccia utente intenti verrà sempre visualizzato insieme 
 Esistono alcuni casi in cui l'app può sostituire le informazioni che Siri sono visualizzate all'utente per impostazione predefinita, ad esempio messaggistica o viene eseguito il mapping in cui l'app può sostituire l'utilizzo predefinito con uno personalizzato per l'app.
 
 > [!IMPORTANT]
-> **Nota:** mentre è possibile aggiungere elementi interattivi, ad esempio `UIButtons` o `UITextFields` per l'estensione dell'interfaccia utente con finalità di `UIViewController`, questi non sono necessariamente consentiti come finalità dell'interfaccia utente in modalità interattiva e l'utente non sarà in grado di interagire con loro.
+> Sebbene sia possibile aggiungere elementi interattivi, ad esempio `UIButtons` oppure `UITextFields` per l'estensione dell'interfaccia utente finalità `UIViewController`, questi non sono strettamente consentiti come interfaccia utente della finalità in modalità interattiva e l'utente non sarà in grado di interagire con essi.
 
 È totalmente facoltativo per l'applicazione fornire un'estensione dell'interfaccia utente con finalità di poiché Siri contiene un set predefinito di interfaccia utente per ogni tipo finalità. Inoltre, le interfacce dell'interfaccia utente intenti sono disponibili solo per determinati tipi che Apple ha considerato sarebbe utili all'utente.
 
@@ -320,7 +320,7 @@ L'applicazione deve inoltre aggiornare immediatamente Siri quando vocabolario sp
 Ancora più importante, l'app _deve_ eliminare le informazioni dal vocabolario Siri immediatamente poiché un utente potrebbe diventare falsare se tali file eliminati un'informazione ma Siri è stato ancora il riconoscimento, ore o giorni in un secondo momento.
 
 > [!IMPORTANT]
-> **Nota:** l'app deve rimuovere tutti del vocabolario utente specifico da Siri se l'utente sceglie di reimpostare l'app o se sono la disconnessione.
+> L'app deve rimuovere tutti il vocabolario utente specifico da Siri se l'utente sceglie di reimpostare l'app o se sono la disconnessione.
 
 ## <a name="sirikit-permissions"></a>Autorizzazioni SiriKit
 

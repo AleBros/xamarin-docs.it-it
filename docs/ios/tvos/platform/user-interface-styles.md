@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b970ff3570079c0e9fba10718ddcd75fbe857f2c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e400a72f4c759662e70bfecc372134f8fda05ad6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="new-user-interface-styles"></a>Nuovi stili di interfaccia utente
 
@@ -101,7 +101,7 @@ Inoltre, le raccolte di tratto presentano le caratteristiche seguenti in tvOS 10
 - Un'app tvOS può gestire le modifiche di tratto raccolta eseguendo l'override di `TraitCollectionDidChange` metodo di un `UIView` o `UIViewController` classe.
 
 > [!IMPORTANT]
-> **Nota:** non supporta completamente l'anteprima Xamarin.tvOS per tvOS 10 `UIUserInterfaceStyle` per `UITraitCollection` ancora. Verrà aggiunto il supporto completo in una versione futura.
+> L'anteprima Xamarin.tvOS per tvOS 10 non supporta completamente `UIUserInterfaceStyle` per `UITraitCollection` ancora. Verrà aggiunto il supporto completo in una versione futura.
 
 
 
@@ -124,7 +124,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 ```
 
 > [!IMPORTANT]
-> **Nota:** Purtroppo, non supporta completamente l'anteprima Xamarin.tvOS per tvOS 10 `UIUserInterfaceStyle` per `UITraitCollection`, pertanto questo tipo di personalizzazione non è ancora disponibile. Verrà aggiunto il supporto completo in una versione futura.
+> Purtroppo, non supporta completamente l'anteprima Xamarin.tvOS per tvOS 10 `UIUserInterfaceStyle` per `UITraitCollection`, pertanto questo tipo di personalizzazione non è ancora disponibile. Verrà aggiunto il supporto completo in una versione futura.
 
 <a name="Responding-to-Theme-Changes-Directly" />
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 302bb1225067ad401f97ee6bad88b4cd16c6dc95
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b622da2d6d9777fc200a091ccf003369b1c2e8d1
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="in-app-purchase-basics-and-configuration"></a>Concetti di base di acquisto in-App e configurazione
 
@@ -84,7 +84,7 @@ Immettere un nome appropriato per il *descrizione*, pertanto è possibile identi
 È possibile utilizzare qualsiasi stringa da utilizzare per il **identificatore Bundle** (purché sia univoco nell'account), ma si consiglia di Apple è conforme al formato inversa DNS anziché utilizzare qualsiasi stringa arbitraria. L'applicazione di esempio che accompagna questo articolo utilizza com.xamarin.storekit.testing per l'identificatore Bundle, ma sarebbe ugualmente valido per l'utilizzo di un identificatore come my_store_example (sebbene non consigliabile Apple).
 
 > [!IMPORTANT]
-> **Nota**: Apple consente inoltre con caratteri jolly asterisco da aggiungere alla fine di un **identificatore Bundle** in modo che un singolo ID di App può essere utilizzato per più applicazioni, tuttavia _ID dell'App con caratteri jolly non può essere utilizzato per In AppPurchase_. Un esempio identificatore Bundle con caratteri jolly potrebbe essere com.xamarin.*
+> Apple consente inoltre con caratteri jolly asterisco da aggiungere alla fine di un **identificatore Bundle** in modo che un singolo ID di App può essere utilizzato per più applicazioni, tuttavia _ID dell'App con caratteri jolly non può essere utilizzato perAppPurchase_. Un esempio identificatore Bundle con caratteri jolly potrebbe essere com.xamarin.*
 
 #### <a name="enabling-app-services"></a>Abilitazione di servizi App
 

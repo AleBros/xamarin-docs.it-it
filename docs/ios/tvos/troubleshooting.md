@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7b6d0901f8b01668626fc3b6a70a091e99e2287e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c72d0dd89593002dbb6ea8ac9369666b811f3a73
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshooting"></a>Risoluzione dei problemi
 
@@ -173,7 +173,7 @@ La soluzione consiste nell'aggiungere il supporto per il computer remoto Siri (`
 ```
 
 > [!IMPORTANT]
-> **Nota:** gioco Bluetooth sono un acquisto facoltativo che potrebbe rendere gli utenti finali, l'app non può forzare l'utente per l'acquisto di uno. Se l'app supporta gioco deve supportare anche Siri remoto in modo che il gioco è utilizzabile da tutti gli utenti di Apple TV.
+> Gioco Bluetooth sono un acquisto facoltativo che potrebbe rendere gli utenti finali, l'app non è possibile forzare l'utente a acquistarne uno. Se l'app supporta gioco deve supportare anche Siri remoto in modo che il gioco è utilizzabile da tutti gli utenti di Apple TV.
 
 Per ulteriori informazioni, vedere il nostro [utilizzo di gioco](~/ios/tvos/platform/remote-bluetooth.md#Working-with-Game-Controllers) sezione del nostro [Siri remoto e i controller Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) documentazione.
 

@@ -7,11 +7,11 @@ ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0ac2a19e9020113df273897a8ec2c86ee1763ec2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: af899bb1c5708e3fc0be88db6224d9127f5a5c6d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="apple-pay"></a>Apple Pay
 
@@ -118,7 +118,7 @@ Per abilitare il nuovo ambiente di test, eseguire le operazioni seguenti:
 4. Utilizzare una delle schede di pagamento di test dal [Guida di Apple pagare](https://developer.apple.com/apple-pay/) per effettuare i pagamenti.
 
 > [!IMPORTANT]
->  **Nota:** passando l'account iCloud, il dispositivo passerà automaticamente al nuovo ambiente di testing. Tuttavia, è ancora Apple **richiede** schede dell'applicazione da testare con reale in un ambiente di produzione prima dell'invio a iTunes App Store.
+> Passando account iCloud, il dispositivo si passerà automaticamente al nuovo ambiente di testing. Tuttavia, è ancora Apple **richiede** schede dell'applicazione da testare con reale in un ambiente di produzione prima dell'invio a iTunes App Store.
 
 ## <a name="summary"></a>Riepilogo
 

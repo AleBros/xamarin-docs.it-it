@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 77808ae03f5801dd3628b8966e05a574b8501f37
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 60b2e6fa65226631fe2d2c847a56852ac9ae63d2
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="unified-storyboards"></a>Storyboard unificati
 
@@ -581,7 +581,7 @@ Finestra di progettazione iOS confermerà che lo sviluppatore desidera convertir
  [![](unified-storyboards-images/sizeclass02.png "L'utilizzo di avviso di classi di dimensione")](unified-storyboards-images/sizeclass02.png#lightbox)
 
 > [!IMPORTANT]
-> **Nota**: Layout automatico deve essere controllati anche per le classi di dimensioni funzionare correttamente.
+> Layout automatico deve essere controllati anche per le classi di dimensioni funzionare correttamente.
 
 ### <a name="generic-device-types"></a>Tipi di dispositivo generico
 
@@ -630,7 +630,7 @@ Vedere la sezione di classe di dimensione di questo articolo per ulteriori infor
 Se lo sviluppatore ha utilizzato storyboard prima, quindi saranno familiarità con i tipi di segue esistente di **Push**, **modale** e **Popover**. Quando sono abilitate le classi di dimensioni in un file di Storyboard unificata, la seguente adattivo definire i tipi (che corrispondono alla nuova vista Controller API discussi in precedenza) vengono resi disponibili: **Mostra** e **Mostra dettagli** .
 
 > [!IMPORTANT]
-> **Nota**: classi dimensioni quando è abilitate, qualsiasi esistente segues verrà essere convertiti nei tipi di nuovo.
+> Quando sono abilitate le classi di dimensioni, qualsiasi esistente segues sarà possibile convertire i nuovi tipi.
 
 Nell'esempio di iOS 8 applicazione che utilizza uno Storyboard unificata con un Controller di visualizzazione di divisione che dispone di un menu di navigazione di gioco semplice nella visualizzazione Master. Se l'utente fa clic su un pulsante di menu, i Controller di visualizzazione dell'elemento selezionato deve essere visualizzato nella sezione dei dettagli del Controller di visualizzazione di divisione quando in esecuzione in un iPad. In un iPhone View Controller dell'elemento deve essere inserito nello stack di navigazione.
 

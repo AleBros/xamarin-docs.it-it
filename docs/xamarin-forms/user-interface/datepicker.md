@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/12/2018
-ms.openlocfilehash: 5c214fe4124b900ea63399b97084d1ce0e181d4a
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: ad214b3986d039de40f8ed46b300e8d3cfd06328
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="using-datepicker"></a>Utilizzo del controllo DatePicker
 
@@ -78,7 +78,7 @@ Se il `DatePicker` non contiene un'associazione nel relativo `Date` proprietà, 
             ··· />
 ```
 
-Tuttavia, questa operazione è sconsigliata. A seconda dell'impostazione del `Format` proprietà, selezionata le date possono richiedere larghezza di visualizzazione diverse. Ad esempio, la stringa di formato "D" causa `DateTime` per visualizzare le date in un formato esteso e "Mercoledì 12 settembre 2018" richiede una larghezza di visualizzazione maggiore rispetto a "Venerdì, maggio 4, 2018." A seconda della piattaforma, questa differenza potrebbe causare il `DateTime` vista per modificare larghezza nel layout, o per la visualizzazione può essere troncato.
+Tuttavia, questa operazione è sconsigliata. A seconda dell'impostazione del `Format` proprietà, selezionata le date possono richiedere larghezza di visualizzazione diverse. Ad esempio, la stringa di formato "D" causa `DateTime` per visualizzare le date in un formato esteso e "Mercoledì 12 settembre 2018" richiede una larghezza di visualizzazione maggiore rispetto a "Venerdì 4 maggio 2018". A seconda della piattaforma, questa differenza potrebbe causare il `DateTime` vista per modificare larghezza nel layout, o per la visualizzazione può essere troncato.
 
 > [!TIP]
 > È consigliabile utilizzare il valore predefinito `HorizontalOptions` impostazione di `Fill` con `DatePicker`e non deve usare una larghezza pari a `Auto` quando si inserisce `DatePicker` in un `Grid` cella.

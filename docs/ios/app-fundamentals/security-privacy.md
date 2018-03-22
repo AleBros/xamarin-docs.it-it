@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 4747fb73358a60d10832a1e650acd90a5a4274d1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5e4bbc22403c6c0bfa5c8dc7ac4e3a39545051d4
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-security-and-privacy-features"></a>iOS funzionalità di sicurezza e Privacy
 
@@ -44,7 +44,7 @@ Le seguenti modifiche generali apportate alla sicurezza e Privacy in iOS 10:
 App in esecuzione su iOS 10 (o versioni successive) necessario dichiarare in modo statico l'intenzione di accedere a funzionalità specifiche o informazioni utente immettendo una o più chiavi di Privacy nella loro `Info.plist` file segnalare all'utente perché l'app desidera accedere.
 
 > [!IMPORTANT]
-> **Nota** App che non consentono chiavi necessarie verranno automaticamente interrotte dal sistema quando tentano di accedere a una delle funzionalità con restrizioni o informazioni utente, _senza errori_! Se un'app viene avviata in modo imprevisto esito negativo in iOS 10, assicurarsi che tutti i obbligatori `Info.plist` sono stati specificati.
+> Le app che non forniscono le chiavi necessarie verranno automaticamente terminate dal sistema quando tentano di accedere a una delle funzionalità con restrizioni o informazioni utente, i _senza errori_! Se un'app viene avviata in modo imprevisto esito negativo in iOS 10, assicurarsi che tutti i obbligatori `Info.plist` sono stati specificati.
 
 La Privacy seguente relative chiavi sono disponibili:
 
@@ -109,7 +109,7 @@ Per impostare una delle chiavi di Privacy, eseguire le operazioni seguenti:
 -----
 
 > [!IMPORTANT]
-> **Nota:** nell'esempio sopra, Impossibile impostare il `NSHomeKitUsageDescription` chiave nel `Info.plist` file comporterebbe l'app _automaticamente in errore_ (viene chiuso dal sistema in fase di esecuzione) senza errori quando si esegue in iOS 10 (o maggiore).
+> Nell'esempio sopra, Impossibile impostare il `NSHomeKitUsageDescription` chiave nel `Info.plist` file comporterebbe l'app _invisibile all'utente hanno generato errori_ (viene chiuso dal sistema in fase di esecuzione) senza errori quando si esegue in iOS 10 (o versione successiva).
 
 <a name="Summary" />
 

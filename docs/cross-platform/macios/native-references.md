@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 5a33993bdef16191b66127dcc68c57661636c0f8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ea635dfd5b7946c6d394d72bffbb328255b56b97
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="native-references"></a>Riferimenti nativi
 
@@ -22,7 +22,7 @@ _I riferimenti nativi offre la possibilità di incorporare un Framework nativo i
 Da iOS 8.0 è stato possibile creare un framework incorporato per condividere il codice tra le estensioni app e l'app principale in Xcode. Utilizza la funzionalità nativa riferimento sarà possibile utilizzare questi Framework incorporati (creati con Xcode) in xamarin. IOS.
  
 > [!IMPORTANT]
-> **Nota:** non sarà possibile creare un framework incorporato da qualsiasi tipo di xamarin. IOS o Xamarin.Mac progetti, i riferimenti nativi consente solo per l'utilizzo del Framework (Objective-C) native esistenti.
+> I riferimenti nativi non sarà possibile creare un framework incorporato da qualsiasi tipo di xamarin. IOS o Xamarin.Mac progetti, consentire solo per l'utilizzo del Framework (Objective-C) native esistenti.
 
 
 

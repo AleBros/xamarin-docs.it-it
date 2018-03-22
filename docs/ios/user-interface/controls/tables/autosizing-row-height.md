@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c8d66ff8199d451ce7469fa893b7673589c9e320
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f1b35905d14086dcfc0cb749c8e4cc7de1608dd5
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="auto-sizing-row-height"></a>Altezza della riga di ridimensionamento automatico
 
@@ -46,7 +46,7 @@ Successivamente, è necessario selezionare il prototipo di cella e assegnargli u
 Nel caso di questo esempio, `GrowCell`. Questo valore verrà utilizzata in un secondo momento quando si popola la tabella.
 
 > [!IMPORTANT]
-> **Nota:** se la tabella contiene più di un tipo di cella (**prototipo**), è necessario assicurarsi che ogni tipo ha un proprio univoco `Identifier` per il ridimensionamento di righe automaticamente funzionare.
+> Se la tabella contiene più di un tipo di cella (**prototipo**), è necessario verificare che ogni tipo ha un proprio univoco `Identifier` per ridimensionamento riga automatico a funzionare.
 
 Per ogni elemento del prototipo cella, assegnare un **nome** esporlo al codice c#. Ad esempio:
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3e21794c9f1d8f010ec323774bc93987f4b89e1d
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: e7075b67db94b6bf603bd96c637c9f7724ae1519
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="healthkit"></a>HealthKit
 
@@ -43,7 +43,7 @@ Per completare la procedura illustrata in questo articolo è necessario quanto s
 - **iOS 8 (o versione successiva) dispositivo** : un dispositivo iOS in esecuzione la versione più recente di iOS 8 o versione successiva per il test.
 
 > [!IMPORTANT]
-> **Nota:** Kit di integrità è stato introdotto in iOS 8. Attualmente, Kit di integrità non è disponibile nel simulatore iOS e il debug richiede una connessione a un dispositivo dei / o fisici.
+> Kit di integrità è stato introdotto in iOS 8. Attualmente, Kit di integrità non è disponibile nel simulatore iOS e il debug richiede una connessione a un dispositivo dei / o fisici.
 
 
 
@@ -216,7 +216,7 @@ Il processo di `ValidateAuthorization()` consiste nel compilare il set di `HKObj
 Il `ReactToHealthCarePermissions()` verrà chiamato il callback dopo che l'utente ha interagito con la finestra di dialogo autorizzazioni e viene passato a due tipi di informazioni: un `bool` valore che verrà `true` se l'utente ha interagito con la finestra di dialogo autorizzazioni e un `NSError`che, se diverso da null, indica un tipo di errore associato alla presentazione di finestra di dialogo autorizzazioni.
 
 > [!IMPORTANT]
-> **Nota:** chiarire gli argomenti di questa funzione: il _successo_ e _errore_ parametri non indicano se l'utente dispone delle autorizzazioni necessarie per accedere ai dati di integrità Kit! Indicano solo che l'utente ha avuto la possibilità per consentire l'accesso ai dati.
+> Per chiarire gli argomenti di questa funzione: il _esito positivo_ e _errore_ parametri non indicano se l'utente dispone dell'autorizzazione per accedere ai dati di integrità Kit! Indicano solo che l'utente ha avuto la possibilità per consentire l'accesso ai dati.
 
 Per verificare se l'applicazione abbia accesso ai dati, il `HKHealthStore.GetAuthorizationStatus()` è possibile utilizzare `HKQuantityTypeIdentifierKey.HeartRate`. L'app in base allo stato restituito, Abilita o disabilita la possibilità di immettere i dati. Non vi è alcuna esperienza utente standard per la gestione di un negato l'accesso e sono disponibili molte opzioni possibili. Nell'applicazione di esempio, lo stato è impostato su un `HeartRateModel` oggetto singleton che, a sua volta, genera eventi rilevanti.
 
@@ -404,7 +404,7 @@ Simulatore iOS non supporta il Kit di integrità. Il debug deve essere eseguito 
 Collegare un dispositivo di sviluppo correttamente il provisioning di iOS 8 al sistema. Selezionare come destinazione di distribuzione in Visual Studio per Mac e scegliere dal menu **eseguire > Debug**.
 
 > [!IMPORTANT]
-> **Nota:** errori relativi al provisioning esporrà a questo punto. Per risolvere gli errori, esaminare la creazione e il Provisioning di una sezione di integrità Kit App precedente. I componenti sono: 
+> Errori relativi al provisioning esporrà a questo punto. Per risolvere gli errori, esaminare la creazione e il Provisioning di una sezione di integrità Kit App precedente. I componenti sono: 
 >
 > - **Centro per sviluppatori iOS** -ID App esplicito & Kit integrità abilitazione del profilo di Provisioning. 
 > - **Opzioni del progetto** -Bundle identificatore (ID App esplicita) & profilo di Provisioning.

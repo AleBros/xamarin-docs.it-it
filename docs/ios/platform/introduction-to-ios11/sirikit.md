@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/07/2017
-ms.openlocfilehash: 557521bc3bce41b9023acbf31a344a57cb63d2a1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6331912eedcd52df45c0d25d83a5b599c55ca7d2
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sirikit"></a>SiriKit
 
@@ -146,12 +146,10 @@ public partial class IntentHandler : INExtension, IINNotebookDomainHandling
 La classe deve ereditare da `INExtension`, e poiché il codice di esempio sta per la gestione di elenchi e note intenti, implementa inoltre `IINNotebookDomainHandling`.
 
 > [!NOTE]
-> **Nota sulla denominazione:** è una convenzione in .NET per le interfacce per essere preceduto dalla lettera maiuscola `I`, che rispetti Xamarin quando si associano i protocolli da iOS SDK.
->
-> Xamarin mantiene anche i nomi dei tipi da iOS e Apple Usa i primi due caratteri nei nomi di tipo in modo da riflettere il framework di un tipo a cui appartiene.
->
-> Per il `Intents` framework, i tipi sono precedute dal prefisso `IN*` (ad es. `INExtension`), ma si tratta di _non_ interfacce.
-> Segue anche i protocolli (che diventano le interfacce in c#) finire con due `I`s, ad esempio `IINAddTasksIntentHandling`.
+> - È una convenzione in .NET per le interfacce per essere preceduti da un carattere maiuscolo `I`, che rispetti Xamarin quando si associano i protocolli da iOS SDK.
+> - Xamarin mantiene anche i nomi dei tipi da iOS e Apple Usa i primi due caratteri nei nomi di tipo in modo da riflettere il framework di un tipo a cui appartiene.
+> - Per il `Intents` framework, i tipi sono precedute dal prefisso `IN*` (ad es. `INExtension`), ma si tratta di _non_ interfacce.
+> - Segue anche i protocolli (che diventano le interfacce in c#) finire con due `I`s, ad esempio `IINAddTasksIntentHandling`.
 
 #### <a name="handling-intents"></a>La gestione dei tipi
 

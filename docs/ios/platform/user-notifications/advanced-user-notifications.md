@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e20c9f068fe92e0dd711e0c20d31d713a0d03f0d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 46a0920efc8d80db7f3783654630f65086907f50
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="advanced-user-notifications"></a>Notifiche utente avanzato
 
@@ -145,7 +145,7 @@ Oltre alle notifiche remoto presentato in precedenza, allegati multimediali sono
 Notifica in iOS 10 supporta gli allegati di supporto di immagini (statico e gif), audio o video e il sistema visualizzerà automaticamente la corretta dell'interfaccia utente personalizzata per ognuno di questi tipi di allegati quando la notifica viene presentata all'utente.
 
 > [!NOTE]
-> **Nota:** deve prestare attenzione per ottimizzare la dimensione dei supporti e il tempo necessario per scaricare il supporto dal server remoto (o per assemblare il supporto per le notifiche locale) come sistema impone limiti strict sia quando si esegue il servizio dell'applicazione Estensione. Si consideri ad esempio l'invio di una versione ridimensionata verso il basso dell'immagine o un clip piccoli di un video a essere presentati nella notifica.
+> Si deve prestare attenzione per ottimizzare la dimensione dei supporti e il tempo che necessario per scaricare il supporto dal server remoto (o per assemblare il supporto per le notifiche locale) come sistema impone limiti strict sia quando si esegue l'estensione servizio Web dell'app. Si consideri ad esempio l'invio di una versione ridimensionata verso il basso dell'immagine o un clip piccoli di un video a essere presentati nella notifica.
 
 ## <a name="creating-custom-user-interfaces"></a>Creazione di interfacce utente personalizzate
 
@@ -299,7 +299,7 @@ Nel caso in cui l'interfaccia utente notifica personalizzata verrà visualizzand
 Per progettare l'interfaccia utente personalizzata dell'estensione di contenuto notifica, fare doppio clic su di `MainInterface.storyboard` file per aprirlo e modificarlo in iOS, progettazione trascinare gli elementi che è necessario compilare l'interfaccia desiderata (ad esempio `UILabels` e `UIImageViews`).
 
 > [!NOTE]
-> **Nota:** l'interfaccia utente di notifica _non_ supportano controlli interattivi, ad esempio i campi di testo o i pulsanti in un'estensione di contenuto di notifica. Anche se possono essere aggiunti allo storyboard, l'utente non sarà in grado di interagire con essi. Per aggiungere l'interazione dell'utente a un'interfaccia utente di notifica personalizzata, utilizzare le azioni personalizzate.
+> L'interfaccia utente notifica _non_ supportano controlli interattivi, ad esempio i campi di testo o i pulsanti in un'estensione di contenuto di notifica. Anche se possono essere aggiunti allo storyboard, l'utente non sarà in grado di interagire con essi. Per aggiungere l'interazione dell'utente a un'interfaccia utente di notifica personalizzata, utilizzare le azioni personalizzate.
 
 Una volta è disposto l'interfaccia utente e i controlli necessari esposta al codice c#, aprire il `NotificationViewController.cs` per la modifica e modificare il `DidReceiveNotification` metodo per popolare l'interfaccia utente quando l'utente lo espande la notifica. Ad esempio:
 

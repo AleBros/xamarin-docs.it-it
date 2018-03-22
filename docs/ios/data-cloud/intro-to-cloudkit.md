@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: e231043b1c4b0fa7ba72f2a371545036ffb21164
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: c4ee5c0457dd1faea74cbbc30dd2d0f42087a8d0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -43,7 +43,7 @@ CloudKit supporta sia il concetto di database pubblici e privati. Pubblici datab
 CloudKit supporta dati strutturati e bulk. È in grado di gestire facilmente i trasferimenti di file di grandi dimensioni. CloudKit farà in modo efficiente il trasferimento di file di grandi dimensioni da e verso i server iCloud in background, liberando lo sviluppatore di concentrarsi su altre attività.
 
 > [!NOTE]
-> **Nota:** è importante notare che CloudKit è un _tecnologia trasporto_. Non fornisce persistenza; consente solo di un'applicazione inviare e ricevere informazioni dai server in modo efficiente.
+> È importante notare che CloudKit è un _tecnologia trasporto_. Non fornisce persistenza; consente solo di un'applicazione inviare e ricevere informazioni dai server in modo efficiente.
 
 Redazione del presente documento, Apple inizialmente fornisce CloudKit gratuitamente con un limite elevato sia la larghezza di banda e capacità di archiviazione. Per i progetti o applicazioni con un utente di grandi dimensioni grandi dimensioni, Apple ha suggerisce che vengano fornita una scala di prezzo conveniente.
 
@@ -239,7 +239,7 @@ I riferimenti vengono esposte in CloudKit Framework tramite la `CKReference` cla
 Riferimenti forniscono il meccanismo alla base eliminazioni a cascata. Se un record padre viene eliminato dal database, qualsiasi record figlio (come specificato in una relazione) verrà automaticamente eliminato dal database anche.
 
 > [!NOTE]
-> **Nota**: puntatori (dangling) sono una possibilità quando si utilizza CloudKit. Ad esempio, quando l'applicazione ha recuperato un elenco di puntatori di record, la selezione di un record e quindi richiesto per il record, il record non esiste più nel database. Un'applicazione deve essere codificata per gestire questa situazione normalmente.
+> I puntatori inesatti sono una possibilità quando si utilizza CloudKit. Ad esempio, quando l'applicazione ha recuperato un elenco di puntatori di record, la selezione di un record e quindi richiesto per il record, il record non esiste più nel database. Un'applicazione deve essere codificata per gestire questa situazione normalmente.
 
 Sebbene non sia necessario, nuovamente i riferimenti sono preferibili quando si lavora con il CloudKit Framework. Apple ha ottimizzato il sistema per rendere questo tipo di riferimento più efficiente.
 
@@ -395,7 +395,7 @@ Tre aspetti da tenere presenti circa il codice sopra riportato:
 
 
 > [!NOTE]
-> **Nota**: a causa della natura delle comunicazioni di rete per dispositivi mobili, in cui le connessioni vengono continuamente rilasciate o interrotta una delle considerazioni prima lo sviluppatore deve fare quando l'utilizzo con CloudKit è la gestione degli errori "perdita di dati".
+> A causa della natura "perdita di dati" delle comunicazioni di rete per dispositivi mobili, in cui le connessioni vengono continuamente rilasciate o interrotta una delle considerazioni prima lo sviluppatore deve fare quando l'utilizzo con CloudKit è la gestione degli errori.
 
 ### <a name="fetching-a-record"></a>Recupero di un Record
 
@@ -560,7 +560,7 @@ Infine, è necessario inviata una notifica di push per ogni dispositivo collegat
 Le sottoscrizioni vengono esposte in CloudKit Framework tramite la `CKSubscription` classe. Combinano un tipo di Record ( `RecordType`), un predicato ( `NSPredicate`) e una notifica Push Apple ( `Push`).
 
 > [!NOTE]
-> **Nota**: CloudKit push sono leggermente incrementati in quanto contengono un payload contenente CloudKit informazioni specifiche, ad esempio ciò che ha determinato il push a verificarsi.
+> In quanto contengono un payload contenente CloudKit informazioni specifiche, ad esempio ciò che ha determinato il push al verificarsi leggermente vengono aumentati in modo CloudKit push.
 
 #### <a name="how-subscriptions-work"></a>Funzionamento delle sottoscrizioni
 
@@ -678,7 +678,7 @@ Poiché questo proviene da iCloud, vi è potente il backup delle informazioni de
 In modo da contenitore, un ID utente univoco generato in modo casuale viene creato e associato con l'account iCloud dell'utente (indirizzo di posta elettronica). L'ID utente viene restituito all'applicazione e può essere utilizzato in alcun modo che lo sviluppatore maniera appropriata.
 
 > [!NOTE]
-> **Nota**: diverse applicazioni in esecuzione sullo stesso dispositivo per lo stesso utente iCloud avrà l'ID utente diversi perché sono connessi a contenitori CloudKit diversi.
+> Diverse applicazioni in esecuzione sullo stesso dispositivo per lo stesso utente iCloud avrà ID utente diversi perché sono connessi a contenitori CloudKit diversi.
 
 Il seguente codice ottiene l'ID utente CloudKit per attualmente connesso in iCloud utente sul dispositivo:
 
@@ -810,7 +810,7 @@ Lo sviluppatore può utilizzare questa funzionalità per apportare modifiche a u
 Prima di distribuire l'applicazione, lo sviluppatore può eseguire la migrazione ai dati e dello schema per l'ambiente di produzione tramite **CloudKit Dashboard**. Durante l'esecuzione per l'ambiente di produzione, il server impedisce un'applicazione modifica dello schema a livello di codice. Lo sviluppatore può comunque apportano modifiche con **CloudKit Dashboard** , ma tenta di aggiungere campi a un record nel risultato errori in ambiente di produzione.
 
 > [!NOTE]
-> **Nota:** iOS simulatore funziona solo con il **ambiente di sviluppo**. Quando lo sviluppatore è pronto per testare un'applicazione in un **ambiente di produzione**, è necessario un dispositivo dei / o fisici.
+> IOS simulatore funziona solo con il **ambiente di sviluppo**. Quando lo sviluppatore è pronto per testare un'applicazione in un **ambiente di produzione**, è necessario un dispositivo dei / o fisici.
 
 
 ## <a name="shipping-a-cloudkit-enabled-app"></a>App abilitata per la spedizione di un CloudKit

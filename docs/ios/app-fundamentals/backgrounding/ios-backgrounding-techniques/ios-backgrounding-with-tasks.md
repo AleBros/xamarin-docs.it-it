@@ -6,11 +6,11 @@ ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5e05cf0f13512478b3957070e7fa6329ea84337f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ad75dfac55add7e03ffbdb910e0e62ebd0fd6c18
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding con attività
 
@@ -43,7 +43,7 @@ UIApplication.SharedApplication.EndBackgroundTask(taskID);
 Le coppie di un'attività con un identificatore univoco, il processo di registrazione `taskID`e quindi ne esegue il wrapping in corrispondenza `BeginBackgroundTask` e `EndBackgroundTask` chiamate. Per generare l'identificatore, si effettua una chiamata al `BeginBackgroundTask` metodo il `UIApplication` dell'oggetto e quindi avviare l'attività di lunga durata, in genere in un nuovo thread. Quando l'attività viene completata, viene detta `EndBackgroundTask` e passare lo stesso identificatore. Questo è importante perché iOS terminerà l'applicazione se un `BeginBackgroundTask` chiamata non ha un corrispondente `EndBackgroundTask`.
 
 > [!IMPORTANT]
-> **Nota**: attività in Background safe è possibile eseguire il thread principale o un thread in background, a seconda delle esigenze dell'applicazione.
+> Attività in background-safe può eseguire nel thread principale o in un thread in background, in base alle esigenze dell'applicazione.
 
 
 ## <a name="performing-tasks-during-didenterbackground"></a>Esecuzione di attività durante DidEnterBackground
@@ -65,7 +65,7 @@ public override void DidEnterBackground (UIApplication application) {
 Iniziare eseguendo l'override di `DidEnterBackground` metodo il `AppDelegate`, in cui si registra l'attività tramite `BeginBackgroundTask` come è stato fatto nell'esempio precedente. Successivamente, è possibile distribuire un nuovo thread ed eseguire l'attività a esecuzione prolungata. Si noti che il `EndBackgroundTask` chiamata viene ora effettuata da all'interno delle attività a esecuzione prolungata, poiché il `DidEnterBackground` metodo sarà ritornato già.
 
 > [!IMPORTANT]
-> **Nota**: iOS utilizza un [sorveglianza meccanismo](http://developer.apple.com/library/ios/qa/qa1693/_index.html) per assicurare che rimanga reattiva dell'interfaccia utente dell'applicazione. Un'applicazione che impiega troppo tempo `DidEnterBackground` diventerà non risponde nell'interfaccia utente. Iniziando attività da eseguire in background consente `DidEnterBackground` da restituire in modo tempestivo, mantenere reattiva l'interfaccia utente e impedire che il watchdog la terminazione dell'applicazione.
+> iOS Usa una [sorveglianza meccanismo](http://developer.apple.com/library/ios/qa/qa1693/_index.html) per assicurare che rimanga reattiva dell'interfaccia utente dell'applicazione. Un'applicazione che impiega troppo tempo `DidEnterBackground` diventerà non risponde nell'interfaccia utente. Iniziando attività da eseguire in background consente `DidEnterBackground` da restituire in modo tempestivo, mantenere reattiva l'interfaccia utente e impedire che il watchdog la terminazione dell'applicazione.
 
 
 ## <a name="handling-background-task-time-limits"></a>Limiti di tempo di attività in Background gestione
@@ -153,7 +153,7 @@ else {
 ```
 
 > [!IMPORTANT]
-> **Nota**: evitare l'esecuzione di chiamate all'aggiornamento dell'interfaccia utente di background nel codice conforme a 6 iOS, iOS 6 non supporta gli aggiornamenti dell'interfaccia utente in background e terminerà l'applicazione.
+> Evitare l'esecuzione di chiamate per aggiornare l'interfaccia utente dallo sfondo di codice conforme a 6 iOS, non supporta gli aggiornamenti dell'interfaccia utente in background, iOS 6 e terminerà l'applicazione.
 
 
 Il `NSURLSession` API include un'ampia gamma di funzionalità per gestire l'autenticazione, gestire i trasferimenti non riusciti e segnalare gli errori sul lato client, ma non sul lato server -. Consente di sfruttare che le interruzioni di attività runtime introdotte in iOS 7 e fornisce inoltre supporto per il trasferimento di file di grandi dimensioni in modo rapido e affidabile. La sezione successiva illustra questa funzionalità di secondo.

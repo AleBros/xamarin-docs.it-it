@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: ee79c79d7b3226f23851a3157e5a609d7cfc4cf4
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 73f3beb87fffcb37ef3e36d54f634c3bc62da538
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-user-defaults"></a>Utilizzo di impostazioni predefinite dell'utente
 
@@ -32,7 +32,7 @@ Come descritto in precedenza, impostazioni predefinite dell'utente (`NSUserDefau
 Quando si esegue prima l'app, `NSUserDefaults` legge le chiavi e valori da Database di impostazioni predefinite dell'applicazione utente e li memorizza nella cache in memoria per evitare di apertura e la lettura del database ogni volta che è necessario specificare un valore. 
 
 > [!IMPORTANT]
-> **Nota**: Apple non consiglia non è più la chiamata di sviluppatore di `Synchronize` metodo per la sincronizzazione direttamente la cache in memoria con il database. Al contrario, verrà automaticamente chiamato a intervalli regolari per mantenere sincronizzati con un database dell'utente predefinite nella cache in memoria.
+> Apple non consiglia non è più la chiamata di sviluppatore di `Synchronize` metodo per la sincronizzazione direttamente la cache in memoria con il database. Al contrario, verrà automaticamente chiamato a intervalli regolari per mantenere sincronizzati con un database dell'utente predefinite nella cache in memoria.
 
 La `NSUserDefaults` classe contiene vari metodi pratici per leggere e scrivere i valori delle preferenze per i tipi di dati comuni, ad esempio: string, integer, float, boolean e URL. Altri tipi di dati possono essere archiviati usando `NSData`, quindi leggere o scrivere al Database per impostazione predefinita. Per ulteriori informazioni, vedere Apple [preferenze e impostazioni di Guida per programmatori](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i).
 
@@ -127,7 +127,7 @@ plist.SetBool(useHeader, "UseHeader");
 ```
 
 > [!IMPORTANT]
-> **Nota:** quando si esegue prima l'App, `NSUserDefaults` legge le chiavi e valori da Database di impostazioni predefinite dell'applicazione utente e li memorizza nella cache in memoria per evitare di apertura e la lettura del database ogni volta che è necessario specificare un valore.
+> Quando l'App viene eseguita prima di tutto, `NSUserDefaults` legge le chiavi e valori da impostazioni predefinite Database degli utenti dell'app e li memorizza nella cache in memoria per evitare di apertura e la lettura del database ogni volta che è necessario specificare un valore.
 
 
 

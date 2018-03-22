@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 768ee4a2f33475b5327bf9c0fd006f1da580d836
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e72c013516de5bcf97e2e9f58a7a4f5cd87c730b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="resources-and-data-storage"></a>Archiviazione dei dati e risorse
 
@@ -35,7 +35,7 @@ Ogni app tvOS viene fornita una directory cache temporanea che le risorse aggiun
 Di conseguenza, l'app è possibile basarsi su contenuto scaricato in precedenza è disponibile al successivo avvio. L'app Xamarin.tvOS sempre deve verificare l'esistenza delle risorse necessarie e scaricarli in base alle esigenze.
 
 > [!IMPORTANT]
-> **Nota:** mentre è la possibilità di scaricare altri asset e risorse in base alle esigenze, Apple avvisa utilizzato tutto lo spazio nella cache dell'applicazione, quanto può causare risultati imprevisti.
+> Mentre si è in grado di scaricare altri asset e le risorse come richiesto, Apple avvisa utilizzato tutto lo spazio nella cache dell'applicazione, quanto può causare risultati imprevisti.
 
 
 
@@ -70,7 +70,7 @@ Queste risorse possono continuare a essere memorizzati nella cache in Apple TV i
 Xcode è possibile per creare pacchetti di contenuto correlato (ad esempio, tutte le risorse per il gioco livello 2) associate a un Tag di risorse offrono. Specificando questo Tag delle risorse in un secondo momento l'app richiederà di risorse su richiesta. L'app deve presentare un'interfaccia utente per l'utente che informa che il contenuto durante il download. Per ulteriori informazioni, vedere Apple [Guida risorse su richiesta](https://developer.apple.com/library/prerelease/tvos/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/index.html#//apple_ref/doc/uid/TP40015083).
 
 > [!IMPORTANT]
-> **Nota:** deve prestare attenzione per raggiungere il giusto equilibrio tra il numero di volte in cui l'app deve scaricare le risorse su richiesta e le dimensioni dei singoli download. Utente potrebbe diventare sempre con l'app in caso di interruzione costantemente la modalità di gioco per scaricare il contenuto nuovo o se un unico download impiega troppo tempo.
+> Necessario fare attenzione a raggiungere il giusto equilibrio tra il numero di volte in cui che l'app deve scaricare le risorse su richiesta e le dimensioni dei singoli download. Utente potrebbe diventare sempre con l'app in caso di interruzione costantemente la modalità di gioco per scaricare il contenuto nuovo o se un unico download impiega troppo tempo.
 
 
 

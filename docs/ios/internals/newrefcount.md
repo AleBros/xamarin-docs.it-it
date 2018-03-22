@@ -6,11 +6,11 @@ ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 43b357eecb0974884db645a0b2e5c8467ddf3b5d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 723a9c4a052f7f432ba0f32ec501af3221b2696f
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="new-reference-counting-system"></a>Nuovo sistema di conteggio dei riferimenti
 
@@ -46,7 +46,7 @@ Si noti che queste opzioni sono state rimosse nelle versioni più recenti di Vis
 
     
 > [!IMPORTANT]
-> **Nota:** una versione precedente di questa funzionalità è stata poiché 5.2 MonoTouch ma è disponibile solo per **sgen** come un'anteprima sperimentale. Questa nuova versione avanzata è anche disponibile per il **Boehm** garbage collector.
+> Una versione precedente di questa funzionalità è stato rilasciato poiché MonoTouch 5.2 ma era disponibile solo per **sgen** come un'anteprima sperimentale. Questa nuova versione avanzata è anche disponibile per il **Boehm** garbage collector.
 
 
 In passato sono state apportate due tipi di oggetti gestiti da xamarin: quelli che erano in genere semplicemente un wrapper per un oggetto nativo (oggetti peer) e quelli che esteso o incorporate nuove funzionalità (oggetti derivati) - mantenendo stato extra in memoria. In precedenza era possibile che è possibile incrementare un oggetto peer con stato (ad esempio aggiungendo un gestore eventi in c#) ma che è che l'oggetto privo di riferimento e quindi raccolti. Ciò potrebbe causare un arresto anomalo in un secondo momento (ad esempio, se richiamato l'oggetto gestito Objective-C runtime).

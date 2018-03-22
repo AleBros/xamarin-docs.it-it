@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ce850b7890265b82774534ca0daaf25bed7e0c2d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4a6b916f991b337d8a28764f1482ddd837bad460
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="watchos-troubleshooting"></a>watchOS risoluzione dei problemi
 
@@ -33,13 +33,6 @@ Questa pagina contiene informazioni aggiuntive e soluzioni alternative per le fu
 ### <a name="general"></a>Generale
 
 <a name="deploy" />
-<!--
-* You cannot deploy to the App Store *from within Visual Studio for Mac or Visual Studio*
-    in the current release. You should create an **Archive** in Visual Studio for Mac
-    and then switch to Xcode to upload the archive to iTunes Connect. Visual Studio
-    is not currently supported (but will be a future release). Refer to the
-    [deployment guide](~/ios/watchos/deploy-test/appstore.md) for more information.
--->
 
 - In modo non corretto mostrano una delle versioni precedenti di Visual Studio per Mac l'il **AppleCompanionSettings** icone come pixel 88 x 88; determinando un **mancante icona errore** se si tenta di inviare all'App Archivio.
     Questa icona deve essere 87 x 87 pixel (29 unità per  **@3x**  schermate Retina). Non è possibile risolvere questo problema in Visual Studio per Mac - modificare la risorsa di immagine in Xcode o modificare manualmente il **Contents.json** file (in modo che corrisponda [in questo esempio](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
@@ -47,14 +40,6 @@ Questa pagina contiene informazioni aggiuntive e soluzioni alternative per le fu
 - Se il progetto di estensione di espressioni di controllo **Info. plist > ID Bundle WKApp** non [impostato correttamente](~/ios/watchos/get-started/project-references.md) per corrispondente all'applicazione di espressioni di controllo **ID Bundle**, il debugger avrà esito negativo per la connessione e Visual Con il messaggio rimarrà in attesa Studio per Mac *"In attesa del debugger"*.
 
 - Il debug è supportato in **notifiche** modalità, ma potrebbero non essere affidabili. Nuovo tentativo talvolta funzionerà. Verificare che l'applicazione di espressioni di controllo **Info. plist** `WKCompanionAppBundleIdentifier` è impostata in corrispondenza l'identificatore bundle dell'app/contenitore padre (ie. è in esecuzione su iPhone).
-
-<!--
-- **Can't launch application on Watch simulator.** This seems to
-    be an issue with the iOS Simulator hanging when trying to
-    install an app that has changed. Xcode release notes (beta 4)
-    includes a similar known issue:
-    If the issue persists, reset the Simulator (**iOS Simulator > Reset Content and Settings...**).
--->
 
 - finestra di progettazione iOS non sono presenti frecce di punto di ingresso per i controller di interfaccia di riepilogo o una notifica.
 
@@ -69,15 +54,6 @@ Questa pagina contiene informazioni aggiuntive e soluzioni alternative per le fu
 ### <a name="visual-studio"></a>Visual Studio
 
 La finestra di progettazione iOS supportano per espressioni di controllo Kit *richiede* la soluzione sia configurato correttamente. Se non sono riferimenti del progetto (vedere [come impostare i riferimenti](~/ios/watchos/get-started/project-references.md)) nell'area di progettazione non funzionerà correttamente.
-
-<!--
-* New Watch Kit apps created in Visual Studio might not allow
-    starting in Notifications mode.
-
-* You cannot deploy to the App Store from Visual Studio (see [notes above](#deploy)
-    and the [deployment guide](~/ios/watchos/deploy-test/appstore.md)). Use
-    Visual Studio for Mac and Xcode on your Mac Build Host.
-    -->
 
 <a name="noalpha" />
 
@@ -109,11 +85,10 @@ with an alpha channel. Icons should not have an alpha channel.
 ## <a name="manually-adding-interface-controller-files"></a>Aggiunta manuale di file di Controller di interfaccia
 
 > [!IMPORTANT]
-> Il supporto di espressioni di controllo Kit di Xamarin include la progettazione delle espressioni di controllo storyboard in Progettazione iOS (in Visual Studio per Mac e Visual Studio), che non richiede i passaggi descritti di seguito. Semplicemente offrono un controller di interfaccia di un nome di classe in Visual Studio per Mac proprietà riempimento e verranno creati automaticamente i file di codice c#.
+> Il supporto di Xamarin WatchKit include progettazione storyboard espressioni di controllo in Progettazione iOS (in Visual Studio per Mac e Visual Studio), che non richiede i passaggi descritti di seguito. Semplicemente offrono un controller di interfaccia di un nome di classe in Visual Studio per Mac proprietà riempimento e verranno creati automaticamente i file di codice c#.
 
 
 *Se* si utilizza il generatore di interfaccia Xcode, seguire questi passaggi per creare nuovi controller di interfaccia per l'applicazione di espressioni di controllo e abilitare la sincronizzazione con Xcode in modo che le prese e le azioni disponibili in c#:
-
 
 1. Aprire l'app di espressioni di controllo **Interface.storyboard** in **Xcode interfaccia generatore**.
     
@@ -256,7 +231,7 @@ Il parametro è necessario aggiornare in modo da riflettere l'app è `launchsimw
 Il percorso completo per il bundle dell'app principale *dell'app per iOS che contiene l'applicazione di espressioni di controllo e l'estensione*.
 
 > [!NOTE]
-> *Nota:* è il percorso in cui è necessario fornire per il *file dell'App iPhone applicazione*, ovvero quello che verrà distribuito al simulatore iOS, che contiene le estensioni di espressioni di controllo e l'app watch.
+> È necessario fornire sia per il *file app applicazione iPhone*, ovvero quello che verrà distribuito al simulatore iOS, che contiene le estensioni di espressioni di controllo e app di espressioni di controllo.
 
 Esempio:
 

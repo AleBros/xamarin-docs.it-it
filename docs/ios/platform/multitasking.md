@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 34b51f784b549caa0dda2eeda066bb39dfc13020
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 0783372cd36d5a4984d09ee055257d525e7becb1
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="multitasking-for-ipad"></a>Multitasking per iPad
 
@@ -33,7 +33,7 @@ Esistono diversi aspetti da considerare quando [supporto multitasking nell'app](
 - [Tasti di scelta rapida di Hardware personalizzato](#Custom-Hardware-Keyboard-Shortcuts)
 - [Gestione delle risorse](#Resource-Management-Considerations)
 
-Uno sviluppatore di app è anche possibile [rifiutare esplicitamente il multitasking](#Opting-Out-of-Multitasking), tra cui [la disabilitazione di riproduzione Video PIP](#Disabling-PIP-Video-Playback).
+Lo sviluppatore di applicazioni è inoltre possibile [rifiutare esplicitamente il multitasking](#Opting-Out-of-Multitasking), tra cui [la disabilitazione di riproduzione Video PIP](#Disabling-PIP-Video-Playback).
 
 In questo articolo illustra i passaggi necessari per garantire che venga eseguita correttamente l'app xamarin. IOS in un ambiente multitasking o come rifiutare esplicitamente il multitasking, se non è una buona base per l'app.
 
@@ -205,7 +205,7 @@ Vedere l'esempio [MultiTask app](http://developer.xamarin.com/samples/monotouch/
 
 Anche per le app che usano già Guide alla progettazione e procedure consigliate di iOS 8, la gestione delle risorse efficiente potrebbe comunque essere un problema. In iOS 9, le applicazioni non devono più utilizzo esclusivo di memoria, CPU o altre risorse di sistema.
 
-Di conseguenza, è necessario ottimizzare l'app xamarin per utilizzare efficacemente le risorse di sistema o che sia rivolto verso la terminazione in situazioni di memoria insufficiente. Questo vale anche delle App rifiutare esplicitamente il multitasking, dopo un secondo app potrebbe ancora essere eseguita in un pannello diapositiva su o un'immagine nella finestra di immagine che richiede risorse aggiuntive o che causano la frequenza di aggiornamento cadere di sotto di 60 fotogrammi al secondo.
+Di conseguenza, è necessario ottimizzare l'app xamarin per utilizzare efficacemente le risorse di sistema o che sia rivolto verso la terminazione in situazioni di memoria insufficiente. Ciò vale anche delle App rifiutare esplicitamente il multitasking, poiché un secondo app potrebbe ancora essere eseguito in un pannello diapositiva su o un'immagine nella finestra di immagine che richiede risorse aggiuntive o che causano la frequenza di aggiornamento cada di sotto di 60 fotogrammi al secondo.
 
 Si considerino le seguenti azioni dell'utente e le relative implicazioni:
 
@@ -223,19 +223,16 @@ Vedere Apple [Guida di efficienza energetica per App iOS](https://developer.appl
 
 <a name="Opting-Out-of-Multitasking" />
 
-## <a name="opting-out-of-multitasking"></a>Acconsentito esplicitamente il Multitasking
+## <a name="opting-out-of-multitasking"></a>Rifiuto esplicito Multitasking
 
 Sebbene Apple suggerisce che tutte le app di iOS 9 supportano il multitasking, può essere motivi specifici per un'app non troppo, ad esempio giochi o App della fotocamera che richiedono l'intero schermo per funzionare correttamente.
 
-Per l'app xamarin rifiutare esplicitamente l'esecuzione in entrambi un pannello diapositiva Out o in modalità di visualizzazione suddivisa, modificare il progetto **Info. plist** file e verificare **richiede schermo**:
+Per l'app xamarin. IOS rifiutare esplicitamente in esecuzione in entrambi un pannello diapositiva Out o in modalità di visualizzazione suddivisa, modificare il progetto **Info. plist** del file e verificare **richiede la modalità a schermo intero**:
 
-[![](multitasking-images/fullscreen01.png "Acconsentito esplicitamente il Multitasking")](multitasking-images/fullscreen01.png#lightbox)
+[![](multitasking-images/fullscreen01.png "Rifiuto esplicito Multitasking")](multitasking-images/fullscreen01.png#lightbox)
 
 > [!IMPORTANT]
-> **Nota:** mentre Opting-Out di multitasking impedisce l'esecuzione nella diapositiva Out o doppia visualizzazione dell'app, accade **non** impedire l'esecuzione in una diapositiva Out o di un'immagine video di immagine da visualizzare insieme a un'altra app del app.
-
-
-
+> Mentre rifiuto esplicito multitasking impedisce l'esecuzione nella diapositiva Out o doppia visualizzazione dell'app, non impedisce un'altra app viene eseguita in diapositiva Out o un'immagine in immagine video da visualizzare con l'app.
 
 <a name="Disabling-PIP-Video-Playback" />
 

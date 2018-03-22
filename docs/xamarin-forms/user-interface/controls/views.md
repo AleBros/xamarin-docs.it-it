@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: ef4de2d544f3bcfb661b29dd90de738ae0442373
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: f7d27c5226741ec2b105633206ebaa0ac73d9a7b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="xamarinforms-views"></a>Viste di xamarin. Forms
 
@@ -86,7 +86,7 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio etichette, i
 
 |     |     |
 | --- | --- |
-| [`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) consente all'utente di selezionare un `double` valore da un intervallo continuo specificato con il [ `Minimum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Minimum/) e [ `Maximum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Maximum/) proprietà.<br /><br />[Documentazione dell'API](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) | [![Esempio di dispositivo di scorrimento](views-images/Slider.png "dispositivo di scorrimento esempio")](views-images/Slider-Large.png#lightbox "esempio dispositivo di scorrimento")<br />[Il codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SliderDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SliderDemoPage.xaml) |
+| [`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) consente all'utente di selezionare un `double` valore da un intervallo continuo specificato con il [ `Minimum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Minimum/) e [ `Maximum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Maximum/) proprietà.<br /><br />[La documentazione dell'API](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) / [Guida](~/xamarin-forms/user-interface/slider.md) / [esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) | [![Esempio di dispositivo di scorrimento](views-images/Slider.png "dispositivo di scorrimento esempio")](views-images/Slider-Large.png#lightbox "esempio dispositivo di scorrimento")<br />[Il codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SliderDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SliderDemoPage.xaml) |
 |     |     |
 
 ### <a name="stepper"></a>Gestore di istruzioni

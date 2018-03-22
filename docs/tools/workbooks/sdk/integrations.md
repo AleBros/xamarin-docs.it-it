@@ -6,11 +6,11 @@ ms.assetid: 002CE0B1-96CC-4AD7-97B7-43B233EF57A6
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 2e9f1282ec567e894f4e0841ae42f791d8a77d3f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e51aa9ab9d4d63d16b3a68d24084c872d831975
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="external-integrations"></a>Integrazioni esterne
 
@@ -55,6 +55,6 @@ Come con qualsiasi assembly cui viene fatto riferimento da una cartella di lavor
 L'assembly di integrazione è in effetti un ponte tra un'applicazione o SDK di interesse e la sessione. È possibile offrire nuove API che ha senso in particolare nel contesto di una cartella di lavoro o in tempo reale controllare di sessione, o non fornire alcuna API pubbliche e semplicemente eseguire "dietro le quinte" attività cede il controllo oggetto [rappresentazioni](~/tools/workbooks/sdk/representations.md).
 
 > [!NOTE]
-> Nota: Le API che devono essere pubblico, ma non devono essere resi visibili tramite IntelliSense possono essere contrassegnate con la consueta `[EditorBrowsable (EditorBrowsableState.Never)]` attributo.
+> Le API che devono essere pubblici, ma non devono essere resi visibili tramite IntelliSense possono essere contrassegnate con le normali attività `[EditorBrowsable (EditorBrowsableState.Never)]` attributo.
 
 [nuget]: https://nuget.org/packages/Xamarin.Workbooks.Integration

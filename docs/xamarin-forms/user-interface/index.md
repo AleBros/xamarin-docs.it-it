@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: c5cca8e6fceb9aef82fc6543adc6dc5e7399d839
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: b2a5402b8d2ac127f6a5f75decbee8567decb905
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="user-interface"></a>Interfaccia utente
 
@@ -65,6 +65,10 @@ Aggiunta di mappe richiede un download del pacchetto NuGet aggiuntive e alcune c
 ## <a name="pickerpickerindexmd"></a>[Selezione](picker/index.md)
 
 Il [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) Vista è un controllo per la selezione di un elemento di testo da un elenco di dati.
+
+## <a name="sliderslidermd"></a>[Dispositivo di scorrimento](slider.md)
+
+Il `Slider` consente a un utente di selezionare un valore numerico da un intervallo continuo.
 
 ## <a name="stylesstylesindexmd"></a>[Stili](styles/index.md)
 

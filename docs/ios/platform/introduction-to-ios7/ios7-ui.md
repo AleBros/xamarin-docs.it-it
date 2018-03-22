@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 1ad37cb4a794ac47e0e2f184a730949f14e85572
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3d70aff4df91120402e2987598b8973172b46245
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 panoramica dell'interfaccia utente
 
@@ -173,7 +173,7 @@ Consultare la [ImageViewer](https://developer.xamarin.com/samples/mobile/iOS7-ui
 Il valore di spostamento viene generato in modo dinamico dopo la visualizzazione è stato aggiunto alla gerarchia, pertanto il tentativo di lettura `TopLayoutGuide` e `BottomLayoutGuide` valori `ViewDidLoad` restituirà 0. Calcolare il valore dopo la visualizzazione è caricate - ad esempio, il `ViewDidLayoutSubviews`.
 
 > [!IMPORTANT]
-> **Nota**: `TopLayoutGuide` e `BottomLayoutGuide` sono deprecati in iOS 11 a favore il nuovo layout area di sicurezza. Apple hanno indicato che l'utilizzo di area di sicurezza è compatibile con la versione di iOS precedenti a iOS 11. Per ulteriori informazioni, vedere il [l'aggiornamento dell'app per iOS 11](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) Guida.
+> `TopLayoutGuide` e `BottomLayoutGuide` sono deprecati in iOS 11 a favore il nuovo layout area di sicurezza. Apple hanno indicato che l'utilizzo di area di sicurezza è compatibile con la versione di iOS precedenti a iOS 11. Per ulteriori informazioni, vedere il [l'aggiornamento dell'app per iOS 11](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) Guida.
 
 #### <a name="edgesforextendedlayout"></a>EdgesForExtendedLayout
 
@@ -252,7 +252,7 @@ Ad esempio, nella schermata seguente mostra l'effetto della modifica il colore t
 Il colore tinta può essere applicato a immagini anche quando il `RenderingMode` è impostato su `UIImageRenderingMode.AlwaysTemplate`.
 
 > [!IMPORTANT]
-> Nota: Colore tinta non può essere impostate utilizzando `UIAppearance`.
+> Colore tonalità non può essere impostate tramite `UIAppearance`.
 
 
 ### <a name="dynamic-type"></a>Tipo dinamico

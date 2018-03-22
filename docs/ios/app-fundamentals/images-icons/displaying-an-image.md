@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 1ca537ef47f48886483e99bb33b0d524d16593f8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 39da41b7fb5118a16f2b2953f8fcb0a5b72aa819
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="displaying-an-image"></a>Visualizzazione di un'immagine
 
@@ -95,7 +95,7 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 ```
 
 > [!IMPORTANT]
-> **Nota**: se le immagini assegnate a un Set di immagini non vengono visualizzati correttamente, verificare che il nome corretto del file viene utilizzato con il `FromBundle` metodo (il **immagine impostata** e non il padre **catalogo di Asset**  nome). Per le immagini PNG, il `.png` estensione può essere omesso. Per altri formati di immagine, l'estensione è necessaria (ad es. `PurpleMonkey.jpg`).
+> Se le immagini assegnate a un Set di immagini non vengono visualizzati correttamente, verificare che il nome corretto del file è in uso con la `FromBundle` metodo (la **immagine impostata** e non il padre **catalogo di Asset** nome). Per le immagini PNG, il `.png` estensione può essere omesso. Per altri formati di immagine, l'estensione è necessaria (ad es. `PurpleMonkey.jpg`).
 
 <a name="Using-Vector-Images-in-Asset-Catalogs" />
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c40e9291e81770435535de7b0c83d6c865cbed58
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: efc0da0b0f0a800069efb00a402361a8b0cd7f1d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-stacked-view"></a>Utilizzo di visualizzazione in pila
 
@@ -76,7 +76,7 @@ Se il `BaselineRelativeArrangement` proprietà `true`, le sottoviste verranno di
 * Una visualizzazione Stack orizzontale utilizzerà la più alta secondaria per la base e il cognome. Se la vista più alta è anche una visualizzazione dello Stack, utilizzerà la più alta secondaria come linea di base.
 
 > [!IMPORTANT]
-> **Nota:** l'allineamento della linea di base non funziona sulle dimensioni di visualizzazione secondaria allungato o compresso come verrà calcolata la linea di base in posizione errata. Per l'allineamento della linea di base, verificare che la visualizzazione secondaria **altezza** corrisponde la visualizzazione contenuto intrinseco **altezza**.
+> Allineamento della linea di base non funziona sulle dimensioni di visualizzazione secondaria allungato o compresso come verrà calcolata la linea di base in posizione errata. Per l'allineamento della linea di base, verificare che la visualizzazione secondaria **altezza** corrisponde la visualizzazione contenuto intrinseco **altezza**.
 
 
 
@@ -149,7 +149,7 @@ Il modo più semplice per utilizzare le visualizzazioni dello Stack in un'app Xa
 -----
 
 > [!IMPORTANT]
-> **Nota:** Nota: anche se è possibile assegnare azioni, ad esempio `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio un `UIButton`) nella finestra di progettazione durante la creazione di un gestore eventi, iOS non verrà mai chiamato perché non dispone di un tocco schermata o il supporto del tocco Apple TV eventi. È consigliabile utilizzare sempre il valore predefinito `Action Type` durante la creazione di azioni per tvOS elementi dell'interfaccia utente.
+> Sebbene sia possibile assegnare le azioni, ad esempio `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio un `UIButton`) nella finestra di progettazione durante la creazione di un gestore eventi, iOS non verrà mai chiamato perché Apple TV non ha un tocco supportano eventi tocco o sullo schermo. È consigliabile utilizzare sempre il valore predefinito `Action Type` durante la creazione di azioni per tvOS elementi dell'interfaccia utente.
 
 Per ulteriori informazioni sull'uso di storyboard, consultare il nostro [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
 

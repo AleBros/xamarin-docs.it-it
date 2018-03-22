@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/13/2017
-ms.openlocfilehash: a4491f550369bbb8515635ecbb7c1c2b74de48cf
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 357528c559de36329ca4bf12ab2597247a17222d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="app-transport-security"></a>Sicurezza del trasporto di App
 
@@ -82,7 +82,7 @@ Il livello di TLS è controllato dal servizio web che si utilizza, pertanto è d
 In base al server che si parla (specialmente se si tratta di un servizio di terze parti 3rd), potrebbe essere necessario disabilitare PFS o selezionare un livello inferiore di TLS. Vedere il [configurazione delle opzioni di at](#Configuring-ATS-Options) sezione riportata di seguito per ulteriori dettagli.
 
 > [!IMPORTANT]
-> **Nota:** App la sicurezza del trasporto non è valida per le app Xamarin mediante **implementazioni gestite HTTPClient**. Si applica alle connessioni tramite CFNetwork **implementazioni HTTPClient** o **NSURLSession HTTPClient implementazioni** solo.
+> Sicurezza del trasporto App non è valida per le app Xamarin mediante **implementazioni gestite HTTPClient**. Si applica alle connessioni tramite CFNetwork **implementazioni HTTPClient** o **NSURLSession HTTPClient implementazioni** solo.
 
 ### <a name="setting-the-httpclient-implementation"></a>Impostazione dell'implementazione di HTTPClient
 
@@ -138,7 +138,7 @@ Svantaggi:
 
 Quando si tenta di connettersi a internet, direttamente o da una visualizzazione web a iOS 9, si potrebbe ricevere un errore nel formato:
 
-> Sicurezza del trasporto App ha bloccato un carico di risorsa (http://www.-the-blocked-domain.com) HTTP come testo non crittografato perché è non protetto. Eccezioni temporanee possono essere configurate tramite file Info. plist dell'app.
+> Sicurezza del trasporto App ha bloccato una HTTP come testo non crittografato (http://www.-the-blocked-domain.com) carico risorse perché è non protetta. Eccezioni temporanee possono essere configurate tramite file Info. plist dell'app.
 
 Sicurezza trasporto App (AT) iOS9, garantisce connessioni protette tra le risorse internet (ad esempio i server back-end dell'app) e l'app. AT richiede inoltre la comunicazione con il `HTTPS` protocollo e la comunicazione di alto livello dell'API da crittografare con TLS versione 1.2 PFS.
 
@@ -243,7 +243,7 @@ All'interno di Visual Studio per Mac, fare doppio clic sul `Info.plist` file nel
 [![](ats-images/ats02.png "La vista di origine del file Info. plist")](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
-> **Nota:** se l'applicazione richiede una connessione a un sito Web di non protetta, è necessario **sempre** immettere il dominio come un'eccezione utilizzando `NSExceptionDomains` anziché disattivare completamente l'utilizzo di at `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` deve essere utilizzato solo in situazioni di emergenza estremi.
+> Se l'applicazione richiede una connessione a un sito Web non protetta, è necessario **sempre** immettere il dominio come un'eccezione utilizzando `NSExceptionDomains` anziché disattiva completamente utilizzando la at `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` deve essere utilizzato solo in situazioni di emergenza estremi.
 
 
 

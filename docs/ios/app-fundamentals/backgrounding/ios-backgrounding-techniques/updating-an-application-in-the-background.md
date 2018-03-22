@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f4a18bf8f35d1a6c615c819ea90433d1eb123422
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7f7cfcd320fcb38a9b08dfd8fe7e0fae7ff808ec
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="updating-an-application-in-the-background"></a>Aggiornamento di un'applicazione in Background
 
@@ -79,7 +79,7 @@ Al termine, l'aggiornamento del contenuto è informare il sistema operativo chia
 Applicazioni che usano il recupero in Background possono effettuare chiamate per l'aggiornamento dell'interfaccia utente di background. Quando l'utente apre l'app, l'interfaccia utente sarà fino a data e di visualizzare il nuovo contenuto. Snapshot App selezione dell'applicazione, verranno aggiornate anche in modo che l'utente può visualizzare quando l'applicazione dispone di nuovo contenuto.
 
 > [!IMPORTANT]
-> **Nota**: una volta `PerformFetch` viene chiamato, l'applicazione è circa 30 secondi per avviare il download del contenuto nuovo e chiamare il blocco del gestore di completamento. Se si impiega troppo tempo, l'applicazione verrà terminata. È consigliabile utilizzare il recupero in Background con il _servizio trasferimento in Background_ durante il download di supporto o altri file di grandi dimensioni.
+> Una volta `PerformFetch` viene chiamato, l'applicazione deve circa 30 secondi chiamerò download del contenuto nuovo e chiamare il blocco del gestore di completamento. Se si impiega troppo tempo, l'applicazione verrà terminata. È consigliabile utilizzare il recupero in Background con il _servizio trasferimento in Background_ durante il download di supporto o altri file di grandi dimensioni.
 
 
 ### <a name="backgroundfetchinterval"></a>BackgroundFetchInterval
@@ -132,7 +132,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 Notifiche remote devono essere utilizzate per gli aggiornamenti non frequenti con il contenuto è fondamentale per le funzionalità dell'applicazione. Per ulteriori informazioni sulle notifiche remote, vedere il Xamarin [le notifiche Push in iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md) Guida.
 
 > [!IMPORTANT]
-> **Nota**: perché il meccanismo di aggiornamento nelle notifiche remoto dipende dal recupero in Background, l'applicazione deve avviare il download del contenuto nuovo e chiamare il blocco del gestore di completamento entro 30 secondi di ricezione della notifica o verrà iOS terminare l'applicazione. Prendere in considerazione le notifiche remoto con l'associazione _servizio trasferimento in Background_ durante il download di supporto o altri file di grandi dimensioni in background.
+> Poiché il meccanismo di aggiornamento nelle notifiche remoto si basa su recupero in Background, l'applicazione deve chiamerò download del contenuto nuovo e chiamare il blocco del gestore di completamento entro 30 secondi di ricevere la notifica oppure iOS terminerà l'applicazione. Prendere in considerazione le notifiche remoto con l'associazione _servizio trasferimento in Background_ durante il download di supporto o altri file di grandi dimensioni in background.
 
 
 ### <a name="silent-remote-notifications"></a>Notifiche Remote invisibile all'utente
@@ -156,7 +156,7 @@ Tuttavia, APN consentirà di notifiche invisibile all'utente "piggyback" insieme
  [![](updating-an-application-in-the-background-images/silent.png "Notifiche periodiche utilizzabile stored invisibile all'utente invio delle notifiche push da APNs il dispositivo, come illustrato in questo diagramma")](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
-> **Nota**: Apple invita gli sviluppatori per inviare notifiche push invisibile all'utente ogni volta che richiede l'applicazione e servizio APN consentono di pianificare il recapito.
+> Apple invita gli sviluppatori per inviare notifiche push invisibile all'utente ogni volta che l'applicazione richiede e lasciare che il servizio APNs pianificare il recapito.
 
 
 In questa sezione, abbiamo trattato le varie opzioni per l'aggiornamento del contenuto in background per eseguire attività che non rientrano in una categoria di background necessarie. A questo punto, vediamo alcune di queste API in azione.

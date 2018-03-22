@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 0b8d8d08db15959a47093f255a891605a089ea00
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c55ba4fb90181aaa1aa8ec52e2fcb3e2b2cc76d0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="table-control"></a>Controllo della tabella
 
@@ -51,7 +51,8 @@ myTable.SetNumberOfRows ((nint)rows.Count, "default");
 ```
 
 > [!IMPORTANT]
-> **Nota**: le righe della tabella non virtualizzate come in iOS. Provare a limitare il numero di righe (Apple consiglia inferiore a 20).
+> Le righe della tabella non siano virtualizzate, ad esempio si trovano in iOS. Provare a limitare il numero di righe (Apple consiglia inferiore a 20).
+
 Dopo avere create le righe, è necessario popolare ogni cella (ad esempio `GetCell` farebbe in iOS). Questo frammento di codice il [WatchTables esempio](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/) Aggiorna l'etichetta in ogni riga
 
 ```csharp
@@ -62,7 +63,7 @@ for (var i = 0; i < rows.Count; i++) {
 ```
 
 > [!IMPORTANT]
-> **Nota:** Using `SetNumberOfRows` e quindi ciclo viene eseguito mediante `GetRowController` fa sì che l'intera tabella da inviare per l'espressione di controllo. Le viste successive della tabella, se si desidera aggiungere o rimuovere righe specifiche utilizzano `InsertRowsAt` e `RemoveRowsAt` per ottenere prestazioni migliori.
+> Utilizzo `SetNumberOfRows` e quindi ciclo viene eseguito mediante `GetRowController` fa sì che l'intera tabella da inviare per le espressioni di controllo. Le viste successive della tabella, se si desidera aggiungere o rimuovere righe specifiche utilizzano `InsertRowsAt` e `RemoveRowsAt` per ottenere prestazioni migliori.
 
 
 ## <a name="respond-to-taps"></a>Rispondere alle scelte
@@ -148,7 +149,7 @@ watchOS 3 introdotta una nuova funzionalità per le tabelle: la possibilità di 
 ![](table-images/table-scroll-sml.png "Esempio di dettaglio Paging verticale") ![](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
-> **Avviso:** questa funzionalità è attualmente disponibile solo modificando lo storyboard in Xcode interfaccia generatore.
+> Questa funzionalità è attualmente disponibile solo modificando lo storyboard in Xcode interfaccia generatore.
 
 Per abilitare questa funzionalità, selezionare il `WKInterfaceTable` sulla superficie di progettazione e segni di graduazione di **Paging dettaglio verticale** opzione:
 

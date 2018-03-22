@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 83841e62d863bf4be4edef5c0b6b7d486f192f4d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8fd2b5069e175a68ff7609e75775db1929507582
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="background-tasks"></a>Attività di background
 
@@ -143,7 +143,7 @@ Nuovamente, verrà generato un `WKSnapshotRefreshBackgroundTask` in modo che l'a
 Quando l'app contrassegna il `WKSnapshotRefreshBackgroundTask` completato, il sistema verrà automaticamente uno snapshot di interfaccia utente dell'applicazione.
 
 > [!IMPORTANT]
-> **Nota:** è importante pianificare sempre un ` WKSnapshotRefreshBackgroundTask` dopo l'applicazione ha ricevuto nuovi dati e aggiornato relativa interfaccia utente o l'utente non vedrà le informazioni modificate.
+> È importante pianificare sempre un ` WKSnapshotRefreshBackgroundTask` dopo che l'app ha ricevuto nuovi dati e aggiornato relativa interfaccia utente o l'utente non verrà visualizzate le informazioni modificate.
 
 
 
@@ -630,7 +630,7 @@ App aggiunti ancoraggio possibile prevedere le operazioni seguenti:
 L'ultimo app è stato eseguito l'utente verrà considerato il _usati di recente_ app e occupa l'ultimo slot nell'alloggiamento di espansione. Da qui, si può scegliere di aggiungere in modo permanente di ancoraggio. L'usati di recente verrà considerato come qualsiasi altra app preferita all'utente ha già aggiunti al ancoraggio.
 
 > [!IMPORTANT]
-> **Nota:** App che sono stati aggiunti solo alla schermata Home non verrà fornita una pianificazione regolare. Per ricevere una pianificazione regolare e in background aggiorna, un'app _deve_ da aggiungere al Dock.
+> Le app che sono stati aggiunti solo alla schermata Home non verranno fornite una pianificazione regolare. Per ricevere una pianificazione regolare e in background aggiorna, un'app _deve_ da aggiungere al Dock.
 
 Come indicato in precedenza in questo documento, gli snapshot sono molto importanti per watchOS 3 poiché funzionano come le immagini di anteprima e l'avvio per l'app. Se l'utente liquida in un'app di ancoraggio, venga espanso a schermo intero, immettere il primo piano e avviare l'esecuzione, pertanto è fondamentale che lo Snapshot può essere aggiornato.
 
