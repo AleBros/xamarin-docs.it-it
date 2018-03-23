@@ -1,6 +1,6 @@
 ---
 title: Risoluzione dei problemi di connessione
-description: "Questa guida presenta una procedura di risoluzione dei problemi che possono verificarsi durante l'uso del nuovo strumento di gestione connessione, inclusi i problemi di connettività e di SSH."
+description: Questa guida presenta una procedura di risoluzione dei problemi che possono verificarsi durante l'uso del nuovo strumento di gestione connessione, inclusi i problemi di connettività e di SSH.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1508A15-1997-4562-B537-E4A9F3DD1F06
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: ffa61004bdaaaaf400f5e0d5ed90b4e6b1dcb7e7
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: d33f4ba5512985d62575885d44fdcebced8b61ed
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="connection-troubleshooting"></a>Risoluzione dei problemi di connessione
 
@@ -72,26 +72,34 @@ L'host di compilazione Xamarin delle versioni precedenti di Xamarin.iOS non è p
 
 7. Dopo aver verificato l'indirizzo IP del Mac, eseguire il comando `ping` per tale indirizzo in `cmd.exe` in Windows:
 
-        ping 10.1.8.95
-
+    ```
+    ping 10.1.8.95
+    ```
+    
     Se il ping ha esito negativo, il Mac non è _instradabile_ dal computer Windows. Questo problema deve essere risolto a livello di configurazione della rete locale tra i due computer. Assicurarsi che entrambi i computer siano all'interno della stessa rete locale.
 
 8. Verificare quindi se il client `ssh` da OpenSSH può connettersi correttamente al Mac da Windows. Un modo per installare questo programma è tramite l'installazione di [Git per Windows](https://git-for-windows.github.io/). È quindi possibile avviare un prompt dei comandi **Git Bash** e tentare di usare `ssh` nel Mac tramite nome utente e indirizzo IP:
 
-        ssh amyb@10.1.8.95
-
+    ```bash
+    ssh amyb@10.1.8.95
+    ```
+    
 <a name="stepnine" />
 
 9. Se **il passaggio 8 ha esito positivo**, è possibile provare a eseguire un comando semplice, ad esempio `ls`, attraverso la connessione:
 
-        ssh amyb@10.1.8.95 'ls'
-
+    ```bash
+    ssh amyb@10.1.8.95 'ls'
+    ```
+    
     Questo comando dovrebbe elencare il contenuto della directory home del Mac. Se il comando `ls` funziona correttamente, ma la connessione di Visual Studio non funziona ancora, è possibile vedere la sezione [Problemi e limitazioni noti](#knownissues) relativa a complicazioni specifiche di Xamarin. Se nessuna di queste corrisponde al proprio problema, [inviare un nuovo report sui bug](https://bugzilla.xamarin.com/newbug) allegando i log descritti in [Controllare i file di log dettagliati](#verboselogs).
 
 10. Se **il passaggio 8 ha esito negativo**, è possibile eseguire il comando seguente nel terminale del Mac per vedere se il server SSH accetti _alcuna_ connessione:
 
-        ssh localhost
-
+    ```bash
+    ssh localhost
+    ```
+    
 11. Se il passaggio 8 ha esito negativo ma **il passaggio 10 ha esito positivo**, molto probabilmente il problema è che la porta 22 nell'host di compilazione Mac non è accessibile da Windows a causa della configurazione di rete. Ecco alcuni problemi di configurazione possibili:
 
     - Le impostazioni del firewall di OS X non consentono la connessione. Ricontrollare il passaggio 3.
@@ -161,8 +169,10 @@ Cause segnalate:
 
     5. Aggiungere la riga seguente nella parte inferiore del file:
 
-            UseDNS no
-
+        ```
+        UseDNS no
+        ```
+        
     6. Rimuovere tutte le righe `UseDNS yes` per assicurarsi che la nuova impostazione sia effettiva.
 
     7. Salvare il file.
@@ -179,16 +189,20 @@ Se i file di log indicano un problema durante il passaggio di installazione, car
 
 1. Eseguire il comando seguente nel terminale del Mac:
 
-        open "$HOME/Library/Caches/Xamarin"
-
+    ```bash
+    open "$HOME/Library/Caches/Xamarin"
+    ```
+    
 2. Premere CTRL+clic sulla cartella **XMA** e selezionare **Sposta nel Cestino**:
 
     [![](troubleshooting-images/troubleshooting-image8.png "Spostare la cartella XMA nel Cestino")](troubleshooting-images/troubleshooting-image8.png#lightbox)
 
 3. Anche in Windows è presente una cache che può essere utile cancellare. In Windows aprire il prompt dei comandi come amministratore:
 
-        del %localappdata%\Temp\Xamarin\XMA
-
+    ```
+    del %localappdata%\Temp\Xamarin\XMA
+    ```
+    
 ## <a name="warning-messages"></a>Messaggi di avviso
 
 Questa sezione illustra alcuni messaggi che possono essere visualizzati nella finestra di output e nei log e che in genere è possibile ignorare.
@@ -230,7 +244,7 @@ Se la finestra di output non include informazioni sufficienti per diagnosticare 
 1. Avviare Visual Studio.
 
     > [!IMPORTANT]
->  Si noti che i file con estensione **svclogs** non sono abilitati per impostazione predefinita. Per accedervi è necessario avviare Visual Studio con log dettagliati, come descritto nella guida [corrispondente](~/cross-platform/troubleshooting/questions/version-logs.md#visual-studio-startup-verbose-logs). Per altre informazioni, vedere il blog [Troubleshooting Extensions with the Activity Log](https://blogs.msdn.microsoft.com/visualstudio/2010/02/24/troubleshooting-extensions-with-the-activity-log/) (Risoluzione dei problemi delle estensioni con il log attività).
+    > Si noti che i file con estensione **svclogs** non sono abilitati per impostazione predefinita. Per accedervi è necessario avviare Visual Studio con log dettagliati, come descritto nella guida [corrispondente](~/cross-platform/troubleshooting/questions/version-logs.md#visual-studio-startup-verbose-logs). Per altre informazioni, vedere il blog [Troubleshooting Extensions with the Activity Log](https://blogs.msdn.microsoft.com/visualstudio/2010/02/24/troubleshooting-extensions-with-the-activity-log/) (Risoluzione dei problemi delle estensioni con il log attività).
 
 2. Tentare di connettersi all'host di compilazione.
 
@@ -272,7 +286,7 @@ Se i file di log normali non offrono comunque informazioni sufficienti per diagn
 
     ```bash
     grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"
-    ```
+   ```
 
 Se questi file di log dettagliati non forniscono indicazioni sufficienti per risolvere il problema direttamente, [inviare un nuovo report sui bug](https://bugzilla.xamarin.com/newbug) allegando sia il file con estensione zip del passaggio 5 che il file con estensione log del passaggio 6.
 

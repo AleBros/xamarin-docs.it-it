@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/29/2017
-ms.openlocfilehash: cfbe2df23317ee3ad11c9970ab892ddcc251b9d6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 08bf8b2b7c56983c43cf1ae080ab112e81851fbb
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="installing-xamarinios-on-windows"></a>Installazione di Xamarin.iOS in Windows
 
@@ -37,7 +37,7 @@ Il diagramma seguente offre una semplice panoramica del flusso di lavoro di svil
 [![Flusso di lavoro di sviluppo di Xamarin.iOS](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
->  Visual Studio avvia un processo MSBuild separato per compilare i progetti. Questo processo crea una nuova connessione al Mac, quindi esistono effettivamente due connessioni SSH da Windows a Mac durante la compilazione di Visual Studio. La compilazione dalla [riga di comando](~/ios/get-started/installation/windows/connecting-to-mac/index.md) crea un unico processo MSBuild. Per semplificare il diagramma, tutte le connessioni sono rappresentate da una sola freccia.
+> Visual Studio avvia un processo MSBuild separato per compilare i progetti. Questo processo crea una nuova connessione al Mac, quindi esistono effettivamente due connessioni SSH da Windows a Mac durante la compilazione di Visual Studio. La compilazione dalla [riga di comando](~/ios/get-started/installation/windows/connecting-to-mac/index.md) crea un unico processo MSBuild. Per semplificare il diagramma, tutte le connessioni sono rappresentate da una sola freccia.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -105,7 +105,7 @@ Per installare gli strumenti Xamarin.iOS nell'host mac, è necessario [installar
 Dopo aver installato il software, seguire i passaggi nelle sezioni successive per configurare Xamarin.iOS su macOS per consentire a Xamarin per Visual Studio di connettersi a questo.
 
 > [!IMPORTANT]
->  Il computer Windows deve usare la stessa versione di Xamarin.iOS del Mac a cui è connesso. Per verificare che sia così:
+> Il computer Windows deve usare la stessa versione di Xamarin.iOS del Mac a cui è connesso. Per verificare che sia così:
 >
 > - **Visual Studio 2015 e versioni precedenti**: assicurarsi di trovarsi nello stesso [canale aggiornamenti](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/) di Visual Studio per Mac.
 >
