@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 5f27c1acefa63ee26184b8997594630e24cb0acc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 16cd5571a8c3b0e179046351e9996e55b040a9de
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="authentication-and-authorization"></a>Autenticazione e autorizzazione
 
@@ -21,7 +21,7 @@ Esistono molti approcci per l'integrazione di autenticazione e autorizzazione in
 
 ## <a name="authentication"></a>Autenticazione
 
-Autenticazione è necessaria quando un'applicazione deve conoscere l'identità dell'utente corrente. Meccanismo principale del ASP.NET Core per identificare gli utenti è il sistema di appartenenze di ASP.NET Identity Core, che archivia le informazioni utente in un archivio dati configurato dallo sviluppatore. L'archivio dati sarà in genere, un archivio, EntityFramework proposte archivi personalizzati o pacchetti di terze parti possono essere usati per archiviare le informazioni di identità in archiviazione di Azure, DocumentDB o altre posizioni.
+Autenticazione è necessaria quando un'applicazione deve conoscere l'identità dell'utente corrente. Meccanismo principale del ASP.NET Core per identificare gli utenti è il sistema di appartenenze di ASP.NET Identity Core, che archivia le informazioni utente in un archivio dati configurato dallo sviluppatore. In genere, questo archivio dati sarà un archivio EntityFramework, proposte archivi personalizzati o pacchetti di terze parti possono essere usati per archiviare le informazioni di identità in archiviazione di Azure, Azure Cosmos DB o altre posizioni.
 
 Per scenari di autenticazione che utilizzano dell'archivio dati utente locali, e vengono mantenute le informazioni di identità tra le richieste tramite i cookie (come avviene in genere nelle applicazioni web ASP.NET MVC), ASP.NET Identity Core è una soluzione adeguata. Tuttavia, i cookie non sono sempre un mezzo naturale di persistenza e la trasmissione dei dati. Ad esempio, un'applicazione web ASP.NET di base che espone endpoint REST che è possibile accedere da un'app per dispositivi mobili in genere necessario utilizzare l'autenticazione token della connessione, poiché i cookie non possono essere utilizzati in questo scenario. Tuttavia, i token di connessione possono facilmente essere recuperati e incluso nell'intestazione di autorizzazione delle richieste web effettuate dall'app mobile.
 

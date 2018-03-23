@@ -1,6 +1,6 @@
 ---
 title: Ricerca di dati con ricerca di Azure
-description: "Ricerca di Azure è un servizio cloud che fornisce funzionalità di caricamento dei dati di query e l'indicizzazione. Questa operazione rimuove i requisiti di infrastruttura e le complessità di algoritmo di ricerca in genere associata a implementare la funzionalità di ricerca in un'applicazione. In questo articolo viene illustrato come utilizzare la libreria di ricerca di Microsoft Azure per l'integrazione di ricerca di Azure in un'applicazione di xamarin. Forms."
+description: Ricerca di Azure è un servizio cloud che fornisce funzionalità di caricamento dei dati di query e l'indicizzazione. Questa operazione rimuove i requisiti di infrastruttura e le complessità di algoritmo di ricerca in genere associata a implementare la funzionalità di ricerca in un'applicazione. In questo articolo viene illustrato come utilizzare la libreria di ricerca di Microsoft Azure per l'integrazione di ricerca di Azure in un'applicazione di xamarin. Forms.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: bf6b9f8aaa07e934a1e707b85ecaa24e4f3d99bf
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 24db1404e218eea86356f9bbc004e7d5850c2e7a
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="searching-data-with-azure-search"></a>Ricerca di dati con ricerca di Azure
 
@@ -119,7 +119,7 @@ searchClient.Indexes.Delete(Constants.Index);
 
 Dopo aver definito l'indice, è possano caricare i dati utilizzando uno dei due modelli:
 
-- **Modello pull** : dati periodicamente vengono acquisiti da Azure DocumentDB, Database SQL di Azure, archiviazione Blob di Azure o SQL Server ospitato in una macchina virtuale di Azure.
+- **Modello pull** : i dati vengono periodicamente acquisiti da Azure Cosmos DB, Database SQL di Azure, archiviazione Blob di Azure o SQL Server ospitato in una macchina virtuale di Azure.
 - **Modello push** -dati a livello di codice viene inviati all'indice. Si tratta del modello adottato in questo articolo.
 
 Oggetto `SearchIndexClient` per importare dati in corrispondenza dell'indice, è necessario creare l'istanza. Questa operazione può essere eseguita chiamando il `SearchServiceClient.Indexes.GetClient` (metodo), come illustrato nell'esempio di codice seguente:

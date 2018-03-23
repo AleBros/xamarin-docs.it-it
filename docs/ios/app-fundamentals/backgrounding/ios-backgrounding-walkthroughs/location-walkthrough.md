@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: dfae07d36c67c12d254cd70c22acb01b2fc1c9b0
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: efdabc5450b186c89785ee3cb19a3decdd6c2064
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="walkthrough---using-background-location"></a>Procedura dettagliata - utilizza il percorso di sfondo
 
@@ -28,7 +28,6 @@ Questa procedura dettagliata vengono illustrate alcune chiave backgrounding conc
 
     In Esplora soluzioni, fare doppio clic su di **Info. plist** file per aprirlo e scorrere fino alla fine dell'elenco. Inserire un segno di spunta da entrambi i **abilitare la modalità di Background** e **percorso aggiornamenti** caselle di controllo.
 
-
     In Visual Studio per Mac, avrà un aspetto simile al seguente:
 
     [![](location-walkthrough-images/image7.png "Inserire un segno di spunta sia la modalità di Background attiva e le caselle di controllo degli aggiornamenti di percorso")](location-walkthrough-images/image7.png#lightbox)
@@ -38,7 +37,7 @@ Questa procedura dettagliata vengono illustrate alcune chiave backgrounding conc
     ```xml
     <key>UIBackgroundModes</key>
     <array>
-        <string>location</string>
+      <string>location</string>
     </array>
     ```
 

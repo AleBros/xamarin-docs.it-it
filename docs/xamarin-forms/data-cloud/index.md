@@ -1,18 +1,18 @@
 ---
 title: Dati e servizi cloud
-description: "Xamarin. Forms applicazioni possono utilizzare servizi web implementati tramite un'ampia gamma di tecnologie e verrà esaminato in questa Guida eseguire questa operazione."
+description: Xamarin. Forms applicazioni possono utilizzare servizi web implementati tramite un'ampia gamma di tecnologie e verrà esaminato in questa Guida eseguire questa operazione.
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: "0601D9D0-C8D2-4C3B-A749-A340BDBF64A4ß"
+ms.assetid: 0601D9D0-C8D2-4C3B-A749-A340BDBF64A4ß
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: 28007ee702c66f3b819430b544465d3470d571d9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 54313c3e8808ee9e563d6b55e3bf034c543a48e5
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="data--cloud-services"></a>Dati e servizi cloud
 
@@ -50,7 +50,7 @@ In questo articolo viene illustrato come utilizzare la libreria di ricerca di Mi
 
 ## <a name="storing-data-in-a-document-databasecosmosdbindexmd"></a>[Archiviazione dei dati in un database di documenti](cosmosdb/index.md)
 
-Questa guida viene illustrato come utilizzare la libreria Client di Microsoft Azure DocumentDB per l'integrazione di un database di documenti di Azure Cosmos DB in un'applicazione di xamarin. Forms. Un database di documenti di Azure Cosmos DB è un database NoSQL che fornisce accesso a bassa latenza per i documenti JSON, che offre un servizio di database veloce, a disponibilità elevata, scalabili per applicazioni che richiedono scalabilità trasparente e replica globale.
+Questa guida viene illustrato come utilizzare la libreria client .NET Standard di Azure Cosmos DB per integrare un database di documenti di Azure Cosmos DB in un'applicazione di xamarin. Forms. Un database di documenti di Azure Cosmos DB è un database NoSQL che fornisce accesso a bassa latenza per i documenti JSON, che offre un servizio di database veloce, a disponibilità elevata, scalabili per applicazioni che richiedono scalabilità trasparente e replica globale.
 
 ## <a name="adding-intelligence-with-cognitive-servicescognitive-servicesindexmd"></a>[Aggiunta di funzionalità di Intelligence con Servizi cognitivi](cognitive-services/index.md)
 

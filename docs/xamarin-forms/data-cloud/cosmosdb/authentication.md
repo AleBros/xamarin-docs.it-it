@@ -1,6 +1,6 @@
 ---
 title: L'autenticazione degli utenti con un Database di documenti di Azure Cosmos DB
-description: "Azure DB Cosmos documento i database supportano le raccolte partizionate, che possono estendersi su più server e le partizioni, supportando la velocità effettiva e archiviazione illimitata. In questo articolo spiega come combinare il controllo di accesso con le raccolte partizionate, in modo che un utente può accedere solo i propri documenti in un'applicazione di xamarin. Forms."
+description: Azure DB Cosmos documento i database supportano le raccolte partizionate, che possono estendersi su più server e le partizioni, supportando la velocità effettiva e archiviazione illimitata. In questo articolo spiega come combinare il controllo di accesso con le raccolte partizionate, in modo che un utente può accedere solo i propri documenti in un'applicazione di xamarin. Forms.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 10c4a1e3355263722d170dff0a5e2707eb794818
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8de64d6489b4022e43bcf694f3b13d6f7eaaecbd
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="authenticating-users-with-an-azure-cosmos-db-document-database"></a>L'autenticazione degli utenti con un Database di documenti di Azure Cosmos DB
 
@@ -22,12 +22,12 @@ _Azure DB Cosmos documento i database supportano le raccolte partizionate, che p
 
 Una chiave di partizione deve essere specificata durante la creazione di una raccolta partizionata e documenti con la stessa chiave di partizione verranno archiviati nella stessa partizione. Pertanto, se si specifica l'identità dell'utente come chiave di partizione otterrà in una raccolta partizionata che verrà archiviate solo documenti per l'utente. Questo processo assicura anche che il database di documenti di Azure Cosmos DB verrà ridimensionato con il numero di utenti e aumentare gli elementi.
 
-Necessario concedere l'accesso a ciascuna raccolta e il modello di controllo di accesso API DocumentDB definisce due tipi di costrutti di accesso:
+Deve essere concesso l'accesso a ciascuna raccolta e il modello di controllo di accesso SQL API definisce due tipi di costrutti di accesso:
 
 - **Le chiavi master** abilitare l'accesso amministrativo completo a tutte le risorse all'interno di un account DB Cosmos e vengono creati quando viene creato un account DB Cosmos.
 - **I token di risorsa** acquisiscono la relazione tra l'utente di un database e l'autorizzazione di cui l'utente dispone per una risorsa Cosmos DB specifica, ad esempio una raccolta o un documento.
 
-Esposizione di una chiave master viene aperto un account Cosmos DB la possibilità di utilizzare dannoso o non appropriato. Tuttavia, i token di risorsa Cosmos DB forniscono un meccanismo sicuro per consentire ai client di lettura, scrittura ed eliminazione di risorse specifiche in un account Cosmos DB in base alle autorizzazioni concesse.
+Esposizione di una chiave master viene aperto un account Cosmos DB la possibilità di utilizzare dannoso o non appropriato. Tuttavia, i token di risorsa di Azure Cosmos DB forniscono un meccanismo sicuro per consentire ai client di lettura, scrittura ed eliminazione di risorse specifiche in un account Azure Cosmos DB in base alle autorizzazioni concesse.
 
 Un approccio tipico per la richiesta, la generazione e il recapito i token di risorsa a un'applicazione per dispositivi mobili consiste nell'utilizzare un gestore di token di risorsa. Il diagramma seguente mostra una panoramica di come l'applicazione di esempio utilizza un gestore di token di risorsa per gestire l'accesso ai dati di database del documento:
 
@@ -44,7 +44,7 @@ Il gestore di token di risorsa è un servizio di API Web di livello intermedio, 
 > [!NOTE]
 > Quando scade il token della risorsa, le richieste di database di documenti successivi riceverà un'eccezione 401 non autorizzato. A questo punto, le applicazioni di xamarin. Forms devono ristabilire l'identità e richiedere un nuovo token di risorsa.
 
-Per ulteriori informazioni sul partizionamento Cosmos DB, vedere [come partizione e la scala in Azure Cosmos DB](/azure/cosmos-db/partition-data/). Per ulteriori informazioni sul controllo di accesso Cosmos DB, vedere [protezione dell'accesso ai dati Cosmos DB](/azure/cosmos-db/secure-access-to-data/) e [controllo degli accessi nell'API DocumentDB](/rest/api/documentdb/access-control-on-documentdb-resources/).
+Per ulteriori informazioni sul partizionamento Cosmos DB, vedere [come partizione e la scala in Azure Cosmos DB](/azure/cosmos-db/partition-data/). Per ulteriori informazioni sul controllo di accesso Cosmos DB, vedere [protezione dell'accesso ai dati DB Cosmos](/azure/cosmos-db/secure-access-to-data/) e [Access control nell'API di SQL](/rest/api/documentdb/access-control-on-documentdb-resources/).
 
 ## <a name="setup"></a>Configurazione
 
@@ -58,11 +58,11 @@ Il processo per l'integrazione di Service broker di token di risorsa in un'appli
 
 <a name="cosmosdb_configuration" />
 
-### <a name="cosmos-db-configuration"></a>Configurazione COSMOS DB
+### <a name="azure-cosmos-db-configuration"></a>Configurazione di Azure Cosmos DB
 
 Il processo per la creazione di un account di DB Cosmos che verrà utilizzato il controllo di accesso è come segue:
 
-1. Creare un account DB Cosmos. Per ulteriori informazioni, vedere [creare un account Cosmos DB](/azure/cosmos-db/documentdb-dotnetcore-get-started#step-1-create-a-documentdb-account).
+1. Creare un account DB Cosmos. Per altre informazioni, vedere [creare un account Azure Cosmos DB](/azure/cosmos-db/sql-api-dotnetcore-get-started#step-1-create-an-azure-cosmos-db-account).
 1. Nell'account di database Cosmos, creare una nuova raccolta denominata `UserItems`, specificare una chiave di partizione di `/userid`.
 
 <a name="app_service_configuration" />
@@ -269,10 +269,10 @@ Questo articolo ha descritto come combinare il controllo di accesso con le racco
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [TodoDocumentDBAuth (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+- [TODO Azure Cosmos DB Auth (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
 - [Utilizzo di un database di documenti di Azure Cosmos DB](~/xamarin-forms/data-cloud/cosmosdb/consuming.md)
 - [Protezione dell'accesso ai dati di Azure Cosmos DB](/azure/cosmos-db/secure-access-to-data/)
-- [Controllo degli accessi nell'API DocumentDB](/rest/api/documentdb/access-control-on-documentdb-resources/).
+- [Controllo di accesso in sull'API SQL](/rest/api/documentdb/access-control-on-documentdb-resources/).
 - [Creazione di partizioni e scala nel database di Azure Cosmos](/azure/cosmos-db/partition-data/)
-- [Libreria Client di DocumentDB](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
+- [Libreria Client di Azure Cosmos DB](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
 - [API di Azure Cosmos DB](https://msdn.microsoft.com/library/azure/dn948556.aspx)
