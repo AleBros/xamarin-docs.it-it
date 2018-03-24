@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 2ee98b48feb8bc1e3431d796a7ca07a6c2e74790
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25c4cb980f77880ae690916ec45be3cd12a3cf10
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="app-store-distribution"></a>Distribuzione tramite l'App Store
 
@@ -37,7 +37,7 @@ Indipendentemente da come si prevede di rilasciare un'applicazione Xamarin.iOS, 
 È possibile selezionare lo stesso **ID app** e gli stessi **dispositivi** usati per il profilo di provisioning di sviluppo, ma, se non ne è già disponibile uno, sarà necessario creare un certificato di distribuzione per identificare l'organizzazione quando si invia l'app all'App Store. La procedura di creazione di un certificato di distribuzione è descritta nella sezione successiva.
 
 > [!NOTE]
->  Nota: solo gli agenti e gli amministratori del team possono creare i certificati di distribuzione e i profili di provisioning.
+> Solo gli agenti e gli amministratori del team possono creare i certificati di distribuzione e i profili di provisioning.
 
 <a name="creatingcertificate" />
 

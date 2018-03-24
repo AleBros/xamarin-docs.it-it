@@ -1,6 +1,6 @@
 ---
-title: "Uso delle funzionalità"
-description: "L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per tutte le funzionalità."
+title: Uso delle funzionalità
+description: L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per tutte le funzionalità.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: c038aba3989046e6df062e97ae7f777ae6238ade
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ffc694e2f513d61cf32e94d8dc3bae17c887521b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-capabilities"></a>Uso delle funzionalità
 
@@ -58,7 +58,7 @@ Questa sezione illustra come usare il provisioning automatico di Visual Studio p
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 > [!IMPORTANT]
-> **NOTA**: non tutte le funzionalità possono essere aggiunte e gestite in Visual Studio per Mac. L'elenco seguente contiene le funzionalità supportate:
+> Non tutte le funzionalità possono essere aggiunte e gestite in Visual Studio per Mac. L'elenco seguente contiene le funzionalità supportate:
 >
 >* HealthKit 
 >* HomeKit 
@@ -198,7 +198,7 @@ Creare ora un profilo di provisioning contenente tale ID app. Attenersi ai passi
     ![Opzioni progetto di Visual Studio per Mac](images/image16.png)
 
 > [!IMPORTANT]
-> Nota: potrebbe anche essere necessario impostare le chiavi per gli entitlement nel file Entitlements.plist e le chiavi per la privacy nel file Info.plist. Per altre informazioni su questi entitlement, vedere la guida [Uso degli entitlement](~/ios/deploy-test/provisioning/entitlements.md).
+> Potrebbe anche essere necessario impostare le chiavi per gli entitlement nel file Entitlements.plist e le chiavi per la privacy nel file Info.plist. Per altre informazioni su questi entitlement, vedere la guida [Uso degli entitlement](~/ios/deploy-test/provisioning/entitlements.md).
 
 <a name="nextsteps" />
 
@@ -220,7 +220,7 @@ Il seguente è un elenco dettagliato di alcuni dei problemi più comuni che poss
 -   Assicurarsi che i profili di provisioning e gli ID delle app siano stati installati e che il file **Info.plist** dell'app (nel progetto Xamarin) usi uno degli ID app configurati sopra.
 -   Assicurarsi che il file **Entitlements.plist** dell'app (nel progetto Xamarin) abbia il servizio corretto abilitato.
 -   Assicurarsi che in info.plist siano impostate le chiavi per la privacy appropriate
--   In **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. **Nota:** questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
+-   In **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
 
 <a name="summary" />
 
