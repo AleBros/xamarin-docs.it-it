@@ -6,11 +6,11 @@ ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: b1b61e7ce1bae413f132cfe1e6c051a53b786f98
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bd9be12ee1d67c7c071cf8fcfb49b4d888258dae
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="mtouch"></a>mtouch
 
@@ -24,6 +24,22 @@ Il processo di conversione di un eseguibile .NET in applicazione viene per lo pi
 
 Consultare la pagina del manuale di [mtouch(1)](http://docs.go-mono.com/?link=man%3amtouch(1)), che contiene informazioni su tutti i possibili usi dello strumento mtouch.
 
+## <a name="installation"></a>Installazione
+
+In un Mac, `mtouch` è in bundle con Xamarin.iOS. È disponibile nella directory seguente:
+
+**/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin**
+
+Per rendere `mtouch` comodo usare, aggiungere la relativa directory padre alla variabile di ambiente di sistema `PATH`.  
+
+Ad esempio, per eseguire questa operazione in Bash, aggiungere la riga seguente alla fine del file **~/.bash_profile**:
+
+```bash
+export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin
+```
+
+> [!WARNING]
+> Per usare `mtouch`, non fare affidamento sull'esistenza di **/Developer/MonoTouch/usr/bin**, un collegamento simbolico che punta a **/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin**. Questo collegamento simbolico esiste solo per mantenere la compatibilità con versioni precedenti di MonoTouch non installate in **/Library/Frameworks/...**  e potrebbe non essere più disponibile in una versione futura.
 
 ## <a name="building"></a>Compilazione
 

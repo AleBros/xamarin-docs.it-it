@@ -1,18 +1,18 @@
 ---
 title: Gestione dispositivi di Xamarin Android
-description: "Gestione dispositivi di Xamarin Android, attualmente in anteprima, sostituisce Gestione dispositivi legacy di Google. La presente guida illustra come usare Gestione dispositivi di Xamarin Android per creare e configurare dispositivi virtuali Android (AVD) che emulano i dispositivi Android. È possibile usare questi dispositivi virtuali per eseguire e testare l'app anche senza un dispositivo fisico."
+description: Gestione dispositivi di Xamarin Android, attualmente in anteprima, sostituisce Gestione dispositivi legacy di Google. La presente guida illustra come usare Gestione dispositivi di Xamarin Android per creare e configurare dispositivi virtuali Android (AVD) che emulano i dispositivi Android. È possibile usare questi dispositivi virtuali per eseguire e testare l'app anche senza un dispositivo fisico.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/13/2018
-ms.openlocfilehash: c38a0a7f6897cd90f81c92348280539b33524b9c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.date: 03/20/2018
+ms.openlocfilehash: 01fb21729e919872935fd63af28a13642a11fa4b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="xamarin-android-device-manager"></a>Gestione dispositivi di Xamarin Android
 
@@ -308,7 +308,8 @@ Per configurare un nuovo dispositivo nella schermata **New Device** (Nuovo dispo
 
 
 <a name="device-edit" />
- 
+
+
 ### <a name="edit-device"></a>Modificare il dispositivo
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -415,6 +416,7 @@ Il menu delle opzioni aggiuntive contiene le voci seguenti:
 
 <a name="properties" />
  
+
 ## <a name="profile-properties"></a>Proprietà profilo
 
 Le schermate **New Device** (Nuovo dispositivo) e **Device Editor** (Editor dispositivi) elencano le proprietà del dispositivo virtuale nella prima colonna e i valori corrispondenti di ogni proprietà nella seconda colonna. Quando si seleziona una proprietà, sul lato destro viene visualizzata una descrizione dettagliata di tale proprietà. È possibile modificare le *proprietà del profilo hardware* e le *proprietà AVD*.
@@ -467,9 +469,9 @@ Per altre informazioni su queste proprietà, vedere [Hardware Profile Properties
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
 Le sezioni seguenti descrivono problemi comuni riscontrati con Gestione dispositivi di Xamarin Android e le relative soluzioni:
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 ### <a name="android-sdk-in-non-standard-location"></a>Android SDK in un percorso non standard
 
@@ -501,19 +503,64 @@ Per evitare questo problema, eseguire le operazioni seguenti:
 
 Dopo aver modificato in questo modo **user.config** è possibile avviare Gestione dispositivi di Xamarin Android.
 
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>Uno snapshot disabilita l'accesso Wi-Fi in Android Oreo
+
+In presenza di un dispositivo virtuale Android configurato per Android Oreo con accesso Wi-Fi simulato, il riavvio dell'AVD dopo uno snapshot può causare la disabilitazione dell'accesso Wi-Fi.
+
+Per risolvere il problema:
+
+1. Selezionare l'AVD in Gestione dispositivi di Xamarin.
+
+2. Scegliere **Visualizza in Esplora risorse** dal menu delle opzioni aggiuntive.
+
+3. Passare a **Snapshot > default_boot**.
+
+4. Eliminare il file **snapshot.pb**:
+
+    [![Percorso del file snapshot.pb](xamarin-device-manager-images/win/36-delete-snapshot-sml.png)](xamarin-device-manager-images/win/36-delete-snapshot.png#lightbox)
+
+5. Riavviare l'AVD. 
+
+Dopo aver apportato queste modifiche, l'AVD verrà riavviato in uno stato che consente di nuovo il funzionamento dell'accesso Wi-Fi.
+
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>Uno snapshot disabilita l'accesso Wi-Fi in Android Oreo
+
+In presenza di un dispositivo virtuale Android configurato per Android Oreo con accesso Wi-Fi simulato, il riavvio dell'AVD dopo uno snapshot può causare la disabilitazione dell'accesso Wi-Fi.
+
+Per risolvere il problema:
+
+1. Selezionare l'AVD in Gestione dispositivi di Xamarin.
+
+2. Scegliere **Visualizza in Finder** dal menu delle opzioni aggiuntive.
+
+3. Passare a **Snapshot > default_boot**.
+
+4. Eliminare il file **snapshot.pb**:
+
+    [![Percorso del file snapshot.pb](xamarin-device-manager-images/mac/36-delete-snapshot-sml.png)](xamarin-device-manager-images/mac/36-delete-snapshot.png#lightbox)
+
+5. Riavviare l'AVD. 
+
+Dopo aver apportato queste modifiche, l'AVD verrà riavviato in uno stato che consente di nuovo il funzionamento dell'accesso Wi-Fi.
+
+-----
+
+
 ### <a name="generating-a-bug-report"></a>Generazione di un report sui bug
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Se si rileva un problema in Gestione dispositivi di Xamarin Android che non può essere risolto con i suggerimenti elencati sopra, inoltrare un report sui bug facendo clic con il pulsante destro del mouse sulla barra del titolo e selezionando **Generate Bug Report** (Genera report sui bug):
 
 ![Voce di menu per l'inoltro di un report sui bug](xamarin-device-manager-images/win/35-bug-report.png)
 
+
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-Attualmente non esistono problemi noti e soluzioni corrispondenti per Gestione dispositivi di Xamarin Android in Visual Studio per Mac. 
-
-### <a name="generating-a-bug-report"></a>Generazione di un report sui bug
-
-Se si rileva un problema, inviare un report sui bug facendo clic su **Aiuto > Generate Bug Report** (Genera report sui bug):
+Se si rileva un problema in Gestione dispositivi di Xamarin Android che non può essere risolto con i suggerimenti elencati sopra, inoltrare un report sui bug facendo clic su **Aiuto > Generate Bug Report** (Genera report sui bug):
 
 ![Voce di menu per l'inoltro di un report sui bug](xamarin-device-manager-images/mac/35-bug-report.png)
 

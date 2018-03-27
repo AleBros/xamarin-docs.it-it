@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 08/28/2017
-ms.openlocfilehash: 2a2b5a1135a4d08c2a89caf0fbf4b2cdb1ac624c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 4a53053ebef88bf831b7749fa82f3444ecc26723
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="system-requirements"></a>Requisiti di sistema
 
@@ -47,7 +47,7 @@ L'uso di un computer Mac per lo sviluppo con Xamarin richiede le versioni softwa
 [!include[](~/cross-platform/includes/macos-requirements.md)]
 
 > [!NOTE]
-> NOTA: è possibile installare (e aggiornare) Xcode in [developer.apple.com](https://developer.apple.com/xcode/download/) o tramite Mac App Store.
+> È possibile installare (e aggiornare) Xcode in [developer.apple.com](https://developer.apple.com/xcode/download/) o tramite Mac App Store.
 
 ### <a name="testing--debugging-on-macos"></a>Test e debug in macOS
 

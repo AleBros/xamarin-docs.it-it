@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 7b1d56c62fe54d5b1e196e20e1a6989b542da1be
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6a26bb42ee0abcec70d17633152dd12bd200a737
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="helloios-quickstart"></a>Guida introduttiva a Hello.iOS
 
@@ -90,7 +90,7 @@ Nella schermata di avvio fare clic su **Nuovo progetto** per creare una nuova so
   ![](hello-ios-quickstart-images/image8new.png "Trascinare un elemento Etichetta nell'area di progettazione al centro")
 
   > [!NOTE]
-> **Nota:** è possibile visualizzare il **riquadro delle proprietà** o la **casella degli strumenti** in qualsiasi momento passando a **Visualizzazione > Riquadri**.
+  > È possibile visualizzare il **riquadro delle proprietà** o la **casella degli strumenti** in qualsiasi momento passando a **Visualizza > Riquadri**.
 
 9. Afferrare i punti di controllo dei *controlli di trascinamento* (i cerchi intorno al controllo) e ingrandire l'elemento:
 
@@ -268,9 +268,8 @@ Nella schermata di avvio fare clic su **Nuovo progetto** per creare una nuova so
 
   ![](hello-ios-quickstart-images/image27new.png "Premere Avvia")
 
-
   > [!NOTE]
-> **Nota:** al momento, a causa di un requisito Apple, per compilare codice per un dispositivo o un simulatore potrebbe essere necessario un certificato di sviluppo o un'*identità di firma*. Per soddisfare questo requisito, seguire i passaggi nella [guida Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
+  > Al momento, a causa di un requisito Apple, per compilare codice per un dispositivo o un simulatore potrebbe essere necessario un certificato di sviluppo o un'*identità di firma*. Per soddisfare questo requisito, seguire i passaggi nella [guida Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
 
 28. Verrà avviata l'applicazione all'interno del simulatore iOS:
 
@@ -289,7 +288,7 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 **Nota**: questa procedura dettagliata usa Visual Studio Enterprise 2017 in una macchina virtuale Windows 10. La configurazione usata può essere diversa da quella usata qui, purché i requisiti sopra riportati siano soddisfatti. Tenere presente tuttavia che alcune schermate potrebbero essere diverse.
 
 > [!NOTE]
-> **Prima di procedere con questa procedura dettagliata**, _è necessario_ connettersi al Mac da Visual Studio. Xamarin.iOS, infatti, si basa su alcuni strumenti Apple per compilare e avviare iOS Designer e le applicazioni. Per eseguire la configurazione, seguire i passaggi nella guida [Connessione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+> Prima di procedere con questa procedura dettagliata, è necessario connettersi al Mac da Visual Studio. Xamarin.iOS, infatti, si basa su alcuni strumenti Apple per compilare e avviare iOS Designer e le applicazioni. Per eseguire la configurazione, seguire i passaggi nella guida [Connessione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Avviare Visual Studio dal menu **Start**:
 
@@ -333,7 +332,7 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
   ![](hello-ios-quickstart-images/vs-image10.png "Modificare la proprietà Testo dell'etichetta in 'Enter a Phoneword' (Immettere una Phoneword)")
 
   > [!NOTE]
-> **Nota:** è possibile visualizzare le **proprietà** o la **casella degli strumenti** in qualsiasi momento passando al menu **Visualizzazione**.
+  > È possibile visualizzare le **proprietà** o la **casella degli strumenti** in qualsiasi momento passando al menu **Visualizza**.
 
 
 9. Cercare "campo di testo" all'interno della casella degli strumenti e trascinare un **Campo di testo** dalla **casella degli strumenti** nell'area di progettazione e posizionarlo sotto l'elemento **Etichetta**. Regolare la larghezza in modo che il **Campo di testo** sia della stessa larghezza dell'**Etichetta**:
@@ -377,7 +376,7 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
   ![](hello-ios-quickstart-images/vs-image19.png "Aggiungere una nuova classe denominata PhoneTranslator")
 
   > [!IMPORTANT]
-> Assicurarsi di selezionare il modello "Classe" con C# nell'icona. In caso contrario non è possibile fare riferimento a questa nuova classe.
+  > Assicurarsi di selezionare il modello "Classe" con C# nell'icona. In caso contrario non è possibile fare riferimento a questa nuova classe.
 
 
 17. Viene creata una nuova classe C#. Rimuovere tutto il codice del modello e sostituirlo con il codice seguente:

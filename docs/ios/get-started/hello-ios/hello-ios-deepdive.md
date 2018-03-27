@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d7a458a0a0c2da1dbb40ae7222fcd35cf7172953
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 500c3d1c6f38427a921097a0c3104254ec5cb263
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Hello, iOS: approfondimenti
 
@@ -306,7 +306,7 @@ public partial class ViewController : UIViewController
 `ViewController` ora consente il funzionamento delle interazioni della gerarchia di visualizzazione del contenuto associate a questo controller di visualizzazione nello Storyboard. Verrà quindi presentato il processo detto del ciclo di vita della visualizzazione, attraverso il quale si apprenderà il ruolo del controller di visualizzazione nella gestione delle visualizzazioni.
 
 > [!NOTE]
-> **Nota:** per le schermate di sola visualizzazione che non richiedono alcuna interazione utente, la proprietà **Classe** nel **riquadro delle proprietà** può essere lasciata vuota. In questo modo la classe sottostante del controller di visualizzazione viene impostata come implementazione predefinita di `UIViewController`. Ciò è corretto se non si prevede di aggiungere codice personalizzato.
+> Per le schermate di sola visualizzazione che non richiedono alcuna interazione con l'utente, la proprietà **Classe** nel **riquadro delle proprietà** può essere lasciata vuota. In questo modo la classe sottostante del controller di visualizzazione viene impostata come implementazione predefinita di `UIViewController`. Ciò è corretto se non si prevede di aggiungere codice personalizzato.
 
 ### <a name="view-lifecycle"></a>Ciclo di vita della visualizzazione
 
@@ -416,7 +416,7 @@ Il simulatore iOS consente di testare le applicazioni in modo rapido. Il simulat
 Il provisioning di un dispositivo richiede tempo e un account sviluppatore Apple. La guida [Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) offre istruzioni esaurienti per la predisposizione di un dispositivo per lo sviluppo.
 
 > [!NOTE]
-> **Nota:** al momento, a causa di un requisito Apple, per compilare codice per un dispositivo o un simulatore è necessario un certificato di sviluppo o un'_identità di firma_. Per soddisfare questo requisito, seguire i passaggi nella [guida Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
+> Al momento, a causa di un requisito Apple, per compilare codice per un dispositivo o un simulatore è necessario un certificato di sviluppo o un'_identità di firma_. Per soddisfare questo requisito, seguire i passaggi nella [guida Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
 
 Dopo il provisioning del dispositivo, per usare il dispositivo stesso come destinazione della distribuzione è necessario collegarlo, modificare la destinazione sulla barra degli strumenti di compilazione per il dispositivo iOS e premere **Avvia** ( **Riproduci**) come illustrato nello screenshot seguente:
 

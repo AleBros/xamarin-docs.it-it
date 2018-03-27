@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: ee612d4a8982a6ae505b4d329b9abbc84624a1e0
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 66f4dcf14cd179795e9a23bccabe4289d74c7c5b
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="xamarinandroid-environment"></a>Ambiente Xamarin.Android
 
@@ -36,7 +36,7 @@ I commenti sono righe che iniziano con `#`. Le righe vuote vengono ignorate.
 
 Se la *chiave* inizia con una lettera maiuscola, la *chiave* viene considerata una variabile di ambiente e viene usato **setenv**(3) per impostare la variabile di ambiente sul *valore* specificato durante l'avvio del processo.
 
-Se la *chiave* inizia con una lettera minuscola, la *chiave* viene considerata una proprietà di sistema di Android e il *valore* è il *valore predefinito*: prima vengono cercate nel server delle proprietà di sistema di Android le proprietà di sistema di Android che controllano il comportamento di esecuzione di Xamarin.Android e, se non sono presenti valori, viene usato il valore specificato nel file dell'ambiente. Lo scopo è quello di consentire l'uso di `adb shell setprop` per eseguire l'override dei valori ricavati dal file dell'ambiente a fini diagnostici.
+Se la *chiave* inizia con una lettera minuscola, la *chiave* viene considerata una proprietà di sistema di Android e il *valore* è il *valore predefinito*: prima vengono cercate nell'archivio delle proprietà di sistema di Android le proprietà di sistema di Android che controllano il comportamento di esecuzione di Xamarin.Android e, se non sono presenti valori, viene usato il valore specificato nel file dell'ambiente. Lo scopo è quello di consentire l'uso di `adb shell setprop` per eseguire l'override dei valori ricavati dal file dell'ambiente a fini diagnostici.
 
 ## <a name="xamarinandroid-environment-variables"></a>Variabili di ambiente Xamarin.Android
 
@@ -45,9 +45,9 @@ Xamarin.Android supporta la variabile `XA_HTTP_CLIENT_HANDLER_TYPE`, che può es
 
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
-Tipo qualificato dall'assembly che deve ereditare da [HttpMessageHandler](https://msdn.microsoft.com/en-us/library/system.net.http.httpmessagehandler(v=vs.118).aspx) e viene creato dal [costruttore predefinito `HttpClient()`](https://msdn.microsoft.com/en-us/library/hh138077(v=vs.118).aspx).
+Tipo qualificato dall'assembly che deve ereditare da [HttpMessageHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpmessagehandler?view=xamarinandroid-7.1) e viene creato dal [costruttore predefinito `HttpClient()`](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=xamarinandroid-7.1#System_Net_Http_HttpClient__ctor).
 
-Per impostazione predefinita, in Xamarin.Android 6.1 questa variabile di ambiente non è impostata e verrà usata la classe [HttpClientHandler](https://msdn.microsoft.com/en-us/library/system.net.http.httpclienthandler(v=vs.118).aspx).
+Per impostazione predefinita, in Xamarin.Android 6.1 questa variabile di ambiente non è impostata e verrà usata la classe [HttpClientHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1).
 
 In alternativa, si può specificare il valore `Xamarin.Android.Net.AndroidClientHandler` per usare [`java.net.URLConnection`](https://developer.xamarin.com/api/type/Java.Net.URLConnection/) per l'accesso alla rete, che *può* consentire l'uso di TLS 1.2 se supportato da Android.
 

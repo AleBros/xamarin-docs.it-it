@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 9b7738736995835ebb6da68d32bdfbec868e73cc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2c2ba84167924916c3bec27379d33c47e8dab360
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="uninstalling-xamarin"></a>Disinstallazione di Xamarin
 
@@ -69,13 +69,14 @@ rm -rf ~/Library/XamarinStudio-*
 Mono è un'implementazione open source di Microsoft .NET Framework ed è usato da tutti i prodotti Xamarin (Xamarin.iOS, Xamarin.Android e Xamarin.Mac) per consentire lo sviluppo di queste piattaforme in C#.
 
 > [!IMPORTANT]
-> Nota: vi sono altre applicazioni oltre a Xamarin che usano Mono, ad esempio Unity. Prima di disinstallare Mono, assicurarsi che non vi siano altre dipendenze.
+> Vi sono altre applicazioni oltre a Xamarin che usano Mono, ad esempio Unity. Prima di disinstallare Mono, assicurarsi che non vi siano altre dipendenze.
 
 Per rimuovere Mono Framework da un computer, eseguire i comandi in Terminal:
 
 ```bash
 sudo rm -rf /Library/Frameworks/Mono.framework
 sudo pkgutil --forget com.xamarin.mono-MDK.pkg
+sudo rm /etc/paths.d/mono-commands
 ```
 
 <a name="uninstallandroid" />
@@ -257,7 +258,7 @@ Per disinstallare completamente Visual Studio 2017, scegliere **Disinstalla** da
 [![](uninstalling-xamarin-images/vs2017-uninstall-sml.png "Disinstallare completamente Visual Studio")](uninstalling-xamarin-images/vs2017-uninstall.png#lightbox)
 
 > [!IMPORTANT]
-> **AVVISO:** se si dispone di due (o più) istanze di Visual Studio installate side-by-side (SxS), ad esempio una versione di rilascio e una di anteprima, la disinstallazione di un'istanza potrebbe rimuovere alcune funzionalità di Xamarin dalle altre istanze di Visual Studio, tra cui:
+> Se si dispone di due (o più) istanze di Visual Studio installate side-by-side (SxS), ad esempio una versione di rilascio e una di anteprima, la disinstallazione di un'istanza potrebbe rimuovere alcune funzionalità di Xamarin dalle altre istanze di Visual Studio, tra cui:
 >
 > - Xamarin Profiler
 > - Xamarin Workbooks/Inspector

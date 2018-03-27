@@ -1,6 +1,6 @@
 ---
 title: Hello, iOS Multiscreen
-description: "In questa guida divisa in due parti l'applicazione Phoneword creata nella guida Hello, iOS viene espansa in modo da gestire una seconda schermata. Viene presentato anche lo schema progettuale MVC (Model-View-Controller), viene implementata la prima navigazione iOS e vengono illustrate in modo più approfondito la struttura e la funzionalità dell'applicazione iOS."
+description: In questa guida divisa in due parti l'applicazione Phoneword creata nella guida Hello, iOS viene espansa in modo da gestire una seconda schermata. Viene presentato anche lo schema progettuale MVC (Model-View-Controller), viene implementata la prima navigazione iOS e vengono illustrate in modo più approfondito la struttura e la funzionalità dell'applicazione iOS.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: a7d4af1563cb5fe5166c289c4ee5dca6ad3ffb00
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0c21fbd86fc9069d52f5f5935f66500e9477ca02
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="hello-ios-multiscreen-deep-dive"></a>Approfondimento su Hello, iOS Multiscreen
 
@@ -40,7 +40,7 @@ MVC è uno *schema progettuale*, vale a dire una soluzione di architettura riuti
 Lo schema MVC è utile perché consente la separazione logica tra diverse parti di un'applicazione GUI e rende più semplice per noi riusare il codice e le visualizzazioni. Passiamo ora a osservare in modo più dettagliato ognuno dei tre ruoli.
 
 > [!NOTE]
-> **Nota**: lo schema MVC ricorda vagamente la struttura delle pagine ASP.NET o delle applicazioni WPF. In questi esempi, la visualizzazione è il componente che è effettivamente responsabile della descrizione dell'interfaccia utente e corrisponde alla pagina ASPX (HTML) in ASP.NET o a XAML in un'applicazione WPF. Il controller è il componente responsabile della gestione della visualizzazione, che corrisponde al code-behind in ASP.NET o WPF.
+> Lo schema MVC ricorda vagamente la struttura delle pagine ASP.NET o delle applicazioni WPF. In questi esempi, la visualizzazione è il componente che è effettivamente responsabile della descrizione dell'interfaccia utente e corrisponde alla pagina ASPX (HTML) in ASP.NET o a XAML in un'applicazione WPF. Il controller è il componente responsabile della gestione della visualizzazione, che corrisponde al code-behind in ASP.NET o WPF.
 
 
 ### <a name="model"></a>Modello
@@ -52,7 +52,7 @@ MVC è completamente indipendente dalla *persistenza dei dati* e dall'*accesso* 
 In alcuni casi, la parte relativa al modello di MVC può essere vuota. Si può scegliere, ad esempio, di aggiungere alcune pagine statiche all'app per spiegare come funziona il traduttore telefonico, perché lo abbiamo compilato e come contattarci per segnalare eventuali bug. Queste schermate dell'app verranno comunque create usando le visualizzazioni e i controller, ma non hanno dati di modello reali.
 
 > [!NOTE]
-> **Nota**: in alcune parti della documentazione, la parte relativa allo schema MVC può fare riferimento al back-end dell'intera applicazione, non solo ai dati che vengono visualizzati nell'interfaccia utente. In questa guida si usa un'interpretazione moderna del modello, ma la distinzione non è particolarmente importante.
+> In alcune parti della documentazione, la parte relativa al modello dello schema MVC può fare riferimento al back-end dell'intera applicazione e non solo ai dati visualizzati nell'interfaccia utente. In questa guida si usa un'interpretazione moderna del modello, ma la distinzione non è particolarmente importante.
 
 
 ### <a name="view"></a>Visualizza

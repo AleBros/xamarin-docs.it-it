@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: dc21b21e28de155aa7a0e7b5cf9734e752cce9a2
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 3d5c84aee12c374317a797aa41446630a441f6df
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configurazione di un'app in iTunes Connect
 
@@ -198,7 +198,7 @@ In questa sezione del record applicazione di iTunes Connect è contenuto l'ID un
 ### <a name="app-icon"></a>Icona dell'app
 
 > [!IMPORTANT]
->  **Nota**: le icone dell'app non vengono più inviate tramite iTunes Connect. Devono essere inviate tramite il set di immagini **AppIcon** che si trova nel file **Assets.xcassets** del progetto. Per altre informazioni, vedere la guida [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) (Icona App Store).
+>  Le icone dell'app non vengono più inviate tramite iTunes Connect. Devono essere inviate tramite il set di immagini **AppIcon** che si trova nel file **Assets.xcassets** del progetto. Per altre informazioni, vedere la guida [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) (Icona App Store).
 
 L'icona dell'app rappresenta il volto dell'applicazione. Deve essere quindi facile da tenere in mente e ben visualizzabile in piccole dimensioni. Sono facilmente ricordabili le icone basiche, semplici e immediatamente riconoscibili.
 

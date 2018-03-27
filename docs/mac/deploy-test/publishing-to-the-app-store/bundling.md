@@ -8,18 +8,18 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 77365d5ed62b2ef2e81407ab1fa5aef55c592d0b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c3f94b448539b2e4073c7d8a1092df066e484dfc
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="bundle-for-mac-app-store"></a>Bundle per Mac App Store
 
 In questa sezione vengono descritti i concetti di base per compilare con Visual Studio per Mac un'applicazione da rilasciare in Mac App Store. In base alle funzionalità aggiuntive, come ad esempio l'accesso iCloud e le notifiche push, potrebbe essere necessaria una configurazione aggiuntiva, che oltrepassa l'ambito di questo articolo.
 
 > [!NOTE]
->  **Nota**: prima di iniziare questa sezione, lo sviluppatore deve aver creato un profilo di provisioning di produzione per la compilazione per Mac App Store. Per la creazione dei profili di provisioning richiesti, vedere le istruzioni riportate in precedenza nel documento.
+> Prima di iniziare questa sezione, lo sviluppatore deve aver creato un profilo di provisioning di produzione per la compilazione per Mac App Store. Per la creazione dei profili di provisioning richiesti, vedere le istruzioni riportate in precedenza nel documento.
 
 ## <a name="code-signing-options"></a>Opzioni di firma del codice
 

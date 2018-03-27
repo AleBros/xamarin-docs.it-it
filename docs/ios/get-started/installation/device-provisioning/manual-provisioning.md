@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: e42b9d0b5eb64c17c96b66c9dbae7582551a06a0
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: ecda5823636a1b2d7e31a39e29f1d46cdf7118b6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manual-provisioning"></a>Provisioning manuale
 
@@ -85,7 +85,7 @@ Il profilo sviluppatore contiene i certificati, le relative chiavi e i profili d
 -----
 
 > [!WARNING]
-> **Nota:** la perdita del certificato e delle chiavi associate può essere estremamente problematica, perché comporta la revoca dei certificati esistenti e la ripetizione del provisioning di tutti i dispositivi associati, inclusi quelli registrati per la distribuzione ad hoc. Dopo aver impostato correttamente i certificati di sviluppo, esportare una copia di backup e archiviarla in un luogo sicuro. Per altre informazioni su come eseguire questa operazione, vedere la sezione Exporting and Importing Certificates and Profiles (Esportazione e importazione di certificati e profili) della guida [Maintaining Certificates](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) (Manutenzione dei certificati) nella documentazione di Apple.
+> La perdita del certificato e delle chiavi associate può essere estremamente problematica, perché comporta la revoca dei certificati esistenti e la ripetizione del provisioning di tutti i dispositivi associati, inclusi quelli registrati per la distribuzione ad hoc. Dopo aver impostato correttamente i certificati di sviluppo, esportare una copia di backup e archiviarla in un luogo sicuro. Per altre informazioni su come eseguire questa operazione, vedere la sezione Exporting and Importing Certificates and Profiles (Esportazione e importazione di certificati e profili) della guida [Maintaining Certificates](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) (Manutenzione dei certificati) nella documentazione di Apple.
 
 <a name="provisioning" />
 
@@ -209,12 +209,12 @@ I nuovi certificati o profili di provisioning saranno disponibili in Visual Stud
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 > [!IMPORTANT]
-> **Nota:** può essere necessario arrestare e riavviare Visual Studio per Mac prima di poter visualizzare i certificati o i profili nuovi o modificati aggiornati da Xcode.
+> Può essere necessario arrestare e riavviare Visual Studio per Mac prima di poter visualizzare i certificati o i profili nuovi o modificati aggiornati da Xcode.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 > [!IMPORTANT]
-> **Nota:** può essere necessario arrestare e riavviare Visual Studio prima di poter visualizzare i certificati o i profili nuovi o modificati aggiornati da Xcode.
+> Può essere necessario arrestare e riavviare Visual Studio prima di poter visualizzare i certificati o i profili nuovi o modificati aggiornati da Xcode.
 
 -----
 

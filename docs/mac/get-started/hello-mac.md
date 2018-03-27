@@ -8,15 +8,15 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: fdf5d1236c0d8f797bc53d01eada1777b1d92373
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 635577bbc35d9e80147ecf7e1a59540099f85b9d
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="hello-mac"></a>Hello, Mac
 
-Xamarin.Mac consente di sviluppare app Mac completamente native in C# e .NET usando le stesse librerie e gli stessi comandi di interfaccia OS X usati per lo sviluppo in *Objective-C* e *Xcode*. Poiché Xamarin.Mac si integra direttamente con Xcode, lo sviluppatore può usare _Interface Builder_ di Xcode per creare le interfacce utente di un'app (oppure crearle direttamente nel codice C#).
+Xamarin.Mac consente di sviluppare app Mac completamente native in C# e .NET usando le stesse librerie e gli stessi comandi di interfaccia OS X usati per lo sviluppo in *Objective-C* e *Xcode*. Poiché Xamarin.Mac si integra direttamente con Xcode, lo sviluppatore può usare _Interface Builder_ di Xcode per creare le interfacce utente di un'app oppure crearle direttamente nel codice C#.
 
 Inoltre, poiché le applicazioni Xamarin.Mac sono scritte in C# e .NET, il codice back-end comune può essere condiviso con le app per dispositivi mobili Xamarin.iOS e Xamarin.Android offrendo un'esperienza nativa su ogni piattaforma.
 
@@ -89,7 +89,7 @@ Lo sviluppatore può creare uno o più progetti libreria di codice contenenti co
 
 ## <a name="anatomy-of-a-xamarinmac-application"></a>Anatomia di un'applicazione Xamarin.Mac
 
-Se si ha famigliarità con la programmazione iOS, è possibile osservare diverse analogie. Poiché iOS infatti usa il framework CocoaTouch, una versione ridotta di Cocoa, usato da Mac, numerosi concetti corrispondono.
+Se si ha familiarità con la programmazione iOS, è possibile osservare diverse analogie. Poiché iOS infatti usa il framework CocoaTouch, una versione ridotta di Cocoa, usato da Mac, numerosi concetti corrispondono.
 
 Osservare i file nel progetto:
 
@@ -163,7 +163,7 @@ namespace Hello_Mac
 
 Se lo sviluppatore non ha già creato un'app iOS in precedenza, questo codice non risulterà famigliare sebbene sia piuttosto semplice.
 
-Il metodo `FinishedLaunching` viene eseguito dopo la creazione dell'istanza dell'app ed è responsabile dell'effettiva creazione della finestra dell'app e dell'avvio del processo di inserimento della visualizzazione nella finestra.
+Il metodo `DidFinishLaunching` viene eseguito dopo la creazione dell'istanza dell'app ed è responsabile dell'effettiva creazione della finestra dell'app e dell'avvio del processo di inserimento della visualizzazione nella finestra.
 
 Il metodo `WillTerminate` viene chiamato quando l'utente o il sistema ha creato un'istanza di un arresto dell'app. Lo sviluppatore deve usare questo metodo per finalizzare l'app prima della chiusura, ad esempio per salvare le preferenze dell'utente o le dimensioni e la posizione delle finestre.
 
@@ -171,7 +171,7 @@ Il metodo `WillTerminate` viene chiamato quando l'utente o il sistema ha creato 
 
 ### <a name="viewcontrollercs"></a>ViewController.cs
 
-Cocoa e per derivazione CocoaTouch usano il modello *MVC* (Model View Controller). La dichiarazione `ViewController` rappresenta i controlli oggetto nella finestra dell'app. In genere, per ogni finestra creata, e per numerosi altri elementi all'interno delle finestre, è disponibile un controller che è responsabile del ciclo di vita della finestra, ad esempio dell'apertura, dell'aggiunta di nuove visualizzazioni (controlli) e così via.
+Cocoa e per derivazione CocoaTouch usano il modello *MVC* (Model View Controller). La dichiarazione `ViewController` rappresenta l'oggetto che controlla la finestra dell'app. In genere, per ogni finestra creata, e per numerosi altri elementi all'interno delle finestre, è disponibile un controller che è responsabile del ciclo di vita della finestra, ad esempio dell'apertura, dell'aggiunta di nuove visualizzazioni (controlli) e così via.
 
 La classe `ViewController` è il controller della finestra principale. Ciò significa che è responsabile del ciclo di vita della finestra principale. Il controller seguente è descritto più avanti nel dettaglio:
 
@@ -248,7 +248,7 @@ Il file `Info.plist` contiene informazioni sull'app Xamarin.Mac, ad esempio **No
 
 [![](hello-mac-images/infoplist01.png "Editor plist di Visual Studio per Mac")](hello-mac-images/infoplist01.png#lightbox)
 
-Il file definisce lo _Storyboard_ che verrà usato per visualizzare l'interfaccia utente per l'app Xamarin.Mac nella casella a discesa **Interfaccia principale**. Nel caso dell'esempio precedente `Main` nella casella a discesa si riferisce a `Main.storyboard` nell'albero di origine del progetto in **Esplora soluzioni**. Definisce anche le icone dell'app specificando il *Catalogo asset* che le contiene, in questo caso AppIcons.
+Il file definisce anche lo _Storyboard_ che verrà usato per visualizzare l'interfaccia utente per l'app Xamarin.Mac nella casella a discesa **Interfaccia principale**. Nel caso dell'esempio precedente `Main` nella casella a discesa si riferisce a `Main.storyboard` nell'albero di origine del progetto in **Esplora soluzioni**. Definisce anche le icone dell'app specificando il *Catalogo asset* che le contiene, in questo caso AppIcons.
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
@@ -318,7 +318,7 @@ La sezione **Properties & Utilities** (Proprietà e utilità) è divisa in due s
 
 Inizialmente questa sezione è quasi vuota. Tuttavia, se lo sviluppatore seleziona un elemento in **Interface Editor** (Editor interfaccia) o **Interface Hierarchy** (Gerarchia interfacce), la sezione **Properties** (proprietà) viene popolata con le informazioni relative all'elemento e alle proprietà che possono essere modificate.
 
-Nella sezione **Properties** (Proprietà) sono incluse 8 *schede di controllo*, come mostra la figura seguente:
+Nella sezione **Properties** (Proprietà) sono incluse otto *schede di controllo*, come mostra la figura seguente:
 
 [![](hello-mac-images/xcode05.png "Panoramica di tutti i controlli")](hello-mac-images/xcode05.png#lightbox)
 
@@ -395,7 +395,7 @@ Eseguire le operazioni seguenti:
 
 Durante il ridimensionamento e lo spostamenti dei comandi, si noti che Interface Builder offre suggerimenti utili basati su [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Linee guida dell'interfaccia umana OS X). Queste linee guida aiutano lo sviluppatore a creare app di qualità elevata con un aspetto famigliare per gli utenti Mac.
 
-Osservare la sezione **Interface Hierarchy** (Gerarchia interfacce) per vedere come appaiono il layout e la gerarchia degli elementi che costituiscono l'interfaccia utente:
+Osservare la sezione **Interface Hierarchy** (Gerarchia interfacce) per verificare come appaiono il layout e la gerarchia degli elementi che costituiscono l'interfaccia utente:
 
 [![](hello-mac-images/xcode15.png "Selezione di un elemento in Interface Hierarchy (Gerarchia interfacce)")](hello-mac-images/xcode15.png#lightbox)
 
@@ -407,7 +407,7 @@ Dopo aver creato l'interfaccia utente, lo sviluppatore deve esporre gli elementi
 
 ### <a name="outlets-and-actions"></a>Outlet e azioni
 
-Che cosa sono gli **outlet** e le **azioni**? Nella programmazione tradizione dell'interfaccia utente .NET, i comandi dell'interfaccia utente vengono esposti automaticamente come proprietà quando vengono aggiunti. In Mac ciò non avviene, la semplice aggiunta di un comando in una visualizzazione non lo rende accessibile al codice. Lo sviluppatore deve esporre esplicitamente l'elemento dell'interfaccia utente al codice. A tale scopo, Apple offre due opzioni:
+Che cosa sono gli **outlet** e le **azioni**? Nella programmazione dell'interfaccia utente .NET tradizionale, i comandi dell'interfaccia utente vengono esposti automaticamente come proprietà quando vengono aggiunti. In Mac ciò non avviene, la semplice aggiunta di un comando in una visualizzazione non lo rende accessibile al codice. Lo sviluppatore deve esporre esplicitamente l'elemento dell'interfaccia utente al codice. A tale scopo, Apple offre due opzioni:
 
 -   **Outlet**: gli outlet sono analoghi alle proprietà. Se lo sviluppatore collega un comando a un outlet, il comando viene esposto al codice tramite una proprietà per consentire di eseguire operazioni come collegare gestori di eventi, chiamare metodi e così via.
 -   **Azioni**: le azioni sono analoghe al modello di comando in WPF. Ad esempio, quando viene eseguita un'azione su un comando, come il clic su un pulsante, il comando chiama automaticamente un metodo nel codice. Le azioni sono un'opzione pratica e potente poiché lo sviluppatore può collegare numerosi comandi alla stessa azione.
@@ -561,7 +561,7 @@ public override void ViewDidLoad ()
 
 Usare `ViewDidLoad` anziché un altro metodo come `Initialize` poiché `ViewDidLoad` viene chiamato *dopo* che il sistema operativo ha caricato e creato un'istanza dell'interfaccia utente dal file **.storyboard**. Se lo sviluppatore tenta di accedere all'etichetta prima che il caricamento e la creazione dell'istanza del file **.storyboard** siano stati completati, viene visualizzato un errore `NullReferenceException` poiché l'etichetta non è ancora stata creata.
 
-Successivamente, aggiungere il codice per rispondere al clic dell'utente sul pulsante. Aggiungere la classe parziale seguente alla classe `ViewController`:
+Successivamente, aggiungere il codice per rispondere al clic dell'utente sul pulsante. Aggiungere il metodo parziale seguente alla classe `ViewController`:
 
 ```csharp
 partial void ClickedButton (Foundation.NSObject sender) {

@@ -6,11 +6,11 @@ ms.assetid: 9801644A-89BB-4491-AD28-7F3B97D2CD62
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 7489c2fe38e8433811c5f298296baebacf1c0727
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: c46d3aa151d4a596ca3da881a3c4e5e38bb41cbd
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="environment"></a>Ambiente
 
@@ -22,7 +22,7 @@ Le variabili di ambiente temporanee vengono impostate nella finestra **Propriet√
 
 ## <a name="permanent-environment-variables"></a>Variabili di ambiente permanenti
 
-Le variabili di ambiente permanenti vengono impostate specificando argomenti aggiuntivi per lo strumento di creazione dei pacchetti mtouch. Queste variabili di ambiente vengono compilate nel file eseguibile e verranno impostate anche se l'app non viene avviata da Xamarin Studio.
+Le variabili di ambiente permanenti vengono impostate specificando argomenti aggiuntivi per lo strumento di creazione dei pacchetti mtouch. Queste variabili di ambiente vengono compilate nel file eseguibile e verranno impostate anche se l'app non viene avviata da Visual Studio per Mac.
 
 ## <a name="example"></a>Esempio
 
