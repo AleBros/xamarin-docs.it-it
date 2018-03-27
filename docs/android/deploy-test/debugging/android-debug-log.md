@@ -6,12 +6,12 @@ ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/21/2018
-ms.openlocfilehash: 2e3225c0b0f984e52507ac472e26c4aee6a76909
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.date: 03/22/2018
+ms.openlocfilehash: 1b6b8ed99c3b2ccc9c39499c9bb9f585bd335c46
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="android-debug-log"></a>Log di debug Android
 
@@ -110,17 +110,24 @@ Dopo aver selezionato il dispositivo, lo strumento **Log del dispositivo** aggiu
 
 Un'altra opzione per visualizzare il log di debug è tramite la riga di comando. Aprire una finestra del prompt dei comandi e passare alla cartella platform-tools di Android SDK (in genere, la cartella platform-tools dell'SDK si trova in **C:\\Programmi (x86)\\Android\\android-sdk\\platform-tools**).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
-
-Un'altra opzione per visualizzare il log di debug è tramite la riga di comando. Aprire una finestra di Terminale e passare alla cartella platform-tools di Android SDK (in genere, la cartella platform-tools dell'SDK si trova in **/Users/nomeutente/Library/Developer/Xamarin/android-sdk-macosx/platform-tools**).
-
------
-
 Se è collegato solo un singolo dispositivo (dispositivo fisico o emulatore), è possibile visualizzare il log immettendo il comando seguente:
 
 ```shell
 $ adb logcat
 ```
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+
+Un'altra opzione per visualizzare il log di debug è tramite la riga di comando. Aprire una finestra di Terminale e passare alla cartella platform-tools di Android SDK (in genere, la cartella platform-tools dell'SDK si trova in **/Users/nomeutente/Library/Developer/Xamarin/android-sdk-macosx/platform-tools**).
+
+Se è collegato solo un singolo dispositivo (dispositivo fisico o emulatore), è possibile visualizzare il log immettendo il comando seguente:
+
+```shell
+$ ./adb logcat
+```
+
+-----
+
 
 Se sono collegati più dispositivi, è necessario identificare in modo esplicito il dispositivo. **adb -d logcat**, ad esempio, consente di visualizzare il log dell'unico dispositivo fisico connesso, mentre **adb -e logcat** mostra il log dell'unico emulatore in esecuzione.
 
