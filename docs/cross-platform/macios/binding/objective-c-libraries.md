@@ -7,17 +7,17 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 29b846453396d37adc689fe49e80299e8f35bbe2
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 3b1894555c27e368fc80cc4ebaa1f6b40446e2aa
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="binding-objective-c-libraries"></a>Associazione di raccolte Objective-C
 
 Quando si lavora con xamarin. IOS o Xamarin.Mac, potrebbero verificarsi casi in cui si desidera utilizzare una libreria di terze parti Objective-C. In questi casi, è possibile utilizzare progetti di associazione di Xamarin per creare un'associazione alle librerie native Objective-C in c#. Il progetto utilizza gli stessi strumenti utilizzati per portare il iOS e Mac API c#.
 
-Questo documento viene descritto come associare le API di Objective-C, se si desidera associare solo le API di C, utilizzare il meccanismo standard di .NET a tale scopo, [il framework di P/Invoke](http://mono-project.com/Dllimport).
+Questo documento viene descritto come associare le API di Objective-C, se si desidera associare solo le API di C, utilizzare il meccanismo standard di .NET a tale scopo, [il framework di P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/).
 Dettagli su come collegare in modo statico una libreria di C sono disponibili sul [collegamento librerie Native](~/ios/platform/native-interop.md) pagina.
 
 Consultare il manuale [Guida di riferimento per i tipi di associazione](~/cross-platform/macios/binding/binding-types-reference.md).

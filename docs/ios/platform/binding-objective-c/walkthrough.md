@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: e4619f5b1d3f888b2557cf894aaa83106504766f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 44ed651413d66866f131a294158525440278b291
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procedura dettagliata: Associazione di una libreria Objective-C per iOS
 
@@ -94,7 +94,7 @@ Con installati gli strumenti della riga di comando, si è pronti per continuare 
 In questa procedura dettagliata, verranno descritte le seguenti operazioni:
 
 - **[Creare una libreria statica](#Creating_A_Static_Library)**  -questo passaggio prevede la creazione di una libreria statica del **InfColorPicker** codice Objective-C. La libreria statica avrà il `.a` estensione di file e verranno incorporate nell'assembly .NET del progetto di libreria.
-- **[Creare un progetto di associazione di xamarin](#Create_a_Xamarin.iOS_Binding_Project)**  -una volta che una libreria statica, verrà usato per creare un progetto di associazione di xamarin. IOS. Il progetto di associazione è costituito dalla libreria statica che appena creato e i metadati sotto forma di codice c# che illustra come utilizzare l'API di Objective-C. Questi metadati sono considerato come le definizioni di API. Useremo  **[obiettivo Sharpie](#Using_Objective_Sharpie)**  per consentire agli utenti con le definizioni di API di creazione.
+- **[Creare un progetto di associazione di xamarin](#Create_a_Xamarin.iOS_Binding_Project)**  -una volta che una libreria statica, verrà usato per creare un progetto di associazione di xamarin. IOS. Il progetto di associazione è costituito dalla libreria statica che appena creato e i metadati sotto forma di codice c# che illustra come utilizzare l'API di Objective-C. Questi metadati sono considerato come le definizioni di API. Useremo **[obiettivo Sharpie](#Using_Objective_Sharpie)** per consentire agli utenti con le definizioni di API di creazione.
 - **[Normalizzare le definizioni di API](#Normalize_the_API_Definitions)**  : Sharpie obiettivo è molto utile di contribuito a, ma non tutti gli elementi. Parleremo alcune modifiche che è necessario apportare alle definizioni di API prima di poter essere usati.
 - **[Utilizzare la libreria di associazione](#Using_the_Binding)**  -infine, si creerà un'applicazione di xamarin. IOS in cui viene illustrato come utilizzare il progetto di associazione appena creata.
 
@@ -159,7 +159,7 @@ Il primo passaggio è riservata aggiungere il codice sorgente InfoColorPicker in
 
     [![](walkthrough-images/image16b.png "Espandere la sezione binario con librerie di collegamento")](walkthrough-images/image16b.png#lightbox)
 
-13. Utilizzare il  **+**  pulsante per aprire la finestra di dialogo che consente di aggiungere i framework di frame necessari elencati in precedenza:
+13. Utilizzare il **+** pulsante per aprire la finestra di dialogo che consente di aggiungere i framework di frame necessari elencati in precedenza:
 
     [![](walkthrough-images/image16c.png "Aggiungere che i framework di frame necessari elencati sopra")](walkthrough-images/image16c.png#lightbox)
 
@@ -183,7 +183,7 @@ La creazione di una file System fat binario è un processo in tre passaggi:
 
 Questi tre passaggi piuttosto semplici, mentre potrebbe essere necessario ripeterli in futuro quando la libreria Objective-C riceve aggiornamenti oppure se sono necessarie correzioni di bug. Se si decide di automatizzare questi passaggi, questa operazione semplifica la manutenzione future e il supporto del progetto di associazione di iOS.
 
-Sono disponibili numerosi strumenti disponibili per automatizzare attività quali - uno script della shell, [inclinazione](http://rake.rubyforge.org/), [xbuild](http://www.mono-project.com/Microsoft.Build), e [rendere](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Quando sono stati installati gli strumenti da riga di comando Xcode, viene installato anche verificare, in modo che sia il sistema di compilazione che verrà utilizzato per questa procedura dettagliata. Ecco un **Makefile** che è possibile utilizzare per creare una libreria condivisa multi-architettura che funzionerà su un dispositivo iOS e il simulatore per qualsiasi libreria:
+Sono disponibili numerosi strumenti disponibili per automatizzare attività quali - uno script della shell, [inclinazione](http://rake.rubyforge.org/), [xbuild](http://www.mono-project.com/docs/tools+libraries/tools/xbuild/), e [rendere](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Quando sono stati installati gli strumenti da riga di comando Xcode, viene installato anche verificare, in modo che sia il sistema di compilazione che verrà utilizzato per questa procedura dettagliata. Ecco un **Makefile** che è possibile utilizzare per creare una libreria condivisa multi-architettura che funzionerà su un dispositivo iOS e il simulatore per qualsiasi libreria:
 
 ```bash
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild

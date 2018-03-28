@@ -1,6 +1,6 @@
 ---
 title: 'Procedura dettagliata: utilizzo di controlli personalizzati con la finestra di progettazione di Xamarin per iOS'
-description: "Questo articolo fornisce una procedura dettagliata che illustra come creare un controllo personalizzato e utilizzarlo nella finestra di progettazione di Xamarin per iOS. Viene illustrato come creare un controllo disponibile nella casella degli strumenti della finestra di progettazione in modo che può essere trascinamento/rilasciato in una vista. Inoltre, viene illustrato come implementare un controllo in modo corretto rendering in fase di progettazione e in fase di esecuzione, nonché come creare proprietà che può essere impostata in fase di progettazione."
+description: Questo articolo fornisce una procedura dettagliata che illustra come creare un controllo personalizzato e utilizzarlo nella finestra di progettazione di Xamarin per iOS. Viene illustrato come creare un controllo disponibile nella casella degli strumenti della finestra di progettazione in modo che può essere trascinamento/rilasciato in una vista. Inoltre, viene illustrato come implementare un controllo in modo corretto rendering in fase di progettazione e in fase di esecuzione, nonché come creare proprietà che può essere impostata in fase di progettazione.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 3e12e33b254e58759043ed838d5c34dd7bd024fd
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4138ba0da1dd2174c53e6e35105c3199ea941f7f
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="walkthrough---using-custom-controls-with-the-xamarin-designer-for-ios"></a>Procedura dettagliata: utilizzo di controlli personalizzati con la finestra di progettazione di Xamarin per iOS
 
@@ -32,15 +32,11 @@ Questa guida si presuppone una certa familiarità con il contenuto incluso nel [
 
 1. Creare una nuova soluzione dal **iOS > App > singola vista > c#** modello, il nome `ScratchTicket`e continuare con la creazione guidata nuovo progetto:
 
-
     [![](ios-designable-controls-walkthrough-images/01new.png "Creare una nuova soluzione")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
-
 
 1. Creare un nuovo file di classe vuota denominato `ScratchTicketView`:
 
-
     [![](ios-designable-controls-walkthrough-images/02new.png "Creare una nuova classe ScratchTicketView")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
-
 
 1. Aggiungere il codice seguente per `ScratchTicketView` classe:
 

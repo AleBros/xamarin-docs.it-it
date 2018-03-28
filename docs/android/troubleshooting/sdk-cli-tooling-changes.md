@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 69e9f08870a01c056951700978d07277af5edfa8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a16aa3704d9e0a63cfabde4b620452e7e2a5bf57
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Modifiche agli strumenti di Android SDK
 
@@ -20,7 +20,7 @@ _Modifiche come Android SDK gestisce i livelli di API e i AVDs installato._
 
 ## <a name="changes-to--android-sdk-tooling"></a>Modifiche per gli strumenti di Android SDK
 
-Nelle versioni più recenti degli strumenti di SDK per Android, Google ha rimosso le Gestioni AVD e SDK esistenti favore nuovi _interfaccia della riga di comando_ strumenti (CLI). Il primo **android** programma è stato rimosso e i gestori di interfaccia utente grafica (GUI) in Visual Studio per Mac e le versioni precedenti di Xamarin per Visual Studio non funzionerà più dopo gli strumenti SDK Android versione.
+Nelle versioni più recenti degli strumenti di SDK per Android, Google ha rimosso i gestori di SDK e AVD esistenti favore nuovi strumenti CLI (interfaccia della riga di comando). Il primo **android** programma è stato rimosso e i gestori di interfaccia utente grafica (GUI) in Visual Studio per Mac e le versioni precedenti di Xamarin per Visual Studio non funzionerà più dopo versione 25.2.5 di strumenti Android SDK.
 
 
 ![Menu IDE Android in Visual Studio](sdk-cli-tooling-changes-images/android-ide-menu.png)
@@ -50,7 +50,7 @@ I seguenti programmi che ora costituiscono l'interfaccia della riga di comando p
 
 **Aggiunto In:** strumenti Android SDK (marzo 2017) 25.3.0 e versioni successive.
 
-È un nuovo programma chiamato **avdmanager** nel **tools/bin** cartella il Android SDK. Questo strumento viene utilizzato per gestire il AVD per l'emulatore Android di Google. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
+È un nuovo programma chiamato **avdmanager** nel **tools/bin** cartella il Android SDK. Questo strumento viene usato per gestire il AVDs per l'emulatore Android di Google. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
 
 ### <a name="downgrading"></a>Downgrade
 
@@ -64,7 +64,7 @@ I seguenti programmi che ora costituiscono l'interfaccia della riga di comando p
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Installazione di Android SDK](~/android/get-started/installation/android-sdk.md)
-- [Informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md)
-- [Note sulla versione (Google) degli strumenti SDK](https://developer.android.com/studiohttps://developer.xamarin.com/releases/sdk-tools.html)
+- [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md) (Informazioni sui livelli API Android)
+- [Note sulla versione di SDK Tools (Google)](https://developer.android.com/studio/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
-- [avdmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
+- [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)

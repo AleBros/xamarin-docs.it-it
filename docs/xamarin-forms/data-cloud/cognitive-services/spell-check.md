@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: ad2bdf27323fd7d7e108a25387cd6aea6d442098
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 420eea4622d9c90c3587899fb24e707524990b19
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Tramite il controllo ortografico Bing API controllo ortografico
 
@@ -25,19 +25,19 @@ L'API REST controllo ortografico Bing ha due modalità operative, e una modalit�
 - `Spell` corregge testo breve (parole fino a 9) senza apportare modifiche di maiuscole e minuscole.
 - `Proof` corregge testo lungo e fornisce correzioni di maiuscole e minuscole e la punteggiatura base Elimina correzioni aggressive.
 
-Per utilizzare l'API di controllo ortografico Bing, è necessario ottenere una chiave API. Può essere ottenuto in [introduzione gratuitamente](https://www.microsoft.com/cognitive-services/sign-up?ReturnUrl=/cognitive-services/subscriptions?productId=%2fproducts%2fBing.Speech.Preview) sul sito Web microsoft.com.
+Per utilizzare l'API di controllo ortografico Bing, è necessario ottenere una chiave API. Può essere ottenuto in [provare servizi cognitivi](https://azure.microsoft.com/try/cognitive-services/)
 
-Per un elenco delle lingue supportate dall'API controllo ortografico Bing, vedere [supporto linguistico](https://www.microsoft.com/cognitive-services/Bing-Spell-check-API/documentation#language-support) sul sito Web microsoft.com. Per ulteriori informazioni sull'API controllo ortografico Bing, vedere [API di controllo ortografico Bing](https://www.microsoft.com/cognitive-services/bing-spell-check-api/documentation) sul sito Web microsoft.com.
+Per un elenco delle lingue supportate dall'API controllo ortografico Bing, vedere [lingue supportate](/azure/cognitive-services/bing-spell-check/bing-spell-check-supported-languages/). Per ulteriori informazioni sull'API controllo ortografico Bing, vedere [documentazione di controllo ortografico Bing](/azure/cognitive-services/bing-spell-check/).
 
 ## <a name="authentication"></a>Autenticazione
 
 Ogni richiesta effettuata all'API controllo ortografico Bing richiede una chiave API che deve essere specificata come valore della `Ocp-Apim-Subscription-Key` intestazione. Esempio di codice seguente viene illustrato come aggiungere la chiave API per la `Ocp-Apim-Subscription-Key` intestazione di una richiesta:
 
 ```csharp
-using (var httpClient = new HttpClient())
+public BingSpellCheckService()
 {
-  httpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
-  ...
+    httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", Constants.BingSpellCheckApiKey);
 }
 ```
 
@@ -45,27 +45,25 @@ Il mancato superamento di una chiave API valida per l'API di controllo ortografi
 
 ## <a name="performing-spell-checking"></a>Eseguire il controllo ortografico
 
-Il controllo ortografico può essere ottenuto una richiesta GET o POST per il `SpellCheck` API `https://api.cognitive.microsoft.com/bing/v5.0/SpellCheck`. Quando si effettua una richiesta GET, il testo da ortografico selezionato viene inviato come parametro di query. Quando si effettua una richiesta POST, il testo da ortografico selezionato viene inviato nel corpo della richiesta. Le richieste GET sono limitate a 1500 caratteri a causa della limitazione di lunghezza stringa di query parametro di controllo ortografico. Pertanto, le richieste POST in genere essere effettuate a meno che non sono stringhe brevi in corso ortografico selezionato.
+Il controllo ortografico può essere ottenuto una richiesta GET o POST per il `SpellCheck` API `https://api.cognitive.microsoft.com/bing/v7.0/SpellCheck`. Quando si effettua una richiesta GET, il testo da ortografico selezionato viene inviato come parametro di query. Quando si effettua una richiesta POST, il testo da ortografico selezionato viene inviato nel corpo della richiesta. Le richieste GET sono limitate a 1500 caratteri a causa della limitazione di lunghezza stringa di query parametro di controllo ortografico. Pertanto, le richieste POST devono essere apportate in genere, a meno che stringhe brevi vengono ortografico selezionato.
 
 Nell'applicazione di esempio, il `SpellCheckTextAsync` metodo richiama il processo di controllo ortografico:
 
 ```csharp
 public async Task<SpellCheckResult> SpellCheckTextAsync(string text)
 {
-  string requestUri = GenerateRequestUri(Constants.BingSpellCheckEndpoint, text, SpellCheckMode.Spell);
-  var response = await SendRequestAsync(requestUri, Constants.BingSpellCheckApiKey);
-  var spellCheckResults = JsonConvert.DeserializeObject<SpellCheckResult>(response);
-  return spellCheckResults;
+    string requestUri = GenerateRequestUri(Constants.BingSpellCheckEndpoint, text, SpellCheckMode.Spell);
+    var response = await SendRequestAsync(requestUri);
+    var spellCheckResults = JsonConvert.DeserializeObject<SpellCheckResult>(response);
+    return spellCheckResults;
 }
 ```
 
 Il `SpellCheckTextAsync` metodo genera un URI di richiesta e quindi invia la richiesta alla `SpellCheck` API, che restituisce una risposta JSON contenente il risultato. La risposta JSON viene deserializzata, con il risultato viene restituito al metodo di chiamata per la visualizzazione.
 
-Per ulteriori informazioni sull'API REST controllo ortografico Bing, vedere [API controllo ortografico](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/57855119bca1df1c647bc358) sul sito Web microsoft.com.
-
 ### <a name="configuring-spell-checking"></a>Configurare il controllo ortografico
 
-È possibile configurare il processo di controllo ortografico specificando i parametri di query HTTP. Sono previsti parametri obbligatori e facoltativi, con il metodo seguente che mostra i parametri obbligatori che devono essere impostati per una richiesta GET:
+È possibile configurare il processo di controllo ortografico specificando i parametri di query HTTP:
 
 ```csharp
 string GenerateRequestUri(string spellCheckEndpoint, string text, SpellCheckMode mode)
@@ -79,59 +77,56 @@ string GenerateRequestUri(string spellCheckEndpoint, string text, SpellCheckMode
 
 Questo metodo imposta il testo da ortografico selezionata e la modalità di controllo ortografico.
 
-Per ulteriori informazioni sui parametri obbligatori e facoltativi, vedere [API controllo ortografico](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/57855119bca1df1c647bc358) sul sito Web microsoft.com.
+Per ulteriori informazioni sull'API REST controllo ortografico Bing, vedere [riferimento v7 API controllo ortografico](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/).
 
 ### <a name="sending-the-request"></a>L'invio della richiesta
 
 Il `SendRequestAsync` metodo effettua la richiesta GET all'API REST controllo ortografico Bing e restituisce la risposta:
 
 ```csharp
-async Task<string> SendRequestAsync(string url, string apiKey)
+async Task<string> SendRequestAsync(string url)
 {
-  using (var httpClient = new HttpClient())
-  {
-    httpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
     var response = await httpClient.GetAsync(url);
     return await response.Content.ReadAsStringAsync();
-  }
 }
 ```
 
 Questo metodo crea la richiesta GET, aggiungere la chiave API come valore della `Ocp-Apim-Subscription-Key` intestazione. La richiesta di recupero viene quindi inviata al `SpellCheck` API, con l'URL della richiesta che specifica il testo da convertire e la modalità di controllo ortografico. La risposta viene quindi letto e restituita al metodo di chiamata.
 
-Il `SpellCheck` API invierà il codice di stato HTTP 200 (OK) in risposta, a condizione che la richiesta sia valida, che indica che la richiesta ha avuto esito positivo e che le informazioni richieste sono presenti nella risposta. Per un elenco di possibili risposte d'errore, vedere le risposte a [API controllo ortografico](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/57855119bca1df1c647bc358) sul sito Web microsoft.com.
+Il `SpellCheck` API invierà il codice di stato HTTP 200 (OK) in risposta, a condizione che la richiesta sia valida, che indica che la richiesta ha avuto esito positivo e che le informazioni richieste sono presenti nella risposta. Per un elenco di oggetti di risposta, vedere [oggetti risposta](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference#response-objects).
 
 ### <a name="processing-the-response"></a>L'elaborazione della risposta
 
 Viene restituita la risposta di API in formato JSON. I dati JSON seguenti mostrano il messaggio di risposta per il testo di errore di ortografia `Go shappin tommorow`:
 
-```csharp
-{
-  "_type": "SpellCheck",
-  "flaggedTokens": [
-    {
-      "offset": 3,
-      "token": "shappin",
-      "type": "UnknownToken",
-      "suggestions": [
-        {
-          "suggestion": "shopping",
-          "score": 1
-        }
-      ]
-    },
-    {
-      "offset": 11,
-      "token": "tommorow",
-      "type": "UnknownToken",
-      "suggestions": [
-        {
-          "suggestion": "tomorrow",
-          "score": 1
-        }
-      ]
-    }
-  ]
+```json
+{  
+   "_type":"SpellCheck",
+   "flaggedTokens":[  
+      {  
+         "offset":3,
+         "token":"shappin",
+         "type":"UnknownToken",
+         "suggestions":[  
+            {  
+               "suggestion":"shopping",
+               "score":1
+            }
+         ]
+      },
+      {  
+         "offset":11,
+         "token":"tommorow",
+         "type":"UnknownToken",
+         "suggestions":[  
+            {  
+               "suggestion":"tomorrow",
+               "score":1
+            }
+         ]
+      }
+   ],
+   "correctionType":"High"
 }
 ```
 
@@ -162,11 +157,9 @@ Il codice scorre la `FlaggedTokens` insieme e sostituisce qualsiasi errate o err
 
 In questo articolo viene illustrato come utilizzare l'API REST controllo ortografico Bing per correggere gli errori di ortografia in un'applicazione di xamarin. Forms. Controllo ortografico Bing esegue ortografico contestuale per il testo, fornire suggerimenti inline per le parole.
 
-
-
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Documentazione di controllo ortografico Bing](https://www.microsoft.com/cognitive-services/bing-spell-check-api/documentation)
+- [Documentazione di controllo ortografico Bing](/azure/cognitive-services/bing-spell-check/)
 - [Utilizzo di un servizio Web RESTful](~/xamarin-forms/data-cloud/consuming/rest.md)
 - [Servizi cognitivi TODO (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
-- [Controllo ortografico Bing API](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/57855119bca1df1c647bc358)
+- [Riferimento v7 API di controllo ortografico Bing](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)

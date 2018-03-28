@@ -1,6 +1,6 @@
 ---
-title: "Aggiunta di funzionalità con servizi cognitivi"
-description: "Servizi cognitivi Microsoft sono un set di API e SDK di servizi disponibili per gli sviluppatori per rendere le applicazioni più intelligenti aggiungendo funzionalità quali il riconoscimento facciale, riconoscimento vocale e comprensione del linguaggio. In questo articolo viene fornita un'introduzione all'applicazione di esempio che illustra come richiamare alcune delle API dei servizi Microsoft cognitivi."
+title: Aggiunta di funzionalità con servizi cognitivi
+description: Servizi cognitivi Microsoft sono un set di API e SDK di servizi disponibili per gli sviluppatori per rendere le applicazioni più intelligenti aggiungendo funzionalità quali il riconoscimento facciale, riconoscimento vocale e comprensione del linguaggio. In questo articolo viene fornita un'introduzione all'applicazione di esempio che illustra come richiamare alcune delle API dei servizi Microsoft cognitivi.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: c309fb6936296dc181e499c91770ab8891121e9c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: fd67629b9e8d0057ccf3b95b9e84ff1d16acbd7b
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="adding-intelligence-with-cognitive-services"></a>Aggiunta di funzionalità con servizi cognitivi
 
@@ -23,12 +23,12 @@ _Servizi cognitivi Microsoft sono un set di API e SDK di servizi disponibili per
 L'esempio di accompagnamento è un'applicazione di elenco todo che fornisce funzionalità per:
 
 - Consente di visualizzare un elenco di attività.
-- Aggiungere e modificare le attività tramite la tastiera, oppure eseguendo il riconoscimento vocale con l'API di riconoscimento vocale Bing. Per ulteriori informazioni sull'esecuzione di riconoscimento vocale, vedere [di riconoscimento vocale utilizzando l'API di riconoscimento vocale Bing](speech-recognition.md).
+- Aggiungere e modificare le attività tramite la tastiera su schermo, oppure eseguendo il riconoscimento vocale con l'API di riconoscimento vocale Microsoft. Per ulteriori informazioni sull'esecuzione di riconoscimento vocale, vedere [riconoscimento vocale utilizzando l'API di riconoscimento vocale Microsoft](speech-recognition.md).
 - Digitare il nome di attività di controllo utilizzando l'API di controllo ortografico Bing. Per ulteriori informazioni, vedere [il controllo ortografico tramite l'API di controllo ortografico Bing](spell-check.md).
 - Tradurre attività dall'inglese, tedesco tramite l'API di conversione. Per ulteriori informazioni, vedere [la conversione di testo tramite l'API di conversione](text-translation.md).
 - Eliminare le attività.
 - Impostare lo stato dell'attività su "OK".
-- Frequenza dell'applicazione con riconoscimento emozioni, tramite l'API emozioni. Per ulteriori informazioni, vedere [riconoscimento emozioni tramite l'API emozioni](emotion-recognition.md).
+- Frequenza dell'applicazione con riconoscimento del emozioni, tramite l'API di tipo di carattere. Per altre informazioni, vedere [riconoscimento emozioni usando l'API viso](emotion-recognition.md).
 
 Le attività vengono archiviate in un database locale di SQLite. Per ulteriori informazioni sull'utilizzo di un database locale di SQLite, vedere [utilizzo di un Database locale](~/xamarin-forms/app-fundamentals/databases.md).
 
@@ -36,7 +36,7 @@ Il `TodoListPage` viene visualizzata quando viene avviata l'applicazione. Questa
 
 ![](images/sample-application-1.png "TodoListPage")
 
-Possono essere creati nuovi elementi facendo clic su di  *+*  pulsante che consente di passare al `TodoItemPage`. Questa pagina inoltre per spostarsi selezionando un'attività:
+Possono essere creati nuovi elementi facendo clic su di *+* pulsante che consente di passare al `TodoItemPage`. Questa pagina inoltre per spostarsi selezionando un'attività:
 
 ![](images/sample-application-2.png "TodoItemPage")
 
@@ -46,7 +46,7 @@ Facendo clic sul pulsante smilies sul `TodoListPage` passa al `RateAppPage`, che
 
 ![](images/sample-application-3.png "RateAppPage")
 
-Il `RateAppPage` consente all'utente di richiedere una foto del loro tipo di carattere, viene inviato all'API emozioni con l'emozioni restituita viene visualizzata.
+Il `RateAppPage` consente all'utente di richiedere una foto del loro faccia, viene inviata all'API viso con l'emozioni restituita venga visualizzata nuovamente.
 
 ## <a name="understanding-the-application-anatomy"></a>Comprendere l'anatomia di applicazione
 
@@ -73,7 +73,7 @@ L'applicazione di esempio utilizza i pacchetti NuGet seguenti:
 
 - `Microsoft.Net.Http` : fornisce la `HttpClient` classe per eseguire le richieste su HTTP.
 - `Newtonsoft.Json` : fornisce un framework JSON per .NET.
-- `Microsoft.ProjectOxford.Emotion` : una libreria client per l'accesso all'API emozioni.
+- `Microsoft.ProjectOxford.Face` : una libreria client per l'accesso all'API viso.
 - `PCLStorage` : fornisce un set di API dei / o dei file locale multipiattaforma.
 - `sqlite-net-pcl` : fornisce l'archiviazione del database SQLite.
 - `Xam.Plugin.Media` : consente di acquisire foto multipiattaforma e API di prelievo.
@@ -117,11 +117,10 @@ Il `IAudioRecorderService` viene implementata mediante la `AudioRecorderService`
 
 L'applicazione di esempio richiama servizi cognitivi Microsoft seguenti:
 
-- API di sintesi vocale Bing. Per ulteriori informazioni, vedere [di riconoscimento vocale utilizzando l'API di riconoscimento vocale Bing](speech-recognition.md).
+- API riconoscimento vocale Microsoft. Per altre informazioni, vedere [riconoscimento vocale utilizzando l'API di riconoscimento vocale Microsoft](speech-recognition.md).
 - Controllo ortografico Bing API. Per ulteriori informazioni, vedere [il controllo ortografico tramite l'API di controllo ortografico Bing](spell-check.md).
 - Tradurre API. Per ulteriori informazioni, vedere [la conversione di testo tramite l'API di conversione](text-translation.md).
-- API emozioni. Per ulteriori informazioni, vedere [riconoscimento emozioni tramite l'API emozioni](emotion-recognition.md).
-
+- API viso. Per altre informazioni, vedere [riconoscimento emozioni usando l'API viso](emotion-recognition.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

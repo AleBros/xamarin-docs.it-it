@@ -6,17 +6,17 @@ ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 3fa01d8f28dc1c86f9d4a8ee4d9fc0a9cdb8ee9c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7b7f64288695ecc0f9f57ec670c4e9ff2e44804c
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="objective-c-selectors"></a>Selettori Objective-C
 
 Si basa la lingua Objective-C *selettori*. Un selettore è un messaggio che può essere inviato a un oggetto o un *classe*. [Xamarin](~/ios/internals/api-design/index.md) i selettori per metodi di istanza dell'istanza, mappe e i selettori per metodi statici di classe.
 
-A differenza delle normale funzioni C e come funzioni membro C++, non è possibile richiamare direttamente un selettore utilizzando [P/Invoke](http://www.mono-project.com/Dllimport).
+A differenza delle normale funzioni C e come funzioni membro C++, non è possibile richiamare direttamente un selettore utilizzando [P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/).
 (*Riservato*: in teoria è possibile usare P/Invoke per le funzioni di membro non virtuale C++, ma è necessario preoccuparsi al compilatore alterazione dei nomi, ovvero un mondo di deboli meglio ignorato.) Al contrario, i selettori vengono inviati a una classe Objective-C o istanza utilizzando il [ `objc_msgSend` funzione](http://developer.apple.com/mac/library/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/objc_msgSend).
 
 È possibile [questa guida utile sulla messaggistica Objective-C](http://developer.apple.com/iphone/library/documentation/cocoa/conceptual/ObjCRuntimeGuide/Articles/ocrtHowMessagingWorks.html) utile.

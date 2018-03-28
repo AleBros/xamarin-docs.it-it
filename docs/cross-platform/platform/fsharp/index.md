@@ -8,32 +8,33 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 3d89e8986c098d14d2540d729338fe4b90554556
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bf41df7b3ff8186fa37dcdab0458c6b2a9844391
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="f35"></a>F&#35;
 
-_F # è un fortemente tipizzata linguaggio di programmazione funzionale progettato per l'esecuzione su .NET_
+F # è un linguaggio di programmazione open-source, multipiattaforma e funzionale-first per .NET.
 
-F # combina il succinctness, espressività e componibilità del tipo dedotto programmazione funzionale, la sicurezza in fase di compilazione del codice fortemente tipizzata e il supporto runtime, librerie, interoperabilità, strumenti e modello a oggetti di .NET.
+F # combina il succinctness espressività e componibilità di tipo dedotto programmazione funzionale, la sicurezza in fase di compilazione del codice fortemente tipizzata e il supporto runtime, librerie, interoperabilità, strumenti e modello a oggetti di .NET.
 
-F # è ora disponibile "out della finestra" come un linguaggio di programmazione agli utenti di Xamarin in tutte le piattaforme supportate Xamarin: Android, OS X e iOS.
+F # è disponibile come un linguaggio di programmazione agli utenti di Xamarin in tutte le piattaforme supportate Xamarin: Android, macOS e iOS.
 
-- [Introduzione a F #](overview.md)
-- [Esempi di F#](samples.md)
+- [Guida a F#](https://docs.microsoft.com/en-us/dotnet/fsharp/)
+- [Introduzione a F # e Xamarin](overview.md)
+- [Esempi di F # Mobile](samples.md)
 
 ## <a name="f-features-in-visual-studio-for-mac"></a>Funzionalità di F # in Visual Studio per Mac
 
-Esistono una serie di [nuove funzionalità di F #](https://developer.xamarin.com/releases/studio/xamarin.studio_6.0/xamarin.studio_6.0/#F_Enhancements) disponibili in Visual Studio per Mac, tra cui:
+F # è un linguaggio supportato in Visual Studio per Mac. Funzionalità supportate includono:
 
-- Supporto di F # 4
-- Supporto di F # PCL
+- Supporto di F # 4.1
+- Supporto di F # PCL e .NET Standard
 - Supporto per i progetti condivisi F #
-- Miglioramenti di spostamento di codice
+- Esplorazione del codice
 - Evidenziazione della sintassi in F # Interactive
-- Modelli di F # per i progetti di xamarin. Forms
-- [*e molto altro ancora...*](https://developer.xamarin.com/releases/studio/xamarin.studio_6.0/xamarin.studio_6.0/#F_Enhancements)
+- Modelli di F # per xamarin. Forms, iOS e Android
+- [*e altro ancora...*](https://developer.xamarin.com/releases/studio/xamarin.studio_6.0/xamarin.studio_6.0/#F_Enhancements)
 

@@ -1,6 +1,6 @@
 ---
 title: Conversione di testo tramite l'API di conversione
-description: "Per convertire il riconoscimento vocale e testo tramite un'API REST, è possibile utilizzare l'API di Microsoft Translator. In questo articolo viene illustrato come utilizzare l'API di Microsoft testo traduzione per tradurre il testo da una lingua a altra in un'applicazione di xamarin. Forms."
+description: Per convertire il riconoscimento vocale e testo tramite un'API REST, è possibile utilizzare l'API di Microsoft Translator. In questo articolo viene illustrato come utilizzare l'API di testo Microsoft traduttore per tradurre il testo da una lingua a altra in un'applicazione di xamarin. Forms.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 68330242-92C5-46F1-B1E3-2395D8823B0C
@@ -8,15 +8,15 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: f403ebaffdf742c22e61b73aee7a42648fe597dc
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 1e71249e3114404cce2abcef081b9b6fa19693d8
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="text-translation-using-the-translator-api"></a>Conversione di testo tramite l'API di conversione
 
-_Per convertire il riconoscimento vocale e testo tramite un'API REST, è possibile utilizzare l'API di Microsoft Translator. In questo articolo viene illustrato come utilizzare l'API di Microsoft testo traduzione per tradurre il testo da una lingua a altra in un'applicazione di xamarin. Forms._
+_Per convertire il riconoscimento vocale e testo tramite un'API REST, è possibile utilizzare l'API di Microsoft Translator. In questo articolo viene illustrato come utilizzare l'API di testo Microsoft traduttore per tradurre il testo da una lingua a altra in un'applicazione di xamarin. Forms._
 
 ## <a name="overview"></a>Panoramica
 
@@ -25,50 +25,48 @@ L'API di conversione presenta due componenti:
 - Una traduzione di testo API REST per tradurre il testo da una lingua nel testo di un'altra lingua. L'API rileva automaticamente la lingua del testo che è stato inviato prima di traduzione.
 - Una traduzione di riconoscimento vocale API REST per trascrivere vocale da una lingua nel testo di un'altra lingua. L'API integra anche le funzionalità di sintesi vocale per pronunciare il testo tradotto nuovamente.
 
-Questo articolo illustra la traduzione del testo da una lingua a un altro utilizzando l'API di conversione di testo.
+Questo articolo illustra la conversione di testo da una lingua a altro utilizzando l'API di testo di funzione di conversione.
 
-Per utilizzare l'API di conversione di testo, è necessario ottenere una chiave API. Questo può essere ottenuto seguendo le istruzioni in [Introduzione](http://docs.microsofttranslator.com/text-translate.html) su [docs.microsofttranslator.com](http://docs.microsofttranslator.com/).
+Per utilizzare l'API di testo di funzione di conversione, è necessario ottenere una chiave API. Può essere ottenuto in [come iscriversi per l'API di Microsoft Translator testo](/azure/cognitive-services/translator/translator-text-how-to-signup/).
 
-Per ulteriori informazioni sull'API di conversione di Microsoft, vedere [Microsoft Translator documentazione](https://www.microsoft.com/cognitive-services/translator-api/documentation/TranslatorInfo/overview) sul sito Web microsoft.com.
+Per ulteriori informazioni sull'API di Microsoft Translator Text, vedere [la documentazione dell'API di conversione testo](/azure/cognitive-services/translator/).
 
 ## <a name="authentication"></a>Autenticazione
 
-Ogni richiesta effettuata all'API di conversione di testo richiede un token di accesso JSON Web Token (JWT), che può essere ottenuto dal servizio token di servizi cognitivi in `https://api.cognitive.microsoft.com/sts/v1.0/issueToken`. Un token può essere ottenuto tramite una richiesta POST al servizio token di specificando un `Ocp-Apim-Subscription-Key` intestazione che contiene la chiave API come relativo valore.
+Tutte le richieste inviate all'API di testo di funzione di conversione richiede un token di accesso JSON Web Token (JWT), che può essere ottenuto dal servizio token di servizi cognitivi in `https://api.cognitive.microsoft.com/sts/v1.0/issueToken`. Un token può essere ottenuto tramite una richiesta POST al servizio token di specificando un `Ocp-Apim-Subscription-Key` intestazione che contiene la chiave API come relativo valore.
 
 Esempio di codice seguente viene illustrato come richiedere un accesso token dal servizio token di:
 
 ```csharp
-async Task<string> FetchTokenAsync(string fetchUri, string apiKey)
+public AuthenticationService(string apiKey)
 {
-  using (var client = new HttpClient())
-  {
-    client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
+    subscriptionKey = apiKey;
+    httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
+}
+...
+async Task<string> FetchTokenAsync(string fetchUri)
+{
     UriBuilder uriBuilder = new UriBuilder(fetchUri);
     uriBuilder.Path += "/issueToken";
-
-    var result = await client.PostAsync(uriBuilder.Uri.AbsoluteUri, null);
+    var result = await httpClient.PostAsync(uriBuilder.Uri.AbsoluteUri, null);
     return await result.Content.ReadAsStringAsync();
-  }
 }
 ```
 
 Il token di accesso restituito, ovvero testo Base64, dispone di un'ora di scadenza di 10 minuti. Pertanto, l'applicazione di esempio rinnova il token di accesso ogni 9 minuti.
 
-Il token di accesso deve essere specificato in ogni API di conversione di testo come un `Authorization` intestazione con la stringa di prefisso `Bearer`, come illustrato nell'esempio di codice seguente:
+Il token di accesso deve essere specificato nell'API di testo ogni funzione di conversione chiamare come un `Authorization` intestazione con la stringa di prefisso `Bearer`, come illustrato nell'esempio di codice seguente:
 
 ```csharp
-using (var httpClient = new HttpClient())
-{
-  httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
-  ...
-}  
+httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
 ```
 
-Per ulteriori informazioni relative al servizio token di servizi cognitivi, vedere [API Token di autenticazione](http://docs.microsofttranslator.com/oauth-token.html) su [docs.microsofttranslator.com](http://docs.microsofttranslator.com/).
+Per altre informazioni relative al servizio token di servizi cognitivi, vedere [API di Token di autenticazione](http://docs.microsofttranslator.com/oauth-token.html).
 
 ## <a name="performing-text-translation"></a>Effettua la conversione di testo
 
-Conversione di testo può essere ottenuto eseguendo una richiesta GET per il `Translate` API `https://api.microsofttranslator.com/v2/http.svc/Translate`. Nell'applicazione di esempio, il `TranslateTextAsync` metodo richiama il processo di conversione di testo:
+Conversione di testo può essere ottenuto eseguendo una richiesta GET per il `translate` API `https://api.microsofttranslator.com/v2/http.svc/translate`. Nell'applicazione di esempio, il `TranslateTextAsync` metodo richiama il processo di conversione di testo:
 
 ```csharp
 public async Task<string> TranslateTextAsync(string text)
@@ -82,13 +80,13 @@ public async Task<string> TranslateTextAsync(string text)
 }
 ```
 
-Il `TranslateTextAsync` metodo genera un URI di richiesta e recupera un token di accesso dal servizio di token. La richiesta di conversione di testo viene quindi inviata al `Translate` API, che restituisce una risposta XML che contiene il risultato. La risposta XML viene analizzata e viene restituito il risultato della conversione al metodo di chiamata per la visualizzazione.
+Il `TranslateTextAsync` metodo genera un URI di richiesta e recupera un token di accesso dal servizio di token. La richiesta di conversione di testo viene quindi inviata al `translate` API, che restituisce una risposta XML che contiene il risultato. La risposta XML viene analizzata e viene restituito il risultato della conversione al metodo di chiamata per la visualizzazione.
 
-Per ulteriori informazioni sulle API REST di traduzione di testo, vedere [codice di esempio](http://docs.microsofttranslator.com/text-translate.html#/default) su [docs.microsofttranslator.com](http://docs.microsofttranslator.com/).
+Per ulteriori informazioni sulle API REST conversione di testo, vedere [API di Microsoft Translator testo](http://docs.microsofttranslator.com/text-translate.html).
 
 ### <a name="configuring-text-translation"></a>Configurazione della conversione di testo
 
-Il processo di conversione di testo può essere configurato specificando i parametri di query HTTP. Sono previsti parametri obbligatori e facoltativi, con il metodo seguente che mostra i parametri obbligatori che devono essere impostati:
+È possibile configurare il processo di conversione di testo, specificando i parametri di query HTTP:
 
 ```csharp
 string GenerateRequestUri(string endpoint, string text, string to)
@@ -100,12 +98,10 @@ string GenerateRequestUri(string endpoint, string text, string to)
 }
 ```
 
-Questo metodo imposta il testo da convertire e la lingua per il testo da convertire. Per un elenco di lingue supportate da Microsoft Translator, vedere [lingue](https://www.microsoft.com/translator/languages.aspx) sul sito Web microsoft.com.
+Questo metodo imposta il testo da convertire e la lingua per il testo da convertire. Per un elenco di lingue supportate da Microsoft Translator, vedere [lingue supportate nell'API di Microsoft Translator testo](/azure/cognitive-services/translator/languages/).
 
 > [!NOTE]
 > Se un'applicazione deve conoscere la lingua in cui si trova il testo di `Detect` API può essere chiamato per rilevare la lingua della stringa di testo.
-
-Per ulteriori informazioni sui parametri obbligatori e facoltativi, vedere [API di conversione di testo](http://docs.microsofttranslator.com/text-translate.html#!/default/get_Translate) su [docs.microsofttranslator.com](http://docs.microsofttranslator.com/).
 
 ### <a name="sending-the-request"></a>L'invio della richiesta
 
@@ -114,18 +110,20 @@ Il `SendRequestAsync` metodo effettua la richiesta GET all'API REST di conversio
 ```csharp
 async Task<string> SendRequestAsync(string url, string bearerToken)
 {
-  using (var httpClient = new HttpClient())
-  {
+    if (httpClient == null)
+    {
+        httpClient = new HttpClient();
+    }
     httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+
     var response = await httpClient.GetAsync(url);
     return await response.Content.ReadAsStringAsync();
-  }
 }
 ```
 
-Questo metodo crea la richiesta di recupero aggiungendo il token di accesso per il `Authorization` intestazione, con la stringa di prefisso `Bearer`. La richiesta di recupero viene quindi inviata al `Translate` API, con l'URL della richiesta che specifica il testo da convertire e la lingua per il testo da convertire. La risposta viene quindi letto e restituita al metodo di chiamata.
+Questo metodo crea la richiesta di recupero aggiungendo il token di accesso per il `Authorization` intestazione, con la stringa di prefisso `Bearer`. La richiesta di recupero viene quindi inviata al `translate` API, con l'URL della richiesta che specifica il testo da convertire e la lingua per il testo da convertire. La risposta viene quindi letto e restituita al metodo di chiamata.
 
-Il `Translate` API invierà il codice di stato HTTP 200 (OK) in risposta, a condizione che la richiesta sia valida, che indica che la richiesta ha avuto esito positivo e che le informazioni richieste sono presenti nella risposta. Per un elenco di possibili risposte d'errore, vedere i messaggi di risposta a [ottenere tradurre](http://docs.microsofttranslator.com/text-translate.html#!/default/get_Translate) su [docs.microsofttranslator.com](http://docs.microsofttranslator.com/).
+Il `translate` API invierà il codice di stato HTTP 200 (OK) in risposta, a condizione che la richiesta sia valida, che indica che la richiesta ha avuto esito positivo e che le informazioni richieste sono presenti nella risposta. Per un elenco delle risposte di errore possibili, vedere i messaggi di risposta al [ottenere tradurre](http://docs.microsofttranslator.com/text-translate.html#!/default/get_Translate).
 
 ### <a name="processing-the-response"></a>L'elaborazione della risposta
 
@@ -141,13 +139,11 @@ Nell'applicazione di esempio, la risposta XML viene analizzata in un `XDocument`
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha descritto come utilizzare l'API di Microsoft testo traduzione per tradurre il testo da una lingua nel testo di un'altra lingua in un'applicazione di xamarin. Forms. Oltre alla conversione di testo, è possibile che l'API Microsoft Translator trascrivere anche vocale da una lingua nel testo di un'altra lingua.
-
-
+Questo articolo ha descritto come utilizzare l'API di testo Microsoft traduttore per tradurre il testo da una lingua nel testo di un'altra lingua in un'applicazione di xamarin. Forms. Oltre alla conversione di testo, è possibile che l'API Microsoft Translator trascrivere anche vocale da una lingua nel testo di un'altra lingua.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Documentazione di Microsoft Translator](https://www.microsoft.com/cognitive-services/translator-api/documentation/TranslatorInfo/overview)
+- [Documentazione di testo API traduttore](/azure/cognitive-services/translator/).
 - [Utilizzo di un servizio Web RESTful](~/xamarin-forms/data-cloud/consuming/rest.md)
 - [Servizi cognitivi TODO (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
-- [Conversione di testo API](http://docs.microsofttranslator.com/text-translate.html)
+- [Microsoft Translator testo API](http://docs.microsofttranslator.com/text-translate.html).
