@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/22/2017
-ms.openlocfilehash: ddc16dc1faaf623098aad5bca340c15f943223ba
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 05d6a679f318406d1ee5c6893ae4d01452a79723
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Programma di installazione di Xamarin Player in tempo reale
 
@@ -22,25 +22,28 @@ Xamarin Player in tempo reale consente di apportare modifiche in tempo reale all
 
 ## <a name="1-get-the-app"></a>1. Ottenere l'App
 
-### <a name="xamarin-live-player-for-android"></a>Xamarin Player in tempo reale per Android
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
 Xamarin Player in tempo reale è disponibile per Android da Google Play:
 
 [ ![Disponibile su Google Play](install-images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
 Per i dispositivi Android senza Google Play Live Xamarin Player è disponibile tramite [HockeyApp](https://aka.ms/xlp-hockeyapp) distribuzione. Inoltre, l'anteprima compilazioni per Android possono essere installati direttamente da Google Play dalla scelta di utilizzare il [programma beta aperto](https://play.google.com/apps/testing/com.xamarin.live)
 
-### <a name="xamarin-live-player-for-ios"></a>Xamarin Player in tempo reale per iOS
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
 Che incoraggia la collaborazione agli utenti di creare un join di [app Xamarin Player Live _iOS anteprima_ ](https://aka.ms/liveplayeralpha) per accedere rapidamente ai miglioramenti più aggiornati tramite TestFlight.
 
+-----
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-## <a name="2-get-visual-studio-2017-preview-on-windows-or-for-mactabsvsmac"></a>2. Ottenere Visual Studio 2017 Preview in Windows (o [per Mac](?tabs=vsmac))
+## <a name="2-get-visual-studio-2017"></a>2. Ottenere Visual Studio 2017
 
 Xamarin Player in tempo reale, è necessario:
 
-- Visual Studio 2017 [15.4](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/#visualstudio2017) o versione successiva.
-- Un computer di Visual Studio e un dispositivo nella stessa rete Wi-Fi
+- Visual Studio 2017 15.4 o versione successiva.
+- Un computer di Visual Studio e un dispositivo nella stessa rete Wi-Fi.
 
 ## <a name="3-using-xamarin-live-player-for-the-first-time"></a>3. Con Xamarin Player in tempo reale per la prima volta
 
@@ -72,9 +75,9 @@ Xamarin Player in tempo reale, è necessario:
 
   Se non è possibile contattare il dispositivo per l'associazione, potrebbe verificarsi un errore.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-## <a name="2-get-visual-studio-for-mac-or-for-windowstabsvswin"></a>2. Ottenere Visual Studio per Mac (o [per Windows](?tabs=vswin))
+## <a name="2-get-visual-studio-for-mac"></a>2. Ottenere Visual Studio per Mac
 
 Xamarin Player in tempo reale, è necessario:
 
@@ -120,7 +123,7 @@ Xamarin Player in tempo reale, è necessario:
 
 -----
 
-Se si verificano problemi, vedere [limitazioni e risoluzione dei problemi](~/tools/live-player/troubleshooting.md).
+Se si verificano problemi relativi o non è possibile connettersi, vedere [limitazioni e risoluzione dei problemi](~/tools/live-player/troubleshooting.md).
 
 
 ## <a name="related-links"></a>Collegamenti correlati

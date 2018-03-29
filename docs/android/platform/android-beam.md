@@ -7,15 +7,15 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: e9936bb523db8ba8777df94a03bf12f9fa718fca
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 08d15095c8d1d08a65f18d5ad867efdd89d3b795
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="android-beam"></a>Trasmetti Android
 
-Trasmetti Android sono una nuova tecnologia di comunicazione (prossimità) 4 di Android che consente alle applicazioni di condividere informazioni tramite NFC in stretta vicinanza.
+Trasmetti Android sono una tecnologia di comunicazione (prossimità) introdotta in Android 4.0 che consente alle applicazioni di condividere informazioni tramite NFC in stretta vicinanza.
 
 [![Diagramma che illustra due dispositivi in prossimità di condivisione delle informazioni](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 

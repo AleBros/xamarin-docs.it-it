@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2016
-ms.openlocfilehash: a30dd9b33466ac6907322f8c6b586c012452a44f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 232f60bb7afca7acf73e63bd7e11e1b6ec47fbd2
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="passing-arguments-in-xaml"></a>Passaggio di argomenti in XAML
 
@@ -135,7 +135,7 @@ Il [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) stru
 </BoxView>
 ```
 
-Il numero di elementi all'interno di `x:Arguments` tag e i tipi di questi elementi, devono corrispondere gli argomenti del metodo factory chiamato. Il [ `FromRgba` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/) metodo factory richiede quattro [ `Int32` ](https://developer.xamarin.com/api/type/System.Int32/) parametri, che rappresentano i valori di rossi, verdi, blu e alfa, compreso tra 0 e 255 rispettivamente. Il [ `FromHsla` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/) metodo factory richiede quattro [ `Double` ](https://developer.xamarin.com/api/type/System.Double/) parametri, che rappresentano il valori di tonalità, saturazione, luminosità e alfa, compreso tra 0 e 1 rispettivamente. Il [ `FromHex` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/) metodo factory richiede un [ `String` ](https://developer.xamarin.com/api/type/System.String/) che rappresenta il formato esadecimale (A) colore RGB.
+Il numero di elementi all'interno di `x:Arguments` tag e i tipi di questi elementi, devono corrispondere gli argomenti del metodo factory chiamato. Il [ `FromRgba` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/) metodo factory richiede quattro [ `Int32` ](https://docs.microsoft.com/dotnet/api/system.int32) parametri, che rappresentano i valori di rossi, verdi, blu e alfa, compreso tra 0 e 255 rispettivamente. Il [ `FromHsla` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/) metodo factory richiede quattro [ `Double` ](https://docs.microsoft.com/dotnet/api/system.double) parametri, che rappresentano il valori di tonalità, saturazione, luminosità e alfa, compreso tra 0 e 1 rispettivamente. Il [ `FromHex` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/) metodo factory richiede un [ `String` ](https://docs.microsoft.com/dotnet/api/system.string) che rappresenta il formato esadecimale (A) colore RGB.
 
 La schermata seguente mostra il risultato della chiamata ogni [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) metodo factory con i valori dell'argomento specificato:
 

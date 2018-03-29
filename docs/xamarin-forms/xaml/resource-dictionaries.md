@@ -1,6 +1,6 @@
 ---
 title: Dizionari delle risorse
-description: "Risorse XAML sono definizioni di oggetti che possono essere utilizzati più volte. Un oggetto ResourceDictionary consente risorse siano definiti in un'unica posizione e riutilizzate in un'applicazione di xamarin. Forms. In questo articolo viene illustrato come creare e utilizzare un oggetto ResourceDictionary e come unire i dizionari delle risorse."
+description: Risorse XAML sono definizioni di oggetti che possono essere utilizzati più volte. Un oggetto ResourceDictionary consente risorse siano definiti in un'unica posizione e riutilizzate in un'applicazione di xamarin. Forms. In questo articolo viene illustrato come creare e utilizzare un oggetto ResourceDictionary e come unire i dizionari delle risorse.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/17/2017
-ms.openlocfilehash: 9602e4d99e8f5c004fe75ab724bb3746aca46003
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: aa3ae9fed67b6cd7521e5c59edcb54f05cc6b7c5
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="resource-dictionaries"></a>Dizionari delle risorse
 
@@ -53,7 +53,7 @@ L'esempio di codice XAML seguente mostra le risorse definite in un livello di ap
 
 Questo [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) definisce tre [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) risorse e un [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) risorse. Per ulteriori informazioni sulla creazione di un file XAML `App` classe, vedere [classe App](~/xamarin-forms/app-fundamentals/application-class.md).
 
-Ogni risorsa è una chiave specificata utilizzando il `x:Key` attributo, che fornisce una chiave descrittiva nel `ResourceDictionary`. La chiave viene usata per recuperare una risorsa dal [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) dal `StaticResource` estensione di markup, come illustrato nell'esempio di codice XAML seguente che mostra le risorse aggiuntive definite in un controllo livello `ResourceDictionary`:
+Ogni risorsa ha una chiave specificata utilizzando il `x:Key` attributo, che offre una chiave descrittiva nel `ResourceDictionary`. La chiave viene usata per recuperare una risorsa dal [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) dal `StaticResource` estensione di markup, come illustrato nell'esempio di codice XAML seguente che mostra le risorse aggiuntive definite in un controllo livello `ResourceDictionary`:
 
 ```xaml
 <StackLayout Margin="0,20,0,0">

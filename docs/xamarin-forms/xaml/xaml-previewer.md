@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 02/24/2017
-ms.openlocfilehash: 8f4d8253d56708f77ede7b5173f3dd771e1da0ea
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a7a9c4fed92cb4ed8c8c12e97129bc8379037acb
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizzatore di XAML per xamarin. Forms
 
@@ -26,17 +26,19 @@ Altre informazioni, vedere è il [note sulla versione](https://developer.xamarin
 
 ## <a name="getting-started"></a>Introduzione
 
-### <a name="visual-studio-for-mac-on-mac"></a>Visual Studio per Mac su Mac
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Utilizzare il **Vista > altre finestre > Anteprima di xamarin. Forms** menu in Visual Studio per aprire la finestra di anteprima. Utilizzare il **finestra > gruppo di schede verticali** menu per posizionarla side-by-side.
+
+[![Anteprima di controllo ListView in Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "anteprima di form in Visual Studio")](xaml-previewer-images/xamlp-list-vs.png#lightbox "anteprima di form in Visual Studio")
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 Il **anteprima** pulsante può essere visualizzato nell'editor destro del mouse su un file XAML e selezionando **Apri con > Visualizzatore XAML**. Nel riquadro di anteprima può quindi essere mostrato o nascosto premendo il **anteprima** pulsante nell'angolo superiore destro della finestra di un documento XAML:
 
 [![Anteprima di controllo ListView in Visual Studio per Mac](xaml-previewer-images/xamlp-list-sml.png "anteprima di form in Visual Studio per Mac")](xaml-previewer-images/xamlp-list.png#lightbox "anteprima di form in Visual Studio per Mac")
 
-### <a name="visual-studio-on-windows"></a>Visual Studio su Windows
-
-Utilizzare il **Vista > altre finestre > Anteprima di xamarin. Forms** menu in Visual Studio per aprire la finestra di anteprima. Utilizzare il **finestra > gruppo di schede verticali** menu per posizionarla side-by-side.
-
-[![Anteprima di controllo ListView in Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "anteprima di form in Visual Studio")](xaml-previewer-images/xamlp-list-vs.png#lightbox "anteprima di form in Visual Studio")
+-----
 
 ## <a name="xaml-preview-options"></a>Opzioni di anteprima XAML
 

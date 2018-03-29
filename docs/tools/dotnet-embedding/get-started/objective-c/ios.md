@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: c1b21e36d314b79402702f29428f2c337ddc1069
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3921f57847bbe095f01ea9246ffe19f9bc5c5014
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="getting-started-with-ios"></a>Introduzione a iOS
 
@@ -20,7 +20,7 @@ ms.lasthandoff: 02/27/2018
 
 Oltre ai requisiti dal nostro [introduzione Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) Guida sarà inoltre necessario:
 
-* [Xamarin. IOS 10.11 +](https://jenkins.mono-project.com/view/Xamarin.MaciOS/job/xamarin-macios-builds-master/) dal nostro _master_ ramo.
+* [Xamarin. IOS 10.11](https://www.visualstudio.com/xamarin/) o versione successiva
 
 ## <a name="hello-world"></a>Hello world
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 6b0d62a9026c1248a66166e75ed41bb0148547a6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d666bb9a7749845265d50b86e46ef78e2036cb69
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xamarin-live-player-app"></a>App di Windows Media Player in tempo reale di Xamarin
 
@@ -20,17 +20,19 @@ ms.lasthandoff: 03/12/2018
 
 ## <a name="get-the-app"></a>Ottenere l'App
 
-### <a name="xamarin-live-player-for-android"></a>Xamarin Player in tempo reale per Android
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
 Xamarin Player in tempo reale è disponibile per Android da Google Play:
 
 [ ![Disponibile su Google Play](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
 Per i dispositivi Android senza Google Play Live Xamarin Player è disponibile tramite [HockeyApp](https://aka.ms/xlp-hockeyapp) distribuzione. Inoltre, l'anteprima compilazioni per Android possono essere installati direttamente da Google Play dalla scelta di utilizzare il [programma beta aperto](https://play.google.com/apps/testing/com.xamarin.live)
 
-### <a name="xamarin-live-player-for-ios"></a>Xamarin Player in tempo reale per iOS
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
 Che incoraggia la collaborazione agli utenti di creare un join di [app Xamarin Player Live _iOS anteprima_ ](https://aka.ms/liveplayeralpha) per accedere rapidamente ai miglioramenti più aggiornati tramite TestFlight.
 
-
+-----
 
 ## <a name="using-the-app"></a>Utilizzo dell'App
 
@@ -44,7 +46,7 @@ Quando si preme **coppia a Visual Studio**, utilizzare la fotocamera per analizz
 
 ![Schermata dello scanner di codici a barre iOS](player-images/scan-iphone-sml.png) ![Schermata dello scanner di codici a barre Android](player-images/scan-android-sml.png)
 
-Se la connessione ha esito positivo, il codice deve essere eseguito sul dispositivo quasi immediatamente (ad esempio, l'esempio di calcolo):
+Se la connessione ha esito positivo, il codice deve essere eseguito sul dispositivo quasi immediatamente (come le [esempio Calculator](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator)):
 
 ![Applicazione Calcolatrice di esempio in esecuzione sul dispositivo](player-images/basic-calculator-iphone-sml.png)
 
@@ -52,7 +54,7 @@ Se la connessione ha esito positivo, il codice deve essere eseguito sul disposit
 
 Premere il pulsante informazioni **(i)** nella parte inferiore dell'app per rivelare il **opzioni** menu:
 
-![Schermata di opzioni del menu di scelta](player-images/options.png)
+[ ![Schermata di opzioni del menu di scelta](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>Log
 
@@ -64,13 +66,13 @@ Visualizzare i log per diagnosticare i problemi.
 * Informazioni sulla versione.
 * Inviare commenti e suggerimenti.
 
-![Schermata delle impostazioni](player-images/settings.png)
+[ ![Schermata delle impostazioni](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>La gestione dei dispositivi
 
 Per connettere un dispositivo per la prima volta, seguire le istruzioni in [Setup & requisiti](~/tools/live-player/install.md). È possibile associare più dispositivi (ad esempio iOS e un Android) e gestirli tramite l'IDE.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 In Visual Studio, scegliere **strumenti > Xamarin Player in tempo reale > gestire i dispositivi...**
 
@@ -84,7 +86,7 @@ Questa finestra consente di eseguire le operazioni seguenti:
 
 È inoltre possibile accedere a questa finestra dall'elenco dei dispositivi.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 In Visual Studio per Mac, scegliere **strumenti > (Xamarin Player in tempo reale) di gestire i dispositivi...**
 

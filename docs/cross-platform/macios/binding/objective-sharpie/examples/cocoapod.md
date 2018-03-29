@@ -1,28 +1,31 @@
 ---
 title: Esempio reale utilizzando CocoaPods
+description: Questo documento viene illustrato come utilizzare Sharpie obiettivo di generare automaticamente le definizioni di associazione c# da un CocoaPod.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.date: 03/29/2017
-ms.openlocfilehash: ae92b491e6186371f1fc1ead835f918a94f18f86
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/28/2018
+ms.openlocfilehash: 24c796cb258578fdfc68c5b4aa1079d3c589da0f
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="real-world-example-using-cocoapods"></a>Esempio reale utilizzando CocoaPods
 
+> [!NOTE]
+> Questo esempio viene utilizzata la [AFNetworking CocoaPod](https://cocoapods.org/pods/AFNetworking).
 
-**Questo esempio viene utilizzato il [AFNetworking CocoaPod](https://cocoapods.org/pods/AFNetworking).**
+Nuovo nella versione 3.0, supporta l'associazione dei CocoaPods Sharpie obiettivo e include anche un comando (`sharpie pod`) per il download, configurazione e di compilazione CocoaPods molto semplice. È necessario [acquisire familiarità con CocoaPods](https://cocoapods.org) in genere prima di utilizzare questa funzionalità.
 
-Nuovo nella versione 3.0 supporta l'associazione CocoaPods Sharpie obiettivo e ha anche un comando di front-end (`sharpie pod`) per il download, configurazione e di compilazione CocoaPods molto semplice. È necessario [faimilarize manualmente con CocoaPods](https://cocoapods.org) in genere prima di utilizzare questa funzionalità.
+## <a name="creating-a-binding-for-a-cocoapod"></a>Creazione di un'associazione per un CocoaPod
 
 Il `sharpie pod` comando dispone di un'opzione globale e due sottocomandi:
 
-```csharp
+```bash
 $ sharpie pod -help
 usage: sharpie pod [OPTIONS] COMMAND [COMMAND_OPTIONS]
 
@@ -37,7 +40,7 @@ Available Commands:
 
 Il `init` sottocomando mancano alcuni argomenti della Guida utili:
 
-```csharp
+```bash
 $ sharpie pod init -help
 usage: sharpie pod init [INIT_OPTIONS] TARGET_SDK POD_SPEC_NAMES
 
@@ -48,34 +51,48 @@ Init Options:
 
 È possibile specificare più nomi CocoaPod e subspec a `init`.
 
-<pre>$ <b>sharpie pod init ios AFNetworking</b>
-<span class="terminal-green">**</span> Setting up CocoaPods master repo ...
+```bash
+$ sharpie pod init ios AFNetworking
+** Setting up CocoaPods master repo ...
    (this may take a while the first time)
-<span class="terminal-green">**</span> Searching for requested CocoaPods ...
-<span class="terminal-green">**</span> Working directory:
-<span class="terminal-green">**</span>   - Writing Podfile ...
-<span class="terminal-green">**</span>   - Installing CocoaPods ...
-<span class="terminal-green">**</span>     (running `<span class="terminal-blue">pod install --no-integrate --no-repo-update</span>`)
+** Searching for requested CocoaPods ...
+** Working directory:
+**   - Writing Podfile ...
+**   - Installing CocoaPods ...
+**     (running `pod install --no-integrate --no-repo-update`)
 Analyzing dependencies
 Downloading dependencies
 Installing AFNetworking (2.6.0)
 Generating Pods project
 Sending stats
-<span class="terminal-green">**</span> 🍻 Success! You can now use other `<span class="terminal-green">sharpie pod</span>`  commands.</pre>
+** 🍻 Success! You can now use other `sharpie podn`  commands.
+```
 
 Dopo aver impostato la CocoaPod, è ora possibile creare l'associazione:
 
-<pre>$ <b>sharpie pod bind</b></pre>
+```bash
+$ sharpie pod bind
+```
 
 Verrà creato nel progetto CocoaPod Xcode viene compilata e quindi valutato e analizzato da Sharpie obiettivo. Molti dell'output di console verranno generato, ma devono comportare la definizione dell'associazione alla fine:
 
-<pre><em>(... lots of build output ...)</em>
+```bash
+(... lots of build output ...)
 
-<span class="terminal-blue">Parsing 19 header files...</span>
+Parsing 19 header files...
 
-<span class="terminal-magenta">Binding...</span>
-  <span class="terminal-magenta">[write]</span> ApiDefinitions.cs
-  <span class="terminal-magenta">[write]</span> StructsAndEnums.cs
+Binding...
+  [write] ApiDefinitions.cs
+  [write] StructsAndEnums.cs
 
-<span class="terminal-green">Done.</span></pre>
+Done.
+```
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Dopo aver generato il **ApiDefinitions.cs** e **StructsAndEnums.cs** file, esaminare la documentazione seguente per generare un assembly da utilizzare nelle app di Windows:
+
+- [Panoramica del binding Objective-C](~/cross-platform/macios/binding/overview.md)
+- [Associazione di raccolte Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
+- [Procedura dettagliata: Associazione di una libreria di Objective-C iOS](~/ios/platform/binding-objective-c/walkthrough.md)
 
