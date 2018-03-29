@@ -6,15 +6,14 @@ ms.assetid: 5341D28E-B203-478D-8464-6FAFDC3A4110
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: e71c6ea816b8b732d21148db32fd9395732dd4c0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/27/2018
+ms.openlocfilehash: f02f77eb45086d1d568b367b28163a4773dcd80d
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="replacing-the-action-bar"></a>Sostituire la barra delle azioni
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -38,7 +37,7 @@ Le sezioni seguenti illustrano in dettaglio il processo. Viene creata una sempli
 
 ## <a name="start-an-app-project"></a>Avviare un progetto di App
 
-Creare un nuovo progetto Android denominato **ToolbarFun** (vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) per ulteriori informazioni sulla creazione di un nuovo progetto Android). Dopo aver creato il progetto, impostare i livelli di API Android minimo e di destinazione **Android 5.0 (API livello 21 - simbolo)**. Per ulteriori informazioni sull'impostazione dei livelli di versione di Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md). Quando l'app viene compilato ed eseguito, come illustrato in questa schermata viene visualizzato sulla barra delle azioni predefinite: 
+Creare un nuovo progetto Android denominato **ToolbarFun** (vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) per ulteriori informazioni sulla creazione di un nuovo progetto Android). Dopo aver creato il progetto, impostare i livelli di API Android minimo e di destinazione **Android 5.0 (API livello 21 - simbolo)** o versione successiva. Per ulteriori informazioni sull'impostazione dei livelli di versione di Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md). Quando l'app viene compilato ed eseguito, come illustrato in questa schermata viene visualizzato sulla barra delle azioni predefinite:
 
 [![Schermata della barra delle azioni predefinite](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
 
@@ -76,6 +75,8 @@ Un olive-green `colorPrimary` impostazione viene utilizzata per il colore di sfo
 ```xml
 <item name="android:colorPrimary">#5A8622</item>
 ```
+
+## <a name="apply-the-custom-theme"></a>Applicare il tema personalizzato
 
 Modifica **Properties/AndroidManifest.xml** e aggiungere le seguenti `android:theme` attributo la `<application>` elemento in modo che l'app Usa la `MyTheme` tema personalizzato: 
 
@@ -136,12 +137,6 @@ Modificare il file di layout **Resources/layout/Main.axml** e sostituirne il con
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
-    <Button
-        android:id="@+id/MyButton"
-        android:layout_below="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello World, Click Me!" />
 </RelativeLayout>
 ```
 
@@ -171,6 +166,7 @@ Questo codice viene cercato il `Toolbar` e chiama `SetActionBar` in modo che il 
 
 Si noti che il `Toolbar` stile in modo indipendente dal `Theme.Material.Light.DarkActionBar` applicato al resto dell'app. 
 
+Se si verifica un'eccezione durante l'esecuzione dell'app, vedere la [Troubleshooting](#troubleshooting) sezione riportata di seguito.
 
  
 ## <a name="add-menu-items"></a>Aggiungere voci di Menu 
@@ -193,7 +189,7 @@ Nelle sezioni seguenti illustrano in dettaglio il processo aggiungendo **modific
 
 ### <a name="install-menu-icons"></a>Installare le icone di Menu
 
-Continuare con la `ToolbarFun` applicazione di esempio, aggiungere le icone di menu al progetto di app. Scaricare [barra degli strumenti icons.zip](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons.zip?raw=true) e decomprimerlo. Copiare il contenuto dell'estratto *mipmap -* cartelle al progetto *mipmap -* cartelle **ToolbarFun/risorse** e includere ogni file di icona aggiunto nel progetto.
+Continuare con la `ToolbarFun` applicazione di esempio, aggiungere le icone di menu al progetto di app. Scaricare [icone della barra degli strumenti](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons-plus.zip?raw=true), decomprimere e copiare il contenuto dell'estratto *mipmap -* cartelle al progetto *mipmap -* cartelle sotto **ToolbarFun / Risorse** e includere ogni file di icona aggiunto nel progetto.
 
 
 ### <a name="define-a-menu-resource"></a>Definire una risorsa di Menu
@@ -270,13 +266,26 @@ Quando un'utente le scelte di **modifica** voce di menu, un avviso popup visuali
 
 [![Schermata di tipo avviso popup visualizzata quando verrà scelti modificare un elemento](replacing-the-action-bar-images/05-toast-displayed-sml.png)](replacing-the-action-bar-images/05-toast-displayed.png#lightbox)
 
-Quando un utente tocca il menu di overflow, il **preferenze** voce di menu viene visualizzata. In genere, meno comune azioni devono risiedere nel menu di overflow &ndash; questo esempio viene utilizzato il menu di overflow per **preferenze** perché non è più spesso utilizzato come **modifica** e  **Salvare**: 
+Quando un utente tocca il menu di overflow, il **preferenze** voce di menu viene visualizzata. In genere, meno comune azioni devono risiedere nel menu di overflow &ndash; questo esempio viene utilizzato il menu di overflow per **preferenze** perché non è più spesso utilizzato come **modifica** e ** Salvare**: 
 
 [![Schermata di preferenze menu che viene visualizzato nel menu di Overflow](replacing-the-action-bar-images/06-preferences-sml.png)](replacing-the-action-bar-images/06-preferences.png#lightbox)
 
 Per ulteriori informazioni sui menu Android, vedere Android Developer [menu](https://developer.android.com/guide/topics/ui/menus.html) argomento. 
  
 
+## <a name="troubleshooting"></a>Risoluzione dei problemi
+
+I suggerimenti seguenti possono aiutare a eseguire il debug di problemi che possono verificarsi durante la sostituzione sulla barra delle azioni con una barra degli strumenti.
+
+### <a name="activity-already-has-an-action-bar"></a>Attività è già presente una barra di azione
+
+Se l'app non è configurato correttamente per l'utilizzo di un tema personalizzato come descritto in [applicare il tema personalizzato](#apply-the-custom-theme), può verificarsi durante l'esecuzione dell'app dell'eccezione seguente:
+
+![Errore che può verificarsi quando non viene usato un tema personalizzato](replacing-the-action-bar-images/03-theme-not-defined.png)
+
+Inoltre, un messaggio di errore, ad esempio può essere prodotta la seguente: _Java.Lang.IllegalStateException: l'attività dispone già di una barra di azione specificata per la finestra di progettazione._ 
+
+Per correggere l'errore, verificare che il `android:theme` attributo per il tema personalizzato viene aggiunto a `<application>` (in **Properties/AndroidManifest.xml**) come descritto nella sezione precedente [applicare il tema personalizzato](#apply-the-custom-theme). Inoltre, questo errore può verificarsi se il `Toolbar` layout o tema personalizzato non è configurato correttamente.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
