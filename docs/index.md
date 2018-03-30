@@ -1,6 +1,6 @@
 ---
 layout: HubPage
-hide_bc: 
+hide_bc: true
 title: Documentazione di Xamarin
 description: Xamarin consente di creare app native per Android, iOS e macOS usando codice .NET e interfacce utente specifiche della piattaforma. Xamarin.Forms consente di creare app native, con codice dell'interfaccia utente condiviso scritto in C# o XAML.
 featureFlags:
