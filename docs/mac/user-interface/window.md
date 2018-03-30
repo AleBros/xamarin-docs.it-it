@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f483fcfa9dfca1eb476ceab2b67e7a03bf4b6354
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4b8de30cecb738fecb13616a3b796c0b4fa5a51a
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="windows"></a>WINDOWS
 
@@ -20,7 +20,7 @@ _In questo articolo viene descritto l'utilizzo con windows e i pannelli in un'ap
 
 Quando si lavora con c# e .NET in un'applicazione Xamarin.Mac, disporre dell'accesso per le stesse finestre e pannelli che uno sviluppatore che lavora *Objective-C* e *Xcode* does. Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile utilizzare del Xcode _generatore interfaccia_ per creare e gestire le finestre e pannelli (o, facoltativamente, crearli direttamente nel codice c#).
 
-In base a scopo di, un'applicazione Xamarin.Mac può presentare uno o più finestra sullo schermo per gestire e coordinare le informazioni vengano visualizzate e funziona con. Le funzioni principali di windows sono:
+In base alle finalità, un'applicazione Xamarin.Mac può presentare una o più finestre visualizzate per gestire e coordinare le informazioni vengano visualizzate e funziona con. Le funzioni dell'entità di una finestra sono:
 
 1. Per fornire un'area in cui le visualizzazioni e i controlli possono essere inseriti e gestiti.
 2. Per accettare e rispondere agli eventi in risposta all'interazione dell'utente sia la tastiera e mouse.

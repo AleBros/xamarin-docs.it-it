@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 55d72a49f90095a33577279d018e1696dda8fc42
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 246dd135b8a6e8a60bca9ba38e91ca8fd2d43674
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="gdb"></a>GDB
 
@@ -163,7 +163,7 @@ Tenere tuttavia presente che la destinazione MSBuild `_Gdb` terminerà le istanz
 
 ### <a name="monopmip-doesnt-work"></a>`mono_pmip` non funziona
 
-La funzione `mono_pmip` (utile per [ottenere stack frame gestiti](http://www.mono-project.com/Debugging#Debugging_with_GDB))viene esportata da `libmonosgen-2.0.so`, attualmente non scaricato dalla destinazione `_Gdb`. Questo problema verrà corretto in una versione futura.
+La funzione `mono_pmip` (utile per [ottenere stack frame gestiti](http://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb))viene esportata da `libmonosgen-2.0.so`, attualmente non scaricato dalla destinazione `_Gdb`. Questo problema verrà corretto in una versione futura.
 
 Per abilitare la chiamata alle funzioni presenti in `libmonosgen-2.0.so`, copiarle dal dispositivo di destinazione alla directory `gdb-symbols`:
 

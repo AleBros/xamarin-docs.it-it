@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d33f4ba5512985d62575885d44fdcebced8b61ed
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 505bd755140e3d4cdd162caf694de386fc72a68a
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connection-troubleshooting"></a>Risoluzione dei problemi di connessione
 
@@ -83,8 +83,7 @@ L'host di compilazione Xamarin delle versioni precedenti di Xamarin.iOS non è p
     ```bash
     ssh amyb@10.1.8.95
     ```
-    
-<a name="stepnine" />
+    <a name="stepnine" />
 
 9. Se **il passaggio 8 ha esito positivo**, è possibile provare a eseguire un comando semplice, ad esempio `ls`, attraverso la connessione:
 
