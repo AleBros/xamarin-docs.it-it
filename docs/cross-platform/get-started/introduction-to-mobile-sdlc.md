@@ -1,6 +1,6 @@
 ---
 title: Introduzione al ciclo di vita di sviluppo del software per dispositivi mobili
-description: "Questo articolo descrive il ciclo di vita di sviluppo del software per le applicazioni mobili e offre alcune considerazioni che è necessario tenere presente durante la compilazione di progetti per dispositivi mobili. Gli sviluppatori che vogliono passare direttamente alla compilazione possono ignorare questa guida e leggerla successivamente per una miglior comprensione dello sviluppo per dispositivi mobili."
+description: Questo articolo descrive il ciclo di vita di sviluppo del software per le applicazioni mobili e offre alcune considerazioni che è necessario tenere presente durante la compilazione di progetti per dispositivi mobili. Gli sviluppatori che vogliono passare direttamente alla compilazione possono ignorare questa guida e leggerla successivamente per una miglior comprensione dello sviluppo per dispositivi mobili.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: 7a344ce211a025176c2b40540ce8337802dd347b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 144e71677ad5477c7e1cfb5211cc5860995642bb
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introduzione al ciclo di vita di sviluppo del software per dispositivi mobili
 
@@ -25,7 +25,7 @@ In questo documento vengono fornite informazioni introduttive dettagliate sulla 
 1.   **Processo**: il processo di sviluppo del software è chiamato ciclo di vita di sviluppo del software (SDLC, Software Development Lifecycle). Verranno descritte tutte le fasi del ciclo di vita di sviluppo del software relativo allo sviluppo di applicazioni per dispositivi mobili, tra cui: ispirazione, progettazione, sviluppo, stabilizzazione, distribuzione e manutenzione.
 1.   **Considerazioni**: sono numerose le considerazioni da tenere presente durante la creazione di applicazioni per dispositivi mobili, che si distingue in particolare da quella di applicazioni Web o desktop tradizionali. Queste considerazioni verranno prese in esame e ne verrà descritto l'effetto sullo sviluppo per applicazioni mobili.
 
-Questo documento si propone di rispondere alle domande fondamentali sullo sviluppo di app per dispositivi mobili degli sviluppatori di ogni livello. La maggior parte dei concetti relativi all'intero ciclo di vita di sviluppo del software (SDLC) sono descritti con un approccio sostanzialmente completo. È possibile tuttavia che questo documento non sia adatto a tutti. Coloro che sono impazienti di iniziare possono passare direttamente alle esercitazioni [Introduzione allo sviluppo per dispositivi mobili](~/cross-platform/get-started/introduction-to-mobile-development.md), [Hello, Android](~/android/get-started/hello-android/index.md) o [Hello, iPhone](~/ios/get-started/hello-ios/index.md) e tornare più tardi su questo documento.
+Questo documento si propone di rispondere alle domande fondamentali sullo sviluppo di app per dispositivi mobili degli sviluppatori di ogni livello. La maggior parte dei concetti relativi all'intero ciclo di vita di sviluppo del software (SDLC) sono descritti con un approccio sostanzialmente completo. È possibile tuttavia che questo documento non sia adatto a tutti. Coloro che sono impazienti di iniziare possono passare direttamente alla guida [Introduzione allo sviluppo per dispositivi mobili](~/cross-platform/get-started/introduction-to-mobile-development.md) e tornare più tardi a questo documento.
 
 ## <a name="mobile-development-sdlc"></a>Ciclo di vita di sviluppo del software per dispositivi mobili
 
@@ -73,19 +73,17 @@ Dopo aver individuato le funzioni e le funzionalità dell'app, il passaggio succ
 
 #### <a name="ux-design"></a>Progettazione dell'esperienza utente
 
-L'esperienza utente viene in genere creata con wireframe o mockup usando strumenti come [Balsamiq](http://www.balsamiq.com/), [Mockingbird](https://gomockingbird.com/), [Visio](http://office.microsoft.com/en-us/visio/) o semplicemente carta e penna. I mockup consentono di progettare l'esperienza utente senza doversi preoccupare della progettazione dell'interfaccia utente:
+L'esperienza utente viene in genere creata con wireframe o mockup usando uno dei tanti [toolkit di progettazione](https://docs.microsoft.com/windows/uwp/design/downloads/). I mockup consentono di progettare l'esperienza utente senza doversi preoccupare della progettazione dell'interfaccia utente:
 
  [![](introduction-to-mobile-sdlc-images/balsamiq.png "L'esperienza utente viene in genere creata con wireframe o mockup usando strumenti come Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
-Quando si creano i mockup di esperienza utente, è importante tenere presente le linee guida dell'interfaccia per le varie piattaforme a cui è indirizzata l'app. L'app deve adattarsi a ogni piattaforma. Le linee guida di progettazione ufficiali per ogni piattaforma sono le seguenti:
+Quando si creano i mockup di esperienza utente, è importante tenere presente le linee guida dell'interfaccia per le varie piattaforme a cui è destinata l'app. L'app deve adattarsi a ogni piattaforma. Le linee guida di progettazione ufficiali per ogni piattaforma sono le seguenti:
 
-1.   **Apple** -  [Human Interface Guidelines](http://developer.apple.com/library/ios/#DOCUMENTATION/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
+1.   **Apple** -  [Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
 1.   **Android** -  [Design Guidelines](http://developer.android.com/design/index.html)
-1.   **Windows Phone** -  [Design library for Windows Phone](http://msdn.microsoft.com/en-US/library/windowsphone/design/fa00461b-abe1-41d1-be87-0b0fe3d3389d(v=vs.105).aspx)
+1.   **UWP** - [UWP Design basics](https://docs.microsoft.com/windows/uwp/design/basics/) (Nozioni di base sulla progettazione per la piattaforma UWP)
 
-Ad esempio, ogni app ha una metafora per il passaggio da una sezione all'altra in un'applicazione. iOS usa una barra di schede nella parte inferiore della schermata, Android usa una barra di schede nella parte superiore della schermata e Windows Phone usa la visualizzazione Panorama:
-
- ![](introduction-to-mobile-sdlc-images/38.png "Ogni app ha una metafora per il passaggio da una sezione all'altra in un'applicazione")
+Ad esempio, ogni app ha una metafora per il passaggio da una sezione all'altra in un'applicazione. iOS usa una barra di schede nella parte inferiore della schermata, Android usa una barra di schede nella parte superiore della schermata e la piattaforma UWP usa la visualizzazione con [pivot o schede](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot).
 
 Anche l'hardware determina le decisioni relative all'esperienza utente. Ad esempio, i dispositivi iOS non hanno un tasto *Indietro* e di conseguenza adottano la metafora del controller di spostamento:
 
@@ -104,15 +102,6 @@ Dopo aver determinato l'esperienza utente, il passaggio successivo consiste nell
 Come per l'esperienza utente, è importante tenere presente che ogni piattaforma ha un proprio linguaggio di progettazione: un'applicazione ben progettata può avere un aspetto diverso in ogni piattaforma:
 
  [![](introduction-to-mobile-sdlc-images/multiplatform-1.png "Un'applicazione ben progettata può avere un aspetto diverso in ogni piattaforma")](introduction-to-mobile-sdlc-images/multiplatform-1.png#lightbox)
-
-Per idee su come progettare un'interfaccia utente, visitare alcuni dei siti seguenti:
-
-1.   [pttrns.com](http://pttrns.com) - (solo iOS)
-1.   [androidpttrns.com](http://androidpttrns.com) - (solo Android)
-1.   [lovelyui.com](http://lovelyui.com) - (iOS, Android e Windows Phone)
-1.   [mobiledesignpatterngallery.com](http://mobiledesignpatterngallery.com) - (iOS, Android e Windows Phone)
-
-È anche possibile visualizzare i portfolio dei Graphic Designer in siti come [Behance.com](http://behance.com) e [Dribbble.com](http://dribbble.com). In questi siti è possibile trovare Designer di tutto il mondo, spesso in luoghi dove il tasso di cambio è favorevole: una buona progettazione grafica non deve essere necessariamente costosa.
 
 ### <a name="development"></a>Sviluppo
 
@@ -135,12 +124,7 @@ In genere procedendo nelle fasi del ciclo di vita, l'applicazione viene aperta a
 
 Per un test preliminare e la distribuzione in un numero relativamente basso di dispositivi, è solitamente sufficiente la distribuzione diretta dal computer di sviluppo. Tuttavia, quando il pubblico diventa più vasto, questa operazione può diventare complessa. Per questa ragione, sono disponibili diverse opzioni di distribuzione dei test che rendono più semplice questo processo consentendo di invitare persone in un pool di test, rilasciare build sul Web e offrire strumenti per l'invio di commenti da parte degli utenti.
 
-Alcune delle opzioni più usate sono:
-
-1.   **Testflight**: prodotto iOS che consente di distribuire le app per il test e ricevere dai clienti segnalazioni di arresti anomali e informazioni sull'utilizzo. È incluso in iTunes Connect e non è disponibile per i membri del programma Apple Developer Enterprise.
-2.   **LaunchPad (launchpadapp.com)**: progettato per Android, il servizio è molto simile a TestFlight.
-3.   **Vessel (vessel.io)**: servizio per iOS e Android che consente di monitorare l'utilizzo, tenere traccia dei clienti ed eseguire test A/B dall'interno dell'app.
-4.  **hockeyapp.com**: offre un servizio di test per iOS, Android e Windows Phone.
+Per i test e la distribuzione, è possibile usare [App Center](https://appcenter.ms/) per gestire in modo continuativo le attività di compilazione, test, rilascio e monitoraggio delle app.
 
 ### <a name="distribution"></a>Distribuzione
 
@@ -170,9 +154,9 @@ Ciò offre agli sviluppatori un canale di distribuzione per le applicazioni più
 1.  [Handango](http://www.handango.com/)
 1.  [GetJar](http://www.getjar.com/)
 
-#### <a name="windows"></a>WINDOWS 
+#### <a name="uwp"></a>UWP 
 
-Le applicazioni Windows sono distribuite agli utenti tramite Microsoft Store. Gli sviluppatori inviano le proprie app per l'approvazione. Una volta approvate, le app sono visibili nello Store.
+Le applicazioni UWP vengono distribuite agli utenti tramite Microsoft Store. Gli sviluppatori inviano le proprie app per l'approvazione. Una volta approvate, le app sono visibili nello Store. Per altre informazioni sulla pubblicazione di app di Windows, vedere la documentazione sulla [pubblicazione](https://docs.microsoft.com/windows/uwp/publish/) della piattaforma UWP (Universal Windows Platform).
 
 ## <a name="mobile-development-considerations"></a>Considerazioni sullo sviluppo per dispositivi mobili
 
@@ -237,9 +221,9 @@ Il multitasking in Android ha due componenti. Il primo componente è il ciclo di
 Il secondo componente del multitasking in Android è l'uso dei servizi.
 I servizi sono processi a esecuzione prolungata che esistono indipendentemente da un'applicazione e vengono usati per eseguire processi mentre l'applicazione viene eseguita in background. Per altre informazioni, vedere la guida [Creating Services](~/android/app-fundamentals/services/index.md) (Creazione di servizi).
 
-#### <a name="many-devices-amp-many-form-factors"></a>Numerosi dispositivi con numerosi fattori di forma
+#### <a name="many-devices-and-many-form-factors"></a>Numerosi dispositivi e numerosi fattori di forma
 
-A differenza di iOS che ha un set di dispositivi limitato o di Windows Phone che viene eseguito solo su dispositivi approvati che soddisfano un set minimo di requisiti di piattaforma, Google non impone limiti ai dispositivi che possono eseguire il sistema operativo Android. Questo paradigma aperto crea un ambiente di prodotto popolato da innumerevoli dispositivi con hardware, formati e risoluzioni dello schermo, funzioni dei dispositivi e capacità molto diversi.
+Google non impone alcun limite ai dispositivi che possono eseguire il sistema operativo Android. Questo paradigma aperto crea un ambiente di prodotto popolato da innumerevoli dispositivi con hardware, formati e risoluzioni dello schermo, funzioni dei dispositivi e capacità molto diversi.
 
 A causa di questa frammentazione estrema dei dispositivi Android, nella maggior parte dei casi vengono scelti i 5 o 6 dispositivi più diffusi per la progettazione e i test, a cui viene data priorità.
 
@@ -252,25 +236,17 @@ A causa del modello di Store delle applicazioni aperto, questo è un passaggio e
 
 #### <a name="multitasking"></a>Multitasking
 
-Anche in Windows Phone il multitasking è suddiviso in due parti: il ciclo di vita per le pagine e le applicazioni e i processi in background. Ogni schermata di un'applicazione è un'istanza di una classe Page che include eventi associati all'attivazione o alla disattivazione (con regole speciali per la gestione dello stato inattivo o il contrassegno per la rimozione). 
+Anche nella piattaforma UWP il multitasking è suddiviso in due parti: il ciclo di vita per le pagine e le applicazioni e i processi in background. Ogni schermata di un'applicazione è un'istanza di una classe Page che include eventi associati all'attivazione o alla disattivazione (con regole speciali per la gestione dello stato inattivo o il contrassegno per la rimozione). 
 
 La seconda parte consiste nella specifica di agenti in background per l'elaborazione delle attività anche quando l'applicazione non è in esecuzione in primo piano. 
 
 #### <a name="device-capabilities"></a>Funzionalità del dispositivo
 
-Sebbene l'hardware Windows Phone sia abbastanza omogeneo grazie alle rigorose linee guida Microsoft, esistono ancora componenti facoltativi che è necessario tenere presente durante la creazione del codice. Le funzionalità hardware facoltative includono la fotocamera, la bussola e il giroscopio. Esiste anche una classe speciale a memoria limitata (256 MB) che richiede un'attenzione particolare oppure gli sviluppatori possono escludere il supporto dei dispositivi a memoria limitata.
-
-#### <a name="database"></a>Database
-
-iOS e Android includono entrambi il motore di database SQLite che offre un archivio dati sofisticato che supporta più piattaforme. Windows Phone 7 non include un database, mentre Windows Phone 7.1 e 8 includono un [motore di database locale](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202860(v=vs.105).aspx) in cui è possibile eseguire query solo con [LINQ to SQL](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202872(v=vs.105).aspx) e non sono supportate le query Transact-SQL. È disponibile una [porta open source di SQLite](http://code.google.com/p/csharp-sqlite/) che è possibile aggiungere alle applicazioni Windows Phone per offrire il supporto di Transact-SQL e la compatibilità multipiattaforma.
+Sebbene l'hardware UWP sia abbastanza omogeneo, esistono ancora componenti facoltativi che è necessario tenere presente durante la creazione del codice. Le funzionalità hardware facoltative includono la fotocamera, la bussola e il giroscopio. Esiste anche una classe speciale a memoria limitata (256 MB) che richiede un'attenzione particolare oppure gli sviluppatori possono escludere il supporto dei dispositivi a memoria limitata.
 
 #### <a name="security-considerations"></a>Considerazioni sulla sicurezza
 
-Le applicazioni Windows Phone vengono eseguite con un insieme di autorizzazioni limitato che le isola l'una dall'altra e limita le operazioni che possono essere eseguite.
-L'accesso alla rete deve essere eseguito tramite API specifiche e la comunicazione tra applicazioni avviene solo tramite meccanismi controllati. Anche l'accesso al file system è limitato; l'API di spazio di memorizzazione isolato offre l'archiviazione delle coppie chiave-valore e la possibilità di creare file e cartelle in una modalità controllata. Per altre informazioni, vedere [Isolated Storage Overview](http://msdn.microsoft.com/en-us/library/ff402541(v=vs.92).aspx) (Panoramica dello spazio di memorizzazione isolato).
-
-L'accesso all'hardware e alle funzioni del sistema operativo di un'applicazione è controllato dalle funzionalità specificate nel file manifesto corrispondente, come in Android.
-Il manifesto deve dichiarare le funzioni richieste dall'applicazione in modo che gli utenti possano visualizzare e concedere le autorizzazioni e il sistema operativo consenta l'accesso alle API. Le applicazioni devono richiedere l'accesso a funzioni come i contatti o i dati di appuntamenti, la fotocamera, la posizione, il catalogo multimediale e altro ancora. Per altre informazioni, vedere la documentazione Microsoft [Application Manifest File](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509(v=vs.92).aspx) (File manifesto dell'applicazione).
+Per informazioni su importanti considerazioni di sicurezza per la piattaforma UWP, vedere la documentazione sulla [sicurezza](https://docs.microsoft.com/windows/uwp/security/).
 
 ## <a name="summary"></a>Riepilogo
 

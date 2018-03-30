@@ -1,6 +1,6 @@
 ---
 title: Prestazioni multipiattaforma
-description: "Esistono varie tecniche per incrementare le prestazioni delle applicazioni compilate con la piattaforma Xamarin. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione. Questo articolo descrive queste tecniche e le relative caratteristiche."
+description: Esistono varie tecniche per incrementare le prestazioni delle applicazioni compilate con la piattaforma Xamarin. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione. Questo articolo descrive queste tecniche e le relative caratteristiche.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 287f564ba74050aa8a06e5a582ae8db6657e440e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e8b597221e806c2338d6f1965d3d151f998a3011
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="cross-platform-performance"></a>Prestazioni multipiattaforma
 

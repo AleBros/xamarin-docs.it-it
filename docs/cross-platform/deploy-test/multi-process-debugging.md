@@ -1,5 +1,5 @@
 ---
-title: "Debug a più processori"
+title: Debug a più processori
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 852F8AB1-F9E2-4126-9C8A-12500315C599
@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 9454c65298dbb5417f91765f541d22ae1d6137d7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7bc230b43d0b50746a6076ffb2633e7fad0283d9
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="multi-process-debugging"></a>Debug a più processori
 
@@ -104,7 +104,7 @@ Facendo clic sul pulsante **Sospendi** nella **barra degli strumenti di debug** 
 
 ## <a name="creating-a-solution-configuration"></a>Creazione di una configurazione della soluzione
 
-Una _configurazione della soluzione_ indica a Visual Studio per Mac il progetto da eseguire quando viene avviata una sessione di debug con il pulsante **Start**. Può essere presente più di una configurazione della soluzione per ogni soluzione. Ciò consente di specificare quali progetti vengono eseguiti durante il debug del progetto.
+Una _configurazione della soluzione_ indica a Visual Studio per Mac il progetto da eseguire quando viene avviata una sessione di debug con il pulsante **Avvia**. Può essere presente più di una configurazione della soluzione per ogni soluzione. Ciò consente di specificare quali progetti vengono eseguiti durante il debug del progetto.
 
 Per creare una nuova configurazione della soluzione in Xamarin Studio:
 
