@@ -8,11 +8,11 @@ ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: cac2479af2778af6043a85583f9d7b518748d7da
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 771fde301a8585f25d7d83c7bf0451cf6e0cf8e9
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="the-translate-transform"></a>La trasformazione di conversione
 
@@ -36,7 +36,7 @@ Questi argomenti possono essere negativi. Un secondo [ `Translate` ](https://dev
 public void Translate (SKPoint point)
 ```
 
-Il **accumulati tradurre** pagina del [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programma di esempio illustra che più chiamate di `Translate` metodo sono cumulativi. Il [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) classe visualizza 20 versioni dello stesso rettangolo, ogni valore di offset dal rettangolo precedente sufficiente in modo che l'estensione lungo la diagonale. Ecco il `PaintSurface` gestore eventi:
+Il **accumulati tradurre** pagina del [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma di esempio illustra che più chiamate di `Translate` metodo sono cumulativi. Il [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) classe visualizza 20 versioni dello stesso rettangolo, ogni valore di offset dal rettangolo precedente sufficiente in modo che l'estensione lungo la diagonale. Ecco il `PaintSurface` gestore eventi:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -303,4 +303,4 @@ Si noti che la stella mantenga lo stesso orientamento come che ruota intorno al 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

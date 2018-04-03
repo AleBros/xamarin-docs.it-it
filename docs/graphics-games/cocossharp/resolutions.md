@@ -1,5 +1,5 @@
 ---
-title: "La gestione di più risoluzioni in CocosSharp"
+title: Gestione più risoluzioni in CocosSharp
 description: Questa guida viene illustrato come utilizzare CocosSharp per lo sviluppo di giochi visualizzati correttamente nei dispositivi di risoluzioni diverse.
 ms.topic: article
 ms.prod: xamarin
@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 9b76376bdbcf10bf35768cfdb79b6823388e303c
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 772b0d6408a5ba438c5eb0be04a9b549e29b40f9
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="handling-multiple-resolutions-in-cocossharp"></a>La gestione di più risoluzioni in CocosSharp
+# <a name="handling-multiple-resolutions-in-cocossharp"></a>Gestione più risoluzioni in CocosSharp
 
 _Questa guida viene illustrato come utilizzare CocosSharp per lo sviluppo di giochi visualizzati correttamente nei dispositivi di risoluzioni diverse._
 
@@ -32,7 +32,7 @@ Il comportamento di risoluzione predefinito di CocosSharp è per trovare la corr
 Questo documento viene illustrato come utilizzare CocosSharp per risolvere il problema, illustrato nella tabella precedente. Vale a dire, trattati come rendere qualsiasi dispositivo di rendering, come illustrato nella prima riga, indipendentemente dalla risoluzione dello schermo.
 
 
-# <a name="working-with-setdesignresolutionsize"></a>Utilizzo di SetDesignResolutionSize
+## <a name="working-with-setdesignresolutionsize"></a>Utilizzo di SetDesignResolutionSize
 
 Il `CCScene` classe viene in genere utilizzata come contenitore radice per tutti gli oggetti visivi, ma fornisce anche un metodo statico denominato `SetDesignResolutionSize` per specificare la dimensione predefinita per tutte le scene. In altre parole `SetDesignResolutionSize` metodo consente agli sviluppatori di sviluppare giochi che verranno visualizzati correttamente su una vasta gamma di soluzioni hardware. I modelli di progetto CocosSharp utilizzano questo metodo per impostare le dimensioni predefinite del progetto su 1024 x 768, come illustrato nel codice seguente:
 
@@ -77,7 +77,7 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 ```
 
 
-# <a name="ccsceneresolutionpolicy"></a>CCSceneResolutionPolicy
+## <a name="ccsceneresolutionpolicy"></a>CCSceneResolutionPolicy
 
 `SetDesignResolutionSize` Consente di specificare come finestra del gioco si adatta alla risoluzione desiderata. Nelle sezioni seguenti viene illustrato come viene visualizzata un'immagine di 500 x 500 con diversi `CCSceneResolutonPolicy` i valori passati al `SetDesignResolutionSize` metodo. Vengono forniti i valori seguenti per il `CCSceneResolutionPolicy` enum:
 
@@ -93,7 +93,7 @@ Tutte le schermate vengono generate iPhone 4s risoluzione (960x640) con orientam
 ![](resolutions-images/image4.png "Tutte le schermate vengono generate iPhone 4s risoluzione 960x640 con orientamento orizzontale e utilizzano questa immagine")
 
 
-## <a name="ccsceneresolutionpolicyshowall"></a>CCSceneResolutionPolicy.ShowAll
+### <a name="ccsceneresolutionpolicyshowall"></a>CCSceneResolutionPolicy.ShowAll
 
 `ShowAll` Specifica che la risoluzione di gioco intera sarà visibile sullo schermo, ma potrebbe essere visualizzato *letterboxing* (nere) per adattarsi ai proporzioni diverse. Questo criterio viene comunemente usato come garantisce che l'intera vista gioco verrà visualizzato sullo schermo senza una distorsione.
 
@@ -109,7 +109,7 @@ Letterboxing è visibile a sinistra e a destra dell'immagine per rappresentare l
 ![](resolutions-images/image5.png "Letterboxing è visibile a sinistra e a destra dell'immagine per rappresentare le proporzioni fisica da più ampia rispetto alla risoluzione desiderata")
 
 
-## <a name="ccsceneresolutionpolicyexactfit"></a>CCSceneResolutionPolicy.ExactFit
+### <a name="ccsceneresolutionpolicyexactfit"></a>CCSceneResolutionPolicy.ExactFit
 
 `ExactFit` Specifica che la risoluzione di gioco intera sarà visibile sullo schermo con nessun letterboxing. L'area visualizzabile distorto (proporzioni potrebbe non essere mantenuto) in base alle proporzioni dell'hardware.
 
@@ -125,7 +125,7 @@ Nessun letterboxing è visibile, ma poiché la risoluzione del dispositivo retta
 ![](resolutions-images/image6.png "Nessun letterboxing è visibile, ma poiché la risoluzione del dispositivo rettangolare distorta la visualizzazione di gioco")
 
 
-## <a name="ccsceneresolutionpolicyfixedwidth"></a>CCSceneResolutionPolicy.FixedWidth
+### <a name="ccsceneresolutionpolicyfixedwidth"></a>CCSceneResolutionPolicy.FixedWidth
 
 `FixedWidth` Specifica che la larghezza della visualizzazione corrisponderà al valore di larghezza passato a `SetDesignResolutionSize`, ma l'altezza visualizzabile è soggetta alle proporzioni del dispositivo fisico. Il valore di altezza passato a `SetDesignResolutionSize` viene ignorato dal momento in cui verrà calcolata in fase di esecuzione in base alle proporzioni del dispositivo fisico. Ciò significa che l'altezza calcolata può essere inferiore a quanto l'altezza desiderata (che genera parti della visualizzazione gioco da fuori dello schermo) o l'altezza calcolata può essere maggiore rispetto all'altezza desiderata (che comporta più la visualizzazione del gioco). Poiché questo può comportare più di gioco viene visualizzato, quindi potrebbe sembrare come se si è verificato letterboxing; Tuttavia, lo spazio aggiuntivo non useranno necessariamente nero se viene visualizzato alcun oggetto visivo. 
 
@@ -141,7 +141,7 @@ IPhone 4s presenta un rapporto di 3:2, pertanto l'altezza calcolata è circa 333
 ![](resolutions-images/image7.png "IPhone 4s dispone di un rapporto di 3:2, pertanto l'altezza calcolata è circa 333 unità")
 
 
-## <a name="ccsceneresolutionpolicyfixedheight"></a>CCSceneResolutionPolicy.FixedHeight
+### <a name="ccsceneresolutionpolicyfixedheight"></a>CCSceneResolutionPolicy.FixedHeight
 
 Concettualmente, `FixedHeight` si comporta in modo analogo a `FixedWidth` : il gioco avverrà il valore di altezza passato a `SetDesignResolutionSize,` ma calcolerà la larghezza in fase di esecuzione in base alla risoluzione fisica. Come accennato in precedenza, ciò significa che la larghezza visualizzato minore o maggiore della larghezza desiderata, risultante nella parte del gioco da off schermata o più del gioco viene visualizzato, rispettivamente.
 
@@ -157,7 +157,7 @@ Poiché nella schermata seguente è stata creata con l'app in esecuzione in moda
 ![](resolutions-images/image8.png "Questo criterio mantiene il valore di X 0 allineata a sinistra, pertanto la risoluzione aggiuntiva è visualizzabile sul lato destro dello schermo")
 
 
-## <a name="ccsceneresolutionpolicynoborder"></a>CCSceneResolutionPolicy.NoBorder
+### <a name="ccsceneresolutionpolicynoborder"></a>CCSceneResolutionPolicy.NoBorder
 
 `NoBorder` tenta di visualizzare l'applicazione con nessun letterboxing mantenendo le proporzioni originali (Nessuna distorsione). Se le proporzioni della risoluzione richiesta corrisponde a proporzioni fisico del dispositivo, verrà effettuato alcun ritaglio. Se le proporzioni non corrispondono, quindi ritaglio si verificherà.
 
@@ -173,7 +173,7 @@ La schermata seguente vengono visualizzate le parti superiore e inferiore dello 
 ![](resolutions-images/image9.png "Questa schermata consente di visualizzare le parti superiore e inferiore dello schermo troncato, mentre vengono visualizzati tutti i 500 pixel di larghezza di visualizzazione")
 
 
-## <a name="ccsceneresolutionpolicycustom"></a>CCSceneResolutionPolicy.Custom
+### <a name="ccsceneresolutionpolicycustom"></a>CCSceneResolutionPolicy.Custom
 
 `Custom` consente a ogni `CCScene` per specificare il proprio viewport personalizzata rispetto alla risoluzione specificata `SetDesignResolutionSize`.
 
@@ -207,7 +207,7 @@ Il codice precedente produce quanto segue:
 ![](resolutions-images/image10.png "Il codice sopra i risultati in questa schermata")
 
 
-# <a name="defaulttexeltocontentsizeratio"></a>DefaultTexelToContentSizeRatio
+## <a name="defaulttexeltocontentsizeratio"></a>DefaultTexelToContentSizeRatio
 
 Il `DefaultTexelToContentSizeRatio` semplifica l'utilizzo di trame con risoluzione superiore per i dispositivi dotati di schermi a risoluzione superiore. In particolare, questa proprietà consente di giochi da usare con risoluzione superiore asset senza dover per modificare le dimensioni o il posizionamento di elementi visivi. 
 
@@ -249,7 +249,7 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 ```
 
 
-## <a name="defaulttexeltocontentsizeratio-example"></a>Esempio DefaultTexelToContentSizeRatio
+### <a name="defaulttexeltocontentsizeratio-example"></a>Esempio DefaultTexelToContentSizeRatio
 
 Per vedere come `DefaultTexelToContentSizeRatio` influisce sulle dimensioni di visual elementi, si consideri il codice presentato in precedenza:
 
@@ -278,7 +278,7 @@ Se Esegui il gioco la trama di 1000 x 1000 verrà essere completamente visibile:
 ![](resolutions-images/image12.png "A questo punto se Esegui il gioco la trama di 1000 x 1000 sarà completamente visibile")
 
 
-## <a name="defaulttexeltocontentsizeratio-details"></a>DefaultTexelToContentSizeRatio Details
+### <a name="defaulttexeltocontentsizeratio-details"></a>Dettagli DefaultTexelToContentSizeRatio
 
 Il `DefaultTexelToContentSizeRatio` proprietà `static,` ovvero sprite tutti nell'applicazione condividono lo stesso valore. L'approccio tipico per i giochi le risorse per diverse risoluzioni è contenga un set completo di attività per ogni categoria di risoluzione. Per impostazione predefinita di CocosSharp di Visual Studio per i modelli di Mac fornire **ld** e **hd** cartelle per i beni, potrebbe essere utile per i giochi che supporta due set di trame. Una cartella del contenuto di esempio con contenuto potrebbe essere simile:
 
@@ -313,11 +313,11 @@ backgroundSprite  = new CCSprite ("background");
 ```
 
 
-# <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Riepilogo
 
 In questo articolo viene descritto come creare giochi che consentono di visualizzare correttamente indipendentemente dalla risoluzione di dispositivo. Sono riportati esempi dell'utilizzo di diverse `CCSceneResolutionPolicy` i valori per ridimensionare il gioco in base alla risoluzione del dispositivo. Fornisce inoltre un esempio di come `DefaultTexelToContentSizeRatio` può essere utilizzato per contenere più set di contenuti senza elementi visivi deve essere ridimensionato singolarmente.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Introduzione CocosSharp](~/graphics-games/cocossharp/first-game/index.md)
+- [Introduzione CocosSharp](~/graphics-games/cocossharp/index.md)
 - [Documentazione CocosSharp API](https://developer.xamarin.com/api/namespace/CocosSharp/)

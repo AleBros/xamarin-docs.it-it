@@ -1,4 +1,5 @@
 ---
+redirect_url: /visualstudio/mac/installation/
 title: Installazione
 description: L'esercitazione illustra i percorsi di installazione per Xamarin.Mac.
 ms.topic: article
@@ -8,18 +9,18 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 15088ea451ce3e0c590144c5545f8a8e8d5f7c6a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 050055511c62a0fe26356200bed01b1dc650e796
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="installation"></a>Installazione
 
 _L'esercitazione illustra i percorsi di installazione per Xamarin.Mac._
 
 > [!NOTE]
-> Questi contenuti sono stati spostati nelle guide all'installazione di Visual Studio per Mac all'indirizzo [docs.microsoft.com](https://docs.microsoft.com/en-us/visualstudio/mac/installation).
+> Questo contenuto è stato spostato nella [guida all'installazione di Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/installation).
 
 
 ## <a name="related-links"></a>Collegamenti correlati

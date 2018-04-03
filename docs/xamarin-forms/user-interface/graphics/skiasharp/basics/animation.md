@@ -8,11 +8,11 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 347ecf72356915714200835263e38519c1ad8a13
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: d9eea30e1d9e55101975e59ba9d259fba909ca0f
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="basic-animation"></a>Animazione di base
 
@@ -22,7 +22,7 @@ _Per scoprire come animare la grafica SkiaSharp_
 
 ![](animation-images/animationexample.png "Alcuni dei cerchi concentrici apparentemente espansione dal centro")
 
-Il **Pulsating ellisse** nella pagina di [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programma aggiunge un'animazione due assi di un'ellisse in modo che sembra essere pulsating ed è anche possibile controllare il frequenza di questo pulsazioni:
+Il **Pulsating ellisse** nella pagina di [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma aggiunge un'animazione due assi di un'ellisse in modo che sembra essere pulsating ed è anche possibile controllare il frequenza di questo pulsazioni:
 
 
 Il [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) file crea un xamarin. Forms `Slider` e `Label` per visualizzare il valore corrente del dispositivo di scorrimento. Questo è un modo comune per integrare un `SKCanvasView` con altre viste di xamarin. Forms:
@@ -251,4 +251,4 @@ Il risultato è che l'immagine esamina gli stessi quando `t` è uguale a 0, come
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

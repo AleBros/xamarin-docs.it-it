@@ -1,5 +1,5 @@
 ---
-title: "Pixel e unità indipendenti dal dispositivo"
+title: Pixel e unità indipendenti dal dispositivo
 description: Esplorare le differenze tra coordinate SkiaSharp e xamarin. Forms
 ms.topic: article
 ms.prod: xamarin
@@ -8,11 +8,11 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: 5e07377584996694aa8597af79317957c51050ec
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 1698c18eafdce0585daa81c9462ee038c15586bd
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>Pixel e unità indipendenti dal dispositivo
 
@@ -26,7 +26,7 @@ Se è stata programmazione in xamarin. Forms per un periodo di tempo, potrebbe e
 
 Tali cerchi *sono* piccoli rispetto al numero di dimensioni di xamarin. Forms. Per impostazione predefinita, mentre le coordinate e le dimensioni si basa xamarin. Forms in un'unità indipendenti dal dispositivo stabilita dalla piattaforma sottostante SkiaSharp disegna in unità di pixel. (Ulteriori informazioni sul sistema di coordinate di xamarin. Forms sono reperibile [capitolo 5. Gestione delle dimensioni](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) del libro *la creazione di App per dispositivi mobili con xamarin. Forms*.)
 
-La pagina nel [ **SkewSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programma intitolata **area dimensioni** utilizza SkiaSharp output di testo per visualizzare le dimensioni dell'area di visualizzazione da tre origini diverse:
+La pagina nel [ **SkewSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma intitolata **area dimensioni** utilizza SkiaSharp output di testo per visualizzare le dimensioni dell'area di visualizzazione da tre origini diverse:
 
 - Il normale xamarin. Forms [ `Width` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) e [ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) le proprietà del `SKCanvasView` oggetto.
 - Il [ `CanvasSize` ](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKCanvasView.CanvasSize/) proprietà del `SKCanvasView` oggetto.
@@ -165,4 +165,4 @@ canvas.DrawOval(rect, paint);
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

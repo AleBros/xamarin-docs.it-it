@@ -1,17 +1,17 @@
 ---
 title: Prestazioni ed effetti visivi con CCRenderTexture
-description: "CCRenderTexture consente agli sviluppatori di migliorare le prestazioni dei giochi CocosSharp riducendo le chiamate di disegno e può essere usato per creare effetti visivi. Questa guida vengono forniti il codice di esempio CCRenderTexture per fornire un esempio pratico di come utilizzare efficacemente questa classe."
+description: CCRenderTexture consente agli sviluppatori di migliorare le prestazioni dei giochi CocosSharp riducendo le chiamate di disegno e può essere usato per creare effetti visivi. Questa guida vengono forniti il codice di esempio CCRenderTexture per fornire un esempio pratico di come utilizzare efficacemente questa classe.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: F02147C2-754B-4FB4-8BE0-8261F1C5F574
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 8283c299d0e6529ef4cf8c285ec47b4d42fc682a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 36661344fc0f4b9e132e3f721c50f82f3a8db057
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="performance-and-visual-effects-with-ccrendertexture"></a>Prestazioni ed effetti visivi con CCRenderTexture
 
@@ -24,7 +24,7 @@ Questa guida viene esaminato come utilizzare il `CCRenderTexture` oggetto per mi
 ![](ccrendertexture-images/image1.png "Questa guida fa riferimento il progetto di esempio CCRenderTexture")
 
 
-# <a name="card--a-typical-entity"></a>Scheda – un'entità tipico
+## <a name="card--a-typical-entity"></a>Scheda – un'entità tipico
 
 Prima di esaminare in che modo utilizzare `CCRenderTexture` dell'oggetto, si verrà innanzitutto acquisita familiarità con la `Card` entità che verranno utilizzate in tutto il progetto per esplorare la `CCRenderTexture` classe. Il `Card` classe è un'entità tipico, descritte nel modello di entità di [Guida entità](~/graphics-games/cocossharp/entities.md). La classe di Smart Card dispone di tutti i relativi componenti visual (istanze di `CCSprite` e `CCLabel`) elencati come campi:
 
@@ -65,7 +65,7 @@ L'esempio è codificata per esporre due problemi che possono verificarsi quando 
 - Alcuni effetti visivi, ad esempio la trasparenza, non possono essere implementati in modo accurato, come verrà illustrato più avanti
 
 
-## <a name="card-draw-calls"></a>Chiamate di disegno smart card
+### <a name="card-draw-calls"></a>Chiamate di disegno smart card
 
 Il codice è una semplificazione di ciò che potrebbero essere presenti in una procedura completa di *gioco da raccogliere* (CCG), ad esempio "Magic: la raccolta" o "Hearthstone". Il gioco solo Visualizza tre schede in una sola volta e ha un numero ridotto di unità possibili (blu, verde e arancione). Al contrario, un gioco completo potrebbe essere oltre venti schede visualizzate in un determinato momento e lettori potrebbero essere centinaia di schede da selezionare quando si crea i ponti. Anche se il gioco non attualmente subisce problemi di prestazioni, potrebbe essere un gioco completo con un'implementazione simile.
 
@@ -76,7 +76,7 @@ CocosSharp fornisce approfondire le prestazioni di rendering esponendo le chiama
 Notare che, nonostante tre schede nella schermata, è 19 le chiamate di disegno (risultati ogni smart card in sei chiamate di disegno, il testo visualizzando gli account di informazioni sulle prestazioni per un altro). Le chiamate di disegno di avere un impatto significativo sulle prestazioni di un gioco, in modo CocosSharp fornisce una serie di modi per ridurli. Una tecnica è descritta nel [CCSpriteSheet Guida](~/graphics-games/cocossharp/ccspritesheet.md). Un'altra tecnica consiste nell'usare il `CCRenderTexture` ridurre ogni entità fino a una chiamata, come verrà esaminato in questa Guida.
 
 
-## <a name="card-transparency"></a>Trasparenza di smart card
+### <a name="card-transparency"></a>Trasparenza di smart card
 
 Il nostro `Card` entità include un `Opacity` proprietà la trasparenza di controllo, come illustrato nel frammento di codice seguente:
 
@@ -143,7 +143,7 @@ Per facilitare la visualizzazione perché in questo caso, è necessario tenere p
 Utilizzando un `CCRenderTexture` consente di rendere trasparente l'intera scheda senza conseguenze per il rendering dei singoli componenti all'interno di scheda, come verrà illustrato più avanti in questa Guida.
 
 
-# <a name="using-ccrendertexture"></a>Utilizzando CCRenderTexture
+## <a name="using-ccrendertexture"></a>Utilizzando CCRenderTexture
 
 Ora che sono stati identificati i problemi con il rendering di ogni componente singolarmente, si verrà attivato per il rendering di un `CCRenderTexture` e confrontare il comportamento.
 
@@ -159,7 +159,7 @@ protected override void AddedToScene ()
 ```
 
 
-## <a name="card-draw-calls"></a>Chiamate di disegno smart card
+### <a name="card-draw-calls"></a>Chiamate di disegno smart card
 
 Se si esegue ora il gioco, vedremo le chiamate di disegno ridotte da diciannove a quattro (ogni scheda ridotta da 6 a uno):
 
@@ -168,7 +168,7 @@ Se si esegue ora il gioco, vedremo le chiamate di disegno ridotte da diciannove 
 Come accennato in precedenza, questo tipo di riduzione può avere un impatto significativo sul giochi con altre entità visual sullo schermo.
 
 
-## <a name="card-transparency"></a>Trasparenza di smart card
+### <a name="card-transparency"></a>Trasparenza di smart card
 
 Una volta il `useRenderTextures` è impostato su `true`, schede trasparente verranno eseguito il rendering in modo diverso:
 
@@ -181,7 +181,7 @@ Confrontare quindi la scheda di robot trasparente utilizzando le trame di render
 Le differenze più evidenti sono nel testo dettagli (nero anziché grigio chiaro) e sprite robot (scuro anziché chiaro e saturazione).
 
 
-# <a name="ccrendertexture-details"></a>Dettagli CCRenderTexture
+## <a name="ccrendertexture-details"></a>Dettagli CCRenderTexture
 
 Dopo aver esaminato i vantaggi dell'utilizzo `CCRenderTexture`, diamo un'occhiata alla modalità di utilizzo nel `Card` entità.
 
@@ -256,7 +256,7 @@ Il `SwitchToRenderTexture` metodo può essere chiamato ogni volta che la trama d
 Esplorare le sezioni seguenti di `SwitchToRenderTexture` metodo. 
 
 
-## <a name="ccrendertexture-size"></a>Dimensioni CCRenderTexture
+### <a name="ccrendertexture-size"></a>Dimensioni CCRenderTexture
 
 Il costruttore CCRenderTexture richiede due set di dimensioni. Il primo controlla le dimensioni del `CCRenderTexture` quando viene disegnato e il secondo specifica la larghezza in pixel e l'altezza del relativo contenuto. Il `Card` crea un'istanza di entità relativi `CCRenderTexture` utilizzando lo sfondo [ContentSize](https://developer.xamarin.com/api/property/CocosSharp.CCSprite.ContentSize/). Il gioco è un `DesignResolution` di 512 da 384, come illustrato nella `ViewController.LoadGame` in iOS e `MainActivity.LoadGame` in Android:
 
@@ -293,7 +293,7 @@ renderTexture = new CCRenderTexture(unitResolution, pixelResolution);
 ![](ccrendertexture-images/image9.png "Per confrontare, può modificare il valore di pixelResolution per corrispondere allo sfondo. ContentSize senza viene raddoppiata e confrontare il risultato")
 
 
-## <a name="rendering-to-a-ccrendertexture"></a>Esegue il rendering in un CCRenderTexture
+### <a name="rendering-to-a-ccrendertexture"></a>Esegue il rendering in un CCRenderTexture
 
 In genere, gli oggetti visivi CocosSharp non vengono visualizzati in modo esplicito. Invece, gli oggetti visivi vengono aggiunti a un `CCLayer` che fa parte di un `CCScene`. CocosSharp esegue automaticamente il rendering di `CCScene` e la relativa gerarchia visual in ogni frame senza alcun codice per il rendering viene chiamato. 
 
@@ -355,7 +355,7 @@ foreach (var component in visualComponents)
 this.AddChild(renderTexture.Sprite);
 ```
 
-# <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Riepilogo
 
 Trattati in questa Guida di `CCRenderTexture` classe utilizzando un `Card` entità che potrebbero essere usate in un gioco ritirabile. È stato spiegato come utilizzare la `CCRenderTexture` classe per migliorare la frequenza dei fotogrammi e implementare correttamente la trasparenza a livello di entità.
 

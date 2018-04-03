@@ -1,6 +1,6 @@
 ---
-title: "Entità in CocosSharp"
-description: "Il modello di entità è un metodo efficace per organizzare codice del gioco. Migliora la leggibilità, codice risulta più facile da gestire e utilizza le funzionalità predefinite padre/figlio."
+title: Entità in CocosSharp
+description: Il modello di entità è un metodo efficace per organizzare codice del gioco. Migliora la leggibilità, codice risulta più facile da gestire e utilizza le funzionalità predefinite padre/figlio.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1D3261CE-AC96-4296-8A53-A76A42B927A8
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: fe722ce75f0322ab60bb6fd967ff2c498b2e7b20
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bb4af0f76f6b266cad4eb969d987a346b7396aa9
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="entities-in-cocossharp"></a>Entità in CocosSharp
 
@@ -34,7 +34,7 @@ Il gioco completato sarà simile al seguente:
 ![](entities-images/image1.png "Il gioco completato sarà simile al seguente")
 
 
-# <a name="introduction-to-game-entities"></a>Introduzione alle entità di gioco
+## <a name="introduction-to-game-entities"></a>Introduzione alle entità di gioco
 
 Le entità di gioco sono le classi che definiscono gli oggetti che richiedono la logica di rendering, il conflitto, fisica o intelligenza artificiale. Fortunatamente, le entità presenti nel codice del gioco una base corrispondono spesso gli oggetti in un gioco concettuali. In tal caso, identificare le entità necessarie in un gioco può essere più facilmente eseguita. 
 
@@ -51,7 +51,7 @@ Ad esempio, uno spazio con temi [girare em di gioco](http://en.wikipedia.org/wik
 Queste entità sarebbe le proprie classi del gioco e ogni istanza, sarebbe necessario senza alcuna installazione oltre la creazione di istanze.
 
 
-# <a name="general-vs-specific-entity-types"></a>Visual Studio generale. Tipi di entità specifico
+## <a name="general-vs-specific-entity-types"></a>Generale e tipi di entità specifico
 
 Una delle prime domande affrontate dagli sviluppatori di giochi con un sistema di entità è la quantità per generalizzare le relative entità. Le implementazioni più specifico definirebbe le classi per ogni tipo di entità, anche se si differenziano per alcune caratteristiche. Sistemi più generali verranno combinare i gruppi di entità in una classe e consentire alle istanze da personalizzare.
 
@@ -84,7 +84,7 @@ Il livello di generalizzazione usato dipende da considerare molti aspetti, tra c
 Per ragioni di semplicità, verrà usato un approccio basato su classe specifico con una singola entità di spedizione e di punto elenco per questa esercitazione.
 
 
-# <a name="project-setup"></a>Impostazione di progetto
+## <a name="project-setup"></a>Impostazione di progetto
 
 Prima di iniziare l'implementazione di questo tipo di entità, è necessario creare un progetto. I modelli di progetto CocosSharp verrà usato per semplificare la creazione del progetto. [Controllare questo post](http://forums.xamarin.com/discussion/26822/cocossharp-project-templates-for-xamarin-studio) per informazioni sulla creazione di un progetto CocosSharp da Visual Studio per i modelli di Mac. Il resto di questa Guida verrà utilizzato il nome del progetto **EntityProject**.
 
@@ -110,14 +110,14 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 Per ulteriori informazioni sulla gestione delle CocosSharp risoluzioni, vedere il nostro [Guida sulla gestione di più risoluzioni in CocosSharp](~/graphics-games/cocossharp/resolutions.md).
 
 
-# <a name="adding-content-to-the-project"></a>Aggiunta di contenuto al progetto
+## <a name="adding-content-to-the-project"></a>Aggiunta di contenuto al progetto
 
 Dopo aver creato il progetto, si aggiungeranno i file contenuti in [il file zip contenuto](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Entities.zip?raw=true). A tale scopo, scaricare il file zip e decomprimerlo. Aggiungere i **ship.png** e **bullet.png** per il **contenuto** cartella. Il **contenuto** cartella sarà all'interno di **asset** cartella in Android e sarà alla radice del progetto in iOS. Una volta aggiunti, dovremmo vedere in entrambi i file di **contenuto** cartella:
 
 ![](entities-images/image2.png "Una volta aggiunti, entrambi i file devono trovarsi nella cartella contenuta")
 
 
-# <a name="creating-the-ship-entity"></a>Creazione dell'entità di spedizione
+## <a name="creating-the-ship-entity"></a>Creazione dell'entità di spedizione
 
 La `Ship` classe sarà prima entità nostri del gioco. Per aggiungere un `Ship` di classi, creare innanzitutto una cartella denominata **entità** a livello di radice del progetto. Aggiungere una nuova classe nel **entità** cartella denominata `Ship`:
 
@@ -179,16 +179,16 @@ Se Esegui il gioco è ora verrà visualizzato l'entità di spedizione:
 ![](entities-images/image4.png "Quando si esegue il gioco, verrà visualizzato l'entità di spedizione")
 
 
-## <a name="why-inherit-from-ccnode-instead-of-ccsprite"></a>Motivo per cui ereditare CCNode anziché CCSprite?
+### <a name="why-inherit-from-ccnode-instead-of-ccsprite"></a>Motivo per cui ereditare CCNode anziché CCSprite?
 
 A questo punto il nostro `Ship` classe è un semplice wrapper per un `CCSprite` istanza. Poiché `CCSprite` eredita inoltre dalla `CCNode`, è possibile avere ereditata direttamente da `CCSprite`, che verrebbe ridotta di codice in `Ship.cs`. Inoltre, che eredita direttamente da `CCSprite` riduce il numero di oggetti in memoria e migliorare le prestazioni, ridurre le dimensioni l'albero delle dipendenze.
 
 Nonostante questi vantaggi, è ereditata da `CCNode` per nascondere alcune il `CCSprite` le proprietà da ogni istanza. Ad esempio, il `Texture` proprietà non deve essere modificata all'esterno del `Ship` classe e che eredita da `CCNode` consente di nascondere questa proprietà. I membri pubblici dell'entità diventano particolarmente importanti quando un gioco aumenta e gli sviluppatori aggiuntivi vengono aggiunti a un team.
 
 
-# <a name="adding-input-to-the-ship"></a>Aggiunta dell'Input per la spedizione
+## <a name="adding-input-to-the-ship"></a>Aggiunta dell'input per l'avviso di spedizione
 
-Ora che la spedizione è visibile sullo schermo verrà aggiunta input. L'approccio sarà simile all'approccio adottato [Introduzione alla Guida CocosSharp](~/graphics-games/cocossharp/first-game/part2.md), ad eccezione del fatto che è sarà possibile inserire il codice per lo spostamento nel `Ship` classe anziché nel contenitore `CCLayer` o `CCScene`.
+Ora che la spedizione è visibile sullo schermo verrà aggiunta input. L'approccio sarà simile all'approccio adottato [Guida BouncingGame](~/graphics-games/cocossharp/bouncing-game.md), ad eccezione del fatto che si sarà inserire il codice per lo spostamento nel `Ship` classe anziché nel contenitore `CCLayer` o `CCScene`.
 
 Aggiungere il codice per `Ship` per supportare lo spostamento all'ovunque l'utente tocca lo schermo:
 
@@ -230,7 +230,7 @@ public class Ship : CCNode
 Molte riprese em di giochi implementare una velocità massima, che rispecchia lo spostamento dei controller tradizionale. Ciò premesso, verrà semplicemente implementato lo spostamento immediato per mantenere il codice più breve.
 
 
-# <a name="creating-the-bullet-entity"></a>Creazione dell'entità punto elenco
+## <a name="creating-the-bullet-entity"></a>Creazione dell'entità punto elenco
 
 La seconda entità in questo semplice gioco è un'entità per la visualizzazione di elenchi puntati. Analogamente il `Ship` entità, il `Bullet` entità conterrà un `CCSprite` in modo che venga visualizzato sullo schermo. La logica per lo spostamento è diverso in quanto non dipende dall'input dell'utente per lo spostamento. piuttosto, `Bullet` istanze verranno spostato in una linea retta utilizzando le proprietà di velocità.
 
@@ -288,7 +288,7 @@ A parte la modifica del file utilizzato per il `CCSprite` a `bullet.png`, il cod
 Il `Schedule` metodo consente di aggiungere i delegati per chiamare ogni fotogramma. In questo caso è in corso l'aggiunta di `ApplyVelocity` metodo in modo che si sposta il punto elenco in base ai relativi valori di velocità. Il `Schedule` metodo accetta un `Action<float>`, in cui il parametro di tipo float specifica la quantità di tempo (in secondi) dopo l'ultimo fotogramma utilizzato per implementare lo spostamento basato sul tempo. Dopo il valore viene misurato in secondi, quindi i valori di velocità rappresentano lo spostamento in *pixel al secondo*.
 
 
-# <a name="adding-bullets-to-gamelayer"></a>Aggiunta di elenchi puntati a GameLayer
+## <a name="adding-bullets-to-gamelayer"></a>Aggiunta di elenchi puntati a GameLayer
 
 Prima di qualsiasi aggiungiamo `Bullet` istanze per il gioco si consentirà un contenitore, in particolare un `List<Bullet>`. Modificare il `GameLayer` in modo da includere un elenco di elenchi puntati:
 
@@ -422,14 +422,14 @@ Ora è possibile eseguire il gioco e vedere il `Ship` risoluzione `Bullet` istan
 ![](entities-images/image1.png "Esecuzione del gioco e di spedizione verrà le riprese le istanze di elenco puntato")
 
 
-# <a name="why-gamelayer-has-ship-and-bullets-members"></a>Motivo per cui GameLayer dispone di membri di spedizione e di elenchi puntati
+## <a name="why-gamelayer-has-ship-and-bullets-members"></a>Motivo per cui GameLayer dispone di membri di spedizione e di elenchi puntati
 
 Il nostro `GameLayer` classe definisce due campi per mantenere i riferimenti ai nostri istanze di entità (`ship` e `bullets`), ma non esegue alcuna operazione con essi. Inoltre, le entità sono responsabili per il proprio comportamento, ad esempio lo spostamento e la ripresa. Pertanto perché aggiungiamo `ship` e `bullets` campi `GameLayer`?
 
 La ragione è aggiunto a questi membri è un'implementazione del gioco completa richiederebbe logica di `GameLayer` per l'interazione tra le diverse entità. Ad esempio, il gioco può essere ulteriormente sviluppato per includere i nemici che è possibile eliminare definitivamente dal lettore. Questi nemici sarebbe contenuti un `List` nel `GameLayer`e la logica per testare se `Bullet` istanze sono in conflitto con i nemici verrebbero eseguiti nel `GameLayer` anche. In altre parole, il `GameLayer` è la radice *proprietario* dell'entità di tutte le istanze e è responsabile per le interazioni tra istanze di entità.
 
 
-# <a name="bullet-destruction-considerations"></a>Bullet eliminazione considerazioni
+## <a name="bullet-destruction-considerations"></a>Considerazioni sull'eliminazione di punto elenco
 
 Il gioco attualmente non dispone di codice per l'eliminazione definitiva `Bullet` istanze. Ogni `Bullet` istanza dispone di una logica per lo spostamento nella schermata, ma è ancora stato aggiunto il codice per eliminare qualsiasi schermo `Bullet` istanze.
 
@@ -437,8 +437,7 @@ Inoltre, la distruzione del `Bullet` istanze potrebbero non appartenere `GameLay
 
 La soluzione più semplice consiste nell'espandere la responsabilità della classe factory per supportare la distruzione. Quindi la factory può ricevere una notifica di un'istanza di entità viene eliminata, che può essere gestita da altri oggetti, ad esempio il `GameLayer` rimozione dell'istanza di entità relativi elenchi. 
 
-
-# <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Riepilogo
 
 Questa guida viene illustrato come creare le entità CocosSharp ereditando dalla classe di `CCNode` classe. Queste entità sono oggetti indipendenti, la creazione di propri oggetti visivi e la logica personalizzata di gestione. Questa Guida consente di definire il codice che appartiene all'interno di un'entità (lo spostamento e la creazione di altre entità) dal codice che fa parte il contenitore di entità radice (conflitti e logica di interazione tra altre entità).
 

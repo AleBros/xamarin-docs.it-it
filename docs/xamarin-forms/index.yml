@@ -7,11 +7,11 @@ metadata:
   ms.author: crdun
   ms.date: 02/17/2018
   ms.topic: landing-page
-  ms.openlocfilehash: ff86846ded6ca9dffce616a4e0e3415b58fc20da
-  ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+  ms.openlocfilehash: ae192b3f07c4d6c180644871e48b6bc749a633c2
+  ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 02/27/2018
+  ms.lasthandoff: 04/03/2018
 abstract:
   description: Xamarin.Forms espone un toolkit per l'interfaccia utente multipiattaforma completo per gli sviluppatori .NET. Creare app completamente native per Android, iOS e Windows con C# in Visual Studio.
   menu:
@@ -40,11 +40,11 @@ sections:
       href: ~/xamarin-forms/get-started/installation.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Hello, Xamarin.Forms
+      text: Guida rapida
       href: ~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: "App con più schermate"
+      text: App con più schermate
       href: ~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/quickstart.md
 - title: Guide
   items:
@@ -89,13 +89,13 @@ sections:
         image:
           src: ~/media/icons/i_app-build.svg
           href: ~/xamarin-forms/app-fundamentals/
-        title: Nozioni di base sulle applicazioni
+        title: Nozioni fondamentali sulle applicazioni
       - href: ~/
-        html: "Utilizzo delle funzionalità della piattaforma Xamarin.Forms, ad esempio renderer personalizzati e altre importanti funzionalità di ogni versione."
+        html: Utilizzo delle funzionalità della piattaforma Xamarin.Forms, ad esempio renderer personalizzati e altre importanti funzionalità di ogni versione.
         image:
           src: ~/media/icons/i_platform.svg
           href: ~/
-        title: "Funzionalità della piattaforma"
+        title: Funzionalità della piattaforma
       - href: ~/xamarin-forms/xaml/
         html: Creare interfacce utente in modo dichiarativo e condividerle tra le piattaforme per dispositivi mobili e desktop.
         image:
@@ -103,7 +103,7 @@ sections:
           href: ~/xamarin-forms/xaml/
         title: XAML
       - href: ~/xamarin-forms/internals/
-        html: "Informazioni aggiuntive sui meccanismi interni di Xamarin.Forms e assistenza per funzionalità come la localizzazione e l'accessibilità."
+        html: Informazioni aggiuntive sui meccanismi interni di Xamarin.Forms e assistenza per funzionalità come la localizzazione e l'accessibilità.
         image:
           src: https://docs.microsoft.com/en-us/media/common/i_config-tools.svg
           href: ~/xamarin-forms/internals/

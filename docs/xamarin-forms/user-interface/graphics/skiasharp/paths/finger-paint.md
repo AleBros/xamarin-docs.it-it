@@ -8,11 +8,11 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2017
-ms.openlocfilehash: b4213d71c2eca6c2552ac674a0203d7a2cc36e1b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dacb9f399ad044d2d5e9c960bce398092766020c
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="finger-painting"></a>Disegno di un dito
 
@@ -24,7 +24,7 @@ Un `SKPath` oggetto può essere continuamente aggiornato e visualizzato. Questa 
 
 Il supporto per il tocco in xamarin. Forms non consente di rilevamento singoli dita sullo schermo, in modo un effetto di rilevamento di tocco xamarin. Forms è stato sviluppato per fornire supporto per il tocco aggiuntive. Questo effetto è descritto nell'articolo [ **richiamare eventi dagli effetti**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). Il programma di esempio [ **tocco rilevamento effetto demo** ](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/) include due pagine che utilizzano SkiaSharp, tra cui un programma finger-painting.
 
-Il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) soluzione include questo evento di rilevamento di tocco. Il progetto libreria di classi portabile include il `TouchEffect` (classe), il `TouchActionType` enumerazione, il `TouchActionEventHandler` delegare e `TouchActionEventArgs` classe. Progetti di tutte le piattaforme includono un `TouchEffect` classe per la piattaforma; il progetto iOS contiene anche un `TouchRecognizer` classe.
+Il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) soluzione include questo evento di rilevamento di tocco. Il progetto libreria di classi portabile include il `TouchEffect` (classe), il `TouchActionType` enumerazione, il `TouchActionEventHandler` delegare e `TouchActionEventArgs` classe. Progetti di tutte le piattaforme includono un `TouchEffect` classe per la piattaforma; il progetto iOS contiene anche un `TouchRecognizer` classe.
 
 Il **Paint dito** pagina **SkiaSharpFormsDemos** è un'implementazione semplificata di disegno con un dito. Non consentire la selezione del colore o tracciare larghezza non può cancellare l'area di disegno e naturalmente è possibile salvare l'oggetto grafico.
 
@@ -169,6 +169,6 @@ Dipinti i dito sono limitate solo dalle tue capacità:
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Rilevamento di tocco effetto demo (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)
 - [Richiamo di eventi da effetti](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

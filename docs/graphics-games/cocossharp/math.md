@@ -1,6 +1,6 @@
 ---
 title: Matematiche 2D con CocosSharp
-description: "Questa guida illustra 2D matematica per lo sviluppo di gioco. Utilizza CocosSharp in cui viene illustrato come eseguire attività comuni di sviluppo di giochi e spiega i calcoli dietro queste attività."
+description: Questa guida illustra 2D matematica per lo sviluppo di gioco. Utilizza CocosSharp in cui viene illustrato come eseguire attività comuni di sviluppo di giochi e spiega i calcoli dietro queste attività.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5C241AB4-F97E-4B61-B93C-F5D307BCD517
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 7573ca423c3d9462d400f117c2116209e7c2a410
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 484bd8b19f2c51dac57a46a1ef93610ed5e13419
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="2d-math-with-cocossharp"></a>Matematiche 2D con CocosSharp
 
@@ -28,12 +28,12 @@ Per posizionare e spostare gli oggetti con il codice è una parte fondamentale d
 Gli sviluppatori che non dispongono di uno sfondo matematica complessa o che hanno long-dimenticato questi argomenti dall'istituto di istruzione, non è necessario ricorrere a: questo documento verrà suddividere concetti in parti dimensioni effetto e accompagnamento teoriche spiegazioni con esempi pratici. In breve, in questo articolo verrà rispondere alla domanda di studenti di matematica ippiche: "Quando è effettivamente necessario utilizzare questo stuff?"
 
 
-# <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti
 
 Anche se questo documento si concentra principalmente sul lato matematico di CocosSharp, esempi di codice presuppongono l'utilizzo di oggetti che ereditano modulo `CCNode`. Inoltre, poiché `CCNode` non include i valori per velocità e l'accelerazione, nel codice si presuppone l'utilizzo delle entità che forniscono valori, ad esempio VelocityX, VelocityY, AccelerationX e AccelerationY. Per ulteriori informazioni sulle entità, vedere la procedura dettagliata su [le entità in CocosSharp](~/graphics-games/cocossharp/entities.md).
 
 
-# <a name="velocity"></a>Velocità
+## <a name="velocity"></a>Velocità
 
 Sviluppatori di giochi viene usato il termine *velocità* per descrivere come un oggetto viene spostato, in particolare sulla velocità di un elemento viene spostato e la direzione che è mobile. 
 
@@ -50,7 +50,7 @@ bulletInstance.VelocityY = 300;
 ```
 
 
-## <a name="implementing-velocity"></a>Implementazione di velocità
+### <a name="implementing-velocity"></a>Implementazione di velocità
 
 CocosSharp non implementano velocità, è necessario che gli oggetti che richiedono lo spostamento di implementare i propri logica di spostamento. Sviluppatori di giochi nuova implementazione velocità spesso commettono di rendere loro velocità dipende dalla frequenza dei fotogrammi. Vale a dire, quanto segue *implementazione non corretta* risulteranno per fornire risultati corretti, ma saranno basate su frequenza dei fotogrammi del gioco:
 
@@ -75,7 +75,7 @@ this.PositionY += this.VelocityY * seconds;
 Per un esempio di come aggiungere basati sul tempo di spostamento, vedere [ricetta relativi all'ora in base a spostamento](https://developer.xamarin.com/recipes/cross-platform/game_development/time_based_movement/).
 
 
-## <a name="calculating-positions-using-velocity"></a>Il calcolo delle posizioni mediante velocità
+### <a name="calculating-positions-using-velocity"></a>Il calcolo delle posizioni mediante velocità
 
 Velocità utilizzabile per eseguire stime su un oggetto in cui verrà dopo una certa quantità di tempo o per contribuire a ottimizzare il comportamento degli oggetti senza la necessità di eseguire il gioco. Ad esempio, uno sviluppatore che sta implementando lo spostamento di un punto elenco attivato deve impostare la velocità del punto dopo che viene creata un'istanza. Le dimensioni dello schermo consente di fornire una base per l'impostazione della velocità. Vale a dire, se lo sviluppatore sa che il punto deve spostare l'altezza dello schermo in 2 secondi, quindi la velocità deve essere impostata per l'altezza dello schermo diviso 2. Se la schermata è 800 pixel in altezza, velocità del punto sarebbe impostato su 400 (ovvero 800/2).
 
@@ -92,7 +92,7 @@ label.Text = secondsToReachTarget + " seconds to reach target";
 ```
 
 
-# <a name="acceleration"></a>Accelerazione
+## <a name="acceleration"></a>Accelerazione
 
 *Accelerazione* è un concetto comune nello sviluppo di gioco e condivide molte analogie con velocità. Accelerazione quantifica se un oggetto è velocizzare o rallentare (come il valore della velocità cambia nel tempo). Accelerazione *aggiunge* alla velocità, esattamente come velocità aggiunge per posizionare. Applicazioni comuni di accelerazione includono gravità, un'automobile velocizzazione e nave spazio relativo thrusters di generazione. 
 
@@ -111,12 +111,12 @@ icicle.AccelerationY = -50;
 ```
 
 
-## <a name="acceleration-vs-deceleration"></a>Accelerazione vs. Decelerazione
+### <a name="acceleration-vs-deceleration"></a>Accelerazione e decelerazione
 
 Anche se accelerazione e decelerazione talvolta si differenzino solo in vocale ogni giorno, non vi è alcuna differenza tra i due tecnica. Gravità è una forza conseguente accelerazione. Se viene generato un oggetto verso l'alto quindi gravità rallenterà il (decelerando), ma una volta che l'oggetto è stato arrestato progressivamente e che nella stessa direzione gravità quindi gravità è velocizzare (accelerazione). Come illustrato di seguito, l'applicazione di un'accelerazione è lo stesso se viene applicato nella stessa direzione o opposto direzione di spostamento. 
 
 
-## <a name="implementing-acceleration"></a>Implementazione di accelerazione
+### <a name="implementing-acceleration"></a>Implementazione di accelerazione
 
 Accelerazione è simile a velocità in fase di implementazione: non è implementato automaticamente da CocosSharp e accelerazione basata su tempo è l'implementazione desiderata (in contrapposizione accelerazione basata su frame). Pertanto, un'implementazione semplice accelerazione (insieme a velocità) può apparire come:
 
@@ -149,7 +149,7 @@ this.VelocityY += this.AccelerationY * seconds;
 L'impatto di pratica di `halfSecondSquare` è che l'accelerazione comporteranno matematicamente con precisione e in modo prevedibile indipendentemente dalla frequenza dei fotogrammi. L'approssimazione lineare di accelerazione è soggetto a frequenza dei fotogrammi: minore sarà la frequenza dei fotogrammi scende diventa l'approssimazione meno precisa. Utilizzando `halfSecondsSquared` garanzie che codice comporterà lo stesso indipendentemente dalla frequenza dei fotogrammi.
 
 
-# <a name="angles-and-rotation"></a>Gli angoli e rotazione
+## <a name="angles-and-rotation"></a>Gli angoli e la rotazione
 
 Oggetti visivi, ad esempio `CCSprite` supportano la rotazione tramite un `Rotation` variabile. Può essere assegnato a un valore per impostare la rotazione in gradi. Ad esempio, il codice seguente viene illustrato come eseguire la rotazione un `CCSprite` istanza:
 
@@ -189,7 +189,7 @@ Questa distinzione è importante perché il `System.Math` classe utilizza rotazi
 Si noti che i diagrammi precedenti visualizzano rotazione in gradi; Tuttavia, alcune funzioni matematiche (ad esempio le funzioni nel `System.Math` dello spazio dei nomi) previsto e restituire valori in *radianti* anziché gradi. Verrà esaminato come eseguire la conversione tra tipi di unità di due più avanti in questa Guida.
 
 
-## <a name="rotating-to-face-a-direction"></a>Rotazione per affrontare una direzione
+### <a name="rotating-to-face-a-direction"></a>Rotazione per affrontare una direzione
 
 Come illustrato in precedenza, `CCSprite` può essere ruotato utilizzando il `Rotation` proprietà. Il `Rotation` proprietà viene fornita da `CCNode` (la classe base per `CCSprite`), ovvero la rotazione può essere applicata a entità che ereditano da `CCNode` anche. 
 
@@ -261,14 +261,16 @@ Questo codice produce il seguente comportamento:
 
 ![](math-images/image5.gif "Questo codice genera questo comportamento")
 
-### <a name="using-atan2-to-convert-offsets-to-angles"></a>Utilizzo di Atan2 per convertire gli offset per gli angoli
+#### <a name="using-atan2-to-convert-offsets-to-angles"></a>Utilizzare Atan2 per convertire agli offset angoli
+
 `System.Math.Atan2` Consente di convertire un offset a un angolo. Il nome della funzione `Atan2` proviene l'arcotangente di funzione trigonometrica. Il suffisso "2" consentono di distinguere questa funzione dallo standard `Atan` (funzione), che corrisponde strettamente il comportamento dell'arcotangente matematico. Arcotangente è una funzione che restituisce un valore compreso tra -90 e + 90 gradi (o l'equivalente in radianti). Molte applicazioni, inclusi computer giochi, spesso richiedono di 360 gradi di valori, pertanto la `Math` classe include `Atan2` per soddisfare questa esigenza.
 
 Si noti che il codice precedente passa il parametro Y in primo luogo, quindi il parametro X, quando si chiama il `Atan2` metodo. Si tratta con le versioni precedenti dalle consuete X, Y ordinamento delle coordinate di posizione. Per ulteriori informazioni [vedere i documenti Atan2](https://msdn.microsoft.com/en-us/library/system.math.atan2(v=vs.110).aspx).
 
 È inoltre importante notare che il valore restituito da `Atan2` è espresso in radianti, che viene utilizzata per misurare gli angoli di un'altra unità. Questa Guida non riguardano i dettagli di radianti, ma tenere presente che tutte le funzioni trigonometriche il `System.Math` dello spazio dei nomi utilizzare radianti, in modo da tutti i valori devono essere convertiti in gradi prima di essere utilizzati per gli oggetti CocosSharp. Sono disponibili ulteriori informazioni su radianti [nella pagina di Wikipedia radiante](http://en.wikipedia.org/wiki/Radian).
 
-### <a name="forward-angle"></a>Angolo di inoltro
+#### <a name="forward-angle"></a>Angolo di inoltro
+
 Una volta il `FacePoint` metodo converte l'angolo in radianti, definisce un `forwardAngle` valore. Questo valore rappresenta l'angolo, in cui si sta verificando l'entità quando il valore di rotazione è uguale a 0. In questo esempio si presuppone che l'entità è rivolto verso l'alto, che è di 90 gradi, quando si utilizza una rotazione matematica (in contrapposizione a rotazione CocosSharp). Utilizziamo la rotazione matematica qui perché è ancora non invertito la rotazione per CocosSharp.
 
 Di seguito viene illustrato quale un'entità con un `forwardAngle` di 90 gradi, potrebbe essere simile:
@@ -276,7 +278,7 @@ Di seguito viene illustrato quale un'entità con un `forwardAngle` di 90 gradi, 
 ![](math-images/image6.png "Viene illustrato il possibile aspetto un'entità con un forwardAngle di 90 gradi")
 
 
-## <a name="angled-velocity"></a>Velocità angolare
+### <a name="angled-velocity"></a>Velocità angolare
 
 Finora abbiamo esaminato come convertire un offset in un angolo. In questa sezione va viceversa: utilizza un angolo e lo converte in X e i valori Y. Esempi comuni includono un'automobile lo spostamento, la direzione che sta verificando o nave spazio la ripresa di un punto elenco in modo da spostare nella direzione verso la spedizione. 
 
@@ -354,6 +356,6 @@ Questo codice potrebbe produrre simile al seguente:
 ![](math-images/image9.png "Questo codice può produrre un risultato simile a questa schermata")
 
 
-# <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Riepilogo
 
 Questa guida illustra i concetti matematici comuni nello sviluppo di gioco 2D. Viene illustrato come assegnare e implementare velocità e l'accelerazione e viene descritto come eseguire la rotazione di oggetti e i vettori per lo spostamento in qualsiasi direzione.

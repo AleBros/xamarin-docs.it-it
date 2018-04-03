@@ -1,5 +1,5 @@
 ---
-title: Dettagli di implementazione moneta ora
+title: Dettagli di gioco ora moneta
 description: Questa guida vengono illustrati i dettagli di implementazione del gioco moneta tempo, tra cui usano le mappe di riquadro, creazione di entità, animazione Sprite e implementazione di collisione efficiente.
 ms.topic: article
 ms.prod: xamarin
@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 80250ca9fae98fae653c9b2837b2b1a96fb02203
-ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
+ms.openlocfilehash: 8c33b74af80a14df1626ab39ba8c055a81259194
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="coin-time-implementation-details"></a>Dettagli di implementazione moneta ora
+# <a name="coin-time-game-details"></a>Dettagli di gioco ora moneta
 
 _Questa guida vengono illustrati i dettagli di implementazione del gioco moneta tempo, tra cui usano le mappe di riquadro, creazione di entità, animazione Sprite e implementazione di collisione efficiente._
 
@@ -24,27 +24,27 @@ Ora di moneta è un platformer completo giochi per iOS e Android. L'obiettivo de
 
 Questa guida vengono illustrati i dettagli di implementazione in fase di moneta relativa agli argomenti seguenti:
 
-- [Utilizzo dei file TMX](#Working_with_TMX_Files)
-- [Il caricamento di livello](#Level_Loading)
-- [Aggiunta di nuove entità](#Adding_New_Entities)
-- [Entità animata](#Animated_Entities)
+- [Utilizzo dei file tmx](#working-with-tmx-files)
+- [Il caricamento del livello](#level-loading)
+- [Aggiunta di nuove entità](#adding-new-entities)
+- [Entità animata](#animated-entities)
 
 
-# <a name="content-in-coin-time"></a>Contenuto in fase di moneta
+## <a name="content-in-coin-time"></a>Contenuto in fase di moneta
 
 Ora di moneta è un progetto di esempio che rappresenta l'organizzazione potrebbe essere un intero progetto CocosSharp. Coin-ora struttura mira a semplificare l'aggiunta e la manutenzione del contenuto. Usa **.tmx** file creati da [affiancato](http://www.mapeditor.org) per livelli e i file XML per definire le animazioni. Modifica o aggiunta di nuovo contenuto può essere ottenuto con il minimo sforzo. 
 
 Sebbene questo approccio rende moneta ora un progetto efficace per l'apprendimento e sperimentazione, riflette inoltre come professional giochi vengono apportate. Questa guida illustra alcuni degli approcci per semplificare l'aggiunta e modifica del contenuto.
 
 
-# <a name="working-with-tmx-files"></a>Utilizzo dei file TMX
+## <a name="working-with-tmx-files"></a>Utilizzo dei file tmx
 
 Livelli di tempo moneta vengono definiti utilizzando il formato di file .tmx, verrà restituito dal [affiancato](http://www.mapeditor.org) tessera mappa editor. Per una descrizione dettagliata dell'utilizzo affiancato, vedere il [utilizzando affiancato con Guida Cocos acuto](~/graphics-games/cocossharp/tiled.md). 
 
 Ogni livello è definito nel proprio file .tmx contenuti nel **CoinTime/attività/contenuto/livelli** cartella. Tutti i livelli di tempo moneta condividono un file tileset, definito nel **mastersheet.tsx** file. Questo file definisce le proprietà personalizzate per ogni riquadro, ad esempio se il riquadro ha una collisione a tinta unita o se il riquadro deve essere sostituito da un'istanza di entità. Il file mastersheet.tsx consente di definire una sola volta e utilizzata per tutti i livelli proprietà. 
 
 
-## <a name="editing-a-tile-map"></a>Modifica di una mappa del riquadro
+### <a name="editing-a-tile-map"></a>Modifica di una tessera mappa
 
 Per modificare una mappa di riquadro, aprire il file .tmx doppio clic sul file .tmx o l'apertura del file tramite il menu File in affiancato affiancato. Ora di moneta livello tessera mappe contengono tre livelli: 
 
@@ -54,7 +54,8 @@ Per modificare una mappa di riquadro, aprire il file .tmx doppio clic sul file .
 
 Come verranno analizzati in un secondo momento, il codice di caricamento del livello prevede che questi tre livelli in tutti i livelli di moneta ora.
 
-### <a name="editing-terrain"></a>La modifica di terreno
+#### <a name="editing-terrain"></a>Modifica di terreno
+
 Riquadri possono essere inseriti facendo clic di **mastersheet** tileset e quindi fare clic sul riquadro mappa. Ad esempio, per disegnare terrain nuovo in un livello:
 
 1. Selezionare il livello di terreno
@@ -67,7 +68,8 @@ In alto a sinistra del tileset contiene tutti i terrain moneta specifico. Terrai
 
 ![](cointime-images/image3.png "Terrain, ovvero a tinta unita, include la proprietà SolidCollision, come illustrato nelle proprietà del riquadro a sinistra della schermata")
 
-### <a name="editing-entities"></a>La modifica delle entità
+#### <a name="editing-entities"></a>La modifica delle entità
+
 Le entità possono essere aggiunti o rimossi da un livello – come terreno. Il **mastersheet** tileset dispone di tutte le entità posizionate sulla metà in senso orizzontale, in modo che potrebbero non essere visibili senza scorrere verso destra:
 
 ![](cointime-images/image4.png "Il tileset mastersheet dispone di tutte le entità posizionate sulla metà in senso orizzontale, in modo che potrebbero non essere visibili senza scorrere verso destra")
@@ -85,7 +87,7 @@ Una volta modificato e salvato il file, le modifiche verranno visualizzati autom
 ![](cointime-images/image7.png "Una volta modificato e salvato il file, le modifiche verranno visualizzati automaticamente se il progetto viene compilato ed eseguire")
 
 
-## <a name="adding-new-levels"></a>Aggiunta di nuovi livelli
+### <a name="adding-new-levels"></a>Aggiunta di nuovi livelli
 
 Il processo di aggiunta di livelli all'ora di moneta richiede alcuna modifica del codice e solo alcune piccole modifiche al progetto. Per aggiungere un nuovo livello:
 
@@ -105,7 +107,7 @@ Il nuovo livello verrà visualizzata nella schermata di seleziona di livello com
 ![](cointime-images/image10.png "Il nuovo livello verrà visualizzata nella schermata di seleziona di livello come livello 9 avvio di nomi file di livello 0, ma i pulsanti di livello iniziano con il numero 1")
 
 
-# <a name="level-loading"></a>Il caricamento di livello
+## <a name="level-loading"></a>Il caricamento del livello
 
 Come illustrato in precedenza, nuovi livelli non richiedono alcuna modifica nel codice: il gioco rileva automaticamente i livelli se sono denominati correttamente e aggiungere il **livelli** cartella con l'azione di compilazione corretta (**BundleResource**o **AndroidAsset**).
 
@@ -201,7 +203,7 @@ private void GoToLevel(int levelNumber)
 Successivamente si verrà esaminato un metodi chiamati negli `GoToLevel`.
 
 
-## <a name="loadlevel"></a>LoadLevel
+### <a name="loadlevel"></a>LoadLevel
 
 Il `LoadLevel` metodo è responsabile per il caricamento del file .tmx e aggiungendolo al `GameScene`. Questo metodo non crea tutti gli oggetti interattivi, ad esempio conflitti o entità: semplicemente crea gli oggetti visivi per il livello, detta anche il *ambiente*.
 
@@ -227,7 +229,7 @@ Il `CCTileMap` costruttore accetta un nome di file, viene creato utilizzando il 
 Attualmente, CocosSharp non consente il riordinamento dei livelli senza rimuovere e aggiungere nuovamente al padre `CCScene` (ovvero il `GameScene` in questo caso), pertanto sono necessarie le ultime righe del metodo per riordinare i livelli.
 
 
-## <a name="createcollision"></a>CreateCollision
+### <a name="createcollision"></a>CreateCollision
 
 Il `CreateCollision` metodo costruisce una `LevelCollision` istanza che viene utilizzata per eseguire *collisione a tinta unita* tra il lettore e un ambiente.
 
@@ -245,7 +247,7 @@ Senza questa collisione, il lettore rientrerebbero tramite il livello e il gioco
 È possibile aggiungere conflitti in fase di moneta senza codice aggiuntivo: solo le modifiche apportate ai file affiancati. 
 
 
-## <a name="processtileproperties"></a>ProcessTileProperties
+### <a name="processtileproperties"></a>ProcessTileProperties
 
 Una volta che viene caricato un livello e viene creato il conflitto, `ProcessTileProperties` viene chiamato per eseguire la logica in base alle proprietà di riquadro. Tempo moneta include un `PropertyLocation` struttura per la definizione di proprietà e le coordinate del riquadro con queste proprietà:
 
@@ -343,7 +345,7 @@ private bool TryCreateEntity(string entityType, float worldX, float worldY)
 ```
 
 
-# <a name="adding-new-entities"></a>Aggiunta di nuove entità
+## <a name="adding-new-entities"></a>Aggiunta di nuove entità
 
 Tempo moneta utilizza il modello di entità per gli oggetti di giochi (illustrata nella [Guida le entità in CocosSharp](~/graphics-games/cocossharp/entities.md)). Tutte le entità di ereditano da `CCNode`, ovvero possono essere aggiunti come elementi figlio del `gameplayLayer`.
 
@@ -352,19 +354,19 @@ Ogni tipo di entità viene inoltre fare riferimento direttamente tramite un elen
 Il codice esistente fornisce una serie di tipi di entità come esempi su come creare nuove entità. Per creare una nuova entità, è possibile utilizzare la procedura seguente:
 
 
-## <a name="1---define-a-new-class-using-the-entity-pattern"></a>1: definire una nuova classe utilizzando il modello di entità
+### <a name="1---define-a-new-class-using-the-entity-pattern"></a>1: definire una nuova classe utilizzando il modello di entità
 
 L'unico requisito per la creazione di un'entità consiste nel creare una classe che eredita da `CCNode`. La maggior parte delle entità presentano alcuni visivo, ad esempio un `CCSprite`, che deve essere aggiunto come elemento figlio dell'entità nel relativo costruttore.
 
-CoinTime fornisce la `AnimatedSpriteEntity` classe che semplifica la creazione di entità animata. Animazioni verranno descritta più dettagliatamente il [sezione animata entità](#Animated_Entities).
+CoinTime fornisce la `AnimatedSpriteEntity` classe che semplifica la creazione di entità animata. Animazioni verranno descritta più dettagliatamente il [sezione animata entità](#animated-entities).
 
 
-## <a name="2--add-a-new-entry-to-the-trycreateentity-switch-statement"></a>2: aggiungere una nuova voce per l'istruzione switch TryCreateEntity
+### <a name="2--add-a-new-entry-to-the-trycreateentity-switch-statement"></a>2: aggiungere una nuova voce per l'istruzione switch TryCreateEntity
 
 Le istanze della nuova entità devono essere creata un'istanza nel `TryCreateEntity`. Se l'entità richiede una logica di ogni fotogramma come conflitto, AI o la lettura di input, il `GameScene` deve mantenere un riferimento all'oggetto. Se sono necessarie più istanze (ad esempio `Coin` o `Enemy` istanze), quindi un nuovo `List` devono essere aggiunti alla `GameScene` classe.
 
 
-## <a name="3--modify-tile-properties-for-the-new-entity"></a>3: modificare le proprietà del riquadro per la nuova entità
+### <a name="3--modify-tile-properties-for-the-new-entity"></a>3: modificare le proprietà del riquadro per la nuova entità
 
 Una volta il codice supporta la creazione della nuova entità, la nuova entità deve essere aggiunto il tileset. Il tileset può essere modificato tramite l'apertura di qualsiasi livello `.tmx` file. 
 
@@ -389,7 +391,7 @@ Deve sovrascrivere il tileset esistente **mastersheet.tsx** tileset:
 ![](cointime-images/image15.png "egli tileset deve sovrascrivere il tileset mastersheet.tsx esistente")
 
 
-# <a name="entity-tile-removal"></a>Rimozione di entità riquadro
+## <a name="entity-tile-removal"></a>Rimozione di riquadro entità
 
 Quando si mappa un riquadro verrà caricata in un gioco, i singoli riquadri sono oggetti statici. Poiché le entità richiedono un comportamento personalizzato, ad esempio lo spostamento, codice in fase di moneta rimuove i riquadri quando vengono create le entità.
 
@@ -453,7 +455,7 @@ private void ProcessTileProperties()
 ```
 
 
-# <a name="entity-offsets"></a>Offset di entità
+## <a name="entity-offsets"></a>Offset di entità
 
 Le entità create dai riquadri vengono posizionate allineando il centro dell'entità con il centro del riquadro. Le entità di dimensioni maggiori, come `Door`, utilizzare proprietà aggiuntive e la logica per essere inserito correttamente. 
 
@@ -493,12 +495,12 @@ private void ProcessTileProperties()
 ```
 
 
-# <a name="animated-entities"></a>Entità animata
+## <a name="animated-entities"></a>Entità animata
 
 Tempo di moneta include varie entità animata. Il `Player` e `Enemy` entità Riproduci animazioni di percorso e il `Door` entità svolge un'animazione di apertura dopo che sono stati raccolti monete tutti.
 
 
-## <a name="achx-files"></a>file .achx
+### <a name="achx-files"></a>file .achx
 
 Le animazioni ora moneta sono definite nel file .achx. Ogni animazione viene definito tra `AnimationChain` tag, come illustrato nella seguente animazione definito in **propanimations.achx**:
 
@@ -533,7 +535,7 @@ Il `FrameLength` proprietà definisce il numero di secondi che deve essere visua
 Ignora tutte le altre proprietà AnimationChain nel file .achx moneta ora.
 
 
-## <a name="animatedspriteentity"></a>AnimatedSpriteEntity
+### <a name="animatedspriteentity"></a>AnimatedSpriteEntity
 
 Animazione logica è contenuta nel `AnimatedSpriteEntity` (classe), che funge da classe base per la maggior parte delle entità utilizzato per il `GameScene`. Fornisce le funzionalità seguenti:
 
@@ -562,7 +564,7 @@ walkRightAnimation = animations.Find (item => item.Name == "WalkRight");
 ```
 
 
-# <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Riepilogo
 
 Questa guida illustra i dettagli di implementazione di tempo moneta. Tempo moneta viene creata come un gioco completo, ma è anche un progetto che può essere facilmente modificato ed espanso. I lettori sono invitati a spesa modifiche della fase di esecuzione a livelli, aggiunta di nuovi livelli e la creazione di nuove entità per comprendere meglio come moneta è implementata.
 

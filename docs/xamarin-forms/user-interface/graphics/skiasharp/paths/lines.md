@@ -1,6 +1,6 @@
 ---
 title: Le righe e maiuscole tratto
-description: "Informazioni su come usare SkiaSharp per disegnare linee con estremità diversi"
+description: Informazioni su come usare SkiaSharp per disegnare linee con estremità diversi
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1F854DDD-5D1B-4DE4-BD2D-584439429FDB
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 341d850709ff27f4dc397cee3bb2fc5f73c0ec3c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 96b8a990f4644d5e4c9c8ffe6cdb6c173c50657c
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="lines-and-stroke-caps"></a>Le righe e maiuscole tratto
 
@@ -36,7 +36,7 @@ L'aspetto del inizio e fine delle righe viene chiamato un *estremità di linea* 
 - [`Square`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
 - [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
 
-Questi sono illustrate più chiaramente con un programma di esempio. La seconda sezione della home page del [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programma inizia con una pagina denominata **maiuscole tratto** in base il [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) classe. Questa pagina definisce un `PaintSurface` gestore eventi che esegue il ciclo di tre membri del `SKStrokeCap` enumerazione, la visualizzazione sia il nome del membro di enumerazione e creazione di una linea che estremità della traccia utilizzando:
+Questi sono illustrate più chiaramente con un programma di esempio. La seconda sezione della home page del [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma inizia con una pagina denominata **maiuscole tratto** in base il [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) classe. Questa pagina definisce un `PaintSurface` gestore eventi che esegue il ciclo di tre membri del `SKStrokeCap` enumerazione, la visualizzazione sia il nome del membro di enumerazione e creazione di una linea che estremità della traccia utilizzando:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -244,4 +244,4 @@ Se le righe vengono connessi o non è connesso è un aspetto fondamentale di uti
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

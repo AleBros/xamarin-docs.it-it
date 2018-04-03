@@ -8,11 +8,11 @@ ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 10b23975fab8aa87019b9d0fed42decdc6adddfb
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 668488ab7efae66f1777e9ae6ded1f725833fe16
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="skiasharp-transforms"></a>Trasformazioni SkiaSharp
 
@@ -49,7 +49,7 @@ Le trasformazioni SkiaSharp sono rispetto all'angolo superiore sinistro del `SKC
 
 La differenza di grandi dimensioni è che le trasformazioni SKiaSharp sono *metodi* durante le trasformazioni di xamarin. Forms *proprietà*. Si tratta di una differenza semantica oltre la differenza di sintassi: SkiaSharp trasformazioni eseguono un'operazione durante uno stato del set di trasformazioni di xamarin. Forms. SkiaSharp trasformazioni si applicano agli oggetti di grafica disegnati successivamente, ma non a oggetti di grafica disegnati prima che venga applicata la trasformazione. Al contrario, una trasformazione di xamarin. Forms si applica a un elemento precedentemente sottoposti a rendering come la proprietà è impostata. Trasformazioni SkiaSharp sono cumulative, come i metodi vengono chiamati; Quando la proprietà è impostata con un altro valore, vengono sostituite le trasformazioni di xamarin. Forms.
 
-Tutti i programmi di esempio in questa sezione appaiono sotto l'intestazione **trasforma** nella home page del [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programma e il [ **Trasforma** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms) cartella della soluzione.
+Tutti i programmi di esempio in questa sezione appaiono sotto l'intestazione **trasforma** nella home page del [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma e il [ **Trasforma** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms) cartella della soluzione.
 
 ## <a name="the-translate-transformtranslatemd"></a>[Trasformazione di traslazione](translate.md)
 
@@ -87,4 +87,4 @@ Utilizzare le trasformazioni non affini per ruotare gli oggetti 2D nello spazio 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

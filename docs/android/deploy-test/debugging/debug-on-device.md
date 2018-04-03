@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: d340c3da220deacdb5606547a084e55d80c817e7
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: df6d2b246d4f0298ff31228b5db82084a55a8dd4
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="debug-on-device"></a>Eseguire il debug nel dispositivo
 
@@ -20,7 +20,7 @@ _In questo articolo viene illustrato come eseguire il debug di un'applicazione X
 
 ## <a name="debug-on-device-overview"></a>Panoramica del debug nel dispositivo
 
-È possibile eseguire il debug di un'applicazione Xamarin.Android in un dispositivo Android mediante Visual Studio per Mac o Visual Studio. Prima di eseguire il debug in un dispositivo, questo deve essere [impostato per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md) e connesso a PC o Mac.
+È possibile eseguire il debug di un'app Xamarin.Android in un dispositivo Android mediante Visual Studio per Mac o Visual Studio. Prima di eseguire il debug in un dispositivo, questo deve essere [impostato per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md) e connesso a PC o Mac.
 
 
 ## <a name="debug-application"></a>Debug Application (Eseguire il debug dell'applicazione)

@@ -1,6 +1,6 @@
 ---
 title: Utilizzo affiancato con CocosSharp
-description: "Affiancato è una potente, flessibile e applicazione obsoleta per la creazione di riquadro ortogonale e l'effetto viene eseguito il mapping per i giochi. CocosSharp fornisce integrazione incorporata per il formato di file nativi dell'affiancato."
+description: Affiancato è una potente, flessibile e applicazione obsoleta per la creazione di riquadro ortogonale e l'effetto viene eseguito il mapping per i giochi. CocosSharp fornisce integrazione incorporata per il formato di file nativi dell'affiancato.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 804C042C-F62A-4E6C-B10F-06528637F0E2
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 5a469a372a9299712be7aef46c51f3d644946535
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 68afa9d175140fd5104e83282a2f72c47625d882
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="using-tiled-with-cocossharp"></a>Utilizzo affiancato con CocosSharp
 
@@ -30,7 +30,7 @@ Quando termine dovremo demo seguente:
 ![](tiled-images/image1.png "L'app demo creato seguendo i passaggi descritti in questa Guida")
 
 
-# <a name="the-purpose-of-tile-maps"></a>Lo scopo di tessere mappe
+## <a name="the-purpose-of-tile-maps"></a>Lo scopo delle mappe di riquadro
 
 Riquadro mappe esistito nello sviluppo di gioco per decenni, ma sono ancora utilizzate nei giochi 2D per l'efficacia ed esthetics. Riquadro mappe in grado di ottenere un elevato livello di efficienza tramite l'utilizzo di set di tessere: l'immagine di origine utilizzata dal riquadro mappe. Un set di tessere è una raccolta di immagini combinati in un file. Anche se i set di tessere fanno riferimento a immagini utilizzate nelle mappe di riquadro, i file che contengono più immagini di piccole dimensioni sono detti anche fogli sprite o sprite mapping nello sviluppo di gioco. È possibile visualizzare come set di tessere vengono utilizzati tramite l'aggiunta di una griglia al set di riquadro che verrà usato nella demo:
 
@@ -43,7 +43,7 @@ Riquadro mappe disporre i singoli riquadri da set di sezioni. Si noti che ogni m
 ![](tiled-images/image4.png "La seguente immagine illustra possibili disposizioni usando lo stesso set di sezioni")
 
 
-# <a name="working-with-tmx-files"></a>Utilizzo dei file .tmx
+## <a name="working-with-tmx-files"></a>Utilizzo dei file .tmx
 
 Il formato di file .tmx è un file XML creato dall'applicazione affiancato, che può essere [scaricati gratuitamente nel sito Web affiancato](http://www.mapeditor.org/). Il formato del file .tmx archivia le informazioni per le mappe di riquadro. In genere un gioco avrà un file .tmx per ogni area separata o a un livello.
 
@@ -80,7 +80,7 @@ Se Esegui il gioco vedremo tessera mappa vengono visualizzati nell'angolo inferi
 ![](tiled-images/image6.png "Se viene eseguito il gioco, la mappa del riquadro vengono visualizzati nell'angolo inferiore sinistro dello schermo")
 
 
-# <a name="considerations-for-rendering-pixel-art"></a>Considerazioni per il Rendering di immagini di Pixel
+## <a name="considerations-for-rendering-pixel-art"></a>Considerazioni per il rendering di immagini di pixel
 
 Immagine in pixel, nel contesto di sviluppo di gioco, si intende 2D arte visiva che è in genere creati da mano e spesso a bassa risoluzione. ClipArt pixel può essere correggono tempi lunghi per creare, quindi pixel grafica riquadro set includono spesso a bassa risoluzione riquadri, ad esempio 16 o 32 larghezza in pixel e l'altezza. Se non è ridimensionato in fase di esecuzione, arte pixel spesso è troppo piccolo per più moderni telefoni e Tablet.
 
@@ -161,7 +161,7 @@ A questo punto la mappa del riquadro non verrà visualizzato sfocata:
 ![](tiled-images/image8.png "Tessera mappa non verrà ora visualizzato sfocata")
 
 
-# <a name="using-tile-properties-at-runtime"></a>Utilizzando le proprietà del riquadro in fase di esecuzione
+## <a name="using-tile-properties-at-runtime"></a>Utilizzando le proprietà del riquadro in fase di esecuzione
 
 Finora abbiamo un `CCTileMap` durante il caricamento di un file .tmx e visualizzarlo, ma non esiste alcun modo di interagire con essa. Alcuni riquadri (ad esempio, il corpo fissato irrilevanti) in particolare, è necessario disporre di logica personalizzata. Passeremo come rilevare le proprietà del riquadro personalizzato e i vari modi per rispondere a queste proprietà di una volta identificate in fase di esecuzione.
 
@@ -175,7 +175,7 @@ Se non sono visualizzate le proprietà del corpo fissato irrilevanti, fare clic 
 
 ![](tiled-images/image10.png "Se non sono visualizzate le proprietà del corpo fissato irrilevanti, fare clic sul corpo fissato irrilevanti e selezionare le proprietà del riquadro")
 
-Proprietà affiancata vengono implementate con un nome e un valore. Per aggiungere una proprietà, fare clic su di  **+**  pulsante, immettere il nome **IsTreasure**, fare clic su **OK**, quindi immettere il valore **true**: 
+Proprietà affiancata vengono implementate con un nome e un valore. Per aggiungere una proprietà, fare clic su di **+** pulsante, immettere il nome **IsTreasure**, fare clic su **OK**, quindi immettere il valore **true**: 
 
 ![](tiled-images/image11.png "Per aggiungere una proprietà, fare clic sul pulsante, immettere il nome IsTreasure fare clic su OK, quindi immettere il valore true")
 
@@ -273,7 +273,7 @@ La maggior parte del codice è chiara interpretazione, ma dovrebbe prende in esa
 In altre parole, il corpo fissato irrilevanti beneficiare di un'entità viene anziché un semplice riquadro nel `CCTileMap`. Per ulteriori informazioni sulle entità di gioco, vedere il [Guida le entità in CocosSharp](~/graphics-games/cocossharp/entities.md).
 
 
-# <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Riepilogo
 
 Questa procedura dettagliata illustra come caricare i file di .tmx creati da affiancato in un'applicazione CocosSharp. Viene illustrato come modificare la risoluzione di app per tenere conto delle immagini a bassa risoluzione pixel e come individuare i riquadri per le relative proprietà per eseguire la logica personalizzata, quali la creazione di istanze di entità.
 

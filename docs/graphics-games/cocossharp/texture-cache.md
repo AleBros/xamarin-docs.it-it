@@ -1,6 +1,6 @@
 ---
 title: Memorizzazione nella cache della trama utilizzando CCTextureCache
-description: "Classe CCTextureCache del CocosSharp fornisce un modo standard per organizzare, cache e scaricare il contenuto. È particolarmente utile per i giochi di grandi dimensioni che potrebbero non rientra completamente nella memoria RAM, semplificando il processo di raggruppamento e l'eliminazione delle trame."
+description: Classe CCTextureCache del CocosSharp fornisce un modo standard per organizzare, cache e scaricare il contenuto. È particolarmente utile per i giochi di grandi dimensioni che potrebbero non rientra completamente nella memoria RAM, semplificando il processo di raggruppamento e l'eliminazione delle trame.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1B5F3F85-9E68-42A7-B516-E90E54BA7102
@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 365e343a55a208b63f4dc52999e8857b5f0ec1f4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 350a454bc94c796b34cfeeb319481919b18d334f
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="texture-caching-using-cctexturecache"></a>Memorizzazione nella cache della trama utilizzando CCTextureCache
+# <a name="texture-caching-using-cctexturecache"></a>Utilizzando CCTextureCache la memorizzazione nella cache della trama
 
 _Classe CCTextureCache del CocosSharp fornisce un modo standard per organizzare, cache e scaricare il contenuto. È particolarmente utile per i giochi di grandi dimensioni che potrebbero non rientra completamente nella memoria RAM, semplificando il processo di raggruppamento e l'eliminazione delle trame._
 
@@ -29,7 +29,7 @@ Questa guida viene analizzato il `CCTextureCache` e perché è importante per lo
  - Eliminazione di trame
 
 
-# <a name="why-texture-caching-matters"></a>Trama per questioni di memorizzazione nella cache
+## <a name="why-texture-caching-matters"></a>Trama per questioni di memorizzazione nella cache
 
 La memorizzazione nella cache di trama è una considerazione importante nello sviluppo di gioco, come il caricamento di trama è un'operazione richiede molto tempo e le trame richiedono una notevole quantità di RAM in fase di esecuzione.
 
@@ -38,7 +38,7 @@ Come per qualsiasi operazione di file, il caricamento delle trame dal disco può
 Come indicato in precedenza, le trame occupano anche una grande quantità di memoria di runtime. Ad esempio un'immagine di sfondo dimensione per la risoluzione di un iPhone 6 (750 1344) occuperebbero 4 MB di RAM, anche se solo alcuni kilobyte di dimensioni del file PNG. La memorizzazione nella cache di trama fornisce un modo per condividere i riferimenti di trama all'interno di un'applicazione e anche un modo semplice per scaricare tutto il contenuto durante la transizione tra stati diversi di giochi.
 
 
-# <a name="texture-lifespan"></a>Ciclo di vita di trama
+## <a name="texture-lifespan"></a>Ciclo di vita di trama
 
 Le trame CocosSharp possono essere mantenute in memoria per l'intera durata dell'esecuzione di un'app o potrebbe trattarsi di breve durate. Per ridurre al minimo della memoria è necessario eliminarlo sull'utilizzo di un'app di trame quando non è più necessario. Naturalmente, ciò significa che le trame possono essere eliminate e nuovamente caricate in un secondo momento, che può aumentare i tempi di caricamento o ridurre le prestazioni durante il caricamento. 
 
@@ -58,7 +58,7 @@ Se il gioco è grande abbastanza e infine carica sufficiente trame per riempire 
 Il diagramma precedente indica che l'utilizzo della memoria di trama può essere ridotto scaricando, ma tale operazione potrebbe richiedere tempi di caricamento aggiuntive se un lettore decide di riprodurre un livello. È inoltre importante notare che le trame UITexture e MainCharacter vengono caricate e non vengono mai scaricate. Ciò implica che le trame sono necessari in tutti i livelli, in modo che vengono sempre mantenuti in memoria. 
 
 
-# <a name="using-sharedtexturecache"></a>Using SharedTextureCache
+## <a name="using-sharedtexturecache"></a>Using SharedTextureCache
 
 CocosSharp automaticamente memorizza nella cache le trame durante il caricamento tramite il `CCSprite` costruttore. Ad esempio il codice seguente crea solo un'istanza di trama:
 
@@ -84,7 +84,7 @@ CCSprite starSprite = new CCSprite ();
 `AddImage` Controlla se il file di argomento (in questo caso `star.png`) è già stato caricato. In questo caso, viene restituito l'istanza memorizzata nella cache. Se quindi non viene caricato dal file system e un riferimento per la trama viene archiviato internamente per le successive `AddImage` chiamate. In altre parole il `star.png` immagine viene caricata solo una volta e le chiamate successive non richiedono alcun accesso aggiuntivo su disco o memoria aggiuntive texture.
 
 
-# <a name="lazy-loading-vs-pre-loading-with-addimage"></a>Vs durante il caricamento lazy. Precaricamento in corso con AddImage
+## <a name="lazy-loading-vs-pre-loading-with-addimage"></a>Caricamento e pre-caricamento con AddImage Lazy
 
 `AddImage` Consente di scrivere lo stesso codice che la trama richiesta è già caricata. Ciò significa che il contenuto non verrà caricato finché è richiesta; Tuttavia, possono verificarsi problemi di prestazioni in fase di esecuzione a causa di contenuto imprevisto durante il caricamento.
 
@@ -114,12 +114,12 @@ void PreLoadImages()
 Questa pre-caricamento può comportare memoria inutilizzata e può aumentare il tempo di avvio. Ad esempio, il lettore non può mai ottenere un accensione rappresentato dal `powerup3.png` trama, pertanto verrà caricato inutilmente. Naturalmente è possibile un costo necessario pagare evitare un potenziale pop nella modalità di gioco, pertanto è in genere consigliabile precaricamento contenuto se rientra nella RAM.
 
 
-# <a name="disposing-textures"></a>Eliminazione di trame
+## <a name="disposing-textures"></a>Eliminazione di trame
 
 Se un gioco non richiede più memoria trama è disponibile sul dispositivo specifica minimo trame non è necessario essere eliminati. D'altra parte, giochi maggiore potrebbe essere necessario liberare memoria di trama per liberare spazio per il nuovo contenuto. Ad esempio un gioco può utilizzare una grande quantità di memoria di archiviazione di trame per un ambiente. Se l'ambiente viene utilizzata solo in un livello specifico deve essere scaricato al termine il livello.
 
 
-## <a name="disposing-a-single-texture"></a>Eliminazione di una trama singola
+### <a name="disposing-a-single-texture"></a>Eliminazione di una trama singola
 
 Rimozione di una sola trama innanzitutto è necessario chiamare il `Dispose` (metodo), quindi la rimozione manuale del `CCTextureCache`.
 
@@ -187,7 +187,7 @@ Il metodo Dispose eliminerà tutte le trame interne, cancellare la memoria usata
 
 
 
-# <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Riepilogo
 
 Questa guida viene illustrato come utilizzare la `CCTextureCache` classe per le prestazioni di runtime e sull'utilizzo della memoria saldo. `CCTexturCache.SharedTextureCache` è possibile in modo esplicito o implicito consente di caricare e memorizzare nella cache delle trame per la durata dell'applicazione, mentre `CCTextureCache` istanze possono essere usate per scaricare le trame per ridurre l'utilizzo della memoria.
 
