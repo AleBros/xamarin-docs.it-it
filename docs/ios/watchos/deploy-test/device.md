@@ -1,18 +1,17 @@
 ---
 title: Test nei dispositivi di espressioni di controllo
 description: Distribuzione di applicazioni di eseguire i test sul Apple Watch
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 211f8c7066e86dac3a8351b913da0185093dcb70
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d1d00a4d561551435e7d2333520dc614a79dcad3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="testing-on-watch-devices"></a>Test nei dispositivi di espressioni di controllo
 
@@ -26,7 +25,7 @@ Dopo aver eseguito la [passaggi di distribuzione](~/ios/watchos/deploy-test/inde
 
 ## <a name="devices"></a>Dispositivi
 
-Test di App iOS in un reale iPhone o iPad ha sempre richiesto il dispositivo sia registrato in Dev Center. L'elenco dei dispositivi è simile al seguente (fare clic sul segno più  **+**  per aggiungere un nuovo dispositivo):
+Test di App iOS in un reale iPhone o iPad ha sempre richiesto il dispositivo sia registrato in Dev Center. L'elenco dei dispositivi è simile al seguente (fare clic sul segno più **+** per aggiungere un nuovo dispositivo):
 
 ![](device-images/devices-sml.png "L'elenco dei dispositivi è simile al seguente")
 

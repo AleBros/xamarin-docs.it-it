@@ -1,18 +1,17 @@
 ---
 title: Pagina di sequenza
-description: "Il CarouselPage xamarin. Forms è una pagina che gli utenti possono scorrere verso destra per spostarsi tra le pagine di contenuto, ad esempio una raccolta. In questo articolo viene illustrato come utilizzare un CarouselPage per spostarsi di una raccolta di pagine."
-ms.topic: article
+description: Il CarouselPage xamarin. Forms è una pagina che gli utenti possono scorrere verso destra per spostarsi tra le pagine di contenuto, ad esempio una raccolta. In questo articolo viene illustrato come utilizzare un CarouselPage per spostarsi di una raccolta di pagine.
 ms.prod: xamarin
 ms.assetid: 2D14FC9D-DF5F-427E-9006-2AAE61ECF8DC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: c4f8d70625fd8ee0e07832f8bdb3b7e502b5b38f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d55d8c8d98828097c842cc383037db88097b963d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="carousel-page"></a>Pagina di sequenza
 

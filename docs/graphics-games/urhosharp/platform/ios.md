@@ -1,17 +1,16 @@
 ---
 title: IOS UrhoSharp e supporto per tvOS
-description: "iOS e tvOS il programma di installazione specifico e le funzionalità per UrhoSharp."
-ms.topic: article
+description: iOS e tvOS il programma di installazione specifico e le funzionalità per UrhoSharp.
 ms.prod: xamarin
 ms.assetid: 7B06567E-E789-4EA1-A2A9-F3B2212EDD23
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 465fed25f360f29ad0b63146add8de939fa8924e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 81adda3df55a51c375332e1cbe4b2e34574f98bf
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="urhosharp-ios-and-tvos-support"></a>IOS UrhoSharp e supporto per tvOS
 

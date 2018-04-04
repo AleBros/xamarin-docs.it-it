@@ -1,17 +1,16 @@
 ---
 title: Modifiche di Framework aggiuntive iOS 9
 description: Questo articolo vengono illustrate le modifiche aggiuntive, secondarie o miglioramenti alle infrastrutture esistenti per iOS 9.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5053d8d0cf9c1c3e6d3282ee8d6e42448e733c2c
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 5561cccfd0968c309526aae1e5dc90831ca681b4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Modifiche di Framework aggiuntive iOS 9
 

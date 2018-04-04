@@ -1,18 +1,17 @@
 ---
 title: PassKit
-description: "Portafoglio è un'app iOS di sistema che consente di archiviare e visualizza i codici a barre e altre informazioni per collegare le transazioni cliente sul telefono con il mondo reale."
-ms.topic: article
+description: Portafoglio è un'app iOS di sistema che consente di archiviare e visualizza i codici a barre e altre informazioni per collegare le transazioni cliente sul telefono con il mondo reale.
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 279b5bc1188c973fddc033f9b592e9acec703a59
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f1c8ac92c5ff7eed5116587ed13755ddee74a877
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="passkit"></a>PassKit
 
@@ -238,7 +237,7 @@ Per creare le operazioni seguenti a non passare tipo ID.
 
 Il primo passaggio consiste nell'impostare un ID di tipo passato per ogni diversi _tipo_ della sessione devono essere supportati. L'ID passa (o identificatore di tipo passato) crea un identificatore univoco per il passaggio. Si utilizzerà questo ID per il passaggio di collegamento con l'account sviluppatore utilizza un certificato.
 
-1. Nel [sezione certificati, gli identificatori e i profili del portale di Provisioning iOS](https://developer.apple.com/account/overview.action), passare a **identificatori** e selezionare **passare gli ID di tipo** . Selezionare quindi il  **+**  pulsante per creare un nuovo tipo di passaggio: [ ![ ] (passkit-images/passid.png "creare un nuovo tipo di passaggio")](passkit-images/passid.png#lightbox)
+1. Nel [sezione certificati, gli identificatori e i profili del portale di Provisioning iOS](https://developer.apple.com/account/overview.action), passare a **identificatori** e selezionare **passare gli ID di tipo** . Selezionare quindi il **+** pulsante per creare un nuovo tipo di passaggio: [ ![ ] (passkit-images/passid.png "creare un nuovo tipo di passaggio")](passkit-images/passid.png#lightbox)
 
 2.   Fornire un **descrizione** (nome) e **identificatore** (stringa univoca) per il passaggio. Si noti che tutti gli ID tipo passato deve iniziare con la stringa `pass.` In questo esempio viene utilizzata `pass.com.xamarin.coupon.banana` : [ ![ ] (passkit-images/register.png "fornire una descrizione e un identificatore")](passkit-images/register.png#lightbox)
 

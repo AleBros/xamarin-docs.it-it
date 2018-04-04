@@ -1,18 +1,17 @@
 ---
 title: Utilizzo di un'App per dispositivi mobili di Azure
-description: "Azure App per dispositivi mobili consentono di sviluppare applicazioni con scalabilità back-end ospitato in Azure App Service, con supporto per l'autenticazione per dispositivi mobili, non in linea sincronizzazione e le notifiche push. Questo articolo è applicabile solo alle App mobili di Azure che utilizzano un back-end di Node.js, viene illustrato come eseguire una query, inserimento, aggiornamento ed eliminare i dati archiviati in una tabella in un'istanza di App mobili di Azure."
-ms.topic: article
+description: Azure App per dispositivi mobili consentono di sviluppare applicazioni con scalabilità back-end ospitato in Azure App Service, con supporto per l'autenticazione per dispositivi mobili, non in linea sincronizzazione e le notifiche push. Questo articolo è applicabile solo alle App mobili di Azure che utilizzano un back-end di Node.js, viene illustrato come eseguire una query, inserimento, aggiornamento ed eliminare i dati archiviati in una tabella in un'istanza di App mobili di Azure.
 ms.prod: xamarin
 ms.assetid: 2B3EFD0A-2922-437D-B151-4B4DE46E2095
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 5b087700e3a5276e19454a8dafedb508758b7b71
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e2e9e2c05d3f6e467fd47b31af4f53049aab2709
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-an-azure-mobile-app"></a>Utilizzo di un'App per dispositivi mobili di Azure
 

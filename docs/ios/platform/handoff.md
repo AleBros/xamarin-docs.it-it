@@ -1,17 +1,16 @@
 ---
 title: Handoff
-description: "In questo articolo viene illustrato l'uso di passaggio di consegne in un'app xamarin per trasferire le attività degli utenti tra le applicazioni in esecuzione per l'utente 's altri dispositivi."
-ms.topic: article
+description: In questo articolo viene illustrato l'uso di passaggio di consegne in un'app xamarin per trasferire le attività degli utenti tra le applicazioni in esecuzione per l'utente 's altri dispositivi.
 ms.prod: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 25220f37433037b55f13c4de5a07c0c09173a269
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bb665c7ffd4241fac14be13ebd8f113d11afd417
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="handoff"></a>Handoff
 
@@ -463,7 +462,7 @@ Questo file JSON contiene un dizionario che specifica un elenco di app ID nel fo
 }
 ```
 
-Per firmare il file JSON (in modo che abbia il corretto `Content-Type` di `application/pkcs7-mime`), utilizzare il **Terminal** app e un `openssl` comando con un certificato e chiave emesso da un'autorità di certificazione attendibile per iOS (vedere [ http://support.Apple.com/kb/ht5012](http://support.apple.com/kb/ht5012) per un elenco). Ad esempio:
+Per firmare il file JSON (in modo che possa corrette `Content-Type` dei `application/pkcs7-mime`), utilizzare il **Terminal** app e un `openssl` comando con un certificato e chiave emesso da un'autorità di certificazione attendibile per iOS (vedere [ http://support.apple.com/kb/ht5012 ](http://support.apple.com/kb/ht5012) per un elenco). Ad esempio:
 
 ```csharp
 echo '{"activitycontinuation":{"apps":["YWBN8XTPBJ.com.company.FirstApp",

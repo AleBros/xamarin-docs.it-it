@@ -1,18 +1,17 @@
 ---
 title: Classe App
-description: "Funzionalità della classe App predefinito, che può essere c# o XAML"
-ms.topic: article
+description: Funzionalità della classe App predefinito, che può essere c# o XAML
 ms.prod: xamarin
 ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: c383808d443685c1561113e418aed62467f1d5bd
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: db8b767d6e7a6c5e5badc1c74703825a66ea2ab8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="app-class"></a>Classe App
 

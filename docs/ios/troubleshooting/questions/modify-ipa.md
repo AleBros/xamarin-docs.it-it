@@ -1,16 +1,16 @@
 ---
-title: "È possibile aggiungere file o rimuovere i file da un file IPA dopo averlo compilato in Visual Studio?"
-ms.topic: article
+title: È possibile aggiungere file o rimuovere i file da un file IPA dopo averlo compilato in Visual Studio?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6C3082FB-C3F1-4661-BE45-64570E56DE7C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: be792c95de7aa66d64278e47b2ca6b354e611273
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b8b61ba38491b2085233dd1b30a82bc57d2baaed
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>È possibile aggiungere file o rimuovere i file da un file IPA dopo averlo compilato in Visual Studio?
 
@@ -86,4 +86,4 @@ file missing: /Users/macuser/Library/Caches/Xamarin/mtbs/builds/iPhoneApp1/cc530
 
 E il processo di verifica App Store segnalerà un messaggio di errore simile:
 
-> Errore ITMS-90035: "firma non valida. Una risorsa sealed è mancante o non valido. Il file binario nel percorso [iPhoneApp1.app/iPhoneApp1] contiene una firma non valida. Assicurarsi di che aver effettuato l'accesso dell'applicazione con un certificato di distribuzione, non un certificato ad hoc o un certificato di sviluppo. Verificare che le impostazioni di firma codice in Xcode siano corrette a livello di destinazione (che eseguono l'override di tutti i valori a livello di progetto). Inoltre, verificare che il pacchetto di cui che si sta caricando è stato creato utilizzando una destinazione di rilascio in Xcode, non è una destinazione di simulatore. Se si è certi che le impostazioni di firma codice siano corrette, scegliere "Pulita tutto" in Xcode, eliminare la directory "build" in Finder e ricompilare la destinazione di rilascio. Per ulteriori informazioni, consultare [https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"
+> Errore ITMS-90035: "firma non valida. Una risorsa sealed è mancante o non valido. Il file binario nel percorso [iPhoneApp1.app/iPhoneApp1] contiene una firma non valida. Assicurarsi di che aver effettuato l'accesso dell'applicazione con un certificato di distribuzione, non un certificato ad hoc o un certificato di sviluppo. Verificare che le impostazioni di firma codice in Xcode siano corrette a livello di destinazione (che eseguono l'override di tutti i valori a livello di progetto). Inoltre, verificare che il pacchetto di cui che si sta caricando è stato creato utilizzando una destinazione di rilascio in Xcode, non è una destinazione di simulatore. Se si è certi che le impostazioni di firma codice siano corrette, scegliere "Pulita tutto" in Xcode, eliminare la directory "build" in Finder e ricompilare la destinazione di rilascio. Per altre informazioni, consultare [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"

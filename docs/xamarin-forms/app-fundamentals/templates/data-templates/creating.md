@@ -1,18 +1,17 @@
 ---
 title: Creazione di un elemento DataTemplate
-description: "I modelli di dati è possono crearle inline, in un oggetto ResourceDictionary o da un tipo personalizzato o un tipo di cella appropriato xamarin. Forms. Questo articolo esamina ogni tecnica."
-ms.topic: article
+description: I modelli di dati è possono crearle inline, in un oggetto ResourceDictionary o da un tipo personalizzato o un tipo di cella appropriato xamarin. Forms. Questo articolo esamina ogni tecnica.
 ms.prod: xamarin
 ms.assetid: CFF4AB5E-9069-461C-84D8-F9F6C38510AB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 5721aee95e39b56e9732129774a03f08e0db6cc0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cd4266fb8e7d68a9f93bd169ca70c6a0f516a357
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-datatemplate"></a>Creazione di un elemento DataTemplate
 

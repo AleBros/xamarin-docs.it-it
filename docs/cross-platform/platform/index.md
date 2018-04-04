@@ -1,28 +1,27 @@
 ---
-title: "Funzionalità della piattaforma"
-description: "Concetti e le funzionalità dell'applicazione e multipiattaforma."
-ms.topic: article
+title: Funzionalità della piattaforma
+description: Concetti e le funzionalità dell'applicazione e multipiattaforma.
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 26b33b1fbf546f734e6661380f63b574cccbcae5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1699c8bde336c040253a5560a2979de8b3fabf5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="platform-features"></a>Funzionalità della piattaforma
 
 In questa sezione contiene documenti che illustrano i concetti e funzionalità più avanzate di applicazioni multipiattaforma.
 
-##  <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Panoramica del supporto di Async](~/cross-platform/platform/async.md)
+##  <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Panoramica del supporto asincrono](~/cross-platform/platform/async.md)
 
 Versione 5 di c# introdotte due nuove parole chiave per esprimere le operazioni asincrone: async e await. Queste parole chiave consentono di scrivere codice semplice che prevede l'utilizzo di Task Parallel Library per eseguire operazioni a esecuzione prolungata (ad esempio l'accesso di rete) in un altro thread e accedere facilmente i risultati al completamento. Le versioni più recenti di xamarin. IOS e xamarin supportano async e await: questo documento vengono fornite spiegazioni e un esempio di utilizzo della nuova sintassi con Xamarin.
 
-## <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Funzionalità 6 del linguaggio c#](~/cross-platform/platform/csharp-six.md)
+## <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Funzionalità del linguaggio C# 6](~/cross-platform/platform/csharp-six.md)
 
 La versione più recente del linguaggio c#-versione 6 – continua evoluzione del linguaggio che sono meno boilerplate maggiore chiarezza e la coerenza di più. Sintassi di inizializzazione di pulizia, la possibilità di utilizzare `await` in `catch/finally` blocchi e condizionali null `?` operatore risultano particolarmente utili.
 

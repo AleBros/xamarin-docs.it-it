@@ -1,18 +1,17 @@
 ---
 title: Introduzione
 description: Informazioni su come installare il supporto per tvOS Xamarin e iniziare rapidamente in fase di sviluppo tvOS.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1A3D8211-A689-41D9-BCFE-AF8398992031
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 401f322a2baf684f4b91dfaf80a87e358c166a8c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d348cfe00c1099d2e845d93c4e31ff33ae9efc75
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="getting-started-with-xamarintvos"></a>Introduzione a Xamarin.tvOS
 
@@ -20,11 +19,11 @@ Xamarin.tvOS consente la creazione di App native tvOS con la flessibilità e l'e
 
 Questa serie introduce i concetti di base dello sviluppo Xamarin.tvOS. Passa da installazione del supporto per tvOS all'avvio, la progettazione, codifica e l'esecuzione di un'applicazione. Inoltre, spiega le competenze e un set di strumenti necessari per lavorare su qualsiasi app Xamarin.tvOS.
 
-## <a name="installing-tvos-supportiostvosget-startedinstallationmd"></a>[L'installazione di supporto per tvOS](~/ios/tvos/get-started/installation.md)
+## <a name="installing-tvos-supportiostvosget-startedinstallationmd"></a>[Installazione del supporto per tvOS](~/ios/tvos/get-started/installation.md)
 
 Per compilare App tvOS con Xamarin, installare l'ultima versione stabile di xamarin. IOS, che supporta tvOS 11 e watchOS 4.
 
-## <a name="hello-tvos-quick-start-guideiostvosget-startedhello-tvosmd"></a>[Hello, tvOS Guida introduttiva](~/ios/tvos/get-started/hello-tvos.md)
+## <a name="hello-tvos-quick-start-guideiostvosget-startedhello-tvosmd"></a>[Guida introduttiva alla creazione della prima app tvOS](~/ios/tvos/get-started/hello-tvos.md)
 
 Questo articolo fornisce una Guida introduttiva allo sviluppo di App per tvOS creando una semplice app "Hello, tvOS". Vengono illustrate le nozioni di base del dispositivo tvOS provisioning, creazione dell'interfaccia, la codifica per tvOS e il test nel simulatore tvOS e sull'hardware tvOS reale.
 

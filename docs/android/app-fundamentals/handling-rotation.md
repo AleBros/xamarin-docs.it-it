@@ -1,18 +1,17 @@
 ---
 title: Rotazione di gestione
-description: "In questo argomento viene descritto come gestire le modifiche di orientamento di dispositivo in xamarin. Viene illustrato come utilizzare con il sistema Android risorse per caricare automaticamente risorse per un orientamento del dispositivo specifico nonché come gestire a livello di programmazione orientamento cambia."
-ms.topic: article
+description: In questo argomento viene descritto come gestire le modifiche di orientamento di dispositivo in xamarin. Viene illustrato come utilizzare con il sistema Android risorse per caricare automaticamente risorse per un orientamento del dispositivo specifico nonché come gestire a livello di programmazione orientamento cambia.
 ms.prod: xamarin
 ms.assetid: 6D33ADF7-ED81-0256-479D-D9E3787A76B0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: c31dbfeea3134de95f3275a7fa79c508a94d6a91
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1cdc7928c45b99cdd8c8149b3ae9b06e790deeca
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="handling-rotation"></a>Rotazione di gestione
 

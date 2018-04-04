@@ -1,18 +1,17 @@
 ---
 title: Ricerca di dati con ricerca di Azure
 description: Ricerca di Azure è un servizio cloud che fornisce funzionalità di caricamento dei dati di query e l'indicizzazione. Questa operazione rimuove i requisiti di infrastruttura e le complessità di algoritmo di ricerca in genere associata a implementare la funzionalità di ricerca in un'applicazione. In questo articolo viene illustrato come utilizzare la libreria di ricerca di Microsoft Azure per l'integrazione di ricerca di Azure in un'applicazione di xamarin. Forms.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: 24db1404e218eea86356f9bbc004e7d5850c2e7a
-ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
+ms.openlocfilehash: b0542b330e54a41a0cbe6ffe364def78ab6386b8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="searching-data-with-azure-search"></a>Ricerca di dati con ricerca di Azure
 

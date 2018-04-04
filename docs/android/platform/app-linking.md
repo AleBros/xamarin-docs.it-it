@@ -1,18 +1,17 @@
 ---
 title: Collegamento App in Android
-description: "Questa guida illustra come Android 6.0 supporta l'app e il collegamento, una tecnica che consente di App per dispositivi mobili a rispondere a URL nei siti Web. Parlerà quali app per il collegamento viene illustrato come implementare il collegamento app in un'applicazione Android 6.0 e come configurare un sito Web per concedere le autorizzazioni per l'app mobile per un dominio."
-ms.topic: article
+description: Questa guida illustra come Android 6.0 supporta l'app e il collegamento, una tecnica che consente di App per dispositivi mobili a rispondere a URL nei siti Web. Parlerà quali app per il collegamento viene illustrato come implementare il collegamento app in un'applicazione Android 6.0 e come configurare un sito Web per concedere le autorizzazioni per l'app mobile per un dominio.
 ms.prod: xamarin
 ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 78fef780728ba1c2a3b9978504058f7a386b0e7d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2ef6b8044387d759e26d05c1468caaad7efb9bdc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="app-linking-in-android"></a>Collegamento App in Android
 
@@ -56,7 +55,7 @@ Configurazione di collegamenti di app in Android 6.0 prevede due passaggi:
 È necessario configurare un filtro preventivo che esegue il mapping di un URI (o un set di URI possibili) da un sito Web a un'attività in un'applicazione Android. In xamarin, questa relazione viene stabilita tramite la decorazione di un'attività con il [IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/). Il filtro preventivo deve dichiarare le informazioni seguenti:
 
 * **`Intent.ActionView`** &ndash; Consente di registrare il filtro preventivo per rispondere alle richieste per visualizzare le informazioni
-* **`Categories`** &ndash;  Il filtro preventivo deve registrare entrambi  **[Intent.CategoryBrowsable](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryBrowsable/)**  e  **[Intent.CategoryDefault](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryDefault/)**  per poter correttamente gestire l'URI di web.
+* **`Categories`** &ndash;  Il filtro preventivo deve registrare entrambi **[Intent.CategoryBrowsable](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryBrowsable/)** e **[Intent.CategoryDefault](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryDefault/)** per poter correttamente gestire l'URI di web.
 * **`DataScheme`** &ndash; Il filtro preventivo deve dichiarare `http` e/o `https`. Questi sono gli schemi di validi solo due.
 * **`DataHost`** &ndash; Si tratta del dominio originate da URI.
 * **`DataPathPrefix`** &ndash; Si tratta di un percorso facoltativo di risorse nel sito Web.

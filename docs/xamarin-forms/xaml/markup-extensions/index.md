@@ -1,18 +1,17 @@
 ---
 title: Estensioni di Markup XAML
 description: Estendere l'intervallo di origini da cui XAML gli attributi sono impostati
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 11889115b65608c750690c33052a9c86f7081e25
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b81bc4b31edd1d8b8f5f43f97885c38e889dd32c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xaml-markup-extensions"></a>Estensioni di Markup XAML
 
@@ -46,11 +45,11 @@ Qualsiasi impostazione dell'attributo tra parentesi graffe *sempre* un'estension
 
 In questo articolo è suddivisa in due parti:
 
-## <a name="consuming-xaml-markup-extensionsconsumingmd"></a>[Utilizzo di estensioni di Markup XAML](consuming.md)  
+## <a name="consuming-xaml-markup-extensionsconsumingmd"></a>[Utilizzo di estensioni di markup XAML](consuming.md)  
 
 Utilizzare le estensioni di markup XAML definite in xamarin. Forms.
 
-## <a name="creating-xaml-markup-extensionscreatingmd"></a>[Creazione di estensioni di Markup XAML](creating.md) 
+## <a name="creating-xaml-markup-extensionscreatingmd"></a>[Creazione di estensioni di markup XAML](creating.md) 
 
 Scrivere la propria estensioni di markup XAML personalizzate.
 
@@ -60,6 +59,6 @@ Scrivere la propria estensioni di markup XAML personalizzate.
 
 - [Estensioni di markup (esempio)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 - [Capitolo di estensioni di markup XAML di libro xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
-- [Dizionari delle risorse](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Dizionari di risorse](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Stili dinamici](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Data binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)

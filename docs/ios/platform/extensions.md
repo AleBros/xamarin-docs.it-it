@@ -1,7 +1,6 @@
 ---
 title: le estensioni iOS
 description: Introdotta in iOS 8, le estensioni sono widget che vengono presentati da iOS in contesti standard, ad esempio all'interno del centro di notifica, quando l'utente richiede una tastiera personalizzata o quando sono foto di modifica. Tutte le estensioni vengono installate insieme a un'applicazione contenitore e vengono attivate da un determinato punto dell'estensione in un'applicazione Host.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: ccd83f4b31da555aa9c8ec34501a8656ce0a5032
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: af52db5f1add040af025f2134f0e9a7b3936f4f2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-extensions"></a>le estensioni iOS
 

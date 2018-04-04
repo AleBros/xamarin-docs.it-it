@@ -1,18 +1,17 @@
 ---
 title: Visualizzazioni native in XAML
-description: "Viste native da iOS, Android e la piattaforma UWP possono fare riferimento direttamente da file XAML di xamarin. Forms. Le proprietà e i gestori eventi possono essere impostati nativo viste, e possono interagire con le visualizzazioni di xamarin. Forms. In questo articolo viene illustrato come utilizzare le viste native da file XAML di xamarin. Forms."
-ms.topic: article
+description: Viste native da iOS, Android e la piattaforma UWP possono fare riferimento direttamente da file XAML di xamarin. Forms. Le proprietà e i gestori eventi possono essere impostati nativo viste, e possono interagire con le visualizzazioni di xamarin. Forms. In questo articolo viene illustrato come utilizzare le viste native da file XAML di xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 7A856D31-B300-409E-9AEB-F8A4DB99B37E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: f4345e107a32c3a583c246fe5dbe24590960c870
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6dbad7352a089f482fa3a396505507da58771cef
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-views-in-xaml"></a>Visualizzazioni native in XAML
 

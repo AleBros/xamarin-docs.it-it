@@ -1,18 +1,17 @@
 ---
 title: L'integrazione di Azure Active Directory B2C con le App per dispositivi mobili di Azure
-description: "Azure Active B2C di Directory è una soluzione di gestione di identità cloud per applicazioni mobili e web per consumatori. In questo articolo viene illustrato come usare Azure Active Directory B2C per fornire l'autenticazione e autorizzazione a un'istanza di Azure App per dispositivi mobili con xamarin. Forms."
-ms.topic: article
+description: Azure Active B2C di Directory è una soluzione di gestione di identità cloud per applicazioni mobili e web per consumatori. In questo articolo viene illustrato come usare Azure Active Directory B2C per fornire l'autenticazione e autorizzazione a un'istanza di Azure App per dispositivi mobili con xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 53F52036-A997-4D0F-86B4-4302C6913136
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: c28ddc09b07066de67f5c974cf5c2128726c6932
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cafc1e78779dc393fa0409daa08b3daa8948a1ee
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="integrating-azure-active-directory-b2c-with-azure-mobile-apps"></a>L'integrazione di Azure Active Directory B2C con le App per dispositivi mobili di Azure
 

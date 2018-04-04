@@ -1,18 +1,17 @@
 ---
 title: L'invio di notifiche Push
-description: "Una notifica push viene utilizzata per inviare le informazioni, ad esempio, un messaggio da un sistema back-end in un'applicazione in un dispositivo mobile per aumentare l'utilizzo e il coinvolgimento dell'applicazione. Può essere inviata la notifica in qualsiasi momento, anche quando l'utente non usa attivamente l'applicazione di destinazione."
-ms.topic: article
+description: Una notifica push viene utilizzata per inviare le informazioni, ad esempio, un messaggio da un sistema back-end in un'applicazione in un dispositivo mobile per aumentare l'utilizzo e il coinvolgimento dell'applicazione. Può essere inviata la notifica in qualsiasi momento, anche quando l'utente non usa attivamente l'applicazione di destinazione.
 ms.prod: xamarin
 ms.assetid: F58D2D81-FFAF-43DD-8A9B-3684DFEAA99D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: 07995fe53387e9939d21f86ddcf7f9fb494b1a98
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 595c7db89bf8804c34657a6119d7c3427fc1d2b3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sending-push-notifications"></a>L'invio di notifiche Push
 

@@ -1,18 +1,17 @@
 ---
-title: "Funzionalità KitKat"
-description: "Android 4.4 (KitKat) viene caricato con numerose funzionalità per utenti e sviluppatori. Questa guida vengono evidenziate alcune di queste funzionalità e vengono forniti esempi di codice e i dettagli di implementazione che consentono di sfruttare al meglio KitKat."
-ms.topic: article
+title: Funzionalità KitKat
+description: Android 4.4 (KitKat) viene caricato con numerose funzionalità per utenti e sviluppatori. Questa guida vengono evidenziate alcune di queste funzionalità e vengono forniti esempi di codice e i dettagli di implementazione che consentono di sfruttare al meglio KitKat.
 ms.prod: xamarin
 ms.assetid: D3FDEA1C-F076-406F-BCC3-2A55D2C6ADEE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 8fbb3f73fdc09f953ad5f7134020c1555d000d28
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 3c3eafc8dc18113080dd6c906025556292c43e1c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="kitkat-features"></a>Funzionalità KitKat
 

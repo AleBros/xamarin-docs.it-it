@@ -6,12 +6,12 @@ metadata:
   author: conceptdev
   ms.author: crdun
   ms.date: 02/17/2018
-  ms.topic: article
-  ms.openlocfilehash: 2cd0a8019df09c8da0f19812b5217bcad5f0c2e9
-  ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+  ms.topic: sample
+  ms.openlocfilehash: 9a30de76dcdf1fc9c286f3511695e1468d6bfe0a
+  ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 02/28/2018
+  ms.lasthandoff: 04/04/2018
 abstract:
   description: App e demo di codice di esempio Xamarin.Forms per iniziare a comprendere i concetti di Xamarin.Forms.
   menu:
@@ -26,13 +26,13 @@ sections:
     className: cardsW
     items:
     - href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
-      html: "Questo esempio è una dimostrazione di un'applicazione di tipo Elenco attività in cui i dati vengono archiviati e sono accessibili in un database locale di SQLite."
+      html: Questo esempio è una dimostrazione di un'applicazione di tipo Elenco attività in cui i dati vengono archiviati e sono accessibili in un database locale di SQLite.
       image:
         src: images/todo.png
         href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
       title: Todo
     - href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
-      html: "Un gioco familiare con un tocco di novità. In una griglia di riquadri 9x9 sono nascosti 10 insetti. Per vincere si devono trovare e contrassegnare tutti e dieci gli insetti."
+      html: Un gioco familiare con un tocco di novità. In una griglia di riquadri 9x9 sono nascosti 10 insetti. Per vincere si devono trovare e contrassegnare tutti e dieci gli insetti.
       image:
         src: images/bugsweeper.png
         href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
@@ -44,19 +44,19 @@ sections:
         href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
       title: Calcolatrice RPN
     - href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
-      html: "Il programma simula un disco rotante su cui è possibile dipingere tramite tocco e spostando le dita. SpinPaint risponde al tocco disegnando una linea sotto il dito, ma duplica anche la linea in tre immagini speculari in altri tre quadranti del disco."
+      html: Il programma simula un disco rotante su cui è possibile dipingere tramite tocco e spostando le dita. SpinPaint risponde al tocco disegnando una linea sotto il dito, ma duplica anche la linea in tre immagini speculari in altri tre quadranti del disco.
       image:
         src: images/spinpaint.png
         href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
       title: SpinPaint
     - href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
-      html: "XAML (eXtensible Application Markup Language) consente agli sviluppatori di definire le interfacce utente nelle applicazioni Xamarin.Forms tramite markup anziché codice."
+      html: XAML (eXtensible Application Markup Language) consente agli sviluppatori di definire le interfacce utente nelle applicazioni Xamarin.Forms tramite markup anziché codice.
       image:
         src: images/xaml.png
         href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
       title: Esempi XAML
     - href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
-      html: "XAML (eXtensible Application Markup Language) consente agli sviluppatori di definire le interfacce utente nelle applicazioni Xamarin.Forms tramite markup anziché codice."
+      html: XAML (eXtensible Application Markup Language) consente agli sviluppatori di definire le interfacce utente nelle applicazioni Xamarin.Forms tramite markup anziché codice.
       image:
         src: images/xuzzle.png
         href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/

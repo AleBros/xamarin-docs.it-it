@@ -1,18 +1,17 @@
 ---
 title: Introduzione allo sviluppo di giochi con Xamarin
-description: "La natura di sviluppo di giochi può variare notevolmente dallo sviluppo di altri tipi di App. In questo articolo viene fornita un'introduzione allo sviluppo di gioco con tecnologie che possono essere utilizzate con xamarin. IOS e xamarin. Fornisce una descrizione di alto livello di come vengono effettuati i giochi sia un campionamento delle tecnologie disponibili per l'uso con xamarin. IOS e xamarin."
-ms.topic: article
+description: La natura di sviluppo di giochi può variare notevolmente dallo sviluppo di altri tipi di App. In questo articolo viene fornita un'introduzione allo sviluppo di gioco con tecnologie che possono essere utilizzate con xamarin. IOS e xamarin. Fornisce una descrizione di alto livello di come vengono effettuati i giochi sia un campionamento delle tecnologie disponibili per l'uso con xamarin. IOS e xamarin.
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 9d1ce2da87d6f169efb5431f734695f6876cf3f0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b2df6d431004bbfa140b6cae1d069404af92c1df
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Introduzione allo sviluppo di giochi con Xamarin
 
@@ -97,8 +96,8 @@ Alcune pipeline contenute potrebbero essere molto veloci e non richiedono alcun 
 Sviluppo di giochi introduce nuovi ruoli e i titoli per utenti singoli coinvolti nel processo. La maggior parte degli sviluppatori di giochi non sono in grado di soddisfare l'ampia gamma di competenze necessarie per rilasciare un gioco completo, in modo che un numero di discipline esiste. Tenere presente che questo non è un elenco completo delle aree di sviluppo – solo alcuni dei più comuni.
 
 - **Programmatore** : la maggior parte delle persone, leggere questo articolo verrà rientrano in questa categoria. Il ruolo del programmatore nello sviluppo di gioco è simile al ruolo del programmatore in un'applicazione non gioco. Responsabilità comprendono la scrittura logica per controllare il flusso di un gioco, lo sviluppo di sistemi per le attività comuni nel contesto di un determinato progetto, aggiunta e la visualizzazione di contenuto e – naturalmente: la correzione di bug.
-- **2D artista** – artisti 2D sono responsabili della creazione *asset 2D*. Includono i file di immagine per il gioco GUI, particelle, ambienti e caratteri. Se il gioco che si sta sviluppando 3D, artisti 2D non possono essere responsabili per ambienti e i caratteri. È possibile trovare libero grafica per il gioco in [http://opengameart.org/](http://opengameart.org/) .
-- **Artisti 3D** – artisti 3D sono responsabili della creazione *asset 3D*. Queste includono modelli 3D per ambienti, i caratteri e props (mobili piante e altri oggetti inanimati). Alcuni team di distinguere tra artisti 3D e a seconda delle dimensioni del team di esperti di animazione 3D. È possibile trovare libero grafica 3D per il gioco in [http://opengameart.org/](http://opengameart.org/) .
+- **2D artista** – artisti 2D sono responsabili della creazione *asset 2D*. Includono i file di immagine per il gioco GUI, particelle, ambienti e caratteri. Se il gioco che si sta sviluppando 3D, artisti 2D non possono essere responsabili per ambienti e i caratteri. È possibile trovare libero arte per il gioco in [ http://opengameart.org/ ](http://opengameart.org/) .
+- **Artisti 3D** – artisti 3D sono responsabili della creazione *asset 3D*. Queste includono modelli 3D per ambienti, i caratteri e props (mobili piante e altri oggetti inanimati). Alcuni team di distinguere tra artisti 3D e a seconda delle dimensioni del team di esperti di animazione 3D. È possibile trovare libero grafica 3D per il gioco in [ http://opengameart.org/ ](http://opengameart.org/) .
 - **Finestra di progettazione di gioco** – giochi finestre di progettazione sono responsabili per la definizione di come viene riprodotto il gioco. Può trattarsi di alto livello decisioni in merito ad esempio l'impostazione del gioco, l'obiettivo complessivo di gioco e modalità di avanzamento di un lettore tramite il gioco. Giochi finestre di progettazione può essere coinvolti nelle decisioni molto dettagliate, ad esempio input di mapping di azioni, anche la definizione di coefficienti per lo spostamento o livello di gruppo di continuità e la progettazione di layout a livello. Tenere presente che il termine *progettazione* può fare riferimento a una finestra di progettazione del gioco o una finestra di progettazione visiva a seconda del contesto.
 - **Audio progettazione** – audio finestre di progettazione sono responsabili dell'asset audio di un gioco. Alcuni team è possibile distinguere tra responsabili per la creazione di effetti sonori e compositori, mentre il team di dimensioni ridotte potrebbe essere un singolo utente responsabile per tutti i file audio.
 
@@ -171,9 +170,9 @@ Estrarre il [UrhoSharp Guide](~/graphics-games/urhosharp/index.md) per iniziare.
 
 Le tecnologie evidenziate sopra è solo un esempio delle tecnologie disponibili. Altre tecnologie importanti includono:
 
-- **Kit sprite** – Xamarin offre supporto per framework gioco Sprite Kit, Apple che consente di accedere a tutte le funzionalità dell'API native. Poiché Sprite Kit è una tecnologia di Apple, fornisce una stretta integrazione con il resto dell'ecosistema di iOS. Naturalmente, Sprite Kit non è multipiattaforma pertanto non può essere utilizzato in Android. Per ulteriori informazioni sull'utilizzo Sprite Kit, vedere questo post: [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
+- **Kit sprite** – Xamarin offre supporto per framework gioco Sprite Kit, Apple che consente di accedere a tutte le funzionalità dell'API native. Poiché Sprite Kit è una tecnologia di Apple, fornisce una stretta integrazione con il resto dell'ecosistema di iOS. Naturalmente, Sprite Kit non è multipiattaforma pertanto non può essere utilizzato in Android. Per ulteriori informazioni sull'utilizzo Sprite Kit, vedere questo post:  [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
 - **Kit di scena** – Xamarin offre inoltre supporto per il framework di scena Kit di Apple, che semplifica l'implementazione di grafica 3D in App iOS. Kit di scena è anche tecnologia fornita da Apple, quindi presenta l'integrazione e considerazioni specifiche della piattaforma sopra indicate per Sprite Kit. Per ulteriori informazioni sui Kit scena, vedere questo post: [http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
-- **OpenTK –** OpenTK (che è l'acronimo di Open Tool Kit) fornisce l'accesso di iOS e Apple Mac OpenGL basso livello hardware. Per ulteriori informazioni su OpenTK, vedere la pagina principale in: [http://www.opentk.com/](http://www.opentk.com/)
+- **OpenTK –** OpenTK (che è l'acronimo di Open Tool Kit) fornisce l'accesso di iOS e Apple Mac OpenGL basso livello hardware. Per ulteriori informazioni su OpenTK, vedere la pagina principale in:  [http://www.opentk.com/](http://www.opentk.com/)
 
 
 # <a name="summary"></a>Riepilogo

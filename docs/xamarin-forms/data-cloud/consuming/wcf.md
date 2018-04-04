@@ -1,18 +1,17 @@
 ---
 title: Utilizzo di un servizio Web di Windows Communication Foundation (WCF)
-description: "WCF è framework unificato di Microsoft per la creazione di applicazioni orientate ai servizi. Consente agli sviluppatori di compilare applicazioni distribuite protette, affidabile, transazioni e interoperative. In questo articolo viene illustrato come utilizzare un servizio WCF SOAP Simple Object Access Protocol () da un'applicazione di xamarin. Forms."
-ms.topic: article
+description: WCF è framework unificato di Microsoft per la creazione di applicazioni orientate ai servizi. Consente agli sviluppatori di compilare applicazioni distribuite protette, affidabile, transazioni e interoperative. In questo articolo viene illustrato come utilizzare un servizio WCF SOAP Simple Object Access Protocol () da un'applicazione di xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 5696FF04-EF21-4B7A-8C8B-26DE28B5C0AD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: a02627d5e5b40fe9e7b2fdbd3a6995a2d96fbf03
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: c626008012ccdab2f8ed2c719b34a45471598d47
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>Utilizzo di un servizio Web di Windows Communication Foundation (WCF)
 

@@ -1,18 +1,17 @@
 ---
 title: Risoluzione dei problemi di associazione
-description: "Questa guida viene descritto cosa fare se si riscontrano difficoltà nell'associazione di una libreria Objective-C."
-ms.topic: article
+description: Questa guida viene descritto cosa fare se si riscontrano difficoltà nell'associazione di una libreria Objective-C.
 ms.prod: xamarin
 ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/19/2016
-ms.openlocfilehash: 2db7fe30f05224f6b74b4d2189606da59946bda0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7ea3e3802ec2e0baf0fe8355a41e806bacabc9ac
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-troubleshooting"></a>Risoluzione dei problemi di associazione
 
@@ -45,15 +44,15 @@ Se si esegue un caso in cui passando `null` genera un `ArgumentNullException` ma
 
 Commenti e suggerimenti sono importanti per Microsoft. Se i problemi di Xamarin.Mac:
 
-- Controllare il [Xamarin.Mac forum](https://forums.xamarin.com/categories/mac)
-- Ricerca di [repository problema](https://github.com/xamarin/xamarin-macios/issues) 
-- Prima di passare a problemi di GitHub, Xamarin problemi rilevati in [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Per la ricerca per la corrispondenza di problemi.
-- Se non si trova un problema di corrispondenza, inviare un nuovo problema di [repository di GitHub problema](https://github.com/xamarin/xamarin-macios/issues/new).
+- Controllare i [forum di Xamarin.Mac](https://forums.xamarin.com/categories/mac)
+- Cercare nel [repository di problemi](https://github.com/xamarin/xamarin-macios/issues) 
+- Prima di passare ai problemi di GitHub, si è tenuta traccia dei problemi di Xamarin in [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi), dove è possibile cercare i problemi corrispondenti.
+- Se non si riesce a trovare un problema corrispondente, inserirne uno nuovo nel [repository di problemi GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Problemi di GitHub sono tutte pubblici. Non è possibile nascondere i commenti o allegati. 
+I problemi di GitHub sono tutti pubblici. Non è possibile nascondere commenti o allegati. 
 
-Includere la maggior parte delle operazioni seguenti come possibili:
+Includere tutte le informazioni disponibili seguenti:
 
-- Un esempio semplice di riprodurre il problema. Si tratta di **preziose** laddove possibile. 
-- Completo dello stack dell'arresto anomalo.
-- Il codice c# che circonda l'arresto anomalo del sistema. 
+- Un esempio semplice che riproduce il problema. Questo è **molto importante**, ove possibile. 
+- L'analisi dello stack completa dell'arresto anomalo.
+- Il codice C# relativo all'arresto anomalo. 

@@ -1,19 +1,18 @@
 ---
-title: Associazione Objective-C
-ms.topic: article
+title: Binding di Objective-C
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: e836081d79d904e2d0952386e536eefdabe361e1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fef2826f536042dc9be830a4c0dc358658c359d9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
-# <a name="binding-objective-c"></a>Associazione Objective-C
+# <a name="binding-objective-c"></a>Binding di Objective-C
 
 Questa sezione include un'ampia gamma di documenti che coprono la creazione di associazioni a librerie Objective-C, pertanto possono essere chiamati da c# applicazioni create con xamarin. IOS o Xamarin.Mac.
 
@@ -21,7 +20,7 @@ Questa sezione include un'ampia gamma di documenti che coprono la creazione di a
 
 Questo documento contiene alcuni dei componenti interni di come avviene un'associazione. È un documento con alcune informazioni tecniche avanzato.
 
-##  <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Associazione di raccolte Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
+##  <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Binding di librerie Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 
 Questo documento descrive il processo utilizzato per creare associazioni c# delle API di Objective-C e la modalità di mapping idiomi in Objective-C per gli idiomi usati in .NET.
 Se si desidera associare solo le API di C, è necessario utilizzare il meccanismo standard di .NET a tale scopo, il framework di P/Invoke.
@@ -31,7 +30,7 @@ Se si desidera associare solo le API di C, è necessario utilizzare il meccanism
 Si tratta della Guida di riferimento che descrive tutti gli attributi disponibili per gli autori delle associazioni per gestire il processo di generazione di associazione.
 
 
-## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Obiettivo Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
+## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 
 Obiettivo Sharpie è uno strumento da riga di comando per avviare il primo passaggio di un'associazione. Analizzando i file di intestazione di una libreria nativa per eseguire il mapping dell'API pubblica in cui funziona la [definizione di associazioni](~/cross-platform/macios/binding/objective-c-libraries.md) (un processo che può essere eseguito manualmente).
 

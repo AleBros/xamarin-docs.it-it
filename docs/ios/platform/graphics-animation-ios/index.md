@@ -1,17 +1,16 @@
 ---
 title: Grafica e animazione in iOS
 description: Concetti di base dell'applicazione
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3FEF45F2-C0F0-4D66-8796-9674FFE6740F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: ece988f2ba29ec4656631d993e4c4b99a276b199
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 99c05efa13027aca4935425d2a731613f250ec93
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="graphics-and-animation-in-ios"></a>Grafica e animazione in iOS
 
@@ -22,11 +21,11 @@ ms.lasthandoff: 02/27/2018
 
 CoreImage è un nuovo framework introdotto in iOS 5 che fornisce una serie di filtri predefiniti e gli effetti da applicare a immagini e video, ad esempio il rilevamento di tipo di carattere.
 
-##  <a name="core-graphicsiosplatformgraphics-animation-ioscore-graphicsmd"></a>[Grafica di base](~/ios/platform/graphics-animation-ios/core-graphics.md)
+##  <a name="core-graphicsiosplatformgraphics-animation-ioscore-graphicsmd"></a>[Core Graphics](~/ios/platform/graphics-animation-ios/core-graphics.md)
 
 Questo articolo viene illustrato il framework iOS grafica di base che fornisce il supporto di disegno basso livello. Viene illustrato come utilizzare grafica di base per disegnare la geometria, immagini e PDF.
 
-##  <a name="core-animationiosplatformgraphics-animation-ioscore-animationmd"></a>[Animazione di base](~/ios/platform/graphics-animation-ios/core-animation.md)
+##  <a name="core-animationiosplatformgraphics-animation-ioscore-animationmd"></a>[Core Animation](~/ios/platform/graphics-animation-ios/core-animation.md)
 
 In questo articolo esamina il framework di animazione Core, che mostra come consente prestazioni elevate, animazioni fluide in UIKit, e come utilizzarlo direttamente per il controllo animazione di livello inferiore.
 

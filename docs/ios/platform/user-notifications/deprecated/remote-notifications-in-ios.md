@@ -1,18 +1,17 @@
 ---
 title: Notifiche push in iOS
-description: "In questa sezione verrà illustrate le notifiche push in iOS. Introduce il servizio Gateway di notifiche di Push di Apple e il ruolo pubblicazione notifiche per le applicazioni iOS. Verrà illustrato come creare i certificati di sicurezza necessario per abilitare le notifiche push e discutere. Infine in questa sezione verrà illustrate alcune delle attività di manutenzione che i server applicazioni devono eseguire per tenere traccia dei dispositivi mobili client."
-ms.topic: article
+description: In questa sezione verrà illustrate le notifiche push in iOS. Introduce il servizio Gateway di notifiche di Push di Apple e il ruolo pubblicazione notifiche per le applicazioni iOS. Verrà illustrato come creare i certificati di sicurezza necessario per abilitare le notifiche push e discutere. Infine in questa sezione verrà illustrate alcune delle attività di manutenzione che i server applicazioni devono eseguire per tenere traccia dei dispositivi mobili client.
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 3af74fb9d93e22e361f2e3db00961d7955eda689
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 3a86ce5e61576faec41b5fcddf899d731d2cc57a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="push-notifications-in-ios"></a>Notifiche push in iOS
 
@@ -51,7 +50,7 @@ Ognuno degli ambienti riportati nella sezione precedente richiede il proprio cer
 
     [![](remote-notifications-in-ios-images/image6new.png "Passare alla sezione ID App e creare un nuovo ID di app")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
-3.  Facendo clic di  **+**  pulsante, sarà possibile immettere la descrizione e un identificatore di raggruppamento per l'ID dell'app, come illustrato nella schermata successiva:
+3.  Facendo clic di **+** pulsante, sarà possibile immettere la descrizione e un identificatore di raggruppamento per l'ID dell'app, come illustrato nella schermata successiva:
 
     [![](remote-notifications-in-ios-images/image7new.png "Immettere la descrizione e un identificatore di raggruppamento per l'ID dell'app")](remote-notifications-in-ios-images/image7new.png#lightbox)
 

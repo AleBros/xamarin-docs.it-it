@@ -1,17 +1,17 @@
 ---
 title: Suggerimenti per la risoluzione dei problemi
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/15/2018
-ms.openlocfilehash: 015fff63c612c3acf29681b90c1e945c5e460034
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 961f9f38687790343f225d95c74e00e98f594c28
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting-tips"></a>Suggerimenti per la risoluzione dei problemi
 
@@ -200,7 +200,7 @@ Esistono quattro messaggi di conseguenza:
 -  Distruzione fanno riferimento a "Weak" globali: si tratta di righe che iniziano con *-w-* .
 
 
-In tutti i messaggi, il *grefc* valore è il conteggio dei riferimenti globali creato xamarin, mentre il *grefwc* valore è il conteggio dei riferimenti deboli di globali creati xamarin. Il *gestire* o *obj handle* valore è il valore dell'handle JNI e il carattere dopo la '  */* ' è il tipo del valore dell'handle: */L* per riferimento locale, */G* per i riferimenti, globali e */W* per i riferimenti deboli globali.
+In tutti i messaggi, il *grefc* valore è il conteggio dei riferimenti globali creato xamarin, mentre il *grefwc* valore è il conteggio dei riferimenti deboli di globali creati xamarin. Il *gestire* o *obj handle* valore è il valore dell'handle JNI e il carattere dopo la ' */*' è il tipo del valore dell'handle: */L* per riferimento locale, */G* per i riferimenti, globali e */W* per i riferimenti deboli globali.
 
 Come parte del processo di Garbage Collection, i riferimenti globali (+ + g) vengono convertite in riferimenti globali deboli (causando + w + e - g-), un catalogo globale lato Java viene avviato e quindi il riferimento debole globale viene controllato per verificare se sono state raccolte. Se è ancora attivo, un nuovo gref viene creato per il riferimento debole (c +, -w + -), in caso contrario viene eliminato il riferimento debole (-w).
 
@@ -270,7 +270,7 @@ Questo dovrebbe iniziare attivo e in esecuzione. Se si continua ad avere problem
 
 ## <a name="receiving-activation-incomplete-error-message"></a>Ricezione di ' messaggio di errore incompleto di attivazione
 
-Questo problema può verificarsi quando si usa xamarin per Visual Studio. Per risolvere questo problema, inviare i log dal seguente percorso per  *contact@xamarin.com* .
+Questo problema può verificarsi quando si usa xamarin per Visual Studio. Per risolvere questo problema, inviare i log dal seguente percorso per *contact@xamarin.com*.
 
 -  Percorso file di registro: **% LocalAppData %\\Xamarin\\log**
 
@@ -301,7 +301,7 @@ A tale scopo, individuare la piattaforma di seguito e seguire i passaggi:
 5. Immettere le credenziali
 6. Controlla aggiornamenti
 
-Questo messaggio di errore viene nuovamente visualizzato, il messaggio di posta elettronica  **contact@xamarin.com** .
+Questo messaggio di errore viene nuovamente visualizzato, il messaggio di posta elettronica **contact@xamarin.com**.
 
 
 

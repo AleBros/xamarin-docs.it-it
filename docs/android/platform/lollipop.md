@@ -1,18 +1,17 @@
 ---
-title: "Funzionalità di simbolo"
-description: "Questo articolo fornisce una panoramica delle nuove funzionalità introdotte in Android 5.0 (simbolo). Queste funzionalità includono un nuovo stile interfaccia utente chiamato tema materiale, nonché nuove funzionalità di supporto, quali animazioni, Visualizza ombreggiature e tinte drawable. Android 5.0 include anche le notifiche avanzate, due nuovi widget dell'interfaccia utente, una nuova pianificazione processo e un numero limitato di nuove API per migliorare l'archiviazione, rete, la connettività e funzionalità multimediali."
-ms.topic: article
+title: Funzionalità di simbolo
+description: Questo articolo fornisce una panoramica delle nuove funzionalità introdotte in Android 5.0 (simbolo). Queste funzionalità includono un nuovo stile interfaccia utente chiamato tema materiale, nonché nuove funzionalità di supporto, quali animazioni, Visualizza ombreggiature e tinte drawable. Android 5.0 include anche le notifiche avanzate, due nuovi widget dell'interfaccia utente, una nuova pianificazione processo e un numero limitato di nuove API per migliorare l'archiviazione, rete, la connettività e funzionalità multimediali.
 ms.prod: xamarin
 ms.assetid: 1CE99CFE-FAAC-49FC-AEDC-1A21FC6E946E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: de6829a0a698133ad9002ead1cd7c534a30b1f6c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cdef611525abbe4f066959c0ac56380b1c617747
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="lollipop-features"></a>Funzionalità di simbolo
 

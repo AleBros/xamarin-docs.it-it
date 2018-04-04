@@ -1,18 +1,17 @@
 ---
 title: Risoluzione dei problemi
 description: Questo articolo fornisce alcuni suggerimenti sulla risoluzione dei problemi per l'utilizzo di tvOS 10 nelle App Xamarin.tvOS.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EA5564BB-C415-49A2-B70C-3DBF5E0F3FAB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d45b9ed04d3ae4815d408d82068e588a2cbcc6f8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8875e658ead17820655a2401079627875c14958b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting"></a>Risoluzione dei problemi
 

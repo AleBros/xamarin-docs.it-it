@@ -1,18 +1,17 @@
 ---
 title: Personalizzazione di un Pin di mappa
 description: In questo articolo viene illustrato come creare un renderer personalizzato per il controllo mappa, che consente di visualizzare una mappa con un pin personalizzato e una visualizzazione personalizzata dei dati nativa in ciascuna piattaforma.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 312bda44a6b390c6ba486d5a3d60dfe4fb770a2e
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 353575bad91c9bade0207a0aa271d9de7ec50240
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-a-map-pin"></a>Personalizzazione di un Pin di mappa
 
@@ -33,7 +32,7 @@ Il processo di rendering può essere utilizzato per implementare le personalizza
 Ogni elemento verrà ora essere descritti in dettaglio, per implementare un `CustomMap` renderer che consente di visualizzare una mappa con un pin personalizzato e una visualizzazione personalizzata dei dati nativa in ciascuna piattaforma.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) deve essere inizializzato e configurato prima dell'uso. Per ulteriori informazioni, vedere [ `Maps Control` ](~/xamarin-forms/user-interface/map.md).
+> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) deve essere inizializzato e configurato prima dell'uso. Per altre informazioni, vedere [`Maps Control`](~/xamarin-forms/user-interface/map.md).
 
 <a name="Creating_the_Custom_Map" />
 

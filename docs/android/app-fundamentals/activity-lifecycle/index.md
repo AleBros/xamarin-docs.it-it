@@ -1,18 +1,17 @@
 ---
-title: "Ciclo di vita dell'attività"
-description: "Le attività sono un blocco predefinito fondamentale di applicazioni Android e possono essere presenti in un numero di stati diversi. Il ciclo di vita di attività inizia con la creazione di istanze e termina con distruzione e include molti stati intermedi. Quando un'attività viene modificato, viene chiamato il metodo di evento del ciclo di vita appropriato, l'attività dell'imminente modifica lo stato di notifica e in modo che possa eseguire il codice per adattarsi a tale modifica. In questo articolo esamina il ciclo di vita delle attività e illustra la responsabilità che disponga di un'attività durante ognuna di queste modifiche di stato da parte di un'applicazione ben progettata e affidabile."
-ms.topic: article
+title: Ciclo di vita dell'attività
+description: Le attività sono un blocco predefinito fondamentale di applicazioni Android e possono essere presenti in un numero di stati diversi. Il ciclo di vita di attività inizia con la creazione di istanze e termina con distruzione e include molti stati intermedi. Quando un'attività viene modificato, viene chiamato il metodo di evento del ciclo di vita appropriato, l'attività dell'imminente modifica lo stato di notifica e in modo che possa eseguire il codice per adattarsi a tale modifica. In questo articolo esamina il ciclo di vita delle attività e illustra la responsabilità che disponga di un'attività durante ognuna di queste modifiche di stato da parte di un'applicazione ben progettata e affidabile.
 ms.prod: xamarin
 ms.assetid: 05B34788-F2D2-4347-B66B-40AFD7B1D167
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/28/2018
-ms.openlocfilehash: 335e63ce5a36cbd0172744a35c82920853b82e5c
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f35f3e59d8b669795ade3d370894e45866cea1ff
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="activity-lifecycle"></a>Ciclo di vita dell'attività
 

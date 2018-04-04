@@ -1,18 +1,17 @@
 ---
 title: Parte 4. Nozioni fondamentali sull'associazione dati
-description: "Le associazioni dati consentono di proprietà di due oggetti da collegare in modo che una modifica in uno provoca una modifica in altro. Questo è uno strumento molto importante e mentre associazioni di dati possono essere definite interamente nel codice, XAML fornisce tasti di scelta rapida e di praticità. Di conseguenza, una delle estensioni di markup più importanti in xamarin. Forms è associato."
-ms.topic: article
+description: Le associazioni dati consentono di proprietà di due oggetti da collegare in modo che una modifica in uno provoca una modifica in altro. Questo è uno strumento molto importante e mentre associazioni di dati possono essere definite interamente nel codice, XAML fornisce tasti di scelta rapida e di praticità. Di conseguenza, una delle estensioni di markup più importanti in xamarin. Forms è associato.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: dbbbe051aab065a5b71905459f577fcacefd8bc5
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2aa6fd2f54c09921621a12af9401a6f84ae37ffa
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Nozioni fondamentali sull'associazione dati
 

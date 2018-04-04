@@ -1,18 +1,17 @@
 ---
-title: "Proprietà associabili"
-description: "In xamarin. Forms, viene estesa la funzionalità delle proprietà di common language runtime (CLR) dalle proprietà associabile. Una proprietà associabile è un tipo speciale di proprietà, in cui il valore della proprietà viene rilevato dal sistema di proprietà di xamarin. Forms. In questo articolo viene fornita un'introduzione alle proprietà associabile e viene illustrato come creare e utilizzarli."
-ms.topic: article
+title: Proprietà associabili
+description: In xamarin. Forms, viene estesa la funzionalità delle proprietà di common language runtime (CLR) dalle proprietà associabile. Una proprietà associabile è un tipo speciale di proprietà, in cui il valore della proprietà viene rilevato dal sistema di proprietà di xamarin. Forms. In questo articolo viene fornita un'introduzione alle proprietà associabile e viene illustrato come creare e utilizzarli.
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/02/2016
-ms.openlocfilehash: ab8c4cfd92a048efb87f7508e53fc024a9c46405
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 7e1d3c82036ef703014ae548a6719937e89d22f4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="bindable-properties"></a>Proprietà associabili
 

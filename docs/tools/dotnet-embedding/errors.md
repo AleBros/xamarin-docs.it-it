@@ -1,24 +1,23 @@
 ---
 title: Errori di incorporamento .NET
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 90d30b92069bcd6a5c008fa8009c0392c4d26473
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64caaf6610d9f9193a686d91b4731cd4d4953fa6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="em0xxx-binding-error-messages"></a>EM0xxx: i messaggi di errore di associazione
 
-Ad esempio i parametri, ambiente
+Ad esempio, i parametri, ambiente
 
 <!-- 0xxx: the generator itself, e.g. parameters, environment -->
-<h3><a name="EM0000"/>: EM0000 Errore imprevisto - compilare un report di bug in https://github.com/mono/Embeddinator-4000/issues</h3>
+<h3><a name="EM0000"/>EM0000: Errore imprevisto - compilare un report di bug in https://github.com/mono/Embeddinator-4000/issues</h3>
 
 Si è verificato un errore imprevisto. . [Un problema del file](https://github.com/mono/Embeddinator-4000/issues) con le informazioni possibili, tra cui:
 
@@ -68,7 +67,7 @@ Si tratta di un problema noto che si intende risolvere in una versione futura de
 
 Lo strumento non può unire i Framework indicati nel messaggio di errore, perché è presente un file comune tra di essi.
 
-Questo errore potrebbe indicare un bug in Embeddinator-4000; inviare una segnalazione di bug in [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) con un test case.
+Ciò potrebbe indicare un bug in Embeddinator-4000; inviare una segnalazione di bug in [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) con un test case.
 
 <h3><a name="EM0011"/>EM0011: L'assembly `X` non esiste.</h3>
 
@@ -100,11 +99,11 @@ Impossibile creare il collegamento simbolico indicato nel messaggio di errore.
 
 La sintassi per l'opzione della riga di comando `A` non può essere analizzato dallo strumento. È probabile che non è corretto, verificare con la documentazione o la Guida per la sintassi corretta.
 
-<h3><a name="EM0099"/>: EM0099 Errore interno *. Inviare una segnalazione a un test case (https://github.com/mono/Embeddinator-4000/issues).</h3>
+<h3><a name="EM0099"/>: EM0099 Errore interno *. Inviare una segnalazione di bug con un test case (https://github.com/mono/Embeddinator-4000/issues).</h3>
 
 Questo messaggio di errore viene segnalato quando si verifica un errore di controllo di coerenza interna nel Embeddinator-4000.
 
-Questo indica un bug in Embeddinator-4000; inviare una segnalazione di bug in [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) con un test case.
+Questo indica un bug in Embeddinator-4000; inviare una segnalazione di bug in [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) con un test case.
 
 
 <!-- 1xxx: code processing -->
@@ -141,7 +140,7 @@ Nota: Evolveranno funzionalità supportate con le nuove versioni dello strumento
 
 <h3><a name="EM1021"/>Costruttore `C` dispone di valori predefiniti per il quale non viene generato alcun wrapper.</h3>
 
-Si tratta di un **avviso** che i parametri predefiniti di costruttore `C` non generano codice aggiuntivo. La causa più comune è che un metodo esistente già la stessa firma. Ad esempio in .net è possibile disporre di:
+Si tratta di un **avviso** che i parametri predefiniti di costruttore `C` non generano codice aggiuntivo. La causa più comune è che un metodo esistente già la stessa firma. Ad esempio, in .net è possibile disporre di:
 
 ```
 public class MyType {
@@ -173,7 +172,7 @@ Nota: Evolveranno funzionalità supportate con le nuove versioni dello strumento
 
 <h3><a name="EM1032"/>Metodo `M` ha valori predefiniti per il quale non viene generato alcun wrapper.</h3>
 
-Si tratta di un **avviso** che i parametri predefiniti del metodo `M` non generano codice aggiuntivo. La causa più comune è che un metodo esistente già la stessa firma. Ad esempio in .net è possibile disporre di:
+Si tratta di un **avviso** che i parametri predefiniti del metodo `M` non generano codice aggiuntivo. La causa più comune è che un metodo esistente già la stessa firma. Ad esempio, in .net è possibile disporre di:
 
 ```
 public class MyType {

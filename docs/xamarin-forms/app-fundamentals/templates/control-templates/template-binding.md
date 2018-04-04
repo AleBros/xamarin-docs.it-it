@@ -1,18 +1,17 @@
 ---
 title: Associazione di ControlTemplate
-description: "Associazioni a modello consentono di associare i controlli in un modello di controllo ai dati a proprietà pubbliche, abilitare i valori delle proprietà dei controlli nel modello di controllo per modificare con facilità. In questo articolo viene illustrato l'utilizzo di associazioni a modello per eseguire l'associazione di dati da un modello di controllo."
-ms.topic: article
+description: Associazioni a modello consentono di associare i controlli in un modello di controllo ai dati a proprietà pubbliche, abilitare i valori delle proprietà dei controlli nel modello di controllo per modificare con facilità. In questo articolo viene illustrato l'utilizzo di associazioni a modello per eseguire l'associazione di dati da un modello di controllo.
 ms.prod: xamarin
 ms.assetid: 794A663C-3A8D-438A-BD02-8E97C919B55F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 5b330c448a135cbcf8fc2745debc48924e29c103
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3b306c79aea9bd2192aa73eddcf95790a9b24353
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-from-a-controltemplate"></a>Associazione di ControlTemplate
 
@@ -68,7 +67,7 @@ Ciò comporta l'aspetto illustrato nelle schermate seguenti:
 
 ![](template-binding-images/teal-theme.png "Modello di controllo verde acqua con associazioni a modello")
 
-## <a name="creating-a-templatebinding-in-c35"></a>Creazione di un TemplateBinding in C &#35;
+## <a name="creating-a-templatebinding-in-c35"></a>Creazione di un TemplateBinding in C&#35;
 
 In c#, un [ `TemplateBinding` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TemplateBinding/) viene creato utilizzando il `TemplateBinding` costruttore, come illustrato nell'esempio di codice seguente:
 

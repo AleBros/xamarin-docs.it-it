@@ -1,17 +1,16 @@
 ---
 title: Nozioni fondamentali sulla risorsa Android
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: ED32E7B5-D552-284B-6385-C3EDDCC30A4B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: fba8412c53597260744bdce443a7e993a6990672
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f6be1001e5d3455a94e677f1bb5dc52ca574b873
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-resource-basics"></a>Nozioni fondamentali sulla risorsa Android
 
@@ -136,7 +135,7 @@ Ad esempio il contenuto di un file di layout, **axml**, sono i seguenti:
 </LinearLayout>
 ```
 
-L'esempio include un [ `ImageView` ](https://developer.xamarin.com/recipes/android/controls/imageview) che richiede una risorsa drawable denominata **flag**. Il `ImageView` è relativo `src` attributo impostato su  **@drawable/flag** . Quando si avvia l'attività, avrà un aspetto Android all'interno della directory **risorse/Drawable** per un file denominato **flag.png** (l'estensione del file potrebbe essere un altro formato di immagine, ad esempio **flag.jpg**) caricare il file e visualizzarli nel `ImageView`.
+L'esempio include un [ `ImageView` ](https://developer.xamarin.com/recipes/android/controls/imageview) che richiede una risorsa drawable denominata **flag**. Il `ImageView` è relativo `src` attributo impostato su **@drawable/flag**. Quando si avvia l'attività, avrà un aspetto Android all'interno della directory **risorse/Drawable** per un file denominato **flag.png** (l'estensione del file potrebbe essere un altro formato di immagine, ad esempio **flag.jpg**) caricare il file e visualizzarli nel `ImageView`.
 Quando viene eseguita l'applicazione, dovrebbe essere simile l'immagine seguente:
 
 ![ImageView localizzata](android-resource-basics-images/03-localized-screenshot.png)

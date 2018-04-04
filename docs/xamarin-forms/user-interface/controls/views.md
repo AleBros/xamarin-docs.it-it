@@ -1,18 +1,17 @@
 ---
 title: Viste di xamarin. Forms
 description: Viste di xamarin. Forms sono i blocchi predefiniti di interfacce utente per dispositivi mobili multipiattaforma.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 45dc110104d7bb064aff1c883f65d894cbe6402f
-ms.sourcegitcommit: c3abb91d1a944de07d1b2b0878b02752c768d722
+ms.openlocfilehash: b690b4aed315a78d95d9e0e7444257f0fc2c4a78
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinforms-views"></a>Viste di xamarin. Forms
 

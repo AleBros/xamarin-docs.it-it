@@ -1,18 +1,17 @@
 ---
 title: Parte 2. Sintassi XAML essenziali
-description: "XAML è progettato principalmente per la creazione e inizializzazione di oggetti. Spesso, devono essere impostate su oggetti complessi che non possono facilmente essere rappresentati come stringhe XML, ma in alcuni casi è necessario impostare le proprietà definite da una classe in una classe figlio. Queste due esigenze richiedono le funzionalità essenziali della sintassi XAML di elementi di proprietà e le proprietà associate."
-ms.topic: article
+description: XAML è progettato principalmente per la creazione e inizializzazione di oggetti. Spesso, devono essere impostate su oggetti complessi che non possono facilmente essere rappresentati come stringhe XML, ma in alcuni casi è necessario impostare le proprietà definite da una classe in una classe figlio. Queste due esigenze richiedono le funzionalità essenziali della sintassi XAML di elementi di proprietà e le proprietà associate.
 ms.prod: xamarin
 ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 77ed7c49a901a877d822c2274263bcb8dbe19ac6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 776b0d07de947c01761f8e8d8809b24cf7f3c3cb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintassi XAML essenziali
 

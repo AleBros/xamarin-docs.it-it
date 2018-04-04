@@ -1,18 +1,17 @@
 ---
 title: Considerazioni relative alla piattaforma a 32/64 bit
 description: Considerazioni sul supporto di architetture a 32 e 64 bit per l'applicazione
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: af266bf9484f3a0da45173f4cfba22e0378ace22
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 06e65b8a639345af65c6e5d3bbe57d8bb3feffa1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="3264-bit-platform-considerations"></a>Considerazioni relative alla piattaforma a 32/64 bit
 

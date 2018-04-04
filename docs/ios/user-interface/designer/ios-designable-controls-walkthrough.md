@@ -1,18 +1,17 @@
 ---
 title: 'Procedura dettagliata: utilizzo di controlli personalizzati con la finestra di progettazione di Xamarin per iOS'
 description: Questo articolo fornisce una procedura dettagliata che illustra come creare un controllo personalizzato e utilizzarlo nella finestra di progettazione di Xamarin per iOS. Viene illustrato come creare un controllo disponibile nella casella degli strumenti della finestra di progettazione in modo che può essere trascinamento/rilasciato in una vista. Inoltre, viene illustrato come implementare un controllo in modo corretto rendering in fase di progettazione e in fase di esecuzione, nonché come creare proprietà che può essere impostata in fase di progettazione.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 4138ba0da1dd2174c53e6e35105c3199ea941f7f
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: 4a7fb6cba82b52f2a3506df7a36b4813a88ff583
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---using-custom-controls-with-the-xamarin-designer-for-ios"></a>Procedura dettagliata: utilizzo di controlli personalizzati con la finestra di progettazione di Xamarin per iOS
 

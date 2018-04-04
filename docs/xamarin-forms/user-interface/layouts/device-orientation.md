@@ -1,18 +1,17 @@
 ---
 title: Orientamento del dispositivo
 description: Comprendere il layout di applicazioni che aspetto in orientamento verticale e orizzontale.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: cb17c224fc6102d9e0dc25853c2222734299647a
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 9d1b10925f1455c303950eff342764b1fbc9275d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="device-orientation"></a>Orientamento del dispositivo
 
@@ -88,9 +87,9 @@ Xamarin supporta diverse opzioni per specificare l'orientamento:
 - **ReversePortrait** &ndash; fa sì che l'applicazione da utilizzare con orientamento verticale, rivolta nella direzione opposta di solito, in modo che vengono visualizzati "dall'alto in basso."
 - **FullSensor** &ndash; causa dell'applicazione si basano su dati del sensore di selezionare l'orientamento corretto (non più di 4 possibili).
 - **FullUser** &ndash; fa sì che l'applicazione per utilizzare le preferenze dell'utente orientamento. Se la rotazione automatica è abilitata, è possono utilizzare tutti gli 4 orientamenti.
-- **UserLandscape** &ndash;  _\[non supportato\]_  fa sì che l'applicazione da utilizzare con orientamento orizzontale, a meno che l'utente abbia la rotazione automatica abilitata, nel qual caso utilizzerà il sensore per determinare l'orientamento. Questa opzione interromperà la compilazione.
-- **UserPortrait** &ndash;  _\[non supportato\]_  fa sì che l'applicazione da utilizzare con orientamento verticale, a meno che l'utente abbia la rotazione automatica abilitata, nel qual caso utilizzerà il sensore per determinare l'orientamento. Questa opzione interromperà la compilazione.
-- **Bloccato** &ndash;  _\[non supportato\]_  fa sì che l'applicazione per l'utilizzo dell'orientamento dello schermo, l'elemento è all'avvio, senza risposta alle modifiche nel dispositivo del fisico orientamento. Questa opzione interromperà la compilazione.
+- **UserLandscape** &ndash; _\[non supportato\]_ fa sì che l'applicazione da utilizzare con orientamento orizzontale, a meno che l'utente abbia la rotazione automatica abilitata, nel qual caso utilizzerà il sensore per determinare l'orientamento. Questa opzione interromperà la compilazione.
+- **UserPortrait** &ndash; _\[non supportato\]_ fa sì che l'applicazione da utilizzare con orientamento verticale, a meno che l'utente abbia la rotazione automatica abilitata, nel qual caso utilizzerà il sensore per determinare l'orientamento. Questa opzione interromperà la compilazione.
+- **Bloccato** &ndash; _\[non supportato\]_ fa sì che l'applicazione per l'utilizzo dell'orientamento dello schermo, l'elemento è all'avvio, senza risposta alle modifiche nel dispositivo del fisico orientamento. Questa opzione interromperà la compilazione.
 
 Si noti che le API di Android native offrono un grande controllo sulle modalità di gestione dell'orientamento, incluse le opzioni che in modo esplicito in contraddizione con l'utente espresso preferenze.
 

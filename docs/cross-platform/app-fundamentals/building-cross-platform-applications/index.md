@@ -1,18 +1,17 @@
 ---
 title: Compilazione incrociata piattaforma applicazioni
 description: 'In questa sezione illustra, in sei parti, oltre a un riepilogo delle applicazioni utilizzando la piattaforma di sviluppo di Xamarin: da comprendere il funzionamento di Xamarin per la progettazione di App per dispositivi mobili, test e la distribuzione nei vari archivi di app.'
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/28/2016
-ms.openlocfilehash: 53c32003cd1a77a3aa5feb0ab26cedeab27789dc
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: b9d167d8874ecfde9094bacc26cff3e7d1b10bab
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sharing-code-options"></a>Sharing Code Options
 

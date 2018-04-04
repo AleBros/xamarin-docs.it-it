@@ -1,18 +1,17 @@
 ---
 title: Risoluzione dei problemi di associazioni
 description: In questo articolo riepiloga vari errori comuni che possono verificarsi durante la generazione di associazioni, insieme alle possibili cause e suggeriti i metodi per risolverli.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 6d31e2a22c63f8d46893dd1928b561e1a06b19b4
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: da6286eed091114c117c723f462bbb8cac77034b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting-bindings"></a>Risoluzione dei problemi di associazioni
 
@@ -51,7 +50,7 @@ Una volta che si è decompilato libreria Android, esaminare il codice sorgente. 
 
 - **Le classi che dispongono di caratteristiche di offuscamento** &ndash; caratteristiche delle classi offuscate includono:
 
-    - Il nome di classe include un  **$** , vale a dire **una class $**
+    - Il nome di classe include un **$**, vale a dire **una class $**
     - Il nome della classe è interamente compromesso di lettere minuscole, ad esempio **a.class**      
 
 - **`import` istruzioni per le raccolte senza riferimenti** &ndash; identificare la libreria senza riferimento e aggiungere tali dipendenze al progetto xamarin associazione con un **azione di compilazione** di **ReferenceJar**  o **EmbedddedReferenceJar**.

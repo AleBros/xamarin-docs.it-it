@@ -1,18 +1,17 @@
 ---
 title: Pubblicazione in App Store di Apple TV
 description: In questo articolo viene illustrato come configurare, compilare e pubblicare un'app Xamarin.tvOS per la distribuzione tramite App Store di Apple TV. Include una Guida dettagliata che illustra come preparare l'app per la distribuzione, come utilizzare gli strumenti di Apple per inviare l'app per la revisione e, infine, come pubblicare l'app in App Store di Apple TV.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: abb8ee30828e5d9856b9fd72cca8adb669959818
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c72b161845f6d8492a47d95e51a80cf0b4f30271
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Pubblicazione in App Store di Apple TV
 
@@ -114,7 +113,7 @@ Usa tvOS *profili di provisioning* per controllare come è possibile distribuire
 Il provisioning richiede questa procedura che prevede l'uso del portale di provisioning iOS basato sul Web di Apple:
 
 1.  Selezionare **Provisioning** (Provisioning)  > **Distribution** (Distribuzione).
-2.  Fare clic su di  **+**  e selezionare il tipo di profilo di distribuzione che si desidera creare come **App Store di Apple TV**.
+2.  Fare clic su di **+** e selezionare il tipo di profilo di distribuzione che si desidera creare come **App Store di Apple TV**.
 3.  Selezionare un **ID App** nell'elenco a discesa per il quale si vuole creare un profilo di distribuzione.
 4.  Selezionare il certificato richiesto per firmare l'applicazione.
 5.  Immettere un **Name** (Nome) per il nuovo **Distribution Profile** (Profilo di distribuzione) e generare il profilo.
@@ -154,7 +153,7 @@ Con l'app Xamarin.tvOS configurato correttamente, si è ora pronti per eseguire 
     ![](app-store-publishing-images/buildxs01new.png "Selezionare la configurazione di rilascio")
 2. Scegliere **Archivia per la pubblicazione** dal menu **Compila**:
 
-    [![](app-store-publishing-images/buildxs02new.png "Selezionare l'archiviazione per la pubblicazione")](app-store-publishing-images/buildxs02new.png#lightbox)
+    [![](app-store-publishing-images/buildxs02new.png "Selezionare Archivia per la pubblicazione")](app-store-publishing-images/buildxs02new.png#lightbox)
 3. Dopo aver creato l'archivio, sarà visualizzata la visualizzazione **Archivi**:
 
     [![](app-store-publishing-images/buildxs03new.png "La visualizzazione di archivi")](app-store-publishing-images/buildxs03new.png#lightbox)
@@ -196,7 +195,7 @@ Il flusso di lavoro di archiviazione in Visual Studio per Mac verrà aperta Appl
 
 2. Selezionare *Deliver Your App* (Invia l'app) e fare clic sul pulsante *Choose* (Scegli):
 
-    [![](app-store-publishing-images/publishvs01.png "Selezionare recapitare l'App")](app-store-publishing-images/publishvs01.png#lightbox)
+    [![](app-store-publishing-images/publishvs01.png "Selezionare l'invio dell'app")](app-store-publishing-images/publishvs01.png#lightbox)
 
 3. Selezionare il file ZIP o il file IPA creato in precedenza e fare clic sul pulsante **OK**.
 4. Application Loader convaliderà il file:

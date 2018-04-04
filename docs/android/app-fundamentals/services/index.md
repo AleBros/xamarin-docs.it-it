@@ -1,18 +1,17 @@
 ---
 title: Creazione di servizi di Android
-description: "Questa guida illustra xamarin services, ovvero i componenti di Android che consentono di lavorare a essere eseguita senza un'interfaccia utente attivo. I servizi vengono comunemente utilizzati per le attività vengono eseguite in background, ad esempio calcoli molto tempo, il download dei file, riprodurre musica e così via. Vengono illustrati i diversi scenari che i servizi sono adatti per e viene illustrato come implementarle per l'esecuzione di attività in background con esecuzione prolungata, nonché per fornire un'interfaccia per le chiamate di procedura remota."
-ms.topic: article
+description: Questa guida illustra xamarin services, ovvero i componenti di Android che consentono di lavorare a essere eseguita senza un'interfaccia utente attivo. I servizi vengono comunemente utilizzati per le attività vengono eseguite in background, ad esempio calcoli molto tempo, il download dei file, riprodurre musica e così via. Vengono illustrati i diversi scenari che i servizi sono adatti per e viene illustrato come implementarle per l'esecuzione di attività in background con esecuzione prolungata, nonché per fornire un'interfaccia per le chiamate di procedura remota.
 ms.prod: xamarin
 ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/19/2018
-ms.openlocfilehash: 08392872037783e0caaef4f2b19127adbe95151b
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: 2e942d1085822fee935ae0f23f2253f23d49a43d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-android-services"></a>Creazione di servizi di Android
 
@@ -45,7 +44,7 @@ Esistono quattro tipi diversi di servizi Android:
 
 * **Servizio associato** &ndash; A _associato servizio_ è un servizio che dispone di un altro componente (in genere un'attività) a esso associato. Un servizio associato fornisce un'interfaccia che consente al servizio di interagire tra loro e il componente associato. Una volta non sono presenti più client associato al servizio, Android verrà arrestato il servizio. 
 
-* **`IntentService`** &ndash; Un  _`IntentService`_  è una sottoclasse specializzata della `Service` classe che semplifica la creazione del servizio e l'utilizzo. Un `IntentService` è progettato per gestire singole chiamate autonome. A differenza di un servizio, che può gestire contemporaneamente più chiamate, un `IntentService` è più simile a un _processore della coda di lavoro_ &ndash; lavoro viene messo in coda e un `IntentService` elabora ogni processo uno alla volta in un singolo thread di lavoro. In genere, un`IntentService` non è associato a un'attività o un frammento. 
+* **`IntentService`** &ndash; Un _`IntentService`_ è una sottoclasse specializzata della `Service` classe che semplifica la creazione del servizio e l'utilizzo. Un `IntentService` è progettato per gestire singole chiamate autonome. A differenza di un servizio, che può gestire contemporaneamente più chiamate, un `IntentService` è più simile a un _processore della coda di lavoro_ &ndash; lavoro viene messo in coda e un `IntentService` elabora ogni processo uno alla volta in un singolo thread di lavoro. In genere, un`IntentService` non è associato a un'attività o un frammento. 
 
 * **Servizio avviato** &ndash; A _servizio avviato_ è un servizio che è stato avviato da un altro componente Android (ad esempio un'attività) e l'esecuzione continui in background finché non indica un elemento in modo esplicito il arresto del servizio. A differenza di un servizio associato, un servizio avviato non dispone di tutti i client direttamente a esso associati. Per questo motivo, è importante progettare i servizi avviati in modo che può essere riavviati normalmente in base alle esigenze.
 

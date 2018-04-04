@@ -1,18 +1,17 @@
 ---
 title: Utilizzo di tabelle nella finestra di progettazione iOS
-description: "Nelle sezioni precedenti, è esplorare lo sviluppo di utilizzo di tabelle. In questo passaggio la quinta e ultima sezione, verrà ciò che è stato appreso fino a questo punto di aggregazione e creare un'applicazione settimanali base utilizzando uno Storyboard."
-ms.topic: article
+description: Nelle sezioni precedenti, è esplorare lo sviluppo di utilizzo di tabelle. In questo passaggio la quinta e ultima sezione, verrà ciò che è stato appreso fino a questo punto di aggregazione e creare un'applicazione settimanali base utilizzando uno Storyboard.
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e46038b21327fe8847d2c04ee1ba16960f6a059b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 869719b1d3514fee4b45f61dcdb34a0bcf54f7b2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Utilizzo di tabelle nella finestra di progettazione iOS
 
@@ -115,7 +114,7 @@ Successivamente, è necessario creare un pulsante di aggiunta di nuove attività
 Seguire questa procedura: 
 
 -  Trascinare un **elemento pulsante della barra** dalla casella degli strumenti di _lato destro della barra di spostamento_.
--  Nel **proprietà riempimento**in **elemento pulsante della barra** selezionare **identificatore: aggiungere** (per renderlo un  *+*  plus pulsante). 
+-  Nel **proprietà riempimento**in **elemento pulsante della barra** selezionare **identificatore: aggiungere** (per renderlo un *+* plus pulsante). 
 -  Assegnare un nome in modo da poter essere identificato nel codice in una fase successiva. Si noti che è necessario assegnare un nome di classe di Controller di visualizzazione principale (ad esempio **ItemViewController**) consente di impostare il nome dell'elemento del pulsante della barra.
 
 

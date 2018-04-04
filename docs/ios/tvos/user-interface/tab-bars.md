@@ -1,18 +1,17 @@
 ---
 title: Utilizzo di Controller barra delle schede
 description: Questo articolo descrive la progettazione e l'utilizzo di Controller barra scheda all'interno di un'app Xamarin.tvOS.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7b3a7a2347ed93aff5cddc6f15e25028c61a53d8
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 1536e37830f3b2a1e2a83c7bf5039909062d092b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-tab-bar-controller"></a>Utilizzo di Controller barra delle schede
 

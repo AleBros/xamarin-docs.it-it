@@ -1,18 +1,17 @@
 ---
 title: Mappe
-description: "iOS sono inclusi il MapKit framework, che consente di aggiungere facilmente mappato a un'applicazione. Utilizzando il Kit di mappa, le applicazioni iOS possono aggiungere mappe interattive che supportano funzionalità quali la panoramica e zoom, che mostrano il percorso di utente e grafica dei livelli in una mappa. In questo articolo affronta molte delle funzionalità del Kit di mappa, che illustra come sfruttare i vantaggi di essi per creare funzionalità geografica in un'applicazione"
-ms.topic: article
+description: iOS sono inclusi il MapKit framework, che consente di aggiungere facilmente mappato a un'applicazione. Utilizzando il Kit di mappa, le applicazioni iOS possono aggiungere mappe interattive che supportano funzionalità quali la panoramica e zoom, che mostrano il percorso di utente e grafica dei livelli in una mappa. In questo articolo affronta molte delle funzionalità del Kit di mappa, che illustra come sfruttare i vantaggi di essi per creare funzionalità geografica in un'applicazione
 ms.prod: xamarin
 ms.assetid: 5DD8E56D-51C1-4AFA-B387-79B5734698ED
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 3fecf17a4f70e44ca169c825bf0dd34a5127cec8
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 0249da1754083231fa4426ae4f42ce4ad73c3f51
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="maps"></a>Mappe
 

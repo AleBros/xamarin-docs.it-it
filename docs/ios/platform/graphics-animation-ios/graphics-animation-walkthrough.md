@@ -1,18 +1,17 @@
 ---
 title: 'Procedura dettagliata: utilizzo di CoreGraphics e CoreAnimation'
-description: "In questo articolo dettagliata viene illustrato come creare un'applicazione che utilizza Core grafica e animazione Core. Viene illustrato come disegnare sullo schermo in risposta a tocco utente nonché come aggiungere un'animazione a un'immagine da percorrere lungo un percorso."
-ms.topic: article
+description: In questo articolo dettagliata viene illustrato come creare un'applicazione che utilizza Core grafica e animazione Core. Viene illustrato come disegnare sullo schermo in risposta a tocco utente nonché come aggiungere un'animazione a un'immagine da percorrere lungo un percorso.
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c62601ff446c114e97e9d4c2ded3727d08220095
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f857accfcdec4cb60e781936d1d0836dbf8d6ffb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="drawing-and-animating-along-a-path"></a>Disegno e animazione lungo un percorso
 
@@ -183,6 +182,6 @@ In questo articolo viene incrementata passo passo attraverso un esempio che i co
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Animazione di base](~/ios/platform/graphics-animation-ios/core-animation.md)
-- [Grafica di base](~/ios/platform/graphics-animation-ios/core-graphics.md)
+- [Core Animation](~/ios/platform/graphics-animation-ios/core-animation.md)
+- [Core Graphics](~/ios/platform/graphics-animation-ios/core-graphics.md)
 - [Recipe animazione core](https://developer.xamarin.com/recipes/ios/animation/coreanimation)

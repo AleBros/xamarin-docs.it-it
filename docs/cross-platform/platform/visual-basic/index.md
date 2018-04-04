@@ -1,18 +1,17 @@
 ---
 title: Visual Basic.NET portabile
 description: Questa guida viene illustrato come utilizzare Visual Basic per scrivere i progetti libreria di classe portabile (PCL) che possono essere usati nelle soluzioni destinate a xamarin. IOS e xamarin.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 978d9e569825e20b40e963f590049eaab1d4e752
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6a4ecad0b28dc4b8ba4060966ccefb678c8e6794
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="portable-visual-basicnet"></a>Visual Basic.NET portabile
 

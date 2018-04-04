@@ -1,18 +1,17 @@
 ---
 title: Dettagli di gioco cade Fruity
 description: Questa guida esamina il gioco, cade Fruity relativi CocosSharp comuni e ai concetti di sviluppo di giochi, ad esempio fisica, gestione del contenuto, lo stato del gioco e progettazione di gioco.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A5664930-F9F0-4A08-965D-26EF266FED24
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: d37b289249e5c9e2c23b45c998d1e24960637ba6
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 2138e27c1097e014f302cc0b9de0fa411bed89fc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="fruity-falls-game-details"></a>Dettagli di gioco cade Fruity
 

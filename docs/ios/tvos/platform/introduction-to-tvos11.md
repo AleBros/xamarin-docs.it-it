@@ -1,18 +1,17 @@
 ---
 title: Introduzione a tvOS 11
-description: "Nuove funzionalità disponibili per gli sviluppatori con Xamarin per tvOS 11"
-ms.topic: article
+description: Nuove funzionalità disponibili per gli sviluppatori con Xamarin per tvOS 11
 ms.prod: xamarin
 ms.assetid: 5258F7A1-3388-4482-978C-DC33AAAEFBE6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/08/2018
-ms.openlocfilehash: 10f24fa666ce4986c1a130d6527c4269c1999bc4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 735b2a113256b61d4e93c52707411e43fed2eca2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-tvos-11"></a>Introduzione a tvOS 11
 

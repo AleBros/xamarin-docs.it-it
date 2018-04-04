@@ -1,18 +1,17 @@
 ---
-title: "Funzionalità della piattaforma"
-description: "Documenti in questa sezione illustrano le funzionalità specifiche per iOS."
-ms.topic: article
+title: Funzionalità della piattaforma
+description: Documenti in questa sezione illustrano le funzionalità specifiche per iOS.
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/15/2017
-ms.openlocfilehash: 88ddd7c74fd800c71e63c03f6a8492ecfcc28f9f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0a76ed52f52de144bb3da1e7be6e215ce0dfe0ab
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="platform-features"></a>Funzionalità della piattaforma
 
@@ -55,11 +54,11 @@ Questo articolo vengono forniti e Introduzione a utilizzando le nuove API 3D Tou
 
 La nuova API CallKit in iOS 10 fornisce un modo per le app VOIP da integrare con l'iPhone dell'interfaccia utente e fornire un'interfaccia familiare ed esperienza per l'utente finale. Con questa API può visualizzare e interagire con le chiamate VOIP dalla schermata di blocco del dispositivo iOS e gestire i contatti con l'app di Phone **Preferiti** e **recenti** viste.
 
-##  <a name="contacts-and-contactsuiiosplatformcontactsmd"></a>[Contatti e ContactsUI](~/ios/platform/contacts.md)
+##  <a name="contacts-and-contactsuiiosplatformcontactsmd"></a>[Contacts e ContactsUI](~/ios/platform/contacts.md)
 
 Con l'introduzione di iOS 9, Apple ha rilasciato due nuovi Framework, `Contacts` e `ContactsUI`, tale sostituire l'indirizzo esistente Book e Framework dell'interfaccia utente della Rubrica indirizzi usati da iOS 8 e versioni precedenti.
 
-##  <a name="document-pickeriosplatformdocument-pickermd"></a>[Selezione di documento](~/ios/platform/document-picker.md)
+##  <a name="document-pickeriosplatformdocument-pickermd"></a>[Selezione documenti](~/ios/platform/document-picker.md)
 
 La selezione del documento consente di essere condivisi tra le app documenti. Questi documenti possono essere archiviati in iCloud o nella directory dell'applicazione diverso. I documenti vengono condivisi tramite il set di [estensioni Provider documento](~/ios/platform/extensions.md) l'utente ha installato nel dispositivo.
 
@@ -67,7 +66,7 @@ La selezione del documento consente di essere condivisi tra le app documenti. Qu
 
 iOS è incorporate due applicazioni correlate: l'applicazione di calendario e l'applicazione di promemoria. È abbastanza semplice comprendere come l'applicazione di calendario gestisce i dati del calendario, ma l'applicazione di promemoria è meno ovvio. Le date associate in termini di scadenza, quando è completate, quando sono in realtà sono promemoria e così via. Di conseguenza, iOS archivia tutti i dati di calendario, gli eventi del calendario o promemoria, in un'unica posizione, chiamata di *Database calendario*.
 
-##  <a name="ios-extensionsiosplatformextensionsmd"></a>[le estensioni iOS](~/ios/platform/extensions.md)
+##  <a name="ios-extensionsiosplatformextensionsmd"></a>[Estensioni iOS](~/ios/platform/extensions.md)
 
 Le estensioni, come è stato introdotto in iOS 8, sono specializzate `UIViewControllers` che vengono presentati dalla iOS all'interno di contesti standard, ad esempio all'interno di **centro notifiche**, come richiesti dall'utente per eseguire i tipi di tasti specializzato input o altri contesti, come la modifica di una foto in cui l'estensione può fornire filtri effetto speciale.
 
@@ -87,15 +86,15 @@ Kit di integrità fornisce un archivio dati di protezione per le informazioni de
 
 Apple ha introdotto HomeKit in iOS 8 per fornire un framework comune per l'individuazione e comunicare con dispositivi di automazione home nella home page di un utente. HomeKit fornisce una piattaforma comune per i dispositivi e la configurazione di azioni di controllo degli stessi.
 
-##  <a name="in-app-purchasingiosplatformin-app-purchasingindexmd"></a>[Acquisto in-App](~/ios/platform/in-app-purchasing/index.md)
+##  <a name="in-app-purchasingiosplatformin-app-purchasingindexmd"></a>[Acquisti in-app](~/ios/platform/in-app-purchasing/index.md)
 
 le applicazioni iOS possono vendere prodotti digitali o i servizi utilizzando StoreKit: un set di API fornite da iOS che comunicano con i server Apple per condurre transazioni finanziarie con l'utente tramite i relativi ID Apple. Le APIs StoreKit sono principalmente riguarda il recupero di informazioni sul prodotto e l'esecuzione di transazioni: nessun componente dell'interfaccia utente. Le applicazioni che implementano l'acquisto in-app devono compilare la propria interfaccia utente e tenere traccia degli elementi acquistati con codice personalizzato per fornire all'utente, necessario di prodotti o servizi.
 
-##  <a name="ios-gaming-apisiosplatformgamingindexmd"></a>[modalità di gioco API iOS](~/ios/platform/gaming/index.md)
+##  <a name="ios-gaming-apisiosplatformgamingindexmd"></a>[API per i giochi iOS](~/ios/platform/gaming/index.md)
 
 Apple ha diversi miglioramenti tecnologici per i giochi le API di iOS 9 che rendono più semplice implementare grafica di giochi e audio in un'app xamarin. IOS. Questi includono entrambi semplicità di sviluppo tramite il framework di alto livello e sfruttare le potenzialità di GPU del dispositivo iOS per una migliore velocità e le capacità grafiche.
 
-##  <a name="message-app-integrationiosplatformmessage-app-integrationindexmd"></a>[Integrazione di App di messaggio](~/ios/platform/message-app-integration/index.md)
+##  <a name="message-app-integrationiosplatformmessage-app-integrationindexmd"></a>[Integrazione dell'app Messaggi](~/ios/platform/message-app-integration/index.md)
 
 Nuovo in iOS 10, un messaggio dell'estensione App si integra con il **messaggi** nuove funzionalità app e visualizza all'utente. L'estensione può inviare il testo, adesivi, file multimediali e messaggi interattivi.
 
@@ -113,11 +112,11 @@ Questo documento introduce Passbook, tramite l'API di Kit passare con xamarin. I
 
 Foto Kit è un nuovo framework che consente di eseguire una query la libreria di immagini di sistema e creare interfacce utente personalizzate per visualizzare e modificare il relativo contenuto. Include un numero di classi che rappresentano risorse video e immagine, nonché le raccolte di risorse, ad esempio album e le cartelle.
 
-##  <a name="request-app-reviewiosplatformrequest-app-reviewmd"></a>[Richiesta di revisione di App](~/ios/platform/request-app-review.md)
+##  <a name="request-app-reviewiosplatformrequest-app-reviewmd"></a>[Richiedere una recensione per un'app](~/ios/platform/request-app-review.md)
 
 Nuovi utenti di iOS 10.3, il `RequestReview()` metodo consente a un'app iOS chiedere all'utente di velocità o esaminarla. Quando questo metodo viene chiamato in un'app di spedizione che l'utente ha installato dall'App Store, iOS 10 gestirà la classificazione intera e processo di revisione per lo sviluppatore. Poiché questo processo è governato dai criteri di App Store, un avviso o potrebbe non essere visualizzato.
 
-##  <a name="search-apisiosplatformsearchindexmd"></a>[API di ricerca](~/ios/platform/search/index.md)
+##  <a name="search-apisiosplatformsearchindexmd"></a>[API per la ricerca](~/ios/platform/search/index.md)
 
 Ricerca è stata espansa in iOS 9 per fornire nuovi modi per accedere alle informazioni e funzionalità all'interno di un'app xamarin. Utilizzando le nuove API di ricerca di App, app contenuto è reso disponibile per la ricerca tramite Spotlight e Safari risultati della ricerca, uniforme e promemoria Siri e suggerimenti. Ciò consente agli utenti di accedere rapidamente alle attività e le informazioni complete all'interno dell'app.
 
@@ -145,13 +144,13 @@ Touch ID è stato introdotto in iOS 7 come mezzo per autenticare gli utenti - si
 
 Nuovo a 10, la notifica all'utente consente di framework per la gestione delle notifiche locali e remote e il recapito di iOS. Usando questo framework, l'app o l'estensione dell'App può pianificare il recapito delle notifiche locale specificando un set di condizioni, ad esempio percorso o l'ora del giorno.
 
-##  <a name="wide-coloriosplatformwide-colormd"></a>[Colore Wide](~/ios/platform/wide-color.md)
+##  <a name="wide-coloriosplatformwide-colormd"></a>[Wide Color](~/ios/platform/wide-color.md)
 
 iOS 10 e macOS Sierra migliora il supporto per i formati di pixel di intervallo esteso e spazi colore ampia in tutto il sistema incluso Framework, ad esempio grafica di base, l'immagine di base, Metal e AVFoundation. Supporto per i dispositivi dotati di schermi di colori ampia ulteriormente è agevolato fornendo questo comportamento in tutto lo stack dell'intero grafico.
 
 
 
-##  <a name="binding-objective-cbinding-objective-cindexmd"></a>[Associazione Objective-C](binding-objective-c/index.md)
+##  <a name="binding-objective-cbinding-objective-cindexmd"></a>[Binding di Objective-C](binding-objective-c/index.md)
 
 Quando si lavora su iOS, potrebbero verificarsi casi in cui si desidera utilizzare una libreria di terze parti Objective-C. In questi casi, è possibile utilizzare i progetti del MonoTouch associazione per creare un'associazione alle librerie native Objective-C in c#. Il progetto utilizza gli stessi strumenti utilizzati per visualizzare le API iOS in c#. &nbsp;Questo documento viene descritto come associare le API di Objective-C.
 
@@ -159,10 +158,10 @@ Quando si lavora su iOS, potrebbero verificarsi casi in cui si desidera utilizza
 
 Xamarin supporta il collegamento con librerie native di C e librerie Objective-C. Questo documento viene descritto come collegare le librerie C native con il progetto xamarin. IOS. 
 
-## <a name="embedded-frameworksembedded-frameworksmd"></a>[Framework incorporato](embedded-frameworks.md)
+## <a name="embedded-frameworksembedded-frameworksmd"></a>[Framework incorporati](embedded-frameworks.md)
 
 Viene illustrato come incorporare Framework utente Objective-C nelle App xamarin. IOS.
 
-## <a name="exception-marshalingexception-marshalingmd"></a>[Marshalling di eccezione](exception-marshaling.md)
+## <a name="exception-marshalingexception-marshalingmd"></a>[Marshalling delle eccezioni](exception-marshaling.md)
 
 Descrive la modalità di marshalling di Objective-C e le eccezioni gestite tra frame gestiti e nativi.

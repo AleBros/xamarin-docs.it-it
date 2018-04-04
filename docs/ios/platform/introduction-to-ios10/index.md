@@ -1,18 +1,17 @@
 ---
 title: Introduzione a iOS 10
-description: "Questo articolo descrive tutte le nuove e modificate le API e le funzionalità disponibili in iOS 10 per gli sviluppatori di xamarin. IOS."
-ms.topic: article
+description: Questo articolo descrive tutte le nuove e modificate le API e le funzionalità disponibili in iOS 10 per gli sviluppatori di xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: FB91DFFE-CF5E-4253-92CB-78A6371259D9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: fbbbeb41ad83d8f673da2b2e7b0efe5645de4075
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: c3bee0f15016394005a67e98cd8435e6d63b3ac6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-ios-10"></a>Introduzione a iOS 10
 

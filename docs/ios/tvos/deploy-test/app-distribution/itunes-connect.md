@@ -1,18 +1,17 @@
 ---
 title: Configurare l'App tvOS in iTunes Connect
 description: Questo articolo fornisce una Guida supplementare per configurare l'App in iTunes Connect per le configurazioni specifiche tvOS iOS.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 86C7C5BD-C97D-4F1D-B611-A7694557BFDF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b6fad9eadbff272f86f9e426e3f6eb5d48847127
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d082a980572349da1b7e6155b3aa4de41512796f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>Configurare l'App tvOS in iTunes Connect
 

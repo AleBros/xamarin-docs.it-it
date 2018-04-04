@@ -1,18 +1,17 @@
 ---
 title: Utilizzo di Jenkins con Xamarin
 description: Questa guida viene illustrato come impostare Jenkins come server di integrazione continua e automatizzare la compilazione di applicazioni per dispositivi mobili create con Xamarin. Viene descritto come installare Jenkins su OS X, configurarlo e configurare i processi per la compilazione di applicazioni di xamarin. IOS e xamarin quando le modifiche vengono applicate al sistema di gestione del codice sorgente.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: ff754a690627e7e2f0a5cd39dd669a4c9ddd47fb
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: f183eb487b49d60c896bef9c90c711cd3da846b7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>Utilizzo di Jenkins con Xamarin
 
@@ -103,7 +102,7 @@ A questo punto è stato installato Jenkins. Tuttavia, se si desidera compilare a
 
 ### <a name="installing-plugins"></a>L'installazione di plug-in
 
-Al termine, il programma di installazione Jenkins.App date di inizio Jenkins e avviare il browser con URL http://localhost:8080, come illustrato nella schermata seguente:
+Quando il programma di installazione Jenkins.App è stata completata, date di inizio Jenkins e avviare il web browser con URL http://localhost:8080, come illustrato nella schermata seguente:
 
  [![](jenkins-walkthrough-images/image10.png "8080, come illustrato in questa schermata")](jenkins-walkthrough-images/image10.png#lightbox)
 

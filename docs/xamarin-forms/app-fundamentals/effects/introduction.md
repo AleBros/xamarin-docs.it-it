@@ -1,18 +1,17 @@
 ---
 title: Introduzione agli effetti
 description: Effetti consentono controlli nativi in ciascuna piattaforma da personalizzare e vengono in genere utilizzati per lo stile piccole modifiche. In questo articolo viene fornita un'introduzione agli effetti, descrive il limite tra renderer personalizzati e gli effetti e viene descritta la classe PlatformEffect.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 30CB8615-8F39-4762-BDB7-333D2B57D112
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 037c82aa31c167e44a88619cba91a5be8035d0fa
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 598136f43a23070d8bab04c18106738c9e6b0a52
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-effects"></a>Introduzione agli effetti
 

@@ -1,18 +1,17 @@
 ---
 title: Introduzione a iOS 7
-description: "Questo articolo vengono illustrate le principali nuove API introdotte in iOS 7, incluse le transizioni View Controller, miglioramenti alle animazioni UIView, UIKit Dynamics e il Kit di testo. Vengono inoltre illustrate alcune delle modifiche per l'interfaccia utente e le nuove funzionalità multitasking migliorata."
-ms.topic: article
+description: Questo articolo vengono illustrate le principali nuove API introdotte in iOS 7, incluse le transizioni View Controller, miglioramenti alle animazioni UIView, UIKit Dynamics e il Kit di testo. Vengono inoltre illustrate alcune delle modifiche per l'interfaccia utente e le nuove funzionalità multitasking migliorata.
 ms.prod: xamarin
 ms.assetid: 2C33018F-D64A-4BAA-A34E-082EF311D162
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a7bebc2b73ecb564028a92340c726bd5c1f1c54b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9ae82eba78f099f675d21bf53a250923630a0ff6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-ios-7"></a>Introduzione a iOS 7
 

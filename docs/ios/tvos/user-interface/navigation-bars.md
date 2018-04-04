@@ -1,18 +1,17 @@
 ---
 title: Utilizzo di controller di navigazione
 description: Questo articolo descrive la progettazione e l'utilizzo di barre di navigazione all'interno di un'app Xamarin.tvOS.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74E396B7-87F0-46F7-BC6C-827DB8884C97
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 0f59e8f5e732a45f7e6148a08de80fffc56dbb26
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 8a9a1c852137a2bcc0d46615e69eef0a245a9768
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-navigation-controllers"></a>Utilizzo di controller di navigazione
 

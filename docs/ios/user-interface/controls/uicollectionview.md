@@ -1,18 +1,17 @@
 ---
 title: Visualizzazioni di raccolte
-description: "Le viste di raccolta consentono di contenuto che deve essere visualizzato utilizzando i layout arbitrario. Consentono di creare con facilità il layout di griglia predefinita, supporta i layout personalizzati."
-ms.topic: article
+description: Le viste di raccolta consentono di contenuto che deve essere visualizzato utilizzando i layout arbitrario. Consentono di creare con facilità il layout di griglia predefinita, supporta i layout personalizzati.
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 7048eb9c478d7ae10787e158f18b764b258da171
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 75ad331a265c14892f101b1aa7956d2cde3beec8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="collection-views"></a>Visualizzazioni di raccolte
 
@@ -140,7 +139,7 @@ Decorazione visualizzazioni sono puramente visual che possono essere visualizzat
 
 ## <a name="data-source"></a>origine dati
 
-Come con altre parti di iOS, ad esempio `UITableView` e `MKMapView`, `UICollectionView` Ottiene i dati da un *origine dati*, che viene esposto in xamarin. IOS tramite il  **`UICollectionViewDataSource`**  classe. Questa classe è responsabile di fornire contenuto per il `UICollectionView` , ad esempio:
+Come con altre parti di iOS, ad esempio `UITableView` e `MKMapView`, `UICollectionView` Ottiene i dati da un *origine dati*, che viene esposto in xamarin. IOS tramite il **`UICollectionViewDataSource`** classe. Questa classe è responsabile di fornire contenuto per il `UICollectionView` , ad esempio:
 
 -  **Celle** – restituito da `GetCell` metodo.
 -  **Viste supplementari** – restituito da `GetViewForSupplementaryElement` metodo.

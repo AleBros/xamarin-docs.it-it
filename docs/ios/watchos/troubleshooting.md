@@ -1,18 +1,18 @@
 ---
 title: watchOS risoluzione dei problemi
 description: Problemi noti e soluzioni alternative per problemi di sviluppo watchOS.
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4a6b916f991b337d8a28764f1482ddd837bad460
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 6e7a7dd09d65b88831136662d8718886aaf483c5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="watchos-troubleshooting"></a>watchOS risoluzione dei problemi
 
@@ -35,7 +35,7 @@ Questa pagina contiene informazioni aggiuntive e soluzioni alternative per le fu
 <a name="deploy" />
 
 - In modo non corretto mostrano una delle versioni precedenti di Visual Studio per Mac l'il **AppleCompanionSettings** icone come pixel 88 x 88; determinando un **mancante icona errore** se si tenta di inviare all'App Archivio.
-    Questa icona deve essere 87 x 87 pixel (29 unità per  **@3x**  schermate Retina). Non è possibile risolvere questo problema in Visual Studio per Mac - modificare la risorsa di immagine in Xcode o modificare manualmente il **Contents.json** file (in modo che corrisponda [in questo esempio](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
+    Questa icona deve essere 87 x 87 pixel (29 unità per **@3x** schermate Retina). Non è possibile risolvere questo problema in Visual Studio per Mac - modificare la risorsa di immagine in Xcode o modificare manualmente il **Contents.json** file (in modo che corrisponda [in questo esempio](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
 
 - Se il progetto di estensione di espressioni di controllo **Info. plist > ID Bundle WKApp** non [impostato correttamente](~/ios/watchos/get-started/project-references.md) per corrispondente all'applicazione di espressioni di controllo **ID Bundle**, il debugger avrà esito negativo per la connessione e Visual Con il messaggio rimarrà in attesa Studio per Mac *"In attesa del debugger"*.
 

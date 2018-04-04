@@ -1,18 +1,17 @@
 ---
 title: Personalizzazione delle associazioni
-description: "È possibile personalizzare un'associazione xamarin modificando i metadati che controlla il processo di associazione. Queste modifiche manuali sono spesso necessarie per la risoluzione di errori di compilazione e per il data shaping l'API risulta in modo che risulti più coerenza con c# o .NET. Queste guide vengono illustrate la struttura dei metadati, come modificare i metadati e come utilizzare JavaDoc per recuperare i nomi dei parametri del metodo."
-ms.topic: article
+description: È possibile personalizzare un'associazione xamarin modificando i metadati che controlla il processo di associazione. Queste modifiche manuali sono spesso necessarie per la risoluzione di errori di compilazione e per il data shaping l'API risulta in modo che risulti più coerenza con c# o .NET. Queste guide vengono illustrate la struttura dei metadati, come modificare i metadati e come utilizzare JavaDoc per recuperare i nomi dei parametri del metodo.
 ms.prod: xamarin
 ms.assetid: 63C5078D-9E42-4F70-AF8C-8CEEA84FB6AF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 09/25/2017
-ms.openlocfilehash: 14372c3ca42d1ba4a8ade1248f3c5f3210cc7e46
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bb4f3b24be2072cb8b33893899a23951ace63607
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-bindings"></a>Personalizzazione delle associazioni
 

@@ -1,18 +1,17 @@
 ---
 title: Interfaccia utente
 description: Inclusi i controlli, la finestra di progettazione e i principi di progettazione dell'esperienza utente generale copertura di esperienza utente (UX).
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2B3E45FA-C30F-D708-0E8F-3EE02BD1A867
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/21/2017
-ms.openlocfilehash: 896b92b9520e7aa85c6d62e02cb1355c9757f0d6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a3d88c2698ebd290929ceca842c28b3a43aed6e0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="user-interface"></a>Interfaccia utente
 

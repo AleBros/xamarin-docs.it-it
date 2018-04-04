@@ -1,17 +1,17 @@
 ---
-title: "È possibile connettersi a emulatori Android è in esecuzione su un Mac da una macchina virtuale Windows?"
-ms.topic: article
+title: È possibile connettersi a emulatori Android è in esecuzione su un Mac da una macchina virtuale Windows?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 2f0ef027d8a2d40ccf85e35d5a85eba4cd7c7ccc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a04258e6056b4572856d4ec05c40effec4e51910
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>È possibile connettersi a emulatori Android è in esecuzione su un Mac da una macchina virtuale Windows?
 
@@ -34,7 +34,7 @@ Per connettersi a un emulatore Android di Google in esecuzione in un computer Ma
     emulator6 94105 macuser   21u  IPv4 0xa8dacfb1d845a51f      0t0  TCP localhost:5554 (LISTEN)
     ```
 
-    La porta dispari è quello utilizzato per connettersi a `adb`. Vedere anche [http://developer.android.com/tools/devices/emulator.html#emulatornetworking](http://developer.android.com/tools/devices/emulator.html#emulatornetworking).
+    La porta dispari è quello utilizzato per connettersi a `adb`. Vedere anche [ http://developer.android.com/tools/devices/emulator.html#emulatornetworking ](http://developer.android.com/tools/devices/emulator.html#emulatornetworking).
 
 4.  _Opzione 1_: utilizzare [ `nc` ](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html) per inoltrare i pacchetti TCP in ingresso ricevuti esternamente sulla porta 5555 (o qualsiasi altra porta desiderato) alla porta dispari sull'interfaccia di loopback (**127.0.0.1 5555** in questo esempio), e inoltrare i pacchetti in uscita di nuovo l'altro modo:
 
@@ -92,13 +92,13 @@ Una certa cautela: se si utilizza la porta `5555` per la porta locale, `adb` con
 
 ### <a name="alternate-technique-using-adb--h-is-not-yet-supported"></a>Tecnica alternativa utilizzando `adb -H` non è ancora supportata
 
-In teoria, un altro approccio potrebbe consistere nell'utilizzare `adb`della funzionalità incorporate per connettersi a un `adb` server in esecuzione in un computer remoto (ad esempio [http://stackoverflow.com/a/18551325](http://stackoverflow.com/a/18551325)).
+In teoria, un altro approccio potrebbe consistere nell'utilizzare `adb`della funzionalità incorporate per connettersi a un' `adb` server in esecuzione in un computer remoto (vedere ad esempio [ http://stackoverflow.com/a/18551325 ](http://stackoverflow.com/a/18551325)).
 Tuttavia, le estensioni dell'IDE di xamarin non forniscono un modo per configurare tale opzione.
 
 ## <a name="contact-information"></a>Le informazioni di contatto
 
 Questo documento viene illustrato il comportamento corrente a partire da marzo 2016. La tecnica descritta in questo documento non è parte del gruppo di test stabile per Xamarin, pertanto è stato interrotto in futuro.
 
-Se si nota che la tecnica non funziona più, o se si notano errori nel documento, è possibile aggiungere alla discussione sul thread seguenti forum: [http://forums.xamarin.com/discussion/33702/ Android-Emulator-from-host-Device-Inside-Windows-VM](http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
+Se si nota che la tecnica non funziona più, o se si notano eventuali altri errori nel documento, è possibile aggiungere alla discussione sul thread seguenti forum: [ http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm ](http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
 Grazie
 

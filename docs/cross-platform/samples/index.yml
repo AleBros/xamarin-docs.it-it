@@ -6,12 +6,12 @@ metadata:
   author: conceptdev
   ms.author: crdun
   ms.date: 02/26/2018
-  ms.topic: article
-  ms.openlocfilehash: 24f32938930d7cf13374536f9513640ab8e834dc
-  ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+  ms.topic: sample
+  ms.openlocfilehash: e60722dbd99ab845c63eee2c585905f8d06e5279
+  ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 03/12/2018
+  ms.lasthandoff: 04/04/2018
 abstract:
   description: App e demo di codice di esempio multipiattaforma Xamarin per iniziare a creare app per dispositivi mobili con C# e Xamarin.
   menu:
@@ -26,7 +26,7 @@ sections:
     className: cardsW
     items:
     - href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
-      html: "Questo esempio è una dimostrazione di un'applicazione di tipo Elenco attività compilata con Xamarin.Forms, in cui i dati vengono archiviati e sono accessibili in un database locale di SQLite."
+      html: Questo esempio è una dimostrazione di un'applicazione di tipo Elenco attività compilata con Xamarin.Forms, in cui i dati vengono archiviati e sono accessibili in un database locale di SQLite.
       image:
         src: images/todo.png
         href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
@@ -50,7 +50,7 @@ sections:
     className: cardsW
     items:
     - href: https://github.com/xamarinhq/app-acquaint/
-      html: "App per la gestione dell'elenco contatti con una schermata di dettagli e modifica. Il codice sorgente è disponibile sia in Xamarin.Forms sia nelle implementazioni native di Xamarin."
+      html: App per la gestione dell'elenco contatti con una schermata di dettagli e modifica. Il codice sorgente è disponibile sia in Xamarin.Forms sia nelle implementazioni native di Xamarin.
       image:
         src: images/acquaint.jpg
         href: https://github.com/xamarinhq/app-acquaint

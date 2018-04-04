@@ -1,18 +1,17 @@
 ---
 title: Utilizzo di testo e campi di ricerca
 description: Questo articolo descrive la progettazione e l'utilizzo di campi di ricerca e di testo all'interno di un'app Xamarin.tvOS.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7d58c30e745e26d1076e75470e527cbe95e85eb6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 220c6e3d1c6f358c67a2f596c977f4d2132298a8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-text-and-search-fields"></a>Utilizzo di testo e campi di ricerca
 

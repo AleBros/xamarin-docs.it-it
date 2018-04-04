@@ -1,18 +1,17 @@
 ---
 title: 'Case Study: Tasky'
 description: Questo documento descrive l'applicazione nell'applicazione di esempio Tasky Portable i principi di compilazione di applicazioni multipiattaforma. Tocca sulla progettazione di applicazioni per dispositivi mobili, la scrittura di codice comune per il riutilizzo e l'implementazione di progetti specifici della piattaforma di iOS, Android e Windows Phone piattaforme di destinazione.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 5b16fe1d6dab776af31e0aff97a00065517550ec
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f8e663ab2e274bff1ae8b700586d4c6749f04545
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="case-study-tasky"></a>Case Study: Tasky
 
@@ -445,7 +444,7 @@ Nuovamente, con le versioni Android e iOS, il livello di applicazione costituita
 
  <a name="ViewModels" />
 
-#### <a name="viewmodels"></a>ViewModels
+#### <a name="viewmodels"></a>ViewModel
 
 ViewModel di eseguire il wrapping dei dati da una libreria di classi Portabile ( `TaskItemManager`) e le visualizza in modo che può essere utilizzata dall'associazione di dati XAML Silverlight. Questo è un esempio di comportamento specifico della piattaforma (come descritto nel documento di applicazioni multipiattaforma).
 

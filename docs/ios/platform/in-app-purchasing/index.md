@@ -1,17 +1,16 @@
 ---
 title: Acquisti in-app
-description: "le applicazioni iOS è possono vendere digitale prodotti e servizi utilizzando le API di Kit di archivio. I prodotti vengono creati e gestiti nel portale iTunes Connect. Apple gestisce l'elaborazione delle transazioni e approva tutti i prodotti prima di potere essere venduti e una tariffa per ogni transazione (30 %) attualmente). Apple richiede che si utilizza l'acquisto in-app per tutte le vendite digitale nell'app, ma non può essere utilizzato per le vendite del fisici beni o servizi non digitale. Le applicazioni che offrono opzioni di pagamento alternativo per i servizi e prodotti digitali sono probabile che vengano rifiutate. Questo documento viene illustrato come configurare l'applicazione per usare il Kit di archivio e fornisce esempi di xamarin degli scenari di acquisto in-app più comuni."
-ms.topic: article
+description: le applicazioni iOS è possono vendere digitale prodotti e servizi utilizzando le API di Kit di archivio. I prodotti vengono creati e gestiti nel portale iTunes Connect. Apple gestisce l'elaborazione delle transazioni e approva tutti i prodotti prima di potere essere venduti e una tariffa per ogni transazione (30 %) attualmente). Apple richiede che si utilizza l'acquisto in-app per tutte le vendite digitale nell'app, ma non può essere utilizzato per le vendite del fisici beni o servizi non digitale. Le applicazioni che offrono opzioni di pagamento alternativo per i servizi e prodotti digitali sono probabile che vengano rifiutate. Questo documento viene illustrato come configurare l'applicazione per usare il Kit di archivio e fornisce esempi di xamarin degli scenari di acquisto in-app più comuni.
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: af8eb556215679bab2da8f54e8231f7d7d3ed418
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7a8dec6051caeba55c45df29c085ecfcddd160d2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="in-app-purchasing"></a>Acquisti in-app
 
@@ -66,12 +65,12 @@ In questo articolo è stato introdotto il concetto di acquisto all'interno dell'
 
 - [InAppPurchaseSample](https://developer.xamarin.com/samples/StoreKit/)
 - [Nella Guida per programmatori acquisto App](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html)
-- [iTunes Connect Guida per sviluppatori](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/iTunesConnect_Guide.pdf)
+- [iTunes Connect Developer Guide](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/iTunesConnect_Guide.pdf) (Guida per sviluppatori di iTunes Connect)
 - [Archiviare il riferimento Framework Kit](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/StoreKit_Collection/StoreKit_Collection.pdf)
 - [Identificatori di prodotto di acquisto in-App domande e risposte](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
 - [Nota tecnica di acquisto in-App](https://developer.apple.com/library/ios/#technotes/tn2259/_index.html)
 - [Prima di inviare il primo App Store](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
 - [Centro risorse di App Store](https://developer.apple.com/appstore/index.html)
-- [Suggerimenti per la registrazione di App Store](https://developer.apple.com/appstore/resources/submission/tips.html)
-- [App Store Review Guidelines](https://developer.apple.com/appstore/resources/approval/guidelines.html)
+- [App Store Submission Tips](https://developer.apple.com/appstore/resources/submission/tips.html) (Suggerimenti per l'invio nell'App Store)
+- [App Store Review Guidelines](https://developer.apple.com/appstore/resources/approval/guidelines.html) (Linee guida sulle recensioni nell'App Store)
 - [La gestione delle applicazioni](https://developer.apple.com/appstore/resources/managing/index.html)

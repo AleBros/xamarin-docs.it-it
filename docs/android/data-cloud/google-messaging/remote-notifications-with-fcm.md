@@ -1,18 +1,17 @@
 ---
 title: Notifiche remote con Firebase Cloud Messaging
 description: Questa procedura dettagliata fornisce informazioni dettagliate su come utilizzare la messaggistica Cloud Firebase per implementare le notifiche remote (detto anche le notifiche push) in un'applicazione di xamarin. Viene illustrato come implementare varie classi che sono necessari per le comunicazioni con Firebase Cloud Messaging (FCM), vengono forniti esempi su come configurare il file manifesto Android per l'accesso a FCM e dimostra downstream messaggistica utilizzando il Firebase Console.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 7e107fc9ced62027bc793c97a388344d74becd66
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c6e1d36d871b4bb41a1e53d6e58ba8940813b29f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notifiche remote con Firebase Cloud Messaging
 

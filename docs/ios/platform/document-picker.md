@@ -1,17 +1,16 @@
 ---
 title: Selezione di documento
-description: "Il controller di visualizzazione documento selezione concede agli utenti di accedere a file esterni al sandbox di un'applicazione. È un semplice meccanismo per la condivisione di documenti tra app. Consente inoltre i flussi di lavoro più complessi, poiché gli utenti possono modificare un singolo documento con più applicazioni. In questo articolo viene fornita un'introduzione all'utilizzo la selezione del documento in un'applicazione di xamarin. IOS e le modifiche nei documenti iCloud necessari per supportarla."
-ms.topic: article
+description: Il controller di visualizzazione documento selezione concede agli utenti di accedere a file esterni al sandbox di un'applicazione. È un semplice meccanismo per la condivisione di documenti tra app. Consente inoltre i flussi di lavoro più complessi, poiché gli utenti possono modificare un singolo documento con più applicazioni. In questo articolo viene fornita un'introduzione all'utilizzo la selezione del documento in un'applicazione di xamarin. IOS e le modifiche nei documenti iCloud necessari per supportarla.
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 25b9d6c0eebd51a7b47b31c35fb3d5b56e45c3b3
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 33a6dc7294db74c3c8ab451f147c941124db8982
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="document-picker"></a>Selezione di documento
 

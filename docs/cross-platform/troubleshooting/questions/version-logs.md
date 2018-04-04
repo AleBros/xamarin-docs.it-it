@@ -1,17 +1,17 @@
 ---
 title: Dove posso trovare le informazioni sulla versione e i registri?
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 2d6ab8b939b7a6f8c7e66985a8c4238064ee1543
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a669daf5361e35305182922cdcb7c6a1fb92db47
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>Dove posso trovare le informazioni sulla versione e i registri?
 

@@ -1,18 +1,17 @@
 ---
-title: "Accessibilità"
+title: Accessibilità
 description: Compilazione di un'applicazione accessibile assicura che l'applicazione sia utilizzabile da persone che approccio dell'interfaccia utente con una gamma di esigenze ed esperienze.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 99B8A8E8-6F5E-46BC-9639-1C4A6D301049
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 54ca72669926822e84cdb96b5195e7cffbe39b52
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e4fb151b9664df7236d2c22ed54db09bf7bc65b8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="accessibility"></a>Accessibilità
 

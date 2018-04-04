@@ -1,18 +1,17 @@
 ---
 title: Associazione di un. AAR
 description: Questa procedura dettagliata vengono fornite istruzioni dettagliate per la creazione di una raccolta di associazioni xamarin Java da un Android. File AAR.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 380413B8-6A99-4BB8-B64C-3EAF9F359C22
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: ae209f8099925cc160e16cb5365625e48e6c384d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 101fb28add97749549de9c44292a1ef99a717dde
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-an-aar"></a>Associazione di un. AAR
 
@@ -284,7 +283,7 @@ var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
 
 Il **textanalyzer.aar** esempio contiene un file di immagine che si trova in **res/drawable/monkey.png**. Consente di accedere alla risorsa immagine e utilizzarlo nella nostra app di esempio:
 
-Modificare il **BindingTest** layout (**axml**) e aggiungere un `ImageView` alla fine del `LinearLayout` contenitore. Questo `ImageView` Visualizza l'immagine nella  **@drawable/monkey** ; questa immagine verrà caricata da sezione delle risorse di **textanalyzer.aar**:
+Modificare il **BindingTest** layout (**axml**) e aggiungere un `ImageView` alla fine del `LinearLayout` contenitore. Questo `ImageView` Visualizza l'immagine nella **@drawable/monkey**; questa immagine verrà caricata da sezione delle risorse di **textanalyzer.aar**:
 
 ```xml
     ...

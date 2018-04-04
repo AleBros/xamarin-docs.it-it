@@ -1,17 +1,16 @@
 ---
 title: Introduzione
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: cbce0659-fa03-447a-86ec-140438143230
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: d5d5de21c4f397f203b4da5ea86e1f9a0e4714e9
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: a4f1f6ba820221be7553405f570911d3dc66a657
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction"></a>Introduzione
 
@@ -150,7 +149,7 @@ Il progetto di libreria di classi Portabile eShopOnContainers.Core contiene le c
 |Servizi|Contiene le interfacce e classi che implementano i servizi forniti all'app.|
 |Trigger|Contiene il `BeginAnimation` trigger, viene utilizzato per richiamare un'animazione in XAML.|
 |Convalide|Contiene le classi coinvolte nella convalida dei dati di input.|
-|ViewModels|Contiene la logica dell'applicazione che viene esposto a pagine.|
+|ViewModel|Contiene la logica dell'applicazione che viene esposto a pagine.|
 |Visualizzazioni|Contiene le pagine per l'app.|
 
 ##### <a name="platform-projects"></a>Progetti di piattaforma

@@ -1,18 +1,17 @@
 ---
 title: Xamarin.Android Data Access
-description: "La maggior parte delle applicazioni presentano un requisito per salvare i dati nel dispositivo locale. A meno che la quantità di dati sia in modo semplice di piccole dimensioni, è in genere necessario un database e un livello di dati nell'applicazione per gestire l'accesso al database.  Viene semplificato l'accesso per archiviare e recuperare dati dalla piattaforma di Xamarin Android ha il motore di database SQLite 'predefinito'. Questo documento viene illustrato come accedere a un database SQLite in modo multipiattaforma."
-ms.topic: article
+description: La maggior parte delle applicazioni presentano un requisito per salvare i dati nel dispositivo locale. A meno che la quantità di dati sia in modo semplice di piccole dimensioni, è in genere necessario un database e un livello di dati nell'applicazione per gestire l'accesso al database.  Viene semplificato l'accesso per archiviare e recuperare dati dalla piattaforma di Xamarin Android ha il motore di database SQLite 'predefinito'. Questo documento viene illustrato come accedere a un database SQLite in modo multipiattaforma.
 ms.prod: xamarin
 ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 301c4330afe6ff7808ca7b09f6cc5260517aae43
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 508a8f54723bfdd30b1c8ea8d4b6c1d422ae24e9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinandroid-data-access"></a>Xamarin.Android Data Access
 

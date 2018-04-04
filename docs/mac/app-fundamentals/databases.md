@@ -1,18 +1,17 @@
 ---
 title: Database
 description: In questo articolo viene illustrato l'utilizzo chiave-valore di codifica e l'analisi per consentire l'associazione dati tra database SQLite e gli elementi dell'interfaccia utente in interfaccia generatore del Xcode chiave-valore. Descrive inoltre utilizzando il ORM SQLite.NET per fornire l'accesso ai dati di SQLite.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 39186735749174884646a72871accfa051d2901c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 33c1ab7092669bb1dbd4e7bfae628b58a0bf3726
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="databases"></a>Database
 

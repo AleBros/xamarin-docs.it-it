@@ -1,18 +1,17 @@
 ---
 title: Stili impliciti
-description: "Uno stile implicito è quello che viene utilizzato da tutti i controlli di TargetType stesso, senza la necessità di ciascun controllo per fare riferimento allo stile."
-ms.topic: article
+description: Uno stile implicito è quello che viene utilizzato da tutti i controlli di TargetType stesso, senza la necessità di ciascun controllo per fare riferimento allo stile.
 ms.prod: xamarin
 ms.assetid: 02A75F3B-4389-49D4-A2F4-AFD473A4A161
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: b96b306c882eb30aaf8c81604afb9b6a547d715b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d9c9f8816ea45ac122829739ad5134cc740263df
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="implicit-styles"></a>Stili impliciti
 

@@ -1,17 +1,17 @@
 ---
 title: Impostazione delle variabili di ambiente di Runtime Mono per i progetti iOS in Studio a Xamarin
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1176CEA9-C7F1-411B-8F1A-99374E8AFF33
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/31/2017
-ms.openlocfilehash: 6032ea89aa54719cc4b0fdde67e67f1ec8fb183b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5f4f3a2de012d35ddca9c1fa830d599d9d5acb17
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-do-i-set-mono-runtime-environment-variables-for-ios-projects-in-xamarin-studio"></a>Impostazione delle variabili di ambiente di Runtime Mono per i progetti iOS in Studio a Xamarin
 
@@ -25,6 +25,6 @@ Per impostare in modo permanente una variabile di ambiente per un'app, è necess
    --setenv=NAME=VALUE
 ```
 
-Per visualizzare le variabili di ambiente che è possibile impostare, fare riferimento alla pagina man Mono: [http://docs.go-mono.com/?link=man%3amono (1)](http://docs.go-mono.com/?link=man%3amono(1)) vedere la sezione: `ENVIRONMENT VARIABLES`
+Per visualizzare le variabili di ambiente che è possibile impostare, fare riferimento alla pagina man Mono: [ http://docs.go-mono.com/?link=man%3amono(1) ](http://docs.go-mono.com/?link=man%3amono(1)) vedere la sezione intitolata: `ENVIRONMENT VARIABLES`
 
 ![](xs-mono-runtime-images/environment-variables.jpg "Impostazione delle variabili di ambiente per un progetto")

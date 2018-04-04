@@ -1,18 +1,17 @@
 ---
-title: 'Procedura dettagliata: creazione di un''interfaccia a schede con TabHost'
-description: "In questo articolo verrà illustrata la creazione di un'interfaccia a schede in tramite l'API TabHost xamarin."
-ms.topic: article
+title: "Procedura dettagliata: creazione di un'interfaccia a schede con TabHost"
+description: In questo articolo verrà illustrata la creazione di un'interfaccia a schede in tramite l'API TabHost xamarin.
 ms.prod: xamarin
 ms.assetid: AD6E2173-974E-477C-940F-0CAB5E53326D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 2dd397e824ce7735be4421c3f258852de3f77ecb
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ca9a3f3d31707205cdcd4e0d8e74fa303ccba047
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---creating-a-tabbed-ui-with-tabhost"></a>Procedura dettagliata: creazione di un'interfaccia a schede con TabHost
 

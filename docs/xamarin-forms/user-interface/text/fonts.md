@@ -1,18 +1,17 @@
 ---
 title: Tipi di carattere
 description: Impostazione tipi di carattere in xamarin. Forms
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 771e1607bc4e6be8f0991e159b5d34f6d4ea9c02
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e492bee2b43f2be54f450550e3f44e7da3de258e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="fonts"></a>Tipi di carattere
 

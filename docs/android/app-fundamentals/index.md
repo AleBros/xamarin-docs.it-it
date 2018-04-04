@@ -1,18 +1,17 @@
 ---
 title: Nozioni fondamentali sulle applicazioni
 description: Concetti di base dell'applicazione
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 935B8BFE-23B7-4239-5C87-F4A503B889CB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 4abb8c823c62bc62fd2e6f717cc1b5bde9057e4e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cfb31fa6cac7c4848054cd58a1e144c2ac944262
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-fundamentals"></a>Nozioni fondamentali sulle applicazioni
 
@@ -47,7 +46,7 @@ In questo articolo viene illustrato come localizzare un xamarin in altri linguag
 
 In questo articolo vengono illustrati i servizi Android, che sono componenti di Android che consentono di lavoro da eseguire in background. Vengono illustrati i diversi scenari appropriati per i servizi e viene illustrato come implementarle entrambe per l'esecuzione di attività in background con esecuzione prolungata nonché per fornire un'interfaccia per le chiamate di procedura remota.
 
-## <a name="broadcast-receiversandroidapp-fundamentalsbroadcast-receiversmd"></a>[Ricevitori di broadcast](~/android/app-fundamentals/broadcast-receivers.md)
+## <a name="broadcast-receiversandroidapp-fundamentalsbroadcast-receiversmd"></a>[Ricevitori di trasmissione](~/android/app-fundamentals/broadcast-receivers.md)
 
 Questa guida illustra come creare e utilizzare broadcast ricevitori, un componente di Android che risponde alle trasmissioni a livello di sistema, in xamarin.
 
@@ -64,14 +63,14 @@ Questa guida illustra come creare e utilizzare broadcast ricevitori, un componen
 Android fornisce un framework molto avanzato e diverse per il supporto grafica 2D e le animazioni. Questo documento introduce questi Framework e viene illustrato come creare animazioni e immagini personalizzate e usarle in un'applicazione di xamarin.
 
 
-##  <a name="cpu-architecturesandroidapp-fundamentalscpu-architecturesmd"></a>[Architetture della CPU](~/android/app-fundamentals/cpu-architectures.md)
+##  <a name="cpu-architecturesandroidapp-fundamentalscpu-architecturesmd"></a>[Architetture CPU](~/android/app-fundamentals/cpu-architectures.md)
 
 Xamarin supporta diverse architetture della CPU, inclusi i dispositivi a 32 bit e 64 bit. In questo articolo viene illustrato come destinazione un'applicazione per uno o più architetture della CPU supportata Android.
 
 
 
 
-##  <a name="handling-rotationandroidapp-fundamentalshandling-rotationmd"></a>[Rotazione di gestione](~/android/app-fundamentals/handling-rotation.md)
+##  <a name="handling-rotationandroidapp-fundamentalshandling-rotationmd"></a>[Gestione della rotazione](~/android/app-fundamentals/handling-rotation.md)
 
 In questo articolo viene descritto come gestire le modifiche di orientamento di dispositivo in xamarin. Viene illustrato come utilizzare con il sistema Android risorse per caricare automaticamente risorse per un orientamento del dispositivo specifico nonché come gestire a livello di programmazione orientamento cambia. Quindi vengono descritte le tecniche per mantenere lo stato quando un dispositivo viene ruotato.
 

@@ -1,18 +1,17 @@
 ---
 title: Associazione di una. FILE JAR
 description: Questa procedura dettagliata vengono fornite istruzioni dettagliate per la creazione di una raccolta di associazioni xamarin Java da un Android. File JAR.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: bbbf3fb09edb802f1315977fb14ecfe154b2572f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a6cb08f19aac46ffa089914e28c732660caa52b2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-a-jar"></a>Associazione di una. FILE JAR
 

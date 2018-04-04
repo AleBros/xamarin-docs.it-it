@@ -1,18 +1,17 @@
 ---
 title: L'aggiornamento dell'App per iOS 11
-description: "Esplorare le nuove funzionalità di iOS 11"
-ms.topic: article
+description: Esplorare le nuove funzionalità di iOS 11
 ms.prod: xamarin
 ms.assetid: EC809504-9CF6-4949-B6EE-36384297E744
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: cced7cc3d1b0579c36d598ef0d05da872478c8dc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2581f729d85787021763f50f005e84d6bbb5db01
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="updating-your-app-to-ios-11"></a>L'aggiornamento dell'App per iOS 11
 
@@ -26,7 +25,7 @@ Una delle principali modifiche che è necessario essere consapevoli di con iOS 1
 
 Questa guida descrive l'aggiornamento dell'app per a 64 bit.
 
-## <a name="visual-design-updatesvisual-designmd"></a>[Aggiornamenti di progettazione visiva](visual-design.md)
+## <a name="visual-design-updatesvisual-designmd"></a>[Aggiornamenti della progettazione visiva](visual-design.md)
 
 In iOS 11, Apple ha introdotto nuove modifiche visive tra cui gli aggiornamenti per la barra di spostamento, barra di ricerca e viste delle tabelle. Inoltre, sono stati apportati miglioramenti per consentire maggiore flessibilità su margini e il contenuto a schermo intero. Queste modifiche sono descritte in questa Guida.
 

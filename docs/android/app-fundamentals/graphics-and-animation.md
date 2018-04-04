@@ -1,18 +1,17 @@
 ---
 title: Grafica e animazione
 description: Android fornisce un framework molto avanzato e diverse per il supporto grafica 2D e le animazioni. In questo argomento introduce questi Framework e viene illustrato come creare grafici personalizzati e le animazioni per l'utilizzo in un'applicazione di xamarin.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 80086318-6FE4-4711-9A71-5C8F8C28C754
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 25a10fdcfc612d85875ba684fced3f188400b71e
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 85a7cd2ac5094a4760c5465bd099ce2e3beeae79
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="graphics-and-animation"></a>Grafica e animazione
 

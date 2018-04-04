@@ -1,18 +1,17 @@
 ---
-title: "Funzionalità di gelato Sandwich"
-description: "In questo articolo vengono descritte molte delle nuove funzionalità disponibili per gli sviluppatori di applicazioni con l'API Android di 4 - Sandwich gelato. Vengono illustrate diverse nuove tecnologie di interfaccia utente e quindi esamina un'ampia gamma di nuove funzionalità che offre aggiornamenti per la condivisione dei dati tra le applicazioni e tra i dispositivi Android 4."
-ms.topic: article
+title: Funzionalità di gelato Sandwich
+description: In questo articolo vengono descritte molte delle nuove funzionalità disponibili per gli sviluppatori di applicazioni con l'API Android di 4 - Sandwich gelato. Vengono illustrate diverse nuove tecnologie di interfaccia utente e quindi esamina un'ampia gamma di nuove funzionalità che offre aggiornamenti per la condivisione dei dati tra le applicazioni e tra i dispositivi Android 4.
 ms.prod: xamarin
 ms.assetid: 78E18A62-C12F-A699-37FA-44B9F6B44273
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: c2e7f9fabd462faf813299021d5f84ef0a62f790
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 3c5412629f6dcd31fb0a82634ef530569eef459a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ice-cream-sandwich-features"></a>Funzionalità di gelato Sandwich
 

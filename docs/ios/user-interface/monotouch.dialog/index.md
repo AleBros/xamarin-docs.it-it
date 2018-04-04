@@ -1,17 +1,16 @@
 ---
 title: Introduzione a MonoTouch.Dialog
-description: "MonoTouch.Dialog (MT D) toolkit è un framework indispensabile per lo sviluppo dell'interfaccia utente in xamarin. IOS rapido di applicazioni. MT D rende rapido e semplice definire l'applicazione complessa dell'interfaccia utente utilizzando un approccio dichiarativo, anziché il numero di controller di navigazione, tabelle e così via. Inoltre, MT D dispone di un set di API che forniscono agli sviluppatori con un controllo completo o trasferisce approccio, nonché a funzionalità aggiuntive, ad esempio l'immagine di sfondo pull per l'aggiornamento, il caricamento, Cerca il supporto e la generazione dell'interfaccia utente dinamica tramite i dati JSON flessibile. Questa guida illustra i diversi modi per utilizzare MT D e quindi approfondisce deep utilizzo avanzato."
-ms.topic: article
+description: MonoTouch.Dialog (MT D) toolkit è un framework indispensabile per lo sviluppo dell'interfaccia utente in xamarin. IOS rapido di applicazioni. MT D rende rapido e semplice definire l'applicazione complessa dell'interfaccia utente utilizzando un approccio dichiarativo, anziché il numero di controller di navigazione, tabelle e così via. Inoltre, MT D dispone di un set di API che forniscono agli sviluppatori con un controllo completo o trasferisce approccio, nonché a funzionalità aggiuntive, ad esempio l'immagine di sfondo pull per l'aggiornamento, il caricamento, Cerca il supporto e la generazione dell'interfaccia utente dinamica tramite i dati JSON flessibile. Questa guida illustra i diversi modi per utilizzare MT D e quindi approfondisce deep utilizzo avanzato.
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: b9bf4c5ee803aa60a2730703e64fcf73d07efdb5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: be979b35ffdd597dae74f1f661a381ae44433b10
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-monotouchdialog"></a>Introduzione a MonoTouch.Dialog
 

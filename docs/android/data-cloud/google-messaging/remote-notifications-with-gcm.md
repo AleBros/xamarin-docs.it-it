@@ -1,18 +1,17 @@
 ---
 title: Notifiche remote con Google Cloud Messaging
-description: "Questa procedura dettagliata fornisce informazioni dettagliate su come usare Google Cloud Messaging per implementare le notifiche remote (detto anche le notifiche push) in un'applicazione di xamarin. Descrive le varie classi che è necessario implementare per comunicare con Google Cloud Messaging (GCM), viene spiegato come impostare le autorizzazioni nel manifesto dell'Android per l'accesso a GCM e viene illustrato come la messaggistica con un programma di test di esempio end-to-end."
-ms.topic: article
+description: Questa procedura dettagliata fornisce informazioni dettagliate su come usare Google Cloud Messaging per implementare le notifiche remote (detto anche le notifiche push) in un'applicazione di xamarin. Descrive le varie classi che è necessario implementare per comunicare con Google Cloud Messaging (GCM), viene spiegato come impostare le autorizzazioni nel manifesto dell'Android per l'accesso a GCM e viene illustrato come la messaggistica con un programma di test di esempio end-to-end.
 ms.prod: xamarin
 ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/13/2018
-ms.openlocfilehash: 823fad163e837adab5490446c23ab2f492679114
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 969b1b36659ac52782d30a1840ba352524e5e3c6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notifiche remote con Google Cloud Messaging
 

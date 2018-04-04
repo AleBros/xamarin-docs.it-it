@@ -1,18 +1,17 @@
 ---
 title: Qualificatori delle risorse e le opzioni di visualizzazione
-description: "In questo argomento viene illustrato come definire le risorse che verranno utilizzate solo quando vengono confrontati alcuni valori di qualificatore. Un semplice esempio è una risorsa stringa qualificata language. Una risorsa stringa può essere definita come impostazione predefinita, con altre risorse alternative definite per essere utilizzato per lingue aggiuntive. Tutti i tipi di risorse possono essere qualificati, incluso il layout di se stesso."
-ms.topic: article
+description: In questo argomento viene illustrato come definire le risorse che verranno utilizzate solo quando vengono confrontati alcuni valori di qualificatore. Un semplice esempio è una risorsa stringa qualificata language. Una risorsa stringa può essere definita come impostazione predefinita, con altre risorse alternative definite per essere utilizzato per lingue aggiuntive. Tutti i tipi di risorse possono essere qualificati, incluso il layout di se stesso.
 ms.prod: xamarin
 ms.assetid: 2111C18A-3EDA-3787-25E1-3869FF4BE441
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/29/2018
-ms.openlocfilehash: bff6d917fc4ce65daed329f15d6648bbfe0dd069
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bc9eb145b6d9ed7bd441d625f533c5cbbd87fccd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Qualificatori delle risorse e le opzioni di visualizzazione
 

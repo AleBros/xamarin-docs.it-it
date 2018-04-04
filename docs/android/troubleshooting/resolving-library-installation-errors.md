@@ -1,18 +1,18 @@
 ---
 title: Risoluzione degli errori di installazione di libreria
 description: In alcuni casi, potrebbero verificarsi errori durante l'installazione delle librerie di supporto Android. Questa guida vengono illustrate soluzioni alternative per alcuni errori comuni.
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 2AE68ACE-8496-445D-BF17-5E4097D4AE35
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 66555139cfaab2074e7461be737f997a9bb9c7a7
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 6f280a90994ff40ebd8a07d2cab49ddc2b3d6ca1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resolving-library-installation-errors"></a>Risoluzione degli errori di installazione di libreria
 
@@ -104,7 +104,7 @@ Se si è tentato di utilizzare la procedura di ripristino automatico precedente 
 
     -   [Android\_m2repository\_r16.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r16.zip) &ndash; 0595E577D19D31708195A83087881EE6
 
-    Se il **m2repository** archivio non viene visualizzato in questa tabella, è possibile creare l'URL di download anteponendo  **https://dl-ssl.google.com/android/repository/**  al nome del **m2repository** per il download. Ad esempio, utilizzare  **https://dl-ssl.google.com/android/repository/android \_m2repository\_r10.zip** scaricare **android\_m2repository\_r10.zip**.
+    Se il **m2repository** archivio non viene visualizzato in questa tabella, è possibile creare l'URL di download anteponendo **https://dl-ssl.google.com/android/repository/** al nome del **m2repository** per il download. Ad esempio, utilizzare  **https://dl-ssl.google.com/android/repository/android \_m2repository\_r10.zip** scaricare **android\_m2repository\_r10.zip**.
 
 2.  Rinominare il file con il corrispondente hash MD5 dell'URL di download, come illustrato nella tabella precedente. Ad esempio, se è stato scaricato **android\_m2repository\_r25.zip**, rinominarlo in **0B3F1796C97C707339FB13AE8507AF50.zip**. Se l'hash MD5 per l'URL di download del file scaricato non è illustrato nella tabella, è possibile utilizzare un [online MD5 generatore](http://www.webconfs.com/online-md5-generator.php) per convertire l'URL in una stringa hash MD5. 
 

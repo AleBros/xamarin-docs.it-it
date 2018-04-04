@@ -1,18 +1,17 @@
 ---
 title: Aggiunta di funzionalità con servizi cognitivi
 description: Servizi cognitivi Microsoft sono un set di API e SDK di servizi disponibili per gli sviluppatori per rendere le applicazioni più intelligenti aggiungendo funzionalità quali il riconoscimento facciale, riconoscimento vocale e comprensione del linguaggio. In questo articolo viene fornita un'introduzione all'applicazione di esempio che illustra come richiamare alcune delle API dei servizi Microsoft cognitivi.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: fd67629b9e8d0057ccf3b95b9e84ff1d16acbd7b
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: 2600b52b6e044ca9a3a8387bcf719dd1632c406d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="adding-intelligence-with-cognitive-services"></a>Aggiunta di funzionalità con servizi cognitivi
 

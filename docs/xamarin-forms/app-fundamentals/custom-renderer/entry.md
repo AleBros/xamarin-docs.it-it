@@ -1,18 +1,17 @@
 ---
 title: Personalizzazione di una voce
 description: Il controllo voce di xamarin. Forms consente una singola riga di testo da modificare. In questo articolo viene illustrato come creare un renderer personalizzato per il controllo voce, consentendo agli sviluppatori di eseguire l'override per il rendering predefinito nativo con le personalizzazioni specifiche della piattaforma.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 0fe7aa2316abaae33da753e99a6f2eca4870d2d0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1e8ef47ceb381a0e4e163aaa24795d46264195da
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-an-entry"></a>Personalizzazione di una voce
 

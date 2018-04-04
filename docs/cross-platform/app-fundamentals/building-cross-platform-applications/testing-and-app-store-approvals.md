@@ -1,5 +1,5 @@
 #<a name="---"></a>---
-titolo: ms. topic "Parte 6 – test e App Store approvazioni": article ms. Prod: ms. AssetID xamarin: ms. Technology 46E0578A-7EB9-C105-ABB0-A043E501F36B: autore xamarin multipiattaforma: author asb3993: amburns ms. date: 23/03/2017
+titolo: "Parte 6 – test e App Store approvazioni" ms. Prod: ms. AssetID xamarin: ms. Technology 46E0578A-7EB9-C105-ABB0-A043E501F36B: autore xamarin-multipiattaforma: author asb3993: MS amburns: 03/23/2017
 ---
 
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6 - test e le approvazioni App Store

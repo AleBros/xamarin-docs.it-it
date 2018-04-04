@@ -1,18 +1,17 @@
 ---
 title: Riconoscimento vocale Android
 description: Questo articolo vengono illustrate le nozioni di base dell'utilizzo di spazio dei nomi Android.Speech molto potente. Dall'inizio, Android è stato in grado di riconoscimento vocale e di eseguirne l'output come testo. È un processo relativamente semplice. Per sintesi vocale, tuttavia, il processo è più complesso, perché non solo il motore di riconoscimento vocale deve essere prese in considerazione, ma anche le lingue disponibili e installate dal sistema di sintesi vocale (TTS).
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FA3B8EC4-34D2-47E3-ACEA-BD34B28115B9
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/02/2018
-ms.openlocfilehash: acc64fee37e1a6046991355389a09a29e1889993
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: bdaa9bf09485c06551a2df15a2e3a4b410a53e75
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-speech"></a>Riconoscimento vocale Android
 

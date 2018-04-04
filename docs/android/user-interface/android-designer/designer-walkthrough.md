@@ -1,18 +1,17 @@
 ---
 title: Utilizzando la finestra di progettazione Android
-description: "In questo argomento è una procedura dettagliata della finestra di progettazione di xamarin. Viene illustrato come creare un'interfaccia utente per un'applicazione browser del colore; Questa interfaccia utente viene creata interamente nella finestra di progettazione."
-ms.topic: article
+description: In questo argomento è una procedura dettagliata della finestra di progettazione di xamarin. Viene illustrato come creare un'interfaccia utente per un'applicazione browser del colore; Questa interfaccia utente viene creata interamente nella finestra di progettazione.
 ms.prod: xamarin
 ms.assetid: 70FF2F9A-71BD-317E-C881-A44D82DF1BD8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/29/2018
-ms.openlocfilehash: c9ec0d3bc9c3278f097b925ccb755323df950c62
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ea3d4a7f848847d6a9f7341faec47294a4cab3f8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-android-designer"></a>Utilizzando la finestra di progettazione Android
 

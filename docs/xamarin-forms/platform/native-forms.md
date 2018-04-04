@@ -1,18 +1,17 @@
 ---
 title: Moduli nativi
 description: I moduli nativi consentono pagine derivate ContentPage xamarin. Forms deve essere utilizzato da progetti nativi, xamarin. IOS, xamarin e della piattaforma UWP (Universal Windows). Progetti nativi possono utilizzare le pagine derivate ContentPage che vengono aggiunti direttamente al progetto o da una libreria di classe portabile (PCL), la libreria Standard di .NET o progetto condiviso. In questo articolo viene illustrato come utilizzare pagine derivate ContentPage aggiunti direttamente a progetti nativi e come passare tra di essi.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: 5a7d4ab69ff3ccd1a50ea4fccb6e494f7c73fc72
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9d0d4e69228ce8a1d9944833bff80b22ea5f9ddd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-forms"></a>Moduli nativi
 

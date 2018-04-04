@@ -1,18 +1,17 @@
 ---
 title: Storyboard unificati
-description: "Gli storyboard unificati consentono iOS allo sviluppatore di creare l'interfaccia utente con un unico storyboard, anziché più storyboard, per coprire l'intervallo di espansione delle dimensioni dello schermo di dispositivi. In questo articolo è progettato per offrire una panoramica più approfondita per l'esecuzione dello storyboard unificato all'interno di xamarin. IOS."
-ms.topic: article
+description: Gli storyboard unificati consentono iOS allo sviluppatore di creare l'interfaccia utente con un unico storyboard, anziché più storyboard, per coprire l'intervallo di espansione delle dimensioni dello schermo di dispositivi. In questo articolo è progettato per offrire una panoramica più approfondita per l'esecuzione dello storyboard unificato all'interno di xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 60b2e6fa65226631fe2d2c847a56852ac9ae63d2
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: d84afd0d33a6115d5d3ef9ea9b68d3370f9bb946
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="unified-storyboards"></a>Storyboard unificati
 
@@ -680,7 +679,7 @@ E quando l'applicazione viene eseguita nel simulatore di iPhone, l'elemento è m
 
  [![](unified-storyboards-images/exclude05.png "L'elemento mancante quando l'app in esecuzione nel simulatore di iPhone")](unified-storyboards-images/exclude05.png#lightbox)
 
-Per rimuovere un caso di esclusione da un elemento, è sufficiente selezionare l'elemento di **area di progettazione**, scorrere fino alla fine del **Esplora proprietà** e fare clic sul  **-** accanto il case da rimuovere.
+Per rimuovere un caso di esclusione da un elemento, è sufficiente selezionare l'elemento di **area di progettazione**, scorrere fino alla fine del **Esplora proprietà** e fare clic sul **-**accanto il case da rimuovere.
 
 Per visualizzare un'implementazione di storyboard unificata, esaminare il `UnifiedStoryboard` Xamarin iOS 8 applicazione associato a questo documento di esempio.
 

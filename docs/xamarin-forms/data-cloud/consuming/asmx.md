@@ -1,18 +1,17 @@
 ---
 title: Utilizzo di un servizio Web ASP.NET (ASMX)
-description: "ASMX offre la possibilità di compilare servizi web che inviano messaggi utilizzando l'oggetto accesso protocollo SOAP (Simple). SOAP è un protocollo indipendente dalla piattaforma e indipendente dal linguaggio per la compilazione e l'accesso ai servizi web. I consumer di un servizio ASMX non è necessario conoscere la piattaforma, un modello a oggetti o un linguaggio di programmazione utilizzato per implementare il servizio. È sufficiente comprendere come inviare e ricevere messaggi SOAP. In questo articolo viene illustrato come utilizzare un servizio ASMX SOAP da un'applicazione di xamarin. Forms."
-ms.topic: article
+description: ASMX offre la possibilità di compilare servizi web che inviano messaggi utilizzando l'oggetto accesso protocollo SOAP (Simple). SOAP è un protocollo indipendente dalla piattaforma e indipendente dal linguaggio per la compilazione e l'accesso ai servizi web. I consumer di un servizio ASMX non è necessario conoscere la piattaforma, un modello a oggetti o un linguaggio di programmazione utilizzato per implementare il servizio. È sufficiente comprendere come inviare e ricevere messaggi SOAP. In questo articolo viene illustrato come utilizzare un servizio ASMX SOAP da un'applicazione di xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: D5533964-5528-4D35-9C2B-FAFB632472AC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: a095dbbb78ad1517791356ae0b7cbeaa94d1336f
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: c45f0de039abc3f98b7c269f183e2883a495910b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>Utilizzo di un servizio Web ASP.NET (ASMX)
 

@@ -1,18 +1,17 @@
 ---
 title: EventToCommandBehavior riutilizzabili
 description: Comportamenti possono essere utilizzati per associare i comandi con i controlli che non sono stati progettati per interagire con i comandi. In questo articolo viene illustrato l'utilizzo di un comportamento di xamarin. Forms per richiamare un comando quando viene generato un evento.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: EC7F6556-9776-40B8-9424-A8094482A2F3
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: d82a1391feca9187cf2aca4394509447aeac6a18
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 530c47703d72a3d199a35dbf04f4a0b3851921b9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior riutilizzabili
 

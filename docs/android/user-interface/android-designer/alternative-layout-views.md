@@ -1,18 +1,17 @@
 ---
 title: Visualizzazioni alternative di Layout
-description: "In questo argomento viene illustrato come layout può essere con controllo delle versioni con qualificatori delle risorse. Ad esempio, si può essere una versione di un layout in cui viene utilizzato solo quando il dispositivo è in modalità orizzontale e una versione di layout che è solo per la modalità verticale."
-ms.topic: article
+description: In questo argomento viene illustrato come layout può essere con controllo delle versioni con qualificatori delle risorse. Ad esempio, si può essere una versione di un layout in cui viene utilizzato solo quando il dispositivo è in modalità orizzontale e una versione di layout che è solo per la modalità verticale.
 ms.prod: xamarin
 ms.assetid: 5EBF51FC-9048-F0CF-624A-D8782A91C1FD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/21/2017
-ms.openlocfilehash: c2df60a79ea3b5a0ff226cfaade0440db13fd5ea
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d2228169ed5d8575c9e332c85d963fca0400dea8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alternative-layout-views"></a>Visualizzazioni alternative di Layout
 

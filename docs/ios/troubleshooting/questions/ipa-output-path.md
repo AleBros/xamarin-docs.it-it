@@ -1,17 +1,17 @@
 ---
-title: "È possibile modificare il percorso di output del file IPA?"
-ms.topic: article
+title: È possibile modificare il percorso di output del file IPA?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F5E5DCC6-F7CC-48E2-89E8-709E9C269502
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 2cb5ef615bfd965ce3fbd4efbab7669fe12679a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 06074566b3d3a05e05a1646c70de211f908f3aa9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="can-i-change-the-output-path-of-the-ipa-file"></a>È possibile modificare il percorso di output del file IPA?
 
@@ -44,7 +44,7 @@ Questi passaggi funzionerà per qualsiasi progetto iOS che usa il motore di comp
 2. Impostare il DestinationFolder nella cartella di output desiderato. Come al solito è possibile utilizzare la proprietà di MSBuild (ad esempio $(OutputPath)) all'interno di questo argomento se si desidera.
 
 ## <a name="notes"></a>Note
-- Il `CreateIpaDependsOn` proprietà definita nel `Xamarin.iOS.Common.targets` file che è parte di xamarin. IOS. Si comporta come descritto in *proprietà 'DependsOn' verrà ignorato* su [https://msdn.microsoft.com/en-us/library/ms366724.aspx](https://msdn.microsoft.com/en-us/library/ms366724.aspx).
+- Il `CreateIpaDependsOn` proprietà definita nel `Xamarin.iOS.Common.targets` file che è parte di xamarin. IOS. Si comporta come descritto in *delle proprietà 'DependsOn' verrà ignorato* sul [ https://msdn.microsoft.com/en-us/library/ms366724.aspx ](https://msdn.microsoft.com/en-us/library/ms366724.aspx).
 
 - È possibile utilizzare un **spostare** attività piuttosto che un **copia** attività se preferito. Se si sceglie l'opzione e sono la creazione in Windows, è necessario utilizzare il nome completo attività `<Microsoft.Build.Tasks.Move>` per evitare ambiguità con il XamarinVS attività di compilazione.
 
@@ -78,6 +78,6 @@ Questi passaggi funzionerà per qualsiasi progetto iOS che usa il motore di comp
 2. Impostare il `DestinationFolder` nella cartella di output desiderato. Come al solito è possibile utilizzare le proprietà di MSBuild (ad esempio `$(OutputPath)`) all'interno di questo argomento se si desidera.
 
 ## <a name="notes"></a>Note
-- Il `CreateIpaDependsOn` proprietà definita nel `Xamarin.iOS.Common.targets` file che è parte di xamarin. IOS. Si comporta come descritto in *verrà ignorato "DependsOn" proprietà* su [https://msdn.microsoft.com/en-us/library/ms366724.aspx](https://msdn.microsoft.com/en-us/library/ms366724.aspx).
+- Il `CreateIpaDependsOn` proprietà definita nel `Xamarin.iOS.Common.targets` file che è parte di xamarin. IOS. Si comporta come descritto in *delle proprietà "DependsOn" verrà ignorato* sul [ https://msdn.microsoft.com/en-us/library/ms366724.aspx ](https://msdn.microsoft.com/en-us/library/ms366724.aspx).
 
 - È possibile utilizzare un **spostare** attività piuttosto che un **copia** attività se preferito. Se si sceglie l'opzione e sono la creazione in Windows, è necessario utilizzare il nome completo attività `<Microsoft.Build.Tasks.Move>` per evitare ambiguità con il XamarinVS attività di compilazione.

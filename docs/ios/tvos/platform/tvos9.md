@@ -1,18 +1,17 @@
 ---
 title: Introduzione a tvOS 9
-description: "Questo articolo descrive tutte le nuove e modificate le API e le funzionalità disponibili in tvOS 9 per gli sviluppatori Xamarin.tvOS."
-ms.topic: article
+description: Questo articolo descrive tutte le nuove e modificate le API e le funzionalità disponibili in tvOS 9 per gli sviluppatori Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 55e83658e09bc7e5c12bb3ef3f508497651ec46c
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e2e3843506061cc79ad911404468477bf49dfe56
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-tvos-9"></a>Introduzione a tvOS 9
 

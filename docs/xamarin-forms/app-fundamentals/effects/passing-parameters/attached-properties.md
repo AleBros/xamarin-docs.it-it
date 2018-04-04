@@ -1,18 +1,17 @@
 ---
-title: "Passaggio di parametri effetto come proprietà associate"
-description: "Le proprietà associate consente di definire i parametri di effetto che rispondono alle modifiche di proprietà di runtime. In questo articolo viene illustrato l'utilizzo di proprietà per passare i parametri per un effetto e modificare un parametro in fase di esecuzione associate."
-ms.topic: article
+title: Passaggio di parametri effetto come proprietà associate
+description: Le proprietà associate consente di definire i parametri di effetto che rispondono alle modifiche di proprietà di runtime. In questo articolo viene illustrato l'utilizzo di proprietà per passare i parametri per un effetto e modificare un parametro in fase di esecuzione associate.
 ms.prod: xamarin
 ms.assetid: DFCDCB9F-17DD-4117-BD53-B4FB206BB387
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: 585d0422b4dc2b35fc8ba50ed82d2d34e53a784e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c02929c49d9757f0814208d5f4fce7d258a689bd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passaggio di parametri effetto come proprietà associate
 

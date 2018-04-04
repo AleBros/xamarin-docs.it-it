@@ -1,18 +1,17 @@
 ---
 title: Progetti di installazione Windows
 description: Aggiunta di nuovi progetti di Windows a una soluzione xamarin. Forms esistente
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A0774D2E-6994-4D91-84E8-DAB66FC92320
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/16/2016
-ms.openlocfilehash: 2acabc68c595bfb3bbd5c3516f68cd777ba10327
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0ad8dedc2e92005473f8836c3cdd590ce4cab5ab
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="setup-windows-projects"></a>Progetti di installazione Windows
 

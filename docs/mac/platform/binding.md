@@ -1,18 +1,17 @@
 ---
 title: Associazione di raccolte Mac
 description: In questo modo altri documenti che descrivono come creare associazioni per Objective-C librariesl Guida
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 521707CD-79D3-488A-84CB-A37EBF93AC94
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/13/2017
-ms.openlocfilehash: 918c02542ee861b44411c29b01510a92659dee42
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c70a34acbdac6339a96000a2f987d4ac4f3d6a45
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-mac-libraries"></a>Associazione di raccolte Mac
 
@@ -27,7 +26,7 @@ Vedere i collegamenti seguenti per informazioni sull'associazione di librerie Ob
   descrive tutti gli attributi disponibili per gli autori delle associazioni per gestire il processo di generazione di associazione.
 
 
-<a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Obiettivo Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
+<a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 -------------------
 
 Obiettivo Sharpie è uno strumento da riga di comando per avviare il primo passaggio di un'associazione.
@@ -41,5 +40,5 @@ Consultare la [esempio XMBindingExample Mac](https://github.com/xamarin/mac-samp
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Associazione Objective-C](~/cross-platform/macios/binding/index.md)
+- [Binding di Objective-C](~/cross-platform/macios/binding/index.md)
 - [Associazione di raccolte di iOS](~/ios/platform/binding-objective-c/index.md)

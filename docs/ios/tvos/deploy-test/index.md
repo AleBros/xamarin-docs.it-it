@@ -1,18 +1,17 @@
 ---
 title: Distribuzione e test
 description: Questa sezione vengono trattati gli argomenti utilizzati per testare un'app e come la distribuzione. Argomenti qui includono, ad esempio, gli strumenti utilizzati per il debug, distribuzione a tester e come pubblicare un'applicazione in App Store di Apple TV.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DA4B4BD7-DC09-4F61-BC07-36727AF52BA2
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: f781e0ad889415d75f22e7dd5fb3eae75d080a8f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ab5b12e13095212a070c308b7e21d008c9aa2673
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deployment-and-testing"></a>Distribuzione e test
 

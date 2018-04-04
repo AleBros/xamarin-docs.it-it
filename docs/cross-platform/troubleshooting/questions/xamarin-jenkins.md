@@ -1,16 +1,16 @@
 ---
-title: "Motivo per cui non è supportato Jenkins da Xamarin?"
-ms.topic: article
+title: Motivo per cui non è supportato Jenkins da Xamarin?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 8129229a821edd2ef4f251679ee46bca7b74c8f9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8112f9bfc8975b12e3c300c0c981d21749173f7c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="why-isnt-jenkins-supported-by-xamarin"></a>Motivo per cui non è supportato Jenkins da Xamarin?
 
@@ -50,7 +50,7 @@ oppure
 
 > Errore: La Starter Edition di xamarin non supporta la compilazione all'esterno di Xamarin Studio 
 
-La causa più comune di questo scenario è l'utilizzo di Jenkins eseguendo l'accesso con un account utente non associato con la licenza di Xamarin. Il modo più semplice della risoluzione, è di installare Jenkins come un'app direttamente tramite l'account utente. Che processo e altre considerazioni sono descritti di seguito: [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)
+La causa più comune di questo scenario è l'utilizzo di Jenkins eseguendo l'accesso con un account utente non associato con la licenza di Xamarin. Il modo più semplice della risoluzione, è di installare Jenkins come un'app direttamente tramite l'account utente. Questo processo e alcune considerazioni aggiuntive sono descritti di seguito: [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)
 
 Un'altra possibilità è che le informazioni sulla licenza di Xamarin è danneggiati in qualche modo, è possibile utilizzare il [Guida Resync licenza di Xamarin](~/cross-platform/troubleshooting/legacy-licenses/resync-licenses.md) per risolvere questo scenario.
 

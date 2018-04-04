@@ -1,18 +1,17 @@
 ---
-title: "Funzionalità della piattaforma"
-description: "Sfruttare le funzionalità specifiche della piattaforma con xamarin. Forms"
-ms.topic: article
+title: Funzionalità della piattaforma
+description: Sfruttare le funzionalità specifiche della piattaforma con xamarin. Forms
 ms.prod: xamarin
 ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: 950cc4a8611b05c22825ef89a85827fa0d3e5f7b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 454969d8a59128423d632452033b8ba84ee0bc98
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="platform-features"></a>Funzionalità della piattaforma
 
@@ -22,11 +21,11 @@ Xamarin. Forms è estendibile e consente di incorporare le funzionalità specifi
 
 Questa guida viene descritto come implementare materiale progettazione mediante l'aggiornamento di App Android di xamarin. Forms esistenti.
 
-## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[L'indicizzazione di applicazione e il collegamento completo](deep-linking.md)
+## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[Indicizzazione e deep linking delle applicazioni](deep-linking.md)
 
 L'indicizzazione dell'applicazione consente alle applicazioni che, in caso contrario, verrebbero dimenticate dopo qualche utilizza rimanere rilevanti da visualizzati nei risultati della ricerca. Il collegamento completo consente alle applicazioni rispondere a un risultato di ricerca che contiene i dati dell'applicazione, in genere passando a una pagina a cui fa riferimento da un collegamento diretto.
 
-## <a name="device-classdevicemd"></a>[Classe di dispositivi](device.md)
+## <a name="device-classdevicemd"></a>[Classe Device](device.md)
 
 Come utilizzare la `Device` classe per creare il comportamento specifico della piattaforma nel codice condiviso e l'interfaccia utente (inclusi tramite XAML). Vengono inoltre illustrati `BeginInvokeOnMainThread` che è essenziale quando si modificano i controlli dell'interfaccia utente dal thread in background.
 
@@ -38,11 +37,11 @@ Alcuni stili di iOS possono essere eseguiti tramite **Info. plist** e `UIAppeara
 
 Xamarin. Forms include ora il supporto di anteprima per le app macOS.
 
-## <a name="native-formsnative-formsmd"></a>[Moduli nativi](native-forms.md)
+## <a name="native-formsnative-formsmd"></a>[Form nativi](native-forms.md)
 
 Form native consentono di xamarin. Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivato pagine deve essere utilizzato da progetti nativi, xamarin. IOS, xamarin e della piattaforma UWP (Universal Windows).
 
-## <a name="native-viewsnative-viewsindexmd"></a>[Viste native](native-views/index.md)
+## <a name="native-viewsnative-viewsindexmd"></a>[Visualizzazioni native](native-views/index.md)
 
 Viste native da iOS, Android e la piattaforma UWP possono fare riferimento direttamente da xamarin. Forms. Le proprietà e i gestori eventi possono essere impostati nativo viste, e possono interagire con le visualizzazioni di xamarin. Forms.
 

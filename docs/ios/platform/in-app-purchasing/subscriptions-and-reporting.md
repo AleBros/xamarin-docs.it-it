@@ -1,17 +1,16 @@
 ---
 title: Le sottoscrizioni e report
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 237a986d6db2fb6984e99c6265fbbc212b35a351
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7ba47e8f0ec114845c14269e81bb7f078a5d4936
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="subscriptions-and-reporting"></a>Le sottoscrizioni e report
 
@@ -53,7 +52,7 @@ Il segreto condiviso acquisto In-App deve essere utilizzato nella richiesta JSON
 
 ITunes Connect pagina iniziale selezionare **My Apps**:   
    
- [![](subscriptions-and-reporting-images/image2.png "Selezionare le app")](subscriptions-and-reporting-images/image2.png#lightbox)  
+ [![](subscriptions-and-reporting-images/image2.png "Selezionare le app personali")](subscriptions-and-reporting-images/image2.png#lightbox)  
  
 Selezionare un'applicazione e fare clic su di **acquisti In-App** scheda:
 

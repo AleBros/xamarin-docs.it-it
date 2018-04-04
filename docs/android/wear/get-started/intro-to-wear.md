@@ -1,18 +1,17 @@
 ---
 title: Introduzione a usura Android
-description: "Con l'introduzione di accenti Android di Google, non sono più limitate a appena telefoni e Tablet per quanto riguarda lo sviluppo di App Android eccezionali. Supporto di xamarin per Android con accenti rende possibile eseguire il codice c# in alcun modo! In questa introduzione fornisce una panoramica di base dell'Android accenti, descrive le funzionalità principali e offre una panoramica delle funzionalità disponibili in 2.0, usare Android. Vengono elencati alcuni dei dispositivi Android, usare più comuni e vengono forniti collegamenti alla documentazione di Google Android accenti essenziale per un approfondimento."
-ms.topic: article
+description: Con l'introduzione di accenti Android di Google, non sono più limitate a appena telefoni e Tablet per quanto riguarda lo sviluppo di App Android eccezionali. Supporto di xamarin per Android con accenti rende possibile eseguire il codice c# in alcun modo! In questa introduzione fornisce una panoramica di base dell'Android accenti, descrive le funzionalità principali e offre una panoramica delle funzionalità disponibili in 2.0, usare Android. Vengono elencati alcuni dei dispositivi Android, usare più comuni e vengono forniti collegamenti alla documentazione di Google Android accenti essenziale per un approfondimento.
 ms.prod: xamarin
 ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 4f6cfe61b5f91fb6703fdcdd20513ce6bc2dc161
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0ab166bb71c23d456cb70d35a2794717110642fd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-android-wear"></a>Introduzione a usura Android
 

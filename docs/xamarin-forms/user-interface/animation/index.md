@@ -1,18 +1,17 @@
 ---
 title: Animazione
-description: "Xamarin. Forms include la propria infrastruttura animazione che è molto semplice per la creazione di semplici animazioni, pur sufficientemente versatile per creare animazioni complesse."
-ms.topic: article
+description: Xamarin. Forms include la propria infrastruttura animazione che è molto semplice per la creazione di semplici animazioni, pur sufficientemente versatile per creare animazioni complesse.
 ms.prod: xamarin
 ms.assetid: AC0B4127-ECA3-44DA-8A24-A2B10A275083
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: e50419eaa6466e94fc5192a77ffd7cb89ca9d965
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7cff122e7ecc24f5ad93bd863ee422981871f857
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="animation"></a>Animazione
 
@@ -20,7 +19,7 @@ _Xamarin. Forms include la propria infrastruttura animazione che è molto sempli
 
 Le classi di animazione xamarin. Forms destinazione diverse proprietà degli elementi visivi, con un'animazione tipico progressivamente modifica di una proprietà da un valore a un altro in un periodo di tempo. Si noti che non è disponibile alcuna interfaccia XAML per le classi di animazione xamarin. Forms. Tuttavia, è possibile incapsulare animazioni [comportamenti](~/xamarin-forms/app-fundamentals/behaviors/index.md) e quindi farvi riferimento da XAML.
 
-## <a name="simple-animationssimplemd"></a>[Animazioni semplice](simple.md)
+## <a name="simple-animationssimplemd"></a>[Animazioni semplici](simple.md)
 
 Il [ `ViewExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/) classe fornisce metodi di estensione che possono essere usati per costruire le animazioni semplice ruotare, ridimensionare, convertono e dissolvenza [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/) istanze. In questo articolo illustra la creazione e l'annullamento di animazioni mediante la `ViewExtensions` classe.
 

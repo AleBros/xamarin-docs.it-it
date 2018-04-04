@@ -1,17 +1,17 @@
 ---
-title: "È possibile aggiornare il modello predefinito di xamarin. Forms per un pacchetto NuGet più recente?"
-ms.topic: article
+title: È possibile aggiornare il modello predefinito di xamarin. Forms per un pacchetto NuGet più recente?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 160FBE13-26EB-4B4F-9248-A5CBE58FDD7F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: c626e8b4a01a55fac5d2c07f0c511241056c2774
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: fce595d7722dcd053f6fc9dcad84dc9a921e55b3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>È possibile aggiornare il modello predefinito di xamarin. Forms per un pacchetto NuGet più recente?
 
@@ -41,5 +41,5 @@ Questa Guida Usa il modello libreria di classi Portabile xamarin. Forms ad esemp
 
 7.  Copiare la nuova cartella del modello di backup compresso nella nuova directory "App per dispositivi mobili".
 
-8.  Scaricare il pacchetto NuGet che corrisponde alla versione del passaggio 3. Ad esempio, [http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529](http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529) (vedere anche [http://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file](http://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file)) e copiarlo in nella sottocartella appropriata della cartella di estensioni di Visual Studio a Xamarin:
+8.  Scaricare il pacchetto NuGet che corrisponde alla versione del passaggio 3. Ad esempio [ http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529 ](http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529) (vedere anche [ http://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file ](http://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file)) e copiarlo nella sottocartella appropriata della cartella di estensioni di Visual Studio a Xamarin:
     > `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Xamarin\Xamarin\[Xamarin Version]\Packages`

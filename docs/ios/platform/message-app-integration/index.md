@@ -1,18 +1,17 @@
 ---
 title: Integrazione di App di messaggio
-description: "Mostra questi articoli includono come estensione dell'App un messaggio in una soluzione xamarin. IOS che si integra con l'app di messaggi per presentare le nuove funzionalità all'utente."
-ms.topic: article
+description: Mostra questi articoli includono come estensione dell'App un messaggio in una soluzione xamarin. IOS che si integra con l'app di messaggi per presentare le nuove funzionalità all'utente.
 ms.prod: xamarin
 ms.assetid: 00AF2D4C-9BA8-4265-A11F-989C93BDF723
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/29/2016
-ms.openlocfilehash: 4c583e147ef363062a026770f7d8a7549f402d55
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a0471ba7b6cd612ecf781233381550e6abf800ce
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="message-app-integration"></a>Integrazione di App di messaggio
 

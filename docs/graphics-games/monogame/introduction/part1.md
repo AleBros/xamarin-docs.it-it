@@ -1,18 +1,17 @@
 ---
 title: 'Parte 1: creazione di un MonoGame multipiattaforma'
-description: "Questa procedura dettagliata viene illustrato come creare un nuovo progetto per iOS e Android utilizzando MonoGame. Il risultato è un Visual Studio per la soluzione Mac con un progetto di codice condiviso multipiattaforma, nonché un unico progetto per ogni piattaforma. Questo progetto verrà visualizzato un errore irreversibile vuoto quando eseguita."
-ms.topic: article
+description: Questa procedura dettagliata viene illustrato come creare un nuovo progetto per iOS e Android utilizzando MonoGame. Il risultato è un Visual Studio per la soluzione Mac con un progetto di codice condiviso multipiattaforma, nonché un unico progetto per ogni piattaforma. Questo progetto verrà visualizzato un errore irreversibile vuoto quando eseguita.
 ms.prod: xamarin
 ms.assetid: FC69E69B-04D4-45DF-9BBF-2A6CDEAD9B2F
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 0d1352b4129dc1cf8be42e813787b9b73f80cd3e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0cd12f23f8cb269b2a41a08bf641db08e18fb82b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>Parte 1: creazione di un MonoGame multipiattaforma
 
@@ -32,7 +31,7 @@ MonoGame possono essere aggiunti come un componente aggiuntivo per Visual Studio
 ![](part1-images/image2.png "Selezionare la scheda di raccolta, espandere la categoria di sviluppo di giochi e selezionare MonoGame del componente aggiuntivo, quindi fare clic su Installa")
 
 > [!IMPORTANT]
-> **Nota**: se il **lo sviluppo di giochi** sezione non viene visualizzata in Gestione componenti aggiuntivi, è possibile scaricare e installare la versione più recente da manualmente: http://www.monogame.net/downloads/. Si potrebbe essere necessario riavviare Visual Studio per Mac per i modelli di visualizzazione.
+> **Nota**: se il **allo sviluppo di giochi** sezione non viene visualizzata in Gestione aggiuntivo, è possibile scaricare e installare la versione più recente da manualmente: http://www.monogame.net/downloads/. Si potrebbe essere necessario riavviare Visual Studio per Mac per i modelli di visualizzazione.
 
 
 

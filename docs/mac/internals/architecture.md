@@ -1,18 +1,17 @@
 ---
 title: Architettura Xamarin.Mac
 description: Questa guida viene esaminato Xamarin.Mac e la relativa relazione per Objective-C a un livello basso. Vengono illustrati concetti, ad esempio la compilazione, i selettori, Registrar, l'app viene avviata e il generatore.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74D1FF57-4F2A-4646-8669-003DE99671D4
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 5e32a06499d68c58bedbe88b24dc40b6c86ee8d0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d6d7557fed5ea0ca0719dcbddbda316340645320
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinmac-architecture"></a>Architettura Xamarin.Mac
 

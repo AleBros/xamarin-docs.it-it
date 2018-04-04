@@ -1,28 +1,27 @@
 ---
 title: Interfaccia utente
 description: Creazione di interfacce utente per le app xamarin
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F67B7C33-BC53-2BB6-CDA7-16E4AB4A9EFB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/18/2017
-ms.openlocfilehash: 40d02def5c0aae3334ae59cec78f6d22a1d5d772
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 152f5551e2f539e8ab93121c35c2acca7eb7f2e9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="user-interface"></a>Interfaccia utente
 
 Le sezioni seguenti illustrano i diversi strumenti e i blocchi predefiniti che vengono utilizzati per creare interfacce utente in App xamarin.
 
-## <a name="android-designerandroiduser-interfaceandroid-designerindexmd"></a>[Finestra di progettazione Android](~/android/user-interface/android-designer/index.md)
+## <a name="android-designerandroiduser-interfaceandroid-designerindexmd"></a>[Android Designer](~/android/user-interface/android-designer/index.md)
 
 In questa sezione viene illustrato come utilizzare la finestra di progettazione Android per disporre i controlli visivamente e modificare le proprietà. Viene inoltre spiegato come utilizzare la finestra di progettazione per operare con interfacce utente e le risorse in configurazioni diverse, ad esempio i temi, lingue e le configurazioni del dispositivo, nonché sulla progettazione per le visualizzazioni alternative come verticale e orizzontale.
 
-## <a name="material-themeandroiduser-interfacematerial-thememd"></a>[Tema materiale](~/android/user-interface/material-theme.md)
+## <a name="material-themeandroiduser-interfacematerial-thememd"></a>[Tema Material](~/android/user-interface/material-theme.md)
 
 *Tema materiale* è lo stile dell'interfaccia utente che determina l'aspetto delle viste e le attività in Android. Tema materiale viene compilata in Android, verrà utilizzato dal sistema dell'interfaccia utente e con le applicazioni. Questa guida vengono presentati i principi di progettazione di materiale e come tema un'app usando i temi di materiale incorporati o un tema personalizzato.
 

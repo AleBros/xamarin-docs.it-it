@@ -1,17 +1,16 @@
 ---
-title: 'Procedura dettagliata: Creazione di un''applicazione tramite l''API Reflection'
+title: "Procedura dettagliata: Creazione di un'applicazione tramite l'API Reflection"
 description: Oltre alle API di elementi, MonoTouch.Dialog (MT D) contiene un'API di Reflection basato su attributi. L'API di Reflection consente la creazione di schermate con MT D semplice quanto la decorazione di classi con attributi. Questo articolo fornisce una procedura dettagliata che illustra come creare un'applicazione mediante l'API di Reflection.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: ec5ca2883c6e109a67ee8a4ecb25fe938d0df4ec
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e56eaeccb2e09d9f1ad84245bf41e2a4bf1b56f1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough-creating-an-application-using-the-reflection-api"></a>Procedura dettagliata: Creazione di un'applicazione tramite l'API Reflection
 

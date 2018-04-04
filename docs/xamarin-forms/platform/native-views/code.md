@@ -1,18 +1,17 @@
 ---
 title: Viste native in c#
 description: Viste native di iOS, Android e UWP possono fare riferimento direttamente dalle pagine di xamarin. Forms create in c#. In questo articolo viene illustrato come aggiungere viste native a un layout di xamarin. Forms creato in c# e come eseguire l'override di layout di visualizzazioni personalizzate per correggere i misurazione dell'utilizzo delle API.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 230F937C-F914-4B21-8EA1-1A2A9E644769
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 0c4014ecda0501e9309a17901c439444e4b48e86
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7979e43cdde60b1b0248118e591c096295847acb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-views-in-c"></a>Viste native in c#
 

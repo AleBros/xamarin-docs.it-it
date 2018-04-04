@@ -1,18 +1,17 @@
 ---
 title: Notifiche utente migliorata
-description: "Questo articolo vengono illustrate tutte le modalità che notifica gli utenti sono stata migliorata da iOS 10 e sul loro utilizzo in un'app xamarin. IOS."
-ms.topic: article
+description: Questo articolo vengono illustrate tutte le modalità che notifica gli utenti sono stata migliorata da iOS 10 e sul loro utilizzo in un'app xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 50553cb1dc5f7ea782c0f13e32f60d7b6ce3e181
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 9fd3ff17dc9af3fd30a7d5b31e8cea7ff8669a51
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="enhanced-user-notifications"></a>Notifiche utente migliorata
 
@@ -169,7 +168,7 @@ Per fornire i diritti necessari, eseguire le operazioni seguenti:
 2. Passare il **origine** Vista: 
 
     [![](enhanced-user-notifications-images/setup01.png "La visualizzazione origine")](enhanced-user-notifications-images/setup01.png#lightbox)
-3. Fare clic su di  **+**  pulsante per aggiungere una nuova chiave.
+3. Fare clic su di **+** pulsante per aggiungere una nuova chiave.
 4. Immettere `aps-environment` per il **proprietà**, lasciare il **tipo** come `String` e immettere una `development` o `production` per il **valore**: 
 
     [![](enhanced-user-notifications-images/setup02.png "La proprietà di ambiente di punti di accesso")](enhanced-user-notifications-images/setup02.png#lightbox)
@@ -178,7 +177,7 @@ Per fornire i diritti necessari, eseguire le operazioni seguenti:
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Fare doppio clic su di `Entitlements.plist` file nel **Esplora** per aprirlo e modificarlo.
-3. Fare clic su di  **+**  pulsante per aggiungere una nuova chiave.
+3. Fare clic su di **+** pulsante per aggiungere una nuova chiave.
 4. Immettere `aps-environment` per il **proprietà**, lasciare il **tipo** come `String` e immettere una `development` o `production` per il **valore**: 
 
     [![](enhanced-user-notifications-images/setup02w.png "La proprietà di ambiente di punti di accesso")](enhanced-user-notifications-images/setup02.png#lightbox)

@@ -1,7 +1,6 @@
 ---
-title: "6 nuove funzionalità di c# Panoramica"
-description: "La versione più recente del linguaggio c#-versione 6 – continua evoluzione del linguaggio che sono meno boilerplate maggiore chiarezza e la coerenza di più. Sintassi di inizializzazione pulizia, la possibilità di usare await nei blocchi catch/finally e null-condizionale? operatore risultano particolarmente utili."
-ms.topic: article
+title: 6 nuove funzionalità di c# Panoramica
+description: La versione più recente del linguaggio c#-versione 6 – continua evoluzione del linguaggio che sono meno boilerplate maggiore chiarezza e la coerenza di più. Sintassi di inizializzazione pulizia, la possibilità di usare await nei blocchi catch/finally e null-condizionale? operatore risultano particolarmente utili.
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.technology: xamarin-cross-platform
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 80456287c92913b048b73f40d2db6dcb16cc270d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2a189a19280576876e5d5a6a4fa34d2d00cab330
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="c-6-new-features-overview"></a>6 nuove funzionalità di c# Panoramica
 
@@ -52,7 +51,7 @@ Visual Studio per Mac Aggiorna automaticamente l'installazione Mono nel sistema.
 
 Gli utenti di Windows è necessario [Visual Studio 2015 o 2017 ^](https://www.visualstudio.com/) installato per la compilazione di codice c# 6 (anche se si sceglie Xamarin Studio per Windows come l'IDE).
 
-^ o  *[Microsoft compilare strumenti 2015](http://www.microsoft.com/en-us/download/details.aspx?id=48159)*  per comando riga compilazione o il server di compilazione, ad esempio.
+^ o *[Microsoft compilare strumenti 2015](http://www.microsoft.com/en-us/download/details.aspx?id=48159)* per comando riga compilazione o il server di compilazione, ad esempio.
 
 ## <a name="using-c-6"></a>In c# 6
 

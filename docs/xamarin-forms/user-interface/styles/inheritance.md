@@ -1,18 +1,17 @@
 ---
-title: "Ereditarietà degli stili"
+title: Ereditarietà degli stili
 description: Stili possono ereditare da altri stili per ridurre la duplicazione e consentire il riutilizzo.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 67A3A39C-8CC0-446D-8162-FFA73582D3B8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: e57f19d1eb66e22badb418d4584f5654904c7ade
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ffddc14145a3b187c03a6b2ba5ac6f8d6414468c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="style-inheritance"></a>Ereditarietà degli stili
 

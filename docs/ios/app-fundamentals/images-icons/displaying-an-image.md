@@ -1,18 +1,17 @@
 ---
 title: Visualizzazione di un'immagine
 description: Questo articolo descrive incluso un asset di immagine in un'app xamarin. IOS e la visualizzazione di quell'immagine usando codice c# o tramite l'assegnazione a un controllo nella finestra di progettazione iOS.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 39da41b7fb5118a16f2b2953f8fcb0a5b72aa819
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 8afc15a75b6d34d9b3f094fe2c92f2b6623ee63f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="displaying-an-image"></a>Visualizzazione di un'immagine
 

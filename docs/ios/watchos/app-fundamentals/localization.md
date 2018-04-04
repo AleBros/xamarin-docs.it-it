@@ -1,17 +1,16 @@
 ---
 title: Utilizzo di localizzazione
-description: "Adattamento App watchOS per più lingue"
-ms.topic: article
+description: Adattamento App watchOS per più lingue
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 9ad3499a232e5f2b2ef362f772ed0197e71e6bee
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c765005491f55a1bdcadb1bc5aea97f693dc4570
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-localization"></a>Utilizzo di localizzazione
 
@@ -86,13 +85,13 @@ Quando viene eseguito il rendering dello storyboard nelle espressioni di control
 
 #### <a name="storyboard-images"></a>Immagini di storyboard
 
-La soluzione di esempio include anche un  **gradient@2x.png**  immagine in ogni cartella della lingua. Questa immagine può essere diversa per ogni lingua (ad es. può avere incorporato testo che richiede la conversione o utilizzare localizzato visualizzato).
+La soluzione di esempio include anche un **gradient@2x.png** immagine in ogni cartella della lingua. Questa immagine può essere diversa per ogni lingua (ad es. può avere incorporato testo che richiede la conversione o utilizzare localizzato visualizzato).
 
 L'immagine è sufficiente impostare **immagine** verrà visualizzata come proprietà nello storyboard e l'immagine corretta nell'orologio in base alla lingua selezionata dall'utente.
 
 ![](localization-images/storyboard-image.png "Imposta le immagini di proprietà dell'immagine dello storyboard")
 
-Nota: poiché dispongono di tutte le espressioni di controllo di Apple Retina viene visualizzata solo la  **@2x**  è necessaria una versione dell'immagine. Non è necessario specificare  **@2x**  dello storyboard.
+Nota: poiché dispongono di tutte le espressioni di controllo di Apple Retina viene visualizzata solo la **@2x** è necessaria una versione dell'immagine. Non è necessario specificare **@2x** dello storyboard.
 
 ### <a name="watch-extension"></a>Estensione delle espressioni di controllo
 
@@ -130,7 +129,7 @@ Le immagini sono popolati da codice possono essere impostate in due modi.
   displayImage.SetImage("gradient"); // image in Watch App (as shown above)
   ```
 
-2. È possibile spostare un'immagine dall'estensione per l'utilizzo di espressioni di controllo `FromBundle` e l'app verrà scelto automaticamente l'immagine corretta per la selezione della lingua dell'utente. Nella soluzione di esempio è un'immagine  **language@2x.png**  in ciascuna lingua viene visualizzata nella cartella e `DetailController` utilizzando il codice seguente:
+2. È possibile spostare un'immagine dall'estensione per l'utilizzo di espressioni di controllo `FromBundle` e l'app verrà scelto automaticamente l'immagine corretta per la selezione della lingua dell'utente. Nella soluzione di esempio è un'immagine **language@2x.png** in ciascuna lingua viene visualizzata nella cartella e `DetailController` utilizzando il codice seguente:
 
   ```csharp
   using (var image = UIImage.FromBundle ("language")) {
@@ -138,7 +137,7 @@ Le immagini sono popolati da codice possono essere impostate in due modi.
   }
   ```
 
-  Si noti che non è necessario specificare il  **@2x**  quando si fa riferimento al nome file dell'immagine.
+  Si noti che non è necessario specificare il **@2x** quando si fa riferimento al nome file dell'immagine.
 
 Il secondo metodo è applicabile se si scarica un'immagine da un server remoto per eseguire il rendering di guardia; anche Tuttavia in questo caso è necessario assicurarsi che l'immagine scaricato correttamente è localizzata in base alle preferenze dell'utente.
 

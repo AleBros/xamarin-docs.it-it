@@ -1,18 +1,17 @@
 ---
 title: ToolBar
 description: "La barra degli strumenti è un componente di barra di azione che garantisce una maggiore flessibilità rispetto a barra delle azioni predefinite: può essere collocato ovunque nell'app, la dimensione può essere modificata e può utilizzare una combinazione di colori che è diversa dal tema dell'app. Inoltre, ogni schermata dell'app può avere più barre degli strumenti."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 22EE5FBD-3240-4308-AF76-EF45D72936DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 30b1cb280c2817f55d73e10ff8b4d7942011bf2c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 08fa00b539bd5baca4f5d61b04419a76a4a72ab1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="toolbar"></a>ToolBar
 

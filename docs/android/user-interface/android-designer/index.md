@@ -1,18 +1,17 @@
 ---
 title: Android Designer
-description: "In questo articolo riguarda le funzionalità della finestra di progettazione di xamarin. Illustra i concetti di base della finestra di progettazione che mostra come utilizzare la finestra di progettazione per il layout visivo widget e come modificare le proprietà. Viene inoltre illustrato come utilizzare la finestra di progettazione per operare con interfacce utente e le risorse in configurazioni diverse, ad esempio i temi, lingue e le configurazioni del dispositivo, nonché sulla progettazione per le visualizzazioni alternative come verticale e orizzontale."
-ms.topic: article
+description: In questo articolo riguarda le funzionalità della finestra di progettazione di xamarin. Illustra i concetti di base della finestra di progettazione che mostra come utilizzare la finestra di progettazione per il layout visivo widget e come modificare le proprietà. Viene inoltre illustrato come utilizzare la finestra di progettazione per operare con interfacce utente e le risorse in configurazioni diverse, ad esempio i temi, lingue e le configurazioni del dispositivo, nonché sulla progettazione per le visualizzazioni alternative come verticale e orizzontale.
 ms.prod: xamarin
 ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 90dc37612f36eb914c3aaa140200762945ac4516
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 20da09895bae759c77e96300d798267881a7cbfd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-designer"></a>Android Designer
 

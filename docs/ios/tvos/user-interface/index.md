@@ -1,18 +1,17 @@
 ---
 title: Interfaccia utente
 description: Code coverage esperienza utente generale (UX), inclusi i controlli dell'interfaccia utente (UI), utilizzare del Xcode generatore di interfaccia e i principi di progettazione dell'esperienza utente quando si lavora con Xamarin.tvOS.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8CF80705-B36A-42D6-B66B-52BC8586FA5A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c77cc6f9954c5fb7d1a303748efc5c3182a0c138
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a30bd02a9545717175daf1381730afce6b72218d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="user-interface"></a>Interfaccia utente
 

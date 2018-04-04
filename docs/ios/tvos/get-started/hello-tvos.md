@@ -1,18 +1,17 @@
 ---
 title: Hello, tvOS Guida introduttiva
 description: Questa guida descrive come creare la prima app Xamarin.tvOS e la toolchain di sviluppo. Introduce anche la finestra di progettazione di Xamarin, che espone i controlli dell'interfaccia utente al codice e viene illustrato come compilare, eseguire e testare un'applicazione Xamarin.tvOS.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6E0AFE58-A13B-492F-861E-D5D73EB1C4A3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: 5eccb36b3c6a437ddc1ec055e779d8f78460643e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0adf6e326dd29db15b6bd90626f424b803dc0bc9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS Guida introduttiva
 
@@ -253,7 +252,7 @@ Non è necessario utilizzare Progettazione Xamarin per iOS per creare l'interfac
 
 Per iniziare a creare l'interfaccia utente, si fare doppio clic su di `Main.storyboard` file nel **Esplora** per aprirlo e modificarlo nella finestra di progettazione iOS:
 
-[![](hello-tvos-images/designer01.png "Il file Main in Esplora soluzioni")](hello-tvos-images/designer01.png#lightbox)
+[![](hello-tvos-images/designer01.png "File Main.storyboard in Esplora soluzioni")](hello-tvos-images/designer01.png#lightbox)
 
 Questo deve avviare la finestra di progettazione e simile al seguente:
 

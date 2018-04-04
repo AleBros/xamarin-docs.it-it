@@ -1,17 +1,17 @@
 ---
 title: Come copiare i file di output IPA alla cartella di ricezione TFS?
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B0F1E09E-7315-45BA-B7FF-44D2063EE19C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c89d81434cac43505c4f0341a10aaf4fc99407fe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2139be01b95a0a4287bba43b8a2ebad537ac7a4f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-can-i-copy-ipa-output-files-to-the-tfs-drop-folder"></a>Come copiare i file di output IPA alla cartella di ricezione TFS?
 
@@ -41,7 +41,7 @@ Aprire il `.csproj` file per il progetto di app iOS in un editor di testo e quin
 
 -   È la stessa tecnica generale descritto in [è possibile modificare il percorso di output del file IPA?](~/ios/troubleshooting/questions/ipa-output-path.md). I due punti importanti sono impostare `$(TF_BUILD_BINARIESDIRECTORY)` come cartella di destinazione e aggiungere una condizione aggiuntiva in modo `CopyIpa` verrà eseguito solo per le build di TFS.
 
--   Per una descrizione di `TF_BUILD_BINARIESDIRECTORY` vedere [https://msdn.microsoft.com/en-us/library/hh850448.aspx](https://msdn.microsoft.com/en-us/library/hh850448.aspx).
+-   Per una descrizione delle `TF_BUILD_BINARIESDIRECTORY` vedere [ https://msdn.microsoft.com/en-us/library/hh850448.aspx ](https://msdn.microsoft.com/en-us/library/hh850448.aspx).
 
 ## <a name="additional-references"></a>Riferimenti aggiuntivi
 

@@ -1,18 +1,17 @@
 ---
 title: Metadati di binding di linguaggio
 description: Codice c# di xamarin chiama librerie Java le associazioni, che sono un meccanismo che estrae i dettagli di basso livello che sono specificati in JNI Java Native Interface (). Xamarin offre uno strumento che genera le associazioni. Questo strumento consente il controllo dello sviluppatore come viene creata un'associazione usando i metadati, che consente alle procedure, ad esempio spazi dei nomi di modifica e ridenominazione di membri. Questo documento illustra il funzionamento di metadati, riepiloga gli attributi dei metadati supporta e viene spiegato come risolvere i problemi di associazione modificando questi metadati.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 70f17b6bc8dc991534cdf4dd065c813aa0e27e96
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 6dea13fcda43cad22b8bea9838bbcb23b97820c7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="java-bindings-metadata"></a>Metadati di binding di linguaggio
 
@@ -246,7 +245,7 @@ Modifica il tipo restituito di un metodo. Ciò non modifica l'attributo restitui
 
 ### <a name="obfuscated"></a>offuscato
 
-Gli strumenti che coprono le librerie di Java possono interferire con il generatore di associazione di xamarin e la possibilità di generare classi wrapper c#. Caratteristiche delle classi offuscate includono: * include il nome della classe un  **$** , vale a dire **una class $** * il nome della classe è interamente compromesso di lettere minuscole, ad esempio  **a.Class**
+Gli strumenti che coprono le librerie di Java possono interferire con il generatore di associazione di xamarin e la possibilità di generare classi wrapper c#. Caratteristiche delle classi offuscate includono: * include il nome della classe un **$**, vale a dire **una class $** * il nome della classe è interamente compromesso di lettere minuscole, ad esempio  **a.Class**
 
 Questo frammento è riportato un esempio di come generare un tipo c# "non offuscato":
 

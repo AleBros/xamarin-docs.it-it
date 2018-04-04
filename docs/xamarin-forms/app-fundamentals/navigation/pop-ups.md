@@ -1,18 +1,17 @@
 ---
 title: Visualizzazione popup
 description: "Xamarin. Forms fornisce due elementi dell'interfaccia utente pop configurazione simile: un avviso e un foglio di azione. In questo articolo viene illustrato l'utilizzo di API di foglio di avviso e l'azione per chiedere agli utenti semplici domande e per guidare gli utenti attraverso le attività."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 87b20dfd8882bf7da58b1bd078930fb69c46a79d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2e0a5ff433de034da0170e3aa9a19ab50ddc3cb6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="displaying-pop-ups"></a>Visualizzazione popup
 

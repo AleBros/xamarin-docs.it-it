@@ -1,18 +1,17 @@
 ---
 title: La comprensione dell'esempio
 description: In questo argomento fornisce una procedura dettagliata dell'applicazione di esempio xamarin. Forms che illustra come comunicare con servizi web diversi. Mentre ogni servizio web utilizza un'applicazione di esempio distinto, sono simili a livello funzionale e condividono classi comuni.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: ab44cb7a065164bb5b7501ac63bd0321b612b7ca
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: e9738a766762dd64cdfbb034d4eaa54f76aca311
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="understanding-the-sample"></a>La comprensione dell'esempio
 
@@ -56,7 +55,7 @@ Inoltre, il progetto libreria di classi Portabile per ogni applicazione è costi
 
 La maggior parte delle applicazioni di esempio contiene almeno due pagine:
 
-- **TodoListPage** : questa pagina consente di visualizzare un elenco di `TodoItem` istanze e un'icona segno di spunta se il `TodoItem.Done` proprietà `true`. Scegliere un elemento per spostarsi di `TodoItemPage`. Inoltre, è possano creati nuovi elementi facendo clic su di  *+*  simbolo.
+- **TodoListPage** : questa pagina consente di visualizzare un elenco di `TodoItem` istanze e un'icona segno di spunta se il `TodoItem.Done` proprietà `true`. Scegliere un elemento per spostarsi di `TodoItemPage`. Inoltre, è possano creati nuovi elementi facendo clic su di *+* simbolo.
 - **TodoItemPage** : questa pagina vengono visualizzati i dettagli per il nodo `TodoItem`e consente di modificare, salvare, eliminato e pronunciata.
 
 Inoltre, alcune applicazioni di esempio contengono pagine aggiuntive che consentono di gestire il processo di autenticazione utente.
