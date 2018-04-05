@@ -7,11 +7,11 @@ ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 0bd13cc58d4f15b46edc03eda35f04d7ca866dec
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2b730690e508c29e9bee45ccfdd05d5dd6e92d7b
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="skiasharp-curves-and-paths"></a>I percorsi e SkiaSharp curve
 
@@ -19,7 +19,7 @@ _Informazioni su come usare SkiaSharp curve e utilizzare le funzionalità di per
 
 L'esplorazione del [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) metodi e proprietà iniziato nel [SkiaSharp righe e i percorsi](~/xamarin-forms/user-interface/graphics/skiasharp/paths/index.md) articolo. Gli articoli di continuare con metodi che aggiungono curve a un `SKPath` oggetti e di sfruttare funzionalità potenti percorso. Si noterà come è possibile specificare un percorso completo in una stringa di testo breve, come utilizzare gli effetti di percorso e come esaminare sui meccanismi interni di percorso.
 
-Tutti i programmi di esempio in questa sezione appaiono sotto l'intestazione **curve e più percorsi** nella home page del [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma e il [ **Curve** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves) cartella della soluzione.
+Tutti i programmi di esempio in questa sezione appaiono sotto l'intestazione **curve e più percorsi** nella home page del [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma e il [ **Curve** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) cartella della soluzione.
 
 ## <a name="three-ways-to-draw-an-arcarcsmd"></a>[Tre modi per disegnare un arco](arcs.md)
 

@@ -7,11 +7,11 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: a718d051c2bf04e75c87b0e4a18aced4824802ba
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e5b18bd6a565639e2ca22f4637a67c4f48717f6
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="drawing-a-simple-circle"></a>Disegnare un cerchio semplice
 
@@ -19,11 +19,11 @@ _Nozioni di base del disegno SkiaSharp, tra cui aree e paint_
 
 In questo articolo vengono illustrati i concetti di creazione di elementi grafici in xamarin. Forms usando SkiaSharp, inclusa la creazione di un `SKCanvasView` oggetto per ospitare la grafica, la gestione di `PaintSurface` evento e utilizzando un `SKPaint` oggetto per specificare il colore e l'altro disegno attributi.
 
-Il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma contiene tutto il codice di esempio per questa serie di articoli SkiaSharp. La prima pagina è autorizzata a utilizzare **cerchio semplice** e richiama la classe page [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Questo codice viene illustrato come disegnare un cerchio al centro della pagina con un raggio di 100 pixel. La struttura del cerchio rossa, e l'interno del cerchio blu.
+Il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma contiene tutto il codice di esempio per questa serie di articoli SkiaSharp. La prima pagina è autorizzata a utilizzare **cerchio semplice** e richiama la classe page [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Questo codice viene illustrato come disegnare un cerchio al centro della pagina con un raggio di 100 pixel. La struttura del cerchio rossa, e l'interno del cerchio blu.
 
 ![](circle-images/circleexample.png "Un cerchio blu evidenziato in rosso")
 
-Il [ `SimpleCirle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) pagina classe deriva da `ContentPage` e contiene due `using` direttive per gli spazi dei nomi SkiaSharp:
+Il [ `SimpleCirle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) pagina classe deriva da `ContentPage` e contiene due `using` direttive per gli spazi dei nomi SkiaSharp:
 
 ```csharp
 using SkiaSharp;

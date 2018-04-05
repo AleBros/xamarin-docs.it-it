@@ -7,11 +7,11 @@ ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 1e8ad47867fb1821df1e427aa777ead1a7da19a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4ef9f1b634d2ecfa73a94bfd562a68593dfdc575
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="integrating-text-and-graphics"></a>L'integrazione di testo e grafica
 
@@ -23,7 +23,7 @@ In questo articolo viene illustrato come misurare il testo, probabilmente scalar
 
 Il SkiaSharp `Canvas` classe include anche metodi per disegnare un rettangolo ([`DrawRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawRect/p/SkiaSharp.SKRect/SkiaSharp.SKPaint/)) e un rettangolo con angoli arrotondati ([`DrawRoundRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawRoundRect/p/SkiaSharp.SKRect/System.Single/System.Single/SkiaSharp.SKPaint/)). Questi metodi richiedono il rettangolo deve essere definito come un `SKRect` valore.
 
-Il **racchiuse testo** pagina Centra una breve stringa di testo nella pagina e scelte con un intervallo composto da una coppia di rettangoli con angoli arrotondati. Il [ `FramedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/FramedTextPage.cs) classe illustra come farlo.
+Il **racchiuse testo** pagina Centra una breve stringa di testo nella pagina e scelte con un intervallo composto da una coppia di rettangoli con angoli arrotondati. Il [ `FramedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/FramedTextPage.cs) classe illustra come farlo.
 
 In SkiaSharp è utilizzare la `SKPaint` classe di set di attributi di testo e i tipi di carattere, ma è possibile utilizzarlo anche per ottenere la dimensione di rendering del testo. L'inizio delle operazioni seguenti `PaintSurface` gestore eventi chiama due diversi `MeasureText` metodi. Il primo [ `MeasureText` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.MeasureText/p/System.String/) chiamata presenta una semplice `string` argomento e restituisce la larghezza in pixel del testo in base agli attributi di tipo di carattere corrente. Quindi viene calcolato un nuovo `TextSize` proprietà del `SKPaint` oggetto basato su tale larghezza di rendering corrente `TextSize` , proprietà e alla larghezza dell'area di visualizzazione. Questo consente di impostare `TextSize` in modo che la stringa di testo per eseguire il rendering al 90% della larghezza dello schermo:
 

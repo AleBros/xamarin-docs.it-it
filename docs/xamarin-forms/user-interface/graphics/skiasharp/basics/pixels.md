@@ -7,11 +7,11 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: dd9694a05632cd5f37cb583d15bc93311a49cfdc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e01d3e228a0684865fb09dd7a4cbb0e2f0b49125
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>Pixel e unità indipendenti dal dispositivo
 
@@ -31,7 +31,7 @@ La pagina nel [ **SkewSharpFormsDemos** ](https://developer.xamarin.com/samples/
 - Il [ `CanvasSize` ](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKCanvasView.CanvasSize/) proprietà del `SKCanvasView` oggetto.
 - Il [ `Size` ](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Size/) proprietà del `SKImageInfo` valore, che è coerente con il `Width` e `Height` proprietà utilizzate nei due pagine precedenti.
 
-Il [ `SurfaceSizePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SurfaceSizePage.cs) classe viene illustrato come visualizzare questi valori. Salva il costruttore di `SKCanvasView` oggetto come un campo, pertanto è possibile accedervi nel `PaintSurface` gestore eventi:
+Il [ `SurfaceSizePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SurfaceSizePage.cs) classe viene illustrato come visualizzare questi valori. Salva il costruttore di `SKCanvasView` oggetto come un campo, pertanto è possibile accedervi nel `PaintSurface` gestore eventi:
 
 ```csharp
 SKCanvasView canvasView;
@@ -114,7 +114,7 @@ Oltre al `DrawCircle` metodo `SKCanvas` definisce anche due `DrawOval` metodi ch
 public void DrawOval (Single cx, Single cy, Single rx, Single ry, SKPaint paint)
 ```
 
-È possibile disegnare un'ellisse che riempie l'area di visualizzazione? Il **ellisse riempimento** è illustrato come. Il `PaintSurface` gestore dell'evento nel [ **EllipseFillPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/EllipseFillPage.xaml.cs) classe sottrae metà della larghezza del tratto dal `xRadius` e `yRadius` i valori per adattare l'intero ellisse e il relativo struttura all'interno dell'area di visualizzazione:
+È possibile disegnare un'ellisse che riempie l'area di visualizzazione? Il **ellisse riempimento** è illustrato come. Il `PaintSurface` gestore dell'evento nel [ **EllipseFillPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/EllipseFillPage.xaml.cs) classe sottrae metà della larghezza del tratto dal `xRadius` e `yRadius` i valori per adattare l'intero ellisse e il relativo struttura all'interno dell'area di visualizzazione:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

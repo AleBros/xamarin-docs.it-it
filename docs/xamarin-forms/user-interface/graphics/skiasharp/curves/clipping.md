@@ -7,11 +7,11 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: 0451653b4ee5c85b9bcf884b6b5609a251cf577c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 051ceec148a569d00048a661e6ba8dc3ce96fc81
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="clipping-with-paths-and-regions"></a>Ritaglio e percorsi
 
@@ -23,7 +23,7 @@ In alcuni casi è necessario limitare il rendering di immagini a una determinata
 
 Il *area di ritaglio* è l'area dello schermo in cui viene eseguito il rendering di grafica. Tutto ciò che viene visualizzato all'esterno dell'area di ritaglio non viene eseguito il rendering. L'area di visualizzazione viene in genere definita da un [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) oggetto ma è in alternativa possibile definire un'area di ritaglio utilizzando un [ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) oggetto. Questi due tipi di oggetti sembrano innanzitutto correlati poiché è possibile creare un'area da un percorso. Tuttavia, non è possibile creare un percorso da un'area e internamente sono molto diversi: un percorso è costituito da una serie di linee e curve, mentre una regione è definita da una serie di linee di scansione orizzontale.
 
-L'immagine precedente è stato creato dal **Monkey tramite microchirurgia** pagina. Il [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) classe definisce un percorso utilizzando dati SVG e utilizza il costruttore per caricare una bitmap da risorse programma:
+L'immagine precedente è stato creato dal **Monkey tramite microchirurgia** pagina. Il [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) classe definisce un percorso utilizzando dati SVG e utilizza il costruttore per caricare una bitmap da risorse programma:
 
 ```csharp
 public class MonkeyThroughKeyholePage : ContentPage
@@ -118,7 +118,7 @@ public void ClipPath(SKPath path, SKClipOperation operation = SKClipOperation.In
 public Void ClipRect(SKRect rect, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
 ```
 
-Per impostazione predefinita, l'area di visualizzazione risultante è un punto di intersezione tra l'area di visualizzazione esistente e `SKPath` o `SKRect` specificata nel `ClipPath` o `ClipRect` metodo. Questa funzionalità viene illustrata la **quattro cerchi si intersecano Clip** pagina. Il `PaintSurface` gestore il [ `FourCircleInteresectClipPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/FourCircleIntersectClipPage.cs) classe riutilizza la stessa `SKPath` oggetto da creare quattro cerchi sovrapposti, ognuno dei quali consente di ridurre l'area di visualizzazione tramite le chiamate successive a `ClipPath`:
+Per impostazione predefinita, l'area di visualizzazione risultante è un punto di intersezione tra l'area di visualizzazione esistente e `SKPath` o `SKRect` specificata nel `ClipPath` o `ClipRect` metodo. Questa funzionalità viene illustrata la **quattro cerchi si intersecano Clip** pagina. Il `PaintSurface` gestore il [ `FourCircleInteresectClipPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/FourCircleIntersectClipPage.cs) classe riutilizza la stessa `SKPath` oggetto da creare quattro cerchi sovrapposti, ognuno dei quali consente di ridurre l'area di visualizzazione tramite le chiamate successive a `ClipPath`:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -183,7 +183,7 @@ Il **operazioni di ritaglio** pagina viene illustrata la differenza tra queste d
 
 [![](clipping-images//clipoperations-small.png "Schermata di triplo della pagina operazioni di ritaglio")](clipping-images/clipoperations-large.png#lightbox "tripla schermata della pagina operazioni di ritaglio")
 
-Il [ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs) classe definisce due `SKPaint` oggetti come campi e quindi suddivide la schermata in due aree rettangolari. Queste aree sono diverse a seconda se il telefono è in modalità verticale o orizzontale. Il `DisplayClipOp` classe visualizza il testo e le chiamate `ClipPath` con i percorsi di due cerchio per illustrare ogni operazione di ritaglio:
+Il [ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs) classe definisce due `SKPaint` oggetti come campi e quindi suddivide la schermata in due aree rettangolari. Queste aree sono diverse a seconda se il telefono è in modalità verticale o orizzontale. Il `DisplayClipOp` classe visualizza il testo e le chiamate `ClipPath` con i percorsi di due cerchio per illustrare ogni operazione di ritaglio:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -286,7 +286,7 @@ La schermata seguente mostra in base alle operazioni sei area aree di ritaglio. 
 
 Sono tali tutte le possibilità di combinare questi due cerchi? Prendere in considerazione l'immagine risultante come una combinazione di tre componenti, che da soli è visibili nel `Difference`, `Intersect`, e `ReverseDifference` operazioni. Il numero totale di combinazioni è 2 alla potenza di 3 o otto. I due mancanti sono l'area originale (risultante dalla chiamata non `Op` affatto) e un'area vuota completamente.
 
-È più difficile da usare aree per il ritaglio perché è necessario creare innanzitutto un percorso, quindi selezionare un'area da tale percorso e quindi combinare più aree. La struttura complessiva del **area operazioni** è molto simile alla pagina **operazioni di ritaglio** ma la [ `RegionOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/RegionOperationsPage.cs) classe suddivide la schermata in sei aree e Mostra il lavoro aggiuntivo necessario per usare aree per questo processo:
+È più difficile da usare aree per il ritaglio perché è necessario creare innanzitutto un percorso, quindi selezionare un'area da tale percorso e quindi combinare più aree. La struttura complessiva del **area operazioni** è molto simile alla pagina **operazioni di ritaglio** ma la [ `RegionOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RegionOperationsPage.cs) classe suddivide la schermata in sei aree e Mostra il lavoro aggiuntivo necessario per usare aree per questo processo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -370,7 +370,7 @@ Questo è ciò che è un'area: una serie di linee di scansione orizzontale che d
 
 Tuttavia, quando un'area viene ridotto a una serie di analisi le righe, tali righe sono basate su una dimensione di un pixel specifico di analisi. In teoria, l'area non è un oggetto di grafica vettoriale. È più vicino di natura una bitmap monocromatica compressa rispetto a un percorso. Di conseguenza, non sono ridimensionate o ruotate senza perdita di fedeltà e per questo motivo che non vengono trasformate quando viene utilizzato per le aree di ritaglio aree.
 
-Tuttavia, è possibile applicare trasformazioni alle aree per scopi di disegno. Il **area di disegno** programma illustra intensamente la natura interna delle aree. Il [ `RegionPaintPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/RegionPaintPage.cs) classe crea un `SKRegion` oggetto basato su un `SKPath` di un cerchio di 10 unità radius. Una trasformazione viene quindi espanso il cerchio per riempire la pagina:
+Tuttavia, è possibile applicare trasformazioni alle aree per scopi di disegno. Il **area di disegno** programma illustra intensamente la natura interna delle aree. Il [ `RegionPaintPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RegionPaintPage.cs) classe crea un `SKRegion` oggetto basato su un `SKPath` di un cerchio di 10 unità radius. Una trasformazione viene quindi espanso il cerchio per riempire la pagina:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -427,7 +427,7 @@ Il `DrawRegion` chiamata riempie l'area di colore arancione, mentre il `DrawPath
 
 L'area è chiaramente una serie di coordinate discrete.
 
-Se non è necessario utilizzare le trasformazioni in relazione le aree di visualizzazione, è possibile utilizzare le aree per il ritaglio, come il **quattro – foglia trifoglio** illustra come. Il [ `FourLeafCloverPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/FourLeafCloverPage.cs) classe costruisce un'area composta da quattro aree circolari, imposta tale area composito come area di ritaglio e quindi disegna una serie di 360 linee rette provenienti dall'area della pagina:
+Se non è necessario utilizzare le trasformazioni in relazione le aree di visualizzazione, è possibile utilizzare le aree per il ritaglio, come il **quattro – foglia trifoglio** illustra come. Il [ `FourLeafCloverPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/FourLeafCloverPage.cs) classe costruisce un'area composta da quattro aree circolari, imposta tale area composito come area di ritaglio e quindi disegna una serie di 360 linee rette provenienti dall'area della pagina:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

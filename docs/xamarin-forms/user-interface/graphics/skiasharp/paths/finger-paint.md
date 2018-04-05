@@ -7,11 +7,11 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2017
-ms.openlocfilehash: 9f7e3f64122f3b95291973d032aaf507dfbc8fab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 95c023d702d165b7a8a0ba392b2f87af58bfae07
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="finger-painting"></a>Disegno di un dito
 
@@ -27,7 +27,7 @@ Il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-for
 
 Il **Paint dito** pagina **SkiaSharpFormsDemos** è un'implementazione semplificata di disegno con un dito. Non consentire la selezione del colore o tracciare larghezza non può cancellare l'area di disegno e naturalmente è possibile salvare l'oggetto grafico.
 
-Il [ **FingerPaintPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml) file inserisce il `SKCanvasView` in una cella singola `Grid` e collega il `TouchEffect` a quella `Grid`:
+Il [ **FingerPaintPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml) file inserisce il `SKCanvasView` in una cella singola `Grid` e collega il `TouchEffect` a quella `Grid`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -50,7 +50,7 @@ Il [ **FingerPaintPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples
 
 Associare il `TouchEffect` direttamente il `SKCanvasView` non funziona in tutte le piattaforme.
 
-Il [ **FingerPaintPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml.cs) file code-behind definisce due raccolte per l'archiviazione di `SKPath` oggetti, nonché un `SKPaint` oggetto per il rendering di questi percorsi:
+Il [ **FingerPaintPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml.cs) file code-behind definisce due raccolte per l'archiviazione di `SKPath` oggetti, nonché un `SKPaint` oggetto per il rendering di questi percorsi:
 
 ```csharp
 public partial class FingerPaintPage : ContentPage

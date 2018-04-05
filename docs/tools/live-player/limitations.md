@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2018
-ms.openlocfilehash: 0068540ec385ab3be56865c7728eb3128154a2ea
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43699e77bc8b7365c6d5f7fbf27e19a945e69e22
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="limitations"></a>Limitazioni
 
@@ -51,7 +51,7 @@ Esistono alcune limitazioni sulle cose che eseguire Xamarin Player in tempo real
 - Un supporto limitato per la reflection (attualmente influisce su alcuni NuGets più diffusi, ad esempio SQLite e Json.NET). Altri NuGets potrebbe ancora essere supportate.
 - Impossibile eseguire l'override di alcune classi di sistema (ad esempio, è Impossibile implementare una sottoclasse).
 - Alcune funzionalità di piattaforma che richiedono il provisioning non può funzionare in app Xamarin Player in tempo reale (tuttavia è stato configurato per operazioni comuni, ad esempio l'accesso raccolta foto).
-- Destinazioni personalizzate e le istruzioni di compilazione vengono ignorate. Ad esempio, strumenti come Fody, Retit, AutoFac e AutoMapper non può essere incorporata.
+- Destinazioni personalizzate e le istruzioni di compilazione vengono ignorate. Ad esempio, strumenti come Fody, Riadatta, AutoFac e AutoMapper non possono essere incorporati.
 - Progetti F # non sono supportati in Android e supporto in iOS limitato
 - Scenari avanzati con le classi generiche personalizzate e le interfacce potrebbero non essere supportati.
 
