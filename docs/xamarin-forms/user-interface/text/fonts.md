@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: e492bee2b43f2be54f450550e3f44e7da3de258e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09328e1c6d884898aed86f2cb8ab1b84bf6d5cab
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="fonts"></a>Tipi di carattere
 
@@ -135,7 +135,7 @@ Xamarin. Forms controlla che il testo visualizzato hanno un `Font` proprietà ch
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-Per specificare più `Font` impostazioni, combinare le impostazioni necessarie in una stringa di attributo di tipo di carattere singolo. La stringa dell'attributo di tipo di carattere deve essere formattata come `"[font-face],[attributes],[size]"`. L'ordine dei parametri è importante, tutti i parametri sono facoltativi e più `attributes` è possibile specificare, ad esempio:
+Per specificare più `Font` la combinazione di impostazioni, le impostazioni necessarie in una stringa di attributo del tipo di carattere singolo. La stringa dell'attributo di tipo di carattere deve essere formattata come `"[font-face],[attributes],[size]"`. L'ordine dei parametri è importante, tutti i parametri sono facoltativi e più `attributes` è possibile specificare, ad esempio:
 
 ```xaml
 <Label Text="Small bold text" FontAttributes="Bold" FontSize="Micro" />

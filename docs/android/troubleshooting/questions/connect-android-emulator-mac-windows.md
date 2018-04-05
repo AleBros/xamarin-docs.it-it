@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: a04258e6056b4572856d4ec05c40effec4e51910
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4afe2b9fab8eeebb3f0451379b8e3937cc8d8f55
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>È possibile connettersi a emulatori Android è in esecuzione su un Mac da una macchina virtuale Windows?
 
@@ -41,7 +41,7 @@ Per connettersi a un emulatore Android di Google in esecuzione in un computer Ma
     ```bash
     cd /tmp
     mkfifo backpipe
-    nc -kl 5555 0 < backpipe | nc 127.0.0.1 5555 > backpipe
+    nc -kl 5555 0<backpipe | nc 127.0.0.1 5555 > backpipe
     ```
 
     Purché il `nc` comandi rimangono in esecuzione in una finestra terminale, i pacchetti verranno inoltrati come previsto. È possibile digitare CTRL + C nella finestra del terminale per chiudere il `nc` comandi una volta utilizzando l'emulatore.

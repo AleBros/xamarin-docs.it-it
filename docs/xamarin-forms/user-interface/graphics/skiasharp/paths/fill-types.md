@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 88b9dacef7a77d5f18908bdcb696e5172ceaa8c7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6288a773fb7122c16b405b8a5056b23b7a59fb6d
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-path-fill-types"></a>I tipi di riempimento del percorso
 
@@ -32,7 +32,7 @@ Entrambi gli algoritmi culling e coppie determinano se qualsiasi area racchiusa 
 
 Con tutti i percorsi di routine, l'algoritmo culling riempie spesso tutte le aree di un percorso tra parentesi. L'algoritmo coppie produce in genere risultati più significativi.
 
-Il classico esempio è una stella di cinque checkpoint, come dimostrato nel **Five-Pointed Star** pagina. Il [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) file crea due `Picker` viste per selezionare il percorso di riempimento di tipo e se il percorso è tracciato o compilato o entrambe e in quale ordine:
+Il classico esempio è una stella di cinque checkpoint, come dimostrato nel **Five-Pointed Star** pagina. Il [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) file crea due `Picker` viste per selezionare il percorso di riempimento di tipo e se il percorso è tracciato o compilato o entrambe e in quale ordine:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 3a828baccda83822237d2564d771bcd89c9099e5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b2881148631435c9082b42cad0e784100b010b46
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="path-basics"></a>Nozioni fondamentali di percorso
 
@@ -50,7 +50,7 @@ Il `R` è l'acronimo di *relativo*. Hanno la stessa sintassi dei metodi corrispo
 
 Una distribuzione termina con un'altra chiamata a `MoveTo` o `RMoveTo`, che inizia un nuovo profilo o una chiamata a `Close`, che chiude il contorno. Il `Close` metodo automaticamente aggiunge una linea retta dal punto corrente il primo punto del contorno e contrassegna il percorso come chiuso, il che significa che viene sottoposto a rendering senza le maiuscole tratto.
 
-È illustrata la differenza tra i contorni aperte e chiuse nel **due distribuzioni del triangolo** pagina, che utilizza un `SKPath` oggetto con due distribuzioni per il rendering di due triangoli. Il primo contorno è aperto e il secondo è chiuso. Ecco il [ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) classe:
+È illustrata la differenza tra i contorni aperte e chiuse nel **due distribuzioni del triangolo** pagina, che utilizza un `SKPath` oggetto con due distribuzioni per il rendering di due triangoli. Il primo contorno è aperto e il secondo è chiuso. Ecco il [ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) classe:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -122,7 +122,7 @@ Come l'aspetto di inizio e alla fine di una riga è definito da un'estremità de
 - [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Round/) creare un join arrotondato
 - [`Bevel`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Bevel/) creare un join abbassate-off
 
-Il **tratto join** pagina vengono visualizzati questi tre tracciare join con codice simile di **maiuscole tratto** pagina. Si tratta di `PaintSurface` gestore dell'evento nel [ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) classe:
+Il **tratto join** pagina vengono visualizzati questi tre tracciare join con codice simile di **maiuscole tratto** pagina. Si tratta di `PaintSurface` gestore dell'evento nel [ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) classe:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
