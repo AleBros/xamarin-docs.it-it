@@ -1,18 +1,18 @@
 ---
 title: 'Hello, Android Multiscreen: guida introduttiva'
 description: Questa guida in due parti consente di ampliare l'applicazione Phoneword per gestire una seconda schermata. Nel corso della trattazione, è stato introdotto il concetto fondamentale dei blocchi predefiniti per le applicazioni Android, con un approfondimento dell'architettura Android.
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 2913508159787f6d369f5e55f879addfc1b2ba4f
-ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
+ms.openlocfilehash: 67644caedd268aac45a86c03a69ba017976fc103
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: guida introduttiva
 

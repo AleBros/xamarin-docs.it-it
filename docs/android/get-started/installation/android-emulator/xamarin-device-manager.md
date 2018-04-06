@@ -1,18 +1,17 @@
 ---
 title: Gestione dispositivi di Xamarin Android
 description: Gestione dispositivi di Xamarin Android, attualmente in anteprima, sostituisce Gestione dispositivi legacy di Google. La presente guida illustra come usare Gestione dispositivi di Xamarin Android per creare e configurare dispositivi virtuali Android (AVD) che emulano i dispositivi Android. È possibile usare questi dispositivi virtuali per eseguire e testare l'app anche senza un dispositivo fisico.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/20/2018
-ms.openlocfilehash: 01fb21729e919872935fd63af28a13642a11fa4b
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 3dd67f25e389adda1af31f4a2b85abd4cfd751d0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-android-device-manager"></a>Gestione dispositivi di Xamarin Android
 

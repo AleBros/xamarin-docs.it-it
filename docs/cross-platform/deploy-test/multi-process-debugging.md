@@ -1,17 +1,16 @@
 ---
 title: Debug a più processori
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 852F8AB1-F9E2-4126-9C8A-12500315C599
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 7bc230b43d0b50746a6076ffb2633e7fad0283d9
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: ec2203b668365290fc9df78e63b401fb71ead7e6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="multi-process-debugging"></a>Debug a più processori
 
@@ -31,7 +30,7 @@ Per offrire assistenza agli sviluppatori nel debug di più processi, Visual Stud
 
 Per impostazione predefinita, Visual Studio per Mac visualizzerà un unico progetto nell'area **Configurazione soluzione** della barra degli strumenti di debug. Quando viene avviata una sessione di debug, questo è il progetto che sarà avviato da Visual Studio per Mac e a cui sarà collegato il debugger.
 
-Per avviare ed eseguire il debug di più processi in Visual Studio per Mac, è necessario creare una _configurazione delle soluzioni_. Una configurazione delle soluzioni descrive i progetti di una soluzione che dovrebbero essere inclusi quando viene avviata una sessione di debug facendo clic sul pulsante **Start** o premendo la combinazione &#8984; &#8617; (**Cmd-Invio**). Nella schermata riportata di seguito è riportato un esempio di soluzione in Visual Studio per Mac che dispone di più configurazioni delle soluzioni:
+Per avviare ed eseguire il debug di più processi in Visual Studio per Mac, è necessario creare una _configurazione delle soluzioni_. Una configurazione delle soluzioni descrive i progetti di una soluzione che dovrebbero essere inclusi quando viene avviata una sessione di debug facendo clic sul pulsante **Start** o premendo la combinazione & #8984; & #8617; (**Cmd-Invio**). Nella schermata riportata di seguito è riportato un esempio di soluzione in Visual Studio per Mac che dispone di più configurazioni delle soluzioni:
 
 ![](multi-process-debugging-images/mpd01-xs.png "Soluzione con più configurazioni delle soluzioni")
 
@@ -66,7 +65,7 @@ Il **riquadro thread** visualizzerà informazioni per tutti i processi e thread 
 
 ![](multi-process-debugging-images/mpd06-xs.png "Riquadro thread per una configurazione delle soluzioni")
 
-I thread sono raggruppati in base al processo che li ospita. Il nome del progetto e l'ID del thread attivo verranno visualizzati in grassetto e verrà visualizzata una freccia rivolta verso destra nella barra accanto al thread attivo. Nella schermata precedente, **thread &#1;** in **Id processo 48703** (**FirstProject**) costituiscono il thread attivo.
+I thread sono raggruppati in base al processo che li ospita. Il nome del progetto e l'ID del thread attivo verranno visualizzati in grassetto e verrà visualizzata una freccia rivolta verso destra nella barra accanto al thread attivo. Nella schermata precedente, **thread 1 #** in **Id processo 48703** (**FirstProject**) costituiscono il thread attivo.
 
 Durante il debug di più processi, è possibile passare al thread attivo per visualizzare informazioni di debug per tale processo (o thread) utilizzando il **riquadro thread**. Per passare al thread attivo, selezionare il thread desiderato nel **riquadro thread** e fare doppio clic su di esso.
 

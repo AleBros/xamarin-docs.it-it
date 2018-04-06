@@ -1,7 +1,6 @@
 ---
 title: Introduzione ad Android
-description: "Xamarin.Android consente di creare applicazioni Android native con gli stessi controlli dell'interfaccia utente che si userebbero in Java, ma con la flessibilità e l'eleganza tipiche di un linguaggio moderno (C#), la potenza della libreria di classi base .NET e un IDE di prim'ordine (Visual Studio). Questa serie introduce i concetti di base dello sviluppo di Xamarin.Android. Guida l'utente dall'installazione e configurazione fino alla compilazione della prima applicazione."
-ms.topic: article
+description: Xamarin.Android consente di creare applicazioni Android native con gli stessi controlli dell'interfaccia utente che si userebbero in Java, ma con la flessibilità e l'eleganza tipiche di un linguaggio moderno (C#), la potenza della libreria di classi base .NET e un IDE di prim'ordine (Visual Studio). Questa serie introduce i concetti di base dello sviluppo di Xamarin.Android. Guida l'utente dall'installazione e configurazione fino alla compilazione della prima applicazione.
 ms.prod: xamarin
 ms.assetid: D3BC68C5-87C1-50AF-ED0A-55EBF07CBD8B
 ms.technology: xamarin-android
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/25/2017
-ms.openlocfilehash: c07ab37bc88b52bbff0ddc0fb7bf1faa4d97bb2a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8a9abb7e9a5640994d67c1fb33d15d8405442b6c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="getting-started-series"></a>Documentazione introduttiva
 

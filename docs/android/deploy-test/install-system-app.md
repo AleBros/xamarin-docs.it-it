@@ -1,18 +1,17 @@
 ---
 title: Installazione di Xamarin.Android come app di sistema
-description: "Questa guida illustra le differenze tra un'app di sistema e un'app utente e spiega come installare un'applicazione Xamarin.Android come applicazione di sistema. Questa guida è rivolta agli autori di immagini ROM Android personalizzate. Non illustra come creare una ROM personalizzata."
-ms.topic: article
+description: Questa guida illustra le differenze tra un'app di sistema e un'app utente e spiega come installare un'applicazione Xamarin.Android come applicazione di sistema. Questa guida è rivolta agli autori di immagini ROM Android personalizzate. Non illustra come creare una ROM personalizzata.
 ms.prod: xamarin
 ms.assetid: 0113143B-7D8D-4C4C-B2F5-B966A2E7CE1F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: ad2080c61c9cc7fb376997bc56668b6db135dbae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 94f2108a55cea520782aa5eac959195be09929b5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>Installazione di Xamarin.Android come app di sistema
 

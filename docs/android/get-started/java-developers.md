@@ -1,18 +1,17 @@
 ---
 title: Xamarin per sviluppatori Java
-description: "Gli sviluppatori Java possono sfruttare le competenze e il codice esistente nella piattaforma Xamarin con i vantaggi che derivano dal riutilizzare il codice C#. La sintassi C# è molto simile alla sintassi Java ed entrambi i linguaggi offrono funzionalità analoghe. Ci sono inoltre funzionalità specifiche di C# che semplificano notevolmente lo sviluppo."
-ms.topic: article
+description: Gli sviluppatori Java possono sfruttare le competenze e il codice esistente nella piattaforma Xamarin con i vantaggi che derivano dal riutilizzare il codice C#. La sintassi C# è molto simile alla sintassi Java ed entrambi i linguaggi offrono funzionalità analoghe. Ci sono inoltre funzionalità specifiche di C# che semplificano notevolmente lo sviluppo.
 ms.prod: xamarin
 ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/13/2018
-ms.openlocfilehash: 7abcaa218c6755a58e6f35e982a1144060df0b3b
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 29fc698e6ed1cfe02ce329813342916d5e7a1651
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin per sviluppatori Java
 

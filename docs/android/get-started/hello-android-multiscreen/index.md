@@ -1,18 +1,18 @@
 ---
 title: Hello, Android Multiscreen
-description: "In questa guida divisa in due parti viene espansa l'applicazione Phoneword creata nella guida Hello, Android, in modo da gestire una seconda schermata. La guida introduce i blocchi predefiniti di base dell'applicazione e un'analisi più approfondita dell'architettura Android a mano a mano che si comprende meglio la struttura e la funzionalità delle applicazioni."
-ms.topic: article
+description: In questa guida divisa in due parti viene espansa l'applicazione Phoneword creata nella guida Hello, Android, in modo da gestire una seconda schermata. La guida introduce i blocchi predefiniti di base dell'applicazione e un'analisi più approfondita dell'architettura Android a mano a mano che si comprende meglio la struttura e la funzionalità delle applicazioni.
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D82EC193-2CB7-44C3-8688-0CEBDF60C3D6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/02/2016
-ms.openlocfilehash: c61e3dfd76f077d36d4bf6f8f43e3aa794e31644
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a168e285358fff51b923200e55784b566df29d9d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-android-multiscreen"></a>Hello, Android Multiscreen
 

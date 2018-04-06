@@ -1,18 +1,17 @@
 ---
 title: Uso degli entitlement
 description: Gli entitlement sono funzionalità speciali delle app e autorizzazioni di sicurezza concesse alle applicazioni configurate correttamente per il loro uso.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 8b5c88f4af3087f980b586113c274016935585c0
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 6ced541ca9df6fcae1643dc14c2e19807e972822
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-entitlements"></a>Uso degli entitlement
 

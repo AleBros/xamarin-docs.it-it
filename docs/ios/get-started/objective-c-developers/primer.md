@@ -1,17 +1,16 @@
 ---
 title: Introduzione a C# per sviluppatori Objective-C
-description: "Xamarin.iOS consente di condividere tra diverse piattaforme il codice indipendente dalla piattaforma scritto in C#. Tuttavia, per le applicazioni iOS esistenti può essere necessario sfruttare codice Objective-C che è già stato creato. Questo articolo offre una breve panoramica per gli sviluppatori Objective-C che vogliono passare a Xamarin e al linguaggio C#."
-ms.topic: article
+description: Xamarin.iOS consente di condividere tra diverse piattaforme il codice indipendente dalla piattaforma scritto in C#. Tuttavia, per le applicazioni iOS esistenti può essere necessario sfruttare codice Objective-C che è già stato creato. Questo articolo offre una breve panoramica per gli sviluppatori Objective-C che vogliono passare a Xamarin e al linguaggio C#.
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: bfc91ba92b2ed62e61d7ba99dec03784933295bd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 717e131dd4025ea07780f6e52d8171fd15272dac
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Introduzione a C# per sviluppatori Objective-C
 
@@ -35,11 +34,11 @@ Objective-C e C# sono linguaggi molto diversi, sia sintatticamente che dal punto
 
 Detto ciò, esistono diverse funzionalità dei linguaggi Objective-C e C# che hanno una funzione simile. Quando si crea un binding a codice Objective-C da C# o durante il porting di Objective-C in C#, è utile comprendere queste analogie.
 
-### <a name="protocols-vs-interfaces"></a>Protocolli e interfacce
+### <a name="protocols-vs-interfaces"></a>Protocolli e Interfacce
 
 Sia Objective-C che C# sono linguaggi a ereditarietà singola. Tuttavia, entrambi i linguaggi supportano l'implementazione di più interfacce in una determinata classe. In Objective-C queste interfacce logiche sono denominate *protocolli*, mentre in C# sono denominate *interfacce*. A livello di implementazione, la principale differenza tra un'interfaccia C# e un protocollo Objective-C è che quest'ultimo può avere metodi facoltativi. Per altre informazioni, vedere l'articolo relativo a [eventi, delegati e protocolli](~/ios/app-fundamentals/delegates-protocols-and-events.md).
 
-### <a name="categories-vs-extension-methods"></a>Categorie e metodi di estensione
+### <a name="categories-vs-extension-methods"></a>Categorie e Metodi di estensione
 
 Objective-C consente di aggiungere metodi a una classe per cui potrebbe non essere disponibile il codice di implementazione tramite le *categorie*. In C# è disponibile un concetto simile, tramite i *metodi di estensione*.
 
@@ -61,7 +60,7 @@ Quindi, quando si crea un'istanza di `UITextView` nel codice, il metodo è dispo
 
 Quando viene chiamato il metodo di estensione, l'istanza viene passata all'argomento, come `textView` in questo esempio.
 
-### <a name="frameworks-vs-assemblies"></a>Framework e assembly
+### <a name="frameworks-vs-assemblies"></a>Framework e Assembly
 
 In Objective-C vengono creati pacchetti di classi correlate in speciali directory denominate framework. In C# e .NET, invece, vengono usati gli assembly per fornire bit riutilizzabili di codice precompilato. Negli ambienti all'esterno di iOS, gli assembly contengono codice Intermediate Language (IL) compilato in modalità JIT (Just In Time) in fase di esecuzione. Tuttavia, Apple non consente la compilazione JIT nelle applicazioni iOS. Pertanto, il codice C# per iOS con Xamarin è compilato in modalità AOT (Ahead Of Time), che produce un singolo file eseguibile Unix insieme ai file di metadati inclusi nel pacchetto dell'applicazione.
 
@@ -132,7 +131,7 @@ MyClass object2 = new MyClass ();
 List<MyClass> myList = new List<MyClass>{ object1, object2 };
 ```
 
-### <a name="blocks-vs-lambda-expressions"></a>Blocchi ed espressioni lambda
+### <a name="blocks-vs-lambda-expressions"></a>Blocchi ed Espressioni lambda
 
 Objective-C usa i *blocchi* per creare le chiusure, in cui è possibile creare una funzione inline che è in grado di usare lo stato in cui è inclusa. In C# è presente un concetto simile tramite l'uso delle espressioni lambda. In C# le espressioni lambda vengono create con l'operatore `=>`, come illustrato di seguito:
 

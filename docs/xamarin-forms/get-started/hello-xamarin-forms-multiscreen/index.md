@@ -1,24 +1,24 @@
 ---
 title: Hello, Xamarin.Forms Multiscreen
 description: Questa guida espande l'applicazione Phoneword creata nella guida Hello, Xamarin.Forms per passare a una seconda schermata. Gli argomenti trattati includono la navigazione tra le pagine e l'associazione di dati a una raccolta.
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 4b1f7817-6754-4b8d-9567-424d7d8f2b05
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 79b9ead855863498964aca3807afa7edcf40f21b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 2132e1d0732a727d90e3eb7f36085f13c78c2e7c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-xamarinforms-multiscreen"></a>Hello, Xamarin.Forms Multiscreen
 
 _Questa guida espande l'applicazione Phoneword creata nella guida Hello, Xamarin.Forms per passare a una seconda schermata. Gli argomenti trattati includono la navigazione tra le pagine e il data binding a una raccolta._
 
-## <a name="part-1-quickstartxamarin-formsget-startedhello-xamarin-forms-multiscreenquickstartmd"></a>[Part 1: Quickstart](~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/quickstart.md) (Parte 1: guida introduttiva)
+## <a name="part-1-quickstartxamarin-formsget-startedhello-xamarin-forms-multiscreenquickstartmd"></a>[Parte 1: guida introduttiva](~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/quickstart.md)
 
 La prima parte di questa guida illustra come aggiungere una seconda schermata all'applicazione Phoneword per tenere traccia del registro chiamate per l'applicazione.
 

@@ -1,17 +1,16 @@
 ---
 title: Xamarin per sviluppatori Objective-C
-description: "Gli sviluppatori Objective-C possono sfruttare le competenze e il codice Objective-C esistente nella piattaforma Xamarin, con i vantaggi che derivano dal riutilizzare il codice C#. Questa sezione è un'introduzione a Xamarin.iOS e contiene i collegamenti alle informazioni sull'uso del codice Objective-C esistente da C#."
-ms.topic: article
+description: Gli sviluppatori Objective-C possono sfruttare le competenze e il codice Objective-C esistente nella piattaforma Xamarin, con i vantaggi che derivano dal riutilizzare il codice C#. Questa sezione è un'introduzione a Xamarin.iOS e contiene i collegamenti alle informazioni sull'uso del codice Objective-C esistente da C#.
 ms.prod: xamarin
 ms.assetid: 9F3C86A3-403E-4025-99CA-99FCA86DC828
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 275cce891801cd542d202960efc3da668fa8f07b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e29762fb258f7d796878c85bfe6f7aaa93207c5e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-for-objective-c-developers"></a>Xamarin per sviluppatori Objective-C
 

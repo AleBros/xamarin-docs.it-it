@@ -1,18 +1,17 @@
 ---
 title: Introduzione a Xamarin.iOS per Visual Studio
-description: "Questo articolo spiega come compilare e testare le applicazioni Xamarin iOS con Visual Studio. Verrà spiegato come usare Visual Studio per creare nuovi progetti iOS, compilare un'applicazione iOS e quindi compilare, testare ed eseguire il debug usando un Mac connesso alla rete per ospitare il compilatore e il simulatore di Apple e la toolchain di compilazione di Xamarin."
-ms.topic: article
+description: Questo articolo spiega come compilare e testare le applicazioni Xamarin iOS con Visual Studio. Verrà spiegato come usare Visual Studio per creare nuovi progetti iOS, compilare un'applicazione iOS e quindi compilare, testare ed eseguire il debug usando un Mac connesso alla rete per ospitare il compilatore e il simulatore di Apple e la toolchain di compilazione di Xamarin.
 ms.prod: xamarin
 ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e958b4e48767e0c2246b9f237c681fbc362f6b00
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a8264d3ebd5f294b1b77fbbafd660825d5ce5180
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introduzione a Xamarin.iOS per Visual Studio
 
