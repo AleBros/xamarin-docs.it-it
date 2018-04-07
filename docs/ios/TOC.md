@@ -189,7 +189,6 @@
 ##### [Notifiche remote](platform/user-notifications/deprecated/remote-notifications-in-ios.md)
 ### [Wide Color](platform/wide-color.md)
 ## [Dati e servizi cloud](data-cloud/index.md)
-### [Servizi connessi di Azure](~/cross-platform/data-cloud/connected-services.md?context=xamarin/ios)
 ### [Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/ios)
 #### [Introduzione](~/cross-platform/data-cloud/active-directory/get-started/index.md?context=xamarin/ios)
 ##### [Passaggio 1. Registrare](~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/ios)
