@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: db8b767d6e7a6c5e5badc1c74703825a66ea2ab8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1e1039f513534885dffe9fef348d567243651e22
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="app-class"></a>Classe App
 
@@ -21,7 +21,7 @@ Il `Application` classe di base offre le funzionalità seguenti, che sono espost
 * Permanente [ `Properties` dizionario](#Properties_Dictionary) per archiviare valori semplici tra le modifiche dello stato del ciclo di vita.
 * Un valore statico `Current` proprietà che contiene un riferimento all'oggetto applicazione corrente.
 
-Se inoltre espone [metodi del ciclo di vita](~/xamarin-forms/app-fundamentals/app-lifecycle.md) , ad esempio `OnStart`, `OnSleep`, e `OnResume` nonché gli eventi di modale di spostamento.
+Espone inoltre [metodi del ciclo di vita](~/xamarin-forms/app-fundamentals/app-lifecycle.md) , ad esempio `OnStart`, `OnSleep`, e `OnResume` , nonché gli eventi di spostamento modale.
 
 A seconda del modello è stata selezionata, la `App` classe può essere definita in uno dei due modi:
 

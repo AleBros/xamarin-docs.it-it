@@ -6,17 +6,13 @@ ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: cdddc66df4da22654e44b5b72d4b0b1c659c1fde
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 579393a8830e73f7ab64f750c0176eb4c4e36029
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="general-frequently-asked-questions"></a>Domande frequenti generali
-
-## <a name="visual-studio-2017-release-candidate"></a>Visual Studio 2017 Release Candidate
-### <a name="can-i-use-visual-studio-2017-release-candidate-with-xamarinvisualstudio-2017-rcmd"></a>[È possibile usare Visual Studio 2017 Release Candidate con Xamarin?](visualstudio-2017-rc.md)
-Per una descrizione delle implicazioni dell'utilizzo di Xamarin con Visual Studio 2017 Release Candidate (RC) nonché per informazioni su come installare Xamarin in Visual Studio2017 RC corrente.
 
 ## <a name="portable-class-libraries"></a>Librerie di classi portabili
 ### <a name="how-can-i-view-what-libraries-are-supported-in-a-pclpcl-support-librariesmd"></a>[Come è possibile visualizzare le librerie supportate in una libreria di classi portabile (PCL)?](pcl-support-libraries.md)
@@ -33,7 +29,7 @@ Xamarin. IOS e xamarin non implementano 100% di tutti i profili che consentono c
 Componenti aggiuntivi, estensioni e aggiornamenti di NuGet è reperibile nella **aggiornamenti** nella scheda il **Gestione pacchetti NuGet**. Navigazione dettagliate per trovare gli aggiornamenti in Visual Studio per Mac e Visual Studio è in questa Guida.
 
 ### <a name="how-do-i-downgrade-a-nuget-packagenuget-package-downgrademd"></a>[Come si effettua il downgrade di un pacchetto NuGet?](nuget-package-downgrade.md)
-Visual Studio per Mac e Visual Studio hanno caratteristiche per la selezione di versioni precedenti di pacchetti e installarli automaticamente. simile al modo in cui l'aggiornamento di pacchetti.
+Visual Studio per Mac e Visual Studio sono disponibili funzionalità per la selezione di versioni precedenti di pacchetti e installarli automaticamente. simile alla modalità di aggiornamento pacchetti works.
 
 ### <a name="missing-packages-error-after-updating-nuget-packagesnuget-packages-missingmd"></a>[Errore di pacchetti mancanti dopo l'aggiornamento di pacchetti Nuget](nuget-packages-missing.md)
 Questo problema è stato segnalato principalmente sulle soluzioni di app di esempio xamarin. Forms, ma il potenziale per questo problema può verificarsi in qualsiasi progetto che utilizza i pacchetti NuGet.

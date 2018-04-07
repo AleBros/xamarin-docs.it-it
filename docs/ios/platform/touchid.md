@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 6ec46a5e098ba14925102211a27fcce8c27970e9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d9d70c37de5cb91c4cd1fdc77e27942d851c346b
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="touch-id"></a>ID tocco
 
@@ -121,47 +121,46 @@ Nelle sezioni precedenti, è stato esaminato teoria accesso e l'autenticazione t
 
 Pertanto si esaminerà l'aggiunta di alcune autenticazione ID tocco per l'applicazione. In questa procedura dettagliata verrà per utilizzare il [tabella Storyboard](https://developer.xamarin.com/samples/StoryboardTable/) esempio. Si desidera assicurarsi che solo il proprietario del dispositivo può aggiungere un elemento all'elenco, non si voglia ingombrare chiunque consentendo di aggiungere un elemento.
 
-1.  Scaricare l'esempio ed eseguirlo in Visual Studio per Mac.
-2.  Fare doppio clic su `MainStoryboard.Storyboard` per aprire l'esempio nella finestra di progettazione iOS. In questo esempio, si vuole aggiungere una nuova schermata all'applicazione, che consentono di controllare l'autenticazione. Questo entra prima corrente `MasterViewController`.
-3.  Trascinare una nuova **View Controller** dal **della casella degli strumenti** per il **area di progettazione**. Impostare questo elemento come il **radice View Controller** da **Ctrl + trascinare** dal **navigazione Controller**:
+1. Scaricare l'esempio ed eseguirlo in Visual Studio per Mac.
+2. Fare doppio clic su `MainStoryboard.Storyboard` per aprire l'esempio nella finestra di progettazione iOS. In questo esempio, si vuole aggiungere una nuova schermata all'applicazione, che consentono di controllare l'autenticazione. Questo entra prima corrente `MasterViewController`.
+3. Trascinare una nuova **View Controller** dal **della casella degli strumenti** per il **area di progettazione**. Impostare questo elemento come il **radice View Controller** da **Ctrl + trascinare** dal **navigazione Controller**:
 
     [![](touchid-images/image4.png "Impostare il Controller di visualizzazione radice")](touchid-images/image4.png#lightbox)
 4.  Denominare il nuovo Controller di visualizzazione `AuthenticationViewController`.
-5.  Successivamente, trascinare un pulsante e posizionarlo sul `AuthenticationViewController`. Chiamare questo metodo `AuthenticateButton`e assegnargli il testo `Add a Chore`.
-6.  Creare un evento nel `AuthenticateButton` chiamato `AuthenticateMe`.
-7.  Creare un manuale definire da `AuthenticationViewController` facendo clic su barra di colore nero nella parte inferiore e **Ctrl + trascinare** dalla barra per il `MasterViewController` e scegliendo **push** (o **Mostra** Se si utilizza classi di dimensione):
+5. Successivamente, trascinare un pulsante e posizionarlo sul `AuthenticationViewController`. Chiamare questo metodo `AuthenticateButton`e assegnargli il testo `Add a Chore`.
+6. Creare un evento nel `AuthenticateButton` chiamato `AuthenticateMe`.
+7. Creare un manuale definire da `AuthenticationViewController` facendo clic su barra di colore nero nella parte inferiore e **Ctrl + trascinare** dalla barra per il `MasterViewController` e scegliendo **push** (o **Mostra** Se si utilizza classi di dimensione):
 
     [![](touchid-images/image5.png "Trascinare dalla barra di MasterViewController e scegliendo push o visualizzare")](touchid-images/image6.png#lightbox)
-8.  Fare clic su appena creato di definire e assegnare l'identificatore `AuthenticationSegue`, come illustrato di seguito:
+8. Fare clic su appena creato di definire e assegnare l'identificatore `AuthenticationSegue`, come illustrato di seguito:
 
     [![](touchid-images/image7.png "Impostare l'identificatore segue su AuthenticationSegue")](touchid-images/image7.png#lightbox)
-9.  Aggiungi il seguente codice a `AuthenticationViewController`.
+9. Aggiungi il seguente codice a `AuthenticationViewController`.
 
-    ```
+    ```csharp
     partial void AuthenticateMe (UIButton sender)
-        {
-            var context = new LAContext();
-            NSError AuthError;
-            var myReason = new NSString("To add a new chore");
+    {
+        var context = new LAContext();
+        NSError AuthError;
+        var myReason = new NSString("To add a new chore");
 
-
-            if (context.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out AuthError)){
-                var replyHandler = new LAContextReplyHandler((success, error) => {
-
-                    this.InvokeOnMainThread(()=>{
-                        if(success){
-                            Console.WriteLine("You logged in!");
-                            PerformSegue("AuthenticationSegue", this);
-                        }
-                        else{
-                            //Show fallback mechanism here
-                        }
-                    });
-
+        if (context.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out AuthError)){
+            var replyHandler = new LAContextReplyHandler((success, error) => {
+                this.InvokeOnMainThread(()=> {
+                    if(success)
+                    {
+                        Console.WriteLine("You logged in!");
+                        PerformSegue("AuthenticationSegue", this);
+                    }
+                    else
+                    {
+                        // Show fallback mechanism here
+                    }
                 });
-                context.EvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, myReason, replyHandler);
-            };
-        }
+            });
+            context.EvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, myReason, replyHandler);
+        };
+    }
     ```
 
 Questo è tutto il codice che necessario per implementare l'autenticazione di Touch ID utilizzando l'autenticazione locale. Le righe evidenziate nell'immagine seguente mostrano l'uso dell'autenticazione locale:

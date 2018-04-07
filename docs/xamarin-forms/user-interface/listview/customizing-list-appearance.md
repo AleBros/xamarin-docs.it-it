@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: ff36deff996a92fca512158252c64e5c29046be9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 76a5c96d0e7bb85f0e6b313e2dbc058b8c2aae6d
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="list-appearance"></a>Elenco aspetto
 
@@ -117,14 +117,12 @@ Si noti che è necessario:
 - Modificare il `ListView`del `ItemsSource` all'elenco di gruppi
 
 ### <a name="customizing-grouping"></a>Personalizzazione di raggruppamento
-Ora che abbiamo visto come implementare base raggruppamento in ListView, di seguito viene illustrato come personalizzare la visualizzazione delle intestazioni di gruppo.
 
-Simile alla modalità `ListView` ha un `ItemTemplate` per definire la modalità di visualizzazione delle righe, `ListView` ha un `GroupHeaderTemplate`. Questo è un esempio di ListView precedente, con un modello di intestazione di un gruppo personalizzato:
+Raggruppamento è stato abilitato nell'elenco, può essere personalizzato anche l'intestazione di gruppo.
 
-![](customizing-list-appearance-images/grouping-depth.png "ListView con GroupHeaderTemplate personalizzato")
+Simile alla modalità `ListView` ha un `ItemTemplate` per definire la modalità di visualizzazione delle righe, `ListView` ha un `GroupHeaderTemplate`. 
 
-
-Di seguito è illustrato come eseguire tale progettazione in XAML:
+In seguito è riportato un esempio di personalizzazione di intestazione del gruppo in XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
