@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 54c70fda22782dfa9b6617c0832f2c17f0169b57
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a96c57b66e5debbbb7318c22e33a21eb9b998395
+ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="webview"></a>WebView
 
@@ -399,6 +399,8 @@ Caricamento completato:
 Recenti progressi sono visto prima ognuno dei browser web comuni adottare tecnologie, ad esempio la compilazione di JavaScript e il rendering con accelerazione hardware. Sfortunatamente, a causa di restrizioni di sicurezza, la maggior parte di questi miglioramenti non erano disponibile nell'il equaivalent iOS di `WebView`, `UIWebView`. Xamarin. Forms `WebView` utilizza `UIWebView`. Se questo è un problema, è necessario scrivere un renderer personalizzato che utilizza `WKWebView`, che supporta la visualizzazione più veloce. Si noti che `WKWebView` è supportato solo in iOS 8 e versioni successive.
 
 WebView in Android per impostazione predefinita è veloci quasi quanto il browser predefinito.
+
+Il [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) utilizza il motore di rendering Microsoft Edge. I dispositivi desktop e tablet dovrebbe essere le stesse prestazioni come usando il browser Edge se stesso.
 
 Il `WebBrowser` controllo di Windows Phone 8 e Windows Phone 8.1 viene non funzionalità di supporto di HTML5 più recente e spesso può avere un peggioramento delle prestazioni. Tenere in considerazione come siti visualizzerà in di Windows Phone `WebView`. Non è sufficiente eseguire il test in Internet Explorer.
 

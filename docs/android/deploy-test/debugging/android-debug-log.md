@@ -1,17 +1,16 @@
 ---
 title: Log di debug Android
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/22/2018
-ms.openlocfilehash: 1b6b8ed99c3b2ccc9c39499c9bb9f585bd335c46
-ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
+ms.date: 04/04/2018
+ms.openlocfilehash: e0e22fe35dc5042a7b3c895a250803e936611629
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="android-debug-log"></a>Log di debug Android
 
@@ -153,6 +152,18 @@ Questo codice produce un output simile al seguente:
 I/myapp   (11103): this is an info message
 W/myapp   (11103): this is a warning message
 E/myapp   (11103): this is an error message
+```
+
+È anche possibile usare `Console.WriteLine` per la scrittura nel **log di debug**. Questi messaggi vengono visualizzati in logcat con un formato di output leggermente diverso (questa tecnica è particolarmente utile durante il debug delle app Xamarin.Forms su Android):
+
+```csharp
+System.Console.WriteLine ("DEBUG - Button Clicked!");
+```
+
+Questo codice produce un output simile al seguente in logcat:
+
+```
+Info (19543) / mono-stdout: DEBUG - Button Clicked!
 ```
 
 ## <a name="interesting-messages"></a>Messaggi interessanti

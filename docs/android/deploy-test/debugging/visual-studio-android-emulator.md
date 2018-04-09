@@ -1,18 +1,17 @@
 ---
 title: Emulatore di Visual Studio per Android
 description: Questa guida illustra come configurare e usare l'emulatore di Visual Studio per Android per sviluppare le app Xamarin.Android in Visual Studio 2015.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CD128CB9-499F-4558-B49F-77248824EFDF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: a31d90e6d5abd574eb6187953082e1b70f66a113
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/30/2018
+ms.openlocfilehash: bcc88ba4c46aa9abe9038d6ea65bc9c17f337da6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="visual-studio-android-emulator"></a>Emulatore di Visual Studio per Android
 
@@ -21,6 +20,9 @@ _Questa guida illustra come configurare e usare l'emulatore di Visual Studio per
 ## <a name="visual-studio-android-emulator-overview"></a>Panoramica dell'emulatore di Visual Studio per Android
 
 Microsoft Visual Studio 2015 include un emulatore per Android che può essere usato come destinazione per il debug di un'app Xamarin.Android: *Visual Studio Emulator for Android*. L'emulatore usa le funzionalità Hyper-V del computer di sviluppo offrendo tempi di avvio ed esecuzione più rapidi rispetto all'emulatore predefinito accluso ad Android SDK. Visual Studio Emulator for Android può essere usato come alternativa all'emulatore predefinito di Android SDK quando si sviluppa un'applicazione Xamarin.Android.
+
+> [!NOTE]
+> Visual Studio Emulator for Android è compatibile solo con Visual Studio 2015 e non funziona con Visual Studio 2017.
 
 Questa guida illustra come avviare l'emulatore Android di Microsoft da Visual Studio per testare l'app e descrive le varie funzionalità disponibili nell'emulatore. Verrà spiegato come selezionare i *profili di dispositivo*, simili alle definizioni di dispositivo nell'emulatore predefinito di Android SDK, per simulare i diversi tipi di dispositivi Android. Infine, una sezione sulla risoluzione dei problemi illustra i problemi più comuni e le relative soluzioni.
 

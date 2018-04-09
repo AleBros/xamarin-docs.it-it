@@ -1,7 +1,6 @@
 ---
 title: Introduzione
 description: Informazioni su come sviluppare applicazioni dalle fasi iniziali fino alla distribuzione usando queste guide dettagliate.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.technology: xamarin-cross-platform
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 8d9acbf5fa53c2fa94d1a15d51de9d3db48a16fe
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2178d567f1ccfe803ebce8b7b623c31c290999bc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="getting-started"></a>Introduzione
 
@@ -23,11 +22,13 @@ Prima di iniziare, verificare i [requisiti di sistema](requirements.md) e le [is
 
 ## <a name="build-your-first-app"></a>Compilare la prima app
 
-Per iniziare subito con la generazione di codice, scegliere una guida rapida per compilare la prima app:
+> [!div class="nextstepaction"]
+> [Guida introduttiva di Xamarin.Forms](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md)
+
+Per compilare un'app usando tecnologie di interfaccia utente native (ad esempio Android XML o gli storyboard Xcode), vedere una di queste guide per piattaforme specifiche:
 
 * [Android Quick Start](~/android/get-started/hello-android/hello-android-quickstart.md) (Guida introduttiva di Android)
 * [iOS Quick Start](~/ios/get-started/hello-ios/hello-ios-quickstart.md) (Guida introduttiva di iOS)
-* [Xamarin.Forms Quick Start](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md) (Guida introduttiva di Xamarin.Forms)
 * [Introduzione a Mac](~/mac/get-started/hello-mac.md)
 
 ## <a name="getting-started-with-mobile-development"></a>Introduzione allo sviluppo per dispositivi mobili
@@ -47,7 +48,7 @@ Questo articolo descrive il ciclo di vita di sviluppo del software per le applic
 Questo documento offre una panoramica di Visual Studio per Mac, l'ambiente di sviluppo integrato (IDE).
 
 
-## <a name="xamarin-university-video"></a>Video di Xamarin University
+## <a name="get-started-with-xamarin-university"></a>Introduzione a Xamarin University
 
 > [!VIDEO https://youtube.com/embed/NGvn-pGZFPA]
 

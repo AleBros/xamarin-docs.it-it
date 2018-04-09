@@ -6,11 +6,11 @@ ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 8112f9bfc8975b12e3c300c0c981d21749173f7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: befcdcbee3114e760cec94a61a84106fddc72cf9
+ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="why-isnt-jenkins-supported-by-xamarin"></a>Motivo per cui non è supportato Jenkins da Xamarin?
 
@@ -51,7 +51,3 @@ oppure
 > Errore: La Starter Edition di xamarin non supporta la compilazione all'esterno di Xamarin Studio 
 
 La causa più comune di questo scenario è l'utilizzo di Jenkins eseguendo l'accesso con un account utente non associato con la licenza di Xamarin. Il modo più semplice della risoluzione, è di installare Jenkins come un'app direttamente tramite l'account utente. Questo processo e alcune considerazioni aggiuntive sono descritti di seguito: [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)
-
-Un'altra possibilità è che le informazioni sulla licenza di Xamarin è danneggiati in qualche modo, è possibile utilizzare il [Guida Resync licenza di Xamarin](~/cross-platform/troubleshooting/legacy-licenses/resync-licenses.md) per risolvere questo scenario.
-
-
