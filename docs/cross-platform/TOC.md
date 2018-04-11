@@ -6,7 +6,7 @@
 ##### [Installazione delle anteprime di Xamarin (Windows)](get-started/installation/windows-preview.md)
 #### [Installazione di Visual Studio per Mac](/visualstudio/mac/installation/)
 ##### [Installazione delle anteprime di Xamarin (Mac)](/visualstudio/mac/update/)
-#### [Istruzioni di configurazione del firewall di](get-started/installation/firewall.md) Xamarin
+#### [Istruzioni di configurazione del firewall di Xamarin](get-started/installation/firewall.md)
 #### [Disinstallazione di Xamarin](get-started/installation/uninstalling-xamarin.md)
 ### [Introduzione allo sviluppo per dispositivi mobili](get-started/introduction-to-mobile-development.md)
 ### [Introduzione al ciclo di vita di sviluppo del software per i dispositivi mobili](get-started/introduction-to-mobile-sdlc.md)
