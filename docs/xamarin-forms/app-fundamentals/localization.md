@@ -146,7 +146,7 @@ File di risorse specifiche della lingua devono seguire una convenzione di denomi
 * **AppResources.zh Hans.resx** - cinese (semplificato) traduzioni delle lingue.
 * **AppResources.zh Hant.resx** - cinese (tradizionale) traduzioni delle lingue.
 * **AppResources.pt.resx** -traduzioni in lingua portoghese.
-* **AppResources.pt BR.resx** -traduzioni in lingua portoghese brasiliano.
+* **AppResources.pt BR.resx** -traduzioni in lingua portoghese (Brasile).
 
 Il modello generale consiste nell'utilizzare i codici di lingua di due lettere, ma vi sono alcuni esempi (ad esempio il cinese) in cui viene utilizzato un formato diverso e altri esempi (ad esempio il portoghese brasiliano) in cui è richiesto un identificatore di impostazioni locali di quattro caratteri.
 
@@ -455,7 +455,7 @@ Dopo avere implementato il servizio di dipendenza e aggiornato **Info. plist**, 
 > [!NOTE]
 > Si noti che considera Apple portoghese in modo leggermente diverso da quello previsto.
 > Da [i documenti](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"Usa pt come ID di lingua per il portoghese è utilizzato in Brasile e pt-PT come ID di lingua per il portoghese è utilizzato in Portogallo"_.
-> Ciò significa che, quando portoghese viene scelto delle impostazioni locali non standard, la lingua di fallback sarà portoghese brasiliano in iOS, a meno che non viene scritto codice per modificare questo comportamento (ad esempio il `ToDotnetFallbackLanguage` sopra).
+> Ciò significa che, quando portoghese viene scelto delle impostazioni locali non standard, la lingua di fallback sarà portoghese (Brasile) in iOS, a meno che non viene scritto codice per modificare questo comportamento (ad esempio il `ToDotnetFallbackLanguage` sopra).
 
 #### <a name="android-application-project"></a>Progetto di applicazione Android
 

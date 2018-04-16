@@ -71,7 +71,7 @@ L'API di riconoscimento vocale fornisce risultati al chiamante app in quasi in t
 - Livelli di confidenza per le singole traduzioni.
 - Informazioni di temporizzazione.
 
-Come descritto in precedenza, l'audio per la conversione può essere fornito sia da un feed in tempo reale, o da origine pre-registrato e in tutti i dialetti supportati da iOS 10 e oltre 50 lingue.
+Come descritto in precedenza, l'audio per la conversione può essere fornito sia da un feed in tempo reale, o da origine pre-registrato e in tutte le lingue regionali supportate da iOS 10 e oltre 50 lingue.
 
 L'API di riconoscimento vocale può essere utilizzato in qualsiasi dispositivo iOS che eseguono iOS 10 e nella maggior parte dei casi, richiede una connessione internet attiva poiché la maggior parte delle traduzioni viene eseguita per i server Apple. Ciò premesso, alcuni iOS più recente dispositivi supportano always on, sul dispositivo traduzioni delle lingue specifiche.
 
