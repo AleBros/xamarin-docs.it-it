@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b4d96ef50498b454da583a955169b9d51c29dd01
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8103dcc1c2e1e8c2375a86d51580b1ea3fcce432
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resources-and-data-storage"></a>Archiviazione dei dati e risorse
 
@@ -55,6 +55,9 @@ Di conseguenza, l'app Xamarin.tvOS necessario archiviare tutti i dati utente in 
 
 - **Archivio chiave-valore (KVS) iCloud** : per piccole quantità di informazioni (minore di 1 MB) che l'app potrebbe richiedere (ad esempio le preferenze dell'utente), è possibile utilizzare KVS archiviazione iCloud. iCloud KVS dati viene automaticamente sincronizzati al cloud e tutti i dispositivi dell'utente che esegue la stessa app. Per ulteriori informazioni, vedere il [archivio chiave-valore](~/ios/data-cloud/introduction-to-icloud.md) sezione del nostro [introduzione in iCloud](~/ios/data-cloud/introduction-to-icloud.md) documento o Apple [progettazione per i dati di chiave-valore in iCloud](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/iCloudDesignGuide/Chapters/DesigningForKey-ValueDataIniCloud.html#//apple_ref/doc/uid/TP40012094-CH7) documentazione.
 - **CloudKit** : per l'archiviazione di più parti di informazioni (maggiore di 1 MB), utilizzare il Framework di CloudKit di Apple. A differenza di iCloud KVS archiviazione, dati CloudKit possono essere condivisa tra tutti gli utenti dell'app (così come privato a un singolo utente). Per ulteriori informazioni, consultare il nostro [Introduzione a CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) documentazione o Apple [CloudKit Quick Start](https://developer.apple.com/library/prerelease/tvos/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987).
+
+> [!IMPORTANT]
+> Apple [fornisce strumenti](https://developer.apple.com/support/allowing-users-to-manage-data/) per aiutare gli sviluppatori di gestire correttamente generale Data Protection regolamento (PILR dell'Unione europea).
 
 <a name="On-Demand-Resources" />
 

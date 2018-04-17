@@ -7,11 +7,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ab373d708d47ad7c3dbbf4507284be04a1f9934
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3b8211e4c38fd37040fab5b35be4709d4b926c91
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-macos-sierra"></a>Introduzione a macOS Sierra
 
@@ -64,6 +64,9 @@ Il framework CloudKit macOS Sierra per consentire l'utente di condividere facilm
 CloudKit fornisce un'interfaccia utente completa per l'invio e di accettare gli inviti record condivisi e l'utente disponga di controllo completo, lettura/scrittura le persone che hanno accesso ai record.
 
 Per ulteriori informazioni, vedere Apple [CloudKit Framework riferimento](https://developer.apple.com/reference/clockkit) e [CloudKit JS Framework riferimento](https://developer.apple.com/reference/cloudkitjs).
+
+> [!IMPORTANT]
+> Apple [fornisce strumenti](https://developer.apple.com/support/allowing-users-to-manage-data/) per aiutare gli sviluppatori di gestire correttamente generale Data Protection regolamento (PILR dell'Unione europea).
 
 <a name="Safari-App-Extensions-Support" />
 

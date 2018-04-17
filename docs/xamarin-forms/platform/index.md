@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: 454969d8a59128423d632452033b8ba84ee0bc98
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fd46411f3662652ef26addc76f273d6071401a6f
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="platform-features"></a>Funzionalità della piattaforma
 
@@ -33,9 +33,17 @@ Come utilizzare la `Device` classe per creare il comportamento specifico della p
 
 Alcuni stili di iOS possono essere eseguiti tramite **Info. plist** e `UIAppearance` API. Questa guida sono inclusi esempi che illustrano come includere iOS 9 funzionalità nell'app iOS di una soluzione xamarin. Forms, ad esempio la ricerca Spotlight di Core.
 
+## <a name="gtkgtkmd"></a>[GTK](gtk.md)
+
+Xamarin. Forms dispone ora di supporto di anteprima per le app GTK #.
+
 ## <a name="macmacmd"></a>[Mac](mac.md)
 
 Xamarin. Forms include ora il supporto di anteprima per le app macOS.
+
+## <a name="wpfwpfmd"></a>[WPF](wpf.md)
+
+Xamarin. Forms dispone ora di supporto di anteprima per le app di Windows Presentation Foundation (WPF).
 
 ## <a name="native-formsnative-formsmd"></a>[Form nativi](native-forms.md)
 

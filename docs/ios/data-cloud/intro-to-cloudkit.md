@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: 33ceff4549e4afbb1e5fecf3bd380fdb9a3df5f2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4765b91bdc1f64be7e2ea67622db7af8634f1347
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -20,6 +20,9 @@ _iCloud API consente alle applicazioni di iOS 8 archiviare i dati in iCloud, con
 Il framework CloudKit semplifica lo sviluppo di applicazioni iCloud tale accesso. Sono inclusi il recupero di dati dell'applicazione e i diritti di asset, nonché la possibilità di archiviare in modo sicuro le informazioni dell'applicazione. Questo kit offre agli utenti un livello di anonimato consentendo l'accesso alle applicazioni con i relativi ID iCloud senza condividere le informazioni personali.
 
 Gli sviluppatori possono concentrarsi sulle proprie applicazioni sul lato client e consente di eliminare la necessità di scrivere la logica dell'applicazione sul lato server iCloud. CloudKit fornisce autenticazione, database privati e pubblici e i dati strutturati e servizi di archiviazione di asset.
+
+> [!IMPORTANT]
+> Apple [fornisce strumenti](https://developer.apple.com/support/allowing-users-to-manage-data/) per aiutare gli sviluppatori di gestire correttamente generale Data Protection regolamento (PILR dell'Unione europea).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -881,6 +884,6 @@ In questo articolo è descritta una rapida introduzione all'API CloudKit. È sta
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [CloudKitAtlas (sample)](https://developer.xamarin.com/samples/monotouch/ios8/CloudKitAtlas/)
+- [CloudKitAtlas (esempio)](https://developer.xamarin.com/samples/monotouch/ios8/CloudKitAtlas/)
 - [Introduzione a iOS 8](~/ios/platform/introduction-to-ios8.md)
 - [Creazione di un profilo di provisioning](~/ios/get-started/installation/device-provisioning/index.md)
