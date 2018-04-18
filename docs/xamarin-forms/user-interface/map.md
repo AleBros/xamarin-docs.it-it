@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: f78b16a99d8bc828e26bb6aecdb67d4ba07e18d4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7dcf3cba72a07b06236e29ddf2603745fd348596
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="map"></a>Mappa
 
@@ -95,8 +95,9 @@ Istruzioni, vedere la documentazione di Xamarin [ottenere una chiave di Google M
 Dopo aver seguito le istruzioni, incollare la chiave API di **Properties/AndroidManifest.xml** file (HTML e trova/aggiornare l'elemento seguente):
 
 ```xml
-<meta-data android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AbCdEfGhIjKlMnOpQrStUvWValueGoesHere" />
+<meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="YOUR_API_KEY"/>
 ```
 
 Senza una chiave API valida il controllo esegue il mapping verrà visualizzato come una casella di colore grigia in Android.

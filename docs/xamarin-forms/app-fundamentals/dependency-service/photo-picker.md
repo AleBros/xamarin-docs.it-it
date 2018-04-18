@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 5b4e3ab12a74b0f70866dc9f41593bfd5bcec0e8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 95ac9912f0ff6788a2a633b3f8d3495e286030f1
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>Selezione di una foto dalla raccolta immagini di
 
@@ -48,7 +48,7 @@ Questa interfaccia viene implementata in tutte le piattaforme tramite codice spe
 
 ## <a name="ios-implementation"></a>Implementazione di iOS
 
-L'implementazione di iOS del `IPicturePicker` interfaccia viene utilizzata la [ `UIImagePickerController` ](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) come descritto nel [ **scegliere una foto dalla raccolta** ](https://developer.xamarin.com/recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery/) recipe e [codice di esempio](https://github.com/xamarin/recipes/tree/master/ios/media/video_and_photos/choose_a_photo_from_the_gallery).
+L'implementazione di iOS del `IPicturePicker` interfaccia viene utilizzata la [ `UIImagePickerController` ](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) come descritto nel [ **scegliere una foto dalla raccolta** ](https://developer.xamarin.com/recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery/) recipe e [codice di esempio](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery).
 
 L'implementazione di iOS è contenuto nel [ `PicturePickerImplementation` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/iOS/PicturePickerImplementation.cs) classe nel progetto iOS del codice di esempio. Per rendere visibile a questa classe di `DependencyService` manager, la classe deve essere identificata con un [`assembly`] attributo di tipo `Dependency`, e la classe deve essere pubblico e implementare in modo esplicito il `IPicturePicker` interfaccia:
 
@@ -146,7 +146,7 @@ Un'applicazione iOS richiede l'autorizzazione da parte dell'utente per accedere 
 
 ## <a name="android-implementation"></a>Implementazione di Android
 
-L'implementazione di Android Usa la tecnica descritta nel [ **selezionare un'immagine** ](https://developer.xamarin.com/recipes/android/other_ux/pick_image/) recipe e [codice di esempio](https://github.com/xamarin/recipes/tree/master/android/other_ux/pick_image). Tuttavia, il metodo che viene chiamato quando l'utente ha selezionato un'immagine dalla raccolta immagini di è un `OnActivityResult` eseguire l'override in una classe che deriva da `Activity`. Per questo motivo, la normale [ `MainActivity` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/MainActivity.cs) state arricchite con un campo, una proprietà e un override della classe nel progetto Android la `OnActivityResult` metodo:
+L'implementazione di Android Usa la tecnica descritta nel [ **selezionare un'immagine** ](https://developer.xamarin.com/recipes/android/other_ux/pick_image/) recipe e [codice di esempio](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image). Tuttavia, il metodo che viene chiamato quando l'utente ha selezionato un'immagine dalla raccolta immagini di è un `OnActivityResult` eseguire l'override in una classe che deriva da `Activity`. Per questo motivo, la normale [ `MainActivity` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/MainActivity.cs) state arricchite con un campo, una proprietà e un override della classe nel progetto Android la `OnActivityResult` metodo:
 
 ```csharp
 public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity

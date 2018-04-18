@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 02/24/2017
-ms.openlocfilehash: 77f9873259a2a44426007c50efbd7ff83c8a0ccb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d23f89ed8ad7956f7a366280a14ccc12ba3dac0c
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizzatore di XAML per xamarin. Forms
 
@@ -33,7 +33,7 @@ Utilizzare il **Vista > altre finestre > Anteprima di xamarin. Forms** menu in V
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-Il **anteprima** pulsante può essere visualizzato nell'editor destro del mouse su un file XAML e selezionando **Apri con > Visualizzatore XAML**. Nel riquadro di anteprima può quindi essere mostrato o nascosto premendo il **anteprima** pulsante nell'angolo superiore destro della finestra di un documento XAML:
+Il **anteprima** pulsante può essere visualizzato nell'editor facendo clic su un file XAML e selezionando **Apri con > Anteprima form**. Nel riquadro di anteprima può quindi essere mostrato o nascosto premendo il **anteprima** pulsante nell'angolo superiore destro della finestra di un documento XAML:
 
 [![Anteprima di controllo ListView in Visual Studio per Mac](xaml-previewer-images/xamlp-list-sml.png "anteprima di form in Visual Studio per Mac")](xaml-previewer-images/xamlp-list.png#lightbox "anteprima di form in Visual Studio per Mac")
 

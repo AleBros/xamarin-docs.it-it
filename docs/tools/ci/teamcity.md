@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 643ae8f30dc6447b548448f77883b204d8dc76c2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 34702fafdd0d767362b0ca32ab56e880ed7cb366
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-team-city-with-xamarin"></a>Utilizzando Team City con Xamarin
 
@@ -39,7 +39,7 @@ Sono disponibili diversi passaggi per configurare TeamCity:
 
 - **Creazione di un progetto di TeamCity** : dopo aver completati i tre passaggi precedenti, è necessario creare un progetto TeamCity che conterrà tutti i metadati necessari per recuperare il codice sorgente, compilare i progetti e inviare i test da Xamarin Test Cloud.
 
-# <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti
 
 Esperienza con [Xamarin Test Cloud](https://developer.xamarin.com/guides/testcloud) è obbligatorio.
 
@@ -88,7 +88,6 @@ Lo script di compilazione può essere semplice come un file di Powershell (in Wi
 - [**FALSIFICARE** ](http://fsharp.github.io/FAKE/) : si tratta di un linguaggio DSL basato in F # che rende possibile utilizzare le librerie .NET esistenti, se necessario.
 
 Viene utilizzato il linguaggio di script dipende dalle preferenze e requisiti. Il [TaskyPro Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) contenuto un esempio dell'utilizzo di inclinazione come un [script di compilazione](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile).
-
 
 > [!NOTE]
 > È possibile utilizzare un sistema di compilazione basate su XML, ad esempio MSBuild o NAnt, ma questi mancanza stesso l'espressività e gestibilità di un linguaggio DSL dedicato alla compilazione di software.
@@ -166,35 +165,35 @@ Una volta installato TeamCity e Visual Studio per Mac è possibile compilare il 
 
 1. Accedendo a TeamCity tramite il web browser, avviata. Passare al progetto di primo livello:
 
-    ![](teamcity-images/image2.png "Passare al progetto radice") sotto il progetto di primo livello, creare un nuovo progetto secondari:
+    ![Passare al progetto di primo livello](teamcity-images/image2.png "passare al progetto di primo livello") sotto il progetto di primo livello, creare un nuovo progetto secondari:
 
-    ![](teamcity-images/image3.png "Passare al progetto di primo livello progetto sottostante la radice, creare un nuovo progetto secondario")
+    ![Passare al progetto di primo livello progetto sottostante la radice, creare un nuovo progetto secondari](teamcity-images/image3.png "passare per il progetto sottostante la radice progetto radice, creare un nuovo progetto secondario")
 2. Dopo aver creato il sottoprogetto, aggiungere una nuova configurazione di compilazione:
 
-    ![](teamcity-images/image5.png "Dopo aver creato il sottoprogetto, aggiungere una nuova configurazione di compilazione")
+    ![Dopo aver creato il sottoprogetto, aggiungere una nuova configurazione di compilazione](teamcity-images/image5.png "dopo aver creato il sottoprogetto, aggiungere una nuova configurazione di compilazione")
 3. Collegare un progetto dei contenitori dei volumi per la configurazione di compilazione. Questa operazione viene eseguita tramite la schermata di impostazione di controllo di versione:
 
-    ![](teamcity-images/image6.png "Questa operazione viene eseguita tramite la schermata di impostazione controllo della versione")
+    ![Questa operazione viene eseguita tramite la schermata di impostazione controllo della versione](teamcity-images/image6.png "questa operazione viene eseguita tramite la schermata di impostazione controllo della versione")
 
     Se è presente alcun progetto dei contenitori dei volumi creato, è possibile crearne uno dalla pagina nuova radice dei contenitori dei volumi illustrata di seguito:
 
-    ![](teamcity-images/image7.png "Se è presente alcun progetto dei contenitori dei volumi creato, è possibile creare una pagina nuova radice dei contenitori dei volumi")
+    ![Se è presente alcun progetto dei contenitori dei volumi creato, si ha la possibilità di crearne uno dalla pagina nuova radice dei contenitori dei volumi](teamcity-images/image7.png "se è presente alcun progetto dei contenitori dei volumi creato, si ha la possibilità di crearne uno dalla pagina nuova radice dei contenitori dei volumi")
 
     Una volta la radice dei contenitori dei volumi è stata collegata, TeamCity verrà estrarre il progetto e provare automaticamente rilevare le istruzioni di compilazione. Se si ha familiarità con TeamCity, è possibile selezionare una delle istruzioni di compilazione rilevati. È possibile ignorare le istruzioni di compilazione rilevati per ora.
 
 4. Configurare quindi un Trigger di compilazione. Questo verrà inseriti nella coda di una compilazione quando vengono soddisfatte determinate condizioni, ad esempio quando un utente esegue il commit di codice al repository. Nella schermata seguente viene illustrato come aggiungere un trigger di compilazione:
 
-    ![](teamcity-images/image8.png "Questa schermata viene illustrato come aggiungere un trigger di compilazione") un esempio di configurazione di un trigger di compilazione può essere visualizzato nella schermata seguente:
+    ![Questa schermata viene illustrato come aggiungere un trigger di compilazione](teamcity-images/image8.png "questa schermata viene illustrato come aggiungere un trigger di compilazione") un esempio di configurazione di un trigger di compilazione può essere visualizzato nella schermata seguente:
 
-    ![](teamcity-images/image9.png "Un esempio di configurazione di un trigger di compilazione può essere visualizzato in questa schermata")
+    ![Un esempio di configurazione di un trigger di compilazione può essere visualizzato in questa schermata](teamcity-images/image9.png "un esempio di configurazione di un trigger di compilazione può essere visualizzato in questa schermata")
 
 5. La sezione precedente, lo Script di compilazione, la parametrizzazione delle suggerito l'archiviazione di alcuni valori come variabili di ambiente. Queste variabili possono essere aggiunti alla configurazione di compilazione tramite la schermata di parametri. Aggiungere le variabili per la chiave API Cloud di Test, l'ID del dispositivo iOS e l'ID dispositivo Android, come illustrato nella schermata seguente:
 
-    ![](teamcity-images/image11.png "Aggiungere le variabili per la chiave API Cloud di Test, l'ID del dispositivo iOS e l'ID del dispositivo Android")
+    ![Aggiungere le variabili per la chiave API Cloud di Test, l'ID del dispositivo iOS e l'ID del dispositivo Android](teamcity-images/image11.png "aggiungere le variabili per la chiave API Cloud di Test, l'ID del dispositivo iOS e l'ID del dispositivo Android")
 
 6. Il passaggio finale consiste nell'aggiungere un'istruzione di compilazione che verrà richiamato lo script di compilazione per compilare l'applicazione e accodare l'applicazione cloud di Test. Nella schermata riportata di seguito è riportato un esempio di un'istruzione di compilazione che utilizza un Rakefile per compilare un'applicazione:
 
-    ![](teamcity-images/image12.png "Questa schermata è riportato un esempio di un'istruzione di compilazione che utilizza un Rakefile per compilare un'applicazione")
+    ![Questa schermata è riportato un esempio di un'istruzione di compilazione che utilizza un Rakefile per compilare un'applicazione](teamcity-images/image12.png "questa schermata è riportato un esempio di un'istruzione di compilazione che utilizza un Rakefile per compilare un'applicazione")
 
 7. A questo punto, la configurazione della build è stata completata. È consigliabile attivare una compilazione per verificare che il progetto è configurato correttamente. Un buon metodo per eseguire questa operazione è eseguire il commit di una modifica di piccole dimensioni e non significativa nel repository. TeamCity deve rilevare il commit e avviare una compilazione.
 
