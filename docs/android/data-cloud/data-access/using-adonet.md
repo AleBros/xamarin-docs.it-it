@@ -1,18 +1,18 @@
 ---
-title: Utilizzo di ADO.NET
+title: Utilizzo di ADO.NET con Android
 ms.prod: xamarin
 ms.assetid: F6ABCEF1-951E-40D8-9EA9-DD79123C2650
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: a2f7a7a0c282284d7a45fb81c134d300aef5afba
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 29e81afdf2c46cdefc68e2c2fae4e6e47999a346
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="using-adonet"></a>Utilizzo di ADO.NET
+# <a name="using-adonet-with-android"></a>Utilizzo di ADO.NET con Android
 
 Xamarin offre supporto predefinito per il database SQLite è disponibile in Android e possa essere esposte tramite sintassi ADO.NET familiarità. Utilizzo di queste API richiede la scrittura di istruzioni SQL che vengono elaborate SQLite, ad esempio `CREATE TABLE`, `INSERT` e `SELECT` istruzioni.
 
@@ -33,7 +33,7 @@ Per usare l'accesso SQLite tramite ADO.NET, è necessario aggiungere `System.Dat
 
 Fare doppio clic su **riferimenti > modificare i riferimenti...**  , quindi fare clic per selezionare gli assembly necessari.
 
-## <a name="about-monodatasqlite"></a>About Mono.Data.Sqlite
+## <a name="about-monodatasqlite"></a>Sulle Mono.Data.Sqlite
 
 Si utilizzerà il `Mono.Data.Sqlite.SqliteConnection` classe per creare un file di database vuoto e quindi creare un'istanza `SqliteCommand` oggetti che è possibile utilizzare per eseguire istruzioni SQL nel database.
 

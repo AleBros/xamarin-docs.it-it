@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 7531a8a21b6895de6113f5edd85d09a5e150877e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ec3cb08b227b268c4c755545e8bc76b9e234d093
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="sharing-code-options"></a>Sharing Code Options
 
@@ -136,7 +136,7 @@ Una buona soluzione se si prevede di condividere l'assembly risultante con altri
 
 Il codice condivisione strategia che scelta dipende dalle piattaforme di destinazione. Scegliere un metodo ottimale per il progetto.
 
-Libreria di classi Portabile o .NET Standard costituiscono un'ottima scelta per la compilazione di librerie di codice condivisibile (in particolare la pubblicazione in NuGet). Progetti condivisi funzionano anche per gli sviluppatori di applicazioni prevede di usare un numero elevato di funzionalità specifiche di plaform nelle proprie App tra platforma.
+Libreria di classi Portabile o .NET Standard costituiscono un'ottima scelta per la compilazione di librerie di codice condivisibile (in particolare la pubblicazione in NuGet). I progetti condivisi vengono usati anche per gli sviluppatori dell'applicazione prevede di usare un numero elevato di funzionalità specifiche di plaform nelle proprie App multipiattaforma.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

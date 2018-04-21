@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: e7ce8320441f6b248b183a8698a4f41c78bf2d64
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: ac87ee44163d53b11c15538f382379aae962cbb2
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="monogame-gamepad-reference"></a>Riferimento Game pad MonoGame
 
@@ -25,7 +25,7 @@ L'API XNA originale fornita la `Xbox360GamePad` classe per la lettura dell'input
 
 ## <a name="reading-input-from-gamepad"></a>Lettura di Input dalla Game pad
 
-La `GameController` classe fornisce un modo standardizzato di lettura di input su qualsiasi piattaforma MonoGame. Fornisce informazioni sono disponibili due metodi:
+La `GamePad` classe fornisce un modo standardizzato di lettura di input su qualsiasi piattaforma MonoGame. Fornisce informazioni sono disponibili due metodi:
 
 - `GetState` : restituisce lo stato corrente di pulsanti, bastoncini analogici e d-pad del controller.
 - `GetCapabilities` : restituisce informazioni sulle funzionalità dell'hardware, ad esempio se il controller ha alcuni pulsanti o resistenza alle vibrazioni supporta.

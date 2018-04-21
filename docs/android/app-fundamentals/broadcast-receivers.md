@@ -6,17 +6,16 @@ ms.assetid: B2727160-12F2-43EE-84B5-0B15C8FCF4BD
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 03/19/2018
-ms.openlocfilehash: 75d42da4ba01aaefded0081da02b8e1651695f46
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/20/2018
+ms.openlocfilehash: 9c17641312384634983c2cbb34fa923a9416c9f7
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Ricevitori di trasmissione in xamarin
 
 _In questa sezione viene illustrato come utilizzare un ricevitore di trasmissione._
-
 
 ## <a name="broadcast-receiver-overview"></a>Panoramica di broadcast destinatario
 
@@ -55,7 +54,7 @@ public class SampleReceiver : BroadcastReceiver
     public override void OnReceive(Context context, Intent intent)
     {
         // Do stuff here.
-        
+
         String value = intent.GetStringExtra("key");
     }
 }
@@ -97,9 +96,9 @@ public class MySampleBroadcastReceiver : BroadcastReceiver
 }
 ```
 
-Le app destinate a Android 8.0 (livello API 26) o versione successiva possono non staticamente registrarsi per una trasmissione implicita. Le app possono registrare comunque in modo statico per una trasmissione esplicita. È un elenco di piccole dimensioni di trasmissioni implicite che verranno esentati da questa limitazione. Queste eccezioni sono descritte nel [eccezioni implicite Broadcast](https://developer.android.com/guide/components/broadcast-exceptions.html) Guida nella documentazione di Android. Le app che sono interessate a trasmissioni implicite devono ricorrere dinamicamente il `RegisterReceiver` metodo. Ciò è descritto di seguito.  
+Le app destinate a Android 8.0 (livello API 26) o versione successiva possono non staticamente registrarsi per una trasmissione implicita. Le app possono registrare comunque in modo statico per una trasmissione esplicita. È un elenco di piccole dimensioni di trasmissioni implicite che verranno esentati da questa limitazione. Queste eccezioni sono descritte nel [eccezioni implicite Broadcast](https://developer.android.com/guide/components/broadcast-exceptions.html) Guida nella documentazione di Android. Le app che sono interessate a trasmissioni implicite devono ricorrere dinamicamente il `RegisterReceiver` metodo. Ciò è descritto di seguito.
 
-### <a name="context-registering-a-broadcast-receiver"></a>Registrazione di un ricevitore Broadcast contesto 
+### <a name="context-registering-a-broadcast-receiver"></a>Registrazione di un ricevitore Broadcast contesto
 
 Contesto della registrazione (detta anche la registrazione dinamica) di un ricevitore viene eseguita invocando la `RegisterReceiver` metodo e il destinatario broadcast deve essere registrato con una chiamata al `UnregisterReceiver` metodo. Per evitare perdite di risorse, è importante annullare la registrazione il ricevitore quando non è più pertinente per il contesto (l'attività o il servizio). Ad esempio, un servizio può trasmettere un intento per informare un'attività che gli aggiornamenti disponibili da visualizzare all'utente. Quando si avvia l'attività, registrato per tali scopi. Quando l'attività viene spostata in background e non sono più visibili all'utente, non deve annullare la registrazione il destinatario perché l'interfaccia utente per visualizzare gli aggiornamenti non è più visibile. Frammento di codice seguente è riportato un esempio di come registrare e annullare la registrazione di un ricevitore di trasmissione nel contesto di un'attività:
 
@@ -108,22 +107,22 @@ Contesto della registrazione (detta anche la registrazione dinamica) di un ricev
 public class MainActivity: Activity 
 {
     MySampleBroadcastReceiver receiver;
-    
+
     protected override void OnCreate(Bundle savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
         receiver = new MySampleBroadcastReceiver()
-        
+
         // Code omitted for clarity
     }
-    
+
     protected override OnResume() 
     {
         base.OnResume();
         RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
         // Code omitted for clarity
     }
-    
+
     protected override OnPause() 
     {
         UnregisterReceiver(receiver);
@@ -150,28 +149,32 @@ Una trasmissione può essere pubblicata di tutte le app installate nel dispositi
    ```
 
     Questo frammento è un altro esempio di invio di una trasmissione utilizzando il `Intent.SetAction` metodo per identificare l'azione:
-    
+
     ```csharp 
     Intent intent = new Intent();
     intent.SetAction("com.xamarin.example.TEST");
     intent.PutExtra("key", "value");
     SendBroadcast(intent);
     ```
-   
+
 2. **Context.SendOrderedBroadcast** &ndash; si tratta di metodo è molto simile a `Context.SendBroadcast`, con la differenza è che l'intento sarà pubblicato uno in fase di ricevitori, nell'ordine che il recievers siano stati registrati.
-   
+
 ### <a name="localbroadcastmanager"></a>LocalBroadcastManager
 
-Il [v4 di libreria di supporto Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) fornisce una classe helper denominata [ `LocalBroadcastManager` ](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html). Il `LocalBroadcastManager` previsto per le app che non si desidera inviare o ricevere le trasmissioni da altre app nel dispositivo. Il `LocalBroadcastManager` pubblicherà solo i messaggi all'interno del contesto dell'applicazione. Le altre app nel dispositivo non può ricevere i messaggi che vengono pubblicati con la `LocalBroadcastManager`. 
+Il [v4 di libreria di supporto Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) fornisce una classe helper denominata [ `LocalBroadcastManager` ](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html). Il `LocalBroadcastManager` previsto per le app che non si desidera inviare o ricevere le trasmissioni da altre app nel dispositivo. Il `LocalBroadcastManager` pubblicheranno messaggi all'interno del contesto dell'applicazione e solo per i ricevitori broadcast che sono registrati con solo il `LocalBroadcastManager`. Questo frammento di codice è riportato un esempio di registrazione di un ricevitore di broadcast con `LocalBroadcastManager`:
 
-Questo frammento di codice viene illustrato come inviare un preventivo utilizzando il `LocalBroadcastManager`:
+```csharp
+Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this). RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
+```
+
+Le altre app nel dispositivo non può ricevere i messaggi che vengono pubblicati con la `LocalBroadcastManager`. Questo frammento di codice viene illustrato come inviare un preventivo utilizzando il `LocalBroadcastManager`:
 
 ```csharp
 Intent message = new Intent("com.xamarin.example.TEST");
 // If desired, pass some values to the broadcast receiver.
 intent.PutExtra("key", "value");
 Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this).SendBroadcast(message);
-``` 
+```
 
 ## <a name="related-links"></a>Collegamenti correlati
 
