@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: 13868864813a2f120857fb6347924197e374638c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ab449a58cc87699b97a1ade7721a08f771c4f55d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="microsoft-azure"></a>Microsoft Azure
 
@@ -31,7 +31,7 @@ Il nuovo [servizi connessi](connected-services.md) funzionalità di Visual Studi
 È una raccolta di [documentazione di App mobili di Azure](~/cross-platform/data-cloud/mobile-apps.md) che in modo semplificato il processo di implementazione di [Client mobili di Azure](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/).
 Xamarin offre inoltre un NuGet di messaggistica di Azure pacchetti per [iOS](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.iOS/) e [Android](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.Android/) per facilitare l'implementazione di notifiche push su piattaforme diverse.
 
-Configurare le app nel [portale dei servizi di App di Azure](https://portal.azure.com/) per accedere alle App per dispositivi mobili, API Web, archiviazione e molto altro ancora. Informazioni su [come servizi app sono diversi](http://azure.microsoft.com/en-us/updates/whats-new-with-azure-app-service/) e guardare [questi video Microsoft](http://azure.microsoft.com/en-us/campaigns/azure-march-announcement/).
+Configurare le app nel [portale dei servizi di App di Azure](https://portal.azure.com/) per accedere alle App per dispositivi mobili, API Web, archiviazione e molto altro ancora. Informazioni su [come servizi app sono diversi](http://azure.microsoft.com/updates/whats-new-with-azure-app-service/) e guardare [questi video Microsoft](http://azure.microsoft.com/campaigns/azure-march-announcement/).
 
 ## <a name="active-directory-authentication"></a>Autenticazione di Active Directory
 
@@ -58,7 +58,7 @@ Oltre al [esempi della documentazione](https://github.com/xamarin/mobile-samples
 - [MyShoppe](https://github.com/jamesmontemagno/MyShoppe) -App per dispositivi mobili di Azure.
 
 - [eShop](https://github.com/dotnet-architecture/eShopOnContainers) : per il [serie architettura](https://www.microsoft.com/net/learn/architecture) di eBook.
-- [MyDriving](https://azure.microsoft.com/en-us/campaigns/mydriving/) – Azure + IoT di esempio da compilazione 2016.
+- [MyDriving](https://azure.microsoft.com/campaigns/mydriving/) – Azure + IoT di esempio da compilazione 2016.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

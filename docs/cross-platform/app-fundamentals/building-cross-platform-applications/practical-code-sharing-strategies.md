@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: d5f639cffc8ff2d134731374bd72663fec81c6a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6f6b88bf29e94a221b2ef58b3299348eb08d33fa
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Parte 5 - pratico strategie di condivisione del codice
 
@@ -200,7 +200,7 @@ Spazio di memorizzazione isolato è un'API comune per il salvataggio e caricamen
 
 È il meccanismo predefinito per l'accesso ai file di Windows Phone (Silverlight) che è stato implementato in xamarin. IOS e xamarin per consentire al codice di accesso ai file comuni da scrivere. Il `System.IO.IsolatedStorage` classe è possibile fare riferimento in tutte e tre le piattaforme in un [progetto condiviso](~/cross-platform/app-fundamentals/shared-projects.md).
 
-Consultare la [isolato archiviazione Panoramica per Windows Phone](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402541(v=vs.105).aspx) per ulteriori informazioni.
+Consultare la [isolato archiviazione Panoramica per Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) per ulteriori informazioni.
 
 Le API di archiviazione isolata non sono disponibili in [librerie di classi portabili](~/cross-platform/app-fundamentals/pcl.md). È un'alternativa per la libreria di classi Portabile il [PCLStorage NuGet](https://pclstorage.codeplex.com/)
 

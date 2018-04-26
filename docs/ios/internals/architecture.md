@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 930b52e5b2a532e71594f26af79035db2cc5fb25
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 85dc675a9b18b974f21532298e4d3028bdecd0b7
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ios-architecture"></a>Architettura di iOS
 
@@ -23,14 +23,14 @@ Il diagramma seguente mostra una panoramica dell'architettura di base:
 
 ## <a name="native-and-managed-code-an-explanation"></a>Nativo e codice gestito: una spiegazione
 
-Durante lo sviluppo di Xamarin le condizioni di *nativo e gestito* codice vengono spesso utilizzati. [Codice gestito](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) è codice che l'esecuzione gestita dal [Common Language Runtime di .NET Framework](https://msdn.microsoft.com/en-us/library/8bs2ecf4(v=vs.110).aspx), o in caso di Xamarin: il Runtime Mono. Questo è ciò che viene definito un linguaggio intermedio.
+Durante lo sviluppo di Xamarin le condizioni di *nativo e gestito* codice vengono spesso utilizzati. [Codice gestito](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) è codice che l'esecuzione gestita dal [Common Language Runtime di .NET Framework](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx), o in caso di Xamarin: il Runtime Mono. Questo è ciò che viene definito un linguaggio intermedio.
 
 Codice nativo è codice che verrà eseguito in modo nativo nella piattaforma specifica (ad esempio, Objective-C o persino codice AOT compilati, in un chip ARM). Questa guida viene descritto come AOT compila il codice gestito al codice nativo e illustra la modalità di funzionamento di xamarin. IOS dell'applicazione, rendendo uso completo dell'API di iOS di Apple tramite l'utilizzo di associazioni, ma anche l'accesso a. Libreria di classi base della rete e un linguaggio di sofisticate, ad esempio c#.
 
 
 ## <a name="aot"></a>AOT
 
-Quando si compila tutte le applicazioni di piattaforma Xamarin, il compilatore c# Mono (o F #) verrà eseguito e verrà compilato il codice c# e F # in Microsoft Intermediate Language (MSIL). Se si esegue un xamarin, un'applicazione Xamarin.Mac o un'applicazione di xamarin. IOS in un simulatore di [.NET Common Language Runtime (CLR)](https://msdn.microsoft.com/en-us/library/8bs2ecf4(v=vs.110).aspx) compila il codice MSIL con un solo nel compilatore JIT di tempo. In fase di esecuzione in questo viene compilato in codice nativo, che possono eseguire nella corretta architettura per l'applicazione.
+Quando si compila tutte le applicazioni di piattaforma Xamarin, il compilatore c# Mono (o F #) verrà eseguito e verrà compilato il codice c# e F # in Microsoft Intermediate Language (MSIL). Se si esegue un xamarin, un'applicazione Xamarin.Mac o un'applicazione di xamarin. IOS in un simulatore di [.NET Common Language Runtime (CLR)](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx) compila il codice MSIL con un solo nel compilatore JIT di tempo. In fase di esecuzione in questo viene compilato in codice nativo, che possono eseguire nella corretta architettura per l'applicazione.
 
 Tuttavia, è una restrizione di sicurezza in iOS, l'impostazione di Apple, che non consente l'esecuzione del codice generato in modo dinamico in un dispositivo.
 Per assicurarsi che ci sono conformi a questi protocolli di sicurezza, xamarin. IOS utilizza invece un compilatore di anticipo del tempo AOT () per compilare il codice gestito. Ciò produce un iOS native binario, facoltativamente ottimizzata con LLVM per i dispositivi, che possono essere distribuiti nel processore basato su ARM di Apple. Un diagramma di base del funzionamento questo complessivo è illustrato di seguito:
@@ -69,7 +69,7 @@ Lo pseudocodice seguente viene illustrato un esempio di questa procedura:
  }
 ```
 
-**Objective-C:**
+**Objective-c:**
 
 ```objectivec
 @interface MyViewController : UIViewController { }

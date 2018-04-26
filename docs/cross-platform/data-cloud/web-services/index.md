@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: ad18382a7143c7b1cc6bbecb3867c042512eb562
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6de16095d9e1267587a050e8081f87f896f3153e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-web-services"></a>Introduzione a servizi Web
 
@@ -337,7 +337,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 Task Parallel Library (TPL) può semplificare il processo di utilizzo di una coppia di metodi begin/end APM incapsulando le operazioni asincrone nello stesso `Task` oggetto. Fornito da più overload di questo incapsulamento di `Task.Factory.FromAsync` metodo. Questo metodo crea un `Task` che esegue il `TodoService.EndGetTodoItems` metodo una volta il `TodoService.BeginGetTodoItems` metodo viene completato, con il `null` che indica che nessun dato è stato passato nel parametro di `BeginGetTodoItems` delegato. Infine, il valore di `TaskCreationOptions` enumerazione specifica che deve essere utilizzato il comportamento predefinito per la creazione e l'esecuzione di attività.
 
-Per ulteriori informazioni su Application Performance Monitoring, vedere [modello di programmazione asincrono](https://msdn.microsoft.com/en-us/library/ms228963(v=vs.110).aspx) e [TPL e .NET Framework programmazione asincrona tradizionale](https://msdn.microsoft.com/en-us/library/dd997423(v=vs.110).aspx) su MSDN.
+Per ulteriori informazioni su Application Performance Monitoring, vedere [modello di programmazione asincrono](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) e [TPL e .NET Framework programmazione asincrona tradizionale](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) su MSDN.
 
 Per ulteriori informazioni sull'utilizzo di un servizio ASMX, vedere [utilizzo di un servizio Web di ASP.NET (ASMX)](~/xamarin-forms/data-cloud/consuming/asmx.md).
 
@@ -364,7 +364,7 @@ Per ulteriori informazioni sull'utilizzo sulla piattaforma Xamarin utilizzare WC
 
 Oggetto *proxy* deve essere generato per utilizzare un servizio WCF, che consente all'applicazione di connettersi al servizio. Il proxy viene costruito mediante dispendiosa in termini di metadati del servizio che definiscono i metodi e la configurazione del servizio associato. I metadati vengono esposti nel formato di un documento Web Services Description Language (WSDL) che viene generato dal servizio web. Il proxy può essere compilato utilizzando il Provider di riferimento Microsoft servizi Web WCF in Visual Studio 2017 per aggiungere un riferimento al servizio per il servizio web a una libreria Standard di .NET.
 
-Un'alternativa alla creazione del proxy utilizzando Provider riferimento del servizio Web di Microsoft WCF in Visual Studio 2017 consiste nell'utilizzare lo strumento ServiceModel Metadata Utility Tool (svcutil.exe). Per ulteriori informazioni, vedere [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
+Un'alternativa alla creazione del proxy utilizzando Provider riferimento del servizio Web di Microsoft WCF in Visual Studio 2017 consiste nell'utilizzare lo strumento ServiceModel Metadata Utility Tool (svcutil.exe). Per ulteriori informazioni, vedere [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
 
 <a name="Calling_a_WCF_Service_with_Client_Credential_Security" />
 
@@ -416,7 +416,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 Task Parallel Library (TPL) può semplificare il processo di utilizzo di una coppia di metodi begin/end APM incapsulando le operazioni asincrone nello stesso `Task` oggetto. Fornito da più overload di questo incapsulamento di `Task.Factory.FromAsync` metodo. Questo metodo crea un `Task` che esegue il `TodoServiceClient.EndGetTodoItems` metodo una volta il `TodoServiceClient.BeginGetTodoItems` metodo viene completato, con il `null` che indica che nessun dato è stato passato nel parametro di `BeginGetTodoItems` delegato. Infine, il valore di `TaskCreationOptions` enumerazione specifica che deve essere utilizzato il comportamento predefinito per la creazione e l'esecuzione di attività.
 
-Per ulteriori informazioni su Application Performance Monitoring, vedere [modello di programmazione asincrono](https://msdn.microsoft.com/en-us/library/ms228963(v=vs.110).aspx) e [TPL e .NET Framework programmazione asincrona tradizionale](https://msdn.microsoft.com/en-us/library/dd997423(v=vs.110).aspx) su MSDN.
+Per ulteriori informazioni su Application Performance Monitoring, vedere [modello di programmazione asincrono](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) e [TPL e .NET Framework programmazione asincrona tradizionale](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) su MSDN.
 
 Per ulteriori informazioni sull'utilizzo di un servizio WCF, vedere [utilizzo di un servizio Web di Windows Communication Foundation (WCF)](~/xamarin-forms/data-cloud/consuming/wcf.md).
 
@@ -462,5 +462,5 @@ Questa guida viene illustrato come utilizzare tecnologie del servizio web divers
 
 - [Esempio di servizi Web](https://developer.xamarin.com/samples/mobile/WebServices/WebServiceSamples/)
 - [Servizi Web di xamarin. Forms](~/xamarin-forms/data-cloud/index.md)
-- [ServiceModel Metadata Utility Tool (svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
-- [BasicHttpBinding](http://msdn.microsoft.com/en-us/library/system.servicemodel.basichttpbinding.aspx)
+- [Strumento ServiceModel Metadata Utility Tool (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
+- [BasicHttpBinding](http://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)

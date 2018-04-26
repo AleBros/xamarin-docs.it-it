@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: e27ad3469a37634f5829f9c4c903808a74e4d6ae
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a80a23e8c3a41b7a06e1bbcb33d171ed2dc30fd2
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="available-assemblies"></a>Assembly disponibili
 
@@ -48,28 +48,28 @@ Possono usare anche i progetti di Xamarin [librerie di classi portabili .NET](~/
 > |monotouch.dll|Questo assembly contiene l'associazione all'API CocoaTouch c#. Questo è disponibile solo all'interno dei progetti iOS classica.|✓| | |
 > |MonoTouch.&#8203;Dialog-1.dll| |✓| | |
 > |MonoTouch.&#8203;NUnitLite.dll| |✓| | |
-> |mscorlib.dll|[Silverlight](https://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |mscorlib.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |OpenTK-1.0.dll|L'oggetto OpenGL/OpenAL orientata ai servizi API estese per fornire il supporto dei dispositivi iPhone.|✓|✓|✓|
-> |System.dll|[Silverlight](https://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx), nonché i tipi degli spazi dei nomi seguenti:<br />System.Collections.Specialized<br />System.&#8203;ComponentModel<br />System.ComponentModel.Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System.IO.Compression.FileSystem<br />System.Net<br />System.Net.Cache<br />System.Net.Mail<br />System.Net.Mime<br />System.Net.&#8203;NetworkInformation<br />System.Net.Security<br />System.Net.Sockets<br />System.Runtime.&#8203;InteropServices<br />System.Runtime.Versioning<br />System.Security.&#8203;AccessControl<br />System.Security.Authentication<br />System.Security.&#8203;Cryptography<br />System.Security.Permissions<br />System.Threading<br />System.Timers|✓|✓|✓|
+> |System.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), nonché i tipi degli spazi dei nomi seguenti:<br />System.Collections.Specialized<br />System.&#8203;ComponentModel<br />System.ComponentModel.Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System.IO.Compression.FileSystem<br />System.Net<br />System.Net.Cache<br />System.Net.Mail<br />System.Net.Mime<br />System.Net.&#8203;NetworkInformation<br />System.Net.Security<br />System.Net.Sockets<br />System.Runtime.&#8203;InteropServices<br />System.Runtime.Versioning<br />System.Security.&#8203;AccessControl<br />System.Security.Authentication<br />System.Security.&#8203;Cryptography<br />System.Security.Permissions<br />System.Threading<br />System.Timers|✓|✓|✓|
 > |System.&#8203;ComponentModel.&#8203;Composition.dll| |✓|✓|✓|
 > |System.&#8203;ComponentModel.&#8203;DataAnnotations.dll| |✓|✓|✓|
-> |System.Core.dll|[Silverlight](https://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.Data.dll|[.NET 3.5](http://msdn.microsoft.com/en-us/library/ms229335.aspx) , con [alcune delle funzionalità rimosse](~/ios/data-cloud/system.data.md).|✓|✓|✓|
+> |System.Core.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Data.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx) , con [alcune delle funzionalità rimosse](~/ios/data-cloud/system.data.md).|✓|✓|✓|
 > |System.Data.&#8203;Services.&#8203;Client.dll|Client oData completo.|✓|✓|✓|
 > |System.IO.&#8203;Compression| |✓|✓|✓|
 > |System.IO.&#8203;Compression.&#8203;FileSystem| |✓|✓|✓|
-> |System.Json.dll|[Silverlight](http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Json.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |System.Net.&#8203;Http.dll| |✓|✓|✓|
 > |System.&#8203;Numerics.dll| |✓|✓|✓|
-> |System.Runtime.&#8203;Serialization.dll|[Silverlight](http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.&#8203;ServiceModel.dll|Stack WCF come presente nella [Silverlight](http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Runtime.&#8203;Serialization.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.&#8203;ServiceModel.dll|Stack WCF come presente nella [Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |System.&#8203;ServiceModel.&#8203;Internals.dll| |✓|✓|✓|
-> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx), nonché i tipi degli spazi dei nomi seguenti: <br />System<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
-> |System.&#8203;Transactions.dll|[.NET 3.5](http://msdn.microsoft.com/en-us/library/ms229335.aspx); fa parte di [System. Data](~/ios/data-cloud/system.data.md) supportano.|✓|✓|✓|
+> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), nonché i tipi degli spazi dei nomi seguenti: <br />System<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
+> |System.&#8203;Transactions.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx); fa parte di [System. Data](~/ios/data-cloud/system.data.md) supportano.|✓|✓|✓|
 > |System.Web.&#8203;Services.dll|Servizi Web di base del profilo di .NET 3.5, con le funzionalità server rimosso.|✓|✓|✓|
 > |System.&#8203;Windows.dll| |✓|✓|✓|
-> |System.&#8203;Xml.dll|[.NET 3.5](http://msdn.microsoft.com/en-us/library/ms229335.aspx)|✓|✓|✓|
-> |System.Xml.&#8203;Linq.dll|[.NET 3.5](http://msdn.microsoft.com/en-us/library/ms229335.aspx)|✓|✓|✓|
+> |System.&#8203;Xml.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
+> |System.Xml.&#8203;Linq.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
 > |System.Xml.Serialization.dll| |✓|✓|✓|
 > |Xamarin.iOS.dll|Questo assembly contiene l'associazione all'API CocoaTouch c#. Viene utilizzato solo nei progetti iOS unificato.|✓| | |
 > |Java.Interop.dll| | |✓| |

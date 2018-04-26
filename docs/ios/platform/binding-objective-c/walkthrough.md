@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7a25aa1043dcaf52406059d3fa184da36dc4875e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6a43b9ad3c9af0a4118c40fb128f8890ac0ffe40
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procedura dettagliata: Associazione di una libreria Objective-C per iOS
 
@@ -735,4 +735,4 @@ In questo articolo viene esaminato in dettaglio il processo di creazione e utili
 - [Dettagli di associazione](~/cross-platform/macios/binding/overview.md)
 - [Guida di riferimento per i tipi di associazione](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin per sviluppatori Objective-C](~/ios/get-started/objective-c-developers/index.md)
-- [Linee guida per la progettazione di Framework](http://msdn.microsoft.com/en-us/library/ms229042.aspx)
+- [Linee guida per la progettazione di Framework](http://msdn.microsoft.com/library/ms229042.aspx)

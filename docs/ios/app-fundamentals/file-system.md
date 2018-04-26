@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5c6a5233c9cdc043986f106712895439fa008b41
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0706e416861e5636413577d38bf524ce9184bc4d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-file-system"></a>Utilizzo di File System
 
@@ -77,7 +77,7 @@ using (TextReader reader = new StreamReader("./TestData/test.xml")) {
 }
 ```
 
-Consultare la documentazione di MSDN per la [System](http://msdn.microsoft.com/en-us/library/system.xml.aspx) dello spazio dei nomi per ulteriori informazioni su [serializzazione](http://msdn.microsoft.com/en-us/library/system.xml.serialization.aspx). È inoltre consigliabile esaminare il [documentazione di xamarin](~/ios/deploy-test/linker.md) del linker: in genere è necessario aggiungere il `[Preserve]` attributo alle classi che si desidera serializzare.
+Consultare la documentazione di MSDN per la [System](http://msdn.microsoft.com/library/system.xml.aspx) dello spazio dei nomi per ulteriori informazioni su [serializzazione](http://msdn.microsoft.com/library/system.xml.serialization.aspx). È inoltre consigliabile esaminare il [documentazione di xamarin](~/ios/deploy-test/linker.md) del linker: in genere è necessario aggiungere il `[Preserve]` attributo alle classi che si desidera serializzare.
 
  <a name="Creating_Files_and_Directories" />
 
@@ -102,7 +102,7 @@ var directoryname = Path.Combine (documents, "NewDirectory");
 Directory.CreateDirectory(directoryname);
 ```
 
-Per ulteriori informazioni sullo spazio dei nomi System.IO, vedere il [documentazione MSDN](http://msdn.microsoft.com/en-us/library/system.io.aspx).
+Per ulteriori informazioni sullo spazio dei nomi System.IO, vedere il [documentazione MSDN](http://msdn.microsoft.com/library/system.io.aspx).
 
 
 ### <a name="serializing-json"></a>La serializzazione Json
@@ -239,7 +239,7 @@ Queste directory e le relative funzioni sono elencati di seguito:
 
 |Directory|Descrizione|
 |---|---|
-|[ApplicationName].app/|**In iOS 7 e versioni precedenti** si tratta di `ApplicationBundle` directory in cui è archiviato nel file eseguibile dell'applicazione. La struttura di directory creati nell'applicazione esiste in questa directory (ad esempio, immagini e altri tipi di file contrassegnati come risorse di Visual Studio per il progetto Mac).<br /><br />Se si desidera accedere ai file di contenuto all'interno del pacchetto di applicazione, il percorso di questa directory è disponibile tramite il `NSBundle.MainBundle.BundlePath` proprietà.|
+|App [ApplicationName] /|**In iOS 7 e versioni precedenti** si tratta di `ApplicationBundle` directory in cui è archiviato nel file eseguibile dell'applicazione. La struttura di directory creati nell'applicazione esiste in questa directory (ad esempio, immagini e altri tipi di file contrassegnati come risorse di Visual Studio per il progetto Mac).<br /><br />Se si desidera accedere ai file di contenuto all'interno del pacchetto di applicazione, il percorso di questa directory è disponibile tramite il `NSBundle.MainBundle.BundlePath` proprietà.|
 |Documenti /|Utilizzare questa directory per archiviare i documenti degli utenti e i file di dati dell'applicazione.<br /><br />Il contenuto di questa directory può essere offerti all'utente tramite file iTunes condivisione (anche se è disabilitato per impostazione predefinita). Aggiungere un `UIFileSharingEnabled` booleano chiave per il file Info. plist per consentire agli utenti di accedere a tali file.<br /><br />Anche se un'applicazione non attiva immediatamente la condivisione di file, è consigliabile evitare di inserire i file che devono essere nascosto agli utenti in questa directory (ad esempio i file di database, a meno che non si desidera condividerli). Finché i file riservati rimangono nascosti, questi file verranno non esposti (e potenzialmente spostati, modificati o eliminati da iTunes) se è attivata la condivisione file in una versione futura.<br /><br /> È possibile utilizzare il `Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)` metodo per ottenere il percorso della directory documenti per l'applicazione.<br /><br />Il contenuto di questa directory viene eseguito il backup da iTunes.|
 |Libreria /|La directory di libreria è un ottimo strumento per archiviare i file che non vengono creati direttamente dall'utente, ad esempio database o altri file generati dall'applicazione. Il contenuto di questa directory non è mai esposte all'utente tramite iTunes.<br /><br />È possibile creare la propria sottodirectory nella libreria. Tuttavia, sono già presenti alcune creato dal sistema Directory qui che occorre conoscere, tra cui le preferenze e memorizza nella cache.<br /><br />Il contenuto della directory (ad eccezione della sottodirectory della cache) viene eseguito il backup da iTunes. Directory personalizzate creati nella raccolta verranno sottoposti a backup.|
 |Preferenze/libreria /|In questa directory vengono archiviati i file di preferenze specifiche dell'applicazione. Non creare direttamente i file. Utilizzare invece la `NSUserDefaults` classe.<br /><br />Il contenuto di questa directory viene eseguito il backup da iTunes.|

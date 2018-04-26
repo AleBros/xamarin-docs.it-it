@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 0187b65e4c10e7cc03715a997a90fbddab9bd532
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71cddc07863002a887cada2bb0db0f8d25fd1a17
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xamarinios-errors"></a>Errori di xamarin
 
@@ -164,10 +164,10 @@ Mtouch non riconosce l'argomento della riga di comando indicato nel messaggio di
 Esistono diverse opzioni per mtouch non possono essere utilizzati contemporaneamente:
 
 -  --logdev
--  --installdev
+-  -installdev
 -  -killdev
--  --launchdev
--  --launchdebug
+-  -launchdev
+-  -launchdebug
 -  -launchsim
 
 <a name="MT0020" />
@@ -631,7 +631,7 @@ Poiché `my/path.o` non è un nome di file valido a causa il carattere separator
 
 <a name="MT0109" />
 
-### <a name="mt0109-the-assembly-0-was-loaded-from-a-different-path-than-the-provided-path-provided-path-1-actual-path-2"></a>MT0109: L'assembly '{0}' è stato caricato da un percorso diverso rispetto al percorso specificato (specificato percorso: \\{1 \\}, percorso effettivo: {2}).
+### <a name="mt0109-the-assembly-0-was-loaded-from-a-different-path-than-the-provided-path-provided-path-1-actual-path-2"></a>MT0109: L'assembly '{0}' è stato caricato da un percorso diverso da quello del percorso specificato (fornito percorso: {1}, percorso effettivo: {2}).
 
 Si tratta di un avviso che indica che un assembly a cui fa riferimento l'applicazione è stato caricato da un percorso diverso, a quella richiesta.
 
@@ -1653,11 +1653,11 @@ L'assembly che causa il problema è denominato nel messaggio di errore. Per riso
 
 <a name="MT2104" />
 
-### <a name="mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a>MM2104: Impossibile collegare l'assembly '{0}' perché è in modalità mista.
+### <a name="mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a>MM2104: Non è possibile collegare assembly '{0}' perché è in modalità mista.
 
 Assembly in modalità mista non possono essere elaborate dal linker.
 
-Vedere https://msdn.microsoft.com/en-us/library/x0w2664k.aspx per ulteriori informazioni sull'assembly in modalità mista.
+Vedere https://msdn.microsoft.com/library/x0w2664k.aspx per ulteriori informazioni sull'assembly in modalità mista.
 
 ## <a name="mt3xxx-aot-error-messages"></a>MT3xxx: Messaggi di errore AOT
 
@@ -2060,7 +2060,7 @@ Verificare che il `Register` attributo della classe gestita indicata nel messagg
 
 <a name="MT4161" />
 
-### <a name="mt4161-the-registrar-found-an-unsupported-structure--all-fields-in-a-structure-must-also-be-structures-field--with-type-2-is-not-a-structure"></a>MT4161: Il programma di registrazione trovato una struttura non supportata '\*': tutti i campi in una struttura devono essere anche strutture (campo '\*' con tipo '{2}' non è una struttura).
+### <a name="mt4161-the-registrar-found-an-unsupported-structure--all-fields-in-a-structure-must-also-be-structures-field--with-type-2-is-not-a-structure"></a>MT4161: Il programma di registrazione trovato una struttura non supportata '\*': tutti i campi in una struttura devono essere anche strutture (campo '\*'con tipo'{2}' non è una struttura).
 
 Il programma di registrazione trovato una struttura con campi non supportati.
 
@@ -2179,7 +2179,7 @@ Se si verificano questo durante lo sviluppo di un progetto di associazione per u
 
 Ciò indica in genere un bug in xamarin. IOS; Per inviare un bug nel [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
 
-### <a name="mt52xx-linking"></a>MT52xx: Linking
+### <a name="mt52xx-linking"></a>MT52xx: il collegamento
 
 <!--
   MT52xx linking
@@ -2425,7 +2425,7 @@ Si è verificato un errore durante l'accesso all'applicazione. Esaminare il log 
 
 ## <a name="mt6xxx-mtouch-internal-tools-error-messages"></a>MT6xxx: i messaggi di errore degli strumenti mtouch interno
 
-### <a name="mt600x-stripper"></a>MT600x: Stripper
+### <a name="mt600x-stripper"></a>MT600x: formattazione
 
 <!--
  MT6xxx mtouch internal tools
@@ -2961,7 +2961,7 @@ Ciò indica in genere un bug in xamarin. IOS; Per inviare un bug nel [ http://bu
 
 <a name="MT8015" />
 
-### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015: DelegateProxyAttribute non valido per il valore restituito per il metodo *.*: il Tipodelegato ({2}) il campo 'Handler' non è un delegato, si tratta di un *. Per inviare un bug nel http://bugzilla.xamarin.com.
+### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015: DelegateProxyAttribute non valido per il valore restituito per il metodo *.*: il Tipodelegato ({2}) il campo 'Handler' non è un delegato, è un *. Per inviare un bug nel http://bugzilla.xamarin.com.
 
 L'attributo DelegateProxy per il metodo in questione non è valido.
 

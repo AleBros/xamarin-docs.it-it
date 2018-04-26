@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: ae1300936a24ac1381496eaaf78aefb875bd5ed6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 33573d14d77f0582caca7d1e71b839563a3dd110
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="2d-math-with-cocossharp"></a>Matematiche 2D con CocosSharp
 
@@ -264,7 +264,7 @@ Questo codice produce il seguente comportamento:
 
 `System.Math.Atan2` Consente di convertire un offset a un angolo. Il nome della funzione `Atan2` proviene l'arcotangente di funzione trigonometrica. Il suffisso "2" consentono di distinguere questa funzione dallo standard `Atan` (funzione), che corrisponde strettamente il comportamento dell'arcotangente matematico. Arcotangente è una funzione che restituisce un valore compreso tra -90 e + 90 gradi (o l'equivalente in radianti). Molte applicazioni, inclusi computer giochi, spesso richiedono di 360 gradi di valori, pertanto la `Math` classe include `Atan2` per soddisfare questa esigenza.
 
-Si noti che il codice precedente passa il parametro Y in primo luogo, quindi il parametro X, quando si chiama il `Atan2` metodo. Si tratta con le versioni precedenti dalle consuete X, Y ordinamento delle coordinate di posizione. Per ulteriori informazioni [vedere i documenti Atan2](https://msdn.microsoft.com/en-us/library/system.math.atan2(v=vs.110).aspx).
+Si noti che il codice precedente passa il parametro Y in primo luogo, quindi il parametro X, quando si chiama il `Atan2` metodo. Si tratta con le versioni precedenti dalle consuete X, Y ordinamento delle coordinate di posizione. Per ulteriori informazioni [vedere i documenti Atan2](https://msdn.microsoft.com/library/system.math.atan2(v=vs.110).aspx).
 
 È inoltre importante notare che il valore restituito da `Atan2` è espresso in radianti, che viene utilizzata per misurare gli angoli di un'altra unità. Questa Guida non riguardano i dettagli di radianti, ma tenere presente che tutte le funzioni trigonometriche il `System.Math` dello spazio dei nomi utilizzare radianti, in modo da tutti i valori devono essere convertiti in gradi prima di essere utilizzati per gli oggetti CocosSharp. Sono disponibili ulteriori informazioni su radianti [nella pagina di Wikipedia radiante](http://en.wikipedia.org/wiki/Radian).
 

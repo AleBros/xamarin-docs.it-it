@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 0ecad6259cb0d472ac39afb0a6be980d4582812c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 638e16a47d30e1d4d61fe9e7d19a0245261e5d7f
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-support-overview"></a>Panoramica del supporto asincrono
 
@@ -23,7 +23,7 @@ Supporto asincrono di Xamarin è basato su Mono 3.0 e aggiorna il profilo di API
 
 Questo documento introduce il nuovo async e await parole chiave quindi illustra alcuni semplici esempi di implementazione di metodi asincroni in xamarin. IOS e xamarin.
 
-Per una descrizione più completa delle nuove funzionalità asincrone in c# 5 (incluso un numero elevato di esempi e i diversi scenari di utilizzo) consultare la documentazione MSDN [la programmazione asincrona con Async e Await](http://msdn.microsoft.com/en-us/library/vstudio/hh191443.aspx).
+Per una descrizione più completa delle nuove funzionalità asincrone in c# 5 (incluso un numero elevato di esempi e i diversi scenari di utilizzo) consultare la documentazione MSDN [la programmazione asincrona con Async e Await](http://msdn.microsoft.com/library/vstudio/hh191443.aspx).
 
 L'applicazione di esempio effettua una richiesta web asincrona semplice (senza bloccare il thread principale), quindi aggiorna l'interfaccia utente html scaricato e numero di caratteri.
 
@@ -69,7 +69,7 @@ Utilizzando await non blocca il thread del chiamante, anziché il controllo vien
 
 Al completamento dell'attività, il metodo riprende l'esecuzione nel punto nel codice stesso. Ciò include la restituzione all'ambito del blocco try di un blocco try-catch-finally (se presente). Await non può essere utilizzato in un blocco catch o blocco finally.
 
-Altre informazioni sui [await in MSDN](http://msdn.microsoft.com/en-us/library/vstudio/hh156528.aspx).
+Altre informazioni sui [await in MSDN](http://msdn.microsoft.com/library/vstudio/hh156528.aspx).
 
 ## <a name="exception-handling"></a>Gestione delle eccezioni
 
@@ -85,7 +85,7 @@ Metodi asincroni che richiedere molto tempo per completare devono supportare l'a
 
 Quindi, l'attività Annulla se stessa e riconosce l'annullamento.
 
-Per ulteriori informazioni sull'annullamento, vedere [come annullare un'attività asincrona](http://msdn.microsoft.com/en-us/library/vstudio/jj155761.aspx) su MSDN.
+Per ulteriori informazioni sull'annullamento, vedere [come annullare un'attività asincrona](http://msdn.microsoft.com/library/vstudio/jj155761.aspx) su MSDN.
 
 ## <a name="example"></a>Esempio
 
@@ -198,13 +198,13 @@ Questo documento è assegnate una panoramica delle nuove parole chiave del lingu
 
 - [AsyncAwait (esempio)](https://developer.xamarin.com/samples/mobile/AsyncAwait/)
 - [I callback come il nostro generazioni passare all'istruzione](http://tirania.org/blog/archive/2013/Aug-15.html)
-- [Data (iOS) (sample)](https://developer.xamarin.com/samples/monotouch/Data/)
+- [Dati (iOS) (esempio)](https://developer.xamarin.com/samples/monotouch/Data/)
 - [HttpClient (iOS) (esempio)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
-- [MapKitSearch (iOS) (sample)](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
+- [MapKitSearch (iOS) (esempio)](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
 - [Webinar: C# Async in iOS e Android (video)](http://xamarin.wistia.com/medias/k27mc627xz)
-- [Programmazione asincrona con Async e Await (MSDN)](http://msdn.microsoft.com/en-us/library/vstudio/hh191443.aspx)
-- [Ottimizzazione dell'applicazione Async (MSDN)](http://msdn.microsoft.com/en-us/library/vstudio/jj155761.aspx)
+- [Programmazione asincrona con Async e Await (MSDN)](http://msdn.microsoft.com/library/vstudio/hh191443.aspx)
+- [Ottimizzazione dell'applicazione Async (MSDN)](http://msdn.microsoft.com/library/vstudio/jj155761.aspx)
 - [Await e dell'interfaccia utente e i deadlock. Oh mio Dio! (MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2011/01/13/10115163.aspx)
 - [L'elaborazione delle attività quando vengono completate (MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2012/08/02/processing-tasks-as-they-complete.aspx)
-- [Modello asincrono basato su attività (TAP)](http://msdn.microsoft.com/en-us/library/hh873175.aspx)
+- [Modello asincrono basato su attività (TAP)](http://msdn.microsoft.com/library/hh873175.aspx)
 - [Modalità asincrona in c# 5 (blog Lippert) – sull'introduzione delle parole chiave](http://blogs.msdn.com/b/ericlippert/archive/2010/11/11/whither-async.aspx)

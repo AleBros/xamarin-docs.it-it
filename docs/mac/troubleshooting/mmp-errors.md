@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/27/2018
-ms.openlocfilehash: df6a848023febcb7fc65cf6616aeae3b43b39262
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 7f0d40e4adb16e47db18d0796afa42c66af096ce
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Messaggi di errore Xamarin.Mac (mmp)
 
@@ -34,11 +34,11 @@ Il modo più semplice per ottenere informazioni sulla versione esatta consiste n
 
 <a name="MM0001" />
 
-#### <a name="mm0001-this-version-of-xamarinmac-requires-mono-0-the-current-mono-version-is-1-please-update-the-monoframework-from-httpmono-projectcomdownloads"></a>MM0001: Questa versione di Xamarin.Mac richiede {0} Mono (la versione Mono corrente è \\{1 \\}). Aggiornare il Mono.framework da http://mono-project.com/Downloads
+#### <a name="mm0001-this-version-of-xamarinmac-requires-mono-0-the-current-mono-version-is-1-please-update-the-monoframework-from-httpmono-projectcomdownloads"></a>MM0001: Questa versione di Xamarin.Mac richiede Mono {0} (la versione corrente Mono è {1}). Aggiornare il Mono.framework da http://mono-project.com/Downloads
 
 <a name="MM0003" />
 
-#### <a name="mm0003-application-name-0exe-conflicts-with-an-sdk-or-product-assembly-dll-name"></a>MM0003: Applicazione '{0} .exe' conflitti di nomi con un nome di assembly (DLL) SDK o il prodotto.
+#### <a name="mm0003-application-name-0exe-conflicts-with-an-sdk-or-product-assembly-dll-name"></a>MM0003: Nome dell'applicazione '{0}.exe' è in conflitto con un nome di assembly (DLL) SDK o prodotto.
 
 <a name="MM0007" />
 
@@ -46,7 +46,7 @@ Il modo più semplice per ottenere informazioni sulla versione esatta consiste n
 
 <a name="MM0008" />
 
-#### <a name="mm0008-you-should-provide-one-root-assembly-only-found-0-assemblies-1"></a>MM0008: È necessario fornire uno assembly {0} solo, trovato assembly radice: '\\{1 \\}'
+#### <a name="mm0008-you-should-provide-one-root-assembly-only-found-0-assemblies-1"></a>MM0008: È necessario fornire un unico assembly radice solo, trovati {0} assembly: '{1}'
 
 <a name="MM0010" />
 
@@ -68,15 +68,15 @@ Il modo più semplice per ottenere informazioni sulla versione esatta consiste n
 
 <a name="MM0020" />
 
-#### <a name="mm0020-the-valid-options-for-0-are-1"></a>MM0020: Le opzioni valide per '{0}' sono '\\{1 \\}'.
+#### <a name="mm0020-the-valid-options-for-0-are-1"></a>MM0020: Le opzioni valide per '{0}'sono'{1}'.
 
 <a name="MM0023" />
 
-#### <a name="mm0023-application-name-0exe-conflicts-with-another-user-assembly"></a>MM0023: Applicazione '{0} .exe' conflitti di nome con un altro assembly utente.
+#### <a name="mm0023-application-name-0exe-conflicts-with-another-user-assembly"></a>MM0023: Nome dell'applicazione '{0}.exe' è in conflitto con un altro assembly utente.
 
 <a name="MM0026" />
 
-#### <a name="mm0026-could-not-parse-the-command-line-argument-0-1"></a>MM0026: Non è stato possibile analizzare l'argomento della riga di comando '{0}': \\{1 \\}
+#### <a name="mm0026-could-not-parse-the-command-line-argument-0-1"></a>MM0026: Non è stato possibile analizzare l'argomento della riga di comando '{0}': {1}
 
 <a name="MM0043" />
 
@@ -141,7 +141,7 @@ Una soluzione ultimo riconosciuti potrebbe consistere nell'utilizzare una versio
 
 <a name="MM0097" />
 
-#### <a name="mm0097-machineconfig-file-0-can-not-be-found"></a>MM0097: Impossibile trovare il file Machine. config '{0}'.
+#### <a name="mm0097-machineconfig-file-0-can-not-be-found"></a>MM0097: file Machine. config '{0}' non può essere trovato.
 
 <a name="MM0098" />
 
@@ -149,7 +149,7 @@ Una soluzione ultimo riconosciuti potrebbe consistere nell'utilizzare una versio
 
 <a name="MM0099" />
 
-#### <a name="mm0099-internal-error-0-please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MM0099: Errore interno di {0}. Inviare una segnalazione di bug con un test case (http://bugzilla.xamarin.com).
+#### <a name="mm0099-internal-error-0-please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MM0099: Errore interno {0}. Inviare una segnalazione di bug con un test case (http://bugzilla.xamarin.com).
 
 <a name="MM0114" />
 
@@ -165,7 +165,7 @@ Una soluzione ultimo riconosciuti potrebbe consistere nell'utilizzare una versio
 
 <a name="MM1401" />
 
-#### <a name="mm1401-the-required-0-assembly-is-missing-from-the-references"></a>MM1401: L'assembly richiesto '{0}' non è disponibile dai riferimenti
+#### <a name="mm1401-the-required-0-assembly-is-missing-from-the-references"></a>MM1401: Richiesto '{0}' assembly mancante dai riferimenti
 
 <a name="MM1402" />
 
@@ -173,7 +173,7 @@ Una soluzione ultimo riconosciuti potrebbe consistere nell'utilizzare una versio
 
 <a name="MM1403" />
 
-#### <a name="mm1403-0-1-could-not-be-found-target-framework-0-is-unusable-to-package-the-application"></a>MM1403: {0} '\\{1 \\}' non trovato. Framework di destinazione '{0}' non è utilizzabile per il pacchetto dell'applicazione.
+#### <a name="mm1403-0-1-could-not-be-found-target-framework-0-is-unusable-to-package-the-application"></a>MM1403: {0} '{1}' non è stato trovato. Framework di destinazione '{0}' non è utilizzabile per il pacchetto dell'applicazione.
 
 <a name="MM1404" />
 
@@ -189,35 +189,35 @@ Una soluzione ultimo riconosciuti potrebbe consistere nell'utilizzare una versio
 
 <a name="MM1407" />
 
-#### <a name="mm1407-mismatch-between-xamarinmac-reference-0-and-target-framework-selected-1"></a>MM1407: Mancata corrispondenza tra framework '{0}' e quello di destinazione del riferimento Xamarin.Mac selezionato '\\{1 \\}'.
+#### <a name="mm1407-mismatch-between-xamarinmac-reference-0-and-target-framework-selected-1"></a>MM1407: Mancata corrispondenza tra Xamarin.Mac riferimento '{0}'e il framework di destinazione selezionato'{1}'.
 
 ### <a name="mm15xx-assembly-gathering-not-requiring-linker-errors"></a>MM15xx: Errori Assembly raccolta (che non richiedono del linker)
 
 <a name="MM1501" />
 
-#### <a name="mm1501-can-not-resolve-reference-0"></a>MM1501: Non può risolvere il riferimento: {0}
+#### <a name="mm1501-can-not-resolve-reference-0"></a>MM1501: Può risolvere il riferimento: {0}
 
 ### <a name="machocs"></a>MachO.cs
 
 <a name="MM1600" />
 
-#### <a name="mm1600-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1600: Non una O uguale alla libreria dinamica (intestazione sconosciuta ' 0 x {0}'): \\{1 \\}.
+#### <a name="mm1600-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1600: Non una O uguale alla libreria dinamica (intestazione sconosciuta ' 0 x{0}'): {1}.
 
 <a name="MM1601" />
 
-#### <a name="mm1601-not-a-static-library-unknown-header-0-1"></a>MM1601: Non una libreria statica (intestazione sconosciuta '{0}'): \\{1 \\}.
+#### <a name="mm1601-not-a-static-library-unknown-header-0-1"></a>MM1601: Non una libreria statica (intestazione sconosciuta '{0}'): {1}.
 
 <a name="MM1602" />
 
-#### <a name="mm1602-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1602: Non una O uguale alla libreria dinamica (intestazione sconosciuta ' 0 x {0}'): \\{1 \\}.
+#### <a name="mm1602-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1602: Non una O uguale alla libreria dinamica (intestazione sconosciuta ' 0 x{0}'): {1}.
 
 <a name="MM1603" />
 
-#### <a name="mm1603-unknown-format-for-fat-entry-at-position-0-in-1"></a>MM1603: Formato sconosciuto per la voce fat nella posizione {0} in \\{1 \\}.
+#### <a name="mm1603-unknown-format-for-fat-entry-at-position-0-in-1"></a>MM1603: Formato sconosciuto per la voce fat nella posizione {0} in {1}.
 
 <a name="MM1604" />
 
-#### <a name="mm1604-file-of-type-0-is-not-a-macho-file-1"></a>MM1604: File di tipo {0} non è un file MachO (\\{1 \\}).
+#### <a name="mm1604-file-of-type-0-is-not-a-macho-file-1"></a>MM1604: File di tipo {0} non è un file MachO ({1}).
 
 ## <a name="mm2xxx-linker"></a>MM2xxx: Linker
 
@@ -229,23 +229,23 @@ Una soluzione ultimo riconosciuti potrebbe consistere nell'utilizzare una versio
 
 <a name="MM2002" />
 
-#### <a name="mm2002-can-not-resolve-reference-0"></a>MM2002: Non può risolvere il riferimento: {0}
+#### <a name="mm2002-can-not-resolve-reference-0"></a>MM2002: Può risolvere il riferimento: {0}
 
 <a name="MM2003" />
 
-#### <a name="mm2003-option-0-will-be-ignored-since-linking-is-disabled"></a>MM2003: Opzione '{0}' verrà ignorata perché il collegamento è disabilitato
+#### <a name="mm2003-option-0-will-be-ignored-since-linking-is-disabled"></a>MM2003: Opzione '{0}' verrà ignorato perché il collegamento è disabilitato
 
 <a name="MM2004" />
 
-#### <a name="mm2004-extra-linker-definitions-file-0-could-not-be-located"></a>MM2004: File di definizione del linker Extra '{0}' non è possibile individuare.
+#### <a name="mm2004-extra-linker-definitions-file-0-could-not-be-located"></a>MM2004: File di definizione del linker Extra '{0}' non è stato trovato.
 
 <a name="MM2005" />
 
-#### <a name="mm2005-definitions-from-0-could-not-be-parsed"></a>MM2005: Non è stato possibile analizzare le definizioni di '{0}'.
+#### <a name="mm2005-definitions-from-0-could-not-be-parsed"></a>MM2005: Le definizioni da '{0}' non è stato possibile analizzare.
 
 <a name="MM2006" />
 
-#### <a name="mm2006-native-library-0-was-referenced-but-could-not-be-found"></a>MM2006: La libreria nativa di '{0}' è stato fatto riferimento, ma non è stata trovata.
+#### <a name="mm2006-native-library-0-was-referenced-but-could-not-be-found"></a>MM2006: La libreria nativa '{0}' viene fatto riferimento ma non è stato trovato.
 
 <a name="MM2007" />
 
@@ -253,7 +253,7 @@ Una soluzione ultimo riconosciuti potrebbe consistere nell'utilizzare una versio
 
 <a name="MM2009" />
 
-#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009: Fa riferimento {0}. \ {1 \} * * questo messaggio è correlato a MM2006 * *
+#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>: MM2009 Fa riferimento {0}.{1}     * * Questo messaggio è correlato a MM2006 * *
 
 <a name="MM2010" />
 
@@ -261,15 +261,15 @@ Una soluzione ultimo riconosciuti potrebbe consistere nell'utilizzare una versio
 
 <a name="MM2011" />
 
-#### <a name="mm2011-unknown-tlsprovider-0--valid-values-are-default-or-appletls"></a>MM2011: TLSProvider sconosciuto ' {0}.  I valori validi sono default o appletls
+#### <a name="mm2011-unknown-tlsprovider-0--valid-values-are-default-or-appletls"></a>MM2011: TLSProvider sconosciuto '{0}.  I valori validi sono default o appletls
 
 <a name="MM2012" />
 
-#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012: Solo prima {0} di \\{1 \\} "fa riferimento" avvisi visualizzati. * * Questo messaggio correlato a 2009 * *
+#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012: Solo le prime {0} di {1} "Fa riferimento" avvisi visualizzati. * * Questo messaggio correlato a 2009 * *
 
 <a name="MM2013" />
 
-#### <a name="mm2013-failed-to-resolve-the-reference-to-0-referenced-in-1-the-app-will-not-include-the-referenced-assembly-and-may-fail-at-runtime"></a>MM2013: Non è stato possibile risolvere il riferimento a "{0}", "\\{1 \\}" a cui fa riferimento. L'app non includerà l'assembly di riferimento e potrebbe non riuscire in fase di esecuzione.
+#### <a name="mm2013-failed-to-resolve-the-reference-to-0-referenced-in-1-the-app-will-not-include-the-referenced-assembly-and-may-fail-at-runtime"></a>MM2013: Non è stato possibile risolvere il riferimento a "{0}", cui viene fatto riferimento in"{1}". L'app non includerà l'assembly di riferimento e potrebbe non riuscire in fase di esecuzione.
 
 <a name="MM2014" />
 
@@ -303,11 +303,11 @@ L'assembly che causa il problema è denominato nel messaggio di errore. Per riso
 
 <a name="MM2104" />
 
-#### <a name="mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a>MM2104: Impossibile collegare l'assembly '{0}' perché è in modalità mista.
+#### <a name="mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a>MM2104: Non è possibile collegare assembly '{0}' perché è in modalità mista.
 
 Assembly in modalità mista non possono essere elaborate dal linker.
 
-Vedere https://msdn.microsoft.com/en-us/library/x0w2664k.aspx per ulteriori informazioni sull'assembly in modalità mista.
+Vedere https://msdn.microsoft.com/library/x0w2664k.aspx per ulteriori informazioni sull'assembly in modalità mista.
 
 ## <a name="mm3xxx-aot"></a>MM3xxx: AOT
 
@@ -345,7 +345,7 @@ Vedere https://msdn.microsoft.com/en-us/library/x0w2664k.aspx per ulteriori info
 
 <a name="MM4134" />
 
-#### <a name="mm4134-your-application-is-using-the-0-framework-which-isnt-included-in-the-macos-sdk-youre-using-to-build-your-app-this-framework-was-introduced-in-osx-2-while-youre-building-with-the-macos-1-sdk-this-configuration-is-not-supported-with-the-static-registrar-pass---registrardynamic-as-an-additional-mmp-argument-in-your-projects-mac-build-option-to-select-alternatively-select-a-newer-sdk-in-your-apps-mac-build-options"></a>MM4134: L'applicazione usi di framework '{0}', che non è incluso nel SDK MacOS in uso per compilare l'app (questo framework è stato introdotto in OSX {2}, mentre si sta compilando con il SDK \\{1 \\} MacOS). Questa configurazione non è supportata con il programma di registrazione statico (pass - registrar: dinamico come argomento mmp aggiuntiva nell'opzione di compilazione Mac del progetto per selezionare). In alternativa selezionare un SDK più recente nelle opzioni di compilazione Mac dell'app.
+#### <a name="mm4134-your-application-is-using-the-0-framework-which-isnt-included-in-the-macos-sdk-youre-using-to-build-your-app-this-framework-was-introduced-in-osx-2-while-youre-building-with-the-macos-1-sdk-this-configuration-is-not-supported-with-the-static-registrar-pass---registrardynamic-as-an-additional-mmp-argument-in-your-projects-mac-build-option-to-select-alternatively-select-a-newer-sdk-in-your-apps-mac-build-options"></a>MM4134: L'applicazione usi il '{0}' framework, che non è incluso nel SDK MacOS in uso per compilare l'app (questo framework è stato introdotto in OSX {2}, mentre si vogliano compilare con il MacOS {1} SDK.) Questa configurazione non è supportata con il programma di registrazione statico (pass - registrar: dinamico come argomento mmp aggiuntiva nell'opzione di compilazione Mac del progetto per selezionare). In alternativa selezionare un SDK più recente nelle opzioni di compilazione Mac dell'app.
 
 ## <a name="mm5xxx-gcc-and-toolchain"></a>MM5xxx: GCC e toolchain
 
@@ -353,13 +353,13 @@ Vedere https://msdn.microsoft.com/en-us/library/x0w2664k.aspx per ulteriori info
 
 <a name="MM5101" />
 
-#### <a name="mm5101-missing-0-compiler-please-install-xcode-command-line-tools-component"></a>MM5101: Manca '{0}' del compilatore. Installare il componente 'Strumenti da riga di comando' Xcode.
+#### <a name="mm5101-missing-0-compiler-please-install-xcode-command-line-tools-component"></a>MM5101: Manca '{0}' compilatore. Installare il componente 'Strumenti da riga di comando' Xcode.
 
 <!-- 5102 used by mtouch -->
 
 <a name="MM5103" />
 
-#### <a name="mm5103-failed-to-compile-error-code---0-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MM5103: Impossibile compilare. Codice di errore: {0}. Inviare una segnalazione di bug in http://bugzilla.xamarin.com
+#### <a name="mm5103-failed-to-compile-error-code---0-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MM5103: Impossibile compilare. Codice di errore - {0}. Inviare una segnalazione di bug in http://bugzilla.xamarin.com
 
 <!-- 5104 used by mtouch -->
 
@@ -379,7 +379,7 @@ Vedere https://msdn.microsoft.com/en-us/library/x0w2664k.aspx per ulteriori info
 
 <a name="MM5205" />
 
-#### <a name="mm5205-invalid-architecture-0-valid-architectures-are-i386-and-x8664-when---profilemobile"></a>MM5205: Architettura '{0}' non valido. Le architetture valide sono i386 e x86_64 (quando - profilo = mobile).
+#### <a name="mm5205-invalid-architecture-0-valid-architectures-are-i386-and-x8664-when---profilemobile"></a>MM5205: Architettura non valido '{0}'. Le architetture valide sono i386 e x86_64 (quando - profilo = mobile).
 
 <a name="MM5218" />
 
@@ -428,7 +428,7 @@ Vedere la [mtouch equivalente avviso](~/ios/troubleshooting/mtouch-errors.md#MT5
 
 <a name="MM5310" />
 
-#### <a name="mm5310-installnametool-failed-with-an-error-code-0-check-build-log-for-details"></a>MM5310: install_name_tool non riuscita con codice di errore '{0}'. Vedere il log di compilazione per i dettagli.
+#### <a name="mm5310-installnametool-failed-with-an-error-code-0-check-build-log-for-details"></a>MM5310: install_name_tool non riuscita con codice errore '{0}'. Vedere il log di compilazione per i dettagli.
 
 <!-- MM6xxx: mmp internal tools -->
 <!-- MM7xxx: reserved -->

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: b7604633a5dfad6134d7b549299194ab6707a865
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da827c5bdd25bf841f5396b10d1eeb70e132dfeb
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="api-design"></a>Progettazione delle API
 
@@ -693,7 +693,7 @@ Xamarin è un garbage collector che si occuperà di rilascio delle risorse per l
 
 Esposizione di `IDisposable` interfaccia è un modo pratico di assistere gli sviluppatori il rilascio di oggetti che potrebbero incapsulare grandi blocchi di memoria (ad esempio, un `UIImage` potrebbe essere simile a un puntatore di inoffensivo, ma potrebbe essere che punta a un'immagine 2 megabyte ) e altre risorse importanti e finiti (ad esempio, un buffer di decodifica video).
 
-NSObject implementa l'interfaccia IDisposable e anche il [modello Dispose .NET](http://msdn.microsoft.com/en-us/library/fs2xkftw.aspx). Questo consente agli sviluppatori che sottoclasse NSObject per eseguire l'override del comportamento di eliminazione e rilasciare le proprie risorse su richiesta. Si consideri, ad esempio, questo controller di visualizzazione che dispone di una serie di immagini:
+NSObject implementa l'interfaccia IDisposable e anche il [modello Dispose .NET](http://msdn.microsoft.com/library/fs2xkftw.aspx). Questo consente agli sviluppatori che sottoclasse NSObject per eseguire l'override del comportamento di eliminazione e rilasciare le proprie risorse su richiesta. Si consideri, ad esempio, questo controller di visualizzazione che dispone di una serie di immagini:
 
 ```csharp
 class MenuViewController : UIViewController {

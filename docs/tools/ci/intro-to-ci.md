@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 07/19/2017
-ms.openlocfilehash: 017691ece68f979eea1627c0442f49018d5742fb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5e4720ac44876620783b32f731c44afe5a623231
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Introduzione all'integrazione continua con Xamarin
 
@@ -36,7 +36,7 @@ Nel diagramma seguente viene illustrato questo processo:
 
 App per dispositivi mobili introducono sfide straordinarie per l'integrazione continua. Le applicazioni possono richiedere sensori, ad esempio la fotocamera GPS che sono disponibili solo su dispositivi fisici. Inoltre, emulatori o simulatori sono solo un'approssimazione dell'hardware e possono nascondere o nascondere i problemi. Alla fine, è necessario testare un'app per dispositivi mobili sull'hardware effettivo per essere sicuri che è effettivamente pronta.
 
-Il [App centro Test](https://docs.microsoft.com/en-us/appcenter/test-cloud) risolve questo problema specifico eseguendo i test di App direttamente in centinaia di dispositivi fisici. Gli sviluppatori di scrivere i test automatizzati accettazioni, che consentono di test dell'interfaccia utente potenti. Una volta caricati i test al centro di App, CI server possibile eseguirli automaticamente come parte di un processo di elemento di configurazione come illustrato nel diagramma seguente:
+Il [App centro Test](https://docs.microsoft.com/appcenter/test-cloud) risolve questo problema specifico eseguendo i test di App direttamente in centinaia di dispositivi fisici. Gli sviluppatori di scrivere i test automatizzati accettazioni, che consentono di test dell'interfaccia utente potenti. Una volta caricati i test al centro di App, CI server possibile eseguirli automaticamente come parte di un processo di elemento di configurazione come illustrato nel diagramma seguente:
 
 [![](intro-to-ci-images/intro02-small.png "Una volta caricati i test al centro di App, CI server possibile eseguirli automaticamente come parte di un processo di elemento di configurazione come illustrato in questo diagramma")](intro-to-ci-images/intro02.png#lightbox)
 
@@ -48,21 +48,21 @@ Non vi è un ecosistema completo di strumenti commerciali e open-source, progett
 
 ### <a name="visual-studio-team-services-and-team-foundation-server"></a>Visual Studio Team Services e Team Foundation Server
 
-[Visual Studio Team Services](https://www.visualstudio.com/products/visual-studio-team-services-vs) (VSTS) e [Team Foundation Server](http://msdn.microsoft.com/en-us/vstudio/ff637362.aspx) (TFS) sono strumenti di collaborazione di Microsoft per l'integrazione continuata compilare servizi attività di rilevamento, pianificazione agile e reporting strumenti e versione controllo. Il controllo della versione, Visual Studio Team Services e TFS possono essere usati con il proprio sistema (controllo della versione di Team Foundation o TFVC) o con i progetti ospitati in GitHub.
+[Visual Studio Team Services](https://www.visualstudio.com/products/visual-studio-team-services-vs) (VSTS) e [Team Foundation Server](http://msdn.microsoft.com/vstudio/ff637362.aspx) (TFS) sono strumenti di collaborazione di Microsoft per l'integrazione continuata compilare servizi attività di rilevamento, pianificazione agile e reporting strumenti e versione controllo. Il controllo della versione, Visual Studio Team Services e TFS possono essere usati con il proprio sistema (controllo della versione di Team Foundation o TFVC) o con i progetti ospitati in GitHub.
 
  - Visual Studio Team Services fornisce servizi tramite il cloud. Il vantaggio è che non richiede hardware dedicato o dell'infrastruttura e che è possibile accedere da qualsiasi tramite browser web e gli strumenti di sviluppo comuni, ad esempio Visual Studio, rendendo più interessante per i team che sono geograficamente distribuito. È disponibile per i team di cinque sviluppatori o meno, dopo è possibile acquistare le licenze aggiuntive per gestire un aumento team.
  - TFS è progettato per i server Windows locali e si accede tramite una rete locale o una connessione VPN alla rete. Il vantaggio principale è completamente il controllo della configurazione dei server di compilazione e può installare qualsiasi altro software o servizi sono necessari. TFS è un'edizione gratuita di Express base per i team di piccole dimensioni.
 
 TFS e Visual Studio Team Services sono strettamente integrati con Visual Studio e consentono agli sviluppatori di eseguire molti controllo della versione e attività degli elementi di configurazione da comodamente a un singolo IDE. È disponibile anche il Team Explorer Everywhere plug-in per Eclipse (vedere sotto). Visual Studio per Mac non offre alcun supporto per TFS o Visual Studio Team Services.
 
-Il sistema di compilazione di Visual Studio Team del servizio dispone di supporto diretto per i progetti di Xamarin, entro il quale si crea una definizione di compilazione per ogni piattaforma che si desidera destinazione (Android, iOS e Windows). La licenza di Xamarin è necessaria per ogni definizione di compilazione. È inoltre possibile per la connessione locale, in grado di supportare Xamarin TFS build server per Visual Studio Team Services per questo scopo. Con questa configurazione, le compilazioni in coda per Visual Studio Team Services verranno delegate al server locale. Per informazioni dettagliate, vedere [distribuire e configurare un server di compilazione](https://msdn.microsoft.com/en-us/library/ms181712.aspx). In alternativa, è possibile utilizzare un altro strumento di compilazione, ad esempio Jenkins o città Team.
+Il sistema di compilazione di Visual Studio Team del servizio dispone di supporto diretto per i progetti di Xamarin, entro il quale si crea una definizione di compilazione per ogni piattaforma che si desidera destinazione (Android, iOS e Windows). La licenza di Xamarin è necessaria per ogni definizione di compilazione. È inoltre possibile per la connessione locale, in grado di supportare Xamarin TFS build server per Visual Studio Team Services per questo scopo. Con questa configurazione, le compilazioni in coda per Visual Studio Team Services verranno delegate al server locale. Per informazioni dettagliate, vedere [distribuire e configurare un server di compilazione](https://msdn.microsoft.com/library/ms181712.aspx). In alternativa, è possibile utilizzare un altro strumento di compilazione, ad esempio Jenkins o città Team.
 
-Un elenco completo di tutte le funzionalità di Application Lifecycle Management (ALM) di Visual Studio, Visual Studio Team Services e Team Foundation Server, vedere [gestione del ciclo di vita delle applicazioni con App Xamarin](https://msdn.microsoft.com/en-us/library/mt162217(v=vs.140).aspx) su MSDN.
+Un elenco completo di tutte le funzionalità di Application Lifecycle Management (ALM) di Visual Studio, Visual Studio Team Services e Team Foundation Server, vedere [gestione del ciclo di vita delle applicazioni con App Xamarin](https://msdn.microsoft.com/library/mt162217(v=vs.140).aspx) su MSDN.
 
 
 ### <a name="team-explorer-everywhere"></a>Team Explorer Everywhere
 
-[Team Explorer Everywhere](http://msdn.microsoft.com/en-us/library/gg413285.aspx) le potenzialità di Team Foundation Server e Visual Studio Team Services per team di sviluppo esterni a Visual Studio. Consente agli sviluppatori di connettersi ai progetti team in locale o nel cloud da Eclipse o il client della riga di comando multipiattaforma per OS X e Linux. Team Explorer Everywhere completo fornisce accesso al controllo della versione, inclusi Git, gli elementi di lavoro e compilare funzionalità per le piattaforme non Windows.
+[Team Explorer Everywhere](http://msdn.microsoft.com/library/gg413285.aspx) le potenzialità di Team Foundation Server e Visual Studio Team Services per team di sviluppo esterni a Visual Studio. Consente agli sviluppatori di connettersi ai progetti team in locale o nel cloud da Eclipse o il client della riga di comando multipiattaforma per OS X e Linux. Team Explorer Everywhere completo fornisce accesso al controllo della versione, inclusi Git, gli elementi di lavoro e compilare funzionalità per le piattaforme non Windows.
 
 
 ### <a name="git"></a>Git
@@ -103,11 +103,11 @@ Il diagramma seguente illustra questo topografia:
 
 [![](intro-to-ci-images/intro03-small.png "Questo diagramma viene illustrata questa topografia")](intro-to-ci-images/intro03.png#lightbox)
 
-È anche possibile collegare un server TFS locale a un progetto di Visual Studio Team Services in modo che le compilazioni di Visual Studio Team Services sono delegate al server locale. Per informazioni dettagliate, vedere [distribuire e configurare un server di compilazione](http://msdn.microsoft.com/en-us/library/ms181712.aspx) su MSDN.
+È anche possibile collegare un server TFS locale a un progetto di Visual Studio Team Services in modo che le compilazioni di Visual Studio Team Services sono delegate al server locale. Per informazioni dettagliate, vedere [distribuire e configurare un server di compilazione](http://msdn.microsoft.com/library/ms181712.aspx) su MSDN.
 
 ### <a name="visual-studio-team-services-and-jenkins"></a>Jenkins e visual Studio Team Services
 
-Se si utilizza Jenkins per compilare le applicazioni, è possibile archiviare il codice in Visual Studio Team Services o Team Foundation Server e continuare a utilizzare Jenkins per le compilazioni di elemento di configurazione. Quando si esegue il push codice del progetto team repository Git o quando si archivia codice in tfvc, è possibile attivare una compilazione Jenkins. Per informazioni dettagliate, vedere [Jenkins con Visual Studio Team Services](https://www.visualstudio.com/en-us/docs/marketplace/integrate/service-hooks/services/jenkins).
+Se si utilizza Jenkins per compilare le applicazioni, è possibile archiviare il codice in Visual Studio Team Services o Team Foundation Server e continuare a utilizzare Jenkins per le compilazioni di elemento di configurazione. Quando si esegue il push codice del progetto team repository Git o quando si archivia codice in tfvc, è possibile attivare una compilazione Jenkins. Per informazioni dettagliate, vedere [Jenkins con Visual Studio Team Services](https://www.visualstudio.com/docs/marketplace/integrate/service-hooks/services/jenkins).
 
 [![](intro-to-ci-images/intro04-small.png "Se si utilizza Jenkins per compilare le applicazioni, è possibile archiviare il codice in Visual Studio Team Services o Team Foundation Server e continuare a utilizzare Jenkins per le compilazioni di CI")](intro-to-ci-images/intro04.png#lightbox)
 
@@ -123,4 +123,4 @@ Un altro ambiente CI comune può essere interamente OS X in base. Questo scenari
 
 # <a name="summary"></a>Riepilogo
 
-Questo documento è stato introdotto il concetto di integrazione continua e i vantaggi che offre ai team di sviluppo software. L'importanza del controllo della versione è stato illustrato insieme al ruolo e le responsabilità del server di compilazione. Il documento ha quindi per illustrare alcuni degli strumenti che è possono utilizzare per controllo del codice sorgente e server di compilazione. È stata inoltre introdotta App centro Test, che consente agli sviluppatori di pubblicare App eccezionali eseguendo i test automatizzati che si rivelerà la qualità e la funzionalità delle app. Documentazione sull'invio di applicazioni e test per App Center sono reperibili dettagliate [qui](https://docs.microsoft.com/en-us/appcenter/test-cloud). Infine, per comprendere come gli strumenti e componenti disposte, delineato ambienti CI differenti che potrebbero stabilire le organizzazioni per l'integrazione continua. Per ulteriori informazioni sull'utilizzo di Visual Studio Team Services e Team Foundation Server con i progetti di Xamarin, vedere [configurazione TFVC](https://docs.microsoft.com/vsts/tfvc/overview) e [introduzione di integrazione continua](https://docs.microsoft.com/en-us/vsts/build-release/actions/ci-cd-part-1). Analogamente, se si usa Jenkins, vedere [utilizzando Jenkins con Xamarin](~/tools/ci/jenkins-walkthrough.md) per informazioni dettagliate su come configurare un'integrazione continua.
+Questo documento è stato introdotto il concetto di integrazione continua e i vantaggi che offre ai team di sviluppo software. L'importanza del controllo della versione è stato illustrato insieme al ruolo e le responsabilità del server di compilazione. Il documento ha quindi per illustrare alcuni degli strumenti che è possono utilizzare per controllo del codice sorgente e server di compilazione. È stata inoltre introdotta App centro Test, che consente agli sviluppatori di pubblicare App eccezionali eseguendo i test automatizzati che si rivelerà la qualità e la funzionalità delle app. Documentazione sull'invio di applicazioni e test per App Center sono reperibili dettagliate [qui](https://docs.microsoft.com/appcenter/test-cloud). Infine, per comprendere come gli strumenti e componenti disposte, delineato ambienti CI differenti che potrebbero stabilire le organizzazioni per l'integrazione continua. Per ulteriori informazioni sull'utilizzo di Visual Studio Team Services e Team Foundation Server con i progetti di Xamarin, vedere [configurazione TFVC](https://docs.microsoft.com/vsts/tfvc/overview) e [introduzione di integrazione continua](https://docs.microsoft.com/vsts/build-release/actions/ci-cd-part-1). Analogamente, se si usa Jenkins, vedere [utilizzando Jenkins con Xamarin](~/tools/ci/jenkins-walkthrough.md) per informazioni dettagliate su come configurare un'integrazione continua.

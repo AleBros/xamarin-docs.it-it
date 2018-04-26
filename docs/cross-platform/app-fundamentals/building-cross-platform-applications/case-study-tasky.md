@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: f8e663ab2e274bff1ae8b700586d4c6749f04545
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 690edabd53752ff0347fdb232a4bbfcb1ba6e84d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="case-study-tasky"></a>Case Study: Tasky
 
@@ -166,7 +166,7 @@ public T GetItem<T> (int id) where T : BL.Contracts.IBusinessEntity, new ()
 
 #### <a name="locking-to-prevent-concurrent-access"></a>Il blocco per impedire l'accesso simultaneo
 
-A [blocco](http://msdn.microsoft.com/en-us/library/c5kehkcz(v=vs.100).aspx) viene implementato all'interno di `TaskItemDatabase` classe per impedire l'accesso simultaneo al database. Questo modo si garantisce l'accesso simultaneo da thread diversi viene serializzato (in caso contrario un componente dell'interfaccia utente potrebbe tentare di leggere il database nello stesso momento aggiornamento da un thread in background). In seguito è riportato un esempio della modalità di implementazione del blocco:
+A [blocco](http://msdn.microsoft.com/library/c5kehkcz(v=vs.100).aspx) viene implementato all'interno di `TaskItemDatabase` classe per impedire l'accesso simultaneo al database. Questo modo si garantisce l'accesso simultaneo da thread diversi viene serializzato (in caso contrario un componente dell'interfaccia utente potrebbe tentare di leggere il database nello stesso momento aggiornamento da un thread in background). In seguito è riportato un esempio della modalità di implementazione del blocco:
 
 ```csharp
 static object locker = new object ();
@@ -253,7 +253,7 @@ Le sezioni rimanenti discutere i dettagli di implementazione specifica della pia
 
  <a name="iOS_App" />
 
-## <a name="ios-app"></a>iOS App
+## <a name="ios-app"></a>App iOS
 
 Sono disponibili solo un numero limitato di classi necessarie per implementare iOS Tasky applicazione utilizzando il progetto PCL comune per archiviare e recuperare dati. Il progetto xamarin iOS completo è illustrato di seguito:
 
