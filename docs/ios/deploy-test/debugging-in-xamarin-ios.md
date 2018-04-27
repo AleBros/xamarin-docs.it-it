@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8848dd20683163cd42215fe496dd7ff6a9e9f0c7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e2e32170de258f46eb5a926db35bce33c0ca64de
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="debugging"></a>Debug
 
@@ -164,7 +164,7 @@ Questi sono:
 - **Esegui istruzione (F10)**: anche questo pulsante esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante si ferma alla prima riga della funzione, permettendo di continuare a eseguire il debug della funzione riga per riga. Se la riga successiva non è una funzione, il pulsante si comporta come il pulsante Esegui istruzione/routine.
 - **Esci da istruzione/routine (MAIUSC+F11)**: torna alla riga in cui è stata chiamata la funzione corrente.
 
-Per una documentazione più approfondita sul debug, vedere [Spostarsi nel codice con il debugger di Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
+Per una documentazione più approfondita sul debug, vedere [Spostarsi nel codice con il debugger di Visual Studio](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
 -----
 

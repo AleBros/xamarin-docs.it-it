@@ -5,13 +5,13 @@ metadata:
   description: Xamarin.Mac espone la versione completa di macOS SDK per gli sviluppatori .NET.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 04/25/2018
   ms.topic: landing-page
-  ms.openlocfilehash: a81c5b6fe71f178f2def0e6bbacac56db229a39a
-  ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+  ms.openlocfilehash: 0dc1a27fa1cb99d3a2941d1ec838ce03ac301e1e
+  ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 02/27/2018
+  ms.lasthandoff: 04/26/2018
 abstract:
   description: Xamarin.Mac espone la versione completa di macOS SDK per gli sviluppatori .NET. Creare app completamente native in Visual Studio per Mac.
   menu:
@@ -42,54 +42,46 @@ sections:
       href: ~/mac/get-started/hello-mac.md
 - title: Guide
   items:
-  - type: grid
-    style: columns
-    className: column50
+  - type: list
+    style: cards
+    className: cardsB
     items:
-    - type: list
-      style: cards
-      className: cardsB
-      items:
-      - href: ~/mac/get-started/index.md
-        html: Esercitazioni per imparare velocemente a conoscere e usare Xamarin.Mac. Assicurarsi che tutti gli elementi siano installati correttamente e creare le prime app Mac.
-        image:
-          src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
-          href: ~/mac/get-started/index.md
-        title: Introduzione
-      - href: ~/mac/user-interface
-        html: Informazioni sul set completo di controlli dell'interfaccia utente disponibili per macOS in AppKit.
-        image:
-          src: ~/media/icons/i_user-interface.svg
-          href: ~/mac/user-interface/
-        title: Interfaccia utente
-      - href: ~/mac/deploy-test/
-        html: Istruzioni per la compilazione e distribuzione delle app in App Store e suggerimenti per i test.
-        image:
-          src: ~/media/icons/i_deploy-test.svg
-          href: ~/mac/deploy-test/
-        title: Distribuzione e test
-    - type: list
-      style: cards
-      className: cardsB
-      items:
-      - href: ~/mac/app-fundamentals/
-        html: Tutto quello che serve sapere per creare app Mac, come l'utilizzo di file, immagini, database e altri elementi.
-        image:
-          src: ~/media/icons/i_app-build.svg
-          href: ~/mac/app-fundamentals/
-        title: Nozioni di base sulle applicazioni
-      - href: ~/mac/platform/
-        html: "Utilizzo delle funzionalità per la piattaforma Mac, come storyboard, OpenTK e le funzionalità più recenti in macOS."
-        image:
-          src: ~/media/icons/i_platform.svg
-          href: ~/mac/platform/
-        title: "Funzionalità della piattaforma"
-      - href: ~/mac/internals/
-        html: "Informazioni aggiuntive sui meccanismi interni di Xamarin.Mac e assistenza per funzionalità come l'accessibilità."
-        image:
-          src: https://docs.microsoft.com/en-us/media/common/i_config-tools.svg
-          href: ~/mac/internals/
-        title: Concetti avanzati e meccanismi interni
+    - href: ~/mac/get-started/index.md
+      html: Esercitazioni per imparare velocemente a conoscere e usare Xamarin.Mac. Assicurarsi che tutti gli elementi siano installati correttamente e creare le prime app Mac.
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+        href: ~/mac/get-started/index.md
+      title: Introduzione
+    - href: ~/mac/app-fundamentals/
+      html: Tutto quello che serve sapere per creare app Mac, come l'utilizzo di file, immagini, database e altri elementi.
+      image:
+        src: ~/media/icons/i_app-build.svg
+        href: ~/mac/app-fundamentals/
+      title: Nozioni fondamentali sulle applicazioni
+    - href: ~/mac/user-interface
+      html: Informazioni sul set completo di controlli dell'interfaccia utente disponibili per macOS in AppKit.
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: ~/mac/user-interface/
+      title: Interfaccia utente
+    - href: ~/mac/platform/
+      html: Utilizzo delle funzionalità per la piattaforma Mac, come storyboard, OpenTK e le funzionalità più recenti in macOS.
+      image:
+        src: ~/media/icons/i_platform.svg
+        href: ~/mac/platform/
+      title: Funzionalità della piattaforma
+    - href: ~/mac/deploy-test/
+      html: Istruzioni per la compilazione e distribuzione delle app in App Store e suggerimenti per i test.
+      image:
+        src: ~/media/icons/i_deploy-test.svg
+        href: ~/mac/deploy-test/
+      title: Distribuzione e test
+    - href: ~/mac/internals/
+      html: Informazioni aggiuntive sui meccanismi interni di Xamarin.Mac e assistenza per funzionalità come l'accessibilità.
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_config-tools.svg
+        href: ~/mac/internals/
+      title: Concetti avanzati e meccanismi interni
 - title: Riferimenti
   items:
   - type: list

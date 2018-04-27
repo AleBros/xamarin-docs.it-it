@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5ca2918a0348254407fcbfff030def6c36af4988
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71bfccdcab73b651f458dd8d9c5396bffd55004b
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Hello, iOS: approfondimenti
 
@@ -85,7 +85,7 @@ A destra è presente il *riquadro della soluzione*, che contiene la struttura di
 
 Nella procedura dettagliata [Hello, iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md) è stata creata la soluzione **Phoneword** ed è stato inserito un progetto iOS, **Phoneword_iOS**, all'interno di questa. Gli elementi all'interno del progetto sono:
 
--  **Riferimenti**: contiene gli assembly necessari per compilare ed eseguire l'applicazione. Espandere la directory per visualizzare riferimenti ad assembly .NET quali [System](http://msdn.microsoft.com/en-us/library/system%28v=vs.110%29.aspx), System.Core e [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml%28v=vs.110%29.aspx), nonché un riferimento all'assembly Xamarin.iOS di Xamarin.
+-  **Riferimenti**: contiene gli assembly necessari per compilare ed eseguire l'applicazione. Espandere la directory per visualizzare riferimenti ad assembly .NET quali [System](http://msdn.microsoft.com/library/system%28v=vs.110%29.aspx), System.Core e [System.Xml](http://msdn.microsoft.com/library/system.xml%28v=vs.110%29.aspx), nonché un riferimento all'assembly Xamarin.iOS di Xamarin.
 -  **Pacchetti**: la directory Pacchetti contiene pacchetti NuGet pronti all'uso.
 -  **Risorse**: nella cartella Risorse sono archiviati altri file multimediali.
 -  **Main.cs**: contiene il punto di ingresso principale dell'applicazione. Per avviare l'applicazione, è necessario passare il nome della classe principale dell'applicazione, `AppDelegate`.

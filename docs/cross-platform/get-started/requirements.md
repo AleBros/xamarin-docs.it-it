@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 08/28/2017
-ms.openlocfilehash: fe15e96780df7e47ce0530acbb04605ad48bf5ee
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ed9992eb162b57cd9c0dd1bc9f4abda4235bac12
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="system-requirements"></a>Requisiti di sistema
 
@@ -82,14 +82,14 @@ Per le attività di test e debug è possibile distribuire le applicazioni Xamari
 
 > [!NOTE]
 >
->* [Download dell'emulatore Windows Phone 8.1](https://www.microsoft.com/en-us/download/details.aspx?id=43719).
+>* [Download dell'emulatore Windows Phone 8.1](https://www.microsoft.com/download/details.aspx?id=43719).
 >* L'emulatore Windows Phone 10 è incluso in Visual Studio 2015 UWP SDK.
 
 <a name="install" />
 
 ## <a name="installation-instructions"></a>Istruzioni di installazione
 
-È possibile scaricare la versione più recente di Xamarin per macOS da [xamarin.com/download](http://xamarin.com/download). Per Windows seguire le istruzioni di installazione di [Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio).
+È possibile scaricare la versione più recente di Xamarin per macOS da [xamarin.com/download](http://xamarin.com/download). Per Windows seguire le istruzioni di installazione di [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
 
 Nella [pagina delle versioni correnti](http://developer.xamarin.com/releases/current/) è disponibile un elenco completo delle attuali versioni del prodotto. La pagina include anche le singole versioni del prodotto e i collegamenti alle note sulla versione per i canali alfa e beta.
 

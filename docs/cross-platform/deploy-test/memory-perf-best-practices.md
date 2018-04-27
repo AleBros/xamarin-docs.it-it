@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: d434782e2586b1ed4f42984f2eeb72191b0dc171
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 98b4b4a9e7bc28dd444cfdcb1afdfbe64cb1aee0
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cross-platform-performance"></a>Prestazioni multipiattaforma
 
@@ -211,7 +211,7 @@ double Compute(double x)
 
 L'inizializzazione differita viene eseguita la prima volta che si accede alla proprietà `Lazy<T>.Value`. Il tipo con wrapping viene creato e restituito in occasione del primo accesso e viene quindi archiviato per l'eventuale accesso futuro.
 
-Per altre informazioni sull'inizializzazione differita, vedere [Inizializzazione differita](https://msdn.microsoft.com/en-us/library/dd997286(v=vs.110).aspx).
+Per altre informazioni sull'inizializzazione differita, vedere [Inizializzazione differita](https://msdn.microsoft.com/library/dd997286(v=vs.110).aspx).
 
 <a name="async" />
 

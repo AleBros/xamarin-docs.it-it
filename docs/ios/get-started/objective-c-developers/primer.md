@@ -6,11 +6,11 @@ ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 717e131dd4025ea07780f6e52d8171fd15272dac
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c4c8e7246b4414fb4153f0dd9eb812ddff1e7b07
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Introduzione a C# per sviluppatori Objective-C
 
@@ -141,7 +141,7 @@ Objective-C usa i *blocchi* per creare le chiusure, in cui è possibile creare u
 };
 ```
 
-Per altre informazioni sulle espressioni lambda, vedere la [Guida per programmatori C#](http://msdn.microsoft.com/en-us/library/vstudio/bb397687.aspx) di Microsoft.
+Per altre informazioni sulle espressioni lambda, vedere la [Guida per programmatori C#](http://msdn.microsoft.com/library/vstudio/bb397687.aspx) di Microsoft.
 
 ## <a name="summary"></a>Riepilogo
 
