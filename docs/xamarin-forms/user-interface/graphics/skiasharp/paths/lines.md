@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: b9a5e7c15fd1105a9ca4661ff38e4eb2c92dd10f
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 24bf7bd7fb2aa51968a96bdbf808030604665c26
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="lines-and-stroke-caps"></a>Le righe e maiuscole tratto
 
@@ -235,7 +235,7 @@ L'iPhone a sinistra illustra il modo in `SKPointMode.Points` fa sì che il membr
 
 Quando si utilizza invece `SKPointMode.Lines`, come illustrato nella schermata di Android nel centro di `DrawPoints` metodo disegna una linea tra ogni coppia di `SKPoint` valori, utilizzando il delimitatore di riga specificata, in questo caso `Round`.
 
-Il dispositivo mobile Windows Mostra il risultato del `SKPointMode.Polygon` valore. Viene tracciata una linea tra i successivi punti nella matrice, ma se si osserva attentamente, si noterà che le righe seguenti non sono connessi. Ognuna di queste righe separate inizia e termina con il delimitatore di riga specificato. Se si seleziona il `Round` BLOC MAIUSC, le righe sembrano essere connessi, ma sono effettivamente non connessi.
+Nella schermata UWP Mostra il risultato del `SKPointMode.Polygon` valore. Viene tracciata una linea tra i successivi punti nella matrice, ma se si osserva attentamente, si noterà che le righe seguenti non sono connessi. Ognuna di queste righe separate inizia e termina con il delimitatore di riga specificato. Se si seleziona il `Round` BLOC MAIUSC, le righe sembrano essere connessi, ma sono effettivamente non connessi.
 
 Se le righe vengono connessi o non è connesso è un aspetto fondamentale di utilizzo dei percorsi di grafica.
 

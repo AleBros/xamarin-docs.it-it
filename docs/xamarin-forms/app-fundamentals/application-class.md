@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 1e1039f513534885dffe9fef348d567243651e22
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 5c9eed8f48a40bc7feaadd0c644610f691713e9b
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="app-class"></a>Classe App
 
@@ -198,70 +198,9 @@ public class MainActivity :
 > È una nuova [ `FormsAppCompatActivity` ](~/xamarin-forms/platform/android/appcompat.md) classe base che può essere utilizzato per migliorare il supporto Android materiale di progettazione.
 > Che diventerà il modello di Android predefinito in futuro, ma è possibile seguire [queste istruzioni](~/xamarin-forms/platform/android/appcompat.md) per aggiornare le app Android esistente.
 
-
-### <a name="windows-phone-project"></a>Progetto Windows Phone
-
-Pagina principale del progetto (basata su Silverlight) di Windows Phone deve ereditare da `FormsApplicationPage`. Ciò significa XAML e c# per `MainPage` riferimento il `FormsApplicationPage` come illustrato.
-
-Il codice XAML usa uno spazio dei nomi personalizzato in modo che l'elemento radice riflette la `FormsApplicationPage` classe:
-
-```xaml
-<winPhone:FormsApplicationPage
-   ...
-   xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"
-    ...>
-</winPhone:FormsApplicationPage>
-```
-
-In c# eredita il `FormsApplicationPage` classe e le chiamate `LoadApplication` per creare un'istanza del xamarin. Forms `App`. Si noti che è consigliabile utilizzare in modo esplicito lo spazio dei nomi dell'applicazione per qualificare il `App` poiché le applicazioni Windows Phone presentano anche i propri `App` classe non correlati a xamarin. Forms.
-
-```csharp
-public partial class MainPage :
-    global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
-
-        global::Xamarin.Forms.Forms.Init();
-        LoadApplication(new YOUR_APP_NAMESPACE.App()); // new in 1.3, use the correct namespace
-    }
- }
-```
-
-### <a name="windows-81-project"></a>Progetto Windows 8.1
-
-Pagina principale nella [Windows 8.1 (basato su WinRT)](~/xamarin-forms/platform/windows/installation/tablet.md) progetti devono ora ereditano da `WindowsPage`. Ciò significa che il codice XAML per `MainPage` riferimento il `WindowsPage` come illustrato:
-
-Il codice XAML usa uno spazio dei nomi personalizzato in modo che l'elemento radice riflette la `FormsApplicationPage` classe:
-
-```xaml
-<forms:WindowsPage
-   ...
-   xmlns:forms="using:Xamarin.Forms.Platform.WinRT"
-   ...>
-</forms:WindowsPage>
-```
-
-Costruzione del codice c# è necessario chiamare `LoadApplication` per creare un'istanza del xamarin. Forms `App`. Si noti che è consigliabile utilizzare in modo esplicito lo spazio dei nomi dell'applicazione per qualificare il `App` poiché le applicazioni UWP presentano anche i propri `App` classe non correlati a xamarin. Forms.
-
-```csharp
-public partial class MainPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        LoadApplication(new YOUR_APP_NAMESPACE.App());
-    }
- }
-```
-
-Si noti che `Forms.Init()` deve essere chiamato **App.xaml.cs** alla riga 65.
-
 ### <a name="universal-windows-project-uwp-for-windows-10"></a>Progetto Windows universale (UWP) per Windows 10
 
-[Il progetto Windows universale](~/xamarin-forms/platform/windows/installation/universal.md) supporto in xamarin. Forms è attualmente in anteprima.
+Vedere [progetti di installazione Windows](~/xamarin-forms/platform/windows/installation/index.md) per informazioni sul supporto di piattaforma UWP in xamarin. Forms.
 
 Pagina principale nel progetto UWP deve ereditare da `WindowsPage`. Ciò significa XAML e c# per `MainPage` riferimento il `FormsApplicationPage` come illustrato.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 95ac9912f0ff6788a2a633b3f8d3495e286030f1
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 6945d64e37bc7e0de930093d8a3f71590026182d
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>Selezione di una foto dalla raccolta immagini di
 
@@ -21,7 +21,6 @@ In questo articolo vengono illustrati la creazione di un'applicazione che consen
 - **[iOS implementazione](#iOS_Implementation)**  &ndash; informazioni su come implementare l'interfaccia nel codice nativo per iOS.
 - **[Implementazione Android](#Android_Implementation)**  &ndash; informazioni su come implementare l'interfaccia nel codice nativo per Android.
 - **[L'implementazione della piattaforma Windows Universal](#UWP_Implementation)**  &ndash; informazioni su come implementare l'interfaccia nel codice nativo per la piattaforma UWP (Universal Windows).
-- **[Implementazione di Windows Phone](#Windows_Phone_Implementation)**  &ndash; informazioni su come implementare l'interfaccia nel codice nativo per Windows Phone 8.1.
 - **[Implementazione di codice condiviso](#Implementing_in_Shared_Code)**  &ndash; imparare a usare `DependencyService` chiamino l'implementazione native da codice condiviso.
 
 <a name="Creating_the_Interface" />
@@ -256,92 +255,6 @@ namespace DependencyServiceSample.UWP
         }
     }
 }
-```
-
-<a name="Windows_Phone_Implementation" />
-
-## <a name="windows-phone-81-implementation"></a>Implementazione di Windows Phone 8.1
-
-L'implementazione di Windows Phone 8.1 è simile all'implementazione UWP ad eccezione di una grande differenza con un impatto significativo: il `PickSingleFileAsync` metodo `FileOpenPicker` non è disponibile. Al contrario, il `GetImageStreamAsync` metodo deve chiamare `PickSingleFileAndContinue`. Questo metodo restituisce quando la raccolta di foto viene visualizzata all'utente, ma la selezione dell'utente di una foto viene segnalata da una chiamata al `OnActivated` metodo la `App` classe.
-
-Per questo motivo, il [ `App` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/WinPhone/App.xaml.cs) classe creata dal modello di progetto xamarin. Forms nel progetto Windows Phone 8.1 è stata completata con una proprietà di tipo `TaskCompletionSource` e un override del `OnActivated` metodo:
-
-```csharp
-namespace DependencyServiceSample.WinPhone
-{
-    public sealed partial class App : Application
-    {
-        ...
-        public TaskCompletionSource<Stream> TaskCompletionSource { set; get; }
-
-        protected async override void OnActivated(IActivatedEventArgs args)
-        {
-            base.OnActivated(args);
-
-            IContinuationActivatedEventArgs continuationArgs = args as IContinuationActivatedEventArgs;
-
-            if (continuationArgs != null &&
-                continuationArgs.Kind == ActivationKind.PickFileContinuation)
-            {
-                FileOpenPickerContinuationEventArgs pickerArgs = args as FileOpenPickerContinuationEventArgs;
-
-                if (pickerArgs.Files.Count > 0)
-                {
-                    // Get the file and a Stream
-                    StorageFile storageFile = pickerArgs.Files[0];
-                    IRandomAccessStreamWithContentType raStream = await storageFile.OpenReadAsync();
-                    Stream stream = raStream.AsStreamForRead();
-
-                    // Set the completion of the Task
-                    TaskCompletionSource.SetResult(stream);
-                }
-                else
-                {
-                    TaskCompletionSource.SetResult(null);
-                }
-            }
-        }
-    }
-}
-```
-
-Il `OnActivated` metodo potrebbe essere chiamato per vari motivi, inclusi l'avvio dell'applicazione. Il codice si adatta alle sole chiamate quando la selezione e apertura file non è terminata e successivamente viene ottenuto un `Stream` dall'oggetto di `StorageFile`.
-
-Il [ `PicturePickerImplementation` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/WinPhone/PicturePickerImplementation.cs) classe contiene il `GetImageStreamAsync` metodo che crea il `FileOpenPicker` e chiama `PickSingleFileAndContainue`:
-
-```csharp
-[assembly: Xamarin.Forms.Dependency(typeof(PicturePickerImplementation))]
-
-namespace DependencyServiceSample.WinPhone
-{
-    public class PicturePickerImplementation : IPicturePicker
-    {
-        public Task<Stream> GetImageStreamAsync()
-        {
-            // Create and initialize the FileOpenPicker
-            FileOpenPicker openPicker = new FileOpenPicker
-            {
-                ViewMode = PickerViewMode.Thumbnail,
-                SuggestedStartLocation = PickerLocationId.PicturesLibrary,
-            };
-
-            openPicker.FileTypeFilter.Add(".jpg");
-            openPicker.FileTypeFilter.Add(".jpeg");
-            openPicker.FileTypeFilter.Add(".png");
-
-            // Display the picker for a single file (resumes in OnActivated in App.xaml.cs)
-            openPicker.PickSingleFileAndContinue();
-
-            // Create a TaskCompletionSource stored in App.xaml.cs
-            TaskCompletionSource<Stream> taskCompletionSource = new TaskCompletionSource<Stream>();
-            (Application.Current as App).TaskCompletionSource = taskCompletionSource;
-
-            // Return the Task object
-            return taskCompletionSource.Task;
-        }
-    }
-}
-
 ```
 
 <a name="Implementing_in_Shared_Code" />

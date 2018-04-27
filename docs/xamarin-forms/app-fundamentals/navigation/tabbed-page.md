@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 11287d38ec0e01e068ca385c92e6a6efdc323aeb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4210f672cdc68acc45b1f547dcc2e6933298df93
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tabbed-page"></a>Pagina a schede
 
@@ -39,7 +39,6 @@ Il layout di un [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.
     > [!NOTE]
   > Si noti che quando si utilizza una delle applicazioni in Android, ogni scheda verrà anche visualizzata un'icona. Inoltre, il `TabbedPageRenderer` per Android delle applicazioni presenta un sottoponibile a override `SetTabIcon` metodo che può essere utilizzato per caricare le icone scheda da un oggetto personalizzato `Drawable`. Questa sostituzione consente di utilizzare le immagini SVG sotto forma di icone in una `TabbedPage`.
 
-- In Windows Phone, viene visualizzato l'elenco delle schede nella parte superiore della schermata e nell'area dettaglio è inferiore. La scheda nomi vengono convertiti automaticamente in minuscole e l'utente può scorrere la raccolta di schede se vi sono troppi per essere contenuta in una schermata.
 - In Windows tablet fattori di forma, le schede non sono sempre visibili e gli utenti devono scorrere verso il basso (o pulsante destro del mouse, se hanno un mouse collegato) per visualizzare le schede in un `TabbedPage` (come illustrato di seguito).
 
 ![](tabbed-page-images/windows-tabs.png "TabbedPage schede in Windows")
@@ -251,6 +250,6 @@ In questo articolo viene illustrato come utilizzare un TabbedPage per spostarsi 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Tipi di pagina](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
-- [TabbedPageWithNavigationPage (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
+- [TabbedPageWithNavigationPage (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
 - [TabbedPage (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPage/)
 - [TabbedPage](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/)

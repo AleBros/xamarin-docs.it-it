@@ -7,11 +7,11 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: c6fd0f905aceb9dddc4047abc6ad2722adf2d8e9
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: aba193ca38d60db52298fdf239d936310a4ac193
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Tre metodi per disegnare un arco
 
@@ -414,8 +414,6 @@ public partial class TangentArcPage : InteractivePage
 Ecco il **arco tangente** in esecuzione in tutti e tre le piattaforme di pagina:
 
 [![](arcs-images/tangentarc-small.png "Schermata triplo della pagina arco tangente")](arcs-images/tangentarc-large.png#lightbox "tripla schermata della pagina arco tangente")
-
-Nel dispositivo Windows Mobile, i tre punti sono collineari quasi e l'arco è molto piccolo.
 
 L'arco tangente è ideale per la creazione di angoli arrotondati, ad esempio un rettangolo arrotondato. Poiché `SKPath` include già un `AddRoundedRect` (metodo), il **arrotondato Heptagon** pagina viene illustrato come utilizzare `ArcTo` per arrotondare gli angoli di un poligono sette lati. (Il codice è generalizzato per qualsiasi poligono regolare).
 

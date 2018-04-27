@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 09328e1c6d884898aed86f2cb8ab1b84bf6d5cab
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 52c86c63c328729211c4fbd22bd10b5eb1e56615
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="fonts"></a>Tipi di carattere
 
@@ -166,7 +166,7 @@ La `FormattedString` classe può essere utilizzata anche in XAML, come illustrat
         <OnPlatform x:TypeArguments="x:String">
                 <On Platform="iOS" Value="MarkerFelt-Thin" />
                 <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
         </OnPlatform>
     </Label.FontFamily>
 </Label>
@@ -178,7 +178,7 @@ Quando si specifica un tipo di carattere personalizzato, è sempre consigliabile
 
 ## <a name="using-a-custom-font"></a>Utilizzo di un tipo di carattere personalizzato
 
-Utilizza un carattere diverso da caratteri tipografici predefiniti richiede alcune specifiche della piattaforma di codifica. Questa schermata mostra il tipo di carattere personalizzato **astice** da [tipi di carattere open source di Google](https://www.google.com/fonts) sottoposti a rendering in iOS, Android e Windows Phone con xamarin. Forms.
+Utilizza un carattere diverso da caratteri tipografici predefiniti richiede alcune specifiche della piattaforma di codifica. Questa schermata mostra il tipo di carattere personalizzato **astice** da [tipi di carattere open source di Google](https://www.google.com/fonts) eseguito il rendering con xamarin. Forms.
 
  [![Tipo di carattere personalizzato in iOS e Android](fonts-images/custom-sml.png "esempio tipi di carattere personalizzato")](fonts-images/custom.png#lightbox "esempio tipi di carattere personalizzato")
 
@@ -240,7 +240,7 @@ Il codice comune per l'applicazione è ora completo. Il codice di composizione t
         <OnPlatform x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Lobster-Regular" />
                 <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
         </OnPlatform>
     </Label.FontFamily>
 </Label>

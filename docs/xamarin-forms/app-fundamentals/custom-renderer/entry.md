@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 1e8ef47ceb381a0e4e163aaa24795d46264195da
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c120add5a301e440911bd9794da77732e7787cc0
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-an-entry"></a>Personalizzazione di una voce
 
 _Il controllo voce di xamarin. Forms consente una singola riga di testo da modificare. In questo articolo viene illustrato come creare un renderer personalizzato per il controllo voce, consentendo agli sviluppatori di eseguire l'override per il rendering predefinito nativo con le personalizzazioni specifiche della piattaforma._
 
-Ogni controllo in xamarin. Forms è un renderer di accompagnamento per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) rendering del controllo da un'applicazione di xamarin. Forms, in iOS il `EntryRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza nativa `UITextField` controllo. Nella piattaforma Android, il `EntryRenderer` crea un'istanza di classe un `EditText` controllo. In Windows Phone e di Windows della piattaforma UWP (Universal), il `EntryRenderer` crea un'istanza di classe un `TextBox` controllo. Per ulteriori informazioni sulle classi di controllo nativo che eseguono il mapping per i controlli di xamarin. Forms e renderer, vedere [Renderer classi di Base e i controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Ogni controllo in xamarin. Forms è un renderer di accompagnamento per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) rendering del controllo da un'applicazione di xamarin. Forms, in iOS il `EntryRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza nativa `UITextField` controllo. Nella piattaforma Android, il `EntryRenderer` crea un'istanza di classe un `EditText` controllo. Nella piattaforma UWP (Universal Windows), il `EntryRenderer` crea un'istanza di classe un `TextBox` controllo. Per ulteriori informazioni sulle classi di controllo nativo che eseguono il mapping per i controlli di xamarin. Forms e renderer, vedere [Renderer classi di Base e i controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Il diagramma seguente illustra la relazione tra il [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) controllo e i corrispondenti controlli nativi che l'implementano:
 
@@ -178,13 +178,13 @@ namespace CustomRenderer.Android
 
 La chiamata per la classe base `OnElementChanged` metodo crea un'istanza di un Android `EditText` controllo con un riferimento al controllo viene assegnato per il renderer `Control` proprietà. Viene impostato il colore di sfondo verde chiaro con il `Control.SetBackgroundColor` metodo.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Creazione di Renderer personalizzato in Windows Phone e UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Creazione di Renderer personalizzato in UWP
 
-Esempio di codice seguente viene illustrato il renderer personalizzato per Windows Phone e UWP:
+Esempio di codice seguente viene illustrato il renderer personalizzato per la piattaforma UWP:
 
 ```csharp
 [assembly: ExportRenderer(typeof(MyEntry), typeof(MyEntryRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class MyEntryRenderer : EntryRenderer
     {

@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 9d822444196479dabd19f43f45f289117f64c05e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 964e2302c290930ec62752e51e7de388cb42ee32
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-a-listview"></a>Personalizzazione di un controllo ListView
 
 _Un controllo ListView di xamarin. Forms è una visualizzazione contenente una raccolta di dati come un elenco verticale. In questo articolo viene illustrato come creare un renderer personalizzato che incapsula i controlli elenco specifico della piattaforma e il layout di cella native, consentendo maggiore controllo sulle prestazioni del controllo elenco nativo._
 
-Tutte le viste di xamarin. Forms sono un renderer di accompagnamento per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) viene eseguito il rendering da un'applicazione di xamarin. Forms, in iOS il `ListViewRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza nativa `UITableView` controllo. Nella piattaforma Android, il `ListViewRenderer` un'istanza nativa `ListView` controllo. In Windows Phone e di Windows della piattaforma UWP (Universal), il `ListViewRenderer` un'istanza nativa `ListView` controllo. Per ulteriori informazioni sulle classi di controllo nativo che eseguono il mapping per i controlli di xamarin. Forms e renderer, vedere [Renderer classi di Base e i controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Tutte le viste di xamarin. Forms sono un renderer di accompagnamento per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) viene eseguito il rendering da un'applicazione di xamarin. Forms, in iOS il `ListViewRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza nativa `UITableView` controllo. Nella piattaforma Android, il `ListViewRenderer` un'istanza nativa `ListView` controllo. Nella piattaforma UWP (Universal Windows), il `ListViewRenderer` classe viene creata un'istanza nativa `ListView` controllo. Per ulteriori informazioni sulle classi di controllo nativo che eseguono il mapping per i controlli di xamarin. Forms e renderer, vedere [Renderer classi di Base e i controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Il diagramma seguente illustra la relazione tra il [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) controllo e i corrispondenti controlli nativi che l'implementano:
 
@@ -467,15 +467,15 @@ protected override void OnElementPropertyChanged (object sender, System.Componen
 
 Il metodo crea una nuova istanza di `NativeAndroidListViewAdapter` classe che fornisce dati per l'oggetto nativo `ListView` di controllo, a condizione che le proprietà associabili `NativeListView.Items` proprietà è stata modificata.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Creazione di Renderer personalizzato in Windows Phone e UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Creazione di Renderer personalizzato in UWP
 
-Esempio di codice seguente viene illustrato il renderer personalizzato per Windows Phone e UWP:
+Esempio di codice seguente viene illustrato il renderer personalizzato per la piattaforma UWP:
 
 ```csharp
-[assembly: ExportRenderer (typeof(NativeListView), typeof(NativeWinPhoneListViewRenderer))]
-namespace CustomRenderer.WinPhone81
+[assembly: ExportRenderer(typeof(NativeListView), typeof(NativeUWPListViewRenderer))]
+namespace CustomRenderer.UWP
 {
-    public class NativeWinPhoneListViewRenderer : ListViewRenderer
+    public class NativeUWPListViewRenderer : ListViewRenderer
     {
         ListView listView;
 

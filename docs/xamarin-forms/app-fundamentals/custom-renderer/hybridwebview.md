@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 4adff8a95f9981dbecc44bf177dcd98b7984a3a9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ffb013c355db34ef7456404d6f9dcaec75743420
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementazione di un HybridWebView
 
 _Xamarin. Forms controlli dell'interfaccia utente personalizzata devono derivare dalla classe di visualizzazione, viene utilizzata per posizionare i controlli nella schermata e layout. In questo articolo viene illustrato come creare un renderer personalizzato per un controllo personalizzato HybridWebView, cui viene illustrato come migliorare i controlli specifici della piattaforma web per consentire al codice c# di essere richiamato da JavaScript._
 
-Tutte le viste di xamarin. Forms sono un renderer di accompagnamento per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) viene eseguito il rendering da un'applicazione di xamarin. Forms in iOS, il `ViewRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza nativa `UIView` controllo. Nella piattaforma Android, il `ViewRenderer` crea un'istanza di classe un `View` controllo. In Windows Phone e di Windows della piattaforma UWP (Universal), il `ViewRenderer` un'istanza nativa `FrameworkElement` controllo. Per ulteriori informazioni sulle classi di controllo nativo che eseguono il mapping per i controlli di xamarin. Forms e renderer, vedere [Renderer classi di Base e i controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Tutte le viste di xamarin. Forms sono un renderer di accompagnamento per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) viene eseguito il rendering da un'applicazione di xamarin. Forms in iOS, il `ViewRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza nativa `UIView` controllo. Nella piattaforma Android, il `ViewRenderer` crea un'istanza di classe un `View` controllo. Nella piattaforma UWP (Universal Windows), il `ViewRenderer` classe viene creata un'istanza nativa `FrameworkElement` controllo. Per ulteriori informazioni sulle classi di controllo nativo che eseguono il mapping per i controlli di xamarin. Forms e renderer, vedere [Renderer classi di Base e i controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Il diagramma seguente illustra la relazione tra il [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) e i corrispondenti controlli nativi che l'implementano:
 
@@ -417,13 +417,13 @@ Si noti che il `JSBridge` classe mantiene una `WeakReference` per la `HybridWebV
 > [!IMPORTANT]
 > In Android Oreo assicurarsi che il manifesto Android imposta il **versione di destinazione Android** a **automatica**. In caso contrario, l'esecuzione del codice verrà generato l'errore messaggio "invokeCSharpAction non è definito".
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Creazione di Renderer personalizzato in Windows Phone e UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Creazione di Renderer personalizzato in UWP
 
-Esempio di codice seguente viene illustrato il renderer personalizzato per Windows Phone e UWP:
+Esempio di codice seguente viene illustrato il renderer personalizzato per la piattaforma UWP:
 
 ```csharp
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class HybridWebViewRenderer : ViewRenderer<HybridWebView, Windows.UI.Xaml.Controls.WebView>
     {

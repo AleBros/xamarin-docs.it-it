@@ -7,11 +7,11 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: e01d3e228a0684865fb09dd7a4cbb0e2f0b49125
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 95f782fd4670782217d8ce4bc055341747a71170
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>Pixel e unità indipendenti dal dispositivo
 
@@ -102,7 +102,7 @@ Di seguito è riportato il programma in esecuzione in tutti e tre le piattaforme
 
 Come si può notare, la `CanvasSize` proprietà del `SKCanvasView` e `Size` proprietà del `SKImageInfo` valore siano consistenti nei report le dimensioni in pixel. Il `Height` e `Width` le proprietà del `SKCanvasView` proprietà xamarin. Forms e segnalare le dimensioni della visualizzazione nell'unità indipendenti dal dispositivo definite dalla piattaforma.
 
-Il simulatore di iOS 7 a sinistra con 2 pixel per unità indipendenti dal dispositivo, Android 5 di Nexus al centro è di 3 pixel per ogni unità, e il 925 Lumia Nokia a destra con 2,25 pixel per unità. Che del motivo per cui il semplice circle precedente ha un aspetto illustrato sulla stessa dimensione su iPhone e Windows phone, ma è più piccolo sul telefono Android.
+Il simulatore di iOS 7 a sinistra ha 2 pixel per ogni unità indipendenti dal dispositivo e di Android 5 Nexus nel centro ha 3 pixel per ogni unità. Questo motivo il cerchio semplice illustrato in precedenza ha diverse dimensioni su piattaforme diverse.
 
 Se si preferisce utilizzare interamente in unità indipendenti dal dispositivo, è possibile farlo impostando la `IgnorePixelScaling` proprietà del `SKCanvasView` a `true`. Tuttavia, potrebbe non i risultati sono soddisfacenti. SkiaSharp esegue il rendering della grafica in un'area di dispositivi più piccola, con una dimensione in pixel, pari alla dimensione della visualizzazione in unità indipendenti dal dispositivo. (Ad esempio, SkiaSharp utilizzerà una superficie di visualizzazione di 360 x 512 pixel sul 5 Nexus.) Quindi si adatta quell'immagine dimensioni, risultante in contorni frastagliati bitmap evidenti.
 

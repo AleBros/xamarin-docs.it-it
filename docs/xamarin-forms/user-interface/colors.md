@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 8d6276a96d591363c88be4ff7edd8a9d039fb29d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71c10e1de8b94b8d9799d144fb603c82c40ca9eb
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="colors"></a>Colori
 
@@ -44,7 +44,7 @@ var @default = new Label    { Text = "Default",    BackgroundColor = Color.Defau
 var accent = new Label      { Text = "Accent",     BackgroundColor = Color.Accent };
 ```
 
-Questi colori vengono visualizzati in ogni piattaforma sottostante. Si noti il colore finale - `Accent` -un colore blue-ish per iOS e Android; questo valore è definito da xamarin. Forms. In Windows Phone il `Accent` viene visualizzato come rosso *perché questo è il colore selezionato dall'utente per il dispositivo*; questo valore cambia in base alle preferenze dell'utente.
+Questi colori vengono visualizzati in ogni piattaforma sottostante. Si noti il colore finale - `Accent` -un colore blue-ish per iOS e Android; questo valore è definito da xamarin. Forms.
 
  [![Demo di colore](colors-images/colors-sml.png "Demo colore")](colors-images/colors.png#lightbox "Demo di colore")
 
@@ -54,13 +54,11 @@ Utilizzare il `Default` per impostare un valore di colore predefinita della piat
 
 Gli sviluppatori possono utilizzare questo valore per impostare un `Color` proprietà ma deve **non** eseguire query su questa istanza per il componente valori RGB (che sta tutti impostati su -1).
 
-## <a name="colortransparent"></a>Color.Transparent
+## <a name="colortransparent"></a>Transparent
 
 Impostare il colore da cancellare.
 
 ## <a name="coloraccent"></a>Color.Accent
-
-In Windows Phone, questo è il colore complementare scelto dall'utente. Applicazioni Windows Phone valide usare questo come parte della loro applicazione di stili per fornire un aspetto nativo.
 
 In iOS e Android questa istanza è impostata su un colore diversi che è visibile sullo sfondo predefinito ma non è lo stesso come il colore del testo predefinito.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 773636cf879439477a6f71e44f13ae66b8f10ea8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6138bd1f9211248b3a260795c2ef9d3db87580be
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="creating-an-effect"></a>Creazione di un effetto
 
@@ -150,17 +150,17 @@ Il `OnAttached` chiamate al metodo di `SetBackgroundColor` per impostare il colo
 
 Il `OnElementPropertyChanged` override risponde alle modifiche di proprietà associabile nel controllo xamarin. Forms. Quando il [ `IsFocused` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsFocused/) modifiche delle proprietà, il colore di sfondo del controllo viene impostato su vuoto se il controllo ha lo stato attivo, in caso contrario viene modificata in verde chiaro. Questa funzionalità viene inserita in un `try` / `catch` blocco nel caso in cui il controllo è collegata l'effetto non dispone di un `BackgroundColor` proprietà.
 
-## <a name="windows-phone--universal-windows-platform-projects"></a>Windows Phone & progetti con piattaforma Windows universale
+## <a name="universal-windows-platform-projects"></a>Progetti della piattaforma Windows universale
 
-Nell'esempio di codice riportato di seguito viene illustrato il `FocusEffect` implementazione per i progetti Windows Phone e Windows piattaforma UWP (Universal):
+Nell'esempio di codice riportato di seguito viene illustrato il `FocusEffect` implementazione per i progetti della piattaforma UWP (Universal Windows):
 
 ```csharp
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.WinRT;
+using Xamarin.Forms.Platform.UWP;
 
 [assembly: ResolutionGroupName("MyCompany")]
 [assembly: ExportEffect(typeof(FocusEffect), "FocusEffect")]
-namespace EffectsDemo.WinPhone81
+namespace EffectsDemo.UWP
 {
     public class FocusEffect : PlatformEffect
     {

@@ -7,11 +7,11 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/29/2017
-ms.openlocfilehash: 9bdad3e7d3e16dfe906f96bce2b92cdb9ee6260a
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 76192f48bedebb183c64c83e34c3908cc85d591c
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="path-effects"></a>Effetti di percorso
 
@@ -420,7 +420,7 @@ Il *cosh* è la funzione coseno iperbolico. Per *x* uguale a 0, *cosh* è uguale
 
 Trovare il valore corretto di *un* per adattarla alle dimensioni di pagina del telefono catenaria non è un calcolo diretto. Se *w* e *h* sono la larghezza e altezza di un rettangolo, il valore ottimale di *un* soddisfa l'equazione seguente:
 
-cosh(w / 2 / a) = 1 + h / a
+cosh (w/2/a) = 1 + h / a
 
 Il metodo seguente nel [ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) classe incorpora tale uguaglianza facendo riferimento a due espressioni a sinistra e a destra del segno di uguale come `left` e `right`. Per valori bassi di *un*, `left` è maggiore di `right`; valori elevati di *un*, `left` è minore di `right`. Il `while` ciclo viene convertito un valore ottimale di *un*:
 
@@ -854,7 +854,7 @@ Nel `PaintSurface` gestore, la `SKPathEffect.Create2DPath` chiamate imposta la s
 
 Il ridimensionamento dalla schermata originale causa distorsioni, in particolare sullo schermo Android.
 
-Si noti che questi riquadri sempre visualizzato interi e non vengono mai troncati. Ad eccezione del fatto sullo schermo, Windows 10 Mobile non è ancora evidente che l'area riempita è un rettangolo arrotondato. Se si desidera troncare questi riquadri per una determinata area, usare un tracciato di ritaglio.
+Si noti che questi riquadri sempre visualizzato interi e non vengono mai troncati. Nelle prime due schermate, non è ancora evidente che l'area riempita è un rettangolo arrotondato. Se si desidera troncare questi riquadri per una determinata area, usare un tracciato di ritaglio.
 
 Provare a impostare il `Style` proprietà del `SKPaint` oggetto `Stroke`, si noterà che i singoli riquadri descritti anziché compilato.
 

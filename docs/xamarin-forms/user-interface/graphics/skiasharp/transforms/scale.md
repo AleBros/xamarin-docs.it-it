@@ -7,11 +7,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 09a81cd84f145512b9fbbf0db009335eac8a95a9
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: b4a36e15bd5db72ef113748282175c6d31a95966
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-scale-transform"></a>La trasformazione di scala
 
@@ -167,7 +167,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](scale-images/centeredscale-small.png "Schermata triplo della pagina centrata scala")](scale-images/centeredscale-large.png#lightbox "tripla schermata della pagina scala centrata")
 
-Il `Slider` elementi in questo programma sono un intervallo di &ndash;10 a 10. Come si può notare, i valori negativi (ad esempio in di Android schermata al centro) la scalabilità verticale provocare capovolgere intorno all'asse orizzontale che passa attraverso il centro della scala degli oggetti. I valori negativi di (ad esempio la schermata di Windows a destra) la scalabilità orizzontale che gli oggetti da capovolgere intorno all'asse verticale che passa attraverso il centro della scala.
+Il `Slider` elementi in questo programma sono un intervallo di &ndash;10 a 10. Come si può notare, i valori negativi (ad esempio in di Android schermata al centro) la scalabilità verticale provocare capovolgere intorno all'asse orizzontale che passa attraverso il centro della scala degli oggetti. I valori negativi di (ad esempio la schermata UWP sulla destra) la scalabilità orizzontale di provocare errori degli oggetti capovolgere intorno all'asse verticale che passano attraverso il centro della scala.
 
 Questa versione di quarto di `Scale` metodo è effettivamente un collegamento. Si potrebbe voler vedere il funzionamento sostituendo il `Scale` metodo in questo codice con quanto segue:
 

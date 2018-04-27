@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: d75c5714e53961ff5704c72b5508514f8cd2e898
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bcd277145de13a95a0b19aa4945b02078af52978
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Layout per le applicazioni Desktop e Tablet
 
@@ -18,7 +18,7 @@ Xamarin. Forms supporta tutti i tipi di dispositivo disponibili sulle piattaform
 
 * iPad,
 * Tablet Android,
-* Tablet Windows e computer desktop (che eseguono Windows 8.1 o Windows 10).
+* Tablet Windows e computer desktop (che eseguono Windows 10).
 
 Questa pagina vengono descritti brevemente:
 
@@ -31,7 +31,7 @@ Questa pagina vengono descritti brevemente:
 
 Dispositivi dello schermo più grandi sono disponibili per tutte le piattaforme supportate da xamarin. Forms.
 
-### <a name="ipads-ios"></a>iPads (iOS)
+### <a name="ipads-ios"></a>iPad (iOS)
 
 Il modello di xamarin. Forms include automaticamente il supporto iPad configurando il **Info. plist > dispositivi** impostando su **Universal** (ovvero iPhone e iPad sono supportati).
 
@@ -53,12 +53,7 @@ Esaminare il [risorse Android](~/android/app-fundamentals/resources-in-android/i
 
 ### <a name="windows-tablets-and-desktops"></a>Desktop e i Tablet Windows
 
-Per supportare i Tablet e computer desktop che eseguono Windows, è necessario utilizzare uno dei due tipi di progetto supportati:
-
-* [Windows 8.1](~/xamarin-forms/platform/windows/installation/tablet.md) -
-  compila le App in modo specifico per i Tablet Windows 8.1 e desktop.
-* [Supporto della piattaforma UWP Windows](~/xamarin-forms/platform/windows/installation/universal.md) -
-  compila universal App eseguite in Windows 10 telefoni, Tablet e desktop.
+Per supportare Tablet e computer desktop che eseguono Windows, è necessario utilizzare [supporto della piattaforma UWP Windows](~/xamarin-forms/platform/windows/installation/index.md), quali compilazioni universal App eseguite in Windows 10.
 
 App in esecuzione su computer desktop e i Tablet Windows può essere ridimensionata alle dimensioni arbitrari inoltre a schermo intero in esecuzione.
 

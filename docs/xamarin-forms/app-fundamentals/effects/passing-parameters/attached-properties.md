@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: c02929c49d9757f0814208d5f4fce7d258a689bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bca36189100942e21d1d750dd156dab0cf45fc4
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passaggio di parametri effetto come proprietà associate
 
@@ -345,14 +345,14 @@ public class LabelShadowEffect : PlatformEffect
 
 Il `OnElementPropertyChanged` metodo aggiorna il raggio, al colore o offset dell'ombreggiatura, a condizione che appropriata `ShadowEffect` valore della proprietà associata è stata modificata. Un controllo per la proprietà che è stato modificato deve essere sempre effettuato, come la sostituzione può essere chiamata più volte.
 
-### <a name="windows-phone--universal-windows-platform-projects"></a>Windows Phone & progetti con piattaforma Windows universale
+### <a name="universal-windows-platform-project"></a>Progetto della piattaforma Windows universale
 
-Nell'esempio di codice riportato di seguito viene illustrato il `LabelShadowEffect` implementazione per i progetti Windows Phone e Windows piattaforma UWP (Universal):
+Nell'esempio di codice riportato di seguito viene illustrato il `LabelShadowEffect` implementazione per il progetto della piattaforma UWP (Universal Windows):
 
 ```csharp
 [assembly: ResolutionGroupName ("MyCompany")]
 [assembly: ExportEffect (typeof(LabelShadowEffect), "LabelShadowEffect")]
-namespace EffectsDemo.WinPhone81
+namespace EffectsDemo.UWP
 {
     public class LabelShadowEffect : PlatformEffect
     {
@@ -401,7 +401,7 @@ namespace EffectsDemo.WinPhone81
 }
 ```
 
-Windows Runtime e piattaforma UWP non forniscono un effetto di ombreggiatura e pertanto la `LabelShadowEffect` implementazione in entrambe le piattaforme simula uno aggiungendo un offset secondo [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) rispetto a quello primario `Label`. Il `OnAttached` crea il nuovo metodo `Label` e imposta alcune proprietà del layout sul `Label`. Chiama quindi i metodi che recuperano i valori della proprietà associata utilizzando la `ShadowEffect` get e crea l'ombreggiatura impostando il [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/), [ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/)e [ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) proprietà per controllare il colore e il percorso del `Label`. Il `shadowLabel` viene quindi inserito offset dietro primario `Label`. Questa funzionalità viene inserita in un `try` / `catch` blocco nel caso in cui il controllo a cui è collegata l'effetto non dispone di `Control.Layer` proprietà. Viene fornita alcuna implementazione per il `OnDetached` metodo perché non è necessaria alcuna operazione di rimozione.
+La piattaforma UWP non fornisce un'ombreggiatura e pertanto la `LabelShadowEffect` implementazione in entrambe le piattaforme simula uno aggiungendo un offset secondo [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) dietro primario `Label`. Il `OnAttached` crea il nuovo metodo `Label` e imposta alcune proprietà del layout sul `Label`. Chiama quindi i metodi che recuperano i valori della proprietà associata utilizzando la `ShadowEffect` get e crea l'ombreggiatura impostando il [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/), [ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/)e [ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) proprietà per controllare il colore e il percorso del `Label`. Il `shadowLabel` viene quindi inserito offset dietro primario `Label`. Questa funzionalità viene inserita in un `try` / `catch` blocco nel caso in cui il controllo a cui è collegata l'effetto non dispone di `Control.Layer` proprietà. Viene fornita alcuna implementazione per il `OnDetached` metodo perché non è necessaria alcuna operazione di rimozione.
 
 #### <a name="responding-to-property-changes"></a>Risposta alle modifiche di proprietà
 

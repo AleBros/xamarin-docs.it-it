@@ -7,11 +7,11 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: 39547ebaf301a9b6dca6a90cb5ede831b19862cf
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: c8913dcb5dbe9664f1186b1acf46f09cb8da74ed
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-skew-transform"></a>La trasformazione di inclinazione
 
@@ -71,7 +71,7 @@ I valori del `xSkew` argomento shift a fondo il testo a destra per i valori posi
 
 [![](skew-images/skewexperiment-small.png "Schermata triplo della pagina di sfasamento dell'esperimento")](skew-images/skewexperiment-large.png#lightbox "tripla schermata della pagina di sfasamento dell'esperimento")
 
-Se `xSkew` è il corrispondente negativo del `ySkew`, il risultato è la rotazione, ma anche scalata più o meno come le finestre di visualizzazione indica.
+Se `xSkew` è il corrispondente negativo del `ySkew`, il risultato è la rotazione, ma anche scalato in qualche modo come indica la visualizzazione di piattaforma UWP.
 
 Di seguito sono elencate le formule di trasformazione:
 

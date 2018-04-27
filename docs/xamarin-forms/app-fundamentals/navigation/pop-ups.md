@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 2e0a5ff433de034da0170e3aa9a19ab50ddc3cb6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 97f0917e4e8670ab379aae1b2707ae08cb29bb70
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="displaying-pop-ups"></a>Visualizzazione popup
 
@@ -45,7 +45,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 ## <a name="guiding-users-through-tasks"></a>Guida agli utenti tramite le attività
 
-Il [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) è un elemento dell'interfaccia utente comune in iOS. Di xamarin. Forms [ `DisplayActionSheet` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) metodo consente di includere il controllo in applicazioni di piattaforme, il rendering alternative native in Android e Windows Phone.
+Il [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) è un elemento dell'interfaccia utente comune in iOS. Il xamarin. Forms [ `DisplayActionSheet` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) metodo consente di includere il controllo nelle app di piattaforme, il rendering alternative native in Android e UWP.
 
 Per visualizzare un foglio di azione, `await` [ `DisplayActionSheet` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) in qualsiasi [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/), passando il messaggio e pulsante etichette come stringhe. Il metodo restituisce l'etichetta della stringa del pulsante su cui è stato scelto dall'utente. Di seguito è riportato un esempio semplice:
 

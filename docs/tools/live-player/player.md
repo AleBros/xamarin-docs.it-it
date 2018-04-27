@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 2ddaba4541af52ae119fbf504fdcc66ba357c113
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e3205d83ba207322d4c53c4c6e98d4890ad48a77
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xamarin-live-player-app"></a>App di Windows Media Player in tempo reale di Xamarin
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 04/04/2018
 
 Xamarin Player in tempo reale è disponibile per Android da Google Play:
 
-[ ![Disponibile su Google Play](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
+[![Disponibile su Google Play](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
 Per i dispositivi Android senza Google Play Live Xamarin Player è disponibile tramite [HockeyApp](https://aka.ms/xlp-hockeyapp) distribuzione. Inoltre, l'anteprima compilazioni per Android possono essere installati direttamente da Google Play dalla scelta di utilizzare il [programma beta aperto](https://play.google.com/apps/testing/com.xamarin.live)
 
@@ -53,7 +53,7 @@ Se la connessione ha esito positivo, il codice deve essere eseguito sul disposit
 
 Premere il pulsante informazioni **(i)** nella parte inferiore dell'app per rivelare il **opzioni** menu:
 
-[ ![Schermata di opzioni del menu di scelta](player-images/options-sml.png)](player-images/options.png#lightbox)
+[![Schermata di opzioni del menu di scelta](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>Log
 
@@ -61,11 +61,11 @@ Visualizzare i log per diagnosticare i problemi.
 
 ### <a name="settings"></a>Impostazioni
 
-* Attiva/disattiva la visualizzazione degli errori di compilazione e runtime.
-* Informazioni sulla versione.
-* Inviare commenti e suggerimenti.
+- Attiva/disattiva la visualizzazione degli errori di compilazione e runtime.
+- Informazioni sulla versione.
+- Inviare commenti e suggerimenti.
 
-[ ![Schermata delle impostazioni](player-images/settings-sml.png)](player-images/settings.png#lightbox)
+[![Schermata delle impostazioni](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>La gestione dei dispositivi
 
@@ -107,9 +107,8 @@ Questa finestra consente di eseguire le operazioni seguenti:
 
 Se si verifica eventuali problemi di vedere [limitazioni e risoluzione dei problemi](~/tools/live-player/troubleshooting.md).
 
-
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Limitazioni](~/tools/live-player/limitations.md)
 - [Risoluzione dei problemi](~/tools/live-player/troubleshooting.md)
-- [Esempi di Xamarin Player in tempo reale](~/tools/livehttps://developer.xamarin.com/samples.md)
+- [Esempi di Xamarin Player in tempo reale](samples.md)

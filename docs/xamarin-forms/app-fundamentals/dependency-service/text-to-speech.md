@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2017
-ms.openlocfilehash: 67e392bb3672e54a1e2fe709af9cf5deb3dae5e8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c9cf700ea798ac316e806c40cb90eedc7ded9fa5
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-text-to-speech"></a>Implementazione di sintesi vocale
 
@@ -20,7 +20,7 @@ In questo articolo guiderà l'utente durante la creazione di un'app multipiattaf
 - **[La creazione dell'interfaccia](#Creating_the_Interface)**  &ndash; comprendere la modalità di creazione dell'interfaccia nel codice condiviso.
 - **[iOS implementazione](#iOS_Implementation)**  &ndash; informazioni su come implementare l'interfaccia nel codice nativo per iOS.
 - **[Implementazione Android](#Android_Implementation)**  &ndash; informazioni su come implementare l'interfaccia nel codice nativo per Android.
-- **[Implementazione di Windows](#WindowsImplementation)**  &ndash; informazioni su come implementare l'interfaccia nel codice nativo per Windows Phone e la piattaforma UWP (Universal Windows).
+- **[Implementazione UWP](#WindowsImplementation)**  &ndash; imparare a implementare l'interfaccia nel codice nativo per la piattaforma UWP (Universal Windows).
 - **[Implementazione di codice condiviso](#Implementing_in_Shared_Code)**  &ndash; imparare a usare `DependencyService` chiamino l'implementazione native da codice condiviso.
 
 L'applicazione utilizzando `DependencyService` avrà la struttura seguente:
@@ -122,9 +122,9 @@ Il `[assembly]` attributo consente di registrare la classe come un'implementazio
 
 <a name="WindowsImplementation" />
 
-## <a name="windows-phone-and-universal-windows-platform-implementation"></a>Windows Phone e l'implementazione della piattaforma Windows universale
+## <a name="universal-windows-platform-implementation"></a>Implementazione della piattaforma Windows universale
 
-Windows Phone e la piattaforma Windows universale hanno una API di sintesi vocale nel `Windows.Media.SpeechSynthesis` dello spazio dei nomi. L'unico problema è da ricordare tick il **microfono** funzionalità nel manifesto, in caso contrario l'accesso a del contenuto vocale API sono bloccate.
+La piattaforma Windows universale è un'API di sintesi vocale nel `Windows.Media.SpeechSynthesis` dello spazio dei nomi. L'unico problema è da ricordare tick il **microfono** funzionalità nel manifesto, in caso contrario l'accesso a del contenuto vocale API sono bloccate.
 
 ```csharp
 [assembly:Dependency(typeof(TextToSpeechImplementation))]
@@ -165,7 +165,7 @@ public MainPage ()
 }
 ```
 
-Esecuzione dell'applicazione in iOS, Android, o le piattaforme Windows e premendo che il pulsante comporterà l'applicazione utilizzando il SDK di riconoscimento vocale nativo in ogni piattaforma vocale.
+Questa applicazione in esecuzione iOS, Android o alla piattaforma UWP e premendo il pulsante comporterà l'applicazione di pronuncia all'utente, tramite il riconoscimento vocale native SDK in ciascuna piattaforma.
 
  ![iOS e Android pulsante sintesi vocale](text-to-speech-images/running.png "esempio sintesi vocale")
 

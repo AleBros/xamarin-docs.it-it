@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 24d9dd332275fd811c0ff60fc514ae0f84c6ee07
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 864e81b6955fd5138c4055a3f202695803139ac6
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layouts"></a>Layout
 
@@ -180,7 +180,7 @@ Xamarin. Forms e il layout predefinito sono in grado di gestire le modifiche in 
 
 ### <a name="layout-for-tablet-and-desktop-appstabletmd"></a>[Layout per le applicazioni Desktop e Tablet](tablet.md)
 
-iOS, Android e Windows piattaforme supportano dimensioni dello schermo più grande sul tablet dispositivi (nonché portatili e desktop per Windows). Xamarin. Forms consente di ottimizzare l'app per schermi di dimensioni maggiori rilevare il tipo di dispositivo e una modifica del layout di pagina o utilizzando una pagina diversa completamente completamente per schermi di dimensioni maggiori.
+iOS, Android e Universal Windows Platform tutte supportano dimensioni dello schermo più grande sul tablet dispositivi (nonché portatili e desktop per Windows). Xamarin. Forms consente di ottimizzare l'app per schermi di dimensioni maggiori rilevare il tipo di dispositivo e una modifica del layout di pagina o utilizzando una pagina diversa completamente completamente per schermi di dimensioni maggiori.
 
 ### <a name="creating-a-custom-layoutcustommd"></a>[Creazione di un layout personalizzato](custom.md)
 

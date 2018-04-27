@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 46ab21aa5156a6deab5952f165917cc299b500ac
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 1e295ac424c311472ff175d4627c5fb12641d31f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dots-and-dashes"></a>Punti e trattini
 
@@ -164,7 +164,7 @@ Per aggirare questo problema quando si usa un limite di traccia di `Square` o `R
 - {30, 10} diventa {20, 20} per una linea tratteggiata
 - {10, 10, 30, 10} è {0, 20, 20, 20} per una riga con tratteggiata o
 
-Chiudere il Mostra schermata di Windows che da punti e tratteggiata per un tratto di `Round`. Il `Round` nelle righe thick estremità della traccia offre spesso migliorare l'aspetto dei punti e trattini.
+Chiudere il Mostra schermata UWP puntata e tratteggiata per un tratto di `Round`. Il `Round` nelle righe thick estremità della traccia offre spesso migliorare l'aspetto dei punti e trattini.
 
 Finora non è diventati alcuna indicazione del secondo parametro per il `SKPathEffect.CreateDash` metodo. Questo parametro è denominato `phase` e si riferisce a un offset all'interno del criterio trattino e punto per l'inizio della riga. Ad esempio, se la matrice dash è {10, 10} e `phase` è 10, quindi la riga inizia con uno spazio vuoto anziché un punto.
 

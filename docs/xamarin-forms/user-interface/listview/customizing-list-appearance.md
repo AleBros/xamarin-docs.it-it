@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 76a5c96d0e7bb85f0e6b313e2dbc058b8c2aae6d
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: f1f0bb0ce282479a7b185257880244863bb67a60
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="list-appearance"></a>Elenco aspetto
 
@@ -35,7 +35,7 @@ Per abilitare il raggruppamento:
 - Impostare il `ListView`del `ItemsSource` a tale elenco.
 - Impostare `IsGroupingEnabled` su true.
 - Impostare [ `GroupDisplayBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupDisplayBinding/) da associare alla proprietà dei gruppi che viene utilizzata come il titolo del gruppo.
-- [Facoltativo] Impostare [ `GroupShortNameBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/) da associare alla proprietà dei gruppi che viene utilizzata come il nome breve per il gruppo. Il nome breve viene utilizzato per gli elenchi di salto (colonna lato rigt in iOS, Windows Phone riquadro griglia).
+- [Facoltativo] Impostare [ `GroupShortNameBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/) da associare alla proprietà dei gruppi che viene utilizzata come il nome breve per il gruppo. Il nome breve viene utilizzato per gli elenchi di salto (colonna a destra in iOS).
 
 Iniziare creando una classe per i gruppi:
 
@@ -120,7 +120,7 @@ Si noti che è necessario:
 
 Raggruppamento è stato abilitato nell'elenco, può essere personalizzato anche l'intestazione di gruppo.
 
-Simile alla modalità `ListView` ha un `ItemTemplate` per definire la modalità di visualizzazione delle righe, `ListView` ha un `GroupHeaderTemplate`. 
+Simile alla modalità `ListView` ha un `ItemTemplate` per definire la modalità di visualizzazione delle righe, `ListView` ha un `GroupHeaderTemplate`.
 
 In seguito è riportato un esempio di personalizzazione di intestazione del gruppo in XAML:
 
@@ -206,7 +206,7 @@ Per creare un'intestazione personalizzata e un piè di pagina, definire le visua
 <a name="Row_Separators" />
 
 ## <a name="row-separators"></a>Separatori di riga
-Viene visualizzata una linea di separazione tra `ListView` elementi per impostazione predefinita in iOS e Android. Windows Phone non supporta le righe di separatore, per tale piattaforme linee guida UX. Se si preferisce nascondere le righe di separazione in iOS e Android, impostare il `SeparatorVisibility` proprietà in ListView. Le opzioni per `SeparatorVisibility` sono:
+Viene visualizzata una linea di separazione tra `ListView` elementi per impostazione predefinita in iOS e Android. Se si preferisce nascondere le righe di separazione in iOS e Android, impostare il `SeparatorVisibility` proprietà in ListView. Le opzioni per `SeparatorVisibility` sono:
 
 * **Predefinito** -Mostra una linea di separazione in iOS e Android.
 * **Nessuna** -nasconde il separatore in tutte le piattaforme.

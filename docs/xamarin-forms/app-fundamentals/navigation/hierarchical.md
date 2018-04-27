@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: afaf0c702cdba1ba9c5d2c9d158501c50501f910
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3fc5b24474230fd2b2477f020ac24cd72996d7b1
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="hierarchical-navigation"></a>Navigazione gerarchica
 
@@ -47,7 +47,7 @@ Il layout di un [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xama
 
 - In iOS, una barra di spostamento è presente nella parte superiore della pagina che viene visualizzato un titolo, e che ha un *nuovamente* pulsante Torna alla pagina precedente.
 - In Android, è presente nella parte superiore della pagina che consente di visualizzare un titolo, un'icona, una barra di spostamento e un *nuovamente* pulsante Torna alla pagina precedente. L'icona è definito nel `[Activity]` attributo che decora il `MainActivity` classe nel progetto specifico della piattaforma Android.
-- In Windows Phone, una barra di spostamento è presente nella parte superiore della pagina che consente di visualizzare un titolo. Non dispone di Windows Phone il *nuovamente* pulsante sulla barra di spostamento, in quanto sullo schermo *nuovamente* pulsante è presente nella parte inferiore della schermata.
+- Nella piattaforma Windows universale, una barra di spostamento è presente nella parte superiore della pagina che consente di visualizzare un titolo. 
 
 In tutte le piattaforme, il valore di [ `Page.Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/) verrà visualizzata come titolo della pagina proprietà.
 

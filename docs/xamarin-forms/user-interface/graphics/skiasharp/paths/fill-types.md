@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 6288a773fb7122c16b405b8a5056b23b7a59fb6d
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: d22ebf0e150c064835fa73765a65025f10ef4c2a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-path-fill-types"></a>I tipi di riempimento del percorso
 
@@ -165,7 +165,7 @@ Il tipo di riempimento del percorso deve riguardano in genere, solo operazioni d
 
 [![](fill-types-images/fivepointedstar-small.png "Schermata triplo della pagina a stella Five-Pointed")](fill-types-images/fivepointedstar-large.png#lightbox "tripla schermata della pagina Five-Pointed stella")
 
-Le schermate di dispositivi mobili Android e Windows visualizza gli effetti di coppie e culling tipico, ma l'ordine del tratto e riempimento influisce inoltre sui risultati.
+Le schermate di Android e UWP mostrano gli effetti di coppie e culling tipico, ma l'ordine del tratto e riempimento influisce inoltre sui risultati.
 
 L'algoritmo è dipendente dalla direzione che vengono visualizzate linee. In genere quando si crea un percorso, è possibile controllare la direzione come specificare che le linee vengono disegnate da un punto a altro. Tuttavia, il `SKPath` classe definisce inoltre metodi, ad esempio `AddRect` e `AddCircle` che disegna l'intera distribuzione. Per controllare la modalità in cui vengono disegnati questi oggetti, i metodi includono un parametro di tipo [ `SKPathDirection` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/), che contiene due membri:
 

@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: e84427ba576528ed76f5885605c423bf6499d20c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a8ab35b3ec13c76e1e00da6e3265e3e337e37b7e
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-a-view"></a>Implementazione di una vista
 
 _Xamarin. Forms controlli dell'interfaccia utente personalizzata devono derivare dalla classe di visualizzazione, viene utilizzata per posizionare i controlli nella schermata e layout. In questo articolo viene illustrato come creare un renderer personalizzato per un controllo personalizzato di xamarin. Forms che consente di visualizzare un flusso video di anteprima da fotocamera del dispositivo._
 
-Tutte le viste di xamarin. Forms sono un renderer di accompagnamento per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) viene eseguito il rendering da un'applicazione di xamarin. Forms in iOS, il `ViewRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza nativa `UIView` controllo. Nella piattaforma Android, il `ViewRenderer` un'istanza nativa `View` controllo. In Windows Phone e di Windows della piattaforma UWP (Universal), il `ViewRenderer` un'istanza nativa `FrameworkElement` controllo. Per ulteriori informazioni sulle classi di controllo nativo che eseguono il mapping per i controlli di xamarin. Forms e renderer, vedere [Renderer classi di Base e i controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Tutte le viste di xamarin. Forms sono un renderer di accompagnamento per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) viene eseguito il rendering da un'applicazione di xamarin. Forms in iOS, il `ViewRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza nativa `UIView` controllo. Nella piattaforma Android, il `ViewRenderer` un'istanza nativa `View` controllo. Nella piattaforma UWP (Universal Windows), il `ViewRenderer` classe viene creata un'istanza nativa `FrameworkElement` controllo. Per ulteriori informazioni sulle classi di controllo nativo che eseguono il mapping per i controlli di xamarin. Forms e renderer, vedere [Renderer classi di Base e i controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Il diagramma seguente illustra la relazione tra il [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) e i corrispondenti controlli nativi che l'implementano:
 
@@ -263,13 +263,13 @@ namespace CustomRenderer.Droid
 
 Purché il `Control` proprietà è `null`, `SetNativeControl` metodo viene chiamato per creare un'istanza di un nuovo `CameraPreview` controllare e assegnare un riferimento a questo argomento per il `Control` proprietà. Il `CameraPreview` controllo è un controllo personalizzato specifico della piattaforma che utilizza il `Camera` API per fornire il flusso di anteprima tra la camera. Il `CameraPreview` controllo viene quindi configurato, condizione che il renderer personalizzato è collegato a un nuovo elemento di xamarin. Forms. Questa configurazione prevede la creazione di un nuovo nativo `Camera` dell'oggetto per accedere a una fotocamera hardware specifico e la registrazione di un gestore eventi per l'elaborazione di `Click` evento. A sua volta questo gestore verrà avviati e arrestati anteprima video quando verrà scelti. Il `Click` evento è annullato la sottoscrizione a, se l'elemento di xamarin. Forms, il renderer è associato alle modifiche.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Creazione di Renderer personalizzato in Windows Phone e UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Creazione di Renderer personalizzato in UWP
 
-Esempio di codice seguente viene illustrato il renderer personalizzato per Windows Phone e UWP:
+Esempio di codice seguente viene illustrato il renderer personalizzato per la piattaforma UWP:
 
 ```csharp
 [assembly: ExportRenderer (typeof(CameraPreview), typeof(CameraPreviewRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class CameraPreviewRenderer : ViewRenderer<CameraPreview, Windows.UI.Xaml.Controls.CaptureElement>
     {
@@ -317,7 +317,7 @@ namespace CustomRenderer.WinPhone81
 Purché il `Control` proprietà è `null`, un nuovo `CaptureElement` viene creata un'istanza e `InitializeAsync` metodo viene chiamato, che utilizza il `MediaCapture` API per fornire il flusso di anteprima tra la camera. Il `SetNativeControl` viene quindi chiamato il metodo per assegnare un riferimento al `CaptureElement` istanza per il `Control` proprietà. Il `CaptureElement` controllo espone un `Tapped` evento che viene gestita dal `OnCameraPreviewTapped` metodo per interrompere e avviare l'anteprima video quando verrà scelti. Il `Tapped` evento sottoscritto quando renderer personalizzato è collegato a un nuovo elemento di xamarin. Forms e ha annullato la sottoscrizione da solo quando l'elemento del renderer è associato alle modifiche.
 
 > [!NOTE]
-> È importante arrestare ed eliminare oggetti che forniscono l'accesso alla fotocamera in un Windows Phone o un'applicazione UWP. In caso contrario, può interferire con altre applicazioni che tentano di accedere la fotocamera del dispositivo. Per ulteriori informazioni, vedere e [Guida introduttiva: acquisizione video tramite l'API MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) per le applicazioni di Windows Runtime, e [visualizzare l'anteprima della fotocamera](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) per le applicazioni UWP.
+> È importante arrestare ed eliminare oggetti che forniscono l'accesso alla camera in un'applicazione UWP. In caso contrario, può interferire con altre applicazioni che tentano di accedere la fotocamera del dispositivo. Per ulteriori informazioni, vedere [visualizzare l'anteprima della fotocamera](/windows/uwp/audio-video-camera/simple-camera-preview-access/).
 
 ## <a name="summary"></a>Riepilogo
 

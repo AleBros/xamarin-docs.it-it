@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: f17a6ad012aff81674db943b7d65e65ba77dca52
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 627c6773c099c9cf45f871a9bb73a201bf98271a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>L'autenticazione degli utenti con Azure Active Directory B2C
 
@@ -60,7 +60,7 @@ La libreria di NuGet della libreria di autenticazione di Microsoft (MSAL) deve e
 
 ### <a name="portable-class-library"></a>Libreria di classi portabile
 
-MSAL non supporta Windows Phone 8.1 e pertanto PCLs che utilizzano MSAL sarà necessario rimuovere questa destinazione. Questo può essere eseguito da PCLs per l'utilizzo di Profile7 di reindirizzamento. Per altre informazioni sulle librerie di classi portabili, vedere l'[introduzione alle librerie di classi portabili](~/cross-platform/app-fundamentals/pcl.md).
+PCLs che utilizzano MSAL dovranno essere reindirizzati per l'utilizzo di Profile7. Per altre informazioni sulle librerie di classi portabili, vedere l'[introduzione alle librerie di classi portabili](~/cross-platform/app-fundamentals/pcl.md).
 
 ### <a name="ios"></a>iOS
 
@@ -237,6 +237,6 @@ In questo articolo viene illustrato come utilizzare Microsoft Authentication Lib
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [AzureADB2CAuth (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureADB2CAuth/)
+- [AzureADB2CAuth (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureADB2CAuth/)
 - [Azure Active Directory B2C](/azure/active-directory-b2c/)
 - [Libreria di autenticazione Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client)

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: fce595d7722dcd053f6fc9dcad84dc9a921e55b3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6aea0faa65944f33783940178a1d2ce3ef65df1a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>È possibile aggiornare il modello predefinito di xamarin. Forms per un pacchetto NuGet più recente?
 
@@ -26,7 +26,6 @@ Questa Guida Usa il modello libreria di classi Portabile xamarin. Forms ad esemp
 3.  Modificare tutte le occorrenze della versione precedente del pacchetto di form per la nuova versione che si desidera utilizzare.
     *   `FormsTemplate\FormsTemplate.vstemplate`
     *   `FormsTemplate.Android\FormsTemplate.Android.vstemplate`
-    *   `FormsTemplate.WinPhone\FormsTemplate.WinPhone.vstemplate`
     *   `FormsTemplate.iOS\FormsTemplate.iOS.vstemplate`
 
     Esempio: `<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 909a04398043a3c2f0c30e4da82d174a6bfaf148
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 00d52aa69372ab5ec3073e2355a43521b515ca8b
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="modal-pages"></a>Pagine modale
 
@@ -100,7 +100,7 @@ Tuttavia, l'ordine esatto che questi eventi si verificano è dipendente dalla pi
 
 ### <a name="disabling-the-back-button"></a>Disabilitare il pulsante Indietro
 
-In Android e Windows Phone, l'utente sempre possibile tornare alla pagina precedente premendo standard *nuovamente* pulsante sul dispositivo. Se la pagina modale richiede all'utente di completare un'attività indipendente prima di uscire dalla pagina, è necessario disabilitare l'applicazione di *nuovamente* pulsante. Questo può essere effettuato eseguendo l'override di [ `Page.OnBackButtonPressed` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnBackButtonPressed/) metodo nella pagina modale. Per ulteriori informazioni vedere [capitolo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) di libro di Petzolds xamarin. Forms.
+In Android, l'utente sempre possibile tornare alla pagina precedente premendo standard *Indietro* pulsante sul dispositivo. Se la pagina modale richiede all'utente di completare un'attività indipendente prima di uscire dalla pagina, è necessario disabilitare l'applicazione di *nuovamente* pulsante. Questo può essere effettuato eseguendo l'override di [ `Page.OnBackButtonPressed` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnBackButtonPressed/) metodo nella pagina modale. Per ulteriori informazioni vedere [capitolo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) di libro di Petzolds xamarin. Forms.
 
 ### <a name="animating-page-transitions"></a>Animazione di transizioni di pagina
 

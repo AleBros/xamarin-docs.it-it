@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 3e5f4f2d4c4025cce21026cc611af650616e69e2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4d1d4323e42df6240fee7be42ae8fac70a2b3f1f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-a-viewcell"></a>Personalizzazione di un ViewCell
 
 _Un ViewCell xamarin. Forms è una cella che può essere aggiunti a un controllo ListView o TableView, che contiene una visualizzazione definita dallo sviluppatore. In questo articolo viene illustrato come creare un renderer personalizzato per un ViewCell che è ospitato all'interno di un controllo ListView di xamarin. Forms. In tal modo i calcoli di layout di xamarin. Forms il chiamato più volte durante lo scorrimento di ListView._
 
-Ogni cella di xamarin. Forms è un renderer di accompagnamento per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) viene eseguito il rendering da un'applicazione di xamarin. Forms, in iOS il `ViewCellRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza nativa `UITableViewCell` controllo. Nella piattaforma Android, il `ViewCellRenderer` un'istanza nativa `View` controllo. In Windows Phone e di Windows della piattaforma UWP (Universal), il `ViewCellRenderer` un'istanza nativa `DataTemplate`. Per ulteriori informazioni sulle classi di controllo nativo che eseguono il mapping per i controlli di xamarin. Forms e renderer, vedere [Renderer classi di Base e i controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Ogni cella di xamarin. Forms è un renderer di accompagnamento per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) viene eseguito il rendering da un'applicazione di xamarin. Forms, in iOS il `ViewCellRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza nativa `UITableViewCell` controllo. Nella piattaforma Android, il `ViewCellRenderer` un'istanza nativa `View` controllo. Nel Windows piattaforma UWP (Universal), il `ViewCellRenderer` un'istanza nativa `DataTemplate`. Per ulteriori informazioni sulle classi di controllo nativo che eseguono il mapping per i controlli di xamarin. Forms e renderer, vedere [Renderer classi di Base e i controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Il diagramma seguente illustra la relazione tra il [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) e i corrispondenti controlli nativi che l'implementano:
 
@@ -169,7 +169,7 @@ Il `NativeCell` viene eseguito il rendering di cella personalizzati dalle classi
 
 ![](viewcell-images/screenshots.png "NativeCell in ciascuna piattaforma")
 
-La `ViewCellRenderer` classe espone i metodi specifici della piattaforma per il rendering di cella personalizzato. Questo è il `GetCell` metodo nella piattaforma iOS, il `GetCellCore` metodo nella piattaforma Android e il `GetTemplate` metodo sulla piattaforma Windows Phone.
+La `ViewCellRenderer` classe espone i metodi specifici della piattaforma per il rendering di cella personalizzato. Si tratta il `GetCell` metodo nella piattaforma iOS, il `GetCellCore` metodo nella piattaforma Android e il `GetTemplate` metodo in UWP.
 
 Ogni classe renderer personalizzato è decorato con un `ExportRenderer` attributo che registra il renderer con xamarin. Forms. L'attributo accetta due parametri: il nome del tipo di cella xamarin. Forms viene eseguito il rendering e il nome del tipo di renderer personalizzato. Il `assembly` prefisso per l'attributo specifica che l'attributo si applica all'intero assembly.
 
@@ -519,15 +519,15 @@ Esempio di codice seguente illustra la definizione di layout per il `NativeAndro
 
 Questo layout specifica che due `TextView` controlli e un `ImageView` controllo consentono di visualizzare il contenuto della cella. I due `TextView` i controlli sono orientati in verticale all'interno di un `LinearLayout` controllo con tutti i controlli sia indipendente all'interno di un `RelativeLayout`.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Creazione di Renderer personalizzato in Windows Phone e UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Creazione di Renderer personalizzato in UWP
 
-Esempio di codice seguente viene illustrato il renderer personalizzato per Windows Phone e UWP:
+Esempio di codice seguente viene illustrato il renderer personalizzato per la piattaforma UWP:
 
 ```csharp
-[assembly: ExportRenderer(typeof(NativeCell), typeof(NativeWinPhoneCellRenderer))]
-namespace CustomRenderer.WinPhone81
+[assembly: ExportRenderer(typeof(NativeCell), typeof(NativeUWPCellRenderer))]
+namespace CustomRenderer.UWP
 {
-    public class NativeWinPhoneCellRenderer : ViewCellRenderer
+    public class NativeUWPCellRenderer : ViewCellRenderer
     {
         public override Windows.UI.Xaml.DataTemplate GetTemplate(Cell cell)
         {
