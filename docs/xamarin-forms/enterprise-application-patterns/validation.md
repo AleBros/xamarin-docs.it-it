@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 7b1eb1289688b6152e4e854ca0f51d66932c91a1
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 80c78d359761c4383f9abf9338a995e3cc486968
+ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="validation"></a>Convalida
 
@@ -189,7 +189,7 @@ Questo metodo cancella il `Errors` insieme, quindi recupera alcuna convalida del
 
 ### <a name="triggering-validation-when-properties-change"></a>Attivare la convalida quando vengono modificate
 
-La convalida viene attivata automaticamente anche ogni volta che viene modificata una proprietà associata. Ad esempio, quando un'associazione bidirezionale nel `LoginView` imposta il `UserName` o `Password` proprietà, la convalida viene attivata. Esempio di codice seguente viene illustrato come questo errore si verifica:
+La convalida può anche essere attivata ogni volta che viene modificata una proprietà associata. Ad esempio, quando un'associazione bidirezionale nel `LoginView` imposta il `UserName` o `Password` proprietà, la convalida viene attivata. Esempio di codice seguente viene illustrato come questo errore si verifica:
 
 ```xaml
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">  

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 74f65021c23515e78e630f907a89ffde74de4da4
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 37ecc76d9774b3f375af92f2a00c6c687358f065
+ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="cell-appearance"></a>Aspetto delle celle
 
@@ -70,7 +70,7 @@ TextCells vengono visualizzati come controlli nativi in fase di esecuzione, le p
 <a name="customcells" />
 
 ## <a name="custom-cells"></a>Celle personalizzate
-Quando le celle incorporate non forniscono il layout richiesto, celle personalizzate implementato il layout richiesto. Ad esempio, si desideri presentare una cella con due etichette che hanno lo stesso peso. A `LabelCell` sarebbe sufficiente perché il `LabelCell` ha un'etichetta che è inferiore. La maggior parte delle personalizzazioni di cella aggiungono dati di sola lettura aggiuntivi (ad esempio ulteriori etichette, immagini o altre informazioni di visualizzazione).
+Quando le celle incorporate non forniscono il layout richiesto, celle personalizzate implementato il layout richiesto. Ad esempio, si desideri presentare una cella con due etichette che hanno lo stesso peso. A `TextCell` sarebbe sufficiente perché il `TextCell` ha un'etichetta che è inferiore. La maggior parte delle personalizzazioni di cella aggiungono dati di sola lettura aggiuntivi (ad esempio ulteriori etichette, immagini o altre informazioni di visualizzazione).
 
 Tutte le celle personalizzate devono derivare da [ `ViewCell` ](http://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/), la stessa classe di base che tutti i della cella predefinita tipi di utilizzo.
 
