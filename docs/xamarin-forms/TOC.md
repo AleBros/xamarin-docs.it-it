@@ -16,6 +16,7 @@
 #### [Parte 4. Nozioni di base sul data binding](xaml/xaml-basics/data-binding-basics.md)
 #### [Parte 5. Da data binding a MVVM](xaml/xaml-basics/data-bindings-to-mvvm.md)
 ### [Compilazione XAML](xaml/xamlc.md)
+### [Ricaricamento in tempo reale](xaml/live-reload.md)
 ### [Visualizzatore anteprima XAML](xaml/xaml-previewer.md)
 ### [Spazi dei nomi XAML](xaml/namespaces.md)
 ### [Estensioni di markup XAML](xaml/markup-extensions/index.md)
