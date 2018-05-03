@@ -1,6 +1,6 @@
 ---
 title: Introduzione a Xamarin.Forms
-description: Xamarin.Forms è un toolkit per interfacce utente multipiattaforma che consente agli sviluppatori di creare in modo efficiente layout di interfaccia utente nativi che possono essere condivisi tra app iOS, Android, Windows Phone e UWP. Questa serie introduce i concetti di base dello sviluppo di Xamarin.Forms e illustra la compilazione di applicazioni multipiattaforma e multi-schermata.
+description: Xamarin.Forms è un toolkit per interfacce utente multipiattaforma che consente agli sviluppatori di creare in modo efficiente layout di interfaccia utente nativi che possono essere condivisi tra app iOS, Android e UWP. Questa serie introduce i concetti di base dello sviluppo di Xamarin.Forms e illustra la compilazione di applicazioni multipiattaforma e multi-schermata.
 ms.prod: xamarin
 ms.assetid: d87d7232-242c-4ec4-81e9-36103d7e8fcf
 ms.technology: xamarin-forms
@@ -8,15 +8,15 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 58c0fa2041c106f697166891c0e88a409283c17f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da5547de1f21b1f02462f47a4e6ffee43dd0d1bf
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="getting-started-with-xamarinforms"></a>Introduzione a Xamarin.Forms
 
-_Xamarin.Forms è un toolkit per interfacce utente multipiattaforma che consente agli sviluppatori di creare in modo efficiente layout di interfaccia utente nativi che possono essere condivisi tra app iOS, Android, Windows Phone e UWP. Questa serie introduce i concetti di base dello sviluppo di Xamarin.Forms e illustra la compilazione di applicazioni multipiattaforma e multi-schermata._
+_Xamarin.Forms è un toolkit per interfacce utente multipiattaforma che consente agli sviluppatori di creare in modo efficiente layout di interfaccia utente nativi che possono essere condivisi tra app iOS, Android e UWP. Questa serie introduce i concetti di base dello sviluppo di Xamarin.Forms e illustra la compilazione di applicazioni multipiattaforma e multi-schermata._
 
 Per una panoramica dell'installazione e della configurazione applicabili allo sviluppo multipiattaforma, vedere [Requisiti di Xamarin.Forms](installation.md) e [Installation](~/cross-platform/get-started/installation/index.md) (Installazione).
 

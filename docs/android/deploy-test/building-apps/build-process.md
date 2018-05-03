@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 2833c645a07a3717d9baeeec11e5fa7f9087725a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 806ed841ec4db037a063bb458e1eed13226e08bd
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="build-process"></a>Processo di compilazione
 
@@ -52,7 +52,7 @@ Fast Deployment è abilitato per impostazione predefinita e può essere disabili
 Il processo di compilazione di Xamarin.Android si basa su MSBuild, che è anche il formato del file di progetto usato da Visual Studio per Mac e Visual Studio.
 Gli utenti di norma non dovranno modificare manualmente i file MSBuild perché l'IDE crea progetti completamente funzionali, li aggiorna con le modifiche apportate e richiama automaticamente le destinazioni di compilazione, se necessario. 
 
-Gli utenti avanzati potrebbero voler eseguire operazioni non supportate dall'interfaccia utente grafica dell'IDE, quindi il processo di compilazione è personalizzabile modificando direttamente il file di progetto. Questa pagina documenta solo le funzionalità e le personalizzazioni specifiche di Xamarin.Android, ma è possibile eseguire molte altre operazioni con i normali elementi, proprietà e destinazioni MSBuild. 
+Gli utenti avanzati potrebbero voler eseguire operazioni non supportate dall'interfaccia utente grafica dell'IDE, quindi il processo di compilazione si può personalizzare modificando direttamente il file di progetto. Questa pagina documenta solo le funzionalità e le personalizzazioni specifiche di Xamarin.Android, ma è possibile eseguire molte altre operazioni con i normali elementi, proprietà e destinazioni MSBuild. 
 
 <a name="Build_Targets" />
 
@@ -238,7 +238,7 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 
 -   **AndroidSdkBuildToolsVersion**: il pacchetto di strumenti di compilazione Android SDK fornisce gli strumenti **aapt**, **zipalign** e altri ancora. Più versioni diverse del pacchetto di strumenti di compilazione possono essere installate contemporaneamente. Il pacchetto di strumenti di compilazione scelto per la creazione di pacchetti viene creato cercando e usando una versione "preferita" degli strumenti di compilazione, se presente. Se la versione "preferita" *non* è presente, viene usato il pacchetto di strumenti di compilazione installato con la versione superiore.
 
-    La proprietà MSBuild `$(AndroidSdkBuildToolsVersion)` contiene la versione degli strumenti di compilazione preferita. Il sistema di compilazione Xamarin.Android fornisce un valore predefinito in `Xamarin.Android.Common.targets` ed è possibile eseguire l'override del valore predefinito nel file di progetto scegliendo una versione alternativa degli strumenti di compilazione, se (ad esempio) lo strumento aapt più recente si arresta in modo anomalo mentre una versione di aapt precedente è sicuramente funzionante.
+    La proprietà MSBuild `$(AndroidSdkBuildToolsVersion)` contiene la versione preferita degli strumenti di compilazione. Il sistema di compilazione Xamarin.Android specifica un valore predefinito in `Xamarin.Android.Common.targets` ed è possibile eseguire l'override del valore predefinito nel file di progetto per scegliere una versione alternativa degli strumenti di compilazione, se, ad esempio, lo strumento aapt più recente si arresta in modo anomalo mentre una versione di aapt precedente è sicuramente funzionante.
 
 -   **AndroidSupportedAbis**: proprietà stringa contenente un elenco di ABI delimitati da punto e virgola (`;`), che devono essere inclusi nel file `.apk`.
 
@@ -264,9 +264,9 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 
     Questa proprietà deve essere `True` per le build di rilascio e `False` per le build di debug. *Potrebbe* dover essere `True` nelle build di debug se Fast Deployment non supporta il dispositivo di destinazione.
 
-    Quando questa proprietà è `False`, la proprietà MSBuild `$(AndroidFastDeploymentType)` controlla anche che cosa verrà incorporato nel file `.apk` e ciò può influire sui tempi di distribuzione e ricompilazione.
+    Quando questa proprietà è `False`, la proprietà MSBuild `$(AndroidFastDeploymentType)` controlla anche che cosa verrà incorporato in `.apk` e ciò può influire sui tempi di distribuzione e ricompilazione.
 
--   **EnableLLVM**: proprietà booleana che determina se LLVM verrà usato o meno durante la compilazione Ahead Of Time degli assembly nel codice nativo.
+-   **EnableLLVM** &ndash;Proprietà booleana che determina se LLVM verrà usato o meno durante la compilazione Ahead Of Time degli assembly nel codice nativo.
 
     Il supporto per questa proprietà stato aggiunto in Xamarin.Android 5.1.
 
@@ -332,7 +332,7 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
     
     Elementi chiave predefiniti
 
-    -   **abi**: inserisce l'ABI di destinazione per l'app
+    -   **abi** &ndash; Inserisce l'ABI di destinazione per l'app
         -   1 &ndash; `armeabi`
         -   2 &ndash; `armeabi-v7a`
         -   3 &ndash; `x86`
@@ -341,11 +341,11 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 
     -   **minSDK**: inserisce il valore minimo supportato per l'SDK da `AndroidManifest.xml` o `11` se non è definito nessuno.
 
-    -   **versionCode**: usa il codice della versione direttamente da `Properties\AndroidManifest.xml`. 
+    -   **versionCode** &ndash; Usa il codice della versione direttamente da `Properties\AndroidManifest.xml`. 
 
     È possibile definire gli elementi personalizzati usando la proprietà `$(AndroidVersionCodeProperties)` (definita successivamente).
 
-    Per impostazione predefinita, il valore verrà impostato su `{abi}{versionCode:D6}`. Se uno sviluppatore vuole mantenere il comportamento precedente può ignorare l'impostazione predefinita impostando la proprietà `$(AndroidUseLegacyVersionCode)` su `true`.
+    Per impostazione predefinita, il valore verrà impostato su `{abi}{versionCode:D6}`. Se uno sviluppatore vuole mantenere il comportamento precedente può ignorare l'impostazione predefinita impostando la proprietà `$(AndroidUseLegacyVersionCode)` su `true`
 
     Aggiunto in Xamarin.Android 7.2.
 
@@ -394,7 +394,7 @@ Le proprietà MSBuild seguenti vengono usate con i [progetti di binding](~/andro
 
 -   **AndroidCodegenTarget**: proprietà stringa che controlla l'ABI di destinazione della generazione del codice. I valori possibili includono:
 
-    - **XamarinAndroid**: usa l'API di binding JNI presente a partire da Mono for Android 1.0. Gli assembly di binding compilati con Xamarin.Android 5.0 o versioni successive possono essere eseguiti solo in Xamarin.Android 5.0 o versioni successive (aggiunte API/ABI), ma l'*origine* è compatibile con versioni precedenti del prodotto.
+    - **XamarinAndroid**: usa l'API di binding JNI presente a partire da Mono for Android 1.0. Gli assembly di binding compilati con Xamarin.Android 5.0 o versioni successive possono essere eseguiti solo in Xamarin.Android 5.0 o versioni successive (aggiunte API/ABI), ma l'*origine* è compatibile con le versioni precedenti del prodotto.
 
     - **XAJavaInterop1**: usa Java.Interop per le chiamate JNI. Gli assembly di binding che usano `XAJavaInterop1` possono solo essere compilati ed eseguiti con Xamarin.Android 6.1 o versioni successive. Xamarin.Android 6.1 e versioni successive eseguono il binding di `Mono.Android.dll` con questo valore.
 
