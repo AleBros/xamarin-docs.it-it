@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 04/23/2018
-ms.openlocfilehash: bfb53af420b64fb9af994d3fb19293406d3acd7b
-ms.sourcegitcommit: 180a8411d912de40545f9624e2127a66ee89e7b2
+ms.openlocfilehash: 627225fdeef781a8b24a79e9b46627a739fd15af
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xamarin-live-reload"></a>Ricaricamento in tempo reale di Xamarin
 
@@ -30,7 +30,7 @@ Ricaricamento in tempo reale è attualmente disponibile solo in Visual Studio 20
 * [Visual Studio 2017 15.7 Preview 4](https://www.visualstudio.com/vs/preview/) o versione successiva con il **sviluppo per dispositivi Mobile con .NET** carico di lavoro.
 * [Xamarin. Forms 3.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3) o versione successiva.
 
-## <a name="getting-started"></a>Attività iniziali
+## <a name="getting-started"></a>Introduzione
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Installare Xamarin Ricarica in tempo reale da Visual Studio Marketplace
 
 Xamarin Live Ricarica viene distribuito tramite Visual Studio Marketplace. Per installare l'estensione, visitare il [Xamarin Live Ricarica pagina in Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Xamarin.XamarinLiveReload) sito Web e fare clic su **scaricare**.
@@ -106,13 +106,33 @@ No. In effetti, è possibile anche avviare tutte supportate destinazione dell'ap
 ## <a name="limitations"></a>Limitazioni
 
 * È supportato solo il ricaricamento di XAML.
-* Supportato solo in Visual Studio.
-* Funziona solo con le librerie .NET Standard.
-* Fogli di stile CSS non sono supportati.
 * Stato dell'interfaccia utente potrebbe non essere mantenuto tra distribuzioni, a meno che non utilizzando MVVM.
-* Ricaricamento di risorse a livello di app (vale a dire **app** o condiviso i dizionari delle risorse), navigazione app viene reimpostato.
+
+## <a name="known-issues"></a>Problemi noti
+
+* Supportato solo in Visual Studio.
+* Funziona solo con le librerie .NET Standard. Questo problema verrà risolto nella prossima versione di anteprima.
+* Fogli di stile CSS non sono supportati. Questo problema verrà risolto nella prossima versione di anteprima.
+* Ricaricamento di risorse a livello di app (vale a dire **app** o condiviso i dizionari delle risorse), navigazione app viene reimpostato. Questo problema verrà risolto nella prossima versione di anteprima.
+* Modifica XAML durante il debug UWP può causare un arresto anomalo del runtime. Soluzione alternativa: Utilizzare **Avvia senza eseguire debug (CTRL+F5)** anziché **Avvia debug (F5)**.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
+
+### <a name="error-codes"></a>Codici di errore
+
+* **XLR001**: *il progetto corrente fa riferimento a versione del pacchetto NuGet 'Xamarin.LiveReload' '[versione]', ma l'estensione Xamarin Live Ricarica richiede la versione ' []'.*
+
+  Per consentire l'iterazione rapido ed evoluzione della funzionalità di ricarica in tempo reale, il pacchetto nuget e l'estensione di Visual Studio devono corrispondere esattamente. Aggiornare il pacchetto nuget per la stessa versione dell'estensione che è stato installato.
+
+* **XLR002**: *Ricarica in tempo reale richiede almeno la proprietà 'MqttHostname' durante la compilazione dalla riga di comando. In alternativa, impostare 'EnableLiveReload' su 'false' per disabilitare la funzionalità.*
+
+  Le proprietà obbligatorie per Live Ricarica non sono disponibili se la compilazione dalla riga di comando (o nell'integrazione continua) e pertanto deve essere specificata in modo esplicito. 
+
+* **XLR003**: *pacchetto nuget di ricaricamento in tempo reale richiede l'installazione dell'estensione Xamarin Live Ricarica Visual Studio.*
+
+  Tentativo di creare un progetto che fa riferimento il pacchetto nuget di ricaricamento in tempo reale, ma non è installato l'estensione di Visual.  
+
+
 
 ### <a name="app-doesnt-connect"></a>Non collega l'App
 
@@ -145,7 +165,7 @@ Se si dispone di un'anteprima precedente e si riscontrano disinstallarlo, seguir
 
 Negli scenari in cui una connessione da app in esecuzione nel computer in uso (come indicato tramite `localhost` o `127.0.0.1` in **strumenti > Opzioni > Xamarin > Live Ricarica**) non è possibile (ad esempio i firewall, reti diverse), è possibile configurare un server remoto, invece, quale sia l'IDE e l'app verrà connettersi a una a.
 
-Ricaricamento in tempo reale utilizza lo standard [protocollo MQTT](http://mqtt.org/) per lo scambio di messaggi e possono pertanto comunicare [server di terze parti](https://github.com/mqtt/mqtt.github.io/wiki/servers). Esistono anche [server pubblici](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (noto anche come *Broker*) disponibili che è possibile utilizzare. Ricaricamento in tempo reale è stato testato con `broker.hivemq.com` e `iot.eclipse.org` i nomi host, nonché i servizi forniti da [www.cloudmqtt.com](https://www.cloudmqtt.com) e [www.cloudamqp.com](https://www.cloudamqp.com). È inoltre possibile distribuire il proprio server MQTT nel cloud, ad esempio [HiveMQ in Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud) oppure [MQ coniglio su AWS](http://www.rabbitmq.com/ec2.html). 
+Ricaricamento in tempo reale utilizza lo standard [protocollo MQTT](http://mqtt.org/) per lo scambio di messaggi e possono pertanto comunicare [server di terze parti](https://github.com/mqtt/mqtt.github.io/wiki/servers). Esistono anche [server pubblici](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (noto anche come *Broker*) disponibili che è possibile utilizzare. Ricaricamento in tempo reale è stato testato con `broker.hivemq.com` e `iot.eclipse.org` i nomi host, nonché i servizi forniti da [www.cloudmqtt.com](https://www.cloudmqtt.com) e [www.cloudamqp.com](https://www.cloudamqp.com). È inoltre possibile distribuire il proprio server MQTT nel cloud, ad esempio [HiveMQ in Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud).
 
 È possibile configurare qualsiasi porta, ma è comune per utilizzare la porta 1883 predefinita per i server remoti. I messaggi di ricaricamento in tempo reale Usa end-to-end AES simmetrica crittografia avanzata, pertanto è consigliabile connettersi a server remoti. Per impostazione predefinita, sia la chiave di crittografia e il vettore di inizializzazione (IV) vengono rigenerate in ogni sessione di Visual Studio.
 

@@ -1,5 +1,5 @@
 ---
-title: Tocco
+title: Tocco e i movimenti in xamarin. Android
 description: "Touch screen su molti dei dispositivi moderni consente agli utenti di interagire in modo rapido ed efficiente con i dispositivi in modo naturale e intuitivo. Questa interazione non è limitata alle rilevamento tocco semplice: è possibile utilizzare anche i movimenti. Ad esempio, il movimento zoom con avvicinamento delle dita è un esempio molto comune di questo da parte della schermata con due dita che l'utente è possibile ingrandire o ridurre di compressione. Questa guida esamina tocco e i movimenti in Android."
 ms.prod: xamarin
 ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
@@ -7,13 +7,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: d6c6d7fd02511ede84b7cfa75575d755f11bab99
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3700f9c73fb58fefcdba7987c9931e385cd52d38
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="touch"></a>Tocco
+# <a name="touch-and-gestures-in-xamarinandroid"></a>Tocco e i movimenti in xamarin. Android
 
 _Touch screen su molti dei dispositivi moderni consente agli utenti di interagire in modo rapido ed efficiente con i dispositivi in modo naturale e intuitivo. Questa interazione non è limitata alle rilevamento tocco semplice: è possibile utilizzare anche i movimenti. Ad esempio, il movimento zoom con avvicinamento delle dita è un esempio molto comune di questo da parte della schermata con due dita che l'utente è possibile ingrandire o ridurre di compressione. Questa guida esamina tocco e i movimenti in Android._
 

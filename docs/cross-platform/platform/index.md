@@ -1,5 +1,5 @@
 ---
-title: Funzionalità della piattaforma
+title: Supporto per le lingue
 description: Concetti e le funzionalità dell'applicazione e multipiattaforma.
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
@@ -7,21 +7,22 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: a1699c8bde336c040253a5560a2979de8b3fabf5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f22bb1b37f3e03f63c9e47cf71d5df57ade0042f
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="platform-features"></a>Funzionalità della piattaforma
+# <a name="language-support"></a>Supporto per le lingue
 
 In questa sezione contiene documenti che illustrano i concetti e funzionalità più avanzate di applicazioni multipiattaforma.
 
-##  <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Panoramica del supporto asincrono](~/cross-platform/platform/async.md)
+## <a name="c"></a>C# 
+###  <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Panoramica del supporto asincrono](~/cross-platform/platform/async.md)
 
 Versione 5 di c# introdotte due nuove parole chiave per esprimere le operazioni asincrone: async e await. Queste parole chiave consentono di scrivere codice semplice che prevede l'utilizzo di Task Parallel Library per eseguire operazioni a esecuzione prolungata (ad esempio l'accesso di rete) in un altro thread e accedere facilmente i risultati al completamento. Le versioni più recenti di xamarin. IOS e xamarin supportano async e await: questo documento vengono fornite spiegazioni e un esempio di utilizzo della nuova sintassi con Xamarin.
 
-## <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Funzionalità del linguaggio C# 6](~/cross-platform/platform/csharp-six.md)
+### <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Funzionalità del linguaggio C# 6](~/cross-platform/platform/csharp-six.md)
 
 La versione più recente del linguaggio c#-versione 6 – continua evoluzione del linguaggio che sono meno boilerplate maggiore chiarezza e la coerenza di più. Sintassi di inizializzazione di pulizia, la possibilità di utilizzare `await` in `catch/finally` blocchi e condizionali null `?` operatore risultano particolarmente utili.
 
@@ -37,7 +38,3 @@ Visual Studio supporta la creazione di librerie di classi portabili utilizzando 
 
 Xamarin consente agli sviluppatori di sfruttare il motore del modello Razor, introdotta in origine con ASP.NET MVC, insieme a c# per combinare facilmente i dati con HTML, Javascript e CSS senza la necessità di creare manualmente le stringhe HTML nel codice.
 In questo articolo viene illustrato come utilizzare i modelli Razor con Xamarin per Android e iOS.
-
-##  <a name="manually-creating-nuget-packages-for-xamarincross-platformapp-fundamentalsnuget-manualmd"></a>[Creazione manuale di pacchetti NuGet di Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
-
-Suggerimenti per la creazione di pacchetti NuGet che funzionano con la piattaforma di Xamarin.

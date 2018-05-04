@@ -1,17 +1,17 @@
 ---
-title: Installazione e configurazione
+title: 'Installazione e configurazione di usura onXamarin.Android del sistema operativo '
 description: In questo articolo vengono illustrati i passaggi di installazione e i dettagli di configurazione necessari per preparare il computer e dispositivi per lo sviluppo, usare Android. Alla fine di questo articolo, è necessario un lavoro di installazione di xamarin usura integrati in Visual Studio per Mac e/o Microsoft Visual Studio, e sarà possibile iniziare a creare la prima applicazione usura xamarin.
 ms.prod: xamarin
 ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 86ed62075f5c39eaf7b0e348020f4a9361764727
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 14162663c518fdd1324f2b0340592fbae491d112
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setup-and-installation"></a>Installazione e configurazione
 

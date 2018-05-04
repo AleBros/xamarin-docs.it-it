@@ -6,20 +6,19 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 96afe6bbfd1d9c6f4fd5ca3b7358ef0b89da30bb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1769c2cd5e9f68e80f7f4c0ef5e2393971b659f9
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-with-objective-c"></a>Introduzione a Objective-C
 
 Questa è la pagina introduttiva per Objective-C, che illustra le nozioni di base per tutte le piattaforme supportate.
 
-
 ## <a name="requirements"></a>Requisiti
 
-Per usare .NET incorporamento con Objective-C, è necessario un Mac che esegue:
+Per usare .NET incorporamento con Objective-C, è necessario utilizzare un Mac che eseguono:
 
 * macOS 10.12 (Sierra) o versione successiva
 * Xcode 8.3.2 o versione successiva
@@ -27,34 +26,19 @@ Per usare .NET incorporamento con Objective-C, è necessario un Mac che esegue:
 
 È possibile installare [Visual Studio per Mac](https://www.visualstudio.com/vs/visual-studio-mac/) per modificare e compilare il codice c#.
 
+> [!NOTE]
+> * Le versioni precedenti di macOS, Xcode e Mono _potrebbe_ funziona, ma sono non testato e non supportati
+> * Generazione di codice può essere eseguita in Windows, ma è possibile eseguire la compilazione in un computer Mac in cui è installato Xcode solo
 
-Note:
+## <a name="installing-net-embedding-from-nuget"></a>L'installazione di .NET incorporamento da NuGet
 
-* Le versioni precedenti di macOS, Xcode e Mono _potrebbe_ di lavoro, ma sono non testato e non è supportato;
-* Generazione di codice può essere eseguita in Windows, ma è possibile eseguire la compilazione in un computer Mac in cui è installato Xcode; solo
+Attenersi alla seguente [istruzioni](~/tools/dotnet-embedding/get-started/install/install.md) per installare e configurare .NET incorporamento per il progetto.
 
-
-## <a name="installation"></a>Installazione
-
-Il passaggio successivo è necessario scaricare e installare .NET incorporamento sul Mac.
-
-* [Pacchetto](https://dl.xamarin.com/embeddinator/Xamarin.Embeddinator-4000-0.2.0.79.pkg)
-* [Note sulla versione](https://github.com/mono/Embeddinator-4000/tree/master/docs/releases)
-
-In alternativa è possibile compilarla dal nostro [repository git](https://github.com/mono/Embeddinator-4000/tree/objc), vedere il [che contribuiscono](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md) documento per le istruzioni.
-
-Il programma di installazione è un programma di installazione standard pkg basato su:
-
-![Programma di installazione Introduzione](images/install1.png)
-![programma di installazione installa tipo](images/install2.png)
-![Riepilogo installazione](images/install3.png)
-
-Una volta installato tramite il programma di installazione dopo avere avviato una nuova sessione terminal, è possibile utilizzare il `objcgen` comando.
-In caso contrario è sempre possibile eseguire lo strumento tramite il relativo percorso assoluto: `/Library/Frameworks/Xamarin.Embeddinator-4000.framework/Commands/objcgen`.
+Una chiamata di comandi di esempio è elencata nella [macOS](~/tools/dotnet-embedding/get-started/objective-c/macos.md) e [iOS](~/tools/dotnet-embedding/get-started/objective-c/ios.md) guide introduttive.
 
 ## <a name="platforms"></a>Piattaforme
 
-Objective-C è un linguaggio che viene comunemente utilizzato per scrivere applicazioni per Mac OS, iOS, tvOS e watchOS; e il embeddinator supporta tutte le piattaforme. Utilizzo di ogni piattaforma implica alcune differenze fondamentali e questi vengono spiegati [qui](~/tools/dotnet-embedding/objective-c/platforms.md).
+Objective-C è un linguaggio che viene comunemente utilizzato per scrivere applicazioni per Mac OS, iOS, tvOS e watchOS; durante l'incorporamento .NET supporta tutte le piattaforme. Utilizzo di ogni piattaforma implica alcune [principali differenze e queste sono illustrate in questo argomento](~/tools/dotnet-embedding/objective-c/platforms.md).
 
 ### <a name="macos"></a>macOS
 
@@ -62,23 +46,21 @@ Objective-C è un linguaggio che viene comunemente utilizzato per scrivere appli
 
 ### <a name="ios--tvos"></a>iOS / tvOS
 
-Verificare che sono già impostati per lo sviluppo di applicazioni iOS prima di tentare di crearlo utilizzando la embeddinator. Il [attenendosi alle istruzioni](~/tools/dotnet-embedding/get-started/objective-c/ios.md) si supponga di aver già completato compilata e distribuita un'applicazione iOS dal computer.
+Verificare che sono già impostati per sviluppare le applicazioni iOS prima di tentare di crearne uno utilizzando l'incorporamento .NET. Il [attenendosi alle istruzioni](~/tools/dotnet-embedding/get-started/objective-c/ios.md) si supponga di aver già completato compilata e distribuita un'applicazione iOS dal computer.
 
 Supporto per tvOS è analogo al funzionamento di iOS, utilizzando solo progetti tvOS in IDE (Visual Studio e Xcode) anziché progetti iOS.
 
 > [!NOTE]
-> Nota: Supporto per watchOS sarà disponibile nelle versioni future e sarà molto simile a iOS/tvOS.
-
+> Il supporto per watchOS sarà disponibile nelle versioni future e sarà molto simile a iOS/tvOS.
 
 ## <a name="further-reading"></a>Ulteriori informazioni
 
 * [Funzionalità .NET incorporamento specifiche per Objective-C](~/tools/dotnet-embedding/objective-c/index.md)
 * [Procedure consigliate per Objective-C](~/tools/dotnet-embedding/objective-c/best-practices.md)
 * [Limitazioni di incorporamento .NET](~/tools/dotnet-embedding/limitations.md)
-* [Che contribuiscono al progetto open source](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
+* [Che contribuiscono al progetto open source](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
 * [Codici di errore e descrizioni](~/tools/dotnet-embedding/errors.md)
 * [Piattaforme di destinazione](~/tools/dotnet-embedding/objective-c/platforms.md)
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,17 +1,17 @@
 ---
-title: Dati e servizi Cloud
+title: I dati e ai servizi Cloud con xamarin
 description: Per accedere ai dati e di esaminare le guide in questa sezione utilizzare i servizi cloud.
 ms.prod: xamarin
 ms.assetid: 54D9D34B-D4FA-473B-BD11-75D3762920B0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 7d96f72f3c7acaaf2e39ae94b24d7d6e3b623773
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 216ee45df1d7d9e0d06c04b9677bc263929515c0
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-and-cloud-services"></a>Dati e servizi Cloud
 

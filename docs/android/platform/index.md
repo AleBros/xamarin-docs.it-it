@@ -1,5 +1,5 @@
 ---
-title: Funzionalità della piattaforma
+title: Funzionalità della piattaforma di xamarin
 description: Documenti in questa sezione illustrano le funzionalità specifiche per Android. Qui sono disponibili argomenti, ad esempio tramite frammenti, l'uso con le mappe e incapsulamento dei dati con i provider di contenuti.
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 69a70fe399bc95a9d8b24cc839382f2f3bee553e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8c26cc3af97cad26e8add248b5bf4aabcefc614b
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="platform-features"></a>Funzionalità della piattaforma
 

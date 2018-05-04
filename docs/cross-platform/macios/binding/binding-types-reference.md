@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 9364b4c56951ac9ebd3870e4afe41a40f9e1f455
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e064eda3db9aa0156869cf1c7392823553af9bd2
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-types-reference-guide"></a>Guida di riferimento dei tipi di associazione
 
@@ -752,7 +752,7 @@ public partial class UIToolbar {
 }
 ```
 
-### <a name="autoreleaseattribute-xamarinios-54"></a>AutoReleaseAttribute (Xamarin.iOS 5.4)
+### <a name="autoreleaseattribute-xamarinios-54"></a>AutoReleaseAttribute (xamarin. IOS 5.4)
 
 Utilizzare il `[AutoReleaseAttribute]` sui metodi e proprietà per eseguire il wrapping la chiamata del metodo al metodo in un `NSAutoReleasePool`.
 
@@ -1136,12 +1136,12 @@ public NSObject this [NSObject idx] {
 
 L'attributo contrassegna il campo sottostante per una proprietà a essere annotato con .NET `[ThreadStatic]` attributo. Ciò è utile se il campo è una variabile di thread statica.
 
-### <a name="marshalnativeexceptions-xamarinios-606"></a>MarshalNativeExceptions (Xamarin.iOS 6.0.6)
+### <a name="marshalnativeexceptions-xamarinios-606"></a>MarshalNativeExceptions (xamarin. IOS 6.0.6)
 
 Questo attributo consentirà un metodo supporto nativo (Objective-C) le eccezioni.
 Anziché chiamare `objc_msgSend` direttamente, la chiamata verrà inviata tramite un trampoline personalizzato che intercetta le eccezioni ObjectiveC e ne esegue il marshalling in eccezioni gestite.
 
-Attualmente solo alcuni `objc_msgSend` sono supportate le firme (verrà indicato se una firma non è supportata quando il collegamento native di un'applicazione che utilizza l'associazione ha esito negativo con un monotouch_ mancante*_objc_msgSend* simbolo), ma più può essere aggiunta alla richiesta.
+Attualmente solo alcuni `objc_msgSend` sono supportate le firme (verrà indicato se una firma non è supportata quando il collegamento native di un'applicazione che utilizza l'associazione ha esito negativo con un monotouch_ mancante *_objc_msgSend* simbolo), ma più può essere aggiunta alla richiesta.
 
 
 ### <a name="newattribute"></a>NewAttribute
@@ -1371,7 +1371,7 @@ Se il valore di `doAdd` è true, il parametro viene aggiunto per il `__mt_{0}_va
 
 Per un esempio vedere [foundation.cs](https://github.com/mono/maccore/blob/master/src/foundation.cs) e [NSNotificationCenter.cs](https://github.com/mono/maccore/blob/master/src/Foundation/NSNotificationCenter.cs)
 
-### <a name="releaseattribute-xamarinios-60"></a>ReleaseAttribute (Xamarin.iOS 6.0)
+### <a name="releaseattribute-xamarinios-60"></a>ReleaseAttribute (xamarin. IOS 6.0)
 
 Questo può essere applicato per restituire i tipi per indicare che il generatore deve chiamare `Release` per l'oggetto prima di restituirlo. Questo è necessario solo quando un metodo fornisce un oggetto memorizzato (in contrapposizione a un oggetto autoreleased, ovvero lo scenario più comune)
 
@@ -1493,7 +1493,7 @@ Questo attributo viene applicato a tipi di parametro nelle dichiarazioni di dele
 
 In genere viene utilizzato per i callback che sono definiti come segue in Objective-c:
 
-```csharp
+```objc
 typedef returnType (^SomeTypeDefinition) (int parameter1, NSString *parameter2);
 ```
 

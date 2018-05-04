@@ -1,17 +1,17 @@
 ---
-title: ListView
+title: Utilizzo del controllo ListView in xamarin. Android
 description: ListView è un importante componente dell'interfaccia utente delle applicazioni Android. utilizzato ovunque da breve elenco delle opzioni di menu in lunghi elenchi di contatti o Preferiti di internet. Fornisce un modo semplice per presentare un elenco di scorrimento di righe che può essere formattato con uno stile predefinito o personalizzato in modo considerevole.
 ms.prod: xamarin
 ms.assetid: C2BA2705-9B20-01C2-468D-860BDFEDC157
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/21/2018
-ms.openlocfilehash: 8499b9f186c12df22518893b6677cab22f0a3568
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: c5c8222df16b265f3b44f3ee3fcd9053d827cf6a
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="listview"></a>ListView
 
@@ -220,7 +220,7 @@ Questo insieme di argomenti introdotta `ListView` e forniti alcuni esempi di com
 - [CustomRowView (esempio)](https://developer.xamarin.com/samples/CustomRowView/)
 - [FastScroll (esempio)](https://developer.xamarin.com/samples/FastScroll/)
 - [SectionIndex (esempio)](https://developer.xamarin.com/samples/SectionIndex/)
-- [SimpleCursorTableAdapter (sample)](https://developer.xamarin.com/samples/SimpleCursorTableAdapter/)
+- [SimpleCursorTableAdapter (esempio)](https://developer.xamarin.com/samples/SimpleCursorTableAdapter/)
 - [CursorTableAdapter (esempio)](https://developer.xamarin.com/samples/CursorTableAdapter/)
 - [Esercitazione del ciclo di vita di attività](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Utilizzo delle tabelle e le celle (xamarin)](~/ios/user-interface/controls/tables/index.md)

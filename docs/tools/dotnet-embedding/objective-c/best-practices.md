@@ -1,18 +1,18 @@
 ---
-title: Embeddinator 4000 procedure consigliate per ObjC
+title: Incorporamento di procedure consigliate per Objective-C .NET
 ms.prod: xamarin
 ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: ca5face9865c60fabe8359c2bf356d5d5555f517
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 9f31190d54b187e1dc298fe1c2a8d443862f10de
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="embeddinator-4000-best-practices-for-objc"></a>Embeddinator 4000 procedure consigliate per ObjC
+# <a name="net-embedding-best-practices-for-objective-c"></a>Incorporamento di .NET di procedure consigliate per Objective-C
 
 Si tratta di una bozza e potrebbe non essere sincronizzata con le funzionalità attualmente supportato dallo strumento. Ci auguriamo che questo documento verrà evolvere separatamente e corrisponde alla fine dello strumento finale, ad esempio consigliabile sarà a lungo termine migliori approcci - soluzioni alternative non immediati.
 
@@ -106,7 +106,7 @@ Questa regola di denominazione non esistono corrispondenze nell'ambiente di GC .
 
 ## <a name="exceptions"></a>Eccezioni
 
-È ancora pronti commont in .NET per utilizzare le eccezioni in modo esteso per segnalare gli errori. Tuttavia, sono lente e non è abbastanza identica in ObjC. Quando possibile è consigliabile nascondere da parte dello sviluppatore Objective-C.
+È abbastanza frequente in .NET per utilizzare le eccezioni in modo esteso per segnalare gli errori. Tuttavia, sono lente e non abbastanza identici in Objective-C. Quando possibile è consigliabile nascondere da parte dello sviluppatore Objective-C.
 
 Ad esempio, .NET `Try` pattern è molto più semplice da utilizzare dal codice Objective-C:
 
@@ -138,6 +138,6 @@ Il generatore di seguire lo stesso `return nil` di schema per generare `init*` m
 
 Objective-C non consente agli operatori di essere sottoposti a overload come c#, in modo vengono convertiti di selettori di classe.
 
-["Descrittivo"](/dotnet/standard/design-guidelines/operator-overloads/) metodo denominato generati anziché gli overload dell'operatore trovato, quindi in grado di produrre un semplice utilizzare l'API.
+["Descrittivo"](https://docs.microsoft.com/dotnet/standard/design-guidelines/operator-overloads) vengono generati i metodi denominati anziché gli overload dell'operatore quando trovato e possono produrre un semplice utilizzare API.
 
 Le classi che eseguono l'override gli operatori `==` e/o elaborati `!=` deve eseguire l'override anche del metodo Equals (Object) standard.
