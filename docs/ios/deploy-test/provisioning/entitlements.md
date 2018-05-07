@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 6ced541ca9df6fcae1643dc14c2e19807e972822
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f158ab7e51eb7610566ed052b326fecf016add8a
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-entitlements"></a>Uso degli entitlement
 
@@ -127,6 +127,9 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
     - Per individuare la stringa `$(TeamIdentifierPrefix)`, accedere a developer.apple.com e visitare **Member Center > Account utente > Developer Account Summary (Riepilogo account per sviluppatore)** per ottenere l'ID del team (o l'ID individuale per i singoli sviluppatori). Sarà una stringa di 10 caratteri (ad esempio, A93A5CM278).
     - La stringa `$(CFBundleIdentifier)` inizia con `iCloud` e viene impostata quando il contenitore iCloud viene creato seguendo i passaggi della guida [Uso delle funzionalità](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md).
     - Si possono usare i segnaposto $`(TeamIdentifierPrefix)` e `$(CFBundleIdentifier)` che verranno sostituiti con i valori corretti in fase di compilazione.
+
+> [!IMPORTANT]
+> Apple [fornisce strumenti](https://developer.apple.com/support/allowing-users-to-manage-data/) per aiutare gli sviluppatori a gestire correttamente il Regolamento generale sulla protezione dei dati (GDPR) dell'Unione Europea.
 
 ### <a name="app-groups"></a>Gruppi di app
 

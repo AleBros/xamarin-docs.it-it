@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a8264d3ebd5f294b1b77fbbafd660825d5ce5180
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 859f84fbe329d79e9e1e6a8b7445fe2a7f03af23
+ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introduzione a Xamarin.iOS per Visual Studio
 
@@ -42,33 +42,19 @@ Sono disponibili alcune opzioni di configurazione, quindi è possibile scegliere
 
 In entrambi i casi è necessario seguire questi passaggi:
 
-- [Installare gli strumenti Xamarin.iOS nell'host Mac](https://docs.microsoft.com/visualstudio/mac/installation)
-- [Configurare il Mac](~/ios/get-started/installation/windows/index.md#configuring)
+- [Installare Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 - [Installare gli strumenti di Xamarin in Windows](~/cross-platform/get-started/installation/windows.md)
-
-Per lo sviluppo con Xamarin in Visual Studio, è necessario usare **almeno** Visual Studio 2015 Professional o versione successiva. Xamarin **non funziona** con le edizioni Express di Visual Studio, poiché non supporta i componenti aggiuntivi.
 
 ## <a name="connecting-to-the-mac"></a>Connessione al Mac
 
-È possibile connettersi all'host di compilazione Mac usando l'icona sulla barra degli strumenti di Visual Studio (purché sia aperta un'applicazione iOS):
+Per connettere Visual Studio all'host di compilazione Mac, seguire le istruzioni nella guida [Associazione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png "Icona di connessione al Mac")](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png#lightbox)
-
-Oppure passare a **Strumenti > Opzioni** in Visual Studio e selezionare **Xamarin > Impostazioni iOS**:
-
- [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png "Opzione iOS")](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png#lightbox)
-
-Per modificare l'host di compilazione Mac, fare clic sul pulsante **Trova Xamarin Mac Agent**. Per aggiornare l'host di compilazione Mac viene visualizzata questa schermata:
-
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png "Finestra di dialogo Xamarin Mac Agent")](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png#lightbox)
 
 
 ## <a name="visual-studio-toolbar-overview"></a>Panoramica della barra degli strumenti di Visual Studio
 
 Xamarin iOS per Visual Studio aggiunge elementi alla barra degli strumenti standard e alla nuova barra degli strumenti iOS.
 Le funzioni di queste barre degli strumenti sono illustrate di seguito.
-
-
 
 ### <a name="standard-toolbar"></a>Barra degli strumenti standard
 
@@ -174,7 +160,7 @@ Per aggiungere oggetti alla visualizzazione, usare il riquadro **Casella degli s
 
 ### <a name="device-logging"></a>Registrazione dispositivi
 
-In Visual Studio 2015 e versioni successive i riquadri dei log di Android e iOS sono unificati
+In Visual Studio 2017 i riquadri dei log di Android e iOS sono unificati.
 
 La finestra del nuovo strumento Log del dispositivo per Visual Studio consente di visualizzare i log per i dispositivi Android e iOS. È possibile visualizzarla eseguendo uno dei comandi seguenti:
 

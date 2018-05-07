@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: e4828f1ae5448a94fa1f52147d1aef3787e95521
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dc9b86845dc91c7fb8ec3a88a5862e5e9f6de18d
+ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="helloios-quickstart"></a>Guida introduttiva a Hello.iOS
 
@@ -288,7 +288,7 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 **Nota**: questa procedura dettagliata usa Visual Studio Enterprise 2017 in una macchina virtuale Windows 10. La configurazione usata può essere diversa da quella usata qui, purché i requisiti sopra riportati siano soddisfatti. Tenere presente tuttavia che alcune schermate potrebbero essere diverse.
 
 > [!NOTE]
-> Prima di procedere con questa procedura dettagliata, è necessario connettersi al Mac da Visual Studio. Xamarin.iOS, infatti, si basa su alcuni strumenti Apple per compilare e avviare iOS Designer e le applicazioni. Per eseguire la configurazione, seguire i passaggi nella guida [Connessione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+> Prima di procedere con questa procedura dettagliata, è necessario connettersi al Mac da Visual Studio. Xamarin.iOS, infatti, si basa su alcuni strumenti Apple per compilare e avviare iOS Designer e le applicazioni. Per eseguire la configurazione, seguire i passaggi nella guida [Associazione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Avviare Visual Studio dal menu **Start**:
 

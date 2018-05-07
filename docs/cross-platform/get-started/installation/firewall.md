@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
-ms.openlocfilehash: bb551b548f241cacfc4cb700d247684c15f6fcf7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 212a190b56465a8401b17b7a379a1f083d8f8d87
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xamarin-firewall-configuration-instructions"></a>Istruzioni di configurazione del firewall di Xamarin
 
@@ -42,7 +42,7 @@ Per accedere allo Store dei componenti Xamarin o a NuGet (Xamarin.Forms è dispo
 
 -  components.xamarin.com (per usare lo Store dei componenti Xamarin)
 -  xampubdl.blob.core.windows.net (ospita i download dello Store dei componenti)
--  www.nuget.org (per accedere a NuGet)
+-  www\.nuget.org (per accedere a NuGet)
 -  az320820.vo.msecnd.net (download di NuGet)
 -  dl-ssl.google.com (componenti Google)
 

@@ -1,18 +1,18 @@
 ---
-title: Introduction to Mobile Development (Introduzione allo sviluppo per dispositivi mobili)
+title: Introduzione allo sviluppo per dispositivi mobili
 ms.prod: xamarin
 ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: 2f3950509134d3f643f0ea63b6725c1b4fe38409
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6be97162d1c371b9215d59ef77a7a5044e04f6b1
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="introduction-to-mobile-development"></a>Introduction to Mobile Development (Introduzione allo sviluppo per dispositivi mobili)
+# <a name="introduction-to-mobile-development"></a>Introduzione allo sviluppo per dispositivi mobili
 
 La compilazione di applicazioni per dispositivi mobili può essere un'operazione semplice e rapida come aprire l'IDE, assemblare una serie di componenti, eseguire un breve test e caricare il tutto in App Store. Oppure può essere un processo estremamente complesso che richiede una progettazione preliminare rigorosa, un test di usabilità, il controllo qualità su migliaia di dispositivi, un ciclo di vita completo della versione beta e quindi la distribuzione in numerosi modi diversi.
 
@@ -42,7 +42,7 @@ Grazie a questo set di funzionalità avanzate e complete, Xamarin costituisce la
 
 
 > [!NOTE]
-> Questa serie di guide introduttive illustra come iniziare a compilare applicazioni iOS e Android. Microsoft offre esercitazioni per lo sviluppo in Windows Phone [a questo indirizzo](http://dev.windowsphone.com/en-us/develop). Per altre informazioni sullo sviluppo multipiattaforma con Xamarin (incluse app UWP per Windows), vedere la guida [Building Cross-Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) (Compilazione di applicazioni multipiattaforma).
+> Questa serie di guide introduttive illustra come iniziare a compilare applicazioni iOS e Android. Microsoft offre informazioni sullo [sviluppo della piattaforma UWP (Universal Windows Platform)](https://docs.microsoft.com/windows/uwp/develop/) per tablet e desktop. Per altre informazioni sullo sviluppo multipiattaforma con Xamarin (incluse app UWP per Windows), vedere la guida [Building Cross-Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) (Compilazione di applicazioni multipiattaforma).
 
 
 
