@@ -4,14 +4,14 @@ description: Controllare il flusso di informazioni tra origine e destinazione
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
 ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: fdcba9b680bd548371883788af9e4eda755d91df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: charlespetzold
+ms.author: chape
+ms.date: 05/01/2018
+ms.openlocfilehash: 1aa612d8b855158f09bc0aeaad1520a44b3d9637
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-mode"></a>Modalità di associazione
 
@@ -58,6 +58,7 @@ La modalità di associazione è specificata con un membro con il [ `BindingMode`
 - [`TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/) &ndash; i dati vengono inseriti in entrambe le direzioni tra origine e destinazione
 - [`OneWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWay/) &ndash; i dati vengono inseriti dall'origine alla destinazione
 - [`OneWayToSource`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; i dati vengono inseriti dalla destinazione all'origine
+- [`OneTime`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; passa dati dall'origine alla destinazione, ma solo quando il `BindingContext` modifiche (nuove con xamarin. Forms 3.0)
 
 Tutte le proprietà associabili ha un valore predefinito modalità di associazione che viene impostata quando la proprietà associabile viene creata e disponibile dal [ `DefaultBindingMode` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableProperty.DefaultBindingMode/) proprietà del `BindableProperty` oggetto. Questa modalità di associazione predefinita indica la modalità attiva quando la proprietà è una destinazione di associazione dati.
 
@@ -94,6 +95,15 @@ Le proprietà associabili di sola lettura hanno una modalità di associazione pr
 - `SelectedItem` proprietà di `ListView`
 
 La logica alla base che è un'associazione di `SelectedItem` dovrebbe restituire proprietà impostando l'origine di associazione. Un esempio più avanti in questo articolo esegue l'override di questo comportamento.
+
+### <a name="one-time-bindings"></a>Associazioni monouso
+
+Molte proprietà hanno una modalità di associazione predefinito di `OneTime`. Questi sono:
+
+- `IsTextPredictionEnabled` proprietà di `Entry`
+- `Text`, `BackgroundColor`, e `Style` proprietà di `Span`.
+
+Specificare come destinazione proprietà con una modalità di associazione di `OneTime` vengono aggiornate solo quando cambia il contesto di associazione. Per le associazioni su queste proprietà di destinazione, questa operazione semplifica l'infrastruttura di associazione perché non è necessario monitorare le modifiche nelle proprietà dell'origine.
 
 ## <a name="viewmodels-and-property-change-notifications"></a>ViewModel e notifiche di modifica delle proprietà
 
@@ -198,6 +208,8 @@ public class HslColorViewModel : INotifyPropertyChanged
 Quando il `Color` le modifiche alle proprietà, il metodo statico `GetNearestColorName` metodo il `NamedColor` classe (inclusi anche nel **DataBindingDemos** soluzione) Ottiene il colore più simile denominato e imposta il `Name` proprietà. Questo `Name` proprietà ha una privata `set` funzione di accesso, pertanto non può essere impostata dall'esterno della classe.
 
 Quando un elemento ViewModel è impostato come origine di associazione, l'infrastruttura di associazione associa un gestore per il `PropertyChanged` evento. In questo modo, l'associazione può ricevere una notifica di modifiche alle proprietà e quindi è possibile impostare le proprietà di destinazione da valori modificati.
+
+Tuttavia, quando una proprietà di destinazione (o la `Binding` definition per una proprietà di destinazione) ha un `BindingMode` di `OneTime`, non è necessario per l'infrastruttura di associazione collegare un gestore nel `PropertyChanged` evento. La proprietà di destinazione viene aggiornata solo quando il `BindingContext` le modifiche e non quando cambia la proprietà di origine stessa. 
 
 Il **semplice selettore del colore** file XAML crea un'istanza di `HslColorViewModel` nel dizionario risorse e inizializza la pagina di `Color` proprietà. Il `BindingContext` proprietà del `Grid` è impostata su un `StaticResource` estensione per fare riferimento a tale risorsa di binding:
 

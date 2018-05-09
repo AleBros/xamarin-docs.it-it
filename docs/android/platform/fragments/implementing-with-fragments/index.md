@@ -1,65 +1,55 @@
 ---
-title: Implementazione di frammenti
-description: Android 3.0 sono state introdotte frammenti. I frammenti sono componenti indipendenti e modulari usati per semplificare la scrittura di applicazioni che possono essere eseguite su schermi di dimensioni diverse. Questo articolo descrive come utilizzare i frammenti per sviluppare applicazioni di xamarin e come supportare i frammenti nei 3.0 dispositivi pre-Android.
+title: Implementazione di frammenti - procedura dettagliata
+description: In questo articolo illustra in dettaglio come usare frammenti per sviluppare applicazioni di xamarin. Android.
+ms.topic: tutorial
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 81f1f992de450ee62c4c1d2e80da858b024be594
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/26/2018
+ms.openlocfilehash: 92c68298d7abd2570efd89e12d7cfb6364e90972
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="implementing-with-fragments"></a>Implementazione di frammenti
+# <a name="implementing-fragments---walkthrough"></a>Implementazione di frammenti - procedura dettagliata
 
-_Android 3.0 sono state introdotte frammenti. I frammenti sono componenti indipendenti e modulari usati per semplificare la scrittura di applicazioni che possono essere eseguite su schermi di dimensioni diverse. Questo articolo descrive come utilizzare i frammenti per sviluppare applicazioni di xamarin e come supportare i frammenti nei 3.0 dispositivi pre-Android._
-
+_I frammenti sono componenti autonomi, modulari che possono contribuire a gestire la complessità delle App Android destinate a dispositivi con un'ampia gamma di dimensioni dello schermo. In questo articolo illustra in dettaglio come creare e usare frammenti durante lo sviluppo di applicazioni di xamarin. Android._
 
 ## <a name="overview"></a>Panoramica
 
-In questa sezione verrà esaminato come creare un'applicazione che consente di visualizzare un elenco di riproduzione di considerato e un'offerta da ogni riproduzione selezionato. L'applicazione utilizzerà frammenti in modo che è possibile definire i componenti dell'interfaccia utente in un'unica posizione, ma quindi utilizzarli in diversi fattori di forma. Ad esempio, le schermate seguenti mostrano l'applicazione in esecuzione su un tablet 10", nonché su un telefono:
+In questa sezione verranno esaminati come creare e utilizzare i frammenti in un'applicazione di xamarin. Android. L'applicazione visualizzerà i titoli di riproduzione diversi da William Shakespeare in un elenco. Quando l'utente tocca sul titolo di un gioco, l'applicazione visualizzerà una virgoletta da tale play in un'attività separata:
 
-[![Schermate dell'app di esempio in esecuzione sul telefono e tablet](images/intro-screenshot-sml.png)](images/intro-screenshot.png#lightbox)
+[![App in esecuzione in un telefono Android in modalità verticale](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
 
-In questa sezione verrà trattati i seguenti argomenti:
+Quando il telefono viene ruotato in orizzontale, viene modificato l'aspetto dell'app: sia l'elenco di riproduzione e le virgolette verrà visualizzati nella stessa attività. Quando è selezionata una riproduzione, l'offerta sarà visualizzato nella stessa attività:
 
-- **Creazione di frammenti** &ndash; viene illustrato come creare un frammento di visualizzare un elenco di riproduzione di considerato e un altro frammento per la visualizzazione di un'offerta da ogni play.
+[![App in esecuzione in un telefono Android in modalità orizzontale](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
 
-- **Supporto di diverse dimensioni dello schermo** &ndash; viene illustrato come layout, l'applicazione per usufruire di maggiori dimensioni dello schermo.
+Infine, se l'app è in esecuzione su un tablet:
 
-- **Mediante il pacchetto di supporto Android** &ndash; implementa il pacchetto di supporto Android, quindi apporta alcune modifiche minori per le attività nell'applicazione, consentendo l'esecuzione in versioni precedenti di Android.
+[![App in esecuzione su un tablet Android](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)
 
+Questa applicazione di esempio può adattare facilmente i diversi fattori di forma e gli orientamenti con modifiche minime al codice usando frammenti e [layout alternativi](/xamarin/android/app-fundamentals/resources-in-android/alternate-resources).
 
-## <a name="requirements"></a>Requisiti
+I dati per l'applicazione saranno disponibile in due matrici di stringhe che sono hardcoded nell'app come matrici di stringhe in c#. Ognuna delle matrici fungerà da origine dati per un frammento.  Una matrice conterrà il nome di alcuni svolto da considerato e l'altra matrice conterrà una virgoletta da tale play. Se l'app viene avviata, visualizzerà i nomi di riproduzione in un `ListFragment`. Quando l'utente fa clic sul gioco nel `ListFragment`, l'app verrà avviata un'altra attività che verrà visualizzato l'offerta.
 
-Questa procedura dettagliata richiede xamarin 4.0 o versione successiva. Inoltre sarà necessario installare il pacchetto di supporto Android, come descritto nella documentazione di frammenti.
+L'interfaccia utente per l'app sarà costituito da due layout, uno per verticale e uno per la modalità orizzontale. In fase di esecuzione Android determinerà il layout per caricare in base all'orientamento del dispositivo e fornirà tale layout per l'attività per eseguire il rendering. Tutta la logica per risponde ai clic dell'utente e la visualizzazione dei dati saranno contenuti in frammenti. Le attività nell'app esistono solo come contenitori che ospiteranno i frammenti.
 
+Questa procedura dettagliata verrà suddivisi in due guide. Il [prima parte](./walkthrough.md) si basano sulle parti principali dell'applicazione. Verrà creato un singolo set di layout (ottimizzato per la modalità verticale), insieme ai due frammenti e due attività:
 
-## <a name="introduction"></a>Introduzione
+1. `MainActivity` &nbsp; Questo è l'attività di avvio per l'app.
+1. `TitlesFragment` &nbsp; Questo frammento verrà visualizzato un elenco dei titoli di riproduzione che sono state progettate William Shakespeare. Questa verrà ospitata da `MainActivity`.
+1. `PlayQuoteActivity` &nbsp; `TitlesFragment` verrà avviata il `PlayQuoteActivity` in risposta all'utente la selezione di riproduzione in `TitlesFragment`.
+1. `PlayQuoteFragment` &nbsp; Questo frammento visualizzerà una virgoletta da riprodurre dal William Shakespeare. Questa verrà ospitata da `PlayQuoteActivity`.
 
-Nell'esempio che verrà creato in questa sezione, le attività non contengono la logica per il caricamento dell'elenco, rispondere alla selezione dell'utente o visualizzare l'offerta per la riproduzione selezionato. Questa logica esiste nei singoli frammenti.
-Inserendo questa logica nei frammenti autonomamente, è possibile suddividere il flusso di lavoro dell'applicazione per supportare schermi di grandi dimensioni con un'attività o schermi di piccole dimensioni con più attività senza dover scrivere una logica diversa per ogni attività. Su un tablet, entrambi i frammenti saranno in un'attività. Su un telefono, i frammenti verranno ospitati in attività diverse.
-
-Questa applicazione include le parti seguenti:
-
- **MainActivity** : consente di visualizzare uno o entrambi i frammenti, a seconda delle dimensioni dello schermo. Questo è l'attività di avvio.
-
- **TitlesFragment** : visualizza un elenco di riproduzione di considerato da cui l'utente può selezionare.
-
- **DetailsFragment** : Visualizza l'offerta dalla riproduzione selezionato.
-
- **DetailsActivity** : ospita e visualizza il DetailsFragment.
-Questa attività viene utilizzata dai dispositivi Monitor di piccole dimensioni, ad esempio telefoni.
-
-
+Il [seconda parte di questa procedura dettagliata](./walkthrough-landscape.md) parlerà aggiunta di un layout diverso (ottimizzato per la modalità orizzontale) che verranno visualizzati entrambi i frammenti sullo schermo. Inoltre, verranno apportate alcune modifiche di codice secondario per il codice in modo che l'app verrà adattare il comportamento corrispondente al numero di frammenti che vengono visualizzati contemporaneamente sullo schermo.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [FragmentsWalkthrough (esempio)](https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/)
 - [Panoramica della finestra di progettazione](~/android/user-interface/android-designer/index.md)
-- [Esempi di xamarin: raccolta Nido d'API](https://developer.xamarin.com/samples/HoneycombGallery/)
 - [Implementazione di frammenti](http://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [Pacchetto di supporto](http://developer.android.com/sdk/compatibility-library.html)

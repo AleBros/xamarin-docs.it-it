@@ -5,12 +5,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.date: 04/05/2017
-ms.openlocfilehash: 21af0ef09644f39f9be42788b3d8f4977a2143d3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
-ms.translationtype: MT
+ms.date: 05/06/2018
+ms.openlocfilehash: a4ca803085f31ff0db5dd4f194b705d765447c9d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="apple-account-management"></a>Gestione degli Account di Apple
 
@@ -18,23 +18,20 @@ L'interfaccia di gestione di account Apple fornisce un modo per visualizzare tut
 
 L'autenticazione dell'ID Apple viene eseguita nella riga di comando con [fastlane](https://fastlane.tools/). FastLane debba essere installati nel computer per poter essere autenticato. Ulteriori informazioni su fastlane e modalità di installazione dettagliate di [fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) Guide.
 
-La finestra di dialogo Account di Apple in Visual Studio per Mac consente di eseguire le operazioni seguenti:
+La finestra di dialogo Account Apple consente di eseguire le operazioni seguenti:
 
 * **Creare e gestire i certificati** 
 * **Creare e gestire profili di Provisioning** 
 
 Informazioni su come eseguire questa operazione sono descritta in questa Guida.
 
-È anche possibile utilizzare strumenti firma Bundle iOS per eseguire le operazioni seguenti:
-
-* **Aggiungere una nuova identità di firma per un profilo esistente** 
-* **Eseguire il provisioning di nuovi dispositivi** 
+È inoltre possibile utilizzare iOS gli strumenti di Provisioning automatico per creare e gestire le identità di firma, ID di App e i profili di Provisioning automaticamente.
 
 Per ulteriori informazioni sull'utilizzo di queste funzionalità, consultare il [Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) Guida.
 ️
 ## <a name="requirements"></a>Requisiti
 
-Gestione degli account Apple è disponibile in Visual Studio per Mac. Non è attualmente disponibile in Visual Studio per Windows.
+Gestione degli account Apple è disponibile in Visual Studio per Mac e Visual Studio 2017 (versione 15.7 e versioni successive)
 
 È necessario disporre di un account per sviluppatori di Apple per usare questa funzionalità. Ulteriori informazioni sugli account per sviluppatori di Apple sono disponibile nel [Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) Guida.
 
@@ -44,6 +41,8 @@ Gestione degli account Apple è disponibile in Visual Studio per Mac. Non è att
 - Prima di iniziare, assicurarsi di eventuali contratti di licenza utente di accettare il [portale per sviluppatori](https://developer.apple.com/account/).
 
 ## <a name="adding-an-apple-developer-account"></a>Aggiunta di un account per sviluppatori di Apple
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 1. Per aprire la finestra di dialogo di gestione di account, passare a **Visual Studio > Preferenze > Account per sviluppatori Apple**:
 
@@ -57,18 +56,35 @@ Gestione degli account Apple è disponibile in Visual Studio per Mac. Non è att
  
 5. Selezionare **Consenti sempre** nella finestra di dialogo di avviso per consentire a Visual Studio utilizzare le credenziali:
 
-    ![](apple-account-management-images/image4.png)
+    ![Consenti sempre le finestra di dialogo Avviso](apple-account-management-images/image4.png)
 
 6. Una volta che l'account è stato aggiunto correttamente, verrà visualizzato il proprio ID Apple e agli eventuali team che il proprio ID Apple.
 
-    ![](apple-account-management-images/image5.png)
+    ![Finestra di dialogo di Apple developer account con gli account aggiunti](apple-account-management-images/image5.png)
 
 7. Selezionare qualsiasi team e premere il **visualizzare i dettagli...** immagini (...). Questo verrà visualizzato un elenco di tutti i profili di Provisioning che vengono installati nel computer e le identità di firma:
 
-    ![](apple-account-management-images/image6.png)
+    ![Visualizzazione dei dettagli nella schermata identità di firma e profili nel computer di provisioning](apple-account-management-images/image6.png)
 
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-<a name="managing" />
+1. Prima di iniziare ad aggiungere il proprio ID Apple in Visual Studio 2017, assicurarsi che l'ambiente di sviluppo sia [abbinati a un host di compilazione Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+
+1. Per aprire la finestra di gestione di account, Vai a **strumenti > Opzioni > Xamarin > account Apple**:
+
+    ![Schermata di opzioni di account di Apple](apple-account-management-images/prov1.png)
+
+1. Selezionare il **Aggiungi** pulsante e immettere il proprio ID Apple e la password:
+
+    ![finestra di dialogo nome utente e password](apple-account-management-images/prov1a.png)
+
+1. Una volta che l'account è stato aggiunto correttamente, verrà visualizzato il proprio ID Apple e agli eventuali team che il proprio ID Apple.
+ 
+1. Selezionare qualsiasi team e premere il **visualizzare i dettagli...** immagini (...). Questo verrà visualizzato un elenco di tutti i profili di Provisioning che vengono installati nel computer e le identità di firma:
+
+    ![finestra di dialogo nome utente e password](apple-account-management-images/prov2.png)
+
+-----
 
 
 ## <a name="managing-signing-identities-and-provisioning-profiles"></a>La gestione delle identità di firma e profili di Provisioning
@@ -83,21 +99,37 @@ La finestra di dialogo Dettagli team visualizza un elenco di identità di firma,
 
 * **Scaduto** : il certificato è scaduto. È necessario rimuovere questo da portachiavi.
 
-  ![](apple-account-management-images/image7.png)
+  ![informazioni finestra di dialogo Dettagli su team](apple-account-management-images/image7.png)
 
 ## <a name="create-a-signing-identities"></a>Creare un'identità di firma
 
-Per creare una nuova identità di firma, selezionare il **creare nuovo certificato** pulsante a discesa e selezionare il tipo richiesto. Se si dispone delle autorizzazioni corrette di una nuova firma identità apparirà dopo alcuni secondi.
+Per creare una nuova identità di firma, selezionare il **Create Certificate** pulsante di menu a discesa e selezionare il tipo che è necessario. Se si dispone delle autorizzazioni corrette di una nuova firma identità apparirà dopo alcuni secondi.
 
-Se un'opzione nell'elenco a discesa è disattivata e non viene selezionata, come illustrato di seguito, significa che non si dispone delle autorizzazioni team corretto per creare questo tipo di certificato.
+Se un'opzione nell'elenco a discesa è disattivata e deselezionata, significa che non si dispone delle autorizzazioni team corretti per creare questo tipo di certificato.
 
-![](apple-account-management-images/image8.png)
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+
+![creare le opzioni di certificati](apple-account-management-images/image8.png)
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+![creare le opzioni di certificati](apple-account-management-images/prov3.png)
+
+-----
 
 ## <a name="download-provisioning-profiles"></a>Scaricare i profili di Provisioning
 
 La finestra di dialogo Dettagli team visualizza inoltre un elenco di tutti i profili di provisioning connessi al proprio account sviluppatore. È possibile scaricare tutti i profili di provisioning nel computer locale, premendo il **scaricare tutti i profili** pulsante
 
-![](apple-account-management-images/image9.png)
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+
+![Scaricare provisioning sezione profili](apple-account-management-images/image9.png)
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+![Scaricare provisioning sezione profili](apple-account-management-images/prov4.png)
+
+-----
 
 ## <a name="ios-bundle-signing"></a>Firma bundle iOS
 
@@ -107,7 +139,7 @@ Per informazioni sulla distribuzione dell'app in un dispositivo, consultare il [
 
 ### <a name="view-details-dialog-is-empty"></a>Finestra di dialogo visualizzazione dettagli è vuoto
 
-È attualmente un problema noto, relativi a bug [&#53906;](https://bugzilla.xamarin.com/show_bug.cgi?id=53906). Assicurarsi che si utilizza la versione stabile più recente di Visual Studio per Mac
+È attualmente un problema noto, relativi a bug [53906 #](https://bugzilla.xamarin.com/show_bug.cgi?id=53906). Assicurarsi che si utilizza la versione stabile più recente di Visual Studio per Mac
 
 ### <a name="if-you-are-experiencing-issues-logging-in-your-account-please-try-the-following"></a>Se si verificano problemi nell'account di accesso, provare le operazioni seguenti:
 
@@ -120,13 +152,10 @@ In questo modo 2 factor authentication è abilitato per l'account. Assicurarsi c
 ### <a name="failed-to-create-new-certificate"></a>Impossibile creare il nuovo certificato
 "È stato raggiunto il limite per i certificati di questo tipo"
 
-![](apple-account-management-images/image10.png)
+![finestra di dialogo limite certificato](apple-account-management-images/image10.png)
 
 Il numero massimo di certificati consentito è stato generato. Per risolvere questo problema, individuare il [Apple Developer Center](https://developer.apple.com/account/ios/certificate/distribution) e revocare uno dei certificati di produzione.
 
 ## <a name="known-issues"></a>Problemi noti
 
-* In alcuni casi, la finestra di dialogo Visualizza dettagli può richiedere una quantità eccessiva di tempo per recuperare le identità di firma e i profili.
-* Spesso lo stato attivo potrebbe non restituire a Visual Studio per Mac dopo aver immesso i dettagli, che l'account non deve essere aggiunto. In questo caso, provare di nuovo il processo.
-* I profili di provisioning creati in Visual Studio per Mac non tengono conto dei diritti selezionati nei progetti (Entitlements.plist). Questa funzionalità verrà aggiunta nelle versioni successive dell'IDE.
 * Per impostazione predefinita, i profili di provisioning di distribuzione indirizzano all'App Store. È necessario creare manualmente profili interni o ad hoc.

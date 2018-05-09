@@ -1,44 +1,24 @@
 ---
-title: Stili
+title: App xamarin. Forms Styling
 description: Utilizzando gli stili per personalizzare l'aspetto
 ms.prod: xamarin
-ms.assetid: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8
+ms.assetid: EABF5072-B89B-4356-B7B3-1C6B40358926
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/17/2016
-ms.openlocfilehash: 7a19f7597ee17282bc8b41e7f0e7e3ade2361a50
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 28/04/2018
+ms.openlocfilehash: f6a80084ea68bb57a0c8aa61ad15d16dd67c6fc4
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="styles"></a>Stili
+# <a name="styling-xamarinforms-apps"></a>App xamarin. Forms Styling
 
-## <a name="introductionintroductionmd"></a>[Introduzione](introduction.md)
+## <a name="styling-xamarinforms-apps-using-xaml-stylesxamlindexmd"></a>[App xamarin. Forms usando sintassi XAML per gli stili di stile](xaml/index.md)
 
-Xamarin. Forms applicazioni spesso contengono più controlli che hanno un aspetto identico. Impostare l'aspetto di ogni singolo controllo può essere ricorrenti e soggetta a errori. Invece, gli stili possono essere creati che consentono di personalizzare l'aspetto del controllo da proprietà raggruppamento e le impostazioni disponibili sul tipo di controllo.
+Applicazione degli stili un'app xamarin. Forms tradizionalmente mediante il [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) (classe) per raggruppare un insieme di valori di proprietà in un unico oggetto che può essere applicato a più istanze di elemento visivo. Ciò consente di ridurre markup ripetitiva e consente un aspetto delle app più semplice da modificare.
 
-## <a name="explicit-stylesexplicitmd"></a>[Stili espliciti](explicit.md)
+## <a name="styling-xamarinforms-apps-using-cascading-style-sheetscssindexmd"></a>[Applicazione degli stili le app xamarin. Forms usando fogli di stile CSS](css/index.md)
 
-Un *esplicita* stile è quello che viene applicato in modo selettivo a controlli impostando i relativi [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) proprietà.
-
-## <a name="implicit-stylesimplicitmd"></a>[Stili impliciti](implicit.md)
-
-Un *implicita* stile è utilizzato da tutti i controlli dello stesso [ `TargetType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/), senza la necessità di ciascun controllo per fare riferimento allo stile.
-
-## <a name="global-stylesapplicationmd"></a>[Stili globali](application.md)
-
-Gli stili possono essere resi disponibili a livello globale, aggiungerli all'applicazione [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/). Ciò consente di evitare la duplicazione degli stili nelle pagine o controlli.
-
-## <a name="style-inheritanceinheritancemd"></a>[Ereditarietà degli stili](inheritance.md)
-
-Stili possono ereditare da altri stili per ridurre la duplicazione e consentire il riutilizzo.
-
-## <a name="dynamic-stylesdynamicmd"></a>[Stili dinamici](dynamic.md)
-
-Stili non rispondere alle modifiche di proprietà e rimangono invariati per tutta la durata di un'applicazione. Tuttavia, le applicazioni come rispondere alle modifiche di stile in modo dinamico in fase di esecuzione utilizzando le risorse dinamiche.
-
-## <a name="device-stylesdevicemd"></a>[Stili di dispositivo](device.md)
-
-Xamarin. Forms include sei *dinamica* stili, noti come *dispositivo* gli stili, il [ `Devices.Styles` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/) classe. Tutti i sei stili possono essere applicati a [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) solo istanze.
+Xamarin. Forms supporta gli elementi visivi di definizione dello stile utilizzando fogli CSS (Cascading Style). Un foglio di stile è costituito da un elenco di regole, con ogni regola composta da uno o più selettori e un blocco di dichiarazione.

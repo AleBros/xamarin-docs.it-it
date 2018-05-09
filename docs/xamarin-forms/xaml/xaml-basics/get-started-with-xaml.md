@@ -6,12 +6,12 @@ ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 10/25/2017
-ms.openlocfilehash: f8032966b49f6f023642b0d1338e8c5d740b66e0
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 04/10/2018
+ms.openlocfilehash: bc535160816ad186baaa5e802eceb6ae40347d75
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introduzione a XAML
 
@@ -23,9 +23,9 @@ Per iniziare la modifica del primo file XAML, utilizzare Visual Studio o Visual 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-In Windows, utilizzare Visual Studio per selezionare **File > Nuovo > progetto** dal menu. Nel **nuovo progetto** finestra di dialogo Seleziona **Visual c# > multipiattaforma** a sinistra, quindi **Cross Platform App (xamarin. Forms o nativo)** dall'elenco al centro. 
+In Windows, utilizzare Visual Studio per selezionare **File > Nuovo > progetto** dal menu. Nel **nuovo progetto** finestra di dialogo, seleziona **Visual c# > multipiattaforma** a sinistra, quindi **Mobile App (xamarin. Forms)** dall'elenco al centro. 
 
-![](get-started-with-xaml-images/win/newprojectdialog.png "Finestra di dialogo Nuovo progetto")
+![](get-started-with-xaml-images/win/newprojectdialog.w157.png "Finestra di dialogo Nuovo progetto")
 
 Selezionare un percorso per la soluzione, assegnargli un nome di **XamlSamples** (o secondo le proprie preferenze) e premere **OK**.
 
@@ -226,7 +226,7 @@ Verificare che il programma ancora compila e distribuisce prima di continuare.
 
 Per aggiungere altri basate su XAML `ContentPage` classi al progetto, selezionare il **XamlSamples** PCL progetto e richiamare il **progetto > Aggiungi nuovo elemento** voce di menu. A sinistra del **Aggiungi nuovo elemento** finestra di dialogo Seleziona **Visual c#** e **xamarin. Forms**. Nell'elenco selezionare **pagina contenuto** (non **pagina contenuto (c#)**, che consente di creare una pagina solo codice, o **visualizzazione contenuto**, che non è una pagina). Assegnare, ad esempio, un nome, la pagina **HelloXamlPage.xaml**:
 
-![](get-started-with-xaml-images/win/addnewitemdialog.png "Aggiungere una finestra di dialogo Nuovo elemento")
+![](get-started-with-xaml-images/win/addnewitemdialog.w157.png "Aggiungere una finestra di dialogo Nuovo elemento")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 

@@ -6,12 +6,12 @@ ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/17/2017
-ms.openlocfilehash: 5fdc05de19799ce7b553428c23f860186909bcbb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: a4f38e93cae3c9577a0b1e32067da2cfd2e4796d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="implementing-sirikit"></a>Implementazione SiriKit
 
@@ -95,7 +95,7 @@ Seguire questa procedura:
 2. Fare clic sul nome della soluzione nel **Esplora** e selezionare **Aggiungi** > **nuovo progetto...** .
 3. Selezionare **Visual c#** > **progetto condiviso** e fare clic su di **Avanti** pulsante: 
 
-    [![](implementing-sirikit-images/prep02w.png "Selezionare una libreria di classi")](implementing-sirikit-images/prep02w.png#lightbox)
+    [![](implementing-sirikit-images/prep02.w157-sml.png "Selezionare una libreria di classi")](implementing-sirikit-images/prep02.w157.png#lightbox)
 4. Immettere `MonkeyChatCommon` per il **nome** e fare clic su di **crea** pulsante.
 5. Fare clic su di **riferimenti** cartella dell'applicazione principale nel **Esplora** e selezionare **Modifica riferimenti...** . Controllare il **MonkeyChatCommon** sul progetto e scegliere il **OK** pulsante: 
 
@@ -459,7 +459,7 @@ Per aggiungere un `AppIntentVocabulary.plist` file al progetto di app, eseguire 
 
 1. Fare doppio clic sul nome del progetto nel **Esplora** e selezionare **Aggiungi** > **nuovo File...**   >  **iOS**:
 
-    [![](implementing-sirikit-images/plist01.png "Aggiungere un elenco di proprietà")](implementing-sirikit-images/plist01.png#lightbox) 
+    [![](implementing-sirikit-images/plist01.png "Aggiungere un elenco di proprietà")](implementing-sirikit-images/plist01.png#lightbox)
 2. Fare doppio clic su di `AppIntentVocabulary.plist` file nel **Esplora** per aprirlo e modificarlo.
 3. Fare clic su di **+** per aggiungere una chiave, impostare il **nome** a `ParameterVocabularies` e **tipo** per `Array`:
 
@@ -521,9 +521,10 @@ Per aggiungere un `AppIntentVocabulary.plist` file al progetto di app, eseguire 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. Fare doppio clic sul nome del progetto nel **Esplora** e selezionare **Aggiungi** > **nuovo File...**   >  **iOS**:
+1. Destro del mouse sul nome del progetto nel **Esplora soluzioni** e selezionare **Aggiungi > Nuovo elemento... > Apple > elenco di proprietà > Info. plist**:
 
-    [![](implementing-sirikit-images/plist01w.png "Aggiungere un nuovo file Info. plist")](implementing-sirikit-images/plist01w.png#lightbox) 
+    [![](implementing-sirikit-images/plist01.w157-sml.png "Aggiungere un nuovo file Info. plist")](implementing-sirikit-images/plist01.w157.png#lightbox)
+
 2. Fare doppio clic su di `AppIntentVocabulary.plist` file nel **Esplora** per aprirlo e modificarlo.
 3. Fare clic su di **+** per aggiungere una chiave, impostare il **nome** a `ParameterVocabularies` e **tipo** per `Array`:
 
@@ -625,11 +626,11 @@ Per aggiungere un'estensione di tipi per la soluzione, eseguire le operazioni se
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Fare clic su di **Nome soluzione** nel **Esplora** e selezionare **Aggiungi** > **Aggiungi nuovo progetto...** .
-2. Nella finestra di dialogo selezionare **iOS** > **estensioni** > **estensione finalità** e fare clic su di **Avanti** pulsante: 
+2. Nella finestra di dialogo selezionare **Visual c# > iOS estensioni > estensione finalità** e fare clic sul **successivo** pulsante:
 
-    [![](implementing-sirikit-images/intents05w.png "Selezionare l'estensione preventivo")](implementing-sirikit-images/intents05w.png#lightbox)
+    [![](implementing-sirikit-images/intents05.w157-sml.png "Selezionare l'estensione preventivo")](implementing-sirikit-images/intents05.w157.png#lightbox)
 3. Quindi immettere un **nome** la finalità dell'estensione e fare clic su di **OK** pulsante.
-5. Nel **Esplora**, fare clic su di **riferimenti** cartella dell'estensione finalità appena creato. Verificare il nome del progetto di libreria codice condiviso comune (che l'app è stato creato in precedenza) e fare clic su di **OK** pulsante: 
+1. Nel **Esplora soluzioni**, fare clic sui **riferimenti** cartella dell'estensione intenti appena creato e scegliere **Aggiungi > riferimento**. Verificare il nome del progetto di libreria codice condiviso comune (che l'app è stato creato in precedenza) e fare clic su di **OK** pulsante:
 
     [![](implementing-sirikit-images/intents08w.png "Selezionare il nome del progetto di libreria di codice condiviso comune")](implementing-sirikit-images/intents08w.png#lightbox)
     

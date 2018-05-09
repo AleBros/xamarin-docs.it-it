@@ -6,12 +6,12 @@ ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: a6cb08f19aac46ffa089914e28c732660caa52b2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/11/2018
+ms.openlocfilehash: 2d9f2198dbb88e7614944ac73729a4e6eca42647
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-a-jar"></a>Associazione di una. FILE JAR
 
@@ -81,7 +81,7 @@ Prima di iniziare con la procedura seguente, scaricare [picasso 2.x.x.jar](http:
 
 Innanzitutto, creare un nuovo progetto libreria di associazioni. In Visual Studio per Mac o Visual Studio, creare una nuova soluzione e selezionare il *libreria associazioni Android* modello. (Le schermate in questa procedura dettagliata utilizzano Visual Studio, ma Visual Studio per Mac è molto simile). Denominare la soluzione **JarBinding**: 
 
-[![Creare il progetto di libreria JarBinding](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png#lightbox)
+[![Creare il progetto di libreria JarBinding](binding-a-jar-images/01-new-bindings-library-sml.w157.png)](binding-a-jar-images/01-new-bindings-library.w157.png#lightbox)
 
 Il modello include un **file JAR** cartella in cui si aggiunge il. JAR(s) al progetto libreria di associazioni. Fare doppio clic su di **file JAR** cartella e selezionare **Aggiungi > elemento esistente**: 
 
@@ -130,7 +130,7 @@ Nei passaggi seguenti, si creerà un'applicazione minimo che utilizza la raccolt
 
 Innanzitutto, creare una nuova app xamarin che utilizza la raccolta di associazioni. La soluzione e scegliere **Aggiungi nuovo progetto**; denominare il nuovo progetto **BindingTest**. Si sta creando questa applicazione nella stessa soluzione come la raccolta di associazioni per semplificare questa procedura dettagliata; Tuttavia l'app che utilizza la raccolta di associazioni invece potrebbe trovarsi in una soluzione diversa: 
 
-[![Aggiungi nuovo progetto BindingTest](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png#lightbox)
+[![Aggiungi nuovo progetto BindingTest](binding-a-jar-images/07-add-new-project-sml.w157.png)](binding-a-jar-images/07-add-new-project.w157.png#lightbox)
 
 Fare doppio clic su di **riferimenti** nodo del **BindingTest** del progetto e selezionare **Aggiungi riferimento...** :
 

@@ -6,12 +6,12 @@ ms.assetid: 380413B8-6A99-4BB8-B64C-3EAF9F359C22
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 101fb28add97749549de9c44292a1ef99a717dde
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/11/2018
+ms.openlocfilehash: 54708a7cfd071f77968991c9fe4e52938697c9bb
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-an-aar"></a>Associazione di un. AAR
 
@@ -82,7 +82,7 @@ Prima di iniziare con la procedura seguente, scaricare l'esempio [textanalyzer.a
 
 1.  Creare un nuovo progetto di libreria di associazioni a partire dal modello libreria Android di associazioni. È possibile utilizzare Visual Studio per Mac o Visual Studio (schermate riportate di seguito mostrano Visual Studio, ma Visual Studio per Mac è molto simile). Denominare la soluzione **AarBinding**:
 
-    [![Creare il progetto AarBindings](binding-an-aar-images/01-new-bindings-library-vs-sml.png)](binding-an-aar-images/01-new-bindings-library-vs.png#lightbox)
+    [![Creare il progetto AarBindings](binding-an-aar-images/01-new-bindings-library-vs-sml.w157.png)](binding-an-aar-images/01-new-bindings-library-vs.w157.png#lightbox)
 
 2.  Il modello include un **file JAR** cartella in cui si aggiunge il. AAR(s) al progetto libreria di associazioni. Fare doppio clic su di **file JAR** cartella e selezionare **Aggiungi > elemento esistente**:
 
@@ -118,7 +118,7 @@ Per utilizzare questo. DLL in app xamarin, è necessario prima aggiungere un rif
 
 1.  Si sta creando questa applicazione nella stessa soluzione come libreria di associazioni per semplificare questa procedura dettagliata. (L'app che utilizza la raccolta di associazioni può inoltre trovarsi in una soluzione diversa). Creare una nuova app xamarin: la soluzione e scegliere **Aggiungi nuovo progetto**. Denominare il nuovo progetto **BindingTest**:
 
-    [![Crea nuovo progetto BindingTest](binding-an-aar-images/07-add-new-project-vs-sml.png)](binding-an-aar-images/07-add-new-project-vs.png#lightbox)
+    [![Crea nuovo progetto BindingTest](binding-an-aar-images/07-add-new-project-vs-sml.w157.png)](binding-an-aar-images/07-add-new-project-vs.w157.png#lightbox)
 
 2.  Fare doppio clic su di **riferimenti** nodo del **BindingTest** del progetto e selezionare **Aggiungi riferimento...** :
 

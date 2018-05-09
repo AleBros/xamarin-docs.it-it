@@ -5,12 +5,12 @@ ms.assetid: A78A55E7-FB5C-4C42-8E3E-939B5E98F9EB
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/01/2018
-ms.openlocfilehash: d1e0fdb1c4b159b6db283d7b9b3be673b73a0ee0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: 00785ad161f5f05fd70b059bb0a3f1c8d6c31f97
+ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-a-service"></a>Creazione di un servizio
 
@@ -82,8 +82,8 @@ Il passaggio successivo è possibile analizzare come avviare un servizio e quind
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
--   **Finalità implicita** &ndash; questo tipo di finalità regime di controllo libero identifica dell'azione che deve essere eseguita, ma il servizio esatto per eseguire questa operazione è sconosciuto. Un intento implicito può essere considerato come una lettera indirizzati a "To Whom It maggio problema …".
-    Android esaminerà il contenuto della finalità e determinare se è presente un servizio esistente a cui corrisponde la finalità.
+-   **Finalità implicita** &ndash; delle finalità di questo tipo regime di controllo libero identifica dell'azione che l'utente desidera eseguire, ma il servizio esatto per eseguire questa operazione è sconosciuto. Un intento implicito può essere considerato come una lettera indirizzati a "To Whom It maggio problema …".
+    Android verrà esaminarne il contenuto delle finalità e determinare se è presente un servizio esistente che corrisponde allo scopo.
 
     Un _filtro preventivo_ viene utilizzato per ottenere una corrispondenza con l'intento implicito con un servizio registrato. Un filtro preventivo è un elemento XML che viene aggiunto a **AndroidManifest.xml** che contiene i metadati necessari per ottenere una corrispondenza con un servizio con stato intento implicito.
 

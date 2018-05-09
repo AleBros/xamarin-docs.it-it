@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: 96ee8343bb2b99fdc0be9437aaa7737a70b8c19c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5ee04614a500618846ad3acf2a38f279351d6e9d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ios-localization"></a>Localizzazione di iOS
 
@@ -359,5 +359,5 @@ Questo articolo vengono illustrate le nozioni di base di localizzazione di appli
 - [Tasky (storyboard localizzate) (esempio)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard)
 - [Guida di Apple localizzazione](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)
 - [Cenni preliminari sulla localizzazione multipiattaforma](~/cross-platform/app-fundamentals/localization.md)
-- [Localizzazione di xamarin. Forms](~/xamarin-forms/app-fundamentals/localization.md)
+- [Localizzazione di xamarin. Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [Localizzazione di Android](~/android/app-fundamentals/localization.md)

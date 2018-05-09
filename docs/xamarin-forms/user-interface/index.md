@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 83fb7a03b3426631fcf772bcb3605fea44fd4f2b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3485a7ebf9c54c2aa084dd11f32cd028cbc68aff
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="user-interface"></a>Interfaccia utente
 
@@ -51,7 +51,7 @@ Le immagini possono essere condivisi tra piattaforme con xamarin. Forms, possono
 
 ## <a name="layoutslayoutsindexmd"></a>[Layout](layouts/index.md)
 
-Xamarin. Forms include diversi layout per l'organizzazione di contenuto visualizzato sullo schermo. `StackLayout`, `Grid`, `AbsoluteLayout`, `ScrollView`, e `RelativeLayout` ogni consentono di creare interfacce utente accattivanti, reattiva.
+Xamarin. Forms include diversi layout per l'organizzazione di contenuto visualizzato sullo schermo. `StackLayout`, `Grid`, `FlexLayout`, `AbsoluteLayout`, `ScrollView`, e `RelativeLayout` ognuno consente di creare interfacce utente efficaci e reattive.
 
 ## <a name="listviewlistviewindexmd"></a>[ListView](listview/index.md)
 
@@ -84,6 +84,10 @@ Xamarin. Forms sono disponibili visualizzazioni diverse per la presentazione e l
 ## <a name="themesthemesindexmd"></a>[Temi](themes/index.md)
 
 I temi di xamarin. Forms definiscono un aspetto specifico per i controlli standard. Dopo aver aggiunto un tema al dizionario di risorse dell'applicazione, verrà modificato l'aspetto dei controlli standard.
+
+## <a name="visual-state-managervisual-state-managermd"></a>[Gestione dello stato di visualizzazione](visual-state-manager.md)
+
+Il gestore dello stato fornisce un modo strutturato per attivare le modifiche nell'interfaccia utente dal codice, inclusi i layout in grado di adattarsi alle modifiche della dimensione o orientamento del dispositivo.
 
 ## <a name="webviewwebviewmd"></a>[WebView](webview.md)
 

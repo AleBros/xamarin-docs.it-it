@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 864e81b6955fd5138c4055a3f202695803139ac6
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 2f57ac5b5b54b2606618c5e59fb544cae7c77e88
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="layouts"></a>Layout
 
@@ -28,6 +28,7 @@ Ogni controllo di layout è descritta di seguito, nonché informazioni dettaglia
 * **[AbsoluteLayout](absolute-layout.md)**  &ndash; utilizzato per disporre le visualizzazioni impostando coordinate & dimensioni in termini di valori assoluti o rapporti. AbsoluteLayout utilizzabile per le visualizzazioni di livello, nonché ancorarli a sinistra, destra o al centro.
 * **[RelativeLayout](relative-layout.md)**  &ndash; usato per disporre le visualizzazioni impostando vincoli rispetto al rispettivo elemento padre le dimensioni e posizione.
 * **[Griglia](grid.md)**  &ndash; usato per disporre le visualizzazioni in una griglia. È possibile specificare le righe e colonne in termini di valori assoluti o rapporti.
+* **[FlexLayout](flex-layout.md)**  &ndash; usato per disporre le viste in senso orizzontale o verticale con ritorno a capo.
 * **[Elemento ScrollView](scroll-view.md)**  &ndash; utilizzato per fornire lo scorrimento quando una vista non può essere contenuta interamente all'interno dei limiti dello schermo.
 * **[LayoutOptions](layout-options.md)**  &ndash; definire l'allineamento e l'espansione di una visualizzazione, rispetto al padre.
 * **[La trasparenza di input](#input_transparency)**  &ndash; specifica se un elemento riceve l'input.
@@ -59,6 +60,23 @@ Per un esempio di quando `StackLayout` potrebbe essere una scelta ottimale, si c
   <Button HorizontalOptions="End" Text="Button" />
 </StackLayout>
 ```
+
+### <a name="flexlayoutflex-layoutmd"></a>[FlexLayout](flex-layout.md)
+
+Il `FlexLayout` è simile a `StackLayout` in cui viene visualizzata visualizzazioni figlio orizzontalmente o verticalmente:
+
+```xaml
+<FlexLayout Direction="Column"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly">
+        
+    <Label Text="FlexLayout in Action" />
+    <Button Text="Button" />
+    <Label Text="Another Label" />
+</FlexLayout>
+```
+
+Tuttavia, se sono presenti troppi elementi figlio per essere contenuta in una singola riga o colonna, `FlexLayout` è inoltre in grado di disposizione testo per tali visualizzazioni. `FlexLayout` si basa sul modulo di Layout casella flessibile di CSS e ha molte le stesse opzioni predefinite per il posizionamento e allineamento dei relativi elementi figlio.
 
 ### <a name="absolutelayoutabsolute-layoutmd"></a>[AbsoluteLayout](absolute-layout.md)
 

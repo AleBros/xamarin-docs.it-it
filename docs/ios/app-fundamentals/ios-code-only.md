@@ -6,12 +6,12 @@ ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/18/2017
-ms.openlocfilehash: 7e8460d2c946159a9869322d6d4944d213d3d801
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: e2f377b11cfb1ff5027cc704de694184d2208c97
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>Creazione di interfacce utente iOS nel codice
 
@@ -33,9 +33,7 @@ Il diagramma seguente illustra le relazioni tra la finestra, le visualizzazioni,
 
 [![](ios-code-only-images/image9.png "Questo diagramma viene illustrata la relazione tra la finestra, viste, sottoviste e View Controller")](ios-code-only-images/image9.png#lightbox)
 
-
 Queste gerarchie di visualizzazione possono essere costruite usando il [progettazione Xamarin per iOS](~/ios/user-interface/designer/index.md) in Visual Studio per Mac, tuttavia è opportuno disporre di conoscenze approfondite sulla modalità di utilizzo completamente nel codice. In questo articolo vengono illustrati alcuni aspetti di base per la configurazione e l'esecuzione con lo sviluppo di interfaccia di solo codice utente.
-
 
 -----
 
@@ -45,16 +43,17 @@ Queste gerarchie di visualizzazione possono essere costruite usando il [progetta
 
 ## <a name="ios-blank-project-template"></a>Modello di progetto vuoto di iOS
 
-Creare innanzitutto un progetto iOS in Visual Studio usando l'iPhone **progetto vuoto** modello, illustrato di seguito, che verrà esteso per aggiungere controller e visualizzazioni.
+Creare innanzitutto un progetto iOS in Visual Studio usando il **File > Nuovo progetto > c# > iPhone & iPad > iOS App (Xamarin)** progetto, vedere di seguito:
 
+[![Finestra di dialogo Nuovo progetto](ios-code-only-images/blankapp.w157-sml.png)](ios-code-only-images/blankapp.w157.png#lightbox)
 
-[![](ios-code-only-images/blankapp-vs.png "Finestra di dialogo Nuovo progetto")](ios-code-only-images/blankapp-vs.png#lightbox)
+Quindi selezionare il **applicazione vuota** modello di progetto:
 
+[![Selezionare una finestra di dialogo di modello](ios-code-only-images/blankapp-2.w157-sml.png)](ios-code-only-images/blankapp-2.w157.png#lightbox)
 
 Il modello di progetto vuoto aggiunge 4 file al progetto:
 
-
-[![](ios-code-only-images/empty-project.png "File di progetto")](ios-code-only-images/empty-project.png#lightbox)
+[![File di progetto](ios-code-only-images/empty-project.w157-sml.png "file di progetto")](ios-code-only-images/empty-project.w157.png#lightbox)
 
 
 1. **Appdelegate. cs** -contiene un `UIApplicationDelegate` sottoclasse `AppDelegate` , che viene utilizzata per gestire gli eventi dell'applicazione IOS. La finestra dell'applicazione viene creata nel `AppDelegate`del `FinishedLaunching` metodo.
@@ -99,18 +98,12 @@ I passaggi seguenti consentono di eseguire la rimozione dello Storyboard da un'a
             return true;
         }
 
+Il codice che è stato aggiunto per il `FinishedLaunching` metodo nel passaggio 5 sopra, è la quantità minima di codice necessario per creare una finestra per l'applicazione iOS.
+
 
 -----
 
-## <a name="creating-a-window"></a>Creazione di una finestra
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
-
-Il codice che è stato aggiunto per il `FinishedLaunching` metodo nel passaggio 3 riportato sopra, è la quantità minima di codice necessario per creare una finestra per l'applicazione iOS.  
-
------
 
 le applicazioni iOS vengono compilate mediante il [modello MVC](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md#Model_View_Controller). La prima schermata che consente di visualizzare un'applicazione viene creata dal controller di visualizzazione della finestra principale. Vedere il [Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md) della Guida per ulteriori informazioni sul MVC criterio stesso.
 
@@ -223,7 +216,7 @@ Aggiungere una nuova classe denominata `CustomViewController` come illustrato di
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](ios-code-only-images/customviewcontroller.png "Aggiungere una nuova classe denominata CustomViewController")](ios-code-only-images/customviewcontroller.png#lightbox)
+[![](ios-code-only-images/customviewcontroller.w157-sml.png "Aggiungere una nuova classe denominata CustomViewController")](ios-code-only-images/customviewcontroller.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -649,4 +642,4 @@ In questo articolo viene descritto come sviluppare applicazioni iOS a livello di
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [SimpleLogin (sample)](https://developer.xamarin.com/samples/monotouch/SimpleLogin)
+- [SimpleLogin (esempio)](https://developer.xamarin.com/samples/monotouch/SimpleLogin)

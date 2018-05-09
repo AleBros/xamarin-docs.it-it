@@ -6,12 +6,12 @@ ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/16/2017
-ms.openlocfilehash: 492b06420d27f902faf7240003ebe5e16416a5cb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/02/2017
+ms.openlocfilehash: 73ca0974a42bf661a89327148b68341114297084
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-app-extension-basics"></a>Nozioni di base dell'estensione App messaggio
 
@@ -131,11 +131,12 @@ Per la creazione di un'esperienza di codice personalizzato, eseguire le operazio
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Avviare Visual Studio.
-2. Aprire la soluzione per aggiungere un'estensione App messaggio. 
-3. Selezionare **iOS** > **estensioni** > **iMessage estensione** e fare clic su di **Avanti** pulsante: 
+2. Aprire la soluzione per aggiungere un'estensione di App di messaggio.
+3. Selezionare * * iOS estensioni > iMessage estensione (iOS) * * e fare clic sui **successivo** pulsante:
 
-    [![](intro-to-message-app-extensions-images/message01w.png "Selezionare l'estensione iMessage")](intro-to-message-app-extensions-images/message01.png#lightbox)
-4. Immettere un **nome estensione** e fare clic su di **OK** pulsante
+    [![Selezionare iMessage estensione (iOS)](intro-to-message-app-extensions-images/message01.w157-sml.png)](intro-to-message-app-extensions-images/message01.w157.png#lightbox)
+
+4. Immettere un **nome** e fare clic sui **OK** pulsante
 
 -----
 
@@ -166,7 +167,7 @@ Seguire questa procedura:
 1. Nel **Esplora**, fare clic sul nome del progetto di estensione e selezionare **Aggiungi** > **nuovo File...**   >  **iOS | Apple Watch** > **interfaccia Controller**.
 2. Immettere `StickerBrowserViewController` per il **nome** e fare clic su di **New** pulsante: 
 
-    [![](intro-to-message-app-extensions-images/browser01w.png "Immettere il nome StickerBrowserViewController")](intro-to-message-app-extensions-images/browser01.png#lightbox)
+    [![](intro-to-message-app-extensions-images/browser01.w157-sml.png "Immettere il nome StickerBrowserViewController")](intro-to-message-app-extensions-images/browser01.w157.png#lightbox)
 3. Aprire il `StickerBrowserViewController.cs` file per la modifica.
 
 -----

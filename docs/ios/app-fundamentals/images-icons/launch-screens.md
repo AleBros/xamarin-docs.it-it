@@ -1,17 +1,17 @@
 ---
-title: Aprire schermate
+title: Aprire schermate per le app xamarin
 description: In questo articolo viene illustrato come creare un'app schermata di avvio per tutti i dispositivi iOS, per qualsiasi risoluzione e l'orientamento, utilizzando un unico Storyboard unificata.
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 01/19/2018
-ms.openlocfilehash: 991c2f30bcca1969e336f7269ad2a22ce6245b95
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/02/2018
+ms.openlocfilehash: d5a267bfa8655a9b9c6d4dba9d8cf9d16624ba9b
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="launch-screens"></a>Aprire schermate
 
@@ -96,17 +96,19 @@ In iOS 8 (e versioni successive), lo sviluppatore può creare uno Storyboard uni
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. Creare un nuovo progetto. In Visual Studio, selezionare **File > Nuovo > progetto**, quindi scegliere **singola vista App (iPhone)**:
-    
-    ![La finestra Nuovo progetto, con una singola visualizzazione App (iPhone) selezionata](launch-screens-images/launch01-vs.png)
+1. Creare un nuovo progetto. In Visual Studio, selezionare **File > Nuovo > progetto > c# > iPhone & iPad > iOS App (Xamarin)**:
 
-    - Denominare il progetto, scegliere un percorso e selezionare **OK**.
+    ![La finestra Nuovo progetto, con App (Xamarin) iOS selezionata](launch-screens-images/launch01.w157.png)
+
+    Selezionare il **singola vista App** modello e quindi fare clic su **OK**:
+
+    ![Singolo modello Visualizza App](launch-screens-images/launch01-2.w157.png)
 
 2. Se **risorse > LaunchScreen.xib** esiste nel **Esplora**, eliminarlo facendo clic sul file e scegliendo **eliminare**. Questo file verrà sostituito con uno Storyboard nel passaggio successivo.
 
 3. Creare uno Storyboard da utilizzare come schermata di avvio. Nel **Esplora**, pulsante destro del mouse sul progetto e scegliere **Aggiungi > Nuovo elemento...**  seguito da **Storyboard vuoto**. Nome di questo Storyboard **LaunchScreen.storyboard** e fare clic su **Aggiungi**:
 
-    ![La finestra Aggiungi nuovo elemento con Storyboard vuota selezionata](launch-screens-images/launch03-vs.png)
+    ![La finestra Aggiungi nuovo elemento con Storyboard vuota selezionata](launch-screens-images/launch03.w157.png)
 
 4. Configurare il progetto deve utilizzare **LaunchScreen.storyboard** come dello Storyboard, schermata avvio:
 
@@ -119,7 +121,7 @@ In iOS 8 (e versioni successive), lo sviluppatore può creare uno Storyboard uni
 
     - Nel **Esplora**, fare clic su **Asset cataloghi** e selezionare **aggiungere catalogo di Asset**. Nome di questo nuovo catalogo di Asset **asset**:
 
-    ![Finestra Aggiungi nuovo elemento del catalogo di Asset selezionata](launch-screens-images/launch05-vs.png)
+    ![Finestra Aggiungi nuovo elemento del catalogo di Asset selezionata](launch-screens-images/launch05.w157.png)
 
     - Aggiungere un nuovo Set di immagini per il **asset** catalogo di Asset, come descritto nel [aggiunta di immagini per un Asset immagine cataloghi](~/ios/app-fundamentals/images-icons/displaying-an-image.md) sezione del [visualizzazione di un'immagine](~/ios/app-fundamentals/images-icons/displaying-an-image.md) Guida.
 

@@ -6,12 +6,12 @@ ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/16/2018
-ms.openlocfilehash: 1cb151cc5c741a020fcbb398441ed4958ec5980b
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.date: 05/04/2018
+ms.openlocfilehash: f4fe1bd753260f05dedb452655572d290c0781d0
+ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Associare i servizi in xamarin
 
@@ -42,8 +42,8 @@ Questa Guida verrà illustrate le procedure estendere la `Service` classe per im
 Sono presenti tre componenti che devono essere implementati in modo che un'applicazione Android di usare un servizio associato:
 
 1. **Estendere la `Service` classe e implementare i metodi di Callback del ciclo di vita** &ndash; questa classe conterrà il codice che eseguirà il lavoro che verrà richieste del servizio. Questo argomento verrà descritto in dettaglio più avanti.
-2. **Creare una classe che implementa `IServiceConnection`**  &ndash; questo oggetto contiene i metodi di callback da notificano al client quando è connesso a (o la connessione è stata interrotta) dal servizio. La connessione al servizio fornirà anche un riferimento a un oggetto che il client può utilizzare per interagire direttamente con il servizio. Questo riferimento è noto come il _binder_.
-3. **Creare una classe che implementa `IBinder`**  &ndash; A _Binder_ implementazione fornisce API che un client utilizza per comunicare con il servizio. Lo strumento di associazione può fornire un riferimento al servizio associato, consentendo di metodi da richiamare direttamente oppure il gestore di associazione può fornire un'API che incapsula e nascondere il servizio associato dall'applicazione client. Un `IBinder` deve fornire il codice necessario per le chiamate di procedura remota. Non è necessario (né consigliato) per implementare il `IBinder` interfaccia direttamente. Un `IBinder` devono estendere applicazioni Instead il `Binder` che fornisce la maggior parte della funzionalità di base necessaria per un `IBinder`.
+2. **Creare una classe che implementa `IServiceConnection`**  &ndash; questa interfaccia fornisce i metodi di callback verranno richiamato da Android per notificare al client quando la connessione al servizio è stato modificato, ad esempio il client è connesso o disconnesso per il servizio. La connessione al servizio fornirà anche un riferimento a un oggetto che il client può utilizzare per interagire direttamente con il servizio. Questo riferimento è noto come il _binder_.
+3. **Creare una classe che implementa `IBinder`**  &ndash; A _Binder_ implementazione fornisce API che un client utilizza per comunicare con il servizio. Lo strumento di associazione può fornire un riferimento al servizio associato, consentendo di metodi da richiamare direttamente oppure il gestore di associazione può fornire un'API che incapsula e nascondere il servizio associato dall'applicazione client. Un `IBinder` deve fornire il codice necessario per le chiamate di procedura remota. Non è necessario (né consigliato) per implementare il `IBinder` interfaccia direttamente. In alternativa, le applicazioni devono estendere la `Binder` tipo che fornisce la maggior parte delle funzionalità di base necessari per un `IBinder`.
 4. **Avvio e l'associazione a un servizio** &ndash; dopo avere creati la connessione del servizio, strumento di associazione e servizio è responsabile dell'avvio del servizio e l'associazione a tale applicazione Android.
 
 Ognuno di questi passaggi verrà descritte nelle sezioni seguenti in modo più dettagliato.
