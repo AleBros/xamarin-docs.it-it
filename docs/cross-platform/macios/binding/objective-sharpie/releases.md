@@ -2,15 +2,14 @@
 title: Cronologia dei rilasci
 ms.prod: xamarin
 ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: a9eb4b1ea958f2756eb2a21ee44d0d0dfcf8b931
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9a29b131af706b9dedc808a156cdfaffa4173882
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="release-history"></a>Cronologia dei rilasci
 
@@ -70,7 +69,7 @@ ms.lasthandoff: 04/04/2018
 * [bxc #27849](https://bugzilla.xamarin.com/show_bug.cgi?id=27849): verificare `using ObjCRuntime;` viene generato quando `ArgumentSemantic` viene utilizzato.
 * [bxc #27850](https://bugzilla.xamarin.com/show_bug.cgi?id=27850): verificare `using System.Runtime.InteropServices;` viene generato quando `DllImport` viene utilizzato.
 * [bxc #27852](https://bugzilla.xamarin.com/show_bug.cgi?id=27852): predefinito `DllImport` per il caricamento dei simboli da `__Internal`.
-* [bxc &#27848;](https://bugzilla.xamarin.com/show_bug.cgi?id=27848): ignorare dichiarato forward le dichiarazioni di contenitore Objective-C.
+* [bxc 27848 #](https://bugzilla.xamarin.com/show_bug.cgi?id=27848): ignorare dichiarato forward le dichiarazioni di contenitore Objective-C.
 * [bxc #27846](https://bugzilla.xamarin.com/show_bug.cgi?id=27846): associare tipi di protocollo con una qualificazione solo come interfacce concrete (`id<Foo>` come `Foo` anziché `Foundation.NSObject<Foo>`).
 * [bxc #28037](https://bugzilla.xamarin.com/show_bug.cgi?id=28037): associare `UInt32`, `UInt64`, e `Int64` valori letterali come `Int32` per eliminare il `u` e/o `uL` suffissi quando i valori in modo sicuro possono essere contenuti in `Int32`.
 * [bxc #28038](https://bugzilla.xamarin.com/show_bug.cgi?id=28038): correggere enum mapping di nomi quando si avvia il nome nativo originale con un `k` prefisso.

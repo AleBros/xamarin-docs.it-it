@@ -3,15 +3,14 @@ title: 'Programmazione UrhoSharp con F #'
 description: 'Come creare una semplice applicazione UrhoSharp con F # in Visual Studio per Mac'
 ms.prod: xamarin
 ms.assetid: F976AB09-0697-4408-999A-633977FEFF64
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 1496ff10a089829a01ad9993dfbca87d10b18991
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: d2b21204d1d328831419308827e1a2de2b6aef1c
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="programming-urhosharp-with-f"></a>Programmazione UrhoSharp con F #
 
@@ -33,7 +32,7 @@ Non sono disponibili modelli di F # per UrhoSharp ancora disponibile, pertanto, 
 
 ## <a name="building-hello-world-in-urho"></a>Compilazione Hello World in Urho
 
-A questo punto si è pronti iniziare a definire le classi del gioco. Come minimo, è necessario definire una sottoclasse di `Urho.Application` ed eseguire l'override relativo `Start` metodo. Per creare questo file, fare clic su progetto F #, scegliere **Aggiungi nuovo file... ** e aggiungere una classe F # vuota al progetto. Il nuovo file verrà aggiunto alla fine dell'elenco di file nel progetto, ma è necessario trascinare in modo che venga visualizzato *prima* viene utilizzato in **AppDelegate.fs**.
+A questo punto si è pronti iniziare a definire le classi del gioco. Come minimo, è necessario definire una sottoclasse di `Urho.Application` ed eseguire l'override relativo `Start` metodo. Per creare questo file, fare clic su progetto F #, scegliere **Aggiungi nuovo file...**  e aggiungere una classe F # vuota al progetto. Il nuovo file verrà aggiunto alla fine dell'elenco di file nel progetto, ma è necessario trascinare in modo che venga visualizzato *prima* viene utilizzato in **AppDelegate.fs**.
 
 1. Aggiungere un riferimento al pacchetto Urho NuGet.
 1. Da un progetto esistente Urho, copiare le directory (grande) **CoreData /** e **dati /** all'interno del progetto **risorse /** directory. Nel progetto F #, fare clic su di **risorse** cartella e utilizzare **Add / Aggiungi cartella esistente** per aggiungere tutti i file al progetto.

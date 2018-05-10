@@ -1,6 +1,6 @@
 ---
 title: La gestione dello stato di visualizzazione di xamarin. Forms
-description: Utilizzare il gestore dello stato per apportare modifiche negli elementi XAML in base a stati di visualizzazione impostata dal codice.
+description: Utilizzare il gestore dello stato per apportare modifiche agli elementi XAML in base a stati di visualizzazione impostata dal codice.
 ms.prod: xamarin
 ms.assetid: 17296F14-640D-484B-A24C-A4E9B7013E4F
 ms.technology: xamarin-forms
@@ -8,15 +8,15 @@ ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: f511f5c33b947704a42df850d2772c0b26511173
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
-ms.translationtype: HT
+ms.openlocfilehash: 14553bc9484ecc236fb4ceefd687ec7742109758
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="the-xamarinforms-visual-state-manager"></a>La gestione dello stato di visualizzazione di xamarin. Forms
 
-_Utilizzare il gestore dello stato per apportare modifiche negli elementi XAML in base a stati di visualizzazione impostata dal codice._
+_Utilizzare il gestore dello stato per apportare modifiche agli elementi XAML in base a stati di visualizzazione impostata dal codice._
 
 Il Manager di stato Visual (VSM) è stato introdotto in xamarin. Forms 3.0. VSM fornisce un modo strutturato per apportare delle modifiche visive per l'interfaccia utente dal codice. Nella maggior parte dei casi, l'interfaccia utente dell'applicazione è definito in XAML, e questo codice XAML include il markup che descrive gli elementi visivi dell'interfaccia utente di influenza il gestore dello stato.
 
@@ -24,7 +24,7 @@ VSM introduce il concetto di _gli stati visivi_. Una vista di xamarin. Forms, ad
 
 Gli stati visivi vengono raccolti nel _gruppi dello stato di visualizzazione_. Tutti gli stati visivi all'interno di un gruppo dello stato di visualizzazione si escludono a vicenda. Gli stati visivi sia gruppi dello stato di visualizzazione vengono identificati da stringhe di testo semplice.
 
-Nella versione iniziale, il gestore degli stati Visual Xamarin.Florms definisce un gruppo di stato di visualizzazione denominato "CommonStates" con tre stati di visualizzazione:
+Il gestore dello stato di xamarin. Forms definisce un gruppo di stato di visualizzazione denominato "CommonStates" con tre stati di visualizzazione:
 
 - "Normal"
 - "Disabilitato"
@@ -39,9 +39,9 @@ Questo gruppo dello stato di visualizzazione è supportato per tutte le classi c
 
 ## <a name="the-common-states"></a>Gli Stati comuni
 
-Nella versione iniziale, il gestore dello stato consente di includere sezioni nel file XAML che può cambiare l'aspetto visivo di una vista se la visualizzazione normale o disabilitato, oppure ha lo stato attivo di input. Tali parametri sono noti come il _stati comuni_.
+Il gestore dello stato consente di includere sezioni nel file XAML che può cambiare l'aspetto visivo di una vista se la visualizzazione normale o disabilitato, oppure ha lo stato attivo di input. Tali parametri sono noti come il _stati comuni_.
 
-Si supponga, ad esempio, un `Entry` visualizzazione della pagina. Ecco come si desidera che l'aspetto visivo del `Entry` modificare:
+Si supponga, ad esempio, un' `Entry` visualizzazione della pagina, e si desidera che l'aspetto visivo del `Entry` modificare nei modi seguenti:
 
 - Il `Entry` devono avere un rosa in background quando il `Entry` è disabilitato.
 - Il `Entry` deve avere uno sfondo verde brillante normalmente.
@@ -71,9 +71,7 @@ Successivamente, Inserisci `VisualStateManager.VisualStateGroups` tag tra i tag:
 </Entry>
 ```
 
-Ciò potrebbe apparire un po'. In genere, il markup solo che viene visualizzato tra due tag di questo tipo è per gli elementi di contenuto o una proprietà e il `VisualStateManager.VisualStateGroups` tag è Nessuno.
-
-Infatti, conforme alla sintassi di XAML [ `VisualStateGroups` ](xref:Xamarin.Forms.VisualStateManager.VisualStateGroupsProperty) è una proprietà associabile associata definita dal [ `VisualStateManager` ](xref:Xamarin.Forms.VisualStateManager) classe. (Per ulteriori informazioni sulle proprietà associabile associate, vedere l'articolo [le proprietà associate](~/xamarin-forms/xaml/attached-properties.md).) Questo è il modo in cui `VisualStateGroups` proprietà è associata al `Entry` oggetto.
+[`VisualStateGroups`](xref:Xamarin.Forms.VisualStateManager.VisualStateGroupsProperty) è una proprietà associabile associata definita per il [ `VisualStateManager` ](xref:Xamarin.Forms.VisualStateManager) classe. (Per ulteriori informazioni sulle proprietà associabile associate, vedere l'articolo [le proprietà associate](~/xamarin-forms/xaml/attached-properties.md).) Questo è il modo in cui `VisualStateGroups` proprietà è associata al `Entry` oggetto.
 
 Il `VisualStateGroups` proprietà è di tipo [ `VisualStateGroupList` ](xref:Xamarin.Forms.VisualStateGroupList), che è una raccolta di [ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup) oggetti. All'interno di `VisualStateManager.VisualStateGroups` tag, inserire una coppia di `VisualStateGroup` tag per ogni gruppo di stati di visualizzazione che si desidera includere:
 
@@ -87,13 +85,15 @@ Il `VisualStateGroups` proprietà è di tipo [ `VisualStateGroupList` ](xref:Xam
 </Entry>
 ```
 
-Si noti che il `VisualStateGroup` tag ha un `x:Name` attributo che indica il nome del gruppo. Il `VisualStateGroup` classe definisce un `Name` proprietà che è possibile utilizzare che, anziché:
+Si noti che il `VisualStateGroup` tag ha un `x:Name` attributo che indica il nome del gruppo. Il `VisualStateGroup` classe definisce un `Name` proprietà che è possibile usare:
 
 ```xaml
 <VisualStateGroup Name="CommonStates">
 ```
 
-Il `VisualStateGroup` classe definisce una proprietà denominata [ `States` ](xref:Xamarin.Forms.VisualStateGroup.States), che è una raccolta di [ `VisualState` ](xref:Xamarin.Forms.VisualState) oggetti. `States` è la proprietà content del `VisualStateGroups` pertanto è possibile includere il `VisualState` direttamente tra i tag di `VisualStateGroup` tag.
+È possibile utilizzare `x:Name` o `Name` ma non entrambi nello stesso elemento.
+
+Il `VisualStateGroup` classe definisce una proprietà denominata [ `States` ](xref:Xamarin.Forms.VisualStateGroup.States), che è una raccolta di [ `VisualState` ](xref:Xamarin.Forms.VisualState) oggetti. `States` è il _proprietà content_ di `VisualStateGroups` pertanto è possibile includere il `VisualState` direttamente tra i tag di `VisualStateGroup` tag. (Contenuto proprietà sono descritte nell'articolo [essenziali sintassi di XAML](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md#content-properties).)
 
 Il passaggio successivo è per includere una coppia di tag per ogni stato di visualizzazione in tale gruppo. Inoltre possono essere identificati utilizzando `x:Name` o `Name`:
 
@@ -254,7 +254,7 @@ Si noti che il secondo `Entry` dispone anche di un `DataTrigger` come parte del 
 
 Lo stato di visualizzazione corrente è "Disabled" pertanto la sfondo del secondo `Entry` è rosa nelle iOS e Android schermate. L'implementazione di piattaforma UWP di `Entry` non consente l'impostazione background colore quando i `Entry` è disabilitato. 
 
-Quando si immettono nel terzo `Entry`, il secondo `Entry` switch in stato di "Normal" e lo sfondo è ora verde:
+Quando si immette un testo nel terzo `Entry`, il secondo `Entry` switch in stato di "Normal" e lo sfondo è ora verde:
 
 [![VSM sulla vista: Normal](vsm-images/VsmOnViewNormal.png "VSM sulla vista - normale")](vsm-images/VsmOnViewNormal-Large.png#lightbox)
 
@@ -281,7 +281,7 @@ Affinché queste `Setter` oggetti il corretto funzionamento di un `VisualStateGr
 <VisualState x:Name="Normal" />
 ``` 
 
-### <a name="vsm-markup-in-a-style"></a>Markup di questo tipo di migrazione in uno stile
+### <a name="visual-state-manager-markup-in-a-style"></a>Markup di gestione dello stato di visualizzazione in uno stile
 
 È spesso necessario condividere lo stesso markup gestore dello stato tra due o più visualizzazioni. In questo caso, è opportuno inserire il markup in un `Style` definizione.
 
@@ -415,13 +415,13 @@ Ora tutti i `Entry` viste in questa pagina rispondono allo stesso modo per i rel
 
 ## <a name="defining-your-own-visual-states"></a>Definire i propri Stati di visualizzazione
 
-Ogni classe che deriva da `VisualElement` supporta i tre stati comuni "Normal", "Con stato attivo" e "Disabilitato". Internamente, il [ `VisualElement` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs) classe rileva se sta diventando abilitato o disabilitato, o con lo stato attivo o con stato non attivo e chiama il metodo statico [ `VisualStateManager.GoToState` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualStateManager.GoToState/p/Xamarin.Forms.VisualElement/System.String/) metodo simile al seguente:
+Ogni classe che deriva da `VisualElement` supporta i tre stati comuni "Normal", "Con stato attivo" e "Disabilitato". Internamente, il [ `VisualElement` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs) classe rileva se sta diventando abilitato o disabilitato, o con lo stato attivo o con stato non attivo e chiama il metodo statico [ `VisualStateManager.GoToState` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualStateManager.GoToState/p/Xamarin.Forms.VisualElement/System.String/) metodo:
 
 ```csharp
 VisualStateManager.GoToState(this, "Focused");
 ```
 
-Si tratta del metodo fondamentale ed è l'unico codice gestore dello stato sono disponibili nel `VisualElement` classe. Poiché `GoToState` viene chiamato per ogni oggetto in base a ogni tht classe deriva da `VisualElement`, è possibile utilizzare il gestore dello stato con qualsiasi `VisualElement` oggetto per rispondere a queste modifiche.
+Questo è l'unico codice gestore dello stato che si trova nel `VisualElement` classe. Poiché `GoToState` viene chiamato per ogni oggetto in base a ogni classe che deriva da `VisualElement`, è possibile utilizzare il gestore dello stato con qualsiasi `VisualElement` oggetto per rispondere a queste modifiche.
 
 È interessante notare che il nome del gruppo dello stato di visualizzazione "CommonStates" è un riferimento esplicito a `VisualElement`. Il nome del gruppo non fa parte dell'API per il gestore dello stato. All'interno di uno dei due programma di esempio illustrato finora, è possibile modificare il nome del gruppo da "CommonStates" in modo diverso e il programma continuerà a funzionare. Il nome del gruppo è semplicemente una descrizione generale degli stati in tale gruppo. In modo implicito è inteso che gli stati visivi in qualsiasi gruppo si escludono a vicenda: uno stato e un solo stato sia aggiornato in qualsiasi momento.
 
@@ -485,9 +485,9 @@ Il **convalida VSM** nella pagina di **[VsmDemos](https://developer.xamarin.com/
 </ContentPage>
 ```
 
-Markup VSM è collegato alla seconda `Label` (denominata `helpLabel`) e il `Button` (denominato `submitButton`). Esistono due stati che si escludono a vicenda, denominati "Valid" e "Non valido". (Vedrai il file code-behind che imposta questi stati al più presto.) Si noti che ognuno dei due gruppi "ValidationState" contiene `VisualState` tag per "Valid" e "Non valido", anche se uno di essi è vuoto in ogni caso. 
+Markup VSM è collegato alla seconda `Label` (denominata `helpLabel`) e il `Button` (denominato `submitButton`). Esistono due stati che si escludono a vicenda, denominati "Valid" e "Non valido". Si noti che ognuno dei due gruppi "ValidationState" contiene `VisualState` tag per "Valid" e "Non valido", anche se uno di essi è vuoto in ogni caso. 
 
-Se il `Entry` non contiene un numero di telefono valido, quindi lo stato corrente è "Valido". Il secondo `Label` è visibile e il `Button` è disabilitato:
+Se il `Entry` non contiene un numero di telefono valido, quindi lo stato corrente è "Valido" e quindi il secondo `Label` è visibile e il `Button` è disabilitato:
 
 [![Convalida VSM: Stato non valido](vsm-images/VsmValidationInvalid.png "convalida VSM - non valido")](vsm-images/VsmValidationInvalid-Large.png#lightbox)
 
@@ -526,19 +526,19 @@ Si noti inoltre che il `GoToState` metodo viene chiamato dal costruttore per ini
 
 Si noti che il file code-behind deve tener conto di ogni oggetto nella pagina in cui è influenzata da questi stati di visualizzazione e di chiamare `VisualStateManager.GoToState` per ognuno di questi oggetti. In questo esempio, che si tratta solo di due oggetti (il `Label` e il `Button`), ma potrebbe risultare diverse altre.
 
-Ci si potrebbe chiedere: se il file code-behind deve fare riferimento a tutti gli oggetti nella pagina in cui è influenzato da questi stati di visualizzazione, perché non è il file code-behind semplicemente accedere agli oggetti direttamente? Sicuramente Impossibile. Tuttavia, tramite il gestore dello stato, è possibile controllare come rispondere quando questi oggetti per i diversi stati visual interamente in XAML, che consente di mantenere tutte la progettazione dell'interfaccia utente in un'unica posizione.
+Ci si potrebbe chiedere: se il file code-behind deve fare riferimento a tutti gli oggetti nella pagina in cui è influenzato da questi stati di visualizzazione, perché non è il file code-behind semplicemente accedere agli oggetti direttamente? Sicuramente Impossibile. Tuttavia, il vantaggio dell'utilizzo di questo tipo di migrazione è che è possibile controllare gli elementi visivi come reagire alle diverso stato interamente in XAML, che consente di mantenere tutta la progettazione dell'interfaccia utente in un'unica posizione. Questo evita l'aspetto visivo di impostazione accedendo elementi visivi direttamente il code-behind.
 
 Potrebbe essere tentato di prendere in considerazione la derivazione di una classe da `Entry` e forse la definizione di una proprietà che è possibile impostare per una funzione esterna di convalida. La classe che deriva da `Entry` può quindi chiamare il `VisualStateManager.GoToState` metodo. Questo schema funzionerà correttamente, ma solo se il `Entry` sono l'unico oggetto interessato da diversi stati di visualizzazione. In questo esempio, un `Label` e un `Button` anche interessati. Non esiste un modo per markup VSM associate a un `Entry` per controllare gli altri oggetti nella pagina e può in alcun modo per markup VSM associate a questi altri oggetti per fare riferimento a una modifica nello stato di visualizzazione da un altro oggetto.
 
 <a name="adaptive-layout" />
 
-## <a name="using-the-vsm-for-adaptive-layout"></a>Utilizzare VSM per il layout adattivo
+## <a name="using-the-visual-state-manager-for-adaptive-layout"></a>Utilizzare il gestore dello stato per il layout adattivo
 
-In genere, un programma di xamarin. Forms in esecuzione su un telefono può essere visualizzato in una proporzione verticale o orizzontale, e un programma di xamarin. Forms in esecuzione sul desktop può essere ridimensionato per assumere molte diverse dimensioni e proporzioni possono variare. Un'applicazione ben progettata potrebbe visualizzare il relativo contenuto in modo diverso per i vari fattori di forma pagina o nella finestra. 
+È possibile ridimensionare un xamarin. Forms applicazione in esecuzione su un telefono può essere visualizzati in genere in verticale o orizzontale proporzioni e un programma di xamarin. Forms in esecuzione sul desktop per assumere molte diverse dimensioni e proporzioni possono variare. Un'applicazione ben progettata potrebbe visualizzare il relativo contenuto in modo diverso per i vari fattori di forma pagina o nella finestra. 
 
 Questa tecnica viene talvolta definita come _adattivo layout_. Poiché layout adattivo riguarda unicamente gli oggetti visivi di un programma, è un'applicazione ideale del gestore dello stato.
 
-Un semplice esempio è un programma che consente di visualizzare una piccola raccolta di pulsanti che interessano il contenuto dell'applicazione. In modalità verticale, questi pulsanti potrebbero essere visualizzati in una riga orizzontale nella parte superiore della pagina:
+Un semplice esempio è un'applicazione che visualizza una piccola raccolta di pulsanti che influiscono sul contenuto dell'applicazione. In modalità verticale, questi pulsanti potrebbero essere visualizzati in una riga orizzontale nella parte superiore della pagina:
 
 [![Layout adattivo VSM: Verticale](vsm-images/VsmAdaptiveLayoutPortrait.png "layout adattivo VSM - verticale")](vsm-images/VsmAdaptiveLayoutPortrait-Large.png#lightbox)
 
@@ -548,9 +548,9 @@ In modalità orizzontale, la matrice dei pulsanti potrebbe essere spostata su un
 
 Dall'alto verso il basso, il programma è in esecuzione la piattaforma Windows universale, Android e iOS.
 
-Si tratta di un processo per il gestore dello stato. Il **VSM adattivo Layout** nella pagina di [VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/) esempio definisce un gruppo denominato "OrientationStates" con due stati di visualizzazione denominati "Verticale" e "Orizzontale". (Un approccio più complesso potrebbe essere basato su numerose larghezze diverse di pagina o nella finestra). 
+Il **VSM adattivo Layout** nella pagina di [VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/) esempio definisce un gruppo denominato "OrientationStates" con due stati di visualizzazione denominati "Verticale" e "Orizzontale". (Un approccio più complesso potrebbe essere basato su numerose larghezze diverse di pagina o nella finestra). 
 
-Markup VSM viene visualizzato in quattro posizioni nel file XAML. Il `StackLayout` denominato `mainStack` contiene sia il menu del contenuto, che è un `Image` elemento. Questo `StackLayout` deve avere un orientamento verticale in modalità verticale e l'orientamento orizzontale in modalità orizzontale:
+Markup VSM si verifica in quattro posizioni nel file XAML. Il `StackLayout` denominato `mainStack` contiene sia il menu del contenuto, che è un `Image` elemento. Questo `StackLayout` deve avere un orientamento verticale in modalità verticale e l'orientamento orizzontale in modalità orizzontale:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -663,9 +663,9 @@ Markup VSM viene visualizzato in quattro posizioni nel file XAML. Il `StackLayou
 </ContentPage>
 ```
 
-Interna `ScrollView` denominato `menuScroll` e il `StackLayout` denominato `menuStack` implementare il menu dei pulsanti. L'orientamento di questi layout è opposto di `mainStack`: il menu deve essere in modalità verticale orizzontali e verticali in modalità orizzontale.
+Interna `ScrollView` denominato `menuScroll` e il `StackLayout` denominato `menuStack` implementare il menu dei pulsanti. L'orientamento di questi layout è opposto di `mainStack`. Il menu deve essere in modalità verticale orizzontali e verticali in modalità orizzontale.
 
-Il quarto blocco del markup VSM si trova in uno stile implicito per i pulsanti di se stessi. In questo markup `VerticalOptions`, `HorizontalOptions`, e `Margin` le proprietà specifiche di orienations portait e orizzontale.
+Nella quarta sezione markup VSM è in uno stile implicito per i pulsanti di se stessi. In questo markup `VerticalOptions`, `HorizontalOptions`, e `Margin` proprietà specifiche per gli orientamenti supportati dal portait e orizzontale.
 
 I set di file di codice il `BindingContext` proprietà di `menuStack` implementare `Button` comandi e collega anche un gestore per il `SizeChanged` evento della pagina:
 
@@ -703,7 +703,7 @@ public partial class VsmAdaptiveLayoutPage : ContentPage
 
 Il `SizeChanged` chiamate del gestore `VisualStateManager.GoToState` per i due `StackLayout` e `ScrollView` gli elementi e quindi scorre in ciclo gli elementi figlio del `menuStack` chiamare `VisualStateManager.GoToState` per il `Button` elementi.
 
-Inizialmente può sembrare come se il file code-behind è possibile gestire le modifiche di orientamento più direttamente impostando le proprietà degli elementi nel file XAML, ma il gestore dello stato tratta decisamente di un approccio più strutturato. Tutti gli elementi visivi vengono mantenuti nel file XAML, in cui diventano più facile da esaminare, gestire e modificare.
+Può sembrare come se il file code-behind è possibile gestire le modifiche di orientamento più direttamente impostando le proprietà degli elementi nel file XAML, ma il gestore dello stato tratta decisamente di un approccio più strutturato. Tutti gli elementi visivi vengono mantenuti nel file XAML, in cui diventano più facile da esaminare, gestire e modificare.
 
 ## <a name="visual-state-manager-with-xamarinuniversity"></a>Gestione dello stato di visualizzazione con Xamarin.University
 

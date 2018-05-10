@@ -3,15 +3,14 @@ title: Memorizzazione nella cache della trama utilizzando CCTextureCache
 description: Classe CCTextureCache del CocosSharp fornisce un modo standard per organizzare, cache e scaricare il contenuto. È particolarmente utile per i giochi di grandi dimensioni che potrebbero non rientra completamente nella memoria RAM, semplificando il processo di raggruppamento e l'eliminazione delle trame.
 ms.prod: xamarin
 ms.assetid: 1B5F3F85-9E68-42A7-B516-E90E54BA7102
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: f0a8121d5e90d2f39fb1b0cbd8d283253c2bf76d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bb75efea0914827f1d59a8e0943584597f91803a
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="texture-caching-using-cctexturecache"></a>Utilizzando CCTextureCache la memorizzazione nella cache della trama
 
@@ -23,7 +22,7 @@ Questa guida viene analizzato il `CCTextureCache` e perché è importante per lo
 
  - Trama per questioni di memorizzazione nella cache
  - Ciclo di vita di trama
- - Using SharedTextureCache
+ - Utilizzo SharedTextureCache
  - Caricamento e pre-caricamento con AddImage Lazy
  - Eliminazione di trame
 
@@ -57,7 +56,7 @@ Se il gioco è grande abbastanza e infine carica sufficiente trame per riempire 
 Il diagramma precedente indica che l'utilizzo della memoria di trama può essere ridotto scaricando, ma tale operazione potrebbe richiedere tempi di caricamento aggiuntive se un lettore decide di riprodurre un livello. È inoltre importante notare che le trame UITexture e MainCharacter vengono caricate e non vengono mai scaricate. Ciò implica che le trame sono necessari in tutti i livelli, in modo che vengono sempre mantenuti in memoria. 
 
 
-## <a name="using-sharedtexturecache"></a>Using SharedTextureCache
+## <a name="using-sharedtexturecache"></a>Utilizzo SharedTextureCache
 
 CocosSharp automaticamente memorizza nella cache le trame durante il caricamento tramite il `CCSprite` costruttore. Ad esempio il codice seguente crea solo un'istanza di trama:
 

@@ -3,15 +3,14 @@ title: Utilizzo di Jenkins con Xamarin
 description: Questa guida viene illustrato come impostare Jenkins come server di integrazione continua e automatizzare la compilazione di applicazioni per dispositivi mobili create con Xamarin. Viene descritto come installare Jenkins su OS X, configurarlo e configurare i processi per la compilazione di applicazioni di xamarin. IOS e xamarin quando le modifiche vengono applicate al sistema di gestione del codice sorgente.
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: f183eb487b49d60c896bef9c90c711cd3da846b7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1052507bfbf06e264f9e9da89be1e0f35fa70ce1
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>Utilizzo di Jenkins con Xamarin
 

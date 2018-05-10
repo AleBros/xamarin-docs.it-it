@@ -3,15 +3,14 @@ title: L'aggiornamento di App xamarin. Forms esistente
 description: Seguire questi passaggi per aggiornare un'app xamarin. Forms esistente per usare l'API unificata e l'aggiornamento alla versione 1.3.1
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 49614dddf05d692d94d28b29729e7b2038be31e7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7b69ecb5d62a30cf6259aae1884971ad13babede
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>L'aggiornamento di App xamarin. Forms esistente
 
@@ -63,7 +62,7 @@ Questo verrà automaticamente:
 
 Se è stato aggiunto il codice nativo di iOS aggiuntive (ad esempio un renderer personalizzato o servizi di dipendenza) occorre eseguire le correzioni del codice manuale aggiuntive. Ricompilare l'app e fare riferimento al [aggiornamento esistenti iOS istruzioni app](~/cross-platform/macios/unified/updating-ios-apps.md) per ulteriori informazioni sulle modifiche che potrebbero essere necessari. [Questi suggerimenti](~/cross-platform/macios/unified/updating-tips.md) consentirà inoltre di identificare le modifiche necessarie.
 
-## <a name="2-xamarinforms-131-update"></a>2. Xamarin.Forms 1.3.1 Update
+## <a name="2-xamarinforms-131-update"></a>2. Aggiornamento di xamarin. Forms 1.3.1
 
 Una volta l'app per iOS è stata aggiornata a Unified API, il resto della soluzione deve essere aggiornato a una versione 1.3.1 di xamarin. Forms. vale a dire:
 

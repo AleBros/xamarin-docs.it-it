@@ -3,15 +3,14 @@ title: Come effettuare una completa disinstallazione di Xamarin per Visual Studi
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: c1742239-05ea-449d-9c99-611e5e5a90e4
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
-ms.openlocfilehash: 49577961026d9895912d2848975e71a9f7eebbd8
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 99fde9330498ee62d3cf6b5910c2cbfae39cfdeb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="how-do-i-perform-a-thorough-uninstall-for-xamarin-for-visual-studio"></a>Come effettuare una completa disinstallazione di Xamarin per Visual Studio?
 
@@ -48,23 +47,23 @@ ms.lasthandoff: 04/06/2018
 
 4.  Archivia anche i _VirtualStore_ directory per verificare se Windows potrebbe essere archiviato qualsiasi sovrapposizione file per il _estensioni\\Xamarin_ o _ComponentModelCache_directory non esiste:
 
-    _%LOCALAPPDATA%\\VirtualStore_
+    _% LOCALAPPDATA %\\VirtualStore_
 
 5.  Aprire l'editor del Registro di sistema (`regedit`).
 
 6.  Cerca la chiave seguente:
 
-    _HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\SharedDlls_
+    _HKEY\_locale\_macchina\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\SharedDlls_
 
-7.  Individuare ed eliminare tutte le voci che corrispondono a questo modello:
+7.  Individuare ed eliminare eventuali voci che corrispondono a questo modello:
 
     _C:\\file di programma\*\\Microsoft Visual Studio 1\*,0\\Common7\\IDE\\estensioni\\Xamarin_
 
-8.  Cerca la chiave:
+8.  Cercare questa chiave:
 
-    _HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\1\*.0\\ExtensionManager\\PendingDeletions_
+    _HKEY\_correnti\_utente\\Software\\Microsoft\\VisualStudio\\1\*,0\\ExtensionManager\\PendingDeletions_
 
-9.  Eliminare tutte le voci che apparentemente potrebbe essere correlati a Xamarin.  Ad esempio, ecco che per utilizzare causare problemi nelle versioni precedenti di Xamarin:
+9.  Eliminare tutte le voci che apparentemente possono essere correlate a Xamarin.  Ad esempio, ecco che per utilizzare causare problemi nelle versioni precedenti di Xamarin:
 
     _Mono.VisualStudio.Shell,1.0_
 

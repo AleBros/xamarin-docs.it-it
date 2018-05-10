@@ -3,15 +3,14 @@ title: Gestione più risoluzioni in CocosSharp
 description: Questa guida viene illustrato come utilizzare CocosSharp per lo sviluppo di giochi visualizzati correttamente nei dispositivi di risoluzioni diverse.
 ms.prod: xamarin
 ms.assetid: 859ABF98-2646-431A-A4A8-3E7E48DA5A43
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 4077af2351b8ab3ef718a71cc672add54b6ef05a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 577a3edbd106b6fba298b3ee5999265ef955f9dd
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>Gestione più risoluzioni in CocosSharp
 
@@ -26,7 +25,7 @@ Il comportamento di risoluzione predefinito di CocosSharp è per trovare la corr
 |--- | --- |--- |
 |Visualizzazione desiderato|368 x 240 (con barre nere per proporzioni)| ![368 x 240 (con barre nere per proporzioni)](resolutions-images/image1.png) |
 |iPhone 4s|960x640| ![iPhone 4s 960x640](resolutions-images/image2.png) |
-|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920x1080](resolutions-images/image3.png) |
+|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus diverse da 1920x1080](resolutions-images/image3.png) |
 
 Questo documento viene illustrato come utilizzare CocosSharp per risolvere il problema, illustrato nella tabella precedente. Vale a dire, trattati come rendere qualsiasi dispositivo di rendering, come illustrato nella prima riga, indipendentemente dalla risoluzione dello schermo.
 

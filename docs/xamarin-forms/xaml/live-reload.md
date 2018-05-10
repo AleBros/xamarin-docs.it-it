@@ -6,12 +6,12 @@ ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
 ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
-ms.date: 04/23/2018
-ms.openlocfilehash: 627225fdeef781a8b24a79e9b46627a739fd15af
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.date: 05/08/2018
+ms.openlocfilehash: 96054505af44c5d3e198c2b9e7e7cb30d39b02b1
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarin-live-reload"></a>Ricaricamento in tempo reale di Xamarin
 
@@ -27,8 +27,8 @@ Ricaricamento in tempo reale è attualmente disponibile solo in Visual Studio 20
 
 ## <a name="requirements"></a>Requisiti
 
-* [Visual Studio 2017 15.7 Preview 4](https://www.visualstudio.com/vs/preview/) o versione successiva con il **sviluppo per dispositivi Mobile con .NET** carico di lavoro.
-* [Xamarin. Forms 3.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3) o versione successiva.
+* [Visual Studio 2017 versione 15.7 o versione successiva](https://www.visualstudio.com/vs/) o versione successiva con il **sviluppo per dispositivi Mobile con .NET** carico di lavoro.
+* [Xamarin. Forms 3.0.0 o versione successiva](https://www.nuget.org/packages/Xamarin.Forms/) o versione successiva.
 
 ## <a name="getting-started"></a>Introduzione
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Installare Xamarin Ricarica in tempo reale da Visual Studio Marketplace
@@ -45,8 +45,13 @@ In alternativa, è possibile cercare nel **Online** nella scheda il **estensioni
 
 Aggiunta in tempo reale Ricarica esistente App per dispositivi mobili può essere eseguita in tre passaggi:
 
-1. Verificare che tutti i progetti siano aggiornati per usare [3.0.354232-pre3 xamarin. Forms](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3) o versione successiva.
-2. Installare il **Xamarin.LiveReload** NuGet nella libreria del .NET 2.0 Standard. Ciò non è necessario installare nei progetti di piattaforma. Verificare che il **origine pacchetto** è impostata su **tutte**.
+1. Verificare che tutti i progetti siano aggiornati per usare [xamarin. Forms 3.0.0 o versione successiva](https://www.nuget.org/packages/Xamarin.Forms/) o versione successiva.
+
+2. Aggiungere il **Xamarin.LiveReload** pacchetto NuGet:
+
+    a. **.NET standard** : installare il **Xamarin.LiveReload** NuGet nella libreria del .NET 2.0 Standard. Ciò non è necessario installare nei progetti di piattaforma. Verificare che il **origine pacchetto** è impostata su **tutte**.
+    
+    b. **I progetti condivisi** : installare il **Xamarin.LiveReload** NuGet in tutti i progetti di piattaforma (ad esempio Android, iOS, UWP, ecc.). Verificare che il **origine pacchetto** è impostata su **tutte**.
 
 ![Aggiungere NuGet di Xamarin Ricarica in tempo reale con Gestione pacchetti NuGet](images/addlivereloadnuget.png)
 
@@ -85,7 +90,7 @@ Poiché l'app viene compilato, Live Ricarica funziona con tutte le librerie, ad 
 
 ### <a name="what-changes-does-live-reload-redeploy"></a>Le modifiche ridistribuire Live ricarica? 
 
-Ricaricamento in tempo reale si applica solo le modifiche apportate in XAML. Se si apportano modifiche a un file c#, la ricompilazione saranno necessario. Supporto per il ricaricamento c# è pianificato per una versione futura.
+Ricaricamento in tempo reale si applica solo le modifiche apportate a XAML o CSS. Se si apportano modifiche a un file c#, la ricompilazione saranno necessario. Supporto per il ricaricamento c# è pianificato per una versione futura.
 
 ### <a name="what-platforms-are-supported"></a>Quali piattaforme sono supportate? 
 
@@ -111,8 +116,6 @@ No. In effetti, è possibile anche avviare tutte supportate destinazione dell'ap
 ## <a name="known-issues"></a>Problemi noti
 
 * Supportato solo in Visual Studio.
-* Funziona solo con le librerie .NET Standard. Questo problema verrà risolto nella prossima versione di anteprima.
-* Fogli di stile CSS non sono supportati. Questo problema verrà risolto nella prossima versione di anteprima.
 * Ricaricamento di risorse a livello di app (vale a dire **app** o condiviso i dizionari delle risorse), navigazione app viene reimpostato. Questo problema verrà risolto nella prossima versione di anteprima.
 * Modifica XAML durante il debug UWP può causare un arresto anomalo del runtime. Soluzione alternativa: Utilizzare **Avvia senza eseguire debug (CTRL+F5)** anziché **Avvia debug (F5)**.
 
@@ -131,8 +134,6 @@ No. In effetti, è possibile anche avviare tutte supportate destinazione dell'ap
 * **XLR003**: *pacchetto nuget di ricaricamento in tempo reale richiede l'installazione dell'estensione Xamarin Live Ricarica Visual Studio.*
 
   Tentativo di creare un progetto che fa riferimento il pacchetto nuget di ricaricamento in tempo reale, ma non è installato l'estensione di Visual.  
-
-
 
 ### <a name="app-doesnt-connect"></a>Non collega l'App
 

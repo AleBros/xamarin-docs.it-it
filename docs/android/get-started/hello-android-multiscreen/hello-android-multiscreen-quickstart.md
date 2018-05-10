@@ -7,12 +7,12 @@ ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 67644caedd268aac45a86c03a69ba017976fc103
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/30/2018
+ms.openlocfilehash: d8f909ab522b5bbf08a2b666fd4f64340e60b3e5
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: guida introduttiva
 
@@ -108,10 +108,11 @@ In questa classe si sta creando e popolando un oggetto `ListActivity` a livello 
 
 ### <a name="adding-translation-history-code"></a>Aggiunta del codice della cronologia delle conversioni
 
-Questa app raccoglie i numeri di telefono che l'utente ha convertito nella prima schermata e li passa alla seconda schermata. I numeri di telefono vengono archiviati sotto forma di elenco di stringhe. Per supportare gli elenchi, aggiungere la direttiva `using` seguente all'inizio della classe `MainActivity`:
+Questa app raccoglie i numeri di telefono che l'utente ha convertito nella prima schermata e li passa alla seconda schermata. I numeri di telefono vengono archiviati sotto forma di elenco di stringhe. Per il supporto di elenchi e Intent, usati più avanti, aggiungere le direttive `using` seguenti all'inizio di **MainActivity.cs**:
 
 ```csharp
 using System.Collections.Generic;
+using Android.Content;
 ```
 
 Creare quindi un elenco vuoto che possa essere compilato con numeri di telefono.
@@ -246,10 +247,11 @@ In questa classe si sta creando e popolando un oggetto `ListActivity` a livello 
 
 ### <a name="adding-translation-history-code"></a>Aggiunta del codice della cronologia delle conversioni
 
-Questa app raccoglie i numeri di telefono che l'utente ha convertito nella prima schermata e li passa alla seconda schermata. I numeri di telefono vengono archiviati sotto forma di elenco di stringhe. Per supportare gli elenchi, aggiungere la direttiva `using` seguente all'inizio della classe `MainActivity`:
+Questa app raccoglie i numeri di telefono che l'utente ha convertito nella prima schermata e li passa alla seconda schermata. I numeri di telefono vengono archiviati sotto forma di elenco di stringhe. Per il supporto di elenchi e Intent, usati più avanti, aggiungere le direttive `using` seguenti all'inizio di **MainActivity.cs**:
 
 ```csharp
 using System.Collections.Generic;
+using Android.Content;
 ```
 
 Creare quindi un elenco vuoto che possa essere compilato con numeri di telefono. La classe `MainActivity` avrà l'aspetto seguente:
