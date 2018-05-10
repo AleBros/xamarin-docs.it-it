@@ -2,15 +2,14 @@
 title: Introduzione
 ms.prod: xamarin
 ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 139a5102b2f2d8a9d803fd1ac593934aa73e2415
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5f61d0794e1f5a38370f0d840504720043f69590
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="getting-started"></a>Introduzione
 
@@ -51,9 +50,9 @@ Anziché convertire analizzata [AST](http://en.wikipedia.org/wiki/Abstract_synta
 
 Se obiettivo Sharpie gli errori di timeout durante l'analisi, significa che clang con errori di timeout durante la relativa analisi fase tenta di costruire l'albero sintattico Astratto ed è necessario capire il motivo.
 
-**NEW!** versione 3.0 tenta di risolvere alcuni di questa complessità supportando progetti Xcode direttamente. Se una libreria nativa dispone di un progetto Xcode valido, obiettivo Sharpie possibile valutare il progetto per una destinazione specificata e la configurazione di dedurre il file di intestazione di input necessarie e i flag del compilatore.
+**NUOVO!** versione 3.0 tenta di risolvere alcuni di questa complessità supportando progetti Xcode direttamente. Se una libreria nativa dispone di un progetto Xcode valido, obiettivo Sharpie possibile valutare il progetto per una destinazione specificata e la configurazione di dedurre il file di intestazione di input necessarie e i flag del compilatore.
 
 Se non è disponibile alcun progetto Xcode, è necessario da maggiore familiarità con il progetto consiste nel dedurre i file di intestazione di input corretti, i percorsi di ricerca di file di intestazione e altri flag di compilatore necessarie. È importante tenere presente che i flag del compilatore utilizzati per compilare la libreria nativa sono gli stessi che deve essere passato a Sharpie obiettivo. Si tratta di un processo manuale e uno che richiedono un bit di una certa familiarità con la compilazione di codice nativo nella riga di comando con la toolchain Clang.
 
-**NEW!** versione 3.0 include anche uno strumento per l'associazione facilmente [CocoaPods](https://cocoapods.org) tramite il `sharpie pod` comando.
+**NUOVO!** versione 3.0 include anche uno strumento per l'associazione facilmente [CocoaPods](https://cocoapods.org) tramite il `sharpie pod` comando.
 Se la raccolta a cui che si è interessati è disponibile come un CocoaPod, è consigliabile che iniziare dal tentativo di associare il CocoaPod con Sharpie obiettivo (e il tentativo di associare direttamente sull'origine).

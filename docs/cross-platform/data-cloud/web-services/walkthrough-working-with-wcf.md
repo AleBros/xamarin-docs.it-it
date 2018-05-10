@@ -3,15 +3,14 @@ title: 'Procedura dettagliata: utilizzo di WCF'
 description: Questa procedura dettagliata illustra come un'applicazione per dispositivi mobili compilata con Xamarin può utilizzare un servizio web WCF utilizzando la classe BasicHttpBinding.
 ms.prod: xamarin
 ms.assetid: D0E83342-2E79-4D25-BD57-43718F5628C4
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: 297aac4ba4a564e4506d841d3e11718ad79307e2
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: b0502028985cf35498a5811ec88b9e32d74d0311
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>Procedura dettagliata: utilizzo di WCF
 

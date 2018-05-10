@@ -3,15 +3,14 @@ title: Xamarin Profiler
 description: Questa guida illustra le funzionalità principali del Xamarin Profiler. E risultare in Profiler, profilatura e quando deve essere utilizzati e in un flusso di lavoro standard per la profilatura delle applicazioni di Xamarin.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 3408d4e1ca50651536b9d04f64156efac4fdd0ed
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e28e2513b74faa884fb7bc3d7194f1b02844734
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 

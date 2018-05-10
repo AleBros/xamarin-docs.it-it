@@ -3,15 +3,14 @@ title: Xamarin. Forms usando Visual Basic.NET
 description: Modello di progetto xamarin. Forms PCL può essere modificata per l'utilizzo di Visual Basic per l'assembly principale, in modo efficace che consente di creare App per dispositivi mobili multipiattaforma con Visual Basic.NET.
 ms.prod: xamarin
 ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e26d330d62e6ffdfdb3f9b8eab59e57a6377a86c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b858e26de95d2abbc23917b1ed5a1de65105cd8d
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarinforms-using-visual-basicnet"></a>Xamarin. Forms usando Visual Basic.NET
 
@@ -120,5 +119,5 @@ Come menzionato nel [pagina portabile Visual Basic.NET](~/cross-platform/platfor
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [XamarinFormsVB (sample)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB)
+- [XamarinFormsVB (esempio)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB)
 - [Lo sviluppo multipiattaforma con .NET Framework (Microsoft)](http://msdn.microsoft.com/en-us/library/gg597391(v=vs.110).aspx)

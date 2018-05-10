@@ -6,24 +6,38 @@ ms.assetid: CB8607B9-FFDA-4617-8210-8E43EC512588
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: ce60c19ab0b680e00338f517e5a3f17f725ed329
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/09/2018
+ms.openlocfilehash: 60d897be8739ff5b78a322bc4ea3f43011785bb5
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logs"></a>Dove trovare il file .dSYM symbolicate i registri di arresto anomalo iOS
 
-Quando si compila le app iOS da visual studio, il file .dSYM che può essere usato per symbolicate segnalazioni di arresti anomali finisce nell'host di compilazione nel percorso:
-```
-    /Users/<username>/Library/Caches/Xamarin/mtbs/builds/<appname>/<guid>/bin/iPhone/<configuration>
-```
+Quando si compila un'app iOS con Visual Studio per Mac o Visual Studio 2017, il file .dSYM che è necessario per symbolicate segnalazioni di arresti anomali verrà inserito nella stessa gerarchia di directory del file di progetto dell'app (con estensione csproj). La posizione esatta dipende dalle impostazioni di compilazione del progetto:
 
-Si noti che il `~/Library` cartella è nascosto per impostazione predefinita in Finder, pertanto, se necessario utilizzare del Finder **passare > passare alla cartella** menu e immettere: `~/Library/Caches/Xamarin/mtbs/builds/` per aprire la cartella.  
+- Se è stata abilitata compilazioni specifiche del dispositivo, il il .dSYM è reperibile nella directory seguente:
 
-In alternativa è possibile scoprire il `~/Library` cartella utilizzando il **Mostra opzioni di visualizzazione** pannello per la cartella principale. Se si seleziona la cartella principale nella barra laterale in Finder e utilizzare il menu Finder **Vista > Mostra opzioni di visualizzazione** (o cmd + j), verrà visualizzata una casella di controllo **Mostra cartella libreria**.
+    **&lt;directory del progetto&gt;/bin/&lt;piattaforma&gt;/&lt;configurazione&gt;/device-builds /&lt;dispositivo&gt; - &lt; versione del sistema operativo&gt;/**
 
+    Ad esempio:
+  
+    **TestApp/bin/iPhone/Release/device-builds/iphone8.4-11.3.1/**
 
-### <a name="see-also"></a>Vedere anche
-- Segnalazioni di arresto anomalo procedura estesa per symbolicating iOS: [http://jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/](http://jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/)
+- Se non è stato abilitato compilazioni specifiche del dispositivo, il .dSYM è reperibile nella directory seguente:
+
+    **&lt;directory del progetto&gt;/bin/&lt;piattaforma&gt;/&lt;configurazione&gt;/**
+
+    Ad esempio:
+
+    **TestApp/bin/iPhone/rilascio /**
+
+> [!NOTE]
+> Come parte del processo di compilazione, Visual Studio 2017 copia il file .dSYM dall'host di compilazione Mac e Windows. Se non è presente un file .dSYM in Windows, assicurarsi che sono state configurate impostazioni di compilazione dell'app per [creare un file con estensione IPA](~/ios/deploy-test/app-distribution/ipa-support.md).
+
+## <a name="see-also"></a>Vedere anche
+
+- [Symbolicating iOS di arresto anomalo del file (xamarin)](http://jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/)
 - [Demistificazione iOS i registri di arresto anomalo applicazioni](https://www.raywenderlich.com/23704/demystifying-ios-application-crash-logs)
+

@@ -6,16 +6,18 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 03/20/2018
-ms.openlocfilehash: 124823238968ab21c1e55818ba5b99d2bb0c0bf8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/08/2018
+ms.openlocfilehash: a714ac55c3a49b91cb21e3ba1793b9bccd7d1be2
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Dispatcher processo firebase
 
 _Questa guida viene descritto come pianificare il lavoro in background utilizza la libreria Firebase processo Dispatcher da Google._
+
+![Dispatcher di processo firebase in anteprima](~/media/shared/preview.png)
 
 ## <a name="overview"></a>Panoramica
 
@@ -60,9 +62,13 @@ Il Dispatcher processo Firebase richiede il livello API Android 9 o versione suc
 
 ## <a name="using-the-firebase-job-dispatcher-library-in-xamarinandroid"></a>Utilizzo della libreria di Dispatcher processo Firebase in xamarin
 
-Per iniziare a utilizzare il Dispatcher processo Firebase, aggiungere il [pacchetto Xamarin.Firebase.JobDispatcher NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher/0.6.0-beta1) al progetto xamarin. Gestione pacchetti NuGet per eseguire la ricerca di **Xamarin.Firebase.Jobdispatcher** pacchetto.  
+Per iniziare a utilizzare il Dispatcher processo Firebase, aggiungere il [pacchetto Xamarin.Firebase.JobDispatcher NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher) al progetto xamarin. Ricerca di gestione pacchetti NuGet per la **Xamarin.Firebase.JobDispatcher** pacchetto (che è ancora in versione non definitiva).
 
 Dopo aver aggiunto la libreria Firebase Dispatcher di processo, creare un `JobService` classe e quindi pianificare l'esecuzione con un'istanza di `FirebaseJobDispatcher`.
+
+> [!NOTE]
+> L'associazione corrente per il Dispatcher processo Firebase destinata a una versione precedente della libreria. il è un [bug noto [(https://bugzilla.xamarin.com/show_bug.cgi?id=59046)] che impediscono l'associazione da in corso l'aggiornamento a una versione più recente del Dispatcher Firebase processo di destinazione.
+
 
 ### <a name="creating-a-jobservice"></a>Creazione di un JobService
 
@@ -287,7 +293,8 @@ Questa guida viene spiegato come utilizzare il Dispatcher processo Firebase per 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Xamarin.Firebase.JobDispatcher in NuGet](https://www.nuget.org/packages/Xamarin.FirebaseJobDispatcher)
+- [Generatore di associazioni non riesce con errore irreversibile un'eccezione non GESTITA: System. ArgumentNullException: valore non può essere null.](https://bugzilla.xamarin.com/show_bug.cgi?id=59046)
+- [Xamarin.Firebase.JobDispatcher in NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher)
 - [dispatcher di processo firebase su GitHub](https://github.com/firebase/firebase-jobdispatcher-android)
 - [Xamarin.Firebase.JobDispatcher Binding](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
 - [Intelligente pianificazione dei processi](https://developer.android.com/topic/performance/scheduling.html)

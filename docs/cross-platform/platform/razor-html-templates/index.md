@@ -3,15 +3,14 @@ title: Viste di compilazione HTML utilizzando i modelli Razor
 description: " Utilizzo di una pagina Web a schermo intero per il rendering HTML può essere un modo semplice ed efficace per eseguire il rendering formattazione complessa in un modo multipiattaforma, soprattutto se si dispone già di HTML, Javascript e CSS da un progetto di sito Web."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: fa361e48f8f7e236a3295deda2d80a02ef06b34d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 48d7778bf3225401f2819909ae6be320cfa881e3
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="building-html-views-using-razor-templates"></a>Viste di compilazione HTML utilizzando i modelli Razor
 
@@ -483,7 +482,7 @@ HTML può essere elevato per la creazione di prototipi, e la visualizzazione di 
 
 Visualizzazioni web nel modello possono essere ampliate facilmente con controlli specifici della piattaforma: modifica semplicemente il **Mainstoryboard** nella finestra di progettazione iOS o **Resources/layout/Main.axml** in Android.
 
-### <a name="razortodo-sample"></a>RazorTodo Sample
+### <a name="razortodo-sample"></a>Esempio RazorTodo
 
 Il [RazorTodo](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo) repository contiene due soluzioni separate per visualizzare le differenze tra un'applicazione completamente basati su HTML e un'app che combina HTML con controlli nativi:
 

@@ -8,11 +8,11 @@ ms.custom: video
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 4a7a8a96ff22cf02d04ffdfff684d454d1a28024
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3eb3bdd7b060b661d5202c63a879f1c88d2ccdcb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="oreo-features"></a>Funzionalità Oreo
 
@@ -190,7 +190,7 @@ Dopo aver utilizzato **avdmanager** per creare il dispositivo virtuale, verrà i
 
 -----
 
-Per ulteriori informazioni sulla configurazione di un emulatore Android di test e debug, vedere [emulatore di Android SDK](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Per ulteriori informazioni sulla configurazione di un emulatore Android di test e debug, vedere [emulatore Android di Google](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
 
 Se si utilizza un dispositivo fisico, ad esempio un nodo o un Pixel, è possibile aggiornare il dispositivo tramite automatico sugli aggiornamenti air (OTA) o scaricare un'immagine del sistema e flash direttamente il dispositivo. Per ulteriori informazioni sull'aggiornamento manuale del dispositivo per Oreo Android, vedere [immagini Factory per i dispositivi di Pixel e Nexus](https://developers.google.com/android/images).
 
