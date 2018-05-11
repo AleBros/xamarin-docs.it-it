@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: cf0e7cab0c879f8fb286c87b2aaadab2dc1453f8
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: eaa57e90ef71f13a53737aa6540e5b5bd9126ad2
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="localization"></a>Localizzazione
 
@@ -32,7 +32,7 @@ Sono disponibili due esempi relativi a questo documento:
 
 Nell'esempio TodoLocalized è incluso un [demo progetto condiviso](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized/SharedProject/) tuttavia a causa di limitazioni del sistema di compilazione i file di risorse non si ottengono un **. designer.cs** file generati creando un'interruzione di accedere al le stringhe tradotte fortemente tipizzate nel codice.
 
-Il resto di questo documento si riferisce ai progetti utilizzando il modello libreria di classi Portabile xamarin. Forms.
+Il resto di questo documento si riferisce ai progetti utilizzando il modello libreria xamarin. Forms .NET Standard.
 
 ## <a name="globalizing-xamarinforms-code"></a>Globalizzazione di xamarin. Forms
 
@@ -46,7 +46,7 @@ Gli esempi di destinazione le lingue inglese, francese, spagnolo, tedesco, cines
 
 ### <a name="adding-resources"></a>Aggiunta di risorse
 
-Il primo passaggio per la globalizzazione di un'applicazione di libreria di classi Portabile xamarin. Forms è aggiungendo i file di risorse RESX che verranno utilizzati per archiviare tutto il testo utilizzato nell'app. È necessario aggiungere un file RESX che contiene il testo predefinito e quindi aggiungere ulteriori file RESX per ogni lingua che si desidera supportare.
+Il primo passaggio della globalizzazione di un'applicazione libreria xamarin. Forms .NET Standard è aggiungendo i file di risorse RESX che verranno utilizzati per archiviare tutto il testo utilizzato nell'app. È necessario aggiungere un file RESX che contiene il testo predefinito e quindi aggiungere ulteriori file RESX per ogni lingua che si desidera supportare.
 
 #### <a name="base-language-resource"></a>Risorsa di lingua di base
 
@@ -98,7 +98,7 @@ Per rendere le proprietà della stringa fortemente tipizzato `public`, è necess
 
 -----
 
-Questa modifica è facoltativa ed è solo necessario se si desidera fare riferimento a stringhe localizzate in assembly diversi (ad esempio, se si inserisce i file RESX in un assembly diverso per il codice). L'esempio di questo argomento lascia le stringhe `internal` perché sono definiti nello stesso assembly xamarin. Forms PCL in cui vengono utilizzati.
+Questa modifica è facoltativa ed è solo necessario se si desidera fare riferimento a stringhe localizzate in assembly diversi (ad esempio, se si inserisce i file RESX in un assembly diverso per il codice). L'esempio di questo argomento lascia le stringhe `internal` perché sono definiti nello stesso assembly libreria xamarin. Forms .NET Standard in cui vengono utilizzati.
 
 È necessario impostare lo strumento personalizzato nel file RESX base, come illustrato sopra. non è necessario impostare *qualsiasi* strumento di compilazione nei file specifici della lingua RESX illustrati nelle sezioni seguenti.
 
@@ -559,7 +559,7 @@ I progetti di Universal Windows Platform (UWP) non richiedono il servizio di dip
 
 ##### <a name="assemblyinfocs"></a>AssemblyInfo.cs
 
-Espandere il nodo di proprietà del progetto libreria di classe portabile (PCL) e fare doppio clic su di **AssemblyInfo.cs** file. Aggiungere la riga seguente al file per impostare il linguaggio assembly di risorse neutre su inglese:
+Espandere il nodo di proprietà nel progetto di libreria Standard di .NET e fare doppio clic sui **AssemblyInfo.cs** file. Aggiungere la riga seguente al file per impostare il linguaggio assembly di risorse neutre su inglese:
 
 ```csharp
 [assembly: NeutralResourcesLanguage("en")]

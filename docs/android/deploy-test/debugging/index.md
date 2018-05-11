@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/25/2018
-ms.openlocfilehash: 4b51b10965f3f6e77420d657bc0f7f7d25fc6569
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: a4ce36e28bd5b6dcf78d248b1f2ba951cad9b286
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="debugging"></a>Debug
 
@@ -21,7 +21,7 @@ Questa sezione illustra come eseguire il debug di un'app Xamarin.Android in disp
 Lo sviluppo di applicazioni Android richiede l'esecuzione dell'applicazione su hardware fisico o usando un emulatore. L'uso di hardware è l'approccio migliore, ma non sempre il più pratico. In molti casi può essere più semplice e più conveniente simulare/emulare hardware Android usando uno degli emulatori descritti di seguito.
 
 
-### <a name="android-sdk-emulatorandroiddeploy-testdebuggingandroid-sdk-emulatorindexmd"></a>[Emulatore di Android SDK](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
+### <a name="google-android-emulatorandroiddeploy-testdebuggingandroid-sdk-emulatorindexmd"></a>[Emulatore Android di Google](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
 
 Questi articoli illustrano come usare l'emulatore predefinito incluso in Android SDK. L'emulatore è disponibile per Visual Studio per Windows e Visual Studio per Mac.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 4d1d4323e42df6240fee7be42ae8fac70a2b3f1f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: fd96770caf92eb30e669133f592f5d780146be59
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-a-viewcell"></a>Personalizzazione di un ViewCell
 
@@ -65,13 +65,13 @@ public class NativeCell : ViewCell
   }
 }
 ```
-La `NativeCell` classe viene creata nel progetto di libreria (PCL) di classi portabile e definisce l'API per la cella personalizzata. Espone la cella personalizzata `Name`, `Category`, e `ImageFilename` proprietà che possono essere visualizzate tramite l'associazione dati. Per altre informazioni sul data binding, vedere [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) (Nozioni di base sul data binding).
+Il `NativeCell` classe creata nel progetto di libreria Standard di .NET e definisce l'API per la cella personalizzata. Espone la cella personalizzata `Name`, `Category`, e `ImageFilename` proprietà che possono essere visualizzate tramite l'associazione dati. Per altre informazioni sul data binding, vedere [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) (Nozioni di base sul data binding).
 
 <a name="Consuming_the_Custom_Cell" />
 
 ## <a name="consuming-the-custom-cell"></a>Utilizzo di cella personalizzato
 
-Il `NativeCell` cella personalizzato può fare riferimento in Xaml nel progetto libreria di classi Portabile dichiarare uno spazio dei nomi per la posizione e utilizzando il prefisso dello spazio dei nomi dell'elemento di cella personalizzato. Nell'esempio di codice riportato di seguito viene illustrato come la `NativeCell` cella personalizzati può essere utilizzato da una pagina XAML:
+Il `NativeCell` cella personalizzato può fare riferimento in Xaml nel progetto di libreria .NET Standard dichiarare uno spazio dei nomi per la posizione e utilizzando il prefisso dello spazio dei nomi dell'elemento di cella personalizzato. Nell'esempio di codice riportato di seguito viene illustrato come la `NativeCell` cella personalizzati può essere utilizzato da una pagina XAML:
 
 ```xaml
 <ContentPage ...

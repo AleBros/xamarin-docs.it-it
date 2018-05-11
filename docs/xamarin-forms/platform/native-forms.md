@@ -1,23 +1,23 @@
 ---
 title: Moduli nativi
-description: I moduli nativi consentono pagine derivate ContentPage xamarin. Forms deve essere utilizzato da progetti nativi, xamarin. IOS, xamarin e della piattaforma UWP (Universal Windows). Progetti nativi possono utilizzare le pagine derivate ContentPage che vengono aggiunti direttamente al progetto o da una libreria di classe portabile (PCL), la libreria Standard di .NET o progetto condiviso. In questo articolo viene illustrato come utilizzare pagine derivate ContentPage aggiunti direttamente a progetti nativi e come passare tra di essi.
+description: I moduli nativi consentono pagine derivate ContentPage xamarin. Forms deve essere utilizzato da progetti nativi, xamarin. IOS, xamarin e della piattaforma UWP (Universal Windows). Progetti nativi possono utilizzare le pagine derivate ContentPage direttamente aggiunti al progetto o da una libreria .NET Standard, la libreria Standard di .NET o progetto condiviso. In questo articolo viene illustrato come utilizzare pagine derivate ContentPage aggiunti direttamente a progetti nativi e come passare tra di essi.
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: 9d0d4e69228ce8a1d9944833bff80b22ea5f9ddd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bb7aa9a7071f9ac7bef0dce5790a3fe74302cfb4
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="native-forms"></a>Moduli nativi
 
-_I moduli nativi consentono pagine derivate ContentPage xamarin. Forms deve essere utilizzato da progetti nativi, xamarin. IOS, xamarin e della piattaforma UWP (Universal Windows). Progetti nativi possono utilizzare le pagine derivate ContentPage che vengono aggiunti direttamente al progetto o da una libreria di classe portabile (PCL), la libreria Standard di .NET o progetto condiviso. In questo articolo viene illustrato come utilizzare pagine derivate ContentPage aggiunti direttamente a progetti nativi e come passare tra di essi._
+_I moduli nativi consentono pagine derivate ContentPage xamarin. Forms deve essere utilizzato da progetti nativi, xamarin. IOS, xamarin e della piattaforma UWP (Universal Windows). Progetti nativi possono utilizzare le pagine derivate ContentPage direttamente aggiunti al progetto o da una libreria .NET Standard, la libreria Standard di .NET o progetto condiviso. In questo articolo viene illustrato come utilizzare pagine derivate ContentPage aggiunti direttamente a progetti nativi e come passare tra di essi._
 
-In genere, un'applicazione di xamarin. Forms include una o più pagine che derivano da [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/), e queste pagine sono condivisi da tutte le piattaforme in una libreria di classi Portabile, la libreria Standard di .NET o progetto condiviso. Tuttavia, i moduli nativi consente `ContentPage`-derivato pagine da aggiungere direttamente alle applicazioni native di xamarin. IOS, xamarin e UWP. Confrontare con il progetto nativo utilizzano `ContentPage`-pagine derivate da una libreria di classi Portabile, la libreria Standard di .NET o progetto condiviso, il vantaggio di aggiunta di pagine direttamente a progetti nativi è che le pagine possono essere esteso con viste native. Viste native possono quindi essere denominate in XAML con `x:Name` e a cui viene fatto riferimento dal code-behind. Per ulteriori informazioni sulle viste native, vedere [viste nativo](~/xamarin-forms/platform/native-views/index.md).
+In genere, un'applicazione di xamarin. Forms include una o più pagine che derivano da [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/), e queste pagine sono condivisi da tutte le piattaforme in un progetto condiviso o un progetto di libreria .NET Standard. Tuttavia, i moduli nativi consente `ContentPage`-derivato pagine da aggiungere direttamente alle applicazioni native di xamarin. IOS, xamarin e UWP. Confrontare con il progetto nativo utilizzano `ContentPage`-pagine derivate da un progetto di libreria .NET Standard o un progetto condiviso, il vantaggio di aggiunta di pagine direttamente ai progetti nativi è che le pagine possono essere esteso con viste native. Viste native possono quindi essere denominate in XAML con `x:Name` e a cui viene fatto riferimento dal code-behind. Per ulteriori informazioni sulle viste native, vedere [viste nativo](~/xamarin-forms/platform/native-views/index.md).
 
 Il processo per l'utilizzo di un xamarin. Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-pagina derivata in un progetto nativo è come segue:
 
@@ -30,7 +30,7 @@ Il processo per l'utilizzo di un xamarin. Forms [ `ContentPage` ](https://develo
 Xamarin. Forms deve essere inizializzato chiamando il `Forms.Init` metodo prima di un progetto nativo è possibile costruire un [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-pagina derivata. Scelta del momento a tale scopo principalmente dipende da quando è più semplice nel flusso dell'applicazione: è stato possibile eseguire all'avvio dell'applicazione, o immediatamente prima che il `ContentPage`-pagina derivata viene costruito. In questo articolo e le applicazioni di esempio associato, il `Forms.Init` metodo viene chiamato all'avvio dell'applicazione.
 
 > [!NOTE]
-> Il **NativeForms** soluzione dell'applicazione di esempio non contiene tutti i progetti di xamarin. Forms. In alternativa, è costituito da un progetto xamarin. IOS, un progetto xamarin e un progetto UWP. Ogni progetto è un progetto nativo che utilizza form Native di utilizzare [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-pagine derivate. Tuttavia, non è necessario perché non è stato possibile utilizzare i progetti nativi `ContentPage`-deriva le pagine da una libreria di classi Portabile, la libreria Standard di .NET o progetto condiviso.
+> Il **NativeForms** soluzione dell'applicazione di esempio non contiene tutti i progetti di xamarin. Forms. In alternativa, è costituito da un progetto xamarin. IOS, un progetto xamarin e un progetto UWP. Ogni progetto è un progetto nativo che utilizza form Native di utilizzare [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-pagine derivate. Tuttavia, non vi è alcun motivo per cui non è stato possibile utilizzare progetti nativi `ContentPage`-derivato pagine da un progetto di libreria .NET Standard o condiviso.
 
 Quando si utilizzano moduli nativi, ad esempio funzionalità di xamarin. Forms [ `DependencyService` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/), [ `MessagingCenter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/)e il motore di associazione dati, tutto il lavoro ancora.
 
@@ -187,7 +187,7 @@ public void NavigateToCallHistoryPage()
 
 Il `NavigateToCallHistoryPage` metodo converte il xamarin. Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivato dalla pagina un `Fragment` con il `CreateFragment` metodo di estensione e aggiunge il `Fragment` al frammento stack indietro. Pertanto, l'interfaccia utente definita di xamarin. Forms `CallHistoryPage` verranno visualizzati, come illustrato nella schermata seguente:
 
-[![](native-forms-images/android-callhistorypage.png "Android CallHistoryPage")](native-forms-images/android-callhistorypage-large.png#lightbox "Android CallHistoryPage")
+[![](native-forms-images/android-callhistorypage.png "Android CallHistoryPage")](native-forms-images/android-callhistorypage-large.png#lightbox "CallHistoryPage Android")
 
 Quando il `CallHistoryPage` viene visualizzato, toccare il back freccia verrà visualizzata la `Fragment` per il `CallHistoryPage` dallo stack indietro di frammento, restituzione all'utente del `Fragment` per la `PhonewordPage` classe.
 
@@ -292,7 +292,7 @@ public void NavigateToCallHistoryPage()
 
 Navigazione in UWP viene in genere eseguita con il `Frame.Navigate` metodo, che accetta un `Page` argomento. Xamarin. Forms definisce un `Frame.Navigate` metodo di estensione che accetta un [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-pagina istanza derivata. Pertanto, quando il `NavigateToCallHistoryPage` esecuzione del metodo, l'interfaccia utente definito in di xamarin. Forms `CallHistoryPage` verranno visualizzati, come illustrato nella schermata seguente:
 
-[![](native-forms-images/uwp-callhistorypage.png "UWP CallHistoryPage")](native-forms-images/uwp-callhistorypage-large.png#lightbox "UWP CallHistoryPage")
+[![](native-forms-images/uwp-callhistorypage.png "UWP CallHistoryPage")](native-forms-images/uwp-callhistorypage-large.png#lightbox "CallHistoryPage UWP")
 
 Quando il `CallHistoryPage` viene visualizzato, toccare il back freccia verrà visualizzata la `FrameworkElement` per il `CallHistoryPage` dallo stack indietro nell'applicazione, la restituzione all'utente del `FrameworkElement` per la `PhonewordPage` classe.
 
@@ -349,7 +349,7 @@ Per ulteriori informazioni sul supporto di navigazione all'indietro in UWP, vede
 
 ## <a name="summary"></a>Riepilogo
 
-Form native consentono di xamarin. Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivato pagine deve essere utilizzato da progetti nativi, xamarin. IOS, xamarin e della piattaforma UWP (Universal Windows). Possono utilizzare i progetti nativi `ContentPage`-derivato pagine che vengono aggiunti direttamente al progetto o da una libreria di classi Portabile, la libreria Standard di .NET o progetto condiviso. Questo articolo ha descritto come utilizzare `ContentPage`-derivato pagine che vengono aggiunti direttamente a progetti nativi e su come spostarsi tra di esse.
+Form native consentono di xamarin. Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivato pagine deve essere utilizzato da progetti nativi, xamarin. IOS, xamarin e della piattaforma UWP (Universal Windows). Progetti nativi possono usare `ContentPage`-derivato pagine che vengono aggiunti direttamente al progetto o da un progetto di libreria .NET Standard o condiviso. Questo articolo ha descritto come utilizzare `ContentPage`-derivato pagine che vengono aggiunti direttamente a progetti nativi e su come spostarsi tra di esse.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

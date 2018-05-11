@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2017
-ms.openlocfilehash: 95c5f482e1bf3e55fa4c6fef18b1dbe6274f33e8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d1f11ed1b52354dedbdb8893a96e0ae7589d5389
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="local-databases"></a>Database locali
 
@@ -19,7 +19,7 @@ _Xamarin. Forms supporta le applicazioni basate sul database utilizzando il moto
 
 ## <a name="overview"></a>Panoramica
 
-Xamarin. Forms applicazioni possono utilizzare il [NuGet PCL SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/) pacchetto per incorporare le operazioni di database in codice condiviso facendo riferimento al `SQLite` classi disponibili in NuGet. Operazioni di database possono essere definite nel progetto libreria di classe portabile (PCL) della soluzione xamarin. Forms, con i progetti specifici della piattaforma restituire un percorso in cui verrà archiviato il database.
+Xamarin. Forms applicazioni possono utilizzare il [NuGet PCL SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/) pacchetto per incorporare le operazioni di database in codice condiviso facendo riferimento al `SQLite` classi disponibili in NuGet. È possibile definire le operazioni del database nel progetto di libreria Standard di .NET della soluzione xamarin. Forms, con i progetti specifici della piattaforma restituzione di un percorso a dove verrà archiviato il database.
 
 Il tipo di accompagnamento [applicazione di esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) è una semplice applicazione elenco attività. Le schermate seguenti mostrano come nell'esempio viene visualizzata in ogni piattaforma:
 
@@ -33,7 +33,7 @@ In questa sezione viene illustrato come aggiungere pacchetti SQLite.Net NuGet a 
 
 <a name="XamarinForms_PCL_Project" />
 
-### <a name="xamarinsforms-pcl-project"></a>Xamarins.Forms PCL Project
+### <a name="xamarinsforms-pcl-project"></a>Progetto PCL Xamarins.Forms
 
 Per aggiungere il supporto di SQLite a un progetto libreria di classi Portabile xamarin. Forms, utilizzare la funzione di ricerca di NuGet per trovare **sqlite-net-pcl** e installare il pacchetto:
 

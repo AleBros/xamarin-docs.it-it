@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: c120add5a301e440911bd9794da77732e7787cc0
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c93681c3bfd8de8d813cbe98a7ac28b3ee8b74fc
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-an-entry"></a>Personalizzazione di una voce
 
@@ -43,13 +43,13 @@ public class MyEntry : Entry
 }
 ```
 
-Il `MyEntry` controllo viene creato nel progetto di libreria (PCL) di classi portabile ed è semplicemente un [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) controllo. Personalizzazione del controllo verrà effettuata nel renderer personalizzato, è necessario alcun implementazione aggiuntiva di `MyEntry` controllo.
+Il `MyEntry` controllo viene creato nel progetto di libreria Standard di .NET ed è semplicemente un' [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) controllo. Personalizzazione del controllo verrà effettuata nel renderer personalizzato, è necessario alcun implementazione aggiuntiva di `MyEntry` controllo.
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>Utilizzo del controllo personalizzato
 
-Il `MyEntry` controllo può fare riferimento in XAML nel progetto libreria di classi Portabile dichiarare uno spazio dei nomi per la posizione e utilizzando il prefisso dello spazio dei nomi dell'elemento di controllo. Nell'esempio di codice riportato di seguito viene illustrato come la `MyEntry` controllo può essere utilizzato da una pagina XAML:
+Il `MyEntry` controllo possibile farvi riferimento in XAML nel progetto di libreria .NET Standard dichiarando uno spazio dei nomi per la posizione e utilizzando il prefisso dello spazio dei nomi dell'elemento di controllo. Nell'esempio di codice riportato di seguito viene illustrato come la `MyEntry` controllo può essere utilizzato da una pagina XAML:
 
 ```xaml
 <ContentPage ...

@@ -7,39 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: b6ea988aa8c058fe5a92a17e9b72f81e0ccb12db
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: aed240dd403957e5935666d4179a6d642c411b86
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="setup-windows-projects"></a>Progetti di installazione Windows
 
 _Aggiunta di nuovi progetti di Windows a una soluzione xamarin. Forms esistente_
 
 Soluzioni più vecchie in xamarin. Forms (o quelli creati nel macOS) non avrà progetti per app della piattaforma UWP (Universal Windows). Pertanto, è necessario aggiungere manualmente un progetto UWP per compilare un'app Windows 10 (UWP).
-
-<a name="pcl" />
-
-## <a name="update-the-pcl-profile"></a>Aggiornare il profilo della libreria di classi Portabile
-
-Se l'app xamarin. Forms esistente utilizzato il modello libreria di classe portabile (PCL), è necessario aggiornare il profilo.
-
-1. **Fare doppio clic su > proprietà** (le impostazioni esistenti potrebbero essere diverso)
-
-  ![](images/targets.png "Destinazioni di libreria di classi Portabile")
-
-2. Fare clic su di **modifica...**  pulsante
-
-3. Verificare che il **Windows 8** e **Windows Phone 8.1** le opzioni sono selezionate (e **Windows Phone Silveright** è *deselezionate*):
-
-  ![](images/pcl.png "Opzioni di destinazione di libreria di classi Portabile")
-
-4. Premere **OK** e salvare le modifiche.
-
-Ciò corrisponde a **111 profilo** se si configura la libreria di classi Portabile in Visual Studio per Mac utilizzando l'elenco a discesa.
-
-  ![](images/pcl-xs.png "Profilo PCL 111")
 
 ## <a name="add-a-universal-windows-platform-app"></a>Aggiungere un Windows Universal app della piattaforma
 
@@ -65,7 +43,7 @@ Seguire queste istruzioni per aggiungere un'app UWP che verrà eseguiti nel desk
 
   [![](universal-images/configuration-sml.png "Finestra di Configuration Manager")](universal-images/configuration.png#lightbox "finestra Configuration Manager")
 
- 5 . Pulsante destro del mouse sul progetto e selezionare **Aggiungi > riferimento** e creare un riferimento al progetto di applicazione xamarin. Forms (PCL, .NET Standard o progetto condiviso).
+ 5 . Pulsante destro del mouse sul progetto e selezionare **Aggiungi > riferimento** e creare un riferimento al progetto di applicazione di xamarin. Forms (.NET Standard o progetto condiviso).
 
   ![](universal-images/addref-sml.png "Finestra di dialogo Gestione riferimenti")
 

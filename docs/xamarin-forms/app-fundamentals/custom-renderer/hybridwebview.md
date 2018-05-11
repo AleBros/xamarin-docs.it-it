@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ffb013c355db34ef7456404d6f9dcaec75743420
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: af0dbef84d8ceb178fe5c1ac6fc7194c178141dc
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementazione di un HybridWebView
 
@@ -74,7 +74,7 @@ public class HybridWebView : View
 }
 ```
 
-Il `HybridWebView` controllo personalizzato viene creato nel progetto di libreria (PCL) di classi portabile e definisce l'API per il controllo seguente:
+Il `HybridWebView` controllo personalizzato viene creato nel progetto di libreria Standard di .NET e definisce l'API seguente per il controllo:
 
 - Oggetto `Uri` proprietà che specifica l'indirizzo della pagina web da caricare.
 - Oggetto `RegisterAction` metodo che registra un `Action` con il controllo. Viene richiamato l'azione registrata da JavaScript contenute nel file HTML a cui fa riferimento tramite il `Uri` proprietà.
@@ -85,7 +85,7 @@ Il `HybridWebView` controllo personalizzato viene creato nel progetto di libreri
 
 ## <a name="consuming-the-hybridwebview"></a>Utilizzo di HybridWebView
 
-Il `HybridWebView` controllo personalizzato può fare riferimento in XAML nel progetto libreria di classi Portabile dichiarare uno spazio dei nomi per la posizione e utilizzando il prefisso dello spazio dei nomi del controllo personalizzato. Nell'esempio di codice riportato di seguito viene illustrato come la `HybridWebView` controllo personalizzato può essere utilizzato da una pagina XAML:
+Il `HybridWebView` controllo personalizzato può fare riferimento in XAML nel progetto di libreria .NET Standard dichiarare uno spazio dei nomi per la posizione e utilizzando il prefisso dello spazio dei nomi del controllo personalizzato. Nell'esempio di codice riportato di seguito viene illustrato come la `HybridWebView` controllo personalizzato può essere utilizzato da una pagina XAML:
 
 ```xaml
 <ContentPage ...

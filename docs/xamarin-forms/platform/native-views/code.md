@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 46284fd1b0863f904e9f24f125aef75fe3eb8caa
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c3a79947b02e0f877fd4ea1b0ddb72486c222719
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="native-views-in-c"></a>Viste native in c#
 
@@ -19,7 +19,7 @@ _Viste native di iOS, Android e UWP possono fare riferimento direttamente dalle 
 
 ## <a name="overview"></a>Panoramica
 
-Qualsiasi controllo di xamarin. Forms che consente `Content` per impostare, o che dispone di un `Children` insieme, è possibile aggiungere viste specifiche della piattaforma. Ad esempio, un iOS `UILabel` possono essere aggiunti direttamente al [ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) proprietà, o il [ `StackLayout.Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/) insieme. Si noti tuttavia che questa funzionalità richiede l'utilizzo di `#if` definisce nelle soluzioni di progetto condiviso xamarin. Forms e non è disponibile da soluzioni xamarin. Forms portabile classe libreria (PCL).
+Qualsiasi controllo di xamarin. Forms che consente `Content` per impostare, o che dispone di un `Children` insieme, è possibile aggiungere viste specifiche della piattaforma. Ad esempio, un iOS `UILabel` possono essere aggiunti direttamente al [ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) proprietà, o il [ `StackLayout.Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/) insieme. Tuttavia, si noti che questa funzionalità richiede l'utilizzo di `#if` definisce nelle soluzioni xamarin. Forms progetto condiviso, mentre non è disponibile da soluzioni libreria xamarin. Forms .NET Standard.
 
 Le schermate seguenti illustrano specifico della piattaforma viste è stato aggiunto a un xamarin. Forms [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/):
 

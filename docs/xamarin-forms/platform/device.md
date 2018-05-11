@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 1fc3fb17ec97ce9028abbf63cdedbfc5fec12204
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 520982491803fa0a909008ee60730a4149a75296
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="device-class"></a>Classe di dispositivi
 
@@ -155,7 +155,7 @@ Il [esempio mappe](https://github.com/xamarin/xamarin-forms-samples/blob/master/
 
 ## <a name="devicestarttimer"></a>Device.StartTimer
 
-Il `Device` classe include inoltre un `StartTimer` metodo che fornisce un modo semplice per attivare le attività dipendenti dal tempo utilizzabile nel codice comune di xamarin. Forms (inclusi PCLs). Passare un `TimeSpan` per impostare l'intervallo e restituire `true` per mantenere il timer in esecuzione o `false` per interromperla, dopo la chiamata corrente.
+Il `Device` classe include inoltre un `StartTimer` metodo che fornisce un modo semplice per attivare le attività dipendenti dal tempo che viene utilizzato codice comune con xamarin. Forms, inclusa una libreria .NET Standard. Passare un `TimeSpan` per impostare l'intervallo e restituire `true` per mantenere il timer in esecuzione o `false` per interromperla, dopo la chiamata corrente.
 
 ```csharp
 Device.StartTimer (new TimeSpan (0, 0, 60), () => {
@@ -184,7 +184,7 @@ Si noti che tramite i metodi `async/await` non è necessario utilizzare `BeginIn
 
 ## <a name="summary"></a>Riepilogo
 
-Di xamarin. Forms `Device` classe consente a un controllo accurato sul layout e funzionalità di base per ogni piattaforma, anche in comune di codice (progetti di libreria di classi Portabile o condiviso).
+Il xamarin. Forms `Device` classe consente a un controllo accurato funzionalità e i layout di base per ogni piattaforma, anche in comune codice (progetti di libreria .NET Standard o i progetti condivisi).
 
 
 ## <a name="related-links"></a>Collegamenti correlati

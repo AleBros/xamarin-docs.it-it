@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: cf1b586c8e30b2922251104461d9ca7100b8e74e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3dda1445815f747f484458388cd856c2f9705603
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Eseguire il debug di Android usura in un emulatore
 
@@ -21,9 +21,9 @@ _Questi articoli viene illustrato come eseguire il debug di un'applicazione di x
 
 Lo sviluppo di applicazioni, usare Android richiede l'esecuzione dell'applicazione, uno su hardware fisico o un emulatore o simulatore. L'uso di hardware è l'approccio migliore, ma non sempre il più pratico. In molti casi, può essere più semplice e più conveniente per simulare/emulare hardware, usare Android usando un emulatore, come descritto di seguito. Se non sono ancora familiarità con il processo di distribuzione ed esecuzione di App, usare Android, vedere [salve, usura](~/android/wear/get-started/hello-wear.md).
 
-## <a name="configure-the-android-sdk-emulator"></a>Configurare l'emulatore di Android SDK
+## <a name="configure-the-google-android-emulator"></a>Configurare l'emulatore Android di Google
 
-Per eseguire l'app usura in un emulatore, è necessario installare l'emulatore di Android SDK Android e configurarlo per Android con accenti. Per emulatore di Android SDK installazione e configurazione informazioni generali, vedere [emulatore di Android SDK](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Per eseguire l'app usura in un emulatore, è necessario installare l'emulatore di Android SDK Android e configurarlo per Android con accenti. Per emulatore di Android SDK installazione e configurazione informazioni generali, vedere [emulatore Android di Google](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
 
 Quando si crea un dispositivo virtuale usura, selezionare un profilo di dispositivo, usare Android (ad esempio **Android usura quadrato**). Per migliorare le prestazioni, utilizzare l'usura **x86** CPU/ABI, come illustrato in questo esempio:
 
@@ -47,4 +47,4 @@ L'emulatore può essere lasciato in esecuzione. Non è necessario arrestarlo e r
  
 ## <a name="summary"></a>Riepilogo
  
-Questa guida viene spiegato come configurare l'emulatore di Android SDK per lo sviluppo di usura e avviare un dispositivo virtuale usura per il debug.
+Questa guida viene spiegato come configurare l'emulatore Android di Google per lo sviluppo usura e avviare un dispositivo virtuale usura per il debug.

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/03/2016
-ms.openlocfilehash: 5fcc3405780e0c5e8a0e8d32caf35abf59808c8e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7ce541134e6db9a26699f96ab3114ced2ad22244
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Utilizzo di CocosSharp in xamarin. Forms
 
@@ -53,13 +53,13 @@ Per ulteriori informazioni, vedere il [CocosSharp sezione](~/graphics-games/coco
 ## <a name="adding-the-cocossharp-nuget-packages"></a>Aggiunta di pacchetti CocosSharp Nuget
 
 Prima di utilizzare CocosSharp, gli sviluppatori devono eseguire alcune aggiunte al progetto xamarin. Forms.
-Questa guida si presuppone che un progetto xamarin. Forms con un iOS, Android e PCL progetto.
-Tutto il codice verrà scritto nel progetto libreria di classi Portabile. Tuttavia, è necessario aggiungere librerie per i progetti iOS e Android.
+Questa guida si presuppone un progetto xamarin. Forms con un iOS, Android e .NET Standard progetto di libreria.
+Tutto il codice verrà scritto nel progetto di libreria .NET Standard; Tuttavia, è necessario aggiungere librerie per i progetti iOS e Android.
 
 Il pacchetto CocosSharp Nuget contiene tutti gli oggetti necessari per creare oggetti CocosSharp.
 Il pacchetto nuget CocosSharp.Forms include il `CocosSharpView` (classe), che viene utilizzato per l'host CocosSharp in xamarin. Forms.
 Aggiungere il **CocosSharp.Forms** NuGet e **CocosSharp** verrà aggiunto automaticamente anche.
-A tale scopo, fare clic sulla libreria di classi Portabile <span class="UIItem">pacchetti</span> cartella e selezionare <span class="UIItem">Aggiungi pacchetti... </span>. Immettere il termine di ricerca <span class="UIItem">CocosSharp.Forms</span>selezionare <span class="UIItem">CocosSharp per xamarin. Forms</span>, quindi fare clic su <span class="UIItem">Aggiungi pacchetto</span>.
+A tale scopo, fare clic sui <span class="UIItem">pacchetti</span> cartella nel progetto di libreria .NET Standard e selezionare <span class="UIItem">Aggiungi pacchetti... </span>. Immettere il termine di ricerca <span class="UIItem">CocosSharp.Forms</span>selezionare <span class="UIItem">CocosSharp per xamarin. Forms</span>, quindi fare clic su <span class="UIItem">Aggiungi pacchetto</span>.
 
 ![](cocossharp-images/image1.png "Aggiungere una finestra di dialogo di pacchetti")
 
@@ -198,7 +198,7 @@ Nel grafico seguente consente di visualizzare una gerarchia CocosSharp tipico:
 
 Un solo `CCScene` possono essere attive contemporaneamente. La maggior parte dei giochi utilizzano più `CCLayer` istanze per il contenuto di ordinamento, ma l'applicazione utilizza solo uno. Analogamente, la maggior parte dei giochi usare più oggetti visivi, ma è necessario solo uno nella nostra app. Più dettagliata discussione su CocosSharp gerarchia visiva sono reperibili le [procedura dettagliata BouncingGame](~/graphics-games/cocossharp/bouncing-game.md).
 
-Inizialmente il `GameScene` classe sarà quasi vuota: ci limiteremo a creare in modo da soddisfare il riferimento in `HomePage`. Aggiungere una nuova classe per la libreria di classi Portabile denominato `GameScene`. È necessario ereditare la `CCScene` classe come indicato di seguito:
+Inizialmente il `GameScene` classe sarà quasi vuota: ci limiteremo a creare in modo da soddisfare il riferimento in `HomePage`. Aggiungere una nuova classe al progetto di libreria .NET Standard denominato `GameScene`. È necessario ereditare la `CCScene` classe come indicato di seguito:
 
 
 ```csharp

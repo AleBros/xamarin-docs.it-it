@@ -7,11 +7,11 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 3/27/2018
-ms.openlocfilehash: 104a3adb5d59bc7feafa3c993290247b749ce312
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c110223eae2bb06f64adf3e09977d97cc7b5d71b
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Estensioni di Markup XAML
 
@@ -386,13 +386,13 @@ xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-È necessario ulteriori dichiarazioni di spazio dei nomi XML per accedere alle altre classi. Ogni dichiarazione di spazio dei nomi XML aggiuntivo definisce un nuovo prefisso. Per accedere a classi locali dell'applicazione condiviso PCL, ad esempio `AppConstants`, i programmatori XAML utilizzano spesso il prefisso `local`. La dichiarazione dello spazio dei nomi deve indicare il nome dello spazio dei nomi CLR (Common Language Runtime), noto anche come il nome di spazio dei nomi .NET, ovvero il nome visualizzato del linguaggio c# `namespace` definizione o in un `using` direttiva:
+È necessario ulteriori dichiarazioni di spazio dei nomi XML per accedere alle altre classi. Ogni dichiarazione di spazio dei nomi XML aggiuntivo definisce un nuovo prefisso. Per accedere alle classi locale per la libreria .NET Standard di applicazione condivisa, ad esempio `AppConstants`, i programmatori XAML utilizzano spesso il prefisso `local`. La dichiarazione dello spazio dei nomi deve indicare il nome dello spazio dei nomi CLR (Common Language Runtime), noto anche come il nome di spazio dei nomi .NET, ovvero il nome visualizzato del linguaggio c# `namespace` definizione o in un `using` direttiva:
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-È inoltre possibile definire le dichiarazioni dello spazio dei nomi XML per gli spazi dei nomi .NET in qualsiasi assembly cui fa riferimento la libreria di classi Portabile. Ad esempio, ecco un `sys` prefisso per .NET standard `System` spazio dei nomi, ovvero nel **mscorlib** assembly, che una volta superato per "Common Runtime libreria di oggetti", ma ora significa "multilingue Standard Oggetto Runtime libreria comune." Poiché si tratta di un altro assembly, è necessario anche specificare il nome dell'assembly, in questo caso **mscorlib**:
+È inoltre possibile definire le dichiarazioni dello spazio dei nomi XML per gli spazi dei nomi .NET in qualsiasi assembly cui fa riferimento la libreria .NET Standard. Ad esempio, ecco un `sys` prefisso per .NET standard `System` spazio dei nomi, ovvero nel **mscorlib** assembly, che una volta superato per "Common Runtime libreria di oggetti", ma ora significa "multilingue Standard Oggetto Runtime libreria comune." Poiché si tratta di un altro assembly, è necessario anche specificare il nome dell'assembly, in questo caso **mscorlib**:
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=mscorlib"

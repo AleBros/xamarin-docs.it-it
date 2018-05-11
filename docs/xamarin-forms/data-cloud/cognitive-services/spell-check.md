@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 41bd79b22aa193dd5303847997bc07e8e8d12e58
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 259be743a706c9316e2e275ff305a0fe5ad97906
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Tramite il controllo ortografico Bing API controllo ortografico
 
@@ -90,7 +90,7 @@ async Task<string> SendRequestAsync(string url)
 }
 ```
 
-Questo metodo crea la richiesta GET, aggiungere la chiave API come valore della `Ocp-Apim-Subscription-Key` intestazione. La richiesta di recupero viene quindi inviata al `SpellCheck` API, con l'URL della richiesta che specifica il testo da convertire e la modalità di controllo ortografico. La risposta viene quindi letto e restituita al metodo di chiamata.
+Questo metodo invia la richiesta di recupero per il `SpellCheck` API, con l'URL della richiesta che specifica il testo da convertire e la modalità di controllo ortografico. La risposta viene quindi letto e restituita al metodo di chiamata.
 
 Il `SpellCheck` API invierà il codice di stato HTTP 200 (OK) in risposta, a condizione che la richiesta sia valida, che indica che la richiesta ha avuto esito positivo e che le informazioni richieste sono presenti nella risposta. Per un elenco di oggetti di risposta, vedere [oggetti risposta](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference#response-objects).
 

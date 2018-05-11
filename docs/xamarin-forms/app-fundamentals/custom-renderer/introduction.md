@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: 43b021b158bbb815ab8d27c393f54e0775599940
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: b394c64fe6e2bfb9e5e7ee0e00d8c0366d6bd93e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>Introduzione a un renderer personalizzato
 
@@ -51,7 +51,7 @@ Il `MyEntry` controllo è un `Entry` consentono di controllare il `BackgroundCol
 Il `local` prefisso dello spazio dei nomi può essere qualsiasi carattere. Tuttavia, il `namespace` e `assembly` i valori devono corrispondere i dettagli del controllo personalizzato. Dopo aver dichiarato lo spazio dei nomi, il prefisso viene utilizzato per fare riferimento al controllo personalizzato.
 
 > [!NOTE]
-> La definizione di `xmlns` è molto più semplice in PCLs rispetto ai progetti condivisi. Una libreria di classi Portabile viene compilato in un assembly in modo semplice determinare il tipo è il `assembly=CustomRenderer` valore deve essere. Quando si usano progetti condivisi, tutte le risorse condivise (incluso il codice XAML) vengono compilate in ognuno dei progetti di riferimenti, che significa che se il iOS, Android e UWP progetti hanno un proprio *i nomi degli assembly* non è possibile scrivere il `xmlns` dichiarazione perché il valore deve essere diverso per ogni applicazione. Controlli personalizzati in XAML per i progetti condivisi richiederà ogni progetto di applicazione deve essere configurato con lo stesso nome di assembly.
+> Definizione di `xmlns` è molto più semplice nei progetti di libreria .NET Standard rispetto ai progetti condivisi. Una libreria .NET Standard è compilata in un assembly in modo che risulti semplice determinare il tipo di `assembly=CustomRenderer` valore deve essere. Quando si usano progetti condivisi, tutte le risorse condivise (incluso il codice XAML) vengono compilate in ognuno dei progetti di riferimenti, che significa che se il iOS, Android e UWP progetti hanno un proprio *i nomi degli assembly* non è possibile scrivere il `xmlns` dichiarazione perché il valore deve essere diverso per ogni applicazione. Controlli personalizzati in XAML per i progetti condivisi richiederà ogni progetto di applicazione deve essere configurato con lo stesso nome di assembly.
 
 Il `MyEntry` controllo personalizzato viene quindi eseguito il rendering in ogni piattaforma, con uno sfondo grigio, come illustrato nelle schermate seguenti:
 
@@ -74,7 +74,7 @@ Negli argomenti di questa serie fornirà dimostrazioni e una spiegazione di ques
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-Se un controllo personalizzato è contenuto in un progetto libreria di classi Portabile che è stato aggiunto alla soluzione (vale a dire non PCL creata da Visual Studio per il modello di progetto App di xamarin. Forms Mac e Visual Studio), un'eccezione può verificarsi in iOS, quando si tenta di accedere al controllo personalizzato. Se si verifica questo problema può essere risolto tramite la creazione di un riferimento al controllo personalizzato dalla `AppDelegate` classe:
+Se un controllo personalizzato è contenuto in un progetto di libreria .NET Standard che è stato aggiunto alla soluzione (vale a dire non .NET libreria Standard creata da Visual Studio per il modello di progetto App di xamarin. Forms Mac/Visual Studio), un'eccezione può verificarsi in iOS quando tentativo di accedere al controllo personalizzato. Se si verifica questo problema può essere risolto tramite la creazione di un riferimento al controllo personalizzato dalla `AppDelegate` classe:
 
 ```csharp
 var temp = new ClassInPCL(); // in AppDelegate, but temp not used anywhere

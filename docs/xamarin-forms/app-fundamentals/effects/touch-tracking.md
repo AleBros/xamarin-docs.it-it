@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: eb4ed3df4ea1f9e6aacf1c875eab17908d73cb7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e363cae4dd72a25e4768395410d4e56a8db30eba
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="invoking-events-from-effects"></a>Richiamo di eventi da effetti
 
@@ -49,7 +49,7 @@ Per questo motivo, l'effetto di tocco rilevamento descritto in questo articolo i
 
 ## <a name="the-touch-tracking-effect-api"></a>L'API di effetto di rilevamento di tocco
 
-Il [ **tocco demo effetto rilevamento** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) esempio contiene le classi e un'enumerazione implementare il rilevamento di tocco basso livello. Questi tipi appartengono allo spazio dei nomi `TouchTracking` e iniziare con la parola `Touch`. Il **TouchTrackingEffectDemos** progetto libreria di classi portabile include il `TouchActionType` enumerazione per il tipo di eventi tocco:
+Il [ **tocco demo effetto rilevamento** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) esempio contiene le classi e un'enumerazione implementare il rilevamento di tocco basso livello. Questi tipi appartengono allo spazio dei nomi `TouchTracking` e iniziare con la parola `Touch`. Il **TouchTrackingEffectDemos** progetto di libreria .NET Standard include il `TouchActionType` enumerazione per il tipo di eventi tocco:
 
 ```csharp
 public enum TouchActionType
@@ -65,7 +65,7 @@ public enum TouchActionType
 
 Tutte le piattaforme includono anche un evento che indica che l'evento tocco è stata annullata.
 
-Il `TouchEffect` deriva dalla classe nella libreria di classi Portabile `RoutingEffect` e definisce un evento denominato `TouchAction` e un metodo denominato `OnTouchAction` che richiama la `TouchAction` evento:
+Il `TouchEffect` classe nella libreria .NET Standard deriva da `RoutingEffect` e definisce un evento denominato `TouchAction` e un metodo denominato `OnTouchAction` che richiama la `TouchAction` evento:
 
 ```csharp
 public class TouchEffect : RoutingEffect
@@ -87,7 +87,7 @@ public class TouchEffect : RoutingEffect
 
 Si noti inoltre la `Capture` proprietà. Per acquisire gli eventi tocco, un'applicazione deve impostare questa proprietà su `true` prima di un `Pressed` evento. In caso contrario, gli eventi tocco si comportano come quelle nella piattaforma Windows universale.
 
-La `TouchActionEventArgs` classe nella libreria di classi Portabile contiene tutte le informazioni che accompagna ogni evento:
+Il `TouchActionEventArgs` classe nella libreria .NET Standard contiene tutte le informazioni che accompagna ogni evento:
 
 ```csharp
 public class TouchActionEventArgs : EventArgs
@@ -112,7 +112,7 @@ public class TouchActionEventArgs : EventArgs
 
 Un'applicazione può utilizzare il `Id` proprietà per tenere traccia delle dita singoli. Si noti il `IsInContact` proprietà. Questa proprietà è sempre `true` per `Pressed` gli eventi e `false` per `Released` eventi. È inoltre sempre `true` per `Moved` gli eventi in iOS e Android. Il `IsInContact` proprietà potrebbe essere `false` per `Moved` eventi sulla piattaforma Windows Universal quando l'esecuzione del programma sul desktop e il puntatore del mouse viene spostato senza un pulsante premuto.
 
-È possibile utilizzare il `TouchEffect` nelle proprie applicazioni includendo il file nel progetto libreria di classi Portabile della soluzione e mediante l'aggiunta di un'istanza di classe di `Effects` raccolta di elementi di xamarin. Forms. Collegare un gestore per il `TouchAction` evento per ottenere gli eventi tocco.
+È possibile usare il `TouchEffect` classe nelle proprie applicazioni includendo il file nel progetto di libreria Standard di .NET della soluzione e mediante l'aggiunta di un'istanza per il `Effects` raccolta di elementi di xamarin. Forms. Collegare un gestore per il `TouchAction` evento per ottenere gli eventi tocco.
 
 Per utilizzare `TouchEffect` nella propria applicazione, è necessario anche le implementazioni di piattaforma incluso in **TouchTrackingEffectDemos** soluzione.
 
@@ -151,7 +151,7 @@ public class TouchEffect : PlatformEffect
         // Get the Windows FrameworkElement corresponding to the Element that the effect is attached to
         frameworkElement = Control == null ? Container : Control;
 
-        // Get access to the TouchEffect class in the PCL
+        // Get access to the TouchEffect class in the .NET Standard library
         effect = (TouchTracking.TouchEffect)Element.Effects.
                     FirstOrDefault(e => e is TouchTracking.TouchEffect);
 
@@ -203,7 +203,7 @@ public class TouchEffect : PlatformEffect
 }
 ```
 
-`OnPointerPressed` Controlla anche il valore di `Capture` proprietà nella classe effetto la libreria di classi Portabile e chiama `CapturePointer` se è `true`.
+`OnPointerPressed` Controlla anche il valore di `Capture` proprietà nella classe effetto la libreria Standard di .NET e chiama `CapturePointer` se è `true`.
 
  Altri gestori di eventi UWP sono ancora più semplice:
 
@@ -267,7 +267,7 @@ void OnTouch(object sender, Android.Views.View.TouchEventArgs args)
 
             idToEffectDictionary.Add(id, this);
 
-            capture = pclTouchEffect.Capture;
+            capture = libTouchEffect.Capture;
             break;
 
 ```
@@ -278,7 +278,7 @@ L'elemento viene rimosso dal `idToEffectDictionary` quando il dito viene rilasci
 void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Point pointerLocation, bool isInContact)
 {
     // Get the method to call for firing events
-    Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.pclTouchEffect.OnTouchAction;
+    Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.libTouchEffect.OnTouchAction;
 
     // Get the location of the pointer within the view
     touchEffect.view.GetLocationOnScreen(twoIntArray);

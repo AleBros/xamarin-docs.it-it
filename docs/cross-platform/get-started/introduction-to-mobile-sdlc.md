@@ -3,15 +3,14 @@ title: Introduzione al ciclo di vita di sviluppo del software per dispositivi mo
 description: Questo articolo descrive il ciclo di vita di sviluppo del software per le applicazioni mobili e offre alcune considerazioni che è necessario tenere presente durante la compilazione di progetti per dispositivi mobili. Gli sviluppatori che vogliono passare direttamente alla compilazione possono ignorare questa guida e leggerla successivamente per una miglior comprensione dello sviluppo per dispositivi mobili.
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: c49723038870b7b222bdada7823f1571c5d89d9e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c93a063c9c933e1b9f397d172115471473cf8f35
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introduzione al ciclo di vita di sviluppo del software per dispositivi mobili
 
@@ -253,7 +252,7 @@ Questa guida ha offerto un'introduzione al ciclo di vita di sviluppo del softwar
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Introduction to Mobile Development](~/cross-platform/get-started/introduction-to-mobile-development.md) (Introduzione allo sviluppo per dispositivi mobili)
+- [Introduzione allo sviluppo per dispositivi mobili](~/cross-platform/get-started/introduction-to-mobile-development.md)
 - [Hello, iOS](~/ios/get-started/hello-ios/index.md)
 - [Hello, Android](http://developer.xamarin.com/get-started-droid/)
 - [Nozioni di base sulle applicazioni](~/cross-platform/app-fundamentals/index.md)

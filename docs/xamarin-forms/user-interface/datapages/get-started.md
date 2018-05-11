@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: d06c3f95f55edb4870279bfc7d5326be4af4b3bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5774d91dad7b733a03219dcce1434798f70d4564
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="getting-started-with-datapages"></a>Introduzione a DataPages
 
@@ -26,7 +26,7 @@ Per iniziare la creazione di una pagina di unità di dati semplice utilizzando l
 
 ## <a name="1-add-nuget-packages"></a>1. Aggiungere pacchetti NuGet
 
-Aggiungere questi pacchetti Nuget per la libreria di classi Portabile xamarin. Forms e i progetti di applicazione:
+Aggiungere questi pacchetti Nuget per i progetti di applicazioni e librerie Standard di .NET di xamarin. Forms:
 
 * Xamarin.Forms.Pages
 * Xamarin.Forms.Theme.Base
@@ -135,7 +135,7 @@ I passaggi precedenti devono risultare in una pagina di dati di utilizzo:
 
 [![](get-started-images/demo-sml.png "Applicazione di esempio DataPages")](get-started-images/demo.png#lightbox "applicazione di esempio DataPages")
 
-Questo procedimento funziona perché lo stile predefinito **"Eventi"** esista nel pacchetto Nuget di tema chiaro e con gli stili definiti che corrispondano all'origine dati (ad es. "title", "image", "presenter").
+Questo procedimento funziona perché lo stile predefinito **"Eventi"** esista nel pacchetto Nuget di tema chiaro e con gli stili definiti che corrispondano all'origine dati (ad es. "title", "image", "relatore").
 
 Gli eventi"" `StyleClass` è compilato per la visualizzazione di `ListDataPage` controllo con un oggetto personalizzato `CardView` controllo Xamarin.Forms.Pages definito in. Il `CardView` controllo dispone di tre proprietà: `ImageSource`, `Text`, e `Detail`. Il tema è hardcoded per associare i tre campi dell'origine dati (dal file JSON) per queste proprietà per la visualizzazione.
 

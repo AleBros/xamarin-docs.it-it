@@ -5,12 +5,12 @@ ms.assetid: E281F89B-4142-4BD8-8882-FB65508BF69E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/02/2018
-ms.openlocfilehash: ae4d5b0b8cd384a11d130bc9258894e1cf4cfa36
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/09/2018
+ms.openlocfilehash: 625ba800ce498f80c0344c67e26bd79360de4002
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="walkthrough---using-touch-in-android"></a>Procedura dettagliata: utilizzo di tocco in Android
 
@@ -38,7 +38,7 @@ La prima attività, esempio tocco, viene illustrato come utilizzare i gestori ev
     private void TouchMeImageViewOnTouch(object sender, View.TouchEventArgs touchEventArgs)
     {
         string message;
-        switch (touchEventArgs.Event.Action & MotionEventArgs.Mask)
+        switch (touchEventArgs.Event.Action & MotionEventActions.Mask)
         {
             case MotionEventActions.Down:
             case MotionEventActions.Move:
@@ -344,13 +344,11 @@ Ai fini di questa procedura dettagliata, la libreria di movimenti già creata ut
 
     Disegna un segno di spunta nella schermata e la bitmap viene visualizzata dovrebbe apparire simile a quello illustrato nelle schermate Avanti:
 
-    [![Segno di spunta disegnato](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
-    [![Recognized segno di spunta](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
+    [![È stato riconosciuto disegnato sul segno di spunta, segno di spunta](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
 
     Infine, disegnare un scribble sullo schermo. La casella di controllo deve ripristinare l'immagine originale come illustrato in queste schermate:
 
-    [![Scribble sullo schermo](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png#lightbox)
-    [![viene visualizzata l'immagine originale](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png#lightbox)
+    [![Viene visualizzato sullo schermo, immagine originale Scribble](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
 È ora la comprensione della modalità di integrazione di tocco e i movimenti in un'applicazione Android usando xamarin.
 

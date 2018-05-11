@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: de08e686fc07595b75016b9266f57b12831e9822
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0985fb533969a331ceee62f490bae600de9f189c
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mac-platform-setup"></a>Installazione di piattaforma Mac
 
@@ -41,7 +41,7 @@ Seguire queste istruzioni per aggiungere un'app Mac che verrà eseguito su macOS
 
 5. Nel progetto Mac, fare clic su **pacchetti > Aggiungi pacchetti...**  per aggiungere il [Xamarin.Forms/2.3.5.235-pre2](https://www.nuget.org/packages/Xamarin.Forms/2.3.5.235-pre2) NuGet. Per questa versione, è necessario aggiornare anche gli altri progetti.
 
-6. Nel progetto Mac, fare clic su **riferimenti** e aggiungere un riferimento al progetto xamarin. Forms (progetto condiviso o PCL).
+6. Nel progetto Mac, fare clic su **riferimenti** e aggiungere un riferimento al progetto xamarin. Forms (progetto di libreria di progetto condiviso o Standard .NET).
 
   ![Aggiungere un riferimento al progetto di codice condiviso xamarin. Forms](mac-images/references-sml.png)
 

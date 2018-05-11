@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 6138bd1f9211248b3a260795c2ef9d3db87580be
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 12b8906dd4562e58dede181e773e4046b8434214
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-an-effect"></a>Creazione di un effetto
 
@@ -188,7 +188,7 @@ Il `OnAttached` metodo imposta la `Background` proprietà del controllo da ciano
 
 ## <a name="consuming-the-effect"></a>L'effetto di utilizzo
 
-Il processo per l'utilizzo di un effetto da una libreria di xamarin. Forms classe portabile (PCL) o un progetto di libreria condivisa è come segue:
+Il processo per l'utilizzo di un effetto da una libreria .NET di xamarin. Forms Standard o un progetto di libreria condivisa è come segue:
 
 1. Dichiarare un controllo che verrà personalizzato per l'effetto.
 1. Collegare l'effetto del controllo aggiungendola al controllo [ `Effects` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/) insieme.
@@ -209,7 +209,7 @@ Nell'esempio di codice XAML seguente viene un [ `Entry` ](https://developer.xama
 </Entry>
 ```
 
-La `FocusEffect` classe nella libreria di classi Portabile supporta l'utilizzo di effetto in XAML e viene illustrato nell'esempio di codice seguente:
+Il `FocusEffect` classe nella libreria Standard di .NET supporta l'utilizzo di effetto in XAML e viene illustrata nell'esempio di codice seguente:
 
 ```csharp
 public class FocusEffect : RoutingEffect
