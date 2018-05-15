@@ -5,34 +5,16 @@ ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: topgenorth
 ms.author: toopge
-ms.date: 05/10/2017
-ms.openlocfilehash: 2e2a3e80c121688f9a8bfff0afe4184f19fc6619
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/14/2017
+ms.openlocfilehash: 3d4d34c6945387f5878ea708faf630d2545a750e
+ms.sourcegitcommit: b706fbe05344f7201fbe8f82d9dbbceb66060637
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="xamarin-live-player-app"></a>App di Windows Media Player in tempo reale di Xamarin
 
 ![Funzionalità di anteprima](~/media/shared/preview.png)
-
-## <a name="get-the-app"></a>Ottenere l'App
-
-# <a name="androidtabandroid"></a>[Android](#tab/android)
-
-Xamarin Player in tempo reale è disponibile per Android da Google Play:
-
-[![Disponibile su Google Play](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
-
-Per i dispositivi Android senza Google Play Live Xamarin Player è disponibile tramite [HockeyApp](https://aka.ms/xlp-hockeyapp) distribuzione. Inoltre, l'anteprima compilazioni per Android possono essere installati direttamente da Google Play dalla scelta di utilizzare il [programma beta aperto](https://play.google.com/apps/testing/com.xamarin.live)
-
-# <a name="iostabios"></a>[iOS](#tab/ios)
-
-Che incoraggia la collaborazione agli utenti di creare un join di [app Xamarin Player Live _iOS anteprima_ ](https://aka.ms/liveplayeralpha) per accedere rapidamente ai miglioramenti più aggiornati tramite TestFlight.
-
------
-
-## <a name="using-the-app"></a>Utilizzo dell'App
 
 Dopo aver installato l'app sul telefono, seguire la [istruzioni di installazione](~/tools/live-player/install.md) per connettersi al computer. Provare una del [app di esempio](~/tools/live-player/samples.md) per ottenere lo stesso risultato.
 

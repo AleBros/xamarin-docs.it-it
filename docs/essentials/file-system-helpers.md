@@ -5,11 +5,11 @@ ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2d660e4c325b72817c7386c43c0d1dde909c4921
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 871d164df982d1d170e8ba5bffd3bd6600a4cdda
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-file-system-helpers"></a>File Xamarin.Essentials sistema helper
 
@@ -76,5 +76,5 @@ Aggiungere tutti i file nella directory principale nel progetto UWP e contrasseg
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di file System helper](https://github.com/xamarin/Essentials/tree/master/Essentials/FileSystem)
+- [Codice sorgente di file System helper](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/FileSystem)
 - [Documentazione dell'API di sistema di file](xref:Xamarin.Essentials.FileSystem)

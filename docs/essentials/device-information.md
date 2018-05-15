@@ -5,11 +5,11 @@ ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: d5220b09808bda2deb2ef391b5fbe2a1332d0e28
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: a398f2697b03cec26f2c786b11e7a3c332cb5f63
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-device-information"></a>Informazioni sul dispositivo Xamarin.Essentials
 
@@ -75,5 +75,5 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="api"></a>API
 
-- [Codice sorgente DeviceInfo](https://github.com/xamarin/Essentials/tree/master/Essentials/DeviceInfo)
+- [Codice sorgente DeviceInfo](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DeviceInfo)
 - [Documentazione dell'API di DeviceInfo](xref:Xamarin.Essentials.DeviceInfo)

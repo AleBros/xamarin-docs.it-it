@@ -6,12 +6,12 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: f34a3ee44b604bf0b82faf77769f3c2844e6460f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
-ms.translationtype: MT
+ms.date: 05/11/2018
+ms.openlocfilehash: 431cc359f4191ab2b247b3cacf0f54c3ba44cd57
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="splash-screen"></a>Schermata iniziale
 
@@ -152,6 +152,74 @@ public class MainActivity : AppCompatActivity
     // Code omitted for brevity
 }
 ```
+
+## <a name="landscape-mode"></a>Modalità orizzontale
+
+La schermata iniziale implementata nei passaggi precedenti verrà visualizzati correttamente in modalità sia verticale e orizzontale. Tuttavia, in alcuni casi è necessario che sia separata le schermate iniziali per le modalità verticale e orizzontale (ad esempio, se l'immagine di schermata iniziale è schermo).
+
+Per aggiungere una schermata per la modalità orizzontale, utilizzare la procedura seguente:
+
+1. Nel **risorse/drawable** cartella, aggiungere la versione orizzontale dell'immagine di schermata iniziale da usare. In questo esempio, **splash_logo_land.png** è quella orizzontale del logo che è stato utilizzato negli esempi precedenti (utilizza mancato recapito nero anziché blu).
+
+2. Nel **risorse/drawable** cartella, creare una versione orizzontale il `layer-list` drawable che è stata definita in precedenza (ad esempio, **splash_screen_land.xml**). In questo file, impostare il percorso di bitmap a quella orizzontale dell'immagine di schermata iniziale. Nell'esempio seguente, **splash_screen_land.xml** Usa **splash_logo_land.png**:
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+      <item>
+        <color android:color="@color/splash_background"/>
+      </item>
+      <item>
+        <bitmap
+            android:src="@drawable/splash_logo_land"
+            android:tileMode="disabled"
+            android:gravity="center"/>
+      </item>
+    </layer-list>
+
+    ```
+
+3.  Creare il **risorse/valori-terreni** cartella se non esiste già.
+
+4.  Aggiungere i file **Colors. XML** e **Style. XML** al **valori terreni** (questi possono essere copiati e modificati dalle esistenti **values/colors.xml**e **values/style.xml** file).
+
+5.  Modificare **valori-terreni/Style. XML** in modo che utilizzi la versione orizzontale di drawable per `windowBackground`. In questo esempio, **splash_screen_land.xml** utilizzato:
+
+    ```xml
+    <resources>
+      <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
+      </style>
+        <style name="MyTheme" parent="MyTheme.Base">
+      </style>
+      <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_land</item>
+        <item name="android:windowNoTitle">true</item>  
+        <item name="android:windowFullscreen">true</item>  
+        <item name="android:windowContentOverlay">@null</item>  
+        <item name="android:windowActionBar">true</item>  
+      </style>
+    </resources>
+    ```
+
+6.  Modificare **valori-terreni/Colors. XML** per configurare i colori da utilizzare per la versione orizzontale della schermata. In questo esempio, il colore di sfondo schermata iniziale viene modificato in giallo per la modalità orizzontale:
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+      <color name="primary">#2196F3</color>
+      <color name="primaryDark">#1976D2</color>
+      <color name="accent">#FFC107</color>
+      <color name="window_background">#F5F5F5</color>
+      <color name="splash_background">#FFFF00</color>
+    </resources>
+    ```
+
+7.  Compilare ed eseguire nuovamente l'app. Ruota il dispositivo per orizzontale mentre è ancora visualizzata la schermata iniziale. La schermata iniziale di modifiche alla versione di orizzontale:
+
+    [![Rotazione della schermata iniziale in modalità orizzontale](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
+
+
+Si noti che l'utilizzo di una schermata orizzontale-modalità non fornisce sempre un'esperienza senza problemi. Per impostazione predefinita, Android avvia l'app in modalità verticale e le transizioni in modo orizzontale anche se il dispositivo è già in modalità orizzontale. Di conseguenza, se l'app viene avviata mentre il dispositivo è in modalità orizzontale, il dispositivo presenta brevemente la schermata iniziale portrait e quindi aggiunge un'animazione rotazione dal verticale per la schermata iniziale orizzontale. Purtroppo questa transizione verticale a orizzontale iniziale viene eseguita anche quando `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape` specificato nei flag dell'attività iniziale. Il modo migliore per risolvere questa limitazione consiste nel creare un'immagine di schermata iniziale singolo che esegue il rendering correttamente in modalità sia verticale e orizzontale.
 
 
 ## <a name="summary"></a>Riepilogo

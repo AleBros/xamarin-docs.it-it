@@ -5,17 +5,17 @@ ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2fcb97eafda15a73e2b7e5441f1d6c94f75af0ce
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b2c9ed50c48aee6343a20ddb28c49e1bd05d2153
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Sintesi vocale Xamarin.Essentials
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 
-Il **TextToSpeech** classe consente a un'applicazione utilizzano incorporato nei motori di sintesi vocale per pronunciare il testo nascosto dal dispositivo, nonché per lingue disponibili di query in grado di supportare il motore.
+Il **TextToSpeech** classe consente a un'applicazione di utilizzare incorporato nei motori di sintesi vocale per pronunciare il testo nascosto dal dispositivo, nonché per lingue disponibili di query in grado di supportare il motore.
 
 ## <a name="using-text-to-speech"></a>Utilizzo della sintesi vocale
 
@@ -45,7 +45,7 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-Questo metodo accetta in un oggetto CancellationToken facoltativo per interrompere l'emissione uno che viene avviato. 
+Questo metodo accetta in un oggetto CancellationToken facoltativo per interrompere l'emissione avviato. 
 ```csharp
 CancellationTokenSource cts;
 public async Task SpeakNowDefaultSettings()
@@ -115,7 +115,7 @@ Di seguito sono supportati i valori per questi parametri:
 
 ### <a name="speech-locales"></a>Impostazioni locali di riconoscimento vocale
 
-Ogni piattaforma offre le impostazioni locali per parlare testo nascosto in più lingue e degli accenti. Ogni piattaforma presenta un diversi codici e i modi di specificare, motivo per cui Essentials fornisce una libreria multipiattaforma `Locale` classe e un modo per eseguire le query con `GetLocalesAsync`.
+Ogni piattaforma offre le impostazioni locali per parlare testo nascosto in più lingue e degli accenti. Ogni piattaforma prevede diversi codici e i modi di specificare, motivo per cui Essentials fornisce una libreria multipiattaforma `Locale` classe e un modo per eseguire le query con `GetLocalesAsync`.
 
 ```csharp
 public async Task SpeakNow()
@@ -143,5 +143,5 @@ public async Task SpeakNow()
 
 ## <a name="api"></a>API
 
-- [Codice sorgente TextToSpeech](https://github.com/xamarin/Essentials/tree/master/Essentials/TextToSpeech)
+- [Codice sorgente TextToSpeech](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
 - [Documentazione dell'API TextToSpeech](xref:Xamarin.Essentials.TextToSpeech)

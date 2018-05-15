@@ -81,8 +81,6 @@
 #### [GridLayout](user-interface/layouts/grid-layout.md)
 #### [Layout a schede](user-interface/layouts/tab-layout/index.md)
 ##### [Schede di spostamento con ActionBar](user-interface/layouts/tab-layout/with-action-bar.md)
-##### [Panoramica di TabHost](user-interface/layouts/tab-layout/tab-host.md)
-##### [Creazione di un'interfaccia utente a schede con TabHost](user-interface/layouts/tab-layout/creating-a-tabbed-ui.md)
 ### [Controlli](user-interface/controls/index.md)
 #### [ActionBar](user-interface/controls/action-bar.md)
 #### [Completamento automatico](user-interface/controls/auto-complete.md)

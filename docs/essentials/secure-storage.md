@@ -5,17 +5,39 @@ ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: redth
 ms.author: jodick
 ms.date: 05/04/2018
-ms.openlocfilehash: 24d1e29ba0203aaafc3e21533478f6c505cc09b3
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: e64160a5579bffa8e9e9820db1a3ba39bdf7304e
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-secure-storage"></a>Archiviazione protetta Xamarin.Essentials
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 
 Il **SecureStorage** classe consente di archiviare in modo sicuro coppie chiave/valore semplice.
+
+## <a name="getting-started"></a>Introduzione
+
+Per l'accesso di **SecureStorage** , il programma di installazione specifico della piattaforma seguente è necessaria la funzionalità:
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+Non è necessaria alcuna configurazione aggiuntiva.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+Quando si sviluppa in un simulatore iOS, abilitare il **portachiavi** diritto e aggiungere un gruppo di accesso portachiavi per identificatore bundle dell'applicazione.
+
+Aprire la **Entitlements.plist** nel progetto iOS e trova il **portachiavi** diritto e abilitarlo. Identificatore dell'applicazione verrà automaticamente aggiunto come gruppo.
+
+Nelle proprietà del progetto, sotto **firma Bundle iOS** impostare il **i diritti personalizzati** al **Entitlements.plist**.
+
+# <a name="uwptabuwp"></a>[PIATTAFORMA UWP](#tab/uwp)
+
+Non è necessaria alcuna configurazione aggiuntiva.
+
+-----
 
 ## <a name="using-secure-storage"></a>Utilizzo dell'archiviazione sicura
 
@@ -75,5 +97,5 @@ Questa API è progettata per archiviare piccole quantità di testo.  Le prestazi
 
 ## <a name="api"></a>API
 
-- [Codice sorgente SecureStorage](https://github.com/xamarin/Essentials/tree/master/Essentials/SecureStorage)
+- [Codice sorgente SecureStorage](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/SecureStorage)
 - [Documentazione dell'API SecureStorage](xref:Xamarin.Essentials.SecureStorage)
