@@ -7,15 +7,15 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: a399aa1c314f1e93377a7831b430e563d9fd1b13
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c42ebdca44e47e29ac74a263f0d11d4d4c120586
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="google-emulator-manager"></a>Gestione emulatori Google
 
-Dopo la verifica dell'abilitazione dell'accelerazione hardware (procedura descritta in [Accelerazione hardware dell'emulatore Android](~/android/get-started/installation/android-emulator/hardware-acceleration.md)), il passaggio successivo è la creazione di dispositivi virtuali per il test e il debug dell'app. È possibile usare la funzionalità legacy Gestione emulatori Google (anche denominato *Android Virtual Device (AVD) Manager*) per creare i dispositivi virtuali per l'uso da parte dell'emulatore di Android SDK.
+Dopo la verifica dell'abilitazione dell'accelerazione hardware (procedura descritta in [Accelerazione hardware dell'emulatore Android](~/android/get-started/installation/android-emulator/hardware-acceleration.md)), il passaggio successivo è la creazione di dispositivi virtuali per il test e il debug dell'app. È possibile usare la funzionalità legacy Gestione emulatori Google (denominato anche *gestore di dispositivi virtuali Android AVD Manager*) per creare i dispositivi virtuali che possono essere usati dall'emulatore Android di Google.
 
 > [!NOTE]
 > Se la destinazione è Android Oreo 8.0, è necessario usare [Gestione dispositivi di Xamarin Android](~/android/get-started/installation/android-emulator/xamarin-device-manager.md) per creare e configurare i dispositivi virtuali.

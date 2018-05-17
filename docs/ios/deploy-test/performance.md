@@ -1,40 +1,26 @@
 ---
 title: Prestazioni di Xamarin.iOS
-description: Esistono varie tecniche per incrementare le prestazioni delle applicazioni create con Xamarin.iOS. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione. Questo articolo descrive queste tecniche e le relative caratteristiche.
+description: Questo documento descrive tecniche che possono essere usate per migliorare le prestazioni e l'uso della memoria nelle applicazioni Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/29/2016
-ms.openlocfilehash: 3fc6263aa99edb94ae69f1ce8f87835043477392
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: afff9d3924c673edc363292efa1a9b7df43a9218
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="xamarinios-performance"></a>Prestazioni di Xamarin.iOS
 
-_Esistono varie tecniche per incrementare le prestazioni delle applicazioni create con Xamarin.iOS. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione. Questo articolo descrive queste tecniche e le relative caratteristiche._
+Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, assicurarsi che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente. 
 
-Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, assicurarsi che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
-
-Esistono diverse tecniche per migliorare le prestazioni, e le prestazioni percepite, delle applicazioni compilate con Xamarin.iOS. e comprendono:
-
-- [Evitare cicli di riferimento sicuro](#avoidcircularreferences)
-- [Ottimizzare le visualizzazioni di tabelle](#optimizetableviews)
-- [Usare le visualizzazioni opache](#opaqueviews)
-- [Evitare XIB FAT](#avoidfatxibs)
-- [Ottimizzare le risorse immagine](#optimizeimages)
-- [Eseguire test nei dispositivi](#testondevices)
-- [Sincronizzare le animazioni con l'aggiornamento dello schermo](#synchronizeanimations)
-- [Evitare la trasparenza di Core Animation](#avoidtransparency)
-- [Evitare la generazione di codice](#avoidcodegeneration)
+Questo documento descrive tecniche per migliorare le prestazioni e l'uso della memoria nelle applicazioni Xamarin.iOS.
 
 > [!NOTE]
 > Prima di leggere questo articolo, è consigliabile vedere [Prestazioni multipiattaforma](~/cross-platform/deploy-test/memory-perf-best-practices.md), che illustra le tecniche non specifiche di una piattaforma che consentono di migliorare l'utilizzo della memoria e le prestazioni delle applicazioni compilate con la piattaforma Xamarin.
-
-<a name="avoidcircularreferences" />
 
 ## <a name="avoid-strong-circular-references"></a>Evitare riferimenti circolari sicuri
 
@@ -82,14 +68,14 @@ Nei casi in cui un oggetto contenuto mantiene un collegamento al contenitore, so
 
 ### <a name="using-weakreferences"></a>Uso di WeakReference
 
-Un modo per evitare un ciclo consiste nell'usare un riferimento debole dall'elemento figlio all'elemento padre. Il codice precedente, ad esempio, potrebbe essere scritto come il seguente:
+Un modo per evitare un ciclo è l'uso di un riferimento debole dall'elemento figlio all'elemento padre. Ad esempio il codice riportato sopra potrebbe essere scritto nel modo seguente:
 
 ```csharp
 class Container : UIView
 {
     public void Poke ()
     {
-    // Call this method to poke this object
+        // Call this method to poke this object
     }
 }
 
@@ -112,11 +98,76 @@ var container = new Container ();
 container.AddSubview (new MyView (container));
 ```
 
-Ciò significa che l'oggetto contenuto non manterrà attivo l'elemento padre. Solo l'elemento padre mantiene attivo l'elemento figlio tramite la chiamata effettuata a `container.AddSubView`.
+In questo caso, l'oggetto contenuto non mantiene attivo l'elemento padre. Tuttavia l'elemento padre mantiene attivo l'elemento figlio tramite la chiamata eseguita a `container.AddSubView`.
 
-Questo linguaggio è presente anche nelle API iOS che usano il modello del delegato o dell'origine dati, in cui una classe peer conterrà l'implementazione, ad esempio quando si imposta la proprietà [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/) o [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/) nella classe [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/).
+Questo accade anche nelle API iOS che usano il modello del delegato o dell'origine dati, in cui una classe peer contiene l'implementazione. Un esempio è l'impostazione della proprietà [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/) o [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/) nella classe [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/).
 
 Nel caso delle classi create esclusivamente per l'implementazione di un protocollo, ad esempio [`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/), invece di creare una sottoclasse, è sufficiente implementare l'interfaccia nella classe, eseguire l'override del metodo e assegnare la proprietà `DataSource` a `this`.
+
+#### <a name="weak-attribute"></a>Attributo Weak
+
+In [Xamarin.iOS 11.10](https://developer.xamarin.com/releases/ios/xamarin.ios_11/xamarin.ios_11.10/#WeakAttribute) è stato introdotto l'attributo `[Weak]`. Come `WeakReference <T>`, `[Weak]` può essere usato per interrompere [riferimenti circolari sicuri](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/performance#avoid-strong-circular-references), usando una quantità di codice ancora più ridotta.
+
+Si consideri il codice seguente, che usa `WeakReference <T>`:
+
+```csharp
+public class MyFooDelegate : FooDelegate {
+    WeakReference<MyViewController> controller;
+    public MyFooDelegate (MyViewController ctrl) => controller = new WeakReference<MyViewController> (ctrl);
+    public void CallDoSomething ()
+    {
+        MyViewController ctrl;
+        if (controller.TryGetTarget (out ctrl)) {
+            ctrl.DoSomething ();
+        }
+    }
+}
+```
+
+Il codice equivalente che usa `[Weak]` è molto più conciso:
+
+```csharp
+public class MyFooDelegate : FooDelegate {
+    [Weak] MyViewController controller;
+    public MyFooDelegate (MyViewController ctrl) => controller = ctrl;
+    public void CallDoSomething () => controller.DoSomething ();
+}
+```
+
+Ecco un altro esempio d'uso di `[Weak]` nel contesto del criterio [delegation](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Delegation.html):
+
+```csharp
+public class MyViewController : UIViewController 
+{
+    WKWebView webView;
+
+    protected MyViewController (IntPtr handle) : base (handle) { }
+
+    public override void ViewDidLoad ()
+    {
+        base.ViewDidLoad ();
+        webView = new WKWebView (View.Bounds, new WKWebViewConfiguration ());
+        webView.UIDelegate = new UIDelegate (this);
+        View.AddSubview (webView);
+    }
+}
+
+public class UIDelegate : WKUIDelegate 
+{
+    [Weak] MyViewController controller;
+
+    public UIDelegate (MyViewController ctrl) => controller = ctrl;
+
+    public override void RunJavaScriptAlertPanel (WKWebView webView, string message, WKFrameInfo frame, Action completionHandler)
+    {
+        var msg = $"Hello from: {controller.Title}";
+        var alertController = UIAlertController.Create (null, msg, UIAlertControllerStyle.Alert);
+        alertController.AddAction (UIAlertAction.Create ("Ok", UIAlertActionStyle.Default, null));
+        controller.PresentViewController (alertController, true, null);
+        completionHandler ();
+    }
+}
+```
 
 ### <a name="disposing-of-objects-with-strong-references"></a>Eliminazione di oggetti con riferimenti sicuri
 
@@ -142,7 +193,8 @@ class MyContainer : UIView
 Per un oggetto figlio che conserva il riferimento sicuro all'elemento padre, cancellare il riferimento al padre nell'implementazione `Dispose`:
 
 ```csharp
-    class MyChild : UIView {
+class MyChild : UIView 
+{
     MyContainer container;
     public MyChild (MyContainer container)
     {
@@ -162,9 +214,6 @@ Per altre informazioni sul rilascio di riferimenti sicuri, vedere [Release IDisp
 
 Per altre informazioni, vedere [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) (Regole per evitare i cicli di conservazione) in Cocoa With Love, [Is this a bug in MonoTouch GC](http://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) (È un bug nel Garbage Collection di MonoTouch?) in StackOverflow e [Why can't MonoTouch GC kill managed objects with refcount > 1?](http://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) (Perché il Garbage Collection di MonoTouch non riesce a terminare gli oggetti gestiti con refcount > 1?) in StackOverflow.
 
-
-<a name="optimizetableviews" />
-
 ## <a name="optimize-table-views"></a>Ottimizzare le visualizzazioni di tabelle
 
 Gli utenti si aspettano uno scorrimento fluido e tempi di caricamento rapidi per le istanze di [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/). Le prestazioni dello scorrimento possono tuttavia peggiorare quando le celle contengono gerarchie di visualizzazione con molti livelli di annidamento o quando le celle contengono layout complessi. Alcune tecniche consentono tuttavia di evitare un peggioramento delle prestazioni di `UITableView`:
@@ -178,9 +227,7 @@ Gli utenti si aspettano uno scorrimento fluido e tempi di caricamento rapidi per
 
 Nel loro insieme, queste tecniche consentono di mantenere uno scorrimento fluido per le istanze di [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/).
 
-<a name="reusecells" />
-
-### <a name="reuse-cells"></a>Riutilizzare le celle
+### <a name="reuse-cells"></a>Riusare le celle
 
 Se si visualizzano centinaia di righe in [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/), sarebbe uno spreco di memoria creare centinaia di oggetti [`UITableViewCell`](https://developer.xamarin.com/api/type/UIKit.UITableViewCell/) quando poi ne vengono visualizzati contemporaneamente sullo schermo solo alcuni. Solo le celle visibili sullo schermo vengono invece caricate in memoria e il **contenuto** viene caricato in queste celle riutilizzate. Questo impedisce la creazione di istanze di centinaia di oggetti aggiuntivi, con conseguente risparmio di tempo e memoria.
 
@@ -204,19 +251,13 @@ Mentre l'utente scorre, [`UITableView`](https://developer.xamarin.com/api/type/U
 
 Per altre informazioni, vedere [Cell Reuse](~/ios/user-interface/controls/tables/populating-a-table-with-data.md) (Riutilizzo delle celle) in [Populating a Table with Data](~/ios/user-interface/controls/tables/populating-a-table-with-data.md) (Popolamento di una tabella con i dati).
 
-<a name="opaqueviews" />
-
 ## <a name="use-opaque-views"></a>Usare le visualizzazioni opache
 
 Assicurarsi che la proprietà [`Opaque`](https://developer.xamarin.com/api/property/UIKit.UIView.Opaque/) sia impostata per tutte le visualizzazioni per cui non è definita la trasparenza. Questa opzione garantisce che il sistema di disegno esegua il rendering ottimale delle visualizzazioni. Questa funzionalità è particolarmente importante quando una visualizzazione è incorporata in [`UIScrollView`](https://developer.xamarin.com/api/type/UIKit.UIScrollView/) o fa parte di un'animazione complessa. In caso contrario il sistema di disegno unirà le visualizzazioni con gli altri contenuti, con il rischio di compromettere in modo significativo le prestazioni.
 
-<a name="avoidfatxibs" />
-
 ## <a name="avoid-fat-xibs"></a>Evitare XIB FAT
 
 Anche se i file XIB sono stati in gran parte sostituiti dagli storyboard, in alcuni casi è possibile che vengano ancora usati. Quando un file XIB viene caricato in memoria, vengono caricati in memoria tutti i contenuti, incluse eventuali immagini. Se il file XIB contiene una visualizzazione che non viene usata immediatamente, la memoria risulta sprecata. Quando si usano i file XIB, assicurarsi quindi che sia presente un solo XIB per controller di visualizzazione e, se possibile, separare la gerarchia di visualizzazioni del controller di visualizzazione in XIB separati.
-
-<a name="optimizeimages" />
 
 ## <a name="optimize-image-resources"></a>Ottimizzare le risorse immagine
 
@@ -224,15 +265,11 @@ Le immagini sono tra le risorse più dispendiose usate dalle applicazioni e spes
 
 Per altre informazioni, vedere [Ottimizzare le risorse immagine](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages) nella guida [Prestazioni multipiattaforma](~/cross-platform/deploy-test/memory-perf-best-practices.md).
 
-<a name="testondevices" />
-
 ## <a name="test-on-devices"></a>Eseguire test nei dispositivi
 
 Iniziare la distribuzione e il test di un'applicazione su un dispositivo fisico il prima possibile. I simulatori non rispecchiano alla perfezione i comportamenti e le limitazioni dei dispositivi, quindi è importante eseguire il test in uno scenario basato su un dispositivo reale.
 
 In particolare il simulatore non simula in alcun modo le restrizioni di memoria o CPU di un dispositivo fisico.
-
-<a name="synchronizeanimations" />
 
 ## <a name="synchronize-animations-with-the-display-refresh"></a>Sincronizzare le animazioni con l'aggiornamento dello schermo
 
@@ -240,13 +277,9 @@ I giochi hanno tendenzialmente cicli rigidi per eseguire la logica del gioco e a
 
 Il server di visualizzazione esegue tuttavia gli aggiornamenti della schermata non più di sessanta volte al secondo. Se quindi si prova ad aggiornare la schermata più velocemente, potrebbero verificarsi problemi di screen tearing e microstuttering. È meglio strutturare il codice in modo che gli aggiornamenti della schermata siano sincronizzati con l'aggiornamento della visualizzazione. A questo scopo, è possibile usare la classe [`CoreAnimation.CADisplayLink`](https://developer.xamarin.com/api/type/CoreAnimation.CADisplayLink/), un timer idoneo per la visualizzazione e i giochi che viene eseguito a sessanta fotogrammi al secondo.
 
-<a name="avoidtransparency" />
-
 ## <a name="avoid-core-animation-transparency"></a>Evitare la trasparenza di Core Animation
 
 Se si evita la trasparenza di Core Animation, migliorano le prestazioni di composizione delle bitmap. Se possibile, evitare in generale i livelli trasparenti e i bordi sfocati.
-
-<a name="avoidcodegeneration" />
 
 ## <a name="avoid-code-generation"></a>Evitare la generazione di codice
 

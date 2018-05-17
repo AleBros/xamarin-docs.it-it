@@ -1,35 +1,46 @@
 ---
 title: Provisioning automatico
-description: Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo nello sviluppo iOS consiste nell'eseguire il provisioning del dispositivo iOS. Questa guida illustra l'uso della firma automatica in Visual Studio per Mac per richiedere profili e certificati di sviluppo.
+description: Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo nello sviluppo iOS consiste nell'eseguire il provisioning del dispositivo iOS. Questa guida illustra l'uso della firma automatica per richiedere profili e certificati di sviluppo.
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 11/17/2017
-ms.openlocfilehash: 01818d2870c7cf59a0f15385dbb3565f07400ff0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/06/2018
+ms.openlocfilehash: 0e2ce758da2951efa0508e76cdf4eaac5384fa6b
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="automatic-provisioning"></a>Provisioning automatico
 
-_Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo per lo sviluppo iOS consiste nell'eseguire il provisioning del dispositivo iOS. Questa guida illustra l'uso della firma automatica in Visual Studio per Mac per richiedere profili e certificati di sviluppo._
+_Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo per lo sviluppo iOS consiste nell'eseguire il provisioning del dispositivo iOS. Questa guida illustra l'uso della firma automatica per richiedere profili e certificati di sviluppo._
 
 ## <a name="requirements"></a>Requisiti
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 - Visual Studio per Mac 7.3 o versione successiva
 - Xcode 9 o versione successiva
 
-> [!IMPORTANT]
-> Questa guida illustra come usare Visual Studio per Mac per configurare un dispositivo Apple per la distribuzione e come distribuire un'applicazione. Per le procedure manuali o per le istruzioni valide per Visual Studio su Windows, è consigliabile seguire i passaggi dettagliati nella guida al [provisioning manuale](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+- Visual Studio 2017 15.7 o versione successiva
+
+È anche necessario disporre di un collegamento a un host di compilazione Mac che includa quanto segue:
+
+- Xcode 9 o versione successiva
+
+-----
 
 ## <a name="enabling-automatic-signing"></a>Abilitazione della firma automatica
 
-Prima di avviare il processo di firma automatica, verificare di avere un ID Apple aggiunto in Visual Studio per Mac, come descritto nella guida [Apple Account Management](~/cross-platform/macios/apple-account-management.md) (Gestione degli account Apple). Dopo aver aggiunto un ID Apple, è possibile usare qualsiasi _team_ associato. In questo modo è possibile creare certificati, profili e altri ID per il team. L'ID del team viene usato anche per creare il prefisso di un ID app che verrà incluso nel profilo di provisioning. Questo ID consente a Apple di verificare l'identità dell'utente.
+Prima di avviare il processo di firma automatica, verificare di avere un ID Apple aggiunto in Visual Studio, come descritto nella guida [Apple Account Management](~/cross-platform/macios/apple-account-management.md) (Gestione degli account Apple). Dopo aver aggiunto un ID Apple, è possibile usare qualsiasi _team_ associato. In questo modo è possibile creare certificati, profili e altri ID per il team. L'ID del team viene usato anche per creare il prefisso di un ID app che verrà incluso nel profilo di provisioning. Questo ID consente a Apple di verificare l'identità dell'utente.
 
 Per firmare automaticamente l'app per la distribuzione in un dispositivo iOS, seguire questa procedura:
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
 1. Aprire un progetto iOS in Visual Studio per Mac.
 
@@ -46,6 +57,26 @@ Per firmare automaticamente l'app per la distribuzione in un dispositivo iOS, se
     ![Certificato e profilo creati correttamente](automatic-provisioning-images/image5.png)
 
     Se il processo di firma automatica non riesce, nel riquadro **Firma automatica** viene visualizzato il motivo dell'errore.
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+1. Associare Visual Studio 2017 a un computer Mac, come descritto nella guida [Associazione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+
+2. Aprire le opzioni di provisioning, selezionando **Progetto > Provisioning Properties (Proprietà di provisioning)**
+
+3. Selezionare lo schema **Automatically Provisioning** (Provisioning automatico):
+
+    ![Selezione di uno schema automatico](automatic-provisioning-images/prov4.png)
+
+4. Selezionare il team nella casella combinata **Team** per avviare il processo di firma automatica.
+
+    ![Selezione del team](automatic-provisioning-images/prov3.png)
+
+4. Viene avviato il processo di firma automatica. Visual Studio tenta di generare un ID dell'app, un profilo di provisioning e un'identità di firma da usare per la firma. È possibile visualizzare il processo di generazione nell'output di compilazione:
+
+    ![Output di compilazione che mostra la generazione di elementi](automatic-provisioning-images/prov5.png)
+
+-----
 
 ## <a name="triggering-automatic-provisioning"></a>Attivazione del provisioning automatico
 

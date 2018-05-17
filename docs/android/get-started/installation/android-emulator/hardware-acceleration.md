@@ -1,37 +1,96 @@
 ---
 title: Accelerazione hardware dell'emulatore Android
-description: Come preparare il computer per ottenere prestazioni ottimali dall'emulatore Android SDK
+description: Come preparare il computer per ottenere prestazioni ottimali dall'emulatore Android di Google
 ms.prod: xamarin
 ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/04/2018
-ms.openlocfilehash: d5921c549c299197bdc442c9b883b49064655f76
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.date: 05/10/2018
+ms.openlocfilehash: b5c20eb9f40bb4c4981d6b60b9fd4bc75fd29336
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="android-emulator-hardware-acceleration"></a>Accelerazione hardware dell'emulatore Android
 
-Poiché l'emulatore di Android SDK è estremamente lento senza l'accelerazione hardware, è consigliabile usare Intel HAXM (Hardware Accelerated Execution Manager) per migliorarne notevolmente le prestazioni.
+L'emulatore Android di Google è estremamente lento senza l'accelerazione hardware. È possibile migliorare notevolmente le prestazioni dell'emulatore Android di Google usando immagini dell'emulatore speciali destinate all'hardware x86, oltre a una o due tecnologie di virtualizzazione:
 
+1. **Microsoft Hyper-V e piattaforma Hypervisor** &ndash; Hyper-V è un componente di virtualizzazione disponibile in Windows 10 che consente l'esecuzione di sistemi di computer virtualizzati su un host fisico. Questa è la tecnologia di virtualizzazione consigliata per le immagini con accelerazione dell'emulatore Android di Google. Per altre informazioni su Hyper-V, vedere la guida [Hyper-V in Windows 10](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/).
+2. **Intel Hardware Accelerated Execution Manager (HAXM)** &ndash; Motore di virtualizzazione per i computer che usano CPU Intel. Questo è il motore di virtualizzazione consigliato per gli sviluppatori che non possono usare Hyper-V.
+
+Android SDK Manager usa automaticamente l'accelerazione hardware (se disponibile) ed esegue un'immagine dell'emulatore specifica per un dispositivo virtuale basato su **x86**, come descritto in [Configuration and Use](~/android/deploy-test/debugging/android-sdk-emulator/index.md) (Configurazione e uso).
+
+## <a name="hyper-v-overview"></a>Panoramica su Hyper-V
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+![](~/media/shared/preview.png)
+
+> [!NOTE]
+> Il supporto di Hyper-V è attualmente in anteprima.
+
+L'uso di Microsoft Hyper-V è vivamente consigliato agli sviluppatori che usano Windows 10 April 2018 Update. Per gli sviluppatori, Strumenti di Visual Studio per Xamarin semplifica i test e il debug del codice delle applicazioni Xamarin.Android nelle situazioni in cui un dispositivo Android non è disponibile o risulta poco pratico.
+
+Per iniziare a usare Hyper-V e l'emulatore Android di Google:
+
+1. **Aggiornare a Windows 10 April 2018 Update (build 1803)** &ndash; Per verificare la versione di Windows in esecuzione fare clic sulla barra di ricerca di Cortana e digitare **Informazioni su**. Nei risultati della ricerca selezionare **Informazioni sul PC**. Scorrere verso il basso la finestra **Informazioni su** fino a visualizzare la sezione **Specifiche Windows**. Il valore di **Versione** non deve essere inferiore a 1803:
+
+    [![Specifiche Windows](hardware-acceleration-images/win/12-about-windows.w10-sml.png)](hardware-acceleration-images/win/12-about-windows.w10.png#lightbox)
+
+2. **Abilitare Hyper-V e la piattaforma Hypervisor** &ndash; Nella barra di ricerca di Cortana digitare **Attiva o disattiva funzionalità di Windows**.
+   Scorrere verso il basso nella finestra di dialogo **Funzionalità Windows** e assicurarsi che **Windows Hypervisor Platform** (Piattaforma Hypervisor di Windows) sia abilitata.
+
+    [![Hyper-V e Piattaforma Hypervisor di Windows abilitate](hardware-acceleration-images/win/13-windows-features.w10-sml.png)](hardware-acceleration-images/win/13-windows-features.w10.png#lightbox)
+
+    Dopo aver abilitato Hyper-V e la piattaforma Hypervisor di Windows potrebbe essere necessario riavviare il computer.
+
+3. **Installare [Visual Studio 15.8 Preview 1](https://aka.ms/hyperv-emulator-dl)** &ndash; Questa versione di Visual Studio fornisce supporto IDE per l'avvio dell'emulatore Android di Google con il supporto di Hyper-V.
+
+4. **Installare il pacchetto dell'emulatore Android di Google 27.2.7 o versione successiva** &ndash; Per installare questo pacchetto, passare a **Strumenti > Android > Android SDK Manager** in Visual Studio. Selezionare la scheda **Strumenti** e verificare che la versione del componente emulatore Android non sia inferiore alla 27.2.7.
+
+    [![Finestra di dialogo Android SDK e strumenti Android](hardware-acceleration-images/win/14-sdk-manager.w158-sml.png)](hardware-acceleration-images/win/14-sdk-manager.w158.png#lightbox)
+
+5. Se la versione dell'emulatore Android è inferiore a 27.3.1, applicare il passaggio con la soluzione alternativa illustrata di seguito in **Problemi noti**.
+
+
+### <a name="known-issues"></a>Problemi noti
+
+-   Se la versione dell'emulatore è almeno 27.2.7 ma inferiore a 27.3.1, per usare Hyper- V è necessaria la soluzione alternativa seguente:
+    1.  Nella cartella **C:\\Utenti\\_nomeutente_\\.android** creare il file **advancedFeatures.ini** se non esiste già.
+    2.  Aggiungere la seguente riga ad **advancedFeatures.ini**:
+        ```
+        WindowsHypervisorPlatform = on
+        ```
+
+-   Le prestazioni possono risultare ridotte quando si usano determinati processori Intel e AMD.
+
+-   Il caricamento dell'applicazione Android può richiedere un periodo di tempo molto lungo al momento della distribuzione.
+
+-   Un errore di accesso MMIO può impedire in modo intermittente un avvio dell'emulatore Android. Riavviare l'emulatore per risolvere il problema.
+
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+
+Per il supporto di Hyper-V è necessario Windows 10. Per altri dettagli, vedere [Requisiti di Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#check-requirements).
+
+-----
 
 ## <a name="haxm-overview"></a>Panoramica di HAXM
 
 HAXM è un motore di virtualizzazione assistita mediante hardware (hypervisor) che usa Intel Virtualization Technology (VT) per velocizzare l'emulazione delle app Android in un computer host. In combinazione con le immagini x86 dell'emulatore Android fornite da Intel e dalla versione ufficiale di Android SDK Manager, HAXM consente di velocizzare l'emulazione di Android nei sistemi abilitati per VT. 
 
-Se si sviluppa in un computer con una CPU Intel che dispone di funzionalità VT, è possibile trarre vantaggio da HAXM per velocizzare notevolmente l'emulatore di Android SDK (se non si è certi che la CPU supporti VT, vedere l'articolo su come [determinare se il processore supporta Intel Virtualization Technology](https://www.intel.com/content/www/us/en/support/processors/000005486.html)).
+Se si sviluppa in un computer con una CPU Intel che dispone di funzionalità VT, è possibile trarre vantaggio da HAXM per velocizzare notevolmente l'emulatore Android di Google (se non si è certi che la CPU supporti VT, vedere l'articolo su come [determinare se il processore supporta Intel Virtualization Technology](https://www.intel.com/content/www/us/en/support/processors/000005486.html)).
 
 > [!NOTE]
 > Non è possibile eseguire un emulatore con accelerazione della macchina virtuale all'interno di un'altra macchina virtuale, ad esempio una macchina ospitata da VirtualBox, VMWare o Docker. È necessario eseguire l'emulatore Android di Google [direttamente nell'hardware del sistema](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
-L'emulatore di Android SDK usa automaticamente HAXM quando è disponibile. Quando si seleziona un dispositivo virtuale basato su **x86** (come descritto in [Configurazione e uso](~/android/deploy-test/debugging/android-sdk-emulator/index.md)), tale dispositivo virtuale userà HAXM per l'accelerazione hardware. Prima di usare l'emulatore di Android SDK per la prima volta, è consigliabile verificare che HAXM sia installato e disponibile per l'emulatore di Android SDK.
+Prima di usare l'emulatore Android di Google per la prima volta, è consigliabile verificare che HAXM sia installato e disponibile per l'emulatore Android di Google.
 
-## <a name="verifying-haxm-installation"></a>Verifica dell'installazione di HAXM
+### <a name="verifying-haxm-installation"></a>Verifica dell'installazione di HAXM
 
-È possibile verificare se HAXM è disponibile visualizzando la finestra **Avvio dell'emulatore Android** durante l'avvio dell'emulatore. Per avviare l'emulatore di Android SDK, seguire questa procedura:
+È possibile verificare se HAXM è disponibile visualizzando la finestra **Avvio dell'emulatore Android** durante l'avvio dell'emulatore. Per avviare l'emulatore Android di Google seguire questa procedura:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -47,7 +106,7 @@ L'emulatore di Android SDK usa automaticamente HAXM quando è disponibile. Quand
 
 3. Selezionare un'immagine **x86** (ad esempio, **VisualStudio\_android-23\_x86\_phone**), fare clic su **Avvia**, quindi di nuovo su **Avvia**:
 
-    ![Avvio dell'emulatore di Android SDK con un'immagine di dispositivo virtuale predefinita](hardware-acceleration-images/win/02-start-default-avd.png)
+    ![Avvio dell'emulatore Android di Google con un'immagine di dispositivo virtuale predefinita](hardware-acceleration-images/win/02-start-default-avd.png)
 
 4. Controllare la finestra di dialogo **Avvio dell'emulatore Android** durante l'avvio dell'emulatore. Se HAXM è installato, verrà visualizzato il messaggio **HAX is working and emulator runs in fast virt mode** (HAX è in funzione e l'emulatore viene eseguito in modalità di virtualizzazione rapida), come illustrato in questo screenshot:
 
@@ -73,7 +132,7 @@ L'emulatore di Android SDK usa automaticamente HAXM quando è disponibile. Quand
 
 3. Selezionare l'immagine **x86** (ad esempio, **Android\_Accelerated\_x86**), fare clic su **Avvia**, quindi di nuovo su **Avvia**:
 
-    [![Avvio dell'emulatore di Android SDK con un'immagine di dispositivo virtuale predefinita](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png#lightbox)
+    [![Avvio dell'emulatore Android di Google con un'immagine di dispositivo virtuale predefinita](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png#lightbox)
 
 3. Controllare la finestra di dialogo **Avvio dell'emulatore Android** durante l'avvio dell'emulatore. Se HAXM è installato, verrà visualizzato il messaggio **HAX is working and emulator runs in fast virt mode** (HAX è in funzione e l'emulatore viene eseguito in modalità di virtualizzazione rapida), come illustrato in questo screenshot:
 
@@ -86,7 +145,7 @@ L'emulatore di Android SDK usa automaticamente HAXM quando è disponibile. Quand
 
 <a name="install-haxm" />
 
-## <a name="installing-haxm"></a>Installazione di HAXM
+### <a name="installing-haxm"></a>Installazione di HAXM
 
 Se l'emulatore non viene avviato, potrebbe essere necessario installare HAXM manualmente. I pacchetti di installazione di HAXM per Windows e macOS sono disponibili nella pagina [Intel Hardware Accelerated Execution Manager](https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager). Usare la procedura seguente per scaricare e installare manualmente HAXM:
 
@@ -104,84 +163,6 @@ Se l'emulatore non viene avviato, potrebbe essere necessario installare HAXM man
 
    ![Finestra di installazione di Intel Hardware Accelerated Execution Manager](hardware-acceleration-images/win/05-haxm-installer.png)
 
-Se viene visualizzata la finestra di dialogo di errore _This computer does not support Intel Virtualization Technology (VT-x) or it is being exclusively used by Hyper-V_ (Questo computer non supporta Intel Virtualization Technology (VT-x) o è usato in modo esclusivo da Hyper-V), Hyper-V deve essere disabilitato prima di poter installare HAXM:
-
-![HAXM non può essere installato a causa di un conflitto con Hyper-V](hardware-acceleration-images/win/06-cant-install-haxm.png)
-
-Nella sezione successiva viene spiegato come disabilitare Hyper-V.
-
-<a name="disable-hyperv" />
-
-## <a name="disabling-hyper-v"></a>Disabilitazione di Hyper-V
-
-Se si usa Windows con Hyper-V abilitato, è necessario disabilitarlo e riavviare il computer per installare e usare HAXM. È possibile disabilitare Hyper-V dal Pannello di controllo attenendosi alla procedura seguente:
-
-1. Nella casella di ricerca di Windows immettere **Programmi** e quindi fare clic su **Programmi e funzionalità** nei risultati della ricerca.
-
-2. Nella finestra di dialogo **Programmi e funzionalità** del Pannello di controllo fare clic su **Attiva o disattiva funzionalità di Windows**:
-
-    ![Attiva o disattiva le funzionalità Windows](hardware-acceleration-images/win/07-turn-windows-features.png)
-
-3. Deselezionare **Hyper-V** e riavviare il computer:
-
-    ![Disabilitazione di Hyper-V nella finestra di dialogo Funzionalità Windows](hardware-acceleration-images/win/08-uncheck-hyper-v.png)
-
-In alternativa, è possibile usare il cmdlet PowerShell seguente per disabilitare Hyper-V:
-
-`Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor`
-
-Intel HAXM e Microsoft Hyper-V non possono essere attivi contemporaneamente. Purtroppo, attualmente non è possibile passare da Hyper-V a HAXM e viceversa senza riavviare il computer. Se si vuole usare [Visual Studio Emulator for Android](~/android/deploy-test/debugging/visual-studio-android-emulator.md) (che dipende da Hyper-V), non sarà possibile usare l'emulatore di Android SDK senza riavviare il computer. È possibile usare sia Hyper-V che HAXM per creare una configurazione ad avvio multiplo, come descritto in [Creating a no hypervisor boot entry](https://blogs.msdn.microsoft.com/virtual_pc_guy/2008/04/14/creating-a-no-hypervisor-boot-entry/) (Creazione di una voce di avvio no hypervisor).
-
-In alcuni casi, non è possibile disabilitare Hyper-V tramite la procedura precedente se sono abilitati Device Guard e Credential Guard. Se non è possibile disabilitare Hyper-V (o se risulta disabilitato ma l'installazione di HAXM ha comunque esito negativo), usare la procedura descritta nella sezione successiva per disabilitare Device Guard e Credential Guard.
-
-<a name="disable-devguard" />
-
-## <a name="disabling-device-guard"></a>Disabilitazione di Device Guard
-
-Device Guard e Credential Guard possono impedire la disabilitazione di Hyper-V nei computer Windows. Questo rappresenta spesso un problema per i computer aggiunti a un dominio che sono configurati e controllati da un'organizzazione.
-In Windows 10, attenersi alla seguente procedura per verificare se **Device Guard** è in esecuzione:
-
-1. Nella **casella di ricerca di Windows** digitare **System info** per avviare l'app **System Information**.
-
-2. In **Risorse di sistema** verificare che **Device Guard: sicurezza basata sulla virtualizzazione** sia presente e nello stato **In esecuzione**:
-
-   [![Device Guard è presente e in esecuzione](hardware-acceleration-images/win/09-device-guard-sml.png)](hardware-acceleration-images/win/09-device-guard.png#lightbox)
-
-Se Device Guard è abilitato, usare la procedura seguente per disabilitarlo:
-
-1. Verificare che **Hyper-V** sia disabilitato (in **Attiva o disattiva funzionalità di Windows**), come descritto nella sezione precedente.
-
-2. Nella casella di ricerca di Windows digitare **gpedit** e selezionare il risultato della ricerca **Modifica Criteri di gruppo**. Verrà avviato l'**Editor Criteri di gruppo locali**.
-
-3. Nell'**Editor Criteri di gruppo locali** passare a **Configurazione computer > Modelli amministrativi > Sistema > Device Guard**:
-
-   [![Device Guard nell'Editor Criteri di gruppo locali](hardware-acceleration-images/win/10-group-policy-editor-sml.png)](hardware-acceleration-images/win/10-group-policy-editor.png#lightbox)
-
-4. Modificare **Attiva sicurezza basata su virtualizzazione** in **Disabilitato** (come illustrato in precedenza) e chiudere l'**Editor Criteri di gruppo locali**.
-
-5. Nella casella di ricerca di Windows digitare **cmd**. Quando viene visualizzato **Prompt dei comandi** nei risultati della ricerca, fare clic con il pulsante destro del mouse su **Prompt dei comandi** e selezionare **Esegui come amministratore**.
-
-6. Copiare e incollare i comandi seguenti nella finestra del prompt dei comandi (se l'unità **Z:** è in uso, selezionare una lettera di unità inutilizzata da usare in alternativa):
-
-        mountvol Z: /s
-        copy %WINDIR%\System32\SecConfig.efi Z:\EFI\Microsoft\Boot\SecConfig.efi /Y
-        bcdedit /create {0cb3b571-2f2e-4343-a879-d86a476d7215} /d "DebugTool" /application osloader
-        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} path "\EFI\Microsoft\Boot\SecConfig.efi"
-        bcdedit /set {bootmgr} bootsequence {0cb3b571-2f2e-4343-a879-d86a476d7215}
-        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} loadoptions DISABLE-LSA-ISO,DISABLE-VBS
-        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} device partition=Z:
-        mountvol Z: /d
-
-7. Riavviare il computer. Nella schermata di avvio verrà visualizzata una richiesta simile alla seguente:
-
-   **Disabilitare Credential Guard?**
-
-   Premere il tasto indicato per disabilitare Credential Guard come richiesto.
-
-8. Dopo il riavvio del computer, verificare nuovamente che Hyper-V sia disabilitato (come descritto nei passaggi precedenti).
-
-Se Hyper-V non è disabilitato, i criteri del computer aggiunto al dominio potrebbero impedire la disabilitazione di Device Guard o Credential Guard. In questo caso, è possibile richiedere un'esenzione all'amministratore di dominio in modo da poter rifiutare esplicitamente Credential Guard. In alternativa, è possibile impiegare un computer non aggiunto al dominio per usare HAXM.
-
 ## <a name="hardware-acceleration-and-amd-cpus"></a>Accelerazione hardware e CPU AMD
 
 Poiché l'emulatore Android di Google attualmente supporta l'accelerazione hardware AMD [solo in Linux](https://developer.android.com/studio/run/emulator-acceleration.html#dependencies), l'accelerazione hardware non è disponibile per i computer basati su processori AMD che eseguono Windows.
@@ -196,3 +177,8 @@ Poiché l'emulatore Android di Google attualmente supporta l'accelerazione hardw
    [![Finestra di installazione di Intel Hardware Accelerated Execution Manager](hardware-acceleration-images/mac/05-haxm-installer-sml.png)](hardware-acceleration-images/win/05-haxm-installer.png#lightbox)
 
 -----
+
+
+## <a name="related-links"></a>Collegamenti correlati
+
+* [Run Apps on the Android Emulator](https://developer.android.com/studio/run/emulator) (Eseguire app nell'emulatore Android)

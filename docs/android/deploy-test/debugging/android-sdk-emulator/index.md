@@ -1,21 +1,21 @@
 ---
-title: Emulatore di Android SDK
-description: Questa guida illustra come usare l'emulatore Android SDK di Google con Visual Studio.
+title: Emulatore Android di Google
+description: Questa guida illustra come usare l'emulatore Android di Google con Visual Studio.
 ms.prod: xamarin
 ms.assetid: 8913bb90-1340-409d-b7bb-71a06914923a
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: bdae9f2189f91a6768419fd930a4ad5ce4b6e0ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: aca71284c7d51936ce2addf143edb9980d9536fc
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="android-sdk-emulator"></a>Emulatore di Android SDK
+# <a name="google-android-emulator"></a>Emulatore Android di Google
 
-_Questa guida illustra come usare l'emulatore Android SDK di Google con Visual Studio._
+_Questa guida illustra come usare l'emulatore Android di Google con Visual Studio._
 
 
 ## <a name="overview"></a>Panoramica
@@ -27,13 +27,13 @@ _Questa guida illustra come usare l'emulatore Android SDK di Google con Visual S
 
 ### <a name="running-the-emulatorandroiddeploy-testdebuggingandroid-sdk-emulatorrunning-the-emulatormd"></a>[Esecuzione dell'emulatore](~/android/deploy-test/debugging/android-sdk-emulator/running-the-emulator.md)
 
-Come avviare l'emulatore Android SDK da Visual Studio.
+Come avviare l'emulatore Android di Google da Visual Studio.
 
 ### <a name="troubleshootingandroiddeploy-testdebuggingandroid-sdk-emulatortroubleshootingmd"></a>[Risoluzione dei problemi](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md)
 
-Come identificare e risolvere problemi comuni dell'emulatore Android SDK.
+Come identificare e risolvere problemi comuni dell'emulatore Android di Google.
 
-Per informazioni sulla configurazione dell'emulatore Android SDK e la creazione di nuovi dispositivi virtuali, vedere [Configurazione dell'emulatore Android](~/android/get-started/installation/android-emulator/index.md).
+Per informazioni sulla configurazione dell'emulatore Android di Google e sulla creazione di nuovi dispositivi virtuali, vedere [Configurazione dell'emulatore Android](~/android/get-started/installation/android-emulator/index.md).
 
 
 

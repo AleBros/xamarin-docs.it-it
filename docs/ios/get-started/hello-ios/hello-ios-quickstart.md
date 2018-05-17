@@ -1,5 +1,5 @@
 ---
-title: Hello, iOS
+title: Guida introduttiva a Hello, iOS
 description: In questa guida divisa in due parti viene descritto come compilare un'applicazione Xamarin.iOS di base usando Visual Studio o Visual Studio per Mac e vengono illustrate le nozioni di base dello sviluppo di applicazioni iOS con Xamarin. Vengono presentati strumenti, concetti e passaggi necessari per compilare e distribuire un'applicazione Xamarin.iOS.
 ms.topic: quickstart
 ms.prod: xamarin
@@ -7,19 +7,18 @@ ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/23/2017
-ms.openlocfilehash: dc9b86845dc91c7fb8ec3a88a5862e5e9f6de18d
-ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
+ms.date: 05/02/2017
+ms.openlocfilehash: c82343b3ec36512a8cfd7ba3b96862eac14bfafd
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="helloios-quickstart"></a>Guida introduttiva a Hello.iOS
 
 Questa guida descrive come creare un'applicazione che converte un numero di telefono alfanumerico immesso dall'utente in un numero di telefono numerico e lo chiama. L'applicazione finale ha l'aspetto seguente:
 
  [![](hello-ios-quickstart-images/image1.png "App della Guida introduttiva a Hello.iOS")](hello-ios-quickstart-images/image1.png#lightbox)
-
 
 <a name="Requirements" />
 
@@ -42,7 +41,7 @@ Per istruzioni dettagliate sull'installazione, è disponibile la [guida all'inst
 
 Xamarin.iOS è compatibile con le configurazioni seguenti:
 
--  Versione più recente di Visual Studio 2015 o 2017 Professional o versione successiva in Windows 7 o versione successiva, associato a un host di compilazione Mac con le specifiche indicate in precedenza.
+-  Versione più recente di Visual Studio 2017, Community, Professional o Enterprise in Windows 7 o versione successiva, associato a un host di compilazione Mac con le specifiche indicate in precedenza.
 
 Per istruzioni dettagliate sull'installazione, è disponibile la [guida all'installazione di Xamarin.iOS in Windows](~/ios/get-started/installation/windows/index.md).
 
@@ -63,7 +62,6 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 Nella schermata di avvio fare clic su **Nuovo progetto** per creare una nuova soluzione Xamarin.iOS:
 
 ![](hello-ios-quickstart-images/image3new.png "Soluzione iOS")
-
 
 2. Nella **finestra di dialogo Nuova soluzione** scegliere il modello **iOS > App > App visualizzazione singola**, verificando che sia selezionato il linguaggio C#. Fare clic su **Avanti**:
 
@@ -294,51 +292,42 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
   ![](hello-ios-quickstart-images/image001-.png "Schermata Start")
 
-  Nella casella di ricerca in **Nuova soluzione** immettere _App visualizzazione singola_e selezionare **App visualizzazione singola (iPhone)** per creare una nuova soluzione Xamarin.iOS:
+  Creare una nuova soluzione Xamarin.iOS selezionando **File > Nuovo > Progetto > Visual C# > iPhone e iPad > App iOS (Xamari**:
 
-  ![](hello-ios-quickstart-images/image002-.png "Aggiungere un'app visualizzazione singola")
+  ![Selezionare il tipo di progetto App iOS (Xamarin)](hello-ios-quickstart-images/image002.w157.png "Selezionare il tipo di progetto App iOS (Xamarin)")
 
+  Nella finestra di dialogo successiva selezionare il modello **App visualizzazione singola** e premere **OK** per creare il progetto:
 
-2. Assegnare il nome `Phoneword` al progetto e alla soluzione , come illustrato di seguito:
+  ![Selezionare il modello App visualizzazione singola](hello-ios-quickstart-images/image002-2.w157.png "Selezionare il modello App visualizzazione singola")
 
-  ![](hello-ios-quickstart-images/vs-image3.png "Assegnare al progetto il nome PhonewordiOS e alla nuova soluzione il nome Phoneword")
-
-
-3. Premere **OK** per creare il nuovo progetto.
-
-4. Verificare che l'icona Xamarin Mac Agent sulla barra degli strumenti sia verde.
+1. Verificare che l'icona Xamarin Mac Agent sulla barra degli strumenti sia verde.
 
     ![Verificare che l'icona Xamarin Mac Agent sulla barra degli strumenti sia verde](hello-ios-quickstart-images/vs-image4.png)
 
     Se non lo è, significa che non è disponibile la connessione all'host di compilazione Mac. Per connettersi, seguire i passaggi nella [guida alla configurazione](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-
-5. Aprire il file **Main.storyboard** in iOS Designer facendo doppio clic su di esso in **Esplora soluzioni**:
+1. Aprire il file **Main.storyboard** in iOS Designer facendo doppio clic su di esso in **Esplora soluzioni**:
 
   ![](hello-ios-quickstart-images/vs-image7.png "iOS Designer")
 
-6. Aprire la scheda **Casella degli strumenti**, digitare "etichetta" nella barra di ricerca e trascinare un elemento **Etichetta** nell'area di progettazione (l'area al centro):
+1. Aprire la scheda **Casella degli strumenti**, digitare "etichetta" nella barra di ricerca e trascinare un elemento **Etichetta** nell'area di progettazione (l'area al centro):
 
   ![](hello-ios-quickstart-images/vs-image8.png "Trascinare un elemento Etichetta nell'area di progettazione al centro")
 
-
-7. Afferrare quindi i punti di controllo dei *controlli di trascinamento* e ingrandire l'elemento:
+1. Afferrare quindi i punti di controllo dei *controlli di trascinamento* e ingrandire l'elemento:
 
   ![](hello-ios-quickstart-images/vs-image9.png "Ingrandire l'elemento Etichetta")
 
-
-8. Dopo aver selezionato l'elemento **Etichetta** nell'area di progettazione, usare la **finestra Proprietà** per modificare la proprietà **Testo** dell'elemento **Etichetta** in "Enter a Phoneword:" (Immettere una Phoneword)
+1. Dopo aver selezionato l'elemento **Etichetta** nell'area di progettazione, usare la **finestra Proprietà** per modificare la proprietà **Testo** dell'elemento **Etichetta** in "Enter a Phoneword:" (Immettere una Phoneword)
 
   ![](hello-ios-quickstart-images/vs-image10.png "Modificare la proprietà Testo dell'etichetta in 'Enter a Phoneword' (Immettere una Phoneword)")
 
   > [!NOTE]
   > È possibile visualizzare le **proprietà** o la **casella degli strumenti** in qualsiasi momento passando al menu **Visualizza**.
 
-
-9. Cercare "campo di testo" all'interno della casella degli strumenti e trascinare un **Campo di testo** dalla **casella degli strumenti** nell'area di progettazione e posizionarlo sotto l'elemento **Etichetta**. Regolare la larghezza in modo che il **Campo di testo** sia della stessa larghezza dell'**Etichetta**:
+1. Cercare "campo di testo" all'interno della casella degli strumenti e trascinare un **Campo di testo** dalla **casella degli strumenti** nell'area di progettazione e posizionarlo sotto l'elemento **Etichetta**. Regolare la larghezza in modo che il **Campo di testo** sia della stessa larghezza dell'**Etichetta**:
 
   ![](hello-ios-quickstart-images/vs-image12.png "Regolare la larghezza in modo che il Campo di testo sia della stessa larghezza dell'Etichetta")
-
 
 10. Dopo aver selezionato il **Campo di testo** nell'area di progettazione, modificare la proprietà **Nome**del **Campo di testo** nella sezione Identità di **Proprietà** in `PhoneNumberText` e modificare la proprietà **Testo** in "1-855-XAMARIN":
 
@@ -371,9 +360,9 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
   ![](hello-ios-quickstart-images/vs-image18.png "Aggiungere codice per convertire i numeri di telefono da alfanumerici a numerici")
 
 
-16. Nella finestra di dialogo **Nuovo file** selezionare **Apple > Classe** e assegnare al nuovo file il nome `PhoneTranslator`:
+16. Nella finestra di dialogo **Aggiungi nuovo elemento** (fare clic con il pulsante destro del mouse sul progetto, scegliere Aggiungi > Nuovo elemento) selezionare **Apple > Classe** e denominare il nuovo file `PhoneTranslator`:
 
-  ![](hello-ios-quickstart-images/vs-image19.png "Aggiungere una nuova classe denominata PhoneTranslator")
+  ![](hello-ios-quickstart-images/vs-image19.w157.png "Aggiungere una nuova classe denominata PhoneTranslator")
 
   > [!IMPORTANT]
   > Assicurarsi di selezionare il modello "Classe" con C# nell'icona. In caso contrario non è possibile fare riferimento a questa nuova classe.

@@ -1,21 +1,21 @@
 ---
-title: Esecuzione dell'emulatore di Android SDK
-description: Come eseguire il debug dell'app con l'emulatore di Android SDK
+title: Esecuzione dell'emulatore Android di Google
+description: Come eseguire il debug dell'app con l'emulatore Android di Google
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 630520f88dd23d3860b5f42fbb9bc4eb35ca2c4b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0e290b24c0d7a98b1abaf647fe76e56867042645
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="running-the-android-sdk-emulator"></a>Esecuzione dell'emulatore di Android SDK
+# <a name="running-the-google-android-emulator"></a>Esecuzione dell'emulatore Android di Google
 
-In questa guida si apprenderà come avviare un dispositivo virtuale nell'emulatore di Android SDK per attività di debug e test dell'app.
+Questa guida contiene informazioni su come avviare un dispositivo virtuale nell'emulatore Android di Google per attività di debug e test dell'app.
 
 ## <a name="using-a-pre-configured-virtual-device"></a>Uso di un dispositivo virtuale preconfigurato
 
@@ -80,13 +80,13 @@ Dopo aver scelto un dispositivo virtuale dal menu a discesa dei dispositivi, sel
 
 -----
 
-Dopo l'avvio dell'emulatore Android, Xamarin.Android distribuirà l'app nell'emulatore. L'emulatore esegue l'app con l'immagine del dispositivo virtuale configurato. Di seguito è disponibile uno screenshot di esempio dell'emulatore di Android SDK (l'emulatore esegue un'app vuota denominata **MyApp**):
+Dopo l'avvio dell'emulatore Android, Xamarin.Android distribuirà l'app nell'emulatore. L'emulatore esegue l'app con l'immagine del dispositivo virtuale configurato. Di seguito è disponibile uno screenshot di esempio dell'emulatore Android di Google. L'emulatore esegue un'app vuota denominata **MyApp**:
 
 ![Emulatore che esegue un'app vuota](running-the-emulator-images/emulator-running.png)
 
 L'emulatore può essere lasciato in esecuzione. Non è necessario arrestarlo e riavviarlo ogni volta che si esegue l'app. Alla prima esecuzione di un'app Xamarin.Android nell'emulatore, viene installato il runtime condiviso di Xamarin.Android per il livello API di destinazione, seguito dall'applicazione. L'installazione del runtime può richiedere un po' di tempo. L'installazione del runtime viene eseguita solo in occasione della distribuzione della prima app Xamarin.Android nell'emulatore. Le distribuzioni successive sono più veloci perché nell'emulatore viene copiata solo l'app.
 
-Per altre informazioni sull'uso dell'emulatore di Android SDK, vedere gli argomenti seguenti per sviluppatori Android:
+Per altre informazioni sull'uso dell'emulatore Android di Google, vedere gli argomenti seguenti per sviluppatori Android:
 
 -   [Navigating on the Screen](https://developer.android.com/studio/run/emulator.html#navigate) (Spostamenti nello schermo)
 

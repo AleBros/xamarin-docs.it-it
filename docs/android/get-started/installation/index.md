@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/25/2018
-ms.openlocfilehash: 269b5a06796ae748da93f7c65b23598d9e9311df
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: b2f83c8f8ab6ab730a586b30394454f6bf6f6ba9
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="setup-and-installation"></a>Installazione e configurazione
 
@@ -31,8 +31,8 @@ Visual Studio include Android SDK Manager che sostituisce Android SDK Manager, l
 
 ## <a name="android-emulator-setupandroidget-startedinstallationandroid-emulatorindexmd"></a>[Configurazione dell'emulatore Android](~/android/get-started/installation/android-emulator/index.md)
 
-Questi articoli illustrano come configurare l'emulatore di Android SDK per il test e debug di applicazioni Xamarin.Android.
+Questi articoli illustrano come configurare l'emulatore Android di Google per il test e il debug di applicazioni Xamarin.Android.
 
-## <a name="android-device-setupandroidget-startedinstallationset-up-device-for-developmentmd"></a>[Android Device Setup](~/android/get-started/installation/set-up-device-for-development.md) (Installazione di dispositivi Android)
+## <a name="android-device-setupandroidget-startedinstallationset-up-device-for-developmentmd"></a>[Installazione di dispositivi Android](~/android/get-started/installation/set-up-device-for-development.md)
 
 In questo articolo viene illustrato come installare un dispositivo Android fisico e connetterlo a un computer di sviluppo in modo che il dispositivo possa essere usato per eseguire applicazioni Xamarin.Android ed eseguirne il debug.
