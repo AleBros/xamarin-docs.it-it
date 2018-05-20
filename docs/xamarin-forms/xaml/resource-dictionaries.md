@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: bfdfeda5821b020d7948e583a63bf9ec7e8ee324
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
+ms.openlocfilehash: 47cca2f726b0af396ea1eb287cfa4e1f1bf19724
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="resource-dictionaries"></a>Dizionari delle risorse
 
@@ -35,7 +35,7 @@ Le risorse vengono definite un [ `ResourceDictionary` ](xref:Xamarin.Forms.Resou
 Un programma xamarin. Forms contiene solo una classe che deriva da `Application` , ma spesso si avvalgono di molte classi che derivano da `VisualElement`, inclusi i controlli, layout e pagine. Uno di questi oggetti possono avere relativa `Resources` impostata su un `ResourceDictionary`. Scelta posizione in cui inserire un particolare `ResourceDictionary` impatto in cui le risorse possono essere usate:
 
 - Le risorse in un `ResourceDictionary` che è associata a una visualizzazione, ad esempio `Button` o `Label` può essere applicato solo a tale oggetto specifico, in modo non è molto utile.
-- Le risorse in un `ResourceDictionary` associata a un layout, ad esempio `StackLayout` o `Grid` può essere applicato a tutti gli elementi figlio di tale layout e il layout. 
+- Le risorse in un `ResourceDictionary` associata a un layout, ad esempio `StackLayout` o `Grid` può essere applicato a tutti gli elementi figlio di tale layout e il layout.
 - Le risorse in un `ResourceDictionary` definiti nella pagina di livello può essere applicato alla pagina e a tutti i relativi figli.
 - Le risorse in un `ResourceDictionary` definito l'applicazione di livello può essere applicato in tutta l'applicazione.
 
@@ -187,7 +187,7 @@ Ciò `ResourceDictionary` contiene una singola risorsa, ovvero un oggetto di tip
         <local:MyResourceDictionary />
     </ContentPage.Resources>
     ...
-</ContentPage>  
+</ContentPage>
 ```
 
 Un'istanza di `MyResourceDictionary` è impostato il `Resources` proprietà del `ContentPage` oggetto.
@@ -258,7 +258,7 @@ Quando unite [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) le 
 
 ## <a name="merging-dictionaries-in-xamarinforms-30"></a>L'unione di dizionari in xamarin. Forms 3.0
 
-A partire da xamarin. Forms 3.0, il processo di unione `ResourceDictionaries` è diventata più semplice e più flessibile. Il `MergedDictionaries` i tag di elemento di proprietà non sono più necessari. Al contrario, aggiungere al dizionario risorse un'altra `ResourceDictionary` tag con il nuovo [ `Source` ](xref:Xamarin.Forms.ResourceDictionary.Source) impostata per il nome del file del file XAML con le risorse:
+A partire da xamarin. Forms 3.0, il processo di unione [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) istanze è diventata più semplice e più flessibile. Il `MergedDictionaries` i tag di elemento di proprietà non sono più necessari. Al contrario, aggiungere al dizionario risorse un'altra `ResourceDictionary` tag con il nuovo [ `Source` ](xref:Xamarin.Forms.ResourceDictionary.Source) impostata per il nome del file del file XAML con le risorse:
 
 ```xaml
 <ContentPage ...>
@@ -294,7 +294,7 @@ Poiché xamarin. Forms 3.0 crea automaticamente un'istanza di `ResourceDictionar
 </ContentPage>
 ```
 
-Questa nuova sintassi _non_ creare un'istanza di `MyResourceDictionary` classe. Invece, fa riferimento a file con estensione XAML. Per questa ragione il file code-behind (**MyResourceDictionary.xaml.cs**) non è più necessario. È inoltre possibile rimuovere il `x:Class` attributo dal tag radice del **MyResourceDictionary.xaml** file. 
+Questa nuova sintassi _non_ creare un'istanza di `MyResourceDictionary` classe. Invece, fa riferimento a file con estensione XAML. Per questa ragione il file code-behind (**MyResourceDictionary.xaml.cs**) non è più necessario. È inoltre possibile rimuovere il `x:Class` attributo dal tag radice del **MyResourceDictionary.xaml** file.
 
 ## <a name="summary"></a>Riepilogo
 

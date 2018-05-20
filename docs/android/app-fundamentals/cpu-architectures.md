@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: dea5aaa16891893f649d5ec56f3e6b1ee9a18683
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: abfe22683de024f056d7798dc3ac2de13ebd953e
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="cpu-architectures"></a>Architetture CPU
 
@@ -29,7 +29,7 @@ Per ulteriori informazioni sul funzionamento, vedere [dispositivi multicore &amp
 
 In genere, si selezionare in modo esplicito un'architettura (o architetture) quando l'app è configurata per **versione**. Quando l'app è configurata per **Debug**, **Usa fase di esecuzione condiviso** e **Usa distribuzione rapida** opzioni sono abilitate, che disabilita selezione esplicita architettura.
 
-In Visual Studio, fare doppio clic su **proprietà** nel progetto in **Esplora** e selezionare il **opzioni Android** pagina. Fare clic su di **imballaggio** scheda e verificare che **Usa fase di esecuzione condiviso** è disabilitato (disattivando questa opzione consente di selezionare quali ABIs per supportare in modo esplicito). Fare clic su di **avanzate** scheda e, in **proprietà avanzate**, controllare le architetture che si desidera supportare:
+In Visual Studio, fare clic su progetto sotto il **Esplora soluzioni** e selezionare **proprietà**. Sotto il **opzioni Android** pagina controllo il **delle proprietà di creazione del pacchetto** sezione e verificare che **Usa fase di esecuzione condiviso** è disabilitato (disattivando questa opzione consente di in modo esplicito Selezionare quali ABIs per supportare). Fare clic sui **avanzate** pulsante e, in **architetture supportate**, controllare le architetture che si desidera supportare:
 
 [![Selezione di armeabi e armeabi v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 

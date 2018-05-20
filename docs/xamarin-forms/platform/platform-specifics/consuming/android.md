@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/17/2017
-ms.openlocfilehash: dfc46b5caa14c1c02d1c2afaffecc701fea59e2c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8aa17c868ce1d0343eab6758c03aaf042c27130e
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="android-platform-specifics"></a>Specifiche di piattaforma Android
 
@@ -135,7 +135,7 @@ Il risultato è che paging scorrere le pagine visualizzate da un [ `TabbedPage` 
 
 ## <a name="controlling-the-elevation-of-visual-elements"></a>Controllare l'elevazione di elementi visivi
 
-Questo specifico della piattaforma viene usato per controllare l'elevazione dei privilegi o ordine Z degli elementi visivi sulle applicazioni che hanno come destinazione API 21 o maggiore. L'elevazione di un elemento visivo determina l'ordine di disegno, con elementi visivi con valori Z superiori occluding elementi visivi con i valori più bassi Z. Viene utilizzata in XAML impostando i `Elevation.Elevation` associata a un `boolean` valore:
+Questo specifico della piattaforma viene usato per controllare l'elevazione dei privilegi o ordine Z degli elementi visivi sulle applicazioni che hanno come destinazione API 21 o maggiore. L'elevazione di un elemento visivo determina l'ordine di disegno, con elementi visivi con valori Z superiori occluding elementi visivi con i valori più bassi Z. Viene utilizzata in XAML impostando i `VisualElement.Elevation` associata a un `boolean` valore:
 
 ```xaml
 <ContentPage ...
@@ -147,7 +147,7 @@ Questo specifico della piattaforma viene usato per controllare l'elevazione dei 
             <BoxView Color="Red" Opacity="0.2" HeightRequest="50" />
         </Grid>        
         <Grid Margin="0,20,0,0">
-            <Button Text="Button Above BoxView - Click Me" android:Elevation.Elevation="10"/>
+            <Button Text="Button Above BoxView - Click Me" android:VisualElement.Elevation="10"/>
             <BoxView Color="Red" Opacity="0.2" HeightRequest="50" />
         </Grid>
     </StackLayout>
@@ -196,7 +196,7 @@ public class AndroidElevationPageCS : ContentPage
 }
 ```
 
-Il `Button.On<Android>` metodo specifica che questo specifico della piattaforma verrà eseguito solo in Android. Il `Elevation.SetElevation` (metodo), nel [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific/) dello spazio dei nomi, viene utilizzato per impostare l'elevazione dell'elemento visivo nullable `float`. Inoltre, il `Elevation.GetElevation` metodo può essere utilizzato per recuperare il valore di elevazione dei privilegi di un elemento visivo.
+Il `Button.On<Android>` metodo specifica che questo specifico della piattaforma verrà eseguito solo in Android. Il `VisualElement.SetElevation` (metodo), nel [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific/) dello spazio dei nomi, viene utilizzato per impostare l'elevazione dell'elemento visivo nullable `float`. Inoltre, il `VisualElement.GetElevation` metodo può essere utilizzato per recuperare il valore di elevazione dei privilegi di un elemento visivo.
 
 Il risultato è che l'elevazione di elementi visivi può essere controllato in modo che gli elementi visivi con i valori Z superiore nasconde i colori elementi visivi con i valori più bassi Z. Pertanto, in questo esempio il secondo [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) viene eseguito il rendering di sopra di [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) perché contiene un valore più alto di elevazione dei privilegi:
 
