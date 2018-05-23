@@ -4,11 +4,11 @@ title: 'Visual Studio WPF. Xamarin. Forms: Analogie e differenze'
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 21ffca65ee72308d1340a1db43471228b2adbe91
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: ac30a29a2b4982b2f995c9f717cf1893ca5d8b8a
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>Visual Studio WPF. Xamarin. Forms: Analogie e differenze
 
@@ -33,7 +33,7 @@ XAML viene usato come linguaggio di markup dichiarativo per WPF e xamarin. Forms
 
 - Xamarin. Forms supporta il [specifica di XAML 2009](/dotnet/framework/xaml-services/xaml-2009-language-features/); questo rende più semplice definire i dati, ad esempio `string`s, `int`s, i tipi generici anche come definizione e così via e il passaggio di argomenti ai costruttori.
 
-- Non è attualmente possibile caricare dyanmically XAML WPF può essere con `XamlReader`. È possibile ottenere la stessa funzionalità di base con un [pacchetto NuGet](https://www.nuget.org/packages/Xamarin.Forms.Dynamic/) se.
+- Non è attualmente possibile caricare dinamicamente XAML WPF può essere con `XamlReader`. È possibile ottenere la stessa funzionalità di base con un [pacchetto NuGet](https://www.nuget.org/packages/Xamarin.Forms.Dynamic/) se.
 
 ### <a name="markup-extensions"></a>Estensioni di markup
 

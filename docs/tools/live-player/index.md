@@ -6,11 +6,11 @@ ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: b5301e499a3b85087f19449f8a25b107b8ec1e4b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: dd179fb1d1ce3ca57cdf6e27bb86a12e2f9ef03f
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin Player in tempo reale per xamarin. Forms
 
@@ -22,7 +22,7 @@ Xamarin Player in tempo reale è progettato come un riquadro attività iniziale 
 
 [![Xamarin Player in tempo reale: Codice, eseguire la scansione, Test](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
-1. Scaricare l'applicazione, che passano i [programma di installazione di Xamarin Player Live](install.md) istruzioni.
+1. Scaricare l'app seguendo le [programma di installazione di Xamarin Player Live](install.md) istruzioni.
 2. Abilitare il *Xamarin Player in tempo reale* in **preferenze**, quindi selezionare il dispositivo dal **dispositivi** elenco.
 2. Gestire i dispositivi Windows Media Player in tempo reale per Scansionare un codice per associare il dispositivo a Visual Studio.
 3. L'app viene eseguita direttamente dal proprio telefono o tablet.

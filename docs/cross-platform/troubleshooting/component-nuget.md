@@ -7,11 +7,11 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: asb3993
 ms.author: amburns
 ms.date: 04/18/2018
-ms.openlocfilehash: 31660ff1255878dbae15bda601da8e628aabd459
-ms.sourcegitcommit: c5bb1045b2f4607dafe3101ad1ea6ade23e44342
+ms.openlocfilehash: e9c056d37577a280b66bb3aa7ded19e966bca43b
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="updating-component-references-to-nuget"></a>Aggiornamento dei riferimenti a componenti di NuGet
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 05/14/2018
 
 Fare riferimento a queste istruzioni per aggiungere pacchetti NuGet on [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) oppure [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
-Un elenco di Xamarin diffusi [i plug-in e le librerie](https://github.com/xamarin/XamarinComponents/blob/master/README.md) è disponibile per consentire di trovare alternative per i componenti che non sono disponibili come pacakges NuGet.
+Un elenco di Xamarin diffusi [i plug-in e le librerie](https://github.com/xamarin/XamarinComponents/blob/master/README.md) è disponibile per consentire di trovare alternative per i componenti che non sono disponibili come pacchetti NuGet.
 
 ## <a name="manually-removing-component-references"></a>Rimozione manuale di riferimenti a componenti
 

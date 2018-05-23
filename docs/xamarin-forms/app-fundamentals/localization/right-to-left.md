@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: ff9814291d5a28ec9e0bbb3c2a6fc6cce5d8ee25
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: 92ca58374292c829df4098274abae870b355a7b0
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="right-to-left-localization"></a>Localizzazione da destra a sinistra
 
@@ -24,7 +24,7 @@ _Da destra a sinistra localizzazione aggiunge il supporto per la direzione di fl
 Direzione del flusso è la direzione in cui gli elementi dell'interfaccia utente della pagina vengono analizzati dall'occhio. Alcuni linguaggi, come l'arabo ed ebraico, richiedono che gli elementi dell'interfaccia utente sono posizionati in una direzione di flusso da destra a sinistra. Questo risultato può essere ottenuto impostando il [ `VisualElement.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) proprietà. Questa proprietà ottiene o imposta la direzione nella quale flusso di elementi dell'interfaccia utente all'interno di qualsiasi elemento padre che controlla il layout e deve essere impostato su uno del [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) valori di enumerazione:
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
-- [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
+- [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
 Impostazione di [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) proprietà [ `RightToLeft` ](xref:Xamarin.Forms.FlowDirection.RightToLeft) su un elemento in genere imposta l'allineamento a destra, l'ordine di lettura da destra a sinistra e il layout del controllo da da destra a sinistra:
