@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: ca359e5ea700ef09249a2d8a299b6604f91e9149
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: d2aee2d6421b06f9147c656debdd58bdfe21be72
+ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarin-live-reload"></a>Ricaricamento in tempo reale di Xamarin
 
@@ -63,8 +63,10 @@ public partial class App : Application
     public App ()
     {
         // Initialize Live Reload.
+        #if DEBUG
         LiveReload.Init();
-    
+        #endif
+        
         InitializeComponent();
         MainPage = new MainPage();
     }
@@ -134,6 +136,10 @@ No. In effetti, è possibile anche avviare tutte supportate destinazione dell'ap
 * **XLR003**: *pacchetto nuget di ricaricamento in tempo reale richiede l'installazione dell'estensione Xamarin Live Ricarica Visual Studio.*
 
   Tentativo di creare un progetto che fa riferimento il pacchetto nuget di ricaricamento in tempo reale, ma non è installato l'estensione di Visual.  
+
+* *Eccezione durante il caricamento degli assembly: FileNotFoundException: Impossibile caricare l'assembly ' Xamarin.Live.Reload, versione = 0.3.27.0, Culture = neutral, PublicKeyToken ='.*
+
+  Usare il progetto host `PackageReference` invece di `packages.config`
 
 ### <a name="app-doesnt-connect"></a>Non collega l'App
 
