@@ -232,6 +232,7 @@
 ### [Impostazioni del linker personalizzate](deploy-test/linker.md)
 ### [Dispositivi multicore](deploy-test/multicore-devices.md)
 ### [Prestazioni](deploy-test/performance.md)
+### [Profilatura](deploy-test/profiling.md)
 ### [Preparazione per il rilascio](deploy-test/release-prep/index.md)
 #### [ProGuard](deploy-test/release-prep/proguard.md)
 ### [Firma del file APK](deploy-test/signing/index.md)
