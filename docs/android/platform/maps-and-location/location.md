@@ -6,12 +6,12 @@ ms.assetid: 0008682B-6CEF-0C1D-3200-56ECF58F5D3C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 366c75db49a7e0f4f559b13c0871071dee2f08e3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/22/2018
+ms.openlocfilehash: b509f6892b27afa053a6ee913826d913d7ad54a8
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="location-services"></a>Servizi di posizione
 
@@ -83,9 +83,15 @@ Il provider di percorso fusibili è il modo migliore per le applicazioni Android
  
 Il provider di percorso fusibili API fornisce un'ampia gamma di altri strumenti di sviluppo di applicazioni con riconoscimento del percorso, tra cui geofencing e il monitoraggio dell'attività. In questa sezione si imposterà lo stato attivo le nozioni di base di configurazione di `LocationClient`, stabilire i provider e l'acquisizione della posizione dell'utente.
 
-Il provider di posizione fusibili fa parte di [Google Play Services](http://developer.android.com/google/play-services/index.html). Il pacchetto di Google Play Services deve essere installato e configurato correttamente nell'applicazione per l'API del provider fusibili percorso per il lavoro e il dispositivo deve avere l'APK Google Play Services installato.
+Il provider di posizione fusibili fa parte di [Google Play Services](http://developer.android.com/google/play-services/index.html).
+Il pacchetto di Google Play Services deve essere installato e configurato correttamente nell'applicazione per l'API del provider fusibili percorso per il lavoro e il dispositivo deve avere l'APK Google Play Services installato.
 
-Prima di un xamarin applicazione può utilizzare il provider di posizione fusibili, è necessario aggiungere il **Xamarin.GooglePlayServices.Maps** al progetto.
+Prima di un xamarin applicazione può utilizzare il provider di posizione fusibili, è necessario aggiungere il **Xamarin.GooglePlayServices.Maps** pacchetto al progetto. Inoltre, i seguenti `using` istruzioni devono essere aggiunti ad alcun file di origine che fanno riferimento le classi descritte di seguito:
+
+```csharp
+using Android.Gms.Common;
+using Android.Gms.Location;
+```
 
 ### <a name="checking-if-google-play-services-is-installed"></a>Verifica se è installato Google Play Services
 

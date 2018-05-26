@@ -6,12 +6,12 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/17/2017
-ms.openlocfilehash: 8aa17c868ce1d0343eab6758c03aaf042c27130e
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.date: 05/23/2018
+ms.openlocfilehash: 8d7ec3f2f64fdb8be903fd13bd72bcf545265a3d
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="android-platform-specifics"></a>Specifiche di piattaforma Android
 
@@ -24,6 +24,8 @@ In Android, xamarin. Forms contiene le specifiche di piattaforma seguenti:
 - Abilitazione di passaggio tra le pagine in un [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/). Per ulteriori informazioni, vedere [abilitazione passaggio tra le pagine in un TabbedPage](#enable_swipe_paging).
 - Controllare l'ordine Z degli elementi visivi per determinare l'ordine di disegno. Per ulteriori informazioni, vedere [controllo l'elevazione dei privilegi di elementi visivi](#elevation).
 - La disabilitazione di [ `Disappearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) e [ `Appearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) pagina eventi del ciclo di vita in pausa e riprendere, rispettivamente, per le applicazioni che utilizzano delle applicazioni. Per ulteriori informazioni, vedere [la disabilitazione di Disappearing e visualizzati eventi del ciclo di vita della pagina](#disable_lifecycle_events).
+- Controllare se un [ `WebView` ](xref:Xamarin.Forms.WebView) possibile visualizzare il contenuto misto. Per altre informazioni, vedere [abilitazione contenuto misto in un WebView](#webview-mixed-content).
+- L'impostazione di opzioni dell'editor per la tastiera su schermo per il metodo di input un [ `Entry` ](xref:Xamarin.Forms.Entry). Per altre informazioni, vedere [opzioni di impostazione voce Input Method Editor](#entry-imeoptions).
 
 <a name="soft_input_mode" />
 
@@ -245,10 +247,88 @@ Il risultato è che il [ `Disappearing` ](https://developer.xamarin.com/api/even
 
 [![](android-images/keyboard-on-resume.png "Ciclo di vita eventi specifici per la piattaforma")](android-images/keyboard-on-resume-large.png#lightbox "specifico della piattaforma gli eventi del ciclo di vita")
 
+<a name="webview-mixed-content" />
+
+## <a name="enabling-mixed-content-in-a-webview"></a>L'abilitazione di contenuto misto in un WebView
+
+Questo controlli specifici della piattaforma se un [ `WebView` ](xref:Xamarin.Forms.WebView) possibile Visualizza contenuto misto nelle applicazioni destinate a API 21 o versione successiva. Contenuto misto è che viene caricato inizialmente tramite una connessione HTTPS, ma che vengono caricate le risorse (ad esempio immagini, audio, video, fogli di stile, script) su una connessione HTTP. Viene utilizzata in XAML impostando il [ `WebView.MixedContentMode` ](x:ref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.MixedContentModeProperty) un valore della proprietà associata di [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) enumerazione:
+
+```xaml
+<ContentPage ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <WebView ... android:WebView.MixedContentMode="AlwaysAllow" />
+</ContentPage>
+```
+
+In alternativa, possono essere utilizzato da codice c# che utilizza l'API fluent:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+webView.On<Android>().SetMixedContentMode(MixedContentHandling.AlwaysAllow);
+```
+
+Il `WebView.On<Android>` metodo specifica che questo specifico della piattaforma verrà eseguito solo in Android. Il [ `WebView.SetMixedContentMode` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.SetMixedContentMode(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.WebView},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling)) metodo, nel [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) dello spazio dei nomi, viene utilizzato per controllare se è possibile visualizzare il contenuto misto, con il [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) enumerazione che fornisce tre possibili valori:
+
+- [`AlwaysAllow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.AlwaysAllow) : indica che il [ `WebView` ](xref:Xamarin.Forms.WebView) consentirà un'entità origin HTTPS caricare il contenuto da un'origine HTTP.
+- [`NeverAllow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.NeverAllow) : indica che il [ `WebView` ](xref:Xamarin.Forms.WebView) non consente un'entità origin HTTPS caricare il contenuto da un'origine HTTP.
+- [`CompatibilityMode`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.CompatibilityMode) : indica che il [ `WebView` ](xref:Xamarin.Forms.WebView) tenterà di essere compatibile con l'approccio del browser web dispositivo più recente. Parte del contenuto HTTP potrà essere caricata da un'entità origin HTTPS e altri tipi di contenuto verranno bloccate. I tipi di contenuto che sono bloccati o consentiti possono variare a ogni versione del sistema operativo.
+
+Il risultato è che un determinato [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) valore si riferisce al [ `WebView` ](xref:Xamarin.Forms.WebView), che controlla se è possibile visualizzare contenuto misto:
+
+[![WebView mista specifico della piattaforma di gestione del contenuto](android-images/webview-mixedcontent.png "WebView mista specifico della piattaforma di gestione del contenuto")](android-images/webview-mixedcontent-large.png#lightbox "WebView mista specifico della piattaforma di gestione del contenuto")
+
+<a name="entry-imeoptions" />
+
+## <a name="setting-entry-input-method-editor-options"></a>Opzioni di impostazione voce Input Method Editor
+
+Questo specifico della piattaforma imposta il metodo di input opzioni dell'editor (IME) per la tastiera su schermo per un [ `Entry` ](xref:Xamarin.Forms.Entry). Ciò include l'impostazione di pulsante di azione utente nell'angolo in basso della tastiera su schermo e le interazioni con il `Entry`. Viene utilizzata in XAML impostando il [ `Entry.ImeOptions` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.ImeOptionsProperty) un valore della proprietà associata di [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) enumerazione:
+
+```xaml
+<ContentPage ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout ...>
+        <Entry ... android:Entry.ImeOptions="Send" />
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+In alternativa, possono essere utilizzato da codice c# che utilizza l'API fluent:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+entry.On<Android>().SetImeOptions(ImeFlags.Send);
+```
+
+Il `Entry.On<Android>` metodo specifica che questo specifico della piattaforma verrà eseguito solo in Android. Il [ `Entry.SetImeOptions` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.SetImeOptions(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Entry},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags)) (metodo), nel [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) spazio dei nomi, viene utilizzato per impostare l'opzione di azione del metodo di input per la tastiera su schermo per i [ `Entry` ](xref:Xamarin.Forms.Entry), con il [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) enumerazione che fornisce i valori seguenti:
+
+- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Default) : indica che non è necessaria alcuna azione specifica chiave e che il controllo sottostante produrrà autonomamente se possibile.
+- [`None`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.None) : indica che non chiave dell'azione verrà resa disponibile.
+- [`Go`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Go) : indica che la chiave dell'azione eseguirà un'operazione "go", che richiede all'utente di destinazione del testo digitato.
+- [`Search`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Search) : indica che la chiave dell'azione esegue un'operazione di "ricerca", che richiede all'utente i risultati di ricerca per il testo digitati.
+- [`Send`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Send) : indica che la chiave dell'azione eseguirà un'operazione "send", fornire il testo alla relativa destinazione.
+- [`Next`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Next) : indica che la chiave dell'azione eseguirà un'operazione "Avanti", richiede all'utente nel campo successivo che verrà accetta un testo.
+- [`Done`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Done) : indica che la chiave dell'azione eseguirà un'operazione "done", chiudendo la tastiera su schermo.
+- [`Previous`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Previous) : indica che la chiave dell'azione eseguirà un'operazione "precedente", richiede all'utente al campo precedente che accetterà testo.
+- [`ImeMaskAction`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.ImeMaskAction) – la maschera per selezionare le opzioni di azione.
+- [`NoPersonalizedLearning`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.NoPersonalizedLearning) : indica che il controllo ortografico sarà informazioni da parte dell'utente, né Suggerisci correzioni in base a ciò che l'utente ha digitato in precedenza.
+- [`NoFullscreen`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.NoFullscreen) : indica che l'interfaccia utente non va a schermo intero.
+- [`NoExtractUi`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.NoExtractUi) : indica che è verrà visualizzata alcuna interfaccia utente per testo estratto.
+- [`NoAccessoryAction`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.NoAccessoryAction) : indica che non verrà visualizzata alcuna interfaccia utente per le azioni personalizzate.
+
+Il risultato è che un determinato [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) valore viene applicato per la tastiera su schermo per il [ `Entry` ](xref:Xamarin.Forms.Entry), che imposta il metodo di input opzioni dell'editor:
+
+[![Metodo editor specifico per la piattaforma di input voce](android-images/entry-imeoptions.png "voce metodo editor specifico per la piattaforma di input")](android-images/entry-imeoptions-large.png#lightbox "voce di input specifico della piattaforma editor (metodo)")
+
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo viene illustrato come utilizzare la piattaforma-specifiche Android che vengono compilate in xamarin. Forms. Le specifiche di piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare un renderer personalizzato o effetti.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
