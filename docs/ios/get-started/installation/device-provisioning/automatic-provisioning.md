@@ -6,12 +6,12 @@ ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 05/06/2018
-ms.openlocfilehash: 0e2ce758da2951efa0508e76cdf4eaac5384fa6b
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.date: 05/22/2018
+ms.openlocfilehash: d324e469ba392b14c635990d607bf04c949ad5db
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="automatic-provisioning"></a>Provisioning automatico
 
@@ -37,6 +37,14 @@ _Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo per lo 
 ## <a name="enabling-automatic-signing"></a>Abilitazione della firma automatica
 
 Prima di avviare il processo di firma automatica, verificare di avere un ID Apple aggiunto in Visual Studio, come descritto nella guida [Apple Account Management](~/cross-platform/macios/apple-account-management.md) (Gestione degli account Apple). Dopo aver aggiunto un ID Apple, è possibile usare qualsiasi _team_ associato. In questo modo è possibile creare certificati, profili e altri ID per il team. L'ID del team viene usato anche per creare il prefisso di un ID app che verrà incluso nel profilo di provisioning. Questo ID consente a Apple di verificare l'identità dell'utente.
+
+> [!IMPORTANT]
+> Prima di iniziare, assicurarsi di accedere a [iTunes Connect](https://itunesconnect.apple.com/) oppure [appleid.apple.com](https://appleid.apple.com) per verificare di avere accettato i criteri per l'account Apple più recenti. Se richiesto, completare i passaggi per accettare eventuali nuovi contratti per l'account da Apple. Se non si accetta l'informativa sulla privacy di maggio 2018, verrà visualizzato l'avviso seguente quando si tenta di eseguire il provisioning del dispositivo:
+> ```
+> Unexpected authentication failure. Reason: {
+> "authType" : "sa"
+>}
+>```
 
 Per firmare automaticamente l'app per la distribuzione in un dispositivo iOS, seguire questa procedura:
 

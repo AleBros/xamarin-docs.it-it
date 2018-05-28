@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/10/2018
-ms.openlocfilehash: b5c20eb9f40bb4c4981d6b60b9fd4bc75fd29336
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 2f0bb6f1371b9ce1b925b876851d58f3c4d01419
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="android-emulator-hardware-acceleration"></a>Accelerazione hardware dell'emulatore Android
 
@@ -46,9 +46,9 @@ Per iniziare a usare Hyper-V e l'emulatore Android di Google:
 
     Dopo aver abilitato Hyper-V e la piattaforma Hypervisor di Windows potrebbe essere necessario riavviare il computer.
 
-3. **Installare [Visual Studio 15.8 Preview 1](https://aka.ms/hyperv-emulator-dl)** &ndash; Questa versione di Visual Studio fornisce supporto IDE per l'avvio dell'emulatore Android di Google con il supporto di Hyper-V.
+3. **Installare [Visual Studio 15.8 Preview 1 o versioni successive](https://www.visualstudio.com/vs/preview/)** &ndash; Questa versione di Visual Studio fornisce supporto IDE per l'avvio dell'emulatore Android di Google con il supporto di Hyper-V.
 
-4. **Installare il pacchetto dell'emulatore Android di Google 27.2.7 o versione successiva** &ndash; Per installare questo pacchetto, passare a **Strumenti > Android > Android SDK Manager** in Visual Studio. Selezionare la scheda **Strumenti** e verificare che la versione del componente emulatore Android non sia inferiore alla 27.2.7.
+4. **Installare il pacchetto dell'emulatore Android di Google 27.2.7 o versioni successive** &ndash; Per installare questo pacchetto, passare a **Strumenti > Android > Android SDK Manager** in Visual Studio. Selezionare la scheda **Strumenti** e verificare che la versione del componente emulatore Android non sia inferiore alla 27.2.7.
 
     [![Finestra di dialogo Android SDK e strumenti Android](hardware-acceleration-images/win/14-sdk-manager.w158-sml.png)](hardware-acceleration-images/win/14-sdk-manager.w158.png#lightbox)
 
