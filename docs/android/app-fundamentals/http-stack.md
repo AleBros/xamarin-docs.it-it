@@ -7,11 +7,12 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 04/20/2018
-ms.openlocfilehash: bedcf0603fffc9886155881f91972203104ba155
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 765c51346ac63a00838fec52bde87b38091e2dd9
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689474"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Stack HttpClient e selettore di implementazione di SSL/TLS per Android
 
@@ -89,9 +90,9 @@ La scelta tra `AndroidClientHandler` e `HttpClientHandler` dipende dalle esigenz
 
 A partire da xamarin 8.3, `HttpClientHandler` impostazioni predefinite per SSL barenatura (`btls`) come provider di TLS sottostante. Il provider barenatura SSL TLS offre i vantaggi seguenti:
 
--   Supporta TLS 1.2.
+-   Supporta TLS 1.2 +.
 -   Supporta tutte le versioni di Android.
--   Viene fornito il supporto di TLS 1.2 per entrambi `HttpClient` e `WebClient`.
+-   Fornisce supporto sia per TLS 1.2 + `HttpClient` e `WebClient`.
 
 Lo svantaggio dell'uso di SSL barenatura come provider di TLS sottostante è che è possibile aumentare le dimensioni dell'APK risultante (aggiunge circa 1MB di dimensioni di file APK aggiuntivi per ABI supportati).
 

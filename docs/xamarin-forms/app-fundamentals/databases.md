@@ -6,12 +6,13 @@ ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/23/2017
-ms.openlocfilehash: d1f11ed1b52354dedbdb8893a96e0ae7589d5389
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.date: 05/31/2018
+ms.openlocfilehash: d97fc792e2eb14f7e432d377811d1318c99b9602
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689448"
 ---
 # <a name="local-databases"></a>Database locali
 
@@ -33,17 +34,20 @@ In questa sezione viene illustrato come aggiungere pacchetti SQLite.Net NuGet a 
 
 <a name="XamarinForms_PCL_Project" />
 
-### <a name="xamarinsforms-pcl-project"></a>Progetto PCL Xamarins.Forms
+### <a name="xamarinsforms-net-standard-or-pcl-project"></a>Xamarins.Forms .NET Standard o un progetto libreria di classi Portabile
 
-Per aggiungere il supporto di SQLite a un progetto libreria di classi Portabile xamarin. Forms, utilizzare la funzione di ricerca di NuGet per trovare **sqlite-net-pcl** e installare il pacchetto:
+Per aggiungere il supporto di SQLite a un progetto xamarin. Forms, utilizzare la funzione di ricerca di NuGet per trovare **sqlite-net-libreria di classi portabile** e installare il pacchetto:
 
-![](databases-images/vs2017-sqlite-pcl-nuget.png "Aggiungere NuGet SQLite.NET PCL pacchetto")
+![Aggiungere NuGet SQLite.NET PCL pacchetto](databases-images/vs2017-sqlite-pcl-nuget.png "aggiungere NuGet SQLite.NET PCL pacchetto")
 
 Esistono un numero di pacchetti NuGet con nomi simili, il pacchetto corretto questi attributi è:
 
 - **Creato da:** Frank A. Krueger
 - **ID:** sqlite-net-libreria di classi portabile
 - **Collegamento di NuGet:** [sqlite-net-libreria di classi portabile](https://www.nuget.org/packages/sqlite-net-pcl/)
+
+> [!TIP]
+> Usare la **sqlite-net-libreria di classi portabile** NuGet anche in progetti .NET Standard.
 
 Dopo aver aggiunto il riferimento, scrivere un'interfaccia per l'astrazione di funzionalità specifiche della piattaforma, per determinare la posizione del file di database. L'interfaccia utilizzata in questo esempio definisce un singolo metodo:
 
@@ -130,7 +134,7 @@ Tutti i viene scritto il codice di accesso ai dati nel progetto libreria di clas
 
 Per configurare l'applicazione iOS, aggiungere lo stesso pacchetto NuGet per il progetto iOS utilizzando il *NuGet* finestra:
 
-![](databases-images/vsmac-sqlite-nuget.png "Aggiungere NuGet SQLite.NET PCL pacchetto")
+![Aggiungere NuGet SQLite.NET PCL pacchetto](databases-images/vsmac-sqlite-nuget.png "aggiungere NuGet SQLite.NET PCL pacchetto")
 
 È l'unico codice richiesto il `IFileHelper` implementazione che determina il percorso del file di dati. Il codice seguente inserisce i file di database SQLite nel **/database di libreria** cartella all'interno di sandbox dell'applicazione. Vedere il [iOS funziona con il File System](~/ios/app-fundamentals/file-system.md) documentazione per ulteriori informazioni sulle diverse directory disponibili per l'archiviazione.
 
@@ -138,21 +142,21 @@ Per configurare l'applicazione iOS, aggiungere lo stesso pacchetto NuGet per il 
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.iOS
 {
-    public class FileHelper : IFileHelper
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
     {
-        public string GetLocalFilePath(string filename)
-        {
-            string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
+      string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+      string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
 
-            if (!Directory.Exists(libFolder))
-            {
-                Directory.CreateDirectory(libFolder);
-            }
+      if (!Directory.Exists(libFolder))
+      {
+        Directory.CreateDirectory(libFolder);
+      }
 
-            return Path.Combine(libFolder, filename);
-        }
+      return Path.Combine(libFolder, filename);
     }
+  }
 }
 ```
 
@@ -172,14 +176,14 @@ Dopo aver aggiunto questo riferimento, l'unico codice richiesto è il `IFileHelp
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.Droid
 {
-    public class FileHelper : IFileHelper
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
     {
-        public string GetLocalFilePath(string filename)
-        {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            return Path.Combine(path, filename);
-        }
+        string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+        return Path.Combine(path, filename);
     }
+  }
 }
 ```
 
@@ -189,7 +193,7 @@ namespace Todo.Droid
 
 Per configurare l'applicazione UWP, aggiungere lo stesso pacchetto NuGet per il progetto UWP utilizzando il *NuGet* finestra:
 
-![](databases-images/vs2017-sqlite-uwp-nuget.png "Aggiungere NuGet SQLite.NET PCL pacchetto")
+![Aggiungere NuGet SQLite.NET PCL pacchetto](databases-images/vs2017-sqlite-uwp-nuget.png "aggiungere NuGet SQLite.NET PCL pacchetto")
 
 Dopo aver aggiunto il riferimento, implementare il `IFileHelper` interfaccia mediante la specifica della piattaforma `Windows.Storage` API per determinare il percorso del file di dati.
 
@@ -200,23 +204,21 @@ using Windows.Storage;
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.UWP
 {
-    public class FileHelper : IFileHelper
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
     {
-        public string GetLocalFilePath(string filename)
-        {
-            return Path.Combine(ApplicationData.Current.LocalFolder.Path, filename);
-        }
+      return Path.Combine(ApplicationData.Current.LocalFolder.Path, filename);
     }
+  }
 }
-
 ```
 
 ## <a name="summary"></a>Riepilogo
 
 Xamarin. Forms supporta le applicazioni basate sul database utilizzando il motore di database SQLite, che consente di caricare e salvare gli oggetti nel codice condiviso.
 
-In questo articolo è incentrata sulla **accesso** un database SQLite con xamarin. Forms. Per ulteriori informazioni sull'uso di SQLite.Net stesso, vedere il [accesso ai dati: SQLite.NET utilizzando](~/cross-platform/app-fundamentals/index.md) documentazione. Gran parte del codice SQLite.Net è condivisibile in tutte le piattaforme; Configura solo il percorso del file di database SQLite richiede funzionalità specifiche della piattaforma.
-
+In questo articolo è incentrata sulla **accesso** un database SQLite con xamarin. Forms. Per ulteriori informazioni sull'uso di SQLite.Net stesso, consultare il [SQLite.NET in Android](~/android/data-cloud/data-access/using-sqlite-orm.md) oppure [SQLite.NET in iOS](~/ios/data-cloud/data/using-sqlite-orm.md) documentazione. Gran parte del codice SQLite.Net è condivisibile in tutte le piattaforme; Configura solo il percorso del file di database SQLite richiede funzionalità specifiche della piattaforma.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

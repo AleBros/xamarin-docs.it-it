@@ -6,11 +6,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 78783089303eba09b0ee36534b0078b82674a1c6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9ed90a9c4ddcd398d834cb8c91553a57e7bd5ad8
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689541"
 ---
 # <a name="touch-in-ios"></a>Touch con iOS
 
@@ -117,7 +118,7 @@ I riconoscitori di movimento notevolmente consente di semplificare e ridurre il 
 
 Xamarin fornisce la classe `UIGestureRecognizer` come classe di base dei tipi di riconoscimento di movimento predefiniti seguenti:
 
--  *UITapGesturesRecognizer* : si tratta di uno o più scelte.
+-  *UITapGestureRecognizer* – si tratta di uno o più le scelte.
 -  *UIPinchGestureRecognizer* – Pinching e diffusione dita distanti.
 -  *UIPanGestureRecognizer* : panoramica o trascinamento.
 -  *UISwipeGestureRecognizer* : passaggio in qualsiasi direzione.
