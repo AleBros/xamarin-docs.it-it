@@ -1,18 +1,20 @@
 ---
-title: Controllo della tabella
+title: watchOS controlli struttura a schede in Xamarin
+description: Questo documento descrive come usare i controlli tabella watchOS in Xamarin. Viene aggiunta una tabella, aggiungere un controller di riga, creazione e popolamento righe, risponde alle scelte e altro ancora.
 ms.prod: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 3f596b424292dd0f4db08429bc7c5d4a885d3954
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: afb8f9a96fa14877cbd0352869e23972719a4480
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791358"
 ---
-# <a name="table-control"></a>Controllo della tabella
+# <a name="watchos-table-controls-in-xamarin"></a>watchOS controlli struttura a schede in Xamarin
 
 Il watchOS `WKInterfaceTable` controllo è molto più semplice rispetto alla controparte iOS, ma esegue un ruolo simile. Crea un elenco di scorrimento di righe che possono essere layout personalizzati e cui rispondere a eventi di tocco.
 

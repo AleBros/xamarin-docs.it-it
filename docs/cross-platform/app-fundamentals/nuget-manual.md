@@ -1,16 +1,17 @@
 ---
 title: Creazione manuale di pacchetti NuGet di Xamarin
-description: In questa pagina sono riportati alcuni suggerimenti per la creazione di pacchetti NuGet destinati alla piattaforma Xamarin.
+description: Questo documento contiene suggerimenti per la creazione di pacchetti NuGet destinati alla piattaforma Xamarin. Descrive i profili Xamarin pacchetto NuGet, NuGets libreria di classi Portabile con le dipendenze della piattaforma e collegamenti a diversi esempi di open source.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 510c27cb54b91c837ca6f6b7a93f944f13097f0c
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: cc39ade2ccc1192461bcfa19c98b7f9925b667a0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781421"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Creazione manuale di pacchetti NuGet di Xamarin
 
@@ -58,7 +59,6 @@ Per chiarire:
 - **Xamarin.iOS10** corrisponde xamarin 1.0 e successive
 - **Xamarin.iOS1.0** corrisponde anche xamarin 1.0 e successive
 
-
 ## <a name="pcl-nugets-with-platform-dependencies"></a>Libreria di classi Portabile NuGets con le dipendenze della piattaforma
 
 PCL profili sono limitati nel quale possono accedere API di .NET framework e non possono accedere sicuramente codice specifico della piattaforma. Questi collegamenti 3rd party illustrano approcci diversi per la creazione di pacchetti NuGet che utilizzano API native e libreria di classi Portabile per garantire la compatibilità per altre piattaforme e Xamarin:
@@ -76,7 +76,6 @@ Alcuni esempi di open source che è possibile fare riferimento a:
 - [**ModernHttpClient** ](https://www.nuget.org/packages/modernhttpclient/) : scrivere un'applicazione con System.NET. http, ma eliminare questa raccolta in e spostarlo notevolmente più veloce (visualizzazione [origine](https://github.com/paulcbetts/ModernHttpClient)).
 - [**Gocce** ](https://www.nuget.org/packages/Splat/) : una libreria multipiattaforma il problema che deve essere (visualizzazione [origine](https://github.com/paulcbetts/Splat)).
 - [**NGraphics** ](https://www.nuget.org/packages/NGraphics/) -una libreria multipiattaforma per il rendering di grafica vettoriale su .NET (visualizzazione [origine](https://github.com/praeclarum/NGraphics/blob/master/NGraphics.nuspec)).
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

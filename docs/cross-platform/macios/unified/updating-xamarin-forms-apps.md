@@ -1,16 +1,17 @@
 ---
 title: L'aggiornamento di App xamarin. Forms esistente
-description: Seguire questi passaggi per aggiornare un'app xamarin. Forms esistente per usare l'API unificata e l'aggiornamento alla versione 1.3.1
+description: Questo documento vengono descritti i passaggi che devono essere seguiti per aggiornare un'app xamarin. Forms dall'API classica all'API unificata.
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 7b69ecb5d62a30cf6259aae1884971ad13babede
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: d5c16b034b07d3e9875412f041c16b293557438a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781839"
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>L'aggiornamento di App xamarin. Forms esistente
 

@@ -1,18 +1,20 @@
 ---
-title: Barra di ricerca
+title: Barre di ricerca in xamarin. IOS
+description: Questo documento descrive come utilizzare le barre di ricerca in xamarin. IOS. Illustra come creare barre di ricerca a livello di codice e in uno storyboard.
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: 4ea39f6f935adba2c035884c625c57c0039b1165
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cd78c58ecb119c437296a0befe1d319d8837edae
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789925"
 ---
-# <a name="search-bar"></a>Barra di ricerca
+# <a name="search-bars-in-xamarinios"></a>Barre di ricerca in xamarin. IOS
 
 Il UISearchBar viene utilizzato per cercare un elenco di valori. 
 

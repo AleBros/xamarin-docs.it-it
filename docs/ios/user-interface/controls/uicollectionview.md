@@ -1,5 +1,5 @@
 ---
-title: Visualizzazioni di raccolte
+title: Viste di raccolta in xamarin. IOS
 description: Le viste di raccolta consentono di contenuto che deve essere visualizzato utilizzando i layout arbitrario. Consentono di creare con facilità il layout di griglia predefinita, supporta i layout personalizzati.
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 75ad331a265c14892f101b1aa7956d2cde3beec8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b9ba2f885364084d6bee67c460b4831c00c7ae55
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790627"
 ---
-# <a name="collection-views"></a>Visualizzazioni di raccolte
+# <a name="collection-views-in-xamarinios"></a>Viste di raccolta in xamarin. IOS
 
 _Le viste di raccolta consentono di contenuto che deve essere visualizzato utilizzando i layout arbitrario. Consentono di creare con facilità il layout di griglia predefinita, supporta i layout personalizzati._
 
@@ -1298,6 +1299,6 @@ Che trattato l'implementazione di un'azione di trascinamento-a-Riordina semplice
 
 - [Esempi di iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
 - [Esempio di visualizzazione di raccolta](https://developer.xamarin.com/samples/monotouch/ios9/CollectionView/)
-- [SimpleCollectionView (sample)](https://developer.xamarin.com/samples/SimpleCollectionView/)
+- [SimpleCollectionView (esempio)](https://developer.xamarin.com/samples/SimpleCollectionView/)
 - [Eventi, protocolli e delegati](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [Utilizzo di tabelle e le celle](~/ios/user-interface/controls/tables/index.md)

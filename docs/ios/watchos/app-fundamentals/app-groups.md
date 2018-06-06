@@ -1,18 +1,20 @@
 ---
-title: Utilizzo dei gruppi di App
+title: Utilizzo di watchOS gruppi App Xamarin
+description: Questo documento descrive i gruppi di app e il relativo utilizzo in un'applicazione watchOS. Illustra come configurare un gruppo di app, provisioning requisiti, Entitlements.plist considerazioni e distribuzione.
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 341f6b4f5049a39817f2923901472f35b254bead
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5736b25af3993e2da794422a1a6f040461532497
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790679"
 ---
-# <a name="working-with-app-groups"></a>Utilizzo dei gruppi di App
+# <a name="working-with-watchos-app-groups-in-xamarin"></a>Utilizzo di watchOS gruppi App Xamarin
 
 
 Un Gruppo di app consente a diverse applicazioni o a un'applicazione e alle relative estensioni di accedere a un percorso di archiviazione file condiviso. È possibile usare i Gruppi di app per dati quali:

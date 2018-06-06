@@ -1,19 +1,20 @@
 ---
-title: Introduzione a CoreML
-description: Machine learning per App per dispositivi mobili su iOS 11
+title: Introduzione a CoreML in xamarin. IOS
+description: Questo documento descrive CoreML, che consente di apprendimento automatico in iOS. Questo documento viene descritto come iniziare a usare CoreML e come utilizzarla con il framework visione.
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/30/2016
-ms.openlocfilehash: 412a534829349dbbc3f3b76b166882fa6e0e1cd1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b893fe5e56cc2d43a71870ffbbd20f0b8c6cfd18
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787496"
 ---
-# <a name="introduction-to-coreml"></a>Introduzione a CoreML
+# <a name="introduction-to-coreml-in-xamarinios"></a>Introduzione a CoreML in xamarin. IOS
 
 _Machine learning per App per dispositivi mobili su iOS 11_
 

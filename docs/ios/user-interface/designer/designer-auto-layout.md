@@ -1,21 +1,20 @@
 ---
 title: Layout automatico con la finestra di progettazione Xamarin iOS
-description: Questa guida vengono presentate iOS Layout automatico e il nuovo flusso di lavoro vincoli disponibile nella finestra di progettazione di Xamarin per iOS.
+description: Questa guida vengono presentate iOS Layout automatico e viene descritto come utilizzare la finestra di progettazione di Xamarin per iOS per creare e modificare i layout usando i vincoli. Illustra anche la modifica dei vincoli nel codice, animazione di modifica dei vincoli e altro ancora.
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 2023483f817c365d2cfad6945b281d630317693b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 876bf3de19d2bcce7d951facc92d5b05a928cd38
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790201"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automatico con la finestra di progettazione Xamarin iOS
-
-_Questa guida vengono presentate iOS Layout automatico e il nuovo flusso di lavoro vincoli disponibile nella finestra di progettazione di Xamarin per iOS._
 
 Layout automatico (detto anche "adattivo layout") è un approccio di progettazione reattiva. A differenza di sistema di layout di transizione, in cui ogni elemento si trova a livello di codice per un punto dello schermo, Layout automatico sta *relazioni* -le posizioni degli elementi relazione ad altri elementi nell'area di progettazione. Il fulcro di Layout automatico è l'idea di vincoli o le regole che definiscono la posizione di un elemento o un set di elementi nel contesto di altri elementi sullo schermo. Poiché gli elementi non sono collegati a una particolare posizione sullo schermo, i vincoli consentono di creare un layout adattivo può sembrare adeguato su orientamenti di dispositivo e dimensioni dello schermo diverse.
 

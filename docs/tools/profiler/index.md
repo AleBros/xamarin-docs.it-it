@@ -5,12 +5,13 @@ ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: topgenorth
 ms.author: toopge
-ms.date: 10/27/2017
-ms.openlocfilehash: 81c6a5682fc91b49a0f7495f06e7f7b6d3f76330
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.date: 06/03/2018
+ms.openlocfilehash: 42a8a2e3751d111f6ba8ccbea32e0446460f9a29
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793875"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -289,13 +290,15 @@ Il grafico, come illustrato nella schermata seguente, viene visualizzato il nume
 
 ### <a name="cycles"></a>Cicli
 
-Tramite l'utilizzo di codice c# e F # gestiti, può essere molto comune e purtroppo molto semplice creare riferimenti a oggetti che non verranno mai eliminati. Questo intrument consente di individuare tali oggetti e visualizzare i cicli di cui viene fatto riferimento nell'applicazione.
+Tramite l'utilizzo di codice c# e F # gestiti, può essere molto comune e purtroppo molto semplice creare riferimenti a oggetti che non verranno mai eliminati. Questo strumento consente di individuare tali oggetti e visualizzare i cicli di cui viene fatto riferimento nell'applicazione.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
+[![Strumento di cicli](images/cycles.m751-sml.png)](images/cycles.m751.png#lightbox) 
+
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Strumento di cicli](images/cycles-vs.png)](images/time1-vs.png#lightbox) 
+[![Strumento di cicli](images/cycles-vs-sml.png)](images/cycles-vs.png#lightbox) 
 
 -----
 

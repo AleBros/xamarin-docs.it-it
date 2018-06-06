@@ -1,19 +1,20 @@
 ---
-title: API Mac
-description: Questo documento viene descritto come leggere i selettori Objective-C e come individuare i relativi metodi di c#.
+title: macOS API per gli sviluppatori Xamarin.Mac
+description: Questo documento viene descritto come leggere i selettori Objective-C e come individuare i metodi c# corrispondenti in un'app Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 9F7451FA-E07E-4C7B-B5CF-27AFC157ECDA
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/02/2017
-ms.openlocfilehash: 0344fecb9a8d64a680bb11689f56cf074d952f4e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cceaa2f6e89b712be5929f7e978663d8c47f18c5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791550"
 ---
-# <a name="mac-apis"></a>API Mac
+# <a name="macos-apis-for-xamarinmac-developers"></a>macOS API per gli sviluppatori Xamarin.Mac
 
 ## <a name="overview"></a>Panoramica
 

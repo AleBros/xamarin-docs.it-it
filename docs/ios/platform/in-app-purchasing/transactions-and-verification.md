@@ -1,18 +1,20 @@
 ---
-title: Le transazioni e la verifica
+title: Le transazioni e la verifica in xamarin. IOS
+description: Questo documento descrive come consentire per il ripristino degli ultimi acquisti in un'app xamarin. IOS. Illustra anche modi per proteggere gli acquisti e prodotti recapitati al server.
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c8d86d0ce3119b3e104a65a170ab141484af44a7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2cb38df4bbabc3534f5c90c7695569d68349ccc3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786925"
 ---
-# <a name="transactions-and-verification"></a>Le transazioni e la verifica
+# <a name="transactions-and-verification-in-xamarinios"></a>Le transazioni e la verifica in xamarin. IOS
 
 ## <a name="restoring-past-transactions"></a>Il ripristino dopo le transazioni
 
@@ -191,17 +193,17 @@ Poiché il server remoto richiede una modalità di convalida che una richiesta d
    
  10. L'applicazione consente il prodotto e quindi chiama del StoreKit `FinishTransaction`. L'applicazione può quindi facoltativamente, visualizzare il contenuto acquistato (ad esempio, Mostra la prima pagina di un libro acquistata o problema rivista).
 
-Un'implementazione alternativa per i file di contenuto di un prodotto molto grande può comportare semplicemente l'archiviazione la ricezione delle transazioni nel passaggio &#9; in modo che sia possibile completare rapidamente la transazione e un'interfaccia utente per l'utente di scaricare il contenuto di prodotti effettivi in un secondo momento. La richiesta di download successive può inviare nuovamente la ricezione stored per accedere al file di contenuto di prodotto obbligatorio.
+Un'implementazione alternativa per i file di contenuto di un prodotto molto grande può comportare semplicemente l'archiviazione la ricezione delle transazioni nel passaggio 9 # in modo che sia possibile completare rapidamente la transazione e un'interfaccia utente per l'utente di scaricare il contenuto di prodotti effettivi in un secondo momento. La richiesta di download successive può inviare nuovamente la ricezione stored per accedere al file di contenuto di prodotto obbligatorio.
 
 ### <a name="writing-server-side-receipt-verification-code"></a>Scrittura di codice di verifica di ricezione sul lato Server
 
-Convalida una ricevuta nel codice sul lato server può essere eseguita con una semplice HTTP POST richiesta/risposta che include i passaggi da &#5;-#8 nel diagramma di flusso di lavoro.   
+Convalida una ricevuta nel codice sul lato server può essere eseguita con una semplice HTTP POST richiesta/risposta che include i passaggi da 5 #-#8 nel diagramma di flusso di lavoro.   
    
    
    
- Estrarre il `SKPaymentTansaction.TransactionReceipt` proprietà nell'app. Si tratta dei dati che deve essere inviato a iTunes per la verifica (passaggio &#5;).
+ Estrarre il `SKPaymentTansaction.TransactionReceipt` proprietà nell'app. Si tratta dei dati che deve essere inviato a iTunes per la verifica (passaggio 5 #).
 
-Codifica Base64 i dati di ricezione delle transazioni (sia nel passaggio &#5; o #6).
+Codifica Base64 i dati di ricezione delle transazioni (sia nel passaggio 5 # o #6).
 
 Creare un semplice payload JSON simile al seguente:
 

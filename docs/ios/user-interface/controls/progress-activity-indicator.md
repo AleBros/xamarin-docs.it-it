@@ -1,18 +1,20 @@
 ---
-title: Lo stato di avanzamento e indicatori di attività
+title: Lo stato di avanzamento e indicatori di attività in xamarin. IOS
+description: Questo documento viene illustrato come utilizzare gli indicatori di stato e attività in xamarin. IOS. Viene descritto come utilizzarli a livello di programmazione sia con uno storyboard.
 ms.prod: xamarin
 ms.assetid: 7AA887E4-51F7-4867-82C5-A8D2EA48AE07
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: 58a492bed81a1d96a482c1396718da1c5e4af589
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 27ee788ec40bfd158dbc0d9926245b166e2954a9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790055"
 ---
-# <a name="progress-and-activity-indicators"></a>Lo stato di avanzamento e indicatori di attività
+# <a name="progress-and-activity-indicators-in-xamarinios"></a>Lo stato di avanzamento e indicatori di attività in xamarin. IOS
 
 È probabile che l'app dovrà eseguire prolungata che esegue attività quali il caricamento o l'elaborazione dati e che questo ritardo può provocare un ritardo durante l'aggiornamento dell'interfaccia utente. Durante questo periodo è consigliabile usare sempre un indicatore di stato per rassicurare l'utente che il sistema è occupato, eseguire il lavoro. In questo modo il controllo utente che l'app funziona su richiesta, che non è in attesa per i relativi input e forniscono un mezzo che riporta in dettaglio esattamente il tempo di attesa hanno.
 

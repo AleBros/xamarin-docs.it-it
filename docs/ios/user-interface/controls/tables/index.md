@@ -1,20 +1,20 @@
 ---
-title: Utilizzo di tabelle e le celle
-description: Visualizzazione di dati tramite UITableView con xamarin
+title: Utilizzo delle tabelle e le celle in xamarin. IOS
+description: Questo documento include collegamenti ad varie guide che descrivono come visualizzare i dati con il controllo UITableView in un'app xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/06/2016
-ms.openlocfilehash: a1cda3632a75c7e462e763a34fdb5b586237b670
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ebdad2cc8e3083bee5acc127660b5641f42c731f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790016"
 ---
-# <a name="working-with-tables-and-cells"></a>Utilizzo di tabelle e le celle
-
+# <a name="working-with-tables-and-cells-in-xamarinios"></a>Utilizzo delle tabelle e le celle in xamarin. IOS
 
 In questa sezione vengono descritte le classi usate per creare e visualizzare le tabelle, quindi vengono forniti esempi su come utilizzarle in xamarin. IOS. Che verrà applicata mediante l'aspetto predefinito per le tabelle, personalizzazione del layout, l'implementazione di modifica e l'utilizzo di Xamarin iOS finestra di progettazione per progettare visivamente una tabella. In alcuni casi la visualizzazione è ovviamente un elenco di righe (ad esempio, l'app musica), mentre altre volte che è difficile riconoscono il controllo tabella (ad esempio la modifica, l'app dei contatti o una conversazione in app di messaggi).
 
@@ -26,7 +26,6 @@ Questi articoli verranno un quadro completo utilizzo delle tabelle, tra cui:
 -   **La visualizzazione dei dati nelle tabelle** : illustra come creare e popolare una tabella, utilizzare i diversi stili di tabella e di cella e per evitare problemi di memoria da riciclare gli oggetti di cella. 
 -   **Utilizzo avanzato** : compilazione di celle personalizzate e utilizzando le funzionalità di modifica della classe UITableView. 
 -   **Creazione di una tabella in modo visivo** : utilizzo di progettazione Xamarin per iOS per creare un'interfaccia basati su tabelle con uno Storyboard. 
-
 
 ## <a name="contents"></a>Sommario
 
@@ -43,7 +42,6 @@ Questi articoli verranno un quadro completo utilizzo delle tabelle, tra cui:
  [Creazione di tabelle in uno Storyboard](~/ios/user-interface/controls/tables/creating-tables-in-a-storyboard.md)
  
  [Ridimensionamento automatico dell'altezza delle righe](~/ios/user-interface/controls/tables/autosizing-row-height.md)
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

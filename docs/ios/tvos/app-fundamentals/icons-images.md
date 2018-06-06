@@ -1,21 +1,20 @@
 ---
-title: Utilizzo di immagini e icone
-description: Questo articolo descrive la progettazione e l'utilizzo di icone e immagini all'interno di un'app Xamarin.tvOS.
+title: Utilizzo di tvOS icone e le immagini di Xamarin
+description: Questo documento viene descritto come utilizzare icone e le immagini in un'app tvOS compilata con Xamarin. Illustra le immagini di avvio, immagini a più livelli, l'icona dell'app e altro ancora.
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c888ecf3d7e0f21734f2b89176eed56bf778dbf9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 59cbc53acf3ab7da12826b9d3cffb821631a0500
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788797"
 ---
-# <a name="working-with-icons-and-images"></a>Utilizzo di immagini e icone
-
-_Questo articolo descrive la progettazione e l'utilizzo di icone e immagini all'interno di un'app Xamarin.tvOS._
+# <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Utilizzo di tvOS icone e le immagini di Xamarin
 
 Creazione di straordinaria icone e immagini sono una parte essenziale di sviluppo di un'esperienza coinvolgente per le app di Apple TV. Questa guida illustra i passaggi necessari per creare e includere le risorse grafiche necessarie per le app Xamarin.tvOS:
 

@@ -1,18 +1,19 @@
 ---
-title: HttpClient Stack e selettore di implementazione di SSL/TLS per iOS/macOS
-description: HttpClient Stack e selettore di implementazione di SSL/TLS determina l'implementazione HttpClient e SSL/TLS che verrà utilizzato dall'app iOS, tvOS o macOS Xamarin.
+title: HttpClient e selettore di implementazione di SSL/TLS per iOS/macOS
+description: Lo stack di HttpClient e SSL/TLS selettore implementazione determina l'implementazione di SSL/TLS e HttpClient che verrà usato dall'app iOS, tvOS oppure macOS Xamarin.
 ms.prod: xamarin
 ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
-ms.openlocfilehash: dcbdb4d20bca9764731b08e551a4d3b8a26a2ab4
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 9de2c97933bd33111a751be51e06dffe09794f15
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782268"
 ---
-# <a name="httpclient-stack-and-ssltls-implementation-selector-for-iosmacos"></a>HttpClient Stack e selettore di implementazione di SSL/TLS per iOS/macOS
+# <a name="httpclient-and-ssltls-implementation-selector-for-iosmacos"></a>HttpClient e selettore di implementazione di SSL/TLS per iOS/macOS
 
 Il **HttpClient implementazione selettore** per xamarin. IOS, Xamarin.tvOS e Xamarin.Mac determina quale `HttpClient` implementazione da usare. È possibile passare a un'implementazione che utilizza i trasporti nativi di iOS, tvOS oppure macOS (`NSUrlSession` o `CFNetwork`, a seconda del sistema operativo). Il vantaggio è file binari TLS 1.2-supporto di dimensioni ridotte e più velocemente Scarica; lo svantaggio è che richiede il ciclo di eventi sia in esecuzione di operazioni asincrone da eseguire.
 

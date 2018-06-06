@@ -1,22 +1,20 @@
 ---
-title: Siri remoto e i controller Bluetooth
-description: Questo articolo descrive il supporto di nuovi controller di gioco Siri remoto e Bluetooth nelle App Xamarin.tvOS.
+title: Siri remoto e i controller Bluetooth per tvOS in Xamarin
+description: In questo articolo viene descritto come utilizzare il remoto Siri e Bluetooth gioco nelle App tvOS scritte con Xamarin.
 ms.prod: xamarin
 ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5b5893278acad999efd94c89f1ca923100f5cf7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3fc2abed202f8b2e6993890ca4e6b3c6875522e5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789190"
 ---
-# <a name="siri-remote-and-bluetooth-controllers"></a>Siri remoto e i controller Bluetooth
-
-_Questo articolo descrive il supporto di nuovi controller di gioco Siri remoto e Bluetooth nelle App Xamarin.tvOS._
-
+# <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri remoto e i controller Bluetooth per tvOS in Xamarin
 
 Gli utenti dell'app Xamarin.tvOS verranno non essere interazione con relativa interfaccia direttamente come con iOS in cui vengono toccati immagini sullo schermo del dispositivo, ma indirettamente da tra la sala utilizzando il [Siri remoto](#The-Siri-Remote).
 
@@ -75,9 +73,6 @@ Inoltre, pulsanti di menu possono essere rilevati tramite un riconoscimento di m
 
 > [!IMPORTANT]
 > È necessario **sempre** assegnare una funzione al pulsante Play/Pausa in remoto. Con un pulsante non funzionale può rendere l'app interrotto all'utente finale. Se non si dispone di una funzione valida per questo pulsante, assegnare la stessa funzione del pulsante primario (tocco area fare clic su).
-
-
-
 
 <a name="Gestures-and-Storyboards" />
 

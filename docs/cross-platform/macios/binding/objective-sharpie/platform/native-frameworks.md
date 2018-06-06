@@ -1,15 +1,17 @@
 ---
 title: Associazione Framework nativo
+description: Questo documento viene descritto come utilizzare obiettivo Sharpie - opzione relativa al framework per creare un'associazione a una libreria distribuito come un framework.
 ms.prod: xamarin
 ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: 219295ad9299b36a763289c4aef8e52cd859ceea
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 02ee21ce58ecf945893f7e4f94763731abe92018
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781445"
 ---
 # <a name="binding-native-frameworks"></a>Associazione Framework nativo
 

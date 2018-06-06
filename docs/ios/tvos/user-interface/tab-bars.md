@@ -1,21 +1,20 @@
 ---
-title: Utilizzo di Controller barra delle schede
-description: Questo articolo descrive la progettazione e l'utilizzo di Controller barra scheda all'interno di un'app Xamarin.tvOS.
+title: Utilizzo di tvOS scheda barra controller Xamarin
+description: Questo documento descrive come utilizzare i controller barra scheda in un app tvOS compilata con Xamarin. Fornisce un livello elevato sulla visualizzazione di barre di scheda e vengono illustrati gli elementi della barra della scheda, integrazione con storyboard e gli elementi della barra della scheda.
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 1536e37830f3b2a1e2a83c7bf5039909062d092b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea782fc8d6a2ccef2cdd687ec467be6d49793fc0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789320"
 ---
-# <a name="working-with-tab-bar-controller"></a>Utilizzo di Controller barra delle schede
-
-_Questo articolo descrive la progettazione e l'utilizzo di Controller barra scheda all'interno di un'app Xamarin.tvOS._
+# <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Utilizzo di tvOS scheda barra controller Xamarin
 
 Per molti tipi di App tvOS, navigazione primario viene presentato come una barra delle schede in esecuzione nella parte superiore della schermata. L'utente passa a sinistra e destra tra l'elenco di categorie possibili e l'area del contenuto di sotto le modifiche in modo da riflettere la selezione dell'utente.
 

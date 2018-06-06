@@ -1,20 +1,19 @@
 ---
 title: Piattaforma di Apple (iOS e Mac)
-description: In questa sezione sono illustrate le strategie per condividere il codice tra i progetti di xamarin e Xamarin.Mac.
+description: "Questo documento descrive vari argomenti correlati allo sviluppo di xamarin. IOS e Xamarin.Mac: codice di condivisione, l'API unificata, Objective-C librerie, i riferimenti nativi, i tipi nativi e informazioni di associazione."
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 3c01ff4af699dd0374729b638470d1ef34aa7022
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b40758fa562e57415cd3c0818763ef0a7ce5dcca
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781533"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Piattaforma di Apple (iOS e Mac)
-
-_In questa sezione sono illustrate le strategie per condividere il codice tra i progetti di xamarin e Xamarin.Mac._
 
 ## <a name="code-sharing"></a>La condivisione del codice
 
@@ -48,8 +47,6 @@ Xamarin consente di rendere le app librerie native con associazioni. Questa sezi
 
 ## <a name="native-referencesnative-referencesmd"></a>[Riferimenti nativi](native-references.md)
 
-
-
 ##  <a name="macios-native-typesnativetypesmd"></a>[Tipi nativi Mac/iOS](nativetypes.md)
 
 Per supportare 32 e 64 bit di codice in modo trasparente da c# e F #, Microsoft sta introducendo nuovi tipi di dati.   Informazioni su di essi qui.
@@ -62,7 +59,6 @@ Cosa è necessario conoscere per supportare applicazioni a 32 e 64 bit.
 
 In questo articolo viene illustrato l'utilizzo di nuovi tipi Unified API Native iOS (`nint`, `nuint`, `nfloat`) in un'applicazione multipiattaforma in cui il codice è condiviso con i dispositivi non iOS, ad esempio Android o sistemi operativi Windows Phone.
 Fornisce informazioni su quando usare i tipi nativi e offre diverse soluzioni possibili per i casi in cui il nuovo tipo deve essere utilizzato con codice multipiattaforma.
-
 
 ## <a name="httpclient-stack-and-ssltls-implementation-selectorhttp-stackmd"></a>[Stack HttpClient e selettore dell'implementazione di SSL/TLS](http-stack.md)
 

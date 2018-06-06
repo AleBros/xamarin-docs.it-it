@@ -1,22 +1,20 @@
 ---
-title: Tocco
-description: "Touch screen su molti dei dispositivi moderni consente agli utenti di interagire in modo rapido ed efficiente con i dispositivi in modo naturale e intuitivo. Questa interazione non è limitata solo per il rilevamento di tocco semplice: è possibile utilizzare anche i movimenti. Ad esempio, il movimento zoom con avvicinamento delle dita è un esempio molto comune: da una parte della schermata con due dita che l'utente è possibile ingrandire o ridurre di compressione. Questa guida viene esaminato tocco e i movimenti in iOS."
+title: Gestione tocco nelle App xamarin
+description: Questo documento include collegamenti ad guide che descrivono come utilizzare i tocco, Multi-touch, movimenti e 3D Touch in un'app xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/23/2017
-ms.openlocfilehash: f34b502e3c0d67f33d41bc489f7ec1d93356af99
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eb8dce8b13345c13a6f95ae7784bd135e7d1f1f5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784162"
 ---
-# <a name="touch"></a>Tocco
-
-_Touch screen su molti dei dispositivi moderni consente agli utenti di interagire in modo rapido ed efficiente con i dispositivi in modo naturale e intuitivo. Questa interazione non è limitata solo per il rilevamento di tocco semplice: è possibile utilizzare anche i movimenti. Ad esempio, il movimento zoom con avvicinamento delle dita è un esempio molto comune: da una parte della schermata con due dita che l'utente è possibile ingrandire o ridurre di compressione. Questa guida viene esaminato tocco e i movimenti in iOS._
-
+# <a name="handling-touch-in-xamarinios-apps"></a>Gestione tocco nelle App xamarin
 
 Come altre piattaforme per dispositivi mobili, iOS dispone di un numero di modi per gestire il tocco. Può supportare Multi-touch-numero di punti di contatto nella schermata e i movimenti complessi. Questa guida vengono introdotti alcuni concetti, nonché la specificità dell'implementazione di tocco e i movimenti in iOS.
 
@@ -38,8 +36,6 @@ Questa guida viene utilizzato come introduzione al tocco in iOS. Per ulteriori i
 
 * [3D Touch](~/ios/platform/3d-touch.md)
 * [Implementazione del feedback aptico](~/ios/user-interface/ios-ui/haptic-feedback.md)
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

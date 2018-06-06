@@ -1,5 +1,5 @@
 ---
-title: Menu
+title: Menu Xamarin.Mac
 description: In questo articolo viene descritto l'utilizzo dei menu in un'applicazione Xamarin.Mac. Descrive la creazione e la gestione di menu e voci di menu in Xcode e interfaccia generatore e utilizzarli a livello di codice.
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 50c9cf333ff7965bbdfbb964a2301e677eb6aa59
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cb89d1df60bafe14dcc989666f0eeb5d757e4017
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792921"
 ---
-# <a name="menus"></a>Menu
+# <a name="menus-in-xamarinmac"></a>Menu Xamarin.Mac
 
 _In questo articolo viene descritto l'utilizzo dei menu in un'applicazione Xamarin.Mac. Descrive la creazione e la gestione di menu e voci di menu in Xcode e interfaccia generatore e utilizzarli a livello di codice._
 

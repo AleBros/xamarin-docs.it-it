@@ -1,19 +1,20 @@
 ---
-title: Ricerca con Markup Web
-description: Aggiunta di risultati della ricerca basata sul web che può essere collegata all'app.
+title: Ricerca con Markup Web in xamarin. IOS
+description: Questo documento descrive come creare i risultati della ricerca basata sul web che un collegano a un'app xamarin. IOS. Descrive come abilitare il contenuto web l'indicizzazione, rendendo individuabile, mediante i banner app smart, collegamenti universali e molto altro sito Web dell'app.
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: bc3446419ef0e469f7184d60fe8876cd2e5da520
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 438a65de3eb78f849493e3478bce5522a325d0cd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787994"
 ---
-# <a name="search-with-web-markup"></a>Ricerca con Markup Web
+# <a name="search-with-web-markup-in-xamarinios"></a>Ricerca con Markup Web in xamarin. IOS
 
 Per le applicazioni che forniscono l'accesso ai contenuti tramite un sito web (non solo all'interno dell'app), il contenuto web può essere contrassegnato con collegamenti speciali che verranno indicizzati da Apple e forniscono il collegamento completo per l'app nel dispositivo iOS 9 dell'utente.
 

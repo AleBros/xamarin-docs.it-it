@@ -1,21 +1,20 @@
 ---
 title: Notifiche push in iOS
-description: In questa sezione verrà illustrate le notifiche push in iOS. Introduce il servizio Gateway di notifiche di Push di Apple e il ruolo pubblicazione notifiche per le applicazioni iOS. Verrà illustrato come creare i certificati di sicurezza necessario per abilitare le notifiche push e discutere. Infine in questa sezione verrà illustrate alcune delle attività di manutenzione che i server applicazioni devono eseguire per tenere traccia dei dispositivi mobili client.
+description: Questo documento viene descritto come utilizzare le notifiche push in iOS 9 e versioni precedenti. Vengono illustrati i certificati, la registrazione con Apple Push notifiche Gateway Service (APNS) e altro ancora.
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 3a86ce5e61576faec41b5fcddf899d731d2cc57a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7bb2a250b9d3cc0c8df02f432330f9fe1dc58f94
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788667"
 ---
 # <a name="push-notifications-in-ios"></a>Notifiche push in iOS
-
-_In questa sezione verrà illustrate le notifiche push in iOS. Introduce il servizio Gateway di notifiche di Push di Apple e il ruolo pubblicazione notifiche per le applicazioni iOS. Verrà illustrato come creare i certificati di sicurezza necessario per abilitare le notifiche push e discutere. Infine in questa sezione verrà illustrate alcune delle attività di manutenzione che i server applicazioni devono eseguire per tenere traccia dei dispositivi mobili client._
 
 > [!IMPORTANT]
 > Le informazioni in questa sezione si riferiscono a iOS 9 e precedenti, è stato lasciato qui per supportare le versioni precedenti di iOS. Per iOS 10 e versioni successive, vedere il [Guida utente notifica Framework](~/ios/platform/user-notifications/index.md) per il supporto sia locali che Remote notifica in un dispositivo iOS.

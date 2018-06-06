@@ -1,17 +1,19 @@
 ---
-title: Threading
+title: Modello di threading nel xamarin. IOS
+description: Questo documento viene descritto come usare le APIs System.Threading in un'applicazione di xamarin. IOS. Illustra la Task Parallel Library, creazione di applicazioni reattive e operazioni di garbage collection.
 ms.prod: xamarin
 ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 63a213a62021923ac6dae8b080f3f8931621251d
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 05d015d8d255ccc8c6230b1a89e098e187b22b37
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784917"
 ---
-# <a name="threading"></a>Threading
+# <a name="threading-in-xamarinios"></a>Modello di threading nel xamarin. IOS
 
 Il runtime di xamarin offre agli sviluppatori l'accesso a .NET API, entrambi in modo esplicito quando si utilizza thread di threading (`System.Threading.Thread, System.Threading.ThreadPool`) e in modo implicito quando si utilizzano i modelli di delegato asincrono o i metodi BeginXXX, nonché l'intervallo completo di API che supportano il Task Parallel Library.
 

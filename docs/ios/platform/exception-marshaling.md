@@ -1,19 +1,20 @@
 ---
-title: Marshalling di eccezione
-description: Xamarin. IOS contiene nuovi eventi per consentire di rispondere alle eccezioni, in particolare in codice nativo.
+title: Marshalling in xamarin. IOS (eccezione)
+description: Questo documento viene descritto come gestire le eccezioni native e gestite in un'app xamarin. IOS. Illustra i problemi che possono verificarsi e una soluzione per questi problemi.
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/05/2017
-ms.openlocfilehash: bb9c16985d958772193093434350435ce477956a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dcf1074aacb6d139d107dac01fa86f459831d5f9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786743"
 ---
-# <a name="exception-marshaling"></a>Marshalling di eccezione
+# <a name="exception-marshaling-in-xamarinios"></a>Marshalling in xamarin. IOS (eccezione)
 
 _Xamarin. IOS contiene nuovi eventi per consentire di rispondere alle eccezioni, in particolare in codice nativo._
 
@@ -108,7 +109,7 @@ In questo caso, i frame gestiti soli sono fotogrammi 8-10, ma viene generata un'
 
 Esempio di codice:
 
-``` objective-c
+```objc
 -(id) setObject: (id) object forKey: (id) key
 {
     @try {
@@ -124,7 +125,7 @@ E `@finally` clausola non verrà eseguita perché il runtime Mono che rimuove qu
 
 Una variante di questo consiste nel generare un'eccezione gestita in codice gestito e quindi la rimozione tramite frame nativi per ottenere al primo gestiti `catch` clausola:
 
-``` csharp
+```csharp
 class AppDelegate : UIApplicationDelegate {
     public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
     {

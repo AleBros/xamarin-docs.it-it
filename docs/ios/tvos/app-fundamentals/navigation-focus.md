@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di navigazione e lo stato attivo
+title: Utilizzo di tvOS navigazione e lo stato attivo in Xamarin
 description: Questo articolo descrive il concetto di messa a fuoco e come viene utilizzato per presentare e gestire la navigazione all'interno di un'app Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: DD72E95F-AE9B-47D2-B132-5FA5FBD8026E
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: cd60a11d860f51fd0d0e574516ca8dec1834865c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2af3306b605ee802b72b159d5f2759d71d292a64
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788732"
 ---
-# <a name="working-with-navigation-and-focus"></a>Utilizzo di navigazione e lo stato attivo
+# <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Utilizzo di tvOS navigazione e lo stato attivo in Xamarin
 
 _Questo articolo descrive il concetto di messa a fuoco e come viene utilizzato per presentare e gestire la navigazione all'interno di un'app Xamarin.tvOS._
 

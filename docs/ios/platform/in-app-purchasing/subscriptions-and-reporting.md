@@ -1,26 +1,26 @@
 ---
-title: Le sottoscrizioni e report
+title: Le sottoscrizioni e gestione rapporti in xamarin. IOS
+description: Questo documento descrive non rinnovare le sottoscrizioni, le sottoscrizioni gratuite, auto rinnovabile sottoscrizioni e tramite iTunes Connect per segnalare questi elementi.
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7ba47e8f0ec114845c14269e81bb7f078a5d4936
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e0873107a60b48e5ebfd8e159f3bf3b85d02867
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787030"
 ---
-# <a name="subscriptions-and-reporting"></a>Le sottoscrizioni e report
+# <a name="subscriptions-and-reporting-in-xamarinios"></a>Le sottoscrizioni e gestione rapporti in xamarin. IOS
 
 ## <a name="about-non-renewing-subscriptions"></a>Le sottoscrizioni Non di rinnovo
 
 Le sottoscrizioni di rinnovo non sono destinate i prodotti che rappresentano la vendita di un servizio con una restrizione di tempo, ad esempio (accedere della settimana a un'applicazione di navigazione) o tempo limitato a un archivio dati.   
    
-   
-   
- Differenze principali tra le sottoscrizioni non rinnovo e altri tipi di prodotto:
+Differenze principali tra le sottoscrizioni non rinnovo e altri tipi di prodotto:
 
 -  La definizione di prodotto in iTunes Connect non include il termine. Il codice dell'applicazione deve essere in grado di dedurre il periodo di validità dall'ID prodotto. 
 -  Può essere acquistati più volte (ad esempio un prodotto supportato). Le applicazioni necessarie per gestire la sottoscrizione termine/scadenza e il rinnovo e impedire all'utente di acquisto di sottoscrizioni sovrapposte. 

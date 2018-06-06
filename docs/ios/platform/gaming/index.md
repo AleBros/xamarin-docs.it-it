@@ -1,5 +1,5 @@
 ---
-title: modalità di gioco API iOS
+title: API di gioco in xamarin. IOS iOS
 description: In questo articolo vengono illustrati i nuovi miglioramenti di gioco forniti da iOS 9 che può essere utilizzato per migliorare le funzionalità audio e grafica di un gioco di xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 34d3d6980819510a3390e2c30069818d6dfd721f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 263c325816867e9eee32c92edf97f703b39bda7c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786860"
 ---
-# <a name="ios-gaming-apis"></a>modalità di gioco API iOS
+# <a name="ios-gaming-apis-in-xamarinios"></a>API di gioco in xamarin. IOS iOS
 
 _In questo articolo vengono illustrati i nuovi miglioramenti di gioco forniti da iOS 9 che può essere utilizzato per migliorare le funzionalità audio e grafica di un gioco di xamarin. IOS._
 

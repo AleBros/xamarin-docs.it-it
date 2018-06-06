@@ -1,19 +1,20 @@
 ---
-title: Introduzione a watchOS
-description: Introduzione a watchOS e come creare app di espressioni di controllo
+title: Guida introduttiva a watchOS in Xamarin
+description: Questo documento include collegamenti ad varie guide che descrivono come iniziare a usare watchOS sviluppo con Xamarin. Il contenuto collegato viene fornita un'introduzione a watchOS, viene illustrato come installare Supporto watchOS per Xamarin e viene illustrato come compilare un'applicazione iniziale.
 ms.prod: xamarin
 ms.assetid: BB938008-C013-4A1D-8229-FEEE94F83BBD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 7eabcb9a9ea300eccf34737e634168defe2948e7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 66482d72bebabbc6fd5c4f4a252ac81d1b73dd05
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790893"
 ---
-# <a name="getting-started-with-watchos"></a>Introduzione a watchOS
+# <a name="getting-started-with-watchos-in-xamarin"></a>Guida introduttiva a watchOS in Xamarin
 
 _Introduzione a watchOS e come creare app di espressioni di controllo_
 

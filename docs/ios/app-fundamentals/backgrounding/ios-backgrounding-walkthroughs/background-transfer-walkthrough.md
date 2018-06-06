@@ -1,21 +1,20 @@
 ---
-title: 'Procedura dettagliata: utilizzo di NSURLSession e il servizio di trasferimento in Background'
-description: In questa procedura dettagliata, è utilizzare il servizio trasferimento in Background e l'API NSURLSession per avviare il download di un'immagine di grandi dimensioni che continua a essere scaricato quando l'app è in background.
+title: Trasferimento in background e NSURLSession in xamarin. IOS
+description: Questo documento fornisce una procedura dettagliata viene illustrato come utilizzare il trasferimento in background e NSUrlSession per avviare il download di un'immagine di grandi dimensioni e continuare il download quando l'app viene inserito in background.
 ms.prod: xamarin
 ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 51e1ae0a4314d0b23ec9e3236656321bd3dcb4e4
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 08a0ba1337c0d28d1f0d60d04394ccaf4a9ccfc7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783739"
 ---
-# <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>Procedura dettagliata: utilizzo di NSURLSession e il servizio di trasferimento in Background
-
-_In questa procedura dettagliata, è utilizzare il servizio trasferimento in Background e l'API NSURLSession per avviare il download di un'immagine di grandi dimensioni che continua a essere scaricato quando l'app è in background._
+# <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Trasferimento in background e NSURLSession in xamarin. IOS
 
 Viene avviato un trasferimento in background tramite la configurazione di uno sfondo `NSURLSession` e caricare o scaricare operazioni di Accodamento. Se il completamento di attività durante l'applicazione è backgrounded, sospeso o terminato, iOS avviserà l'applicazione chiamando il gestore di completamento dell'applicazione *AppDelegate*. Nel diagramma seguente illustra questo processo in azione:
 

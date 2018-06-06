@@ -1,19 +1,20 @@
 ---
-title: Localizzazione di iOS
-description: Questo documento vengono illustrate le funzionalità di localizzazione di iOS SDK e come accedervi con Xamarin.
+title: Localizzazione in xamarin. IOS
+description: Questo documento descrive le funzionalità di localizzazione iOS e come utilizzare queste funzionalità in App xamarin. IOS. Viene descritto language, delle impostazioni locali, i file di stringhe, immagini di avvio e altro ancora.
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: 5ee04614a500618846ad3acf2a38f279351d6e9d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 06758fd8fac62a63c309b173738a8ee889716143
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785266"
 ---
-# <a name="ios-localization"></a>Localizzazione di iOS
+# <a name="localization-in-xamarinios"></a>Localizzazione in xamarin. IOS
 
 _Questo documento vengono illustrate le funzionalità di localizzazione di iOS SDK e come accedervi con Xamarin._
 

@@ -1,17 +1,18 @@
 ---
-title: Panoramica
-description: Dettagli di come funziona il processo di associazione
+title: Panoramica delle associazioni Objective-C
+description: Questo documento viene fornita una panoramica dei diversi modi per creare associazioni c# per il codice Objective-C, tra cui le associazioni della riga di comando, i progetti di associazione e Sharpie obiettivo. Illustra anche la modalità di funzionamento dell'associazione.
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ce2e45a1985c64b5c479bd41140d7270fae97aee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: f9f981a9024ad9b1f780efbadeeb7e1f1636a8ae
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781744"
 ---
-# <a name="overview"></a>Panoramica
+# <a name="overview-of-objective-c-bindings"></a>Panoramica delle associazioni Objective-C
 
 _Dettagli di come funziona il processo di associazione_
 

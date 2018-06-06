@@ -1,23 +1,24 @@
 ---
 title: Aggiornamento di App esistenti per l'API unificata
+description: Questo documento include collegamenti ad varie guide che descrivono come aggiornare le applicazioni di Xamarin per l'API unificata. Vengono illustrate le app xamarin. IOS, Xamarin.Mac app. App xamarin. Forms, i tipi nativi App multipiattaforma e progetti di associazione.
 ms.prod: xamarin
 ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 588c01ef9f9ee014592c9d8dc72f2b8be20dfee3
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 2d09be7b85980e5c5a8eb209dc1b4ff3136c34b3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781631"
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>Aggiornamento di App esistenti per l'API unificata
 
 > [!IMPORTANT]
-> **Deprecazione di profilo classico:** con l'aggiunta di nuove piattaforme in xamarin. IOS, si inizierà gradualmente deprecare funzionalità dal profilo classico (monotouch.dll). Ad esempio, l'opzione non NRC (nuovo-ref-count) è stato rimosso. NRC è sempre stato abilitato per unificata tutte le applicazioni (ad esempio NRC non è stato mai un'opzione) e sono presenti problemi noti. Nelle versioni future rimuoverà la possibilità di usare Boehm come il garbage collector. Questo è anche un'opzione non disponibile alle applicazioni unificate. La rimozione completa del supporto classico è pianificata per il passaggio successivo con la versione di xamarin. IOS 10.0.
-
-
-
+> L'API classica Xamarin preceduto Unified API, è stato deprecato. 
+> - L'ultima versione di xamarin. IOS per supportare l'API classico (monotouch.dll) è stata 9.10 xamarin. IOS.
+> - Xamarin.Mac supporta ancora l'API classica, ma non verrà più aggiornata. Poiché è deprecato, gli sviluppatori devono spostare le applicazioni e l'API unificata.
 
 ## <a name="how-to-update-your-apps"></a>Come aggiornare le app
 
@@ -31,7 +32,7 @@ Esistono tre passaggi per aggiornare le app:
 
 2. Per aggiornare i file di progetto e gli spazi dei nomi, utilizzare lo strumento di migrazione integrata in Visual Studio per Mac.
 
-3. Correggere gli errori del compilatore relative al nuovo rimanenti [64 tipi](~/cross-platform/macios/nativetypes.md) e [altre API](~/cross-platform/macios/unified/index.md#deprecated-typos) che sono stati modificati. Estrarre [questi suggerimenti](~/cross-platform/macios/unified/updating-tips.md) per ulteriori informazioni su aggiornamenti manuali che potrebbero essere necessarie.
+3. Correggere gli errori del compilatore relative al nuovo rimanenti [64 tipi](~/cross-platform/macios/nativetypes.md) e [altre API](~/cross-platform/macios/unified/overview.md#deprecated-typos) che sono stati modificati. Estrarre [questi suggerimenti](~/cross-platform/macios/unified/updating-tips.md) per ulteriori informazioni su aggiornamenti manuali che potrebbero essere necessarie.
 
 Sono disponibili guide specifiche per ogni prodotto aggiornare le App per le API unificata e supporto a 64 bit:
 
@@ -55,9 +56,6 @@ In questo articolo viene illustrato l'utilizzo di iOS nuovi tipi Unified API Nat
 
 I clienti che hanno creato le associazioni alle librerie Objective-C saranno necessario aggiornare il progetto di associazione per riflettere le modifiche nell'API sottostante (in cui alcuni tipi verranno a 64 bit).
 Seguire queste istruzioni per [aggiornare un progetto di associazione esistente per supportare l'API unificata](~/cross-platform/macios/unified/update-binding.md).
-
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

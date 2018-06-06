@@ -1,21 +1,20 @@
 ---
-title: Attività di background
-description: Utilizzare la nuova attività in Background watchOS 3 per garantire che un'applicazione di espressioni di controllo è sempre i dati e l'ancoraggio snapshot più recente.
+title: watchOS attività in Background in Xamarin
+description: Questo documento descrive come usare le attività in background con watchOS in Xamarin, osservare i tipi di attività in background, l'utilizzo delle risorse, implementazione di attività in background, pianificazione, procedure consigliate e altro ancora.
 ms.prod: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 0279aed1e694e3b38dcb8189819d88740c37b6ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5ab53d4aea32cf41c492e286c18cbe85a619889a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792047"
 ---
-# <a name="background-tasks"></a>Attività di background
-
-_Utilizzare la nuova attività in Background watchOS 3 per garantire che un'applicazione di espressioni di controllo è sempre i dati e l'ancoraggio snapshot più recente._
+# <a name="watchos-background-tasks-in-xamarin"></a>watchOS attività in Background in Xamarin
 
 WatchOS 3, non vi sono tre modi principali che un'applicazione di espressioni di controllo può aggiornare le informazioni: 
 
@@ -545,7 +544,7 @@ Mentre un'app è in background, il sistema impone limiti diversi su di essa:
 - Per completare le attività, gli viene assegnato solo pochi secondi. Il sistema prende in considerazione non solo la quantità di tempo trascorso, ma anche quanta capacità di CPU dell'app viene utilizzato per derivare questo limite.
 - Qualsiasi app che supera i limiti verranno terminate con i codici di errore seguente:
     - **CPU** - 0xc51bad01
-    - **Time** - 0xc51bad02
+    - **Tempo** -0xc51bad02
 - Il sistema verrà impone limiti diversi in base al tipo di cui è richiesta l'app per eseguire attività in Background. Ad esempio, `WKApplicationRefreshBackgroundTask` e `WKURLSessionRefreshBackgroundTask` attività vengono assegnate un runtime più lente rispetto ad altri tipi di attività in Background.
 
 <a name="Complications-and-App-Updates" />

@@ -1,5 +1,5 @@
 ---
-title: Framework di social networking
+title: Framework sociali in xamarin. IOS
 description: Il Framework di social networking fornisce un'API unificata per l'interazione con i social network inclusi Facebook e Twitter, nonché SinaWeibo per gli utenti in Cina.
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 334e05ad653d766b48f7f6028a1e98b0a0548c0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9b7269282b18adc46f53b708a0af4934a1621d23
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788195"
 ---
-# <a name="social-framework"></a>Framework di social networking
+# <a name="social-framework-in-xamarinios"></a>Framework sociali in xamarin. IOS
 
 _Il Framework di social networking fornisce un'API unificata per l'interazione con i social network inclusi Facebook e Twitter, nonché SinaWeibo per gli utenti in Cina._
-
 
 Tramite il Framework di social networking consente alle applicazioni di interagire con i social network da una singola API senza la necessità di gestire l'autenticazione. Include un sistema fornito controller di visualizzazione per la composizione di post, nonché un'astrazione che consente l'utilizzo API della rete ogni social su HTTP.
 
@@ -476,5 +476,5 @@ In questo articolo viene illustrato come utilizzare il Framework di social netwo
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [SocialFrameworkDemo (sample)](https://developer.xamarin.com/samples/SocialFrameworkDemo/)
+- [SocialFrameworkDemo (esempio)](https://developer.xamarin.com/samples/SocialFrameworkDemo/)
 - [Introduzione ai servizi Web](~/cross-platform/data-cloud/web-services/index.md)

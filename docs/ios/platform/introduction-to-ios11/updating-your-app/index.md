@@ -1,21 +1,20 @@
 ---
 title: L'aggiornamento dell'App per iOS 11
-description: Esplorare le nuove funzionalità di iOS 11
+description: Questo documento include collegamenti ad varie guide che descrivono le nuove funzionalità disponibili per gli sviluppatori di xamarin. IOS con la versione di iOS 11. Ad esempio, gli aggiornamenti di progettazione visiva, App Store cambia, e Aggiorna icona App.
 ms.prod: xamarin
 ms.assetid: EC809504-9CF6-4949-B6EE-36384297E744
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 2581f729d85787021763f50f005e84d6bbb5db01
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea57acbd6165f7b1abd8b9bd69873670c179f411
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787572"
 ---
 # <a name="updating-your-app-to-ios-11"></a>L'aggiornamento dell'App per iOS 11
-
-_Esplorare le nuove funzionalità di iOS 11_
 
 In iOS 11, Apple ha introdotto un processo di connessione aggiornate iTunes architettura aggiornamenti e nuove modifiche di visual. Questa guida viene esaminato ognuna di queste modifiche, consentono di ottenere l'app xamarin aggiornato per iOS 11.
 

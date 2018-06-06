@@ -1,21 +1,20 @@
 ---
-title: watchOS
-description: Creare App per Apple Watch con Xamarin
+title: Compilazione watchOS App con Xamarin
+description: Questo documento include collegamenti ad varie guide che descrivono come creare App watchOS con Xamarin. Le guide collegate discutere riquadro attività iniziale, i controlli dell'interfaccia utente watchOS, watchOS funzionalità, distribuzione e test e risoluzione dei problemi
 ms.prod: xamarin
 ms.assetid: 14EAE85E-460A-4145-8C8D-869D176D5C3F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 5634306836b5fe0255a5d4cdf49013441206dd5f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 407c1648bef6e1ca84922a8186fbcfbc76c2c7a6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791397"
 ---
-# <a name="watchos"></a>watchOS
-
-_Creare App per Apple Watch con Xamarin_
+# <a name="building-watchos-apps-with-xamarin"></a>Compilazione watchOS App con Xamarin
 
 ![Interfaccia selezione Apple Watch](images/watch1.png) ![Pulsanti di Apple Watch](images/watch2.png) ![Interfaccia map Apple Watch](images/watch3.png)
 

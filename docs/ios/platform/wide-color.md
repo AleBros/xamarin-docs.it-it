@@ -1,19 +1,20 @@
 ---
-title: Colore Wide
-description: Questo articolo descrive il colore ampia e come può essere usato in un'app xamarin o Xamarin.Mac.
+title: Ampia gamma di colori in xamarin. IOS
+description: Questo documento vengono illustrate l'ampia gamma di colori e come può essere usato in un'app xamarin. IOS o Xamarin.Mac. Fornisce inoltre una panoramica generale dei molti concetti importanti correlate al colore, ad esempio spazi colore, i canali e primari.
 ms.prod: xamarin
 ms.assetid: 576E978A-F182-489A-83E4-D8CDC6890B24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 5f56b396715159cbc1539ae9a7f30cc7ad2236bf
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 173919e0d5feda6ab7d34895cc834c5f36d737a8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788781"
 ---
-# <a name="wide-color"></a>Colore Wide
+# <a name="wide-color-in-xamarinios"></a>Ampia gamma di colori in xamarin. IOS
 
 _Questo articolo descrive il colore ampia e come può essere usato in un'app xamarin o Xamarin.Mac._
 

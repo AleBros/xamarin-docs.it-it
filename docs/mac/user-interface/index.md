@@ -1,19 +1,20 @@
 ---
-title: interfaccia utente macOS
-description: Questo articolo include collegamenti a guide che descrivono macOS vari controlli dell'interfaccia utente.
+title: controlli dell'interfaccia utente macOS in Xamarin.Mac
+description: Questo documento include collegamenti ad guide che descrivono i vari controlli dell'interfaccia utente disponibili per gli sviluppatori Xamarin.Mac. Contenuto collegato prende in considerazione finestre, finestre di dialogo, avvisi, menu, barre degli strumenti, viste delle tabelle, visualizzazioni della struttura e più.
 ms.prod: xamarin
 ms.assetid: 876B6EC2-E158-43F2-B9C9-03F54F3D2A49
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/27/2018
-ms.openlocfilehash: d40faa29f2fe278377bf4eae42a032f3dc9086ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 231d3a935cf251d0b2a1a3e6947abcb1c2133b90
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792954"
 ---
-# <a name="macos-user-interface"></a>interfaccia utente macOS
+# <a name="macos-user-interface-controls-in-xamarinmac"></a>controlli dell'interfaccia utente macOS in Xamarin.Mac
 
 _Questo articolo include collegamenti a guide che descrivono macOS vari controlli dell'interfaccia utente._
 

@@ -1,16 +1,17 @@
 ---
 title: Supporto UrhoSharp Android
-description: Il programma di installazione di Android specifico e funzionalità per UrhoSharp.
+description: Questo documento vengono descritte l'installazione di Android specifici e informazioni correlate alla funzionalità per UrhoSharp. In particolare, le architetture supportate, illustra come creare un progetto, configurare e avviare Urho e personalizzati durante l'incorporamento di Urho.
 ms.prod: xamarin
 ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 008afb060729b6d1badf47db7eafedbe631326df
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 6e489f52712989b5f94fa52d5ec6f22a13ce6252
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783782"
 ---
 # <a name="urhosharp-android-support"></a>Supporto UrhoSharp Android
 

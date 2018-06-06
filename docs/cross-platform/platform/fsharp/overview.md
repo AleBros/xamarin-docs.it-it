@@ -1,16 +1,17 @@
 ---
 title: 'Introduzione a F #'
-description: "F # è un fortemente tipizzata linguaggio di programmazione funzionale progettato per l'esecuzione su .NET"
+description: 'Questo documento viene descritto come informazioni su F # e usarlo per compilare applicazioni Xamarin con Visual Studio 2017 e Visual Studio per Mac.'
 ms.prod: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 07082ed68e1257679b6296470d276b61a9f39f00
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fb11feb2d3af537e1b21470a4cc10ec16f49bf77
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781777"
 ---
 # <a name="getting-started-with-f35"></a>Introduzione a F&#35;
 

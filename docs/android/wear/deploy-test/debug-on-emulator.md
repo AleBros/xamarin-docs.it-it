@@ -6,12 +6,13 @@ ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 3dda1445815f747f484458388cd856c2f9705603
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/30/2018
+ms.openlocfilehash: 9be9b91a0ed7e7607469bf8d74087b6f93677559
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732983"
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Eseguire il debug di Android usura in un emulatore
 
@@ -23,7 +24,7 @@ Lo sviluppo di applicazioni, usare Android richiede l'esecuzione dell'applicazio
 
 ## <a name="configure-the-google-android-emulator"></a>Configurare l'emulatore Android di Google
 
-Per eseguire l'app usura in un emulatore, è necessario installare l'emulatore di Android SDK Android e configurarlo per Android con accenti. Per emulatore di Android SDK installazione e configurazione informazioni generali, vedere [emulatore Android di Google](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Per eseguire l'app usura in un emulatore, è necessario installare l'emulatore di Android SDK Android e configurarlo per Android con accenti. Per emulatore di Android SDK installazione e configurazione informazioni generali, vedere [programma di installazione dell'emulatore Android](~/android/get-started/installation/android-emulator/index.md).
 
 Quando si crea un dispositivo virtuale usura, selezionare un profilo di dispositivo, usare Android (ad esempio **Android usura quadrato**). Per migliorare le prestazioni, utilizzare l'usura **x86** CPU/ABI, come illustrato in questo esempio:
 

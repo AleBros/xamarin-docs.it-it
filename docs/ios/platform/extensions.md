@@ -1,6 +1,6 @@
 ---
-title: le estensioni iOS
-description: Introdotta in iOS 8, le estensioni sono widget che vengono presentati da iOS in contesti standard, ad esempio all'interno del centro di notifica, quando l'utente richiede una tastiera personalizzata o quando sono foto di modifica. Tutte le estensioni vengono installate insieme a un'applicazione contenitore e vengono attivate da un determinato punto dell'estensione in un'applicazione Host.
+title: iOS estensioni in xamarin. IOS
+description: Questo documento vengono descritte le estensioni, ovvero i widget presentati da iOS nel contesto standard, ad esempio all'interno del centro di notifica. Illustra come creare un'estensione e comunicare con esso dall'app padre.
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
@@ -8,15 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: af52db5f1add040af025f2134f0e9a7b3936f4f2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c26f951ddaff34cf23662f701395e636e1258b7d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786730"
 ---
-# <a name="ios-extensions"></a>le estensioni iOS
-
-_Introdotta in iOS 8, le estensioni sono widget che vengono presentati da iOS in contesti standard, ad esempio all'interno del centro di notifica, quando l'utente richiede una tastiera personalizzata o quando sono foto di modifica. Tutte le estensioni vengono installate insieme a un'applicazione contenitore e vengono attivate da un determinato punto dell'estensione in un'applicazione Host._
+# <a name="ios-extensions-in-xamarinios"></a>iOS estensioni in xamarin. IOS
 
 > [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
 
@@ -48,7 +47,7 @@ In questo articolo vengono illustrati gli argomenti seguenti:
 |Operazione|Editor specializzato o un visualizzatore per un determinato tipo di supporto|`com.apple.ui-services`|Qualsiasi|
 |Provider di documenti|Consente di app di usare un archivio remoto|`com.apple.fileprovider-ui`|Le app usando un [UIDocumentPickerViewController](https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/)|
 |Tastiera|Tastiere alternative|`com.apple.keyboard-service`|Qualsiasi|
-|Modifica di foto|La modifica di foto e modifica|`com.apple.photo-editing`|Photos.app editor|
+|Modifica di foto|La modifica di foto e modifica|`com.apple.photo-editing`|Editor Photos.app|
 |Condividi|Condivide dati con i social network, messaggistica di servizi e così via.|`com.apple.share-services`|Qualsiasi|
 |Oggi|"Widget" che vengono visualizzati nella schermata Oggi o centro notifiche|`com.apple.widget-extensions`|Centro notifiche e attuali|
 

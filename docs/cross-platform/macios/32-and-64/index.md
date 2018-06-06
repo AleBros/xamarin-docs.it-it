@@ -1,16 +1,17 @@
 ---
 title: Considerazioni relative alla piattaforma a 32/64 bit
-description: Considerazioni sul supporto di architetture a 32 e 64 bit per l'applicazione
+description: Questo documento descrive varie considerazioni da tenere presenti quando architetture a 32 e 64 bit per un'applicazione di xamarin. IOS o Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: 223da6b490e09b2fa27ab3bbf8fa123b5fa8070c
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: c722efc0bc6e8a4ea29af603f88c0e0644c2ed8c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781549"
 ---
 # <a name="3264-bit-platform-considerations"></a>Considerazioni relative alla piattaforma a 32/64 bit
 

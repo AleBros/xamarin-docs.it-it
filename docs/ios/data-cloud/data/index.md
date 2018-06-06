@@ -1,21 +1,20 @@
 ---
-title: accesso ai dati iOS
-description: La maggior parte delle applicazioni presentano un requisito per salvare i dati nel dispositivo locale. A meno che la quantità di dati sia in modo semplice di piccole dimensioni, è in genere necessario un database e un livello di dati nell'applicazione per gestire l'accesso al database. iOS è il motore di database SQLite "incorporato" e viene semplificato l'accesso per archiviare e recuperare dati dalla piattaforma di Xamarin. Questo documento viene illustrato come accedere a un database SQLite.
+title: Accesso ai dati di xamarin. IOS
+description: Questo documento include collegamenti ad guide che descrivono come utilizzare i database locali in un'applicazione di xamarin. IOS. Contenuto collegato illustra SQLite.NET, ADO.NET e molto altro.
 ms.prod: xamarin
 ms.assetid: 3AEDFD8D-FB10-4CEF-BE04-CCD14E95F02C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: 47f2567d81f61568aad639330dc5133856e31936
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a986ea9931f62497e5a6863c84bd4041983d66d9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784576"
 ---
-# <a name="ios-data-access"></a>accesso ai dati iOS
-
-_La maggior parte delle applicazioni presentano un requisito per salvare i dati nel dispositivo locale. A meno che la quantità di dati sia in modo semplice di piccole dimensioni, è in genere necessario un database e un livello di dati nell'applicazione per gestire l'accesso al database. iOS è il motore di database SQLite "incorporato" e viene semplificato l'accesso per archiviare e recuperare dati dalla piattaforma di Xamarin. Questo documento viene illustrato come accedere a un database SQLite._
+# <a name="xamarinios-data-access"></a>Accesso ai dati di xamarin. IOS
 
 Xamarin supporta le API di accesso a database, ad esempio:
 
@@ -40,7 +39,6 @@ Per le applicazioni di xamarin. Forms, leggere [si lavora con database](~/xamari
 -  [Uso di SQLite.NET ORM](using-sqlite-orm.md)
 -  [Uso di ADO.NET](using-adonet.md)
 -  [Uso dei dati in un'app](using-data-in-an-app.md)
-
 
 ## <a name="summary"></a>Riepilogo
 

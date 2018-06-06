@@ -1,18 +1,20 @@
 ---
-title: Registrazione delle applicazioni per l'esecuzione in Background
+title: La registrazione di App xamarin. IOS per l'esecuzione in Background
+description: Questo documento viene descritto come registrare un'applicazione di xamarin. IOS per l'esecuzione in background. Viene descritto Audio App, VoIP App, accessori esterni e bluetooth e altro ancora.
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 58ee68f765372094d68c3cf30ed6a631a67fe313
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f4774f6b4f5412c44dc985bd40129a178b1e813c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783675"
 ---
-# <a name="registering-applications-to-run-in-the-background"></a>Registrazione delle applicazioni per l'esecuzione in Background
+# <a name="registering-xamarinios-apps-to-run-in-the-background"></a>La registrazione di App xamarin. IOS per l'esecuzione in Background
 
 Registrazione di singole attività per sfondo privilegi funziona per alcune applicazioni, ma cosa accade se un'applicazione costantemente viene chiamata per eseguire attività importanti, con esecuzione prolungata, ad esempio ottenere indicazioni per l'utente attraverso GPS? Applicazioni di questo tipo invece devono essere registrate come le applicazioni in background necessarie.
 

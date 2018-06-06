@@ -1,19 +1,20 @@
 ---
-title: ID tocco
-description: Touch ID è una tecnologia di autenticazione impronte di Apple.
+title: ID tocco in xamarin. IOS
+description: Questo documento viene descritto come usare l'ID tocco, tecnologia di autenticazione di biometria delle impronte digitali di Apple, nelle App xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: d9d70c37de5cb91c4cd1fdc77e27942d851c346b
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: b5db80d280d7ad3c43a438d5caae57fbd1928896
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788589"
 ---
-# <a name="touch-id"></a>ID tocco
+# <a name="touch-id-in-xamarinios"></a>ID tocco in xamarin. IOS
 
 Touch ID è stato introdotto in iOS 7 come mezzo per autenticare gli utenti - simili a un passcode. Tuttavia, è limitato a sbloccare il dispositivo, utilizzando l'App Store, iTunes e iCloud keychain solo autenticazione.
 
@@ -51,8 +52,8 @@ A partire da iOS 8, è ora disponibile un nuovo criterio di presenza di utente, 
 
 |Configurazione del dispositivo|Valutazione dei criteri|Meccanismo di backup|
 |--- |--- |--- |
-|Dispositivo senza Passcode|Nessun accesso|Nessuno|
-|Dispositivo con Passcode|Richiede Passcode|Nessuno|
+|Dispositivo senza Passcode|Nessun accesso|nessuno|
+|Dispositivo con Passcode|Richiede Passcode|nessuno|
 |Dispositivo con ID tocco|Preferisce ID tocco|Consente di Passcode|
 
 Tutte le operazioni all'interno di Enclave Secure possano considerano attendibili reciprocamente. Ciò significa che è possibile utilizzare il risultato dell'autenticazione ID tocco per autorizzare la decrittografia di elemento Keychain. Il Enclave Secure mantiene anche un contatore di corrispondenze non riuscite di Touch ID, in cui sarà necessario tornare a utilizzare il passcode caso un utente.

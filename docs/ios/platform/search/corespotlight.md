@@ -1,18 +1,20 @@
 ---
-title: Ricerca con Core Spotlight
+title: Ricerca con Spotlight Core in xamarin. IOS
+description: Questo documento viene descritto come usare Spotlight dei componenti di base in un'applicazione di xamarin. IOS per fornire i collegamenti al contenuto all'interno dell'applicazione. Illustra come creare, ripristinare, aggiornare ed eliminare elementi ricercabili.
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 0074cfcdc4a80f66f64d12f8e5c0a5e81ab2b8a1
-ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
+ms.openlocfilehash: a8bc3aaa43d7830b0a3baa0768d495458b1ecfad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788039"
 ---
-# <a name="search-with-core-spotlight"></a>Ricerca con Core Spotlight
+# <a name="search-with-core-spotlight-in-xamarinios"></a>Ricerca con Spotlight Core in xamarin. IOS
 
 Spotlight core è un nuovo framework per iOS 9 che presenta un'API di database simile per aggiungere, modificare o eliminare i collegamenti al contenuto all'interno dell'app. Gli elementi che sono stati aggiunti mediante Spotlight Core sarà disponibili alla ricerca Spotlight nel dispositivo iOS.
 

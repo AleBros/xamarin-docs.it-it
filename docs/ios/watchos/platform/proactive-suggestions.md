@@ -1,5 +1,5 @@
 ---
-title: Suggerimenti attiva
+title: watchOS attiva i suggerimenti di Xamarin
 description: In questo articolo viene illustrato come utilizzare i suggerimenti attiva in un'app watchOS 3 al coinvolgimento di unità, consentendo al sistema di presentare in modo proattivo automaticamente informazioni utili all'utente.
 ms.prod: xamarin
 ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
@@ -7,18 +7,19 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: f22be43f814865c3c14e12aa2aec3a8dbce09b7a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 33dccd00e07062e040c2707826ef62b764e11a0e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791284"
 ---
-# <a name="proactive-suggestions"></a>Suggerimenti attiva
+# <a name="watchos-proactive-suggestions-in-xamarin"></a>watchOS attiva i suggerimenti di Xamarin
 
 _In questo articolo viene illustrato come utilizzare i suggerimenti attiva in un'app watchOS 3 al coinvolgimento di unità, consentendo al sistema di presentare in modo proattivo automaticamente informazioni utili all'utente._
 
 
-Familiarità con watchOS 3, la presente notizie suggerimenti per gli utenti di stabilire con app xamarin in modo proattivo presenti informazioni utili automaticamente all'utente in momenti appropriati.
+Familiarità con watchOS 3, proattiva presente notizie suggerimenti agli utenti di contattare un'app xamarin. IOS da presentare in modo proattivo le informazioni utili automaticamente all'utente in momenti appropriati.
 
 
 ## <a name="about-proactive-suggestions"></a>Sui suggerimenti attiva

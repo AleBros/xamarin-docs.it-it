@@ -1,5 +1,5 @@
 ---
-title: Introduzione agli storyboard
+title: Introduzione agli storyboard in Xamarin.Mac
 description: In questo articolo viene fornita un'introduzione all'utilizzo in un'app Xamarin.Mac storyboard. Viene descritto come creare e gestire l'interfaccia utente dell'app usando gli storyboard e Interface Builder di Xcode.
 ms.prod: xamarin
 ms.assetid: F37BA503-0B25-489F-80A8-58C493291A55
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: c5d69e1d11fb59afe3cdcbe11391af7eced733b3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 027998d6aff8aba4e5621b1cde51a24e18821ff9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792665"
 ---
-# <a name="introduction-to-storyboards"></a>Introduzione agli storyboard
+# <a name="introduction-to-storyboards-in-xamarinmac"></a>Introduzione agli storyboard in Xamarin.Mac
 
 _In questo articolo viene fornita un'introduzione all'utilizzo in un'app Xamarin.Mac storyboard. Vengono illustrate la creazione e la gestione dell'interfaccia utente dell'applicazione mediante storyboard e generatore del Xcode di interfaccia._
 

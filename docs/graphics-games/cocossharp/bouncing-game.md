@@ -1,16 +1,17 @@
 ---
 title: Dettagli BouncingGame
-description: Questa procedura dettagliata viene illustrato come implementare un semplice gioco palla rimbalzo con CocosSharp.
+description: Questo documento fornisce una procedura dettagliata per la creazione di BouncingGame, un semplice gioco palla rimbalzo compilato con CocosSharp.
 ms.prod: xamarin
 ms.assetid: AC9FD56F-6E4A-40DA-8168-45A761D869FD
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2018
-ms.openlocfilehash: d12d6fb8ecfcba5e5093b2af4790a51ef8cf8e47
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 1a2423fcbeec0c3414b766a6c9e6f64ab53f4bf9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783107"
 ---
 # <a name="bouncinggame-details"></a>Dettagli BouncingGame
 

@@ -1,21 +1,20 @@
 ---
-title: Notifiche utente migliorata
-description: Questo articolo vengono illustrate tutte le modalità che notifica gli utenti sono stata migliorata da iOS 10 e sul loro utilizzo in un'app xamarin. IOS.
+title: Notifiche utente migliorata in xamarin. IOS
+description: In questo articolo viene descritto il framework di notifiche utente introdotto in iOS 10. Illustra le notifiche locale, notifiche remote, gestione delle notifiche, azioni di notifica e altro ancora.
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: b27d415240f3b8cd25c4bc54f6d176c50e42a250
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 29c529d57d35b0ab2b7bf2e80f8d295a8d059c5e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788654"
 ---
-# <a name="enhanced-user-notifications"></a>Notifiche utente migliorata
-
-_Questo articolo vengono illustrate tutte le modalità che notifica gli utenti sono stata migliorata da iOS 10 e sul loro utilizzo in un'app xamarin. IOS._
+# <a name="enhanced-user-notifications-in-xamarinios"></a>Notifiche utente migliorata in xamarin. IOS
 
 Nuovo a 10, la notifica all'utente consente di framework per la gestione delle notifiche locali e remote e il recapito di iOS. Usando questo framework, un'app o l'estensione dell'App può pianificare il recapito delle notifiche locale specificando un set di condizioni, ad esempio percorso o l'ora del giorno.
 

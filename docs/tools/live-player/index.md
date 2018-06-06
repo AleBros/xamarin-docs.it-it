@@ -1,16 +1,17 @@
 ---
-title: Lettore in tempo reale per xamarin. Forms
-description: Iniziare formazione Xamarin rapidamente, compilazione e le applicazioni in esecuzione nel dispositivo Android o iOS.
+title: Xamarin Player in tempo reale per xamarin. Forms
+description: Questo documento vengono illustrate in tempo reale Xamarin Player per xamarin. Forms, che descrive l'installazione, l'app Xamarin Player in tempo reale, campioni da utilizzare con Xamarin Player in tempo reale, limitazioni e risoluzione dei problemi.
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: dd179fb1d1ce3ca57cdf6e27bb86a12e2f9ef03f
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: 79cf2c790789963189d3eedd6645a6b6ae6503b6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793138"
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin Player in tempo reale per xamarin. Forms
 
@@ -46,7 +47,6 @@ Xamarin Player Live presenta alcune restrizioni sulle quali funzionalità sono s
 ## <a name="troubleshootingtroubleshootingmd"></a>[Risoluzione dei problemi](troubleshooting.md)
 
 Trovare la Guida in caso di problemi.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

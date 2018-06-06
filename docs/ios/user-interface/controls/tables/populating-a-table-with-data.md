@@ -1,18 +1,20 @@
 ---
-title: Popolamento di una tabella con dati
+title: Popolamento di una tabella con i dati in xamarin. IOS
+description: Questo documento viene descritto come compilare una tabella con dati in un'applicazione di xamarin. IOS. Viene descritto UITableViewSource riutilizzo di cella, aggiunta di un indice e le intestazioni e piè di pagina.
 ms.prod: xamarin
 ms.assetid: 6FE64DDF-1029-EB9B-6EEC-1C7DFDFDF3AF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c139b96adfc325e7c251f8093eab338ddf0c6337
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 77167bb8938ec0b3dcd30b80235ee5d9a60b4ce0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790068"
 ---
-# <a name="populating-a-table-with-data"></a>Popolamento di una tabella con dati
+# <a name="populating-a-table-with-data-in-xamarinios"></a>Popolamento di una tabella con i dati in xamarin. IOS
 
 Per aggiungere righe a un `UITableView` è necessario implementare un `UITableViewSource` sottoclasse ed eseguire l'override chiama i metodi che consente di visualizzare la tabella per popolare automaticamente.
 

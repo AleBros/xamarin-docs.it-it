@@ -1,21 +1,20 @@
 ---
-title: Icona App Store
-description: Questo articolo viene illustrato come inclusi e la gestione di un asset di immagine in un'app xamarin da utilizzare come icona App Store.
+title: Icone dell'archivio di App in xamarin. IOS
+description: Questo documento viene descritto come usare i cataloghi di asset per gestire un'icona di App Store per un'applicazione di xamarin. IOS. Icone dell'archivio di App in precedenza, veniva gestite con iTunes Connect.
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/26/2017
-ms.openlocfilehash: f8d993ccb23817e237b9cef8074b881f3ea4b3a2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 749dbf01af382a54fe24652706f6a605ac7b20b4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783610"
 ---
-# <a name="app-store-icon"></a>Icona App Store
-
-_Questo articolo viene illustrato come inclusi e la gestione di un asset di immagine in un'app xamarin da utilizzare come icona App Store._
+# <a name="app-store-icons-in-xamarinios"></a>Icone dell'archivio di App in xamarin. IOS
 
 Prima di Xcode 9 tutte le icone di App Store sono stati aggiunti tramite iTunes Connect. Tuttavia, ciò non è più il caso. Icone dell'archivio di App devono ora essere inclusi come parte del bundle del progetto e aggiunta all'interno di un catalogo di asset. Le applicazioni che non contengono un'icona di App Store verranno rifiutate da Apple.
 

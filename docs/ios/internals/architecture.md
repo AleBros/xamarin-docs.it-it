@@ -1,19 +1,20 @@
 ---
-title: Architettura di iOS
-description: Esplorazione di un livello basso di xamarin. IOS
+title: Architettura App iOS
+description: Questo documento vengono descritti xamarin. IOS in un codice basso livello, alla modalità nativo e gestito interagire, compilazione AOT selettori, Registrar, avvio dell'applicazione e il generatore.
 ms.prod: xamarin
 ms.assetid: F40F2275-17DA-4B4D-9678-618FF25C6803
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 85dc675a9b18b974f21532298e4d3028bdecd0b7
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 89b4e8bde43b34c50c1cba54a4c7d8d4ff183c66
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786122"
 ---
-# <a name="ios-architecture"></a>Architettura di iOS
+# <a name="ios-app-architecture"></a>Architettura App iOS
 
 Xamarin. IOS applicazioni eseguite all'interno dell'ambiente di esecuzione Mono e utilizzano compilazione completa di anticipo del tempo AOT () per compilare il codice c# in linguaggio assembly ARM. Ciò comporta l'esecuzione side-by-side con la [Objective-C Runtime](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/). Entrambi gli ambienti di runtime sono eseguiti su un kernel simili a UNIX, in particolare [XNU](https://en.wikipedia.org/wiki/XNU)ed esporre diverse API per il codice utente consentendo agli sviluppatori di accedere al sistema nativo o gestito sottostante.
 
@@ -26,7 +27,6 @@ Il diagramma seguente mostra una panoramica dell'architettura di base:
 Durante lo sviluppo di Xamarin le condizioni di *nativo e gestito* codice vengono spesso utilizzati. [Codice gestito](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) è codice che l'esecuzione gestita dal [Common Language Runtime di .NET Framework](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx), o in caso di Xamarin: il Runtime Mono. Questo è ciò che viene definito un linguaggio intermedio.
 
 Codice nativo è codice che verrà eseguito in modo nativo nella piattaforma specifica (ad esempio, Objective-C o persino codice AOT compilati, in un chip ARM). Questa guida viene descritto come AOT compila il codice gestito al codice nativo e illustra la modalità di funzionamento di xamarin. IOS dell'applicazione, rendendo uso completo dell'API di iOS di Apple tramite l'utilizzo di associazioni, ma anche l'accesso a. Libreria di classi base della rete e un linguaggio di sofisticate, ad esempio c#.
-
 
 ## <a name="aot"></a>AOT
 
@@ -62,10 +62,10 @@ Lo pseudocodice seguente viene illustrato un esempio di questa procedura:
 
 ```csharp
  class MyViewController : UIViewController{
-    [Export ("myFunc")]
-    public void MyFunc ()
-    {
-    }
+     [Export ("myFunc")]
+     public void MyFunc ()
+     {
+     }
  }
 ```
 

@@ -1,18 +1,19 @@
 ---
-title: Condivisione del codice
-description: Concetti di base dell'applicazione
+title: Condivisione del codice su più piattaforme
+description: Questo documento include collegamenti ad varie guide che descrivono le tecniche per la condivisione del codice, incluse le librerie di classi portabile, i progetti condivisi, .NET Standard e NuGet.
 ms.prod: xamarin
 ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 4cca202627d1b901e00532c92598ffddd48b4853
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 61377afa61e2c2006c2fdf8ef9b21fe7d567b3de
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780069"
 ---
-# <a name="sharing-code"></a>Condivisione del codice
+# <a name="sharing-code-on-multiple-platforms"></a>Condivisione del codice su più piattaforme
 
 In questa sezione viene fornita una Guida su alcune delle più comuni attività di cose o concetti che gli sviluppatori devono tenere conto durante lo sviluppo di applicazioni per dispositivi mobili.
 

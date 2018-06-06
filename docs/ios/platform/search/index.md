@@ -1,20 +1,21 @@
 ---
-title: Nuove API di ricerca
+title: API di ricerca in xamarin. IOS
 description: In questo articolo viene illustrato l'utilizzo di nuove API di ricerca di App di iOS 9 per consentire agli utenti di eseguire la ricerca di informazioni e funzionalità in App xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5dcd3d9665befaa82fd0f5677a4a662f633ed45b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bc62ad34af0b9b98f0475599a08946122badd21e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788176"
 ---
-# <a name="new-search-apis"></a>Nuove API di ricerca
+# <a name="search-apis-in-xamarinios"></a>API di ricerca in xamarin. IOS
 
-_In questo articolo viene illustrato l'utilizzo di nuove API di ricerca di App di iOS 9 per consentire agli utenti di eseguire la ricerca di informazioni e funzionalità in App xamarin. IOS._
+_In questo articolo viene illustrato l'utilizzo le API di ricerca di App fornite da iOS 9 di consentire agli utenti di eseguire la ricerca di informazioni e funzionalità in App xamarin. IOS._
 
 Ricerca è stata espansa in iOS 9 per fornire nuovi modi per accedere alle informazioni e funzionalità all'interno di un'app xamarin. Utilizzando le nuove API di ricerca di App, app contenuto è reso disponibile per la ricerca tramite Spotlight e Safari risultati della ricerca, uniforme e promemoria Siri e suggerimenti. Ciò consente agli utenti di accedere rapidamente alle attività e le informazioni complete all'interno dell'app.
 

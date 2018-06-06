@@ -1,21 +1,20 @@
 ---
-title: Introduzione agli storyboard
-description: Uno Storyboard è una rappresentazione visiva dell'aspetto e il flusso dell'applicazione. Xamarin ha introdotto una finestra di progettazione per consentire alle applicazioni di xamarin. IOS in modo da sfruttare storyboard, pertanto è possibile progettare visivamente la schermata di applicazione e accedere alle visualizzazioni, controller e segues con c# per un maggiore controllo.
+title: Introduzione agli storyboard in xamarin. IOS
+description: Questo documento viene fornita un'introduzione agli storyboard in xamarin. IOS. Questa procedura viene descritto l'utilizzo di uno storyboard per definire un'interfaccia utente, segues e come utilizzare la finestra di progettazione iOS per modificare i file storyboard.
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 647bd7d339dc56978752f7ab29de30cf8acb7e07
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3366da2f5dc869c7b075bf32be238a1ebd3145d7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790968"
 ---
-# <a name="introduction-to-storyboards"></a>Introduzione agli storyboard
-
-_Uno Storyboard è una rappresentazione visiva dell'aspetto e il flusso dell'applicazione. Xamarin ha introdotto una finestra di progettazione per consentire alle applicazioni di xamarin. IOS in modo da sfruttare storyboard, pertanto è possibile progettare visivamente la schermata di applicazione e accedere alle visualizzazioni, controller e segues con c# per un maggiore controllo._
+# <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in xamarin. IOS
 
 In questa Guida verrà spiegato quale uno Storyboard è ed esaminare alcuni dei componenti principali: ad esempio Segues. Verrà esaminato come gli storyboard possono essere creati e usati, e quali vantaggi hanno per uno sviluppatore.
 
@@ -324,7 +323,7 @@ Prima di iniziare, seguire i passaggi 1-8. In questa procedura viene creata il s
         - Name: PasswordTextField
         - Segnaposto: 'Immettere la Password segreta'
     - UILabel
-        - Text: 'Error: Wrong Password. Non deve passare!'
+        - Testo: "errore: Password errata. Non deve passare!'
         - Colori: rosso
         - Allineamento: Center
         - Righe: 2

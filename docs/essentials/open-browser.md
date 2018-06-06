@@ -1,17 +1,18 @@
 ---
 title: Apri Xamarin.Essentials Browser
-description: La classe di Browser consente a un'applicazione aprire un collegamento web nel browser preferito sistema ottimizzato o browser esterno.
+description: Classe del Browser in Xamarin.Essentials consente a un'applicazione aprire un collegamento web nel browser preferito sistema ottimizzato o browser esterno.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2a95d0b89b78ce8b0ddfdc94d86c284a6f8b2bbe
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: 563d3899cffb80c0215d90e8e4392046c4635256
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783135"
 ---
-# <a name="xamarinessentials-browser"></a>Browser Xamarin.Essentials
+# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Browser
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 

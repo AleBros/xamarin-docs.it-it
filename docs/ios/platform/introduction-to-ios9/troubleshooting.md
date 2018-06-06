@@ -1,19 +1,20 @@
 ---
-title: Risoluzione dei problemi
-description: Questo articolo fornisce alcuni suggerimenti sulla risoluzione dei problemi per l'utilizzo di iOS 9 in App xamarin. IOS.
+title: 'Xamarin. IOS 9: risoluzione dei problemi'
+description: Questo articolo fornisce vari suggerimenti sulla risoluzione dei problemi per l'utilizzo di iOS 9 in xamarin. IOS. Suggerimenti per coprire l'analisi XML-simulatori, vincoli di layout, problemi di rete e molti altri argomenti.
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 1b335fc6b19d87a46059511baf866433691b1b4d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c44d737efcf5092eb4b27d5311271005de65318b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787663"
 ---
-# <a name="troubleshooting"></a>Risoluzione dei problemi
+# <a name="xamarinios-9--troubleshooting"></a>Xamarin. IOS 9: risoluzione dei problemi
 
 _Questo articolo fornisce alcuni suggerimenti sulla risoluzione dei problemi per l'utilizzo di iOS 9 in App xamarin. IOS._
 
@@ -190,8 +191,6 @@ Esistono almeno due possibili soluzioni per questo problema:
 Con xamarin. IOS è possibile eseguire l'inizializzazione di Controller di visualizzazione o una vista all'interno di costruttori che vengono chiamati quando qualcosa viene esposta al codice gestito, ma interrompe il progetto iOS.
 
 In generale non è necessario inizializzare tutto ciò che è possibile richiamare codice Objective-C dal costruttore perché non è possibile assicurarsi quando verrà chiamato. Anche significa che contiene un migliori risorse (altri ctor) o chiamate a eseguire l'override (come Objective-C è associato alcun evento) in cui deve essere eseguita l'inizializzazione.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

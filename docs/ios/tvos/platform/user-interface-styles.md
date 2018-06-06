@@ -1,5 +1,5 @@
 ---
-title: Nuovi stili di interfaccia utente
+title: tvOS gli stili dell'interfaccia utente in Xamarin
 description: Questo articolo vengono illustrate la luce e temi scuro di interfaccia utente che Apple sia aggiunto al tvOS 10 e come implementarli in un'app Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: da75a99e842b13d42251cdd1c5195ec66ff4a513
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43bfac29acb8b465fd1f3cdfd53c7664adeae18f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789171"
 ---
-# <a name="new-user-interface-styles"></a>Nuovi stili di interfaccia utente
+# <a name="tvos-user-interface-styles-in-xamarin"></a>tvOS gli stili dell'interfaccia utente in Xamarin
 
 _Questo articolo vengono illustrate la luce e temi scuro di interfaccia utente che Apple sia aggiunto al tvOS 10 e come implementarli in un'app Xamarin.tvOS._
 
 tvOS 10 ora supporta sia un'interfaccia utente chiaro e scuro tema tutti UIKit compilazione aggiuntivo controlli verranno automaticamente adattarsi alle, in base alle preferenze dell'utente. Inoltre, lo sviluppatore possibile regolare manualmente gli elementi dell'interfaccia utente in base al tema che l'utente ha selezionato e può eseguire l'override di un tema specificato.
-
 
 <a name="About-the-New-User-Interface-Styles" />
 

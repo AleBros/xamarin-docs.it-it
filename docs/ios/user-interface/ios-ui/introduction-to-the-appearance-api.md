@@ -1,5 +1,5 @@
 ---
-title: Aspetto API
+title: Aspetto API in xamarin. IOS
 description: iOS consente di applicare le impostazioni di proprietà visiva a un livello di classe statica anziché su singoli oggetti, in modo che la modifica si applica a tutte le istanze di tale controllo nell'applicazione.
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 7c7e4909cc12f49411c527af12fc0e4855979804
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 02b33550451506ef4756f0f7d4400b4f98cef368
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790253"
 ---
-# <a name="appearance-api"></a>Aspetto API
+# <a name="appearance-api-in-xamarinios"></a>Aspetto API in xamarin. IOS
 
 _iOS consente di applicare le impostazioni di proprietà visiva a un livello di classe statica anziché su singoli oggetti, in modo che la modifica si applica a tutte le istanze di tale controllo nell'applicazione._
 

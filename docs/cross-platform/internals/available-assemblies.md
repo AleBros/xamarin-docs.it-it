@@ -1,20 +1,19 @@
 ---
 title: Assembly disponibili
-description: Assembly disponibili in xamarin. IOS, xamarin e Xamarin.Mac
+description: Questo documento sono elencati gli assembly disponibili per l'utilizzo in xamarin. IOS, xamarin. Android e Xamarin.Mac. Anche possibile collegare alla documentazione sulle librerie Standard .NET e librerie di classi portabili.
 ms.prod: xamarin
 ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: ef1dde061ffce4082922cc2eb2af1ae9b045aedd
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b73a818d3864c7c4d1d776e104d95090e87f5877
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781907"
 ---
 # <a name="available-assemblies"></a>Assembly disponibili
-
-_Assembly disponibili in xamarin. IOS, xamarin e Xamarin.Mac_
 
 Xamarin. IOS, xamarin e Xamarin.Mac tutti forniti con decine assembly. Come Silverlight è un sottoinsieme degli assembly .NET desktop esteso, Xamarin piattaforme è anche un sottoinsieme dei numerosi Silverlight e gli assembly .NET desktop esteso.
 

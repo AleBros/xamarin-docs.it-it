@@ -1,19 +1,20 @@
 ---
-title: Progettazione delle API
-description: Prospettiva sulla progettazione delle API di xamarin
+title: Progettazione delle API di xamarin. IOS
+description: Questo documento vengono descritti alcuni dei principi che consentono di progettare le APIs Xamarin.iOS e modo in cui tali elementi sono correlati a Objective-C.
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: da827c5bdd25bf841f5396b10d1eeb70e132dfeb
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: a7e508ddd086936a3ffea9d76cde7d896fe4d1f3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787354"
 ---
-# <a name="api-design"></a>Progettazione delle API
+# <a name="xamarinios-api-design"></a>Progettazione delle API di xamarin. IOS
 
 Oltre alle librerie di classi di Base che fanno parte di Mono, il nucleo [xamarin](http://www.xamarin.com/iOS) viene fornito con le associazioni per iOS diverse API per consentire agli sviluppatori di creare applicazioni native per iOS con Mono.
 

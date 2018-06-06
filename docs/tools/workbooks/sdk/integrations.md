@@ -1,17 +1,19 @@
 ---
 title: Negli argomenti di integrazione avanzata
+description: Questo documento illustra argomenti avanzati relativi per le integrazioni per le cartelle di lavoro di Xamarin. Viene descritto il pacchetto Xamarin.Workbook.Integrations NuGet e l'esposizione di API all'interno di una cartella di lavoro di Xamarin.
 ms.prod: xamarin
 ms.assetid: 002CE0B1-96CC-4AD7-97B7-43B233EF57A6
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: fc108c3d7f6f4c0fbd948182b4e60a3eee0aea0a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 1aa6b5d0ca574345e1d349ea53df96f554c06bc4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793836"
 ---
-# <a name="external-integrations"></a>Integrazioni esterne
+# <a name="advanced-integration-topics"></a>Negli argomenti di integrazione avanzata
 
 Assembly di integrazione devono fare riferimento il [ `Xamarin.Workbooks.Integrations` NuGet][nuget]. Estrarre il nostro [documentazione introduttiva](~/tools/workbooks/sdk/index.md) per ulteriori informazioni sulle attività iniziali con il pacchetto NuGet.
 

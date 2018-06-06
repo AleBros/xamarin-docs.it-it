@@ -1,21 +1,20 @@
 ---
-title: HealthKit
-description: HealthKit è un framework, introdotto in iOS 8 che fornisce un archivio dati centralizzato, coordinato e sicuro per le informazioni correlate di integrità. Il sistema operativo garantisce la privacy e protezione delle informazioni di integrità e, con l'app di integrità, un dashboard per l'utente. Con l'autorizzazione dell'utente, le applicazioni possono leggere e scrivere una vasta gamma di informazioni di integrità.
+title: HealthKit in xamarin. IOS
+description: Questo documento descrive HealthKit, un framework, introdotto in iOS 8 che fornisce un archivio dati centralizzato, coordinato e sicuro per le informazioni correlate di integrità. Viene descritto come eseguire il provisioning di un'app HealthKit e su come scrivere codice che usa il framework HealthKit.
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a569bcff3ac33d008788bb0b946bd027fa5c0ea8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 06c0231bbb9aa7b82b92e0a8c2157b8be9c8b05b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787533"
 ---
-# <a name="healthkit"></a>HealthKit
-
-_HealthKit è un framework, introdotto in iOS 8 che fornisce un archivio dati centralizzato, coordinato e sicuro per le informazioni correlate di integrità. Il sistema operativo garantisce la privacy e protezione delle informazioni di integrità e, con l'app di integrità, un dashboard per l'utente. Con l'autorizzazione dell'utente, le applicazioni possono leggere e scrivere una vasta gamma di informazioni di integrità._
+# <a name="healthkit-in-xamarinios"></a>HealthKit in xamarin. IOS
 
 Kit di integrità fornisce un archivio dati di protezione per le informazioni dell'utente all'integrità. Integrità Kit App può, con l'autorizzazione esplicita dell'utente, leggere e scrivere l'archivio dati e ricevere notifiche quando vengono aggiunti dati pertinenti. Le applicazioni possono presentare i dati o dell'utente è possibile utilizzare app integrità fornito di Apple per visualizzare un dashboard di tutti i dati.
 

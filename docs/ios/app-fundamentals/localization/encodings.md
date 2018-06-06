@@ -1,17 +1,19 @@
 ---
-title: Codifiche di internazionalizzazione
+title: Codifiche di internazionalizzazione in xamarin. IOS
+description: Questo documento descrive le codifiche di internazionalizzazione in xamarin. IOS, che illustrano le codifiche disponibili e su come aggiungerli a un'app.
 ms.prod: xamarin
 ms.assetid: F5117294-28BB-4583-B6A0-A339B050FDE1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 60cfc5ac8238c853cc066afe2978f91ab9c0755e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4963b0f95ae48ee56462a82d2f82a8dcaa231a23
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784126"
 ---
-# <a name="internationalization-encodings"></a>Codifiche di internazionalizzazione
+# <a name="internationalization-encodings-in-xamarinios"></a>Codifiche di internazionalizzazione in xamarin. IOS
 
 Per impostazione predefinita, non tutte le codifiche sono inclusi nella libreria di classi di xamarin. IOS.
 

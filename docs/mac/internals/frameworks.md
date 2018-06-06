@@ -1,21 +1,20 @@
 ---
-title: Framework
-description: Questo documento elenca Framework supportati da Xamarin.Mac.
+title: Framework Xamarin.Mac
+description: Questo documento vengono elencati i diversi Framework macOS disponibili per l'utilizzo durante lo sviluppo di applicazioni Mac con Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: E8108E77-13FE-2EC2-83FF-AFE0408D3EE6
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 7e3ccfd9f23fa5c9c158ff49f0961b5140084d06
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8b4dc591d9fd606e9ee3ef6e34d9d29f44263392
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792290"
 ---
-# <a name="frameworks"></a>Framework
-
-&nbsp;
+# <a name="xamarinmac-frameworks"></a>Framework Xamarin.Mac
 
 I framework macOS seguenti sono supportati da Xamarin.Mac:
 

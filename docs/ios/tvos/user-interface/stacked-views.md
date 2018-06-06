@@ -1,22 +1,20 @@
 ---
-title: Utilizzo di visualizzazione in pila
-description: Questo articolo descrive la progettazione e l'utilizzo di visualizzazione in pila all'interno di un'app Xamarin.tvOS.
+title: Utilizzo delle viste in pila tvOS in Xamarin
+description: Questo documento viene descritto come collaborato con tvOS viste in pila in un'app compilata con Xamarin. Fornisce una panoramica generale delle viste in pila e descrive il Layout automatico, posizionamento e il ridimensionamento di una visualizzazione in pila, comune utilizzato, integrazione con storyboard e altro ancora.
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: a6300e4da47022199c0503e6be63b0c90f15654d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e718e525c23e78fbf846209602a07bf0f3f386e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789372"
 ---
-# <a name="working-with-stacked-view"></a>Utilizzo di visualizzazione in pila
-
-_Questo articolo descrive la progettazione e l'utilizzo di visualizzazione in pila all'interno di un'app Xamarin.tvOS._
-
+# <a name="working-with-tvos-stacked-views-in-xamarin"></a>Utilizzo delle viste in pila tvOS in Xamarin
 
 Controllo di visualizzazione dello Stack (`UIStackView`) si avvale di Layout automatico e le classi di dimensioni per gestire una pila di sottoviste, orizzontale o verticale, che risponde dinamicamente alle modifiche del contenuto e dimensioni dello schermo del dispositivo Apple TV.
 

@@ -1,18 +1,20 @@
 ---
-title: Utilizzo delle impostazioni
+title: Utilizzo di watchOS le impostazioni di Xamarin
+description: Questo documento viene descritto come utilizzare le impostazioni di watchOS in Xamarin. Vengono illustrate le impostazioni aggiunta a una soluzione di app di espressioni di controllo, utilizzando le impostazioni dell'app e l'app di Apple Watch su iPhone.
 ms.prod: xamarin
 ms.assetid: 4B2EB192-F0A2-4010-B141-0431520594C0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 6de70eae1eb1c498336a62b4d7be5e2805de11f9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6cfbcf3b4383588819490838c2a54cdb4faf9403
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790877"
 ---
-# <a name="working-with-settings"></a>Utilizzo delle impostazioni
+# <a name="working-with-watchos-settings-in-xamarin"></a>Utilizzo di watchOS le impostazioni di Xamarin
 
 App di Apple Watch è possibile utilizzare la stessa funzionalità di impostazioni come le app iOS: l'interfaccia utente di impostazioni viene visualizzata nel **Apple Watch** app iPhone, ma i valori sono accessibili sia l'app iPhone, e anche l'estensione di espressioni di controllo.
 

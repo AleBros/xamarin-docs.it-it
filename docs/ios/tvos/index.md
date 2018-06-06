@@ -1,6 +1,6 @@
 ---
-title: Introduzione a tvOS
-description: Questo articolo descrive compilazione tvOS App con Xamarin.
+title: Introduzione a tvOS in Xamarin
+description: Questo documento collega varie guide ed esempi che illustrano come compilare App tvOS con Xamarin. Le guide descrivono varie funzionalità, ad esempio sviluppo dell'interfaccia utente, archiviazione dei dati, le icone e molto altro.
 ms.prod: xamarin
 ms.assetid: 14345503-1742-41F5-B2EF-EE31AB7C3516
 ms.technology: xamarin-ios
@@ -8,13 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: 457e1c01365017f699c5902376cdb44b9127d88e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 45a509f6ee86e42279ec7877272965e8f6d7338f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788686"
 ---
-# <a name="introduction-to-tvos"></a>Introduzione a tvOS
+# <a name="introduction-to-tvos-in-xamarin"></a>Introduzione a tvOS in Xamarin
 
 ## <a name="introducing-tvos"></a>Introduzione a tvOS
 

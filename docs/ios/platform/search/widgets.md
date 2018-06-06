@@ -1,22 +1,22 @@
 ---
-title: Ricerca e miglioramenti di Widget schermata iniziale
-description: Questo articolo vengono descritti i miglioramenti che Apple apportate al sistema di Widget in iOS 10.
+title: Ricerca e Home schermata Widget i miglioramenti in iOS 10
+description: Questo documento vengono descritti i miglioramenti che Apple ha tentato di widget nel iOS 10, inclusi gli aggiornamenti alla ricerca e widget schermata iniziale.
 ms.prod: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e7a64738f29ab2b5c62659d721beb50db7c9adb5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8383f167f8c85459e996b83368281fa243317948
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788111"
 ---
-# <a name="search-and-home-screen-widget-enhancements"></a>Ricerca e miglioramenti di Widget schermata iniziale
+# <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>Ricerca e Home schermata Widget i miglioramenti in iOS 10
 
 _Questo articolo vengono descritti i miglioramenti che Apple apportate al sistema di Widget in iOS 10._
-
 
 Apple ha introdotto numerosi miglioramenti al sistema di Widget per assicurarti che il widget eccezionale su eventuali sfondo che esiste nel nuovo iOS 10 schermata di blocco. Inoltre, ora contengono widget un [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) proprietà che consente agli sviluppatori di descrivere la quantità di contenuto è disponibile e consente all'utente di espandere e comprimere il contenuto.
 

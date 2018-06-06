@@ -1,23 +1,21 @@
 ---
 title: Introduzione all'integrazione continua con Xamarin
-description: Integrazione continua è una pratica di progettazione del software in cui viene compilata una compilazione automatica e facoltativamente, verifica di un'app quando il codice viene aggiunto o modificato dagli sviluppatori nel repository di controllo della versione del progetto. In questo articolo verrà illustrati i concetti generali relativi a integrazione continua e alcune delle opzioni disponibili per l'integrazione continua con i progetti di Xamarin.
+description: Questo documento include collegamenti ad guide che descrivono l'integrazione continua con Xamarin. Contenuto collegato viene fornita una panoramica dell'integrazione continua e vengono illustrati App Center Build a TeamCity e Jenkins.
 ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
 author: topgenorth
 ms.author: toopge
 ms.date: 05/04/2017
-ms.openlocfilehash: 34838a1527cb3661e8e5ed51b5950f26026e9433
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 1a38160b4f1536c0e0e393cb9ec3482624a40681
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793744"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Introduzione all'integrazione continua con Xamarin
 
-_Integrazione continua è una pratica di progettazione del software in cui viene compilata una compilazione automatica e facoltativamente, verifica di un'app quando il codice viene aggiunto o modificato dagli sviluppatori nel repository di controllo della versione del progetto. In questo articolo verrà illustrati i concetti generali relativi a integrazione continua e alcune delle opzioni disponibili per l'integrazione continua con i progetti di Xamarin._
-
 > [!Video https://youtube.com/embed/wXgnh2Q7Uv8]
-
 
 ##  <a name="introduction-to-continuous-integrationtoolsciintro-to-cimd"></a>[Introduzione all'integrazione continua](~/tools/ci/intro-to-ci.md)
 
@@ -26,7 +24,6 @@ Questa sezione descrive i diversi componenti di integrazione continua e le relat
 [!include[](~/tools/ci/includes/firewall-information.md)]
 
 ## <a name="working-with-continuous-integration-environments"></a>Utilizzo di ambienti di integrazione continua
-
 
 ### <a name="using-app-center-build-with-xamarinappcenterbuildxamarin"></a>[Uso di App Center Build con Xamarin](/appcenter/build/xamarin/)
 

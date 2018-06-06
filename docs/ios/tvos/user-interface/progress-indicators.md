@@ -1,19 +1,20 @@
 ---
-title: Utilizzo di indicatori di stato di avanzamento
-description: Questo articolo descrive la progettazione e utilizzo di indicatori di stato di avanzamento all'interno di un'app Xamarin.tvOS.
+title: Utilizzo di tvOS gli indicatori di stato di Xamarin
+description: Questo documento viene descritto come lavorare con gli indicatori di stato in un'app tvOS compilata con Xamarin. Descrive gli indicatori di stato e gli indicatori di attività.
 ms.prod: xamarin
 ms.assetid: 582B6D0C-1F16-4299-A9A6-5651E76009FE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/25/2018
-ms.openlocfilehash: d512dfddb3a6c81767f937272a4ffb1ab1a35372
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: f8812f6b3f8a461487dcaf548637c84b16631d6b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789216"
 ---
-# <a name="working-with-progress-indicators"></a>Utilizzo di indicatori di stato di avanzamento
+# <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Utilizzo di tvOS gli indicatori di stato di Xamarin
 
 _Questo articolo descrive la progettazione e utilizzo di indicatori di stato di avanzamento all'interno di un'app Xamarin.tvOS._
 

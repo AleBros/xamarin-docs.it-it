@@ -1,18 +1,19 @@
 ---
-title: Limitazioni
-description: Alcune limitazioni di Xamarin Player in tempo reale
+title: Limitazioni di Xamarin Player in tempo reale
+description: Questo documento descrive le limitazioni di Xamarin Player in tempo reale. Questa procedura guidata illustra i requisiti di dispositivo, le funzionalità può essere utilizzata con tipi di progetto e altri argomenti esterni.
 ms.prod: xamarin
 ms.assetid: 36A1531E-630A-4B7C-A333-4E67E5DC023C
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2018
-ms.openlocfilehash: a3aea31f32e3bf6227cce2e3340e3d04828472a0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: ea71391382f9e1ecb80cbf5f2d5bf127e0d6d1be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793675"
 ---
-# <a name="limitations"></a>Limitazioni
+# <a name="limitations-of-xamarin-live-player"></a>Limitazioni di Xamarin Player in tempo reale
 
 ![Funzionalità di anteprima](~/media/shared/preview.png)
 
@@ -36,6 +37,7 @@ L'app Xamarin Player Live supporta i dispositivi seguenti:
 Esistono alcune limitazioni sulle cose che eseguire Xamarin Player in tempo reale, inclusi gli elementi seguenti:
 
 ### <a name="xamarinforms"></a>Xamarin.Forms
+
 - Non sono supportati i renderer personalizzati.
 - Effetti non sono supportati.
 - Controlli personalizzati con proprietà associabile personalizzate non sono supportati.
@@ -44,9 +46,11 @@ Esistono alcune limitazioni sulle cose che eseguire Xamarin Player in tempo real
 - Cataloghi di asset in iOS non sono supportati.
 
 ### <a name="other-project-types"></a>Altri tipi di progetto
+
 - Windows Media Player in tempo reale non è destinata Android native o i progetti iOS (che usano storyboard o Android XML per l'interfaccia utente).
 
 ### <a name="misc"></a>Varie
+
 - Un supporto limitato per la reflection (attualmente influisce su alcuni NuGets più diffusi, ad esempio SQLite e Json.NET). Altri NuGets potrebbe ancora essere supportate.
 - Impossibile eseguire l'override di alcune classi di sistema (ad esempio, è Impossibile implementare una sottoclasse).
 - Alcune funzionalità di piattaforma che richiedono il provisioning non può funzionare in app Xamarin Player in tempo reale (tuttavia è stato configurato per operazioni comuni, ad esempio l'accesso raccolta foto).
@@ -55,7 +59,6 @@ Esistono alcune limitazioni sulle cose che eseguire Xamarin Player in tempo real
 - Scenari avanzati con le classi generiche personalizzate e le interfacce potrebbero non essere supportati.
 
 Segnalare eventuali problemi aggiuntivi su [bugzilla](https://aka.ms/live-player-report-issue).
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

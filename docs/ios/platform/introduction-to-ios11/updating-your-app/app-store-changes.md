@@ -1,21 +1,20 @@
 ---
-title: Modifiche di App Store
-description: Esplorare le nuove funzionalità di iOS 11
+title: Novità di App Store iOS 11
+description: Questo documento illustra le modifiche all'archivio di App in iOS 11. Viene icona archivio dell'applicazione, acquisti in-app innalzate di livello, pagina prodotto riprogettato con, comunicazione cliente e versioni graduale.
 ms.prod: xamarin
 ms.assetid: 4A7A03FD-B4F2-4969-8676-A17260730FD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 9c9355c047d2e7083ca787f473515163d8e6f5f1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 59f5d2c0c05ec2950ae7cc74e4f5aaa2565020f0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787390"
 ---
-# <a name="app-store-changes"></a>Modifiche di App Store
-
-_Esplorare le nuove funzionalità di iOS 11_
+# <a name="app-store-changes-in-ios-11"></a>Novità di App Store iOS 11
 
 App Store iOS ha avuto una riprogettazione completa, che non solo consente agli utenti di esplorare in modo efficiente store, ma consente inoltre, gli sviluppatori, per promuovere l'app agli utenti. Queste promozioni includono aggiornamenti di acquisti in-app e gli aggiornamenti a pagina del prodotto. iOS 11 aggiunge anche gli aggiornamenti relativi a come rilasciare l'app al pubblico, come aggiungere l'icona dell'app e come comunicare con gli utenti.
 

@@ -1,18 +1,20 @@
 ---
-title: Con ARKit UrhoSharp
+title: Utilizzo di ARKit con UrhoSharp in xamarin. IOS
+description: Questo documento viene descritto come configurare un'app ARKit in xamarin. IOS, quindi esamina la modalità di rendering frame, come regolare il dispositivo foto/video, come rilevare i piani, sull'utilizzo di illuminazione e altro ancora. Illustra anche UrhoSharp e scrittura di codice per HoloLens.
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/01/2016
-ms.openlocfilehash: 95c9c602d0bfe1b77fda453a137dfdfc12a975c9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0d70b1f751d5aa6b6c8fa578f53ba1ac8260cfa1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787103"
 ---
-# <a name="using-arkit-with-urhosharp"></a>Con ARKit UrhoSharp
+# <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Utilizzo di ARKit con UrhoSharp in xamarin. IOS
 
 Con l'introduzione di [ARKit](https://developer.apple.com/arkit/), Apple ha reso semplice per gli sviluppatori di creare applicazioni realtà aumentata. ARKit può tenere traccia della posizione esatta del dispositivo e rilevare superfici diversi nel mondo e sarà quindi compito dello sviluppatore per combinare i dati provengano da ARKit nel codice.
 
@@ -223,4 +225,4 @@ HoloLens è una delle piattaforme più interessanti per che cui è in esecuzione
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [UrhoSharp](~/graphics-games/urhosharp/index.md)
-- [ARKitXamarinDemo (with UrhoSharp) (sample)](https://github.com/EgorBo/ARKitXamarinDemo)
+- [ARKitXamarinDemo (con UrhoSharp) (esempio)](https://github.com/EgorBo/ARKitXamarinDemo)

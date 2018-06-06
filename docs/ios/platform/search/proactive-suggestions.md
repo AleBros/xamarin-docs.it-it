@@ -1,5 +1,5 @@
 ---
-title: Introduzione ai suggerimenti attiva
+title: Introduzione ai suggerimenti proattivi in xamarin. IOS
 description: In questo articolo viene illustrato come utilizzare i suggerimenti attiva nell'app xamarin al coinvolgimento di unità, consentendo al sistema di presentare in modo proattivo automaticamente informazioni utili all'utente.
 ms.prod: xamarin
 ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5b06dbf0e8e108616adb4f77910267aaa1ac71f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f736e9dda00546ddef7cf03457813c7e3d10882b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788019"
 ---
-# <a name="introduction-to-proactive-suggestions"></a>Introduzione ai suggerimenti attiva
+# <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introduzione ai suggerimenti proattivi in xamarin. IOS
 
 _In questo articolo viene illustrato come utilizzare i suggerimenti attiva nell'app xamarin al coinvolgimento di unità, consentendo al sistema di presentare in modo proattivo automaticamente informazioni utili all'utente._
 

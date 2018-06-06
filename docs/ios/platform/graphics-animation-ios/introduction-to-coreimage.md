@@ -1,23 +1,24 @@
 ---
-title: CoreImage
-description: CoreImage è un nuovo framework introdotte con iOS 5 per fornire l'elaborazione di immagini e funzionalità di miglioramento video live. Questo articolo descrive queste funzionalità con gli esempi di xamarin. IOS.
+title: Immagine di core in xamarin. IOS
+description: Immagine dei componenti di base è un nuovo framework introdotte con iOS 5 per fornire l'elaborazione di immagini e funzionalità di miglioramento video live. Questo articolo descrive queste funzionalità con gli esempi di xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 0bb2c3b8b563da53e432ad16e6518ada67a4655e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6032554a0ddbda26ff5de94f6035bc4f8c15a22a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786632"
 ---
-# <a name="coreimage"></a>CoreImage
+# <a name="core-image-in-xamarinios"></a>Immagine di core in xamarin. IOS
 
-_CoreImage è un nuovo framework introdotte con iOS 5 per fornire l'elaborazione di immagini e funzionalità di miglioramento video live. Questo articolo descrive queste funzionalità con gli esempi di xamarin. IOS._
+_Immagine dei componenti di base è un nuovo framework introdotte con iOS 5 per fornire l'elaborazione di immagini e funzionalità di miglioramento video live. Questo articolo descrive queste funzionalità con gli esempi di xamarin. IOS._
 
-CoreImage è un nuovo framework introdotto in iOS 5 che fornisce una serie di filtri predefiniti e gli effetti da applicare a immagini e video, ad esempio il rilevamento di tipo di carattere.
+Immagine dei componenti di base è un nuovo framework introdotto in iOS 5 che fornisce una serie di filtri predefiniti e gli effetti da applicare a immagini e video, ad esempio il rilevamento viso in.
 
 Questo documento contiene esempi semplici di:
 
@@ -26,7 +27,7 @@ Questo documento contiene esempi semplici di:
 -  Elenca i filtri disponibili.
 
 
-Questi esempi devono iniziare l'inserimento di funzionalità CoreImage nelle applicazioni di xamarin. IOS.
+Questi esempi dovrebbero iniziare l'inserimento di immagine Core funzionalità nelle applicazioni di xamarin. IOS.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -34,7 +35,7 @@ Questi esempi devono iniziare l'inserimento di funzionalità CoreImage nelle app
 
 ## <a name="face-detection"></a>Rilevamento viso
 
-La funzionalità di rilevamento viso di CoreImage consente solo, poiché tenta di identificare le facce di una foto e restituisce le coordinate di tutti i caratteri tipografici che riconosce. Queste informazioni consente di contare il numero di persone in un'immagine, disegnare indicatori dell'immagine (ad es. per 'tag' persone in una fotografia), o qualsiasi altro elemento può essere considerato.
+La funzionalità di rilevamento viso immagine Core consente solo, poiché tenta di identificare i caratteri tipografici in una foto e restituisce le coordinate di tutti i caratteri tipografici che esso venga riconosciuto. Queste informazioni consente di contare il numero di persone in un'immagine, disegnare indicatori dell'immagine (ad es. per 'tag' persone in una fotografia), o qualsiasi altro elemento può essere considerato.
 
 Questo codice da CoreImage\SampleCode.cs di seguito viene illustrato come creare e utilizzare il rilevamento viso in un'immagine incorporata:
 
@@ -219,11 +220,11 @@ Ogni filtro elencato è stato esposto come una classe in xamarin. IOS, pertanto 
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stato illustrato come utilizzare le nuove funzionalità di framework iOS 5 CoreImage come rilevamento viso e applicato i filtri di un'immagine. Sono disponibili moltissime filtri immagine diversa in framework da usare.
+In questo articolo ha illustrato come utilizzare le nuove funzionalità di framework iOS 5 immagine Core come rilevamento viso e applicazione di filtri a un'immagine. Sono disponibili moltissime filtri immagine diversa in framework da usare.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Immagine di base (esempio)](https://developer.xamarin.com/samples/CoreImage/)
 - [Regolare contratto e la luminosità di un'immagine di Recipe](https://developer.xamarin.com/recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
-- [Utilizzo di filtri CoreImage](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
+- [Utilizzo di filtri di immagine dei componenti di base](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 - [Riferimento alla classe CIFilter](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.htm)

@@ -1,5 +1,5 @@
 ---
-title: HomeKit
+title: HomeKit in xamarin. IOS
 description: HomeKit è il framework di Apple per controllare i dispositivi di automazione home. In questo articolo presenta HomeKit e copre accessori la configurazione di test nel simulatore HomeKit accessori e la scrittura di una semplice app xamarin di interagire con questi accessori.
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 5699465330a4d2a5b983ec7661f80c1ed4f14bde
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0dfc6e9ba5098df66a72292d6c8b89ea1bbd1f97
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787461"
 ---
-# <a name="homekit"></a>HomeKit
+# <a name="homekit-in-xamarinios"></a>HomeKit in xamarin. IOS
 
 _HomeKit è il framework di Apple per controllare i dispositivi di automazione home. In questo articolo presenta HomeKit e copre accessori la configurazione di test nel simulatore HomeKit accessori e la scrittura di una semplice app xamarin di interagire con questi accessori._
 

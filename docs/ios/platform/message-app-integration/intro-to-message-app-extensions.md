@@ -1,5 +1,5 @@
 ---
-title: Nozioni di base dell'estensione App messaggio
+title: Nozioni fondamentali sulle App estensione messaggio in xamarin. IOS
 description: In questo articolo mostra come include un messaggio dell'estensione App in una soluzione xamarin. IOS che si integra con l'app di messaggi e presenta nuove funzionalità all'utente.
 ms.prod: xamarin
 ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 73ca0974a42bf661a89327148b68341114297084
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: bc06d73543b9e0bd1e8715fc722b0a95af7d9f07
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787910"
 ---
-# <a name="message-app-extension-basics"></a>Nozioni di base dell'estensione App messaggio
+# <a name="message-app-extension-basics-in-xamarinios"></a>Nozioni fondamentali sulle App estensione messaggio in xamarin. IOS
 
 _In questo articolo mostra come include un messaggio dell'estensione App in una soluzione xamarin. IOS che si integra con l'app di messaggi e presenta nuove funzionalità all'utente._
 

@@ -1,18 +1,19 @@
 ---
-title: Progetti condivisi
+title: Utilizzando i progetti per condividere codice condivisi
 description: Progetti condivisi consentono di scrivere codice comune a cui fa riferimento un numero di progetti di applicazione diverso. Il codice viene compilato come parte di ogni progetto di riferimento e può includere le direttive del compilatore per incorporare funzionalità specifiche della piattaforma di base di codice condiviso.
 ms.prod: xamarin
 ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 2910ada16aad2d8cb19cf0ee3a059c7df22b630e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 749daac36cce26c9d24d04b89e933aab994791b4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781803"
 ---
-# <a name="shared-projects"></a>Progetti condivisi
+# <a name="using-shared-projects-to-share-code"></a>Utilizzando i progetti per condividere codice condivisi
 
 _Progetti condivisi consentono di scrivere codice comune a cui fa riferimento un numero di progetti di applicazione diverso. Il codice viene compilato come parte di ogni progetto di riferimento e può includere le direttive del compilatore per incorporare funzionalità specifiche della piattaforma di base di codice condiviso._
 

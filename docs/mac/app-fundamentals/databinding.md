@@ -1,5 +1,5 @@
 ---
-title: Data binding e la generazione di codice chiave-valore
+title: Data binding e la generazione di codice chiave-valore in Xamarin.Mac
 description: In questo articolo viene illustrato l'utilizzo chiave-valore di codifica e l'analisi per consentire il data binding a elementi dell'interfaccia utente in interfaccia generatore del Xcode chiave-valore.
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 48ee5d4e4a0a53de49fbba46d79424e03af6fe5c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 88567e47f488a94fcf7334584a678c9689b83306
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792138"
 ---
-# <a name="data-binding-and-key-value-coding"></a>Data binding e la generazione di codice chiave-valore
+# <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Data binding e la generazione di codice chiave-valore in Xamarin.Mac
 
 _In questo articolo viene illustrato l'utilizzo chiave-valore di codifica e l'analisi per consentire il data binding a elementi dell'interfaccia utente in interfaccia generatore del Xcode chiave-valore._
 

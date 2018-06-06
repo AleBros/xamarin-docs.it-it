@@ -1,19 +1,20 @@
 ---
-title: Modelli e idiomi comuni
-description: Questo documento descrive il modello model-view-controller, modelli di origine e il delegato di dati e i protocolli.
+title: Modelli e idiomi in Xamarin.Mac comuni
+description: Questo documento descrive i modelli di progettazione comuni utilizzati durante la compilazione di App Xamarin.Mac. Viene descritto il modello model-view-controller, i modelli di origine e il delegato di dati e i protocolli.
 ms.prod: xamarin
 ms.assetid: BF0A3517-17D8-453D-87F7-C8A34BEA8FF5
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/17/2016
-ms.openlocfilehash: cf499c555ddbefbdb5a7fae3ae8929a17e0d0cd7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f6bba5575edf2dcbddbd354b590e03f9fed06291
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791537"
 ---
-# <a name="common-patterns-and-idioms"></a>Modelli e idiomi comuni
+# <a name="common-patterns-and-idioms-in-xamarinmac"></a>Modelli e idiomi in Xamarin.Mac comuni
 
 In tutta l'API Apple esposte tramite c#, determinati idiomi e i pattern di avviarsi in modo continuativo. Se si ha esperienza con la programmazione con xamarin, questi possono essere noti. Documentazione spesso farà riferimento a questi modelli e idiomi più volte, in modo da avere una conoscenza approfondita di essi consentono di senso della documentazione di cui che trova.
 

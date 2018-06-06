@@ -1,17 +1,18 @@
 ---
-title: Archiviazione protetta Xamarin.Essentials
-description: La classe SecureStorage consente di archiviare in modo sicuro coppie chiave/valore semplice.
+title: 'Xamarin.Essentials: Archiviazione protetta'
+description: Questo documento descrive la classe SecureStorage in Xamarin.Essentials, che consente di archiviare in modo sicuro coppie chiave/valore semplice. Illustra come utilizzare la classe, specifiche di implementazione della piattaforma e limitazioni.
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: redth
 ms.author: jodick
 ms.date: 05/04/2018
-ms.openlocfilehash: e64160a5579bffa8e9e9820db1a3ba39bdf7304e
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: d9fd5b5fd0d4dc29f4d2531521370618f97e3846
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783158"
 ---
-# <a name="xamarinessentials-secure-storage"></a>Archiviazione protetta Xamarin.Essentials
+# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Archiviazione protetta
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 

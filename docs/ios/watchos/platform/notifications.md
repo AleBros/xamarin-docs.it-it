@@ -1,18 +1,20 @@
 ---
-title: Notifiche
+title: watchOS le notifiche di Xamarin
+description: Questo documento viene descritto come utilizzare le notifiche di watchOS in Xamarin. Illustra la creazione i controller di notifica, la generazione di notifiche e il test delle notifiche.
 ms.prod: xamarin
 ms.assetid: 0BC1306E-0713-4592-996E-7530CCF281E7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 1a681c2bda941d8fe015a8d4da8b99f4d85e441b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 42b0354f19a9e0c31b7a859d598526fddad726cd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791910"
 ---
-# <a name="notifications"></a>Notifiche
+# <a name="watchos-notifications-in-xamarin"></a>watchOS le notifiche di Xamarin
 
 Controllare l'App possono ricevere notifiche se l'app iOS contenitore supportarle. È presente la gestione di notifica predefinita in modo da non *necessario* per aggiungere il supporto di notifica aggiuntive descritto di seguito, tuttavia se si desidera personalizzare il comportamento di notifica e la lettura in aspetto.
 

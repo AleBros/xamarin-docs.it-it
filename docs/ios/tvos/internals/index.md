@@ -1,22 +1,20 @@
 ---
-title: tvOS elementi interni
-description: Xamarin.tvOS condivide DNA stesso come il nostro prodotto xamarin. IOS, pertanto i documenti avanzati che è stato generato per il nostro prodotto iOS sono quasi identici a quella del prodotto tvOS.
+title: tvOS in Xamarin – elementi interni
+description: Documenti che descrivono i processi interni di tvOS su Xamarin, si basa su xamarin. IOS. Collegamento contenuto illustra gli assembly, il framework di destinazione e relativi concetti iOS.
 ms.prod: xamarin
 ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 83b8d5b6dc4e73f05160960f0e2547284de57799
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0132eac4edd4ecb9f693828bd58288dfbcb1c008
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789145"
 ---
-# <a name="tvos-internals"></a>tvOS elementi interni
-
-_Xamarin.tvOS condivide DNA stesso come il nostro prodotto xamarin. IOS, pertanto i documenti avanzati che è stato generato per il nostro prodotto iOS sono quasi identici a quella del prodotto tvOS._
-
+# <a name="tvos-in-xamarin--internals"></a>tvOS in Xamarin – elementi interni 
 
 ##  <a name="assembliesiostvosinternalsassembliesmd"></a>[Assembly](~/ios/tvos/internals/assemblies.md)
 
@@ -73,8 +71,6 @@ Note sull'utilizzo del threading all'interno delle applicazioni di xamarin. IOS.
 ###  <a name="xib-code-generationiosinternalsxib-code-generationmd"></a>[Generazione di codice XIB](~/ios/internals/xib-code-generation.md)
 
 Integrazione Visual Studio per Mac con generatore del Xcode di interfaccia che consente di utilizzare il generatore di interfaccia di progettazione dell'interfaccia utente.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

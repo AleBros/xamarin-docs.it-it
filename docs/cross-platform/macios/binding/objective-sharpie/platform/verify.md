@@ -1,18 +1,19 @@
 ---
-title: Verificare gli attributi
+title: Obiettivo Sharpie verificare gli attributi
+description: Questo documento descrive l'attributo [Verify] generato da Sharpie obiettivo. L'attributo [Verify] evidenzia per gli sviluppatori in cui è necessario verificare manualmente output dell'obiettivo Sharpie.
 ms.prod: xamarin
 ms.assetid: 107FBCEA-266B-4295-B7AA-40A881B82B7B
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: b9409b4351ed9233db0edf8e2dd9f516b9727fe0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 96e5bafc14c2d3aba03ccc137151a83ee8afeef9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780711"
 ---
-# <a name="verify-attributes"></a>Verificare gli attributi
-
+# <a name="objective-sharpie-verify-attributes"></a>Obiettivo Sharpie verificare gli attributi
 
 È spesso che associazioni prodotte dall'obiettivo Sharpie verranno annotate con il `[Verify]` attributo. Questi attributi indicano che è necessario _verificare_ che Sharpie obiettivo è la cosa corretta confrontando l'associazione con la dichiarazione originale di C/Objective-C (che verrà fornita in un commento sopra la dichiarazione di associazione).
 
@@ -27,7 +28,7 @@ Dopo avere verificato che il binding è correggere o correzione in modo che sia 
 
 L'argomento hint fornito all'attributo può essere incrociato a cui fa riferimento alla documentazione riportata di seguito. Documentazione per qualsiasi prodotto `[Verify]` attributi verranno forniti nella console anche dopo l'associazione è stata completata.
 
-|Verificare l'Hint|Descrizione|
+|`[Verify]` Hint|Descrizione|
 |---|---|
 |InferredFromPreceedingTypedef|Il nome di questa dichiarazione è stata dedotta per convenzione comune dall'immediatamente precedente `typedef` nel codice sorgente nativo originale. Verificare che il nome derivato sia corretto di questa convenzione è ambigua.|
 |ConstantsInterfaceAssociation|Non è piuttosto complesso per determinare con quale interfaccia Objective-C può essere associata una dichiarazione di variabile extern. Le istanze di questi elementi vengono associate come `[Field]` proprietà in un'interfaccia parziale in un'interfaccia concreta quasi by per produrre un'API intuitiva, probabilmente eliminando 'Costanti' interfaccia completamente.|

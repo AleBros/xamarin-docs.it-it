@@ -1,24 +1,25 @@
 ---
-title: Opzioni di layout
+title: Opzioni di layout in xamarin. IOS
+description: Questo documento descrive diversi modi per disporre le interfacce utente in xamarin. IOS. Viene descritto ridimensionamento automatico e il Layout automatico.
 ms.prod: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 8f197bbffeabb708769c48f0130aa27a86b14386
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bad29eae308c8ca9f7228a1cbdfd69940894cf34
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790116"
 ---
-# <a name="layout-options"></a>Opzioni di layout
+# <a name="layout-options-in-xamarinios"></a>Opzioni di layout in xamarin. IOS
 
 Sono disponibili due meccanismi diversi per controllare il layout quando una vista è stata ridimensionata o ruotata:
 
 -  **Ridimensionamento automatico** : ridimensionamento automatico del controllo nella finestra di progettazione fornisce un modo per impostare il `AutoresizingMask` proprietà. Ciò consente un controllo di essere ancorato al bordo del relativo contenitore e/o correggere le dimensioni. Ridimensionamento automatico funziona in tutte le versioni di iOS. Questo aspetto viene descritto in dettaglio più avanti
--  **Layout automatico** – una funzionalità introdotta in iOS6 che consente un controllo accurato le relazioni di controlli dell'interfaccia utente. Consentirà di controllo delle posizioni all'interno di elementi relazione ad altri elementi nell'area di progettazione. Questo argomento viene descritto più dettagliatamente il [Layout automatico con Xamarin iOS progettazione](~/ios/user-interface/designer/designer-auto-layout.md) Guida.
-
+-  **Auto Layout** – una funzionalità introdotta in iOS 6 che consente un controllo accurato le relazioni dei controlli dell'interfaccia utente. Consentirà di controllo delle posizioni all'interno di elementi relazione ad altri elementi nell'area di progettazione. Questo argomento viene descritto più dettagliatamente il [Layout automatico con Xamarin iOS progettazione](~/ios/user-interface/designer/designer-auto-layout.md) Guida.
 
 ## <a name="autosizing"></a>Ridimensionamento automatico
 

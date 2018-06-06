@@ -1,21 +1,19 @@
 ---
-title: "Procedura dettagliata: Creazione di un'applicazione tramite l'API Reflection"
-description: Oltre alle API di elementi, MonoTouch.Dialog (MT D) contiene un'API di Reflection basato su attributi. L'API di Reflection consente la creazione di schermate con MT D semplice quanto la decorazione di classi con attributi. Questo articolo fornisce una procedura dettagliata che illustra come creare un'applicazione mediante l'API di Reflection.
+title: Creazione di un'applicazione di xamarin. IOS tramite l'API Reflection
+description: Questo documento descrive il MonoTouch.Dialog basato su attributi Reflection API, che crea un'interfaccia utente basati su classi decorate con attributi.
 ms.prod: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: e56eaeccb2e09d9f1ad84245bf41e2a4bf1b56f1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c60d2a8ca58fe807dc340125d0db21b6f9ddff9f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790510"
 ---
-# <a name="walkthrough-creating-an-application-using-the-reflection-api"></a>Procedura dettagliata: Creazione di un'applicazione tramite l'API Reflection
-
-_Oltre alle API di elementi, MonoTouch.Dialog (MT D) contiene un'API di Reflection basato su attributi. L'API di Reflection consente la creazione di schermate con MT D semplice quanto la decorazione di classi con attributi. Questo articolo fornisce una procedura dettagliata che illustra come creare un'applicazione mediante l'API di Reflection._
-
+# <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Creazione di un'applicazione di xamarin. IOS tramite l'API Reflection
 
 La voce MT. API di Reflection D consente alle classi di essere decorato con attributi che MT D viene utilizzato per creare schermate automaticamente. L'API di reflection fornisce un'associazione tra queste classi e cosa viene visualizzata sullo schermo. Sebbene questa API non offre il controllo con granularità fine che esegue gli elementi API, riduce complessità compilando automaticamente out la gerarchia degli elementi in effetti di classe basata.
 
@@ -36,7 +34,6 @@ Esaminiamo un esempio per illustrare come utilizzare l'API di Reflection. In que
  [![](reflection-api-walkthrough-images/01-expense-entry.png "In questo esempio creeremo una schermata di immissione di dati semplici come illustrato di seguito")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
 
  <a name="Creating_a_Class_with_MT.D_Attributes" />
-
 
 ## <a name="creating-a-class-with-mtd-attributes"></a>Creazione di una classe con MT Attributi D
 

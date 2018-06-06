@@ -1,18 +1,19 @@
 ---
-title: Backgrounding
+title: Backgrounding in xamarin. IOS
 description: L'elaborazione o backgrounding di sfondo è il processo di consentendo alle applicazioni di eseguire le attività in background mentre un'altra applicazione è in esecuzione in primo piano. Questa guida viene utilizzato come un'introduzione all'elaborazione in iOS in background.
 ms.prod: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: ae3e732008c6503f511dc4be9cad874ecfe1272d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b22f3ef3276129f7f46c23cc1d06666f151f5ac4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783542"
 ---
-# <a name="backgrounding"></a>Backgrounding
+# <a name="backgrounding-in-xamarinios"></a>Backgrounding in xamarin. IOS
 
 _L'elaborazione o backgrounding di sfondo è il processo di consentendo alle applicazioni di eseguire le attività in background mentre un'altra applicazione è in esecuzione in primo piano. Questa guida viene utilizzato come un'introduzione all'elaborazione in iOS in background._
 
@@ -39,7 +40,7 @@ In questa Guida, abbiamo introdotto i diversi modi di eseguire l'elaborazione in
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Backgrounding in Android](~/android/app-fundamentals/services/index.md)
-- [LifecycleDemo (sample)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)
+- [LifecycleDemo (esempio)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)
 - [Posizione (esempio)](https://developer.xamarin.com/samples/monotouch/Location/)
 - [Trasferimento in Background semplice (esempio)](https://developer.xamarin.com/samples/monotouch/SimpleBackgroundTransfer/)
 - [Esecuzione in Background di iOS](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)

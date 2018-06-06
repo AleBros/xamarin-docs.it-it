@@ -1,18 +1,20 @@
 ---
-title: Generazione di codice .xib
+title: Generazione di codice .xib in xamarin. IOS
+description: Questo documento descrive come xamarin. IOS genera codice per eseguire il mapping di file .xib a c#, rendere accessibili controlli visivi a livello di codice.
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: b887dbf09693452f62f744669ad9713927020cea
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 064e17393747a36cd761cb2464e3239cfc17141c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786148"
 ---
-# <a name="xib-code-generation"></a>Generazione di codice .xib
+# <a name="xib-code-generation-in-xamarinios"></a>Generazione di codice .xib in xamarin. IOS
 
 > [!IMPORTANT]
 >  Questo documento viene illustrato Visual Studio per l'integrazione del Mac con generatore del Xcode di interfaccia a solo come azioni e prese non vengono utilizzate nella finestra di progettazione di Xamarin per iOS. Per ulteriori informazioni sulla finestra di progettazione iOS, consultare il [iOS progettazione](~/ios/user-interface/designer/index.md) documento.
@@ -31,7 +33,7 @@ Le classi personalizzate possono essere definite in un **.xib** file utilizzando
 
 ## <a name="generating-code"></a>Generazione di codice
 
-Per qualsiasi **{0} .xib** file con un'azione di compilazione *pagina*, se un **{0}.xib.designer.cs** file è presente anche nel progetto, Visual Studio per Mac genererà le classi parziali nel per tutte le classi utente è possibile trovare nel file di progettazione di **.xib** file, con le proprietà per i punti vendita e i metodi parziali per tutte le azioni. Semplicemente per la presenza di questo file è abilitata la generazione di codice.
+Per qualsiasi  **{0}.xib** file con un'azione di compilazione *pagina*, se un  **{0}. xib.designer.cs** file è presente anche nel progetto, Visual Studio per Mac Genera classi parziali nel file di progettazione per tutte le classi utente individuata nel **.xib** file, con le proprietà per i punti vendita e i metodi parziali per tutte le azioni. Semplicemente per la presenza di questo file è abilitata la generazione di codice.
 
 Il file viene automaticamente aggiornato quando il **.xib** file le modifiche e Visual Studio per Mac riassume lo stato attivo. Il file della finestra di progettazione non deve essere modificato manualmente, poiché le modifiche saranno sovrascritta successivo Visual Studio per gli aggiornamenti di Mac il file.
 
@@ -49,7 +51,7 @@ Progettazione classi parziali non deve essere utilizzato come-è. Punti vendita 
 
 Il motivo è la necessità di flessibilità. Ad esempio, più classi CodeBehind Impossibile comune gestiti astratta, che crea una sottoclasse della classe da sottoclassare dall'IB sottoclasse.
 
-È convenzionale per inserire gli elementi un **{0}.xib.cs** file accanto il **{0}.xib.designer.cs** file di progettazione.
+È convenzionale per inserire gli elementi un  **{0}. xib.cs** file accanto il  **{0}. xib.designer.cs** file di progettazione.
 
 <a name="generated" />
 

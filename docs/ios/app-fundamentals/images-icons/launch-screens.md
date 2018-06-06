@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2018
-ms.openlocfilehash: d5a267bfa8655a9b9c6d4dba9d8cf9d16624ba9b
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 0fbd38b643e7806932ba262becc72be2bae6ba4b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784619"
 ---
-# <a name="launch-screens"></a>Aprire schermate
+# <a name="launch-screens-for-xamarinios-apps"></a>Aprire schermate per le app xamarin
 
 _In questo articolo viene illustrato come creare un'app schermata di avvio per tutti i dispositivi iOS, per qualsiasi risoluzione e l'orientamento, utilizzando un unico Storyboard unificata._
 

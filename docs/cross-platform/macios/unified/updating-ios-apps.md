@@ -1,16 +1,17 @@
 ---
 title: Aggiornamento delle App iOS esistente
-description: Seguire questi passaggi per aggiornare un'app xamarin esistente per utilizzare l'API unificata.
+description: Questo documento vengono descritti i passaggi che devono essere seguiti per aggiornare un'app xamarin. IOS da API classica a Unified API.
 ms.prod: xamarin
 ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 74534333bb0c4ae54dc6816312a5531f29a80ce5
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 4d506232903d4a94ac20a1fb9f93a39884d9099c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781878"
 ---
 # <a name="updating-existing-ios-apps"></a>Aggiornamento delle App iOS esistente
 

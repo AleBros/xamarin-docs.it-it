@@ -1,5 +1,5 @@
 ---
-title: Estensioni App messaggio avanzate
+title: Estensioni App messaggio avanzate in xamarin. IOS
 description: Questo articolo illustra le tecniche avanzate per l'utilizzo di estensioni per App i messaggi in una soluzione xamarin. IOS che si integra con l'app di messaggi e presenta nuove funzionalità all'utente.
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: cd2cabf98c83bba7502e8533e482713a9c43f67a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eca3dcc19714251184092fbe136d0078f1ca8d54
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788022"
 ---
-# <a name="advanced-message-app-extensions"></a>Estensioni App messaggio avanzate
+# <a name="advanced-message-app-extensions-in-xamarinios"></a>Estensioni App messaggio avanzate in xamarin. IOS
 
 _Questo articolo illustra le tecniche avanzate per l'utilizzo di estensioni per App i messaggi in una soluzione xamarin. IOS che si integra con l'app di messaggi e presenta nuove funzionalità all'utente._
 

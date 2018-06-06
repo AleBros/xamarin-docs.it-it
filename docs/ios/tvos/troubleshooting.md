@@ -1,6 +1,6 @@
 ---
-title: Risoluzione dei problemi
-description: In questo articolo include informazioni conoscono i problemi che potrebbero verificarsi durante l'utilizzo con supporto per tvOS di Xamarin.
+title: Risoluzione dei problemi tvOS compilate con Xamarin
+description: Questo articolo fornisce vari suggerimenti per la risoluzione dei problemi durante lo sviluppo di un'app tvOS compilata con Xamarin. Vengono descritti problemi noti ed errori specifici.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 124E4953-4DFA-42B0-BCFC-3227508FE4A6
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 86106fa5ca53e93ccffb4dd141914c01ab65a506
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e69157cf9c8a9b9405e31edb2906754328653ccb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789203"
 ---
-# <a name="troubleshooting"></a>Risoluzione dei problemi
+# <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Risoluzione dei problemi tvOS compilate con Xamarin
 
 _In questo articolo include informazioni conoscono i problemi che potrebbero verificarsi durante l'utilizzo con supporto per tvOS di Xamarin._
 
@@ -128,7 +129,7 @@ Se si utilizza una libreria di terze parti 3rd (ad esempio MonoGame) e la compil
 
 È necessario includere anche `--bitcode=asmonly` nel **tocco ulteriori argomenti**, configurato le opzioni del linker per **collegamento tutti** ed eseguire una compilazione pulita.
 
-### <a name="itms-90471-error-the-large-icon-is-missing"></a>ITMS-90471 error. Icona di grandi dimensioni è manca
+### <a name="itms-90471-error-the-large-icon-is-missing"></a>Errore ITMS 90471. Icona di grandi dimensioni è manca
 
 Se viene visualizzato un messaggio nel formato "ITMS 90471 errore. Icona di grandi dimensioni è manca"durante il tentativo di inviare una app Xamarin.tvOS in App Store di Apple TV per versione, vedere i seguenti:
 

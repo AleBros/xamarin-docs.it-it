@@ -1,5 +1,5 @@
 ---
-title: Viste delle tabelle
+title: Viste delle tabelle in Xamarin.Mac
 description: In questo articolo viene descritto l'utilizzo con le visualizzazioni di tabella in un'applicazione Xamarin.Mac. Vengono descritte la creazione di viste di tabella in Xcode e il generatore di interfaccia e l'interazione con essi nel codice.
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: c274405613f079cb61ad9c96497a9effdc7173f5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da26810869f23b8861ffb4409248c56bff12a521
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793230"
 ---
-# <a name="table-views"></a>Viste delle tabelle
+# <a name="table-views-in-xamarinmac"></a>Viste delle tabelle in Xamarin.Mac
 
 _In questo articolo viene descritto l'utilizzo con le visualizzazioni di tabella in un'applicazione Xamarin.Mac. Vengono descritte la creazione di viste di tabella in Xcode e il generatore di interfaccia e l'interazione con essi nel codice._
 

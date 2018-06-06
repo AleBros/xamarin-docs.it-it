@@ -1,18 +1,20 @@
 ---
-title: Utilizzo di Thread dell'interfaccia utente
+title: Utilizzo di Thread dell'interfaccia utente in xamarin. IOS
+description: Questo documento descrive come utilizzare i Thread UI in xamarin. IOS. Illustra l'esecuzione del thread dell'interfaccia utente, viene fornito un esempio di thread in background ed esamina async/await.
 ms.prod: xamarin
 ms.assetid: 98762ACA-AD5A-4E1E-A536-7AF3BE36D77E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 72f161001509519fb02a652f23eaa7805a55f7ca
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4328b84625aff4c92d6e97029ced7dde747d4fc4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790409"
 ---
-# <a name="working-with-the-ui-thread"></a>Utilizzo di Thread dell'interfaccia utente
+# <a name="working-with-the-ui-thread-in-xamarinios"></a>Utilizzo di Thread dell'interfaccia utente in xamarin. IOS
 
 Interfacce utente delle applicazioni sono sempre a thread singolo, anche nei dispositivi a thread multipli: è presente solo una rappresentazione dello schermo e modifiche di contenuto devono essere coordinate tramite un singolo 'punto di accesso di '. Ciò impedisce che più thread tentano di aggiornare lo stesso pixel allo stesso tempo, ad esempio.
 

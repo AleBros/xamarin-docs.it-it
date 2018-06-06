@@ -1,29 +1,26 @@
 ---
-title: Riferimenti nativi
-description: I riferimenti nativi offre la possibilità di incorporare un Framework nativo in un progetto xamarin. IOS o Xamarin.Mac o un progetto di associazione.
+title: IOS, Mac e progetti le associazioni riferimenti nativi
+description: I riferimenti nativi offre la possibilità di incorporare un framework native in xamarin. IOS, Xamarin.Mac un progetto di associazione.
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c56e392420debb21998363cfffa288aec51691ea
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3a497d0bb4674014b8063cb1fbc91eec6e7ae5ea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781718"
 ---
-# <a name="native-references"></a>Riferimenti nativi
+# <a name="native-references-in-ios-mac-and-bindings-projects"></a>Riferimenti nativi in iOS, Mac e i progetti di associazioni
 
-_I riferimenti nativi offre la possibilità di incorporare un Framework nativo in un progetto xamarin. IOS o Xamarin.Mac o un progetto di associazione._
-
+_I riferimenti nativi offre la possibilità di incorporare un framework nativo in un progetto xamarin. IOS o Xamarin.Mac o associazione._
 
 Da iOS 8.0 è stato possibile creare un framework incorporato per condividere il codice tra le estensioni app e l'app principale in Xcode. Utilizza la funzionalità nativa riferimento sarà possibile utilizzare questi Framework incorporati (creati con Xcode) in xamarin. IOS.
  
 > [!IMPORTANT]
 > I riferimenti nativi non sarà possibile creare un framework incorporato da qualsiasi tipo di xamarin. IOS o Xamarin.Mac progetti, consentire solo per l'utilizzo del Framework (Objective-C) native esistenti.
-
-
-
 
 <a name="Terminology" />
 

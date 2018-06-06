@@ -1,19 +1,20 @@
 ---
-title: Utilizzo di storyboard
-description: Creazione di interfacce utente macOS con storyboard usando Xcode.
+title: Utilizzo di storyboard in Xamarin.Mac
+description: Questo documento viene descritto come lavorare con gli storyboard in Xamarin.Mac, esaminare le procedure caricare in modo da codice, il ciclo di vita di controller di visualizzazione, la catena di risponditore, segues, controller di finestra, i riconoscitori di movimento e altro ancora.
 ms.prod: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3b72affd9b101b0a139301fec9f2bed343310507
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 72986ed4247c3b6f66f6f1813d74bf0a95d0de53
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792840"
 ---
-# <a name="storyboards"></a>Storyboard
+# <a name="working-with-storyboards-in-xamarinmac"></a>Utilizzo di storyboard in Xamarin.Mac
 
 Uno storyboard definisce l'interfaccia utente per un'applicazione specificata suddivisa in una panoramica dei controller di vista funzionale. In Generatore di interfaccia di Xcode, ognuno di questi controller si trova nella propria scena.
 

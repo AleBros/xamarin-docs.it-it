@@ -1,16 +1,17 @@
 ---
 title: Visual Basic.NET Xamarin iOS e Android
-description: Procedura dettagliata XThis viene illustrato come compilare App xamarin. IOS e xamarin native che utilizzano la logica di business scritta in Visual Basic.NET.
+description: Questa procedura dettagliata viene illustrato come compilare App native di xamarin. IOS e xamarin. Android che usano la logica di business scritta in Visual Basic.NET.
 ms.prod: xamarin
 ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 3b92442668f6bd86c1c521dd6b476e4bbb43c1ec
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: a3e63f6c8d9b35a8158e2db6a48734b2205fe54c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782281"
 ---
 # <a name="visual-basicnet-in-xamarin-ios-and-android"></a>Visual Basic.NET Xamarin iOS e Android
 

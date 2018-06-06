@@ -1,32 +1,32 @@
 ---
-title: TextKit
-description: L'API del Kit di testo offre testo potente funzionalità di layout e rendering in xamarin. IOS.
+title: TextKit in xamarin. IOS
+description: Questo documento descrive come usare TextKit in xamarin. IOS. TextKit fornisce testo potente funzionalità di layout e rendering.
 ms.prod: xamarin
 ms.assetid: 1D0477E8-CD1E-48A9-B7C8-7CA892069EFF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 78ca0d9505c9f56dc6476bd04dab560a70b2c4b0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ac80d1d07f5649d377dd6fdefcb4911ba9ec2dcb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788335"
 ---
-# <a name="text-kit"></a>Text Kit
+# <a name="textkit-in-xamarinios"></a>TextKit in xamarin. IOS
 
-Kit di testo è una nuova API che offre funzionalità di layout e rendering di testo potente. Si basa su framework testo principale di livello basso, ma è molto più semplice da utilizzare rispetto ai componenti di base del testo.
+TextKit è una nuova API che contiene testo potente funzionalità di layout e rendering. Si basa su framework Core testo basso livello, ma è molto più semplice da utilizzare rispetto al testo dei componenti di base.
 
-Per rendere le funzionalità del Kit di testo disponibile per i controlli standard, diversi controlli di testo iOS sono stati nuovamente implementati per utilizzare testo Kit, tra cui:
+Per rendere le funzionalità di TextKit disponibile per i controlli standard, diversi controlli di testo iOS sono stati nuovamente implementati per utilizzare TextKit, tra cui:
 
 -  UITextView
 -  UITextField
 -  UILabel
 
-
 ## <a name="architecture"></a>Architettura
 
-Testo Kit fornisce un'architettura a più livelli che separa lo spazio di archiviazione di testo dal layout e visualizzazione, ad esempio le classi seguenti:
+TextKit fornisce un'architettura a più livelli che separa lo spazio di archiviazione di testo dal layout e visualizzazione, ad esempio le classi seguenti:
 
 -  `NSTextContainer` : Fornisce la geometria che viene utilizzato per il testo di layout e il sistema di coordinate.
 -  `NSLayoutManager` : Definisce il layout di testo, attivando il testo in glifi. 
@@ -37,7 +37,7 @@ Queste tre classi vengono applicate a una visualizzazione che esegue il renderin
 
 Nella figura seguente viene illustrata questa architettura:
 
- ![](textkit-images/textkitarch.png "Nella figura viene illustrata l'architettura del Kit di testo")
+ ![](textkit-images/textkitarch.png "Nella figura viene illustrata l'architettura TextKit")
 
 ## <a name="text-storage-and-attributes"></a>Gli attributi e l'archiviazione di testo
 
@@ -56,7 +56,7 @@ Dopo aver `EndEditing` viene chiamato, le modifiche vengono inviate al gestore d
 
 ## <a name="layout-with-exclusion-path"></a>Layout con il percorso di esclusione
 
-Testo Kit inoltre supporta il layout e consente scenari complessi, ad esempio testo a più colonne e propagazione i percorsi specificati chiamato *percorsi di esclusione*. I percorsi di esclusione vengono applicati per il contenitore di testo, che modifica la geometria del layout del testo, causando il testo scorra i percorsi specificati.
+TextKit inoltre supporta il layout e consente per scenari complessi, ad esempio testo a più colonne e propagazione testo percorsi specificati chiamato *percorsi di esclusione*. I percorsi di esclusione vengono applicati per il contenitore di testo, che modifica la geometria del layout del testo, causando il testo scorra i percorsi specificati.
 
 Aggiunta di un percorso di esclusione richiede l'impostazione di `ExclusionPaths` proprietà nel gestore del layout. Impostando questa proprietà, il gestore di layout invalidare il layout del testo e scorrere il testo di racchiudere il percorso di esclusione.
 
@@ -139,10 +139,10 @@ public class ExclusionPathView : UITextView
 }
 ```
 
-Questo codice aggiunge il supporto per il disegno nella visualizzazione di testo con grafica di base. Poiché la `UITextView` classe è ora compilata per usare il Kit di testo per il rendering del testo e layout, è possibile utilizzare tutte le funzionalità del Kit di testo, ad esempio l'impostazione dei percorsi di esclusione.
+Questo codice aggiunge il supporto per il disegno nella visualizzazione di testo con grafica di base. Poiché il `UITextView` classe è ora compilata per usare TextKit per il rendering del testo e il layout, è possibile usare tutte le funzionalità di TextKit, ad esempio l'impostazione di percorsi di esclusione.
 
 > [!IMPORTANT]
-> Le sottoclassi questo esempio `UITextView` per aggiungere il supporto di disegno tocco. Creazione di sottoclassi `UITextView` non è necessario per ottenere le funzionalità del Kit di testo.
+> Le sottoclassi questo esempio `UITextView` per aggiungere il supporto di disegno tocco. Creazione di sottoclassi `UITextView` non è necessario per ottenere le funzionalità di TextKit.
 
 
 

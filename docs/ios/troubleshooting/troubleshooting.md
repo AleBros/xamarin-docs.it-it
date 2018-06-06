@@ -1,5 +1,6 @@
 ---
-title: Risoluzione dei problemi
+title: Risoluzione dei problemi di suggerimenti per xamarin. IOS
+description: Questo documento fornisce vari suggerimenti utili per la risoluzione dei problemi relativi durante lo sviluppo di applicazioni di xamarin. IOS. Vengono descritti i messaggi di errore specifici, nonché altri problemi potenziali.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
@@ -7,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/0201
-ms.openlocfilehash: 6a179c1d63e9b5a7b8a42705d5c112a7b71a4906
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 26fe2fb848fb81940bc01a34c69b1b28897005dc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789353"
 ---
-# <a name="troubleshooting"></a>Risoluzione dei problemi
+# <a name="troubleshooting-tips-for-xamarinios"></a>Risoluzione dei problemi di suggerimenti per xamarin. IOS 
 
 ## <a name="xamarinios-cannot-resolve-systemvaluetuple"></a>Xamarin non è possibile risolvere System.ValueTuple
 
@@ -134,7 +136,7 @@ Se viene visualizzato questo messaggio di errore, in genere il problema è che i
 
 Ciò si verifica quando si esegue l'operazione di tutti gli elementi seguenti:
 
-1.  Use Mono.Data.Sqlite
+1.  Utilizzare Mono.Data.Sqlite
 1.  Usare Mac OS X Leopard (10.5)
 1.  Eseguire l'app nel simulatore.
 

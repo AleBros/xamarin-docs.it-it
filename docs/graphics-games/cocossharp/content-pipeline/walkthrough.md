@@ -1,20 +1,21 @@
 ---
-title: Utilizzando il MonoGame PipelineTool
-description: Lo strumento di Pipeline MonoGame viene utilizzato per creare e gestire i progetti contenuti MonoGame. I file nei progetti di contenuto vengono elaborati dallo strumento di Monogame Pipeline e restituiti come file .xnb per le applicazioni CocosSharp e MonoGame.
+title: Utilizzando lo strumento di Pipeline MonoGame
+description: Lo strumento di Pipeline MonoGame viene utilizzato per creare e gestire i progetti contenuti MonoGame. I file nei progetti di contenuto sono elaborati dallo strumento MonoGame Pipeline e offrano informazioni utili come file .xnb da usare in applicazioni CocosSharp e MonoGame.
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 50e6c611e285cde9184eed242353ad08b2a941ee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 347cb7e9d417f97cb6e8d78e67b1c76a378cd188
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783297"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>Utilizzando lo strumento di Pipeline MonoGame
 
-_Lo strumento di Pipeline MonoGame viene utilizzato per creare e gestire i progetti contenuti MonoGame. I file nei progetti di contenuto vengono elaborati dallo strumento di Monogame Pipeline e restituiti come file .xnb per le applicazioni CocosSharp e MonoGame._
+_Lo strumento di Pipeline MonoGame viene utilizzato per creare e gestire i progetti contenuti MonoGame. I file nei progetti di contenuto sono elaborati dallo strumento MonoGame Pipeline e offrano informazioni utili come file .xnb da usare in applicazioni CocosSharp e MonoGame._
 
 Lo strumento di Pipeline MonoGame offre un ambiente facile da usare per la conversione di file di contenuto in **.xnb** file da usare in applicazioni CocosSharp e MonoGame. Per informazioni sul contenuto pipeline e perché sono utili per lo sviluppo di giochi, vedere [utile consultare questa introduzione nella pipeline del contenuto](~/graphics-games/cocossharp/content-pipeline/introduction.md)
 

@@ -1,21 +1,21 @@
 ---
 title: Avanzate (manuale) esempio reale
+description: Questo documento viene descritto come utilizzare l'output di xcodebuild come input a Sharpie obiettivo, che fornisce informazioni approfondite scopo dell'obiettivo Sharpie dietro le quinte.
 ms.prod: xamarin
 ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 82bca525433e5c8fea3a29250afb83962f2e64fc
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7af9700a9b661280c2ee32a1f65cdc01234cbe37
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781256"
 ---
 # <a name="advanced-manual-real-world-example"></a>Avanzate (manuale) esempio reale
 
-
 **Questo esempio viene utilizzato il [libreria POP da Facebook](https://github.com/facebook/pop).**
-
 
 Questa sezione descrive un approccio più avanzato all'associazione, in cui verrà utilizzato Apple `xcodebuild` strumento per generare il progetto POP prima e quindi dedurre manualmente l'input per Sharpie obiettivo. Questo articolo descrive essenzialmente svolte da obiettivo Sharpie dietro le quinte nella sezione precedente.
 

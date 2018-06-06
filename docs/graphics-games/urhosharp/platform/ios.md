@@ -1,20 +1,19 @@
 ---
 title: IOS UrhoSharp e supporto per tvOS
-description: iOS e tvOS il programma di installazione specifico e le funzionalità per UrhoSharp.
+description: Questo documento vengono illustrate iOS e tvOS supporto per UrhoSharp. Viene descritto come creare un progetto, configurare e avviare Urho ed eseguire un embed personalizzato di Urho.
 ms.prod: xamarin
 ms.assetid: 7B06567E-E789-4EA1-A2A9-F3B2212EDD23
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 322297e7782a06a2d900b12cd5afc5f469009f69
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7e8975b6885f6c902634e05aafca0b8ee60a981c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783975"
 ---
 # <a name="urhosharp-ios-and-tvos-support"></a>IOS UrhoSharp e supporto per tvOS
-
-_iOS e tvOS il programma di installazione specifico e funzionalità_
 
 Mentre Urho è una libreria di classi portabile e consente la stessa API da utilizzare nella piattaforma diversi per la logica di gioco, è comunque necessario inizializzare Urho nel driver specifico della piattaforma in alcuni casi, è possibile sfruttare le funzionalità specifiche della piattaforma .
 

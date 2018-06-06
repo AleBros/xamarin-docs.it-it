@@ -1,21 +1,20 @@
 ---
-title: Icone applicazioni
-description: Questo articolo viene illustrato come inclusi e la gestione di un asset di immagine in un'app xamarin da utilizzare come icona dell'App.
+title: Icone di applicazioni in xamarin. IOS
+description: "Questo documento descrive come utilizzare i vari icone di applicazioni in xamarin. ios: l'icona dell'applicazione stessa, icone Spotlight, le icone di impostazioni e grafica iTunes."
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/2017
-ms.openlocfilehash: 3bf9286fe641d836f0877bfe2e17263bf9d7356e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c07f2573aa8ac6e28b2cd6bff56a773e6206aea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783997"
 ---
-# <a name="application-icons"></a>Icone applicazioni
-
-_Questo articolo viene illustrato come inclusi e la gestione di un asset di immagine in un'app xamarin da utilizzare come icona dell'App._
+# <a name="application-icons-in-xamarinios"></a>Icone di applicazioni in xamarin. IOS
 
 Gli argomenti seguenti vengono descritti nel dettaglio:
 
@@ -49,7 +48,7 @@ La seguente immagine asset risoluzioni e dimensioni saranno necessarie per suppo
     |---|---|
     |Icona dell'applicazione|180x180|
     |In primo piano|120x120|
-    |Impostazioni|87x87|
+    |Impostazioni|87 x 87|
 
 - **iPhone: iOS 7 e 8**
 
@@ -77,7 +76,7 @@ La seguente immagine asset risoluzioni e dimensioni saranno necessarie per suppo
     |In primo piano|120x120<sup>6</sup>|
     |Impostazioni|58x58<sup>5</sup>|
 
-- **iPad: iOS 7 & 8**
+- **iPad: iOS 7 e 8**
 
     ||1x|2x|
     |---|---|---|
@@ -114,7 +113,7 @@ Per utilizzare un catalogo di Asset, eseguire le operazioni seguenti:
 
 1. Fare doppio clic su di `Info.plist` file nel **Esplora** per aprirlo e modificarlo.
 2. Scorrere verso il basso il **icone App** sezione.
-3. Dal **origine** elenco a discesa elenco, verificare **AppIcons** è selezionata: 
+3. Dal **origine** elenco a discesa elenco, verificare **AppIcon** sia selezionato: 
 
     ![](app-icons-images/migrate01.png "Assicurarsi che sia selezionato AppIcons")
 4. Dal **Esplora**, fare doppio clic su di `Assets.xcassets` file per aprirlo e modificarlo: 

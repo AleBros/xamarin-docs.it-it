@@ -1,19 +1,20 @@
 ---
-title: Distribuzione e test
-description: Test su dispositivi e il caricamento di App Store
+title: Distribuzione e test watchOS App con Xamarin
+description: Questo documento viene descritto come distribuire e testare watchOS compilate con Xamarin. Questa procedura guidata fornisce un elenco di controllo di distribuzione, vengono illustrati esplicita e con caratteri jolly app ID e si esaminano i gruppi di app.
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 47c63a01d435626fd1637b6ed5f5bb1755c717af
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 778583456e74bb7ed3a85dce96bcdbc487aef57a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790942"
 ---
-# <a name="deployment-and-testing"></a>Distribuzione e test
+# <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Distribuzione e test watchOS App con Xamarin
 
 ## <a name="deployment-checklist"></a>Elenco di controllo distribuzione
 

@@ -1,17 +1,18 @@
 ---
 title: Supporto delle estensioni Xamarin.Mac
-description: Questo articolo descrive il supporto delle estensioni in Xamarin.Mac versione 2.10 (e versioni successive).
+description: Questo documento viene descritto il supporto del Xamarin.Mac per le estensioni di ricerca, condivisione e la data odierna. Esamina le limitazioni e problemi noti, collegamenti a una procedura dettagliata e app di esempio e vengono forniti suggerimenti per l'utilizzo di estensioni.
 ms.prod: xamarin
 ms.assetid: 4148F1BE-DFA0-46B6-9FCD-425A6541F510
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 03936c75d31bfd01e741ad2c09096c925dc9dbfc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4cef6e89b89ef41a0c93b687c9df11a8aa971ed5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792378"
 ---
 # <a name="xamarinmac-extension-support"></a>Supporto delle estensioni Xamarin.Mac
 

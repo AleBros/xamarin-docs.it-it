@@ -1,18 +1,20 @@
 ---
-title: Acquisto di prodotti Non riproducibili
+title: Acquisto di prodotti Non può essere utilizzato in xamarin. IOS
+description: Questo documento descrive i prodotti non può essere utilizzato in xamarin. IOS, che sono funzionalità acquistate da un utente che rimangono disponibili per un periodo illimitato, indipendentemente dal dispositivo.
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 0a581dc222e43f8d4742bd52dc56dc691449a8f2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: db193493ea11a7963fe5fc57f0c45978c26a7a74
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786951"
 ---
-# <a name="purchasing-non-consumable-products"></a>Acquisto di prodotti Non riproducibili
+# <a name="purchasing-non-consumable-products-in-xamarinios"></a>Acquisto di prodotti Non può essere utilizzato in xamarin. IOS
 
 I prodotti non riproducibile 'proprietà' dal cliente. È previsto che sempre avranno accesso a essi, anche se il dispositivo viene smarrito o rubato o acquistare uno nuovo. Sono utili per la documentazione rivista problemi, livelli di giochi, i filtri di foto, 'le funzionalità pro', e così via. Una volta che un utente ha acquistato un prodotto non può essere utilizzato, hanno mai pagare per nuovamente. Se il codice accidentalmente consente di provare, StoreKit verrà visualizzato un messaggio che è già stato acquistato.
 

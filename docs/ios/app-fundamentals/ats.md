@@ -1,5 +1,5 @@
 ---
-title: Sicurezza del trasporto di App
+title: Sicurezza del trasporto di App in xamarin. IOS
 description: Sicurezza del trasporto di App (AT) applica connessioni protette tra le risorse internet (ad esempio i server back-end dell'app) e l'app.
 ms.prod: xamarin
 ms.assetid: F8C5E444-2D05-4D9B-A2EF-EB052CD6F007
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/13/2017
-ms.openlocfilehash: 7e3a191def7e0c06365f334b4a7708e5927eadf8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71632da89c6a276b427b36f91eb343ab0a5c515b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784322"
 ---
-# <a name="app-transport-security"></a>Sicurezza del trasporto di App
+# <a name="app-transport-security-in-xamarinios"></a>Sicurezza del trasporto di App in xamarin. IOS
 
 _Sicurezza del trasporto di App (AT) applica connessioni protette tra le risorse internet (ad esempio i server back-end dell'app) e l'app._
 

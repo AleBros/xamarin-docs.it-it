@@ -1,19 +1,20 @@
 ---
-title: Nozioni fondamentali sulle applicazioni
-description: Concetti di base dell'applicazione
+title: Nozioni di base dell'applicazione di xamarin. IOS
+description: Questo documento include collegamenti ad varie guide che descrivono i concetti fondamentali per lo sviluppo di xamarin. IOS, ad esempio sicurezza del trasporto app backgrounding, eventi e threading.
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/21/2017
-ms.openlocfilehash: d8dc1e25de527357fe6ad3ad1328a930e0e4dc70
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cdace50d851b2c99f9241b869f248e58d5b93377
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784497"
 ---
-# <a name="application-fundamentals"></a>Nozioni fondamentali sulle applicazioni
+# <a name="xamarinios-application-fundamentals"></a>Nozioni di base dell'applicazione di xamarin. IOS
 
 In questa sezione viene fornita una Guida su alcune delle più comuni attività di cose o concetti che gli sviluppatori devono tenere conto durante lo sviluppo di applicazioni di xamarin (in precedenza MonoTouch).
 

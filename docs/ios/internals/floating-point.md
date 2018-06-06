@@ -1,17 +1,19 @@
 ---
-title: A virgola mobile
+title: Operazioni a virgola mobile in xamarin. IOS
+description: Questo documento descrive come xamarin. IOS gestisce precisione a 32 e 64 bit operazioni a virgola mobile e viene associato impatto sulle prestazioni.
 ms.prod: xamarin
 ms.assetid: 003F25C1-B430-4339-9C95-7DF527EBC699
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 67fcf459747152346d32eb5836fa22b99719af12
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea5d69b52cbd4c76abb236bd1a272633dde440b7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786161"
 ---
-# <a name="floating-point"></a>A virgola mobile
+# <a name="floating-point-operations-in-xamarinios"></a>Operazioni a virgola mobile in xamarin. IOS
 
 Xamarin esegue per impostazione predefinita a 32 e 64 bit operazioni a virgola mobile con precisione a 64 bit su ARM.  
 

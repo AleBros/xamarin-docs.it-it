@@ -1,19 +1,20 @@
 ---
-title: Core NFC
-description: Tag di lettura comunicazione (prossimità) usando iOS 11
+title: Core NFC in xamarin. IOS
+description: Questo documento descrive come leggere in prossimità di tag di comunicazione field in xamarin. IOS utilizzando le API introdotte in iOS 11.
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2016
-ms.openlocfilehash: db0c417c1c79a988821a93b1cf20d94161f5c47a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c42048f9c00238fb73e354ea86322c3d19bae601
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787377"
 ---
-# <a name="core-nfc"></a>Core NFC
+# <a name="core-nfc-in-xamarinios"></a>Core NFC in xamarin. IOS
 
 _Tag di lettura comunicazione (prossimità) usando iOS 11_
 
@@ -162,5 +163,5 @@ CoreNFC consente all'app di leggere i dati dal tag NFC. Supporta la lettura di u
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [NFCTagReader (sample)](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)
+- [NFCTagReader (esempio)](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)
 - [Introduzione a Core NFC (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/718/)

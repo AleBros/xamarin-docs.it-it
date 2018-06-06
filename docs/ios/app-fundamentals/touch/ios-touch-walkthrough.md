@@ -1,18 +1,20 @@
 ---
-title: 'Procedura dettagliata: utilizzo tocco in iOS'
+title: 'Procedura dettagliata: Utilizzo tocco in xamarin. IOS'
+description: Questo documento viene descritto come gestire tocco nelle applicazioni di xamarin. IOS, che illustrano le interazioni tocco di esempio, i riconoscitori di movimento e i riconoscitori di movimento personalizzato.
 ms.prod: xamarin
 ms.assetid: 13F8289B-7A80-4959-AF3F-57874D866DCA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 58066ef0071c8105658f0d766e8f038b2bd3ddf2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fff49599d3843bb09d407316d6964ca54b6a1004
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784790"
 ---
-# <a name="walkthrough--using-touch-in-ios"></a>Procedura dettagliata: utilizzo tocco in iOS
+# <a name="walkthrough-using-touch-in-xamarinios"></a>Procedura dettagliata: Utilizzo tocco in xamarin. IOS
 
 Questa procedura dettagliata viene illustrato come scrivere codice che risponde a diversi tipi di eventi tocco. Ogni esempio è inclusa in una schermata separata:
 
@@ -316,7 +318,7 @@ Nella schermata seguente è un esempio di tali interazioni:
 
 In questa sezione si applicherà i concetti delle sezioni precedenti per generare un riconoscimento di movimenti personalizzati. Il riconoscitore di movimento personalizzato verrà sottoclassi `UIGestureRecognizer`, verrà riconoscere quando l'utente disegna "V" sullo schermo e attivare o disattivare una bitmap. Nella schermata riportata di seguito è riportato un esempio di questa schermata:
 
- [![](ios-touch-walkthrough-images/image8.png "L'app riconoscerà quando l'utente disegna "V" sullo schermo")](ios-touch-walkthrough-images/image8.png#lightbox)
+ [![](ios-touch-walkthrough-images/image8.png "L'app riconoscerà quando l'utente disegna \"V\" sullo schermo")](ios-touch-walkthrough-images/image8.png#lightbox)
 
 Seguire questi passaggi per creare un riconoscimento di movimenti personalizzati:
 

@@ -1,20 +1,19 @@
 ---
 title: Supporto di Windows UrhoSharp
-description: Il programma di installazione specifiche di Windows e funzionalità per UrhoSharp.
+description: Questo documento viene descritto il supporto di Windows per UrhoSharp. Viene descritto come creare un progetto, configurare e avviare Urho, integrare con WPF e integrare con UWP.
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: ac563e18c714a276ebe94a491999e61630d53ef3
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 094eaf0ebe84ce8c1771bd6481ee897463349856
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783233"
 ---
 # <a name="urhosharp-windows-support"></a>Supporto di Windows UrhoSharp
-
-_Funzionalità e l'installazione di Windows specifico_
 
 Mentre Urho è una libreria di classi portabile e consente la stessa API da utilizzare nella piattaforma diversi per la logica di gioco, è comunque necessario inizializzare Urho nel driver specifico della piattaforma in alcuni casi, è possibile sfruttare le funzionalità specifiche della piattaforma .
 

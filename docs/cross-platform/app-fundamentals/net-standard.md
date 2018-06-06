@@ -1,19 +1,21 @@
 ---
-title: .NET Standard
+title: Utilizzo di librerie Standard di .NET per condividere il codice
+description: Questo documento viene descritto come usare le librerie Standard di .NET per condividere il codice. Illustra la creazione di una libreria .NET Standard, modifica le impostazioni e utilizzarlo in un'applicazione.
 ms.prod: xamarin
 ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: c70a1cb1aa05426ba6d54d8af3787f014883bfa1
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 448bbc0630388f6bf45056c90cc75586996d0623
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781033"
 ---
-# <a name="net-standard"></a>.NET Standard
+# <a name="using-net-standard-libraries-to-share-code"></a>Utilizzo di librerie Standard di .NET per condividere il codice
 
-## <a name="using-net-standard-library-projects-to-share-code"></a>Utilizzo di progetti di libreria Standard di .NET per condividere il codice
+## <a name="net-standard"></a>.NET Standard
 
 La libreria .NET Standard è una specifica formale delle API .NET che devono essere disponibili in tutti i runtime .NET. La motivazione alla base della libreria Standard è l'esigenza di creare maggiore uniformità nell'ecosistema .NET.
 Lo standard [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) continua ad assicurare uniformità riguardo al comportamento del runtime .NET, ma non esiste una specifica simile per le BCL (Base Class Library) .NET per le implementazioni delle librerie .NET.

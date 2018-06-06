@@ -1,21 +1,20 @@
 ---
-title: Modifiche all'architettura
-description: Esplorare le nuove funzionalità di iOS 11
+title: Modifiche all'architettura in iOS 11
+description: Questo documento descrive la deprecazione delle App a 32 bit in iOS 11. Illustra come aggiornare le applicazioni alle architetture a 64 bit di destinazione.
 ms.prod: xamarin
 ms.assetid: 55F62F3F-8570-402B-B7D9-2875F76CB946
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 6dd874fd803d2b3de21b0b604cbc2bafa5bf1aec
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09d528ceb0654debd7c0ac8818f19c622775eac2
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787435"
 ---
-# <a name="architecture-changes"></a>Modifiche all'architettura
-
-_Esplorare le nuove funzionalità di iOS 11_
+# <a name="architecture-changes-in-ios-11"></a>Modifiche all'architettura in iOS 11
 
 Una delle principali modifiche che è necessario essere consapevoli di con iOS 11 è della deprecazione del supporto a 32 bit per le app, come descritto in dettaglio nella [Apple](https://developer.apple.com/news/?id=06282017b) comunicato. Tutte le nuove app e aggiornamenti alle App esistenti devono supportare a 64 bit. applicazioni a 32 bit **non verranno avviate** in iOS 11.
 

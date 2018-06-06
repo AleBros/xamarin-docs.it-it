@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials telefonica
-description: La classe PhoneDialer consente a un'applicazione aprire un collegamento web nel browser preferito sistema ottimizzato o browser esterno.
+title: 'Xamarin.Essentials: Telefonica'
+description: La classe PhoneDialer in Xamarin.Essentials consente a un'applicazione aprire un collegamento web nel browser preferito sistema ottimizzato o browser esterno.
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 112cc305457413ad057e390d46c5a765ea29514f
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 6733e43ed4174d1dd78b2e8f70268eb54adadb98
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782847"
 ---
-# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials telefonica
+# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Telefonica
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 

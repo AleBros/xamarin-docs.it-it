@@ -1,20 +1,19 @@
 ---
 title: Xamarin Profiler risoluzione dei problemi
-description: Risoluzione dei problemi il Xamarin Profiler
+description: Questo documento vengono fornite informazioni sulla risoluzione dei problemi correlate al Xamarin Profiler. Vengono descritti i problemi relativi alla registrazione e diagnostica, l'IDE e altri argomenti.
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 9e2f9a35f37513ce0cb785f2bd922aeccf42dd8e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 247a18cf7f645ea90d100cb3f4900f30ac7754cc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793855"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin Profiler risoluzione dei problemi
-
-_Risoluzione dei problemi il Xamarin Profiler_
 
 ## <a name="logging-and-diagnostics"></a>Registrazione e diagnostica
 
@@ -25,6 +24,7 @@ Il team di Xamarin consente di tenere traccia dei problemi, se fornire informazi
 - Il **.mlpd** generate per la sessione di profilatura (vedere sotto).
 
 ### <a name="getting-log-outputs"></a>Ottenere l'output di Log
+
 In Mac vengono salvati i log `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`.
 
 In Windows salvarli su `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` Includi log più recente quando si invia un problema.
@@ -49,7 +49,6 @@ Il **.mlpd** per una sessione di corrente può essere salvata anche scegliendo *
 
 ![](troubleshooting-images/image17-vs.png "Salvataggio file .mlpd in Visual Studio")
 
-
 È importante notare che **.mlpd** contengono molte informazioni e le dimensioni del file sarà elevata.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
@@ -70,7 +69,6 @@ Controllare le impostazioni seguenti per risolvere questo problema:
 - Assicurarsi di essere connessi in modo semplice e configurata correttamente autenticato.
 - [Visual Studio] È necessario utilizzare [Visual Studio Enterprise](https://www.visualstudio.com/vs/enterprise/) e avere una licenza Enterprise.
 
-
 #### <a name="i-get-an-error-when-i-try-to-launch-the-profiler"></a>Viene visualizzato un errore quando si tenta di avviare il profiler
 
 Se si esegue in questa finestra di errore quando si usa il profiler di Visual Studio:
@@ -83,14 +81,11 @@ Se si esegue in questa finestra di errore quando si usa il profiler di Visual St
 
 Se si dispone di un thread che si desidera controllare in modo specifico, sarebbe ideale per denominare il primo thread molto inizio della sua creazione in modo da ottenere get `ThreadName` anziché `0x0`. Ad esempio per impostare il nome del thread di interfaccia utente, è possibile utilizzare il codice seguente:
 
-
 ```csharp
 RunOnUiThread (() => {
   Thread.CurrentThread.Name  = "UI";
 });
 ```
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

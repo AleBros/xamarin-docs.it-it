@@ -1,17 +1,19 @@
 ---
-title: Utilizzo di icone
+title: Utilizzo di watchOS icone di Xamarin
+description: Questo documento descrive le varie icone necessarie per un'applicazione watchOS e su come configurare una soluzione per includere queste icone.
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: a7cdecaa2ba6a8c9f28ef8598fec31506eee6852
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 150cca754de26edffcf97bb5d39b26166662c75b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790666"
 ---
-# <a name="working-with-icons"></a>Utilizzo di icone
+# <a name="working-with-watchos-icons-in-xamarin"></a>Utilizzo di watchOS icone di Xamarin
 
 Soluzioni di Apple Watch richiedono due set di icone:
 
@@ -31,7 +33,7 @@ Soluzioni di Apple Watch richiedono due set di icone:
 
 Per garantire che l'app iOS e app di espressioni di controllo Mostra il nome corretto e l'icona, seguire queste istruzioni per ogni progetto:
 
-### <a name="ios-app"></a>iOS App
+### <a name="ios-app"></a>App iOS
 
 Consultare il [icone applicazioni iOS Guida](~/ios/app-fundamentals/images-icons/app-icons.md) affinché siano configurate correttamente le icone dell'app iOS.
 

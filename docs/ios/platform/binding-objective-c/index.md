@@ -1,6 +1,6 @@
 ---
 title: Associazione iOS librerie
-description: Come creare librerie native di iOS (e CocoaPods) accessibili in App Xamarin.
+description: Questo documento descrive come creare c# associazioni al codice Objective-C, rendendo possibile l'utilizzo di librerie native e CocoaPods in un'applicazione di xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
@@ -8,15 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 268900c7ab7b317b0b20f4c1ead2360fd6f9bbf0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b054595568a34616a01f2c3f3c7d85f968c3f1fa
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787168"
 ---
 # <a name="binding-ios-libraries"></a>Associazione iOS librerie
-
-_Come creare librerie native di iOS (e CocoaPods) accessibili in App Xamarin._
 
 Vedere i collegamenti seguenti per informazioni sull'associazione di raccolte Objective-C e CocoaPods per xamarin. IOS e Xamarin.Mac:
 

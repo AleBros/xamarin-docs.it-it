@@ -1,18 +1,20 @@
 ---
-title: watchOS interfaccia utente
+title: watchOS controlli dell'interfaccia utente in Xamarin
+description: Questo documento descrive i diversi controlli che possono essere utilizzati nelle interfacce utente watchOS. Fornisce una descrizione di etichette, i pulsanti, commutatori, i dispositivi di scorrimento, immagini, separatori, mappe e altro ancora.
 ms.prod: xamarin
 ms.assetid: EDFAD203-02EA-4A74-9CE2-7B8513BC90E1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/19/2016
-ms.openlocfilehash: 73099768d876cad08571c3d0bf8340535eb1307b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b56cfed8f045d824996a004539533b27d66c8cb1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791410"
 ---
-# <a name="watchos-user-interface"></a>watchOS interfaccia utente
+# <a name="watchos-user-interface-controls-in-xamarin"></a>watchOS controlli dell'interfaccia utente in Xamarin
 
 Il [ **WatchKitCatalog** ](https://github.com/xamarin/monotouch-samples/tree/master/watchOS/WatchKitCatalog) illustra vari controlli watchOS. Storyboard dell'app è illustrato di seguito (fare clic per ingrandire):
 

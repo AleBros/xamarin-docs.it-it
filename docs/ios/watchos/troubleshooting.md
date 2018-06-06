@@ -1,6 +1,6 @@
 ---
 title: watchOS risoluzione dei problemi
-description: Problemi noti e soluzioni alternative per problemi di sviluppo watchOS.
+description: Questo documento vengono illustrati i problemi noti e soluzioni alternative per watchOS lo sviluppo con Xamarin. Vengono descritte le immagini con problemi, aggiunta manuale di file di controller di interfaccia, avviare un'app di espressioni di controllo dalla riga di comando e molto altro.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
@@ -8,11 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 6e7a7dd09d65b88831136662d8718886aaf483c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4e84028336669738c40da9e37cd22f32ba11dfc1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791765"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS risoluzione dei problemi
 
@@ -96,7 +97,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
 2. Trascinare una nuova `InterfaceController` nello storyboard:
 
-    ![](troubleshooting-images/add-1.png "A InterfaceController")
+    ![](troubleshooting-images/add-1.png "Un InterfaceController")
 
 3. È possibile trascinare i controlli nel controller di interfaccia (ad es. le etichette e i pulsanti) ma non è possibile creare azioni o prese ancora, poiché non esiste alcun **h** file di intestazione. La procedura seguente causerà la **h** file di intestazione da creare.
 
@@ -257,7 +258,7 @@ Ad esempio, è possibile aggiungere gli argomenti per il comando mtouch:
 
 Gli argomenti rimanenti vengono spiegati di seguito:
 
-### <a name="--sdkroot"></a>--sdkroot
+### <a name="--sdkroot"></a>-sdkroot
 
 Obbligatorio. Specifica il percorso a Xcode (6.2 o versione successiva).
 

@@ -1,18 +1,20 @@
 ---
-title: Modifica
+title: Modifica delle tabelle con xamarin. IOS
+description: Questo documento viene descritto come modificare le tabelle in xamarin. IOS. Viene descritto scorrere rapidamente per eliminare, modalità di modifica e inserimento di riga.
 ms.prod: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 161de0209217dde671b976afad90eaad18d8c7b0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 28ebf1157a1bfc9f7bd910fd11365b29cecb9529
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789990"
 ---
-# <a name="editing"></a>Modifica
+# <a name="editing-tables-with-xamarinios"></a>Modifica delle tabelle con xamarin. IOS
 
 Funzionalità di modifica nella tabella sono abilitate per l'override dei metodi in un `UITableViewSource` sottoclasse. Il comportamento di modifica più semplice è il movimento di scorrere rapidamente per eliminare che può essere implementato con un override del metodo singolo.
 La modifica più complesso (incluso lo spostamento di righe) può essere eseguita con la tabella in modalità di modifica.

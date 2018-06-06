@@ -1,18 +1,20 @@
 ---
-title: Procedura dettagliata - utilizza il percorso di sfondo
+title: Procedura dettagliata - percorso di sfondo in xamarin. IOS
+description: Questo documento fornisce una procedura dettagliata di come usare le informazioni sul percorso in un'applicazione di xamarin. IOS backgrounded. Viene descritto il programma di installazione necessario, interfaccia utente e gli Stati dell'applicazione.
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: e6c74d9ffba4f63682a905d6ebc06d02be81abf4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: aef39ef435bbbad6f643b2376832d8f8132d6a4c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784094"
 ---
-# <a name="walkthrough---using-background-location"></a>Procedura dettagliata - utilizza il percorso di sfondo
+# <a name="walkthrough---background-location-in-xamarinios"></a>Procedura dettagliata - percorso di sfondo in xamarin. IOS
 
 In questo esempio verrà per compilare iOS dell'applicazione di percorso che stampa informazioni il percorso corrente: latitudine, longitudine e altri parametri alla schermata. Questa applicazione verrà illustrato come eseguire correttamente gli aggiornamenti di percorso, mentre l'applicazione è attivo o Backgrounded.
 

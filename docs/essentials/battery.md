@@ -1,17 +1,18 @@
 ---
-title: Batteria Xamarin.Essentials
-description: La classe batteria consente di controllare le informazioni sulla batteria del dispositivo e monitorare le modifiche.
+title: 'Xamarin.Essentials: batteria'
+description: Questo documento descrive la classe di batteria in Xamarin.Essentials, che consente di controllare le informazioni sulla batteria del dispositivo e monitorare le modifiche.
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 171f65f0ab26faaacddbd8fef37056d7f892d973
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: 35764b4c2270359a7c010e1186f882e236e17fd5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782086"
 ---
-# <a name="xamarinessentials-battery"></a>Batteria Xamarin.Essentials
+# <a name="xamarinessentials-battery"></a>Xamarin.Essentials: batteria
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 

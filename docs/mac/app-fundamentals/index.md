@@ -1,5 +1,5 @@
 ---
-title: Nozioni di base dell'applicazione
+title: Nozioni di base dell'applicazione Xamarin.Mac
 description: Questo documento collegamenti a guide che descrivono i vari concetti necessari per comprendere quando si sviluppano applicazioni Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 5A36B3A7-F197-4AC3-A40D-B2C49362FF06
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/17/2015
-ms.openlocfilehash: 807cf0e16cafc00483cecfc578367bc110657672
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1c807e97d5218e93c4eb991a9bd80219c9745c2b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791501"
 ---
-# <a name="application-fundamentals"></a>Nozioni di base dell'applicazione
+# <a name="xamarinmac-application-fundamentals"></a>Nozioni di base dell'applicazione Xamarin.Mac
 
 ## <a name="common-patterns-and-idiomsmacapp-fundamentalspatternsmd"></a>[Modelli e idiomi comuni](~/mac/app-fundamentals/patterns.md)
 

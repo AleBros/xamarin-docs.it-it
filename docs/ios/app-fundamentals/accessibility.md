@@ -1,16 +1,18 @@
 ---
 title: Accessibilità in iOS
+description: Questo documento descrive accessibilità in iOS, discusse le varie proprietà e le funzionalità utilizzabili per rendere utilizzabile l'applicazione dagli utenti tanti possibili.
 ms.prod: xamarin
 ms.assetid: 88D59B36-05A3-4356-AE29-EC2B69CE7162
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/18/2016
-ms.openlocfilehash: af28d0866337c769d1d6102317fc186c49ec259e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fa85459870211ff26c3bfdd3cc25f722a635952c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783571"
 ---
 # <a name="accessibility-on-ios"></a>Accessibilità in iOS
 
@@ -89,7 +91,7 @@ Se l'interfaccia utente è disposto in uno storyboard, è possibile specificare 
 
 Questo file verrà inserito nella **es.lproj** directory per il contenuto spagnolo.
 
-**Localizable.strings**
+**Localizable.Strings**
 
 In alternativa, è possibile aggiungere le traduzioni per il **Localizable.strings** file (ad es la directory del contenuto localizzato. **es.lproj** per lo spagnolo):
 
@@ -140,4 +142,4 @@ Mentre il controllo è visibile, utilizzare l'icona "X" nella parte superiore si
 
 - [Accessibilità multipiattaforma](~/cross-platform/app-fundamentals/accessibility.md)
 - [iOS accessibilità (mela)](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
-- [iOS VoiceOver](http://www.apple.com/accessibility/ios/voiceover/)
+- [iOS Voice over](http://www.apple.com/accessibility/ios/voiceover/)

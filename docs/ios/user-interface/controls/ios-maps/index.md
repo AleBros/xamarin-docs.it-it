@@ -1,21 +1,20 @@
 ---
-title: Mappe
-description: iOS sono inclusi il MapKit framework, che consente di aggiungere facilmente mappato a un'applicazione. Utilizzando il Kit di mappa, le applicazioni iOS possono aggiungere mappe interattive che supportano funzionalità quali la panoramica e zoom, che mostrano il percorso di utente e grafica dei livelli in una mappa. In questo articolo affronta molte delle funzionalità del Kit di mappa, che illustra come sfruttare i vantaggi di essi per creare funzionalità geografica in un'applicazione
+title: Mappe in xamarin. IOS
+description: Questo documento descrive il framework di MapKit iOS e come utilizzarlo con xamarin. IOS. Illustra come aggiungere una mappa, stile, panoramica e zoom, operare località dell'utente, aggiungere annotazioni, collaborare con callout e sovrapposizioni di strade ed eseguire ricerca locale.
 ms.prod: xamarin
 ms.assetid: 5DD8E56D-51C1-4AFA-B387-79B5734698ED
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 0249da1754083231fa4426ae4f42ce4ad73c3f51
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3649c8eb9c8c1a82940b8e2eece7d2bfd005d024
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790230"
 ---
-# <a name="maps"></a>Mappe
-
-_iOS sono inclusi il MapKit framework, che consente di aggiungere facilmente mappato a un'applicazione. Utilizzando il Kit di mappa, le applicazioni iOS possono aggiungere mappe interattive che supportano funzionalità quali la panoramica e zoom, che mostrano il percorso di utente e grafica dei livelli in una mappa. In questo articolo affronta molte delle funzionalità del Kit di mappa, che illustra come sfruttare i vantaggi di essi per creare funzionalità geografica in un'applicazione_
+# <a name="maps-in-xamarinios"></a>Mappe in xamarin. IOS
 
 Le mappe sono una funzionalità comune in tutti i sistemi operativi moderni dispositivi mobili. iOS offre il supporto di mapping in modo nativo tramite il framework del Kit di mappa. Kit di mappa, le applicazioni possono aggiungere facilmente mappe dettagliate e interattive. Queste mappe possono essere personalizzate in diversi modi, ad esempio l'aggiunta di annotazioni per contrassegnare i percorsi su una mappa e la sovrapposizione di elementi grafici di impatto su forme arbitrarie. Kit di mappa ha anche il supporto incorporato per mostrare la posizione corrente di un dispositivo.
 

@@ -1,18 +1,20 @@
 ---
-title: Acquisto di prodotti di consumo
+title: Acquisto di prodotti può essere utilizzati in xamarin. IOS
+description: Questo documento descrive i prodotti utilizzabili in xamarin. IOS. Prodotto di consumo è parti a utilizzo singolo di funzionalità, ad esempio valuta di gioco.
 ms.prod: xamarin
 ms.assetid: E0CB4A0F-C3FA-3933-58A7-13246971D677
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5c2c84c044ff41cced2c97e414502faff45341ec
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9c53af1055736512c42f83a58011b7b3a42bcd5b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786977"
 ---
-# <a name="purchasing-consumable-products"></a>Acquisto di prodotti di consumo
+# <a name="purchasing-consumable-products-in-xamarinios"></a>Acquisto di prodotti può essere utilizzati in xamarin. IOS
 
 I prodotti utilizzabili sono più semplici da implementare, poiché non c'è Nessun requisito 'restore'. Sono utili per i prodotti come valuta di gioco o una parte a utilizzo singolo della funzionalità. Gli utenti possono acquistare nuovamente prodotti consumo over-e-over nuovamente.
 
@@ -23,8 +25,6 @@ Il codice di esempio che accompagna questo documento illustra i prodotti incorpo
 [![La visualizzazione di processo di acquisto](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
    
  Il flusso di lavoro di base è:   
-   
-   
    
  1. Aggiunge l'app un `SKPayment` alla coda. Se necessario, l'utente verrà richiesto per l'ID Apple e viene richiesto di confermare il pagamento.   
    

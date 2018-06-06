@@ -1,19 +1,20 @@
 ---
-title: Touch con iOS
+title: Eventi tocco ed i movimenti di xamarin. IOS
+description: Questo documento viene descritto come utilizzare eventi tocco, Multi-touch, i movimenti, più i movimenti e movimenti personalizzati nelle applicazioni di xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 9ed90a9c4ddcd398d834cb8c91553a57e7bd5ad8
-ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
+ms.openlocfilehash: 34073474ef3ef74f2fddbf487b3377224dc1aa3e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34689541"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784589"
 ---
-# <a name="touch-in-ios"></a>Touch con iOS
+# <a name="touch-events-and-gestures-in-xamarinios"></a>Eventi tocco ed i movimenti di xamarin. IOS
 
 È importante comprendere gli eventi di tocco e toccare API in un'applicazione iOS, come se fossero centrale per tutte le interazioni con il dispositivo fisiche. Tutte le interazioni di tocco comportano un `UITouch` oggetto. In questo articolo verrà illustrato come utilizzare la `UITouch` classe e le relative API per supportare il tocco. In un secondo momento, si espanderà in conoscendo per informazioni su come supportare i movimenti.
 

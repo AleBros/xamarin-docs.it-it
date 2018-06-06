@@ -1,20 +1,19 @@
 ---
-title: Selezione di documento
-description: Il controller di visualizzazione documento selezione concede agli utenti di accedere a file esterni al sandbox di un'applicazione. È un semplice meccanismo per la condivisione di documenti tra app. Consente inoltre i flussi di lavoro più complessi, poiché gli utenti possono modificare un singolo documento con più applicazioni. In questo articolo viene fornita un'introduzione all'utilizzo la selezione del documento in un'applicazione di xamarin. IOS e le modifiche nei documenti iCloud necessari per supportarla.
+title: Selezione di documento in xamarin. IOS
+description: Questo documento descrive iOS selettore di documento e viene illustrato come utilizzare in xamarin. IOS. Accetta un'occhiata iCloud, documenti, codice di programma di installazione comune, estensioni di provider di documento e altro ancora.
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: d9b98611c7d269e590ce6fe2ce0270ef71dacf1e
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: efa1b589ad4afe26d8b87c3db1777660b3e27be6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786886"
 ---
-# <a name="document-picker"></a>Selezione di documento
-
-_Il controller di visualizzazione documento selezione concede agli utenti di accedere a file esterni al sandbox di un'applicazione. È un semplice meccanismo per la condivisione di documenti tra app. Consente inoltre i flussi di lavoro più complessi, poiché gli utenti possono modificare un singolo documento con più applicazioni. In questo articolo viene fornita un'introduzione all'utilizzo la selezione del documento in un'applicazione di xamarin. IOS e le modifiche nei documenti iCloud necessari per supportarla._
+# <a name="document-picker-in-xamarinios"></a>Selezione di documento in xamarin. IOS
 
 La selezione del documento consente di essere condivisi tra le app documenti. Questi documenti possono essere archiviati in iCloud o nella directory dell'applicazione diverso. I documenti vengono condivisi tramite il set di [estensioni Provider documento](~/ios/platform/extensions.md) l'utente ha installato nel dispositivo. 
 
@@ -39,7 +38,7 @@ Per implementare le nuove funzionalità di selezione di documento, le seguenti m
 -  i dispositivi iOS è possono accedere al contenuto della cartella del sistema operativo Mac iCloud.
 
 > [!IMPORTANT]
-> Apple [fornisce strumenti](https://developer.apple.com/support/allowing-users-to-manage-data/) per aiutare gli sviluppatori di gestire correttamente generale Data Protection regolamento (PILR dell'Unione europea).
+> Apple [fornisce strumenti](https://developer.apple.com/support/allowing-users-to-manage-data/) per aiutare gli sviluppatori a gestire correttamente il Regolamento generale sulla protezione dei dati (GDPR) dell'Unione Europea.
 
 ## <a name="what-is-a-document"></a>Che cos'è un documento?
 

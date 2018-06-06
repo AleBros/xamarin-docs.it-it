@@ -1,19 +1,20 @@
 ---
-title: Introduzione a ARKit
-description: Realtà aumentata per iOS 11
+title: Introduzione a ARKit in xamarin. IOS
+description: Questo documento descrive realtà aumentata in iOS 11 con ARKit. Illustra come aggiungere un modello 3D per un'app, configurare la visualizzazione, implementare un delegato di sessione, posizionare il modello 3D nel mondo e sospendere la sessione realtà aumentata.
 ms.prod: xamarin
 ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/30/2016
-ms.openlocfilehash: f48cdd48e63131fe234fef1bb60b555724dd8a92
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 55ef2004f66cb808f878b2215dfdd59a45015877
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787169"
 ---
-# <a name="introduction-to-arkit"></a>Introduzione a ARKit
+# <a name="introduction-to-arkit-in-xamarinios"></a>Introduzione a ARKit in xamarin. IOS
 
 _Realtà aumentata per iOS 11_
 

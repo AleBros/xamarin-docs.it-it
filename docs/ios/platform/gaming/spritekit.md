@@ -1,33 +1,35 @@
 ---
-title: SpriteKit
+title: SpriteKit in xamarin. IOS
+description: Questo documento descrive SpriteKit, framework grafica 2D di Apple che si integra con SceneKit, incorpora fisica e animazione, include il supporto di illuminazione e dello sfondo e altro ancora. SpriteKit può essere utilizzato per creare giochi 2D.
 ms.prod: xamarin
 ms.assetid: 93971DAE-ED6B-48A8-8E61-15C0C79786BB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 967fd5b25213478c89d1ab849b6c0b7ac66d0e20
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b74b5a722aab240b55ed96bea2a33b162d7817eb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786769"
 ---
-# <a name="spritekit"></a>SpriteKit
+# <a name="spritekit-in-xamarinios"></a>SpriteKit in xamarin. IOS
 
-Sprite Kit, il framework di gioco 2D di Apple, include alcune nuove funzionalità interessanti in iOS 8 e OS X Yosemite. Queste includono l'integrazione con scena Kit, supporto dello shader, illuminazione, ombreggiature, vincoli, la generazione di mappe normali e miglioramenti fisica. In particolare, le nuove funzionalità di fisica rendono molto semplice aggiungere effetti realistici per un gioco.
+SpriteKit, il framework di grafica 2D di Apple, include alcune nuove funzionalità interessanti in iOS 8 e OS X Yosemite. Queste includono l'integrazione con SceneKit, supporto dello shader, illuminazione, ombreggiature, vincoli, la generazione di mappe normali e miglioramenti fisica. In particolare, le nuove funzionalità di fisica rendono molto semplice aggiungere effetti realistici per un gioco.
 
 ## <a name="physics-bodies"></a>Corpi fisica
 
-Kit di sprite include un 2D, fisica corpo rigida API. Ogni sprite ha un corpo fisica associato (`SKPhysicsBody`) che definisce le proprietà fisiche, ad esempio massa le forze di attrito, nonché la geometria del corpo nel mondo fisica.
+SpriteKit include un 2D, fisica corpo rigida API. Ogni sprite ha un corpo fisica associato (`SKPhysicsBody`) che definisce le proprietà fisiche, ad esempio massa le forze di attrito, nonché la geometria del corpo nel mondo fisica.
 
 ## <a name="creating-a-physics-body-from-a-texture"></a>Creazione di un corpo fisica da una trama
-Sprite Kit supporta ora la derivazione corpo fisica di un sprite dalla rispettiva trama. Questo rende facile da implementare conflitti che più naturali.
+SpriteKit supporta ora la derivazione corpo fisica di un sprite la trama. Questo rende facile da implementare conflitti che più naturali.
 
 Ad esempio, si noti che nel conflitto seguente come le banana monkey sono in conflitto quasi alla superficie di ogni immagine:
  
 ![](spritekit-images/image13.png "Sono in conflitto di banana e monkey quasi alla superficie di ogni immagine")
 
-Kit sprite semplifica la creazione di questo tipo di un corpo fisica possibili con una singola riga di codice. È sufficiente chiamare `SKPhysicsBody.Create` con la trama e le dimensioni: sprite. PhysicsBody = SKPhysicsBody.Create (sprite. Trama, sprite. Dimensioni).
+SpriteKit permette la creazione di questo tipo un corpo di fisica con una singola riga di codice. È sufficiente chiamare `SKPhysicsBody.Create` con la trama e le dimensioni: sprite. PhysicsBody = SKPhysicsBody.Create (sprite. Trama, sprite. Dimensioni).
 
 ## <a name="alpha-threshold"></a>Soglia alpha
 
@@ -45,7 +47,7 @@ L'effetto dell'ottimizzazione la soglia alpha simile al seguente ottimizza il co
  
 ## <a name="physics-fields"></a>Campi fisica
 
-Un'altra aggiunta importante per Sprite Kit è supportano il nuovo campo fisica. Questi consentono di aggiungere, ad esempio, i campi vortex, gravità radiale campi e i campi di primavera per assegnare un nome di un numero limitato.
+Un'altra aggiunta importante per SpriteKit è supportano il nuovo campo fisica. Questi consentono di aggiungere, ad esempio, i campi vortex, gravità radiale campi e i campi di primavera per assegnare un nome di un numero limitato.
 
 Campi fisica vengono creati utilizzando la classe SKFieldNode, che viene aggiunto a una scena come qualsiasi altro `SKNode`. Esistono diversi metodi factory per `SKFieldNode` per creare campi fisica diversa. È possibile creare un campo spring chiamando `SKFieldNode.CreateSpringField()`, un campo della radiale gravità chiamando `SKFieldNode.CreateRadialGravityField()`e così via.
 

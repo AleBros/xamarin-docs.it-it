@@ -1,21 +1,20 @@
 ---
-title: Controlli della fotocamera manuale
-description: Il AVFoundation Framework rende ancora più facile agli utenti di richiedere foto consentendo la fotocamera manuale. Usando questo framework, un'applicazione può richiedere un controllo diretto su messa a fuoco, del bianco e le impostazioni di esposizione. Un'applicazione può inoltre utilizzare acquisizioni esposizione tra parentesi quadre per acquisire automaticamente le immagini con diverse impostazioni di esposizione. In questo articolo verrà esaminato un rapido utilizzando i controlli di fotocamera manuale in un'applicazione per dispositivi mobili iOS semplice 8.
+title: Manuale della fotocamera in xamarin. IOS
+description: Questo documento viene descritto come framework iOS AVFoundation utilizzabile con xamarin. IOS per abilitare i controlli dispositivo foto/video manuale. Fotocamera manuale controlli consentono all'utente di controllo lo stato attivo, del bianco e impostazioni di esposizione.
 ms.prod: xamarin
 ms.assetid: 56340225-5F3C-4BFC-9A79-61496D7FE5B5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 8545dce1b9232e396c4c9e71ad5f20649eef2417
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a0f605a38117df87a03801c3b9d86b0b7361c232
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790825"
 ---
-# <a name="manual-camera-controls"></a>Controlli della fotocamera manuale
-
-_Il AVFoundation Framework rende ancora più facile agli utenti di richiedere foto consentendo la fotocamera manuale. Usando questo framework, un'applicazione può richiedere un controllo diretto su messa a fuoco, del bianco e le impostazioni di esposizione. Un'applicazione può inoltre utilizzare acquisizioni esposizione tra parentesi quadre per acquisire automaticamente le immagini con diverse impostazioni di esposizione. In questo articolo verrà esaminato un rapido utilizzando i controlli di fotocamera manuale in un'applicazione per dispositivi mobili iOS semplice 8._
+# <a name="manual-camera-controls-in-xamarinios"></a>Manuale della fotocamera in xamarin. IOS
 
 I controlli di fotocamera manuale, fornito dal `AVFoundation Framework` in iOS 8, consentire a un'applicazione per dispositivi mobili assumere il controllo completo della fotocamera del dispositivo iOS. Questo livello di controllo con granularità fine è utilizzabile per creare applicazioni professionali fotocamera livello e fornire le composizioni artista modificando i parametri della camera durante la creazione di un'immagine o un video.
 

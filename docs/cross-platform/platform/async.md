@@ -1,20 +1,21 @@
 ---
-title: Panoramica della programmazione asincrona
-description: "La versione più recente del linguaggio c# – versione 5 – introdotte due nuove parole chiave per esprimere le operazioni asincrone: async e await. Queste parole chiave consentono di scrivere codice semplice che prevede l'utilizzo di Task Parallel Library per eseguire operazioni a esecuzione prolungata (ad esempio l'accesso di rete) in un altro thread e accedere facilmente i risultati al completamento. Le versioni più recenti di xamarin. IOS e xamarin supportano async e await: questo documento vengono fornite spiegazioni e un esempio di utilizzo della nuova sintassi con Xamarin."
+title: Panoramica del supporto asincrono
+description: Questo documento descrive la programmazione con async e await, i concetti introdotti in c# 5 per semplificare la scrittura di codice asincrono.
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 5d6bb9581a4429502d9a70385b3ee2ff056f30ee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 22878695d93ae79bbbfe1b99961587ff0bf957be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782008"
 ---
 # <a name="async-support-overview"></a>Panoramica del supporto asincrono
 
-_La versione più recente del linguaggio c# – versione 5 – introdotte due nuove parole chiave per esprimere le operazioni asincrone: async e await. Queste parole chiave consentono di scrivere codice semplice che prevede l'utilizzo di Task Parallel Library per eseguire operazioni a esecuzione prolungata (ad esempio l'accesso di rete) in un altro thread e accedere facilmente i risultati al completamento. Le versioni più recenti di xamarin. IOS e xamarin supportano async e await: questo documento vengono fornite spiegazioni e un esempio di utilizzo della nuova sintassi con Xamarin._
+_C# 5 introdotte due parole chiave per semplificare la programmazione asincrona: async e await. Queste parole chiave consentono di scrivere codice semplice che prevede l'utilizzo di Task Parallel Library per eseguire operazioni a esecuzione prolungata (ad esempio l'accesso di rete) in un altro thread e accedere facilmente i risultati al completamento. Le versioni più recenti di xamarin. IOS e xamarin supportano async e await: questo documento vengono fornite spiegazioni e un esempio di utilizzo della nuova sintassi con Xamarin._
 
 Supporto asincrono di Xamarin è basato su Mono 3.0 e aggiorna il profilo di API dal da una versione Mobile-friendly di Silverlight per essere una versione mobile di .NET 4.5.
 

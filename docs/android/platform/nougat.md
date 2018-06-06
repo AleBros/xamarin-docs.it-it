@@ -6,12 +6,13 @@ ms.assetid: 5C74ABE2-C862-4ED0-8EA5-C7FEE5251D4B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: fe544f8ac677987f8921ccb1c11b8930811b9553
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/02/2018
+ms.openlocfilehash: 15698767ae71b68a26138169771f7f397bddd95a
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732518"
 ---
 # <a name="nougat-features"></a>Funzionalità nougat
 
@@ -46,7 +47,7 @@ In questo articolo viene illustrato come iniziare a creare App con Android Nouga
 
 Di seguito è necessario utilizzare le nuove funzionalità di Android Nougat nelle App basate su Xamarin:
 
--   **Visual Studio o Visual Studio per Mac** &ndash; se si utilizza Visual Studio, versione 4.2.0.628 o versioni successive di Xamarin per Visual Studio è obbligatoria. Se si utilizza Visual Studio per Mac, versione 6.1.0 o versione successiva di Visual Studio per Mac è necessario.
+-   **Visual Studio o Visual Studio per Mac** &ndash; se si utilizza Visual Studio, versione 4.2.0.628 o successiva di Visual Studio Tools per Xamarin è obbligatorio. Se si utilizza Visual Studio per Mac, versione 6.1.0 o versione successiva di Visual Studio per Mac è necessario.
 
 -   **Xamarin** &ndash; xamarin 7.0 o versioni successive deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 

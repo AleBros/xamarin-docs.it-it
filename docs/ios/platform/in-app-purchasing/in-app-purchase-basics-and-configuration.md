@@ -1,18 +1,20 @@
 ---
-title: Concetti di base di acquisto in-App e configurazione
+title: Nozioni fondamentali di acquisto in-App e la configurazione in xamarin. IOS
+description: Questo documento descrive gli acquisti in-app in xamarin. IOS, che illustrano le informazioni pertinenti sulle regole, la configurazione e iTunes Connect.
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c08d27ce2f5d41b7de1d08ea73232e92f9fa8144
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9ded160ad4b31346c400e63d739a3dc21f6304d3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787243"
 ---
-# <a name="in-app-purchase-basics-and-configuration"></a>Concetti di base di acquisto in-App e configurazione
+# <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Nozioni fondamentali di acquisto in-App e la configurazione in xamarin. IOS
 
 Implementazione di acquisti in-app richiede che l'applicazione di utilizzare l'API StoreKit nel dispositivo. StoreKit gestisce tutte le comunicazioni con iTunes i server Apple per ottenere informazioni sul prodotto ed eseguire le transazioni. Il profilo di provisioning deve essere configurato per l'acquisto nell'applicazione e informazioni sul prodotto devono essere immessi in iTunes Connect.
 

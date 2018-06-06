@@ -1,5 +1,5 @@
 ---
-title: Controlli standard
+title: Controlli standard in Xamarin.Mac
 description: In questo articolo viene descritto l'utilizzo con i controlli AppKit standard, ad esempio pulsanti, etichette, campi di testo, caselle di controllo e segmentata in un'applicazione Xamarin.Mac. Viene descritto aggiungerli a un'interfaccia con il generatore di interfaccia e l'interazione con essi nel codice.
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3fe155508b60cbe502c3beca58426528d6f49c9d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e9d110d0d7a46d431ea6fca50caffe05903ddce2
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793045"
 ---
-# <a name="standard-controls"></a>Controlli standard
+# <a name="standard-controls-in-xamarinmac"></a>Controlli standard in Xamarin.Mac
 
 _In questo articolo viene descritto l'utilizzo con i controlli AppKit standard, ad esempio pulsanti, etichette, campi di testo, caselle di controllo e segmentata in un'applicazione Xamarin.Mac. Viene descritto aggiungerli a un'interfaccia con il generatore di interfaccia e l'interazione con essi nel codice._
 

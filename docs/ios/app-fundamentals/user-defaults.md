@@ -1,19 +1,20 @@
 ---
-title: Utilizzo di impostazioni predefinite dell'utente
-description: In questo articolo viene descritto l'utilizzo con NSUserDefault per salvare le impostazioni predefinite in un iOS Xamarin App o un'estensione.
+title: Utilizzo di impostazioni predefinite dell'utente in xamarin. IOS
+description: In questo articolo viene descritto l'utilizzo con NSUserDefaults per salvare le impostazioni predefinite in un'app Xamarin iOS o estensione. Descrive NSUserDefaults a un livello elevato e viene illustrato come leggere e scrivere i valori.
 ms.prod: xamarin
 ms.assetid: DAE7FFC4-B8C9-4D9E-886A-9B2388452EEB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: aa28e7d5636b06c8ab1e46457537431b5d1c7f1a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3befe77e990887773d408a3b9b6ec2e8cd371540
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784614"
 ---
-# <a name="working-with-user-defaults"></a>Utilizzo di impostazioni predefinite dell'utente
+# <a name="working-with-user-defaults-in-xamarinios"></a>Utilizzo di impostazioni predefinite dell'utente in xamarin. IOS
 
 _In questo articolo viene descritto l'utilizzo con NSUserDefault per salvare le impostazioni predefinite in un'App Xamarin.iOS o un'estensione._
 

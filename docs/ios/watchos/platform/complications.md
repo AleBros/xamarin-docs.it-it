@@ -1,19 +1,20 @@
 ---
-title: Complessità
-description: watchOS consente agli sviluppatori di scrivere complicazioni personalizzati per i caratteri tipografici espressioni di controllo
+title: watchOS complicazioni in Xamarin
+description: Questo documento descrive come utilizzare i watchOS complicazioni in Xamarin. Si illustra come aggiungere una complicazione, scrivere una complicazione, modelli e fornisce il codice di esempio.
 ms.prod: xamarin
 ms.assetid: 7ACD9A2B-CF69-46EA-B0C8-10E7D81216E8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/03/2017
-ms.openlocfilehash: c058922f97183359122a1bfa2b0e162e4ce344f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c69f65091e7d6c83afe34c6d8c06477cc5d133b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791839"
 ---
-# <a name="complications"></a>Complessità
+# <a name="watchos-complications-in-xamarin"></a>watchOS complicazioni in Xamarin
 
 _watchOS consente agli sviluppatori di scrivere complicazioni personalizzati per i caratteri tipografici espressioni di controllo_
 

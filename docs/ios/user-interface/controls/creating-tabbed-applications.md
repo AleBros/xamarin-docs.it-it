@@ -1,21 +1,20 @@
 ---
-title: Barre di scheda e sulla scheda controller
-description: le applicazioni iOS utilizzando un'interfaccia utente di spostamento tramite tabulazione vengono compilate mediante la classe UITabBarController. In questo articolo verrà esaminato come configurare un'applicazione a schede contenente più controller e visualizzazioni. Si esamineranno quindi illustrato come caricare un UITabBarController quando non è il controller principale, ad esempio dopo una schermata di accesso.
+title: Barre di scheda e barra della scheda controller in xamarin. IOS
+description: Questo documento descrive iOS scheda barra controller e come usarli con xamarin. IOS. Viene illustrato come impostare un UITabBarController, utilizzare le immagini, impostare i valori di badge, funzionano con gli eventi e altro ancora.
 ms.prod: xamarin
 ms.assetid: 7C772899-2900-F139-D642-F3C4F3F14DDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c3c57cceed7271ebbe707172db892a246003426b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d8b096774e60ec0e0b69e109fa5da53c25e66d25
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789758"
 ---
-# <a name="tab-bars-and-tab-bar-controllers"></a>Barre di scheda e sulla scheda controller
-
-_le applicazioni iOS utilizzando un'interfaccia utente di spostamento tramite tabulazione vengono compilate mediante la classe UITabBarController. In questo articolo verrà esaminato come configurare un'applicazione a schede contenente più controller e visualizzazioni. Si esamineranno quindi illustrato come caricare un UITabBarController quando non è il controller principale, ad esempio dopo una schermata di accesso._
+# <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barre di scheda e barra della scheda controller in xamarin. IOS
 
 Applicazioni a schede vengono utilizzate in iOS per supportare le interfacce utente in cui è possibile accedere più schermate in nessun ordine particolare. Tramite il `UITabBarController` (classe), le applicazioni possono facilmente includono il supporto per questi scenari multi-schermati. `UITabBarController` si occupa della gestione di multi-schermata, consentendo allo sviluppatore di applicazioni di concentrarsi sui dettagli di ogni schermata.
 

@@ -1,17 +1,19 @@
 ---
-title: Registrazione di tipo
+title: Tipo Registrar per xamarin. IOS
+description: Questo documento descrive il registrar di tipo xamarin. IOS, che rende disponibili al runtime di Objective-C classi c#.
 ms.prod: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 9d4d2e5f3e1c2dc1233b466c00dd60340552fed0
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: e818d6a2092f408823e4a635a70c4f6666e3a7a9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786174"
 ---
-# <a name="type-registrar"></a>Registrazione di tipo
+# <a name="type-registrar-for-xamarinios"></a>Tipo Registrar per xamarin. IOS
 
 Questo documento descrive il sistema di registrazione di tipo usato da xamarin. IOS.
 

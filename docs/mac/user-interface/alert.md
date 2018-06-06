@@ -1,5 +1,5 @@
 ---
-title: Avvisi
+title: Avvisi in Xamarin.Mac
 description: In questo articolo viene descritto l'utilizzo con gli avvisi in un'applicazione Xamarin.Mac. Descrive la creazione e la visualizzazione degli avvisi dal codice c# e risponde alle interazioni dell'utente.
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: a451d0a5535915d9e52f687ae07ea028c0ccd5ef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1eb781fe02213de6a994f56e321316b93a128b60
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792642"
 ---
-# <a name="alerts"></a>Avvisi
+# <a name="alerts-in-xamarinmac"></a>Avvisi in Xamarin.Mac
 
 _In questo articolo viene descritto l'utilizzo con gli avvisi in un'applicazione Xamarin.Mac. Descrive la creazione e la visualizzazione degli avvisi dal codice c# e risponde alle interazioni dell'utente._
 

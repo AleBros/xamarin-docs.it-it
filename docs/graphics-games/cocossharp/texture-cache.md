@@ -1,16 +1,17 @@
 ---
-title: Memorizzazione nella cache della trama utilizzando CCTextureCache
-description: Classe CCTextureCache del CocosSharp fornisce un modo standard per organizzare, cache e scaricare il contenuto. È particolarmente utile per i giochi di grandi dimensioni che potrebbero non rientra completamente nella memoria RAM, semplificando il processo di raggruppamento e l'eliminazione delle trame.
+title: Utilizzando CCTextureCache la memorizzazione nella cache della trama
+description: Classe CCTextureCache del CocosSharp fornisce un modo standard per organizzare, cache e scaricare il contenuto. È particolarmente utile per i giochi di grande che potrebbero non essere adatto interamente nella memoria RAM, semplificando il processo di raggruppamento e all'eliminazione delle trame.
 ms.prod: xamarin
 ms.assetid: 1B5F3F85-9E68-42A7-B516-E90E54BA7102
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: bb75efea0914827f1d59a8e0943584597f91803a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: c217d8a935ae971aab472b05968c0251366362b2
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783688"
 ---
 # <a name="texture-caching-using-cctexturecache"></a>Utilizzando CCTextureCache la memorizzazione nella cache della trama
 

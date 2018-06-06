@@ -1,18 +1,20 @@
 ---
-title: Archiviare una panoramica di Kit e il recupero delle informazioni di prodotto
+title: Panoramica di StoreKit durante il recupero delle informazioni sul prodotto e in xamarin. IOS
+description: Questo documento viene fornita una panoramica di StoreKit. Vengono descritte le classi usate con StoreKit test StoreKit interazioni, visualizzazione di prodotti in vendita, gestisce i prodotti non validi e prezzi localizzati vengono visualizzati.
 ms.prod: xamarin
 ms.assetid: FC21192E-6325-4389-C060-E92DBB5EBD87
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f4ecd2942a99f80854fd340be454f9d8fefa5a36
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 964b97e82db8e79cb32598d0c955fac3ab122314
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787224"
 ---
-# <a name="store-kit-overview-and-retrieving-product-information"></a>Archiviare una panoramica di Kit e il recupero delle informazioni di prodotto
+# <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Panoramica di StoreKit durante il recupero delle informazioni sul prodotto e in xamarin. IOS
 
 L'interfaccia utente per un acquisto in-app viene visualizzato nelle schermate riportate di seguito.
 Prima di qualsiasi transazione viene eseguita, l'applicazione deve recuperare prezzo del prodotto e la descrizione per la visualizzazione. Quindi quando l'utente preme **acquistare**, l'applicazione effettua una richiesta a StoreKit che gestisce la finestra di dialogo di conferma e account di accesso ID Apple. Presupponendo che la transazione ha esito positivo, StoreKit notifica al codice dell'applicazione, che deve memorizzare il risultato della transazione e fornire all'utente l'accesso per l'acquisto.   

@@ -1,20 +1,19 @@
 ---
-title: 'Case Study: Tasky'
-description: Questo documento descrive l'applicazione nell'applicazione di esempio Tasky Portable i principi di compilazione di applicazioni multipiattaforma. Tocca sulla progettazione di applicazioni per dispositivi mobili, la scrittura di codice comune per il riutilizzo e l'implementazione di progetti specifici della piattaforma di iOS, Android e Windows Phone piattaforme di destinazione.
+title: 'Case Study di App multipiattaforma: Tasky'
+description: Questo documento viene descritto come l'applicazione di esempio Tasky Portable è stato progettato e compilato come un'applicazione per dispositivi mobili multipiattaforma. Viene descritto l'app requisiti, interfaccia, modello di dati, funzionalità di base, implementazione e altro ancora.
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 1f8325bbc6b3f8aa40a08ca2c57605544ab0bc85
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 48650445d06ad3bc7ca6d4da84c9b8837f8a0f88
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782235"
 ---
-# <a name="case-study-tasky"></a>Case Study: Tasky
-
-_Questo documento descrive l'applicazione nell'applicazione di esempio Tasky Portable i principi di compilazione di applicazioni multipiattaforma. Tocca sulla progettazione di applicazioni per dispositivi mobili, la scrittura di codice comune per il riutilizzo e l'implementazione di progetti specifici della piattaforma di iOS, Android e Windows Phone piattaforme di destinazione._
+# <a name="cross-platform-app-case-study-tasky"></a>Case Study di App multipiattaforma: Tasky
 
 *Tasky* *portabile* è un'applicazione di elenco semplice di attività da eseguire. Questo documento viene illustrato come è stata progettata e compilata, seguendo le indicazioni del [compilazione di applicazioni multipiattaforma](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) documento. La discussione include le seguenti operazioni:
 

@@ -1,16 +1,17 @@
 ---
 title: Modifiche di Framework aggiuntive iOS 9
-description: Questo articolo vengono illustrate le modifiche aggiuntive, secondarie o miglioramenti alle infrastrutture esistenti per iOS 9.
+description: Questo documento descrive le modifiche al framework aggiuntive introdotte in iOS 9. Viene descritto AVFoundation AVKit e CloudKit.
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0ae286ddbc61f48cbdd257dc453a2d9680bba703
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 15c9364cf3bdcb8c797882cc9ac76219959de439
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787708"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Modifiche di Framework aggiuntive iOS 9
 
@@ -20,9 +21,9 @@ _Questo articolo vengono illustrate le modifiche aggiuntive, secondarie o miglio
 
 Oltre alle modifiche essenziali per iOS, Apple ha apportato modifiche e miglioramenti per diversi Framework esistenti iOS 9.
 
-## <a name="av-foundation-framework-additions"></a>Aggiunte di Framework AV Foundation
+## <a name="avfoundation-framework-additions"></a>Aggiunte AVFoundation Framework
 
-In framework Foundation AV di [AVSpeechSynthesisVoice](https://developer.xamarin.com/api/type/AVFoundation.AVSpeechSynthesisVoice/) classe ora consente di specificare una voce dall'identificatore oltre alla lingua.
+In framework AVFoundation, il [AVSpeechSynthesisVoice](https://developer.xamarin.com/api/type/AVFoundation.AVSpeechSynthesisVoice/) classe ora consente di specificare una voce dall'identificatore oltre alla lingua.
 
 Ad esempio, il codice seguente ottiene un elenco di tutte le voci disponibili:
 
@@ -66,7 +67,7 @@ Per ulteriori informazioni, vedere i seguenti documenti:
 - [Catalogo CloudKit: An Introduction to CloudKit (Cocoa e JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) -app di esempio di Apple usando CloudKit e CloudKit JS.
 
 > [!IMPORTANT]
-> Apple [fornisce strumenti](https://developer.apple.com/support/allowing-users-to-manage-data/) per aiutare gli sviluppatori di gestire correttamente generale Data Protection regolamento (PILR dell'Unione europea).
+> Apple [fornisce strumenti](https://developer.apple.com/support/allowing-users-to-manage-data/) per aiutare gli sviluppatori a gestire correttamente il Regolamento generale sulla protezione dei dati (GDPR) dell'Unione Europea.
 
 ## <a name="foundation-framework-additions"></a>Aggiunte di Framework Foundation
 

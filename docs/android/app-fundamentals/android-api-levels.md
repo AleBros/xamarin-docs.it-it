@@ -6,12 +6,13 @@ ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 8f284fefd260764c6f09d78d2518bfd115782cd2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/01/2018
+ms.openlocfilehash: b942bb1be3441b1fb1a8bd65016914b3ecddbb26
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732320"
 ---
 # <a name="understanding-android-api-levels"></a>Informazioni sui livelli di API Android
 
@@ -29,6 +30,10 @@ Xamarin espone tre impostazioni di progetto a livello di API Android:
 -   [Versione di Android](#target) &ndash; specifica la versione di Android dell'app deve essere eseguita su. Questo livello API viene utilizzato in *eseguire* tempo da Android.
 
 Prima di poter configurare un livello di API per il progetto, è necessario installare i componenti di platform SDK per tale livello dell'API. Per ulteriori informazioni sul download e installazione dei componenti di Android SDK, vedere [il programma di installazione di Android SDK](~/android/get-started/installation/android-sdk.md).
+
+> [!NOTE]
+> A partire da 2018 agosto, la Console di Google Play richiederà che nuove app di destinazione del livello di API 26 (8.0 Android) o versione successiva.
+Saranno necessario per il livello di API 26 o superiore a partire da novembre 2018 App esistenti. Per ulteriori informazioni, vedere [miglioramento della protezione di app e delle prestazioni in Google Play per anni a venire](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -173,10 +178,6 @@ Il *Framework di destinazione* (noto anche come `compileSdkVersion`) è la versi
 Il Framework di destinazione identifica le versioni della libreria è collegata l'applicazione in &ndash; determina le API che è possibile usare in app. Ad esempio, se si desidera utilizzare il [NotificationBuilder.SetCategory](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetCategory/p/System.String/) metodo che è stata introdotta in Android 5.0 simbolo, è necessario impostare il Framework di destinazione su **21 livello API (simbolo)** o versione successiva. Se si imposta il Framework di destinazione del progetto per un'API livello, ad esempio **livello 19 API (KitKat)** e tenta di chiamare il `SetCategory` metodo nel codice, si otterrà un errore di compilazione.
 
 È consigliabile che la compilazione sempre con il *più recente* versione Framework di destinazione disponibili. In questo modo fornisce utili messaggi di avviso per le API deprecate che potrebbero essere chiamate dal codice. Utilizzando la versione più recente di .NET Framework di destinazione è particolarmente importante quando si utilizzano la libreria supporto più recenti &ndash; ogni libreria prevede che l'app compilata a livello API minimo della libreria di supporto o versione successiva. 
-
-> [!NOTE]
-> A partire da 2018 agosto, la Console di Google Play richiederà che nuove app di destinazione del livello di API 26 (8.0 Android) o versione successiva.
-Saranno necessario per il livello di API 26 o superiore a partire da novembre 2018 App esistenti. Per ulteriori informazioni, vedere [miglioramento della protezione di app e delle prestazioni in Google Play per anni a venire](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)

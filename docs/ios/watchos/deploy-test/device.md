@@ -1,19 +1,20 @@
 ---
-title: Test nei dispositivi di espressioni di controllo
-description: Distribuzione di applicazioni di eseguire i test sul Apple Watch
+title: Test nei dispositivi di Apple Watch
+description: Questo documento viene descritto come distribuire un'app watchOS compilata con Xamarin per i test su un Apple Watch effettivo. Vengono illustrati i dispositivi, i profili, test, il provisioning e vengono forniti alcuni suggerimenti sulla risoluzione dei problemi.
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: d1d00a4d561551435e7d2333520dc614a79dcad3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a960d81d41ff127fa3316e6190dfbf4881305c02
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790861"
 ---
-# <a name="testing-on-watch-devices"></a>Test nei dispositivi di espressioni di controllo
+# <a name="testing-on-apple-watch-devices"></a>Test nei dispositivi di Apple Watch
 
 Dopo aver eseguito la [passaggi di distribuzione](~/ios/watchos/deploy-test/index.md) per creare gli ID di App e i gruppi di App (se richiesto), utilizzare le istruzioni riportate in questa pagina per:
 

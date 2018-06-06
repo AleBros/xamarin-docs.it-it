@@ -1,18 +1,19 @@
 ---
-title: Utilizzo di localizzazione
-description: Adattamento App watchOS per più lingue
+title: Utilizzo di watchOS localizzazione in Xamarin
+description: Questo documento descrive come localizzare watchOS compilate con Xamarin. Illustra le app di espressioni di controllo, le estensioni di espressioni di controllo, le stringhe nel codice, creare uno storyboard testo, test e altro ancora.
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: c765005491f55a1bdcadb1bc5aea97f693dc4570
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4f158f1c8699ad5090eb7fade8af8918c8881d95
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790779"
 ---
-# <a name="working-with-localization"></a>Utilizzo di localizzazione
+# <a name="working-with-watchos-localization-in-xamarin"></a>Utilizzo di watchOS localizzazione in Xamarin
 
 _Adattamento App watchOS per più lingue_
 
@@ -172,7 +173,7 @@ Le stringhe di lingua spagnola (tradotto) per lo storyboard è illustrate di seg
 
 Questi valori vengono utilizzati nel codice per convertire le informazioni prima di essere visualizzato all'utente. Il *chiave* è selezionata per lo sviluppatore mentre si scrive codice e in genere contiene la stringa effettiva da convertire.
 
-#### <a name="eslprojlocalizablestrings-file"></a>es.lproj/Localizable.strings file
+#### <a name="eslprojlocalizablestrings-file"></a>file es.lproj/Localizable.strings
 
 Le stringhe di linguaggio Spansish (tradotto):
 

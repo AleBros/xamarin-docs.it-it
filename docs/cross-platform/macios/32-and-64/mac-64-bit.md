@@ -1,16 +1,17 @@
 ---
 title: Aggiornamento delle applicazioni unificata Xamarin.Mac a 64 bit
-description: Questa guida viene descritto come aggiornare le applicazioni Xamarin.Mac di destinazione a 64 bit
+description: Questa guida viene descritto come aggiornare le applicazioni Xamarin.Mac alla destinazione a 64 bit. Vengono inoltre forniti esempi di questi tipi di errori che possono essere rilevati quando si apporta questa modifica.
 ms.prod: xamarin
 ms.assetid: C3810A74-539C-4FFB-B47F-68CA5F7BCDAD
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/22/2018
-ms.openlocfilehash: 558edbdee5adfe57205c7f76b35a0538c78b927f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: aa97f9a68ea4acc4234233a22d10c99cde3e6d6c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780698"
 ---
 # <a name="updating-xamarinmac-unified-applications-to-64-bit"></a>Aggiornamento delle applicazioni unificata Xamarin.Mac a 64 bit
 

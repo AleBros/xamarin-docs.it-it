@@ -1,18 +1,19 @@
 ---
-title: Disegno 2D
-description: Cross Platform disegno 2D con SkiaSharp
+title: Disegno 2D con SkiaSharp
+description: Questo documento viene fornita una panoramica della libreria multipiattaforma 2D disegno con SkiaSharp. Fornisca un collegamento al relativo varie API e varie guide che descrivono SkiaSharp.
 ms.prod: xamarin
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
-ms.openlocfilehash: f1a40b48ecfb7244aae77cf1b4110ae53490d98c
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 962fe657f25976f9b5069f2d434e92f816d249ca
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783292"
 ---
-# <a name="2d-drawing"></a>Disegno 2D
+# <a name="2d-drawing-with-skiasharp"></a>Disegno 2D con SkiaSharp
 
 SkiaSharp fornisce un'API di potenti c# per l'esecuzione di grafica 2D. È alimentato dalle [libreria Skia Google](http://skia.org), la stessa libreria che alimenta stack grafico Google Chrome, Firefox e di Android.
 

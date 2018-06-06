@@ -1,21 +1,20 @@
 ---
-title: Aggiornamenti di progettazione visiva
-description: Esplorare le nuove funzionalità di iOS 11
+title: Aggiornamenti di progettazione visivi in iOS 11
+description: Questo documento descrive gli aggiornamenti introdotti in iOS 11 di progettazione visiva. Vengono illustrate le modifiche a barre di navigazione, ricerca controller, i margini, il contenuto a schermo intero e viste delle tabelle.
 ms.prod: xamarin
 ms.assetid: 7C300B94-0FAF-492E-A326-877419A1824B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 50858592ec6246fe825e80a3039f3640ebf708a9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bc29e021e30910c7fcc4c3b451d0a4dfe187d05
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787851"
 ---
-# <a name="visual-design-updates"></a>Aggiornamenti di progettazione visiva
-
-_Esplorare le nuove funzionalità di iOS 11_
+# <a name="visual-design-updates-in-ios-11"></a>Aggiornamenti di progettazione visivi in iOS 11
 
 In iOS 11, Apple ha introdotto nuove modifiche visive tra cui gli aggiornamenti per la barra di spostamento, barra di ricerca e viste delle tabelle. Inoltre, sono stati apportati miglioramenti per consentire maggiore flessibilità su margini e il contenuto a schermo intero. Queste modifiche sono descritte in questa Guida.
 

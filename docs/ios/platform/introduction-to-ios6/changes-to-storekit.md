@@ -1,5 +1,5 @@
 ---
-title: Modifiche apportate a StoreKit
+title: Modifiche al StoreKit di iOS 6
 description: "iOS 6 introduce due modifiche all'archivio Kit API: la possibilità di visualizzare iTunes (e App Store/iBookstore) prodotti all'interno dell'app e una nuova in-app acquistano in Apple ospiterà i file scaricabili. Questo documento illustra come implementare tali funzionalità con xamarin. IOS."
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8a7a70c3f84518141cf44d630fb4137051d0c866
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ff717d1e4ea7da947d5534f1ce790b58d84fdfd4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787692"
 ---
-# <a name="changes-to-storekit"></a>Modifiche apportate a StoreKit
+# <a name="changes-to-storekit-in-ios-6"></a>Modifiche al StoreKit di iOS 6
 
 _iOS 6 introduce due modifiche all'archivio Kit API: la possibilità di visualizzare iTunes (e App Store/iBookstore) prodotti all'interno dell'app e una nuova in-app acquistano in Apple ospiterà i file scaricabili. Questo documento illustra come implementare tali funzionalità con xamarin. IOS._
 
@@ -142,8 +143,8 @@ I risultati includeranno anche altri metadati, tra cui URL di disegno che può e
 
 Ecco alcuni esempi:
 
--   **app iBooks*- [http://itunes.apple.com/search?term=ibooks&amp;entità = software&amp;country = us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us) 
--   **Punto e il iBook che salta*- [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entità = ebook&amp;country = us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us) 
+-   **app iBooks*- [http://itunes.apple.com/search?term=ibooks&amp; entità = software&amp;country = us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us) 
+-   **Punto e il iBook che salta*- [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp; entità = ebook&amp;country = us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us) 
 
 
 ### <a name="enterprise-partner-feed"></a>Organizzazione Partner Feed
@@ -537,7 +538,7 @@ In questo articolo è state introdotte due nuove funzionalità di archivio Kit i
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [StoreKit (sample)](https://developer.xamarin.com/samples/StoreKit/)
+- [StoreKit (esempio)](https://developer.xamarin.com/samples/StoreKit/)
 - [Acquisti in-app](~/ios/platform/in-app-purchasing/index.md)
 - [Riferimento di Framework StoreKit](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [Riferimento alla classe SKStoreProductViewController](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)

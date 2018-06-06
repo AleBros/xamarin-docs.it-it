@@ -1,15 +1,17 @@
 ---
 title: procedure dettagliate Backgrounding iOS
+description: Questo documento include collegamenti ad procedure dettagliate che illustrano come usare le informazioni sul percorso in un'app backgrounded e come utilizzare il servizio di trasferimento in background e NSURLSession.
 ms.prod: xamarin
 ms.assetid: D4937080-7865-48C0-8FE5-310E90229BC3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: dd113905196fc6633b64319617dd19e393e196a8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 94e9370f5bda5aaf78bf67fd7da0d7450c6fbe5d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783626"
 ---
 # <a name="ios-backgrounding-walkthroughs"></a>procedure dettagliate Backgrounding iOS
 

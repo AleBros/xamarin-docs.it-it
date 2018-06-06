@@ -1,19 +1,20 @@
 ---
-title: Visualizzazioni Web
-description: Per evitare ambiguità tra le opzioni di visualizzazione web iOS
+title: Visualizzazioni Web di xamarin. IOS
+description: Questo documento descrive i vari modi che un'app xamarin. IOS possa visualizzare il contenuto web. Viene descritto UIWebView WKWebView, SFSafariViewController, Safari e sicurezza del trasporto app.
 ms.prod: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 787b5594476b3a1b5b3f6a0e8151a98c97443d00
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f720eae68415ab9efe021e53c9da4875209cd221
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790496"
 ---
-# <a name="web-views"></a>Visualizzazioni Web
+# <a name="web-views-in-xamarinios"></a>Visualizzazioni Web di xamarin. IOS
 
 In base alla durata di iOS Apple ha rilasciato un numero di modi per gli sviluppatori di app incorporare funzionalità di visualizzazione web nelle proprie app. La maggior parte degli utenti utilizzano il browser web Safari predefinito sul proprio dispositivo iOS e prevedono che la funzionalità di visualizzazione web da altre App sia coerenza con questa esperienza. Prevedono che gli stessi movimenti siano funzionanti, le prestazioni per corrispondere alle par e alle funzionalità.
 

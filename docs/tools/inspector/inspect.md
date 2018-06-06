@@ -1,29 +1,26 @@
 ---
 title: Controllo delle applicazioni in tempo reale
-description: Visualizzare ed eseguire il debug dell'app in tempo reale
+description: Questo documento descrive come utilizzare il controllo di Xamarin per controllare le applicazioni. Illustra anche limiti dello strumento di controllo di Xamarin.
 ms.prod: xamarin
 ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: 8bcdc5ac50a0f03086ad9e9c3265e3ce86b06704
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 16a0474c7fc9a496409e2133714b6d4374691dbc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793479"
 ---
 # <a name="inspecting-live-applications"></a>Controllo delle applicazioni in tempo reale
 
 L'ispezione applicazione in tempo reale è disponibile per i clienti aziendali.
 
-
 1. [Le cartelle di lavoro di installare Xamarin & controllo.](~/tools/inspector/install.md)
-
 1. Aprire qualsiasi [supportati progetto di app](~/tools/inspector/install.md#supported-platforms) in Visual Studio per Mac o Visual Studio.
 1. Eseguire l'app in modalità di debug.
 1. Fare clic su di **controlla** sulla barra degli strumenti dell'IDE (in Visual Studio, il **app corrente controlla....**  voce di menu è disponibile anche la **strumenti** o **Debug** menu).
-
-
 
 [![](inspect-images/mac-heres-the-button.png "Fare clic sul pulsante Controlla sulla barra degli strumenti dell'IDE")](inspect-images/mac-heres-the-button.png#lightbox)
 

@@ -11,7 +11,7 @@
 ### [Introduzione allo sviluppo per dispositivi mobili](get-started/introduction-to-mobile-development.md)
 ### [Introduzione al ciclo di vita di sviluppo del software per i dispositivi mobili](get-started/introduction-to-mobile-sdlc.md)
 
-### [Creazione di applicazioni multipiattaforma](app-fundamentals/building-cross-platform-applications/index.md)
+### [Compilazione di applicazioni multipiattaforma](app-fundamentals/building-cross-platform-applications/index.md)
 #### [Panoramica](app-fundamentals/building-cross-platform-applications/overview.md)
 #### [Parte 1 - Informazioni sulla piattaforma per dispositivi mobili Xamarin](app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md)
 #### [Parte 2 - Architettura](app-fundamentals/building-cross-platform-applications/architecture.md)

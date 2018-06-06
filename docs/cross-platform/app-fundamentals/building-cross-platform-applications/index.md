@@ -1,24 +1,23 @@
 ---
-title: Compilazione incrociata piattaforma applicazioni
-description: 'In questa sezione illustra, in sei parti, oltre a un riepilogo delle applicazioni utilizzando la piattaforma di sviluppo di Xamarin: da comprendere il funzionamento di Xamarin per la progettazione di App per dispositivi mobili, test e la distribuzione nei vari archivi di app.'
+title: Compilazione di applicazioni multipiattaforma
+description: In questa sezione illustra, in sei parti, oltre a un riepilogo delle applicazioni utilizzando la piattaforma di sviluppo Xamarin – dalla comprensione funzionamento di Xamarin per la progettazione di App per dispositivi mobili, testing e distribuzione nei vari archivi di app.
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
 author: asb3993
 ms.author: amburns
 ms.date: 01/28/2016
-ms.openlocfilehash: fba13ab921949cd2361e78535d5ffc96952a1336
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3966b731531d617f105583210334a23071a6802b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780174"
 ---
-# <a name="sharing-code-options"></a>Sharing Code Options
+# <a name="building-cross-platform-applications"></a>Compilazione di applicazioni multipiattaforma
 
 Sono disponibili due opzioni per la condivisione del codice tra applicazioni per dispositivi mobili multipiattaforma: progetti di Asset condivisi e librerie di classi portabili. Queste opzioni sono [descritte di seguito](~/cross-platform/app-fundamentals/code-sharing.md); ulteriori informazioni su [librerie di classi portabili](~/cross-platform/app-fundamentals/pcl.md) e [progetti condivisi](~/cross-platform/app-fundamentals/shared-projects.md) è disponibile.
 
 <a name="Sections" />
-
-## <a name="building-cross-platform-mobile-apps"></a>Compilazione incrociata App della piattaforma per dispositivi mobili
 
  [Panoramica](~/cross-platform/app-fundamentals/building-cross-platform-applications/overview.md)
 
@@ -36,13 +35,11 @@ Sono disponibili due opzioni per la condivisione del codice tra applicazioni per
 
  <a name="Cross-Platform_Mobile_Application_Case_Studies" />
 
-
 ## <a name="case-studies"></a>Case study
 
 I principi indicati in questo documento vengono inseriti nella pratica nell'applicazione di esempio *Tasky*, così come [pre-compilate applicazioni](https://xamarin.com/prebuilt) come [Xamarin CRM](https://xamarin.com/prebuilt/#xamarincrm).
 
  <a name="Tasky" />
-
 
 ### <a name="tasky"></a>Tasky
 
@@ -53,7 +50,6 @@ Illustra le nozioni di base di creazione di un'applicazione multipiattaforma con
 
 Lettura di [Tasky Case Study](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md).
 
-
 ## <a name="summary"></a>Riepilogo
 
 In questa sezione vengono introdotti gli strumenti di sviluppo di applicazioni di Xamarin e viene descritto come compilare applicazioni destinate a più piattaforme per dispositivi mobili.
@@ -63,8 +59,6 @@ Descrive un'architettura a più livelli che il codice per il riutilizzo struttur
 Vengono forniti esempi di funzioni comuni di applicazione (ad esempio, operazioni su file e rete) e come può essere compilati in modo multipiattaforma.
 
 Infine, viene brevemente viene illustrato il test che fornisce riferimenti a un case study che inserisce questi principi in azione.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

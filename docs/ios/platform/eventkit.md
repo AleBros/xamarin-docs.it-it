@@ -1,21 +1,20 @@
 ---
-title: EventKit
-description: Questa guida fornisce una panoramica su come accedere e utilizzare i dati di calendari e CalendarEvents promemoria archiviati nel Database di calendario, esposto tramite la EventKit. Vengono illustrate le classi principali e il relativo ruolo nella programmazione EventKit, nonché un numero di attività comuni associate EventKit framework.
+title: EventKit in xamarin. IOS
+description: Questo documento descrive EventKit e come utilizzarla in xamarin. IOS. Vengono illustrati i calendari, calendario eventi e promemoria, esamina classi comunemente usate durante la programmazione con EventKit e altro ancora.
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a8439586ac92f8139cf9341611125352c85706e5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3522870d3e063d1e12660094a311e9850bcefa13
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786714"
 ---
-# <a name="eventkit"></a>EventKit
-
-_Questa guida fornisce una panoramica su come accedere e utilizzare i dati di calendari e CalendarEvents promemoria archiviati nel Database di calendario, esposto tramite la EventKit. Vengono illustrate le classi principali e il relativo ruolo nella programmazione EventKit, nonché un numero di attività comuni associate EventKit framework._
+# <a name="eventkit-in-xamarinios"></a>EventKit in xamarin. IOS
 
 iOS è incorporate due applicazioni correlate: l'applicazione di calendario e l'applicazione di promemoria. È abbastanza semplice comprendere come l'applicazione di calendario gestisce i dati del calendario, ma l'applicazione di promemoria è meno ovvio. Le date associate in termini di scadenza, quando è completate, quando sono in realtà sono promemoria e così via. Di conseguenza, iOS archivia tutti i dati di calendario, gli eventi del calendario o promemoria, in un'unica posizione, chiamata di *Database calendario*.
 

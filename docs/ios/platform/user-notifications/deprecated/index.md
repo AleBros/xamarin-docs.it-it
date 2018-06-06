@@ -1,26 +1,25 @@
 ---
-title: Tecnologie di notifica obsolete
+title: Tecnologie di notifica obsolete in xamarin. IOS
+description: Questo documento descrive le tecnologie di notifica iOS che sono state deprecate a favore di framework, le notifiche utente, introdotto in iOS 10.
 ms.prod: xamarin
 ms.assetid: 20C4F6E5-56DF-4A85-BBF0-E38C88586307
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/07/2016
-ms.openlocfilehash: eff1d999e705aa493d0481e34ead3b9b81d434f9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4becc5e296fb6e2496d9ffd863f7137419480262
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788553"
 ---
-# <a name="deprecated-notification-technologies"></a>Tecnologie di notifica obsolete
+# <a name="deprecated-notification-technologies-in-xamarinios"></a>Tecnologie di notifica obsolete in xamarin. IOS
 
 In questa sezione viene illustrato come implementare locale e le notifiche push in xamarin. IOS. Verrà spiegare i vari elementi dell'interfaccia utente di una notifica di iOS e illustrano l'API del coinvolto nella creazione e visualizzazione di una notifica.
 
 > [!IMPORTANT]
 > Le informazioni in questa sezione si riferiscono a iOS 9 e precedenti, è stato lasciato qui per supportare le versioni precedenti di iOS. Per iOS 10 e versioni successive, vedere il [Guida utente notifica Framework](~/ios/platform/user-notifications/index.md) per il supporto sia locali che Remote notifica in un dispositivo iOS.
-
-
-
 
 ## <a name="sections"></a>Sezioni
 

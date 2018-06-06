@@ -1,18 +1,20 @@
 ---
-title: Altezza della riga di ridimensionamento automatico
+title: Altezza della riga di ridimensionamento automatico in xamarin. IOS
+description: Questo documento descrive come aggiungere le app xamarin. IOS tabella Visualizza righe cui altezze variano in base al contenuto. Viene descritto il layout di cella nella finestra di progettazione iOS e l'altezza di ridimensionamento automatico abilitazione.
 ms.prod: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 73e16c3381b639645463e3e8aaeed35224b67861
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c6beb112947f5423de200fd5c8957ef28dd48f9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789967"
 ---
-# <a name="auto-sizing-row-height"></a>Altezza della riga di ridimensionamento automatico
+# <a name="auto-sizing-row-height-in-xamarinios"></a>Altezza della riga di ridimensionamento automatico in xamarin. IOS
 
 A partire da iOS 8, Apple aggiunta la possibilità di creare una visualizzazione tabella (`UITableView`) che può automaticamente crescere e ridurre l'altezza di una determinata riga in base alla dimensione del relativo contenuto usando i vincoli, le classi di dimensioni e Layout automatico.
 
