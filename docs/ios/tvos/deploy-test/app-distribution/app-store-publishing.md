@@ -1,21 +1,20 @@
 ---
 title: Pubblicazione in App Store di Apple TV
-description: In questo articolo viene illustrato come configurare, compilare e pubblicare un'app Xamarin.tvOS per la distribuzione tramite App Store di Apple TV. Include una Guida dettagliata che illustra come preparare l'app per la distribuzione, come utilizzare gli strumenti di Apple per inviare l'app per la revisione e, infine, come pubblicare l'app in App Store di Apple TV.
+description: Questo documento descrive come pubblicare un'app in App Store di Apple TV. Illustra come configurare, eseguire il provisioning, compilare e inviare un'applicazione tvOS compilata con Xamarin.
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c72b161845f6d8492a47d95e51a80cf0b4f30271
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ac905caaf0bdefe7f0c5502be0bd63102ca5a813
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789304"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Pubblicazione in App Store di Apple TV
-
-_In questo articolo viene illustrato come configurare, compilare e pubblicare un'app Xamarin.tvOS per la distribuzione tramite App Store di Apple TV. Include una Guida dettagliata che illustra come preparare l'app per la distribuzione, come utilizzare gli strumenti di Apple per inviare l'app per la revisione e, infine, come pubblicare l'app in App Store di Apple TV._
 
 In ordine di distribuire applicazioni a tutti i dispositivi di Apple TV, Apple richiede che le app da pubblicare tramite il *App Store di Apple TV*, effettua la posizione di acquisto unica per tvOS app di App Store. Gli sviluppatori di molti tipi di applicazioni può in maiuscolo il successo notevole di questo singolo punto di distribuzione. App Store di Apple TV è una soluzione chiavi in mano, offrendo agli sviluppatori di app di sistemi di distribuzione e di pagamento.
 

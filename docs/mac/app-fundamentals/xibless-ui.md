@@ -1,5 +1,5 @@
 ---
-title: progettazione dell'interfaccia utente.Storyboard/.xib-less
+title: progettazione dell'interfaccia utente.Storyboard/.xib-less in Xamarin.Mac
 description: Questo articolo vengono illustrate la creazione di un Xamarin.Mac interfaccia utente direttamente dal codice c#, senza file .storyboard, .xib oppure il generatore di interfaccia.
 ms.prod: xamarin
 ms.assetid: 02310F58-DCF1-4589-9F4A-065DF64FC0E1
@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 66725b02d3e351e74fa79ae5336a7db3a9f2b534
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 239133c8a5bcce97aca0c4444624fe0541600354
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792401"
 ---
-# <a name="storyboardxib-less-user-interface-design"></a>progettazione dell'interfaccia utente.Storyboard/.xib-less
+# <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>progettazione dell'interfaccia utente.Storyboard/.xib-less in Xamarin.Mac
 
 _Questo articolo vengono illustrate la creazione di un Xamarin.Mac interfaccia utente direttamente dal codice c#, senza file .storyboard, .xib oppure il generatore di interfaccia._
-
 
 ## <a name="overview"></a>Panoramica
 

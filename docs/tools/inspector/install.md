@@ -1,21 +1,21 @@
 ---
 title: Requisiti e l'installazione di controllo
-description: Come scaricare, installare e utilizzare il controllo di Xamarin.
+description: Questo documento viene descritto come installare il controllo di Xamarin e ne illustra il sistema operativo supportato, IDE e piattaforme di app.
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: 5bbd5c64f53e191d5ac629e20df87c2b7ca4ec00
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 80bf3cb4e8e27355ccf6213dbfd07a17e992961b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793808"
 ---
 # <a name="inspector-installation-and-requirements"></a>Requisiti e l'installazione di controllo
 
 ## <a name="download-and-installation"></a>Download e installazione
-
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
@@ -55,7 +55,6 @@ L'ispezione applicazione in tempo reale è disponibile per i clienti aziendali.
 |iOS (unificato)|Supportato in Visual Studio e XS|Esaminare le app iOS da Windows richiede la stessa versione di controllo per essere installato anche nell'host di compilazione Mac.|
 |Android|Supportato in Visual Studio e XS|Deve avere come destinazione Android > = 4.0.3, con **fastdev** abilitato.<br />È necessario usare gli emulatori di Google, Visual Studio o Xamarin Android. Gli emulatori Android di 7 potrebbero non consentire l'ispezione in questo momento.|
 |WPF|Supportato solo in Visual Studio in Windows|
-
 
 <a name="reporting-bugs" />
 
@@ -167,6 +166,5 @@ Per le versioni precedenti, è necessario rimuovere manualmente quanto segue:
 
 1. Eliminare l'app Workbooks all'indirizzo `"/Applications/Xamarin Workbooks.app"`
 2. Eliminare l'app Inspector `"Applications/Xamarin Inspector.app"`
-2. Eliminare i componenti aggiuntivi: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` e `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-3. Eliminare Inspector e i file di supporto qui: `/Library/Frameworks/Xamarin.Interactive.framework` e `/Library/Frameworks/Xamarin.Inspector.framework`
-
+3. Eliminare i componenti aggiuntivi: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` e `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+4. Eliminare Inspector e i file di supporto qui: `/Library/Frameworks/Xamarin.Interactive.framework` e `/Library/Frameworks/Xamarin.Inspector.framework`

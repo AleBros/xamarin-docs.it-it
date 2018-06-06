@@ -1,23 +1,22 @@
 ---
-title: Controlli
-description: Xamarin. IOS espone tutti gli oggetti dell'interfaccia utente nativi forniti da Apple. Vengono aggiunte facilmente alle App xamarin con iOS progettazione interfaccia generatore del Xcode o a livello di codice. Indipendentemente dal metodo scelto, xamarin. IOS espone tutte le proprietà dell'oggetto dell'interfaccia utente e i metodi in c#.
+title: Controlli dell'interfaccia utente in xamarin. IOS
+description: Questo documento include collegamenti ad guide che descrivono le varie iOS controlli dell'interfaccia utente disponibili per gli sviluppatori di xamarin. IOS. Contenuto collegato descrive gli avvisi, pulsanti, viste di raccolta, immagini, i controlli dispositivo foto/video manuale, mappe, etichette, le selezioni, controlli selezione data e più.
 ms.prod: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 82b2998319d4e78ee4f58a6d024032a509724537
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 477cb4e479224b9e795f3460e0f59e0aa2038630
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790042"
 ---
-# <a name="controls"></a>Controlli
+# <a name="user-interface-controls-in-xamarinios"></a>Controlli dell'interfaccia utente in xamarin. IOS
 
-_Xamarin. IOS espone tutti gli oggetti dell'interfaccia utente nativi forniti da Apple. Vengono aggiunte facilmente alle App xamarin con iOS progettazione interfaccia generatore del Xcode o a livello di codice. Indipendentemente dal metodo scelto, xamarin. IOS espone tutte le proprietà dell'oggetto dell'interfaccia utente e i metodi in c#._
-
-Questo documento introduce anche alcuni dei controlli dell'interfaccia utente più comuni iOS e come utilizzarle.
+Questo documento vengono presentati alcuni dei controlli dell'interfaccia utente più comuni iOS e come utilizzarle.
 
 ## <a name="alertsalertsmd"></a>[Alerts](alerts.md) (Avvisi)
 

@@ -1,23 +1,23 @@
 ---
-title: Risoluzione dei problemi
-description: Problemi noti con Xamarin Player in tempo reale e su come correggerli.
+title: Risoluzione dei problemi Xamarin Player in tempo reale
+description: Questo documento descrive problemi noti con Xamarin Player in tempo reale le potenziali correzioni. Illustra i problemi di connessione, problemi di configurazione e altro ancora.
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: topgenorth
 ms.author: toopge
 ms.date: 05/17/2017
-ms.openlocfilehash: 147ce43d3fe764f71f27dce46b699142dfb99872
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3db14db2c64e024ef1c04275661f610f9407dfb7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793755"
 ---
-# <a name="troubleshooting"></a>Risoluzione dei problemi
+# <a name="troubleshooting-xamarin-live-player"></a>Risoluzione dei problemi Xamarin Player in tempo reale
 
 ![Funzionalità di anteprima](~/media/shared/preview.png)
 
 In questo articolo vengono illustrati alcuni problemi comuni e le procedure per correggerli.
-
 
 ## <a name="mobile-device-does-not-connect-after-scanning-barcode-or-entering-code"></a>Dispositivo mobile non connettersi dopo l'analisi del codice a barre (o l'inserimento del codice)
 
@@ -27,7 +27,6 @@ Si verifica quando il dispositivo mobile esegue Xamarin Player in tempo reale no
   - Se il computer è connesso anche a una rete cablata, provare a scollegare il cavo.
 - La rete potrebbe essere strettamente protetti (ad esempio, in alcune reti aziendali), il blocco delle porte necessarie da Xamarin Player in tempo reale.
 - Chiudere l'app Xamarin Player in tempo reale e riavviarlo.
-
 
 ## <a name="error-while-trying-to-deploy-message-in-ide"></a>Messaggio "Errore durante il tentativo di distribuire" nell'IDE
 
@@ -67,7 +66,6 @@ All'interno della scelta di Xamarin Player Live **coppia** oppure **coppia nuova
 
 Passare a: https://www.guidgenerator.com/online-guid-generator.aspx e generare un nuovo guid e verificare che sia lettere maiuscole nel.
 
-
 **Passaggio 5: Configurare i dispositivi**
 
 Aprire la **PlayerDeviceList.xml** backup in un editor, ad esempio Visual Studio o Visual Studio Code. È necessario configurare manualmente il dispositivo in questo file. Per impostazione predefinita, il file deve contenere il seguente vuoto `Devices` (elemento XML):
@@ -98,7 +96,6 @@ Aprire la **PlayerDeviceList.xml** backup in un editor, ad esempio Visual Studio
 </PlayerDevice>
 ```
 
-
 **Aggiungere un dispositivo Android:**
 
 ```xml
@@ -118,7 +115,6 @@ Aprire la **PlayerDeviceList.xml** backup in un editor, ad esempio Visual Studio
 ```
 
 **Chiudere e riaprire Visual Studio.** Il dispositivo dovrebbe essere inclusa nell'elenco.
-
 
 ## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>Messaggio "tipo o spazio dei nomi non può essere trovato" nell'IDE
 
@@ -141,9 +137,7 @@ File AXML non sono attualmente supportati in Xamarin Player in tempo reale.
 
 I progetti Android di xamarin. Forms devono utilizzare "Toolbar.axml" e "Tabbar.axml" per i nomi dei file di layout pertinente. Il modello predefinito utilizza questi nomi. ridenominazione di essi causerà problemi di rendering.
 
-
 Segnalare eventuali problemi aggiuntivi su [bugzilla](https://aka.ms/live-player-report-issue).
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,19 +1,19 @@
 ---
 title: Xamarin Inspector
-description: Visualizzare ed eseguire il debug dell'app in tempo reale
+description: Questo documento include collegamenti ad guide che descrivono come installare e usare il controllo di Xamarin per esplorare ed eseguire il debug di applicazioni.
 ms.prod: xamarin
 ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: 87e78cb7a7b2d310bc77c1fd638a1cf32dad75a0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 8f33f61cd3c38dbce16f9a7afa103836aa454a0c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793087"
 ---
 # <a name="xamarin-inspector"></a>Xamarin Inspector
-
 
 Le cartelle di lavoro di Xamarin & controllo portare una console c# interattiva con gli strumenti per gli utenti. Il controllo si integra con l'applicazione di debug del flusso di lavoro dell'IDE, che funge da un supporto per il debug o di diagnostica durante il controllo dell'app in esecuzione.
 

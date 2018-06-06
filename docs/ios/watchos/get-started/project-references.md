@@ -1,19 +1,20 @@
 ---
-title: Riferimenti al progetto
-description: Spiegazione della relazione tra l'app iOS, espressioni di controllo app e l'estensione di espressioni di controllo.
+title: watchOS riferimenti di progetto Xamarin
+description: Questo documento descrive la relazione tra un'app per iOS, un'app di espressioni di controllo e un'estensione di app di espressioni di controllo. Vengono illustrati i riferimenti al progetto e bundle di identificatori.
 ms.prod: xamarin
 ms.assetid: C366E062-C33D-406A-B3FF-CBE82E5D1E7E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: f3573e8b578ca567ea9d7360eb132aead4c24f37
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1bd950d0929beae7133b0eb8ef6b2a69bc116f50
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791488"
 ---
-# <a name="project-references"></a>Riferimenti al progetto
+# <a name="watchos-project-references-in-xamarin"></a>watchOS riferimenti di progetto Xamarin
 
 _Spiegazione della relazione tra l'app iOS, espressioni di controllo app e l'estensione di espressioni di controllo._
 

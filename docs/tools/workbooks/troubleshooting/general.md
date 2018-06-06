@@ -1,14 +1,16 @@
 ---
 title: Problemi noti e soluzioni alternative
+description: Questo documento descrive problemi noti e soluzioni alternative per le cartelle di lavoro di Xamarin. Illustra i problemi di CultureInfo, JSON e altre problematiche.
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 186faf3fc4f93d1c9a4af9e3e9f72afd569fed8b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b6dc3b119d3e85369a71638f2519b2ef0c85446c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794033"
 ---
 # <a name="known-issues--workarounds"></a>Problemi noti e soluzioni alternative
 
@@ -56,7 +58,7 @@ Pacchetti NuGet in modo esplicito in base 10 di newtonsoft. JSON o versione succ
 
 ## <a name="skiasharp-renderers-are-missing-in-workbooks-13"></a>Renderer SkiaSharp mancano le cartelle di lavoro 1.3
 
-A partire da cartelle di lavoro 1.3, è stata rimossa il renderer SkiaSharp che abbiamo fornito nelle cartelle di lavoro 0.99.0, a favore SkiaSharp fornendo il renderer di se stesso, tramite il nostro [SDK] [Guide/cross-piattaforma o le cartelle di lavoro/sdk / /].
+A partire da cartelle di lavoro 1.3, è stata rimossa renderer SkiaSharp che abbiamo fornito nelle cartelle di lavoro 0.99.0, a favore SkiaSharp fornendo il renderer di se stesso, tramite il nostro [SDK](~/tools/workbooks/sdk/index.md).
 
 ### <a name="workaround"></a>Soluzione alternativa
 

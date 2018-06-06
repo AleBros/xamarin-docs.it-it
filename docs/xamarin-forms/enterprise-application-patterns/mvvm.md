@@ -6,11 +6,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 32a7a7dd50edcc3eefe76429ddb1e5581447993e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 03a3c411c7031ece32a8987b480f96ad39909201
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793954"
 ---
 # <a name="mvvm"></a>MVVM
 
@@ -175,7 +176,7 @@ Questo approccio presenta il vantaggio che un'applicazione ha un'unica classe ch
 
 Devono implementare tutte modello di visualizzazione e le classi di modello che sono accessibili a una visualizzazione di `INotifyPropertyChanged` interfaccia. Implementare questa interfaccia in un modello di visualizzazione o una classe di modello consente alla classe fornire le notifiche di modifica a tutti i controlli con associazione a dati nella vista quando cambia il valore della proprietà sottostante.
 
-Dell'app deve essere progettata per l'uso corretto della notifica di modifica di proprietà, per soddisfare i requisiti seguenti:
+Le app devono essere progettate per l'uso corretto della notifica di modifica di proprietà, da soddisfare i requisiti seguenti:
 
 -   Sempre generato un `PropertyChanged` eventi se si modifica il valore della proprietà pubblica. Non presupporre che la generazione di `PropertyChanged` evento può essere ignorato a causa di conoscenza delle modalità di associazione XAML.
 -   Sempre generato un `PropertyChanged` calcolato di evento per qualsiasi proprietà i cui valori vengono utilizzati da altre proprietà nella vista del modello o modello.

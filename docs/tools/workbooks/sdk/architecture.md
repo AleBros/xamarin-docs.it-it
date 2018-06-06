@@ -1,15 +1,17 @@
 ---
 title: Panoramica dell'architettura
+description: Questo documento viene descritta l'architettura di cartelle di lavoro Xamarin, esaminare l'interazione tra l'agente interattivo e un client interattivo.
 ms.prod: xamarin
 ms.assetid: 6C0226BE-A0C4-4108-B482-0A903696AB04
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: b80576d3c43340a3c5dc2c6fe1ed20a277f14222
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3cd0d3e8cc47dd7fa43dfa0b910c9f09740fcc9a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794007"
 ---
 # <a name="architecture-overview"></a>Panoramica dell'architettura
 

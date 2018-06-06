@@ -1,18 +1,20 @@
 ---
-title: Cartelle di lavoro di esempio
+title: 'Cartelle di lavoro di Xamarin: esempi'
+description: Questo documento include collegamenti ad cartelle di lavoro di esempio da utilizzare per imparare a utilizzare le cartelle di lavoro di Xamarin. Le cartelle di lavoro collegati illustrano OpenGL UrhoSharp e proprietà di animazione in xamarin. Android.
 ms.prod: xamarin
 ms.assetid: DE1609F8-0D39-4EA0-8666-0468FCF77ACC
 ms.custom: xamu-video
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 83b4f56ea64c80c5aa1f040acc26b567a9b66e70
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 1ebc4d12801deea42219fad060e70b8c24ad179c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793768"
 ---
-# <a name="sample-workbooks"></a>Cartelle di lavoro di esempio
+# <a name="xamarin-workbooks--samples"></a>Cartelle di lavoro di Xamarin: esempi
 
 > [!NOTE]
 > Sono disponibili in una serie di esempi [developer.xamarin.com/workbooks](https://developer.xamarin.com/workbooks/).

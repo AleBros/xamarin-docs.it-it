@@ -1,5 +1,5 @@
 ---
-title: Finestre di dialogo
+title: Finestre di dialogo in Xamarin.Mac
 description: In questo articolo viene descritto l'utilizzo con le finestre di dialogo e finestre modali in un'applicazione Xamarin.Mac. Vengono descritte la creazione di finestre modali in Xcode e interfaccia generatore, utilizzo di finestre di dialogo standard e l'interazione con questi controlli nel codice c#.
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: cd0b57cc40d3f7cffd4d5711ec04a7225be870e9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7d9a93c8503d7e25f098e871378a22455b597e90
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792694"
 ---
-# <a name="dialogs"></a>Finestre di dialogo
+# <a name="dialogs-in-xamarinmac"></a>Finestre di dialogo in Xamarin.Mac
 
 Quando si utilizza c# e .NET in un'applicazione Xamarin.Mac, è possibile accedere allo stesso finestre di dialogo e finestre modali che uno sviluppatore che lavora *Objective-C* e *Xcode* does. Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile utilizzare del Xcode _generatore interfaccia_ per creare e gestire le finestre modali (o, facoltativamente, crearli direttamente nel codice c#).
 
