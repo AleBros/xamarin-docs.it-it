@@ -1,27 +1,28 @@
 ---
-title: Dispositivi di scorrimento, commutatori e controlli segmentati
+title: Dispositivi di scorrimento, commutatori e i controlli segmentati in xamarin. IOS
+description: Questo documento vengono illustrate le diapositive, commutatori e i controlli segmentati in xamarin. IOS, che descrivono come utilizzarle sia a livello di codice e nella finestra di progettazione iOS.
 ms.prod: xamarin
 ms.assetid: 85BF0EC8-E581-49CD-B9E7-98BE4C5A0F6B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 3c98ea19b3f925e71f72b09d5356286d676a9f71
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09a5d9e76c41eba4e16cab041daa67d3a5d8a584
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790029"
 ---
-# <a name="sliders-switches-and-segmented-controls"></a>Dispositivi di scorrimento, commutatori e controlli segmentati
+# <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Dispositivi di scorrimento, commutatori e i controlli segmentati in xamarin. IOS
 
 <a name="Sliders" />
-
 
 ## <a name="sliders"></a>Dispositivi di scorrimento
 
 Il dispositivo di scorrimento consente di selezione semplice di un valore numerico in un intervallo. Il controllo predefinito per un valore compreso tra 0 e 1, ma questi limiti possono essere personalizzati.
 
- [![](slider-switch-segmented-controls-images/image25a.png "Slider")](slider-switch-segmented-controls-images/image25a.png#lightbox)
+ [![](slider-switch-segmented-controls-images/image25a.png "Dispositivo di scorrimento")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
 Nella schermata seguente vengono illustrate le proprietà che possono essere modificate nella finestra di progettazione:
 

@@ -1,17 +1,18 @@
 ---
 title: Introduzione a iOS 6
-description: iOS 6 include un'ampia gamma di nuove tecnologie per lo sviluppo di App, che rende disponibile per gli sviluppatori c# 6 xamarin. IOS.
+description: Questo documento include collegamenti ad guide che descrivono le funzionalità introdotte in iOS 6. Viste di raccolta, PassKit, il Framework di social networking, e le modifiche a StoreKit vengono descritti.
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8f3be80ffb8156c24c96b03fda8eac3907ca88bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cf623c7788137106ddbb2c23c69465f205a5a400
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787615"
 ---
 # <a name="introduction-to-ios-6"></a>Introduzione a iOS 6
 
@@ -28,12 +29,12 @@ Questo documento vengono elencate alcune delle più nuove funzionalità che sono
 Le viste di raccolta consentono di contenuto che deve essere visualizzato utilizzando i layout arbitrario. Consentono di creare con facilità il layout di griglia predefinita, supportando nonché i layout personalizzati. Per ulteriori informazioni, vedere la [Introduzione alle visualizzazioni di raccolta](~/ios/user-interface/controls/uicollectionview.md) [ ](~/ios/user-interface/controls/uicollectionview.md)Guida.
 
 
-## <a name="introduction-to-pass-kitiosplatformpasskitmd"></a>[Introduzione a passare Kit](~/ios/platform/passkit.md)
+## <a name="introduction-to-passkitiosplatformpasskitmd"></a>[Introduction to PassKit](~/ios/platform/passkit.md) (Introduzione a PassKit)
 
-Il framework di Kit passare consente alle applicazioni di interagire con passate digitale che sono gestite in all'app Passbook. Per ulteriori informazioni, vedere la [Introduzione alla Guida Kit passare](~/ios/platform/passkit.md).
+Il framework PassKit consente alle applicazioni di interagire con passate digitale che sono gestite in all'app Passbook. Per ulteriori informazioni, vedere la [Introduzione alla Guida Kit passare](~/ios/platform/passkit.md).
 
 
-##  <a name="introduction-to-event-kitiosplatformeventkitmd"></a>[Introduzione al Kit di evento](~/ios/platform/eventkit.md)
+##  <a name="introduction-to-eventkitiosplatformeventkitmd"></a>[Introduzione a EventKit](~/ios/platform/eventkit.md)
 
 Il framework EventKit fornisce un modo per accedere ai dati promemoria che archivia il Database di calendario, calendari e gli eventi del calendario. Accesso ai calendari e calendario eventi è disponibile da iOS 4, ma iOS 6 espone ora l'accesso ai dati di promemoria. Per ulteriori informazioni, vedere il [si](~/ios/platform/eventkit.md) [ntroduction a EventKit](~/ios/platform/eventkit.md) Guida.
 
@@ -43,7 +44,7 @@ Il framework EventKit fornisce un modo per accedere ai dati promemoria che archi
 Il Framework di social networking fornisce un'API unificata per l'interazione con i social network inclusi Facebook e Twitter, nonché SinaWeibo per gli utenti in Cina. Per ulteriori informazioni, vedere la [Introduzione a Framework Social](~/ios/platform/social-framework.md) Guida.
 
 
-##  <a name="changes-to-store-kitchanges-to-storekitmd"></a>[Modifiche per l'archiviazione Kit](changes-to-storekit.md)
+##  <a name="changes-to-storekitchanges-to-storekitmd"></a>[Modifiche di StoreKit](changes-to-storekit.md)
 
 Apple è state introdotte due nuove funzionalità di archivio Kit: acquisto e download iTunes o contenuto App Store dall'interno dell'app e l'hosting dei file di contenuto per acquisti in-app. Per ulteriori informazioni, vedere la [diventa Store Kit](changes-to-storekit.md) Guida.
 
