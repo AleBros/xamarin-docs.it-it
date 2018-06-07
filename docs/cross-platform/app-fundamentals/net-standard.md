@@ -6,12 +6,12 @@ ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: 448bbc0630388f6bf45056c90cc75586996d0623
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 82a89309e6462462471f42c3504d109ff0722917
+ms.sourcegitcommit: 5db075bdd0b62d5d1d1567c267303a6a1888c8f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781033"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34806790"
 ---
 # <a name="using-net-standard-libraries-to-share-code"></a>Utilizzo di librerie Standard di .NET per condividere il codice
 
@@ -37,7 +37,7 @@ Aggiunta di una libreria Standard di .NET per la soluzione è piuttosto semplice
 
   **Nota:** questo modello verrà rinominato in `.NET Standard` in una versione futura di Visual Studio per Mac.
 
-  ![Creare una libreria di classi .NET Core](net-standard-images/vsm01.png)
+  ![Creare una libreria di classi .NET Core](net-standard-images/vsm01.png "la creazione di una nuova libreria di classi .NET Core")
 
 2. Il progetto di libreria Standard di .NET verrà visualizzati come mostrato in Esplora soluzioni. Il nodo dipendenze indicherà che utilizza la libreria di [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
 
@@ -47,7 +47,7 @@ Aggiunta di una libreria Standard di .NET per la soluzione è piuttosto semplice
 
 Le impostazioni della libreria Standard di .NET possono essere visualizzate e modificate facendo clic sul progetto e selezionare `Options` come illustrato in questo screenshot:
 
-![Modifica Standard di .NET framework di destinazione nelle opzioni di progetto](net-standard-images/vsm03.png)
+![Modifica Standard di .NET framework di destinazione nelle opzioni progetto](net-standard-images/vsm03.png "modificare la versione di Framework di destinazione Standard di .NET, nelle opzioni progetto")
 
 In cui è possibile modificare la versione di `netstandard` modificando il `Target Framework` il valore di elenco a discesa.
 
@@ -67,17 +67,17 @@ Aggiunta di una libreria Standard di .NET per la soluzione è piuttosto semplice
 
 1. Nella finestra di dialogo Aggiungi nuovo progetto, selezionare il `.NET Standard` categoria e quindi selezionare `Class Library(.NET Standard)`.
 
-  ![](net-standard-images/vs01.png "Creare una nuova libreria di classi .NET Standard")
+  ![Creazione di una nuova libreria di classi Standard .NET](net-standard-images/vs01.png "Crea nuova libreria di classi .NET Standard")
 
 2. Il progetto di libreria Standard di .NET verrà visualizzati come mostrato in Esplora soluzioni. Il nodo dipendenze indicherà che utilizza la libreria di [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
 
-  ![](net-standard-images/vs02.png ".NET standard progetto nella soluzione")
+  ![NETStandard.Library nella cartella del progetto](net-standard-images/vs02.png ".NET Standard progetto nella soluzione")
 
 #### <a name="editing-net-standard-library-settings"></a>Modifica delle impostazioni della libreria Standard di .NET
 
 Le impostazioni della libreria Standard di .NET possono essere visualizzate e modificate facendo clic sul progetto e selezionare `Properties` come illustrato in questo screenshot:
 
-![](net-standard-images/vs03.png "Fare riferimento a una libreria .NET Standard nello stesso modo di altri progetti")
+![Modificare il framework di destinazione standard .NET nelle proprietà del progetto](net-standard-images/vs03.png "fanno riferimento a una libreria .NET Standard esattamente come altri progetti")
 
 In cui è possibile modificare la versione di `netstandard` modificando il `Target Framework` il valore di elenco a discesa.
 
@@ -87,7 +87,7 @@ In cui è possibile modificare la versione di `netstandard` modificando il `Targ
 
 Dopo aver creata una libreria Standard di .NET, è possibile aggiungere un riferimento da qualsiasi progetto di applicazioni o librerie compatibile nello stesso modo, che si aggiungono in genere i riferimenti. In Visual Studio, fare clic sul nodo Riferimenti e scegliere `Add Reference...` quindi passare il `Solution : Projects` scheda come illustrato:
 
-![](net-standard-images/vs04.png "In Visual Studio, fare doppio clic sul nodo Riferimenti e scegliere Aggiungi riferimento … quindi passare alla scheda Esplora progetti, come illustrato")
+![Riferimento a una libreria Standard di .NET](net-standard-images/vs04.png "In Visual Studio, fare clic sul nodo Riferimenti e scegliere Aggiungi riferimento... quindi passare alla scheda progetti della soluzione, come illustrato")
 
 -----
 

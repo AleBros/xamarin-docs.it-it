@@ -6,18 +6,18 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 05/08/2018
-ms.openlocfilehash: a714ac55c3a49b91cb21e3ba1793b9bccd7d1be2
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 06/05/2018
+ms.openlocfilehash: 0d512342f1c978c84341d20c298a9fa750800d84
+ms.sourcegitcommit: 5db075bdd0b62d5d1d1567c267303a6a1888c8f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34806803"
 ---
 # <a name="firebase-job-dispatcher"></a>Dispatcher processo firebase
 
 _Questa guida viene descritto come pianificare il lavoro in background utilizza la libreria Firebase processo Dispatcher da Google._
 
-![Dispatcher di processo firebase in anteprima](~/media/shared/preview.png)
 
 ## <a name="overview"></a>Panoramica
 
@@ -65,9 +65,6 @@ Il Dispatcher processo Firebase richiede il livello API Android 9 o versione suc
 Per iniziare a utilizzare il Dispatcher processo Firebase, aggiungere il [pacchetto Xamarin.Firebase.JobDispatcher NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher) al progetto xamarin. Ricerca di gestione pacchetti NuGet per la **Xamarin.Firebase.JobDispatcher** pacchetto (che è ancora in versione non definitiva).
 
 Dopo aver aggiunto la libreria Firebase Dispatcher di processo, creare un `JobService` classe e quindi pianificare l'esecuzione con un'istanza di `FirebaseJobDispatcher`.
-
-> [!NOTE]
-> L'associazione corrente per il Dispatcher processo Firebase destinata a una versione precedente della libreria. il è un [bug noto [(https://bugzilla.xamarin.com/show_bug.cgi?id=59046)] che impediscono l'associazione da in corso l'aggiornamento a una versione più recente del Dispatcher Firebase processo di destinazione.
 
 
 ### <a name="creating-a-jobservice"></a>Creazione di un JobService
@@ -293,7 +290,6 @@ Questa guida viene spiegato come utilizzare il Dispatcher processo Firebase per 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Generatore di associazioni non riesce con errore irreversibile un'eccezione non GESTITA: System. ArgumentNullException: valore non può essere null.](https://bugzilla.xamarin.com/show_bug.cgi?id=59046)
 - [Xamarin.Firebase.JobDispatcher in NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher)
 - [dispatcher di processo firebase su GitHub](https://github.com/firebase/firebase-jobdispatcher-android)
 - [Xamarin.Firebase.JobDispatcher Binding](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
