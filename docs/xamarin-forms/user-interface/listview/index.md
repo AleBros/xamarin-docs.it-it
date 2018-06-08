@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: ddd779fc7eb1a10e74c68504367083ff0efcdfcd
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 7beb9e66a6e6bc29de36fcd605c5daa0098e75a2
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848538"
 ---
 # <a name="listview"></a>ListView
 
@@ -41,8 +42,8 @@ ListView con un numero di componenti disponibili per verificare la funzionalità
 
 - **[Celle](customizing-cell-appearance.md)**  &ndash; nelle celle di presentazione dei dati in un controllo ListView. Ogni cella corrisponde a una riga di dati. Sono presenti celle predefinite da selezionare oppure è possibile definire la propria cella personalizzato. Le celle di incorporati e personalizzate possono essere utilizzati/definiti in XAML o nel codice.
   - **[Incorporata](customizing-cell-appearance.md#Built_in_Cells)**  &ndash; compilato nelle celle, in particolare TextCell e ImageCell, può essere ideale per le prestazioni, in quanto corrispondono ai controlli nativi in ciascuna piattaforma.
-    - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; viene visualizzata una stringa di testo, facoltativamente con testo dettagliato. Testo dei dettagli viene visualizzato come una seconda riga in un carattere più piccolo con un colore.
-    - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; Visualizza un'immagine con il testo. Viene visualizzato come un TextCell con un'immagine a sinistra.
+       - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; viene visualizzata una stringa di testo, facoltativamente con testo dettagliato. Testo dei dettagli viene visualizzato come una seconda riga in un carattere più piccolo con un colore.
+       - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; Visualizza un'immagine con il testo. Viene visualizzato come un TextCell con un'immagine a sinistra.
   - **[Le celle personalizzate](customizing-cell-appearance.md#customcells)**  &ndash; celle personalizzati sono molto utili se è necessario presentare dati complessi. Ad esempio, una visualizzazione personalizzata può essere utilizzata per presentare un elenco di brani, tra cui album e artista:
 
 ![](images/image-cell-default.png "ListView con ImageCells")

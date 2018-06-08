@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 3b0cba75c8a62d571e82abb3bd2e27cac1e0d075
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: af5912736e2a2bd7d3347d4aa199faa3fdfe41c7
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34846445"
 ---
 # <a name="triggers"></a>Trigger
 
@@ -163,7 +164,7 @@ Possano impostare le proprietà esposte dall'azione del trigger nella dichiarazi
 
 Prestare attenzione quando si condividono i trigger in un `ResourceDictionary`, un'istanza verrà condiviso tra i controlli in modo da qualsiasi stato una volta configurato verrà applicate a tutti.
 
-Si noti che non supportano i trigger di evento `EnterActions` e `ExitActions` [descritto di seguito](#enterexit).
+Si noti che i trigger di evento non supportano `EnterActions` e `ExitActions` [descritto di seguito](#enterexit).    
 
 <a name="multi" />
 
@@ -211,7 +212,7 @@ public class MultiTriggerConverter : IValueConverter
         if ((int)value > 0) // length > 0 ?
             return true;            // some data has been entered
         else
-            return false;           // input is empty
+            return false;            // input is empty
     }
 
     public object ConvertBack(object value, Type targetType,

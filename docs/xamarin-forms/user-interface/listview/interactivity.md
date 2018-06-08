@@ -6,12 +6,13 @@ ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: d16c45b7f7cb7eef67a905b6fbcb9b8675b0b2ba
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 06/01/2018
+ms.openlocfilehash: 5fe821e7e5254da8febbbde518b9fd42526bf262
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848122"
 ---
 # <a name="listview-interactivity"></a>Interattività di ListView
 
@@ -111,7 +112,7 @@ ContextActions.Add (deleteAction);
                Text="Delete" IsDestructive="True" />
          </ViewCell.ContextActions>
          <StackLayout Padding="15,0">
-             <Label Text="{Binding title}" />
+              <Label Text="{Binding title}" />
          </StackLayout>
       </ViewCell>
     </DataTemplate>
@@ -132,6 +133,9 @@ public void OnDelete (object sender, EventArgs e) {
     DisplayAlert("Delete Context Action", mi.CommandParameter + " delete context action", "OK");
 }
 ```
+
+> [!NOTE]
+> Il `NavigationPageRenderer` per Android ha un sottoponibile a override `UpdateMenuItemIcon` metodo che può essere utilizzato per caricare le icone da un oggetto personalizzato `Drawable`. Questa sostituzione consente di utilizzare le immagini SVG come icone sul `MenuItem` istanze in Android.
 
 <a name="Pull_to_Refresh" />
 

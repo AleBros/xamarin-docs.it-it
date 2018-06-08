@@ -8,11 +8,12 @@ ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: 14553bc9484ecc236fb4ceefd687ec7742109758
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3c0330d8d6d07112350db007d0500d57c236dc24
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848024"
 ---
 # <a name="the-xamarinforms-visual-state-manager"></a>La gestione dello stato di visualizzazione di xamarin. Forms
 

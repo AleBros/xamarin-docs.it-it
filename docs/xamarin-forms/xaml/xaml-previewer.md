@@ -6,12 +6,13 @@ ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 02/24/2017
-ms.openlocfilehash: d23f89ed8ad7956f7a366280a14ccc12ba3dac0c
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.date: 05/31/2018
+ms.openlocfilehash: 9b87145773bf16b15c391c5c5d6d136b7aa76e39
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848356"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizzatore di XAML per xamarin. Forms
 
@@ -55,6 +56,17 @@ Le opzioni nella parte superiore del riquadro di anteprima sono:
 Alcuni layout possono essere difficili da visualizzare senza dati associati a controlli dell'interfaccia utente. Per visualizzare l'anteprima più utile, assegnare alcuni dati statici ai controlli, hardcoded un contesto di associazione (sia nel code-behind o tramite XAML).
 
 Fare riferimento a di James Montemagno [post di blog sull'aggiunta di dati in fase di progettazione](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data) per informazioni su come associare un ViewModel statico in XAML.
+
+## <a name="detecting-design-mode"></a>Individuazione modalità progettazione
+
+Il metodo statico [ `DesignMode.IsDesignModeEnabled` ](xref:Xamarin.Forms.DesignMode.IsDesignModeEnabled) proprietà può essere esaminata per determinare se l'applicazione è in esecuzione nell'anteprima. Ciò consente di specificare il codice che verrà eseguito solo quando l'applicazione è in esecuzione nell'anteprima:
+
+```csharp
+if (DesignMode.IsDesignModeEnabled)
+{
+  // Previewer only code  
+}
+```
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 

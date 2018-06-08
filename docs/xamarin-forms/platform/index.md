@@ -6,12 +6,13 @@ ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/20/2017
-ms.openlocfilehash: be131bdbfeceabd72494708cdfe9a263da9bbbd8
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 04/06/2018
+ms.openlocfilehash: 0609d15248f1827b892ae02a877382ca0ffbed18
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847631"
 ---
 # <a name="platform-features"></a>Funzionalità della piattaforma
 
@@ -41,10 +42,6 @@ Xamarin. Forms dispone ora di supporto di anteprima per le app GTK #.
 
 Xamarin. Forms include ora il supporto di anteprima per le app macOS.
 
-## <a name="wpfwpfmd"></a>[WPF](wpf.md)
-
-Xamarin. Forms dispone ora di supporto di anteprima per le app di Windows Presentation Foundation (WPF).
-
 ## <a name="native-formsnative-formsmd"></a>[Form nativi](native-forms.md)
 
 Form native consentono di xamarin. Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivato pagine deve essere utilizzato da progetti nativi, xamarin. IOS, xamarin e della piattaforma UWP (Universal Windows).
@@ -61,6 +58,14 @@ Le specifiche di piattaforma consentono di utilizzare funzionalità che è dispo
 
 Sono disponibili un'ampia gamma di plug-in open source in Github, Nuget e l'archivio di componenti di Xamarin per estendere le app xamarin. Forms.
 
+## <a name="tizentizenmd"></a>[Tizen](tizen.md)
+
+Tizen .NET consente di creare applicazioni .NET con xamarin. Forms e Tizen .NET framework.
+
 ## <a name="windowswindowsindexmd"></a>[Windows](windows/index.md)
 
 Xamarin. Forms offre supporto per la piattaforma UWP (Universal Windows) in Windows 10. In questo articolo viene descritto come aggiungere un un progetto UWP per una soluzione xamarin. Forms esistente.
+
+## <a name="wpfwpfmd"></a>[WPF](wpf.md)
+
+Xamarin. Forms dispone ora di supporto di anteprima per le app di Windows Presentation Foundation (WPF).

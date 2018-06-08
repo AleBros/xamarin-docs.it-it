@@ -6,25 +6,27 @@ ms.assetid: 69B416CF-B243-4790-AB29-F030B32465BE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/19/2016
-ms.openlocfilehash: 511591482a0e7512be34f6a210c6f44a1826be24
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/31/2018
+ms.openlocfilehash: a22ad8f3f272212f5c7f088ba2112f2771ff4a7f
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34846344"
 ---
 # <a name="app-lifecycle"></a>Ciclo di vita App
 
-La `Application` classe di base offre le funzionalità seguenti:
+Il [ `Application` ](xref:Xamarin.Forms.Application) classebase offre le funzionalità seguenti:
 
 * [I metodi del ciclo di vita](#Lifecycle_Methods) `OnStart`, `OnSleep`, e `OnResume`.
+* [Pagina eventi di spostamento](#page) [ `PageAppearing` ](xref:Xamarin.Forms.Application.PageAppearing), [ `PageDisappearing` ](xref:Xamarin.Forms.Application.PageDisappearing).
 * [Gli eventi di spostamento modale](#modal) `ModalPushing`, `ModalPushed`, `ModalPopping`, e `ModalPopped`.
 
 <a name="Lifecycle_Methods" />
 
 ## <a name="lifecycle-methods"></a>Metodi del ciclo di vita
 
-La `Application` classe contiene tre metodi virtuali che possono essere sostituiti per gestire i metodi del ciclo di vita:
+Il [ `Application` ](xref:Xamarin.Forms.Application) classe contiene tre metodi virtuali che possono essere sostituiti per gestire i metodi del ciclo di vita:
 
 * **OnStart** -chiamato all'avvio dell'applicazione.
 
@@ -54,18 +56,30 @@ protected override void OnResume()
 
 Quando si aggiorna *precedente* xamarin. Forms applicazioni (ad es. creare con xamarin. Forms 1.3 o versioni precedenti), assicurarsi che includa l'attività principale Android `ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation` nel `[Activity()]` attributo. Se non è presente sarà possibile osservare il `OnStart` metodo viene chiamato sul rotazione e al primo avvio dell'applicazione. Questo attributo viene inclusa automaticamente nei modelli di app xamarin. Forms correnti.
 
+<a name="page" />
+
+## <a name="page-navigation-events"></a>Eventi di navigazione a pagina
+
+Esistono due eventi nel [ `Application` ](xref:Xamarin.Forms.Application) classe che forniscono la notifica di pagine Capture e visualizzati:
+
+- [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing) -generato quando una pagina viene visualizzato sullo schermo.
+- [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing) -generato quando una pagina sta per essere scompaiano dalla schermata.
+
+Questi eventi possono essere utilizzati in scenari in cui si desidera tenere traccia delle pagine come essi vengono visualizzati sullo schermo.
+
+> [!NOTE]
+> Il [ `PageAppearing` ](xref:Xamarin.Forms.Application.PageAppearing) e [ `PageDisappearing` ](xref:Xamarin.Forms.Application.PageDisappearing) da cui vengono generati eventi il [ `Page` ](xref:Xamarin.Forms.Page) classe di base immediatamente dopo il [ `Page.Appearing` ](xref:Xamarin.Forms.Page.Appearing) e [ `Page.Disappearing` ](xref:Xamarin.Forms.Page.Disappearing) degli eventi, rispettivamente.
+
 <a name="modal" />
 
 ## <a name="modal-navigation-events"></a>Eventi di spostamento modale
 
-Non sono presenti quattro nuovi eventi nel `Application` classe 1.4 xamarin. Forms, ciascuno con i propri argomenti dell'evento:
+Esistono quattro eventi sul [ `Application` ](xref:Xamarin.Forms.Application) (classe), ciascuno con i propri argomenti dell'evento, che consentono di rispondere alle pagine modale viene visualizzato e verrà eliminato:
 
 * **ModalPushing** - `ModalPushingEventArgs`
 * **ModalPushed** - `ModalPushedEventArgs`
 * **ModalPopping** - `ModalPoppingEventArgs` classe contiene un `Cancel` proprietà. Quando `Cancel` è impostato su `true` pop modale è stata annullata.
 * **ModalPopped** - `ModalPoppedEventArgs`
-
-Questi eventi consente di migliorare la gestione del ciclo di vita dell'applicazione, consentendo rispondere a modale pagine viene visualizzato e verrà eliminato.
 
 > [!NOTE]
 > Per implementare i metodi del ciclo di vita delle applicazioni e gli eventi di spostamento modale, tutti pre-`Application` metodi di creazione di un'app xamarin. Forms (ie. le applicazioni scritte nella versione 1.2 o precedente che utilizzano un valore statico `GetMainPage` metodo) sono stati aggiornati per creare un predefinito `Application` questo valore è impostato come elemento padre di `MainPage`.

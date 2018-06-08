@@ -1,5 +1,5 @@
 ---
-title: ScrollView
+title: Elemento ScrollView
 description: Utilizzare ScrollView layout che non è un solo schermo e includere contenuto liberare spazio per la tastiera.
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
@@ -7,19 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2016
-ms.openlocfilehash: 13f3d5c02b8451bcd52b355fb89f7931f50a0d39
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 708fb39aa2e56861a8c9fc47ab30bd20ed20188e
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847537"
 ---
-# <a name="scrollview"></a>ScrollView
+# <a name="scrollview"></a>Elemento ScrollView
 
 [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) include layout e consente loro di scorrimento fuori schermo. `ScrollView` viene usata anche per consentire le visualizzazioni spostare automaticamente per la parte visibile dello schermo quando viene visualizzato sulla tastiera.
 
 [![](scroll-view-images/layouts-sml.png "Xamarin.Forms Layouts")](scroll-view-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
-Questo articolo descrive:
+Questo articolo illustra le attività seguenti:
 
 - **[Scopo](#Purpose)**  &ndash; allo scopo di `ScrollView` e quando viene usato.
 - **[Utilizzo](#Usage)**  &ndash; illustrato come utilizzare `ScrollView` in pratica.
@@ -55,7 +56,7 @@ In C#:
 var scroll = new ScrollView();
 Content = scroll;
 var stack = new StackLayout();
-stack.Children.Add(new BoxView { BackgroundColor = Color.Red,   HeightRequest = 600, WidthRequest = 600 });
+stack.Children.Add(new BoxView { BackgroundColor = Color.Red,    HeightRequest = 600, WidthRequest = 600 });
 stack.Children.Add(new Entry());
 ```
 
