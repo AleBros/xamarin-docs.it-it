@@ -1,19 +1,20 @@
 ---
-title: Convertitori di valori di associazione
-description: Eseguire il cast o convertire i valori all'interno dell'associazione dati
+title: Convertitori di valori di associazione di xamarin. Forms
+description: In questo articolo viene illustrato come eseguire il cast o convertire i valori all'interno di un data binding di xamarin. Forms implementando un convertitore di tipi (che è noto anche come un convertitore di tipi di associazione, o il convertitore di valori di associazione).
 ms.prod: xamarin
 ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 260db2372977202df3d73e32645a358066146b40
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a5bd52d43ef93013537f30c7d5e0c31cbf336d07
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241829"
 ---
-# <a name="binding-value-converters"></a>Convertitori di valori di associazione
+# <a name="xamarinforms-binding-value-converters"></a>Convertitori di valori di associazione di xamarin. Forms
 
 In genere le associazioni dati trasferire dati da una proprietà di origine a una proprietà di destinazione e in alcuni casi dalla proprietà di destinazione per la proprietà di origine. Questo trasferimento è semplice quando le proprietà di origine e destinazione sono dello stesso tipo o un tipo può essere convertito in altro tipo mediante una conversione implicita. Quando non è questo il caso, una conversione del tipo deve essere effettuato.
 

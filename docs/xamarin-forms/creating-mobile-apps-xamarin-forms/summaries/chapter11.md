@@ -1,16 +1,18 @@
 ---
 title: Riepilogo del capitolo 11. L'infrastruttura associabile
+description: "Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 11. L'infrastruttura associabile"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9a35388f9ddd3adbefc3401352874a774376655b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7a878be4cf43e2168c37fdfd8e6fcdb79feb1602
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241539"
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Riepilogo del capitolo 11. L'infrastruttura associabile
 

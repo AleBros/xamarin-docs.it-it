@@ -1,17 +1,18 @@
 ---
 title: Concetti avanzati e meccanismi interni
-description: Dettagli di implementazione di xamarin. Forms e avanzate suggerimenti.
+description: Questa guida vengono presentati i concetti avanzati ed elementi interni per xamarin. Forms. Attualmente include articoli relativi a renderer veloce e .NET Standard.
 ms.prod: xamarin
 ms.assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/24/2017
-ms.openlocfilehash: c19dca3701b2915625ac8ac8566abf5796a28547
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 53e833da405596bf2503851ac9e12648d17ea032
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243466"
 ---
 # <a name="advanced-concepts--internals"></a>Concetti avanzati e meccanismi interni
 

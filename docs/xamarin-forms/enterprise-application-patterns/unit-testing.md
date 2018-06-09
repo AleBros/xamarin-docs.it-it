@@ -1,18 +1,20 @@
 ---
-title: Testing unità
+title: Unit test le app aziendali
+description: In questo capitolo illustra come gli unit test viene eseguito nell'app mobile eShopOnContainers.
 ms.prod: xamarin
 ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 57201a32f5ffc0ae962f6db851a25a737e1cb17d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 06cd89e0b0871eac723e8580340173f77821e4ed
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242531"
 ---
-# <a name="unit-testing"></a>Testing unità
+# <a name="unit-testing-enterprise-apps"></a>Unit test le app aziendali
 
 App per dispositivi mobili prevedono problemi univoci che desktop e applicazioni basate sul web non sono necessario preoccuparsi. Gli utenti mobili variano dai dispositivi che usano, alla connettività di rete, la disponibilità dei servizi e un intervallo di altri fattori. Pertanto, è necessario testare App per dispositivi mobili che verranno utilizzate nel mondo reale, per migliorare la qualità, affidabilità e prestazioni. Esistono molti tipi di test che devono essere eseguiti in un'app, tra cui unit test, test di integrazione e test, con gli unit test da una forma più comune di test dell'interfaccia utente.
 

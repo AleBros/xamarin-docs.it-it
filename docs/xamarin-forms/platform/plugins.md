@@ -1,19 +1,20 @@
 ---
-title: Plug-in
-description: Aggiungere facilmente funzionalità native per le app xamarin. Forms
+title: Utilizzo e la creazione di plug-in xamarin. Forms
+description: In questo articolo viene illustrato come creare plug-in xamarin. Forms e utilizzare. I plug-in genere consente di esporre facilmente funzionalità di piattaforma nativa.
 ms.prod: xamarin
 ms.assetid: 8A06A420-A9D0-4BCB-B9AF-3AEA6A648A8B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2016
-ms.openlocfilehash: 5770d13c46998872752820b7a0cbb222a04c3ff8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dff9fad0da30475a0fb91c0af76a25ea50d34439
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242557"
 ---
-# <a name="plugins"></a>Plug-in
+# <a name="consuming-and-creating-xamarinforms-plugins"></a>Utilizzo e la creazione di plug-in xamarin. Forms
 
 Sono disponibili molte funzionalità di piattaforma nativa che esistono in tutte le piattaforme, ma dispongono di API leggermente diverse. Gli sviluppatori di scrivere plug-in per creare un'interfaccia multipiattaforma astratta per le funzionalità possono inoltre condividere con altri utenti.
 

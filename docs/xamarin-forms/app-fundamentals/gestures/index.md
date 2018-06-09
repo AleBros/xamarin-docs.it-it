@@ -1,19 +1,20 @@
 ---
-title: Movimenti
-description: Per rilevare l'interazione dell'utente con molti elementi di un'applicazione di xamarin. Forms, è possono utilizzare i riconoscitori di movimento.
+title: Movimenti di xamarin. Forms
+description: Questa guida illustra come i riconoscitori di movimento di xamarin. Forms consente di rilevare l'interazione dell'utente con molti elementi di un'applicazione di xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 0E197A51-2304-4C09-A710-C7FF24A89F15
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 621110686e52c1558f74108789aa216c349436bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1c055d7ab02ad3233c38f2123793c4a4f49479cb
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240366"
 ---
-# <a name="gestures"></a>Movimenti
+# <a name="xamarinforms-gestures"></a>Movimenti di xamarin. Forms
 
 _Per rilevare l'interazione dell'utente con molti elementi di un'applicazione di xamarin. Forms, è possono utilizzare i riconoscitori di movimento._
 
@@ -30,4 +31,3 @@ Il movimento zoom indietro viene utilizzato per eseguire lo zoom interattivo e v
 ## <a name="adding-a-pan-gesture-recognizerpanmd"></a>[Aggiunta di un riconoscimento di movimento zoom](pan.md)
 
 Il movimento zoom viene utilizzato per il rilevamento di trascinamento e viene implementato con la [ `PanGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PanGestureRecognizer/) classe.
-

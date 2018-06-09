@@ -1,16 +1,18 @@
 ---
 title: Riepilogo del capitolo 15. L'interfaccia interattiva
+description: "Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 15. L'interfaccia interattiva"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c5b2bc00c4337969322193966f26ce0e151f426e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: aac49c9e74dd22642396ea8daf5ee3abd85de7bf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241897"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Riepilogo del capitolo 15. L'interfaccia interattiva
 
@@ -23,8 +25,8 @@ Xamarin. Forms contiene 20 istanziabili classi che derivano da `View` ma non `La
 - `Label`: [ **Capitolo 2. Anatomia di un'app**](chapter02.md)
 - `BoxView`: [ **Capitolo 3. Lo stack di scorrimento**](chapter03.md)
 - `Button`: [ **Capitolo 6. Fa clic sul pulsante**](chapter06.md)
-- `Image`: [ **Capitolo 13. Bitmaps**](chapter13.md)
-- `ActivityIndicator`: [ **Capitolo 13. Bitmaps**](chapter13.md)
+- `Image`: [ **Capitolo 13. Bitmap**](chapter13.md)
+- `ActivityIndicator`: [ **Capitolo 13. Bitmap**](chapter13.md)
 - `ProgressBar`: [ **Capitolo 14. AbsoluteLayout**](chapter14.md)
 
 Le viste in questo capitolo otto consentono in modo efficace all'utente di interagire con tipi di dati .NET di base:

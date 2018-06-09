@@ -1,20 +1,20 @@
 ---
-title: Grid
-description: Viste presente nelle griglie.
+title: Griglia di xamarin. Forms
+description: In questo articolo viene illustrato come utilizzare la classe di griglia di xamarin. Forms per presentare le viste nelle griglie, che deve disporre di righe e colonne.
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 6ff36f511c5194017afd34601fc9ea2f89b1e2d4
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: a50144f5e0962bd74858bb7731e30cef5dd31b6d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848109"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245153"
 ---
-# <a name="grid"></a>Grid
+# <a name="xamarinforms-grid"></a>Griglia di xamarin. Forms
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) supporta la disposizione delle viste in righe e colonne. Dimensioni proporzionale o dimensioni assolute, è possono impostare le righe e colonne. Il `Grid` layout non deve essere confuso con tabelle tradizionali e non deve presentare i dati tabulari. `Grid` non ha il concetto di riga, colonna o cella formattazione. A differenza delle tabelle HTML, `Grid` è destinato esclusivamente per definire il layout del contenuto.
 

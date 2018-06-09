@@ -1,19 +1,20 @@
 ---
-title: Percorso di associazione
-description: Utilizzare le associazioni di dati di sottoproprietà di accesso e i membri della raccolta
+title: Percorso di associazione di xamarin. Forms
+description: In questo articolo viene illustrato come utilizzare xamarin. Forms i data binding per l'accesso a sottoproprietà e i membri della raccolta con la proprietà percorso della classe di associazione.
 ms.prod: xamarin
 ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: f75cfcf4bfd5ffa71699f62b30145b732421d964
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d7c3b1ba991380451b4a82c389c4d46e950bc914
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240473"
 ---
-# <a name="binding-path"></a>Percorso di associazione
+# <a name="xamarinforms-binding-path"></a>Percorso di associazione di xamarin. Forms
 
 In tutti gli esempi di associazione di dati precedenti, il [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/) proprietà del `Binding` classe (o [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Path/) proprietà del `Binding` estensione di markup) è stato impostato per una singola proprietà. È effettivamente possibile impostare `Path` per un *delle sottoproprietà* (una proprietà di una proprietà), o a un membro di una raccolta.
 
@@ -29,7 +30,7 @@ Il `Time` proprietà di `TimePicker` è di tipo `TimeSpan`, ma forse si desidera
 {Binding Source={x:Reference timePicker},
          Path=Time.TotalSeconds}
 ```
-         
+
 Il `Time` proprietà è di tipo `TimeSpan`, che presenta un `TotalSeconds` proprietà. Il `Time` e `TotalSeconds` proprietà sono simply connessa con un punto. Gli elementi di `Path` stringa sempre fare riferimento alle proprietà e non i tipi di queste proprietà.
 
 Esempio e molti altri verranno mostrati nel **percorso variazioni** pagina:
@@ -50,7 +51,7 @@ Esempio e molti altri verranno mostrati nel **percorso variazioni** pagina:
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout Margin="10, 0">
         <TimePicker x:Name="timePicker" />
 
@@ -61,7 +62,7 @@ Esempio e molti altri verranno mostrati nel **percorso variazioni** pagina:
         <Label Text="{Binding Source={x:Reference page},
                               Path=Content.Children.Count,
                               StringFormat='There are {0} children in this StackLayout'}" />
-        
+
         <Label Text="{Binding Source={x:Static globe:CultureInfo.CurrentCulture},
                               Path=DateTimeFormat.DayNames[3],
                               StringFormat='The middle day of the week is {0}'}" />
@@ -156,7 +157,7 @@ Che visualizza il tipo di origine di associazione, o `DataBindingDemos.PathVaria
 
 Il tipo di `Content` proprietà viene ora visualizzata da `Xamarin.Forms.StackLayout`. Aggiungere il `Children` proprietà per il `Path` e il tipo è `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]`, ovvero una classe interna per xamarin. Forms, ma ovviamente un tipo di raccolta. Aggiungere un indice che e il tipo è `Xamarin.Forms.Label`. In questo modo, continuare.
 
-Come xamarin. Forms elabora il percorso di associazione, viene installato un `PropertyChanged` gestore su qualsiasi oggetto nel percorso che implementa il `INotifyPropertyChanged` interfaccia. Ad esempio, l'associazione finale risponde a una modifica nel primo `Label` perché il `Text` le modifiche alle proprietà. 
+Come xamarin. Forms elabora il percorso di associazione, viene installato un `PropertyChanged` gestore su qualsiasi oggetto nel percorso che implementa il `INotifyPropertyChanged` interfaccia. Ad esempio, l'associazione finale risponde a una modifica nel primo `Label` perché il `Text` le modifiche alle proprietà.
 
 Se una proprietà nel percorso di associazione non implementa `INotifyPropertyChanged`, qualsiasi modifica a tale proprietà verrà ignorata. Alcune modifiche potrebbero completamente invalidare il percorso di associazione, è necessario utilizzare questa tecnica solo quando la stringa di proprietà e sottoproprietà non diventano non validi.
 

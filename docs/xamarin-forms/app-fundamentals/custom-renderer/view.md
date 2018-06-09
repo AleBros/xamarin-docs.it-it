@@ -1,18 +1,18 @@
 ---
 title: Implementazione di una vista
-description: Xamarin. Forms controlli dell'interfaccia utente personalizzata devono derivare dalla classe di visualizzazione, viene utilizzata per posizionare i controlli nella schermata e layout. In questo articolo viene illustrato come creare un renderer personalizzato per un controllo personalizzato di xamarin. Forms che consente di visualizzare un flusso video di anteprima da fotocamera del dispositivo.
+description: In questo articolo viene illustrato come creare un renderer personalizzato per un controllo personalizzato di xamarin. Forms che consente di visualizzare un flusso video di anteprima dal dispositivo foto/video del dispositivo.
 ms.prod: xamarin
 ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: d270a23fb2fee67e5e3dd415771c975aeb682854
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: eb0bc199bfd31ac631ca9d131796b606960d76aa
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848486"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240486"
 ---
 # <a name="implementing-a-view"></a>Implementazione di una vista
 

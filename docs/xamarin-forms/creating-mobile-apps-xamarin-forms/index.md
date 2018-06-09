@@ -1,17 +1,18 @@
 ---
 title: Creazione di App per dispositivi mobili con xamarin. Forms libro prima edizione
-description: Informazioni su xamarin. Forms con la versione del libro la creazione di App per dispositivi mobili di Charles Petzold elettronica.
+description: Informazioni su xamarin. Forms lo sviluppo di applicazioni con la versione del libro la creazione di App per dispositivi mobili di Charles Petzold elettronico.
 ms.prod: xamarin
 ms.assetid: CDE99818-689B-4376-9DC4-C4102AC0F931
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/03/2016
-ms.openlocfilehash: 6e98adc4cc9dbf1ef6483d552d859b4925d51fe9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 84ed08419c49617ee0fcde57682e512ecb9ee6d7
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241702"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book-first-edition"></a>Creazione di App per dispositivi mobili con xamarin. Forms libro prima edizione
 

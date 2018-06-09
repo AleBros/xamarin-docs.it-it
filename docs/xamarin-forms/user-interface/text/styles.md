@@ -1,33 +1,25 @@
 ---
-title: Stili
-description: Testo di stile in xamarin. Forms
+title: Stili del testo di xamarin. Forms
+description: Questo articolo viene illustrato come lo stile di testo nelle applicazioni di xamarin. Forms. Stili possono essere definiti una volta e utilizzati da numerose visualizzazioni, ma uno stile può essere utilizzato solo con le visualizzazioni di un tipo.
 ms.prod: xamarin
 ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 42d5da5c4171347de8c4befc773e498803fd9f36
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b8cc6493c3574180e7938050075c5a70ecebeebf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848447"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245322"
 ---
-# <a name="styles"></a>Stili
+# <a name="xamarinforms-text-styles"></a>Stili del testo di xamarin. Forms
 
-_Testo di stile in xamarin. Forms_
-
+_Lo stile testo in xamarin. Forms_
 
 Stili consente di modificare l'aspetto dell'editor, le voci e le etichette. Stili possono essere definiti una volta e utilizzati da numerose visualizzazioni, ma uno stile può essere utilizzato solo con le visualizzazioni di un tipo.
 Stili possono essere assegnati un `Key` e applicati in modo selettivo usando un controllo specifico `Style` proprietà.
-
-In questo articolo vengono illustrati gli argomenti seguenti:
-
-- **[Gli stili predefiniti](#Built-In_Styles)**  &ndash; utilizzare gli stili predefiniti per le viste basate su testo stile in tutta l'app.
-- **[Gli stili personalizzati](#Custom_Styles)**  &ndash; definiscono gli stili personalizzati quando le opzioni predefinite non sono sufficienti.
-- **[Applicazione di stili](#Applying_Styles)**  &ndash; si applicano gli stili predefiniti e personalizzati alle visualizzazioni.
-- **[Accessibilità](#Accessibility)**  &ndash; assicurarsi che il testo rispetta le impostazioni di accessibilità.
 
 <a name="Built-In_Styles" />
 

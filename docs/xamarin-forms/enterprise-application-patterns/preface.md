@@ -1,18 +1,20 @@
 ---
-title: Prefisso
+title: Prefisso per lo sviluppo di App aziendali
+description: Questo capitolo vengono fornite un prefisso per i modelli di applicazione Enterprise con xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: e9dd5f663fc98ac1e869721517e9a3d0fb2033bb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fd085d2fb12e82233f6d3be2e2773a84539f837b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242368"
 ---
-# <a name="preface"></a>Prefisso
+# <a name="preface-to-enterprise-app-development"></a>Prefisso per lo sviluppo di App aziendali
 
 Questo eBook fornisce informazioni aggiuntive sulla creazione di applicazioni enterprise multipiattaforma con xamarin. Forms. Xamarin. Forms è un toolkit dell'interfaccia utente multipiattaforma che consente agli sviluppatori di creare facilmente utente nativi layout dell'interfaccia che può essere condivisa tra le piattaforme, tra cui iOS, Android e la piattaforma UWP (Universal Windows). Fornisce una soluzione completa per Business dipendente (B2E), Business to Business (B2B) e di Business per le app Consumer (B2C), fornendo la possibilità di condividere il codice per tutte le piattaforme di destinazione e contribuendo a ridurre il costo totale di proprietà (TCO).
 

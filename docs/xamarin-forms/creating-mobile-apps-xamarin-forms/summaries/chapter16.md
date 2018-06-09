@@ -1,16 +1,18 @@
 ---
 title: Riepilogo del capitolo 16. Associazione dati
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo di 16 capitolo. Associazione dati'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0f200e0c482402813ac7051255dd7c27da93d6dc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 520da1518c7b795bd1ad17cc3cfaa8d37815de53
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241510"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>Riepilogo del capitolo 16. Associazione dati
 

@@ -1,19 +1,20 @@
 ---
-title: Dati del percorso SVG
-description: Definire i percorsi di utilizzo delle stringhe di testo nel formato Scalable Vector Graphics
+title: Dati del percorso SVG in SkiaSharp
+description: In questo articolo viene illustrato come definire i percorsi di SkiaSharp usando stringhe di testo nel formato Scalable Vector Graphics e viene illustrato quanto descritto con codice di esempio.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: fe9699894224d9a33b3a79e9b5bcd4cd41c635dd
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 0453374c59c3b12842b7fb1524cc150329d84b7f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243974"
 ---
-# <a name="svg-path-data"></a>Dati del percorso SVG
+# <a name="svg-path-data-in-skiasharp"></a>Dati del percorso SVG in SkiaSharp
 
 _Definire i percorsi di utilizzo delle stringhe di testo nel formato Scalable Vector Graphics_
 
@@ -65,7 +66,7 @@ L x y ...
 
 Questo comando aggiunge una linea retta (o righe) al percorso e imposta la nuova posizione corrente alla fine dell'ultima riga. È possibile seguire il `L` con più coppie di *x* e *y* coordinate.
 
-## <a name="horizontal-lineto"></a>**Horizontal LineTo**
+## <a name="horizontal-lineto"></a>**LineTo orizzontale**
 
 ```csharp
 H x ...

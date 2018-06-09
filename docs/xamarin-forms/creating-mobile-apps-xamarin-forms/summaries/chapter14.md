@@ -1,16 +1,18 @@
 ---
 title: Riepilogo del capitolo 14. Layout assoluto
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 14. Layout assoluto'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 87feb17f79dadb0eb8da271f7c072e4a9753381c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b8fe8f8bb0ba3204a312f3d91bc59b8fa3f7c03a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241403"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Riepilogo del capitolo 14. Layout assoluto
 
@@ -83,7 +85,7 @@ Il [ **ProportionalCoordinateCalc** ](https://github.com/xamarin/xamarin-forms-b
 
 ## <a name="overlays"></a>Sovrapposizioni
 
-È possibile utilizzare `AbsoluteLayout` per costruire un *sovrapposizione*, che copre la con altri controlli, ad esempio per impedire che l'utente interagisce con i normali controlli nella pagina. 
+È possibile utilizzare `AbsoluteLayout` per costruire un *sovrapposizione*, che copre la con altri controlli, ad esempio per impedire che l'utente interagisce con i normali controlli nella pagina.
 
 Il [ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) esempio viene illustrata questa tecnica e viene inoltre illustrato il [ `ProgressBar` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ProgressBar/), che consente di visualizzare l'entità a cui un programma è stata completata una attività.
 

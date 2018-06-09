@@ -1,20 +1,20 @@
 ---
-title: Animazioni personalizzate
-description: La classe di animazione è il blocco predefinito di tutte le animazioni di xamarin. Forms, con i metodi di estensione nella classe ViewExtensions la creazione di uno o più oggetti di animazione. In questo articolo viene illustrato come utilizzare la classe di animazione per creare e annullare le animazioni, sincronizzare più animazioni e creare animazioni personalizzate che animare le proprietà che non sono animate dai metodi di animazione esistente.
+title: Animazioni personalizzate in xamarin. Forms
+description: In questo articolo viene illustrato come utilizzare la classe di animazione xamarin. Forms per creare e annullare le animazioni, sincronizzare più animazioni e creare animazioni personalizzate che animare le proprietà che non sono animate dai metodi di animazione esistente.
 ms.prod: xamarin
 ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 238268a3ad2b82494f1d096d0cbeba97edb90366
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 74430f6c158e74569f1b2cbfa0b6a85e8d40fbcf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847784"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242976"
 ---
-# <a name="custom-animations"></a>Animazioni personalizzate
+# <a name="custom-animations-in-xamarinforms"></a>Animazioni personalizzate in xamarin. Forms
 
 _La classe di animazione è il blocco predefinito di tutte le animazioni di xamarin. Forms, con i metodi di estensione nella classe ViewExtensions la creazione di uno o più oggetti di animazione. In questo articolo viene illustrato come utilizzare la classe di animazione per creare e annullare le animazioni, sincronizzare più animazioni e creare animazioni personalizzate che animare le proprietà che non sono animate dai metodi di animazione esistente._
 

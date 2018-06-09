@@ -1,17 +1,18 @@
 ---
 title: Utilizzo di estensioni di Markup XAML
-description: Utilizzare le estensioni di Markup XAML disponibili in xamarin. Forms
+description: In questo articolo viene illustrato come utilizzare le estensioni di markup XAML di xamarin. Forms per migliorare la potenza e flessibilità di XAML, consentendo di attributi dell'elemento da impostare da diverse origini.
 ms.prod: xamarin
 ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 25eada483e8bd2ce95cb3101dfe873ea38b283ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 278677d45f997ac446c2a20967dc3501179bf8da
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245937"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilizzo di estensioni di Markup XAML
 
@@ -136,7 +137,7 @@ Nell'esempio finale viene visualizzato il `Device.RuntimePlatform` valore. Il `E
 
 Di seguito è riportato l'esempio in esecuzione in tutti e tre le piattaforme:
 
-[![x:Static Demo](consuming-images/staticdemo-small.png "x:Static Demo")](consuming-images/staticdemo-large.png#lightbox "x:Static Demo")
+[![X:Static Demo](consuming-images/staticdemo-small.png "X:Static Demo")](consuming-images/staticdemo-large.png#lightbox "X:Static Demo")
 
 <a name="reference" />
 

@@ -1,17 +1,18 @@
 ---
 title: Manipolazioni tocco
-description: Trasforma una matrice di utilizzo per implementare il trascinamento di tocco, compressione e la rotazione
+description: In questo articolo viene illustrato come utilizzare le trasformazioni di matrice per implementare il trascinamento di tocco, compressione e la rotazione e viene illustrato quanto descritto con codice di esempio.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2018
-ms.openlocfilehash: e8e5cc7b1a00f9822c4cbb4859a02b7546102ca0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a53fe287e74070adb22c2a7c67d4b7cc10b35d3e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244286"
 ---
 # <a name="touch-manipulations"></a>Manipolazioni tocco
 
@@ -753,9 +754,9 @@ public partial class SingleFingerCornerScalePage : ContentPage
 }
 ```
 
-Ciò `SKMatrix` oggetto viene modificato dalla logica di tocco illustrata di seguito. 
+Ciò `SKMatrix` oggetto viene modificato dalla logica di tocco illustrata di seguito.
 
-Il resto del file code-behind è il `TouchEffect` gestore dell'evento. Viene innanzitutto eseguita la conversione della posizione corrente del dito per un `SKPoint` valore. Per il `Pressed` tipo di azione, il gestore verifica che nessun altro dito tocca lo schermo e che si trova entro i limiti della bitmap. 
+Il resto del file code-behind è il `TouchEffect` gestore dell'evento. Viene innanzitutto eseguita la conversione della posizione corrente del dito per un `SKPoint` valore. Per il `Pressed` tipo di azione, il gestore verifica che nessun altro dito tocca lo schermo e che si trova entro i limiti della bitmap.
 
 La parte essenziale del codice è un `if` istruzione che interessa due chiamate al `Math.Pow` metodo. Questo matematiche controlla se il dito si trova di fuori di un'ellisse che riempie la mappa di bit. In tal caso, che è un'operazione di ridimensionamento. Si trova in uno degli angoli dell'immagine bitmap della prossimità e un punto pivot viene stabilito che è l'angolo opposto. Se si trova all'interno di questa ellisse, è un'operazione di panoramica regolari:
 

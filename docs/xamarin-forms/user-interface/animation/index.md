@@ -1,5 +1,5 @@
 ---
-title: Animazione
+title: Animazione in xamarin. Forms
 description: Xamarin. Forms include la propria infrastruttura animazione che è molto semplice per la creazione di semplici animazioni, pur sufficientemente versatile per creare animazioni complesse.
 ms.prod: xamarin
 ms.assetid: AC0B4127-ECA3-44DA-8A24-A2B10A275083
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 7cff122e7ecc24f5ad93bd863ee422981871f857
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bc04f638168a10266c20e278481fc0c513afe48
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245026"
 ---
-# <a name="animation"></a>Animazione
+# <a name="animation-in-xamarinforms"></a>Animazione in xamarin. Forms
 
 _Xamarin. Forms include la propria infrastruttura animazione che è molto semplice per la creazione di semplici animazioni, pur sufficientemente versatile per creare animazioni complesse._
 
@@ -30,4 +31,3 @@ Xamarin. Forms include un [ `Easing` ](https://developer.xamarin.com/api/type/Xa
 ## <a name="custom-animationscustommd"></a>[Animazioni personalizzate](custom.md)
 
 Il [ `Animation` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Animation/) classe è il blocco predefinito di tutte le animazioni di xamarin. Forms, con i metodi di estensione di [ `ViewExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/) classe creazione di uno o più `Animation` oggetti. In questo articolo viene illustrato come utilizzare la `Animation` classe per creare e annullare le animazioni, sincronizzare più animazioni e creare animazioni personalizzate che animare le proprietà che non sono animate dai metodi di animazione esistente.
-

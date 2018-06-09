@@ -1,19 +1,20 @@
 ---
-title: Testo
-description: Con xamarin. Forms consente di immettere o visualizzare il testo.
+title: Testo in xamarin. Forms
+description: Xamarin. Forms offre tre visualizzazioni principali per l'utilizzo di testo e questo articolo spiega come usarli per immettere e visualizzare il testo nelle applicazioni di xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 37289c4c118c3a84b8c81d3a1c1502ff80564bb9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c5bd157299c9388b561f316e65f2ba290bd15224
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244987"
 ---
-# <a name="text"></a>Testo
+# <a name="text-in-xamarinforms"></a>Testo in xamarin. Forms
 
 _Con xamarin. Forms consente di immettere o visualizzare il testo._
 

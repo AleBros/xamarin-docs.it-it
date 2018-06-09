@@ -1,17 +1,18 @@
 ---
 title: Trasformazioni non affini.
-description: Creare prospettive ed effetti conici con la terza colonna della matrice di trasformazione
+description: In questo articolo viene illustrato come creare prospettive ed effetti conici con la terza colonna della matrice di trasformazione e viene illustrato quanto descritto con codice di esempio.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 8c3d39038fbaf5ed6601102a0aa16860c7a5a7a6
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 03c5b0dcbb7870e38991d7e0f4c7ac4feebfcf4e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244233"
 ---
 # <a name="non-affine-transforms"></a>Trasformazioni non affini.
 
@@ -39,7 +40,7 @@ x' = ScaleX·x + SkewX·y + TransX
 
 y' = SkewY·x + ScaleY·y + TransY
 
-z` = Persp0·x + Persp1·y + Persp2
+z' = Persp0·x + Persp1·y Persp2
 
 La regola fondamentale dell'utilizzo di una matrice 3 per 3 per le trasformazioni bidimensionale è che tutto ciò che rimane nel piano in cui Z è uguale a 1. A meno che non `Persp0` e `Persp1` sono 0, e `Persp2` è uguale a 1, la trasformazione è stato spostato le coordinate Z tale piano.
 
@@ -47,7 +48,7 @@ Per ripristinare una trasformazione bidimensionale, è necessario spostare le co
 
 x" = x' / z'
 
-y" = y' / z'
+y"= y' / z'
 
 z" = z' / z' = 1
 
@@ -59,7 +60,7 @@ Quando la visualizzazione della grafica, tuttavia, si desidera evitare il render
 
 L'equazione, non si desidera il valore di z' diventa zero:
 
-z` = Persp0·x + Persp1·y + Persp2
+z' = Persp0·x + Persp1·y Persp2
 
 Il `Persp2` cella può essere zero o non zero. Se `Persp2` è zero, z' è uguale a zero per il punto (0, 0) e che non è in genere preferibile perché tale punto è molto comune nei grafici bidimensionali. Se `Persp2` non è uguale a zero, non vi è alcuna perdita di generalità se `Persp2` è fissato a 1. Ad esempio, se si determina che `Persp2` deve essere di 5, quindi è possibile dividere semplicemente tutte le celle della matrice di 5, che rende `Persp2` uguale a 1 e il risultato sarà lo stesso.
 
@@ -230,7 +231,7 @@ Ecco alcune immagini di esempio:
 
 Mentre si sperimentano i dispositivi di scorrimento, sono disponibili che valori oltre 0.0066 o di sotto di –0.0066 causare l'immagine risulti improvvisamente fractured e incoerenti. La mappa di bit vengono trasformato è 300 pixel. Trasformato rispetto al centro, pertanto le coordinate della mappa di bit compreso tra –150 e 150. Tenere presente che il valore di z' è:
 
-z` = Persp0·x + Persp1·y + 1
+z' = Persp0·x Persp1·y + 1
 
 Se `Persp0` o `Persp1` è maggiore di 0.0066 o di sotto di –0.0066, quindi è sempre alcune coordinate della bitmap risultante in z' valore pari a zero. Che causa la divisione per zero e il rendering diventa un messaggio. Quando si utilizzano le trasformazioni non affini, si desidera evitare il rendering di qualsiasi operazione con le coordinate che causano la divisione per zero.
 

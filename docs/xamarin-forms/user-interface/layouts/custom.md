@@ -1,18 +1,18 @@
 ---
 title: Creazione di un Layout personalizzato
-description: Xamarin. Forms definisce quattro classi layout – StackLayout, AbsoluteLayout, RelativeLayout e griglia, e ognuno dispone i relativi elementi figlio in modo diverso. Tuttavia, talvolta è necessario organizzare il contenuto di pagina utilizzando un layout non fornito da xamarin. Forms. In questo articolo viene illustrato come scrivere una classe di layout personalizzato e viene illustrata una classe di WrapLayout orientamento dipendente che dispone i relativi elementi figlio orizzontalmente attraverso la pagina e quindi esegue il wrapping la visualizzazione di elementi figlio successivi a righe aggiuntive.
+description: In questo articolo viene illustrato come scrivere una classe di layout personalizzato e viene illustrata una classe di WrapLayout orientamento dipendente che dispone i relativi elementi figlio orizzontalmente attraverso la pagina e quindi esegue il wrapping la visualizzazione di elementi figlio successivi a righe aggiuntive.
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 7f2a443ded0d6b41db237e9842cd80e016bb5251
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: f225a80a1c386668b71d1cdd47409eb017f19033
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847747"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244935"
 ---
 # <a name="creating-a-custom-layout"></a>Creazione di un Layout personalizzato
 

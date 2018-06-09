@@ -1,16 +1,18 @@
 ---
 title: Riepilogo del capitolo 3. Più approfondita nel testo
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 3. Più approfondita nel testo'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: d4ea9b9da2788ba0cfc9534532fedb5fe83e78a8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f0e6063b6ce6038a6f6def67c27347ca024e72f6
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241487"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Riepilogo del capitolo 3. Più approfondita nel testo
 

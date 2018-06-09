@@ -1,19 +1,20 @@
 ---
-title: Formattazione di stringhe
-description: Utilizzare le associazioni dati per formattare e visualizzare gli oggetti come stringhe
+title: Formattazione di stringhe di xamarin. Forms
+description: In questo articolo viene illustrato come utilizzare le associazioni dati xamarin. Forms per formattare e visualizzare gli oggetti come stringhe. Questo risultato si ottiene impostando StringFormat dell'associazione a una stringa di formattazione .NET standard con un segnaposto.
 ms.prod: xamarin
 ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 4e143f650c3cde7577def1a95e53b207608a088a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bdac74e4ec14797ec373f86b8a94c7af4d480951
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240301"
 ---
-# <a name="string-formatting"></a>Formattazione di stringhe
+# <a name="xamarinforms-string-formatting"></a>Formattazione di stringhe di xamarin. Forms
 
 In alcuni casi è consigliabile usare le associazioni dati per visualizzare la rappresentazione di stringa di un oggetto o un valore. Potrebbe ad esempio, si desidera utilizzare un `Label` per visualizzare il valore corrente di un `Slider`. In questa associazione di dati, il `Slider` è l'origine e la destinazione è il `Text` proprietà del `Label`.
 

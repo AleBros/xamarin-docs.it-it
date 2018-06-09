@@ -1,5 +1,5 @@
 ---
-title: Pagina master-details
+title: Pagina Master-Details xamarin. Forms
 description: 'Il MasterDetailPage xamarin. Forms è una pagina che gestisce due pagine correlate di informazioni: una pagina master che presenta elementi e una pagina di dettaglio che visualizza i dettagli sugli elementi della pagina master. In questo articolo viene illustrato come utilizzare un MasterDetailPage e spostarsi tra le pagine di informazioni.'
 ms.prod: xamarin
 ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 20032cdf4789de3248ec30a8da5e21e1bd8e4bcd
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 80d86e1aa6a00d4a55c0fdba1b858bfef7bcbc84
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846377"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241344"
 ---
-# <a name="master-detail-page"></a>Pagina master-details
+# <a name="xamarinforms-master-detail-page"></a>Pagina Master-Details xamarin. Forms
 
 _Il MasterDetailPage xamarin. Forms è una pagina che gestisce due pagine correlate di informazioni: una pagina master che presenta elementi e una pagina di dettaglio che visualizza i dettagli sugli elementi della pagina master. In questo articolo viene illustrato come utilizzare un MasterDetailPage e spostarsi tra le pagine di informazioni._
 

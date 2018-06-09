@@ -1,20 +1,20 @@
 ---
-title: Elenco aspetto
-description: Personalizzare i controlli ListView utilizzando le intestazioni, piè di pagina, gruppi e le celle di altezza variabile.
+title: Personalizzazione dell'aspetto di ListView
+description: In questo articolo viene illustrato come personalizzare i controlli ListView nelle applicazioni di xamarin. Forms usando le intestazioni, piè di pagina, gruppi e le celle di altezza variabile.
 ms.prod: xamarin
 ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 6b460e25aa5b97953069caa5456003b6cab2c8a8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: febf712848b81c09a4e25c824acc097e8b65e409
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848388"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245140"
 ---
-# <a name="list-appearance"></a>Elenco aspetto
+# <a name="customizing-listview-appearance"></a>Personalizzazione dell'aspetto di ListView
 
 `ListView` sono disponibili opzioni per controllare la presentazione dell'elenco globale, oltre a sottostante `ViewCell`s. Le opzioni includono:
 

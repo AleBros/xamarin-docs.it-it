@@ -1,16 +1,18 @@
 ---
 title: Autenticazione e autorizzazione
+description: In questo capitolo viene illustrato come l'app mobile eShopOnContainers esegue l'autenticazione e autorizzazione in base a microservizi nei contenitori.
 ms.prod: xamarin
 ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 9c6f3ae19b3e1b89220cbdf0985f4bdf789f2209
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e6cfa566ab455841b3f11e4a857dcf678083417
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242428"
 ---
 # <a name="authentication-and-authorization"></a>Autenticazione e autorizzazione
 
@@ -93,7 +95,7 @@ Dopo la chiamata di `services.AddIdentityServer` metodo, l'API fluent aggiuntive
 -   Credenziali utilizzate per la firma.
 -   Risorse di API e l'identità che gli utenti potrebbero richiedere l'accesso.
 -   Client che si connettono ai token di richiesta.
--   ASP.NET Core Identity.
+-   Identità di ASP.NET Core.
 
 >💡 **Suggerimento**: caricare in modo dinamico la configurazione di 4 IdentityServer. API IdentityServer 4 consentono di configurare IdentityServer da un elenco di oggetti di configurazione in memoria. Nell'applicazione di riferimento eShopOnContainers, queste raccolte in memoria sono hardcoded nell'applicazione. Tuttavia, negli scenari di produzione possono essere caricati in modo dinamico da un file di configurazione o da un database.
 
@@ -324,7 +326,7 @@ Per informazioni sulla navigazione tra le pagine, vedere [navigazione](~/xamarin
 > [!NOTE]
 > Consente inoltre una simulazione Accedi quando l'app è configurato per utilizzare i servizi fittizi nel eShopOnContainers il `SettingsView`. In questa modalità l'app comunica con IdentityServer, invece che consente all'utente di accedere utilizzando le credenziali.
 
-#### <a name="signing-out"></a>Signing-out
+#### <a name="signing-out"></a>Firma orizzontale
 
 Quando l'utente tocca il **LOG OUT** pulsante il `ProfileView`, `LogoutCommand` nel `ProfileViewModel` classe viene eseguita, che a sua volta esegue il `LogoutAsync` (metodo). Questo metodo esegue navigazione tra le pagine per il `LoginView` pagina, passando un `LogoutParameter` istanza impostata su `true` come parametro. Per ulteriori informazioni sul passaggio di parametri durante la navigazione tra le pagine, vedere [passando i parametri durante la navigazione](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing_parameters_during_navigation).
 

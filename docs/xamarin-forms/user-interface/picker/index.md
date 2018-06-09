@@ -1,20 +1,20 @@
 ---
-title: Selezione
-description: La visualizzazione di selezione è un controllo per la selezione di un elemento di testo da un elenco di dati.
+title: Selezione di xamarin. Forms
+description: La selezione di xamarin. Forms consente di visualizzare un breve elenco di elementi, da cui l'utente può selezionare un elemento. In questo articolo viene illustrato come utilizzare la classe di selezione per selezionare un elemento di testo da un elenco di dati.
 ms.prod: xamarin
 ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/04/2018
-ms.openlocfilehash: 7f0050351ca28d7f8afeb82a85e82e51d399824b
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 82ae36a7be139e2a93d0e5c43c4bad355c49f217
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847498"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245039"
 ---
-# <a name="picker"></a>Selezione
+# <a name="xamarinforms-picker"></a>Selezione di xamarin. Forms
 
 _La visualizzazione di selezione è un controllo per la selezione di un elemento di testo da un elenco di dati._
 

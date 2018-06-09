@@ -1,6 +1,6 @@
 ---
 title: Installazione di piattaforma Mac
-description: Xamarin. Forms include ora il supporto di anteprima per la piattaforma Mac
+description: In questo articolo viene illustrato come aggiungere un progetto Mac a un progetto xamarin. Forms, che produrrà un'app in grado di eseguire su macOS Sierra e macOS montagna di El Capitan.
 ms.prod: xamarin
 ms.assetid: EEC549E0-F182-4F9C-B2BA-B31D19569AA5
 ms.technology: xamarin-forms
@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: c3a2c36463b2934254c54f3f2250ee253d57798b
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: ae0fbfc7862a0d2147b2c3bbdbae7dd53dfce78f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848227"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242596"
 ---
 # <a name="mac-platform-setup"></a>Installazione di piattaforma Mac
 
@@ -28,7 +28,7 @@ Prima di iniziare, creare (o utilizzare un'esistente) progetto xamarin. Forms.
 
 ## <a name="adding-a-mac-app"></a>Aggiunta di un'App Mac
 
-Seguire queste istruzioni per aggiungere un'app Mac che verrà eseguito su macOS Sierra e montagna di El Capitan Mac OS X:
+Seguire queste istruzioni per aggiungere un'app Mac che verrà eseguito su macOS Sierra e macOS montagna di El Capitan:
 
 1. In Visual Studio per Mac, fare clic su una soluzione xamarin. Forms esistente e scegliere **Aggiungi > Aggiungi nuovo progetto...**
 

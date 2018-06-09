@@ -1,19 +1,20 @@
 ---
-title: Disegno di un dito
-description: Utilizzare le dita per disegnare nell'area di disegno.
+title: Disegno con un dito in SkiaSharp
+description: In questo articolo viene illustrato come utilizzare le dita per disegnare nell'area di disegno SkiaSharp in un'applicazione di xamarin. Forms e viene illustrato quanto descritto con codice di esempio.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2017
-ms.openlocfilehash: 6180eb61e7850b7739c5514461796fb0aacbc4ff
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: f4c3d2ef2f6d1253f58b95559ef83af291f87b03
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243779"
 ---
-# <a name="finger-painting"></a>Disegno di un dito
+# <a name="finger-painting-in-skiasharp"></a>Disegno con un dito in SkiaSharp
 
 _Utilizzare le dita per disegnare nell'area di disegno._
 

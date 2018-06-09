@@ -1,20 +1,20 @@
 ---
-title: Colori
-description: Xamarin. Forms fornisce una classe di colore flessibile e multipiattaforma.
+title: Colori in xamarin. Forms
+description: Xamarin. Forms fornisce una classe di colore flessibile e multipiattaforma. Questo articolo illustra la funzionalità fornita dalla classe colore e come utilizzarla.
 ms.prod: xamarin
 ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 7a304790213bcebe50a3f39295b5b1d1fb052879
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 45adcb8a0fe25e729211e8b166be51ce2c4d93bd
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848343"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243018"
 ---
-# <a name="colors"></a>Colori
+# <a name="colors-in-xamarinforms"></a>Colori in xamarin. Forms
 
 _Xamarin. Forms fornisce una classe di colore flessibile e multipiattaforma._
 

@@ -1,20 +1,20 @@
 ---
-title: TableView
-description: Presentare il menu di scorrimento, impostazioni e i moduli di input.
+title: Xamarin. Forms TableView
+description: In questo articolo viene illustrato come utilizzare la classe TableView xamarin. Forms per presentare scorrimento menu, le impostazioni e moduli di input nelle applicazioni.
 ms.prod: xamarin
 ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 312472fdfae65bc62b76f4295a13760236dededc
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 5ad1db6a073b5a6d0199aa586230cb55a9d4a925
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847659"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244858"
 ---
-# <a name="tableview"></a>TableView
+# <a name="xamarinforms-tableview"></a>Xamarin. Forms TableView
 
 [TableView](https://developer.xamarin.com/api/type/Xamarin.Forms.TableView/) è una vista per la visualizzazione scorrevoli elenchi di dati o scelte in cui sono presenti righe che non condividono lo stesso modello. A differenza di [ListView](~/xamarin-forms/user-interface/listview/index.md), TableView non hanno il concetto di un `ItemsSource`, in modo che gli elementi devono essere aggiunti come elementi figlio manualmente.
 

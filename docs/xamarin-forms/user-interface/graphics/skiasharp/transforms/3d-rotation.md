@@ -1,19 +1,20 @@
 ---
-title: Rotazioni 3D
-description: Utilizzare le trasformazioni non affini per ruotare gli oggetti 2D nello spazio 3D.
+title: Rotazione 3D in SkiaSharp
+description: In questo articolo viene illustrato come utilizzare le trasformazioni non affini eseguire la rotazione 2D oggetti nello spazio 3D e viene illustrato quanto descritto con codice di esempio.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 2f5562475db17b7451fe7cb2ee8bbf4ccb782a87
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: ad4bce6eff7df65185fc3bd754c747fd0db0c9f1
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244299"
 ---
-# <a name="3d-rotations"></a>Rotazioni 3D
+# <a name="3d-rotations-in-skiasharp"></a>Rotazione 3D in SkiaSharp
 
 _Utilizzare le trasformazioni non affini per ruotare gli oggetti 2D nello spazio 3D._
 
@@ -62,7 +63,7 @@ Analogo a 2D le trasformazioni che si verificano in tre dimensioni, le trasforma
 
 x' = M11·x + M21·y + M31·z + M41
 
-y' = M12·x + M22·y + M32·z + M42
+y' = M12·x M22·y M32·z + M42
 
 z' = M13·x + M23·y + M33·z + M43
 
@@ -162,11 +163,11 @@ Il valore 0 per ottenere risultati z nelle formule di trasformazione che non rig
 
 x' = M11·x + M21·y + M41
 
-y' = M12·x + M22·y + M42
+y' = M12·x + M22·y M42
 
-z' = M13·x + M23·y + M43
+z' = M13·x + M23·y M43
 
-w' = M14·x + M24·y + M44
+w' = M14·x + M24·y M44
 
 Inoltre, la z' coordinata è irrilevante qui anche. Quando un oggetto 3D viene visualizzato in un sistema grafico 2D, compresso in un oggetto bidimensionale ignorando i valori delle coordinate Z. Le formule di trasformazione sono in realtà solo queste due:
 
@@ -209,7 +210,7 @@ x' = cos(α)·x
 
 y' = y
 
-z' = (sin(α)/depth)·x + 1
+z' = (sin (α) / profondità) ·x + 1
 
 Ora tutto diviso z':
 

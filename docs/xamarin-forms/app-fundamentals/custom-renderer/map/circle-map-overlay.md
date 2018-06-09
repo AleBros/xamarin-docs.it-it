@@ -1,18 +1,18 @@
 ---
 title: Evidenziazione di un'Area circolare su una mappa
-description: In questo articolo viene illustrato come aggiungere una sovrapposizione circolare a una mappa, per evidenziare un'area circolare della mappa.
+description: In questo articolo viene illustrato come aggiungere una sovrapposizione circolare a una mappa, per evidenziare un'area circolare della mappa. Anche se iOS e Android fornisce le API per l'aggiunta di sovrapposizione circolare alla mappa, in UWP la sovrimpressione viene sottoposta a rendering come un poligono.
 ms.prod: xamarin
 ms.assetid: 6FF8BD15-074E-4E6A-9522-F9E2BE32EF12
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 1bec7a318bebc40c050104a51408473d89f483a5
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 06ea1e788add0064571f01dc1080147e64bb8397
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846523"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240285"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>Evidenziazione di un'Area circolare su una mappa
 

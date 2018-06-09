@@ -1,19 +1,20 @@
 ---
-title: MVVM
+title: Il modello Model-View-ViewModel
+description: In questo capitolo illustra come le app per dispositivi mobili eShopOnContainers viene usato il modello MVVM per separare correttamente la logica di business e la presentazione dell'app dall'interfaccia utente.
 ms.prod: xamarin
 ms.assetid: dd8c1813-df44-4947-bcee-1a1ff2334b87
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 03a3c411c7031ece32a8987b480f96ad39909201
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: fe2cace6a0fc3a1d901f55556eed09380f8f2006
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793954"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245432"
 ---
-# <a name="mvvm"></a>MVVM
+# <a name="the-model-view-viewmodel-pattern"></a>Il modello Model-View-ViewModel
 
 L'esperienza degli sviluppatori di xamarin. Forms in genere implica la creazione di un'interfaccia utente in XAML e quindi aggiungendo code-behind che opera sull'interfaccia utente. Come le app vengono modificate e aumento delle dimensioni e dell'ambito, possono verificarsi dei problemi di manutenzione complessa. Questi problemi includono la stretta integrazione tra i controlli dell'interfaccia utente e la logica di business, che aumenta il costo di apportare le modifiche dell'interfaccia utente e le difficoltà di unit test di tale codice.
 

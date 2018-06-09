@@ -1,16 +1,18 @@
 ---
 title: Riepilogo del capitolo 13. Bitmap
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 13. Bitmap'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 76551057abc1abdd150591c0a1be39e9f68c4278
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d95e801f6a239e894c1f6baa68015659af9eba35
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241555"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Riepilogo del capitolo 13. Bitmap
 
@@ -156,7 +158,7 @@ I progetti di Windows Runtime supportano una bitmap denominazione costituito da 
 
 - MyImage.scale-200.jpg 320 pixel quadrati
 
-Solo alcuni percentuali sono valide. I programmi di esempio di questo documento includono solo immagini con **scala 200** suffissi, ma i modelli di soluzioni xamarin. Forms correnti includono **scala 100**, **scala 125**, **scala 150**, e **scala 400**. 
+Solo alcuni percentuali sono valide. I programmi di esempio di questo documento includono solo immagini con **scala 200** suffissi, ma i modelli di soluzioni xamarin. Forms correnti includono **scala 100**, **scala 125**, **scala 150**, e **scala 400**.
 
 Durante l'aggiunta di bitmap per i progetti di piattaforma, il **azione di compilazione** deve essere:
 

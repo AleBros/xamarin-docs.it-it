@@ -1,19 +1,20 @@
 ---
-title: Convalida
+title: Convalida nelle App aziendali
+description: In questo capitolo illustra modalità app mobile eShopOnContainers esegue la convalida dell'input dell'utente. Ciò include specificando regole di convalida, attivare la convalida e visualizzare gli errori di convalida.
 ms.prod: xamarin
 ms.assetid: 56e4f0fc-48d9-4033-91ec-173bb46a5e4d
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 484f3b3d45e41d0dd0406681250ac90943a1cdde
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 6a7f244b78d5b48dd219f59f1191993d62663bbf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847589"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243177"
 ---
-# <a name="validation"></a>Convalida
+# <a name="validation-in-enterprise-apps"></a>Convalida nelle App aziendali
 
 Qualsiasi app che accetta l'input dell'utente è necessario assicurarsi che l'input è valido. Un'app potrebbe, ad esempio, controllare per l'input che contiene solo i caratteri in un intervallo specifico, è una certa lunghezza o corrisponde a un determinato formato. Senza convalida, l'utente può fornire dati che causano l'esito negativo dell'app. Convalida applica le regole di business e impedisce che un utente malintenzionato inserendo dati dannosi.
 

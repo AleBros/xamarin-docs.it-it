@@ -1,19 +1,20 @@
 ---
-title: Associazioni di base
-description: Il contesto di associazione, origini e destinazioni di associazione dati
+title: Binding xamarin. Forms Basic
+description: In questo articolo viene illustrato come utilizzare xamarin. Forms associazione dati, che collega una coppia di proprietà tra due oggetti, almeno uno dei quali è in genere un oggetto dell'interfaccia utente. Questi due oggetti vengono chiamati l'origine e destinazione.
 ms.prod: xamarin
 ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 065258acacb8469b90dd2ca04286f0686dc90063
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f932b7dfbcccb8f1c6ccb726f5e48c2df6e93c6c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241689"
 ---
-# <a name="basic-bindings"></a>Associazioni di base
+# <a name="xamarinforms-basic-bindings"></a>Binding xamarin. Forms Basic
 
 Un'associazione di dati di xamarin. Forms consente di collegare una coppia di proprietà tra due oggetti, almeno uno dei quali è in genere un oggetto dell'interfaccia utente. Questi due oggetti vengono chiamati i *destinazione* e *origine*:
 
@@ -47,7 +48,7 @@ Sebbene le associazioni dati sono in genere specificate interamente in XAML, è 
 
 Il `Slider` è impostato per un intervallo da 0 a 360. Lo scopo di questo programma è la rotazione di `Label` modificando il `Slider`.
 
-Senza le associazioni di dati, è necessario impostare il `ValueChanged` evento del `Slider` a un gestore eventi che accede al `Value` proprietà del `Slider` e imposta tale valore il `Rotation` proprietà del `Label`. L'associazione dati consente di automatizzare il processo. il gestore dell'evento e il codice all'interno di esso non sono più necessari. 
+Senza le associazioni di dati, è necessario impostare il `ValueChanged` evento del `Slider` a un gestore eventi che accede al `Value` proprietà del `Slider` e imposta tale valore il `Rotation` proprietà del `Label`. L'associazione dati consente di automatizzare il processo. il gestore dell'evento e il codice all'interno di esso non sono più necessari.
 
 È possibile impostare un'associazione in un'istanza di qualsiasi classe che deriva da [ `BindableObject` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/), che include `Element`, `VisualElement`, `View`, e `View` derivati.  L'associazione è sempre impostato sull'oggetto di destinazione. L'associazione fa riferimento all'oggetto di origine. Per impostare l'associazione dati, utilizzare i seguenti due membri della classe di destinazione:
 
@@ -73,7 +74,7 @@ public partial class BasicCodeBindingPage : ContentPage
 
 Il `Label` oggetto è la destinazione dell'associazione in modo che l'oggetto in cui è impostata questa proprietà e su cui viene chiamato il metodo. Il `BindingContext` proprietà indica l'origine di associazione, ovvero il `Slider`.
 
-Il `SetBinding` metodo viene chiamato su una destinazione del binding, ma specifica sia la proprietà di destinazione e la proprietà di origine. La proprietà di destinazione viene specificata come un `BindableProperty` oggetto: `Label.RotationProperty`. La proprietà di origine è specificata come stringa e indica il `Value` proprietà `Slider`. 
+Il `SetBinding` metodo viene chiamato su una destinazione del binding, ma specifica sia la proprietà di destinazione e la proprietà di origine. La proprietà di destinazione viene specificata come un `BindableProperty` oggetto: `Label.RotationProperty`. La proprietà di origine è specificata come stringa e indica il `Value` proprietà `Slider`.
 
 Il `SetBinding` metodo rivela una delle regole delle associazioni dati più importanti:
 
@@ -120,7 +121,7 @@ Il **associazione Xaml di base** è identica alla pagina **associazione di base 
 Solo come codice, il data binding è impostato sull'oggetto di destinazione, ovvero il `Label`. Sono coinvolti due estensioni di markup XAML. Di seguito vengono immediatamente riconoscibile dai delimitatori parentesi graffa.
 
 - Il `x:Reference` estensione di markup è necessario fare riferimento all'oggetto di origine, ovvero il `Slider` denominato `slider`.
-- Il `Binding` collegamenti estensione di markup di `Rotation` proprietà del `Label` per il `Value` proprietà del `Slider`. 
+- Il `Binding` collegamenti estensione di markup di `Rotation` proprietà del `Label` per il `Value` proprietà del `Slider`.
 
 Vedere l'articolo [le estensioni di Markup XAML](~/xamarin-forms/xaml/markup-extensions/index.md) per ulteriori informazioni sulle estensioni di markup XAML. Il `x:Reference` estensione di markup è supportato dal [ `ReferenceExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.ReferenceExtension/) classe; `Binding` è supportato dal [ `BindingExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.BindingExtension/) classe. Come il codice XML indicano i prefissi dello spazio dei nomi, `x:Reference` fa parte della specifica di XAML 2009, mentre `Binding` fa parte di xamarin. Forms. Si noti che virgolette non vengono visualizzati all'interno delle parentesi graffe.
 
@@ -185,13 +186,13 @@ public partial class AlternativeCodeBindingPage : ContentPage
 }
 ```
 
-Il `Binding` costruttore ha 6 parametri, pertanto la `source` viene specificato con un argomento denominato. L'argomento è il `slider` oggetto. 
+Il `Binding` costruttore ha 6 parametri, pertanto la `source` viene specificato con un argomento denominato. L'argomento è il `slider` oggetto.
 
 Eseguire il programma potrebbe essere leggermente sorprendente:
 
 [![Codice alternativo associazione](basic-bindings-images/alternativecodebinding-small.png "codice alternativo associazione")](basic-bindings-images/alternativecodebinding-large.png#lightbox "associazione codice alternativo")
 
-La schermata di iOS a sinistra mostra la schermata aspetto quando viene visualizzata la prima pagina. Dove è il `Label`? 
+La schermata di iOS a sinistra mostra la schermata aspetto quando viene visualizzata la prima pagina. Dove è il `Label`?
 
 Il problema è che il `Slider` ha un valore iniziale pari a 0. In questo modo il `Scale` proprietà del `Label` anche essere impostata su 0, si esegue l'override sul valore predefinito 1. Di conseguenza, il `Label` viene inizialmente invisibile. Come dimostrano le schermate di Android e Windows piattaforma UWP (Universal), è possibile modificare il `Slider` per rendere il `Label` verrà nuovamente visualizzato, ma la scomparsa iniziale viene aggiunto.
 
@@ -246,7 +247,7 @@ Anche se le estensioni di markup XAML in genere sono racchiusi tra parentesi gra
                  Path="Value" />
     </Label.Scale>
 </Label>
-``` 
+```
 
 A questo punto il `Source` e `Path` proprietà sono attributi XAML regolari: I valori vengono visualizzati all'interno di virgolette e gli attributi non sono separati da una virgola. Il `x:Reference` estensione di markup può diventare anche un elemento dell'oggetto:
 
@@ -267,9 +268,9 @@ A questo punto il `Source` e `Path` proprietà sono attributi XAML regolari: I v
 
 Questa sintassi non è comune, ma in alcuni casi è necessario quando sono coinvolti oggetti complessi.
 
-Impostano gli esempi illustrati fino a questo punto il `BindingContext` proprietà e `Source` proprietà di `Binding` per un `x:Reference` estensione di markup per fare riferimento a un'altra visualizzazione della pagina. Queste due proprietà sono di tipo `Object`, e possono essere impostate per qualsiasi oggetto che include proprietà che sono adatte per le origini di associazione. 
+Impostano gli esempi illustrati fino a questo punto il `BindingContext` proprietà e `Source` proprietà di `Binding` per un `x:Reference` estensione di markup per fare riferimento a un'altra visualizzazione della pagina. Queste due proprietà sono di tipo `Object`, e possono essere impostate per qualsiasi oggetto che include proprietà che sono adatte per le origini di associazione.
 
-In anticipo gli articoli, sarà possibile osservare che è possibile impostare il `BindingContext` o `Source` proprietà per un `x:Static` estensione di markup per fare riferimento al valore di una proprietà statica o un campo o un `StaticResource` estensione di markup per fare riferimento a un oggetto archiviato in un dizionario risorse, oppure direttamente a un oggetto, che è in genere (ma non sempre) un'istanza di un elemento ViewModel. 
+In anticipo gli articoli, sarà possibile osservare che è possibile impostare il `BindingContext` o `Source` proprietà per un `x:Static` estensione di markup per fare riferimento al valore di una proprietà statica o un campo o un `StaticResource` estensione di markup per fare riferimento a un oggetto archiviato in un dizionario risorse, oppure direttamente a un oggetto, che è in genere (ma non sempre) un'istanza di un elemento ViewModel.
 
 Il `BindingContext` può anche essere impostata su un `Binding` oggetto in modo che il `Source` e `Path` le proprietà di `Binding` definire il contesto di associazione.
 
@@ -294,7 +295,7 @@ Il **ereditarietà di contesto di associazione** esempio è una dimostrazione de
 
         <StackLayout VerticalOptions="FillAndExpand"
                      BindingContext="{x:Reference slider}">
-            
+
             <Label Text="TEXT"
                    FontSize="80"
                    HorizontalOptions="Center"
@@ -309,14 +310,14 @@ Il **ereditarietà di contesto di associazione** esempio è una dimostrazione de
                      Rotation="{Binding Value}" />
         </StackLayout>
 
-        <Slider x:Name="slider" 
+        <Slider x:Name="slider"
                 Maximum="360" />
-        
+
     </StackLayout>
 </ContentPage>
 ```
 
-Il `BindingContext` proprietà del `StackLayout` è impostato sul `slider` oggetto. Questo contesto di associazione viene ereditato da entrambi il `Label` e `BoxView`, entrambi privi di loro `Rotation` impostate in modo che il `Value` proprietà del `Slider`: 
+Il `BindingContext` proprietà del `StackLayout` è impostato sul `slider` oggetto. Questo contesto di associazione viene ereditato da entrambi il `Label` e `BoxView`, entrambi privi di loro `Rotation` impostate in modo che il `Value` proprietà del `Slider`:
 
 [![Ereditarietà del contesto di associazione](basic-bindings-images/bindingcontextinheritance-small.png "ereditarietà del contesto di associazione")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "ereditarietà del contesto di associazione")
 

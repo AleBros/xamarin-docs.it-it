@@ -1,18 +1,20 @@
 ---
-title: Navigazione
+title: Spostamento di App aziendali
+description: In questo capitolo illustra modalità app mobile eShopOnContainers esegue la navigazione nella visualizzazione modello-first dalla visualizzazione di modelli.
 ms.prod: xamarin
 ms.assetid: 4cad57b5-7fe4-4527-a988-d9b60c9620b4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: aa2e2858e3bb8e435ec3f38bb3d5b249eaa6cba4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9ac9f3200440001752c07ad45fdaaf2b1d9ba6a5
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243681"
 ---
-# <a name="navigation"></a>Navigazione
+# <a name="enterprise-app-navigation"></a>Spostamento di App aziendali
 
 Xamarin. Forms include il supporto per lo spostamento di pagina, che in genere comporta l'interazione dell'utente con l'interfaccia utente o l'app in seguito alle modifiche di stato interno basata sulla logica. Tuttavia, navigazione può essere complessa da implementare nelle App che usano il modello Model-View-ViewModel (MVVM), in quanto devono essere soddisfatti i seguenti problemi:
 

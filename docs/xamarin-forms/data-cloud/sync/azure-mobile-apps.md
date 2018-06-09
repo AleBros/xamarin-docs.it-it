@@ -1,18 +1,18 @@
 ---
 title: La sincronizzazione dei dati non in linea con le App per dispositivi mobili di Azure
-description: Sincronizzazione non in linea consente agli utenti di interagire con un'applicazione per dispositivi mobili, visualizzazione, aggiunta o modifica dei dati, anche se non è disponibile una connessione di rete. Le modifiche vengono archiviate in un database locale e una volta che il dispositivo è online, le modifiche possono essere sincronizzate con l'istanza di App mobili di Azure. In questo articolo viene illustrato come aggiungere la funzionalità di sincronizzazione non in linea a un'applicazione di xamarin. Forms.
+description: In questo articolo viene illustrato come aggiungere la funzionalità di sincronizzazione non in linea per un'applicazione di xamarin. Forms che utilizza un back-end App mobili di Azure.
 ms.prod: xamarin
 ms.assetid: DBB343B0-2709-4C20-A669-5522B9956D9B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/02/2017
-ms.openlocfilehash: 8623127444836d3335f42f9ba7a40de6aedfef70
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: e8b0eeeb4f0033fccd7a61b4acb286bb8457e6c2
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848369"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243597"
 ---
 # <a name="synchronizing-offline-data-with-azure-mobile-apps"></a>La sincronizzazione dei dati non in linea con le App per dispositivi mobili di Azure
 

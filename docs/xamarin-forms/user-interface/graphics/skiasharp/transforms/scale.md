@@ -1,17 +1,18 @@
 ---
 title: La trasformazione di scala
-description: Individuare la trasformazione di scala SkiaSharp per ridimensionare gli oggetti per diverse dimensioni
+description: Articolo Thhis viene esaminata la trasformazione di scala SkiaSharp per ridimensionare gli oggetti per diverse dimensioni e viene illustrato quanto descritto con codice di esempio.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: b4a36e15bd5db72ef113748282175c6d31a95966
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 9008e95a7cd6caf7ab2346ff4e2364a4efef0d65
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244675"
 ---
 # <a name="the-scale-transform"></a>La trasformazione di scala
 

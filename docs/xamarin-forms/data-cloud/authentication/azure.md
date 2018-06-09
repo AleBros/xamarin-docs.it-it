@@ -1,17 +1,18 @@
 ---
 title: L'autenticazione degli utenti con App per dispositivi mobili di Azure
-description: Azure App per dispositivi mobili di utilizzare un'ampia gamma di provider di identità esterno per supportare l'autenticazione e autorizzazione degli utenti dell'applicazione, inclusi Facebook, Google, Microsoft, Twitter e Azure Active Directory. Per limitare l'accesso solo agli utenti autenticati, è possano impostare autorizzazioni su tabelle. In questo articolo viene illustrato come utilizzare App mobili di Azure per gestire il processo di autenticazione in un'applicazione di xamarin. Forms.
+description: In questo articolo viene illustrato come utilizzare App mobili di Azure per gestire il processo di autenticazione in un'applicazione di xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: D50D6F56-8B19-44E7-81F3-E0E1C6E240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: 5f5c69601c11a3c0d25bc804c60883841b0fb30d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fc6206a22d7527ea38a39ab034c424bfe7730abb
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241715"
 ---
 # <a name="authenticating-users-with-azure-mobile-apps"></a>L'autenticazione degli utenti con App per dispositivi mobili di Azure
 
@@ -185,7 +186,7 @@ In questo articolo viene spiegato come utilizzare App mobili di Azure per gestir
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [TodoAzureAuth (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzureAuth/)
+- [TodoAzureAuth (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzureAuth/)
 - [Utilizzo di un'App per dispositivi mobili di Azure](~/xamarin-forms/data-cloud/consuming/azure.md)
 - [Aggiungere l'autenticazione all'App xamarin. Forms](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users/)
 - [Client per dispositivi mobili di Azure SDK](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)

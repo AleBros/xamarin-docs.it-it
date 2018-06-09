@@ -1,18 +1,18 @@
 ---
 title: Introduzione a DependencyService
-description: Comprendere il funzionamento di DependencyService per accedere alle funzionalità di piattaforma nativa
+description: Questo articolo illustra il funzionamento della classe DependencyService xamarin. Forms per accedere alle funzionalità di piattaforma nativa.
 ms.prod: xamarin
 ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 1cf84203d78b0f41e506a3d9505da94b676184fe
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 0b81d429b0488603c7a487421cb7f32c1f3cf890
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846880"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240993"
 ---
 # <a name="introduction-to-dependencyservice"></a>Introduzione a DependencyService
 

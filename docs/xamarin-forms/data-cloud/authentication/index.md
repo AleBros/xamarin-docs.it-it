@@ -1,17 +1,18 @@
 ---
 title: Autenticazione dell'accesso ai servizi Web
-description: Questa guida illustra come integrare servizi di autenticazione in un'applicazione di xamarin. Forms per consentire agli utenti di condividere un back-end durante l'accesso solo ai propri dati. Gli argomenti trattati includono l'autenticazione di base con un servizio REST, utilizzando il componente Xamarin.Auth effettuare l'autenticazione presso il provider di identità di OAuth, e utilizzando i meccanismi di autenticazione predefinito offerto da provider diversi.
+description: Questa guida illustra come integrare servizi di autenticazione in un'applicazione di xamarin. Forms per consentire agli utenti di condividere un back-end durante l'accesso solo ai propri dati.
 ms.prod: xamarin
 ms.assetid: E6FCFAE1-4F83-4F93-9190-EC5290360C54
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: bc34cf265885708fa6392936a8dbc9d82796e2fd
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: d598a9b3de31ea6823530f911c3544bf3cebb37f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240687"
 ---
 # <a name="authenticating-access-to-web-services"></a>Autenticazione dell'accesso ai servizi Web
 

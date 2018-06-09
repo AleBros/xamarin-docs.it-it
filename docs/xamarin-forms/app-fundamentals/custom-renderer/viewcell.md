@@ -1,18 +1,18 @@
 ---
 title: Personalizzazione di un ViewCell
-description: Un ViewCell xamarin. Forms è una cella che può essere aggiunti a un controllo ListView o TableView, che contiene una visualizzazione definita dallo sviluppatore. In questo articolo viene illustrato come creare un renderer personalizzato per un ViewCell che è ospitato all'interno di un controllo ListView di xamarin. Forms. In tal modo i calcoli di layout di xamarin. Forms il chiamato più volte durante lo scorrimento di ListView.
+description: Un ViewCell xamarin. Forms è una cella che può essere aggiunti a un controllo ListView o TableView, che contiene una visualizzazione definita dallo sviluppatore. In questo articolo viene illustrato come creare un renderer personalizzato per un ViewCell che è ospitato all'interno di un controllo ListView di xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 61F378C9-6DEF-436B-ACC3-2324B25D404E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: ec7e8ef619ba065c0e9d81b71f267eb70a68bd14
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 2011049180aa47b7be68486d4f30bd356e2ba813
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847706"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241803"
 ---
 # <a name="customizing-a-viewcell"></a>Personalizzazione di un ViewCell
 

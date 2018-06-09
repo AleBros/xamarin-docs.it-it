@@ -1,16 +1,18 @@
 ---
 title: Riepilogo del capitolo 2. Anatomia di un'app
+description: "Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 2. Anatomia di un'app"
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 81bcc8e2f8627264820a859123e1be1a9f960a92
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 208cf28341ceaa43d1c56b4f5086dc98febee6be
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242747"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Riepilogo del capitolo 2. Anatomia di un'app
 
@@ -142,11 +144,11 @@ Il `Device.OnPlatform` metodi vengono utilizzati per eseguire codice specifico d
 
 Il `Device.OnPlatform` metodi, il `Device.OS` , proprietà e `TargetPlatform` enumerazione sono ora deprecate. Utilizzare invece il [ `Device.RuntimePlatform` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/) proprietà e confrontare il `string` restituito con i campi statici seguenti:
 
-- [`iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/), la stringa "iOS" 
+- [`iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/), la stringa "iOS"
 - [`Android`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Android/), la stringa "Android"
 - [`UWP`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.UWP/), la stringa "UWP", che fa riferimento alla piattaforma di Windows Runtime
 - [`Windows`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Windows/), la stringa "Windows" per Windows Runtime (Windows 8.1 e Windows Phone 8.1)
-- [`WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/), la stringa "WinPhone" per Windows Phone 8.0 
+- [`WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/), la stringa "WinPhone" per Windows Phone 8.0
 
 Il [ `Device.Idiom` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.Idiom/) è correlata la proprietà statica di sola lettura. Restituisce un membro del [ `TargetIdiom` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TargetIdiom/), che dispone di questi membri:
 

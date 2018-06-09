@@ -1,28 +1,22 @@
 ---
 title: Orientamento del dispositivo
-description: Comprendere il layout di applicazioni che aspetto in orientamento verticale e orizzontale.
+description: Questo articolo viene illustrato come le applicazioni di xamarin. Forms layout che visualizzato correttamente nell'orientamento verticale e orizzontale.
 ms.prod: xamarin
 ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 95049e2d44b369bfa879226e17d2bad20b7b5408
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 9245a17423d97887d2032856b10427685b25c29b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848135"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244351"
 ---
 # <a name="device-orientation"></a>Orientamento del dispositivo
 
 È importante considerare come verrà usato l'applicazione e come l'orientamento orizzontale può essere incorporata per migliorare l'esperienza utente. Layout di singoli possono essere progettate per supportare più orientamenti e migliore utilizzo dello spazio disponibile. A livello di applicazione, la rotazione può essere disabilitata o abilitata.
-
-In questo articolo verrà illustrata la creazione di applicazioni che sfruttano le funzionalità orientamento del dispositivo e include le sezioni seguenti:
-
-- **[Controllo dell'orientamento](#Controlling_Orientation)**  &ndash; sapere controllare l'orientamento a livello di app in ciascuna piattaforma.
-- **[Reazione alle modifiche nell'orientamento](#Reacting_to_Changes_in_Orientation)**  &ndash; imparare ricevere una notifica di e reagire a, cambia l'orientamento.
-- **[Layout reattivo](#Responsive_Layout)**  &ndash; informazioni su come creare layout di lavoro automaticamente tra gli orientamenti orizzontale e verticale.
 
 <a name="Controlling_Orientation" />
 

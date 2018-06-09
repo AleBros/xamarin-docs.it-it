@@ -1,16 +1,18 @@
 ---
 title: Riepilogo del capitolo 24. Navigazione tra le pagine
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo capitolo 24. Navigazione tra le pagine'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9d1a226a4532b745fddee28e943562fb51d34e65
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 048b002cc3a250fe74a41bbeb756f8484a15abf1
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241367"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Riepilogo del capitolo 24. Navigazione tra le pagine
 

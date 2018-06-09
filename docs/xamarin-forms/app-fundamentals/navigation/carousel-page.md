@@ -1,5 +1,5 @@
 ---
-title: Pagina di sequenza
+title: Xamarin. Forms sequenza pagina
 description: Il CarouselPage xamarin. Forms è una pagina che gli utenti possono scorrere verso destra per spostarsi tra le pagine di contenuto, ad esempio una raccolta. In questo articolo viene illustrato come utilizzare un CarouselPage per spostarsi di una raccolta di pagine.
 ms.prod: xamarin
 ms.assetid: 2D14FC9D-DF5F-427E-9006-2AAE61ECF8DC
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 9259e2a85a7375106891eaae5fe22d6babfa2fcf
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: daf19dbed2e98429280758125a19efce2d7fd9a1
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846458"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241751"
 ---
-# <a name="carousel-page"></a>Pagina di sequenza
+# <a name="xamarinforms-carousel-page"></a>Xamarin. Forms sequenza pagina
 
 _Il CarouselPage xamarin. Forms è una pagina che gli utenti possono scorrere verso destra per spostarsi tra le pagine di contenuto, ad esempio una raccolta. In questo articolo viene illustrato come utilizzare un CarouselPage per spostarsi di una raccolta di pagine._
 
@@ -46,7 +46,7 @@ Due approcci possono essere utilizzati per creare un [ `CarouselPage` ](https://
 - [Popolare](#Populating_a_CarouselPage_with_a_Page_Collection) il `CarouselPage` con una raccolta di figlio [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) istanze.
 - [Assegnare](#Populating_a_CarouselPage_with_a_Template) una raccolta per il [ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemsSource/) proprietà e assegnare un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) per il [ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemTemplate/) proprietà da restituire [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) istanze per gli oggetti nella raccolta.
 
-Con entrambi gli approcci, il `CarouselPage` verrà quindi visualizzare ogni pagina a sua volta, con un'interazione scorrere lo spostamento alla pagina successiva deve essere visualizzato. 
+Con entrambi gli approcci, il `CarouselPage` verrà quindi visualizzare ogni pagina a sua volta, con un'interazione scorrere lo spostamento alla pagina successiva deve essere visualizzato.
 
 > [!NOTE]
 > Oggetto [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) può essere usato solo con [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) istanze, o `ContentPage` derivati.

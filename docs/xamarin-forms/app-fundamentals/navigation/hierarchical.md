@@ -1,18 +1,18 @@
 ---
 title: Navigazione gerarchica
-description: La classe NavigationPage fornisce un'esperienza di navigazione gerarchica in cui l'utente è in grado di scorrere le pagine, Avanti e indietro, in base alle esigenze. La classe implementa navigazione come uno stack last-in, First-Out (LIFO) degli oggetti di pagina. In questo articolo viene illustrato come utilizzare la classe NavigationPage per spostarsi in una pila di pagine.
+description: In questo articolo viene illustrato come utilizzare la classe NavigationPage eseguire navigazione in uno stack last-in, First-Out (LIFO) pagine.
 ms.prod: xamarin
 ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 49be5b812c5ef66907e7ebf74906c25bfbb076b6
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 20dfb6e935d08c35da73a81fb401a613aa6c9bac
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847163"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242456"
 ---
 # <a name="hierarchical-navigation"></a>Navigazione gerarchica
 
@@ -48,7 +48,7 @@ Il layout di un [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xama
 
 - In iOS, una barra di spostamento è presente nella parte superiore della pagina che viene visualizzato un titolo, e che ha un *nuovamente* pulsante Torna alla pagina precedente.
 - In Android, è presente nella parte superiore della pagina che consente di visualizzare un titolo, un'icona, una barra di spostamento e un *nuovamente* pulsante Torna alla pagina precedente. L'icona è definito nel `[Activity]` attributo che decora il `MainActivity` classe nel progetto specifico della piattaforma Android.
-- Nella piattaforma Windows universale, una barra di spostamento è presente nella parte superiore della pagina che consente di visualizzare un titolo. 
+- Nella piattaforma Windows universale, una barra di spostamento è presente nella parte superiore della pagina che consente di visualizzare un titolo.
 
 In tutte le piattaforme, il valore di [ `Page.Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/) verrà visualizzata come titolo della pagina proprietà.
 
