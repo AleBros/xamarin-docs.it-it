@@ -1,19 +1,20 @@
 ---
-title: Renderer personalizzato
-description: Vengono visualizzate le interfacce utente xamarin. Forms usando i controlli nativi della piattaforma di destinazione, consentendo alle applicazioni di xamarin. Forms mantenere l'aspetto appropriato per ogni piattaforma. Renderer personalizzati consentono agli sviluppatori di eseguire l'override di questo processo per personalizzare l'aspetto e il comportamento dei controlli di xamarin. Forms in ciascuna piattaforma.
+title: Renderer personalizzati xamarin. Forms
+description: Renderer personalizzati consentono agli sviluppatori di eseguire l'override per il rendering di controlli nativi in ciascuna piattaforma, per personalizzare l'aspetto e comportamento dei controlli di xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 6a2ee4b09426e6b4ff6dac7e1fd5221fc5b6d750
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a88462052906e68fd85a07161e8b5bb63a61e69d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239890"
 ---
-# <a name="custom-renderers"></a>Renderer personalizzato
+# <a name="xamarinforms-custom-renderers"></a>Renderer personalizzati xamarin. Forms
 
 _Vengono visualizzate le interfacce utente xamarin. Forms usando i controlli nativi della piattaforma di destinazione, consentendo alle applicazioni di xamarin. Forms mantenere l'aspetto appropriato per ogni piattaforma. Renderer personalizzati consentono agli sviluppatori di eseguire l'override di questo processo per personalizzare l'aspetto e il comportamento dei controlli di xamarin. Forms in ciascuna piattaforma._
 
@@ -55,7 +56,7 @@ In questo articolo viene illustrato come creare un renderer personalizzato per u
 
 ## <a name="implementing-a-video-playervideo-playerindexmd"></a>[Implementazione di un lettore video](video-player/index.md)
 
-In questo articolo viene illustrato come scrivere i renderer per implementare un oggetto personalizzato `VideoPlayer` controllo in grado di riprodurre video dal web, video incorporati come risorse dell'applicazione o i video archiviati nella libreria di video sul dispositivo dell'utente. Vengono illustrate diverse tecniche, inclusa l'implementazione di metodi e le proprietà associabili di sola lettura. 
+In questo articolo viene illustrato come scrivere i renderer per implementare un oggetto personalizzato `VideoPlayer` controllo in grado di riprodurre video dal web, video incorporati come risorse dell'applicazione o i video archiviati nella libreria di video sul dispositivo dell'utente. Vengono illustrate diverse tecniche, inclusa l'implementazione di metodi e le proprietà associabili di sola lettura.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

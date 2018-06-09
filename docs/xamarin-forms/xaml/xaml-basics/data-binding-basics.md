@@ -1,18 +1,18 @@
 ---
 title: Parte 4. Nozioni fondamentali sull'associazione dati
-description: Le associazioni dati consentono di proprietà di due oggetti da collegare in modo che una modifica in uno provoca una modifica in altro. Questo è uno strumento molto importante e mentre associazioni di dati possono essere definite interamente nel codice, XAML fornisce tasti di scelta rapida e di praticità. Di conseguenza, una delle estensioni di markup più importanti in xamarin. Forms è associato.
+description: Le associazioni dati consentono di proprietà di due oggetti da collegare in modo che una modifica in uno provoca una modifica in altro.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: a8adc0c16043048ec919f5a0f9f7c5ce25f08ef9
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 117ddd033faedda871c33ba10c246739309e2e86
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733035"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245950"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Nozioni fondamentali sull'associazione dati
 
@@ -86,7 +86,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 Le proprietà possono essere su una riga o suddivisi in più righe:
 
 ```csharp
-Text="{Binding Value, 
+Text="{Binding Value,
                StringFormat='The angle is {0:F0} degrees'}"
 ```
 
@@ -102,13 +102,13 @@ Di seguito è riportato il programma in esecuzione:
 
 [![](data-binding-basics-images/sliderbinding.png "Per visualizzare associazioni")](data-binding-basics-images/sliderbinding-large.png#lightbox "-per visualizzare le associazioni ")
 
-## <a name="the-binding-mode"></a>La modalità di associazione 
+## <a name="the-binding-mode"></a>La modalità di associazione
 
 Una singola visualizzazione può avere associazioni dati in alcune delle proprie proprietà. Tuttavia, ogni vista può avere un solo `BindingContext`, in modo più associazioni di dati per tale vista devono fare riferimento alle proprietà dell'oggetto stesso.
 
 La soluzione a questo e altri problemi implica il `Mode` proprietà è impostata su un membro del `BindingMode` enumerazione:
 
-- `Default` 
+- `Default`
 - `OneWay` : i valori vengono trasferiti dall'origine alla destinazione
 - `OneWayToSource` : i valori vengono trasferiti dalla destinazione all'origine
 - `TwoWay` : i valori vengono trasferiti in entrambe le direzioni tra origine e destinazione
@@ -324,7 +324,7 @@ Molto meglio. Tutto ciò che serve è perfetto il modello di elemento con ulteri
 </ContentPage>
 ```
 
-Si noti l'uso di `OnPlatform` per definire la dimensione di un `BoxView` e l'altezza del `ListView` righe. Anche se i valori per tutte e tre le piattaforme sono uguali, il codice può essere facilmente adattato per gli altri valori ottimizzare la visualizzazione. 
+Si noti l'uso di `OnPlatform` per definire la dimensione di un `BoxView` e l'altezza del `ListView` righe. Anche se i valori per tutte e tre le piattaforme sono uguali, il codice può essere facilmente adattato per gli altri valori ottimizzare la visualizzazione.
 
 ## <a name="binding-value-converters"></a>Convertitori di valori di associazione
 
@@ -366,7 +366,7 @@ namespace XamlSamples
 }
 ```
 
-Il `ConvertBack` metodo non svolge un ruolo in questo programma perché le associazioni sono solo unidirezionale dall'origine alla destinazione. 
+Il `ConvertBack` metodo non svolge un ruolo in questo programma perché le associazioni sono solo unidirezionale dall'origine alla destinazione.
 
 Un'associazione fa riferimento a un convertitore di tipi di associazione con il `Converter` proprietà. Un convertitore di tipi di associazione può anche accettare un parametro specificato con il `ConverterParameter` proprietà. Per alcuni versatilità, si tratta di come specificare il moltiplicatore. Il convertitore di tipi di associazione controlla il parametro del convertitore per un oggetto valido `double` valore.
 

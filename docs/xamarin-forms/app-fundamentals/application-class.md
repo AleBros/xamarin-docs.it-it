@@ -1,20 +1,20 @@
 ---
-title: Classe App
-description: Funzionalità della classe App predefinito, che può essere c# o XAML
+title: Classe App xamarin. Forms
+description: Questo articolo descrive le funzionalità della classe App predefinito, che include una proprietà da impostare per la pagina iniziale per l'app, e un dizionario permanente per archiviare valori semplici tra le modifiche dello stato del ciclo di vita.
 ms.prod: xamarin
 ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 4b502b0d6eea37e0b5b374cfd4740cf6a5ced478
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 15fb866d2cde9409f401d6d021b22b8cb0468795
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846390"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240541"
 ---
-# <a name="app-class"></a>Classe App
+# <a name="xamarinforms-app-class"></a>Classe App xamarin. Forms
 
 Il `Application` classe di base offre le funzionalità seguenti, che sono esposte nel predefinito progetti `App` sottoclasse:
 

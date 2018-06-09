@@ -1,19 +1,20 @@
 ---
-title: Tema chiaro
+title: Tema chiaro xamarin. Forms
+description: In questo articolo viene illustrato come utilizzare il tema chiaro xamarin. Forms in un'app.
 ms.prod: xamarin
 ms.assetid: D5D16AE3-F51F-4359-B37A-E1087ECE512B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 87c2a1a1003868aba10c7c1ec50856f307cc5bff
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 7f40e375d653acec60f8848627234ab46fcce8de
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848005"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245247"
 ---
-# <a name="light-theme"></a>Tema chiaro
+# <a name="xamarinforms-light-theme"></a>Tema chiaro xamarin. Forms
 
 ![](~/media/shared/preview.png "Questa API è attualmente in anteprima")
 
@@ -68,4 +69,3 @@ Di seguito è riportato un esempio di pulsanti ed etichette tema chiaro, con il 
 ```
 
 Il [elenco completo delle classi incorporate](~/xamarin-forms/user-interface/themes/index.md) presenta gli stili disponibili per alcuni controlli comuni.
-

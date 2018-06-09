@@ -1,20 +1,20 @@
 ---
-title: Elemento ScrollView
-description: Utilizzare ScrollView layout che non è un solo schermo e includere contenuto liberare spazio per la tastiera.
+title: Xamarin. Forms ScrollView
+description: In questo articolo viene illustrato come utilizzare la classe ScrollView xamarin. Forms per presentare layout che non può essere contenuta in una sola schermata e ai quali è contenuto liberare spazio per la tastiera.
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2016
-ms.openlocfilehash: 708fb39aa2e56861a8c9fc47ab30bd20ed20188e
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 72897013842d464ff9d46825e2b111efbaeb79b8
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847537"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245234"
 ---
-# <a name="scrollview"></a>Elemento ScrollView
+# <a name="xamarinforms-scrollview"></a>Xamarin. Forms ScrollView
 
 [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) include layout e consente loro di scorrimento fuori schermo. `ScrollView` viene usata anche per consentire le visualizzazioni spostare automaticamente per la parte visibile dello schermo quando viene visualizzato sulla tastiera.
 

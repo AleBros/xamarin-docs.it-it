@@ -1,17 +1,18 @@
 ---
 title: Parte 5. Da associazioni di dati per MVVM
-description: Il modello architetturale Model-View-ViewModel (MVVM) è stato ideato con XAML presente. Il modello consente di applicare una separazione tra tre livelli di software, l'interfaccia utente XAML, chiamato della visualizzazione. i dati sottostanti, chiamati del modello. e un intermediario tra la visualizzazione e il modello di chiamata di ViewModel. La visualizzazione e l'elemento ViewModel spesso sono connessi tramite le associazioni dati definite nel file XAML. BindingContext per la vista è in genere un'istanza di ViewModel.
+description: Il modello MVVM consente di applicare una separazione tra tre livelli di software, l'interfaccia utente XAML, chiamato della visualizzazione. i dati sottostanti, definiti modello; chiamarla intermediario tra la visualizzazione e il modello, l'elemento ViewModel.
 ms.prod: xamarin
 ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 95cd79a4bd6da47757cfeb12a2862ccb5a66fee2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e9f38377299e8094162dd2d2d73174e6f2b40369
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245771"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. Da associazioni di dati per MVVM
 
@@ -649,7 +650,7 @@ public class PageDataViewModel
         };
     }
 
-    public static IList<PageDataViewModel> All { private set; get; } 
+    public static IList<PageDataViewModel> All { private set; get; }
 }
 ```
 

@@ -1,17 +1,18 @@
 ---
 title: Polilinea ed equazioni parametriche
-description: Utilizzare SkiaSharp per il rendering di qualsiasi riga che è possibile definire con equazioni parametriche
+description: Questo articolo viene illustrato come a SkiaSharp utilizzare per il rendering di qualsiasi riga è possibile definire con equazioni parametriche e viene illustrato quanto descritto con codice di esempio.
 ms.prod: xamarin
 ms.assetid: 85AEBB33-E954-4364-A6E1-808FAB197BEE
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: efd2dbac0f4a1190fac646d8e9e3120ee4d245a7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9539a21b7dbc91da63795639610886233ed705be
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245309"
 ---
 # <a name="polylines-and-parametric-equations"></a>Polilinea ed equazioni parametriche
 
@@ -31,7 +32,7 @@ In genere è preferibile definire una curva in termini di una coppia di equazion
 
 Per un'ellisse con il parallelo assi orizzontale e verticale, sono coinvolti due raggi:
 
-x = xCenter + xRadius·cos(2πt) y = yCenter + yRadius·sin(2πt)
+x = Centrox + xRadius·cos(2πt) y = Centroy + yRadius·sin(2πt)
 
 È quindi possibile inserire il codice SkiaSharp equivalente in un ciclo che calcola i vari punti e aggiunge quelle a un percorso. Il codice SkiaSharp seguente crea un `SKPath` oggetto per un'ellisse che riempie l'area di visualizzazione. I ciclo scorre 360 gradi direttamente. Il centro è a metà larghezza e altezza dell'area di visualizzazione, e quindi i raggi di due:
 

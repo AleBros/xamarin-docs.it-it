@@ -1,5 +1,5 @@
 ---
-title: Pagina a schede
+title: Pagina a schede xamarin. Forms
 description: Il TabbedPage xamarin. Forms è costituito da un elenco di schede e un'area più grande di dettaglio, con ogni scheda, il caricamento del contenuto nell'area dei dettagli. In questo articolo viene illustrato come utilizzare un TabbedPage per spostarsi di una raccolta di pagine.
 ms.prod: xamarin
 ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 7af9248e706e615ea3e693a58a5f7664e8dc4daa
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b7e3eb8539704fccd713af45490c35a6196b072f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847812"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240379"
 ---
-# <a name="tabbed-page"></a>Pagina a schede
+# <a name="xamarinforms-tabbed-page"></a>Pagina a schede xamarin. Forms
 
 _Il TabbedPage xamarin. Forms è costituito da un elenco di schede e un'area più grande di dettaglio, con ogni scheda, il caricamento del contenuto nell'area dei dettagli. In questo articolo viene illustrato come utilizzare un TabbedPage per spostarsi di una raccolta di pagine._
 

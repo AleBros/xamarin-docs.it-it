@@ -1,16 +1,18 @@
 ---
 title: Layout per le applicazioni Desktop e Tablet
+description: In questo articolo viene illustrato come ottimizzare i layout delle applicazione xamarin. Forms per i Tablet, anziché i telefoni.
 ms.prod: xamarin
 ms.assetid: D62F472B-4345-4983-8403-659A538B591F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: bcd277145de13a95a0b19aa4945b02078af52978
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 932b4aa9c865501284b02fc35e12dc8d7e7166fc
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244845"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Layout per le applicazioni Desktop e Tablet
 

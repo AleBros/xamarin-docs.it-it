@@ -1,19 +1,20 @@
 ---
-title: Themes
+title: Temi di xamarin. Forms
+description: Questo articolo descrive i temi di xamarin. Forms, che consentono di definire specifica l'aspetto visivo per le visualizzazioni standard.
 ms.prod: xamarin
 ms.assetid: 3DFB7C55-69F6-4980-A501-588719143482
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: fca5a0cb2e188df822efb15b090ef7986cf4a2d8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 0f49eeba072d6aeb7ead40d5d56d4af9e9bf5e27
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848096"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245732"
 ---
-# <a name="themes"></a>Themes
+# <a name="xamarinforms-themes"></a>Temi di xamarin. Forms
 
 ![](~/media/shared/preview.png "Questa API è attualmente in anteprima")
 

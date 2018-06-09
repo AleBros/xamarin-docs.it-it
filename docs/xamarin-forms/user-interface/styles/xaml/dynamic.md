@@ -1,20 +1,20 @@
 ---
-title: Stili dinamici
-description: Stili non rispondere alle modifiche di proprietà e rimangono invariati per tutta la durata di un'applicazione. Ad esempio, dopo l'assegnazione di uno stile a un elemento visivo, se una delle istanze di Setter modificata, rimossi o aggiungere una nuova istanza di metodo di impostazione, le modifiche non applicate all'elemento visivo. Tuttavia, le applicazioni come rispondere alle modifiche di stile in modo dinamico in fase di esecuzione utilizzando le risorse dinamiche.
+title: Stili dinamici in xamarin. Forms
+description: Questo articolo viene illustrato come un'applicazione di xamarin. Forms può rispondere alle modifiche di stile in modo dinamico in fase di esecuzione utilizzando le risorse dinamiche.
 ms.prod: xamarin
 ms.assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: e0cfcbaef70f58622a21315637279740f568ada8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 0f82e0cfde29921ea768000f17b93d04f8ad307e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848070"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245221"
 ---
-# <a name="dynamic-styles"></a>Stili dinamici
+# <a name="dynamic-styles-in-xamarinforms"></a>Stili dinamici in xamarin. Forms
 
 _Stili non rispondere alle modifiche di proprietà e rimangono invariati per tutta la durata di un'applicazione. Ad esempio, dopo l'assegnazione di uno stile a un elemento visivo, se una delle istanze di Setter modificata, rimossi o aggiungere una nuova istanza di metodo di impostazione, le modifiche non applicate all'elemento visivo. Tuttavia, le applicazioni come rispondere alle modifiche di stile in modo dinamico in fase di esecuzione utilizzando le risorse dinamiche._
 

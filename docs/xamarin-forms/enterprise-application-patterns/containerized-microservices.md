@@ -1,16 +1,18 @@
 ---
 title: Nei contenitori Microservizi
+description: In questo capitolo viene illustrato come utilizzare i contenitori e microservizi per compilare agile, scalabile e le applicazioni cloud moderne affidabile.
 ms.prod: xamarin
 ms.assetid: 5872ad92-04e0-4f1a-9691-79d5602f5683
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 461a1310ff430c16e49fa0ed6037a77b1302f769
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 33be84bc17f72c8b70d117a0742b001f1f763d3d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242261"
 ---
 # <a name="containerized-microservices"></a>Nei contenitori Microservizi
 
@@ -22,7 +24,7 @@ In particolare relative era del cloud, sia i singoli componenti non possono esse
 
 **Figura 8-1**: applicazione monolitico scalabilità
 
-## <a name="microservices"></a>Microservices
+## <a name="microservices"></a>Microservizi
 
 Microservizi offrono un approccio diverso per lo sviluppo di applicazioni e la distribuzione, un approccio adatto per la flessibilità, scala e requisiti di affidabilità delle applicazioni cloud moderne. Un'applicazione di microservizi viene scomposto in componenti indipendenti che interagiscono per fornire funzionalità complessiva dell'applicazione. Il termine di microservizio evidenzia che applicazioni devono essere composto dai servizi sufficientemente ridotto in modo da riflettere problemi indipendenti, in modo che ogni microservizio implementa una singola funzione. Inoltre, ogni microservizio ha contratti ben definiti in modo che altri microservizi possono comunicare e condividere dati. Esempi tipici di microservizi includono carrelli, l'elaborazione di inventario, sottosistemi e l'elaborazione dei pagamenti di acquisto.
 

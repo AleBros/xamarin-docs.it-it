@@ -1,17 +1,18 @@
 ---
 title: Layout di xamarin. Forms
-description: Layout di xamarin. Forms vengono utilizzati per creare i controlli dell'interfaccia utente in strutture visual.
+description: Layout di xamarin. Forms vengono utilizzati per creare i controlli dell'interfaccia utente in strutture visual. Questo articolo vengono elencati i layout inclusi in xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: F4180997-BA21-453A-9958-D1E2940DF050
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: ca48ad6fb7d5aae53f972f6e3b5257919d140a8d
-ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
+ms.openlocfilehash: 6e9889bf8ec748ed2034d63acfec9784d074ca44
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243090"
 ---
 # <a name="xamarinforms-layouts"></a>Layout di xamarin. Forms
 

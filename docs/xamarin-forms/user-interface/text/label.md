@@ -1,20 +1,20 @@
 ---
-title: Label
-description: Testo visualizzato in xamarin. Forms
+title: Etichetta di xamarin. Forms
+description: In questo articolo viene illustrato come utilizzare la classe di etichetta di xamarin. Forms per visualizzare il testo singolo e su più righe nelle applicazioni.
 ms.prod: xamarin
 ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: e0caa12136feb84d22ec4b90b84f3f92a601e0c0
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: e9f99ace64e013dfa681e497b9d33376d79555ed
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847511"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245498"
 ---
-# <a name="label"></a>Label
+# <a name="xamarinforms-label"></a>Etichetta di xamarin. Forms
 
 _Testo visualizzato in xamarin. Forms_
 

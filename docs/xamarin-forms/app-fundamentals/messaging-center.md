@@ -1,19 +1,20 @@
 ---
-title: MessagingCenter
-description: Xamarin. Forms include un semplice servizio di messaggistica per inviare e ricevere messaggi.
+title: Xamarin. Forms MessagingCenter
+description: In questo articolo viene illustrato come utilizzare il MessagingCenter xamarin. Forms per inviare e ricevere messaggi, per ridurre l'accoppiamento tra classi, quali modelli di visualizzazione.
 ms.prod: xamarin
 ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: e8145847f3c91683aa7433208d70198998cda87f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71f526f87a2536110a6d2292cd66a0f4d81c0bfc
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240337"
 ---
-# <a name="messagingcenter"></a>MessagingCenter
+# <a name="xamarinforms-messagingcenter"></a>Xamarin. Forms MessagingCenter
 
 _Xamarin. Forms include un semplice servizio di messaggistica per inviare e ricevere messaggi._
 

@@ -1,19 +1,20 @@
 ---
-title: Mappa
-description: Xamarin. Forms Usa mappa API native in ciascuna piattaforma.
+title: Mappa di xamarin. Forms
+description: In questo articolo viene illustrato come utilizzare la classe della mappa di xamarin. Forms per utilizzare la mappa native API in ogni piattaforma per fornire che un classiche viene eseguito il mapping per gli utenti.
 ms.prod: xamarin
 ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 6063732e08680974b8d4a2358bfd85b176b36aec
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 9bd4c810db0397d84803be7c38f625b9b047c3da
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245475"
 ---
-# <a name="map"></a>Mappa
+# <a name="xamarinforms-map"></a>Mappa di xamarin. Forms
 
 _Xamarin. Forms Usa mappa API native in ciascuna piattaforma._
 
@@ -80,7 +81,7 @@ Per accedere a servizi di posizione su iOS, è necessario impostare le chiavi se
 - iOS 10 e versioni precedenti
     - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) : per l'utilizzo di servizi di posizione quando l'app è in uso
     - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) : per l'utilizzo di servizi di posizione in qualsiasi momento    
-    
+
 Per supportare iOS 11 e versioni precedenti, è possibile includere tutte e tre le chiavi: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, e `NSLocationAlwaysUsageDescription`.
 
 Rappresentazione XML di tali chiavi in **Info. plist** è illustrato di seguito. È necessario aggiornare il `string` valori in modo da riflettere come l'applicazione usa le informazioni sul percorso:

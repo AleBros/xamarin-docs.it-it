@@ -1,22 +1,24 @@
 ---
 title: Riepilogo del capitolo 1. La modalità di utilizzo xamarin. Forms
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 1. La modalità di utilizzo xamarin. Forms'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 534c36a16acdc10ffb6f6b6703296a672875286e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2897229b0749b1a6ead805d6ad063603a77f8f0d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240460"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Riepilogo del capitolo 1. La modalità di utilizzo xamarin. Forms
 
 Uno dei processi più spiacevoli nella programmazione consiste nel porting di un codice di base da una piattaforma a un'altra, in particolare se tale piattaforma prevede un linguaggio di programmazione diverso. Che è durante il porting del codice per il refactoring nonché, ma se entrambe le piattaforme devono essere mantenute in parallelo, quindi le differenze tra i due codebase renderà manutenzione future più difficile.
 
-## <a name="cross-platform-mobile-development"></a>Sviluppo mobile multipiattaforma
+## <a name="cross-platform-mobile-development"></a>Sviluppo di app per dispositivi mobili multipiattaforma
 
 Questo problema è comune quando la destinazione delle piattaforme per dispositivi mobili. Attualmente, esistono due principali piattaforme mobili, la famiglia di Apple iPhone e iPad che eseguono il sistema operativo iOS e il sistema operativo Android che viene eseguito su una vasta gamma di telefoni e Tablet. Un'altra piattaforma significativa è Microsoft Windows della piattaforma UWP (Universal), che consente a un singolo programma di destinazione sia Windows 10 e Windows 10 Mobile.
 
@@ -74,7 +76,7 @@ I siti web di Xamarin e Microsoft contengono informazioni su come eseguire quest
 
 - [Introduzione a iOS](~/ios/get-started/index.md)
 - [Introduzione a Android](~/android/get-started/index.md)
-- [Windows Dev Center](http://dev.windows.com)
+- [Centro per sviluppatori Windows](http://dev.windows.com)
 
 Una volta è possibile creare e l'esecuzione di progetti per le singole piattaforme, si dovrebbe presentare alcun problema di creazione ed esecuzione di un'applicazione di xamarin. Forms.
 
