@@ -1,20 +1,20 @@
 ---
-title: WebView
-description: Presentare il contenuto web di rete e locali o documenti.
+title: Xamarin. Forms WebView
+description: In questo articolo viene illustrato come utilizzare la classe di WebView xamarin. Forms per presentare locale o contenuto web di rete e documenti agli utenti.
 ms.prod: xamarin
 ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 7ce48e48e41c3554094a12a220ae197cc4ec3fff
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: df004bd2a580e48137162d28ca3974521266ae7a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847992"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245644"
 ---
-# <a name="webview"></a>WebView
+# <a name="xamarinforms-webview"></a>Xamarin. Forms WebView
 
 [WebView](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) è una vista per la visualizzazione web e HTML contenuta nell'app. A differenza di `OpenUri`, che accetta l'utente per il web browser nel dispositivo, `WebView` consente di visualizzare il contenuto HTML all'interno dell'app.
 
