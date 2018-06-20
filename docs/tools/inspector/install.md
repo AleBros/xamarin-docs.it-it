@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: topgenorth
 ms.author: toopge
-ms.date: 03/29/2017
-ms.openlocfilehash: 80bf3cb4e8e27355ccf6213dbfd07a17e992961b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: f7c5217a9c2d3881ca29094c3186e448975db6a3
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793808"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268969"
 ---
 # <a name="inspector-installation-and-requirements"></a>Requisiti e l'installazione di controllo
 
@@ -19,13 +19,15 @@ ms.locfileid: "34793808"
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-1. Scaricare e installare [Xamarin le cartelle di lavoro e controllo per Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
-2. [Controllare la propria app.](~/tools/inspector/inspect.md)
+1. Scaricare e installare [Visual Studio Enterprise](https://www.visualstudio.com/vs/) e selezionare il **sviluppo per dispositivi Mobile con .NET** carico di lavoro.
+1. [Accedi](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) per abilitare la sottoscrizione dell'organizzazione.
+1. [Controllare](~/tools/inspector/inspect.md) la propria app.
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-1. Scaricare e installare [Xamarin le cartelle di lavoro e controllo per Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
-2. [Controllare la propria app.](~/tools/inspector/inspect.md)
+1. Scaricare e installare [Visual Studio per Mac](https://www.visualstudio.com/vs/mac/).
+1. [Accedi](https://docs.microsoft.com/visualstudio/mac/activation) per abilitare la sottoscrizione dell'organizzazione.
+1. [Controllare](~/tools/inspector/inspect.md) la propria app.
 
 -----
 
@@ -38,10 +40,8 @@ ms.locfileid: "34793808"
 
 ### <a name="supported-ides"></a>IDE supportati
 
-- Xamarin Studio 6.2 o versione successiva
-- Visual Studio per Mac Preview 4 o versione successiva
-- Visual Studio 2015 con Xamarin 4.3.x o versione successiva
-- Visual Studio 2017 con carico di lavoro di Xamarin
+- Visual Studio per Mac
+- Visual Studio 2017 con **sviluppo per dispositivi Mobile con .NET** carico di lavoro
 
 L'ispezione applicazione in tempo reale è disponibile per i clienti aziendali.
 
@@ -51,10 +51,10 @@ L'ispezione applicazione in tempo reale è disponibile per i clienti aziendali.
 
 |App della piattaforma|Supporto IDE|Note|
 |--- |--- |--- |
-|Mac (unificata)|Supportato solo su Mac|
-|iOS (unificato)|Supportato in Visual Studio e XS|Esaminare le app iOS da Windows richiede la stessa versione di controllo per essere installato anche nell'host di compilazione Mac.|
-|Android|Supportato in Visual Studio e XS|Deve avere come destinazione Android > = 4.0.3, con **fastdev** abilitato.<br />È necessario usare gli emulatori di Google, Visual Studio o Xamarin Android. Gli emulatori Android di 7 potrebbero non consentire l'ispezione in questo momento.|
-|WPF|Supportato solo in Visual Studio in Windows|
+|Mac|Supportato solo in Visual Studio per Mac|
+|iOS|Supportata in Visual Studio 2017 e Visual Studio per Mac| |
+|Android|Supportata in Visual Studio 2017 e Visual Studio per Mac|Deve avere come destinazione Android > = 4.0.3, con **fastdev** abilitato.<br />È necessario usare gli emulatori di Google, Visual Studio o Xamarin Android. Gli emulatori Android di 7 potrebbero non consentire l'ispezione in questo momento.|
+|WPF|Supportato solo in Visual Studio 2017|
 
 <a name="reporting-bugs" />
 
@@ -73,11 +73,6 @@ Queste informazioni sono essenziale.
 Visual Studio per Mac
 
 - **Visual Studio > su Visual Studio > Mostra dettagli > Copia informazioni**
-- Incollare in report di bug
-
-Xamarin Studio
-
-- **Xamarin Studio > informazioni su Xamarin Studio > Mostra dettagli > Copia informazioni**
 - Incollare in report di bug
 
 Visual Studio
@@ -102,10 +97,6 @@ Visual Studio per Mac
 
 - `~/Library/Logs/VisualStudio/7.0/Ide.log`
 
-Xamarin Studio
-
-- `~/Library/Logs/XamarinStudio-6.0/Ide.log`
-
 Visual Studio
 
 - `%LOCALAPPDATA%\Xamarin\Logs\{VS version}\Inspector {date}.log`
@@ -129,42 +120,3 @@ Per Android e iOS, è essenziale che si sa quale dispositivo a cui si esegue il 
 - Il dispositivo dispone di connettività di rete (controllo tramite browser web)?
 
 [client-bugs]: https://github.com/Microsoft/workbooks/issues/new
-
-## <a name="uninstall"></a>Disinstalla
-
-### <a name="windows"></a>WINDOWS
-
-A seconda di come è stato acquistato le cartelle di lavoro e controllo, è possibile eseguire due procedure di disinstallazione. Controllare entrambi questi per disinstallare completamente il software.
-
-#### <a name="visual-studio-installer"></a>Programma di installazione di Visual Studio
-
-Se si dispone di Visual Studio 2017, aprire **programma di installazione di Visual Studio**ed esaminare **singoli componenti** per **Xamarin le cartelle di lavoro**. Se è selezionata, deselezionarla e quindi fare clic su "Modifica" per disinstallare.
-
-#### <a name="system-uninstall"></a>Disinstallazione di sistema
-
-Se è installato cartelle di lavoro di & controllo manualmente con un programma di installazione scaricato, dovranno essere disinstallate tramite le **App e funzionalità** pagina Impostazioni di sistema in Windows 10 o tramite **Aggiungi/Rimuovi programmi**nel Pannello di controllo nelle versioni precedenti di Windows.
-
-> **Start > Impostazioni > sistema > app & funzionalità**
-
-![](install-images/windows-remove.png "Cartelle di lavoro di Xamarin e controllo elencato nella 'App e funzionalità'")
-
-**È comunque necessario seguire la procedura per il programma di installazione Visual Studio rendere le cartelle di lavoro che & controllo non venga reinstallato insaputa dell'utente.**
-
-### <a name="macos"></a>macOS
-
-A partire da [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/), Xamarin le cartelle di lavoro e controllo possono essere disinstallati da un terminale eseguendo:
-
-```bash
-sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
-```
-
-Il programma di disinstallazione illustra in dettaglio i file e directory saranno rimosse e richiedere la conferma prima di procedere.
-
-Passare il `-help` argomento per il `uninstall` script per scenari più avanzati.
-
-Per le versioni precedenti, è necessario rimuovere manualmente quanto segue:
-
-1. Eliminare l'app Workbooks all'indirizzo `"/Applications/Xamarin Workbooks.app"`
-2. Eliminare l'app Inspector `"Applications/Xamarin Inspector.app"`
-3. Eliminare i componenti aggiuntivi: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` e `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-4. Eliminare Inspector e i file di supporto qui: `/Library/Frameworks/Xamarin.Interactive.framework` e `/Library/Frameworks/Xamarin.Inspector.framework`

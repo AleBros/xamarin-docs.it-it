@@ -6,13 +6,13 @@ ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 07/10/2017
-ms.openlocfilehash: faa4998869b918caaf5bc4252dc81a5745199c93
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.date: 06/18/2018
+ms.openlocfilehash: 25299bc3b56c2fbb748db202e43e75be183cce66
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245833"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209297"
 ---
 # <a name="xaml-namespaces-in-xamarinforms"></a>Spazi dei nomi XAML in xamarin. Forms
 
@@ -43,11 +43,12 @@ Nella tabella seguente vengono illustrati il `x` attributi dello spazio dei nomi
 |`x:Arguments`|Specifica gli argomenti del costruttore per un costruttore non predefinito, o per una dichiarazione di oggetto del metodo factory.|
 |`x:Class`|Specifica lo spazio dei nomi e il nome di una classe definita in XAML. Il nome della classe deve corrispondere al nome di classe di file code-behind. Si noti che questo costrutto può apparire solo nell'elemento radice di un file XAML.|
 |`x:FactoryMethod`|Specifica un metodo factory che può essere utilizzato per inizializzare un oggetto.|
+|`x:FieldModifier`|Specifica il livello di accesso per i campi generati per elementi XAML denominati.|
 |`x:Key`|Specifica una chiave univoca definito dall'utente per ogni risorsa in un `ResourceDictionary`. Il valore della chiave viene utilizzato per recuperare la risorsa XAML e viene in genere utilizzato come argomento per il `StaticResource` estensione di markup.|
 |`x:Name`|Specifica il nome di un oggetto di runtime per l'elemento XAML. Impostazione `x:Name` è simile alla dichiarazione di una variabile nel codice.|
 |`x:TypeArguments`|Specifica gli argomenti di tipo generico per il costruttore di un tipo generico.|
 
-Per ulteriori informazioni sul `x:Arguments`, `x:FactoryMethod`, e `x:TypeArguments` gli attributi, vedere [il passaggio di argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md).
+Per ulteriori informazioni sul `x:FieldModifier` dell'attributo, vedere [modificatori di campo](~/xamarin-forms/xaml/field-modifiers.md). Per ulteriori informazioni sul `x:Arguments`, `x:FactoryMethod`, e `x:TypeArguments` gli attributi, vedere [il passaggio di argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
 In XAML, le dichiarazioni dello spazio dei nomi ereditano da elemento padre per l'elemento figlio. Pertanto, quando si definisce uno spazio dei nomi nell'elemento radice di un file XAML, tutti gli elementi all'interno del file ereditano la dichiarazione dello spazio dei nomi.
 

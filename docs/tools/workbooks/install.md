@@ -5,12 +5,13 @@ ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: b5e94a9b0bc3b9e9f141ad9fd262d29e01eb8a10
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: a35038a948a89889bbf067a453b7465c1a6a7b49
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793821"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268992"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Requisiti e l'installazione di cartelle di lavoro
 
@@ -43,8 +44,8 @@ ms.locfileid: "34793821"
 
 |App della piattaforma|Supporto del sistema operativo|Note|
 |--- |--- |--- |
-|Mac (unificata)|Supportato solo su Mac|
-|iOS (unificato)|Supportato in Mac e Windows|Xamarin. IOS 11.0 e Xcode 9.0 o versione successiva devono essere installati su Mac. L'esecuzione di cartelle di lavoro di iOS in Windows richiede un host di compilazione Mac che esegue tutte le precedenti e [simulatore iOS remoto](~/tools/ios-simulator.md) installato in Windows.|
+|Mac|Supportato solo su Mac|
+|iOS|Supportato in Mac e Windows|Xamarin. IOS 11.0 e Xcode 9.0 o versione successiva devono essere installati su Mac. L'esecuzione di cartelle di lavoro di iOS in Windows richiede un host di compilazione Mac che esegue tutte le precedenti e [simulatore iOS remoto](~/tools/ios-simulator.md) installato in Windows.|
 |Android|Supportato in Mac e Windows|Deve usare l'emulatore di Google, Visual Studio o Xamarin Android, con un dispositivo virtuale > = 5.0|
 |WPF|Supportato solo in Windows|
 |Console (.NET Framework)|Supportato in Mac e Windows|
@@ -114,7 +115,7 @@ Se si verificano problemi di connessione iOS o Android cartella di lavoro e sono
 
 ### <a name="windows"></a>WINDOWS
 
-A seconda di come è stato acquistato le cartelle di lavoro e controllo, è possibile eseguire due procedure di disinstallazione. Controllare entrambi questi per disinstallare completamente il software.
+A seconda del modo in cui è stato acquistato le cartelle di lavoro, è possibile eseguire due procedure di disinstallazione. Controllare entrambi questi per disinstallare completamente il software.
 
 #### <a name="visual-studio-installer"></a>Programma di installazione di Visual Studio
 
@@ -122,19 +123,19 @@ Se si dispone di Visual Studio 2017, aprire **programma di installazione di Visu
 
 #### <a name="system-uninstall"></a>Disinstallazione di sistema
 
-Se è installato cartelle di lavoro di & controllo manualmente con un programma di installazione scaricato, dovranno essere disinstallate tramite le **App e funzionalità** pagina Impostazioni di sistema in Windows 10 o tramite **Aggiungi/Rimuovi programmi**nel Pannello di controllo nelle versioni precedenti di Windows.
+Se è stato installato cartelle di lavoro manualmente con un programma di installazione scaricato, sarà necessario essere disinstallate tramite le **App e funzionalità** pagina delle impostazioni di sistema in Windows 10 o tramite **Aggiungi/Rimuovi programmi** nel controllo Pannello sul versioni precedenti di Windows.
 
 > **Start > Impostazioni > sistema > app & funzionalità**
 
-![](install-images/windows-remove.png "Cartelle di lavoro di Xamarin e controllo elencato nella &quot;app &amp; funzionalità&quot;")
+![](install-images/windows-remove.png "Cartelle di lavoro di Xamarin come elencato nella &quot;app &amp; funzionalità&quot;")
 
-**È comunque necessario seguire la procedura per il programma di installazione Visual Studio rendere le cartelle di lavoro che & controllo non venga reinstallato insaputa dell'utente.**
+**È comunque necessario seguire la procedura per il programma di installazione Visual Studio per assicurarsi che le cartelle di lavoro non venga reinstallato all'insaputa.**
 
 <a name="uninstall-macos" />
 
 ### <a name="macos"></a>macOS
 
-A partire da [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/), Xamarin le cartelle di lavoro e controllo possono essere disinstallati da un terminale eseguendo:
+A partire da [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/), Xamarin le cartelle di lavoro possono essere disinstallati da un terminale eseguendo:
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
@@ -153,7 +154,7 @@ Per le versioni precedenti, è necessario rimuovere manualmente quanto segue:
 
 ## <a name="downgrading"></a>Downgrade
 
-L'identificatore bundle per **applicazioni/Xamarin Workbooks.app** modificato da `com.xamarin.Inspector` per `com.xamarin.Workbooks` nella versione 1.4 per facilitare un futuro la suddivisione dei programmi di installazione di Xamarin le cartelle di lavoro e controllo.
+L'identificatore bundle **Workbooks.app applicazioni/Xamarin** modificato da `com.xamarin.Inspector` a `com.xamarin.Workbooks` nella versione 1.4, come le cartelle di lavoro e di controllo sono completamente suddivise.
 
 A causa di un bug nei programmi di installazione precedente, non è possibile effettuare il downgrade versioni 1.4 o versione successive utilizzando il 1.3.2 o programmi di installazione precedente.
 

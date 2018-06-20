@@ -7,22 +7,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/31/2018
-ms.openlocfilehash: eadc2147a44d6077436e394a4757d367ce42e5fa
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a931373a6abba3084af3c7aefcdddc903ad1b577
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790003"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209232"
 ---
 # <a name="building-user-interfaces-with-the-ios-designer"></a>Creazione di interfacce utente con la finestra di progettazione iOS
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
-
-=======
-# <a name="ios-designer"></a>iOS Designer
-
 _La finestra di progettazione di Xamarin per iOS è una finestra di progettazione visiva per iOS Storyboard e interfaccia generatore formati che è completamente integrato con Visual Studio per Mac e Visual Studio. La finestra di progettazione iOS gestisce completamente compatibile con i formati di Storyboard e .xib, in modo che i file possono essere modificati in Visual Studio per Mac o Visual Studio, oltre a interfaccia generatore del Xcode. Inoltre, la finestra di progettazione Xamarin iOS supporta funzionalità avanzate, quali controlli personalizzati che eseguono il rendering in fase di progettazione nell'editor._
->>>>>>> master
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 

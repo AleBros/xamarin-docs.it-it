@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 author: topgenorth
 ms.author: toopge
-ms.date: 03/30/2017
-ms.openlocfilehash: fa8806345a364a70535a91b2ba99e3bfee8d47bc
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: 6e37b1ac3d0fb78b5737ebe97b5a28ab40adb648
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794020"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269057"
 ---
 # <a name="debugging-integrations"></a>Integrazioni debug
 
@@ -23,8 +23,8 @@ Nel macOS, messaggi di log vengono visualizzati nel menu entrambi Visualizzatore
 
 Il log del client è disponibili nelle posizioni seguenti in macOS e Windows:
 
-- Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
-- Windows: `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
+- Mac: `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
+- Windows: `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
 È necessario tenere presente è che, durante il caricamento di integrazioni tramite le normali attività `#r` meccanismo durante lo sviluppo, l'assembly di integrazione verrà prelevato come un _dipendenza_ della cartella di lavoro e incluso nel pacchetto, se è un percorso assoluto non usato. Ciò può provocare modifiche per la propagazione non, come se l'integrazione di ricompilazione non aveva alcun effetto.
 
@@ -39,7 +39,7 @@ Entrambi i set di strumenti consentono di visualizzare l'origine JavaScript o Ty
 Per abilitare gli strumenti di sviluppo per le cartelle di lavoro di Xamarin su Mac, eseguire il comando seguente in terminale:
 
 ```shell
-defaults write com.xamarin.Inspector WebKitDeveloperExtras -bool true
+defaults write com.xamarin.Workbooks WebKitDeveloperExtras -bool true
 ```
 
 e quindi riavviare le cartelle di lavoro di Xamarin. Una volta eseguita questa operazione, dovrebbe essere **controllare elemento** visualizzato il menu di scelta rapida e un nuovo **Developer** riquadro sarà disponibile nelle preferenze di cartelle di lavoro. Questa opzione consente di scegliere se si desidera che gli strumenti di sviluppo aperti all'avvio:

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: fd45528446c9d3d4bdfa1b8f9f4010babb2ad044
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 3d5fe936da9086dd7201b7ee7d91185b81eb65a1
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245631"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269031"
 ---
 # <a name="fonts-in-xamarinforms"></a>Tipi di carattere in xamarin. Forms
 
-Questo articolo descrive come xamarin. Forms consente di specificare gli attributi dei caratteri, compresi peso e dimensioni, i controlli che visualizzano il testo. Informazioni di carattere possono essere [specificate nel codice](#Setting_Font_in_Code) o [specificato in Xaml](#Setting_Font_in_Xaml).
+Questo articolo descrive come xamarin. Forms consente di specificare gli attributi dei caratteri, compresi peso e dimensioni, i controlli che visualizzano il testo. Informazioni sui caratteri può essere [specificate nel codice](#Setting_Font_in_Code) oppure [specificato in XAML](#Setting_Font_in_Xaml).
 È anche possibile usare un [tipo di carattere personalizzato](#Using_a_Custom_Font).
 
 <a name="Setting_Font_in_Code" />
@@ -55,7 +55,6 @@ label.FontSize = 24;
 -  **Piccola**
 -  **Media**
 -  **Grande**
-
 
 Il `NamedSize` enumerazione può essere utilizzato ovunque un `FontSize` può essere specificato utilizzando il `Device.GetNamedSize` metodo per convertire il valore di un `double`:
 
@@ -103,7 +102,6 @@ fs.Spans.Add (new Span { Text=" and green!", ForegroundColor = Color.Green, Font
 labelFormatted.FormattedText = fs;
 ```
 
-
 ### <a name="setting-font-info-per-platform"></a>Impostazione delle informazioni di carattere per ogni piattaforma
 
 In alternativa, il `Device.RuntimePlatform` proprietà può essere utilizzata per impostare i nomi di tipo di carattere diverso in ogni piattaforma, come illustrato in questo codice:
@@ -119,16 +117,16 @@ label.FontSize = Device.RuntimePlatform == Device.iOS ? 24 :
 
 <a name="Setting_Font_in_Xaml" />
 
-## <a name="setting-the-font-in-xaml"></a>Impostazione del carattere in Xaml
+## <a name="setting-the-font-in-xaml"></a>Impostazione del carattere in XAML
 
-Xamarin. Forms controlla che il testo visualizzato hanno un `Font` proprietà che può essere impostato in Xaml. Il modo più semplice per impostare il tipo di carattere in Xaml è consiste nell'utilizzare i valori di enumerazione dimensione denominata, come illustrato in questo esempio:
+Xamarin. Forms controlla che il testo visualizzato hanno un `Font` proprietà che può essere impostato in XAML. Il modo più semplice per impostare il tipo di carattere in XAML consiste nell'utilizzare i valori di enumerazione dimensione denominata, come illustrato in questo esempio:
 
 ```xaml
 <Label Text="Login" FontSize="Large"/>
 <Label Text="Instructions" FontSize="Small"/>
 ```
 
-È un convertitore di tipi incorporati per la `Font` proprietà che consente tutte le impostazioni del carattere essere espresso come valore stringa in Xaml. Gli esempi seguenti mostrano come è possibile specificare gli attributi dei caratteri e le dimensioni in Xaml:
+È un convertitore di tipi incorporati per la `Font` proprietà che consente tutte le impostazioni del tipo di carattere essere espresso come valore stringa in XAML. Gli esempi seguenti mostrano come è possibile specificare gli attributi dei caratteri e le dimensioni in XAML:
 
 ```xaml
 <Label Text="Italics are supported" FontAttributes="Italic" />
@@ -136,11 +134,12 @@ Xamarin. Forms controlla che il testo visualizzato hanno un `Font` proprietà ch
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-Per specificare più `Font` la combinazione di impostazioni, le impostazioni necessarie in una stringa di attributo del tipo di carattere singolo. La stringa dell'attributo di tipo di carattere deve essere formattata come `"[font-face],[attributes],[size]"`. L'ordine dei parametri è importante, tutti i parametri sono facoltativi e più `attributes` è possibile specificare, ad esempio:
+Per specificare più `Font` la combinazione di impostazioni, le impostazioni necessarie in un unico `Font` stringa dell'attributo. La stringa dell'attributo di tipo di carattere deve essere formattata come `"[font-face],[attributes],[size]"`. L'ordine dei parametri è importante, tutti i parametri sono facoltativi e più `attributes` è possibile specificare, ad esempio:
 
 ```xaml
-<Label Text="Small bold text" FontAttributes="Bold" FontSize="Micro" />
-<Label Text="Really big italic text" FontAttributes="Italic" FontSize="72" />
+<Label Text="Small bold text" Font="Bold, Micro" />
+<Label Text="Medium custom font" Font="MarkerFelt-Thin, 42" />
+<Label Text="Really big bold and italic text" Font="Bold, Italic, 72"  />
 ```
 
 La `FormattedString` classe può essere utilizzata anche in XAML, come illustrato di seguito:
@@ -253,7 +252,7 @@ Il codice comune per l'applicazione è ora completo. Il codice di composizione t
 
 Xamarin. Forms fornisce impostazioni predefinite semplice per consentono di dimensioni testo facilmente per tutte le piattaforme supportate. Consente inoltre di specificare tipo di carattere e dimensioni &ndash; anche in modo diverso per ogni piattaforma &ndash; quando un controllo più accurato è obbligatorio. Il `FormattedString` classe può essere utilizzata per costruire una stringa che contiene le specifiche di diverso tipo di carattere utilizzando il `Span` classe.
 
-Informazioni di carattere possono essere specificate anche in Xaml utilizzando gli attributi di un tipo di carattere formattato correttamente o `FormattedString` elemento con `Span` gli elementi figlio.
+Può inoltre specificare informazioni sui caratteri nella sintassi XAML per gli attributi del tipo di carattere formattato in modo corretto di o la `FormattedString` elemento con `Span` gli elementi figlio.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

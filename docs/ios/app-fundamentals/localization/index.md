@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: 06758fd8fac62a63c309b173738a8ee889716143
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 7f05243196a9b916ac5c7b73df957262604ccb11
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785266"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268810"
 ---
 # <a name="localization-in-xamarinios"></a>Localizzazione in xamarin. IOS
 
@@ -55,6 +55,16 @@ Le impostazioni locali correnti possono eseguire query per uno dei due modi:
 - `NSLocale.AutoUpdatingCurrentLocale.LocaleIdentifier`
 
 Il primo valore può essere memorizzati nella cache dal sistema operativo e pertanto potrebbe non riflettere sempre la lingua dell'utente attualmente selezionato. Utilizzare il secondo valore per ottenere le impostazioni locali di attualmente selezionata.
+
+> [!NOTE]
+> Mono (runtime di .NET su cui si basa xamarin. IOS) e API di iOS di Apple non supportano insiemi identici di combinazioni di lingua/area geografica.
+> Per questo motivo, è possibile selezionare una combinazione lingua/area geografica in iOS **impostazioni** app che non è mappato a un valore valido in Mono. Ad esempio, impostazione della lingua di un iPhone su inglese e dell'area a Spagna causerà le seguenti API per produrre valori differenti:
+> 
+> - `CurrentThead.CurrentCulture`: en-US (Mono API)
+> - `CurrentThread.CurrentUICulture`: en-US (Mono API)
+> - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (Apple API)
+>
+> Poiché utilizza Mono `CurrentThread.CurrentUICulture` per selezionare le risorse e `CurrentThread.CurrentCulture` per formattare date e valute, localizzazione basato su Mono (ad esempio, con estensione resx) non può produrre risultati previsti per queste combinazioni lingua/area geografica. In questi casi, si basano sulle API di Apple per localizzare base alle necessità.
 
 ### <a name="nscurrentlocaledidchangenotification"></a>NSCurrentLocaleDidChangeNotification
 

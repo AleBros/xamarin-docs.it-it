@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 71f526f87a2536110a6d2292cd66a0f4d81c0bfc
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 49a7ecdad53c7820594f7ebc047ae6fbc5a9bc56
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240337"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209414"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Xamarin. Forms MessagingCenter
 
@@ -30,7 +30,7 @@ Xamarin. Forms `MessagingCenter` consente di visualizzare modelli e altri compon
 
 Esistono due parti per `MessagingCenter`:
 
--  **La sottoscrizione** : ascolto dei messaggi con una determinata firma e di eseguire un'azione quando vengono ricevuti. Possono essere in ascolto di più sottoscrittori per lo stesso messaggio.
+-  **La sottoscrizione** : ascolto dei messaggi con una determinata firma e di eseguire un'azione quando vengono ricevuti. Più server di sottoscrizione può rimanere in attesa per lo stesso messaggio.
 -  **Inviare** -pubblicazione di un messaggio per i listener possono eseguire operazioni. Se nessun listener hanno sottoscritto il messaggio viene ignorato.
 
 

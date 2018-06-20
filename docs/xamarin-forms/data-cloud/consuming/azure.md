@@ -7,16 +7,19 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 3cf27e48fe23b9a0f035689e55a72fcc706ab266
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 73d74b59ef6e59028eec7cad19feec21908b6329
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241331"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269044"
 ---
 # <a name="consuming-an-azure-mobile-app"></a>Utilizzo di un'App per dispositivi mobili di Azure
 
 _Azure App per dispositivi mobili consentono di sviluppare applicazioni con scalabilità back-end ospitato in Azure App Service, con supporto per l'autenticazione per dispositivi mobili, non in linea sincronizzazione e le notifiche push. Questo articolo è applicabile solo alle App mobili di Azure che utilizzano un back-end di Node.js, viene illustrato come eseguire una query, inserimento, aggiornamento ed eliminare i dati archiviati in una tabella in un'istanza di App mobili di Azure._
+
+> [!NOTE]
+> Avviare il 30 giugno, tutte le nuove app Mobile Azure verrà creata con TLS 1.2 per impostazione predefinita. Inoltre, è inoltre consigliabile esistenti per usare TLS 1.2 riconfigurare App mobili di Azure. Per informazioni su come applicare TLS 1.2 in un'App per dispositivi mobili di Azure, vedere [imporre TLS 1.2](/azure/app-service/app-service-web-tutorial-custom-ssl#enforce-tls-1112). Per informazioni su come configurare progetti di Xamarin per l'uso di TLS 1.2, vedere [Transport Layer Security (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md).
 
 Per informazioni su come creare un'istanza di App mobili di Azure che può essere utilizzata da xamarin. Forms, vedere [creare un'app xamarin. Forms](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started/). Dopo aver seguito le istruzioni, l'applicazione di esempio scaricabile può essere configurata per utilizzare l'istanza di App mobili di Azure mediante l'impostazione di `Constants.ApplicationURL` all'URL dell'istanza di App mobili di Azure. Quindi, quando viene eseguita l'applicazione di esempio si connetterà all'istanza di App mobili di Azure, come illustrato nella schermata seguente:
 

@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: 275ec851a2fd8e96adecfeca5daf6a66add7bd92
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 7f68b7c8affc11b50bdb4a2fc9589f8dcbfb45ec
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209190"
 ---
 # <a name="gtk-platform-setup"></a>Installazione di piattaforma GTK #
 
@@ -42,7 +43,7 @@ Seguire queste istruzioni per aggiungere un'app GTK # che verrà eseguito sul de
 
     Premere il **OK** pulsante per creare il progetto.
 
-4. Nel **Esplora soluzioni**, fare clic con il pulsante destro del nuovo progetto GTK e selezionare **Gestisci pacchetti NuGet**. Selezionare il **Sfoglia** scheda, fare clic sui **Includi versione provvisoria** casella di controllo per cercare **xamarin. Forms** 3.0 o versione successiva.
+4. Nel **Esplora soluzioni**, fare clic con il pulsante destro del nuovo progetto GTK e selezionare **Gestisci pacchetti NuGet**. Selezionare il **esplorare** scheda, cercare **xamarin. Forms** 3.0 o versione successiva.
 
     ![Selezionare il pacchetto NuGet di xamarin. Forms](gtk-images/win/select-forms-nuget-package.png "selezionare il pacchetto NuGet di xamarin. Forms")
 
