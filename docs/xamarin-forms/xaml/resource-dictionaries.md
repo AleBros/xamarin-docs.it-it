@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/21/2018
-ms.openlocfilehash: b9c15357895bae64176ef34a848b968917035f3d
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: c2e6a5624baba251061bcd324fcb849e3d95ebfd
+ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36291035"
 ---
 # <a name="resource-dictionaries"></a>Dizionari delle risorse
 
@@ -251,7 +252,7 @@ Quando unite [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) le 
 
 1. Le risorse locali per il dizionario risorse.
 1. Le risorse contenute nel dizionario risorse che è stato unito tramite deprecate [ `MergedWith` ](xref:Xamarin.Forms.ResourceDictionary.MergedWith) proprietà.
-1. Le risorse contenute nei dizionari risorse che sono stati uniti tramite il `MergedDictionaries` insieme, nell'ordine in cui sono elencati il `MergedDictionaries` proprietà.
+1. Le risorse contenute nei dizionari risorse che sono stati uniti tramite il `MergedDictionaries` insieme, in ordine inverso sono elencati nel `MergedDictionaries` proprietà.
 
 > [!NOTE]
 > La ricerca di dizionari delle risorse può essere un'attività complesse se un'applicazione contiene più dizionari risorse di grandi dimensioni. Pertanto, per evitare di ricerche non necessarie, è necessario assicurarsi che ogni pagina in un'applicazione utilizza solo i dizionari delle risorse appropriate per la pagina.
