@@ -12,6 +12,7 @@ ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32019685"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>Renderer di classi Base e i controlli nativi
 

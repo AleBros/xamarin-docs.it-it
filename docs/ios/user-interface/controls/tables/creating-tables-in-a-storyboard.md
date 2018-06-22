@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30780723"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Utilizzo di tabelle nella finestra di progettazione iOS
 
@@ -45,7 +46,7 @@ Utilizzano un UITableView entrambi gli schermi l'interfaccia utente verrà compi
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
-Creare una nuova soluzione in Visual Studio usando **(Create) nuovo progetto > singola vista App(C#)**e lo chiama _StoryboardTables_.
+Creare una nuova soluzione in Visual Studio usando **(Create) nuovo progetto > singola vista App(C#)** e lo chiama _StoryboardTables_.
 
  [![Creare una finestra di dialogo Nuovo progetto](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png#lightbox)
 

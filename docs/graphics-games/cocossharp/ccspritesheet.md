@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33922548"
 ---
 # <a name="improving-frame-rate-with-ccspritesheet"></a>Miglioramento della frequenza dei fotogrammi con CCSpriteSheet
 

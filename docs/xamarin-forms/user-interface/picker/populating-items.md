@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30792654"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Aggiunta di dati alla raccolta di elementi di un controllo di selezione
 
