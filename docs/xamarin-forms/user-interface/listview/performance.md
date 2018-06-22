@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: 4803a612e2b06e458f2859dbbbd30b970f0fc8ea
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: f1707a6b2a1dc03ae1346520bf29ff83f0fe74fb
+ms.sourcegitcommit: eac092f84b603958c761df305f015ff84e0fad44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244903"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36309811"
 ---
 # <a name="listview-performance"></a>Prestazioni di ListView
 
@@ -171,9 +171,9 @@ Sono disponibili numerose tecniche per migliorare le prestazioni di un `ListView
 -  Evitare gerarchie di layout di annidamento. Utilizzare `AbsoluteLayout` o `Grid` per ridurre la nidificazione.
 -  Evitare specifico `LayoutOptions` diverso da `Fill` (riempimento è cheapest di calcolo).
 -  Evitare di inserire un `ListView` all'interno di un `ScrollView` per i motivi seguenti:
-  - Il `ListView` implementa un proprio lo scorrimento.
-  - Il `ListView` non riceveranno i movimenti di qualsiasi tipo, come verranno gestiti dall'elemento padre `ScrollView`.
-  - Il `ListView` può presentare un'intestazione personalizzata e un piè di pagina che consente di scorrere gli elementi dell'elenco, potenzialmente offre le funzionalità di `ScrollView` è stata utilizzata per. Per ulteriori informazioni vedere [intestazioni e piè di pagina](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#Headers_and_Footers).
+    - Il `ListView` implementa un proprio lo scorrimento.
+    - Il `ListView` non riceveranno i movimenti di qualsiasi tipo, come verranno gestiti dall'elemento padre `ScrollView`.
+    - Il `ListView` può presentare un'intestazione personalizzata e un piè di pagina che consente di scorrere gli elementi dell'elenco, potenzialmente offre le funzionalità di `ScrollView` è stata utilizzata per. Per ulteriori informazioni vedere [intestazioni e piè di pagina](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#Headers_and_Footers).
 -  Se è necessaria una progettazione molto specifica e complessa presentata in alle celle, prendere in considerazione un renderer personalizzato.
 
 `AbsoluteLayout` è in grado di eseguire layout senza una chiamata a singola misura. Questo rende molto potente per le prestazioni. Se `AbsoluteLayout` non può essere utilizzato, prendere in considerazione [ `RelativeLayout` ](http://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/). Se si utilizza `RelativeLayout`, passando direttamente i vincoli saranno notevolmente più veloce rispetto all'utilizzo dell'API di espressione. Ciò avviene perché l'espressione API utilizza JIT e in iOS è illustrata la struttura deve essere interpretato, che è più lento. L'API di espressione sia adatta per layout di pagina in cui richiesto solo nel layout iniziale e la rotazione, ma `ListView`, in cui viene eseguita costantemente durante lo scorrimento, influisce negativamente sulle prestazioni.

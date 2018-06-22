@@ -5,12 +5,13 @@ ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: c37fce491b2e6f5e0211fcc6aa7906643a1bac2a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/20/2018
+ms.openlocfilehash: 5a162ba15bbb6d6dcdf7debe01fb12b3b08a843e
+ms.sourcegitcommit: eac092f84b603958c761df305f015ff84e0fad44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36309790"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Ottenere un Google esegue il mapping di chiave API
 
@@ -46,7 +47,7 @@ Per impostazione predefinita il file keystore che verrà utilizzato per firmare 
 
 Le informazioni su un archivio chiavi si ottengono eseguendo il comando `keytool` dal JDK. Questo strumento si trova in genere nella directory bin Java:
 
-**/System/Library/Java/JavaVirtualMachines/[VERSION].jdk/Contents/Home/bin/keytool**
+**/System/Library/Java/JavaVirtualMachines/[Version].JDK/Contents/home/bin/keytool**
 
 -----
 
@@ -104,45 +105,41 @@ Certificate fingerprints:
 
 Si utilizzerà l'impronta digitale SHA-1 (elencate dopo **SHA1**) più avanti in questa Guida.
 
-
 ## <a name="creating-an-api-project"></a>Creazione di un progetto di API
 
 Dopo aver recuperato l'impronta digitale SHA-1 dell'archivio chiavi di firma, è necessario creare un nuovo progetto nella Google APIs console (o aggiungere il servizio di v2 API Android di Google Maps a un progetto esistente).
 
-1. In un browser, passare al [Google Developers Console](https://console.developers.google.com/): fare clic su **Crea progetto**:
+1. In un browser, passare ai [API Console sviluppatori Google & Dashboard Services](https://console.developers.google.com/apis/dashboard/) e fare clic su **selezionare un progetto**. Fare clic sul nome di un progetto o crearne uno nuovo facendo clic **nuovo progetto**:
 
    [![Pulsante Crea progetto di Google Developer Console](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs-sml.png)](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs.png#lightbox)
 
-2. Nel **nuovo progetto** finestra di dialogo visualizzata, immettere il nome del progetto.
-   La finestra di dialogo verrà produrre un ID univoco del progetto che si basa sul nome del progetto, come illustrato in questo esempio:
+2. Se è stato creato un nuovo progetto, immettere il nome del progetto nel **nuovo progetto** finestra di dialogo che viene visualizzato. Questa finestra di dialogo verrà producono un ID univoco del progetto che si basa sul nome del progetto. Fare clic su, il **crea** pulsante come illustrato in questo esempio:
 
    [![Nuovo progetto viene denominato XamarinMapsDemo](obtaining-a-google-maps-api-key-images/02-new-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/02-new-project-vs.png#lightbox)
 
-3. Fare clic sul pulsante **Crea**. Dopo un minuto, il progetto viene creato e che viene visualizzata la **API Manager** pagina. Nel **libreria** fare clic su **API Android di Google Maps**:
+3. Dopo un minuto, la creazione del progetto e vengono acquisiti per il **Dashboard** pagina del progetto. Da qui, fare clic su **ABILITA le API e servizi**:
 
    [![Fare clic su API Android di Google Maps nella sezione della libreria](obtaining-a-google-maps-api-key-images/03-api-selection-vs-sml.png)](obtaining-a-google-maps-api-key-images/03-api-selection-vs.png#lightbox)
 
-4. Nella parte superiore del **API Android di Google Maps** pagina, fare clic su **abilitare** per attivare il servizio per questo progetto:
+4. Dal **libreria dell'API** fare clic su **Maps SDK per Android**. Nella pagina successiva, fare clic su **abilitare** per attivare il servizio per questo progetto:
 
    [![Fare clic sul pulsante Attiva nella sezione Dashboard](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
-
-A questo punto è stato creato il progetto di API e v2 l'API Android di Google Maps è stato aggiunto a esso. Tuttavia, è possibile usare questa API nel progetto, fino a creare le credenziali per tale. Quindi esamineremo come creare una chiave API e un'applicazione di xamarin whitelist in modo che si è autorizzato a usare questa chiave.
-
+A questo punto è stato creato il progetto di API e API Android di Google Maps v2 è stato aggiunto a esso. Tuttavia, è possibile usare questa API nel progetto, fino a creare le credenziali per tale. La sezione successiva spiega come creare una chiave API e un elenco approvato un'applicazione di xamarin. Android in modo che si è autorizzato a usare questa chiave.
 
 ## <a name="obtaining-the-api-key"></a>Ottenere la chiave API
 
 Dopo il **Google Developer Console** API progetto è stato creato, è necessario creare una chiave API Android. Applicazioni di xamarin devono avere una chiave API prima di ottenere accesso alle API di Android mappa v2.
 
-1. Nel **API Android di Google Maps** pagina visualizzata (dopo aver fatto clic **abilitare** nel passaggio precedente), fare clic su di **scegliere credenziali** pulsante:
+1. Nel **Maps SDK per Android** pagina visualizzata (dopo aver fatto clic **abilitare** nel passaggio precedente), visitare il **credenziali** scheda e fare clic sul **crea credenziali** pulsante:
 
-   [![Questa API è abilitata messaggio](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
+   [![Esegue il mapping per messaggio di credenziali di Android SDK](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
-2. Nel **credenziali** pagina, fare clic su di **le credenziali sono necessarie?** pulsante:
+2. Fare clic su **chiave API**:
 
    [![Aggiungere le credenziali per la finestra di dialogo del progetto](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
 
-3. Dopo questo pulsante, verrà generata la chiave API. Successivamente è necessario limitare questa chiave in modo che solo l'applicazione può chiamare le API con questa chiave. Fare clic su **chiave Restrict**:
+3. Dopo questo pulsante, verrà generata la chiave API. Successivamente è necessario limitare questa chiave in modo che solo l'applicazione può chiamare le API con questa chiave. Fare clic su **RESTRICT chiave**:
 
    [![Fare clic su chiave limitare nella pagina credenziali](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs-sml.png)](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs.png#lightbox)
 
@@ -166,7 +163,17 @@ Dopo il **Google Developer Console** API progetto è stato creato, è necessario
 
    [![XamarinMapsDemoKey viene visualizzato nell'elenco di chiavi API](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs-sml.png)](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs.png#lightbox)
 
+## <a name="connect-the-project-to-a-billable-account"></a>Connettere il progetto a un account fatturabile
 
+Inizio di giugno, 2018 11, la chiave API non funzionerà se il progetto non è connesso a un account fatturabile (anche se il servizio è ancora disponibile per l'App per dispositivi mobili).
+
+1. Fare clic sul pulsante di menu a tre linee e selezionare il **fatturazione** pagina:
+
+   [![Selezionare la sezione di fatturazione dal menu a tre linee](obtaining-a-google-maps-api-key-images/13-goto-billing-vs-sml.png)](obtaining-a-google-maps-api-key-images/13-goto-billing-vs.png#lightbox)
+
+2. Collegare il progetto a un account di fatturazione facendo **collegare un account di fatturazione** aggiungendo **crea ACCOUNT di fatturazione** nella finestra popup visualizzato (se non si dispone di un account, saranno illustrati per crearne uno nuovo):
+
+   [![Progetto di collegamento di account di fatturazione](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs-sml.png)](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs.png#lightbox)
 
 ## <a name="adding-the-key-to-your-project"></a>Aggiungere la chiave al progetto
 
@@ -177,15 +184,13 @@ Infine, aggiungere questa chiave API per la **AndroidManifest.XML** file dell'ap
     android:versionName="4.10" package="com.xamarin.docs.android.mapsandlocationdemo"
     android:versionCode="10">
 ...
-
   <application android:label="@string/app_name">
     <!-- Put your Google Maps V2 API Key here. -->
-    <meta-data android:name="com.google.android.geo.API_KEY" android:value="YOUR_API_KEY" />
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR_API_KEY" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
   </application>
 </manifest>
 ```
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
