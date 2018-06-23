@@ -5,12 +5,12 @@ ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 0b6cbf9ee5621466285656a5efee68ccc2c85211
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 001cca2524e495d64c6781d8a2fc5cb58e771e6e
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783028"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321444"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Geocodifica
 
@@ -32,7 +32,7 @@ Non è necessaria alcuna configurazione aggiuntiva.
 
 # <a name="uwptabuwp"></a>[PIATTAFORMA UWP](#tab/uwp)
 
-Chiave dell'API di Bing mappe è obbligatorio utilizzare funcationality geocodifica. Iscriversi a una liberazione [Bing Maps](https://www.bingmapsportal.com/) account. Sotto **mio account > le chiavi** creare una nuova chiave e le informazioni in base al tipo di applicazione.
+Chiave dell'API di Bing mappe è obbligatorio utilizzare funcationality geocodifica. Iscriversi a una liberazione [Bing Maps](https://www.bingmapsportal.com/) account. Sotto **mio account > le chiavi** creare una nuova chiave e le informazioni in base al tipo di applicazione (che deve essere **pubblico delle App Windows (UWP, 8. x e versioni precedenti)** per App UWP).
 
 All'inizio di vita dell'applicazione prima di chiamare qualsiasi **Geocodifica** metodi impostano la chiave API:
 
