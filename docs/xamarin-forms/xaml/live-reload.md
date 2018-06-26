@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: 756f0570ce792450cfcaf6b1c5161a95a6cb80c8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 15de334500ea25d22657c257a4a4fc6887cc122c
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848304"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935428"
 ---
 # <a name="xamarin-live-reload"></a>Ricaricamento in tempo reale di Xamarin
 
@@ -119,6 +119,7 @@ No. In effetti, è possibile anche avviare tutte supportate destinazione dell'ap
 ## <a name="known-issues"></a>Problemi noti
 
 * Supportato solo in Visual Studio.
+* Il collegamento deve essere impostato su **collegamento non** o **solo collegamento Framework SDK** 
 * Ricaricamento di risorse a livello di app (vale a dire **app** o condiviso i dizionari delle risorse), navigazione app viene reimpostato. Questo problema verrà risolto nella prossima versione di anteprima.
 * Modifica XAML durante il debug UWP può causare un arresto anomalo del runtime. Soluzione alternativa: Utilizzare **Avvia senza eseguire debug (CTRL+F5)** anziché **Avvia debug (F5)**.
 

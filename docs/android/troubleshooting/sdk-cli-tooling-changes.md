@@ -1,23 +1,23 @@
 ---
 title: Modifiche agli strumenti di Android SDK
-description: Modifiche come Android SDK gestisce i livelli di API e i AVDs installato.
+description: Modifiche come Android SDK gestisce i livelli di API e i AVDs installati.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/02/2018
-ms.openlocfilehash: b0d9458238c4b3ac9ceeeb7d7ce4e2ca8b0b6de3
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/21/2018
+ms.openlocfilehash: 4e808736fd92fa40ecbf0c24938c0fedd7afcff9
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732866"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935451"
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Modifiche agli strumenti di Android SDK
 
-_Modifiche come Android SDK gestisce i livelli di API e i AVDs installato._
+_Modifiche come Android SDK gestisce i livelli di API e i AVDs installati._
 
 ## <a name="changes-to-android-sdk-tooling"></a>Modifiche per gli strumenti di Android SDK
 
@@ -42,29 +42,29 @@ Visual Studio e Visual Studio per Mac forniscono ora Xamarin sostituzioni per i 
 
 Questi strumenti sono funzionalmente equivalenti al Google grafica responsabili sostituiscono.
 
-### <a name="cli-tools"></a>Strumenti CLI
+### <a name="cli-tools"></a>Strumenti di CLI
 
-In alternativa, è possibile utilizzare gli strumenti CLI per gestire e aggiornare le emulatori e Android SDK. I seguenti programmi che ora costituiscono l'interfaccia della riga di comando per gli strumenti di Android SDK:
+In alternativa, è possibile utilizzare gli strumenti CLI per gestire e aggiornare le emulatori e Android SDK. Ora che i programmi seguenti costituiscono l'interfaccia della riga di comando per gli strumenti di Android SDK:
 
 #### <a name="sdkmanager"></a>sdkmanager
 
 **Aggiunto In:** strumenti Android SDK 25.2.3 (novembre 2016) e versioni successive.
 
-È un nuovo programma chiamato **sdkmanager** nel **tools/bin** cartella il Android SDK. Questo strumento viene utilizzato per mantenere il Android SDK dalla riga di comando. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html).
+È un nuovo programma chiamato **sdkmanager** nel **tools/bin** cartella del Android SDK. Questo strumento viene usato per mantenere il Android SDK dalla riga di comando. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html).
 
 #### <a name="avdmanager"></a>avdmanager
 
-**Aggiunto In:** strumenti Android SDK (marzo 2017) 25.3.0 e versioni successive.
+**Aggiunto In:** strumenti Android SDK 25.3.0 (marzo, 2017) e versioni successive.
 
-È un nuovo programma chiamato **avdmanager** nel **tools/bin** cartella il Android SDK. Questo strumento viene usato per gestire il AVDs per l'emulatore Android di Google. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
+È un nuovo programma chiamato **avdmanager** nel **tools/bin** cartella del Android SDK. Questo strumento viene usato per gestire il AVDs per l'emulatore Android. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
 
 ### <a name="downgrading"></a>Downgrade
 
 È possibile effettuare il downgrade del **strumenti Android SDK** installa una versione precedente di Android SDK da una versione di [sito Web Android Developer](https://developer.android.com/studio/index.html).
 
-### <a name="using-the-old-gui"></a>Tramite l'interfaccia utente grafica precedente
+### <a name="using-the-old-gui"></a>Tramite la GUI precedente
 
-È comunque possibile usare l'interfaccia utente grafica originale eseguendo il **android** programma all'interno del **strumenti** a condizione che si è nella cartella **strumenti Android SDK** versione **25.2.5**  o inferiore.
+È comunque possibile usare l'interfaccia utente grafica originale eseguendo il **android** programma all'interno del **strumenti** fino a quando si è nella cartella **strumenti Android SDK** versione **25.2.5**  o inferiore.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
