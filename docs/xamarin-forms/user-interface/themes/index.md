@@ -49,7 +49,7 @@ Questi screenshot mostrano questi controlli con:
 * Tema chiaro (solo piccole differenze per non avere alcun tema)
 * Tema scuro
 
-![](images/standard-none-sml.png "Controlli senza temi") ![ ] (images/standard-light-sml.png "controlli con tema chiaro") ![ ] (images/standard-dark-sml.png "controlli con tema scuro")
+![](images/standard-none-sml.png "Controlli senza temi") ![](images/standard-light-sml.png "controlli con tema chiaro") ![](images/standard-dark-sml.png "controlli con tema scuro")
 
 <a name="styleclass" />
 
@@ -69,7 +69,7 @@ Il [luce](light.md) e [scuro](dark.md) temi sia definiscono tre aspetti diversi 
 
 Si esegue il rendering con chiaro e scuro come indicato di seguito:
 
-![](images/boxview-light-sml.png "BoxView con StyleClass un tema chiaro") ![ ] (images/boxview-dark-sml.png "BoxView con StyleClass un tema scuro")
+![](images/boxview-light-sml.png "BoxView con StyleClass un tema chiaro") ![](images/boxview-dark-sml.png "BoxView con StyleClass un tema scuro")
 
 <a name="builtin" />
 
