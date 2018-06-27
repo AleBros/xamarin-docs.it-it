@@ -6,12 +6,12 @@ ms.assetid: 9F730444-06E8-4B3F-8A19-CA95CD484FFA
 author: asb3993
 ms.author: amburns
 ms.date: 03/20/2018
-ms.openlocfilehash: d920dd688a7911ccf4002d67914c977da56f89e1
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 17deacf115042a2fcd6bad9e22a630eadb432d44
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780685"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269018"
 ---
 # <a name="installing-xamarin-preview-on-windows"></a>Installazione di Xamarin Preview in Windows
 
@@ -29,7 +29,8 @@ La versione Preview di Visual Studio può includere le versioni di anteprima cor
 - Xamarin.iOS
 - Xamarin.Android
 - Xamarin Profiler
-- Xamarin Workbooks/Inspector
+- Xamarin Workbooks
+- Xamarin Inspector
 - Xamarin Remoted iOS Simulator
 
 Lo screenshot seguente del **programma di installazione della versione Preview** mostra entrambe le opzioni Preview e Release (notare i numeri di versione in grigio: la versione 15.0 è Release e la versione 15.1 è Preview):

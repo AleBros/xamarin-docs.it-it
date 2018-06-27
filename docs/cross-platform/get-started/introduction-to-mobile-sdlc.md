@@ -1,20 +1,19 @@
 ---
 title: Introduzione al ciclo di vita di sviluppo del software per dispositivi mobili
-description: Questo articolo descrive il ciclo di vita di sviluppo del software per le applicazioni mobili e offre alcune considerazioni che è necessario tenere presente durante la compilazione di progetti per dispositivi mobili. Gli sviluppatori che vogliono passare direttamente alla compilazione possono ignorare questa guida e leggerla successivamente per una miglior comprensione dello sviluppo per dispositivi mobili.
+description: Questo documento descrive il ciclo di vita di sviluppo del software per dispositivi mobili, prendendo in esame la progettazione dell'esperienza utente, la progettazione dell'interfaccia utente, lo sviluppo, la stabilizzazione, la distribuzione e altro ancora.
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: c93a063c9c933e1b9f397d172115471473cf8f35
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 8a95f89ad41ab793d8c26631f1a967180b4c1779
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782333"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introduzione al ciclo di vita di sviluppo del software per dispositivi mobili
-
-_Questo articolo descrive il ciclo di vita di sviluppo del software per le applicazioni mobili e illustra alcune considerazioni che è necessario tenere presente durante la compilazione di progetti per dispositivi mobili. Gli sviluppatori che vogliono passare direttamente alla compilazione possono ignorare questa guida e leggerla successivamente per una miglior comprensione dello sviluppo per dispositivi mobili._
 
 La compilazione di applicazioni per dispositivi mobili può essere un'operazione semplice e rapida come aprire l'IDE, assemblare una serie di componenti, eseguire un breve test e caricare il tutto in App Store. Oppure può essere un processo estremamente complesso che richiede un rigoroso design up-front, un test di usabilità, il controllo qualità su migliaia di dispositivi, un ciclo di vita completo della versione beta e quindi la distribuzione in numerosi modi diversi.
 

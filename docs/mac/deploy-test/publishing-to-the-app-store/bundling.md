@@ -1,19 +1,20 @@
 ---
 title: Creazione di bundle per Mac App Store
-description: La guida descrive come creare il bundle di un'app Xamarin.Mac per la pubblicazione in Mac App Store.
+description: Questo documento descrive come creare un bundle di un'app Xamarin.Mac per la pubblicazione in Mac App Store. Vengono illustrate le opzioni di firma del codice e la compilazione.
 ms.prod: xamarin
 ms.assetid: 00a36d7c-937d-4657-bf6a-0de9684b8f94
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 88d813331dfce437f3668ada8f008bbbd5fdc3de
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3aeda97fa4a5a63d51623335c0721026b2394d2f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792060"
 ---
-# <a name="bundle-for-mac-app-store"></a>Bundle per Mac App Store
+# <a name="bundling-for-the-mac-app-store"></a>Creazione di bundle per Mac App Store
 
 In questa sezione vengono descritti i concetti di base per compilare con Visual Studio per Mac un'applicazione da rilasciare in Mac App Store. In base alle funzionalità aggiuntive, come ad esempio l'accesso iCloud e le notifiche push, potrebbe essere necessaria una configurazione aggiuntiva, che oltrepassa l'ambito di questo articolo.
 
