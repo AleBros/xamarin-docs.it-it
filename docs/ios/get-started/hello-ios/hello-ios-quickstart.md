@@ -1,6 +1,6 @@
 ---
-title: Guida introduttiva a Hello, iOS
-description: In questa guida divisa in due parti viene descritto come compilare un'applicazione Xamarin.iOS di base usando Visual Studio o Visual Studio per Mac e vengono illustrate le nozioni di base dello sviluppo di applicazioni iOS con Xamarin. Vengono presentati strumenti, concetti e passaggi necessari per compilare e distribuire un'applicazione Xamarin.iOS.
+title: Hello, iOS - Guida introduttiva
+description: Questa procedura dettagliata illustra come compilare una semplice applicazione Xamarin.iOS denominata Hello, iOS. Presenta inoltre gli strumenti e i concetti fondamentali che è necessario conoscere per compilare applicazioni Xamarin.iOS.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: c82343b3ec36512a8cfd7ba3b96862eac14bfafd
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: d9f5894f03bbfaa2145aec462dbd0ede7774354a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785986"
 ---
-# <a name="helloios-quickstart"></a>Guida introduttiva a Hello.iOS
+# <a name="hello-ios--quickstart"></a>Hello, iOS - Guida introduttiva
 
 Questa guida descrive come creare un'applicazione che converte un numero di telefono alfanumerico immesso dall'utente in un numero di telefono numerico e lo chiama. L'applicazione finale ha l'aspetto seguente:
 
@@ -126,7 +127,7 @@ Nella schermata di avvio fare clic su **Nuovo progetto** per creare una nuova so
 
 16. Dopo aver selezionato il secondo **Pulsante** nell'area di progettazione, modificare la proprietà **Nome** nella sezione **Identità** del **riquadro delle proprietà** in `CallButton`. Modificare la proprietà **Titolo** in "Call" (Chiama):
 
-  ![](hello-ios-quickstart-images/image17new.png "Modificare la proprietà Titolo in "Call" (Chiama)")
+  ![](hello-ios-quickstart-images/image17new.png "Modificare la proprietà Titolo in \"Call\" (Chiama)")
 
   Salvare le modifiche passando a **File > Salva** o premendo **⌘ + s**.
 
@@ -351,7 +352,7 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
 14. Dopo aver selezionato il secondo **Pulsante** nell'area di progettazione, modificare la proprietà **Nome** nella sezione **Identità** di **Proprietà** in `CallButton`. Modificare la proprietà **Titolo** in "Call" (Chiama):
 
-  ![](hello-ios-quickstart-images/vs-image17.png "Modificare la proprietà Titolo in "Call" (Chiama)")
+  ![](hello-ios-quickstart-images/vs-image17.png "Modificare la proprietà Titolo in \"Call\" (Chiama)")
 
   Salvare le modifiche passando a **File > Salva tutto** o premendo **Ctrl + s**.
 

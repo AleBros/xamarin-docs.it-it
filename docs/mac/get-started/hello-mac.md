@@ -1,6 +1,6 @@
 ---
-title: Hello, Mac
-description: Questa guida descrive i passaggi per creare per la prima volta un'app Xamarin.Mac e illustra la toolchain di sviluppo che include Visual Studio per Mac, Xcode e Interface Builder. Vengono inoltre descritti gli outlet e le azioni che espongono i comandi dell'interfaccia utente al codice e infine viene illustrato come compilare, eseguire e testare un'applicazione Xamarin.Mac.
+title: Hello, Mac - Procedura dettagliata
+description: Questo documento spiega come creare un'app Xamarin.Mac e presenta Visual Studio per Mac, Xcode e Interface Builder. Illustra l'esposizione dei controlli dell'interfaccia utente al codice tramite outlet e azioni e descrive come compilare, eseguire e testare un'applicazione Xamarin.Mac.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 37D0E9E6-979B-7069-B3BE-C5F0AF99BA72
@@ -8,13 +8,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: e5d87d42765480c97da392cf07b6599108895321
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 438bb8141818ccdb1aaf2fa604707d2fb7601cd5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792785"
 ---
-# <a name="hello-mac"></a>Hello, Mac
+# <a name="hello-mac--walkthrough"></a>Hello, Mac - Procedura dettagliata
 
 Xamarin.Mac consente di sviluppare app Mac completamente native in C# e .NET usando le stesse librerie e gli stessi comandi di interfaccia OS X usati per lo sviluppo in *Objective-C* e *Xcode*. Poiché Xamarin.Mac si integra direttamente con Xcode, lo sviluppatore può usare _Interface Builder_ di Xcode per creare le interfacce utente di un'app oppure crearle direttamente nel codice C#.
 

@@ -1,6 +1,6 @@
 ---
-title: Hello, iOS Multiscreen
-description: In questa guida divisa in due parti l'applicazione Phoneword creata nella guida Hello, iOS viene espansa in modo da gestire una seconda schermata. Viene presentato anche lo schema progettuale MVC (Model-View-Controller), viene implementata la prima navigazione iOS e vengono illustrate in modo più approfondito la struttura e la funzionalità dell'applicazione iOS.
+title: Hello, iOS Multiscreen - Guida introduttiva
+description: Questo documento illustra come espandere l'applicazione di esempio Phoneword per aggiungere una seconda schermata, descrivendo lo schema MVC (Model, View, Controller), la navigazione in iOS e altri concetti di sviluppo di app iOS fondamentali.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d72e6230-c9ee-4bee-90ec-877d256821aa
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 3b59b942b3c256418d60436a1c4ba8b4aea14aa4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 469032dc7caa46c6a89b350dc37bc9a93366066a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785671"
 ---
-# <a name="helloios-multiscreen-quickstart"></a>Guida introduttiva di Hello.iOS Multiscreen
+# <a name="hello-ios-multiscreen--quickstart"></a>Hello, iOS Multiscreen - Guida introduttiva
 
 In questa parte della procedura dettagliata viene aggiunta una seconda schermata all'applicazione Phoneword per consentire la visualizzazione di una cronologia dei numeri di telefono chiamati con l'app. L'applicazione finale avrà una seconda schermata contenente la cronologia delle chiamate, come illustrato nello screenshot seguente:
 
@@ -75,7 +76,7 @@ Spostare la scena **Phoneword** accanto al **controller di spostamento**:
 
 8. Fare doppio clic sulla barra del **titolo** della schermata **Phoneword** e modificare il **titolo** in **Phoneword**:
 
-  ![](hello-ios-multiscreen-quickstart-images/09.png "Modificare il titolo in "Phoneword"")
+  ![](hello-ios-multiscreen-quickstart-images/09.png "Modificare il titolo in \"Phoneword\"")
 
 
 9. Trascinare un **pulsante** dalla **casella degli strumenti** e posizionarlo sotto il **pulsante di chiamata**. Trascinare i quadratini di ridimensionamento per rendere la larghezza del nuovo **pulsante** uguale a quella del **pulsante di chiamata**:
@@ -342,7 +343,7 @@ In questa procedura dettagliata verrà aggiunta la schermata Call History all'ap
 
 10. Nel **riquadro delle proprietà** modificare il **nome** del **pulsante** in `CallHistoryButton` e modificare il **titolo** in **Call History**:
 
-  ![](hello-ios-multiscreen-quickstart-images/image9.png "Modificare il nome del pulsante in "CallHistoryButton" e modificare il titolo in "Call History"")
+  ![](hello-ios-multiscreen-quickstart-images/image9.png "Modificare il nome del pulsante in \"CallHistoryButton\" e modificare il titolo in \"Call History\"")
 
 
 11. Creare la schermata **Call History**. Trascinare un **controller visualizzazione tabella** dalla **casella degli strumenti** nell'area di progettazione:

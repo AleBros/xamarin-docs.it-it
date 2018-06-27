@@ -1,21 +1,20 @@
 ---
-title: Provisioning dei dispositivi
-description: Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo nello sviluppo iOS consiste nell'eseguire il provisioning del dispositivo iOS. In questa guida vengono illustrati la richiesta di certificati e profili di sviluppo, l'uso dei servizi app e la distribuzione di un'app nel dispositivo.
+title: Provisioning di dispositivi per Xamarin.iOS
+description: Questo documento descrive come eseguire il provisioning di un dispositivo in modo da usarlo per il test di un'applicazione. Illustra inoltre come configurare un'app per poter usare funzionalità quali le notifiche push.
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 5265ee366c7e3c0e79e54d320d3d6eb57c2fd92d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 9721cc40319f0b4d6f0869eabccb84256122fb02
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785788"
 ---
-# <a name="device-provisioning"></a>Provisioning dei dispositivi
-
-_Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo per lo sviluppo iOS consiste nell'eseguire il provisioning del dispositivo iOS. Questa guida esplora la richiesta di certificati e profili di sviluppo, l'uso di servizi app e la distribuzione di un'app nel dispositivo._
+# <a name="device-provisioning-for-xamarinios"></a>Provisioning di dispositivi per Xamarin.iOS
 
 Durante lo sviluppo di un'applicazione Xamarin.iOS è molto importante testare l'app distribuendola in un dispositivo fisico oltre che nel simulatore. I bug specifici del dispositivo e i problemi di prestazioni possono emergere solo quando l'app viene eseguita in un dispositivo, a causa dei limiti dell'hardware, ad esempio la memoria o la connettività di rete. Per eseguire il test in un dispositivo fisico, il dispositivo deve essere *sottoposto a provisioning* ed è necessario informare Apple che tale dispositivo sarà usato a scopo di test.
 

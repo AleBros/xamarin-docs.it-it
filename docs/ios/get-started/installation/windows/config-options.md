@@ -1,17 +1,18 @@
 ---
 title: Configurazione di Visual Studio 2017
-description: Questo articolo descrive le diverse opzioni di configurazione di Xamarin.iOS per Visual Studio 2017.
+description: Questo articolo descrive come configurare Visual Studio 2017 per lo sviluppo di Xamarin.iOS. In particolare, illustra come configurare la versione installata di Xamarin.iOS, la barra degli strumenti di iOS e il menu a discesa Piattaforme soluzione.
 ms.prod: xamarin
 ms.assetid: 22D82244-890D-4325-B3CC-C0AC49130BCA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/16/2018
-ms.openlocfilehash: ee08cf7d68bd9d10026f1c15d4438077349fe367
-ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
+ms.openlocfilehash: 70633877fb07f52ce4e7a399668be6268942b137
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785954"
 ---
 # <a name="configuring-visual-studio-2017"></a>Configurazione di Visual Studio 2017
 

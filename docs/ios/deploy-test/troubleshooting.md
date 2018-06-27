@@ -1,19 +1,20 @@
 ---
-title: Risoluzione dei problemi
-description: Suggerimenti e consigli per una distribuzione senza problemi
+title: Test e distribuzione di Xamarin.iOS - Risoluzione dei problemi
+description: Questo documento fornisce suggerimenti sulla risoluzione dei problemi relativi alla firma del codice e al provisioning, a TestFlight e alla copia del bundle dell'app iOS dall'host di compilazione Mac a Windows.
 ms.prod: xamarin
 ms.assetid: 65286D09-F74D-4F22-B6CD-D1BCD7FC7992
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: fe7425bbf6440317cc856d2c727874298f66bc33
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 056b9ba5c1625093cd7fdd2914fa5df919a2f426
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785385"
 ---
-# <a name="troubleshooting"></a>Risoluzione dei problemi
+# <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Test e distribuzione di Xamarin.iOS - Risoluzione dei problemi
 
 ## <a name="code-signing--provisioning"></a>Firma del codice e provisioning
 
@@ -32,7 +33,6 @@ Le operazioni di firma del codice e provisioning con iOS possono essere compless
 * Assicurarsi che siano disponibili tutti i certificati necessari e le corrispondenti chiavi private. Per ogni team sarà necessario un certificato dello sviluppatore (per installare le app in un dispositivo personale) e un certificato di distribuzione (per installarle in altri dispositivi).
 
 * Riavviare Xcode e Visual Studio per Mac/Visual Studio quando viene installato un nuovo profilo di provisioning o un nuovo certificato.
-
 
 ## <a name="testflight"></a>TestFlight
 

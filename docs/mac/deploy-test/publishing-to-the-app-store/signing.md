@@ -1,19 +1,20 @@
 ---
-title: Firmare con un ID sviluppatore
-description: Questa guida descrive come firmare un'app Xamarin.Mac con un ID sviluppatore per la pubblicazione.
+title: Firma delle app Xamarin.Mac con un ID sviluppatore
+description: Questo documento descrive come firmare un'app Xamarin.Mac con un ID sviluppatore in modo da poterla distribuire al di fuori di Mac App Store. Vengono illustrate le opzioni di firma del codice e la compilazione.
 ms.prod: xamarin
 ms.assetid: cf7b733b-e08f-4f56-a233-264b29ee4c97
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 1a2726ec46ac51ae9848b318798afba74183360c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 130766ef7f9ab8e311db97a7209f4ec62a2ceee4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792304"
 ---
-# <a name="sign-with-developer-id"></a>Firmare con un ID sviluppatore
+# <a name="signing-xamarinmac-apps-with-a-developer-id"></a>Firma delle app Xamarin.Mac con un ID sviluppatore
 
 Se lo sviluppatore prevede di distribuire un'app direttamente agli utenti di macOS, Apple consiglia di firmarne il codice con l'ID sviluppatore in modo che possa essere installata nei sistemi macOS con **GateKeeper** abilitato. Se l'app non è stata firmata, **GateKeeper** impedirà agli utenti di installarla visualizzando un messaggio di avviso. Gli utenti possono ignorare questa limitazione tenendo premuto CTRL durante l'avvio.
 

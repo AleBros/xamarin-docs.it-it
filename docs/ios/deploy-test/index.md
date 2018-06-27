@@ -1,22 +1,22 @@
 ---
-title: Distribuzione e test
-description: Guide per la stabilizzazione e la distribuzione
+title: Distribuzione e test di app Xamarin.iOS
+description: Questo documento contiene i collegamenti a varie guide che descrivono gli argomenti relativi alla distribuzione e al test di un'applicazione Xamarin.iOS. Ad esempio, distribuzione di app, file con estensione ipa, provisioning, distribuzione wireless, TestFlight e debug.
 ms.prod: xamarin
 ms.assetid: 2DBF3BF9-79E7-4E24-AF26-E34C972B0169
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 515ea8e63f8309c46a7d802af1daafcb0c483762
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a96eeefa631eb4055d8bd0af5b89160ab0899907
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785184"
 ---
-# <a name="deployment-and-testing"></a>Distribuzione e test
+# <a name="deploying-and-testing-xamarinios-apps"></a>Distribuzione e test di app Xamarin.iOS
 
 Questa sezione include argomenti che descrivono come eseguire il test di un'applicazione e come distribuirla. Gli argomenti includono gli strumenti di debug, la distribuzione ai tester e la pubblicazione di un'applicazione nell'App Store.
-
 
 ##  <a name="app-distributioniosdeploy-testapp-distributionindexmd"></a>[Distribuzione di app](~/ios/deploy-test/app-distribution/index.md)
 
@@ -46,19 +46,14 @@ TestFlight ora è di proprietà da Apple ed è lo strumento principale per il te
 
 Gli ambienti IDE di Visual Studio e Visual Studio per Mac supportano il debug delle applicazioni Xamarin.iOS sia nel simulatore iOS che nei dispositivi iOS. Questo articolo illustra come usare il debugger e come configurare le varie opzioni supportate.
 
-
 ##  <a name="touchunitiosdeploy-testtouchunitmd"></a>[Touch.Unit](~/ios/deploy-test/touch.unit.md)
 
 Questo documento descrive come creare unit test per i progetti Xamarin.iOS.
 Gli unit test con Xamarin.iOS vengono eseguiti mediante il framework Touch.Unit, che include un test runner iOS e una versione modificata del framework [NUnitLite](http://www.nunitlite.com/), dotata di un set di API note che semplificano la creazione di unit test.
 
-
-
 ##  <a name="using-instruments-to-detect-native-leaks-using-markheapiosdeploy-testusing-instruments-to-detect-native-leaks-using-markheapmd"></a>[Uso di Instruments per rilevare le perdite native mediante MarkHeap](~/ios/deploy-test/using-instruments-to-detect-native-leaks-using-markheap.md)
 
 Questo articolo illustra l'uso di Instruments su qualsiasi dispositivo iOS e in qualsiasi applicazione Xamarin.iOS. Descrive anche la profilatura delle applicazioni nel simulatore.
-
-
 
 ##  <a name="walkthrough---using-apples-instrument-tooliosdeploy-testwalkthrough-apples-instrumentmd"></a>[Procedura dettagliata: Uso di Apple Instruments](~/ios/deploy-test/walkthrough-apples-instrument.md)
 

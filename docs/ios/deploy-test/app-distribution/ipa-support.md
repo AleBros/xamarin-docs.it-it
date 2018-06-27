@@ -1,5 +1,5 @@
 ---
-title: Supporto IPA
+title: Supporto IPA in Xamarin.iOS
 description: Questo articolo illustra come creare un file IPA che può essere usato per distribuire un'applicazione con la distribuzione ad hoc, per il testing o per la distribuzione interna di applicazioni interne.
 ms.prod: xamarin
 ms.assetid: D253C2DB-852E-6FC6-C9FD-574730B8DB19
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d63624ed486079f44e9756ee84612863e6176d7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 288ac813f23f281a1bbed375cadf5faa9d4ff9d0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784878"
 ---
-# <a name="ipa-support"></a>Supporto IPA
+# <a name="ipa-support-in-xamarinios"></a>Supporto IPA in Xamarin.iOS
 
 _Questo articolo illustra come creare un file IPA che è possibile usare per distribuire un'applicazione con la distribuzione ad hoc, a scopo di test o per la distribuzione interna di applicazioni interne._
 

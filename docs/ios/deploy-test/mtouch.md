@@ -1,23 +1,23 @@
 ---
-title: mtouch
+title: Uso di mtouch per creare un bundle di app Xamarin.iOS
+description: Questo documento descrive mtouch, uno strumento che consente di eseguire molti dei passaggi richiesti per convertire un'applicazione Xamarin.iOS in un bundle, avviarlo nel simulatore e distribuirlo in un dispositivo fisico.
 ms.prod: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 933ad24a8778ffbee3a1b6089c6ebcf33d26bf84
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9aaa79f929898f6765b97ab0a0c4a30a271d945a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784953"
 ---
-# <a name="mtouch"></a>mtouch
-
+# <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Uso di mtouch per creare un bundle di app Xamarin.iOS
 
 Le applicazioni per iPhone vengono fornite come bundle dell'applicazione. Si tratta di directory con estensione `.app` che contengono il codice, i dati, i file di configurazione e un manifesto, che l'iPhone usa per acquisire informazioni sull'applicazione.
 
 Il processo di conversione di un eseguibile .NET in applicazione viene per lo più eseguito dal comando `mtouch`, uno strumento che integra molti dei passaggi necessari per convertire l'applicazione in bundle. Questo strumento viene usato anche per avviare l'applicazione nel simulatore e per distribuire il software in un dispositivo touch iPhone o iPod reale.
-
 
 ## <a name="detailed-instructions"></a>Istruzioni dettagliate
 

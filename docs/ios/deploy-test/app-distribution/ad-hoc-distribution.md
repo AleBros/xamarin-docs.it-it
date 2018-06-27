@@ -1,5 +1,5 @@
 ---
-title: Distribuzione ad hoc
+title: Distribuzione ad hoc per le app Xamarin.iOS
 description: Questo documento offre una panoramica delle tecniche di distribuzione ad hoc usate principalmente per testare le applicazioni Xamarin.iOS con un gruppo numeroso di persone.
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 9b862a39d8fb8fe079b83b8842281fad5ec903e4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0907c3bcca9e0955e5ad9f8ed48adac03202cbaa
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784803"
 ---
-# <a name="ad-hoc-distribution"></a>Distribuzione ad hoc
+# <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Distribuzione ad hoc per le app Xamarin.iOS
 
 _Questo documento offre una panoramica delle tecniche di distribuzione ad hoc usate principalmente per testare le applicazioni Xamarin.iOS con un gruppo numeroso di persone._
 

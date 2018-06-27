@@ -1,19 +1,20 @@
 ---
-title: Associazione al Mac
-description: Questa guida descrive come usare Associa a Mac per connettere Visual Studio 2017 a un host di compilazione Mac.
+title: Associa a Mac per lo sviluppo di Xamarin.iOS
+description: Questa guida descrive come usare Associa a Mac per connettere Visual Studio 2017 a un host di compilazione Mac. Illustra come abilitare l'accesso remoto nel Mac, connettersi al Mac da Visual Studio 2017, aggiungere manualmente un host di compilazione Mac al computer Windows e molto altro.
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 04/16/2018
-ms.openlocfilehash: e2f9b23bb298b0bb01f7e5491963daed4521ac9c
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.date: 05/29/2018
+ms.openlocfilehash: c4e28c1f3e058977d6f9072b70f17717a2b27585
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786077"
 ---
-# <a name="pair-to-mac"></a>Associazione al Mac
+# <a name="pair-to-mac-for-xamarinios-development"></a>Associa a Mac per lo sviluppo di Xamarin.iOS
 
 _Questa guida descrive come usare Associa a Mac per connettere Visual Studio 2017 a un host di compilazione Mac._
 
@@ -38,6 +39,7 @@ Associa a Mac consente il flusso di lavoro di sviluppo seguente:
 - È possibile usare la riga di comando di Windows per compilare le applicazioni iOS.
 
 > [!NOTE]
+> 
 > Prima di seguire le istruzioni riportate in questa guida, completare i passaggi seguenti: 
 > 
 > - In un computer Windows [installare Visual Studio 2017](~/cross-platform/get-started/installation/windows.md)
@@ -161,6 +163,7 @@ A partire da [Visual Studio 2017 versione 15.6](https://docs.microsoft.com/visua
 > [!IMPORTANT]
 > - Associa a Mac non può installare Xcode; è necessario installarlo manualmente nell'host di compilazione Mac perché è richiesto per lo sviluppo con Xamarin.iOS.
 > - Per il provisioning automatico del Mac è necessario che l'accesso remoto sia abilitato nel Mac e il Mac deve essere accessibile al computer Windows tramite la rete. Vedere [Abilitare l'accesso remoto nel Mac](#enable-remote-login-on-the-mac) per maggiori dettagli.
+> - Il provisioning automatico del Mac richiede 3 GB di spazio libero nel Mac per l'installazione di Xamarin.iOS.
 
 Associa a Mac esegue le installazioni e gli aggiornamenti software necessari durante la [connessione al Mac](#connect-to-the-mac-from-visual-studio-2017) di Visual Studio 2017.
 

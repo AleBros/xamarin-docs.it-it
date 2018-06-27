@@ -1,21 +1,20 @@
 ---
 title: Introduzione a Xamarin.iOS per Visual Studio
-description: Questo articolo spiega come compilare e testare le applicazioni Xamarin iOS con Visual Studio. Verrà spiegato come usare Visual Studio per creare nuovi progetti iOS, compilare un'applicazione iOS e quindi compilare, testare ed eseguire il debug usando un Mac connesso alla rete per ospitare il compilatore e il simulatore di Apple e la toolchain di compilazione di Xamarin.
+description: Questo documento descrive come compilare e testare le applicazioni Xamarin.iOS con Visual Studio. Vengono illustrate la creazione di un progetto, l'esecuzione e il debug di un'app e la connessione a un host di compilazione Mac da Windows.
 ms.prod: xamarin
 ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2018
-ms.openlocfilehash: fbd48deb0b18dcd3ac0d40e379e21d5967f81e0d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: e07119bee6478a503ca6c586fa3348206ccd16f7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786200"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introduzione a Xamarin.iOS per Visual Studio
-
-_Questo articolo illustra come compilare e testare le applicazioni Xamarin iOS con Visual Studio. Viene spiegato come usare Visual Studio per creare nuovi progetti iOS, compilare un'applicazione iOS e quindi compilare, testare ed eseguire il debug usando un Mac connesso alla rete per ospitare il compilatore e il simulatore di Apple e la toolchain di compilazione di Xamarin._
 
 Xamarin per Windows consente di scrivere e testare le applicazioni iOS all'interno di Visual Studio, con un Mac connesso alla rete che assicura il servizio di compilazione e distribuzione.
 
@@ -27,7 +26,6 @@ Lo sviluppo per iOS in Visual Studio offre diversi vantaggi:
 -  Possibilità di usare gli strumenti preferiti di Visual Studio, ad esempio **ReSharper** e **Team Foundation Server**, per tutti i progetti multipiattaforma, incluso il codice sorgente di iOS.
 -  Uso di un ambiente di sviluppo integrato familiare, sfruttando i data binding di Xamarin.iOS di tutte le API di Apple.
 
-
 <a name="Requirements_and_Installation" />
 
 ## <a name="requirements-and-installation"></a>Requisiti e installazione
@@ -38,7 +36,6 @@ Sono disponibili alcune opzioni di configurazione, quindi è possibile scegliere
 
 -  Usare un Mac come computer di sviluppo principale ed eseguire una macchina virtuale Windows con Visual Studio installato. Si consiglia di usare software per macchina virtuale, ad esempio [Parallels](http://www.parallels.com/products/desktop/) o [VMWare](http://www.vmware.com/products/fusion/).
 -  Usare un Mac solo come host di compilazione. In questo scenario verrebbe connesso alla stessa rete come computer Windows con gli strumenti [necessari](~/cross-platform/get-started/installation/windows.md#installation) installati.
-
 
 In entrambi i casi è necessario seguire questi passaggi:
 
@@ -64,7 +61,6 @@ I controlli relativi allo sviluppo con Xamarin iOS sono cerchiati in rosso:
 -  **Configurazioni soluzione**: consente di selezionare la configurazione da usare, ad esempio debug o rilascio.
 -  **Piattaforme soluzione**: consente di selezionare iPhone o iPhoneSimulator per la distribuzione.
 
-
 ### <a name="ios-toolbar"></a>Barra degli strumenti iOS
 
 La barra degli strumenti iOS in Visual Studio è simile in ogni versione di Visual Studio. Sono tutte riportate di seguito:
@@ -77,10 +73,7 @@ Ogni elemento viene illustrato di seguito:
 -  **Mostra il simulatore iOS** : visualizza la finestra del simulatore iOS in primo piano nel Mac.
 -  **Mostra il file IPA nel server di compilazione**: apre il Finder nel Mac in corrispondenza del percorso del file di output IPA dell'applicazione.
 
-
-
 ## <a name="ios-output-options"></a>Opzioni di output iOS
-
 
 ### <a name="output-window"></a>Finestra di output
 
@@ -108,29 +101,23 @@ Altri riquadri di output predefiniti di Visual Studio, ad esempio Debug e Build,
 
     [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "Output di MSBuild")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
-
 ## <a name="ios-project-properties"></a>Proprietà del progetto iOS
 
 Per accedere alle proprietà del progetto di Visual Studio, fare clic con il pulsante destro del mouse sul nome del progetto e selezionare *Proprietà* nel menu di scelta rapida. Ciò consente di configurare l'applicazione iOS, come illustrato nello screenshot seguente:
-
 
  ![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Configurazione di un'applicazione iOS")
 
 -  *Firma bundle iOS*: consente di connettersi al Mac per popolare le identità di firma del codice e i profili di provisioning:
 
-
  ![](introduction-to-xamarin-ios-for-visual-studio-images/bundlesigning.png "Popolare le identità di firma del codice e i profili di provisioning")
 
 -  *Opzioni IPA iOS*: il file IPA verrà salvato nel file system del Mac:
-
 
  ![](introduction-to-xamarin-ios-for-visual-studio-images/ipaoptions.png "Opzioni IPA iOS")
 
 -  *Opzioni esecuzione iOS*: configurare i parametri aggiuntivi:
 
  ![](introduction-to-xamarin-ios-for-visual-studio-images/iosrunoptions.png "Opzioni di esecuzione iOS")
-
-
 
 ## <a name="creating-a-new-project-for-ios-applications"></a>Creazione di un nuovo progetto per applicazioni iOS
 
@@ -156,7 +143,6 @@ Per aggiungere oggetti alla visualizzazione, usare il riquadro **Casella degli s
 
  Per altre informazioni sull'uso di iOS Designer, vedere le guide relative alla [finestra di progettazione](~/ios/user-interface/designer/index.md).
 
-
 ## <a name="running--debugging-ios-applications"></a>Esecuzione e debug delle applicazioni iOS
 
 ### <a name="device-logging"></a>Registrazione dispositivi
@@ -175,7 +161,6 @@ Affinché i dispositivi appaiano nella casella combinata, è necessario caricare
 
 La finestra dello strumento offre una tabella di voci di log, un elenco a discesa per la selezione dei dispositivi, la possibilità di cancellare le voci di log, una casella di ricerca e pulsanti di riproduzione/arresto/sospensione.
 
-
 ### <a name="set-debugging-stops"></a>Impostare interruzioni del debug
 
 In qualsiasi punto dell'applicazione è possibile impostare punti di interruzione per segnalare al debugger di interrompere temporaneamente l'esecuzione del programma. Per impostare un punto di interruzione in Visual Studio, fare clic sull'area del margine nell'editor, accanto al numero di riga del codice dove si vuole applicare l'interruzione:
@@ -185,7 +170,6 @@ In qualsiasi punto dell'applicazione è possibile impostare punti di interruzion
 Avviare il debug e usare il simulatore o il dispositivo per portare l'applicazione a un punto di interruzione. Quando viene raggiunto un punto di interruzione, la riga viene evidenziata e viene abilitato il normale comportamento di debug di Visual Studio: è possibile eseguire, ignorare o uscire dall'istruzione, esaminare le variabili locali o usare la finestra di controllo immediato.
 
 In questo screenshot appare il simulatore iOS in esecuzione accanto a Visual Studio usando Parallels su OS X:
-
 
 ![](introduction-to-xamarin-ios-for-visual-studio-images/image19.png "In questo screenshot appare il simulatore iOS in esecuzione accanto a Visual Studio usando Parallels su OS X")
 

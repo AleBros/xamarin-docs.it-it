@@ -1,21 +1,20 @@
 ---
-title: Pubblicazione nell'App Store
-description: Questo articolo illustra come configurare, compilare e pubblicare un'applicazione Xamarin.iOS per la distribuzione tramite l'App Store. Contiene una guida dettagliata che illustra come preparare l'applicazione per la distribuzione, come usare gli strumenti di Apple per inviare l'applicazione per la revisione e, infine, come pubblicare l'applicazione nell'App Store.
+title: Pubblicazione di app Xamarin.iOS nell'App Store
+description: Questo documento descrive come configurare, compilare e pubblicare un'applicazione Xamarin.iOS per la distribuzione nell'App Store.
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 5d78cb81f27ce7478719ff9f11f4eb38fddc3981
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b8bea29e71e055621e7d0b85d3736ec6cc9ba3b4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785700"
 ---
-# <a name="publishing-to-the-app-store"></a>Pubblicazione nell'App Store
-
-_Questo articolo illustra come configurare, compilare e pubblicare un'applicazione Xamarin.iOS per la distribuzione tramite l'App Store. Contiene una guida dettagliata che illustra come preparare l'applicazione per la distribuzione, come usare gli strumenti di Apple per inviare l'applicazione per la revisione e, infine, come pubblicare l'applicazione nell'App Store._
+# <a name="publishing-xamarinios-apps-to-the-app-store"></a>Pubblicazione di app Xamarin.iOS nell'App Store
 
 Per distribuire le applicazioni in tutti i dispositivi iOS, Apple richiede che le app siano pubblicate tramite l'*App Store*, che diventa così l'unico punto d'acquisto di applicazioni iOS. Con oltre 500.000 applicazioni in archivio, gli sviluppatori di molti tipi di applicazioni hanno sfruttato al meglio l'enorme successo di questo unico punto di distribuzione. L'App Store è una soluzione chiavi in mano, in cui gli sviluppatori di app trovano sia sistemi di distribuzione sia di pagamento.
 

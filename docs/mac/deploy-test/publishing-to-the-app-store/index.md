@@ -1,21 +1,20 @@
 ---
-title: Pubblicazione nell'App Store
-description: Questa guida descrive in dettaglio la distribuzione di un'app Xamarin.Mac mediante Visual Studio per Mac. Illustra come configurare un account Mac Developer, descrive il processo di creazione dei certificati per la firma del codice e indica come usarli per creare app Mac distribuibili direttamente o tramite Mac App Store.
+title: Pubblicazione di app Xamarin.Mac in Mac App Store
+description: Questo documento descrive come distribuire un'app Xamarin.Mac con Visual Studio per Mac. Illustra come configurare un account Mac Developer, come creare i certificati per la firma del codice e come usarli per creare app Mac distribuibili direttamente o tramite Mac App Store.
 ms.prod: xamarin
 ms.assetid: D26C5E54-EAD2-5487-264D-4263AEA1EBF2
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3b21dd0adfd96e1190660aa97b2850f968b5473f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eba359dac70e31325235f6145fe06902e25df7af
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791966"
 ---
-# <a name="publishing-to-the-app-store"></a>Pubblicazione nell'App Store
-
-_Questa guida descrive in dettaglio la distribuzione di un'app Xamarin.Mac mediante Visual Studio per Mac. Illustra come configurare un account Mac Developer, descrive il processo di creazione dei certificati per la firma del codice e indica come usarli per creare app Mac distribuibili direttamente o tramite Mac App Store._
+# <a name="publishing-xamarinmac-apps-to-the-mac-app-store"></a>Pubblicazione di app Xamarin.Mac in Mac App Store
 
 ## <a name="overview"></a>Panoramica
 

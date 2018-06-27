@@ -1,18 +1,20 @@
 ---
-title: Collegamento in iOS
+title: Collegamento di app Xamarin.iOS
+description: Questo documento descrive il linker Xamarin.iOS, che consente di eliminare il codice non utilizzato da un'applicazione Xamarin.iOS per ridurne le dimensioni.
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/24/2017
-ms.openlocfilehash: 1d83a152c0949abe0221f6eb6dfb42f4e79eaf38
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f80faa961fe4bef45df33c411d914ba80e605c75
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785580"
 ---
-# <a name="linking-on-ios"></a>Collegamento in iOS
+# <a name="linking-xamarinios-apps"></a>Collegamento di app Xamarin.iOS
 
 Durante la compilazione dell'applicazione, Visual Studio per Mac o Visual Studio chiama uno strumento denominato **mtouch** che include un linker per il codice gestito. Questo viene usato per rimuovere dalle librerie di classi le funzionalità che non vengono usate dall'applicazione. L'obiettivo consiste nel ridurre le dimensioni dell'applicazione, che viene fornita solo con i bit necessari.
 

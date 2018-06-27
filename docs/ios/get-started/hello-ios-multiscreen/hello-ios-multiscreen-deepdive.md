@@ -1,6 +1,6 @@
 ---
-title: Hello, iOS Multiscreen
-description: In questa guida divisa in due parti l'applicazione Phoneword creata nella guida Hello, iOS viene espansa in modo da gestire una seconda schermata. Viene presentato anche lo schema progettuale MVC (Model-View-Controller), viene implementata la prima navigazione iOS e vengono illustrate in modo più approfondito la struttura e la funzionalità dell'applicazione iOS.
+title: Hello, iOS Multiscreen - Approfondimento
+description: Questo documento esamina in modo dettagliato l'applicazione Phoneword espansa, prendendo in considerazione in particolare lo schema MVC (Model, View, Controller), la navigazione in iOS e altri concetti di sviluppo di app iOS.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 6f3c02bf3e5def0ad4acdb82e4c8a2606159846a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cdeea6d78ec1262a0b5b613b4f483012c9df2c19
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785658"
 ---
-# <a name="hello-ios-multiscreen-deep-dive"></a>Approfondimento su Hello, iOS Multiscreen
+# <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS Multiscreen - Approfondimento
 
 Nella procedura dettagliata di avvio rapido è stata compilata ed eseguita la prima applicazione Xamarin.iOS multi-schermata. A questo punto è necessario sviluppare una comprensione più approfondita della navigazione e dell'architettura di iOS.
 

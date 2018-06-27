@@ -1,5 +1,5 @@
 ---
-title: Profili di provisioning
+title: Profili di provisioning per le app Xamarin.Mac
 description: Questa guida descrive come creare i profili di provisioning necessari per pubblicare un'app Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: bdff6c32-f7e3-4a97-a093-dbda48be8227
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 4f3120c45de5022dca1e522be251f453f9f5b4c7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9660d5373cc5213f648b145ef38ddbf25c7633ce
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792151"
 ---
-# <a name="provisioning-profiles"></a>Profili di provisioning
+# <a name="provisioning-profiles-for-xamarinmac-apps"></a>Profili di provisioning per le app Xamarin.Mac
 
 I profili di provisioning consentono a uno sviluppatore di incorporare nelle app Xamarin.Mac diverse funzionalità specifiche di macOS (precedentemente noto come Mac OS X), ad esempio iCloud e le notifiche push. Lo sviluppatore deve creare, scaricare e installare un profilo di provisioning Mac per ogni applicazione in fase di sviluppo che userà queste funzionalità.
 

@@ -1,16 +1,18 @@
 ---
 title: 'fastlane per iOS: sigh'
+description: Questo documento descrive il comando sigh di fastlane, che consente di creare, rinnovare e ripristinare i profili di provisioning per tutte le configurazione della build Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: ee04569fbfff84eafc5f813e6a25cbf6ad53f033
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8eedc86807035887cade48c42868649b362b7cb2
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785502"
 ---
 # <a name="fastlane-for-ios--sigh"></a>fastlane per iOS: sigh
 

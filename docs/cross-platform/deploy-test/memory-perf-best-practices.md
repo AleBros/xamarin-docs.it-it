@@ -1,23 +1,21 @@
 ---
 title: Prestazioni multipiattaforma
-description: Esistono varie tecniche per incrementare le prestazioni delle applicazioni compilate con la piattaforma Xamarin. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione. Questo articolo descrive queste tecniche e le relative caratteristiche.
+description: Questo documento descrive le varie tecniche che possono essere usate per migliorare le prestazioni di un'applicazione per dispositivi mobili. Vengono illustrati il profiler, la risorsa IDisposable, i riferimenti deboli, il Garbage Collector SGen, le tecniche di riduzione delle dimensioni e altro ancora.
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: f011a92b4789da7328827f184449fd957abdf3ba
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 66234bb44bb0cae9580c119c6029603a528f882e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781982"
 ---
 # <a name="cross-platform-performance"></a>Prestazioni multipiattaforma
 
-_Sono disponibili molte tecniche per migliorare le prestazioni delle applicazioni compilate con la piattaforma Xamarin. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione. Questo articolo descrive queste tecniche e le relative caratteristiche._
-
 Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, assicurarsi che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
-
 
 <a name="profiler" />
 
