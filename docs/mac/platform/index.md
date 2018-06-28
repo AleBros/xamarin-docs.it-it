@@ -7,34 +7,44 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 9e82db1c0f38d35c23a6cd0667bef49315ff86be
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 539ec976e3ea28aa2e017318022bd102f2c03ae5
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792221"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066884"
 ---
 # <a name="macos-platform-features"></a>macOS funzionalità della piattaforma
 
-Documenti in questa sezione illustrano l'utilizzo delle funzionalità chiave, specifici della piattaforma di macOS in un'applicazione Xamarin.Mac di.
+Documenti in questa sezione riguardano lavoro con le funzionalità chiave e specifiche della piattaforma di macOS in un'applicazione Xamarin.Mac.
+
+## <a name="introduction-to-macos-mojavemacplatformintroduction-to-macos-mojaveindexmd"></a>[Introduzione a macOS Mojave](~/mac/platform/introduction-to-macos-mojave/index.md)
+
+> [!WARNING]
+> MacOS Xamarin supporto Mojave è attualmente in anteprima, il che significa che può contenere bug, non completare funzionalità e potrebbe cambiare. Usarlo per esperimenti solo.
+
+Questo documento fornisce una panoramica generale delle funzionalità nuove e aggiornate in macOS Mojave che possono essere utilizzati quando si compilano applicazioni Xamarin.Mac.
+
+## <a name="introduction-to-macos-high-sierramacplatformintroduction-to-macos-high-sierraindexmd"></a>[Introduzione a macOS Sierra elevata](~/mac/platform/introduction-to-macos-high-sierra/index.md)
+
+Questo documento descrive le funzionalità nuove e migliorate macOS Sierra elevata.
 
 ## <a name="introduction-to-macos-sierramacplatformintroduction-to-macos-sierraindexmd"></a>[Introduzione a macOS Sierra](~/mac/platform/introduction-to-macos-sierra/index.md)
 
-macOS Sierra è la più recente evoluzione del sistema operativo desktop di Apple per Mac. Questo documento vengono illustrate le modifiche da montagna di El Capitan Mac OS X e come implementarli in un'app Xamarin.Mac.
+macOS Sierra è la più recente evoluzione del sistema operativo desktop di Apple per Mac. Questo documento vengono illustrate le modifiche da montagna Capitan El di Mac OS X e come implementarli in un'app Xamarin.Mac.
 
-## <a name="binding-objective-c-libraries-for-macbindingmd"></a>[Associazione di raccolte Objective-C per Mac](binding.md)
+## <a name="binding-objective-c-libraries-for-macbindingmd"></a>[Associazione librerie Objective-C per Mac](binding.md)
 
-Informazioni su come associare le raccolte di Objective-C Mac da utilizzare nei progetti Xamarin.Mac.
-Fare riferimento al [pagina Troubleshooting](~/cross-platform/macios/binding/troubleshooting.md) per risolvere eventuali problemi.
+Informazioni sull'associazione librerie Mac Objective-C per l'utilizzo nei progetti Xamarin.Mac.
+Fare riferimento ai [Troubleshooting pagina](~/cross-platform/macios/binding/troubleshooting.md) per risolvere eventuali problemi.
 
 ## <a name="introduction-to-opentkmacplatformopentkmd"></a>[Introduzione a OpenTK](~/mac/platform/opentk.md)
 
-OpenTK (il Toolkit Open) è un'avanzate di basso livello c# libreria che semplifica l'utilizzo di OpenGL e OpenCL OpenAL. OpenTK può essere utilizzato per giochi, le applicazioni di scientifiche o altri progetti che richiedono la grafica 3D, le funzionalità audio o di calcolo. In questo articolo fornisce una breve introduzione all'utilizzo OpenTK in un'app Xamarin.Mac.
-
+OpenTK (The Open Toolkit) è un'avanzate di basso livello c# libreria che rende più semplice l'uso con OpenGL e OpenCL OpenAL. OpenTK può essere utilizzato per giochi, applicazioni scientifiche o altri progetti che richiedono la grafica 3D, funzionalità audio o di calcolo. In questo articolo fornisce una breve introduzione all'utilizzo OpenTK in un'app Xamarin.Mac.
 
 ## <a name="introduction-to-storyboardsmacplatformstoryboardsindexmd"></a>[Introduzione agli storyboard](~/mac/platform/storyboards/index.md)
 
-Gli storyboard consentono di sviluppare un'interfaccia utente per l'app Xamarin.Mac che include non solo i controlli e le definizioni di finestra, ma contiene inoltre i collegamenti tra finestre diverse (tramite segues) e gli stati di visualizzazione. In questo articolo viene fornita un'introduzione all'utilizzo di storyboard in un'app Xamarin.Mac.
+Gli storyboard consentono inoltre di sviluppare un'interfaccia utente per l'app Xamarin.Mac che include non solo i controlli e le definizioni di finestra, ma contiene inoltre i collegamenti tra finestre diverse (tramite segues) e gli stati di visualizzazione. In questo articolo viene fornita un'introduzione all'utilizzo di storyboard in un'app Xamarin.Mac.
 
 ## <a name="xamarinmac-extension-supportmacplatformextensionsmd"></a>[Supporto delle estensioni Xamarin.Mac](~/mac/platform/extensions.md)
 

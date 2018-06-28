@@ -1,25 +1,25 @@
 ---
-title: Introduzione al linguaggio
+title: Guida introduttiva a Java
 description: Questo documento viene descritto come iniziare a utilizzare .NET incorporamento con Java. Illustra i requisiti di sistema, installazione e le piattaforme supportate.
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
 author: topgenorth
 ms.author: toopge
 ms.date: 03/28/2018
-ms.openlocfilehash: 84ef5d047b3f70635d74ef5bee7741a7447db677
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 53871a5311cdba824b0bddca37dd5c416d06e272
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793217"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066809"
 ---
-# <a name="getting-started-with-java"></a>Introduzione al linguaggio
+# <a name="getting-started-with-java"></a>Guida introduttiva a Java
 
-Questa è la pagina introduttiva per Java, in cui vengono illustrate le nozioni di base per tutte le piattaforme supportate.
+Questa è la pagina introduttiva per Java, che vengono illustrate le nozioni di base per tutte le piattaforme supportate.
 
 ## <a name="requirements"></a>Requisiti
 
-Per usare .NET incorporamento con Java, è necessario:
+Per usare .NET incorporamento con Java sarà necessario:
 
 * Java 1.8 o versioni successiva
 * [Mono 5.0](http://www.mono-project.com/download/)
@@ -30,18 +30,18 @@ Per Mac:
 
 Per Windows:
 
-* Visual Studio 2017, con supporto per C++
+* Visual Studio 2017 con supporto per C++
 * Windows 10 SDK
 
 Per Android:
 
-* [Xamarin. Android 7.5](https://www.visualstudio.com/xamarin/) o versione successiva
-* [Android Studio 3. x](https://developer.android.com/studio/index.html) con Java 1.8
+* [Xamarin. Android 7.5](https://visualstudio.microsoft.com/xamarin/) o versione successiva
+* [Android Studio 3.x](https://developer.android.com/studio/index.html) con Java 1.8
 
-È possibile utilizzare [Visual Studio per Mac](https://www.visualstudio.com/vs/visual-studio-mac/) per modificare e compilare il codice c#.
+È possibile utilizzare [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/mac/) per modificare e compilare il codice c#.
 
 > [!NOTE]
-> Le versioni precedenti di Xcode, Visual Studio, xamarin, Studio Android e Mono _potrebbe_ di lavoro, ma sono non testato e supportato.
+> Le versioni precedenti di Xcode, Visual Studio, xamarin. Android, Studio Android e Mono _potrebbe_ funziona, ma sono non testato e supportato.
 
 ## <a name="installation"></a>Installazione
 
@@ -63,19 +63,19 @@ La piattaforma è selezionata, passando il `--platform=<platform>` argomento del
 
 ### <a name="macos-and-windows"></a>macOS e Windows
 
-Per lo sviluppo, dovrebbe essere possibile usare qualsiasi ambiente IDE Java che supporti 1.8 Java. È anche possibile utilizzare Android Studio per questo eventualmente [vedere qui](https://stackoverflow.com/questions/16626810/can-android-studio-be-used-to-run-standard-java-projects). È possibile utilizzare l'output del file JAR come a qualsiasi altro file jar di Java standard.
+Per lo sviluppo, dovrebbe essere possibile usare qualsiasi ambiente IDE Java che supporti 1.8 Java. È anche possibile utilizzare Android Studio per questo eventualmente [visualizzata qui](https://stackoverflow.com/questions/16626810/can-android-studio-be-used-to-run-standard-java-projects). È possibile utilizzare l'output del file JAR come si farebbe qualsiasi file jar Java standard.
 
 ### <a name="android"></a>Android
 
-Verificare che sono già impostati per sviluppare applicazioni Android prima di tentare di crearne uno utilizzando l'incorporamento .NET. Il [attenendosi alle istruzioni](~/tools/dotnet-embedding/get-started/java/android.md) si supponga di aver già completato compilata e distribuita un'applicazione Android dal computer.
+Verificare che sono già impostati per sviluppare applicazioni Android prima di tentare di crearne uno utilizzando l'incorporamento .NET. Il [attenendosi alle istruzioni accessibili](~/tools/dotnet-embedding/get-started/java/android.md) presupporre che è stato già compilata e distribuita un'applicazione Android dal computer.
 
-Android Studio è consigliata per lo sviluppo, ma altri IDE dovrebbero funzionare, purché sia presente il supporto per il [il formato di file AAR](https://developer.android.com/studio/projects/android-library.html).
+Android Studio è consigliata per lo sviluppo, ma altri IDE dovrebbe funzionare fino a quando è disponibile supporto per la [il formato di file AAR](https://developer.android.com/studio/projects/android-library.html).
 
 ## <a name="further-reading"></a>Ulteriori informazioni
 
 * [Guida introduttiva in Android](~/tools/dotnet-embedding/get-started/java/android.md)
 * [Callback in Android](~/tools/dotnet-embedding/android/callbacks.md)
 * [Ricerca di Android preliminare](~/tools/dotnet-embedding/android/index.md)
-* [Limitazioni di incorporamento .NET](~/tools/dotnet-embedding/limitations.md)
-* [Che contribuiscono al progetto open source](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+* [Limitazioni durante l'incorporamento .NET](~/tools/dotnet-embedding/limitations.md)
+* [Che hanno contribuito al progetto open source](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
 * [Codici di errore e descrizioni](~/tools/dotnet-embedding/errors.md)

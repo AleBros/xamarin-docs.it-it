@@ -7,31 +7,30 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/07/2017
-ms.openlocfilehash: 550cf57f6b89a8fd5726ae55cb5eaaa54d6d2692
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 94c931176e968ed765cbc05ddaac2fa7329107f0
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791267"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066598"
 ---
 # <a name="introduction-to-watchos-4"></a>Introduzione a watchOS 4
 
-Accesso alle nuove funzionalità di watchOS 4 nelle App:
+Accedere alle nuove funzionalità di watchOS 4 nelle app di Windows:
 
-* Leggere i dati altimeter barometrica nella nuova 3 serie Apple Watch.
-* Connettersi direttamente alle risorse di rete con rete dati disponibili su alcuni modelli di 3 serie di Apple Watch.
+* Leggere i dati altimeter barometrica in 3 serie di Apple Watch nuovo.
+* Connettersi direttamente alle risorse di rete con rete dati disponibili su alcuni modelli Apple Watch serie 3.
 * Core Bluetooth possono connettersi direttamente al accessori.
-* Nuove modalità di sfondo per le app allenamenti e audio.
-* Nuovi tipi di SiriKit per [elenchi e le note](~/ios/platform/introduction-to-ios11/sirikit.md).
+* Nuove modalità in background per le app allenamenti e audio.
+* Nuovo intenti SiriKit per [elenchi e le note](~/ios/platform/introduction-to-ios11/sirikit.md).
 
 Modifiche apportate dal watchOS 3:
 
-* Codice dell'applicazione e dell'interfaccia utente vengono eseguiti in un unico processo.
-* Autorizzazione di posizione è possibile concedere per l'espressione di controllo (non è necessario chiedere all'utente di accettare sul telefono).
+* Codice dell'App e dell'interfaccia utente vengono eseguiti in un unico processo.
+* L'autorizzazione di posizione è possibile concedere per l'espressione di controllo (senza bisogno di chiedere all'utente di accettare sul telefono).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di watchOS](https://developer.xamarin.com/samples/watchos/all/)
-- [Novità di watchOS 4](https://developer.apple.com/watchos/)
-- [WatchKit (mela)](https://developer.apple.com/documentation/watchkit)
-- [Novità di watchOS 4 (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/205/)
+* [Esempi di watchOS](https://developer.xamarin.com/samples/watchos/all/)
+* [WatchKit (mela)](https://developer.apple.com/documentation/watchkit)
+* [Novità in watchOS 4 (mela) (video)](https://developer.apple.com/videos/play/wwdc2017/205/)

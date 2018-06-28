@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/22/2018
-ms.openlocfilehash: 8b49d02b9670e66d04060375e59b005905c41bf7
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: ee3f2b1e1ff6a3ac1bec2d73d4af6e740979aa04
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935256"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066871"
 ---
 # <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>I driver USB necessaria eseguire il debug di Android in Windows
 
@@ -28,7 +28,7 @@ A seconda fabbricante, può essere difficile da rilevare il driver USB esatto Ne
 
 - [Test di App Center](https://docs.microsoft.com/appcenter/test-cloud/) - test vengono eseguiti in centinaia di dispositivi Android reale i servizi Cloud.
 
-- [Visual Studio Emulator for Android](https://www.visualstudio.com/en-us/features/msft-android-emulator-vs.aspx)
+- [Visual Studio Emulator for Android](https://visualstudio.microsoft.com/vs/msft-android-emulator/)
 
 - [Il debug nell'emulatore Android](~/android/deploy-test/debugging/debug-on-emulator.md)
 

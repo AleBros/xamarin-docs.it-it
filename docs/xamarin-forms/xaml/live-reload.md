@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: 15de334500ea25d22657c257a4a4fc6887cc122c
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: 12b677c8cc4a709a865d2eaee3ea44a6babf1b05
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935428"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066650"
 ---
 # <a name="xamarin-live-reload"></a>Ricaricamento in tempo reale di Xamarin
 
@@ -28,7 +28,7 @@ Ricaricamento in tempo reale è attualmente disponibile solo in Visual Studio 20
 
 ## <a name="requirements"></a>Requisiti
 
-* [Visual Studio 2017 versione 15.7 o versione successiva](https://www.visualstudio.com/vs/) o versione successiva con il **sviluppo per dispositivi Mobile con .NET** carico di lavoro.
+* [Visual Studio 2017 versione 15.7 o versione successiva](https://visualstudio.microsoft.com/vs/) o versione successiva con il **sviluppo per dispositivi Mobile con .NET** carico di lavoro.
 * [Xamarin. Forms 3.0.0 o versione successiva](https://www.nuget.org/packages/Xamarin.Forms/) o versione successiva.
 
 ## <a name="getting-started"></a>Introduzione

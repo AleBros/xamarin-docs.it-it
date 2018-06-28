@@ -1,31 +1,31 @@
 ---
-title: Introduzione a iOS
+title: Guida introduttiva a iOS
 description: Questo documento viene descritto come iniziare a utilizzare .NET incorporamento con iOS. Illustra i requisiti e presenta un'app di esempio per illustrare come associare un assembly gestito e usare l'output in un progetto Xcode.
 ms.prod: xamarin
 ms.assetid: D5453695-69C9-44BC-B226-5B86950956E2
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 3da76e650281cbf7320b88fa9c76948865d7a2fb
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 683f448c3e0cdba1bbe3ba68f0db3225675f5830
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793561"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066897"
 ---
-# <a name="getting-started-with-ios"></a>Introduzione a iOS
+# <a name="getting-started-with-ios"></a>Guida introduttiva a iOS
 
 ## <a name="requirements"></a>Requisiti
 
 Oltre ai requisiti dal nostro [Guida introduttiva a Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) Guida, è anche necessario:
 
-* [Xamarin. IOS 10.11](https://www.visualstudio.com/xamarin/) o versione successiva
+* [Xamarin. IOS 10.11](https://visualstudio.microsoft.com/xamarin/) o versione successiva
 
 ## <a name="hello-world"></a>Hello world
 
 In primo luogo, compilazione di un esempio semplice hello world in c#.
 
-### <a name="create-c-sample"></a>Creazione di un esempio in c#
+### <a name="create-c-sample"></a>Creazione di un esempio c#
 
 Aprire Visual Studio per Mac, creare un nuovo progetto di libreria di classi di iOS e denominarlo **hello da csharp**e salvarlo in un **~/Projects/hello-from-csharp**.
 
@@ -63,7 +63,7 @@ Aprire Xcode, creare un nuovo iOS singola applicazione di visualizzazione, denom
 
 Aprire la **~/Projects/hello-from-csharp/output** directory Finder, selezionare **hello da csharp.framework**, trascinarla al progetto Xcode e rilasciarla subito sopra il **hello da csharp**  cartella nel progetto.
 
-! [Trascinare e rilasciare framework] Images/Hello-from-CSharp-IOS-Drag-Drop-Framework.PNG)
+! [Trascinamento della selezione framework] Images/Hello-from-CSharp-IOS-Drag-Drop-Framework.PNG)
 
 Assicurarsi che **copiare gli elementi, se necessario** sia selezionata nella finestra di dialogo che viene visualizzato e fare clic su **fine**.
 
@@ -101,4 +101,4 @@ Disabilitarla nelle impostazioni di progetto:
 
 Infine, eseguire il progetto Xcode e verrà visualizzato un codice simile al seguente:
 
-![Hello c# di esempio in esecuzione nel simulatore](ios-images/hello-from-csharp-ios.png)
+![Hello tratto dall'esempio c# in esecuzione nel simulatore](ios-images/hello-from-csharp-ios.png)

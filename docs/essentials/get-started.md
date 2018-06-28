@@ -5,12 +5,12 @@ ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: f0f6eebbd12041a7be2d8e2dc00a9146b40d675f
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a42086f70eb81a761358655b3effb9f8f934c8d4
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783074"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37067322"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Guida introduttiva Xamarin.Essentials
 
@@ -63,6 +63,10 @@ Xamarin.Essentials è disponibile come pacchetto NuGet che può essere aggiunto 
 5. Xamarin.Essentials richiede l'installazione specifico della piattaforma:
 
     # <a name="androidtabandroid"></a>[Android](#tab/android)
+
+    Xamarin.Essentials supporta una versione minima di Android 4.4, corrispondente a livello API 19, ma la versione Android di destinazione per la compilazione deve essere 8.1, corrispondente a livello di API 27. (In Visual Studio, queste due versioni vengono impostate nella finestra di dialogo proprietà del progetto per il progetto Android, nella scheda manifesto Android. In Visual Studio per Mac, si impostano nella finestra di dialogo Project Options per il progetto Android, nella scheda applicazione Android.) 
+    
+    Xamarin.Essentials installa versione 27.0.2 delle librerie di deselezionati che lo richiede. Anche altre librerie di deselezionati richieste dall'applicazione devono essere aggiornate alla versione 27.0.2 usando Gestione pacchetti NuGet. Tutte le librerie deselezionati utilizzate dall'applicazione deve essere la stessa e deve essere almeno versione 27.0.2. Fare riferimento ai [risoluzione dei problemi pagina](troubleshooting.md) se si verificano problemi di aggiunta Xamarin.Essentials NuGet o aggiornamento NuGets nella soluzione.
 
     Nel progetto Android `MainLauncher` o qualsiasi `Activity` vale a dire Xamarin.Essentials avviato devono essere inizializzati nel `OnCreate` metodo:
 

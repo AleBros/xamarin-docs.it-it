@@ -1,26 +1,26 @@
 ---
-title: Introduzione a Android
+title: Guida introduttiva a Android
 description: Questo documento viene descritto come iniziare a utilizzare .NET incorporamento con Android. Viene descritto l'installazione di .NET incorpora, creazione di un progetto di libreria Android, tramite output generato in un progetto Android Studio e altre considerazioni.
 ms.prod: xamarin
 ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
 author: topgenorth
 ms.author: toopge
 ms.date: 03/28/2018
-ms.openlocfilehash: 6fbd46578f07692f266d97279031f1893bb96a1f
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 0bb27df901d306e97151cfeaad5c26130508e5b1
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793917"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066481"
 ---
-# <a name="getting-started-with-android"></a>Introduzione a Android
+# <a name="getting-started-with-android"></a>Guida introduttiva a Android
 
 Oltre ai requisiti dal [Guida introduttiva a Java](~/tools/dotnet-embedding/get-started/java/index.md) Guida sarà inoltre necessario:
 
-* [Xamarin. Android 7.5](https://www.visualstudio.com/xamarin/) o versione successiva
-* [Android Studio 3. x](https://developer.android.com/studio/index.html) con Java 1.8
+* [Xamarin. Android 7.5](https://visualstudio.microsoft.com/xamarin/) o versione successiva
+* [Android Studio 3.x](https://developer.android.com/studio/index.html) con Java 1.8
 
-Come una panoramica, Microsoft:
+Come una panoramica, è necessario:
 
 * Creare un progetto di libreria Android in c#
 * Installare .NET incorporamento tramite NuGet
@@ -33,7 +33,7 @@ Aprire Visual Studio per Windows o Mac, creare un nuovo progetto Android libreri
 
 Aggiungere una nuova attività Android denominato **HelloActivity.cs**, seguito da un Layout in Android **Resource/layout/hello.axml**.
 
-Aggiungere un nuovo `TextView` al layout e modifica il testo su qualcosa di semplice.
+Aggiungere un nuovo `TextView` al layout e modifica il testo su qualcosa di semplice e flessibile.
 
 L'origine di layout dovrebbe essere simile al seguente:
 
@@ -74,7 +74,7 @@ public class HelloActivity : Activity
 
 Compilare il progetto. L'assembly risultante verrà salvato `bin/Debug/hello-from-csharp.dll`.
 
-## <a name="installing-net-embedding-from-nuget"></a>L'installazione di .NET incorporamento da NuGet
+## <a name="installing-net-embedding-from-nuget"></a>Installazione di .NET incorporamento da NuGet
 
 Attenersi alla seguente [istruzioni](~/tools/dotnet-embedding/get-started/install/install.md) per installare e configurare .NET incorporamento per il progetto.
 
@@ -96,7 +96,7 @@ if exist %E4K_OUTPUT% rmdir /S /Q %E4K_OUTPUT%
 
 ## <a name="use-the-generated-output-in-an-android-studio-project"></a>Utilizzare l'output generato in un progetto Android Studio
 
-1. Aprire Android Studio e creare un nuovo progetto con un **attività vuota**.
+1. Apri Android Studio e creare un nuovo progetto con un **attività vuota**.
 2. Fare clic sui **app** modulo e scegliere **nuovo > modulo**.
 3. Selezionare **importazione. FILE JAR /. Pacchetto AAR**.
 4. Utilizzare la visualizzazione directory per individuare **~/Projects/hello-from-csharp/output/hello_from_csharp.aar** e fare clic su **fine**.
@@ -143,7 +143,7 @@ android {
 }
 ```
 
-Xamarin attualmente carica gli assembly .NET direttamente il file APK, ma sono richiesti gli assembly non verrà compresso.
+Xamarin. Android attualmente carica gli assembly .NET direttamente il file APK, ma sono richiesti gli assembly non verrà compresso.
 
 Se non si dispone di questo programma di installazione, l'app verrà un arresto anomalo all'avvio e stampare sulla console simile al seguente:
 
@@ -155,12 +155,12 @@ com.xamarin.hellocsharp A/monodroid: No assemblies found in '(null)' or '<unavai
 
 All'avvio dell'app:
 
-![Hello c# di esempio in esecuzione nell'emulatore](android-images/hello-from-csharp-android.png)
+![Hello tratto dall'esempio c# in esecuzione nell'emulatore](android-images/hello-from-csharp-android.png)
 
 Si noti che cosa è successo qui:
 
 * È disponibile una classe c# `HelloActivity`, tale linguaggio di sottoclassi
-* Sono disponibili file di risorse Android
+* Sono disponibili i file di risorse Android
 * È stato usato dal linguaggio in Android Studio
 
 Per il funzionamento di questo esempio, tutte le seguenti opzioni vengono impostate in APK finale:
@@ -175,9 +175,9 @@ Se si sta cercando una procedura dettagliata aggiuntiva, vedere il video seguent
 
 [![Embeddinator-4000 per Android](https://img.youtube.com/vi/ZVcrXUpCNpI/0.jpg)](https://www.youtube.com/watch?v=ZVcrXUpCNpI)
 
-## <a name="using-java-18"></a>Utilizzo di Java 1.8
+## <a name="using-java-18"></a>Usa Java 1.8
 
-A partire dalla scrittura, la soluzione migliore consiste nell'utilizzare Android Studio 3.0 ([scaricare qui](https://developer.android.com/studio/index.html)).
+A partire da la scrittura, l'opzione migliore consiste nell'utilizzare Android Studio 3.0 ([scaricare qui](https://developer.android.com/studio/index.html)).
 
 Per abilitare Java 1.8 del modulo di app **gradle** file:
 
@@ -193,7 +193,7 @@ android {
 
 È anche possibile esaminare un [progetto di test di Android Studio](https://github.com/mono/Embeddinator-4000/blob/master/tests/android/app/build.gradle) per altri dettagli. 
 
-Se si sono desiderano utilizzare stabile 2.3.x Android Studio, è necessario abilitare la toolchain presa deprecata:
+Se sono si desiderano utilizzare stabile 2.3.x Android Studio, è necessario abilitare la toolchain presa deprecata:
 
 ```groovy
 android {
@@ -226,7 +226,7 @@ public class ViewSubclass : TextView
 * `[Register]` è necessario eseguire il mapping a un nome di pacchetto Java desiderato
 * `[Export]` è necessario per rendere un metodo visibile per Java
 
-È possibile utilizzare `ViewSubclass` in Java come illustrato di seguito:
+È possibile usare `ViewSubclass` in Java come illustrato di seguito:
 
 ```java
 import mono.embeddinator.android.ViewSubclass;
@@ -235,20 +235,20 @@ ViewSubclass v = new ViewSubclass(this);
 v.apply("Hello");
 ```
 
-Altre informazioni sui [integrazione Java con xamarin](~/android/platform/java-integration/index.md).
+Ulteriori informazioni, vedere [integrazione di Java con xamarin. Android](~/android/platform/java-integration/index.md).
 
 ## <a name="multiple-assemblies"></a>Più assembly
 
-Incorporamento di un singolo assembly è semplice. Tuttavia, è molto più probabile che sarà necessario più di uno c# assembly. Molte volte si avrà le dipendenze per i pacchetti NuGet, ad esempio il supporto Android librerie o Google Play Services che complicare ulteriormente le cose.
+Incorporamento di un singolo assembly è semplice. Tuttavia, è molto più probabile che sarà creata più di uno c# assembly. Numero di volte saranno disponibili le dipendenze dei pacchetti NuGet, ad esempio le librerie di supporto Android o Google Play Services che complicare ulteriormente le cose.
 
 Di conseguenza, un dilemma, poiché l'incorporamento .NET è necessario includere molti tipi di file in AAR finale, ad esempio:
 
 * Asset Android
-* Risorse Android
+* Risorse di Android
 * Librerie native di Android
 * Origine java Android
 
-È molto probabile che non si desidera includere questi file dalla libreria di supporto Android o Google Play Services nel AAR, ma invece utilizzata la versione ufficiale da Google Android Studio.
+Molto probabile che non si desidera includere questi file dalla libreria di supporto per Android o Google Play Services nel AAR ma preferisce usare la versione ufficiale da Google Android Studio.
 
 Di seguito è l'approccio consigliato:
 
@@ -279,8 +279,8 @@ dependencies {
 
 * [Callback in Android](~/tools/dotnet-embedding/android/callbacks.md)
 * [Ricerca di Android preliminare](~/tools/dotnet-embedding/android/index.md)
-* [Limitazioni di incorporamento .NET](~/tools/dotnet-embedding/limitations.md)
-* [Che contribuiscono al progetto open source](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+* [Limitazioni durante l'incorporamento .NET](~/tools/dotnet-embedding/limitations.md)
+* [Che hanno contribuito al progetto open source](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
 * [Codici di errore e descrizioni](~/tools/dotnet-embedding/errors.md)
 
 ## <a name="related-links"></a>Collegamenti correlati
