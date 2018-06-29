@@ -5,12 +5,12 @@ ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 99529f08348254dff7577b7e82da739fabd63a14
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8229a372659e7918457a9d2f358b871e1a3f5978
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781865"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080491"
 ---
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: accelerometro
 
@@ -89,6 +89,8 @@ Esempi:
 - **Gioco** – frequenza adatto per i giochi (necessariamente restituire sul thread dell'interfaccia utente).
 - **Normale** – frequenza predefinita adatta per le modifiche di orientamento dello schermo.
 - **Interfaccia utente** – frequenza adatto per l'interfaccia utente generali.
+
+Se il gestore dell'evento non è garantito che eseguite sul thread dell'interfaccia utente e se il gestore dell'evento è necessario accedere agli elementi dell'interfaccia utente, usare il [ `MainThread.BeginInvokeOnMainThread` ](main-thread.md) metodo per eseguire il codice nel thread UI.
 
 ## <a name="api"></a>API
 

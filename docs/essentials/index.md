@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 5fec06fd6f0c13a75040d940a11811ef97c3bcc3
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 97dc5494f37da1590178bc90feb673889598bdd7
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782739"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080488"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -44,8 +44,11 @@ Seguire le indicazioni per l'integrazione di queste funzionalità Xamarin.Essent
 * [Georilevazione](geolocation.md?context=xamarin/xamarin-forms) : recuperare il percorso della periferica GPS.
 * [Giroscopio](gyroscope.md?context=xamarin/xamarin-forms) : tenere traccia di rotazione attorno ai tre assi primari del dispositivo.
 * [Magnetometro](magnetometer.md?context=xamarin/xamarin-forms) – rilevare orientamento del dispositivo rispetto al campo magnetico della terra.
+* [MainThread](main-thread.md?content=xamarin/xamarin-forms) : eseguire codice nel thread principale dell'applicazione. 
 * [Aprire Browser](open-browser.md?context=xamarin/xamarin-forms) – rapidamente e facilmente aprire un browser a un sito Web specifico.
+* [Sensore di orientamento](orientation-sensor.md?context=xamarin/xamarin-forms) : recuperare l'orientamento del dispositivo in tre spazio dimensionale.
 * [Connessione telefonica](phone-dialer.md?context=xamarin/xamarin-forms) : aprire la connessione telefonica.
+* [Power](power.md?context=xamarin/xamarin-forms) : ottenere lo stato di risparmio energetico del dispositivo.
 * [Preferenze](preferences.md?context=xamarin/xamarin-forms) – aggiungere rapidamente e facilmente preferenze permanente.
 * [Blocco schermo](screen-lock.md?context=xamarin/xamarin-forms) – mantenere attivi lo schermo del dispositivo.
 * [Archiviazione protetta](secure-storage.md?context=xamarin/xamarin-forms) : in modo sicuro archiviare i dati.

@@ -5,12 +5,12 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: d5dfdcb11754b1e08e7768a17003a14117e795ea
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 11749107403fc99e1d49b63ee3b50ff105abaa57
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783191"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080287"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Georilevazione
 
@@ -88,7 +88,7 @@ try
 
     if (location != null)
     {
-        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}");
+        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
     }
 }
 catch (FeatureNotSupportedException fnsEx)
@@ -105,6 +105,8 @@ catch (Exception ex)
 }
 ```
 
+L'Altitudine non è sempre disponibile. Se non è disponibile, il `Altitude` potrebbe essere proprietà `null` o il valore può essere zero. Se l'altitudine è disponibile, il valore è in metri sopra sea livello superiore. 
+
 Per eseguire una query del dispositivo corrente [posizione](xref:Xamarin.Essentials.Location) coordinate, il `GetLocationAsync` può essere utilizzato. È consigliabile passare in una procedura completa `GeolocationRequest` e `CancellationToken` poiché potrebbe richiedere tempo per ottenere la posizione del dispositivo.
 
 ```csharp
@@ -115,7 +117,7 @@ try
 
     if (location != null)
     {
-        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}");
+        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
     }
 }
 catch (FeatureNotSupportedException fnsEx)
@@ -175,6 +177,22 @@ Nella tabella seguente sono illustrati accuratezza per ogni piattaforma:
 | Android | 0 - 100 |
 | iOS | ~0 |
 | UWP | < = 10 |
+
+<a name="calculate-distance" />
+
+## <a name="distance-between-two-locations"></a>Distanza tra due posizioni
+
+Il [ `Location` ](xref:Xamarin.Essentials.Location) e [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) definiscono classi `CalculateDistance` metodi che consentono di calcolare la distanza tra due posizioni geografiche. Questo calcolato distanza strade o altri percorsi non preso in considerazione e viene anche detto semplicemente la distanza più breve tra i due punti lungo la superficie della terra, la _great cerchio distanza_ o il prelievo, il distanza "come file linea d'aria."
+
+Di seguito è riportato un esempio:
+
+```csharp
+Location boston = new Location(42.358056, -71.063611);
+Location sanFrancisco = new Location(37.783333, -122.416667);
+double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Miles);
+```
+
+Il `Location` costruttore ha latitudine e longitudine argomenti nell'ordine specificato. I valori di latitudine positivo sono Nord dell'equatore e i valori di longitudine positivo sono est del primo meridiano. Utilizzare l'argomento finale `CalculateDistance` specificare chilometri o miglia. Il `Location` classe definisce inoltre `KilometersToMiles` e `MilesToKilometers` metodi per la conversione tra le due unità.
 
 ## <a name="api"></a>API
 

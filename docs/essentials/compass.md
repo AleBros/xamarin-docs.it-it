@@ -5,12 +5,12 @@ ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 30ef4c7c155b09c06c8bc36404b92c2a91b7eb0d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 63818014a9b3bdbef479055cbbcfbf8d348080fc
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782294"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080499"
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: compasso
 
@@ -74,6 +74,8 @@ public class CompassTest
 - **Gioco** – frequenza adatto per i giochi (necessariamente restituire sul thread dell'interfaccia utente).
 - **Normale** – frequenza predefinita adatta per le modifiche di orientamento dello schermo.
 - **Interfaccia utente** – frequenza adatto per l'interfaccia utente generali.
+
+Se il gestore dell'evento non è garantito che eseguite sul thread dell'interfaccia utente e se il gestore dell'evento è necessario accedere agli elementi dell'interfaccia utente, usare il [ `MainThread.BeginInvokeOnMainThread` ](main-thread.md) metodo per eseguire il codice nel thread UI.
 
 ## <a name="platform-implementation-specifics"></a>Informazioni specifiche sull'implementazione della piattaforma
 
