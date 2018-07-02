@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e371b4aecdd7b40c33e4596fec3c3ca7691bb42c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 575e6705679539af6d3e5fae3ffc5721d9f79ba6
+ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786187"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36291048"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Risoluzione dei problemi di connessione per un host di compilazione Xamarin.iOS
 
@@ -91,7 +91,7 @@ L'host di compilazione Xamarin delle versioni precedenti di Xamarin.iOS non è p
     ssh amyb@10.1.8.95 'ls'
     ```
     
-    Questo comando dovrebbe elencare il contenuto della directory home del Mac. Se il comando `ls` funziona correttamente, ma la connessione di Visual Studio non funziona ancora, è possibile vedere la sezione [Problemi e limitazioni noti](#knownissues) relativa a complicazioni specifiche di Xamarin. Se nessuna di queste corrisponde al proprio problema, [inviare un nuovo report sui bug](https://bugzilla.xamarin.com/newbug) allegando i log descritti in [Controllare i file di log dettagliati](#verboselogs).
+    Questo comando dovrebbe elencare il contenuto della directory home del Mac. Se il comando `ls` funziona correttamente, ma la connessione di Visual Studio non funziona ancora, è possibile vedere la sezione [Problemi e limitazioni noti](#knownissues) relativa a complicazioni specifiche di Xamarin. Se nessuna di queste soluzioni risolve il problema, inviare un nuovo report sui bug nella Community degli sviluppatori, selezionando **Guida >Commenti e suggerimenti > Segnala un problema** in Visual Studio e collegando i log descritti in [Check the Verbose Log Files](#verboselogs) (Controlla i file di log Verbose).
 
 10. Se **il passaggio 8 ha esito negativo**, è possibile eseguire il comando seguente nel terminale del Mac per vedere se il server SSH accetti _alcuna_ connessione:
 

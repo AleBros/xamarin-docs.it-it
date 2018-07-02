@@ -7,21 +7,24 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 42d287285fc9b8842dfb0c86b627d1d5c84189e1
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: b763407797cf635908cf34cce4f1a6a06325000d
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784816"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209259"
 ---
 # <a name="app-store-distribution"></a>Distribuzione tramite l'App Store
 
 Dopo che un'app Xamarin.iOS è stata sviluppata, il passaggio successivo del ciclo di vita dello sviluppo software è la distribuzione dell'app agli utenti tramite l'App Store iTunes. Questa è la modalità di distribuzione più comune per le applicazioni. Pubblicando un'applicazione nell'App Store di Apple, è possibile renderla disponibile per gli utenti di tutto il mondo.
 
 > [!IMPORTANT]
-> È **importante** ricordare che, per usare iTunes Connect e quindi per pubblicare un'app nell'App Store, **è necessario** fare parte di un programma Apple Developer per singoli utenti o per organizzazioni. Non sarà possibile eseguire i passaggi di questa pagina se si è membri di un programma Apple Developer **Enterprise**.
+> Apple [ha indicato](https://developer.apple.com/news/?id=05072018a) che a partire da luglio 2018, tutte le app e gli aggiornamenti inviati all'App Store devono essere stati compilati con iOS 11 SDK e devono [supportare il display di iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
 
 Per distribuire un'applicazione, come per sviluppare un'applicazione, è necessario effettuare il provisioning dell'applicazione con il *profilo di provisioning* appropriato. I profili di provisioning sono file che contengono le informazioni sulla firma del codice, oltre all'identità dell'applicazione e al meccanismo di distribuzione previsto. Contengono anche informazioni sui dispositivi in cui l'app può essere distribuita per la distribuzione senza App Store.
+
+> [!IMPORTANT]
+> È **importante** ricordare che, per usare iTunes Connect e quindi per pubblicare un'app nell'App Store, **è necessario** fare parte di un programma Apple Developer per singoli utenti o per organizzazioni. Non sarà possibile eseguire i passaggi di questa pagina se si è membri di un programma Apple Developer **Enterprise**.
 
 <a name="provisioning" />
 

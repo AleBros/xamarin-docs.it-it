@@ -7,14 +7,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: b8bea29e71e055621e7d0b85d3736ec6cc9ba3b4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 489d9fa569b083f5cb655dc503ab4fa551810b6d
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785700"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209474"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Pubblicazione di app Xamarin.iOS nell'App Store
+
+> [!IMPORTANT]
+> Apple [ha indicato](https://developer.apple.com/news/?id=05072018a) che a partire da luglio 2018, tutte le app e gli aggiornamenti inviati all'App Store devono essere stati compilati con iOS 11 SDK e devono [supportare il display di iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
 
 Per distribuire le applicazioni in tutti i dispositivi iOS, Apple richiede che le app siano pubblicate tramite l'*App Store*, che diventa così l'unico punto d'acquisto di applicazioni iOS. Con oltre 500.000 applicazioni in archivio, gli sviluppatori di molti tipi di applicazioni hanno sfruttato al meglio l'enorme successo di questo unico punto di distribuzione. L'App Store è una soluzione chiavi in mano, in cui gli sviluppatori di app trovano sia sistemi di distribuzione sia di pagamento.
 
@@ -231,9 +234,9 @@ Il plug-in di Xamarin per Visual Studio non supporta attualmente il flusso di la
 1. Selezionare **Firma del bundle iOS** e modificare il profilo di provisioning in un profilo di provisioning dell'App Store:
 
     ![](publishing-to-the-app-store-images/ipa01.png "Selezionare Firma del bundle iOS e modificare il profilo di provisioning in un profilo di provisioning dell'App Store")
-1. Selezionare **Opzioni IPA iOS** e selezionare **Ad-Hoc** dall'elenco del menu a discesa **Configurazione**. Se l'opzione Ad-hoc non viene visualizzata, selezionare **Rilascio**:
+1. Selezionare **Opzioni IPA iOS > Configurazione > Ad-Hoc** (se **Ad-Hoc** non è una scelta possibile, selezionare invece **Versione**) e selezionare la casella di controllo per la compilazione di un file IPA:
 
-    ![](publishing-to-the-app-store-images/imagevs02.png "Selezionare Ad-hoc dal menu a discesa Configurazione")
+    ![](publishing-to-the-app-store-images/imagevs02.png "Selezionare Ad hoc dall'elenco a discesa Configurazione")
 
 1. È possibile specificare facoltativamente un **Nome pacchetto** per il pacchetto IPA. Se non viene specificato, il pacchetto avrà lo stesso nome del progetto Xamarin.iOS.
 1. Salvare le modifiche alle proprietà del progetto.
