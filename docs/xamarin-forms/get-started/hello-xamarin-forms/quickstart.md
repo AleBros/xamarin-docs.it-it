@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: 6cef2f5e8b92341a83f9e791f268f8ad324f1da5
-ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
+ms.openlocfilehash: 5b5f8c80e49d66ed3bd8b008c975d1cfeda93ed4
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36291364"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321405"
 ---
 # <a name="xamarinforms-quickstart"></a>Guida introduttiva di Xamarin.Forms
 
@@ -95,7 +95,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
 
             void OnTranslate (object sender, EventArgs e)
             {
-                translatedNumber = Core.PhonewordTranslator.ToNumber (phoneNumberText.Text);
+                translatedNumber = PhonewordTranslator.ToNumber (phoneNumberText.Text);
                 if (!string.IsNullOrWhiteSpace (translatedNumber)) {
                     callButton.IsEnabled = true;
                     callButton.Text = "Call " + translatedNumber;
@@ -139,7 +139,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     ```csharp
     using System.Text;
 
-    namespace Core
+    namespace Phoneword
     {
         public static class PhonewordTranslator
         {
@@ -519,7 +519,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
 
             void OnTranslate (object sender, EventArgs e)
             {
-                translatedNumber = Core.PhonewordTranslator.ToNumber (phoneNumberText.Text);
+                translatedNumber = PhonewordTranslator.ToNumber (phoneNumberText.Text);
                 if (!string.IsNullOrWhiteSpace (translatedNumber)) {
                     callButton.IsEnabled = true;
                     callButton.Text = "Call " + translatedNumber;
@@ -563,7 +563,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     ```csharp
     using System.Text;
 
-    namespace Core
+    namespace Phoneword
     {
         public static class PhonewordTranslator
         {
