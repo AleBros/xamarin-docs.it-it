@@ -1,36 +1,36 @@
 ---
-title: 'Procedura dettagliata: utilizzo delle notifiche locale in xamarin. IOS'
-description: In questa sezione verrà esaminato come utilizzare le notifiche locale in un'applicazione di xamarin. IOS. Illustra le nozioni di base di creazione e pubblicazione di una notifica che verrà visualizzato un avviso quando ricevuti dall'app.
+title: Procedura dettagliata - uso delle notifiche locali in xamarin. IOS
+description: In questa sezione illustra come usare le notifiche locali in un'applicazione xamarin. IOS. Illustra le nozioni di base di creazione e pubblicazione di una notifica che verrà visualizzato un avviso quando ricevuti dall'app.
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: bb133d16f12249cbd31e4fce2b227162b4b28333
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cf1e44ba4176922234fc1b6b9bfe5c463611cc7b
+ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30776781"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37403429"
 ---
-# <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Procedura dettagliata: utilizzo delle notifiche locale in xamarin. IOS
+# <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Procedura dettagliata - uso delle notifiche locali in xamarin. IOS
 
-_In questa sezione verrà esaminato come utilizzare le notifiche locale in un'applicazione di xamarin. IOS. Illustra le nozioni di base di creazione e pubblicazione di una notifica che verrà visualizzato un avviso quando ricevuti dall'app._
+_In questa sezione illustra come usare le notifiche locali in un'applicazione xamarin. IOS. Illustra le nozioni di base di creazione e pubblicazione di una notifica che verrà visualizzato un avviso quando ricevuti dall'app._
 
 > [!IMPORTANT]
-> Le informazioni in questa sezione si riferiscono a iOS 9 e precedenti, è stato lasciato qui per supportare le versioni precedenti di iOS. Per iOS 10 e versioni successive, vedere il [Guida utente notifica Framework](~/ios/platform/user-notifications/index.md) per il supporto sia locali che Remote notifica in un dispositivo iOS.
+> Le informazioni in questa sezione si riferiscono ai dispositivi iOS 9 e precedenti, è stato lasciato in questo campo per supportare versioni precedenti di iOS. Per iOS 10 e versioni successive, vedere la [Guida utente notifica Framework](~/ios/platform/user-notifications/index.md) per il supporto sia locali che notifica remota in un dispositivo iOS.
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
-Consente di creare un'applicazione semplice che mostra le notifiche locale nell'azione. Questa applicazione sarà necessario un solo pulsante su di esso. Quando si fa clic sul pulsante, viene creato una notifica locale. Specificato periodo di tempo trascorso, si verrà visualizzata la notifica.
+Consentire di creare un'applicazione semplice che mostra le notifiche locali in azione. Questa applicazione avrà un solo pulsante su di esso. Quando si fa clic sul pulsante, creerà una notifica locale. Dopo aver specificato il periodo di tempo, si vedrà la notifica visualizzata.
 
 
-1. In Visual Studio per Mac, creare una nuova soluzione iOS singola visualizzazione e chiamarlo `Notifications`.
-1. Aprire il `Main.storyboard` file e trascinare la visualizzazione di un pulsante. Denominare il pulsante **pulsante**e assegnargli il titolo **notifica aggiungere**. È anche possibile impostare alcune [vincoli](~/ios/user-interface/designer/designer-auto-layout.md) al pulsante a questo punto: 
+1. In Visual Studio per Mac, creare una nuova soluzione di visualizzazione singola iOS e chiamarlo `Notifications`.
+1. Aprire il `Main.storyboard` file e trascinare un pulsante di visualizzazione. Denominare il pulsante **sul pulsante**e specificare il titolo **Aggiungi notifica**. È anche possibile impostare alcune [vincoli](~/ios/user-interface/designer/designer-auto-layout.md) al pulsante a questo punto: 
 
     ![](local-notifications-in-ios-walkthrough-images/image3.png "L'impostazione di alcuni vincoli sul pulsante")
-1. Modificare la `ViewController` classe e aggiungere il seguente gestore eventi per il metodo ViewDidLoad:
+1. Modificare il `ViewController` classe e aggiungere il gestore eventi seguente al metodo ViewDidLoad:
 
     ```csharp
     button.TouchUpInside += (sender, e) =>
@@ -56,9 +56,9 @@ Consente di creare un'applicazione semplice che mostra le notifiche locale nell'
     };
     ```
 
-    Questo codice verrà creata una notifica che utilizza un suono, imposta il valore del badge icona su 1 e viene visualizzato un avviso all'utente.
+    Questo codice verrà creata una notifica che utilizza un suono, imposta il valore del badge sull'icona a 1 e viene visualizzato un avviso all'utente.
 
-1. Successivamente, modificare il file `AppDelegate.cs`, innanzitutto aggiungere il codice seguente per il `FinishedLaunching` (metodo). È stata selezionata per vedere se il dispositivo esegue iOS 8, se così **obbligatorio** per richiedere l'autorizzazione dell'utente ricevere le notifiche:
+1. Modificare quindi il file `AppDelegate.cs`, aggiungere prima di tutto il codice seguente al `FinishedLaunching` (metodo). È stato controllato per verificare se il dispositivo è in esecuzione iOS 8, se siamo **obbligatorio** per richiedere l'autorizzazione dell'utente ricevere le notifiche:
 
     ```csharp
     if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
@@ -70,7 +70,7 @@ Consente di creare un'applicazione semplice che mostra le notifiche locale nell'
         }
     ```
 
-1. Ancora in `AppDelegate.cs`, aggiungere il seguente metodo che verrà chiamato quando viene ricevuta una notifica:
+1. Sempre nella `AppDelegate.cs`, aggiungere il metodo seguente che verrà chiamato quando viene ricevuta una notifica:
 
     ```csharp
     public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
@@ -79,7 +79,7 @@ Consente di creare un'applicazione semplice che mostra le notifiche locale nell'
                 UIAlertController okayAlertController = UIAlertController.Create(notification.AlertAction, notification.AlertBody, UIAlertControllerStyle.Alert);
                 okayAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 
-                Window.RootViewController.PresentViewController(okayAlertController, true, null);
+                UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(okayAlertController, true, null);
 
                 // reset our badge
                 UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
@@ -87,7 +87,7 @@ Consente di creare un'applicazione semplice che mostra le notifiche locale nell'
 
     ```
 
-1. È necessario gestire il caso in cui la notifica è stata avviata a causa di una notifica locale. Modificare il metodo `FinishedLaunching` nel `AppDelegate` per includere il frammento di codice seguente:
+1. È necessario gestire il caso in cui la notifica è stata avviata a causa di una notifica locale. Modificare il metodo `FinishedLaunching` nella `AppDelegate` per includere il frammento di codice seguente:
 
 
     ```csharp
@@ -114,16 +114,16 @@ Consente di creare un'applicazione semplice che mostra le notifiche locale nell'
 
     ```
 
-1. Infine, eseguire l'applicazione. Nelle versioni iOS 8 è richiesto per consentire le notifiche. Fare clic su **OK** e quindi fare clic su di **aggiungere notifica** pulsante. Dopo una breve pausa la finestra di dialogo di avviso, verrà visualizzato come illustrato nelle schermate seguenti:
+1. Infine, eseguire l'applicazione. In iOS 8 sarà per consentire le notifiche. Fare clic su **OK** e quindi fare clic sui **aggiungere notifica** pulsante. Dopo una breve pausa dovrebbe essere la finestra di dialogo di avviso, come illustrato negli screenshot seguenti:
 
     ![](local-notifications-in-ios-walkthrough-images/image0.png "Per confermare la possibilità di inviare notifiche") ![ ] (local-notifications-in-ios-walkthrough-images/image1.png "pulsante di notifica aggiungere") ![ ] (local-notifications-in-ios-walkthrough-images/image2.png "la finestra di dialogo Avviso di notifica")
 
 ## <a name="summary"></a>Riepilogo
 
-Questa procedura dettagliata viene illustrato come utilizzare le varie API per la creazione e pubblicazione di notifiche in iOS. Inoltre illustrato come aggiornare l'icona dell'applicazione con un badge per fornire un feedback specifico dell'applicazione all'utente.
+Questa procedura dettagliata ha illustrato come usare l'API diverse per la creazione e pubblicazione di notifiche in iOS. È stato anche illustrato come aggiornare l'icona dell'applicazione con una notifica per fornire un feedback specifici dell'applicazione all'utente.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Notifiche locale (esempio)](https://developer.xamarin.com/samples/monotouch/LocalNotifications)
-- [Locale e le notifiche Push Guida per programmatori](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
+- [Notifiche locali (esempio)](https://developer.xamarin.com/samples/monotouch/LocalNotifications)
+- [Locale e Guida alla programmazione di notifiche Push](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
