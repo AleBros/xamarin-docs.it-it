@@ -1,23 +1,23 @@
 ---
-title: Avanzate (manuale) esempio reale
-description: Questo documento viene descritto come utilizzare l'output di xcodebuild come input a Sharpie obiettivo, che fornisce informazioni approfondite scopo dell'obiettivo Sharpie dietro le quinte.
+title: Avanzate (manuali) esempio reale
+description: Questo documento descrive come usare l'output di xcodebuild come input per Sharpie obiettivo, che fornisce informazioni approfondite Sharpie obiettivo del funzionamento dietro le quinte.
 ms.prod: xamarin
 ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 811b783d33a20e23a7e807861e19355a1c372b84
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.openlocfilehash: c4f7f1e9702fb2ee0f5525343a52e3aacd85d68c
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209401"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37855260"
 ---
-# <a name="advanced-manual-real-world-example"></a>Avanzate (manuale) esempio reale
+# <a name="advanced-manual-real-world-example"></a>Avanzate (manuali) esempio reale
 
-**Questo esempio viene utilizzato il [libreria POP da Facebook](https://github.com/facebook/pop).**
+**Questo esempio Usa la [libreria POP proveniente da Facebook](https://github.com/facebook/pop).**
 
-Questa sezione descrive un approccio più avanzato all'associazione, in cui verrà utilizzato Apple `xcodebuild` strumento per generare il progetto POP prima e quindi dedurre manualmente l'input per Sharpie obiettivo. Questo articolo descrive essenzialmente svolte da obiettivo Sharpie dietro le quinte nella sezione precedente.
+Questa sezione viene illustrato un approccio più avanzato di associazione, in cui si userà di Apple `xcodebuild` dello strumento per compilare innanzitutto il progetto POP e quindi dedurre manualmente input per Sharpie obiettivo. La descrizione riguarda essenzialmente Sharpie obiettivo operazioni svolte dietro le quinte nella sezione precedente.
 
 ```
  $ git clone https://github.com/facebook/pop.git
@@ -27,7 +27,7 @@ Cloning into 'pop'...
 $ cd pop
 ```
 
-Poiché la libreria POP dispone di un progetto Xcode (`pop.xcodeproj`), è possibile utilizzare solo `xcodebuild` per compilare POP. Questo processo può a sua volta generare file di intestazione Sharpie obiettivo potrebbe essere necessario analizzare. Ecco perché la compilazione prima di associazione è importante. Quando si compila tramite `xcodebuild` verificare passare lo stesso identificatore SDK e architettura che si intende passare a Sharpie obiettivo (e ricordare, obiettivo Sharpie 3.0 in genere per questo scopo si):
+Poiché la libreria POP dispone di un progetto Xcode (`pop.xcodeproj`), è possibile usare semplicemente `xcodebuild` compilare POP. Questo processo, a sua volta può generare file di intestazione Objective Sharpie potrebbe essere necessario analizzare. Ecco perché la compilazione prima dell'associazione è importante. Durante la compilazione tramite `xcodebuild` verificare di passare lo stesso identificatore SDK e architettura che si prevede di passare all'obiettivo Sharpie (e ricordare, obiettivo Sharpie 3.0 in genere per questo scopo è):
 
 ```
 $ xcodebuild -sdk iphoneos9.0 -arch arm64
@@ -50,9 +50,9 @@ CpHeader pop/POPAnimationTracer.h build/Headers/POP/POPAnimationTracer.h
 ** BUILD SUCCEEDED **
 ```
 
-Esistere molte dell'output di compilazione le informazioni nella console come parte di `xcodebuild`. Come visualizzato di sopra, possiamo vedere che è stata eseguita una destinazione "CpHeader" in cui sono stati copiati i file di intestazione in una directory di output di compilazione. Questo accade spesso e semplifica l'associazione: come parte della compilazione della libreria nativa, è spesso vengono copiati i file di intestazione in un percorso utilizzabile "pubblico" che può semplificare l'analisi più semplice per l'associazione. In questo caso, si sa che il file di intestazione del POP siano presenti i `build/Headers` directory.
+Vi saranno molte dell'output di informazioni di compilazione nella console di come parte di `xcodebuild`. Come visualizzato in precedenza, possiamo vedere che è stata eseguita una destinazione di "CpHeader" in cui sono stati copiati i file di intestazione in una directory di output di compilazione. Questo accade spesso e semplifica l'associazione: come parte della compilazione della libreria nativa, in un percorso utilizzabile "pubblico" che può rendere più semplice di analisi per l'associazione spesso vengono copiati i file di intestazione. In questo caso, sappiamo che siano file di intestazione del POP il `build/Headers` directory.
 
-Si sono ora pronte per l'associazione POP. Sappiamo che si desidera compilare per SDK `iphoneos8.1` con il `arm64` architettura e i file di intestazione, Microsoft si impegna a siano `build/Headers` sotto l'estrazione di git POP. Se si osserva il `build/Headers` directory, vedremo un numero di file di intestazione:
+A questo punto siamo pronti eseguire l'associazione POP. Sappiamo che si desidera creare per SDK `iphoneos8.1` con il `arm64` architettura e che i file di intestazione ci preoccupiamo siano `build/Headers` sotto il checkout di git POP. Se si osserva il `build/Headers` directory, si vedrà un numero di file di intestazione:
 
 ```
 $ ls build/Headers/POP/
@@ -64,7 +64,7 @@ POPAnimationExtras.h     POPCustomAnimation.h     POPSpringAnimation.h
 POPAnimationPrivate.h    POPDecayAnimation.h
 ```
 
-Se si esamina `POP.h`, possiamo vedere file di intestazione di primo livello principale della libreria è `#import`s altri file. Per questo motivo, è necessario solo passare `POP.h` a Sharpie obiettivo, eseguire il resto dietro le quinte clang:
+Se osserviamo `POP.h`, possiamo vedere si tratta di file di intestazione di primo livello principale della libreria `#import`s altri file. Per questo motivo, è sufficiente passare `POP.h` a Sharpie obiettivo, e clang farà il resto dietro le quinte:
 
 ```
 $ sharpie bind -output Binding -sdk iphoneos8.1 \
@@ -122,19 +122,23 @@ Submitting usage data to Xamarin...
 Done.
 ```
 
-Si noterà che è stato passato un `-scope build/Headers` argomento Sharpie obiettivo. Poiché le librerie C e Objective-C devono `#import` o `#include` altri file di intestazione che i dettagli di implementazione della libreria e non si desidera eseguire il binding, come API di `-scope` argomento indica Sharpie obiettivo per ignorare qualsiasi API che non è definito in un file in un punto qualsiasi all'interno di `-scope` directory.
+Si noterà che viene passato un `-scope build/Headers` argomento Sharpie obiettivo. Poiché le librerie C e Objective-C devono `#import` o `#include` altri file di intestazione sono dettagli di implementazione della libreria e non si vuole eseguire il binding, come API di `-scope` argomento indica Sharpie obiettivo per ignorare qualsiasi API che non è definito in un file in un punto qualsiasi all'interno di `-scope` directory.
 
-Si noterà la `-scope` argomento è spesso facoltativo per le librerie implementate correttamente, tuttavia, non è in modo esplicito fornendo non causa problemi.
+Si noterà il `-scope` argomento spesso è facoltativo per le librerie implementate correttamente, tuttavia non crea alcun problema in modo esplicito fornendo.
 
-Inoltre, è specificato `-c -Ibuild/headers`. Prima di tutto il `-c` argomento indica Sharpie obiettivo per arrestare l'interpretazione degli argomenti della riga di comando e passare argomenti successivi _direttamente al compilatore clang_. Pertanto, `-Ibuild/Headers` è include un argomento del compilatore clang indica clang per la ricerca in `build/Headers`, ovvero in cui le intestazioni POP in tempo reale. Senza questo argomento, clang non sarà possibile sapere dove posizionare i file che `POP.h` è `#import`sta eseguendo un'operazione. _Quasi tutti i "problemi" con l'obiettivo Sharpie riducono a capire cosa da passare per clang_.
+Inoltre, abbiamo specificato `-c -Ibuild/headers`. In primo luogo, il `-c` argomento indica Sharpie descrive come arrestare interpreta gli argomenti della riga di comando e passare argomenti successivi _direttamente al compilatore clang_. Pertanto `-Ibuild/Headers` è un argomento del compilatore clang che istruisce clang per la ricerca include sotto `build/Headers`, ovvero dove si trovano le intestazioni POP. Senza questo argomento, clang non saprebbe dove posizionare i file che `POP.h` è `#import`ing. _Quasi tutti i "problemi" con obiettivo Sharpie riducono a capire cosa da passare per clang_.
 
-### <a name="completing-the-binding"></a>L'associazione di completamento
+### <a name="completing-the-binding"></a>Il completamento dell'associazione
 
 Obiettivo Sharpie ora ha generato `Binding/ApiDefinitions.cs` e `Binding/StructsAndEnums.cs` file.
 
-Si tratta base primo passaggio dell'obiettivo Sharpie della associazione, e in alcuni casi potrebbe essere è sufficiente. Come descritto in precedenza, tuttavia, lo sviluppatore in genere è necessario modificare manualmente i file generati al termine Sharpie obiettivo per [risolvere eventuali problemi](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) che potrebbe non essere automaticamente gestita dallo strumento.
+Si tratta base prima passata dell'obiettivo Sharpie all'associazione e in alcuni casi potrebbe essere tutto quello che serve. Come indicato in precedenza, tuttavia, lo sviluppatore in genere necessario modificare manualmente i file generati al termine obiettivo Sharpie al [risolvere i problemi](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) che potrebbe non essere automaticamente gestita dallo strumento.
 
-Dopo aver completato l'aggiornamento, questi due file può ora essere aggiunto a un progetto di associazione in Visual Studio per Mac o essere passati direttamente il `btouch` o `bmac` strumenti per produrre l'associazione finale.
+Dopo aver completati gli aggiornamenti, questi due file può ora essere aggiunto a un progetto di associazione in Visual Studio per Mac o essere passati direttamente al `btouch` o `bmac` strumenti per produrre l'associazione finale.
 
-Per una descrizione dettagliata del processo di associazione, vedere il nostro [istruzioni della procedura dettagliata completa](~/ios/platform/binding-objective-c/walkthrough.md).
+Per una descrizione dettagliata del processo di associazione, vedere la [istruzioni della procedura dettagliata completa](~/ios/platform/binding-objective-c/walkthrough.md).
 
+## <a name="related-links"></a>Collegamenti correlati
+
+- [Corso di Xamarin University: Creazione di una libreria di binding di Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Corsi di Xamarin University: Compilare una libreria di binding Objective-C con Sharpie obiettivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
