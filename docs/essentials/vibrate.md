@@ -5,12 +5,12 @@ ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 1de464d289bc684015e5fb8489683e3134535b70
-ms.sourcegitcommit: cb69bdb469db0b3118e365d71114091c6febb027
+ms.openlocfilehash: ca21f43631c261cd384f9049f30f0fa29e2ca44e
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37406771"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37855169"
 ---
 # <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: vibrazione
 
@@ -101,11 +101,21 @@ catch (Exception ex)
 
 ## <a name="platform-differences"></a>Differenze tra le piattaforme
 
-| Piattaforma | Differenza |
-| --- | --- |
-| iOS | Solo emissione degli avvisi visivi quando il dispositivo viene impostato su "In suoneria, vibrazione". |
-| iOS | Emissione sempre degli avvisi visivi per 500 millisecondi. |
-| iOS | Non è possibile annullare vibrazione. |
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+Nessuna differenza di piattaforma.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+* Solo emissione degli avvisi visivi quando il dispositivo viene impostato su "In suoneria, vibrazione".
+* Emissione sempre degli avvisi visivi per 500 millisecondi.
+* Non è possibile annullare vibrazione.
+
+# <a name="uwptabuwp"></a>[PIATTAFORMA UWP](#tab/uwp)
+
+Nessuna differenza di piattaforma.
+
+-----
 
 ## <a name="api"></a>API
 
