@@ -1,57 +1,57 @@
 ---
-title: Riepilogo del capitolo 4. Lo stack di scorrimento
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 4. Lo stack di scorrimento'
+title: Riepilogo del capitolo 4. Scorrimento dello stack
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 4. Scorrimento dello stack'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 1af3632d226ce894c1d856f665d6482f45d61f16
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 7860df998fbfe580362aff0f4f01374a4ae1f923
+ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241142"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37935553"
 ---
-# <a name="summary-of-chapter-4-scrolling-the-stack"></a>Riepilogo del capitolo 4. Lo stack di scorrimento
+# <a name="summary-of-chapter-4-scrolling-the-stack"></a>Riepilogo del capitolo 4. Scorrimento dello stack
 
-Questo capitolo è dedicato principalmente per introdurre il concetto di *layout*, che è il termine generale per le classi e le tecniche utilizzate per organizzare la visualizzazione di più visualizzazioni nella pagina di xamarin. Forms.
+In questo capitolo è principalmente dedicato per introdurre il concetto di *layout*, ovvero il termine generale per le classi e le tecniche che usa xamarin. Forms per organizzare la visualizzazione di più visualizzazioni nella pagina.
 
-Layout prevede diverse classi che derivano da [ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/) e [ `Layout<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/). Questo capitolo illustra [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/).
+Layout comporta diverse classi che derivano da [ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/) e [ `Layout<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/). Questo capitolo illustra [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/).
 
-Sono stati introdotti in questo capitolo sono le [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/), [ `Frame` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Frame/), e [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) classi.
+Inoltre introdotto in questo capitolo sono le [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/), [ `Frame` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Frame/), e [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) classi.
 
 ## <a name="stacks-of-views"></a>Stack di viste
 
-[`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) deriva da `Layout<View>` ed eredita un [ `Children` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) proprietà di tipo `IList<View>`. Si aggiungono più voci di visualizzazione per questa raccolta, e `StackLayout` li visualizza in uno stack orizzontale o verticale.
+[`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) deriva da `Layout<View>` ed eredita un [ `Children` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) vlastnosti typu `IList<View>`. Si aggiungono più voci di visualizzazione per questa raccolta, e `StackLayout` li visualizza in uno stack orizzontale o verticale.
 
-Impostare il [ `Orientation` ](https://developer.xamarin.com/api/property/Xamarin.Forms.StackLayout.Orientation/) proprietà di `StackLayout` a un membro del [ `StackOrientation` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackOrientation/) enumerazione entrambi [ `Vertical` ](https://developer.xamarin.com/api/field/Xamarin.Forms.StackOrientation.Vertical/) o [ `Horizontal`](https://developer.xamarin.com/api/field/Xamarin.Forms.StackOrientation.Horizontal/). Il valore predefinito è `Vertical`.
+Impostare il [ `Orientation` ](xref:Xamarin.Forms.StackLayout.Orientation) proprietà della `StackLayout` a un membro del [ `StackOrientation` ](xref:Xamarin.Forms.StackOrientation) enumerazione, entrambi [ `Vertical` ](xref:Xamarin.Forms.StackOrientation.Vertical) o [ `Horizontal`](xref:Xamarin.Forms.StackOrientation.Horizontal). Il valore predefinito è `Vertical`.
 
-Impostare il [ `Spacing` ](https://developer.xamarin.com/api/property/Xamarin.Forms.StackLayout.Spacing/) proprietà di `StackLayout` per un `double` valore per specificare una spaziatura tra gli elementi figlio. Il valore predefinito è 6.
+Impostare il [ `Spacing` ](https://developer.xamarin.com/api/property/Xamarin.Forms.StackLayout.Spacing/) proprietà della `StackLayout` a un `double` valore da specificare una spaziatura tra gli elementi figlio. Il valore predefinito è 6.
 
-Nel codice, è possibile aggiungere elementi per il `Children` insieme di `StackLayout` in un `for` o `foreach` ciclo, come illustrato nel [ **ColorLoop** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorLoop) esempio oppure è possibile inizializzare il `Children` insieme con un elenco delle visualizzazioni singole come illustrato in [ **ColorList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorList). Gli elementi figlio devono derivare da `View` ma può includere altri `StackLayout` oggetti.
+Nel codice, è possibile aggiungere elementi per il `Children` raccolta di `StackLayout` in un `for` o `foreach` ciclo, come illustrato nel [ **ColorLoop** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorLoop) esempio oppure è possibile inizializzare il `Children` insieme con un elenco delle singole viste come illustrato nella [ **ColorList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorList). Gli elementi figlio devono derivare da `View` , ma può includere altri `StackLayout` oggetti.
 
 ## <a name="scrolling-content"></a>Scorrimento di contenuto
 
-Se un `StackLayout` contiene troppi elementi figlio per visualizzare una pagina, è possibile inserire il `StackLayout` in un [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) per consentire lo scorrimento.
+Se un `StackLayout` contiene troppi elementi figlio da visualizzare in una pagina, è possibile inserire il `StackLayout` in un [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) per consentire lo scorrimento.
 
-Impostare il [ `Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ScrollView.Content/) proprietà `ScrollView` per la visualizzazione in cui si desidera scorrere. Questo è spesso un `StackLayout`, ma può essere qualsiasi visualizzazione.
+Impostare il [ `Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ScrollView.Content/) proprietà della `ScrollView` alla visualizzazione di cui si desidera scorrere. Questo è spesso un `StackLayout`, ma può trattarsi di qualsiasi visualizzazione.
 
-Impostare il [ `Orientation` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ScrollView.Orientation/) proprietà di `ScrollView` a un membro del [ `ScrollOrientation` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollOrientation/) proprietà [ `Vertical` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ScrollOrientation.Vertical/), [ `Horizontal` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ScrollOrientation.Horizontal/), o [ `Both` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ScrollOrientation.Both/). Il valore predefinito è `Vertical`. Se il contenuto di un `ScrollView` è un `StackLayout`, due orientamenti devono essere coerenti.
+Impostare il [ `Orientation` ](xref:Xamarin.Forms.ScrollView.Orientation) proprietà del `ScrollView` a un membro del [ `ScrollOrientation` ](xref:Xamarin.Forms.ScrollOrientation) proprietà [ `Vertical` ](xref:Xamarin.Forms.ScrollOrientation.Vertical), [ `Horizontal` ](xref:Xamarin.Forms.ScrollOrientation.Horizontal), o [ `Both` ](xref:Xamarin.Forms.ScrollOrientation.Both). Il valore predefinito è `Vertical`. Se il contenuto di un `ScrollView` è un `StackLayout`, i due orientamenti dovrebbero essere coerenti.
 
-Il [ **ReflectedColors** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ReflectedColors) esempio viene illustrato l'utilizzo di `ScrollView` e `StackLayout` per visualizzare i colori disponibili. Nell'esempio viene inoltre illustrato come utilizzare la reflection .NET per ottenere tutte le proprietà statica pubblica e a tutti i campi del `Color` struttura senza la necessità per elencarli in modo esplicito.
+Il [ **ReflectedColors** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ReflectedColors) esempio dimostra l'uso di `ScrollView` e `StackLayout` per visualizzare i colori disponibili. L'esempio illustra anche come usare la reflection .NET per ottenere tutte le proprietà statiche pubbliche e campi del `Color` struttura senza la necessità di elencarli in maniera esplicita.
 
 ## <a name="the-expands-option"></a>L'opzione viene espansa
 
-Quando un `StackLayout` stack relativi elementi figlio, ogni elemento figlio occupa uno slot specifico all'interno dell'altezza totale del `StackLayout` che dipende dalla dimensione del bambino e le impostazioni del relativo `HorizontalOptions` e `VerticalOptions` proprietà. Queste proprietà vengono assegnate i valori di tipo [ `LayoutOptions` ](http://developer.xamstage.com/api/type/Xamarin.Forms.LayoutOptions/).
+Quando un `StackLayout` stack relativi elementi figlio, ogni elemento figlio occupa uno slot specifico all'interno dell'altezza totale del `StackLayout` che varia a seconda delle dimensioni del bambino e le impostazioni del relativo `HorizontalOptions` e `VerticalOptions` proprietà. Queste proprietà vengono assegnate i valori di tipo [ `LayoutOptions` ](http://developer.xamstage.com/api/type/Xamarin.Forms.LayoutOptions/).
 
 Il `LayoutOptions` struttura definisce due proprietà:
 
-- [`Alignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Alignment/) del tipo di enumerazione [ `LayoutAlignment` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutAlignment/) con quattro membri, [ `Start` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutAlignment.Start/), [ `Center` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutAlignment.Center/), [ `End` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutAlignment.End/), e [`Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutAlignment.Fill/)
-- [`Expands`](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Expands/) di tipo `bool`
+- [`Alignment`](xref:Xamarin.Forms.LayoutOptions.Alignment) del tipo di enumerazione [ `LayoutAlignment` ](xref:Xamarin.Forms.LayoutAlignment) con quattro membri [ `Start` ](xref:Xamarin.Forms.LayoutAlignment.Start), [ `Center` ](xref:Xamarin.Forms.LayoutAlignment.Center), [ `End` ](xref:Xamarin.Forms.LayoutAlignment.End), e [`Fill`](xref:Xamarin.Forms.LayoutAlignment.Fill)
+- [`Expands`](xref:Xamarin.Forms.LayoutOptions.Expands) di tipo `bool`
 
-Per praticità, la `LayoutOptions` struttura definisce inoltre otto statici campi di sola lettura di tipo `LayoutOptions` che includono tutte le combinazioni delle proprietà dell'istanza di due:
+Per praticità, la `LayoutOptions` struttura definisce anche otto campi statici con sola lettura di tipo `LayoutOptions` che comprende tutte le combinazioni delle proprietà dell'istanza di due:
 
 - [`LayoutOptions.Start`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Start/)
 - [`LayoutOptions.Center`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Center/)
@@ -62,49 +62,49 @@ Per praticità, la `LayoutOptions` struttura definisce inoltre otto statici camp
 - [`LayoutOptions.EndAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.EndAndExpand/)
 - [`LayoutOptions.FillAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/)
 
-La seguente discussione implica un `StackLayout` con orientamento verticale predefinito. Orizzontale `StackLayout` è analoga.
+La discussione seguente comporta un `StackLayout` con orientamento verticale predefinito. Orizzontale `StackLayout` è analogo.
 
-Per un oggetto verticale `StackLayout`, `HorizontalOptions` determina come un elemento figlio è posizionato orizzontalmente all'interno della larghezza del `StackLayout`. Un `Alignment` l'impostazione di `Start`, `Center`, o `End` figlio sia orizzontalmente senza vincoli. L'elemento figlio determina la propria larghezza ed è posizionato in corrispondenza di sinistra, al centro o destra del `StackLayout`. Il `Fill` opzione fa sì che l'elemento figlio di essere vincolato in senso orizzontale e riempie la larghezza del `StackLayout`.
+Per un parametro vertical `StackLayout`, il `HorizontalOptions` impostazione determina come un elemento figlio è posizionato orizzontalmente entro la larghezza del `StackLayout`. Un' `Alignment` impostazione `Start`, `Center`, o `End` fa sì che l'elemento figlio sia orizzontalmente non vincolato. L'elemento figlio determina la propria larghezza ed è posizionato in corrispondenza di sinistra, al centro o a destra del `StackLayout`. Il `Fill` opzione fa sì che l'elemento figlio da vincolare in senso orizzontale e riempie la larghezza del `StackLayout`.
 
-Per un oggetto verticale `StackLayout`, ogni elemento figlio non è vincolata verticalmente e ottiene un oggetto verticale slot a seconda di altezza del bambino, nel qual caso il `VerticalOptions` impostazione non è rilevante.
+Per un parametro vertical `StackLayout`, ogni elemento figlio è verticale non vincolato e ottiene un parametro vertical slot a seconda di altezza del bambino, nel qual caso il `VerticalOptions` impostazione non è rilevante.
 
-Se verticale `StackLayout` stesso non è vincolata&mdash;vale a dire se relativo `VerticalOptions` impostazione è `Start`, `Center`, o `End`, quindi l'altezza del `StackLayout` è l'altezza totale dei relativi elementi figlio.
+Se verticale `StackLayout` stesso non è vincolato&mdash;vale a dire se relativi `VerticalOptions` impostazione è `Start`, `Center`, o `End`, quindi l'altezza del `StackLayout` corrisponde all'altezza totale dei relativi elementi figlio.
 
-Tuttavia, se verticale `StackLayout` verticalmente è vincolato&mdash;se relativo `VerticalOptions` è `Fill` &mdash;quindi l'altezza del `StackLayout` sarà l'altezza del contenitore, potrebbe essere maggiore del totale altezza dei relativi elementi figlio. Se è questo il caso e se almeno un elemento figlio è un `VerticalOptions` impostazione con un `Expands` flag di `true`, quindi lo spazio aggiuntivo nel `StackLayout` viene allocato in modo uniforme tra tutti gli elementi figlio con un `Expands` flag di `true`. L'altezza totale degli elementi figlio verrà quindi uguale all'altezza del `StackLayout`e `Alignment` in parte il `VerticalOptions` determina come elemento figlio in senso verticale è posizionato nello slot.
+Tuttavia, se verticale `StackLayout` verticalmente è vincolato&mdash;se relativi `VerticalOptions` impostazione è `Fill` &mdash;quindi l'altezza del `StackLayout` sarà l'altezza del relativo contenitore, che può essere maggiore del totale altezza dei relativi elementi figlio. Se in questo caso e se almeno un elemento figlio è un `VerticalOptions` impostazione con un `Expands` flag di `true`, quindi lo spazio aggiuntivo nel `StackLayout` viene allocato in modo uniforme tra tutti gli elementi figlio con un `Expands` flag di `true`. L'altezza totale degli elementi figlio verrà quindi uguale all'altezza del `StackLayout`e il `Alignment` in parte il `VerticalOptions` impostazione determina come l'elemento figlio è posizionato verticalmente nello slot.
 
 Questa funzionalità viene illustrata la [ **VerticalOptionsDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/VerticalOptionsDemo) esempio.
 
 ## <a name="frame-and-boxview"></a>Frame e BoxView
 
-Queste due visualizzazioni rettangolare vengono spesso utilizzate per scopi di presentazione.
+Queste due viste rettangolare vengono spesso usate per scopi di presentazione.
 
-Il [ `Frame` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Frame/) Visualizza una cornice intorno a un'altra visualizzazione, che può essere, ad esempio un layout rettangolare `StackLayout`. `Frame` eredita un [ `Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) proprietà [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) impostata per la visualizzazione da visualizzare all'interno di `Frame`. Il `Frame` è trasparente per impostazione predefinita. Impostare le seguenti tre proprietà per personalizzare l'aspetto del frame:
+Il [ `Frame` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Frame/) Vista sono riportati un frame intorno a un'altra visualizzazione, che può essere, ad esempio un layout rettangolare `StackLayout`. `Frame` eredita un [ `Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) proprietà dal [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) che è impostato per la visualizzazione deve essere visualizzato all'interno di `Frame`. Il `Frame` è trasparente per impostazione predefinita. Impostare le seguenti tre proprietà per personalizzare l'aspetto del frame:
 
-- Il [ `OutlineColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Frame.OutlineColor/) proprietà per renderlo visibile. È comune impostare `OutlineColor` a `Color.Accent` quando non si conosce la combinazione di colori sottostante.
+- Il [ `OutlineColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Frame.OutlineColor/) proprietà per renderla visibile. È comune per impostare `OutlineColor` a `Color.Accent` quando non si conosce lo schema di colore sottostante.
 - Il [ `HasShadow` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Frame.HasShadow/) può essere impostata su `true` per visualizzare un'ombreggiatura di colore nera nei dispositivi iOS.
-- Impostare il [ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) proprietà per un `Thickness` contenuto del valore per lasciare uno spazio tra il frame e il frame. Il valore predefinito è 20 unità su tutti i lati.
+- Impostare il [ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) proprietà su un `Thickness` contenuto del valore di lasciare uno spazio tra il frame e il frame. Il valore predefinito è 20 unità di misura su tutti i lati.
 
-Il `Frame` predefinito `HorizontalOptions` e `VerticalOptions` valori di `LayoutOptions.Fill`, vale a dire che il `Frame` compilerà il relativo contenitore. Con altre impostazioni, le dimensioni del `Frame` si basa sulle dimensioni del relativo contenuto.
+Il `Frame` ha un valore predefinito `HorizontalOptions` e `VerticalOptions` valori di `LayoutOptions.Fill`, che significa che il `Frame` compilerà il relativo contenitore. Con le altre impostazioni, le dimensioni del `Frame` si basa sulle dimensioni del relativo contenuto.
 
 Il `Frame` viene illustrata la [ **FramedText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FramedText) esempio.
 
-Il [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) consente di visualizzare un'area rettangolare di colore specificato dal relativo [ `Color` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BoxView.Color/) proprietà.
+Il [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) verrà visualizzata un'area rettangolare di colore specificato dai relativi [ `Color` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BoxView.Color/) proprietà.
 
-Se il `BoxView` è vincolato (relativo `HorizontalOptions` e `VerticalOptions` proprietà hanno valori predefiniti di `LayoutOptions.Fill`), il `BoxView` riempie lo spazio disponibile per tale. Se il `BoxView` vincolata (con `HorizontalOptions` e `LayoutOptions` le impostazioni di `Start`, `Center`, o `End`), ha una dimensione predefinita del quadrato 40 unità. Oggetto `BoxView` può essere vincolato in una dimensione e non vincolato in altro.
+Se il `BoxView` è limitato (relativo `HorizontalOptions` e `VerticalOptions` proprietà hanno valori predefiniti dei `LayoutOptions.Fill`), il `BoxView` riempie lo spazio disponibile per tale. Se il `BoxView` non è vincolata (con `HorizontalOptions` e `LayoutOptions` le impostazioni del `Start`, `Center`, o `End`), ha una dimensione predefinita del quadrato 40 unità. Oggetto `BoxView` può essere vincolato in una dimensione e non vincolato in altro.
 
-Spesso, verrà impostata l'il [ `WidthRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/) e [ `HeightRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) le proprietà di `BoxView` per assegnargli una dimensione specifica. Questo comportamento è illustrato il [ **SizedBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) esempio.
+Spesso, si imposterà il il [ `WidthRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/) e [ `HeightRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) le proprietà di `BoxView` per assegnargli una dimensione specifica. Questo comportamento è illustrato il [ **SizedBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) esempio.
 
-È possibile usare istanze diverse di `StackLayout` per combinare un `BoxView` e diversi `Label` le istanze in un `Frame` per visualizzare un determinato colore e quindi inserire ciascuna di queste visualizzazioni in un `StackLayout` in un `ScrollView` per creare l'interessante elenco di colori visualizzato nella finestra di [ **ColorBlocks** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) esempio:
+È possibile usare più istanze di `StackLayout` per combinare un `BoxView` e diverse `Label` istanze in un `Frame` per visualizzare un determinato colore e quindi inserire ognuna di queste visualizzazioni in un `StackLayout` in un `ScrollView` per creare le interessanti elenco di colori nella [ **ColorBlocks** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) esempio:
 
-[![Schermata di triplo dei blocchi di colore](images/ch04fg11-small.png "elenco di colori")](images/ch04fg11-large.png#lightbox "elenco di colori")
+[![Schermata triplo dei blocchi di colore](images/ch04fg11-small.png "elenco di colori")](images/ch04fg11-large.png#lightbox "elenco di colori")
 
-## <a name="a-scrollview-in-a-stacklayout"></a>Un elemento ScrollView in un StackLayout?
+## <a name="a-scrollview-in-a-stacklayout"></a>ScrollView in un StackLayout?
 
-Inserimento di un `StackLayout` in un `ScrollView` è comune, ma la messa un `ScrollView` in un `StackLayout` talvolta è utile. In teoria, questo non dovrebbe essere possibile in quanto gli elementi figlio di un oggetto verticale `StackLayout` sono verticalmente non vincolato. Ma un `ScrollView` deve essere vincolato in senso verticale. È necessario assegnare un'altezza specifica in modo che è possibile quindi determinare la dimensione del relativo elemento figlio per lo scorrimento.
+Inserimento di un `StackLayout` in un `ScrollView` è comune, ma l'inserimento una `ScrollView` in un `StackLayout` talvolta è utile. In teoria, questo non dovrebbe essere possibile in quanto gli elementi figlio di un parametro vertical `StackLayout` sono verticalmente non vincolato. Ma un `ScrollView` deve essere vincolato in senso verticale. È necessario assegnargli un'altezza specifica in modo che possa quindi determinare la dimensione del relativo elemento figlio per lo scorrimento.
 
-Lo stratagemma consiste nell'assegnare il `ScrollView` figlio di `StackLayout` un `VerticalOptions` l'impostazione di `FillAndExpand`. Questa funzionalità viene illustrata la [ **BlackCat** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCat) esempio.
+Lo stratagemma consiste nell'assegnare il `ScrollView` figlio il `StackLayout` una `VerticalOptions` impostazione di `FillAndExpand`. Questa funzionalità viene illustrata la [ **BlackCat** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCat) esempio.
 
-Il **BlackCat** esempio viene inoltre illustrato come definire e accedere alle risorse di programma che sono incorporate nella libreria di classe portabile (PCL). Possono essere visualizzato anche con i progetti di Asset condivisi (SAP), ma il processo è leggermente più complicato, come il [ **BlackCatSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) viene illustrato l'esempio.
+Il **BlackCat** esempio viene inoltre illustrato come definire e accedere alle risorse di programma che sono incorporate nella libreria di classi portabile (PCL). Ciò può anche essere ottenuto con progetti di Asset condivisi (SAPs) ma il processo è un po' più complicato, come le [ **BlackCatSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) esempio viene illustrato.
 
 
 
