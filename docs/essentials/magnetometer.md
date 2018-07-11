@@ -1,16 +1,16 @@
 ---
 title: 'Xamarin.Essentials: Magnetometro'
-description: La classe Magnetometro in Xamarin.Essentials consente di monitorare sensore magnetometro del dispositivo, che indica l'orientamento del dispositivo rispetto al campo magnetico della terra.
+description: La classe Magnetometro in Xamarin.Essentials consente di monitorare il sensore magnetometro del dispositivo, che indica l'orientamento del dispositivo rispetto al campo magnetico della terra.
 ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2c02188b5282949559e0abc5fa1b61b6b451fc8e
-ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
+ms.openlocfilehash: 52790f78c2d78347a35f111b3c4db63900c24ec7
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080496"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947361"
 ---
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: Magnetometro
 
@@ -18,7 +18,7 @@ ms.locfileid: "37080496"
 
 Il **Magnetometro** classe consente di monitorare sensore magnetometro del dispositivo che indica l'orientamento del dispositivo rispetto al campo magnetico della terra.
 
-## <a name="using-magnetometer"></a>Utilizzo Magnetometro
+## <a name="using-magnetometer"></a>Usando Magnetometro
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -26,7 +26,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La funzionalità Magnetometro funziona chiamando il `Start` e `Stop` metodi per attendere le modifiche per il magnetometro. Tutte le modifiche vengono inviate attraverso la `ReadingChanged` evento. Ecco l'esempio di utilizzo:
+La funzionalità Magnetometro funziona chiamando il `Start` e `Stop` metodi per l'ascolto delle modifiche per il magnetometro. Eventuali modifiche vengono inviate attraverso la `ReadingChanged` evento. Ecco l'esempio di utilizzo:
 
 ```csharp
 
@@ -71,16 +71,9 @@ public class MagnetometerTest
 
 Tutti i dati vengono restituiti in microteslas.
 
-## <a name="sensor-speedxrefxamarinessentialssensorspeed"></a>[Sensore velocità](xref:Xamarin.Essentials.SensorSpeed)
-
-- **Più veloce** -ottenere i dati del sensore più velocemente possibile (necessariamente restituire sul thread dell'interfaccia utente).
-- **Gioco** – frequenza adatto per i giochi (necessariamente restituire sul thread dell'interfaccia utente).
-- **Normale** – frequenza predefinita adatta per le modifiche di orientamento dello schermo.
-- **Interfaccia utente** – frequenza adatto per l'interfaccia utente generali.
-
-Se il gestore dell'evento non è garantito che eseguite sul thread dell'interfaccia utente e se il gestore dell'evento è necessario accedere agli elementi dell'interfaccia utente, usare il [ `MainThread.BeginInvokeOnMainThread` ](main-thread.md) metodo per eseguire il codice nel thread UI.
+[!include[](~/essentials/includes/sensor-speed.md)]
 
 ## <a name="api"></a>API
 
 - [Codice sorgente magnetometro](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Magnetometer)
-- [Documentazione magnetometro API](xref:Xamarin.Essentials.Magnetometer)
+- [Documentazione di magnetometro API](xref:Xamarin.Essentials.Magnetometer)
