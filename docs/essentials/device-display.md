@@ -1,24 +1,24 @@
 ---
 title: 'Xamarin.Essentials: Informazioni di visualizzazione dispositivo'
-description: Questo documento descrive la classe DeviceDisplay in Xamarin.Essentials, che fornisce le metriche di schermata per il dispositivo in cui viene eseguita l'applicazione.
+description: Questo documento descrive la classe DeviceDisplay in Xamarin.Essentials, che fornisce metriche dello schermo del dispositivo in cui viene eseguita l'applicazione.
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 3060d56e14fb0d3801a96ec0fe6e24c9efda4dac
-ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080313"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38816516"
 ---
 # <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: Informazioni di visualizzazione dispositivo
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 
-Il **DeviceDisplay** classe fornisce informazioni sulle metriche dello schermo del dispositivo è in esecuzione l'applicazione.
+Il **DeviceDisplay** classe fornisce informazioni sulle metriche di schermo del dispositivo cui è in esecuzione l'applicazione.
 
-## <a name="using-devicedisplay"></a>Utilizzo DeviceDisplay
+## <a name="using-devicedisplay"></a>Usando DeviceDisplay
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -28,7 +28,7 @@ using Xamarin.Essentials;
 
 ## <a name="screen-metrics"></a>Metriche dello schermo
 
-Oltre alle informazioni di base del dispositivo il **DeviceDisplay** classe contiene informazioni sulla schermata e l'orientamento del dispositivo.
+Oltre alle informazioni di base del dispositivo le **DeviceDisplay** classe contiene informazioni su schermo e l'orientamento del dispositivo.
 
 ```csharp
 // Get Metrics
@@ -50,7 +50,7 @@ var height = metrics.Height;
 var density = metrics.Density;
 ```
 
-Il **DeviceDisplay** classe espone inoltre un evento che può essere sottoscritti che viene attivato quando uno schermata le modifiche alla metrica:
+Il **DeviceDisplay** classe espone inoltre un evento che può essere sottoscritti che viene attivato ogni volta che una schermata di modifiche delle metriche:
 
 ```csharp
 public class ScreenMetricsTest

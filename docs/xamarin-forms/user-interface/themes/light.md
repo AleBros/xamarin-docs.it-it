@@ -1,6 +1,6 @@
 ---
-title: Tema chiaro xamarin. Forms
-description: In questo articolo viene illustrato come utilizzare il tema chiaro xamarin. Forms in un'app.
+title: Tema chiaro di xamarin. Forms
+description: Questo articolo illustra come usare il tema chiaro di xamarin. Forms in un'app.
 ms.prod: xamarin
 ms.assetid: D5D16AE3-F51F-4359-B37A-E1087ECE512B
 ms.technology: xamarin-forms
@@ -8,30 +8,30 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
 ms.openlocfilehash: 7f40e375d653acec60f8848627234ab46fcce8de
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245247"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38842752"
 ---
-# <a name="xamarinforms-light-theme"></a>Tema chiaro xamarin. Forms
+# <a name="xamarinforms-light-theme"></a>Tema chiaro di xamarin. Forms
 
 ![](~/media/shared/preview.png "Questa API è attualmente in anteprima")
 
 > [!NOTE]
-> Temi richiedono la versione di anteprima di xamarin. Forms 2.3. Controllare il [suggerimenti sulla risoluzione dei](~/xamarin-forms/user-interface/themes/index.md) se si verificano errori.
+> I temi richiedono la versione di anteprima di xamarin. Forms 2.3. Verificare i [suggerimenti](~/xamarin-forms/user-interface/themes/index.md) se si verificano errori.
 
 Per utilizzare il tema chiaro:
 
-## <a name="1-add-nuget-packages"></a>1. Aggiungere pacchetti Nuget
+## <a name="1-add-nuget-packages"></a>1. Aggiungere i pacchetti Nuget
 
 * Xamarin.Forms.Theme.Base
 * Xamarin.Forms.Theme.Light
 
 ## <a name="2-add-to-the-resource-dictionary"></a>2. Aggiungere al dizionario risorse
 
-Nel **app** file aggiunge un nuovo oggetto personalizzato `xmlns` per il tema, quindi verificare che il dizionario di risorse dell'applicazione vengono unite le risorse del tema.
-Un file XAML di esempio è illustrato di seguito:
+Nel **app. XAML** file aggiungere una nuova `xmlns` per il tema, quindi verificare che le risorse del tema vengono unite con dizionario risorse dell'applicazione.
+Seguito è riportato un esempio di file XAML:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8"?>
@@ -45,13 +45,13 @@ Un file XAML di esempio è illustrato di seguito:
 
 ## <a name="3-load-theme-classes"></a>3. Caricare le classi di temi
 
-Seguire questo [risoluzione dei problemi di passaggio](~/xamarin-forms/user-interface/themes/index.md) e aggiungere il codice necessario nella progetti di applicazione Android e iOS.
+Seguire questo [risoluzione dei problemi di passaggio](~/xamarin-forms/user-interface/themes/index.md) e aggiungere il codice necessario in iOS e i progetti applicazione Android.
 
-## <a name="4-use-styleclass"></a>4. Utilizzare StyleClass
+## <a name="4-use-styleclass"></a>4. Usare StyleClass
 
-Di seguito è riportato un esempio di pulsanti ed etichette tema chiaro, con il markup che li produce.
+Ecco un esempio di pulsanti ed etichette il tema chiaro, con il markup che li produce.
 
-[![](light-images/light-theme-sml.png "I pulsanti ed etichette in tema chiaro")](light-images/light-theme.png#lightbox "pulsanti ed etichette in tema chiaro")
+[![](light-images/light-theme-sml.png "Pulsanti ed etichette nel tema chiaro")](light-images/light-theme.png#lightbox "pulsanti ed etichette nel tema chiaro")
 
 ```xaml
 <StackLayout Padding="20">
@@ -68,4 +68,4 @@ Di seguito è riportato un esempio di pulsanti ed etichette tema chiaro, con il 
 </StackLayout>
 ```
 
-Il [elenco completo delle classi incorporate](~/xamarin-forms/user-interface/themes/index.md) presenta gli stili disponibili per alcuni controlli comuni.
+Il [elenco completo delle classi incorporate](~/xamarin-forms/user-interface/themes/index.md) Mostra gli stili disponibili per alcuni controlli comuni.

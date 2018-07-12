@@ -1,22 +1,22 @@
 ---
 title: 'Xamarin.Essentials: connettività'
-description: La classe di connettività in Xamarin.Essentials consente di monitorare le modifiche nelle condizioni di rete del dispositivo, verificare l'accesso alla rete corrente e modo in cui è attualmente connesso.
+description: La classe di connettività in Xamarin.Essentials consente di monitorare le modifiche in condizioni di rete del dispositivo, controllare l'accesso alla rete corrente e modo in cui è attualmente connesso.
 ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 54c165e15e725caaecb1573b74cfe295170db141
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782866"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38848609"
 ---
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: connettività
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 
-Il **connettività** consente di classe monitorare per le modifiche nelle condizioni di rete del dispositivo, controllare l'accesso alla rete corrente e modo in cui è attualmente connesso.
+Il **connettività** permette di classe monitorare le modifiche in condizioni di rete del dispositivo, controllare l'accesso alla rete corrente e modo in cui è attualmente connesso.
 
 ## <a name="getting-started"></a>Introduzione
 
@@ -24,23 +24,23 @@ Per l'accesso di **connettività** è necessaria la funzionalità le seguenti im
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Il `AccessNetworkState` l'autorizzazione è obbligatorio e deve essere configurata nel progetto Android. Questo può essere aggiunto nei modi seguenti:
+Il `AccessNetworkState` l'autorizzazione è obbligatorio e deve essere configurata nel progetto Android. Ciò è possibile aggiungere nei modi seguenti:
 
-Aprire la **AssemblyInfo.cs** file sotto il **proprietà** cartella e aggiungere:
+Aprire il **AssemblyInfo.cs** file sotto il **proprietà** cartella e aggiungere:
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.AccessNetworkState)]
 ```
 
-O aggiornare il manifesto Android:
+In alternativa, aggiornare il manifesto di Android:
 
-Aprire la **androidmanifest. XML** file sotto il **proprietà** cartella e aggiungere il codice seguente all'interno del **manifesto** nodo.
+Aprire il **androidmanifest. XML** file sotto il **proprietà** cartella e aggiungere il codice seguente all'interno del **manifesto** nodo.
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-Oppure fare clic con il pulsante destro sul progetto di piattaforma Android e aprire le proprietà del progetto. Sotto **manifesto Android** trovare il **delle autorizzazioni necessarie:** area e verificare il **stato di accesso rete** l'autorizzazione. Verrà automaticamente aggiornato il **Androidmanifest** file.
+Oppure fare clic con il pulsante destro sul progetto di piattaforma Android e aprire le proprietà del progetto. Sotto **manifesto Android** trovare il **autorizzazioni necessarie:** area e verificare il **stato di accesso rete** autorizzazione. Si aggiornerà automaticamente il **androidmanifest. XML** file.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -52,7 +52,7 @@ Non è necessaria alcuna configurazione aggiuntiva.
 
 -----
 
-## <a name="using-connectivity"></a>Utilizzo di connettività
+## <a name="using-connectivity"></a>Utilizza la connettività
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -71,15 +71,15 @@ if (current == NetworkAccess.Internet)
 }
 ```
 
-[L'accesso alla rete](xref:Xamarin.Essentials.NetworkAccess) rientra nelle categorie seguenti:
+[Accesso alla rete](xref:Xamarin.Essentials.NetworkAccess) rientra nelle categorie seguenti:
 
-* **Internet** : l'accesso locale e internet.
-* **ConstrainedInternet** – limitato l'accesso a internet. Indica vincolato la connettività del portale, in cui viene fornito l'accesso locale a un portale web, ma l'accesso a Internet richiede che vengano fornite credenziali specifiche tramite un portale.
+* **Internet** – accesso locale e internet.
+* **ConstrainedInternet** – accesso internet limitato. Indica captive la connettività del portale, in cui viene fornito accesso locale a un portale web, ma richiede l'accesso a Internet che credenziali specifiche sono disponibili tramite un portale.
 * **Locale** : locale solo l'accesso alla rete.
 * **Nessuno** – nessuna connettività è disponibile.
 * **Sconosciuto** : Impossibile determinare la connettività internet.
 
-È possibile controllare il tipo di [profilo di connessione](xref:Xamarin.Essentials.ConnectionProfile) sta utilizzando attivamente il dispositivo:
+È possibile controllare il tipo di [profilo di connessione](xref:Xamarin.Essentials.ConnectionProfile) il dispositivo in uso:
 
 ```csharp
 var profiles = Connectivity.Profiles;
@@ -89,7 +89,7 @@ if (profiles.Contains(ConnectionProfile.WiFi))
 }
 ```
 
-Ogni volta che il profilo di connessione o rete accedere alle modifiche è possibile ricevere un evento all'attivazione:
+Ogni volta che il profilo di connessione o rete accedere alle modifiche è possibile ricevere un evento quando attivata:
 
 ```csharp
 public class ConnectivityTest
@@ -110,9 +110,9 @@ public class ConnectivityTest
 
 ## <a name="limitations"></a>Limitazioni
 
-È importante notare che è possibile che `Internet` viene segnalato da `NetworkAccess` ma l'accesso completo al web non è disponibile. A causa di funzionamento di connettività in ciascuna piattaforma solo possibile garantire che sia disponibile una connessione. Ad esempio il dispositivo può essere collegato a una rete Wi-Fi, ma il router è disconnesso da internet. In questa istanza possono essere riportati Internet, ma non è disponibile una connessione attiva.
+È importante notare che è possibile che `Internet` viene segnalato da `NetworkAccess` ma accesso completo al web non è disponibile. A causa di funzionamento della connettività in ogni piattaforma può garantire solo che sia disponibile una connessione. Ad esempio il dispositivo può essere collegato a una rete Wi-Fi, ma il router è disconnesso da internet. In questa istanza possono essere riportati Internet, ma non è disponibile una connessione attiva.
 
 ## <a name="api"></a>API
 
 * [Codice sorgente di connettività](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Connectivity)
-* [Documentazione API di connettività](xref:Xamarin.Essentials.Connectivity)
+* [Documentazione delle API di connettività](xref:Xamarin.Essentials.Connectivity)

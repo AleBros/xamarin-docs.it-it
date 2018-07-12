@@ -1,22 +1,22 @@
 ---
 title: 'Xamarin.Essentials: sintesi vocale'
-description: La classe TextToSpeech in Xamarin.Essentials consente un'applicazione utilizzare incorporato nei motori di sintesi vocale per pronunciare il testo nascosto dal dispositivo, nonché per lingue disponibili di query in grado di supportare il motore.
+description: La classe TextToSpeech in Xamarin.Essentials consente un'applicazione usare incorporato nei motori di sintesi vocale da pronunciare il testo nascosto dal dispositivo, nonché di lingue disponibili di query in grado di supportare il motore.
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 9383411074bc43af1034138aadbb6ac5494c2c01
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782801"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38815661"
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: sintesi vocale
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 
-Il **TextToSpeech** classe consente a un'applicazione di utilizzare incorporato nei motori di sintesi vocale per pronunciare il testo nascosto dal dispositivo, nonché per lingue disponibili di query in grado di supportare il motore.
+Il **TextToSpeech** classe consente a un'applicazione usare incorporato nei motori di sintesi vocale da pronunciare il testo nascosto dal dispositivo, nonché di lingue disponibili di query in grado di supportare il motore.
 
 ## <a name="using-text-to-speech"></a>Utilizzo della sintesi vocale
 
@@ -26,7 +26,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La funzionalità di sintesi vocale funziona chiamando il `SpeakAsync` metodo con testo e i parametri facoltativi e restituisce dopo l'emissione. 
+La funzionalità di sintesi vocale funziona chiamando il `SpeakAsync` metodo con testo e i parametri facoltativi e restituisce il utterance termine. 
 
 ```csharp
 public async Task SpeakNowDefaultSettings()
@@ -46,7 +46,7 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-Questo metodo accetta in un oggetto CancellationToken facoltativo per interrompere l'emissione avviato. 
+Questo metodo accetta un oggetto CancellationToken facoltativo per arrestare il utterance dopo l'avvio. 
 ```csharp
 CancellationTokenSource cts;
 public async Task SpeakNowDefaultSettings()
@@ -66,7 +66,7 @@ public void CancelSpeech()
 }
 ```
 
-Sintesi vocale verrà automaticamente inseriti nella coda le richieste di riconoscimento vocale dallo stesso thread. 
+Sintesi vocale verrà automaticamente messi in coda le richieste vocali dallo stesso thread. 
 
 ```csharp
 bool isBusy = false;
@@ -92,7 +92,7 @@ public void SpeakMultiple()
 
 ### <a name="speech-settings"></a>Impostazioni di riconoscimento vocale
 
-Per un maggiore controllo sul modo in cui l'audio viene pronunciata sottoporre `SpeakSettings` che consente di impostare il Volume, x e delle impostazioni locali.
+Per maggiore controllo sul modo in cui l'audio viene pronunciata eseguire il backup con `SpeakSettings` che consente di impostare il Volume del passo e delle impostazioni locali.
 
 ```csharp
 public async Task SpeakNow()
@@ -116,7 +116,7 @@ Di seguito sono supportati i valori per questi parametri:
 
 ### <a name="speech-locales"></a>Impostazioni locali di riconoscimento vocale
 
-Ogni piattaforma offre le impostazioni locali per parlare testo nascosto in più lingue e degli accenti. Ogni piattaforma prevede diversi codici e i modi di specificare, motivo per cui Essentials fornisce una libreria multipiattaforma `Locale` classe e un modo per eseguire le query con `GetLocalesAsync`.
+Ogni piattaforma sono disponibili le impostazioni locali per pronunciare il testo nascosto in più lingue e le evidenziazioni. Ogni piattaforma ha diversi codici e sui metodi per la definizione di questo, motivo per cui multi-piattaforma di fornisce Essentials `Locale` classe e un modo per eseguire query con `GetLocalesAsync`.
 
 ```csharp
 public async Task SpeakNow()
@@ -139,7 +139,7 @@ public async Task SpeakNow()
 
 ## <a name="limitations"></a>Limitazioni
 
-- Coda di emissione non è garantita se viene chiamato su più thread.
+- Coda utterance non è garantita se viene chiamato attraverso più thread.
 - Riproduzione audio in background non è ufficialmente supportata.
 
 ## <a name="api"></a>API

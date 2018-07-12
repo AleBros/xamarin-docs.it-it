@@ -1,22 +1,22 @@
 ---
 title: 'Xamarin.Essentials: messaggio di posta elettronica'
-description: La classe messaggio di posta elettronica in Xamarin.Essentials consente a un'applicazione aprire l'applicazione di posta elettronica predefinito con un'inclusi soggetto, corpo e destinatari (a, CC, Ccn) le informazioni specificate.
+description: La classe messaggio di posta elettronica in Xamarin.Essentials consente a un'applicazione aprire l'applicazione di posta elettronica predefinito con un'inclusi oggetto, corpo e destinatari (a, CC, Ccn) le informazioni specificate.
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: aea2f429126180ae3d98bc665bed5574f416ea53
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782437"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38848546"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: messaggio di posta elettronica
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 
-Il **messaggio di posta elettronica** classe consente a un'applicazione aprire l'applicazione di posta elettronica predefinito con un'inclusi soggetto, corpo e recepients (a, CC, Ccn) le informazioni specificate.
+Il **messaggio di posta elettronica** classe consente a un'applicazione aprire l'applicazione di posta elettronica predefinito con un'inclusi oggetto, corpo e recepients (a, CC, Ccn) le informazioni specificate.
 
 ## <a name="using-email"></a>Tramite posta elettronica
 
@@ -61,4 +61,4 @@ public class EmailTest
 ## <a name="api"></a>API
 
 - [Codice sorgente di posta elettronica](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
-- [Documentazione del messaggio di posta elettronica API](xref:Xamarin.Essentials.Email)
+- [Documentazione delle API di posta elettronica](xref:Xamarin.Essentials.Email)

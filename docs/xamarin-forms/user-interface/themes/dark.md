@@ -1,6 +1,6 @@
 ---
 title: Tema scuro di xamarin. Forms
-description: In questo articolo viene illustrato come utilizzare il tema scuro di xamarin. Forms in un'app.
+description: Questo articolo illustra come usare il tema scuro di xamarin. Forms in un'app.
 ms.prod: xamarin
 ms.assetid: 43A3798D-6F05-4734-AF5E-97235B46D9B9
 ms.technology: xamarin-forms
@@ -8,30 +8,30 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
 ms.openlocfilehash: 1fc329f506afde04b0dc59dc637d999865aafbe1
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245924"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38853245"
 ---
 # <a name="xamarinforms-dark-theme"></a>Tema scuro di xamarin. Forms
 
 ![](~/media/shared/preview.png "Questa API è attualmente in anteprima")
 
 > [!NOTE]
-> Temi richiedono la versione di anteprima di xamarin. Forms 2.3. Controllare il [suggerimenti sulla risoluzione dei](~/xamarin-forms/user-interface/themes/index.md) se si verificano errori.
+> I temi richiedono la versione di anteprima di xamarin. Forms 2.3. Verificare i [suggerimenti](~/xamarin-forms/user-interface/themes/index.md) se si verificano errori.
 
 Per utilizzare il tema scuro:
 
-## <a name="1-add-nuget-packages"></a>1. Aggiungere pacchetti Nuget
+## <a name="1-add-nuget-packages"></a>1. Aggiungere i pacchetti Nuget
 
 * Xamarin.Forms.Theme.Base
 * Xamarin.Forms.Theme.Dark
 
 ## <a name="2-add-to-the-resource-dictionary"></a>2. Aggiungere al dizionario risorse
 
-Nel **app** file aggiunge un nuovo oggetto personalizzato `xmlns` per il tema, quindi verificare che il dizionario di risorse dell'applicazione vengono unite le risorse del tema.
-Un file XAML di esempio è illustrato di seguito:
+Nel **app. XAML** file aggiungere una nuova `xmlns` per il tema, quindi verificare che le risorse del tema vengono unite con dizionario risorse dell'applicazione.
+Seguito è riportato un esempio di file XAML:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8"?>
@@ -45,13 +45,13 @@ Un file XAML di esempio è illustrato di seguito:
 
 ## <a name="3-load-theme-classes"></a>3. Caricare le classi di temi
 
-Seguire questo [risoluzione dei problemi di passaggio](~/xamarin-forms/user-interface/themes/index.md) e aggiungere il codice necessario nella progetti di applicazione Android e iOS.
+Seguire questo [risoluzione dei problemi di passaggio](~/xamarin-forms/user-interface/themes/index.md) e aggiungere il codice necessario in iOS e i progetti applicazione Android.
 
-## <a name="4-use-styleclass"></a>4. Utilizzare StyleClass
+## <a name="4-use-styleclass"></a>4. Usare StyleClass
 
-Di seguito è riportato un esempio di pulsanti ed etichette nel tema scuro, con il markup che li produce.
+Ecco un esempio di pulsanti ed etichette nel tema scuro, con il markup che li produce.
 
-[![](dark-images/dark-theme-sml.png "I pulsanti ed etichette nel tema scuro")](dark-images/dark-theme.png#lightbox "pulsanti ed etichette nel tema scuro")
+[![](dark-images/dark-theme-sml.png "Pulsanti ed etichette nel tema scuro")](dark-images/dark-theme.png#lightbox "pulsanti ed etichette nel tema scuro")
 
 ```xaml
 <StackLayout Padding="20">
@@ -69,4 +69,4 @@ Di seguito è riportato un esempio di pulsanti ed etichette nel tema scuro, con 
 </StackLayout>
 ```
 
-Il [elenco completo delle classi incorporate](~/xamarin-forms/user-interface/themes/index.md) presenta gli stili disponibili per alcuni controlli comuni.
+Il [elenco completo delle classi incorporate](~/xamarin-forms/user-interface/themes/index.md) Mostra gli stili disponibili per alcuni controlli comuni.

@@ -1,22 +1,22 @@
 ---
 title: 'Xamarin.Essentials: negli Appunti'
-description: Questo documento descrive la classe negli Appunti in Xamarin.Essentials, che consente di copiare e incollare il testo negli Appunti di sistema tra applicazioni.
+description: Questo documento descrive la classe negli Appunti in Xamarin.Essentials, che consente di copiare e incollare il testo negli Appunti di sistema tra le applicazioni.
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 41b15b480fa23bd49667b68e904043e4f1a95732
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782359"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38842615"
 ---
 # <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials: negli Appunti
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 
-Il **Appunti** classe consente di copiare e incollare il testo negli Appunti di sistema tra applicazioni.
+Il **negli Appunti** classe consente di copiare e incollare il testo negli Appunti di sistema tra le applicazioni.
 
 ## <a name="using-clipboard"></a>Utilizzo degli Appunti
 
@@ -26,19 +26,19 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-Per verificare se il **Appunti** attualmente pronto per essere incollato il testo:
+Per verificare se il **negli Appunti** è attualmente pronto per essere incollato testo:
 
 ```csharp
 var hasText = Clipboard.HasText;
 ```
 
-Per impostare il testo il **Appunti**:
+Per impostare il testo il **negli Appunti**:
 
 ```csharp
 Clipboard.SetText("Hello World");
 ```
 
-Leggere il testo dal **Appunti**:
+Leggere il testo dal **negli Appunti**:
 
 ```csharp
 var text = await Clipboard.GetTextAsync();

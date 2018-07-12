@@ -1,22 +1,22 @@
 ---
-title: 'Xamarin.Essentials: Geocodifica'
-description: La classe Geocodifica Xamarin.Essentials fornisce le API per entrambi geocode un placemark una corrispondenza delle coordinate posizionali e invertire geocode coordinate a un placemark.
+title: 'Xamarin.Essentials: la Geocodifica'
+description: La classe la Geocodifica in Xamarin.Essentials fornisce le API per la geocodifica entrambi un placemark un coordinate posizionali e invertire una placemark geocode coordinate.
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 063adba82d96e7fcc64d7ec49a0c0133e1cef8ef
-ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080326"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38831448"
 ---
-# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Geocodifica
+# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: la Geocodifica
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 
-Il **Geocodifica** classe offre API a geocode un placemark una corrispondenza delle coordinate posizionali e invertire geocode coordincates un placemark.
+Il **Geocodifica** classe fornisce le API per la geocodifica un placemark un coordinate posizionali e invertire una placemark coordincates geocode.
 
 ## <a name="getting-started"></a>Introduzione
 
@@ -32,9 +32,9 @@ Non è necessaria alcuna configurazione aggiuntiva.
 
 # <a name="uwptabuwp"></a>[PIATTAFORMA UWP](#tab/uwp)
 
-Chiave dell'API di Bing mappe è obbligatorio utilizzare funcationality geocodifica. Iscriversi a una liberazione [Bing Maps](https://www.bingmapsportal.com/) account. Sotto **mio account > le chiavi** creare una nuova chiave e le informazioni in base al tipo di applicazione (che deve essere **pubblico delle App Windows (UWP, 8. x e versioni precedenti)** per App UWP).
+Una chiave API di Bing mappe è necessario usare funcationality la geocodifica. Iscriversi per ottenere una [Bing Maps](https://www.bingmapsportal.com/) account. Sotto **il mio account > i codici** creare una nuova chiave e immettere le informazioni di base al tipo di applicazione (che deve essere **pubblica App di Windows (UWP, 8.x e versioni precedenti)** per le app UWP).
 
-All'inizio di vita dell'applicazione prima di chiamare qualsiasi **Geocodifica** metodi impostano la chiave API:
+Sin dall'inizio nel ciclo di vita dell'applicazione prima di chiamare qualsiasi **Geocodifica** metodi impostano la chiave API:
 
 ```csharp
 Geocoding.MapKey = "YOUR-KEY-HERE";
@@ -42,7 +42,7 @@ Geocoding.MapKey = "YOUR-KEY-HERE";
 
 -----
 
-## <a name="using-geocoding"></a>Utilizzo di Geocodifica
+## <a name="using-geocoding"></a>Usando la Geocodifica
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -50,7 +50,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-Recupero [posizione](xref:Xamarin.Essentials.Location) coordinate per un indirizzo:
+Getting [posizione](xref:Xamarin.Essentials.Location) coordinate per un indirizzo:
 
 ```csharp
 try
@@ -74,9 +74,9 @@ catch (Exception ex)
 }
 ```
 
-L'Altitudine non è sempre disponibile. Se non è disponibile, il `Altitude` potrebbe essere proprietà `null` o il valore può essere zero. Se l'altitudine è disponibile, il valore è in metri sopra sea livello superiore. 
+Altitudine non è sempre disponibile. Se non è disponibile, il `Altitude` proprietà potrebbe essere `null` o il valore potrebbe essere zero. Se è disponibile l'altitudine, il valore è in metri sopra livello del mare. 
 
-Recupero [placemarks](xref:Xamarin.Essentials.Placemark) per un set esistente di coordinate:
+Getting [placemarks](xref:Xamarin.Essentials.Placemark) per un set esistente di coordinate:
 
 ```csharp
 try
@@ -120,5 +120,5 @@ Il [ `Location` ](xref:Xamarin.Essentials.Location) e [ `LocationExtensions` ](x
 
 ## <a name="api"></a>API
 
-- [Codice sorgente geocodifica](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geocoding)
-- [Documentazione di geocodifica API](xref:Xamarin.Essentials.Geocoding)
+- [Codice sorgente di geocodifica](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geocoding)
+- [Documentazione delle API di geocodifica](xref:Xamarin.Essentials.Geocoding)
