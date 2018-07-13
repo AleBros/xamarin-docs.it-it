@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/02/2016
-ms.openlocfilehash: a168e285358fff51b923200e55784b566df29d9d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6979d1f221a8b06b5d04d7a7f738dee86c4392e9
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763735"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998394"
 ---
 # <a name="hello-android-multiscreen"></a>Hello, Android Multiscreen
 
@@ -31,5 +31,5 @@ Nella seconda parte del documento viene rivista l'applicazione compilata e vengo
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Android Getting Started](http://developer.android.com/training/index.html) (Introduzione ad Android)
-- [Debug in Visual Studio](http://msdn.microsoft.com/en-us/library/k0k771bt%28v=vs.90%29.aspx)
+- [Debug in Visual Studio](https://docs.microsoft.com/visualstudio/debugger/)
 - [Visual Studio for Mac Recipes - Debugging (Visual Studio per Mac - debug)](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/)

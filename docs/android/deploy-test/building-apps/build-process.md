@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 806ed841ec4db037a063bb458e1eed13226e08bd
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: bf8dfb43115806f28935c6dec0ebd2d6d7bd2cdc
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32019711"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998256"
 ---
 # <a name="build-process"></a>Processo di compilazione
 
@@ -76,7 +76,7 @@ Per i progetti Xamarin.Android vengono definite le destinazioni di compilazione 
 
 ## <a name="build-properties"></a>Proprietà di compilazione
 
-Le proprietà MSBuild controllano il comportamento delle destinazioni. Sono specificate nel file di progetto, ad esempio **MyApp.csproj**, in un [elemento PropertyGroup MSBuild](http://msdn.microsoft.com/en-us/library/t4w159bs.aspx). 
+Le proprietà MSBuild controllano il comportamento delle destinazioni. Sono specificate nel file di progetto, ad esempio **MyApp.csproj**, in un [elemento PropertyGroup MSBuild](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild).
 
 -   **Configuration**: specifica la configurazione della build da usare, ad esempio "Debug" o "Release" (Rilascio). La proprietà Configuration viene usata per determinare i valori predefiniti per le altre proprietà che determinano il comportamento delle destinazioni. Configurazioni aggiuntive possono essere create nell'IDE.
 
@@ -86,7 +86,7 @@ Le proprietà MSBuild controllano il comportamento delle destinazioni. Sono spec
 
 -   **DebugSymbols**: valore booleano che determina se il pacchetto Android *può essere sottoposto a debug*, in combinazione con la proprietà `$(DebugType)`. Un pacchetto sottoponibile a debug contiene simboli di debug, imposta l'attributo `//application/@android:debuggable` su `true` e aggiunge automaticamente l'autorizzazione `INTERNET` in modo che un debugger possa connettersi al processo. Un'applicazione può essere sottoposta a debug se `DebugSymbols` è `True` *e* `DebugType` è una stringa vuota o `Full`.
 
--   **DebugType**: specifica il [tipo di simboli di debug](http://msdn.microsoft.com/en-us/library/s5c8athz.aspx) da generare durante la compilazione, da cui dipende anche la possibilità di sottoporre l'applicazione a debug. I valori possibili includono:
+-   **DebugType**: specifica il [tipo di simboli di debug](https://docs.microsoft.com/visualstudio/msbuild/csc-task) da generare durante la compilazione, da cui dipende anche la possibilità di sottoporre l'applicazione a debug. I valori possibili includono:
 
     - **Full**: vengono generati simboli completi. Se anche la proprietà MSBuild `DebugSymbols` è `True`, il pacchetto dell'applicazione può essere sottoposto a debug.
 
@@ -484,7 +484,7 @@ Per usare il file dell'archivio chiavi generato sopra, usare il gruppo di propri
 
 ## <a name="build-actions"></a>Azioni di compilazione
 
-Le *azioni di compilazione* vengono [applicate ai file](http://msdn.microsoft.com/en-us/library/bb629388.aspx) del progetto e controllano l'elaborazione del file. 
+Le *azioni di compilazione* vengono [applicate ai file](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items) del progetto e controllano l'elaborazione del file. 
 
 <a name="AndroidEnvironment" />
 
