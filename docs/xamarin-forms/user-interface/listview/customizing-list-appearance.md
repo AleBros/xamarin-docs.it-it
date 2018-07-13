@@ -1,42 +1,42 @@
 ---
 title: Personalizzazione dell'aspetto di ListView
-description: In questo articolo viene illustrato come personalizzare i controlli ListView nelle applicazioni di xamarin. Forms usando le intestazioni, piè di pagina, gruppi e le celle di altezza variabile.
+description: Questo articolo illustra come personalizzare ListView che nelle applicazioni xamarin. Forms usando le intestazioni, piè di pagina, gruppi e le celle di altezza variabile.
 ms.prod: xamarin
 ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: febf712848b81c09a4e25c824acc097e8b65e409
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 1326a1326b4a88459e4e0a01ef590e770e3a88c0
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245140"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997348"
 ---
 # <a name="customizing-listview-appearance"></a>Personalizzazione dell'aspetto di ListView
 
 `ListView` sono disponibili opzioni per controllare la presentazione dell'elenco globale, oltre a sottostante `ViewCell`s. Le opzioni includono:
 
-- [**Raggruppamento** ](#Grouping) &ndash; raggruppare gli elementi di ListView per semplificare l'esplorazione e una migliore organizzazione.
-- [**Intestazioni e piè di pagina** ](#Headers_and_Footers) &ndash; visualizzare le informazioni all'inizio e alla fine della vista che scorre con gli altri elementi.
+- [**Raggruppamento** ](#Grouping) &ndash; raggruppare gli elementi in ListView per semplificare l'esplorazione e organizzazione migliorata.
+- [**Informazioni sulle intestazioni e piè di pagina** ](#Headers_and_Footers) &ndash; visualizzare le informazioni all'inizio e alla fine della visualizzazione che supporta lo scorrimento con gli altri elementi.
 - [**Separatori di riga** ](#Row_Separators) &ndash; mostrare o nascondere le righe di separazione tra gli elementi.
-- [**Le righe di altezza variabile** ](#Row_Heights) &ndash; per impostazione predefinita, tutte le righe hanno la stessa altezza, ma può essere modificato per consentire le righe con altezza diversi da visualizzare.
+- [**Righe di altezza variabile** ](#Row_Heights) &ndash; per impostazione predefinita tutte le righe sono della stessa altezza, ma può essere modificato per consentire le righe con altezze diverse da visualizzare.
 
 <a name="Grouping" />
 
 ## <a name="grouping"></a>Raggruppamento
-Spesso, grandi set di dati può diventare difficile da gestire quando presentati in un elenco di scorrimento continuo. L'abilitazione di raggruppamento può migliorare l'esperienza utente in questi casi per organizzare meglio il contenuto e l'attivazione di controlli specifici della piattaforma che consentono di semplificare lo spostamento di dati.
+Spesso, grandi set di dati può diventare difficile da gestire quando viene visualizzata in un elenco a scorrimento continuo. L'abilitazione di raggruppamento può migliorare l'esperienza utente in questi casi organizzare meglio il contenuto e attivando controlli specifici della piattaforma che semplificano l'esplorazione dei dati.
 
 Quando il raggruppamento viene attivato per un `ListView`, viene aggiunta una riga di intestazione per ogni gruppo.
 
 Per abilitare il raggruppamento:
 
-- Creare un elenco di elenchi (un elenco di gruppi, ogni gruppo in un elenco di elementi).
+- Creare un elenco di elenchi (un elenco di gruppi, ogni gruppo da un elenco di elementi).
 - Impostare il `ListView`del `ItemsSource` a tale elenco.
 - Impostare `IsGroupingEnabled` su true.
-- Impostare [ `GroupDisplayBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupDisplayBinding/) da associare alla proprietà dei gruppi che viene utilizzata come il titolo del gruppo.
-- [Facoltativo] Impostare [ `GroupShortNameBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/) da associare alla proprietà dei gruppi che viene utilizzata come il nome breve per il gruppo. Il nome breve viene utilizzato per gli elenchi di salto (colonna a destra in iOS).
+- Impostare [ `GroupDisplayBinding` ](xref:Xamarin.Forms.ListView.GroupDisplayBinding) da associare alla proprietà dei gruppi di cui viene utilizzata come titolo del gruppo.
+- [Facoltativo] Impostare [ `GroupShortNameBinding` ](xref:Xamarin.Forms.ListView.GroupShortNameBinding) da associare alla proprietà dei gruppi di cui viene utilizzata come il nome breve per il gruppo. Il nome breve viene usato per il jump List (colonna destra in iOS).
 
 Iniziare creando una classe per i gruppi:
 
@@ -56,9 +56,9 @@ public class PageTypeGroup : List<PageModel>
     }
 ```
 
-Nel codice precedente, `All` è riportato l'elenco che verrà assegnato al nostro controllo ListView come origine di associazione. `Title` e `ShortName` sono le proprietà che verranno utilizzate per le intestazioni di gruppo.
+Nel codice precedente, `All` è riportato l'elenco che verrà assegnato al nostro ListView come origine del binding. `Title` e `ShortName` sono le proprietà che verranno usate per le intestazioni di gruppo.
 
-In questa fase, `All` è un elenco vuoto. Aggiungere un costruttore statico, in modo che l'elenco verrà popolato all'avvio del programma:
+In questa fase, `All` è un elenco vuoto. Aggiungere un costruttore statico, in modo che verrà popolato l'elenco all'avvio del programma:
 
 ```csharp
 static PageTypeGroup()
@@ -81,9 +81,9 @@ static PageTypeGroup()
 }
 ```
 
-Nel codice precedente è inoltre possibile chiamare `Add` sugli elementi di `groups`, che sono istanze di tipo `PageTypeGroup`. Ciò è possibile perché `PageTypeGroup` eredita da `List<PageModel>`. Questo è un esempio dell'elenco di elenchi motivo indicato in precedenza.
+Nel codice precedente è anche possibile chiamare `Add` sugli elementi della `groups`, che sono istanze del tipo `PageTypeGroup`. Ciò è possibile in quanto `PageTypeGroup` eredita da `List<PageModel>`. Questo è un esempio dell'elenco di elenchi modello indicato in precedenza.
 
-Di seguito è riportato il codice XAML per la visualizzazione dell'elenco di gruppo:
+Ecco il XAML per la visualizzazione elenco raggruppato:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -112,18 +112,18 @@ L'opzione produce quanto segue:
 
 Si noti che è necessario:
 
-- Impostare `GroupShortNameBinding` per il `ShortName` proprietà definita nella classe di gruppo
-- Impostare `GroupDisplayBinding` per il `Title` proprietà definita nella classe di gruppo
+- Impostare `GroupShortNameBinding` per il `ShortName` proprietà definita nella classe gruppo
+- Impostare `GroupDisplayBinding` per il `Title` proprietà definita nella classe gruppo
 - Impostare `IsGroupingEnabled` su true
-- Modificare il `ListView`del `ItemsSource` all'elenco di gruppi
+- Modificare il `ListView`del `ItemsSource` all'elenco di raggruppamenti
 
 ### <a name="customizing-grouping"></a>Personalizzazione di raggruppamento
 
-Raggruppamento è stato abilitato nell'elenco, può essere personalizzato anche l'intestazione di gruppo.
+Se è stato abilitato il raggruppamento nell'elenco, è anche possibile personalizzare l'intestazione di gruppo.
 
-Simile alla modalità `ListView` ha un `ItemTemplate` per definire la modalità di visualizzazione delle righe, `ListView` ha un `GroupHeaderTemplate`.
+Simile al modo in cui il `ListView` ha un `ItemTemplate` per la definizione delle modalità di visualizzazione, le righe `ListView` ha un `GroupHeaderTemplate`.
 
-In seguito è riportato un esempio di personalizzazione di intestazione del gruppo in XAML:
+Di seguito è riportato un esempio di personalizzazione di intestazione del gruppo in XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -161,12 +161,12 @@ x:Class="DemoListView.GroupingViewPage">
 <a name="Headers_and_Footers" />
 
 ## <a name="headers-and-footers"></a>Intestazioni e piè di pagina
-È possibile che un controllo ListView presentare un'intestazione e piè di pagina che lo scorrimento con gli elementi dell'elenco. L'intestazione e piè di pagina può essere stringhe di testo o un layout più complesso. Si noti che questo è separato dal [sezione gruppi](#Grouping).
+È possibile che un ListView presentare un'intestazione e piè di pagina che scorrono con gli elementi dell'elenco. L'intestazione e piè di pagina possono essere stringhe di testo o un layout più complesso. Si noti che è separato dal [sezione gruppi](#Grouping).
 
 È possibile impostare il `Header` e/o `Footer` in una stringa semplice oppure è possibile impostarli su un layout più complesso.
-Sono inoltre disponibili `HeaderTemplate` e `FooterTemplate` proprietà che consentono di creare un layout più complessi per l'intestazione e piè di pagina che supportano il data binding.
+Esistono inoltre `HeaderTemplate` e `FooterTemplate` proprietà che consentono di creare un layout più complessi per l'intestazione e piè di pagina che supportano il data binding.
 
-Per creare un semplice intestazione/piè di pagina, impostare solo le proprietà di intestazione o piè di pagina per il testo che si desidera visualizzare. In codice:
+Per creare una semplice intestazione/piè di pagina, è sufficiente impostare le proprietà di intestazione o piè di pagina per il testo da visualizzare. In codice:
 
 ```csharp
 ListView HeaderList = new ListView() {
@@ -207,10 +207,10 @@ Per creare un'intestazione personalizzata e un piè di pagina, definire le visua
 <a name="Row_Separators" />
 
 ## <a name="row-separators"></a>Separatori di riga
-Viene visualizzata una linea di separazione tra `ListView` elementi per impostazione predefinita in iOS e Android. Se si preferisce nascondere le righe di separazione in iOS e Android, impostare il `SeparatorVisibility` proprietà in ListView. Le opzioni per `SeparatorVisibility` sono:
+Vengono visualizzate le righe di separazione tra `ListView` elementi per impostazione predefinita in iOS e Android. Se si preferisce nascondere le righe di separazione in iOS e Android, impostare il `SeparatorVisibility` proprietà nella finestra di ListView. Le opzioni per `SeparatorVisibility` sono:
 
-* **Predefinito** -Mostra una linea di separazione in iOS e Android.
-* **Nessuna** -nasconde il separatore in tutte le piattaforme.
+* **Default** -Mostra una linea di separazione in iOS e Android.
+* **Nessuno** -nasconde il separatore in tutte le piattaforme.
 
 Visibilità predefinita:
 
@@ -244,7 +244,7 @@ XAML:
 
 ![](customizing-list-appearance-images/separator-none.png "ListView senza separatori di riga")
 
-È inoltre possibile impostare il colore della linea di separazione tramite il `SeparatorColor` proprietà:
+È anche possibile impostare il colore della linea di separazione tramite il `SeparatorColor` proprietà:
 
 C#:
 
@@ -266,14 +266,14 @@ XAML:
 <a name="Row_Heights" />
 
 ## <a name="row-heights"></a>Altezza delle righe
-Per impostazione predefinita, tutte le righe in un controllo ListView hanno la stessa altezza. ListView con due proprietà che può essere usata per modificare questo comportamento:
+Impostazione predefinita, tutte le righe in un ListView dispongono della stessa altezza. ListView ha due proprietà che può essere utilizzata per modificare questo comportamento:
 
-- `HasUnevenRows` &ndash; `true`/`false` valore, le righe hanno altezze se impostato su `true`. Il valore predefinito è `false`.
-- `RowHeight` &ndash; Imposta l'altezza di ogni riga quando `HasUnevenRows` è `false`.
+- `HasUnevenRows` &ndash; `true`/`false` valore, le righe hanno altezza diversa se impostato su `true`. Il valore predefinito è `false`.
+- `RowHeight` &ndash; Imposta l'altezza di ogni riga durante `HasUnevenRows` è `false`.
 
-È possibile impostare l'altezza di tutte le righe mediante l'impostazione di `RowHeight` proprietà il `ListView`.
+È possibile impostare l'altezza di tutte le righe, impostando il `RowHeight` proprietà di `ListView`.
 
-### <a name="custom-fixed-row-height"></a>Altezza di riga predefinito personalizzato
+### <a name="custom-fixed-row-height"></a>Altezza di riga fissa personalizzato
 
 C#:
 
@@ -287,13 +287,13 @@ XAML:
 <ListView x:Name="RowHeightDemoListView" RowHeight="100" />
 ```
 
-![](customizing-list-appearance-images/height-custom.png "ListView con altezza fissa")
+![](customizing-list-appearance-images/height-custom.png "ListView con l'altezza di riga fisso")
 
 
-### <a name="uneven-rows"></a>Righe non uniforme
+### <a name="uneven-rows"></a>Righe non uniformi
 
-Se si desidera singole righe di altezza diversa, è possibile impostare il `HasUnevenRows` proprietà `true`.
-Si noti che non può essere impostato manualmente una volta altezza delle righe `HasUnevenRows` è stata impostata su `true`, poiché l'altezza verrà calcolata automaticamente da xamarin. Forms.
+Se si desidera singole righe affinché altezza diversa, è possibile impostare il `HasUnevenRows` proprietà `true`.
+Si noti che non devono essere impostato manualmente una volta altezze `HasUnevenRows` è stata impostata su `true`, poiché l'altezza verrà automaticamente calcolato da xamarin. Forms.
 
 
 C#:
@@ -308,11 +308,11 @@ XAML:
 <ListView x:Name="RowHeightDemoListView" HasUnevenRows="true" />
 ```
 
-![](customizing-list-appearance-images/height-uneven.png "ListView con righe dispari")
+![](customizing-list-appearance-images/height-uneven.png "ListView con righe non uniformi")
 
 ### <a name="runtime-resizing-of-rows"></a>Runtime di ridimensionamento di righe
 
-Singoli `ListView` righe possono essere ridimensionate a livello di codice in fase di esecuzione, a condizione che il `HasUnevenRows` è impostata su `true`. Il [ `Cell.ForceUpdateSize` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Cell.ForceUpdateSize()/) metodo aggiorna dimensioni di una cella, anche quando non è attualmente visibile, come illustrato nell'esempio di codice seguente:
+Singoli `ListView` righe possono essere ridimensionate a livello di codice in fase di esecuzione, a condizione che il `HasUnevenRows` è impostata su `true`. Il [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) metodo aggiorna le dimensioni della cella, anche quando non è attualmente visibile, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 void OnImageTapped (object sender, EventArgs args)
@@ -327,18 +327,18 @@ void OnImageTapped (object sender, EventArgs args)
 }
 ```
 
-Il `OnImageTapped` gestore eventi viene eseguito in risposta a un [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) vengano utilizzate in una cella e aumenta le dimensioni del `Image` visualizzato nella cella in modo che sia visualizzato facilmente.
+Il `OnImageTapped` gestore eventi viene eseguito in risposta a un [ `Image` ](xref:Xamarin.Forms.Image) vengano utilizzate in una cella e aumenta la dimensione del `Image` visualizzato nella cella in modo che sia facilmente è visualizzarlo.
 
-![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView con il ridimensionamento di righe di Runtime")
+![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView con ridimensionamento di righe di Runtime")
 
-Si noti che esiste una possibilità sicura di riduzione delle prestazioni se questa funzionalità è eccessivo.
+Si noti che esiste una forte possibilità di riduzione delle prestazioni se questa funzionalità è eccessivo.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Raggruppamento (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
-- [Visualizzazione di rendering personalizzata (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
+- [Visualizzazione di Renderer personalizzato (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
 - [Ridimensionamento di righe dinamiche (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/DynamicUnevenListCells/)
 - [note sulla versione 1.4](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
 - [note sulla versione 1.3](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

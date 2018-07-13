@@ -1,44 +1,44 @@
 ---
-title: Implementazione di un HybridWebView
-description: In questo articolo viene illustrato come creare un renderer personalizzato per un controllo personalizzato HybridWebView, cui viene illustrato come migliorare i controlli specifici della piattaforma web per consentire al codice c# di essere richiamato da JavaScript.
+title: Implementazione di un elemento HybridWebView
+description: Questo articolo illustra come creare un renderer personalizzato per un controllo personalizzato elemento HybridWebView, che illustra come migliorare i controlli specifici della piattaforma web per consentire al codice c# di essere richiamato da JavaScript.
 ms.prod: xamarin
 ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: d2cce7598fde4cf59a91940161e605860847623e
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: f0b21277b91c44edbb574aece92664de2e49a65a
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241299"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996360"
 ---
-# <a name="implementing-a-hybridwebview"></a>Implementazione di un HybridWebView
+# <a name="implementing-a-hybridwebview"></a>Implementazione di un elemento HybridWebView
 
-_Xamarin. Forms controlli dell'interfaccia utente personalizzata devono derivare dalla classe di visualizzazione, viene utilizzata per posizionare i controlli nella schermata e layout. In questo articolo viene illustrato come creare un renderer personalizzato per un controllo personalizzato HybridWebView, cui viene illustrato come migliorare i controlli specifici della piattaforma web per consentire al codice c# di essere richiamato da JavaScript._
+_Xamarin. Forms controlli dell'interfaccia utente personalizzata devono derivare dalla classe di visualizzazione, che viene usata per posizionare i layout e controlli sullo schermo. Questo articolo illustra come creare un renderer personalizzato per un controllo personalizzato elemento HybridWebView, che illustra come migliorare i controlli specifici della piattaforma web per consentire al codice c# di essere richiamato da JavaScript._
 
-Tutte le viste di xamarin. Forms sono un renderer di accompagnamento per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) viene eseguito il rendering da un'applicazione di xamarin. Forms in iOS, il `ViewRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza nativa `UIView` controllo. Nella piattaforma Android, il `ViewRenderer` crea un'istanza di classe un `View` controllo. Nella piattaforma UWP (Universal Windows), il `ViewRenderer` classe viene creata un'istanza nativa `FrameworkElement` controllo. Per ulteriori informazioni sulle classi di controllo nativo che eseguono il mapping per i controlli di xamarin. Forms e renderer, vedere [Renderer classi di Base e i controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Tutte le visualizzazioni di xamarin. Forms sono un renderer di accompagnamento per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [ `View` ](xref:Xamarin.Forms.View) viene eseguito il rendering da un'applicazione xamarin. Forms in iOS, il `ViewRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza di nativo `UIView` controllo. La piattaforma Android, il `ViewRenderer` crea un'istanza di classe un `View` controllo. In Universal Windows Platform (UWP), il `ViewRenderer` un'istanza nativa `FrameworkElement` controllo. Per altre informazioni sulle classi di controllo nativo che eseguono il mapping per i controlli di xamarin. Forms e renderer, vedere [Renderer di classi di Base e controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
-Il diagramma seguente illustra la relazione tra il [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) e i corrispondenti controlli nativi che l'implementano:
+Il diagramma seguente illustra la relazione tra il [ `View` ](xref:Xamarin.Forms.View) e i corrispondenti controlli nativi che l'implementano:
 
-![](hybridwebview-images/view-classes.png "Relazione tra la classe di visualizzazione e le relative classi Native di implementazione")
+![](hybridwebview-images/view-classes.png "Relazione tra la classe di visualizzazione e relativa implementazione delle classi Native")
 
-Il processo di rendering può essere utilizzato per implementare le personalizzazioni specifiche della piattaforma tramite la creazione di un renderer personalizzato per un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) in ciascuna piattaforma. Il processo per eseguire questa operazione è come segue:
+Il processo di rendering può essere usato per implementare le personalizzazioni specifiche della piattaforma tramite la creazione di un renderer personalizzato per un [ `View` ](xref:Xamarin.Forms.View) in ogni piattaforma. Il processo per eseguire questa operazione è come segue:
 
 1. [Creare](#Creating_the_HybridWebView) il `HybridWebView` controllo personalizzato.
-1. [Utilizzare](#Consuming_the_HybridWebView) il `HybridWebView`da xamarin. Forms.
-1. [Creare](#Creating_the_Custom_Renderer_on_each_Platform) il renderer personalizzato per il `HybridWebView` in ciascuna piattaforma.
+1. [Consumano](#Consuming_the_HybridWebView) il `HybridWebView`da xamarin. Forms.
+1. [Creare](#Creating_the_Custom_Renderer_on_each_Platform) il renderer personalizzato per il `HybridWebView` in ogni piattaforma.
 
-Ogni elemento ora essere descritti in dettaglio per implementare un `HybridWebView` renderer che migliora i controlli specifici della piattaforma web per consentire al codice c# di essere richiamato da JavaScript. Il `HybridWebView` istanza verrà utilizzata per visualizzare una pagina HTML in cui viene chiesto all'utente di immettere il proprio nome. Quindi, quando l'utente fa clic sul pulsante HTML, verrà richiamare una funzione JavaScript in c# `Action` che visualizza una finestra popup contenente il nome degli utenti.
+Ogni elemento ora verrà a sua volta descritta per implementare un `HybridWebView` renderer che migliora i controlli specifici della piattaforma web per consentire al codice c# di essere richiamato da JavaScript. Il `HybridWebView` istanza verrà usata per visualizzare una pagina HTML in cui viene chiesto all'utente di immettere il proprio nome. Quindi, quando l'utente fa clic sul pulsante HTML, una funzione JavaScript richiamerà c# `Action` che visualizza una finestra popup contenente il nome degli utenti.
 
-Per ulteriori informazioni sul processo di chiamata c# da JavaScript, vedere [richiamare c# da JavaScript](#Invoking_C_from_JavaScript). Per ulteriori informazioni sulla pagina HTML, vedere [creazione di una pagina Web](#Creating_the_Web_Page).
+Per altre informazioni sul processo per richiamare c# da JavaScript, vedere [richiamare c# da JavaScript](#Invoking_C_from_JavaScript). Per altre informazioni sulla pagina HTML, vedere [creazione di una pagina Web](#Creating_the_Web_Page).
 
 <a name="Creating_the_HybridWebView" />
 
-## <a name="creating-the-hybridwebview"></a>Creazione di HybridWebView
+## <a name="creating-the-hybridwebview"></a>Creare l'elemento HybridWebView
 
-Il `HybridWebView` controllo personalizzato è possibile creare tramite la creazione di sottoclassi di [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) classe, come illustrato nell'esempio di codice seguente:
+Il `HybridWebView` controllo personalizzato può essere creato dalla creazione di una sottoclasse di [ `View` ](xref:Xamarin.Forms.View) classe, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 public class HybridWebView : View
@@ -75,18 +75,18 @@ public class HybridWebView : View
 }
 ```
 
-Il `HybridWebView` controllo personalizzato viene creato nel progetto di libreria Standard di .NET e definisce l'API seguente per il controllo:
+Il `HybridWebView` controllo personalizzato viene creato nel progetto della libreria .NET Standard e definisce l'API per il controllo seguente:
 
 - Oggetto `Uri` proprietà che specifica l'indirizzo della pagina web da caricare.
-- Oggetto `RegisterAction` metodo che registra un `Action` con il controllo. Viene richiamato l'azione registrata da JavaScript contenute nel file HTML a cui fa riferimento tramite il `Uri` proprietà.
-- Oggetto `CleanUp` metodo che rimuove il riferimento registrato `Action`.
-- Un `InvokeAction` metodo che richiama registrato `Action`. Questo metodo verrà chiamato da un renderer personalizzato in ogni progetto specifico della piattaforma.
+- Oggetto `RegisterAction` metodo che registra un `Action` con il controllo. L'azione registrata verrà richiamato da JavaScript sul contenuto nel file HTML mediante il `Uri` proprietà.
+- Oggetto `CleanUp` metodo che rimuove il riferimento a registrato `Action`.
+- Un' `InvokeAction` metodo che richiama l'oggetto registrato `Action`. Questo metodo verrà chiamato da un renderer personalizzato in ogni progetto specifico della piattaforma.
 
 <a name="Consuming_the_HybridWebView" />
 
-## <a name="consuming-the-hybridwebview"></a>Utilizzo di HybridWebView
+## <a name="consuming-the-hybridwebview"></a>Utilizza l'elemento HybridWebView
 
-Il `HybridWebView` controllo personalizzato può fare riferimento in XAML nel progetto di libreria .NET Standard dichiarare uno spazio dei nomi per la posizione e utilizzando il prefisso dello spazio dei nomi del controllo personalizzato. Nell'esempio di codice riportato di seguito viene illustrato come la `HybridWebView` controllo personalizzato può essere utilizzato da una pagina XAML:
+Il `HybridWebView` controllo personalizzato è reperibile in XAML nel progetto della libreria .NET Standard dichiara uno spazio dei nomi per la relativa posizione e usando il prefisso dello spazio dei nomi del controllo personalizzato. Nell'esempio di codice riportato di seguito viene illustrato come il `HybridWebView` controlli personalizzati possono essere usati da una pagina XAML:
 
 ```xaml
 <ContentPage ...
@@ -100,9 +100,9 @@ Il `HybridWebView` controllo personalizzato può fare riferimento in XAML nel pr
 </ContentPage>
 ```
 
-Il `local` prefisso dello spazio dei nomi denominato nulla. Tuttavia, il `clr-namespace` e `assembly` i valori devono corrispondere i dettagli del controllo personalizzato. Dopo aver dichiarato lo spazio dei nomi, il prefisso viene utilizzato per fare riferimento al controllo personalizzato.
+Il `local` prefisso dello spazio dei nomi può essere denominata alcuna operazione. Tuttavia, il `clr-namespace` e `assembly` valori devono corrispondere i dettagli del controllo personalizzato. Una volta lo spazio dei nomi è dichiarato, il prefisso viene utilizzato per fare riferimento al controllo personalizzato.
 
-Nell'esempio di codice riportato di seguito viene illustrato come la `HybridWebView` controllo personalizzato può essere utilizzato da una pagina in c#:
+Nell'esempio di codice riportato di seguito viene illustrato come il `HybridWebView` controlli personalizzati possono essere usati da una pagina di c#:
 
 ```csharp
 public class HybridWebViewPageCS : ContentPage
@@ -121,7 +121,7 @@ public class HybridWebViewPageCS : ContentPage
 }
 ```
 
-Il `HybridWebView` istanza verrà utilizzata per visualizzare un controllo web nativi in ciascuna piattaforma. Ha `Uri` proprietà è impostata su un file HTML archiviato in ogni progetto specifico della piattaforma e che verrà visualizzato dal controllo web nativi. Il codice HTML viene chiesto all'utente di immettere il proprio nome, con una funzione JavaScript chiamata c# `Action` in risposta a un clic del pulsante HTML.
+Il `HybridWebView` istanza verrà usata per visualizzare un controllo web nativi in ciascuna piattaforma. Ha `Uri` è impostata su un file HTML che viene archiviato in ogni progetto specifico della piattaforma e che verrà visualizzato dal controllo web nativi. Il codice HTML sottoposto a rendering chiede all'utente di immettere il proprio nome, con una funzione JavaScript richiamare c# `Action` in risposta a un clic sul pulsante HTML.
 
 Il `HybridWebViewPage` registra l'azione da richiamare da JavaScript, come illustrato nell'esempio di codice seguente:
 
@@ -136,36 +136,36 @@ public partial class HybridWebViewPage : ContentPage
 }
 ```
 
-Questa azione chiama il [ `DisplayAlert` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert/p/System.String/System.String/System.String/) metodo per visualizzare una finestra popup modale che presenta il nome immesso nella pagina HTML visualizzata per il `HybridWebView` istanza.
+Questa azione chiama il [ `DisplayAlert` ](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) metodo per visualizzare una finestra popup modale che presenta il nome immesso nella pagina HTML visualizzata per il `HybridWebView` istanza.
 
-Un renderer personalizzato può ora essere aggiunto a ogni progetto di applicazione per migliorare i controlli specifici della piattaforma web, consentendo di codice c# per essere richiamato da JavaScript.
+Un renderer personalizzato può ora essere aggiunti a ogni progetto di applicazione per migliorare i controlli specifici della piattaforma web, consentendo a codice c# per essere richiamato da JavaScript.
 
 <a nane="Creating_the_Custom_Renderer_on_each_Platform" />
 
-## <a name="creating-the-custom-renderer-on-each-platform"></a>Creazione di Renderer personalizzato a seconda della piattaforma
+## <a name="creating-the-custom-renderer-on-each-platform"></a>Creare il Renderer personalizzato a seconda della piattaforma
 
-Il processo di creazione della classe renderer personalizzato è come segue:
+Il processo per la creazione della classe renderer personalizzati è come segue:
 
-1. Creare una sottoclasse di `ViewRenderer<T1,T2>` classe che esegue il rendering del controllo personalizzato. Il primo argomento di tipo deve essere il controllo personalizzato, il renderer è, in questo caso `HybridWebView`. Il secondo argomento di tipo deve essere il controllo nativo che consente di implementare la visualizzazione personalizzata.
-1. Eseguire l'override di `OnElementChanged` metodo che esegue il rendering di controllo e scrivere la logica personalizzata per personalizzarlo. Questo metodo viene chiamato quando viene creato il controllo personalizzato di xamarin. Forms corrispondente.
-1. Aggiungere un `ExportRenderer` attributo alla classe renderer personalizzato per specificare che verrà usata per il rendering del controllo personalizzato di xamarin. Forms. Questo attributo viene utilizzato per registrare il renderer personalizzato con xamarin. Forms.
+1. Creare una sottoclasse del `ViewRenderer<T1,T2>` classe che esegue il rendering del controllo personalizzato. Il primo argomento tipo deve essere il controllo personalizzato in questo caso il renderer è, `HybridWebView`. Il secondo argomento tipo deve essere del controllo nativo che implementerà la visualizzazione personalizzata.
+1. Eseguire l'override di `OnElementChanged` metodo che esegue il rendering il controllo e scrivere la logica personalizzata per personalizzarla. Questo metodo viene chiamato quando viene creato il controllo personalizzato di xamarin. Forms corrispondente.
+1. Aggiungere un `ExportRenderer` attributo alla classe renderer personalizzato per specificare che verrà usata per eseguire il rendering del controllo personalizzato di xamarin. Forms. Questo attributo viene utilizzato per registrare il renderer personalizzato con xamarin. Forms.
 
 > [!NOTE]
-> Per la maggior parte degli elementi di xamarin. Forms, è facoltativo per fornire un renderer personalizzato in ogni progetto della piattaforma. Se non è registrato un renderer personalizzato, verrà utilizzato il renderer predefinito per la classe di base del controllo. Un renderer personalizzato è tuttavia necessarie in ogni progetto della piattaforma per il rendering di un [vista](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) elemento.
+> Per la maggior parte degli elementi di xamarin. Forms, è facoltativo per fornire un renderer personalizzato in ogni progetto della piattaforma. Se non è registrato un renderer personalizzato, quindi verrà utilizzato il renderer predefinito per la classe di base del controllo. Renderer personalizzati sono tuttavia necessarie in ogni progetto della piattaforma durante il rendering di un [vista](xref:Xamarin.Forms.View) elemento.
 
 Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, con le relazioni tra di essi:
 
-![](hybridwebview-images/solution-structure.png "Responsabilità di progetto personalizzato HybridWebView Renderer")
+![](hybridwebview-images/solution-structure.png "Responsabilità di progetto Renderer personalizzati elemento HybridWebView")
 
-Il `HybridWebView` viene eseguito il rendering di controlli personalizzati dalle classi renderer specifico della piattaforma, che derivano dalla `ViewRenderer` classe per ogni piattaforma. Di conseguenza, ogni `HybridWebView` controllo personalizzato viene eseguito il rendering con controlli specifici della piattaforma web, come illustrato nelle schermate seguenti:
+Il `HybridWebView` viene eseguito il rendering di controlli personalizzati dalle classi renderer specifica della piattaforma, che derivano da tutti i `ViewRenderer` classe per ogni piattaforma. Di conseguenza ogni `HybridWebView` controllo personalizzato viene eseguito il rendering con controlli specifici della piattaforma web, come illustrato negli screenshot seguenti:
 
-![](hybridwebview-images/screenshots.png "HybridWebView in ciascuna piattaforma")
+![](hybridwebview-images/screenshots.png "Elemento HybridWebView in ogni piattaforma")
 
-Il `ViewRenderer` classe espone il `OnElementChanged` metodo, che viene chiamato quando viene creato il controllo personalizzato di xamarin. Forms per il rendering del controllo web native corrispondenti. Questo metodo accetta un `ElementChangedEventArgs` parametro contenente `OldElement` e `NewElement` proprietà. Queste proprietà rappresentano l'elemento di xamarin. Forms che il renderer *è stata* collegata, l'elemento di xamarin. Forms e che il renderer *è* associata rispettivamente. Nell'applicazione di esempio di `OldElement` proprietà sarà `null` e `NewElement` proprietà contiene un riferimento al `HybridWebView` istanza.
+Il `ViewRenderer` classe espone il `OnElementChanged` metodo, che viene chiamato quando viene creato il controllo personalizzato di xamarin. Forms per il rendering del controllo web native corrispondenti. Questo metodo accetta un `ElementChangedEventArgs` parametro che contiene `OldElement` e `NewElement` proprietà. Queste proprietà rappresentano l'elemento di xamarin. Forms che il renderer *è stata* collegata, l'elemento di xamarin. Forms e che il renderer *è* collegati rispettivamente. Nell'applicazione di esempio il `OldElement` proprietà sarà `null` e il `NewElement` proprietà conterrà un riferimento al `HybridWebView` istanza.
 
-Una versione sottoposta a override del `OnElementChanged` (metodo), in ogni classe renderer specifico della piattaforma, è possibile eseguire la creazione di istanze di web nativi controllo e personalizzazione. Il `SetNativeControl` (metodo) deve essere utilizzato per creare il controllo web nativi e questo metodo assegna anche il riferimento al controllo per il `Control` proprietà. Inoltre, un riferimento al controllo di xamarin. Forms che viene eseguito il rendering può essere ottenuto tramite il `Element` proprietà.
+Una versione override del `OnElementChanged` metodo, in ogni classe renderer specifica della piattaforma, è possibile eseguire la creazione di istanze di web nativi controllo e personalizzazione. Il `SetNativeControl` metodo deve essere usato per creare un'istanza del controllo web native e questo metodo si assegna il riferimento di controllo per il `Control` proprietà. Inoltre, un riferimento al controllo di xamarin. Forms che viene eseguito il rendering può essere ottenuto tramite il `Element` proprietà.
 
-In alcuni casi il `OnElementChanged` metodo può essere chiamato più volte. Pertanto, per evitare perdite di memoria, prestare attenzione quando si crea un nuovo controllo nativo. L'approccio da usare quando si crea un'istanza di un nuovo controllo nativo in un renderer personalizzato è illustrato nell'esempio di codice seguente:
+In alcune circostanze il `OnElementChanged` metodo può essere chiamato più volte. Pertanto, per evitare perdite di memoria, è necessario prestare attenzione quando si crea un nuovo controllo nativo. L'approccio da usare quando si crea un'istanza di un nuovo controllo nativo in un renderer personalizzato è illustrato nell'esempio di codice seguente:
 
 ```csharp
 protected override void OnElementChanged (ElementChangedEventArgs<NativeListView> e)
@@ -187,17 +187,17 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 }
 ```
 
-Per un nuovo controllo nativo l'istanza deve essere creata solo una volta, quando la proprietà `Control` è `null`. Configurare il controllo e sottoscrivere i gestori degli eventi solo quando il renderer personalizzato è allegato a un nuovo elemento di Xamarin.Forms. Analogamente, per i gestori degli eventi sottoscritti l'iscrizione deve essere annullata solo in caso di modifica dell'elemento allegato al renderer. Questo approccio consente di creare un renderer personalizzato ad alte prestazioni che non subisca delle perdite di memoria.
+Per un nuovo controllo nativo l'istanza deve essere creata solo una volta, quando la proprietà `Control` è `null`. Configurare il controllo e sottoscrivere i gestori degli eventi solo quando il renderer personalizzato è allegato a un nuovo elemento di Xamarin.Forms. Analogamente, per i gestori degli eventi sottoscritti l'iscrizione deve essere annullata solo in caso di modifica dell'elemento allegato al renderer. Adottando questo approccio consente di creare un renderer personalizzato ad alte prestazioni che non subisce perdite di memoria.
 
-Ogni classe renderer personalizzato è decorato con un `ExportRenderer` attributo che registra il renderer con xamarin. Forms. L'attributo accetta due parametri: il nome del tipo del controllo personalizzato xamarin. Forms viene eseguito il rendering e il nome del tipo di renderer personalizzato. Il `assembly` prefisso per l'attributo specifica che l'attributo si applica all'intero assembly.
+Ogni classe renderer personalizzato è decorata con un `ExportRenderer` attributo che registra il renderer con xamarin. Forms. L'attributo accetta due parametri: il nome del tipo del controllo personalizzato xamarin. Forms viene eseguito il rendering e il nome del tipo di renderer personalizzato. Il `assembly` prefisso per l'attributo specifica che l'attributo viene applicato all'intero assembly.
 
-Le sezioni seguenti illustrano la struttura della pagina web caricata da ogni controllo web nativi, il processo di chiamata c# da JavaScript e l'implementazione di questo oggetto in ogni classe renderer personalizzato specifico della piattaforma.
+Le sezioni seguenti illustrano la struttura della pagina web caricato da ogni controllo web nativi, il processo per richiamare c# da JavaScript e l'implementazione di questo oggetto in ogni classe renderer personalizzato specifico della piattaforma.
 
 <a name="Creating_the_Web_Page" />
 
 ### <a name="creating-the-web-page"></a>Creazione di una pagina Web
 
-Esempio di codice seguente mostra la pagina web che verranno visualizzate le `HybridWebView` controllo personalizzato:
+Esempio di codice seguente mostra la pagina web che verrà visualizzato per il `HybridWebView` controllo personalizzato:
 
 ```html
 <html>
@@ -231,10 +231,10 @@ function invokeCSCode(data) {
 </html>
 ```
 
-La pagina web consente all'utente di immettere il proprio nome in un `input` elemento e fornisce un `button` elemento che richiama il codice c# quando si fa clic. Il processo per raggiungere questo obiettivo è come segue:
+La pagina web consente all'utente di immettere il proprio nome in un' `input` elemento e fornisce un `button` elemento che verrà richiamato codice c# quando si fa clic. Il processo per raggiungere questo obiettivo è come segue:
 
-- Quando l'utente fa clic su di `button` elemento, il `invokeCSCode` funzione JavaScript viene chiamata con il valore della `input` elemento passato alla funzione.
-- Il `invokeCSCode` chiamate di funzione di `log` funzione per visualizzare i dati di invio alla c# `Action`. Chiama quindi il `invokeCSharpAction` metodo da richiamare c# `Action`, passando il parametro ricevuto dal `input` elemento.
+- Quando l'utente fa clic sui `button` elemento, il `invokeCSCode` funzione JavaScript viene chiamata, con il valore della `input` elemento passato alla funzione.
+- Il `invokeCSCode` chiamate di funzione il `log` funzione per visualizzare i dati di invio per il codice c# `Action`. Chiama poi il `invokeCSharpAction` metodo da richiamare il codice c# `Action`, passando il parametro ricevuto dal `input` elemento.
 
 Il `invokeCSharpAction` funzione JavaScript non è definito nella pagina web e verrà inserita al suo interno per ogni renderer personalizzato.
 
@@ -244,17 +244,17 @@ Il `invokeCSharpAction` funzione JavaScript non è definito nella pagina web e v
 
 Il processo per richiamare c# da JavaScript è identico in ogni piattaforma:
 
-- Il renderer personalizzato viene creato un controllo web nativi e carica il file HTML specificato da di `HybridWebView.Uri` proprietà.
-- Una volta caricata la pagina web, il renderer personalizzato inserisce le `invokeCSharpAction` funzione JavaScript nella pagina web.
-- Quando l'utente immette il nome e fa clic su HTML `button` elemento, il `invokeCSCode` funzione viene richiamata, che a sua volta richiama il `invokeCSharpAction` (funzione).
-- Il `invokeCSharpAction` funzione richiama un metodo nel renderer del personalizzato, che a sua volta richiama il `HybridWebView.InvokeAction` metodo.
+- Il renderer personalizzato viene creato un controllo web native e carica il file HTML specificato da di `HybridWebView.Uri` proprietà.
+- Dopo aver caricato la pagina web, il renderer personalizzato inserisce le `invokeCSharpAction` funzione JavaScript nella pagina web.
+- Quando l'utente immette il proprio nome e fa clic sul codice HTML `button` elemento, il `invokeCSCode` funzione viene richiamata, che a sua volta richiama il `invokeCSharpAction` (funzione).
+- Il `invokeCSharpAction` funzione richiama un metodo nel renderer personalizzato, che a sua volta richiama il `HybridWebView.InvokeAction` (metodo).
 - Il `HybridWebView.InvokeAction` metodo richiama registrato `Action`.
 
-Nelle sezioni seguenti verranno illustrate come questo processo viene implementato in ogni piattaforma.
+Le sezioni seguenti illustreranno come questo processo viene implementato in ogni piattaforma.
 
-### <a name="creating-the-custom-renderer-on-ios"></a>Creazione di Renderer personalizzato in iOS
+### <a name="creating-the-custom-renderer-on-ios"></a>Creare il Renderer personalizzati in iOS
 
-Esempio di codice seguente viene illustrato il renderer personalizzato per la piattaforma iOS:
+Esempio di codice seguente illustra il renderer personalizzato per la piattaforma iOS:
 
 ```csharp
 [assembly: ExportRenderer (typeof(HybridWebView), typeof(HybridWebViewRenderer))]
@@ -299,28 +299,28 @@ namespace CustomRenderer.iOS
 }
 ```
 
-Il `HybridWebViewRenderer` classe carica la pagina web specificata nel `HybridWebView.Uri` proprietà nativo [ `WKWebView` ](https://developer.xamarin.com/api/type/WebKit.WKWebView/) (controllo) e `invokeCSharpAction` funzione JavaScript viene inserito nella pagina web. Dopo che l'utente immette il nome e fa clic su HTML `button` elemento, il `invokeCSharpAction` funzione JavaScript viene eseguito, con la `DidReceiveScriptMessage` metodo chiamato dopo che viene ricevuto un messaggio dalla pagina web. A sua volta, questo metodo richiama il `HybridWebView.InvokeAction` metodo che richiama l'azione registrato per visualizzare la finestra popup.
+Il `HybridWebViewRenderer` classe carica la pagina web specificata nel `HybridWebView.Uri` proprietà nativo [ `WKWebView` ](https://developer.xamarin.com/api/type/WebKit.WKWebView/) (controllo) e il `invokeCSharpAction` funzione JavaScript viene inserito nella pagina web. Una volta che l'utente immette il proprio nome e fa clic HTML `button` elemento, il `invokeCSharpAction` funzione JavaScript viene eseguito, con la `DidReceiveScriptMessage` metodo chiamato dopo che viene ricevuto un messaggio dalla pagina web. A sua volta, questo metodo richiama il `HybridWebView.InvokeAction` metodo che richiama l'azione registrata per visualizzare la finestra popup.
 
-Questa funzionalità viene ottenuta nel modo seguente:
+Questa funzionalità è disponibile come indicato di seguito:
 
-- Purché il `Control` proprietà `null`, vengono eseguite le operazioni seguenti:
+- A condizione che il `Control` è di proprietà `null`, vengono eseguite le operazioni seguenti:
   - Oggetto [ `WKUserContentController` ](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/) viene creata l'istanza, che consente l'invio di messaggi e l'inserimento di script dell'utente in una pagina web.
   - Oggetto [ `WKUserScript` ](https://developer.xamarin.com/api/type/WebKit.WKUserScript/) istanza viene creata per inserire il `invokeCSharpAction` funzione JavaScript nella pagina web dopo il caricamento della pagina web.
   - Il [ `WKUserContentController.AddScript` ](https://developer.xamarin.com/api/member/WebKit.WKUserContentController.AddUserScript/p/WebKit.WKUserScript/) metodo aggiunge il [ `WKUserScript` ](https://developer.xamarin.com/api/type/WebKit.WKUserScript/) istanza al controller di contenuto.
-  - Il [ `WKUserContentController.AddScriptMessageHandler` ](https://developer.xamarin.com/api/member/WebKit.WKUserContentController.AddScriptMessageHandler/p/WebKit.IWKScriptMessageHandler/System.String/) metodo aggiunge un gestore di messaggi di script denominato `invokeAction` per il [ `WKUserContentController` ](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/) istanza, che provoca la funzione JavaScript `window.webkit.messageHandlers.invokeAction.postMessage(data)` da definire in tutto i frame in tutte le visualizzazioni web che verranno utilizzato il `WKUserContentController` istanza.
-  - Oggetto [ `WKWebViewConfiguration` ](https://developer.xamarin.com/api/type/WebKit.WKWebViewConfiguration/) viene creata l'istanza, con la [ `WKUserContentController` ](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/) istanza viene impostata come controller di contenuto.
-  - A [ `WKWebView` ](https://developer.xamarin.com/api/type/WebKit.WKWebView/) viene creata un'istanza di controllo e `SetNativeControl` metodo viene chiamato per assegnare un riferimento al `WKWebView` controllo il `Control` proprietà.
-- Condizione che il renderer personalizzato è associato a un nuovo elemento di xamarin. Forms:
-  - Il [ `WKWebView.LoadRequest` ](https://developer.xamarin.com/api/member/WebKit.WKWebView.LoadRequest/p/Foundation.NSUrlRequest/) metodo carica il file HTML specificato dal `HybridWebView.Uri` proprietà. Il codice specifica che il file è archiviato nel `Content` nella cartella del progetto. Dopo aver visualizzato la pagina web, il `invokeCSharpAction` funzione JavaScript verrà inserita nella pagina web.
+  - Il [ `WKUserContentController.AddScriptMessageHandler` ](https://developer.xamarin.com/api/member/WebKit.WKUserContentController.AddScriptMessageHandler/p/WebKit.IWKScriptMessageHandler/System.String/) metodo aggiunge un gestore di messaggi di script denominato `invokeAction` per il [ `WKUserContentController` ](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/) istanza, che causerà la funzione JavaScript `window.webkit.messageHandlers.invokeAction.postMessage(data)` essere definiti in tutte le i frame in tutte le visualizzazioni web che useranno il `WKUserContentController` istanza.
+  - Oggetto [ `WKWebViewConfiguration` ](https://developer.xamarin.com/api/type/WebKit.WKWebViewConfiguration/) creazione dell'istanza, con il [ `WKUserContentController` ](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/) istanza impostato come controller di contenuto.
+  - Oggetto [ `WKWebView` ](https://developer.xamarin.com/api/type/WebKit.WKWebView/) viene creata un'istanza di controllo e il `SetNativeControl` viene chiamato per assegnare un riferimento al `WKWebView` il controllo al `Control` proprietà.
+- Condizione che il renderer personalizzato è allegato a un nuovo elemento di xamarin. Forms:
+  - Il [ `WKWebView.LoadRequest` ](https://developer.xamarin.com/api/member/WebKit.WKWebView.LoadRequest/p/Foundation.NSUrlRequest/) metodo carica il file HTML specificato da di `HybridWebView.Uri` proprietà. Il codice specifica che il file è archiviato nel `Content` cartella del progetto. Una volta che viene visualizzata la pagina web, il `invokeCSharpAction` funzione JavaScript verrà inserito nella pagina web.
 - Quando l'elemento del renderer è associato alle modifiche:
   - Le risorse vengono rilasciate.
 
 > [!NOTE]
-> La `WKWebView` classe è supportata solo in iOS 8 e versioni successive.
+> Il `WKWebView` classe è supportata solo in iOS 8 e versioni successive.
 
-### <a name="creating-the-custom-renderer-on-android"></a>Creazione di Renderer personalizzato in Android
+### <a name="creating-the-custom-renderer-on-android"></a>Creare il Renderer personalizzati in Android
 
-Esempio di codice seguente viene illustrato il renderer personalizzato per la piattaforma Android:
+Esempio di codice seguente illustra il renderer personalizzato per la piattaforma Android:
 
 ```csharp
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
@@ -371,19 +371,19 @@ namespace CustomRenderer.Droid
 }
 ```
 
-Il `HybridWebViewRenderer` classe carica la pagina web specificata nel `HybridWebView.Uri` proprietà nativo [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) (controllo) e `invokeCSharpAction` funzione JavaScript viene inserito nella pagina web, dopo aver caricato la pagina web, con il `InjectJS` metodo. Dopo che l'utente immette il nome e fa clic su HTML `button` elemento, il `invokeCSharpAction` viene eseguita la funzione JavaScript. Questa funzionalità viene ottenuta nel modo seguente:
+Il `HybridWebViewRenderer` classe carica la pagina web specificata nel `HybridWebView.Uri` proprietà nativo [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) (controllo) e il `invokeCSharpAction` funzione JavaScript viene inserito nella pagina web, dopo aver caricato la pagina web, con la `InjectJS` (metodo). Una volta che l'utente immette il proprio nome e fa clic HTML `button` elemento, il `invokeCSharpAction` funzione JavaScript viene eseguito. Questa funzionalità è disponibile come indicato di seguito:
 
-- Purché il `Control` proprietà `null`, vengono eseguite le operazioni seguenti:
+- A condizione che il `Control` è di proprietà `null`, vengono eseguite le operazioni seguenti:
   - Nativo [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) istanza viene creata e JavaScript è abilitato nel controllo.
-  - Il `SetNativeControl` metodo viene chiamato per assegnare un riferimento nativo [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) controllo il `Control` proprietà.
-- Condizione che il renderer personalizzato è associato a un nuovo elemento di xamarin. Forms:
-  - Il [ `WebView.AddJavascriptInterface` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.AddJavascriptInterface/p/Java.Lang.Object/System.String/) inserisce un nuovo metodo `JSBridge` istanza nel frame principale del contesto di JavaScript di WebView, denominarla `jsBridge`. In questo modo i metodi di `JSBridge` classe a cui accedere da JavaScript.
-  - Il [ `WebView.LoadUrl` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.LoadUrl/p/System.String/) metodo carica il file HTML specificato dal `HybridWebView.Uri` proprietà. Il codice specifica che il file è archiviato nel `Content` nella cartella del progetto.
-  - Il `InjectJS` metodo viene richiamato per inserire il `invokeCSharpAction` funzione JavaScript nella pagina web.
+  - Il `SetNativeControl` viene chiamato per assegnare un riferimento all'oggetto nativo [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) controllo il `Control` proprietà.
+- Condizione che il renderer personalizzato è allegato a un nuovo elemento di xamarin. Forms:
+  - Il [ `WebView.AddJavascriptInterface` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.AddJavascriptInterface/p/Java.Lang.Object/System.String/) metodo inserisce un nuovo `JSBridge` istanza nel frame principale del contesto di JavaScript di WebView, denominarlo `jsBridge`. In questo modo i metodi nel `JSBridge` classe a cui accedere da JavaScript.
+  - Il [ `WebView.LoadUrl` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.LoadUrl/p/System.String/) metodo carica il file HTML specificato da di `HybridWebView.Uri` proprietà. Il codice specifica che il file è archiviato nel `Content` cartella del progetto.
+  - Il `InjectJS` metodo viene richiamato per l'inserimento di `invokeCSharpAction` funzione JavaScript nella pagina web.
 - Quando l'elemento del renderer è associato alle modifiche:
   - Le risorse vengono rilasciate.
 
-Quando il `invokeCSharpAction` funzione JavaScript viene eseguito, a sua volta richiama il `JSBridge.InvokeAction` (metodo), come illustrato nell'esempio di codice seguente:
+Quando la `invokeCSharpAction` funzione JavaScript viene eseguito, a sua volta richiama il `JSBridge.InvokeAction` metodo, che viene visualizzato nell'esempio di codice seguente:
 
 ```csharp
 public class JSBridge : Java.Lang.Object
@@ -408,19 +408,19 @@ public class JSBridge : Java.Lang.Object
 }
 ```
 
-La classe deve derivare da `Java.Lang.Object`, e metodi esposti a JavaScript devono essere provvisto di `[JavascriptInterface]` e `[Export]` gli attributi. Pertanto, quando il `invokeCSharpAction` funzione JavaScript viene inserito nella pagina web e viene eseguito, verrà chiamato il `JSBridge.InvokeAction` metodo a causa di essere decorata con il `[JavascriptInterface]` e `[Export("invokeAction")]` gli attributi. A sua volta, il `InvokeAction` metodo richiama il `HybridWebView.InvokeAction` metodo che verrà richiamato l'azione registrato per visualizzare la finestra popup.
+La classe deve derivare da `Java.Lang.Object`, e i metodi esposti a JavaScript devono essere decorati con il `[JavascriptInterface]` e `[Export]` attributi. Pertanto, quando la `invokeCSharpAction` funzione JavaScript viene inserito nella pagina web e viene eseguito, verrà chiamato il `JSBridge.InvokeAction` metodo a causa di essere decorata con il `[JavascriptInterface]` e `[Export("invokeAction")]` attributi. A sua volta, il `InvokeAction` metodo richiama il `HybridWebView.InvokeAction` metodo, di cui verrà richiamato l'azione registrata per visualizzare la finestra popup.
 
 > [!NOTE]
-> I progetti che utilizzano il `[Export]` attributo deve includere un riferimento a `Mono.Android.Export`, o si verificherà un errore del compilatore.
+> I progetti che utilizzano le `[Export]` attributo deve includere un riferimento a `Mono.Android.Export`, o si verificherà un errore del compilatore.
 
-Si noti che il `JSBridge` classe mantiene una `WeakReference` per la `HybridWebViewRenderer` classe. Questo permette di evitare la creazione di un riferimento circolare tra le due classi. Per ulteriori informazioni vedere [riferimenti deboli](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx) su MSDN.
+Si noti che il `JSBridge` classe mantiene una `WeakReference` per il `HybridWebViewRenderer` classe. Questo serve a evitare la creazione di un riferimento circolare tra le due classi. Per altre informazioni, vedere [riferimenti deboli](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx) su MSDN.
 
 > [!IMPORTANT]
-> In Android Oreo assicurarsi che il manifesto Android imposta il **versione di destinazione Android** a **automatica**. In caso contrario, l'esecuzione del codice verrà generato l'errore messaggio "invokeCSharpAction non è definito".
+> In Android Oreo assicurarsi che i set di manifesto Android il **Target Android version** al **automatica**. In caso contrario, eseguire questo codice verrà generato l'errore messaggio "invokeCSharpAction non è definito".
 
-### <a name="creating-the-custom-renderer-on-uwp"></a>Creazione di Renderer personalizzato in UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Creare il Renderer personalizzato nella piattaforma UWP
 
-Esempio di codice seguente viene illustrato il renderer personalizzato per la piattaforma UWP:
+Esempio di codice seguente illustra il renderer personalizzato per la piattaforma UWP:
 
 ```csharp
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
@@ -468,24 +468,24 @@ namespace CustomRenderer.UWP
 }
 ```
 
-Il `HybridWebViewRenderer` classe carica la pagina web specificata nel `HybridWebView.Uri` proprietà nativo `WebView` (controllo) e `invokeCSharpAction` funzione JavaScript viene inserito nella pagina web, dopo aver caricato la pagina web, con il `WebView.InvokeScriptAsync` metodo. Dopo che l'utente immette il nome e fa clic su HTML `button` elemento, il `invokeCSharpAction` funzione JavaScript viene eseguito, con la `OnWebViewScriptNotify` metodo chiamato dopo che viene ricevuta una notifica dalla pagina web. A sua volta, questo metodo richiama il `HybridWebView.InvokeAction` metodo che richiama l'azione registrato per visualizzare la finestra popup.
+Il `HybridWebViewRenderer` classe carica la pagina web specificata nel `HybridWebView.Uri` proprietà nativo `WebView` (controllo) e il `invokeCSharpAction` funzione JavaScript viene inserito nella pagina web, dopo aver caricato la pagina web, con la `WebView.InvokeScriptAsync` (metodo). Una volta che l'utente immette il proprio nome e fa clic HTML `button` elemento, il `invokeCSharpAction` funzione JavaScript viene eseguito, con la `OnWebViewScriptNotify` metodo chiamato dopo che viene ricevuta una notifica della pagina web. A sua volta, questo metodo richiama il `HybridWebView.InvokeAction` metodo che richiama l'azione registrata per visualizzare la finestra popup.
 
-Questa funzionalità viene ottenuta nel modo seguente:
+Questa funzionalità è disponibile come indicato di seguito:
 
-- Purché il `Control` proprietà `null`, vengono eseguite le operazioni seguenti:
-  - Il `SetNativeControl` metodo viene chiamato per creare un'istanza nuova nativo `WebView` controllare e assegnare un riferimento a questo argomento per il `Control` proprietà.
-- Condizione che il renderer personalizzato è associato a un nuovo elemento di xamarin. Forms:
-  - Gestori eventi per il `NavigationCompleted` e `ScriptNotify` gli eventi vengono registrati. Il `NavigationCompleted` evento viene generato quando il nativo `WebView` controllo ha terminato il caricamento del contenuto corrente o se navigazione ha esito negativo. Il `ScriptNotify` evento viene generato quando il contenuto nativo `WebView` controllo utilizza JavaScript per passare una stringa per l'applicazione. L'attivazione della pagina web di `ScriptNotify` evento chiamando `window.external.notify` durante il passaggio di un `string` parametro.
-  - Il `WebView.Source` proprietà è impostata per l'URI del file HTML specificato dal `HybridWebView.Uri` proprietà. Nel codice si presuppone che il file è archiviato nel `Content` nella cartella del progetto. Dopo aver visualizzato la pagina web, il `NavigationCompleted` evento verrà generato e `OnWebViewNavigationCompleted` metodo verrà richiamato. Il `invokeCSharpAction` funzione JavaScript verrà quindi inserita nella pagina web con il `WebView.InvokeScriptAsync` (metodo), a condizione che la navigazione completata.
+- A condizione che il `Control` è di proprietà `null`, vengono eseguite le operazioni seguenti:
+  - Il `SetNativeControl` metodo viene chiamato per creare un'istanza di un nuovo nativo `WebView` controllano e assegnare un riferimento a esso con il `Control` proprietà.
+- Condizione che il renderer personalizzato è allegato a un nuovo elemento di xamarin. Forms:
+  - I gestori eventi per il `NavigationCompleted` e `ScriptNotify` gli eventi vengono registrati. Il `NavigationCompleted` evento viene generato quando il nativo `WebView` controllo ha completato il caricamento del contenuto corrente o se navigazione ha esito negativo. Il `ScriptNotify` evento viene generato quando il contenuto nativo `WebView` controllo Usa JavaScript per passare una stringa per l'applicazione. L'attivazione di pagina web di `ScriptNotify` evento chiamando `window.external.notify` mentre si passano un `string` parametro.
+  - Il `WebView.Source` viene impostata per l'URI del file HTML specificato da di `HybridWebView.Uri` proprietà. Nel codice si presuppone che il file è archiviato nel `Content` cartella del progetto. Una volta che viene visualizzata la pagina web, il `NavigationCompleted` viene generato l'evento e `OnWebViewNavigationCompleted` verrà richiamato metodo. Il `invokeCSharpAction` JavaScript funzione verrà quindi inserita nella pagina web con il `WebView.InvokeScriptAsync` metodo, a condizione che la navigazione completata correttamente.
 - Quando l'elemento del renderer è associato alle modifiche:
-  - Gli eventi sono annullati da.
+  - Gli eventi sono annullati.
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo ha illustrato come creare un renderer personalizzato per un `HybridWebView` controllo personalizzato, che viene descritto come migliorare i controlli specifici della piattaforma web per consentire al codice c# di essere richiamato da JavaScript.
+Questo articolo ha illustrato come creare un renderer personalizzato per un `HybridWebView` controllo personalizzato, che illustra come migliorare i controlli specifici della piattaforma web per consentire al codice c# di essere richiamato da JavaScript.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [CustomRendererHybridWebView (esempio)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
-- [Chiamare c# da JavaScript](https://developer.xamarin.com/recipes/android/controls/webview/call_csharp_from_javascript/)
+- [Chiamata di codice c# da JavaScript](https://developer.xamarin.com/recipes/android/controls/webview/call_csharp_from_javascript/)

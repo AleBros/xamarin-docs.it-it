@@ -1,66 +1,66 @@
 ---
-title: Pagina a schede xamarin. Forms
-description: Il TabbedPage xamarin. Forms è costituito da un elenco di schede e un'area più grande di dettaglio, con ogni scheda, il caricamento del contenuto nell'area dei dettagli. In questo articolo viene illustrato come utilizzare un TabbedPage per spostarsi di una raccolta di pagine.
+title: Pagina a schede di xamarin. Forms
+description: TabbedPage di xamarin. Forms è costituito da un elenco di schede e un'area più grande di dettaglio, con ogni scheda di caricamento del contenuto nell'area dei dettagli. Questo articolo illustra come usare un TabbedPage per scorrere una raccolta di pagine.
 ms.prod: xamarin
 ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: b7e3eb8539704fccd713af45490c35a6196b072f
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 3eb978780222da2050fc91dfa41c68ef4bd3b6f4
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240379"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996295"
 ---
-# <a name="xamarinforms-tabbed-page"></a>Pagina a schede xamarin. Forms
+# <a name="xamarinforms-tabbed-page"></a>Pagina a schede di xamarin. Forms
 
-_Il TabbedPage xamarin. Forms è costituito da un elenco di schede e un'area più grande di dettaglio, con ogni scheda, il caricamento del contenuto nell'area dei dettagli. In questo articolo viene illustrato come utilizzare un TabbedPage per spostarsi di una raccolta di pagine._
+_TabbedPage di xamarin. Forms è costituito da un elenco di schede e un'area più grande di dettaglio, con ogni scheda di caricamento del contenuto nell'area dei dettagli. Questo articolo illustra come usare un TabbedPage per scorrere una raccolta di pagine._
 
 ## <a name="overview"></a>Panoramica
 
-Le schermate seguenti viene illustrato un [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) in ogni piattaforma:
+L'esempio di screenshot seguente mostra una [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) in ogni piattaforma:
 
 ![](tabbed-page-images/tab1.png "Esempio TabbedPage")
 
-Le seguenti catture concentrano sul formato scheda in ogni piattaforma:
+Le schermate seguenti si concentrano sul formato di scheda in ogni piattaforma:
 
 ![](tabbed-page-images/tabbedpage-components.png "TabbedPage scheda componenti")
 
-Il layout di un [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/)e le relative schede, dipende dalla piattaforma:
+Il layout di un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)e le relative schede dipende dalla piattaforma:
 
-- In iOS, verrà visualizzato l'elenco delle schede nella parte inferiore della schermata e nell'area dettaglio è sopra. Ogni scheda è inoltre presente un'icona che deve essere un 30 x 30 PNG con trasparenza per la normale risoluzione 60x60 per ad alta risoluzione e 90 x 90 per iPhone 6 Plus risoluzione. Se sono presenti più di cinque schede, una *più* verrà visualizzata la scheda, che può essere utilizzato per accedere le schede aggiuntive. Per ulteriori informazioni sul caricamento di immagini in un'applicazione di xamarin. Forms, vedere [utilizzo delle immagini](~/xamarin-forms/user-interface/images.md). Per ulteriori informazioni sui requisiti di icona, vedere [la creazione di applicazioni a schede](~/ios/user-interface/controls/creating-tabbed-applications.md).
-
-    > [!NOTE]
-  > Si noti che il `TabbedRenderer` per iOS è un override `GetIcon` metodo che può essere utilizzato per caricare le icone scheda da un'origine specificata. Questa sostituzione consente di utilizzare le immagini SVG sotto forma di icone in una `TabbedPage`. Inoltre, possono essere fornite selezionate e le versioni di un'icona.
-
-- In Android, verrà visualizzato l'elenco delle schede nella parte superiore della schermata e nell'area dettaglio è inferiore. I nomi delle schede sono automaticamente in maiuscolo e l'utente può scorrere la raccolta di schede se vi sono troppi per essere contenuta in una schermata.
+- In iOS, verrà visualizzato l'elenco di schede nella parte inferiore dello schermo e l'area dei dettagli è sopra. Ogni scheda è presente anche un'immagine dell'icona che deve essere un 30 x 30 PNG con trasparenza per la risoluzione del normale, 60x60 per ad alta risoluzione e 90 x 90 per iPhone 6 Plus risoluzione. Se sono presenti più di cinque schede, una *altre* verrà visualizzata la scheda, che può essere utilizzato per accedere le schede aggiuntive. Per altre informazioni sul caricamento di immagini in un'applicazione xamarin. Forms, vedere [utilizzo di immagini](~/xamarin-forms/user-interface/images.md). Per altre informazioni sui requisiti di icona, vedere [creazione di applicazioni a schede](~/ios/user-interface/controls/creating-tabbed-applications.md).
 
     > [!NOTE]
-  > Si noti che quando si utilizza una delle applicazioni in Android, ogni scheda verrà anche visualizzata un'icona. Inoltre, il `TabbedPageRenderer` per Android delle applicazioni presenta un sottoponibile a override `SetTabIcon` metodo che può essere utilizzato per caricare le icone scheda da un oggetto personalizzato `Drawable`. Questa sostituzione consente di utilizzare le immagini SVG sotto forma di icone in una `TabbedPage`.
+  > Si noti che il `TabbedRenderer` per iOS ha un sottoponibile a override `GetIcon` metodo che può essere utilizzato per caricare le icone di scheda da un'origine specificata. Questa sostituzione consente di usare le immagini SVG come icone su una `TabbedPage`. Inoltre, possono essere fornite selezionate e le versioni di un'icona.
 
-- In Windows tablet fattori di forma, le schede non sono sempre visibili e gli utenti devono scorrere verso il basso (o pulsante destro del mouse, se hanno un mouse collegato) per visualizzare le schede in un `TabbedPage` (come illustrato di seguito).
+- In Android, viene visualizzato l'elenco di schede nella parte superiore della schermata per impostazione predefinita, e l'area dei dettagli è inferiore. Elenco di schede, tuttavia, può essere spostato nella parte inferiore della schermata con una specifica della piattaforma. Per altre informazioni, vedere [posizionamento di impostazione TabbedPage sulla barra degli strumenti e il colore](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar).
 
-![](tabbed-page-images/windows-tabs.png "TabbedPage schede in Windows")
+    > [!NOTE]
+  > Si noti che quando si usa AppCompat in Android, ciascuna scheda verrà anche visualizzata un'icona. Inoltre, il `TabbedPageRenderer` per AppCompat Android ha un sottoponibile a override `SetTabIcon` metodo che può essere utilizzato per caricare le icone di scheda da una classe personalizzata `Drawable`. Questa sostituzione consente di usare le immagini SVG come icone su una `TabbedPage`.
+
+- In Windows tablet fattori di forma, le schede non sono sempre visibili e gli utenti devono scorrere rapidamente verso il basso (o destro del mouse e se dispongono di un mouse collegato) per visualizzare le schede in una `TabbedPage` (come illustrato di seguito).
+
+![](tabbed-page-images/windows-tabs.png "Schede TabbedPage su Windows")
 
 ## <a name="creating-a-tabbedpage"></a>Creazione di un TabbedPage
 
-Due approcci possono essere utilizzati per creare un [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/):
+Due approcci possono essere utilizzati per creare un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage):
 
-- [Popolare](#Populating_a_TabbedPage_with_a_Page_Collection) il [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) con una raccolta di figlio [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) oggetti, ad esempio una raccolta di [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) istanze.
-- [Assegnare](#Populating_a_TabbedPage_with_a_Template) una raccolta per il [ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemsSource/) proprietà e assegnare un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) per il [ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemTemplate/) proprietà da restituire per le pagine oggetti nella raccolta.
+- [Popolare](#Populating_a_TabbedPage_with_a_Page_Collection) il [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) con una raccolta di elemento figlio [ `Page` ](xref:Xamarin.Forms.Page) oggetti, ad esempio una raccolta di [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) istanze.
+- [Assegnare](#Populating_a_TabbedPage_with_a_Template) una raccolta per il [ `ItemsSource` ](xref:Xamarin.Forms.MultiPage`1.ItemsSource) proprietà e assegnare una [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) per il [ `ItemTemplate` ](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) proprietà per restituire le pagine per oggetti nella raccolta.
 
-Con entrambi gli approcci di [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) visualizzerà ogni pagina quando l'utente sceglie ogni scheda.
+Con entrambi gli approcci, il [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) visualizzerà ogni pagina quando l'utente seleziona ogni scheda.
 
 > [!NOTE]
-> È consigliabile un [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) deve essere popolato con [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) e [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)solo istanze. Ciò è utile per garantire un'esperienza utente coerente in tutte le piattaforme.
+> È consigliabile che una [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) deve essere popolato con [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) e [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)solo istanze. Ciò è utile per garantire un'esperienza utente uniforme tra tutte le piattaforme.
 
 <a name="Populating_a_TabbedPage_with_a_Page_Collection" />
 
 ### <a name="populating-a-tabbedpage-with-a-page-collection"></a>Popolamento di un TabbedPage con una raccolta di pagina
 
-Nell'esempio di codice XAML seguente viene un [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) costruito da popolare con una raccolta di figlio [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) oggetti:
+L'esempio di codice XAML seguente mostra una [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) costruito dal popolarlo con una raccolta di figlio [ `Page` ](xref:Xamarin.Forms.Page) oggetti:
 
 ```xaml
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -76,7 +76,7 @@ Nell'esempio di codice XAML seguente viene un [ `TabbedPage` ](https://developer
 </TabbedPage>
 ```
 
-L'esempio di codice seguente mostra l'equivalente [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) creato in c#:
+Esempio di codice seguente viene illustrato l'equivalente [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) creato in c#:
 
 ```csharp
 public class MainPageCS : TabbedPage
@@ -93,27 +93,27 @@ public class MainPageCS : TabbedPage
 }
 ```
 
-Il [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) viene popolato con due figlio [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) oggetti. Il primo figlio è un [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) istanza e la seconda scheda è un [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) contenente un `ContentPage` istanza.
+Il [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) viene popolata con l'elemento figlio due [ `Page` ](xref:Xamarin.Forms.Page) oggetti. Il primo elemento figlio è un [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) istanza, mentre la seconda scheda è un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) contenente una `ContentPage` istanza.
 
 > [!NOTE]
-> Il [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) non supporta la virtualizzazione dell'interfaccia utente. Pertanto, le prestazioni possono essere interessate se la `TabbedPage` contiene troppi elementi figlio.
+> Il [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) non supporta la virtualizzazione dell'interfaccia utente. Di conseguenza, le prestazioni possono essere interessate se la `TabbedPage` contiene troppi elementi figlio.
 
-Le schermate seguenti viene illustrato il `TodayPage` [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) istanza, viene visualizzato sul *oggi* scheda:
+Gli screenshot seguenti viene illustrato il `TodayPage` [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) istanza, che viene visualizzato sul *oggi* scheda:
 
 ![](tabbed-page-images/today-page.png "In un TabbedPage ContentPage")
 
-Selezionando il *pianificazione* scheda consente di visualizzare il `SchedulePage` [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) istanza, che viene eseguito il wrapping in un [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) istanza e viene visualizzata di cattura di schermata seguente:
+Selezionando il *pianificazione* scheda consente di visualizzare i `SchedulePage` [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) istanza, che viene eseguito il wrapping in un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) dell'istanza e viene visualizzata nel schermata seguente:
 
-![](tabbed-page-images/schedule-page.png "In un TabbedPage NavigationPage")
+![](tabbed-page-images/schedule-page.png "NavigationPage in un TabbedPage")
 
-Per informazioni sul layout di un [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/), vedere [esecuzione navigazione](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
+Per informazioni sul layout di un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage), vedere [esecuzione navigazione](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
 > [!NOTE]
-> Mentre è possibile inserire un [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) in un [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/), non è consigliabile inserire un `TabbedPage` in un `NavigationPage`. Questo avviene perché, in iOS, una `UITabBarController` sempre funge da wrapper per il `UINavigationController`. Per ulteriori informazioni, vedere [combinati Visualizza Controller interfacce](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/CombiningViewControllers.html) in iOS Developer Library.
+> Benché sia accettabile per inserire un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) in un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage), non è consigliabile inserire un `TabbedPage` in un `NavigationPage`. Questo avviene perché, in iOS, una `UITabBarController` sempre funge da wrapper per il `UINavigationController`. Per altre informazioni, vedere [combinare interfacce del Controller di visualizzazione](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/CombiningViewControllers.html) in iOS Developer Library.
 
 #### <a name="navigation-inside-a-tab"></a>Navigazione all'interno di una scheda
 
-Navigazione può essere eseguita dalla seconda scheda richiamando il [ `PushAsync` ](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)/) metodo il [ `Navigation` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Navigation/) proprietà del [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) istanza, come illustrato nell'esempio di codice seguente:
+Navigazione può essere eseguita dalla seconda scheda richiamando il [ `PushAsync` ](xref:Xamarin.Forms.NavigationPage.PushAsync*) metodo sul [ `Navigation` ](xref:Xamarin.Forms.VisualElement.Navigation) proprietà del [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) istanza, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnUpcomingAppointmentsButtonClicked (object sender, EventArgs e)
@@ -122,17 +122,17 @@ async void OnUpcomingAppointmentsButtonClicked (object sender, EventArgs e)
 }
 ```
 
-Di conseguenza l'istanza `UpcomingAppointmentsPage` viene inserita tramite push nello stack di navigazione, in cui diventa la pagina attiva. Come illustrato nelle schermate seguenti:
+Di conseguenza l'istanza `UpcomingAppointmentsPage` viene inserita tramite push nello stack di navigazione, in cui diventa la pagina attiva. Come illustrato negli screenshot seguenti:
 
 ![](tabbed-page-images/navigationpage.png "Navigazione all'interno di una scheda")
 
-Per ulteriori informazioni sull'esecuzione di navigazione tramite il [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) classe, vedere [navigazione gerarchica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
+Per altre informazioni sull'esecuzione di navigazione utilizzando la [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) classe, vedere [navigazione gerarchica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
 <a name="Populating_a_TabbedPage_with_a_Template" />
 
 ### <a name="populating-a-tabbedpage-with-a-template"></a>Popolamento di un TabbedPage con un modello
 
-Nell'esempio di codice XAML seguente viene un [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) costruito assegnando un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) per il [ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemTemplate/) proprietà da restituire per le pagine oggetti nella raccolta:
+L'esempio di codice XAML seguente mostra una [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) costruito tramite l'assegnazione di un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) per il [ `ItemTemplate` ](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) proprietà per restituire le pagine per oggetti nella raccolta:
 
 ```xaml
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -164,7 +164,7 @@ Nell'esempio di codice XAML seguente viene un [ `TabbedPage` ](https://developer
 </TabbedPage>
 ```
 
-Il [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) viene popolato con i dati impostando il [ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemsSource/) proprietà nel costruttore per il file code-behind:
+Il [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) viene popolata con i dati impostando i [ `ItemsSource` ](xref:Xamarin.Forms.MultiPage`1.ItemsSource) proprietà nel costruttore per il file code-behind:
 
 ```csharp
 public TabbedPageDemoPage ()
@@ -174,7 +174,7 @@ public TabbedPageDemoPage ()
 }
 ```
 
-L'esempio di codice seguente mostra l'equivalente [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) creato in c#:
+Esempio di codice seguente viene illustrato l'equivalente [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) creato in c#:
 
 ```csharp
 public class TabbedPageDemoPageCS : TabbedPage
@@ -232,20 +232,20 @@ public class TabbedPageDemoPageCS : TabbedPage
 }
 ```
 
-Ogni scheda vengono visualizzate una [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) che usa una serie di [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) e [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) istanze per visualizzare i dati per la scheda. La schermata seguente mostra il contenuto per il *Tamarin* scheda:
+Ogni scheda vengono visualizzate una [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) che usa una serie di [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) e [ `Label` ](xref:Xamarin.Forms.Label) istanze per visualizzare i dati per la scheda. Gli screenshot seguenti mostrano il contenuto per il *Tamarin* scheda:
 
 ![](tabbed-page-images/tab3.png "Popolamento di un TabbedPage con un modello")
 
 Selezionare quindi un'altra scheda Visualizza il contenuto per tale scheda.
 
 > [!NOTE]
-> Il [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) non supporta la virtualizzazione dell'interfaccia utente. Pertanto, le prestazioni possono essere interessate se la `TabbedPage` contiene troppi elementi figlio.
+> Il [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) non supporta la virtualizzazione dell'interfaccia utente. Di conseguenza, le prestazioni possono essere interessate se la `TabbedPage` contiene troppi elementi figlio.
 
-Per ulteriori informazioni sul [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/), vedere [capitolo 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) di libro di Petzolds xamarin. Forms.
+Per altre informazioni sul [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage), vedere [capitolo 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) del libro di xamarin. Forms Petzolds.
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo viene illustrato come utilizzare un TabbedPage per spostarsi di una raccolta di pagine. Di xamarin. Forms [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) è costituito da un elenco di schede e un'area più grande di dettaglio, con ogni scheda, il caricamento del contenuto nell'area dei dettagli.
+In questo articolo viene illustrato come utilizzare un TabbedPage per scorrere una raccolta di pagine. Xamarin. Forms [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) è costituito da un elenco di schede e un'area più grande di dettaglio, con ogni scheda di caricamento del contenuto nell'area dei dettagli.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
@@ -253,4 +253,4 @@ In questo articolo viene illustrato come utilizzare un TabbedPage per spostarsi 
 - [Tipi di pagina](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
 - [TabbedPageWithNavigationPage (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
 - [TabbedPage (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPage/)
-- [TabbedPage](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/)
+- [TabbedPage](xref:Xamarin.Forms.TabbedPage)

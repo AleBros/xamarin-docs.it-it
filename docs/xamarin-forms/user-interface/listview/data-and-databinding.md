@@ -1,28 +1,28 @@
 ---
-title: Origini dati di ListView
-description: In questo articolo viene illustrato come popolare il controllo ListView xamarin. Forms con i dati e come utilizzare l'associazione dati con un controllo ListView.
+title: Origini dati ListView
+description: Questo articolo illustra come compilare il ListView di xamarin. Forms con i dati e come usare il data binding con un ListView.
 ms.prod: xamarin
 ms.assetid: B5571660-1E82-4379-95C3-0725288CF5D9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: aa9c23266329c03b3b28c7795f67290bbc23c4bf
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 17c353844a7ddc808e5d9f0632434472913170a4
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245540"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995206"
 ---
-# <a name="listview-data-sources"></a>Origini dati di ListView
+# <a name="listview-data-sources"></a>Origini dati ListView
 
-ListView viene utilizzato per visualizzare gli elenchi di dati. Si apprenderà sulla compilazione di un controllo ListView con i dati e come è possibile associare l'elemento selezionato.
+ListView viene utilizzato per visualizzare gli elenchi di dati. Si apprenderanno informazioni sul popolamento di un ListView con dati e come è possibile associare all'elemento selezionato.
 
-- **[Impostazione ItemsSource](#ItemsSource)**  &ndash; utilizza un elenco semplice o una matrice.
-- **[Associazione dati](#Data_Binding)**  &ndash; stabilisce una relazione tra un modello e il controllo ListView. L'associazione è ideale per il modello MVVM.
+- **[Impostazione proprietà ItemsSource](#ItemsSource)**  &ndash; Usa un elenco semplice o una matrice.
+- **[Data Binding](#Data_Binding)**  &ndash; stabilisce una relazione tra un modello e il ListView. L'associazione è ideale per il modello MVVM.
 
 ## <a name="itemssource"></a>ItemsSource
-ListView viene popolato con i dati utilizzando il `ItemsSource` proprietà, che può accettare qualsiasi raccolta che implementa `IEnumerable`. Il modo più semplice per compilare un `ListView` comporta l'utilizzo di una matrice di stringhe:
+ListView viene popolato con i dati utilizzando il `ItemsSource` proprietà, che può accettare qualsiasi insieme che implementa `IEnumerable`. Il modo più semplice per popolare un `ListView` prevede l'uso di una matrice di stringhe:
 
 ```csharp
 var listView = new ListView();
@@ -45,9 +45,9 @@ listView.ItemsSource.Add("monochrome");
 
 ![](data-and-databinding-images/itemssource-simple.png "ListView visualizzazione elenco di stringhe")
 
-L'approccio precedente popolerà il `ListView` con un elenco di stringhe. Per impostazione predefinita, `ListView` chiamerà `ToString` e visualizzare il risultato in un `TextCell` per ogni riga. Per personalizzare la modalità di visualizzazione dati, vedere [aspetto delle celle](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md).
+L'approccio precedente popolerà il `ListView` con un elenco di stringhe. Per impostazione predefinita `ListView` chiamerà `ToString` e visualizzare il risultato in un `TextCell` per ogni riga. Per personalizzare la modalità di visualizzazione dei dati, vedere [aspetto delle celle](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md).
 
-Poiché `ItemsSource` è stato inviato a una matrice, il contenuto non verrà aggiornate in base alle modifiche di elenco o matrice sottostante. Se si desidera il controllo ListView per aggiornare automaticamente come gli elementi vengono aggiunti, rimossi e modificati nell'elenco sottostante, è necessario utilizzare un `ObservableCollection`. [`ObservableCollection`](https://developer.xamarin.com/api/type/System.Collections.ObjectModel.ObservableCollection%3CT%3E/) è definito in `System.Collections.ObjectModel` ed è analoga `List`, ad eccezione del fatto che è possibile segnalare `ListView` delle modifiche:
+Poiché `ItemsSource` è stato inviato a una matrice, il contenuto non verrà aggiornata quando viene modificato l'elenco o una matrice sottostante. Se si desidera che il ListView per aggiornare automaticamente come gli elementi vengono aggiunti, rimossi e modificati nell'elenco sottostante, è necessario usare un `ObservableCollection`. [`ObservableCollection`](xref:System.Collections.ObjectModel.ObservableCollection`1) è definito in `System.Collections.ObjectModel` ed è analoga a `List`, ad eccezione del fatto che è possibile avvisare `ListView` di tutte le modifiche:
 
 ```csharp
 ObservableCollection<Employees> employeeList = new ObservableCollection<Employess>();
@@ -60,14 +60,14 @@ employeeList.Add(new Employee(){ DisplayName="Mr. Mono"});
 <a name="Data_Binding" />
 
 ## <a name="data-binding"></a>Data binding
-Associazione dati è "glue" che associa le proprietà di un oggetto di interfaccia utente per le proprietà di un oggetto CLR, ad esempio una classe nel ViewModel. Associazione dati è utile perché semplifica lo sviluppo di interfacce utente sostituendo la quantità di codice boilerplate un'operazione noiosa.
+Associazione dati è il "glue" che associa le proprietà di un oggetto di interfaccia utente per le proprietà di un oggetto CLR, ad esempio una classe nei ViewModel. Associazione dati è utile perché semplifica lo sviluppo di interfacce utente mediante la sostituzione di una grande quantità di noioso codice standard.
 
-Funzionamento dell'associazione dati per mantenere sincronizzati gli oggetti come modificare i relativi valori associati. Invece di dover scrivere gestori eventi per ogni volta che cambia il valore di un controllo, stabilire l'associazione e consentono l'associazione del ViewModel.
+Data binding dati funziona, mantenendo gli oggetti sincronizzati man mano che cambiano i relativi valori associati. Anziché dover scrivere gestori eventi per ogni volta che cambia il valore di un controllo, stabilire l'associazione e abilitare l'associazione nei ViewModel.
 
-Per ulteriori informazioni sull'associazione dati, vedere [nozioni fondamentali sull'associazione dati](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) che fa parte di quattro il [nozioni di base di xamarin. Forms XAML articolo serie](~/xamarin-forms/xaml/xaml-basics/index.md).
+Per altre informazioni sul data binding, vedere [nozioni di base di Data Binding](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) che fa parte di quattro il [serie di articoli nozioni di base di xamarin. Forms XAML](~/xamarin-forms/xaml/xaml-basics/index.md).
 
-### <a name="binding-cells"></a>Associazione di celle
-Proprietà delle celle (e gli elementi figlio di celle) possono essere associate alle proprietà degli oggetti nel `ItemsSource`. Ad esempio, un controllo ListView potrebbe essere utilizzato per presentare un elenco di dipendenti con immagini.
+### <a name="binding-cells"></a>Binding di celle
+Proprietà delle celle (e gli elementi figlio di celle) possono essere associate alle proprietà degli oggetti nel `ItemsSource`. Ad esempio, un ListView è stato possibile utilizzabile per presentare un elenco dei dipendenti con le immagini.
 
 La classe dipendente:
 
@@ -77,7 +77,7 @@ public class Employee{
 }
 ```
 
-`ObservableCollection<Employee>` viene creato e impostato come il `ListView`del `ItemsSource`:
+`ObservableCollection<Employee>` viene creato e impostato come le `ListView`del `ItemsSource`:
 
 ```csharp
 ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
@@ -104,7 +104,7 @@ public EmployeeListPage()
 }
 ```
 
-Nel frammento seguente viene illustrato un `ListView` associato a un elenco di dipendenti:
+Il frammento seguente illustra un `ListView` associato a un elenco di dipendenti:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -123,17 +123,17 @@ Title="Employee List">
 </ContentPage>
 ```
 
-Si noti che l'associazione è stata impostata nel codice per semplicità, anche se è stato possibile associare in XAML.
+Si noti che l'associazione è stata impostata nel codice per motivi di semplicità, anche se è stato possibile sono stati associato in XAML.
 
-Il bit precedente del codice XAML definisce un `ContentPage` che contiene un `ListView`. L'origine dati di `ListView` è impostata tramite il `ItemsSource` attributo. Il layout di ogni riga nel `ItemsSource`è definito all'interno di `ListView.ItemTemplate` elemento.
+Il bit di XAML precedente definisce una `ContentPage` che contiene un `ListView`. L'origine dati del `ListView` viene impostato tramite la `ItemsSource` attributo. Il layout di ogni riga nel `ItemsSource`è definito all'interno di `ListView.ItemTemplate` elemento.
 
 Questo è il risultato:
 
-![](data-and-databinding-images/bound-data.png "ListView con associazione dati")
+![](data-and-databinding-images/bound-data.png "ListView con Data Binding")
 
 ### <a name="binding-selecteditem"></a>Associazione SelectedItem
 
-Sarà spesso si desidera associare all'elemento selezionato di un `ListView`, invece di utilizzare un gestore eventi per rispondere alle modifiche. A tale scopo in XAML, associare il `SelectedItem` proprietà:
+Spesso è opportuno per l'associazione all'elemento selezionato di un `ListView`, anziché usare un gestore eventi per rispondere alle modifiche. A questo scopo in XAML, associare il `SelectedItem` proprietà:
 
 ```xaml
 <ListView x:Name="listView"
@@ -143,7 +143,7 @@ Sarà spesso si desidera associare all'elemento selezionato di un `ListView`, in
 </ListView>
 ```
 
-Supponendo che `listView`del `ItemsSource` è riportato un elenco di stringhe, `SomeLabel` avrà la proprietà text associata al `SelectedItem`.
+Presupponendo che `listView`del `ItemsSource` è riportato un elenco di stringhe `SomeLabel` avrà la relativa proprietà text associata al `SelectedItem`.
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: Layout in xamarin. Forms
-description: In questo articolo vengono spiegati xamarin. Forms ha diversi layout e le funzionalità nell'organizzazione del contenuto sullo schermo.
+title: Layout di xamarin. Forms
+description: Xamarin. Forms dispone di diversi layout e le funzionalità nell'organizzazione del contenuto sullo schermo e vengono spiegati in questo articolo.
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms
@@ -8,52 +8,52 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: d11e0e286c25f11c24dc788be8d1c29155261b7a
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: cff5f9c15f4608ecfb643d2c49dd636df8b18b5c
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244890"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995755"
 ---
-# <a name="layouts-in-xamarinforms"></a>Layout in xamarin. Forms
+# <a name="layouts-in-xamarinforms"></a>Layout di xamarin. Forms
 
 Xamarin. Forms dispone di diversi layout e le funzionalità nell'organizzazione del contenuto sullo schermo.
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
-**Layout di xamarin. Forms, da [University Xamarin](https://university.xamarin.com/)**
+**Layout di xamarin. Forms, da [Xamarin University](https://university.xamarin.com/)**
 
-Ogni controllo di layout è descritta di seguito, nonché informazioni dettagliate su come gestire le modifiche di orientamento dello schermo:
+Ogni controllo di layout è descritta di seguito, oltre a informazioni dettagliate su come gestire le modifiche apportate orientamento dello schermo:
 
-* **[StackLayout](stack-layout.md)**  &ndash; usato per disporre le visualizzazioni in modo lineare, orizzontalmente o verticalmente. Visualizzazioni in un StackLayout possono essere allineate al centro, a sinistro o a destro del layout.
-* **[AbsoluteLayout](absolute-layout.md)**  &ndash; utilizzato per disporre le visualizzazioni impostando coordinate & dimensioni in termini di valori assoluti o rapporti. AbsoluteLayout utilizzabile per le visualizzazioni di livello, nonché ancorarli a sinistra, destra o al centro.
-* **[RelativeLayout](relative-layout.md)**  &ndash; usato per disporre le visualizzazioni impostando vincoli rispetto al rispettivo elemento padre le dimensioni e posizione.
-* **[Griglia](grid.md)**  &ndash; usato per disporre le visualizzazioni in una griglia. È possibile specificare le righe e colonne in termini di valori assoluti o rapporti.
-* **[FlexLayout](flex-layout.md)**  &ndash; usato per disporre le viste in senso orizzontale o verticale con ritorno a capo.
-* **[Elemento ScrollView](scroll-view.md)**  &ndash; utilizzato per fornire lo scorrimento quando una vista non può essere contenuta interamente all'interno dei limiti dello schermo.
-* **[LayoutOptions](layout-options.md)**  &ndash; definire l'allineamento e l'espansione di una visualizzazione, rispetto al padre.
-* **[La trasparenza di input](#input_transparency)**  &ndash; specifica se un elemento riceve l'input.
-* **[Margine e spaziatura interna](margin-and-padding.md)**  &ndash; viene illustrato come controllare il comportamento di layout quando viene eseguito il rendering di un elemento nell'interfaccia utente.
-* **[Orientamento del dispositivo](device-orientation.md)**  &ndash; viene illustrato come gestire le modifiche di orientamento di dispositivo.
-* **[Il layout nei dispositivi desktop e tablet](tablet.md)**  &ndash; viene illustrato come ottimizzare per schermi di dimensioni maggiori in ciascuna piattaforma.
-* **[Creazione di un Layout personalizzato](custom.md)**  &ndash; viene illustrato come creare una classe di layout personalizzato.
-* **[La compressione di layout](layout-compression.md)**  &ndash; rimuove specificato layout dall'albero visuale nel tentativo di migliorare le prestazioni per il rendering della pagina.
+* **[StackLayout](stack-layout.md)**  &ndash; utilizzata per disporre le visualizzazioni in modo lineare, orizzontalmente o verticalmente. Viste in un StackLayout possono essere allineate al centro, a sinistra o destro del layout.
+* **[AbsoluteLayout](absolute-layout.md)**  &ndash; usato per organizzare le visualizzazioni impostando le coordinate & sioni in termini di valori assoluti o rapporti. AbsoluteLayout utilizzabile per le visualizzazioni di livello, nonché ancorarli a sinistra, destra o al centro.
+* **[RelativeLayout](relative-layout.md)**  &ndash; utilizzata per disporre le visualizzazioni impostando vincoli rispetto al relativo elemento padre le dimensioni e posizione.
+* **[Griglia](grid.md)**  &ndash; utilizzata per disporre le viste in una griglia. Le righe e colonne possono essere specificate in termini di valori assoluti o rapporti.
+* **[FlexLayout](flex-layout.md)**  &ndash; utilizzata per disporre le visualizzazioni in senso orizzontale o verticale con ritorno a capo.
+* **[ScrollView](scroll-view.md)**  &ndash; utilizzato per fornire lo scorrimento quando una vista non può essere contenuta interamente all'interno della schermata.
+* **[LayoutOptions](layout-options.md)**  &ndash; definiscono l'allineamento e la sostituzione per una vista, rispetto al padre.
+* **[Input trasparenza](#input_transparency)**  &ndash; specifica se un elemento riceve l'input.
+* **[Margini e spaziatura interna](margin-and-padding.md)**  &ndash; viene illustrato come controllare il comportamento di layout quando viene eseguito il rendering di un elemento nell'interfaccia utente.
+* **[Orientamento del dispositivo](device-orientation.md)**  &ndash; viene illustrato come gestire le modifiche apportate orientamento di dispositivo.
+* **[Layout nei dispositivi desktop e tablet](tablet.md)**  &ndash; viene illustrato come ottimizzare per schermi di dimensioni maggiori in ogni piattaforma.
+* **[Creazione di un Layout personalizzato](custom.md)**  &ndash; spiega come creare una classe di layout personalizzato.
+* **[Compressione del layout](layout-compression.md)**  &ndash; rimuove specificato layout dall'albero visuale nel tentativo di migliorare le prestazioni per il rendering della pagina.
 
-Controlli di piattaforma inoltre possono essere utilizzati direttamente nel layout di xamarin. Forms con [ **incorporamento Native** ](~/xamarin-forms/platform/native-views/index.md) (nuovo in xamarin. Forms 2.2), è anche possibile [ **creare layout personalizzati** ](custom.md) per soddisfare i requisiti specifici.
+I controlli della piattaforma sono anche utilizzabile direttamente nei layout di xamarin. Forms con [ **incorporamento nativa** ](~/xamarin-forms/platform/native-views/index.md) (novità in xamarin. Forms 2.2), ed è possibile [ **creare layout personalizzati** ](custom.md) per soddisfare requisiti specifici.
 
-Nella figura seguente mostra i controlli di layout:
+Il grafico seguente visualizza i controlli di layout:
 
 [![](images/layouts-sml.png "Xamarin.Forms Layouts")](images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
-## <a name="choosing-the-right-layout"></a>Scegliere il Layout di destra
+## <a name="choosing-the-right-layout"></a>Scegliere il Layout giusto
 
-Il layout desiderato nell'app della Guida oppure influire negativamente sulle come si crea un'app xamarin. Forms interessante e utilizzabile. Scorrendo da considerare come funziona ogni layout consente di scrivere codice dell'interfaccia utente semplice e più scalabile. Una schermata può avere una combinazione di diversi layout per ottenere una progettazione specifica.
+I layout che scelto nell'app per la Guida in linea oppure influire negativamente sulle come si crea un'app xamarin. Forms interessante e utilizzabile. Mettendo un po' da considerare come funziona ogni layout consente di scrivere il codice dell'interfaccia utente più pulita e più scalabile. Una schermata può avere una combinazione di layout diversi per ottenere una progettazione specifica.
 
 ### <a name="stacklayoutstack-layoutmd"></a>[StackLayout](stack-layout.md)
 
-Il `StackLayout` viene utilizzato per visualizzare le visualizzazioni lungo una riga orizzontale o verticale. Posizione e dimensioni all'interno del layout è determinato in base a una vista `HeightRequest`, `WidthRequest`, `HorizontalOptions` e `VerticalOptions`. `StackLayout` viene spesso utilizzato come il layout di base, la disposizione di altri layout sullo schermo.
+Il `StackLayout` viene utilizzato per visualizzare le visualizzazioni lungo una riga orizzontale o verticale. Posizione e dimensioni all'interno del layout viene determinata in base a una vista `HeightRequest`, `WidthRequest`, `HorizontalOptions` e `VerticalOptions`. `StackLayout` viene spesso utilizzato come il layout di base, la disposizione di altri layout sullo schermo.
 
-Per un esempio di quando `StackLayout` potrebbe essere una scelta ottimale, si consideri un'applicazione che deve visualizzare un pulsante e un'etichetta, con l'etichetta allineato a sinistra e il pulsante allineato a destra.
+Per un esempio di quando `StackLayout` potrebbe essere una buona scelta, prendere in considerazione un'app che è necessario visualizzare un pulsante e un'etichetta con l'etichetta allineato a sinistra e il pulsante allineato a destra.
 
 ```xaml
 <StackLayout Orientation="Horizontal">
@@ -77,13 +77,13 @@ Il `FlexLayout` è simile a `StackLayout` in cui viene visualizzata visualizzazi
 </FlexLayout>
 ```
 
-Tuttavia, se sono presenti troppi elementi figlio per essere contenuta in una singola riga o colonna, `FlexLayout` è inoltre in grado di disposizione testo per tali visualizzazioni. `FlexLayout` si basa sul modulo di Layout casella flessibile di CSS e ha molte le stesse opzioni predefinite per il posizionamento e allineamento dei relativi elementi figlio.
+Tuttavia, se sono presenti troppi elementi figlio per rientrare in una singola riga o colonna, `FlexLayout` è inoltre in grado di ritorno a capo le visualizzazioni. `FlexLayout` si basa sul modulo di Layout casella flessibile di CSS e ha molte delle stesse opzioni predefinite per posizionare e allineare gli elementi figlio.
 
 ### <a name="absolutelayoutabsolute-layoutmd"></a>[AbsoluteLayout](absolute-layout.md)
 
-Il `AbsoluteLayout` viene utilizzato per visualizzare le visualizzazioni, con dimensioni e posizione viene specificato come valori espliciti o relativo alle dimensioni del layout. A differenza di `StackLayout` e `Grid`, `AbsoluteLayout` consente figlio viste si sovrappongono. A differenza di `RelativeLayout`, `AbsoluteLayout` non è possibile posizionare gli elementi fuori dello schermo.
+Il `AbsoluteLayout` viene utilizzato per visualizzare le visualizzazioni, con dimensioni e posizione viene specificata sia come valori espliciti o relativo alle dimensioni del layout. A differenza `StackLayout` e `Grid`, `AbsoluteLayout` consente figlio viste si sovrappongano. A differenza `RelativeLayout`, `AbsoluteLayout` non consente di posizionare gli elementi fuori dallo schermo.
 
-Per un esempio di quando `AbsoluteLayout` potrebbe essere una scelta ottimale, si consideri un'applicazione che deve presentare le raccolte di oggetti come stack. Ciò viene spesso visualizzato quando si presentano album foto o brani. Il codice seguente fornisce l'aspetto di una pila, con elementi per l'hint per l'accumulo il relativo contenuto:
+Per un esempio di quando `AbsoluteLayout` potrebbe essere una buona scelta, si consideri un'applicazione che deve presentare le raccolte di oggetti come stack. Questo spesso si verifica quando la presentazione di album di foto o brani. Il codice seguente fornisce l'aspetto di una pila, con elementi ruotati hint il contenuto dell'accumulo per:
 
 In XAML:
 
@@ -98,18 +98,18 @@ In XAML:
 </AbsoluteLayout>
 ```
 
-Tenere presente i seguenti aspetti di codice sopra riportato:
+Tenere presente i seguenti aspetti di codice riportato in precedenza:
 
-- Ogni `Image` viene visualizzata nella stessa posizione (al centro lo spazio orizzontale)
-- Il `Padding` viene considerato da `AbsoluteLayout`, a differenza `RelativeLayout`, che viene ignorato.
-- `AbsoluteLayout.LayoutFlags` Specifica la modalità di interpretazione dei limiti di layout. In questo caso `PositionProportional`, significa che le coordinate sarà una percentuale delle dimensioni del layout, mentre la dimensione verrà interpretata come una dimensione esplicita.
-- `AbsoluteLayout.Layoutbounds` Specifica la posizione orizzontale, la posizione verticale, la larghezza e l'altezza, in quest'ordine.
+- Ogni `Image` viene visualizzata nella stessa posizione (all'interno dello spazio orizzontale)
+- Il `Padding` viene considerato dal `AbsoluteLayout`, a differenza `RelativeLayout`, che viene ignorato.
+- `AbsoluteLayout.LayoutFlags` Specifica come verranno interpretati i limiti di layout. In questo caso `PositionProportional`, significa che le coordinate sarà un rapporto tra le dimensioni del layout, mentre la dimensione verrà interpretata come una dimensione esplicita.
+- `AbsoluteLayout.Layoutbounds` Specifica la posizione orizzontale, la posizione verticale, la larghezza e l'altezza in quell'ordine.
 
 ### <a name="relativelayoutrelative-layoutmd"></a>[RelativeLayout](relative-layout.md)
 
-Il `RelativeLayout` viene utilizzato per visualizzare le visualizzazioni, con dimensioni e posizione specificati come valori rispetto ai valori del layout o un'altra visualizzazione. Valori non è necessario affinché corrisponda allo corrispondente valore per la vista correlata. Ad esempio, è possibile impostare una visualizzazione `Width` proprietà sia proporzionale a un'altra visualizzazione `X` proprietà.
+Il `RelativeLayout` viene utilizzato per visualizzare le visualizzazioni, con dimensioni e posizione specificati come valori rispetto ai valori del layout o un'altra visualizzazione. Valori relativi non sono necessario affinché corrisponda corrispondente valore per la vista correlata. Ad esempio, è possibile impostare una visualizzazione `Width` della proprietà proporzionale a un'altra visualizzazione `X` proprietà.
 
-RelativeLayout consente di creare interfacce utente che si adattano in proporzione tra le dimensioni di dispositivo. Il codice XAML seguente implementa una struttura con le caselle negli angoli superiori, con un'asta con flag nell'area:
+RelativeLayout utilizzabile per creare interfacce utente con scalabilità in modo proporzionale in dimensioni del dispositivo. il XAML seguente implementa una progettazione con le caselle negli angoli in primo piano, con un'asta con flag al centro:
 
 ```xaml
 <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -131,17 +131,17 @@ RelativeLayout consente di creare interfacce utente che si adattano in proporzio
 </RelativeLayout>
 ```
 
-Tenere presente i seguenti aspetti di codice sopra riportato:
+Tenere presente i seguenti aspetti di codice riportato in precedenza:
 
-- Le posizioni e le dimensioni vengono specificate come vincoli.
-- Asta denominato in modo che il flag (verde della casella) posizione può essere impostata relativo asta.
-- Le espressioni di vincolo è `Factor` e `Constant` proprietà, che può essere utilizzata per definire le posizioni e le dimensioni come multipli (o le frazioni di secondo) delle proprietà di altri oggetti, oltre a una costante. Costanti possono essere negative.
+- Entrambe le posizioni e le dimensioni vengono specificate come vincoli.
+- Asta è denominato in modo che il flag (del riquadro verde) posizione può essere impostata rispetto all'asta.
+- Le espressioni di vincolo hanno `Factor` e `Constant` proprietà, che può essere usata per definire le posizioni e le dimensioni in multipli (o le frazioni) delle proprietà di altri oggetti, oltre a una costante. Le costanti possono essere negative.
 
 ### <a name="gridgridmd"></a>[Griglia](grid.md)
 
-Il `Grid` viene utilizzato per visualizzare gli elementi in righe e colonne. Si noti che la griglia non è una tabella, pertanto non è il concetto di celle, righe di intestazione e piè di pagina o i bordi tra righe e colonne. Griglia in generale, non è appropriata per la visualizzazione dei dati in formato tabulare. Per tale utilizzo, prendere in considerazione un [ListView](~/xamarin-forms/user-interface/listview/index.md) o [TableView](~/xamarin-forms/user-interface/tableview.md).
+Il `Grid` viene utilizzato per visualizzare gli elementi in righe e colonne. Si noti che la griglia non è una tabella, in modo che non includa il concetto di celle, righe di intestazione e piè di pagina o i bordi tra righe e colonne. Griglia in generale, non è appropriata per la visualizzazione dei dati in formato tabulare. Per tale uso, prendere in considerazione una [ListView](~/xamarin-forms/user-interface/listview/index.md) oppure [TableView](~/xamarin-forms/user-interface/tableview.md).
 
-Per un esempio di quando un `Grid` è il layout destra da usare, considerare un input numerico per una calcolatrice. Un input numerico per un calcolo può essere costituito da quattro righe e tre colonne, ognuna con un pulsante. Il codice seguente implementa questa struttura:
+Per un esempio di quando un `Grid` è il layout giusto da usare, prendere in considerazione un input numerico per una calcolatrice. Un input numerico per un calcolo può essere costituito da quattro righe e tre colonne, ognuna con un pulsante. Il codice seguente implementa questa struttura:
 
 ```xaml
 <Grid>
@@ -171,53 +171,53 @@ Per un esempio di quando un `Grid` è il layout destra da usare, considerare un 
 </Grid>
 ```
 
-Tenere presente i seguenti aspetti di codice sopra riportato:
+Tenere presente i seguenti aspetti di codice riportato in precedenza:
 
-- Griglie e le colonne vengono specificate esplicitamente, non è stato dedotto dal contenuto.
-- `Height` e `Width` valori possono essere impostati su proporzionale, il che significa che la griglia verrà impostare tali valori per riempire lo spazio disponibile.
-- Posizione di ogni pulsante è specificata da `Grid.Row`  &  `Grid.Column` proprietà.
+- Griglie e le colonne sono specificate in modo esplicito, non è stato dedotto dal contenuto.
+- `Height` e `Width` valori possono essere impostati su stelle, il che significa che la griglia verrà impostato tali valori per riempire lo spazio disponibile.
+- Posizione di ogni pulsante viene specificata da `Grid.Row`  &  `Grid.Column` proprietà.
 
 ### <a name="layoutoptionslayout-optionsmd"></a>[LayoutOptions](layout-options.md)
 
-Il [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) struttura può essere utilizzata per definire l'allineamento e l'espansione di una visualizzazione, rispetto al padre.
+Il [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) struttura può essere utilizzata per definire l'allineamento e la sostituzione per una vista, rispetto al padre.
 
 ### <a name="margin-and-paddingmargin-and-paddingmd"></a>[Margine e spaziatura interna](margin-and-padding.md)
 
-Il [ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) e [ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) proprietà controllano il comportamento di layout quando viene eseguito il rendering di un elemento nell'interfaccia utente.
+Il [ `Margin` ](xref:Xamarin.Forms.View.Margin) e [ `Padding` ](xref:Xamarin.Forms.Layout.Padding) proprietà controllano il comportamento di layout quando viene eseguito il rendering di un elemento nell'interfaccia utente.
 
 <a name="input_transparency" />
 
 ### <a name="input-transparency"></a>Trasparenza di input
 
-Ogni elemento dispone di un [ `InputTransparent` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.InputTransparent/) proprietà che consentono di definire se l'elemento riceve l'input. Il valore predefinito è `false`, assicurandosi che l'elemento riceve l'input.
+Ogni elemento ha un [ `InputTransparent` ](xref:Xamarin.Forms.VisualElement.InputTransparent) proprietà che consente di definire se l'elemento riceve l'input. Il valore predefinito è `false`, assicurando che l'elemento riceve l'input.
 
-Quando questa proprietà è impostata su una classe contenitore, ad esempio una classe di layout, i trasferimenti di valore per gli elementi figlio. Pertanto, l'impostazione di [ `InputTransparent` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.InputTransparent/) proprietà `true` in un layout di classe comporterà gli elementi all'interno del layout non riceve l'input.
+Quando questa proprietà è impostata su una classe di contenitore, ad esempio una classe di layout, i trasferimenti di valore agli elementi figlio. Pertanto, l'impostazione di [ `InputTransparent` ](xref:Xamarin.Forms.VisualElement.InputTransparent) proprietà `true` in un layout di classe comporterà gli elementi all'interno del layout non riceve l'input.
 
 ### <a name="device-orientationdevice-orientationmd"></a>[Orientamento del dispositivo](device-orientation.md)
 
-Xamarin. Forms e il layout predefinito sono in grado di gestire le modifiche in orientamento del dispositivo. Considerare quali orientamenti app supporterà, nonché come ti utilizzo di spazio disponibile in modalità verticale e orizzontale.
+Xamarin. Forms e il layout predefinito sono in grado di gestire modifiche apportate orientamento del dispositivo. Prendere in considerazione quali orientamenti di verranno supportate dall'app, nonché come si apporteranno utilizzo di spazio disponibile in modalità verticale e orizzontale.
 
-### <a name="layout-for-tablet-and-desktop-appstabletmd"></a>[Layout per le applicazioni Desktop e Tablet](tablet.md)
+### <a name="layout-for-tablet-and-desktop-appstabletmd"></a>[Layout per le app Desktop e Tablet](tablet.md)
 
-iOS, Android e Universal Windows Platform tutte supportano dimensioni dello schermo più grande sul tablet dispositivi (nonché portatili e desktop per Windows). Xamarin. Forms consente di ottimizzare l'app per schermi di dimensioni maggiori rilevare il tipo di dispositivo e una modifica del layout di pagina o utilizzando una pagina diversa completamente completamente per schermi di dimensioni maggiori.
+iOS, Android e Universal Windows Platform tutte supportano le dimensioni dello schermo più grande su tablet dispositivi (nonché i computer portatili e desktop per Windows). Xamarin. Forms consente di ottimizzare l'app per schermi di dimensioni maggiori rilevamento del tipo di dispositivo e una regolazione del layout di pagina o utilizzando una pagina di completamente diversa completamente per schermi di dimensioni maggiori.
 
 ### <a name="creating-a-custom-layoutcustommd"></a>[Creazione di un layout personalizzato](custom.md)
 
-Xamarin. Forms definisce quattro classi layout - [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), [ `AbsoluteLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/), [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/), e [ `Grid` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), e ognuno dispone i relativi elementi figlio in modo diverso. Tuttavia, talvolta il necessario per organizzare il contenuto di pagina utilizzando un layout non forniti da xamarin. Forms. In questo articolo viene illustrato come scrivere una classe di layout personalizzato e viene illustrato un orientamento sensibili `WrapLayout` classe che dispone i relativi elementi figlio orizzontalmente attraverso la pagina e quindi esegue il wrapping la visualizzazione di elementi figlio successivi a righe aggiuntive.
+Xamarin. Forms definisce quattro classi di layout - [ `StackLayout` ](xref:Xamarin.Forms.StackLayout), [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout), [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout), e [ `Grid` ](xref:Xamarin.Forms.Grid), e ognuno dispone i relativi elementi figlio in modo diverso. Tuttavia, in alcuni casi la necessità per organizzare i contenuti di pagina utilizzando un layout non forniti da xamarin. Forms. Questo articolo spiega come scrivere una classe di layout personalizzato e viene illustrato un orientamento minuscole `WrapLayout` classe che dispone gli elementi figlio in senso orizzontale attraverso la pagina e quindi esegue il wrapping la visualizzazione degli elementi figlio successivi per le righe aggiuntive.
 
 ### <a name="layout-compressionlayout-compressionmd"></a>[Compressione del layout](layout-compression.md)
 
-La compressione di layout rimuove layout specificato dall'albero visuale nel tentativo di migliorare le prestazioni per il rendering della pagina. Il miglioramento delle prestazioni offerto varia in base alla complessità di una pagina, alla versione del sistema operativo in uso e al dispositivo in cui viene eseguita l'applicazione. Tuttavia, le prestazioni miglioreranno in modo più evidente nei dispositivi meno recenti.
+Compressione dei layout rimuove i layout specificati dall'albero visuale nel tentativo di migliorare le prestazioni per il rendering della pagina. Il miglioramento delle prestazioni offerto varia in base alla complessità di una pagina, alla versione del sistema operativo in uso e al dispositivo in cui viene eseguita l'applicazione. Tuttavia, le prestazioni miglioreranno in modo più evidente nei dispositivi meno recenti.
 
-## <a name="making-your-choice"></a>La scelta.
+## <a name="making-your-choice"></a>Rendendo la scelta
 
-Tenere presente nella maggior parte dei casi, più di un'opzione di layout può essere utilizzata per implementare la progettazione desiderata. Quando sono presenti più le scelte valide, prendere in considerazione l'approccio sarà più semplice per la situazione specifica.
-Impossibile realizzare la maggior parte dei progetti con un solo layout, in modo nidificare layout come necessari per creare progetti più complessi.
+Tenere presente che nella maggior parte dei casi, più opzioni di layout sono utilizzabile per implementare la progettazione desiderata. Quando sono presenti più le scelte valide, prendere in considerazione l'approccio sarà più semplice alla situazione specifica.
+Non è possibile realizzare la maggior parte delle progettazioni con un solo layout, pertanto i layout di annidamento come necessario creare strutture più complesse.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Linee guida dell'interfaccia umana Apple](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG)
+- [Human Interface Guidelines di Apple](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG)
 - [Sito Web di progettazione di Android](https://developer.android.com/design/index.html)
 - [Layout (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 - [Esempio BusinessTumble (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)

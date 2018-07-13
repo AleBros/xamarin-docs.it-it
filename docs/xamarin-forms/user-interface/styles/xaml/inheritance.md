@@ -1,18 +1,18 @@
 ---
 title: Ereditarietà degli stili in xamarin. Forms
-description: Stili possono ereditare da altri stili per ridurre la duplicazione e consentire il riutilizzo. In questo articolo viene illustrato come eseguire l'ereditarietà di stile in un'applicazione di xamarin. Forms.
+description: Stili possono ereditare da altri stili per ridurre la duplicazione e consentire il riutilizzo. Questo articolo illustra come eseguire l'ereditarietà dello stile di un'applicazione xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 67A3A39C-8CC0-446D-8162-FFA73582D3B8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: aff47769fad065e03de4c62af1be1d67b903eb0a
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: f8cf3287c6d713d91a0217bd30ca2ee927534aea
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245094"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995333"
 ---
 # <a name="style-inheritance-in-xamarinforms"></a>Ereditarietà degli stili in xamarin. Forms
 
@@ -20,11 +20,11 @@ _Stili possono ereditare da altri stili per ridurre la duplicazione e consentire
 
 ## <a name="style-inheritance-in-xaml"></a>Ereditarietà degli stili in XAML
 
-Ereditarietà degli stili viene eseguita impostando il [ `Style.BasedOn` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.BasedOn/) proprietà esistente [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/). In XAML, questo risultato si ottiene impostando il `BasedOn` proprietà per un `StaticResource` estensione di markup che fa riferimento a un oggetto creato in precedenza `Style`. In c#, questo risultato si ottiene impostando il `BasedOn` proprietà per un `Style` istanza.
+L'ereditarietà dello stile viene eseguita impostando il [ `Style.BasedOn` ](xref:Xamarin.Forms.Style.BasedOn) proprietà a un oggetto esistente [ `Style` ](xref:Xamarin.Forms.Style). In XAML, questo si ottiene impostando il `BasedOn` proprietà per un `StaticResource` estensione di markup che fa riferimento a una creata in precedenza `Style`. In c#, questo si ottiene impostando il `BasedOn` proprietà su un `Style` istanza.
 
-Gli stili che ereditano da uno stile di base possono includere [ `Setter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/) istanze per le proprietà di nuovo, o utilizzarli per eseguire l'override degli stili dallo stile di base. Inoltre, gli stili che ereditano da uno stile di base devono avere come destinazione lo stesso tipo o un tipo che deriva dal tipo di destinazione per lo stile di base. Ad esempio, se è destinato a un stile di base [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) istanze, gli stili che si basano lo stile di base possono avere come destinazione `View` istanze o tipi che derivano dal `View` classe, ad esempio [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) e [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) istanze.
+Gli stili che ereditano da uno stile di base possono includere [ `Setter` ](xref:Xamarin.Forms.Setter) istanze per nuove proprietà, oppure usarli per eseguire l'override degli stili dallo stile di base. Inoltre, gli stili che ereditano da uno stile di base devono avere come destinazione lo stesso tipo o un tipo da cui deriva il tipo di destinazione per lo stile di base. Ad esempio, se è destinato a una base di stile [ `View` ](xref:Xamarin.Forms.View) istanze, gli stili che si basano sullo stile di base possono avere come destinazione `View` istanze o tipi che derivano dal `View` classe, ad esempio [ `Label` ](xref:Xamarin.Forms.Label) e [ `Button` ](xref:Xamarin.Forms.Button) istanze.
 
-Il codice seguente illustra *esplicita* stile ereditarietà in una pagina XAML:
+Il codice seguente illustra *esplicita* applicare uno stile di ereditarietà in una pagina XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" Icon="xaml.png">
@@ -60,20 +60,20 @@ Il codice seguente illustra *esplicita* stile ereditarietà in una pagina XAML:
 </ContentPage>
 ```
 
-Il `baseStyle` destinazioni [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) le istanze e imposta il [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) e [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) proprietà. Il `baseStyle` non è impostato direttamente su tutti i controlli. In alternativa, `labelStyle` e `buttonStyle` ereditano da essa, i valori di proprietà associabile aggiuntive. Il `labelStyle` e `buttonStyle` vengono quindi applicati al [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) istanze e [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) istanza, impostando i relativi [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) proprietà. Ciò comporta l'aspetto illustrato nelle schermate seguenti:
+Il `baseStyle` destinazioni [ `View` ](xref:Xamarin.Forms.View) istanze e imposta il [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) e [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) proprietà. Il `baseStyle` non è impostato direttamente su tutti i controlli. Al contrario, `labelStyle` e `buttonStyle` ereditano da esso, i valori di proprietà associabili aggiuntiva. Il `labelStyle` e `buttonStyle` vengono quindi applicati al [ `Label` ](xref:Xamarin.Forms.Label) istanze e [ `Button` ](xref:Xamarin.Forms.Button) istanza, impostando i [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) delle proprietà. Ciò comporta l'aspetto illustrato negli screenshot seguenti:
 
 [![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
 
 > [!NOTE]
-> Uno stile implicito può essere derivato da un stile esplicito, ma un stile esplicito non può essere derivato da uno stile implicito.
+> Uno stile implicito può essere derivato da uno stile esplicito, ma uno stile esplicito non può essere derivato da uno stile implicito.
 
 ### <a name="respecting-the-inheritance-chain"></a>Rispettando la catena di ereditarietà
 
-Uno stile può ereditare solo da stili allo stesso livello o superiore nella gerarchia della visualizzazione. Vale a dire che:
+Uno stile può ereditare solo da stili allo stesso livello o precedente, nella gerarchia di visualizzazione. Vale a dire che:
 
-- Una risorsa a livello dell'applicazione può ereditare solo da altre risorse di livello applicazione.
-- Una risorsa di livello di pagina può ereditare da risorse di livello applicazione e altre risorse di livello di pagina.
-- Una risorsa di livello di controllo può ereditare da risorse di livello applicazione, risorse a livello di pagina e altre risorse di livello di controllo.
+- Una risorsa a livello di applicazione può ereditare solo da altre risorse a livello di applicazione.
+- Una risorsa a livello di pagina può ereditare da risorse a livello di applicazione e altre risorse a livello di pagina.
+- Una risorsa a livello di controllo può ereditare da risorse a livello di applicazione, le risorse a livello di pagina e altre risorse a livello di controllo.
 
 Questa catena di ereditarietà è illustrata nell'esempio di codice seguente:
 
@@ -104,11 +104,11 @@ Questa catena di ereditarietà è illustrata nell'esempio di codice seguente:
 </ContentPage>
 ```
 
-In questo esempio, `labelStyle` e `buttonStyle` è risorse a livello di controllo mentre `baseStyle` è una risorsa di livello di pagina. Tuttavia, se `labelStyle` e `buttonStyle` ereditare `baseStyle`, non è possibile per `baseStyle` da cui ereditare `labelStyle` o `buttonStyle`, a causa di nelle rispettive posizioni nella gerarchia della visualizzazione.
+In questo esempio `labelStyle` e `buttonStyle` sono i controlli di risorse di livello, mentre `baseStyle` è una risorsa a livello di pagina. Tuttavia, se `labelStyle` e `buttonStyle` ereditare `baseStyle`, non è possibile `baseStyle` da cui ereditare `labelStyle` o `buttonStyle`, a causa di nelle rispettive posizioni nella gerarchia di visualizzazione.
 
 ## <a name="style-inheritance-in-c35"></a>Ereditarietà degli stili in C&#35;
 
-Equivalente in c# pagina, in cui [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) istanze sono assegnate direttamente al [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) proprietà dei controlli necessari, è illustrato nell'esempio di codice seguente:
+Equivalenti c# pagina, dove [ `Style` ](xref:Xamarin.Forms.Style) istanze sono assegnate direttamente al [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) proprietà dei controlli necessari, è illustrato nell'esempio di codice seguente:
 
 ```csharp
 public class StyleInheritancePageCS : ContentPage
@@ -151,18 +151,18 @@ public class StyleInheritancePageCS : ContentPage
 }
 ```
 
-Il `baseStyle` destinazioni [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) le istanze e imposta il [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) e [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) proprietà. Il `baseStyle` non è impostato direttamente su tutti i controlli. In alternativa, `labelStyle` e `buttonStyle` ereditano da essa, i valori di proprietà associabile aggiuntive. Il `labelStyle` e `buttonStyle` vengono quindi applicati al [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) istanze e [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) istanza, impostando i relativi [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) proprietà.
+Il `baseStyle` destinazioni [ `View` ](xref:Xamarin.Forms.View) istanze e imposta il [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) e [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) proprietà. Il `baseStyle` non è impostato direttamente su tutti i controlli. Al contrario, `labelStyle` e `buttonStyle` ereditano da esso, i valori di proprietà associabili aggiuntiva. Il `labelStyle` e `buttonStyle` vengono quindi applicati al [ `Label` ](xref:Xamarin.Forms.Label) istanze e [ `Button` ](xref:Xamarin.Forms.Button) istanza, impostando i [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) delle proprietà.
 
 ## <a name="summary"></a>Riepilogo
 
-Stili possono ereditare da altri stili per ridurre la duplicazione e consentire il riutilizzo. Ereditarietà degli stili viene eseguita impostando il [ `Style.BasedOn` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.BasedOn/) proprietà esistente [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/).
+Stili possono ereditare da altri stili per ridurre la duplicazione e consentire il riutilizzo. L'ereditarietà dello stile viene eseguita impostando il [ `Style.BasedOn` ](xref:Xamarin.Forms.Style.BasedOn) proprietà a un oggetto esistente [ `Style` ](xref:Xamarin.Forms.Style).
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Estensioni di markup XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Stili di base (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
-- [Utilizzo degli stili (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
-- [ResourceDictionary](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)
-- [Stile](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
-- [Metodo set](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/)
+- [Utilizzo di stili (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
+- [Stile di visualizzazione](xref:Xamarin.Forms.Style)
+- [Setter](xref:Xamarin.Forms.Setter)

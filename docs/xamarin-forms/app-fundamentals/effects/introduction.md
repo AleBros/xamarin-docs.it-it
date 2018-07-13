@@ -1,42 +1,42 @@
 ---
-title: Introduzione agli effetti
-description: Effetti consentono controlli nativi in ciascuna piattaforma da personalizzare e vengono in genere utilizzati per lo stile piccole modifiche. In questo articolo viene fornita un'introduzione agli effetti, descrive il limite tra renderer personalizzati e gli effetti e viene descritta la classe PlatformEffect.
+title: Introduzione a effetti
+description: Effetti consentono controlli nativi in ogni piattaforma per la personalizzazione e vengono in genere usati per lo stile piccole modifiche. Questo articolo viene fornita un'introduzione agli effetti, delinea il limite tra gli effetti e renderer personalizzati e descrive la classe PlatformEffect.
 ms.prod: xamarin
 ms.assetid: 30CB8615-8F39-4762-BDB7-333D2B57D112
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 38805c09136405a7a241cfaeb8fa8cb6fb1a5d5f
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: d3fa958e999a10832d5fa15e4190077955b0e6df
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732723"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997380"
 ---
-# <a name="introduction-to-effects"></a>Introduzione agli effetti
+# <a name="introduction-to-effects"></a>Introduzione a effetti
 
-_Effetti consentono controlli nativi in ciascuna piattaforma da personalizzare e vengono in genere utilizzati per lo stile piccole modifiche. In questo articolo viene fornita un'introduzione agli effetti, descrive il limite tra renderer personalizzati e gli effetti e viene descritta la classe PlatformEffect._
+_Effetti consentono controlli nativi in ogni piattaforma per la personalizzazione e vengono in genere usati per lo stile piccole modifiche. Questo articolo viene fornita un'introduzione agli effetti, delinea il limite tra gli effetti e renderer personalizzati e descrive la classe PlatformEffect._
 
-Xamarin. Forms [controlli, layout e pagine](~/xamarin-forms/user-interface/controls/index.md) presenta un'API comune per descrivere le interfacce utente per dispositivi mobili multipiattaforma. Ogni pagina, layout e il controllo viene eseguito il rendering in modo diverso in ogni piattaforma usando un `Renderer` classe che a sua volta crea un controllo nativo (corrispondente nella rappresentazione di xamarin. Forms), li dispone sullo schermo e aggiunge il comportamento specificato in condiviso codice.
+Xamarin. Forms [controlli, layout e pagine](~/xamarin-forms/user-interface/controls/index.md) presenta un'API comune per descrivere le interfacce utente per dispositivi mobili multipiattaforma. Ogni pagina, layout e il controllo viene eseguito il rendering in modo diverso in ogni piattaforma usando un `Renderer` classe che a sua volta crea un controllo nativo (che corrisponde alla relativa rappresentazione in xamarin. Forms), lo dispone sullo schermo e aggiunge il comportamento specificato nel condiviso codice.
 
-Gli sviluppatori possono implementare le proprie classi `Renderer` per personalizzare l'aspetto e/o il comportamento di un controllo. Tuttavia, implementare una classe renderer personalizzato per eseguire una controllo semplice di personalizzazione è spesso una risposta pesante. Effetti semplificano questo processo, consentendo di controlli nativi in ciascuna piattaforma più facilmente da personalizzare.
+Gli sviluppatori possono implementare le proprie classi `Renderer` per personalizzare l'aspetto e/o il comportamento di un controllo. Tuttavia, implementazione di una classe di renderer personalizzato per eseguire una personalizzazione di controlli semplici è spesso una risposta approfondita. Effetti semplificano questo processo, consentendo controlli nativi in ciascuna piattaforma più facile da personalizzare.
 
-Effetti vengono creati nei progetti specifici della piattaforma creando sottoclassi di `PlatformEffect` controllo e quindi gli effetti vengono utilizzati, associarle a un controllo appropriato in un progetto di libreria condivisa o la libreria Standard di .NET di xamarin. Forms.
+Gli effetti vengono creati nei progetti specifici della piattaforma creando sottoclassi di `PlatformEffect` controllo e quindi gli effetti vengono usati associandoli a un controllo appropriato in un progetto di libreria condivisa o una libreria .NET Standard di xamarin. Forms.
 
 ## <a name="why-use-an-effect-over-a-custom-renderer"></a>Perché usare un effetto su un Renderer personalizzato?
 
-Effetti semplificano la personalizzazione di un controllo, sono riutilizzabili e possono essere parametrizzati per migliorare ulteriormente il riutilizzo.
+Effetti di semplificano la personalizzazione di un controllo, sono riutilizzabili e possono essere parametrizzati per migliorare ulteriormente il riutilizzo.
 
-Tutto ciò che può essere ottenuta con un effetto può essere ottenuta con un renderer personalizzato. Tuttavia, un renderer personalizzato offerta maggiore flessibilità e personalizzazione di effetti. Di seguito sono elencate le circostanze in cui si desidera scegliere un effetto su un renderer personalizzato:
+Tutto ciò che può essere ottenuta con un effetto può essere ottenuta anche con un renderer personalizzato. Tuttavia, renderer personalizzati offrono maggiore flessibilità e personalizzazione rispetto a effetti. Di seguito sono elencate le situazioni in cui è possibile scegliere un effetto su un renderer personalizzato:
 
-- Quando si modificano le proprietà di un controllo specifico della piattaforma consente di ottenere il risultato desiderato, è consigliabile un effetto.
+- Quando si modificano le proprietà di un controllo specifico della piattaforma verrà ottenere il risultato desiderato, è consigliabile un effetto.
 - Un renderer personalizzato è obbligatorio quando è necessario eseguire l'override di un controllo specifico della piattaforma.
-- Un renderer personalizzato è obbligatorio quando è necessario sostituire il controllo specifico della piattaforma che implementa un controllo di xamarin. Forms.
+- Un renderer personalizzato è obbligatorio quando è necessario sostituire il controllo specifiche della piattaforma che implementa un controllo di xamarin. Forms.
 
 ## <a name="subclassing-the-platformeffect-class"></a>Creazione di una sottoclasse della classe PlatformEffect
 
-La tabella seguente elenca lo spazio dei nomi per il `PlatformEffect` classe per ogni piattaforma e i tipi delle proprietà:
+La tabella seguente elenca lo spazio dei nomi per il `PlatformEffect` classe su ogni piattaforma e i tipi delle relative proprietà:
 
 |Piattaforma|Spazio dei nomi|Contenitore|Control|
 |--- |--- |--- |--- |
@@ -44,20 +44,20 @@ La tabella seguente elenca lo spazio dei nomi per il `PlatformEffect` classe per
 |Android|Xamarin.Forms.Platform.Android|ViewGroup|Visualizza|
 |Piattaforma UWP (Universal Windows Platform)|Xamarin.Forms.Platform.UWP|FrameworkElement|FrameworkElement|
 
-Ogni specifico della piattaforma `PlatformEffect` classe espone le proprietà seguenti:
+Ogni specifica della piattaforma `PlatformEffect` classe espone le proprietà seguenti:
 
-- `Container` : fa riferimento al controllo specifico della piattaforma in uso per implementare il layout.
-- `Control` : fa riferimento al controllo specifico della piattaforma in uso per implementare il controllo di xamarin. Forms.
-- `Element` : fa riferimento al controllo di xamarin. Forms che viene eseguito il rendering.
+- `Container` -fa riferimento al controllo specifiche della piattaforma in uso per implementare il layout.
+- `Control` -fa riferimento al controllo specifiche della piattaforma in uso per implementare il controllo di xamarin. Forms.
+- `Element` -fa riferimento al controllo di xamarin. Forms che viene eseguito il rendering.
 
-Effetti non dispone di informazioni sul tipo relative il contenitore, un controllo o un elemento che a cui sono collegate in quanto è possibile che siano collegati ad alcun elemento. Pertanto, quando un effetto è collegato a un elemento che non supporta deve adattarsi o genera un'eccezione. Tuttavia, il `Container`, `Control`, e `Element` proprietà possono eseguire il cast al tipo di implementazione. Per ulteriori informazioni su questi tipi vedere [Renderer classi di Base e i controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Gli effetti non è tipo di informazioni sul contenitore, controllo o elemento che a cui sono collegate in quanto essi possono essere collegati a qualsiasi elemento. Pertanto, quando un effetto è collegato a un elemento che non supporta deve adattarsi in modo o generare un'eccezione. Tuttavia, il `Container`, `Control`, e `Element` proprietà possono eseguire il cast del tipo di implementazione. Per ulteriori informazioni su questi tipi vedere [Renderer di classi di Base e controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
-Ogni specifico della piattaforma `PlatformEffect` classe espone i metodi seguenti, che devono essere sottoposto a override per implementare un effetto:
+Ogni specifica della piattaforma `PlatformEffect` classe espone i metodi seguenti, che devono essere sottoposto a override per implementare un effetto:
 
-- [`OnAttached`](https://developer.xamarin.com/api/member/Xamarin.Forms.Effect.OnAttached()/) : viene chiamato quando un effetto è collegato a un controllo di xamarin. Forms. Una versione sottoposta a override di questo metodo, in ogni classe effetto Platform specifici, è possibile eseguire la personalizzazione del controllo, con la gestione delle eccezioni nel caso in cui l'effetto non può essere applicato al controllo specificato xamarin. Forms.
-- [`OnDetached`](https://developer.xamarin.com/api/member/Xamarin.Forms.Effect.OnDetached()/) : viene chiamato quando un effetto viene disconnesso da un controllo di xamarin. Forms. Una versione sottoposta a override di questo metodo, in ogni classe effetto specifico della piattaforma, è possibile eseguire le operazioni di pulitura effetto, ad esempio la registrazione di un gestore eventi.
+- [`OnAttached`](xref:Xamarin.Forms.Effect.OnAttached) : viene chiamato quando un effetto è collegato a un controllo di xamarin. Forms. Una versione override del metodo, in ogni classe effetto platfom specifici, è possibile eseguire una personalizzazione del controllo, con la gestione delle eccezioni nel caso in cui non è possibile applicare l'effetto sul controllo specificato di xamarin. Forms.
+- [`OnDetached`](xref:Xamarin.Forms.Effect.OnDetached) : viene chiamato quando un effetto non è associato a un controllo di xamarin. Forms. Una versione override del metodo, in ogni classe effetto specifico della piattaforma, è possibile eseguire la pulizia effetto, ad esempio annullando la registrazione di un gestore eventi.
 
-Inoltre, il `PlatformEffect` espone il [ `OnElementPropertyChanged` ](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformEffect%3CTContainer,TControl%3E.OnElementPropertyChanged/p/System.ComponentModel.PropertyChangedEventArgs/) metodo, che è anche possibile eseguire l'override. Questo metodo viene chiamato quando viene modificata una proprietà dell'elemento. Una versione sottoposta a override di questo metodo, in ogni classe effetto specifico della piattaforma, è possibile rispondere alle modifiche di proprietà associabile nel controllo xamarin. Forms. Un controllo per la proprietà che è stato modificato deve essere sempre effettuato, come la sostituzione può essere chiamata più volte.
+Inoltre, il `PlatformEffect` espone il [ `OnElementPropertyChanged` ](xref:Xamarin.Forms.PlatformEffect`2.OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)) metodo, che è anche possibile eseguire l'override. Questo metodo viene chiamato quando una proprietà dell'elemento è stato modificato. Una versione override del metodo, in ogni classe effetto specifico della piattaforma, è possibile rispondere alle modifiche di proprietà associabili del controllo di xamarin. Forms. Un controllo per la proprietà viene modificata deve essere sempre eseguito, come la sostituzione può essere chiamata più volte.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

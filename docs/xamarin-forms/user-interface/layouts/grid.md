@@ -1,62 +1,62 @@
 ---
 title: Griglia di xamarin. Forms
-description: In questo articolo viene illustrato come utilizzare la classe di griglia di xamarin. Forms per presentare le viste nelle griglie, che deve disporre di righe e colonne.
+description: Questo articolo illustra come usare la classe di griglia di xamarin. Forms per presentare le viste nelle griglie, che possiedono le righe e colonne.
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: a50144f5e0962bd74858bb7731e30cef5dd31b6d
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 01dd59d5e94b473316b03f9035d38305fad42880
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245153"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38994502"
 ---
 # <a name="xamarinforms-grid"></a>Griglia di xamarin. Forms
 
-[`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) supporta la disposizione delle viste in righe e colonne. Dimensioni proporzionale o dimensioni assolute, è possono impostare le righe e colonne. Il `Grid` layout non deve essere confuso con tabelle tradizionali e non deve presentare i dati tabulari. `Grid` non ha il concetto di riga, colonna o cella formattazione. A differenza delle tabelle HTML, `Grid` è destinato esclusivamente per definire il layout del contenuto.
+[`Grid`](xref:Xamarin.Forms.Grid) supporta la disposizione di visualizzazioni in righe e colonne. Per avere dimensioni proporzionale o dimensioni assolute, è possono impostare righe e colonne. Il `Grid` layout non vanno confuso con le tabelle tradizionali e non può presentare i dati tabulari. `Grid` non è il concetto di riga, colonna o di formattazione delle celle. A differenza delle tabelle HTML, `Grid` è destinato esclusivamente per la disposizione del contenuto.
 
 [![](grid-images/layouts-sml.png "Xamarin.Forms Layouts")](grid-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
-In questo articolo illustra:
+Questo articolo illustrerà quanto segue:
 
-- **[Scopo](#Purpose)**  &ndash; utilizzi comuni di `Grid`.
-- **[Utilizzo](#Usage)**  &ndash; illustrato come utilizzare `Grid` per ottenere la progettazione desiderata.
-  - **[Righe e colonne](#Rows_and_Columns)**  &ndash; specificare righe e colonne per la `Grid`.
-  - **[Inserimento di viste](#Placing_Views)**  &ndash; aggiungere visualizzazioni a griglia in righe e colonne specifiche.
-  - **[Spaziatura](#Spacing)**  &ndash; configurare gli spazi tra le righe e colonne.
-  - **[Intervalli](#Spans)**  &ndash; configurare gli elementi di estendersi su più righe o colonne.
+- **[Utilizzo generico](#Purpose)**  &ndash; utilizzi comuni di `Grid`.
+- **[Utilizzo](#Usage)**  &ndash; come usare `Grid` per ottenere la progettazione desiderata.
+  - **[Le righe e colonne](#Rows_and_Columns)**  &ndash; specificare le righe e colonne per il `Grid`.
+  - **[Inserimento di visualizzazioni](#Placing_Views)**  &ndash; aggiungere visualizzazioni a griglia in righe e colonne specifiche.
+  - **[Spaziatura](#Spacing)**  &ndash; configurare gli spazi tra righe e colonne.
+  - **[Intervalli](#Spans)**  &ndash; configurare gli elementi per estendersi su più righe o colonne.
 
 ![](grid-images/grid.png "Esplorazione della griglia")
 
 ## <a name="purpose"></a>Scopo
 
-`Grid` può essere utilizzato per organizzare le visualizzazioni in una griglia. Ciò risulta utile in molti casi:
+`Grid` può essere usato per disporre le viste in una griglia. Ciò è utile in diversi casi:
 
-- Disposizione di pulsanti di un'app calcolatrice
-- La disposizione dei pulsanti le scelte in una griglia, ad esempio il iOS o Android schermate home
-- Disposizione di visualizzazioni in modo che siano delle stesse dimensioni in una dimensione (come nel alcune barre degli strumenti)
+- Disposizione di pulsanti in un'app calcolatrice
+- La disposizione dei pulsanti le scelte in una griglia, ad esempio schermate home Android o iOS
+- Disposizione di visualizzazioni in modo che siano di dimensioni uguali in una dimensione (come in alcune barre degli strumenti)
 
 ## <a name="usage"></a>Utilizzo
 
-A differenza delle tabelle tradizionali, `Grid` non deduce il numero e dimensioni di righe e colonne dal contenuto. In alternativa, `Grid` è `RowDefinitions` e `ColumnDefinitions` raccolte. Questi blocchi contengono le definizioni di verranno disposti come numero di righe e colonne. Le visualizzazioni vengono aggiunte al `Grid` con indici di colonna e riga specificata, che identifica la riga e colonna deve essere inserita in una vista.
+A differenza delle tabelle tradizionali, `Grid` non deduce il numero e dimensioni delle righe e colonne nel contenuto. Al contrario, `Grid` ha `RowDefinitions` e `ColumnDefinitions` raccolte. Questi blocchi contengono le definizioni di verranno disposto il numero di righe e colonne. Le visualizzazioni vengono aggiunte al `Grid` con indici di colonna e riga specificata, che identificano la riga e una vista deve essere inserita nella colonna.
 
 <a name="Rows_and_Columns" />
 
-### <a name="rows-and-columns"></a>Righe e colonne
+### <a name="rows-and-columns"></a>Le righe e colonne
 
-Informazioni di riga e di colonna vengono archiviate in `Grid`del `RowDefinitions`  &  `ColumnDefinitions` proprietà, ovvero ogni raccolte di [ `RowDefinition` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RowDefinition/) e [ `ColumnDefinition` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ColumnDefinition/)oggetti, rispettivamente. `RowDefinition` ha una singola proprietà, `Height`, e `ColumnDefinition` ha una singola proprietà `Width`. Le opzioni per l'altezza e larghezza sono come segue:
+Informazioni sulla riga e colonna viene archiviati `Grid`del `RowDefinitions`  &  `ColumnDefinitions` le proprietà, ovvero ogni raccolte di [ `RowDefinition` ](xref:Xamarin.Forms.RowDefinition) e [ `ColumnDefinition` ](xref:Xamarin.Forms.ColumnDefinition)oggetti, rispettivamente. `RowDefinition` dispone di una proprietà singola `Height`, e `ColumnDefinition` ha una singola proprietà `Width`. Le opzioni per l'altezza e larghezza sono come segue:
 
-- **Auto** &ndash; automaticamente le dimensioni in base al contenuto della riga o colonna. Specificato come [ `GridUnitType.Auto` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GridUnitType/) in c# o come `Auto` in XAML.
-- **Proportional(*)** &ndash; dimensioni di righe e colonne come una percentuale di spazio rimanente. Specifica un valore e `GridUnitType.Star` in c# e come `#*` in XAML, con `#` il valore desiderato. Specifica una riga o colonna con `*` indurla a riempire lo spazio disponibile.
-- **Assoluto** &ndash; ridimensiona le colonne e righe con valori di altezza e larghezza fissi di specifici. Specifica un valore e `GridUnitType.Absolute` in c# e come `#` in XAML, con `#` il valore desiderato.
+- **Auto** &ndash; automaticamente le dimensioni in base al contenuto nella riga o colonna. Specificato come [ `GridUnitType.Auto` ](xref:Xamarin.Forms.GridUnitType) in c# o come `Auto` in XAML.
+- **Proportional(*)** &ndash; alle dimensioni delle righe e colonne come una percentuale dello spazio rimanente. Specifica un valore e `GridUnitType.Star` in c# e come `#*` in XAML, con `#` in corso sul valore desiderato. Specifica una riga o colonna con `*` causerà per riempire lo spazio disponibile.
+- **Assoluto** &ndash; alle dimensioni delle colonne e righe con valori di altezza e larghezza fissi di specifici. Specifica un valore e `GridUnitType.Absolute` in c# e come `#` in XAML, con `#` in corso sul valore desiderato.
 
 > [!NOTE]
-> I valori di larghezza per le colonne vengono impostati come ' * ' per impostazione predefinita in xamarin. Forms, che assicura che la colonna verrà riempire lo spazio disponibile.
+> I valori di larghezza per le colonne vengono impostati come ' * ' per impostazione predefinita in xamarin. Forms, che assicura che la colonna di tipo esaurisca lo spazio disponibile.
 
-Si consideri un'applicazione che richiede tre righe e due colonne. La riga inferiore deve essere esattamente 200px altezza e la riga superiore deve essere due volte la stessa altezza riga centrale. La colonna a sinistra deve essere sufficientemente ampio per adattarle al contenuto e la colonna di destra deve riempire lo spazio rimanente.
+Si consideri un'applicazione che richiede tre righe e due colonne. La riga inferiore deve essere esattamente 200px estesa in altezza e la riga superiore deve essere due volte la stessa altezza alla riga centrale. Nella colonna sinistra deve essere sufficientemente ampio per adattarle al contenuto e la colonna a destra deve riempire lo spazio rimanente.
 
 In XAML:
 
@@ -86,15 +86,15 @@ grid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (200) }
 
 <a name="Placing_Views" />
 
-### <a name="placing-views-in-a-grid"></a>Inserimento di viste in una griglia
+### <a name="placing-views-in-a-grid"></a>L'inserimento di visualizzazioni in una griglia
 
-Per posizionare le viste in un `Grid` sarà necessario aggiungerli come elementi figlio nella griglia, quindi specificare la riga e colonna appartengono.
+Per posizionare le visualizzazioni in un `Grid` sarà necessario aggiungerli come elementi figlio nella griglia, quindi specificare la riga e colonna appartengono.
 
-In XAML, utilizzare `Grid.Row` e `Grid.Column` in ogni vista singoli per specificare la selezione host. Si noti che `Grid.Row` e `Grid.Column` specificare posizione in base a elenchi di righe e colonne in base zero. Ciò significa che in una 4x4 griglia, nella cella superiore sinistra è (0,0) e nella cella inferiore destra è (3,3).
+In XAML, usare `Grid.Row` e `Grid.Column` in ogni vista singole per specificare il posizionamento. Si noti che `Grid.Row` e `Grid.Column` specificare posizione in base gli elenchi in base zero di righe e colonne. Ciò significa che in una 4x4 griglia, la cella superiore sinistra è (0,0) e nella cella inferiore destra è (3,3).
 
 Il `Grid` illustrato di seguito contiene quattro celle:
 
-![](grid-images/label-grid.png "Griglia con quattro viste")
+![](grid-images/label-grid.png "Griglia con quattro visualizzazioni")
 
 In XAML:
 
@@ -136,9 +136,9 @@ grid.Children.Add(bottomLeft, 0, 1);
 grid.Children.Add(bottomRight, 1, 1);
 ```
 
-Il codice sopra riportato crea griglia con quattro etichette, due colonne e due righe. Si noti che ogni etichetta avrà le stesse dimensioni e che le righe si espandono per utilizzare tutto lo spazio disponibile.
+Il codice riportato sopra crea griglia con quattro etichette, due colonne e due righe. Si noti che ogni etichetta avrà le stesse dimensioni e che le righe si espandono per utilizzare tutto lo spazio disponibile.
 
-Nell'esempio precedente, le visualizzazioni vengono aggiunte al [ `Grid.Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Grid.Children/) insieme utilizzando la [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/) overload che specifica gli argomenti a sinistro e dall'alto. Quando si utilizza il [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) overload che specifichi a sinistra, destra, superiore e inferiore argomenti, mentre a sinistra e argomenti superiore verranno sempre fare riferimento alle celle all'interno di [ `Grid` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), destra e gli argomenti nella parte inferiore è ammesso per fare riferimento alle celle che si trovano all'esterno di `Grid`. In questo modo l'argomento a destra deve essere sempre maggiore di argomento a sinistra e l'argomento inferiore deve essere sempre maggiore dell'argomento principale. Nell'esempio seguente viene illustrato il codice equivalente utilizzando sia `Add` Overload:
+Nell'esempio precedente, le visualizzazioni vengono aggiunte al [ `Grid.Children` ](xref:Xamarin.Forms.Grid.Children) raccolta utilizzando la [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/) overload che specifichi l'argomento a sinistra e superiore. Quando si usa la [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) overload che specifichi a sinistra, destra, superiore e inferiore argomenti, mentre il left e top argomenti farà sempre riferimento alle celle all'interno di [ `Grid` ](xref:Xamarin.Forms.Grid), destra e possono sembrare argomenti inferiore fanno riferimento alle celle che si trovano all'esterno di `Grid`. Infatti, l'argomento a destra deve essere sempre superiore l'argomento a sinistra e l'argomento di fine deve essere sempre minore dell'argomento principale. L'esempio seguente illustra codice equivalente utilizzando entrambi `Add` Overload:
 
 ```csharp
 // left, top
@@ -156,12 +156,12 @@ grid.Children.Add(bottomRight, 1, 2, 1, 2);
 
 ### <a name="spacing"></a>Spacing (Spaziatura)
 
-`Grid` proprietà per controllare la spaziatura tra le righe e colonne.  Le proprietà seguenti sono disponibili per la personalizzazione di `Grid`:
+`Grid` dispone di proprietà per controllare la spaziatura tra colonne e righe.  Le proprietà seguenti sono disponibili per la personalizzazione di `Grid`:
 
 - **Spaziatura** &ndash; la quantità di spazio tra le colonne.
-- **RowSpacing** &ndash; la quantità di spazio tra righe.
+- **RowSpacing** &ndash; la quantità di spazio tra le righe.
 
-Il codice XAML seguente specifica un `Grid` con due colonne, una riga e 5 px di spaziatura tra le colonne:
+Il seguente XAML specifica una `Grid` con due colonne, una riga e 5 pixel di spaziatura tra le colonne:
 
 ```xaml
 <Grid ColumnSpacing="5">
@@ -182,17 +182,17 @@ grid.ColumnDefnitions.Add(new ColumnDefinition { Width = new GridLength (1, Grid
 
 ### <a name="spans"></a>Intervalli
 
-Spesso quando si utilizza una griglia, vi sia un elemento che deve occupare più di una riga o colonna. Si consideri una semplice applicazione Calcolatrice:
+Spesso quando si lavora con una griglia, è presente un elemento che deve occupare più di una riga o colonna. Si consideri una semplice applicazione Calcolatrice:
 
 ![](grid-images/calculator.png "Applicazione Calulator")
 
-Si noti che il pulsante 0 si estende su due colonne, come nei calcolatori incorporati per ogni piattaforma. Questa operazione viene eseguita utilizzando il `ColumnSpan` proprietà che specifica il numero di colonne un elemento deve occupare. Il codice XAML per tale pulsante:
+Si noti che il pulsante 0 si estende su due colonne, esattamente come sui fogli di calcolo predefiniti per ogni piattaforma. Ciò avviene utilizzando il `ColumnSpan` proprietà che specifica il numero di colonne un elemento deve occupare. XAML per tale pulsante:
 
 ```xaml
 <Button Text = "0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" />
 ```
 
-E in c#:
+E nel linguaggio c#:
 
 ```csharp
 Button zeroButton = new Button { Text = "0" };
@@ -200,9 +200,9 @@ controlGrid.Children.Add (zeroButton, 0, 4);
 Grid.SetColumnSpan (zeroButton, 2);
 ```
 
-Si noti che nel codice, i metodi statici del `Grid` classe vengono utilizzate per eseguire modifiche di posizionamento incluse le modifiche di `ColumnSpan` e `RowSpan`. Si noti che, a differenza di altre proprietà che è possibile impostare in qualsiasi momento, le proprietà impostate tramite i metodi statici devono già essere nella griglia prima della modifica.
+Si noti che nel codice, i metodi statici del `Grid` classe vengono utilizzate per eseguire modifiche di posizionamento, incluse le modifiche al `ColumnSpan` e `RowSpan`. Si noti che, a differenza di altre proprietà che è possibile impostare in qualsiasi momento, le proprietà impostate tramite i metodi statici devono già essere anche nella griglia prima che vengano modificate.
 
-Il codice XAML completo per l'app calcolatrice precedente è il seguente:
+Come indicato di seguito è riportato il XAML completo per l'app calcolatrice precedente:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -294,7 +294,7 @@ BackgroundColor="#404040">
 </ContentPage>
 ```
 
-Si noti che l'etichetta nella parte superiore della griglia sia zero pulsante occuping più di una colonna. Sebbene un layout simile può essere ottenuto usando griglie nidificate, di `ColumnSpan`  &  `RowSpan` approccio è più semplice.
+Si noti che l'etichetta nella parte superiore della griglia sia zero pulsante occuping più di una colonna. Anche se è stato possibile ottenere un layout simile utilizzando griglie nidificate, il `ColumnSpan`  &  `RowSpan` approccio è più semplice.
 
 L'implementazione c#:
 
@@ -384,6 +384,6 @@ public CalculatorGridCode ()
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Creazione di App per dispositivi mobili con xamarin. Forms, capitolo 17](https://developer.xamarin.com/r/xamarin-forms/book/chapter17.pdf)
-- [Griglia](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/)
+- [Griglia](xref:Xamarin.Forms.Grid)
 - [Layout (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 - [Esempio BusinessTumble (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)

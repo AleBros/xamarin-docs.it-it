@@ -1,58 +1,58 @@
 ---
 title: Etichetta di xamarin. Forms
-description: In questo articolo viene illustrato come utilizzare la classe di etichetta di xamarin. Forms per visualizzare il testo singolo e su più righe nelle applicazioni.
+description: Questo articolo illustra come usare la classe di etichetta di xamarin. Forms per visualizzare il testo singolo e multi-linea nelle applicazioni.
 ms.prod: xamarin
 ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: e9f99ace64e013dfa681e497b9d33376d79555ed
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: ce602a84ea1024dc22298a3ec1567a9a34ad4a82
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245498"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995966"
 ---
 # <a name="xamarinforms-label"></a>Etichetta di xamarin. Forms
 
 _Testo visualizzato in xamarin. Forms_
 
-Il `Label` vista utilizzata per la visualizzazione di testo, un o più righe. Le etichette possono avere tipi di carattere personalizzati (dimensioni, opzioni e gruppi) e testo colorato. In questo articolo vengono illustrati gli argomenti seguenti:
+Il `Label` vista utilizzata per la visualizzazione di testo, un o più righe. Le etichette possono avere tipi di carattere personalizzati (famiglie di dimensioni e opzioni) e il testo colorato. Questo articolo illustra gli argomenti seguenti:
 
-- **[Il troncamento e ritorno a capo](#Truncation_and_Wrapping)**  &ndash; troncamento e ritorno a capo le opzioni per la gestione di situazioni in cui il testo non può essere contenuta in un'unica riga.
-- **[Tipo di carattere](#Font)**  &ndash; opzioni relative ai caratteri.
-- **[Colore](#Color)**  &ndash; testo dell'etichetta opzioni colore.
+- **[Il troncamento e ritorno a capo](#Truncation_and_Wrapping)**  &ndash; troncamento e ritorno a capo le opzioni per la gestione delle situazioni in cui il testo non può essere contenuta in una sola riga.
+- **[Tipo di carattere](#Font)**  &ndash; opzioni tipi di carattere.
+- **[Colore](#Color)**  &ndash; opzioni colore testo etichetta.
 - **[Testo formattato](#Formatted_Text)**  &ndash; opzioni per la visualizzazione di testo con più formati o stili inline.
 
-## <a name="styling-label"></a>Etichetta applicazione di stili
+## <a name="styling-label"></a>Stile etichetta
 
-Le sezioni seguenti riguardano l'impostazione delle proprietà di `Label` manualmente in ogni istanza. Si noti che set di proprietà possono essere raggruppati in uno stile che viene applicato in modo coerente a uno o più viste. Questo può migliorare la leggibilità del codice e rendere più semplice implementare le modifiche di progettazione. Vedere [stili](~/xamarin-forms/user-interface/text/styles.md) per ulteriori informazioni.
+Le sezioni seguenti illustrano l'impostazione delle proprietà di `Label` manualmente in ogni istanza. Si noti che set di proprietà possono essere raggruppati in uno stile che viene applicato in modo coerente a uno o più viste. Ciò può migliorare la leggibilità del codice e apportare modifiche alla struttura più semplice da implementare. Visualizzare [stili](~/xamarin-forms/user-interface/text/styles.md) per altre informazioni.
 
 <a name="Truncation_and_Wrapping" />
 
 ## <a name="truncation-and-wrapping"></a>Il troncamento e ritorno a capo
 
-Etichette possono essere impostate su testo che non rientra in una riga in uno dei diversi modi, esposti da gestire la `LineBreakMode` proprietà. [`LineBreakMode`](https://developer.xamarin.com/api/type/Xamarin.Forms.LineBreakMode/) è un'enumerazione delle opzioni seguenti:
+Le etichette possono essere impostate su gestione di testo non può essere contenuta in una sola riga in uno dei diversi modi, esposti dal `LineBreakMode` proprietà. [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode) è un'enumerazione delle opzioni seguenti:
 
-- **HeadTruncation** &ndash; Tronca l'inizio del testo, che mostra la fine.
+- **HeadTruncation** &ndash; Tronca l'intestazione del testo, che mostra la fine.
 - **CharacterWrap** &ndash; esegue il wrapping di testo in una nuova riga in un confine di carattere.
 - **MiddleTruncation** &ndash; Visualizza l'inizio e alla fine del testo, con la sostituzione intermedio dai puntini di sospensione.
-- **NoWrap** &ndash; non va a capo del testo, visualizzare solo il testo come può occupare una riga.
-- **TailTruncation** &ndash; Mostra l'inizio del testo, il troncamento di fine.
-- **Ritorno a capo automatico** &ndash; esegue il wrapping di testo al confine di parola.
+- **NoWrap** &ndash; non va a capo del testo, visualizzando solo il testo come può rientrare in una sola riga.
+- **TailTruncation** &ndash; Mostra l'inizio del testo troncamento di fine.
+- **WordWrap** &ndash; esegue il wrapping di testo il confine di parola.
 
 ## <a name="font"></a>Tipo di carattere
 
-Vedere [utilizzo dei tipi di carattere](~/xamarin-forms/user-interface/text/fonts.md) per ulteriori informazioni.
+Visualizzare [funziona con i tipi di carattere](~/xamarin-forms/user-interface/text/fonts.md) per altre informazioni.
 
 ## <a name="color"></a>Colore
 
-`Label`s può essere impostato su utilizza un colore del testo personalizzato tramite la proprietà associabili `TextColor` proprietà.
+`Label`s può essere impostato su utilizza un colore del testo personalizzato tramite l'associabile `TextColor` proprietà.
 
-Particolare attenzione è necessario assicurarsi che i colori sia utilizzabili in ciascuna piattaforma. Poiché ogni piattaforma prevede valori predefiniti diversi per i colori di sfondo e di testo, è necessario prestare attenzione a scegliere un valore predefinito che funziona in ognuno.
+Particolare attenzione è necessario assicurarsi che i colori saranno utilizzabili in ogni piattaforma. Poiché ogni piattaforma ha valori predefiniti diversi per i colori di sfondo e testo, è necessario prestare attenzione a scegliere un valore predefinito che funziona su ognuno.
 
-Utilizzare il codice seguente per impostare il colore del testo di un'etichetta:
+Usare il codice seguente per impostare il colore del testo di un'etichetta:
 
 In codice:
 
@@ -92,14 +92,14 @@ Title="Label Demo">
 
 ## <a name="formatted-text"></a>Testo formattato
 
-Etichette di espongono un `FormattedText` proprietà che consente di presentare il testo con più tipi di carattere e colori nella stessa visualizzazione.
+Le etichette di espongono un `FormattedText` proprietà che consente di presentare il testo con più tipi di carattere e colori nella stessa visualizzazione.
 
-Il `FormattedText` proprietà è di tipo [ `FormattedString` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FormattedString/). Stringhe formattate sono costituite da uno o più `Span`s, ciascuno con le proprietà seguenti:
+Il `FormattedText` proprietà è di tipo [ `FormattedString` ](xref:Xamarin.Forms.FormattedString). Le stringhe di formato sono costituite da uno o più `Span`s, ognuno dei quali con le proprietà seguenti:
 
 - **BackgroundColor** &ndash; può essere utilizzato per impostare un colore di sfondo, ad esempio per ottenere un effetto evidenziatore dei risultati.
-- **FontAttributes** &ndash; può essere impostato su grassetto, corsivo o nessuna.
+- **FontAttributes** &ndash; può essere impostato su in grassetto, corsivo o nessuna.
 - **FontFamily** &ndash; imposta il tipo di carattere da utilizzare.
-- **FontSize** &ndash; imposta le dimensioni del testo.
+- **FontSize** &ndash; imposta la dimensione del testo.
 - **ForegroundColor** &ndash; imposta il colore del testo.
 - **Testo** &ndash; il testo da presentare.
 
@@ -155,4 +155,4 @@ Title="Label Demo">
 
 - [Creazione di App per dispositivi mobili con xamarin. Forms, capitolo 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [Testo (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
-- [API di etichetta](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)
+- [API di etichetta](xref:Xamarin.Forms.Label)

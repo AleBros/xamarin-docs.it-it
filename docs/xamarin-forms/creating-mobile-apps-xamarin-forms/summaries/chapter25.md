@@ -7,32 +7,32 @@ ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9c7fd87579d0c35c9efe31edf5c25b8ed8f40658
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 148388b80137bd335bbb977ea230726da1f4a32d
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935398"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995885"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>Riepilogo del capitolo 25. Tipi di pagina
 
 Finora si sono visto due classi che derivano da `Page`: `ContentPage` e `NavigationPage`. Questo capitolo vengono illustrati altri due controlli:
 
-- [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) gestisce due pagine, un master e un corpo
-- [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) gestisce più pagine di figlio a cui accede tramite schede visualizzate
+- [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) gestisce due pagine, un master e un corpo
+- [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) gestisce più pagine di figlio a cui accede tramite schede visualizzate
 
 Questi tipi di pagina offrono le opzioni di navigazione più sofisticate rispetto al `NavagationPage` descritti in [capitolo 24. Pagina spostamento](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter24.md).
 
 ## <a name="master-and-detail"></a>Master e dettaglio
 
-Il [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) definisce due proprietà di tipo `Page`: [ `Master` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Master/) e [ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/). In genere è ognuna di queste proprietà per impostare un `ContentPage`. Il `MasterDetailPage` consente di visualizzare e passare tra queste due pagine.
+Il [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) definisce due proprietà di tipo `Page`: [ `Master` ](xref:Xamarin.Forms.MasterDetailPage.Master) e [ `Detail` ](xref:Xamarin.Forms.MasterDetailPage.Detail). In genere è ognuna di queste proprietà per impostare un `ContentPage`. Il `MasterDetailPage` consente di visualizzare e passare tra queste due pagine.
 
 Esistono due modi fondamentali per passare tra queste due pagine:
 
 - *suddividere* in cui il master e dettaglio sono side-by-side
 - *nel popover* pagina in cui la pagina dei dettagli copre o parzialmente coperto master
 
-Esistono diverse varianti del *nel popover* approccio (*diapositiva*, *si sovrappongono*, e *swap*), ma si tratta in genere piattaforma dipendenti. È possibile impostare il [ `MasterDetailBehavior` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.MasterBehavior/) proprietà della `MasterDetailPage` a un membro del [ `MasterBehavior` ](xref:Xamarin.Forms.MasterBehavior) enumerazione:
+Esistono diverse varianti del *nel popover* approccio (*diapositiva*, *si sovrappongono*, e *swap*), ma si tratta in genere piattaforma dipendenti. È possibile impostare il [ `MasterDetailBehavior` ](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) proprietà della `MasterDetailPage` a un membro del [ `MasterBehavior` ](xref:Xamarin.Forms.MasterBehavior) enumerazione:
 
 - [`Default`](xref:Xamarin.Forms.MasterBehavior.Default)
 - [`Split`](xref:Xamarin.Forms.MasterBehavior.Split)
@@ -54,7 +54,7 @@ Il [ **SchoolAndDetail** ](https://github.com/xamarin/xamarin-forms-book-samples
 
 Il `Master` e `Detail` delle proprietà sono definite con strutture ad albero visuali nel [SchoolAndDetailPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml) file, che deriva da `MasterDetailPage`. Questa disposizione consente le associazioni di dati da impostare tra le pagine master e di dettaglio.
 
-Che file XAML imposta anche il [ `IsPresented` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsPresented/) proprietà della `MasterDetailPage` a `True`. In questo modo la pagina master da visualizzare all'avvio. Per impostazione predefinita viene visualizzata la pagina di dettaglio. Il [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs) file imposta `IsPresented` al `false` quando viene selezionato un elemento dal `ListView` nella pagina master. Verrà quindi visualizzata la pagina di dettaglio:
+Che file XAML imposta anche il [ `IsPresented` ](xref:Xamarin.Forms.MasterDetailPage.IsPresented) proprietà della `MasterDetailPage` a `True`. In questo modo la pagina master da visualizzare all'avvio. Per impostazione predefinita viene visualizzata la pagina di dettaglio. Il [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs) file imposta `IsPresented` al `false` quando viene selezionato un elemento dal `ListView` nella pagina master. Verrà quindi visualizzata la pagina di dettaglio:
 
 [![Schermata di tripla di dettaglio e dell'istituto di istruzione](images/ch25fg09-small.png "pagina dei dettagli da un MasterDetailPage")](images/ch25fg09-large.png#lightbox "pagina dei dettagli da un MasterDetailPage")
 
@@ -62,8 +62,8 @@ Che file XAML imposta anche il [ `IsPresented` ](https://developer.xamarin.com/a
 
 Sebbene xamarin. Forms fornisce un'interfaccia utente per il passaggio tra le visualizzazioni master e di dettaglio, è possibile fornire il proprio. A tale scopo:
 
-- Impostare il [ `IsGestureEnabled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsGestureEnabled/) proprietà `false` disabilitare scorrendo rapidamente
-- Eseguire l'override di [ `ShouldShowToolbarButton` ](https://developer.xamarin.com/api/member/Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton()/) metodo e restituire `false` per nascondere i pulsanti della barra degli strumenti in Windows 8.1 e Windows Phone 8.1.
+- Impostare il [ `IsGestureEnabled` ](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabled) proprietà `false` disabilitare scorrendo rapidamente
+- Eseguire l'override di [ `ShouldShowToolbarButton` ](xref:Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton) metodo e restituire `false` per nascondere i pulsanti della barra degli strumenti in Windows 8.1 e Windows Phone 8.1.
 
 È quindi necessario fornire un mezzo per spostarsi tra le pagine master e di dettaglio, ad esempio illustrati il [ **ColorsDetail** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/ColorsDetails) esempio.
 
@@ -71,28 +71,28 @@ Il [ **MasterDetailTaps** ](https://github.com/xamarin/xamarin-forms-book-sample
 
 ## <a name="tabbedpage"></a>TabbedPage
 
-Il [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) è una raccolta di pagine in cui è possibile alternare usando le schede. Deriva da `MultiPage<Page>` e non definisce proprietà pubbliche o metodi propri. [`MultiPage<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/), tuttavia, definire una proprietà:
+Il [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) è una raccolta di pagine in cui è possibile alternare usando le schede. Deriva da `MultiPage<Page>` e non definisce proprietà pubbliche o metodi propri. [`MultiPage<T>`](xref:Xamarin.Forms.MultiPage`1), tuttavia, definire una proprietà:
 
-- [`Children`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.Children/) proprietà di tipo `IList<T>`
+- [`Children`](xref:Xamarin.Forms.MultiPage`1.Children) proprietà di tipo `IList<T>`
 
 Ciò riempire `Children` insieme con gli oggetti della pagina.
 
 Un altro approccio è possibile definire le `TabbedPage` figli in modo analogo un `ListView` usando queste due proprietà che generano automaticamente le pagine a schede:
 
-- [`ItemsSource`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.ItemsSource/) di tipo `IEnumerable`
-- [`ItemTemplate`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.ItemTemplate/) di tipo `DataTemplate`
+- [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) di tipo `IEnumerable`
+- [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) di tipo `DataTemplate`
 
 Tuttavia, questo approccio non funziona bene in iOS quando la raccolta contiene più di alcuni elementi.
 
 `MultiPage<T>` definisce altre due proprietà che consentono di tenere traccia di quale pagina è attualmente visualizzata:
 
-- [`CurrentPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.CurrentPage/) di tipo `T`, che fa riferimento alla pagina
-- [`SelectedItem`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.SelectedItem/) typu `Object`, che fa riferimento all'oggetto nel `ItemsSource` raccolta
+- [`CurrentPage`](xref:Xamarin.Forms.MultiPage`1.CurrentPage) di tipo `T`, che fa riferimento alla pagina
+- [`SelectedItem`](xref:Xamarin.Forms.MultiPage`1.SelectedItem) typu `Object`, che fa riferimento all'oggetto nel `ItemsSource` raccolta
 
 `MultiPage<T>` definisce inoltre due eventi:
 
-- [`PagesChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.MultiPage%3CT%3E.PagesChanged/) Quando il `ItemsSource` le modifiche alla raccolta
-- [`CurrentPageChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.MultiPage%3CT%3E.CurrentPageChanged/) quando cambia la pagina visualizzata
+- [`PagesChanged`](xref:Xamarin.Forms.MultiPage`1.PagesChanged) Quando il `ItemsSource` le modifiche alla raccolta
+- [`CurrentPageChanged`](xref:Xamarin.Forms.MultiPage`1.CurrentPageChanged) quando cambia la pagina visualizzata
 
 ### <a name="discrete-tab-pages"></a>Le schede discreti
 

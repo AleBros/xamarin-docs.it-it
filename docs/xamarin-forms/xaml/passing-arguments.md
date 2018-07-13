@@ -1,37 +1,37 @@
 ---
 title: Passaggio di argomenti in XAML
-description: In questo articolo viene illustrato l'utilizzo di attributi XAML che possono essere utilizzati per passare argomenti a costruttori non predefiniti, per chiamare i metodi factory e per specificare il tipo di argomento generico.
+description: Questo articolo viene illustrato come utilizzare gli attributi XAML che possono essere usati per passare argomenti per i costruttori non predefiniti, per chiamare i metodi factory e per specificare il tipo di argomento generico.
 ms.prod: xamarin
 ms.assetid: 8F3B267F-499E-4D79-9193-FCA99F199519
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2016
-ms.openlocfilehash: c6ba3de9e50fd2ac452d9eeac169e4c1afd52ae0
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 51b72d9143895543715c519a65cf8c82aa4d12f7
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848434"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996548"
 ---
 # <a name="passing-arguments-in-xaml"></a>Passaggio di argomenti in XAML
 
-_In questo articolo viene illustrato l'utilizzo di attributi XAML che possono essere utilizzati per passare argomenti a costruttori non predefiniti, per chiamare i metodi factory e per specificare il tipo di argomento generico._
+_Questo articolo viene illustrato come utilizzare gli attributi XAML che possono essere usati per passare argomenti per i costruttori non predefiniti, per chiamare i metodi factory e per specificare il tipo di argomento generico._
 
 ## <a name="overview"></a>Panoramica
 
-Spesso è necessario creare istanze di oggetti con costruttori che richiedono argomenti, oppure chiamando un metodo di creazione statica. Questo può essere realizzato in XAML tramite il `x:Arguments` e `x:FactoryMethod` attributi:
+È spesso necessario creare un'istanza degli oggetti con costruttori che richiedono argomenti oppure chiamando un metodo di creazione statica. Ciò può essere ottenuto in XAML utilizzando il `x:Arguments` e `x:FactoryMethod` attributi:
 
-- Il `x:Arguments` attributo viene utilizzato per specificare gli argomenti del costruttore per un costruttore non predefinito, o per una dichiarazione di oggetto del metodo factory. Per ulteriori informazioni, vedere [passando gli argomenti del costruttore](#constructor_arguments).
-- Il `x:FactoryMethod` attributo viene utilizzato per specificare un metodo factory che può essere utilizzato per inizializzare un oggetto. Per ulteriori informazioni, vedere [chiamando metodi Factory](#factory_methods).
+- Il `x:Arguments` attributo viene usato per specificare gli argomenti del costruttore per un costruttore non predefinito o per una dichiarazione dell'oggetto metodo factory. Per altre informazioni, vedere [passando gli argomenti del costruttore](#constructor_arguments).
+- Il `x:FactoryMethod` attributo viene utilizzato per specificare un metodo factory che può essere utilizzato per inizializzare un oggetto. Per altre informazioni, vedere [chiamata di metodi Factory](#factory_methods).
 
-Inoltre, il `x:TypeArguments` attributo può essere utilizzato per specificare gli argomenti di tipo generico per il costruttore di un tipo generico. Per ulteriori informazioni, vedere [specifica di un argomento di tipo generico](#generic_type_arguments).
+Inoltre, il `x:TypeArguments` attributo può essere utilizzato per specificare gli argomenti di tipo generico per il costruttore di un tipo generico. Per altre informazioni, vedere [che specifica un argomento di tipo generico](#generic_type_arguments).
 
 <a name="constructor_arguments" />
 
 ## <a name="passing-constructor-arguments"></a>Il passaggio di argomenti del costruttore
 
-Gli argomenti possono essere passati a un costruttore non predefinito utilizzando il `x:Arguments` attributo. Ogni argomento del costruttore deve essere delimitato all'interno di un elemento XML che rappresenta il tipo dell'argomento. Xamarin. Forms supporta i seguenti elementi per i tipi di base:
+Argomenti possono essere passati a un costruttore non predefinito usando la `x:Arguments` attributo. Ogni argomento di costruttore deve essere delimitato all'interno di un elemento XML che rappresenta il tipo dell'argomento. Xamarin. Forms supporta i seguenti elementi per i tipi di base:
 
 - `x:Object`
 - `x:Boolean`
@@ -48,7 +48,7 @@ Gli argomenti possono essere passati a un costruttore non predefinito utilizzand
 - `x:Array`
 - `x:DateTime`
 
-Esempio di codice seguente viene illustrato l'utilizzo di `x:Arguments` attributo con tre [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) costruttori:
+Esempio di codice seguente viene illustrato come utilizzare il `x:Arguments` attributo con tre [ `Color` ](xref:Xamarin.Forms.Color) costruttori:
 
 ```xaml
 <BoxView HeightRequest="150" WidthRequest="150" HorizontalOptions="Center">
@@ -85,19 +85,19 @@ Esempio di codice seguente viene illustrato l'utilizzo di `x:Arguments` attribut
 </BoxView>
 ```
 
-Il numero di elementi all'interno di `x:Arguments` tag e i tipi di questi elementi, devono corrispondere a uno del [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) costruttori. Il `Color` [costruttore](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/) con un singolo parametro richiede un valore di scala di grigi compreso tra 0 (nero) a 1 (bianco). Il `Color` [costruttore](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/System.Double/System.Double/) con tre parametri richiede un valore di colore rosso, verde e blu, compreso tra 0 e 1. Il `Color` [costruttore](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/System.Double/System.Double/System.Double/) con quattro parametri consente di aggiungere un canale alfa come quarto parametro.
+Il numero di elementi all'interno di `x:Arguments` tag e i tipi di questi elementi, devono corrispondere a uno del [ `Color` ](xref:Xamarin.Forms.Color) costruttori. Il `Color` [costruttore](xref:Xamarin.Forms.Color.%23ctor(System.Double)) con un singolo parametro richiede un valore di scala di grigi compreso tra 0 (nero) su 1 (bianco). Il `Color` [costruttore](xref:Xamarin.Forms.Color.%23ctor(System.Double,System.Double,System.Double)) con tre parametri richiede un valore di colore rosso, verde e blu, compreso tra 0 e 1. Il `Color` [costruttore](xref:Xamarin.Forms.Color.%23ctor(System.Double,System.Double,System.Double,System.Double)) con quattro parametri aggiunge un canale alfa come quarto parametro.
 
-La schermata seguente mostra il risultato della chiamata ogni [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) costruttore con i valori dell'argomento specificato:
+Le schermate seguenti illustrano il risultato della chiamata ognuno [ `Color` ](xref:Xamarin.Forms.Color) costruttore con i valori dell'argomento specificato:
 
 ![](passing-arguments-images/passing-arguments.png "BoxView.Color specificato con X:Arguments")
 
 <a name="factory_methods" />
 
-## <a name="calling-factory-methods"></a>La chiamata di metodi Factory
+## <a name="calling-factory-methods"></a>Chiamata di metodi Factory
 
-Metodi factory possono essere chiamati in XAML, il metodo specificando nome usando il `x:FactoryMethod` attributo e i relativi argomenti utilizzando il `x:Arguments` attributo. Un metodo factory è un `public static` metodo che restituisce oggetti o valori dello stesso tipo della classe o struttura che definisce i metodi.
+I metodi factory possono essere chiamati in XAML, specificando il metodo nome utilizzando il `x:FactoryMethod` attributo e i relativi argomenti usando le `x:Arguments` attributo. Un metodo factory è un `public static` metodo che restituisce oggetti o valori dello stesso tipo della classe o struttura che definisce i metodi.
 
-Il [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) struttura definisce una serie di metodi factory e il codice riportato di seguito viene illustrato come chiamante e tre i parametri:
+Il [ `Color` ](xref:Xamarin.Forms.Color) struttura definisce una serie di metodi factory e il codice seguente viene illustrato chiamante tre parametri:
 
 ```xaml
 <BoxView HeightRequest="150" WidthRequest="150" HorizontalOptions="Center">
@@ -135,15 +135,15 @@ Il [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) stru
 </BoxView>
 ```
 
-Il numero di elementi all'interno di `x:Arguments` tag e i tipi di questi elementi, devono corrispondere gli argomenti del metodo factory chiamato. Il [ `FromRgba` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/) metodo factory richiede quattro [ `Int32` ](https://docs.microsoft.com/dotnet/api/system.int32) parametri, che rappresentano i valori di rossi, verdi, blu e alfa, compreso tra 0 e 255 rispettivamente. Il [ `FromHsla` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/) metodo factory richiede quattro [ `Double` ](https://docs.microsoft.com/dotnet/api/system.double) parametri, che rappresentano il valori di tonalità, saturazione, luminosità e alfa, compreso tra 0 e 1 rispettivamente. Il [ `FromHex` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/) metodo factory richiede un [ `String` ](https://docs.microsoft.com/dotnet/api/system.string) che rappresenta il formato esadecimale (A) colore RGB.
+Il numero di elementi all'interno di `x:Arguments` tag e i tipi di questi elementi, devono corrispondere gli argomenti del metodo factory viene chiamato. Il [ `FromRgba` ](xref:Xamarin.Forms.Color.FromRgba(System.Int32,System.Int32,System.Int32,System.Int32)) metodo factory richiede quattro [ `Int32` ](https://docs.microsoft.com/dotnet/api/system.int32) parametri, che rappresentano i valori rossi, verdi, blu e alfa, compreso tra 0 e 255 rispettivamente. Il [ `FromHsla` ](xref:Xamarin.Forms.Color.FromHsla(System.Double,System.Double,System.Double,System.Double)) metodo factory richiede quattro [ `Double` ](https://docs.microsoft.com/dotnet/api/system.double) parametri, che rappresentano la tonalità, saturazione, luminosità e i valori alfa, compreso tra 0 e 1 rispettivamente. Il [ `FromHex` ](xref:Xamarin.Forms.Color.FromHex(System.String)) metodo factory richiede un [ `String` ](https://docs.microsoft.com/dotnet/api/system.string) che rappresenta il formato esadecimale (A) colore RGB.
 
-La schermata seguente mostra il risultato della chiamata ogni [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) metodo factory con i valori dell'argomento specificato:
+Le schermate seguenti illustrano il risultato della chiamata ognuno [ `Color` ](xref:Xamarin.Forms.Color) metodo factory con i valori di argomento specificato:
 
 ![](passing-arguments-images/factory-methods.png "BoxView.Color specificato con X:FactoryMethod e X:Arguments")
 
 <a name="generic_type_arguments" />
 
-## <a name="specifying-a-generic-type-argument"></a>Specificare un argomento di tipo generico
+## <a name="specifying-a-generic-type-argument"></a>Se si specifica un argomento tipo generico
 
 Argomenti di tipo generico per il costruttore di un tipo generico possono essere specificati utilizzando il `x:TypeArguments` attributo, come illustrato nell'esempio di codice seguente:
 
@@ -161,15 +161,15 @@ Argomenti di tipo generico per il costruttore di un tipo generico possono essere
 </ContentPage>
 ```
 
-Il [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) classe è una classe generica e deve essere creata un'istanza con un `x:TypeArguments` attributo che corrisponde al tipo di destinazione. Nel [ `On` ](https://developer.xamarin.com/api/type/Xamarin.Forms.On/) (classe), il [ `Platform` ](https://developer.xamarin.com/api/property/Xamarin.Forms.On.Platform/) attributo può accettare un singolo `string` valore o più delimitato da virgole `string` valori. In questo esempio, il [ `StackLayout.Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) è impostata su una specifica della piattaforma [ `Thickness` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Thickness/).
+Il [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) classe è una classe generica e deve essere creata un'istanza con un `x:TypeArguments` attributo che corrisponde al tipo di destinazione. Nel [ `On` ](xref:Xamarin.Forms.On) (classe), il [ `Platform` ](xref:Xamarin.Forms.On.Platform) attributo può accettare un singolo `string` valore o più valori delimitati da virgole `string` valori. In questo esempio, il [ `StackLayout.Margin` ](xref:Xamarin.Forms.View.Margin) è impostata su una specifica della piattaforma [ `Thickness` ](xref:Xamarin.Forms.Thickness).
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo sono state illustrate usando gli attributi XAML che possono essere utilizzati per passare argomenti a costruttori non predefiniti, per chiamare i metodi factory e per specificare il tipo di argomento generico.
+L'articolo descrive gli attributi XAML può essere usato per passare argomenti per i costruttori non predefiniti, per chiamare i metodi factory e per specificare il tipo di argomento generico.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Spazi dei nomi XAML](~/xamarin-forms/xaml/namespaces.md)
 - [Il passaggio di argomenti del costruttore (esempio)](https://developer.xamarin.com/samples/xamarin-forms/xaml/passingconstructorarguments/)
-- [La chiamata di metodi Factory (esempio)](https://developer.xamarin.com/samples/xamarin-forms/xaml/callingfactorymethods/)
+- [Chiamata di metodi Factory (esempio)](https://developer.xamarin.com/samples/xamarin-forms/xaml/callingfactorymethods/)

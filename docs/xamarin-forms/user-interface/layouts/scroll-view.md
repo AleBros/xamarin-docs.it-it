@@ -1,41 +1,41 @@
 ---
 title: Xamarin. Forms ScrollView
-description: In questo articolo viene illustrato come utilizzare la classe ScrollView xamarin. Forms per presentare layout che non può essere contenuta in una sola schermata e ai quali è contenuto liberare spazio per la tastiera.
+description: Questo articolo illustra come usare la classe ScrollView xamarin. Forms per presentare i layout che non può essere contenuta in una sola schermata e ai quali è contenuto liberare spazio per la tastiera.
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/22/2016
-ms.openlocfilehash: 72897013842d464ff9d46825e2b111efbaeb79b8
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.date: 07/10/2018
+ms.openlocfilehash: f2bccc9140c4c1c9d5d543a4240178f9301852bb
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245234"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997361"
 ---
 # <a name="xamarinforms-scrollview"></a>Xamarin. Forms ScrollView
 
-[`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) include layout e consente loro di scorrimento fuori schermo. `ScrollView` viene usata anche per consentire le visualizzazioni spostare automaticamente per la parte visibile dello schermo quando viene visualizzato sulla tastiera.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) include layout e consente loro di scorrimento fuori schermo. `ScrollView` viene inoltre utilizzato per consentire le visualizzazioni spostare automaticamente per la parte visibile dello schermo quando viene visualizzata la tastiera.
 
 [![](scroll-view-images/layouts-sml.png "Xamarin.Forms Layouts")](scroll-view-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 Questo articolo illustra le attività seguenti:
 
-- **[Scopo](#Purpose)**  &ndash; allo scopo di `ScrollView` e quando viene usato.
+- **[Utilizzo generico](#Purpose)**  &ndash; allo scopo di `ScrollView` e quando viene usato.
 - **[Utilizzo](#Usage)**  &ndash; illustrato come utilizzare `ScrollView` in pratica.
-- **[Proprietà](#Properties)**  &ndash; proprietà pubbliche che possono essere letti e modificate.
-- **[Metodi](#Methods)**  &ndash; metodi pubblici che possono essere chiamati per scorrere la visualizzazione.
-- **[Eventi](#Events)**  &ndash; gli eventi che possono essere usati per ascoltare le modifiche degli stati della vista.
+- **[Le proprietà](#Properties)**  &ndash; proprietà pubbliche che può essere letto e modificata.
+- **[I metodi](#Methods)**  &ndash; metodi pubblici che possono essere chiamati per scorrere la visualizzazione.
+- **[Gli eventi](#Events)**  &ndash; eventi che possono essere utilizzati per ascoltare le modifiche dello stato della visualizzazione.
 
 ## <a name="purpose"></a>Scopo
 
-`ScrollView` può essere utilizzato per garantire che più grande nelle visualizzazioni anche su telefoni più piccoli. Ad esempio, un layout che funziona in un iPhone 6s potrebbe essere ritagliato in un iPhone 4s. Utilizzando un `ScrollView` limiterebbe le porzioni del layout da visualizzare sullo schermo più piccolo.
+`ScrollView` può essere utilizzato per garantire che più grande consente di visualizzare anche su telefoni più piccoli. Ad esempio, un layout che funziona in un iPhone 6s potrebbe essere ritagliato in un iPhone 4s. Usando un `ScrollView` consentirebbe le porzioni del layout per essere visualizzata su schermi più piccoli.
 
 ## <a name="usage"></a>Utilizzo
 
 > [!NOTE]
-> `ScrollView`s non devono essere nidificate. Inoltre, `ScrollView`s non devono essere nidificate con altri controlli che forniscono lo scorrimento, ad esempio `ListView` e `WebView`.
+> `ScrollView`s non devono essere nidificate. È inoltre `ScrollView`s non deve essere annidato con altri controlli che consentono lo scorrimento, ad esempio `ListView` e `WebView`.
 
 `ScrollView` espone un `Content` proprietà che può essere impostata su una singola visualizzazione o layout. Si consideri l'esempio di un layout con un boxView molto grandi, seguito da un `Entry`:
 
@@ -60,29 +60,30 @@ stack.Children.Add(new BoxView { BackgroundColor = Color.Red,    HeightRequest =
 stack.Children.Add(new Entry());
 ```
 
-Prima che l'utente scorre verso il basso, solo il `BoxView` visibile:
+Prima che l'utente scorre verso il basso, solo il `BoxView` è visibile:
 
 ![](scroll-view-images/scroll-start.png "BoxView in ScrollView")
 
-Si noti che quando l'utente inizia a immettere testo nel `Entry`, consente di scorrere la visualizzazione per mantenere visibile sullo schermo:
+Si noti che quando l'utente inizia a immettere testo nel `Entry`, scorre la visualizzazione per mantenere visibile sullo schermo:
 
-![](scroll-view-images/scroll-end.png "Voce ScrollView")
+![](scroll-view-images/scroll-end.png "Voce in ScrollView")
 
 ## <a name="properties"></a>Proprietà
 
-Elemento ScrollView dispone delle proprietà seguenti:
+`ScrollView` definisce le proprietà seguenti:
 
-- **Contenuto** &ndash; Ottiene o imposta la visualizzazione per visualizzare il `ScrollView`.
-- **[ContentSize](https://developer.xamarin.com/api/type/Xamarin.Forms.Size/)**  &ndash; sola lettura, ottiene le dimensioni del contenuto, che dispone di un componente di larghezza e altezza. Si tratta di una proprietà associabile
-- **[Orientamento](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollOrientation/)**  &ndash; si tratta di un [ `ScrollOrientation` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollOrientation/), che è un'enumerazione che può essere impostata su `Horizontal`, `Vertical`, o `Both`.
-- **ScrollX** &ndash; sola lettura, ottiene la posizione di scorrimento corrente nella dimensione X.
-- **ScrollY** &ndash; sola lettura, ottiene la posizione di scorrimento corrente nella dimensione Y.
+- [`ContentSize`](xref:Xamarin.Forms.ScrollView.ContentSizeProperty) Ottiene un [ `Size` ](xref:Xamarin.Forms.Size) valore che rappresenta le dimensioni del contenuto.
+- [`Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) Ottiene o imposta una [ `ScrollOrientation` ](xref:Xamarin.Forms.ScrollOrientation) valore di enumerazione che rappresenta la direzione di scorrimento di `ScrollView`.
+- [`ScrollX`](xref:Xamarin.Forms.ScrollView.ScrollXProperty) Ottiene un `double` che rappresenta l'oggetto corrente X posizione di scorrimento.
+- [`ScrollY`](xref:Xamarin.Forms.ScrollView.ScrollYProperty) Ottiene un `double` che rappresenta la posizione di scorrimento Y corrente.
+- [`HorizontalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.HorizontalScrollBarVisibilityProperty) Ottiene o imposta una [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valore che rappresenta quando la barra di scorrimento orizzontale è visibile.
+- [`VerticalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.VerticalScrollBarVisibilityProperty) Ottiene o imposta una [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valore che rappresenta quando la barra di scorrimento verticale è visibile.
 
 ## <a name="methods"></a>Metodi
 
-`ScrollView` fornisce un `ScrollToAsync` metodo, che può essere utilizzato per scorrere la visualizzazione utilizzando coordinate oppure specificare una visualizzazione specifica che deve essere reso visibile.
+`ScrollView` fornisce un `ScrollToAsync` metodo, che può essere utilizzato per scorrere la visualizzazione utilizzando coordinate o specificando una visualizzazione specifica che deve essere reso visibile.
 
-Quando si utilizzano le coordinate, specificare il `x` e `y` coordinate, insieme a un valore booleano che indica se le barre di scorrimento deve essere aggiunta un'animazione:
+Quando si utilizzano le coordinate, specificare il `x` e `y` coordinate, insieme a un valore booleano che indica se lo scorrimento dovrebbe essere animato:
 
 ```csharp
 scroll.ScrollToAsync(0, 150, true); //scrolls so that the position at 150px from the top is visible
@@ -90,18 +91,18 @@ scroll.ScrollToAsync(0, 150, true); //scrolls so that the position at 150px from
 scroll.ScrollToAsync(label, ScrollToPosition.Start, true); //scrolls so that the label is at the start of the list
 ```
 
-Durante lo scorrimento a un particolare elemento, il `ScrollToPosition` enumerazione specifica in cui verrà visualizzato l'elemento nella visualizzazione:
+Durante lo scorrimento a un particolare elemento, il `ScrollToPosition` enumerazione specifica dove verrà visualizzato l'elemento nella visualizzazione:
 
-- **Center** &ndash; scorre l'elemento al centro della parte visibile della vista.
-- **Fine** &ndash; scorre l'elemento alla fine della parte visibile della vista.
+- **Centro** &ndash; scorre l'elemento al centro della parte visibile della visualizzazione.
+- **Estremità** &ndash; scorre l'elemento alla fine della parte visibile della visualizzazione.
 - **MakeVisible** &ndash; scorre l'elemento in modo che sia visibile all'interno della visualizzazione.
-- **Avviare** &ndash; scorre l'elemento all'inizio della parte visibile della vista.
+- **Avviare** &ndash; scorre l'elemento all'inizio della parte visibile della visualizzazione.
 
-Il `IsAnimated` proprietà consente di specificare come verrà scorso la visualizzazione. Quando impostato su true, un'animazione smooth verrà utilizzata, anziché immediatamente lo spostamento del contenuto nella visualizzazione.
+Il `IsAnimated` proprietà specifica la modalità di visualizzazione avverrà. Quando impostato su true, un'animazione fluida viene utilizzata, invece di immediatamente lo spostamento del contenuto nella visualizzazione.
 
 ## <a name="events"></a>Eventi
 
-`ScrollView` espone un solo evento, `Scrolled`. `Scrolled` viene generato quando la vista ha completato lo scorrimento. Il gestore eventi per `Scrolled` accetta `ScrolledEventArgs`, che presenta il `ScrollX` e `ScrollY` proprietà. Nell'esempio viene illustrato come aggiornare un'etichetta con la posizione di scorrimento corrente un `ScrollView`:
+`ScrollView` definisce un solo evento, `Scrolled`. `Scrolled` viene generato quando la vista ha completato lo scorrimento. Il gestore eventi per `Scrolled` accetta `ScrolledEventArgs`, che ha il `ScrollX` e `ScrollY` proprietà. Nell'esempio viene illustrato come aggiornare un'etichetta con la posizione di scorrimento corrente di un `ScrollView`:
 
 ```csharp
 Label label = new Label { Text = "Position: " };
@@ -111,7 +112,7 @@ scroll.Scrolled += (object sender, ScrolledEventArgs e) => {
 };
 ```
 
-Si noti che posizioni di scorrimento possono essere negative, a causa l'effetto di rimbalzo durante lo scorrimento alla fine di un elenco.
+Si noti che potrebbero essere un valore negativo, a causa l'effetto di rimbalzo durante lo scorrimento alla fine di un elenco di posizioni di scorrimento.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

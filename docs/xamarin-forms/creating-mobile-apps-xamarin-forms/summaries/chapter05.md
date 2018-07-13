@@ -7,78 +7,78 @@ ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0b93942d6623106a5e507d6eef3e7140f9d409bd
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 36d208f2326c7584bc03c351b4a5b05a3f3928c9
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241647"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995453"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Riepilogo del capitolo 5. Gestione delle dimensioni
 
-Dimensioni diverse in xamarin. Forms sono state rilevate fino a questo punto:
+Diverse dimensioni in xamarin. Forms sono state rilevate fino a questo momento:
 
 - L'altezza della barra di stato iOS è 20
-- Il `BoxView` ha una larghezza predefinita e l'altezza di 40
+- Il `BoxView` ha una larghezza predefinita e un'altezza pari a 40
 - Il valore predefinito `Padding` in un `Frame` è 20
-- Il valore predefinito `Spacing` sul `StackLayout` è 6.
+- Il valore predefinito `Spacing` nella `StackLayout` è 6
 - Il `Device.GetNamedSize` metodo restituisce una dimensione del carattere numerico
 
-Queste dimensioni non sono i pixel. Sono invece unità indipendenti dal dispositivo riconosciuta in modo indipendente per ogni piattaforma.
+Queste dimensioni non sono i pixel. In questo caso sono unità indipendenti dal dispositivo riconosciute in modo indipendente per ogni piattaforma.
 
-## <a name="pixels-points-dps-dips-and-dius"></a>Pixel, punti, dei punti di distribuzione, DIP e DIUs
+## <a name="pixels-points-dps-dips-and-dius"></a>Pixel, punti, punti di distribuzione, DIP e DIUs
 
-Nelle prime fasi cronologie di Apple Mac e Microsoft Windows, i programmatori funzionavano in unità di pixel. Tuttavia, l'avvento di visualizzazioni con risoluzione superiore è necessario un approccio più astratto e virtualizzato in coordinate dello schermo. Nel mondo Mac, i programmatori funzionavano in unità di *punti*, in genere 1/72 pollice, mentre gli sviluppatori di Windows utilizzato *unità indipendenti dal dispositivo* (DIUs) in base 1/96 di pollice.
+Nelle prime fasi di cronologie di Apple Mac e Microsoft Windows, i programmatori funzionava in unità di pixel. Tuttavia, l'avvento degli schermi con risoluzione superiore è necessario un approccio più virtualizzato e astratto in coordinate dello schermo. Nel mondo Mac, i programmatori ha lavorato in unità pari a *punti*, in genere 1/72 pollice, mentre gli sviluppatori di Windows utilizzato *device independent unit* (DIUs) basato su 1/96 di pollice.
 
-I dispositivi mobili, tuttavia, in genere vengono mantenuti molto più simile per il tipo di carattere e avere una risoluzione più alta rispetto a desktop schermate, che implica che è possibile tollerare una maggiore densità in pixel.
+I dispositivi mobili, tuttavia, vengono mantenuti in genere molto più vicino per il viso e hanno una risoluzione maggiore rispetto a desktop le schermate, che implica che è possibile tollerare una maggiore densità in pixel.
 
-I programmatori destinate a dispositivi di Apple iPhone e iPad continuano a funzionare in unità di *punti*, ma esistono 160 questi punti per pollice. A seconda del dispositivo, potrebbe essere 1, 2 o 3 pixel per il punto.
+I programmatori destinate a dispositivi iPhone e iPad di Apple continuano a funzionare in unità pari *punti*, ma esistono 160 di questi punti per pollice. A seconda del dispositivo, potrebbe essere 1, 2 o 3 pixel per il punto.
 
-Android è simile. I programmatori di lavoro in unità di *independent densità di pixel* (dp), e la relazione tra dei punti di distribuzione e pixel si basa su un 160 DP al pollice.
+Android è simile. I programmatori lavorano in unità pari *pixel indipendenti dalla densità* (dps), e si basa la relazione tra pixel e punti di distribuzione nel servizio Device 160 provisioning per pollice.
 
-Windows Runtime ha stabilito anche i fattori di scala che implicano qualcosa di simile a 160 unità indipendenti dal dispositivo di pollice.
+Il Runtime di Windows ha inoltre stabilito i fattori di scala che implicano qualcosa di simile a 160 unità indipendenti dal dispositivo di pollice.
 
-In breve, un programmatore di xamarin. Forms destinato a telefoni e Tablet può presupporre che tutte le unità di misura sono basate sul criterio seguente:
+In sintesi, un programmatore di xamarin. Forms destinate a telefoni e Tablet possa presupporre che tutte le unità di misura sono basate sul criterio seguente:
 
 - 160 unità per pollice, equivalente a
-- 64 unità per il centimetro
+- unità di 64 per il centimetro
 
-La proprietà di sola lettura [ `Width` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) e [ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) proprietà definite da `VisualElement` avere predefinito "simulare" valori di &ndash;1. Solo quando un elemento è stato ridimensionato e gestito nei layout di queste proprietà riflette le dimensioni effettive dell'elemento in unità indipendenti dal dispositivo. Questa dimensione include qualsiasi `Padding` impostato sull'elemento, ma non il `Margin`.
+Di sola lettura [ `Width` ](xref:Xamarin.Forms.VisualElement.Width) e [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) le proprietà definite da `VisualElement` presentano predefinito "fittizio" valori di &ndash;1. Solo quando un elemento è stato ridimensionato e gestito nei layout di queste proprietà riflette le dimensioni effettive dell'elemento in unità indipendenti dal dispositivo. Questa dimensione include eventuali `Padding` impostato sull'elemento, ma non la `Margin`.
 
-Viene generato un elemento visivo il [ `SizeChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.VisualElement.SizeChanged/) eventi quando il relativo `Width` o `Height` è stato modificato. Il [ **WhatSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/WhatSize) viene utilizzato questo evento per visualizzare le dimensioni dello schermo del programma.
+Viene generato un elemento visivo la [ `SizeChanged` ](xref:Xamarin.Forms.VisualElement.SizeChanged) evento quando relativo `Width` o `Height` è stato modificato. Il [ **WhatSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/WhatSize) esempio viene usato questo evento per visualizzare le dimensioni della schermata del programma.
 
 ## <a name="metrical-sizes"></a>Dimensioni di metrica:
 
-Il [ **MetricalBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/MetricalBoxView) Usa [ `WidthRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/) e [ `HeightRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) per visualizzare un `BoxView` un pollice altezza e una centimetro wide.
+Il [ **MetricalBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/MetricalBoxView) Usa [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) per visualizzare un `BoxView` un pollice talla e l'altra larghezza centimetri.
 
-## <a name="estimated-font-sizes"></a>Dimensioni stimate
+## <a name="estimated-font-sizes"></a>Dimensioni dei caratteri stimato
 
-Il [ **caratteri del testo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FontSizes) esempio viene illustrato come utilizzare la regola di 160 unità-in-the-pollici per specificare le dimensioni dei caratteri in unità di punti. La coerenza tra le piattaforme utilizzando questa tecnica visual è migliore `Device.GetNamedSize`.
+Il [ **caratteri del testo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FontSizes) esempio viene illustrato come usare la regola di 160 unità-a-the-pollice per specificare le dimensioni dei caratteri in unità di punti. La coerenza visiva tra le piattaforme che usano questa tecnica è migliore `Device.GetNamedSize`.
 
 ## <a name="fitting-text-to-available-size"></a>Adattamento del testo di dimensioni disponibili
 
-È possibile adattare un blocco di testo all'interno di un rettangolo particolare calcolando un `FontSize` del `Label` utilizzando i criteri seguenti:
+È possibile adattare un blocco di testo all'interno di un rettangolo particolare calcolando una `FontSize` del `Label` usando i criteri seguenti:
 
-- Interlinea è 120% delle dimensioni del carattere (130% nelle piattaforme Windows).
-- Larghezza del carattere medio è il 50% delle dimensioni del carattere.
+- L'interlinea è 120% delle dimensioni del carattere (130% nelle piattaforme Windows).
+- Media di un carattere width è 50% delle dimensioni del carattere.
 
-Il [ **EstimatedFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EstimatedFontSize) illustra questa tecnica. Questo programma è stato scritto prima il [ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) proprietà è disponibile, quindi viene utilizzato un [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) con un [ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) impostazione per simulare un margine.
+Il [ **EstimatedFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EstimatedFontSize) illustra questa tecnica. Questo programma è stato scritto prima la [ `Margin` ](xref:Xamarin.Forms.View.Margin) proprietà era disponibile, pertanto vengono usati un [ `ContentView` ](xref:Xamarin.Forms.ContentView) con un [ `Padding` ](xref:Xamarin.Forms.Layout.Padding) impostazione per simulare un margine.
 
-[![Schermata di triplo della dimensione del carattere stimato](images/ch05fg07-small.png "testo adatta alle dimensioni disponibili")](images/ch05fg07-large.png#lightbox "testo adatta alle dimensioni disponibili")
+[![Schermata di triplo delle dimensioni del carattere stimato](images/ch05fg07-small.png "testo adatta alle dimensioni disponibili")](images/ch05fg07-large.png#lightbox "testo adatta alle dimensioni disponibili")
 
-## <a name="a-fit-to-size-clock"></a>Un clock adatta per dimensioni
+## <a name="a-fit-to-size-clock"></a>Un orologio fit-a-dimensioni
 
-Il [ **FitToSizeClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FitToSizeClock) esempio viene illustrato come utilizzare [ `Device.StartTimer` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.StartTimer/p/System.TimeSpan/System.Func%7BSystem.Boolean%7D/) per avviare un timer notifica periodicamente l'applicazione quando è necessario aggiornare l'orologio. Le dimensioni del carattere è un-sesto della larghezza della pagina per rendere lo schermo più grande possibile.
+Il [ **FitToSizeClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FitToSizeClock) esempio viene illustrato l'utilizzo [ `Device.StartTimer` ](xref:Xamarin.Forms.Device.StartTimer(System.TimeSpan,System.Func{System.Boolean})) per avviare un timer che notifica periodicamente all'applicazione quando è necessario aggiornare l'orologio. Le dimensioni del carattere sono impostata su un-sesto della larghezza della pagina per rendere lo schermo di dimensioni corrispondenti.
 
-## <a name="accessibility-issues"></a>Problemi di accesso facilitato
+## <a name="accessibility-issues"></a>Problemi di accessibilità
 
-Il **EstimatedFontSize** programma e **FitToSizeClock** programma entrambe contengono un difetto meno evidente: se l'utente modifica le impostazioni di accessibilità del telefono Android o Windows 10 Mobile, il programma non è più per stimare il testo viene visualizzato in base alla dimensione del carattere. Il [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) esempio viene illustrato il problema.
+Il **EstimatedFontSize** programma e il **FitToSizeClock** programma entrambe contengono un difetto sottile: se l'utente modifica le impostazioni di accessibilità del telefono su Android o Windows 10 Mobile, il programma non sarà più possibile stimare le dimensioni di rendering del testo in base alla dimensione del carattere. Il [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) esempio viene illustrato il problema.
 
 ## <a name="empirically-fitting-text"></a>In modo empirico adattamento del testo
 
-Un altro modo per adattare il testo a un rettangolo è ed empiricamente calcolare le dimensioni del testo visualizzabile e modificarlo verso l'alto o verso il basso. Il programma nelle chiamate libro [ `GetSizeRequest` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.GetSizeRequest/p/System.Double/System.Double/) su un elemento visivo per ottenere le dimensioni dell'elemento desiderato. Metodo è obsoleto che i programmi possono invece chiamare [ `Measure` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.Measure/p/System.Double/System.Double/Xamarin.Forms.MeasureFlags/).
+Un altro modo per adattare il testo a un rettangolo è in modo empirico calcolare le dimensioni del testo sottoposto a rendering e modificarlo verso l'alto o verso il basso. Il programma nelle chiamate libro [ `GetSizeRequest` ](xref:Xamarin.Forms.VisualElement.GetSizeRequest(System.Double,System.Double)) su un elemento visivo per ottenere le dimensioni dell'elemento desiderato. Metodo obsoleto che programmi è necessario chiamare invece [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)).
 
-Per un `Label`, il primo argomento deve essere la larghezza del contenitore (per consentire di ritorno a capo), mentre il secondo argomento deve essere impostato a `Double.PositiveInfinity` affinché l'altezza non vincolato. Il [ **EmpiricalFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize) illustra questa tecnica.
+Per un `Label`, il primo argomento deve essere la larghezza del contenitore (per consentire di ritorno a capo), mentre il secondo argomento deve essere impostato per `Double.PositiveInfinity` per rendere l'altezza non vincolato. Il [ **EmpiricalFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize) illustra questa tecnica.
 
 
 

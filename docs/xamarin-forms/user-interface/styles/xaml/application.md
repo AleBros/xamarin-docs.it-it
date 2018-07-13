@@ -1,28 +1,28 @@
 ---
 title: Stili globali in xamarin. Forms
-description: Gli stili possono essere resi disponibili a livello globale aggiungendoli al dizionario di risorse dell'applicazione. Ciò consente di evitare la duplicazione degli stili nelle pagine o controlli.
+description: Gli stili possono essere resi disponibili a livello globale aggiungendoli al dizionario risorse dell'applicazione. Ciò consente di evitare la duplicazione degli stili nelle pagine o controlli.
 ms.prod: xamarin
 ms.assetid: BDC65F82-65E0-4C8E-BB91-8E340EB2D15A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: c5ce0f3e4ff906f9bdef06e605e71d4ed64d2a68
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: e7b2a37b868ea03ca626ffd2dcddb006a235b0cc
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245348"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995401"
 ---
 # <a name="global-styles-in-xamarinforms"></a>Stili globali in xamarin. Forms
 
-_Gli stili possono essere resi disponibili a livello globale aggiungendoli al dizionario di risorse dell'applicazione. Ciò consente di evitare la duplicazione degli stili nelle pagine o controlli._
+_Gli stili possono essere resi disponibili a livello globale aggiungendoli al dizionario risorse dell'applicazione. Ciò consente di evitare la duplicazione degli stili nelle pagine o controlli._
 
 ## <a name="creating-a-global-style-in-xaml"></a>Creazione di uno stile globale in XAML
 
-Per impostazione predefinita, tutte le applicazioni di xamarin. Forms create da un modello utilizzano il **App** classe per implementare il [ `Application` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Application/) sottoclasse. Per dichiarare un [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) a livello di applicazione, l'applicazione [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) tramite XAML, il valore predefinito **App** classe deve essere sostituita con un file XAML **App** classe e code-behind associato. Per ulteriori informazioni, vedere [si utilizza la classe App](~/xamarin-forms/app-fundamentals/application-class.md).
+Per impostazione predefinita, tutte le applicazioni xamarin. Forms create da un modello utilizzano le **App** classe per implementare le [ `Application` ](xref:Xamarin.Forms.Application) sottoclasse. Per dichiarare un [ `Style` ](xref:Xamarin.Forms.Style) a livello di applicazione, dell'applicazione [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) tramite XAML, il valore predefinito **App** classe deve essere sostituita con un XAML **App** classe e code-behind associato. Per altre informazioni, vedere [funziona con la classe App](~/xamarin-forms/app-fundamentals/application-class.md).
 
-Nell'esempio di codice riportato di seguito viene illustrato un [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) dichiarato a livello di applicazione:
+Nell'esempio di codice riportato di seguito viene illustrato un [ `Style` ](xref:Xamarin.Forms.Style) dichiarato a livello di applicazione:
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.App">
@@ -42,9 +42,9 @@ Nell'esempio di codice riportato di seguito viene illustrato un [ `Style` ](http
 </Application>
 ```
 
-Questo [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) definisce una singola *esplicita* stile, `buttonStyle`, che verrà utilizzato per impostare l'aspetto di [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) istanze. Gli stili globali possono tuttavia essere *esplicita* o *implicita*.
+Ciò [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) definisce un singolo *esplicita* stile, `buttonStyle`, che verrà utilizzato per impostare l'aspetto della [ `Button` ](xref:Xamarin.Forms.Button) istanze. Tuttavia, possono essere globali stili *esplicite* o *implicita*.
 
-L'esempio di codice seguente mostra una pagina XAML l'applicazione di `buttonStyle` alla pagina [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) istanze:
+Esempio di codice seguente mostra una pagina XAML applicando la `buttonStyle` alla pagina [ `Button` ](xref:Xamarin.Forms.Button) istanze:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ApplicationStylesPage" Title="Application" Icon="xaml.png">
@@ -58,15 +58,15 @@ L'esempio di codice seguente mostra una pagina XAML l'applicazione di `buttonSty
 </ContentPage>
 ```
 
-Ciò comporta l'aspetto illustrato nelle schermate seguenti:
+Ciò comporta l'aspetto illustrato negli screenshot seguenti:
 
-[![](application-images/application-styles-1.png "Gli stili globali esempio")](application-images/application-styles-1-large.png#lightbox "esempio stili globali")
+[![](application-images/application-styles-1.png "Stili globali riportato")](application-images/application-styles-1-large.png#lightbox "esempio stili globali")
 
-Per informazioni sulla creazione di stili in una pagina [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), vedere [stili esplicita](~/xamarin-forms/user-interface/styles/explicit.md) e [stili impliciti](~/xamarin-forms/user-interface/styles/implicit.md).
+Per informazioni sulla creazione di stili in una pagina [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), vedere [stili espliciti](~/xamarin-forms/user-interface/styles/explicit.md) e [stili impliciti](~/xamarin-forms/user-interface/styles/implicit.md).
 
 ### <a name="overriding-styles"></a>L'override degli stili
 
-Gli stili di livello inferiori nella gerarchia di visualizzazione hanno la precedenza su quelli definiti più backup. Ad esempio, impostando un [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) che imposta [ `Button.TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.TextColor/) a `Red` l'applicazione di livello verrà sottoposto a override da un tipo di livello di pagina che imposta `Button.TextColor` a `Green`. Analogamente, uno stile di livello di pagina verrà sostituito da un tipo di livello di controllo. Inoltre, se `Button.TextColor` è impostato direttamente su una proprietà di controllo, si avrà la precedenza su tutti gli stili. La precedenza è illustrata nell'esempio di codice seguente:
+Stili di livello inferiori nella gerarchia di visualizzazione hanno la precedenza rispetto a quelli definiti più backup. Ad esempio, impostando un [ `Style` ](xref:Xamarin.Forms.Style) che consente di scegliere [ `Button.TextColor` ](xref:Xamarin.Forms.Button.TextColor) a `Red` nell'applicazione livello eseguirà l'override di uno stile a livello di pagina che imposta `Button.TextColor` a `Green`. Analogamente, uno stile a livello di pagina verrà sostituito da uno stile a livello di controllo. Inoltre, se `Button.TextColor` è impostato direttamente su una proprietà di controllo, si avrà la precedenza su tutti gli stili. Questa precedenza è illustrata nell'esempio di codice seguente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ApplicationStylesPage" Title="Application" Icon="xaml.png">
@@ -96,13 +96,13 @@ Gli stili di livello inferiori nella gerarchia di visualizzazione hanno la prece
 </ContentPage>
 ```
 
-Originale `buttonStyle`, definiti a livello di applicazione, viene sottoposto a override di `buttonStyle` istanza definita a livello di pagina. Inoltre, lo stile di livello di pagina viene sottoposta a override dal livello di controllo `buttonStyle`. Pertanto, il [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) istanze vengono visualizzate con testo blu, come illustrato nelle schermate seguenti:
+Originale `buttonStyle`, definite a livello di applicazione, viene sottoposto a override il `buttonStyle` istanza definita a livello di pagina. Inoltre, lo stile a livello di pagina esegue l'override del livello di controllo `buttonStyle`. Pertanto, il [ `Button` ](xref:Xamarin.Forms.Button) istanze vengono visualizzate con testo in blu, come illustrato negli screenshot seguenti:
 
-[![](application-images/application-styles-2.png "Si esegue l'override degli stili esempio")](application-images/application-styles-2-large.png#lightbox "si esegue l'override di esempio di stili")
+[![](application-images/application-styles-2.png "Si esegue l'override degli stili riportato")](application-images/application-styles-2-large.png#lightbox "eseguendo l'override di esempio degli stili")
 
 ## <a name="creating-a-global-style-in-c35"></a>Creazione di uno stile globale in C&#35;
 
-[`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) le istanze possono essere aggiunte all'applicazione [ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) raccolta in c# tramite la creazione di un nuovo [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)e quindi aggiungendo il `Style` istanze per il `ResourceDictionary`, come Nell'esempio di codice seguente:
+[`Style`](xref:Xamarin.Forms.Style) è possibile aggiungere istanze dell'applicazione [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) raccolta in c# mediante la creazione di un nuovo [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)e quindi aggiungendo il `Style` alle istanze di `ResourceDictionary`, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 public class App : Application
@@ -124,9 +124,9 @@ public class App : Application
 }
 ```
 
-Il costruttore definisce una singola *esplicita* stile per l'applicazione a [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) istanze in tutta l'applicazione. *Esplicita* [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) vengono aggiunte istanze di [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) utilizzando il [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ResourceDictionary.Add/p/System.String/System.Object/) metodo, specificando un `key`stringa per fare riferimento al `Style` istanza. Il `Style` istanza può essere applicata a tutti i controlli del tipo corretto nell'applicazione. Gli stili globali possono tuttavia essere *esplicita* o *implicita*.
+Il costruttore definisce un singolo *esplicita* stile di visualizzazione per l'applicazione ai [ `Button` ](xref:Xamarin.Forms.Button) istanze in tutta l'applicazione. *Espliciti* [ `Style` ](xref:Xamarin.Forms.Style) istanze vengono aggiunte alle [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) usando la [ `Add` ](xref:Xamarin.Forms.ResourceDictionary.Add(System.String,System.Object)) metodo, specificando un `key`per fare riferimento alla stringa di `Style` istanza. Il `Style` istanza può quindi essere applicata a tutti i controlli del tipo corretto nell'applicazione. Tuttavia, possono essere globali stili *esplicite* o *implicita*.
 
-Esempio di codice seguente viene illustrato un c# pagina applicazione di `buttonStyle` alla pagina [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) istanze:
+Esempio di codice seguente mostra un c# pagina applicando la `buttonStyle` alla pagina [ `Button` ](xref:Xamarin.Forms.Button) istanze:
 
 ```csharp
 public class ApplicationStylesPageCS : ContentPage
@@ -146,11 +146,11 @@ public class ApplicationStylesPageCS : ContentPage
 }
 ```
 
-Il `buttonStyle` viene applicato al [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) istanze impostando i relativi [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) proprietà e controlla l'aspetto del `Button` istanze.
+Il `buttonStyle` viene applicato al [ `Button` ](xref:Xamarin.Forms.Button) istanze impostando loro [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) proprietà e controlla l'aspetto del `Button` istanze.
 
 ## <a name="summary"></a>Riepilogo
 
-Gli stili possono essere resi disponibili a livello globale, aggiungerli all'applicazione [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/). Ciò consente di evitare la duplicazione degli stili nelle pagine o controlli.
+Gli stili possono essere rese disponibili a livello globale vengono aggiunte all'applicazione [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary). Ciò consente di evitare la duplicazione degli stili nelle pagine o controlli.
 
 
 
@@ -158,7 +158,7 @@ Gli stili possono essere resi disponibili a livello globale, aggiungerli all'app
 
 - [Estensioni di markup XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Stili di base (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
-- [Utilizzo degli stili (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
-- [ResourceDictionary](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)
-- [Stile](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
-- [Metodo set](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/)
+- [Utilizzo di stili (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
+- [Stile di visualizzazione](xref:Xamarin.Forms.Style)
+- [Setter](xref:Xamarin.Forms.Setter)
