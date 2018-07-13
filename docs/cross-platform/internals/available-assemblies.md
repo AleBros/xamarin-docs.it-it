@@ -1,34 +1,34 @@
 ---
 title: Assembly disponibili
-description: Questo documento sono elencati gli assembly disponibili per l'utilizzo in xamarin. IOS, xamarin. Android e Xamarin.Mac. Anche possibile collegare alla documentazione sulle librerie Standard .NET e librerie di classi portabili.
+description: Questo documento Elenca gli assembly disponibili per l'uso in xamarin. IOS, xamarin. Android e xamarin. Mac. Anche possibile collegare alla documentazione sulle librerie .NET Standard e librerie di classi portabili.
 ms.prod: xamarin
 ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: b73a818d3864c7c4d1d776e104d95090e87f5877
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: d005d6c5e1dcfe7e9bcff44b308cea0ce7ab73e9
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781907"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998654"
 ---
 # <a name="available-assemblies"></a>Assembly disponibili
 
-Xamarin. IOS, xamarin e Xamarin.Mac tutti forniti con decine assembly. Come Silverlight è un sottoinsieme degli assembly .NET desktop esteso, Xamarin piattaforme è anche un sottoinsieme dei numerosi Silverlight e gli assembly .NET desktop esteso.
+Xamarin. IOS, xamarin. Android e xamarin. Mac tutti forniti con oltre una dozzina di assembly. Esattamente come Silverlight che rappresenta un sottoinsieme degli assembly .NET desktop, piattaforme Xamarin è anche un subset esteso di diversi Silverlight e desktop assembly .NET.
 
-Piattaforme di Xamarin non sono ABI compatibile con gli assembly esistenti compilati per un profilo diverso. È necessario ricompilare il codice sorgente per generare gli assembly come destinazione il profilo corretto (esattamente come è necessario ricompilare il codice sorgente per Silverlight e .NET 3.5 come destinazione separatamente).
+Piattaforme Xamarin non sono ABI compatibile con gli assembly esistenti compilati per un profilo diverso. È necessario ricompilare il codice sorgente per generare assembly di destinazione è il profilo corretto (esattamente come è necessario ricompilare il codice sorgente per impostare come destinazione Silverlight e .NET 3.5 separatamente).
 
-Applicazioni Xamarin.Mac possono essere compilate in tre modalità: una che usa Xamarin del curata relativa profilo per dispositivi mobili, Xamarin.Mac .NET 4.5 Framework che consente di destinazione gli assembly desktop completi esistenti e uno non supportato che usa l'API .NET è disponibile in un sistema Mono installazione. Per ulteriori informazioni, vedere il nostro [Framework di destinazione](~/mac/platform/target-framework.md) documentazione.
+Le applicazioni xamarin. Mac possono essere compilate in tre modalità: una che usa Xamarin di curata profilo per dispositivi mobili xamarin. Mac .NET 4.5 Framework che consente all'utente di destinazione gli assembly desktop completa esistenti e uno non supportato che usa l'API .NET è disponibile in un sistema Mono installazione. Per altre informazioni, vedere la [Framework di destinazione](~/mac/platform/target-framework.md) documentazione.
 
 
-## <a name="net-standard-libraries"></a>Librerie standard di .NET
+## <a name="net-standard-libraries"></a>Librerie .NET standard
 
-Oltre a Mac, iOS e Android associazioni, i progetti possono utilizzare Xamarin [librerie .NET Standard](~/cross-platform/app-fundamentals/net-standard.md).
+Oltre a iOS, Android e Mac, associazioni, Xamarin possono utilizzare i progetti [librerie .NET Standard](~/cross-platform/app-fundamentals/net-standard.md).
 
 ## <a name="portable-class-libraries"></a>Librerie di classi portabili
  
-Possono usare anche i progetti di Xamarin [librerie di classi portabili .NET](~/cross-platform/app-fundamentals/pcl.md), sebbene questa tecnologia è stata deprecata a favore .NET Standard.
+Progetti Xamarin possono anche usare [librerie di classi portabile .NET](~/cross-platform/app-fundamentals/pcl.md), anche se questa tecnologia è stata deprecata a favore di .NET Standard.
 
 ## <a name="supported-assemblies"></a>Assembly supportati
 
@@ -36,19 +36,19 @@ Possono usare anche i progetti di Xamarin [librerie di classi portabili .NET](~/
 > |Assembly|Compatibilità con le API|Xamarin iOS|Xamarin Android|Xamarin Mac|
 > |--------|-----------------|-----------|---------------|-----------|
 > |FSharp.Core.dll| |✓|✓|✓|
-> |l18N.dll|Include CJK, MidEast, altri, rari, ovest|✓|✓|✓|
+> |l18N.dll|Include CJK, MidEast, altri non comune, rara, occidentale|✓|✓|✓|
 > |Microsoft.CSharp.dll| |✓|✓|✓|
 > |Mono.CSharp.dll| |✓|✓|✓|
 > |Mono.Data.Sqlite.dll|Provider ADO.NET per SQLite; vedere le limitazioni.|✓|✓|✓|
-> |Mono.Data.Tds.dll|Supporto del protocollo TDS; utilizzato per [SqlClient](https://developer.xamarin.com/api/namespace/System.Data.SqlClient/) supportano all'interno di [System. Data](https://developer.xamarin.com/api/namespace/System.Data/).|✓|✓|✓|
+> |Mono.Data.Tds.dll|Supporto del protocollo TDS; usato per [SqlClient](xref:System.Data.SqlClient) supportano entro [System. Data](xref:System.Data).|✓|✓|✓|
 > |Mono.Dynamic.&#8203;Interpreter.dll| |✓| | |
 > |Mono.Security.dll|API di crittografia.|✓|✓|✓|
-> |monotouch.dll|Questo assembly contiene l'associazione all'API CocoaTouch c#. Questo è disponibile solo all'interno dei progetti iOS classica.|✓| | |
+> |monotouch.dll|Questo assembly contiene l'associazione all'API cocoatouch usano c#. È disponibile solo all'interno di progetti iOS classici.|✓| | |
 > |MonoTouch.&#8203;Dialog-1.dll| |✓| | |
 > |MonoTouch.&#8203;NUnitLite.dll| |✓| | |
 > |mscorlib.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |OpenTK-1.0.dll|L'oggetto OpenGL/OpenAL orientata ai servizi API estese per fornire il supporto dei dispositivi iPhone.|✓|✓|✓|
-> |System.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), nonché i tipi degli spazi dei nomi seguenti:<br />System.Collections.Specialized<br />System.&#8203;ComponentModel<br />System.ComponentModel.Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System.IO.Compression.FileSystem<br />System.Net<br />System.Net.Cache<br />System.Net.Mail<br />System.Net.Mime<br />System.Net.&#8203;NetworkInformation<br />System.Net.Security<br />System.Net.Sockets<br />System.Runtime.&#8203;InteropServices<br />System.Runtime.Versioning<br />System.Security.&#8203;AccessControl<br />System.Security.Authentication<br />System.Security.&#8203;Cryptography<br />System.Security.Permissions<br />System.Threading<br />System.Timers|✓|✓|✓|
+> |OpenTK-1.0.dll|L'oggetto OpenGL/OpenAL orientata ai servizi API estese per fornire supporto per dispositivi iPhone.|✓|✓|✓|
+> |System.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), oltre a tipi degli spazi dei nomi seguenti:<br />System.Collections.Specialized<br />System.&#8203;ComponentModel<br />System.ComponentModel.Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System.IO.Compression.FileSystem<br />System.Net<br />System.Net.Cache<br />System.Net.Mail<br />System.Net.Mime<br />System.Net.&#8203;NetworkInformation<br />System.Net.Security<br />System.Net.Sockets<br />System.Runtime.&#8203;InteropServices<br />System.Runtime.Versioning<br />System.Security.&#8203;AccessControl<br />System.Security.Authentication<br />System.Security.&#8203;Cryptography<br />System.Security.Permissions<br />System.Threading<br />System.Timers|✓|✓|✓|
 > |System.&#8203;ComponentModel.&#8203;Composition.dll| |✓|✓|✓|
 > |System.&#8203;ComponentModel.&#8203;DataAnnotations.dll| |✓|✓|✓|
 > |System.Core.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
@@ -60,16 +60,16 @@ Possono usare anche i progetti di Xamarin [librerie di classi portabili .NET](~/
 > |System.Net.&#8203;Http.dll| |✓|✓|✓|
 > |System.&#8203;Numerics.dll| |✓|✓|✓|
 > |System.Runtime.&#8203;Serialization.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.&#8203;ServiceModel.dll|Stack WCF come presente nella [Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.&#8203;ServiceModel.dll|Stack WCF come presente in [Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |System.&#8203;ServiceModel.&#8203;Internals.dll| |✓|✓|✓|
-> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), nonché i tipi degli spazi dei nomi seguenti: <br />System<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
-> |System.&#8203;Transactions.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx); fa parte di [System. Data](~/ios/data-cloud/system.data.md) supportano.|✓|✓|✓|
-> |System.Web.&#8203;Services.dll|Servizi Web di base del profilo di .NET 3.5, con le funzionalità server rimosso.|✓|✓|✓|
+> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), oltre a tipi degli spazi dei nomi seguenti: <br />System<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
+> |System.&#8203;Transactions.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx); in parte [System. Data](~/ios/data-cloud/system.data.md) supportano.|✓|✓|✓|
+> |System.Web.&#8203;Services.dll|Servizi Web di base dal profilo .NET 3.5, con le funzionalità server rimossi.|✓|✓|✓|
 > |System.&#8203;Windows.dll| |✓|✓|✓|
 > |System.&#8203;Xml.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
 > |System.Xml.&#8203;Linq.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
 > |System.Xml.Serialization.dll| |✓|✓|✓|
-> |Xamarin.iOS.dll|Questo assembly contiene l'associazione all'API CocoaTouch c#. Viene utilizzato solo nei progetti iOS unificato.|✓| | |
+> |Xamarin.iOS.dll|Questo assembly contiene l'associazione all'API cocoatouch usano c#. Viene usato solo nei progetti iOS unificato.|✓| | |
 > |Java.Interop.dll| | |✓| |
 > |Mono.Android.dll| | |✓| |
 > |Mono.Android.&#8203;Export.dll| | |✓| |
@@ -78,4 +78,4 @@ Possono usare anche i progetti di Xamarin [librerie di classi portabili .NET](~/
 > |Xamarin.Android.&#8203;NUnitLite.dll| | |✓| |
 > |Mono.CompilerServices.&#8203;SymbolWriter.dll|Writer di compilatori.| | |✓|
 > |Xamarin.Mac.dll| | | |✓|
-> |System.&#8203;Drawing.dll|System. Drawing API - solo API classica. System. Drawing non è supportata nell'API unificata per le Xamarin.Mac 4.5 di .NET Framework per dispositivi mobili. Può essere aggiunto il supporto di System. Drawing per iOS e OS X con il [sysdrawing coregraphics](https://github.com/mono/sysdrawing-coregraphics) libreria|✓| |✓|
+> |System.&#8203;Drawing.dll|System. Drawing API - solo l'API classica. System. Drawing non è supportata nell'API unificata di xamarin. Mac .NET 4.5 o Framework per dispositivi mobili. Può essere aggiunto il supporto di System. Drawing per iOS e OS X tramite il [sysdrawing coregraphics](https://github.com/mono/sysdrawing-coregraphics) libreria|✓| |✓|

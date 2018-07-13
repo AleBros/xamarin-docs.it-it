@@ -7,16 +7,16 @@ ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b6ef23364cac0dd1459681aa92c7a7db58bc81f0
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 1fc42207d26f2e2154c7bd6634cc90fead4b0b17
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935641"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998934"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>Riepilogo del capitolo 26. Layout personalizzati
 
-Xamarin. Forms include diverse classi derivate da [ `Layout<View>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/):
+Xamarin. Forms include diverse classi derivate da [ `Layout<View>` ](xref:Xamarin.Forms.Layout`1):
 
 * `StackLayout`,
 * `Grid`,
@@ -35,74 +35,74 @@ Tutti gli elementi che contiene elementi figlio sono responsabili per il posizio
 
 ### <a name="sizing-and-positioning"></a>Ridimensionamento e posizionamento
 
-Layout in cui inizia la parte superiore della struttura visiva con la pagina e quindi procede con tutti i rami. Il metodo pubblico più importante nel layout viene [ `Layout` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.Layout/p/Xamarin.Forms.Rectangle/) definiti da `VisualElement`. Tutti gli elementi che sono di altre chiamate di elementi padre `Layout` per ognuno dei relativi elementi figlio per specificare l'elemento figlio, dimensioni e posizione rispetto a se stesso sotto forma di un [ `Rectangle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Rectangle/) valore. Questi `Layout` chiamate propagano attraverso la struttura ad albero visuale.
+Layout in cui inizia la parte superiore della struttura visiva con la pagina e quindi procede con tutti i rami. Il metodo pubblico più importante nel layout viene [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) definiti da `VisualElement`. Tutti gli elementi che sono di altre chiamate di elementi padre `Layout` per ognuno dei relativi elementi figlio per specificare l'elemento figlio, dimensioni e posizione rispetto a se stesso sotto forma di un [ `Rectangle` ](xref:Xamarin.Forms.Rectangle) valore. Questi `Layout` chiamate propagano attraverso la struttura ad albero visuale.
 
 Una chiamata a `Layout` è obbligatorio per un elemento venga visualizzato sullo schermo e fa sì che le seguenti proprietà di sola lettura da impostare. Siano coerenti con il `Rectangle` passato al metodo:
 
-- [`Bounds`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Bounds/) di tipo `Rectangle`
-- [`X`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.X/) di tipo `double`
-- [`Y`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Y/) di tipo `double`
-- [`Width`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) di tipo `double`
-- [`Height`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) di tipo `double`
+- [`Bounds`](xref:Xamarin.Forms.VisualElement.Bounds) di tipo `Rectangle`
+- [`X`](xref:Xamarin.Forms.VisualElement.X) di tipo `double`
+- [`Y`](xref:Xamarin.Forms.VisualElement.Y) di tipo `double`
+- [`Width`](xref:Xamarin.Forms.VisualElement.Width) di tipo `double`
+- [`Height`](xref:Xamarin.Forms.VisualElement.Height) di tipo `double`
 
 Nelle versioni precedenti al `Layout` , chiamare `Height` e `Width` includono valori fittizi &ndash;1.
 
 Una chiamata a `Layout` attiva anche le chiamate ai metodi protetti seguenti:
 
-- [`SizeAllocated`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.SizeAllocated/p/System.Double/System.Double/), che chiama
-- [`OnSizeAllocated`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.OnSizeAllocated/p/System.Double/System.Double/), che può essere sottoposto a override.
+- [`SizeAllocated`](xref:Xamarin.Forms.VisualElement.SizeAllocated(System.Double,System.Double)), che chiama
+- [`OnSizeAllocated`](xref:Xamarin.Forms.VisualElement.OnSizeAllocated(System.Double,System.Double)), che può essere sottoposto a override.
 
 Infine, viene generato l'evento seguente:
 
-- [`SizeChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.VisualElement.SizeChanged/)
+- [`SizeChanged`](xref:Xamarin.Forms.VisualElement.SizeChanged)
 
 Il `OnSizeAllocated` metodo esegue l'override `Page` e `Layout`, quali sono le uniche due classi in xamarin. Forms che può avere elementi figlio. Le chiamate del metodo sottoposto a override
 
-- [`UpdateChildrenLayout`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.UpdateChildrenLayout()/) per la `Page` derivati e [ `UpdateChildrenLayout` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.UpdateChildrenLayout()/) per `Layout` derivati, che chiama
-- [`LayoutChildren`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.LayoutChildren/p/System.Double/System.Double/System.Double/System.Double/) per la `Page` derivati e [ `LayoutChildren` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.LayoutChildren/p/System.Double/System.Double/System.Double/System.Double/) per `Layout` derivati.
+- [`UpdateChildrenLayout`](xref:Xamarin.Forms.Page.UpdateChildrenLayout) per la `Page` derivati e [ `UpdateChildrenLayout` ](xref:Xamarin.Forms.Layout.UpdateChildrenLayout) per `Layout` derivati, che chiama
+- [`LayoutChildren`](xref:Xamarin.Forms.Page.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) per la `Page` derivati e [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) per `Layout` derivati.
 
 `LayoutChildren` chiama quindi `Layout` per ognuno degli elementi figlio dell'elemento. Se almeno un elemento figlio è disponibile un nuovo `Bounds` impostazione, quindi viene generato l'evento seguente:
 
-- [`LayoutChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.LayoutChanged/) per la `Page` derivati e [ `LayoutChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Layout.LayoutChanged/) per `Layout` derivati
+- [`LayoutChanged`](xref:Xamarin.Forms.Page.LayoutChanged) per la `Page` derivati e [ `LayoutChanged` ](xref:Xamarin.Forms.Layout.LayoutChanged) per `Layout` derivati
 
 ### <a name="constraints-and-size-requests"></a>I vincoli e le dimensioni richieste
 
 Per `LayoutChildren` per chiamare in modo intelligente `Layout` in tutti i relativi elementi figlio, è necessario conoscere un *preferito* oppure *desiderato* dimensioni per gli elementi figlio. Di conseguenza le chiamate a `Layout` per ognuno degli elementi figlio in genere sono precedute dalle chiamate a
 
-- [`GetSizeRequest`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.GetSizeRequest/p/System.Double/System.Double/)
+- [`GetSizeRequest`](xref:Xamarin.Forms.VisualElement.GetSizeRequest(System.Double,System.Double))
 
 Dopo che è stato pubblicato il libro, il `GetSizeRequest` metodo è stato deprecato e sostituito con
 
-- [`Measure`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.Measure/p/System.Double/System.Double/Xamarin.Forms.MeasureFlags/)
+- [`Measure`](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags))
 
-Il `Measure` alcune variazioni per il metodo di [ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) proprietà e include un argomento di tipo [ `MeasureFlag` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MeasureFlags/), che contiene due membri:
+Il `Measure` alcune variazioni per il metodo di [ `Margin` ](xref:Xamarin.Forms.View.Margin) proprietà e include un argomento di tipo [ `MeasureFlag` ](xref:Xamarin.Forms.MeasureFlags), che contiene due membri:
 
 - [`IncludeMargins`](xref:Xamarin.Forms.MeasureFlags.IncludeMargins)
 - [`None`](xref:Xamarin.Forms.MeasureFlags.None) Per non includere i margini
 
 Per molti elementi `GetSizeRequest` o `Measure` Ottiene le dimensioni dell'elemento nativa dal renderer. Entrambi i metodi presentano i parametri per la larghezza e altezza *vincoli*. Ad esempio, un `Label` utilizzerà il vincolo di larghezza per determinare come eseguire il wrapping di più righe di testo.
 
-Entrambe `GetSizeRequest`e `Measure` restituiscono un valore di tipo [ `SizeRequest` ](https://developer.xamarin.com/api/type/Xamarin.Forms.SizeRequest/), che dispone di due proprietà:
+Entrambe `GetSizeRequest`e `Measure` restituiscono un valore di tipo [ `SizeRequest` ](xref:Xamarin.Forms.SizeRequest), che dispone di due proprietà:
 
-- [`Request`](https://developer.xamarin.com/api/property/Xamarin.Forms.SizeRequest.Request/) di tipo `Size`
-- [`Minimum`](https://developer.xamarin.com/api/property/Xamarin.Forms.SizeRequest.Minimum/) di tipo `Size`
+- [`Request`](xref:Xamarin.Forms.SizeRequest.Request) di tipo `Size`
+- [`Minimum`](xref:Xamarin.Forms.SizeRequest.Minimum) di tipo `Size`
 
 Molto spesso questi due valori sono uguali e il `Minimum` valore in genere può essere ignorato.
 
 `VisualElement` definisce anche un metodo protetto simile a `GetSizeRequest` che viene chiamato da `GetSizeRequest`:
 
-- [`OnSizeRequest`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.OnSizeRequest/p/System.Double/System.Double/) Restituisce un `SizeRequest` valore
+- [`OnSizeRequest`](xref:Xamarin.Forms.VisualElement.OnSizeRequest(System.Double,System.Double)) Restituisce un `SizeRequest` valore
 
 Tale metodo è ora deprecato e sostituito con:
 
-- [`OnMeasure`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.OnMeasure/p/System.Double/System.Double/)
+- [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double))
 
 Ogni classe che deriva da `Layout` oppure `Layout<T>` deve eseguire l'override `OnSizeRequest` o `OnMeasure`. Si tratta in cui una classe layout determina la propria dimensione, che in genere si basa sulle dimensioni dei relativi elementi figlio, ottenuto chiamando `GetSizeRequest` o `Measure` sugli elementi figlio. Prima e dopo la chiamata `OnSizeRequest` oppure `OnMeasure`, `GetSizeRequest` o `Measure` consente regolazioni in incrementi sulla base delle proprietà seguenti:
 
-- [`WidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/)di tipo `double`, riguarda il `Request` proprietà di `SizeRequest`
-- [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) di tipo `double`, riguarda il `Request` proprietà di `SizeRequest`
-- [`MinimumWidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumWidthRequest/) di tipo `double`, riguarda il `Minimum` proprietà di `SizeRequest`
-- [`MinimumHeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumHeightRequest/) di tipo `double`, riguarda il `Minimum` proprietà di `SizeRequest`
+- [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest)di tipo `double`, riguarda il `Request` proprietà di `SizeRequest`
+- [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) di tipo `double`, riguarda il `Request` proprietà di `SizeRequest`
+- [`MinimumWidthRequest`](xref:Xamarin.Forms.VisualElement.MinimumWidthRequest) di tipo `double`, riguarda il `Minimum` proprietà di `SizeRequest`
+- [`MinimumHeightRequest`](xref:Xamarin.Forms.VisualElement.MinimumHeightRequest) di tipo `double`, riguarda il `Minimum` proprietà di `SizeRequest`
 
 ### <a name="infinite-constraints"></a>Vincoli infiniti
 
@@ -131,23 +131,23 @@ Il [ **VerticalStackDemo** ](https://github.com/xamarin/xamarin-forms-book-sampl
 
 ### <a name="vertical-and-horizontal-positioning-simplified"></a>Verticale e orizzontale posizionamento semplificato
 
-Uno dei processi che `VerticalStack` deve eseguire rientra il `LayoutChildren` eseguire l'override. Il metodo Usa l'elemento figlio `HorizontalOptions` proprietà per determinare la modalità posizionare l'elemento figlio all'interno del relativo slot nel `VerticalStack`. È invece possibile chiamare il metodo statico [ `Layout.LayoutChildIntoBoundingRect` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.LayoutChildIntoBoundingRegion/p/Xamarin.Forms.VisualElement/Xamarin.Forms.Rectangle/). Questo metodo chiama `Measure` su figlio e all'utilizzo relativi `HorizontalOptions` e `VerticalOptions` proprietà per posizionare l'elemento figlio all'interno del rettangolo specificato.
+Uno dei processi che `VerticalStack` deve eseguire rientra il `LayoutChildren` eseguire l'override. Il metodo Usa l'elemento figlio `HorizontalOptions` proprietà per determinare la modalità posizionare l'elemento figlio all'interno del relativo slot nel `VerticalStack`. È invece possibile chiamare il metodo statico [ `Layout.LayoutChildIntoBoundingRect` ](xref:Xamarin.Forms.Layout.LayoutChildIntoBoundingRegion(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle)). Questo metodo chiama `Measure` su figlio e all'utilizzo relativi `HorizontalOptions` e `VerticalOptions` proprietà per posizionare l'elemento figlio all'interno del rettangolo specificato.
 
 ### <a name="invalidation"></a>Invalidamento
 
 Spesso una modifica nella proprietà di un elemento influisce sul modo in cui tale elemento viene visualizzato nel layout. Il layout deve essere invalidato per attivare un nuovo layout.
 
-`VisualElement` definisce un metodo protetto [ `InvalidateMeasure` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.InvalidateMeasure()/), che in genere viene chiamato dal gestore di modifica delle proprietà di qualsiasi proprietà associabili cui modifica influisce sulle dimensioni dell'elemento. Il `InvalidateMeasure` metodo viene attivato un [ `MeasureInvalidated` ](https://developer.xamarin.com/api/event/Xamarin.Forms.VisualElement.MeasureInvalidated/) evento.
+`VisualElement` definisce un metodo protetto [ `InvalidateMeasure` ](xref:Xamarin.Forms.VisualElement.InvalidateMeasure), che in genere viene chiamato dal gestore di modifica delle proprietà di qualsiasi proprietà associabili cui modifica influisce sulle dimensioni dell'elemento. Il `InvalidateMeasure` metodo viene attivato un [ `MeasureInvalidated` ](xref:Xamarin.Forms.VisualElement.MeasureInvalidated) evento.
 
-Il `Layout` classe definisce un metodo protetto simile denominato [ `InvalidateLayout` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.InvalidateLayout()/), ovvero un `Layout` derivato deve chiamare per qualsiasi modifica che influisce sulle modalità posizione e dimensioni relativi elementi figlio.
+Il `Layout` classe definisce un metodo protetto simile denominato [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout), ovvero un `Layout` derivato deve chiamare per qualsiasi modifica che influisce sulle modalità posizione e dimensioni relativi elementi figlio.
 
 ### <a name="some-rules-for-coding-layouts"></a>Alcune regole per la codifica di layout
 
 1. Le proprietà definite da `Layout<T>` derivati devono essere eseguiti dalle proprietà associabile e devono chiamare i gestori di modifica della proprietà `InvalidateLayout`.
 
-2. Oggetto `Layout<T>` deve eseguire l'override derivato che definisce le proprietà associabili associate [ `OnAdded` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout%3CT%3E.OnAdded/p/T/) per aggiungere un gestore di modifica delle proprietà ai relativi figli e [ `OnRemoved` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout%3CT%3E.OnRemoved/p/T/) da rimuovere che gestore. Il gestore deve verificare per le modifiche in tali associate proprietà associabili e rispondere chiamando `InvalidateLayout`.
+2. Oggetto `Layout<T>` deve eseguire l'override derivato che definisce le proprietà associabili associate [ `OnAdded` ](xref:Xamarin.Forms.Layout`1.OnAdded*) per aggiungere un gestore di modifica delle proprietà ai relativi figli e [ `OnRemoved` ](xref:Xamarin.Forms.Layout`1.OnRemoved*) da rimuovere che gestore. Il gestore deve verificare per le modifiche in tali associate proprietà associabili e rispondere chiamando `InvalidateLayout`.
 
-3. Oggetto `Layout<T>` derivato che implementa una cache di dimensione figlio deve eseguire l'override `InvalidateLayout` e [ `OnChildMeasureInvalidated` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.OnChildMeasureInvalidated()/) e cancellare la cache quando vengono chiamati questi metodi.
+3. Oggetto `Layout<T>` derivato che implementa una cache di dimensione figlio deve eseguire l'override `InvalidateLayout` e [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) e cancellare la cache quando vengono chiamati questi metodi.
 
 ### <a name="a-layout-with-properties"></a>Un layout con proprietà
 
@@ -169,8 +169,8 @@ Oggetto `Layout<T>` derivato può essere sovrapposto relativi elementi figlio. T
 
 Il `Layout` classe definisce due metodi che consentono di spostare un elemento figlio all'interno della raccolta:
 
-- [`LowerChild`](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.LowerChild/p/Xamarin.Forms.View/) Per spostare un elemento figlio all'inizio della raccolta
-- [`RaiseChild`](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.RaiseChild/p/Xamarin.Forms.View/) Per spostare un elemento figlio alla fine della raccolta
+- [`LowerChild`](xref:Xamarin.Forms.Layout.LowerChild(Xamarin.Forms.View)) Per spostare un elemento figlio all'inizio della raccolta
+- [`RaiseChild`](xref:Xamarin.Forms.Layout.RaiseChild(Xamarin.Forms.View)) Per spostare un elemento figlio alla fine della raccolta
 
 Per gli elementi figlio sovrapposti, gli elementi figlio alla fine della raccolta vengono visualizzati in modo visivo sopra gli elementi figlio all'inizio della raccolta.
 

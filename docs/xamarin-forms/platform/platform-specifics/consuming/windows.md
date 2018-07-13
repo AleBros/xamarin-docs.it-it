@@ -6,13 +6,13 @@ ms.assetid: 22B403C0-FE6D-498A-AE53-095E6C4B527C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/30/2018
-ms.openlocfilehash: 52895564ef327845940d687a58b007fb1502e62b
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.date: 07/10/2018
+ms.openlocfilehash: 43a681350035c3e965798bd63f49cd39f472ebfd
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935121"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998416"
 ---
 # <a name="windows-platform-specifics"></a>Funzionalità specifiche della piattaforma Windows
 
@@ -20,19 +20,21 @@ _Funzionalità specifiche della piattaforma consentono di utilizzare funzionalit
 
 In Universal Windows Platform (UWP), xamarin. Forms contiene le funzionalità specifiche della piattaforma seguenti:
 
-- Impostazione delle opzioni di posizionamento della barra degli strumenti. Per altre informazioni, vedere [modifica la posizione della barra degli strumenti](#toolbar_placement).
-- Comprimere il [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) barra di spostamento. Per altre informazioni, vedere [compressione di una barra di spostamento MasterDetailPage](#collapsable_navigation_bar).
+- Impostazione delle opzioni di posizionamento della barra degli strumenti. Per altre informazioni, vedere [modifica la posizione della barra degli strumenti pagina](#toolbar_placement).
+- Comprimere il [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) barra di spostamento. Per altre informazioni, vedere [compressione di una barra di spostamento MasterDetailPage](#collapsable_navigation_bar).
 - Abilitazione di un [ `WebView` ](xref:Xamarin.Forms.WebView) per visualizzare gli avvisi di JavaScript in una finestra di dialogo messaggio UWP. Per altre informazioni, vedere [visualizzazione di avvisi JavaScript](#webview-javascript-alert).
 - Abilitazione di un [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) per interagire con il motore di controllo ortografico. Per altre informazioni, vedere [abilitazione controllo ortografico SearchBar](#searchbar-spellcheck).
 - Rilevamento di ordine di lettura dal testo contenuto nel [ `Entry` ](xref:Xamarin.Forms.Entry), [ `Editor` ](xref:Xamarin.Forms.Editor), e [ `Label` ](xref:Xamarin.Forms.Label) istanze. Per altre informazioni, vedere [rilevamento di ordine di lettura dal contenuto](#inputview-readingorder).
 - Disattivazione della modalità colore legacy in supportato [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Per altre informazioni, vedere [disattivazione modalità colore Legacy](#legacy-color-mode).
 - Abilitazione del supporto di movimenti tocco in una [ `ListView` ](xref:Xamarin.Forms.ListView). Per altre informazioni, vedere [abilitazione supporto movimenti toccare in un ListView](#listview-selectionmode).
+- Abilitazione di icone da visualizzare in una [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) sulla barra degli strumenti. Per altre informazioni, vedere [abilitazione icone su una TabbedPage](#tabbedpage-icons).
+- L'impostazione di una chiave di accesso per un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Per altre informazioni, vedere [chiavi di accesso di impostazione VisualElement](#visualelement-accesskeys).
 
 <a name="toolbar_placement" />
 
-## <a name="changing-the-toolbar-placement"></a>Modifica la posizione della barra degli strumenti
+## <a name="changing-the-page-toolbar-placement"></a>Modifica il posizionamento degli strumenti della pagina
 
-Questo specifico della piattaforma viene utilizzata per modificare la posizione di una barra degli strumenti in un [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)e vengono utilizzati in XAML, impostando il [ `Page.ToolbarPlacement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page.ToolbarPlacementProperty/) proprietà associata a un valore del [ `ToolbarPlacement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement/) enumerazione:
+Questo specifico della piattaforma viene utilizzata per modificare la posizione di una barra degli strumenti in un [ `Page` ](xref:Xamarin.Forms.Page)e vengono utilizzati in XAML, impostando il [ `Page.ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page.ToolbarPlacementProperty) proprietà associata a un valore del [ `ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement) enumerazione:
 
 ```xaml
 <TabbedPage ...
@@ -52,9 +54,9 @@ using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
 page.On<Windows>().SetToolbarPlacement(ToolbarPlacement.Bottom);
 ```
 
-Il `Page.On<Windows>` metodo consente di specificare che questo specifico della piattaforma sarà eseguita solo su Windows. Il [ `Page.SetToolbarPlacement` ](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page.SetToolbarPlacement/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.Page}/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement/) (metodo), nella [ `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) dello spazio dei nomi, viene usato per impostare la posizione della barra degli strumenti, con la [ `ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement) enumerazione fornendo tre valori: [ `Default` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement.Default), [ `Top` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement.Top), e [ `Bottom` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement.Bottom).
+Il `Page.On<Windows>` metodo consente di specificare che questo specifico della piattaforma sarà eseguita solo su Windows. Il [ `Page.SetToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page.SetToolbarPlacement(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.Page},Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement)) (metodo), nella [ `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) dello spazio dei nomi, viene usato per impostare la posizione della barra degli strumenti, con la [ `ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement) enumerazione fornendo tre valori: [ `Default` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement.Default), [ `Top` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement.Top), e [ `Bottom` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement.Bottom).
 
-Il risultato è che la posizione della barra degli strumenti specificata viene applicata per il [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) istanza:
+Il risultato è che la posizione della barra degli strumenti specificata viene applicata per il [ `Page` ](xref:Xamarin.Forms.Page) istanza:
 
 [![](windows-images/toolbar-placement.png "Sulla barra degli strumenti posizione specifici della piattaforma")](windows-images/toolbar-placement-large.png#lightbox "specifiche della piattaforma posizionamento della barra degli strumenti")
 
@@ -62,7 +64,7 @@ Il risultato è che la posizione della barra degli strumenti specificata viene a
 
 ## <a name="collapsing-a-masterdetailpage-navigation-bar"></a>Compressione di una barra di navigazione MasterDetailPage
 
-Questo specifico della piattaforma è utilizzato per comprimere la barra di spostamento in un [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/)e vengono utilizzati in XAML impostando i [ `MasterDetailPage.CollapseStyle` ](https://developer.xamarin.com/api/field/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.CollapseStyleProperty/) e [ `MasterDetailPage.CollapsedPaneWidth` ](https://developer.xamarin.com/api/field/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.CollapsedPaneWidthProperty/)le proprietà associate:
+Questo specifico della piattaforma è utilizzato per comprimere la barra di spostamento in un [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage)e vengono utilizzati in XAML impostando i [ `MasterDetailPage.CollapseStyle` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.CollapseStyleProperty) e [ `MasterDetailPage.CollapsedPaneWidth` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.CollapsedPaneWidthProperty)le proprietà associate:
 
 ```xaml
 <MasterDetailPage ...
@@ -84,9 +86,9 @@ using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
 page.On<Windows>().SetCollapseStyle(CollapseStyle.Partial).CollapsedPaneWidth(148);
 ```
 
-Il `MasterDetailPage.On<Windows>` metodo consente di specificare che questo specifico della piattaforma sarà eseguita solo su Windows. Il [ `Page.SetCollapseStyle` ](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.SetCollapseStyle/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.MasterDetailPage}/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle/) metodo, nel [ `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.WindowsSpecific/) dello spazio dei nomi, viene usato per specificare lo stile di compressione, con la [ `CollapseStyle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle/) enumerazione che fornisce due valori: [ `Full` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle.Full) e [ `Partial` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle.Partial). Il [ `MasterDetailPage.CollapsedPaneWidth` ](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.CollapsedPaneWidth/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.MasterDetailPage}/System.Double/) metodo viene utilizzato per specificare la larghezza di una barra di spostamento compressa parzialmente.
+Il `MasterDetailPage.On<Windows>` metodo consente di specificare che questo specifico della piattaforma sarà eseguita solo su Windows. Il [ `Page.SetCollapseStyle` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.SetCollapseStyle(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.MasterDetailPage},Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle)) metodo, nel [ `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) dello spazio dei nomi, viene usato per specificare lo stile di compressione, con la [ `CollapseStyle` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle) enumerazione che fornisce due valori: [ `Full` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle.Full) e [ `Partial` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle.Partial). Il [ `MasterDetailPage.CollapsedPaneWidth` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.CollapsedPaneWidth(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.MasterDetailPage},System.Double)) metodo viene utilizzato per specificare la larghezza di una barra di spostamento compressa parzialmente.
 
-Il risultato è che un oggetto specificato [ `CollapseStyle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle/) viene applicato per il [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) istanza, con la larghezza specificata anche:
+Il risultato è che un oggetto specificato [ `CollapseStyle` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle) viene applicato per il [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) istanza, con la larghezza specificata anche:
 
 [![](windows-images/collapsed-navigation-bar.png "Specifiche della piattaforma sulla barra di spostamento compressa")](windows-images/collapsed-navigation-bar-large.png#lightbox "compresso barra di spostamento specifici della piattaforma")
 
@@ -293,6 +295,153 @@ Inoltre, il [ `GetSelectionMode` ](xref:Xamarin.Forms.PlatformConfiguration.Wind
 
 Il risultato è che un oggetto specificato [ `ListViewSelectionMode` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode) viene applicato al [ `ListView` ](xref:Xamarin.Forms.ListView), che controlla se gli elementi nel `ListView` può rispondere per la scelta di movimenti e pertanto se nativo `ListView` viene attivato il `ItemClick` o `Tapped` evento.
 
+<a name="tabbedpage-icons" />
+
+## <a name="enabling-icons-on-a-tabbedpage"></a>Abilitazione delle icone su una TabbedPage
+
+Questo specifico della piattaforma Abilita le icone di pagina da visualizzare in una [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) sulla barra degli strumenti e offre la possibilità di specificare facoltativamente le dimensioni dell'icona. Vengono utilizzati in XAML, impostando il [ `TabbedPage.HeaderIconsEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsEnabledProperty) proprietà associata `true`e, facoltativamente impostando il [ `TabbedPage.HeaderIconsSize` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsSizeProperty) proprietà associata una [ `Size` ](xref:Xamarin.Forms.Size) valore:
+
+```xaml
+<TabbedPage ...
+            xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core"
+            windows:TabbedPage.HeaderIconsEnabled="true">
+    <windows:TabbedPage.HeaderIconsSize>
+        <Size>
+            <x:Arguments>
+                <x:Double>24</x:Double>
+                <x:Double>24</x:Double>
+            </x:Arguments>
+        </Size>
+    </windows:TabbedPage.HeaderIconsSize>
+    <ContentPage Title="Todo" Icon="todo.png">
+        ...
+    </ContentPage>
+    <ContentPage Title="Reminders" Icon="reminders.png">
+        ...
+    </ContentPage>
+    <ContentPage Title="Contacts" Icon="contacts.png">
+        ...
+    </ContentPage>
+</TabbedPage>
+```
+
+In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
+...
+
+public class WindowsTabbedPageIconsCS : Xamarin.Forms.TabbedPage
+{
+  public WindowsTabbedPageIconsCS()
+    {
+    On<Windows>().SetHeaderIconsEnabled(true);
+    On<Windows>().SetHeaderIconsSize(new Size(24, 24));
+
+    Children.Add(new ContentPage { Title = "Todo", Icon = "todo.png" });
+    Children.Add(new ContentPage { Title = "Reminders", Icon = "reminders.png" });
+    Children.Add(new ContentPage { Title = "Contacts", Icon = "contacts.png" });
+  }
+}
+```
+
+Il `TabbedPage.On<Windows>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo nella piattaforma Windows universale. Il [ `TabbedPage.SetHeaderIconsEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.SetHeaderIconsEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.TabbedPage},System.Boolean)) metodo, nelle [ `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) dello spazio dei nomi, viene utilizzato per attivare o disattivare la icone di intestazione. Il [ `TabbedPage.SetHeaderIconsSize` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.SetHeaderIconsSize(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.TabbedPage},Xamarin.Forms.Size)) metodo facoltativamente specifica le dimensioni dell'icona intestazione con un [ `Size` ](xref:Xamarin.Forms.Size) valore.
+
+Inoltre, il `TabbedPage` classe nel `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` dello spazio dei nomi ha anche un [ `EnableHeaderIcons` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.EnableHeaderIcons*) metodo che abilita le icone di intestazione, un [ `DisableHeaderIcons` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.DisableHeaderIcons*) metodo che consente di disattivare le icone di intestazione, e una [ `IsHeaderIconsEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.IsHeaderIconsEnabled*) metodo che restituisce un `boolean` valore che indica se sono abilitate le icone di intestazione.
+
+Il risultato è tale pagina è possibile visualizzare le icone in una [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) barra degli strumenti con le dimensioni dell'icona facoltativamente impostata in base alle esigenze:
+
+![Specifiche della piattaforma icone abilitate TabbedPage](windows-images/tabbedpage-icons.png "TabbedPage icone abilitate specifico della piattaforma")
+
+<a name="visualelement-accesskeys" />
+
+## <a name="setting-visualelement-access-keys"></a>Impostazione delle chiavi di accesso VisualElement
+
+Chiavi di accesso sono scelte rapide da tastiera che consentono di migliorare l'usabilità e accessibilità delle App sulla piattaforma Windows universale, fornendo un modo intuitivo per gli utenti di passare rapidamente e interagire con l'interfaccia utente visibile dell'app tramite la tastiera anziché tramite tocco o un oggetto mouse. Sono combinazioni di uno o più tasti alfanumerici, in genere premuti in sequenza e il tasto Alt. Tasti di scelta rapida sono automaticamente supportati per le chiavi di accesso che utilizzano un singolo carattere alfanumerico.
+
+Suggerimenti tasto di accesso sono variabili badge visualizzati accanto ai controlli che includono chiavi di accesso. Ogni suggerimento di chiavi di accesso contiene le chiavi di caratteri alfanumeriche che attiva il controllo associato. Quando un utente preme il tasto Alt, vengono visualizzati i suggerimenti tasto di accesso.
+
+Questo specifico della piattaforma viene usato per specificare una chiave di accesso per un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Vengono utilizzati in XAML, impostando il [ `VisualElement.AccessKey` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyProperty) proprietà associata a un valore alfanumerico e, facoltativamente impostando il [ `VisualElement.AccessKeyPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyPlacementProperty) proprietà associata a un valore di [ `AccessKeyPlacement` ](xref:Xamarin.Forms.AccessKeyPlacement) enumerazione, il [ `VisualElement.AccessKeyHorizontalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyHorizontalOffsetProperty) proprietà associata una `double`e i [ `VisualElement.AccessKeyVerticalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyVerticalOffsetProperty) proprietà associata a un `double`:
+
+```xaml
+<TabbedPage ...
+            xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core">
+    <ContentPage Title="Page 1"
+                 windows:VisualElement.AccessKey="1">
+        <StackLayout Margin="20">
+            ...
+            <Switch windows:VisualElement.AccessKey="A" />
+            <Entry Placeholder="Enter text here"
+                   windows:VisualElement.AccessKey="B" />
+            ...
+            <Button Text="Access key F, placement top with offsets"
+                    Margin="20"
+                    Clicked="OnButtonClicked"
+                    windows:VisualElement.AccessKey="F"
+                    windows:VisualElement.AccessKeyPlacement="Top"
+                    windows:VisualElement.AccessKeyHorizontalOffset="20"
+                    windows:VisualElement.AccessKeyVerticalOffset="20" />
+            ...
+        </StackLayout>
+    </ContentPage>
+    ...
+</TabbedPage>
+```
+
+In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
+...
+
+var page = new ContentPage { Title = "Page 1" };
+page.On<Windows>().SetAccessKey("1");
+
+var switchView = new Switch();
+switchView.On<Windows>().SetAccessKey("A");
+var entry = new Entry { Placeholder = "Enter text here" };
+entry.On<Windows>().SetAccessKey("B");
+...
+
+var button4 = new Button { Text = "Access key F, placement top with offsets", Margin = new Thickness(20) };
+button4.Clicked += OnButtonClicked;
+button4.On<Windows>()
+    .SetAccessKey("F")
+    .SetAccessKeyPlacement(AccessKeyPlacement.Top)
+    .SetAccessKeyHorizontalOffset(20)
+    .SetAccessKeyVerticalOffset(20);
+...
+```
+
+Il `VisualElement.On<Windows>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo nella piattaforma Windows universale. Il [ `VisualElement.SetAccessKey` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKey(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},System.String)) metodo, nel [ `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) dello spazio dei nomi, viene utilizzato per impostare il valore di chiave di accesso per il `VisualElement`. Il [ `VisualElement.SetAccessKeyPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKeyPlacement(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},Xamarin.Forms.AccessKeyPlacement)) metodo, facoltativamente, specifica la posizione da utilizzare per visualizzare il suggerimento di chiavi di accesso, con il [ `AccessKeyPlacement` ](xref:Xamarin.Forms.AccessKeyPlacement) enumerazione che fornisce i valori possibili seguenti:
+
+- [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto) : indica che il posizionamento di base al suggerimento tasto di accesso verrà determinato dal sistema operativo.
+- [`Top`](xref:Xamarin.Forms.AccessKeyPlacement.Top) : indica che il suggerimento di chiavi di accesso verrà visualizzato sopra il bordo superiore del `VisualElement`.
+- [`Bottom`](xref:Xamarin.Forms.AccessKeyPlacement.Bottom) : indica che il suggerimento di chiavi di accesso verrà visualizzato sotto il bordo inferiore del `VisualElement`.
+- [`Right`](xref:Xamarin.Forms.AccessKeyPlacement.Right) : indica che il suggerimento di chiavi di accesso verrà visualizzato a destra del bordo destro del `VisualElement`.
+- [`Left`](xref:Xamarin.Forms.AccessKeyPlacement.Left) : indica che il suggerimento di chiavi di accesso verrà visualizzato a sinistra del bordo sinistro del `VisualElement`.
+- [`Center`](xref:Xamarin.Forms.AccessKeyPlacement.Center) : indica che il suggerimento di chiavi di accesso verrà visualizzato sovrapposta al centro del `VisualElement`.
+
+> [!NOTE]
+> In genere, il [ `Auto` ](xref:Xamarin.Forms.AccessKeyPlacement.Auto) selezione host di base al suggerimento tasto è sufficiente, che include il supporto per interfacce utente adattiva.
+
+Il [ `VisualElement.SetAccessKeyHorizontalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKeyHorizontalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},System.Double)) e [ `VisualElement.SetAccessKeyVerticalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.SetAccessKeyVerticalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement},System.Double)) metodi possono essere utilizzati per un controllo più granulare del percorso di base al suggerimento tasto di accesso. L'argomento per il `SetAccessKeyHorizontalOffset` metodo indica come distanza di spostamento a sinistra il suggerimento di chiavi di accesso o a destra e l'argomento di `SetAccessKeyVerticalOffset` metodo indica la distanza di spostamento il suggerimento di chiavi di accesso verso l'alto o verso il basso.
+
+>[!NOTE]
+> Offset di base al suggerimento tasto di accesso non può essere impostato quando è impostato il posizionamento di chiavi di accesso `Auto`.
+
+Inoltre, il [ `GetAccessKey` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKey(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})), [ `GetAccessKeyPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKeyPlacement(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})), [ `GetAccessKeyHorizontalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKeyHorizontalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})), e [ `GetAccessKeyVerticalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.GetAccessKeyVerticalOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.VisualElement})) metodi possono essere usati per recuperare un accesso valore e il percorso della chiave.
+
+Il risultato è che i suggerimenti tasto di accesso possono essere visualizzati accanto alle [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) accessibile a istanze che definiscono le chiavi, premendo il tasto Alt:
+
+![Specifica della piattaforma di chiavi di accesso di VisualElement](windows-images/visualelement-accesskeys.png "VisualElement accesso chiavi specifiche della piattaforma")
+
+Quando un utente attiva di una chiave di accesso, premendo il tasto Alt seguito dall'accesso della chiave, l'azione predefinita per il `VisualElement` verrà eseguito. Ad esempio, quando un utente attiva il tasto di scelta rapida in una [ `Switch` ](xref:Xamarin.Forms.Switch), il `Switch` è attivata o disattivata. Quando un utente attiva la chiave di accesso in un' [ `Entry` ](xref:Xamarin.Forms.Entry), il `Entry` Ottiene lo stato attivo. Quando un utente attiva il tasto di scelta rapida in una [ `Button` ](xref:Xamarin.Forms.Button), il gestore eventi per il [ `Clicked` ](xref:Xamarin.Forms.Button.Clicked) viene eseguito l'evento.
+
+Per altre informazioni sulle chiavi di accesso, vedere [chiavi di accesso](/windows/uwp/design/input/access-keys#key-tip-positioning).
+
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo è stato illustrato come utilizzare il Windows-funzionalità specifiche della piattaforma incorporate in xamarin. Forms. Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti.
@@ -301,4 +450,4 @@ Questo articolo è stato illustrato come utilizzare il Windows-funzionalità spe
 
 - [Creazione di funzionalità specifiche della piattaforma](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (esempio)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
-- [WindowsSpecific](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.WindowsSpecific/)
+- [WindowsSpecific](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

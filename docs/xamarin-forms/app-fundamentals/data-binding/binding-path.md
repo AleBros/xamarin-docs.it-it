@@ -1,22 +1,22 @@
 ---
 title: Percorso di associazione di xamarin. Forms
-description: In questo articolo viene illustrato come utilizzare xamarin. Forms i data binding per l'accesso a sottoproprietà e i membri della raccolta con la proprietà percorso della classe di associazione.
+description: Questo articolo illustra come usare le associazioni di dati di xamarin. Forms per accedere alle proprietà secondarie e i membri della raccolta con la proprietà percorso della classe di associazione.
 ms.prod: xamarin
 ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: d7c3b1ba991380451b4a82c389c4d46e950bc914
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 887a20f1791a190c182e6d179cfabb46c6e0eb48
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240473"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998947"
 ---
 # <a name="xamarinforms-binding-path"></a>Percorso di associazione di xamarin. Forms
 
-In tutti gli esempi di associazione di dati precedenti, il [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/) proprietà del `Binding` classe (o [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Path/) proprietà del `Binding` estensione di markup) è stato impostato per una singola proprietà. È effettivamente possibile impostare `Path` per un *delle sottoproprietà* (una proprietà di una proprietà), o a un membro di una raccolta.
+In tutti gli esempi di data binding precedenti, il [ `Path` ](xref:Xamarin.Forms.Binding.Path) proprietà del `Binding` classe (o la [ `Path` ](xref:Xamarin.Forms.Xaml.BindingExtension.Path) proprietà del `Binding` estensione di markup) è stata impostata per una singola proprietà. È possibile effettivamente impostare `Path` a un *sottoproprietà* (una proprietà di una proprietà), o a un membro di una raccolta.
 
 Ad esempio, si supponga che la pagina contiene un `TimePicker`:
 
@@ -24,16 +24,16 @@ Ad esempio, si supponga che la pagina contiene un `TimePicker`:
 <TimePicker x:Name="timePicker">
 ```
 
-Il `Time` proprietà di `TimePicker` è di tipo `TimeSpan`, ma forse si desidera creare un'associazione di dati che fa riferimento il `TotalSeconds` proprietà di tale `TimeSpan` valore. Di seguito è l'associazione di dati:
+Il `Time` proprietà di `TimePicker` JE typu `TimeSpan`, ma si vogliono creare un'associazione di dati che fa riferimento il `TotalSeconds` proprietà di tale `TimeSpan` valore. Ecco il data binding:
 
 ```xaml
 {Binding Source={x:Reference timePicker},
          Path=Time.TotalSeconds}
 ```
 
-Il `Time` proprietà è di tipo `TimeSpan`, che presenta un `TotalSeconds` proprietà. Il `Time` e `TotalSeconds` proprietà sono simply connessa con un punto. Gli elementi di `Path` stringa sempre fare riferimento alle proprietà e non i tipi di queste proprietà.
+Il `Time` proprietà è di tipo `TimeSpan`, che ha un `TotalSeconds` proprietà. Il `Time` e `TotalSeconds` proprietà sono connessa con un punto. Gli elementi di `Path` stringa fanno sempre riferimento alle proprietà e non ai tipi di queste proprietà.
 
-Esempio e molti altri verranno mostrati nel **percorso variazioni** pagina:
+Esempio e altri ancora verranno mostrati nel **variazioni percorso** pagina:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -89,11 +89,11 @@ Esempio e molti altri verranno mostrati nel **percorso variazioni** pagina:
 </ContentPage>
 ```
 
-Nella seconda `Label`, l'origine di associazione è la pagina stessa. Il `Content` proprietà è di tipo `StackLayout`, che presenta un `Children` proprietà di tipo `IList<View>`, che presenta un `Count` proprietà che indica il numero di elementi figlio.
+Nella seconda `Label`, l'origine del binding è la pagina stessa. Il `Content` proprietà è di tipo `StackLayout`, che dispone di un `Children` vlastnosti typu `IList<View>`, che ha un `Count` proprietà che indica il numero di elementi figlio.
 
 ## <a name="paths-with-indexers"></a>Percorsi con gli indicizzatori
 
-L'associazione nel terzo `Label` nel **variazioni percorso** pagine riferimenti il [ `CultureInfo` ](https://developer.xamarin.com/api/type/System.Globalization.CultureInfo/) classe il `System.Globalization` dello spazio dei nomi:
+L'associazione nel terzo `Label` nella **percorso variazioni** pagine riferimenti il [ `CultureInfo` ](xref:System.Globalization.CultureInfo) classe il `System.Globalization` dello spazio dei nomi:
 
 ```xaml
 <Label Text="{Binding Source={x:Static globe:CultureInfo.CurrentCulture},
@@ -101,9 +101,9 @@ L'associazione nel terzo `Label` nel **variazioni percorso** pagine riferimenti 
                       StringFormat='The middle day of the week is {0}'}" />
 ```
 
-L'origine è impostata su statica `CultureInfo.CurrentCulture` proprietà, che è un oggetto di tipo `CultureInfo`. Che classe definisce una proprietà denominata `DateTimeFormat` di tipo [ `DateTimeFormatInfo` ](https://developer.xamarin.com/api/type/System.Globalization.DateTimeFormatInfo/) che contiene un `DayNames` insieme. L'indice consente di selezionare il quarto elemento.
+L'origine è impostato su statico `CultureInfo.CurrentCulture` proprietà, ovvero un oggetto di tipo `CultureInfo`. Che classe implementa una proprietà denominata `DateTimeFormat` typu [ `DateTimeFormatInfo` ](xref:System.Globalization.DateTimeFormatInfo) che contiene un `DayNames` raccolta. L'indice consente di selezionare il quarto elemento.
 
-Il quarto `Label` è un'operazione simile, ma per le impostazioni cultura associate Francia. Il `Source` dell'associazione è impostata su `CultureInfo` oggetto con un costruttore:
+Il quarto `Label` esegue un'operazione simile ma per le impostazioni cultura associato Francia. Il `Source` dell'associazione è impostata su `CultureInfo` oggetto con un costruttore:
 
 ```xaml
 <Label>
@@ -122,7 +122,7 @@ Il quarto `Label` è un'operazione simile, ma per le impostazioni cultura associ
 </Label>
 ```
 
-Vedere [passando gli argomenti del costruttore](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) per ulteriori informazioni su come specificare gli argomenti del costruttore in XAML.
+Visualizzare [passando gli argomenti del costruttore](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) per altri dettagli su come specificare gli argomenti del costruttore in XAML.
 
 Infine, nell'ultimo esempio è simile al secondo, ad eccezione del fatto che fa riferimento a uno degli elementi figlio del `StackLayout`:
 
@@ -132,22 +132,22 @@ Infine, nell'ultimo esempio è simile al secondo, ad eccezione del fatto che fa 
                       StringFormat='The first Label has {0} characters'}" />
 ```
 
-Tale elemento figlio è un `Label`, che presenta un `Text` proprietà di tipo `String`, che presenta un `Length` proprietà. Il primo `Label` report il `TimeSpan` impostato `TimePicker`, pertanto quando viene modificato il testo, finale `Label` anche le modifiche.
+Tale elemento figlio è un `Label`, che dispone di un `Text` vlastnosti typu `String`, che ha un `Length` proprietà. Il primo `Label` report il `TimeSpan` impostato `TimePicker`, pertanto quando viene modificato, che il testo finale `Label` anche le modifiche.
 
-Di seguito è riportato il programma in esecuzione in tutti e tre le piattaforme:
+Ecco il programma in esecuzione in tutti e tre le piattaforme:
 
-[![Percorso variazioni](binding-path-images/pathvariations-small.png "variazioni percorso")](binding-path-images/pathvariations-large.png#lightbox "variazioni di percorso")
+[![Percorso variazioni](binding-path-images/pathvariations-small.png "percorso variazioni")](binding-path-images/pathvariations-large.png#lightbox "variazioni di percorso")
 
-## <a name="debugging-complex-paths"></a>Debug percorsi complessi
+## <a name="debugging-complex-paths"></a>Debug di tracciati complessi
 
-Le definizioni di percorso complesse possono essere difficili da costruire: È necessario conoscere il tipo di ogni proprietà secondaria o il tipo di elementi nella raccolta per aggiungere correttamente la proprietà secondaria successiva, ma degli stessi tipi non vengono visualizzati nel percorso. Una buona tecnica consiste nel compilare costituisce il percorso in modo incrementale ed esaminare i risultati intermedi. Ad esempio ultimo che è possibile iniziare senza alcun `Path` definizione affatto:
+Le definizioni di percorso complesse possono essere difficili da costruire: È necessario conoscere il tipo di ogni proprietà secondarie o il tipo di elementi nella raccolta aggiungere correttamente la proprietà secondaria Avanti, ma non vengono visualizzati degli stessi tipi di nel percorso. Una buona tecnica consiste nel compilare il percorso in modo incrementale ed esaminare i risultati intermedi. Ultimo esempio, è possibile iniziare senza alcun `Path` definizione affatto:
 
 ```xaml
 <Label Text="{Binding Source={x:Reference page},
                       StringFormat='{0}'}" />
 ```
 
-Che visualizza il tipo di origine di associazione, o `DataBindingDemos.PathVariationsPage`. Si è certi `PathVariationsPage` deriva da `ContentPage`, ha un `Content` proprietà:
+Che visualizza il tipo di origine del binding, o `DataBindingDemos.PathVariationsPage`. Si conosce `PathVariationsPage` deriva da `ContentPage`, pertanto un `Content` proprietà:
 
 ```xaml
 <Label Text="{Binding Source={x:Reference page},
@@ -155,15 +155,15 @@ Che visualizza il tipo di origine di associazione, o `DataBindingDemos.PathVaria
                       StringFormat='{0}'}" />
 ```
 
-Il tipo di `Content` proprietà viene ora visualizzata da `Xamarin.Forms.StackLayout`. Aggiungere il `Children` proprietà per il `Path` e il tipo è `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]`, ovvero una classe interna per xamarin. Forms, ma ovviamente un tipo di raccolta. Aggiungere un indice che e il tipo è `Xamarin.Forms.Label`. In questo modo, continuare.
+Il tipo dei `Content` proprietà viene ora visualizzata sia `Xamarin.Forms.StackLayout`. Aggiungere il `Children` proprietà per il `Path` e il tipo è `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]`, ovvero una classe interna per xamarin. Forms, ma ovviamente un tipo di raccolta. Aggiungere un indice che e il tipo è `Xamarin.Forms.Label`. Continua in questo modo.
 
-Come xamarin. Forms elabora il percorso di associazione, viene installato un `PropertyChanged` gestore su qualsiasi oggetto nel percorso che implementa il `INotifyPropertyChanged` interfaccia. Ad esempio, l'associazione finale risponde a una modifica nel primo `Label` perché il `Text` le modifiche alle proprietà.
+Poiché xamarin. Forms ha elaborato il percorso di associazione, viene installato un `PropertyChanged` gestore su qualsiasi oggetto nel percorso che implementa il `INotifyPropertyChanged` interfaccia. Ad esempio, l'associazione finale reagisce a una modifica nel primo `Label` perché il `Text` le modifiche alle proprietà.
 
-Se una proprietà nel percorso di associazione non implementa `INotifyPropertyChanged`, qualsiasi modifica a tale proprietà verrà ignorata. Alcune modifiche potrebbero completamente invalidare il percorso di associazione, è necessario utilizzare questa tecnica solo quando la stringa di proprietà e sottoproprietà non diventano non validi.
+Se una proprietà nel percorso di associazione non implementa `INotifyPropertyChanged`, eventuali modifiche a tale proprietà verranno ignorate. Alcune modifiche è stato interamente invalidare il percorso di associazione, è necessario utilizzare questa tecnica solo quando la stringa di proprietà e sottoproprietà mai diventano non validi.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Data Binding Demo (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Capitolo di associazione di dati dalla Rubrica di xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capitolo di associazione di dati dal libro di xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

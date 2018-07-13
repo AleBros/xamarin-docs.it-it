@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: 7f68b7c8affc11b50bdb4a2fc9589f8dcbfb45ec
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 34fb58f44e3f341fa34eef512d61f20f5d035a9b
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38830480"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998204"
 ---
 # <a name="gtk-platform-setup"></a>Installazione di piattaforma GTK #
 
@@ -211,7 +211,7 @@ GtkThemes.LoadCustomTheme ("Themes/gtkrc");
 
 ### <a name="native-forms"></a>Form nativi
 
-Form nativi consente a xamarin. Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivato pagine deve essere utilizzato da progetti nativi, inclusi i progetti di GTK #. A questo scopo tramite la creazione di un'istanza del [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivato pagina inferiori e convertendolo nel native GTK # tipo utilizzando il `CreateContainer` metodo di estensione:
+Form nativi consente a xamarin. Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-derivato pagine deve essere utilizzato da progetti nativi, inclusi i progetti di GTK #. A questo scopo tramite la creazione di un'istanza del [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-derivato pagina inferiori e convertendolo nel native GTK # tipo utilizzando il `CreateContainer` metodo di estensione:
 
 ```csharp
 var settingsView = new SettingsView().CreateContainer();

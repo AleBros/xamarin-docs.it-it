@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: ff707cdf73665ae07881d2d17ec837a4cfacaca0
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: c706d50962fb707208203a97374d4ae26f141ebf
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935371"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998267"
 ---
 # <a name="xamarinforms-device-class"></a>Classe di dispositivi di xamarin. Forms
 
@@ -24,11 +24,11 @@ Oltre ai metodi e proprietà per il codice di destinazione in tipi di hardware s
 
 ## <a name="providing-platform-specific-values"></a>Fornendo valori specifici della piattaforma
 
-Prima di xamarin. Forms 2.3.4, la piattaforma su cui era in esecuzione l'applicazione è stato possibile ottenere esaminando il [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) proprietà e confrontandola con la [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android), [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), e [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows) valori di enumerazione. Analogamente, uno dei [ `Device.OnPlatform` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) overload può essere utilizzato per fornire valori specifici della piattaforma da un controllo.
+Prima di xamarin. Forms 2.3.4, la piattaforma su cui era in esecuzione l'applicazione è stato possibile ottenere esaminando il [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) proprietà e confrontandola con la [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android), [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), e [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows) valori di enumerazione. Analogamente, uno dei [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) overload può essere utilizzato per fornire valori specifici della piattaforma da un controllo.
 
-Tuttavia, poiché xamarin. Forms 2.3.4 queste API sono state deprecate e sostituite. Il [ `Device` ](xref:Xamarin.Forms.Device) classe ora contiene le costanti di stringa pubblica che identificano le piattaforme – [ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS), [ `Device.Android` ](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`( deprecato), `Device.WinRT` (deprecata), [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP), e [ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS). Analogamente, il [ `Device.OnPlatform` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) overload sono stati sostituiti con il [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) e [ `On` ](xref:Xamarin.Forms.On) API.
+Tuttavia, poiché xamarin. Forms 2.3.4 queste API sono state deprecate e sostituite. Il [ `Device` ](xref:Xamarin.Forms.Device) classe ora contiene le costanti di stringa pubblica che identificano le piattaforme – [ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS), [ `Device.Android` ](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`( deprecato), `Device.WinRT` (deprecata), [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP), e [ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS). Analogamente, il [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) overload sono stati sostituiti con il [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) e [ `On` ](xref:Xamarin.Forms.On) API.
 
-In c#, è possibile fornire valori specifici della piattaforma tramite la creazione di un `switch` struzione il [ `Device.RuntimePlatform` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/) proprietà e quindi fornendo `case` istruzioni per le piattaforme necessarie:
+In c#, è possibile fornire valori specifici della piattaforma tramite la creazione di un `switch` struzione il [ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform) proprietà e quindi fornendo `case` istruzioni per le piattaforme necessarie:
 
 ```csharp
 double top;
@@ -46,7 +46,7 @@ switch (Device.RuntimePlatform)
 layout.Margin = new Thickness(5, top, 5, 0);
 ```
 
-Il [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) e [ `On` ](xref:Xamarin.Forms.On) classi forniscono la stessa funzionalità in XAML:
+Il [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) e [ `On` ](xref:Xamarin.Forms.On) classi forniscono la stessa funzionalità in XAML:
 
 ```xaml
 <StackLayout>
@@ -60,7 +60,7 @@ Il [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatf
 </StackLayout>
 ```
 
-Il [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) classe è una classe generica e pertanto deve essere creata con un `x:TypeArguments` attributo che corrisponde al tipo di destinazione. Nel [ `On` ](xref:Xamarin.Forms.On) (classe), il [ `Platform` ](xref:Xamarin.Forms.On.Platform) attributo può accettare un singolo `string` valore o più valori delimitati da virgole `string` valori.
+Il [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) classe è una classe generica e pertanto deve essere creata con un `x:TypeArguments` attributo che corrisponde al tipo di destinazione. Nel [ `On` ](xref:Xamarin.Forms.On) (classe), il [ `Platform` ](xref:Xamarin.Forms.On.Platform) attributo può accettare un singolo `string` valore o più valori delimitati da virgole `string` valori.
 
 > [!IMPORTANT]
 > Che fornisce un'implementazione non corretta `Platform` nel valore dell'attributo di `On` classe non comporterà un errore. Al contrario, il codice verrà eseguito senza il valore specifico della piattaforma in corso l'applicazione.
@@ -75,6 +75,7 @@ Il `Device.Idiom` possono essere usati per modificare layout o la funzionalità 
 -  **Tablet** : iPad, i dispositivi Windows e i dispositivi Android più ampio di 600 DIP ^
 -  **Desktop** : solo restituito nella [App della piattaforma UWP](~/xamarin-forms/platform/windows/installation/index.md) nei computer desktop Windows 10 (restituisce `Phone` nei dispositivi mobili di Windows, inclusi negli scenari di continuità)
 -  **TV** – dispositivi Tizen TV
+-  **Espressioni di controllo** – dispositivi watch Tizen
 -  **Non supportato** : non usato
 
 *^ DIP non è necessariamente il numero di pixel fisici*
@@ -172,7 +173,7 @@ Se il codice all'interno del timer interagisce con l'interfaccia utente (ad esem
 
 ## <a name="devicebegininvokeonmainthread"></a>Device.BeginInvokeOnMainThread
 
-Elementi dell'interfaccia utente non devono mai essere accessibile tramite i thread in background, ad esempio il codice in esecuzione in un timer o un gestore di completamento per le operazioni asincrone, ad esempio richieste web. Qualsiasi codice in background che è necessario aggiornare l'interfaccia utente debba essere incapsulato all'interno [ `BeginInvokeOnMainThread` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/). Questo è l'equivalente di `InvokeOnMainThread` in iOS `RunOnUiThread` in Android, e `Dispatcher.RunAsync` sulla piattaforma Windows universale.
+Elementi dell'interfaccia utente non devono mai essere accessibile tramite i thread in background, ad esempio il codice in esecuzione in un timer o un gestore di completamento per le operazioni asincrone, ad esempio richieste web. Qualsiasi codice in background che è necessario aggiornare l'interfaccia utente debba essere incapsulato all'interno [ `BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)). Questo è l'equivalente di `InvokeOnMainThread` in iOS `RunOnUiThread` in Android, e `Dispatcher.RunAsync` sulla piattaforma Windows universale.
 
 Il codice xamarin. Forms è:
 

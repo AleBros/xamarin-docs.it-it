@@ -7,36 +7,36 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 3cb4d7f152e0f9540275f12f0ade568cd0552784
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: b1ebe2694ad5fa996b8b679cfb31a203588de05c
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935576"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998999"
 ---
 # <a name="customizing-a-viewcell"></a>Personalizzazione di un elemento ViewCell
 
 _Un elemento ViewCell xamarin. Forms è una cella che è possibile aggiungere a un ListView o TableView, che contiene una visualizzazione definita dallo sviluppatore. Questo articolo illustra come creare un renderer personalizzato per un elemento ViewCell ospitato all'interno di un controllo ListView di xamarin. Forms. Questo arresta i calcoli di layout di xamarin. Forms venga chiamato più volte durante lo scorrimento di ListView._
 
-Tutte le celle di xamarin. Forms sono un renderer di accompagnamento per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) viene eseguito il rendering da un'applicazione xamarin. Forms, in iOS il `ViewCellRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza di nativo `UITableViewCell` controllo. La piattaforma Android, il `ViewCellRenderer` un'istanza nativa `View` controllo. In Universal Windows Platform (UWP), il `ViewCellRenderer` un'istanza nativa `DataTemplate`. Per altre informazioni sulle classi di controllo nativo che eseguono il mapping per i controlli di xamarin. Forms e renderer, vedere [Renderer di classi di Base e controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Tutte le celle di xamarin. Forms sono un renderer di accompagnamento per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) viene eseguito il rendering da un'applicazione xamarin. Forms, in iOS il `ViewCellRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza di nativo `UITableViewCell` controllo. La piattaforma Android, il `ViewCellRenderer` un'istanza nativa `View` controllo. In Universal Windows Platform (UWP), il `ViewCellRenderer` un'istanza nativa `DataTemplate`. Per altre informazioni sulle classi di controllo nativo che eseguono il mapping per i controlli di xamarin. Forms e renderer, vedere [Renderer di classi di Base e controlli nativi](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
-Il diagramma seguente illustra la relazione tra il [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) e i corrispondenti controlli nativi che l'implementano:
+Il diagramma seguente illustra la relazione tra il [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) e i corrispondenti controlli nativi che l'implementano:
 
 ![](viewcell-images/viewcell-classes.png "Relazione tra i controlli nativi di implementazione e il controllo elemento ViewCell")
 
-Il processo di rendering possibile avvantaggiarsi di implementare le personalizzazioni specifiche della piattaforma tramite la creazione di un renderer personalizzato per un [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) in ogni piattaforma. Il processo per eseguire questa operazione è come segue:
+Il processo di rendering possibile avvantaggiarsi di implementare le personalizzazioni specifiche della piattaforma tramite la creazione di un renderer personalizzato per un [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) in ogni piattaforma. Il processo per eseguire questa operazione è come segue:
 
 1. [Creare](#Creating_the_Custom_Cell) una cella personalizzata a xamarin. Forms.
 1. [Utilizzare](#Consuming_the_Custom_Cell) la cella personalizzata da xamarin. Forms.
 1. [Creare](#Creating_the_Custom_Renderer_on_each_Platform) il renderer personalizzato per la cella in ogni piattaforma.
 
-Ogni elemento a questo punto discuteremo a sua volta, per implementare una `NativeCell` renderer che si avvale di un layout specifico della piattaforma per ogni cella ospitato all'interno di un xamarin. Forms [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) controllo. Questo arresta i calcoli di layout di xamarin. Forms venga chiamato più volte durante `ListView` lo scorrimento.
+Ogni elemento a questo punto discuteremo a sua volta, per implementare una `NativeCell` renderer che si avvale di un layout specifico della piattaforma per ogni cella ospitato all'interno di un xamarin. Forms [ `ListView` ](xref:Xamarin.Forms.ListView) controllo. Questo arresta i calcoli di layout di xamarin. Forms venga chiamato più volte durante `ListView` lo scorrimento.
 
 <a name="Creating_the_Custom_Cell" />
 
 ## <a name="creating-the-custom-cell"></a>Creazione della cella personalizzata
 
-È possibile creare un controllo di cella personalizzato creando sottoclassi il [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) classe, come illustrato nell'esempio di codice seguente:
+È possibile creare un controllo di cella personalizzato creando sottoclassi il [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) classe, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 public class NativeCell : ViewCell
@@ -143,9 +143,9 @@ public class NativeCellPageCS : ContentPage
 }
 ```
 
-Un xamarin. Forms [ `ListView` ](xref:Xamarin.Forms.ListView) controllo viene usato per visualizzare un elenco di dati, che viene compilati tramite il [ `ItemSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%601.ItemsSource/) proprietà. Il [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) strategia di cache tenta di ridurre al minimo il `ListView` footprint di memoria e l'esecuzione più veloci per riciclare le celle di elenco. Per altre informazioni, vedere [strategia di memorizzazione nella cache](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy).
+Un xamarin. Forms [ `ListView` ](xref:Xamarin.Forms.ListView) controllo viene usato per visualizzare un elenco di dati, che viene compilati tramite il [ `ItemSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) proprietà. Il [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) strategia di cache tenta di ridurre al minimo il `ListView` footprint di memoria e l'esecuzione più veloci per riciclare le celle di elenco. Per altre informazioni, vedere [strategia di memorizzazione nella cache](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy).
 
-Ogni riga nell'elenco contiene tre elementi di dati, un nome, una categoria e un nome di file di immagine. Il layout di ogni riga nell'elenco è definito dal `DataTemplate` che viene fatto riferimento tramite il [ `ListView.ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%601.ItemTemplate/) proprietà associabile. Il `DataTemplate` definisce che ogni riga di dati nell'elenco sarà un `NativeCell` che consente di visualizzare relativo `Name`, `Category`, e `ImageFilename` proprietà tramite associazione dati. Per altre informazioni sul `ListView` controllano, vedere [ListView](~/xamarin-forms/user-interface/listview/index.md).
+Ogni riga nell'elenco contiene tre elementi di dati, un nome, una categoria e un nome di file di immagine. Il layout di ogni riga nell'elenco è definito dal `DataTemplate` che viene fatto riferimento tramite il [ `ListView.ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) proprietà associabile. Il `DataTemplate` definisce che ogni riga di dati nell'elenco sarà un `NativeCell` che consente di visualizzare relativo `Name`, `Category`, e `ImageFilename` proprietà tramite associazione dati. Per altre informazioni sul `ListView` controllano, vedere [ListView](~/xamarin-forms/user-interface/listview/index.md).
 
 Un renderer personalizzato può ora essere aggiunti a ogni progetto di applicazione per personalizzare il layout specifici della piattaforma per ogni cella.
 
@@ -315,9 +315,9 @@ internal class NativeiOSCell : UITableViewCell, INativeElementView
 }
 ```
 
-Questa classe definisce i controlli usati per eseguire il rendering, il contenuto della cella e il relativo layout. La classe implementa il [ `INativeElementView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.INativeElementView/) interfaccia, che è obbligatorio quando il [ `ListView` ](xref:Xamarin.Forms.ListView) utilizza il [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) strategia di memorizzazione nella cache. Questa interfaccia specifica che la classe deve implementare il [ `Element` ](https://developer.xamarin.com/api/property/Xamarin.Forms.INativeElementView.Element/) proprietà, che deve restituire i dati di cella personalizzato per le celle riciclate.
+Questa classe definisce i controlli usati per eseguire il rendering, il contenuto della cella e il relativo layout. La classe implementa il [ `INativeElementView` ](xref:Xamarin.Forms.INativeElementView) interfaccia, che è obbligatorio quando il [ `ListView` ](xref:Xamarin.Forms.ListView) utilizza il [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) strategia di memorizzazione nella cache. Questa interfaccia specifica che la classe deve implementare il [ `Element` ](xref:Xamarin.Forms.INativeElementView.Element) proprietà, che deve restituire i dati di cella personalizzato per le celle riciclate.
 
-Il `NativeiOSCell` costruttore inizializza l'aspetto del `HeadingLabel`, `SubheadingLabel`, e `CellImageView` proprietà. Queste proprietà vengono usate per visualizzare i dati archiviati nel `NativeCell` istanza, con la `UpdateCell` metodo chiamato per impostare il valore di ogni proprietà. Inoltre, quando la [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) utilizza il [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) i dati visualizzati dalla strategia di memorizzazione nella cache il `HeadingLabel`, `SubheadingLabel`, e `CellImageView` le proprietà possono essere aggiornando il `OnNativeCellPropertyChanged` (metodo) nel programma di rendering personalizzata.
+Il `NativeiOSCell` costruttore inizializza l'aspetto del `HeadingLabel`, `SubheadingLabel`, e `CellImageView` proprietà. Queste proprietà vengono usate per visualizzare i dati archiviati nel `NativeCell` istanza, con la `UpdateCell` metodo chiamato per impostare il valore di ogni proprietà. Inoltre, quando la [ `ListView` ](xref:Xamarin.Forms.ListView) utilizza il [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) i dati visualizzati dalla strategia di memorizzazione nella cache il `HeadingLabel`, `SubheadingLabel`, e `CellImageView` le proprietà possono essere aggiornando il `OnNativeCellPropertyChanged` (metodo) nel programma di rendering personalizzata.
 
 Viene eseguito il layout di cella per la `LayoutSubviews` esegue l'override, che imposta le coordinate del `HeadingLabel`, `SubheadingLabel`, e `CellImageView` all'interno della cella.
 
@@ -358,19 +358,19 @@ namespace CustomRenderer.Droid
 }
 ```
 
-Il `GetCellCore` metodo viene chiamato per compilare ogni cella da visualizzare. Ogni cella è una `NativeAndroidCell` istanza, che definisce il layout della cella e dei relativi dati. L'operazione dei `GetCellCore` metodo dipende il [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) strategia di memorizzazione nella cache:
+Il `GetCellCore` metodo viene chiamato per compilare ogni cella da visualizzare. Ogni cella è una `NativeAndroidCell` istanza, che definisce il layout della cella e dei relativi dati. L'operazione dei `GetCellCore` metodo dipende il [ `ListView` ](xref:Xamarin.Forms.ListView) strategia di memorizzazione nella cache:
 
-- Quando la [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) strategia di memorizzazione nella cache viene [ `RetainElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement), il `GetCellCore` metodo verrà richiamato per ogni cella. Oggetto `NativeAndroidCell` verrà creato per ogni `NativeCell` istanza che viene inizialmente visualizzato sullo schermo. Mentre l'utente scorre attraverso il `ListView`, `NativeAndroidCell` istanze verrà nuovamente usate. Per altre informazioni sulla cella Android usare di nuovo, vedere [riutilizzo delle visualizzazioni riga](~/android/user-interface/layouts/list-view/populating.md).
+- Quando la [ `ListView` ](xref:Xamarin.Forms.ListView) strategia di memorizzazione nella cache viene [ `RetainElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement), il `GetCellCore` metodo verrà richiamato per ogni cella. Oggetto `NativeAndroidCell` verrà creato per ogni `NativeCell` istanza che viene inizialmente visualizzato sullo schermo. Mentre l'utente scorre attraverso il `ListView`, `NativeAndroidCell` istanze verrà nuovamente usate. Per altre informazioni sulla cella Android usare di nuovo, vedere [riutilizzo delle visualizzazioni riga](~/android/user-interface/layouts/list-view/populating.md).
 
   > [!NOTE]
-  > Si noti che questo codice di renderer personalizzato eseguirà alcune celle usare di nuovo, anche se il [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) è impostata per conservare le celle.
+  > Si noti che questo codice di renderer personalizzato eseguirà alcune celle usare di nuovo, anche se il [ `ListView` ](xref:Xamarin.Forms.ListView) è impostata per conservare le celle.
 
   I dati visualizzati da ognuno `NativeAndroidCell` istanza, appena creata o usata nuovamente, verrà aggiornata con i dati da ognuno `NativeCell` dell'istanza dal `UpdateCell` (metodo).
 
   > [!NOTE]
-  > Si noti che, anche se il `OnNativeCellPropertyChanged` metodo sarà richiamato quando il [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) viene impostata per conservare le celle, non verrà aggiornato il `NativeAndroidCell` i valori delle proprietà.
+  > Si noti che, anche se il `OnNativeCellPropertyChanged` metodo sarà richiamato quando il [ `ListView` ](xref:Xamarin.Forms.ListView) viene impostata per conservare le celle, non verrà aggiornato il `NativeAndroidCell` i valori delle proprietà.
 
-- Quando la [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) strategia di memorizzazione nella cache viene [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement), il `GetCellCore` metodo verrà richiamato per ogni cella che viene inizialmente visualizzato sullo schermo. Oggetto `NativeAndroidCell` viene creata per ogni istanza `NativeCell` istanza che viene inizialmente visualizzato sullo schermo. I dati visualizzati da ognuno `NativeAndroidCell` verrà aggiornata con i dati da un'istanza di `NativeCell` istanza dal `UpdateCell` (metodo). Tuttavia, il `GetCellCore` metodo non verranno chiamato quando l'utente scorre il `ListView`. Al contrario, il `NativeAndroidCell` istanze verrà nuovamente usate.  `PropertyChanged` verranno generati eventi sul `NativeCell` modifica dei dati, di istanze e il `OnNativeCellPropertyChanged` gestore dell'evento verrà aggiornati i dati in ogni riusati `NativeAndroidCell` istanza.
+- Quando la [ `ListView` ](xref:Xamarin.Forms.ListView) strategia di memorizzazione nella cache viene [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement), il `GetCellCore` metodo verrà richiamato per ogni cella che viene inizialmente visualizzato sullo schermo. Oggetto `NativeAndroidCell` viene creata per ogni istanza `NativeCell` istanza che viene inizialmente visualizzato sullo schermo. I dati visualizzati da ognuno `NativeAndroidCell` verrà aggiornata con i dati da un'istanza di `NativeCell` istanza dal `UpdateCell` (metodo). Tuttavia, il `GetCellCore` metodo non verranno chiamato quando l'utente scorre il `ListView`. Al contrario, il `NativeAndroidCell` istanze verrà nuovamente usate.  `PropertyChanged` verranno generati eventi sul `NativeCell` modifica dei dati, di istanze e il `OnNativeCellPropertyChanged` gestore dell'evento verrà aggiornati i dati in ogni riusati `NativeAndroidCell` istanza.
 
 Nell'esempio di codice riportato di seguito viene illustrato il `OnNativeCellPropertyChanged` metodo che ha richiamato quando un `PropertyChanged` viene generato l'evento:
 
@@ -474,7 +474,7 @@ internal class NativeAndroidCell : LinearLayout, INativeElementView
 }
 ```
 
-Questa classe definisce i controlli usati per eseguire il rendering, il contenuto della cella e il relativo layout. La classe implementa il [ `INativeElementView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.INativeElementView/) interfaccia, che è obbligatorio quando il [ `ListView` ](xref:Xamarin.Forms.ListView) utilizza il [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) strategia di memorizzazione nella cache. Questa interfaccia specifica che la classe deve implementare il [ `Element` ](https://developer.xamarin.com/api/property/Xamarin.Forms.INativeElementView.Element/) proprietà, che deve restituire i dati di cella personalizzato per le celle riciclate.
+Questa classe definisce i controlli usati per eseguire il rendering, il contenuto della cella e il relativo layout. La classe implementa il [ `INativeElementView` ](xref:Xamarin.Forms.INativeElementView) interfaccia, che è obbligatorio quando il [ `ListView` ](xref:Xamarin.Forms.ListView) utilizza il [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) strategia di memorizzazione nella cache. Questa interfaccia specifica che la classe deve implementare il [ `Element` ](xref:Xamarin.Forms.INativeElementView.Element) proprietà, che deve restituire i dati di cella personalizzato per le celle riciclate.
 
 Il `NativeAndroidCell` costruttore ingrandisce il `NativeAndroidCell` layout e inizializza il `HeadingTextView`, `SubheadingTextView`, e `ImageView` proprietà ai controlli nel layout maggiori del necessario. Queste proprietà vengono usate per visualizzare i dati archiviati nel `NativeCell` istanza, con la `UpdateCell` metodo chiamato per impostare il valore di ogni proprietà. Inoltre, quando la [ `ListView` ](xref:Xamarin.Forms.ListView) utilizza il [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) i dati visualizzati dalla strategia di memorizzazione nella cache il `HeadingTextView`, `SubheadingTextView`, e `ImageView` le proprietà possono essere aggiornando il `OnNativeCellPropertyChanged` (metodo) nel programma di rendering personalizzata.
 
@@ -569,7 +569,7 @@ Il `DataTemplate` specifica i controlli usati per visualizzare il contenuto dell
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato come creare un renderer personalizzato per un [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) ospitato all'interno di un xamarin. Forms [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) controllo. Questo arresta i calcoli di layout di xamarin. Forms venga chiamato più volte durante `ListView` lo scorrimento.
+Questo articolo ha illustrato come creare un renderer personalizzato per un [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) ospitato all'interno di un xamarin. Forms [ `ListView` ](xref:Xamarin.Forms.ListView) controllo. Questo arresta i calcoli di layout di xamarin. Forms venga chiamato più volte durante `ListView` lo scorrimento.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
