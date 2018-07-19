@@ -1,22 +1,22 @@
 ---
 title: 'Xamarin.Essentials: Dialer telefono'
-description: La classe PhoneDialer in Xamarin.Essentials consente a un'applicazione aprire un collegamento web nel browser preferito di sistema ottimizzato o il browser esterno.
+description: La classe PhoneDialer in Xamarin.Essentials consente a un'applicazione aprire un numero di telefono per la connessione
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 6733e43ed4174d1dd78b2e8f70268eb54adadb98
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 34a6c80836d8cb42b1f8fd95718fe248d4701c0f
+ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831397"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130793"
 ---
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Dialer telefono
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 
-Il **PhoneDialer** classe consente a un'applicazione aprire un collegamento web nel browser preferito di sistema ottimizzato o il browser esterno.
+Il **PhoneDialer** classe consente a un'applicazione aprire un numero di telefono per la connessione.
 
 ## <a name="using-phone-dialer"></a>Utilizzando telefonica
 
