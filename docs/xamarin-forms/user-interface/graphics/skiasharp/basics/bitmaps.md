@@ -7,12 +7,12 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/17/2018
-ms.openlocfilehash: cbce6f414586597dc2b2788aa18b03228c128018
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 5a535d60dd01e32dc1d888d3372db13312cc069a
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130959"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156964"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Nozioni di base di bitmap in SkiaSharp
 
@@ -21,6 +21,8 @@ _Caricare immagini bitmap da diverse origini e visualizzarli._
 Il supporto delle bitmap in SkiaSharp è piuttosto ampio. Questo articolo illustra le nozioni di base &mdash; come caricare bitmap e come visualizzarli:
 
 ![](bitmaps-images/bitmapssample.png "La visualizzazione delle due bitmap")
+
+Una quantità eccessiva un'esplorazione più approfondita delle bitmap sono reperibili nella sezione [SkiaSharp Bitmaps](../bitmaps/index.md).
 
 Una bitmap di SkiaSharp è un oggetto di tipo [ `SKBitmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/). Esistono diversi modi per creare una bitmap, ma in questo articolo si limita al [ `SKBitmap.Decode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/System.IO.Stream/) metodo, che carica la bitmap da un .NET `Stream` oggetto.
 

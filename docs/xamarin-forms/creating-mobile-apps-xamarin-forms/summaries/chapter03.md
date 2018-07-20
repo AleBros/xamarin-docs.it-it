@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 3ef8f14bd60cf612408bb9e3885ef319d3efc8c5
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: eabd001587034ac0bf1b86962fe63b016fe651e9
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998335"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156574"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Riepilogo del capitolo 3. Dettagli della gestione del testo
 
@@ -100,8 +100,6 @@ Infine, due proprietà statiche di sola lettura definire il valore di colore spe
 - iOS: scuro testo sullo sfondo chiaro
 - Android: Chiaro di testo su uno sfondo scuro (nel libro) o scuro su uno sfondo chiaro (per Material Design tramite AppCompat nel **master** ramo del repository di codice di esempio)
 - Piattaforma UWP: Testo scuro su uno sfondo chiaro
-- Windows 8.1: Chiaro su uno sfondo scuro
-- Windows Phone 8.1: Chiaro su uno sfondo scuro
 
 Il `Color.Accent` valore i risultati in un colore specifico della piattaforma (e talvolta selezionabili dall'utente) che è visibile su uno sfondo chiaro o scuro.
 

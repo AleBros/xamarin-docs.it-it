@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 8a035da3dec468df291a19849ca89964c6707589
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: e7b2eea22758155db7d79fa26f3376e16cf16a45
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994757"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39157016"
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Riepilogo del capitolo 9. Chiamate API specifiche della piattaforma
+
+> [!NOTE] 
+> Le note in questa pagina indicano le aree in cui xamarin. Forms è diversa dal materiale presentato nel libro.
 
 In alcuni casi è necessario eseguire il codice che varia in base alla piattaforma. In questo capitolo illustra le tecniche.
 
@@ -32,19 +35,20 @@ Tuttavia, il codice risultante può essere confusa e difficili da leggere.
 
 ## <a name="dependencyservice-and-the-portable-class-library"></a>DependencyService e libreria di classi portabile
 
-Una libreria non è in genere accedere alle classi nei progetti di applicazione. Sembra che impediscono la tecnica illustrata in questa restrizione **PlatInfoSap2** perché non venga usato in una libreria di classi Portabile. Tuttavia, xamarin. Forms contiene una classe denominata [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) che usa la reflection .NET per accedere alle classi pubbliche nel progetto dell'applicazione dalla libreria di classi Portabile.
+> [!NOTE] 
+> Librerie di classi portabili sono state sostituite dalle librerie .NET Standard. Tutto il codice di esempio dal libro è stato convertito per utilizzare le librerie .NET standard.
 
-Libreria di classi Portabile è necessario definire un `interface` con i membri che deve essere utilizzato in ogni piattaforma. Quindi, ognuna delle piattaforme contiene un'implementazione di tale interfaccia. La classe che implementa l'interfaccia deve essere identificata con un [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) a livello di assembly.
+Una libreria non è in genere accedere alle classi nei progetti di applicazione. Sembra che impediscono la tecnica illustrata in questa restrizione **PlatInfoSap2** perché non venga usato in una libreria. Tuttavia, xamarin. Forms contiene una classe denominata [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) che usa la reflection .NET per accedere alle classi pubbliche nel progetto dell'applicazione dalla libreria.
 
-Libreria di classi Portabile Usa quindi il tipo generico [ `Get` ](xref:Xamarin.Forms.DependencyService.Get*) metodo `DependencyService` per ottenere un'istanza della classe che implementa l'interfaccia della piattaforma.
+La libreria è necessario definire un `interface` con i membri che deve essere utilizzato in ogni piattaforma. Quindi, ognuna delle piattaforme contiene un'implementazione di tale interfaccia. La classe che implementa l'interfaccia deve essere identificata con un [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) a livello di assembly.
+
+La libreria Usa quindi il tipo generico [ `Get` ](xref:Xamarin.Forms.DependencyService.Get*) metodo `DependencyService` per ottenere un'istanza della classe che implementa l'interfaccia della piattaforma.
 
 Questa funzionalità viene illustrata la [ **DisplayPlatformInfo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/DisplayPlatformInfo) esempio.
 
 ## <a name="platform-specific-sound-generation"></a>Generazione del suono specifico della piattaforma
 
 Il [ **MonkeyTapWithSound** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/MonkeyTapWithSound) esempio aggiunge segnali acustici per il **MonkeyTap** programma tramite l'accesso a funzionalità di generazione del suono in ogni piattaforma.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -6,21 +6,27 @@ ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 2ff54b65b1dca9798c91f147da7e8482649e40d2
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: d606432174807498fd458470647109de4fa0b6b4
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996282"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156730"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Riepilogo del capitolo 20. / O asincrono e file
+
+> [!NOTE] 
+> Le note in questa pagina indicano le aree in cui xamarin. Forms è diversa dal materiale presentato nel libro.
 
  Un'interfaccia utente grafica deve rispondere a eventi di input dell'utente in modo sequenziale. Ciò implica che l'elaborazione di eventi di input dell'utente deve essere presenti in un singolo thread, spesso denominato il *thread principale* o nella *thread dell'interfaccia utente*.
 
 Gli utenti si aspettano interfacce utente grafiche di essere reattiva. Ciò significa che un programma deve elaborare rapidamente gli eventi di input dell'utente. Se ciò non è possibile, quindi l'elaborazione deve essere confinato al secondario thread di esecuzione.
 
 Alcuni programmi di esempio in questo libro è sono usato il [ `WebRequest` ](xref:System.Net.WebRequest) classe. In questa classe la [ `BeginGetReponse` ](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)) metodo avvia un thread di lavoro, che chiama una funzione di callback quando sarà completata. Tuttavia, tale funzione di callback viene eseguito nel thread di lavoro, in modo che il programma deve chiamare [ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) metodo per accedere all'interfaccia utente.
+
+> [!NOTE]
+> Programmi di xamarin. Forms devono utilizzare [ `HttpClient` ](xref:System.Net.Http.HttpClient) anziché [ `WebRequest` ](xref:System.Net.WebRequest) per accedere ai file tramite internet. `HttpClient` supporta le operazioni asincrone.
 
 Un approccio più moderno per l'elaborazione asincrona è disponibile in .NET e c#. Ciò comporta il [ `Task` ](xref:System.Threading.Tasks.Task) e [ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1) classi e altri tipi all'interno di [ `System.Threading` ](xref:System.Threading) e [ `System.Threading.Tasks` ](xref:System.Threading.Tasks) spazi dei nomi, nonché il linguaggio c# 5.0 `async` e `await` parole chiave. Questo è ciò che in questo capitolo è incentrato sulla.
 
@@ -74,13 +80,16 @@ Tuttavia, se si cerca questi `System.IO` classi in una libreria di classi Portab
 
 Ciò significa che è necessario usare il [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) (illustrata per prima nella [ **capitolo 9. Chiamate API specifiche della piattaforma** ](chapter09.md) per implementare i/o file.
 
+> [!NOTE]
+> Librerie di classi portabili sono stati sostituiti con le librerie .NET Standard 2.0 e supporta .NET Standard 2.0 [ `System.IO` ](xref:System.IO) tipi per tutte le piattaforme di xamarin. Forms. Non è più necessario usare un `DependencyService` per la maggior parte delle attività dei / o file. Visualizzare [gestione File in xamarin. Forms](~/xamarin-forms/app-fundamentals/files.md) per un approccio più moderno file i/o.
+
 ### <a name="a-first-shot-at-cross-platform-file-io"></a>Vengo prima i/o file lo sviluppo multipiattaforma
 
 Il [ **TextFileTryout** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/TextFileTryout) esempio definisce un [ `IFileHelper` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter20/TextFileTryout/TextFileTryout/TextFileTryout/IFileHelper.cs) interfaccia per i/o file e le implementazioni di questa interfaccia in tutte le piattaforme. Tuttavia, le implementazioni di Windows Runtime non funzionano con i metodi in questa interfaccia perché i metodi dei / o file di Windows Runtime sono asincroni.
 
 ### <a name="accommodating-windows-runtime-file-io"></a>Da tenere conto dei / o file di Windows Runtime
 
-I programmi in esecuzione in Runtime di Windows usano classi i [ `Windows.Storage` ](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) e [ `Windows.Storage.Streams` ](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.aspx) gli spazi dei nomi per il file i/o, inclusa l'archiviazione locale dell'applicazione. Poiché Microsoft ha deciso che qualsiasi operazione che richiede che più di 50 millisecondi devono essere asincroni per evitare di bloccare il thread dell'interfaccia utente, questi metodi dei / o file sono prevalentemente asincroni.
+I programmi in esecuzione in Runtime di Windows usano classi i [ `Windows.Storage` ](/uwp/api/Windows.Storage) e [ `Windows.Storage.Streams` ](/uwp/api/Windows.Storage.Streams) gli spazi dei nomi per il file i/o, inclusa l'archiviazione locale dell'applicazione. Poiché Microsoft ha deciso che qualsiasi operazione che richiede che più di 50 millisecondi devono essere asincroni per evitare di bloccare il thread dell'interfaccia utente, questi metodi dei / o file sono prevalentemente asincroni.
 
 Il codice che illustra questo nuovo approccio sarà in una libreria in modo che può essere utilizzato da altre applicazioni.
 
@@ -94,8 +103,6 @@ Il [ **Xamarin.FormsBook.Platform** ](https://github.com/xamarin/xamarin-forms-b
 - [**Xamarin.FormsBook.Platform.iOS**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS), una libreria di classi iOS
 - [**Xamarin.FormsBook.Platform.Android**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android), una libreria di classi Android
 - [**Xamarin.FormsBook.Platform.UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.UWP), una libreria di classi di Windows universale
-- [**Xamarin.FormsBook.Platform.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Windows), una libreria di classi Portabile per Windows 8.1.
-- [**Xamarin.FormsBook.Platform.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinPhone), una libreria di classi Portabile per Windows Phone 8.1
 - [**Xamarin.FormsBook.Platform.WinRT**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT), un progetto condiviso per il codice che è comune a tutte le piattaforme Windows
 
 Tutti i singoli progetti di piattaforma (ad eccezione di **Xamarin.FormsBook.Platform.WinRT**) includono riferimenti ai **Xamarin.FormsBook.Platform**. I tre progetti Windows dispone di un riferimento a **Xamarin.FormsBook.Platform.WinRT**.

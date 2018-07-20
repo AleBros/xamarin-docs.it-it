@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 58a8976b054ac7fad5c4e24f0561d1b4e468c1b2
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: abf30f2cd828d67ef6fb04f809fce6235e1add9b
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995131"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156483"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Riepilogo del capitolo 1. Xamarin. Forms?
+
+> [!NOTE] 
+> Le note in questa pagina indicano le aree in cui xamarin. Forms è diversa dal materiale presentato nel libro.
 
 Uno dei processi più spiacevoli nella programmazione consiste nel porting di un codice di base da una piattaforma a altra, in particolare se tale piattaforma prevede un linguaggio di programmazione diversi. È possibile quando il porting del codice per effettuare il refactoring, nonché, ma se entrambe le piattaforme devono essere mantenute in parallelo, quindi le differenze tra i due codebase renderà futura manutenzione più difficile.
 
@@ -32,6 +35,9 @@ Attualmente, Xamarin offre strumenti per il Mac, iOS e le API di Android usando 
 
 Gli sviluppatori possono usare la piattaforma Xamarin per scrivere applicazioni in c# destinati a Mac, iOS o Android. Ma quando la destinazione più piattaforme, è molto utile a condividere parte del codice tra le piattaforme di destinazione. Questa operazione richiede la separazione del programma in codice dipendente dalla piattaforma (a livello generale che coinvolgono l'interfaccia utente) e codice indipendente dalla piattaforma, che in genere richiede solo base .NET framework. Questo codice indipendente dalla piattaforma può trovarsi in una libreria di classi portabile (PCL) o un progetto condiviso, spesso denominata un progetto di Asset condivisi o SAP.
 
+> [!NOTE] 
+> Librerie di classi portabili sono state sostituite dalle librerie .NET Standard. Tutto il codice di esempio dal libro è stato convertito per utilizzare le librerie .NET standard.
+
 ## <a name="introducing-xamarinforms"></a>Introduzione a xamarin. Forms
 
 Quando la destinazione più piattaforme per dispositivi mobili, xamarin. Forms consente la condivisione del codice ancora più. Un singolo programma scritto per xamarin. Forms è utilizzabile cinque piattaforme distinte:
@@ -42,13 +48,21 @@ Quando la destinazione più piattaforme per dispositivi mobili, xamarin. Forms c
 - l'API del Runtime di Windows di Windows 8.1
 - l'API del Runtime di Windows di Windows Phone 8.1
 
-I modelli di soluzione xamarin. Forms correnti non includono i modelli di progetti per le piattaforme Windows 8.1 e Windows Phone 8.1.
+> [!NOTE] 
+> Xamarin. Forms non supporta più Windows 8.1, Windows Phone 8.1 o Windows 10 Mobile, ma le applicazioni xamarin. Forms vengono eseguite sul desktop di Windows 10. È inoltre disponibile il supporto di anteprima per il [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK #](~/xamarin-forms/platform/gtk.md), e [Tizen](/xamarin-forms/platform/tizen.md) piattaforme.
 
-La maggior parte di un'applicazione xamarin. Forms esistente in una libreria di classi Portabile o un SAP. Ognuna delle piattaforme è costituito da uno stub piccola applicazione che chiama la libreria di classi Portabile. Eseguire il mapping APIs Xamarin.Forms in controlli nativi in ciascuna piattaforma, in modo che ogni piattaforma gestisce la caratteristica aspetto:
+La maggior parte di un'applicazione xamarin. Forms esistente in una libreria o un SAP. Ognuna delle piattaforme è costituito da uno stub piccola applicazione che chiama il codice condiviso. 
+
+Eseguire il mapping APIs Xamarin.Forms in controlli nativi in ciascuna piattaforma, in modo che ogni piattaforma gestisce la caratteristica aspetto:
 
 [![Schermata tripla degli oggetti visivi di piattaforma di condivisione](images/ch01fg03-small.png "xamarin. Forms Controls on Each Platform")](images/ch01fg03-large.png#lightbox "xamarin. Forms Controls on Each Platform")
 
-Gli screenshot da sinistra a destra mostrano un iPhone, un telefono Android e un telefono Windows 10 Mobile. In ogni schermata, la pagina contiene un xamarin. Forms [ `Label` ](xref:Xamarin.Forms.Label) per la visualizzazione di testo, una [ `Button` ](xref:Xamarin.Forms.Button) per l'inizializzazione di azioni, un [ `Switch` ](xref:Xamarin.Forms.Switch) per scelta di un valore di attivazione/disattivazione e un [ `Slider` ](xref:Xamarin.Forms.Slider) per specificare un valore all'interno di un intervallo continuo. Tutti e quattro le visualizzazioni sono elementi figlio di un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) su un [ `ContentPage` ](xref:Xamarin.Forms.ContentPage).
+Gli screenshot da sinistra a destra mostrano un iPhone, un telefono Android e un telefono Windows 10 Mobile. 
+
+> [!NOTE] 
+> Xamarin. Forms non supporta più Windows 10 Mobile.
+
+In ogni schermata, la pagina contiene un xamarin. Forms [ `Label` ](xref:Xamarin.Forms.Label) per la visualizzazione di testo, una [ `Button` ](xref:Xamarin.Forms.Button) per l'inizializzazione di azioni, un [ `Switch` ](xref:Xamarin.Forms.Switch) per scelta di un valore di attivazione/disattivazione e un [ `Slider` ](xref:Xamarin.Forms.Slider) per specificare un valore all'interno di un intervallo continuo. Tutti e quattro le visualizzazioni sono elementi figlio di un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) su un [ `ContentPage` ](xref:Xamarin.Forms.ContentPage).
 
 Anche collegati alla pagina è una barra degli strumenti di xamarin. Forms costituito da diversi [ `ToolbarItem` ](xref:Xamarin.Forms.ToolbarItem) oggetti. Questi sono visibili come le icone nella parte superiore di iOS e Android schermate e nella parte inferiore della schermata di Windows 10 Mobile.
 
@@ -79,8 +93,6 @@ I siti web di Xamarin e Microsoft contengono informazioni su come eseguire quest
 - [Windows Dev Center](http://dev.windows.com)
 
 Una volta è possibile creare ed eseguire i progetti per le singole piattaforme, si dovrebbe presentare alcun problema di creazione ed esecuzione di un'applicazione xamarin. Forms.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

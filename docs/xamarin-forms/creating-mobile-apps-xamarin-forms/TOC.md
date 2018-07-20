@@ -1,5 +1,4 @@
 # [Libro Creazione di app per dispositivi mobili con Xamarin.Forms](index.md)
-## [Riassunti dei capitoli](summaries/index.md)
 ## [1. Scopi di Xamarin.Forms](summaries/chapter01.md)
 ## [2. Anatomia di un'app](summaries/chapter02.md)
 ## [3. Dettagli della gestione del testo](summaries/chapter03.md)
