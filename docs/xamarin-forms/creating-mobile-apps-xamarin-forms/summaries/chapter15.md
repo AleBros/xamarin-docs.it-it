@@ -7,12 +7,12 @@ ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 6da3753d723ed44ca640d8c80ae07258a03cbbbc
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 534355b607d17e2d5a8c08254300496b49506bc8
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998667"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156642"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Riepilogo del capitolo 15. L'interfaccia interattiva
 
@@ -243,5 +243,7 @@ Il [ **SetTimer** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/m
 
 - [Capitolo 15 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf)
 - [Capitolo 15 campioni](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
+- [Dispositivo di scorrimento](~/xamarin-forms/user-interface/slider.md)
 - [Entry](~/xamarin-forms/user-interface/text/entry.md)
 - [Editor](~/xamarin-forms/user-interface/text/editor.md)
+- [DatePicker](~/xamarin-forms/user-interface/datepicker.md)
