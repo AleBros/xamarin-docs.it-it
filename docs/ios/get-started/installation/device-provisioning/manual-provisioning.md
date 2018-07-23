@@ -7,18 +7,19 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: c0404a1fd8f7e878638b9483c65c637f6b4faa66
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: dd0afe03adbd021717a88cd4409e3e1351ba9b50
+ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786103"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39111186"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Provisioning manuale per Xamarin.iOS
 
 _Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo per lo sviluppo iOS consiste nell'eseguire il provisioning del dispositivo iOS. Questa guida illustra l'uso del provisioning manuale per configurare profili e certificati di sviluppo._
 
-<a name="signingidentity" />
+> [!NOTE]
+> Le istruzioni in questa pagina sono utili per gli sviluppatori che hanno l'accesso a pagamento al programma Apple Developer. Se si ha un account gratuito, vedere la guida [Provisioning gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md) per altre informazioni sui test dei dispositivi.
 
 ## <a name="creating-a-signing-identity"></a>Creazione di un'identità di firma
 
@@ -27,9 +28,9 @@ Il primo passaggio nella configurazione di un dispositivo di sviluppo consiste n
 - Un certificato di sviluppo
 - Una chiave privata
 
-I certificati di sviluppo e le [chiavi](#keypairs) associate sono fondamentali per lo sviluppatore di iOS: essi stabiliscono l'identità dell'utente con Apple e lo associano a un determinato dispositivo e profilo per lo sviluppo ed equivalgono all'inserimento della propria firma digitale sulle applicazioni. Apple verifica i certificati per controllare l'accesso ai dispositivi che è possibile distribuire.
+I certificati di sviluppo e le [chiavi](#understanding-certificate-key-pairs) associate sono fondamentali per lo sviluppatore di iOS: essi stabiliscono l'identità dell'utente con Apple e lo associano a un determinato dispositivo e profilo per lo sviluppo ed equivalgono all'inserimento della propria firma digitale sulle applicazioni. Apple verifica i certificati per controllare l'accesso ai dispositivi che è possibile distribuire.
 
-I team di sviluppo, i certificati e i profili possono essere gestiti mediante l'accesso alla sezione [Certificates, Identifiers & Profiles](https://developer.apple.com/account/overview.action) (Certificati, identificatori e profili) di Apple's Members Center. Apple richiede un'identità di firma per compilare il proprio codice per il dispositivo o simulatore.  
+I team di sviluppo, i certificati e i profili possono essere gestiti mediante l'accesso alla sezione [Certificates, Identifiers & Profiles](https://developer.apple.com/account/overview.action) (Certificati, identificatori e profili) di Apple's Members Center (accesso richiesto). Apple richiede un'identità di firma per compilare il proprio codice per il dispositivo o simulatore.  
 
 > [!IMPORTANT]
 > È importante notare che possono essere presenti solo due certificati di sviluppo iOS per volta. Se è necessario crearne altri, occorre revocarne uno esistente. Un computer con un certificato revocato non sarà in grado di firmare le app.
@@ -70,8 +71,6 @@ Per generare un'identità di firma, eseguire le operazioni seguenti:
 
     [![](manual-provisioning-images/keychain.png "Certificato nell'accesso keychain")](manual-provisioning-images/keychain.png#lightbox)
 
-<a name="keypairs" />
-
 ### <a name="understanding-certificate-key-pairs"></a>Coppie di chiavi del certificato
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
@@ -89,7 +88,7 @@ Il profilo sviluppatore contiene i certificati, le relative chiavi e i profili d
 
 <a name="provisioning" />
 
-## <a name="provisioning-an-ios-device-for-development"></a>Provisioning di un dispositivo iOS per lo sviluppo
+## <a name="provisioning-an-ios-device-for-development"></a>Esecuzione del provisioning di un dispositivo iOS per lo sviluppo
 
 Dopo aver stabilito la propria identità con Apple e aver ottenuto un certificato di sviluppo, è necessario impostare un profilo di provisioning e le entità necessarie in modo da poter distribuire un'app a un dispositivo Apple. Nel dispositivo deve essere in esecuzione una versione di iOS supportata da Xcode; potrebbe essere necessario aggiornare il dispositivo, Xcode o entrambi.
 
@@ -135,7 +134,6 @@ Quando si crea un profilo di provisioning per lo sviluppo, è necessario indicar
 Ripetere i passaggi precedenti per tutti i dispositivi iOS che verranno usati per testare o eseguire il debug di un'applicazione Xamarin.iOS.
 
 Dopo aver aggiunto il dispositivo al portale per sviluppatori, è necessario creare un profilo di provisioning e aggiungervi il dispositivo.
-
 
 <a name="provisioningprofile" />
 
@@ -220,7 +218,7 @@ I nuovi certificati o profili di provisioning saranno disponibili in Visual Stud
 
 <a name="appservices" />
 
-## <a name="provisioning-for-application-services"></a>Provisioning dei servizi per le applicazioni
+## <a name="provisioning-for-application-services"></a>Provisioning dei servizi delle applicazioni
 
 Apple offre una selezione di servizi speciali per le applicazioni, denominati anche funzionalità, che possono essere attivati per un'applicazione Xamarin.iOS. Questi servizi per le applicazioni devono essere configurati sia nel portale di provisioning iOS quando viene creato l'**ID app** sia nel file **Entitlements.plist** che è parte del progetto dell'applicazione Xamarin.iOS. Per informazioni sull'aggiunta dei servizi per le applicazioni all'app, vedere la guida [Introduction to Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) (Introduzione alle funzionalità) e la guida [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) (Uso degli entitlement).
 
@@ -228,9 +226,7 @@ Apple offre una selezione di servizi speciali per le applicazioni, denominati an
 * Creare un nuovo [profilo di provisioning](#provisioningprofile) contenente tale ID app.
 * Impostare gli entitlement nel progetto Xamarin.iOS
 
-<a name="deploy" />
-
-## <a name="deploying-to-a-device"></a>Distribuzione a un dispositivo
+## <a name="deploying-to-a-device"></a>Distribuzione in un dispositivo
 
 A questo punto il provisioning è completo e l'applicazione è pronta per essere distribuita al dispositivo. A tale scopo, seguire questa procedura:
 
@@ -276,7 +272,6 @@ Se è impostato su **Automatico**, Visual Studio per Mac selezionerà l'identit�
 ## <a name="summary"></a>Riepilogo
 
 In questa guida sono stati illustrati i passaggi necessari per impostare l'ambiente di sviluppo per Xamarin.iOS. È stato spiegato come un'applicazione viene firmata con codice contenente informazioni sullo sviluppatore e il relativo team, i dispositivi sui quali può essere eseguita l'app e un ID app individuale.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

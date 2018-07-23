@@ -8,14 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: cdeea6d78ec1262a0b5b613b4f483012c9df2c19
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: eaf77dd68895a3fbf677e1d0aa68125d81d709c1
+ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785658"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39111225"
 ---
-# <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS Multiscreen - Approfondimento
+# <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS Multiscreen - approfondimento
 
 Nella procedura dettagliata di avvio rapido è stata compilata ed eseguita la prima applicazione Xamarin.iOS multi-schermata. A questo punto è necessario sviluppare una comprensione più approfondita della navigazione e dell'architettura di iOS.
 
@@ -24,7 +24,7 @@ Approfondiremo quindi il controller di spostamento e spiegheremo come offrire un
 
 <a name="Model_View_Controller" />
 
-## <a name="model-view-controller-mvc"></a>MCV (Model View Controller)
+## <a name="model-view-controller-mvc"></a>MVC (Model-View-Controller)
 
 Nell'esercitazione [Hello, iOS](~/ios/get-started/hello-ios/index.md) abbiamo appreso che le applicazioni iOS hanno una sola *finestra* e che i controller di visualizzazione sono responsabili del caricamento delle rispettive *gerarchie di visualizzazione del contenuto* nella finestra. Nella seconda procedura dettagliata relativa a Phoneword abbiamo aggiunto una seconda schermata all'applicazione e passato alcuni dati (un elenco di numeri di telefono) tra le due schermate, come illustrato nella figura seguente:
 
@@ -43,7 +43,6 @@ Lo schema MVC è utile perché consente la separazione logica tra diverse parti 
 > [!NOTE]
 > Lo schema MVC ricorda vagamente la struttura delle pagine ASP.NET o delle applicazioni WPF. In questi esempi, la visualizzazione è il componente che è effettivamente responsabile della descrizione dell'interfaccia utente e corrisponde alla pagina ASPX (HTML) in ASP.NET o a XAML in un'applicazione WPF. Il controller è il componente responsabile della gestione della visualizzazione, che corrisponde al code-behind in ASP.NET o WPF.
 
-
 ### <a name="model"></a>Modello
 
 L'oggetto modello è in genere una rappresentazione specifica dell'applicazione dei dati che devono essere visualizzati o inseriti nella visualizzazione. Il modello viene spesso definito genericamente, ad esempio, nella nostra app **Phoneword_iOS**, l'elenco dei numeri di telefono (rappresentato come un elenco di stringhe) è il modello. Se si compila un'applicazione multipiattaforma, è possibile scegliere di condividere il codice **PhonewordTranslator** tra le applicazioni iOS e Android. Si può anche pensare al codice condiviso come al modello.
@@ -54,7 +53,6 @@ In alcuni casi, la parte relativa al modello di MVC può essere vuota. Si può s
 
 > [!NOTE]
 > In alcune parti della documentazione, la parte relativa al modello dello schema MVC può fare riferimento al back-end dell'intera applicazione e non solo ai dati visualizzati nell'interfaccia utente. In questa guida si usa un'interpretazione moderna del modello, ma la distinzione non è particolarmente importante.
-
 
 ### <a name="view"></a>Visualizza
 
@@ -68,7 +66,7 @@ I controller possono anche gestire altri controller. Un controller potrebbe ad e
 
 ## <a name="navigation-controller"></a>Controller di spostamento
 
-Nell'applicazione Phoneword abbiamo usato un *controller di spostamento* per gestire la navigazione tra più schermate. Il controller di spostamento è un oggetto `UIViewController` specializzato rappresentato dalla classe `UINavigationController`. Anziché gestire una singola gerarchia di visualizzazione del contenuto, il controller di spostamento gestisce altri controller di visualizzazione, oltre alla propria gerarchia di visualizzazione del contenuto speciale, sotto forma di una barra degli strumenti di navigazione che include un titolo, un pulsante Indietro e altre funzionalità facoltative.
+Nell'applicazione Phoneword abbiamo usato un controller di spostamento per gestire la navigazione tra più schermate. Il controller di spostamento è un oggetto `UIViewController` specializzato rappresentato dalla classe `UINavigationController`. Anziché gestire una singola gerarchia di visualizzazione del contenuto, il controller di spostamento gestisce altri controller di visualizzazione, oltre alla propria gerarchia di visualizzazione del contenuto speciale, sotto forma di una barra degli strumenti di navigazione che include un titolo, un pulsante Indietro e altre funzionalità facoltative.
 
 Il controller di spostamento è comune nelle applicazioni iOS e offre funzioni di navigazione per le applicazioni iOS di base come l'app **Settings** (Impostazioni), come illustrato nella schermata seguente:
 
@@ -86,27 +84,24 @@ Il controller di spostamento svolge tre funzioni principali:
     [![](hello-ios-multiscreen-deepdive-images/03.png "Questa figura illustra l'estrazione di una carta dal mazzo")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
--  **Include una barra del titolo**: la parte superiore del **controller di spostamento** viene chiamata *barra del titolo*. È responsabile della visualizzazione del titolo del controller di spostamento, come illustrato nella figura seguente:  
+-  **Include una barra del titolo**: la parte superiore del controller di spostamento viene chiamata *barra del titolo*. È responsabile della visualizzazione del titolo del controller di spostamento, come illustrato nella figura seguente:  
 
     [![](hello-ios-multiscreen-deepdive-images/04.png "La barra del titolo è responsabile della visualizzazione del titolo del controller di spostamento")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
-
-
-
 ### <a name="root-view-controller"></a>Controller visualizzazione radice
 
-Un **controller di spostamento** non gestisce una gerarchia di visualizzazione del contenuto, pertanto non ha nulla da visualizzare di per sé.
-Un **controller di spostamento** è invece associato a un *controller visualizzazione radice*:
+Un controller di spostamento non gestisce una gerarchia di visualizzazione del contenuto, pertanto non ha nulla da visualizzare di per sé.
+Un controller di spostamento è invece associato a un *controller visualizzazione radice*:
 
  [![](hello-ios-multiscreen-deepdive-images/05.png "Un controller di spostamento è associato a un controller visualizzazione radice")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
-Il controller visualizzazione radice rappresenta il primo controller di visualizzazione nello stack del **controller di spostamento** e la gerarchia di visualizzazione del contenuto del controller visualizzazione radice è la prima gerarchia di visualizzazione del contenuto a essere caricata nella finestra. Se si intende inserire l'intera applicazione nello stack del controller di spostamento, è possibile spostare l'elemento Sourceless Segue nel **controller di spostamento** e impostare il controller di visualizzazione della prima schermata come controller visualizzazione radice, come abbiamo fatto nell'app Phoneword:
+Il controller visualizzazione radice rappresenta il primo controller di visualizzazione nello stack del controller di spostamento e la gerarchia di visualizzazione del contenuto del controller visualizzazione radice è la prima gerarchia di visualizzazione del contenuto a essere caricata nella finestra. Se si intende inserire l'intera applicazione nello stack del controller di spostamento, è possibile spostare l'elemento Sourceless Segue nel controller di spostamento e impostare il controller di visualizzazione della prima schermata come controller visualizzazione radice, come abbiamo fatto nell'app Phoneword:
 
  [![](hello-ios-multiscreen-deepdive-images/06.png "L'elemento Sourceless Segue imposta il controller di visualizzazione delle prime schermate come controller visualizzazione radice")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>Opzioni di navigazione aggiuntive
 
-Il **controller di spostamento** è un modo comune per gestire la navigazione in iOS, ma non è l'unica opzione. Un [controller di barra schede](~/ios/user-interface/controls/creating-tabbed-applications.md) può suddividere un'applicazione in diverse aree funzionali; un [controller doppia visualizzazione](https://developer.xamarin.com/recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) consente di creare visualizzazioni master/dettagli; un [controller di navigazione a comparsa](http://components.xamarin.com/view/flyoutnavigation) crea uno spostamento che l'utente può far scorrere lateralmente. Tutti questi elementi possono essere combinati con un **controller di spostamento** per presentare il contenuto in modo intuitivo.
+Il controller di spostamento è un modo comune per gestire la navigazione in iOS, ma non è l'unica opzione. Ad esempio, un [controller di barra schede](~/ios/user-interface/controls/creating-tabbed-applications.md) può suddividere un'applicazione in diverse aree funzionali e un [controller doppia visualizzazione](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) può essere usato per creare visualizzazioni master/dettagli. La combinazione dei controller di spostamento con questi altri paradigmi di spostamento offre molti metodi flessibili per la presentazione e la navigazione del contenuto in iOS.
 
 ## <a name="handling-transitions"></a>Gestione delle transizioni
 
@@ -194,14 +189,13 @@ CallHistoryButton.TouchUpInside += (object sender, EventArgs e) => {
 };
 ```
 
-## <a name="additional-concepts-introduced-in-phoneword"></a>Concetti aggiuntivi introdotti in Phoneword
+## <a name="additional-concepts-introduced-in-phoneword"></a>Altri concetti introdotti in Phoneword
 
 L'applicazione Phoneword ha introdotto alcuni concetti non trattati in questa guida. Essi includono:
 
 -  **Creazione automatica dei controller di visualizzazione**: quando si immette un nome di classe per il controller di visualizzazione nel **riquadro delle proprietà**, la finestra di progettazione iOS verifica se quella classe esiste e genera quindi automaticamente la classe sottostante del controller di visualizzazione. Per altre informazioni su questa e altre funzionalità di progettazione iOS, vedere la guida [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) (Introduzione alla finestra di progettazione iOS).
 -  **Controller di visualizzazione tabella**: `CallHistoryController` è un controller di visualizzazione tabella. Un controller di visualizzazione tabella contiene una visualizzazione tabella, lo strumento di visualizzazione di layout e dati più comune in iOS. Le tabelle non rientrano nell'ambito di questa guida. Per altre informazioni sul controller di visualizzazione tabella, vedere la guida [Working with Tables and Cells](~/ios/user-interface/controls/tables/index.md) (Uso di tabelle e celle).
 -   **ID storyboard**: l'impostazione dell'ID storyboard crea una classe del controller di visualizzazione in Objective-C, che contiene il code-behind per il controller di visualizzazione nello storyboard. L'ID di storyboard viene usato per trovare la classe Objective-C e creare un'istanza del controller di visualizzazione nello storyboard. Per altre informazioni sugli ID storyboard, vedere la guida [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) (Introduzione agli storyboard).
-
 
 ## <a name="summary"></a>Riepilogo
 
@@ -210,7 +204,6 @@ Complimenti, è stata completata la prima applicazione multi-schermata iOS.
 In questa guida abbiamo presentato lo schema MVC e lo abbiamo usato per creare un'applicazione multi-schermata. Abbiamo anche analizzato i controller di spostamento e il loro ruolo nel potenziamento della navigazione in iOS. Hai acquisito le competenze di base necessarie per iniziare a sviluppare le tue applicazioni Xamarin.iOS.
 
 In seguito spiegheremo come compilare applicazioni multipiattaforma con Xamarin tramite le guide [Introduction to Mobile Development](~/cross-platform/get-started/introduction-to-mobile-development.md) (Introduzione allo sviluppo mobile) e [Building Cross-Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) (Compilazione di applicazioni multipiattaforma).
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
