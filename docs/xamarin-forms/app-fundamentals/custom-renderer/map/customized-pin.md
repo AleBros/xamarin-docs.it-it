@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 4fee67f08e86c40709aa226c40c0f7721dc26800
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 351119a8b0089f78d4ce98729a1516c3cd7bae7b
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998315"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203085"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizzazione di un Pin di mappa
 
@@ -240,7 +240,7 @@ Il `GetViewForAnnotation` metodo viene chiamato quando la posizione dell'annotaz
 Il `GetViewForAnnotation` metodo accetta un `IMKAnnotation` che contiene i dati dell'annotazione e restituisce un `MKAnnotationView` da visualizzare sulla mappa e come illustrato nell'esempio di codice seguente:
 
 ```csharp
-MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
+protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
 {
     MKAnnotationView annotationView = null;
 
@@ -273,12 +273,12 @@ Questo metodo assicura che l'annotazione verrà visualizzata come un'immagine pe
 1. Il `GetCustomPin` viene chiamato per restituire i dati personalizzati pin per l'annotazione.
 1. Per risparmiare memoria, la visualizzazione dell'annotazione è in pool per il riutilizzo fra la chiamata a [ `DequeueReusableAnnotation` ](https://developer.xamarin.com/api/member/MapKit.MKMapView.DequeueReusableAnnotation/(System.String)/).
 1. Il `CustomMKAnnotationView` classe estende la `MKAnnotationView` classe con `Id` e `Url` le proprietà che corrispondono alle proprietà identiche nel `CustomPin` istanza. Una nuova istanza di `CustomMKAnnotationView` è stato creato, purché l'annotazione è `null`:
-  - Il `CustomMKAnnotationView.Image` viene impostata per l'immagine che rappresenta l'annotazione sulla mappa.
-  - Il `CustomMKAnnotationView.CalloutOffset` è impostata su un `CGPoint` che specifica che il callout verrà centrato sopra l'annotazione.
-  - Il `CustomMKAnnotationView.LeftCalloutAccessoryView` è impostata su un'immagine di un meccanico che verrà visualizzato a sinistra del titolo di annotazione e dell'indirizzo.
-  - Il `CustomMKAnnotationView.RightCalloutAccessoryView` è impostata su un *informazioni* pulsante che verrà visualizzato a destra del titolo di annotazione e dell'indirizzo.
-  - Il `CustomMKAnnotationView.Id` è impostata sul `CustomPin.Id` restituito dalla proprietà di `GetCustomPin` (metodo). In questo modo l'annotazione che deve essere identificato in modo che includa [callout è possibile personalizzare ulteriormente](#Selecting_the_Annotation), se necessario.
-  - Il `CustomMKAnnotationView.Url` è impostata sul `CustomPin.Url` restituito dalla proprietà di `GetCustomPin` (metodo). L'URL verrà aperto quando l'utente [tocca il pulsante visualizzato nella visualizzazione degli accessori callout destro](#Tapping_on_the_Right_Callout_Accessory_View).
+    - Il `CustomMKAnnotationView.Image` viene impostata per l'immagine che rappresenta l'annotazione sulla mappa.
+    - Il `CustomMKAnnotationView.CalloutOffset` è impostata su un `CGPoint` che specifica che il callout verrà centrato sopra l'annotazione.
+    - Il `CustomMKAnnotationView.LeftCalloutAccessoryView` è impostata su un'immagine di un meccanico che verrà visualizzato a sinistra del titolo di annotazione e dell'indirizzo.
+    - Il `CustomMKAnnotationView.RightCalloutAccessoryView` è impostata su un *informazioni* pulsante che verrà visualizzato a destra del titolo di annotazione e dell'indirizzo.
+    - Il `CustomMKAnnotationView.Id` è impostata sul `CustomPin.Id` restituito dalla proprietà di `GetCustomPin` (metodo). In questo modo l'annotazione che deve essere identificato in modo che includa [callout è possibile personalizzare ulteriormente](#Selecting_the_Annotation), se necessario.
+    - Il `CustomMKAnnotationView.Url` è impostata sul `CustomPin.Url` restituito dalla proprietà di `GetCustomPin` (metodo). L'URL verrà aperto quando l'utente [tocca il pulsante visualizzato nella visualizzazione degli accessori callout destro](#Tapping_on_the_Right_Callout_Accessory_View).
 1. Il [ `MKAnnotationView.CanShowCallout` ](https://developer.xamarin.com/api/property/MapKit.MKAnnotationView.CanShowCallout/) è impostata su `true` in modo che i callout viene visualizzato quando si tocca l'annotazione.
 1. L'annotazione viene restituita da visualizzare sulla mappa.
 

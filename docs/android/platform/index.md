@@ -1,123 +1,126 @@
 ---
-title: Funzionalità della piattaforma di xamarin
-description: Documenti in questa sezione illustrano le funzionalità specifiche per Android. Qui sono disponibili argomenti, ad esempio tramite frammenti, l'uso con le mappe e incapsulamento dei dati con i provider di contenuti.
+title: Funzionalità della piattaforma di xamarin. Android
+description: I documenti in questa sezione illustrano funzionalità specifiche di Android. Sono disponibili argomenti, ad esempio l'uso di frammenti, uso di mappe e che incapsula i dati con i provider di contenuti.
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 8c26cc3af97cad26e8add248b5bf4aabcefc614b
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.date: 07/23/2018
+ms.openlocfilehash: 762df7322607588344d570830dafc745a89ea165
+ms.sourcegitcommit: 9bb9e8297d3edd9a50585f4ba53c1b4f0bcd1d3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32436531"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39212004"
 ---
 # <a name="platform-features"></a>Funzionalità della piattaforma
 
-_Documenti in questa sezione illustrano le funzionalità specifiche per Android. Qui sono disponibili argomenti, ad esempio tramite frammenti, l'uso con le mappe e incapsulamento dei dati con i provider di contenuti._
+_I documenti in questa sezione illustrano funzionalità specifiche di Android. Sono disponibili argomenti, ad esempio l'uso di frammenti, uso di mappe e che incapsula i dati con i provider di contenuti._
 
 ## <a name="android-beamandroidplatformandroid-beammd"></a>[Android Beam](~/android/platform/android-beam.md)
 
-Trasmetti Android sono una nuova tecnologia di comunicazione (prossimità) 4 di Android che consente alle applicazioni di condividere informazioni tramite NFC in stretta vicinanza.
+Trasmetti Android sono una nuova tecnologia di quasi Field Communication (NFC) in Android 4 che consente alle applicazioni di condividere informazioni tramite NFC quando in stretta vicinanza.
+
+## <a name="working-with-filesandroidplatformfilesindexmd"></a>[Uso dei file](~/android/platform/files/index.md)
+
+Questa sezione illustra come accedere ai file in xamarin. Android.
 
 ## <a name="fingerprint-authenticationandroidplatformfingerprint-authenticationindexmd"></a>[Autenticazione con impronta digitale](~/android/platform/fingerprint-authentication/index.md)
 
-In questa sezione viene illustrato come utilizzare l'autenticazione impronta digitale, introdotto inizialmente in Android 6.0, a un'applicazione di xamarin.
+Questa sezione illustra come usare l'autenticazione tramite impronta digitale, introdotto inizialmente in Android 6.0, a un'applicazione xamarin. Android.
 
 
 ## <a name="firebase-job-dispatcherandroidplatformfirebase-job-dispatchermd"></a>[Firebase Job Dispatcher](~/android/platform/firebase-job-dispatcher.md)
 
-Questa guida illustra il Dispatcher processo Firebase e come utilizzarla per semplificare i processi in background in esecuzione in un'app xamarin.
-
-
+Questa guida illustra come usarlo per semplificare i processi in background in esecuzione in un'app xamarin. Android e Firebase processo Dispatcher.
 
 ##  <a name="fragmentsandroidplatformfragmentsindexmd"></a>[Frammenti](~/android/platform/fragments/index.md)
 
-Android 3.0 sono state introdotte frammenti, che illustra come supportare progettazioni più flessibile per le dimensioni dello schermo diverse molti presenti nei telefoni e Tablet. In questo articolo illustra come usare i frammenti di sviluppo di applicazioni di xamarin e come supportare frammenti dispositivi pre-Android 3.0 (API livello 11). 
+Android 3.0 ha introdotto i frammenti, che illustra come supportare le progettazioni più flessibile per le dimensioni dello schermo diverse molti trovate su telefoni e Tablet. Questo articolo illustra come usare i frammenti per sviluppare applicazioni xamarin. Android, nonché come supportare frammenti dispositivi precedenti ad Android 3.0 (API livello 11).
 
 
 
-## <a name="app-linkingandroidplatformapp-linkingmd"></a>[Collegamento App](~/android/platform/app-linking.md)
+## <a name="app-linkingandroidplatformapp-linkingmd"></a>[Collegamento di App](~/android/platform/app-linking.md)
 
-Questa Guida verrà illustrate le modalità Android 6.0 supporta _collegamento app_, una tecnica che consente di App per dispositivi mobili a rispondere a URL nei siti Web. Parlerà di come implementare il collegamento app in un'applicazione Android 6.0 e come configurare un sito Web per concedere le autorizzazioni per l'app mobile per gestire i collegamenti per il dominio applicazione.
+Questa guida illustra come supporta Android 6.0 _app-collegamento_, una tecnica che consente alle App per dispositivi mobili rispondere agli URL nei siti Web. Illustra come implementare l'app e il collegamento in un'applicazione Android 6.0 e su come configurare un sito Web per concedere le autorizzazioni per l'app per dispositivi mobili per gestire i collegamenti per il dominio applicazione.
 
 
 
 ##  <a name="android-8-oreoandroidplatformoreomd"></a>[Android 8 Oreo](~/android/platform/oreo.md)
 
-Questo articolo fornisce una struttura di nuove funzionalità di Android Oreo, spiega come preparare xamarin per lo sviluppo di Android Oreo e vengono forniti collegamenti ad applicazioni di esempio che illustrano come utilizzare le funzionalità di Android Oreo in App xamarin.
+Questo articolo fornisce una descrizione delle nuove funzionalità in Android Oreo, spiega come preparare xamarin. Android per lo sviluppo di Android Oreo e vengono forniti collegamenti ad applicazioni di esempio che illustrano come usare le funzionalità di Android Oreo nelle App xamarin. Android.
 
 
 
 ##  <a name="android-7-nougatandroidplatformnougatmd"></a>[Android 7 Nougat](~/android/platform/nougat.md)
 
-Questo articolo fornisce una panoramica delle nuove funzionalità introdotte in Android 7.0 Nougat.
+Questo articolo fornisce una panoramica generale delle nuove funzionalità introdotte in Android Nougat 7.0.
 
 
 
 
 ##  <a name="android-6-marshmallowandroidplatformmarshmallowmd"></a>[Android 6 Marshmallow](~/android/platform/marshmallow.md)
 
-Questo articolo fornisce una panoramica delle nuove funzionalità introdotte in Android Marshmallow 6.0.
+Questo articolo fornisce una panoramica generale delle nuove funzionalità introdotte in Android Marshmallow 6.0.
 
 
 
 
 ##  <a name="android-5-lollipopandroidplatformlollipopmd"></a>[Android 5 Lollipop](~/android/platform/lollipop.md)
 
-Questa guida viene fornita una panoramica delle nuove funzionalità di Android 5.0 simbolo, ad esempio il tema di materiale, CardView, RecyclerView e intestazioni delle notifiche ed è collegato a approfondita articoli che consentono di usare queste nuove funzionalità nell'app. 
+Questa guida viene fornita una panoramica delle nuove funzionalità di Android 5.0 Lollipop, ad esempio materiale temi, widget CardView, RecyclerView e testine delle notifiche ed è collegato a approfondita articoli utili per usano queste nuove funzionalità nell'app.
 
 
 
 ##  <a name="android-44-kitkatandroidplatformkitkatmd"></a>[Android 4.4 KitKat](~/android/platform/kitkat.md)
 
-Android 4.4 (KitKat) viene caricato con numerose funzionalità per utenti e sviluppatori. Questa guida vengono evidenziate alcune di queste funzionalità e vengono forniti esempi di codice e i dettagli di implementazione che consentono di sfruttare al meglio KitKat. 
+Android 4.4 (KitKat) viene caricato con numerose funzionalità per utenti e sviluppatori. Questa guida vengono evidenziate alcune di queste funzionalità e vengono forniti esempi di codice e i dettagli di implementazione che consentono di sfruttare al meglio KitKat.
 
 
 
 
 ##  <a name="android-41-jelly-beanandroidplatformjelly-beanmd"></a>[Android 4.1 Jelly Bean](~/android/platform/jelly-bean.md)
 
-Questo documento verrà fornita una panoramica di alto livello delle nuove funzionalità per gli sviluppatori che sono stati introdotti in Android 4.1. Queste funzionalità includono: avanzata notifiche, gli aggiornamenti per Android raggio di condividere file di grandi dimensioni, gli aggiornamenti per l'individuazione di rete dei dati multimediali, peer-to-peer, animazioni, nuove autorizzazioni. 
+Questo documento fornirà una panoramica generale delle nuove funzionalità per gli sviluppatori che sono stati introdotti in Android 4.1. Queste funzionalità includono: notifiche, gli aggiornamenti per Android fascio di condividere file di grandi dimensioni, gli aggiornamenti per l'individuazione di rete multimedia, peer-to-peer, animazioni, nuove autorizzazioni avanzate.
 
 
 
 ##  <a name="android-40-ice-cream-sandwichandroidplatformice-cream-sandwichmd"></a>[Android 4.0 Ice Cream Sandwich](~/android/platform/ice-cream-sandwich.md)
 
-In questo articolo vengono descritte molte delle nuove funzionalità disponibili per gli sviluppatori di applicazioni con il *API Android di 4 - Sandwich gelato*. Vengono illustrate diverse nuove tecnologie di interfaccia utente e quindi esamina un'ampia gamma di nuove funzionalità che offre aggiornamenti per la condivisione dei dati tra le applicazioni e tra i dispositivi Android 4. 
+Questo articolo vengono illustrate alcune delle nuove funzionalità disponibili per gli sviluppatori di applicazioni con il *API di Android 4 - Ice Cream Sandwich*.
+Illustra diverse nuove tecnologie di interfaccia utente e quindi esamina un'ampia gamma di nuove funzionalità che offre la condivisione dei dati tra applicazioni e tra i dispositivi Android 4.
 
 
-##  <a name="working-with-the-android-manifestandroid-manifestmd"></a>[Utilizzo con il manifesto Android](android-manifest.md)
+##  <a name="working-with-the-android-manifestandroid-manifestmd"></a>[Utilizzo di manifesto Android](android-manifest.md)
 
-In questo articolo introducts il file AndroidManifest.xml e come forse essere utilizzato per controllare le funzionalità e vengono descritti i requisiti di un Mono per applicazione Android.
+In questo articolo introducts il file androidmanifest. XML e modo in cui potrebbe essere usato per controllare le funzionalità e vengono descritti i requisiti di un progetto di Mono per applicazione Android.
 
 
 ##  <a name="introduction-to-content-providersandroidplatformcontent-providersindexmd"></a>[Introduzione ai provider di contenuti](~/android/platform/content-providers/index.md)
 
-Un provider di contenuti incapsula un archivio di dati e fornisce un'API per accedere alla finestra. Il provider esista come parte di un'applicazione Android che in genere fornisce anche un'interfaccia utente per la visualizzazione o gestione dei dati. Il principale vantaggio dell'utilizzo di un provider di contenuti consente ad altre applicazioni di accedere facilmente i dati incapsulati utilizzando un oggetto client provider (chiamato un ContentResolver). Insieme, un provider di contenuti e il resolver di contenuto offrono un'API coerenza tra le applicazioni per l'accesso ai dati è semplice per creare e utilizzare. Questo documento viene illustrato come accedere e compilare ContentProviders con xamarin. 
+Un ContentProvider incapsula un archivio dati e fornisce un'API per accedere alla finestra. Il provider esista nell'ambito di un'applicazione Android che in genere fornisce anche un'interfaccia utente per la visualizzazione o gestione dei dati. Il vantaggio principale dell'uso di un provider di contenuti è l'abilitazione di altre applicazioni di accedere più facilmente i dati incapsulati usando un oggetto client del provider (chiamato un ContentResolver). Un provider di contenuti e un resolver di contenuto insieme offrono un'API coerente tra le applicazioni per l'accesso ai dati che è semplice da creare e utilizzare. Questo documento illustra come accedere e compilare ContentProviders con xamarin. Android.
 
 
 
 ##  <a name="maps-and-locationandroidplatformmaps-and-locationindexmd"></a>[Mappe e posizione](~/android/platform/maps-and-location/index.md)
 
-In questa sezione viene illustrato come utilizzare mappe e il percorso con xamarin. Copre tutti i dati da sfruttare l'applicazione di mappe predefinite per l'utilizzo di [API Android viene eseguito il mapping di Google v2](https://developers.google.com/maps/documentation/android/) direttamente. Inoltre, viene spiegato come utilizzare una singola API per lavorare con i servizi di posizione, che usano triangolazione cellulare per consentire a un'applicazione ottenere le correzioni di percorso, la posizione di Wi-Fi e GPS. 
+Questa sezione illustra come usare le mappe e posizione con xamarin. Android. Viene descritto come tutti i dati da sfruttando l'applicazione mappe predefinite per mediante il [esegue il mapping di API Android di Google v2](https://developers.google.com/maps/documentation/android/) direttamente. Inoltre, viene spiegato come usare un'unica API per lavorare con i servizi di posizione, che usano triangolazione cellulare per consentire a un'applicazione ottenere le correzioni di posizione, la posizione di Wi-Fi e GPS.
 
 
 
-## <a name="android-speechandroidplatformspeechmd"></a>[Riconoscimento vocale Android](~/android/platform/speech.md)
+## <a name="android-speechandroidplatformspeechmd"></a>[Riconoscimento vocale di Android](~/android/platform/speech.md)
 
-In questa sezione viene illustrato come utilizzare il testo Android per il riconoscimento vocale e riconoscimento vocale per strutture di testo. Descrive inoltre l'installazione language pack e l'interpretazione del testo pronunciato al dispositivo. 
+Questa sezione illustra come usare il testo di Android per il riconoscimento vocale e sintesi vocale per strutture di testo. Viene anche descritto come installare i language pack e l'interpretazione del testo pronunciato nel dispositivo.
 
 
 ##  <a name="binding-a-java-librarybinding-java-libraryindexmd"></a>[Associazione di una libreria Java](binding-java-library/index.md)
 
-Questa guida illustra come incorporare le librerie di Java in App xamarin mediante la creazione di una raccolta di associazioni.
+Questa guida illustra come incorporare librerie Java in App xamarin. Android tramite la creazione di una libreria di binding.
 
 ##  <a name="java-integrationjava-integrationindexmd"></a>[Integrazione di Java](java-integration/index.md)
 
-In questo articolo viene fornita una panoramica dei metodi che gli sviluppatori possono riutilizzare i componenti di Java esistenti in App xamarin.
+Questo articolo offre una panoramica dei modi che gli sviluppatori possono riutilizzare i componenti Java esistenti nelle App xamarin. Android.
 
 ##  <a name="renderscriptrenderscriptmd"></a>[Renderscript](renderscript.md)
 

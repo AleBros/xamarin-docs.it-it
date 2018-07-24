@@ -6,19 +6,19 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/31/2018
-ms.openlocfilehash: 4879ff88d5bbdab5aa92024bee7f50239a141e3b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/13/2018
+ms.openlocfilehash: 2ec9ba6e39673b5a60911f9a9ae70474dbe2443b
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995866"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203111"
 ---
 # <a name="xamarinforms-editor"></a>Editor di xamarin. Forms
 
 _Input di testo multilinea_
 
-Il `Editor` controllo viene utilizzato per accettare l'input multiriga. Questo articolo illustrerà quanto segue:
+Il [ `Editor` ](xref:Xamarin.Forms.Editor) controllo viene utilizzato per accettare l'input multiriga. Questo articolo illustra le attività seguenti:
 
 - **[Personalizzazione](#customization)**  &ndash; opzioni della tastiera e il colore.
 - **[Interattività](#interactivity)**  &ndash; gli eventi che possono restare in ascolto per fornire l'interattività.
@@ -27,7 +27,7 @@ Il `Editor` controllo viene utilizzato per accettare l'input multiriga. Questo a
 
 ### <a name="setting-and-reading-text"></a>Impostazione e la lettura di testo
 
-Il `Editor`, come altre visualizzazioni di testo-presentazione, espone la `Text` proprietà. Questa proprietà può essere utilizzata per impostare e leggere il testo visualizzato dal `Editor`. Nell'esempio seguente viene illustrata l'impostazione di `Text` proprietà in XAML:
+Il [ `Editor` ](xref:Xamarin.Forms.Editor), come altre visualizzazioni di testo-presentazione, espone la `Text` proprietà. Questa proprietà può essere utilizzata per impostare e leggere il testo visualizzato dal `Editor`. Nell'esempio seguente viene illustrata l'impostazione di `Text` proprietà in XAML:
 
 ```xaml
 <Editor Text="I am an Editor" />
@@ -59,20 +59,86 @@ var editor = new Editor { ... MaxLength = 10 };
 
 Oggetto [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) ha valore 0 indica che non sarà consentito alcun input e il valore `int.MaxValue`, che è il valore predefinito per un [ `Editor` ](xref:Xamarin.Forms.Editor), indica che è presente alcun limite effettivo per il numero di caratteri che possono essere immessi.
 
-### <a name="keyboards"></a>Tastiere
+### <a name="auto-sizing-an-editor"></a>Un Editor di ridimensionamento automatico
 
-La tastiera che viene visualizzata quando gli utenti interagiscono con un' `Editor` possono essere impostati a livello di codice usando il [ ``Keyboard`` ](xref:Xamarin.Forms.Keyboard) proprietà.
+Un' [ `Editor` ](xref:Xamarin.Forms.Editor) può essere effettuata per il ridimensionamento automatico in base al contenuto impostando le [ `Editor.AutoSize` ](xref:Xamarin.Forms.Editor.AutoSize) proprietà [ `TextChanges` ](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges), che è un valore della [ `EditoAutoSizeOption` ](xref:Xamarin.Forms.EditorAutoSizeOption) enumerazione. Questa enumerazione contiene due valori:
 
-Le opzioni per il tipo di tastiera sono:
+- [`Disabled`](xref:Xamarin.Forms.EditorAutoSizeOption.Disabled) indica che il ridimensionamento automatico è disabilitato e il valore predefinito.
+- [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) indica che il ridimensionamento automatico è abilitato.
 
-- **Impostazione predefinita** &ndash; della tastiera predefinita
-- **Avvia una chat** &ndash; usato per inviato e posizioni in cui sono utili emoji
-- **Messaggio di posta elettronica** &ndash; usato quando si immette gli indirizzi di posta elettronica
-- **Numerico** &ndash; utilizzato durante l'immissione di numeri
-- **Telefono** &ndash; usato quando si immettono i numeri di telefono
-- **URL** &ndash; usato per l'immissione di percorsi di file e gli indirizzi web
+Ciò può essere eseguito nel codice come indicato di seguito:
 
-È presente un' [esempio di ogni tastiera](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) nella sezione Domande recipe.
+```xaml
+<Editor Text="Enter text here" AutoSize="TextChanges" />
+```
+
+```csharp
+var editor = new Editor { Text = "Enter text here", AutoSize = EditorAutoSizeOption.TextChanges };
+```
+
+Quando il ridimensionamento automatico è abilitato, l'altezza, la [ `Editor` ](xref:Xamarin.Forms.Editor) aumenta quando l'utente vi inserisce testo e l'altezza diminuirà quando l'utente elimina il testo.
+
+> [!NOTE]
+> Un' [ `Editor` ](xref:Xamarin.Forms.Editor) verrà se non il ridimensionamento automatico la [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) proprietà è stata impostata.
+
+### <a name="customizing-the-keyboard"></a>Personalizzazione di tastiera
+
+La tastiera che viene visualizzata quando gli utenti interagiscono con un' [ `Editor` ](xref:Xamarin.Forms.Editor) possono essere impostati a livello di codice usando la [ `Keyboard` ](xref:Xamarin.Forms.InputView.Keyboard) proprietà per una delle seguenti proprietà dal [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) classe:
+
+- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat) : usato per inviato e posizioni in cui sono utili emoji.
+- [`Default`](xref:Xamarin.Forms.Keyboard.Default) – la tastiera predefinita.
+- [`Email`](xref:Xamarin.Forms.Keyboard.Email) : usato durante l'immissione degli indirizzi di posta elettronica.
+- [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric) : usato durante l'immissione di numeri.
+- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain) : usato durante l'immissione di testo, senza alcuna [ `KeyboardFlags` ](xref:Xamarin.Forms.KeyboardFlags) specificato.
+- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone) : usato durante l'immissione di numeri di telefono.
+- [`Text`](xref:Xamarin.Forms.Keyboard.Text) : usato durante l'immissione di testo.
+- [`Url`](xref:Xamarin.Forms.Keyboard.Url) : usato per l'immissione di percorsi di file e gli indirizzi web.
+
+Ciò può essere eseguito in XAML come indicato di seguito:
+
+```xaml
+<Editor Keyboard="Chat" />
+```
+
+Il codice c# equivalente è:
+
+```csharp
+var editor = new Editor { Keyboard = Keyboard.Chat };
+```
+
+Esempi di ogni tastiera sono reperibili nel nostro [recipe](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) repository.
+
+Il [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) classe include anche una [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) metodo factory che può essere utilizzato per personalizzare una tastiera, specificando il comportamento di maiuscole/minuscole, controllo ortografico e suggerimenti. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) i valori di enumerazione come specificato come argomenti al metodo, con un oggetto personalizzato `Keyboard` restituiti. Il `KeyboardFlags` enumerazione contiene i valori seguenti:
+
+- [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – non vengono aggiunte funzionalità per la tastiera.
+- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) : indica che la prima lettera della parola prima di ogni frase immessa sarà essere automaticamente la prima lettera maiuscola.
+- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck) : indica il controllo ortografico verrà eseguita nel testo immesso.
+- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions) – indica tale parola completamenti verranno offerto sul testo immesso.
+- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord) : indica che la prima lettera di ogni parola viene possibile automaticamente la prima lettera maiuscola.
+- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter) : indica che ogni carattere viene possibile automaticamente la prima lettera maiuscola.
+- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone) : indica che si verificherà alcuna conversione automatica.
+- [`All`](xref:Xamarin.Forms.KeyboardFlags.All) : indica che si verifichi controllo ortografico, i completamenti delle parole e uso delle maiuscole frase nel testo immesso.
+
+Esempio di codice XAML seguente viene illustrato come personalizzare il valore predefinito [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) per offrire i completamenti delle parole e converte in maiuscolo tutti i caratteri immessi:
+
+```xaml
+<Editor>
+    <Editor.Keyboard>
+        <Keyboard x:FactoryMethod="Create">
+            <x:Arguments>
+                <KeyboardFlags>Suggestions,CapitalizeCharacter</KeyboardFlags>
+            </x:Arguments>
+        </Keyboard>
+    </Editor.Keyboard>
+</Editor>
+```
+
+Il codice c# equivalente è:
+
+```csharp
+var editor = new Editor();
+editor.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
+```
 
 ### <a name="enabling-and-disabling-spell-checking"></a>Abilitazione e disabilitazione di controllo ortografico
 
