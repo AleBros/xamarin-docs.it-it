@@ -1,45 +1,45 @@
 ---
-title: Utilizzo di dati in un'app per iOS
-description: Questo documento descrive DataAccess_Adv esempio, di cui viene illustrato come raccogliere input utente ed eseguire la creazione, leggere, aggiornare ed eliminare (CRUD) del database in un'app xamarin. IOS.
+title: Uso dei dati in un'app per iOS
+description: Questo documento descrive la DataAccess_Adv un esempio che illustra come raccogliere input dell'utente ed eseguire create, read, update e delete (CRUD) di operazioni in un'app xamarin. IOS di database.
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: 5c9eab9316539ecf5988c8768bef9ef2cd61513e
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 35caae657700e321a7560d1e95c8551b7b10a5ca
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784540"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242105"
 ---
-# <a name="using-data-in-an-ios-app"></a>Utilizzo di dati in un'app per iOS
+# <a name="using-data-in-an-ios-app"></a>Uso dei dati in un'app per iOS
 
-Il **DataAccess_Adv** illustra un'applicazione funzionante che consente l'input dell'utente e *CRUD* funzionalità del database (Create, Read, Update e Delete). L'applicazione è costituita da due schermate: un elenco e un form di immissione dati. Tutto il codice di accesso ai dati è riutilizzabile in iOS e Android senza alcuna modifica.
+Il **DataAccess_Adv** esempio illustra un'applicazione funzionante che consente l'input dell'utente e *CRUD* funzionalità del database (creazione, lettura, aggiornamento ed eliminazione). L'applicazione è costituita da due schermate seguenti: un elenco e un modulo di immissione dati. Tutto il codice di accesso di dati è riutilizzato in iOS e Android senza alcuna modifica.
 
-Dopo avere aggiunto alcuni dati le schermate dell'applicazione simile al seguente in iOS:
+Dopo aver aggiunto alcuni dati le schermate dell'applicazione l'aspetto seguente in iOS:
 
  ![](using-data-in-an-app-images/image9.png "elenco di esempi di iOS")
 
  ![](using-data-in-an-app-images/image10.png "dettagli di esempio iOS")
 
-IOS progetto è illustrato di seguito: il codice illustrato in questa sezione è contenuto all'interno di **Orm** directory:
+IOS Project è illustrato di seguito: il codice riportato in questa sezione è contenuto all'interno di **Orm** directory:
 
- ![](using-data-in-an-app-images/image13.png "struttura di un progetto iOS")
+ ![](using-data-in-an-app-images/image13.png "struttura del progetto iOS")
 
-Il codice dell'interfaccia utente nativo per ViewControllers in iOS esula dall'ambito di questo documento.
-Consultare la [iOS utilizzo di tabelle e le celle](~/ios/user-interface/controls/tables/index.md) Guida per ulteriori informazioni sui controlli dell'interfaccia utente.
+Il codice dell'interfaccia utente nativo per ViewControllers in iOS è esterna all'ambito di questo documento.
+Vedere le [iOS utilizzo di tabelle e celle](~/ios/user-interface/controls/tables/index.md) Guida per altre informazioni sui controlli dell'interfaccia utente.
 
 ## <a name="read"></a>Lettura
 
 Esistono un paio di operazioni di lettura nell'esempio:
 
 -  La lettura dell'elenco
--  Lettura dei singoli record
+-  La lettura dei singoli record
 
 
-I due metodi di `StockDatabase` sono:
+I due metodi nel `StockDatabase` classe sono:
 
 ```csharp
 public IEnumerable<Stock> GetStocks ()
@@ -56,12 +56,12 @@ public Stock GetStock (int id)
 }
 ```
 
-iOS viene eseguito il rendering dei dati in modo diverso, come un `UITableView`.
+iOS rende i dati in modo diverso come un `UITableView`.
 
-## <a name="create-and-update"></a>Creazione e aggiornamento
+## <a name="create-and-update"></a>Creare e aggiornare
 
-Per semplificare il codice dell'applicazione, un singolo metodo di salvataggio è fornito che esegue un'istruzione Insert o Update a seconda se è stata impostata la PrimaryKey. Poiché il `Id` proprietà è contrassegnata con un `[PrimaryKey]` attributo, è consigliabile non impostare nel codice.
-Questo metodo consentirà di rilevare se il valore è stato precedente salvata (selezionando la proprietà di chiave primaria) e inserire o aggiornare di conseguenza l'oggetto:
+Per semplificare il codice dell'applicazione, un singolo metodo di salvataggio è fornito che consente di eseguire un'istruzione Insert o Update a seconda che sia stata impostata il PrimaryKey. Poiché il `Id` proprietà è contrassegnata con un `[PrimaryKey]` attributo è consigliabile non impostarlo nel codice.
+Questo metodo rileva se il valore è stato precedente salvata (controllando la proprietà di chiave primaria) e inserire o aggiornare di conseguenza l'oggetto:
 
 ```csharp
 public int SaveStock (Stock item)
@@ -79,13 +79,13 @@ public int SaveStock (Stock item)
 
 
 
-Applicazioni reali in genere richiedono una convalida (ad esempio i campi obbligatori, lunghezza minima o altre regole di business).
-Le applicazioni multipiattaforma buona implementare la maggior parte della convalida logica possibile nel codice condiviso, il passaggio di errori di convalida, eseguire il backup l'interfaccia utente per la visualizzazione in base alle funzionalità della piattaforma.
+Applicazioni reali richiede in genere una convalida (ad esempio i campi obbligatori, le lunghezze minima o altre regole di business).
+Le applicazioni multipiattaforma buona implementare la maggior parte della convalida logico possibile nel codice condiviso, il passaggio di errori di convalida, eseguire il backup l'interfaccia utente per la visualizzazione in base alle funzionalità della piattaforma.
 
 ## <a name="delete"></a>Eliminare
 
-A differenza di `Insert` e `Update` metodi, il `Delete<T>` metodo può accettare solo il valore di chiave primaria anziché completa `Stock` oggetto.
-In questo esempio un `Stock` oggetto viene passato al metodo, ma solo la proprietà Id viene passata al `Delete<T>` metodo.
+A differenza di `Insert` e `Update` metodi, il `Delete<T>` metodo accetta semplicemente il valore di chiave primaria anziché completa `Stock` oggetto.
+In questo esempio un `Stock` oggetto viene passato al metodo, ma solo la proprietà Id viene passata al `Delete<T>` (metodo).
 
 ```csharp
 public int DeleteStock(Stock stock)
@@ -98,16 +98,16 @@ public int DeleteStock(Stock stock)
 
 ## <a name="using-a-pre-populated-sqlite-database-file"></a>Utilizzo di un file di database SQLite prepopolato
 
-Alcune applicazioni vengono forniti con un database già popolato con dati.
-Si può facilmente questo scopo nell'applicazione per dispositivi mobili per la spedizione di un file di database SQLite esistente con l'app e copiarlo in una directory accessibile in scrittura prima di accedervi. Poiché SQLite è un formato di file standard che viene utilizzato in molte piattaforme, sono disponibili numerosi strumenti disponibili per creare un file di database SQLite:
+Alcune applicazioni vengono forniti con un database già popolato con i dati.
+È possibile farlo facilmente nell'applicazione per dispositivi mobili da un file di database SQLite esistente con l'app di spedizione e copiarla in una directory scrivibile prima dell'accesso. Poiché SQLite è un formato di file standard che viene usato in molte piattaforme, sono disponibili numerosi strumenti disponibili per creare un file di database SQLite:
 
--  **Estensione di gestione di SQLite Firefox** – funziona su Mac e Windows e genera file che sono compatibili con iOS e Android.
--  **Riga di comando** – vedere [www.sqlite.org/sqlite.html](http://www.sqlite.org/sqlite.html) .
+-  **Estensione per Firefox SQLite Manager** – funziona su Mac e Windows e produce file che sono compatibili con iOS e Android.
+-  **Riga di comando** , vedere [www.sqlite.org/sqlite.html](http://www.sqlite.org/sqlite.html) .
 
 
-Prestare attenzione quando si crea un file di database per la distribuzione con l'app, con la denominazione di tabelle e colonne per assicurarsi che corrispondano cosa prevede che il codice, in particolare se si utilizza SQLite.NET che si aspetta di ricevere i nomi in modo che corrisponda l'in c# le classi e proprietà (o attributi personalizzati associati).
+Prestare attenzione quando si crea un file di database per la distribuzione con l'app, con la denominazione di tabelle e colonne per assicurarsi che corrispondano a ciò che prevede che il codice, soprattutto se si usa SQLite.NET che si aspetta di ricevere i nomi in base ai in c# le classi e proprietà (o il attributi personalizzati associati).
 
-Per iOS, includere il file di sqlite nell'applicazione e assicurarsi sia contrassegnato con **azione di compilazione: contenuto**. Inserire il codice nel `FinishedLaunching` per copiare il file in una directory accessibile in scrittura *prima* di chiamare qualsiasi dati. Il codice seguente verrà copiato un database esistente denominato **data.sqlite**, solo se non esiste già.
+Per iOS, includere il file di sqlite nell'applicazione e verificare sia contrassegnata con **azione di compilazione: contenuto**. Inserire il codice nel `FinishedLaunching` copiare il file in una directory scrivibile *prima di* è chiamare qualsiasi metodo dati. Il codice seguente verrà copiato un database esistente denominato **data.sqlite**, solo se non esiste già.
 
 ```csharp
 // Copy the database across (if it doesn't exist)
@@ -119,12 +119,12 @@ if (!File.Exists (Database.DatabaseFilePath))
 }
 ```
 
-Qualsiasi codice di accesso ai dati (se ADO.NET o tramite SQLite.NET) che viene eseguito dopo che questa operazione verrà completata hanno accesso ai dati pre-popolati.
+Qualsiasi codice di accesso ai dati (se ADO.NET o uso di SQLite.NET) che viene eseguito dopo che questa operazione verrà completata hanno accesso ai dati già popolati.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess avanzate (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [iOS dati ricette](https://developer.xamarin.com/recipes/ios/data/sqlite/)
+- [iOS recipe di dati](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
 - [Accesso ai dati di xamarin. Forms](~/xamarin-forms/app-fundamentals/databases.md)

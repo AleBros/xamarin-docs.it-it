@@ -1,33 +1,33 @@
 ---
-title: Utilizzo dei componenti di base grafica e animazione Core in xamarin. IOS
-description: In questo articolo dettagliata viene illustrato come creare un'applicazione che utilizza Core grafica e animazione Core. Viene illustrato come disegnare sullo schermo in risposta a tocco utente nonché come aggiungere un'animazione a un'immagine da percorrere lungo un percorso.
+title: Utilizzo Core grafica e animazione di Core in xamarin. IOS
+description: Procedura dettagliata, questo articolo illustra come creare un'applicazione che usa Core grafica e animazione di base. Viene illustrato come disegnare sullo schermo in risposta a tocco utente nonché come aggiungere un'animazione di un'immagine da percorrere lungo un percorso.
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7a4399a5d62e2000c2a15a65da8e0e427dc039e0
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: cecfd7f3a9678f298af3ed547aa7b50a18238729
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787055"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242004"
 ---
-# <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Utilizzo dei componenti di base grafica e animazione Core in xamarin. IOS
+# <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Utilizzo Core grafica e animazione di Core in xamarin. IOS
 
-Per questa procedura dettagliata verrà per disegnare un tracciato con grafica di base in risposta a input tocco. Quindi, si aggiungerà un `CALayer` contenente un'immagine che si sarà animare lungo il percorso.
+Per questa procedura dettagliata si userà per disegnare un tracciato tramite Core Graphics in risposta a input tocco. Quindi, si aggiungerà un `CALayer` contenente un'immagine che viene viene animato lungo il percorso.
 
-La schermata seguente mostra l'applicazione completata:
+Lo screenshot seguente mostra l'applicazione completata:
 
-![](graphics-animation-walkthrough-images/00-final-app.png "Applicazione completata")
+![](graphics-animation-walkthrough-images/00-final-app.png "L'applicazione completata")
 
-Prima di iniziare il download di *GraphicsDemo* esempio in questa Guida. Può essere scaricato [qui](https://developer.xamarin.com/samples/monotouch/GraphicsAndAnimation/) e si trova all'interno di **GraphicsWalkthrough** directory avviare il progetto denominato **GraphicsDemo_starter** facendo doppio clic su di esso, e Aprire la `DemoView` classe.
+Prima di iniziare il download il *GraphicsDemo* esempio che accompagna questa Guida. È possibile scaricarlo [qui](https://developer.xamarin.com/samples/monotouch/GraphicsAndAnimation/) e si trova all'interno di **GraphicsWalkthrough** directory avviare il progetto denominato **GraphicsDemo_starter** facendo doppio clic su di esso, e Aprire il `DemoView` classe.
 
 ## <a name="drawing-a-path"></a>Disegnare un tracciato
 
 
-1. In `DemoView` aggiungere un `CGPath` variabile alla classe e un'istanza nel costruttore. Dichiarare anche due `CGPoint` variabili, `initialPoint` e `latestPoint`, che verrà utilizzato per acquisire il punto di contatto da cui è necessario creare il percorso:
+1. Nelle `DemoView` aggiungere un `CGPath` variabile alla classe e crearne un'istanza nel costruttore. Anche dichiarare due `CGPoint` variabili `initialPoint` e `latestPoint`, che verrà usato per acquisire il punto di tocco da cui è necessario creare il percorso:
     
     ```csharp
     public class DemoView : UIView
@@ -53,7 +53,7 @@ Prima di iniziare il download di *GraphicsDemo* esempio in questa Guida. Può es
     using Foundation;
     ```
 
-3. Successivamente, eseguire l'override `TouchesBegan` e `TouchesMoved,` e aggiungere le implementazioni per acquisire il punto di contatto iniziale e ogni punto di contatto successivi rispettivamente seguenti:
+3. Successivamente, eseguire l'override `TouchesBegan` e `TouchesMoved,` e Aggiungi le implementazioni seguenti per acquisire il punto di tocco iniziale e ogni punto di tocco successive rispettivamente:
 
     ```csharp
     public override void TouchesBegan (NSSet touches, UIEvent evt){
@@ -80,9 +80,9 @@ Prima di iniziare il download di *GraphicsDemo* esempio in questa Guida. Può es
     }
     ```
 
-    `SetNeedsDisplay` verrà chiamato ogni volta che passa ritocchi affinché `Draw` venga chiamata per il successivo ciclo di esecuzione.
+    `SetNeedsDisplay` verrà chiamato ogni volta che i tocchi spostare affinché `Draw` da chiamare al successivo passaggio di esecuzione ciclo.
 
-4. Verrà aggiunto al percorso in righe di `Draw` metodo e utilizzare una riga tratteggiata rossa da disegnare con. [Implementare `Draw` ](~/ios/platform/graphics-animation-ios/core-graphics.md) con il codice riportato di seguito:
+4. Verrà aggiunto al percorso in linee di `Draw` metodo e usare una riga tratteggiata rossa con cui tracciare. [Implementare `Draw` ](~/ios/platform/graphics-animation-ios/core-graphics.md) con il codice seguente:
 
     ```csharp
     public override void Draw (CGRect rect){
@@ -116,15 +116,15 @@ Prima di iniziare il download di *GraphicsDemo* esempio in questa Guida. Può es
     }
     ```
 
-Se si esegue ora l'applicazione, è possibile toccare per disegnare sullo schermo, come illustrato nella schermata seguente:
+Se eseguiamo ora l'applicazione, è possibile toccare questo pulsante per disegnare sullo schermo, come illustrato nello screenshot seguente:
 
-![](graphics-animation-walkthrough-images/01-path.png "Disegno sullo schermo")
+![](graphics-animation-walkthrough-images/01-path.png "Nella schermata di disegno")
 
-## <a name="animating-along-a-path"></a>Animazione lungo un percorso
+## <a name="animating-along-a-path"></a>L'animazione lungo un tracciato
 
-Ora che sono stati implementati nel codice per consentire agli utenti disegnare il tracciato, aggiungere il codice per aggiungere un'animazione a un livello lungo il percorso disegnato.
+A questo punto è stato implementato il codice per consentire agli utenti di disegnare il percorso, è possibile aggiungere il codice per aggiungere un'animazione a un livello lungo il tracciato disegnato.
 
-1. Aggiungere innanzitutto un [ `CALayer` ](~/ios/platform/graphics-animation-ios/core-animation.md) variabile alla classe e crearne una nel costruttore:
+1. Aggiungere prima di tutto una [ `CALayer` ](~/ios/platform/graphics-animation-ios/core-animation.md) variabile alla classe e crearla nel costruttore:
 
     ```csharp
     public class DemoView : UIView
@@ -149,7 +149,7 @@ Ora che sono stati implementati nel codice per consentire agli utenti disegnare 
             }
     ```
 
-2. Successivamente, il livello verrà aggiunto come un sottolivello del livello della vista quando l'utente alza il dito dallo schermo. Quindi, si creerà un'animazione con fotogramma chiave usando il percorso, il livello di animazione `Position`.
+2. Successivamente, si aggiungerà il livello come un sottolivello del livello della visualizzazione quando l'utente solleva backup il dito dallo schermo. Quindi, si creerà un'animazione tra fotogrammi chiave utilizzando il percorso, l'animazione del livello `Position`.
 
     A tale scopo è necessario eseguire l'override di `TouchesEnded` e aggiungere il codice seguente:
 
@@ -172,17 +172,17 @@ Ora che sono stati implementati nel codice per consentire agli utenti disegnare 
         }
     ```
 
-3. Eseguire l'applicazione ora e dopo il disegno, un livello con un'immagine viene aggiunto e viene trasferito nel percorso creato:
+3. Eseguire l'applicazione ora e dopo il disegno, un livello con un'immagine viene aggiunto e verrà trasmesso lungo il tracciato disegnato:
 
-![](graphics-animation-walkthrough-images/00-final-app.png "Un livello con un'immagine viene aggiunto e viene trasferito nel percorso disegnato")
+![](graphics-animation-walkthrough-images/00-final-app.png "Un livello con un'immagine viene aggiunto e verrà trasmesso lungo il tracciato disegnato")
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo viene incrementata passo passo attraverso un esempio che i concetti di grafica e animazione collegati. In primo luogo, abbiamo anche mostrato come utilizzare grafica di base per disegnare un tracciato in un `UIView` in risposta a tocco utente. Quindi si viene illustrato come utilizzare animazione di base per creare un'immagine lungo tale percorso.
+In questo articolo si sono esaminati un esempio in cui collegare i concetti di grafica e animazione. In primo luogo, è stato illustrato come utilizzare Core Graphics per disegnare un tracciato un `UIView` in risposta a tocco utente. Quindi è stato illustrato come utilizzare Core Animation per convertire un'immagine percorrere lungo tale percorso.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Core Animation](~/ios/platform/graphics-animation-ios/core-animation.md)
 - [Core Graphics](~/ios/platform/graphics-animation-ios/core-graphics.md)
-- [Recipe animazione core](https://developer.xamarin.com/recipes/ios/animation/coreanimation)
+- [Recipe di animazione di base](https://github.com/xamarin/recipes/tree/master/Recipes/ios/animation/coreanimation)

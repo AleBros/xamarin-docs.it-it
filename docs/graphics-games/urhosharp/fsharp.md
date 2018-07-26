@@ -6,12 +6,12 @@ ms.assetid: F976AB09-0697-4408-999A-633977FEFF64
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: a4e1a31a2591c799a153e1333e4a4a4a0719a107
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: 430c4eca7c6dbd7107692246b70ff93bafa44d01
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111199"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241834"
 ---
 # <a name="programming-urhosharp-with-f"></a>Programmazione di UrhoSharp con F #
 
@@ -19,11 +19,11 @@ ms.locfileid: "39111199"
 
 Ad esempio molte librerie che hanno origine in tutto il mondo di C++, molte funzioni di UrhoSharp restituiscono valori booleani o interi che indica esito positivo o negativo. È consigliabile usare `|> ignore` ignorare tali valori.
 
-Il [programma di esempio](https://github.com/xamarin/recipes/tree/master/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) è un "Hello World" di UrhoSharp con F #.
+Il [programma di esempio](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) è un "Hello World" di UrhoSharp con F #.
 
 ## <a name="creating-an-empty-project"></a>Creazione di un progetto vuoto
 
-Non sono disponibili modelli per UrhoSharp F # è ancora disponibile, pertanto, per creare il proprio progetto di UrhoSharp è possibile avviare con il [esempio](https://github.com/xamarin/recipes/tree/master/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) o seguire questa procedura:
+Non sono disponibili modelli per UrhoSharp F # è ancora disponibile, pertanto, per creare il proprio progetto di UrhoSharp è possibile avviare con il [esempio](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) o seguire questa procedura:
 
 1. Da Visual Studio per Mac, creare una nuova **soluzione**. Scegli **iOS > App > App visualizzazione singola** e selezionare **F #** come linguaggio di implementazione. 
 1. Eliminare il **Main. Storyboard** file. Aprire il **Info. plist** file e nel **iPhone / iPod le informazioni sulla distribuzione** riquadro, eliminare il `Main` stringa nel **interfaccia principale** elenco a discesa.
@@ -114,4 +114,4 @@ Il programma risulta dovrebbe essere simile:
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Sfoglia su GitHub (esempio)](https://github.com/xamarinhttps://developer.xamarin.com/recipes/tree/master/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp)
+- [Sfoglia su GitHub (esempio)](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp)

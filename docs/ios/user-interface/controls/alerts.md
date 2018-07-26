@@ -1,35 +1,35 @@
 ---
 title: La visualizzazione degli avvisi in xamarin. IOS
-description: Questo documento descrive come visualizzare gli avvisi in xamarin. IOS utilizzando UIAlertController API introdotte in iOS 8.
+description: Questo documento descrive come visualizzare gli avvisi in xamarin. IOS tramite l'API introdotte in iOS 8 UIAlertController.
 ms.prod: xamarin
 ms.assetid: 61C671E9-3757-4052-86E4-28640025A34A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 88233cb1ac31b2669fdc38bbc9b0835a45c6b0ce
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 788e62b30dbf533df059b0c3805e04ecf7b857aa
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789595"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241340"
 ---
 # <a name="displaying-alerts-in-xamarinios"></a>La visualizzazione degli avvisi in xamarin. IOS
 
-A partire da iOS 8, UIAlertController ha completato UIActionSheet sostituito e UIAlertView entrambi che ora sono deprecate.
+A partire da iOS 8, UIAlertController ha completato UIActionSheet sostituito e UIAlertView entrambe di cui sono stati deprecati.
 
-A differenza delle classi che sostituisce, che sono sottoclassi di UIView, UIAlertController è una sottoclasse di UIViewController.
+A differenza delle classi che sostituisce, che rappresentano le sottoclassi di UIView, UIAlertController è una sottoclasse di UIViewController.
 
-Utilizzare `UIAlertControllerStyle` per indicare il tipo di avviso da visualizzare. Questi tipi di avvisi sono:
+Usare `UIAlertControllerStyle` per indicare il tipo di avviso da visualizzare. Questi tipi di avvisi sono:
 
 - **UIAlertControllerStyleActionSheet**
-    * Pre-iOS 8 ciò avrebbe un UIActionSheet
+    * Pre-iOS 8 questo sarebbe stata una UIActionSheet
 - **UIAlertControllerStyleAlert**
-    * Pre-iOS 8 ciò avrebbe UIAlertView 
+    * Pre-iOS 8 questo sarebbe stato UIAlertView 
 
-Esistono tre passaggi necessari per rendere durante la creazione di un Controller di avviso:
+Esistono tre passaggi necessari per prendere durante la creazione di un Controller di avvisi:
 
-- Creare e configurare l'avviso con r:
+- Creare e configurare l'avviso gli elementi seguenti:
     * title
     * messaggio
     * preferredStyle
@@ -38,9 +38,9 @@ Esistono tre passaggi necessari per rendere durante la creazione di un Controlle
 - Aggiungere le azioni necessarie
 - Presentare il Controller di visualizzazione
 
-L'avviso più semplice contiene un solo pulsante, come illustrato in questo screenshot:
+L'avviso più semplice contiene un singolo pulsante, come illustrato in questo screenshot:
 
- ![Avviso con un pulsante](alerts-images/alert1.png)
+ ![Avviso con un solo pulsante](alerts-images/alert1.png)
 
 Il codice per visualizzare un avviso semplice è come segue:
 
@@ -58,7 +58,7 @@ okayButton.TouchUpInside += (sender, e) => {
 };
 ```
 
-Visualizzazione di un avviso con più opzioni, viene eseguita in modo simile, ma aggiungere due azioni. Ad esempio, nella schermata seguente mostra un avviso con due pulsanti:
+La visualizzazione di un avviso con più opzioni, viene eseguito in modo simile, ma aggiungere due azioni. Ad esempio, lo screenshot seguente mostra un avviso con due pulsanti:
 
  ![ Avviso con due pulsanti](alerts-images/alert2.png)
 
@@ -77,11 +77,11 @@ okayCancelButton.TouchUpInside += ((sender, e) => {
 });
 ```
 
-Gli avvisi è possono visualizzare anche un foglio di azione, simile alla seguente:
+Gli avvisi possono visualizzare anche un foglio di azione, simile allo screenshot seguente:
 
  ![Avviso di foglio di azione](alerts-images/alert3.png)
 
-Vengono aggiunti i pulsanti per l'avviso con il `AddAction` metodo:
+Vengono aggiunti i pulsanti per l'avviso, usare il `AddAction` metodo:
 
 ```csharp
 actionSheetButton.TouchUpInside += ((sender, e) => {
@@ -114,4 +114,4 @@ actionSheetButton.TouchUpInside += ((sender, e) => {
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Controlli (esempio)](https://developer.xamarin.com/samples/Controls/)
-- [Avvisi Controller](https://developer.xamarin.com/recipes/ios/standard_controls/alertcontroller/)
+- [Controller di avvisi](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)

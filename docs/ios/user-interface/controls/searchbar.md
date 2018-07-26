@@ -1,40 +1,40 @@
 ---
-title: Barre di ricerca in xamarin. IOS
-description: Questo documento descrive come utilizzare le barre di ricerca in xamarin. IOS. Illustra come creare barre di ricerca a livello di codice e in uno storyboard.
+title: Le barre di ricerca in xamarin. IOS
+description: Questo documento descrive come usare le barre di ricerca in xamarin. IOS. Illustra come creare le barre di ricerca a livello di codice e in uno storyboard.
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: cd78c58ecb119c437296a0befe1d319d8837edae
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: fdd9fe647f1a2f63b2a86a64ad92d1e71d6fcd2e
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789925"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242079"
 ---
-# <a name="search-bars-in-xamarinios"></a>Barre di ricerca in xamarin. IOS
+# <a name="search-bars-in-xamarinios"></a>Le barre di ricerca in xamarin. IOS
 
-Il UISearchBar viene utilizzato per cercare un elenco di valori. 
+Il UISearchBar viene utilizzato per eseguire ricerche in un elenco di valori. 
 
-Include tre componenti principali: 
+Contiene tre componenti principali: 
 
 - Un campo usato per immettere testo. Gli utenti possono utilizzare questa opzione per immettere i termini di ricerca.
-- Pulsante Cancella, rimuovere qualsiasi testo dal campo di ricerca.
+- Pulsante cancellato, rimuovere qualsiasi testo dal campo di ricerca.
 - Un pulsante Annulla per uscire dalla funzione di ricerca.
 
 ![Barra di ricerca](searchbar-images/image1.png)
 
 ## <a name="implementing-the-search-bar"></a>Implementazione della barra di ricerca
 
-Per implementare l'inizio della barra di ricerca creando uno nuovo:
+Per implementare l'inizio barra di ricerca creando una nuova:
 
 ```csharp
 searchBar = new UISearchBar();
 ```
 
-E quindi viene inserito. Nell'esempio seguente viene illustrato come attivare la barra di spostamento o HeaderView di una tabella:
+E posizionarlo. L'esempio seguente viene illustrato come posizionarlo nella barra di spostamento o in HeaderView di una tabella:
 
 ```csharp
 NavigationItem.TitleView = searchBar;
@@ -44,7 +44,7 @@ NavigationItem.TitleView = searchBar;
 TableView.TableHeaderView = searchBar;
 ```
 
-Impostazione delle proprietà sulla barra di ricerca:
+Impostazione delle proprietà nella barra di ricerca:
 
 ```csharp
  searchBar = new UISearchBar(){
@@ -65,37 +65,37 @@ searchBar.SearchButtonClicked += (sender, e) => {
             };
 ```
 
-Per informazioni sulla gestione della presentazione della barra di ricerca e i risultati di ricerca, vedere il [ricerca Controller ](https://developer.xamarin.com/recipes/ios/content_controls/search-controller/) recipe.
+Per informazioni sulla gestione della presentazione della barra di ricerca e i risultati della ricerca, vedere la [ricerca Controller ](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller) recipe.
 
-## <a name="using-the-search-bar-in-the-designer"></a>Utilizzando la barra di ricerca nella finestra di progettazione
+## <a name="using-the-search-bar-in-the-designer"></a>Tramite la barra di ricerca nella finestra di progettazione
 
-La finestra di progettazione sono disponibili due opzioni per l'implementazione di una barra di ricerca nella finestra di progettazione
+La finestra di progettazione offre due opzioni per l'implementazione di una barra di ricerca nella finestra di progettazione
 
 - Barra di ricerca
-- Barra di ricerca con Controller di visualizzazione di ricerca (deprecata)
+- Barra di ricerca con il Controller di visualizzazione di ricerca (deprecato)
 
-![Controlli della barra di ricerca nella finestra di progettazione](searchbar-images/image2.png)
+![Controlli barra di ricerca nella finestra di progettazione](searchbar-images/image2.png)
 
-Utilizzare il Pannello proprietà per impostare proprietà sulla barra di ricerca
+Utilizzare il pannello delle proprietà per impostare proprietà sulla barra di ricerca
 
-![Progettazione di proprietà barra di ricerca](searchbar-images/image3.png)
+![Progettazione delle proprietà barra di ricerca](searchbar-images/image3.png)
 
 Queste proprietà vengono spiegate di seguito:
 
-- **Prompt dei comandi di testo segnaposto,** – queste proprietà vengono utilizzate per suggerire e indicare come gli utenti devono utilizzare la barra di ricerca. Se l'app viene visualizzato un elenco degli archivi, ad esempio, è possibile utilizzare la proprietà prompt dei comandi per indicare che gli utenti possono "Immettere una città, il nome di storia o codice postale"
-- **Stile di ricerca** : È possibile impostare la barra di ricerca per essere **Prominent** o **minimo**. Utilizzando le principali verrà tingere tutto il resto sullo schermo, ad eccezione della barra, causando lo stato attivo su cui disegnare la barra di ricerca di ricerca. La barra di ricerca stile minima verrà blend con circostanti.
-- **Funzionalità** : abilitazione di queste proprietà vengono visualizzati solo l'elemento dell'interfaccia utente. La funzionalità deve essere implementata per tali generando l'evento corretto come descritto in dettaglio nella [docs API barra di ricerca](https://developer.xamarin.com/api/type/UIKit.UISearchBar/)
-    - Mostra i risultati della ricerca / pulsante segnalibri, viene visualizzata un'icona di risultati della ricerca o nei segnalibri sulla barra di ricerca
+- **Testo segnaposto, prompt dei comandi** – queste proprietà vengono usate per suggerire e indicare come gli utenti devono usare la barra di ricerca. Se l'app è visualizzato un elenco degli archivi, ad esempio, è possibile utilizzare la proprietà prompt per indicare che gli utenti possono "Immettere una città, nome del brano o codice postale"
+- **Stile di visualizzazione di ricerca** – è possibile impostare la barra di ricerca per essere **Prominent** oppure **minimo**. Usando il notificate all'utente verrà tingere tutto il resto sullo schermo, fatta eccezione per la ricerca della barra, causando lo stato attivo su cui disegnare la barra di ricerca. La barra di ricerca di stile minimo si mescoleranno con adatto al contesto.
+- **Funzionalità** : abilitazione di queste proprietà vengono visualizzate solo l'elemento dell'interfaccia utente. La funzionalità deve essere implementata per questi generando l'evento corretto come illustrato in dettaglio nella [documentazione delle API di barra di ricerca](https://developer.xamarin.com/api/type/UIKit.UISearchBar/)
+    - Mostra i risultati della ricerca / pulsante dei segnalibri – Mostra un'icona di segnalibri o i risultati della ricerca nella barra di ricerca
     - Mostra pulsante Annulla: consente agli utenti di uscire dalla funzione di ricerca. È consigliabile che questa opzione è selezionata.
-    - Mostra barra ambito – in questo modo gli utenti limitare l'ambito della ricerca. Ad esempio, durante la ricerca nell'app musica l'utente può selezionare se si desidera effettuare la ricerca musica di Apple o la libreria per un particolare brano o l'artista. Per visualizzare diverse opzioni, aggiungere una matrice di titoli di **ScopeBarTitles** proprietà.
+    - Mostra barra ambito – ciò consente agli utenti di limitare l'ambito della ricerca. Ad esempio, durante la ricerca nell'app music l'utente può selezionare se si desidera cercare la libreria per un brano musicale particolare o di un artista o Apple Music. Per visualizzare diverse opzioni, aggiungere una matrice di titoli per il **ScopeBarTitles** proprietà.
     ![Titoli di ambito sulla barra di ricerca](searchbar-images/image4.png)
 
-- **Comportamento del testo** – queste opzioni vengono utilizzate per risolvere la formattazione dell'input dell'utente durante la digitazione. Uso delle maiuscole imposterà l'inizio di ogni parola o frase, ogni carattere come lettere maiuscole o. Con il controllo ortografico e la correzione richiede all'utente con suggerimenti di parole durante la digitazione.
-- **Tastiera** : i controlli visualizzati lo stile della tastiera per l'input e pertanto le chiavi sono disponibili sulla tastiera. Ciò include tastierino numerico, il riempimento di telefono, posta elettronica, URL con altre opzioni.
-- **Aspetto** : controlla l'aspetto e lo stile della tastiera e verranno entrambi scuro o chiaro temi.
-- **Il tasto** : modificare l'etichetta per la chiave restituita per meglio riflettere l'azione che verrà eseguita. I valori supportati includono Go, Join, successivo, Route, di fatto e la ricerca.
-- **Proteggere** – indica se l'input viene mascherato (quali per un input di Password).
+- **Comportamento del testo** : queste opzioni vengono utilizzate per risolvere la formattazione dell'input utente durante la digitazione. L'uso delle maiuscole imposterà l'inizio di ogni parola o frase, ogni carattere come lettere maiuscole o. Correzione e ortografico con chiedere all'utente di forme suggerite parole digitazione.
+- **Tastiera** : controlli lo stile della tastiera visualizzata per l'input e pertanto le chiavi sono disponibili sulla tastiera. Oltre ad altre opzioni sono inclusi tastierino numerico, tastierino telefonico, indirizzo di posta elettronica, URL.
+- **Aspetto** : controlla l'aspetto e lo stile della tastiera e verranno entrambi scuro o con tema chiaro di.
+- **Il tasto** : modificare l'etichetta per la chiave Return per riflettere meglio l'azione che verrà eseguita. I valori supportati includono Go, Join, Next, Route, operazione eseguita e ricerca.
+- **Proteggere** : indica se l'input viene mascherato (ad esempio un input di Password).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Controller di ricerca](https://developer.xamarin.com/recipes/ios/content_controls/search-controller/)
+- [Controller di ricerca](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller)

@@ -1,21 +1,21 @@
 ---
-title: Nozioni fondamentali sulla risorsa Android
+title: Concetti fondamentali sulle risorse Android
 ms.prod: xamarin
 ms.assetid: ED32E7B5-D552-284B-6385-C3EDDCC30A4B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: f6be1001e5d3455a94e677f1bb5dc52ca574b873
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 207644f5a5d3d346214ba090dcd450e55fde2657
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764892"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241318"
 ---
-# <a name="android-resource-basics"></a>Nozioni fondamentali sulla risorsa Android
+# <a name="android-resource-basics"></a>Concetti fondamentali sulle risorse Android
 
-Quasi tutte le applicazioni Android avrà una qualche forma di risorse in essi. come minimo hanno spesso il layout dell'interfaccia utente nel formato di file XML. Quando viene creata un'applicazione di xamarin, le risorse predefinite sono il programma di installazione dal modello di progetto xamarin:
+Quasi tutte le Android applicazioni avranno una sorta di risorse. come minimo hanno spesso il layout di interfaccia utente sotto forma di file XML. Quando viene creata un'applicazione xamarin. Android, le risorse predefinite sono configurati dal modello di progetto xamarin. Android:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -27,44 +27,44 @@ Quasi tutte le applicazioni Android avrà una qualche forma di risorse in essi. 
  
 -----
 
-I cinque file che costituiscono le risorse predefinite sono stati creati nella cartella risorse:
+I cinque file che costituiscono le risorse predefinite sono stati creati nella cartella delle risorse:
 
--  **Icona Icon.PNG** &ndash; l'icona predefinita per l'applicazione
+-  **Icon. PNG** &ndash; l'icona predefinita per l'applicazione
 
--  **Main. axml** &ndash; il file di layout predefinito dell'interfaccia utente per un'applicazione. Si noti che, sebbene Android, viene utilizzato il **XML** Usa xamarin estensione di file, il **.axml** estensione di file.
+-  **Main. axml** &ndash; il file di layout dell'interfaccia utente predefinite per un'applicazione. Si noti che mentre Android usano la **. XML** estensione di file, xamarin. Android Usa le **axml** estensione di file.
 
--  **Strings** &ndash; una tabella di stringhe per facilitare la localizzazione dell'applicazione
+-  **Strings. XML** &ndash; una tabella di stringhe per facilitare la localizzazione dell'applicazione
 
--  **AboutResources.txt** &ndash; questo non è necessario e può essere eliminato senza problemi. Fornisce solo una panoramica di alto livello di cartella risorse e dei file in essa contenuti.
+-  **Aboutresources** &ndash; questo non è necessario e può essere eliminato senza problemi. Fornisce solo una panoramica generale della cartella delle risorse e file in essa.
 
--  **Cs** &ndash; questo file viene automaticamente generato e gestito da xamarin e univoci contiene gli ID assegnati a ogni risorsa. Questo è molto simile e scopo identico al file R.java che potrebbe avere un'applicazione Android scritta in Java. Viene creata automaticamente dagli strumenti di xamarin e verrà rigenerato nel tempo.
+-  **Resource.Designer.cs** &ndash; questo file viene automaticamente generato e gestito da xamarin. Android e univoco contiene gli ID assegnati a ogni risorsa. Questo è molto simile e scopo identico al file R.java che potrebbe avere un'applicazione Android scritta in Java. Viene automaticamente creato dagli strumenti di xamarin. Android e verrà rigenerato di tanto in tanto.
 
 
 ## <a name="creating-and-accessing-resources"></a>Creazione e l'accesso alle risorse
 
-Creazione di risorse è semplice come l'aggiunta di file della directory per il tipo di risorsa in questione. Cattura di schermata seguente mostra le risorse stringa per le impostazioni locali tedesche sono stati aggiunti a un progetto. Quando **Strings** è stato aggiunto al file, il **azione di compilazione** è stata impostata automaticamente su **AndroidResource** dagli strumenti di xamarin:
+Creazione di risorse è semplice come aggiungere file alla directory per il tipo di risorsa in questione. Cattura di schermata seguente mostra le risorse stringa per le impostazioni locali tedesche sono stati aggiunti a un progetto. Quando **Strings. XML** è stato aggiunto al file, il **azione di compilazione** automaticamente è stata impostata su **AndroidResource** dagli strumenti di xamarin. Android:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-![Azione per Strings impostato su AndroidResource di compilazione](android-resource-basics-images/02-build-action-vs.png)
+![Operazione per impostare su AndroidResource Strings. XML di compilazione](android-resource-basics-images/02-build-action-vs.png)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
-![Azione per Strings impostato su AndroidResource di compilazione](android-resource-basics-images/02-build-action-xs.png)
+![Operazione per impostare su AndroidResource Strings. XML di compilazione](android-resource-basics-images/02-build-action-xs.png)
  
 -----
  
 
-In questo modo gli strumenti di xamarin per compilare e incorporare le risorse per il file APK correttamente. Se per qualche motivo il **azione di compilazione** non è impostata su **risorse Android**, quindi i file verranno esclusi dall'APK e qualsiasi tentativo di caricare o accedere alle risorse comporterà un errore di run-time e verificherà un arresto anomalo dell'applicazione.
+In questo modo gli strumenti di xamarin. Android compilare e incorporare le risorse in per il file APK in modo corretto. Se per qualche motivo il **Build Action** non è impostata su **risorse Android**, quindi i file verranno esclusi dall'APK e qualsiasi tentativo di caricare o accedere alle risorse comporterà un errore di run-time e il applicazioni si arresteranno.
 
-Inoltre, è importante notare che mentre Android supporta solo nomi file lettere minuscole per gli elementi di risorsa, xamarin tollera un po' meglio; supporta i nomi di file sia lettere maiuscole e minuscole. La convenzione per i nomi delle immagini consiste nell'usare minuscole con caratteri di sottolineatura come separatore (ad esempio, **my\_immagine\_name.png**). Si noti che i nomi delle risorse non possono essere elaborati se trattini o spazi vengono utilizzati come separatori.
+Inoltre, è importante notare che, mentre Android supporta solo nomi file lettere minuscole per gli elementi di risorsa, xamarin. Android è un po' più tollerante; supporterà i nomi di file sia lettere maiuscole e minuscole. La convenzione per i nomi delle immagini consiste nell'usare lettere minuscole con caratteri di sottolineatura come separatore (ad esempio, **my\_immagine\_name.png**). Si noti che i nomi delle risorse non possono essere elaborati se trattini né spazi vengono utilizzati come separatori.
 
-Una volta le risorse sono stati aggiunti a un progetto, sono disponibili due modalità di utilizzo in un'applicazione &ndash; a livello di codice (all'interno di codice) o dai file XML.
+Dopo aver aggiunto le risorse a un progetto, esistono due modi per usarli in un'applicazione &ndash; a livello di codice (all'interno di codice) o dai file XML.
 
 
 ## <a name="referencing-resources-programmatically"></a>Riferimento alle risorse a livello di codice
 
-Per accedere a questi file a livello di programmazione, vengono assegnati un ID risorsa univoco. Questo ID di risorsa è un numero intero definito in una classe speciale chiamata `Resource`, che si trova nel file **cs**, e sarà simile al seguente:
+Per accedere ai file a livello di programmazione, vengono assegnati un ID di risorsa univoco. Questo ID risorsa è un numero intero definito in una classe speciale chiamata `Resource`, che si trova nel file **Resource.designer.cs**, e ha un aspetto simile al seguente:
 
 ```csharp
 public partial class Resource
@@ -91,10 +91,10 @@ public partial class Resource
 }
 ```
 
-Ogni ID di risorsa è contenuto all'interno di una classe annidata che corrisponde al tipo di risorsa. Ad esempio, quando il file **Icon.png** è stato aggiunto al progetto, xamarin aggiornato il `Resource` (classe), la creazione di una classe annidata denominata `Drawable` con una costante interno denominato `Icon`.
-In questo modo il file **Icon.png** a fare riferimento nel codice come `Resource.Drawable.Icon`. La `Resource` classe dovrebbe non essere modificata manualmente, come le modifiche effettuate a esso verranno sovrascritta da xamarin.
+Ogni ID di risorsa è contenuta all'interno di una classe annidata che corrisponde al tipo di risorsa. Ad esempio, quando il file **Icon. PNG** è stato aggiunto al progetto xamarin. Android aggiornato il `Resource` (classe), la creazione di una classe annidata denominata `Drawable` all'interno di una costante denominata `Icon`.
+In questo modo, il file **Icon. PNG** a fare riferimento nel codice come `Resource.Drawable.Icon`. Il `Resource` classe non deve essere modificata manualmente, come tutte le modifiche vengono apportate a essa verranno sovrascritto da xamarin. Android.
 
-Quando si fa riferimento alle risorse a livello di codice (nel codice), è possibile accedere tramite la gerarchia di classi di risorse che utilizza la sintassi seguente:
+Quando si fa riferimento alle risorse a livello di codice (nel codice), è possibile accedervi tramite la gerarchia di classi di risorse che usa la sintassi seguente:
 
 ```xml
 @[<PackageName>.]Resource.<ResourceType>.<ResourceName>
@@ -102,14 +102,14 @@ Quando si fa riferimento alle risorse a livello di codice (nel codice), è possi
 
 -  **PackageName** &ndash; il pacchetto che fornisce la risorsa ed è solo necessario quando vengono utilizzate le risorse da altri pacchetti.
 
--  **ResourceType** &ndash; si tratta del tipo di risorsa annidata all'interno della classe di risorse descritta in precedenza.
+-  **ResourceType** &ndash; questo è il tipo di risorsa annidata che si trova all'interno della classe di risorse descritta in precedenza.
 
--  **Nome della risorsa** &ndash; questo è il nome del file della risorsa (senza estensione) o il valore dell'attributo android: name per le risorse presenti in un elemento XML.
+-  **Nome della risorsa** &ndash; questo è il nome del file della risorsa (senza estensione) o il valore dell'attributo android: name per le risorse in un elemento XML.
 
 
 ## <a name="referencing-resources-from-xml"></a>Riferimento alle risorse da XML
 
-Accesso alle risorse in un file XML da una segue una sintassi speciale:
+Accesso alle risorse in un file XML da un segue una sintassi speciale:
 
 ```xml
 @[<PackageName>:]<ResourceType>/<ResourceName>.
@@ -117,11 +117,11 @@ Accesso alle risorse in un file XML da una segue una sintassi speciale:
 
 -  **PackageName** &ndash; il pacchetto che fornisce la risorsa ed è solo necessario quando vengono utilizzate le risorse da altri pacchetti.
 
--  **ResourceType** &ndash; si tratta del tipo di risorsa annidata all'interno della classe di risorse.
+-  **ResourceType** &ndash; questo è il tipo di risorsa annidata che si trova all'interno della classe di risorse.
 
--  **Nome della risorsa** &ndash; si tratta del nome della risorsa (*senza* l'estensione del tipo di file) o il valore del `android:name` attributo per le risorse presenti in un elemento XML.
+-  **Nome della risorsa** &ndash; si tratta del nome della risorsa (*senza* l'estensione del tipo di file) o il valore della `android:name` attributo per le risorse in un elemento XML.
 
-Ad esempio il contenuto di un file di layout, **axml**, sono i seguenti:
+Ad esempio il contenuto di un file di layout **Main. axml**, sono i seguenti:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -136,8 +136,8 @@ Ad esempio il contenuto di un file di layout, **axml**, sono i seguenti:
 </LinearLayout>
 ```
 
-L'esempio include un [ `ImageView` ](https://developer.xamarin.com/recipes/android/controls/imageview) che richiede una risorsa drawable denominata **flag**. Il `ImageView` è relativo `src` attributo impostato su **@drawable/flag**. Quando si avvia l'attività, avrà un aspetto Android all'interno della directory **risorse/Drawable** per un file denominato **flag.png** (l'estensione del file potrebbe essere un altro formato di immagine, ad esempio **flag.jpg**) caricare il file e visualizzarli nel `ImageView`.
-Quando viene eseguita l'applicazione, dovrebbe essere simile l'immagine seguente:
+Questo esempio è costituito da un [ `ImageView` ](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) che richiede una risorsa drawable denominata **flag**. Il `ImageView` ha relativi `src` attributo impostato su **@drawable/flag**. All'avvio, l'attività Android avrà un aspetto all'interno della directory **risorsa/Drawable** per un file denominato **flag.png** (l'estensione di file potrebbe essere un altro formato di immagine, ad esempio **flag.jpg**) e caricare tale file e lo visualizza nel `ImageView`.
+Quando si esegue questa applicazione, che sarebbe simile all'immagine seguente:
 
-![ImageView localizzata](android-resource-basics-images/03-localized-screenshot.png)
+![ImageView localizzato](android-resource-basics-images/03-localized-screenshot.png)
 

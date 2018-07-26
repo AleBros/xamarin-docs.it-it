@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: 5e9bf9555d10c8b34ad9323529d4af5ea66110f8
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 688457ab25398e8c5b9848a7e58f6163db4c0a05
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156782"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242394"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Creazione di interfacce utente di iOS nel codice in xamarin. IOS
 
@@ -607,7 +607,7 @@ Apple consiglia un xib o uno Storyboard viene usato per le applicazioni destinat
 
 Per altre informazioni sulla creazione di una schermata di avvio, vedere la documentazione seguente:
 
-- [Creazione di una schermata di avvio usando un xib](https://developer.xamarin.com/recipes/ios/general/templates/launchscreen-xib/)
+- [Creazione di una schermata di avvio usando un xib](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/templates/launchscreen-xib)
 - [La gestione delle schermate di avvio con gli storyboard](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 > [!IMPORTANT]

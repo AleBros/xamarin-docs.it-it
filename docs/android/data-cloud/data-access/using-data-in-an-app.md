@@ -1,42 +1,42 @@
 ---
-title: Utilizzo di dati in un'App per Android
+title: Uso dei dati in un'App per Android
 ms.prod: xamarin
 ms.assetid: D5932AEB-0B6E-4F37-8B32-9BE4775AEE85
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: b79b2e44e79a6ff75b096c7443f6d46c20e27144
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 563c04ef1c8eec00108844894c5f9bdc0e9950e3
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31647034"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241890"
 ---
-# <a name="using-data-in-an-app"></a>Utilizzo di dati in un'App
+# <a name="using-data-in-an-app"></a>Uso dei dati in un'App
 
-Il **DataAccess_Adv** illustra un'applicazione funzionante che consente l'input dell'utente e le funzionalità di database CRUD (Create, Read, Update e Delete). L'applicazione è costituita da due schermate: un elenco e un form di immissione dati. Tutto il codice di accesso ai dati è riutilizzabile in iOS e Android senza alcuna modifica.
+Il **DataAccess_Adv** illustra un'applicazione funzionante che consente l'input dell'utente e le funzionalità di database CRUD (Create, Read, Update e Delete). L'applicazione è costituita da due schermate seguenti: un elenco e un modulo di immissione dati. Tutto il codice di accesso di dati è riutilizzato in iOS e Android senza alcuna modifica.
 
-Dopo avere aggiunto alcuni dati le schermate dell'applicazione simile al seguente in Android:
+Dopo aver aggiunto alcuni dati le schermate dell'applicazione l'aspetto seguente in Android:
 
-![Elenco di esempi Android](using-data-in-an-app-images/image11.png "elenco di esempi di Android")
+![Elenco di esempi di Android](using-data-in-an-app-images/image11.png "elenco di esempi di Android")
 
-![Dettagli campione Android](using-data-in-an-app-images/image12.png "dettagli campione Android")
+![Dettagli di esempio di Android](using-data-in-an-app-images/image12.png "dettaglio di esempio di Android")
 
-Di seguito è riportato il progetto Android &ndash; il codice illustrato in questa sezione è contenuto all'interno di **Orm** directory:
+Di seguito è riportato il progetto Android &ndash; il codice riportato in questa sezione è contenuto all'interno di **Orm** directory:
 
-![Struttura ad albero di progetto Android](using-data-in-an-app-images/image14.png "della struttura di progetto Android")
+![Struttura del progetto Android](using-data-in-an-app-images/image14.png "albero del progetto Android")
 
-Il codice dell'interfaccia utente nativo per le attività in Android esula dall'ambito di questo documento. Consultare il [Android controlli ListView e schede](~/android/user-interface/layouts/list-view/index.md) Guida per ulteriori informazioni sui controlli dell'interfaccia utente.
+Il codice dell'interfaccia utente nativo per le attività in Android non è compreso nell'ambito di questo documento. Vedere le [Android ListView e adapter](~/android/user-interface/layouts/list-view/index.md) Guida per altre informazioni sui controlli dell'interfaccia utente.
 
 ## <a name="read"></a>Lettura
 
 Esistono un paio di operazioni di lettura nell'esempio:
 
 -  La lettura dell'elenco
--  Lettura dei singoli record
+-  La lettura dei singoli record
 
-I due metodi di `StockDatabase` sono:
+I due metodi nel `StockDatabase` classe sono:
 
 ```csharp
 public IEnumerable<Stock> GetStocks ()
@@ -55,9 +55,9 @@ public Stock GetStock (int id)
 
 Android viene eseguito il rendering dei dati come un `ListView`.
 
-## <a name="create-and-update"></a>Creazione e aggiornamento
+## <a name="create-and-update"></a>Creare e aggiornare
 
-Per semplificare il codice dell'applicazione, un singolo metodo di salvataggio è fornito che esegue un'istruzione Insert o Update a seconda se è stata impostata la PrimaryKey. Poiché il `Id` proprietà è contrassegnata con un `[PrimaryKey]` attributo, è consigliabile non impostare nel codice. Questo metodo consentirà di rilevare se il valore è stato precedente salvata (selezionando la proprietà di chiave primaria) e inserire o aggiornare di conseguenza l'oggetto:
+Per semplificare il codice dell'applicazione, un singolo metodo di salvataggio è fornito che consente di eseguire un'istruzione Insert o Update a seconda che sia stata impostata il PrimaryKey. Poiché il `Id` proprietà è contrassegnata con un `[PrimaryKey]` attributo è consigliabile non impostarlo nel codice. Questo metodo rileva se il valore è stato precedente salvata (controllando la proprietà di chiave primaria) e inserire o aggiornare di conseguenza l'oggetto:
 
 ```csharp
 public int SaveStock (Stock item)
@@ -73,11 +73,11 @@ public int SaveStock (Stock item)
 }
 ```
 
-Applicazioni reali in genere richiedono una convalida (ad esempio i campi obbligatori, lunghezza minima o altre regole di business). Le applicazioni multipiattaforma buona implementare la maggior parte della convalida logica possibile nel codice condiviso, il passaggio di errori di convalida, eseguire il backup l'interfaccia utente per la visualizzazione in base alle funzionalità della piattaforma.
+Applicazioni reali richiede in genere una convalida (ad esempio i campi obbligatori, le lunghezze minima o altre regole di business). Le applicazioni multipiattaforma buona implementare la maggior parte della convalida logico possibile nel codice condiviso, il passaggio di errori di convalida, eseguire il backup l'interfaccia utente per la visualizzazione in base alle funzionalità della piattaforma.
 
 ## <a name="delete"></a>Eliminare
 
-A differenza di `Insert` e `Update` metodi, il `Delete<T>` metodo può accettare solo il valore di chiave primaria anziché completa `Stock` oggetto. In questo esempio un `Stock` oggetto viene passato al metodo, ma solo la proprietà Id viene passata al `Delete<T>` metodo.
+A differenza di `Insert` e `Update` metodi, il `Delete<T>` metodo accetta semplicemente il valore di chiave primaria anziché completa `Stock` oggetto. In questo esempio un `Stock` oggetto viene passato al metodo, ma solo la proprietà Id viene passata al `Delete<T>` (metodo).
 
 ```csharp
 public int DeleteStock(Stock stock)
@@ -90,15 +90,15 @@ public int DeleteStock(Stock stock)
 
 ## <a name="using-a-pre-populated-sqlite-database-file"></a>Utilizzo di un file di database SQLite prepopolato
 
-Alcune applicazioni vengono forniti con un database già popolato con dati. Si può facilmente questo scopo nell'applicazione per dispositivi mobili per la spedizione di un file di database SQLite esistente con l'app e copiarlo in una directory accessibile in scrittura prima di accedervi. Poiché SQLite è un formato di file standard che viene utilizzato in molte piattaforme, sono disponibili numerosi strumenti disponibili per creare un file di database SQLite:
+Alcune applicazioni vengono forniti con un database già popolato con i dati. È possibile farlo facilmente nell'applicazione per dispositivi mobili da un file di database SQLite esistente con l'app di spedizione e copiarla in una directory scrivibile prima dell'accesso. Poiché SQLite è un formato di file standard che viene usato in molte piattaforme, sono disponibili numerosi strumenti disponibili per creare un file di database SQLite:
 
--   **Estensione di Firefox Manager SQLite** &ndash; funziona su Mac e Windows e genera file che sono compatibili con iOS e Android.
+-   **Estensione per Firefox Manager SQLite** &ndash; funziona su Mac e Windows e produce file che sono compatibili con iOS e Android.
 
 -   **Riga di comando** &ndash; vedere [www.sqlite.org/sqlite.html](http://www.sqlite.org/sqlite.html) .
 
-Prestare attenzione quando si crea un file di database per la distribuzione con l'app, con la denominazione di tabelle e colonne per assicurarsi che corrispondano cosa prevede che il codice, in particolare se si utilizza SQLite.NET che si aspetta di ricevere i nomi in modo che corrisponda l'in c# le classi e proprietà (o attributi personalizzati associati).
+Prestare attenzione quando si crea un file di database per la distribuzione con l'app, con la denominazione di tabelle e colonne per assicurarsi che corrispondano a ciò che prevede che il codice, soprattutto se si usa SQLite.NET che si aspetta di ricevere i nomi in base ai in c# le classi e proprietà (o il attributi personalizzati associati).
 
-Per garantire l'esecuzione di codice prima di qualsiasi altra nell'app Android, è possibile inserirlo nella prima attività per caricare o creare un `Application` sottoclasse che viene caricata prima di qualsiasi attività. Il codice seguente viene illustrato un `Application` sottoclasse che copia un file di database esistente **data.sqlite** fuori il **/Resources./Raw/** directory.
+Per garantire che venga eseguito codice prima di altre operazioni nell'app per Android, è possibile inserirlo nella prima attività per caricare o è possibile creare un `Application` sottoclasse che viene caricata prima di qualsiasi attività. Il codice seguente mostra un' `Application` sottoclasse che copia un file di database esistente **data.sqlite** fuori il **/Resources./Raw/** directory.
 
 ```csharp
 [Application]
@@ -139,5 +139,5 @@ public class YourAndroidApp : Application {
 
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess avanzate (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Recipe dati Android](https://developer.xamarin.com/recipes/android/data/)
+- [Ricette dei dati Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
 - [Accesso ai dati di xamarin. Forms](~/xamarin-forms/app-fundamentals/databases.md)
