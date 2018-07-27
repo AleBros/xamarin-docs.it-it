@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 1292db3534570dace90639958a3d5be9f6466716
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 886cc1de87bd8225bd0389d2e7b84b546ffb39d7
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30765246"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241497"
 ---
 # <a name="gdb"></a>GDB
 
@@ -145,7 +145,7 @@ Il supporto di `gdb` presenta tre requisiti:
 2.  Debug dell'app abilitato.
 3.  `gdbserver` accessibile.
 
-L'autorizzazione `INTERNET` è abilitata per impostazione predefinita nelle app di debug. Se non è già presente nell'applicazione, è possibile aggiungerla modificando **Properties/AndroidManifest.xml** o modificando le [proprietà del progetto](https://developer.xamarin.com/recipes/android/general/projects/add_permissions_to_android_manifest/).
+L'autorizzazione `INTERNET` è abilitata per impostazione predefinita nelle app di debug. Se non è già presente nell'applicazione, è possibile aggiungerla modificando **Properties/AndroidManifest.xml** o modificando le [proprietà del progetto](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest).
 
 Il debug dell'app può essere abilitato impostando la proprietà dell'attributo personalizzato [ApplicationAttribute.Debugging](https://developer.xamarin.com/api/property/Android.App.ApplicationAttribute.Debuggable/) su `true` o modificando **Properties/AndroidManifest.xml** e impostando l'attributo `//application/@android:debuggable` su `true`:
 

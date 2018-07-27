@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: f62842c3b2aea93d28303b7f47c5d50df6381387
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 3aa70469c5916a22a22d7857c62a4b46c1637124
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998427"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242420"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: approfondimenti
 
@@ -302,7 +302,7 @@ Visual Studio per Mac e Visual Studio offrono entrambi numerose opzioni per il t
 
 ### <a name="debugging-tools"></a>Strumenti di debug
 
-I problemi del codice di un'applicazione possono essere difficili da diagnosticare. Per facilitare la diagnosi di problemi complessi del codice, è possibile [impostare un punto di interruzione](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/), [eseguire il codice un'istruzione alla volta](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/) o [visualizzare le informazioni di output nella finestra del log](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/).
+I problemi del codice di un'applicazione possono essere difficili da diagnosticare. Per facilitare la diagnosi di problemi complessi del codice, è possibile [impostare un punto di interruzione](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint), [eseguire il codice un'istruzione alla volta](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code) o [visualizzare le informazioni di output nella finestra del log](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window).
 
 
 ### <a name="deploy-to-a-device"></a>Eseguire la distribuzione in un dispositivo

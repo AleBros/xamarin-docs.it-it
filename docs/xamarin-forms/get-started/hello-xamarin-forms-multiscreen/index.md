@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 2132e1d0732a727d90e3eb7f36085f13c78c2e7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6a7d3b29bd9d3ab3cfee07a30bb23daab76de22a
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30789514"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241718"
 ---
 # <a name="hello-xamarinforms-multiscreen"></a>Hello, Xamarin.Forms Multiscreen
 
@@ -32,6 +32,6 @@ La seconda parte di questa guida riesamina ciò che è stato compilato, per comp
 
 - [Introduzione a Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Debug in Visual Studio](http://msdn.microsoft.com/library/k0k771bt%28v=vs.90%29.aspx)
-- [Visual Studio for Mac Recipes - Debugging (Visual Studio per Mac - debug)](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/)
+- [Visual Studio for Mac Recipes - Debugging (Visual Studio per Mac - debug)](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)
 - [Apprendimento guidato gratuito (video)](https://university.xamarin.com/self-guided)
 - [Getting Started with Xamarin (video)](https://developer.xamarin.com/videos/) (Introduzione a Xamarin - Video)

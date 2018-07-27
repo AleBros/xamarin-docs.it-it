@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 1b017f282a1295dba4b2a051928b54fc16ff746b
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 4f5f3ab00b55de270c209d6fa7082c3acc40b5ef
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35243740"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241305"
 ---
 # <a name="hello-xamarinforms"></a>Hello, Xamarin.Forms
 
@@ -34,7 +34,7 @@ La seconda parte della guida riesamina ciò che è stato compilato, per comprend
 
 - [Introduzione a Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Debug in Visual Studio](http://msdn.microsoft.com/library/k0k771bt%28v=vs.90%29.aspx)
-- [Visual Studio for Mac Recipes - Debugging (Visual Studio per Mac - debug)](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/)
+- [Visual Studio for Mac Recipes - Debugging (Visual Studio per Mac - debug)](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)
 - [Apprendimento guidato gratuito (video)](https://university.xamarin.com/self-guided)
 - [Getting Started with Xamarin (video)](https://developer.xamarin.com/videos/) (Introduzione a Xamarin - Video)
 - [Cartella di lavoro iOS Xamarin.Forms](https://developer.xamarin.com/workbooks/xamarin-forms/getting-started/GettingStartedWithXamarinForms-ios.workbook)

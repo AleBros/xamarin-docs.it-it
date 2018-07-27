@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 494dfad0ba3d26147604ce1bca1de49fac318811
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 4b21a69e49c8c7fd79de8edac9858c4714657f1c
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785434"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242316"
 ---
 # <a name="debugging-xamarinios-apps"></a>Debug di app Xamarin.iOS
 
@@ -30,7 +30,7 @@ Il debugger Xamarin.iOS usa il [debugger Mono Soft](http://www.mono-project.com/
 
 ## <a name="setting-breakpoints"></a>Impostazione di punti di interruzione
 
-Quando si è pronti per avviare il debug dell'applicazione, il primo passaggio da eseguire è l'[impostazione di punti di interruzione per l'applicazione](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/). A questo scopo, fare clic nell'area del margine dell'editor, accanto al numero di riga del codice in corrispondenza del quale si vuole impostare il punto di interruzione:
+Quando si è pronti per avviare il debug dell'applicazione, il primo passaggio da eseguire è l'[impostazione di punti di interruzione per l'applicazione](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). A questo scopo, fare clic nell'area del margine dell'editor, accanto al numero di riga del codice in corrispondenza del quale si vuole impostare il punto di interruzione:
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -121,7 +121,7 @@ Per impostare un punto di interruzione condizionale, accedere alla **finestra Pr
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-Per impostare un punto di interruzione condizionale in Visual Studio 2015, prima [impostare un normale punto di interruzione](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/). Fare clic con il pulsante destro del mouse sul punto di interruzione per visualizzare il menu di scelta rapida:
+Per impostare un punto di interruzione condizionale in Visual Studio 2015, prima [impostare un normale punto di interruzione](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). Fare clic con il pulsante destro del mouse sul punto di interruzione per visualizzare il menu di scelta rapida:
 
  [![](debugging-in-xamarin-ios-images/image4vs.png "Menu di scelta rapida del punto di interruzione")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
 
@@ -241,6 +241,6 @@ Dopo avere eseguito questa operazione, è possibile avviare l'applicazione ed es
 
 - [Debug con Xamarin](/visualstudio/mac/debugging/)
 - [Visualizzazioni dei dati](/visualstudio/mac/data-visualizations/)
-- [Impostare un punto di interruzione](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/)
-- [Esecuzione del codice un'istruzione alla volta](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/)
-- [Visualizzare le informazioni nella finestra del log](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/)
+- [Impostare un punto di interruzione](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)
+- [Esecuzione del codice un'istruzione alla volta](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code)
+- [Visualizzare le informazioni nella finestra del log](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)
