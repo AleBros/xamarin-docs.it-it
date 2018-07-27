@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/13/2018
-ms.openlocfilehash: 9774dcad14c2e2fc7e1203ef887a19f4b96218ba
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 6e3cf12431440823b1d32d91927bc634f60fd5e2
+ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241475"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39270456"
 ---
 # <a name="xamarinforms-editor"></a>Editor di xamarin. Forms
 
@@ -108,7 +108,7 @@ var editor = new Editor { Keyboard = Keyboard.Chat };
 
 Esempi di ogni tastiera sono reperibili nel nostro [recipe](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry) repository.
 
-Il [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) classe include anche una [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) metodo factory che può essere utilizzato per personalizzare una tastiera, specificando il comportamento di maiuscole/minuscole, controllo ortografico e suggerimenti. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) i valori di enumerazione come specificato come argomenti al metodo, con un oggetto personalizzato `Keyboard` restituiti. Il `KeyboardFlags` enumerazione contiene i valori seguenti:
+Il [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) classe include anche una [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) metodo factory che può essere utilizzato per personalizzare una tastiera, specificando il comportamento di maiuscole/minuscole, controllo ortografico e suggerimenti. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) i valori di enumerazione sono specificati come argomenti al metodo, con un oggetto personalizzato `Keyboard` restituiti. Il `KeyboardFlags` enumerazione contiene i valori seguenti:
 
 - [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – non vengono aggiunte funzionalità per la tastiera.
 - [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) : indica che la prima lettera della parola prima di ogni frase immessa sarà essere automaticamente la prima lettera maiuscola.

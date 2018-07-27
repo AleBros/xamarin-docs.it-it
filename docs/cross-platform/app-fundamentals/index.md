@@ -1,43 +1,42 @@
 ---
 title: Condivisione del codice su più piattaforme
-description: Questo documento include collegamenti ad varie guide che descrivono le tecniche per la condivisione del codice, incluse le librerie di classi portabile, i progetti condivisi, .NET Standard e NuGet.
+description: Questo documento include collegamenti alle varie guide che descrivono le tecniche per la condivisione di codice, incluse le librerie di classi portabile, i progetti condivisi, .NET Standard e NuGet.
 ms.prod: xamarin
 ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
-author: asb3993
-ms.author: amburns
-ms.date: 02/18/2018
-ms.openlocfilehash: 61377afa61e2c2006c2fdf8ef9b21fe7d567b3de
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: conceptdev
+ms.author: crdun
+ms.date: 07/18/2018
+ms.openlocfilehash: 3a2c3f98e3ba83db0794a68ff1d62a9845a111c0
+ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780069"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39270189"
 ---
 # <a name="sharing-code-on-multiple-platforms"></a>Condivisione del codice su più piattaforme
 
-In questa sezione viene fornita una Guida su alcune delle più comuni attività di cose o concetti che gli sviluppatori devono tenere conto durante lo sviluppo di applicazioni per dispositivi mobili.
+Questi articoli illustrano le diverse opzioni disponibili per la condivisione di codice tra piattaforme, tra cui Windows, Android, iOS e altro ancora.
 
-## <a name="code-sharing-overviewcode-sharingmd"></a>[Panoramica della condivisione del codice](code-sharing.md)
+## <a name="code-sharing-overviewcode-sharingmd"></a>[Panoramica della condivisione di codice](code-sharing.md)
 
-Ulteriori informazioni sul codice diverso opzioni disponibili per progetti di Xamarin, incluse le librerie di classi portabili (PCLs), progetti condivisi e le librerie Standard di .NET di condivisione.
+Scopri le diverso opzioni disponibili per i progetti Xamarin, incluse le librerie .NET Standard e progetti condivisi di condivisione del codice. Librerie di classi portabili sono supportate anche, tuttavia sono considerate deprecate a favore di .NET Standard.
 
+## <a name="net-standardcross-platformapp-fundamentalsnet-standardmd"></a>[.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)
 
-##  <a name="portable-class-librariescross-platformapp-fundamentalspclmd"></a>[Librerie di classi portabili](~/cross-platform/app-fundamentals/pcl.md)
+.NET standard è l'opzione preferita per condividere codice tra piattaforme. Codice viene compilato con una versione specifica (2.0 fornisce il migliore compatibilità con le API con il codice di .NET Framework esistente) e possono quindi essere utilizzato da altri progetti che supportano tale livello o versione successiva. I progetti .NET standard sono supportati in Visual Studio 2017 e Visual Studio per Mac.
 
-Progetti libreria di classi portabili consentono di creare e distribuire gli assembly contenenti codice condiviso per l'esecuzione su più piattaforme. Per creare una libreria di classi portabile (o "PCL") prima selezionare le piattaforme di destinazione, quindi scrivere codice per un sottoinsieme di .NET Framework è disponibile nel profilo definito per tali piattaforme. Questo documento viene descritto come creare e usare PCLs con Xamarin.
+## <a name="shared-projectscross-platformapp-fundamentalsshared-projectsmd"></a>[Progetti condivisi](~/cross-platform/app-fundamentals/shared-projects.md)
 
-##  <a name="shared-projectscross-platformapp-fundamentalsshared-projectsmd"></a>[Progetti condivisi](~/cross-platform/app-fundamentals/shared-projects.md)
+Progetti condivisi consentono di scrivere codice comune a cui viene fatto riferimento da un numero di progetti di applicazione diversi. Il codice viene compilato come parte di ogni progetto di riferimento e può includere le direttive del compilatore per incorporare funzionalità specifiche della piattaforma di base di codice condiviso. Questo articolo illustra come creare e usarli con i progetti Xamarin e funzionamento dei progetti condivisi.
 
-Progetti condivisi consentono di scrivere codice comune a cui fa riferimento un numero di progetti di applicazione diverso. Il codice viene compilato come parte di ogni progetto di riferimento e può includere le direttive del compilatore per incorporare le funzionalità specifiche della piattaforma di base di codice condiviso. Questo articolo illustra il funzionamento progetti condivisi e come crearli e utilizzarli con i progetti di Xamarin.
+## <a name="portable-class-librariescross-platformapp-fundamentalspclmd"></a>[Librerie di classi portabili](~/cross-platform/app-fundamentals/pcl.md)
 
-##  <a name="net-standardcross-platformapp-fundamentalsnet-standardmd"></a>[.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)
+Progetti libreria di classi portabili consentono di compilare e distribuire gli assembly contenenti codice condiviso per l'esecuzione su più piattaforme. Per creare una libreria di classi portabile (o "Libreria di classi Portabile") prima di tutto selezionare quali piattaforme di destinazione, quindi scrivere codice in base a un sottoinsieme di .NET Framework che è disponibile nel profilo è definito per tali piattaforme. Librerie di classi portabili sono considerati a essere deprecata nelle versioni più recenti di Visual Studio. gli sviluppatori sono invitati a usare invece di .NET Standard 2.0.
 
-.NET standard è una nuova opzione per la condivisione del codice tra le piattaforme. Funziona in modo simile alle librerie di classi portabile; codice viene compilato con una versione specifica (attualmente 1.0 tramite 1.6) e può quindi essere utilizzato da altri progetti che supportano tale livello o superiore. Progetti .NET standard sono supportati in 6.2 di Xamarin Studio, Visual Studio per Windows e Visual Studio per Mac.
+## <a name="nuget-projects-multiplatform-libraries-for-code-sharingcross-platformapp-fundamentalsnuget-multiplatform-librariesindexmd"></a>[Progetti NuGet: librerie multipiattaforma per la condivisione del codice](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)
 
-##  <a name="nuget-projects-multiplatform-libraries-for-code-sharingcross-platformapp-fundamentalsnuget-multiplatform-librariesindexmd"></a>[Progetti di NuGet: Librerie multipiattaforma per la condivisione del codice](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)
+I pacchetti NuGet possono essere generati automaticamente da progetti libreria di classi Portabile o .NET standard. e i progetti condivisi possono essere inseriti in pacchetti NuGet "specchietto per le allodole" utilizzando il tipo di progetto NuGet separato. In questa sezione illustra come creare pacchetti NuGet per ogni scenario di condivisione del codice.
 
-Pacchetti NuGet possono essere generati automaticamente da progetti libreria di classi Portabile o .NET standard. e i progetti condivisi possono essere inseriti in pacchetti NuGet "tecnica dello" utilizzando il tipo di progetto NuGet separato. In questa sezione viene illustrato come creare pacchetti di NuGet per ogni scenario di condivisione del codice.
+## <a name="manually-creating-nuget-packages-for-xamarincross-platformapp-fundamentalsnuget-manualmd"></a>[Creazione manuale di pacchetti NuGet per Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
 
-##  <a name="manually-creating-nuget-packages-for-xamarincross-platformapp-fundamentalsnuget-manualmd"></a>[Creazione manuale di pacchetti NuGet di Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
-
-Suggerimenti per la creazione di pacchetti NuGet che funzionano con la piattaforma di Xamarin.
+Suggerimenti per la creazione di pacchetti NuGet che funzionano con la piattaforma Xamarin.

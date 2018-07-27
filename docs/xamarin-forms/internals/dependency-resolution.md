@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/23/2018
-ms.openlocfilehash: 8235b6fb5fda2a414cf192dd66007d1d02f232aa
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 2379c8ddc4bea6dd97bc4febd055dd8dfef39beb
+ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242381"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39270488"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Risoluzione delle dipendenze in xamarin. Forms
 
@@ -111,7 +111,7 @@ Quando un'applicazione usa un metodo di risoluzione delle dipendenze per risolve
 
 Dopo la registrazione di tipo da un progetto di piattaforma, il `IContainer` oggetto deve essere compilato, quale operazione viene eseguita chiamando il `BuildContainer` (metodo). Questo metodo richiama di Autofac `Build` metodo di `ContainerBuilder` istanza, che compila un nuovo contenitore di inserimento delle dipendenze che contiene le registrazioni che sono state apportate.
 
-Nelle sezioni che seguono, un `Logger` (classe), che implementa il `ILogger` interfaccia, viene inserito nelle costruttori della classe. Il `Logger` funzionalità di registrazione semplice implementa classe usando il `Debug.WriteLine` metodo e viene usato per illustrare come servizi possono essere inseriti nel renderer personalizzati, gli effetti, e [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) implementazioni.
+Nelle sezioni che seguono, un `Logger` classe che implementa il `ILogger` interfaccia viene inserita nelle costruttori della classe. Il `Logger` funzionalità di registrazione semplice implementa classe usando il `Debug.WriteLine` metodo e viene usato per illustrare come servizi possono essere inseriti nel renderer personalizzati, gli effetti, e [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) implementazioni.
 
 ### <a name="registering-custom-renderers"></a>La registrazione di renderer personalizzati
 

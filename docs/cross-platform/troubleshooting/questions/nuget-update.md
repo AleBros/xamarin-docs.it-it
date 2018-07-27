@@ -1,29 +1,29 @@
 ---
-title: Come posso aggiornare NuGet?
+title: Come si aggiorna NuGet?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 40DDE713-DE80-422F-BE34-A732E40C3F81
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: b13edf66af5bb005eeed8f5e56bd89d91cbc5702
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: ac990024e99d8e49f921ce4b49a793731e332913
+ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33920174"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39270228"
 ---
-# <a name="how-can-i-update-nuget"></a>Come posso aggiornare NuGet?
+# <a name="how-can-i-update-nuget"></a>Come si aggiorna NuGet?
 
-Componenti aggiuntivi, estensioni e aggiornamenti di NuGet è reperibile nella **aggiornamenti** nella scheda il **Gestione pacchetti NuGet**. Di seguito viene navigazione dettagliate per trovare gli aggiornamenti in Visual Studio per Mac e Visual Studio. 
+Aggiornamenti di NuGet, estensioni e componenti aggiuntivi sono disponibili nel **aggiornamenti** scheda le **Gestione pacchetti NuGet**. Di seguito è navigazione dettagliati per trovare gli aggiornamenti in Visual Studio per Mac e Visual Studio. 
 
-. Si noti che gli aggiornamenti verranno *solo* visualizzare questi menu se non è supportata la versione più recente di NuGet dall'IDE installato:
+. Si noti che gli aggiornamenti verranno *solo* visualizzato in questi menu se non è la versione supportata più recente di NuGet per l'ambiente IDE:
 
 ## <a name="visual-studio"></a>Visual Studio
-1. Aprire **strumenti > estensioni e aggiornamenti > aggiornamenti > Visual Studio Gallery**
+1. Apri **strumenti > estensioni e aggiornamenti > aggiornamenti > Visual Studio Gallery**
 2. Selezionare **Gestione pacchetti NuGet per Visual Studio [anno]**
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio per Mac
 
-1. Aprire **Visual Studio per Mac > Gestione componenti aggiuntivi > aggiornamenti > estensioni IDE**
+1. Apri **Visual Studio per Mac > estensioni > aggiornamenti > estensioni IDE**
 2. Selezionare **Gestione pacchetti NuGet**
 

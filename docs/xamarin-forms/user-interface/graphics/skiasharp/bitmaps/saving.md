@@ -2,17 +2,17 @@
 title: Salvataggio di bitmap di SkiaSharp ai file
 description: Esplorare i vari formati di file supportati da SkiaSharp per il salvataggio di bitmap nella libreria di foto dell'utente.
 ms.prod: xamarin
-ms.technology: xamarin-forms++++++
+ms.technology: xamarin-forms
 ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
 author: charlespetzold
 ms.author: chape
 ms.date: 07/10/2018
-ms.openlocfilehash: ee9690d52d18c1b0da2b35144b41ae856d64a85d
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 5ef18728bbf417750575bad88b3498f66fa585c4
+ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131525"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276015"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>Salvataggio di bitmap di SkiaSharp ai file
 
