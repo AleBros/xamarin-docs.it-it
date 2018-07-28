@@ -1,61 +1,65 @@
 ---
-title: Nozioni di base dell'applicazione Xamarin.Mac
-description: Questo documento collegamenti a guide che descrivono i vari concetti necessari per comprendere quando si sviluppano applicazioni Xamarin.Mac.
+title: Nozioni fondamentali dell'applicazione xamarin. Mac
+description: Questo documento include collegamenti alle guide che descrivono vari concetti necessari per comprendere quando si sviluppano applicazioni xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: 5A36B3A7-F197-4AC3-A40D-B2C49362FF06
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/17/2015
-ms.openlocfilehash: 1c807e97d5218e93c4eb991a9bd80219c9745c2b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: e085cf33615d216e1ce9963254050ef2b623ae40
+ms.sourcegitcommit: d0da5ce4158239abd2b36f67550e9b475055766a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791501"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39320804"
 ---
-# <a name="xamarinmac-application-fundamentals"></a>Nozioni di base dell'applicazione Xamarin.Mac
+# <a name="xamarinmac-application-fundamentals"></a>Nozioni fondamentali dell'applicazione xamarin. Mac
 
 ## <a name="common-patterns-and-idiomsmacapp-fundamentalspatternsmd"></a>[Modelli e idiomi comuni](~/mac/app-fundamentals/patterns.md)
 
-In tutta l'API Apple esposte tramite c#, determinati idiomi e i pattern di avviarsi in modo continuativo. Se si ha esperienza con la programmazione con xamarin, questi possono essere noti. Documentazione spesso farà riferimento a questi modelli e idiomi più volte, in modo da avere una conoscenza approfondita di essi consentono di senso della documentazione di cui che trova.
+In tutta l'API Apple esposte tramite c#, alcuni modelli e idiomi ad avviarsi in modo continuativo. Se si ha esperienza con la programmazione con xamarin. IOS, questi potrebbero apparire familiari. Documentazione spesso farà riferimento a questi modelli e idiomi più volte, in modo da avere una conoscenza approfondita di essi consentono di avere senso della documentazione che trova.
 
 ## <a name="understanding-mac-apismacapp-fundamentalsmac-apismd"></a>[Informazioni sulle API Mac](~/mac/app-fundamentals/mac-apis.md)
 
-Per la maggior parte del tempo allo sviluppo con Xamarin.Mac, può pensare, lettura e scrittura in c# senza preoccuparsi con le API sottostanti Objective-C. Tuttavia, talvolta si necessario leggere la documentazione dell'API di Apple, convertire una risposta dall'Overflow dello Stack a una soluzione per il problema oppure confrontare a un campione esistente.
+Per la maggior parte del tempo allo sviluppo con xamarin. Mac, è possibile pensare, leggere e scrivere in c# senza preoccuparsi con le API Objective-C sottostante. Tuttavia, in alcuni casi sarà necessario leggere la documentazione dell'API di Apple, tradurre una risposta di Stack Overflow per una soluzione al problema o confrontare con un esempio esistente.
 
-## <a name="working-with-xib-filesmacapp-fundamentalsxibmd"></a>[Utilizzo dei file .xib](~/mac/app-fundamentals/xib.md)
+## <a name="console-appsmacapp-fundamentalsconsolemd"></a>[App console](~/mac/app-fundamentals/console.md)
 
-In questo articolo viene descritto l'utilizzo con i file .xib creati in Generatore di Xcode interfaccia per creare e gestire le interfacce utente per un'applicazione Xamarin.Mac.
+È anche possibile compilare App console "headless" accedere alle API di macOS native usando xamarin. Mac.
+
+## <a name="working-with-xib-filesmacapp-fundamentalsxibmd"></a>[Utilizzo di file con estensione xib](~/mac/app-fundamentals/xib.md)
+
+Questo articolo descrive l'uso con i file con estensione xib creati in Interface Builder di Xcode per creare e gestire le interfacce utente per un'applicazione xamarin. Mac.
 
 ## <a name="storyboardxib-less-user-interface-designmacapp-fundamentalsxibless-uimd"></a>[.Storyboard/.xib meno progettazione dell'interfaccia utente](~/mac/app-fundamentals/xibless-ui.md)
 
-Questo articolo vengono illustrate la creazione di un Xamarin.Mac interfaccia utente direttamente dal codice c# senza l'utilizzo interfaccia generatore di Xcode con .storyboard o .xib file.
+Questo articolo illustra la creazione dell'interfaccia utente di un'applicazione xamarin. Mac direttamente dal codice c# senza dover usare Interface Builder di Xcode con i file con estensione xib o storyboard.
 
 ## <a name="working-with-imagesmacapp-fundamentalsimagemd"></a>[Utilizzo di immagini](~/mac/app-fundamentals/image.md)
 
-In questo articolo viene descritto l'utilizzo di immagini e icone in un'applicazione Xamarin.Mac. Vengono illustrate la creazione e mantenere le immagini necessarie per creare l'icona dell'applicazione e l'utilizzo di immagini nel codice c# e nel generatore di interfaccia di Xcode.
+Questo articolo descrive l'uso delle immagini e icone in un'applicazione xamarin. Mac. Viene descritto come creare e gestire le immagini necessarie per creare l'icona dell'applicazione e l'utilizzo di immagini nel codice c# e Interface Builder di Xcode.
 
-## <a name="data-binding-and-key-value-codingmacapp-fundamentalsdatabindingmd"></a>[Data binding e la generazione di codice chiave-valore](~/mac/app-fundamentals/databinding.md)
+## <a name="data-binding-and-key-value-codingmacapp-fundamentalsdatabindingmd"></a>[Data binding e codifica di chiave-valore](~/mac/app-fundamentals/databinding.md)
 
-In questo articolo viene illustrato l'utilizzo chiave-valore di codifica e l'analisi per consentire il data binding a elementi dell'interfaccia utente in interfaccia generatore del Xcode chiave-valore. Questa tecnica è ridurre notevolmente la quantità di codice c# che deve essere scritto per l'applicazione Xamarin.Mac. 
+Questo articolo viene illustrato l'utilizzo chiave-valore di codifica e chiave-valore osservando la possibilità di associazione dati a elementi dell'interfaccia utente in Interface Builder di Xcode. Utilizzando questa tecnica, è notevolmente ridurre la quantità di codice c# che deve essere scritto per l'applicazione xamarin. Mac. 
 
-## <a name="working-with-databasesmacapp-fundamentalsdatabasesmd"></a>[Utilizzo di database](~/mac/app-fundamentals/databases.md)
+## <a name="working-with-databasesmacapp-fundamentalsdatabasesmd"></a>[Utilizzo dei database](~/mac/app-fundamentals/databases.md)
 
-In questo articolo viene illustrato l'utilizzo chiave-valore di codifica e l'analisi per consentire il data binding con accesso diretto ai database SQLite per gli elementi dell'interfaccia utente in interfaccia generatore del Xcode chiave-valore. Descrive inoltre utilizzando il ORM SQLite.NET per fornire l'accesso ai dati di SQLite.
+Questo articolo viene illustrato l'utilizzo chiave-valore di codifica e chiave-valore osservando la possibilità di data binding con accesso diretto ai database SQLite agli elementi dell'interfaccia utente di Interface Builder di Xcode. Viene anche illustrato l'uso di SQLite.NET ORM per fornire accesso ai dati di SQLite.
 
 ## <a name="working-with-copy-and-pastemacapp-fundamentalscopy-pastemd"></a>[Utilizzo di copia e Incolla](~/mac/app-fundamentals/copy-paste.md)
 
-In questo articolo viene descritto l'utilizzo con tavolo per fornire copia e Incolla in un'applicazione Xamarin.Mac. Viene illustrato come lavorare con i tipi di dati standard che possono essere condivisi tra più App e come supportare dati personalizzati all'interno di un'app offrono.
+Questo articolo descrive come usare il tavolo alla invierà copia e Incolla in un'applicazione xamarin. Mac. Viene illustrato come lavorare con i tipi di dati standard che possono essere condivisi tra più App e come supportare dati personalizzati all'interno di un'app offrono.
 
-## <a name="sandboxing-a-xamarinmac-appmacapp-fundamentalssandboxingmd"></a>[Un'app Xamarin.Mac sandboxing](~/mac/app-fundamentals/sandboxing.md)
+## <a name="sandboxing-a-xamarinmac-appmacapp-fundamentalssandboxingmd"></a>[Sandboxing un'app xamarin. Mac](~/mac/app-fundamentals/sandboxing.md)
 
-Questo articolo descrive il sandboxing un'applicazione Xamarin.Mac per la versione in App Store. Copre tutti gli elementi che costituiscono il sandboxing: directory contenitore, i diritti, determinato dall'utente, la separazione dei privilegi e autorizzazioni imposizione del kernel.
+Questo articolo illustra il sandboxing un'applicazione xamarin. Mac di rilascio di App Store. Viene descritto come tutti gli elementi che costituiscono il sandboxing: directory contenitore, i diritti, determinato dall'utente, la separazione dei privilegi e autorizzazioni l'imposizione del kernel.
 
 ## <a name="playing-sound-with-avaudioplayermacapp-fundamentalssoundsmd"></a>[Riproduzione di suoni con AVAudioPlayer](~/mac/app-fundamentals/sounds.md)
 
-In questo articolo viene illustrato come utilizzare una classe helper per controllare la riproduzione di audio usando un AVAudioPlayer.
+Questo articolo illustra come usare una classe helper per controllare la riproduzione di suoni con AVAudioPlayer un.
 
 ## <a name="reporting-bugsmacapp-fundamentalstroubleshootingmd"></a>[Segnalazione dei bug](~/mac/app-fundamentals/troubleshooting.md)
 
-In alcuni casi si tutti spesso bloccati mentre si lavora in un progetto, l'impossibilità di ottenere un'API per funzionare nel modo desiderato o tentativo di risolvere un bug. È stata fornita alcune risorse necessarie per l'obiettivo di Xamarin è per poter essere eseguita correttamente in scrittura di applicazioni per dispositivi mobili e desktop.
+In alcuni casi è creato un blocco durante l'uso di un progetto, l'impossibilità di ottenere un'API da usare nel modo desiderato o in sta tentando di risolvere un bug. Sono disponibili alcune risorse utili per il nostro obiettivo in Xamarin è appositamente per la scrittura di applicazioni per dispositivi mobili e desktop in modo corretto.
