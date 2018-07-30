@@ -26,7 +26,7 @@
 ### [.NET Standard](app-fundamentals/net-standard.md)
 ### [Progetti condivisi](app-fundamentals/shared-projects.md)
 ### [Librerie di classi portabili](app-fundamentals/pcl.md)
-### [Pacchetti NuGet (automatizzati)](app-fundamentals/nuget-multiplatform-libraries/index.md)
+### [Progetti di libreria multipiattaforma NuGet](app-fundamentals/nuget-multiplatform-libraries/index.md)
 #### [Progetti di libreria esistenti](app-fundamentals/nuget-multiplatform-libraries/existing-library.md)
 #### [Nuova libreria multipiattaforma](app-fundamentals/nuget-multiplatform-libraries/single-codebase.md)
 #### [Nuove librerie specifiche della piattaforma](app-fundamentals/nuget-multiplatform-libraries/platform-specific.md)
