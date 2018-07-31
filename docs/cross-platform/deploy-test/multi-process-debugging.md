@@ -31,7 +31,7 @@ Per offrire assistenza agli sviluppatori nel debug di più processi, Visual Stud
 
 Per impostazione predefinita, Visual Studio per Mac visualizzerà un unico progetto nell'area **Configurazione soluzione** della barra degli strumenti di debug. Quando viene avviata una sessione di debug, questo è il progetto che sarà avviato da Visual Studio per Mac e a cui sarà collegato il debugger.
 
-Per avviare ed eseguire il debug di più processi in Visual Studio per Mac, è necessario creare una _configurazione delle soluzioni_. Una configurazione delle soluzioni descrive i progetti di una soluzione che dovrebbero essere inclusi quando viene avviata una sessione di debug facendo clic sul pulsante **Start** o premendo la combinazione & #8984; & #8617; (**Cmd-Invio**). Nella schermata riportata di seguito è riportato un esempio di soluzione in Visual Studio per Mac che dispone di più configurazioni delle soluzioni:
+Per avviare ed eseguire il debug di più processi in Visual Studio per Mac, è necessario creare una _configurazione delle soluzioni_. Una configurazione delle soluzioni descrive i progetti di una soluzione che dovrebbero essere inclusi quando viene avviata una sessione di debug facendo clic sul pulsante **Start** o premendo la combinazione &#8984;&#8617; (**Cmd-Invio**). Nella schermata riportata di seguito è riportato un esempio di soluzione in Visual Studio per Mac che dispone di più configurazioni delle soluzioni:
 
 ![](multi-process-debugging-images/mpd01-xs.png "Soluzione con più configurazioni delle soluzioni")
 
@@ -60,7 +60,7 @@ Quando viene avviata la configurazione di più soluzioni, vengono visualizzati p
 
 Quando viene rilevato un punto di interruzione in un processo, tale processo sospende l'esecuzione, mentre gli altri processi continuano a essere eseguiti. In uno scenario con un unico processo, Visual Studio per Mac può visualizzare agevolmente informazioni quali thread, variabili locali, output dell'applicazione in un unico set di riquadri. Tuttavia, quando sono presenti più processi con più punti di interruzione e potenzialmente più thread, può rivelarsi impegnativo per gli sviluppatori gestire le informazioni provenienti da una sessione di debug che sta tentando di visualizzare tutte le informazioni di tutti i thread (e processi) contemporaneamente.
 
-Per risolvere questo problema, Visual Studio per Mac visualizzerà solo le informazioni provenienti da un thread alla volta, noto come _thread attivo_. Il primo thread che viene sospeso in un punto di interruzione viene considerato il _thread attivo_. Il thread attivo è il thread su cui è concentrata l'attenzione dello sviluppatore. I comandi di debug, come **Esegui istruzione/routine** &#8679;&#8984;O (Shift-Cmd-O), verranno generati per il thread attivo.
+Per risolvere questo problema, Visual Studio per Mac visualizzerà solo le informazioni provenienti da un thread alla volta, noto come _thread attivo_. Il primo thread che viene sospeso in un punto di interruzione viene considerato il _thread attivo_. Il thread attivo è il thread su cui è concentrata l'attenzione dello sviluppatore. I comandi di debug, come **Esegui istruzione/routine** &#8984;&#8617;O (Shift-Cmd-O), verranno generati per il thread attivo.
 
 Il **riquadro thread** visualizzerà informazioni per tutti i processi e thread in esame nella configurazione delle soluzioni e fornirà indicazioni visive riguardo a che cos'è il thread attivo:
 
