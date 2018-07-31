@@ -1,50 +1,51 @@
 ---
-title: Risoluzione dei problemi di cartelle di lavoro di Xamarin in Android
-description: Questo documento vengono forniti suggerimenti sulla risoluzione dei problemi per l'utilizzo di cartelle di lavoro di Xamarin in Android. Viene descritto il supporto dell'emulatore, le cartelle di lavoro non viene caricata e altri argomenti.
+title: Risoluzione dei problemi delle cartelle di lavoro Xamarin in Android
+description: Questo documento vengono forniti suggerimenti sulla risoluzione dei problemi per l'utilizzo di cartelle di lavoro di Xamarin in Android. Viene descritto il supporto dell'emulatore, le cartelle di lavoro non vengono caricati e altri argomenti.
 ms.prod: xamarin
 ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: b01fa5b67f8a7f5577c6598f63f8c38e8fa4cf3c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 03/30/2017
+ms.openlocfilehash: b0333e1a40570374ee6218b7a848d2dd1c06b872
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793984"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351717"
 ---
-# <a name="troubleshooting-xamarin-workbooks-on-android"></a>Risoluzione dei problemi di cartelle di lavoro di Xamarin in Android
+# <a name="troubleshooting-xamarin-workbooks-on-android"></a>Risoluzione dei problemi delle cartelle di lavoro Xamarin in Android
 
 ## <a name="emulator-support"></a>Supporto dell'emulatore
 
-Per eseguire una cartella di lavoro Android, un emulatore Android deve essere disponibile per l'utilizzo. Non sono supportati i dispositivi Android fisici.
+Per eseguire una cartella di lavoro Android, un emulatore Android deve essere disponibile per l'uso. Non sono supportati i dispositivi Android fisici.
 
-Se il computer supporta, è consigliabile emulatore Google insieme HAXM.
-Se è abilitata nel sistema di Hyper-V, usare invece l'emulatore Android di Visual Studio.
+Se il computer supporta, è consigliabile emulatore di Google con HAXM.
+Se è necessario avere abilitato nel sistema di Hyper-V, procedere invece con l'emulatore Android di Visual Studio.
 
-È necessario disporre di un emulatore che esegue Android 5.0 o versione successiva. Gli emulatori ARM non sono supportati. Utilizzare `x86` o `x86_64` solo per dispositivi.
+È necessario avere un emulatore che esegue Android 5.0 o versioni successive. Gli emulatori ARM non sono supportati. Uso `x86` o `x86_64` solo per i dispositivi.
 
-Leggere [documentazione su come configurare gli emulatori Android] [ android-emu] se non si ha familiarità con il processo.
+Leggi [la documentazione su come configurare emulatori Android] [ android-emu] se non si ha familiarità con il processo.
 
 > [!NOTE]
-> 1.1 e versioni precedenti delle cartelle di lavoro richiederà provare (e non sarà!) per utilizzare ARM emulatori se sono disponibili. Per evitare l'emulatore di avvio x86 desiderato prima di aprire o creare una cartella di lavoro Android. Le cartelle di lavoro preferiranno sempre di connettersi a un emulatore in esecuzione, purché sia compatibile.
+> Cartelle di lavoro 1.1 e versioni precedenti verranno provare (e non riuscire!) per gli emulatori ARM usare se sono disponibili. Per ovviare a questo, emulatore di avvio x86 di propria scelta prima di aprire o creare una cartella di lavoro Android. Le cartelle di lavoro preferiranno sempre di connettersi a un emulatore in esecuzione, purché sia compatibile.
 
-## <a name="workbooks-wont-load"></a>Non caricare le cartelle di lavoro
+## <a name="workbooks-wont-load"></a>Non caricherà cartelle di lavoro
 
-### <a name="workbook-window-spins-forever-never-loads-windows"></a>Cartella di lavoro esegue rotazioni sempre, mai Carica (Windows)
+### <a name="workbook-window-spins-forever-never-loads-windows"></a>Finestra della cartella di lavoro fa girare per sempre, mai carichi (Windows)
 
-Verificare innanzitutto che l'emulatore ha accesso alla rete completamente funzionante testando un sito Web nel browser web dell'emulatore.
+In primo luogo, verificare che l'emulatore abbia accesso alla rete completamente funzionante eseguendo il test di qualsiasi sito Web nel browser web dell'emulatore.
 
 ### <a name="visual-studio-android-emulator-cannot-connect-to-the-internet"></a>Emulatore Android di Visual Studio non è possibile connettersi a internet
 
-Se l'emulatore non dispone di accesso alla rete, si potrebbe essere necessario seguire questi passaggi per risolvere il commutatore di rete Hyper-V. Se si passa tra reti Wi-Fi spesso occorre ripetere periodicamente questo:
+Se l'emulatore non ha accesso alla rete, devi seguire questi passaggi per risolvere il commutatore di rete Hyper-V. Se si passa tra le reti Wi-Fi spesso occorre ripetere questa operazione periodicamente:
 
-0. **Verificare che eventuali operazioni di rete critiche siano completi, come si potrebbero essere temporaneamente interrotte Windows da internet.**
+0. **Assicurarsi che eventuali operazioni di rete critiche vengono completate, come si può disconnettere temporaneamente Windows da internet.**
 1. Chiudere gli emulatori.
 2. Aprire `Hyper-V Manager`.
-3. In `Actions`aprire `Virtual Switch Manager...`.
+3. Sotto `Actions`, aprire `Virtual Switch Manager...`.
 4. Eliminare tutti i commutatori virtuali.
 5. Fare clic su `OK`.
-6. Avvia l'emulatore Android di Visual Studio. È probabilmente dovrà ricreare commutatore di rete virtuale.
+6. Avviare l'emulatore Android di Visual Studio. Richiederà probabilmente ricreare commutatore di rete virtuale.
 7. Verificare che il browser dell'emulatore di Visual Studio Android può accedere a internet.
 
 [android-emu]: https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debug-on-emulator/
