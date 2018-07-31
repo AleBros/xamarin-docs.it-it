@@ -5,12 +5,12 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 11749107403fc99e1d49b63ee3b50ff105abaa57
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 0aeb2ed96e6c21def69eb2e6f305b26e2e478825
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38848751"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353854"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Georilevazione
 
@@ -65,7 +65,7 @@ O modificare il file manualmente e aggiungere quanto segue:
 
 # <a name="uwptabuwp"></a>[PIATTAFORMA UWP](#tab/uwp)
 
-È necessario impostare il `Location` l'autorizzazione per l'applicazione. Questa operazione può essere eseguita aprendo il **package. appxmanifest** selecing e il **funzionalità** scheda e il controllo **percorso**.
+È necessario impostare il `Location` l'autorizzazione per l'applicazione. Questa operazione può essere eseguita aprendo il **package. appxmanifest** e selezionando le **funzionalità** scheda e il controllo **percorso**.
 
 -----
 

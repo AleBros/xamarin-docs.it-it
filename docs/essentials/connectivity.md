@@ -5,12 +5,12 @@ ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 54c165e15e725caaecb1573b74cfe295170db141
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 96b4ee0487034c651bec1dfb168fed7567b63c96
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38848609"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353698"
 ---
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: connettività
 
@@ -40,7 +40,7 @@ Aprire il **androidmanifest. XML** file sotto il **proprietà** cartella e aggiu
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-Oppure fare clic con il pulsante destro sul progetto di piattaforma Android e aprire le proprietà del progetto. Sotto **manifesto Android** trovare il **autorizzazioni necessarie:** area e verificare il **stato di accesso rete** autorizzazione. Si aggiornerà automaticamente il **androidmanifest. XML** file.
+Oppure fare clic con il pulsante destro sul progetto Android e aprire le proprietà del progetto. Sotto **manifesto Android** trovare il **autorizzazioni necessarie:** area e verificare il **stato di accesso rete** autorizzazione. Si aggiornerà automaticamente il **androidmanifest. XML** file.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 

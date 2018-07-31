@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 97dc5494f37da1590178bc90feb673889598bdd7
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 6a49f16f935f058b002d260825cfb005df0c6eef
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831553"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353763"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -44,7 +44,8 @@ Seguire le guide per integrare queste funzionalità Xamarin.Essentials nelle app
 * [Georilevazione](geolocation.md?context=xamarin/xamarin-forms) : recuperare la posizione GPS del dispositivo.
 * [Il Giroscopio](gyroscope.md?context=xamarin/xamarin-forms) : tenere traccia di rotazione intorno a assi primari tre del dispositivo.
 * [Magnetometro](magnetometer.md?context=xamarin/xamarin-forms) : rilevare l'orientamento del dispositivo rispetto al campo magnetico della terra.
-* [MainThread](main-thread.md?content=xamarin/xamarin-forms) : eseguire codice nel thread principale dell'applicazione. 
+* [MainThread](main-thread.md?content=xamarin/xamarin-forms) : eseguire codice nel thread principale dell'applicazione.
+* [Esegue il mapping](maps.md?content=xamarin/xamarin-forms) -aprire l'applicazione esegue il mapping a una posizione specifica.
 * [Apri Browser](open-browser.md?context=xamarin/xamarin-forms) – rapidamente e facilmente aprire un browser a un sito Web specifico.
 * [Sensore di orientamento](orientation-sensor.md?context=xamarin/xamarin-forms) : recuperare l'orientamento del dispositivo in uno spazio dimensionale tre.
 * [Connessione telefonica](phone-dialer.md?context=xamarin/xamarin-forms) : aprire la connessione telefonica.

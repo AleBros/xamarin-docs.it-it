@@ -1,34 +1,34 @@
 ---
-title: Utilizzo di librerie Native
+title: Uso di librerie Native
 ms.prod: xamarin
 ms.assetid: 7AA6CEC8-C09E-BBDA-FDD6-E40559143548
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 0fa66f3a16047c18af19cb7257c778b498bc0c9b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9175996f516a980d915d1501b4b18ea23ec86cef
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30774811"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353580"
 ---
-# <a name="using-native-libraries"></a>Utilizzo di librerie Native
+# <a name="using-native-libraries"></a>Uso di librerie Native
 
-Xamarin supporta l'utilizzo di librerie native tramite il meccanismo standard di PInvoke. È anche possibile raggruppare le librerie native aggiuntive che non fanno parte del sistema operativo nel file con estensione apk.
+Xamarin. Android supporta l'uso di librerie native tramite il meccanismo standard di PInvoke. È anche possibile raggruppare le librerie native aggiuntive che non fanno parte del sistema operativo nel file con estensione apk.
 
-Per distribuire una libreria nativa con un'applicazione di xamarin, aggiungere la libreria binaria al progetto e impostare il relativo **azione di compilazione** a **AndroidNativeLibrary**.
+Per distribuire una libreria nativa con un'applicazione xamarin. Android, aggiungere la libreria binaria al progetto e impostare relativi **Build Action** al **AndroidNativeLibrary**.
 
-Per distribuire una libreria nativa con un progetto libreria di xamarin, aggiungere la libreria binaria al progetto e impostare il relativo **azione di compilazione** a **EmbeddedNativeLibrary**.
+Per distribuire le librerie native con un progetto di libreria xamarin. Android, aggiungere la libreria binaria al progetto e impostare relativi **Build Action** al **EmbeddedNativeLibrary**.
 
-Si noti che poiché Android supporta più Application Binary Interface (ABIs), xamarin deve conoscere quali ABI è stata compilata per la libreria nativa.
+Si noti che poiché Android supporta più interfacce binarie dell'applicazione (ABI), xamarin. Android è necessario sapere per quale ABI viene compilata la libreria nativa per.
 Esistono due modi per farlo:
 
 1.  Percorso "analisi"
-1.  Utilizzando un `AndroidNativeLibrary/Abi` elemento all'interno del file di progetto
+1.  Usando un `AndroidNativeLibrary/Abi` elemento all'interno del file di progetto
 
 
-Con l'analisi del percorso, il nome della directory padre della libreria nativa viene usato per specificare l'ABI di destinazione della libreria. Pertanto, se si aggiungono `lib/armeabi/libfoo.so` al progetto, quindi l'ABI verrà essere "rilevata" come `armeabi`.
+Con l'analisi del percorso, il nome della directory padre della libreria nativa viene usato per specificare l'ABI di destinazione della libreria. Di conseguenza, se si aggiungono `lib/armeabi/libfoo.so` al progetto, quindi l'interfaccia ABI viene possibile "individuato" come `armeabi`.
 
 In alternativa, è possibile modificare il file di progetto per specificare in modo esplicito l'interfaccia ABI da usare:
 
@@ -40,17 +40,24 @@ In alternativa, è possibile modificare il file di progetto per specificare in m
 </ItemGroup>
 ```
 
-Per ulteriori informazioni sull'utilizzo di librerie native, vedere [interoperabilità alle librerie native](http://www.mono-project.com/docs/advanced/pinvoke/).
+Per altre informazioni sull'uso di librerie native, vedere [interoperabilità con le librerie native](http://www.mono-project.com/docs/advanced/pinvoke/).
 
-## <a name="debugging-native-code-with-visual-studio-2015"></a>Debug del codice nativo con Visual Studio 2015
+## <a name="debugging-native-code-with-visual-studio-2017"></a>Debug del codice nativo con Visual Studio 2017
 
-Se si utilizza *Visual Studio 2015*, non è necessario modificare i file di progetto (come descritto in precedenza).
-È possibile compilare ed eseguire il debug C++ all'interno della soluzione xamarin, semplicemente aggiungendo un riferimento al progetto di C++ **libreria condivisa dinamica (Android)** progetto.
+Se si usa *Visual Studio 2017* o versione successiva, non è necessario modificare i file di progetto come descritto in precedenza.
+È possibile compilare ed eseguire il debug di C++ all'interno della soluzione xamarin. Android tramite l'aggiunta di un riferimento al progetto per C++ **la libreria condivisa dinamica (Android)** progetto. 
 
-Gli sviluppatori di Visual Studio C++ è possono visualizzare il [SanAngeles_NativeDebug](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/) di esempio per eseguire il debug di C++ da Visual Studio 2015 con Xamarin; e fare riferimento al nostro [post di blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) per ulteriori informazioni.
+Per eseguire il debug di codice nativo C++ nel progetto, seguire questa procedura:
+
+1. Fare doppio clic sul progetto **delle proprietà** e selezionare il **opzioni Android** pagina.
+2. Scorrere verso il basso **opzioni di debug**.
+3. Nel **Debugger** dal menu a discesa, seleziona **C++** (anziché il valore predefinito **.Net (Xamarin)**).
+
+Gli sviluppatori di Visual Studio C++ possono vedere le [SanAngeles_NativeDebug](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/) di esempio per provare il debug di C++ da Visual Studio 2017 con Xamarin; e fare riferimento al nostro [post di blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) per altre informazioni.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [SanAngeles_NativeDebug (esempio)](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)
+- [Lo sviluppo di applicazioni Native di Xamarin. Android](https://blogs.msdn.microsoft.com/vcblog/2015/02/23/developing-xamarin-android-native-applications/)

@@ -1,27 +1,28 @@
 ---
-title: Backgrounding in xamarin. IOS
-description: L'elaborazione o backgrounding di sfondo è il processo di consentendo alle applicazioni di eseguire le attività in background mentre un'altra applicazione è in esecuzione in primo piano. Questa guida viene utilizzato come un'introduzione all'elaborazione in iOS in background.
+title: Elaborazione in background in xamarin. IOS
+description: In background di elaborazione o l'elaborazione in background in è il processo di consentire alle applicazioni di eseguire attività in background mentre un'altra applicazione è in esecuzione in primo piano. Questa guida serve come un'introduzione a iOS di elaborazione in background.
 ms.prod: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: b22f3ef3276129f7f46c23cc1d06666f151f5ac4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/05/2018
+ms.openlocfilehash: 73344b790bf6d4719d9a92cfa9146578dffe04e9
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783542"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350768"
 ---
-# <a name="backgrounding-in-xamarinios"></a>Backgrounding in xamarin. IOS
+# <a name="backgrounding-in-xamarinios"></a>Elaborazione in background in xamarin. IOS
 
-_L'elaborazione o backgrounding di sfondo è il processo di consentendo alle applicazioni di eseguire le attività in background mentre un'altra applicazione è in esecuzione in primo piano. Questa guida viene utilizzato come un'introduzione all'elaborazione in iOS in background._
+_In background di elaborazione o l'elaborazione in background in è il processo di consentire alle applicazioni di eseguire attività in background mentre un'altra applicazione è in esecuzione in primo piano. Questa guida serve come un'introduzione a iOS di elaborazione in background._
 
-Backgrounding in applicazioni per dispositivi mobili è fondamentalmente diverso rispetto al tradizionale concetto multitasking sul desktop. Computer desktop hanno un'ampia varietà di risorse disponibili per un'applicazione, tra cui area dello schermo, potenza e memoria. Le applicazioni sono in grado di eseguire side-by-side e rimangono ad alte prestazioni e utilizzabile. In un dispositivo mobile, le risorse sono molto più limitate. È difficile visualizzare più di un'applicazione di piccole dimensioni e che esegue più applicazioni alla massima velocità sarebbe svuotare la batteria. Backgrounding è un costante compromesso tra fornendo applicazioni le risorse per l'esecuzione di attività in background che necessari per le prestazioni migliori e mantenere reattiva l'applicazione foregrounded e il dispositivo. IOS e Android dispongono del provisioning per backgrounding, ma gestiti in modi molto diversi.
+Elaborazione in background in applicazioni per dispositivi mobili è fondamentalmente diverso il concetto tradizionale di multitasking sul desktop. Computer desktop hanno un'ampia gamma di risorse disponibili per un'applicazione, inclusi memoria, potenza e l'area dello schermo. Le applicazioni sono in grado di eseguire side-by-side e rimanere ad alte prestazioni e utilizzabile. In un dispositivo mobile, le risorse sono molto più limitate. È difficile da visualizzare più di un'applicazione su schermi di piccole dimensioni e diverse applicazioni in esecuzione alla massima velocità sarebbero esauriscono la batteria. Elaborazione in background in è un costante compromesso tra assegnare le risorse per eseguire le attività in background che necessarie per eseguire correttamente le applicazioni e mantenere reattiva l'applicazione foregrounded e il dispositivo. Dispongono del provisioning per l'elaborazione in background in iOS e Android, ma gestirla in modi molto diversi.
 
-In iOS, backgrounding è riconosciuto come uno stato dell'applicazione e le app vengono spostate da e verso lo stato di sfondo in base al comportamento dell'app e l'utente. iOS offre inoltre diverse opzioni per l'associazione di un'app per l'esecuzione in background, tra cui chiedere il sistema operativo per periodo di tempo per completare un'attività importante, che opera come un tipo di applicazione in background necessarie noti, e l'aggiornamento del contenuto di un'applicazione in designato intervalli.
+In iOS, elaborazione in background in viene riconosciuto come uno stato dell'applicazione e le app vengono spostate da e verso lo stato in background in base al comportamento dell'app e l'utente. iOS offre anche diverse opzioni per l'associazione di un'app per l'esecuzione in background, tra cui chiedere il sistema operativo per periodo di tempo per completare un'attività importante, funzionano come un tipo di applicazione in background necessarie noti, e aggiornamento del contenuto di un'applicazione a designato intervalli.
 
-In questa Guida e procedure dettagliate di accompagnamento, verrà illustrato come eseguire attività dell'applicazione in background. Si verrà illustrano i concetti chiave e le procedure consigliate e quindi passare attraverso la creazione di un'applicazione reale che riceve gli aggiornamenti di percorso in background.
+In questa Guida e procedure dettagliate di accompagnamento, verrà illustrato come eseguire attività dell'applicazione in background. Verranno riguardano i concetti chiave e le procedure consigliate e quindi passare attraverso la creazione di un'app reale che riceve aggiornamenti della posizione in background.
 
 ## <a name="contents"></a>Sommario
 
@@ -33,14 +34,14 @@ In questa Guida e procedure dettagliate di accompagnamento, verrà illustrato co
 
 ## <a name="summary"></a>Riepilogo
 
-In questa Guida, abbiamo introdotto i diversi modi di eseguire l'elaborazione in background in iOS. È coperto iOS stati dell'applicazione ed esaminare il ruolo rivestito nel ciclo di vita dell'applicazione iOS backgrounding. Inoltre, è stato descritto come è stato possibile registrare le singole attività o intere applicazioni funzionino in background in iOS. Infine, abbiamo rafforzato approfondimento di backgrounding in iOS per la creazione di applicazioni che eseguono aggiornamenti in background.
+In questa Guida, abbiamo introdotto i diversi modi di eseguire l'elaborazione in background in iOS. È coperto iOS stati dell'applicazione ed esaminare il ruolo di elaborazione in background in viene riprodotta in iOS Application Lifecycle Management. Inoltre, è stato illustrato come è stato possibile registrare le singole attività o intere applicazioni per il funzionamento in background in iOS. Infine, abbiamo corroborata maggiore familiarità con elaborazione in background in IOS tramite la compilazione di applicazioni che eseguono gli aggiornamenti in background.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Backgrounding in Android](~/android/app-fundamentals/services/index.md)
+- [Elaborazione in background in Android](~/android/app-fundamentals/services/index.md)
 - [LifecycleDemo (esempio)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)
-- [Posizione (esempio)](https://developer.xamarin.com/samples/monotouch/Location/)
+- [Location (esempio)](https://developer.xamarin.com/samples/monotouch/Location/)
 - [Trasferimento in Background semplice (esempio)](https://developer.xamarin.com/samples/monotouch/SimpleBackgroundTransfer/)
-- [Esecuzione in Background di iOS](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)
+- [l'esecuzione in Background di iOS](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)

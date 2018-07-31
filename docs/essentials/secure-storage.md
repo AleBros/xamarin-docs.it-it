@@ -5,12 +5,12 @@ ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: redth
 ms.author: jodick
 ms.date: 05/04/2018
-ms.openlocfilehash: fae5f5f0f15d80e2f3bdce26b8beb5f6fae2f81f
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 2dfdb7051b269e73c68290a557849b9ae606c165
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38830453"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353295"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Archiviazione protetta
 
@@ -51,13 +51,27 @@ using Xamarin.Essentials;
 Per salvare un valore per un determinato _chiave_ in un archivio protetto:
 
 ```csharp
-await SecureStorage.SetAsync("oauth_token", "secret-oauth-token-value");
+try
+{
+  await SecureStorage.SetAsync("oauth_token", "secret-oauth-token-value");
+}
+catch (Exception ex)
+{
+  // Possible that device doesn't support secure storage on device.
+}
 ```
 
 Per recuperare un valore da un archivio protetto:
 
 ```csharp
-var oauthToken = await SecureStorage.GetAsync("oauth_token");
+try
+{
+  var oauthToken = await SecureStorage.GetAsync("oauth_token");
+}
+catch (Exception ex)
+{
+  // Possible that device doesn't support secure storage on device.
+}
 ```
 
 > [!NOTE]
@@ -80,7 +94,7 @@ SecureStorage.RemoveAll();
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Il [archivio chiavi Android](https://developer.android.com/training/articles/keystore.html) viene usato per archiviare la chiave di crittografia usata per crittografare il valore prima che venga salvato in un [preferenze condivise](https://developer.android.com/training/data-storage/shared-preferences.html) con il nome di **.xamarinessentials [YOUR-APP-PACKAGE-ID]** .  La chiave usata nel file di preferenze condivise è un _Hash MD5_ della chiave passata il `SecureStorage` dell'API.
+Il [archivio chiavi Android](https://developer.android.com/training/articles/keystore.html) viene usato per archiviare la chiave di crittografia usata per crittografare il valore prima che venga salvato in un [preferenze condivise](https://developer.android.com/training/data-storage/shared-preferences.html) con il nome di **.xamarinessentials [YOUR-APP-PACKAGE-ID]** .  La chiave usata nel file di preferenze condivise è un _Hash MD5_ della chiave passata il `SecureStorage` API.
 
 ## <a name="api-level-23-and-higher"></a>Livello API 23 e versioni successive
 
@@ -90,7 +104,7 @@ Sui livelli API più recenti, un' **AES** chiave viene ottenuta dall'archivio ch
 
 Sui livelli API precedenti, l'archivio chiavi Android supporta solo l'archiviazione **RSA** le chiavi, che viene usato con un **RSA/ECB/PKCS1Padding** pacchetti di crittografia per crittografare un' **AES** chiave (in modo casuale generato in fase di esecuzione) e archiviati nel file di preferenze condivise nella chiave _SecureStorageKey_, se uno non è già stato generato.
 
-Tutti i valori crittografati vengono rimosse quando l'app viene disinstallata dal dispositivo.
+**SecureStorage** utilizza le [preferenze](preferences.md) API e la persistenza dei dati stessi descritti nella seguente il [preferenze](preferences.md#persistence) documentazione. Se un dispositivo viene aggiornato dal livello API 22 o inferiore a livello API 23 e versioni successiva, questo tipo di crittografia continuerà a essere utilizzato a meno che l'app viene disinstallata oppure **RemoveAll** viene chiamato.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -100,11 +114,11 @@ In alcuni casi i dati di KeyChain sono sincronizzati con iCloud e disinstallare 
 
 # <a name="uwptabuwp"></a>[PIATTAFORMA UWP](#tab/uwp)
 
-[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) viene usato per i valori crittografato in modo sicuro sui dispositivi UWP.
+[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) viene utilizzato per i valori crittografati in modo sicuro sui dispositivi UWP.
 
-Crittografato vengono archiviati nella `ApplicationData.Current.LocalSettings`, all'interno di un contenitore con il nome **.xamarinessentials [YOUR-APP-ID]**.
+I valori crittografati sono archiviati in `ApplicationData.Current.LocalSettings`, all'interno di un contenitore con il nome **.xamarinessentials [YOUR-APP-ID]**.
 
-Disinstallare l'applicazione genererà il _LocalSettings_e i valori crittografati tutti deve essere rimosso anche.
+**SecureStorage** utilizza le [preferenze](preferences.md) API e la persistenza dei dati stessi descritti nella seguente il [preferenze](preferences.md#persistence) documentazione.
 
 -----
 

@@ -5,12 +5,12 @@ ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: a5c559653bff38c692f0b1d881d5d8f4cac3d383
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 8c471f64c14a2e41693c450e02f89e7ac845d060
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831411"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353360"
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: torcia
 
@@ -42,7 +42,7 @@ Aprire il **androidmanifest. XML** file sotto il **proprietà** cartella e aggiu
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-Oppure fare clic con il pulsante destro sul progetto di piattaforma Android e aprire le proprietà del progetto. Sotto **manifesto Android** trovare il **autorizzazioni necessarie:** area e selezionare il **TORCIA** e **fotocamera** autorizzazioni. Si aggiornerà automaticamente il **androidmanifest. XML** file.
+Oppure fare clic con il pulsante destro sul progetto Android e aprire le proprietà del progetto. Sotto **manifesto Android** trovare il **autorizzazioni necessarie:** area e selezionare il **TORCIA** e **fotocamera** autorizzazioni. Si aggiornerà automaticamente il **androidmanifest. XML** file.
 
 Aggiungendo queste autorizzazioni [Google Play verranno automaticamente esclusi i dispositivi](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) senza hardware specifico. È possibile evitare questo problema aggiungendo il codice seguente al file AssemblyInfo.cs nel progetto Android:
 
@@ -96,9 +96,9 @@ catch (Exception ex)
 
 ## <a name="platform-implementation-specifics"></a>Funzionalità specifiche di implementazione della piattaforma
 
-### <a name="androidtabandroid-specifics"></a>[Android](#tab/android-specifics)
+### <a name="androidtabandroid"></a>[Android](#tab/android)
 
-La classe torcia è stata optmized basato sul sistema operativo del dispositivo.
+La classe torcia è stata ottimizzata basato sul sistema operativo del dispositivo.
 
 #### <a name="api-level-23-and-higher"></a>Livello API 23 e versioni successive
 
@@ -108,11 +108,11 @@ Livelli di API più recenti, [Torch modalità](https://developer.android.com/ref
 
 Viene creata una trama della superficie della fotocamera per attivare o disattivare il `FlashMode` dell'unità della fotocamera. 
 
-### <a name="iostabios-specifics"></a>[iOS](#tab/ios-specifics)
+### <a name="iostabios"></a>[iOS](#tab/ios)
 
 [AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) consente di attivare e disattivare il Torch e la modalità Flash del dispositivo.
 
-### <a name="uwptabuwp-specifics"></a>[PIATTAFORMA UWP](#tab/uwp-specifics)
+### <a name="uwptabuwp"></a>[PIATTAFORMA UWP](#tab/uwp)
 
 [Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp) viene usato per rilevare il primo lamp nella parte posteriore del dispositivo da attivare o disattivare.
 

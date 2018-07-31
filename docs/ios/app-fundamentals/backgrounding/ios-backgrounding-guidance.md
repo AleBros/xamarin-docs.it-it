@@ -1,25 +1,26 @@
 ---
-title: materiale sussidiario Backgrounding iOS
-description: Questo diagrammi presentato in questo documento forniscono indicazioni su quale delle numerose opzioni backgrounding di iOS devono essere scelto per una specifica esigenza.
+title: Istruzioni di elaborazione in background in iOS
+description: Questo diagrammi presentato in questo documento forniscono materiale sussidiario sulle opzioni backgrounding molti di iOS deve essere scelte per un'esigenza specifica.
 ms.prod: xamarin
 ms.assetid: BC629536-F179-4EC2-AD72-8F45081F8EE0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 26766aac66789497d8db266123b768527093ecf4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/05/2018
+ms.openlocfilehash: 4d5f236bab59578491948e2154474dfa4b28568f
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783893"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350794"
 ---
-# <a name="ios-backgrounding-guidance"></a>materiale sussidiario Backgrounding iOS
+# <a name="ios-backgrounding-guidance"></a>Istruzioni di elaborazione in background in iOS
 
-Consultare il diagramma seguente per scegliere una tecnica backgrounding in iOS 6:
+Vedere il diagramma seguente per scegliere una tecnica backgrounding in iOS 6:
 
  [![](ios-backgrounding-guidance-images/image10.png "Scegliere una tecnica backgrounding in iOS 6")](ios-backgrounding-guidance-images/image10.png#lightbox)
 
-Consultare il diagramma seguente per scegliere una tecnica backgrounding in iOS 7:
+Vedere il diagramma seguente per scegliere una tecnica backgrounding in iOS 7:
 
  [![](ios-backgrounding-guidance-images/image10b.png "Scegliere una tecnica backgrounding in iOS 7")](ios-backgrounding-guidance-images/image10b.png#lightbox)
 

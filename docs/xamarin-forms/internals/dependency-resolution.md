@@ -1,33 +1,33 @@
 ---
 title: Risoluzione delle dipendenze in xamarin. Forms
-description: Questo articolo illustra come inserire un metodo di risoluzione delle dipendenze in xamarin. Forms in modo da contenitore di inserimento delle dipendenze di un'applicazione ha il controllo tramite la costruzione e la durata del renderer personalizzati e gli effetti DependencyService implementazioni.
+description: Questo articolo illustra come inserire un metodo di risoluzione delle dipendenze in xamarin. Forms in modo da contenitore di inserimento delle dipendenze di un'applicazione ha il controllo tramite la creazione e la durata del renderer personalizzati e gli effetti DependencyService implementazioni.
 ms.prod: xamarin
 ms.assetid: 491B87DC-14CB-4ADC-AC6C-40A7627B2524
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/23/2018
-ms.openlocfilehash: 2379c8ddc4bea6dd97bc4febd055dd8dfef39beb
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 07/27/2018
+ms.openlocfilehash: 8952f98045d9830e9b8f25a7d4b93a5e4310cb32
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270488"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351583"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Risoluzione delle dipendenze in xamarin. Forms
 
-_Questo articolo illustra come inserire un metodo di risoluzione delle dipendenze in xamarin. Forms in modo da contenitore di inserimento delle dipendenze di un'applicazione ha il controllo tramite la costruzione e la durata del renderer personalizzati e gli effetti DependencyService implementazioni. Gli esempi di codice vengono prelevati i [risoluzione delle dipendenze](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/) esempio._
+_Questo articolo illustra come inserire un metodo di risoluzione delle dipendenze in xamarin. Forms in modo da contenitore di inserimento delle dipendenze di un'applicazione ha il controllo tramite la creazione e la durata del renderer personalizzati e gli effetti DependencyService implementazioni. Gli esempi di codice in questo articolo vengono forniti dal [risoluzione delle dipendenze con i contenitori](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/) esempio._
 
 Nel contesto di un'applicazione xamarin. Forms che utilizza il modello Model-View-ViewModel (MVVM), un contenitore di inserimento delle dipendenze può essere utilizzato per la registrazione e la risoluzione di visualizzazione di modelli e per la registrazione di servizi e li inserisce nei modelli di visualizzazione. Durante la creazione di modelli di visualizzazione, il contenitore inserisce tutte le dipendenze necessarie. Se queste dipendenze non sono state create, il contenitore viene creato e risolve le dipendenze prima di tutto. Per altre informazioni sull'inserimento di dipendenze, inclusi gli esempi di inserimento di dipendenze in visualizzazione di modelli, vedere [inserimento delle dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
 
-Controllare la creazione e della durata dei tipi nei progetti di piattaforma è in genere eseguita da xamarin. Forms, che usa il `Activator.CreateInstance` metodo per creare istanze di renderer personalizzati, gli effetti, e [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) implementazioni. Sfortunatamente, questo limita il controllo dello sviluppatore tramite la creazione e la durata di questi tipi e la possibilità di inserire le dipendenze al loro interno. Tuttavia, questo comportamento può essere modificato dall'inserimento di un metodo di risoluzione delle dipendenze in xamarin. Forms che controlla come tipi verranno creati: contenitore di inserimento delle dipendenze dell'applicazione oppure da xamarin. Forms.
+Controllare la creazione e della durata dei tipi nei progetti di piattaforma è in genere eseguita da xamarin. Forms, che usa il `Activator.CreateInstance` metodo per creare istanze di renderer personalizzati, gli effetti, e [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) implementazioni. Sfortunatamente, questo limita il controllo dello sviluppatore tramite la creazione e la durata di questi tipi e la possibilità di inserire le dipendenze al loro interno. Questo comportamento può essere modificato dall'inserimento di un metodo di risoluzione delle dipendenze in xamarin. Forms che controlla come tipi verranno creati: contenitore di inserimento delle dipendenze dell'applicazione oppure da xamarin. Forms. Si noti tuttavia che non è necessario inserire un metodo di risoluzione delle dipendenze in xamarin. Forms. Xamarin. Forms continuerà a creare e gestire la durata dei tipi nei progetti di piattaforma, se non viene inserito un metodo di risoluzione delle dipendenze.
 
 > [!NOTE]
-> Non è necessario inserire un metodo di risoluzione delle dipendenze in xamarin. Forms. Xamarin. Forms continuerà a creare e gestire la durata dei tipi nei progetti di piattaforma, se non viene inserito un metodo di risoluzione delle dipendenze.
+> Questo articolo è incentrato sulla inserimento di un metodo di risoluzione delle dipendenze in xamarin. Forms che risolve i tipi registrati tramite un contenitore di inserimento delle dipendenze, è anche possibile inserire un metodo di risoluzione delle dipendenze che usa i metodi factory per risolvere tipi registrati. Per altre informazioni, vedere la [risoluzione delle dipendenze con metodi Factory](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/FactoriesDemo/) esempio.
 
 ## <a name="injecting-a-dependency-resolution-method"></a>Inserimento di un metodo di risoluzione delle dipendenze
 
-Il [ `DependencyResolver` ](xref:Xamarin.Forms.Internals.DependencyResolver) classe offre la possibilità di inserire un metodo di risoluzione delle dipendenze in xamarin. Forms, usando uno del [ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) metodi. Quindi, quando xamarin. Forms è un'istanza di un determinato tipo, il metodo di risoluzione delle dipendenze viene data la possibilità per fornire l'istanza. Se restituisce il metodo di risoluzione delle dipendenze `null` per un tipo di richiesto, xamarin. Forms opta per provare a creare il tipo di istanza stesso tramite il `Activator.CreateInstance` (metodo).
+Il [ `DependencyResolver` ](xref:Xamarin.Forms.Internals.DependencyResolver) classe offre la possibilità di inserire un metodo di risoluzione delle dipendenze in xamarin. Forms, utilizzando le [ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) (metodo). Quindi, quando xamarin. Forms è un'istanza di un determinato tipo, il metodo di risoluzione delle dipendenze viene data la possibilità per fornire l'istanza. Se restituisce il metodo di risoluzione delle dipendenze `null` per un tipo di richiesto, xamarin. Forms opta per provare a creare il tipo di istanza stesso tramite il `Activator.CreateInstance` (metodo).
 
 Nell'esempio seguente viene illustrato come impostare il metodo di risoluzione delle dipendenze con il [ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) metodo:
 
@@ -97,6 +97,18 @@ public partial class App : Application
                 (pi, ctx) => pi.ParameterType == param2Type && pi.Name == param2Name,
                 (pi, ctx) => ctx.Resolve(param2Type))
         });
+    }
+
+    public static void RegisterTypeWithParameters<TInterface, T>(Type param1Type, object param1Value, Type param2Type, string param2Name) where TInterface : class where T : class, TInterface
+    {
+        builder.RegisterType<T>()
+               .WithParameters(new List<Parameter>()
+        {
+            new TypedParameter(param1Type, param1Value),
+            new ResolvedParameter(
+                (pi, ctx) => pi.ParameterType == param2Type && pi.Name == param2Name,
+                (pi, ctx) => ctx.Resolve(param2Type))
+        }).As<TInterface>();
     }
 
     public static void BuildContainer()
@@ -219,7 +231,7 @@ public interface IPhotoPicker
 
 In ogni progetto della piattaforma, il `PhotoPicker` classe implementa il `IPhotoPicker` interfaccia usando le API della piattaforma. Per altre informazioni su questi servizi di dipendenza, vedere [selezionando una foto dalla raccolta immagini di](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md).
 
-In tutti e tre le piattaforme, il `PhotoPicker` classe ha il seguente costruttore, che richiede un `ILogger` argomento:
+In iOS e UWP, il `PhotoPicker` classi hanno il costruttore seguente, che richiede un `ILogger` argomento:
 
 ```csharp
 public PhotoPicker(ILogger logger)
@@ -239,7 +251,32 @@ void RegisterTypes()
 }
 ```
 
-In questo esempio, il `Logger` tipo concreto è registrato tramite un mapping per il tipo di interfaccia e il `PhotoPicker` tipo viene registrato anche tramite un mapping dell'interfaccia. Quando l'utente passa alla pagina di selezione di foto e sceglie di selezionare una foto, il `OnSelectPhotoButtonClicked` viene eseguito il gestore:
+In questo esempio, il `Logger` tipo concreto è registrato tramite un mapping per il tipo di interfaccia e il `PhotoPicker` tipo viene registrato anche tramite un mapping dell'interfaccia.
+
+Il `PhotoPicker` costruttore nella piattaforma Android è leggermente più complicato perché richiede un `Context` argomenti oltre al `ILogger` argomento:
+
+```csharp
+public PhotoPicker(Context context, ILogger logger)
+{
+    _context = context ?? throw new ArgumentNullException(nameof(context));
+    _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+}
+```
+
+L'esempio seguente illustra il `RegisterTypes` metodo nella piattaforma Android:
+
+```csharp
+void RegisterTypes()
+{
+    App.RegisterType<ILogger, Logger>();
+    App.RegisterTypeWithParameters<IPhotoPicker, Services.Droid.PhotoPicker>(typeof(Android.Content.Context), this, typeof(ILogger), "logger");
+    App.BuildContainer();
+}
+```
+
+In questo esempio, il `App.RegisterTypeWithParameters` metodo registra la `PhotoPicker` con il contenitore di inserimento delle dipendenze. Il metodo di registrazione assicura che il `MainActivity` istanza verrà inserita come il `Context` argomento e che il `Logger` tipo verrà inserito come il `ILogger` argomento.
+
+Quando l'utente passa alla pagina di selezione di foto e sceglie di selezionare una foto, il `OnSelectPhotoButtonClicked` viene eseguito il gestore:
 
 ```csharp
 async void OnSelectPhotoButtonClicked(object sender, EventArgs e)
@@ -262,7 +299,7 @@ Quando la [ `DependencyService.Resolve<T>` ](xref:Xamarin.Forms.DependencyServic
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Risoluzione delle dipendenze (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/)
+- [Risoluzione delle dipendenze con i contenitori (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/)
 - [Inserimento di dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
 - [Implementazione di un lettore video](~/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md)
 - [Richiamo di eventi dagli effetti](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

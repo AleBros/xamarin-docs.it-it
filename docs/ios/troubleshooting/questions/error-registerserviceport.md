@@ -1,32 +1,33 @@
 ---
-title: Errore di progettazione con RegisterServicePort iOS
+title: Errore di iOS Designer con RegisterServicePort
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 929A0080-B126-4744-BF88-A4A1EFBB6CC2
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 62d4a06c62bffb23566f4f59f42a0c980f417c45
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/03/2018
+ms.openlocfilehash: 9edcc822b170c3463908b9f5fb1db8b798346e3e
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30776716"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350706"
 ---
-# <a name="ios-designer-error-with-registerserviceport"></a>Errore di progettazione con RegisterServicePort iOS
+# <a name="ios-designer-error-with-registerserviceport"></a>Errore di iOS Designer con RegisterServicePort
 
 ## <a name="sample-error"></a>Errore di esempio
-> System. AggregateException: Uno o più errori---> System. SystemException: RegisterServicePort (com.xamarin.MTHosting.2a0b1, com.apple.PowerManagement.control): Kernel restituito: -308 (-308): (ipc/MIG relativo) server è stata interrotta
+> System. AggregateException: Uno o più errori si sono verificati---> System. SystemException: RegisterServicePort (com.xamarin.MTHosting.2a0b1, com.apple.PowerManagement.control): Kernel restituito: -308 (-308): server (ipc/saldatrice) è stata interrotta
 
 ## <a name="explanation"></a>Descrizione
-Gli errori con `RegisterServicePort` e messaggi di errore simili come sopra sono in genere un problema con spyware/malware nel computer. Provare il [commento in questo report di bug](https://bugzilla.xamarin.com/show_bug.cgi?id=21907#c4) per ulteriori informazioni, insieme al collegamento al [forum di discussione Apple](https://discussions.apple.com/thread/5596008) su come rimuovere un'infezione dovuta a possibili. 
+Gli errori con `RegisterServicePort` e messaggi di errore simile come in precedenza sono in genere un problema con spyware/malware nel computer. Prendere in considerazione la [commento su questo report sui bug](https://bugzilla.xamarin.com/show_bug.cgi?id=21907#c4) per altre informazioni, insieme al collegamento per il [Apple forum di discussione](https://discussions.apple.com/thread/5596008) su come rimuovere un'infezione dovuta a possibili. 
 
-Per facilitare la diagnosi del problema, aprire l'applicazione macOS **della Console** ed eliminare tutti i file all'interno di **i rapporti di diagnostica di utente** sezione [ http://screencast.com/t/y9i3NKcuMy ](http://screencast.com/t/y9i3NKcuMy). Quindi avviare Visual Studio per Mac e provare a utilizzare la finestra di progettazione. Se i nuovi file di log vengono visualizzate in questa sezione dopo che la finestra di progettazione non è riuscito a inizializzare, salvare questi a Microsoft per l'analisi.  
+Per facilitare la diagnosi del problema, aprire l'applicazione di macOS **Console** ed eliminare tutti i file all'interno di **i report di diagnostica utente** sezione [ http://screencast.com/t/y9i3NKcuMy ](http://screencast.com/t/y9i3NKcuMy). Quindi avviare Visual Studio per Mac e provare a usare la finestra di progettazione. Se eventuali nuovi file di log visualizzato in questa sezione dopo che la finestra di progettazione non è riuscito a inizializzare, per salvare queste informazioni a Microsoft per analizzare.  
 
-Si noti l'aspetto più importante da cercare è il file: 
+Tenere presente questo file è più importante per verificare la presenza di: 
 > /usr/lib/libimckit.dylib
 
-Indipendentemente da questi risultati, se il file esiste, il problema di spyware/malware menzionati in precedenza è presente nel computer in uso.  
+Indipendentemente dai risultati sopra riportati, se il file esiste, il problema di malware/spyware menzionati in precedenza è presente nel computer.  
 
-Il collegamento seguente include i passaggi per rimuovere questo spyware/malware: [http://www.thesafemac.com/arg-genieo/](http://www.thesafemac.com/arg-genieo/)  
+Il collegamento seguente include i passaggi per rimuovere malware/spyware. [http://www.thesafemac.com/arg-genieo/](http://www.thesafemac.com/arg-genieo/)  
 

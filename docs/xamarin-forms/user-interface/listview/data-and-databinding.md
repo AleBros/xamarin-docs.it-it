@@ -6,27 +6,49 @@ ms.assetid: B5571660-1E82-4379-95C3-0725288CF5D9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: 17c353844a7ddc808e5d9f0632434472913170a4
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/30/2018
+ms.openlocfilehash: 71e1655b6bc05c621ee97fcf826ce8b468f0dd48
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995206"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351496"
 ---
 # <a name="listview-data-sources"></a>Origini dati ListView
 
-ListView viene utilizzato per visualizzare gli elenchi di dati. Si apprenderanno informazioni sul popolamento di un ListView con dati e come è possibile associare all'elemento selezionato.
+Oggetto [ `ListView` ](xref:Xamarin.Forms.ListView) viene utilizzato per visualizzare gli elenchi di dati. Si apprenderanno informazioni sul popolamento di un ListView con dati e come è possibile associare all'elemento selezionato.
 
 - **[Impostazione proprietà ItemsSource](#ItemsSource)**  &ndash; Usa un elenco semplice o una matrice.
 - **[Data Binding](#Data_Binding)**  &ndash; stabilisce una relazione tra un modello e il ListView. L'associazione è ideale per il modello MVVM.
 
 ## <a name="itemssource"></a>ItemsSource
-ListView viene popolato con i dati utilizzando il `ItemsSource` proprietà, che può accettare qualsiasi insieme che implementa `IEnumerable`. Il modo più semplice per popolare un `ListView` prevede l'uso di una matrice di stringhe:
+
+Oggetto [ `ListView` ](xref:Xamarin.Forms.ListView) viene popolata con i dati utilizzando le [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) proprietà, che può accettare qualsiasi insieme che implementa `IEnumerable`. Il modo più semplice per popolare un `ListView` prevede l'uso di una matrice di stringhe:
+
+```xaml
+<ListView>
+      <ListView.ItemsSource>
+          <x:Array Type="{x:Type x:String}">
+            <x:String>mono</x:String>
+            <x:String>monodroid</x:String>
+            <x:String>monotouch</x:String>
+            <x:String>monorail</x:String>
+            <x:String>monodevelop</x:String>
+            <x:String>monotone</x:String>
+            <x:String>monopoly</x:String>
+            <x:String>monomodal</x:String>
+            <x:String>mononucleosis</x:String>
+          </x:Array>
+      </ListView.ItemsSource>
+</ListView>
+```
+
+Il codice c# equivalente è:
 
 ```csharp
 var listView = new ListView();
-listView.ItemsSource = new string[]{
+listView.ItemsSource = new string[]
+{
   "mono",
   "monodroid",
   "monotouch",
@@ -145,10 +167,6 @@ Spesso è opportuno per l'associazione all'elemento selezionato di un `ListView`
 
 Presupponendo che `listView`del `ItemsSource` è riportato un elenco di stringhe `SomeLabel` avrà la relativa proprietà text associata al `SelectedItem`.
 
-
-
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Associazione bidirezionale (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
-- [note sulla versione 1.4](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
-- [note sulla versione 1.3](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

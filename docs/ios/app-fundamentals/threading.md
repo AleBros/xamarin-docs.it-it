@@ -1,40 +1,41 @@
 ---
-title: Modello di threading nel xamarin. IOS
-description: Questo documento viene descritto come usare le APIs System.Threading in un'applicazione di xamarin. IOS. Illustra la Task Parallel Library, creazione di applicazioni reattive e operazioni di garbage collection.
+title: Il threading in xamarin. IOS
+description: Questo documento descrive come usare le APIs System.Threading in un'applicazione xamarin. IOS. Vengono illustrati la Task Parallel Library, creazione di applicazioni reattive e operazioni di garbage collection.
 ms.prod: xamarin
 ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 05d015d8d255ccc8c6230b1a89e098e187b22b37
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/05/2017
+ms.openlocfilehash: 8e4ee10fdabdcbb4c6cefe02b15dc93459708364
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784917"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350420"
 ---
-# <a name="threading-in-xamarinios"></a>Modello di threading nel xamarin. IOS
+# <a name="threading-in-xamarinios"></a>Il threading in xamarin. IOS
 
-Il runtime di xamarin offre agli sviluppatori l'accesso a .NET API, entrambi in modo esplicito quando si utilizza thread di threading (`System.Threading.Thread, System.Threading.ThreadPool`) e in modo implicito quando si utilizzano i modelli di delegato asincrono o i metodi BeginXXX, nonché l'intervallo completo di API che supportano il Task Parallel Library.
+Il runtime di xamarin. IOS consente agli sviluppatori di accedere a .NET API, entrambi in modo esplicito quando si usano i thread di threading (`System.Threading.Thread, System.Threading.ThreadPool`) e in modo implicito quando si usano i modelli di delegato asincrono o i metodi BeginXXX, nonché la gamma completa di API che supportano il Task Parallel Library.
 
 
 
 Xamarin consiglia vivamente di utilizzare il [Task Parallel Library](http://msdn.microsoft.com/library/dd460717.aspx) (TPL) per la compilazione di applicazioni per diversi motivi:
--  L'utilità di pianificazione predefinita TPL delegherà l'esecuzione dell'attività al pool di thread, che a sua volta aumenterà in modo dinamico il numero di thread necessarie come processo ha luogo, si evita di uno scenario in cui troppi thread rimangano in competizione per tempo CPU. 
--  Risulta più semplice considerare le operazioni in termini di attività TPL. È possibile modificarli, pianificazione, l'esecuzione di serializzare o avvio in parallelo con un ampio set di API. 
--  È la base per la programmazione con le estensioni del linguaggio di nuovo c# asincrono. 
+-  L'utilità di pianificazione predefinita TPL delegherà l'esecuzione dell'attività al pool di thread, che a sua volta aumenterà in modo dinamico il numero di thread necessari come processo viene eseguita, evitando uno scenario in cui un numero eccessivo di thread finire in competizione per tempo di CPU. 
+-  È più semplice considerare le operazioni in termini di attività TPL. È facilmente possibile modificarli, pianificarle, serializzare l'esecuzione o avviare molte in parallelo con una vasta gamma di API. 
+-  È la base per la programmazione con le nuove estensioni del linguaggio di async c#. 
 
 
-Il pool di thread lenta aumenterà il numero di thread come necessario in base al numero di core CPU disponibile nel sistema, il carico di sistema e le richieste dell'applicazione. È possibile utilizzare il pool di thread chiamando metodi in `System.Threading.ThreadPool` o utilizzando il valore predefinito `System.Threading.Tasks.TaskScheduler` (in parte il *Framework parallelo*).
+Il pool di thread lentamente aumenterà il numero di thread come necessario in base al numero di core CPU disponibili nel sistema, il carico di sistema e le esigenze dell'applicazione. È possibile usare questo pool di thread richiamando i metodi nel `System.Threading.ThreadPool` oppure usando il valore predefinito `System.Threading.Tasks.TaskScheduler` (fa parte del *Framework parallele*).
 
-In genere gli sviluppatori di utilizzano i thread quando è necessario creare applicazioni reattive e non si desidera bloccare l'interfaccia utente principale eseguire ciclo.
+In genere gli sviluppatori di utilizzano i thread quando hanno bisogno per creare applicazioni reattive e non si desidera bloccare l'interfaccia utente principale eseguire ciclo.
 
  <a name="Developing_Responsive_Applications" />
 
 
-## <a name="developing-responsive-applications"></a>Sviluppo di applicazioni reattive
+## <a name="developing-responsive-applications"></a>Lo sviluppo di applicazioni reattive
 
-L'accesso agli elementi dell'interfaccia utente dovrebbe essere limitato allo stesso thread che esegue il ciclo principale per l'applicazione. Se si desidera apportare modifiche all'interfaccia utente principale da un thread, è necessario mettere in coda il codice utilizzando [NSObject.InvokeOnMainThread](https://developer.xamarin.com/api/type/Foundation.NSObject/), come segue:
+Accesso a elementi dell'interfaccia utente deve essere limitata allo stesso thread che esegue il ciclo principale per l'applicazione. Se si desidera apportare modifiche all'interfaccia utente principale da un thread, è necessario accodare il codice usando [NSObject.InvokeOnMainThread](https://developer.xamarin.com/api/type/Foundation.NSObject/), simile al seguente:
 
 ```csharp
 MyThreadedRoutine ()  
@@ -51,16 +52,16 @@ MyThreadedRoutine ()
 }
 ```
 
-Il precedente richiama il codice all'interno di un delegato di nel contesto del thread principale, senza causare alcun race condition che potrebbe arrestarsi in modo anomalo dell'applicazione.
+Il codice precedente richiama il codice all'interno di delegato nel contesto del thread principale, senza causare alcun race condition che potrebbe potenzialmente di arresto anomalo dell'applicazione.
 
  <a name="Threading_and_Garbage_Collection" />
 
 
 ## <a name="threading-and-garbage-collection"></a>Threading e Garbage Collection
 
-Nel corso di esecuzione, il runtime Objective-C creare e rilasciare gli oggetti. Se gli oggetti vengono contrassegnati per la "rilascio automatico" Objective-C runtime rilascerà tali oggetti corrente del thread di `NSAutoReleasePool`. Xamarin consente di creare uno `NSAutoRelease` pool per ogni thread di `System.Threading.ThreadPool` e per il thread principale. Dall'estensione sono inclusi tutti i thread creati utilizzando il valore predefinito TaskScheduler System.Threading.Tasks.
+Nel corso dell'esecuzione, il runtime di Objective-C verrà creare e rilasciare gli oggetti. Se gli oggetti contrassegnati per la "auto-rilascio" il runtime di Objective-C rilascerà tali oggetti al corrente del thread di `NSAutoReleasePool`. Xamarin. IOS consente di creare uno `NSAutoRelease` per ogni thread dal pool di `System.Threading.ThreadPool` e per il thread principale. Tale estensione copre tutti i thread creati utilizzando l'oggetto TaskScheduler predefinito in Tasks.
 
-Se si creano i propri thread utilizzando `System.Threading` è necessario fornire si è proprietari `NSAutoRelease` pool per impedire che i dati dalla divulgazione. A tale scopo, è sufficiente eseguire il wrapping del thread nel seguente frammento di codice:
+Se si crea il proprio thread che usano `System.Threading` è necessario fornire possedute `NSAutoRelease` pool per evitare che i dati dalla divulgazione. A tale scopo, è semplicemente il wrapping del thread nel seguente frammento di codice:
 
 ```csharp
 void MyThreadStart (object arg)
@@ -71,7 +72,7 @@ void MyThreadStart (object arg)
 }
 ```
 
-Nota: Poiché xamarin. IOS 5.2 non è di fornire una propria `NSAutoReleasePool` più uno verrà visualizzato automaticamente.
+Nota: Poiché xamarin. IOS 5.2 non è necessario specificare il proprio `NSAutoReleasePool` più come una riceveranno automaticamente per l'utente.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

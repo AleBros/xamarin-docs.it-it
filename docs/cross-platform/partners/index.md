@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 07/16/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: fc4f851d25837690cd3412ca142a52b1312a08b3
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.openlocfilehash: d78c0e52b96403ad27a7c5ac69a367746781b589
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270202"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351743"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>Certified società di consulenza partner per offrire soluzioni per dispositivi mobili
 
@@ -112,6 +112,7 @@ _Nell'elenco dalla località primaria, molti partner di fornire servizi tra i bo
 |[Interknowlogy](http://www.interknowlogy.com/)|San Diego, CA, Stati Uniti|Un leader in tutto il mondo in fase di sviluppo di app personalizzate, InterKnowlogy sfrutta le tecnologie attuali ed emergenti per fornire esperienze collegate ti tramite tocco, gesti e voce|
 |[Soluzioni Intouch](http://www.intouchsol.com )|Overland Park, KS, Stati Uniti; Londra, Regno Unito; Chicago, livello di integrità, Stati Uniti; New York, New YORK, Stati Uniti|Siamo un'agenzia digitale iniziale all'interno della Pharma e assistenza sanitario spazio|
 |[iTexico](http://www.itexico.com)|Ad Austin, Texas, Stati Uniti|iTexico è una società di tecnologia software globale che è interessata a contribuire alle aziende con sviluppo per dispositivi mobili in tutto il progetto ' ciclo di vita Äôs tramite nearshore esternalizzazione.|
+|[JBS](https://www.jbssolutions.com)|Pennsylvania, Stati Uniti|JBS è un provider di soluzioni software personalizzate.|
 |[Kaonsoft](http://www.kaonsoft.net/)|Palo Alto, CA, Stati Uniti; Chicago, livello di integrità, Stati Uniti; Toledo, OH, Stati Uniti; Seongnam-intervento di servizio, Gyeonggi cosa da fare, Corea del Sud|Kaonsoft è una società di software innovativo che offre soluzioni end-to-end completate per creare applicazioni di mobilità per tra le piattaforme enterprise.|
 |[Katalyst Technologies Inc. ](http://www.katalysttech.com )|Evanston, livello di integrità, Stati Uniti; Atlanta, disponibile a livello generale, Stati Uniti; Mumbai, India, Maharashtra; Hyderabad sperimentano, Telangana, India; Pune, Maharashtra (India)|Katalyst, si ritiene che la tecnologia può essere veramente un ostacolo alla loro creazione. Che contiene il motivo per cui le aziende leader credici a non solo forniscono prodotti e servizi, ma anche modificare la modalità di che loro attività principale viene eseguito tramite le soluzioni personalizzate, forte impatto che interessano l'azienda.|
 |[Kleio Technology LLC](http://kleiotechnology.com)|Royal Palm Beach, FL|Tradizionalmente, ci siamo adoperati per un'istruzione, marchio e le identità. Abbiamo studiare problema di un cliente aziendale risolvere il problema di progettazione, dell'esperienza utente e la strategia di contenuto. Ti aiutiamo a (uff.) per raggiungere le esigenze di client e renderlo la redditività della tua|

@@ -1,46 +1,46 @@
 ---
 title: Introduzione a ARKit in xamarin. IOS
-description: Questo documento descrive realtà aumentata in iOS 11 con ARKit. Illustra come aggiungere un modello 3D per un'app, configurare la visualizzazione, implementare un delegato di sessione, posizionare il modello 3D nel mondo e sospendere la sessione realtà aumentata.
+description: Questo documento descrive la realtà aumentata in iOS 11 con ARKit. Illustra come aggiungere un modello 3D per un'app, configurare la visualizzazione, implementare un delegato di sessione, posizionare il modello 3D in tutto il mondo e sospendere la sessione di realtà aumentata.
 ms.prod: xamarin
 ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 08/30/2016
-ms.openlocfilehash: 55ef2004f66cb808f878b2215dfdd59a45015877
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 08/30/2017
+ms.openlocfilehash: 14bbb35477c098738e9cd7e2cb92154422d394ee
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787169"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350615"
 ---
 # <a name="introduction-to-arkit-in-xamarinios"></a>Introduzione a ARKit in xamarin. IOS
 
 _Realtà aumentata per iOS 11_
 
-ARKit consente un'ampia gamma di giochi e applicazioni realtà aumentata. In questa sezione vengono trattati i seguenti argomenti:
+ARKit consente un'ampia gamma di applicazioni di realtà aumentata e giochi. In questa sezione vengono trattati i seguenti argomenti:
 
-- [Introduzione a ARKit](#gettingstarted)
-- [Con ARKit UrhoSharp](urhosharp.md)
+- [Guida introduttiva a ARKit](#gettingstarted)
+- [Uso di ARKit con UrhoSharp](urhosharp.md)
 
 <a name="gettingstarted" />
 
-## <a name="getting-started-with-arkit"></a>Introduzione a ARKit
+## <a name="getting-started-with-arkit"></a>Guida introduttiva a ARKit
 
-Per informazioni introduttive su realtà aumentata, le istruzioni seguenti illustrata una semplice applicazione: posizionamento di un modello 3D e consentendo ARKit di mantenere il modello con le funzionalità di rilevamento.
+Per iniziare a usare realtà aumentata, le istruzioni riportate di seguito illustra una semplice applicazione: posizionamento di un modello 3D e consentendo ARKit mantenere il modello con le sue funzionalità di rilevamento.
 
-![Modello di Jet 3D Mobile in immagine](images/jet-sml.png)
+![Modello 3D di Jet a virgola mobile in immagine](images/jet-sml.png)
 
 ### <a name="1-add-a-3d-model"></a>1. Aggiungere un modello 3D
 
-Asset devono essere aggiunti al progetto con il **SceneKitAsset** azione di compilazione.
+Gli asset devono essere aggiunto al progetto con il **SceneKitAsset** azione di compilazione.
 
-![SceneKit asset in un progetto](images/scene-assets.png)
+![In un progetto di asset SceneKit](images/scene-assets.png)
 
 
 ### <a name="2-configure-the-view"></a>2. Configurare la visualizzazione
 
-Il controller di visualizzazione `ViewDidLoad` (metodo), caricare la risorsa di scena e impostare il `Scene` proprietà nella vista:
+Nel controller di visualizzazione `ViewDidLoad` metodo, caricare l'asset di scena e impostare il `Scene` proprietà nella vista:
 
 ```csharp
 ARSCNView SceneView = (View as ARSCNView);
@@ -52,9 +52,9 @@ var scene = SCNScene.FromFile("art.scnassets/ship");
 SceneView.Scene = scene;
 ```
 
-### <a name="3-optionally-implement-a-session-delegate"></a>3. È possibile implementare un delegato di sessione
+### <a name="3-optionally-implement-a-session-delegate"></a>3. Se lo si desidera implementare un delegato di sessione
 
-Anche se non è necessaria nei casi semplici, l'implementazione di un delegato di sessione può essere utile per il debug lo stato della sessione ARKit (e nelle applicazioni reali, inviare commenti e suggerimenti all'utente). Creare un delegato semplice tramite il codice riportato di seguito:
+Sebbene non obbligatorio per i casi semplici, che implementa un delegato di sessione può essere utile per eseguire il debug lo stato della sessione ARKit (e in applicazioni reali, inviare commenti e suggerimenti all'utente). Creare un delegato semplice usando il codice seguente:
 
 ```csharp
 public class SessionDelegate : ARSessionDelegate
@@ -67,7 +67,7 @@ public class SessionDelegate : ARSessionDelegate
 }
 ```
 
-Assegnare il delegato nel `ViewDidLoad` metodo:
+Assegnare il delegato nel nel `ViewDidLoad` metodo:
 
 ```csharp
 // Track changes to the session
@@ -76,7 +76,7 @@ SceneView.Session.Delegate = new SessionDelegate();
 
 ### <a name="4-position-the-3d-model-in-the-world"></a>4. Posizionare il modello 3D in tutto il mondo
 
-In `ViewWillAppear`, il codice seguente consente di stabilire una sessione ARKit e imposta la posizione del modello 3D nello spazio relativo della fotocamera del dispositivo:
+In `ViewWillAppear`, il codice seguente consente di stabilire una sessione ARKit e imposta la posizione del modello 3D nello spazio in relazione la fotocamera del dispositivo:
 
 ```csharp
 // Create a session configuration
@@ -94,11 +94,11 @@ var ship = SceneView.Scene.RootNode.FindChildNode("ship", true);
 ship.Position = new SCNVector3(2f, -2f, -9f);
 ```
 
-Ogni volta che l'applicazione viene eseguito o ripreso, il modello 3D verrà posizionato davanti la fotocamera. Una volta che si trova il modello, spostare la camera e osservare come ARKit mantiene il modello posizionato.
+Ogni volta che l'applicazione viene eseguito o ripreso, il modello 3D verrà posizionato davanti alla fotocamera. Una volta che si trova il modello, spostare la camera e osservare come ARKit mantiene il modello posizionato.
 
-### <a name="5-pause-the-augmented-reality-session"></a>5. Sospendere la sessione realtà aumentata
+### <a name="5-pause-the-augmented-reality-session"></a>5. Sospendere la sessione di realtà aumentata
 
-È consigliabile sospendere la sessione ARKit quando il controller di visualizzazione non è visibile (nel `ViewWillDisappear` metodo:
+È buona norma per sospendere la sessione ARKit quando il controller di visualizzazione non è visibile (nel `ViewWillDisappear` metodo:
 
 ```csharp
 SceneView.Session.Pause();
@@ -106,15 +106,15 @@ SceneView.Session.Pause();
 
 ## <a name="summary"></a>Riepilogo
 
-Il codice precedente comporta una semplice applicazione ARKit. Esempi più complessi si aspetta che ospita la sessione realtà aumentata per implementare il controller di visualizzazione `IARSCNViewDelegate`, e implementare i metodi aggiuntivi.
+Il codice precedente comporta una semplice applicazione ARKit. Esempi più complessi aspetta il controller di visualizzazione che ospita la sessione di realtà aumentata per implementare `IARSCNViewDelegate`, e implementare i metodi aggiuntivi.
 
-ARKit offre molte delle funzionalità più sofisticate, ad esempio rilevamento superficie e l'interazione dell'utente. Vedere il [UrhoSharp demo](urhosharp.md) per un esempio la combinazione di rilevamento con UrhoSharp ARKit.
+ARKit offre molte delle funzionalità più sofisticate, ad esempio rilevamento superficie e l'interazione dell'utente. Vedere le [demo di UrhoSharp](urhosharp.md) per un esempio ARKit rilevamento con UrhoSharp combinazione.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Realtà aumentata (mela)](https://developer.apple.com/arkit/)
-- [Con ARKit UrhoSharp](urhosharp.md)
-- [Esempio semplice ARKit (Jet)](https://developer.xamarin.com/samples/monotouch/ios11/ARKitSample/)
+- [Realtà aumentata (Apple)](https://developer.apple.com/arkit/)
+- [Uso di ARKit con UrhoSharp](urhosharp.md)
+- [Esempio ARKit semplice (Jet)](https://developer.xamarin.com/samples/monotouch/ios11/ARKitSample/)
 - [ARKit inserimento di oggetti (esempio)](https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/)
 - [Introduzione a ARKit - realtà aumentata per iOS (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/602/)

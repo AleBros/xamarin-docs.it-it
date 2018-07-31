@@ -1,22 +1,23 @@
 ---
-title: "Errore durante l'invio all'archivio di App: \"Bundle non valido - opzioni non possibile essere incorporati in bitcode vengono rilevati nell'inoltro\""
+title: "Errore durante l'invio all'App Store: \"Bundle non valido - opzioni non possa essere incorporate in bitcode vengono rilevate nell'invio\""
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 137313FB-3D29-428B-93C1-5A05DC8F7C03
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: cacb9040ddc8582490c68bcfd24e80c4c4679eb4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/03/2018
+ms.openlocfilehash: 393c1ed81c68d21b610781dfe09de97969e031d1
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30777704"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350924"
 ---
-# <a name="error-when-submitting-to-app-store-invalid-bundle---options-not-allowed-to-be-embedded-in-bitcode-are-detected-in-the-submission"></a>Errore durante l'invio all'archivio di App: "Bundle non valido - opzioni non possibile essere incorporati in bitcode vengono rilevati nell'inoltro"
+# <a name="error-when-submitting-to-app-store-invalid-bundle---options-not-allowed-to-be-embedded-in-bitcode-are-detected-in-the-submission"></a>Errore durante l'invio all'App Store: "Bundle non valido - opzioni non possa essere incorporate in bitcode vengono rilevate nell'invio"
 
-watchOS App e tvOS _richiedono_ bitcode invio all'archivio di App. Durante la compilazione e invio App watchOS e tvOS tramite Xcode 8.3 o versioni precedenti, potrebbe verificarsi l'errore seguente (tramite notifica di posta elettronica) durante il tentativo di caricare nell'App Store:
+watchOS App e App tvOS _richiedono_ bitcode quando vengono inviate per l'App Store. Durante la compilazione e invio di App watchOS e tvOS con Xcode 8.3 o versione precedente, potrebbe verificarsi l'errore seguente (tramite notifica di posta elettronica) quando si prova a caricare l'App Store:
 
->Il pacchetto non valido - Impossibile elaborare l'app perché le opzioni non possibile essere incorporati in bitcode vengono rilevate nell'inoltro. È probabile che non si sta creando l'app con la toolchain fornita in Xcode.
+>Bundle non valido: l'app non può essere elaborato perché le opzioni non possa essere incorporate in bitcode vengono rilevate nell'invio. È probabile che non crei l'app con la toolchain disponibile in Xcode.
 
-Per risolvere questo problema consiste nel compilare le applicazioni con Xcode 9 e l'ultima versione di xamarin. IOS.
+Per risolvere questo problema consiste nella compilazione di applicazioni con Xcode 9 e la versione più recente di xamarin. IOS.

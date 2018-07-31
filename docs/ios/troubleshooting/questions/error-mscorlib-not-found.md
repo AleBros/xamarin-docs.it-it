@@ -1,19 +1,20 @@
 ---
-title: "Errore di runtime: l'assembly mscorlib. dll non è stato trovato o non può essere caricato"
+title: 'Errore di runtime: assembly mscorlib. dll non è stato trovato o non può essere caricato'
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1027E16C-2C14-4BB5-AAAB-342F3E28E22E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 1470396e782fd2343de72e9bea042f45cd07e555
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/03/2018
+ms.openlocfilehash: 3510ccafed3ed1b57d8ecd1b99ee8d10f952c57c
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30778422"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350888"
 ---
-# <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loaded"></a>Errore di runtime: l'assembly mscorlib. dll non è stato trovato o non può essere caricato
+# <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loaded"></a>Errore di runtime: assembly mscorlib. dll non è stato trovato o non può essere caricato
 
 ```
 <Warning>: The assembly mscorlib.dll was not found or could not be loaded.
@@ -21,5 +22,5 @@ ms.locfileid: "30778422"
 <Warning>: Service exited with abnormal code: 1
 ```
 
-Questo problema si verifica quando il *nascosto* `.monotouch-32` e `.monotouch-64` cartelle non sono presenti il `.xcarchive` per la firma / creazione IPA, attivato l'errore di runtime.
+Questo problema si verifica quando la *nascosto* `.monotouch-32` e `.monotouch-64` cartelle non sono presenti il `.xcarchive` per la firma / creazione pacchetto IPA, ha attivato l'errore di runtime.
 

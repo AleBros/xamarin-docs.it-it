@@ -5,12 +5,12 @@ ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: ca6d4f1ec60a80b483c79dd75267144e67d80c0b
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 4a45587c79cfbbcd1198f100915e698289f74950
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831764"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353750"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: preferenze
 
@@ -83,6 +83,10 @@ Tutti i dati vengono archiviati nel [preferenze condivise](https://developer.and
 [ApplicationDataContainer](https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdatacontainer) viene usato per archiviare i valori nel dispositivo. Se nessun `sharedName` viene specificato il `LocalSettings` vengono usati, in caso contrario il nome viene utilizzato per creare un nuovo contenitore all'interno di `LocalSettings`.
 
 --------------
+
+## <a name="persistence"></a>Persistenza
+
+Disinstallare l'applicazione genererà tutti _preferenze_ da rimuovere. Vi è un'eccezione a questa, che per le app di destinazione ed eseguire in Android 6.0 (livello API 23) o versioni successive che usano [ __Backup automatico__](https://developer.android.com/guide/topics/data/autobackup). Questa funzionalità è attivata per impostazione predefinita e mantiene i dati, tra cui app __preferenze condivise__, cioè che cosa le **preferenze** Usa API. È possibile disabilitare questa funzionalità seguenti di Google [documentazione](https://developer.android.com/guide/topics/data/autobackup).
 
 ## <a name="limitations"></a>Limitazioni
 
