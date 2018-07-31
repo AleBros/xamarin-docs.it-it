@@ -3,19 +3,17 @@ title: Requisiti di sistema
 description: Questo documento elenca i requisiti di sistema per la compilazione di app con Xamarin nei computer Windows e Mac. Contiene inoltre i collegamenti alle istruzioni di installazione.
 ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
-author: asb3993
-ms.author: amburns
-ms.date: 08/28/2017
-ms.openlocfilehash: 04db2fe4e3385c55ecf653b002b909f16e99a101
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: conceptdev
+ms.author: crdun
+ms.date: 07/24/2018
+ms.openlocfilehash: 6d16f01965b6b3bcba35cf14d4000f53a4400653
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780724"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241978"
 ---
 # <a name="system-requirements"></a>Requisiti di sistema
-
-_Prerequisiti per l'uso di Xamarin_
 
 I prodotti Xamarin si basano sugli SDK di piattaforma di Apple e Google per le piattaforme iOS o Android di destinazione. I requisiti di sistema Microsoft pertanto corrispondono a quelli di queste aziende. Questa pagina illustra la compatibilità di sistema per la piattaforma Xamarin, l'ambiente di sviluppo consigliato e le versioni degli SDK.
 
@@ -54,36 +52,27 @@ Per le attività di test e debug è possibile distribuire le applicazioni Xamari
 
 [!include[](~/cross-platform/includes/macos-testing.md)]
 
-
 <a name="windows" />
 
 ## <a name="windows-requirements"></a>Requisiti Windows
 
 L'uso di un computer Windows per lo sviluppo con Xamarin richiede le versioni software/SDK indicate di seguito.
 Controllare la versione del sistema operativo in uso e verificare che non si tratti di una versione *Express* di Visual Studio. In caso affermativo, valutare l'aggiornamento a un'edizione *Community*.
-I programmi di installazione di Visual Studio 2015 e 2017 includono un'opzione per installare automaticamente Xamarin.
+Il programma di installazione di Visual Studio 2017 include un'opzione per installare automaticamente Xamarin (**Sviluppo di applicazioni per dispositivi mobili con .NET**).
 
 [!include[](~/cross-platform/includes/windows-requirements.md)]
 
-
 > [!NOTE]
 >
->* Xamarin per Visual Studio supporta qualsiasi edizione di Visual Studio 2015 o 2017 (Community, Professional ed Enterprise).
+>- Xamarin per Visual Studio supporta qualsiasi edizione di Visual Studio 2017 (Community, Professional ed Enterprise).
 >
->* Lo sviluppo di app Xamarin.Forms per la piattaforma UWP (Universal Windows Platform) richiede Windows 10 con Visual Studio 2015 o 2017.
-
+>- Lo sviluppo di app Xamarin.Forms per la piattaforma UWP (Universal Windows Platform) richiede Windows 10 con Visual Studio 2017.
 
 ### <a name="testing--debugging-on-windows"></a>Test e debug in Windows
 
 Per le attività di test e debug è possibile distribuire le applicazioni Xamarin per dispositivi mobili ai dispositivi fisici tramite USB. I dispositivi iOS devono essere connessi al computer Mac, non al computer con Visual Studio.
 
 [!include[](~/cross-platform/includes/windows-testing.md)]
-
-
-> [!NOTE]
->
->* [Download dell'emulatore Windows Phone 8.1](https://www.microsoft.com/download/details.aspx?id=43719).
->* L'emulatore Windows Phone 10 è incluso in Visual Studio 2015 UWP SDK.
 
 <a name="install" />
 
@@ -101,8 +90,7 @@ Istruzioni di [installazione](~/cross-platform/get-started/installation/index.md
 
 Sono anche disponibili altre informazioni sui [requisiti di Xamarin.Forms e le piattaforme supportate](~/xamarin-forms/get-started/installation.md).
 
-
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Download di Xamarin](https://xamarin.com/download/)
+- [Download di Xamarin](https://visualstudio.microsoft.com/xamarin/)
 - [Current Releases](https://developer.xamarin.com/releases/current/) (Versioni correnti)

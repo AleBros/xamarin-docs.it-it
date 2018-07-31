@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 685a29eea4b03361b185e25ae0e146be7b5e69b6
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 9c81138aea57c0027ad0f53e3116878ffb800eae
+ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792035"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276041"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Icona dell'applicazione per le app Xamarin.Mac
 
@@ -23,9 +23,9 @@ _Questo articolo illustra la creazione delle immagini necessarie per l'icona di 
 
 Uno sviluppatore che lavora in C# e .NET in un'applicazione Xamarin.Mac ha accesso agli stessi strumenti per immagini e icone di uno sviluppatore che lavora in *Objective-C* e *Xcode*.
 
-Un'icona efficace dovrebbe comunicare lo scopo principale dell'app Xamarin.Mac e suggerire l'esperienza che l'utente dovrebbe aspettarsi dall'uso dell'app. Questo articolo descrive tutti i passaggi da eseguire per creare gli asset delle immagini necessari per un'icona, per creare un pacchetto di tali asset in un file `AppIcons.appiconset` e per utilizzare il file in un'app Xamarin.Mac.
+Un'icona efficace dovrebbe comunicare lo scopo principale dell'app Xamarin.Mac e suggerire l'esperienza che l'utente dovrebbe aspettarsi dall'uso dell'app. Questo articolo descrive tutti i passaggi da eseguire per creare gli asset delle immagini necessari per un'icona, per creare un pacchetto di tali asset in un file `AppIcon.appiconset` e per utilizzare il file in un'app Xamarin.Mac.
 
-![Editor AppIcons.appiconset](app-icon-images/intro01.png "Editor AppIcons.appiconset")
+![Editor AppIcon.appiconset](app-icon-images/intro01.png "Editor AppIcon.appiconset")
 
 
 ## <a name="application-icon"></a>Icona dell'applicazione
@@ -85,7 +85,7 @@ Seguire questa procedura:
 
 1. Nel **riquadro della soluzione** aprire **Assets.xcassets** > **AppIcons.appiconset**: 
 
-    ![Modifica di AppIcons.appiconset](app-icon-images/intro01.png "Modifica di AppIcons.appiconset")
+    ![Modifica di AppIcon.appiconset](app-icon-images/intro01.png "Modifica di AppIcon.appiconset")
 2. Per ogni dimensione di icona necessaria fare clic sull'icona e selezionare il file di immagine corrispondente precedentemente creato: 
 
     [![Selezione di un'immagine di un'icona](app-icon-images/intro02.png "Selezione di un'immagine di un'icona")](app-icon-images/intro02-large.png#lightbox)
@@ -94,12 +94,12 @@ Seguire questa procedura:
 
 ## <a name="using-the-icon"></a>Uso dell'icona
 
-Dopo che il file `AppIcons.appiconset` è stato compilato, è necessario assegnarlo al progetto Xamarin.Mac in Visual Studio per Mac.
+Dopo che il file `AppIcon.appiconset` è stato compilato, è necessario assegnarlo al progetto Xamarin.Mac in Visual Studio per Mac.
 
 Seguire questa procedura:
 
 1. Fare doppio clic su **Info.plist** nel **riquadro della soluzione** per aprire **Opzioni progetto**.
-2. Nella sezione **Mac OS X Application Target** (Destinazione applicazione Mac OS X) fare clic su **Icone app** per selezionare il file `AppIcons.appiconset`: 
+2. Nella sezione **Mac OS X Application Target** (Destinazione applicazione Mac OS X) fare clic su **Icone app** per selezionare il file `AppIcon.appiconset`: 
 
     [![Impostazione del set di icone](app-icon-images/icon01.png "Impostazione del set di icone")](app-icon-images/icon01-large.png#lightbox)
 3. Salvare le modifiche.

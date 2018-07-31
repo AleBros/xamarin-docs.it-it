@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 25129d532af0b146afedf28865649ffc9e38ee17
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 9b6168eba91a87af88891b9e07e3dd395301cc48
+ms.sourcegitcommit: 021027b78cb2f8061b03a7c6ae59367ded32d587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785612"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39182208"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Profilatura delle applicazioni Xamarin.iOS con Instruments
 
@@ -27,11 +27,11 @@ Xcode Instruments può essere eseguito solo su Mac.
 
 Selezionare il dispositivo ed eseguire l'app Instruments:
 
-1.  Aprire il progetto Xamarin.iOS in Visual Studio per Mac.
-2.  Selezionare la configurazione **Debug|iPhone**.
-3.  Connettere un dispositivo iOS al computer.
-4.  Nel menu **Esegui** selezionare **Carica nel dispositivo** . L'applicazione viene compilata e caricata nel dispositivo.
-5.  Nel menu **Strumenti** selezionare **Launch Instruments** (Avvia Instruments).
+1. Aprire il progetto Xamarin.iOS in Visual Studio per Mac.
+2. Selezionare la configurazione **Debug|iPhone**.
+3. Connettere un dispositivo iOS al computer.
+4. Nel menu **Esegui** selezionare **Carica nel dispositivo** . L'applicazione viene compilata e caricata nel dispositivo.
+5. Nel menu **Strumenti** selezionare **Launch Instruments** (Avvia Instruments).
 
 
 L'app Instruments viene aperta e visualizza la finestra di dialogo seguente:
@@ -65,4 +65,4 @@ Questa guida ha illustrato come avviare Xcode Instruments per monitorare un'app 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Analisi dettagliata di Instruments](~/ios/deploy-test/walkthrough-apples-instrument.md)
-- [Garbage Collection di Xamarin.iOS](https://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/)
+- [Xamarin.iOS Garbage Collection (blog post)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/) (Garbage Collection di Xamarin.iOS - post di blog)

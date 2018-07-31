@@ -8,38 +8,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: f7869f572bfd6f6c8a0bc710c6e28671c22ad7eb
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 16920f27a1830dc6a3ab1a3cb0a267eb3b1d90ea
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786400"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203023"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - Approfondimento
 
 La procedura dettagliata Guida introduttiva ha presentato la compilazione e l'esecuzione di un'applicazione Xamarin.iOS di base. È ora il momento di acquisire una conoscenza più approfondita del funzionamento delle applicazioni iOS, per poter creare programmi più complessi. Questa guida esamina i passaggi illustrati nella procedura dettagliata Hello, iOS per consentire la comprensione dei concetti fondamentali dello sviluppo di applicazioni iOS.
-
-In questo articolo vengono presi in esame gli argomenti seguenti:
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
-
-- **Introduzione a Visual Studio per Mac**: introduzione a Visual Studio per Mac e creazione di una nuova applicazione.
-- **Anatomia di un'applicazione Xamarin.iOS**: panoramica delle parti essenziali di un'applicazione Xamarin.iOS.
-- **Concetti fondamentali dell'architettura e delle app**: revisione delle parti di un'applicazione iOS e della relazione tra di esse.
-- **Interfaccia utente**: creazione di interfacce utente con iOS Designer.
-- **Controller di visualizzazione e ciclo di vita della visualizzazione**: introduzione al ciclo di vita della visualizzazione e gestione di gerarchie di visualizzazione del contenuto con il controller di visualizzazione.
-- **Test, distribuzione e finalizzazione**: completamento dell'applicazione con suggerimenti su esecuzione di test, distribuzione, generazione di elementi grafici e altro ancora.
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-- **Introduzione a Visual Studio**: introduzione a Visual Studio e creazione di una nuova applicazione.
-- **Anatomia di un'applicazione Xamarin.iOS**: panoramica delle parti essenziali di un'applicazione Xamarin.iOS.
-- **Concetti fondamentali dell'architettura e delle app**: revisione delle parti di un'applicazione iOS e della relazione tra di esse.
-- **Interfaccia utente**: creazione di interfacce utente con iOS Designer.
-- **Controller di visualizzazione e ciclo di vita della visualizzazione**: introduzione al ciclo di vita della visualizzazione e gestione di gerarchie di visualizzazione del contenuto con il controller di visualizzazione.
-- **Test, distribuzione e finalizzazione**: completamento dell'applicazione con suggerimenti su esecuzione di test, distribuzione, generazione di elementi grafici e altro ancora.
-
------
 
 Questa guida consente di sviluppare le competenze e le conoscenze necessarie per creare un'applicazione iOS a schermata singola. Al termine di questa guida, si sarà in grado di comprendere le diverse parti di un'applicazione Xamarin.iOS e il modo in cui si integrano tra loro.
 
@@ -64,8 +42,6 @@ Visual Studio consente di organizzare il codice in _soluzioni_ e *progetti*. Una
 ![](hello-ios-deepdive-images/vs-image30.png "Screenshot della soluzione iniziale")
 
 -----
-
-<a name="anatomy" />
 
 ## <a name="anatomy-of-a-xamarinios-application"></a>Anatomia di un'applicazione Xamarin.iOS
 
@@ -163,7 +139,7 @@ L'interfaccia utente di un'app iOS è come una vetrina: l'applicazione ha in gen
 
 Questa sezione approfondisce l'argomento dell'interfaccia utente descrivendo le visualizzazioni, le gerarchie di visualizzazione del contenuto e iOS Designer.
 
-### <a name="ios-designer-and-storyboards"></a>iOS Designer e gli Storyboard
+### <a name="ios-designer-and-storyboards"></a>iOS Designer e storyboard
 
 iOS Designer è uno strumento visivo per la creazione di interfacce utente in Xamarin. È possibile avviare iOS Designer facendo doppio clic su un qualsiasi file Storyboard (con estensione storyboard), che verrà aperto in una visualizzazione simile allo screenshot seguente:
 
@@ -267,7 +243,7 @@ La prossima sezione illustra come usare le visualizzazioni nel codice e come cre
 
 A ogni gerarchia di visualizzazione del contenuto corrisponde un controller di visualizzazione che dà vita all'interazione utente. Il ruolo del controller di visualizzazione è di gestire le visualizzazioni presenti nella gerarchia di visualizzazione del contenuto. Il controller di visualizzazione non fa parte della gerarchia di visualizzazione del contenuto e non è un elemento dell'interfaccia ma fornisce il codice che dà vita alle interazioni dell'utente con gli oggetti sullo schermo.
 
-### <a name="view-controllers-and-storyboards"></a>Controller di visualizzazione e Storyboard
+### <a name="view-controllers-and-storyboards"></a>Controller di visualizzazione e storyboard
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -322,7 +298,7 @@ Ecco i metodi di base del ciclo di vita e le funzioni corrispondenti:
 
 Quando si aggiunge codice personalizzato a una qualsiasi fase del ciclo di vita, è necessario *eseguire l'override* dell'*implementazione di base* del metodo corrispondente del ciclo di vita. A questo scopo, toccare il metodo del ciclo di vita esistente, a cui è già associato del codice, e ampliare quest'ultimo con codice aggiuntivo. L'implementazione di base viene chiamata dall'interno del metodo per assicurarsi che il codice originale venga eseguito prima del nuovo codice. Un esempio di queste operazioni è illustrato nella prossima sezione.
 
-Per altre informazioni sull'uso dei controller di visualizzazione, vedere [View Controller Programming Guide for iOS](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/ViewLoadingandUnloading/ViewLoadingandUnloading.html) (Guida alla programmazione del controller di visualizzazione) e [UIViewController reference](https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html) (Informazioni di riferimento su UIViewController) nel sito Web Apple.
+Per altre informazioni sull'uso dei controller di visualizzazione, vedere [View Controller Programming Guide for iOS](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1) (Guida alla programmazione del controller di visualizzazione) e [UIViewController reference](https://developer.apple.com/documentation/uikit/uiviewcontroller?language=objc) (Informazioni di riferimento su UIViewController) nel sito Web Apple.
 
 ### <a name="responding-to-user-interaction"></a>Risposta all'interazione dell'utente
 
@@ -379,7 +355,7 @@ L'applicazione Phoneword ha introdotto alcuni concetti non trattati in questa gu
     CallButton.SetTitle ("Call", UIControlState.Normal);
     ```
 - **Abilitazione e disabilitazione dei pulsanti**: lo stato degli elementi **Pulsante** può essere `Enabled` o `Disabled`. Un **Pulsante** disabilitato non risponde all'input dell'utente. Il codice seguente, ad esempio, disabilita l'elemento `CallButton`: CallButton.Enabled = false; Per altre informazioni sui pulsanti, vedere la guida [Pulsanti](~/ios/user-interface/controls/buttons.md).
-- **Chiusura della tastiera**: quando l'utente tocca il campo di testo, iOS visualizza la tastiera per consentire all'utente di immettere input. Non esiste una funzionalità incorporata che consenta di chiudere la tastiera. Il codice seguente viene aggiunto all'elemento `TranslateButton` per chiudere la tastiera quando l'utente preme l'elemento `TranslateButton` stesso: PhoneNumberText.ResignFirstResponder (); Per un altro esempio di chiusura della tastiera, vedere il recipe [Dismiss the Keyboard](https://developer.xamarin.com/recipes/ios/input/keyboards/dismiss_the_keyboard) (Chiudere la tastiera).
+- **Chiusura della tastiera**: quando l'utente tocca il campo di testo, iOS visualizza la tastiera per consentire all'utente di immettere input. Non esiste una funzionalità incorporata che consenta di chiudere la tastiera. Il codice seguente viene aggiunto all'elemento `TranslateButton` per chiudere la tastiera quando l'utente preme l'elemento `TranslateButton` stesso: PhoneNumberText.ResignFirstResponder (); Per un altro esempio di chiusura della tastiera, vedere il recipe [Dismiss the Keyboard](https://github.com/xamarin/recipes/tree/master/Recipes/ios/input/keyboards/dismiss_the_keyboard) (Chiudere la tastiera).
 - **Chiamata telefonica con URL**: nell'app Phoneword per avviare l'app telefono di sistema viene usato uno schema URL Apple. Lo schema URL personalizzato è costituito dal prefisso "tel:" e dal numero di telefono convertito, come illustrato nel codice seguente:
 
     ```csharp
@@ -399,7 +375,7 @@ L'applicazione Phoneword ha introdotto alcuni concetti non trattati in questa gu
                 }
     ```
 
-Per altre informazioni sulla visualizzazione di avvisi in iOS, vedere [Alert Controller recipe](https://developer.xamarin.com/recipes/ios/standard_controls/alertcontroller/) (Recipe controller di avvisi).
+Per altre informazioni sulla visualizzazione di avvisi in iOS, vedere [Alert Controller recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller) (Recipe controller di avvisi).
 
 ## <a name="testing-deployment-and-finishing-touches"></a>Test, distribuzione e finalizzazione
 
@@ -407,11 +383,11 @@ Visual Studio per Mac e Visual Studio offrono entrambi numerose opzioni per il t
 
 ### <a name="debugging-tools"></a>Strumenti di debug
 
-I problemi del codice di un'applicazione sono talvolta difficili da diagnosticare. Per facilitare la diagnosi di problemi complessi del codice, è possibile [impostare un punto di interruzione](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/), [eseguire il codice un'istruzione alla volta](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/) o [visualizzare le informazioni di output nella finestra del log](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/).
+I problemi del codice di un'applicazione sono talvolta difficili da diagnosticare. Per facilitare la diagnosi di problemi complessi del codice, è possibile [impostare un punto di interruzione](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint), [eseguire il codice un'istruzione alla volta](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code) o [visualizzare le informazioni di output nella finestra del log](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window).
 
 ### <a name="deploy-to-a-device"></a>Eseguire la distribuzione in un dispositivo
 
-Il simulatore iOS consente di testare le applicazioni in modo rapido. Il simulatore è dotato di numerose ottimizzazioni utili per l'esecuzione di test, ad esempio un percorso fittizio, [la simulazione di movimento](https://developer.xamarin.com/recipes/ios/multitasking/test_location_changes_in_simulator/) e così via. Gli utenti, tuttavia, non utilizzeranno l'app finale in un simulatore. È necessario testare tutte le applicazioni con dispositivi reali in modo tempestivo e frequente.
+Il simulatore iOS consente di testare le applicazioni in modo rapido. Il simulatore è dotato di numerose ottimizzazioni utili per l'esecuzione di test, ad esempio un percorso fittizio, [la simulazione di movimento](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/test_location_changes_in_simulator) e così via. Gli utenti, tuttavia, non utilizzeranno l'app finale in un simulatore. È necessario testare tutte le applicazioni con dispositivi reali in modo tempestivo e frequente.
 
 Il provisioning di un dispositivo richiede tempo e un account sviluppatore Apple. La guida [Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) offre istruzioni esaurienti per la predisposizione di un dispositivo per lo sviluppo.
 
@@ -464,5 +440,5 @@ Nella [prossima esercitazione della serie introduttiva](~/ios/get-started/hello-
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Hello, iOS (sample)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/) (Hello, iOS - Esempio)
-- [Linee guida dell'interfaccia umana iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
-- [Portale di provisioning iOS](https://developer.apple.com/ios/manage/overview/index.action)
+- [Linee guida dell'interfaccia umana iOS](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
+- [Portale di provisioning iOS](http://developer.apple.com/account/#/overview)

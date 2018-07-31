@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 438bb8141818ccdb1aaf2fa604707d2fb7601cd5
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f06bf6736b427a4d77ac34957d75cd321f3dae3a
+ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792785"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39275937"
 ---
 # <a name="hello-mac--walkthrough"></a>Hello, Mac - Procedura dettagliata
 
@@ -249,7 +249,7 @@ Il file `Info.plist` contiene informazioni sull'app Xamarin.Mac, ad esempio **No
 
 [![](hello-mac-images/infoplist01.png "Editor plist di Visual Studio per Mac")](hello-mac-images/infoplist01.png#lightbox)
 
-Il file definisce anche lo _Storyboard_ che verrà usato per visualizzare l'interfaccia utente per l'app Xamarin.Mac nella casella a discesa **Interfaccia principale**. Nel caso dell'esempio precedente `Main` nella casella a discesa si riferisce a `Main.storyboard` nell'albero di origine del progetto in **Esplora soluzioni**. Definisce anche le icone dell'app specificando il *Catalogo asset* che le contiene, in questo caso AppIcons.
+Il file definisce anche lo _Storyboard_ che verrà usato per visualizzare l'interfaccia utente per l'app Xamarin.Mac nella casella a discesa **Interfaccia principale**. Nel caso dell'esempio precedente `Main` nella casella a discesa si riferisce a `Main.storyboard` nell'albero di origine del progetto in **Esplora soluzioni**. Definisce anche le icone dell'app specificando il *Catalogo asset* che le contiene, in questo caso **AppIcon**.
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 

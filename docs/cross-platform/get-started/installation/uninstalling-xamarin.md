@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 265833c3b1453dfb21064860a747651d45c2c4a0
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 87f59e9f0c2150291a43cdfee4fe6c5dfc2058f8
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066468"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203124"
 ---
 # <a name="uninstalling-xamarin"></a>Disinstallazione di Xamarin
 
@@ -260,7 +260,7 @@ Per disinstallare completamente Visual Studio 2017, scegliere **Disinstalla** da
 >
 > In determinate condizioni la disinstallazione di una delle istanze SxS può comportare la rimozione non corretta di queste funzionalità. Ciò può peggiorare le prestazioni della piattaforma Xamarin nelle istanze di Visual Studio che rimangono nel sistema dopo la disinstallazione dell'istanza SxS.
 >
->Questo problema si risolve eseguendo l'opzione di **ripristino** nel programma di installazione di Visual Studio, che consente di reinstallare i componenti mancanti.
+>Questo problema si risolve eseguendo l'opzione **Ripristina** nel programma di installazione di Visual Studio, che consente di reinstallare i componenti mancanti.
 
 
 ## <a name="uninstalling-older-and-unsupported-products"></a>Disinstallazione di prodotti precedenti e non supportati
