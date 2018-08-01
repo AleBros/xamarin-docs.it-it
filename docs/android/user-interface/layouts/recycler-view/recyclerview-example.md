@@ -6,13 +6,13 @@ ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/13/2018
-ms.openlocfilehash: abc21c3830126346ffb877639657c973da474812
-ms.sourcegitcommit: cb80df345795989528e9df78eea8a5b45d45f308
+ms.date: 07/30/2018
+ms.openlocfilehash: d48796b3c62fc342bd86f2d58e74c5f1710174bb
+ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038391"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39360838"
 ---
 # <a name="a-basic-recyclerview-example"></a>Un esempio di RecyclerView base
 
@@ -368,7 +368,15 @@ Quando questo codice viene compilato ed eseguito, vengono creati la foto base Vi
 
 [![Due schermate delle app con scorrimento verticale schede foto di visualizzazione delle foto](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png#lightbox)
 
+Se le ombreggiature non vengono viene disegnate (come illustrato nello screenshot precedente), modificare **Properties/AndroidManifest.xml** e aggiungere la seguente impostazione di attributo per il `<application>` elemento:
+
+```xml
+android:hardwareAccelerated="true"
+```
+
 Questa app di base supporta solo l'esplorazione di album di foto. Non risponde per gli eventi touch elemento, né gestisce le modifiche nei dati sottostanti. Questa funzionalità viene aggiunto in [estendendo l'esempio di RecyclerView](~/android/user-interface/layouts/recycler-view/extending-the-example.md).
+
+
 
 
 ### <a name="changing-the-layoutmanager"></a>Modifica il LayoutManager
