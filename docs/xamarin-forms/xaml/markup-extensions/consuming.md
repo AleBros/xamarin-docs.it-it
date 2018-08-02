@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 6f0c15976871129362fb3d6d3287215d1fba2cb9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a630d7c2acb95b7551c9f5f870078a0efcfc075c
+ms.sourcegitcommit: ecdc031e9e26bbbf9572885531ee1f2e623203f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995982"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39393672"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilizzo di estensioni di Markup XAML
 
@@ -24,12 +24,12 @@ Le estensioni di markup XAML consentono di migliorare la potenza e flessibilità
 - [`x:Array`](#array) &ndash; costruire una matrice di oggetti di un determinato tipo.
 - [`x:Null`](#null) &ndash; impostare un attributo un `null` valore.
 
-Tre altre estensioni di markup XAML in passato sono supportati nelle altre implementazioni di XAML e sono supportate anche da xamarin. Forms. Questi elementi sono descritti più dettagliatamente negli altri articoli:
+Altre estensioni di markup XAML in passato sono supportate nelle altre implementazioni di XAML e sono supportate anche da xamarin. Forms. Questi elementi sono descritti più dettagliatamente negli altri articoli:
 
 - `StaticResource` &ndash; Fare riferimento a oggetti da un dizionario risorse, come descritto nell'articolo [ **dizionari risorse**](~/xamarin-forms/xaml/resource-dictionaries.md).
 - `DynamicResource` &ndash; rispondere alle modifiche agli oggetti in un dizionario risorse, come descritto nell'articolo [ **stili dinamici**](~/xamarin-forms/user-interface/styles/dynamic.md).
 - `Binding` &ndash; stabilire un collegamento tra le proprietà di due oggetti, come descritto nell'articolo [ **Data Binding**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding` &ndash; esegue l'associazione dati da un modello di controllo, come descritto nell'articolo [**l'associazione da un modello di controllo**] Guide/xamarin-forms/applicazione-nozioni di base/modelli/controllo-modelli /-associazione a modello / /)
+- `TemplateBinding` &ndash; esegue l'associazione dati da un modello di controllo, come descritto nell'articolo [ **l'associazione da un modello di controllo**](/guides/xamarin-forms/application-fundamentals/templates/control-templates/template-binding/).
 
 Il [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) layout Usa l'estensione di markup personalizzata [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression). Questa estensione di markup è descritto nell'articolo [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
