@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/16/2018
-ms.openlocfilehash: 22ac17e211562eccbc49cc213e06079e77dd08c0
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: 0f2418994e02c9e83506071f14901d22af4b8a66
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111157"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353321"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Provisioning gratuito per le app Xamarin.iOS
 
@@ -35,7 +35,7 @@ Per distribuire le applicazioni Xamarin.iOS in un dispositivo con il provisionin
 - L'app Xamarin.iOS deve usare un ID app esplicito, non un ID app con carattere jolly.
 - L'identificatore del bundle usato nell'app Xamarin.iOS deve essere univoco e non deve essere stato usato in un'altra app in precedenza. Gli identificatori bundle usati con il provisioning gratuito **non** possono essere riutilizzati.
 - Se un'app è già stata distribuita, non è possibile implementarla con il provisioning gratuito.
-- Se l'app usa i Servizi app, è necessario creare un profilo di provisioning, come descritto in dettaglio nella guida [Provisioning di dispositivi](~/ios/get-started/installation/device-provisioning/index.md#appservices). 
+- Se l'app usa i Servizi app, è necessario creare un profilo di provisioning, come descritto in dettaglio nella guida [Provisioning di dispositivi](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services). 
 
 Vedere la sezione [Limitazioni](#limitations) di questo documento per altre informazioni sulle limitazioni associate al provisioning gratuito e fare riferimento a [Panoramica della distribuzione di app Xamarin.iOS](~/ios/deploy-test/app-distribution/index.md) per altre informazioni sulla distribuzione di applicazioni iOS.
 
@@ -144,4 +144,4 @@ In questa guida sono stati illustrati i vantaggi e le limitazioni relativi all'u
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Provisioning di dispositivi](~/ios/get-started/installation/device-provisioning/index.md)
-- [Provisioning dei servizi delle applicazioni](~/ios/get-started/installation/device-provisioning/index.md#appservices)
+- [Provisioning dei servizi delle applicazioni](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services)
