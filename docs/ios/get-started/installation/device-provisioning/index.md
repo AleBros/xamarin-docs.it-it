@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 9721cc40319f0b4d6f0869eabccb84256122fb02
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f0d6d2343350455a101033aced7cec0c31695503
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785788"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353230"
 ---
 # <a name="device-provisioning-for-xamarinios"></a>Provisioning di dispositivi per Xamarin.iOS
 
@@ -29,7 +29,6 @@ Prima di distribuire l'applicazione in un dispositivo, è necessario avere una s
 - **Apple Developer Program**: Apple Developer Program consente sia a singoli sviluppatori sia a organizzazioni di sviluppare, testare e distribuire le app.
 - **Apple Developer Enterprise Program**: Apple Developer Enterprise Program è un programma più adatto alle organizzazioni che vogliono sviluppare e distribuire le app solo internamente. I membri del programma Enterprise non hanno accesso a iTunes Connect e le app create non possono essere pubblicate nell'App Store.
 
-
 Per registrarsi a uno di questi programmi, visitare il [portale Apple Developer](https://developer.apple.com/programs/enroll/). Si noti che per registrarsi come sviluppatore Apple, è necessario essere in possesso di un [ID Apple](https://appleid.apple.com/). In questa guida si presuppone di **essere** un membro di Apple Developer Program.
 
 In alternativa, Apple ha introdotto il [provisioning gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md) in Xcode 7 che consente di eseguire una singola applicazione in un unico dispositivo *senza* essere membro di Apple Developer Program. Se si effettua il provisioning in questo modo, esistono alcune limitazioni, come descritto [qui](~/ios/get-started/installation/device-provisioning/free-provisioning.md#limitations) nel dettaglio.
@@ -44,8 +43,6 @@ Quando un'applicazione viene distribuita in un dispositivo, nel dispositivo iOS 
 
 Questi passaggi servono a garantire che tutto ciò che viene creato o usato durante il processo di sviluppo, tra cui le applicazioni e i dispositivi, possano essere riconducibili a un account sviluppatore Apple.
 
-<a name="Provisioning_Profile" />
-
 ## <a name="provisioning-your-device"></a>Provisioning del dispositivo
 
 Esistono due modi per effettuare il provisioning del dispositivo iOS:
@@ -54,15 +51,12 @@ Esistono due modi per effettuare il provisioning del dispositivo iOS:
 
 * **Manualmente**: è possibile creare e gestire le identità di firma, gli ID app e i profili di provisioning tramite il portale Apple Developer, come descritto nella guida [Provisioning manuale](manual-provisioning.md). Questi elementi possono quindi essere gestiti come descritto nella guida [Apple Account Management](~/cross-platform/macios/apple-account-management.md) (Gestione degli account Apple).
 
-
-<a name="appservices" />
-
 ## <a name="provisioning-for-application-services"></a>Provisioning dei servizi per le applicazioni
 
 Apple offre una selezione di servizi speciali per le applicazioni, denominati anche funzionalità, che possono essere attivati per un'applicazione Xamarin.iOS. Questi servizi per le applicazioni devono essere configurati sia nel portale di provisioning iOS quando viene creato l'**ID app** sia nel file **Entitlements.plist** che è parte del progetto dell'applicazione Xamarin.iOS. Per informazioni sull'aggiunta dei servizi per le applicazioni all'app, vedere la guida [Introduction to Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) (Introduzione alle funzionalità) e la guida [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) (Uso degli entitlement).
 
 * Creare un ID app con i servizi app necessari.
-* Creare un nuovo [profilo di provisioning](#Provisioning_Profile) contenente tale ID app.
+* Creare un nuovo [profilo di provisioning](#provisioning-your-device) contenente tale ID app.
 * Impostare gli entitlement nel progetto Xamarin.iOS
 
 ## <a name="related-links"></a>Collegamenti correlati
