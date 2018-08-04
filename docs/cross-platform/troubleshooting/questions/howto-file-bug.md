@@ -4,45 +4,46 @@ description: Questo documento viene descritto quando, dove e come a un report su
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
-author: asb3993
-ms.author: amburns
-ms.date: 06/05/2018
-ms.openlocfilehash: b70fe29a79e099f1141c1295d907b48afaa2c3c7
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+author: conceptdev
+ms.author: crdun
+ms.date: 08/01/2018
+ms.openlocfilehash: f20740ff1e16187be3d3703b3da07329f6f52daf
+ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351606"
+ms.lasthandoff: 08/04/2018
+ms.locfileid: "39514338"
 ---
 # <a name="when-and-how-should-i-file-a-bug-report"></a>Come e quando è opportuno registrare un report sui bug?
 
-Segnala bug nei file di registro bug Bugzilla di Xamarin qui: [ https://bugzilla.xamarin.com/enter_bug.cgi?classification=__all ](https://bugzilla.xamarin.com/enter_bug.cgi?classification=__all).
+> [!TIP]
+> Usare la **segnalare un problema** voce di menu in Visual Studio &ndash; questa invierà le informazioni di diagnostica insieme ai report bug per consentire di risolvere il problema.
+>
+> Sono disponibili istruzioni dettagliate sul [Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) e [Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/report-a-problem).
+>
+> È possibile cercare i report esistenti nel [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) sito Web.
 
 ## <a name="file-a-bug-if"></a>Segnalare un bug se...
 
-Si dispone di una serie di passaggi si ritiene che i tecnici di Xamarin saranno possibile usare per riprodurre un problema causato da Xamarin.
+Si dispone di un set di passaggi si ritiene che i tecnici saranno possibile usare per riprodurre un problema.
 
 OR
 
 È possibile descrivere i sintomi del problema, visibili con cautela soprattutto se è possibile anche descrivere alcune circostanze precisi correlati al problema. <sup> [[1]](#note-1)</sup>
 
+## <a name="best-practices-to-help-address-bugs-quickly-and-efficiently"></a>Le procedure consigliate per correggere i bug rapidamente e in modo efficiente
 
-## <a name="best-practices-to-help-xamarin-address-bugs-quickly-and-efficiently"></a>Procedure consigliate per facilitare i bug di Xamarin indirizzo rapido ed efficiente
+1. <a name="ref-1" />Ricerca [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) e il web esistente bug report o suggerimenti sull'utilizzo che potrebbero risolvere il problema direttamente.<sup> [[2]](#note-2)</sup><sup>[[3]](#note-3)</sup>
 
+1. <a name="ref-2" />Descrivere il problema in modo chiaro e conciso possibile, inclusa una descrizione di ciò che si sono verificati ed è stata prevista.
 
-1. <a name="ref-1" />Ricerca [Bugzilla](https://bugzilla.xamarin.com/query.cgi?format=specific&amp;bug_status=__all__) e il web esistente bug report o suggerimenti sull'utilizzo che potrebbero risolvere il problema direttamente.<sup> [[2]](#note-2)</sup><sup>[[3]](#note-3)</sup>
-
-1. <a name="ref-2" />Seguire le [bug, la scrittura di linee guida](https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html) per descrivere il problema, come in modo chiaro e conciso possibile, inclusa una descrizione di cosa è successo ed è stato prevedeva come risultato.
-
-1. <a name="ref-3" />Includere le analisi dello stack pertinenti, testo messaggio di errore o log di arresto anomalo. <sup>[[4]](#note-4)</sup>
+1. <a name="ref-3" />Includere le analisi dello stack pertinenti, testo messaggio di errore o log di arresto anomalo (se si usa la **segnalare un problema** feature, questi possono essere inclusi automaticamente). <sup>[[4]](#note-4)</sup>
 
 1. <a name="ref-4" />Prendere nota di eventuali messaggi di errore importante visualizzate negli screenshot allegati come testo normale troppo.
 
 1. <a name="ref-5" />Includere un piccolo, indipendente test case che riproduca il bug con poco codice possibile.  Se non è possibile riprodurre il problema con un progetto nuovo (creato con uno dei modelli predefiniti), quindi, comprimere un progetto che dimostra il problema e allegarla al report sul bug.  Eseguire il progetto di esempio più semplice possibile prima di allegarlo. <sup> [[5]](#note-5)</sup><sup>[[6]](#note-6)</sup>
 
 1. <a name="ref-6" />Descrive l'ambiente in cui è stato rilevato il bug, tra cui il sistema operativo e [le versioni di Xamarin](~/cross-platform/troubleshooting/questions/version-logs.md) ed eventuali dipendenze.
-
----
 
 ## <a name="additional-details"></a>Dettagli aggiuntivi
 
@@ -55,13 +56,11 @@ OR
 1. <a name="note-4" />[*^*](#ref-4) Alcuni esempi di informazioni da includere:
 
     1. Per gli errori che si verificano quando si compila un progetto, includere l'intero [output di compilazione diagnostica](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output) nel report sul bug.
-    
-    1. Per gli errori che si verificano quando si compila o il debug di un progetto iOS da Visual Studio, eseguire _aiutare > Xamarin > Comprimi log_ dopo aver individuato l'errore e includere il file ZIP risultante in report sul bug.
-    
-    1. Per le eccezioni o arresti anomali nelle App Android o iOS, includere il relativo "[eseguire il Debug dei log per le app xamarin. Android e xamarin. IOS](~/cross-platform/troubleshooting/questions/version-logs.md#debug-logs-for-xamarin-apps)."
 
-1. <a name="note-5" />[*^*](#ref-5) Se possibile per un problema specifico, una possibilità eccellente è ricreare il problema aggiungendo un numero ridotto di file dalla soluzione originale in una soluzione nuova di zecca. Il team di Xamarin spesso sarà in grado di analizzare i problemi anche nei casi di test più grandi (presupponendo che sono illustrati chiaramente i passaggi per riprodurre), ma più semplice test case offrono che le migliori possibilità che il bug verrà risolto rapidamente.
+    1. Per gli errori che si verificano quando si compila o il debug di un progetto iOS da Visual Studio, eseguire **aiutare > Xamarin > Comprimi log** dopo aver individuato l'errore e includere il file ZIP risultante in report sul bug.
 
+    1. Per le eccezioni o arresti anomali nelle App Android o iOS, includere il relativo [eseguire il Debug dei log per le app xamarin. Android e xamarin. IOS](~/cross-platform/troubleshooting/questions/version-logs.md#debug-logs-for-xamarin-apps).
+
+1. <a name="note-5" />[*^*](#ref-5) Se possibile per un problema specifico, una delle opzioni è possibile ricreare il problema aggiungendo un numero ridotto di file dalla soluzione originale in una soluzione nuova di zecca. Il team di Xamarin spesso sarà in grado di analizzare i problemi anche nei casi di test più grandi (presupponendo che sono illustrati chiaramente i passaggi per riprodurre), ma più semplice test case offrono che le migliori possibilità che il bug verrà risolto rapidamente.
 
 1. <a name="note-6" />[*^*](#ref-6) Se si tratta _non_ possibili per riprodurre il problema aggiungendo un numero ridotto di file a una nuova soluzione, quindi è possibile comprimere e collegare la cartella intera soluzione per l'app completa. Eliminare il `bin`, `obj`, `Components`, e `packages` cartelle per rendere il file zip di file più piccoli. (L'IDE e il processo di compilazione verranno in genere ripristinare o ricreare il contenuto di queste cartelle in base alle esigenze). È anche possibile eliminare tante risorse e codice file dal progetto nel modo desiderato, purché la soluzione risultante Mostra comunque il problema originale.
-
