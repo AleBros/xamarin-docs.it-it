@@ -157,7 +157,7 @@ Effettua il pull di pull per aggiornare l'utente:
 
 ![](interactivity-images/refresh-start.png "ListView Pull per aggiornare In corso")
 
-Pull per aggiornare l'utente ha rilasciato il pull. Questo è ciò che l'utente vede quando si aggiorna elenco: ![ ] (interactivity-images/refresh-in-progress.png "ListView Pull, aggiornare completo")
+Pull per aggiornare l'utente ha rilasciato il pull. Questo è ciò che l'utente vede quando si aggiorna elenco: ![](interactivity-images/refresh-in-progress.png "ListView Pull, aggiornare completo")
 
 ListView espone alcuni eventi che consentono di rispondere agli eventi di pull per aggiornare.
 

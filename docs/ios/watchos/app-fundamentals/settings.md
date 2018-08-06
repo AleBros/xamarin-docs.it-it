@@ -63,7 +63,7 @@ var userName = shared.StringForKey ("name_preference");
 
 Gli utenti interagiscono con le impostazioni tramite la nuova **Apple Watch** app sul loro iPhone. Questa applicazione consente all'utente mostrare/nascondere le App in espressioni di controllo, nonché modificare le impostazioni esposte tramite il **impostazioni Watch.bundle**.
 
-![](settings-images/applewatch-1.png "Ad esempio le impostazioni dell'app") ![ ] (settings-images/applewatch-2.png "esempio delle impostazioni di app")
+![](settings-images/applewatch-1.png "Ad esempio le impostazioni dell'app") ![](settings-images/applewatch-2.png "esempio delle impostazioni di app")
 
 
 

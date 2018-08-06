@@ -19,7 +19,7 @@ ms.locfileid: "34787955"
 
 _iOS 9 supporta due delle applicazioni in esecuzione contemporaneamente, mediante diapositiva su o doppia visualizzazione. Supporta inoltre la riproduzione di immagini In Picture video._
 
-![](multitasking-images/about02-sml.png "Suddividere l'esempio di schermata") ![ ] (multitasking-images/about03-sml.png "in PAP esempio")
+![](multitasking-images/about02-sml.png "Suddividere l'esempio di schermata") ![](multitasking-images/about03-sml.png "in PAP esempio")
 
 iOS 9 aggiunge il supporto di multitasking per le due applicazioni in esecuzione nello stesso momento su iPad specifiche hardware. Il multitasking per iPad è supportato tramite le funzionalità seguenti:
 

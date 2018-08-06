@@ -21,7 +21,7 @@ MT. 1!d supporta la creazione di interfacce utente dichiarata in JSON. Quando gl
 
 MT. 1!d supporta l'intera gamma di funzionalità disponibili nell'API di elementi quando si utilizza JSON. Ad esempio, l'applicazione nella schermata seguente è completamente dichiarata usando JSON:
 
-[![](json-element-walkthrough-images/01-load-from-file.png "Ad esempio, l'applicazione in questo screenshot viene completamente dichiarata usando JSON") ](json-element-walkthrough-images/01-load-from-file.png#lightbox) [ ![ ] (json-element-walkthrough-images/01-load-from-file.png ", ad esempio, l'applicazione in questo screenshot viene completamente dichiarata usando JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
+[![](json-element-walkthrough-images/01-load-from-file.png "Ad esempio, l'applicazione in questo screenshot viene completamente dichiarata usando JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox) [![](json-element-walkthrough-images/01-load-from-file.png ", ad esempio, l'applicazione in questo screenshot viene completamente dichiarata usando JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
 Rivediamo l'esempio dal [procedura dettagliata sull'API elementi](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) esercitazione che illustra come aggiungere una schermata dei dettagli attività usando JSON.
 

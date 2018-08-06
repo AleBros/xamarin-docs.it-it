@@ -479,7 +479,7 @@ Le applicazioni risultante è simile alla seguente in ogni piattaforma:
 
 L'applicazione utilizza Progettazione dell'interfaccia utente di iOS-standard, ad esempio il pulsante 'Aggiungi' viene posizionato nella barra di spostamento e l'utilizzo predefinito **più (+)** icona. Viene inoltre utilizzato il valore predefinito `UINavigationController` pulsante "Indietro" comportamento e supporta 'scorrere per delete' nella tabella.
 
- [![](case-study-tasky-images/ios-taskylist.png "Inoltre utilizza le impostazioni predefinite UINavigationController pulsante Indietro e supporta scorrere per eliminare la tabella") ](case-study-tasky-images/ios-taskylist.png#lightbox) [ ![ ] (case-study-tasky-images/ios-taskylist.png "utilizza anche il valore predefinito UINavigationController il comportamento di un pulsante e supporta scorrere per eliminare la tabella")](case-study-tasky-images/ios-taskylist.png#lightbox)
+ [![](case-study-tasky-images/ios-taskylist.png "Inoltre utilizza le impostazioni predefinite UINavigationController pulsante Indietro e supporta scorrere per eliminare la tabella")](case-study-tasky-images/ios-taskylist.png#lightbox) [![](case-study-tasky-images/ios-taskylist.png "utilizza anche il valore predefinito UINavigationController il comportamento di un pulsante e supporta scorrere per eliminare la tabella")](case-study-tasky-images/ios-taskylist.png#lightbox)
 
  <a name="Android" />
 
@@ -495,7 +495,7 @@ L'app Android utilizza controlli incorporati, incluso il layout predefinito per 
 
 L'app di Windows Phone utilizza il layout standard, la compilazione sulla barra dell'app nella parte inferiore dello schermo anziché una barra di navigazione nella parte superiore.
 
- [![](case-study-tasky-images/wp-taskylist.png "L'app di Windows Phone utilizza il layout standard, la barra dell'app nella parte inferiore dello schermo anziché una barra di navigazione nella parte superiore di compilazione") ](case-study-tasky-images/wp-taskylist.png#lightbox) [ ![ ] (case-study-tasky-images/wp-taskylist.png "app di Windows Phone utilizza lo standard layout, la barra dell'app nella parte inferiore dello schermo anziché una barra di navigazione nella parte superiore di compilazione")](case-study-tasky-images/wp-taskylist.png#lightbox)
+ [![](case-study-tasky-images/wp-taskylist.png "L'app di Windows Phone utilizza il layout standard, la barra dell'app nella parte inferiore dello schermo anziché una barra di navigazione nella parte superiore di compilazione")](case-study-tasky-images/wp-taskylist.png#lightbox) [![](case-study-tasky-images/wp-taskylist.png "app di Windows Phone utilizza lo standard layout, la barra dell'app nella parte inferiore dello schermo anziché una barra di navigazione nella parte superiore di compilazione")](case-study-tasky-images/wp-taskylist.png#lightbox)
 
  <a name="Summary" />
 

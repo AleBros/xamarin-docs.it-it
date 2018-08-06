@@ -116,7 +116,7 @@ Consentire di creare un'applicazione semplice che mostra le notifiche locali in 
 
 1. Infine, eseguire l'applicazione. In iOS 8 sarà per consentire le notifiche. Fare clic su **OK** e quindi fare clic sui **aggiungere notifica** pulsante. Dopo una breve pausa dovrebbe essere la finestra di dialogo di avviso, come illustrato negli screenshot seguenti:
 
-    ![](local-notifications-in-ios-walkthrough-images/image0.png "Per confermare la possibilità di inviare notifiche") ![ ] (local-notifications-in-ios-walkthrough-images/image1.png "pulsante di notifica aggiungere") ![ ] (local-notifications-in-ios-walkthrough-images/image2.png "la finestra di dialogo Avviso di notifica")
+    ![](local-notifications-in-ios-walkthrough-images/image0.png "Per confermare la possibilità di inviare notifiche") ![](local-notifications-in-ios-walkthrough-images/image1.png "pulsante di notifica aggiungere") ![](local-notifications-in-ios-walkthrough-images/image2.png "la finestra di dialogo Avviso di notifica")
 
 ## <a name="summary"></a>Riepilogo
 

@@ -49,7 +49,7 @@ Schermate modale possono essere un singolo scena oppure utilizzare un layout di 
 
 Visualizza automaticamente come uno stack che è possibile spostarsi all'indietro, in modo analogo a quello che `UINavigationController` utilizzabile in iOS. Scene possono essere inserite nello stack di navigazione e dallo (a livello di codice o dalla selezione dell'utente).
 
-![](navigation-images/hierarchy-1.png "Scene possono essere inserite nello stack di navigazione") ![ ] (navigation-images/hierarchy-2.png "scene possono essere estratto dallo stack di navigazione")
+![](navigation-images/hierarchy-1.png "Scene possono essere inserite nello stack di navigazione") ![](navigation-images/hierarchy-2.png "scene possono essere estratto dallo stack di navigazione")
 
 Come con iOS, una scorrere bordo sinistro consente di passare al controller padre in uno stack di navigazione gerarchica.
 
@@ -94,7 +94,7 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 Interfacce basate su pagina scorrere verso sinistra a destra, simile a quello `UIPageViewController` utilizzabile in iOS. Punti di indicatore vengono visualizzati nella parte inferiore della schermata per visualizzare la pagina è attualmente visualizzata.
 
-![](navigation-images/paged-1.png "Prima pagina di esempio") ![ ] (navigation-images/paged-2.png "seconda pagina di esempio") ![ ] (navigation-images/paged-5.png "quinta pagina di esempio")
+![](navigation-images/paged-1.png "Prima pagina di esempio") ![](navigation-images/paged-2.png "seconda pagina di esempio") ![](navigation-images/paged-5.png "quinta pagina di esempio")
 
 
 Affinché l'interfaccia utente principale per l'applicazione di espressioni di controllo a un'interfaccia basata su pagina, utilizzare `ReloadRootControllers` con una matrice di controller di interfaccia e i contesti:

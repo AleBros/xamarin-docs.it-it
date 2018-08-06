@@ -29,7 +29,7 @@ In questo articolo apprenderanno tutti questi argomenti, offrendo una solida bas
 
 Per illustrare un protocolli e i delegati, verrà creata un'applicazione semplice mappa che aggiunge un'annotazione a una mappa, come illustrato di seguito:
 
- [![](delegates-protocols-and-events-images/01-map.png "Un esempio di un'applicazione semplice mappa che aggiunge un'annotazione a una mappa") ](delegates-protocols-and-events-images/01-map.png#lightbox) [ ![ ] (delegates-protocols-and-events-images/04-annotation-with-callout.png "un'annotazione di esempio aggiunta a una mappa")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+ [![](delegates-protocols-and-events-images/01-map.png "Un esempio di un'applicazione semplice mappa che aggiunge un'annotazione a una mappa")](delegates-protocols-and-events-images/01-map.png#lightbox) [![](delegates-protocols-and-events-images/04-annotation-with-callout.png "un'annotazione di esempio aggiunta a una mappa")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 Prima di affrontare questa app, è possibile iniziare subito, esaminando gli eventi .NET sotto il UIKit.
 

@@ -121,7 +121,7 @@ Progetti di applicazione specifico della piattaforma fa riferimento il codice co
 
 I progetti di applicazione ogni fare riferimento a progetto condiviso e contengono il codice dell'interfaccia utente necessario per le funzionalità presente all'utente, come illustrato in queste schermate:
 
-![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "L'applicazione progetti ogni riferimento a progetto condiviso") ![ ] (setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "l'applicazione progetti ogni riferimento a progetto condiviso")
+![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "L'applicazione progetti ogni riferimento a progetto condiviso") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "l'applicazione progetti ogni riferimento a progetto condiviso")
 
 
 Esempi specifici di come strutturare i progetti utilizzati in case study.

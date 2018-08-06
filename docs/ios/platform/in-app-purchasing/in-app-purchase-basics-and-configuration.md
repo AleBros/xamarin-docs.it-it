@@ -109,8 +109,8 @@ Fare clic su **acquisti In-App** per creare o modificare i prodotti in vendita. 
 
 Processo di aggiunta di nuovi prodotti prevede due passaggi:
 
-1.   Scegliere il tipo di prodotto: [ ![ ] (in-app-purchase-basics-and-configuration-images/image8.png "scegliere il tipo di prodotto")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
-2.   Immettere gli attributi dei prodotti, tra cui l'Id prodotto, piano tariffario e descrizioni localizzate: [ ![ ] (in-app-purchase-basics-and-configuration-images/image9.png "immettere gli attributi di prodotti")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
+1.   Scegliere il tipo di prodotto: [![](in-app-purchase-basics-and-configuration-images/image8.png "scegliere il tipo di prodotto")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
+2.   Immettere gli attributi dei prodotti, tra cui l'Id prodotto, piano tariffario e descrizioni localizzate: [![](in-app-purchase-basics-and-configuration-images/image9.png "immettere gli attributi di prodotti")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 I campi necessari per ogni prodotto di acquisto in-app sono descritti di seguito:
 
