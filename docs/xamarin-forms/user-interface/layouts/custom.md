@@ -409,8 +409,8 @@ Quando la pagina contenente le `WrapLayout` viene visualizzata, l'applicazione d
 Gli screenshot seguenti viene illustrato il `WrapLayout` dopo che è stato ruotato l'orientamento orizzontale:
 
 ![](custom-images/landscape-ios.png "IOS Screenshot orizzontale dell'applicazione di esempio")
-![](custom-images/landscape-android.png "Screenshot orizzontale dell'applicazione Android di esempio") 
- ![ ] (custom-images/landscape-uwp.png " Screenshot di orizzontale dell'applicazione di esempio UWP")
+![](custom-images/landscape-android.png "Screenshot orizzontale dell'applicazione Android di esempio")
+![](custom-images/landscape-uwp.png " Screenshot di orizzontale dell'applicazione di esempio UWP")
 
 Il numero di colonne in ogni riga dipende la dimensione di foto, la larghezza dello schermo e il numero di pixel per ogni unità indipendenti dal dispositivo. Il [ `Image` ](xref:Xamarin.Forms.Image) elementi caricare in modo asincrono le foto e pertanto il `WrapLayout` classe riceverà chiamate frequenti al relativo [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) metodo come ognuno `Image` elemento riceve una nuova dimensione di base la foto caricata.
 
