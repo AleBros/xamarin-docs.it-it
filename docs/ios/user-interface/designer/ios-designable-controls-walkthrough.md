@@ -1,34 +1,34 @@
 ---
-title: Utilizzo di controlli personalizzati con la finestra di progettazione iOS
-description: Questo documento viene descritto come creare un controllo personalizzato e usarlo con la finestra di progettazione di Xamarin per iOS. Viene illustrato come rendere disponibile il controllo nella casella degli strumenti della finestra di progettazione iOS, implementare il controllo in modo che esegue il rendering correttamente e la progettazione e altre funzionalità.
+title: Uso di controlli personalizzati con iOS Designer
+description: Questo documento descrive come creare un controllo personalizzato e usarlo con la finestra di progettazione di Xamarin per iOS. Viene illustrato come rendere disponibile il controllo nella casella degli strumenti della finestra di progettazione iOS, implementare il controllo in modo da poter sviluppare correttamente e la progettazione e altre funzionalità.
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: dae675d65cb2be93ac828a1aebe560354630ab54
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 0097cdf006944a51d938ea91d3ea0b0c2aee08cf
+ms.sourcegitcommit: bf51592be39b2ae3d63d029be1d7745ee63b0ce1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790165"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39573581"
 ---
-# <a name="using-custom-controls-with-the-ios-designer"></a>Utilizzo di controlli personalizzati con la finestra di progettazione iOS
+# <a name="using-custom-controls-with-the-ios-designer"></a>Uso di controlli personalizzati con iOS Designer
 
 ## <a name="requirements"></a>Requisiti
 
 La finestra di progettazione di Xamarin per iOS è disponibile in Visual Studio per Mac e Visual Studio 2015 e 2017 in Windows.
 
-Questa guida si presuppone una certa familiarità con il contenuto incluso nel [Getting Started Guide](~/ios/get-started/index.md).
+Questa guida presuppone una familiarità con il contenuto illustrato nel [Guida introduttiva descrive](~/ios/get-started/index.md).
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
 > [!IMPORTANT]
-> A partire da Xamarin.Studio 5.5, il modo in cui vengono creati controlli personalizzati è leggermente diverso per le versioni precedenti. Per creare un controllo personalizzato, sia il `IComponent` interfaccia è obbligatoria (con i metodi di implementazione associata) o la classe può essere annotata con `[DesignTimeVisible(true)]`. Il secondo metodo è utilizzato nell'esempio seguente questa procedura dettagliata.
+> Il modo in cui vengono creati i controlli personalizzati a partire da xamarin Studio 5.5, è leggermente diverso rispetto a versioni precedenti. Per creare un controllo personalizzato, ovvero il `IComponent` interfaccia è necessaria (con i metodi di implementazione associata) o la classe può essere annotata con `[DesignTimeVisible(true)]`. Il secondo metodo è utilizzato nell'esempio seguente questa procedura dettagliata.
 
 
-1. Creare una nuova soluzione dal **iOS > App > singola vista > c#** modello, il nome `ScratchTicket`e continuare con la creazione guidata nuovo progetto:
+1. Creare una nuova soluzione dal **iOS > App > Single View Application > c#** modello, denominarlo `ScratchTicket`e continuare tramite la procedura guidata nuovo progetto:
 
     [![](ios-designable-controls-walkthrough-images/01new.png "Creare una nuova soluzione")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
 
@@ -158,60 +158,60 @@ Questa guida si presuppone una certa familiarità con il contenuto incluso nel [
     ```
 
 
-1. Aggiungere il `FillTexture.png`, `FillTexture2.png` e `Monkey.png` file (disponibile [da GitHub](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) per il **risorse** cartella.
+1. Aggiungere il `FillTexture.png`, `FillTexture2.png` e `Monkey.png` i file (disponibile [da GitHub](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) per il **risorse** cartella.
     
-1. Fare doppio clic su di `Main.storyboard` file per aprirlo nella finestra di progettazione:
+1. Fare doppio clic il `Main.storyboard` file per aprirlo nella finestra di progettazione:
 
-    [![](ios-designable-controls-walkthrough-images/03new.png "Finestra di progettazione iOS")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/03new.png "IOS Designer")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
 
 
-1. Trascinamento della selezione un **visualizzazione immagine** dal **della casella degli strumenti** sulla visualizzazione dello storyboard.
+1. Trascinamento della selezione un **Visualizza immagine** dalle **della casella degli strumenti** alla visualizzazione nello storyboard.
 
     [![](ios-designable-controls-walkthrough-images/04new.png "Visualizzazione di un'immagine aggiunti al layout")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
 
 
-1. Selezionare il **visualizzazione immagine** e modificare il relativo **immagine** proprietà `Monkey.png`.
+1. Selezionare il **Visualizza immagine** e modificare relativo **immagine** proprietà `Monkey.png`.
 
-    [! [] (ios-possa-controlli-procedura dettagliata-immagini/05new.png "immagine della visualizzazione immagine impostazione proprietà Monkey.png)](ios-designable-controls-walkthrough-images/05new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/05new.png "Impostazione di proprietà di immagine della visualizzazione immagine su Monkey.png")](ios-designable-controls-walkthrough-images/05new.png#lightbox)
 
     
-1. Come si sono usando le classi di dimensioni è necessario limitare la visualizzazione dell'immagine. Fare clic sull'immagine due volte per attivare la modalità di vincolo. Di seguito vincolarlo al centro facendo l'handle di blocco al centro e lo allinea sia verticalmente che orizzontalmente:
+1. Perché si usa le classi di dimensioni è necessario limitare la visualizzazione di immagini. Fare clic sull'immagine di due volte per inserirlo nella modalità di vincolo. Verrà ora vincolarla in Centro facendo l'handle del centro di blocco e lo allinea sia verticalmente che orizzontalmente:
 
     [![](ios-designable-controls-walkthrough-images/06new.png "Centrare l'immagine")](ios-designable-controls-walkthrough-images/06new.png#lightbox)
 
-1. Per vincolare l'altezza e la larghezza, fare clic sugli handle di dimensioni di blocco (l'handle 'ossa' forma) e selezionare larghezza e altezza, rispettivamente:
+1. Per vincolare l'altezza e la larghezza, fare clic sugli handle di dimensioni di blocco (gli handle a forma di "ossa") e selezionare la larghezza e altezza rispettivamente:
 
     [![](ios-designable-controls-walkthrough-images/07new.png "Aggiunta di vincoli")](ios-designable-controls-walkthrough-images/07new.png#lightbox)
 
 
-1. Aggiornare il frame in base ai vincoli facendo clic sul pulsante Aggiorna sulla barra degli strumenti:
+1. Aggiornare il frame basato sui vincoli facendo clic sul pulsante Aggiorna sulla barra degli strumenti:
 
     [![](ios-designable-controls-walkthrough-images/08new.png "La barra degli strumenti di vincoli")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
 
 
-1. Successivamente, compilare il progetto in modo che il **Scratch vista Ticket** verrà visualizzato in **componenti personalizzati** nella casella degli strumenti:
+1. Successivamente, compilare il progetto in modo che il **Scratch Visualizza Ticket** verrà visualizzato sotto **componenti personalizzati** della casella degli strumenti:
 
     [![](ios-designable-controls-walkthrough-images/09new.png "La casella degli strumenti di componenti personalizzati")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
 
 
-1. Trascinare e rilasciare un **Scratch vista Ticket** in modo che venga visualizzato sull'immagine monkey. Modificare gli handle di trascinamento in modo che la visualizzazione di Ticket Scratch copre il monkey completamente, come illustrato di seguito:
+1. Trascinare e rilasciare un **Scratch Visualizza Ticket** in modo che venga visualizzato sull'immagine monkey. Regolare gli handle di trascinamento in modo che la visualizzazione di Ticket Scratch copre il monkey completamente, come illustrato di seguito:
 
-    [![](ios-designable-controls-walkthrough-images/10new.png "Una vista di Ticket di lavoro tramite la visualizzazione di immagini")](ios-designable-controls-walkthrough-images/10new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/10new.png "Una visualizzazione di file temporanei Ticket tramite la visualizzazione di immagini")](ios-designable-controls-walkthrough-images/10new.png#lightbox)
 
-1. Limitare la visualizzazione di Ticket di memoria virtuale per la visualizzazione di immagini disegnando un rettangolo di delimitazione per selezionare entrambe le visualizzazioni. Selezionare le opzioni per vincolare il frame di larghezza, altezza, Centra e intermedio e aggiornamento in base a vincoli, come illustrato di seguito:
+1. Limitare la visualizzazione di Ticket dei file temporanei per la visualizzazione di immagini trascinando un rettangolo di delimitazione per selezionare entrambe le visualizzazioni. Selezionare le opzioni per vincolarla in frame larghezza, altezza, Center e centro e update in base ai vincoli, come illustrato di seguito:
 
-    [![](ios-designable-controls-walkthrough-images/11new.png "Centratura e aggiunta di vincoli")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/11new.png "Allineamento al centro dei e aggiunta di vincoli")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
 
 
-1. Eseguire l'applicazione e "scratch off" l'immagine per rivelare il monkey.
+1. Eseguire l'applicazione e "zero" off sull'immagine per rivelare il monkey.
 
-    [![](ios-designable-controls-walkthrough-images/10-app.png "Eseguire un'app di esempio")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/10-app.png "Esecuzione di un'app di esempio")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
-## <a name="adding-design-time-properties"></a>Aggiunta di proprietà in fase di progettazione
+## <a name="adding-design-time-properties"></a>Aggiunta di proprietà Design-Time
 
-La finestra di progettazione include anche il supporto in fase di progettazione per controlli personalizzati di proprietà tipo numerici, enumerazione, string, bool, CGSize, UIColor e UIImage. Per dimostrare, aggiungere una proprietà per il `ScratchTicketView` per impostare l'immagine che tal "caso off."
+La finestra di progettazione include anche il supporto in fase di progettazione per i controlli personalizzati del tipo numeric proprietà enumerazione, string, bool, CGSize, le proprietà UIColor e UIImage. Per una dimostrazione, è possibile aggiungere una proprietà di `ScratchTicketView` per impostare l'immagine che è "grattato off."
 
-Aggiungere il codice seguente per la `ScratchTicketView` classe per la proprietà:
+Aggiungere il codice seguente per il `ScratchTicketView` classe per la proprietà:
 
 ```csharp
 [Export("Image"), Browsable(true)]
@@ -225,7 +225,7 @@ public UIImage Image
 }
 ```
 
-È inoltre possibile aggiungere un controllo null per il `Draw` (metodo), come illustrato di seguito:
+Potremmo anche voler aggiungere un controllo null per il `Draw` metodo, come illustrato di seguito:
 
 ```csharp
 public override void Draw(CGRect rect)
@@ -265,13 +265,13 @@ public override void Draw(CGRect rect)
 }
 ```
 
-Tra cui un `ExportAttribute` e `BrowsableAttribute` con l'argomento impostato su `true` comporta la proprietà viene visualizzata nella finestra di progettazione **proprietà** pannello. Modifica della proprietà a un'altra immagine inclusa con il progetto, ad esempio `FillTexture2.png`, comporta l'aggiornamento del controllo in fase di progettazione, come illustrato di seguito:
+Tra cui un' `ExportAttribute` e una `BrowsableAttribute` con l'argomento impostato su `true` comporterà la proprietà viene visualizzata nella finestra di progettazione **proprietà** pannello. Modifica la proprietà su un'altra immagine inclusa nel progetto, ad esempio `FillTexture2.png`, comporta l'aggiornamento di controllo in fase di progettazione, come illustrato di seguito:
 
- [![](ios-designable-controls-walkthrough-images/11-customproperty.png "Modifica le proprietà in fase di progettazione")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
+ [![](ios-designable-controls-walkthrough-images/11-customproperty.png "Modifica di proprietà in fase di progettazione")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stato illustrato come creare un controllo personalizzato, nonché di usarla in un'applicazione iOS utilizzando la finestra di progettazione iOS. È stato illustrato come creare e compilare il controllo per renderlo disponibile per un'applicazione nella finestra di progettazione **della casella degli strumenti**. Inoltre, è stato illustrato come implementare il controllo in modo che esegue il rendering correttamente in fase di progettazione e runtime, nonché come esporre le proprietà del controllo personalizzato nella finestra di progettazione.
+In questo articolo viene descritto come creare un controllo personalizzato e come usarla in un'applicazione iOS con iOS designer. È stato illustrato come creare e compilare il controllo per renderlo disponibile per un'applicazione nella finestra di progettazione **casella degli strumenti**. Inoltre, è stato illustrato come implementare il controllo in modo che esegue il rendering correttamente in fase di progettazione e runtime, nonché come esporre le proprietà di controllo personalizzato nella finestra di progettazione.
 
 
 

@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: conceptdev
 ms.author: crdun
-ms.date: 07/18/2018
-ms.openlocfilehash: 82a73619e4c0507e8857cc91d88ababa870013de
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 08/06/2018
+ms.openlocfilehash: 98b5786ae4f071b4d8e8f854561db97aee037fdc
+ms.sourcegitcommit: aa7b0182d117e2af66ffaa4fa29b8c214ceecae1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270472"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39520285"
 ---
 # <a name="sharing-code-overview"></a>Panoramica del codice di condivisione
 
@@ -19,7 +19,7 @@ _Questo documento consente di confrontare i diversi metodi di condivisione del c
 
 Esistono tre metodi per condividere codice tra le applicazioni multi-piattaforma:
 
-- [**Le librerie .NET standard** ](#Net_Standard) : i progetti .NET Standard può implementare il codice per essere condivisi tra più piattaforme e possono accedere a un numero elevato di API .NET (a seconda della versione). Implementare standard 1.0-1.6 .NET progressivamente più ampio set di API, mentre .NET Standard 2.0 offre la migliore copertura di.
+- [**Le librerie .NET standard** ](#Net_Standard) : i progetti .NET Standard può implementare il codice per essere condivisi tra più piattaforme e possono accedere a un numero elevato di API .NET (a seconda della versione). .NET standard 1.0-1.6 implementare progressivamente più ampio set di API, mentre .NET Standard 2.0 offre la migliore copertura della libreria di classi base .NET (incluse le API di .NET disponibili nelle App Xamarin).
 - [**Progetti condivisi** ](#Shared_Projects) : usare il tipo di progetto di Asset condivisi per organizzare il codice sorgente e usare `#if` direttive del compilatore come richiesto per gestire i requisiti specifici della piattaforma.
 - [**Librerie di classi portabili** ](#Portable_Class_Libraries) (deprecata): librerie di classi portabili (librerie di classi portabili) può interagire con più piattaforme con una superficie API comune e utilizzare le interfacce per fornire funzionalità specifiche della piattaforma. Librerie di classi portabili sono deprecati nelle versioni più recenti di Visual Studio &ndash; alternativa, usare .NET Standard.
 
