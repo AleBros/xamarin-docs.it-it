@@ -1,37 +1,37 @@
 ---
 title: Disegnare un cerchio semplice in SkiaSharp
-description: In questo articolo vengono illustrate le nozioni di disegno SkiaSharp, tra aree e paint, nelle applicazioni di xamarin. Forms e viene illustrato quanto descritto con codice di esempio.
+description: Questo articolo illustra le nozioni di base di disegno di SkiaSharp, tra cui Canvas e paint, nelle applicazioni xamarin. Forms e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 68085894e0e4783a3a16428d331b6993ab967c5a
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: e06a1310fad01da11c8d8b115df504cc19426344
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243584"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615223"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Disegnare un cerchio semplice in SkiaSharp
 
-_Nozioni di base del disegno SkiaSharp, tra cui aree e paint_
+_Scopri le nozioni di base di disegno di SkiaSharp, tra cui Canvas e disegno_
 
-In questo articolo vengono illustrati i concetti di creazione di elementi grafici in xamarin. Forms usando SkiaSharp, inclusa la creazione di un `SKCanvasView` oggetto per ospitare la grafica, la gestione di `PaintSurface` evento e utilizzando un `SKPaint` oggetto per specificare il colore e l'altro disegno attributi.
+Questo articolo vengono illustrati i concetti di creazione grafica in xamarin. Forms con SkiaSharp, compresa la creazione di un' `SKCanvasView` oggetto per ospitare la grafica, la gestione di `PaintSurface` evento e l'utilizzo un `SKPaint` oggetto per specificare colori e altri disegno attributi.
 
-Il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma contiene tutto il codice di esempio per questa serie di articoli SkiaSharp. La prima pagina è autorizzata a utilizzare **cerchio semplice** e richiama la classe page [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Questo codice viene illustrato come disegnare un cerchio al centro della pagina con un raggio di 100 pixel. La struttura del cerchio rossa, e l'interno del cerchio blu.
+Il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma contiene tutto il codice di esempio per questa serie di articoli di SkiaSharp. La prima pagina è autorizzata a utilizzare **cerchio semplice** e richiama la classe delle pagine [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Questo codice illustra come disegnare un cerchio al centro della pagina con un raggio pari a 100 pixel. Il contorno del cerchio è rosso e l'interno del cerchio è blu.
 
 ![](circle-images/circleexample.png "Un cerchio blu evidenziato in rosso")
 
-Il [ `SimpleCirle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) pagina classe deriva da `ContentPage` e contiene due `using` direttive per gli spazi dei nomi SkiaSharp:
+Il [ `SimpleCirle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) deriva dalla classe di pagina `ContentPage` e contiene due `using` le direttive per gli spazi dei nomi di SkiaSharp:
 
 ```csharp
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 ```
 
-Il costruttore della classe seguente crea un [ `SKCanvasView` ](https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.SKCanvasView/) oggetto, che associa un gestore per il [ `PaintSurface` ](https://developer.xamarin.com/api/event/SkiaSharp.Views.Forms.SKCanvasView.PaintSurface/) evento e imposta il `SKCanvasView` oggetto come il contenuto della pagina:
+Crea il seguente costruttore della classe un' [ `SKCanvasView` ](https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.SKCanvasView/) oggetto, collega un gestore per il [ `PaintSurface` ](https://developer.xamarin.com/api/event/SkiaSharp.Views.Forms.SKCanvasView.PaintSurface/) evento e imposta il `SKCanvasView` oggetto come il contenuto della pagina:
 
 ```csharp
 public SimpleCirclePage()
@@ -44,9 +44,9 @@ public SimpleCirclePage()
 }
 ```
 
-Il `SKCanvasView` occupa l'intera area del contenuto della pagina. In alternativa, è possibile combinare un `SKCanvasView` con altri xamarin. Forms `View` derivati, come si noterà negli altri esempi.
+Il `SKCanvasView` occupa l'intera area del contenuto della pagina. In alternativa, è possibile combinare un `SKCanvasView` con altri xamarin. Forms `View` derivati, come si vedrà in altri esempi.
 
-Il `PaintSurface` gestore eventi è in cui si tutti il disegno. Questo metodo viene in genere chiamato più volte durante l'esecuzione del programma, pertanto è necessario mantenere tutte le informazioni necessarie per ricreare il grafico visualizzato:
+Il `PaintSurface` gestore dell'evento è in cui si svolgono tutti il disegno. Questo metodo viene chiamato in genere più volte durante l'esecuzione del programma, pertanto è necessario gestire tutte le informazioni necessarie per ricreare il grafico visualizzato:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -56,16 +56,16 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-Il [ `SKPaintSurfaceEventArgs` ](https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs/) oggetto che accompagna l'evento ha due proprietà:
+Il [ `SKPaintSurfaceEventArgs` ](https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs/) che accompagna l'evento ha due proprietà:
 
 - [`Info`](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Info/) di tipo [`SKImageInfo`](https://developer.xamarin.com/api/type/SkiaSharp.SKImageInfo/)
 - [`Surface`](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Surface/) di tipo [`SKSurface`](https://developer.xamarin.com/api/type/SkiaSharp.SKSurface/)
 
-Il `SKImageInfo` struttura contiene informazioni sulla superficie di disegno, in particolare, è la larghezza e altezza in pixel. Il `SKSurface` oggetto rappresenta la superficie di disegno. In questo programma, l'area di disegno è un video, ma in altri programmi un `SKSurface` oggetto può anche rappresentare una bitmap che si utilizzano SkiaSharp sul quale per disegnare.
+Il `SKImageInfo` struttura contiene informazioni sulla superficie di disegno, in particolare, è la larghezza e altezza in pixel. Il `SKSurface` oggetto rappresenta l'area di disegno. In questo programma, l'area di disegno è uno schermo video, ma in altri programmi un `SKSurface` oggetto può anche rappresentare una bitmap che si usano SkiaSharp su cui per disegnare.
 
-La proprietà più importante di `SKSurface` è [ `Canvas` ](https://developer.xamarin.com/api/property/SkiaSharp.SKSurface.Canvas/) di tipo [ `SKCanvas` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCanvas/). Questa classe è un contesto che consente di eseguire il disegno effettivo grafiche. Il `SKCanvas` uno stato di grafica, che include le trasformazioni di grafica e il ritaglio incapsulata dall'oggetto.
+La proprietà più importante della `SKSurface` viene [ `Canvas` ](https://developer.xamarin.com/api/property/SkiaSharp.SKSurface.Canvas/) di tipo [ `SKCanvas` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCanvas/). Questa classe è una disegno contesto utilizzato per eseguire il disegno effettivo delle immagini. Il `SKCanvas` uno stato di grafica, che include le trasformazioni di grafica e il ridimensionamento incapsulato dall'oggetto.
 
-Ecco un avvio tipico di un `PaintSurface` gestore eventi:
+Ecco un tipico inizio di un `PaintSurface` gestore dell'evento:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -82,7 +82,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Il [ `Clear` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Clear()/) metodo cancella l'area di disegno con un colore trasparente. Un overload consente di specificare un colore di sfondo per l'area di disegno.
 
-L'obiettivo è per disegnare un cerchio rosso contenente blu. Poiché questo particolare immagine contiene due colori diversi, il processo deve essere eseguita in due passaggi. Il primo passaggio consiste nella disegnare la struttura del cerchio. Per specificare il colore e altre caratteristiche della linea, è necessario creare e inizializzare un [ `SKPaint` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPaint/) oggetto:
+L'obiettivo qui è per disegnare un cerchio rosso contenente blu. Poiché questa particolare immagine grafica contiene due colori diversi, il processo deve essere eseguita in due passaggi. Il primo passaggio è per disegnare il contorno del cerchio. Per specificare il colore e altre caratteristiche della linea, creare e inizializzare un' [ `SKPaint` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPaint/) oggetto:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -98,19 +98,19 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Il [ `Style` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.Style/) proprietà indica che si desidera *tratto* una riga (in questo caso, la struttura del cerchio) anziché *riempimento* l'interno. I tre membri del [ `SKPaintStyle` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPaintStyle/) enumerazione sono i seguenti:
+Il [ `Style` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.Style/) proprietà indica che si desidera *stroke* una riga, in questo caso il contorno del cerchio, anziché *riempimento* l'interno. I tre membri del [ `SKPaintStyle` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPaintStyle/) enumerazione sono i seguenti:
 
 - [`Fill`](https://developer.xamarin.com/api/field/SkiaSharp.SKPaintStyle.Fill/)
 - [`Stroke`](https://developer.xamarin.com/api/field/SkiaSharp.SKPaintStyle.Stroke/)
 - [`StrokeAndFill`](https://developer.xamarin.com/api/field/SkiaSharp.SKPaintStyle.StrokeAndFill/)
 
-Il valore predefinito è `Fill`. Utilizzare la terza opzione per tracciare la riga e riempire l'area interna con lo stesso colore.
+Il valore predefinito è `Fill`. Utilizzare la terza opzione per disegnare la linea e riempire l'area interna con lo stesso colore.
 
-Impostare il [ `Color` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.Color/) su un valore di tipo [ `SKColor` ](https://developer.xamarin.com/api/type/SkiaSharp.SKColor/). Un modo per ottenere un `SKColor` è convertendo un xamarin. Forms `Color` valore un `SKColor` valore utilizzando il metodo di estensione [ `ToSKColor` ](https://developer.xamarin.com/api/member/SkiaSharp.Views.Forms.Extensions.ToSKColor/p/Xamarin.Forms.Color/). Il [ `Extensions` ](https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.Extensions/) classe il `SkiaSharp.Views.Forms` spazio dei nomi include altri metodi di conversione tra i valori di xamarin. Forms e SkiaSharp.
+Impostare il [ `Color` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.Color/) la proprietà su un valore di tipo [ `SKColor` ](https://developer.xamarin.com/api/type/SkiaSharp.SKColor/). Un modo per ottenere un `SKColor` valore è convertendo un xamarin. Forms `Color` valore a un `SKColor` valore usando il metodo di estensione [ `ToSKColor` ](https://developer.xamarin.com/api/member/SkiaSharp.Views.Forms.Extensions.ToSKColor/p/Xamarin.Forms.Color/). Il [ `Extensions` ](https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.Extensions/) classe la `SkiaSharp.Views.Forms` dello spazio dei nomi include altri metodi per la conversione tra valori di xamarin. Forms e SkiaSharp.
 
-Il [ `StrokeWidth` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeWidth/) proprietà indica lo spessore della linea. Di seguito viene impostato su 25 pixel.
+Il [ `StrokeWidth` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeWidth/) proprietà indica lo spessore della linea. In questo caso è impostato su 25 pixel.
 
-Utilizzare che `SKPaint` oggetto su cui disegnare il cerchio:
+Che è utilizzare `SKPaint` oggetto su cui disegnare il controllo circle:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -121,11 +121,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Vengono specificate le coordinate rispetto all'angolo superiore sinistro dell'area di visualizzazione. Le coordinate X aumento a destra e aumento delle coordinate Y risulti non disponibile. Nella discussione sulla grafica, la notazione matematica (x, y) viene spesso utilizzata per indicare un punto. Il punto (0, 0) è l'angolo superiore sinistro dell'area di visualizzazione e spesso viene chiamato il *origine*.
+Coordinate vengono specificate in relazione all'angolo superiore sinistro dell'area di visualizzazione. X coordina l'aumento a destra e aumento delle coordinate Y verso la parte inferiore. Nella descrizione informazioni sugli elementi grafici, la notazione matematica (x, y) viene spesso utilizzata per indicare un punto. Il punto (0, 0) è l'angolo superiore sinistro dell'area di visualizzazione e viene spesso definito di *origin*.
 
-I primi due argomenti di `DrawCircle` indicano le coordinate X e Y del centro del cerchio. Questi sono assegnati a metà larghezza e altezza dell'area di visualizzazione per inserire il centro del cerchio al centro dell'area di visualizzazione. Il terzo argomento consente di specificare il raggio del cerchio, e l'ultimo argomento è il `SKPaint` oggetto.
+I primi due argomenti di `DrawCircle` indicano le coordinate X e Y del centro del cerchio. Queste entità vengono assegnate metà della larghezza e altezza dell'area di visualizzazione per inserire il centro del cerchio al centro dell'area di visualizzazione. Il terzo argomento specifica il raggio del cerchio, e l'ultimo argomento è il `SKPaint` oggetto.
 
-Per riempire l'area interna di cerchio, è possibile modificare due proprietà del `SKPaint` oggetto e chiamare `DrawCircle` nuovamente. Questo codice viene inoltre illustrato un modo alternativo per ottenere un `SKColor` valore da uno dei molti campi del [ `SKColors` ](https://developer.xamarin.com/api/type/SkiaSharp.SKColors/) struttura:
+Per riempire l'interno del cerchio, è possibile modificare due proprietà del `SKPaint` oggetto e chiamare `DrawCircle` nuovamente. Questo codice mostra anche un modo alternativo per ottenere un `SKColor` valore da uno dei molti campi del [ `SKColors` ](https://developer.xamarin.com/api/type/SkiaSharp.SKColors/) struttura:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -136,22 +136,22 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     canvas.DrawCircle(args.Info.Width / 2, args.Info.Height / 2, 100, paint);
 }
 ```
-Questa volta il `DrawCircle` chiamata riempie il cerchio utilizzando le proprietà di nuovo il `SKPaint` oggetto.
+Questa volta, il `DrawCircle` chiamata riempie il cerchio usando le proprietà di nuovo il `SKPaint` oggetto.
 
-Di seguito è riportato il programma in esecuzione su iOS, Android e la piattaforma Windows universale:
+Ecco il programma in esecuzione in iOS, Android e la piattaforma Windows universale:
 
-[![](circle-images/simplecircle-small.png "Schermata di triplo della pagina cerchio semplice")](circle-images/simplecircle-large.png#lightbox "tripla schermata della pagina cerchio semplice")
+[![](circle-images/simplecircle-small.png "Tripla screenshot della pagina del cerchio semplice")](circle-images/simplecircle-large.png#lightbox "tripla screenshot della pagina del cerchio semplice")
 
-Quando si esegue il programma, è possibile attivare il telefono o il simulatore lateralmente per vedere come l'immagine viene ridisegnato. Ogni volta che l'immagine deve essere ridisegnato il `PaintSurface` gestore eventi viene chiamato nuovamente.
+Quando si esegue il programma, è possibile attivare il telefono o il simulatore lateralmente per visualizzare come l'elemento grafico viene ridisegnato. Ogni volta che l'immagine deve essere ridisegnata, il `PaintSurface` gestore eventi viene chiamato nuovamente.
 
-Un `SKPaint` oggetto è poco più di una raccolta di proprietà di disegno delle immagini. Questi oggetti sono molto semplici. È possibile riutilizzare `SKPaint` oggetti come di questo programma, oppure è possibile creare più `SKPaint` gli oggetti per diverse combinazioni di proprietà di disegno. È possibile creare e inizializzare questi oggetti di fuori del `PaintSurface` un gestore eventi ed è possibile salvarli come campi nella classe della pagina.
+Un `SKPaint` oggetto è poco più di una raccolta di proprietà di disegno delle immagini. Questi oggetti sono molto semplici. È possibile riutilizzare `SKPaint` oggetti come questo programma di, oppure è possibile creare più `SKPaint` gli oggetti per diverse combinazioni di proprietà di disegno. È possibile creare e inizializzare questi oggetti di fuori del `PaintSurface` un gestore eventi ed è possibile salvarli come campi nella classe di pagina.
 
-Anche se la larghezza del contorno del cerchio è specificata come 25 pixel &mdash; o un quarto del raggio del cerchio &mdash; risulta essere sottili ed è un buon motivo per cui: metà della larghezza della riga è nascosto dal cerchio blu. Gli argomenti per il `DrawCircle` il metodo per definire le coordinate geometriche astratte di un cerchio. L'area interna di blu viene ridimensionato per tale dimensione per il pixel più vicino, ma la struttura del livello di pixel 25 attraversata dalla cerchio geometrico &mdash; metà all'interno e metà all'esterno.
+Anche se la larghezza del contorno del cerchio è specificata come 25 pixel &mdash; o un quarto del raggio del cerchio &mdash; risulta essere più sottili e vi è un buon motivo per cui: metà della larghezza della riga è nascosto dai cerchio blu. Gli argomenti per il `DrawCircle` metodo definirà le coordinate geometriche astratte di un cerchio. L'interno blu viene ridimensionato su tale dimensione per il pixel più vicino, ma la struttura di larghezza di 25 pixel attraversa il cerchio geometrico &mdash; metà su interno e il metà all'esterno.
 
 Nell'esempio successivo nel [l'integrazione con xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) articolo viene illustrata questa visivamente.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API di SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

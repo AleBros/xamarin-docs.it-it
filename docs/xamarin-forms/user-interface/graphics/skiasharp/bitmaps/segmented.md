@@ -2,17 +2,17 @@
 title: Visualizzazione segmentata del bitmap di SkiaSharp
 description: Visualizzare una bitmap di SkiaSharp in modo che alcuni area viene allungato e non sono alcune aree.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 79AE2033-C41C-4447-95A6-76D22E913D19
 author: charlespetzold
 ms.author: chape
 ms.date: 07/17/2018
-ms.openlocfilehash: f1f148f0b510b55aebb70a03e0d5beb89c4044c4
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: e5bfa076a8746abd6275e9d7a8393c7c8ab53294
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131485"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615236"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>Visualizzazione segmentata del bitmap di SkiaSharp
 

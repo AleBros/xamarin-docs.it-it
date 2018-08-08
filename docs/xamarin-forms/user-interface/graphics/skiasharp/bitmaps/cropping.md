@@ -2,17 +2,17 @@
 title: Il ritaglio di immagini bitmap in SkiaSharp
 description: Informazioni su come usare SkiaSharp per progettare un'interfaccia utente per desribing in modo interattivo un rettangolo di ritaglio.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
 author: charlespetzold
 ms.author: chape
 ms.date: 07/17/2018
-ms.openlocfilehash: b264fb14e0dc50ca980b8035a75f6f6d8b3ed85f
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 3dd9011d19e77f52d1fe89a37e4d992c23c72ab1
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131475"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615548"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>Il ritaglio di immagini bitmap in SkiaSharp
 
@@ -516,7 +516,7 @@ public partial class PhotoCroppingPage : ContentPage
 
 [![Ritaglia 1 di foto](cropping-images/PhotoCropping1.png "foto Ritaglia 1")](cropping-images/PhotoCropping1-Large.png#lightbox)
 
-Quando è stato definito un rettangolo di ritaglio ottimo, scegliere il **eseguita** pulsante. Il `Clicked` gestore ottiene bitmap ritagliata dal `CroppedBitmap` proprietà di `PhotoCropperCanvasView`e sostituisce tutto il contenuto della pagina con un nuovo `SKCanvasView` oggetto che consente di visualizzare questa bitmap ritagliata:
+Quando è stato definito un rettangolo di ritaglio ottimo, scegliere il pulsante **.** Il `Clicked` gestore ottiene bitmap ritagliata dal `CroppedBitmap` proprietà di `PhotoCropperCanvasView`e sostituisce tutto il contenuto della pagina con un nuovo `SKCanvasView` oggetto che consente di visualizzare questa bitmap ritagliata:
 
 [![Ritaglia 2 di foto](cropping-images/PhotoCropping2.png "foto Ritaglia 2")](cropping-images/PhotoCropping2-Large.png#lightbox)
 
@@ -734,7 +734,7 @@ public partial class PhotoPuzzlePage3 : ContentPage
 }
 ```
 
-Il **eseguita** gestore del pulsante Ottiene la larghezza e altezza della bitmap ritagliata (questi due valori devono essere lo stesso) e quindi si divide in 15 bitmap separate, ognuno dei quali è 1 e 4 la larghezza e altezza dell'originale. (L'ultima delle bitmap di 16 possibili non viene creato). Il `DrawBitmap` metodo con rettangolo di origine e di destinazione consente a una bitmap essere creata in base a subset di una bitmap di dimensioni maggiori.
+Il gestore del pulsante Ottiene la larghezza e altezza della bitmap ritagliata (questi due valori devono essere lo stesso) e quindi si divide in 15 bitmap separate, ognuno dei quali è 1 e 4 la larghezza e altezza dell'originale **.** (L'ultima delle bitmap di 16 possibili non viene creato). Il `DrawBitmap` metodo con rettangolo di origine e di destinazione consente a una bitmap essere creata in base a subset di una bitmap di dimensioni maggiori.
 
 ## <a name="converting-to-xamarinforms-bitmaps"></a>Conversione di bitmap di xamarin. Forms
 
