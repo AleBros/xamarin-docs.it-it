@@ -1,40 +1,40 @@
 ---
-title: Polilinea ed equazioni parametriche
-description: Questo articolo viene illustrato come a SkiaSharp utilizzare per il rendering di qualsiasi riga è possibile definire con equazioni parametriche e viene illustrato quanto descritto con codice di esempio.
+title: Polilinee ed equazioni parametriche
+description: Questo articolo illustra la procedura per l'uso di SkiaSharp per eseguire il rendering di tutte le righe per definire con equazioni parametriche e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.assetid: 85AEBB33-E954-4364-A6E1-808FAB197BEE
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9539a21b7dbc91da63795639610886233ed705be
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 9118ca8e23e4c4a9023a1add89e26c4484979c8f
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245309"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615795"
 ---
-# <a name="polylines-and-parametric-equations"></a>Polilinea ed equazioni parametriche
+# <a name="polylines-and-parametric-equations"></a>Polilinee ed equazioni parametriche
 
-_Utilizzare SkiaSharp per il rendering di qualsiasi riga che è possibile definire con equazioni parametriche_
+_Consente di eseguire il rendering di qualsiasi riga che è possibile definire con equazioni parametriche SkiaSharp_
 
-Nella parte successiva di questa Guida, è possibile visualizzare i vari metodi che `SKPath` definisce per eseguire il rendering di determinati tipi di curve. Talvolta, tuttavia, è necessario creare un tipo di curva che non è supportato direttamente da `SKPath`. In tal caso, è possibile utilizzare una polilinea (una raccolta di linee collegate) per disegnare qualsiasi curva che è possibile definire matematicamente. Se si crea le righe sufficientemente piccole numerosi sufficiente, il risultato sarà simile a una curva. Questa spirale è effettivamente 3.600 piccole linee:
+Nella parte successiva di questa Guida, si noterà i vari metodi che `SKPath` definisce per eseguire il rendering di determinati tipi di curve. Tuttavia, è talvolta necessario disegnare un tipo di curva che non è supportata direttamente da `SKPath`. In tal caso, è possibile usare una polilinea (una raccolta di linee collegate) per disegnare qualsiasi curva che è possibile definire matematicamente. Se si imposta le righe è piccolo e numerosi sufficiente, il risultato sarà simile una curva. Questo spirale è effettivamente 3.600 piccole linee:
 
-![](polylines-images/spiralexample.png "Spirale")
+![](polylines-images/spiralexample.png "Una spirale")
 
-In genere è preferibile definire una curva in termini di una coppia di equazioni parametriche. Si tratta di equazioni per X e Y coordinate che dipendono da una terza variabile, talvolta chiamata `t` per volta. Ad esempio, di definire un cerchio con un raggio pari a 1 centrato il punto (0, 0) per le equazioni parametriche seguente *t* da 0 a 1:
+In genere è preferibile definire una curva in termini di una coppia di equazioni parametriche. Queste sono le equazioni per X e Y coordinate che dipendono da una terza variabile, talvolta denominata `t` per volta. Ad esempio, di definire un cerchio con raggio pari a 1 centrato al punto (0, 0) per le equazioni parametriche seguenti *t* compreso tra 0 e 1:
 
  x = y cos(2πt) = sin(2πt)
 
- Se si desidera un raggio di dimensioni maggiori di 1, è semplicemente possibile moltiplicare i valori seno e coseno del raggio e se è necessario spostare il centro di un'altra posizione, aggiungere tali valori:
+ Se si desidera un raggio di dimensioni superiori a 1, è possibile moltiplicare i seno e il coseno di valori per tale radius semplicemente e se è necessario passare al centro in un'altra posizione, aggiungere tali valori:
 
  x = Centrox + radius·cos(2πt) y = Centroy + radius·sin(2πt)
 
-Per un'ellisse con il parallelo assi orizzontale e verticale, sono coinvolti due raggi:
+Per un'ellisse con parallelo di assi orizzontale e verticale, sono coinvolti due raggi:
 
 x = Centrox + xRadius·cos(2πt) y = Centroy + yRadius·sin(2πt)
 
-È quindi possibile inserire il codice SkiaSharp equivalente in un ciclo che calcola i vari punti e aggiunge quelle a un percorso. Il codice SkiaSharp seguente crea un `SKPath` oggetto per un'ellisse che riempie l'area di visualizzazione. I ciclo scorre 360 gradi direttamente. Il centro è a metà larghezza e altezza dell'area di visualizzazione, e quindi i raggi di due:
+È quindi possibile inserire il codice equivalente di SkiaSharp in un ciclo che calcola i vari punti e aggiunge quelle per un percorso. Il codice di SkiaSharp seguente crea un `SKPath` oggetto per un'ellisse che riempie l'area di visualizzazione. Il ciclo scorre 360 gradi direttamente. Il centro è metà della larghezza e altezza dell'area di visualizzazione, e quindi i due raggi:
 
 ```csharp
 SKPath path = new SKPath();
@@ -57,11 +57,11 @@ for (float angle = 0; angle < 360; angle += 1)
 path.Close();
 ```
 
-Il risultato di un'ellisse definita da piccole 360 linee. Quando ne viene eseguito il rendering, viene visualizzato senza problemi.
+Di conseguenza un'ellisse definita da 360 piccole linee. Quando ne viene eseguito il rendering, viene visualizzato senza problemi.
 
-Ovviamente, non è necessario creare un'ellisse utilizzando una polilinea perché `SKPath` include un `AddOval` metodo che si adatta automaticamente. Ma è possibile disegnare un oggetto visivo che non viene fornito da `SKPath`.
+Naturalmente, non è necessario creare una forma ellipse utilizzando una polilinea in quanto `SKPath` include un `AddOval` metodo che esegue tutto automaticamente. Ma è possibile disegnare un oggetto visivo che non viene fornito da `SKPath`.
 
-Il **Archimedean spirale** è incluso codice simile al codice ellisse ma con una differenza fondamentale. Esegue un ciclo intorno a 360 gradi di cerchio 10 volte, in modo continuo regolando il raggio:
+Il **spirale Archimedean** è incluso il codice simile al codice dell'ellisse ma con una differenza essenziale. Esegue un ciclo intorno a 360 gradi di cerchio 10 volte, in modo continuativo la regolazione del raggio:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -107,14 +107,14 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Il risultato è l'acronimo un *spirale aritmetici* perché la differenza tra ogni ciclo è costante:
+Il risultato è l'acronimo di un' *spirale aritmetico* perché l'offset tra ogni ciclo è costante:
 
-[![](polylines-images/archimedeanspiral-small.png "Schermata di triplo della pagina spirale Archimedean")](polylines-images/archimedeanspiral-large.png#lightbox "tripla schermata della pagina spirale Archimedean")
+[![](polylines-images/archimedeanspiral-small.png "Tripla screenshot della pagina Archimedean spirale")](polylines-images/archimedeanspiral-large.png#lightbox "tripla screenshot della pagina Archimedean spirale")
 
-Si noti che il `SKPath` viene creato in un `using` blocco. Questo `SKPath` Usa più memoria rispetto al `SKPath` oggetti nei programmi precedenti, che suggerisce che un `using` blocco è più appropriato per tutte le risorse non gestite.
+Si noti che il `SKPath` viene creato in un `using` blocco. Ciò `SKPath` consuma più memoria per il `SKPath` gli oggetti nei programmi precedenti, che suggerisce che un `using` blocco risulta più appropriato per l'eliminazione delle risorse non gestite.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API di SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
