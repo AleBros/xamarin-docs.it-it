@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/08/2018
-ms.openlocfilehash: 865a06e9fa430e195ce4ea3c6088785d9513dbf6
-ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
+ms.openlocfilehash: 4e1249b7a9c1e9797cbc758c3bd1b83f87d47431
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39030704"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615148"
 ---
 # <a name="introduction-to-ios-12"></a>Introduzione a iOS 12
 
@@ -21,11 +21,12 @@ ms.locfileid: "39030704"
 > [!WARNING]
 > Supporto di 12 iOS di Xamarin è attualmente in anteprima, vale a dire che può contenere bug, non sono funzionalità di completamento, e può cambiare. Usarlo solo come riferimento.
 
-> [!NOTE]
-> - Rivedere le [introduttiva](get-started.md) Guida per le istruzioni su come iniziare a compilare App iOS 12 con Xamarin.
-> - Per altre informazioni, leggere l'anteprima di Xamarin [post di blog di rilascio](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
-
 Questo documento fornisce una descrizione dettagliata di alcune API di iOS 12 per l'anteprima di Xamarin, quale versione fornisce le associazioni c#.
+
+Per iniziare a creare App iOS 12 con Xamarin, dare un'occhiata:
+
+- Il [Guida introduttiva](get-started.md)
+- L'anteprima di Xamarin [post di blog di rilascio](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
 
 ## <a name="arkit-2"></a>ARKit 2
 
@@ -69,8 +70,12 @@ iOS 11.3 introdotte [cliniche](https://www.apple.com/healthcare/health-records/)
 
 In iOS 12, le App per iMessage supportano contesti di presentazione, che consentono l'esecuzione come app iMessage normale o nel contesto di una foto o video effetto delle app.
 
+## <a name="vision-framework"></a>Framework Vision
+
+Il framework Vision include un rilevamento volti migliorate che consentono di rilevare i visi in vari orientamenti. Inoltre, le revisioni richieste ora utilizzabile per selezionare una revisione dell'algoritmo di framework Vision specifica.
+
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Get Ready per iOS 12 (Apple)](https://developer.apple.com/ios/)
 - [iOS 12 anteprima (Apple)](https://www.apple.com/ios/ios-12-preview/)
-- Anteprima di Xamarin [post di blog di rilascio](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
+- Anteprima di Xamarin [post di blog di rilascio](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)

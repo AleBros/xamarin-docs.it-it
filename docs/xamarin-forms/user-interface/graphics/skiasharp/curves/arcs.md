@@ -1,20 +1,20 @@
 ---
-title: Tre metodi per disegnare un arco
-description: In questo articolo viene illustrato come utilizzare SkiaSharp per definire gli archi in tre modi diversi e viene illustrato quanto descritto con codice di esempio.
+title: Tre modi per disegnare un arco
+description: Questo articolo illustra come usare SkiaSharp per definire gli archi in tre modi diversi e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: 9e0ed04543436ec7a83d13fa6a56637fc7916338
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: e862a663b35124c1470ae5239c93409c298b19ba
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244152"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615405"
 ---
-# <a name="three-ways-to-draw-an-arc"></a>Tre metodi per disegnare un arco
+# <a name="three-ways-to-draw-an-arc"></a>Tre modi per disegnare un arco
 
 _Informazioni su come usare SkiaSharp per definire gli archi in tre modi diversi_
 
@@ -22,13 +22,13 @@ Un arco è una curva sulla circonferenza di un'ellisse, ad esempio le parti di q
 
 ![](arcs-images/arcsample.png "Simbolo di infinito")
 
-Nonostante la semplicità della definizione, non è possibile definire una funzione di disegno dell'arco che soddisfa ogni esigenza, e di conseguenza, non il consenso dei sistemi grafici del modo migliore per disegnare l'arco. Per questo motivo, la `SKPath` classe non limita automaticamente a un unico approccio.
+Nonostante la semplicità di tale definizione, non è possibile definire una funzione di disegno da parte di arco che soddisfa ogni esigenza, e di conseguenza, non il consenso dei sistemi di grafica del modo migliore per disegnare un arco. Per questo motivo, il `SKPath` classe non limita la stessa di un solo approccio.
 
-`SKPath` definisce un `AddArc` (metodo), cinque diverse `ArcTo` metodi e i relativi due `RArcTo` metodi. Questi metodi rientrano in tre categorie, che rappresenta tre diversi approcci per specificare un arco. Il metodo scelto dipende dalle informazioni disponibili per definire l'arco e adattamento l'arco con gli altri elementi grafici che si sta creando.
+`SKPath` definisce un `AddArc` metodo, cinque diversi `ArcTo` metodi e relativi ai due `RArcTo` metodi. Questi metodi rientrano in tre categorie, che rappresenta tre diversi approcci alla specifica di un arco. Il metodo scelto dipende dalle informazioni disponibili per definire l'arco e come questo arco si integra con gli altri elementi grafici che si sta creando.
 
-## <a name="the-angle-arc"></a>L'angolo di arco
+## <a name="the-angle-arc"></a>L'angolo arco
 
-L'approccio di arco angolo per archi di disegno è necessario specificare un rettangolo che delimita un'ellisse. L'arco nella circonferenza di questa ellisse è indicato da angoli dal centro dell'ellisse effettua l'inizio dell'arco e la relativa lunghezza. Due metodi diversi disegnano archi angolo. Si tratta di [ `AddArc` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddArc/p/SkiaSharp.SKRect/System.Single/System.Single/) (metodo) e il [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKRect/System.Single/System.Single/System.Boolean/) metodo:
+L'approccio di arco angolo al disegno di archi richiede di specificare un rettangolo che delimita un'ellisse. Base ad angoli dal centro dell'ellisse effettua l'inizio dell'arco e la relativa lunghezza è indicato l'arco nella circonferenza di questa ellissi. Due metodi diversi per tracciare gli archi angolo. Questi sono i [ `AddArc` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddArc/p/SkiaSharp.SKRect/System.Single/System.Single/) metodo e il [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKRect/System.Single/System.Single/System.Boolean/) metodo:
 
 ```csharp
 public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
@@ -36,45 +36,45 @@ public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
 public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean forceMoveTo)
 ```
 
-Questi metodi sono identici per il Android [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) e [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) metodi. IOS [ `AddArc` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArc/p/System.Boolean/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) metodo è simile, ma è limitato a archi nella circonferenza del cerchio anziché generalizzato in un'ellisse.
+Questi metodi sono identici per Android [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) e [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) metodi. IOS [ `AddArc` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArc/p/System.Boolean/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) metodo è simile, ma è limitato agli archi sulla circonferenza del cerchio anziché generalizzata da un'ellisse.
 
 Entrambi i metodi iniziano con un `SKRect` valore che definisce la posizione e dimensioni di un'ellisse:
 
-![](arcs-images/anglearcoval.png "Oval che inizia un arco angolo")
+![](arcs-images/anglearcoval.png "La forma ovale che inizia un arco angolo")
 
-L'arco fa parte la circonferenza di questa ellisse.
+Punto finale dell'arco è una parte tra la circonferenza di questa ellissi.
 
-Il `startAngle` argomento è un angolo in senso orario espresso in gradi rispetto alla linea orizzontale disegnata dal centro dell'ellisse a destra. Il `sweepAngle` argomento è relativo al `startAngle`. Di seguito sono `startAngle` e `sweepAngle` i valori di 100 e 60 gradi, rispettivamente:
+Il `startAngle` argomento è un angolo in senso orario espresso in gradi relativa a una riga orizzontale disegnata dal centro dell'ellisse a destra. Il `sweepAngle` argomento è relativo al `startAngle`. Ecco `startAngle` e `sweepAngle` valori di 100 e 60 gradi, rispettivamente:
 
-![](arcs-images/anglearcangles.png "Aspetti che definiscono un arco angolo")
+![](arcs-images/anglearcangles.png "Gli angoli che definiscono un arco angolo")
 
-Inizia l'angolo iniziale dell'arco. La lunghezza è disciplinata dall'angolo di apertura:
+In cui inizia l'angolo iniziale dell'arco. La sua lunghezza è disciplinata dall'angolo di apertura:
 
-![](arcs-images/anglearchighlight.png "L'arco angolo evidenziato")
+![](arcs-images/anglearchighlight.png "Punto finale dell'arco angolo evidenziato")
 
-La curva aggiunta al percorso con il `AddArc` o `ArcTo` metodo è sufficiente che una parte della circonferenza dell'ellisse, illustrata di seguito in rosso:
+La curva aggiunta al percorso con il `AddArc` o `ArcTo` metodo è semplicemente quella parte di circonferenza dell'ellisse, illustrata di seguito in rosso:
 
 ![](arcs-images/anglearc.png "L'arco angolo da solo")
 
-Il `startAngle` o `sweepAngle` gli argomenti possono essere negativi: l'arco è in senso orario per i valori positivi di `sweepAngle` e in senso antiorario per i valori negativi.
+Il `startAngle` oppure `sweepAngle` gli argomenti possono essere negativi: l'arco viene in senso orario per i valori positivi di `sweepAngle` e antiorario per i valori negativi.
 
-Tuttavia, `AddArc` does *non* definiscono un contorno chiuso. Se si chiama `LineTo` dopo `AddArc`, una linea viene tracciata dalla fine dell'arco al punto di `LineTo` (metodo) e lo stesso vale per `ArcTo`.
+Tuttavia `AddArc` viene *non* definiscono un contorno chiuso. Se si chiama `LineTo` dopo aver `AddArc`, viene tracciata una linea dalla fine dell'arco al punto nel `LineTo` metodo e lo stesso vale per `ArcTo`.
 
-`AddArc` inizia un nuovo contorno automaticamente ed è funzionalmente equivalente a una chiamata a `ArcTo` con un argomento finale di `true`:
+`AddArc` inizia un nuovo contorno ed è funzionalmente equivalente a una chiamata a automaticamente `ArcTo` con un argomento finale di `true`:
 
 ```csharp
 path.ArcTo (oval, startAngle, sweepAngle, true);
 ```
 
-Che viene chiamato l'ultimo argomento `forceMoveTo`, e fa in modo efficace un `MoveTo` chiamare all'inizio dell'arco. Che inizia una nuova distribuzione. Ovvero non nel caso di un argomento di ultima `false`:
+Ultimo argomento è detto `forceMoveTo`, e si verifica in modo efficace un `MoveTo` chiamare all'inizio dell'arco. Che avvia una nuova distribuzione. Vale a dire non avviene con un ultimo argomento di `false`:
 
 ```csharp
 path.ArcTo (oval, startAngle, sweepAngle, false);
 ```
 
-Questa versione di `ArcTo` Disegna una riga dalla posizione corrente all'inizio dell'arco. Ciò significa che l'arco può essere in qualche punto all'interno di una distribuzione più grande.
+Questa versione di `ArcTo` Disegna una linea dalla posizione corrente all'inizio dell'arco. Ciò significa che l'arco può essere un punto qualsiasi all'interno di una distribuzione più grande.
 
-Il **arco angolo** pagina consente di usare due dispositivi di scorrimento per specificare l'inizio e durante lo sweep angoli. Il file XAML crea un'istanza di due `Slider` elementi e un `SKCanvasView`. Il `PaintCanvas` gestore di [ **AngleArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/AngleArcPage.xaml.cs) file disegna ovale sia l'arco con due `SKPaint` gli oggetti definiti come campi:
+Il **angolo dell'arco** pagina è possibile usare due dispositivi di scorrimento per specificare l'inizio e durante lo sweep degli angoli. Il file XAML crea un'istanza di due `Slider` elementi e un `SKCanvasView`. Il `PaintCanvas` gestore nel [ **AngleArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/AngleArcPage.xaml.cs) file consente di disegnare la forma ovale sia l'arco usando due `SKPaint` gli oggetti definiti come campi:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -99,19 +99,19 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Come si può notare, sia l'angolo iniziale e l'angolo di apertura può assumere i valori negativi:
+Come può notare, i valori negativi può assumere entrambi l'angolo iniziale e angolo di apertura:
 
-[![](arcs-images/anglearc-small.png "Schermata triplo della pagina arco angolo")](arcs-images/anglearc-large.png#lightbox "tripla schermata della pagina angolo arco")
+[![](arcs-images/anglearc-small.png "Tripla screenshot della pagina angolo dell'arco")](arcs-images/anglearc-large.png#lightbox "tripla screenshot della pagina angolo dell'arco")
 
-Questo approccio per la generazione di un arco è modo algoritmico la più semplice e facile derivare le equazioni parametriche che descrivono l'arco. Conoscere le dimensioni e posizione dei puntini di sospensione e gli angoli di inizio e di apertura, i punti iniziale e finale dell'arco può essere calcolati con trigonometria semplice:
+Questo approccio per la generazione di un arco è modo algoritmico la più semplice ed è facile derivare le equazioni parametriche che descrivono l'arco. Conoscendo le dimensioni e posizione dei puntini di sospensione e gli angoli di avvio e durante lo sweep, i punti iniziale e finale dell'arco può essere calcolati usando trigonometria semplice:
 
 x = oval. MidX + (oval. Larghezza / 2) * cos(angle)
 
 y = oval. MidY + (oval. Altezza / 2) * sin(angle)
 
-Il `angle` il valore è `startAngle` o `startAngle + sweepAngle`.
+Il `angle` valore è `startAngle` o `startAngle + sweepAngle`.
 
-L'utilizzo di due angoli per definire un arco è ideale per i casi in cui si conosce la lunghezza dell'arco da disegnare, ad esempio, per creare un grafico a torta angolare. Il **grafico a torta esplosa** pagina viene illustrata questa. Il [ `ExplodedPieChartPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ExplodedPieChartPage.cs) classe utilizza una classe interna per definire alcuni dati creati e i colori:
+L'uso di due degli angoli per definire un arco è ideale per i casi in cui si conosce la lunghezza angular dell'arco da disegnare, ad esempio, per creare un grafico a torta. Il **grafico a torta esplosa** pagina viene illustrata questa. Il [ `ExplodedPieChartPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ExplodedPieChartPage.cs) classe utilizza una classe interna per definire alcuni dati creati e i colori:
 
 ```csharp
 class ChartData
@@ -140,7 +140,7 @@ ChartData[] chartData =
 
 ```
 
-Il `PaintSurface` gestore prima scorre in ciclo gli elementi da calcolare un `totalValues` numero. Tramite la quale può determinare la dimensione di ogni elemento come frazione del totale e convertirli in un angolo:
+Il `PaintSurface` gestore prima scorre in ciclo gli elementi da calcolare un `totalValues` numero. Tramite la quale è possibile determinare le dimensioni di ogni elemento come la frazione del totale e convertirlo in un angolo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -204,19 +204,19 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Un nuovo `SKPath` viene creato l'oggetto per ogni sezione della torta. Il percorso è costituito da una riga dal centro, quindi un `ArcTo` per tracciare l'arco e un'altra riga nuovamente i risultati center il `Close` chiamare. Questo programma consente di visualizzare le sezioni "esploso" spostandoli tutte le risorse dal centro di 50 pixel. L'attività richiede un vettore di direzione del punto centrale dell'angolo di apertura per ogni sezione:
+Un nuovo `SKPath` oggetto viene creato per ogni sezione della torta. Il percorso è costituito da una riga dal centro di un' `ArcTo` per tracciare l'arco e un'altra riga nuovamente i risultati di centro del `Close` chiamare. Questo programma consente di visualizzare sezioni della torta "esploso" spostandoli tutte le risorse dal centro per 50 pixel. Questa attività richiede un vettore nella direzione del punto centrale dell'angolo di apertura per ogni sezione:
 
-[![](arcs-images/explodedpiechart-small.png "Schermata di triplo della pagina del grafico a torta esplosa")](arcs-images/explodedpiechart-large.png#lightbox "tripla schermata della pagina del grafico a torta esplosa")
+[![](arcs-images/explodedpiechart-small.png "Tripla screenshot della pagina del grafico a torta esplosa")](arcs-images/explodedpiechart-large.png#lightbox "tripla screenshot della pagina del grafico a torta esplosa")
 
-Per visualizzare l'aspetto senza "esplosione", è sufficiente impostare come commento il `Translate` chiamare:
+Per visualizzare l'aspetto senza l'esplosione del "generale", è sufficiente impostare come commento il `Translate` chiamare:
 
-[![](arcs-images/explodedpiechartunexploded-small.png "Schermata triplo della pagina di grafico a torta esplosa senza l'esplosione")](arcs-images/explodedpiechartunexploded-large.png#lightbox "tripla schermata della pagina senza l'esplosione grafico a torta esplosa")
+[![](arcs-images/explodedpiechartunexploded-small.png "Tripla screenshot della pagina del grafico a torta esplosa senza l'esplosione")](arcs-images/explodedpiechartunexploded-large.png#lightbox "tripla screenshot della pagina del grafico a torta esplosa senza l'esplosione")
 
 ## <a name="the-tangent-arc"></a>L'arco tangente
 
-Il secondo tipo di arco supportato da `SKPath` è il *arco tangente*, pertanto chiamato perché l'arco è la circonferenza del cerchio tangente a due linee collegate.
+Il secondo tipo di arc supportati da `SKPath` è il *arco tangente*, pertanto chiamato quanto l'arco viene la circonferenza del cerchio tangente a due linee collegate.
 
-Un arco tangente viene aggiunto a un percorso con una chiamata al [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/) metodo con due `SKPoint` parametri, o [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/) overload con separato `Single` parametri per il punti:
+Un arco tangente viene aggiunto a un percorso con una chiamata ai [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/) metodo con due `SKPoint` parametri, o la [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/) overload con separato `Single` parametri per il punti:
 
 ```csharp
 public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
@@ -224,17 +224,17 @@ public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
 public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 ```
 
-Questo `ArcTo` metodo è simile al PostScript [ `arct` ](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) funzione (pagina 532 nel documento PDF) e iOS [ `AddArcToPoint` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArcToPoint/p/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) metodo.
+Ciò `ArcTo` metodo è simile al PostScript [ `arct` ](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) funzione (pagina 532 nel documento PDF) e iOS [ `AddArcToPoint` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArcToPoint/p/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) (metodo).
 
 Il `ArcTo` metodo prevede tre punti:
 
-- Punto di corrente della distribuzione o il punto (0, 0) se `MoveTo` non è stato chiamato
-- Il primo argomento punto il `ArcTo` metodo, denominato il *angolo punto*
-- Il secondo argomento punto `ArcTo`, denominato il *punto di destinazione*:
+- Punto di corrente di contorno e il punto (0, 0) se `MoveTo` non è stato chiamato
+- Il primo argomento punto per il `ArcTo` metodo, denominato il *angolo punto*
+- Il secondo argomento punto `ArcTo`, definita come il *punto di destinazione*:
 
 ![](arcs-images/tangentarcthreepoints.png "Tre punti che iniziano un arco tangente")
 
-Questi tre punti definiscono due linee collegate:
+Queste tre punti definiscono due linee collegate:
 
 ![](arcs-images/tangentarcconnectinglines.png "Linee che collegano i tre punti di un arco tangente")
 
@@ -244,23 +244,23 @@ Il `ArcTo` metodo include anche un `radius` parametro. Definisce il raggio del c
 
 ![](arcs-images/tangentarccircle.png "Il cerchio di un arco tangente")
 
-Non è stato generalizzato l'arco tangente per un'ellisse.
+L'arco tangente non è generalizzata per un'ellisse.
 
-Se le due righe soddisfano angolazione, tale cerchio può essere inserita tra le righe in modo che sia tangente in entrambe le righe:
+Se le due righe soddisfano qualsiasi angolo di rotazione, tale cerchio può essere inserita tra le righe in modo che risulti tangente in entrambe le righe:
 
-![](arcs-images/tangentarctangentcircle.png "Il cerchio arco tangente tra due linee")
+![](arcs-images/tangentarctangentcircle.png "Il cerchio arco tangente tra le due righe")
 
-Non tocca uno dei punti di specificato in curva che viene aggiunto per la distribuzione di `ArcTo` metodo. È costituito da una linea retta dal punto corrente per il primo punto di controllo di tangente e un arco che termina in corrispondenza del secondo punto tangente:
+Non hai uno dei punti specificati nella curva che viene aggiunto per il contorno di `ArcTo` (metodo). È costituito da una linea retta dal punto corrente per il primo punto tangente e un arco che termina in corrispondenza del secondo punto tangente:
 
-![](arcs-images/tangentarchighlight.png "L'arco tangente evidenziata tra le due linee")
+![](arcs-images/tangentarchighlight.png "L'arco tangente evidenziato tra le due righe")
 
-Di seguito è la linea retta finale e un arco che viene aggiunto per la distribuzione:
+Ecco la linea retta finale e un arco che viene aggiunto per la distribuzione:
 
-![](arcs-images/tangentarc.png "L'arco tangente evidenziata tra le due linee")
+![](arcs-images/tangentarc.png "L'arco tangente evidenziato tra le due righe")
 
-È possibile continuare la distribuzione dal secondo punto tangente.
+La distribuzione possa essere ripreso da secondo punto tangente.
 
-Il **arco tangente** pagina consente di sperimentare l'arco tangente. Questo è il primo di più pagine che derivano da [ `InteractivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/InteractivePage.cs), che definisce alcune utili `SKPaint` oggetti ed esegue `TouchPoint` elaborazione:
+Il **arco tangente** pagina consente di sperimentare l'arco tangente. Questo è il primo di diverse pagine che derivano da [ `InteractivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/InteractivePage.cs), che definisce alcune utili `SKPaint` oggetti ed esegue `TouchPoint` elaborazione:
 
 ```csharp
 public class InteractivePage : ContentPage
@@ -310,7 +310,7 @@ public class InteractivePage : ContentPage
 }
 ```
 
-La classe `TangentArcPage` deriva da `InteractivePage`. Il costruttore nel [ **TangentArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml.cs) è responsabile della creazione di un'istanza e l'inizializzazione di file di `touchPoints` matrice e impostazione `baseCanvasView` (in `InteractivePage`) per il `SKCanvasView` creata un'istanza di oggetto nel [ **TangentArcPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml) file:
+La classe `TangentArcPage` deriva da `InteractivePage`. Il costruttore nel [ **TangentArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml.cs) è responsabile della creazione di istanze e inizializzazione di file il `touchPoints` array e impostazione `baseCanvasView` (in `InteractivePage`) per il `SKCanvasView` creata un'istanza di oggetto nel [ **TangentArcPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml) file:
 
 ```csharp
 public partial class TangentArcPage : InteractivePage
@@ -346,7 +346,7 @@ public partial class TangentArcPage : InteractivePage
 }
 ```
 
-Il `PaintSurface` gestore utilizza il `ArcTo` metodo per disegnare l'arco basato sui punti di tocco e un `Slider`, ma anche modo algoritmico calcola il cerchio in base all'angolo:
+Il `PaintSurface` gestore utilizza la `ArcTo` metodo consente di disegnare l'arco basato sui punti di tocco e un `Slider`, ma anche modo algoritmico calcola il cerchio l'angolo di base:
 
 ```csharp
 public partial class TangentArcPage : InteractivePage
@@ -412,13 +412,13 @@ public partial class TangentArcPage : InteractivePage
 }
 ```
 
-Ecco il **arco tangente** in esecuzione in tutti e tre le piattaforme di pagina:
+Di seguito è riportato il **arco tangente** pagina eseguita in tutti e tre le piattaforme:
 
-[![](arcs-images/tangentarc-small.png "Schermata triplo della pagina arco tangente")](arcs-images/tangentarc-large.png#lightbox "tripla schermata della pagina arco tangente")
+[![](arcs-images/tangentarc-small.png "Tripla screenshot della pagina arco tangente")](arcs-images/tangentarc-large.png#lightbox "tripla screenshot della pagina arco tangente")
 
-L'arco tangente è ideale per la creazione di angoli arrotondati, ad esempio un rettangolo arrotondato. Poiché `SKPath` include già un `AddRoundedRect` (metodo), il **arrotondato Heptagon** pagina viene illustrato come utilizzare `ArcTo` per arrotondare gli angoli di un poligono sette lati. (Il codice è generalizzato per qualsiasi poligono regolare).
+L'arco tangente è ideale per la creazione e angoli arrotondati, ad esempio un rettangolo arrotondato. Poiché `SKPath` include già un' `AddRoundedRect` metodo, il **arrotondato Heptagon** pagina illustra come usare `ArcTo` per arrotondare gli angoli di un poligono sette lati. (Il codice è generalizzato per qualsiasi poligono normale).
 
-Il `PaintSurface` gestore del [ `RoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RoundedHeptagonPage.cs) classe contiene un `for` ciclo per calcolare le coordinate dei sette vertici il heptagon e un secondo per calcolare i punti centrali dei sette lati da queste vertici. Questi punti centrali vengono utilizzati per costruire il percorso:
+Il `PaintSurface` gestore del [ `RoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RoundedHeptagonPage.cs) classe contiene una `for` loop per calcolare le coordinate dei vertici del heptagon e la seconda per calcolare i punti centrali dei sette lati da questi sette vertici. Questi punti centrali vengono quindi usati per creare il percorso:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -487,13 +487,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-Di seguito è riportato il programma in esecuzione su tre piattaforme:
+Ecco il programma in esecuzione su tre piattaforme:
 
-[![](arcs-images/roundedheptagon-small.png "Schermata triplo della pagina arrotondato Heptagon")](arcs-images/roundedheptagon-large.png#lightbox "tripla schermata della pagina Heptagon arrotondato")
+[![](arcs-images/roundedheptagon-small.png "Tripla screenshot della pagina arrotondato Heptagon")](arcs-images/roundedheptagon-large.png#lightbox "tripla screenshot della pagina Heptagon arrotondato")
 
-## <a name="the-elliptical-arc"></a>Arco ellittico
+## <a name="the-elliptical-arc"></a>Punto finale dell'arco ellittico
 
-Arco ellittico viene aggiunto a un percorso con una chiamata al [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKPoint/System.Single/SkiaSharp.SKPathArcSize/SkiaSharp.SKPathDirection/SkiaSharp.SKPoint/) metodo che dispone di due `SKPoint` parametri, o [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/System.Single/System.Single/System.Single/SkiaSharp.SKPathArcSize/SkiaSharp.SKPathDirection/System.Single/System.Single/) eseguire l'overload con separato X e Y coordinate:
+Arco ellittico viene aggiunto a un percorso con una chiamata ai [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKPoint/System.Single/SkiaSharp.SKPathArcSize/SkiaSharp.SKPathDirection/SkiaSharp.SKPoint/) metodo che presenta due `SKPoint` parametri, o la [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/System.Single/System.Single/System.Single/SkiaSharp.SKPathArcSize/SkiaSharp.SKPathDirection/System.Single/System.Single/) overload con separato X e Y coordinate:
 
 ```csharp
 public void ArcTo (SKPoint r, Single xAxisRotate, SKPathArcSize largeArc, SKPathDirection sweep, SKPoint xy)
@@ -501,48 +501,48 @@ public void ArcTo (SKPoint r, Single xAxisRotate, SKPathArcSize largeArc, SKPath
 public void ArcTo (Single rx, Single ry, Single xAxisRotate, SKPathArcSize largeArc, SKPathDirection sweep, Single x, Single y)
 ```
 
-Arco ellittico è coerenza con il [arco ellittico](http://www.w3.org/TR/SVG11/paths.html#PathDataEllipticalArcCommands) incluso in Scalable Vector Graphics (SVG) e la piattaforma Windows universale [ `ArcSegment` ](/uwp/api/Windows.UI.Xaml.Media.ArcSegment/) classe.
+Punto finale dell'arco ellittico è coerente con il [arco ellittico](http://www.w3.org/TR/SVG11/paths.html#PathDataEllipticalArcCommands) incluso in Scalable Vector Graphics (SVG) e la piattaforma Windows universale [ `ArcSegment` ](/uwp/api/Windows.UI.Xaml.Media.ArcSegment/) classe.
 
-Questi `ArcTo` metodi disegnano un arco tra due punti, ovvero il punto corrente del contorno, e l'ultimo parametro per il `ArcTo` metodo (il `xy` parametro o singole `x` e `y` parametri):
+Questi `ArcTo` metodi disegnano un arco tra due punti, che corrisponde al punto corrente per il contorno, e l'ultimo parametro per il `ArcTo` (metodo) (le `xy` parametro o le varie `x` e `y` parametri):
 
 ![](arcs-images/ellipticalarcpoints.png "I due punti definiti un arco ellittico")
 
-Il primo parametro punto il `ArcTo` metodo (`r`, o `rx` e `ry`) non è considerato un punto, ma specifica invece il raggio orizzontale e verticale di un'ellisse.
+Il primo parametro punto per il `ArcTo` metodo (`r`, o `rx` e `ry`) non è considerato un punto, ma vengono invece specificati i raggi orizzontali e verticali di un'ellisse.
 
-![](arcs-images/ellipticalarcellipse.png "L'ellisse definita da un arco ellittico")
+![](arcs-images/ellipticalarcellipse.png "Ellisse definiti un arco ellittico")
 
-Il `xAxisRotate` è il numero di gradi in senso orario di rotazione questa ellisse:
+Il `xAxisRotate` parametro indica il numero di gradi in senso orario di rotazione di questa ellissi:
 
-![](arcs-images/ellipticalarctiltedellipse.png "L'ellisse inclinato definito un arco ellittico")
+![](arcs-images/ellipticalarctiltedellipse.png "Ellisse inclinato definiti un arco ellittico")
 
-Se questa ellisse inclinata quindi non è posizionata in modo che tocca i due punti, i punti vengono collegati da due archi diversi:
+Se questa ellisse inclinata quindi viene posizionata in modo che interessa i due punti, i punti sono uniti da due archi diversi:
 
-![](arcs-images/ellipticalarcellipse1.png "Il primo set di arco ellittico")
+![](arcs-images/ellipticalarcellipse1.png "Il primo set di archi ellittici")
 
-È possibile distinguere questi due archi in due modi: l'arco superiore è maggiore dell'arco inferiore e come l'arco viene disegnato da sinistra a destra, l'arco superiore viene disegnato in senso orario, mentre l'arco inferiore viene disegnato in senso antiorario.
+Questi due archi possono essere distinti in due modi: l'arco superiore è maggiore dell'arco nella parte inferiore e come l'arco viene disegnato da sinistra a destra, viene disegnato l'arco superiore in senso orario mentre viene disegnato l'arco in basso in senso antiorario.
 
-È inoltre possibile adattare l'ellisse tra i due punti in un altro modo:
+È anche possibile adattare i puntini di sospensione tra i due punti in un altro modo:
 
-![](arcs-images/ellipticalarcellipse2.png "Il secondo set di arco ellittico")
+![](arcs-images/ellipticalarcellipse2.png "Il secondo set di archi ellittici")
 
 Ora è presente un arco più piccolo che viene disegnato in senso orario nella parte superiore e un arco più grande nella parte inferiore che viene disegnato in senso antiorario.
 
-Questi due punti possono quindi essere collegati da un arco definito da ellisse inclinato in un totale di quattro modi:
+Questi due punti possono quindi essere collegati da un arco definito dai puntini di sospensione inclinato un totale di quattro modi:
 
-![](arcs-images/ellipticalarccolors.png "Tutti e quattro gli archi ellittici")
+![](arcs-images/ellipticalarccolors.png "Tutti i quattro archi ellittici")
 
-Queste quattro archi si distinguono dalle combinazioni di quattro il [ `SKPathArcSize` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathArcSize/) e [ `SKPathDirection` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/) gli argomenti di tipo enumerazione il `ArcTo` metodo:
+Questi quattro archi si distinguono dalle quattro combinazioni dei [ `SKPathArcSize` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathArcSize/) e [ `SKPathDirection` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/) argomenti di tipo di enumerazione per il `ArcTo` metodo:
 
 - rosso: SKPathArcSize.Large e SKPathDirection.Clockwise
 - verde: SKPathArcSize.Small e SKPathDirection.Clockwise
 - blu: SKPathArcSize.Small e SKPathDirection.CounterClockwise
 - magenta: SKPathArcSize.Large e SKPathDirection.CounterClockwise
 
-Se l'ellisse inclinato non è sufficientemente grande per tra i due punti, viene ridimensionato in modo uniforme fino a quando non è sufficientemente grande. Solo due archi univoci connettono in questo caso i due punti. Questi possono essere distinte con il `SKPathDirection` parametro.
+Se l'ellisse inclinato non è sufficientemente grande da posizionarla tra i due punti, quindi viene ridimensionato in modo uniforme fino a quando non è sufficientemente grande. Solo due archi univoci connettono in questo caso i due punti. Questi possono essere distinti con il `SKPathDirection` parametro.
 
-Sebbene questo approccio per la definizione di un arco suoni complesso incontrata prima, è l'unico approccio che consente di definire un arco con un ellisse ruotata, ed è spesso l'approccio più semplice quando è necessario integrare archi con altre parti del contorno.
+Sebbene questo approccio per la definizione di un arco suona complesso nel primo incontro, è l'unico approccio che consente di definire un arco con un ellisse ruotata ed è spesso l'approccio più semplice quando è necessario integrare archi con altre parti del contorno.
 
-Il **arco ellittico** pagina consente di impostare in modo interattivo i due punti e la dimensione e la rotazione dell'ellisse. Il `EllipticalArcPage` deriva dalla classe `InteractivePage`e `PaintSurface` gestore il [ **EllipticalArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/EllipticalArcPage.xaml.cs) file code-behind disegna quattro archi:
+Il **arco ellittico** pagina consente di impostare in modo interattivo i due punti e la dimensione e la rotazione dell'ellisse. Il `EllipticalArcPage` deriva dalla classe `InteractivePage`e il `PaintSurface` gestore nel [ **EllipticalArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/EllipticalArcPage.xaml.cs) file code-behind crea quattro archi:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -582,37 +582,37 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-Qui è in esecuzione su tre piattaforme:
+Qui è in esecuzione sulle tre piattaforme:
 
-[![](arcs-images/ellipticalarc-small.png "Schermata di triplo della pagina arco ellittico")](arcs-images/ellipticalarc-large.png#lightbox "tripla schermata della pagina arco ellittico")
+[![](arcs-images/ellipticalarc-small.png "Tripla screenshot della pagina arco ellittico")](arcs-images/ellipticalarc-large.png#lightbox "tripla screenshot della pagina arco ellittico")
 
-Il **arco infinito** pagina utilizza l'arco ellittico per disegnare un simbolo di infinito. Il simbolo di infinito si basa su due cerchi con un raggio di 100 unità separati da 100 unità:
+Il **arco infinito** pagina utilizza l'arco ellittico per disegnare un segno di un numero infinito. Il simbolo di infinito si basa su due cerchi con un raggio di separati da 100 unità di 100 unità:
 
 ![](arcs-images/infinitycircles.png "Due cerchi")
 
-Due perpendicolari tra loro sono tangente a entrambi i cerchi:
+Due perpendicolari tra loro sono tangente per entrambi i cerchi:
 
 ![](arcs-images/infinitycircleslines.png "Due cerchi con tangenti")
 
-Il simbolo di infinito è una combinazione delle parti di questi cerchi e le due righe. Per usare l'arco ellittico per disegnare il simbolo di infinito, è necessario determinare le coordinate in cui le due righe sono tangente ai cerchi.
+Il simbolo di infinito è una combinazione delle parti di tali cerchi e le due righe. Per usare l'arco ellittico per disegnare il simbolo di infinito, è necessario determinare le coordinate in cui le due righe sono tangente ai cerchi.
 
 Creare un rettangolo a destra in uno dei cerchi:
 
-![](arcs-images/infinitytriangle.png "Due cerchi con tangenti e cerchio incorporato")
+![](arcs-images/infinitytriangle.png "Due cerchi con linee tangente e cerchio incorporato")
 
-Il raggio del cerchio è 100 unità e l'ipotenusa del triangolo è 150 unità, pertanto l'angolo α è l'arcoseno (funzione inversa del seno) pari a 100 diviso per 150, o gradi 41.8. La lunghezza di altro lato del triangolo è 150 volte il coseno di gradi 41.8 o 112, può anche essere calcolato per il teorema pitagorica.
+Il raggio del cerchio è 100 unità e l'ipotenusa del triangolo è 150 unità, in modo che l'angolo α è l'arcoseno (seno inverso) pari a 100 diviso da 150, o gradi 41.8. La lunghezza di altro lato del triangolo è 150 volte il coseno di gradi 41.8 o 112, che possono essere calcolati anche il teorema pitagorica.
 
-Le coordinate del punto di controllo di tangente possono quindi essere calcolate con queste informazioni:
+Le coordinate del punto tangente possono quindi essere calcolate usando queste informazioni:
 
 x = 112·cos(41.8) = 83
 
 y = 112·sin(41.8) = 75
 
-I quattro punti di controllo di tangente sono tutto ciò che è necessario per disegnare un segno di infinito centrato nel punto (0, 0) con un raggio cerchio di 100:
+I quattro punti tangenti sono tutto ciò che è necessario disegnare un segno di un numero infinito centrato sul punto (0, 0) con raggi cerchio pari a 100:
 
-![](arcs-images/infinitycoordinates.png "Due cerchi con le coordinate e tangenti")
+![](arcs-images/infinitycoordinates.png "Due cerchi con le coordinate e le tangenti")
 
-Il `PaintSurface` gestore di [ `ArcInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ArcInfinityPage.cs) classe posiziona il simbolo di infinito in modo che il (0, 0) punto viene posizionato al centro della pagina e scalare il percorso per le dimensioni dello schermo:
+Il `PaintSurface` gestore nel [ `ArcInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ArcInfinityPage.cs) classe posiziona il simbolo di infinito in modo che il (0, 0) punto viene posizionata al centro della pagina e ridimensiona il percorso alle dimensioni dello schermo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -650,22 +650,22 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Il codice Usa il `Bounds` proprietà `SKPath` per determinare le dimensioni del seno infinito per ridimensionarlo per le dimensioni dell'area di disegno:
+Il codice Usa il `Bounds` proprietà di `SKPath` per determinare le dimensioni del seno infinito per la scalabilità per le dimensioni dell'area di disegno:
 
-[![](arcs-images/arcinfinity-small.png "Schermata triplo della pagina arco infinito")](arcs-images/arcinfinity-large.png#lightbox "tripla schermata della pagina infinito arco")
+[![](arcs-images/arcinfinity-small.png "Tripla screenshot della pagina di un numero infinito arco")](arcs-images/arcinfinity-large.png#lightbox "tripla screenshot della pagina di un numero infinito arco")
 
-Il risultato appare un po' di piccole dimensioni, che suggerisce che il `Bounds` proprietà `SKPath` è di dimensioni maggiori rispetto al percorso di reporting.
+Il risultato sembra un po' piccolo, che suggerisce che il `Bounds` proprietà di `SKPath` Invia report di dimensioni maggiori rispetto al percorso.
 
-Internamente, Skia all'incirca l'arco con più di Bézier quadratica. Queste curve (come verrà visualizzato nella sezione successiva) contengono punti di controllo che determinano come viene disegnata la curva ma non fanno parte della curva sottoposto a rendering. Il `Bounds` proprietà include i punti di controllo.
+Internamente, Skia approssima l'arco usando più curve di Bézier quadratiche. Queste curve (come si vedrà nella sezione successiva) contengono i punti di controllo che controllano come viene disegnata la curva ma che non fanno parte della curva sottoposto a rendering. Il `Bounds` proprietà include i punti di controllo.
 
-Per ottenere un migliore adattamento, utilizzare il `TightBounds` proprietà, che consente di escludere i punti di controllo. Ecco il programma in esecuzione in modalità orizzontale e l'utilizzo di `TightBounds` proprietà per ottenere i limiti di percorso:
+Per ottenere un migliore adattamento, usare il `TightBounds` proprietà, che consente di escludere i punti di controllo. Ecco il programma in esecuzione in modalità orizzontale e l'utilizzo di `TightBounds` proprietà per ottenere i limiti di percorso:
 
-[![](arcs-images/arcinfinitytightbounds-small.png "Schermata triplo della pagina arco infinito con limiti di una stretta")](arcs-images/arcinfinitytightbounds-large.png#lightbox "tripla schermata della pagina arco infinito con limiti di una stretta")
+[![](arcs-images/arcinfinitytightbounds-small.png "Tripla screenshot della pagina arco infinito con limiti rigidi")](arcs-images/arcinfinitytightbounds-large.png#lightbox "tripla screenshot della pagina arco infinito con limiti rigidi")
 
-Anche se le connessioni tra l'archi e linee rette sono matematicamente smooth, la modifica da arco linea retta potrebbe sembrare poco improvvisa. Nella pagina successiva, viene visualizzato un simbolo di infinito migliorato.
+Anche se le connessioni tra le linee rette e gli archi sono matematicamente smooth, la modifica da arco linea retta potrebbe sembrare un po' improvvisa. Nella pagina successiva viene presentato un simbolo di infinito migliorato.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API di SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

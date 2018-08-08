@@ -3,16 +3,15 @@ title: Uso di SkiaSharp in xamarin. Forms
 description: SkiaSharp è un sistema di grafica 2D per .NET e c# con tecnologia il motore della grafica Skia open source che viene ampiamente usato nei prodotti di Google. Questa guida illustra come usare SkiaSharp per la grafica 2D nelle applicazioni xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
-ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/11/2017
-ms.openlocfilehash: bdc0603c6ae406adac42533e251106ccccf2cb7c
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: f7d97b798bf2a5a75af0731a665fe212491a6516
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130946"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615873"
 ---
 # <a name="using-skiasharp-in-xamarinforms"></a>Uso di SkiaSharp in xamarin. Forms
 
@@ -53,7 +52,7 @@ Trasformazioni consentono agli oggetti di grafica in modo uniforme convertito, r
 
 L'esplorazione dei percorsi continua con l'aggiunta di curve agli oggetti percorso e sfruttare altre funzionalità potenti percorso. Si noterà come è possibile specificare un percorso completo nella stringa di testo conciso, come utilizzare effetti per il tracciato e come approfondire meccanismi interni di percorso.
 
-## <a name="skiasharp-bitmapsbitmapsindexmd"></a>[Bitmap di SkiaSharp](bitmaps/index.md)
+## <a name="skiasharp-bitmapsbitmapsindexmd"></a>[Bitmap SkiaSharp](bitmaps/index.md)
 
 Le bitmap sono matrici rettangolari di bit corrispondente per il pixel di un dispositivo di visualizzazione. Questa serie di articoli illustra come caricare, salvare, visualizzare, creare, disegnare sul, aggiungere un'animazione e accedere i bit di SkiaSharp bitmap.
 

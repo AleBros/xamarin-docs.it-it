@@ -2,17 +2,17 @@
 title: Trasformazioni con matrice in SkiaSharp
 description: Questo articolo più profondo approfondisce le trasformazioni di SkiaSharp con la matrice di trasformazione versatili e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: fafa883d013701b9e72e544aff03739a7ff9230c
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 8d5f1a08f7e1bff5ca2f9b696463bc03340476af
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130868"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615431"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>Trasformazioni con matrice in SkiaSharp
 

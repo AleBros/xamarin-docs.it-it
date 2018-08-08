@@ -1,44 +1,44 @@
 ---
-title: Nozioni di percorso in SkiaSharp
-description: In questo articolo vengono illustrati l'oggetto SkiaSharp SKPath per la combinazione di linee e curve collegate e viene illustrato quanto descritto con codice di esempio.
+title: Nozioni di base di percorso in SkiaSharp
+description: Questo articolo esamina l'oggetto di SkiaSharp SKPath per la combinazione di linee e curve collegate e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.assetid: A7EDA6C2-3921-4021-89F3-211551E430F1
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 2fc492f723a7a009da506d241ddf2e8459908633
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 3c07614c12fb503638d3d5e63b24eb5367ba691a
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244045"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615535"
 ---
-# <a name="path-basics-in-skiasharp"></a>Nozioni di percorso in SkiaSharp
+# <a name="path-basics-in-skiasharp"></a>Nozioni di base di percorso in SkiaSharp
 
-_Esplorare l'oggetto SkiaSharp SKPath per la combinazione di linee e curve collegate_
+_Esplorare l'oggetto di SkiaSharp SKPath per la combinazione di linee e curve collegate_
 
-Tra le funzionalità più importanti del percorso di grafica è la possibilità di definire quando devono essere connessa più righe e quando non devono essere connessi. La differenza può essere piuttosto visibile, come illustrano le parti superiori di queste due triangoli:
+Tra i più importanti possono incidere del percorso della grafica è la possibilità di definire quando più righe devono essere connesse e quando non devono essere collegati. La differenza può essere ancora visibile, come le parti superiori di queste due triangoli illustrano:
 
 ![](paths-images/connectedlinesexample.png "Due triangoli che mostrano le differenze tra le linee connesse e disconnesse")
 
-Un percorso di grafica viene incapsulata dalle classi di [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) oggetto. Un percorso è una raccolta di uno o più *contorni*. Ogni profilo è una raccolta di *connesso* linee rette e curve. Distribuzione non sono connessi tra loro, ma potrebbe visivamente si sovrappongono. In alcuni casi una singola distribuzione può sovrapporsi stesso.
+Un percorso di grafica viene incapsulato dal [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) oggetto. Un percorso è una raccolta di uno o più *contorni*. Ogni distribuzione è una raccolta di *connessi* linee rette e curve. Distribuzioni non sono connessi tra loro, ma sono visivamente potrebbe sovrapporsi. In alcuni casi una singola distribuzione può sovrapporsi a se stesso.
 
-Una distribuzione in genere inizia con una chiamata al metodo seguente di `SKPath`:
+Una distribuzione a livello generale inizia con una chiamata al metodo seguente della `SKPath`:
 
 - `MoveTo` Per iniziare una nuova distribuzione
 
-L'argomento a tale metodo è un singolo punto, è possibile esprimere come un `SKPoint` come separato X e Y coordinate o valore. Il `MoveTo` chiamata stabilisce un punto all'inizio di contorno e iniziale *punto corrente*. È possibile chiamare i metodi seguenti per continuare la distribuzione con una riga o una curva dal punto corrente a un punto specificato nel metodo, che diventa il nuovo punto corrente:
+L'argomento al metodo è un singolo punto, è possibile esprimere come un `SKPoint` come separato X e Y coordinate o valore. Il `MoveTo` chiamata stabilisce un punto all'inizio di un'iniziale e il contorno *punto corrente*. È possibile chiamare i metodi seguenti per continuare la distribuzione con una riga o una curva dal punto corrente a un punto specificato nel metodo, che diventa il nuovo punto corrente:
 
-- `LineTo` Per aggiungere il percorso di una linea retta
-- `ArcTo` Per aggiungere un arco, che è una linea lungo la circonferenza di un cerchio o puntini di sospensione
+- `LineTo` Per aggiungere una linea retta nel percorso
+- `ArcTo` Per aggiungere un arco, vale a dire una riga nella circonferenza di un cerchio o dell'ellisse
 - `CubicTo` Per aggiungere una spline di Bézier cubica
 - `QuadTo` Per aggiungere una spline di Bézier quadratica
-- `ConicTo` Per aggiungere una razionale quadratica spline di Bézier, che può eseguire in modo accurato il rendering di sezioni conica (puntini di sospensione, parabolas e hyperbolas)
+- `ConicTo` Per aggiungere una razionale spline Bezier quadratica, che può eseguire in modo accurato il rendering di sezioni conica (puntini di sospensione, parabolas e hyperbolas)
 
-Nessuno di questi cinque metodi contiene tutte le informazioni necessarie per descrivere la riga o la curva. Ognuno di questi cinque metodi funziona in abbinamento con il punto corrente stabilito dalla chiamata al metodo precedono immediatamente. Ad esempio, il `LineTo` metodo aggiunge una linea retta per il contorno basate sul punto corrente, pertanto il parametro `LineTo` è solo un singolo punto.
+Nessuno di questi cinque metodi contengono tutte le informazioni necessarie per descrivere la riga o una curva. Ognuno di questi cinque metodi funziona in combinazione con il punto corrente stabilito dalla chiamata al metodo precede immediatamente. Ad esempio, il `LineTo` metodo aggiunge una linea retta per la distribuzione basata sul punto corrente di, il parametro `LineTo` è solo un singolo punto.
 
-Il `SKPath` classe definisce inoltre metodi che hanno gli stessi nomi di questi sei metodi ma con un `R` all'inizio:
+Il `SKPath` classe definisce anche i metodi che hanno gli stessi nomi di questi sei metodi ma con un `R` all'inizio:
 
 - `RMoveTo`
 - `RLineTo`
@@ -47,11 +47,11 @@ Il `SKPath` classe definisce inoltre metodi che hanno gli stessi nomi di questi 
 - `RQuadTo`
 - `RConicTo`
 
-Il `R` è l'acronimo di *relativo*. Hanno la stessa sintassi dei metodi corrispondenti senza il `R` ma sono rispetto al punto corrente. Questi sono utili per la creazione di parti simili di un percorso in un metodo che viene chiamato più volte.
+Il `R` è l'acronimo *relativo*. Hanno la stessa sintassi dei metodi corrispondenti senza il `R` ma sono relativo al punto corrente. Questi strumenti sono utili per la creazione di parti simili di un percorso in un metodo che viene chiamato più volte.
 
-Una distribuzione termina con un'altra chiamata a `MoveTo` o `RMoveTo`, che inizia un nuovo profilo o una chiamata a `Close`, che chiude il contorno. Il `Close` metodo automaticamente aggiunge una linea retta dal punto corrente il primo punto del contorno e contrassegna il percorso come chiuso, il che significa che viene sottoposto a rendering senza le maiuscole tratto.
+Una distribuzione termina con un'altra chiamata a `MoveTo` oppure `RMoveTo`, che inizia una nuova distribuzione o una chiamata a `Close`, che chiude il contorno. Il `Close` metodo automaticamente aggiunge una linea retta dal punto corrente e il primo punto del contorno e contrassegna il percorso come chiuso, il che significa che verrà visualizzata senza eventuali estremità dei tratti.
 
-È illustrata la differenza tra i contorni aperte e chiuse nel **due distribuzioni del triangolo** pagina, che utilizza un `SKPath` oggetto con due distribuzioni per il rendering di due triangoli. Il primo contorno è aperto e il secondo è chiuso. Ecco il [ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) classe:
+È illustrata la differenza tra i contorni aperte e chiuse nel **due distribuzioni del triangolo** pagina, che usa un `SKPath` oggetto con due distribuzioni per il rendering due triangoli. Il primo contorno è aperto e il secondo viene chiusa. Di seguito è riportato il [ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) classe:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -97,33 +97,33 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Il primo contorno è costituito da una chiamata a [ `MoveTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.MoveTo/p/System.Single/System.Single/) usando le coordinate X e Y anziché un' `SKPoint` valore, seguita da tre chiamate al [ `LineTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.LineTo/p/System.Single/System.Single/) per disegnare i lati di tre il triangolo. Il secondo contorno ha solo due chiamate a `LineTo` ma viene completata la distribuzione con una chiamata a [ `Close` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Close()/), che chiude il contorno. La differenza è significativa.
+Il primo contorno è costituito da una chiamata a [ `MoveTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.MoveTo/p/System.Single/System.Single/) usando le coordinate X e Y anziché un' `SKPoint` valore, seguita da tre chiamate a [ `LineTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.LineTo/p/System.Single/System.Single/) disegnare tre lati del triangolo. La seconda distribuzione ha solo due chiamate a `LineTo` ma viene completata la distribuzione con una chiamata a [ `Close` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Close()/), che chiude il contorno. La differenza è significativa.
 
-[![](paths-images/twotrianglecontours-small.png "La schermata della pagine dei contorni triangolo due")](paths-images/twotrianglecontours-large.png#lightbox "tripla schermata della pagine dei contorni triangolo due")
+[![](paths-images/twotrianglecontours-small.png "Tripla screenshot della pagina di due distribuzioni di triangolo")](paths-images/twotrianglecontours-large.png#lightbox "tripla screenshot della pagina di due distribuzioni triangolo")
 
-Come si può notare, il primo contorno ovviamente è una serie di tre righe collegate, ma la fine non connettersi con l'inizio. Le due righe si sovrappongono nella parte superiore. Il secondo contorno ovviamente viene chiusa ed è stato ottenuto con uno meno `LineTo` chiama perché il `Close` metodo aggiunge automaticamente una riga finale per chiudere il contorno.
+Come può notare, il primo contorno è ovviamente una serie di tre linee collegate, ma non può connettersi con inizio alla fine. Le due righe sovrappongano nella parte superiore. La seconda distribuzione ovviamente viene chiuso ed è stata eseguita con una minore `LineTo` chiama perché il `Close` metodo aggiunge automaticamente una riga finale per chiudere il contorno.
 
-`SKCanvas` definisce un solo [ `DrawPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawPath/p/SkiaSharp.SKPath/SkiaSharp.SKPaint/) metodo, che in questa demo viene chiamato due volte per compilare e tracciare il percorso. Tutti i contorni sono riempiti, anche quelli che non sono chiusi. Per motivi di compilazione i percorsi non chiusi, una linea retta presume che esiste tra i punti iniziale e finale dei contorni. Se si rimuove l'ultimo `LineTo` dal primo contorno o rimuovere il `Close` chiamata dal secondo contorno, ciascun contorno avrà solo due lati ma verrà compilata come se fosse un triangolo.
+`SKCanvas` definisce un solo [ `DrawPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawPath/p/SkiaSharp.SKPath/SkiaSharp.SKPaint/) metodo, che in questa dimostrazione viene chiamato due volte per riempire e tracciare il percorso. Tutte le distribuzioni sono riempiti, anche quelli che non sono chiusi. Per motivi di compilazione di percorsi non chiusi, una linea retta si presuppone che esiste tra i punti iniziale e finale delle distribuzioni. Se si rimuove l'ultima `LineTo` dal primo contorno o rimuovere il `Close` chiamata dal contorno secondo, ogni contour avrà solo due lati ma essere compilato come se fosse un triangolo.
 
-`SKPath` definisce molti altri metodi e proprietà. I metodi seguenti aggiungono contorni interi per il percorso, che potrebbe essere chiusa o non è stato chiuso a seconda del metodo:
+`SKPath` definisce molti altri metodi e proprietà. I metodi seguenti aggiungono i contorni interi per il percorso, che potrebbe essere chiuso o non è stato chiuso a seconda del metodo:
 
 - `AddRect`
 - [`AddRoundedRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddRoundedRect/p/SkiaSharp.SKRect/System.Single/System.Single/SkiaSharp.SKPathDirection/)
 - [`AddCircle`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddCircle/p/System.Single/System.Single/System.Single/SkiaSharp.SKPathDirection/)
 - [`AddOval`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddOval/p/SkiaSharp.SKRect/SkiaSharp.SKPathDirection/)
-- [`AddArc`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddArc/p/SkiaSharp.SKRect/System.Single/System.Single/) Per aggiungere una curva alla circonferenza di un'ellisse
+- [`AddArc`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddArc/p/SkiaSharp.SKRect/System.Single/System.Single/) Per aggiungere una curva sulla circonferenza di un'ellisse
 - `AddPath` Per aggiungere un altro percorso per il percorso corrente
 - [`AddPathReverse`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddPathReverse/p/SkiaSharp.SKPath/) Per aggiungere un altro percorso in ordine inverso
 
-Tenere presente che un `SKPath` oggetto definisce solo una geometria &mdash; una serie di punti e le connessioni. Solo quando un `SKPath` viene combinato con un `SKPaint` oggetto è il percorso in cui il rendering di un determinato colore, spessore e così via. Inoltre, tenere presente che il `SKPaint` oggetto passato per il `DrawPath` metodo consente di definire le caratteristiche dell'intero percorso. Se si desidera creare un elemento che richiedono vari colori, è necessario utilizzare un percorso separato per ogni colore.
+Tenere presente che un `SKPath` oggetto definisce solo una geometria &mdash; una serie di punti e le connessioni. Solo quando un `SKPath` combinata con un `SKPaint` oggetto è il percorso in cui viene eseguito il rendering con un colore specifico, spessore del tratto e così via. Inoltre, tenere presente che il `SKPaint` oggetto passato per il `DrawPath` metodo consente di definire le caratteristiche dell'intero percorso. Se si desidera disegnare qualcosa che richiedono vari colori, è necessario utilizzare un percorso distinto per ogni colore.
 
-Come l'aspetto di inizio e alla fine di una riga è definito da un'estremità della traccia, l'aspetto della connessione tra due linee è definito da un *join tratto*. Specificare impostando il [ `StrokeJoin` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeJoin/) proprietà di `SKPaint` a un membro del [ `SKStrokeJoin` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeJoin/) enumerazione:
+Proprio come l'aspetto di inizio e alla fine di una riga è definito da un'estremità della traccia, l'aspetto della connessione tra due righe è definito da una *join stroke*. Viene specificata impostando il [ `StrokeJoin` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeJoin/) proprietà della `SKPaint` a un membro del [ `SKStrokeJoin` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeJoin/) enumerazione:
 
-- [`Miter`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Miter/) creare un join indossano
-- [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Round/) creare un join arrotondato
-- [`Bevel`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Bevel/) creare un join abbassate-off
+- [`Miter`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Miter/) per un join indossano
+- [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Round/) per un join arrotondato
+- [`Bevel`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Bevel/) per un join abbassate-off
 
-Il **tratto join** pagina vengono visualizzati questi tre tracciare join con codice simile di **maiuscole tratto** pagina. Si tratta di `PaintSurface` gestore dell'evento nel [ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) classe:
+Il **join tratto** pagina mostra tre tracciare join con codice simile al **estremità dei tratti** pagina. Questo è il `PaintSurface` gestore dell'evento nel [ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) classe:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -187,14 +187,14 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Di seguito è riportato il programma in esecuzione su tre piattaforme:
+Ecco il programma in esecuzione su tre piattaforme:
 
-[![](paths-images/strokejoins-small.png "Schermata triplo della pagina tratto join")](paths-images/strokejoins-large.png#lightbox "tripla schermata della pagine dei join tratto")
+[![](paths-images/strokejoins-small.png "Tripla screenshot della pagina di tratto unisce")](paths-images/strokejoins-large.png#lightbox "tripla screenshot della pagina viene aggiunto tratto")
 
-La giunzione è costituito da un punto acuto in cui le righe di connettono. Quando un piccolo angolo unito in join due righe, la giunzione può diventare piuttosto lunga. Per evitare l'angolo acuto eccessivamente lunghe join, la lunghezza di giunzione è limitata dal valore della [ `StrokeMiter` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeMiter/) proprietà `SKPaint`. Una giunzione che supera la lunghezza viene troncata per diventare un join della smussatura.
+La giunzione è costituito da un punto ben strutturato di cui si connettono le righe. Quando due righe vengono aggiunti a un angolo di piccole dimensioni, la giunzione può diventare piuttosto lunga. Per evitare join acuto eccessivamente lunga, la lunghezza del join acuto è limitata dal valore della [ `StrokeMiter` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeMiter/) proprietà della `SKPaint`. Una giunzione che supera la lunghezza viene troncata per diventare un angolo smussato.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API di SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

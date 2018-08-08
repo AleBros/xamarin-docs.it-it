@@ -1,36 +1,36 @@
 ---
 title: Punti e trattini in SkiaSharp
-description: In questo articolo illustra gli aspetti complessi di disegno di linee con tratteggiate o in SkiaSharp impiegano e viene illustrato quanto descritto con codice di esempio.
+description: Questo articolo illustra come master le complicazioni del disegno di linee con tratteggiate o in SkiaSharp e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.assetid: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 5571f2d1824cef72e192a19d15f9af03276f7523
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 7c336e6b5224f61ff84eb39652788b23f52b806e
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243873"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615418"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>Punti e trattini in SkiaSharp
 
-_Gli aspetti complessi di disegno di linee punteggiate e tratteggiate in SkiaSharp master_
+_Master le complicazioni del disegno di linee con tratteggiate o in SkiaSharp_
 
-SkiaSharp consente di disegnare linee che non sono a tinta unita, ma sono composti da punti e trattini:
+SkiaSharp consente di disegnare le righe che non sono affidabili ma che invece sono costituiti da punti e trattini:
 
 ![](dots-images/dottedlinesample.png "Linea punteggiata")
 
-Eseguire questa operazione con un *effetto del percorso*, che è un'istanza del [ `SKPathEffect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathEffect/) classe che viene impostato il [ `PathEffect` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.PathEffect/) proprietà di `SKPaint`. È possibile creare un percorso effetto o combinare percorso effetti mediante statica `Create` metodi definiti dal `SKPathEffect`.
+Usando un *effetto del percorso*, che è un'istanza del [ `SKPathEffect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathEffect/) classe che è impostato sulla [ `PathEffect` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.PathEffect/) proprietà di `SKPaint`. È possibile creare un percorso di effetto (o combinare percorso effetti) usando il metodo statico `Create` metodi definiti da `SKPathEffect`.
 
-Per disegnare linee punteggiate o tratteggiate, si utilizza il [ `SKPathEffect.CreateDash` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDash/p/System.Single[]/System.Single/) metodo statico. Esistono due argomenti: questo primo è una matrice di `float` valori che indicano le lunghezze dei punti e trattini e la lunghezza degli spazi tra di essi. Questa matrice deve avere un numero pari di elementi, e devono essere presenti almeno due elementi. (Possono essere presenti zero elementi nella matrice, ma che generano una linea continua.) Se sono presenti due elementi, il primo è la lunghezza di un punto o un trattino e il secondo è la lunghezza dello spazio vuoto prima il punto o un trattino successivo. Se sono presenti più di due elementi, quindi si trovano in questo ordine: trattino-lunghezza, lunghezza dello spazio, dash lunghezza, lunghezza dello spazio e così via.
+Per disegnare linee tratteggiate o punteggiate, si utilizza il [ `SKPathEffect.CreateDash` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDash/p/System.Single[]/System.Single/) metodo statico. Esistono due argomenti: si tratta prima di tutto una matrice di `float` valori che indicano la lunghezza dei punti e trattini e la lunghezza degli spazi tra di essi. Questa matrice deve avere un numero pari di elementi e devono essere presenti almeno due elementi. (Può essere zero elementi nella matrice, ma che i risultati in una linea continua.) Se sono presenti due elementi, la prima è la lunghezza di un punto o trattino e il secondo è la lunghezza del gap prima il successivo punto o trattino. Se sono presenti più di due elementi, quindi sono nell'ordine indicato: trattino di lunghezza, durata dell'intervallo, lunghezza del trattino, durata dell'intervallo e così via.
 
-In genere, sarà necessario apportare le lunghezze trattino e uno spazio di un multiplo dello spessore del tratto. Se lo spessore del tratto è 10 pixel, ad esempio, quindi la matrice {10, 10} verrà disegnare una linea punteggiata in cui i punti e spazi vuoti sono la stessa lunghezza lo spessore del tratto.
+In generale, è opportuno apportare le lunghezze dash e gap un multiplo dello spessore del tratto. Se lo spessore del tratto è di 10 pixel, ad esempio, quindi la matrice {10, 10} verrà disegnare una linea punteggiata in cui i punti e spazi vuoti sono della stessa lunghezza come lo spessore del tratto.
 
-Tuttavia, il `StrokeCap` impostazione il `SKPaint` oggetto influisce inoltre su questi punti e trattini. Come si vedrà a breve, che ha un impatto sugli elementi di questa matrice.
+Tuttavia, il `StrokeCap` impostazione del `SKPaint` oggetto interessa anche questi punti e trattini. Come si vedrà a breve, che ha un impatto sugli elementi di questa matrice.
 
-Con punti e vengono illustrate le linee tratteggiate nella **punti e trattini** pagina. Il [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) file crea due `Picker` viste, uno per cui è possibile selezionare un'estremità della traccia e il secondo per selezionare una matrice di trattini:
+Con punti e vengono illustrate le linee tratteggiate nella **da punti e trattini** pagina. Il [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) un'istanza di file due `Picker` Visualizza, uno per cui è possibile selezionare un'estremità della traccia e il secondo per selezionare un array di dash:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -91,9 +91,9 @@ Con punti e vengono illustrate le linee tratteggiate nella **punti e trattini** 
 </ContentPage>
 ```
 
-I primi tre elementi di `dashArrayPicker` si presuppone che lo spessore del tratto sia 10 pixel. Il {10, 10} matrice è per una linea punteggiata, {30, 10} è per una linea tratteggiata e {10, 10, 30, 10} per una riga di punti e trattini. (Gli altri tre verranno descritte al più presto.)
+I primi tre elementi di `dashArrayPicker` si presuppone che lo spessore del tratto sia 10 pixel. La {10, 10} array si trovi per una linea punteggiata, {30, 10} è per una linea tratteggiata e {10, 10, 30, 10} per una riga di punto e dash. (Gli altri tre verranno discussa tra breve.)
 
-Il [ `DotsAndDashesPage` file code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) contiene il `PaintSurface` gestore dell'evento e un paio di routine di supporto per l'accesso di `Picker` viste:
+Il [ `DotsAndDashesPage` file code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) contiene il `PaintSurface` gestore dell'evento e un paio di routine di supporto per l'accesso al `Picker` viste:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -153,23 +153,23 @@ float[] GetPickerArray(Picker picker)
 }
 ```
 
-Nelle schermate seguenti, la schermata di iOS all'estrema sinistra mostra una linea punteggiata:
+Nelle schermate seguenti, la schermata iOS all'estrema sinistra mostra una linea punteggiata:
 
-[![](dots-images/dotsanddashes-small.png "La schermata della pagine dei punti e trattini")](dots-images/dotsanddashes-large.png#lightbox "tripla schermata della pagine dei punti e trattini")
+[![](dots-images/dotsanddashes-small.png "Tripla screenshot della pagina di punti e trattini")](dots-images/dotsanddashes-large.png#lightbox "tripla screenshot della pagina di punti e trattini")
 
-Tuttavia, la schermata Android dovrebbe anche per visualizzare una linea punteggiata usando la matrice {10, 10} ma invece la riga è a tinta unita. Cosa è successo? Il problema è che la schermata di Android include anche un'impostazione maiuscole tratto di `Square`. Estende a tutti i trattini per metà larghezza del tratto, provocando riempire i gap.
+Tuttavia, lo schermo Android anche dovrebbe per visualizzare una linea punteggiata utilizzando la matrice {10, 10} ma è invece a tinta unita con la riga. Cosa è successo? Il problema è che lo schermo Android include anche un'impostazione di criteri di autorizzazione connessioni tratto di `Square`. Estende tutti i trattini per metà della larghezza di tratto, comportando riempire i gap.
 
-Per aggirare questo problema quando si usa un limite di traccia di `Square` o `Round`, è necessario ridurre la lunghezza di trattino nella matrice dalla lunghezza tratto (talvolta risultante in lunghezza dash pari a 0) e aumentare le lunghezze di distanza per la lunghezza del tratto. Si tratta come tre finale tratteggio le matrici di `Picker` sono stati calcolati nel file XAML:
+Per evitare questo problema quando si usa un'estremità del tratto del `Square` o `Round`, è necessario ridurre le lunghezze di trattino nella matrice per la lunghezza di tratto (talvolta risultante in una lunghezza di tratteggio pari a 0) e aumentare le lunghezze di gap per la lunghezza di tratto. Si tratta di come i tre finali dash matrici nel `Picker` nel file XAML sono state calcolate:
 
-- {10, 10} è {0, 20} per una linea punteggiata
+- {10, 10} diventa {0, 20} per una linea punteggiata
 - {30, 10} diventa {20, 20} per una linea tratteggiata
-- {10, 10, 30, 10} è {0, 20, 20, 20} per una riga con tratteggiata o
+- {10, 10, 30, 10} diventa {0, 20, 20, 20} per una riga con tratteggiata o
 
-Chiudere il Mostra schermata UWP puntata e tratteggiata per un tratto di `Round`. Il `Round` nelle righe thick estremità della traccia offre spesso migliorare l'aspetto dei punti e trattini.
+Limitare il Mostra schermata UWP che da punti e linee tratteggiate line per un tratto di `Round`. Il `Round` nelle righe spesse estremità della traccia offre spesso l'aspetto migliore di punti e trattini.
 
-Finora non è diventati alcuna indicazione del secondo parametro per il `SKPathEffect.CreateDash` metodo. Questo parametro è denominato `phase` e si riferisce a un offset all'interno del criterio trattino e punto per l'inizio della riga. Ad esempio, se la matrice dash è {10, 10} e `phase` è 10, quindi la riga inizia con uno spazio vuoto anziché un punto.
+Finora non è diventato alcun accenno del secondo parametro per il `SKPathEffect.CreateDash` (metodo). Questo parametro è denominato `phase` e fa riferimento a un offset all'interno del criterio trattino e punto per l'inizio della riga. Ad esempio, se la matrice dash è {10, 10} che `phase` è 10, quindi la riga inizia con uno spazio vuoto anziché a un punto.
 
-Un'interessante applicazione del `phase` parametro è un'animazione. Il **spirale animato** pagina è simile al **Archimedean spirale** pagina con la differenza che il [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) classe aggiunge un'animazione di `phase` parametro. La pagina viene inoltre illustrato un altro approccio per l'animazione. Il precedente esempio del [ `PulsatingEllipsePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) utilizzato il `Task.Delay` metodo per controllare l'animazione. Questo esempio viene utilizzato invece di xamarin. Forms `Device.Timer` metodo:
+Un'interessante applicazione dei `phase` parametro è un'animazione. Il **animato spirale** pagina è simile al **Archimedean spirale** pagina con la differenza che il [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) classe aggiunge un'animazione il `phase` parametro. La pagina viene anche illustrato un altro approccio per l'animazione. Nell'esempio precedente del [ `PulsatingEllipsePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) utilizzato la `Task.Delay` metodo per controllare l'animazione. Questo esempio viene usato invece xamarin. Forms `Device.Timer` metodo:
 
 
 ```csharp
@@ -211,14 +211,14 @@ protected override void OnAppearing()
 }
 ```
 
-Naturalmente, è necessario eseguire effettivamente il programma per visualizzare l'animazione:
+Naturalmente, è possibile eseguire effettivamente il programma per verificare l'animazione:
 
-[![](dots-images/animatedspiral-small.png "Schermata triplo della pagina spirale animato")](dots-images/animatedspiral-large.png#lightbox "tripla schermata della pagina spirale animato")
+[![](dots-images/animatedspiral-small.png "Tripla screenshot della pagina aggiungendo un'animazione spirale")](dots-images/animatedspiral-large.png#lightbox "tripla screenshot della pagina spirale animata")
 
-Abbiamo visto come per disegnare linee e curve utilizzando equazioni parametriche. Una sezione per la pubblicazione in un secondo momento illustra i vari tipi di curve che `SKPath` supporta.
+A questo punto si è appreso come per disegnare linee e curve utilizzando equazioni parametriche definire. Una sezione da pubblicare in un secondo momento illustra i vari tipi di curve che `SKPath` supporta.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API di SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
 - [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
