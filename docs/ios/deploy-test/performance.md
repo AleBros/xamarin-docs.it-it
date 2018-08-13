@@ -1,18 +1,18 @@
 ---
 title: Prestazioni di Xamarin.iOS
-description: Questo documento descrive tecniche che possono essere usate per migliorare le prestazioni e l'uso della memoria nelle applicazioni Xamarin.iOS.
+description: Questo documento descrive tecniche per migliorare le prestazioni e l'uso della memoria nelle applicazioni Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/29/2016
-ms.openlocfilehash: afff9d3924c673edc363292efa1a9b7df43a9218
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 40a2acf28819279b2a0d5c1d50c651a79b455465
+ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33798590"
+ms.lasthandoff: 08/04/2018
+ms.locfileid: "39514463"
 ---
 # <a name="xamarinios-performance"></a>Prestazioni di Xamarin.iOS
 

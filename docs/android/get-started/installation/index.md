@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/22/2018
-ms.openlocfilehash: 776e2b52d6b8860c5fb5fa16253c2e1d42aa962a
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: fcc2ce5e45cd9094a9987ce12267850e19da9d75
+ms.sourcegitcommit: bf51592be39b2ae3d63d029be1d7745ee63b0ce1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241415"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39573516"
 ---
 # <a name="setup-and-installation"></a>Installazione e configurazione
 
@@ -39,6 +39,6 @@ Questi articoli illustrano come configurare l'emulatore Android per il test e de
 
 In questo articolo viene illustrato come installare un dispositivo Android fisico e connetterlo a un computer di sviluppo in modo che il dispositivo possa essere usato per eseguire applicazioni Xamarin.Android ed eseguirne il debug.
 
-## <a name="microsoft-openjdk-previewandroidget-startedinstallationopenjdkmd"></a>[Anteprima di Microsoft OpenJDK](~/android/get-started/installation/openjdk.md)
+## <a name="microsoft-mobile-openjdk-previewandroidget-startedinstallationopenjdkmd"></a>[Anteprima di Microsoft Mobile OpenJDK](~/android/get-started/installation/openjdk.md)
 
-Questa guida descrive la procedura per il passaggio alla versione di anteprima della distribuzione di OpenJDK di Microsoft.
+Questa guida descrive la procedura per il passaggio alla versione di anteprima della distribuzione di OpenJDK di Microsoft. La distribuzione di OpenJDK è concepita per lo sviluppo per dispositivi mobili.
