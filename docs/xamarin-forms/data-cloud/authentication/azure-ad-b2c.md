@@ -65,7 +65,7 @@ In grado di gestire lo scenario in cui un token appropriato potrebbe essere già
 
 ### <a name="ios"></a>iOS
 
-Se il tentativo di ottenere un token ha esito positivo, il ** passa ad.
+In iOS, lo schema URL personalizzato che è stato registrato con Azure Active Directory B2C deve essere registrato nella **Info. plist**, come illustrato nello screenshot seguente:
 
 ![](azure-ad-b2c-images/customurl-ios.png "Se il tentativo di ottenere un token ha esito negativo, non accade nulla e l'utente avrà la possibilità di avviare un nuovo flusso di autenticazione.")
 

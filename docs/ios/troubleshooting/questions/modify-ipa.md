@@ -46,7 +46,7 @@ Questo esempio presuppone che il nome del progetto xamarin. IOS sia `iPhoneApp1`
 
 9.  Eliminare i file desiderati dal `.ipa`. È possibile spostarli nel Cestino mediante il Finder oppure eliminarle nella riga di comando tramite `Terminal.app`. Per visualizzare il contenuto del `Payload/iPhone` file in Finder, tenendo premuto CTRL e selezionare **Mostra contenuti pacchetto**.
 
-10.  Usando lo stesso approccio generale come indicato nel passaggio 3, individuare il file di log nella `~/Library/Logs/Xamarin/MonoTouchVS/` che contiene sia il nome del progetto e il `generated session id` nel nome: ![ ] (modify-ipa-images/build-log.png "individuare il log di compilazione progetto in Finder")
+10.  Usando lo stesso approccio generale come indicato nel passaggio 3, individuare il file di log nella `~/Library/Logs/Xamarin/MonoTouchVS/` che contiene sia il nome del progetto e il `generated session id` nel nome: ![](modify-ipa-images/build-log.png "individuare il log di compilazione progetto in Finder")
 
 11.  Aprire il log di compilazione nel passaggio 10, ad esempio facendovi doppio clic.
 
