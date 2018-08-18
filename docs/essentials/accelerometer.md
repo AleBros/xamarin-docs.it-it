@@ -1,24 +1,24 @@
 ---
-title: 'Xamarin.Essentials: accelerometro'
-description: La classe Accelerometer in Xamarin.Essentials consente di monitorare il sensore accelerometro del dispositivo, che indica l'accelerazione del dispositivo in uno spazio dimensionale tre.
+title: 'Xamarin.Essentials: Accelerometer'
+description: La classe Accelerometer in Xamarin.Essentials consente di monitorare il sensore dell'accelerometro del dispositivo, che indica l'accelerazione del dispositivo nello spazio tridimensionale.
 ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: b5a24e214eb129b4d53b94586632791c8827447b
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 53e7ca70184270662d27043387da836ad44432fe
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353841"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40184428"
 ---
-# <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: accelerometro
+# <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: Accelerometer
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-Il **accelerometro** classe consente di monitorare sensore accelerometro del dispositivo che indica l'accelerazione del dispositivo in uno spazio dimensionale tre.
+La classe **Accelerometer** consente di monitorare il sensore dell'accelerometro del dispositivo, che indica l'accelerazione del dispositivo nello spazio tridimensionale.
 
-## <a name="using-accelerometer"></a>Usando l'accelerometro
+## <a name="using-accelerometer"></a>Uso della classe Accelerometer
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -26,7 +26,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La funzionalità di accelerometro funziona chiamando il `Start` e `Stop` metodi per l'ascolto delle modifiche per l'accelerazione. Eventuali modifiche vengono inviate attraverso la `ReadingChanged` evento. Ecco l'esempio di utilizzo:
+La funzionalità Accelerometer opera chiamando i metodi `Start` e `Stop` per attivare l'ascolto dei cambi di accelerazione. Le eventuali modifiche vengono inviate tramite l'evento `ReadingChanged`. Utilizzo di esempio:
 
 ```csharp
 
@@ -48,7 +48,7 @@ public class AccelerometerTest
         // Process Acceleration X, Y, and Z
     }
 
-    public void ToggleAcceleromter()
+    public void ToggleAccelerometer()
     {
         try
         {
@@ -69,23 +69,23 @@ public class AccelerometerTest
 }
 ```
 
-Le letture accelerometro vengano restituite nel G. G è un'unità di gravitation forzata uguale a quello esercitati dal campo gravitazionale della terra (9,81 m/s ^ 2).
+Le letture dell'accelerometro vengono restituite in G. G è un'unità di forza gravitazionale uguale a quella esercitata dal campo gravitazionale della terra (9,81 m/s^2).
 
-Il sistema di coordinate è definito rispetto allo schermo del telefono nello stesso orientamento predefinito. Gli assi non vengono scambiati quando cambia l'orientamento dello schermo del dispositivo.
+Il sistema di coordinate viene definito in relazione allo schermo del telefono con l'orientamento predefinito. Gli assi non vengono invertiti quando cambia l'orientamento dello schermo del dispositivo.
 
-L'asse X è orizzontale e punta a destra, l'asse Y verticale e punta verso l'alto e fa riferimento all'asse Z verso l'esterno della parte anteriore dello schermo. In questo sistema, dietro la schermata hanno valori Z negativi.
+L'asse X è orizzontale e punta verso destra, l'asse Y è verticale e punta verso l'alto e l'asse Z punta verso l'esterno rispetto alla parte frontale dello schermo. In questo sistema, le coordinate dietro lo schermo hanno valori Z negativi.
 
 Esempi:
 
-* Quando il dispositivo si trova flat in una tabella e viene eseguito il push a sinistra verso destra, il valore di accelerazione x è positivo.
+* Quando il dispositivo è piatto su un piano e viene spinto dal lato sinistro verso destra, il valore di accelerazione x è positivo.
 
-* Quando il dispositivo si trova fissi su una tabella, il valore di accelerazione è +1.00 G o (9,81 m/s + ^ 2), che corrispondono all'accelerazione del dispositivo (0, m/s ^ 2) meno la forza di gravità (-9,81 m/s ^ 2) e normalizzata come G.
+* Quando il dispositivo è piatto su un piano, il valore di accelerazione è +1,00 G o (+9,81 m/s^2), che corrisponde all'accelerazione del dispositivo (0 m/s^2) meno la forza di gravità (-9,81 m/s^2) normalizzata in G.
 
-* Quando il dispositivo si trova flat in una tabella e viene eseguito il push verso il cielo con un'accelerazione di m/s ^ 2, il valore di accelerazione è uguale a + 9.81 corrispondenti per l'accelerazione del dispositivo (m/s + ^ 2) meno la forza di gravità (-9,81 m/s ^ 2) e normalizzata in G.
+* Quando il dispositivo è piatto su un piano e viene spinto verso il cielo con un'accelerazione di A m/s^2, il valore di accelerazione è uguale a A+9,81 che corrisponde all'accelerazione del dispositivo (+A m/s^2) meno la forza di gravità (-9,81 m/s^2) normalizzata in G.
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
 ## <a name="api"></a>API
 
-- [Codice sorgente accelerometro](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
-- [Documentazione API accelerometro](xref:Xamarin.Essentials.Accelerometer)
+- [Codice sorgente dell'accelerometro](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
+- [Documentazione dell'API Accelerometer](xref:Xamarin.Essentials.Accelerometer)
