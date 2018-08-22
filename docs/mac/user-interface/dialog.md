@@ -1,133 +1,133 @@
 ---
-title: Finestre di dialogo in Xamarin.Mac
-description: In questo articolo viene descritto l'utilizzo con le finestre di dialogo e finestre modali in un'applicazione Xamarin.Mac. Vengono descritte la creazione di finestre modali in Xcode e interfaccia generatore, utilizzo di finestre di dialogo standard e l'interazione con questi controlli nel codice c#.
+title: Finestre di dialogo in xamarin. Mac
+description: Questo articolo descrive l'uso delle finestre di dialogo e finestre modali in un'applicazione xamarin. Mac. Descrive la creazione di finestre modali in Xcode e Interface builder, utilizzo di finestre di dialogo standard e l'interazione con questi controlli nel codice c#.
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 7d9a93c8503d7e25f098e871378a22455b597e90
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 2f28b52b4904b73f97cd9da575e90ef583e443da
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792694"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251069"
 ---
-# <a name="dialogs-in-xamarinmac"></a>Finestre di dialogo in Xamarin.Mac
+# <a name="dialogs-in-xamarinmac"></a>Finestre di dialogo in xamarin. Mac
 
-Quando si utilizza c# e .NET in un'applicazione Xamarin.Mac, è possibile accedere allo stesso finestre di dialogo e finestre modali che uno sviluppatore che lavora *Objective-C* e *Xcode* does. Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile utilizzare del Xcode _generatore interfaccia_ per creare e gestire le finestre modali (o, facoltativamente, crearli direttamente nel codice c#).
+Quando si usa c# e .NET in un'applicazione xamarin. Mac, si ha accesso allo stesso modale di Windows e le finestre di dialogo che gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire il Windows modale (oppure crearle direttamente nel codice c#).
 
-Una finestra di dialogo viene visualizzato in risposta a un'azione dell'utente e in genere fornisce agli utenti di modi di completare l'azione. Una finestra di dialogo richiede una risposta da parte dell'utente prima di chiuderla.
+Una finestra di dialogo viene visualizzata in risposta a un'azione dell'utente e in genere fornisce agli utenti di modi possano completare l'azione. Una finestra di dialogo richiede una risposta da parte dell'utente prima di chiuderla.
 
-Windows può essere utilizzato in uno stato non modale (ad esempio un editor di testo che può avere più documenti aperti contemporaneamente) o modale (ad esempio una finestra di dialogo di esportazione che deve essere chiusa prima di continua l'applicazione).
+Windows può essere usato in uno stato non modale (ad esempio un editor di testo che è possibile avere più documenti aperti in una sola volta) o modale (ad esempio, una finestra di dialogo di esportazione che deve essere chiusa prima che l'applicazione può continuare).
 
 [![](dialog-images/dialog03.png "La finestra di dialogo Apri")](dialog-images/dialog03.png#lightbox)
 
-In questo articolo verranno descritte le nozioni di base dell'utilizzo di finestre di dialogo e finestre modali in un'applicazione Xamarin.Mac. È altamente consigliabile che il [Hello, Mac](~/mac/get-started/hello-mac.md) articolo prima di tutto, in particolare il [Introduzione a Xcode e interfaccia generatore](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [punti vendita e le azioni](~/mac/get-started/hello-mac.md#Outlets_and_Actions) le sezioni, come illustra i concetti chiave e le tecniche che verrà usato in questo articolo.
+In questo articolo, si affronterà le nozioni di base dell'utilizzo di finestre di dialogo e Windows modali in un'applicazione xamarin. Mac. È altamente consigliabile usare la [Hello, Mac](~/mac/get-started/hello-mac.md) articolo prima di tutto, in particolare le [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [Outlet e azioni](~/mac/get-started/hello-mac.md#outlets-and-actions) le sezioni, perché illustra i concetti chiave e le tecniche che verrà usato in questo articolo.
 
-Si consiglia di esaminare il [c# esposizione di classi / metodi per Objective-C](~/mac/internals/how-it-works.md) sezione del [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) del documento, nonché viene descritto il `Register` e `Export` comandi utilizzato per le classi c# in transito-fino a oggetti Objective-C e gli elementi dell'interfaccia utente.
+È possibile ottenere un quadro il [c# esposizione di classi / metodi di Objective-c](~/mac/internals/how-it-works.md) sezione del [meccanismi interni di xamarin. Mac](~/mac/internals/how-it-works.md) del documento, viene spiegato il `Register` e `Export` comandi utilizzato per wireup classi c# per gli oggetti di Objective-C e gli elementi dell'interfaccia utente.
 
 <a name="Introduction_to_Dialogs" />
 
 ## <a name="introduction-to-dialogs"></a>Introduzione alle finestre di dialogo
 
-Una finestra di dialogo viene visualizzato in risposta a un'azione dell'utente (ad esempio, il salvataggio di un file) e fornisce un modo per gli utenti di completare tale operazione. Una finestra di dialogo richiede una risposta da parte dell'utente prima di chiuderla.
+Una finestra di dialogo viene visualizzata in risposta a un'azione dell'utente (ad esempio, il salvataggio di un file) e fornisce un modo per gli utenti completare l'operazione. Una finestra di dialogo richiede una risposta da parte dell'utente prima di chiuderla.
 
-In base a Apple, sono disponibili tre modalità per presentare una finestra di dialogo:
+In base a Apple, esistono tre modi per presentare una finestra di dialogo:
 
-- **Documento modale** -finestra di dialogo modale di un documento impedisce all'utente di apportare altre modifiche all'interno di un determinato documento fino a quando non viene chiuso.
-- **App modale** : un'App di finestra di dialogo modale impedisce all'utente di interagire con l'applicazione fino a quando non viene chiuso.
-- **Non modale** finestra di dialogo non modale consente agli utenti di modificare le impostazioni nella finestra di dialogo durante ancora l'interazione con la finestra del documento.
+- **Documentare modale** -finestra di dialogo modale di un documento impedisce all'utente di qualunque altra all'interno di un determinato documento fino a quando non viene chiuso.
+- **App modale** : un'App finestra di dialogo modale impedisce all'utente di interagire con l'applicazione fino a quando non viene chiuso.
+- **Non modale** finestra di dialogo non modale consente agli utenti di modificare le impostazioni nella finestra di dialogo durante comunque l'interazione con la finestra del documento.
 
 ### <a name="modal-window"></a>Finestra modale
 
-Qualsiasi standard `NSWindow` può essere utilizzato come una finestra di dialogo personalizzata e visualizzato come form modale:
+Qualsiasi standard `NSWindow` può essere utilizzato come una finestra di dialogo personalizzata visualizzando come modale:
 
 [![](dialog-images/modal01.png "Una finestra modale di esempio")](dialog-images/modal01.png#lightbox)
 
-### <a name="document-modal-dialog-sheets"></a>Finestre delle finestre di dialogo modali documento
+### <a name="document-modal-dialog-sheets"></a>Fogli di finestra di dialogo modale di documento
 
-Oggetto _foglio_ è una finestra di dialogo modale che è collegato a una finestra del documento specificato, impedendo agli utenti di interagire con la finestra fino a quando non sono per chiudere la finestra di dialogo. Un foglio è collegato alla finestra da cui emerge e solo un foglio di lavoro può essere aperto per una finestra in qualsiasi momento.
+Oggetto _foglio_ è una finestra di dialogo modale che è collegato a una finestra del documento specificato, impedendo agli utenti di interagire con la finestra fino a quando non sono per chiudere la finestra di dialogo. Un foglio è collegato alla finestra da cui emerge e un solo foglio può essere aperto per una finestra in qualsiasi momento.
 
 [![](dialog-images/sheet08.png "Un esempio di foglio modale")](dialog-images/sheet08.png#lightbox)
 
-### <a name="preferences-windows"></a>Preferenze Windows
+### <a name="preferences-windows"></a>Windows le preferenze
 
-Una finestra Preferenze è una finestra di dialogo non modale che contiene le impostazioni dell'applicazione che l'utente vengono modificati raramente. Preferenze di Windows includono spesso una barra degli strumenti che consente all'utente di passare tra diversi gruppi di impostazioni:
+Una finestra Preferenze è una finestra di dialogo non modale che contiene le impostazioni dell'applicazione che l'utente vengono modificati raramente. Le preferenze di Windows include spesso una barra degli strumenti che consente all'utente di spostarsi tra i diversi gruppi di impostazioni:
 
 [![](dialog-images/dialog02.png "Una finestra delle preferenze di esempio")](dialog-images/dialog02.png#lightbox)
 
 ### <a name="open-dialog"></a>Finestra di dialogo aprire
 
-La finestra di dialogo aprire concede agli utenti un modo coerenza per trovare e aprire un elemento in un'applicazione:
+La finestra di dialogo aprire offre agli utenti un modo coerente per trovare e aprire un elemento in un'applicazione:
 
 [![](dialog-images/dialog03.png "Una finestra di dialogo Apri")](dialog-images/dialog03.png#lightbox)
 
 
 ### <a name="print-and-page-setup-dialogs"></a>Stampa e le finestre di dialogo Imposta pagina
 
-Pagina Installazione finestre di dialogo che è possibile visualizzare in modo che gli utenti possono avere una stampa coerenza esperienza in tutte le applicazioni che utilizzano e macOS fornisce stampa standard.
+macOS fornisce stampa standard e pagina di installazione di finestre di dialogo che è possibile visualizzare in modo che gli utenti possono avere una stampa coerente esperienza in tutte le applicazioni che usano.
 
-La finestra di dialogo di stampa può essere visualizzata come entrambi libera mobile finestra di dialogo:
+La finestra di dialogo di stampa può essere visualizzato come entrambi una finestra di dialogo gratuitamente a virgola mobile:
 
 [![](dialog-images/print01.png "Una finestra di dialogo Stampa")](dialog-images/print01.png#lightbox)
 
-In alternativa, possono essere visualizzato come un foglio di:
+In alternativa, può essere visualizzato come un foglio di:
 
-[![](dialog-images/print02.png "Un foglio di stampato")](dialog-images/print02.png#lightbox)
+[![](dialog-images/print02.png "Un foglio di stampa")](dialog-images/print02.png#lightbox)
 
-Finestra di dialogo Imposta pagina può essere visualizzata come entrambi libera mobile finestra di dialogo:
+Finestra di dialogo Imposta pagina possono essere visualizzato come entrambi una finestra di dialogo gratuitamente a virgola mobile:
 
 [![](dialog-images/print03.png "Una finestra di dialogo Imposta pagina")](dialog-images/print03.png#lightbox)
 
-In alternativa, possono essere visualizzato come un foglio di:
+In alternativa, può essere visualizzato come un foglio di:
 
 [![](dialog-images/print04.png "Un foglio di programma di installazione di pagina")](dialog-images/print04.png#lightbox)
 
 ### <a name="save-dialogs"></a>Salvare le finestre di dialogo
 
-La finestra di dialogo Salva offre agli utenti un modo coerenza per salvare un elemento in un'applicazione. La finestra di dialogo Salva dispone di due stati: **minima** (noto anche come compressa):
+La finestra di dialogo Salva offre agli utenti un modo coerente per salvare un elemento in un'applicazione. La finestra di dialogo Salva dispone di due stati: **minimo** (noto anche come compressa):
 
 [![](dialog-images/save01.png "Una finestra di dialogo Salva")](dialog-images/save01.png#lightbox)
 
-E **espansa** stato:
+E il **espansa** stato:
 
 [![](dialog-images/save02.png "Finestra di dialogo Salva espanso")](dialog-images/save02.png#lightbox)
 
-Il **minimo** Salva finestra di dialogo può anche essere visualizzato come un foglio di:
+Il **minimo** finestra di dialogo Salva inoltre possono essere visualizzato come un foglio di:
 
-[![](dialog-images/save03.png "Un numero minimo di salvataggio foglio")](dialog-images/save03.png#lightbox)
+[![](dialog-images/save03.png "Un minimo di salvataggio foglio")](dialog-images/save03.png#lightbox)
 
-Che può essere il **espansa** Salva finestra di dialogo:
+Come può il **espansa** Salva finestra di dialogo:
 
 [![](dialog-images/save04.png "Salvare un espanso foglio")](dialog-images/save04.png#lightbox)
 
-Per ulteriori informazioni, vedere il [finestre di dialogo](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowDialogs.html#//apple_ref/doc/uid/20000957-CH43-SW1) sezione di Apple [linee guida dell'interfaccia umana di OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+Per altre informazioni, vedere la [Dialogs](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowDialogs.html#//apple_ref/doc/uid/20000957-CH43-SW1) sezione di Apple [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 
 <a name="Adding_a_Modal_Window_to_a_Project" />
 
 ## <a name="adding-a-modal-window-to-a-project"></a>Aggiunta di una finestra modale a un progetto
 
-A parte la finestra principale del documento, un'applicazione Xamarin.Mac potrebbe essere necessario visualizzare altri tipi di windows per l'utente, ad esempio le preferenze o pannelli di controllo.
+A parte la finestra del documento principale, un'applicazione xamarin. Mac potrebbe essere necessario visualizzare altri tipi di windows per l'utente, ad esempio le preferenze o i pannelli di controllo.
 
 Per aggiungere una nuova finestra, eseguire le operazioni seguenti:
 
-1. Nel **Esplora**, aprire il `Main.storyboard` file per la modifica in Generatore del Xcode di interfaccia.
-2. Trascinare una nuova **View Controller** nell'area di progettazione:
+1. Nel **Esplora soluzioni**, aprire il `Main.storyboard` file per la modifica in Interface Builder di Xcode.
+2. Trascinare una nuova **Controller visualizzazione** nell'area di progettazione:
 
-    [![](dialog-images/new01.png "Selezione di un Controller di visualizzazione dalla libreria")](dialog-images/new01.png#lightbox)
-3. Nel **controllo di identità**, immettere `CustomDialogController` per il **nome classe**: 
+    [![](dialog-images/new01.png "Quando si seleziona un Controller di visualizzazione dalla libreria")](dialog-images/new01.png#lightbox)
+3. Nel **Identity Inspector**, immettere `CustomDialogController` per il **nome classe**: 
 
-    [![](dialog-images/new02.png "L'impostazione del nome di classe")](dialog-images/new02.png#lightbox)
+    [![](dialog-images/new02.png "Impostazione del nome di classe")](dialog-images/new02.png#lightbox)
 4. Tornare a Visual Studio per Mac, consentire la sincronizzazione con Xcode e creare il `CustomDialogController.h` file.
 5. Tornare a Xcode e progettare l'interfaccia: 
 
     [![](dialog-images/new03.png "Progettazione dell'interfaccia utente in Xcode")](dialog-images/new03.png#lightbox)
-6. Creare un **definire modale** dalla finestra principale dell'app per il nuovo Controller di visualizzazione mediante il trascinamento di controllo dall'elemento dell'interfaccia utente che verrà aperta la finestra di dialogo alla finestra della finestra di dialogo. Assegnare il **identificatore** `ModalSegue`: 
+6. Creare un **Segue modale** dalla finestra principale dell'app nel nuovo controller di visualizzazione mediante il trascinamento di controllo dall'elemento dell'interfaccia utente che verrà aperta la finestra di dialogo alla finestra della finestra di dialogo. Assegnare il **Identifier** `ModalSegue`: 
 
-    [![](dialog-images/new06.png "Segue un modale")](dialog-images/new06.png#lightbox)
-6. Rete per qualsiasi **azioni** e **prese**: 
+    [![](dialog-images/new06.png "Un elemento segue modale")](dialog-images/new06.png#lightbox)
+6. Wireup eventuali **azioni** e **Outlet**: 
 
     [![](dialog-images/new04.png "Configurazione di un'azione")](dialog-images/new04.png#lightbox)
 6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
@@ -220,9 +220,9 @@ namespace MacDialog
 }
 ```
 
-Questo codice espone alcune proprietà per impostare il titolo e la descrizione della finestra di dialogo e alcuni eventi per rispondere alla finestra di dialogo viene annullata o accettata.
+Questo codice espone alcuni eventi per rispondere alla finestra di dialogo viene annullata o accettato e alcune proprietà per impostare il titolo e la descrizione della finestra di dialogo.
 
-Successivamente, modificare il `ViewController.cs` file, eseguire l'override di `PrepareForSegue` metodo e renderlo simile al seguente:
+Successivamente, modificare il `ViewController.cs` file, eseguire l'override di `PrepareForSegue` (metodo) e renderlo simile al seguente:
 
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
@@ -245,41 +245,41 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 }
 ```
 
-Questo codice inizializza segue che è stato definito in Generatore del Xcode di interfaccia per la finestra di dialogo e imposta il titolo e descrizione. Gestisce inoltre la scelta che rende l'utente nella finestra di dialogo.
+Questo codice inizializza l'elemento segue è definiti in Interface Builder di Xcode a nostra finestra di dialogo e consente di impostare il titolo e descrizione. Gestisce inoltre la scelta che rende l'utente nella finestra di dialogo.
 
 È possibile eseguire l'applicazione e visualizzare la finestra di dialogo personalizzata:
 
 [![](dialog-images/new05.png "Una finestra di dialogo di esempio")](dialog-images/new05.png#lightbox)
 
-Per ulteriori informazioni sull'utilizzo di windows in un'applicazione Xamarin.Mac, consultare il nostro [utilizzo di finestre](~/mac/user-interface/window.md) documentazione.
+Per altre informazioni sull'uso di windows in un'applicazione xamarin. Mac, vedere la [utilizzo di Windows](~/mac/user-interface/window.md) documentazione.
 
 <a name="Creating_a_Custom_Sheet" />
 
 ## <a name="creating-a-custom-sheet"></a>Creazione di un foglio di lavoro personalizzato
 
-Oggetto _foglio_ è una finestra di dialogo modale che è collegato a una finestra del documento specificato, impedendo agli utenti di interagire con la finestra fino a quando non sono per chiudere la finestra di dialogo. Un foglio è collegato alla finestra da cui emerge e solo un foglio di lavoro può essere aperto per una finestra in qualsiasi momento. 
+Oggetto _foglio_ è una finestra di dialogo modale che è collegato a una finestra del documento specificato, impedendo agli utenti di interagire con la finestra fino a quando non sono per chiudere la finestra di dialogo. Un foglio è collegato alla finestra da cui emerge e un solo foglio può essere aperto per una finestra in qualsiasi momento. 
 
-Per creare un foglio personalizzato in Xamarin.Mac, è possibile eseguire le operazioni seguenti:
+Per creare un foglio personalizzata in xamarin. Mac, è possibile eseguire le operazioni seguenti:
 
-1. Nel **Esplora**, aprire il `Main.storyboard` file per la modifica in Generatore del Xcode di interfaccia.
-2. Trascinare una nuova **View Controller** nell'area di progettazione:
+1. Nel **Esplora soluzioni**, aprire il `Main.storyboard` file per la modifica in Interface Builder di Xcode.
+2. Trascinare una nuova **Controller visualizzazione** nell'area di progettazione:
 
-    [![](dialog-images/new01.png "Selezione di un Controller di visualizzazione dalla libreria")](dialog-images/new01.png#lightbox)
+    [![](dialog-images/new01.png "Quando si seleziona un Controller di visualizzazione dalla libreria")](dialog-images/new01.png#lightbox)
 2. Progettare l'interfaccia utente:
 
     [![](dialog-images/sheet01.png "La progettazione dell'interfaccia utente")](dialog-images/sheet01.png#lightbox)
-3. Creare un **foglio definire** dalla finestra di principale per il nuovo Controller di visualizzazione: 
+3. Creare un **foglio Segue** dalla finestra del principale per il nuovo Controller di visualizzazione: 
 
-    [![](dialog-images/sheet02.png "Selezione del tipo segue foglio")](dialog-images/sheet02.png#lightbox)
-4. Nel **controllo di identità**, denominare il Controller di visualizzazione **classe** `SheetViewController`: 
+    [![](dialog-images/sheet02.png "Selezione del tipo di elemento segue foglio")](dialog-images/sheet02.png#lightbox)
+4. Nel **Identity Inspector**, assegnare un nome del Controller visualizzazione **classe** `SheetViewController`: 
 
-    [![](dialog-images/sheet03.png "L'impostazione del nome di classe")](dialog-images/sheet03.png#lightbox)
-5. Definire le esigenze **prese** e **azioni**: 
+    [![](dialog-images/sheet03.png "Impostazione del nome di classe")](dialog-images/sheet03.png#lightbox)
+5. Definire alcuna necessità **Outlet** e **azioni**: 
 
-    [![](dialog-images/sheet04.png "Definire i punti vendita e le azioni necessarie")](dialog-images/sheet04.png#lightbox)
+    [![](dialog-images/sheet04.png "La definizione di Outlet e azioni necessari")](dialog-images/sheet04.png#lightbox)
 6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione.
 
-Successivamente, modificare il `SheetViewController.cs` file e renderlo simile al seguente:
+Modificare quindi il `SheetViewController.cs` file e renderlo simile al seguente:
 
 ```csharp
 using System;
@@ -375,7 +375,7 @@ namespace MacDialog
 }
 ```
 
-Successivamente, modificare il `ViewController.cs` file, modificare il `PrepareForSegue` metodo e renderlo simile al seguente:
+Successivamente, modificare il `ViewController.cs` file, modificare il `PrepareForSegue` (metodo) e renderlo simile al seguente:
 
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
@@ -405,15 +405,15 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 }
 ```
 
-Se si esegue l'applicazione e aprire la finestra, questo verrà collegato alla finestra:
+Se è eseguire l'applicazione e aprire la finestra, si verrà collegato alla finestra:
 
-[![](dialog-images/sheet08.png "Un esempio di foglio")](dialog-images/sheet08.png#lightbox)
+[![](dialog-images/sheet08.png "Un foglio di esempio")](dialog-images/sheet08.png#lightbox)
 
 <a name="Creating_a_Preferences_Dialog" />
 
 ## <a name="creating-a-preferences-dialog"></a>Creazione di una finestra di dialogo Preferenze
 
-Prima è la visualizzazione delle preferenze nel generatore di interfaccia il layout, è necessario aggiungere un tipo segue personalizzato per gestire le preferenze per la disattivazione. Aggiungere una nuova classe al progetto e chiamarlo `ReplaceViewSeque `. Modificare la classe e renderlo simile al seguente:
+Prima è il layout di visualizzazione delle preferenze in Interface Builder, è necessario aggiungere un tipo di elemento segue personalizzata per gestire le preferenze per la disattivazione. Aggiungere una nuova classe al progetto e denominarlo `ReplaceViewSeque `. Modificare la classe e renderlo simile al seguente:
 
 ```csharp
 using System;
@@ -474,53 +474,53 @@ namespace MacWindows
 }
 ```
 
-Con la segue personalizzati creati, è possibile aggiungere una nuova finestra in Generatore del Xcode di interfaccia per gestire il nostro preferenze.
+L'elemento segue personalizzato creato, è possibile aggiungere una nuova finestra in Interface Builder di Xcode per gestire il preferenze.
 
 Per aggiungere una nuova finestra, eseguire le operazioni seguenti:
 
-1. Nel **Esplora**, aprire il `Main.storyboard` file per la modifica in Generatore del Xcode di interfaccia.
-2. Trascinare una nuova **finestra Controller** nell'area di progettazione:
+1. Nel **Esplora soluzioni**, aprire il `Main.storyboard` file per la modifica in Interface Builder di Xcode.
+2. Trascinare una nuova **Controller di finestra** nell'area di progettazione:
 
     [![](dialog-images/pref01.png "Selezionare un Controller di finestra dalla libreria")](dialog-images/pref01.png#lightbox)
-3. Disporre la finestra vicino il **barra dei Menu** progettazione:
+3. Disporre la finestra vicino i **barra dei Menu** progettazione:
 
-    [![](dialog-images/pref02.png "Aggiunta della nuova finestra")](dialog-images/pref02.png#lightbox)
-4. Poiché vi saranno le schede nella pagina delle preferenze, creare copie del Controller di visualizzazione associata:
+    [![](dialog-images/pref02.png "Aggiunta la nuova finestra")](dialog-images/pref02.png#lightbox)
+4. Creare copie dei Controller di visualizzazione associato saranno le schede nella visualizzazione di preferenza:
 
-    [![](dialog-images/pref03.png "Aggiunta di controller di visualizzazione necessarie")](dialog-images/pref03.png#lightbox)
-5. Trascinare una nuova **Controller della barra degli strumenti** dal **libreria**:
+    [![](dialog-images/pref03.png "Aggiunta di controller di visualizzazione richiesto")](dialog-images/pref03.png#lightbox)
+5. Trascinare una nuova **Controller di barra degli strumenti** dalle **libreria**:
 
-    [![](dialog-images/pref04.png "Selezionare un Controller della barra degli strumenti dalla libreria")](dialog-images/pref04.png#lightbox)
-6. E rilasciarla nella finestra nell'area di progettazione:
+    [![](dialog-images/pref04.png "Selezionare un Controller di barra degli strumenti dalla raccolta")](dialog-images/pref04.png#lightbox)
+6. E rilasciarlo nella finestra nell'area di progettazione:
 
-    [![](dialog-images/pref05.png "Aggiunge un nuovo Controller della barra degli strumenti")](dialog-images/pref05.png#lightbox)
+    [![](dialog-images/pref05.png "Aggiunge un nuovo Controller di barra degli strumenti")](dialog-images/pref05.png#lightbox)
 7. La progettazione della barra degli strumenti layout:
 
-    [![](dialog-images/pref06.png "La barra degli strumenti di layout")](dialog-images/pref06.png#lightbox)
-8. CTRL + clic e trascinare da ogni **pulsante della barra degli strumenti** per le visualizzazioni create in precedenza. Selezionare un **personalizzato** definire tipo:
+    [![](dialog-images/pref06.png "Barra degli strumenti layout")](dialog-images/pref06.png#lightbox)
+8. CTRL + clic e trascinare da ognuna **pulsante sulla barra degli strumenti** alle visualizzazioni creato in precedenza. Selezionare una **Custom** tipo di elemento segue:
 
-    [![](dialog-images/pref07.png "L'impostazione del tipo segue")](dialog-images/pref07.png#lightbox)
-9. Selezionare il nuovo Segue e impostare il **classe** a `ReplaceViewSegue`:
+    [![](dialog-images/pref07.png "Impostare il tipo di elemento segue")](dialog-images/pref07.png#lightbox)
+9. Selezionare il nuovo elemento Segue e impostare il **classe** a `ReplaceViewSegue`:
 
-    [![](dialog-images/pref08.png "L'impostazione della classe segue")](dialog-images/pref08.png#lightbox)
-10. Nel **Menubar progettazione** nell'area di progettazione, dal Menu dell'applicazione selezionare **preferenze...** , CTRL + clic e trascinare la finestra Preferenze per creare un **Mostra** definire:
+    [![](dialog-images/pref08.png "L'impostazione della classe di elemento segue")](dialog-images/pref08.png#lightbox)
+10. Nel **sulla barra dei menu Progettazione** nell'area di progettazione, dal Menu dell'applicazione selezionare **preferenze...** , fare CTRL + clic e trascinare la finestra Preferenze per creare un **mostrano** elemento segue:
 
-    [![](dialog-images/pref09.png "L'impostazione del tipo segue")](dialog-images/pref09.png#lightbox)
+    [![](dialog-images/pref09.png "Impostare il tipo di elemento segue")](dialog-images/pref09.png#lightbox)
 11. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione.
 
 Se si esegue il codice e selezionare il **preferenze...**  dal **Menu applicazione**, verrà visualizzata la finestra:
 
 [![](dialog-images/pref10.png "Una finestra Preferenze di esempio")](dialog-images/pref10.png#lightbox)
 
-Per ulteriori informazioni sull'uso di Windows e le barre degli strumenti, vedere il nostro [Windows](~/mac/user-interface/window.md) e [barre degli strumenti](~/mac/user-interface/toolbar.md) documentazione.
+Per altre informazioni sull'uso di Windows e le barre degli strumenti, vedere la [Windows](~/mac/user-interface/window.md) e [barre degli strumenti](~/mac/user-interface/toolbar.md) documentazione.
 
 <a name="Saving-and-Loading-Preferences" />
 
-### <a name="saving-and-loading-preferences"></a>Salvataggio e caricamento preferenze
+### <a name="saving-and-loading-preferences"></a>Salvataggio e caricamento delle preferenze
 
-In un tipico macOS App, quando l'utente modifica le preferenze dell'utente dell'applicazione, le modifiche vengono salvate automaticamente. Il modo più semplice per gestire questo problema in un'app Xamarin.Mac, consiste nel creare un'unica classe per gestire tutte le preferenze dell'utente e condividere a livello di sistema.
+In macOS tipiche App, quando l'utente apporta modifiche a una delle preferenze dell'utente dell'App, tali modifiche vengono salvate automaticamente. Il modo più semplice per gestire questo problema in un'app xamarin. Mac, consiste nel creare un'unica classe per gestire tutte le preferenze dell'utente e condividerlo a livello di sistema.
 
-In primo luogo, aggiungere un nuovo `AppPreferences` classe al progetto e di ereditare da `NSObject`. Sono progettate per utilizzare le preferenze [Data Binding e la generazione di codice chiave-valore](~/mac/app-fundamentals/databinding.md) che rendono il processo di creazione e gestione la preferenza di form molto più semplice. Poiché le preferenze saranno costituito da una piccola quantità di tipi di dati semplice, usare il `NSUserDefaults` per archiviare e recuperare i valori.
+In primo luogo, aggiungere una nuova `AppPreferences` classe al progetto e di ereditare `NSObject`. Verranno progettate le preferenze per utilizzare [Data Binding e codifica di chiave-valore](~/mac/app-fundamentals/databinding.md) che rendono il processo di creazione e la preferenza di gestione basata su form molto più semplice. Poiché le preferenze costituito da una piccola quantità di tipi di dati semplice, usare incorporato `NSUserDefaults` per archiviare e recuperare i valori.
 
 Modificare il `AppPreferences.cs` file e renderlo simile al seguente:
 
@@ -683,9 +683,9 @@ namespace SourceWriter
 }
 ```
 
-Questa classe contiene alcune routine di supporto, ad esempio `SaveInt`, `LoadInt`, `SaveColor`, `LoadColor`, e così via per lavorare con `NSUserDefaults` più semplice. Inoltre, dato che `NSUserDefaults` non dispone di un metodo incorporato per gestire `NSColors`, `NSColorToHexString` e `NSColorFromHexString` vengono utilizzati metodi per convertire i colori per le stringhe esadecimali basata sul web (`#RRGGBBAA` dove `AA` è la trasparenza alfa) che può essere facilmente archiviati e recuperati.
+Questa classe contiene alcune routine di supporto, ad esempio `SaveInt`, `LoadInt`, `SaveColor`, `LoadColor`, e così via per agevolare l'uso con `NSUserDefaults` più semplice. Inoltre, dato `NSUserDefaults` non ha un metodo integrato per gestire `NSColors`, il `NSColorToHexString` e `NSColorFromHexString` metodi vengono usati per convertire i colori in stringhe esadecimali basata sul web (`#RRGGBBAA` dove `AA` è la trasparenza alfa) che può essere facilmente archiviati e recuperati.
 
-Nel `AppDelegate.cs` file, creare un'istanza di **AppPreferences** oggetto che verrà utilizzato a livello di app:
+Nel `AppDelegate.cs` file, creare un'istanza del **AppPreferences** oggetto che verrà utilizzato a livello di app:
 
 ```csharp
 using AppKit;
@@ -715,13 +715,13 @@ namespace SourceWriter
 
 <a name="Wiring-Preferences-to-Preference-Views" />
 
-### <a name="wiring-preferences-to-preference-views"></a>Le preferenze per le visualizzazioni delle preferenze di cablaggio
+### <a name="wiring-preferences-to-preference-views"></a>Collegare le preferenze per le visualizzazioni di preferenza
 
-Successivamente, connettersi classe preferenza elementi dell'interfaccia utente della finestra delle preferenze e le viste create in precedenza. In Generatore di interfaccia, selezionare un Controller di visualizzazione delle preferenze e passare il **controllo di identità**, creare una classe personalizzata per il controller: 
+Successivamente, connettersi classe preferenza agli elementi dell'interfaccia utente nella finestra di preferenze e le visualizzazioni create in precedenza. In Interface Builder, selezionare un Controller di visualizzazione delle preferenze e passare per il **Identity Inspector**, creare una classe personalizzata per il controller: 
 
-[![](dialog-images/prefs12.png "Il controllo di identità")](dialog-images/prefs12.png#lightbox)
+[![](dialog-images/prefs12.png "Identity Inspector")](dialog-images/prefs12.png#lightbox)
 
-Tornare a Visual Studio per Mac sincronizzare le modifiche e aprire la classe appena creata per la modifica. Impostare la classe simile al seguente:
+Tornare a Visual Studio per Mac sincronizzare le modifiche e aprire la classe appena creata per la modifica. Rendere la classe simile alla seguente:
 
 ```csharp
 using System;
@@ -754,23 +754,23 @@ namespace SourceWriter
 }
 ```
 
-Si noti che questa classe ha svolto due cose qui: è un helper `App` proprietà per facilitare l'accesso di **AppDelegate** più semplice. In secondo luogo, il `Preferences` proprietà espone globale **AppPreferences** classe per l'associazione dati con controlli dell'interfaccia utente inserito in questa vista.
+Si noti che questa classe ha svolto due cose qui: in primo luogo, è un helper `App` proprietà per facilitare l'accesso di **AppDelegate** più semplice. Secondo, il `Preferences` proprietà espone globale **AppPreferences** classe per il data binding con tutti i controlli dell'interfaccia utente inseriti in questa vista.
 
-Successivamente, fare doppio clic il file dello Storyboard per aprire nuovamente nel generatore di interfaccia (e visualizzare le modifiche appena apportate in precedenza). Trascinare i controlli dell'interfaccia utente necessari per compilare l'interfaccia preferenze nella visualizzazione. Per ogni controllo, passare il **controllo associazione** e associare le singole proprietà del **AppPreference** classe:
+Successivamente, fare doppio clic sul file di Storyboard per aprirla nuovamente in Interface Builder (e visualizzare le modifiche appena apportate di sopra). Trascinare tutti i controlli dell'interfaccia utente necessari per compilare l'interfaccia preferenze nella visualizzazione. Per ogni controllo, passare al **associazione Inspector** ed eseguire l'associazione per le singole proprietà delle **AppPreference** classe:
 
-[![](dialog-images/prefs13.png "Il controllo con associazione")](dialog-images/prefs13.png#lightbox)
+[![](dialog-images/prefs13.png "Il controllo di associazione")](dialog-images/prefs13.png#lightbox)
 
-Ripetere i passaggi precedenti per tutti i pannelli (View Controller) e proprietà preferenza necessari.
+Ripetere i passaggi precedenti per tutti i pannelli (controller di visualizzazione) e alle proprietà di preferenza è richiesto.
 
 <a name="Applying-Preference-Changes-to-All-Open-Windows" />
 
-### <a name="applying-preference-changes-to-all-open-windows"></a>L'applicazione delle preferenze viene modificato in tutte le finestre aperte
+### <a name="applying-preference-changes-to-all-open-windows"></a>Applicazione delle preferenze viene modificato in tutti i Windows
 
-Come descritto in precedenza, in un tipico macOS App, quando l'utente modifica le preferenze dell'utente dell'App, tali modifiche vengono salvati automaticamente e applicato a qualsiasi finestra l'utente potrebbe avere aperto nell'applicazione.
+Come indicato in precedenza, in un tipico macOS App, quando l'utente apporta modifiche a una delle preferenze dell'utente dell'App, tali modifiche vengono salvate automaticamente e applicate a tutte le finestre l'utente potrebbe essere aperto nell'applicazione.
 
-Un'attenta pianificazione e progettazione di windows e le preferenze dell'app consentirà di questo processo si verifica in modo uniforme e trasparente per l'utente finale, con una minima quantità di lavoro di codifica.
+Un'attenta pianificazione e progettazione di windows e le preferenze dell'app consentirà questo processo si verifica in modo uniforme e trasparente per l'utente finale, con una quantità minima di lavoro di codifica.
 
-Per qualsiasi finestra che utilizzeranno le preferenze di App, aggiungere la seguente proprietà di supporto per il Controller di visualizzazione del contenuto per facilitare l'accesso il nostro **AppDelegate** più semplice:
+Per qualsiasi finestra che utilizzerà le preferenze di App, aggiungere la seguente proprietà helper al relativo contenuto Controller di visualizzazione per rendere l'accesso ai nostri **AppDelegate** più semplice:
 
 ```csharp
 #region Application Access
@@ -793,7 +793,7 @@ public void ConfigureEditor() {
 }
 ``` 
 
-È necessario chiamare il metodo di configurazione prima apertura di finestra per assicurarsi che sia conforme alle preferenze dell'utente:
+È necessario chiamare il metodo di configurazione quando la finestra viene aperta prima di tutto per assicurarsi che sia conforme alle preferenze dell'utente:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -806,7 +806,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-Successivamente, modificare il `AppDelegate.cs` file e aggiungere il metodo seguente per applicare le preferenze di modifica a tutte le finestre aperte:
+Modificare quindi il `AppDelegate.cs` file e aggiungere il metodo seguente per applicare le preferenze di modifica a tutte le finestre aperte:
 
 ```csharp
 public void UpdateWindowPreferences() {
@@ -868,9 +868,9 @@ namespace SourceWriter
 }
 ```
 
-In questo modo le modifiche delle preferenze da inviare a tutte le finestre aperte quando la preferenza di finestra viene chiusa.
+In questo modo tutte le modifiche delle preferenze da inviare al Windows Apri tutti quando la preferenza di finestra viene chiusa.
 
-Infine, modificare il Controller di finestra Preferenze e aggiungere il delegato creato in precedenza:
+Infine, modificare il Controller di finestra di preferenza e aggiungere il delegato creato in precedenza:
 
 ```csharp
 using System;
@@ -901,7 +901,7 @@ namespace SourceWriter
 }
 ```
 
-Con tutte queste modifiche sul posto, se l'utente modifica le preferenze dell'App e chiude la finestra di preferenza, le modifiche verranno applicate a tutte le finestre aperte:
+Con tutte queste modifiche sul posto, se l'utente modifica le preferenze dell'App e chiude la finestra di preferenza, le modifiche verranno applicate a tutti i Windows aperta:
 
 [![](dialog-images/prefs14.png "Una finestra Preferenze di esempio")](dialog-images/prefs14.png#lightbox)
 
@@ -909,7 +909,7 @@ Con tutte queste modifiche sul posto, se l'utente modifica le preferenze dell'Ap
 
 ## <a name="the-open-dialog"></a>Finestra di dialogo aprire
 
-La finestra di dialogo aprire offre agli utenti un modo coerenza per trovare e aprire un elemento in un'applicazione. Per visualizzare una finestra di dialogo Apri in un'applicazione Xamarin.Mac, utilizzare il codice seguente:
+La finestra di dialogo aprire offre agli utenti un modo coerente per trovare e aprire un elemento in un'applicazione. Per visualizzare una finestra di dialogo Apri in un'applicazione xamarin. Mac, usare il codice seguente:
 
 ```csharp
 var dlg = NSOpenPanel.OpenPanel;
@@ -938,21 +938,21 @@ if (dlg.RunModal () == 1) {
 }
 ```
 
-Nel codice precedente, si sta aprendo una nuova finestra del documento per visualizzare il contenuto del file. È necessario sostituire il codice con la funzionalità è richiesta dall'applicazione.
+Nel codice precedente, apriremo una nuova finestra del documento da visualizzare il contenuto del file. È necessario sostituire questo codice con la funzionalità è richiesta dall'applicazione.
 
 Le proprietà seguenti sono disponibili quando si lavora con un `NSOpenPanel`:
 
 - **CanChooseFiles** - se `true` l'utente può selezionare i file.
-- **CanChooseDirectories** - se `true` l'utente può selezionare una directory.
+- **CanChooseDirectories** - se `true` l'utente può selezionare le directory.
 - **AllowsMultipleSelection** - se `true` l'utente può selezionare più di un file alla volta.
-- **ResolveAliases** - se `true` selezionando e alias, risolve tale nome di percorso del file originale.
-- **AllowedFileTypes** -è una matrice di stringhe di tipi di file che l'utente può selezionare come un'estensione di uno o _UTI_. Il valore predefinito è `null`, che consente a qualsiasi file da aprire.
+- **ResolveAliases** - se `true` selezionando e alias, risolve tale percorso del file originale.
+- **AllowedFileTypes** -è una matrice di stringhe dei tipi di file che l'utente può selezionare come un'estensione di uno o _UTI_. Il valore predefinito è `null`, che consente a qualsiasi file da aprire.
 
-Il `RunModal ()` metodo consente di visualizzare la finestra di dialogo Apri e consentire all'utente di selezionare i file o directory (come specificato dalle proprietà) e restituisce `1` se l'utente fa clic il **aprire** pulsante.
+Il `RunModal ()` metodo consente di visualizzare la finestra di dialogo Apri e consentire all'utente di selezionare i file o directory (come specificato dalle proprietà) e restituisce `1` se l'utente fa clic il **Open** pulsante.
 
-Finestra di dialogo Apri restituisce selezionati file o directory dell'utente come una matrice di URL nel `URL` proprietà.
+Finestra di dialogo Apri restituisce i file selezionati o le directory dell'utente come una matrice di URL nel `URL` proprietà.
 
-Se si esegue il programma e selezionare il **Apri...**  articolo dal **File** visualizzazione del menu, le operazioni seguenti: 
+Se si esegue il programma e selezionare il **aprire...**  articolo dal **File** viene visualizzato dal menu di seguito: 
 
 [![](dialog-images/dialog03.png "La finestra di dialogo Apri")](dialog-images/dialog03.png#lightbox)
 
@@ -960,7 +960,7 @@ Se si esegue il programma e selezionare il **Apri...**  articolo dal **File** vi
 
 ## <a name="the-print-and-page-setup-dialogs"></a>La stampa e le finestre di dialogo Imposta pagina
 
-Pagina Installazione finestre di dialogo che è possibile visualizzare in modo che gli utenti possono avere una stampa coerenza esperienza in tutte le applicazioni che utilizzano e macOS fornisce stampa standard.
+macOS fornisce stampa standard e pagina di installazione di finestre di dialogo che è possibile visualizzare in modo che gli utenti possono avere una stampa coerente esperienza in tutte le applicazioni che usano.
 
 Il codice seguente mostra la finestra di dialogo Stampa standard:
 
@@ -989,15 +989,15 @@ void ShowDocument (NSObject sender) {
 
 ```
 
-Se si imposta la `ShowPrintAsSheet` proprietà `false`, eseguire l'applicazione e visualizzare la finestra di dialogo di stampa, verrà visualizzato quanto segue:
+Se si impostano i `ShowPrintAsSheet` proprietà `false`, eseguire l'applicazione e visualizzare la finestra di dialogo Stampa, verrà visualizzato quanto segue:
 
 [![](dialog-images/print01.png "Una finestra di dialogo Stampa")](dialog-images/print01.png#lightbox)
 
-Se impostato il `ShowPrintAsSheet` proprietà `true`, eseguire l'applicazione e visualizzare la finestra di dialogo di stampa, verrà visualizzato quanto segue:
+Se impostare il `ShowPrintAsSheet` proprietà `true`, eseguire l'applicazione e visualizzare la finestra di dialogo Stampa, verrà visualizzato quanto segue:
 
-[![](dialog-images/print02.png "Un foglio di stampato")](dialog-images/print02.png#lightbox)
+[![](dialog-images/print02.png "Un foglio di stampa")](dialog-images/print02.png#lightbox)
 
-Il seguente codice visualizzerà la finestra di dialogo di Layout di pagina:
+Il codice seguente visualizzerà la finestra di dialogo di Layout di pagina:
 
 ```csharp
 [Export ("showLayout:")]
@@ -1020,21 +1020,21 @@ void ShowLayout (NSObject sender) {
 }
 ```
 
-Se si imposta la `ShowPrintAsSheet` proprietà `false`, eseguire l'applicazione e visualizzare la finestra di dialogo di layout di stampa, verrà visualizzato quanto segue:
+Se si impostano i `ShowPrintAsSheet` proprietà `false`, eseguire l'applicazione e visualizzare la finestra di dialogo di layout di stampa, verrà visualizzato quanto segue:
 
 [![](dialog-images/print03.png "Una finestra di dialogo Imposta pagina")](dialog-images/print03.png#lightbox)
 
-Se impostato il `ShowPrintAsSheet` proprietà `true`, eseguire l'applicazione e visualizzare la finestra di dialogo di layout di stampa, verrà visualizzato quanto segue:
+Se impostare il `ShowPrintAsSheet` proprietà `true`, eseguire l'applicazione e visualizzare la finestra di dialogo di layout di stampa, verrà visualizzato quanto segue:
 
 [![](dialog-images/print04.png "Un foglio di programma di installazione di pagina")](dialog-images/print04.png#lightbox)
 
-Per ulteriori informazioni sull'utilizzo di stampa e le finestre di dialogo programma di installazione di pagina, vedere Apple [NSPrintPanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPrintPanel_Class/index.html#//apple_ref/doc/uid/TP40004092), [NSPageLayout](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPageLayout_Class/index.html#//apple_ref/doc/uid/TP40004080) e [Introduzione alla stampa](http://sdg.mesonet.org/people/brad/XCode3/Documentation/DocSets/com.apple.adc.documentation.AppleSnowLeopard.CoreReference.docset/Contents/Resources/Documents/#documentation/Cocoa/Conceptual/Printing/Printing.html#//apple_ref/doc/uid/10000083-SW1) documentazione.
+Per altre informazioni sull'utilizzo di stampa e pagina finestre di dialogo di installazione, vedere di Apple [NSPrintPanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPrintPanel_Class/index.html#//apple_ref/doc/uid/TP40004092), [NSPageLayout](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPageLayout_Class/index.html#//apple_ref/doc/uid/TP40004080) e [Introduzione alla stampa](http://sdg.mesonet.org/people/brad/XCode3/Documentation/DocSets/com.apple.adc.documentation.AppleSnowLeopard.CoreReference.docset/Contents/Resources/Documents/#documentation/Cocoa/Conceptual/Printing/Printing.html#//apple_ref/doc/uid/10000083-SW1) documentazione.
 
 <a name="The_Save_Dialog" />
 
-## <a name="the-save-dialog"></a>Salva finestra di dialogo
+## <a name="the-save-dialog"></a>Il salvataggio della finestra
 
-La finestra di dialogo Salva offre agli utenti un modo coerenza per salvare un elemento in un'applicazione.
+La finestra di dialogo Salva offre agli utenti un modo coerente per salvare un elemento in un'applicazione.
 
 Il codice seguente mostra la finestra di dialogo Salva standard:
 
@@ -1072,31 +1072,31 @@ void ShowSaveAs (NSObject sender)
 }
 ```
 
-Il `AllowedFileTypes` proprietà è una matrice di tipi di file che l'utente può selezionare per salvare il file come stringhe. Il tipo di file possa essere specificato come un'estensione o _UTI_. Il valore predefinito è `null`, che consente di qualsiasi tipo di file da utilizzare.
+Il `AllowedFileTypes` proprietà è una matrice di tipi di file che l'utente può scegliere di salvare il file come stringhe. Il tipo di file può essere specificato come un'estensione o _UTI_. Il valore predefinito è `null`, che consente a qualsiasi tipo di file da utilizzare.
 
-Se si imposta la `ShowSaveAsSheet` proprietà `false`, eseguire l'applicazione e selezionare **Salva con nome...**  dal **File** menu, verrà visualizzato quanto segue:
+Se si impostano i `ShowSaveAsSheet` proprietà `false`, eseguire l'applicazione e selezionare **Salva con nome...**  dal **File** menu, verrà visualizzato quanto segue:
 
-[![](dialog-images/save01.png "Salvataggio la finestra di dialogo")](dialog-images/save01.png#lightbox)
+[![](dialog-images/save01.png "Salvataggio nella finestra di dialogo")](dialog-images/save01.png#lightbox)
 
-L'utente è possibile espandere la finestra di dialogo:
+L'utente può espandere la finestra di dialogo:
 
-[![](dialog-images/save02.png "La finestra di dialogo di salvare un espanso")](dialog-images/save02.png#lightbox)
+[![](dialog-images/save02.png "Finestra di dialogo Salva espanso")](dialog-images/save02.png#lightbox)
 
-Se si imposta la `ShowSaveAsSheet` proprietà `true`, eseguire l'applicazione e selezionare **Salva con nome...**  dal **File** menu, verrà visualizzato quanto segue:
+Se si impostano i `ShowSaveAsSheet` proprietà `true`, eseguire l'applicazione e selezionare **Salva con nome...**  dal **File** menu, verrà visualizzato quanto segue:
 
 [![](dialog-images/save03.png "Salvataggio foglio")](dialog-images/save03.png#lightbox)
 
-L'utente è possibile espandere la finestra di dialogo:
+L'utente può espandere la finestra di dialogo:
 
 [![](dialog-images/save04.png "Salvare un espanso foglio")](dialog-images/save04.png#lightbox)
 
-Per ulteriori informazioni su come utilizzare la finestra di dialogo Salva, vedere Apple [NSSavePanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSSavePanel_Class/index.html#//apple_ref/doc/uid/TP40004098) documentazione.
+Per altre informazioni su come utilizzare la finestra di dialogo Salva, vedi di Apple [NSSavePanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSSavePanel_Class/index.html#//apple_ref/doc/uid/TP40004098) documentazione.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stato applicato l'utilizzo di finestre modali, fogli e del sistema standard, finestre di dialogo in un'applicazione Xamarin.Mac un'analisi approfondita. È stato illustrato i diversi tipi e finestre modali, finestre e finestre di dialogo, viene utilizzato come creare e gestire le finestre modali e le finestre in Xcode del generatore di interfaccia e sull'utilizzo di finestre modali, finestre e finestre di dialogo nel codice c#.
+Questo articolo ha fatto un quadro dettagliato di utilizzo di Windows modale, fogli e di sistema standard, finestre di dialogo in un'applicazione xamarin. Mac. Abbiamo visto i diversi tipi e utilizzi di modale di Windows, finestre e finestre di dialogo, come creare e gestire i fogli in Xcode e Windows modale di Interface Builder e come lavorare con Windows modale, fogli di stile e finestre di dialogo nel codice c#.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
@@ -1107,5 +1107,5 @@ In questo articolo è stato applicato l'utilizzo di finestre modali, fogli e del
 - [Barre degli strumenti](~/mac/user-interface/toolbar.md)
 - [Linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introduzione a Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)
-- [Introduzione agli elenchi](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Sheets/Sheets.html#//apple_ref/doc/uid/10000002i)
+- [Introduzione ai fogli](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Sheets/Sheets.html#//apple_ref/doc/uid/10000002i)
 - [Introduzione alla stampa](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Printing/osxp_aboutprinting/osxp_aboutprt.html)

@@ -1,29 +1,29 @@
 ---
-title: Esempi di Xamarin Player in tempo reale
-description: Questo documento include collegamenti ad applicazioni di esempio da utilizzare per testare il Live Xamarin Player. Gli esempi collegati includono una calcolatrice di base e un gioco strumento pulizia bug.
+title: Esempi di Xamarin Live Player
+description: Questo documento include le applicazioni di esempio da usare durante il test di Xamarin Live Player. Esempi collegati includono una calcolatrice di base e un gioco sweeper di bug.
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
 author: topgenorth
 ms.author: toopge
-ms.date: 06/20/2017
-ms.openlocfilehash: 090b52f4ebf9ec6f46426b4364f8b57b67a79324
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 08/08/2017
+ms.openlocfilehash: 6f9f2ed97e03862fc7e77e4a7ff67f456dfde277
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793729"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40250982"
 ---
-# <a name="xamarin-live-player-samples"></a>Esempi di Xamarin Player in tempo reale
+# <a name="xamarin-live-player-samples"></a>Esempi di Xamarin Live Player
 
 ## <a name="get-started-with-xamarinforms"></a>Introduzione a xamarin. Forms
 
-Visitare il [raccolta di esempi](https://developer.xamarin.com/samples/xamarin-live-player/all/) per esempi di xamarin. Forms che funzionano con Xamarin Player in tempo reale.
+Visitare il [raccolta di esempi](https://developer.xamarin.com/samples/xamarin-live-player/all/) per esempi di xamarin. Forms che funzionano con Xamarin Live Player.
 
 ## <a name="featured-samples"></a>Esempi in primo piano
 
 ### <a name="basic-calculatorhttpsdeveloperxamarincomsamplesmobileliveplayerbasiccalculator"></a>[Calcolatrice di base](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator/)
 
-Questa app xamarin. Forms fornisce una calcolatrice che è possibile utilizzare nel dispositivo Android o iOS.
+Questa app xamarin. Forms fornisce una semplice calcolatrice che è possibile usare nel dispositivo Android.
 
 ![Schermata di esempio di calcolo Basic](samples-images/basic-calculator-sml.png)
 
@@ -35,4 +35,4 @@ Un gioco familiare con un tocco di novità. In una griglia di riquadri 9x9 sono 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di Windows Media Player in tempo reale di xamarin. Forms](https://developer.xamarin.com/samples/xamarin-live-player/all/)
+- [Esempi di xamarin. Forms Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)

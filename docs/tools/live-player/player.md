@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: topgenorth
 ms.author: toopge
-ms.date: 05/14/2017
-ms.openlocfilehash: 88f7f62650484007c221aa7baaa684f872e0a8e9
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.date: 08/08/2017
+ms.openlocfilehash: b3166aa440cbe2981d597771b360373fadc6451b
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38830413"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251190"
 ---
 # <a name="xamarin-live-player-app"></a>App Xamarin Live Player
 
@@ -19,17 +19,17 @@ ms.locfileid: "38830413"
 
 Dopo aver installato l'app sul telefono, seguire le [istruzioni di installazione](~/tools/live-player/install.md) per connettersi al computer in uso. Provare una delle [app di esempio](~/tools/live-player/samples.md) per renderla funzionante.
 
-All'avvio, l'app Xamarin Live Player aspetto simile al seguente (in iOS e Android rispettivamente):
+All'avvio, l'app Xamarin Live Player aspetto simile al seguente:
 
-![Schermata di app iOS Player in tempo reale](player-images/app-iphone-sml.png) ![Schermata di app Android Player in tempo reale](player-images/app-android-sml.png)
+![Schermata di app Android Player in tempo reale](player-images/app-android-sml.png)
 
 Quando si preme **coppia da Visual Studio**, usare la fotocamera per analizzare il codice a barre che mostra nel computer in uso:
 
-![Screenshot dello scanner di codici a barre iOS](player-images/scan-iphone-sml.png) ![Screenshot dello scanner di codici a barre Android](player-images/scan-android-sml.png)
+![Screenshot dello scanner di codici a barre Android](player-images/scan-android-sml.png)
 
 Se la connessione ha esito positivo, il codice deve eseguire quasi immediatamente nel dispositivo (ad esempio la [esempio della Calcolatrice](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator)):
 
-![Applicazione Calcolatrice di esempio in esecuzione sul dispositivo](player-images/basic-calculator-iphone-sml.png)
+![Applicazione Calcolatrice di esempio in esecuzione sul dispositivo](player-images/basic-calculator-sml.png)
 
 ## <a name="options"></a>Opzioni
 
@@ -51,7 +51,7 @@ Visualizzare i log per diagnosticare i problemi.
 
 ## <a name="managing-devices"></a>La gestione dei dispositivi
 
-Per connettere un dispositivo per la prima volta, seguire le istruzioni riportate in [Setup & requisiti](~/tools/live-player/install.md). È possibile associare più dispositivi (ad esempio iOS e Android) e gestirli tramite l'IDE.
+Per connettere un dispositivo per la prima volta, seguire le istruzioni riportate in [Setup & requisiti](~/tools/live-player/install.md). È possibile associare più dispositivi e gestirli tramite l'IDE.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

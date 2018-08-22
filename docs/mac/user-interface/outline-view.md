@@ -1,183 +1,183 @@
 ---
-title: Visualizzazioni della struttura in Xamarin.Mac
-description: In questo articolo viene descritto l'utilizzo con visualizzazioni della struttura in un'applicazione Xamarin.Mac. Descrive la creazione e la gestione delle visualizzazioni della struttura in Xcode e il generatore di interfaccia e utilizzarli a livello di codice.
+title: Visualizzazione della struttura in xamarin. Mac
+description: Questo articolo descrive l'uso delle visualizzazioni struttura in un'applicazione xamarin. Mac. Descrive la creazione e gestire le visualizzazioni struttura in Xcode e Interface Builder e utilizzarli a livello di codice.
 ms.prod: xamarin
 ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: a12eee5f473ffdc6a235faeb55c0a3d6754f4629
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 7228a22eeae3dfdb354ba3693c277251fd2cd821
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792827"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251142"
 ---
-# <a name="outline-views-in-xamarinmac"></a>Visualizzazioni della struttura in Xamarin.Mac
+# <a name="outline-views-in-xamarinmac"></a>Visualizzazione della struttura in xamarin. Mac
 
-_In questo articolo viene descritto l'utilizzo con visualizzazioni della struttura in un'applicazione Xamarin.Mac. Descrive la creazione e la gestione delle visualizzazioni della struttura in Xcode e il generatore di interfaccia e utilizzarli a livello di codice._
+_Questo articolo descrive l'uso delle visualizzazioni struttura in un'applicazione xamarin. Mac. Descrive la creazione e gestire le visualizzazioni struttura in Xcode e Interface Builder e utilizzarli a livello di codice._
 
-Quando si utilizza c# e .NET in un'applicazione Xamarin.Mac, è possibile accedere alla stessa struttura viste che uno sviluppatore che lavora *Objective-C* e *Xcode* does. Poiché Xamarin.Mac si integra direttamente con Xcode, è possibile utilizzare del Xcode _generatore interfaccia_ per creare e gestire le visualizzazioni della struttura (o, facoltativamente, crearli direttamente nel codice c#).
+Quando si usa c# e .NET in un'applicazione xamarin. Mac, è possibile utilizzare la stessa struttura vede che gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire le visualizzazioni di struttura (oppure crearle direttamente nel codice c#).
 
-Una visualizzazione struttura è un tipo di tabella che consente all'utente di espandere o comprimere le righe di dati gerarchici. Come una visualizzazione tabella, una visualizzazione della struttura sono visualizzati i dati per un set di elementi correlati, le righe che rappresentano singoli elementi e le colonne che rappresentano gli attributi di tali elementi. A differenza di una visualizzazione tabella, gli elementi in una visualizzazione struttura non in un elenco semplice, in cui sono organizzati in una gerarchia, ad esempio file e cartelle su un disco rigido.
+Una visualizzazione della struttura è un tipo di tabella che consente all'utente di espandere o comprimere le righe di dati gerarchici. Ad esempio la visualizzazione di una tabella, una visualizzazione della struttura sono visualizzati i dati per un set di elementi correlati, le righe che rappresentano singoli elementi e le colonne che rappresentano gli attributi di tali elementi. A differenza di una visualizzazione tabella, gli elementi in una visualizzazione della struttura non sono in un elenco semplice, sono organizzati in una gerarchia, ad esempio file e cartelle su un disco rigido.
 
 [![](outline-view-images/populate03.png "Eseguire un'app di esempio")](outline-view-images/populate03.png#lightbox)
 
-In questo articolo verranno descritte le nozioni di base dell'utilizzo di visualizzazioni della struttura in un'applicazione Xamarin.Mac. È altamente consigliabile che il [Hello, Mac](~/mac/get-started/hello-mac.md) articolo prima di tutto, in particolare il [Introduzione a Xcode e interfaccia generatore](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [punti vendita e le azioni](~/mac/get-started/hello-mac.md#Outlets_and_Actions) le sezioni, come illustra i concetti chiave e le tecniche che verrà usato in questo articolo.
+In questo articolo, si affronterà le nozioni di base dell'uso delle visualizzazioni struttura in un'applicazione xamarin. Mac. È altamente consigliabile usare la [Hello, Mac](~/mac/get-started/hello-mac.md) articolo prima di tutto, in particolare le [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [Outlet e azioni](~/mac/get-started/hello-mac.md#outlets-and-actions) le sezioni, perché illustra i concetti chiave e le tecniche che verrà usato in questo articolo.
 
-Si consiglia di esaminare il [c# esposizione di classi / metodi per Objective-C](~/mac/internals/how-it-works.md) sezione del [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) del documento, nonché viene descritto il `Register` e `Export` comandi utilizzato per le classi c# in transito-fino a oggetti Objective-C e gli elementi dell'interfaccia utente.
+È possibile ottenere un quadro il [c# esposizione di classi / metodi di Objective-c](~/mac/internals/how-it-works.md) sezione del [meccanismi interni di xamarin. Mac](~/mac/internals/how-it-works.md) del documento, viene spiegato il `Register` e `Export` comandi utilizzato per wireup classi c# per gli oggetti di Objective-C e gli elementi dell'interfaccia utente.
 
 <a name="Introduction_to_Outline_Views" />
 
-## <a name="introduction-to-outline-views"></a>Introduzione alle visualizzazioni della struttura
+## <a name="introduction-to-outline-views"></a>Introduzione a visualizzazioni della struttura
 
-Una visualizzazione struttura è un tipo di tabella che consente all'utente di espandere o comprimere le righe di dati gerarchici. Come una visualizzazione tabella, una visualizzazione della struttura sono visualizzati i dati per un set di elementi correlati, le righe che rappresentano singoli elementi e le colonne che rappresentano gli attributi di tali elementi. A differenza di una visualizzazione tabella, gli elementi in una visualizzazione struttura non in un elenco semplice, in cui sono organizzati in una gerarchia, ad esempio file e cartelle su un disco rigido.
+Una visualizzazione della struttura è un tipo di tabella che consente all'utente di espandere o comprimere le righe di dati gerarchici. Ad esempio la visualizzazione di una tabella, una visualizzazione della struttura sono visualizzati i dati per un set di elementi correlati, le righe che rappresentano singoli elementi e le colonne che rappresentano gli attributi di tali elementi. A differenza di una visualizzazione tabella, gli elementi in una visualizzazione della struttura non sono in un elenco semplice, sono organizzati in una gerarchia, ad esempio file e cartelle su un disco rigido.
 
-Se un elemento in una visualizzazione struttura contiene altri elementi, possono essere espansi o compressi dall'utente. Un elemento espandibile viene visualizzato un triangolo, che fa riferimento a destra quando l'elemento è compresso e punta verso il basso quando l'elemento è espanso. Facendo clic sul triangolo divulgazione, l'elemento espandere o comprimere.
+Se un elemento in una visualizzazione struttura contiene altri elementi, possono essere espansi o compressi dall'utente. Un elemento espandibile viene visualizzato un triangolo di visualizzazione, che fa riferimento a destra quando l'elemento è compresso e punta verso il basso, quando l'elemento è espanso. Facendo clic sul triangolo divulgazione fa sì che l'elemento espandere o comprimere.
 
-La visualizzazione struttura (`NSOutlineView`) è una sottoclasse della visualizzazione della tabella (`NSTableView`) e di conseguenza, gran parte del relativo comportamento eredita dalla classe padre. Di conseguenza, molte operazioni supportate da una visualizzazione tabella, ad esempio la selezione di righe o colonne, riposizionamento delle colonne trascinando le intestazioni di colonna e così via, sono supportate anche da una visualizzazione struttura. Un'applicazione Xamarin.Mac ha il controllo di queste funzionalità e configura parametri della visualizzazione della struttura (sia nel codice o interfaccia generatore) per consentire o impedire determinate operazioni.
+Visualizzazione della struttura (`NSOutlineView`) è una sottoclasse della visualizzazione della tabella (`NSTableView`) e di conseguenza, gran parte del suo comportamento eredita dalla classe padre. Di conseguenza, molte operazioni supportate da una visualizzazione tabella, ad esempio la selezione di righe o colonne, il riposizionamento delle colonne trascinando le intestazioni di colonna e così via, sono supportate anche da una visualizzazione della struttura. Un'applicazione xamarin. Mac ha il controllo di queste funzionalità ed è possibile configurare i parametri della visualizzazione della struttura (sia nel codice o Interface Builder) per consentire o impedire determinate operazioni.
 
-Una visualizzazione della struttura non archivia i propri dati, ma basa su un'origine dati (`NSOutlineViewDataSource`) per fornire le righe e colonne necessarie, in una base alla necessità.
+Una visualizzazione della struttura non archivia i propri dati, ma si basa su un'origine dati (`NSOutlineViewDataSource`) per fornire sia le righe e colonne necessari, su una base alle esigenze.
 
-Comportamento di una visualizzazione struttura può essere personalizzato, fornendo una sottoclasse del delegato di visualizzazione di struttura (`NSOutlineViewDelegate`) per supportare la gestione di colonna di struttura, digitare per selezionare funzionalità, la selezione della riga e la modifica, rilevamento personalizzato e visualizzazioni personalizzate per singoli le colonne e righe.
+Comportamento di una visualizzazione della struttura può essere personalizzato specificando una sottoclasse del delegato di visualizzazione di struttura (`NSOutlineViewDelegate`) per supportare la gestione di colonna di struttura, digitare per selezionare funzionalità, la selezione della riga e la modifica, rilevamento personalizzati e visualizzazioni personalizzate per singoli le colonne e righe.
 
-Poiché una visualizzazione struttura condivide molte delle funzionalità e il comportamento con una visualizzazione tabella, è possibile passare attraverso il nostro [viste delle tabelle](~/mac/user-interface/table-view.md) documentazione prima di continuare con questo articolo.
+Poiché una visualizzazione della struttura condivide molte delle funzionalità e il suo comportamento con una visualizzazione tabella, è possibile passare attraverso il [viste delle tabelle](~/mac/user-interface/table-view.md) documentazione prima di continuare con questo articolo.
 
 <a name="Creating_and_Maintaining_Outline_Views_in_Xcode" />
 
-## <a name="creating-and-maintaining-outline-views-in-xcode"></a>Creazione e gestione delle visualizzazioni della struttura in Xcode
+## <a name="creating-and-maintaining-outline-views-in-xcode"></a>Creare e gestire la visualizzazione della struttura in Xcode
 
-Quando si crea una nuova applicazione Xamarin.Mac Cocoa, per impostazione predefinita è ottenere una finestra vuota, standard. Questo windows è definito in un `.storyboard` file automaticamente incluso nel progetto. Per modificare la progettazione di windows, nel **Esplora**, fare doppio clic il `Main.storyboard` file:
+Quando si crea una nuova applicazione xamarin. Mac Cocoa, si ottiene una normale finestra vuota, per impostazione predefinita. Questo windows è definito in un `.storyboard` file automaticamente inclusi nel progetto. Per modificare la progettazione di windows, nelle **Esplora soluzioni**, fare doppio clic il `Main.storyboard` file:
 
-[![](outline-view-images/edit01.png "Selezione storyboard principale")](outline-view-images/edit01.png#lightbox)
+[![](outline-view-images/edit01.png "Selezionando lo storyboard principale")](outline-view-images/edit01.png#lightbox)
 
-La progettazione della finestra verrà aperta in Generatore del Xcode di interfaccia:
+Verrà aperta la progettazione di finestra in Interface Builder di Xcode:
 
 [![](outline-view-images/edit02.png "Modifica l'interfaccia utente in Xcode")](outline-view-images/edit02.png#lightbox)
 
-Tipo `outline` nel **libreria Ispettore** casella di ricerca per renderne più semplice trovare i controlli struttura:
+Tipo di `outline` nella **Library Inspector** casella di ricerca per renderne più semplice trovare i controlli di visualizzazione struttura:
 
-[![](outline-view-images/edit03.png "Selezione di una visualizzazione struttura dalla libreria")](outline-view-images/edit03.png#lightbox)
+[![](outline-view-images/edit03.png "Selezione di una visualizzazione della struttura dalla libreria")](outline-view-images/edit03.png#lightbox)
 
-Trascinare il Controller di visualizzazione di una visualizzazione di **Editor dell'interfaccia**, renderlo riempire l'area del contenuto del Controller di visualizzazione e impostarlo su dove compatta e aumenta con la finestra nel **Editor vincoli di**:
+Trascinare il Controller di visualizzazione in una visualizzazione struttura la **Editor dell'interfaccia**, apportare riempire l'area di contenuto del Controller di visualizzazione e impostarlo su cui si riduce e cresce con la finestra nel **Editor vincoli di**:
 
 [![](outline-view-images/edit04.png "Modifica di vincoli")](outline-view-images/edit04.png#lightbox)
 
-Selezionare la vista struttura il **interfaccia gerarchia** e le proprietà seguenti sono disponibili nel **controllo attributo**:
+Selezionare la vista struttura le **gerarchia delle interfacce** e le proprietà seguenti sono disponibili nel **attributo Inspector**:
 
-[![](outline-view-images/edit05.png "Il controllo di attributo")](outline-view-images/edit05.png#lightbox)
+[![](outline-view-images/edit05.png "Attribute Inspector")](outline-view-images/edit05.png#lightbox)
 
-- **Colonna di struttura** -la colonna della tabella in cui i dati gerarchici vengono visualizzati.
-- **Colonna struttura di salvataggio automatico** - se `true`, la colonna di struttura verrà automaticamente salvata e ripristinata tra l'esecuzione dell'applicazione.
+- **Colonna di struttura** -la colonna della tabella in cui viene visualizzati i dati gerarchici.
+- **Colonna struttura di salvataggio automatico** - se `true`, la colonna di struttura automaticamente salvata e ripristinata tra l'esecuzione dell'applicazione.
 - **Rientro** -la quantità per il rientro delle colonne in un elemento espanso.
 - **Rientro segue celle** - se `true`, il contrassegno di rientro verrà aumentato il rientro insieme le celle.
-- **Salvataggio automatico espanso elementi** - se `true`, lo stato espanso o compresso degli elementi verrà automaticamente salvato e ripristinato tra l'esecuzione dell'applicazione.
-- **Modalità di contenuto** -consente di utilizzare entrambe le visualizzazioni (`NSView`) o le celle (`NSCell`) per visualizzare i dati in righe e colonne. A partire da macOS 10.7, è consigliabile utilizzare le visualizzazioni.
-- **Scorre le righe del gruppo** - se `true`, la visualizzazione della tabella verrà disegnato celle raggruppate come se si sono a virgola mobile.
+- **Salva automaticamente gli elementi espansi** - se `true`, lo stato espanso o compresso degli elementi verrà automaticamente salvato e ripristinato tra l'esecuzione dell'applicazione.
+- **Modalità di contenuto** -consente di usare entrambe le viste (`NSView`) o le celle (`NSCell`) per visualizzare i dati in righe e colonne. A partire da macOS 10.7, è necessario utilizzare le viste.
+- **Gruppo di righe è mobile rispetto** - se `true`, visualizzazione della tabella verrà disegnato celle raggruppate come se si sono variabili.
 - **Colonne** -definisce il numero di colonne visualizzate.
-- **Intestazioni** - se `true`, le colonne hanno intestazioni.
+- **Le intestazioni** - se `true`, le colonne avranno le intestazioni.
 - **Riordinamento** - se `true`, l'utente sarà in grado di trascinare riordinare le colonne nella tabella.
-- **Ridimensionamento** - se `true`, l'utente sarà in grado di trascinare le intestazioni di colonna per ridimensionare le colonne.
-- **Ridimensionamento di colonne** -controlla la tabella automaticamente come ridimensionare le colonne.
-- **Evidenziare** -controlla il tipo di evidenziazione della tabella quando viene selezionata una cella.
-- **Le righe alternate** - se `true`di altre righe avrà un colore di sfondo diversi.
-- **Griglia orizzontale** -seleziona il tipo di bordo disegnato tra le celle orizzontalmente.
-- **Griglia verticale** -seleziona il tipo di bordo disegnata in verticale tra le celle.
-- **Colore della griglia** -imposta il colore del bordo della cella.
+- **Il ridimensionamento** - se `true`, l'utente sarà in grado di trascinare le intestazioni di colonna per ridimensionare le colonne.
+- **Ridimensionamento di colonne** -controlla come la tabella verrà automaticamente le colonne di dimensioni.
+- **Evidenziare** -controlli il tipo di evidenziazione della tabella usati quando è selezionata una cella.
+- **Le righe alternate** - se `true`, mai altra riga avrà un colore di sfondo differente.
+- **Griglia orizzontale** -consente di selezionare il tipo di bordo disegnato tra le celle orizzontalmente.
+- **Griglia verticale** -consente di selezionare il tipo di bordo disegnata in verticale tra le celle.
+- **Colore griglia** -imposta il colore del bordo della cella.
 - **Sfondo** -imposta il colore di sfondo della cella.
-- **Selezione** -consente di controllare la modalità con cui l'utente può selezionare le celle della tabella come:
+- **Selezione** -consentono di controllare la modalità con cui l'utente può selezionare le celle nella tabella come:
     - **Più** - se `true`, l'utente può selezionare più righe e colonne.
     - **Colonna** - se `true`, l'utente può selezionare le colonne.
-    - **Digitare Select** - se `true`, l'utente può digitare un carattere per selezionare una riga.
-    - **Vuoto** - se `true`, l'utente non è necessario selezionare una riga o colonna, la tabella consente di selezione non è affatto.
-- **Salvataggio automatico** -Salva il nome che il formato di tabelle è automaticamente in.
-- **Informazioni sulla colonna** - se `true`, l'ordine e la larghezza delle colonne verranno salvate automaticamente.
-- **Le interruzioni di riga** - selezionare la cella gestisce le interruzioni di riga.
-- **Tronca l'ultima riga visibile** - se `true`, verrà troncata, è possibile di dati non rientrano nei limiti della cella.
+    - **Digitare Select** - se `true`, l'utente può digitare un carattere da utilizzare per selezionare una riga.
+    - **Vuoto** - se `true`, l'utente non è necessario selezionare una riga o colonna, la tabella consente la selezione non è affatto.
+- **Salvataggio automatico** -Salva il nome che il formato di tabelle è automaticamente sotto.
+- **Informazioni sulle colonne** - se `true`, l'ordine e la larghezza delle colonne verranno salvate automaticamente.
+- **Interruzioni di riga** - selezionare in che modo la cella gestisce le interruzioni di riga.
+- **Tronca l'ultima riga visibile** - se `true`, verrà troncata dell'oggetto dati è possibile non adattarsi all'interno dei limiti della cella.
 
 > [!IMPORTANT]
-> A meno che non si esegue la manutenzione di un'applicazione legacy Xamarin.Mac, `NSView` base visualizzazioni della struttura deve essere utilizzate su `NSCell` viste delle tabelle di base. `NSCell` viene considerato legacy e potrebbe non essere supportato in futuro.
+> A meno che non si esegue la manutenzione di un'applicazione xamarin. Mac legacy, `NSView` in base la visualizzazione della struttura deve essere utilizzata su `NSCell` basati su viste delle tabelle. `NSCell` viene considerato legacy e potrebbero non essere supportate in futuro.
 
-Selezionare una colonna della tabella nel **interfaccia gerarchia** e le proprietà seguenti sono disponibili nel **controllo attributo**:
+Selezionare una colonna della tabella nel **gerarchia delle interfacce** e le proprietà seguenti sono disponibili nel **attributo Inspector**:
 
-[![](outline-view-images/edit06.png "Il controllo di attributo")](outline-view-images/edit06.png#lightbox)
+[![](outline-view-images/edit06.png "Attribute Inspector")](outline-view-images/edit06.png#lightbox)
 
 - **Titolo** -imposta il titolo della colonna.
 - **Allineamento** -impostare l'allineamento del testo all'interno delle celle.
-- **Tipo di carattere titolo** -seleziona il tipo di carattere per il testo di intestazione della cella.
-- **Chiave di ordinamento** -rappresenta la chiave utilizzata per ordinare i dati nella colonna. Lasciare vuoto se l'utente non è possibile ordinare questa colonna.
-- **Selettore** -è il **azione** utilizzato per eseguire l'ordinamento. Lasciare vuoto se l'utente non è possibile ordinare questa colonna.
+- **Tipo di carattere del titolo** -consente di selezionare il tipo di carattere per il testo dell'intestazione della cella.
+- **Chiave di ordinamento** -è la chiave usata per ordinare i dati della colonna. Lasciare vuoto se l'utente non è possibile ordinare questa colonna.
+- **Selettore** -è il **azione** usato per eseguire l'ordinamento. Lasciare vuoto se l'utente non è possibile ordinare questa colonna.
 - **Ordine** -è l'ordinamento per i dati di colonne.
-- **Ridimensionamento** -seleziona il tipo di ridimensionamento per la colonna.
-- **Modificabile** - se `true`, l'utente può modificare le celle in una tabella di base di cella.
+- **Il ridimensionamento** -seleziona il tipo di ridimensionamento per la colonna.
+- **Modificabile** - se `true`, l'utente può modificare le celle in una tabella di cella basati su.
 - **Nascosto** - se `true`, la colonna è nascosta.
 
-È anche possibile ridimensionare la colonna trascinando il quadratino (centrati verticalmente sul lato destro della colonna) a sinistra o a destra.
+È anche possibile ridimensionare la colonna mediante il trascinamento dell'handle (centrati verticalmente nella parte destra della colonna) a sinistra o destra.
 
-Di seguito selezionare ogni colonna nella visualizzazione delle tabelle e assegnare la prima colonna un **titolo** di `Product` e la seconda `Details`.
+È possibile selezionare ogni colonna nella visualizzazione tabella e assegnare alla prima colonna un' **Title** dei `Product` e la seconda figura `Details`.
 
-Selezionare una visualizzazione di cella di tabella (`NSTableViewCell`) nel **interfaccia gerarchia** e le proprietà seguenti sono disponibili nel **controllo attributo**:
+Selezionare una visualizzazione di cella di tabella (`NSTableViewCell`) nel **gerarchia delle interfacce** e le proprietà seguenti sono disponibili nel **attributo Inspector**:
 
-[![](outline-view-images/edit07.png "Il controllo di attributo")](outline-view-images/edit07.png#lightbox)
+[![](outline-view-images/edit07.png "Attribute Inspector")](outline-view-images/edit07.png#lightbox)
 
-Si tratta di tutte le proprietà di una vista standard. È inoltre l'opzione di ridimensionamento delle righe per questa colonna qui.
+Queste sono tutte le proprietà di una vista standard. È inoltre la possibilità di ridimensionare le righe per questa colonna qui.
 
-Selezionare una cella di visualizzazione della tabella (per impostazione predefinita, si tratta di un `NSTextField`) nei **interfaccia gerarchia** e le proprietà seguenti sono disponibili nel **attributo controllo**:
+Selezionare una cella di visualizzazione tabella (per impostazione predefinita, questo è un `NSTextField`) nei **gerarchia delle interfacce** e le proprietà seguenti sono disponibili nel **attributo Inspector**:
 
-[![](outline-view-images/edit08.png "Il controllo di attributo")](outline-view-images/edit08.png#lightbox)
+[![](outline-view-images/edit08.png "Attribute Inspector")](outline-view-images/edit08.png#lightbox)
 
-È necessario che tutte le proprietà di un campo di testo standard per impostare qui. Per impostazione predefinita, un campo di testo standard viene utilizzato per visualizzare i dati per una cella in una colonna.
+È possibile tutte le proprietà di un campo di testo standard per questa pagina. Per impostazione predefinita, un campo di testo standard consente di visualizzare i dati per una cella in una colonna.
 
-Selezionare una visualizzazione di cella di tabella (`NSTableFieldCell`) nel **interfaccia gerarchia** e le proprietà seguenti sono disponibili nel **controllo attributo**:
+Selezionare una visualizzazione di cella di tabella (`NSTableFieldCell`) nel **gerarchia delle interfacce** e le proprietà seguenti sono disponibili nel **attributo Inspector**:
 
-[![](outline-view-images/edit09.png "Il controllo di attributo")](outline-view-images/edit09.png#lightbox)
+[![](outline-view-images/edit09.png "Attribute Inspector")](outline-view-images/edit09.png#lightbox)
 
-Le impostazioni di più importanti sono:
+Di seguito le impostazioni più importanti sono:
 
-- **Layout** - selezionare la modalità di celle in questa colonna vengono disposti.
-- **Utilizza la modalità a riga singola** - se `true`, la cella è limitata a una singola riga.
-- **Larghezza del Layout di Runtime prima** - se `true`, la cella preferiranno alla larghezza impostata per tale (automaticamente o manualmente) quando viene visualizzato alla prima esecuzione dell'applicazione.
-- **Azione** -controlla se la modifica **azione** viene inviato per la cella.
-- **Comportamento** -definisce se una cella è modificabile o selezionabile.
-- **Rich Text** - se `true`, la cella può visualizzare il testo formattato e stile.
-- **Annulla** - se `true`, la cella si assume la responsabilità per è il comportamento di annullamento.
+- **Layout** : selezionare la modalità di celle in questa colonna vengono disposti.
+- **Usa modalità a riga singola** - se `true`, la cella è limitata a una singola riga.
+- **Prima fase di esecuzione Layout larghezza** : se `true`, preferisce la larghezza impostata per tale (automaticamente o manualmente) quando la cella viene visualizzato alla prima esecuzione dell'applicazione.
+- **Azione** -esegue i controlli di modifica **azione** viene inviato per la cella.
+- **Comportamento** -definisce se una cella è selezionabile né modificabile.
+- **Rich Text** - se `true`, la cella può visualizzare il testo formattato e con stile.
+- **Annullare** - se `true`, la cella si assume la responsabilità per è annullare il comportamento.
 
-Selezionare la visualizzazione di cella di tabella (`NSTableFieldCell`) nella parte inferiore di una colonna di tabella nel **interfaccia gerarchia**:
+Selezionare la visualizzazione della cella di tabella (`NSTableFieldCell`) nella parte inferiore di una colonna di tabella nel **gerarchia interfaccia**:
 
 [![](outline-view-images/edit11.png "Selezione di visualizzazione della cella di tabella")](outline-view-images/edit10.png#lightbox)
 
-Ciò consente di modificare la visualizzazione di cella di tabella usata come base _modello_ per tutte le celle create per la colonna specificata.
+In questo modo è possibile modificare la vista di cella di tabella usata come base _Pattern_ per tutte le celle create per la colonna specificata.
 
 <a name="Adding_Actions_and_Outlets" />
 
-### <a name="adding-actions-and-outlets"></a>Aggiunta di azioni e prese
+### <a name="adding-actions-and-outlets"></a>Aggiunta di azioni e gli Outlet
 
-È sufficiente come qualsiasi altro controllo dell'interfaccia utente Cocoa, è necessario esporre la visualizzazione struttura e si tratta di colonne e le celle all'utilizzo di codice c# **azioni** e **prese** (basati sulle funzionalità necessarie).
+Proprio come qualsiasi altro controllo interfaccia utente di Cocoa, è necessario esporre la visualizzazione di struttura e si tratta di colonne e le celle di codice c# tramite **azioni** e **Outlet** (basato sulle funzionalità necessarie).
 
-Il processo è lo stesso per qualsiasi elemento di struttura che si desidera esporre:
+Il processo è lo stesso per qualsiasi elemento di visualizzazione struttura che si desidera esporre:
 
-1. Passare al **Assistente Editor** e assicurarsi che il `ViewController.h` è selezionato il file: 
+1. Passare al **Assistente dell'Editor** e assicurarsi che il `ViewController.h` viene selezionato un file: 
 
     [![](outline-view-images/edit11.png "Selezionare il file corretto. h")](outline-view-images/edit11.png#lightbox)
-2. Selezionare la visualizzazione della struttura dal **interfaccia gerarchia**, CTRL + clic e trascinare il `ViewController.h` file.
-3. Creare un **presa** per la visualizzazione struttura chiamata `ProductOutline`: 
+2. Visualizzazione della struttura da selezionare la **gerarchia delle interfacce**, CTRL + clic e trascinare il `ViewController.h` file.
+3. Creare un **Outlet** per la visualizzazione di struttura denominato `ProductOutline`: 
 
-    [![](outline-view-images/edit13.png "Configurazione di una presa di corrente")](outline-view-images/edit13.png#lightbox)
-4. Creare **prese** per le colonne di tabelle anche chiamato `ProductColumn` e `DetailsColumn`: 
+    [![](outline-view-images/edit13.png "Configurazione di un Outlet")](outline-view-images/edit13.png#lightbox)
+4. Creare **Outlet** per le colonne di tabelle anche chiamato `ProductColumn` e `DetailsColumn`: 
 
-    [![](outline-view-images/edit14.png "Configurazione di una presa di corrente")](outline-view-images/edit14.png#lightbox)
-5. Per salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
+    [![](outline-view-images/edit14.png "Configurazione di un Outlet")](outline-view-images/edit14.png#lightbox)
+5. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
-Successivamente, si verranno scritto la visualizzazione di codice alcuni dati per la struttura quando viene eseguita l'applicazione.
+Successivamente, si scriverà la visualizzazione codice alcuni dati per la struttura quando viene eseguita l'applicazione.
 
 <a name="Populating_the_Table_View" />
 
-## <a name="populating-the-outline-view"></a>Popolare la visualizzazione struttura
+## <a name="populating-the-outline-view"></a>Popolamento di visualizzazione della struttura
 
-Con la visualizzazione struttura progettata in Generatore di interfaccia e vengono esposte tramite un **presa**, successivamente è necessario creare il codice c# per compilarlo.
+Con la visualizzazione struttura progettata in Interface Builder e vengono esposte tramite un **Outlet**, successivamente è necessario creare il codice c# per popolarlo.
 
-Innanzitutto, creare un nuovo `Product` classe per contenere le informazioni per le singole righe e gruppi di prodotti sub. Nel **Esplora**, fare clic sul progetto e selezionare **Aggiungi** > **nuovo File...** Selezionare **generale** > **classe vuota**, immettere `Product` per il **nome** e fare clic su di **New** pulsante:
+In primo luogo, è possibile creare un nuovo `Product` classe per contenere le informazioni per le singole righe e gruppi di prodotti sub. Nel **Esplora soluzioni**, fare clic sul progetto e selezionare **Add** > **nuovo File...** Selezionare **generali** > **classe vuota**, immettere `Product` per il **nome** e fare clic su di **New** pulsante:
 
 [![](outline-view-images/populate01.png "Creazione di una classe vuota")](outline-view-images/populate01.png#lightbox)
 
@@ -219,7 +219,7 @@ namespace MacOutlines
 }
 ```
 
-Successivamente, è necessario creare una sottoclasse di `NSOutlineDataSource` per fornire i dati per la struttura come richiesto. Nel **Esplora**, fare clic sul progetto e selezionare **Aggiungi** > **nuovo File...** Selezionare **generale** > **classe vuota**, immettere `ProductOutlineDataSource` per il **nome** e fare clic su di **New** pulsante.
+Successivamente, è necessario creare una sottoclasse di `NSOutlineDataSource` per fornire i dati per la descrizione di base alle esigenze. Nel **Esplora soluzioni**, fare clic sul progetto e selezionare **Add** > **nuovo File...** Selezionare **generali** > **classe vuota**, immettere `ProductOutlineDataSource` per il **nome** e fare clic su di **New** pulsante.
 
 Modificare il `ProductTableDataSource.cs` file e renderlo simile al seguente:
 
@@ -280,9 +280,9 @@ namespace MacOutlines
 }
 ```
 
-Questa classe dispone di spazio di archiviazione per gli elementi della visualizzazione la struttura e sostituzioni di `GetChildrenCount` per restituire il numero di righe nella tabella. Il `GetChild` restituisce un elemento padre o figlio specifico (come richiesto per la visualizzazione struttura) e `ItemExpandable` definisce l'elemento specificato come un elemento padre o figlio.
+Questa classe dispone di spazio di archiviazione per gli elementi della visualizzazione struttura ed esegue l'override di `GetChildrenCount` per restituire il numero di righe nella tabella. Il `GetChild` restituisce un elemento padre o figlio specifico (come richiesto dalla visualizzazione della struttura) e il `ItemExpandable` definisce l'elemento specificato come padre o figlio.
 
-Infine, è necessario creare una sottoclasse di `NSOutlineDelegate` per fornire il comportamento per la struttura. Nel **Esplora**, fare clic sul progetto e selezionare **Aggiungi** > **nuovo File...** Selezionare **generale** > **classe vuota**, immettere `ProductOutlineDelegate` per il **nome** e fare clic su di **New** pulsante.
+Infine, è necessario creare una sottoclasse di `NSOutlineDelegate` per fornire il comportamento per il contorno. Nel **Esplora soluzioni**, fare clic sul progetto e selezionare **Add** > **nuovo File...** Selezionare **generali** > **classe vuota**, immettere `ProductOutlineDelegate` per il **nome** e fare clic su di **New** pulsante.
 
 Modificare il `ProductOutlineDelegate.cs` file e renderlo simile al seguente:
 
@@ -349,9 +349,9 @@ namespace MacOutlines
 }
 ```
 
-Quando si crea un'istanza di `ProductOutlineDelegate`, viene inoltre passato in un'istanza del `ProductOutlineDataSource` che fornisce i dati per la struttura. Il `GetView` metodo è responsabile della restituzione di una vista (dati) per visualizzare la cella per una colonna e riga. Se possibile, una vista esistente verrà riutilizzata per visualizzare la cella, se non è necessario creare una nuova vista.
+Quando si crea un'istanza del `ProductOutlineDelegate`, viene anche passato in un'istanza del `ProductOutlineDataSource` che fornisce i dati per il contorno. Il `GetView` metodo è responsabile della restituzione di una visualizzazione (dati) per visualizzare la cella per una colonna e riga. Se possibile, una vista esistente verrà riutilizzata per la cella di visualizzazione, se non è necessario creare una nuova visualizzazione.
 
-Per popolare la struttura, modifica il `MainWindow.cs` file e verificare il `AwakeFromNib` metodo aspetto simile al seguente:
+Per popolare la struttura, è possibile modificare il `MainWindow.cs` file e apportare le `AwakeFromNib` metodo aspetto simile al seguente:
 
 ```csharp
 public override void AwakeFromNib ()
@@ -388,25 +388,25 @@ public override void AwakeFromNib ()
 }
 ```
 
-Se si esegue l'applicazione, viene visualizzato il seguente:
+Se si esegue l'applicazione, verrà visualizzato quanto segue:
 
 [![](outline-view-images/populate02.png "La visualizzazione compressa")](outline-view-images/populate02.png#lightbox)
 
-Se si espande un nodo nella visualizzazione struttura, sarà simile al seguente:
+Se si espande un nodo nella visualizzazione della struttura, avrà un aspetto simile al seguente:
 
-[![](outline-view-images/populate03.png "La visualizzazione estesa")](outline-view-images/populate03.png#lightbox)
+[![](outline-view-images/populate03.png "Visualizzazione espansa")](outline-view-images/populate03.png#lightbox)
 
 <a name="Sorting_by_Column" />
 
-## <a name="sorting-by-column"></a>Ordinamento per colonna
+## <a name="sorting-by-column"></a>L'ordinamento per colonna
 
-Di seguito consente all'utente di ordinare i dati nella struttura facendo clic su un'intestazione di colonna. In primo luogo, fare doppio clic su di `Main.storyboard` file per aprirlo e modificarlo in Generatore di interfaccia. Selezionare il `Product` colonna, immettere `Title` per il **chiave di ordinamento**, `compare:` per il **selettore** e selezionare `Ascending` per il **ordine**:
+È possibile consentire all'utente di ordinare i dati nella struttura facendo clic su un'intestazione di colonna. In primo luogo, fare doppio clic il `Main.storyboard` file per aprirlo e modificarlo in Interface Builder. Selezionare il `Product` colonna, immettere `Title` per il **chiave di ordinamento**, `compare:` per i **selettore** e selezionare `Ascending` per il **ordine**:
 
 [![](outline-view-images/sort01.png "Impostazione dell'ordine di chiave di ordinamento")](outline-view-images/sort01.png#lightbox)
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
-Ora modifica il `ProductOutlineDataSource.cs` file e aggiungere i metodi seguenti:
+A questo punto è possibile modificare il `ProductOutlineDataSource.cs` file e aggiungere i metodi seguenti:
 
 ```csharp
 public void Sort(string key, bool ascending) {
@@ -431,7 +431,7 @@ public override void SortDescriptorsChanged (NSOutlineView outlineView, NSSortDe
 }
 ```
 
-Il `Sort` metodo consente di ordinare i dati nell'origine dati in base a un determinato `Product` campo della classe in ordine crescente o decrescente. Sottoposto a override `SortDescriptorsChanged` metodo verrà chiamato ogni volta che l'utilizzo fa clic sull'intestazione di colonna. Verrà passato il **chiave** valore impostato nel generatore di interfaccia e l'ordinamento per colonna.
+Il `Sort` metodo consentono di ordinare i dati nell'origine dati basata su un determinato `Product` campo della classe in ordine crescente o decrescente. Sottoposto a override `SortDescriptorsChanged` metodo verrà chiamato ogni volta che l'uso fa clic su un'intestazione di colonna. Verrà passato il **chiave** valore su cui è impostati in Interface Builder e l'ordinamento per colonna.
 
 Se si esegue l'applicazione e fare clic su nelle intestazioni di colonna, le righe verranno ordinate in base alla colonna:
 
@@ -439,16 +439,16 @@ Se si esegue l'applicazione e fare clic su nelle intestazioni di colonna, le rig
 
 <a name="Row_Selection" />
 
-## <a name="row-selection"></a>Selezione di riga
+## <a name="row-selection"></a>Selezione riga
 
-Se si desidera consentire all'utente di selezionare una singola riga, fare doppio clic su di `Main.storyboard` file per aprirlo e modificarlo in Generatore di interfaccia. Selezionare la vista struttura il **interfaccia gerarchia** e deselezionare il **più** nella casella di controllo di **attributo controllo**:
+Se si vuole consentire all'utente di selezionare una singola riga, fare doppio clic il `Main.storyboard` file per aprirlo e modificarlo in Interface Builder. Selezionare la vista struttura il **gerarchia delle interfacce** e deselezionare il **più** casella di controllo nel **attributo Inspector**:
 
-[![](outline-view-images/select01.png "Il controllo di attributo")](outline-view-images/select01.png#lightbox)
+[![](outline-view-images/select01.png "Attribute Inspector")](outline-view-images/select01.png#lightbox)
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
 
-Successivamente, modificare il `ProductOutlineDelegate.cs` file e aggiungere il metodo seguente:
+Modificare quindi il `ProductOutlineDelegate.cs` file e aggiungere il metodo seguente:
 
 ```csharp
 public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
@@ -458,20 +458,20 @@ public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
 }
 ```
 
-In questo modo sarà possibile selezionare ogni singola riga nella visualizzazione struttura. Restituire `false` per il `ShouldSelectItem` per un elemento che non si desidera l'utente sia in grado di selezionare o `false` per ogni elemento se non si desidera essere in grado di selezionare gli elementi all'utente.
+Questa operazione consentirà all'utente di selezionare ogni singola riga nella visualizzazione della struttura. Restituire `false` per il `ShouldSelectItem` per qualsiasi elemento che non si desidera l'utente sia in grado di selezionare o `false` per ogni elemento se non si desidera l'utente sia in grado di selezionare gli elementi.
 
 <a name="Multiple_Row_Selection" />
 
 ## <a name="multiple-row-selection"></a>Selezione di più righe
 
-Se si desidera consentire all'utente di selezionare un più righe, fare doppio clic su di `Main.storyboard` file per aprirlo e modificarlo in Generatore di interfaccia. Selezionare la vista struttura il **interfaccia gerarchia** e controllare il **più** nella casella di controllo di **attributo controllo**:
+Se si vuole consentire all'utente di selezionare un più righe, fare doppio clic il `Main.storyboard` file per aprirlo e modificarlo in Interface Builder. Selezionare la vista struttura il **gerarchia delle interfacce** e controllare il **più** casella di controllo il **attributo Inspector**:
 
-[![](outline-view-images/select02.png "Il controllo di attributo")](outline-view-images/select02.png#lightbox)
+[![](outline-view-images/select02.png "Attribute Inspector")](outline-view-images/select02.png#lightbox)
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
 
-Successivamente, modificare il `ProductOutlineDelegate.cs` file e aggiungere il metodo seguente:
+Modificare quindi il `ProductOutlineDelegate.cs` file e aggiungere il metodo seguente:
 
 ```csharp
 public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
@@ -481,19 +481,19 @@ public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
 }
 ```
 
-In questo modo sarà possibile selezionare ogni singola riga nella visualizzazione struttura. Restituire `false` per il `ShouldSelectRow` per un elemento che non si desidera l'utente sia in grado di selezionare o `false` per ogni elemento se non si desidera essere in grado di selezionare gli elementi all'utente.
+Questa operazione consentirà all'utente di selezionare ogni singola riga nella visualizzazione della struttura. Restituire `false` per il `ShouldSelectRow` per qualsiasi elemento che non si desidera l'utente sia in grado di selezionare o `false` per ogni elemento se non si desidera l'utente sia in grado di selezionare gli elementi.
 
 <a name="Type_to_Select_Row" />
 
-## <a name="type-to-select-row"></a>Tipo per selezionare una riga
+## <a name="type-to-select-row"></a>Tipo per selezionare righe
 
-Se si desidera consentire all'utente di digitare un carattere con la visualizzazione della struttura selezionato e selezionare la prima riga con tale carattere, fare doppio clic su di `Main.storyboard` file per aprirlo e modificarlo in Generatore di interfaccia. Selezionare la vista struttura il **interfaccia gerarchia** e controllare il **tipo selezionare** nella casella di controllo di **attributo controllo**:
+Se si desidera consentire all'utente di digitare un carattere con la visualizzazione di struttura selezionata e selezionare la prima riga che contiene tale carattere, fare doppio clic il `Main.storyboard` file per aprirlo e modificarlo in Interface Builder. Selezionare la vista struttura il **gerarchia delle interfacce** e controllare il **tipo selezionare** casella di controllo il **attributo Inspector**:
 
 [![](outline-view-images/type01.png "Modifica il tipo di riga")](outline-view-images/type01.png#lightbox)
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
-Ora modifica il `ProductOutlineDelegate.cs` file e aggiungere il metodo seguente:
+A questo punto è possibile modificare il `ProductOutlineDelegate.cs` file e aggiungere il metodo seguente:
 
 ```csharp
 public override NSObject GetNextTypeSelectMatch (NSOutlineView outlineView, NSObject startItem, NSObject endItem, string searchString)
@@ -509,21 +509,21 @@ public override NSObject GetNextTypeSelectMatch (NSOutlineView outlineView, NSOb
 }
 ```
 
-Il `GetNextTypeSelectMatch` metodo accetta il determinato `searchString` e restituisce l'elemento del primo `Product` che contiene la stringa del `Title`.
+Il `GetNextTypeSelectMatch` metodo accetta il determinato `searchString` e restituisce l'elemento del primo `Product` che presenta tale stringa nel relativo `Title`.
 
 <a name="Reordering_Columns" />
 
 ## <a name="reordering-columns"></a>Riordinamento di colonne
 
-Se si desidera consentire all'utente di trascinare riordinare le colonne nella visualizzazione struttura, fare doppio clic su di `Main.storyboard` file per aprirlo e modificarlo in Generatore di interfaccia. Selezionare la vista struttura il **interfaccia gerarchia** e controllare il **riordinamento** nella casella di controllo di **attributo controllo**:
+Se si vuole consentire all'utente di trascinare riordinare le colonne nella visualizzazione della struttura, fare doppio clic il `Main.storyboard` file per aprirlo e modificarlo in Interface Builder. Selezionare la vista struttura il **gerarchia delle interfacce** e controllare il **riordinamento** casella di controllo il **attributo Inspector**:
 
-[![](outline-view-images/reorder01.png "Il controllo di attributo")](outline-view-images/reorder01.png#lightbox)
+[![](outline-view-images/reorder01.png "Attribute Inspector")](outline-view-images/reorder01.png#lightbox)
 
-Se si assegna un valore per il **salvataggio** proprietà e selezionare il **informazioni sulla colonna** campo, eventuali modifiche apportate al layout della tabella verranno salvate automaticamente a Microsoft e ripristino la volta successiva che l'applicazione viene eseguito.
+Se si assegna un valore per il **salvataggio automatico** proprietà e selezionare il **informazioni sulla colonna** campo, eventuali modifiche apportate al layout della tabella verranno salvate automaticamente per noi e ripristino la volta successiva che l'applicazione viene eseguito.
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
-Ora modifica il `ProductOutlineDelegate.cs` file e aggiungere il metodo seguente:
+A questo punto è possibile modificare il `ProductOutlineDelegate.cs` file e aggiungere il metodo seguente:
 
 ```csharp
 public override bool ShouldReorder (NSOutlineView outlineView, nint columnIndex, nint newColumnIndex)
@@ -532,17 +532,17 @@ public override bool ShouldReorder (NSOutlineView outlineView, nint columnIndex,
 }
 ```
 
-Il `ShouldReorder` metodo dovrebbe restituire `true` per qualsiasi colonna che desidera consentire a essere trascinamento riordinati nel `newColumnIndex`, altrimenti restituire `false`;
+Il `ShouldReorder` metodo deve restituire `true` per tutte le colonne che desidera consentire a essere riordinati in trascinare il `newColumnIndex`, altrimenti restituire `false`;
 
-Se si esegue l'applicazione, è possibile trascinare le intestazioni di colonna intorno riordinamento delle colonne:
+Se si esegue l'applicazione, è possibile trascinare le intestazioni di colonna per riordinare le colonne:
 
-[![](outline-view-images/reorder02.png "Esempio di riordinamento di colonne")](outline-view-images/reorder02.png#lightbox)
+[![](outline-view-images/reorder02.png "Esempio di riordinamento colonne")](outline-view-images/reorder02.png#lightbox)
 
 <a name="Editing_Cells" />
 
 ## <a name="editing-cells"></a>La modifica delle celle
 
-Se si desidera consentire all'utente di modificare i valori per una cella specificata, modificare il `ProductOutlineDelegate.cs` file e modificare il `GetViewForItem` metodo come indicato di seguito:
+Se si vuole consentire all'utente di modificare i valori per una cella specificata, modificare il `ProductOutlineDelegate.cs` file e modificare il `GetViewForItem` metodo come indicato di seguito:
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -596,15 +596,15 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 }
 ```
 
-Ora se si esegue l'applicazione, l'utente può modificare le celle nella visualizzazione tabella:
+Ora se si esegue l'applicazione, l'utente può modificare le celle nella visualizzazione della tabella:
 
-[![](outline-view-images/editing01.png "Un esempio di modifica delle celle")](outline-view-images/editing01.png#lightbox)
+[![](outline-view-images/editing01.png "Un esempio di modifica di celle")](outline-view-images/editing01.png#lightbox)
 
 <a name="Using_Images_in_Outline_Views" />
 
-## <a name="using-images-in-outline-views"></a>Utilizzo delle immagini in visualizzazioni della struttura
+## <a name="using-images-in-outline-views"></a>Usare le immagini nelle visualizzazioni di struttura
 
-Per includere un'immagine come parte della cella in un `NSOutlineView`, sarà necessario modificare la modalità con cui i dati vengono restituiti per la visualizzazione di struttura `NSTableViewDelegate's` `GetView` metodo da utilizzare un `NSTableCellView` anziché la tipica `NSTextField`. Ad esempio:
+Includere un'immagine come parte della cella in una `NSOutlineView`, è necessario modificare la modalità con cui i dati vengono restituiti dalla visualizzazione della struttura `NSTableViewDelegate's` `GetView` metodo da usare una `NSTableCellView` anziché il tipico `NSTextField`. Ad esempio:
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -668,23 +668,23 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 }
 ```
 
-Per ulteriori informazioni, vedere il [con immagini con visualizzazioni della struttura](~/mac/app-fundamentals/image.md) sezione del nostro [utilizzo immagine](~/mac/app-fundamentals/image.md) documentazione.
+Per altre informazioni, vedere la [usando immagini con la visualizzazione della struttura](~/mac/app-fundamentals/image.md) sezione del nostro [utilizzo di immagini](~/mac/app-fundamentals/image.md) documentazione.
 
 <a name="Data_Binding_Outline_Views" />
 
-## <a name="data-binding-outline-views"></a>Visualizzazioni della struttura di associazione dati
+## <a name="data-binding-outline-views"></a>Visualizzazioni della struttura di Data Binding
 
-Utilizzando le tecniche di associazione di dati e la generazione di codice chiave-valore Xamarin.Mac nell'applicazione in uso, è possibile ridurre notevolmente la quantità di codice che è necessario scrivere e mantenere per popolare e lavorare con gli elementi dell'interfaccia utente. È inoltre il vantaggio di separazione ulteriormente i dati di backup (_modello di dati_) la parte anteriore terminare l'interfaccia utente (_Model-View-Controller_), i punti iniziali per più semplici da gestire, più flessibile dell'applicazione progettazione.
+Utilizzando le tecniche di codifica di chiave-valore e un Data Binding nell'applicazione xamarin. Mac, è possibile ridurre la quantità di codice che è necessario scrivere e mantenere per popolare e lavorare con gli elementi dell'interfaccia utente. È anche il vantaggio di un'ulteriore separazione dei dati di backup (_modello di dati_) dal front end interfaccia utente (_Model-View-Controller_), sfociando in più facilmente gestibile, più flessibile dell'applicazione progettazione.
 
-Dati XML di codifica (i, chiave-valore KVM) è un meccanismo per l'accesso a proprietà di un oggetto indirettamente, utilizzando le chiavi (stringhe di formattazione speciale) per identificare le proprietà anziché accedervi tramite le variabili di istanza o metodi di accesso (`get/set`). Implementando chiave-valore di codifica compatibile con funzioni di accesso nell'applicazione Xamarin.Mac, è possibile accedere ad altre funzionalità macOS come chiave-valore osservazione (KVO), Data Binding, i dati di base, associazioni Cocoa e scriptability.
+Dati XML di codifica (i, chiave-valore KVM) è un meccanismo per l'accesso a proprietà di un oggetto indirettamente, tramite chiavi (stringhe di formattazione speciale) per identificare le proprietà anziché accedervi tramite le variabili di istanza o metodi di accesso (`get/set`). Grazie all'implementazione chiave-valore di codifica compatibili con funzioni di accesso nell'applicazione xamarin. Mac, è possibile accedere ad altre funzionalità macOS come chiave-valore osservando (KVO), Data Binding, Core Data, le associazioni di Cocoa e scriptability.
 
-Per ulteriori informazioni, vedere il [struttura Visualizza Data Binding](~/mac/app-fundamentals/databinding.md#Outline_View_Data_Binding) sezione del nostro [Data Binding e la generazione di codice chiave-valore](~/mac/app-fundamentals/databinding.md) documentazione.
+Per altre informazioni, vedere la [associazione di dati di visualizzazione struttura](~/mac/app-fundamentals/databinding.md#Outline_View_Data_Binding) sezione del nostro [Data Binding e codifica di chiave-valore](~/mac/app-fundamentals/databinding.md) documentazione.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stato applicato l'utilizzo di visualizzazioni della struttura in un'applicazione Xamarin.Mac un'analisi approfondita. È stato illustrato i diversi tipi e sugli usi di visualizzazioni della struttura, come creare e gestire visualizzazioni della struttura in interfaccia generatore del Xcode e come utilizzare le visualizzazioni struttura nel codice c#.
+Questo articolo ha fatto un quadro dettagliato di utilizzo delle visualizzazioni struttura in un'applicazione xamarin. Mac. Abbiamo visto i diversi tipi e si usa la visualizzazione della struttura, come creare e gestire la visualizzazione della struttura in Interface Builder di Xcode e come usare la visualizzazione della struttura nel codice c#.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
@@ -695,7 +695,7 @@ In questo articolo è stato applicato l'utilizzo di visualizzazioni della strutt
 - [Source Lists](~/mac/user-interface/source-list.md) (Elenchi di risorse)
 - [Data binding e codifica di chiave-valore](~/mac/app-fundamentals/databinding.md)
 - [Linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
-- [Introduzione alle visualizzazioni della struttura](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
-- [NSOutlineView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSOutlineView_Class/index.html#//apple_ref/doc/uid/TP40004079)
+- [Introduzione a visualizzazioni della struttura](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
+- [Elemento NSOutlineView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSOutlineView_Class/index.html#//apple_ref/doc/uid/TP40004079)
 - [NSOutlineViewDataSource](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSOutlineViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40004175)
 - [NSOutlineViewDelegate](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/NSOutlineViewDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40008609)
