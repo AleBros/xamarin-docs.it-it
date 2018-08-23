@@ -76,7 +76,7 @@ try {
 
 In questo modo l'agente di rimozione dello stack Objective-C non conosce gestito `catch` clausola e non verrà eseguito il `finally` clausola da eseguire.
 
-Quando l'esempio di codice precedente _è_ efficace, è perché Objective-C dispone di un metodo di ricevere una notifica di eccezioni non gestite Objective-C, [ `NSSetUncaughtExceptionHandler` ] [ 2], che Xamarin. IOS e utilizzare Xamarin.Mac e a questo punto tenta di convertire tutte le eccezioni Objective-C per le eccezioni gestite.
+Quando l'esempio di codice precedente _è_ efficace, è perché Objective-C dispone di un metodo di ricevere una notifica di eccezioni non gestite Objective-C, [`NSSetUncaughtExceptionHandler`][2], che Xamarin. IOS e utilizzare Xamarin.Mac e a questo punto tenta di convertire tutte le eccezioni Objective-C per le eccezioni gestite.
 
 ## <a name="scenarios"></a>Scenari
 
