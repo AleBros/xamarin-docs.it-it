@@ -111,7 +111,7 @@ public partial class HelloBitmapPage : ContentPage
 
 Il `PaintSurface` gestore esegue il rendering di bitmap più volte in righe e colonne della visualizzazione. Si noti che il `Clear` metodo nella `PaintSurface` gestore di è un argomento di `SKColors.Aqua`, quali i colori di sfondo dell'area di visualizzazione:
 
-[![Hello, Bitmap. ] (drawing-images/HelloBitmap.png "Hello, Bitmap.")](drawing-images/HelloBitmap-Large.png#lightbox)
+[![Hello, Bitmap. ](drawing-images/HelloBitmap.png "Hello, Bitmap.")](drawing-images/HelloBitmap-Large.png#lightbox)
 
 L'aspetto dello sfondo azzurro rivela che la bitmap è trasparente ad eccezione del testo.
 
