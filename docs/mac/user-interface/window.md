@@ -762,7 +762,7 @@ Per aggiungere un nuovo pannello, eseguire le operazioni seguenti:
 5. Eliminare la finestra esistente e trascinare un pannello dal **Library Inspector** nell'il **Interface Editor**: 
 
     [![](window-images/panels01.png "L'eliminazione di finestra esistente")](window-images/panels01.png#lightbox)
-6. Associare il pannello fino al **il proprietario del File*-**finestra*- **Outlet**: 
+6. Associare il pannello fino al **il proprietario del File*- **finestra*- **Outlet**: 
 
     [![](window-images/panels02.png "Trascinamento consente di associare il pannello")](window-images/panels02.png#lightbox)
 7. Passare al **Identity Inspector** e impostare la classe del pannello `DocumentPanel`: 
