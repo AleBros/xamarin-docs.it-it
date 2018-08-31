@@ -8,10 +8,10 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
 ms.openlocfilehash: f11f5d1cbde0f5eae27215af8eb6544be46c0206
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.sourcegitcommit: ee66db647ae9d94b54b1c5d9093075a620d0c6b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
+ms.lasthandoff: 08/28/2018
 ms.locfileid: "39654815"
 ---
 # <a name="push-notifications-in-ios"></a>Notifiche push in iOS
@@ -81,12 +81,10 @@ Ogni ambiente menzionati nella sezione precedente richiedono il proprio certific
 
 8.  Per creare un profilo di provisioning di sviluppo, passare al **profili di Provisioning** sezione e seguire i passaggi per crearla, usando l'App Id appena create.
 
-9.  Dopo aver creato il profilo di provisioning, apriamo **Xcode Organizer** e aggiornarlo. Se il profilo di provisioning è stato creato non viene visualizzata, potrebbe essere necessario scaricare il profilo dal portale di Provisioning iOS e importarlo manualmente. Lo screenshot seguente mostra un esempio della libreria con il profilo di provisioning aggiunto:
-
+9.  Dopo aver creato il profilo di provisioning, apriamo **Xcode Organizer** e aggiornarlo. Se il profilo di provisioning è stato creato non viene visualizzata, potrebbe essere necessario scaricare il profilo dal portale di Provisioning iOS e importarlo manualmente. Lo screenshot seguente mostra un esempio della libreria con il profilo di provisioning aggiunto:  
     [![](remote-notifications-in-ios-images/image13new.png "Questo screenshot Mostra un esempio della libreria con il profilo di provisioning aggiunto")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
-10.  A questo punto è necessario configurare il progetto xamarin. IOS per usare questo profilo di provisioning appena creato. Questa operazione viene eseguita dal **opzioni progetto** finestra di dialogo, sotto **firma del Bundle iOS** scheda, come illustrato nello screenshot seguente:
-
+10.  A questo punto è necessario configurare il progetto xamarin. IOS per usare questo profilo di provisioning appena creato. Questa operazione viene eseguita dal **opzioni progetto** finestra di dialogo, sotto **firma del Bundle iOS** scheda, come illustrato nello screenshot seguente:  
     [![](remote-notifications-in-ios-images/image11.png "Configurare il progetto xamarin. IOS per usare questo profilo di provisioning appena creato")](remote-notifications-in-ios-images/image11.png#lightbox)
 
 A questo punto l'applicazione è configurata per l'uso delle notifiche push. Tuttavia, esistono ancora pochi altri passaggi richiesti con il certificato. Questo certificato è in formato DER che non è compatibile con PushSharp, che richiede un certificato Personal Information Exchange (PKCS12). Per convertire il certificato in modo che sia utilizzabile da PushSharp, seguire questi passaggi finali:

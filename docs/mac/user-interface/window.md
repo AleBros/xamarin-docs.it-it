@@ -8,10 +8,10 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
 ms.openlocfilehash: b60b8a6a7c56347d6abf71f8c5149ddd556d3da8
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.sourcegitcommit: ee66db647ae9d94b54b1c5d9093075a620d0c6b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
+ms.lasthandoff: 08/28/2018
 ms.locfileid: "40251126"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows in xamarin. Mac
@@ -762,7 +762,7 @@ Per aggiungere un nuovo pannello, eseguire le operazioni seguenti:
 5. Eliminare la finestra esistente e trascinare un pannello dal **Library Inspector** nell'il **Interface Editor**: 
 
     [![](window-images/panels01.png "L'eliminazione di finestra esistente")](window-images/panels01.png#lightbox)
-6. Associare il pannello fino al **il proprietario del File*- **finestra*- **Outlet**: 
+6. Associare il pannello fino al **il proprietario del File** - **finestra** - **prese**: 
 
     [![](window-images/panels02.png "Trascinamento consente di associare il pannello")](window-images/panels02.png#lightbox)
 7. Passare al **Identity Inspector** e impostare la classe del pannello `DocumentPanel`: 
