@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
 ms.openlocfilehash: 2369b249681b926476cf3938c51c99745eba9098
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 8888cb7d75f4469f2a1195b9a426a2e1fbf46bd8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 08/31/2018
 ms.locfileid: "38995742"
 ---
 # <a name="customizing-a-contentpage"></a>Personalizzazione di un elemento ContentPage
@@ -197,7 +197,7 @@ namespace CustomRenderer.Droid
 
 La chiamata per la classe di base `OnElementChanged` metodo crea un'istanza di Android `ViewGroup` controllo, ovvero un gruppo di viste. Condizione che il renderer non è già collegato a un elemento di xamarin. Forms esistente e condizione che esiste un'istanza di pagina che viene eseguito il rendering dal renderer personalizzati, viene visualizzato solo nel flusso in tempo reale della fotocamera.
 
-La pagina viene quindi personalizzata richiamando una serie di metodi che usano il `Camera` API per fornire il flusso in tempo reale da fotocamera e la possibilità di acquisire una foto, in precedenza il `AddView` metodo viene richiamato per aggiungere la fotocamera in tempo reale di flusso dell'interfaccia utente per il `ViewGroup`.
+La pagina viene quindi personalizzata richiamando una serie di metodi che usano il `Camera` API per fornire il flusso in tempo reale da fotocamera e la possibilità di acquisire una foto, in precedenza il `AddView` metodo viene richiamato per aggiungere la fotocamera in tempo reale di flusso dell'interfaccia utente per il `ViewGroup`. Si noti che in Android è anche necessario eseguire l'override di `OnLayout` metodo per eseguire operazioni di misure e il layout nella visualizzazione. Per altre informazioni, vedere la [esempio renderer ContentPage](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/).
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>Creare il Renderer di pagina nella piattaforma UWP
 
