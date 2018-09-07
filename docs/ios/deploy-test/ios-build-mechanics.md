@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: df84e78709b0ff16087c4bb9816c5d45f6ec33ed
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4145368281c2967bd1311389e5e1b1432af2c9b8
+ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30772357"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43780530"
 ---
 # <a name="ios-build-mechanics"></a>Meccanismi di compilazione per iOS
 
@@ -97,7 +97,7 @@ Tenendo conto delle informazioni fornite sopra, l'elenco seguente offre alcune i
 - Suggerimenti aggiuntivi
   - Preferire la compilazione alla ricompilazione, perché la ricompilazione esegue la pulizia prima della compilazione. La pulizia può richiedere molto tempo, in quanto rimuove riferimenti che possono essere in uso.
   - Sfruttare il fatto che il simulatore non applica la sandbox. Se nel progetto sono incluse risorse di grandi dimensioni come video o altri asset, ogni volta che l'app viene avviata nel simulatore possono essere create operazioni onerose di copia dei file. Evitare queste operazioni onerose inserendo questi file nella home directory e fare riferimento ai file nell'applicazione tramite il percorso completo.  
-  - In caso di dubbi, usare il flag `–time –time` per misurare la modifica
+  - In caso di dubbi, usare il flag `--time --time` per misurare la modifica
 
 Lo screenshot seguente mostra come impostare queste opzioni per il simulatore nelle opzioni iOS:
 
@@ -137,7 +137,7 @@ Riducendo al minimo le dimensioni dell'app, è anche possibile ridurre i tempi d
 Alcune cose da evitare:
 
 - File binari FAT (debug) 
-- Disabilitazione del linker `–nolink` 
+- Disabilitazione del linker `--nolink` 
 - Disabilitazione della rimozione 
   - Simboli `--nosymbolstrip` 
   - IL (rilascio) `--nostrip`.  
@@ -151,7 +151,7 @@ Suggerimenti aggiuntivi
 - Evitare di distribuire file statici di grandi dimensioni in ogni compilazione (debug) 
   - Usare UIFileSharingEnabled (info.plist) 
     - Gli asset possono essere caricati una volta 
-- In caso di dubbi, usare il flag `–time –time` per misurare la modifica
+- In caso di dubbi, usare il flag `--time --time` per misurare la modifica
 
 Lo screenshot seguente mostra come impostare queste opzioni per il simulatore nelle opzioni iOS:
 
