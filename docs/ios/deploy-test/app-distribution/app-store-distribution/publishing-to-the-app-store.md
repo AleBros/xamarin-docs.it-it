@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/25/2018
-ms.openlocfilehash: 60aa177ccb14c443f1599b4ce42c07faa695baed
-ms.sourcegitcommit: 7d766f8a080ee6999e47c873a9f2ccec8fa5dd5a
+ms.openlocfilehash: 7560f66acc3a3ea683e75be2ae85f908036e008c
+ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37439174"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43780518"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Pubblicazione di app Xamarin.iOS nell'App Store
 
@@ -121,17 +121,16 @@ I nuovi progetti Xamarin.iOS impostano automaticamente le _configurazioni della 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. Da **Esplora soluzioni** aprire **Info.plist**. Selezionare **Provisioning manuale**. Salvare e chiudere il file.
-2. Assicurarsi che Visual Studio 2017 sia stato [associato a un host di compilazione Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-3. Fare clic con il pulsante destro del mouse su **Nome progetto** in **Esplora soluzioni**, selezionare **Proprietà** e passare alla scheda **Compilazione iOS**.
-4. Impostare **Configurazione** su **Versione** e **Piattaforma** su **iPhone**.
-5. Per compilare con un SDK per iOS specifico, selezionarlo dall'elenco **Versione SDK**. In alternativa, lasciare questo valore impostato su **Predefinito**.
-6. Il collegamento consente di ridurre le dimensioni complessive dell'applicazione rimuovendo il codice non utilizzato. Nella maggior parte dei casi **Comportamento del linker** deve essere impostato sul valore predefinito **Collega solo SDK del framework**. In alcune situazioni, ad esempio durante l'uso di alcune librerie di terze parti, può essere necessario impostare questo valore su **Non collegare** per assicurarsi che il codice necessario non venga rimosso. Per altre informazioni, vedere la guida [Collegamento di app Xamarin.iOS](~/ios/deploy-test/linker.md).
-7. Selezionare **Ottimizza le immagini PNG** per ridurre ulteriormente le dimensioni dell'applicazione.
-8. Il debug non deve essere abilitato in quanto aumenta inutilmente le dimensioni della build.
-9. Per iOS 11, selezionare una delle architetture del dispositivo che supporta **ARM64**. Per altre informazioni sulla compilazione per i dispositivi iOS a 64 bit, vedere la sezione **Abilitazione delle build a 64 bit delle app Xamarin.iOS** in [Considerazioni relative alla piattaforma a 32/64 bit](~/cross-platform/macios/32-and-64/index.md).
-10. È possibile usare il compilatore **LLVM** per generare codice più veloce e conciso. Questa opzione, tuttavia, aumenta i tempi di compilazione.
-11. In base alle esigenze dell'applicazione, è anche possibile modificare il tipo di **Garbage Collection** in uso e impostare l'**Internazionalizzazione**.
+1. Assicurarsi che Visual Studio 2017 sia stato [associato a un host di compilazione Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+2. Fare clic con il pulsante destro del mouse sul **nome del progetto** in **Esplora soluzioni** e scegliere **Proprietà**.
+3. Passare alla scheda **Compilazione iOS** e impostare **Configurazione** su **Versione** e **Piattaforma** su **iPhone**.
+4. Per compilare con un SDK per iOS specifico, selezionarlo dall'elenco **Versione SDK**. In alternativa, lasciare questo valore impostato su **Predefinito**.
+5. Il collegamento consente di ridurre le dimensioni complessive dell'applicazione rimuovendo il codice non utilizzato. Nella maggior parte dei casi **Comportamento del linker** deve essere impostato sul valore predefinito **Collega solo SDK del framework**. In alcune situazioni, ad esempio durante l'uso di alcune librerie di terze parti, può essere necessario impostare questo valore su **Non collegare** per assicurarsi che il codice necessario non venga rimosso. Per altre informazioni, vedere la guida [Collegamento di app Xamarin.iOS](~/ios/deploy-test/linker.md).
+6. Selezionare **Ottimizza le immagini PNG** per ridurre ulteriormente le dimensioni dell'applicazione.
+7. Il debug non deve essere abilitato in quanto aumenta inutilmente le dimensioni della build.
+8. Per iOS 11, selezionare una delle architetture del dispositivo che supporta **ARM64**. Per altre informazioni sulla compilazione per i dispositivi iOS a 64 bit, vedere la sezione **Abilitazione delle build a 64 bit delle app Xamarin.iOS** in [Considerazioni relative alla piattaforma a 32/64 bit](~/cross-platform/macios/32-and-64/index.md).
+9. È possibile usare il compilatore **LLVM** per generare codice più veloce e conciso. Questa opzione, tuttavia, aumenta i tempi di compilazione.
+10. In base alle esigenze dell'applicazione, è anche possibile modificare il tipo di **Garbage Collection** in uso e impostare l'**Internazionalizzazione**.
 
     Dopo aver impostato le opzioni descritte in precedenza, le impostazioni di compilazione dovrebbero essere simili alle seguenti:
 
@@ -139,27 +138,26 @@ I nuovi progetti Xamarin.iOS impostano automaticamente le _configurazioni della 
 
     Vedere anche la guida [Meccanismi di compilazione per iOS](~/ios/deploy-test/ios-build-mechanics.md) per una descrizione dettagliata delle impostazioni di compilazione.
 
-12. Passare alla scheda **Firma del bundle iOS**. Se le opzioni non sono modificabili, assicurarsi che sia selezionato **Provisioning manuale** nel file **Info.plist**.
-13. Verificare che l'opzione **Configurazione** sia impostata su **Versione** e **Piattaforma** sia impostata su **iPhone**.
-14. Impostare **Identità di firma** su **Distribuzione (automatico)**.
-15. Per **Profilo di provisioning**, selezionare il profilo di provisioning dell'App Store [creato in precedenza](#create-and-install-an-app-store-provisioning-profile).
+11. Passare alla scheda **Firma del bundle iOS**. Verificare che l'opzione **Configurazione** sia impostata su **Versione**, **Piattaforma** sia impostata su **iPhone** e che **Provisioning manuale** sia selezionato.
+12. Impostare **Identità di firma** su **Distribuzione (automatico)**.
+13. Per **Profilo di provisioning**, selezionare il profilo di provisioning dell'App Store [creato in precedenza](#create-and-install-an-app-store-provisioning-profile).
 
     Le opzioni di firma del bundle del progetto dovrebbero essere simili alle seguenti:
 
     ![Impostazioni di firma del bundle iOS](publishing-to-the-app-store-images/bundleSigning-w157.png "Impostazioni di firma del bundle iOS")
 
-16. Passare alla scheda **Opzioni IPA iOS**.
-17. Verificare che l'opzione **Configurazione** sia impostata su **Versione** e **Piattaforma** sia impostata su **iPhone**.
-18. Selezionare la casella di controllo **Compila archivio pacchetto iTunes (IPA)**. Questa impostazione farà in modo che ogni build di **versione** (che corrisponde alla configurazione selezionata) generi un file con estensione ipa. Questo file può essere inviato ad Apple per il rilascio nell'App Store.
+14. Passare alla scheda **Opzioni IPA iOS**.
+15. Verificare che l'opzione **Configurazione** sia impostata su **Versione** e **Piattaforma** sia impostata su **iPhone**.
+16. Selezionare la casella di controllo **Compila archivio pacchetto iTunes (IPA)**. Questa impostazione farà in modo che ogni build di **versione** (che corrisponde alla configurazione selezionata) generi un file con estensione ipa. Questo file può essere inviato ad Apple per il rilascio nell'App Store.
 
     > [!NOTE]
     > I **metadati di iTunes** e **iTunesArtwork** non sono necessari per le versioni dell'App Store. Per altre informazioni, vedere [File iTunesMetadata.plist nelle app Xamarin.iOS](~/ios/deploy-test/app-distribution/itunesmetadata.md) e [iTunes Artwork](~/ios/app-fundamentals/images-icons/app-icons.md#itunes-artwork).
 
-19. Per specificare un nome file con estensione ipa diverso dal nome del progetto Xamarin.iOS, immetterlo nel campo **Nome del pacchetto**.
+17. Per specificare un nome file con estensione ipa diverso dal nome del progetto Xamarin.iOS, immetterlo nel campo **Nome del pacchetto**.
 
     ![Impostazioni di firma del bundle iOS](publishing-to-the-app-store-images/ipaOptions-w157.png "Impostazioni di firma del bundle iOS")
 
-20. Salvare la configurazione della build e chiuderla.
+18. Salvare la configurazione della build e chiuderla.
 
 -----
 
@@ -218,7 +216,7 @@ Con le impostazioni di compilazione configurate correttamente e iTunes Connect i
 
     ![Schermata di convalida](publishing-to-the-app-store-images/publishvs02.png "Schermata di convalida")
 
-13. Fare clic sul pulsante **Next** (Avanti). L'applicazione sarà convalidata per l'App Store:
+13. Fare clic sul pulsante **Next** (Avanti). L'applicazione sarà convalidati per l'App Store:
 
     ![Convalida per l'App Store](publishing-to-the-app-store-images/publishvs03.png "Convalida per l'App Store")
 
