@@ -16,31 +16,31 @@ ms.locfileid: "39353698"
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 
-Il **connettività** permette di classe monitorare le modifiche in condizioni di rete del dispositivo, controllare l'accesso alla rete corrente e modo in cui è attualmente connesso.
+La classe **Connectivity** permette di monitorare le modifiche alla connesione di rete del dispositivo, controllare l'accesso alla rete corrente e il modo in cui è attualmente connesso.
 
 ## <a name="getting-started"></a>Introduzione
 
-Per l'accesso di **connettività** è necessaria la funzionalità le seguenti impostazioni specifiche della piattaforma.
+Per accedere alle funzione **Connectivity** è necessario eseguire le impostazioni specifiche della piattaforma.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Il `AccessNetworkState` l'autorizzazione è obbligatorio e deve essere configurata nel progetto Android. Ciò è possibile aggiungere nei modi seguenti:
+L'Autorizzazione `AccessNetworkState` è obbligatoria e deve essere configurata nel progetto Android. E' possibile aggiungerla nei modi seguenti:
 
-Aprire il **AssemblyInfo.cs** file sotto il **proprietà** cartella e aggiungere:
+Aprire il **AssemblyInfo.cs** file nella cartella **proprietà** e aggiungere:
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.AccessNetworkState)]
 ```
 
-In alternativa, aggiornare il manifesto di Android:
+In alternativa,è possibile modificare il file manifest di Android:
 
-Aprire il **androidmanifest. XML** file sotto il **proprietà** cartella e aggiungere il codice seguente all'interno del **manifesto** nodo.
+Aprire il file **androidmanifest. XML** nella cartella **proprietà** e aggiungere il codice seguente all'interno del **manifest** .
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-Oppure fare clic con il pulsante destro sul progetto Android e aprire le proprietà del progetto. Sotto **manifesto Android** trovare il **autorizzazioni necessarie:** area e verificare il **stato di accesso rete** autorizzazione. Si aggiornerà automaticamente il **androidmanifest. XML** file.
+Oppure fare clic con il pulsante destro sul progetto Android e aprire le proprietà del progetto. Nella sezione **manifesto Android** trovare l'area **autorizzazioni necessarie:**  e verificare l'autorizzazione **stato di accesso rete**. Il file **androidmanifest. XML** si aggiornerà automaticamente.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -52,7 +52,7 @@ Non è necessaria alcuna configurazione aggiuntiva.
 
 -----
 
-## <a name="using-connectivity"></a>Utilizza la connettività
+## <a name="using-connectivity"></a>Utilizzare Connectivity
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -71,15 +71,15 @@ if (current == NetworkAccess.Internet)
 }
 ```
 
-[Accesso alla rete](xref:Xamarin.Essentials.NetworkAccess) rientra nelle categorie seguenti:
+[NetworkAccess](xref:Xamarin.Essentials.NetworkAccess) rientra rientra nei seguenti valori:
 
 * **Internet** – accesso locale e internet.
-* **ConstrainedInternet** – accesso internet limitato. Indica captive la connettività del portale, in cui viene fornito accesso locale a un portale web, ma richiede l'accesso a Internet che credenziali specifiche sono disponibili tramite un portale.
-* **Locale** : locale solo l'accesso alla rete.
+* **ConstrainedInternet** – accesso internet limitato. Indica una connettivà protetta, in cui viene fornito accesso locale a un portale web, ma l'accesso a Internet richiede di inserire in un portale delle credenziali specifiche s.
+* **Locale** : accesso solo alla rete locale.
 * **Nessuno** – nessuna connettività è disponibile.
 * **Sconosciuto** : Impossibile determinare la connettività internet.
 
-È possibile controllare il tipo di [profilo di connessione](xref:Xamarin.Essentials.ConnectionProfile) il dispositivo in uso:
+È possibile controllare il tipo di [profilo di connessione](xref:Xamarin.Essentials.ConnectionProfile) che il dispositivo stà utilizzando:
 
 ```csharp
 var profiles = Connectivity.Profiles;
@@ -89,7 +89,7 @@ if (profiles.Contains(ConnectionProfile.WiFi))
 }
 ```
 
-Ogni volta che il profilo di connessione o rete accedere alle modifiche è possibile ricevere un evento quando attivata:
+Ogni volta che il profilo di connessione o l'accesso alla rete subisce delle modifiche è possibile ricevere la notifica di un evento:
 
 ```csharp
 public class ConnectivityTest
@@ -110,7 +110,7 @@ public class ConnectivityTest
 
 ## <a name="limitations"></a>Limitazioni
 
-È importante notare che è possibile che `Internet` viene segnalato da `NetworkAccess` ma accesso completo al web non è disponibile. A causa di funzionamento della connettività in ogni piattaforma può garantire solo che sia disponibile una connessione. Ad esempio il dispositivo può essere collegato a una rete Wi-Fi, ma il router è disconnesso da internet. In questa istanza possono essere riportati Internet, ma non è disponibile una connessione attiva.
+È importante notare che è possibile che `Internet` venga ritornato da `NetworkAccess` ma accesso completo al web non è disponibile. A causa del funzionamento della connettività in ogni piattaforma si può garantire solo che sia disponibile una connessione. Ad esempio il dispositivo può essere collegato a una rete Wi-Fi, ma il router è disconnesso da internet. In questo caso può essere ritornato Internet, ma non è disponibile una connessione attiva.
 
 ## <a name="api"></a>API
 
