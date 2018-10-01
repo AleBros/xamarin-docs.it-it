@@ -16,23 +16,23 @@ ms.locfileid: "38842615"
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 
-Il **negli Appunti** classe consente di copiare e incollare il testo negli Appunti di sistema tra le applicazioni.
+La classe **Clipboard** consente di copiare e incollare il testo negli appunti di sistema tra le applicazioni.
 
 ## <a name="using-clipboard"></a>Utilizzo degli Appunti
 
-Aggiungere un riferimento a Xamarin.Essentials nella classe:
+Come aggiungere un riferimento a Xamarin.Essentials nella classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-Per verificare se il **negli Appunti** è attualmente pronto per essere incollato testo:
+Per verificare se la **Clipboard** contiene testo:
 
 ```csharp
 var hasText = Clipboard.HasText;
 ```
 
-Per impostare il testo il **negli Appunti**:
+Per impostare il testo della **Clipboard**:
 
 ```csharp
 Clipboard.SetText("Hello World");
