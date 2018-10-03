@@ -20,27 +20,27 @@ La classe **Connectivity** permette di monitorare le modifiche alla connesione d
 
 ## <a name="getting-started"></a>Introduzione
 
-Per accedere alle funzione **Connectivity** è necessario eseguire le impostazioni specifiche della piattaforma.
+Per accedere alla funzionalità di **Connectivity**, sono richieste le seguenti impostazioni, specifiche per la piattaforma.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-L'Autorizzazione `AccessNetworkState` è obbligatoria e deve essere configurata nel progetto Android. E' possibile aggiungerla nei modi seguenti:
+L'autorizzazione 'AccessNetworkState' è obbligatoria e deve essere configurata nel progetto Android. È possibile aggiungerla seguendo uno dei metodi seguenti:
 
-Aprire il **AssemblyInfo.cs** file nella cartella **proprietà** e aggiungere:
+Aprire il file **AssemblyInfo.cs** nella cartella **Proprietà** e aggiungere:
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.AccessNetworkState)]
 ```
 
-In alternativa,è possibile modificare il file manifest di Android:
+In alternativa, è possibile aggiornare il Manifesto Android:
 
-Aprire il file **androidmanifest. XML** nella cartella **proprietà** e aggiungere il codice seguente all'interno del **manifest** .
+Aprire il file **androidmanifest. XML** nella cartella **Proprietà** e aggiungere il codice seguente nel nodo del **manifesto**.
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-Oppure fare clic con il pulsante destro sul progetto Android e aprire le proprietà del progetto. Nella sezione **manifesto Android** trovare l'area **autorizzazioni necessarie:**  e verificare l'autorizzazione **stato di accesso rete**. Il file **androidmanifest. XML** si aggiornerà automaticamente.
+Oppure fare clic con il pulsante destro sul progetto Android e aprire le proprietà del progetto. Nella sezione **manifesto Android** individuare l'area **autorizzazioni necessarie:** e verificare l'autorizzazione **stato di accesso di rete**. Il file **androidmanifest. XML** si aggiornerà automaticamente.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -74,12 +74,12 @@ if (current == NetworkAccess.Internet)
 [NetworkAccess](xref:Xamarin.Essentials.NetworkAccess) rientra rientra nei seguenti valori:
 
 * **Internet** – accesso locale e internet.
-* **ConstrainedInternet** – accesso internet limitato. Indica una connettivà protetta, in cui viene fornito accesso locale a un portale web, ma l'accesso a Internet richiede di inserire in un portale delle credenziali specifiche s.
+* **ConstrainedInternet** – accesso internet limitato. Indica una connettività captive portal in cui viene fornito accesso locale a un portale Web, ma l'accesso a Internet richiede l'inserimento di credenziali specifiche tramite un portale.
 * **Locale** : accesso solo alla rete locale.
 * **Nessuno** – nessuna connettività è disponibile.
 * **Sconosciuto** : Impossibile determinare la connettività internet.
 
-È possibile controllare il tipo di [profilo di connessione](xref:Xamarin.Essentials.ConnectionProfile) che il dispositivo stà utilizzando:
+È possibile controllare il tipo di [profilo di connessione](xref:Xamarin.Essentials.ConnectionProfile) che il dispositivo sta utilizzando attivamente:
 
 ```csharp
 var profiles = Connectivity.Profiles;
@@ -89,7 +89,7 @@ if (profiles.Contains(ConnectionProfile.WiFi))
 }
 ```
 
-Ogni volta che il profilo di connessione o l'accesso alla rete subisce delle modifiche è possibile ricevere la notifica di un evento:
+Ogni volta che il profilo di connessione o l'accesso alla rete subisce delle modifiche, è possibile ricevere la notifica di un evento:	
 
 ```csharp
 public class ConnectivityTest
@@ -110,7 +110,7 @@ public class ConnectivityTest
 
 ## <a name="limitations"></a>Limitazioni
 
-È importante notare che è possibile che `Internet` venga ritornato da `NetworkAccess` ma accesso completo al web non è disponibile. A causa del funzionamento della connettività in ogni piattaforma si può garantire solo che sia disponibile una connessione. Ad esempio il dispositivo può essere collegato a una rete Wi-Fi, ma il router è disconnesso da internet. In questo caso può essere ritornato Internet, ma non è disponibile una connessione attiva.
+È importante ricordare che 'Internet' può essere segnalato da 'NetworkAccess', anche nel caso in cui non sia disponibile un accesso completo al Web. A causa del funzionamento della connettività su ciascuna piattaforma, può esclusivamente garantire la disponibilità di una connessione. Ad esempio, il dispositivo potrebbe essere connesso alla rete Wi-Fi, ma il router potrebbe ugualmente essere disconnesso da Internet. In questo caso, Internet potrebbe essere segnalato, ma questo non significa che una connessione attiva sia disponibile.
 
 ## <a name="api"></a>API
 
