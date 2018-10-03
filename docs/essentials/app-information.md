@@ -16,7 +16,7 @@ ms.locfileid: "38831507"
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 
-Il **AppInfo** classe fornisce informazioni sull'applicazione.
+La classe **AppInfo** fornisce informazioni sull'applicazione.
 
 ## <a name="using-appinfo"></a>Uso di AppInfo
 
@@ -46,14 +46,14 @@ var build = AppInfo.BuildString;
 
 ## <a name="displaying-application-settings"></a>Visualizzazione delle impostazioni dell'applicazione
 
-Il **AppInfo** classe può anche visualizzare una pagina delle impostazioni gestiti dal sistema operativo per l'applicazione:
+La classe **AppInfo** può anche aprire una pagina delle impostazioni gestita dal sistema operativo relativa l'applicazione:
 
 ```csharp
 // Display settings page
 AppInfo.OpenSettings();
 ```
 
-Questa pagina delle impostazioni consente all'utente di modificare le autorizzazioni dell'applicazione ed eseguire altre attività specifiche della piattaforma.
+Questa pagina delle impostazioni consente all'utente di modificare le autorizzazioni relative all'applicazione ed eseguire altre attività specifiche della piattaforma.
 
 ## <a name="api"></a>API
 

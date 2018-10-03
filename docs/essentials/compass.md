@@ -16,7 +16,7 @@ ms.locfileid: "39353883"
 
 ![Versione non definitiva NuGet](~/media/shared/pre-release.png)
 
-Il **Compass** classe consente di monitorare intestazione Nord magnetico del dispositivo.
+La classe **Compass** consente di monitorare la posizione del Nord magnetico rispetto al dispositivo.
 
 ## <a name="using-compass"></a>Usando Compass
 
@@ -26,7 +26,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La funzionalità Compass funziona chiamando il `Start` e `Stop` metodi per l'ascolto delle modifiche alla bussola. Eventuali modifiche vengono inviate attraverso la `ReadingChanged` evento. Ecco un esempio:
+La classe Compass funziona chiamando i metodi `Start` e `Stop` per l'ascolto delle modifiche relative alla bussola. Eventuali modifiche vengono inviate attraverso l'evento `ReadingChanged`. Ecco un esempio:
 
 ```csharp
 public class CompassTest
@@ -74,9 +74,9 @@ public class CompassTest
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Android non fornisce un'API per recuperare l'intestazione della bussola. Viene usato l'accelerometro e magnetometro per calcolare il titolo Nord magnetico, che è consigliato da Google.
+Android non fornisce le API per recuperare lo stato della bussola. Viene utilizzato l'accelerometro e il magnetometro per calcolare la posizione del Nord magnetico, come consigliato da Google.
 
-In rari casi, forse rilevino risultati incoerenti perché i sensori devono essere tarato, che comporta lo spostamento del dispositivo in un movimento figura 8. Il modo migliore di procedere si deve aprire Google Maps, toccare il punto per la posizione e selezionare **Calibra compass**.
+In rari casi è possibile che vengano visualizzati risultati incoerenti poiché i sensori devono essere calibrati effettuando un movimento a forma di otto con il dispositivo. Il modo migliore per eseguire questa operazione consiste nell'aprire Google Maps, toccare il punto della propria posizione e selezionare **Calibra bussola**.
 
 Tenere presente che esegue più sensori dalla propria app allo stesso tempo possono regolare la velocità del sensore.
 
