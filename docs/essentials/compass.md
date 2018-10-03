@@ -76,7 +76,7 @@ public class CompassTest
 
 Android non fornisce le API per recuperare lo stato della bussola. Viene utilizzato l'accelerometro e il magnetometro per calcolare la posizione del Nord magnetico, come consigliato da Google.
 
-In rari casi, è possibile che rilevino risultati incoerenti perché i sensori devono essere tarati, si possono tarare muovendo il dispositivo in modo tale da riprodurre il numero 8. Il modo migliore di procedere consiste nell'aprire Google Mape, toccare il punto relativo alla posizione e selezionare **Calibra bussola**.
+In rari casi è possibile che vengano visualizzati risultati incoerenti poiché i sensori devono essere calibrati effettuando un movimento a forma di otto con il dispositivo. Il modo migliore per eseguire questa operazione consiste nell'aprire Google Maps, toccare il punto della propria posizione e selezionare **Calibra bussola**.
 
 Tenere presente che esegue più sensori dalla propria app allo stesso tempo possono regolare la velocità del sensore.
 
