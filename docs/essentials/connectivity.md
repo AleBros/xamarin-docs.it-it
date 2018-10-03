@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 96b4ee0487034c651bec1dfb168fed7567b63c96
 ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353698"
@@ -24,7 +24,7 @@ Per accedere alla funzionalità di **Connectivity**, sono richieste le seguenti 
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-L'autorizzazione 'AccessNetworkState' è obbligatoria e deve essere configurata nel progetto Android. È possibile aggiungerla seguendo uno dei metodi seguenti:
+L'autorizzazione `AccessNetworkState` è obbligatoria e deve essere configurata nel progetto Android. È possibile aggiungerla seguendo uno dei metodi seguenti:
 
 Aprire il file **AssemblyInfo.cs** nella cartella **Proprietà** e aggiungere:
 
@@ -40,7 +40,7 @@ Aprire il file **androidmanifest. XML** nella cartella **Proprietà** e aggiunge
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-Oppure fare clic con il pulsante destro sul progetto Android e aprire le proprietà del progetto. Nella sezione **manifesto Android** individuare l'area **autorizzazioni necessarie:** e verificare l'autorizzazione **stato di accesso di rete**. Il file **androidmanifest. XML** si aggiornerà automaticamente.
+Oppure fare clic con il pulsante destro sul progetto Android e aprire le proprietà del progetto. Nella sezione **manifesto Android** individuare l'area **autorizzazioni necessarie:**  e verificare l'autorizzazione **stato di accesso di rete**. Il file **androidmanifest. XML** si aggiornerà automaticamente.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -71,7 +71,7 @@ if (current == NetworkAccess.Internet)
 }
 ```
 
-[NetworkAccess](xref:Xamarin.Essentials.NetworkAccess) rientra rientra nei seguenti valori:
+[Accesso alla rete](xref:Xamarin.Essentials.NetworkAccess) rientra nelle categorie seguenti:
 
 * **Internet** – accesso locale e internet.
 * **ConstrainedInternet** – accesso internet limitato. Indica una connettività captive portal in cui viene fornito accesso locale a un portale Web, ma l'accesso a Internet richiede l'inserimento di credenziali specifiche tramite un portale.
@@ -89,7 +89,7 @@ if (profiles.Contains(ConnectionProfile.WiFi))
 }
 ```
 
-Ogni volta che il profilo di connessione o l'accesso alla rete subisce delle modifiche, è possibile ricevere la notifica di un evento:	
+Ogni volta che il profilo di connessione o l'accesso alla rete subisce delle modifiche, è possibile ricevere la notifica di un evento:
 
 ```csharp
 public class ConnectivityTest
@@ -110,7 +110,7 @@ public class ConnectivityTest
 
 ## <a name="limitations"></a>Limitazioni
 
-È importante ricordare che 'Internet' può essere segnalato da 'NetworkAccess', anche nel caso in cui non sia disponibile un accesso completo al Web. A causa del funzionamento della connettività su ciascuna piattaforma, può esclusivamente garantire la disponibilità di una connessione. Ad esempio, il dispositivo potrebbe essere connesso alla rete Wi-Fi, ma il router potrebbe ugualmente essere disconnesso da Internet. In questo caso, Internet potrebbe essere segnalato, ma questo non significa che una connessione attiva sia disponibile.
+È importante ricordare che `Internet` può essere segnalato da `NetworkAccess`, anche nel caso in cui non sia disponibile un accesso completo al Web. A causa del funzionamento della connettività su ciascuna piattaforma, può esclusivamente garantire la disponibilità di una connessione. Ad esempio, il dispositivo potrebbe essere connesso alla rete Wi-Fi, ma il router potrebbe ugualmente essere disconnesso da Internet. In questo caso, Internet potrebbe essere segnalato, ma questo non significa che una connessione attiva sia disponibile.
 
 ## <a name="api"></a>API
 
