@@ -20,13 +20,13 @@ La classe **Clipboard** consente di copiare e incollare il testo negli appunti d
 
 ## <a name="using-clipboard"></a>Utilizzo degli Appunti
 
-Come aggiungere un riferimento a Xamarin.Essentials nella classe:
+Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-Per verificare se la **Clipboard** contiene testo:
+Per verificare se la classe Clipboard include testo pronto per essere incollato:
 
 ```csharp
 var hasText = Clipboard.HasText;
