@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 41b15b480fa23bd49667b68e904043e4f1a95732
 ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38842615"
@@ -26,7 +26,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-Per verificare se la classe Clipboard include testo pronto per essere incollato:
+Per verificare se la classe **Clipboard** include testo pronto per essere incollato:
 
 ```csharp
 var hasText = Clipboard.HasText;
