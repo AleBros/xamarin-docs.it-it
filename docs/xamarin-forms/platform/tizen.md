@@ -1,25 +1,36 @@
 ---
 title: Tizen .NET
-description: Consente di sviluppare applicazioni per il sistema operativo Tizen, che viene eseguito su dispositivi Samsung, include .NET Tizen TV, wearables, i dispositivi mobili e altri dispositivi IoT.
+description: Tizen .NET consente lo sviluppo di applicazioni per il sistema operativo Tizen, che viene eseguito su dispositivi Samsung, tra cui TV, dispositivi indossabili, i dispositivi mobili e altri dispositivi IoT.
 ms.prod: xamarin
 ms.assetid: 5A22A354-A4DD-480D-A1BB-6D0C38592E55
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/04/2018
-ms.openlocfilehash: ccd340eed4ff0558b167fa394e449745ae6a9655
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.date: 09/26/2018
+ms.openlocfilehash: 69e8b919c5cc925be813cf1f768833ccfd948ada
+ms.sourcegitcommit: 4fee5f153fc7578dc376c2c659642f0ea27ae0cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
+ms.lasthandoff: 10/09/2018
 ms.locfileid: "34848592"
 ---
 # <a name="tizen-net"></a>Tizen .NET
 
-_Consente di sviluppare applicazioni per il sistema operativo Tizen, che viene eseguito su dispositivi Samsung, include .NET Tizen TV, wearables, i dispositivi mobili e altri dispositivi IoT._
+_Tizen .NET consente lo sviluppo di applicazioni Tizen da eseguire nei dispositivi Samsung, tra cui TV, dispositivi indossabili, i dispositivi mobili e altri dispositivi IoT._
 
-Tizen .NET consente di creare applicazioni .NET con xamarin. Forms e Tizen .NET framework. Xamarin. Forms consente di creare interfacce utente, mentre l'API TizenFX fornisce interfacce per l'hardware che si trova nel moderna TV, mobili, indossabile e i dispositivi IoT. Per ulteriori informazioni su Tizen .NET, vedere [Introduzione all'applicazione .NET Tizen](https://developer.tizen.org/development/training/.net-application).
+Tizen .NET consente di creare applicazioni .NET con xamarin. Forms e Tizen .NET framework. Xamarin. Forms consente di creare con facilità interfacce utente, mentre l'API TizenFX fornisce interfacce per l'hardware presenti nel TV moderni e per dispositivi mobili, indossabile e dispositivi IoT. Per altre informazioni su Tizen .NET, vedere [Introduzione all'applicazione .NET Tizen](https://developer.tizen.org/development/training/.net-application).
 
-Prima di iniziare lo sviluppo di applicazioni .NET Tizen, è innanzitutto necessario impostare l'ambiente di sviluppo. Per altre informazioni, vedere [installazione di Visual Studio Tools per Tizen](https://developer.tizen.org/development/visual-studio-tools-tizen/installing-visual-studio-tools-tizen).
+## <a name="get-started"></a>Introduzione
 
-Per informazioni su come aggiungere progetto Tizen .NET a una soluzione xamarin. Forms esistente, vedere [creazione di un'applicazione .NET Tizen](https://developer.tizen.org/development/training/.net-application/creating-your-first-tizen-.net-application).
+Prima di iniziare lo sviluppo di applicazioni .NET Tizen, è necessario configurare l'ambiente di sviluppo. Per altre informazioni, vedere [installazione di Visual Studio Tools per Tizen](https://developer.tizen.org/development/visual-studio-tools-tizen/installing-visual-studio-tools-tizen).
+
+Per informazioni su come aggiungere progetto Tizen .NET a una soluzione xamarin. Forms esistente, vedere [creare la prima applicazione .NET Tizen](https://developer.tizen.org/development/training/.net-application/creating-your-first-tizen-.net-application).
+
+## <a name="documentation"></a>Documentazione
+
+- [Documentazione di xamarin. Forms](~/xamarin-forms/index.yml) &ndash; come compilare applicazioni multipiattaforma con c# e xamarin. Forms.
+- [**Developer.tizen.org** ](https://developer.tizen.org/development) &ndash; documentazione e i video che consentono di compilare e distribuire applicazioni Tizen.
+
+## <a name="samples"></a>Esempi
+
+Samsung mantiene un fork del [esempi di xamarin. Forms con i progetti Tizen aggiunti](https://github.com/Samsung/xamarin-forms-samples), ed è presente un repository separato [Tizen-Csharp-Samples](https://github.com/Samsung/Tizen-CSharp-Samples) che contiene progetti aggiuntivi, tra cui indossabile e Demo specifiche TV.
