@@ -70,7 +70,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     </ContentPage>
     ```
 
-    Salvare le modifiche apportate a **MainPage.xaml**, premendo **CTRL+S** e chiudere il file.
+    Salvare le modifiche apportate a **MainPage.xaml** premendo **CTRL+S**, e chiudere il file.
 
 7. In **Esplora soluzioni**, espandere **MainPage.xaml** e fare doppio clic su **MainPage.xaml.cs** per aprirlo:
 
@@ -124,7 +124,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     > [!NOTE]
     > Se si prova a compilare l'applicazione a questo punto, si verificano errori che verranno risolti in un secondo momento.
 
-    Salvare le modifiche apportate a **MainPage.xaml.cs**, premendo **CTRL+S** e chiudere il file.
+    Salvare le modifiche apportate a **MainPage.xaml.cs** premendo **CTRL+S**, e chiudere il file.
 
 9. In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto **Phoneword** e selezionare **Aggiungi > Nuovo elemento...**:
 
@@ -190,7 +190,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     }
     ```
 
-    Salvare le modifiche apportate a **PhoneTranslator.cs**, premendo **CTRL+S** e chiudere il file.
+    Salvare le modifiche apportate a **PhoneTranslator.cs** premendo **CTRL+S**, e chiudere il file.
 
 12. In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto **Phoneword** e selezionare **Aggiungi > Nuovo elemento...**:
 
@@ -212,7 +212,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     }
     ```
 
-    Salvare le modifiche apportate a **IDialer.cs**, premendo **CTRL+S** e chiudere il file.
+    Salvare le modifiche apportate a **IDialer.cs** premendo **CTRL+S**, e chiudere il file.
 
     > [!NOTE]
     > Il codice comune per l'applicazione è ora completo. Il codice di composizione telefonica specifico della piattaforma verrà ora implementato come oggetto [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
@@ -247,7 +247,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     }
     ```
 
-    Salvare le modifiche apportate a **PhoneDialer.cs**, premendo **CTRL+S** e chiudere il file.
+    Salvare le modifiche apportate a **PhoneDialer.cs** premendo **CTRL+S**, e chiudere il file.
 
 18. In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto **Phoneword.Android** e selezionare **Aggiungi > Nuovo elemento...**:
 
@@ -306,7 +306,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     }
     ```
 
-    Si noti che questo codice presuppone l'uso dell'API Android più recente. Salvare le modifiche apportate a **PhoneDialer.cs** premendo **CTRL+S** e chiudere il file.
+    Si noti che questo codice presuppone l'uso dell'API Android più recente. Salvare le modifiche apportate a **PhoneDialer.cs** premendo **CTRL+S**, e chiudere il file.
 
 21. In **Esplora soluzioni**, nel progetto **Phoneword.Android**, fare doppio clic su **MainActivity.cs** per aprirlo, rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
@@ -337,7 +337,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     }
     ```
 
-    Salvare le modifiche apportate a **MainActivity.cs**, premendo **CTRL+S** e chiudere il file.
+    Salvare le modifiche apportate a **MainActivity.cs** premendo **CTRL+S**, e chiudere il file.
 
 22. Nel progetto **Phoneword.Android**, in **Esplora soluzioni**, fare doppio clic su **Proprietà** e selezionare la scheda **Manifesto Android**:
 
@@ -347,7 +347,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
 
     ![](quickstart-images/vs/android-manifest-changed.png "Abilitare l'autorizzazione CallPhone")
 
-    Salvare le modifiche apportate al manifesto, premendo **CTRL+S** e chiudere il file.
+    Salvare le modifiche apportate al manifesto premendo **CTRL+S**, e chiudere il file.
 
 24. In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto **Phoneword.UWP** e selezionare **Aggiungi > Nuovo elemento...**:
 
@@ -406,7 +406,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     }
     ```
 
-    Salvare le modifiche apportate a **PhoneDialer.cs**, premendo **CTRL+S** e chiudere il file.
+    Salvare le modifiche apportate a **PhoneDialer.cs** premendo **CTRL+S**, e chiudere il file.
 
 27. Nel progetto **Phoneword.UWP**, in **Esplora soluzioni**, fare clic con il pulsante destro del mouse su **Riferimenti** e selezionare **Aggiungi riferimento...**:
 
@@ -424,7 +424,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
 
     ![](quickstart-images/vs/uwp-manifest-changed.png "Abilitare la funzionalità Chiamata telefonica")
 
-    Salvare le modifiche apportate al manifesto, premendo **CTRL+S** e chiudere il file.
+    Salvare le modifiche apportate al manifesto premendo **CTRL+S**, e chiudere il file.
 
 31. In Visual Studio, selezionare la voce di menu **Compila > Compila soluzione** o premere **CTRL+MAIUSC+B**. L'applicazione verrà compilata e nella barra di stato di Visual Studio viene visualizzato un messaggio di operazione completata:
 
@@ -494,7 +494,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     </ContentPage>
     ```
 
-    Salvare le modifiche apportate a **MainPage.xaml**, scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
+    Salvare le modifiche apportate a **MainPage.xaml** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
 
 7. Nel **riquadro della soluzione**, fare doppio clic su **MainPage.xaml.cs** per aprirlo:
 
@@ -548,7 +548,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     > [!NOTE]
     > Se si prova a compilare l'applicazione a questo punto, si verificano errori che verranno risolti in un secondo momento.
 
-    Salvare le modifiche apportate a **MainPage.xaml.cs**, scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
+    Salvare le modifiche apportate a **MainPage.xaml.cs** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
 
 9. Nel **riquadro della soluzione**, selezionare il progetto **Phoneword**, fare clic con il pulsante destro del mouse e selezionare **Aggiungi > Nuovo file...**:
 
@@ -614,7 +614,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     }
     ```
 
-    Salvare le modifiche apportate a **PhoneTranslator.cs**, scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
+    Salvare le modifiche apportate a **PhoneTranslator.cs** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
 
 12. Nel **riquadro della soluzione**, selezionare il progetto **Phoneword**, fare clic con il pulsante destro del mouse e selezionare **Aggiungi > Nuovo file...**:
 
@@ -635,7 +635,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
         }
     }
     ```
-    Salvare le modifiche apportate a **IDialer.cs** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
+    Salvare le modifiche apportate a **IDialer.cs** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
 
     > [!NOTE]
     > Il codice comune per l'applicazione è ora completo. Il codice di composizione telefonica specifico della piattaforma verrà ora implementato come oggetto [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
@@ -670,7 +670,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     }
     ```
 
-    Salvare le modifiche apportate a **PhoneDialer.cs**, scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
+    Salvare le modifiche apportate a **PhoneDialer.cs** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
 
 18. Nel **riquadro della soluzione**, selezionare il progetto **Phoneword.Droid**, fare clic con il pulsante destro del mouse e selezionare **Aggiungi > Nuovo file...**:
 
@@ -729,7 +729,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     }
     ```
 
-    Si noti che questo codice presuppone l'uso dell'API Android più recente. Salvare le modifiche apportate a **PhoneDialer.cs**, scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
+    Si noti che questo codice presuppone l'uso dell'API Android più recente. Salvare le modifiche apportate a **PhoneDialer.cs** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
 
 21. Nel **riquadro della soluzione**, nel progetto **Phoneword.Droid**, fare doppio clic su **MainActivity.cs** per aprirlo, rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
@@ -760,7 +760,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     }
     ```
 
-    Salvare le modifiche apportate a **MainActivity.cs**, scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
+    Salvare le modifiche apportate a **MainActivity.cs** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
 
 22. Nel **riquadro della soluzione**, espandere la cartella delle **proprietà** e fare doppio clic sul file **AndroidManifest.xml**:
 
@@ -770,7 +770,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
 
     ![](quickstart-images/xs/android-manifest-changed.png "Abilitare l'autorizzazione CallPhone")
 
-    Salvare le modifiche apportate a **AndroidManifest.xml**, scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
+    Salvare le modifiche apportate a **AndroidManifest.xml** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
 
 24. In Visual Studio per Mac, selezionare la voce di menu **Compila > Compila tutto** o premere **&#8984; + B**. L'applicazione viene compilata e verrà visualizzato un messaggio di operazione completata nella barra degli strumenti di Visual Studio per Mac.
 
