@@ -18,11 +18,11 @@ ms.locfileid: "39361002"
 
 Xamarin.Essentials fornisce agli sviluppatori API multipiattaforma per le proprie applicazioni per dispositivi mobili.
 
-Android, iOS e UWP offrono univoci del sistema operativo e piattaforma API che gli sviluppatori hanno accesso a tutti in Xamarin sfruttando c#. Xamarin.Essentials fornisce un'API multipiattaforma singolo che funziona con xamarin. Forms, Android, iOS o applicazione UWP che sono accessibili da codice condiviso, indipendentemente dal modo in cui viene creata l'interfaccia utente.
+Android, iOS e UWP offrono un unico sistema operativo e le API della piattaforma a cui gli sviluppatori possono accedere in Xamarin sfruttando C#. Xamarin.Essentials fornisce un'API singola multipiattaforma, utilizzabile con Xamarin.Forms, Android, iOS o applicazione UWP a cui si può effettuare l'accesso da codice condiviso, indipendentemente da come viene creata l'interfaccia utente.
 
 ## <a name="get-started-with-xamarinessentialsget-startedmdcontextxamarinxamarin-forms"></a>[Introduzione a Xamarin.Essentials](get-started.md?context=xamarin/xamarin-forms)
 
-Seguire le [Guida introduttiva](get-started.md) per installare il **Xamarin.Essentials** pacchetto NuGet in di xamarin. Forms esistente o nuovo, Android, iOS o i progetti UWP.
+Seguire la [Guida introduttiva](get-started.md) per installare il pacchetto NuGet di **Xamarin.Essentials** in un progetto esistente o nuovo di tipo Xamarin.Forms , Android, iOS o UWP.
 
 ## <a name="feature-guides"></a>Guide sulle funzionalità
 
