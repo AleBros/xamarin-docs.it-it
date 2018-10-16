@@ -64,7 +64,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
         <StackLayout>
           <Label Text="Enter a Phoneword:" />
           <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
-          <Button x:Name="translateButton" Text="Translate" Clicked="OnTranslate" />
+          <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
           <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
         </StackLayout>
     </ContentPage>
@@ -126,11 +126,11 @@ Creare l'applicazione Phoneword come indicato di seguito:
 
     Salvare le modifiche apportate a **MainPage.xaml.cs** premendo **CTRL+S**, e chiudere il file.
 
-9. In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto **Phoneword** e selezionare **Aggiungi > Nuovo elemento...**:
+9. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **Phoneword** e selezionare **Aggiungi > Nuovo elemento...**:
 
     ![](quickstart-images/vs/add-new-item.png "Aggiungere un nuovo elemento")
 
-10. Nella finestra di dialogo **Aggiungi nuovo elemento**, selezionare **Visual C# > Codice > Classe**, assegnare al nuovo file il nome **PhoneTranslator** e fare clic sul pulsante **Aggiungi**:
+10. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Visual C# > Codice > Classe**, assegnare al nuovo file il nome **PhoneTranslator** e fare clic sul pulsante **Aggiungi**:
 
     ![](quickstart-images/vs/add-translator-class.w157.png "Aggiungere una nuova classe")
 
@@ -192,11 +192,11 @@ Creare l'applicazione Phoneword come indicato di seguito:
 
     Salvare le modifiche apportate a **PhoneTranslator.cs** premendo **CTRL+S**, e chiudere il file.
 
-12. In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto **Phoneword** e selezionare **Aggiungi > Nuovo elemento...**:
+12. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **Phoneword** e selezionare **Aggiungi > Nuovo elemento...**:
 
     ![](quickstart-images/vs/add-new-item.png "Aggiungere un nuovo elemento")
 
-13. Nella finestra di dialogo **Aggiungi nuovo elemento**, selezionare **Visual C# > Codice > Interfaccia**, assegnare al nuovo file il nome **IDialer** e fare clic sul pulsante **Aggiungi**:
+13. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Visual C# > Codice > Interfaccia**, assegnare al nuovo file il nome **IDialer** e fare clic sul pulsante **Aggiungi**:
 
     ![](quickstart-images/vs/add-idialer-interface.w157.png "Aggiungere una nuova interfaccia")
 
@@ -217,11 +217,11 @@ Creare l'applicazione Phoneword come indicato di seguito:
     > [!NOTE]
     > Il codice comune per l'applicazione è ora completo. Il codice di composizione telefonica specifico della piattaforma verrà ora implementato come oggetto [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
-15. In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto **Phoneword.iOS** e selezionare **Aggiungi > Nuovo elemento...**:
+15. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **Phoneword.iOS** e selezionare **Aggiungi > Nuovo elemento...**:
 
     ![](quickstart-images/vs/add-new-item-ios.png "Aggiungere un nuovo elemento")
 
-16. Nella finestra di dialogo **Aggiungi nuovo elemento**, selezionare **Apple > Codice > Classe**, assegnare al nuovo file il nome **PhoneDialer** e fare clic sul pulsante **Aggiungi**:
+16. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Apple > Codice > Classe**, assegnare al nuovo file il nome **PhoneDialer** e fare clic sul pulsante **Aggiungi**:
 
     ![](quickstart-images/vs/new-phone-dialer-ios.w157.png "Aggiungere una nuova classe")
 
@@ -249,11 +249,11 @@ Creare l'applicazione Phoneword come indicato di seguito:
 
     Salvare le modifiche apportate a **PhoneDialer.cs** premendo **CTRL+S**, e chiudere il file.
 
-18. In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto **Phoneword.Android** e selezionare **Aggiungi > Nuovo elemento...**:
+18. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **Phoneword.Android** e selezionare **Aggiungi > Nuovo elemento...**:
 
     ![](quickstart-images/vs/add-new-item-android.png "Aggiungi nuovo elemento")
 
-19. Nella finestra di dialogo **Aggiungi nuovo elemento**, selezionare **Visual C# > Android > Classe**, assegnare al nuovo file il nome **PhoneDialer** e fare clic sul pulsante **Aggiungi**:
+19. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Visual C# > Android > Classe**, assegnare al nuovo file il nome **PhoneDialer** e fare clic sul pulsante **Aggiungi**:
 
     ![](quickstart-images/vs/new-phone-dialer-android.w157.png "Aggiungere una nuova classe")
 
@@ -349,11 +349,11 @@ Creare l'applicazione Phoneword come indicato di seguito:
 
     Salvare le modifiche apportate al manifesto premendo **CTRL+S**, e chiudere il file.
 
-24. In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul progetto **Phoneword.UWP** e selezionare **Aggiungi > Nuovo elemento...**:
+24. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **Phoneword.UWP** e selezionare **Aggiungi > Nuovo elemento...**:
 
     ![](quickstart-images/vs/add-new-item-uwp.png "Aggiungere un nuovo elemento")
 
-25. Nella finestra di dialogo **Aggiungi nuovo elemento**, selezionare **Visual C# > Codice > Classe**, assegnare al nuovo file il nome **PhoneDialer** e fare clic sul pulsante **Aggiungi**:
+25. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Visual C# > Codice > Classe**, assegnare al nuovo file il nome **PhoneDialer** e fare clic sul pulsante **Aggiungi**:
 
     ![](quickstart-images/vs/new-phone-dialer-uwp.w157.png "Aggiungere una nuova classe")
 
@@ -412,7 +412,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
 
     ![](quickstart-images/vs/uwp-add-reference.png "Aggiungere un riferimento")
 
-28. Nella finestra di dialogo **Gestione riferimenti**, selezionare **Windows universale > Estensioni > Windows Mobile Extensions for the UWP** e fare clic sul pulsante **OK**:
+28. Nella finestra di dialogo **Gestione riferimenti** selezionare **Windows universale > Estensioni > Windows Mobile Extensions for the UWP** e fare clic sul pulsante **OK**:
 
     ![](quickstart-images/vs/uwp-add-reference-extensions.png "Aggiungere estensioni di Windows Mobile per UWP")
 
@@ -426,7 +426,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
 
     Salvare le modifiche apportate al manifesto premendo **CTRL+S**, e chiudere il file.
 
-31. In Visual Studio, selezionare la voce di menu **Compila > Compila soluzione** o premere **CTRL+MAIUSC+B**. L'applicazione verrà compilata e nella barra di stato di Visual Studio viene visualizzato un messaggio di operazione completata:
+31. In Visual Studio selezionare la voce di menu **Compila > Compila soluzione** o premere **CTRL+MAIUSC+B**. L'applicazione verrà compilata e nella barra di stato di Visual Studio viene visualizzato un messaggio di operazione completata:
 
     ![](quickstart-images/vs/build-successful.png "Compilazione completata")
 
@@ -453,7 +453,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
 
     ![](quickstart-images/xs/new-solution.png "Nuova soluzione")
 
-2. Nella finestra di dialogo, **Scegli un modello per il nuovo progetto** fare clic su **Multipiattaforma > App**, selezionare il modello **App Forms vuota** e fare clic sul pulsante **Avanti**:
+2. Nella finestra di dialogo **Scegli un modello per il nuovo progetto** fare clic su **Multipiattaforma > App**, selezionare il modello **App Forms vuota** e fare clic sul pulsante **Avanti**:
 
     ![](quickstart-images/xs/choose-template.png "Scelta di un modello")
 
@@ -488,13 +488,13 @@ Creare l'applicazione Phoneword come indicato di seguito:
         <StackLayout>
           <Label Text="Enter a Phoneword:" />
           <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
-          <Button x:Name="translateButton" Text="Translate" Clicked="OnTranslate" />
+          <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
           <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
         </StackLayout>
     </ContentPage>
     ```
 
-    Salvare le modifiche apportate a **MainPage.xaml** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
+    Salvare le modifiche apportate a **MainPage.xaml** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
 7. Nel **riquadro della soluzione**, fare doppio clic su **MainPage.xaml.cs** per aprirlo:
 
@@ -548,13 +548,13 @@ Creare l'applicazione Phoneword come indicato di seguito:
     > [!NOTE]
     > Se si prova a compilare l'applicazione a questo punto, si verificano errori che verranno risolti in un secondo momento.
 
-    Salvare le modifiche apportate a **MainPage.xaml.cs** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
+    Salvare le modifiche apportate a **MainPage.xaml.cs** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
-9. Nel **riquadro della soluzione**, selezionare il progetto **Phoneword**, fare clic con il pulsante destro del mouse e selezionare **Aggiungi > Nuovo file...**:
+9. Nel **riquadro della soluzione** selezionare il progetto **Phoneword**, fare clic con il pulsante destro del mouse e selezionare **Aggiungi > Nuovo file...**:
 
     ![](quickstart-images/xs/add-new-translator-file.png "Aggiungere un nuovo file")
 
-10. Nella finestra di dialogo **Nuovo file**, selezionare **Generale > Classe vuota**, assegnare al nuovo file il nome **PhoneTranslator** e fare clic sul pulsante **Nuovo**:
+10. Nella finestra di dialogo **Nuovo file** selezionare **Generale > Classe vuota**, assegnare al nuovo file il nome **PhoneTranslator** e fare clic sul pulsante **Nuovo**:
 
     ![](quickstart-images/xs/add-translator-class.png "Aggiungere una nuova classe")
 
@@ -614,13 +614,13 @@ Creare l'applicazione Phoneword come indicato di seguito:
     }
     ```
 
-    Salvare le modifiche apportate a **PhoneTranslator.cs** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
+    Salvare le modifiche apportate a **PhoneTranslator.cs** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
-12. Nel **riquadro della soluzione**, selezionare il progetto **Phoneword**, fare clic con il pulsante destro del mouse e selezionare **Aggiungi > Nuovo file...**:
+12. Nel **riquadro della soluzione** selezionare il progetto **Phoneword**, fare clic con il pulsante destro del mouse e selezionare **Aggiungi > Nuovo file...**:
 
     ![](quickstart-images/xs/add-new-interface.png "Aggiungere un nuovo file")
 
-13. Nella finestra di dialogo **Nuovo file**, selezionare **Generale > Interfaccia vuota**, assegnare al nuovo file il nome **IDialer** e fare clic sul pulsante **Nuovo**:
+13. Nella finestra di dialogo **Nuovo file** selezionare **Generale > Interfaccia vuota**, assegnare al nuovo file il nome **IDialer** e fare clic sul pulsante **Nuovo**:
 
     ![](quickstart-images/xs/add-idialer-interface.png "Aggiungere una nuova interfaccia")
 
@@ -635,16 +635,16 @@ Creare l'applicazione Phoneword come indicato di seguito:
         }
     }
     ```
-    Salvare le modifiche apportate a **IDialer.cs** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
+    Salvare le modifiche apportate a **IDialer.cs** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
     > [!NOTE]
     > Il codice comune per l'applicazione è ora completo. Il codice di composizione telefonica specifico della piattaforma verrà ora implementato come oggetto [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
-15. Nel **riquadro della soluzione**, selezionare il progetto **Phoneword.iOS**, fare clic con il pulsante destro del mouse e selezionare **Aggiungi > Nuovo file...**:
+15. Nel **riquadro della soluzione** selezionare il progetto **Phoneword.iOS**, fare clic con il pulsante destro del mouse e selezionare **Aggiungi > Nuovo file...**:
 
     ![](quickstart-images/xs/add-new-file-ios.png "Aggiungere un nuovo file")
 
-16. Nella finestra di dialogo **Nuovo file**, selezionare **Generale > Classe vuota**, assegnare al nuovo file il nome **PhoneDialer** e fare clic sul pulsante **Nuovo**:
+16. Nella finestra di dialogo **Nuovo file** selezionare **Generale > Classe vuota**, assegnare al nuovo file il nome **PhoneDialer** e fare clic sul pulsante **Nuovo**:
 
     ![](quickstart-images/xs/new-phonedialer-ios.png "Aggiungere una nuova classe")
 
@@ -670,13 +670,13 @@ Creare l'applicazione Phoneword come indicato di seguito:
     }
     ```
 
-    Salvare le modifiche apportate a **PhoneDialer.cs** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
+    Salvare le modifiche apportate a **PhoneDialer.cs** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
-18. Nel **riquadro della soluzione**, selezionare il progetto **Phoneword.Droid**, fare clic con il pulsante destro del mouse e selezionare **Aggiungi > Nuovo file...**:
+18. Nel **riquadro della soluzione** selezionare il progetto **Phoneword.Droid**, fare clic con il pulsante destro del mouse e selezionare **Aggiungi > Nuovo file...**:
 
     ![](quickstart-images/xs/add-new-file-android.png "Aggiungere un nuovo file")
 
-19. Nella finestra di dialogo **Nuovo file**, selezionare **Generale > Classe vuota**, assegnare al nuovo file il nome **PhoneDialer** e fare clic sul pulsante **Nuovo**:
+19. Nella finestra di dialogo **Nuovo file** selezionare **Generale > Classe vuota**, assegnare al nuovo file il nome **PhoneDialer** e fare clic sul pulsante **Nuovo**:
 
     ![](quickstart-images/xs/new-phonedialer-android.png "Aggiungere una nuova classe")
 
@@ -729,7 +729,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     }
     ```
 
-    Si noti che questo codice presuppone l'uso dell'API Android più recente. Salvare le modifiche apportate a **PhoneDialer.cs** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
+    Si noti che questo codice presuppone l'uso dell'API Android più recente. Salvare le modifiche apportate a **PhoneDialer.cs** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
 21. Nel **riquadro della soluzione**, nel progetto **Phoneword.Droid**, fare doppio clic su **MainActivity.cs** per aprirlo, rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
@@ -760,7 +760,7 @@ Creare l'applicazione Phoneword come indicato di seguito:
     }
     ```
 
-    Salvare le modifiche apportate a **MainActivity.cs** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
+    Salvare le modifiche apportate a **MainActivity.cs** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
 22. Nel **riquadro della soluzione**, espandere la cartella delle **proprietà** e fare doppio clic sul file **AndroidManifest.xml**:
 
@@ -770,9 +770,9 @@ Creare l'applicazione Phoneword come indicato di seguito:
 
     ![](quickstart-images/xs/android-manifest-changed.png "Abilitare l'autorizzazione CallPhone")
 
-    Salvare le modifiche apportate a **AndroidManifest.xml** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
+    Salvare le modifiche apportate a **AndroidManifest.xml** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
-24. In Visual Studio per Mac, selezionare la voce di menu **Compila > Compila tutto** o premere **&#8984; + B**. L'applicazione viene compilata e verrà visualizzato un messaggio di operazione completata nella barra degli strumenti di Visual Studio per Mac.
+24. In Visual Studio per Mac selezionare la voce di menu **Compila > Compila tutto** o premere **&#8984; + B**. L'applicazione viene compilata e verrà visualizzato un messaggio di operazione completata nella barra degli strumenti di Visual Studio per Mac.
 
     ![](quickstart-images/xs/build-successful.png "Compilazione completata")
 
