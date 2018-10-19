@@ -1,24 +1,24 @@
 ---
-title: Un'introduzione a SkiaSharp
+title: Esempi indipendenti dalla piattaforma di SkiaSharp
 description: Questo documento fornisce una breve introduzione ai concetti di SkiaSharp core. In particolare, illustra come ottenere e disegno in un' SKCanvas.
 ms.prod: xamarin
 ms.techonology: xamarin-skiasharp
 ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
-author: charlespetzold
-ms.author: chape
-ms.date: 09/14/2017
-ms.openlocfilehash: eb4a391c52c598c6d276b75028337bf54455e7b4
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/03/2018
+ms.openlocfilehash: 4d0e57b98a479112b9fdf4f9c503418f3966cc73
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615496"
 ---
-# <a name="an-introduction-to-skiasharp"></a>Un'introduzione a SkiaSharp
+# <a name="skiasharp-platform-independent-examples"></a>Esempi indipendenti dalla piattaforma di SkiaSharp
 
-_Ciò fornisce una breve introduzione ai concetti di SkiaSharp_
+_Ciò fornisce una breve introduzione indipendente dalla piattaforma per i concetti di base in SkiaSharp_
 
-SkiaSharp fornisce una grafica 2D potente e ricco di API che può essere usata per eseguire il rendering nei buffer 2D.  È possibile utilizzare questi per implementare gli elementi dell'interfaccia utente personalizzata e grafica 2D che può essere incorporata nell'applicazione.  SkiaSharp è un'associazione di .NET per le [Skia](https://skia.org) libreria ed eredita le funzionalità di questa libreria.
+SkiaSharp fornisce una grafica 2D potente e ricco di API che può essere usata per eseguire il rendering nei buffer 2D.  È possibile utilizzare questi per implementare gli elementi dell'interfaccia utente personalizzata e grafica 2D che può essere incorporata nell'applicazione. SkiaSharp è un'associazione di .NET per le [Skia](https://skia.org) libreria ed eredita le funzionalità di questa libreria.
 
 La libreria è attualmente disponibile come multi-piattaforma [Mobileengagement](https://www.nuget.org/packages/SkiaSharp), è possibile aggiungere al progetto aggiungendo il riferimento di NuGet.
 
@@ -77,7 +77,7 @@ using (var paint = new SKPaint ()) {
 }
 ```
 
-### <a name="drawing-text"></a>Disegno di testo
+### <a name="drawing-text"></a>Disegnare testo
 
 ```csharp
 // clear the canvas / fill with white
@@ -135,9 +135,4 @@ using (var paint = new SKPaint()) {
 
 ## <a name="more-information"></a>Altre informazioni
 
-Altre informazioni sull'uso di SkiaSharp sono reperibile nel [documentazione API online](https://developer.xamarin.com/api/namespace/SkiaSharp/)
-
-
-## <a name="related-links"></a>Collegamenti correlati
-
-- [Cartella di lavoro iOS SkiaSharp](https://developer.xamarin.com/workbooks/graphics/skiasharp/logo/skialogo-ios.workbook)
+Altre informazioni sull'uso di SkiaSharp sono reperibile nel [documentazione dell'API](https://docs.microsoft.com/dotnet/api/skiasharp)

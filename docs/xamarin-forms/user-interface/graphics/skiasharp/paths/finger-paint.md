@@ -4,14 +4,14 @@ description: Questo articolo illustra come usare le dita per disegnare nell'area
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/05/2017
-ms.openlocfilehash: b0f28cd3e8a928a6da3169dee96ec089178a64e2
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 03a6de3b6297e57620655e3697fe729e6fb06501
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615821"
 ---
 # <a name="finger-painting-in-skiasharp"></a>Disegno a mano libera in SkiaSharp
@@ -76,7 +76,7 @@ public partial class FingerPaintPage : ContentPage
 }
 ```
 
-Come suggerisce il nome, il `inProgressPaths` dizionario archivia i percorsi che sono attualmente in corso disegnati in una o più dita. La chiave del dizionario è l'ID tocco che accompagna gli eventi di tocco. Il `completedPaths` campo è una raccolta di percorsi che sono state terminate quando un dito dalla schermata di disegno il percorso è elevato.
+Come suggerisce il nome, il `inProgressPaths` dizionario archivia i percorsi che sono attualmente in corso disegnati in una o più dita. La chiave del dizionario è l'ID tocco che accompagna gli eventi di tocco. Il `completedPaths` campo è una raccolta di percorsi che sono state terminate quando un dito che era il percorso di disegno sollevato dallo schermo.
 
 Il `TouchAction` gestore gestisce questi due insiemi. Quando un dito tocca prima schermata, una nuova `SKPath` viene aggiunto a `inProgressPaths`. Come si sposta il dito, punti aggiuntivi vengono aggiunti al percorso. Quando viene rilasciato il dito, il percorso viene trasferito al `completedPaths` raccolta. È possibile disegnare con più dita contemporaneamente. Dopo ogni modifica apportata a uno dei percorsi o le raccolte, il `SKCanvasView` viene invalidata:
 
@@ -141,7 +141,7 @@ Il `PaintSurface` gestore quindi semplicemente esegue il rendering di entrambe l
 ```csharp
 public partial class FingerPaintPage : ContentPage
 {
-    ,,,
+    ...
     void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {
         SKCanvas canvas = args.Surface.Canvas;
@@ -165,10 +165,11 @@ Dipinti i dito sono limitate solo dai dimostra il tuo talento:
 
 [![](finger-paint-images/fingerpaint-small.png "Tripla screenshot della pagina di disegno con un dito")](finger-paint-images/fingerpaint-large.png#lightbox "tripla screenshot della pagina di disegno con un dito")
 
+A questo punto si è appreso come per disegnare linee e curve utilizzando equazioni parametriche definire. Una sezione successiva sul [ **SkiaSharp curve e tracciati** ](../curves/index.md) illustra i vari tipi di curve che `SKPath` supporta. Ma un prerequisito utile prevede un'esplorazione dei [ **trasformazioni di SkiaSharp**](../transforms/index.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Touch-rilevamento effetto demo (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)
 - [Richiamo di eventi dagli effetti](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

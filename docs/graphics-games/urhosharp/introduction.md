@@ -1,74 +1,75 @@
 ---
-title: Introduzione a UrhoSharp
-description: Questo documento descrive la struttura di base di un'applicazione di UrhoSharp e collegamenti alle varie guide e applicazioni di esempio che illustrano come usare UrhoSharp.
+title: Un'introduzione di UrhoSharp
+description: Questo documento descrive la struttura di base di un'applicazione di UrhoSharp e collegamenti alle varie guide e applicazioni di esempio viene illustrato l'uso di UrhoSharp.
 ms.prod: xamarin
 ms.assetid: 18041443-5093-4AF7-8B20-03E00478EF35
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: d39faabc0851e3e89b03ad58a7f1ead3894efc15
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a3e14ebca961e828fc578035adaca5ba2a809438
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "34783555"
 ---
-# <a name="an-introduction-to-urhosharp"></a>Introduzione a UrhoSharp
+# <a name="an-introduction-to-urhosharp"></a>Un'introduzione di UrhoSharp
 
-![Logo UrhoSharp](introduction-images/urhosharp-icon.png)
+![Logo di UrhoSharp](introduction-images/urhosharp-icon.png)
 
-UrhoSharp è un potente motore di giochi 3D per gli sviluppatori di Xamarin e .NET.  È simile a Apple SceneKit e SpriteKit bevande e includere fisica, navigazione, rete e molto più mentre viene ancora più piattaforme.
+UrhoSharp è un potente motore di gioco 3D per gli sviluppatori di Xamarin e .NET.  È simile come spirito al SceneKit e SpriteKit Apple e includere la fisica, navigazione, rete e molto più mentre ancora in fase di cross-platform.
 
-È un'associazione di .NET per la [Urho3D](http://urho3d.github.io/) del motore e consente agli sviluppatori di scrivere codice multipiattaforma destinate Android, iOS, Windows e Mac con la stessa codebase e possono eseguire il rendering OpenGL sia Direct3D sistemi.
+È un'associazione di .NET per le [Urho3D](http://urho3d.github.io/) del motore e consente agli sviluppatori di scrivere codice multipiattaforma destinate ad Android, iOS, Windows e Mac con lo stesso codebase e può eseguire il rendering OpenGL sia Direct3D sistemi.
 
-UrhoSharp è un motore di gioco con molte funzionalità predefinita:
+UrhoSharp è un motore di gioco con numerose funzionalità predefinite:
 
-- Per il rendering di grafica 3D di potente
-- [Simulazione di fisica](https://developer.xamarin.com/api/namespace/Urho.Physics/) (tramite la libreria punto elenco)
+- Potente di rendering della grafica 3D
+- [Simulazione di fisica](https://developer.xamarin.com/api/namespace/Urho.Physics/) (usando la libreria di punto elenco)
 - [Gestione di scena](https://developer.xamarin.com/api/type/Urho.Scene/)
-- Supporto Await/asincrono
+- Supporto di Await/Async
 - [Azioni descrittive API](https://developer.xamarin.com/api/namespace/Urho.Actions/)
-- [Integrazione 2D scene 3D](https://developer.xamarin.com/api/namespace/Urho.Urho2D/)
-- [Rendering dei caratteri con FreeType](https://developer.xamarin.com/api/type/Urho.Gui.FontFaceFreeType/)
-- [Funzionalità di rete server e client](https://developer.xamarin.com/api/namespace/Urho.Network/)
-- [Importare una vasta gamma di risorse](https://developer.xamarin.com/api/namespace/Urho.Resources/) (con aprire raccolta di risorse)
-- [Rete di navigazione e pathfinding](https://developer.xamarin.com/api/namespace/Urho.Navigation/) (tramite rifondere in un nuovo/deviazione)
-- [Generazione di struttura convessa per il rilevamento di collisioni](https://developer.xamarin.com/api/type/Urho.Physics.CollisionShape/) (tramite StanHull)
+- [Integrazione 2D in scene 3D](https://developer.xamarin.com/api/namespace/Urho.Urho2D/)
+- [Per il rendering del tipo di carattere con FreeType](https://developer.xamarin.com/api/type/Urho.Gui.FontFaceFreeType/)
+- [Client e server, funzionalità di rete](https://developer.xamarin.com/api/namespace/Urho.Network/)
+- [Importare un'ampia gamma di asset](https://developer.xamarin.com/api/namespace/Urho.Resources/) (con la libreria di asset aperta)
+- [Rete mesh di navigazione e pathfinding](https://developer.xamarin.com/api/namespace/Urho.Navigation/) (tramite rifondere in un nuovo/deviazione)
+- [Generazione della struttura convessa per il rilevamento delle collisioni](https://developer.xamarin.com/api/type/Urho.Physics.CollisionShape/) (tramite StanHull)
 - [Riproduzione audio](https://developer.xamarin.com/api/namespace/Urho.Audio/) (con **libvorbis**)
 
 ## <a name="getting-started"></a>Introduzione
 
-UrhoSharp viene distribuito in modo appropriato come un [pacchetto NuGet](https://www.nuget.org/) e può essere aggiunto ai progetti in c# o F # destinate a Windows, Mac, Android o iOS.  NuGet include sia le librerie necessarie per eseguire il programma, nonché le risorse di base (CoreData) utilizzate dal motore.
+UrhoSharp per praticità viene distribuito come un [mobileengagement](https://www.nuget.org/) e può essere aggiunta ai progetti c# o F # che hanno come destinazione Windows, Mac, Android o iOS.  NuGet include sia le librerie necessarie per eseguire il programma, nonché gli asset di base (CoreData) utilizzati dal motore.
 
-### <a name="urho-as-a-portable-class-library"></a>Urho come una libreria di classi portabile
+### <a name="urho-as-a-portable-class-library"></a>Urho come libreria di classi portabile
 
-Il pacchetto Urho può essere utilizzato da un progetto specifico della piattaforma o da un progetto libreria di classi portabile, che consente di riutilizzare tutto il codice per tutte le piattaforme.  Ciò significa che tutto è necessario eseguire in ciascuna piattaforma è come scrivere il punto di ingresso specifico della piattaforma e quindi trasferire il controllo al codice condiviso gioco.
+Il pacchetto Urho può essere utilizzato da un progetto specifico della piattaforma o da un progetto libreria di classi portabile, consentendo di riutilizzare tutto il codice tra tutte le piattaforme.  Ciò significa che è necessario eseguire in ogni piattaforma è sufficiente scrivere il punto di ingresso specifico della piattaforma e quindi trasferire il controllo al codice condiviso del gioco.
 
 ### <a name="samples"></a>Esempi
 
-È possibile ottenere un'idea per le funzionalità di Urho aprendo in Visual Studio per Mac o Visual Studio la soluzione di esempio da:
+È possibile ottenere un'idea delle funzionalità dei Urho aprendo in Visual Studio per Mac o Visual Studio della soluzione di esempio in:
 
 [https://github.com/xamarin/urho-samples](https://github.com/xamarin/urho-samples)
 
-La soluzione predefinito contiene progetti per Android, iOS, Windows e Mac.  È stato strutturato tale soluzione in modo che è disponibile un'utilità di avvio specifico della piattaforma di piccole dimensioni, mentre tutto il codice di esempio e il codice del gioco si trova in una libreria di classi portabile, che illustra come ottimizzare il riutilizzo del codice per tutte le piattaforme.
+La soluzione predefinita contiene i progetti per Android, iOS, Windows e Mac.  È stata strutturata tale soluzione in modo che abbiamo un'utilità di avvio specifiche della piattaforma di piccole dimensioni e tutti i codice di esempio e il codice del gioco si trova in una libreria di classi portabile, che illustra come ottimizzare il riutilizzo del codice tra tutte le piattaforme.
 
-Consultare la [Urho e piattaforma di](~/graphics-games/urhosharp/platform/index.md) pagina per altre informazioni su come creare soluzioni personalizzate.
+Consultare il [Urho e piattaforma Your](~/graphics-games/urhosharp/platform/index.md) pagina per altre informazioni su come creare le proprie soluzioni.
 
-Poiché tutti gli esempi condividono un set comune di elementi dell'interfaccia utente, gli esempi sono indipendenti e possono essere il programma di installazione di base in questo file:
+Poiché tutti gli esempi condividono un set comune di elementi dell'interfaccia utente, gli esempi di eseguire l'astrazione la configurazione di base in questo file:
 
 [https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/Core/Sample.cs](https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/Core/Sample.cs)
 
-Ciò fornisce una classe di base di esempio che gestisce alcuni tasti di base e tocco eventi, le impostazioni di una fotocamera, fornisce gli elementi dell'interfaccia utente di base e questo consente a ogni esempio di concentrarsi sulle funzionalità specifiche che è viene mostrata.
+Ciò fornisce una classe di base di esempio che gestisce alcune sequenze di tasti base e una fotocamera eventi, configurazioni di tocco, fornisce gli elementi dell'interfaccia utente di base e ciò consente a ogni esempio di concentrarsi sulle funzionalità specifiche che viene viene presentato.
 
 L'esempio seguente viene illustrato ciò che il motore è in grado di procedere:
 
-- [Gioco samply](https://github.com/xamarin/urho-samples/tree/master/SamplyGame) un clone di ShootySkies semplice.
+- [Giochi samply](https://github.com/xamarin/urho-samples/tree/master/SamplyGame) un clone di ShootySkies semplice.
 
 Mentre gli altri esempi mostrano le singole proprietà di ogni esempio.
 
 ## <a name="basic-structure"></a>Struttura di base
 
-Il gioco deve essere una sottoclasse di [ `Application` ](https://developer.xamarin.com/api/type/Urho.Application/) (classe), si tratta in cui si installerà il gioco (sul [ `Setup` ](https://developer.xamarin.com/api/member/Urho.Application.Setup/) (metodo)) e iniziare il gioco (nel [ `Start` ](https://developer.xamarin.com/api/member/Urho.Application.Start) (metodo)).  È quindi necessario creare un'interfaccia utente principale.  Verrà illustrata un piccolo esempio che illustra le API per il programma di installazione una scena 3D, alcuni elementi dell'interfaccia utente e la connessione di un comportamento semplice all'applicazione.
+Il tuo gioco deve essere una sottoclasse di [`Application`](https://developer.xamarin.com/api/type/Urho.Application/)
+(classe), si tratta in cui si installerà il tuo gioco (sul [ `Setup` ](https://developer.xamarin.com/api/member/Urho.Application.Setup/) metodo) e avvia il tuo gioco (nel [ `Start` ](https://developer.xamarin.com/api/member/Urho.Application.Start) (metodo)).  Quindi è costruire l'interfaccia utente principale.  Verrà illustrato un esempio di piccole dimensioni che mostra le API per impostare una scena 3D, alcuni elementi dell'interfaccia utente e la connessione di un comportamento semplice all'applicazione.
 
 ```csharp
 class MySample : Application {
@@ -125,21 +126,21 @@ class MySample : Application {
 }
 ```
 
-Se si esegue l'applicazione, si scoprirà presto che il runtime reclamo le risorse non sono presenti.  È necessario eseguire è creare una gerarchia del progetto che inizia con il nome di directory speciale "Data" e all'interno di questa operazione, si posiziona un asset di cui si fa riferimento nel programma.  È quindi necessario impostare nelle proprietà dell'elemento per ogni asset "Copia in Directory di Output" per "Copia se più recente", che garantisce che i dati siano presente.
+Se si esegue questa applicazione, si scoprirà presto che la fase di esecuzione del reclamo gli asset non sono presenti.  Che cosa è necessario eseguire è creare una gerarchia del progetto che inizia con il nome della directory speciali "Dati" e all'interno di questa operazione, è possibile inserire l'asset di cui viene fatto riferimento nel programma.  È quindi necessario impostare nelle proprietà dell'elemento per ogni asset "Copia di Directory di Output" per "Copia se più recente", che garantisce che i dati siano presenti.
 
-Segnalare il problema, spiegare cosa accade in seguito.
+Verrà ora illustrato che cosa succede.
 
-Per avviare l'applicazione si chiama la funzione di inizializzazione del motore, seguita da creare una nuova istanza della classe dell'applicazione, simile al seguente:
+Per avviare l'applicazione si chiama la funzione di inizializzazione del motore, seguita dalla creazione di una nuova istanza della classe dell'applicazione, simile al seguente:
 
 ```csharp
 new MySample().Run();
 ```
 
-Verrà richiamato dal runtime di `Setup` e `Start` metodi.  Se esegue l'override `Setup` è possibile configurare i parametri del motore (non illustrato in questo esempio).
+Il runtime richiama il `Setup` e `Start` metodi per l'utente.  Se esegue l'override `Setup` è possibile configurare i parametri del motore (non illustrato in questo esempio).
 
-È necessario eseguire l'override `Start` come verrà avviato il gioco.  In questo metodo verrà caricare le risorse, connessione di gestori eventi, scena del programma di installazione e avviare le azioni che si desiderano.  In questo esempio, entrambi creiamo un po' di interfaccia utente da visualizzare per l'utente, nonché impostare una scena 3D.
+È necessario eseguire l'override `Start` come verrà avviato il tuo gioco.  In questo metodo si caricherà gli asset, connettere i gestori eventi, la scena di installazione e avviare tutte le azioni che si desiderano.  Nel nostro esempio, entrambi creiamo un po' di interfaccia utente per visualizzare l'utente, nonché impostazione di una scena 3D.
 
-Il frammento di codice seguente utilizza il framework dell'interfaccia utente per creare un elemento di testo e aggiungerlo all'applicazione:
+Il seguente frammento di codice Usa il framework dell'interfaccia utente per creare un elemento di testo e aggiungerlo alla propria applicazione:
 
 ```csharp
 // UI text
@@ -156,41 +157,37 @@ helloText.SetFont(
 UI.Root.AddChild(helloText);
 ```
 
-Framework dell'interfaccia utente è presente per fornire un'interfaccia utente di gioco molto semplice e funziona tramite l'aggiunta di nuovi nodi per il [ `UI.Root` ](https://developer.xamarin.com/api/property/Urho.Gui.UI.Root/) nodo.
+Il framework dell'interfaccia utente è presente per fornire un'interfaccia utente all'interno del gioco molto semplice e funziona mediante l'aggiunta di nuovi nodi per il [ `UI.Root` ](https://developer.xamarin.com/api/property/Urho.Gui.UI.Root/) nodo.
 
-La seconda parte del nostro installazioni esempio scena principale.  Ciò comporta un numero di passaggi, creando una scena 3D, la creazione di una casella 3D nella schermata di aggiunta di una luce, fotocamera e un riquadro di visualizzazione.  Questi vengono esaminati più dettagliatamente nella sezione [scena, i nodi, componenti e fotocamere](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras).
+La seconda parte del nostro configurazioni di esempio della scena principale.  Ciò comporta una serie di passaggi, la creazione di una scena 3D, la creazione di una casella 3D nella schermata di aggiunta di una luce, una videocamera e un riquadro di visualizzazione.  Questi vengono presi in esame in modo più dettagliato nella sezione [scena, nodi, i componenti e fotocamere](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras).
 
-La terza parte dell'esempio attiva un paio di azioni.  Le azioni sono alcuni esempi che descrivono un effetto specifico e una volta creato possono essere eseguite da un nodo su richiesta chiamando il [ `RunActionAsync` ](https://developer.xamarin.com/api/member/Urho.Node.RunActionsAsync) metodo su un `Node`.
+La terza parte del nostro esempio attiva un paio di azioni.  Le azioni sono ricette che descrivono un effetto specifico e dopo la creazione possono essere eseguiti da un nodo su richiesta chiamando il [ `RunActionAsync` ](https://developer.xamarin.com/api/member/Urho.Node.RunActionsAsync) metodo su un `Node`.
 
-La prima azione ridimensiona la finestra con un effetto di rimbalzo e secondo ruota la casella per sempre:
+La prima azione ridimensiona la finestra con un effetto di rimbalzo e il secondo ruota la casella per sempre:
 
 ```csharp
 await boxNode.RunActionsAsync(
     new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1)));
 ```
 
-Sopra vengono illustrate la prima azione che verrà creata una [ `ScaleTo` ](https://developer.xamarin.com/api/type/Urho.Actions.ScaleTo/) azione, si tratta semplicemente una recipe che indica che si desidera applicare la scalabilità per un secondo valore uno la proprietà di scala di un nodo.  Questa azione, a sua volta viene eseguito il wrapping intorno a un'azione di interpolazione, la [ `EaseBounceOut` ](https://developer.xamarin.com/api/type/Urho.Actions.EaseBounceInOut/) azione.  Le azioni di interpolazione distorcere l'esecuzione di un'azione lineare e applicano un effetto, in questo caso fornisce l'effetto di risposta in uscita.
-Così come è possibile scrivere la ricetta:
+Il codice precedente viene illustrato come viene la prima azione che viene creato un [ `ScaleTo` ](https://developer.xamarin.com/api/type/Urho.Actions.ScaleTo/) azione, si tratta semplicemente una ricetta che indica che si desidera scalare per un secondo verso il valore uno la proprietà di scalabilità di un nodo.  Questa azione, a sua volta viene eseguito il wrapping intorno a un'azione di interpolazione, il [ `EaseBounceOut` ](https://developer.xamarin.com/api/type/Urho.Actions.EaseBounceInOut/) azione.  Le azioni di interpolazione distorcono l'esecuzione di un'azione lineare e applicano un effetto, in questo caso fornisce l'effetto di Rimbalzo orizzontale.
+In modo nostra ricetta può essere scritta come:
 
 ```csharp
 var recipe = new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1));
 ```
 
-Dopo aver creata la soluzione, viene eseguita la soluzione:
+Dopo aver creato il file recipe, eseguiamo il file recipe:
 
 ```csharp
 await boxNode.RunActionsAsync (recipe)
 ```
 
-Await indica che di desidera riprendere l'esecuzione dopo questa riga al termine dell'operazione.  Una volta completata l'azione è attivata l'animazione di secondo.
+Await indica che il dovranno riprendere l'esecuzione al termine di questa riga al termine dell'operazione.  Una volta completata l'azione è attiva la seconda animazione.
 
-Il [UrhoSharp utilizzando](~/graphics-games/urhosharp/using.md) documento viene esaminata in modo più approfondito i concetti di base Urho e su come strutturare il codice per compilare un gioco.
+Il [uso di UrhoSharp](~/graphics-games/urhosharp/using.md) documento esamina in modo più approfondito i concetti alla base Urho e su come strutturare il codice per creare un gioco.
 
 ## <a name="copyrights"></a>Copyright
 
-Questa documentazione contiene contenuto originale da Inc Xamarin, ma disegna ampiamente nella documentazione di origine aperti per il progetto Urho3D e schermate dal progetto Cocos2D.
+Questa documentazione vengono forniti contenuti originale da Xamarin Inc, ma traccia ampiamente dalla documentazione open source per il progetto Urho3D e è riportate le schermate dal progetto Cocos2D.
 
-### <a name="related-links"></a>Collegamenti correlati
-
-- [Cartella di lavoro di terra pianeta](https://developer.xamarin.com/workbooks/graphics/urhosharp/planetearth/planetearth.workbook)
-- [Esplorazione di cartella di lavoro di coordinate](https://developer.xamarin.com/workbooks/graphics/urhosharp/coordinates/ExploringUrhoCoordinates.workbook)

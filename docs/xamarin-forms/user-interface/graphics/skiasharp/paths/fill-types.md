@@ -4,14 +4,14 @@ description: Questo articolo esamina i diversi effetti possibili con i tipi di r
 ms.prod: xamarin
 ms.assetid: 57103A7A-49A2-46AE-894C-7C2664682644
 ms.technology: xamarin-skiasharp
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 17043054c920a69570f38b227d05980494e29139
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: d16f6f6023c1db0223d5d5863e19116147f948d1
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615470"
 ---
 # <a name="the-path-fill-types"></a>I tipi di riempimento del percorso
@@ -22,24 +22,25 @@ Può essere sovrapposto due distribuzioni in un percorso e le righe che compongo
 
 ![](fill-types-images/filltypeexample.png "Cinque punte filles parzialmente a stelle")
 
-È necessario un po' controllare. L'algoritmo di riempimento è disciplinato dalle [ `SKFillType` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.FillType/) proprietà della `SKPath`, che è impostata su un membro del [ `SKPathFillType` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathFillType/) enumerazione:
+È necessario un po' controllare. L'algoritmo di riempimento è disciplinato dalle [ `SKFillType` ](xref:SkiaSharp.SKPath.FillType) proprietà della `SKPath`, che è impostata su un membro del [ `SKPathFillType` ](xref:SkiaSharp.SKPathFillType) enumerazione:
 
-- [`Winding`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.Winding/), il valore predefinito
-- [`EvenOdd`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.EvenOdd/)
-- [`InverseWinding`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.InverseWinding/)
-- [`InverseEvenOdd`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.InverseEvenOdd/)
+- `Winding`, il valore predefinito
+- `EvenOdd`
+- `InverseWinding`
+- `InverseEvenOdd`
 
 Entrambi gli algoritmi dei vertici e coppie determinano se qualsiasi area racchiusa viene compilata o non compilato in base a un'ipotetica linea tracciata da quell'area verso l'infinito. Tale riga attraversa uno o più righe di limiti che costituiscono il percorso. Con la modalità dei vertici, se non è il numero di linee dei bordi disegnata in equilibrio di una sola direzione il numero delle linee disegnate in altra direzione, l'area riempita. In caso contrario, l'area viene riempita. L'algoritmo coppie riempie un'area, se il numero di righe di limiti è dispari.
 
 Con tutti i percorsi di routine, l'algoritmo dei vertici riempie spesso tutte le aree racchiusa di un percorso. L'algoritmo coppie produce in genere risultati più interessanti.
 
-L'esempio classico è una stella a 5 punte, come illustrato nel **Five-Pointed Star** pagina. Il [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) un'istanza di file due `Picker` viste per selezionare il percorso è riempire tipo e se il percorso viene tracciato o compilato o entrambi e in quale ordine:
+L'esempio classico è una stella a 5 punte, come illustrato nel **Five-Pointed Star** pagina. Il [ **FivePointedStarPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) un'istanza di file due `Picker` viste per selezionare il percorso è riempire tipo e se il percorso viene tracciato o compilato o entrambi e in quale ordine:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
-             x:Class="SkiaSharpFormsDemos.FivePointedStarPage"
+             xmlns:skia="clr-namespace:SkiaSharp;assembly=SkiaSharp"
+             xmlns:skiaforms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="SkiaSharpFormsDemos.Paths.FivePointedStarPage"
              Title="Five-Pointed Star">
     <Grid>
         <Grid.RowDefinitions>
@@ -58,12 +59,14 @@ L'esempio classico è una stella a 5 punte, come illustrato nel **Five-Pointed S
                 Grid.Column="0"
                 Margin="10"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
-            <Picker.Items>
-                <x:String>Winding</x:String>
-                <x:String>EvenOdd</x:String>
-                <x:String>InverseWinding</x:String>
-                <x:String>InverseEvenOdd</x:String>
-            </Picker.Items>
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type skia:SKPathFillType}">
+                    <x:Static Member="skia:SKPathFillType.Winding" />
+                    <x:Static Member="skia:SKPathFillType.EvenOdd" />
+                    <x:Static Member="skia:SKPathFillType.InverseWinding" />
+                    <x:Static Member="skia:SKPathFillType.InverseEvenOdd" />
+                </x:Array>
+            </Picker.ItemsSource>
             <Picker.SelectedIndex>
                 0
             </Picker.SelectedIndex>
@@ -75,22 +78,24 @@ L'esempio classico è una stella a 5 punte, come illustrato nel **Five-Pointed S
                 Grid.Column="1"
                 Margin="10"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
-            <Picker.Items>
-                <x:String>Fill only</x:String>
-                <x:String>Stroke only</x:String>
-                <x:String>Stroke then Fill</x:String>
-                <x:String>Fill then Stroke</x:String>
-            </Picker.Items>
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Fill only</x:String>
+                    <x:String>Stroke only</x:String>
+                    <x:String>Stroke then Fill</x:String>
+                    <x:String>Fill then Stroke</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
             <Picker.SelectedIndex>
                 0
             </Picker.SelectedIndex>
         </Picker>
 
-        <skia:SKCanvasView x:Name="canvasView"
-                           Grid.Row="1"
-                           Grid.Column="0"
-                           Grid.ColumnSpan="2"
-                           PaintSurface="OnCanvasViewPaintSurface" />
+        <skiaforms:SKCanvasView x:Name="canvasView"
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                PaintSurface="OnCanvasViewPaintSurface" />
     </Grid>
 </ContentPage>
 ```
@@ -111,8 +116,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
     SKPath path = new SKPath
     {
-        FillType = (SKPathFillType)Enum.Parse(typeof(SKPathFillType),
-                        fillTypePicker.Items[fillTypePicker.SelectedIndex])
+        FillType = (SKPathFillType)fillTypePicker.SelectedItem
     };
     path.MoveTo(info.Width / 2, info.Height / 2 - radius);
 
@@ -120,7 +124,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {
         // angle from vertical
         double angle = i * 4 * Math.PI / 5;
-        path.LineTo(center + new SKPoint(radius * (float)Math.Sin(angle),
+        path.LineTo(center + new SKPoint(radius * (float)Math.Sin(angle), 
                                         -radius * (float)Math.Cos(angle)));
     }
     path.Close();
@@ -139,22 +143,22 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         Color = SKColors.Blue
     };
 
-    switch (drawingModePicker.SelectedIndex)
+    switch ((string)drawingModePicker.SelectedItem)
     {
-        case 0:
+        case "Fill only":
             canvas.DrawPath(path, fillPaint);
             break;
 
-        case 1:
+        case "Stroke only":
             canvas.DrawPath(path, strokePaint);
             break;
 
-        case 2:
+        case "Stroke then Fill":
             canvas.DrawPath(path, strokePaint);
             canvas.DrawPath(path, fillPaint);
             break;
 
-        case 3:
+        case "Fill then Stroke":
             canvas.DrawPath(path, fillPaint);
             canvas.DrawPath(path, strokePaint);
             break;
@@ -168,10 +172,10 @@ In genere, il tipo di riempimento percorso dovrebbe influire sul solo riempiment
 
 Gli screenshot di Android e UWP vengono illustrati gli effetti dei vertici e coppie tipici, ma l'ordine del tratto e riempimento influisce anche sui risultati.
 
-La direzione che vengono visualizzate linee dipende l'algoritmo dei vertici. In genere quando si crea un percorso, è possibile controllare tale direzione come specificato da righe sono rappresentate da un punto a altro. Tuttavia, il `SKPath` classe definisce inoltre metodi, ad esempio `AddRect` e `AddCircle` che disegnare i contorni interi. Per controllare come vengono disegnati questi oggetti, i metodi includono un parametro di tipo [ `SKPathDirection` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/), che contiene due membri:
+La direzione che vengono visualizzate linee dipende l'algoritmo dei vertici. In genere quando si crea un percorso, è possibile controllare tale direzione come specificato da righe sono rappresentate da un punto a altro. Tuttavia, il `SKPath` classe definisce inoltre metodi, ad esempio `AddRect` e `AddCircle` che disegnare i contorni interi. Per controllare come vengono disegnati questi oggetti, i metodi includono un parametro di tipo [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection), che contiene due membri:
 
-- [`Clockwise`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathDirection.Clockwise/)
-- [`CounterClockwise`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathDirection.CounterClockwise/)
+- `Clockwise`
+- `CounterClockwise`
 
 I metodi `SKPath` che includono un' `SKPathDirection` parametro assegnargli un valore predefinito di `Clockwise`.
 
@@ -222,5 +226,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

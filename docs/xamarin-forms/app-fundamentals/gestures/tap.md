@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di un riconoscitore di movimento del gesto tocco
+title: Aggiunta di un riconoscimento di movimento tap
 description: Questo articolo illustra come usare i movimenti di tocco per il tocco di rilevamento in un'applicazione xamarin. Forms. Rilevamento di tocco viene implementato con la classe TapGestureRecognizer.
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: e602ae1f140640d9a895b65d78feab3d0a3b7861
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a28afb30770f15861aef06643e7f51070199ea9b
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "38994854"
 ---
-# <a name="adding-a-tap-gesture-gesture-recognizer"></a>Aggiunta di un riconoscitore di movimento del gesto tocco
+# <a name="adding-a-tap-gesture-recognizer"></a>Aggiunta di un riconoscimento di movimento tap
 
 _Il gesto tocco viene usato per il rilevamento di tocco e viene implementato con la classe TapGestureRecognizer._
-
-## <a name="overview"></a>Panoramica
 
 Per rendere selezionabile con i movimenti tocco di un elemento dell'interfaccia utente, creare un [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) dell'istanza, gestire la [ `Tapped` ](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) eventi e aggiungere il nuovo riconoscitore di movimento per il [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) raccolta nell'elemento dell'interfaccia utente. Nell'esempio di codice riportato di seguito viene illustrato un `TapGestureRecognizer` collegato a un [ `Image` ](xref:Xamarin.Forms.Image) elemento:
 
@@ -72,7 +70,7 @@ void OnTapGestureRecognizerTapped(object sender, EventArgs args)
 
 ## <a name="using-icommand"></a>Usa ICommand
 
-Le applicazioni che utilizzano il modello Mvvm in genere usano `ICommand` anziché direttamente il collegamento dei gestori di eventi. Il [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) possibile supportare facilmente `ICommand` impostando l'associazione nel codice:
+Le applicazioni che utilizzano il modello Model-View-ViewModel (MVVM) in genere usano `ICommand` anziché direttamente il collegamento dei gestori di eventi. Il [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) possibile supportare facilmente `ICommand` impostando l'associazione nel codice:
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -113,10 +111,6 @@ public class TapViewModel : INotifyPropertyChanged
     //region INotifyPropertyChanged code omitted
 }
 ```
-
-## <a name="summary"></a>Riepilogo
-
-Il gesto tocco viene usato per il rilevamento di tocco e viene implementata con il [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) classe. Il numero di elementi di ritardo può essere specificato per riconoscere un doppio tocco (oppure toccare triple o più tocca) comportamento.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

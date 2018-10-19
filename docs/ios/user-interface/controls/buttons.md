@@ -4,14 +4,14 @@ description: La classe UIButton viene utilizzata per rappresentare vari diversi 
 ms.prod: xamarin
 ms.assetid: 304229E5-8FA8-41BD-8563-D19E1D2A0296
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 07/11/2018
-ms.openlocfilehash: 32f6330ad2fddc2e8386d6e574918a011f3bebad
-ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
+ms.openlocfilehash: 35fc743944c04dd1fdb8e035ba94ad6aeb6156ea
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "38986004"
 ---
 # <a name="buttons-in-xamarinios"></a>Pulsanti in xamarin. IOS
@@ -90,7 +90,8 @@ Per l'evento appropriato, digitare il nome di un nuovo gestore o selezionarne un
 `UIButton` i controlli possono essere presenti in un numero di diversi stati, ognuno specificato da un `UIControlState` valore – `Normal`, `Disabled`, `Focused`, `Highlighted`e così via. Ogni stato è possibile assegnare uno stile univoco, specificato a livello di codice o con iOS Designer.
 
 > [!NOTE]
-> Per un elenco completo di tutte le `UIControlState` valori, esaminiamo il [ `UIKit.UIControlState enumeration` ](https://developer.xamarin.com/api/type/UIKit.UIControlState/) documentazione.
+> Per un elenco completo di tutte le `UIControlState` valori, esaminiamo il [`UIKit.UIControlState enumeration`](https://developer.xamarin.com/api/type/UIKit.UIControlState/)
+> Documentazione.
 
 Ad esempio, per impostare il colore del titolo e il colore dell'ombreggiatura per `UIControlState.Normal`:
 
@@ -127,6 +128,3 @@ A seconda se l'utente tocca il pulsante o No, questo eseguirà il rendering come
 
 Per altre informazioni sull'uso dei pulsanti personalizzati, vedere la [usare un'immagine per un pulsante](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/buttons/use_an_image_for_a_button) recipe.
 
-## <a name="related-links"></a>Collegamenti correlati
-
-- [Cartella di lavoro UIButton](https://developer.xamarin.com/workbooks/ios/user-interface/UIbutton/uibutton.workbook)

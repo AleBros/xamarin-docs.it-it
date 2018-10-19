@@ -4,39 +4,39 @@ description: Questo articolo illustra come usare SkiaSharp per disegnare linee c
 ms.prod: xamarin
 ms.assetid: 1F854DDD-5D1B-4DE4-BD2D-584439429FDB
 ms.technology: xamarin-skiasharp
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 000bf24c1b06baab892f0b165c8b9eeebebce49d
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 6dc7737290bf7eacb3ba0e0bca0ddcfcd4aacba3
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615262"
 ---
 # <a name="lines-and-stroke-caps"></a>Linee ed estremità dei tratti
 
 _Informazioni su come usare SkiaSharp per disegnare linee con estremità dei tratti diversi_
 
-In SkiaSharp, il rendering di una singola riga è molto diverso dal rendering di una serie di linee rette collegate. Anche quando si disegnano le singole righe, tuttavia, è spesso necessario assegnare le righe di una larghezza specifica tratto e maggiore larghezza di riga, diventa più importante l'aspetto della fine delle righe, denominato il *estremità della traccia*:
+In SkiaSharp, il rendering di una singola riga è molto diverso dal rendering di una serie di linee rette collegate. Anche quando si disegnano le singole righe, tuttavia, è spesso necessario assegnare le righe uno spessore particolare. Man mano che queste righe diventano più ampie, diventa importante anche l'aspetto delle entità finali delle righe. L'aspetto della fine della riga viene chiamato il *estremità della traccia*:
 
 ![](lines-images/strokecapsexample.png "Le opzioni di limiti tre tratto")
 
-Per disegnare singole righe, `SKCanvas` definisce una semplice [ `DrawLine` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawLine/p/System.Single/System.Single/System.Single/System.Single/SkiaSharp.SKPaint/) metodo cui argomenti indicano l'inizio e fine coordinate della riga con un `SKPaint` oggetto:
+Per disegnare singole righe, `SKCanvas` definisce una semplice [ `DrawLine` ](xref:SkiaSharp.SKCanvas.DrawLine(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint)) metodo cui argomenti indicano l'inizio e fine coordinate della riga con un `SKPaint` oggetto:
 
 ```csharp
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-Per impostazione predefinita, il `StrokeWidth` proprietà di una nuova istanza `SKPaint` oggetto è 0, che ha lo stesso effetto di un valore di 1 il rendering di una riga di un pixel in spessore. Questo valore viene visualizzato fette molto sottile nei dispositivi ad alta risoluzione, ad esempio telefoni, pertanto è opportuno impostare il `StrokeWidth` su un valore maggiore. Ma quando si inizia a creare linee di spessore ridimensionabile, che genera un altro problema: modalità di avvio e finali di queste righe spesse di rendering?
+Per impostazione predefinita, il [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) proprietà di una nuova istanza `SKPaint` oggetto è 0, che ha lo stesso effetto di un valore di 1 il rendering di una riga di un pixel in spessore. Questo valore viene visualizzato fette molto sottile dispositivi ad alta risoluzione, ad esempio telefoni, pertanto è opportuno impostare il `StrokeWidth` su un valore maggiore. Ma quando si inizia a creare linee di spessore ridimensionabile, che genera un altro problema: modalità di avvio e finali di queste righe spesse di rendering?
 
-L'aspetto dell'avvio e fine delle righe viene chiamato un *estremità della linea* o, in Skia, un *estremità della traccia*. La parola "limite" in questo contesto si riferisce a un tipo di hat &mdash; qualcosa che si trova all'estremità della linea. È impostato il [ `StrokeCap` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeCap/) proprietà della `SKPaint` oggetto in uno dei seguenti membri del [ `SKStrokeCap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeCap/) enumerazione:
+L'aspetto dell'avvio e fine delle righe viene chiamato un *estremità della linea* o, in Skia, un *estremità della traccia*. La parola "limite" in questo contesto si riferisce a un tipo di hat &mdash; qualcosa che si trova all'estremità della linea. È impostato il [ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap) proprietà della `SKPaint` oggetto in uno dei seguenti membri del [ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap) enumerazione:
 
-- [`Butt`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Butt/) (predefinito)
-- [`Square`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
-- [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
+- `Butt` (predefinito)
+- `Square`
+- `Round`
 
-Questi vengono illustrate più chiaramente con un programma di esempio. La seconda sezione della home page del [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma inizia con una pagina intitolata **estremità dei tratti** base il [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) classe. Questa pagina definisce una `PaintSurface` gestore eventi che consente di scorrere i tre membri del `SKStrokeCap` enumerazione, la visualizzazione sia il nome del membro dell'enumerazione e tracciare una linea con tale limite di traccia:
+Questi vengono illustrate più chiaramente con un programma di esempio. Il **SkiaSharp linee e i percorsi** sezione del [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma inizia con una pagina intitolata **estremità dei tratti** base il [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) classe. Questa pagina definisce una `PaintSurface` gestore eventi che consente di scorrere i tre membri del `SKStrokeCap` enumerazione, la visualizzazione sia il nome del membro dell'enumerazione e tracciare una linea con tale limite di traccia:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -90,7 +90,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Per ogni membro del `SKStrokeCap` enumerazione, il gestore disegnate due linee, uno con uno spessore del tratto pari a 50 pixel e un'altra riga posizionata nella parte superiore e con uno spessore del tratto di 2 pixel. Questa seconda riga è lo scopo di illustrare geometrica inizio e alla fine della riga di indipendenti di spessore della linea e un limite di traccia:
+Per ogni membro del `SKStrokeCap` enumerazione, il gestore disegnate due linee, uno con uno spessore del tratto pari a 50 pixel e un'altra riga posizionata nella parte superiore e con uno spessore del tratto di due pixel. Questa seconda riga è lo scopo di illustrare geometrica inizio e alla fine della riga di indipendenti di spessore della linea e un limite di traccia:
 
 [![](lines-images/strokecaps-small.png "Tripla screenshot della pagina di estremità dei tratti")](lines-images/strokecaps-large.png#lightbox "tripla screenshot della pagina di estremità dei tratti")
 
@@ -102,19 +102,20 @@ Il `SKCanvas` classe include anche un altro metodo per la creazione di più righ
 DrawPoints (SKPointMode mode, points, paint)
 ```
 
-Il `points` parametro è una matrice di `SKPoint` i valori e `mode` è un membro del [ `SKPointMode` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPointMode/) enumerazione, che dispone di tre membri:
+Il `points` parametro è una matrice di `SKPoint` i valori e `mode` è un membro del [ `SKPointMode` ](xref:SkiaSharp.SKPointMode) enumerazione, che dispone di tre membri:
 
-- [`Points`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Points/) Per eseguire il rendering dei singoli punti
-- [`Lines`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Lines/) Per connettersi ogni coppia di punti
-- [`Polygon`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Polygon/) Per connettere tutti i punti consecutivi
+- `Points` Per eseguire il rendering dei singoli punti
+- `Lines` Per connettersi ogni coppia di punti
+- `Polygon` Per connettere tutti i punti consecutivi
 
-Il **più righe** pagina viene illustrato questo metodo. Il [ `MultipleLinesPage` file XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) crea un'istanza di due `Picker` viste che consentono di selezionare un membro del `SKPointMode` enumerazione e un membro del `SKStrokeCap` enumerazione:
+Il **più righe** pagina viene illustrato questo metodo. Il [ **MultipleLinesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) file crea un'istanza di due `Picker` viste che consentono di selezionare un membro del `SKPointMode` enumerazione e un membro del `SKStrokeCap` enumerazione:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
-             x:Class="SkiaSharpFormsDemos.MultipleLinesPage"
+             xmlns:skia="clr-namespace:SkiaSharp;assembly=SkiaSharp"
+             xmlns:skiaforms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="SkiaSharpFormsDemos.Paths.MultipleLinesPage"
              Title="Multiple Lines">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -132,11 +133,13 @@ Il **più righe** pagina viene illustrato questo metodo. Il [ `MultipleLinesPage
                 Grid.Row="0"
                 Grid.Column="0"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
-            <Picker.Items>
-                <x:String>Points</x:String>
-                <x:String>Lines</x:String>
-                <x:String>Polygon</x:String>
-            </Picker.Items>
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type skia:SKPointMode}">
+                    <x:Static Member="skia:SKPointMode.Points" />
+                    <x:Static Member="skia:SKPointMode.Lines" />
+                    <x:Static Member="skia:SKPointMode.Polygon" />
+                </x:Array>
+            </Picker.ItemsSource>
             <Picker.SelectedIndex>
                 0
             </Picker.SelectedIndex>
@@ -147,26 +150,28 @@ Il **più righe** pagina viene illustrato questo metodo. Il [ `MultipleLinesPage
                 Grid.Row="0"
                 Grid.Column="1"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
-            <Picker.Items>
-                <x:String>Butt</x:String>
-                <x:String>Round</x:String>
-                <x:String>Square</x:String>
-            </Picker.Items>
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type skia:SKStrokeCap}">
+                    <x:Static Member="skia:SKStrokeCap.Butt" />
+                    <x:Static Member="skia:SKStrokeCap.Round" />
+                    <x:Static Member="skia:SKStrokeCap.Square" />
+                </x:Array>
+            </Picker.ItemsSource>
             <Picker.SelectedIndex>
                 0
             </Picker.SelectedIndex>
         </Picker>
 
-        <skia:SKCanvasView x:Name="canvasView"
-                           PaintSurface="OnCanvasViewPaintSurface"
-                           Grid.Row="1"
-                           Grid.Column="0"
-                           Grid.ColumnSpan="2" />
+        <skiaforms:SKCanvasView x:Name="canvasView"
+                                PaintSurface="OnCanvasViewPaintSurface"
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2" />
     </Grid>
 </ContentPage>
 ```
 
-Il `SelectedIndexChanged` gestore per entrambi `Picker` viste semplicemente invalida il `SKCanvasView` oggetto:
+Si noti che le dichiarazioni dello spazio dei nomi di SkiaSharp sono un po' diverso perché le `SkiaSharp` dello spazio dei nomi è necessaria per fare riferimento ai membri del `SKPointMode` e `SKStrokeCap` enumerazioni. Il `SelectedIndexChanged` gestore per entrambi `Picker` viste semplicemente invalida il `SKCanvasView` oggetto:
 
 ```csharp
 void OnPickerSelectedIndexChanged(object sender, EventArgs args)
@@ -180,7 +185,7 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs args)
 
 Deve verificare l'esistenza di questo gestore il `SKCanvasView` oggetto perché è il primo gestore dell'evento viene chiamato quando il `SelectedIndex` proprietà delle `Picker` è impostato su 0 nel file XAML, e che si verifica prima il `SKCanvasView` è stata creata un'istanza.
 
-Il `PaintSurface` gestore accede a un metodo generico per il recupero di due elementi selezionati dal `Picker` visualizzazioni e convertirli in valori di enumerazione:
+Il `PaintSurface` gestore ottiene i due valori di enumerazione dal `Picker` viste:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -210,21 +215,12 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         Style = SKPaintStyle.Stroke,
         Color = SKColors.DarkOrchid,
         StrokeWidth = 50,
-        StrokeCap = GetPickerItem<SKStrokeCap>(strokeCapPicker)
+        StrokeCap = (SKStrokeCap)strokeCapPicker.SelectedItem
     };
 
     // Render the points by calling DrawPoints
-    SKPointMode pointMode = GetPickerItem<SKPointMode>(pointModePicker);
+    SKPointMode pointMode = (SKPointMode)pointModePicker.SelectedItem;
     canvas.DrawPoints(pointMode, points, paint);
-}
-
-T GetPickerItem<T>(Picker picker)
-{
-    if (picker.SelectedIndex == -1)
-    {
-        return default(T);
-    }
-    return (T)Enum.Parse(typeof(T), picker.Items[picker.SelectedIndex]);
 }
 ```
 
@@ -243,5 +239,5 @@ Se le righe sono connesso o non connesso è un aspetto fondamentale di utilizzo 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
