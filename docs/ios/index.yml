@@ -15,7 +15,7 @@ metadata:
   ms.topic: landing-page
   ms.technology: xamarin-ios
 abstract:
-  description: 'Xamarin.iOS espone la versione completa di iOS SDK per gli sviluppatori .NET. Creare app iOS completamente native con C# o F # in Visual Studio.'
+  description: Xamarin.iOS espone la versione completa di iOS SDK per gli sviluppatori .NET. Creare app iOS completamente native con C# o F# in Visual Studio.
   menu:
     items:
     - href: ~/ios/samples/index.yml
