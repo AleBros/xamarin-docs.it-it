@@ -4,27 +4,27 @@ description: Questa guida illustra le nozioni di base di SkiaSharp grafica conce
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: cbd0b50d41908f41ef301f883050e9837dfcaace
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 91a5b65836f21fac22ee2f32af3abdf538b197f8
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615379"
 ---
 # <a name="skiasharp-drawing-basics"></a>Nozioni fondamentali di disegno di SkiaSharp
 
 _Scopri le nozioni di base di SkiaSharp grafica concetti e le coordinate_
 
-Dopo aver aggiunto il pacchetto NuGet di SkiaSharp all'applicazione xamarin. Forms, è possibile iniziare a usare SkiaSharp grafica. Il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) soluzione include diverse pagine che illustrano le tecniche di programmazione nelle lezioni progressivamente più avanzati di SkiaSharp.
+Dopo aver aggiunto il pacchetto NuGet di SkiaSharp all'applicazione xamarin. Forms, è possibile iniziare a usare SkiaSharp grafica. Il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) soluzioni includono numerose pagine che illustrano le tecniche di programmazione nelle lezioni progressivamente più avanzati di SkiaSharp.
 
-Tutti i programmi di esempio in questa sezione appaiono sotto l'intestazione **nozioni di base di SkiaSharp** nella home page del [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma e il [ **Nozioni di base** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics) cartella della soluzione.
+Tutti i programmi di esempio in questa sezione appaiono sotto l'intestazione **nozioni di base di SkiaSharp Drawing** nella home page del [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma e il [ **Nozioni di base** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics) cartella della soluzione.
 
 ## <a name="drawing-a-simple-circlecirclemd"></a>[Disegno di un cerchio semplice](circle.md)
 
-Informazioni di base di disegno di SkiaSharp, tra cui Canvas e disegno.
+Scopri le nozioni di base di disegno di SkiaSharp, tra cui Canvas e disegnare gli oggetti.
 
 ## <a name="integrating-with-xamarinformsintegrationmd"></a>[Integrazione con Xamarin.Forms](integration.md)
 
@@ -46,8 +46,11 @@ Informazioni su come determinare le dimensioni delle stringhe di testo sottopost
 
 Caricare immagini bitmap da diverse origini e visualizzarli.
 
+## <a name="transparencytransparencymd"></a>[Trasparenza](transparency.md)
+
+Usare la trasparenza per combinare più immagini in una scena composita.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

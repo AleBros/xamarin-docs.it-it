@@ -6,25 +6,17 @@ ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2017
-ms.openlocfilehash: f8f8f9b4e5755e8b1707178fef633321b64e4e94
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 08/14/2018
+ms.openlocfilehash: a0a58cf05c97221a73cd0784b7859bb9c84cef86
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38994676"
 ---
 # <a name="hierarchical-navigation"></a>Navigazione gerarchica
 
 _La classe NavigationPage offre un'esperienza di navigazione gerarchica in cui l'utente è in grado di scorrere le pagine avanti e indietro in base alle esigenze. La classe implementa la navigazione come un mazzo last in, First-Out (LIFO) di oggetti della pagina. Questo articolo illustra come usare la classe NavigationPage per eseguire l'esplorazione in uno stack di pagine._
-
-Questo articolo tratta gli argomenti seguenti:
-
-- [Navigazione](#Performing_Navigation) : creazione di una pagina radice, il push di pagine in stack di navigazione, si estraggono le pagine dallo stack di navigazione e l'animazione di transizioni di pagina.
-- [Passaggio di dati durante gli spostamenti](#Passing_Data_when_Navigating) – il passaggio di dati tramite un costruttore della pagina e un `BindingContext`.
-- [Modifica lo stack di navigazione](#Manipulating_the_Navigation_Stack) : la modifica dello stack inserendo o rimozione di alcune pagine.
-
-## <a name="overview"></a>Panoramica
 
 Per passare da una pagina a altra, un'applicazione determinerà una nuova pagina nello stack di navigazione, in cui diventa la pagina attiva, come illustrato nel diagramma seguente:
 
@@ -312,10 +304,58 @@ async void OnLoginButtonClicked (object sender, EventArgs e)
 
 Condizione che le credenziali dell'utente siano corrette, la `MainPage` istanza viene inserita nello stack di navigazione prima della pagina corrente. Il [ `PopAsync` ](xref:Xamarin.Forms.NavigationPage.PopAsync) metodo rimuove quindi la pagina corrente dallo stack di navigazione, con la `MainPage` istanza diventa la pagina attiva.
 
-## <a name="summary"></a>Riepilogo
+## <a name="displaying-views-in-the-navigation-bar"></a>Visualizzazione delle viste nella barra di spostamento
 
-Questo articolo è stato illustrato come usare il [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) classe per eseguire l'esplorazione in uno stack di pagine. Questa classe fornisce un'esperienza di navigazione gerarchica in cui l'utente è in grado di scorrere le pagine avanti e indietro in base alle esigenze. La classe implementa la navigazione come stack LIFO (Last-In, First-Out) di oggetti [`Page`](xref:Xamarin.Forms.Page).
+Qualsiasi xamarin. Forms [ `View` ](xref:Xamarin.Forms.View) può essere visualizzato nella barra di spostamento di un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage). Questa operazione viene eseguita impostando il [ `NavigationPage.TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) proprietà associata una `View`. Questa proprietà associata può essere impostata su uno [ `Page` ](xref:Xamarin.Forms.Page)e quando il `Page` viene inserito un `NavigationPage`, il `NavigationPage` rispetterà il valore della proprietà.
 
+L'esempio seguente, tratto dal [esempio di visualizzazione del titolo](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/), viene illustrato come impostare il [ `NavigationPage.TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) proprietà associata da XAML:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigationPageTitleView.TitleViewPage">
+    <NavigationPage.TitleView>
+        <Slider HeightRequest="44" WidthRequest="300" />
+    </NavigationPage.TitleView>
+    ...
+</ContentPage>
+```
+
+Ecco l'equivalente C# code:
+
+```csharp
+public class TitleViewPage : ContentPage
+{
+    public TitleViewPage()
+    {
+        var titleView = new Slider { HeightRequest = 44, WidthRequest = 300 };
+        NavigationPage.SetTitleView(this, titleView);
+        ...
+    }
+}
+```
+
+Il risultato è un [ `Slider` ](xref:Xamarin.Forms.Slider) visualizzati nella barra di navigazione sul [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage):
+
+[![Dispositivo di scorrimento TitleView](hierarchical-images/titleview-small.png "TitleView dispositivo di scorrimento")](hierarchical-images/titleview-large.png#lightbox "TitleView dispositivo di scorrimento")
+
+> [!IMPORTANT]
+> Molte visualizzazioni non sarà più visualizzato nella barra di spostamento, a meno che la dimensione della vista è specificata con il [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) proprietà. In alternativa, la vista può essere eseguito il wrapping in un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) con il [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) e [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) impostate sui valori appropriati.
+
+Si noti che, in quanto il [ `Layout` ](xref:Xamarin.Forms.Layout) deriva dalla classe la [ `View` ](xref:Xamarin.Forms.View) (classe), il [ `TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) proprietà associata può essere impostata per visualizzare un layout classe che contiene più visualizzazioni. In iOS e Universal Windows Platform (UWP), non è possibile modificare l'altezza della barra di spostamento e quindi, ritaglio si verificherà se la visualizzazione contenuta nella barra di spostamento è più grande delle dimensioni predefinite della barra di spostamento. Tuttavia, in Android, l'altezza della barra di spostamento può essere modificato impostando il [ `NavigationPage.BarHeight` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) la proprietà associabile per una `double` che rappresenta la nuova altezza. Per altre informazioni, vedere [impostando l'altezza della barra di spostamento su un NavigationPage](~/xamarin-forms/platform/platform-specifics/consuming/android.md#navigationpage-barheight).
+
+In alternativa, una barra di spostamento estesa può essere suggerita inserendo alcuni contenuti nella barra di spostamento e alcuni in una visualizzazione nella parte superiore del contenuto della pagina che si colore corrispondono alla barra di navigazione. Inoltre, in iOS la linea di separazione e sullo shadow che nella parte inferiore della barra di spostamento può essere rimossa mediante l'impostazione di [ `NavigationPage.HideNavigationBarSeparator` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) la proprietà associabile per `true`. Per altre informazioni, vedere [nascondendo il separatore barra di navigazione in un NavigationPage](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#navigationpage-hideseparatorbar).
+
+> [!NOTE]
+> Il [ `BackButtonTitle` ](xref:Xamarin.Forms.NavigationPage.BackButtonTitleProperty), [ `Title` ](xref:Xamarin.Forms.Page.Title), [ `TitleIcon` ](xref:Xamarin.Forms.NavigationPage.TitleIconProperty), e [ `TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) proprietà possono definire valori che occupano spazio nella barra di spostamento. Anche se le dimensioni di barra di navigazione varia in base alle dimensioni dello schermo e della piattaforma, impostando tutte queste proprietà comporterà i conflitti a causa di spazio limitato disponibile. Invece di provare a usare una combinazione di queste proprietà, è probabile che è possibile ottenere una migliore la progettazione di barra di spostamento desiderato solo impostando il `TitleView` proprietà.
+
+### <a name="limitations"></a>Limitazioni
+
+Esistono alcune limitazioni da tenere presenti quando si visualizza un' [ `View` ](xref:Xamarin.Forms.View) nella barra di spostamento di un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage):
+
+- In iOS, posizionare le viste nella barra di spostamento di un `NavigationPage` vengono visualizzati in una posizione diversa a seconda se sono abilitati i titoli di grandi dimensioni. Per altre informazioni sull'abilitazione di titoli di grandi dimensioni, vedere [visualizzazione di titoli di grandi dimensioni](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#large_title).
+- In Android, posizionare le visualizzazioni nella barra di spostamento di un `NavigationPage` può essere eseguita solo nelle App che usano compatibilità delle app.
+- Non è consigliabile posizionare le viste di grandi e complesse, ad esempio [ `ListView` ](xref:Xamarin.Forms.ListView) e [ `TableView` ](xref:Xamarin.Forms.TableView), nella barra di spostamento di un `NavigationPage`.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
@@ -323,6 +363,7 @@ Questo articolo è stato illustrato come usare il [ `NavigationPage` ](xref:Xama
 - [Gerarchico (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
 - [PassingData (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
 - [LoginFlow (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)
+- [TitleView (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/)
 - [Come creare un segno nel flusso schermata di esempio xamarin. Forms (Video di Xamarin University)](http://xamarinuniversity.blob.core.windows.net/lightninglectures/CreateASignIn.zip)
 - [Come creare un segno nel flusso di schermata in xamarin. Forms (Video di Xamarin University)](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

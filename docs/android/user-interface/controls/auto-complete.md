@@ -3,24 +3,29 @@ title: Completamento automatico
 ms.prod: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 333264e65e814ad73eabeb7be55abb320400a59a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: conceptdev
+ms.author: crdun
+ms.date: 08/31/2018
+ms.openlocfilehash: 134b8e93279dd60f860e44a444e75e0200e66b99
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "30764450"
 ---
 # <a name="auto-complete"></a>Completamento automatico
 
+`AutoCompleteTextView` è un elemento di visualizzazione di testo modificabile che Mostra suggerimenti di completamento automaticamente mentre l'utente sta digitando. Viene visualizzato l'elenco di suggerimenti in un elenco a discesa da cui l'utente può scegliere di sostituire il contenuto della casella di modifica con un elemento.
+
+![Esempio di completamento automatico](images/auto-complete.png)
 
 ## <a name="overview"></a>Panoramica
 
-Per creare un widget di voce di testo che vengono forniti suggerimenti di completamento automatico, utilizzare il [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) widget. Suggerimenti ricevuti da una raccolta di stringhe associata a un widget di tramite un [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/).
+Per creare un widget di immissione di testo che fornisce suggerimenti di completamento automatico, usare il [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+widget. I suggerimenti vengono ricevuti da una raccolta di stringhe associate del widget tramite un [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/).
 
-In questa esercitazione si creerà un [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) widget che vengono forniti suggerimenti per un nome di paese.
+In questa esercitazione si creerà un [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+widget che fornisce suggerimenti per un nome di paese.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -40,14 +45,15 @@ In questa esercitazione si creerà un [ `AutoCompleteTextView` ](https://develop
 </LinearLayout>
 ```
 
-Il [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) è un'etichetta che introduce il [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) widget.
+Il [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) è un'etichetta che introduce la [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+widget.
 
 
 ## <a name="tutorial"></a>Esercitazione
 
 Avviare un nuovo progetto denominato *HelloAutoComplete*.
 
-Creare un file XML denominato `list_item.xml` e salvarla all'interno di **risorse/Layout** cartella. Impostare l'azione di compilazione di questo file per `AndroidResource`. Modificare il file simile al seguente:
+Creare un file XML denominato `list_item.xml` e salvarla all'interno di **risorse/Layout** cartella. Impostare l'azione di compilazione del file su `AndroidResource`. Modificare il file deve essere come segue:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -61,9 +67,9 @@ Creare un file XML denominato `list_item.xml` e salvarla all'interno di **risors
 </TextView>
 ```
 
-Questo file definisce un semplice [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) che verrà usato per ogni elemento che viene visualizzato nell'elenco di suggerimenti.
+Questo file definisce una semplice [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) che verrà utilizzato per ogni elemento che viene visualizzato nell'elenco di suggerimenti.
 
-Aprire **Resources/Layout/Main.axml** e inserire il seguente:
+Aprire **Resources/Layout/Main.axml** e inserire il codice seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -83,7 +89,8 @@ Aprire **Resources/Layout/Main.axml** e inserire il seguente:
 </LinearLayout>
 ```
 
-Aprire **Mainactivity** e inserire il codice seguente per il [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle)) metodo:
+Aprire **MainActivity.cs** e inserire il codice seguente per il [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
+metodo:
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -100,7 +107,9 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-Dopo la visualizzazione di contenuto è impostata sul `main.xml` layout, il [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) widget viene acquisito dal layout con [ `FindViewById` ](https://developer.xamarin.com/api/member/Android.App.Activity.FindViewById/). Un nuovo [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) viene quindi inizializzata per associare il `list_item.xml` layout in ogni elemento elenco di `COUNTRIES` matrice di stringhe (definito nel passaggio successivo). Infine, `SetAdapter()` viene chiamato per associare il [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) con il [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) widget in modo che la matrice di stringhe verrà popolato l'elenco di suggerimenti.
+Dopo la visualizzazione di contenuto è impostata sul `main.xml` layout, il [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+widget viene acquisito dal layout con [ `FindViewById` ](https://developer.xamarin.com/api/member/Android.App.Activity.FindViewById/). Una nuova [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) viene quindi inizializzata per associare il `list_item.xml` layout per ogni elemento dell'elenco nel `COUNTRIES` matrice di stringhe (definito nel passaggio successivo). Infine `SetAdapter()` viene chiamato per associare il [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) con di [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+widget in modo che la matrice di stringhe verrà popolato l'elenco di suggerimenti.
 
 All'interno di `MainActivity` classe, aggiungere la matrice di stringhe:
 
@@ -150,17 +159,19 @@ static string[] COUNTRIES = new string[] {
 };
 ```
 
-Si tratta dell'elenco di suggerimenti che verranno forniti in un elenco a discesa quando l'utente digita nel [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) widget.
+Si tratta dell'elenco di suggerimenti che verrà fornito in un elenco a discesa quando l'utente digita nel [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+widget.
 
 Eseguire l'applicazione. Durante la digitazione, dovrebbe essere simile al seguente:
 
-[![Schermata di completamento automatico esempio elenco di nomi che contengono "ca"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
+[![Screenshot di esempio complet. automatico elenco di nomi che contengono "ca"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
 
 
 ## <a name="more-information"></a>Altre informazioni
 
-Si noti che non sono una pratica di progettazione consigliato perché il codice dell'applicazione è consigliabile concentrarsi sul comportamento, non contenuto utilizzando una matrice di stringhe hardcoded. Contenuto dell'applicazione, ad esempio le stringhe debba essere esternalizzato dal codice per apportare modifiche al contenuto più semplice e facilitare la localizzazione del contenuto. Le stringhe hardcoded vengono utilizzate in questa esercitazione solo per semplificare e concentrarsi sul [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) widget. Al contrario, l'applicazione deve dichiarare tali matrici di stringhe in un file XML. Questa operazione può essere eseguita con un `<string-array>` risorse nel progetto `res/values/strings.xml` file. Ad esempio:
+Si noti che non sono una pratica di progettazione consigliato perché il codice dell'applicazione deve concentrarsi sul comportamento, non il contenuto usando una matrice di stringhe hardcoded. Contenuto dell'applicazione, ad esempio stringhe deve essere esternalizzato dal codice per apportare modifiche al contenuto più facilmente e facilitare la localizzazione del contenuto. Le stringhe a livello di codice vengono utilizzate in questa esercitazione solo per renderlo semplice e concentrarsi sul [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+widget. Al contrario, l'applicazione deve dichiarare tali matrici di stringhe in un file XML. Questa operazione può essere eseguita con un `<string-array>` risorse nel progetto `res/values/strings.xml` file. Ad esempio:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -177,7 +188,8 @@ Si noti che non sono una pratica di progettazione consigliato perché il codice 
 </resources>
 ```
 
-Per usare queste stringhe di risorsa per il [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/), sostituire l'originale [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) riga costruttore con quanto segue:
+Usare queste stringhe di risorsa per il [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/), sostituire l'originale [`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)
+riga di costruttore con il codice seguente:
 
 ```csharp
 string[] countries = Resources.GetStringArray (Resource.array.countries_array);
@@ -187,10 +199,11 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 
 ### <a name="references"></a>Riferimenti
 
+-   [File AutoCompleteTextView Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; progetto di esempio xamarin. Android per la `AutoCompleteTextView`.
 -   [`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)
 -   [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
 
-*Parti di questa pagina sono modifiche basate sul lavoro creati e condivisi per il progetto Android di origine aprire e usare in base alle condizioni descritte nel* 
- [ *Creative Commons 2.5 attribuzione licenza* ](http://creativecommons.org/licenses/by/2.5/) *. In questa esercitazione si basa sul* 
+*Parti di questa pagina sono modifiche basate sul lavoro creato e condiviso da Android Open Source Project e usate in base a condizioni descritte nel* 
+ [ *licenza Creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/) *. Questa esercitazione si basa sul* 
  [ *esercitazione completamento automatico Android*](http://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
  *.*

@@ -6,12 +6,12 @@ ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/06/2017
-ms.openlocfilehash: 558a05b5fdc4c4f08194b708de886bca342dd860
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 09/15/2018
+ms.openlocfilehash: 28c6daa361b7de09a0d9332b21f1b6f75e035850
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38995414"
 ---
 # <a name="introduction-to-dependencyservice"></a>Introduzione a DependencyService
@@ -20,7 +20,10 @@ ms.locfileid: "38995414"
 
 [`DependencyService`](xref:Xamarin.Forms.DependencyService) consente alle App a chiamare funzionalità specifiche della piattaforma da codice condiviso. Questa funzionalità consente alle App xamarin. Forms di eseguire qualsiasi operazione che può eseguire un'app nativa.
 
-`DependencyService` è un resolver di dipendenza. In pratica, viene definita un'interfaccia e `DependencyService` trova la corretta implementazione di tale interfaccia dai vari progetti di piattaforma.
+`DependencyService` è un localizzatore di servizi. In pratica, viene definita un'interfaccia e `DependencyService` trova la corretta implementazione di tale interfaccia dai vari progetti di piattaforma.
+
+> [!NOTE]
+> Per impostazione predefinita, il [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) risolverà solo le implementazioni di piattaforma che dispongono di costruttori senza parametri. Tuttavia, un metodo di risoluzione delle dipendenze può essere inserito in xamarin. Forms che utilizza un contenitore di inserimento delle dipendenze o metodi factory per risolvere le implementazioni della piattaforma. Questo approccio può essere utilizzato per risolvere le implementazioni di piattaforma che dispongono di costruttori con parametri. Per altre informazioni, vedere [risoluzione delle dipendenze in xamarin. Forms](~/xamarin-forms/internals/dependency-resolution.md).
 
 ## <a name="how-dependencyservice-works"></a>Come funziona DependencyService
 
@@ -144,7 +147,6 @@ Il [UsingDependencyService soluzione di esempio](https://developer.xamarin.com/s
 
 > [!NOTE]
 > Si **necessario** fornire un'implementazione in tutti i progetti della piattaforma. Se nessuna implementazione dell'interfaccia è registrato, il `DependencyService` sarà in grado di risolvere il `Get<T>()` metodo in fase di esecuzione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

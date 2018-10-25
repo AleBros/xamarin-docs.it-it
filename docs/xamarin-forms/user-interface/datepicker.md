@@ -1,22 +1,22 @@
 ---
 title: Xamarin. Forms DatePicker
-description: Il controllo DatePicker è visualizzazione xamarin. Forms che consente all'utente di selezionare una data. Questo articolo illustra come usare un controllo DatePicker in un'applicazione xamarin. Forms.
+description: Il controllo DatePicker è una vista di xamarin. Forms che consente all'utente di selezionare una data. Questo articolo illustra come usare un controllo DatePicker in un'applicazione xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/04/2018
-ms.openlocfilehash: 553957bfa06c7b7a9c5261e426ebee4190de5ebb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7917510e910223fc6ca276bf47b1878c19557a38
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38994926"
 ---
 # <a name="xamarinforms-datepicker"></a>Xamarin. Forms DatePicker
 
-_Una visualizzazione di xamarin. Forms che consente all'utente di selezionare una data_
+_Una vista di xamarin. Forms che consente all'utente di selezionare una data._
 
 Xamarin. Forms [ `DatePicker` ](xref:Xamarin.Forms.DatePicker) richiama controllo selezione data della piattaforma e consente all'utente di selezionare una data. `DatePicker` definisce otto proprietà:
 
@@ -184,6 +184,9 @@ Quando si esegue l'esempio prima di tutto, entrambi `DatePicker` viste vengono i
 Toccando uno del `DatePicker` Visualizza richiama selezione data platform. Tre piattaforme implementano questo controllo selezione data in modi molto diversi, ma ogni approccio è noto agli utenti di tale piattaforma:
 
 [![Selezionare giorni compresi tra date](datepicker-images/DaysBetweenDatesSelect.png "giorni compresi tra le date selezionate")](datepicker-images/DaysBetweenDatesSelect-Large.png#lightbox "giorni compresi tra le date selezionate")
+
+> [!TIP]
+> In Android, il `DatePicker` finestra di dialogo può essere personalizzato eseguendo l'override di `CreateDatePickerDialog` metodo in un renderer personalizzato. In questo modo, ad esempio, pulsanti aggiuntivi da aggiungere alla finestra di dialogo.
 
 Dopo aver selezionate i due date, l'applicazione visualizza il numero di giorni tra tali date:
 

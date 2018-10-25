@@ -1,233 +1,230 @@
 ---
 title: Tipo Registrar per xamarin. IOS
-description: Questo documento descrive il registrar di tipo xamarin. IOS, che rende disponibili al runtime di Objective-C classi c#.
+description: Questo documento descrive le registrar di tipo xamarin. IOS, che rende C# le classi disponibili per il runtime di Objective-C.
 ms.prod: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: e818d6a2092f408823e4a635a70c4f6666e3a7a9
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 8/29/2018
+ms.openlocfilehash: cdd57095b03c24472abec5646ee3a70350770d7c
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "34786174"
 ---
-# <a name="type-registrar-for-xamarinios"></a>Tipo Registrar per xamarin. IOS
+# <a name="type-registrar-for-xamarinios"></a>Programma di registrazione di tipo per xamarin. IOS
 
-Questo documento descrive il sistema di registrazione di tipo usato da xamarin. IOS.
+Questo documento descrive il sistema di registrazione tipo usato da xamarin. IOS.
 
-## <a name="registration-of-managed-classes-and-methods"></a>Registrazione di classi gestite e i metodi
+## <a name="registration-of-managed-classes-and-methods"></a>Registrazione dei metodi e le classi gestite
 
-Durante l'avvio, verrà registrato xamarin:
+Durante l'avvio, registrerà xamarin. ios:
 
-  - Le classi con un [[registrare]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) attributo come classi Objective-C.
-  - Le classi con un [[Category]](https://developer.xamarin.com/api/type/CRuntime.CategoryAttribute) attributo come categorie Objective-C.
-  - Interfaccia con un [[Protocol]](https://developer.xamarin.com/api/type/Foundation.ProtocolAttribute/) attributo come protocolli Objective-C.
+- Le classi con una [[registrare]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) attributo come classi di Objective-C.
+- Le classi con una [[Category]](https://developer.xamarin.com/api/type/CRuntime.CategoryAttribute) attributo come categorie di Objective-C.
+- Interfaccia con un [[Protocol]](https://developer.xamarin.com/api/type/Foundation.ProtocolAttribute/) attributo come protocolli di Objective-C.
+- I membri con un' [[esportare]](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/), rendendo possibile per Objective-C per accedervi.
 
-in ogni membri casi con un [[esportare]](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) attributo vengono esportati in Objective-C. In questo modo le classi gestite essere creati e gestiti i metodi da chiamare da Objective-C ed è il modo in cui sono collegate proprietà e metodi tra il mondo in c# e Objective-C uno.
+Ad esempio, prendere in considerazione il gestito `Main` metodo comune nelle applicazioni xamarin. ios:
 
-Un esempio molto semplice è la classe AppDelegate dotato di tutte le applicazioni. Si ricorderà che il metodo Main gestito disponga di una riga come questa:
+```csharp
+UIApplication.Main (args, null, "AppDelegate");
+```
 
-    UIApplication.Main (args, null, "AppDelegate");
+Questo codice indica al runtime di Objective-C di usare il tipo denominato `AppDelegate` come classe delegata dell'applicazione. Il runtime di Objective-C deve essere in grado di creare un'istanza di C# `AppDelegate` classe, che deve essere registrata classe.
 
-In questo modo il runtime Objective-C per creare il tipo denominato "AppDelegate" come classe delegata dell'applicazione.  Per il runtime Objective-C imparare a creare un'istanza della classe "AppDelegate" scritta in c#, questa classe deve essere registrato.
+Xamarin. IOS registrazione vengono eseguite automaticamente, in fase di esecuzione (registrazione dinamica) o in fase di compilazione (registrazione statico).
 
-Xamarin. IOS runtime si occuperà della registrazione, internamente, questa registrazione può essere effettuata interamente in fase di esecuzione (la registrazione dinamica) o può essere eseguita in fase di compilazione (registrazione statico).  L'approccio dinamico prevede l'utilizzo di reflection all'avvio per trovare tutte le classi e metodi per registrare e passare a quelli per il runtime Objective-C.  L'approccio statico controlla se gli assembly utilizzati dall'applicazione in fase di compilazione.  Determina le classi e metodi da registrare con Objective-C e genera una mappa a cui è incorporata in un file binario.  Quindi, all'avvio, registriamo la mappa con il runtime Objective-C.
+Registrazione dinamica Usa la reflection all'avvio per trovare tutte le classi e i metodi di registrazione, passarli al runtime di Objective-C. La registrazione dinamica viene utilizzata per impostazione predefinita per le compilazioni del simulatore.
+
+Registrazione statico controlla se, in fase di compilazione, gli assembly usati dall'applicazione. Determina le classi e i metodi di registrazione con Objective-C e genera una mappa, che viene incorporata in un file binario.
+Quindi, all'avvio, registra la mappa con il runtime di Objective-C. La registrazione statica viene utilizzata per compilazioni del dispositivo.
 
 ### <a name="categories"></a>Categories
 
-A partire da xamarin 8.10, sarà possibile creare categorie di Objective-C utilizzando la sintassi di c#.
+A partire da xamarin. IOS 8.10, è possibile creare categorie di Objective-C tramite C# sintassi.
 
-Questa operazione viene eseguita utilizzando l'attributo [Category], specifica del tipo da estendere come un argomento dell'attributo.
-Nell'esempio seguente viene estesa per l'istanza NSString:
+Per creare una categoria, usare il `[Category]` attributo e specificare il tipo da estendere. Ad esempio, il codice seguente estende `NSString`:
 
-    [Category (typeof (NSString))]
+```csharp
+[Category (typeof (NSString))]
+```
 
-Ogni metodo categoria sta utilizzando il meccanismo normale per l'esportazione di metodi in Objective-C utilizzando l'attributo [Esporta]:
+Ognuno dei metodi di una categoria ha un `[Export]` attributo, rendendolo disponibile per il runtime di Objective-C:
 
-    [Export ("today")]
-    public static string Today ()
-    {
-        return "Today";
-    }
+```csharp
+[Export ("today")]
+public static string Today ()
+{
+    return "Today";
+}
+```
 
-Tutti i metodi di estensione gestita devono essere statici, ma è possibile creare metodi di istanza Objective-C utilizzando la sintassi standard per i metodi di estensione in c#:
+Tutti i metodi di estensione gestita devono essere statici, ma è possibile creare metodi di istanza di Objective-C usando lo standard C# sintassi per i metodi di estensione:
 
+```csharp
+[Export ("toUpper")]
+public static string ToUpper (this NSString self)
+{
+    return self.ToString ().ToUpper ();
+}
+```
+
+Il primo argomento al metodo di estensione è l'istanza in cui è stato richiamato il metodo:
+
+```csharp
+[Category (typeof (NSString))]
+public static class MyStringCategory
+{
     [Export ("toUpper")]
-    public static string ToUpper (this NSString self)
+    static string ToUpper (this NSString self)
     {
         return self.ToString ().ToUpper ();
     }
+ }
+ ```
 
-e il primo argomento al metodo di estensione sarà l'istanza in cui è stato richiamato il metodo.
+Questo esempio si aggiungerà nativo `toUpper` al metodo di istanza di `NSString` classe. Questo metodo può essere chiamato da Objective-c:
 
-Esempio completo:
-
-    [Category (typeof (NSString))]
-    public static class MyStringCategory
+```csharp
+[Category (typeof (UIViewController))]
+public static class MyViewControllerCategory
+{
+    [Export ("shouldAutoRotate")]
+    static bool GlobalRotate ()
     {
-        [Export ("toUpper")]
-        static string ToUpper (this NSString self)
-        {
-            return self.ToString ().ToUpper ();
-        }
+        return true;
     }
-
-In questo esempio aggiungerà un metodo di istanza nativo toUpper alla classe NSString, che può essere richiamata da Objective-C.
-
-    [Category (typeof (UIViewController))]
-    public static class MyViewControllerCategory
-    {
-        [Export ("shouldAutoRotate")]
-        static bool GlobalRotate ()
-        {
-            return true;
-        }
-    }
+}
+```
 
 ### <a name="protocols"></a>Protocolli
 
-A partire da xamarin 8.10 interfacce con l'attributo [Protocol] verranno esportate in Objective-C come protocolli.
+A partire da xamarin. IOS 8.10, si interfaccia con il `[Protocol]` attributi verranno esportati in Objective-C come protocolli:
 
-Esempio:
+```csharp
+[Protocol ("MyProtocol")]
+interface IMyProtocol
+{
+    [Export ("method")]
+    void Method ();
+}
 
-    [Protocol ("MyProtocol")]
-    interface IMyProtocol
+class MyClass : IMyProtocol
+{
+    void Method ()
     {
-        [Export ("method")]
-        void Method ();
     }
+}
+```
 
-    class MyClass : IMyProtocol
-    {
-        void Method ()
-        {
-        }
-    }
-
-Questo verrà esportato in Objective-C come un protocollo (Protocollo1) e una classe (MyClass) che implementa il protocollo.
-
- **Registrazione dinamica**
-
-viene utilizzato per le compilazioni simulatore, come accelera il ciclo di compilazione/debug.  Questo è il risultato di eliminare i passaggi che genera il mapping di classe e la compilazione di questa tabella di mappa nell'utilità di avvio applicazione ogni volta che si avvia l'applicazione e un'utilità di avvio di uso generale viene invece utilizzato ogni volta.  Computer desktop con una notevole quantità di energia elettrica per il runtime di eseguire l'analisi delle classi rapidamente, pertanto le prestazioni non sono mai un problema.
-
- **Registrazione statico**
-
-è progettata per le compilazioni di dispositivi come dispositivi mobili sono più lenti rispetto ai computer desktop e runtime di eseguire l'analisi è lenta.  Poiché si basa dispositivo sarà sempre necessario creare un nuovo file binario, il ciclo di compilazione/debug non è interessato dalla creazione del mapping di registrazione.
+Questo codice consente di esportare `IMyProtocol` Objective-c come un protocollo chiamato `MyProtocol` e una classe denominata `MyClass` che implementa il protocollo.
 
 ## <a name="new-registration-system"></a>Nuovo sistema di registrazione
 
-A partire dal 6.2.6 stabile versione e la versione beta 6.3.4 è stato aggiunto il nuovo programma di registrazione statico. Il precedente punto 7.2.1 versione siamo registrar di nuovo il valore predefinito.
+A partire dal 6.2.6 stabile versione e la versione beta 6.3.4, è stato aggiunto il nuovo programma di registrazione statico. Nel 7.2.1 versione, abbiamo le registrar di nuovo il valore predefinito.
 
 Questo nuovo sistema di registrazione offre le nuove funzionalità seguenti:
 
-- La compilazione di rilevamento in fase di errori di programmazione:
-    - Due classi, la registrazione con lo stesso nome.
+- Rilevamento in fase di compilazione di errori di programmazione:
+    - Due classi da registrare con lo stesso nome.
     - Più di un metodo esportato per rispondere allo stesso selettore
+- Rimozione del codice nativo inutilizzata:
+    - Il nuovo sistema di registrazione aggiungerà i riferimenti forti al codice usato in librerie statiche, che consente al linker nativo di eliminare le codice nativo non utilizzato dal file binario risulta. Nelle associazioni di esempio di Xamarin, la maggior parte delle applicazioni diventano più piccoli almeno 300 KB.
 
+- Supporto per sottoclassi generiche di `NSObject`; vedere [Generics NSObject](~/ios/internals/api-design/nsobject-generics.md) per altre informazioni. Il nuovo sistema di registrazione verrà inoltre rilevato costrutti generici non supportati che avrebbe causato precedentemente comportamento casuale in fase di esecuzione.
 
+### <a name="errors-caught-by-the-new-registrar"></a>Colti di nuovo registro errori
 
-- Possibile rimuovere il codice nativo non utilizzato
-    - Il nuovo sistema di registrazione verrà aggiunti riferimenti forti al codice usato in librerie statiche, consentendo il linker nativo rimuovere un codice nativo non utilizzato dal file binario risulta.
-      Nelle associazioni di esempio di Xamarin, la maggior parte delle applicazioni diventano più piccoli almeno 300 KB.
+Di seguito sono riportati alcuni esempi dei messaggi di errore rilevati dal programma di registrazione nuova.
 
-- Supporto per le sottoclassi generiche di NSObject. Vedere [NSObject Generics](~/ios/internals/api-design/nsobject-generics.md) per ulteriori informazioni. Inoltre, il nuovo sistema di registrazione rileva i costrutti generici non supportati che avrebbe causato precedentemente comportamento casuale in fase di esecuzione.
+- Esportazione di più volte lo stesso selettore nella stessa classe:
 
-Ecco alcuni esempi degli errori per il nuovo registar rilevati:
+    ```csharp
+    [Register]
+    class MyDemo : NSObject 
+    {
+        [Export ("foo:")]
+        void Foo (NSString str);
+        [Export ("foo:")]
+        void Foo (string str)
+    }
+    ```
 
-Esportazione di più volte lo stesso selettore nella stessa classe.
+- Esportazione di più di una classe gestita con lo stesso nome di Objective-C:
 
-```csharp
-[Register]
-class MyDemo : NSObject {
-    [Export ("foo:")]
-    void Foo (NSString str);
-    [Export ("foo:")]
-    void Foo (string str)
-}
-```
+    ```csharp
+    [Register ("Class")]
+    class MyClass : NSObject {}
 
-Esportazione di più di una classe gestita con lo stesso nome Objective-C.
+    [Register ("Class")]
+    class YourClass : NSObject {}
+    ```
 
-```csharp
-[Register ("Class")]
-class MyClass : NSObject {}
+- Esportando i metodi generici:
 
-[Register ("Class")]
-class YourClass : NSObject {}
-```
+    ```csharp
+    [Register]
+    class MyDemo : NSObject
+    {
+        [Export ("foo")]
+        void Foo<T> () {}
+    }
+    ```
 
-Esportazione di metodi generici.
+### <a name="limitations-of-the-new-registrar"></a>Limitazioni della funzione di registrazione nuovo
 
-```csharp
-[Register]
-class MyDemo : NSObject {
-    [Export ("foo")]
-    void Foo<T> () {}
-}
-```
+Alcuni aspetti da tenere in mente riguardo il nuovo programma di registrazione:
 
+- Alcune librerie di terze parti devono essere aggiornate per funzionare con il nuovo sistema di registrazione. Visualizzare [necessarie modifiche](#required_modifications) sotto per altri dettagli.
 
+- È anche un risvolto a breve termine che Clang deve essere utilizzata se viene usato il framework di account (infatti Apple **accounts.h** intestazione può essere compilata solo da Clang). Aggiungere `--compiler:clang` agli argomenti aggiuntivi di mtouch usare Clang se si usa Xcode 4.6 o versioni precedenti (xamarin. IOS selezionerà automaticamente Clang in Xcode 5.0 o versioni successive.)
 
-Alcuni aspetti da tenere presenti sul nuovo registro:
-- Alcune terze parti librerie devono essere aggiornate per funzionare con il nuovo sistema di registrazione, vedere la sezione [necessarie modifiche seguente](#required_modifications) per altri dettagli.
-- È anche un svantaggio a breve termine che Clang deve essere utilizzata se viene utilizzato il framework di account (infatti intestazione accounts.h Apple può essere compilata solo Clang). Aggiungere <code>--compiler:clang</code> agli argomenti mtouch aggiuntive da utilizzare Clang se l'uso Xcode 4.6 o versione precedente (xamarin. IOS verrà automaticamente selezionare Clang in Xcode 5.0 o versione successiva).
-
-    <li>Se Xcode 4.6 (o versioni precedenti) viene utilizzato, GCC / lettera G + + è necessario selezionare se il tipo esportato i nomi contengono caratteri non ascii (in questo modo la versione di Clang fornito con Xcode 4.6 non supporta caratteri non ascii all'interno degli identificatori nel codice Objective-C). Aggiungere <code>--compiler:gcc</code> agli argomenti aggiuntivi mtouch utilizzare GCC.
-
+- Se Xcode 4.6 (o versioni precedenti) viene utilizzato, GCC / G + + è necessario selezionare se tipo esportato i nomi contengono caratteri non ASCII (questo è perché la versione di Clang fornito con Xcode 4.6 non supporta caratteri non ASCII all'interno degli identificatori nel codice Objective-C). Aggiungere `--compiler:gcc` agli argomenti aggiuntivi di mtouch usare GCC.
 
 ## <a name="selecting-a-registrar"></a>Selezionando un registrar
 
-È possibile selezionare un altro registrar tramite l'aggiunta di una delle seguenti opzioni per gli argomenti aggiuntivi mtouch iOS del progetto le opzioni di compilazione:
+È possibile selezionare un altro registrar mediante l'aggiunta di una delle opzioni seguenti agli argomenti di progetto aggiuntivi di mtouch **compilazione iOS** impostazioni:
 
--  `--registrar:static` : il valore predefinito per i dispositivi di compilazioni
--  `--registrar:dynamic` : il valore predefinito per compilazioni simulatore
--  `--registrar:legacystatic` : il valore predefinito per il dispositivo compila finché xamarin 7.2.1
--  `--registrar:legacydynamic` : il valore predefinito per il simulatore compila finché xamarin 7.2.1
+- `--registrar:static` – default per le compilazioni di dispositivo
+- `--registrar:dynamic` : l'impostazione predefinita per le compilazioni del simulatore
 
+> [!NOTE]
+> API classica di Xamarin supportate altre opzioni, ad esempio `--registrar:legacystatic` e `--registrar:legacydynamic`. Tuttavia, queste opzioni non sono supportate dall'API unificata.
 
-## <a name="shortcomings-in-the-old-registration-system"></a>Molti punti deboli nel sistema di registrazione precedente
+## <a name="shortcomings-in-the-old-registration-system"></a>Limitazioni del vecchio sistema di registrazione
 
 Il sistema di registrazione precedente presenta i seguenti svantaggi:
 
--  Si è verificato alcun riferimento statico (nativo) per Objective-C classi e metodi in librerie native di terze parti, questo significa che non chiediamo al linker native di rimuovere il codice nativo di terze parti che non è stata effettivamente utilizzato (in quanto tutti gli elementi verranno rimossi) che. Questo è il motivo per il "-force_load libNative.a" ogni binding di terze parti che doveva eseguire (o l'equivalente ForceLoad = true nell'attributo [LinkWith]).
--  È possibile esportare i due tipi gestiti con lo stesso nome Objective-C, senza alcun avviso. Uno scenario raro è che le due classi AppDelegate (in spazi dei nomi diversi). In fase di esecuzione sarebbe completamente casuali quello che è stato prelevato (infatti che modificata tra le esecuzioni di un'app che non è stato ricompilato anche - effettuate per un'esperienza di debug molto perplessità e frustrante).
--  È possibile esportare i due metodi con la stessa firma Objective-C. Ancora una volta quale deve essere chiamato da Objective-C è casuale, ma questo problema non è comune quanto quello precedente, principalmente perché l'unico modo per sfruttare in realtà questo bug è stata l'override del metodo gestito sfortunato.
--  Il set di metodi che è stato esportato è leggermente diverso tra compilazioni statiche e dinamiche.
--  Non funziona correttamente quando si esportano le classi generiche (quale implementazione generica esatta eseguita in fase di esecuzione sarà casuale, producendo un comportamento indeterminato).
+- Si è verificato alcun riferimento statico (nativo) alle classi di Objective-C e i metodi nelle librerie native di terze parti, che significava che è stato possibile chiedere al linker nativo di rimuovere il codice nativo terze parti che non è stato effettivamente usato (perché tutto ciò che potrebbe venire rimosso). Questo è il motivo per il `-force_load libNative.a` che ogni binding di terze parti di iniziare subito a (o equivalente `ForceLoad=true` nel `[LinkWith]` attributo).
+- È possibile esportare due tipi gestiti con lo stesso nome di Objective-C senza alcun avviso. È stata uno scenario raro ritrovarsi con due `AppDelegate` classi negli spazi dei nomi diversi. In fase di esecuzione sarebbe completamente casuale quello che è stato selezionato (in effetti, che consentono di variare tra le esecuzioni di un'app che non è stato ricompilato anche - effettuato per un'esperienza di debug molto può sembrare sconcertante e frustrante).
+- È possibile esportare due metodi con la stessa firma di Objective-C. Anche in questo caso quello che viene chiamato da Objective-C è casuale, ma questo problema non è stato operazione tanto comune quanto quello precedente, principalmente perché l'unico modo in cui si verifica effettivamente questo bug è stato l'override del metodo gestito sfortunato.
+- Il set di metodi che è stato esportato è leggermente diverso tra compilazioni statiche e dinamiche.
+- Non funziona correttamente quando si esportano le classi generiche (quale implementazione generica esatta eseguita in fase di esecuzione sarebbe random, producendo un comportamento non determinato).
 
+## <a name="new-registrar-required-changes-to-bindings"></a>Nuovo programma di registrazione: ha richiesto modifiche alle associazioni
 
- <a name="required_modifications" />
-
-
-## <a name="new-registrar-required-changes-to-bindings"></a>Nuovo programma di registrazione: Le modifiche necessarie alle associazioni
-
-
-Le associazioni esistenti Objective-C potrebbero dover essere aggiornato per funzionare con il nuovo registar.
-
-Di seguito è riportato un elenco di modifiche che devono essere eseguite.
+In questa sezione vengono descritte le modifiche di associazioni che devono essere apportate per funzionare con il nuovo programma di registrazione.
 
 ### <a name="protocols-must-have-the-protocol-attribute"></a>Protocolli devono avere l'attributo [Protocol]
 
-Le implementazioni di protocolli è necessario ora l'attributo [Protocol] applicata ad essi.  Se non esegue questa operazione, sarà possibile errore del linker native come questa:
+Protocolli ora è necessario disporre di `[Protocol]` attributo. Se non eseguire questa operazione, sarà possibile un errore del linker nativo, ad esempio:
 
-```csharp
+```console
 Undefined symbols for architecture i386: "_OBJC_CLASS_$_ProtocolName", referenced from: ...
 ```
 
 ### <a name="selectors-must-have-a-valid-number-of-parameters"></a>I selettori devono avere un numero di parametri valido
 
-Tutti i selettori di numero di parametri è necessario indicare correttamente.  In precedenza, questi errori sono stati ignorati e potrebbe causare problemi di runtime.
+Tutti i selettori devono indicare in modo corretto numero di parametri. In precedenza, questi errori sono stati ignorati e potrebbe causare problemi di runtime.
 
-In breve, il numero di punti e deve corrispondere al numero di parametri.
+In breve, il numero di punti e deve corrispondere al numero di parametri:
 
-Ad esempio:
-
--  Senza parametri: "foo"
--  Un parametro: "foo:'
--  Due parametri: ' foo:parameterName2:'
-
+- Senza parametri: `foo`
+- Un parametro: `foo:`
+- Due parametri: `foo:parameterName2:`
 
 Di seguito sono gli usi:
 
@@ -243,18 +240,14 @@ void Display ();
 
 ### <a name="use-isvariadic-parameter-in-export"></a>Utilizzare il parametro IsVariadic nell'esportazione
 
-Le funzioni Variadic devono detto prima il relativo attributo di esportazione (in questo modo il selettore non è corretto sul numero di argomenti, ad esempio punto 2. precedente viene violato):
+Funzioni Variadic devono usare la `IsVariadic` argomento per il `[Export]` attributo:
 
 ```csharp
 [Export ("variadicMethod:", IsVariadic = true)]
 void VariadicMethod (NSObject first, IntPtr subsequent);
 ```
 
-### <a name="must-link-to-existing-symbols"></a>Deve essere collegata ai simboli esistenti
+### <a name="must-link-to-existing-symbols"></a>Devono essere collegate ai simboli esistenti
 
-Non è possibile associare le classi che non sono presenti nella libreria nativa.
-
-Se si tenta di associare le classi non esistente, si otterrà un errore del linker nativo.
-
-Ciò si verifica quando un'associazione già esistente per un certo tempo e il codice nativo è stato modificato durante tale intervallo di tempo in modo che una determinata classe nativa è stato rimossa o rinominata, mentre l'associazione non è stato aggiornato.
-
+Non è possibile associare le classi che non esistono nella libreria nativa.
+Se una classe è stato rimossa dal o rinominata nella libreria nativa, assicurarsi di aggiornare le associazioni in modo che corrispondano.

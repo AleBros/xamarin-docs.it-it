@@ -6,12 +6,12 @@ ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/07/2017
-ms.openlocfilehash: 813a913c2c2fb27456c9a489c73b16d5892c4b8d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/26/2018
+ms.openlocfilehash: 3ae2fb8110b7e0a5c6c85c489897acc1a03be8d8
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38997052"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin. Forms BoxView
@@ -35,13 +35,16 @@ Questo articolo tratta gli argomenti seguenti:
 
 ## <a name="setting-boxview-color-and-size"></a>Impostazione BoxView colore e dimensioni
 
-Molto spesso si imposteranno le seguenti tre proprietà di `BoxView`:
+In genere si imposteranno le proprietà seguenti di `BoxView`:
 
 - [`Color`](xref:Xamarin.Forms.BoxView.Color) Per impostare il relativo colore.
+- [`CornerRadius`](xref:Xamarin.Forms.BoxView.CornerRadius) Per impostare il raggio dell'angolo.
 - [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) Per impostare la larghezza del `BoxView` in unità indipendenti dal dispositivo.
 - [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) Per impostare l'altezza del `BoxView`.
 
 Il `Color` proprietà è di tipo `Color`; la proprietà può essere impostata su qualsiasi `Color` valore, inclusi i campi di sola lettura statici 141 di colori compreso tra in ordine alfabetico denominati `AliceBlue` a `YellowGreen`.
+
+Il `CornerRadius` proprietà è di tipo [ `CornerRadius` ](xref:Xamarin.Forms.CornerRadius); la proprietà può essere impostata su un singolo `double` uniform valore raggio d'angolo, o un oggetto `CornerRadius` struttura definita da quattro `double` valori che vengono applicati a l'in alto a sinistra, in alto a destra in basso a sinistra e basso a destra il `BoxView`.
 
 Il `WidthRequest` e `HeightRequest` proprietà svolgono un ruolo solo se il `BoxView` viene *non vincolato* nel layout. Ciò avviene quando il contenitore di layout deve conoscere l'elemento figlio della dimensione, ad esempio, quando la `BoxView` è un elemento figlio di una cella ridimensionato automaticamente nel `Grid` layout. Oggetto `BoxView` è non vincolato anche quando relativi `HorizontalOptions` e `VerticalOptions` delle proprietà vengono impostate sui valori diversi da `LayoutOptions.Fill`. Se il `BoxView` non è vincolata, ma la `WidthRequest` e `HeightRequest` non vengono impostate proprietà, quindi la larghezza o altezza sono impostate sui valori predefiniti di 40 unità, o circa 1 e 4 pollici nei dispositivi mobili.
 
@@ -58,6 +61,7 @@ Il [ **BasicBoxView** ](https://developer.xamarin.com/samples/xamarin-forms/BoxV
              x:Class="BasicBoxView.MainPage">
 
     <BoxView Color="CornflowerBlue"
+             CornerRadius="10"
              WidthRequest="160"
              HeightRequest="160"
              VerticalOptions="Center"

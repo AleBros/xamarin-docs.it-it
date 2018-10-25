@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: 12b677c8cc4a709a865d2eaee3ea44a6babf1b05
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: ce48c4d271167b657505c52518e79c955e53b02e
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38860667"
 ---
 # <a name="xamarin-live-reload"></a>Xamarin Live Reload
@@ -26,10 +26,12 @@ Dal momento che l'app viene compilato quando si usa Live Reload, funziona con tu
 
 Livereload è attualmente disponibile solo in Visual Studio 2017.
 
+[![Partecipare a chat in https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## <a name="requirements"></a>Requisiti
 
-* [Visual Studio 2017 versione 15.7 o successiva](https://visualstudio.microsoft.com/vs/) o versione successiva con il **sviluppo per dispositivi mobili con .NET** carico di lavoro.
-* [Xamarin. Forms 3.0.0 o successiva](https://www.nuget.org/packages/Xamarin.Forms/) o versione successiva.
+* [Visual Studio 2017 versione 15.7 o successiva](https://visualstudio.microsoft.com/vs/) con il **sviluppo per dispositivi mobili con .NET** carico di lavoro.
+* [Xamarin. Forms 3.0.0 o successiva](https://www.nuget.org/packages/Xamarin.Forms/).
 
 ## <a name="getting-started"></a>Introduzione
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Installare Xamarin Live Reload da Visual Studio Marketplace
@@ -121,6 +123,8 @@ No. In effetti, è possibile anche avviare tutte le destinazioni di applicazioni
 * Supportato solo in Visual Studio.
 * Il collegamento deve essere impostato su **non collegare** o **solo collegamento Framework SDK** 
 * Ricaricamento delle risorse a livello di app (vale a dire **app** o i dizionari risorse condivisi), spostamento di app viene reimpostato. Questo problema verrà risolto nella prossima versione di anteprima.
+* Ricaricamento del ContentView attualmente è necessario ricaricare la pagina che lo contiene. Questo problema verrà risolto nella prossima versione di anteprima.
+* Gli elementi contenenti AutomationId potrebbero verificarsi un errore di ricaricamento.
 * Modificando XAML durante il debug di UWP può causare un arresto anomalo del sistema di runtime. Soluzione alternativa: Utilizzare **Avvia senza eseguire debug (CTRL+F5)** invece di **Avvia debug (F5)**.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
