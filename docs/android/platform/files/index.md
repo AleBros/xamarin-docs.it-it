@@ -4,15 +4,15 @@ description: Questa Guida verrà descritto l'accesso ai file in xamarin. Android
 ms.prod: xamarin
 ms.assetid: FC1CFC58-B799-4DD6-8ED1-DE36B0E56856
 ms.technology: xamarin-android
-author: topgenorth
-ms.author: toopge
+author: conceptdev
+ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 5a4ddf606bb71bef10cf99660c198c5a8fdb1b69
-ms.sourcegitcommit: 9bb9e8297d3edd9a50585f4ba53c1b4f0bcd1d3e
+ms.openlocfilehash: 476f1c50a2f1a4199dfaf1996fc9c16615b40598
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212205"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116797"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Archiviazione dei file e l'accesso con xamarin. Android
 
@@ -24,7 +24,7 @@ ms.locfileid: "39212205"
 Questi raggruppamenti sono solo concettuali e non necessariamente fanno riferimento a una singola partizione o una directory nel dispositivo. Un dispositivo Android offrirà sempre partizione per l'archiviazione interna e risorsa di archiviazione esterna. È possibile che alcuni dispositivi potrebbero disporre di più partizioni che vengono considerati come risorsa di archiviazione esterna. Indipendentemente dalla partizione le API per la lettura, scrittura o la creazione di file è lo stesso. Esistono due set di API che un'applicazione xamarin. Android può usare per l'accesso al file:
 
 1. **Le API .NET (fornito da Mono e sottoposto a wrapping da xamarin. Android)** &ndash; includono il [helper di file system](~/essentials/file-system-helpers.md?context=xamarin/android) fornita da [Xamarin.Essentials](~/essentials/index.md?context=xamarin/android). Le API .NET di fornire la migliore compatibilità multipiattaforma e di conseguenza sarà l'obiettivo di questa Guida a queste API.
-1. **Accesso al file Java native API (fornito da Java e sottoposto a wrapping da xamarin. Android)** &ndash; Java fornisce la propria API per la lettura e scrittura di file. Queste rappresentano un'alternativa completamente accettabile per le API di .NET, ma sono specifiche di Android e non sono adatte per le app che dovranno essere multipiattaforma.
+1. **Accesso al file Java native API (fornito da Java e sottoposto a wrapping da xamarin. Android)** &ndash; Java fornisce la propria API per la lettura e scrittura di file. Queste rappresentano un'alternativa completamente accettabile per le API .NET, ma sono specifiche di Android e non sono adatte per le app che dovranno essere multipiattaforma.
 
 La lettura e scrittura su file è quasi identica in xamarin. Android come succede per qualsiasi altra applicazione .NET. L'app xamarin. Android determina il percorso del file che verrà modificato, quindi Usa standard .NET idiomi per l'accesso ai file. Poiché i percorsi effettivi in un archivio interno ed esterno possono variare da un dispositivo a altro o dalla versione di Android per la versione di Android non è consigliabile a livello di codice il percorso dei file. Usare invece le APIs Xamarin.Android per determinare il percorso dei file. In questo modo, le API .NET per la lettura e scrittura di file espone le API di Android native che consentiranno di determinare il percorso dei file nell'archiviazione interna ed esterna.
 
@@ -79,7 +79,7 @@ Per ottimizzare la condivisione del codice, le app xamarin. Android (o le app xa
 
 ### <a name="reading-or-writing-to-files-on-internal-storage"></a>La lettura o scrittura su file nella memoria interna
 
-Uno qualsiasi dei [API c# per la scrittura](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) in un file sono sufficienti; è sufficiente consiste nell'ottenere il percorso del file che si trova nella directory allocata all'applicazione. È consigliabile che la modalità asincrona le versioni delle API .NET consentono di ridurre al minimo eventuali problemi che potrebbero essere associare l'accesso ai file bloccare il thread principale.
+Uno qualsiasi dei [ C# API per la scrittura](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) in un file sono sufficienti; è sufficiente consiste nell'ottenere il percorso del file che si trova nella directory allocata all'applicazione. È consigliabile che la modalità asincrona le versioni delle API .NET consentono di ridurre al minimo eventuali problemi che potrebbero essere associare l'accesso ai file bloccare il thread principale.
 
 Questo frammento di codice è un esempio di scrivere un numero intero in un file di testo UTF-8 nella directory di archiviazione interna di un'applicazione:
 

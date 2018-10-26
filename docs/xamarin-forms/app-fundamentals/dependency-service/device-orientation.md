@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 620404a217b2e8a31192ae6613dcec023ac366cd
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 52b82033cbd6fe0e1a44f5729c815074852230bf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995641"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115419"
 ---
 # <a name="checking-device-orientation"></a>Verifica l'orientamento del dispositivo
 
@@ -29,7 +29,7 @@ L'applicazione usando `DependencyService` avrà la struttura seguente:
 ![](device-orientation-images/orientation-diagram.png "Struttura dell'applicazione DependencyService")
 
 > [!NOTE]
-> È possibile rilevare se il dispositivo è in orientamento verticale o orizzontale nel codice condiviso, come illustrato in [dispositivo Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation). Il metodo descritto in questo articolo Usa funzionalità native per ottenere ulteriori informazioni sull'orientamento, ad esempio se il dispositivo è capovolto.
+> È possibile rilevare se il dispositivo è in orientamento verticale o orizzontale nel codice condiviso, come illustrato in [orientamento del dispositivo](~/xamarin-forms/user-interface/layouts/device-orientation.md#Reacting_to_Changes_in_Orientation). Il metodo descritto in questo articolo Usa funzionalità native per ottenere ulteriori informazioni sull'orientamento, ad esempio se il dispositivo è capovolto.
 
 <a name="Creating_the_Interface" />
 
@@ -215,7 +215,7 @@ public MainPage ()
 }
 ```
 
-Esecuzione di questa applicazione su iOS, Android o le piattaforme Windows e premendo il pulsante genererà il testo del pulsante aggiornamento con l'orientamento del dispositivo.
+Esecuzione di questa applicazione su iOS, Android o le piattaforme Windows e premendo il pulsante verrà generato il testo del pulsante aggiornamento con l'orientamento del dispositivo.
 
 ![](device-orientation-images/orientation.png "Esempio di orientamento dei dispositivi")
 

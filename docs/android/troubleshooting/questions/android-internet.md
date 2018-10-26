@@ -1,33 +1,33 @@
 ---
-title: Perché la compilazione di Android versione non può connettersi a Internet?
+title: Perché non è possibile connettere build di versione Android a Internet?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A6FE770B-A19A-4BF8-95E9-2CF880D4AFC5
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 7f956defd0243e1927746a53e6b3b1b05d98f8d2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cd27d5c884086cd0fade4364851039fd0cd915a0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762084"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117908"
 ---
-# <a name="why-cant-my-android-release-build-connect-to-the-internet"></a>Perché la compilazione di Android versione non può connettersi a Internet?
+# <a name="why-cant-my-android-release-build-connect-to-the-internet"></a>Perché non è possibile connettere build di versione Android a Internet?
 
 ## <a name="cause"></a>Causa
 
-La causa più comune di questo problema è che il **INTERNET** autorizzazione viene inclusa automaticamente in una build di debug, ma è necessario impostare manualmente per una build di rilascio. In questo modo viene utilizzato l'autorizzazione di Internet per consentire al debugger di connettersi al processo, come descritto per "DebugSymbols" [qui](~/android/deploy-test/building-apps/build-process.md).
+La causa più comune di questo problema è che il **INTERNET** autorizzazione viene automaticamente incluso in una build di debug, ma deve essere impostato manualmente per una build di rilascio. Poiché l'autorizzazione Internet viene utilizzato per consentire al debugger di connettersi al processo, come descritto per "DebugSymbols" [qui](~/android/deploy-test/building-apps/build-process.md).
 
 
 ## <a name="fix"></a>Correzione
 
-Per risolvere il problema, è possibile richiedere l'autorizzazione di Internet nel manifesto dell'Android. Questa operazione può essere eseguita tramite l'editor del manifesto o sourcecode del manifesto:
+Per risolvere il problema, è possibile richiedere l'autorizzazione Internet nel manifesto Android. Questa operazione può essere eseguita tramite l'editor del manifesto o sourcecode del manifesto:
 
--   Correggere nell'Editor: nel progetto Android, passare a **proprietà -> AndroidManifest.xml -> autorizzazioni obbligatorie** e controllare **Internet**
+-   Correggere nell'Editor: nel progetto Android, passare a **proprietà -> androidmanifest. Xml -> autorizzazioni necessarie** e controllare **Internet**
 
--   Correggere Sourcecode: aprire il AndroidManifest in un editor di origine e aggiungere il tag di autorizzazione all'interno di `<Manifest>` tag:
+-   Correzione in Sourcecode: aprire il AndroidManifest in un editor di origine e aggiungere il tag di autorizzazione all'interno di `<Manifest>` tag:
 
     ```xml
     <Manifest>

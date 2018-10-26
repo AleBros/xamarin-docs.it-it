@@ -1,46 +1,46 @@
 ---
-title: Denominazione dei parametri con Javadoc
-description: In questo articolo viene illustrato come recuperare i nomi dei parametri in un progetto di associazione Java utilizzando Javadoc generato dal progetto Java.
+title: Denominazione di parametri con Javadoc
+description: Questo articolo illustra come ripristinare i nomi dei parametri in un progetto di Binding di linguaggio con Javadoc generato dal progetto Java.
 ms.prod: xamarin
 ms.assetid: 59E8EF16-1322-486A-BB16-353804B77356
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/20/2017
-ms.openlocfilehash: 7517e46c5b66123dc4e12fb5562c59f569f249aa
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e394377043953a297afed36a3ce0747a3e6d1512
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30766894"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104414"
 ---
-# <a name="naming-parameters-with-javadoc"></a>Denominazione dei parametri con Javadoc
+# <a name="naming-parameters-with-javadoc"></a>Denominazione di parametri con Javadoc
 
-_In questo articolo viene illustrato come recuperare i nomi dei parametri in un progetto di associazione Java utilizzando Javadoc generato dal progetto Java._
+_Questo articolo illustra come ripristinare i nomi dei parametri in un progetto di Binding di linguaggio con Javadoc generato dal progetto Java._
 
 
 ## <a name="overview"></a>Panoramica
 
-Quando si associa una raccolta esistente di Java, alcuni metadati sull'API associata vengono persi. In particolare i nomi dei parametri ai metodi. I nomi dei parametri verranno visualizzati come `p0`, `p1`e così via. Infatti, il linguaggio `.class` file non mantengono i nomi dei parametri utilizzati nel codice sorgente Java. 
+Quando si associa una libreria Java esistente, alcuni metadati sull'API associata vengono perso. In particolare i nomi dei parametri a metodi. I nomi dei parametri verranno visualizzati come `p0`, `p1`e così via. Infatti, il linguaggio `.class` file non conservano i nomi dei parametri usati nel codice sorgente Java. 
 
-Un progetto di associazione xamarin Java è possibile specificare i nomi di parametro se ha accesso al codice HTML di Javadoc dalla libreria originale. 
+Un progetto di associazione di xamarin. Android Java può fornire i nomi dei parametri se ha accesso al codice HTML Javadoc dalla libreria originale. 
 
-## <a name="integrating-javadoc-html-into-a-java-binding-project"></a>Integrazione di Javadoc HTML in un progetto di associazione di Java
+## <a name="integrating-javadoc-html-into-a-java-binding-project"></a>L'integrazione di Javadoc HTML in un linguaggio di progetto di associazione
 
-Integrazione di Javadoc HTML in un progetto Java Binding è un processo manuale costituita da quanto segue: 
+L'integrazione di HTML Javadoc in un progetto Java di associazione è un processo manuale costituito la procedura seguente: 
 
-1.  Scaricare la documentazione Java per la libreria
+1.  Scaricare la documentazione Java relativa per la libreria
 2.  Modificare il `.csproj` file e aggiungere un `<JavaDocPaths>` proprietà:
 3.  Pulire e ricompilare il progetto
 
-Al termine, i nomi dei parametri di Java originale deve essere presente nelle API associate da un progetto di associazione del linguaggio. 
+Al termine, i nomi dei parametri di Java originale deve essere presente nelle API associate da un progetto Java di associazione. 
 
 
 > [!NOTE]
-> È un notevole della varianza nell'output JavaDoc. Il file con estensione File JAR associazione toolchain non supporta ogni permutazione possibili singolo e di conseguenza alcuni parametri potrebbero non essere denominati in modo corretto.
+> È presente una grande quantità di varianza nell'output di JavaDoc. Il file con estensione JAR toolchain di associazione non supporta ogni permutazione possibili singolo e, di conseguenza, alcuni parametri potrebbero non essere denominati in modo corretto.
 
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo trattato come usare Javadoc in un progetto di associazione del linguaggio per fornire i nomi dei parametri di significato per le API associate. 
+Questo articolo illustrato come utilizzare Javadoc in un progetto di Binding Java per fornire i nomi dei parametri di significato per le API associate. 
 

@@ -6,12 +6,12 @@ ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: d005d6c5e1dcfe7e9bcff44b308cea0ce7ab73e9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 213632ae26ae60797e39bc718a95057fb7238609
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998654"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113352"
 ---
 # <a name="available-assemblies"></a>Assembly disponibili
 
@@ -21,16 +21,17 @@ Piattaforme Xamarin non sono ABI compatibile con gli assembly esistenti compilat
 
 Le applicazioni xamarin. Mac possono essere compilate in tre modalità: una che usa Xamarin di curata profilo per dispositivi mobili xamarin. Mac .NET 4.5 Framework che consente all'utente di destinazione gli assembly desktop completa esistenti e uno non supportato che usa l'API .NET è disponibile in un sistema Mono installazione. Per altre informazioni, vedere la [Framework di destinazione](~/mac/platform/target-framework.md) documentazione.
 
-
 ## <a name="net-standard-libraries"></a>Librerie .NET standard
 
 Oltre a iOS, Android e Mac, associazioni, Xamarin possono utilizzare i progetti [librerie .NET Standard](~/cross-platform/app-fundamentals/net-standard.md).
 
 ## <a name="portable-class-libraries"></a>Librerie di classi portabili
- 
+
 Progetti Xamarin possono anche usare [librerie di classi portabile .NET](~/cross-platform/app-fundamentals/pcl.md), anche se questa tecnologia è stata deprecata a favore di .NET Standard.
 
 ## <a name="supported-assemblies"></a>Assembly supportati
+
+Questi sono gli assembly disponibile nel **gestione riferimenti > assembly > Framework** (Visual Studio 2017) e **Modifica riferimenti > pacchetti** (Visual Studio per Mac) e la compatibilità con le piattaforme di Xamarin.
 
 > [!div class="mx-tdCol2BreakAll"]
 > |Assembly|Compatibilità con le API|Xamarin iOS|Xamarin Android|Xamarin Mac|
@@ -78,4 +79,4 @@ Progetti Xamarin possono anche usare [librerie di classi portabile .NET](~/cross
 > |Xamarin.Android.&#8203;NUnitLite.dll| | |✓| |
 > |Mono.CompilerServices.&#8203;SymbolWriter.dll|Writer di compilatori.| | |✓|
 > |Xamarin.Mac.dll| | | |✓|
-> |System.&#8203;Drawing.dll|System. Drawing API - solo l'API classica. System. Drawing non è supportata nell'API unificata di xamarin. Mac .NET 4.5 o Framework per dispositivi mobili. Può essere aggiunto il supporto di System. Drawing per iOS e OS X tramite il [sysdrawing coregraphics](https://github.com/mono/sysdrawing-coregraphics) libreria|✓| |✓|
+> |System.&#8203;Drawing.dll|System. Drawing non è supportata nell'API unificata di xamarin. Mac, di .NET 4.5 o Framework per dispositivi mobili. Può essere aggiunto il supporto di System. Drawing per iOS e macOS usando il [sysdrawing coregraphics](https://github.com/mono/sysdrawing-coregraphics) libreria|✓| |✓|

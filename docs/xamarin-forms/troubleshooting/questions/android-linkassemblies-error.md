@@ -1,5 +1,5 @@
 ---
-title: Errore di compilazione Android-LinkAssemblies l'attività non è riuscita
+title: "Errore di compilazione Android: LinkAssemblies l'attività non è riuscita"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: EB3BE685-CB72-48E3-89D7-C845E76B9FA2
@@ -7,32 +7,32 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: de6e0b66cac688955d27ba2d0165d5a059d36c38
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7360ee9064049bcebfd88f0cd36b5938d5337be3
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30789540"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105285"
 ---
-# <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Errore di compilazione Android-LinkAssemblies l'attività non è riuscita
+# <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Errore di compilazione Android: LinkAssemblies l'attività non è riuscita
 
-Si potrebbe visualizzare un messaggio di errore `The "LinkAssemblies" task failed unexpectedly` quando la compilazione di un progetto xamarin che utilizza form. Ciò si verifica quando il linker è attivo (in genere su un *versione* compilazione per ridurre le dimensioni del pacchetto dell'applicazione); e si verifica perché il dispositivo Android non vengono aggiornato per il framework più recente. (Ulteriori informazioni: [xamarin. Forms per i requisiti di Android](~/xamarin-forms/get-started/installation.md#android))
+Si può vedere un messaggio di errore `The "LinkAssemblies" task failed unexpectedly` quando la compilazione di un progetto xamarin. Android che utilizza form. Ciò si verifica quando il linker è attivo (in genere in un *rilascio* compilazione per ridurre le dimensioni del pacchetto dell'app); e ciò avviene perché gli obiettivi di Android non sono aggiornati per il framework più recente. (Altre informazioni: [xamarin. Forms per i requisiti di Android](~/xamarin-forms/get-started/installation.md#android))
 
-La soluzione per questo problema consiste nell'assicurarsi di avere le ultime versioni supportate di Android SDK e impostare il **Framework di destinazione** a **utilizzare più recente installato platform**. È inoltre consigliabile impostare il **destinazione Android versione** per **versione Framework di destinazione utilizzare** e **versione minima di Android** a 15 API o versione successiva. Questa viene considerata la configurazione supportata.
+La soluzione per questo problema consiste nell'assicurarsi di disporre le ultime versioni supportate di Android SDK e impostare il **Framework di destinazione** al **Usa la piattaforma installata più recente**. È inoltre consigliabile impostare il **la versione Android di destinazione** a **versione Framework di destinazione usare** e il **versione minima di Android** per API 15 o versione successiva. Questa viene considerata la configurazione supportata.
 
 ## <a name="setting-in-visual-studio-for-mac"></a>Impostazione in Visual Studio per Mac
 
 1.  Fare clic sul progetto Android.
 2.  Passare a **compilazione > generale > Framework di destinazione**.
-3.  Impostare il **Framework di destinazione: utilizzare più recente installato platform**.
-4.  In opzioni del progetto, passare a **compilazione > applicazione Android**.
-5.  Impostare il **minimo Android versione** a livello di API 15 o versione successiva & il **versione di destinazione Android** per **automatico - versione di framework di destinazione utilizzare**.
+3.  Impostare il **Framework di destinazione: Usa la piattaforma installata più recente**.
+4.  Ancora nelle opzioni del progetto, passare a **compilazione > applicazione Android**.
+5.  Impostare il **Minimum Android version** a livello API 15 o successivo & la **Target Android version** a **automatico - versione di framework di destinazione usare**.
 
 ## <a name="setting-in-visual-studio"></a>Impostazione in Visual Studio
 
 1.  Fare clic sul progetto Android.
 2.  Passare a **applicazione** nelle opzioni del progetto.
-3.  Impostare il **compila con la versione Android** & **versione di destinazione Android** impostazioni **piattaforma più recente di utilizzare** / **utilizzo Compila con la versione SDK**.
-4.  Impostare il **minimo Android di destinazione** impostando su API 15 o versioni successive.
+3.  Impostare il **la compilazione con la versione di Android** & **Target Android version** impostazioni **Usa la piattaforma più recente** / **usare La compilazione con versione del SDK**.
+4.  Impostare il **minima di Android di destinazione** impostando su API 19 o superiore.
 
-Dopo avere aggiornato, tali impostazioni, pulire e ricompilare il progetto per verificare che le modifiche vengono prelevate.
+Dopo avere aggiornato queste impostazioni, per pulire e ricompilare il progetto per assicurarsi che le modifiche vengono prelevate.

@@ -1,253 +1,253 @@
 ---
-title: Animazione di CCAction
-description: La classe CCAction semplifica l'aggiunta di animazioni CocosSharp giochi. Tali animazioni utilizzabile per implementare la funzionalità o per aggiungere polacco.
+title: Animazione con CCAction
+description: La classe CCAction semplifica l'aggiunta di animazioni ai giochi CocosSharp. Queste animazioni utilizzabile per implementare funzionalità o per aggiungere il polacco.
 ms.prod: xamarin
 ms.assetid: 74DBD02A-6F10-4104-A61B-08CB49B733FB
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: b6209816f741423f40945a0fe4391fe921cb35de
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: c486bb2e78579360e0f935219cd82958fedee34b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33921787"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120970"
 ---
-# <a name="animating-with-ccaction"></a>Animazione di CCAction
+# <a name="animating-with-ccaction"></a>Animazione con CCAction
 
-_La classe CCAction semplifica l'aggiunta di animazioni CocosSharp giochi. Tali animazioni utilizzabile per implementare la funzionalità o per aggiungere polacco._
+_La classe CCAction semplifica l'aggiunta di animazioni ai giochi CocosSharp. Queste animazioni utilizzabile per implementare funzionalità o per aggiungere il polacco._
 
-`CCAction` è una classe di base che può essere usata per animare oggetti CocosSharp. Questa guida illustra incorporato `CCAction` implementazioni per le attività comuni, ad esempio il posizionamento, scalabilità e la rotazione. Esamina inoltre come creare le implementazioni personalizzate ereditando dalla `CCAction`.
+`CCAction` è una classe di base che può essere usata per animare oggetti CocosSharp. Questa guida illustra incorporati `CCAction` implementazioni per le attività comuni, ad esempio il posizionamento, il ridimensionamento e rotazione. Descrive anche come creare implementazioni personalizzate ereditando da `CCAction`.
 
-Questa guida viene utilizzato un progetto denominato **ActionProject** che [può essere scaricata qui](https://developer.xamarin.com/samples/mobile/CCAction). Questa Guida usa la `CCDrawNode` (classe), come illustrato nel [geometria di disegno con CCDrawNode](~/graphics-games/cocossharp/ccdrawnode.md) Guida.
+Questa Guida usa un progetto denominato **ActionProject** quale [può essere scaricato da qui](https://developer.xamarin.com/samples/mobile/CCAction). Questa Guida usa la `CCDrawNode` classe, che viene trattato nel [disegno geometria con CCDrawNode](~/graphics-games/cocossharp/ccdrawnode.md) Guida.
 
 
-## <a name="running-the-actionproject"></a>Esecuzione di ActionProject
+## <a name="running-the-actionproject"></a>Esegue il ActionProject
 
-**ActionProject** è una soluzione CocosSharp che può essere compilata per iOS e Android. Che svolge entrambi come un esempio di codice per l'utilizzo di `CCAction` classe e come una demo in tempo reale di comune `CCAction` implementazioni.
+**ActionProject** è una soluzione di CocosSharp che può essere compilata per iOS e Android. Viene usata sia come un esempio di codice per l'uso di `CCAction` classi e come demo in tempo reale di common `CCAction` implementazioni.
 
-Quando si esegue, ActionProject Visualizza tre `CCLabel` istanze a sinistra dello schermo e un oggetto visivo creato da due `CCDrawNode` istanze per visualizzare le varie azioni:
+Quando si esegue, ActionProject Visualizza tre `CCLabel` istanze a sinistra della schermata e un oggetto visivo creato in base al due `CCDrawNode` istanze per visualizzare le varie azioni:
 
-![](ccaction-images/image1.png "ActionProject Visualizza tre istanze CCLabel a sinistra dello schermo e un oggetto visivo disegnate da due istanze di CCDrawNode per visualizzazione le varie azioni")
+![](ccaction-images/image1.png "ActionProject Visualizza tre istanze CCLabel a sinistra della schermata e un oggetto visivo disegnato da due istanze CCDrawNode per visualizzare le varie azioni")
 
-Le etichette a sinistra indicano il tipo di `CCAction` verrà creato per una maggiore precisione sullo schermo. Per impostazione predefinita, il **posizione** valore è selezionato, determinando un `CCMove` azione viene creata e applicata per il cerchio rosso:
+Le etichette a sinistra indicano il tipo di `CCAction` verrà creata quando toccando sullo schermo. Per impostazione predefinita, il **posizione** valore è selezionato, causando un `CCMove` azione viene creata e applicata per il cerchio rosso:
 
-![](ccaction-images/image2.gif "Il valore della posizione è selezionato, risultante in un'azione CCMove viene creato e applicato per il cerchio rosso")
+![](ccaction-images/image2.gif "Il valore di posizione è selezionato, generando un'azione CCMove viene creato e applicato per il cerchio rosso")
 
-Fare clic le etichette a sinistra per modificare il tipo di `CCAction` viene eseguita sul cerchio. Ad esempio, facendo clic su di **posizione** etichetta deve scorrere i diversi valori che possono essere modificati:
+Scegliendo le etichette a sinistra viene modificato il tipo di `CCAction` viene eseguita sul cerchio. Ad esempio, facendo clic sui **posizione** etichetta deve scorrere i diversi valori che possono essere modificati:
 
 ![](ccaction-images/image3.gif "Fare clic sull'etichetta di posizione deve scorrere i diversi valori che possono essere modificati")
 
-## <a name="common-variable-changing-ccaction-classes"></a>Classi di CCAction Modifica variabile comuni
+## <a name="common-variable-changing-ccaction-classes"></a>Classi di CCAction comuni la modifica variabile
 
-Il **ActionProject** utilizza il seguente `CCAction`-eredità, che fanno parte di CocosSharp:
+Il **ActionProject** utilizza il seguente `CCAction`-eredità delle classi che fanno parte di CocosSharp:
 
- - `CCMoveTo` : Modifica una `CCNode` dell'istanza `Position` proprietà
- - `CCScaleTo` : Modifica una `CCNode` dell'istanza `Scale` proprietà
- - `CCRotateTo` : Modifica una `CCNode` dell'istanza `Rotation` proprietà
+ - `CCMoveTo` -Viene modificato un `CCNode` dell'istanza `Position` proprietà
+ - `CCScaleTo` -Viene modificato un `CCNode` dell'istanza `Scale` proprietà
+ - `CCRotateTo` -Viene modificato un `CCNode` dell'istanza `Rotation` proprietà
 
-Questa guida si riferisce a queste azioni come *Modifica variabile*, il che significa che queste influiscono direttamente sulla variabile del `CCNode` che vengono aggiunti a. Altri tipi di azioni sono detti *interpolazione* azioni, che vengono descritti più avanti in questa Guida.
+Questa guida fa riferimento a queste azioni come *Modifica variabile*, il che significa che cui influisce direttamente sulla variabile del `CCNode` che vengono aggiunti a. Altri tipi di azioni sono dette *interpolazione* azioni che vengono analizzate più avanti in questa Guida.
 
-Il **ActionProject** illustra che lo scopo di queste azioni consiste nella modifica di una variabile nel tempo. In particolare, questi `CCActions` costruttori accettano due argomenti: tempo da eseguire e il valore da assegnare. Il frammento di codice seguente viene illustrato come creare i tre tipi di azioni:
+Il **ActionProject** dimostra che lo scopo di queste azioni consiste nel modificare una variabile nel tempo. In particolare, questi `CCActions` costruttori accettano due argomenti: tempo da eseguire e il valore da assegnare. Il frammento di codice seguente viene illustrato come vengono creati tre tipi di azioni:
 
 
 ```csharp
-switch (VariableOptions [currentVariableIndex])
+switch (VariableOptions [currentVariableIndex])
 {
-    case "Position":
-        coreAction = new CCMoveTo(timeToTake, touch.Location);
+    case "Position":
+        coreAction = new CCMoveTo(timeToTake, touch.Location);
 
-        break;
-    case "Scale":
-        var distance = CCPoint.Distance (touch.Location, drawNodeRoot.Position);
-        var desiredScale = distance / DefaultCircleRadius;
-        coreAction = new CCScaleTo(timeToTake, desiredScale);
+        break;
+    case "Scale":
+        var distance = CCPoint.Distance (touch.Location, drawNodeRoot.Position);
+        var desiredScale = distance / DefaultCircleRadius;
+        coreAction = new CCScaleTo(timeToTake, desiredScale);
 
-        break;
-    case "Rotation":
-        float differenceY = touch.Location.Y - drawNodeRoot.PositionY;
-        float differenceX = touch.Location.X - drawNodeRoot.PositionX;
+        break;
+    case "Rotation":
+        float differenceY = touch.Location.Y - drawNodeRoot.PositionY;
+        float differenceX = touch.Location.X - drawNodeRoot.PositionX;
 
-        float angleInDegrees = -1 * CCMathHelper.ToDegrees(
-            (float)System.Math.Atan2(differenceY, differenceX));
+        float angleInDegrees = -1 * CCMathHelper.ToDegrees(
+            (float)System.Math.Atan2(differenceY, differenceX));
 
-        coreAction = new CCRotateTo (timeToTake, angleInDegrees);
+        coreAction = new CCRotateTo (timeToTake, angleInDegrees);
 
-        break; 
+        break; 
 ...
 }
 ```
 
-Una volta creata l'azione, viene aggiunto a un CCNode come indicato di seguito:
+Dopo aver creato l'azione, viene aggiunto a un CCNode come indicato di seguito:
 
 
 ```csharp
-nodeToAddTo.AddAction (coreAction); 
+nodeToAddTo.AddAction (coreAction); 
 ```
 
-`AddAction` Avvia il `CCAction` il comportamento dell'istanza che verrà eseguita automaticamente la logica frame dopo cornice fino al completamento.
+`AddAction` Avvia il `CCAction` il comportamento dell'istanza che verrà eseguita automaticamente la logica una cornice dopo fino al completamento.
 
-Ognuno dei tipi elencati in precedenza termina con la parola *a* vale a dire che il `CCAction` modificherà il `CCNode` in modo che il valore dell'argomento rappresenta lo stato finale quando ha terminato l'azione. Ad esempio, la creazione di un `CCMoveTo` con una posizione di X = 100 e Y = 200 comporta il `CCNode` dell'istanza `Position` viene impostata su X = 100, Y = 200 alla fine del tempo specificato, indipendentemente dal `CCNode` posizione iniziale dell'istanza.
+Ognuno dei tipi elencati in precedenza termina con la parola *al* vale a dire il `CCAction` modificherà il `CCNode` in modo che il valore dell'argomento rappresenta lo stato finale quando ha terminato l'azione. Ad esempio, la creazione di un `CCMoveTo` con una posizione di X = Y e 100 = 200 risultati nel `CCNode` dell'istanza `Position` viene impostata su X = 100, Y = 200 alla fine del tempo specificato, indipendentemente dal `CCNode` posizione iniziale dell'istanza.
 
-Ogni "classe a" dispone anche di una versione "Da", che verrà aggiunto il valore dell'argomento per il valore corrente nel `CCNode`. Ad esempio, la creazione di un `CCMoveBy` con una posizione di X = 100 e Y = 200 comporterà la `CCNode` istanza spostato nelle unità di destra 100 e 200 unità rispetto alla posizione in cui si trovava quando l'azione è stata avviata.
+Ogni "A" classe ha anche una versione "Da", che consentirà di aggiungere il valore dell'argomento per il valore corrente nella `CCNode`. Ad esempio, la creazione di un `CCMoveBy` con una posizione di X = Y e 100 = 200 comporterà il `CCNode` istanza spostata alle unità di destra 100 e 200 unità dalla posizione in cui è stato avviato l'azione.
 
 
-## <a name="easing-actions"></a>Le azioni di interpolazione
+## <a name="easing-actions"></a>Azioni di interpolazione
 
-Per impostazione predefinita, verranno eseguite azioni di modifica variabile *l'interpolazione lineare* : l'azione verrà spostato verso il valore desiderato a una velocità costante. Se nell'interpolazione *posizione* in modo lineare, l'oggetto mobile verrà immediatamente avviare e arrestare lo spostamento all'inizio e alla fine dell'azione e la velocità verrà rimangono costante durante l'esecuzione dell'azione. 
+Per impostazione predefinita, verranno eseguite azioni di modifica variabile *interpolazione lineare* : l'azione verrà spostato verso il valore desiderato a una velocità costante. Se interpolazione *posizione* in modo lineare, l'oggetto mobile verrà immediatamente avviare e arrestare lo spostamento all'inizio e alla fine dell'azione e la velocità verrà mantenuto costante come l'azione viene eseguita. 
 
-L'interpolazione lineare non è meno jarring e aggiunge un elemento di polacco, in modo CocosSharp offre un'ampia gamma di azioni che possono essere utilizzate per modificare le azioni di modifica variabile di interpolazione.
+L'interpolazione non lineare è meno jarring e aggiunge un elemento di polacco, in modo CocosSharp offre un'ampia gamma di azioni che possono essere utilizzate per modificare azioni di modifica variabile di interpolazione.
 
-Nel **ActionProject** esempio, è possibile passare tra questi tipi di azioni interpolazione facendo clic sulla seconda etichetta (che per impostazione predefinita **<None>**):
+Nel **ActionProject** esempio, è possibile passare tra questi tipi di interpolazione azioni facendo clic sull'etichetta della seconda (che per impostazione predefinita **<None>**):
 
-![](ccaction-images/image4.gif "L'utente può passare tra questi tipi di azioni interpolazione facendo clic sulla seconda etichetta")
+![](ccaction-images/image4.gif "L'utente può passare tra questi tipi di interpolazione azioni facendo clic sull'etichetta della seconda")
 
-Le azioni di interpolazione sono particolarmente efficace perché questi non sono legati a qualsiasi azione di impostazione di variabile particolare. Ciò significa che la stessa azione di interpolazione può essere utilizzata per assegnare posizione, rotazione, ridimensionamento o azioni personalizzate (come verrà illustrato più avanti in questa Guida).
+Le azioni di interpolazione sono particolarmente potente perché questi non sono legati a qualsiasi azione variabile-impostazione particolare. Ciò significa che la stessa azione di interpolazione può essere utilizzata per assegnare posizione, rotazione, ridimensionamento o azioni personalizzate (come verrà illustrato più avanti in questa Guida).
 
-Azioni interpolazione eseguire il wrapping di operazioni di impostazione di variabile (a condizione che l'azione di impostazione di variabile eredita da `CCFiniteTimeAction`) mediante l'accettazione di un'azione di impostazione di variabile come argomento nei propri costruttori.
+Azioni interpolazione eseguire il wrapping di operazioni di impostazione di variabile (purché l'azione di impostazione di variabile eredita da `CCFiniteTimeAction`) mediante l'accettazione di un'azione di impostazione di variabile come argomento nei propri costruttori.
 
 Ad esempio, se le etichette sono impostate su **posizione**, **CCEaseElastic**, quindi il codice seguente viene eseguito quando viene rilevato un tocco (si noti che il codice è stato omesso per evidenziare le righe pertinenti):
 
 
 ```csharp
-CCFiniteTimeAction coreAction = null; 
+CCFiniteTimeAction coreAction = null; 
 ...
-coreAction = new CCMoveTo(timeToTake, touch.Location); 
+coreAction = new CCMoveTo(timeToTake, touch.Location); 
 ...
-CCAction easing = null; 
+CCAction easing = null; 
 ...
-easing = new CCEaseSineOut (coreAction); 
+easing = new CCEaseSineOut (coreAction); 
 ...
-nodeToAddTo.AddAction (easing); 
+nodeToAddTo.AddAction (easing); 
 ```
 
-Come mostrato dall'applicazione, l'interpolazione stesso esatto può essere applicata a altre operazioni di impostazione di variabile, ad esempio `CCRotateTo`:
+Come mostrato dall'applicazione, l'interpolazione stessa esatta è applicabile alle altre azioni di impostazione di variabile, ad esempio `CCRotateTo`:
 
-![](ccaction-images/image5.gif "Interpolazione stesso esatto può essere applicata ad altre azioni di impostazione di variabile, ad esempio CCRotateTo")
+![](ccaction-images/image5.gif "L'interpolazione stessa esatta è applicabile alle altre azioni di impostazione di variabile, ad esempio CCRotateTo")
 
 
 ## <a name="easing-in-out-and-inout"></a>In, Out e InOut di interpolazione
 
-Tutte le azioni interpolazione hanno `In`, `Out`, o `InOut` aggiunto al tipo di interpolazione. Questi termini si riferiscono a quando viene applicata l'interpolazione: `In` significa interpolazione applicata all'inizio, `Out` significa alla fine, e `InOut` significa sia all'inizio e fine.
+Disporre di tutte le azioni di interpolazione `In`, `Out`, o `InOut` aggiunto al tipo di interpolazione. Questi termini si riferiscono a quando viene applicata l'interpolazione: `In` interpolazione verrà applicato all'inizio, `Out` significa che alla fine, e `InOut` significa che sia all'inizio e fine.
 
-Un `In` interpolazione azione influirà il modo in cui una variabile viene applicata l'intera interpolazione (entrambi all'inizio e alla fine), ma in genere le caratteristiche più facilmente riconoscibile dell'azione di interpolazione avrà luogo all'inizio. Analogamente, `Out` interpolazione azioni sono caratterizzate dal relativo comportamento alla fine di interpolazione. Ad esempio, `CCEaseBounceOut` verrà creato un oggetto saranno rimbalzati alla fine dell'azione.
+Un `In` interpolazione azione influirà sul modo in tutta l'interpolazione intera, sia all'inizio e alla fine, viene applicata una variabile, ma in genere le caratteristiche più facilmente riconoscibile dell'azione di interpolazione verrà eseguita la ricerca dall'inizio. Analogamente, `Out` interpolazione azioni sono caratterizzate da loro comportamento alla fine di interpolazione. Ad esempio, `CCEaseBounceOut` comporterà un oggetto rimbalza alla fine dell'azione.
 
 
 ### <a name="out"></a>Out
 
-`Out` in genere interpolazione applica le modifiche più evidenti alla fine di interpolazione. Ad esempio, `CCEaseExponentialOut` rallenterà il tasso di variazione della variabile di modifica quando si avvicina il valore di destinazione:
+`Out` in genere di interpolazione applica le modifiche più evidenti alla fine di interpolazione. Ad esempio, `CCEaseExponentialOut` rallenterà il tasso di variazione della variabile di modifica quando si avvicina il valore di destinazione:
 
 ![](ccaction-images/image6.gif "CCEaseExponentialOut rallenterà il tasso di variazione della variabile di modifica quando si avvicina il valore di destinazione")
 
 
 ### <a name="in"></a>In
 
-`In` interpolazione in genere si applica la modifica più significativa apportata all'inizio dell'interpolazione. Ad esempio, `CCEaseExponentialIn` sposterà più lenta all'inizio dell'azione:
+`In` interpolazione a livello generale si applica la modifica più evidente all'inizio dell'interpolazione. Ad esempio, `CCEaseExponentialIn` sposterà più lentamente all'inizio dell'azione:
 
-![](ccaction-images/image7.gif "CCEaseExponentialIn sposterà più lenta all'inizio dell'azione")
+![](ccaction-images/image7.gif "CCEaseExponentialIn sposterà più lentamente all'inizio dell'azione")
 
 
 ### <a name="inout"></a>InOut
 
-`InOut` in genere si applica le modifiche più evidenti sia all'inizio e fine. `InOut` interpolazione è in genere simmetrica. Ad esempio, `CCEaseExponentialInOut` sposterà lenta all'inizio e alla fine dell'azione:
+`InOut` si applica in genere le modifiche più evidenti, sia all'inizio e fine. `InOut` è in genere simmetrica di interpolazione. Ad esempio, `CCEaseExponentialInOut` sposterà lentamente all'inizio e alla fine dell'azione:
 
-![](ccaction-images/image8.gif "CCEaseExponentialInOut sposterà lenta all'inizio e alla fine dell'azione")
+![](ccaction-images/image8.gif "CCEaseExponentialInOut sposterà lentamente all'inizio e alla fine dell'azione")
 
 
 ## <a name="implementing-a-custom-ccaction"></a>Implementazione di un CCAction personalizzato
 
-Tutte le classi che è stata illustrata finora sono inclusi in CocosSharp per fornire funzionalità comuni. Custom `CCAction` le implementazioni possono fornire una maggiore flessibilità. Ad esempio, un `CCAction` che controlla il rapporto di riempimento di una barra di esperienza può essere utilizzato in modo che la barra di esperienza aumenta in modo uniforme ogni volta che l'utente guadagna esperienza.
+Tutte le classi illustrati finora sono inclusi in CocosSharp per fornire funzionalità comuni. Custom `CCAction` implementazioni possono fornire una maggiore flessibilità. Ad esempio, un `CCAction` che controlla il rapporto riempito di un indicatore di esperienza può essere utilizzato in modo che la barra di esperienza senza problemi aumenta ogni volta che l'utente potrà esperienza.
 
 `CCAction` le implementazioni in genere richiedono due classi:
 
- - `CCFiniteTimeAction` implementazione: la classe di azione di tempo finito è responsabile per l'azione di avvio. È la classe che viene creata un'istanza e uno aggiunti direttamente a un `CCNode` o a un'azione di interpolazione. È necessario creare un'istanza e restituire un `CCFiniteTimeActionState`, che eseguirà gli aggiornamenti.
- - `CCFiniteTimeActionState` implementazione: la classe di stato di tempo finito azione è responsabile per l'aggiornamento delle variabili di azione. È necessario implementare una funzione di aggiornamento, che assegna il valore di destinazione in base a un valore di ora. Questa classe non fa riferimento in modo esplicito di fuori del `CCFiniteTimeAction` che lo crea. Funziona semplicemente "dietro le quinte".
+ - `CCFiniteTimeAction` implementazione: la classe di azione temporale finito è responsabile dell'avvio dell'azione. È la classe che viene creata un'istanza e di essere aggiunti direttamente a un `CCNode` o a un'azione di interpolazione. È necessario creare un'istanza e restituiscono un `CCFiniteTimeActionState`, che eseguirà gli aggiornamenti.
+ - `CCFiniteTimeActionState` implementazione: la classe di stato azione temporale finito è responsabile dell'aggiornamento di variabili di azione. È necessario implementare una funzione di aggiornamento, che assegna il valore di destinazione in base al valore di ora. Questa classe non fa in modo esplicito all'esterno del `CCFiniteTimeAction` che lo crea. Funziona semplicemente "dietro le quinte".
 
-**ActionProject** fornisce un oggetto personalizzato `CCFiniteTimeAction` chiamato implementazione `LineWidthAction,` che consente di regolare la larghezza della riga gialla disegnata sopra il cerchio rosso. Si noti che è il processo solo per creare un'istanza e restituire un `LineWidthState` istanza:
+**ActionProject** fornisce una classe personalizzata `CCFiniteTimeAction` implementazione denominata `LineWidthAction,` che consente di regolare la larghezza della riga di colore gialla disegnata sopra il cerchio rosso. Si noti che l'unico processo consiste nel creare un'istanza e restituiscono un `LineWidthState` istanza:
 
 
 ```csharp
-public class LineWidthAction : CCFiniteTimeAction
+public class LineWidthAction : CCFiniteTimeAction
 {
-    float endWidth;
+    float endWidth;
 
-    public LineWidthAction (float duration, float width) : base(duration)
-    {
-        endWidth = width;
-    }
+    public LineWidthAction (float duration, float width) : base(duration)
+    {
+        endWidth = width;
+    }
 
-    public override CCFiniteTimeAction Reverse ()
-    {
-        throw new NotImplementedException ();
-    }
+    public override CCFiniteTimeAction Reverse ()
+    {
+        throw new NotImplementedException ();
+    }
 
-    protected override CCActionState StartAction (CCNode target)
-    {
-        return new LineWidthState (this, target, endWidth);
-    }
+    protected override CCActionState StartAction (CCNode target)
+    {
+        return new LineWidthState (this, target, endWidth);
+    }
 }
 ```
 
-Come indicato in precedenza, il `LineWidthState` esegue il lavoro dell'assegnazione della linea `Width` proprietà in base a quanto `time` superata:
+Come indicato in precedenza, il `LineWidthState` esegue le operazioni di assegnazione della linea `Width` proprietà in base alla quantità `time` trascorso:
 
 
 ```csharp
-public class LineWidthState : CCFiniteTimeActionState
+public class LineWidthState : CCFiniteTimeActionState
 {
-    float deltaWidth;
-    float startWidth;
+    float deltaWidth;
+    float startWidth;
 
-    LineNode castedTarget;
+    LineNode castedTarget;
 
-    public LineWidthState(LineWidthAction action, CCNode target, float endWidth) : base(action, target)
-    {
-        castedTarget = target as LineNode;
+    public LineWidthState(LineWidthAction action, CCNode target, float endWidth) : base(action, target)
+    {
+        castedTarget = target as LineNode;
 
-        if (castedTarget == null)
-        {
-            throw new InvalidOperationException ("The argument target must be a LineNode");
-        }
+        if (castedTarget == null)
+        {
+            throw new InvalidOperationException ("The argument target must be a LineNode");
+        }
 
-        startWidth = castedTarget.Width;
-        deltaWidth = endWidth - startWidth;
-    }
+        startWidth = castedTarget.Width;
+        deltaWidth = endWidth - startWidth;
+    }
 
-    public override void Update (float time)
-    {
-        castedTarget.Width = startWidth + deltaWidth * time;
-    }
+    public override void Update (float time)
+    {
+        castedTarget.Width = startWidth + deltaWidth * time;
+    }
 } 
 ```
 
-Il LineWidthAction può essere combinato con qualsiasi azione di interpolazione per modificare la larghezza di riga in vari modi, come illustrato nell'animazione seguente:
+È possibile combinare la LineWidthAction con qualsiasi azione interpolazione per modificare lo spessore della linea in vari modi, come illustrato nell'animazione seguente:
 
-![](ccaction-images/image9.gif "Il LineWidthAction può essere combinato con qualsiasi azione di interpolazione per modificare la larghezza di riga in vari modi, come illustrato in questa animazione")
-
-
-### <a name="interpolation-and-the-update-method"></a>Interpolazione e il metodo Update
-
-Logica sola a parte l'archiviazione dei valori nelle classi precedente, è disponibile il `LineWidthState.Update` metodo. Il `startWidth` variabile archivia la larghezza della destinazione `LineNode` all'inizio dell'azione e `deltaWidth` variabile archivia quanto il valore verrà modificato nel corso dell'azione.
-
-Sostituendo il `time` variabile con un valore pari a 0, possiamo vedere che la destinazione `LineNode` sarà nella posizione inizia:
+![](ccaction-images/image9.gif "Il LineWidthAction può essere combinato con qualsiasi azione interpolazione per modificare lo spessore della linea in vari modi, come illustrato in questa animazione")
 
 
-```csharp
-castedTarget.Width = startWidth + deltaWidth * 0; 
-```
+### <a name="interpolation-and-the-update-method"></a>L'interpolazione e il metodo di aggiornamento
 
-Analogamente, possiamo vedere che la destinazione `LineNode` sarà la destinazione specificata, sostituendo la variabile di tempo con un valore pari a 1:
+Il solo per la logica, oltre all'archiviazione di valori in classi precedenti, si trova nel `LineWidthState.Update` (metodo). Il `startWidth` variabile archivia la larghezza della destinazione `LineNode` all'inizio dell'azione e il `deltaWidth` variabile archivia quanto il valore verrà modificato nel corso dell'azione.
+
+Sostituendo la `time` variabile con un valore pari a 0, è possibile osservare che la destinazione `LineNode` saranno nella posizione iniziale:
 
 
 ```csharp
-castedTarget.Width = startWidth + deltaWidth * 1; 
+castedTarget.Width = startWidth + deltaWidth * 0; 
 ```
 
-Il `time` valore sarà in genere compreso tra 0 e 1, ma non sempre - e `Update` implementazioni non devono presupporre che questi limiti. Alcuni metodi di interpolazione (ad esempio `CCEaseBackIn` e `CCEaseBackOut`) fornirà un valore di ora compresi nell'intervallo da 0 a 1.
+Analogamente, è possibile osservare che la destinazione `LineNode` saranno la destinazione specificata, sostituendo la variabile di tempo con un valore pari a 1:
+
+
+```csharp
+castedTarget.Width = startWidth + deltaWidth * 1; 
+```
+
+Il `time` valore sarà in genere compreso tra 0 e 1, ma non sempre - e `Update` implementazioni non devono presupporre che questi limiti. Alcuni metodi di interpolazione (ad esempio `CCEaseBackIn` e `CCEaseBackOut`) fornirà un valore di ora di fuori dell'intervallo da 0 a 1.
 
 
 ## <a name="conclusion"></a>Conclusione
 
-Interpolazione e interpolazione sono una parte essenziale della creazione di un gioco ordinato, in particolare durante la creazione di interfacce utente. Questa guida viene illustrato come utilizzare `CCActions` per interpolare valori standard, ad esempio posizione e la rotazione, nonché i valori personalizzati. Il `LineWidthState` e `LineWidthAction` classi viene illustrato come implementare un'azione personalizzata.
+L'interpolazione e interpolazione sono una parte essenziale della creazione di un gioco raffinato, soprattutto durante la creazione di interfacce utente. Questa guida illustra come usare `CCActions` per eseguire l'interpolazione dei valori standard, ad esempio posizione e la rotazione, nonché i valori personalizzati. Il `LineWidthState` e `LineWidthAction` classi viene illustrato come implementare un'azione personalizzata.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
@@ -256,4 +256,4 @@ Interpolazione e interpolazione sono una parte essenziale della creazione di un 
 - [CCScaleTo](https://developer.xamarin.com/api/type/CocosSharp.CCScaleTo)
 - [CCRotateTo](https://developer.xamarin.com/api/type/CocosSharp.CCRotateTo)
 - [CCDrawNode](https://developer.xamarin.com/api/type/CocosSharp.CCDrawNode)
-- [Per un esempio completo](https://developer.xamarin.com/samples/mobile/CCAction/)
+- [Esempio completo](https://developer.xamarin.com/samples/mobile/CCAction/)

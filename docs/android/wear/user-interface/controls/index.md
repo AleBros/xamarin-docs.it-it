@@ -1,41 +1,41 @@
 ---
-title: Controlli usura Android
+title: Controlli di Android Wear
 ms.prod: xamarin
 ms.assetid: 5B62A5F8-5E55-4B3C-BFC4-E21CDB27C08B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 2adae250d2f59e8eee0558a92c3845c5592aa01a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f13b716e6ead8db8e0adafd180790c67bb82a6bc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30774837"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112039"
 ---
-# <a name="android-wear-controls"></a>Controlli usura Android
+# <a name="android-wear-controls"></a>Controlli di Android Wear
 
-Le app Android usura possono utilizzare molte degli stessi controlli già in uso per le app Android regolari, compresi `Button`, `TextView`e drawables l'immagine. Controlli di layout inclusi `ScrollView`, `LinearLayout`, e `RelativateLayout` può anche essere utilizzato.
+Le app Android Wear possono usare molti degli stessi controlli già in uso per le app Android regolari, compresi `Button`, `TextView`, un'immagine drawable. Controlli di layout compresi `ScrollView`, `LinearLayout`, e `RelativateLayout` può anche essere usato.
 
-I collegamenti di questa pagina per i controlli di Android usura specifici dal [indossabile libreria dell'interfaccia utente](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary) disponibili nei progetti di Xamarin tramite il [indossabile supporto](http://www.nuget.org/packages/Xamarin.Android.Wear/) pacchetto NuGet. Questi controlli includono:
+Questa pagina si collega ai controlli Android Wear specifici dal [indossabile libreria dell'interfaccia utente](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary) disponibili nei progetti Xamarin tramite il [supporto indossabile](http://www.nuget.org/packages/Xamarin.Android.Wear/) pacchetto NuGet. Questi controlli includono quanto segue:
 
--   **GridViewPager** &ndash; creare un'interfaccia di navigazione bidimensionale in cui l'utente scorre verso il basso, quindi tra per effettuare una selezione (per ulteriori informazioni, vedere [GridViewPager](~/android/wear/user-interface/controls/gridviewpager.md)):
+-   **GridViewPager** &ndash; creare un'interfaccia di navigazione bidimensionale in cui l'utente scorre verso il basso, quindi tra per effettuare una selezione (per altre informazioni, vedere [GridViewPager](~/android/wear/user-interface/controls/gridviewpager.md)):
 
-    ![Schermata di esempio di un GridViewPager](images/gridviewpager.png)
+    ![Screenshot di esempio di un GridViewPager](images/gridviewpager.png)
 
-Altri controlli per le app usura importanti includono:
+Altri controlli per le app Wear importanti includono:
 
-* `BoxInsetLayout` (vedere [utilizzo dimensioni dello schermo](~/android/wear/screen-sizes.md)),
+* `BoxInsetLayout` (vedere [funziona con le dimensioni dello schermo](~/android/wear/screen-sizes.md)),
 
-* `WatchViewStub` (vedere [utilizzo dimensioni dello schermo](~/android/wear/screen-sizes.md)),
+* `WatchViewStub` (vedere [funziona con le dimensioni dello schermo](~/android/wear/screen-sizes.md)),
 
-* `CardFrame` (vedere [Android schede creazione](https://developer.android.com/training/wearables/ui/cards.html)),
+* `CardFrame` (vedere [schede di creazione di Android](https://developer.android.com/training/wearables/ui/cards.html)),
 
-* `CardScrollView` (vedere [Android schede creazione](https://developer.android.com/training/wearables/ui/cards.html)),
+* `CardScrollView` (vedere [schede di creazione di Android](https://developer.android.com/training/wearables/ui/cards.html)),
 
 * `WearableListView` (vedere [Android Crea elenchi](https://developer.android.com/training/wearables/ui/lists.html)).
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Documenti Android.Support.Wearable](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
+- [Android.Support.Wearable docs](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)

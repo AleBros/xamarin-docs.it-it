@@ -6,13 +6,13 @@ ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/07/2017
-ms.openlocfilehash: a89bce4f35a73d0b881fd38b2ae246d2eb86ef7b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/17/2018
+ms.openlocfilehash: 62e170558fc908b0ec13669b60eb08495c183b09
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996821"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104953"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Viste di interfaccia utente di xamarin. Forms
 
@@ -44,11 +44,11 @@ DataPages forniscono un'API per rapidamente e facilmente associare un'origine da
 
 ## <a name="datepickerdatepickermd"></a>[DatePicker](datepicker.md)
 
-Il `DatePicker` consente agli utenti di selezionare una data in un intervallo specificato. Viene implementato usando il selettore data supportato da particolare piattaforma in cui viene eseguito il programma.
+Il `DatePicker` consente agli utenti di selezionare una data in un intervallo specificato. Viene implementato tramite la selezione di data supportati da una particolare piattaforma in cui l'applicazione viene eseguita su.
 
-## <a name="graphicsgraphicsindexmd"></a>[Grafica](graphics/index.md)
+## <a name="graphics-with-skiasharpgraphicsskiasharpindexmd"></a>[Grafica con SkiaSharp](graphics/skiasharp/index.md)
 
-Come incorporare elementi grafici e oggetti visivi del motore di gioco in un'applicazione xamarin. Forms.
+Come incorporare la grafica in un'applicazione xamarin. Forms usando SkiaSharp.
 
 ## <a name="imagesimagesmd"></a>[Immagini](images.md)
 
@@ -74,6 +74,10 @@ Il [ `Picker` ](xref:Xamarin.Forms.Picker) Vista è un controllo per la selezion
 
 Il `Slider` consente a un utente di selezionare un valore numerico da un intervallo continuo.
 
+## <a name="steppersteppermd"></a>[Gestore di istruzioni](stepper.md)
+
+Il `Stepper` consente a un utente di selezionare un valore numerico da un intervallo di valori. È costituito da due pulsanti contrassegnati con segni più e meno (-). Modifica i due pulsanti Modifica il valore selezionato in modo incrementale.
+
 ## <a name="stylesstylesindexmd"></a>[Stili](styles/index.md)
 
 Tipo di carattere, colori e altri attributi possono essere raggruppati in stili che possono essere condivisi tra i controlli, layout o l'intera applicazione usando ResourceDictionary.
@@ -89,6 +93,10 @@ Xamarin. Forms sono disponibili diverse viste a presentare e la ricezione di tes
 ## <a name="themesthemesindexmd"></a>[Temi](themes/index.md)
 
 I temi di xamarin. Forms definiscono un aspetto visivo specifico per i controlli standard. Dopo aver aggiunto un tema a dizionario risorse dell'applicazione, verrà modificato l'aspetto dei controlli standard.
+
+## <a name="timepickertimepickermd"></a>[TimePicker](timepicker.md)
+
+Il `TimePicker` consente agli utenti di selezionare un'ora. Viene implementato usando il selettore di ora supportato da una particolare piattaforma in cui l'applicazione viene eseguita su.
 
 ## <a name="visual-state-managervisual-state-managermd"></a>[Gestione dello stato di visualizzazione](visual-state-manager.md)
 

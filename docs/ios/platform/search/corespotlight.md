@@ -1,28 +1,28 @@
 ---
-title: Ricerca con Spotlight Core in xamarin. IOS
-description: Questo documento viene descritto come usare Spotlight dei componenti di base in un'applicazione di xamarin. IOS per fornire i collegamenti al contenuto all'interno dell'applicazione. Illustra come creare, ripristinare, aggiornare ed eliminare elementi ricercabili.
+title: Ricerca Spotlight di Core in xamarin. IOS
+description: Questo documento descrive come usare contenuti in evidenza di Core in un'applicazione xamarin. IOS per fornire i collegamenti al contenuto all'interno dell'applicazione. Illustra come creare, ripristinare, aggiornare ed eliminare gli elementi disponibili per la ricerca.
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a8bc3aaa43d7830b0a3baa0768d495458b1ecfad
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: fb9ddcc39bd33199dc370897250cd0d74597612f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788039"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110355"
 ---
-# <a name="search-with-core-spotlight-in-xamarinios"></a>Ricerca con Spotlight Core in xamarin. IOS
+# <a name="search-with-core-spotlight-in-xamarinios"></a>Ricerca Spotlight di Core in xamarin. IOS
 
-Spotlight core è un nuovo framework per iOS 9 che presenta un'API di database simile per aggiungere, modificare o eliminare i collegamenti al contenuto all'interno dell'app. Gli elementi che sono stati aggiunti mediante Spotlight Core sarà disponibili alla ricerca Spotlight nel dispositivo iOS.
+Spotlight core è un nuovo framework per iOS 9 che presenta un'API di tipo database da aggiungere, modificare o eliminare i collegamenti al contenuto all'interno dell'app. Gli elementi che sono stati aggiunti mediante Core Spotlight saranno disponibili in ricerca di Spotlight nel dispositivo iOS.
 
-Per un esempio dei tipi di contenuto che possono essere indicizzate utilizzando Spotlight Core, esaminare i messaggi, posta elettronica, calendario e note di Apple app. Tutti attualmente usano Spotlight Core per fornire i risultati della ricerca.
+Per un esempio dei tipi di contenuto che può essere indicizzata tramite Spotlight Core, esaminare i messaggi, posta elettronica, calendario e note di Apple app. Questi oggetti attualmente utilizzano Core Spotlight per fornire i risultati della ricerca.
 
 ## <a name="creating-an-item"></a>Creazione di un elemento
 
-Di seguito è riportato un esempio di creazione di un elemento e di indicizzazione mediante Spotlight Core:
+Di seguito è riportato un esempio di creazione di un elemento e indicizzando tale colonna usando Spotlight Core:
 
 ```csharp
 using CoreSpotlight;
@@ -45,13 +45,13 @@ CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, 
 });
 ```
 
-Questa informazione sarà simile alla seguente nei risultati di ricerca:
+Queste informazioni sarà simile alla seguente in un risultato di ricerca:
 
-[![](corespotlight-images/corespotlight01.png "Informazioni generali sul risultato di ricerca Spotlight di base")](corespotlight-images/corespotlight01.png#lightbox)
+[![](corespotlight-images/corespotlight01.png "Panoramica di risultati di ricerca di Spotlight core")](corespotlight-images/corespotlight01.png#lightbox)
 
 ## <a name="restoring-an-item"></a>Il ripristino di un elemento
 
-Quando l'utente tocca su un elemento aggiunto al risultato di ricerca tramite Spotlight Core per l'app, il `AppDelegate` metodo `ContinueUserActivity` viene chiamato (questo metodo viene utilizzato anche per `NSUserActivity`). Ad esempio:
+Quando l'utente tocca un elemento aggiunto ai risultati della ricerca tramite Core Spotlight per l'app, il `AppDelegate` metodo `ContinueUserActivity` viene chiamato (questo metodo viene usato anche per `NSUserActivity`). Ad esempio:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application,
@@ -74,20 +74,20 @@ public override bool ContinueUserActivity (UIApplication application,
 }
 ```
 
-Si noti che questo tempo è controllo per l'attività con un `ActivityType` di `CSSearchableItem.ActionType`.
+Si noti che questa volta si verifica la presenza di attività un' `ActivityType` di `CSSearchableItem.ActionType`.
 
 ## <a name="updating-an-item"></a>Aggiornamento di un elemento
 
-Talvolta potrebbe essere quando un elemento di indice viene creati con Spotlight Core è necessario modificare, ad esempio una modifica nel titolo o immagine di anteprima è obbligatoria. Per apportare questa modifica, è utilizzare lo stesso metodo utilizzato per creare l'indice.
-Si crea un nuovo `CSSearchableItem` utilizzando lo stesso ID utilizzato per creare l'elemento e collegare un nuovo `CSSearchableItemAttributeSet` contenente attributi modificati:
+Potrebbero esserci volte quando un elemento di indice è stata creata con Spotlight Core devono essere modificati, ad esempio una modifica nel titolo o immagine di anteprima è obbligatoria. Per apportare questa modifica, utilizziamo il metodo di stesso perché è stato usato per creare inizialmente l'indice.
+Creiamo una nuova `CSSearchableItem` usando lo stesso ID utilizzato per creare l'elemento e collegare un nuovo `CSSearchableItemAttributeSet` contenente gli attributi modificati:
 
-[![](corespotlight-images/corespotlight02.png "L'aggiornamento a una panoramica di elemento")](corespotlight-images/corespotlight02.png#lightbox)
+[![](corespotlight-images/corespotlight02.png "L'aggiornamento di una panoramica di elemento")](corespotlight-images/corespotlight02.png#lightbox)
 
-Quando questo elemento viene scritto l'indice di ricerca, l'elemento esistente viene aggiornato con le nuove informazioni.
+Quando questo elemento viene scritto all'indice di ricerca, l'elemento esistente viene aggiornato con le nuove informazioni.
 
 ## <a name="deleting-an-item"></a>Eliminazione di un elemento
 
-Core Spotlight offre molti modi per eliminare una voce di indice quando non è più necessario.
+Spotlight core offre molti modi per eliminare un indice di elemento quando non è più necessaria.
 
 In primo luogo, è possibile eliminare un elemento dal relativo identificatore, ad esempio:
 
@@ -101,7 +101,7 @@ CSSearchableIndex.DefaultSearchableIndex.Delete(new string[]{"1","16"},(error) =
 });
 ```
 
-Successivamente, è possibile eliminare un gruppo di elementi di indice in base al nome di dominio. Ad esempio:
+Successivamente, è possibile eliminare un gruppo di opzioni di indice in base al nome di dominio. Ad esempio:
 
 ```csharp
 // Delete by Domain Name
@@ -124,19 +124,19 @@ CSSearchableIndex.DefaultSearchableIndex.DeleteAll((error) => {
     }
 });
 ```
-## <a name="additional-core-spotlight-features"></a>Funzionalità di base aggiuntiva Spotlight
+## <a name="additional-core-spotlight-features"></a>Funzionalità principali aggiuntive in evidenza
 
-Core Spotlight presenta le seguenti funzionalità che consentono di mantenere l'indice accurate e aggiornate:
+Spotlight core presenta le seguenti funzionalità che consentono di mantenere l'indice accurate e aggiornate:
 
-- **Il supporto dell'aggiornamento batch** : se l'app deve creare o modificare un ampio gruppo di indici allo stesso tempo, è possibile inviare l'intero batch il `Index` metodo il `CSSearchableIndex` classe in un'unica chiamata.
-- **Rispondere alle modifiche di indice** -tramite il `CSSearchableIndexDelegate` app può rispondere alle modifiche e le notifiche dall'indice di ricerca.
-- **Applicare la protezione dati** : utilizzo delle classi di protezione dati, è possibile implementare la sicurezza sugli elementi che aggiungono e l'indice di ricerca usando Spotlight Core.
+- **Supporto per gli aggiornamenti di batch** – se l'app deve creare o modificare un ampio gruppo di indici nello stesso momento, l'intero batch può essere inviato per il `Index` metodo del `CSSearchableIndex` classe in un'unica chiamata.
+- **Rispondere alle modifiche di indice** -tramite il `CSSearchableIndexDelegate` l'app può rispondere alle modifiche e le notifiche dall'indice ricercabile.
+- **Applicare la protezione dati** – utilizza le classi di protezione dati, è possibile implementare la sicurezza per gli elementi aggiunti all'indice ricercabile usando Spotlight Core.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempi di iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
-- [iOS 9 per gli sviluppatori](https://developer.apple.com/ios/pre-release/)
+- [per gli sviluppatori iOS 9](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
-- [Guida per programmatori di ricerca di App](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)
+- [Guida alla programmazione di ricerca nelle App](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

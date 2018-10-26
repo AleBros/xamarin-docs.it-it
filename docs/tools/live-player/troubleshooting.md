@@ -3,15 +3,15 @@ title: Risoluzione dei problemi di Xamarin Live Player
 description: Questo documento descrive problemi noti di Xamarin Live Player e potenziali correzioni. Illustra i problemi di connessione, problemi di configurazione e altro ancora.
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: ceb8964ac378957dcf5883bbbfff9e984b079294
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: eb9d758d72febe0fc0b705d66246c99ade1fc80f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251068"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109692"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>Risoluzione dei problemi di Xamarin Live Player
 

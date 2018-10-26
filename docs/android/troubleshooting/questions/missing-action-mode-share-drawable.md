@@ -1,24 +1,24 @@
 ---
-title: "Android.Support.v7.AppCompat - trovata alcuna risorsa corrispondente al nome specificato: attr 'android: actionModeShareDrawable'"
+title: "Android.Support.v7.AppCompat - Nessuna risorsa trovata che corrisponde al nome specificato: attr 'android: actionModeShareDrawable'"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5814069C-FC43-41DE-B5A5-024D05E59929
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 07655587642c3e1aa94d035e76f6f6758340546d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fea681ac3b99abed09d3d3e745bd4bf6015970df
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30774896"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112416"
 ---
-# <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawable"></a>Android.Support.v7.AppCompat - trovata alcuna risorsa corrispondente al nome specificato: attr 'android: actionModeShareDrawable'
+# <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawable"></a>Android.Support.v7.AppCompat - Nessuna risorsa trovata che corrisponde al nome specificato: attr 'android: actionModeShareDrawable'
 
-1. Assicurarsi che scaricare l'ultime funzionalità aggiuntive, nonché di Android 5.0 (API 21) SDK mediante Android SDK Manager.
+1. Assicurarsi di che scaricare l'ultime funzionalità aggiuntive, nonché di Android 5.0 (API 21) SDK tramite Android SDK Manager.
 
-2. Verificare che si esegue la compilazione dell'applicazione con compileSdkVersion impostati su 21. Facoltativamente, è possibile impostare il targetSdkVersion su nonché 21.
+2. Assicurarsi che si esegue la compilazione dell'applicazione con compileSdkVersion impostata su 21. È facoltativamente possibile impostare il targetSdkVersion a 21 anche.
 
 3. Se è necessaria una versione precedente, ad esempio API 19, scaricare la versione corrispondente trovata nella pagina di Nuget:
 

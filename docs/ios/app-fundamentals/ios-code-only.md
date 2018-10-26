@@ -4,21 +4,21 @@ description: Questo documento descrive come usare il codice per compilare un'int
 ms.prod: xamarin
 ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 688457ab25398e8c5b9848a7e58f6163db4c0a05
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 777ba2035511dfd632d64b11c2265e239a646b3a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242394"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109536"
 ---
-# <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Creazione di interfacce utente di iOS nel codice in xamarin. IOS
+# <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Creazione di interfacce utente iOS nel codice in xamarin. IOS
 
 L'interfaccia utente di un'app per iOS è simile a una vetrina: l'applicazione ottiene in genere una finestra, ma può riempirla con come numero di oggetti necessari, e gli oggetti e disposizioni possono essere modificati in base alla quale l'app desidera visualizzare. Gli oggetti di questo scenario, ovvero gli elementi visibili per l'utente, sono chiamati visualizzazioni. Per compilare una singola schermata in un'applicazione, le visualizzazioni sono accatastati uno su altro in una gerarchia di visualizzazione del contenuto e la gerarchia è gestita da un singolo Controller di visualizzazione. Le applicazioni con più schermate hanno più gerarchie di visualizzazione del contenuto, ognuna con un proprio controller di visualizzazione, e l'applicazione inserisce visualizzazioni nella finestra per creare gerarchie di visualizzazione del contenuto diverse in base alla schermata visualizzata dall'utente.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Il diagramma seguente illustra le relazioni tra la finestra, le visualizzazioni, le visualizzazioni secondarie e il controller di visualizzazione che visualizzano l'interfaccia utente sullo schermo del dispositivo: 
 
@@ -26,7 +26,7 @@ Il diagramma seguente illustra le relazioni tra la finestra, le visualizzazioni,
 
 Queste gerarchie di visualizzazione possono essere costruite utilizzando il [finestra di progettazione di Xamarin per iOS](~/ios/user-interface/designer/index.md) in Visual Studio, tuttavia è buona norma disporre di una conoscenza di come utilizzare interamente nel codice. Questo articolo illustra alcuni aspetti di base per iniziare subito e in esecuzione con lo sviluppo dell'interfaccia utente di solo codice.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Il diagramma seguente illustra le relazioni tra la finestra, le visualizzazioni, le visualizzazioni secondarie e il controller di visualizzazione che visualizzano l'interfaccia utente sullo schermo del dispositivo: 
 
@@ -38,9 +38,9 @@ Queste gerarchie di visualizzazione possono essere costruite utilizzando il [fin
 
 ## <a name="creating-a-code-only-project"></a>Creazione di un progetto di solo codice
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-## <a name="ios-blank-project-template"></a>Modello di progetto vuoto di iOS
+## <a name="ios-blank-project-template"></a>modello di progetto vuoto di iOS
 
 In primo luogo, creare un progetto iOS in Visual Studio usando il **File > Nuovo progetto > Visual c# > iPhone & iPad > App iOS (Xamarin)** progetto, illustrato di seguito:
 
@@ -54,16 +54,15 @@ Il modello di progetto vuoto aggiunge 4 file al progetto:
 
 [![I file di progetto](ios-code-only-images/empty-project.w157-sml.png "i file di progetto")](ios-code-only-images/empty-project.w157.png#lightbox)
 
-
 1. **AppDelegate.cs** -contiene una `UIApplicationDelegate` sottoclasse, `AppDelegate` , che consente di gestire gli eventi dell'applicazione da iOS. La finestra dell'applicazione viene creata nel `AppDelegate`del `FinishedLaunching` (metodo).
 1. **Main.cs** -contiene il punto di ingresso per l'applicazione, che specifica la classe per il `AppDelegate` .
 1. **File Info. plist** -file elenco proprietà contenente le informazioni di configurazione dell'applicazione.
 1. **Entitlements. plist** – file elenco proprietà contenente le informazioni sulle funzionalità e le autorizzazioni dell'applicazione.
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-## <a name="ios-templates"></a>i modelli di iOS
+## <a name="ios-templates"></a>modelli di iOS
 
 
 Visual Studio per Mac non è incluso un modello vuoto. Tutti i modelli sono dotate di supporto per Storyboard, che Apple consiglia di usare come metodo principale per creare un'interfaccia utente. Tuttavia, è possibile creare l'interfaccia utente completamente nel codice. 
@@ -72,20 +71,20 @@ I passaggi seguenti consentono di rimuovere lo Storyboard da un'applicazione:
 
 
 1. Usare il modello di App visualizzazione singola per creare un nuovo progetto iOS:
-    
+
     [![](ios-code-only-images/single-view-app.png "Usare il modello di App visualizzazione singola")](ios-code-only-images/single-view-app.png#lightbox)
 
 1. Eliminare il `Main.Storyboard` e `ViewController.cs` file. Effettuare **non** Elimina la `LaunchScreen.Storyboard`. Il Controller di visualizzazione deve essere eliminato perché il code-behind per il controller di visualizzazione che viene creato nello Storyboard è:
 1. Assicurarsi di selezionare **eliminare** dalla finestra di dialogo popup:
-    
+
     [![](ios-code-only-images/delete.png "Selezionare Elimina dalla finestra di dialogo popup")](ios-code-only-images/delete.png#lightbox)
 
 1. In Info. plist, eliminare le informazioni all'interno di **le informazioni sulla distribuzione > interfaccia principale** opzione:
-    
+
     [![](ios-code-only-images/main-interface.png "Eliminare le informazioni all'interno dell'opzione di interfaccia principale")](ios-code-only-images/main-interface.png#lightbox)
 
 1. Infine, aggiungere il codice seguente per il `FinishedLaunching` metodo nella classe AppDelegate:
-        
+
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             // create a new window instance based on the screen size
@@ -102,9 +101,7 @@ Il codice che è stato aggiunto per il `FinishedLaunching` metodo nel passaggio 
 
 -----
 
-
-
-compilazione di applicazioni iOS usando il [pattern MVC](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md#Model_View_Controller). La prima schermata che visualizza un'applicazione viene creata dal controller di visualizzazione della finestra principale. Vedere le [Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md) Guida per altre informazioni su MVC modello stesso.
+compilazione di applicazioni iOS usando il [pattern MVC](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md#model-view-controller-mvc). La prima schermata che visualizza un'applicazione viene creata dal controller di visualizzazione della finestra principale. Vedere le [Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md) Guida per altre informazioni su MVC modello stesso.
 
 L'implementazione per il `AppDelegate` aggiunto per il modello crea la finestra dell'applicazione, di cui si è solo uno per ogni applicazione iOS e lo rende visibile con il codice seguente:
 
@@ -207,17 +204,17 @@ Questo codice produce il controller annidato all'interno del controller di spost
 
  [![](ios-code-only-images/image2.png "Il controller è annidato all'interno di controller di spostamento")](ios-code-only-images/image2.png#lightbox)
 
-## <a name="creating-a-view-controller"></a>Creazione di un Controller di visualizzazione
+## <a name="creating-a-view-vontroller"></a>Creazione di una vista vontroller
 
 Ora che abbiamo visto come aggiungere un controller come il `RootViewController` della finestra, è possibile vedere come creare un controller di visualizzazione personalizzata nel codice.
 
 Aggiungere una nuova classe denominata `CustomViewController` come illustrato di seguito:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](ios-code-only-images/customviewcontroller.w157-sml.png "Aggiungere una nuova classe denominata CustomViewController")](ios-code-only-images/customviewcontroller.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 [![](ios-code-only-images/new-file.png "Aggiungere una nuova classe denominata CustomViewController")](ios-code-only-images/new-file.png#lightbox)
 
@@ -236,8 +233,6 @@ namespace CodeOnlyDemo
     }
 }
 ```
-
-<a name="Initializing_the_View"/>
 
 ## <a name="initializing-the-view"></a>L'inizializzazione della visualizzazione
 
@@ -413,7 +408,7 @@ submitButton.Layer.CornerRadius = 5f;
 Con queste modifiche, la visualizzazione avrà un aspetto simile al seguente:
 
 [![](ios-code-only-images/image6.png "Un'esecuzione di esempio della visualizzazione")](ios-code-only-images/image6.png#lightbox)
- 
+
 ## <a name="adding-multiple-views-to-the-view-hierarchy"></a>Aggiunta di più visualizzazioni alla gerarchia di visualizzazione
 
 iOS fornisce una funzionalità per aggiungere più viste per la gerarchia di visualizzazione tramite `AddSubviews`.
@@ -424,7 +419,7 @@ View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 
 ## <a name="adding-button-functionality"></a>Aggiunta di funzionalità di pulsante
 
-Quando viene selezionato un pulsante, probabile che gli utenti di un intervento. Ad esempio, viene visualizzato un avviso o spostamento viene eseguito a un'altra schermata. 
+Quando viene selezionato un pulsante, probabile che gli utenti di un intervento. Ad esempio, viene visualizzato un avviso o spostamento viene eseguito a un'altra schermata.
 
 È possibile aggiungere codice per inserire un secondo controller di visualizzazione nello stack di navigazione.
 
@@ -470,7 +465,7 @@ Questa operazione, tuttavia non funzionerà se la visualizzazione in fase di ite
 
 Se l'utente ruota il dispositivo da verticale a orizzontale, i controlli non vengono ridimensionano in modo appropriato, come illustrato nella schermata seguente:
 
- [![](ios-code-only-images/image7.png "Se l'utente ruota il dispositivo da verticale a orizzontale, i controlli non vengono ridimensionano in modo appropriato")](ios-code-only-images/image7.png#lightbox)
+[![](ios-code-only-images/image7.png "Se l'utente ruota il dispositivo da verticale a orizzontale, i controlli non vengono ridimensionano in modo appropriato")](ios-code-only-images/image7.png#lightbox)
 
 Un modo per risolvere questo problema consiste nell'impostare il `AutoresizingMask` proprietà in ogni visualizzazione. In questo caso vogliamo i controlli per l'estensione in senso orizzontale, pertanto è sufficiente impostare ciascuno `AutoresizingMask`. L'esempio seguente si riferisce `usernameField`, ma lo stesso dovrà essere applicato a ogni gadget nella gerarchia di visualizzazione.
 
@@ -480,7 +475,7 @@ usernameField.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 
 A questo punto quando si ruota il dispositivo o simulatore, tutto ciò che si estende per riempire lo spazio aggiuntivo, come illustrato di seguito:
 
- [![](ios-code-only-images/image8.png "Tutti i controlli adattano per riempire lo spazio aggiuntivo")](ios-code-only-images/image8.png#lightbox)
+[![](ios-code-only-images/image8.png "Tutti i controlli adattano per riempire lo spazio aggiuntivo")](ios-code-only-images/image8.png#lightbox)
 
 ## <a name="creating-custom-views"></a>Creazione di viste personalizzate
 
@@ -585,19 +580,19 @@ submitButton.TouchUpInside += delegate
 
 A questo punto, quando si esegue l'applicazione e tocca il pulsante di invio, viene visualizzata la nuova vista con un cerchio:
 
- [![](ios-code-only-images/circles.png "Viene visualizzata la nuova vista con un cerchio")](ios-code-only-images/circles.png#lightbox)
+[![](ios-code-only-images/circles.png "Viene visualizzata la nuova vista con un cerchio")](ios-code-only-images/circles.png#lightbox)
 
 ## <a name="creating-a-launch-screen"></a>Creazione di una schermata di avvio
 
-Oggetto [schermata di avvio](~/ios/app-fundamentals/images-icons/launch-screens.md) viene visualizzata all'avvio di app che consente di visualizzare agli utenti che è reattivo. Perché quando l'app viene caricata, viene visualizzata una schermata di avvio, non può essere creata nel codice come l'applicazione è ancora caricata nella memoria. 
+Oggetto [schermata di avvio](~/ios/app-fundamentals/images-icons/launch-screens.md) viene visualizzata all'avvio di app che consente di visualizzare agli utenti che è reattivo. Perché quando l'app viene caricata, viene visualizzata una schermata di avvio, non può essere creata nel codice come l'applicazione è ancora caricata nella memoria.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Quando il creare iOS viene fornito automaticamente sotto forma di un file con estensione xib, che sono disponibili nel progetto in Visual Studio, una schermata di avviare il **risorse** cartella all'interno del progetto. 
+Quando si crea un progetto iOS in Visual Studio, una schermata di avvio viene fornita automaticamente sotto forma di un file con estensione xib, reperibile nella **risorse** cartella all'interno del progetto.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Durante la creazione di un progetto iOS in Visual Studio per Mac, una schermata di avvio viene fornito per l'utente sotto forma di un file Storyboard. 
+Quando si crea un progetto iOS in Visual Studio per Mac, una schermata di avvio viene fornita per l'utente sotto forma di un file Storyboard.
 
 -----
 
@@ -622,22 +617,17 @@ Questa immagine statica può essere impostata nel file Info. plist, o come un ca
 > [!IMPORTANT]
 > Se l'app non dispone di alcuna schermata avvio veloce, è possibile notare che completamente non adattarlo alla schermata. In questo caso, assicurarsi di includere almeno un'immagine di 640 x 1136 denominata `Default-568@2x.png` al file Info. plist. 
 
-
-
 ## <a name="summary"></a>Riepilogo
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Questo articolo ha illustrato come sviluppare applicazioni iOS a livello di codice in Visual Studio. È stato illustrato come compilare un progetto dal modello di progetto vuoto, che illustrano come creare e aggiungere un controller visualizzazione radice alla finestra. È stato quindi illustrato come usare i controlli da UIKit per creare una gerarchia di visualizzazione all'interno di un controller per sviluppare una schermata dell'applicazione. Successivamente abbiamo esaminato come apportare le viste di definire il layout in modo appropriato in diversi orientamenti e abbiamo visto come creare una visualizzazione personalizzata creando sottoclassi `UIView`, nonché come caricare la visualizzazione all'interno di un controller. Infine è stato illustrato come aggiungere una schermata di avvio a un'applicazione.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Questo articolo ha illustrato come sviluppare applicazioni iOS a livello di codice in Visual Studio per Mac. È stato illustrato come compilare un progetto da un modello di visualizzazione singola, che illustrano come creare e aggiungere un controller visualizzazione radice alla finestra. È stato quindi illustrato come usare i controlli da UIKit per creare una gerarchia di visualizzazione all'interno di un controller per sviluppare una schermata dell'applicazione. Successivamente abbiamo esaminato come apportare le viste di definire il layout in modo appropriato in diversi orientamenti e abbiamo visto come creare una visualizzazione personalizzata creando sottoclassi `UIView`, nonché come caricare la visualizzazione all'interno di un controller. Infine è stato illustrato come aggiungere una schermata di avvio a un'applicazione.
 
 -----
-
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

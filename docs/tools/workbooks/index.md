@@ -1,46 +1,44 @@
 ---
 title: Xamarin Workbooks
-description: Le cartelle di lavoro di Xamarin forniscono una combinazione di codice che è ideale per la sperimentazione, e la documentazione dell'apprendimento, nonché la creazione di guide e insegnamento facilita.
+description: Xamarin Workbooks offrono una combinazione di documentazione e codice che rappresenta la soluzione ideale per la sperimentazione, formazione, nonché la creazione di guide e pedagogico.
 ms.prod: xamarin
 ms.assetid: 04275482-0488-4F1C-8808-D03A8E21BE62
-author: topgenorth
-ms.author: toopge
-ms.date: 03/30/2017
-ms.openlocfilehash: 57ef9cb3a45dbf1c6271a1475c27fdd38d2fd96b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+author: lobrien
+ms.author: laobri
+ms.date: 10/23/2018
+ms.openlocfilehash: d0aed1b501b86a23d4008ba9618b0e459178ca24
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33922639"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121893"
 ---
 # <a name="xamarin-workbooks"></a>Xamarin Workbooks
 
-Le cartelle di lavoro di Xamarin forniscono una combinazione di codice che è ideale per la sperimentazione, e la documentazione dell'apprendimento, nonché la creazione di guide e insegnamento facilita.
+Xamarin Workbooks offrono una combinazione di documentazione e codice che rappresenta la soluzione ideale per la sperimentazione, formazione, nonché la creazione di guide e pedagogico.
 
-Creare un c# cartella di lavoro completa per Android, iOS, Mac, WPF o Console e i risultati immediati in tempo reale per comprendere queste API.
+Creare un'avanzata C# cartella di lavoro per Android, iOS, Mac, WPF, o Console e get immediata in tempo reale i risultati è informazioni su queste API.
 
-Cartelle di lavoro di Xamarin è software open source. Lo sviluppo avviene Apri su GitHub. Microsoft invita gli utenti interessati e agli sviluppatori di entrare in contatto con il progetto.
+Xamarin Workbooks è software open source. Lo sviluppo avviene in open in GitHub. Microsoft invita gli utenti interessati e agli sviluppatori di Interagisci con il progetto.
 
-<a class="github-button" href="https://github.com/Microsoft/workbooks" data-size="large" aria-label="View Microsoft/workbooks on GitHub">Aspettiamo su GitHub.</a>
+[Unisciti a noi su GitHub.](https://github.com/Microsoft/workbooks)
 
-Vale la pena provarlo e segnalarlo si ritiene, o se si [in qualsiasi bug](~/tools/workbooks/install.md#reporting-bugs). Abbiamo un [forum](https://forums.xamarin.com/categories/inspector) troppo!
+Fare una prova e facci sapere cosa ne pensi, o se si [riscontrano bug](~/tools/workbooks/install.md#reporting-bugs). È disponibile un' [forum](https://forums.xamarin.com/categories/inspector) troppo!
 
-[![](images/interactive-1.0.0-urho-planet-earth-small.png "Una cartella di lavoro di esempio UrhoSharp basato su")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
+[![](images/interactive-1.0.0-urho-planet-earth-small.png "Una cartella di lavoro di UrhoSharp basata di esempio")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
 
 ## <a name="installation-and-requirementsinstallmd"></a>[Installazione e requisiti](install.md)
 
-Informazioni su come ottenere le cartelle di lavoro installati nel computer Mac o Windows.
+Informazioni su come ottenere le cartelle di lavoro installate nel computer Mac o Windows.
 
 ## <a name="interactive-workbooksworkbookmd"></a>[Cartelle di lavoro interattive](workbook.md)
 
-Introduzione a come utilizzare le cartelle di lavoro di Xamarin.
+Introduzione a come usare Xamarin Workbooks.
 
-## <a name="samplessamplesindexmd"></a>[Esempi](samples/index.md)
+## <a name="samples"></a>Esempi
 
-Sono disponibili un'ampia gamma di [le cartelle di lavoro di esempio](https://developer.xamarin.com/workbooks/) disponibili, tra cui quelli evidenziato [qui](samples/index.md).
+Esistono svariati [cartelle di lavoro disponibile in GitHub di esempio](https://github.com/xamarin/workbooks).
 
 ## <a name="integration-sdksdkindexmd"></a>[SDK per le integrazioni](sdk/index.md)
 
-È possibile estendere le cartelle di lavoro di Xamarin con renderer e rappresentazioni di dati personalizzati. Integrazioni vengono scritti con c# e TypeScript/JavaScript.
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+È possibile estendere le cartelle di lavoro Xamarin con i renderer e rappresentazioni di dati personalizzati. Integrazioni vengono scritti con C# e TypeScript/JavaScript.

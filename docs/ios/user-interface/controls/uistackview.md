@@ -5,22 +5,22 @@ ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a894efebe4089adefeb02007bd394c13fc77974c
-ms.sourcegitcommit: 213b0315f1d6d0791e255794f87512fb253c492f
+ms.openlocfilehash: d04ce6827f6695163c7d9a8d34acc3891d854c8d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "34790100"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122673"
 ---
 # <a name="stack-views-in-xamarinios"></a>Viste dello stack in xamarin. IOS
 
 _Questo articolo illustra l'uso del nuovo controllo UIStackView in un'app xamarin. IOS per gestire un set di visualizzazioni secondarie in uno uno stack disposto orizzontalmente o verticalmente._
 
 > [!IMPORTANT]
-> Si noti che mentre StackView è supportata in iOS Designer, possono insorgere usabilità bug quando si usa il canale stabile. Cambio di canali alfa o Beta allevierà il problema. Si è deciso di presentare questa procedura dettagliata usando Xcode fino a quando non le correzioni necessarie vengono implementate nel canale stabile.
+> Si noti che mentre StackView è supportata in iOS Designer, possono insorgere usabilità bug quando si usa il canale stabile. I canali Beta o alfa di commutazione allevierà il problema. Si è deciso di presentare questa procedura dettagliata usando Xcode fino a quando non le correzioni necessarie vengono implementate nel canale stabile.
 
 Il controllo di visualizzazione dello Stack (`UIStackView`) sfrutta la potenza del Layout automatico e le classi di dimensioni per gestire una pila di visualizzazioni secondarie, orizzontalmente o verticalmente, che risponde dinamicamente alle dimensioni dello schermo e l'orientamento del dispositivo iOS.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 009a4025bc9df6f657964b7e97e559635ef0a929
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 3a46b939fa87cd6535c9f86c46981c098542e7c9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996165"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105480"
 ---
 # <a name="accessing-remote-data"></a>Accesso ai dati remoti
 
@@ -60,26 +60,26 @@ Figura 10-1 illustra l'interazione delle classi che leggono i dati del catalogo 
 Quando il `CatalogView` si accede, il `OnInitialize` metodo nel `CatalogViewModel` classe viene chiamata. Questo metodo recupera i dati del catalogo il microservizio catalogo, come illustrato nell'esempio di codice seguente:
 
 ```csharp
-public override async Task InitializeAsync(object navigationData)  
+public override async Task InitializeAsync(object navigationData)  
 {  
-    ...  
-    Products = await _productsService.GetCatalogAsync();  
-    ...  
+    ...  
+    Products = await _productsService.GetCatalogAsync();  
+    ...  
 }
 ```
 
 Questo metodo chiama il `GetCatalogAsync` metodo del `CatalogService` istanza in cui è stata inserita nel `CatalogViewModel` da Autofac. Nell'esempio di codice riportato di seguito viene illustrato il `GetCatalogAsync` metodo:
 
 ```csharp
-public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
+public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
 {  
-    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.CatalogEndpoint);  
-    builder.Path = "api/v1/catalog/items";  
-    string uri = builder.ToString();  
+    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.CatalogEndpoint);  
+    builder.Path = "api/v1/catalog/items";  
+    string uri = builder.ToString();  
 
-    CatalogRoot catalog = await _requestProvider.GetAsync<CatalogRoot>(uri);  
-    ...  
-    return catalog?.Data.ToObservableCollection();            
+    CatalogRoot catalog = await _requestProvider.GetAsync<CatalogRoot>(uri);  
+    ...  
+    return catalog?.Data.ToObservableCollection();            
 }
 ```
 
@@ -88,18 +88,18 @@ Questo metodo genera l'URI che identifica la risorsa la richiesta verrà inviata
 Nell'esempio di codice riportato di seguito viene illustrato il `GetAsync` metodo nel `RequestProvider` classe:
 
 ```csharp
-public async Task<TResult> GetAsync<TResult>(string uri, string token = "")  
+public async Task<TResult> GetAsync<TResult>(string uri, string token = "")  
 {  
-    HttpClient httpClient = CreateHttpClient(token);  
-    HttpResponseMessage response = await httpClient.GetAsync(uri);  
+    HttpClient httpClient = CreateHttpClient(token);  
+    HttpResponseMessage response = await httpClient.GetAsync(uri);  
 
-    await HandleResponse(response);  
-    string serialized = await response.Content.ReadAsStringAsync();  
+    await HandleResponse(response);  
+    string serialized = await response.Content.ReadAsStringAsync();  
 
-    TResult result = await Task.Run(() =>   
-        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
+    TResult result = await Task.Run(() =>   
+        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
 
-    return result;  
+    return result;  
 }
 ```
 
@@ -108,18 +108,18 @@ Questo metodo chiama il `CreateHttpClient` metodo, che restituisce un'istanza de
 Il `CreateHttpClient` metodo è illustrato nell'esempio di codice seguente:
 
 ```csharp
-private HttpClient CreateHttpClient(string token = "")  
+private HttpClient CreateHttpClient(string token = "")  
 {  
-    var httpClient = new HttpClient();  
-    httpClient.DefaultRequestHeaders.Accept.Add(  
-        new MediaTypeWithQualityHeaderValue("application/json"));  
+    var httpClient = new HttpClient();  
+    httpClient.DefaultRequestHeaders.Accept.Add(  
+        new MediaTypeWithQualityHeaderValue("application/json"));  
 
-    if (!string.IsNullOrEmpty(token))  
-    {  
-        httpClient.DefaultRequestHeaders.Authorization =   
-            new AuthenticationHeaderValue("Bearer", token);  
-    }  
-    return httpClient;  
+    if (!string.IsNullOrEmpty(token))  
+    {  
+        httpClient.DefaultRequestHeaders.Authorization =   
+            new AuthenticationHeaderValue("Bearer", token);  
+    }  
+    return httpClient;  
 }
 ```
 
@@ -130,23 +130,23 @@ Quando la `GetAsync` metodo nella `RequestProvider` classe chiamate `HttpClient.
 ```csharp
 [HttpGet]  
 [Route("[action]")]  
-public async Task<IActionResult> Items(  
-    [FromQuery]int pageSize = 10, [FromQuery]int pageIndex = 0)  
+public async Task<IActionResult> Items(  
+    [FromQuery]int pageSize = 10, [FromQuery]int pageIndex = 0)  
 {  
-    var totalItems = await _catalogContext.CatalogItems  
-        .LongCountAsync();  
+    var totalItems = await _catalogContext.CatalogItems  
+        .LongCountAsync();  
 
-    var itemsOnPage = await _catalogContext.CatalogItems  
-        .OrderBy(c=>c.Name)  
-        .Skip(pageSize * pageIndex)  
-        .Take(pageSize)  
-        .ToListAsync();  
+    var itemsOnPage = await _catalogContext.CatalogItems  
+        .OrderBy(c=>c.Name)  
+        .Skip(pageSize * pageIndex)  
+        .Take(pageSize)  
+        .ToListAsync();  
 
-    itemsOnPage = ComposePicUri(itemsOnPage);  
-    var model = new PaginatedItemsViewModel<CatalogItem>(  
-        pageIndex, pageSize, totalItems, itemsOnPage);             
+    itemsOnPage = ComposePicUri(itemsOnPage);  
+    var model = new PaginatedItemsViewModel<CatalogItem>(  
+        pageIndex, pageSize, totalItems, itemsOnPage);             
 
-    return Ok(model);  
+    return Ok(model);  
 }
 ```
 
@@ -165,50 +165,50 @@ Figura 10-2 viene illustrata l'interazione delle classi che inviano i dati del c
 Quando un elemento viene aggiunto al carrello degli acquisti, il `ReCalculateTotalAsync` metodo nel `BasketViewModel` classe viene chiamata. Questo metodo aggiorna il valore totale degli elementi nel carrello e invia i dati sugli acquisti per il microservizio basket, come illustrato nell'esempio di codice seguente:
 
 ```csharp
-private async Task ReCalculateTotalAsync()  
+private async Task ReCalculateTotalAsync()  
 {  
-    ...  
-    await _basketService.UpdateBasketAsync(new CustomerBasket  
-    {  
-        BuyerId = userInfo.UserId,   
-        Items = BasketItems.ToList()  
-    }, authToken);  
+    ...  
+    await _basketService.UpdateBasketAsync(new CustomerBasket  
+    {  
+        BuyerId = userInfo.UserId,   
+        Items = BasketItems.ToList()  
+    }, authToken);  
 }
 ```
 
-Questo metodo chiama il `UpdateBasketAsync` metodo del `BasketService` istanza in cui è stata inserita nel `BasketViewModel` da Autofac. Nel codice seguente viene illustrato il metodo `UpdateBasketAsync`.
+Questo metodo chiama il `UpdateBasketAsync` metodo del `BasketService` istanza in cui è stata inserita nel `BasketViewModel` da Autofac. Il metodo seguente viene illustrato il `UpdateBasketAsync` metodo:
 
 ```csharp
-public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerBasket, string token)  
+public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerBasket, string token)  
 {  
-    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
-    string uri = builder.ToString();  
-    var result = await _requestProvider.PostAsync(uri, customerBasket, token);  
-    return result;  
+    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
+    string uri = builder.ToString();  
+    var result = await _requestProvider.PostAsync(uri, customerBasket, token);  
+    return result;  
 }
 ```
 
-Questo metodo genera l'URI che identifica la risorsa la richiesta verrà inviata a e Usa il `RequestProvider` classe per richiamare il metodo HTTP POST sulla risorsa, prima di restituire i risultati per il `BasketViewModel`. Si noti che un token di accesso ottenuti da IdentityServer durante il processo di autenticazione, è necessario autorizzare le richieste per il microservizio basket. Per ulteriori informazioni, vedere [autorizzazione](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md#authorization).
+Questo metodo genera l'URI che identifica la risorsa la richiesta verrà inviata a e Usa il `RequestProvider` classe per richiamare il metodo HTTP POST sulla risorsa, prima di restituire i risultati per il `BasketViewModel`. Si noti che un token di accesso ottenuti da IdentityServer durante il processo di autenticazione, è necessario autorizzare le richieste per il microservizio basket. Per altre informazioni sull'autorizzazione, vedere [autorizzazione](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md#authorization).
 
 Esempio di codice seguente viene illustrato uno dei `PostAsync` metodi nel `RequestProvider` classe:
 
 ```csharp
-public async Task<TResult> PostAsync<TResult>(  
-    string uri, TResult data, string token = "", string header = "")  
+public async Task<TResult> PostAsync<TResult>(  
+    string uri, TResult data, string token = "", string header = "")  
 {  
-    HttpClient httpClient = CreateHttpClient(token);  
-    ...  
-    var content = new StringContent(JsonConvert.SerializeObject(data));  
-    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");  
-    HttpResponseMessage response = await httpClient.PostAsync(uri, content);  
+    HttpClient httpClient = CreateHttpClient(token);  
+    ...  
+    var content = new StringContent(JsonConvert.SerializeObject(data));  
+    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");  
+    HttpResponseMessage response = await httpClient.PostAsync(uri, content);  
 
-    await HandleResponse(response);  
-    string serialized = await response.Content.ReadAsStringAsync();  
+    await HandleResponse(response);  
+    string serialized = await response.Content.ReadAsStringAsync();  
 
-    TResult result = await Task.Run(() =>  
-        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
+    TResult result = await Task.Run(() =>  
+        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
 
-    return result;  
+    return result;  
 }
 ```
 
@@ -218,10 +218,10 @@ Quando la `PostAsync` metodo nella `RequestProvider` classe chiamate `HttpClient
 
 ```csharp
 [HttpPost]  
-public async Task<IActionResult> Post([FromBody]CustomerBasket value)  
+public async Task<IActionResult> Post([FromBody]CustomerBasket value)  
 {  
-    var basket = await _repository.UpdateBasketAsync(value);  
-    return Ok(basket);  
+    var basket = await _repository.UpdateBasketAsync(value);  
+    return Ok(basket);  
 }
 ```
 
@@ -238,23 +238,23 @@ Figura 10-3 mostra le interazioni di classi che eliminare i dati del carrello il
 Quando viene richiamato il processo di estrazione, la `CheckoutAsync` metodo nel `CheckoutViewModel` classe viene chiamata. Questo metodo crea un nuovo ordine, prima di cancellare il carrello acquisti, come illustrato nell'esempio di codice seguente:
 
 ```csharp
-private async Task CheckoutAsync()  
+private async Task CheckoutAsync()  
 {  
-    ...  
-    await _basketService.ClearBasketAsync(_shippingAddress.Id.ToString(), authToken);  
-    ...  
+    ...  
+    await _basketService.ClearBasketAsync(_shippingAddress.Id.ToString(), authToken);  
+    ...  
 }
 ```
 
-Questo metodo chiama il `ClearBasketAsync` metodo del `BasketService` istanza in cui è stata inserita nel `CheckoutViewModel` da Autofac. Nel codice seguente viene illustrato il metodo `ClearBasketAsync`.
+Questo metodo chiama il `ClearBasketAsync` metodo del `BasketService` istanza in cui è stata inserita nel `CheckoutViewModel` da Autofac. Il metodo seguente viene illustrato il `ClearBasketAsync` metodo:
 
 ```csharp
-public async Task ClearBasketAsync(string guidUser, string token)  
+public async Task ClearBasketAsync(string guidUser, string token)  
 {  
-    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
-    builder.Path = guidUser;  
-    string uri = builder.ToString();  
-    await _requestProvider.DeleteAsync(uri, token);  
+    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
+    builder.Path = guidUser;  
+    string uri = builder.ToString();  
+    await _requestProvider.DeleteAsync(uri, token);  
 }
 ```
 
@@ -263,10 +263,10 @@ Questo metodo si basa l'URI che identifica la risorsa che la richiesta verrà in
 Nell'esempio di codice riportato di seguito viene illustrato il `DeleteAsync` metodo nel `RequestProvider` classe:
 
 ```csharp
-public async Task DeleteAsync(string uri, string token = "")  
+public async Task DeleteAsync(string uri, string token = "")  
 {  
-    HttpClient httpClient = CreateHttpClient(token);  
-    await httpClient.DeleteAsync(uri);  
+    HttpClient httpClient = CreateHttpClient(token);  
+    await httpClient.DeleteAsync(uri);  
 }
 ```
 
@@ -276,9 +276,9 @@ Quando la `DeleteAsync` metodo nella `RequestProvider` classe chiamate `HttpClie
 
 ```csharp
 [HttpDelete("{id}")]  
-public void Delete(string id)  
+public void Delete(string id)  
 {  
-    _repository.DeleteBasketAsync(id);  
+    _repository.DeleteBasketAsync(id);  
 }
 ```
 
@@ -312,7 +312,7 @@ L'app per dispositivi mobili di eShopOnContainers Usa una cache privata, in cui 
 
 Quando i dati memorizzati nella cache scadono, questa deve essere rimossa dalla cache e l'app deve recuperare i dati dai dati originali archiviano e inserirlo nuovamente nella cache.
 
-È anche possibile che una cache si riempia se i dati può rimangono per molto tempo. Di conseguenza, le richieste per aggiungere nuovi elementi alla cache potrebbero essere necessario rimuovere alcuni elementi in un processo noto come *rimozione*. Servizi di memorizzazione nella cache tipicamente rimuovono i dati a intervalli usati meno di recente. Tuttavia, esistono altri criteri di rimozione, tra cui utilizzati più di recente e first-in-first-out. Per altre informazioni, vedere [Caching Data](/azure/architecture/best-practices/caching/).
+È anche possibile che una cache si riempia se i dati può rimangono per molto tempo. Di conseguenza, le richieste per aggiungere nuovi elementi alla cache potrebbero essere necessario rimuovere alcuni elementi in un processo noto come *rimozione*. Servizi di memorizzazione nella cache tipicamente rimuovono i dati a intervalli usati meno di recente. Tuttavia, esistono altri criteri di rimozione, tra cui utilizzati più di recente e first-in-first-out. Per altre informazioni, vedere [materiale sussidiario di memorizzazione nella cache](/azure/architecture/best-practices/caching/).
 
 <a name="caching_images" />
 
@@ -320,7 +320,7 @@ Quando i dati memorizzati nella cache scadono, questa deve essere rimossa dalla 
 
 L'app per dispositivi mobili di eShopOnContainers Usa le immagini dei prodotti remoto che traggono vantaggio dalla memorizzazione nella cache. Queste immagini vengono visualizzate per il [ `Image` ](xref:Xamarin.Forms.Image) (controllo) e il `CachedImage` controllo fornito dal [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) libreria.
 
-Xamarin. Forms [ `Image` ](xref:Xamarin.Forms.Image) controllo supporta la memorizzazione nella cache delle immagini scaricate. La memorizzazione nella cache è abilitata per impostazione predefinita e archivierà l'immagine in locale per 24 ore. Inoltre, l'ora di scadenza può essere configurata con il [ `CacheValidity` ](xref:Xamarin.Forms.UriImageSource.CacheValidity) proprietà. Per altre informazioni, vedere [memorizzazione nella cache di immagine scaricato](~/xamarin-forms/user-interface/images.md#Image_Caching).
+Xamarin. Forms [ `Image` ](xref:Xamarin.Forms.Image) controllo supporta la memorizzazione nella cache delle immagini scaricate. La memorizzazione nella cache è abilitata per impostazione predefinita e archivierà l'immagine in locale per 24 ore. Inoltre, l'ora di scadenza può essere configurata con il [ `CacheValidity` ](xref:Xamarin.Forms.UriImageSource.CacheValidity) proprietà. Per altre informazioni, vedere [memorizzazione nella cache di immagine scaricato](~/xamarin-forms/user-interface/images.md#downloaded-image-caching).
 
 Del FFImageLoading `CachedImage` controllo è una sostituzione per xamarin. Forms [ `Image` ](xref:Xamarin.Forms.Image) (controllo), che fornisce le proprietà aggiuntive che abilitano funzionalità supplementari. Tra questa funzionalità, il controllo fornisce configurabile la memorizzazione nella cache, durante il supporto di errore e il caricamento di segnaposto immagine. Esempio di codice seguente viene illustrato come l'app per dispositivi mobili di eShopOnContainers Usa il `CachedImage` controllare nel `ProductTemplate`, che è il modello di dati utilizzato dal [ `ListView` ](xref:Xamarin.Forms.ListView) controllare nel `CatalogView`:
 
@@ -408,7 +408,7 @@ Per altre informazioni sul modello di interruttore di circuito, vedere la [inter
 
 Molte soluzioni moderne basate sul web rendere l'uso dei servizi web, ospitate dai server web, per fornire funzionalità per client remoto delle applicazioni. Le operazioni che espone un servizio web costituiscono un'API web e App client devono essere in grado di usare l'API web senza conoscere come vengono implementate i dati o le operazioni che espone l'API.
 
-Una strategia di ripetizione aggressivi con un ritardo minimo tra tentativi e un numero elevato di tentativi, è stato possibile ridurre le prestazioni di un servizio remoto che esegue prossime o in base alla capacità. Per altre informazioni, vedere schema Circuit Breaker. Non implementare mai un meccanismo di ripetizione infiniti. Usare un numero finito di ripetizione dei tentativi o implementare il interruttore criterio per consentire un ripristino del servizio.
+Possono migliorare le prestazioni di un'app per la memorizzazione nella cache i dati utilizzati di frequente a risorsa di archiviazione rapida vicina all'app. Le app possono implementare la memorizzazione nella cache di read-through con il modello cache-aside. Questo modello determina se l'elemento è attualmente nella cache. Se l'elemento non è nella cache, letto dall'archivio dati e aggiunti alla cache.
 
 Durante la comunicazione con le API web, le app devono essere sensibili agli errori temporanei. Gli errori temporanei includono la perdita temporanea della connettività di rete ai servizi, l'indisponibilità temporanea di un servizio o i timeout generati perché un servizio è occupato. Questi errori spesso si risolvono automaticamente e se l'azione viene ripetuta dopo un intervallo di tempo appropriato, quindi è probabile che abbia esito positivo. Di conseguenza, le app devono eseguire il wrapping di tutti i tentativi di accedere a un'API web nel codice che implementa un meccanismo di gestione di errori temporanei.
 

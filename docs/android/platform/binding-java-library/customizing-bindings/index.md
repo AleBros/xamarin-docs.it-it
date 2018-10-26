@@ -1,47 +1,47 @@
 ---
 title: Personalizzazione delle associazioni
-description: È possibile personalizzare un'associazione xamarin modificando i metadati che controlla il processo di associazione. Queste modifiche manuali sono spesso necessarie per la risoluzione di errori di compilazione e per il data shaping l'API risulta in modo che risulti più coerenza con c# o .NET. Queste guide vengono illustrate la struttura dei metadati, come modificare i metadati e come utilizzare JavaDoc per recuperare i nomi dei parametri del metodo.
+description: È possibile personalizzare un'associazione di xamarin. Android modificando i metadati che controlla il processo di associazione. Queste modifiche manuali sono spesso necessari per la risoluzione degli errori di compilazione e per il data shaping dell'API risulta, in modo che sia più coerenza con C#/.NET. Queste guide illustrano la struttura di questi metadati, come modificare i metadati e come usare Java per recuperare i nomi dei parametri del metodo.
 ms.prod: xamarin
 ms.assetid: 63C5078D-9E42-4F70-AF8C-8CEEA84FB6AF
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: bb4f3b24be2072cb8b33893899a23951ace63607
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 44bff372225ee1bf555eb3eeb34da918830980b4
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763137"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102386"
 ---
 # <a name="customizing-bindings"></a>Personalizzazione delle associazioni
 
-_È possibile personalizzare un'associazione xamarin modificando i metadati che controlla il processo di associazione. Queste modifiche manuali sono spesso necessarie per la risoluzione di errori di compilazione e per il data shaping l'API risulta in modo che risulti più coerenza con c# o .NET. Queste guide vengono illustrate la struttura dei metadati, come modificare i metadati e come utilizzare JavaDoc per recuperare i nomi dei parametri del metodo._
+_È possibile personalizzare un'associazione di xamarin. Android modificando i metadati che controlla il processo di associazione. Queste modifiche manuali sono spesso necessari per la risoluzione degli errori di compilazione e per il data shaping dell'API risulta, in modo che sia più coerenza con C#/.NET. Queste guide illustrano la struttura di questi metadati, come modificare i metadati e come usare Java per recuperare i nomi dei parametri del metodo._
 
 
 ## <a name="overview"></a>Panoramica
  
-Xamarin consente di automatizzare gran parte del processo di associazione. Tuttavia, in alcuni casi la modifica manuale è necessaria per risolvere i problemi seguenti:
+Xamarin. Android consente di automatizzare gran parte del processo di associazione; in alcuni casi, tuttavia, la modifica manuale è necessario per risolvere i problemi seguenti:
 
--   Risoluzione di compilare gli errori causati dalla mancanza di tipi, tipi offuscati, nomi duplicati, i problemi di visibilità di classe e altre situazioni in cui non possono essere risolti per gli strumenti di xamarin. 
+-   Risoluzione di compilare gli errori causati dalla mancanza di tipi, tipi offuscati, nomi duplicati, i problemi di visibilità di classe e altre situazioni in cui non possono essere risolti dagli strumenti xamarin. Android. 
 
--   La modifica del mapping che xamarin viene utilizzato per associare l'API Android a tipi diversi in c# (ad esempio, molti sviluppatori preferiscono eseguire il mapping di Java `int` costanti in c# `enum` costanti).
+-   Modifica del mapping che xamarin. Android Usa per associare l'API Android a diversi tipi in C# (ad esempio, molti sviluppatori preferiscono eseguire il mapping di Java `int` le costanti per C# `enum` costanti).
 
 -   Rimozione dei tipi inutilizzati che non devono essere associate. 
 
--   Aggiunta di tipi che non dispongono di alcun equivalente nell'API Java sottostante. 
+-   Aggiunta di tipi che non hanno una controparte nell'API Java sottostante. 
 
-È possibile apportare alcuni o tutti questi cambiamenti modificando i metadati che controlla il processo di associazione.
+È possibile apportare alcune o tutte queste modifiche, modificando i metadati che controlla il processo di associazione.
 
 
 ## <a name="guides"></a>Guide
 
 Le guide seguenti descrivono i metadati che controlla il processo di associazione e viene illustrato come modificare i metadati per risolvere questi problemi:
 
--   [I metadati di associazioni di Java](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md) viene fornita una panoramica dei metadati che passa a un'associazione di Java.
-    Descrive i vari passaggi manuali che sono talvolta necessarie per completare una raccolta di binding di linguaggio e viene descritto come definire la forma un'API esposta da un'associazione di più da vicino seguire indicazioni per la progettazione di .NET.
+-   [Metadati per le associazioni Java](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md) offre una panoramica dei metadati da inserire in un'associazione di Java.
+    Descrive i vari passaggi manuali che sono talvolta necessarie per completare una libreria di binding Java e viene descritto come definire la forma un'API esposta da un'associazione di più da vicino seguire le indicazioni di progettazione .NET.
 
--   [Denominazione dei parametri con Javadoc](~/android/platform/binding-java-library/customizing-bindings/naming-parameters-with-javadoc.md) viene illustrato come recuperare i nomi dei parametri in un progetto di associazione Java utilizzando Javadoc generato dal progetto Java associato.
+-   [Denominazione di parametri con Javadoc](~/android/platform/binding-java-library/customizing-bindings/naming-parameters-with-javadoc.md) viene illustrato come recuperare i nomi dei parametri in un progetto di Binding di linguaggio con Javadoc prodotta dal progetto Java associato.
 
 
  

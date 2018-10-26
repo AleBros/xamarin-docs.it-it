@@ -1,37 +1,37 @@
 ---
-title: Introduzione a autenticazione impronta digitale
+title: Guida introduttiva con autenticazione tramite impronta digitale
 ms.prod: xamarin
 ms.assetid: 7BACCB36-8E3E-4E5D-B8EF-56A639839FD2
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 70d27ef3d7518619a246c25aac128b2fd1ed70c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: conceptdev
+ms.author: crdun
+ms.date: 08/17/2018
+ms.openlocfilehash: 05069272bfa25cc1f003d4aeb83e15bd223c2830
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764398"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118474"
 ---
-# <a name="getting-started-with-fingerprint-authentication"></a>Introduzione a autenticazione impronta digitale
+# <a name="getting-started-with-fingerprint-authentication"></a>Guida introduttiva con autenticazione tramite impronta digitale
 
-Per iniziare, si illustrerà come configurare un progetto xamarin in modo che l'applicazione è in grado di utilizzare l'autenticazione impronta digitale:
+Per iniziare, è possibile si illustrerà come configurare un progetto xamarin. Android in modo che l'applicazione è in grado di usare l'autenticazione tramite impronta digitale:
 
-1. Aggiornamento **AndroidManifest.xml** per dichiarare le autorizzazioni necessarie per le API di impronta digitale.
+1. Update **androidmanifest. XML** per dichiarare le autorizzazioni necessarie per le API di impronta digitale.
 2. Ottenere un riferimento di `FingerprintManager`.
-3. Verificare che il dispositivo è in grado di supportare l'analisi di impronta digitale.
+3. Verificare che il dispositivo è in grado di analizzare con impronta digitale.
 
 ## <a name="requesting-permissions-in-the-application-manifest"></a>Richiesta di autorizzazioni nell'applicazione manifesto
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Un'applicazione deve richiedere la `USE_FINGERPRINT` autorizzazione nel manifesto. Nella schermata seguente viene illustrato come aggiungere questa autorizzazione per l'applicazione in Visual Studio 2015:
+Un'applicazione Android è necessario richiedere il `USE_FINGERPRINT` autorizzazione nel manifesto. Lo screenshot seguente mostra come aggiungere questa autorizzazione all'applicazione in Visual Studio 2015:
 
 [![Abilitare l'utilizzo\_impronta digitale nella schermata di manifesto Android](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Un'applicazione deve richiedere la `USE_FINGERPRINT` autorizzazione nel manifesto. Nella schermata seguente viene illustrato come aggiungere questa autorizzazione per l'applicazione in Visual Studio per Mac:
+Un'applicazione Android è necessario richiedere il `USE_FINGERPRINT` autorizzazione nel manifesto. Lo screenshot seguente mostra come aggiungere questa autorizzazione all'applicazione in Visual Studio per Mac:
 
 [![Abilitazione UseFingerprint nella schermata di applicazione Android](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png#lightbox) 
 
@@ -39,7 +39,7 @@ Un'applicazione deve richiedere la `USE_FINGERPRINT` autorizzazione nel manifest
 
 ## <a name="getting-an-instance-of-the-fingerprintmanager"></a>Ottenere un'istanza di FingerprintManager
 
-Successivamente, l'applicazione deve ottenere un'istanza di `FingerprintManager` o `FingerprintManagerCompat` classe. Per essere compatibile con le versioni precedenti di Android, un'applicazione Android deve usare la compatibilità API trovate nel pacchetto NuGet supporto Android v4. Il frammento di codice seguente viene illustrato come ottenere l'oggetto appropriato dal sistema operativo: 
+Successivamente, l'applicazione deve ottenere un'istanza di `FingerprintManager` o il `FingerprintManagerCompat` classe. Per essere compatibile con le versioni precedenti di Android, un'applicazione Android deve usare l'API di compatibilità sono stati trovati nel pacchetto NuGet supporto Android v4. Il frammento di codice seguente viene illustrato come ottenere l'oggetto sia appropriato dal sistema operativo: 
 
 ```csharp
 // Using the Android Support Library v4
@@ -49,16 +49,15 @@ FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(cont
 FingerprintManager fingerprintManager = context.GetSystemService(Context.FingerprintService) as FingerprintManager;
 ```  
 
-Nel frammento precedente, il `context` è qualsiasi Android `Android.Content.Context`. In genere si tratta di un'attività che esegue l'autenticazione.
+Nel frammento di codice precedente, il `context` è qualsiasi Android `Android.Content.Context`. In genere si tratta dell'attività che sta eseguendo l'autenticazione.
 
-## <a name="checking-for-eligibility"></a>Verifica l'idoneità
+## <a name="checking-for-eligibility"></a>Verifica idoneità
 
-Un'applicazione deve eseguire più controlli per assicurarsi che sia possibile utilizzare l'autenticazione impronta digitale. In totale, sono disponibili cinque condizioni che l'applicazione utilizza per controllare idoneità:  
- 
+Un'applicazione deve eseguire più controlli per assicurarsi che sia possibile usare l'autenticazione tramite impronta digitale. In totale, sono disponibili cinque condizioni utilizzati dall'applicazione per controllare idoneità:  
 
-**Livello API 23** &ndash; l'API di impronta digitale richiedono il livello API 23 o versione successiva. La `FingerprintManagerCompat` classe passerà il controllo del livello di API per l'utente. Per questo motivo è consigliabile utilizzare il **libreria di supporto Android v4** e `FingerprintManagerCompat`; questo verrà tenuto in considerazione uno di questi controlli.
+**Livello API 23** &ndash; le API di impronte digitali richiedono il livello API 23 o superiore. Il `FingerprintManagerCompat` classe conclude il controllo a livello di API per l'utente. Per questo motivo è consigliabile usare la **libreria di supporto Android v4** e `FingerprintManagerCompat`; questo verrà tenuto in considerazione per uno di questi controlli.
 
-**Hardware** &ndash; quando l'applicazione viene avviata per la prima volta, è necessario verificare la presenza di uno scanner di impronta digitale:
+**Hardware** &ndash; all'avvio l'applicazione per la prima volta, è necessario verificare la presenza di uno scanner di impronta digitale:
 
 ```csharp
 FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(context);
@@ -67,8 +66,8 @@ if (!fingerprintManager.IsHardwareDetected)
     // Code omitted
 }
 ```
-    
-**Dispositivo è protetto** &ndash; l'utente deve disporre del dispositivo protetto con un blocco dello schermo. Se l'utente non ha protetto il dispositivo con un blocco dello schermo e la sicurezza è importante per l'applicazione, l'utente deve avvisato che è necessario configurare un blocco dello schermo. Frammento di codice riportato di seguito viene illustrato come controllare questa pre-requiste:
+
+**Dispositivo protetta** &ndash; l'utente deve avere il sicurezza con un blocco dello schermo del dispositivo. Se l'utente non ha protetto il dispositivo con un blocco dello schermo e la sicurezza è importante per l'applicazione, quindi l'utente dovrà essere notificato che è necessario configurare un blocco dello schermo. Il frammento di codice seguente viene illustrato come controllare questo prerequisito:
 
 ```csharp
 KeyguardManager keyguardManager = (KeyguardManager) GetSystemService(KeyguardService);
@@ -77,7 +76,7 @@ if (!keyguardManager.IsKeyguardSecure)
 }
 ```
 
-**Le impronte digitali registrati** &ndash; l'utente deve disporre almeno delle impronte digitali registrata con il sistema operativo. Questo controllo di autorizzazione debba verificarsi prima di ogni tentativo di autenticazione:
+**Registrazione di impronte digitali** &ndash; l'utente deve avere almeno un impronte digitali registrate con il sistema operativo. Questo controllo di autorizzazione debba verificarsi prima di ogni tentativo di autenticazione:
 
 ```csharp
 FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(context);
@@ -88,7 +87,7 @@ if (!fingerprintManager.HasEnrolledFingerprints)
 }
 ```
 
-**Autorizzazioni** &ndash; l'applicazione deve richiedere l'autorizzazione da parte dell'utente prima di utilizzare l'applicazione. Per Android 5.0 e inferiore, l'utente concede l'autorizzazione come condizione per l'installazione dell'app. Android 6.0 introdotto un nuovo modello di autorizzazione che controlla le autorizzazioni in fase di esecuzione. Questo frammento di codice è riportato un esempio di come controllare le autorizzazioni in Android 6.0:
+**Le autorizzazioni** &ndash; l'applicazione deve richiedere l'autorizzazione da parte dell'utente prima di usare l'applicazione. Per Android 5.0 e inferiore, l'utente concede l'autorizzazione come condizione per l'installazione dell'app. Android 6.0 introdotto un nuovo modello di autorizzazione che controlla le autorizzazioni in fase di esecuzione. Questo frammento di codice è un esempio di come verificare le autorizzazioni per Android 6.0:
 
 ```csharp
 // The context is typically a reference to the current activity.
@@ -104,17 +103,15 @@ else
 }
 ```
 
-Un'applicazione deve verificare le condizioni, 3, 4 e 5 ogni volta che desidera utilizzare l'autenticazione impronta digitale. Le prime due condizioni possono essere verificate la prima volta che un'applicazione viene eseguita in un dispositivo e i risultati salvati (in condiviso preferenze, ad esempio).
+Verifica tutte le condizioni seguenti ogni volta che l'applicazione offre le opzioni di autenticazione assicura che l'utente ottiene la migliore esperienza utente. Le modifiche o aggiornamenti al dispositivo o al sistema operativo potrebbero influire sulla disponibilità dell'autenticazione tramite impronta digitale. Se si sceglie di memorizzare nella cache i risultati di uno di questi controlli, assicurarsi di soddisfare per scenari di aggiornamento.
 
-Per ulteriori informazioni su come richiedere le autorizzazioni in Android 6.0, consultare la Guida Android [richiesta di autorizzazioni in fase di esecuzione](http://developer.android.com/training/permissions/requesting.html).
-
-
+Per altre informazioni su come richiedere le autorizzazioni in Android 6.0, consultare la Guida di Android [richiesta di autorizzazioni in fase di esecuzione](http://developer.android.com/training/permissions/requesting.html).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
+- [Contesto](https://developer.xamarin.com/api/type/Android.Content.Context/)
 - [ContextCompat](https://developer.xamarin.com/api/type/Android.Support.V4.Content.ContextCompat/)
 - [KeyguardManager](https://developer.xamarin.com/api/type/Android.App.KeyguardManager/)
 - [FingerprintManager](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
 - [FingerprintManagerCompat](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
-- [La richiesta di autorizzazioni in fase di esecuzione](http://developer.android.com/training/permissions/requesting.html)
+- [Richiesta di autorizzazioni in fase di esecuzione](http://developer.android.com/training/permissions/requesting.html)

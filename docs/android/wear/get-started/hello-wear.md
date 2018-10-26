@@ -1,68 +1,68 @@
 ---
-title: Hello, usura
-description: Creare la prima app Android con accenti ed eseguirlo in un dispositivo o un emulatore usura. Questa procedura dettagliata vengono fornite istruzioni dettagliate per la creazione di un piccolo progetto Android accenti che gestisce i clic del pulsante e visualizza un contatore di fare clic sul dispositivo usura. Viene spiegato come eseguire il debug dell'app usando un emulatore usura o un dispositivo usura che è connesso tramite Bluetooth su un telefono Android. Fornisce inoltre un set di comandi di debug per Android con accenti.
+title: App per wear
+description: Creare la prima app Android Wear ed eseguirlo in un dispositivo o emulatore Wear. Questa procedura dettagliata vengono fornite istruzioni dettagliate per la creazione di un progetto Android Wear piccolo che gestisce i clic sui pulsanti e visualizza un contatore di fare clic sul dispositivo Wear. Viene spiegato come eseguire il debug dell'app usando un emulatore Wear o un dispositivo Wear connessa tramite Bluetooth per un telefono Android. Consente inoltre una serie di suggerimenti per il debug di Android Wear.
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/10/2018
-ms.openlocfilehash: 17c12c4ec818c21d6697932315874ea4f63e6109
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: a8e27063040ff91f72a1cbf932b1b277a5dee63d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33798414"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104921"
 ---
-# <a name="hello-wear"></a>Hello, usura
+# <a name="hello-wear"></a>App per wear
 
-_Creare la prima app Android con accenti ed eseguirlo in un dispositivo o un emulatore usura. Questa procedura dettagliata vengono fornite istruzioni dettagliate per la creazione di un piccolo progetto Android accenti che gestisce i clic del pulsante e visualizza un contatore di fare clic sul dispositivo usura. Viene spiegato come eseguire il debug dell'app usando un emulatore usura o un dispositivo usura che è connesso tramite Bluetooth su un telefono Android. Fornisce inoltre un set di comandi di debug per Android con accenti._
+_Creare la prima app Android Wear ed eseguirlo in un dispositivo o emulatore Wear. Questa procedura dettagliata vengono fornite istruzioni dettagliate per la creazione di un progetto Android Wear piccolo che gestisce i clic sui pulsanti e visualizza un contatore di fare clic sul dispositivo Wear. Viene spiegato come eseguire il debug dell'app usando un emulatore Wear o un dispositivo Wear connessa tramite Bluetooth per un telefono Android. Consente inoltre una serie di suggerimenti per il debug di Android Wear._
 
-![Schermata dell'app usura per completare questa esercitazione](hello-wear-images/example.png)
+![Screenshot dell'app Wear per essere completati in questa esercitazione](hello-wear-images/example.png)
 
-## <a name="your-first-wear-app"></a>La prima app usura
+## <a name="your-first-wear-app"></a>La prima app Wear
 
-Seguire questi passaggi per creare la prima app xamarin usura:
+Seguire questi passaggi per creare la prima app xamarin. Android Wear:
 
 ### <a name="1-create-a-new-android-project"></a>1. Creare un nuovo progetto Android
 
-Creare un nuovo **applicazione Android accenti**:
+Creare una nuova **applicazione Android Wear**:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Creazione di una nuova applicazione Android di usare nella finestra di dialogo Nuovo progetto](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
+[![Creazione di una nuova applicazione Android Wear nella finestra di dialogo Nuovo progetto](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Creazione di una nuova applicazione Android di usare nella finestra di dialogo nuova soluzione](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
-
------
-
-
-Questo modello include automaticamente il **libreria indossabile Android di Xamarin** NuGet (e le dipendenze) in modo sarà possibile accedere a widget usura specifiche. Se non viene visualizzato il modello usura, esaminare il [installazione e configurazione](~/android/wear/get-started/installation.md) Guida verificare di aver installato un SDK Android supportato. 
-
-### <a name="2-choose-the-correct-target-framework"></a>2. Scegliere il corretto **Framework di destinazione**
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-Verificare che **minimo Android di destinazione** è impostato su **Android 5.0 (simbolo)** o versione successiva: 
-
-[![L'impostazione del Framework di destinazione su Android 5.0 in Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
-
-Verificare che il framework di destinazione è impostato su **Android 5.0 (simbolo)** o versione successiva:
-
-[![Impostare il Framework di destinazione Android 5.0 in Visual Studio per Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
+[![Creazione di una nuova applicazione Android Wear nella finestra di dialogo nuova soluzione](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
-Per ulteriori informazioni sull'impostazione del framework di destinazione, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
+
+Questo modello include automaticamente il **libreria indossabile di Xamarin Android** NuGet (e le dipendenze) ed è pertanto necessario l'accesso ai widget Wear specifici. Se non viene visualizzato il modello Wear, consultare il [installazione e configurazione](~/android/wear/get-started/installation.md) Guida verificare di avere installato una versione di Android SDK supportato. 
+
+### <a name="2-choose-the-correct-target-framework"></a>2. Scegliere i valori corretti **Framework di destinazione**
+
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+
+Assicurarsi che **minima di Android di destinazione** è impostata su **Android 5.0 (Lollipop)** o versione successiva: 
+
+[![Impostazione del Framework di destinazione in Android 5.0 in Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+
+Verificare che il framework di destinazione è impostato su **Android 5.0 (Lollipop)** o versione successiva:
+
+[![Impostazione del Framework di destinazione di Android 5.0 in Visual Studio per Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
+
+-----
+
+Per altre informazioni sull'impostazione del framework di destinazione, vedere [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).
 
 
-### <a name="3-edit-the-mainaxml-layout"></a>3. Modificare il **axml** layout
+### <a name="3-edit-the-mainaxml-layout"></a>3. Modificare il **Main. axml** layout
 
-Configurare il layout per contenere un `TextView` e `Button` per il codice di esempio: 
+Configurare il layout per contenere una `TextView` e un `Button` dell'esempio: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -103,9 +103,9 @@ android:layout_height="match_parent">
 </FrameLayout>
 ```
 
-### <a name="4-edit-the-mainactivitycs-source"></a>4. Modificare il **Mainactivity** origine
+### <a name="4-edit-the-mainactivitycs-source"></a>4. Modificare il **MainActivity.cs** origine
 
-Aggiungere il codice per incrementare un contatore e la visualizza ogni volta che si fa clic sul pulsante: 
+Aggiungere il codice per incrementare un contatore e lo visualizza ogni volta che viene scelto il pulsante: 
 
 ```csharp
 [Activity (Label = "WearTest", MainLauncher = true, Icon = "@drawable/icon")]
@@ -129,49 +129,49 @@ public class MainActivity : Activity
 }
 ```
 
-### <a name="5-setup-an-emulator-or-device"></a>5. Programma di installazione di un emulatore o dispositivo
+### <a name="5-setup-an-emulator-or-device"></a>5. Configurare un emulatore o dispositivo
 
-Il passaggio successivo viene configurato un emulatore o dispositivo per distribuire ed eseguire l'app. Se non sono ancora familiarità con il processo di distribuzione ed esecuzione di App xamarin in generale, vedere il [Hello, Android Quickstart](~/android/get-started/hello-android/hello-android-quickstart.md).
+Il passaggio successivo è configurato un emulatore o il dispositivo da distribuire ed eseguire l'app. Se non si ha ancora familiarità con il processo di distribuzione ed esecuzione delle App xamarin. Android in generale, vedere la [Hello, Android: Guida introduttiva](~/android/get-started/hello-android/hello-android-quickstart.md).
 
-Se non si dispone di un dispositivo Android, usare, ad esempio un Smartwatch accenti Android, è possibile eseguire l'app in un emulatore. Per informazioni sul debug usura App in un emulatore, vedere [Debug Android accenti in un emulatore](~/android/wear/deploy-test/debug-on-emulator.md).
+Se non hai un dispositivo Android Wear, ad esempio un Smartwatch Android Wear, è possibile eseguire l'app in un emulatore. Per informazioni sul debug delle App Wear in un emulatore, vedere [il Debug di Android Wear in un emulatore](~/android/wear/deploy-test/debug-on-emulator.md).
 
-Se si dispone di un dispositivo Android, usare, ad esempio un Smartwatch accenti Android, è possibile eseguire l'app sul dispositivo anziché utilizzare un emulatore. Per ulteriori informazioni sul debug in un dispositivo usura, vedere [eseguire il Debug su un dispositivo con accenti](~/android/wear/deploy-test/debug-on-device.md).
+Se si dispone di un dispositivo Android Wear, ad esempio un Smartwatch Android Wear, è possibile eseguire l'app sul dispositivo invece di usare un emulatore. Per altre informazioni sul debug in un dispositivo Wear, vedere [eseguire il Debug in un dispositivo Wear](~/android/wear/deploy-test/debug-on-device.md).
 
 
-### <a name="6-run-the-android-wear-app"></a>6. Eseguire l'app Android usura
+### <a name="6-run-the-android-wear-app"></a>6. Eseguire l'app Android Wear
 
-Il dispositivo Android con accenti compariranno nel menu a discesa dispositivo. Assicurarsi di scegliere il dispositivo Android con accenti corretto o AVD prima di iniziare il debug. Dopo aver selezionato il dispositivo, fare clic sul pulsante Riproduci per distribuire l'app sull'emulatore o dispositivo.
+Il dispositivo Android Wear dovrebbe essere nel menu a discesa dispositivo. Assicurarsi di scegliere il dispositivo Android Wear corretto oppure AVD prima di avviare il debug. Dopo aver selezionato il dispositivo, fare clic sul pulsante Riproduci per distribuire l'app all'emulatore o dispositivo.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Scelta di un AVD accenti nel menu dispositivo di Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
+[![Scelta di un AVD Wear nel menu di Visual Studio dispositivo](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Scelta di un AVD accenti in Visual Studio per menu dispositivo Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
+[![Scelta di un AVD Wear in Visual Studio per il menu di dispositivi Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
-È possibile visualizzare un **pochi minuti...**  messaggio (o alcune altre schermate intermedi) inizialmente: 
+Potrebbe essere visualizzato un **pochi minuti...**  messaggio (o alcuni altri schermo intero intermedio) all'inizio: 
 
-![Guardare l'emulatore consente di visualizzare solo un minuto...](hello-wear-images/please-wait.png)
+![Guarda l'emulatore Visualizza solo un minuto...](hello-wear-images/please-wait.png)
 
-Se si utilizza un emulatore di espressioni di controllo, può richiedere qualche minuto per avviare l'app. Quando si utilizza Bluetooth, richiede più tempo per distribuire l'app rispetto a quanto avviene tramite USB. (Ad esempio, accetta circa 5 minuti per distribuire l'app a cui è connesso a Bluetooth su un telefono 5 Nexus Watch G LG).
+Se si usa un emulatore di espressioni di controllo, può richiedere un po' di tempo per l'avvio dell'app. Quando si usa Bluetooth, richiede più tempo per distribuire l'app rispetto a quanto avviene tramite USB. (Ad esempio, sono necessari circa 5 minuti per distribuire l'app a Watch G LG che è connesso a Bluetooth su un telefono Nexus 5.)
 
-Dopo l'app viene distribuito correttamente, la schermata del dispositivo usura deve visualizzare una schermata simile alla seguente:
+Dopo che l'app distribuisce correttamente, la schermata del dispositivo Wear dovrebbe visualizzare una schermata simile alla seguente:
 
-[![Schermata iniziale dell'app usura](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
+[![Schermata iniziale dell'app per Wear](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
-Toccare il **CLICK ME!** pulsante sul dispositivo usura e vedere l'incremento di conteggio con ogni scelta:
+Toccare il **CLICK ME!** pulsante sul dispositivo Wear e vedere l'incremento di conteggio con ogni tocco:
 
-[![Schermata di usare app dopo 3 fa clic su](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
+[![Schermata di Wear app dopo il 3 clic](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Estrarre il [accenti esempi](https://developer.xamarin.com/samples/android/Android%20Wear/) incluse, usare Android le app con App Phone complementare.
+Consultare il [Wear esempi](https://developer.xamarin.com/samples/android/Android%20Wear/) , incluse le app Android Wear con le app Phone complementare.
 
-Quando si è pronti a distribuire l'app, vedere [utilizzo di creazione del pacchetto](~/android/wear/deploy-test/packaging.md).
+Quando si è pronti per distribuire l'app, vedere [utilizzo di creazione di pacchetti](~/android/wear/deploy-test/packaging.md).
 
 
 ## <a name="related-links"></a>Collegamenti correlati

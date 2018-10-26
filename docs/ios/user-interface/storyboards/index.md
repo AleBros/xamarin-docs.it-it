@@ -4,15 +4,15 @@ description: Questo documento fornisce un'introduzione agli storyboard in xamari
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: bd8fee1b8f1941203bb0e6f00e261cbfbbccc9a7
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: e1e5ec5d064ad7610c5b7be8d18284d3610352c9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242342"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106884"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in xamarin. IOS
 
@@ -129,7 +129,7 @@ Al termine della transizione, l'utente visualizzerà il `CallHistoryController` 
 
 In alcuni casi si potrebbe essere necessario aggiungere uno Storyboard a un file in precedenza non storyboard. Una volta questa operazione in Visual Studio per Mac può essere semplificata con la procedura seguente:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Creare un nuovo file di Storyboard selezionando **File > Nuovo File > iOS > Storyboard**, come illustrato di seguito: 
     
@@ -148,7 +148,7 @@ In alcuni casi si potrebbe essere necessario aggiungere uno Storyboard a un file
             set;
             }
             
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Creare un nuovo file Storyboard facendo clic sul progetto di **Aggiungi > Nuovo File > iOS > Storyboard vuoto**, come illustrato di seguito: 
     

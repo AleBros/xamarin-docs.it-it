@@ -1,38 +1,38 @@
 ---
-title: Associazione di una libreria di Java
-description: La Comunità Android ha molte librerie Java che vuoi usare nell'app; Questa guida viene illustrato come incorporare librerie Java nell'applicazione xamarin mediante la creazione di una raccolta di associazioni.
+title: Associazione di una libreria Java
+description: La community Android ha molte librerie Java che vuoi usare nell'app; Questa guida illustra come incorporare librerie Java nell'applicazione xamarin. Android tramite la creazione di una libreria di binding.
 ms.prod: xamarin
 ms.assetid: B39FF1D5-69C3-8A76-D268-C227A23C9485
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 3c2ed92da07519516db94697bbeaac9f328baa22
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b47b7611665dc3e935bba1bf89ecf9f82291fe08
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30768821"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118955"
 ---
-# <a name="binding-a-java-library"></a>Associazione di una libreria di Java
+# <a name="binding-a-java-library"></a>Associazione di una libreria Java
 
-_La Comunità Android ha molte librerie Java che vuoi usare nell'app; Questa guida viene illustrato come incorporare librerie Java nell'applicazione xamarin mediante la creazione di una raccolta di associazioni._
+_La community Android ha molte librerie Java che vuoi usare nell'app; Questa guida illustra come incorporare librerie Java nell'applicazione xamarin. Android tramite la creazione di una libreria di binding._
 
 ## <a name="overview"></a>Panoramica
 
-L'ecosistema di libreria di terze parti per Android è notevole. Per questo motivo, è spesso opportuno utilizzare una libreria Android esistente di to crearne uno nuovo. Xamarin offre due modalità di utilizzo di queste librerie:
+L'ecosistema delle librerie di terze parti per Android è enorme. Per questo motivo, è spesso opportuno usare una libreria Android esistente rispetto a to crearne uno nuovo. Xamarin. Android offre due modi per usare queste librerie:
 
--   Creare un *libreria associazioni* la libreria con wrapper c# che include automaticamente in modo è possibile richiamare il codice Java tramite c# chiama.
+-   Creare un *libreria di binding* che esegue automaticamente il wrapping con la libreria C# del codice wrapper in modo che è possibile richiamare Java tramite C# le chiamate.
 
--   Utilizzare il *Java Native Interface* (*JNI*) per richiamare direttamente le chiamate nel codice della libreria di Java. JNI è un framework di programmazione che consente al codice Java chiamare ed essere chiamato da applicazioni native o raccolte.
+-   Usare la *Java Native Interface* (*JNI*) per richiamare le chiamate nel codice della libreria Java direttamente. JNI è un framework di programmazione che consente il codice Java e chiamate da app native o librerie.
 
-Questa guida viene illustrata la prima opzione: come creare un *libreria associazioni* che esegue il wrapping di uno o più librerie Java esistenti in un assembly che è possibile collegare a nell'applicazione. Per ulteriori informazioni sull'utilizzo JNI, vedere [utilizzo JNI](~/android/platform/java-integration/working-with-jni.md).
+Questa guida illustra la prima opzione: come creare un *libreria di binding* che esegue il wrapping di uno o più librerie Java esistenti in un assembly a cui è possibile collegare a nell'applicazione. Per altre informazioni sull'uso di JNI, vedere [utilizzo di JNI](~/android/platform/java-integration/working-with-jni.md).
 
-Xamarin implementa associazioni tramite *Callable Wrapper gestiti* (*MCW*). MCW è bridge JNI che viene utilizzato quando è necessario richiamare il codice Java codice gestito. Callable wrapper gestito fornisce anche il supporto per la creazione di sottoclassi tipi Java e per eseguire l'override di metodi virtuali su tipi Java. Allo stesso modo, ogni volta che si desidera richiamare il codice gestito codice runtime Android (ART), non tramite un altro bridge JNI noto come Android Callable Wrapper (ACW). Questo [architettura](~/android/internals/architecture.md) è illustrato nel diagramma seguente:
+Xamarin. Android implementa le associazioni utilizzando *Callable Wrapper gestiti* (*MCW*). MCW è un bridge JNI che viene usato quando il codice gestito deve richiamare il codice Java. Wrapper richiamabili gestiti garantiscono inoltre supporto per la creazione di una sottoclasse tipi Java e per eseguire l'override di metodi virtuali su tipi Java. Analogamente, ogni volta che il codice di runtime Android (ART) intende richiamare il codice gestito, viene eseguita tramite un altro bridge JNI noto come Android Callable Wrapper (ACW). Ciò [architettura](~/android/internals/architecture.md) è illustrata nel diagramma seguente:
 
 [![Architettura di bridge Android JNI](images/architecture.png)](images/architecture.png#lightbox)
 
-Una raccolta di associazioni è un assembly contenente Callable Wrapper gestiti per i tipi Java. Ad esempio, di seguito è un tipo Java, `MyClass`, che si desidera eseguire il wrapping in una raccolta di associazioni:
+Una libreria di binding è un assembly contenente Callable Wrapper gestiti per i tipi Java. Ad esempio, ecco un tipo di Java, `MyClass`, che si vuole eseguire il wrapping in una libreria di binding:
 
 ```java
 package com.xamarin.mycode;
@@ -43,7 +43,7 @@ public class MyClass
 }
 ```
 
-Dopo che si genera una raccolta di associazioni per il **JAR** contenente `MyClass`, è possibile crearne un'istanza e chiamare i metodi da c#:
+Dopo che si genera una libreria di binding per il **JAR** che contiene `MyClass`, è possibile crearne un'istanza e chiamare metodi su di esso da C#:
 
 ```csharp
 var instance = new MyClass ();
@@ -51,95 +51,95 @@ var instance = new MyClass ();
 string result = instance.MyMethod (42);
 ```
 
-Per creare questa raccolta di associazioni, utilizzare il xamarin *Java associazioni libreria* modello. Il progetto di associazione risultante viene creato un assembly .NET con le classi MCW **JAR** file e risorse per i progetti di libreria Android incorporati. È inoltre possibile creare raccolte di associazioni per Android di archivio (. I file AAR) e i progetti di libreria Android Eclipse. Facendo riferimento all'assembly associazioni libreria DLL risultante, è possibile riutilizzare una libreria di Java esistente nel progetto xamarin.
+Per creare questa raccolta di associazioni, si utilizza di xamarin. Android *libreria di binding Java* modello. Il progetto di associazione risultante viene creato un assembly .NET con le classi in MCW **JAR** più file e risorse per i progetti di libreria Android incorporati. È anche possibile creare librerie di binding per l'archivio Android (. I file AAR) e i progetti di Eclipse libreria Android. Facendo riferimento all'assembly risultante DLL della libreria di binding, è possibile riutilizzare una libreria Java esistente nel progetto xamarin. Android.
 
-Quando si fa riferimento a tipi nella libreria di associazione, è necessario utilizzare lo spazio dei nomi della libreria di associazione. In genere, si aggiungono un `using` direttiva all'inizio dell'origine c# di file che rappresenta la versione dello spazio dei nomi .NET del nome del pacchetto Java. Ad esempio, se il pacchetto Java nome per l'associazione **JAR** è il seguente:
+Quando si fa riferimento ai tipi nella libreria di Binding, è necessario usare lo spazio dei nomi della libreria di binding. In genere, si aggiunge un `using` direttiva all'inizio del C# file di origine che rappresenta la versione dello spazio dei nomi .NET del nome del pacchetto Java. Ad esempio, se il pacchetto Java assegnare un nome per l'associazione **JAR** è il seguente:
 
 ```csharp
 com.company.package
 ```
 
-Quindi inserire il seguente `using` istruzione all'inizio del file di origine c# per accedere a tipi di associazione **JAR** file:
+Quindi si dovrà inserire quanto segue `using` istruzione all'inizio del C# file di origine in tipi di in verrà restituito il limite di accesso **con estensione jar** file:
 
 ```csharp
 using Com.Company.Package;
 ```
 
 
-Quando si associa una libreria Android esistente, è necessario tenere presente quanto segue:
+Quando si associa una libreria Android esistente, è necessario tenere presente quanto riportato di seguito:
 
-* **Esistono dipendenze esterne per la libreria?** &ndash; Eventuali dipendenze Java richieste dalla libreria Android devono essere incluso nel progetto di xamarin come un **ReferenceJar** o come un **EmbeddedReferenceJar**. Qualsiasi assembly nativo deve essere aggiunto al progetto associazione come un **EmbeddedNativeLibrary**.  
+* **Sono presenti le dipendenze esterne per la libreria?** &ndash; Eventuali dipendenze Java richieste dalla libreria di Android devono essere incluso nel progetto xamarin. Android come un **ReferenceJar** o come un **EmbeddedReferenceJar**. Qualsiasi assembly nativi deve essere aggiunto al progetto di associazione come un **EmbeddedNativeLibrary**.  
 
-* **La versione dell'API di Android è la destinazione della libreria Android?** &ndash; Non è possibile effettuare il "downgrade" livello di API Android. Assicurarsi che xamarin associazione destinato il progetto è la stessa API livello (o versione successiva) della libreria Android.
+* **Versione dell'API Android inclusa se la destinazione di libreria Android.** &ndash; Non è possibile effettuare "il downgrade di" livello di API Android. Assicurarsi che il progetto di associazione di xamarin. Android è destinato alla stessa API livello (o versione successiva) come la libreria Android.
 
-* **La versione di JDK è stata utilizzata per compilare la libreria?** &ndash; Errori di associazione possono verificarsi se la libreria Android xamarin è stata compilata con una versione diversa di JDK più in uso. Se possibile, ricompilare la libreria Android utilizzando la stessa versione di JDK che viene utilizzato per l'installazione di xamarin.
+* **Quale versione del pacchetto JDK è stato usato per compilare la libreria?** &ndash; Se la libreria Android è stata creata con una versione diversa di JDK più in uso da xamarin. Android, potrebbero verificarsi errori di associazione. Se possibile, ricompilare la libreria Android usando la stessa versione di JDK che viene usato per l'installazione di xamarin. Android.
 
 
 ## <a name="build-actions"></a>Azioni di compilazione
 
-Quando si crea una raccolta di associazioni, impostare *le operazioni di compilazione* sul **JAR** o. I file AAR che viene incorporato nel progetto di libreria associazioni &ndash; ogni azione di compilazione determina il modo in **JAR** o. I file AAR verrà incorporato in (o a cui fa riferimento) la raccolta di associazioni. Nell'elenco seguente sono riepilogate queste azioni di compilazione:
+Quando si crea una libreria di binding, si imposta *azioni di compilazione* nel **JAR** o. I file AAR che viene incorporato nel progetto libreria di binding &ndash; ogni azione di compilazione determina come il **JAR** o. File AAR verrà incorporate nel (o fa riferimento) la raccolta di associazioni. Nell'elenco seguente sono riepilogate queste azioni di compilazione:
 
-* `EmbeddedJar` &ndash; Incorpora il **JAR** nella DLL risultante associazioni libreria come risorsa incorporata. Questo è il più semplice e la maggior parte delle azione di compilazione di uso comune. Utilizzare questa opzione quando si desidera che il **JAR** automaticamente compilato in codice byte e inserite in una raccolta di associazioni.
+* `EmbeddedJar` &ndash; Incorpora il **JAR** nella DLL risultante associazioni libreria come risorsa incorporata. Questo è il più semplice e la maggior parte delle azione di compilazione di uso comune. Usare questa opzione quando si desidera che il **JAR** automaticamente compilate nel codice byte e inserite in libreria di binding.
 
-* `InputJar` &ndash; Non consente di incorporare il **JAR** nella raccolta di associazioni risultante. DLL. Raccolta di associazioni. DLL avrà una dipendenza su questo **JAR** in fase di esecuzione. Utilizzare questa opzione quando non si desidera includere il **JAR** nella raccolta di associazioni (ad esempio, per motivi di licenza). Se si utilizza questa opzione, è necessario assicurarsi che l'input **JAR** è disponibile nel dispositivo che esegue l'app.
+* `InputJar` &ndash; Non consente di incorporare le **JAR** nella libreria di binding risultante. DLL. La libreria di binding. DLL avranno una dipendenza su questo **JAR** in fase di esecuzione. Usare questa opzione quando non si desidera includere il **JAR** nella libreria del binding (ad esempio, per motivi di licenza). Se si usa questa opzione, è necessario assicurarsi che l'input **JAR** è disponibile nel dispositivo che esegue l'app.
 
-* `LibraryProjectZip` &ndash; Incorpora un. File AAR nella raccolta di associazioni risultante. DLL. È simile a EmbeddedJar, ad eccezione del fatto che è possibile accedere alle risorse (così come codice) nel limite. File AAR. Utilizzare questa opzione se si desidera incorporare un. AAR nella libreria del binding.
+* `LibraryProjectZip` &ndash; Incorpora un. File AAR nella libreria di binding risultante. DLL. Ciò è simile a EmbeddedJar, ad eccezione del fatto che sia possibile accedere alle risorse (così come codice) in verrà restituito il limite. File AAR. Usare questa opzione quando si vuole incorporare un. AAR alla libreria di binding.
 
-* `ReferenceJar` &ndash; Specifica un riferimento **JAR**: un riferimento **JAR** è un **JAR** che uno dei associati **JAR** o. Dipende dal file AAR. Questo riferimento **JAR** viene utilizzato solo per soddisfare le dipendenze in fase di compilazione. Quando si usa questa azione di compilazione, le associazioni di c# non vengono create per il riferimento **JAR** e non è incorporato nella raccolta di associazioni risultante. DLL. Utilizzare questa opzione quando si effettuano una raccolta di associazioni per il riferimento **JAR** ma non è fatto ancora. Questa azione di compilazione è utile per creare il pacchetto più **JAR**s (e/o. AARs) in più raccolte di associazioni interdipendenti.
+* `ReferenceJar` &ndash; Specifica un riferimento **JAR**: un riferimento **con estensione jar** è un **JAR** che uno dei associati **JAR** o. I file AAR dipende. Questo riferimento **JAR** viene usato solo per soddisfare le dipendenze in fase di compilazione. Quando si usa questa azione di compilazione, C# per il riferimento non vengono creati i binding **JAR** e non è incorporato nella libreria di binding risultante. DLL. Usare questa opzione quando si apporterà una libreria di binding per il riferimento **JAR** ma non fatto ancora. Questa azione di compilazione è utile per creare il pacchetto multiplo **JAR**s (e/o. AARs) in più raccolte di associazioni interdipendenti.
 
-* `EmbeddedReferenceJar` &ndash; Incorpora un riferimento **JAR** nella raccolta di associazioni risultante. DLL. Utilizzare questa azione di compilazione quando si desidera creare associazioni c# per l'input sia **JAR** (o. AAR) e tutti i relativi riferimenti **JAR**(s) nella raccolta di associazioni.
+* `EmbeddedReferenceJar` &ndash; Incorpora un riferimento **JAR** nella libreria di binding risultante. DLL. Usare questa azione di compilazione quando si desidera creare C# binding per l'input sia **JAR** (o. AAR) e tutti i relativi riferimenti **JAR**(s) nella libreria di binding.
 
-* `EmbeddedNativeLibrary` &ndash; Incorpora nativo **. so** nell'associazione. Questa azione di compilazione viene utilizzata per **. so** i file necessari per il **JAR** file da associare. Potrebbe essere necessario caricare manualmente il **. so** libreria prima di eseguire codice dalla libreria Java. Come descritto di seguito.
+* `EmbeddedNativeLibrary` &ndash; Incorpora nativo **SO** nell'associazione. Questa azione di compilazione viene utilizzata per **SO** i file necessari per il **JAR** file a cui è associata. Potrebbe essere necessario caricare manualmente il **SO** libreria prima di eseguire codice dalla libreria Java. Come descritto di seguito.
 
-Queste azioni sono illustrate in dettaglio nelle guide seguenti di compilazione.
+Queste azioni sono descritti in dettaglio nelle guide seguenti di compilazione.
 
-Inoltre, le seguenti azioni di compilazione vengono utilizzate per consentire l'importazione di documentazione dell'API Java e convertirli in documentazione XML in c#:
+Inoltre, le azioni di compilazione seguenti vengono usate per consentire l'importazione di documentazione dell'API Java e convertirli in C# documentazione XML:
 
-* `JavaDocJar` viene usato per puntare all'archivio Javadoc Jar per una libreria di linguaggio conforme a uno stile di Maven pacchetto (in genere `FOOBAR-javadoc**.jar**`).
-* `JavaDocIndex` viene usato per puntare al `index.html` file all'interno della documentazione di riferimento API HTML.
-* `JavaSourceJar` viene utilizzato per integrare `JavaDocJar`, per generare innanzitutto JavaDoc da origini e quindi considerare i risultati come `JavaDocIndex`, per una libreria di linguaggio conforme a un Maven lo stile del pacchetto (in genere `FOOBAR-sources**.jar**`).
+* `JavaDocJar` viene usato per puntare all'archivio Javadoc Jar per una libreria Java che è conforme a uno stile di pacchetto Maven (in genere `FOOBAR-javadoc**.jar**`).
+* `JavaDocIndex` viene usato per puntare a `index.html` file all'interno della documentazione di riferimento API HTML.
+* `JavaSourceJar` viene utilizzato come complemento `JavaDocJar`, per generare innanzitutto JavaDoc da origini e quindi considerare i risultati come `JavaDocIndex`, per una libreria Java che è conforme a un Maven lo stile del pacchetto (in genere `FOOBAR-sources**.jar**`).
 
-La documentazione dell'API deve essere il valore predefinito doclet da Java8, Java7 o Java6 SDK (si tratta di un formato diverso), o lo stile DroidDoc.
+La documentazione dell'API deve essere il doclet predefinito da Java8, Java7 o SDK Java6 (sono tutte le diverse formato), o lo stile DroidDoc.
 
-## <a name="including-a-native-library-in-a-binding"></a>Tra cui una libreria nativa in un'associazione
+## <a name="including-a-native-library-in-a-binding"></a>Inclusione di una libreria nativa in un'associazione
 
-Potrebbe essere necessario includere un **. so** libreria in un progetto di associazione di xamarin come parte dell'associazione di una libreria di Java. Quando viene eseguito il wrapping codice Java, xamarin avrà esito negativo rendere la chiamata JNI e il messaggio di errore _java.lang.UnsatisfiedLinkError: metodo nativo non trovato:_ verranno visualizzati nella finestra di logcat out per l'applicazione.
+Potrebbe essere necessario includere un **SO** libreria in un progetto di associazione di xamarin. Android come parte dell'associazione di una libreria Java. Quando viene eseguito il codice Java sottoposto a wrapping, xamarin. Android avrà esito negativo rendere il messaggio di errore e la chiamata JNI _java.lang.UnsatisfiedLinkError: metodo nativo non trovato:_ verranno visualizzati nella finestra di logcat out per l'applicazione.
 
-La correzione per questo consiste nel caricare manualmente il **. so** libreria con una chiamata a `Java.Lang.JavaSystem.LoadLibrary`. Ad esempio presupponendo che lo stato di un progetto xamarin è libreria condivisa **libpocketsphinx_jni.so** incluso nel progetto di associazione con un'azione di compilazione di **EmbeddedNativeLibrary**, le operazioni seguenti frammento di codice (eseguito prima di utilizzare la libreria condivisa) caricherà il **. so** libreria:
+La soluzione per questo problema consiste nel caricare manualmente il **SO** libreria con una chiamata a `Java.Lang.JavaSystem.LoadLibrary`. Ad esempio presupponendo che un progetto xamarin. Android ha condiviso library **libpocketsphinx_jni.so** incluso nel progetto di associazione con un'azione di compilazione **EmbeddedNativeLibrary**, il seguente frammento di codice (eseguito prima di usare la libreria condivisa) verranno caricati i **SO** libreria:
 
 ```csharp
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 ```
 
-## <a name="adapting-java-apis-to-ceparsl"></a>Adattamento API Java in C&eparsl;
+## <a name="adapting-java-apis-to-ceparsl"></a>Adattamento delle API Java per C&eparsl;
 
-Il generatore di xamarin Binding verrà modificato alcune idiomi Java e i pattern da corrispondono ai modelli di .NET. L'elenco seguente descrive come viene eseguito il mapping Java a c# / .NET:
+Il generatore di Binding xamarin. Android cambierà alcuni idiomi di Java e i modelli in modo che corrispondano ai modelli di .NET. L'elenco seguente descrive come Java è mappata a C#/.NET:
 
--   _Metodi set/get_ in Java vengono _proprietà_ in .NET.
+-   _I metodi Getter/Setter_ in Java vengono _proprietà_ in .NET.
 
--   _Campi_ in Java vengono _proprietà_ in .NET.
+-   _I campi_ in Java vengono _proprietà_ in .NET.
 
--   _Interfacce del listener/Listener_ in Java vengono _eventi_ in .NET. I parametri dei metodi delle interfacce di callback saranno rappresentati da un `EventArgs` sottoclasse.
+-   _Interfacce del listener/Listener_ in Java vengono _eventi_ in .NET. I parametri dei metodi nelle interfacce di callback saranno rappresentati da un `EventArgs` sottoclasse.
 
--   Oggetto _classe nidificata statico_ in Java è un _le classi annidate_ in .NET.
+-   Oggetto _classi annidate statiche_ in Java è un _classi annidate_ in .NET.
 
--   Un _classe interna_ in Java è un _le classi annidate_ con un costruttore di istanza in c#.
+-   Un' _classe interna_ in Java è un _classi annidate_ con un costruttore di istanza in C#.
 
 
 
 ## <a name="binding-scenarios"></a>Scenari di associazione
 
-Le guide di uno scenario di associazione seguenti consentono di associare un linguaggio (o più librerie) per l'incorporazione nell'app:
+Guide relative agli scenari di associazione seguenti consentono di associare una libreria Java (o le librerie) per l'incorporazione nell'app:
 
--   [Associazione di una. File JAR](~/android/platform/binding-java-library/binding-a-jar.md) è una procedura dettagliata per la creazione di raccolte di associazioni per **JAR** file.
+-   [Associazione di una. JAR](~/android/platform/binding-java-library/binding-a-jar.md) è una procedura dettagliata per la creazione di librerie di associazioni per **JAR** file.
 
--   [Associazione di un. AAR](~/android/platform/binding-java-library/binding-an-aar.md) è una procedura dettagliata per la creazione di raccolte di associazioni per. File AAR. Leggere questa procedura dettagliata per informazioni su come associare le raccolte di Android Studio.
+-   [Associazione di una. AAR](~/android/platform/binding-java-library/binding-an-aar.md) è una procedura dettagliata per la creazione di librerie di associazioni per. File AAR. Leggere questa procedura dettagliata per apprendere come associare le raccolte di Android Studio.
 
--   [Associazione di un progetto libreria di Eclipse](~/android/platform/binding-java-library/binding-a-library-project.md) è una procedura dettagliata per la creazione di librerie di associazione da progetti di libreria Android. Leggere questa procedura dettagliata per informazioni su come associare i progetti di libreria Android Eclipse.
+-   [Associazione di un progetto di libreria Eclipse](~/android/platform/binding-java-library/binding-a-library-project.md) è una procedura dettagliata per la creazione di librerie di binding da progetti di libreria Android. Leggere questa procedura dettagliata per apprendere come associare i progetti di libreria Android Eclipse.
 
--   [Personalizzazione delle associazioni](~/android/platform/binding-java-library/customizing-bindings/index.md) viene illustrato come rendere le modifiche manuali all'associazione per risolvere gli errori di compilazione e definire l'API risulta in modo che risulti più "c#-ad esempio".
+-   [Personalizzazione delle associazioni](~/android/platform/binding-java-library/customizing-bindings/index.md) spiega come rendere le modifiche manuali all'associazione per risolvere gli errori di compilazione e la forma dell'API risulta in modo che risulti più "C#-ad esempio".
 
--   [Risoluzione dei problemi di associazioni](~/android/platform/binding-java-library/troubleshooting-bindings.md) elenchi comuni scenari di errore di associazione, vengono illustrate le possibili cause e offre suggerimenti per la risoluzione di questi errori.
+-   [Risoluzione dei problemi di associazioni](~/android/platform/binding-java-library/troubleshooting-bindings.md) vengono elencati scenari comuni errori di associazione, vengono illustrate le possibili cause e offre suggerimenti per la risoluzione di questi errori.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

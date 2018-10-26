@@ -3,15 +3,15 @@ title: Architettura
 ms.prod: xamarin
 ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: e6a30247c13deab871bf230aba53b9963981fd02
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 219c6bb4cd5718c969ba83a55596ad7b0bab8baf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997400"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121126"
 ---
 # <a name="architecture"></a>Architettura
 
@@ -71,7 +71,7 @@ I riferimenti globali possono essere liberati chiamando esplicitamente [Java.Lan
 Le sottoclassi wrapper chiamabile gestito sono in cui può trovarsi tutta la logica specifica dell'applicazione "interessante". Questi includono custom [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) sottoclassi (ad esempio il [Activity1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13) tipo nel modello di progetto predefinito). (In particolare, sono tutti *Java.Lang.Object* sottoclassi di ripetere l'operazione *non* contengono una [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/) attributo personalizzato o [ RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/) viene *false*, ovvero l'impostazione predefinita.)
 
 Come gestiti callable wrapper, gestito sottoclassi callable wrapper contengono anche un riferimento globale, accessibile tramite il [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/) proprietà. Proprio come con callable wrapper gestiti, i riferimenti globali possono essere liberati in modo esplicito chiamando [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/).
-A differenza dei wrapper chiamabile gestiti, *molta attenzione* deve essere eseguita prima dell'eliminazione di tali istanze, come *Dispose ()* ing dell'istanza interromperà il mapping tra l'istanza di Java (un'istanza di un Android Callable Wrapper) e l'istanza gestita.
+A differenza dei wrapper chiamabile gestiti, *molta attenzione* deve essere eseguita prima dell'eliminazione di tali istanze, come *Dispose ()*- ing dell'istanza interromperà il mapping tra l'istanza di Java (un'istanza di un Android Callable Wrapper) e l'istanza gestita.
 
 
 ### <a name="java-activation"></a>Attivazione di Java
@@ -88,7 +88,7 @@ Esistono due scenari in cui il *(IntPtr, JniHandleOwnership)* costruttore deve e
 
 
 Si noti che (2) è un'astrazione debole. In Java, c#, le chiamate ai metodi virtuali da un costruttore richiamano sempre l'implementazione del metodo più derivato. Ad esempio, il [costruttore TextView (contesto, AttributeSet, int)](https://developer.xamarin.com/api/constructor/Android.Widget.TextView.TextView/p/Android.Content.Context/Android.Util.IAttributeSet/System.Int32/) richiama il metodo virtuale [TextView.getDefaultMovementMethod()](http://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()), che viene associato come il [ Proprietà TextView.DefaultMovementMethod](https://developer.xamarin.com/api/property/Android.Widget.TextView.DefaultMovementMethod/).
-Di conseguenza, se un tipo [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) dovesse (1) [sottoclasse TextView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26), (2) [override TextView.DefaultMovementMethod](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45)e (3) [attivare un'istanza di quel classe tramite il codice XML,](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) sottoposto a override *DefaultMovementMethod* proprietà sarebbe possibile richiamare prima che il costruttore ACW soddisfacente per l'esecuzione e che verrebbe eseguito prima che il costruttore c# avuto la possibilità di essere eseguita.
+Di conseguenza, se un tipo [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) dovesse (1) [sottoclasse TextView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26), (2) [override TextView.DefaultMovementMethod](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45)e (3) [attivare un'istanza di quel classe tramite il codice XML,](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) sottoposto a override *DefaultMovementMethod* proprietà sarebbe possibile richiamare prima che il costruttore ACW soddisfacente per l'esecuzione e che verrebbe eseguito prima il C# soddisfacente costruttore eseguire.
 
 Questo è supportato da un'istanza LogTextBox tramite il [LogTextView (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L28) costruttore quando l'istanza ACW LogTextBox innanzitutto entra in codice gestito e quindi richiamando il [ (Contesto, IAttributeSet, int) LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L41) costruttore *sulla stessa istanza* quando viene eseguito il costruttore ACW.
 

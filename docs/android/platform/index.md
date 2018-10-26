@@ -1,22 +1,22 @@
 ---
 title: Funzionalità della piattaforma di xamarin. Android
-description: I documenti in questa sezione illustrano funzionalità specifiche di Android. Sono disponibili argomenti, ad esempio l'uso di frammenti, uso di mappe e che incapsula i dati con i provider di contenuti.
+description: I documenti in questa sezione illustrano funzionalità specifiche di Android. Sono disponibili argomenti, ad esempio l'uso dei frammenti, l'uso con le mappe e incapsulamento dei dati con i provider di contenuti.
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 07/27/2018
-ms.openlocfilehash: 8e2bb43f885c162eb6dca0cf4a8ed14490ff092b
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+author: conceptdev
+ms.author: crdun
+ms.date: 08/21/2018
+ms.openlocfilehash: 8ce50ab9a1bcd029a0db97e6dd66518d646d82ef
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351564"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104700"
 ---
 # <a name="platform-features"></a>Funzionalità della piattaforma
 
-_I documenti in questa sezione illustrano funzionalità specifiche di Android. Sono disponibili argomenti, ad esempio l'uso di frammenti, uso di mappe e che incapsula i dati con i provider di contenuti._
+_I documenti in questa sezione illustrano funzionalità specifiche di Android. Sono disponibili argomenti, ad esempio l'uso dei frammenti, l'uso con le mappe e incapsulamento dei dati con i provider di contenuti._
 
 ## <a name="android-beamandroidplatformandroid-beammd"></a>[Android Beam](~/android/platform/android-beam.md)
 
@@ -46,9 +46,9 @@ Android 3.0 ha introdotto i frammenti, che illustra come supportare le progettaz
 Questa guida illustra come supporta Android 6.0 _app-collegamento_, una tecnica che consente alle App per dispositivi mobili rispondere agli URL nei siti Web. Illustra come implementare l'app e il collegamento in un'applicazione Android 6.0 e su come configurare un sito Web per concedere le autorizzazioni per l'app per dispositivi mobili per gestire i collegamenti per il dominio applicazione.
 
 
-##  <a name="android-p-previewandroidplatformandroid-pmd"></a>[Anteprima P Android](~/android/platform/android-p.md)
+##  <a name="android-9-pieandroidplatformpiemd"></a>[Grafico a torta 9 Android](~/android/platform/pie.md)
 
-Questo articolo riporta un riepilogo delle nuove funzionalità in anteprima di Android P, spiega come preparare xamarin. Android per lo sviluppo di Android P e fornisce il codice di esempio che illustra come usare le funzionalità principali P Android in App xamarin. Android.
+Questo articolo riporta un riepilogo delle nuove funzionalità in Android a torta, spiega come preparare xamarin. Android per lo sviluppo di Android a torta e fornisce un'app di esempio che illustra come usare le nuove torta Android display ritaglio e notifica funzionalità App xamarin. Android.
 
 
 ##  <a name="android-8-oreoandroidplatformoreomd"></a>[Android 8 Oreo](~/android/platform/oreo.md)
@@ -86,7 +86,7 @@ Android 4.4 (KitKat) viene caricato con numerose funzionalità per utenti e svil
 
 ##  <a name="android-41-jelly-beanandroidplatformjelly-beanmd"></a>[Android 4.1 Jelly Bean](~/android/platform/jelly-bean.md)
 
-Questo documento fornirà una panoramica generale delle nuove funzionalità per gli sviluppatori che sono stati introdotti in Android 4.1. Queste funzionalità includono: notifiche, gli aggiornamenti per Android fascio di condividere file di grandi dimensioni, gli aggiornamenti per l'individuazione di rete multimedia, peer-to-peer, animazioni, nuove autorizzazioni avanzate.
+Questo documento viene fornita una panoramica generale delle nuove funzionalità per gli sviluppatori che sono stati introdotti in Android 4.1. Queste funzionalità includono: notifiche, gli aggiornamenti per Android fascio di condividere file di grandi dimensioni, gli aggiornamenti per l'individuazione di rete multimedia, peer-to-peer, animazioni, nuove autorizzazioni avanzate.
 
 
 
@@ -98,12 +98,12 @@ Illustra diverse nuove tecnologie di interfaccia utente e quindi esamina un'ampi
 
 ##  <a name="working-with-the-android-manifestandroid-manifestmd"></a>[Utilizzo di manifesto Android](android-manifest.md)
 
-In questo articolo introducts il file androidmanifest. XML e modo in cui potrebbe essere usato per controllare le funzionalità e vengono descritti i requisiti di un progetto di Mono per applicazione Android.
+Questo articolo presenta il file androidmanifest. XML, e come essere forse usato per controllare le funzionalità e vengono descritti i requisiti di un progetto di Mono per applicazione Android.
 
 
 ##  <a name="introduction-to-content-providersandroidplatformcontent-providersindexmd"></a>[Introduzione ai provider di contenuti](~/android/platform/content-providers/index.md)
 
-Un ContentProvider incapsula un archivio dati e fornisce un'API per accedere alla finestra. Il provider esista nell'ambito di un'applicazione Android che in genere fornisce anche un'interfaccia utente per la visualizzazione o gestione dei dati. Il vantaggio principale dell'uso di un provider di contenuti è l'abilitazione di altre applicazioni di accedere più facilmente i dati incapsulati usando un oggetto client del provider (chiamato un ContentResolver). Un provider di contenuti e un resolver di contenuto insieme offrono un'API coerente tra le applicazioni per l'accesso ai dati che è semplice da creare e utilizzare. Questo documento illustra come accedere e compilare ContentProviders con xamarin. Android.
+Un ContentProvider incapsula un archivio dati e fornisce un'API per accedere alla finestra. Il provider esista nell'ambito di un'applicazione Android che inoltre fornisce un'interfaccia utente per la visualizzazione o gestione dei dati. Il vantaggio principale dell'uso di un provider di contenuti è l'abilitazione di altre applicazioni di accedere più facilmente i dati incapsulati usando un oggetto client del provider (chiamato un ContentResolver). Un provider di contenuti e un resolver di contenuto insieme offrono un'API coerente tra le applicazioni per l'accesso ai dati che è semplice da creare e utilizzare. Questo documento illustra come accedere e compilare ContentProviders con xamarin. Android.
 
 
 

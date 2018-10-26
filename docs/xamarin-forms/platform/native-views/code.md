@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: ad633f49c1c448529fa4c2b50483ec233c1ee841
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4a1393e60422313c781010c0d70a1a85eb671d34
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996194"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112397"
 ---
 # <a name="native-views-in-c"></a>Visualizzazioni native in c#
 
@@ -20,7 +20,7 @@ _Visualizzazioni native da iOS, Android e UWP possono farvi direttamente dalle p
 
 ## <a name="overview"></a>Panoramica
 
-Qualsiasi controllo di xamarin. Forms che consente `Content` per impostare, o che dispone di un `Children` raccolta, è possibile aggiungere le visualizzazioni specifiche della piattaforma. Ad esempio, iOS `UILabel` possono essere aggiunti direttamente al [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) proprietà, oppure al [ `StackLayout.Children` ](xref:Xamarin.Forms.Layout`1.Children) raccolta. Si noti tuttavia che questa funzionalità richiede l'uso di `#if` definisce nelle soluzioni xamarin. Forms progetto condiviso e non è disponibile da soluzioni di libreria xamarin. Forms .NET Standard.
+Qualsiasi controllo di xamarin. Forms che consente `Content` da impostare, o che dispone di un `Children` raccolta, è possibile aggiungere le visualizzazioni specifiche della piattaforma. Ad esempio, iOS `UILabel` possono essere aggiunti direttamente al [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) proprietà, oppure al [ `StackLayout.Children` ](xref:Xamarin.Forms.Layout`1.Children) raccolta. Si noti tuttavia che questa funzionalità richiede l'uso di `#if` definisce nelle soluzioni xamarin. Forms progetto condiviso e non è disponibile da soluzioni di libreria xamarin. Forms .NET Standard.
 
 Gli screenshot seguenti illustrano le viste specifiche della piattaforma è stato aggiunto a un xamarin. Forms [ `StackLayout` ](xref:Xamarin.Forms.StackLayout):
 

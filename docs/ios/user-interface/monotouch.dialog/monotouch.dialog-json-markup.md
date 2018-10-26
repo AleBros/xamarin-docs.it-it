@@ -1,23 +1,23 @@
 ---
-title: Markup Json MonoTouch.Dialog
-description: Questo documento descrive la sintassi JSON che può essere usata per compilare un'interfaccia utente xamarin. IOS utilizzando MonoTouch.Dialog.
+title: Markup Json per monotouch. Dialog
+description: Questo documento descrive la sintassi JSON che può essere utilizzata per compilare un'interfaccia utente di xamarin. IOS utilizzando monotouch. Dialog.
 ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: dc3f4ea87bbd381a4a1767fb9179fb1bcf0c56d8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: d084094ab52e317fbb42f6b8c8c553d9d6158251
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790757"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106871"
 ---
-# <a name="monotouchdialog-json-markup"></a>Markup Json MonoTouch.Dialog
+# <a name="monotouchdialog-json-markup"></a>Markup Json per monotouch. Dialog
 
-Questa pagina vengono descritti il markup Json accettato da del MonoTouch.Dialog [JsonElement](https://developer.xamarin.com/api/type/MonoTouch.Dialog.JsonElement/)
+Questa pagina descrive il markup Json accettato di monotouch. Dialog [JsonElement](https://developer.xamarin.com/api/type/MonoTouch.Dialog.JsonElement/)
 
-Segnalare il problema, iniziare con un esempio. Di seguito è un file Json completo che può essere passato in JsonElement.
+Possiamo iniziare con un esempio. Di seguito è riportato un file Json completo che può essere passato in JsonElement.
 
 ```csharp
 {     
@@ -74,11 +74,11 @@ Segnalare il problema, iniziare con un esempio. Di seguito è un file Json compl
 }
 ```
 
-Il codice precedente produce l'interfaccia utente di seguente:
+Il markup precedente produce l'interfaccia utente seguente:
 
- [![](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png "L'interfaccia utente creato per il markup specifico")](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png#lightbox)
+ [![](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png "L'interfaccia utente creata dal markup specificato")](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png#lightbox)
 
-Ogni elemento nell'albero può contenere la proprietà `"id"`. È in fase di esecuzione è possibile fare riferimento a singole sezioni o elementi utilizzando l'indicizzatore JsonElement. analogamente a quanto segue:
+Ogni elemento nell'albero può contenere proprietà `"id"`. È possibile in fase di esecuzione per fare riferimento a elementi usando l'indicizzatore JsonElement o le singole sezioni. analogamente a quanto segue:
 
 ```csharp
 var jsonElement = JsonElement.FromFile ("demo.json");
@@ -99,28 +99,28 @@ L'elemento radice contiene i valori seguenti:
 -  `sections` (facoltativo)
 
 
-L'elemento radice può trovarsi all'interno di una sezione come un elemento per creare un controller annidato. In questo caso, la proprietà aggiuntiva `"type"` deve essere impostato su `"root"`
+L'elemento radice può trovarsi all'interno di una sezione come elemento per creare un controller annidato. In tal caso, la proprietà extra `"type"` deve essere impostato su `"root"`
 
  <a name="url" />
 
 
 ### <a name="url"></a>url
 
-Se il `"url"` è impostata, se l'utente tocca su questo RootElement, il codice richiede un file dall'url specificato e renderà il contenuto le nuove informazioni visualizzate. Ciò consente di creare estendere l'interfaccia utente dal server in base a cui l'utente tocca.
+Se il `"url"` è impostata, se l'utente tocca questo RootElement, il codice verrà richiesto un file dall'url specificato e renderà il contenuto le nuove informazioni visualizzate. Ciò consente di creare estendere l'interfaccia utente dal server di base di ciò che l'utente tocca.
 
  <a name="group" />
 
 
 ### <a name="group"></a>raggruppamento
 
-Se impostato, viene impostata la proprietà groupname per l'elemento radice. I nomi dei gruppi vengono utilizzati per selezionare un riepilogo che viene visualizzato come valore dell'elemento radice da uno degli elementi annidati nell'elemento. Questo è il valore di una casella di controllo o il valore di un pulsante di opzione.
+Se impostata, questa operazione set il groupname per l'elemento radice. I nomi dei gruppi vengono usati per selezionare un riepilogo di cui viene visualizzato come valore dell'elemento radice da uno degli elementi annidati nell'elemento. Questo è il valore di una casella di controllo o il valore di un pulsante di opzione.
 
  <a name="radioselected" />
 
 
 ### <a name="radioselected"></a>radioselected
 
-Identifica l'elemento di opzione selezionato in elementi nidificati
+Identifica l'elemento di opzione selezionato in elementi annidati
 
  <a name="title" />
 
@@ -134,14 +134,14 @@ Se presente, sarà il titolo utilizzato per il RootElement
 
 ### <a name="type"></a>tipo
 
-Deve essere impostato su `"root"` quando questo viene visualizzato in una sezione (utilizzata per nidificare controller).
+Deve essere impostata su `"root"` quando questo viene visualizzato in una sezione (ciò viene utilizzata per nidificare i controller).
 
  <a name="sections" />
 
 
 ### <a name="sections"></a>sezioni
 
-Si tratta di una matrice Json con singole sezioni
+Si tratta di una matrice Json con le singole sezioni
 
  <a name="Section_Syntax" />
 
@@ -160,7 +160,7 @@ In questa sezione:
 
 ### <a name="header"></a>intestazione
 
-Se presente, il testo dell'intestazione viene visualizzato come titolo della sezione.
+Se presente, il testo dell'intestazione viene visualizzato come didascalia della sezione.
 
  <a name="footer" />
 
@@ -174,22 +174,22 @@ Se presente, il piè di pagina viene visualizzato nella parte inferiore della se
 
 ### <a name="elements"></a>elementi
 
-Si tratta di una matrice di elementi. Ogni elemento deve contenere almeno una chiave, il `"type"` chiave utilizzata per identificare il tipo dell'elemento da creare.
-Alcuni degli elementi condividono alcune proprietà comuni come `"caption"` e `"value"`. L'elenco di elementi supportati sono:
+Si tratta di una matrice di elementi. Ogni elemento deve contenere almeno una chiave, il `"type"` chiave che viene usato per identificare il tipo dell'elemento da creare.
+Alcuni degli elementi condividono alcune proprietà comuni, ad esempio `"caption"` e `"value"`. L'elenco di elementi supportati sono:
 
--  `string` elementi (con e senza lo stile)
--  `entry` righe (regolare o password)
+-  `string` elementi (sia con o senza stili)
+-  `entry` righe (normale o password)
 -  `boolean` valori (tramite commutatori o immagini)
 
 
-Elementi stringa possono essere utilizzati come pulsanti, fornendo un metodo da richiamare quando l'utente tocca la cella o di accessori,
+Elementi di stringa possono essere utilizzati come pulsanti, fornendo un metodo da richiamare quando l'utente tocca la cella o funzione di accesso,
 
  <a name="Rendering_Elements" />
 
 
 ## <a name="rendering-elements"></a>Il rendering di elementi
 
-Gli elementi di rendering sono in base al linguaggio c# StringElement e StyledStringElement e il rendering di informazioni in diversi modi e sia possibile eseguirne il rendering in vari modi. È possibile creare gli elementi più semplici simile al seguente:
+Gli elementi per il rendering si basano su di C# StringElement e StyledStringElement e può eseguire il rendering informazioni in modi diversi ed è possibile eseguirne il rendering in vari modi. Gli elementi più semplici possono essere creati come segue:
 
 ```csharp
 {
@@ -198,7 +198,7 @@ Gli elementi di rendering sono in base al linguaggio c# StringElement e StyledSt
 }
 ```
 
-Verranno visualizzati una semplice stringa con tutti i valori predefiniti: tipo di carattere, sfondo, il colore del testo ed effetti. È possibile collegare azioni a questi elementi e comportarsi come pulsanti impostando il `"ontap"` proprietà o `"onaccessorytap"` proprietà:
+Questa istruzione visualizzerà una stringa semplice con tutti i valori predefiniti: tipo di carattere, sfondo, colore del testo e decorazioni. È possibile collegare le azioni per questi elementi e li si comportino come pulsanti, impostando il `"ontap"` proprietà o il `"onaccessorytap"` proprietà:
 
 ```csharp
 {
@@ -208,7 +208,7 @@ Verranno visualizzati una semplice stringa con tutti i valori predefiniti: tipo 
 }
 ```
 
-Il precedente verrà richiamato il metodo "ShowPhotos" nella classe "Acme.PhotoLibrary". Il `"onaccessorytap"` è simile, ma solo essere richiamato se l'utente tocca nella funzione di accesso anziché toccato sulla cella. A tale scopo, è necessario impostare anche la funzione di accesso:
+Il codice precedente verrà richiamato il metodo "ShowPhotos" nella classe "Acme.PhotoLibrary". Il `"onaccessorytap"` è simile, ma sarà essere richiamato solo se l'utente tocca l'accessorio invece se si tocca la cella. A tale scopo, è necessario impostare anche funzione di accesso:
 
 ```csharp
 {
@@ -220,7 +220,7 @@ Il precedente verrà richiamato il metodo "ShowPhotos" nella classe "Acme.PhotoL
 }
 ```
 
-Il rendering di elementi possibile visualizzare due stringhe in una sola volta, una didascalia e un'altra è il valore. Come vengono eseguito il rendering di queste stringhe dipendono lo stile, è possibile impostare questa opzione mediante la `"style"` proprietà. Il valore predefinito mostrerà la didascalia sulla sinistra e il valore a destra. Vedere la sezione dello stile per altri dettagli. I colori vengono codificati utilizzando il simbolo '#' seguito da numeri esadecimali che rappresentano i valori per i valori di rossi, verdi, blu e alfa forse. Il contenuto può essere codificato in formato breve (cifre esadecimali di 3 o 4) che rappresenta i valori RGB o RGBA. O il formato esteso (6 o 8 cifre) che rappresentano i valori RGB o RGBA. La versione breve è una sintassi abbreviata per la scrittura di due volte la stessa cifra esadecimale. In modo costante "#1bc" viene interpretato come rosso = 0x11, verde = 0xbb e blu = 0xcc. Se il valore alfa non è presente, il colore è opaco. Ecco alcuni esempi:
+Rendering di elementi può visualizzare due stringhe contemporaneamente, una didascalia e un'altra è il valore. Modo in cui vengono eseguito il rendering di queste stringhe dipende lo stile, è possibile impostarlo utilizzando il `"style"` proprietà. Il valore predefinito mostrerà la didascalia sulla sinistra e il valore a destra. Vedere la sezione sullo stile per altri dettagli. I colori vengono codificati utilizzando il simbolo '#' seguito da numeri esadecimali che rappresentano i valori per i valori rossi, verdi, blu e alfa forse. Il contenuto può essere codificato in formato breve (cifre esadecimali di 3 o 4) che rappresenta i valori RGB o RGBA. O il formato esteso (6 o 8 cifre) che rappresentano i valori RGB o RGBA. La versione abbreviata è una sintassi abbreviata per la scrittura di due volte la stessa cifra esadecimale. In modo costante di "& 1bc" viene interpretata dagli rosso = 0x11, verde = 0xbb e blu = 0xcc. Se il valore alfa non è presente, il colore è opaco. Ecco alcuni esempi:
 
 ```csharp
 "background": "#f00"
@@ -230,30 +230,30 @@ Il rendering di elementi possibile visualizzare due stringhe in una sola volta, 
  <a name="accessory" />
 
 
-### <a name="accessory"></a>funzione di accesso
+### <a name="accessory"></a>Accessorio
 
-Determina il tipo di funzione di accesso da visualizzare nell'elemento per il rendering, i valori possibili sono:
+Determina il tipo di accessori da visualizzare nell'elemento di rendering, i valori possibili sono:
 
 -  `checkmark`
 -  `detail-disclosure`
 -  `disclosure-indicator`
 
 
-Se il valore non è presente, non viene visualizzato alcun accessori
+Se il valore non è presente, non viene visualizzato alcun accessorio
 
  <a name="background" />
 
 
 ### <a name="background"></a>sfondo
 
-La proprietà background imposta il colore di sfondo per la cella. Il valore è un URL dell'immagine (in questo caso, verrà richiamato il downloader di immagine async e lo sfondo verrà aggiornato dopo l'immagine viene scaricata) oppure può essere un colore specificato utilizzando la sintassi di colore.
+La proprietà background imposta il colore di sfondo della cella. Il valore è un URL dell'immagine (in questo caso, verrà richiamato il downloader di immagini asincrono e lo sfondo verrà aggiornato una volta che l'immagine viene scaricata) oppure può essere un colore specificato utilizzando la sintassi di colore.
 
  <a name="caption" />
 
 
 ### <a name="caption"></a>Didascalia
 
-La stringa principale da visualizzare sull'elemento per il rendering. Il tipo di carattere e il colore possono essere personalizzati impostandone il `"textcolor"` e `"font"` proprietà. Lo stile di rendering varia a seconda di `"style"` proprietà.
+La stringa principale da visualizzare sull'elemento per il rendering. Il tipo di carattere e colore può essere personalizzati impostando il `"textcolor"` e `"font"` proprietà. Lo stile di rendering varia a seconda di `"style"` proprietà.
 
  <a name="color_and_detailcolor" />
 
@@ -267,7 +267,7 @@ Il colore da utilizzare per il testo principale o del testo dettagliato.
 
 ### <a name="detailfont-and-font"></a>DetailFont e tipi di carattere
 
-Il tipo di carattere da utilizzare per la didascalia o il testo dei dettagli. Il formato di una specifica del tipo di carattere è il nome del carattere seguito facoltativamente da un trattino e la dimensione in punti.
+Il tipo di carattere da utilizzare per la didascalia o il testo dei dettagli. Il formato di una specifica del tipo di carattere è il nome del tipo di carattere seguito facoltativamente da un trattino e le dimensioni in punti.
 Di seguito sono specifiche del tipo di carattere valido.
 
 -  "Helvetica"
@@ -279,7 +279,7 @@ Di seguito sono specifiche del tipo di carattere valido.
 
 ### <a name="linebreak"></a>linebreak
 
-Determina come le righe sono suddivise. I valori possibili sono:
+Determina come sono suddivise le righe. I valori possibili sono:
 
 -  `character-wrap`
 -  `clip`
@@ -289,14 +289,14 @@ Determina come le righe sono suddivise. I valori possibili sono:
 -  `word-wrap`
 
 
-Entrambi `character-wrap` e `word-wrap` può essere utilizzato con il `"lines"` proprietà è impostata su zero per disattivare l'elemento per il rendering in un elemento a più righe.
+Entrambe `character-wrap` e `word-wrap` può essere usato in combinazione con il `"lines"` proprietà è impostata su zero per trasformare l'elemento per il rendering in un elemento a più righe.
 
  <a name="ontap_and_onaccessorytap" />
 
 
 ### <a name="ontap-and-onaccessorytap"></a>OnTap e onaccessorytap
 
-Queste proprietà devono puntare a un nome di metodo statico dell'applicazione che accetta un oggetto come parametro. Quando si crea la gerarchia utilizzando i metodi JsonDialog.FromFile o JsonDialog.FromJson è possibile passare un valore di oggetto facoltativo. Valore di questo oggetto viene quindi passato ai metodi di. Ciò consente di passare un contesto per il metodo statico. Ad esempio:
+Queste proprietà devono puntare a un nome di metodo statico nell'applicazione che accetta un oggetto come parametro. Quando si crea la gerarchia usando i metodi JsonDialog.FromFile o JsonDialog.FromJson è possibile passare un valore di oggetto facoltativo. Valore di questo oggetto viene quindi passato ai metodi. È possibile utilizzare questo per passare un contesto per il metodo statico. Ad esempio:
 
 ```csharp
 class Foo {
@@ -318,14 +318,14 @@ class Foo {
 
 ### <a name="lines"></a>linee
 
-Se questo è impostato su zero, verranno effettuate Ridimensiona elemento a seconda del contenuto delle stringhe di contenuti. Per il funzionamento, è necessario impostare anche la `"linebreak"` proprietà `"character-wrap"` o `"word-wrap"`.
+Se è impostato su zero, l'elemento il ridimensionamento automatico a seconda del contenuto delle stringhe contenuta verranno effettuate. Per il corretto funzionamento, è necessario impostare anche il `"linebreak"` proprietà `"character-wrap"` o `"word-wrap"`.
 
  <a name="style" />
 
 
 ### <a name="style"></a>stile
 
-Lo stile determina il tipo di stile di cella che verrà utilizzato per il rendering del contenuto e che corrispondano a valori di enumerazione UITableViewCellStyle.
+Lo stile determina il tipo di stile della cella che verrà usato per il rendering del contenuto e corrispondono ai valori di enumerazione UITableViewCellStyle.
 I valori possibili sono:
 
 -  `"default"`
@@ -339,8 +339,8 @@ I valori possibili sono:
 
 ### <a name="subtitle"></a>Sottotitolo
 
-Il valore da utilizzare per il sottotitolo. Si tratta di un collegamento su cui impostare lo stile `"subtitle"` e impostare il `"value"` proprietà in una stringa.
-Questa operazione, entrambi con una sola voce.
+Il valore da utilizzare per i sottotitoli in altre lingue. Si tratta di un collegamento su cui impostare lo stile `"subtitle"` e impostare il `"value"` proprietà in una stringa.
+Questa operazione, entrambi con una singola voce.
 
  <a name="textcolor" />
 
@@ -354,14 +354,14 @@ Il colore da utilizzare per il testo.
 
 ### <a name="value"></a>predefinito
 
-Il valore secondario da visualizzare sull'elemento per il rendering. Il layout di questo oggetto è interessato dal `"style"` impostazione. Il tipo di carattere e il colore possono essere personalizzati impostandone il `"detailfont"` e `"detailcolor"`.
+Il valore secondario da visualizzare sull'elemento per il rendering. Il layout di questo oggetto è influenzato il `"style"` impostazione. Il tipo di carattere e colore può essere personalizzati impostando il `"detailfont"` e `"detailcolor"`.
 
  <a name="Boolean_Elements" />
 
 
 ## <a name="boolean-elements"></a>Elementi booleani
 
-Elementi booleani devono impostare il tipo su `"bool"`, può contenere un `"caption"` per visualizzare e `"value"` è impostata su true o false. Se il `"on"` e `"off"` sono impostate, questi sono considerati immagini. Le immagini vengono risolte rispetto alla directory di lavoro corrente nell'applicazione. Se si desidera fare riferimento ai file di bundle relativo, è possibile utilizzare il `"~"` come collegamento per rappresentare la directory del pacchetto dell'applicazione. Ad esempio `"~/favorite.png"` sarà favorite.png contenuta nel file di bundle. Ad esempio:
+Elementi booleani devono impostare il tipo su `"bool"`, può contenere un `"caption"` per visualizzare e `"value"` è impostato su true o false. Se il `"on"` e `"off"` proprietà vengono impostate, questi sono considerati immagini. Le immagini vengono risolte in base alla directory di lavoro corrente dell'applicazione. Se si desidera fare riferimento ai file di bundle relativo, è possibile usare il `"~"` come collegamento per rappresentare la directory del bundle dell'applicazione. Ad esempio `"~/favorite.png"` saranno favorite.png contenuta nel file di bundle. Ad esempio:
 
 ```csharp
 { 
@@ -384,14 +384,14 @@ Elementi booleani devono impostare il tipo su `"bool"`, può contenere un `"capt
 
 ### <a name="type"></a>tipo
 
-Tipo può essere impostato su `"boolean"` o `"checkbox"`. Se impostato su booleano userà un UISlider o immagini (se entrambi `"on"` e `"off"` sono impostati). Se impostato su una casella di controllo, utilizzerà una casella di controllo. Il `"group"` proprietà può essere utilizzata per contrassegnare un elemento boolean come appartenenti a un determinato gruppo. Ciò è utile se il contenitore radice ha anche un `"group"` riepiloga i risultati con un conteggio di tutti i valori booleani (o le caselle di controllo) che appartengono allo stesso gruppo di proprietà come radice.
+Tipo può essere impostato su `"boolean"` o `"checkbox"`. Se impostato su valore booleano, verrà utilizzata una UISlider o immagini (se entrambi `"on"` e `"off"` sono impostati). Se impostato su casella di controllo, verrà usata una casella di controllo. Il `"group"` proprietà può essere utilizzata per contrassegnare un elemento boolean come appartenenti a un determinato gruppo. Ciò è utile se il contenitore radice ha anche un `"group"` riepilogano i risultati con un conteggio di tutti i valori booleani (o le caselle di controllo) che appartengono allo stesso gruppo di proprietà come radice.
 
  <a name="Entry_Elements" />
 
 
-## <a name="entry-elements"></a>Elementi delle voci
+## <a name="entry-elements"></a>Elementi della voce
 
-Utilizzare gli elementi di ingresso per consentire all'utente di immettere dati. Il tipo per gli elementi di movimento è `"entry"` o `"password"`. Il `"caption"` proprietà è impostata sul testo da visualizzare a destra e `"value"` è impostata sul valore iniziale per impostare la voce. Il `"placeholder"` viene utilizzato per visualizzare un suggerimento all'utente per le voci vuote (risulta grigio). Ecco alcuni esempi:
+Per consentire all'utente di immettere dati è usare elementi di voci. Il tipo di elementi di voci è `"entry"` o `"password"`. Il `"caption"` proprietà è impostata per il testo da visualizzare a destra e il `"value"` è impostata sul valore iniziale su cui impostare la voce. Il `"placeholder"` consente di visualizzare un suggerimento all'utente per le voci vuote (è possibile vederlo grigio). Ecco alcuni esempi:
 
 ```csharp
 {
@@ -425,14 +425,14 @@ Utilizzare gli elementi di ingresso per consentire all'utente di immettere dati.
 
 ### <a name="autocorrect"></a>correzione automatica
 
-Determina lo stile di correzione automatica da utilizzare per la voce. I possibili valori sono true o false (o le stringhe di `"yes"` e `"no"`).
+Determina lo stile di correzione automatica da utilizzare per la voce. I valori possibili sono true o false (o le stringhe `"yes"` e `"no"`).
 
  <a name="capitalization" />
 
 
 ### <a name="capitalization"></a>uso di maiuscole e minuscole
 
-Lo stile di lettere maiuscole/minuscole da utilizzare per la voce. I valori possibili sono:
+Lo stile di maiuscole/minuscole da utilizzare per la voce. I valori possibili sono:
 
 -  `all`
 -  `none`
@@ -452,7 +452,7 @@ La didascalia da utilizzare per la voce
 
 ### <a name="keyboard"></a>tastiera
 
-Il tipo di tastiera da utilizzare per l'immissione di dati. I valori possibili sono:
+Il tipo di tastiera da utilizzare per l'immissione dati. I valori possibili sono:
 
 -  `ascii`
 -  `decimal`
@@ -470,7 +470,7 @@ Il tipo di tastiera da utilizzare per l'immissione di dati. I valori possibili s
 
 ### <a name="placeholder"></a>Segnaposto
 
-Il testo di suggerimento visualizzato quando la voce ha un valore vuoto.
+Il testo di suggerimento che viene visualizzato quando la voce contiene un valore vuoto.
 
  <a name="return-key" />
 
@@ -502,9 +502,9 @@ Il valore iniziale per la voce
  <a name="Radio_Elements" />
 
 
-## <a name="radio-elements"></a>Elementi di opzione
+## <a name="radio-elements"></a>Elementi radio
 
-Gli elementi radio abbiano tipo `"radio"`. Viene selezionato l'elemento è selezionato per il `radioselected` proprietà nell'elemento contenitore radice.
+Opzione elementi hanno tipo `"radio"`. L'elemento selezionato viene prelevata dal `radioselected` proprietà nell'elemento radice che lo contiene.
 Inoltre, se è impostato un valore per il `"group"` proprietà, questo pulsante di opzione appartiene a questo gruppo.
 
  <a name="Date_and_Time_Elements" />
@@ -512,7 +512,7 @@ Inoltre, se è impostato un valore per il `"group"` proprietà, questo pulsante 
 
 ## <a name="date-and-time-elements"></a>Data e ora elementi
 
-I tipi di elemento `"datetime"`, `"date"` e `"time"` vengono utilizzati per eseguire il rendering di date con volte, date o ore. Questi elementi accettano come parametri di una didascalia e un valore. Il valore può essere scritto in qualsiasi formato supportato dalla funzione DateTime. Parse .NET. Esempio:
+I tipi di elementi `"datetime"`, `"date"` e `"time"` vengono utilizzati per eseguire il rendering con tempi di date, date o ore. Questi elementi accettano come parametri di una didascalia e il valore. Il valore può essere scritto in qualsiasi formato supportato dalla funzione DateTime. Parse .NET. Esempio:
 
 ```csharp
 "header": "Dates and Times",
@@ -536,9 +536,9 @@ I tipi di elemento `"datetime"`, `"date"` e `"time"` vengono utilizzati per eseg
  <a name="Html/Web_Element" />
 
 
-## <a name="htmlweb-element"></a>Elemento HTML o Web.
+## <a name="htmlweb-element"></a>Elemento HTML/Web
 
-È possibile creare una cella che quando si tocca verrà incorporato un UIWebView che esegue il rendering di un URL specificato, locali o remoti utilizzando il `"html"` tipo. Sono solo due proprietà per questo elemento `"caption"` e `"url"`:
+È possibile creare una cella che quando si tocca incorporerà un UIWebView che esegue il rendering di contenuto di un URL specificato, locali o remoti utilizzando il `"html"` tipo. Il solo due proprietà per questo elemento vengono `"caption"` e `"url"`:
 
 ```csharp
 {

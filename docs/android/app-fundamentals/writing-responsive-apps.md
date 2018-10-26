@@ -3,19 +3,19 @@ title: Scrittura di applicazioni reattive
 ms.prod: xamarin
 ms.assetid: 452DF940-6331-55F0-D130-002822BBED55
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: b8c113b67b3fbfa57ca86c72e11ddeb0e4e1a9ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a1642c4cbb790cf09d2a31e629408afc61d5b7ab
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763501"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121776"
 ---
 # <a name="writing-responsive-applications"></a>Scrittura di applicazioni reattive
 
-Una delle chiavi per mantenere reattiva GUI consiste nell'eseguire attività a esecuzione prolungata in un thread in background, pertanto l'interfaccia utente grafica, non vengono bloccata. Si supponga di voler calcolare un valore da visualizzare all'utente, ma che il valore 5 secondi per il calcolo:
+Una delle chiavi per garantire una velocità di risposta interfaccia utente grafica consiste nell'eseguire attività con esecuzione prolungata in un thread in background in modo che non venga bloccata l'interfaccia utente grafica. Si supponga di che volere calcolare un valore da visualizzare all'utente, ma tale valore ha 5 secondi per la quale calcolare:
 
 ```csharp
 public class ThreadDemo : Activity
@@ -43,7 +43,7 @@ public class ThreadDemo : Activity
 }
 ```
 
-Questo funzionerà, ma l'applicazione verrà "blocco" per 5 secondi mentre il valore viene calcolato. Durante questo periodo, l'applicazione non risponde alle alcuna interazione dell'utente. Per evitare questo problema, si desidera eseguire i calcoli in un thread in background:
+Questa tecnica funziona, ma l'applicazione si "bloccherà" per 5 secondi mentre il valore viene calcolato. Durante questo periodo, l'app non rispondere alla richiesta alcuna interazione dell'utente. Per evitare questo problema, è necessario eseguire i calcoli in un thread in background:
 
 ```csharp
 public class ThreadDemo : Activity
@@ -71,7 +71,7 @@ public class ThreadDemo : Activity
 }
 ```
 
-Ora è calcolare il valore in un thread in background, pertanto l'interfaccia utente grafica rimane attiva durante il calcolo. Tuttavia, durante il calcolo viene eseguito, l'app arresti anomali, lasciare questa nel registro:
+A questo punto si calcola il valore su un thread in background in modo che l'interfaccia utente grafica rimanga reattiva durante il calcolo. Tuttavia, quando viene eseguito il calcolo, l'App nell'app si blocca, presente nel log:
 
 ```shell
 E/mono    (11207): EXCEPTION handling: Android.Util.AndroidRuntimeException: Exception of type 'Android.Util.AndroidRuntimeException' was thrown.
@@ -82,7 +82,7 @@ E/mono    (11207):   at Android.Widget.TextView.set_Text (IEnumerable`1 value)
 E/mono    (11207):   at MonoDroidDebugging.Activity1.SlowMethod ()
 ```
 
-Questo avviene perché è necessario aggiornare l'interfaccia utente grafica dal thread dell'interfaccia utente grafica. Questo codice aggiorna l'interfaccia utente grafica dal thread di pool di thread, causando l'arresto anomalo dell'app. È necessario calcolare il valore sul thread in background, senza effettuare l'aggiornamento del thread di interfaccia utente grafica, viene gestito con [Activity.RunOnUIThread](https://developer.xamarin.com/api/member/Android.App.Activity.RunOnUiThread/(System.Action)):
+Questo avviene perché è necessario aggiornare l'interfaccia utente grafica dal thread dell'interfaccia utente grafica. Il codice aggiorna l'interfaccia utente grafica da thread di pool di thread, causando l'arresto anomalo dell'app. È necessario calcolare il valore sul thread in background, quindi eseguire l'aggiornamento sul thread della GUI, che viene gestito con [Activity.RunOnUIThread](https://developer.xamarin.com/api/member/Android.App.Activity.RunOnUiThread/(System.Action)):
 
 ```csharp
 public class ThreadDemo : Activity
@@ -110,6 +110,6 @@ public class ThreadDemo : Activity
 }
 ```
 
-Questo codice funziona come previsto. Questa interfaccia GUI rimane attiva e viene aggiornata correttamente una volta il calcolo comple.
+Questo codice funziona come previsto. Questa interfaccia GUI rimane reattiva e viene aggiornata correttamente una volta il calcolo comple.
 
-Nota che questa tecnica non viene usata solo per il calcolo di un valore costosa. E può essere utilizzato per qualsiasi attività di lunga durata che può essere eseguita in background, ad esempio una chiamata al servizio web o il download dei dati di internet.
+Si noti come che questa tecnica non viene usata solo per calcolare un valore di costoso. Può essere utilizzato per qualsiasi attività con esecuzione prolungata che può essere eseguita in background, ad esempio una chiamata al servizio web o il download dei dati su internet.

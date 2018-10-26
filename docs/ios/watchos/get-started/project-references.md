@@ -1,79 +1,79 @@
 ---
-title: watchOS riferimenti di progetto Xamarin
-description: Questo documento descrive la relazione tra un'app per iOS, un'app di espressioni di controllo e un'estensione di app di espressioni di controllo. Vengono illustrati i riferimenti al progetto e bundle di identificatori.
+title: riferimenti al progetto in Xamarin watchOS
+description: Questo documento descrive la relazione tra un'app per iOS, un'app e un'estensione dell'app watch. Illustra i riferimenti al progetto e bundle di identificatori.
 ms.prod: xamarin
 ms.assetid: C366E062-C33D-406A-B3FF-CBE82E5D1E7E
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: 1bd950d0929beae7133b0eb8ef6b2a69bc116f50
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: c900ab714fed2bb1e02367ba39ad3c5a0a76121e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791488"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106663"
 ---
-# <a name="watchos-project-references-in-xamarin"></a>watchOS riferimenti di progetto Xamarin
+# <a name="watchos-project-references-in-xamarin"></a>riferimenti al progetto in Xamarin watchOS
 
-_Spiegazione della relazione tra l'app iOS, espressioni di controllo app e l'estensione di espressioni di controllo._
+_Spiegazione della relazione tra l'app iOS, app e l'estensione dell'espressioni di controllo._
 
-I tre progetti in una soluzione watchOS sono *configurata automaticamente* per fare riferimento a loro in modo specifico per le app watchOS 3 essere compilato e collegate correttamente. Questi riferimenti al progetto e impostazioni dell'identificatore bundle sono descritte di seguito per riferimento.
+Sono i tre progetti in una soluzione di watchOS *configurata automaticamente* per fare riferimento tra loro in modo specifico per le app watchOS 3 di essere compilati e in bundle in modo corretto. Questi riferimenti al progetto e impostazioni dell'identificatore di bundle sono descritte di seguito per riferimento.
 
 ## <a name="project-references"></a>Riferimenti al progetto
 
-Visualizzare i riferimenti facendo doppio clic sui nodi di riferimenti per ogni progetto:
+Visualizzare i riferimenti facendo doppio clic sui nodi riferimenti per ogni progetto:
 
 - **app iPhone** riferimenti **App Watch**
 
-![](project-references-images/catalog-reference1.png "app iPhone fa riferimento a espressioni di controllo App")
+![](project-references-images/catalog-reference1.png "app iPhone fa riferimento all'App Watch")
 
-- **Guardare App** riferimenti **espressioni di controllo dell'estensione App**
+- **App di guardare** riferimenti **estensione dell'App Watch**
 
-![](project-references-images/catalog-reference2.png "app iPhone fa riferimento a espressioni di controllo App")
-
-
- - Il **espressioni di controllo dell'estensione App** non fa riferimento a uno degli altri progetti
-
-![](project-references-images/catalog-reference3.png "Estensione dell'App espressioni di controllo non fa riferimento ad altri progetti")
+![](project-references-images/catalog-reference2.png "app iPhone fa riferimento all'App Watch")
 
 
+ - Il **estensione dell'App Watch** non fa riferimento a uno degli altri progetti
 
-## <a name="bundle-identifiers"></a>Identificatori di raggruppamento
+![](project-references-images/catalog-reference3.png "Estensione dell'App Watch non fa riferimento ad altri progetti")
 
-È inoltre necessario assicurarsi che il **identificatori Bundle** siano corretti.
-Tutti i tre progetti devono avere il *stesso* prefisso dell'identificatore, con i progetti di due espressioni di controllo con predefiniti estensioni di `watchkitextension` e `watchkitapp`, come indicato di seguito (per il **WatchKitCatalog** ad esempio):
 
- - Progetto unificato di xamarin. IOS- `com.xamarin.WatchKitCatalog`
 
- - Progetto di estensione WatchKit- `com.xamarin.WatchKitCatalog.watchkitextension`
+## <a name="bundle-identifiers"></a>Identificatori di bundle
 
- - Progetto di App - espressioni di controllo `com.xamarin.WatchKitCatalog.watchkitapp`
+È anche necessario assicurarsi che il **identificatori di Bundle** siano corretti.
+Tutti e tre i progetti devono avere la *stessa* prefisso identificatore, con i progetti di due espressioni di controllo con predefinito delle estensioni di `watchkitextension` e `watchkitapp`, come indicato di seguito (per il **WatchKitCatalog** ad esempio):
 
-Assicurarsi anche che tali **Info. plist** impostazioni siano corrette:
+ - Progetto unificata di xamarin. ios: `com.xamarin.WatchKitCatalog`
 
- - Il progetto di App Watch `WKCompanionAppBundleIdentifier` corrisponda all'ID Bundle dell'applicazione contenitore/padre (ie. è in esecuzione su iPhone);
+ - Progetto estensione WatchKit: `com.xamarin.WatchKitCatalog.watchkitextension`
 
- - Il progetto di estensione Kit Watch **ID Bundle WKApp** corrispondente di ID di pacchetto. del progetto di applicazione di espressioni di controllo
+ - Progetto di App Watch- `com.xamarin.WatchKitCatalog.watchkitapp`
 
-È possibile modificare gli identificatori facendo doppio clic su di **Info. plist** file in ogni progetto.
+Assicurarsi anche che questi **Info. plist** impostazioni siano corrette:
 
-Questa schermata è il **dell'estensione di espressioni di controllo** file Info. plist, che mostra il **espressioni di controllo dell'App** anche identificatore:
+ - Il progetto di App Watch `WKCompanionAppBundleIdentifier` corrisponda all'ID Bundle dell'app/contenitore padre (ad esempio. è in esecuzione su iPhone);
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+ - Il progetto di estensione di Kit Watch **ID Bundle di WKApp** corrisponde l'ID Bundle del progetto App Watch
+
+È possibile modificare gli identificatori facendo doppio clic sui **Info. plist** file in ogni progetto.
+
+Questa schermata è il **espressioni di controllo dell'estensione** file Info. plist, che mostra le **dell'App Watch** anche identificatore:
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
     
-![](project-references-images/infoplist-extension.png "Questa schermata è file Info. plist dell'estensione di espressioni di controllo")
+![](project-references-images/infoplist-extension.png "Questa schermata è file Info. plist dell'estensione Watch")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
     
-![](project-references-images/infoplist-extension-vs.png "Questa schermata è file Info. plist dell'estensione di espressioni di controllo")
+![](project-references-images/infoplist-extension-vs.png "Questa schermata è file Info. plist dell'estensione Watch")
 
 -----
 
-Questa schermata è il **espressioni di controllo dell'App** file Info. plist.
-Corrente **OS Watch** versione è 8.2, pertanto la **destinazione distribuzione** per l'applicazione di espressioni di controllo deve essere **8.2**. Si noti che se si dispone di Xcode 6.3 installato, questo valore potrebbe essere impostato su 8.3, è consigliabile modificarlo 8.2.
+Questa schermata è il **dell'App Watch** file Info. plist.
+L'oggetto corrente **Watch OS** versione è 8.2, in modo che il **destinazione di distribuzione** per l'App Watch deve essere **8.2**. Si noti che se si dispone di Xcode 6.3 installato, questo valore può essere impostato su 8.3, è consigliabile modificarlo 8.2.
 
 ![](project-references-images/infoplist-watchapp.png "Le espressioni di controllo file Info. plist")
 
-La destinazione di distribuzione per l'applicazione di espressioni di controllo può essere diversa dall'estensione di espressioni di controllo e un'App iOS.
+La destinazione di distribuzione per l'App Watch possa essere diversa dalle espressioni di controllo estensione App iOS.
 

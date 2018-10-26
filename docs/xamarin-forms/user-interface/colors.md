@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 1017f108d6808155cac84e98a811a30d09afa134
-ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
+ms.openlocfilehash: a7acb300dbbd6daa02eace955066d3227834cf67
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38986083"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103075"
 ---
 # <a name="colors-in-xamarinforms"></a>Colori in xamarin. Forms
 
@@ -53,7 +53,7 @@ Tali colori vengono visualizzati in ogni piattaforma riportato di seguito. Si no
 
 Usare il `Default` per impostare un valore di colore sul valore predefinito della piattaforma (comprensione che rappresenta un colore sottostante diverso in ogni piattaforma per ogni proprietà) (o imposta nuovamente).
 
-Gli sviluppatori possono usare questo valore per impostare una `Color` proprietà ma deve **non** eseguire query su questa istanza per il componente valori RGB (che è tutto pronto per -1).
+Gli sviluppatori possono usare questo valore per impostare una `Color` proprietà ma deve **non** eseguire query su questa istanza per i valori RGB del componente (che è tutto pronto per -1).
 
 ## <a name="colortransparent"></a>Transparent
 

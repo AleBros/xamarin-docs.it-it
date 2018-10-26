@@ -1,41 +1,41 @@
 ---
-title: Utilizzo degli avvisi tvOS in Xamarin
-description: Questo documento viene descritto come lavorare con gli avvisi tvOS in Xamarin. Illustra la visualizzazione di un avviso, aggiunta di campi di testo e una classe helper.
+title: Utilizzo degli avvisi di tvOS in Xamarin
+description: Questo documento viene descritto come utilizzare gli avvisi di tvOS in Xamarin. Illustra la visualizzazione di un avviso, aggiunta di campi di testo e una classe helper.
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: b5125f150a4d57ed27041da2944f4c161434cf93
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 13c5ae3fac76ec1ec1a0ade135d5919403066226
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789083"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111290"
 ---
-# <a name="working-with-tvos-alerts-in-xamarin"></a>Utilizzo degli avvisi tvOS in Xamarin
+# <a name="working-with-tvos-alerts-in-xamarin"></a>Utilizzo degli avvisi di tvOS in Xamarin
 
-_In questo articolo viene descritto l'utilizzo con UIAlertController per visualizzare un messaggio di avviso all'utente in Xamarin.tvOS._
+_Questo articolo descrive l'uso con UIAlertController per visualizzare un messaggio di avviso all'utente in xamarin. tvos._
 
-Se è necessario ottenere l'attenzione dell'utente tvOS o richiedere l'autorizzazione per eseguire un'azione distruttiva (ad esempio l'eliminazione di un file), è possibile presentare un messaggio di avviso utilizzando il `UIAlertViewController`:
+Se si desidera ricevere l'attenzione dell'utente tvOS o richiedere l'autorizzazione per eseguire un'azione distruttiva (ad esempio, l'eliminazione di un file), è possibile presentare un messaggio di avviso tramite il `UIAlertViewController`:
 
 [![](alerts-images/alert01.png "Un esempio UIAlertViewController")](alerts-images/alert01.png#lightbox)
 
-Se oltre a visualizzare un messaggio, è possibile aggiungere i pulsanti e i campi di testo a un avviso per consentire all'utente di rispondere alle azioni e fornire commenti e suggerimenti.
+Se aggiunta alla visualizzazione di un messaggio, è possibile aggiungere i pulsanti e campi di testo a un avviso per consentire all'utente di rispondere alle azioni e fornire commenti e suggerimenti.
 
 <a name="About-Alerts" />
 
 ## <a name="about-alerts"></a>Informazioni sugli avvisi
 
-Come descritto in precedenza, gli avvisi vengono utilizzati per ottenere l'attenzione dell'utente e di informarli dello stato dell'app o richiesta di commenti e suggerimenti. Gli avvisi devono presentare un titolo, essi possono disporre di un messaggio e uno o più pulsanti o i campi di testo.
+Come indicato in precedenza, gli avvisi consentono di ottenere l'attenzione dell'utente e di informarli dello stato dell'app o richiesta di commenti e suggerimenti. Gli avvisi devono presentare un titolo, possono avere, facoltativamente, un messaggio e uno o più pulsanti o i campi di testo.
 
 [![](alerts-images/alert04.png "Un avviso di esempio")](alerts-images/alert04.png#lightbox)
 
-Apple ha i seguenti suggerimenti per l'utilizzo degli avvisi:
+Apple ha i seguenti suggerimenti per l'uso di avvisi:
 
-- **Utilizzare gli avvisi in modo sporadico** -avvisi interrompere il flusso dell'utente con l'applicazione e interrompere l'esperienza utente e di conseguenza, deve essere utilizzati solo per le situazioni importanti quali le notifiche di errore, acquisti In-App e le azioni di distruzione. 
-- **Sono disponibili opzioni utili** : se l'avviso vengono presentate le opzioni per l'utente, il deve assicurarsi che ogni opzione offre informazioni critiche e rende disponibili azioni utile per richiedere all'utente.
+- **Usare gli avvisi in modo sporadico** -avvisi interrompere il flusso utente con l'app e interrompere l'esperienza utente e di conseguenza, deve essere utilizzati solo per le situazioni importanti, ad esempio le notifiche di errore, acquisti In-App e le azioni distruttive. 
+- **Fornisce opzioni utili** : se l'avviso offre opzioni all'utente, le devono assicurarsi che ogni opzione offre informazioni critiche e fornisce azioni utili per l'utente debba intraprendere.
 
 <a name="Alert-Titles-and-Messages" />
 
@@ -43,25 +43,25 @@ Apple ha i seguenti suggerimenti per l'utilizzo degli avvisi:
 
 Apple ha i seguenti suggerimenti per la presentazione di titolo e il messaggio facoltativo un avviso:
 
-- **Usare titoli Multiword** -del titolo dell'avviso An è necessario ottenere il punto della situazione tra chiaramente pur rimanendo semplice. Un titolo singola parola raramente fornisce informazioni sufficienti.
-- **Usare titoli descrittivi che non richiedono un messaggio** - laddove possibile, si consiglia di rendere descrittivo titolo dell'avviso è sufficiente che il testo del messaggio facoltativo non è necessaria. 
-- **Rendere il messaggio breve frase completa** : se il messaggio facoltativo è necessario per ottenere il punto dell'avviso tra, rendere più semplice possibile e renderlo una frase completa con maiuscole/minuscole correttamente e la punteggiatura.
+- **Usare titoli Multiword** -del titolo dell'avviso An dovrebbe essere il punto della situazione tra chiaramente pur rimanendo semplice. Un titolo di una singola parola raramente fornisce informazioni sufficienti.
+- **Usare titoli descrittivi che non necessitano di un messaggio** - laddove possibile, prendere in considerazione descrittivo titolo dell'avviso sufficiente che il testo del messaggio facoltativo non è obbligatorio. 
+- **Rendere il messaggio di un breve frase completa** : se il messaggio facoltativo è obbligatorio per ottenere il punto dell'avviso tra, rendere più semplice possibile e renderlo una frase completa con maiuscole/minuscole correttamente e la punteggiatura.
 
 <a name="Alert-Buttons" />
 
-### <a name="alert-buttons"></a>Avviso di pulsanti
+### <a name="alert-buttons"></a>Pulsanti degli avvisi
 
-Apple ha il suggerimento per l'aggiunta di pulsanti a un avviso seguente:
+Apple ha il suggerimento seguente per aggiungere pulsanti a un avviso:
 
-- **Limite di due pulsanti** - laddove possibile, limitare l'avviso a un massimo di due pulsanti. Solo gli avvisi di pulsante forniscono informazioni ma non le azioni. Gli avvisi di pulsante due forniscono una semplice sì/no scelta dell'azione.
-- **Utilizzare Succinct, titoli pulsante logico** -uno o due i titoli di pulsante di word che descrivono in modo chiaro l'azione del pulsante funzionano meglio semplice. Per ulteriori informazioni, vedere il nostro [utilizzo di pulsanti](~/ios/tvos/user-interface/buttons.md) documentazione.
-- **Chiaramente i pulsanti distruttiva contrassegno** : per i pulsanti che eseguono un'azione (ad esempio l'eliminazione di un file) distruttiva contrassegnarli chiaramente con il `UIAlertActionStyle.Destructive` stile.
+- **Limite di due pulsanti** - laddove possibile, limitare l'avviso a un massimo di due pulsanti. Singolo pulsante avvisi offrono informazioni ma nessuna azione. Due pulsante avvisi forniscono una semplice scelte Sì/no dell'azione.
+- **Usare Succinct, titoli pulsante logico** -semplice funzionano meglio di uno o due i titoli di pulsante di word che descrivono in modo chiaro l'azione del pulsante. Per altre informazioni, vedere la [utilizzano i pulsanti](~/ios/tvos/user-interface/buttons.md) documentazione.
+- **Chiaramente i pulsanti distruttive Mark** : per i pulsanti per eseguono un'azione distruttiva (ad esempio, l'eliminazione di un file) contrassegno chiaramente con il `UIAlertActionStyle.Destructive` stile.
 
 <a name="Displaying-an-Alert" />
 
 ## <a name="displaying-an-alert"></a>Visualizzazione di un avviso
 
-Per visualizzare un avviso, si crea un'istanza di `UIAlertViewController` e configurarlo aggiungendo azioni (pulsanti) e selezionando lo stile dell'avviso. Ad esempio, il codice seguente visualizza un avviso di annullamento/OK:
+Per visualizzare un avviso, si crea un'istanza di `UIAlertViewController` e configurarlo aggiungendo le azioni (pulsanti) e selezionare lo stile dell'avviso. Ad esempio, il codice seguente visualizza un avviso OK/Annulla:
 
 ```csharp
 const string title = "A Short Title is Best";
@@ -88,13 +88,13 @@ alertController.AddAction (cancelAction);
 PresentViewController (alertController, true, null);
 ```
 
-Diamo un'occhiata a questo codice in modo dettagliato. In primo luogo, è creare un nuovo avviso con il titolo e il messaggio:
+Diamo un'occhiata a questo codice in modo dettagliato. In primo luogo, creiamo un nuovo avviso con il titolo specificato e il messaggio:
 
 ```csharp
 UIAlertController.Create (title, message, UIAlertControllerStyle.Alert)
 ```
 
-Per ogni pulsante che si desidera visualizzare nell'avviso verrà quindi creata un'azione che definisce il titolo del pulsante, lo stile e l'azione che si desidera eseguire se viene premuto il pulsante:
+Successivamente, per ogni pulsante che si desidera visualizzare nell'avviso è creare un'azione che definisce il titolo del pulsante, lo stile e l'azione che si desidera intraprendere se viene premuto il pulsante:
 
 ```csharp
 UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ => 
@@ -107,7 +107,7 @@ Il `UIAlertActionStyle` enum consentono di impostare lo stile del pulsante come 
 
 - **Predefinito** -pulsante sarà il pulsante predefinito quando viene visualizzato l'avviso selezionato.
 - **Annulla** -il pulsante è il pulsante di annullamento per l'avviso.
-- **Distruttiva** -evidenzia il pulsante come azione distruttiva, ad esempio l'eliminazione di un file. Attualmente, tvOS esegue il rendering sul pulsante distruttivo con uno sfondo rosso.
+- **Distruttive** -evidenzia il pulsante di azione distruttiva, ad esempio l'eliminazione di un file. Attualmente, tvOS esegue il rendering sul pulsante distruttivo con uno sfondo rosso.
 
 Il `AddAction` metodo aggiunge l'azione specificata per il `UIAlertViewController` e infine il `PresentViewController (alertController, true, null)` metodo visualizza l'avviso specificato per l'utente.
 
@@ -115,7 +115,7 @@ Il `AddAction` metodo aggiunge l'azione specificata per il `UIAlertViewControlle
 
 ## <a name="adding-text-fields"></a>Aggiunta di campi di testo
 
-Oltre ad aggiungere azioni (pulsanti) per l'avviso, è possibile aggiungere i campi di testo dell'avviso per consentire all'utente di inserire informazioni quali ID utente e password:
+Oltre ad aggiungere azioni (pulsanti) per l'avviso, è possibile aggiungere i campi di testo dell'avviso per consentire all'utente di immettere informazioni quali gli ID utente e password:
 
 [![](alerts-images/alert02.png "Campo di testo in un avviso")](alerts-images/alert02.png#lightbox)
 
@@ -160,7 +160,7 @@ alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) 
 controller.PresentViewController(alert,true,null);
 ```
 
-Il `AddTextField` metodo aggiunge un nuovo campo di testo all'avviso che è quindi possibile configurare impostando le proprietà come segnaposto del testo (il testo che viene visualizzato quando il campo è vuoto), il valore di testo predefinito e il tipo di tastiera. Ad esempio:
+Il `AddTextField` metodo aggiunge un nuovo campo di testo per l'avviso che è quindi possibile configurare impostando le proprietà, ad esempio il segnaposto del testo (il testo visualizzato quando il campo è vuoto), il valore di testo predefinito e il tipo di tastiera. Ad esempio:
 
 ```csharp
 // Initialize field
@@ -172,7 +172,7 @@ field.ReturnKeyType = UIReturnKeyType.Done;
 field.ClearButtonMode = UITextFieldViewMode.WhileEditing;
 ```
 
-In modo che è possibile intervenire sul valore del campo di testo in un secondo momento, è anche stiamo salvare una copia dell'utilizzo di codice riportato di seguito:
+In modo che è possibile eseguire operazioni sul valore del campo di testo in un secondo momento, Microsoft sta anche salvare una copia del usando il codice seguente:
 
 ```csharp
 UITextField field = null;
@@ -186,13 +186,13 @@ alert.AddTextField ((textField) => {
 });
 ```
 
-Dopo che l'utente ha immesso un valore nel campo di testo, è possibile utilizzare il `field` variabile per accedere a tale valore.
+Dopo che l'utente ha immesso un valore nel campo di testo, è possibile usare il `field` variabile per accedere a tale valore.
 
 <a name="Alert-View-Controller-Helper-Class" />
 
 ## <a name="alert-view-controller-helper-class"></a>Classe di supporto di Controller di visualizzazione avvisi
 
-Poiché la visualizzazione semplici e comuni di tipi di avvisi tramite `UIAlertViewController` può provocare gran parte del codice duplicato, è possibile utilizzare una classe helper per ridurre la quantità di codice ripetitivo. Ad esempio:
+Poiché la visualizzazione di tipi semplici e comuni di avvisi tramite `UIAlertViewController` può comportare la gran parte del codice duplicato, è possibile usare una classe helper per ridurre la quantità di codice ripetitivo. Ad esempio:
 
 ```csharp
 using System;
@@ -329,7 +329,7 @@ namespace UIKit
 }
 ```
 
-Utilizzo di questa classe, visualizzare e rispondere agli avvisi semplici può essere eseguite nel modo seguente:
+Utilizzo di questa classe, visualizzare e rispondere agli avvisi semplici può essere eseguite come indicato di seguito:
 
 ```csharp
 #region Custom Actions
@@ -366,7 +366,7 @@ partial void DisplayTextInputAlert (Foundation.NSObject sender) {
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è illustrati l'utilizzo di `UIAlertController` per visualizzare un messaggio di avviso all'utente in Xamarin.tvOS. In primo luogo, è stato spiegato come visualizzare un avviso semplice e aggiungere i pulsanti. Successivamente, mostrato come aggiungere i campi di testo a un avviso. Infine, mostrato come utilizzare una classe helper per ridurre la quantità di codice ripetitivo necessaria per visualizzare un avviso.
+Questo articolo ha illustrato l'utilizzo di `UIAlertController` per visualizzare un messaggio di avviso all'utente in xamarin. tvos. In primo luogo, è stato illustrato come visualizzare un avviso semplice e aggiungere i pulsanti. Successivamente, è stato illustrato come aggiungere i campi di testo a un avviso. Infine, è stato illustrato come usare una classe helper per ridurre la quantità di codice ripetitivo necessarie per visualizzare un avviso.
 
 
 
@@ -374,5 +374,5 @@ In questo articolo è illustrati l'utilizzo di `UIAlertController` per visualizz
 
 - [Esempi di tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS Guide interfaccia umana](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [le guide dell'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guida alla programmazione di App per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
