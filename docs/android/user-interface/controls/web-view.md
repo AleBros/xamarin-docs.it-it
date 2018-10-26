@@ -3,19 +3,20 @@ title: Visualizzazione Web
 ms.prod: xamarin
 ms.assetid: 807F214A-166D-B342-0BBA-525517577F6B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 8d7b0e1abc8eb11bf812a111764b9cccfb41e041
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: ae0b67de5856e6baef9a4989a93e65ead2854a62
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241175"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110082"
 ---
 # <a name="web-view"></a>Visualizzazione Web
 
-[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) Consente di creare la propria finestra per la visualizzazione pagine web (o anche lo sviluppo di un browser completato). In questa esercitazione si creerà una semplice [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/) che può visualizzare e spostarsi tra le pagine web.
+[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) Consente di creare la propria finestra per la visualizzazione pagine web (o anche lo sviluppo di un browser completato). In questa esercitazione si creerà una semplice [`Activity`](https://developer.xamarin.com/api/type/Android.App.Activity/)
+che possono visualizzare e spostarsi tra le pagine web.
 
 Creare un nuovo progetto denominato **HelloWebView**.
 
@@ -74,7 +75,8 @@ public class HelloWebViewClient : WebViewClient
 }
 ```
 
-Successivamente, usare il codice seguente per il [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle)) metodo:
+Successivamente, usare il codice seguente per il [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
+metodo:
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -118,7 +120,8 @@ public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.Key
 }
 ```
 
-Ciò [ `OnKeyDown(int, KeyEvent)` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent)) callback verrà chiamato ogni volta che viene premuto un pulsante mentre l'attività è in esecuzione. La condizione all'interno Usa la [ `KeyEvent` ](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/) per verificare se premuto il tasto è il **nuovamente** pulsante e indica se il [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) è effettivamente in grado di spostamento all'indietro (se ha una cronologia). Se entrambi sono true, il [ `GoBack()` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/) viene chiamato il metodo che effettua lo spostamento indietro di una fase il [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) cronologia. Restituzione `true` indica che l'evento è stato gestito. Se questa condizione non viene soddisfatta, l'evento viene inviato nuovamente al sistema.
+Questo [`OnKeyDown(int, KeyEvent)`](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent))
+metodo di callback verrà chiamato ogni volta che viene premuto un pulsante mentre l'attività è in esecuzione. La condizione all'interno Usa la [ `KeyEvent` ](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/) per verificare se premuto il tasto è il **nuovamente** pulsante e indica se il [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) è effettivamente in grado di spostamento all'indietro (se ha una cronologia). Se entrambi sono true, il [ `GoBack()` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/) viene chiamato il metodo che effettua lo spostamento indietro di una fase il [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) cronologia. Restituzione `true` indica che l'evento è stato gestito. Se questa condizione non viene soddisfatta, l'evento viene inviato nuovamente al sistema.
 
 Eseguire di nuovo l'applicazione. A questo punto dovrebbe essere in grado di usare i collegamenti e navigare indietro nella cronologia della pagina:
 

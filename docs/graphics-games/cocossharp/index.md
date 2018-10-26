@@ -1,30 +1,30 @@
 ---
-title: Motore di giochi 2D CocosSharp
-description: Questo documento include collegamenti ad articoli diversi sullo sviluppo di gioco con CocosSharp. Contenuto collegato descrive app di esempio, disegno, l'animazione e altro ancora.
+title: Motore di gioco 2D CocosSharp
+description: Questo documento include diversi articoli sullo sviluppo di giochi con CocosSharp. Contenuto collegato descrive le app di esempio, disegno, animazione e altro ancora.
 ms.prod: xamarin
 ms.assetid: 5E72869D-3541-408B-AB64-D34C777AFB79
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2018
-ms.openlocfilehash: 34d22b6e9d8c671e38fbadab0edafa2f57c566e7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: add73360ea98d8c516e413f0cc0264f68c58d79d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783246"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107014"
 ---
-# <a name="cocossharp-2d-game-engine"></a>Motore di giochi 2D CocosSharp
+# <a name="cocossharp-2d-game-engine"></a>Motore di gioco 2D CocosSharp
 
-_CocosSharp è una libreria per la creazione di giochi 2D con c# e F #. È una porta .NET del motore di Cocos2D più diffuso._
+_CocosSharp è una libreria per la creazione di giochi 2D usando C# e F#. È una porta .NET del motore di Cocos2D più diffusi._
 
 ## <a name="introduction-to-cocossharp"></a>Introduzione a CocosSharp
 
-Il motore di giochi 2D CocosSharp offre una tecnologia per l'esecuzione di giochi multipiattaforma. Per un elenco completo delle piattaforme supportate, vedere il [CocosSharp wiki su GitHub](https://github.com/mono/CocosSharp/wiki).
-Queste guide usare c# per gli esempi di codice, sebbene anche CocosSharp sarà completamente funzionale con F #.
+Il motore di gioco 2D CocosSharp fornisce la tecnologia per creare giochi multipiattaforma. Per un elenco completo delle piattaforme supportate, vedere la [CocosSharp wiki su GitHub](https://github.com/mono/CocosSharp/wiki).
+Usano queste guide C# per esempi di codice, anche se è completamente funzionale con CocosSharp F# nonché.
 
-Viene fornito il nucleo di CocosSharp dal [MonoGame framework](http://www.monogame.net/), che è una multipiattaforma, API che fornisce grafica, la gestione dello stato di gioco, audio, input e una pipeline di contenuto per l'importazione di asset con accelerazione hardware.
-CocosSharp è un livello di astrazione efficiente particolarmente utile per i giochi 2D.
-Inoltre, giochi più grande possono eseguire le proprie ottimizzazioni all'esterno le librerie di base giochi aumento della complessità. In altre parole, CocosSharp fornisce una combinazione di facilità di utilizzo e prestazioni, consentendo agli sviluppatori di iniziare rapidamente senza limitare la dimensione del gioco o della complessità.
+Il nucleo di CocosSharp avviene tramite il [MonoGame framework](http://www.monogame.net/), che è a sua volta multi-piattaforma, API, che fornisce grafica, la gestione dello stato di giochi, audio, input e una pipeline di contenuti per l'importazione gli asset con accelerazione hardware.
+CocosSharp è un livello di astrazione efficiente particolarmente adatto per giochi 2D.
+Inoltre, giochi più grandi possono eseguire le proprie ottimizzazioni all'esterno le librerie di base di man mano che aumenta di giochi in termini di complessità. In altre parole, CocosSharp fornisce una combinazione di semplicità d'uso e le prestazioni, consentendo agli sviluppatori di iniziare a usare rapidamente senza limitare la dimensione del gioco o complessità.
 
 In questo video pratico viene illustrato come creare un semplice CocosSharp multipiattaforma gioco:
 
@@ -34,76 +34,76 @@ In questo video pratico viene illustrato come creare un semplice CocosSharp mult
 
 ![BouncingGame](images/bouncing-game.png "BouncingGame")
 
-Questa guida descrive BouncingGame, inclusa la modalità di lavoro con contenuto di gioco, vari elementi visivi utilizzati per compilare un gioco, aggiungere logica del gioco e altro ancora.
+Questa guida descrive BouncingGame, incluse le procedure lavorare con i contenuti dei giochi, vari elementi visivi usati per compilare un gioco, aggiungendo la logica del gioco e altro ancora.
 
-## <a name="fruity-falls-gamegraphics-gamescocossharpfruity-fallsmd"></a>[Gioco cade Fruity](~/graphics-games/cocossharp/fruity-falls.md)
+## <a name="fruity-falls-gamegraphics-gamescocossharpfruity-fallsmd"></a>[Gioco Fruity cade](~/graphics-games/cocossharp/fruity-falls.md)
 
-![Rientra Fruity gioco screenshot](images/fruity-falls.png "Fruity cade gioco schermata")
+![Gioco Fruity screenshot](images/fruity-falls.png "del gioco Fruity screenshot")
 
-Questa guida viene descritto il gioco, Fruity cade copertura CocosSharp comuni e i concetti di sviluppo di giochi, ad esempio fisica, gestione dei contenuti, lo stato del gioco e progettazione di gioco.  
+Questa guida viene descritto il gioco Fruity cade, che coprono CocosSharp comuni e i concetti di sviluppo di giochi, ad esempio fisica, la gestione dei contenuti, lo stato del gioco e progettazione di giochi.  
 
-## <a name="coin-time-gamegraphics-gamescocossharpcointimemd"></a>[Offre ora gioco](~/graphics-games/cocossharp/cointime.md)
+## <a name="coin-time-gamegraphics-gamescocossharpcointimemd"></a>[Medaglia ora gioco](~/graphics-games/cocossharp/cointime.md)
 
-![Coin-tempo schermata di gioco](images/cointime.png "ora moneta schermata di gioco")
+![Tempo screenshot del gioco coin](images/cointime.png "screenshot del gioco moneta ora")
 
-Ora di moneta è un platformer completo giochi per iOS e Android. L'obiettivo del gioco è per raccogliere tutti monete in un livello e quindi raggiungere la porta di uscita evitando nemici e ostacoli.
+Medaglia tempo è un gioco per iOS e Android di platformer completo. L'obiettivo del gioco è per raccogliere tutti i monete in un livello e quindi raggiungere la porta di uscita e si evitano nemici e ostacoli.
 
-## <a name="drawing-geometry-with-ccdrawnodegraphics-gamescocossharpccdrawnodemd"></a>[Geometria di disegno con CCDrawNode](~/graphics-games/cocossharp/ccdrawnode.md)
+## <a name="drawing-geometry-with-ccdrawnodegraphics-gamescocossharpccdrawnodemd"></a>[Disegno di geometria con CCDrawNode](~/graphics-games/cocossharp/ccdrawnode.md)
 
-![Forme disegnate con CCDrawNode](images/ccdrawnode.png "forme disegnate con CCDrawNode")
+![Le forme disegnate con CCDrawNode](images/ccdrawnode.png "forme disegnate con CCDrawNode")
 
-CCDrawNode fornisce metodi per oggetti primitivi, ad esempio linee, cerchi e triangoli.
+CCDrawNode fornisce metodi per oggetti disegno di primitivi, ad esempio linee, cerchi e triangoli.
 
 ## <a name="animating-with-ccactiongraphics-gamescocossharpccactionmd"></a>[Animazione con CCAction](~/graphics-games/cocossharp/ccaction.md)
 
-![Un'animazione CCAction](images/ccaction.png "A CCAction animazione")
+![Un'animazione con CCAction](images/ccaction.png "CCAction un'animazione")
 
-`CCAction` è una classe base che può essere usata per animare oggetti CocosSharp. Questa guida illustra incorporato `CCAction` implementazioni per le attività comuni, ad esempio il posizionamento, scalabilità e la rotazione. Esamina inoltre come creare le implementazioni personalizzate ereditando dalla `CCAction`.
+`CCAction` è una classe di base che può essere utilizzata per aggiungere un'animazione CocosSharp oggetti. Questa guida illustra incorporati `CCAction` implementazioni per le attività comuni, ad esempio il posizionamento, il ridimensionamento e rotazione. Descrive anche come creare implementazioni personalizzate ereditando da `CCAction`.
 
 ## <a name="using-tiled-with-cocossharpgraphics-gamescocossharptiledmd"></a>[Uso di Tiled con CocosSharp](~/graphics-games/cocossharp/tiled.md)
 
 ![Un livello in un gioco](images/tiled.png "un livello in un gioco")
 
-Affiancato è una potente, flessibile e applicazione obsoleta per la creazione di riquadro ortogonale e l'effetto viene eseguito il mapping per i giochi. CocosSharp fornisce integrazione incorporata per il formato di file nativi dell'affiancato.
+Affiancato è una potente, flessibile e applicazione obsoleta per la creazione di riquadro ortogonale e isometrica viene eseguito il mapping per i giochi. CocosSharp offre integrazione predefinita per il formato di file nativi dell'affiancato.
 
 ## <a name="entities-in-cocossharpgraphics-gamescocossharpentitiesmd"></a>[Entità in CocosSharp](~/graphics-games/cocossharp/entities.md)
 
-![Un'astronave dal gioco](images/entities.png "un'astronave dal gioco")
+![Un'astronave da un gioco](images/entities.png "un'astronave da un gioco")
 
-Il modello di entità è un metodo efficace per organizzare codice del gioco. Migliora la leggibilità, codice risulta più facile da gestire e utilizza le funzionalità predefinite padre/figlio.
+Il modello di entità è un metodo efficace per organizzare il codice del gioco. Migliora la leggibilità, rende più facile da gestire, il codice e utilizza le funzionalità predefinite padre/figlio.
 
-## <a name="handling-multiple-resolutions-in-cocossharpgraphics-gamescocossharpresolutionsmd"></a>[Gestione più risoluzioni in CocosSharp](~/graphics-games/cocossharp/resolutions.md)
+## <a name="handling-multiple-resolutions-in-cocossharpgraphics-gamescocossharpresolutionsmd"></a>[Gestione di più risoluzioni in CocosSharp](~/graphics-games/cocossharp/resolutions.md)
 
 ![Una griglia che rappresenta la risoluzione dello schermo](images/resolutions.png "una griglia che rappresenta la risoluzione dello schermo")
 
-Questa guida viene illustrato come utilizzare CocosSharp per lo sviluppo di giochi visualizzati correttamente nei dispositivi di risoluzioni diverse.
+Questa guida viene illustrato come lavorare con CocosSharp per sviluppare giochi che consentono di visualizzare correttamente nei dispositivi di risoluzioni diverse.
 
 ## <a name="cocossharp-content-pipelinegraphics-gamescocossharpcontent-pipelineindexmd"></a>[Pipeline di contenuto CocosSharp](~/graphics-games/cocossharp/content-pipeline/index.md)
 
 ![XNB](images/content-pipeline.png "XNB")
 
-Le pipeline contenute vengono spesso utilizzate nello sviluppo di gioco per ottimizzare il contenuto e formattare tale campo in modo che può essere caricato su determinati componenti hardware o con alcuni Framework di sviluppo di giochi.
+Le pipeline di contenuti vengono spesso usate nello sviluppo di giochi per ottimizzare il contenuto e formattarla in modo che possa essere caricato su determinati componenti hardware o con determinati Framework di sviluppo di giochi.
 
 ## <a name="improving-frame-rate-with-ccspritesheetgraphics-gamescocossharpccspritesheetmd"></a>[Miglioramento della frequenza dei fotogrammi con CCSpriteSheet](~/graphics-games/cocossharp/ccspritesheet.md)
 
-![Un albero da un CCSpriteSheet](images/ccspritesheet.png "un albero da un CCSpriteSheet")
+![Un albero da un CCSpriteSheet](images/ccspritesheet.png "una struttura ad albero da un CCSpriteSheet")
 
-`CCSpriteSheet` fornisce funzionalità per la combinazione e l'utilizzo di molti file di immagine in una trama. Riducendo il numero di trama, è possibile migliorare i tempi di caricamento del gioco e frequenza dei fotogrammi.
+`CCSpriteSheet` fornisce funzionalità per la combinazione e l'utilizzo di molti file di immagine in una trama. Riducendo il numero di trama può migliorare i tempi di caricamento del gioco e frequenza dei fotogrammi.
 
-## <a name="texture-caching-using-cctexturecachegraphics-gamescocossharptexture-cachemd"></a>[Utilizzando CCTextureCache la memorizzazione nella cache della trama](~/graphics-games/cocossharp/texture-cache.md)
+## <a name="texture-caching-using-cctexturecachegraphics-gamescocossharptexture-cachemd"></a>[Usando CCTextureCache la memorizzazione nella cache della trama](~/graphics-games/cocossharp/texture-cache.md)
 
-![Una rappresentazione del modo in cui CocosSharp memorizza nella cache le immagini](images/texture-cache.png "una rappresentazione del modo in cui CocosSharp memorizza nella cache di immagini")
+![Una rappresentazione del modo in cui CocosSharp memorizza nella cache di immagini](images/texture-cache.png "una rappresentazione del modo in cui CocosSharp memorizza nella cache di immagini")
 
-Del CocosSharp `CCTextureCache` classe fornisce un modo standard per organizzare e memorizzare nella cache, scaricare il contenuto. 
+Di CocosSharp `CCTextureCache` classe offre un metodo standard per organizzare, memorizzare nella cache e scaricare il contenuto. 
 
-## <a name="2d-math-with-cocossharpgraphics-gamescocossharpmathmd"></a>[Matematiche 2D con CocosSharp](~/graphics-games/cocossharp/math.md)
+## <a name="2d-math-with-cocossharpgraphics-gamescocossharpmathmd"></a>[Matematica 2D con CocosSharp](~/graphics-games/cocossharp/math.md)
 
 ![Un'immagine da ruotare](images/math.png "un'immagine da ruotare")
 
-Questa guida illustra 2D matematica per lo sviluppo di gioco. Utilizza CocosSharp in cui viene illustrato come eseguire attività comuni di sviluppo di giochi e spiega i calcoli dietro queste attività.
+Questa guida illustra la matematica 2D per lo sviluppo di giochi. Usa CocosSharp in cui viene illustrato come eseguire attività comuni di sviluppo di giochi e illustra le operazioni matematiche alla base di queste attività.
 
-## <a name="performance-and-visual-effects-with-ccrendertexturegraphics-gamescocossharpccrendertexturemd"></a>[Prestazioni ed effetti visivi con CCRenderTexture](~/graphics-games/cocossharp/ccrendertexture.md)
+## <a name="performance-and-visual-effects-with-ccrendertexturegraphics-gamescocossharpccrendertexturemd"></a>[Prestazioni e gli effetti visivi con CCRenderTexture](~/graphics-games/cocossharp/ccrendertexture.md)
 
-![Sprite dal gioco](images/ccrendertexture.png "sprite dal gioco")
+![Sprite da un gioco](images/ccrendertexture.png "sprite da un gioco")
 
-La `CCRenderTexture` classe fornisce funzionalità per il rendering di più oggetti di CocosSharp a una sola trama. Una volta creato, `CCRenderTexture` le istanze possono essere utilizzate per il rendering della grafica in modo efficiente e implementare effetti visivi.
+Il `CCRenderTexture` classe fornisce funzionalità per il rendering di più oggetti CocosSharp a sola trama. Una volta creata, `CCRenderTexture` istanze possono essere usate per eseguire il rendering della grafica in modo efficiente e implementare gli effetti visivi.

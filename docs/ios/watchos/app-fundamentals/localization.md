@@ -1,75 +1,75 @@
 ---
 title: Utilizzo di watchOS localizzazione in Xamarin
-description: Questo documento descrive come localizzare watchOS compilate con Xamarin. Illustra le app di espressioni di controllo, le estensioni di espressioni di controllo, le stringhe nel codice, creare uno storyboard testo, test e altro ancora.
+description: Questo documento descrive come localizzare le app watchOS compilate con Xamarin. Vengono illustrati le app watch, le estensioni di espressioni di controllo, le stringhe nel codice, creare uno storyboard testo, test e altro ancora.
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: 4f158f1c8699ad5090eb7fade8af8918c8881d95
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: 9ff92270be7cbdef43a4d6eb1548f1f010d9869f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790779"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112460"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Utilizzo di watchOS localizzazione in Xamarin
 
-_Adattamento App watchOS per più lingue_
+_Adattamento delle tue App watchOS per più lingue_
 
-![](localization-images/both-languages-sml.png "Apple Watch visualizzare il contenuto localizzato")
+![](localization-images/both-languages-sml.png "Visualizzare il contenuto localizzato di Apple Watch")
 
-App watchOS sono localizzate mediante i metodi standard iOS:
+App watchOS sono localizzate usando i metodi standard di iOS:
 
-- Utilizzando **ID di localizzazione** per gli elementi di uno storyboard,
-- **.Strings** i file associati, lo storyboard e
-- **Localizable.Strings** file per il testo utilizzato nel codice.
+- Usando **ID di localizzazione** su elementi dello storyboard,
+- **.Strings** file associati con lo storyboard, e
+- **Localizable.Strings** file per il testo usato nel codice.
 
-Gli storyboard predefinito e le risorse si trovano un **Base** directory e traduzioni specifiche della lingua e altre risorse vengono archiviate in **.lproj** directory.
-iOS e OS Watch utilizzeranno automaticamente selezione della lingua dell'utente per caricare le stringhe corrette e le risorse.
+Gli storyboard predefinite e le risorse si trovano in un **Base** directory e le conversioni specifiche della lingua e altre risorse vengono archiviate in **.lproj** le directory.
+iOS e OS Watch userà automaticamente selezione della lingua dell'utente per caricare le stringhe corrette e le risorse.
 
-Poiché un'app di Apple Watch è costituita da due parti - App di espressioni di controllo e l'estensione di espressioni di controllo - stringa localizzata, sono necessarie risorse in due posizioni, a seconda della modalità di utilizzo.
+Perché un'app per Apple Watch è costituita da due parti - App e guardare estensione - stringa localizzata sono necessarie risorse in due posizioni, a seconda di come vengono usati.
 
-Il testo localizzato e di risorse *diversi* l'applicazione di espressioni di controllo e l'estensione di espressioni di controllo.
+Il testo localizzato e le risorse saranno *diversi* nell'app watch e l'estensione di espressioni di controllo.
 
-## <a name="watch-app"></a>Applicazione delle espressioni di controllo
+## <a name="watch-app"></a>App Watch
 
-L'applicazione di espressioni di controllo contiene lo storyboard che descrive l'interfaccia utente dell'applicazione. Tutti i controlli (ad esempio `Label` e `Image`) che dispone di supportare la localizzazione un **ID di localizzazione**.
+L'app watch contiene lo storyboard che descrive l'interfaccia utente dell'app. Tutti i controlli (ad esempio `Label` e `Image`) che dispone di supportare la localizzazione un **ID di localizzazione**.
 
-Ogni specifico della lingua **.lproj** directory deve contenere **.strings** i file con le traduzioni per ogni elemento (usando il **ID di localizzazione**), nonché le immagini riferimento dello storyboard.
+Ogni specifico della lingua **.lproj** directory deve contenere **.strings** i file con le traduzioni per ogni elemento (utilizzando il **ID di localizzazione**), nonché immagini fa riferimento lo storyboard.
 
-## <a name="watch-extension"></a>Estensione delle espressioni di controllo
+## <a name="watch-extension"></a>Estensione di espressioni di controllo
 
-L'estensione di espressioni di controllo è in cui viene eseguito il codice dell'app. Qualsiasi testo che viene visualizzato all'utente dal codice deve essere localizzato dell'estensione e non nell'applicazione di espressioni di controllo.
+L'estensione di espressioni di controllo è in cui viene eseguito il codice dell'app. Qualsiasi testo che viene visualizzato all'utente dal codice deve essere localizzato dell'estensione e non nell'app watch.
 
-L'estensione deve inoltre contenere specifiche della lingua **.lproj** directory, ma la **.strings** file richiedono solo le traduzioni per il testo che viene utilizzato nel codice.
+L'estensione deve inoltre contenere specifiche del linguaggio **.lproj** directory, ma la **.strings** file richiedono solo le traduzioni per il testo che viene usato nel codice.
 
 ## <a name="globalizing-the-watch-solution"></a>La soluzione di espressioni di controllo di globalizzazione
 
-La globalizzazione è il processo di creazione di un'applicazione localizzabile.
-Per le app di espressioni di controllo ciò significa che lo storyboard con lunghezze di testo diversi in considerazione di progettazione, ogni layout della schermata di garantire regola in modo appropriato a seconda di quale testo viene visualizzato. È inoltre necessario verificare tutte le stringhe a cui fa riferimento nel codice dell'estensione delle espressioni di controllo possono essere convertite tramite il `LocalizedString` metodo.
+Globalizzazione è il processo di creazione di un'applicazione localizzabile.
+Per le app watch ciò significa che la progettazione di storyboard con testo-lunghezze diverse presente, verificare ogni layout della schermata viene modificata in modo appropriato in base alla quale il testo viene visualizzato. È necessario anche assicurarsi che tutte le stringhe di cui viene fatto riferimento nel codice dell'estensione delle espressioni di controllo possono essere convertite utilizzando il `LocalizedString` (metodo).
 
-### <a name="watch-app"></a>Applicazione delle espressioni di controllo
+### <a name="watch-app"></a>App Watch
 
-Per impostazione predefinita l'applicazione di espressioni di controllo non è configurato per la localizzazione. È necessario spostare il file di storyboard predefinito e creare alcune altre directory per le traduzioni:
+Per impostazione predefinita l'app watch non è configurato per la localizzazione. È necessario spostare il file di storyboard predefinite e creare alcune altre directory per le traduzioni:
 
-1. Creare **Base.lproj** directory e spostamento di **Interface.storyboard** al suo interno.
+1. Creare **Base.lproj** directory e spostare le **Interface.storyboard** al suo interno.
 
-2. Creare  **<language>.lproj** directory per ogni lingua che si desidera supportare.
+2. Creare  **<language>.lproj** directory per ogni lingua si desidera supportare.
 
-3. Il **.lproj** directory devono contenere un **Interface.strings** file di testo (il nome del file deve corrispondere a quello del storboard). Facoltativamente, è possibile inserire tutte le immagini che richiedono la localizzazione in tali directory.
+3. Il **.lproj** directory devono contenere un' **Interface.strings** file di testo (il nome del file deve corrispondere a quello del storboard). È facoltativamente possibile inserire tutte le immagini che necessitano di localizzazione in tali directory.
 
-Una volta apportate queste modifiche (solo inglese e spagnolo lingua sono stati aggiunti file), il progetto di app di espressioni di controllo è simile al seguente:
+Il progetto dell'app watch aspetto simile al seguente dopo aver apportate queste modifiche (solo inglese e spagnola lingua sono stati aggiunti file):
 
-  ![](localization-images/watchapp-solution.png "Il progetto di app di espressioni di controllo con i file di lingua inglese e spagnolo")
+  ![](localization-images/watchapp-solution.png "Il progetto dell'app watch con i file di lingua inglese e spagnolo")
 
-#### <a name="storyboard-text"></a>Testo di storyboard
+#### <a name="storyboard-text"></a>Testo di uno storyboard
 
-Quando si modifica lo storyboard, selezionare ogni elemento e notare il **ID di localizzazione** che compare nella **proprietà** riempimento:
+Quando si modifica lo storyboard, selezionare ogni elemento e si noti che il **ID di localizzazione** che viene visualizzato nella **proprietà** riempimento:
 
-  [![](localization-images/storyboard-sml.png "L'ID di localizzazione che viene visualizzato nel riquadro proprietà")](localization-images/storyboard.png#lightbox)
+  [![](localization-images/storyboard-sml.png "L'ID di localizzazione che viene visualizzato nel riquadro delle proprietà")](localization-images/storyboard.png#lightbox)
 
-Nel **Base.lproj** cartella, creare le coppie chiave-valore, come illustrato di seguito, dove la chiave è costituita dal **ID di localizzazione** e aggiunti a un nome di una proprietà sul controllo, da un punto (`.`).
+Nel **Base.lproj** cartella, creare coppie chiave-valore, come illustrato di seguito, in cui la chiave viene formata dalle **ID di localizzazione** e il nome di una proprietà sul controllo, aggiunti da un punto (`.`).
 
 ```csharp
 "AgC-eL-Hgc.title" = "WatchL10nEN"; // interface controller title
@@ -80,29 +80,29 @@ Nel **Base.lproj** cartella, creare le coppie chiave-valore, come illustrato di 
 "39.text" = "Second screen";
 ```
 
-Si noti che in questo esempio che un **ID di localizzazione** può essere una semplice stringa numerica (ad es. "0", "1", e così via) o una stringa più complessa (ad esempio "AgC eL Hgc"). `Label` i controlli hanno un `Text` proprietà e `Button`hanno un `Title` proprietà, che viene riflesso nel modo in cui vengono impostati i relativi valori localizzate - assicurarsi di usare il nome di proprietà lettere minuscole, come illustrato nell'esempio precedente.
+Si noti che in questo esempio che un **ID di localizzazione** può essere una semplice stringa numerica (ad es. "0", "1", e così via) o una stringa più complessa (ad esempio "AgC eL Hgc"). `Label` i controlli dispongono di un `Text` proprietà e `Button`hanno un `Title` proprietà, che si riflette in modo i valori localizzati sono impostati - assicurarsi di usare il nome della proprietà lettere minuscole, come illustrato nell'esempio precedente.
 
-Quando viene eseguito il rendering dello storyboard nelle espressioni di controllo, i valori corretti verranno automaticamente estratto e visualizzati in base alla lingua selezionata dall'utente.
+Quando lo storyboard deve essere visualizzato nelle espressioni di controllo, i valori corretti automaticamente estratte e visualizzati in base alla lingua selezionata dall'utente.
 
 #### <a name="storyboard-images"></a>Immagini di storyboard
 
-La soluzione di esempio include anche un **gradient@2x.png** immagine in ogni cartella della lingua. Questa immagine può essere diversa per ogni lingua (ad es. può avere incorporato testo che richiede la conversione o utilizzare localizzato visualizzato).
+La soluzione di esempio include anche un **gradient@2x.png** immagine in ogni cartella della lingua. Questa immagine può essere diversa per ogni lingua (ad es. potrebbero avere già implementato il testo che richiede la conversione, o usare localizzato visualizzato).
 
-L'immagine è sufficiente impostare **immagine** verrà visualizzata come proprietà nello storyboard e l'immagine corretta nell'orologio in base alla lingua selezionata dall'utente.
+È sufficiente impostare l'immagine **immagine** proprietà storyboard e l'immagine corretta verrà visualizzata nella finestra Espressioni di controllo in base alla lingua selezionata dall'utente.
 
-![](localization-images/storyboard-image.png "Imposta le immagini di proprietà dell'immagine dello storyboard")
+![](localization-images/storyboard-image.png "Impostare le immagini di proprietà dell'immagine dello storyboard")
 
-Nota: poiché dispongono di tutte le espressioni di controllo di Apple Retina viene visualizzata solo la **@2x** è necessaria una versione dell'immagine. Non è necessario specificare **@2x** dello storyboard.
+Nota: poiché tutte le espressioni di controllo di Apple hanno display Retina, solo il **@2x** versione dell'immagine è necessaria. Non è necessario specificare **@2x** nello storyboard.
 
-### <a name="watch-extension"></a>Estensione delle espressioni di controllo
+### <a name="watch-extension"></a>Estensione di espressioni di controllo
 
-L'estensione di espressioni di controllo richiede una simile struttura di directory per supportare la localizzazione, tuttavia, non è Nessuno storyboard. Le stringhe localizzate nell'estensione sono solo quelli a cui fa riferimento il codice c#.
+L'estensione di espressioni di controllo richiede una struttura di directory simile a supportare la localizzazione, tuttavia, non è Nessuno storyboard. Le stringhe localizzate nell'estensione sono solo quelli a cui fanno riferimento C# codice.
 
-![](localization-images/watchextension-solution.png "La struttura di directory estensione espressioni di controllo per supportare la localizzazione")
+![](localization-images/watchextension-solution.png "La struttura di directory di estensione di espressioni di controllo per supportare la localizzazione")
 
 #### <a name="strings-in-code"></a>Stringhe nel codice
 
-Il **Localizable.strings** file ha una struttura leggermente diversa rispetto a se è associata a uno storyboard. In questo caso è possibile scegliere qualsiasi stringa "chiave"; Apple consiglia di utilizzare una chiave che riflette il testo effettivo che verrà visualizzato nella lingua predefinita:
+Il **Localizable.strings** file ha una struttura leggermente diversa rispetto a se è stato associato a uno storyboard. In questo caso è possibile scegliere qualsiasi stringa di "chiave"; Apple consiglia di usare una chiave che riflette il testo effettivo che verrà visualizzato nella lingua predefinita:
 
 ```csharp
 "Breakfast time" = "Breakfast time!"; // morning
@@ -111,7 +111,7 @@ Il **Localizable.strings** file ha una struttura leggermente diversa rispetto a 
 "Bed time" = "Bed time!"; // night
 ```
 
-Il `NSBundle.MainBundle.LocalizedString` metodo viene utilizzato per risolvere le stringhe nelle relative controparti tradotte, come illustrato nel codice seguente.
+Il `NSBundle.MainBundle.LocalizedString` metodo viene utilizzato per risolvere le stringhe nelle rispettive controparti tradotte, come illustrato nel codice seguente.
 
 ```csharp
 var display = "Breakfast time";
@@ -122,15 +122,15 @@ displayText.SetText (localizedDisplay);
 
 #### <a name="images-in-code"></a>Immagini nel codice
 
-Le immagini sono popolati da codice possono essere impostate in due modi.
+Le immagini che vengono popolate dal codice possono essere impostate in due modi.
 
-1. È possibile modificare un `Image` controllo impostandone il valore per il nome della stringa di un'immagine che già esiste nell'applicazione di espressioni di controllo, ad esempio
+1. È possibile modificare un `Image` controllo impostandone il valore per il nome della stringa di un'immagine che già esiste nell'App Watch, ad esempio
 
   ```csharp
   displayImage.SetImage("gradient"); // image in Watch App (as shown above)
   ```
 
-2. È possibile spostare un'immagine dall'estensione per l'utilizzo di espressioni di controllo `FromBundle` e l'app verrà scelto automaticamente l'immagine corretta per la selezione della lingua dell'utente. Nella soluzione di esempio è un'immagine **language@2x.png** in ciascuna lingua viene visualizzata nella cartella e `DetailController` utilizzando il codice seguente:
+2. È possibile spostare un'immagine dall'estensione per l'espressione di controllo usando `FromBundle` e l'app verrà scelto automaticamente l'immagine corretta per la selezione della lingua dell'utente. Nella soluzione di esempio è disponibile un'immagine **language@2x.png** in ogni lingua cartella che viene visualizzato in `DetailController` usando il codice seguente:
 
   ```csharp
   using (var image = UIImage.FromBundle ("language")) {
@@ -140,25 +140,25 @@ Le immagini sono popolati da codice possono essere impostate in due modi.
 
   Si noti che non è necessario specificare il **@2x** quando si fa riferimento al nome file dell'immagine.
 
-Il secondo metodo è applicabile se si scarica un'immagine da un server remoto per eseguire il rendering di guardia; anche Tuttavia in questo caso è necessario assicurarsi che l'immagine scaricato correttamente è localizzata in base alle preferenze dell'utente.
+Il secondo metodo è applicabile se si scarica un'immagine da un server remoto per eseguire il rendering in watch; anche Tuttavia in questo caso è necessario assicurarsi che l'immagine che è scaricare è localizzato correttamente in base alle preferenze dell'utente.
 
 ## <a name="localization"></a>Localizzazione
 
-Dopo aver configurato la soluzione, funzioni di conversione sarà necessario elaborare il **.strings** file e immagini per ogni lingua che si desidera supportare.
+Dopo aver configurato la soluzione, funzioni di conversione sarà necessario elaborare le **.strings** file e immagini per ogni lingua si desidera supportare.
 
-È possibile creare tante **.lproj** directory, se è necessario (uno per ogni lingua supportata). I file sono denominati con i codici di lingua, ad esempio **en**, **es**, **Germania**, **ja**, **pt-BR**, e così via (per la lingua inglese Spagnolo, italiano, giapponese e portoghese (Brasile) rispettivamente).
+È possibile creare tanti **.lproj** le directory, è necessitano (uno per ogni lingua supportata). Essi vengono denominati usando codici di lingua, ad esempio **en**, **es**, **Germania**, **Giappone**, **pt-BR**, e così via (per la lingua inglese Spagnolo, tedesco, giapponese e portoghese (Brasile) rispettivamente).
 
-L'esempio allegato Usa traduzioni (generati dal computer) per illustrare come localizzare un'app watchOS.
+L'esempio allegato Usa le traduzioni (generati dal computer) per illustrare come localizzare un'app watchOS.
 
-### <a name="watch-app"></a>Applicazione delle espressioni di controllo
+### <a name="watch-app"></a>App Watch
 
-Questi valori vengono utilizzati per convertire l'interfaccia utente definito in uno storyboard delle espressioni di controllo dell'applicazione. Il *chiave* valore è una combinazione di ogni controllo di storyboard **ID di localizzazione** e la proprietà tradotta.
+Questi valori vengono usati per convertire l'interfaccia utente definita nello storyboard dell'app per le espressioni di controllo. Il *key* valore è una combinazione di ogni controllo di storyboard **ID di localizzazione** e la proprietà tradotta.
 
-È consigliabile aggiungere commenti contenente il testo originale del file in modo che i traduttori sapere quale deve essere la traduzione.
+È consigliabile aggiungere commenti che contiene il testo originale del file in modo che i traduttori sapere quale deve essere la conversione.
 
 #### <a name="eslprojinterfacestrings"></a>es.lproj/Interface.strings
 
-Le stringhe di lingua spagnola (tradotto) per lo storyboard è illustrate di seguito. È utile aggiungere commenti a ogni riga, in quanto è difficile sapere cosa il **ID di localizzazione** fa riferimento a:
+Le stringhe lingua spagnola (traduzione) per lo storyboard sono illustrate di seguito. È utile aggiungere commenti a ogni riga, perché è difficile sapere cosa il **ID di localizzazione** fa riferimento in caso contrario:
 
 ```csharp
 "AgC-eL-Hgc.title" = "Spanish"; // app screen heading
@@ -169,13 +169,13 @@ Le stringhe di lingua spagnola (tradotto) per lo storyboard è illustrate di seg
 "39.text" = "Segunda pantalla"; // second screen
 ```
 
-### <a name="watch-extension"></a>Estensione delle espressioni di controllo
+### <a name="watch-extension"></a>Estensione di espressioni di controllo
 
-Questi valori vengono utilizzati nel codice per convertire le informazioni prima di essere visualizzato all'utente. Il *chiave* è selezionata per lo sviluppatore mentre si scrive codice e in genere contiene la stringa effettiva da convertire.
+Questi valori vengono usati nel codice per convertire le informazioni prima di essere visualizzato all'utente. Il *chiave* venga selezionata dallo sviluppatore mentre si scrive codice e in genere contiene la stringa effettiva da tradurre.
 
 #### <a name="eslprojlocalizablestrings-file"></a>file es.lproj/Localizable.strings
 
-Le stringhe di linguaggio Spansish (tradotto):
+Le stringhe di linguaggio Spansish (traduzione):
 
 ```csharp
 "Breakfast time" = "la hora del desayuno"; // morning
@@ -186,19 +186,19 @@ Le stringhe di linguaggio Spansish (tradotto):
 
 ## <a name="testing"></a>Test
 
-Il metodo per modificare le preferenze della lingua differisce tra il simulatore e dispositivi fisici.
+Il metodo per modificare le preferenze di lingua è diverso tra il simulatore e dispositivi fisici.
 
 ### <a name="simulator"></a>Simulatore
 
-Nel simulatore, selezionare la lingua da testare con iOS **impostazioni** app (l'icona di colore grigio marcia nella schermata principale del simulatore).
+Nel simulatore, selezionare la lingua da testare con iOS **impostazioni** app (l'icona grigia gears nella schermata principale del simulatore).
 
-  ![](localization-images/sim-settings-sml.png "Le impostazioni di localizzazione dell'app impostazioni iOS")
+  ![](localization-images/sim-settings-sml.png "Impostazioni localizzazione dell'app impostazioni iOS")
 
 ### <a name="watch-device"></a>Dispositivo di espressioni di controllo
 
-Quando si verifica con un'espressione di controllo, modificare la lingua dell'orologio nel **Apple Watch** app su iPhone associati.
+Durante il test con un'espressione di controllo, cambiare lingua dell'orologio nel **Apple Watch** app su iPhone associato.
 
-  ![](localization-images/phone-settings-sml.png "Modificare la lingua dell'orologio nell'app di Apple Watch su iPhone associati")
+  ![](localization-images/phone-settings-sml.png "Modificare la lingua dell'orologio nell'app Apple Watch su iPhone associato")
 
 
 

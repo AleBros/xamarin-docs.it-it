@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: bce3a60f3647a537906cfa11fc1dcfcc6f5cf365
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 48c009b836ac109e0d54cd2fdb036c46e17c4387
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998609"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121503"
 ---
 # <a name="xamarinforms-carousel-page"></a>Pagina sequenza video di xamarin. Forms
 
@@ -22,7 +22,7 @@ _CarouselPage di xamarin. Forms è una pagina che gli utenti possono scorrere ve
 
 L'esempio di screenshot seguente mostra una [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) in ogni piattaforma:
 
-![](carousel-page-images/thirdpage.png "Elemento Thid CarouselPage")
+![](carousel-page-images/thirdpage.png "CarouselPage terzo elemento")
 
 Il layout di un [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) è identica in ogni piattaforma. È possibile spostarsi attraverso le pagine scorrendo rapidamente verso sinistra a destra per spostarsi in avanti all'interno dell'insieme e scorrendo rapidamente verso sinistra a destra per spostarsi all'indietro tramite la raccolta. Le schermate seguenti illustrano la prima pagina in un [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) istanza:
 

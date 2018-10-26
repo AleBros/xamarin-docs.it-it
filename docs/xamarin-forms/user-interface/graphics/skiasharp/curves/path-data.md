@@ -4,29 +4,29 @@ description: Questo articolo illustra come definire i percorsi di SkiaSharp usan
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: f3c06198ae9e677c667c9216b3ace8784a6056b2
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 5e059cc6ef3a127ae79bd2ed97ade7a8045958f1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615327"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116172"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Dati del tracciato SVG in SkiaSharp
 
 _Definire i percorsi di uso delle stringhe di testo in formato Scalable Vector Graphics_
 
-Il `SKPath` classe supporta la definizione di oggetti intero percorso da stringhe di testo in un formato stabilito dalla specifica Scalable Vector Graphics (SVG). Si noterà più avanti in questo articolo come è possibile rappresentare un intero percorso di questo tipo in una stringa di testo:
+Il [ `SKPath` ](xref:SkiaSharp.SKPath) classe supporta la definizione di oggetti intero percorso da stringhe di testo in un formato stabilito dalla specifica Scalable Vector Graphics (SVG). Si noterà più avanti in questo articolo come è possibile rappresentare un intero percorso di questo tipo in una stringa di testo:
 
 ![](path-data-images/pathdatasample.png "Un tracciato di esempio definito con dati del tracciato SVG")
 
 SVG è una linguaggio di programmazione per le pagine web della grafica basato su XML. Poiché SVG devono consentire i percorsi devono essere definite nella markup anziché a una serie di chiamate di funzione, il formato SVG standard include un metodo estremamente conciso specificando un percorso di grafica intero come stringa di testo.
 
-All'interno di SkiaSharp, questo formato è detto "-dati del tracciato SVG." Il formato è supportato anche in ambienti programmazione basata su XAML di Windows, tra cui the Windows Presentation Foundation e la piattaforma Windows universale, in cui è noto come il [sintassi di Markup del percorso](https://msdn.microsoft.com/library/ms752293%28v=vs.110%29.aspx) o il [spostare disegnare la sintassi di comandi](/windows/uwp/xaml-platform/move-draw-commands-syntax/). Può anche fungere da un formato di scambio per immagini di grafica vettoriale, in particolare nei file basata su testo, ad esempio XML.
+All'interno di SkiaSharp, questo formato è detto "-dati del tracciato SVG." Il formato è supportato anche in ambienti programmazione basata su XAML di Windows, tra cui the Windows Presentation Foundation e la piattaforma Windows universale, in cui è noto come il [sintassi di Markup del percorso](/dotnet/framework/wpf/graphics-multimedia/path-markup-syntax) o il [spostare disegnare la sintassi di comandi](/windows/uwp/xaml-platform/move-draw-commands-syntax/). Può anche fungere da un formato di scambio per immagini di grafica vettoriale, in particolare nei file basata su testo, ad esempio XML.
 
-SkiaSharp definisce due metodi con le parole `SvgPathData` nei relativi nomi:
+Il [ `SKPath` ](xref:SkiaSharp.SKPath) classe definisce due metodi con le parole `SvgPathData` nei relativi nomi:
 
 ```csharp
 public static SKPath ParseSvgPathData(string svgPath)
@@ -34,17 +34,17 @@ public static SKPath ParseSvgPathData(string svgPath)
 public string ToSvgPathData()
 ```
 
-Il metodo statico [ `ParseSvgPathData` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ParseSvgPathData/p/System.String/) metodo converte una stringa in un `SKPath` oggetto, mentre [ `ToSvgPathData` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ToSvgPathData()/) converte un `SKPath` oggetto in una stringa.
+Il metodo statico [ `ParseSvgPathData` ](xref:SkiaSharp.SKPath.ParseSvgPathData(System.String)) metodo converte una stringa in un `SKPath` oggetto, mentre [ `ToSvgPathData` ](xref:SkiaSharp.SKPath.ToSvgPathData) converte un `SKPath` oggetto in una stringa.
 
 Di seguito è una stringa SVG per una stella a 5 punte centrata sul punto (0, 0) con un raggio pari a 100:
 
-```csharp
+```
 "M 0 -100 L 58.8 90.9, -95.1 -30.9, 95.1 -30.9, -58.8 80.9 Z"
 ```
 
-Le lettere sono comandi che creano un `SKPath` oggetto. `M` indica un `MoveTo` , chiamare `L` viene `LineTo`, e `Z` è `Close` per chiudere un contorno. Ogni coppia di numeri fornisce una coordinata X e Y di un punto. Si noti che il `L` comando è seguito da più punti separati da virgole. In una serie di coordinate e i punti, virgole e spazi vuoti vengono considerati in modo identico. Alcuni programmatori preferiscono inserire virgole tra le coordinate X e Y invece che tra i punti, ma virgole o spazi sono necessarie solo per evitare ambiguità. Si tratta di una condizione perfettamente possibile:
+Le lettere sono comandi che creano un' `SKPath` oggetto: `M` indica una `MoveTo` chiamare, `L` viene `LineTo`, e `Z` è `Close` per chiudere un contorno. Ogni coppia di numeri fornisce una coordinata X e Y di un punto. Si noti che il `L` comando è seguito da più punti separati da virgole. In una serie di coordinate e i punti, virgole e spazi vuoti vengono considerati in modo identico. Alcuni programmatori preferiscono inserire virgole tra le coordinate X e Y invece che tra i punti, ma virgole o spazi sono necessarie solo per evitare ambiguità. Si tratta di una condizione perfettamente possibile:
 
-```csharp
+```
 "M0-100L58.8 90.9-95.1-30.9 95.1-30.9-58.8 80.9Z"
 ```
 
@@ -52,7 +52,7 @@ La sintassi dei dati del tracciato SVG formalmente è documentata in [8.3 sezion
 
 ## <a name="moveto"></a>**MoveTo**
 
-```csharp
+```
 M x y
 ```
 
@@ -60,7 +60,7 @@ Viene avviato un nuovo contorno del percorso tramite l'impostazione della posizi
 
 ## <a name="lineto"></a>**LineTo**
 
-```csharp
+```
 L x y ...
 ```
 
@@ -68,7 +68,7 @@ Questo comando aggiunge una linea retta (o le righe) al percorso e imposta la nu
 
 ## <a name="horizontal-lineto"></a>**Orizzontale LineTo**
 
-```csharp
+```
 H x ...
 ```
 
@@ -76,7 +76,7 @@ Questo comando aggiunge una riga orizzontale al percorso e imposta la nuova posi
 
 ## <a name="vertical-line"></a>**Linea verticale**
 
-```csharp
+```
 V y ...
 ```
 
@@ -84,7 +84,7 @@ Questo comando aggiunge una linea verticale al percorso e imposta la nuova posiz
 
 ## <a name="close"></a>**Chiudi**
 
-```csharp
+```
 Z
 ```
 
@@ -94,7 +94,7 @@ Il `C` comando chiude il contorno mediante l'aggiunta di una linea retta dalla p
 
 Il comando per aggiungere un arco ellittico per la distribuzione è di gran lunga il più complesso nella specifica di dati del percorso SVG intera. È l'unico comando in cui i numeri possono rappresentare un valore diverso da valori di coordinate:
 
-```csharp
+```
 A rx ry rotation-angle large-arc-flag sweep-flag x y ...
 ```
 
@@ -108,7 +108,7 @@ Viene disegnato l'arco al punto (*x*, *y*), che diventa la nuova posizione corre
 
 ## <a name="cubicto"></a>**CubicTo**
 
-```csharp
+```
 C x1 y1 x2 y2 x3 y3 ...
 ```
 
@@ -118,7 +118,7 @@ Questo comando aggiunge una curva di Bézier cubica tra la posizione corrente a 
 
 È anche un comando di curva di Bézier "smooth":
 
-```csharp
+```
 S x2 y2 x3 y3 ...
 ```
 
@@ -126,7 +126,7 @@ Questo comando deve seguire un comando di Bézier normale (sebbene che non sia s
 
 ## <a name="quadto"></a>**QuadTo**
 
-```csharp
+```
 Q x1 y1 x2 y2 ...
 ```
 
@@ -134,7 +134,7 @@ Per le curve di Bézier quadratiche, il numero di punti deve essere un multiplo 
 
 È anche un comando di curva quadratica smooth:
 
-```csharp
+```
 T x2 y2 ...
 ```
 
@@ -144,9 +144,9 @@ Tutti questi comandi sono anche disponibili nelle versioni "relative", dove sono
 
 Questo è l'ambito della definizione del percorso dati SVG. Non sono disponibili funzionalità per la ripetizione di gruppi di comandi o per l'esecuzione di qualsiasi tipo di calcolo. I comandi per `ConicTo` oppure non sono disponibili altri tipi di specifiche dell'arco.
 
-Il metodo statico [ `SKPath.ParseSvgPathData` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ParseSvgPathData/p/System.String/) metodo prevede una stringa valida di comandi SVG. Se viene rilevato un errore di sintassi, il metodo restituisce `null`. Ovvero l'indicazione di errore solo.
+Il metodo statico [ `SKPath.ParseSvgPathData` ](xref:SkiaSharp.SKPath.ParseSvgPathData(System.String)) metodo prevede una stringa valida di comandi SVG. Se viene rilevato un errore di sintassi, il metodo restituisce `null`. Ovvero l'indicazione di errore solo.
 
-Il [ `ToSvgPathData` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ToSvgPathData()/) metodo è utile per il recupero di dati del tracciato SVG da un oggetto esistente `SKPath` oggetti per trasferire a un altro programma, o per archiviare in un formato di file di testo come XML. (Il `ToSvgPathData` metodo non è illustrato nel codice di esempio in questo articolo.) Effettuare *non* aspettarsi `ToSvgPathData` per restituire una stringa che corrisponde esattamente alle chiamate al metodo che ha creato il percorso. In particolare, si scoprirà che gli archi vengono convertiti in più `QuadTo` comandi, ovvero come vengono visualizzati nei dati del percorso restituiti da `ToSvgPathData`.
+Il [ `ToSvgPathData` ](xref:SkiaSharp.SKPath.ToSvgPathData) metodo è utile per il recupero di dati del tracciato SVG da un oggetto esistente `SKPath` oggetti per trasferire a un altro programma, o per archiviare in un formato di file di testo come XML. (Il `ToSvgPathData` metodo non è illustrato nel codice di esempio in questo articolo.) Effettuare *non* aspettarsi `ToSvgPathData` per restituire una stringa che corrisponde esattamente alle chiamate al metodo che ha creato il percorso. In particolare, si scoprirà che gli archi vengono convertiti in più `QuadTo` comandi, ovvero come vengono visualizzati nei dati del percorso restituiti da `ToSvgPathData`.
 
 Il **Hello di percorso dati** pagina dirompenti la parola "HELLO" usando dati del tracciato SVG. Sia la `SKPath` e `SKPaint` gli oggetti vengono definiti come campi nel [ `PathDataHelloPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) classe:
 
@@ -330,7 +330,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-Il movimento delle lancette hour e minute ora è racchiusi tra aree, in modo da rendere le mani distinti tra loro, vengono disegnati con un riquadro nero e con riempimento grigio il `handStrokePaint` e `handFillPaint` oggetti.
+Il movimento delle lancette hour e minute have ora racchiusi tra le aree. Per rendere le mani distinti tra loro, vengono disegnati con un riquadro nero e con riempimento grigio il `handStrokePaint` e `handFillPaint` oggetti.
 
 In precedenza **confusa orologio analogico** esempio piccola cerchi contrassegnato le ore e minuti sono stati disegnati in un ciclo. In questo **piuttosto orologio analogico** esempio, viene utilizzato un approccio completamente diverso: gli indicatori di ora e minuto sono linee tratteggiate disegnate con i `minuteMarkPaint` e `hourMarkPaint` oggetti:
 
@@ -359,9 +359,9 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-Il [ **da punti e trattini** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) Guida è stato illustrato come utilizzare il `SKPathEffect.CreateDash` metodo per creare una linea tratteggiata. Il primo argomento è un `float` matrice a livello generale con due elementi: il primo elemento è la lunghezza dei trattini e il secondo elemento è il divario tra i trattini. Quando la `StrokeCap` è impostata su `SKStrokeCap.Round`, quindi le estremità arrotondate del trattino prolungare in modo efficace la lunghezza di dash per lo spessore del tratto su entrambi i lati del trattino. Pertanto, impostando il primo elemento della matrice su 0 consente di creare una linea punteggiata.
+Il [ **da punti e trattini** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) articolo descriveva come è possibile usare il [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) metodo per creare una linea tratteggiata. Il primo argomento è un `float` matrice a livello generale con due elementi: il primo elemento è la lunghezza dei trattini e il secondo elemento è il divario tra i trattini. Quando la `StrokeCap` è impostata su `SKStrokeCap.Round`, quindi le estremità arrotondate del trattino prolungare in modo efficace la lunghezza di dash per lo spessore del tratto su entrambi i lati del trattino. Pertanto, impostando il primo elemento della matrice su 0 consente di creare una linea punteggiata.
 
-La distanza tra queste punti è disciplinata dal secondo elemento della matrice. Come si vedrà a breve, questi due `SKPaint` gli oggetti vengono utilizzati per disegnare cerchi con un raggio di unità di 90. La circonferenza del cerchio è pertanto 180π, il che significa che i segni di 60 minuti devono essere visualizzati ogni unità di 3 π, che corrisponde al valore nel secondo il `float` matrice `minuteMarkPaint`. I segni di dodici ore devono essere visualizzato ogni unità 15π, ovvero il valore nel secondo `float` matrice.
+La distanza tra queste punti è disciplinata dal secondo elemento della matrice. Come si vedrà a breve, questi due `SKPaint` gli oggetti vengono utilizzati per disegnare cerchi con un raggio di unità di 90. La circonferenza del cerchio è pertanto 180π, il che significa che i segni di 60 minuti devono essere visualizzati ogni unità di 3 π, che corrisponde al valore nel secondo il `float` matrice `minuteMarkPaint`. I segni di 12 ore devono essere visualizzato ogni unità 15π, ovvero il valore nel secondo `float` matrice.
 
 Il `PrettyAnalogClockPage` classe imposta un timer per invalidare l'area di ogni 16 millisecondi e il `PaintSurface` gestore viene chiamato con tale frequenza. Le definizioni delle versioni precedenti di `SKPath` e `SKPaint` oggetti consentono molto puliti codice di disegno:
 
@@ -430,5 +430,5 @@ Un'operazione particolare operazione viene eseguita con l'icona della mano, seco
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

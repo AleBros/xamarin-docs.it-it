@@ -1,7 +1,7 @@
 
-La seguente riga di comando per specificare una build di rilascio della soluzione **SOLUTION_FILE.sln** per iPhone. Il percorso del IPA può essere impostato specificando il la `IpaPackageDir` proprietà nella riga di comando:
+La riga di comando seguente per specificare una build di rilascio della soluzione **SOLUTION_FILE.sln** per iPhone. Il percorso del pacchetto IPA può essere impostato specificando il `IpaPackageDir` proprietà nella riga di comando:
 
- - Nel Mac, utilizzando **xbuild**:
+ - Nel Mac, usando **xbuild**:
 
         xbuild /p:Configuration="Release" \ 
            /p:Platform="iPhone" \ 
@@ -10,7 +10,7 @@ La seguente riga di comando per specificare una build di rilascio della soluzion
 
 Il **xbuild** comando si trova in genere nella directory **/Library/Frameworks/Mono.framework/Commands**.
 
- - In Windows, tramite **msbuild**:
+ - In Windows, utilizzando **msbuild**:
 
         msbuild /p:Configuration="Release" 
             /p:Platform="iPhone" 
@@ -19,7 +19,7 @@ Il **xbuild** comando si trova in genere nella directory **/Library/Frameworks/M
             /t:Build MyProject.sln
 
 
-**MSBuild** non espanderà automaticamente `$( )` le espressioni passate dalla riga di comando. Per questo motivo è consigliabile utilizzare un percorso completo durante l'impostazione di `IpaPackageDir` nella riga di comando.
+**MSBuild** non si espanderà automaticamente `$( )` espressioni passati dalla riga di comando. Per questo motivo, è consigliabile usare un percorso completo quando si impostano le `IpaPackageDir` nella riga di comando.
 
 
-Vedere il [note sulla versione di iOS 9.8](https://developer.xamarin.com/releases/ios/xamarin.ios_9/xamarin.ios_9.8/#New_MSBuild_property_IpaPackageDir_to_customize_.ipa_output_location) per ulteriori informazioni sul `IpaPackageDir` proprietà.
+Vedere le [note sulla versione per iOS 9.8](https://developer.xamarin.com/releases/ios/xamarin.ios_9/xamarin.ios_9.8/#New_MSBuild_property_IpaPackageDir_to_customize_.ipa_output_location) per altre informazioni sul `IpaPackageDir` proprietà.

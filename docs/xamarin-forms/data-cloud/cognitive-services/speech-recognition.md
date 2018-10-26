@@ -1,41 +1,41 @@
 ---
-title: Riconoscimento vocale utilizzando l'API di sintesi vocale Microsoft
-description: L'API di riconoscimento vocale Microsoft è un'API basata su cloud che fornisce gli algoritmi per l'elaborazione di lingua parlata. In questo articolo viene illustrato come utilizzare l'API REST di riconoscimento vocale Microsoft per convertire audio in testo in un'applicazione di xamarin. Forms.
+title: Riconoscimento vocale usando l'API riconoscimento vocale di Microsoft
+description: L'API traduzione vocale Microsoft è un'API basata sul cloud che fornisce algoritmi per elaborare il linguaggio parlato. Questo articolo illustra come usare l'API REST di riconoscimento vocale Microsoft per convertire audio in testo in un'applicazione xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: B435FF6B-8785-48D9-B2D9-1893F5A87EA1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: c8eb991f67d54f9bacbb776b350cc5649a04ab2b
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 282ebe330a370e0dda3af54287107b380c85cd80
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846854"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102815"
 ---
-# <a name="speech-recognition-using-the-microsoft-speech-api"></a>Riconoscimento vocale utilizzando l'API di sintesi vocale Microsoft
+# <a name="speech-recognition-using-the-microsoft-speech-api"></a>Riconoscimento vocale usando l'API riconoscimento vocale di Microsoft
 
-_L'API di riconoscimento vocale Microsoft è un'API basata su cloud che fornisce gli algoritmi per l'elaborazione di lingua parlata. In questo articolo viene illustrato come utilizzare l'API REST di riconoscimento vocale Microsoft per convertire audio in testo in un'applicazione di xamarin. Forms._
+_L'API traduzione vocale Microsoft è un'API basata sul cloud che fornisce algoritmi per elaborare il linguaggio parlato. Questo articolo illustra come usare l'API REST di riconoscimento vocale Microsoft per convertire audio in testo in un'applicazione xamarin. Forms._
 
 ## <a name="overview"></a>Panoramica
 
-API riconoscimento vocale Microsoft include due componenti:
+L'API traduzione vocale Microsoft presenta due componenti:
 
-- Riconoscimento vocale API per la conversione di parole in testo. Il riconoscimento vocale può essere eseguito tramite un'API REST, una libreria client o una libreria di servizi.
-- Una sintesi vocale API per la conversione di testo in parole. Conversione di sintesi vocale viene eseguita tramite un'API REST.
+- Un'API di riconoscimento vocale per la conversione vocali in testo. Riconoscimento vocale può essere eseguito tramite un'API REST, libreria client o della libreria di servizi.
+- Un'API sintesi vocale per la conversione del testo in parole. Sintesi vocale viene eseguita tramite l'API REST.
 
-In questo articolo è incentrato sull'esecuzione di riconoscimento vocale attraverso l'API REST. Mentre le librerie client e il servizio supportano la restituzione di risultati parziali, l'API REST può restituire solo un risultato di riconoscimento singola, senza eventuali risultati parziali.
+Questo articolo è incentrato su come eseguire il riconoscimento vocale tramite l'API REST. Mentre le librerie client e il servizio supportano la restituzione dei risultati parziali, l'API REST può restituire solo un risultato del riconoscimento singola, senza eventuali risultati parziali.
 
-Per utilizzare l'API di riconoscimento vocale Microsoft, è necessario ottenere una chiave API. Può essere ottenuto in [provare servizi cognitivi](https://azure.microsoft.com/try/cognitive-services/).
+Per usare l'API traduzione vocale Microsoft, è necessario ottenere una chiave API. Ciò può essere ottenuto da Azure [portale](https://portal.azure.com/). Per altre informazioni, vedere [creare un account servizi cognitivi nel portale di Azure](/azure/cognitive-services/cognitive-services-apis-create-account).
 
-Per ulteriori informazioni sull'API di riconoscimento vocale Microsoft, vedere [documentazione dell'API Microsoft vocale](/azure/cognitive-services/speech/home/).
+Per altre informazioni sull'API riconoscimento vocale di Microsoft, vedere [documentazione dell'API riconoscimento vocale Microsoft](/azure/cognitive-services/speech/home/).
 
 ## <a name="authentication"></a>Autenticazione
 
-Tutte le richieste inviate all'API REST di Microsoft vocale richiede un token di accesso JSON Web Token (JWT), che può essere ottenuto dal servizio token di servizi cognitivi in `https://api.cognitive.microsoft.com/sts/v1.0/issueToken`. Un token può essere ottenuto tramite una richiesta POST al servizio token di specificando un `Ocp-Apim-Subscription-Key` intestazione che contiene la chiave API come relativo valore.
+Tutte le richieste inviate all'API REST di riconoscimento vocale di Microsoft richiede un token di accesso JSON Web Token (JWT), che può essere ottenuto dal servizio token di servizi cognitivi in `https://api.cognitive.microsoft.com/sts/v1.0/issueToken`. Un token può essere ottenuto eseguendo una richiesta POST al servizio token, che specifica un `Ocp-Apim-Subscription-Key` intestazione che contiene la chiave API come relativo valore.
 
-Esempio di codice seguente viene illustrato come richiedere un accesso token dal servizio token di:
+Esempio di codice seguente viene illustrato come richiedere l'accesso in un token dal servizio token:
 
 ```csharp
 public AuthenticationService(string apiKey)
@@ -54,21 +54,21 @@ async Task<string> FetchTokenAsync(string fetchUri)
 }
 ```
 
-Il token di accesso restituito, ovvero testo Base64, dispone di un'ora di scadenza di 10 minuti. Pertanto, l'applicazione di esempio rinnova il token di accesso ogni 9 minuti.
+Il token di accesso restituito, ovvero testo Base64, contiene un'ora di scadenza di 10 minuti. Pertanto, l'applicazione di esempio rinnova il token di accesso ogni 9 minuti.
 
-Il token di accesso deve essere specificato in ogni API REST di Microsoft vocale chiamare come un `Authorization` intestazione con la stringa di prefisso `Bearer`, come illustrato nell'esempio di codice seguente:
+Il token di accesso deve essere specificato in ogni REST API traduzione vocale Microsoft chiamare come un `Authorization` intestazione con la stringa di prefisso `Bearer`, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
 ```
 
-Per passare un token di accesso valido per l'API REST di Microsoft vocale vengono rispettate, un errore di 403 risposta.
+Errore per passare un token di accesso valido per l'API REST di riconoscimento vocale Microsoft comporterà un errore di 403 risposta.
 
-## <a name="performing-speech-recognition"></a>Esecuzione di riconoscimento vocale
+## <a name="performing-speech-recognition"></a>Esegue il riconoscimento vocale
 
-Il riconoscimento vocale viene ottenuto tramite una richiesta POST per il `recognition` API `https://speech.platform.bing.com/speech/recognition/`. Una singola richiesta non può contenere più di 10 secondi di audio e la durata totale delle richieste non può superare 14 secondi.
+Riconoscimento vocale viene ottenuto effettuando una richiesta POST per il `recognition` all'API `https://speech.platform.bing.com/speech/recognition/`. Una singola richiesta non può contenere più di 10 secondi di audio e la durata delle richieste totale non può superare i 14 secondi.
 
-Contenuto audio deve trovarsi nel corpo della richiesta in formato wav POST.
+Contenuto audio deve essere inserito nel corpo del POST della richiesta in formato wav.
 
 Nell'applicazione di esempio, il `RecognizeSpeechAsync` metodo richiama il processo di riconoscimento vocale:
 
@@ -92,11 +92,11 @@ public async Task<SpeechResult> RecognizeSpeechAsync(string filename)
 }
 ```
 
-Audio viene registrato in ogni progetto specifico della piattaforma sotto forma di dati wav PCM e `RecognizeSpeechAsync` metodo utilizza il `PCLStorage` pacchetto NuGet per aprire il file audio in un flusso. La richiesta di riconoscimento vocale URI viene generato e un token di accesso viene recuperato dal servizio token di. La richiesta di riconoscimento vocale viene inserita il `recognition` API, che restituisce una risposta JSON contenente il risultato. La risposta JSON viene deserializzata, con il risultato viene restituito al metodo di chiamata per la visualizzazione.
+L'audio viene registrato in ogni progetto specifico della piattaforma dati wav PCM e il `RecognizeSpeechAsync` metodo viene utilizzato il `PCLStorage` pacchetto NuGet per aprire il file come flusso audio. La richiesta di riconoscimento vocale URI viene generato e un token di accesso viene recuperato dal servizio token. La richiesta di riconoscimento vocale viene registrata la `recognition` API, che restituisce una risposta JSON che contiene il risultato. La risposta JSON viene deserializzata, con il risultato viene restituito al metodo di chiamata per la visualizzazione.
 
 ### <a name="configuring-speech-recognition"></a>Configurazione del riconoscimento vocale
 
-È possibile configurare il processo di riconoscimento vocale specificando i parametri di query HTTP:
+Il processo di riconoscimento vocale può essere configurato specificando i parametri di query HTTP:
 
 ```csharp
 string GenerateRequestUri(string speechEndpoint)
@@ -116,7 +116,7 @@ La configurazione principale eseguita dal `GenerateRequestUri` metodo consiste n
 
 ### <a name="sending-the-request"></a>L'invio della richiesta
 
-Il `SendRequestAsync` metodo effettua la richiesta POST all'API REST di Microsoft vocale e restituisce la risposta:
+Il `SendRequestAsync` metodo effettua la richiesta POST all'API REST di riconoscimento vocale di Microsoft e restituisce la risposta:
 
 ```csharp
 async Task<string> SendRequestAsync(Stream fileStream, string url, string bearerToken, string contentType)
@@ -136,17 +136,17 @@ async Task<string> SendRequestAsync(Stream fileStream, string url, string bearer
 
 Questo metodo crea la richiesta POST per:
 
-- Racchiude il flusso audio in un `StreamContent` istanza, che fornisce contenuto HTTP in base a un flusso.
-- L'impostazione di `Content-Type` intestazione della richiesta da `audio/wav; codec="audio/pcm"; samplerate=16000`.
-- Il token di accesso per l'aggiunta di `Authorization` intestazione, con la stringa di prefisso `Bearer`.
+- Racchiude il flusso audio in un `StreamContent` istanza che fornisce contenuto HTTP in base a un flusso.
+- Impostando il `Content-Type` intestazione della richiesta di `audio/wav; codec="audio/pcm"; samplerate=16000`.
+- Aggiungere il token di accesso per il `Authorization` intestazione, con la stringa di prefisso `Bearer`.
 
-La richiesta POST viene quindi inviata al `recognition` API. La risposta viene quindi letto e restituita al metodo di chiamata.
+La richiesta POST viene quindi inviata a `recognition` API. La risposta viene quindi letto e restituita al metodo di chiamata.
 
-Il `recognition` API invierà il codice di stato HTTP 200 (OK) in risposta, a condizione che la richiesta sia valida, che indica che la richiesta ha avuto esito positivo e che le informazioni richieste sono presenti nella risposta. Per un elenco delle risposte di errore possibili, vedere [Troubleshooting](/azure/cognitive-services/speech/troubleshooting).
+Il `recognition` API invierà il codice di stato HTTP 200 (OK) in risposta, fornita che la richiesta sia valida, che indica che la richiesta ha avuto esito positivo e che le informazioni richieste sono presenti nella risposta. Per un elenco di possibili risposte di errore, vedere [Troubleshooting](/azure/cognitive-services/speech/troubleshooting).
 
 ### <a name="processing-the-response"></a>L'elaborazione della risposta
 
-Viene restituita la risposta di API in formato JSON, con il testo riconosciuto sia indipendente nel `name` tag. I dati JSON seguenti mostrano un messaggio di risposta con esito positivo tipico:
+La risposta dell'API viene restituita in formato JSON, con il testo riconosciuto sia indipendente nel `name` tag. I dati JSON seguenti mostrano un messaggio di risposta con esito positivo tipico:
 
 ```json
 {  
@@ -157,16 +157,16 @@ Viene restituita la risposta di API in formato JSON, con il testo riconosciuto s
 }
 ```
 
-Nell'applicazione di esempio, la risposta JSON viene deserializzata in un `SpeechResult` istanza, con il risultato viene restituito al metodo di chiamata per la visualizzazione, come illustrato nelle schermate seguenti:
+Nell'applicazione di esempio, la risposta JSON viene deserializzata in un `SpeechResult` istanza, con il risultato viene restituito al metodo di chiamata per la visualizzazione, come illustrato negli screenshot seguenti:
 
 ![](speech-recognition-images/speech-recognition.png "Riconoscimento vocale")
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha descritto come utilizzare l'API REST di Microsoft vocale per convertire audio in testo in un'applicazione di xamarin. Forms. Oltre a eseguire il riconoscimento vocale, l'API di riconoscimento vocale Microsoft può anche convertire testo in parole.
+Questo articolo ha illustrato come usare l'API REST di riconoscimento vocale di Microsoft per convertire audio in testo in un'applicazione xamarin. Forms. Oltre a eseguire il riconoscimento vocale, l'API traduzione vocale Microsoft può anche convertire testo in parole.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Documentazione di riconoscimento vocale Microsoft API](/azure/cognitive-services/speech/home/).
+- [Documentazione API traduzione vocale Microsoft](/azure/cognitive-services/speech/home/).
 - [Utilizzo di un servizio Web RESTful](~/xamarin-forms/data-cloud/consuming/rest.md)
 - [Servizi cognitivi TODO (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)

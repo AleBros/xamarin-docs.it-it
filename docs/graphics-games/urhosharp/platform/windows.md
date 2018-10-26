@@ -1,35 +1,35 @@
 ---
-title: Supporto di Windows UrhoSharp
-description: Questo documento viene descritto il supporto di Windows per UrhoSharp. Viene descritto come creare un progetto, configurare e avviare Urho, integrare con WPF e integrare con UWP.
+title: Supporto di Windows di UrhoSharp
+description: Questo documento viene descritto il supporto di Windows per UrhoSharp. Viene descritto come creare un progetto, configurare e avviare Urho, si integrano con WPF e integrare con UWP.
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 094eaf0ebe84ce8c1771bd6481ee897463349856
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8aca028ec1015616a9884cd09b7ffa5e04f2e43d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783233"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119605"
 ---
-# <a name="urhosharp-windows-support"></a>Supporto di Windows UrhoSharp
+# <a name="urhosharp-windows-support"></a>Supporto di Windows di UrhoSharp
 
-Mentre Urho è una libreria di classi portabile e consente la stessa API da utilizzare nella piattaforma diversi per la logica di gioco, è comunque necessario inizializzare Urho nel driver specifico della piattaforma in alcuni casi, è possibile sfruttare le funzionalità specifiche della piattaforma .
+Sebbene Urho è una libreria di classi portabile e consente la stessa API da usare nell'intera piattaforma diverse per la logica del gioco, devi comunque inizializzare Urho nel driver specifici della piattaforma e in alcuni casi, è possibile sfruttare le funzionalità specifiche della piattaforma .
 
-Nelle pagine, si supponga che `MyGame` è una sottoclasse di `Application` classe.
+Nelle pagine seguenti, si supponga che `MyGame` è una sottoclasse del `Application` classe.
 
 **Architetture supportate:** solo 64 bit di Windows.
 
-È possibile visualizzare esempi completi in cui viene illustrato come utilizzare questa funzione è presente il nostro [esempi](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples)
+È possibile visualizzare esempi completi che illustrano come utilizzare questa opzione nel nostro [esempi](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples)
 
 ## <a name="standalone-project"></a>Progetto autonomo
 
 ### <a name="creating-a-project"></a>Creazione di un progetto
 
-Creare un progetto Console, fare riferimento a Urho NuGet e quindi assicurarsi che sia possibile individuare le risorse (la directory contenente la directory dei dati).
+Creare un progetto Console, fare riferimento a Urho NuGet e quindi assicurarsi che sia possibile individuare gli asset (la directory che contiene la directory dati).
 
-### <a name="configuring-and-launching-urho"></a>La configurazione e avvio Urho
+### <a name="configuring-and-launching-urho"></a>Configurando e avviando Urho
 
 Per avviare l'applicazione, eseguire questa operazione:
 
@@ -46,9 +46,9 @@ new MyGame().Run();
 
 ### <a name="creating-a-project"></a>Creazione di un progetto
 
-Creare un progetto WPF, fare riferimento a Urho NuGet e quindi assicurarsi che sia possibile individuare le risorse (la directory contenente la directory dei dati).
+Creare un progetto WPF, fare riferimento a Urho NuGet e quindi assicurarsi che sia possibile individuare gli asset (la directory che contiene la directory dati).
 
-### <a name="configuring-and-launching-urho-from-wpf"></a>La configurazione e avvio Urho da WPF
+### <a name="configuring-and-launching-urho-from-wpf"></a>Configurando e avviando Urho da WPF
 
 Creare una sottoclasse di `Window` e configurare gli asset simile al seguente:
 
@@ -90,9 +90,9 @@ Creare una sottoclasse di `Window` e configurare gli asset simile al seguente:
 
 ### <a name="creating-a-project"></a>Creazione di un progetto
 
-Creare un progetto UWP, fare riferimento a Urho NuGet e quindi assicurarsi che sia possibile individuare le risorse (la directory contenente la directory dei dati).
+Creare un progetto UWP, fare riferimento a Urho NuGet e quindi assicurarsi che sia possibile individuare gli asset (la directory che contiene la directory dati).
 
-### <a name="configuring-and-launching-urho-from-uwp"></a>La configurazione e avvio Urho da UWP
+### <a name="configuring-and-launching-urho-from-uwp"></a>Configurando e avviando Urho dalla piattaforma UWP
 
 Creare una sottoclasse di `Window` e configurare gli asset simile al seguente:
 
@@ -123,8 +123,8 @@ Creare una sottoclasse di `Window` e configurare gli asset simile al seguente:
 
 ### <a name="creating-a-project"></a>Creazione di un progetto
 
-Creare un progetto di Windows. Forms, fare riferimento a Urho NuGet e quindi assicurarsi che sia possibile individuare le risorse (la directory contenente la directory dei dati).
+Creare un progetto di Windows. Forms, fanno riferimento a Urho NuGet e quindi assicurarsi che sia possibile individuare gli asset (la directory che contiene la directory dati).
 
-### <a name="configuring-and-launching-urho-from-windowsforms"></a>La configurazione e avvio Urho da Windows. Forms
+### <a name="configuring-and-launching-urho-from-windowsforms"></a>Configurando e avviando Urho da Windows. Forms
 
 Avviare Urho dal form, vedere [esempio completo](https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/WinForms/SamplesForm.cs)

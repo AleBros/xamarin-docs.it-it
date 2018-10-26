@@ -3,37 +3,37 @@ title: Barra di spostamento
 ms.prod: xamarin
 ms.assetid: 6023DB7E-9E72-4B90-A96A-11BC297B8A3D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 476e73906e4fbe01847740f90a8da701768b29db
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ce80fab39c814204631c5cc408c3f0ee99a329e6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762812"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110557"
 ---
 # <a name="navigation-bar"></a>Barra di spostamento
 
-Android 4 introdotta una nuova funzionalità interfaccia utente di sistema denominata un *barra di spostamento*, che fornisce i controlli per la navigazione nei dispositivi che non includono i pulsanti hardware **Home**, **indietro** , e **Menu**.
-La schermata seguente mostra la barra di spostamento da un dispositivo Nexus primi:
+Android 4 è stato introdotto una nuova funzionalità dell'interfaccia utente di sistema denominata un *sulla barra di navigazione*, che fornisce i controlli di navigazione nei dispositivi che non includono i pulsanti hardware per **Home**, **indietro** , e **Menu**.
+Lo screenshot seguente mostra la barra di spostamento da un dispositivo di primo Nexus:
 
- [![Esempio di una barra di spostamento Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
+ [![Esempio di una barra di spostamento in Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
 
-Sono disponibili numerosi nuovi flag che controllano la visibilità della barra di spostamento e i relativi controlli, nonché la visibilità della barra di sistema che è stata introdotta in Android 3. I flag sono definiti nella `Android.View.View` classe e sono elencati di seguito:
+Sono disponibili numerosi nuovi flag che controllano la visibilità della barra di spostamento e i relativi controlli, nonché la visibilità della barra di sistema che è stato introdotto in Android 3. I flag sono definiti nel `Android.View.View` classe e sono elencate di seguito:
 
 -   `SystemUiFlagVisible` &ndash; Rende visibile la barra di spostamento. 
--   `SystemUiFlagLowProfile` &ndash; Dims controlli nella barra di spostamento. 
+-   `SystemUiFlagLowProfile` &ndash; Dims dei controlli nella barra di spostamento. 
 -   `SystemUiFlagHideNavigation` &ndash; Nasconde la barra di spostamento. 
 
 
-Questi flag è applicabile a qualsiasi visualizzazione nella gerarchia di visualizzazione impostando la `SystemUiVisibility` proprietà. Se più visualizzazioni impostare questa proprietà, il sistema li combina con un'operazione di OR e li applica a condizione che la finestra in cui i flag sono impostati mantiene lo stato attivo. Quando si rimuove una vista, verranno rimossi anche i flag che è impostato.
+Questi flag possono essere applicati a qualsiasi visualizzazione nella gerarchia di visualizzazione con l'impostazione di `SystemUiVisibility` proprietà. Se più viste impostato questa proprietà, il sistema li combina con un'operazione di OR e li applica in modo fino a quando la finestra in cui sono impostati i flag mantiene lo stato attivo. Quando si rimuove una visualizzazione, verranno rimossi anche eventuali flag che è impostato.
 
-L'esempio seguente mostra una semplice applicazione in cui viene modificato facendo clic su uno dei pulsanti di `SystemUiVisibility`:
+L'esempio seguente illustra una semplice applicazione in cui viene modificato facendo clic su uno dei pulsanti di `SystemUiVisibility`:
 
- [![Screenshot che illustra Visible ridotto e SystemUiVisibility nascosto](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
+ [![Screenshot che illustra Visible, basso profilo e SystemUiVisibility nascosti](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
 
-Il codice per modificare il `SystemUiVisibility` imposta la proprietà su un `TextView` da ogni pulsante gestore dell'evento click come indicato di seguito:
+Il codice per modificare la `SystemUiVisibility` imposta la proprietà su un `TextView` da ogni pulsante gestore dell'evento click come indicato di seguito:
 
 ```csharp
 var tv = FindViewById<TextView> (Resource.Id.systemUiFlagTextView);
@@ -56,7 +56,7 @@ visibleButton.Click += delegate {
 }
 ```
 
-Inoltre, un `SystemUiVisibility` modificare genera un `SystemUiVisibilityChange` evento. Come impostazione di `SystemUiVisibility` proprietà, un gestore per il `SystemUiVisibilityChange` evento può essere registrato per qualsiasi visualizzazione nella gerarchia. Ad esempio, il codice seguente viene utilizzato il `TextView` istanza da registrare per l'evento:
+Inoltre, un `SystemUiVisibility` modifica genera un `SystemUiVisibilityChange` evento. Come impostazione il `SystemUiVisibility` proprietà, un gestore per il `SystemUiVisibilityChange` evento può essere registrato per qualsiasi visualizzazione della gerarchia. Ad esempio, il codice seguente usa il `TextView` istanza da registrare per l'evento:
 
 ```csharp
 tv.SystemUiVisibilityChange +=
@@ -69,6 +69,6 @@ tv.SystemUiVisibilityChange +=
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [SystemUIVisibilityDemo (sample)](https://developer.xamarin.com/samples/monodroid/SystemUIVisibilityDemo/)
-- [Introduzione a Sandwich gelato](http://www.android.com/about/ice-cream-sandwich/)
-- [Piattaforma 4.0 Android](http://developer.android.com/sdk/android-4.0.html)
+- [SystemUIVisibilityDemo (esempio)](https://developer.xamarin.com/samples/monodroid/SystemUIVisibilityDemo/)
+- [Introduzione a Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
+- [Piattaforma Android 4.0](http://developer.android.com/sdk/android-4.0.html)

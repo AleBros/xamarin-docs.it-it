@@ -1,18 +1,18 @@
 ---
 title: Framework supportati e non supportati in tvOS
-description: 'Per aiutare a chiarire le funzionalità disponibili per le applicazioni tvOS, questo documento offre due elenchi di Framework Apple: quelli supportati per tvOS e quelli non supportati dal tvOS.'
+description: 'Per aiutare a chiarire le funzionalità disponibili alle applicazioni di tvOS, questo documento fornisce due elenchi dei framework di Apple: quelli supportati per tvOS e quelli non supportati per tvOS.'
 ms.prod: xamarin
 ms.assetid: 28EF1337-3D0E-47AB-8A13-1B333A964FB6
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: 8ba33d028263385eca50f8174124bbe629e3f951
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 85067d1dc95ee63cf905e81fba7afc973f7ec37e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789122"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123191"
 ---
 # <a name="supported-and-unsupported-frameworks-in-tvos"></a>Framework supportati e non supportati in tvOS
 
@@ -20,16 +20,16 @@ ms.locfileid: "34789122"
 
 ## <a name="supported-frameworks"></a>Framework supportati
 
-Questo è un elenco dei Framework fornite da Apple per l'utilizzo nelle App Xamarin.tvOS:
+Questo è un elenco dei Framework fornito da Apple per l'uso nelle App xamarin. tvos:
 
-* Consente di accelerare
+* Accelerazione
 * AudioToolbox
 * AudioUnit
 * AVFoundation
 * AVKit
 * CFNetwork
 * CloudKit
-* CoreBluetooth
+* Corebluetooth per comunicare
 * CoreData
 * CoreFoundation
 * CoreGraphics
@@ -70,7 +70,7 @@ Questo è un elenco dei Framework fornite da Apple per l'utilizzo nelle App Xama
 
 ## <a name="unsupported-frameworks"></a>Framework non supportato
 
-Di seguito è riportato un elenco di modelli, che sono supportati da iOS 9, ma sono stati rimossi tvOS 9 supporto da Apple e pertanto non può essere utilizzato nelle App Xamarin.tvOS:
+Di seguito è riportato un elenco dei Framework supportati da iOS 9, ma sono state rimosse dal supporto per tvOS 9 di Apple e di conseguenza, non è possibile usare nelle App xamarin. tvos:
 
 * Account
 * Rubrica
@@ -84,7 +84,7 @@ Di seguito è riportato un elenco di modelli, che sono supportati da iOS 9, ma s
 * CoreTelephony
 * EventKit
 * EventKitUI
-* ExternalAccessory
+* Accessori esterni
 * GSS
 * HealthKit
 * HomeKit
@@ -115,5 +115,5 @@ Di seguito è riportato un elenco di modelli, che sono supportati da iOS 9, ma s
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS Guide interfaccia umana](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [le guide dell'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guida alla programmazione di App per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

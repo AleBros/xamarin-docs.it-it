@@ -1,43 +1,43 @@
 ---
-title: Supporto UrhoSharp Android
-description: Questo documento vengono descritte l'installazione di Android specifici e informazioni correlate alla funzionalità per UrhoSharp. In particolare, le architetture supportate, illustra come creare un progetto, configurare e avviare Urho e personalizzati durante l'incorporamento di Urho.
+title: Supporto di Android di UrhoSharp
+description: Questo documento descrive il programma di installazione di Android specifici e informazioni relative alla funzionalità di UrhoSharp. In particolare, illustra le architetture supportate, come creare un progetto, configurando e avviando Urho e l'incorporamento personalizzato di Urho.
 ms.prod: xamarin
 ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 6e489f52712989b5f94fa52d5ec6f22a13ce6252
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: e7371fa85fd5955e9a0fd285adb32844001821b3
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783782"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105434"
 ---
-# <a name="urhosharp-android-support"></a>Supporto UrhoSharp Android
+# <a name="urhosharp-android-support"></a>Supporto di Android di UrhoSharp
 
-_Funzionalità e configurazione android_
+_Funzionalità e installazione specifiche di android_
 
-Mentre Urho è una libreria di classi portabile e consente la stessa API da utilizzare nella piattaforma diversi per la logica di gioco, è comunque necessario inizializzare Urho nel driver specifico della piattaforma in alcuni casi, è possibile sfruttare le funzionalità specifiche della piattaforma .
+Sebbene Urho è una libreria di classi portabile e consente la stessa API da usare nell'intera piattaforma diverse per la logica del gioco, devi comunque inizializzare Urho nel driver specifici della piattaforma e in alcuni casi, è possibile sfruttare le funzionalità specifiche della piattaforma .
 
-Nelle pagine, si supponga che `MyGame` è una sottoclasse di `Application` classe.
+Nelle pagine seguenti, si supponga che `MyGame` è una sottoclasse del `Application` classe.
 
 ## <a name="architectures"></a>Architetture
 
-**Architetture supportate**: x86, armeabi, armeabi v7a
+**Architetture supportate**: x86, armeabi, armeabi-v7a
 
 ## <a name="create-a-project"></a>Creare un progetto
 
-Creare un progetto Android e aggiungere il pacchetto UrhoSharp NuGet.
+Creare un progetto Android e aggiungere il pacchetto NuGet di UrhoSharp.
 
-Aggiungere dati che contiene le risorse per il **asset** directory e assicurarsi che tutti i file hanno **AndroidAsset** come il **azione di compilazione**.
+Aggiungere dati che contiene gli asset per il **asset** directory e assicurarsi che tutti i file hanno **AndroidAsset** come il **azione di compilazione**.
 
-![Il programma di installazione del progetto](android-images/image-3.png "Aggiungi dati contenente le risorse nella directory di risorse")
+![Il programma di installazione del progetto](android-images/image-3.png "aggiungere dati che contiene gli asset nella directory di asset")
 
 ## <a name="configure-and-launching-urho"></a>Configurare e avviare Urho
 
-Aggiungere l'utilizzo di istruzioni per la `Urho` e `Urho.Android` gli spazi dei nomi e quindi aggiungere il codice per l'inizializzazione Urho, nonché di avviare l'applicazione.
+Aggiungere usando le istruzioni per la `Urho` e `Urho.Android` spazi dei nomi e quindi aggiungere il codice per l'inizializzazione Urho, nonché l'avvio dell'applicazione.
 
-Per eseguire un gioco, come implementato nella classe MyGame nel modo più semplice consiste nel chiamare
+Il modo più semplice per eseguire un gioco, come implementato nella classe MyGame consiste nel chiamare
 
 ```csharp
 UrhoSurface.RunInActivity<MyGame>();
@@ -47,13 +47,13 @@ Verrà aperta un'attività a schermo intero con il gioco come un contenuto.
 
 ## <a name="custom-embedding-of-urho"></a>Incorporamento personalizzato di Urho
 
-È possibile in alternativa alla Urho assumere la schermata intera applicazione e per utilizzarlo come un componente dell'applicazione, è possibile creare un `SurfaceView` tramite:
+È possibile in alternativa alla presenza di Urho occupi la schermata dell'intera applicazione, e per usarlo come un componente dell'applicazione, è possibile creare un `SurfaceView` tramite:
 
 ```csharp
 var surface = UrhoSurface.CreateSurface<MyGame>(activity)
 ```
 
-È necessario anche per l'inoltro di alcuni eventi da parte dell'utente di attività per UrhoSharp, ad esempio:
+È necessario anche inoltrare alcuni eventi da parte dell'utente attività a UrhoSharp, ad esempio:
 
 ```csharp
 protected override void OnPause()
@@ -65,7 +65,7 @@ protected override void OnPause()
 
 È necessario eseguire la stessa: `OnResume`, `OnPause`, `OnLowMemory`, `OnDestroy`, `DispatchKeyEvent` e `OnWindowFocusChanged`.
 
-Viene illustrato una tipico attività che consente di avviare il gioco:
+Viene illustrato un impegno tipico che consente di avviare il gioco:
 
 ```csharp
 [Activity(Label = "MyUrhoApp", MainLauncher = true,

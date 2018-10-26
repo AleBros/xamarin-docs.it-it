@@ -4,15 +4,15 @@ description: Questa sezione illustra come implementare le notifiche locali in xa
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 221fa9b70eeba2c4ca08433c627e5648470a7fac
-ms.sourcegitcommit: 7ffbecf4a44c204a3fce2a7fb6a3f815ac6ffa21
+ms.openlocfilehash: a4ffae0bde39450778b340b4a4c4da8fe90d0bec
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "39514531"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117681"
 ---
 <a name="compatibility"></a>
 
@@ -22,11 +22,11 @@ _Questa sezione illustra come implementare le notifiche locali in xamarin. Andro
 
 ## <a name="local-notifications-overview"></a>Panoramica delle notifiche locali
 
-Android offre due aree e controllato dal sistema per la visualizzazione delle icone di notifica e le informazioni di notifica all'utente. Quando una notifica verrà pubblicata per prime, la relativa icona viene visualizzata nel *area di notifica*, come illustrato nella schermata riportata di seguito:
+Android offre due aree e controllato dal sistema per la visualizzazione delle icone di notifica e le informazioni di notifica all'utente. Quando una notifica verrà pubblicata per prime, la relativa icona viene visualizzata nel *area di notifica*, come illustrato nello screenshot seguente:
 
 ![Area di notifica di esempio in un dispositivo](local-notifications-images/01-notification-shade.png)
 
-Per ottenere dettagli sulla notifica, l'utente può aprire il pannello di notifiche (che si espande ogni icona di notifica per visualizzare il contenuto di notifica) ed eseguire eventuali azioni associate le notifiche. L'immagine riportata di seguito viene illustrata una *Pannello di notifiche* che corrisponde all'area di notifica visualizzato sopra:
+Per ottenere dettagli sulla notifica, l'utente può aprire il pannello di notifiche (che si espande ogni icona di notifica per visualizzare il contenuto di notifica) ed eseguire eventuali azioni associate le notifiche. La schermata seguente mostra una *Pannello di notifiche* che corrisponde all'area di notifica visualizzato sopra:
 
 [![Pannello di notifiche di esempio la visualizzazione di tre notifiche](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
 
@@ -66,9 +66,9 @@ Facoltativamente, le notifiche possono visualizzare un'icona di grandi dimension
 
 A partire da Android 5.0, le notifiche possono essere visualizzati anche nella schermata di blocco:
 
-[![Esempio di notifica di schermata di blocco](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
+[![Esempio di notifica di blocco dello schermo](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
 
-L'utente può toccare due volte la notifica di schermata di blocco per sbloccare il dispositivo e passare all'app che ha avuto origine la notifica, oppure scorrere rapidamente per ignorarla. Le app possono impostare il livello di visibilità di una notifica per controllare ciò che viene visualizzato nella schermata di blocco e gli utenti possono scegliere se consentire contenuti sensibili da visualizzare nelle notifiche schermata di blocco.
+L'utente può toccare due volte la notifica di schermata di blocco per sbloccare il dispositivo e passare all'app che ha avuto origine la notifica, oppure scorrere rapidamente per ignorarla. Le app possono impostare il livello di visibilità di una notifica a quanto illustrato nella schermata di blocco di controllo e gli utenti possono scegliere se consentire contenuti sensibili da visualizzare nelle notifiche schermata di blocco.
 
 Android 5.0 è stato introdotto un formato di presentazione di notifica ad alta priorità chiamato *Heads-up*. Le notifiche Heads-up scorrere verso il basso dalla parte superiore della schermata per pochi secondi e quindi riesame eseguire il backup in area di notifica:
 
@@ -76,7 +76,7 @@ Android 5.0 è stato introdotto un formato di presentazione di notifica ad alta 
 
 Le notifiche Heads-up rendono possibili per il sistema dell'interfaccia utente di inserire informazioni importanti davanti all'utente senza interrompere lo stato dell'attività attualmente in esecuzione.
 
-Android include il supporto per i metadati di notifica in modo che le notifiche possono essere ordinate e visualizzate in modo intelligente. I metadati di notifica controlla inoltre come le notifiche vengono visualizzate nella schermata di blocco e nel formato Heads-up. Le applicazioni possono impostare i seguenti tipi di metadati di notifica:
+Android include il supporto per i metadati di notifica in modo che le notifiche possono essere ordinate e visualizzate in modo intelligente. I metadati di notifica controlla anche la modalità di presentazione delle notifiche nella schermata di blocco e nel formato Heads-up. Le applicazioni possono impostare i seguenti tipi di metadati di notifica:
 
 -   **Priorità** &ndash; il livello di priorità determina come e quando le notifiche vengono visualizzate. Ad esempio, In Android 5.0, le notifiche ad alta priorità vengono visualizzate come notifiche Heads-up.
 
@@ -117,7 +117,7 @@ Il **YouTube** app che viene installato con Android Oreo sono elencati due categ
 
 [![Schermate di notifica per YouTube in Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
-Ognuna di queste categorie corrisponde a un canale di notifica. YouTube app implementa un **scaricare notifiche** canale e una **notifiche generali** canale. L'utente può toccare **scaricare notifiche**, che consente di visualizzare la schermata Impostazioni per il canale di notifiche di download dell'app:
+Ognuna di queste categorie corrisponde a un canale di notifica. YouTube app implementa un **notifiche scaricare** canale e una **notifiche generali** canale. L'utente può toccare **scaricare notifiche**, che consente di visualizzare la schermata Impostazioni per il canale di notifiche di download dell'app:
 
 [![Scaricare schermata notifiche dell'App YouTube](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
 
@@ -662,9 +662,9 @@ Xamarin. Android definisce le enumerazioni seguenti per l'impostazione di visibi
 
 -   `NotificationVisibility.Public` &ndash; L'intero contenuto della notifica viene visualizzato nella schermata di blocco protetta.
 
--   `NotificationVisibility.Private` &ndash; Viene visualizzate solo le informazioni essenziali nella schermata di blocco protetto (ad esempio l'icona di notifica e il nome dell'app che si è registrato), ma il resto dei dettagli della notifica sono nascosti. Per impostazione predefinita tutte le notifiche `NotificationVisibility.Private`.
+-   `NotificationVisibility.Private` &ndash; Solo le informazioni essenziali viene visualizzate nella schermata di blocco protetto (ad esempio l'icona di notifica e il nome dell'app che si è registrato), ma il resto dei dettagli della notifica sono nascosti. Per impostazione predefinita tutte le notifiche `NotificationVisibility.Private`.
 
--   `NotificationVisibility.Secret` &ndash; Viene visualizzato nulla nella schermata di blocco protetta, non lo è nemmeno l'icona di notifica. Il contenuto della notifica è disponibile solo dopo che l'utente Sblocca il dispositivo.
+-   `NotificationVisibility.Secret` &ndash; Nella schermata di blocco protetta, non lo è nemmeno l'icona di notifica viene visualizzato nulla. Il contenuto della notifica è disponibile solo dopo che l'utente Sblocca il dispositivo.
 
 Per impostare la visibilità di una notifica, chiamata di App di `SetVisibility` metodo del `NotificationCompat.Builder` oggetto, passando l'impostazione di visibilità. Ad esempio, questa chiamata a `SetVisibility` rende la notifica `Private`:
 
@@ -755,9 +755,9 @@ if ((int) Android.OS.Build.Version.SdkInt >= BuildVersionCodes.Lollipop) {
 In di questo esempio, l'app **Framework di destinazione** è impostata su Android 5.0 e il **versione minima di Android** è impostata su **Android 4.1 (livello API 16)**. Poiché `SetCategory` è disponibile nel livello API 21 e versioni successiva, questo codice di esempio chiama `SetCategory` solo quando è disponibile &ndash; non lo chiamerà `SetCategory` quando il livello di API è inferiore a 21.
 
 
-### <a name="lockscreen-visibility"></a>Schermata di blocco visibilità
+### <a name="lock-screen-visibility"></a>Visibilità del blocco dello schermo
 
-Poiché Android non supporta le notifiche schermata di blocco prima di Android 5.0 (livello API 21) `NotificationCompat.Builder` non supporta il `SetVisibility` (metodo). Come spiegato in precedenza per `SetCategory`, il codice può verificare il livello di API di runtime e chiamare `SetVisiblity` solo quando è disponibile:
+Poiché Android non supporta le notifiche schermata di blocco prima di Android 5.0 (livello API 21), `NotificationCompat.Builder` non supporta il `SetVisibility` (metodo). Come spiegato in precedenza per `SetCategory`, il codice può verificare il livello di API di runtime e chiamare `SetVisiblity` solo quando è disponibile:
 
 ```csharp
 if ((int) Android.OS.Build.Version.SdkInt >= 21) {

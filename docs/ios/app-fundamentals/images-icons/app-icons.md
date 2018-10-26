@@ -4,15 +4,15 @@ description: "Questo documento descrive come usare i vari icone dell'applicazion
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: cd67c564461721ade6f3eb269b461ddea5e2d2c4
-ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
+ms.openlocfilehash: ef8e694bc3c617774035ad5cf7902ca3f5b06813
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39276002"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118513"
 ---
 # <a name="application-icons-in-xamarinios"></a>Icone dell'applicazione xamarin. IOS
 
@@ -109,7 +109,7 @@ Per le icone, una speciale `AppIcon` può essere aggiunto al set di immagini di 
 
 Per usare un catalogo Asset, eseguire le operazioni seguenti:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Fare doppio clic il `Info.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo.
 2. Scorrere verso il basso il **icone dell'App** sezione.
@@ -126,7 +126,7 @@ Per usare un catalogo Asset, eseguire le operazioni seguenti:
 7. Scegliere il **Open** per includere l'immagine nel progetto e impostarla di xcasset.
 8. Ripetere per tutte le immagini necessarie.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Fare doppio clic il **Info. plist** del file nei **Esplora soluzioni**:
 
@@ -155,7 +155,7 @@ Per un'app xamarin. IOS esistente usando il `Info.plist` file per gestire le rel
 
 Seguire questa procedura:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Fare doppio clic il `Info.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo.
 2. Scorrere verso il basso il **icone dell'App** sezione.
@@ -166,7 +166,7 @@ Seguire questa procedura:
 
      ![](app-icons-images/migrate03.png "Il Set di immagini AppIcons nell'assets. xcassets")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Fare doppio clic il `Info.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo.
 2. Fare clic su iPhone sezione icone: 
@@ -187,7 +187,7 @@ Se si usa il metodo Ad-Hoc della distribuzione dell'app (sia per gli utenti azie
 
 Per specificare l'illustrazione di iTunes, seguire questa procedura:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Fare doppio clic il `Info.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo.
 2. Scorrere fino al **illustrazione di iTunes** sezione dell'editor: 
@@ -196,7 +196,7 @@ Per specificare l'illustrazione di iTunes, seguire questa procedura:
 3. Per un'immagine mancante, fare clic sull'anteprima nell'editor, selezionare il file di immagine per l'illustrazione di iTunes desiderata dalla finestra di dialogo Apri File e fare clic sui **OK** pulsante.
 4. Ripetere questo passaggio finché non restituiscono tutti necessari immagini sono state specificate per l'app.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Fare doppio clic il `Info.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo.
 

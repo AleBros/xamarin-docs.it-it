@@ -1,29 +1,29 @@
 ---
 title: Introduzione allo sviluppo di giochi con MonoGame
-description: In questa procedura dettagliata multiparte viene illustrato come creare una semplice applicazione 2D utilizzando MonoGame.  Copre gioco comune di gioco i concetti di programmazione, ad esempio immagini, input, entità e fisica.
+description: Questa procedura dettagliata più parte illustra come creare una semplice applicazione 2D con MonoGame.  Viene descritto come comune gioco i concetti di programmazione, ad esempio grafica, input, di gioco le entità e fisica.
 ms.prod: xamarin
 ms.assetid: D781401F-7A96-4098-9645-5F98AEAF7F71
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 46cc3a7e3bb6c58e04626c9d2cc9437c16ba19f5
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 4ab98d59bc74672f9531f4dbd3c33a6270582612
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 10/25/2018
 ms.locfileid: "33920806"
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>Introduzione allo sviluppo di giochi con MonoGame
 
-_In questa procedura dettagliata multiparte viene illustrato come creare una semplice applicazione 2D utilizzando MonoGame.  Copre gioco comune di gioco i concetti di programmazione, ad esempio immagini, input, entità e fisica._
+_Questa procedura dettagliata più parte illustra come creare una semplice applicazione 2D con MonoGame.  Viene descritto come comune gioco i concetti di programmazione, ad esempio grafica, input, di gioco le entità e fisica._
 
-Questo articolo descrive la tecnologia MonoGame API per l'esecuzione di giochi multipiattaforma. Per un elenco completo delle piattaforme, vedere il [sito Web MonoGame](http://www.monogame.net/). In questa esercitazione verrà usato c# per esempi di codice, sebbene anche MonoGame è completamente funzionale con F #.
+Questo articolo descrive la tecnologia per creare giochi multipiattaforma MonoGame API. Per un elenco completo delle piattaforme, vedere la [sito Web MonoGame](http://www.monogame.net/). Questa esercitazione verrà utilizzato C# per esempi di codice, anche se è completamente funzionale con MonoGame F# nonché.
 
-MonoGame è una multipiattaforma, API che fornisce grafica, la gestione dello stato di gioco, audio, input e una pipeline di contenuto per l'importazione di asset con accelerazione hardware. La maggior parte dei motori di giochi, a differenza di MonoGame non fornire o imporre qualsiasi struttura di progetto o modello.  Anche se questo significa che gli sviluppatori sono liberi organizzare il proprio codice che desiderano, significa anche che è necessario un po' di codice di installazione al primo avvio di un nuovo progetto.
+MonoGame è multi-piattaforma, API, che fornisce grafica, la gestione dello stato di giochi, audio, input e una pipeline di contenuti per l'importazione gli asset con accelerazione hardware. A differenza di maggior parte dei motori di gioco, MonoGame non offre né imporre una struttura di progetto o modello.  Mentre ciò significa che gli sviluppatori sono liberi di organizzare il codice che desiderano, significa anche che è necessario un po' di codice di installazione durante l'avvio prima di tutto un nuovo progetto.
 
-La prima sezione di questa procedura dettagliata si concentra sulla configurazione di un progetto vuoto. L'ultima sezione vengono illustrate la scrittura di tutta la logica del gioco e il contenuto di più di cui sarà su più piattaforme.
+La prima sezione di questa procedura dettagliata è incentrato su come configurare un progetto vuoto. Nell'ultima sezione illustra la scrittura di tutti i nostri logica del gioco e il contenuto: più di cui sarà cross-platform.
 
-Al termine di questa procedura dettagliata, si avrà creato un semplice gioco in cui il giocatore possibile controllare un personaggio input tramite tocco.  Anche se non si tratta tecnicamente un gioco completo (perché ha non win o perdere condizioni), vengono illustrati numerosi concetti di sviluppo di giochi e può essere utilizzato come base per molti tipi di giochi. 
+Al termine di questa procedura dettagliata, si verrà creato un semplice gioco in cui il lettore possibile controllare un personaggio con input di tocco.  Anche se questo non è tecnicamente un gioco completo (perché non ha alcun vince o perde condizioni), vengono illustrati numerosi concetti di sviluppo di giochi e può essere utilizzato come base per molti tipi di giochi. 
 
 Di seguito viene illustrato il risultato di questa procedura dettagliata:
 
@@ -31,9 +31,9 @@ Di seguito viene illustrato il risultato di questa procedura dettagliata:
 
 ## <a name="monogame-and-xna"></a>Monogame e XNA
 
-La libreria MonoGame deve simulare una libreria di Microsoft XNA sia sintassi e funzionalità.  Tutti gli oggetti MonoGame esistano nello spazio dei nomi Microsoft.Xna – consentendo gran parte del codice XNA da utilizzare in MonoGame senza modifiche. 
+Consente di simulare libreria XNA di Microsoft nella sintassi e di funzionalità della libreria MonoGame.  Tutti gli oggetti MonoGame esistano Microsoft.Xna nello spazio dei nomi, che consente di gran parte del codice XNA da utilizzare in MonoGame senza modifiche. 
 
-Gli sviluppatori esperti in XNA saranno già familiari con la sintassi del MonoGame e gli sviluppatori che desiderano per ulteriori informazioni sull'utilizzo di MonoGame saranno in grado di fare riferimento esistente procedure dettagliate XNA online, la documentazione dell'API e discussioni di carattere.
+Gli sviluppatori esperti in XNA saranno già familiari con la sintassi del MonoGame e sviluppatori che cercano altre informazioni sull'uso con MonoGame saranno in grado di fare riferimento a procedure dettagliate per XNA online esistente, la documentazione dell'API e discussioni.
 
 
 ## <a name="walkthrough-parts"></a>Parti di questa procedura dettagliata
@@ -44,8 +44,8 @@ Gli sviluppatori esperti in XNA saranno già familiari con la sintassi del MonoG
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Progetto MonoGame WalkingGame (esempio)](https://developer.xamarin.com/samples/mobile/WalkingGameMG/)
-- [Tipi di carattere XNB iOS](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Content/fonts)
-- [XNB Android di tipi di carattere](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Assets/Content/fonts)
+- [I tipi di carattere XNB iOS](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Content/fonts)
+- [XNB i tipi di carattere Android](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Assets/Content/fonts)
 - [MonoGame Android in NuGet](https://www.nuget.org/packages/MonoGame.Framework.Android/)
 - [IOS MonoGame in NuGet](https://www.nuget.org/packages/MonoGame.Framework.iOS/)
-- [Documentazione MonoGame API](http://www.monogame.net/documentation/?page=main)
+- [Documentazione API MonoGame](http://www.monogame.net/documentation/?page=main)

@@ -1,65 +1,65 @@
 ---
-title: Compatibilità degli strumenti
+title: Compatibilità di ToolBar
 ms.prod: xamarin
 ms.assetid: A0798CA1-2C7D-43B6-9E91-4435CC7B6683
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: c3418a007ded30175049e83d515f59d5134deee0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 12c19cf1024b78e8be30b7c9f2652019e9854375
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30768701"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110329"
 ---
-# <a name="toolbar-compatibility"></a>Compatibilità degli strumenti
+# <a name="toolbar-compatibility"></a>Compatibilità di ToolBar
 
 
 ## <a name="overview"></a>Panoramica
 
-In questa sezione viene illustrato come utilizzare `Toolbar` nelle versioni precedenti di Android 5.0 simbolo di Android. Se l'app non supporta le versioni precedenti ad Android 5.0 di Android, è possibile ignorare questa sezione. 
+In questa sezione illustra come usare `Toolbar` in versioni di Android precedenti alla Android 5.0 Lollipop. Se l'app non supporta le versioni di Android precedente alla versione 5.0 di Android, è possibile ignorare questa sezione. 
 
-Poiché `Toolbar` fa parte della libreria di supporto Android v7, può essere utilizzato nei dispositivi che eseguono Android 2.1 (API livello 7) e versioni successive. Tuttavia, il [delle applicazioni di libreria di supporto Android v7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) NuGet deve essere installato e il codice modificato in modo che utilizzi il `Toolbar` implementazione fornita nella raccolta. In questa sezione viene descritto come installare questo NuGet e modificare il **ToolbarFun** app da [aggiunta di una barra degli strumenti secondo](~/android/user-interface/controls/tool-bar/adding-a-second-toolbar.md) in modo che venga eseguito nelle versioni di Android precedenti alla versione 5.0 di simbolo.
+Poiché `Toolbar` fa parte della libreria di supporto Android v7, può essere utilizzato nei dispositivi che eseguono Android 2.1 (API livello 7) e versioni successive. Tuttavia, il [libreria di supporto Android v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) NuGet deve essere installato e il codice modificato in modo che utilizzi il `Toolbar` implementazione fornita in questa libreria. Questa sezione viene illustrato come installare il NuGet e modificare il **ToolbarFun** app da [aggiunta di una seconda barra](~/android/user-interface/controls/tool-bar/adding-a-second-toolbar.md) in modo che venga eseguito in versioni di Android precedente alla versione 5.0 Lollipop.
 
-Per modificare un'app per usare la versione delle applicazioni della barra degli strumenti: 
+Per modificare un'app per usare la versione AppCompat della barra degli strumenti: 
 
-1.  Impostare le versioni minima e Android di destinazione per l'app.
+1.  Impostare le versioni minima e di destinazione di Android per l'app.
 
-2.  Installare il pacchetto NuGet delle applicazioni.
+2.  Installare il pacchetto AppCompat NuGet.
 
-3.  Utilizzare un tema delle applicazioni anziché un tema Android incorporato.
+3.  Utilizzare un tema AppCompat anziché un tema predefinito Android.
 
-4.  Modificare `MainActivity` in modo che si sottoclassi `AppCompatActivity` anziché `Activity`. 
+4.  Modificare `MainActivity` in modo che lo sottoclassi `AppCompatActivity` anziché `Activity`. 
 
 Ognuno di questi passaggi è illustrato in dettaglio nelle sezioni seguenti.
 
 
 
-## <a name="set-the-minimum-and-target-android-version"></a>Impostare i valori minimo e la versione di destinazione Android
+## <a name="set-the-minimum-and-target-android-version"></a>Impostare i valori minimo e la versione Android di destinazione
 
-Il Framework di destinazione dell'app deve essere impostato a livello API 21 o versione successiva o l'app non verrà distribuita correttamente. Se un errore, ad esempio **alcun identificatore di risorsa non trovata per l'attributo 'tileModeX' nel pacchetto 'android'** viene visualizzato durante la distribuzione dell'app, infatti, il Framework di destinazione non è impostato su **Android 5.0 (API livello 21 - simbolo)**  o versione successiva. 
+Framework di destinazione dell'app deve essere impostata a livello API 21 o versione successiva o l'app non verrà distribuita correttamente. Se un errore, ad esempio **alcun identificatore di risorsa non trovata per l'attributo 'tileModeX' nel pacchetto 'android'** viene visualizzato durante la distribuzione dell'app, infatti, il Framework di destinazione non è impostato su **Android 5.0 (API livello 21 - Lollipop)**  o versione successiva. 
 
-Impostare il Framework di destinazione di livello a livello API 21 o maggiore e le impostazioni di progetto a livello di API Android per la versione minima di Android che deve supportare l'app. Per ulteriori informazioni sull'impostazione dei livelli di API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md). Nel `ToolbarFun` esempio, la versione di Android minimo è impostata su KitKat (4.4 livello API). 
-
-
-## <a name="install-the-appcompat-nuget-package"></a>Installare il pacchetto NuGet delle applicazioni
-
-Successivamente, aggiungere il [delle applicazioni di libreria di supporto Android v7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) pacchetto al progetto. In Visual Studio, fare doppio clic su **riferimenti** e selezionare **Gestisci pacchetti NuGet...** . Fare clic su **Sfoglia** e cercare **delle applicazioni di libreria di supporto Android v7**. Selezionare **Xamarin.Android.Support.v7.AppCompat** e fare clic su **installare**: 
-
-[![Schermata di applicazioni V7 pacchetto selezionato in Gestione pacchetti NuGet](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png#lightbox)
-
-Quando viene installato questo NuGet, diversi altri pacchetti NuGet vengono installati anche se non già presente (ad esempio **Xamarin.Android.Support.Animated.Vector.Drawable**, **Xamarin.Android.Support.v4**, e **Xamarin.Android.Support.Vector.Drawable**). Per ulteriori informazioni sull'installazione dei pacchetti NuGet, vedere [procedura dettagliata: inclusi un NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
+Impostare il Framework di destinazione a livello di API livello 21 o versione successiva e le impostazioni del progetto a livello API Android per la versione minima di Android che l'app deve supportare. Per altre informazioni sull'impostazione dei livelli API Android, vedere [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md). Nel `ToolbarFun` esempio, la versione minima di Android è impostata su KitKat (4.4 livello API). 
 
 
-## <a name="use-an-appcompat-theme-and-toolbar"></a>Utilizzare un tema delle applicazioni e sulla barra degli strumenti
+## <a name="install-the-appcompat-nuget-package"></a>Installare il pacchetto AppCompat NuGet
 
-La raccolta delle applicazioni viene fornito con diversi `Theme.AppCompat` temi che possono essere usati in qualsiasi versione di Android supportati dalla libreria delle applicazioni. Il `ToolbarFun` tema dell'app di esempio è derivato da `Theme.Material.Light.DarkActionBar`, che non è disponibile nelle versioni Android precedenti rispetto al simbolo. Pertanto, `ToolbarFun` deve essere adattati per l'utilizzo la controparte delle applicazioni per il tema, `Theme.AppCompat.Light.DarkActionBar`. Inoltre, poiché `Toolbar` è non disponibile nelle versioni di Android precedente a simbolo, è necessario utilizzare la versione delle applicazioni di `Toolbar`. Pertanto, è necessario utilizzare layout `android.support.v7.widget.Toolbar` anziché `Toolbar`. 
+Successivamente, aggiungere il [libreria di supporto Android v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) pacchetto al progetto. In Visual Studio, fare doppio clic **riferimenti** e selezionare **Gestisci pacchetti NuGet...** . Fare clic su **esplorare** e cercare **libreria di supporto Android v7 AppCompat**. Selezionare **Xamarin.Android.Support.v7.AppCompat** e fare clic su **installare**: 
+
+[![Schermata di V7 Appcompat pacchetto selezionato in Gestisci pacchetti NuGet](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png#lightbox)
+
+Quando si installa questo NuGet, diversi altri pacchetti NuGet vengono installati anche se non è già presente (ad esempio **Xamarin.Android.Support.Animated.Vector.Drawable**, **Xamarin.Android.Support.v4**, e **Xamarin.Android.Support.Vector.Drawable**). Per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: inclusi a NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
 
-### <a name="update-layouts"></a>Aggiornamento layout
+## <a name="use-an-appcompat-theme-and-toolbar"></a>Utilizzare un tema AppCompat e barra degli strumenti
 
-Modifica **Resources/layout/Main.axml** e sostituire il `Toolbar` elemento con il codice XML seguente: 
+La libreria AppCompat viene fornito con molti `Theme.AppCompat` temi che possono essere utilizzati in qualsiasi versione di Android supportati dalla libreria AppCompat. Il `ToolbarFun` tema di app di esempio è derivato da `Theme.Material.Light.DarkActionBar`, che non è disponibile nelle versioni precedenti di Lollipop. Pertanto `ToolbarFun` devono essere adattati per l'uso della controparte AppCompat per questo tema, `Theme.AppCompat.Light.DarkActionBar`. Inoltre, poiché `Toolbar` è non disponibile nelle versioni di Android precedenti alla Lollipop, è necessario usare la versione AppCompat di `Toolbar`. Pertanto, è necessario usare i layout `android.support.v7.widget.Toolbar` invece di `Toolbar`. 
+
+
+### <a name="update-layouts"></a>Aggiornare i layout
+
+Modificare **Resources/layout/Main.axml** e sostituire il `Toolbar` elemento con il codice XML seguente: 
 
 ```xml
 <android.support.v7.widget.Toolbar
@@ -71,7 +71,7 @@ Modifica **Resources/layout/Main.axml** e sostituire il `Toolbar` elemento con i
     android:layout_height="wrap_content" />
 ```
 
-Modifica **Resources/layout/toolbar.xml** e sostituirne il contenuto con il codice XML seguente: 
+Modificare **Resources/layout/toolbar.xml** e sostituirne il contenuto con il codice XML seguente: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -84,12 +84,12 @@ Modifica **Resources/layout/toolbar.xml** e sostituirne il contenuto con il codi
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 ```
 
-Si noti che il `?attr` valori non sono preceduti da `android:` (tenere presente che il `?` notazione fa riferimento a una risorsa del tema corrente). Se `?android:attr` ancora utilizzati Android fa riferimento in questo caso, il valore dell'attributo dalla piattaforma attualmente in esecuzione anziché dalla libreria delle applicazioni. Poiché questo esempio viene utilizzato il `actionBarSize` definito dalla libreria delle applicazioni, il `android:` prefisso viene eliminato. Analogamente, `@android:style` viene modificato in `@style` in modo che il `android:theme` attributo è impostato su un tema nella libreria delle applicazioni &ndash; il `ThemeOverlay.AppCompat.Dark.ActionBar` tema viene utilizzato qui anziché `ThemeOverlay.Material.Dark.ActionBar`. 
+Si noti che il `?attr` valori non sono più sono preceduti `android:` (tenere presente che il `?` notazione fa riferimento a una risorsa nel tema corrente). Se `?android:attr` ancora sono stati usati in questo caso, fa riferimento il valore dell'attributo a Android dalla piattaforma attualmente in esecuzione invece che dalla libreria AppCompat. Poiché questo esempio Usa la `actionBarSize` definite dalla libreria AppCompat, il `android:` prefisso viene eliminato. Analogamente, `@android:style` viene modificato in `@style` in modo che il `android:theme` attributo è impostato su un tema nella libreria AppCompat &ndash; il `ThemeOverlay.AppCompat.Dark.ActionBar` tema viene utilizzato in questo caso anziché `ThemeOverlay.Material.Dark.ActionBar`. 
 
 
 ### <a name="update-the-style"></a>Aggiornare lo stile
 
-Modifica **Resources/values/styles.xml** e sostituirne il contenuto con il codice XML seguente: 
+Modificare **Resources/values/styles.xml** e sostituirne il contenuto con il codice XML seguente: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -104,15 +104,15 @@ Modifica **Resources/values/styles.xml** e sostituirne il contenuto con il codic
 </resources>
 ```
 
-I nomi di elemento e il tema padre in questo esempio non sono precedute da `android:` poiché si sta usando la raccolta delle applicazioni. Inoltre, il tema padre viene modificato per la versione delle applicazioni di `Light.DarkActionBar`. 
+I nomi di elemento e il tema principale in questo esempio non è più sono preceduti da `android:` perché si sta usando la libreria AppCompat. Inoltre, il tema padre viene modificato nella versione AppCompat di `Light.DarkActionBar`. 
 
 
 
 ### <a name="update-menus"></a>Aggiornamento menu
 
-Per supportare le versioni precedenti di Android, la raccolta delle applicazioni utilizza gli attributi personalizzati che riflettono gli attributi del `android:` dello spazio dei nomi. Tuttavia, alcuni attributi (ad esempio il `showAsAction` attributo utilizzato nel `<menu>` tag) non sono presenti nel framework Android sui dispositivi meno recenti &ndash; `showAsAction` è stata introdotta in 11 API Android, ma non è disponibile in 7 API Android. Per questo motivo, uno spazio dei nomi personalizzato deve essere utilizzata per tutti gli attributi definiti dalla libreria di supporto del prefisso. Nei file di risorse di menu, uno spazio dei nomi denominato `local` è definito per anteporre un prefisso di `showAsAction` attributo. 
+Per supportare le versioni precedenti di Android, la libreria AppCompat Usa gli attributi personalizzati che riflettono gli attributi del `android:` dello spazio dei nomi. Tuttavia, alcuni attributi (ad esempio il `showAsAction` attributo utilizzato nel `<menu>` tag) non esistono in framework Android in dispositivi meno recenti &ndash; `showAsAction` è stata introdotta in 11 API Android, ma non è disponibile in Android 7 API. Per questo motivo, uno spazio dei nomi personalizzato da utilizzare come prefisso di tutti gli attributi definiti dalla libreria di supporto. Nei file di risorse di menu, uno spazio dei nomi chiamato `local` è definito per anteporre un prefisso di `showAsAction` attributo. 
 
-Modifica **Resources/menu/top_menus.xml** e sostituirne il contenuto con il codice XML seguente:
+Modificare **Resources/menu/top_menus.xml** e sostituirne il contenuto con il codice XML seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -147,7 +147,7 @@ Il `showAsAction` attributo è preceduto `local:` dello spazio dei nomi anziché
 local:showAsAction="ifRoom"
 ```
 
-Modificare in modo analogo, **Resources/menu/edit_menus.xml** e sostituirne il contenuto con il codice XML seguente:
+Analogamente, modificare **Resources/menu/edit_menus.xml** e sostituirne il contenuto con il codice XML seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -171,43 +171,43 @@ Modificare in modo analogo, **Resources/menu/edit_menus.xml** e sostituirne il c
 </menu>
 ```
 
-La modalità fornisce supporto per questo parametro spazio dei nomi di `showAsAction` attributo Android versioni precedenti a 11 livello API? L'attributo personalizzato `showAsAction` e tutti i relativi valori possibili sono incluse nell'app quando AppCompat NuGet è installato. 
+In che modo questo commutatore dello spazio dei nomi offre supporto per il `showAsAction` attributo nelle versioni di Android precedenti alla API livello 11? L'attributo personalizzato `showAsAction` e tutti i relativi valori possibili sono incluse nell'app durante l'installazione di AppCompat NuGet. 
 
 
 ## <a name="subclass-appcompatactivity"></a>Sottoclasse AppCompatActivity
 
-Il passaggio finale nella conversione consiste nel modificare `MainActivity` in modo che sia una sottoclasse di `AppCompactActivity`. Modifica **Mainactivity** e aggiungere le seguenti `using` istruzioni: 
+Il passaggio finale nella conversione consiste nel modificare `MainActivity` in modo che sia una sottoclasse di `AppCompactActivity`. Modificare **MainActivity.cs** e aggiungere quanto segue `using` istruzioni: 
 
 ```csharp
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 ```
 
-Si dichiara `Toolbar` sia la versione delle applicazioni di `Toolbar`. Successivamente, modificare la definizione della classe `MainActivity`: 
+Questo codice dichiara `Toolbar` a corrispondere alla versione AppCompat `Toolbar`. Successivamente, modificare la definizione della classe `MainActivity`: 
 
 ```csharp
 public class MainActivity : AppCompatActivity
 ```
 
-Per impostare la barra delle azioni per la versione delle applicazioni di `Toolbar`, sostituire la chiamata a `SetActionBar` con `SetSupportActionBar`. In questo esempio viene modificato anche il titolo per indicare che la versione delle applicazioni di `Toolbar` è in uso:
+Per impostare la barra delle azioni alla versione di AppCompat `Toolbar`, sostituire la chiamata a `SetActionBar` con `SetSupportActionBar`. In questo esempio, il titolo viene modificato anche per indicare che la versione AppCompat di `Toolbar` è in uso:
 
 ```csharp
 SetSupportActionBar (toolbar);
 SupportActionBar.Title = "My AppCompat Toolbar";
 ```
 
-Infine, è possibile modificare il livello minimo Android al pre-simbolo di valore che deve essere supportata (ad esempio, l'API 19). 
+Infine, modificare il livello minima di Android per il valore di simbolo non definitiva che deve essere supportata (ad esempio, API 19). 
 
-Compilare l'applicazione ed eseguirlo in un dispositivo di pre- simbolo di o l'emulatore Android. La schermata seguente mostra la versione delle applicazioni di **ToolbarFun** 4 un nodo in esecuzione KitKat (API 19): 
+Compilare l'app ed eseguirla in un dispositivo di pre-Lollipop o un emulatore Android. Lo screenshot seguente mostra la versione AppCompat **ToolbarFun** su 4 Nexus esecuzione KitKat (API 19): 
 
 [![Schermata dell'app in esecuzione in un dispositivo KitKat, vengono visualizzate entrambe le barre degli strumenti](toolbar-compatibility-images/02-running-on-kitkat-sml.png)](toolbar-compatibility-images/02-running-on-kitkat.png#lightbox)
 
-Quando si utilizza la libreria delle applicazioni, i temi non è necessario passare in base alla versione di Android &ndash; la raccolta delle applicazioni consente di fornire un'esperienza utente coerente in tutte le versioni Android supportate. 
+Quando viene usata la libreria AppCompat, temi non sono necessario essere spostati in base alla versione di Android &ndash; libreria AppCompat rende possibile fornire un'esperienza utente coerente in tutte le versioni di Android supportate. 
 
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Il simbolo della barra degli strumenti (esempio)](https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/)
-- [Barra degli strumenti delle applicazioni (esempio)](https://developer.xamarin.com/samples/monodroid/Supportv7/AppCompat/Toolbar/)
+- [Barra degli strumenti lollipop (esempio)](https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/)
+- [Barra degli strumenti AppCompat (esempio)](https://developer.xamarin.com/samples/monodroid/Supportv7/AppCompat/Toolbar/)

@@ -3,27 +3,27 @@ title: Aggiunta di una seconda barra degli strumenti
 ms.prod: xamarin
 ms.assetid: FCE0AD27-8B6B-47C6-AD19-2B1C12E1BBBF
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: f2255ab5ac7e153266093877a1c52bfc08927a09
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b8da13afb7fd8d7198e8bfe7476b40a5cd09769a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30766637"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112552"
 ---
 # <a name="adding-a-second-toolbar"></a>Aggiunta di una seconda barra degli strumenti
 
 
 ## <a name="overview"></a>Panoramica 
 
-Il `Toolbar` può eseguire altre operazioni di sostituzione sulla barra delle azioni &ndash; e può essere utilizzato più volte all'interno di un'attività, può essere personalizzato per la selezione in un punto qualsiasi sullo schermo, e può essere configurato per coprire solo una parziale larghezza dello schermo. Gli esempi seguenti viene illustrato come creare un secondo `Toolbar` e inserirlo nella parte inferiore della schermata. Questo `Toolbar` implementa **copia**, **Taglia**, e **Incolla** voci di menu. 
+Il `Toolbar` può eseguire più di sostituire la barra delle azioni &ndash; può essere utilizzato più volte all'interno di un'attività, è possibile essere personalizzato per la selezione host in un punto qualsiasi sullo schermo e può essere configurato per estendersi solo una parziale larghezza dello schermo. Gli esempi seguenti illustrano come creare una seconda `Toolbar` e inserirlo nella parte inferiore della schermata. Ciò `Toolbar` implementi **copia**, **Taglia**, e **Incolla** voci di menu. 
 
 
 ## <a name="define-the-second-toolbar"></a>Definire la seconda barra degli strumenti 
 
-Modificare il file di layout **axml** e sostituirne il contenuto con con il codice XML seguente:
+Modificare il file di layout **Main. axml** e sostituirne il contenuto con con il codice XML seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -54,7 +54,7 @@ Modificare il file di layout **axml** e sostituirne il contenuto con con il codi
 </RelativeLayout>
 ```
 
-Questo codice XML aggiunge un secondo `Toolbar` nella parte inferiore della schermata con un oggetto vuoto `ImageView` riempimento al centro dello schermo. L'altezza di questa `Toolbar` è impostato per l'altezza della barra delle azioni: 
+Questo codice XML viene aggiunto un secondo `Toolbar` nella parte inferiore dello schermo, con un oggetto vuoto `ImageView` la compilazione al centro dello schermo. L'altezza di questo `Toolbar` è impostato per l'altezza di una barra delle azioni: 
 
 ```xml
 android:minHeight="?android:attr/actionBarSize"
@@ -66,41 +66,41 @@ Il colore di sfondo di questo `Toolbar` è impostata su un colore che verrà def
 android:background="?android:attr/colorAccent
 ```
 
-Si noti che questo `Toolbar` si basa su un tema diverso (**ThemeOverlay.Material.Dark.ActionBar**) rispetto a quello utilizzato dal `Toolbar` creato in [sostituendo la barra delle azioni](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md) &ndash;non è associata a Progettazione finestra dell'attività o al tema utilizzato nel primo `Toolbar`.
+Si noti che da questo `Toolbar` si basa su un tema diverso (**ThemeOverlay.Material.Dark.ActionBar**) diverso da quello usato per il `Toolbar` creato nel [sostituendo la barra delle azioni](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md) &ndash;non è associata a decor finestra dell'attività o al tema utilizzato nel primo `Toolbar`.
 
-Modifica **Resources/values/styles.xml** e aggiungere il seguente colore alla definizione di stile: 
+Modificare **Resources/values/styles.xml** e aggiungere il colore principale seguente alla definizione di stile: 
 
 ```xml
 <item name="android:colorAccent">#C7A935</item>
 ```
 
-In questo modo la barra degli strumenti nella parte inferiore di colore giallo scuro. Compilazione ed esecuzione dell'applicazione consente di visualizzare una barra degli strumenti secondo vuoto nella parte inferiore dello schermo: 
+In questo modo la barra degli strumenti nella parte inferiore di colore ambra scuro. Creazione ed esecuzione dell'app Visualizza una barra di secondo vuota nella parte inferiore della schermata: 
 
-[![Schermata dell'app con giallo seconda barra degli strumenti nella parte inferiore della schermata](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
+[![Screenshot dell'app con barra di secondo gialla nella parte inferiore della schermata](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
 
 
  
-## <a name="add-edit-menu-items"></a>Aggiungere voci di Menu Modifica 
+## <a name="add-edit-menu-items"></a>Aggiungere le voci di Menu Modifica 
 
-In questa sezione viene illustrato come aggiungere voci di menu di modifica nella parte inferiore `Toolbar`. 
+In questa sezione viene illustrato come aggiungere voci di menu Modifica verso il basso `Toolbar`. 
 
-Per aggiungere voci di menu a un database secondario `Toolbar`: 
+Per aggiungere voci di menu in un database secondario `Toolbar`: 
 
-1.  Icone del menu per aggiungere il `mipmap-` cartelle di progetto di applicazione (se richiesto).
+1.  Aggiungere le icone di menu per il `mipmap-` cartelle di progetto dell'app (se richiesto).
 
 2.  Definire il contenuto delle voci di menu tramite l'aggiunta di un file di risorse di menu aggiuntive per **risorse/menu**. 
 
-3.  Dell'attività `OnCreate` metodo, trovare il `Toolbar` (chiamando `FindViewById`) e l'ingrandimento di `Toolbar`del menu.
+3.  Dell'attività `OnCreate` metodo, individuare il `Toolbar` (chiamando `FindViewById`) e aumento il `Toolbar`del menu.
 
-4.  Implementare un gestore click in `OnCreate` per nuove voci di menu. 
+4.  Implementare un gestore di clic in `OnCreate` per nuove voci di menu. 
 
-Nelle sezioni seguenti illustrano in dettaglio il processo: **Taglia**, **copia**, e **Incolla** vengono aggiunte voci di menu nella parte inferiore `Toolbar`. 
+Le sezioni seguenti illustrano in dettaglio questo processo: **tagliare**, **copia**, e **Incolla** vengono aggiunte voci di menu nella parte inferiore `Toolbar`. 
 
 
 
 ### <a name="define-the-edit-menu-resource"></a>Definire la risorsa di Menu Modifica
 
-Nel **risorse/menu** sottodirectory, creare un nuovo file XML denominato **edit_menus.xml** e sostituire il contenuto con il codice XML seguente:
+Nel **/menu risorse** sottodirectory, creare un nuovo file XML denominato **edit_menus.xml** e sostituire il contenuto con il codice XML seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -123,13 +123,13 @@ Nel **risorse/menu** sottodirectory, creare un nuovo file XML denominato **edit_
 </menu>
 ```
 
-Questo codice XML crea il **Taglia**, **copia**, e **Incolla** voci di menu (utilizzando le icone che sono stati aggiunti al `mipmap-` cartelle in [sostituendo la barra delle azioni ](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
+Questo codice XML crea il **tagliare**, **copia**, e **Incolla** voci di menu (usando le icone che sono stati aggiunti al `mipmap-` cartelle in [sostituendo la barra delle azioni ](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
 
 
 
-### <a name="inflate-the-menus"></a>I menu di ingrandimento
+### <a name="inflate-the-menus"></a>Aumento i menu
 
-Alla fine del `OnCreate` metodo **Mainactivity**, aggiungere le righe di codice seguente: 
+Alla fine del `OnCreate` nel metodo **MainActivity.cs**, aggiungere le righe di codice seguenti: 
 
 ```csharp
 var editToolbar = FindViewById<Toolbar>(Resource.Id.edit_toolbar);
@@ -140,28 +140,28 @@ editToolbar.MenuItemClick += (sender, e) => {
 };
 ```
 
-Questo codice consente di individuare il `edit_toolbar` le viste definite in **axml**, imposta il titolo **modifica**e incrementa le voci di menu (definito in **edit_menus.xml**). Definisce un menu fare clic su gestore che visualizza un avviso popup per indicare che è stato toccato l'icona di modifica. 
+Questo codice consente di individuare il `edit_toolbar` definito nella vista **Main. axml**, imposta il titolo **modifica**e incrementa le voci di menu (definito in **edit_menus.xml**). Definisce un menu fare clic sul gestore che viene visualizzato un avviso popup per indicare quale icona di modifica viene toccato. 
 
 Compilare ed eseguire l'app. Quando si esegue l'app, verranno visualizzato il testo e icone aggiunte in precedenza come illustrato di seguito: 
 
-[![Diagramma della parte inferiore della barra degli strumenti con icone di Taglia, copia e Incolla](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png#lightbox)
+[![Diagramma della parte inferiore della barra degli strumenti con le icone di Taglia, copia e Incolla](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png#lightbox)
 
-Toccando il **Taglia** sull'icona del menu fa sì che il seguente avviso popup da visualizzare: 
+Se si tocca il **Taglia** icona menu fa sì che il seguente avviso popup da visualizzare: 
 
-[![Schermata di tipo avviso popup che indica che è stato toccato l'icona del menu Taglia](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png#lightbox)
+[![Schermata di tipo avviso popup che indica che è stato toccato l'icona di menu Taglia](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png#lightbox)
 
-Toccare le voci di menu su una barra degli strumenti Visualizza l'avvisi popup risultante: 
+Toccando le voci di menu su una barra degli strumenti consente di visualizzare gli di avvisi popup risultanti: 
 
-[![Schermate di avvisi popup per salvare, copia e Incolla vengano utilizzate le voci di menu](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
+[![Screenshot di avvisi popup per salvare, copiare e incollare le voci di menu viene toccate](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
 
 
 
-## <a name="the-up-button"></a>Pulsante 
+## <a name="the-up-button"></a>Il pulsante di scorrimento 
 
-La maggior parte delle App per Android si basano sul **nuovamente** pulsante per la navigazione delle app, premendo il **nuovamente** pulsante, l'utente passa alla schermata precedente.
-Tuttavia, è anche possibile fornire un **backup** pulsante che rende più semplice per gli utenti possono spostarsi "massimo" alla schermata principale dell'applicazione. Quando l'utente seleziona il **backup** pulsante, l'utente sposta in alto a un livello superiore nella gerarchia di app &ndash; , ovvero l'app viene visualizzata l'utente torna più attività nello stack indietro anziché back POP per l'oggetto selezionato in precedenza Attività. 
+La maggior parte delle App per Android si basano sul **nuovamente** pulsante per lo spostamento di app, premendo il **nuovamente** pulsante, l'utente passa alla schermata precedente.
+Tuttavia, è anche possibile fornire un' **backup** pulsante che rende più semplice per gli utenti possono spostarsi "massimo" alla schermata principale dell'app. Quando l'utente seleziona il **iscrizione** button, l'utente sposta verso l'alto per un livello superiore nella gerarchia di app &ndash; , ovvero l'app viene visualizzata l'utente torna più attività nello stack indietro anziché back POP per l'oggetto selezionato in precedenza Attività. 
 
-Per abilitare il **backup** pulsante in una seconda attività che utilizza un `Toolbar` come la barra di azione, chiamare il `SetDisplayHomeAsUpEnabled` e `SetHomeButtonEnabled` metodi la seconda attività `OnCreate` metodo:
+Per abilitare la **backup** pulsante in una seconda attività che usa un `Toolbar` come la barra delle azioni, chiamare il `SetDisplayHomeAsUpEnabled` e `SetHomeButtonEnabled` metodi la seconda attività `OnCreate` metodo:
 
 ```csharp
 SetActionBar (toolbar);
@@ -170,7 +170,7 @@ ActionBar.SetDisplayHomeAsUpEnabled (true);
 ActionBar.SetHomeButtonEnabled (true);
 ```
 
-Il [supporta la barra degli strumenti v7](https://developer.xamarin.com/samples/monodroid/Supportv7/AppCompat/Toolbar/) nell'esempio di codice viene illustrato il **backup** pulsante di azione. Questo esempio, che utilizza la libreria delle applicazioni descritta di seguito, viene implementata una seconda attività che utilizza la barra degli strumenti **backup** pulsante per la navigazione gerarchica nuovamente per l'attività precedente. In questo esempio, il `DetailActivity` pulsante home consente il **backup** pulsante effettuando le operazioni seguenti `SupportActionBar` chiamate al metodo: 
+Il [v7 sulla barra degli strumenti di supporto](https://developer.xamarin.com/samples/monodroid/Supportv7/AppCompat/Toolbar/) esempio di codice viene illustrato il **backup** pulsante in azione. Questo esempio, che usa la libreria AppCompat descritta di seguito, viene implementata una seconda attività che usa la barra degli strumenti **backup** pulsante per la navigazione gerarchica tornare all'attività precedente. In questo esempio, il `DetailActivity` pulsante home consente la **iscrizione** pulsante effettuando quanto segue `SupportActionBar` chiamate al metodo: 
 
 ```csharp
 SetSupportActionBar (toolbar);
@@ -179,15 +179,15 @@ SupportActionBar.SetDisplayHomeAsUpEnabled (true);
 SupportActionBar.SetHomeButtonEnabled (true);
 ```
 
-Quando l'utente passa da `MainActivity` a `DetailActivity`, `DetailActivity` consente di visualizzare un **backup** pulsante (freccia rivolta verso sinistra), come illustrato nella schermata:
+Quando l'utente passa da `MainActivity` al `DetailActivity`, il `DetailActivity` consente di visualizzare un' **backup** pulsante (puntamento freccia sinistra) come illustrato nello screenshot:
 
-[![Schermata di esempio di una pulsante a sinistra freccia nella barra degli strumenti](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
+[![Screenshot di esempio di una pulsante a sinistra freccia sulla barra degli strumenti](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
 
-Se si tocca questo **backup** pulsante causa l'applicazione tornare alla `MainActivity`. In un'applicazione più complessa con più livelli della gerarchia, toccare il pulsante restituirà l'utente al successivo livello più elevato nell'app anziché alla schermata precedente. 
+Se si tocca questo **iscrizione** pulsante fa sì che l'app tornare alla `MainActivity`. In un'app più complessa con più livelli della gerarchia, toccare questo pulsante restituirebbe l'utente al livello più alto successivo nell'app invece che alla schermata precedente. 
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Il simbolo della barra degli strumenti (esempio)](https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/)
-- [Barra degli strumenti delle applicazioni (esempio)](https://developer.xamarin.com/samples/monodroid/Supportv7/AppCompat/Toolbar/)
+- [Barra degli strumenti lollipop (esempio)](https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/)
+- [Barra degli strumenti AppCompat (esempio)](https://developer.xamarin.com/samples/monodroid/Supportv7/AppCompat/Toolbar/)

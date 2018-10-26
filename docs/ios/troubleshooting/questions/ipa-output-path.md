@@ -4,22 +4,22 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F5E5DCC6-F7CC-48E2-89E8-709E9C269502
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 9c80a209279a2f032eb6c9efcba1398ca0e267a5
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 1c3c3a63de40a63f040870505b086d67fe160773
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31882802"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113748"
 ---
 # <a name="can-i-change-the-output-path-of-the-ipa-file"></a>È possibile modificare il percorso di output del file IPA?
 
-## <a name="for-cycle-7-and-higher"></a>Per il ciclo 7 e versioni successiva
-Sì, è possibile utilizzare le destinazioni di MSBuild personalizzate per ottenere questo risultato. L'opzione più semplice consiste probabilmente nel copiare il `.ipa` file dopo che è stata creata.
+## <a name="for-cycle-7-and-higher"></a>Per il ciclo di 7 e versioni successiva
+Sì, è possibile usare destinazioni MSBuild personalizzate per ottenere questo risultato. L'opzione più semplice consiste probabilmente nel copiare il `.ipa` file dopo che è stata creata.
 
-Questi passaggi funzionerà per qualsiasi progetto iOS che usa il motore di compilazione MSBuild nel Mac o Windows. (Nota: il motore di compilazione MSBuild di utilizzare tutti i progetti di Unified API.)
+Questa procedura è indicata per qualsiasi progetto iOS che usa il motore di compilazione MSBuild in Mac o Windows. (Nota: tutti i progetti di API unificata usano il motore di compilazione MSBuild.)
 
 1. Aprire il `.csproj` file per il progetto di app iOS in un editor di testo e quindi aggiungere le righe seguenti alla fine (immediatamente prima della chiusura `</Project>` tag):
     
@@ -42,18 +42,18 @@ Questi passaggi funzionerà per qualsiasi progetto iOS che usa il motore di comp
     </Target>
     ```
 
-2. Impostare il DestinationFolder nella cartella di output desiderato. Come al solito è possibile utilizzare la proprietà di MSBuild (ad esempio $(OutputPath)) all'interno di questo argomento se si desidera.
+2. Impostare il Cartelladestinazione nella cartella di output desiderato. Normalmente è possibile usare le proprietà di MSBuild (ad esempio $(OutputPath)) all'interno di questo argomento se si desidera.
 
 ## <a name="notes"></a>Note
-- Il `CreateIpaDependsOn` proprietà definita nel `Xamarin.iOS.Common.targets` file che è parte di xamarin. IOS. Si comporta come descritto in *delle proprietà 'DependsOn' verrà ignorato* sul [ https://msdn.microsoft.com/library/ms366724.aspx ](https://msdn.microsoft.com/library/ms366724.aspx).
+- Il `CreateIpaDependsOn` proprietà definita nel `Xamarin.iOS.Common.targets` file che è parte di xamarin. IOS. Si comporta come descritto in *delle proprietà 'DependsOn' override* sul [ https://msdn.microsoft.com/library/ms366724.aspx ](https://msdn.microsoft.com/library/ms366724.aspx).
 
-- È possibile utilizzare un **spostare** attività piuttosto che un **copia** attività se preferito. Se si sceglie l'opzione e sono la creazione in Windows, è necessario utilizzare il nome completo attività `<Microsoft.Build.Tasks.Move>` per evitare ambiguità con il XamarinVS attività di compilazione.
+- È possibile usare una **spostare** attività anziché un **copia** attività se si preferisce. Se si sceglie se l'opzione e si sta generando su Windows, è necessario usare il nome completo attività `<Microsoft.Build.Tasks.Move>` per evitare ambiguità con la XamarinVS attività di compilazione.
 
 ## <a name="for-versions-before-xamarin-studio-6005174--xamarin-for-visual-studio-410530"></a>Per le versioni precedenti di Xamarin Studio 6.0.0.5174 | Xamarin per Visual Studio 4.1.0.530
 
-Sì, è possibile utilizzare le destinazioni di MSBuild personalizzate per ottenere questo risultato. L'opzione più semplice consiste probabilmente nel copiare il `.ipa` file dopo che è stata creata.
+Sì, è possibile usare destinazioni MSBuild personalizzate per ottenere questo risultato. L'opzione più semplice consiste probabilmente nel copiare il `.ipa` file dopo che è stata creata.
 
-Questi passaggi funzionerà per qualsiasi progetto iOS che usa il motore di compilazione MSBuild nel Mac o Windows. (Nota: il motore di compilazione MSBuild di utilizzare tutti i progetti di Unified API.)
+Questa procedura è indicata per qualsiasi progetto iOS che usa il motore di compilazione MSBuild in Mac o Windows. (Nota: tutti i progetti di API unificata usano il motore di compilazione MSBuild.)
 
 1. Aprire il `.csproj` file per il progetto di app iOS in un editor di testo e quindi aggiungere le righe seguenti alla fine (immediatamente prima della chiusura `</Project>` tag).
 
@@ -76,9 +76,9 @@ Questi passaggi funzionerà per qualsiasi progetto iOS che usa il motore di comp
     </Target>
     ```
 
-2. Impostare il `DestinationFolder` nella cartella di output desiderato. Come al solito è possibile utilizzare le proprietà di MSBuild (ad esempio `$(OutputPath)`) all'interno di questo argomento se si desidera.
+2. Impostare il `DestinationFolder` nella cartella di output desiderato. Normalmente è possibile usare le proprietà di MSBuild (ad esempio `$(OutputPath)`) all'interno di questo argomento se si desidera.
 
 ## <a name="notes"></a>Note
-- Il `CreateIpaDependsOn` proprietà definita nel `Xamarin.iOS.Common.targets` file che è parte di xamarin. IOS. Si comporta come descritto in *delle proprietà "DependsOn" verrà ignorato* sul [ https://msdn.microsoft.com/library/ms366724.aspx ](https://msdn.microsoft.com/library/ms366724.aspx).
+- Il `CreateIpaDependsOn` proprietà definita nel `Xamarin.iOS.Common.targets` file che è parte di xamarin. IOS. Si comporta come descritto in *delle proprietà "DependsOn" override* sul [ https://msdn.microsoft.com/library/ms366724.aspx ](https://msdn.microsoft.com/library/ms366724.aspx).
 
-- È possibile utilizzare un **spostare** attività piuttosto che un **copia** attività se preferito. Se si sceglie l'opzione e sono la creazione in Windows, è necessario utilizzare il nome completo attività `<Microsoft.Build.Tasks.Move>` per evitare ambiguità con il XamarinVS attività di compilazione.
+- È possibile usare una **spostare** attività anziché un **copia** attività se si preferisce. Se si sceglie se l'opzione e si sta generando su Windows, è necessario usare il nome completo attività `<Microsoft.Build.Tasks.Move>` per evitare ambiguità con la XamarinVS attività di compilazione.

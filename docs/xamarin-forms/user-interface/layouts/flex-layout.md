@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: a6c1b0a4e0df1c25f595ca4eb53079c74b84972e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 49a0d1dd67959c5949ebe500036b849180795660
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998583"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108743"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>FlexLayout di xamarin. Forms
 
@@ -486,7 +486,7 @@ Ad esempio `AlignItems`, il `AlignContent` proprietà inoltre consente di alline
 
 [![La pagina dell'esperimento: Allineamento del contenuto](flex-layout-images/ExperimentAlignContent.png "allineare il contenuto, la pagina dell'esperimento:")](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
 
-Nel screnshot iOS, entrambe le righe sono in alto. Nella schermata Android in cui si trovano al centro; e nella schermata UWP sono nella parte inferiore. Le righe possono anche essere separate da uno spazio in vari modi:
+Nella schermata iOS, entrambe le righe sono in alto. Nella schermata Android in cui si trovano al centro; e nella schermata UWP sono nella parte inferiore. Le righe possono anche essere separate da uno spazio in vari modi:
 
 [![La pagina dell'esperimento: Allinea contenuto 2](flex-layout-images/ExperimentAlignContent2.png "pagina dell'esperimento - Allinea contenuto 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
 

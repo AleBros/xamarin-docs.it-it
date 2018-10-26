@@ -3,44 +3,44 @@ title: Trasmetti Android
 ms.prod: xamarin
 ms.assetid: 4172A798-89EC-444D-BC0C-0A7DD67EF98C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 89e668b8936db9a05fca2353b334b630b8363a74
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 13a0a0d9c6a9d1d5f49020b1a8096f5e054d415c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762746"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114925"
 ---
 # <a name="android-beam"></a>Trasmetti Android
 
-Trasmetti Android sono una tecnologia di comunicazione (prossimità) introdotta in Android 4.0 che consente alle applicazioni di condividere informazioni tramite NFC in stretta vicinanza.
+Trasmetti Android sono una tecnologia di quasi Field Communication (NFC) introdotta in Android 4.0 che consente alle applicazioni di condividere informazioni tramite NFC quando in stretta vicinanza.
 
 [![Diagramma che illustra due dispositivi in prossimità di condivisione delle informazioni](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 
-Trasmetti Android funziona effettuando il push dei messaggi su NFC quando due dispositivi si trovano nell'intervallo. Dispositivi di circa 4cm tra loro possono condividere dati con raggio Android. Crea un messaggio di un'attività in un dispositivo e specifica un'attività (o attività) in grado di gestire il push. Quando l'attività specificata è in primo piano e i dispositivi si trovano nell'intervallo, per il secondo dispositivo Android Trasmetti determinerà il messaggio. Sul dispositivo di ricezione, l'intento viene richiamato contenente i dati del messaggio.
+Trasmetti Android funziona effettuando il push dei messaggi tramite NFC quando due dispositivi sono nell'intervallo. I dispositivi di circa 4cm uno da altro possono condividere dati con raggio di Android. Un'attività in un dispositivo crea un messaggio e specifica un'attività (o attività) in grado di gestire il push. Quando l'attività specificata è in primo piano e i dispositivi si trovano nell'intervallo, Trasmetti Android effettuerà il push del messaggio al secondo dispositivo. Sul dispositivo di ricezione, viene richiamato un Intent che contiene i dati del messaggio.
 
-Android supporta due tipi di messaggi di impostazione con raggio Android:
+Android supporta due tipi di messaggi di impostazione con raggio di Android:
 
--   `SetNdefPushMessage` -Prima Trasmetti Android viene avviato, è possibile chiamare SetNdefPushMessage per specificare un NdefMessage per effettuare il push su NFC e l'attività viene eseguita, un'applicazione. Questo meccanismo è più adatta quando un messaggio non viene modificato mentre un'applicazione è in uso.
+-   `SetNdefPushMessage` -Prima dell'avvio Trasmetti Android, un'applicazione può chiamare SetNdefPushMessage per specificare un NdefMessage al push tramite NFC e l'attività che è eseguirne il push. Questo meccanismo è più adatta quando un messaggio non viene modificata mentre un'applicazione è in uso.
 
--   `SetNdefPushMessageCallback` -Quando viene avviato il raggio Android, un'applicazione può gestire un callback per creare un NdefMessage. Questo meccanismo consente la creazione del messaggio deve essere ritardata fino a quando non sono dispositivi nell'intervallo. Supporta scenari in cui il messaggio può variare a seconda di ciò che avviene nell'applicazione.
+-   `SetNdefPushMessageCallback` -Quando viene avviato il raggio di Android, un'applicazione può gestire un callback per creare un NdefMessage. Questo meccanismo consente la creazione di messaggio deve essere ritardata fino a quando i dispositivi sono nell'intervallo. Supporta scenari in cui il messaggio può variare a seconda di ciò che avviene nell'applicazione.
 
 
-In entrambi i casi, per l'invio di dati con raggio Android, un'applicazione di invia un `NdefMessage`, creazione di pacchetti di dati in diversi `NdefRecords`. Esaminiamo ora i punti chiave che devono essere risolti prima di è possibile attivare Trasmetti Android. In primo luogo, è possibile utilizzare con lo stile di callback di creazione di un `NdefMessage`.
+In entrambi i casi, per l'invio di dati con raggio di Android, un'applicazione di Invia un' `NdefMessage`, creazione di pacchetti di dati in diverse `NdefRecords`. Esaminiamo ora i punti chiave che deve essere risolto prima che può essere attivato Trasmetti Android. In primo luogo, si collaborerà con lo stile di callback di creazione di un `NdefMessage`.
 
 
 ## <a name="creating-a-message"></a>Creazione di un messaggio
 
-Gli utenti possono registrare callback con un `NfcAdapter` dell'attività `OnCreate` metodo. Ad esempio, supponendo un `NfcAdapter` denominato `mNfcAdapter` è dichiarato come una variabile della classe dell'attività, è possibile scrivere il codice seguente per creare il callback che verrà costruito il messaggio:
+È possibile registrare i callback con un `NfcAdapter` dell'attività `OnCreate` (metodo). Ad esempio, supponendo un `NfcAdapter` denominato `mNfcAdapter` è dichiarato come una variabile di classe nell'attività, è possibile scrivere il codice seguente per creare il callback che costruisce il messaggio:
 
 ```csharp
 mNfcAdapter = NfcAdapter.GetDefaultAdapter (this);
 mNfcAdapter.SetNdefPushMessageCallback (this, this);
 ```
 
-L'attività, che implementa `NfcAdapter.ICreateNdefMessageCallback`, viene passato per il `SetNdefPushMessageCallback` dei metodi descritti sopra. Quando viene avviato il raggio Android, verrà chiamato dal sistema `CreateNdefMessage`, da cui l'attività è possibile costruire un `NdefMessage` come illustrato di seguito:
+L'attività, che implementa `NfcAdapter.ICreateNdefMessageCallback`, viene passato per il `SetNdefPushMessageCallback` metodo precedente. Quando viene avviato il raggio di Android, il sistema chiamerà `CreateNdefMessage`, da cui può essere costruita l'attività di un `NdefMessage` come illustrato di seguito:
 
 ```csharp
 public NdefMessage CreateNdefMessage (NfcEvent evt)
@@ -68,21 +68,21 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 
 ## <a name="receiving-a-message"></a>Ricezione di un messaggio
 
-Sul lato di ricezione, il sistema richiama un intento con il `ActionNdefDiscovered` azione, da cui è possibile estrarre il NdefMessage come indicato di seguito:
+Sul lato ricevente, il sistema richiama un Intent con il `ActionNdefDiscovered` azione, da cui è possibile estrarre il NdefMessage come indicato di seguito:
 
 ```csharp
 IParcelable [] rawMsgs = intent.GetParcelableArrayExtra (NfcAdapter.ExtraNdefMessages);
 NdefMessage msg = (NdefMessage) rawMsgs [0];
 ```
 
-Per un esempio di codice completo che usa Android raggio, illustrato in esecuzione nella schermata riportata di seguito, vedere il [demo Trasmetti Android](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/) nella raccolta di esempio.
+Per un esempio di codice completo che usa Android Trasmetti, illustrato in esecuzione nella schermata riportata di seguito, vedere la [demo Trasmetti Android](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/) nella raccolta di esempio.
 
-[![Schermate di esempio dalla demo Trasmetti Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
+[![Screenshot di esempio dalla demo Trasmetti Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo di raggio Android (esempio)](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/)
-- [Introduzione a Sandwich gelato](http://www.android.com/about/ice-cream-sandwich/)
-- [Piattaforma 4.0 Android](http://developer.android.com/sdk/android-4.0.html)
+- [Demo per Android Trasmetti (esempio)](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/)
+- [Introduzione a Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
+- [Piattaforma Android 4.0](http://developer.android.com/sdk/android-4.0.html)

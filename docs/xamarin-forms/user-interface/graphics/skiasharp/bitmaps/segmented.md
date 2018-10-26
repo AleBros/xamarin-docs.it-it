@@ -4,15 +4,15 @@ description: Visualizzare una bitmap di SkiaSharp in modo che alcuni area viene 
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 79AE2033-C41C-4447-95A6-76D22E913D19
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: e5bfa076a8746abd6275e9d7a8393c7c8ab53294
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 71997acde4545fec801dfdc8147ab1a9ace7ab24
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615236"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119228"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>Visualizzazione segmentata del bitmap di SkiaSharp
 
@@ -26,7 +26,7 @@ Questi metodi vengono in genere usati per il rendering di bitmap che fanno parte
 
 ## <a name="the-nine-patch-display"></a>La visualizzazione di nove-patch 
 
-Concettualmente [ `DrawBitmapNinePatch` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapNinePatch/p/SkiaSharp.SKBitmap/SkiaSharp.SKRectI/SkiaSharp.SKRect/SkiaSharp.SKPaint/) divide una bitmap in nove rettangoli:
+Concettualmente [ `DrawBitmapNinePatch` ](xref:SkiaSharp.SKCanvas.DrawBitmapNinePatch(SkiaSharp.SKBitmap,SkiaSharp.SKRectI,SkiaSharp.SKRect,SkiaSharp.SKPaint)) divide una bitmap in nove rettangoli:
 
 ![Patch di nove](segmented-images/NinePatch.png "nove Patch")
 
@@ -119,14 +119,14 @@ SKRectI centerRect = new SKRectI(150, 150, 350, 350);
 
 I due `DrawBitmapLattice` metodi sono simili a `DrawBitmapNinePatch`, ma sono generalizzati per qualsiasi numero di divisioni orizzontali o verticali. Queste divisioni sono definite da matrici di interi corrispondenti a pixel. 
 
-Il [ `DrawBitmapLattice` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapLattice/p/SkiaSharp.SKBitmap/System.Int32[]/System.Int32[]/SkiaSharp.SKRect/SkiaSharp.SKPaint/) metodo con parametri per le matrici di interi non sembra funzionare. Il [ `DrawBitmapLattice` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapLattice/p/SkiaSharp.SKBitmap/SkiaSharp.SKLattice/SkiaSharp.SKRect/SkiaSharp.SKPaint/) metodo con un parametro di tipo `SKLattice` funziona, e che corrisponde a quella usata negli esempi illustrati di seguito.
+Il [ `DrawBitmapLattice` ](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,System.Int32[],System.Int32[],SkiaSharp.SKRect,SkiaSharp.SKPaint)) metodo con parametri per le matrici di interi non sembra funzionare. Il [ `DrawBitmapLattice` ](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,SkiaSharp.SKLattice,SkiaSharp.SKRect,SkiaSharp.SKPaint)) metodo con un parametro di tipo `SKLattice` funziona, e che corrisponde a quella usata negli esempi illustrati di seguito.
 
-Il [ `SKLattice` ](https://developer.xamarin.com/api/type/SkiaSharp.SKLattice/) struttura definisce quattro proprietà:
+Il [ `SKLattice` ](xref:SkiaSharp.SKLattice) struttura definisce quattro proprietà:
 
-- [`XDivs`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.XDivs/), una matrice di interi
-- [`YDivs`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.YDivs/), una matrice di interi
-- [`Flags`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.Flags/), una matrice di `SKLatticeFlags`, un tipo di enumerazione
-- [`Bounds`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.Bounds/) di tipo `Nullable<SKRectI>` per specificare un rettangolo di origine facoltativa della bitmap
+- [`XDivs`](xref:SkiaSharp.SKLattice.XDivs), una matrice di interi
+- [`YDivs`](xref:SkiaSharp.SKLattice.YDivs), una matrice di interi
+- [`Flags`](xref:SkiaSharp.SKLattice.Flags), una matrice di `SKLatticeFlags`, un tipo di enumerazione
+- [`Bounds`](xref:SkiaSharp.SKLattice.Bounds) di tipo `Nullable<SKRectI>` per specificare un rettangolo di origine facoltativa della bitmap
 
 Il `XDivs` matrice divide la larghezza della bitmap in strisce verticali. La prima striscia si estende dal pixel da 0 a sinistra per `XDivs[0]`. Questo elenco viene visualizzato in larghezza in pixel. Elenco di secondo compreso tra `XDivs[0]` a `XDivs[1]`e viene ridimensionato. Il terzo elenco compreso tra `XDivs[1]` a `XDivs[2]` e viene eseguito il rendering nella relativa larghezza in pixel. Striscia di ultima compreso tra l'ultimo elemento della matrice e il bordo destro della bitmap. Se la matrice ha un numero pari di elementi, viene visualizzato nel relativo larghezza in pixel. In caso contrario, viene estesa. Il numero totale di Sfoglia verticale è una maggiore del numero di elementi nella matrice.
 
@@ -134,7 +134,7 @@ Il `YDivs` matrice è simile. Divide l'altezza della matrice in strisce orizzont
 
 Insieme, il `XDivs` e `YDivs` matrice consentono di dividere la bitmap in rettangoli. Il numero di rettangoli è uguale al prodotto del numero di strisce orizzontali e il numero di strisce verticali.
 
-In base alla documentazione, Skia il `Flags` matrice contiene un elemento per ogni rettangolo, prima di tutto la riga superiore dei rettangoli, quindi la seconda riga e così via. Il `Flags` matrice è di tipo [ `SKLatticeFlags` ](https://developer.xamarin.com/api/type/SkiaSharp.SKLatticeFlags/), un'enumerazione con i membri seguenti:
+In base alla documentazione, Skia il `Flags` matrice contiene un elemento per ogni rettangolo, prima di tutto la riga superiore dei rettangoli, quindi la seconda riga e così via. Il `Flags` matrice è di tipo [ `SKLatticeFlags` ](xref:SkiaSharp.SKLatticeFlags), un'enumerazione con i membri seguenti:
 
 - `Default` con il valore 0
 - `Transparent` con valore 1
@@ -225,5 +225,5 @@ Il **reticolo Display** pagina generalizza la creazione delle `Flags` matrice, c
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

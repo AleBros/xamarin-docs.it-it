@@ -3,15 +3,15 @@ title: Principi di progettazione di API xamarin. Android
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8abb78f335b159223e9394b7845eccbba8d124da
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 53348e15d1ecc74f50cacdd422da5c80af802d1b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996347"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110719"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Principi di progettazione di API xamarin. Android
 
@@ -167,7 +167,8 @@ Il *KeyEventArgs* classe a sua volta ha una [View.KeyEventArgs.Handled](https://
 
 Si prevede di aggiungere gli overload per altri metodi e ctor di esporre la connessione basata sul delegato. Inoltre, i listener con più callback richiedono alcune analisi aggiuntive per determinare se implementare singoli callback è ragionevole, in modo da cui viene convertito queste non appena vengono identificati. Se è presente alcun evento corrispondente, i listener devono essere usati nel linguaggio c#, ma. ripristinare quelli che si ritiene che potrebbe avere l'utilizzo di delegato di prestare attenzione. È stato eseguito per alcune conversioni di interfacce senza il suffisso "Listener" anche se era chiaro che possono trarre vantaggio da un'alternativa di delegato.
 
-Tutte le interfacce di listener di implementare il [ `Android.Runtime.IJavaObject` ](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) interfaccia, a causa di dettagli di implementazione dell'associazione, in modo che le classi di listener devono implementare questa interfaccia. Questa operazione può essere eseguita implementando l'interfaccia del listener in una sottoclasse [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) o qualsiasi altro stato eseguito il wrapping di oggetti di Java, ad esempio un'attività Android.
+Tutte le interfacce di listener di implementare il [`Android.Runtime.IJavaObject`](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/)
+interfaccia, a causa di dettagli di implementazione dell'associazione, in modo che le classi di listener devono implementare questa interfaccia. Questa operazione può essere eseguita implementando l'interfaccia del listener in una sottoclasse [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) o qualsiasi altro stato eseguito il wrapping di oggetti di Java, ad esempio un'attività Android.
 
 
 ### <a name="runnables"></a>Runnables
@@ -262,7 +263,7 @@ Per le interfacce che contiene le costanti che implementano altre interfacce che
 Di conseguenza, l'espressione del linguaggio *MediaStore.Video.VideoColumns.TITLE* deve essere associato all'espressione c# *MediaStore.Video.MediaColumnsConsts.Title* che è di difficile individuazione senza la lettura numero elevato di documentazione Java. Nella versione 1.9, l'espressione c# equivalente saranno [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/).
 
 Inoltre, prendere in considerazione la [android.os.Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/) tipo che implementa il linguaggio *Parcelable* interfaccia. Poiché implementa l'interfaccia, tutte le costanti in quell'interfaccia sono accessibili "tramite" del tipo di aggregazione, ad esempio *Bundle.CONTENTS_FILE_DESCRIPTOR* è un'espressione di Java perfettamente valida.
-In precedenza, eseguire il porting di questa espressione c# è necessario esaminare tutte le interfacce implementate per verificare da quale tipo di *CONTENTS_FILE_DESCRIPTOR* proviene. A partire da xamarin. Android 1.9, le classi che implementano le interfacce di Java che includono costanti saranno necessario nidificate *InterfaceConsts* tipo, che conterrà tutte le costanti di interfaccia ereditati. Questa operazione consentirà di traduzione *Bundle.CONTENTS_FILE_DESCRIPTOR* al [ *Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/).
+In precedenza, per questa espressione per la porta C# è necessario esaminare tutte le interfacce implementate per verificare da quale tipo di *CONTENTS_FILE_DESCRIPTOR* proviene. A partire da xamarin. Android 1.9, le classi che implementano le interfacce di Java che includono costanti saranno necessario nidificate *InterfaceConsts* tipo, che conterrà tutte le costanti di interfaccia ereditati. Questa operazione consentirà di traduzione *Bundle.CONTENTS_FILE_DESCRIPTOR* al [ *Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/).
 
 Infine, i tipi con una *Consts* suffisso, ad esempio *Android.OS.ParcelableConsts* sono ora obsoleti, oltre il InterfaceConsts appena introdotti i tipi annidati. Verranno rimossi nella versione 3.0 di xamarin. Android.
 

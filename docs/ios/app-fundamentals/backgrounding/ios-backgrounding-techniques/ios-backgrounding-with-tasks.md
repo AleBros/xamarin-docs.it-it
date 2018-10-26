@@ -4,15 +4,15 @@ description: Questo documento descrive come usare le attività in background per
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 9d304ee64e7716413febc475e721f5eb39043109
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 48859afe2c988c1afe67d5c4350cef734f879fdf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351538"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120996"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS elaborazione in background in attività
 
@@ -20,7 +20,7 @@ Il modo più semplice per eseguire l'elaborazione in background in IOS è suddiv
 
 Le attività in background possono essere suddivisi in tre categorie:
 
-1.  **Le attività in background-Safe** : viene chiamato in qualsiasi punto nel l'applicazione in cui è presente un'attività non si vuole interrotta deve l'applicazione, immettere lo sfondo.
+1.  **Le attività in background-Safe** : viene chiamato in qualsiasi punto dell'applicazione in cui è presente un'attività non si desidera interrotta deve l'applicazione, immettere lo sfondo.
 1.  **Attività DidEnterBackground** : viene chiamato durante la `DidEnterBackground` metodo del ciclo di vita delle applicazioni utili per la pulizia e il salvataggio dello stato.
 1.  **I trasferimenti (iOS 7 +) di sfondo** -un tipo speciale di attività in background usato per eseguire trasferimenti di rete in iOS 7. A differenza delle normali attività, trasferimenti in background non è un limite di tempo predeterminato.
 

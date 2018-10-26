@@ -1,50 +1,50 @@
 ---
 title: Icone personalizzate dei documenti in xamarin. IOS
-description: Questo articolo viene illustrato come inclusi e la gestione di un asset di immagine da utilizzare come icona del tipo di documento personalizzato in un'app xamarin. IOS.
+description: Questo articolo viene illustrato come inclusi e la gestione di un asset di immagine in un'app xamarin. IOS da utilizzare come icona del tipo di documento personalizzato.
 ms.prod: xamarin
 ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/23/2017
-ms.openlocfilehash: 415500050e4e957ca635c4b18004716dd44a162d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 51abd00f9a21b702811bb3897f273deff54f7d01
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784150"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110485"
 ---
 # <a name="custom-document-icons-in-xamarinios"></a>Icone personalizzate dei documenti in xamarin. IOS
 
-_Questo articolo viene illustrato come inclusi e la gestione di un asset di immagine da utilizzare come icona del tipo di documento personalizzato in un'app xamarin. IOS._
+_Questo articolo viene illustrato come inclusi e la gestione di un asset di immagine in un'app xamarin. IOS da utilizzare come icona del tipo di documento personalizzato._
 
-Se un'app xamarin supporta il caricamento di un particolare tipo di documento, lo sviluppatore può specificare le icone che verrà utilizzata dal sistema quando rileva tale tipo di documento, ad esempio quando un utente tiene premuto un allegato nel *applicazione di posta elettronica* come illustrato di seguito:
+Se un'app xamarin. IOS supporta il caricamento di un particolare tipo di documento, lo sviluppatore può specificare le icone che verrà utilizzata dal sistema quando rileva tale tipo di documento, ad esempio quando un utente tiene premuto un allegato nel *applicazione di posta elettronica* come di seguito riportato:
 
  [![](custom-document-types-images/17.png "Un esempio delle icone del tipo di documento")](custom-document-types-images/17.png#lightbox)
 
-Lo sviluppatore può aggiungere informazioni sul tipo di documento per un formato di file dell'app è in grado di apertura con l'inclusione di voci del dizionario per la `CFBundleTypeName` stringa e `LSItemContentTypes` matrice dell'app `Info.plist`. Le icone per il tipo di documento passare il `CFBundleTypeIconFiles` matrice. Se non viene fornita un'icona di documento, iOS verrà derivare dall'icona dell'app.
-È possibile fornire le icone per diverse dimensioni, ottimizzate per le varie risoluzioni di dispositivo. 
+Lo sviluppatore può aggiungere le informazioni sul tipo di documento per un formato di file dell'app è in grado di apertura, includendo le voci di dizionario per la `CFBundleTypeName` stringa e `LSItemContentTypes` matrice dell'app `Info.plist`. Le icone per il tipo di documento andare `CFBundleTypeIconFiles` matrice. Se l'icona del documento non è specificato, esegue la derivazione uno dall'icona dell'app iOS.
+Le icone possono essere fornite per diverse dimensioni, ottimizzate per le varie risoluzioni di dispositivo. 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Per assegnare i valori sono i seguenti in Visual Studio per Mac, usare il **tipi di documento** sezione sotto il **avanzate** scheda il `Info.plist` editor per aggiungere il tipo di documento e assegnare le icone di immagine. Ad esempio, ecco una schermata che illustra la registrazione per il supporto PDF:
+Per assegnare questi valori in Visual Studio per Mac, usare il **tipi di documento** sezione sotto il **avanzate** scheda la `Info.plist` editor per aggiungere il tipo di documento e assegnare le icone di immagine a esso. Ad esempio, ecco uno screenshot che illustra la registrazione per supporto per PDF:
 
- [![](custom-document-types-images/18.png "La sezione tipi di documento nella scheda avanzata l'editor 'Info. plist'")](custom-document-types-images/18.png#lightbox)
+ [![](custom-document-types-images/18.png "La sezione tipi di documento sotto la scheda Avanzate sull'editor di 'Info. plist'")](custom-document-types-images/18.png#lightbox)
  
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Per assegnare questi valori in Visual Studio, usare il **tipi di documento** sezione sotto il **avanzate** scheda il `Info.plist`:
+Per assegnare questi valori in Visual Studio, usare il **tipi di documento** sezione sotto il **avanzate** scheda la `Info.plist`:
 
- ![](custom-document-types-images/doc01w.png "Aprire la sezione tipi di documento nella scheda Avanzate")
+ ![](custom-document-types-images/doc01w.png "Aprire la sezione tipi di documento sotto la scheda Avanzate")
 
-Fare clic su di **Aggiungi tipo di documento** pulsante e compilare i campi obbligatori:
+Scegliere il **Aggiungi tipo di documento** pulsante e compilare i campi obbligatori:
 
-![](custom-document-types-images/doc02w.png "Il modulo Aggiungi tipo di documento")
+![](custom-document-types-images/doc02w.png "Form Aggiungi tipo di documento")
 
 -----
 
 
-Per ulteriori informazioni sui tipi di documenti, vedere Apple [Uniform riferimento al tipo di identificatori](http://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) e [gli argomenti di programmazione di documento interazione per iOS](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
+Per altre informazioni sui tipi di documenti, vedere di Apple [riferimento a identificatori di tipo Uniform](http://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) e [gli argomenti di programmazione del documento interazione per iOS](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
 
 
 ## <a name="related-links"></a>Collegamenti correlati

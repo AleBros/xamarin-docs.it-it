@@ -1,32 +1,32 @@
 ---
-title: Parti di tabella e funzionalità in xamarin. IOS
-description: Questo documento descrive le varie parti di un UITableView in iOS. Descrive le intestazioni di sezione, celle, piè di pagina di sezione, l'indice e la modalità di modifica.
+title: Parti di tabella e le funzionalità di xamarin. IOS
+description: Questo documento descrive le varie parti di un UITableView in iOS. Illustra le intestazioni di sezione, le celle, sezione piè di pagina, l'indice e la modalità di modifica.
 ms.prod: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: c7c9f810798c3d02078b48e17a2ab951cb36aa12
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: c4d788cce12a9aabdd1170cd1a52915f3b30285f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789876"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113950"
 ---
-# <a name="table-parts-and-functionality-in-xamarinios"></a>Parti di tabella e funzionalità in xamarin. IOS
+# <a name="table-parts-and-functionality-in-xamarinios"></a>Parti di tabella e le funzionalità di xamarin. IOS
 
 Un UITableView può avere uno stile 'raggruppato' o 'normale' ed è costituito dalle parti seguenti:
 
 -  [Intestazione di sezione](#Section_Header)
--  [Celle](#Cells) (o righe, se si preferisce)
+-  [Le celle](#Cells) (o le righe, se si preferisce)
 -  [Sezione piè di pagina](#Section_Footer)
 -  [Index](#Index)
--  [Modalità di modifica](#Edit_Features) (include 'scorrere per eliminare' e trascinare i quadratini di ridimensionamento per modificare l'ordine delle righe) 
+-  [Modalità di modifica](#Edit_Features) (include 'scorrere rapidamente per eliminare' e trascinare i quadratini di ridimensionamento per modificare l'ordine delle righe) 
 
-Questi screenshot mostrano la modalità di visualizzazione delle righe di sezione, intestazioni, piè di pagina, i controlli di modifica e l'indice.
+Questi screenshot mostrano come vengono visualizzati le righe di sezione, le intestazioni, piè di pagina, i controlli di modifica e l'indice.
 
- [![](table-parts-and-functionality-images/image1a.png "Questi screenshot Mostra la modalità di visualizzazione delle righe di sezione, intestazioni, piè di pagina, i controlli di modifica e l'indice")](table-parts-and-functionality-images/image1a.png#lightbox)
+ [![](table-parts-and-functionality-images/image1a.png "Questi screenshot mostrano come vengono visualizzati le righe di sezione, le intestazioni, piè di pagina, i controlli di modifica e l'indice")](table-parts-and-functionality-images/image1a.png#lightbox)
 
 Queste parti sono descritti in dettaglio più avanti:
 
@@ -34,26 +34,26 @@ Queste parti sono descritti in dettaglio più avanti:
 
 ## <a name="section-header"></a>Intestazione di sezione
 
-Celle possono facoltativamente essere raggruppate in sezioni, dotate di un'intestazione personalizzata e/o dotate di un piè di pagina. L'intestazione può essere impostata con un valore stringa o una vista personalizzata può essere fornita per consentire un layout diverso o uno stile.
+Celle possono facoltativamente essere raggruppate in sezioni, etichettate con un'intestazione personalizzata e/o con l'etichetta con un piè di pagina. L'intestazione può essere impostata con un valore stringa o una vista personalizzata può essere fornita per consentire un layout diverso o uno stile.
 
 <a name="Cells" />
 
 ## <a name="cells"></a>Celle
 
-Le celle sono l'elemento dell'interfaccia utente principale per una tabella. Quando implementato in modo corretto, celle vengono riutilizzate per l'efficienza della memoria. Esistono quattro stili di cella predefiniti ed è possibile creare la propria celle personalizzate: nel codice o nella finestra di progettazione quando si utilizzano gli storyboard.
+Le celle sono l'elemento dell'interfaccia utente principale per una tabella. Se implementata correttamente, le celle vengono riutilizzate per l'efficienza della memoria. Esistono quattro stili di cella predefiniti ed è possibile creare il proprio le celle personalizzate: nel codice o nella finestra di progettazione quando si usano gli storyboard.
 
 <a name="Section_Footer"/>
 
 ## <a name="section-footer"></a>Sezione piè di pagina
 
-Il piè di pagina sezione facoltativa può essere impostata con un valore stringa o una vista personalizzata può essere fornita per consentire un layout diverso o uno stile. Piè di pagina e le intestazioni di sezione possono essere impostati in modo indipendente.
+Il piè di pagina sezione facoltativa può essere impostato con un valore stringa o una vista personalizzata può essere fornita per consentire un layout diverso o uno stile. Sezione intestazioni e piè di pagina può essere impostato in modo indipendente.
 
 <a name="Index" />
 
 ## <a name="index"></a>Indice
 
-L'indice viene visualizzato come una sequenza di caratteri verso il basso il bordo destro della tabella.
-Toccare o trascinamento sull'indice accelera lo scorrimento a tale parte della tabella. Un indice è facoltativo, ma è consigliabile spostarsi lunghi elenchi. Un indice non è in genere utilizzato con lo stile raggruppato.
+L'indice viene visualizzata come una sequenza di caratteri verso il basso il bordo destro della tabella.
+Toccare o il trascinamento sull'indice accelera lo scorrimento a tale parte della tabella. Un indice è facoltativo, ma è quindi consigliabile spostarsi lunghi elenchi. Un indice non viene in genere usato con lo stile raggruppato.
 
 <a name="Edit_Features" />
 
@@ -61,9 +61,9 @@ Toccare o trascinamento sull'indice accelera lo scorrimento a tale parte della t
 
 Sono disponibili un paio di diverse funzionalità di modifica:
 
-- Scorrere rapidamente per eliminare singole celle.
-- Modalità di modifica per visualizzare pulsanti delete su ogni riga 
-- Modalità di modifica per visualizzare gli handle di ordinamento nuovamente. 
+- Scorrere rapidamente per eliminare le singole celle.
+- Modalità di modifica per visualizzare i pulsanti di eliminazione su ogni riga 
+- Immissione filestreamstorelibrary. modalità di modifica per visualizzare gli handle di ordinamento nuovamente. 
 - Inserimento di nuove celle (con animazione).
 
 Il resto di questo documento viene illustrato come implementare tutte queste funzionalità UITableView con xamarin. IOS.
@@ -71,25 +71,25 @@ Il resto di questo documento viene illustrato come implementare tutte queste fun
 
 ## <a name="classes-overview"></a>Cenni preliminari sulle classi
 
-Classi principali utilizzate per visualizzare le visualizzazioni di tabella sono illustrate qui:
+Le classi primarie utilizzate per visualizzare le visualizzazioni di tabella sono illustrate qui:
 
-[![](table-parts-and-functionality-images/classdiagram.png "Classi principali utilizzate per visualizzare le visualizzazioni di tabella vengono visualizzate qui")](table-parts-and-functionality-images/classdiagram.png#lightbox)
+[![](table-parts-and-functionality-images/classdiagram.png "Le classi primarie utilizzate per visualizzare le visualizzazioni di tabella vengono visualizzate qui")](table-parts-and-functionality-images/classdiagram.png#lightbox)
 
-Lo scopo di ogni classe è descritta di seguito:
+Lo scopo di ogni classe è il seguente:
 
-- **UITableView** – una vista che contiene una raccolta di celle all'interno di un contenitore a scorrimento. Visualizzazione della tabella in genere utilizza l'intero schermo in un'app iPhone ma può esistere come parte di una visualizzazione più grande in un iPad (o vengono visualizzati in un popover). 
-- **UITableViewCell** – una vista che rappresenta una singola cella o riga, in una visualizzazione tabella. Sono disponibili quattro tipi di cella predefiniti ed è possibile creare celle personalizzate in c# o con progettazione iOS. 
-- **UITableViewSource** xamarin esclusivo: classe astratta che fornisce tutti i metodi necessari per visualizzare una tabella, incluso il numero di riga, la restituzione di una vista di cella per ogni riga, la gestione di selezione di riga e molte altre funzionalità facoltative. Si *deve* sottoclasse questa opzione per ottenere un lavoro UITableView. 
-- **NSIndexPath** -sezione e la riga contiene proprietà che identificano la posizione di una cella in una tabella. 
-- **UITableViewController** – un UIViewController pronto all'uso con l'impostazione hardcoded UITableView come la relativa visualizzazione e accessibile tramite la proprietà TableView. 
-- **UIViewController** : se la tabella non occupa l'intero schermo, è possibile aggiungere un UITableView per qualsiasi UIViewController con il relativo Frame impostare in modo appropriato. 
+- **UITableView** – una vista che contiene una raccolta di celle all'interno di un contenitore scorrevole. Visualizzazione della tabella viene generalmente utilizzata l'intera schermata in un'app per iPhone, ma possono esistere come parte di una visualizzazione più grande in un iPad (o vengono visualizzati nel popover). 
+- **UITableViewCell** – una visualizzazione che rappresenta una cella (riga singola o) in una visualizzazione tabella. Esistono quattro tipi di cella predefiniti ed è possibile creare le celle personalizzate sia in C# o con iOS Designer. 
+- **UITableViewSource** esclusivo di xamarin. ios: classe astratta che fornisce tutti i metodi necessari per visualizzare una tabella, incluso il numero di riga, che restituisce una cella di visualizzazione per ogni riga, la gestione di selezione di riga e molte altre funzionalità facoltative. Si *necessario* sottoclasse questa opzione per ottenere un lavoro UITableView. 
+- **NSIndexPath** -Contains riga e della sezione proprietà che identificano la posizione di una cella in una tabella. 
+- **UITableViewController** : una classe UIViewController pronti da usare con un hardcoded UITableView come relativa visualizzazione e accessibili tramite la proprietà TableView. 
+- **UIViewController** : se la tabella non occupa l'intera schermata è possibile aggiungere un UITableView a qualsiasi UIViewController relativo frame di impostare in modo appropriato. 
 
-UITableViewSource sostituisce le due classi seguenti che sono ancora disponibili in xamarin. IOS, ma non sono richiesti:
+UITableViewSource sostituisce le due classi seguenti, che sono ancora disponibili in xamarin. IOS, ma non sono richiesti:
 
-- **UITableViewDataSource** – Objective-C un protocollo modellate in xamarin. IOS come una classe astratta. Deve essere una sottoclasse per fornire una tabella con una visualizzazione per ogni cella, nonché informazioni sulle intestazioni, piè di pagina e il numero di righe e le sezioni della tabella. 
-- **UITableViewDelegate** – Objective-C un protocollo modellate in xamarin. IOS come una classe. Gestisce la selezione, la modifica di funzionalità e altre funzionalità di tabella facoltativi. 
+- **UITableViewDataSource** – protocollo An Objective-C che è modellata in xamarin. IOS come una classe astratta. Deve essere una sottoclasse per fornire una tabella con una visualizzazione per ogni cella, nonché informazioni sulle intestazioni, piè di pagina e il numero di righe e le sezioni della tabella. 
+- **UITableViewDelegate** – protocollo An Objective-C che è modellata in xamarin. IOS come classe. Gestisce la selezione, funzionalità di modifica e altre funzionalità di tabella facoltativi. 
 
-In questo documento gli esempi utilizzano tutti UITableViewSource e ignorare queste due classi. Citate in questo caso poiché eventuali esempi Objective-C disponibili nella documentazione di Apple farà riferimento a essi, pertanto è utile comprendere le operazioni eseguite (e che è possibile utilizzare UITableViewSource del xamarin).
+In questo documento gli esempi utilizzano UITableViewSource e ignorare queste due classi. Essi sono indicate qui perché eventuali esempi di Objective-C disponibili nella documentazione di Apple farà riferimento a essi, pertanto è utile per conoscere cosa fanno (e che è possibile usare UITableViewSource di xamarin. IOS).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,71 +1,71 @@
 ---
 title: Risorse Android
-description: In questo articolo viene introdotto il concetto di risorse Android di xamarin e verrà documentate come utilizzarle. Viene illustrato come utilizzare le risorse disponibili nell'applicazione Android per supportare la localizzazione dell'applicazione e più dispositivi, tra cui densità e dimensioni dello schermo diverse.
+description: Questo articolo introduce il concetto di risorse Android in xamarin. Android e verrà documentati come usarli. Viene illustrato come usare le risorse nell'applicazione Android per supportare la localizzazione dell'applicazione e più dispositivi tra cui densità e dimensioni dello schermo diverse.
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 7b6ba9cdc222019bfa2e1cb9a61b54e290e69bba
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d9cd6bf3ae51c6e27be88481e412995bd4113c17
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764411"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117261"
 ---
 # <a name="android-resources"></a>Risorse Android
 
-_In questo articolo viene introdotto il concetto di risorse Android di xamarin e verrà documentate come utilizzarle. Viene illustrato come utilizzare le risorse disponibili nell'applicazione Android per supportare la localizzazione dell'applicazione e più dispositivi, tra cui densità e dimensioni dello schermo diverse._
+_Questo articolo introduce il concetto di risorse Android in xamarin. Android e verrà documentati come usarli. Viene illustrato come usare le risorse nell'applicazione Android per supportare la localizzazione dell'applicazione e più dispositivi tra cui densità e dimensioni dello schermo diverse._
 
 
 ## <a name="overview"></a>Panoramica
 
-Raramente, un'applicazione Android è solo il codice sorgente. Spesso esistono numerosi altri file che costituiscono un'applicazione: video, immagini, i tipi di carattere e file audio solo per citarne alcune. Complessivamente, questi file di codice non di origine sono dette risorse e vengono compilati (insieme il codice sorgente) durante il processo di compilazione e compresso come un file APK per la distribuzione e installazione nei dispositivi:
+Un'applicazione Android raramente è semplicemente il codice sorgente. Spesso esistono molti altri file che costituiscono un'applicazione: video, immagini, tipi di carattere e i file audio solo per citarne alcuni. Complessivamente, questi file di codice non di origine vengono definiti le risorse e vengono compilati (con il codice sorgente) durante il processo di compilazione e compresso come un file APK per la distribuzione e l'installazione nei dispositivi:
 
 ![Diagramma di creazione di pacchetti](images/packaging-diagram.png)
 
-Risorse offrono diversi vantaggi a un'applicazione Android:
+Risorse offrono diversi vantaggi per un'applicazione Android:
 
--  **Separazione del codice** &ndash; separa il codice sorgente da immagini, stringhe, i menu, animazioni, colori e così via. In quanto tali risorse possono essere utili notevolmente durante la localizzazione.
+-  **Separazione del codice** &ndash; separa il codice sorgente da immagini, stringhe, i menu, animazioni, colori e così via. In quanto tali risorse possono risultare utili notevolmente durante la localizzazione.
 
--  **Più dispositivi di destinazione** &ndash; fornisce il supporto di più semplice diverse configurazioni di dispositivi senza modifiche al codice.
+-  **Più dispositivi di destinazione** &ndash; offerto un supporto più semplice delle diverse configurazioni dei dispositivi senza modifiche al codice.
 
--  **Verifica in fase di compilazione** &ndash; risorse sono statici e compilati nell'applicazione. In questo modo l'utilizzo delle risorse da controllare in fase di compilazione, quando sarà facile rilevare e correggere gli errori, anziché in fase di esecuzione quando è più difficile da individuare e costosa da correggere.
+-  **Verifica della fase di compilazione** &ndash; risorse sono statici e compilato nell'applicazione. In questo modo l'utilizzo delle risorse deve essere controllata in fase di compilazione, quando sarà più facile rilevare e correggere gli errori, anziché in fase di esecuzione quando è più difficile da individuare e correggere i costi.
 
-Quando viene avviato un nuovo progetto di xamarin, viene creata una directory speciale denominata risorse, insieme a alcuni le sottodirectory:
+Quando viene avviato un nuovo progetto xamarin. Android, una directory speciale denominata risorse viene creata, insieme a alcune sottodirectory:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Contenuto e la cartella di risorse](images/resources-folder-vs.png)
 
-Nell'immagine precedente, le risorse dell'applicazione sono organizzate in base al tipo in tali sottodirectory: le immagini verranno inseriti nel **drawable** directory; andare viste di **layout** sottodirectory e così via.
+Nell'immagine precedente, le risorse dell'applicazione sono organizzate in base al relativo tipo in tali sottodirectory: immagini entra **drawable** directory; viste andare **layout** sottodirectory e così via.
  
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ![Contenuto e la cartella di risorse](images/resources-folder-xs.png)
 
-Nell'immagine precedente, le risorse dell'applicazione sono organizzate in base al tipo in tali sottodirectory: le immagini verranno inseriti nel **mipmap** directory; andare viste di **layout** sottodirectory e così via.
+Nell'immagine precedente, le risorse dell'applicazione sono organizzate in base al relativo tipo in tali sottodirectory: immagini entra **mipmap** directory; viste andare **layout** sottodirectory e così via.
  
 -----
 
-Esistono due modi per accedere alle risorse in un'applicazione di xamarin: *a livello di programmazione* nel codice e *in modo dichiarativo* in XML utilizzando una sintassi XML speciale.
+Esistono due modi per accedere alle risorse in un'applicazione xamarin. Android: *a livello di programmazione* nel codice e *in modo dichiarativo* nel codice XML usando una speciale sintassi XML.
 
-Queste risorse vengono chiamate *risorse predefinite* e vengono utilizzati da tutti i dispositivi a meno che non è specificata una corrispondenza più specifica. Inoltre, ogni tipo di risorsa può facoltativamente avere *risorse alternativo* che Android può usare per specifici dispositivi di destinazione. Ad esempio, possibile specificare le risorse di destinazione delle impostazioni locali dell'utente, le dimensioni dello schermo, o se il dispositivo viene ruotato di 90 gradi da verticale a orizzontale, e così via. In ognuno di questi casi, Android caricherà le risorse da utilizzare per l'applicazione senza un impegno di codifica aggiuntivo dallo sviluppatore.
+Queste risorse vengono chiamate *risorse predefinite* e vengono utilizzati da tutti i dispositivi a meno che non è specificata una corrispondenza più specifica. Inoltre, ogni tipo di risorsa facoltativamente presentare *risorse alternative* che Android può usare come destinazione dispositivi specifici. Ad esempio, le risorse possono essere fornite come destinazione delle impostazioni locali dell'utente, le dimensioni dello schermo, o se il dispositivo viene ruotato di 90 gradi da verticale a orizzontale, e così via. In ognuno di questi casi, Android caricherà le risorse per l'uso per l'applicazione senza alcuno sforzo aggiuntivo codifica dallo sviluppatore.
 
-Le risorse alternative vengono specificate mediante l'aggiunta di una stringa breve, chiamata un *qualificatore*, alla fine della directory che contiene un tipo specifico di risorse.
+Le risorse alternative vengono specificate mediante l'aggiunta di una stringa breve, chiamata un' *qualificatore*, alla fine della directory che contiene un tipo specifico di risorse.
 
-Ad esempio, **risorse/drawable-de** specificherà le immagini per i dispositivi che utilizzano le impostazioni locali tedesche, mentre **risorse/drawable-fr** conterrebbe immagini per i dispositivi è impostato su in lingua francese. Un esempio di fornire risorse alternative può essere visualizzato nell'immagine seguente in cui la stessa applicazione viene eseguita con le impostazioni locali della modifica di dispositivo:
+Ad esempio, **risorse/drawable-de** specificherà le immagini per i dispositivi che sono impostati su impostazioni locali tedesche, mentre **risorse/drawable-fr** conserverebbero immagini per i dispositivi è impostato su delle impostazioni locali francesi. Un esempio di fornire risorse alternative può essere visualizzato nell'immagine seguente in cui è in esecuzione la stessa applicazione con le impostazioni locali della modifica dispositivo:
 
 ![Schermate di esempio per impostazioni locali diverse](images/localized-screenshots.png)
 
-In questo articolo verrà un quadro completo utilizzando le risorse e vengono trattati i seguenti argomenti:
+Questo articolo verrà accettano un quadro completo di utilizzo delle risorse e trattano gli argomenti seguenti:
 
--  **Nozioni di base di Android risorsa** &ndash; utilizzando le risorse predefinite a livello di codice e in modo dichiarativo, aggiungere i tipi di risorse quali immagini e i tipi di carattere a un'applicazione.
+-  **Concetti fondamentali sulle risorse Android** &ndash; usando risorse predefinite a livello di codice e in modo dichiarativo, aggiunta di tipi di risorse quali immagini e i tipi di carattere a un'applicazione.
 
--  **Le configurazioni specifiche del dispositivo** &ndash; che supportano diverse risoluzioni dello schermo e densità in un'applicazione.
+-  **Le configurazioni specifiche dei dispositivi** &ndash; che supportano le diverse risoluzioni dello schermo e densità in un'applicazione.
 
--  **Localizzazione** &ndash; utilizzo delle risorse per supportare le diverse aree di un'applicazione può essere utilizzata.
+-  **Localizzazione** &ndash; utilizzo delle risorse per supportare le diverse aree è possibile usare un'applicazione.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

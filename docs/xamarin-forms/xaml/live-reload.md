@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: ce48c4d271167b657505c52518e79c955e53b02e
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: f05b79e58a9fa87e13aeb45af2dbb46139051005
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38860667"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109991"
 ---
 # <a name="xamarin-live-reload"></a>Xamarin Live Reload
 
@@ -22,11 +22,10 @@ Xamarin Live Reload consente **apportare modifiche a di XAML e visualizzarli in 
 
 Dal momento che l'app viene compilato quando si usa Live Reload, funziona con tutte le librerie e i controlli di terze parti. Live works Ricarica su tutte le piattaforme xamarin. Forms supporta, tra cui Android, iOS e UWP e funziona su tutte le destinazioni di distribuzione valido, inclusi simulatori, emulatori e dispositivi fisici.
 
-> [!Video https://www.youtube.com/embed/-5WJZpeXlC8]
-
-Livereload è attualmente disponibile solo in Visual Studio 2017.
-
-[![Partecipare a chat in https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+> [!NOTE]
+> [L'anteprima di ricaricamento in tempo reale è terminata](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
+>
+> È una discussione su questo sul [ ![partecipare a chat in https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## <a name="requirements"></a>Requisiti
 

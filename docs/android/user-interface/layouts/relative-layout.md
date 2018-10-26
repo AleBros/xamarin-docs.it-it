@@ -4,21 +4,24 @@ description: Come usare RelativeLayout in un'applicazione xamarin. Android
 ms.prod: xamarin
 ms.assetid: AFD9C849-02C3-E728-BC78-77A563612BC5
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/29/2018
-ms.openlocfilehash: af8d37775a798fc6019106a66df75843a951c108
-ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
+ms.openlocfilehash: af2972ecc92435836a75013e6203ba47c2c04627
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403416"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113147"
 ---
 # <a name="relativelayout"></a>RelativeLayout
 
-[`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) è un [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/) che visualizza figlio [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) elementi nelle posizioni relative. La posizione di un [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) può essere specificata come rispetto agli elementi di pari livello (ad esempio per quanto riguarda la sinistra-of o di sotto di un determinato elemento) o in posizioni relative ai [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) area (ad esempio allineato alla parte inferiore, sinistro dell'area).
+[`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) è un [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/) che visualizza figlio [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
+elementi nelle posizioni relative. La posizione di un [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) possono essere specificati come rispetto agli elementi di pari livello (ad esempio per quanto riguarda la sinistra-of o sotto di un elemento specifico) o in posizioni rispetto al [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
+area (ad esempio allineato alla parte inferiore, sinistro del centro).
 
-Oggetto [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) è un'utilità molto efficace per la progettazione di un'interfaccia utente perché in grado di eliminare nidificazione [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)s. Se ci si ritrova utilizzando molti annidati [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) gruppi, è possibile sostituirli con un singolo [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/).
+Oggetto [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) è un'utilità molto efficace per la progettazione di un'interfaccia utente perché in grado di eliminare nidificazione [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)s. Se ci si ritrova utilizzando molti annidati [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+i gruppi, è possibile sostituirli con un unico [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/).
 
 Avviare un nuovo progetto denominato **HelloRelativeLayout**.
 
@@ -62,7 +65,8 @@ Quando si usa un' [ `RelativeLayout` ](https://developer.xamarin.com/api/type/An
 
 Tutti gli attributi di layout disponibili sono definiti nella [ `RelativeLayout.LayoutParams` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout+LayoutParams/).
 
-È necessario caricare questo layout il [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/) metodo:
+È necessario caricare questo layout il nome di [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
+metodo:
 
 ```csharp
 protected override void OnCreate (Bundle savedInstanceState)

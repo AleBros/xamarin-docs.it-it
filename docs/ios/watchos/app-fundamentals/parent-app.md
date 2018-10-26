@@ -1,50 +1,50 @@
 ---
-title: Utilizzo di watchOS applicazione padre in Xamarin
-description: Questo documento viene descritto come lavorare con un'applicazione padre watchOS in Xamarin. Descrive le estensioni app WatchKit, le app iOS, archiviazione condivisa e molto altro.
+title: Utilizzo di watchOS padre Application in Xamarin
+description: Questo documento descrive come usare un'applicazione padre watchOS in Xamarin. Illustra le estensioni dell'app WatchKit, le app iOS, spazio di archiviazione condiviso e altro ancora.
 ms.prod: xamarin
 ms.assetid: 9AD29833-E9CC-41A3-95D2-8A655FF0B511
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 3af2cce0d84e3934eeb89917990f111d29aadef1
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 745c10b381ef2bd578278cb8d141a944ef1087e0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790692"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121984"
 ---
-# <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Utilizzo di watchOS applicazione padre in Xamarin
+# <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Utilizzo di watchOS padre Application in Xamarin
 
 > [!IMPORTANT]
-> L'accesso all'applicazione padre utilizzando solo gli esempi seguenti funziona nelle app di espressioni di controllo watchOS 1.
+> L'accesso all'applicazione padre usando solo gli esempi seguenti funziona nelle App watch watchOS 1.
 
 
-Esistono diversi modi per la comunicazione tra l'applicazione di espressioni di controllo e l'app iOS che in dotazione:
+Esistono diversi modi per la comunicazione tra l'app e l'app per iOS che viene abbinato a:
 
-- Espressioni di controllo estensioni può [chiamare un metodo](#code) contro l'app padre che viene eseguito in background su iPhone.
+- Espressioni di controllo delle estensioni can [chiamare un metodo](#code) per l'app padre che viene eseguito in background nell'iPhone.
 
-- Espressioni di controllo estensioni può [condividono una posizione di archiviazione](#storage) con l'app iPhone padre.
+- Espressioni di controllo delle estensioni can [condividere un percorso di archiviazione](#storage) con l'app iPhone padre.
 
-- Utilizzo di uniforme per passare i dati da un riepilogo o una notifica all'app di espressioni di controllo, l'invio l'utente a un controller di interfaccia specifica nell'app.
+- Utilizzo di Esegui Handoff per passare i dati da un riepilogo o una notifica all'app Watch, l'invio l'utente a un controller di interfaccia specifica nell'app.
 
-L'App padre è anche detta anche l'applicazione contenitore.
+L'App padre viene talvolta anche detto l'App contenitore.
 
 
 <a name="code" />
 
-## <a name="run-code"></a>Esecuzione di codice
+## <a name="run-code"></a>Eseguire il codice
 
 La comunicazione tra un'estensione di espressioni di controllo e l'app iPhone padre viene illustrata la [GpsWatch esempio](https://developer.xamarin.com/samples/GpsWatch).
-L'estensione di espressioni di controllo può richiedere l'app iOS padre per eseguire alcune operazioni di elaborazione sul relativo utilizzo per conto di `OpenParentApplication` metodo.
+L'estensione di espressioni di controllo può richiedere l'app per iOS padre per eseguire alcune operazioni di elaborazione nel relativo per conto dell'utente mediante il `OpenParentApplication` (metodo).
 
-Ciò è particolarmente utile per le attività in corso (incluse le richieste di rete) - solo l'elemento padre app iOS possono sfruttare l'elaborazione in background per completare queste attività e salvare i dati recuperati in una posizione accessibile per l'estensione di espressioni di controllo.
+Ciò è particolarmente utile per le attività in corso (tra cui le richieste di rete) - solo l'elemento padre app iOS possono sfruttare i vantaggi dell'elaborazione in background per completare queste attività e salvare i dati recuperati in una posizione accessibile per l'estensione di espressioni di controllo.
 
 
 
-### <a name="watch-kit-app-extension"></a>Espressioni di controllo dell'estensione App Kit
+### <a name="watch-kit-app-extension"></a>Estensione dell'App Watch Kit
 
-Chiamare il `WKInterfaceController.OpenParentApplication` nell'estensione app espressioni di controllo. Restituisce un `bool` che indica se la richiesta del metodo è stata inviata correttamente o No. Controllare il `error` parametro nella risposta `Action` per determinare se si è verificato durante il metodo in esecuzione nell'app iPhone.
+Chiamare il `WKInterfaceController.OpenParentApplication` nell'estensione dell'app watch. Restituisce un `bool` che indica se la richiesta del metodo è stata inviata correttamente o meno. Verificare i `error` parametro nella risposta `Action` per determinare se si è verificato durante il metodo in esecuzione nell'app iPhone.
 
 ```csharp
 WKInterfaceController.OpenParentApplication (new NSDictionary (), (replyInfo, error) => {
@@ -60,8 +60,8 @@ WKInterfaceController.OpenParentApplication (new NSDictionary (), (replyInfo, er
 
 ### <a name="ios-app"></a>App iOS
 
-Tutte le chiamate da un'estensione di app di espressioni di controllo vengono indirizzate tramite l'app iPhone `HandleWatchKitExtensionRequest` metodo.
-Se si eseguono richieste diverse nell'applicazione di espressioni di controllo, questo metodo sarà necessario eseguire una query di `userInfo` dizionario per determinare come elaborare la richiesta.
+Tutte le chiamate da un'estensione dell'app watch vengono indirizzate tramite l'app iPhone `HandleWatchKitExtensionRequest` (metodo).
+Se si stanno apportando diverse richieste in app watch, questo metodo sarà necessario eseguire una query di `userInfo` dizionario utilizzato per determinare la modalità di elaborazione della richiesta.
 
 
 ```csharp
@@ -87,13 +87,13 @@ public partial class AppDelegate : UIApplicationDelegate
 
 ## <a name="shared-storage"></a>Archiviazione condivisa
 
-Se si configura un [gruppo app](~/ios/watchos/app-fundamentals/app-groups.md) quindi le estensioni iOS 8 (incluse le estensioni di espressioni di controllo) possono condividere dati con l'applicazione padre.
+Se si configura un [gruppo di app](~/ios/watchos/app-fundamentals/app-groups.md) quindi estensioni iOS 8 (incluse le estensioni di espressioni di controllo) possono condividere dati con l'app padre.
 
 <a name="nsuserdefaults" />
 
 ### <a name="nsuserdefaults"></a>NSUserDefaults
 
-Il codice seguente può essere scritto nell'estensione dell'app espressioni di controllo sia l'app iPhone padre in modo che fanno riferimento a un set comune di `NSUserDefaults`:
+Il codice seguente può essere scritto l'estensione dell'app watch sia l'app iPhone padre in modo che si può fare riferimento a un set comune di `NSUserDefaults`:
 
 ```csharp
 NSUserDefaults shared = new NSUserDefaults(
@@ -113,7 +113,7 @@ var count = shared.IntForKey ("count");
 
 ### <a name="files"></a>File
 
-L'estensione di iOS app ed espressioni di controllo è anche possibile condividere i file usando un percorso file comune.
+L'estensione di app e guardare iOS è anche possibile condividere i file usando un percorso di file comuni.
 
 ```csharp
 var FileManager = new NSFileManager ();
@@ -124,15 +124,15 @@ Console.WriteLine ("agcpath: " + appGroupContainerPath);
 // use the path to create and update files
 ```
 
-Nota: se il percorso è `null` quindi controllare il [configurazione del gruppo di app](~/ios/watchos/app-fundamentals/app-groups.md) per verificare i profili di provisioning sono stati configurati correttamente e che sono stati scaricati o installati nel computer di sviluppo.
+Nota: se il percorso `null` quindi selezionare il [configurazione del gruppo di app](~/ios/watchos/app-fundamentals/app-groups.md) per assicurarsi che i profili di provisioning siano stati configurati correttamente e sono stati scaricati o installati nel computer di sviluppo.
 
-Per ulteriori informazioni, vedere il [le funzionalità delle App gruppo](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentazione.
+Per altre informazioni, vedere la [le funzionalità di gruppi di App](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentazione.
 
 ## <a name="wormholesharp"></a>WormHoleSharp
 
-Un meccanismo open source per watchOS 1 (in base a [MMWormHole](https://github.com/mutualmobile/MMWormhole)) per passare dati o i comandi tra l'app padre e l'applicazione di espressioni di controllo.
+Un meccanismo di open source più diffusi per watchOS 1 (base [MMWormHole](https://github.com/mutualmobile/MMWormhole)) per passare i dati o i comandi tra l'app padre e l'app watch.
 
-È possibile configurare spaziale usando un gruppo di app simile al seguente nell'app iOS e guardare estensione:
+È possibile configurare WormHole usando un gruppo di app simile al seguente nell'app per iOS e guarda estensione:
 
 ```csharp
 // AppDelegate (iOS) or InterfaceController (watch extension)
@@ -141,7 +141,7 @@ Wormhole wormHole;
 wormHole = new Wormhole ("group.com.your-company.watchstuff", "messageDir");
 ```
 
-Scaricare la versione c# [WormHoleSharp](https://github.com/Clancey/WormHoleSharp).
+Scaricare il C# versione [WormHoleSharp](https://github.com/Clancey/WormHoleSharp).
 
 
 

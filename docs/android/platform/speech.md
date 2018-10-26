@@ -1,57 +1,57 @@
 ---
-title: Riconoscimento vocale Android
-description: Questo articolo vengono illustrate le nozioni di base dell'utilizzo di spazio dei nomi Android.Speech molto potente. Dall'inizio, Android è stato in grado di riconoscimento vocale e di eseguirne l'output come testo. È un processo relativamente semplice. Per sintesi vocale, tuttavia, il processo è più complesso, perché non solo il motore di riconoscimento vocale deve essere prese in considerazione, ma anche le lingue disponibili e installate dal sistema di sintesi vocale (TTS).
+title: Riconoscimento vocale di Android
+description: Questo articolo illustra le nozioni di base dell'utilizzo dello spazio dei nomi Android. Speech molto potente. Fin dalle sue origini, Android è stata in grado di riconoscimento vocale e restituirlo come testo. È un processo relativamente semplice. Per sintesi vocale, tuttavia, il processo è più complesso, poiché non solo il motore di riconoscimento vocale necessario tener conto, ma anche le lingue disponibili e installate dal sistema di sintesi vocale (TTS).
 ms.prod: xamarin
 ms.assetid: FA3B8EC4-34D2-47E3-ACEA-BD34B28115B9
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/02/2018
-ms.openlocfilehash: bdaa9bf09485c06551a2df15a2e3a4b410a53e75
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e88f6e24cbf4c8b2f0c0486c6408e234e87066cc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30769767"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104349"
 ---
-# <a name="android-speech"></a>Riconoscimento vocale Android
+# <a name="android-speech"></a>Riconoscimento vocale di Android
 
-_Questo articolo vengono illustrate le nozioni di base dell'utilizzo di spazio dei nomi Android.Speech molto potente. Dall'inizio, Android è stato in grado di riconoscimento vocale e di eseguirne l'output come testo. È un processo relativamente semplice. Per sintesi vocale, tuttavia, il processo è più complesso, perché non solo il motore di riconoscimento vocale deve essere prese in considerazione, ma anche le lingue disponibili e installate dal sistema di sintesi vocale (TTS)._
+_Questo articolo illustra le nozioni di base dell'utilizzo dello spazio dei nomi Android. Speech molto potente. Fin dalle sue origini, Android è stata in grado di riconoscimento vocale e restituirlo come testo. È un processo relativamente semplice. Per sintesi vocale, tuttavia, il processo è più complesso, poiché non solo il motore di riconoscimento vocale necessario tener conto, ma anche le lingue disponibili e installate dal sistema di sintesi vocale (TTS)._
 
 ## <a name="speech-overview"></a>Panoramica di riconoscimento vocale
 
-Con un sistema, quale "riconosce" voce umana ed enunciates quanto digitato, riconoscimento vocale per testo e di sintesi vocale, è un'area crescente all'interno di sviluppo per dispositivi mobile quando aumenta la richiesta per la comunicazione naturale con i dispositivi. Sono presenti molte istanze in presenza di una funzionalità che converte il testo nel riconoscimento vocale o viceversa, è uno strumento estremamente utile per incorporare nell'applicazione android.
+Disporre di un sistema, quali "riconosce" voce umana ed enunciates qual è la digitazione, riconoscimento vocale in testo e sintesi vocale, ovvero è un'area all'interno di sviluppo per dispositivi mobili in continua crescita di picco della domanda per la comunicazione naturale con i dispositivi. Sono presenti molte istanze in presenza di una funzionalità che converte il testo in sintesi vocale, o viceversa, è uno strumento molto utile per incorporare nell'applicazione android.
 
-Ad esempio, con clamp verso il basso al telefono cellulare utilizzo durante la Guida, gli utenti desiderano un modo libero mani operativo i propri dispositivi. L'insieme di fattori di forma Android diversi, ad esempio, usare Android, e l'inclusione sempre più ampio di quelle in grado di utilizzare i dispositivi Android (ad esempio Tablet e riempie nota), ha creato un obiettivo più grande in applicazioni di sintesi vocale.
+Ad esempio, con clamp verso il basso utilizzo telefono cellulare mentre si Guida, gli utenti desiderano un modo gratuito mani operativo i propri dispositivi. La vasta gamma di fattori di forma diversi Android, ad esempio Android Wear, e l'inclusione sempre più ampio di quelle in grado di usare i dispositivi Android (ad esempio Tablet e i riquadri nota), ha creato una maggiore attenzione su grandi applicazioni di sintesi vocale.
 
-Google fornisce allo sviluppatore una vasta gamma di API nello spazio dei nomi Android.Speech per coprire la maggior parte delle istanze di rendere i dispositivi "vocale compatibile con" (ad esempio un software progettato for the blind).  Lo spazio dei nomi include la possibilità di consentire che il testo da convertire in vocale tramite `Android.Speech.Tts`, il motore usato per eseguire la traduzione, nonché un numero di controllo `RecognizerIntent`s che consentono di riconoscimento vocale da convertire in testo.
+Google fornisce allo sviluppatore di una vasta gamma di API nello spazio dei nomi Android. Speech per coprire la maggior parte delle istanze di rendere i dispositivi "vocale compatibile con" (ad esempio, software progettato for the blind).  Lo spazio dei nomi include la possibilità di consentire che il testo da tradurre in riconoscimento vocale attraverso `Android.Speech.Tts`, controllare il motore usato per eseguire la traduzione, nonché un numero di `RecognizerIntent`s che consentono di riconoscimento vocale da convertire in testo.
 
-Mentre le funzionalità sono presenti per i dialoghi di comprendere, sono previste limitazioni in base all'hardware utilizzato. È improbabile che il dispositivo verrà interpretato correttamente tutti gli elementi si parla in tutte le lingue disponibili.
+Mentre le funzionalità sono presenti per il riconoscimento vocale essere riconosciuta, sono previste limitazioni in base all'hardware usato. È improbabile che il dispositivo interpreterà correttamente tutto ciò che si parla in tutte le lingue disponibili.
 
 ## <a name="requirements"></a>Requisiti
 
-Non sono previsti requisiti speciali di questa Guida, diverso da un dispositivo che presenta un microfono e degli altoparlanti.
+Non sono previsti requisiti speciali per questa Guida, diverso dal dispositivo che presenta un microfono e degli altoparlanti.
 
-Alla base di un dispositivo Android interpretazione vocale è l'utilizzo di un `Intent` con un corrispondente `OnActivityResult`.
-È importante, tuttavia, ricordare che il riconoscimento vocale non è stata riconosciuta, ma interpretato al testo. La differenza è importante.
+Alla base di un dispositivo Android l'interpretazione di riconoscimento vocale è l'uso di un' `Intent` con un corrispondente `OnActivityResult`.
+È importante, tuttavia, per riconoscere che il riconoscimento vocale non è stato riconosciuto, ma interpretato al testo. La differenza è importante.
 
 ### <a name="the-difference-between-understanding-and-interpreting"></a>La differenza tra la comprensione e l'interpretazione
 
-Una semplice definizione di comprensione è che si è in grado di determinare il significato di ciò che viene detto reale tono e contesto. Per interpretare appena si intende accettare i termini e restituirli in un altro modulo.
+Una definizione di semplice comprensione è che si è in grado di determinare il vero significato di parlato tono e contesto. Per interpretare appena significa che sfruttare le parole e restituirli in un formato diverso.
 
-Si consideri il semplice esempio seguente viene utilizzato nella conversazione quotidiane: 
+Si consideri l'esempio seguente che viene utilizzata nella conversazione ogni giorno: 
 
 <kbd>Ciao come stai?</kbd>
 
-Assenza di curvatura (particolare importanza in parole specifiche o parti di parole), è una semplice domanda. Tuttavia, se un ritmo lento viene applicato alla riga, la persona ascolto rileverà richiedente che non sia troppo lieta forse deve Grandissimo o che il richiedente è unwell. Se viene inserito l'enfasi on "sono", la persona che richiede è in genere più interessata nella risposta.
+Senza flesso (attenzione a parole specifiche o parti di parole), è una semplice domanda. Tuttavia, se un ritmo lento viene applicato alla riga, la persona in ascolto rileverà che il richiedente non è molto soddisfatto e forse deve Grandissimo o che il richiedente è unwell. Se l'attenzione viene inserito nella "sono", la persona che richiede viene in genere più interessati a nella risposta.
 
-Senza audio sufficientemente potente elaborazione per rendere l'uso di curvatura e un livello di intelligenza artificiale (AI) per capire il contesto, il software non è possibile anche iniziare a comprendere cosa è stata definita, ottimali un telefono semplice è il riconoscimento vocale anche convertire testo.
+Senza audio piuttosto potente elaborazione per rendere utilizzare l'inflessione e un livello di intelligenza artificiale (AI) per comprendere il contesto, il software non è possibile anche solo iniziare a comprendere ciò che è stato detto: il meglio possibile eseguire un semplice telefono è convertire il riconoscimento vocale in testo.
 
 ## <a name="setting-up"></a>Impostazione
 
-Prima di utilizzare il sistema di riconoscimento vocale, è sempre consigliabile verificare che il dispositivo dispone di un microfono. Non vi sarà inutile sta tentando di eseguire l'app in un blocco note Kindle o Google senza un microfono installato.
+Prima di usare il sistema di riconoscimento vocale, è sempre consigliabile controllare per verificare che il dispositivo dispone di un microfono. Non vi sarà poco senso provando a eseguire l'app in un blocco note Kindle o Google non dispongono di microfono installato.
 
-Esempio di codice seguente illustra l'esecuzione di query se il microfono sia disponibile e in caso contrario, per creare un avviso. Se non è disponibile alcun microfono a questo punto si sarebbe chiudere l'attività o disabilitare la possibilità di registrare il riconoscimento vocale.
+Esempio di codice seguente illustra l'esecuzione di query se il microfono sia disponibile e in caso contrario, per creare un avviso. Se è disponibile alcun microfono a questo punto si potrebbe uscire dall'attività o disabilitare la possibilità di registrare il riconoscimento vocale.
 
 ```csharp
 string rec = Android.Content.PM.PackageManager.FeatureMicrophone;
@@ -69,7 +69,7 @@ if (rec != "android.hardware.microphone")
 
 ### <a name="creating-the-intent"></a>Lo scopo di creazione
 
-Lo scopo per il sistema di riconoscimento vocale utilizza un tipo particolare di finalità chiamato il `RecognizerIntent`. Questa finalità controlla un numero elevato di parametri, inclusi il tempo di attesa con inattività fino a quando non viene considerata la registrazione su, tutte le lingue aggiuntive per riconoscere e di output e il testo da includere nel `Intent`della finestra di dialogo modale come mezzo di istruzione. In questo frammento, `VOICE` è un `readonly int` utilizzato per il riconoscimento in `OnActivityResult`.
+Lo scopo per il sistema di riconoscimento vocale utilizza un tipo particolare di finalità chiamato il `RecognizerIntent`. Questa finalità controlla un numero elevato di parametri, incluso il tempo di attesa con silenzio finché la registrazione è considerata rispetto, tutte le lingue aggiuntive per riconoscere e di output e qualsiasi testo da includere nel `Intent`della finestra di dialogo modale come mezzo di istruzione. In questo frammento di codice `VOICE` è un `readonly int` utilizzato per il riconoscimento in `OnActivityResult`.
 
 ```csharp
 var voiceIntent = new Intent(RecognizerIntent.ActionRecognizeSpeech);
@@ -85,11 +85,11 @@ StartActivityForResult(voiceIntent, VOICE);
 
 ### <a name="conversion-of-the-speech"></a>Conversione del riconoscimento vocale
 
-Il testo interpretato del contenuto vocale verrà recapitato all'interno di `Intent`, che viene restituito quando l'attività è stata completata e si accede tramite `GetStringArrayListExtra(RecognizerIntent.ExtraResults)`. Verrà restituito un `IList<string>`, di cui l'indice può essere utilizzato e visualizzato, a seconda del numero di lingue richiesto con lo scopo del chiamante (e specificato il `RecognizerIntent.ExtraMaxResults`). Come con qualsiasi elenco, tuttavia, è opportuno un controllo per verificare che sia possibile visualizzare i dati.
+Il testo interpretato del contenuto vocale verrà recapitato all'interno di `Intent`, che viene restituito quando l'attività è stata completata e è accessibili tramite `GetStringArrayListExtra(RecognizerIntent.ExtraResults)`. Verrà restituito un `IList<string>`, di cui l'indice può essere utilizzato e visualizzato, a seconda del numero di lingue richieste nella finalità del chiamante (specificato nel `RecognizerIntent.ExtraMaxResults`). Come con qualsiasi elenco, tuttavia, vale la pena un controllo per assicurarsi che vi sia i dati da visualizzare.
 
-Durante l'attesa per il valore restituito di un `StartActivityForResult`, `OnActivityResult` metodo deve essere fornito.
+Quando è in ascolto per il valore restituito di una `StartActivityForResult`, il `OnActivityResult` metodo deve essere fornito.
 
-Nell'esempio seguente, `textBox` è un `TextBox` utilizzato per l'output dei quali è stato determinato. Potrebbe anche essere utilizzata per passare il testo in una forma dell'interprete e da lì, l'applicazione è possibile confrontare il testo e un ramo a un'altra parte dell'applicazione.
+Nell'esempio riportato di seguito `textBox` è un `TextBox` usato per l'output di ciò che è stato determinato. Può ugualmente essere usata per passare il testo in una forma dell'interprete e da lì, l'applicazione in grado di confrontare il testo e il ramo a un'altra parte dell'applicazione.
 
 ```csharp
 protected override void OnActivityResult(int requestCode, Result resultVal, Intent data)
@@ -99,42 +99,45 @@ protected override void OnActivityResult(int requestCode, Result resultVal, Inte
         if (resultVal == Result.Ok)
         {
             var matches = data.GetStringArrayListExtra(RecognizerIntent.ExtraResults);
-             if (matches.Count != 0)
-             {
-                  string textInput = textBox.Text + matches[0];
-                  textBox.Text = textInput;
-                  switch(matches[0].Substring(0,5).ToLower())
-                  {
-                     case "north":
-                      MovePlayer(0);
-                     break;
-                   case "south":
-                     MovePlayer(1);
-                     break;
-             }
-             else
-                  textBox.Text = "No speech was recognised";
+            if (matches.Count != 0)
+            {
+                string textInput = textBox.Text + matches[0];
+                textBox.Text = textInput;
+                switch (matches[0].Substring(0, 5).ToLower())
+                {
+                    case "north":
+                        MovePlayer(0);
+                        break;
+                    case "south":
+                        MovePlayer(1);
+                        break;
+                }
+            }
+            else
+            {
+                textBox.Text = "No speech was recognised";
+            }
         }
-   }
-    base.OnActivityResult(requestCode, resultVal, data);
+        base.OnActivityResult(requestCode, resultVal, data);
+    }
 }
 ```
 
 ## <a name="text-to-speech"></a>Sintesi vocale
 
-Sintesi vocale non è piuttosto l'opposto di riconoscimento vocale per testo e si basa su due componenti principali; viene installato un motore di sintesi vocale sul dispositivo e una lingua da installare.
+Sintesi vocale non è abbastanza l'opposto di riconoscimento vocale in testo e si basa su due componenti principali. viene installato un motore di sintesi vocale sul dispositivo e una lingua da installare.
 
-In gran parte, i dispositivi Android forniti con il valore predefinito installato servizio Google TTS e almeno una lingua. Ciò viene stabilito quando il dispositivo prima di tutto configurare e sarà basato su cui il dispositivo non è al momento (ad esempio, un telefono configurato in Germania installerà la lingua tedesca, mentre uno in America avrà inglese americano).
+In gran parte, i dispositivi Android forniti con il valore predefinito installato il servizio Google TTS e almeno una lingua. Ciò viene stabilito al momento il dispositivo prima di tutto configurare e si baserà in cui il dispositivo è al momento (ad esempio, un telefono configurato in Germania installerà la lingua tedesca, mentre uno in America avrà l'inglese americano).
 
-### <a name="step-1---instantiating-texttospeech"></a>Passaggio 1: creare un'istanza TextToSpeech
+### <a name="step-1---instantiating-texttospeech"></a>Passaggio 1: creazione di un'istanza TextToSpeech
 
-`TextToSpeech` può richiedere fino a 3 parametri, le prime due sono obbligatori mentre il terzo facoltativa (`AppContext`, `IOnInitListener`, `engine`). Il listener viene utilizzato per associare il servizio e il test per un errore con il motore da qualsiasi numero di motori disponibile Android sintesi vocale. Come minimo, il dispositivo disporrà di motore di Google.
+`TextToSpeech` può richiedere fino a 3 parametri, le prime due sono necessarie con la terza sia facoltativo (`AppContext`, `IOnInitListener`, `engine`). Il listener viene utilizzato per eseguire l'associazione al servizio e a prova di errore con il motore in fase di un numero qualsiasi di motori di disponibile Android sintesi vocale. Come minimo, il dispositivo disporrà del motore di Google.
 
 ### <a name="step-2---finding-the-languages-available"></a>Passaggio 2: individuare le lingue disponibili
 
-Il `Java.Util.Locale` classe contiene un metodo utile denominato `GetAvailableLocales()`. Questo elenco di lingue supportate dal motore di riconoscimento vocale può essere testato le lingue installate.
+Il `Java.Util.Locale` classe contiene un utile metodo denominato `GetAvailableLocales()`. Questo elenco di lingue supportate dal motore di riconoscimento vocale può essere testato con le lingue installate.
 
-È un'operazione semplice per generare l'elenco di lingue "riconosciuto". Sarà sempre presente una lingua predefinita (l'utente impostato durante l'installazione prima il dispositivo di linguaggio), pertanto in questo esempio il `List<string>` è "Default" come primo parametro, il resto dell'elenco verrà compilato in base al risultato del `textToSpeech.IsLanguageAvailable(locale)`.
+È un'operazione banale per generare l'elenco di lingue "riconosciuto". Sarà sempre presente una lingua predefinita (l'utente impostato durante l'installazione prima di tutto il dispositivo di linguaggio), quindi in questo esempio il `List<string>` è "Default" come primo parametro, il resto dell'elenco verrà compilato in base al risultato del `textToSpeech.IsLanguageAvailable(locale)`.
 
 ```csharp
 var langAvailable = new List<string>{ "Default" };
@@ -158,21 +161,21 @@ foreach (var locale in localesAvailable)
 langAvailable = langAvailable.OrderBy(t => t).Distinct().ToList();
 ```
 
-Questo codice chiama [TextToSpeech.IsLanguageAvailable](https://developer.xamarin.com/api/member/Android.Speech.Tts.TextToSpeech.IsLanguageAvailable/p/Java.Util.Locale/) per verificare se il language pack per impostazioni locali specificato è già presente nel dispositivo. Questo metodo restituisce un [LanguageAvailableResult](https://developer.xamarin.com/api/type/Android.Speech.Tts.LanguageAvailableResult/), che indica se è disponibile la lingua per le impostazioni locali passata. Se `LanguageAvailableResult` indica che la lingua è `NotSupported`, non esiste alcun pacchetto vocale (anche per il download) per tale lingua. Se `LanguageAvailableResult` è impostata su `MissingData`, è possibile scaricare un nuovo pacchetto di lingua, come illustrato di seguito nel passaggio 4.
+Questo codice viene chiamato [TextToSpeech.IsLanguageAvailable](https://developer.xamarin.com/api/member/Android.Speech.Tts.TextToSpeech.IsLanguageAvailable/p/Java.Util.Locale/) per verificare se il language pack per le impostazioni locali specificato è già presente nel dispositivo. Questo metodo restituisce un [LanguageAvailableResult](https://developer.xamarin.com/api/type/Android.Speech.Tts.LanguageAvailableResult/), che indica se la lingua per le impostazioni locali passata è disponibile. Se `LanguageAvailableResult` indica che la lingua è `NotSupported`, non esiste alcun pacchetto voice disponibile (anche per il download) per tale lingua. Se `LanguageAvailableResult` è impostata su `MissingData`, è possibile scaricare un nuovo pacchetto di lingua, come illustrato di seguito nel passaggio 4.
 
-### <a name="step-3---setting-the-speed-and-pitch"></a>Passaggio 3: impostazione della velocità e tono
+### <a name="step-3---setting-the-speed-and-pitch"></a>Passaggio 3: impostare la velocità e tono
 
-Android consente all'utente di modificare il suono del riconoscimento vocale modificando il `SpeechRate` e `Pitch` (il tasso di velocità e il tono del riconoscimento vocale). Questo va da 0 a 1, con la voce "normale" da 1 per entrambi.
+Android consente all'utente di modificare il suono del contenuto vocale modificando la `SpeechRate` e `Pitch` (la frequenza di velocità e il tono del contenuto vocale). Questo va da 0 a 1, con la voce "normale" da 1 per entrambi.
 
-### <a name="step-4---testing-and-loading-new-languages"></a>Passaggio 4: test e il caricamento di nuove lingue
+### <a name="step-4---testing-and-loading-new-languages"></a>Passaggio 4: test e il caricamento di nuovi linguaggi
 
-Download di una nuova lingua viene eseguito usando un `Intent`. Il risultato di questa finalità fa sì che il [OnActivityResult](https://developer.xamarin.com/api/member/Android.App.Activity.OnActivityResult/) metodo da richiamare. A differenza dell'esempio discorso in testo (che il [RecognizerIntent](https://developer.xamarin.com/api/type/Android.Speech.RecognizerIntent/) come una `PutExtra` parametro per il `Intent`), il testing e il caricamento `Intent`sono `Action`-basato su:
+Download di un nuovo linguaggio viene eseguito usando un `Intent`. Il risultato di questa finalità fa sì che il [OnActivityResult](https://developer.xamarin.com/api/member/Android.App.Activity.OnActivityResult/) metodo da richiamare. A differenza dell'esempio di riconoscimento vocale (che utilizzato il [RecognizerIntent](https://developer.xamarin.com/api/type/Android.Speech.RecognizerIntent/) come una `PutExtra` parametro per il `Intent`), il test e il caricamento `Intent`sono `Action`-basato su:
 
--   [TextToSpeech.Engine.ActionCheckTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionCheckTtsData/) &ndash; avvia un'attività dalla piattaforma `TextToSpeech` motore per verificare la corretta installazione e la disponibilità delle risorse di lingua del dispositivo.
+-   [TextToSpeech.Engine.ActionCheckTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionCheckTtsData/) &ndash; un'attività viene avviata dalla piattaforma `TextToSpeech` motore per verificare la corretta installazione e la disponibilità delle risorse della lingua del dispositivo.
 
 -   [TextToSpeech.Engine.ActionInstallTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionInstallTtsData/) &ndash; avvia un'attività che richiede all'utente di scaricare le lingue necessarie.
 
-Esempio di codice seguente viene illustrato come usare queste azioni per verificare la presenza di risorse di lingua e scaricare un nuovo linguaggio:
+Esempio di codice seguente illustra come usare queste azioni di test per le risorse della lingua e scaricare un nuovo linguaggio:
 
 ```csharp
 var checkTTSIntent = new Intent();
@@ -190,25 +193,25 @@ protected override void OnActivityResult(int req, Result res, Intent data)
 }
 ```
 
-`TextToSpeech.Engine.ActionCheckTtsData` verifica la disponibilità di risorse di lingua. `OnActivityResult` viene richiamato al completamento di questo test. Se è necessario scaricare, le risorse della lingua `OnActivityResult` genera il `TextToSpeech.Engine.ActionInstallTtsData` per avviare un'attività che consente all'utente di scaricare le lingue necessarie. Nota che questo `OnActivityResult` implementazione non controlla il `Result` codice, in quanto, in questo esempio semplificato, la determinazione è già stata creata che è necessario scaricare il language pack.
+`TextToSpeech.Engine.ActionCheckTtsData` verifica la disponibilità di risorse della lingua. `OnActivityResult` viene richiamato al completamento di questo test. Se è necessario scaricare, le risorse della lingua `OnActivityResult` attiva il `TextToSpeech.Engine.ActionInstallTtsData` azione per avviare un'attività che consente all'utente di scaricare le lingue necessarie. Si noti che questo `OnActivityResult` implementazione non verifica il `Result` codice perché, in questo esempio semplificato, la determinazione sia già stata eseguita che è necessario scaricare il language pack.
 
-Il `TextToSpeech.Engine.ActionInstallTtsData` vengono illustrate le cause di azione il **dati vocali Google TTS** attività vengano presentate all'utente per la scelta delle lingue da scaricare:
+Il `TextToSpeech.Engine.ActionInstallTtsData` cause azione il **i dati vocali Google TTS** attività devono essere presentati all'utente per la scelta delle lingue da scaricare:
 
-![Google sintesi vocale dati attività](speech-images/01-google-tts-voice-data.png)
+![Attività di Data di sintesi vocale di Google Voice](speech-images/01-google-tts-voice-data.png)
 
-Ad esempio, l'utente potrebbe selezionare francese e fare clic sull'icona di download per scaricare dati vocali francese:
+Ad esempio, l'utente potrebbe scegliere francese e fare clic sull'icona di download per scaricare i dati vocali francese:
 
 ![Esempio di download in lingua francese](speech-images/02-selecting-french.png)
 
-Installazione di questi dati viene eseguita automaticamente una volta completato il download.
+Installazione di questi dati viene eseguita automaticamente dopo aver completato il download.
 
 
-### <a name="step-5---the-ioninitlistener"></a>Passaggio 5 - il IOnInitListener
+### <a name="step-5---the-ioninitlistener"></a>Passaggio 5: il IOnInitListener
 
-Per un'attività in grado di convertire il sintesi vocale, il metodo di interfaccia `OnInit` deve essere implementato (questo è il secondo parametro specificato per la creazione dell'istanza di `TextToSpeech` classe). Inizializza il listener e il risultato di test.
+Per un'attività sia in grado di convertire il sintesi vocale, il metodo di interfaccia `OnInit` deve essere implementata (questo è il secondo parametro specificato per la creazione dell'istanza di `TextToSpeech` classe). Ciò consente di inizializzare il listener e si testa il risultato.
 
-Il listener è necessario testare sia per `OperationResult.Success` e `OperationResult.Failure` minimo.
-L'esempio seguente mostra solo che:
+Il listener deve verificare la presenza di entrambe `OperationResult.Success` e `OperationResult.Failure` minimo.
+Nell'esempio seguente illustra questa:
 
 ```csharp
 void TextToSpeech.IOnInitListener.OnInit(OperationResult status)
@@ -224,14 +227,14 @@ void TextToSpeech.IOnInitListener.OnInit(OperationResult status)
 
 ## <a name="summary"></a>Riepilogo
 
-In questa guida sono state osservate le nozioni di base della conversione di sintesi e riconoscimento vocale per testo e i possibili metodi di includerli all'interno delle applicazioni. Mentre non coprono ogni caso particolare, è stata acquisita una conoscenza di base delle modalità di interpretazione di riconoscimento vocale sull'installazione di nuove lingue e come aumentare inclusivity delle app.
+In questa guida è stato illustrato le nozioni di base della conversione di sintesi vocale e sintesi vocale in testo e metodi possibili come includerli nelle proprie app. Mentre non coprono ogni caso particolare, è stata acquisita una conoscenza di base di come viene interpretata vocale, come installare nuovi linguaggi e come aumentare la inclusivity delle tue app.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Xamarin.Forms DependencyService](https://developer.xamarin.com/samples/UsingDependencyService/)
+- [Xamarin. Forms DependencyService](https://developer.xamarin.com/samples/UsingDependencyService/)
 - [Sintesi vocale (esempio)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TextToSpeech)
-- [Riconoscimento vocale per testo (esempio)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SpeechToText)
-- [Spazio dei nomi Android.Speech](https://developer.xamarin.com/api/namespace/Android.Speech/)
+- [Riconoscimento vocale (esempio)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SpeechToText)
+- [Spazio dei nomi Android. Speech](https://developer.xamarin.com/api/namespace/Android.Speech/)
 - [Spazio dei nomi Android.Speech.Tts](https://developer.xamarin.com/api/namespace/Android.Speech.Tts/)

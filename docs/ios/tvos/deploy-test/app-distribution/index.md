@@ -1,31 +1,31 @@
 ---
-title: tvOS Cenni preliminari sulla distribuzione di App
-description: Questo documento viene fornita una panoramica delle tecniche di distribuzione disponibili per app Xamarin.tvOS e funge da un puntatore a documenti più dettagliati per l'argomento.
+title: Panoramica della distribuzione di App tvOS
+description: Questo documento offre una panoramica delle tecniche di distribuzione disponibili per app xamarin. tvos e funge da un puntatore a documenti più dettagliati sull'argomento.
 ms.prod: xamarin
 ms.assetid: D5E0F446-C083-4E21-9788-FC84D32D00C4
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 440d980c39434165ba9a59ccf67850977c8f75c3
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 0a40d50d02008439e81d5db19bcda0647203e2da
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788745"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110700"
 ---
-# <a name="tvos-app-distribution-overview"></a>tvOS Cenni preliminari sulla distribuzione di App
+# <a name="tvos-app-distribution-overview"></a>Panoramica della distribuzione di App tvOS
 
-_Questo documento viene fornita una panoramica delle tecniche di distribuzione disponibili per app Xamarin.tvOS e funge da un puntatore a documenti più dettagliati per l'argomento._
-
-
-Una volta sviluppato l'app Xamarin.tvOS, è il passaggio successivo nel ciclo di vita di sviluppo software per distribuire l'app agli utenti, come illustrato nella sezione evidenziata del diagramma riportato di seguito:
+_Questo documento offre una panoramica delle tecniche di distribuzione disponibili per app xamarin. tvos e funge da un puntatore a documenti più dettagliati sull'argomento._
 
 
-[![Panoramica di ciclo di vita dello sviluppo di software](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
+Una volta all'app xamarin. tvos è stata sviluppata, il passaggio successivo del ciclo di vita di sviluppo software è distribuire l'app agli utenti, come illustrato nella sezione evidenziata del diagramma seguente:
 
 
-Apple fornisce le seguenti per distribuire un'app tvOS, supportati da Xamarin.tvOS:
+[![La panoramica del ciclo di vita dello sviluppo di software](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
+
+
+Apple offre modi seguenti per distribuire un'app tvOS, che sono supportati da xamarin. tvos:
 
 1. [**App Store**](#Apple-TV-App-Store-Distribution)
 2. [**In-House (Enterprise)**](#In-House-Distribution) 
@@ -35,32 +35,32 @@ In tutti questi scenari è necessario effettuare il provisioning delle applicazi
 
 <a name="Apple-TV-App-Store-Distribution" />
 
-## <a name="apple-tv-app-store-distribution"></a>Distribuzione di App Store di Apple TV
+## <a name="apple-tv-app-store-distribution"></a>Distribuzione di Apple TV App Store
 
-Si tratta della modalità principale che tvOS App vengano distribuite a utenti nei dispositivi di Apple TV. Tutte le app inviate all'App Store di Apple TV richiedono l'approvazione da Apple.
+Questo è il modo principale che le app tvOS vengono distribuite agli utenti nei dispositivi Apple TV. Tutte le app inviate alla Store di App Apple TV richiedono l'approvazione di Apple.
 
-Le app vengono inviate all'App Store tramite un portale chiamato *iTunes Connect*. Consultare il nostro [configurata l'applicazione in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) guide per informazioni sugli argomenti seguenti:
+Le app vengono inviate all'App Store tramite un portale chiamato *iTunes Connect*. Vedere la [configurare l'App in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) Guida per informazioni sugli argomenti seguenti:
 
-- La gestione dei contratti, imposte e servizi bancari.
-- Creazione di un iTunes Connect Record.
-- Gestione App video e schermate.
-- La gestione di App nome, descrizione, quali sono le novità, le parole chiave e gli URL.
-- Gestione delle informazioni applicazione generale.
-- Gestione delle informazioni Game Center.
-- Gestione delle informazioni di revisione di App.
+- La gestione dei contratti, imposte e banche.
+- Creazione un Record iTunes Connect.
+- La gestione delle App video e screenshot.
+- Gestione di App nome, descrizione, novità, parole chiave e URL.
+- Gestione di informazioni generali sull'App.
+- Gestione delle informazioni di Game Center.
+- Gestione delle informazioni di revisione dell'App.
 - Gestione di informazioni sui prezzi.
-- Gestione delle informazioni di acquisto In-App.
-- Visualizzazione delle revisioni di applicazione.
+- Gestione delle informazioni sull'acquisto In-App.
+- Visualizzazione delle revisioni dell'applicazione.
 
-Sebbene non scritto in modo specifico per tvOS, questo documento vengono fornite informazioni su come configurare e usare questo portale per preparare l'app per la pubblicazione in App Store di Apple TV. Molti degli stessi passaggi sono necessari se si configura un'app iOS o tvOS.
+Anche se non è scritto specificamente per tvOS, questo documento vengono fornite informazioni su come configurare e usare questo portale per preparare l'app per la pubblicazione nel Store di App Apple TV. Molti dei passaggi sono necessari se si configura un'app iOS o tvOS.
 
-Dopo aver completato tutti i passaggi elencati in precedenza, vedere il nostro [configurare l'App tvOS in iTunes Connect](~/ios/tvos/deploy-test/app-distribution/itunes-connect.md) tvOS informazioni dell'applicazione specifica che verrà richiesto di aggiungere.
+Dopo aver completato tutti i passaggi elencati in precedenza, vedere la [configurare l'App tvOS in iTunes Connect](~/ios/tvos/deploy-test/app-distribution/itunes-connect.md) per aggiungere le informazioni specifiche di app tvOS che verrà richiesto.
 
 È importante tenere presente che solo gli sviluppatori che appartengono al **programma Apple Developer** hanno accesso a iTunes Connect. I membri del **programma Apple Developer Enterprise** non hanno accesso.
 
-Se si sono verificati problemi di invio dell'app Xamarin.tvOS per App Store di Apple TV, consultare il nostro [Troubleshooting](~/ios/tvos/troubleshooting.md) Guida. Contiene diversi problemi che potrebbero verificarsi e come risolverli nel Xamarin.tvOS.
+Se si sono verificati problemi di invio dell'app xamarin. tvos ad la Store di App Apple TV, vedere la [Troubleshooting](~/ios/tvos/troubleshooting.md) Guida. Contiene alcuni problemi noti che possono verificarsi e come risolverli in di xamarin. tvos.
 
-Per ulteriori informazioni, visitare il [la pubblicazione in App Store di Apple TV](~/ios/tvos/deploy-test/app-distribution/app-store-publishing.md) Guida.
+Per altre informazioni, visitare il [pubblicazione di Store di App Apple TV](~/ios/tvos/deploy-test/app-distribution/app-store-publishing.md) Guida.
 
 <a name="In-House-Distribution" />
 
@@ -68,21 +68,21 @@ Per ulteriori informazioni, visitare il [la pubblicazione in App Store di Apple 
 
 La distribuzione interna, chiamata a volte *distribuzione aziendale*, consente a tutti i membri del **programma Apple Developer Enterprise** di distribuire le app internamente ad altri membri della stessa organizzazione. La distribuzione interna presenta il vantaggio di non dover esaminare l'App Store e di poter installare un'applicazione in un numero illimitato di dispositivi. È tuttavia importante tenere presente che i membri del **programma Apple Developer Enterprise** **non** hanno accesso a iTunes Connect e quindi il licenziatario è responsabile della distribuzione dell'app.
 
-Per ulteriori informazioni sulla configurazione e su come distribuire l'applicazione internamente, consultare il [Guida alla distribuzione interne](~/ios/deploy-test/app-distribution/in-house-distribution.md). Questo documento è specifico di iOS, ma vengono utilizzate le stesse tecniche per tvOS app.
+Per altre informazioni sulla configurazione e come distribuire l'applicazione internamente, consultare il [Guida distribuzione interna](~/ios/deploy-test/app-distribution/in-house-distribution.md). Questo documento è specifico di iOS, ma vengono utilizzate le stesse tecniche per le app tvOS.
 
 <a name="Ad_Hoc_Distribution"/>
 
 ## <a name="ad-hoc-distribution"></a>Distribuzione ad hoc
 
-App Xamarin.tvOS può essere sottoposto a test utente tramite la distribuzione di ad hoc, cui è disponibile in entrambi i **programma per sviluppatori Apple**e **Apple Developer Enterprise Program**e consente ai dispositivi Apple TV fino a 100 da testare. Migliore dei casi di utilizzo per la distribuzione ad hoc è distribuzione all'interno della società quando iTunes Connect non è un'opzione.
+Le app xamarin. tvos possono essere testate dagli utenti tramite la distribuzione ad hoc, cui è disponibile in entrambe le **Apple Developer Program**e il **Apple Developer Enterprise Program**che consente fino a 100 dispositivi Apple TV da sottoporre a test. Il caso d'uso ideale per la distribuzione ad hoc è distribuzione all'interno della società quando iTunes Connect non è un'opzione.
 
-Per ulteriori informazioni sulla configurazione e su come distribuire l'app internamente, consultare il [Guida alla distribuzione Ad Hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md). Anche in questo documento è specifico di iOS, ma vengono utilizzate le stesse tecniche per tvOS app.
+Per altre informazioni sulla configurazione e come distribuire l'app internamente, consultare il [Guida alla distribuzione Ad Hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md). Anche in questo documento è specifico di iOS, ma vengono utilizzate le stesse tecniche per le app tvOS.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo ha fornito una breve panoramica dei meccanismi di distribuzione che sono disponibili per App Xamarin.tvOS. Sono stati introdotti App Store di Apple TV, Ad Hoc e internamente la distribuzione e forniti i collegamenti a informazioni più dettagliate.
+Questo articolo ha offerto una breve panoramica dei meccanismi di distribuzione disponibili per le app xamarin. tvos. Ha introdotto la Store di App Apple TV, Ad Hoc e internamente la distribuzione e fornisce collegamenti a informazioni più dettagliate.
 
 
 
@@ -90,5 +90,5 @@ In questo articolo ha fornito una breve panoramica dei meccanismi di distribuzio
 
 - [Esempi di tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS Guide interfaccia umana](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [le guide dell'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guida alla programmazione di App per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -4,15 +4,15 @@ description: Questo documento descrive come configurare un'app ARKit in xamarin.
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/01/2017
-ms.openlocfilehash: 728082eb27684c2176feb2038b7948986ce6a694
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 435ca560eee4f8f44443816c2a4ccec195ba5395
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351691"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103894"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Uso di ARKit con UrhoSharp in xamarin. IOS
 
@@ -25,7 +25,7 @@ Questa pagina illustra come connettere questi due mondi insieme per creare appli
 
 ## <a name="the-basics"></a>Nozioni di base
 
-Ciò che si desidera effettuare è presentano contenuto 3D nella parte superiore del mondo, come illustrato dall'iPhone.   L'idea consiste nell'unire il contenuto proveniente dalla fotocamera del telefono con il contenuto 3D e quando l'utente del telefono sposta nella stanza per assicurarsi che l'oggetto 3D è quello fa parte di tale spazio - ciò avviene mediante l'ancoraggio gli oggetti in questo mondo.
+Ciò che si desidera effettuare è presentano contenuto 3D nella parte superiore del mondo, come illustrato dall'iPhone/iPad.   L'idea consiste nell'unire il contenuto proveniente dalla fotocamera del dispositivo con il contenuto 3D e l'utente del dispositivo viene spostato nella stanza per assicurarsi che l'oggetto 3D è quello fa parte di tale spazio a posteriori, questa operazione viene eseguita mediante l'ancoraggio gli oggetti in questo mondo.
 
 ![Figura animata in ARKit](urhosharp-images/image1.gif)
 

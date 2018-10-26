@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: 65bb3fa070c082fa6c6c489e326a870a80fb9502
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 04d435b29f6f2f577df5025995fcc074ba5d9d9d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997523"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122751"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin. Forms in progetti Xamarin Native
 
@@ -33,7 +33,7 @@ Xamarin. Forms deve essere inizializzato chiamando il `Forms.Init` metodo prima 
 > [!NOTE]
 > Il **NativeForms** soluzione dell'applicazione di esempio non contiene tutti i progetti xamarin. Forms. In alternativa, è costituito da un progetto xamarin. IOS, un progetto xamarin. Android e un progetto UWP. Ogni progetto è un progetto nativo che utilizza form nativi per consumare [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-derivato pagine. Tuttavia, non è necessario perché non è stato possibile utilizzare i progetti nativi `ContentPage`-derivato pagine da un progetto condiviso o un progetto di libreria .NET Standard.
 
-Quando si usano moduli nativi, ad esempio funzionalità di xamarin. Forms [ `DependencyService` ](xref:Xamarin.Forms.DependencyService), [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter)e il motore di data binding, tutti continuano a funzionare.
+Quando si usano moduli nativi, ad esempio funzionalità di xamarin. Forms [ `DependencyService` ](xref:Xamarin.Forms.DependencyService), [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter)e il motore di data binding, tutti continuano a funzionare. Tuttavia, navigazione tra le pagine deve essere eseguita mediante l'API di spostamento nativo.
 
 ## <a name="ios"></a>iOS
 

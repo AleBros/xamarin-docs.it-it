@@ -1,41 +1,41 @@
 ---
-title: Nuovo sistema in xamarin. IOS nel conteggio dei riferimenti
-description: Questo documento descrive sistema, tutte le applicazioni di xamarin. IOS abilitato per impostazione predefinita nel conteggio dei riferimenti avanzato di Xamarin.
+title: Nuovo riferimento il conteggio di sistema in xamarin. IOS
+description: Questo documento descrive system, abilitato per impostazione predefinita in tutte le applicazioni xamarin. IOS nel conteggio dei riferimenti avanzati di Xamarin.
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: f2e40ca1fdd4a02d62e45004b75f3abefda781a5
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: 3a40605dd58cac0bcf14c156ecf65aa3fec52bc6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786252"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103387"
 ---
-# <a name="new-reference-counting-system-in-xamarinios"></a>Nuovo sistema in xamarin. IOS nel conteggio dei riferimenti
+# <a name="new-reference-counting-system-in-xamarinios"></a>Nuovo riferimento il conteggio di sistema in xamarin. IOS
 
-Xamarin. IOS 9.2.1 è stato introdotto il riferimento avanzato sistema a tutte le applicazioni di conteggio per impostazione predefinita. E può essere utilizzato per eliminare molti problemi di memoria difficili da rilevare e correggere nelle versioni precedenti di xamarin. IOS.
+Xamarin. IOS 9.2.1 ha introdotto il riferimento avanzato il conteggio di tutte le applicazioni del sistema per impostazione predefinita. Può essere utilizzato per eliminare molti problemi di memoria difficili da rilevare e correggere nelle versioni precedenti di xamarin. IOS.
 
-## <a name="enabling-the-new-reference-counting-system"></a>Abilitare il nuovo sistema di conteggio di riferimento
+## <a name="enabling-the-new-reference-counting-system"></a>Abilitazione del nuovo riferimento il conteggio di sistema
 
 A partire da Xamarin 9.2.1 il riferimento di nuovo il conteggio di sistema è abilitato per **tutti** applicazioni per impostazione predefinita.
 
-Se si sviluppa un'applicazione esistente, è possibile verificare il file con estensione csproj per assicurarsi che tutte le occorrenze di `MtouchUseRefCounting` sono impostate su `true`, come di seguito:
+Se si sta sviluppando un'applicazione esistente, è possibile controllare il file con estensione csproj per assicurarsi che tutte le occorrenze di `MtouchUseRefCounting` sono impostati su `true`, come di seguito:
 
 ```xml
 <MtouchUseRefCounting>true</MtouchUseRefCounting>
 ```
 
-Se è impostato su `false` l'applicazione non verrà utilizzato lo strumento di nuovo.
+Se è impostato su `false` l'applicazione non utilizzeranno i nuovi strumenti.
 
-### <a name="using-older-versions-of-xamarin"></a>Utilizzo delle versioni precedenti di Xamarin
+### <a name="using-older-versions-of-xamarin"></a>Con le versioni precedenti di Xamarin
 
-Xamarin. IOS 7.2.1 e sopra le caratteristiche avanzata anteprima il nuovo conteggio dei riferimenti del sistema.
+Xamarin. IOS 7.2.1 e sopra un'anteprima avanzata del nostro sistema di conteggio dei riferimenti nuove funzionalità.
 
 **API classica:**
 
-Per abilitare questo nuovo sistema di conteggio dei riferimenti, controllare il **utilizzare l'estensione di conteggio dei riferimenti** casella di controllo, vedere il **avanzate** scheda della finestra del progetto **opzioni di compilazione iOS** , come illustrato di seguito: 
+Per abilitare questo nuovo sistema di conteggio dei riferimenti, selezionare la **usare l'estensione conteggio dei riferimenti** casella di controllo disponibili nel **Advanced** scheda della finestra del progetto **opzioni di compilazione iOS** , come illustrato di seguito: 
 
 [![](newrefcount-images/image1.png "Abilitare il nuovo sistema di conteggio dei riferimenti")](newrefcount-images/image1.png#lightbox)
 
@@ -43,18 +43,18 @@ Si noti che queste opzioni sono state rimosse nelle versioni più recenti di Vis
 
  **[API unificata:](~/cross-platform/macios/unified/index.md)**
 
- Il nuovo riferimento conteggio estensione è necessario per l'API unificata e dovrebbe essere abilitato per impostazione predefinita. Le versioni precedenti dell'IDE non dispone di questo valore estratto e potrebbe essere necessario inserire un segno di spunta da essa manualmente.
+ La nuova estensione conteggio dei riferimenti è obbligatorio per l'API unificata e deve essere abilitata per impostazione predefinita. Le versioni precedenti dell'IDE dell'utente non possono avere questo valore selezionato automaticamente e potrebbe essere necessario inserire un segno di spunta dalla funzione se stessi.
 
     
 > [!IMPORTANT]
-> Una versione precedente di questa funzionalità è stato rilasciato poiché MonoTouch 5.2 ma era disponibile solo per **sgen** come un'anteprima sperimentale. Questa nuova versione avanzata è anche disponibile per il **Boehm** garbage collector.
+> Poiché 5.2 MonoTouch ma erano disponibili solo per una versione precedente di questa funzionalità dura all'incirca **sgen** come anteprima sperimentale. Questa versione nuovi e migliorata è ora disponibile anche per il **Boehm** garbage collector.
 
 
-In passato sono state apportate due tipi di oggetti gestiti da xamarin: quelli che erano in genere semplicemente un wrapper per un oggetto nativo (oggetti peer) e quelli che esteso o incorporate nuove funzionalità (oggetti derivati) - mantenendo stato extra in memoria. In precedenza era possibile che è possibile incrementare un oggetto peer con stato (ad esempio aggiungendo un gestore eventi in c#) ma che è che l'oggetto privo di riferimento e quindi raccolti. Ciò potrebbe causare un arresto anomalo in un secondo momento (ad esempio, se richiamato l'oggetto gestito Objective-C runtime).
+In passato erano disponibili due tipi di oggetti gestiti da xamarin. ios: quelli che sono stati semplicemente un wrapper per un oggetto nativo (oggetti peer) e quelli che esteso o incorporato (oggetti derivati) - le nuove funzionalità in genere, mantenendo lo stato aggiuntivi in memoria. In precedenza era possibile avremmo forniamo un oggetto peer con stato (ad esempio aggiungendo un C# gestore dell'evento), ma che facciamo passare senza riferimenti e quindi raccogliere l'oggetto. Ciò potrebbe causare un arresto anomalo in un secondo momento (ad esempio, se il runtime di Objective-C richiamata nell'oggetto gestito).
 
-Il nuovo sistema aggiorna automaticamente gli oggetti peer in oggetti che vengono gestiti dal runtime quando archiviano le eventuali informazioni aggiuntive.
+Il nuovo sistema di aggiornare automaticamente gli oggetti peer in oggetti gestiti dal runtime quando si archiviano le eventuali informazioni aggiuntive.
 
-Consente di risolvere vari arresti anomali che si sono verificati in situazioni come questa:
+Ciò consente di risolvere vari arresti anomali che si sono verificati in casi come questo:
 
 ```csharp
 class MyTableSource : UITableViewSource {
@@ -72,10 +72,10 @@ class MyTableSource : UITableViewSource {
 }
 ```
 
-Senza l'estensione del numero di riferimento questo codice potrebbe arrestarsi in modo anomalo perché `cell` diventa ritirabile e pertanto il relativo `TouchDown` delegato, che verrà convertito in un puntatore tralasciato.
+Senza l'estensione di conteggio di riferimento questo codice potrebbe arrestarsi in modo anomalo perché `cell` diventa ritirabile e pertanto relativo `TouchDown` delegato, che verrà convertito in un puntatore inesatti.
 
-L'estensione di conteggio di riferimento garantisce l'oggetto gestito rimarrà attivo e impedisce il suo insieme, purché l'oggetto nativo viene mantenuto da codice nativo.
+L'estensione di conteggio dei riferimenti garantisce l'oggetto gestito rimane attivo e impedisce il suo insieme, purché l'oggetto nativo viene mantenuto dal codice nativo.
 
-Il nuovo sistema rimuove inoltre la necessità di *la maggior parte delle* private i campi utilizzati nelle associazioni - è l'approccio predefinito per mantenere l'istanza attiva di backup. Il linker gestito è abbastanza per rimuovere tutti quelli *non necessari* estensione conteggio dei campi delle applicazioni che utilizzano il nuovo riferimento.
+Il nuovo sistema rimuove anche la necessità di *la maggior parte delle* private utilizzati nelle associazioni - è l'approccio predefinito per keep-alive istanza campi sottostanti. Il linker gestito è abbastanza intelligente da rimuovere tutti quelli *non necessarie* campi dalle applicazioni usando il nuovo riferimento al numero di estensione.
 
-Ciò significa che le istanze di ogni oggetto gestito utilizzano meno memoria rispetto a prima. Inoltre, risolve un problema correlato in cui alcuni campi sottostanti conterrebbe i riferimenti che non sono più necessari dal runtime di Objective-C, rendendo difficile recuperare memoria.
+Ciò significa che ciascuna istanza di oggetto gestito utilizzata meno memoria rispetto a prima. Viene risolto un problema correlato in cui alcuni campi sottostanti conserverebbero i riferimenti che non sono necessari più dal runtime di Objective-C, rendendo difficile recuperare parte della memoria.

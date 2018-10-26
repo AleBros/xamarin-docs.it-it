@@ -4,24 +4,24 @@ description: Implementazione di elementi dell'interfaccia utente che l'utente to
 ms.prod: xamarin
 ms.assetid: 4FBB7789-A8DA-4B8B-A46C-849181388A8D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/18/2017
-ms.openlocfilehash: b741683d7dfe80337a0085ac8d94becb0b518535
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: 1eb2ca1881d1710481c84a4420ec644f3a4ab7a5
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32435894"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107690"
 ---
 # <a name="buttons-in-xamarinandroid"></a>Pulsanti in xamarin. Android
 
-La `Button` classe viene utilizzata per rappresentare vari diversi stili di pulsante nelle schermate di Android. Questa sezione vengono illustrate le diverse opzioni per l'utilizzo di pulsanti di xamarin:
+Il `Button` classe viene utilizzata per rappresentare vari diversi stili di pulsante nelle schermate di Android. Questa sezione vengono presentati le diverse opzioni per l'uso di pulsanti in xamarin. Android:
 
 -   [RadioButton](~/android/user-interface/controls/buttons/radio-button.md) consente all'utente di selezionare un'opzione da un set.
 
--   [ToggleButton](~/android/user-interface/controls/buttons/toggle-button.md) consentono all'utente di capovolgere (Attiva/disattiva) di un'impostazione tra due stati.
+-   [ToggleButton](~/android/user-interface/controls/buttons/toggle-button.md) consente di capovolgere (Attiva/disattiva) un'impostazione tra due stati.
 
 -   [Casella di controllo](~/android/user-interface/controls/buttons/check-box.md) è un tipo speciale di pulsante che può essere selezionata o deselezionata questa opzione per indicare uno dei due stati possibili.
 
--   È inoltre possibile creare un [pulsante personalizzato](~/android/user-interface/controls/buttons/custom-button.md) che utilizza un'immagine anziché di testo.
+-   È anche possibile creare un [pulsante personalizzato](~/android/user-interface/controls/buttons/custom-button.md) che usa un'immagine invece del testo.

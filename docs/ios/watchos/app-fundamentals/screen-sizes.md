@@ -1,22 +1,22 @@
 ---
-title: Utilizzo di watchOS dimensioni dello schermo in Xamarin
-description: Questo documento viene descritto come lavorare con diverse dimensioni dello schermo watchOS. Viene descritto il watchOS interfaccia Designer, watchOS simulatore e le risorse dell'immagine.
+title: Utilizzo di watchOS le dimensioni dello schermo in Xamarin
+description: Questo documento descrive come usare diverse dimensioni dello schermo watchOS. Illustra la progettazione di interfaccia, watchOS simulatore, watchOS e risorse immagine.
 ms.prod: xamarin
 ms.assetid: 840DF939-2F59-4ABA-87D8-92AAC8A92BC4
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 30866c70879950acd8f43fd5880b1b24ba127fa4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: b2f4cc71c1993e51ed55b51edd7c50d393e60873
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790711"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117499"
 ---
-# <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Utilizzo di watchOS dimensioni dello schermo in Xamarin
+# <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Utilizzo di watchOS le dimensioni dello schermo in Xamarin
 
-Apple Watch è disponibile in due dimensioni:
+Apple Watch è disponibile in due dimensioni dello schermo:
 
 - **38mm**
   - 136 x 170 pixel logici (pixel fisici 272 x 340)
@@ -24,50 +24,50 @@ Apple Watch è disponibile in due dimensioni:
 - **42mm**
   - 156 x 195 pixel logici (pixel fisici 312 x 390).
 
-Dimensioni dello schermo tenere in considerazione durante la progettazione e il test delle applicazioni.
+È necessario tenere conto durante la progettazione e test di App di dimensioni dello schermo.
 
-## <a name="watchos-interface-designer"></a>finestra di progettazione dell'interfaccia watchOS
+## <a name="watchos-interface-designer"></a>finestra di progettazione di interfaccia watchOS
 
-Per impostazione predefinita di Visual Studio per Mac progettazione visualizzerà guardare i controller di interfaccia **Any Apple Watch**.
+Per impostazione predefinita di Visual Studio per Mac progettazione verranno visualizzati i controller di interfaccia in guardare **Apple Watch Any**.
 
-![](screen-sizes-images/screen-any-sml.png "Consente di visualizzare la finestra di progettazione guardare i controller di interfaccia in qualsiasi Apple Watch")
+![](screen-sizes-images/screen-any-sml.png "Consente di visualizzare la finestra di progettazione guardare i controller di interfaccia in Apple Watch Any")
 
-Utilizzare il menu di dimensioni per modificare e visualizzare in anteprima lo storyboard in una delle dimensioni dello schermo disponibile: **38mm** o **42mm**:
+Usare il menu di dimensioni per modificare e visualizzare in anteprima lo storyboard a una delle dimensioni della schermata disponibili: **38mm** oppure **42mm**:
 
-![](screen-sizes-images/screen-menu-sml.png "Selezionare la dimensione 38 o mm 42")
+![](screen-sizes-images/screen-menu-sml.png "Selezionando le sue dimensioni 38mm o 42mm")
 
-Le dimensioni dello schermo più grande in alcuni casi verranno eseguito il rendering di contenuto che potrebbe essere troncato o nascosta sullo schermo più piccolo.
-Assicurarsi di eseguire i test su entrambe le dimensioni.
+Dimensioni dello schermo più grande in alcuni casi verranno eseguito il rendering di contenuto che verrebbero troncati o nascosta su schermi più piccoli.
+Assicurarsi di testare in entrambe le dimensioni.
 
 
 ### <a name="interface-design"></a>Progettazione di interfacce
 
-L'app deve visualizzare il contenuto stesso sullo schermo, indipendentemente dalle dimensioni e deve espandere o comprimere gli elementi di base alle esigenze. In Visual Studio per Mac progettazione del controllo di attributo, è necessario utilizzare **relativo al contenitore** o **dimensioni Fit Content** a dimensioni fisse.
+L'app deve visualizzare lo stesso contenuto sullo schermo, indipendentemente dalle dimensioni e deve espandere o comprimere gli elementi di base alle esigenze. In Visual Studio per Mac progettazione, in Attribute Inspector è consigliabile utilizzare **relativo al contenitore** oppure **dimensioni per adattarsi contenuto** preferenza rispetto a dimensioni fisse.
 
-![](screen-sizes-images/sizeattributepanel-sml.png "Utilizzare relativa al contenitore o le dimensioni di base del contenuto a dimensioni fisse")
+![](screen-sizes-images/sizeattributepanel-sml.png "Usare Relative al contenitore o dimensioni per adattarsi contenuto preferenza rispetto a dimensioni fisse")
 
-Poiché la schermata di espressioni di controllo è delimitata da un riquadro nero, non è consigliabile fornire spaziatura intorno a un'interfaccia. Gli elementi in modo rest contro il bordo dello schermo e consentono la cornice di formare un bordo intorno all'app naturale.
-
-
-## <a name="watchos-simulator"></a>watchOS simulatore
-
-Quando si verifica nel simulatore passare facilmente tra le dimensioni dello due schermo utilizzando il **Hardware > dispositivo** menu.
-
-![](screen-sizes-images/simulator.png "Il simulatore può passare tra le dimensioni dello due schermo utilizzando il menu di dispositivo Hardware")
+Poiché la schermata di espressioni di controllo è delimitata da un nero, fornendo la spaziatura interna intorno all'interfaccia non è consigliato. Consentire gli elementi inattivi contro il bordo dello schermo e consentire la cornice formano un naturale bordo intorno all'app.
 
 
-## <a name="image-resources"></a>Risorse immagini
+## <a name="watchos-simulator"></a>Simulatore di watchOS
 
-Se un singolo asset non visualizzate correttamente a dimensioni diverse, è consigliabile utilizzare più asset di immagine. Cataloghi di asset immagine consentono di bitmap separata per ogni dimensione:
+Quando testing sul simulatore è possibile passare facilmente tra le dimensioni dello due schermo usando il **Hardware > dispositivo** menu.
 
-![](screen-sizes-images/images-xcassets.png "Editor del catalogo di asset immagine")
+![](screen-sizes-images/simulator.png "Il simulatore può passare tra le dimensioni dello due schermo usando il menu di dispositivo Hardware")
+
+
+## <a name="image-resources"></a>Risorse immagine
+
+Se non ha l'aspetto efficaci per diverse dimensioni di un singolo asset, è consigliabile usare più asset di immagine. Cataloghi asset immagine consentono la bitmap separata per ogni dimensione di specificare:
+
+![](screen-sizes-images/images-xcassets.png "Editor del catalogo asset immagine")
 
 ```csharp
 // specify the asset name, the correct size will automatically be loaded
 staticImage.SetImage(UIImage.FromBundle("Walkway"));
 ```
 
-In alternativa, è possibile utilizzare codice per determinare le dimensioni dello schermo e caricare immagini differenti completamente:
+In alternativa, usare codice per determinare le dimensioni dello schermo e caricare immagini diverse del tutto:
 
 ```csharp
 bool large = WKInterfaceDevice.CurrentDevice.ScreenBounds.Size.Width > 136.0;
@@ -79,7 +79,7 @@ using (var image = UIImage.FromBundle (large ? "42mm-Walkway" : "38mm-Walkway"))
 }
 ```
 
-Lettura ulteriori informazioni sull'utilizzo di [controllo immagine](~/ios/watchos/user-interface/image.md).
+Altre informazioni su usando il [controllo immagine](~/ios/watchos/user-interface/image.md).
 
 
 

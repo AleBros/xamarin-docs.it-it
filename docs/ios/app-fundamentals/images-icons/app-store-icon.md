@@ -1,24 +1,24 @@
 ---
-title: Icone dell'archivio di App in xamarin. IOS
-description: Questo documento viene descritto come usare i cataloghi di asset per gestire un'icona di App Store per un'applicazione di xamarin. IOS. Icone dell'archivio di App in precedenza, veniva gestite con iTunes Connect.
+title: Icone di App Store in xamarin. IOS
+description: Questo documento descrive come usare cataloghi asset per gestire un'icona di App Store per un'applicazione xamarin. IOS. In precedenza, venivano gestite le icone di App Store di iTunes Connect.
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/26/2017
-ms.openlocfilehash: 749dbf01af382a54fe24652706f6a605ac7b20b4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 53e25ae9f4650254f2aaaa03dc8727fae674c9f0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783610"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105883"
 ---
-# <a name="app-store-icons-in-xamarinios"></a>Icone dell'archivio di App in xamarin. IOS
+# <a name="app-store-icons-in-xamarinios"></a>Icone di App Store in xamarin. IOS
 
-Prima di Xcode 9 tutte le icone di App Store sono stati aggiunti tramite iTunes Connect. Tuttavia, ciò non è più il caso. Icone dell'archivio di App devono ora essere inclusi come parte del bundle del progetto e aggiunta all'interno di un catalogo di asset. Le applicazioni che non contengono un'icona di App Store verranno rifiutate da Apple.
+Prima di Xcode 9 tramite iTunes Connect sono state aggiunte tutte le icone di App Store. Tuttavia, ciò non è più il case. Le icone di App Store devono ora essere incluso come parte del bundle del progetto e aggiunta all'interno di un catalogo asset. Apple rifiuterà le app che non contengono un'icona di App Store.
 
-L'icona di archivio di App è il tipo di carattere dell'applicazione a utenti, pertanto devono essere facili da ricordare e visualizzato correttamente di piccole dimensioni. Sono facilmente ricordabili le icone basiche, semplici e immediatamente riconoscibili.
+L'icona dell'App Store è il volto dell'applicazione a utenti, in modo che deve essere facile da ricordare e ben visualizzabile in una dimensione piccola. Sono facilmente ricordabili le icone basiche, semplici e immediatamente riconoscibili.
 
 Per la progettazione dell'icona di un'applicazione, attenersi alle linee guida seguenti suggerite da Apple:
 
@@ -29,7 +29,7 @@ Per la progettazione dell'icona di un'applicazione, attenersi alle linee guida s
 
 Per un'icona dell'app che sarà visualizzata nell'App Store, è necessaria un'immagine di 1024 x 1024 pixel.  Secondo le istruzioni di Apple l'icona per l'App Store nel catalogo asset non deve essere trasparente e non deve contenere un canale alfa.
 
-Per ulteriori informazioni, vedere Apple [iOS linee guida dell'interfaccia umana](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/image-size-and-resolution/).
+Per altre informazioni, vedere di Apple [iOS Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/image-size-and-resolution/).
 
 ## <a name="adding-an-app-store-icon"></a>Aggiunta di un'icona di App Store
 
@@ -37,22 +37,22 @@ Le icone per l'App Store devono raggruppate in un catalogo asset.
 
 Per aggiungere un'icona di App Store eseguire le operazioni seguenti:
 
-1. Individuare il **AppIcon** impostata immagine di **Assets.xcassets** file del progetto. 
-    - Tutti i nuovi progetti devono disporre di un un **Assets.xcassets** file che contiene un set di immagini AppIcon.
-    - Per aggiungere un nuovo catalogo di asset, fare clic sul progetto e selezionare **Aggiungi > Nuovo > catalogo di Asset**.
-    - Per aggiungere un nuovo set di immagini icona un'app, fare doppio clic nell'area di set di icone di selezionare **icone App & immagini di avvio > nuova icona App**:
+1. Individuare il **AppIcon** impostata immagine il **assets. xcassets** file del progetto. 
+    - Dovrebbero essere dotati di tutti i nuovi progetti un un' **assets. xcassets** file che contiene un set di immagini AppIcon.
+    - Per aggiungere un nuovo catalogo asset, pulsante destro del mouse sul progetto, quindi scegliere **Aggiungi > Nuovo File > catalogo di Asset**.
+    - Per aggiungere un nuovo un set di immagini icona di app, fare doppio clic nell'area di set di icone e selezionare **icone delle App e immagini di avvio > nuova icona App**:
     
-    ![Aggiungere una nuova opzione di set di immagini](app-store-icon-images/image1.png)
+    ![Aggiungi nuova opzione di set di immagini](app-store-icon-images/image1.png)
 
-2. Scorrere verso il **App Store** icona dell'elenco:
+2. Scorrere fino al **App Store** icona nell'elenco:
 
     ![Icona App Store](app-store-icon-images/image2.png)
 
-3. Fare clic sull'icona e selezionare l'immagine di 1024 x 1024 pixel. Salvare il catalogo di Asset.
+3. Fare clic sull'icona e cercare l'immagine di 1024 x 1024 pixel. Salvare il catalogo di Asset.
 
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [La gestione delle icone con i cataloghi Asset](~/ios/app-fundamentals/images-icons/app-icons.md#managing)
+- [La gestione delle icone con cataloghi Asset](~/ios/app-fundamentals/images-icons/app-icons.md#managing)

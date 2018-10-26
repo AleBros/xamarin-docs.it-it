@@ -4,15 +4,15 @@ description: Questo documento descrive le funzionalità di localizzazione di iOS
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 04/28/2017
-ms.openlocfilehash: 2a6096efc18f40d18ea37573e77d93796e812cc2
-ms.sourcegitcommit: 4cc17681ee4164bdf2f5da52ac1f2ae99c391d1d
+ms.openlocfilehash: 0c52db61689dd640332fb1e02e2260dda08e4686
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39387440"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115926"
 ---
 # <a name="localization-in-xamarinios"></a>Localizzazione in xamarin. IOS
 
@@ -20,7 +20,7 @@ _Questo documento illustra le funzionalità di localizzazione di iOS SDK e come 
 
 Vedere le [codifiche di internazionalizzazione](encodings.md) per istruzioni sull'inclusione di pagine di codice/set di caratteri nelle applicazioni che devono elaborare dati non Unicode.
 
-## <a name="ios-platform-features"></a>Funzionalità della piattaforma iOS
+## <a name="ios-platform-features"></a>funzionalità della piattaforma iOS
 
 Questa sezione descrive alcune delle funzionalità di localizzazione in iOS. Ignorare per il [nella sezione successiva](#basics) per visualizzare codice specifico ed esempi.
 
@@ -70,8 +70,6 @@ Il primo valore può essere memorizzati nella cache dal sistema operativo e pert
 
 iOS genera una `NSCurrentLocaleDidChangeNotification` quando l'utente non aggiorna le impostazioni locali. Le applicazioni possono restare in ascolto su questa notifica mentre è in esecuzione e può apportare le modifiche appropriate all'interfaccia utente.
 
-<a name="basics" />
-
 ## <a name="localization-basics-in-ios"></a>Nozioni fondamentali di localizzazione in iOS
 
 Facilmente offerte le caratteristiche seguenti di iOS in Xamarin per fornire le risorse localizzate per la visualizzazione all'utente. Vedere le [TaskyL10n esempio](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) per informazioni su come implementare queste idee.
@@ -120,13 +118,13 @@ Per altre informazioni su questi **Info. plist** le chiavi, ottenere un quadro d
 
 ### <a name="getlocalizedstring-method"></a>Metodo GetLocalizedString
 
-Il `NSBundle.MainBundle.GetLocalizedString` metodo cerca il testo localizzato che è stato archiviato nel **.strings** file nel progetto. Questi file sono organizzati per linguaggio, nelle directory appositamente denominata con un **.lproj** suffisso.
+Il `NSBundle.MainBundle.GetLocalizedString` metodo cerca il testo localizzato che è stato archiviato nel **.strings** file nel progetto. Questi file sono organizzati per linguaggio, nelle directory appositamente denominata con un **.lproj** suffisso (si noti la prima lettera dell'estensione è una "L" minuscola).
 
 #### <a name="strings-file-locations"></a>percorsi dei file .strings
 
 - **Base.lproj** è la directory che contiene le risorse per la lingua predefinita.
   Spesso si trova nella radice del progetto (ma può anche essere inserito nel **risorse** cartella).
-- **<language>.lproj** directory vengono create per ogni lingua supportata, in genere il **risorse** cartella.
+- **&lt;linguaggio&gt;.lproj** directory vengono create per ogni lingua supportata, in genere il **risorse** cartella.
 
 Può esistere una serie di diversi **.strings** file nella directory ogni linguaggio:
 
@@ -147,9 +145,9 @@ La sintassi per i valori stringa localizzata è:
 
 È consigliabile eseguire l'escape i seguenti caratteri nelle stringhe:
 
-* `\"`  offerta
-* `\\`  barra rovesciata
-* `\n`  carattere di nuova riga
+* `\"` offerta
+* `\\` barra rovesciata
+* `\n` carattere di nuova riga
 
 In questo esempio viene illustrato **es/Localizable.strings** (ad esempio, File spagnolo) dall'esempio:
 
@@ -171,16 +169,15 @@ Per localizzare un'immagine in iOS:
 
 1. Fare riferimento all'immagine nel codice, ad esempio:
 
-  ```csharp
-  UIImage.FromBundle("flag");
-  ```
+    ```csharp
+    UIImage.FromBundle("flag");
+    ```
 
 2. Inserire il file di immagine predefinito **flag.png** nelle **Base.lproj** (la directory di linguaggio di sviluppo nativo).
 
 3. Se lo si desidera posizionare le versioni localizzate dell'immagine nel **.lproj** cartelle per ogni lingua (ad es. **es.lproj**, **ja.lproj**). Usare lo stesso nome file **flag.png** in ogni directory di linguaggio.
 
 Se un'immagine non è presente per una determinata lingua, iOS verrà fallback nella cartella della lingua predefinita e caricare l'immagine da tale posizione.
-
 
 #### <a name="launch-images"></a>Le immagini di avvio
 
@@ -247,14 +244,14 @@ Fare riferimento a Apple [formattatori data](https://developer.apple.com/library
 
 <a name="rtl" />
 
-### <a name="right-to-left-rtl-layout"></a>Layout da destra a sinistra (RTL)
+### <a name="right-to-left-rtl-layout"></a>Layout di destra a sinistra (RTL)
 
 iOS offre una serie di funzionalità per semplificare la creazione di App con riconoscimento da destra a sinistra:
 
-* Layout di uso automatico `leading` e `trailing` attributi per aligment controllo (che corrisponde a sinistra e destra per la lingua inglese, ma viene invertito per le lingue RTL).
+- Layout di uso automatico `leading` e `trailing` attributi per aligment controllo (che corrisponde a sinistra e destra per la lingua inglese, ma viene invertito per le lingue RTL).
   Il [ `UIStackView` ](~/ios/user-interface/controls/uistackview.md) controllo risulta particolarmente utile per disporre i controlli da tenere presenti da destra a sinistra.
-* Usare `TextAlignment = UITextAlignment.Natural` per l'allineamento del testo (che verrà lasciato per la maggior parte dei linguaggi, ma a destra per da destra a sinistra).
-* `UINavigationController` Capovolge il pulsante Indietro e scorrere rapidamente direzione viene invertita automaticamente.
+- Usare `TextAlignment = UITextAlignment.Natural` per l'allineamento del testo (che verrà lasciato per la maggior parte dei linguaggi, ma a destra per da destra a sinistra).
+- `UINavigationController` Capovolge il pulsante Indietro e scorrere rapidamente direzione viene invertita automaticamente.
 
 Gli screenshot seguenti viene illustrato il [localizzata esempio Tasky](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in arabo ed ebraico (sebbene inglese inserito nei campi):
 
@@ -304,7 +301,7 @@ someControl.Text = localizedString;
 
 <a name="storyboard"/>
 
-## <a name="localizing-storyboard-uis"></a>Localizzazione di interfacce utente di Storyboard
+## <a name="localizing-storyboard-uis"></a>Localizzazione di interfacce utente di storyboard
 
 L'esempio [Tasky (storyboard localizzato)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard) Mostra come localizzare il testo nei controlli in uno storyboard.
 
@@ -322,8 +319,8 @@ Le directory di linguaggio devono contenere una copia di tutte le immagini che s
 
 Durante la creazione e modifica dei controlli in uno storyboard, selezionare ogni controllo e controllare l'ID da usare per la localizzazione:
 
-* In Visual Studio per Mac, si trova nel **riquadro delle proprietà** e viene chiamato **ID di localizzazione**.
-* In Xcode, bensì **ID di oggetto**.
+- In Visual Studio per Mac, si trova nel **riquadro delle proprietà** e viene chiamato **ID di localizzazione**.
+- In Xcode, bensì **ID di oggetto**.
 
 Questo valore di stringa ha spesso un form, ad esempio "NF3 h8 xmR", come illustrato nello screenshot seguente:
 

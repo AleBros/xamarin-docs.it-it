@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/18/2018
-ms.openlocfilehash: f593e5d084d8cd7071d17195663478d430d994b7
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4045f3a1d31b1c0c8b69e840d3943b6ce258b894
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995482"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113586"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>eXtensible Application Markup Language (XAML)
 
@@ -37,7 +37,7 @@ Se necessario, il linguaggio XAML può essere compilato direttamente nel linguag
 
 ## <a name="xaml-previewerxaml-previewermd"></a>[Visualizzatore anteprima XAML](xaml-previewer.md)
 
-Il [Visualizzatore anteprima XAML](~/xamarin-forms/xaml/xaml-previewer.md) annunciato in Xamarin evoluzione 2016 è disponibile per il test del canale alfa.
+Il [Visualizzatore anteprima XAML](~/xamarin-forms/xaml/xaml-previewer.md) esegue il rendering di un'anteprima in tempo reale di una pagina side-by-side con il markup XAML, consentendo di visualizzare l'interfaccia utente sottoposta a rendering durante la digitazione.
 
 ## <a name="xaml-namespacesnamespacesmd"></a>[Spazi dei nomi XAML](namespaces.md)
 

@@ -1,32 +1,32 @@
 ---
-title: In cui è possibile impostare la località di Android SDK?
+title: Dove è possibile impostare la località di Android SDK?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6A9DE6E9-3E27-4DD2-87D2-34E95E5D401C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 11/16/2017
-ms.openlocfilehash: e7af6635aeec72a9a0e0c01eeb6eb0a77d2a1d7b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c004fb7717f78750e7ac1e8dc1856a32ba808638
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764008"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119488"
 ---
-# <a name="where-can-i-set-my-android-sdk-locations"></a>In cui è possibile impostare la località di Android SDK?
+# <a name="where-can-i-set-my-android-sdk-locations"></a>Dove è possibile impostare la località di Android SDK?
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 In Visual Studio, passare a **strumenti > Opzioni > Xamarin > Impostazioni Android** per visualizzare e impostare il percorso di Android SDK:
 
-[![Scheda indirizzi di esempio nelle preferenze](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png#lightbox)
+[![Scheda percorsi di esempio nelle preferenze](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png#lightbox)
 
-Il percorso predefinito per ogni percorso è la seguente:
+Il percorso predefinito per ogni percorso è come segue:
 
-- Java Development Kit percorso: 
+- Percorso di Java Development Kit: 
 
-    **C:\\i file di programma\\Java\\jdk1.8.0_131**
+    **C:\\file di programma\\Java\\jdk1.8.0_131**
 
 - Percorso di Android SDK: 
 
@@ -34,20 +34,20 @@ Il percorso predefinito per ogni percorso è la seguente:
 
 - Percorso di Android NDK: 
 
-    **C:\\ProgramData\\Microsoft\\AndroidNDK64\\android-ndk-r13b**
+    **C:\\ProgramData\\Microsoft\\AndroidNDK64\\ndk-android-r13b**
 
-Si noti che può variare il numero di versione di NDK. Ad esempio, invece di **android-ndk-r13b**, potrebbe trattarsi di una versione precedente, ad esempio **android-ndk-r10e**.
+Si noti che il numero di versione di NDK può variare. Ad esempio, invece di **ndk-android-r13b**, potrebbe essere una versione precedente, ad esempio **ndk-android-r10e**.
 
-Per impostare il percorso di Android SDK, immettere il percorso completo della directory Android SDK nel **percorso di Android SDK** casella. Passare al percorso di Android SDK in Esplora File, copiare il percorso dalla barra degli indirizzi e incollare il percorso nel **percorso di Android SDK** casella.
-Ad esempio, se il percorso di Android SDK è a **c:\\utenti\\username\\AppData\\locale\\Android\\Sdk**, cancellare il percorso precedente nel  **Percorso di Android SDK** , incollare in questo percorso e scegliere **OK**.
+Per impostare il percorso di Android SDK, immettere il percorso completo della directory in Android SDK di **percorso di Android SDK** casella. È possibile passare al percorso di Android SDK in Esplora File, copiare il percorso dalla barra degli indirizzi e incollare il percorso nel **percorso di Android SDK** casella.
+Ad esempio, se il percorso di Android SDK si trova **c:\\gli utenti\\username\\AppData\\locale\\Android\\Sdk**, cancellare il percorso precedente nel  **Percorso di Android SDK** casella, incollare in questo percorso e fare clic su **OK**.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-In Visual Studio per Mac, passare a **Preferenze > progetti > percorsi SDK > Android**. Nel **Android** pagina, fare clic su di **percorsi** scheda per visualizzare e impostare il percorso del SDK:
+In Visual Studio per Mac, passare a **Preferenze > progetti > percorsi SDK > Android**. Nel **Android** pagina, fare clic sui **posizioni** pressione di tab per visualizzare e impostare il percorso di SDK:
 
-[![Scheda indirizzi di esempio nelle preferenze](android-sdk-location-images/mac/01-locations-sml.png)](android-sdk-location-images/mac/01-locations.png#lightbox)
+[![Scheda percorsi di esempio nelle preferenze](android-sdk-location-images/mac/01-locations-sml.png)](android-sdk-location-images/mac/01-locations.png#lightbox)
 
-Il percorso predefinito per ogni percorso è la seguente:
+Il percorso predefinito per ogni percorso è come segue:
 
 - Percorso di Android SDK: 
 
@@ -61,8 +61,8 @@ Il percorso predefinito per ogni percorso è la seguente:
 
     **/usr**
 
-Si noti che può variare il numero di versione di NDK. Ad esempio, invece di **android-ndk-r14b**, potrebbe trattarsi di una versione precedente, ad esempio **android-ndk-r10e**.
+Si noti che il numero di versione di NDK può variare. Ad esempio, invece di **ndk-android-r14b**, potrebbe essere una versione precedente, ad esempio **ndk-android-r10e**.
 
-Per impostare il percorso di Android SDK, immettere il percorso completo della directory Android SDK nel **percorso di Android SDK** casella. È possibile selezionare la cartella di Android SDK in Finder, premere **CTRL +&#8984;+ I** per visualizzare le informazioni di cartella, fare clic e trascinare il percorso a destra del **in:**, copiare, quindi incollarlo il **Android SDK Percorso** casella il **percorsi** scheda. Ad esempio, se il percorso di Android SDK è a **~/Library/Developer/Android/Sdk**, cancellare il percorso precedente nel **percorso di Android SDK** , incollare in questo percorso e scegliere **OK**.
+Per impostare il percorso di Android SDK, immettere il percorso completo della directory in Android SDK di **percorso di Android SDK** casella. È possibile selezionare la cartella SDK Android nel Finder, premere **CTRL +&#8984;+ I** per visualizzare le informazioni di cartella, fare clic e trascinare il percorso a destra di **in cui:**, copiare, quindi incollarlo il **Android SDK Ubicazione** nella casella il **posizioni** scheda. Ad esempio, se il percorso di Android SDK si trova **~/Library/Developer/Android/Sdk**, cancellare il percorso precedente nel **percorso di Android SDK** casella, incollare in questo percorso e fare clic su **OK**.
 
 -----

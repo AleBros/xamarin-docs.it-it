@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/30/2018
-ms.openlocfilehash: 71e1655b6bc05c621ee97fcf826ce8b468f0dd48
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 4f80682c5d8c4f5231fbdd2e081fdcf7962aa969
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351496"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103725"
 ---
 # <a name="listview-data-sources"></a>Origini dati ListView
 
@@ -89,7 +89,7 @@ Data binding dati funziona, mantenendo gli oggetti sincronizzati man mano che ca
 Per altre informazioni sul data binding, vedere [nozioni di base di Data Binding](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) che fa parte di quattro il [serie di articoli nozioni di base di xamarin. Forms XAML](~/xamarin-forms/xaml/xaml-basics/index.md).
 
 ### <a name="binding-cells"></a>Binding di celle
-Proprietà delle celle (e gli elementi figlio di celle) possono essere associate alle proprietà degli oggetti nel `ItemsSource`. Ad esempio, un ListView è stato possibile utilizzabile per presentare un elenco dei dipendenti con le immagini.
+Proprietà delle celle (e gli elementi figlio di celle) possono essere associate alle proprietà degli oggetti nel `ItemsSource`. Ad esempio, un ListView è stato possibile utilizzabile per presentare un elenco di dipendenti.
 
 La classe dipendente:
 

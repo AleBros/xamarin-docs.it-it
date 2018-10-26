@@ -1,26 +1,26 @@
 ---
 title: Operazioni a virgola mobile in xamarin. IOS
-description: Questo documento descrive come xamarin. IOS gestisce precisione a 32 e 64 bit operazioni a virgola mobile e viene associato impatto sulle prestazioni.
+description: Questo documento descrive in che modo xamarin. IOS gestisce 32 bit e a 64 bit di precisione operazioni a virgola mobile e illustra associato impatto sulle prestazioni.
 ms.prod: xamarin
 ms.assetid: 003F25C1-B430-4339-9C95-7DF527EBC699
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: ea5d69b52cbd4c76abb236bd1a272633dde440b7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: c5ee1b833e309c78c7338298cbe5c8800afb1ba1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786161"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116238"
 ---
 # <a name="floating-point-operations-in-xamarinios"></a>Operazioni a virgola mobile in xamarin. IOS
 
-Xamarin esegue per impostazione predefinita a 32 e 64 bit operazioni a virgola mobile con precisione a 64 bit su ARM.  
+Xamarin. IOS eseguirà per impostazione predefinita a 32 e 64 bit operazioni a virgola mobile con precisione a 64 bit in ARM.  
 
-Durante questa precisione più elevata si avvicina a ciò che gli sviluppatori si aspettano da operazioni a virgola mobile in c# sul desktop, mobili, l'impatto sulle prestazioni può essere significativo.
+Sebbene questa precisione superiore si avvicina a ciò che gli sviluppatori si aspettano da operazioni a virgola mobile in C# sul desktop, App per dispositivi mobili, l'impatto sulle prestazioni può essere significativo.
 
-È possibile compilare il codice punto a virgola mobile a 32 bit per l'utilizzo di operazioni a virgola mobile a 32 bit.  A tale scopo, è necessario utilizzare almeno 8.10 xamarin e set in iOS per la generazione del Pannello di opzioni sul "mtouch argomenti aggiuntivi" voce di riga il valore seguente:
+È possibile compilare il codice punto a virgola mobile a 32 bit per usare operazioni a virgola mobile a 32 bit.  A tale scopo, è necessario usare almeno 8.10 xamarin. IOS e set in iOS per la generazione del Pannello di opzioni sul "mtouch argomenti aggiuntivi" voce di riga il valore seguente:
 
      --aot-options=-O=float32
 
-Ciò indicherà i compilatori statici (compilatore statico incorporato del Mono, o quello con tecnologia LLVM) per eseguire operazioni a virgola mobile con virgola mobile a 32 bit.
+Ciò indicherà i compilatori statici (compilatore statico predefinito di Mono, o quella basata su LLVM) per eseguire operazioni a virgola mobile con valori a virgola mobile a 32 bit.

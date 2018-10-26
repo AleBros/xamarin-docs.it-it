@@ -4,15 +4,15 @@ description: Questo documento illustra alcuni principi guida che consentono di p
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 275db96435639a60be89e0e3ddb7fa120a30de1c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: cd25e5c78885f53902c577a900958b842a70219c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996412"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116953"
 ---
 # <a name="xamarinios-api-design"></a>Progettazione di API xamarin. IOS
 
@@ -494,7 +494,7 @@ public class MyCallbacks : NSObject {
 }
 ```
 
-I nomi in c# per i metodi non sono importanti; Ciò che conta sono le stringhe passate per l'attributo [Export].
+Il C# i nomi per i metodi non sono importanti; Ciò che conta sono le stringhe passate per l'attributo [Export].
 
 Quando si utilizza questo stile di programmazione, assicurarsi che i parametri c# corrispondono i tipi effettivi che deve trascorrere il motore di runtime.
 

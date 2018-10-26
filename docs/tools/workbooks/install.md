@@ -1,19 +1,19 @@
 ---
-title: Requisiti e l'installazione di cartelle di lavoro
-description: Questo documento viene descritto come scaricare e installare Xamarin le cartelle di lavoro, discutere dei requisiti di sistema e piattaforme supportate.
+title: Requisiti e installazione di cartelle di lavoro
+description: Questo documento viene descritto come scaricare e installare Xamarin Workbooks, discusse le piattaforme supportate e requisiti di sistema.
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: a35038a948a89889bbf067a453b7465c1a6a7b49
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: 7bef5de57b7ac709ebab4c39feedbec369e6bd14
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36268992"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122426"
 ---
-# <a name="workbooks-installation-and-requirements"></a>Requisiti e l'installazione di cartelle di lavoro
+# <a name="workbooks-installation-and-requirements"></a>Requisiti e installazione di cartelle di lavoro
 
 <a name="install" />
 
@@ -21,15 +21,15 @@ ms.locfileid: "36268992"
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-1. Controllare il [requisiti](#requirements) sotto.
-2. Scaricare e installare [Xamarin le cartelle di lavoro per Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
-3. Avviare [essersi esercitati](~/tools/workbooks/workbook.md) con cartelle di lavoro o provare il [esempi](https://developer.xamarin.com/workbooks)
+1. Verificare i [requisiti](#requirements) sotto.
+2. Scaricare e installare [cartelle di lavoro di Xamarin per Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
+3. Avviare [esercitarsi](~/tools/workbooks/workbook.md) con le cartelle di lavoro o provare il [esempi](https://developer.xamarin.com/workbooks)
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-1. Controllare il [requisiti](#Requirements) sotto.
-2. Scaricare e installare [Xamarin le cartelle di lavoro per Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
-3. Avviare [essersi esercitati](~/tools/workbooks/workbook.md) con cartelle di lavoro o provare il [esempi](https://developer.xamarin.com/workbooks)
+1. Verificare i [requisiti](#Requirements) sotto.
+2. Scaricare e installare [Xamarin Workbooks per Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
+3. Avviare [esercitarsi](~/tools/workbooks/workbook.md) con le cartelle di lavoro o provare il [esempi](https://developer.xamarin.com/workbooks)
 
 -----
 
@@ -38,15 +38,15 @@ ms.locfileid: "36268992"
 #### <a name="supported-operating-systems"></a>Supported Operating Systems
 
 - **Mac** -OS X 10.11 o versione successiva
-- **Windows** -Windows 7 o versione successiva (con Internet Explorer 11 o versione successiva e .NET 4.6.1 o versione successiva)
+- **Windows** -Windows 7 o versione successiva (in Internet Explorer 11 o versione successiva e .NET 4.6.1 o versioni successive)
 
-#### <a name="supported-app-platforms"></a>Piattaforme di App supportate
+#### <a name="supported-app-platforms"></a>Piattaforme di App supportati
 
-|App della piattaforma|Supporto del sistema operativo|Note|
+|Piattaforma per App|Supporto del sistema operativo|Note|
 |--- |--- |--- |
 |Mac|Supportato solo su Mac|
-|iOS|Supportato in Mac e Windows|Xamarin. IOS 11.0 e Xcode 9.0 o versione successiva devono essere installati su Mac. L'esecuzione di cartelle di lavoro di iOS in Windows richiede un host di compilazione Mac che esegue tutte le precedenti e [simulatore iOS remoto](~/tools/ios-simulator.md) installato in Windows.|
-|Android|Supportato in Mac e Windows|Deve usare l'emulatore di Google, Visual Studio o Xamarin Android, con un dispositivo virtuale > = 5.0|
+|iOS|Supportato in Mac e Windows|Xamarin. IOS 11.0 e Xcode 9.0 o versione successiva deve essere installato su computer Mac. L'esecuzione di cartelle di lavoro di iOS in Windows richiede un host di compilazione Mac che esegue tutte le funzionalità precedenti e il [simulatore iOS remoto](~/tools/ios-simulator/index.md) installato in Windows.|
+|Android|Supportato in Mac e Windows|Deve usare l'emulatore di Google, Visual Studio o Xamarin. Android, con un dispositivo virtuale > = 5.0|
 |WPF|Supportato solo in Windows|
 |Console (.NET Framework)|Supportato in Mac e Windows|
 |Console (.NET Core)|Supportato in Mac e Windows|
@@ -54,18 +54,18 @@ ms.locfileid: "36268992"
 
 ## <a name="reporting-bugs"></a>Segnalazione dei bug
 
-. [Segnala un problema in GitHub][bugs]e includere tutte le informazioni seguenti:
+Verificare [segnalare i problemi in GitHub][bugs]e includono tutte le informazioni seguenti:
 
 ### <a name="log-files"></a>File di registro
 
-Collegare sempre il file di log di cartelle di lavoro client:
+Collegare sempre i file di log client di cartelle di lavoro:
 
 - Mac: `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
 - Windows: `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
 1.4.x offre inoltre la possibilità di selezionare il file di log in Finder (macOS) o Esplora risorse (Windows) direttamente dal menu principale:
 
-- **Guida > Visualizza File di Log**
+- **Guida > informazioni sul File di Log**
 
 #### <a name="log-paths-for-workbooks-13-and-earlier"></a>Percorsi di log per le cartelle di lavoro 1.3 e versioni precedenti:
 
@@ -74,40 +74,40 @@ Collegare sempre il file di log di cartelle di lavoro client:
 
 ### <a name="platform-version-information"></a>Informazioni sulla versione della piattaforma
 
-È molto utile conoscere i dettagli sul sistema operativo e prodotti Xamarin installati.
+È molto utile conoscere i dettagli relativi al sistema operativo e i prodotti Xamarin installati.
 
-Nel menu principale nelle cartelle di lavoro:
+Dal menu principale nelle cartelle di lavoro:
 
-* **Guida > copiare le informazioni sulla versione**
+* **Guida in linea > copiare le informazioni sulla versione**
 
 #### <a name="instructions-for-workbooks-13-and-earlier"></a>Istruzioni per le cartelle di lavoro 1.3 e versioni precedenti:
 
 Visual Studio per Mac
 
-- **Visual Studio > su Visual Studio > Mostra dettagli > Copia informazioni**
-- Incollare in report di bug
+- **Visual Studio > informazioni su Visual Studio > Mostra dettagli > Copia informazioni**
+- Incollare nel report sui bug
 
 Visual Studio
 
-- **Guida > su Visual Studio > Copia informazioni**
-- Per comunicarci la versione del sistema operativo e che sia in esecuzione Windows a 32 bit o 64 bit.
+- **Guida > informazioni su Visual Studio > Copia informazioni**
+- Inviaci la versione del sistema operativo e che sia in esecuzione Windows a 32 o 64 bit.
 
 ### <a name="samples"></a>Esempi
 
-Se è possibile collegare o collegare il **.workbooks** file si verificano problemi con, che potrebbe risolvere il bug più rapidamente.
+Se è possibile collegare o collegare il **.workbooks** file si verificano problemi con, che potrà aiutare a risolvere i bug più rapidamente.
 
 ### <a name="devices"></a>Dispositivi
 
-Se si verificano problemi di connessione iOS o Android cartella di lavoro e sono già controllati [la pagina sulla risoluzione dei problemi](~/tools/workbooks/troubleshooting/index.md), è necessario conoscere:
+Se si verificano problemi di connessione cartella di lavoro di Android o iOS e sono già verificati [la pagina sulla risoluzione dei problemi](~/tools/workbooks/troubleshooting/index.md), è necessario conoscere:
 
 - Nome del dispositivo che si sta tentando di connettersi a
 - Versione del sistema operativo del dispositivo
-- Android: Verificare che si sta utilizzando un x86 emulatore
-- Android: Quale piattaforma emulatore si sta utilizzando? Google emulatore?
+- Android: Verificare che si utilizza un x86 dell'emulatore
+- Android: Piattaforma emulatore si sta usando? Emulatore Google?
   Emulatore Android di Visual Studio? Xamarin Android Player?
-- iOS in Windows: la versione del simulatore iOS Xamarin remoto è installato (controllare **Aggiungi/Rimuovi programmi** in **Pannello di controllo**)?
-- iOS in Windows: anche fornire informazioni sulla versione della piattaforma per l'host di compilazione Mac
-- Il dispositivo dispone di connettività di rete (controllo tramite browser web)?
+- iOS in Windows: quale versione di Xamarin REMOTED iOS Simulator è installato (controllare **Aggiungi/Rimuovi programmi** nelle **Pannello di controllo**)?
+- iOS in Windows: inviare anche le informazioni sulla versione della piattaforma per l'host di compilazione Mac
+- Il dispositivo dispone di connettività di rete (controllo tramite web browser)?
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
 
@@ -115,33 +115,33 @@ Se si verificano problemi di connessione iOS o Android cartella di lavoro e sono
 
 ### <a name="windows"></a>WINDOWS
 
-A seconda del modo in cui è stato acquistato le cartelle di lavoro, è possibile eseguire due procedure di disinstallazione. Controllare entrambi questi per disinstallare completamente il software.
+A seconda del modo in cui è stato acquistato le cartelle di lavoro, potrebbe essere necessario eseguire due procedure di disinstallazione. Controllare entrambi a disinstallare completamente il software.
 
 #### <a name="visual-studio-installer"></a>Programma di installazione di Visual Studio
 
-Se si dispone di Visual Studio 2017, aprire **programma di installazione di Visual Studio**ed esaminare **singoli componenti** per **Xamarin le cartelle di lavoro**. Se è selezionata, deselezionarla e quindi fare clic su **modifica** per disinstallare.
+Se si dispone di Visual Studio 2017, aprire **programma di installazione di Visual Studio**e cercare **singoli componenti** per **Xamarin Workbooks**. Se è selezionata, deselezionarla e quindi fare clic su **Modify** disinstallare.
 
 #### <a name="system-uninstall"></a>Disinstallazione di sistema
 
-Se è stato installato cartelle di lavoro manualmente con un programma di installazione scaricato, sarà necessario essere disinstallate tramite le **App e funzionalità** pagina delle impostazioni di sistema in Windows 10 o tramite **Aggiungi/Rimuovi programmi** nel controllo Pannello sul versioni precedenti di Windows.
+Se è installato le cartelle di lavoro manualmente con un programma di installazione scaricato, dovrà essere disinstallato tramite la **App e funzionalità** pagina delle impostazioni di sistema in Windows 10 o tramite **Aggiungi/Rimuovi programmi** nel controllo Pannello nelle versioni precedenti di Windows.
 
-> **Start > Impostazioni > sistema > app & funzionalità**
+> **Start > Impostazioni > sistema > App e funzionalità**
 
-![](install-images/windows-remove.png "Cartelle di lavoro di Xamarin come elencato nella &quot;app &amp; funzionalità&quot;")
+![](install-images/windows-remove.png "Xamarin Workbooks come indicato nella &quot;app &amp; funzionalità&quot;")
 
-**È comunque necessario seguire la procedura per il programma di installazione Visual Studio per assicurarsi che le cartelle di lavoro non venga reinstallato all'insaputa.**
+**È comunque deve seguire la procedura per l'installazione di Visual Studio per assicurarsi che le cartelle di lavoro non venga reinstallato insaputa dell'utente.**
 
 <a name="uninstall-macos" />
 
 ### <a name="macos"></a>macOS
 
-A partire da [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/), Xamarin le cartelle di lavoro possono essere disinstallati da un terminale eseguendo:
+A partire [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/), Xamarin Workbooks può essere disinstallato da un terminal eseguendo:
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
 ```
 
-Il programma di disinstallazione illustra in dettaglio i file e directory saranno rimosse e richiedere la conferma prima di procedere.
+Il programma di disinstallazione fornisce i dettagli di file e directory saranno rimosse e chiedere conferma prima di procedere.
 
 Passare il `-help` argomento per il `uninstall` script per scenari più avanzati.
 
@@ -152,13 +152,13 @@ Per le versioni precedenti, è necessario rimuovere manualmente quanto segue:
 2. Eliminare i componenti aggiuntivi: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` e `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
 3. Eliminare Inspector e i file di supporto qui: `/Library/Frameworks/Xamarin.Interactive.framework` e `/Library/Frameworks/Xamarin.Inspector.framework`
 
-## <a name="downgrading"></a>Downgrade
+## <a name="downgrading"></a>Il downgrade
 
-L'identificatore bundle **Workbooks.app applicazioni/Xamarin** modificato da `com.xamarin.Inspector` a `com.xamarin.Workbooks` nella versione 1.4, come le cartelle di lavoro e di controllo sono completamente suddivise.
+L'identificatore del bundle per **Workbooks.app applicazioni/Xamarin** modificata `com.xamarin.Inspector` a `com.xamarin.Workbooks` nella versione 1.4, come Workbooks e Inspector sono ora completamente dividere.
 
-A causa di un bug nei programmi di installazione precedente, non è possibile effettuare il downgrade versioni 1.4 o versione successive utilizzando il 1.3.2 o programmi di installazione precedente.
+A causa di un bug in programmi di installazione precedente, non è possibile effettuare il downgrade di versioni 1.4 o successive usando i 1.3.2 o programmi di installazione precedenti.
 
-Effettuare il downgrade dalla 1.4 o versione successiva a 1.3.2 o precedente:
+Effettuare il downgrade da 1.4 o versione successiva a 1.3.2 o versioni precedenti:
 
-1. [Disinstallare manualmente le cartelle di lavoro e controllo](#macOS)
-2. Eseguire il 1.3.2 precedente o successiva `.pkg` programma di installazione
+1. [Disinstallare Workbooks e Inspector manualmente](#macOS)
+2. Eseguire il 1.3.2 o versioni precedenti `.pkg` programma di installazione

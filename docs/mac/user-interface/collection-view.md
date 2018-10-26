@@ -4,15 +4,15 @@ description: Questo articolo descrive l'utilizzo con le visualizzazioni di racco
 ms.prod: xamarin
 ms.assetid: 6EE32256-5948-4AE4-8133-6D0B3F4173E8
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/24/2017
-ms.openlocfilehash: c8b4b5ff8bebf5fbbded410ae84d1aefcca2d6cc
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 904db0b97a8b21fd51722b70a63386a53e3f5347
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251110"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104037"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Visualizzazioni raccolta in xamarin. Mac
 
@@ -375,7 +375,7 @@ public override bool Selected
 
 Un'origine dati di visualizzazione raccolta (`NSCollectionViewDataSource`) fornisce tutti i dati per una visualizzazione di raccolta e crea e popola una cella di visualizzazione di raccolta (usando il `.xib` prototipo) come richiesto per ogni elemento nella raccolta.
 
-Aggiungere una nuova classe il progetto, denominarlo `CollectionViewDataSource` e renderlo simile al seguente:
+Aggiungere una nuova classe del progetto, denominarlo `CollectionViewDataSource` e renderlo simile al seguente:
 
 ```csharp
 using System;

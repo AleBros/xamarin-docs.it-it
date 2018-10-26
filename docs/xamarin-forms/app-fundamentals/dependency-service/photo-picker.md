@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: dafa60ff57f34bd4169af48e380079d9637d8d26
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 00308a6c7883d4ac6ce41592d4a0e18f9fb28d52
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241107"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113313"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>Selezione di una foto dalla raccolta immagini di
 
@@ -114,11 +114,14 @@ namespace DependencyServiceSample.iOS
                 NSData data = image.AsJPEG(1);
                 Stream stream = data.AsStream();
 
+                UnregisterEventHandlers();
+
                 // Set the Stream as the completion of the Task
                 taskCompletionSource.SetResult(stream);
             }
             else
             {
+                UnregisterEventHandlers();
                 taskCompletionSource.SetResult(null);
             }
             imagePicker.DismissModalViewController(true);
@@ -126,8 +129,15 @@ namespace DependencyServiceSample.iOS
 
         void OnImagePickerCancelled(object sender, EventArgs args)
         {
+            UnregisterEventHandlers();
             taskCompletionSource.SetResult(null);
             imagePicker.DismissModalViewController(true);
+        }
+
+        void UnregisterEventHandlers()
+        {
+            imagePicker.FinishedPickingMedia -= OnImagePickerFinishedPickingMedia;
+            imagePicker.Canceled -= OnImagePickerCancelled;
         }
     }
 }
@@ -276,7 +286,7 @@ Button pickPictureButton = new Button
 stack.Children.Add(pickPictureButton);
 ```
 
-Il `Clicked` gestore utilizza la `DependencyService` classe chiamare `GetImageStreamAsync`. Ciò comporta una chiamata nel progetto di piattaforma. Se il metodo restituisce un `Stream` dell'oggetto, quindi crea il gestore di un `Image` (elemento) per l'immagine con un `TabGestureRecognizer`e sostituisce il `StackLayout` della pagina per cui `Image`:
+Il `Clicked` gestore utilizza la `DependencyService` classe chiamare `GetImageStreamAsync`. Ciò comporta una chiamata nel progetto di piattaforma. Se il metodo restituisce un `Stream` dell'oggetto, quindi crea il gestore di un `Image` (elemento) per l'immagine con un `TapGestureRecognizer`e sostituisce il `StackLayout` della pagina per cui `Image`:
 
 ```csharp
 pickPictureButton.Clicked += async (sender, e) =>

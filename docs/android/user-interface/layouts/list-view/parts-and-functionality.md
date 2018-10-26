@@ -3,15 +3,15 @@ title: Funzionalità e le parti di ListView
 ms.prod: xamarin
 ms.assetid: ABA40FED-FF68-C0B0-BC43-C748CEE585D8
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: ec9b6583cac9478957e14f709c7c7ee8eb273cbc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 248baa5daceff6db01098a155600ea204547e845
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763982"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116114"
 ---
 # <a name="listview-parts-and-functionality"></a>Funzionalità e le parti di ListView
 
@@ -20,58 +20,58 @@ ms.locfileid: "30763982"
 
 Oggetto `ListView` costituita dalle parti seguenti:
 
-- **Righe** &ndash; la rappresentazione dei dati nell'elenco visibile.
+- **Righe** &ndash; la rappresentazione visibile di dati nell'elenco.
 
-- **Scheda** &ndash; una classe non visivi che associa l'origine dati alla visualizzazione elenco.
+- **Adapter** &ndash; una classe non visivo che associa l'origine dati alla visualizzazione elenco.
 
 - **Scorrimento rapido** &ndash; un handle che consente all'utente di scorrere la lunghezza dell'elenco.
 
-- **Sezione indice** &ndash; le righe di un elemento dell'interfaccia utente che può essere spostata sulle barre di scorrimento per indicare dove nell'elenco di righe corrente si trovano.
+- **Sezione indice** &ndash; righe di un elemento dell'interfaccia utente mobile rispetto allo scorrimento per indicare dove nell'elenco di righe corrente si trovano.
 
-Queste schermate usano un basic `ListView` controllo per mostrare la modalità di rendering scorrimento rapido e l'indice di sezioni:
+Queste schermate usano una basic `ListView` controllo per mostrare la modalità di rendering lo scorrimento veloce e l'indice di sezioni:
 
-[![Schermate dell'App con le righe meno recenti semplice, veloce lo scorrimento e l'indice di sezioni](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png#lightbox)
+[![Alcune schermate dell'App con le righe precedenti semplice, veloce lo scorrimento e l'indice di sezioni](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png#lightbox)
 
 Gli elementi che costituiscono un `ListView` sono descritti in dettaglio più avanti:
 
 
 ## <a name="rows"></a>Righe
 
-Ogni riga ha il proprio `View`. La vista può essere una delle visualizzazioni predefinite definite `Android.Resources`, o una vista personalizzata. Ogni riga è possibile utilizzare lo stesso layout visualizzazione o possono essere tutti diversi. Sono disponibili esempi in questo documento dell'utilizzo di layout predefinito e altri utenti che descrivono come definire un layout personalizzato.
+Ogni riga ha il proprio `View`. La vista può essere una delle visualizzazioni predefinite definite in `Android.Resources`, o una visualizzazione personalizzata. Ogni riga è possibile usare lo stesso layout di visualizzazione o possono essere tutti diversi. Sono disponibili esempi in questo documento dell'uso di layout predefinite e altri che spiega come definire i layout personalizzati.
 
 
 ## <a name="adapter"></a>Adattatore
 
-Il `ListView` controllo richiede un `Adapter` per fornire il formato `View` per ogni riga. Android è incorporato schede e viste che possono essere utilizzate o è possibile creare classi personalizzate.
+Il `ListView` controllo richiede un `Adapter` fornire formattato `View` per ogni riga. Android ha incorporato schede e viste che possono essere utilizzate o è possibile creare classi personalizzate.
 
 
-## <a name="fast-scrolling"></a>Scorrimento rapido
+## <a name="fast-scrolling"></a>Lo scorrimento veloce
 
-Quando un `ListView` contiene molte righe di dati lo scorrimento rapido può essere abilitato per consentire all'utente di passare a qualsiasi parte dell'elenco. Fast-allo scorrimento 'barra di scorrimento' può essere facoltativamente abilitato (e personalizzati nel livello API 11 e versioni successive).
+Quando un `ListView` contiene molte righe di dati lo scorrimento rapido può essere abilitato per consentire all'utente di passare a qualsiasi parte dell'elenco. Fast-allo scorrimento 'barra di scorrimento' può essere facoltativamente abilitato (e personalizzate nel livello API 11 e versioni successive).
 
 
 ## <a name="section-index"></a>Indice di sezioni
 
-Durante lo scorrimento lunghi elenchi, l'indice della sezione facoltativa fornisce all'utente con commenti e suggerimenti su quale parte dell'elenco da cui sta attualmente visualizzando. È solo appropriato in lunghi elenchi, in genere in combinazione con scorrimento rapido.
+Durante lo scorrimento di lunghi elenchi, l'indice di sezioni facoltative fornisce all'utente con commenti e suggerimenti su quale parte dell'elenco si sta visualizzando. È solo appropriato in lunghi elenchi, in genere in combinazione con scorrimento rapido.
 
 
 ## <a name="classes-overview"></a>Cenni preliminari sulle classi
 
-Classi principali utilizzate per visualizzare `ListViews` riportati di seguito:
+Le classi primarie utilizzate per visualizzare `ListViews` riportati di seguito:
 
-[![Diagramma UML che illustrano le relazioni tra ListView e classi associate](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png#lightbox)
+[![UML-Diagramma che illustra le relazioni tra ListView e classi associate](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png#lightbox)
 
-Lo scopo di ogni classe è descritta di seguito:
+Lo scopo di ogni classe è il seguente:
 
-- **ListView** &ndash; elemento dell'interfaccia utente che visualizza una raccolta di righe scorrevole. Su telefoni viene in genere utilizza tutta l'intero schermo (nel qual caso il `ListActivity` classe può essere utilizzata) o può far parte di un layout più grande su telefoni o dispositivi tablet.
+- **ListView** &ndash; elemento dell'interfaccia utente che visualizza una raccolta di righe scorrevole. Su telefoni, in genere utilizza tutta l'intera schermata (nel qual caso il `ListActivity` classe può essere utilizzata) o è stato possibile far parte di un layout più grande in dispositivi tablet o telefoni.
 
-- **Visualizzazione** &ndash; una visualizzazione in Android può essere qualsiasi elemento dell'interfaccia utente, ma nel contesto di un `ListView` richiede un `View` da fornire per ogni riga.
+- **Vista** &ndash; una visualizzazione in Android può essere qualsiasi elemento dell'interfaccia utente, ma nel contesto di un `ListView` richiede una `View` da fornire per ogni riga.
 
 - **BaseAdapter** &ndash; classe di Base per implementazioni dell'adattatore associare un `ListView` a un'origine dati.
 
-- **ArrayAdapter** &ndash; classe dell'adattatore predefinito che associa una matrice di stringhe per un `ListView` per la visualizzazione. Il tipo generico `ArrayAdapter<T>` esegue la stessa operazione per altri tipi.
+- **ArrayAdapter** &ndash; classe dell'adattatore predefinito che associa una matrice di stringhe in cui un `ListView` per la visualizzazione. Il tipo generico `ArrayAdapter<T>` esegue la stessa operazione per altri tipi.
 
-- **CursorAdapter** &ndash; utilizzare `CursorAdapter` o `SimpleCursorAdapter` per visualizzare i dati in base a una query SQLite.
+- **CursorAdapter** &ndash; uso `CursorAdapter` o `SimpleCursorAdapter` per visualizzare i dati in base a una query SQLite.
 
-Questo documento contiene esempi semplici che usano un `ArrayAdapter` nonché esempi più complessi che richiedono le implementazioni personalizzate di `BaseAdapter` o `CursorAdapter`.
+Questo documento contiene semplici esempi che usano un `ArrayAdapter` oltre a esempi più complessi che richiedono le implementazioni personalizzate degli `BaseAdapter` o `CursorAdapter`.
 

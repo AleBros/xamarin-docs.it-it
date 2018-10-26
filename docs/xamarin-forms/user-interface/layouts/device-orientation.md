@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 7f0e1c27f7d6a62dc43ac447c4f796d685a6cd91
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: a008b270d4ff670a03f18318186ca038c5c0348d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241211"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118877"
 ---
 # <a name="device-orientation"></a>Orientamento del dispositivo
 
@@ -28,7 +28,7 @@ Quando si usa xamarin. Forms, il metodo supportato per il controllo dell'orienta
 
 In iOS, l'orientamento del dispositivo è configurato per applicazioni che usano il **Info. plist** file. Questo file includerà le impostazioni di orientamento per iPhone e iPod, nonché le impostazioni per iPad se l'app include come destinazione. Di seguito sono istruzioni specifiche per il tuo IDE. Usare le opzioni dell'IDE all'inizio di questo documento per selezionare le istruzioni che si desidera vedere:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 In Visual Studio, aprire il progetto iOS e aprire **Info. plist**. Il file verrà aperto un pannello di configurazione, iniziando dalla scheda informazioni sulla distribuzione iPhone:
 
@@ -38,7 +38,7 @@ Per configurare l'orientamento di iPad, selezionare la **informazioni sulla dist
 
 ![Orientamenti dispositivo supportati in Visual Studio](device-orientation-images/orientation-vs-ipad.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 In Visual Studio per Mac, aprire il progetto iOS e aprire **Info. plist**. Sotto il **applicazione** scheda sezioni saranno disponibili per impostare l'orientamento:
 
