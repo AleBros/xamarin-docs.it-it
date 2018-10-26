@@ -3,15 +3,15 @@ title: Caricamento manuale dell'APK
 ms.prod: xamarin
 ms.assetid: 1309C251-ABF0-4412-B1F5-200DC8321A9D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 3bfddb315d74e6282004edeb10a35271dce3b9c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: df6ef208957d8dae229ebb8aee2304444b7d18fe
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30771034"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111284"
 ---
 # <a name="manually-uploading-the-apk"></a>Caricamento manuale dell'APK
 

@@ -4,15 +4,15 @@ description: Questa guida illustra come avviare ed eseguire il debug delle app i
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 9e0eade7a2e033838f78f24270ec2bf9d4abc171
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: e40178e43cfcfd261434fab9dd5ca0a9061d3f59
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935757"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113782"
 ---
 # <a name="debugging-on-the-android-emulator"></a>Debug nell'emulatore Android
 
@@ -25,7 +25,7 @@ L'emulatore Android (installato con il carico di lavoro **Sviluppo di applicazio
 
 ## <a name="using-a-pre-configured-virtual-device"></a>Uso di un dispositivo virtuale preconfigurato
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio include dispositivi virtuali preconfigurati che vengono visualizzati nel menu a discesa dei dispositivi. Nello screenshot di Visual Studio 2017 seguente, ad esempio, sono disponibili diversi dispositivi virtuali preconfigurati:
 
@@ -48,7 +48,7 @@ Se il progetto Xamarin.Android usa un livello di framework di destinazione non c
 È possibile fare clic su **Cambia destinazione minima di Android** per modificare la versione minima di Android del progetto in modo che corrisponda al livello API dei dispositivi virtuali disponibili. In alternativa, è possibile usare [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md) per creare nuovi dispositivi virtuali che supportano il livello API di destinazione.
 Prima di poter configurare i dispositivi virtuali per un nuovo livello API, è necessario installare le immagini di sistema corrispondenti per tale livello API (vedere [Configurazione di Android SDK per Xamarin.Android](~/android/get-started/installation/android-sdk.md)).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Visual Studio per Mac include dispositivi virtuali preconfigurati visualizzati nel menu a discesa dei dispositivi. Nello screenshot seguente, ad esempio, sono disponibili due dispositivi virtuali preconfigurati:
 
@@ -73,11 +73,11 @@ Per modificare i dispositivi virtuali (o crearne di nuovi), occorre usare [Andro
 
 Nella parte superiore di Visual Studio è disponibile un menu a discesa che consente di selezionare la modalità **Debug** o **Versione**. Se si sceglie la modalità **Debug**, il debugger viene collegato al processo dell'applicazione in esecuzione all'interno dell'emulatore dopo l'avvio dell'app. Se si sceglie la modalità **Versione**, il debugger viene disabilitato (tuttavia, è comunque possibile eseguire l'app e usare le istruzioni di registrazione per il debug). Dopo aver scelto un dispositivo virtuale dal menu a discesa dei dispositivi, selezionare la modalità **Debug** o **Versione** e quindi fare clic sul pulsante Esegui per eseguire l'applicazione:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![Modalità Debug e Versione, pulsante Esegui](debug-on-emulator-images/win/17-debug-release-sml.png)](debug-on-emulator-images/win/17-debug-release.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 [![Modalità Debug e Versione, pulsante Esegui](debug-on-emulator-images/mac/16-debug-release-sml.png)](debug-on-emulator-images/mac/16-debug-release.png#lightbox)
 

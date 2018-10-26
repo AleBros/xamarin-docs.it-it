@@ -4,15 +4,15 @@ description: Gli sviluppatori Java possono sfruttare le competenze e il codice e
 ms.prod: xamarin
 ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 92bcfc888c52f9f74c8484295666da8f5ef7a14c
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.openlocfilehash: eb1d08c5dee6c7944fa42e7446b34a5dbbb45ad3
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209336"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120411"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin per sviluppatori Java
 
@@ -473,7 +473,7 @@ Ci sono inoltre numerose parole chiave specifiche di C# che non hanno una contro
 |[struct](https://msdn.microsoft.com/en-us/library/ah19swz4.aspx)|Tipo di valore che incapsula un gruppo di variabili correlate.|
 |[typeof](https://msdn.microsoft.com/en-us/library/58918ffs.aspx)|Ottiene il tipo di un oggetto.|
 |[var](https://msdn.microsoft.com/en-us/library/bb383973.aspx)|Dichiara una variabile locale tipizzata in modo implicito.|
-|[value](https://msdn.microsoft.com/en-us/library/a1khb4f8.aspx)|Fa riferimento al valore che il codice client vuole assegnare a una proprietà.|
+|[valore](https://msdn.microsoft.com/en-us/library/a1khb4f8.aspx)|Fa riferimento al valore che il codice client vuole assegnare a una proprietà.|
 |[virtual](https://msdn.microsoft.com/en-us/library/9fkccyh4.aspx)|Consente l'override di un metodo in una classe derivata.|
 
 

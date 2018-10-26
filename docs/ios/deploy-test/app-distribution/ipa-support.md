@@ -4,15 +4,15 @@ description: Questo articolo illustra come creare un file IPA che può essere us
 ms.prod: xamarin
 ms.assetid: D253C2DB-852E-6FC6-C9FD-574730B8DB19
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 4fd64a1ebf05dd149304f49d8282ee1b38bfcf03
-ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
+ms.openlocfilehash: 70d6b908beb0d04788365b104b5e4a2679b0ebe1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36321363"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113248"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Supporto IPA in Xamarin.iOS
 
@@ -54,7 +54,7 @@ Per informazioni più dettagliate, vedere la documentazione [Illustrazione di iT
 
 ## <a name="creating-an-ipa"></a>Creazione di un file IPA
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 La creazione di un file IPA ora è predefinita nel nuovo flusso di lavoro di pubblicazione. A questo scopo, seguire le istruzioni riportate sotto per archiviare l'app, firmarla e salvare il file IPA.
 
@@ -138,7 +138,7 @@ In alcuni casi, ad esempio in un ambiente di integrazione continua, può essere 
     /Library/Frameworks/Mono.framework/Commands/msbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
     ```
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Dopo la creazione e la selezione del profilo di provisioning, la creazione del file **iTunesMetadata.plist** facoltativo e l'impostazione di iTunes Artwork in Visual Studio, è possibile compilare un file IPA per la distribuzione. Sarà quindi necessario configurare il progetto. Seguire questa procedura:
 
@@ -233,11 +233,11 @@ Il pacchetto IPA risultante può essere distribuito agli utenti di test per l'in
 
 La nuova applicazione iOS verrà visualizzata nella sezione **My Apps** (App personali), su cui è possibile fare clic con il pulsante destro del mouse per ottenere informazioni sull'applicazione:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
  ![](ipa-support-images/installxs01.png "Nuova applicazione iOS nella sezione My Apps (App personali)")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
  ![](ipa-support-images/installvs01.png "Nuova applicazione iOS nella sezione My Apps (App personali)")
 

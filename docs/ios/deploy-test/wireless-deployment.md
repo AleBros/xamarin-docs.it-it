@@ -4,15 +4,15 @@ description: Questo documento descrive come distribuire in modalità wireless un
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 02/09/2018
-ms.openlocfilehash: ade7eb7ff26fec8df616401801585e499ddf4206
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 6e63d60d12a80abb8f229b2daf0767ad54a83314
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785518"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118903"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Distribuzione wireless per app Xamarin.iOS e tvOS
 
@@ -26,14 +26,14 @@ La distribuzione wireless è disponibile come funzionalità sia in Visual Studio
 
 Per usare la distribuzione wireless, è necessario quanto segue:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 - macOS 10.12.4
 - Ultima versione di Visual Studio per Mac
 - Xcode 9.0 o versione successiva
 - Un dispositivo con iOS 11.0 o tvOS 11.0 e versioni successive
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - Ultima versione di Visual Studio
 - Un dispositivo con iOS 11.0 o tvOS 11.0 e versioni successive

@@ -1,40 +1,40 @@
 ---
-title: Android Designer
-description: In questo articolo riguarda le funzionalità della finestra di progettazione di xamarin. Illustra i concetti di base della finestra di progettazione che mostra come utilizzare la finestra di progettazione per il layout visivo widget e come modificare le proprietà. Viene inoltre illustrato come utilizzare la finestra di progettazione per operare con interfacce utente e le risorse in configurazioni diverse, ad esempio i temi, lingue e le configurazioni del dispositivo, nonché sulla progettazione per le visualizzazioni alternative come verticale e orizzontale.
+title: Finestra di progettazione di xamarin. Android
+description: Questo articolo descrive le funzionalità della finestra di progettazione di xamarin. Android. Vengono descritte le nozioni di base della finestra di progettazione, che illustra come usare la finestra di progettazione per disporre i widget visivamente e modificare le proprietà. Viene inoltre illustrato come utilizzare la finestra di progettazione per usare risorse e le interfacce utente in diverse configurazioni, ad esempio i temi, linguaggi e le configurazioni dei dispositivi, nonché come progettare per le visualizzazioni alternative, ad esempio verticale e orizzontale.
 ms.prod: xamarin
 ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: 20da09895bae759c77e96300d798267881a7cbfd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: conceptdev
+ms.author: crdun
+ms.date: 07/25/2018
+ms.openlocfilehash: 1923d11829cf96941c8775f5f6b013116e0f2893
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763566"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114516"
 ---
-# <a name="android-designer"></a>Android Designer
+# <a name="xamarinandroid-designer"></a>Finestra di progettazione di xamarin. Android
 
-_In questo articolo riguarda le funzionalità della finestra di progettazione di xamarin. Illustra i concetti di base della finestra di progettazione che mostra come utilizzare la finestra di progettazione per il layout visivo widget e come modificare le proprietà. Viene inoltre illustrato come utilizzare la finestra di progettazione per operare con interfacce utente e le risorse in configurazioni diverse, ad esempio i temi, lingue e le configurazioni del dispositivo, nonché sulla progettazione per le visualizzazioni alternative come verticale e orizzontale._
+_Questo articolo descrive le funzionalità della finestra di progettazione di xamarin. Android. Vengono descritte le nozioni di base della finestra di progettazione, che illustra come usare la finestra di progettazione per disporre i widget visivamente e modificare le proprietà. Viene inoltre illustrato come utilizzare la finestra di progettazione per usare risorse e le interfacce utente in diverse configurazioni, ad esempio i temi, linguaggi e le configurazioni dei dispositivi, nonché come progettare per le visualizzazioni alternative, ad esempio verticale e orizzontale._
 
 
 ## <a name="overview"></a>Panoramica
 
-Xamarin supporta entrambi uno stile dichiarativo di progettazione dell'interfaccia utente basato su file XML, nonché di creazione dell'interfaccia utente a livello di programmazione nel codice.
-Quando si utilizza l'approccio dichiarativo, file XML possono essere modificato manualmente o modificate in modo visivo utilizzando la finestra di progettazione di xamarin. Utilizzo di una finestra di progettazione consente un feedback immediato durante la creazione dell'interfaccia utente, consente di velocizzare lo sviluppo e rende meno complesso, tendente al processo di creazione dell'interfaccia utente.
+Xamarin. Android supporta entrambi uno stile di progettazione dell'interfaccia utente basati su file XML, nonché creazione di un'interfaccia utente a livello di programmazione nel codice dichiarativo.
+Quando si usa l'approccio dichiarativo, file XML possono essere modificato manualmente o modificati in modo visivo tramite la finestra di progettazione di xamarin. Android. Uso di una finestra di progettazione consente un feedback immediato durante la creazione dell'interfaccia utente, consente di velocizzare lo sviluppo e rende meno estremamente complesso il processo di creazione dell'interfaccia utente.
 
-In questo articolo sondaggi molte funzionalità della finestra di progettazione di xamarin. Viene spiegato:
+Questo articolo descrive le numerose funzionalità di xamarin. Android Designer. Viene spiegato quanto segue:
 
-1.  L'utilizzo nella finestra di progettazione di base.
+1.  Le nozioni di base dell'uso della finestra di progettazione.
 2.  Le varie parti che compongono la finestra di progettazione.
-3.  Come caricare un layout Android nella finestra di progettazione.
+3.  Come caricare un layout di Android nella finestra di progettazione.
 4.  Come aggiungere widget.
 5.  Come modificare le proprietà.
-6.  Sull'utilizzo di varie risorse e le configurazioni del dispositivo.
+6.  Come lavorare con diverse risorse e le configurazioni dei dispositivi.
 7.  Come modificare un'interfaccia utente per le visualizzazioni alternative, ad esempio verticale e orizzontale. 
 8.  Come gestire i conflitti che potrebbero verificarsi quando si lavora con le visualizzazioni alternative. 
-9.  Come utilizzare gli strumenti di progettazione di materiale per compilare App materiale progettazione conformi.
+9.  Come usare gli strumenti di progettazione di materiale per compilare App conformi Material Design.
 
 
 
@@ -54,7 +54,8 @@ In questo articolo sondaggi molte funzionalità della finestra di progettazione 
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo viene descritto il set di funzionalità della finestra di progettazione di xamarin. È stato illustrato come iniziare a utilizzare la finestra di progettazione e descritte le relative parti. Descritto come caricare un layout, nonché come aggiungere e modificare widget, sia utilizzando la **proprietà riempimento** e inline nell'area di progettazione. Inoltre spiegato come funzionare con diverse risorse e le configurazioni del dispositivo. Infine, esaminato come utilizzare la finestra di progettazione per compilare interfacce utente che vengono compilate in modo specifico per la visualizzazione, ad esempio orizzontale e verticale, e come risolvere i conflitti che possono verificarsi tra tali visualizzazioni. 
+Questo articolo è illustrato il set di funzionalità della finestra di progettazione di xamarin. Android.
+È stato illustrato come iniziare a usare la finestra di progettazione e illustrato le relative parti. Descritto come caricare un layout, nonché come aggiungere e modificare i widget, utilizzando sia la **nell'area di progettazione** così come il **origine** visualizzazione. Spiega anche come lavorare con diverse risorse e le configurazioni dei dispositivi. Infine, si esaminato come utilizzare la finestra di progettazione per lo sviluppo di interfacce utente che vengono compilate in modo specifico per le visualizzazioni alternative, ad esempio orizzontale e verticale, nonché come risolvere i conflitti che possono verificarsi tra tali visualizzazioni.
 
 
 

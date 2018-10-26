@@ -4,15 +4,15 @@ description: 'Questo documento descrive fastlane, uno strumento che consente di 
 ms.prod: xamarin
 ms.assetid: 900FA6FF-F3C9-4D35-993E-B0D88E6B1883
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: fac90f4738046f91183a1acd080a0d0e480c6cbf
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: e1792eb9150aa92b04b873ae18ccd89723722529
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785197"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108041"
 ---
 # <a name="fastlane-for-ios--cert"></a>fastlane per iOS: cert
 

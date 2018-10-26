@@ -1,31 +1,31 @@
 ---
-title: Introduzione a usura Android
-description: Le guide in questa sezione introducono, usare Android, viene descritto come installare e configurare il computer per lo sviluppo di usura e illustrano le procedure che consentono di creare ed eseguire la prima app, usare Android.
+title: Introduzione a Android Wear
+description: Le guide incluse in questa sezione introducono Android Wear, viene descritto come installare e configurare il computer per lo sviluppo di usura e illustrano le procedure che consentono di creare ed eseguire la prima app Android Wear.
 ms.prod: xamarin
 ms.assetid: 8B9DC98A-773F-4E06-84A7-BA8208C4E864
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 12/18/2017
-ms.openlocfilehash: a0b022225dd670ca6da09abbca6b3db75a55f38b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 88259afe72715a0c369472b1a5c0609b56db8143
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763839"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102230"
 ---
-# <a name="getting-started-with-android-wear"></a>Introduzione a usura Android
+# <a name="get-started-with-android-wear"></a>Introduzione a Android Wear
 
-_Le guide in questa sezione introducono, usare Android, viene descritto come installare e configurare il computer per lo sviluppo di usura e illustrano le procedure che consentono di creare ed eseguire la prima app, usare Android._
+_Le guide incluse in questa sezione introducono Android Wear, viene descritto come installare e configurare il computer per lo sviluppo di usura e illustrano le procedure che consentono di creare ed eseguire la prima app Android Wear._
 
-## <a name="introduction-to-wearandroidwearget-startedintro-to-wearmd"></a>[Introduzione alla scadenza](~/android/wear/get-started/intro-to-wear.md)
+## <a name="introduction-to-wearandroidwearget-startedintro-to-wearmd"></a>[Introduzione a Wear](~/android/wear/get-started/intro-to-wear.md)
 
-Fornisce una panoramica di base dell'Android accenti, descrive le funzionalità principali, sono elencati alcuni dei dispositivi Android, usare più comuni e vengono forniti collegamenti alla documentazione di Google Android accenti essenziale per un approfondimento.
+Fornisce una panoramica di base di Android Wear, ne descrive le funzionalità chiave, sono elencati alcuni dei più diffusi dispositivi Android Wear e vengono forniti collegamenti alla documentazione di Google Android Wear essenziale per un approfondimento.
 
 ## <a name="setup--installationandroidwearget-startedinstallationmd"></a>[Configurazione e installazione](~/android/wear/get-started/installation.md)
 
-Vengono illustrati i passaggi di installazione e i dettagli di configurazione necessari per preparare il computer e dispositivi per lo sviluppo, usare Android.
+Illustra i passaggi di installazione e i dettagli di configurazione necessari per preparare il computer e dispositivi per lo sviluppo di Android Wear.
 
 ## <a name="hello-wearandroidwearget-startedhello-wearmd"></a>[Prima app per Wear](~/android/wear/get-started/hello-wear.md)
 
-Questa procedura dettagliata vengono fornite istruzioni dettagliate per la creazione di un piccolo progetto Android accenti che gestisce i clic del pulsante e visualizza un contatore di fare clic sul dispositivo usura.
+Questa procedura dettagliata vengono fornite istruzioni dettagliate per la creazione di un progetto Android Wear piccolo che gestisce i clic sui pulsanti e visualizza un contatore di fare clic sul dispositivo Wear.

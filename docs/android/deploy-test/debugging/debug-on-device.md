@@ -4,15 +4,15 @@ description: In questo articolo viene illustrato come eseguire il debug di un'ap
 ms.prod: xamarin
 ms.assetid: 153D3746-A27F-198B-48FE-D219C0133A79
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 1848bb624bf5f4bd627441a17fd077843c94edb9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c30beadf7c2de618952bdf0cd5c03e7ceee2845
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762740"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109705"
 ---
 # <a name="debug-on-device"></a>Eseguire il debug nel dispositivo
 
@@ -27,7 +27,7 @@ _In questo articolo viene illustrato come eseguire il debug di un'applicazione X
 
 Una volta che il dispositivo è connesso al computer, il debug di un'applicazione Xamarin.Android viene eseguito esattamente come per qualsiasi altro prodotto Xamarin o applicazione .NET. Verificare che nell'IDE siano selezionati la configurazione **Debug** e il dispositivo esterno. In questo modo i simboli di debug necessari sono disponibili e l'IDE può connettersi all'applicazione in esecuzione: 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Configurazione per il debug selezionata](debug-on-device-images/image1-vs.png)
 
@@ -39,7 +39,7 @@ Quando il dispositivo è stato selezionato, Xamarin.Android si connette al dispo
 
 ![Punto di interruzione raggiunto](debug-on-device-images/image3-vs.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ![Configurazione per il debug selezionata](debug-on-device-images/image1-xs.png)
 

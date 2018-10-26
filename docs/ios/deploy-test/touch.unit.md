@@ -4,15 +4,15 @@ description: Questo documento offre una panoramica su come eseguire unit test di
 ms.prod: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: ce2b452d50222ac3561dab5b76915b7ae634934b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: dd590b65fdf1f83ade3453fa1266d1f6724bb8de
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785463"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121828"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Unit test di app Xamarin.iOS
 
@@ -21,13 +21,13 @@ Gli unit test con Xamarin.iOS vengono eseguiti mediante il framework Touch.Unit,
 
 ## <a name="setting-up-a-test-project"></a>Configurazione di un progetto di test
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Per configurare un framework di testing unità per il progetto, è sufficiente aggiungere alla propria soluzione un progetto di tipo **Progetto di unit test iOS**. A questo scopo, fare clic con il pulsante destro del mouse sulla soluzione e scegliere **Aggiungi > Aggiungi nuovo progetto**. Nell'elenco selezionare **iOS > Test > API unificata > Progetto di unit test iOS** (è possibile scegliere C# o F#).
 
 ![](touch.unit-images/00.png "Scegliere C# o F#")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Per configurare un framework di testing unità per il progetto, è sufficiente aggiungere alla propria soluzione un progetto di tipo **Progetto di unit test iOS**. A questo scopo, fare clic con il pulsante destro del mouse sulla soluzione e scegliere **Aggiungi > Nuovo progetto**. Nell'elenco selezionare **Visual C# > iOS > App unit test (iOS)**.
 
@@ -37,11 +37,11 @@ Per configurare un framework di testing unità per il progetto, è sufficiente a
 
 L'esempio riportato sopra crea un progetto di base che contiene un programma runner di base e che fa riferimento al nuovo assembly MonoTouch.NUnitLite. Il progetto avrà un aspetto simile al seguente:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ![](touch.unit-images/01.png "Progetto in Esplora soluzioni")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](touch.unit-images/01a.png "Progetto in Esplora soluzioni")
 

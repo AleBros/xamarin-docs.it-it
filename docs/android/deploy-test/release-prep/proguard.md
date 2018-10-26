@@ -4,15 +4,15 @@ description: ProGuard di Xamarin.Android è uno strumento di classe Java che con
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: efb9c73eb9bddb2b22b84fb6f3388281f32a82ab
-ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
+ms.openlocfilehash: 998232119159c5dc3a284dd51d55dc381271a4e0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36321376"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117395"
 ---
 # <a name="proguard"></a>ProGuard
 
@@ -323,11 +323,11 @@ Il messaggio di errore seguente può essere visualizzato quando ProGuard legge i
 
 Questo problema in genere si verifica in Windows a causa della codifica non corretta del file `.cfg`. ProGuard non è in grado di gestire eventuali caratteri _byte order mark_ (BOM) all'interno di file di testo. Se è presente un carattere BOM, ProGuard termina con l'errore precedente. 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Per evitare questo problema, modificare il file di configurazione personalizzato con un editor di testo che consenta il salvataggio del file senza un carattere BOM. Per risolvere questo problema, assicurarsi che per l'editor di testo la codifica sia impostata su `UTF-8`. Con l'editor di testo [Notepad++](https://notepad-plus-plus.org/), ad esempio, è possibile salvare i file senza carattere BOM selezionando **Encoding (Codifica) &gt; Encode in UTF-8 Without BOM** (Codifica UTF-8 senza BOM) quando si salva il file. 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Per evitare questo problema, salvare il file di configurazione personalizzato da un editor di testo che consente di omettere il carattere BOM. 
 
