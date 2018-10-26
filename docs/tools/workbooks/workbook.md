@@ -1,92 +1,92 @@
 ---
 title: Cartelle di lavoro interattive
-description: Questo documento viene descritto come utilizzare le cartelle di lavoro di Xamarin per creare documenti in tempo reale che contengono il codice c# per la sperimentazione, insegnamento, training o l'esplorazione.
+description: Questo documento descrive come usare Xamarin Workbooks per creare documenti in tempo reale che contengono C# codice per sperimentare, insegnare, corsi di formazione o esplorazione.
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: fa79aae9af2cd90741a54a5b3abc17910fcb181d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 71f46535ffd0a99ad78acb8f0e3bbc5870abf33e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794176"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116758"
 ---
 # <a name="interactive-workbooks"></a>Cartelle di lavoro interattive
 
-È possibile utilizzare le cartelle di lavoro come un'applicazione autonoma, separata dall'IDE.
+È possibile usare le cartelle di lavoro come applicazione autonoma, separata dal tuo ambiente IDE.
 
-Per iniziare a creare una nuova cartella di lavoro, eseguire l'app cartelle di lavoro. Se non è installato questo già, visitare il [installazione](~/tools/workbooks/install.md#install) pagina. Verrà richiesto di creare una cartella di lavoro nella piattaforma di scelta, viene automaticamente connesso a un'app di agente che consente di visualizzare il documento in tempo reale.
+Per iniziare a creare una nuova cartella di lavoro, eseguire l'app cartelle di lavoro. Se non è stato installato questo già, visitare il [installazione](~/tools/workbooks/install.md#install) pagina. Verrà chiesto di creare una cartella di lavoro nella tua piattaforma preferita, che verrà connesse automaticamente a un'app dell'agente consente di visualizzare il documento in tempo reale.
 
-Se l'app cartelle di lavoro è già in esecuzione, è possibile creare un nuovo documento passando a **File > Nuovo**.
+Se l'app cartelle di lavoro è già in esecuzione, è possibile creare un nuovo documento selezionando **File > New**.
 
-Le cartelle di lavoro può essere salvati ed è aperto in un secondo momento all'interno dell'applicazione. È quindi possibile condividerli con altri utenti per illustrare idee, esplorare nuove API o insegna nuovi concetti.
+Le cartelle di lavoro può essere salvati e aperto in un secondo momento all'interno dell'applicazione. È quindi possibile condividerli con altri utenti per illustrare le idee, esplorare le API nuove o spiegare nuovi concetti.
 
 ## <a name="code-editing"></a>Modifica del codice
 
-Finestra di modifica del codice fornisce il completamento del codice, la colorazione della sintassi, inline live-diagnostica e supporto di istruzione su più righe.
+Finestra di modifica del codice fornisce il completamento del codice, colorazione della sintassi, inline live-diagnostica e supporto di istruzioni a più righe.
 
-[ ![](workbook-images/inspector-0.6.0-repl-small.png "Finestra di modifica del codice fornisce il completamento del codice, la colorazione della sintassi, inline live-diagnostica e supporto di istruzione su più righe")](workbook-images/inspector-0.6.0-repl.png#lightbox)
+[ ![](workbook-images/inspector-0.6.0-repl-small.png "Finestra di modifica del codice fornisce il completamento del codice, colorazione della sintassi, inline live-diagnostica e supporto di istruzioni a più righe")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
-Xamarin le cartelle di lavoro vengono salvati in un `.workbook` file, ovvero un file CommonMark con alcuni metadati nella parte superiore (vedere [tipi di File di cartelle di lavoro](#workbooks-files-types) per ulteriori informazioni su come è possibile salvare le cartelle di lavoro).
+Xamarin Workbooks vengono salvati in un `.workbook` file, ovvero un file CommonMark con alcuni metadati nella parte superiore (vedere [tipi di File di cartelle di lavoro](#workbooks-files-types) per altri dettagli sul modo in cui le cartelle di lavoro possono essere salvati).
 
 ### <a name="nuget-package-support"></a>Supporto per il pacchetto NuGet
 
-Numero di pacchetti NuGet più diffusi è supportati direttamente nelle cartelle di lavoro di Xamarin. È possibile cercare i pacchetti di accedere a **File > Aggiungi pacchetto**. Aggiunta di un pacchetto verrà visualizzato automaticamente `#r` istruzioni che fanno riferimento gli assembly di pacchetto, che consente di usare immediatamente.
+Sono supportati molti pacchetti NuGet più diffusi direttamente in Xamarin Workbooks. È possibile cercare i pacchetti, passare a **File > Aggiungi pacchetto**. Aggiunta di un pacchetto verrà automaticamente `#r` istruzioni che fanno riferimento assembly dei pacchetti, consentendo di usare immediatamente.
 
-Quando si salva una cartella di lavoro con riferimenti del pacchetto, vengono salvati anche tali riferimenti. Se si condivide la cartella di lavoro con un altro utente, verrà scaricato automaticamente i pacchetti di cui si fa riferimento.
+Quando si salva una cartella di lavoro con i riferimenti ai pacchetti, vengono salvate anche tali riferimenti. Se si condivide la cartella di lavoro con un'altra persona, scaricherà automaticamente i pacchetti con riferimenti.
 
-Esistono alcune limitazioni note con il supporto del pacchetto NuGet nelle cartelle di lavoro:
+Esistono alcune limitazioni note con supporto per il pacchetto NuGet nelle cartelle di lavoro:
 
-  * Librerie native sono supportati solo su iOS e solo durante il collegamento con la libreria gestita.
-  * I pacchetti che dipendono da `.targets` file o gli script di PowerShell probabilmente avrà esito negativo a funzionare come previsto.
-  * Per rimuovere o modificare una dipendenza pacchetto, modificare il manifesto della cartella di lavoro con un editor di testo. Gestione dei pacchetti corretto sarà presto disponibile.
+- Le librerie native sono supportati solo in iOS e solo quando collegato con la libreria gestita.
+- I pacchetti che dipendono da `.targets` file o script di PowerShell probabilmente avrà esito negativo a funzionare come previsto.
+- Per rimuovere o modificare una dipendenza del pacchetto, modificare il manifesto della cartella di lavoro con un editor di testo. Gestione dei pacchetti appropriata è in uscita.
 
-### <a name="xamarinforms-support"></a>Supporto xamarin. Forms
+### <a name="xamarinforms-support"></a>Supporto di xamarin. Forms
 
-Se si fa riferimento il pacchetto NuGet di xamarin. Forms nella cartella di lavoro, l'app di cartella di lavoro cambierà la visualizzazione principale per essere basati su xamarin. Forms. È possibile accedervi tramite `Xamarin.Forms.Application.Current.MainPage`.
+Se si fa riferimento il pacchetto NuGet di xamarin. Forms nella cartella di lavoro, l'app della cartella di lavoro cambierà la visualizzazione principale per essere basata su xamarin. Forms. È possibile accedervi tramite `Xamarin.Forms.Application.Current.MainPage`.
 
-La scheda di controllo di visualizzazione ha anche un supporto speciale per visualizzare la gerarchia della visualizzazione xamarin. Forms che consentono di comprendere il layout.
+La scheda di controllo di visualizzazione include anche uno speciale supporto per la visualizzazione della gerarchia di visualizzazione che aiutano a comprendere il layout di xamarin. Forms.
 
-## <a name="rich-text-editing"></a>Modifica del testo RTF
+## <a name="rich-text-editing"></a>Modifica del testo avanzata
 
 È possibile modificare il testo intorno al codice usando l'editor di testo RTF incluso, come illustrato di seguito:
 
-![](workbook-images/inspector-0.6.2-editing.gif "Modificare il testo nel codice utilizzando l'editor di testo RTF incorporato")
+![](workbook-images/inspector-0.6.2-editing.gif "Modificare il testo intorno al codice usando l'editor di testi con formattazione predefinita")
 
 ### <a name="markdown-authoring"></a>Creazione di markdown
 
-Gli autori di cartella di lavoro possono talvolta risultare più semplice modificare direttamente il CommonMark "source" della cartella di lavoro con il proprio editor preferito.
+Gli autori della cartella di lavoro potrebbero talvolta essere più semplice di modificare direttamente il CommonMark "source" della cartella di lavoro con loro editor preferito.
 
-Tenere presente che se si modifica e si salva la cartella di lavoro all'interno del client di cartelle di lavoro, il testo CommonMark potrebbe riformattato.
+Tenere presente che se si modifica e si salva la cartella di lavoro all'interno del client di cartelle di lavoro, il testo CommonMark potrebbe da riformattare.
 
-Si noti che a causa dell'estensione CommonMark viene usata per abilitare i metadati YAML nei file di cartella di lavoro, `---` è riservato a tale scopo. Se si desidera creare [interruzioni tematiche](http://spec.commonmark.org/0.27/#thematic-break) nel testo, è necessario utilizzare `***` o `___` invece. Tali interruzioni devono essere evitate in cartelle di lavoro 1.2 e versioni precedenti a causa di un bug durante il salvataggio.
+Si noti che a causa dell'estensione CommonMark utilizziamo per abilitare i metadati YAML nei file della cartella di lavoro, `---` è riservato a tale scopo. Se si desidera creare [interruzioni tematiche](http://spec.commonmark.org/0.27/#thematic-break) nel testo, è consigliabile usare `***` o `___` invece. Nella versione 1.2 di cartelle di lavoro e in precedenza a causa di un bug durante il salvataggio, è consigliabile evitare tali interruzioni.
 
 ### <a name="improvements-in-workbooks-13"></a>Miglioramenti nelle cartelle di lavoro 1.3
 
-La sintassi di offerta di blocco Markdown leggermente per migliorare la presentazione abbiamo inoltre esteso. Aggiungendo un emoji come primo carattere dell'offerta di blocco, è possibile influenzare il colore di sfondo dell'offerta:
+Abbiamo inoltre esteso la sintassi di offerta di blocco Markdown leggermente per migliorare la presentazione. Quando si aggiungono un emoji come primo carattere dell'offerta di blocco, è possibile influenzare il colore di sfondo dell'offerta:
 
-- `> [!NOTE]
->' verrà eseguito il rendering come una nota con uno sfondo blu
-- `> [!IMPORTANT]
->' verrà eseguito il rendering come un avviso con uno sfondo giallo
-- `> [!WARNING]
->' verrà eseguito il rendering di un problema con uno sfondo rosso
+- `> [!NOTE]`
+    > verrà eseguito il rendering come nota con uno sfondo blu
+- `> [!IMPORTANT]`
+    > verrà eseguito il rendering come un avviso con uno sfondo giallo
+- `> [!WARNING]`
+    > verrà eseguito il rendering come un problema con uno sfondo rosso
 
-È anche possibile collegare le intestazioni nel documento di cartella di lavoro. Punti di ancoraggio per ogni intestazione, verranno generati con l'ID di ancoraggio dal testo dell'intestazione, elaborato come segue:
+È anche possibile collegare a intestazioni nel documento di cartella di lavoro. Punti di ancoraggio per ogni intestazione, verranno generati con l'ID di ancoraggio in corso il testo dell'intestazione, elaborato come segue:
 
-1. L'intestazione è in minuscolo.
+1. L'intestazione è minuscolo.
 1. Vengono rimossi tutti i caratteri eccetto caratteri alfanumerici e trattini.
-1. Tutti gli spazi vengono sostituiti con trattini.
+1. Tutti gli spazi vengono sostituiti con i trattini.
 
-Ciò significa che un'intestazione come "importante" riceve un id di `important-header` e possono essere collegati a inserendo un collegamento a `#important-header` nella cartella di lavoro.
+Ciò significa che un'intestazione, ad esempio "Header importante" Ottiene un id del `important-header` e può essere collegato a inserendo un collegamento a `#important-header` nella cartella di lavoro.
 
 ## <a name="document-structure"></a>Struttura del documento
 
-### <a name="cell"></a>Cella
+### <a name="cell"></a>cella
 
-Unità discreta di contenuto, che rappresenta il codice eseguibile o markdown. Una cella di codice è costituita da un massimo di quattro componenti secondari:
+Unità discreta del contenuto, che rappresenta il codice eseguibile o markdown. Una cella di codice è costituita da un massimo di quattro componenti secondari:
 
 - Editor
   - Buffer
@@ -96,50 +96,51 @@ Unità discreta di contenuto, che rappresenta il codice eseguibile o markdown. U
 
 ### <a name="editor"></a>Editor
 
-Il componente di testo interattiva di una cella. Per le celle di codice, questo è l'editor di codice con evidenziazione della sintassi e così via. Per le celle markdown questo è un editor di contenuto RTF con una formattazione sensibile al contesto e la creazione della barra degli strumenti.
+Il componente di testo interattiva di una cella. Per le celle di codice, si tratta di editor del codice effettivo con l'evidenziazione della sintassi e così via. Per le celle di markdown è un editor di contenuto RTF con una formattazione sensibile al contesto e sulla barra degli strumenti di creazione.
 
 ### <a name="buffer"></a>Buffer
-Il contenuto effettivo di un editor.
+
+Il contenuto di un editor di testo effettivo.
 
 ### <a name="compiler-diagnostics"></a>Diagnostica del compilatore
 
-Qualsiasi diagnostica generati durante la compilazione di codice, il rendering solo quando viene richiesto di esecuzione esplicito. Viene visualizzata immediatamente sotto l'editor della cella.
+Diagnostica di qualsiasi prodotto durante la compilazione di codice, viene eseguito il rendering solo quando viene richiesto l'esecuzione esplicita. Viene visualizzata immediatamente sotto l'editor della cella.
 
 ### <a name="console-output"></a>Output della console
 
-Qualsiasi output venga scritto in un output standard o di errore standard durante l'esecuzione della cella. Verrà visualizzato un output standard nel testo di colore nero e verrà visualizzato l'errore standard nel testo di colore rosso.
+Qualsiasi output scritti durante l'esecuzione della cella output standard o di errore standard. Verrà visualizzato un output standard nel testo di colore nero e verrà eseguito il rendering degli errori standard nel testo di colore rosso.
 
 ### <a name="execution-results"></a>Risultati dell'esecuzione
 
-Verranno visualizzate durante la compilazione ha esito positivo, complete e interattive potenzialmente rappresentazioni dei risultati di una cella fornito un risultato viene effettivamente generato dall'esecuzione. Le eccezioni vengono considerate risultati in questo contesto, poiché non appena vengono prodotti in seguito all'esecuzione effettivamente la compilazione.
+Verranno eseguito il rendering di accattivanti e interattive potenzialmente rappresentazioni dei risultati di una cella dopo la compilazione ha esito positivo, fornito un risultato viene effettivamente generato dall'esecuzione. Le eccezioni vengono considerate i risultati in questo contesto, poiché essi vengono generati come risultato non eseguendo effettivamente la compilazione.
 
 ## <a name="workbooks-files-types"></a>Tipi di file delle cartelle di lavoro
 
-### <a name="plain-files"></a>File semplici
+### <a name="plain-files"></a>Semplici file
 
-Per impostazione predefinita, una cartella di lavoro vengono salvati come testo normale `.workbook` file contenente testo in formato CommonMark.
+Per impostazione predefinita, una cartella di lavoro vengono salvati come testo normale `.workbook` file che contiene il testo formattato CommonMark.
 
 ### <a name="packages"></a>Pacchetti
 
 Un pacchetto di cartella di lavoro è una directory denominata con il `.workbook` estensione.
-Nella ricerca del Mac e nella finestra di dialogo aprirlo Xamarin le cartelle di lavoro e dal menu File recenti, questa directory verrà riconosciuta come se fosse un file.
+Nella ricerca del Mac e nella finestra di dialogo aprirlo Xamarin Workbooks e recenti dal menu file, questa directory verrà riconosciuta come se fosse un file.
 
-La directory deve contenere un `index.workbook` file, ovvero la cartella di lavoro effettivo di testo normale che verrà caricata nelle cartelle di lavoro di Xamarin. La directory può contenere anche risorse richieste dalla `index.workbook`, ad esempio immagini o altri file.
+La directory deve contenere un `index.workbook` file, ovvero la cartella di lavoro di testo normale effettivi che verrà caricato in Xamarin Workbooks. La directory può contenere anche risorse richieste dalla `index.workbook`, ad esempio immagini o altri file.
 
-Se un testo normale `.workbook` file che fa riferimento a risorse dalla directory stesso viene aperto in cartelle di lavoro 0.99.3 o versioni successive, quando viene salvato, verrà convertito in un `.workbook` pacchetto. Questo vale in Windows e Mac.
+Se un testo normale `.workbook` nelle cartelle di lavoro 0.99.3 è aprire file che fa riferimento a risorse dalla relativa directory stesso o in un secondo momento, quando viene salvato, verrà convertito in un `.workbook` pacchetto. Ciò è vero in Mac e Windows.
 
 > [!NOTE]
-> Gli utenti di Windows verranno aperto il `package.workbook\index.workbook` file direttamente, ma in caso contrario, il pacchetto si comporterà come su Mac.
+> Gli utenti di Windows verranno aperto il `package.workbook\index.workbook` file direttamente, ma in caso contrario, il pacchetto si comporterà come nei computer Mac.
 
 ### <a name="archives"></a>Archivi
 
-Pacchetti di cartella di lavoro, da una directory, possono essere difficili da distribuire facilmente tramite internet. La soluzione è archivi di cartella di lavoro. Un archivio di cartella di lavoro è un pacchetto compresso zip cartella di lavoro, denominato con il `.workbook` estensione.
+I pacchetti della cartella di lavoro, in fase di directory, possono essere difficili da distribuire con facilità la rete Internet. La soluzione è archivi cartella di lavoro. Un archivio di cartella di lavoro è un pacchetto con estensione zip compresso della cartella di lavoro, denominato con il `.workbook` estensione.
 
-A partire da cartelle di lavoro 1.1, quando si salva un pacchetto di cartella di lavoro, la finestra di dialogo Salva offre la possibilità di salvare come archivio invece. Le cartelle di lavoro 1.0 non potevano predefinite di creazione o archivi di salvataggio.
+1.1 le cartelle di lavoro, quando si salva un pacchetto di cartella di lavoro, la finestra di dialogo Salva offre la possibilità di salvare invece come un archivio. Le cartelle di lavoro 1.0 prevedeva alcuna funzionalità integrata di creazione o di archivi di salvataggio.
 
-Le cartelle di lavoro 1.0, quando è stato aperto un archivio di cartella di lavoro, che è stato convertito in modo trasparente in un pacchetto di cartella di lavoro e il file zip è stata interrotta. Le cartelle di lavoro 1.1, rimane il file zip. Quando l'utente salva l'archivio, questo viene sostituito con un nuovo file zip.
+Nelle cartelle di lavoro 1.0 quando è stato aperto in un archivio cartella di lavoro, che è stato convertito in modo trasparente in un pacchetto di cartella di lavoro e il file zip è stata perso. Nelle cartelle di lavoro 1.1, rimane il file zip. Quando l'utente salva l'archivio, viene sostituito con un nuovo file zip.
 
-È possibile creare manualmente un archivio di cartella di lavoro facendo un pacchetto di cartella di lavoro **comprimere** sul Mac o **Invia a > Compressed cartella compressa** in Windows. Rinominare il file zip di un `.workbook` estensione di file. Tale operazione funziona solo con i pacchetti di cartella di lavoro, i file di cartella di lavoro non semplice.
+È possibile creare manualmente un archivio di cartella di lavoro facendo clic su un pacchetto di cartella di lavoro e selezionando **comprimere** in Mac, o **Invia a > cartella compressa Compressed** su Windows. Quindi rinominare il file con estensione zip per avere una `.workbook` estensione di file. Funziona solo con i pacchetti della cartella di lavoro, i file della cartella di lavoro non semplice.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

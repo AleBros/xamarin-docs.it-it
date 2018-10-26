@@ -1,20 +1,20 @@
 ---
-title: Come copiare i file di output IPA alla cartella di ricezione TFS?
+title: Come è possibile copiare i file di output IPA nella cartella di rilascio TFS?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B0F1E09E-7315-45BA-B7FF-44D2063EE19C
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 087a20ea3b573595e6cbd2b40d77de649676391e
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 74e2f2219dcb0908edce7f109844932639038b25
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31883709"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113040"
 ---
-# <a name="how-can-i-copy-ipa-output-files-to-the-tfs-drop-folder"></a>Come copiare i file di output IPA alla cartella di ricezione TFS?
+# <a name="how-can-i-copy-ipa-output-files-to-the-tfs-drop-folder"></a>Come è possibile copiare i file di output IPA nella cartella di rilascio TFS?
 
 Aprire il `.csproj` file per il progetto di app iOS in un editor di testo e quindi aggiungere le righe seguenti alla fine (immediatamente prima della chiusura `</Project>` tag):
 
@@ -40,18 +40,16 @@ Aprire il `.csproj` file per il progetto di app iOS in un editor di testo e quin
 
 ## <a name="notes"></a>Note
 
--   È la stessa tecnica generale descritto in [è possibile modificare il percorso di output del file IPA?](~/ios/troubleshooting/questions/ipa-output-path.md). I due punti importanti sono impostare `$(TF_BUILD_BINARIESDIRECTORY)` come cartella di destinazione e aggiungere una condizione aggiuntiva in modo `CopyIpa` verrà eseguito solo per le build di TFS.
+- Si tratta della stessa tecnica generale descritte sul [è possibile modificare il percorso di output del file IPA?](~/ios/troubleshooting/questions/ipa-output-path.md). I due punti importanti devono impostate `$(TF_BUILD_BINARIESDIRECTORY)` come cartella di destinazione e aggiungere quindi una condizione aggiuntiva `CopyIpa` verrà eseguito solo per le compilazioni di TFS.
 
--   Per una descrizione delle `TF_BUILD_BINARIESDIRECTORY` vedere [ https://msdn.microsoft.com/library/hh850448.aspx ](https://msdn.microsoft.com/library/hh850448.aspx).
+- Per una descrizione delle `TF_BUILD_BINARIESDIRECTORY` visualizzare [variabili di compilazione predefinita](https://docs.microsoft.com/azure/devops/pipelines/build/variables).
 
 ## <a name="additional-references"></a>Riferimenti aggiuntivi
 
-- [Documentazione sull'installazione di TFS per l'uso con Xamarin](https://docs.microsoft.com/vsts/tfvc/overview)
-- [Attività di compilazione TFS: xamarin](https://docs.microsoft.com/vsts/build-release/tasks/build/xamarin-android)
-- [Attività di compilazione TFS: xamarin](https://docs.microsoft.com/vsts/build-release/tasks/build/xamarin-ios)
+- [Documentazione sull'installazione di TFS per l'uso con Xamarin](https://docs.microsoft.com/azure/devops/repos/tfvc/overview)
+- [Attività di generazione di DevOps di Azure: xamarin. Android](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-android)
+- [Attività di generazione di DevOps di Azure: xamarin. IOS](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-ios)
 
 ### <a name="next-steps"></a>Passaggi successivi
-Questo documento viene illustrato il comportamento corrente a partire da 3.11.666 Xamarin per Visual Studio e xamarin 8.10.3 nel Mac, host di compilazione. Per ulteriore assistenza, contattare Microsoft, o se il problema rimane anche dopo l'utilizzo di queste informazioni, vedere [quali opzioni di supporto sono disponibili per Xamarin?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, i suggerimenti, nonché come Se necessario, archiviare un nuovo bug. 
 
-
-
+Questo documento illustra il comportamento corrente a partire da Xamarin 3.11.666 per Visual Studio e xamarin. IOS 8.10.3 nel Mac build host. Per ulteriore assistenza, contattare il supporto tecnico o se il problema rimane anche dopo che usano le informazioni sopra riportate, vedi [le opzioni di supporto sono disponibili per Xamarin?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché come archiviare un nuovo bug se necessario.

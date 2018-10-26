@@ -1,43 +1,43 @@
 ---
 title: SiriKit in xamarin. IOS
-description: In questo articolo viene illustrato come utilizzare SiriKit in un'app xamarin di fornire servizi sono accessibili all'utente l'utilizzo di Siri nel dispositivo iOS.
+description: Questo articolo illustra come usare SiriKit in un'app xamarin. IOS per fornire servizi accessibili all'utente l'uso di Siri in un dispositivo iOS.
 ms.prod: xamarin
 ms.assetid: 84E5681A-F557-4967-AA99-F831169157AA
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 584b694c83d6c66d6e79e1030b2e682cefb64e6a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 9f7cbb3f7d9e448947ec8163a8660616910e750f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788052"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117525"
 ---
 # <a name="sirikit-in-xamarinios"></a>SiriKit in xamarin. IOS
 
-_In questo articolo viene illustrato come utilizzare SiriKit in un'app xamarin di fornire servizi sono accessibili all'utente l'utilizzo di Siri nel dispositivo iOS._
+_Questo articolo illustra come usare SiriKit in un'app xamarin. IOS per fornire servizi accessibili all'utente l'uso di Siri in un dispositivo iOS._
 
-Nuovo in iOS 10, SiriKit consente a un'app iOS fornire servizi che sono accessibili all'utente mediante Siri e l'app esegue il mapping in un dispositivo iOS mediante le estensioni App e il nuovo **intenti** e **dell'interfaccia utente intenti** Framework.
+Nuovo ai dispositivi iOS 10, SiriKit consente a un'app per iOS fornire servizi accessibili all'utente tramite Siri e all'app mappe su un dispositivo iOS mediante le estensioni App e le nuove **Intent** e **dell'interfaccia utente Intent** Framework.
 
-Siri funziona con il concetto di **domini**, sapere di gruppi di azioni per attività correlate. Ogni interazione di un'app con Siri deve assumere uno dei domini servizio noto come indicato di seguito:
+Siri funziona con il concetto di **domini**, gruppi di conoscono le azioni per le attività correlate. Ogni interazione di un'app con Siri deve rientrare in uno dei domini del servizio noto come indicato di seguito:
 
 - Audio o video chiamata.
-- Prenotazione di un interscambio.
-- Gestione allenamenti.
+- Una questione di prenotazione.
+- La gestione di allenamenti.
 - Messaggistica.
-- Ricerca foto.
+- Ricerca di foto.
 - Inviare o ricevere i pagamenti.
 
-Quando l'utente effettua una richiesta di Siri che include uno dei servizi di un'estensione App, SiriKit invia l'estensione un **finalità** oggetto che descrive la richiesta dell'utente insieme a eventuali dati di supporto. L'estensione dell'App, quindi genera appropriata **risposta** dell'oggetto per il determinato **finalità**, che riporta in dettaglio come l'estensione può gestire la richiesta.
+Quando l'utente effettua una richiesta di Siri con uno dei servizi di un'estensione App, SiriKit invia l'estensione di un **finalità** oggetto che descrive la richiesta dell'utente insieme a eventuali dati di supporto. l'estensione dell'App, quindi genera appropriato **risposta** dell'oggetto per il determinato **finalità**, che riporta in dettaglio come l'estensione può gestire la richiesta.
 
 ## <a name="understanding-sirikit-conceptsiosplatformsirikitunderstanding-sirikitmd"></a>[Informazioni sui concetti di SiriKit](~/ios/platform/sirikit/understanding-sirikit.md)
 
-In questo articolo descrive i concetti chiavi che verrà richiesto per l'utilizzo di SiriKit in un'app xamarin. IOS. Vengono illustrate la nuova tipi e tipi di punti di estensione dell'interfaccia utente e sul loro utilizzo con App e il vocabolario di utente per aprire un'app a Siri.
+Questo articolo illustra i concetti principali che saranno necessari per l'utilizzo di SiriKit in un'app xamarin. IOS. Viene descritto come il nuovo Intent e punti di estensione dell'interfaccia utente Intent e sul relativo funzionamento con App e utente vocabolario per aprire un'app a Siri.
 
 ## <a name="implementing-sirikitiosplatformsirikitimplementing-sirikitmd"></a>[Implementazione di SiriKit](~/ios/platform/sirikit/implementing-sirikit.md)
 
-In questo articolo vengono illustrati i passaggi necessari per implementare il supporto di SiriKit in un'App xamarin. IOS. Lo sviluppatore deve leggere la Guida di informazioni sui concetti SiriKit sopra prima di tentare di aggiungere il supporto di SiriKit a un'app, come chiave vengono trattati i concetti che sarà necessarie per la corretta implementazione.
+Questo articolo illustra i passaggi necessari per implementare il supporto di SiriKit in un'App xamarin. IOS. Lo sviluppatore deve leggere la Guida informazioni sui concetti di SiriKit sopra prima di tentare di aggiungere il supporto di SiriKit a un'app, come chiave vengono trattati i concetti che sarà necessaria per la corretta implementazione.
 
 
 
@@ -46,6 +46,6 @@ In questo articolo vengono illustrati i passaggi necessari per implementare il s
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempio ElizaChat](https://developer.xamarin.com/samples/monotouch/ios10/ElizaChat/)
-- [Guida per programmatori SiriKit](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
-- [Tipi di riferimento di Framework](https://developer.apple.com/reference/intents)
-- [Tipi di riferimento di Framework dell'interfaccia utente](https://developer.apple.com/reference/intentsui)
+- [Guida per programmatori di SiriKit](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
+- [Riferimento a Framework Intent](https://developer.apple.com/reference/intents)
+- [Riferimento a Framework dell'interfaccia utente Intent](https://developer.apple.com/reference/intentsui)

@@ -1,84 +1,84 @@
 ---
 title: Utilizzo di watchOS Layout di Xamarin
-description: Questo documento viene descritto come creare un layout watchOS con Xamarin. Illustra i controller di interfaccia, gruppi, separatori e i controlli del contenuto.
+description: Questo documento descrive come creare un layout di watchOS con Xamarin. Illustra i controller di interfaccia, gruppi, separatori e i controlli del contenuto.
 ms.prod: xamarin
 ms.assetid: BEDB62A1-2249-4459-986F-413A41E63DF0
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 11ff5ec2fc8fe99a780a3d728d3d84af59794cea
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f84f945bc82972e0274c52a5c5847af1610c10d0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790614"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119787"
 ---
 # <a name="working-with-watchos-layout-in-xamarin"></a>Utilizzo di watchOS Layout di Xamarin
 
-Progettazione di layout per la Apple Watch [schermata dimensioni](~/ios/watchos/app-fundamentals/screen-sizes.md) presenta difficoltà specifiche.
+Progettazione di layout per l'Apple Watch [dimensioni di schermi](~/ios/watchos/app-fundamentals/screen-sizes.md) presenta sfide univoche.
 
-## <a name="design-tips"></a>Suggerimenti sulla progettazione
+## <a name="design-tips"></a>Suggerimenti relativi alla progettazione
 
-Il punto chiave è: rendere l'interfaccia utente leggibile e utilizzabile in una schermata di espressioni di controllo piccole, con un dito di grandi dimensioni. Non rientrano nell'errore di progettazione per il **simulatore iOS** (visualizzata molto grande) e un **puntatore** (funziona con le destinazioni di piccoli tocco)!
+Il punto chiave è: apportare all'interfaccia utente facilmente leggibile e facile da usare in una schermata di piccole espressioni di controllo, con un dito di grandi dimensioni. Non rientrano nell'errore di progettazione per il **simulatore iOS** (visualizzata molto grande) e una **puntatore del mouse** (che funziona con le destinazioni piccolo tocco).
 
-- Utilizzare un sfondo nero, che crea l'illusione di uno schermo più grande con nero dell'orologio.
+- Usare uno sfondo nero, che crea l'illusione di uno schermo più grande con nero dell'orologio.
 
-- Non riempire intorno il layout della schermata: la cornice costituisce un riempimento visual naturale.
+- Non è riempire tutto il layout della schermata: il pannello costituisce un riempimento visual naturale.
 
-- Concentrarsi sulla leggibilità. Usare cautela le dimensioni dei caratteri e colori per garantire il testo è leggibile. Utilizzare gli stili di testo incorporato per ottenere supporto automatico di tipo dinamico.
+- Concentrarsi sulla leggibilità. Usare le dimensioni dei caratteri e colori con cautela per assicurarsi che il testo è leggibile. Usare gli stili del testo incorporato per ottenere supporto automatico di tipo dinamico.
 
 ![](layout-images/type.png "Esempio di supporto di tipo dinamico")
 
-- Concentrarsi sulle dimensioni di destinazione tocco. Pulsanti/tappable righe della tabella con le etichette di testo devono estendersi l'intero schermo. Apple è indicato "mai inserire più di tre elementi side-by-side", e se si utilizzano le icone e non le etichette di testo.
+- Concentrarsi sulle dimensioni di destinazione di tocco. Pulsanti/tappable righe della tabella con le etichette di testo devono estendersi l'intero schermo. Apple afferma "mai inserire più di tre elementi side-by-side", e se si usa le icone e non le etichette di testo.
 
-- Utilizzare il [ `Menu` controllo](~/ios/watchos/user-interface/menu.md) alle funzionalità di esporre utilizzati meno di frequente per mantenere la progettazione di app chiara e concisa.
+- Usare la [ `Menu` controllo](~/ios/watchos/user-interface/menu.md) alla funzionalità espongono meno usato per mantenere la progettazione di app chiara e concisa.
 
 
 ## <a name="implementation"></a>Implementazione
 
-Guardare che Kit include i seguenti controlli per la compilazione di espressioni di controllo interessante layout app:
+Guarda il che Kit comprende i seguenti controlli per la compilazione di espressioni di controllo interessante layout dell'app:
 
 ### <a name="interface-controller"></a>Controller di interfaccia
 
-Il `WKInterfaceController` è la classe di base tutte le scene.
+Il `WKInterfaceController` è la classe di base tutte le quinte.
 
-Finestra di progettazione per il controller di interfaccia si comporta come una verticale **gruppo**: è possibile trascinare altri controlli nel controller di interfaccia e saranno automaticamente disposto uno sopra l'altro:
+Area di progettazione per il controller di interfaccia si comporta come un parametro vertical **gruppo**: è possibile trascinare altri controlli nel controller di interfaccia e saranno automaticamente disposto uno sopra l'altro:
 
-![](layout-images/controller-scene.png "I controlli sono automaticamente disposto uno sopra l'altro")
+![](layout-images/controller-scene.png "I controlli vengono automaticamente disposto uno sopra l'altro")
 
-È possibile impostare il **posizione** e **dimensioni** alle proprietà di ogni controllo per controllare l'aspetto:
+È possibile impostare il **posizione** e **dimensioni** proprietà ogni controllo per controllare l'aspetto:
 
-![](layout-images/positionsize-attributes.png "Impostare le proprietà posizione e le dimensioni su ogni controllo")
+![](layout-images/positionsize-attributes.png "Impostare le proprietà di posizione e le dimensioni in ogni controllo")
 
-Quando la dimensione è impostata su **relativo al contenitore** è possibile fornire un valore proporzionale e una offset di regolazione. Questa schermata viene visualizzato un pulsante che è stato impostato su 80% della larghezza della schermata di espressioni di controllo utilizzare (**0,8**):
+Quando la dimensione è impostata su **relativo al contenitore** è possibile fornire una regolazione dell'offset e un valore proporzionale. Questo screenshot Mostra un pulsante che è stato impostato per usare l'80% della larghezza della schermata espressioni di controllo (**0.8**):
 
-![](layout-images/button-attributes.png "Fornire un valore proporzionale e una offset di regolazione")
+![](layout-images/button-attributes.png "Fornire un valore proporzionale e una regolazione dell'offset")
 
 
-### <a name="group"></a>Gruppo
+### <a name="group"></a>Raggruppa
 
-`WKInterfaceGroup` è un contenitore di layout semplice che può essere configurato per stack controlli orizzontalmente o verticalmente. Sono incluse la spaziatura tra ogni controllo, per impostazione predefinita, ma è possibile modificare la spaziatura elementi interni (e) nei **attributi** controllo.
+`WKInterfaceGroup` è un contenitore di layout semplice che può essere configurato per stack controlla orizzontalmente o verticalmente. Include la spaziatura tra ogni controllo per impostazione predefinita, ma è possibile modificare la spaziatura (e Inset) nei **attributi** inspector.
 
-![](layout-images/group-attributes.png "Modificare la spaziatura e margini del controllo di attributi")
+![](layout-images/group-attributes.png "Modificare la spaziatura e margini in Attributes inspector")
 
-Gruppi possono stessi essere ridimensionati e posizionati rispetto dei controlli attorno a esse e per creare layout complessi, è possibile nidificare i gruppi.
+I gruppi possono stessi dimensionati e posizionati in relazione i controlli attorno a esse e i gruppi possono essere nidificati per creare layout complessi.
 
-![](layout-images/group-scene.png "Per creare layout complessi, è possibile nidificare i gruppi")
+![](layout-images/group-scene.png "I gruppi possono essere nidificati per creare layout complessi")
 
 
 ### <a name="separator"></a>Separatore
 
-Il controllo separatore deve fornire indicazioni visive nel layout. Utilizzare separatori (o i colori di sfondo o immagini) per consentire all'utente di comprendere il contenuto è correlato sullo schermo.
+Il controllo separatore deve consentire di fornire indicazioni visive nel layout. Usare i separatori (o i colori di sfondo o le immagini) per consentire all'utente di comprendere quale contenuto viene correlato sullo schermo.
 
-![](layout-images/separator-scene.png "Esempio di utilizzo separatore")
+![](layout-images/separator-scene.png "Esempio di utilizzo di separatori")
 
-Tenere presente i separatori di verde e blu che non usano l'intera larghezza dello schermo sono stati configurati con **Fixed** o **relativo al contenitore** dimensioni.
+Si noti il blu e verde il separatore che non usano l'intera larghezza dello schermo sono stato configurato con una **Fixed** oppure **relativo al contenitore** dimensioni.
 
 ### <a name="content-controls"></a>Controlli del contenuto
 
 Nessun layout sarebbe incompleta senza il `Label`, `Image`, `Button`, `Switch`, `Slider`, `Map`, e [altri controlli](~/ios/watchos/user-interface/index.md).
-Questi possono essere posizionati, il layout con **gruppi** o le impostazioni di posizione e le dimensioni di ogni controllo.
+Questi possono essere posizionati nei layout usando **gruppi** o le impostazioni di dimensioni e posizione su ogni controllo.
 
 
 
@@ -86,4 +86,4 @@ Questi possono essere posizionati, il layout con **gruppi** o le impostazioni di
 
 - [WatchKitCatalog (esempio)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/)
 - [Riferimento di Layout di Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Layout.html)
-- [Colore & tipografia Apple di riferimento](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/ColorandTypography.html)
+- [Fare riferimento a colore & funzionalità tipografiche di Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/ColorandTypography.html)

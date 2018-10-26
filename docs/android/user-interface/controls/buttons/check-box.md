@@ -3,19 +3,20 @@ title: CheckBox
 ms.prod: xamarin
 ms.assetid: A884AF10-D5EA-72CA-2301-B80CEC7FFBE7
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 85c505d03e7a763b24fb176b6a94c0fe43009b79
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e03595e8d88a2f12341b9e339d0581c631224848
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30765753"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120801"
 ---
 # <a name="checkbox"></a>CheckBox
 
-In questa sezione verrà creata una casella di controllo per la selezione di elementi, con la [ `CheckBox` ](https://developer.xamarin.com/api/type/Android.Widget.CheckBox) widget. Quando si preme la casella di controllo, un messaggio di tipo avviso popup indicherà lo stato corrente della casella di controllo.
+In questa sezione si creerà una casella di controllo per la selezione di elementi, tramite il [`CheckBox`](https://developer.xamarin.com/api/type/Android.Widget.CheckBox)
+widget. Quando si preme la casella di controllo, un messaggio popup indicherà lo stato corrente della casella di controllo.
 
 Aprire il **Resources/layout/Main.axml** file e aggiungere il [ `CheckBox` ](https://developer.xamarin.com/api/type/Android.Widget.CheckBox/) elemento (all'interno di [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout)):
 
@@ -26,7 +27,8 @@ Aprire il **Resources/layout/Main.axml** file e aggiungere il [ `CheckBox` ](htt
         android:text="check it out" />
 ```
 
-Per eseguire un'operazione quando lo stato viene modificato, aggiungere il codice seguente alla fine del [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle) metodo:
+Per eseguire un'operazione quando viene modificato lo stato, aggiungere il codice seguente alla fine del [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle)
+metodo:
 
 ```csharp
 CheckBox checkbox = FindViewById<CheckBox>(Resource.Id.checkbox);
@@ -39,11 +41,17 @@ checkbox.Click += (o, e) => {
 };
 ```
 
-Acquisisce il [ `CheckBox` ](https://developer.xamarin.com/api/type/Android.Widget.CheckBox/) elemento dal layout, quindi gestisce l'evento Click, che definisce l'azione da eseguire quando viene selezionata la casella di controllo. Quando si fa clic, il [ `Checked` ](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/) proprietà viene chiamata per verificare il nuovo stato della casella di controllo. Se sono stati verificato, quindi un [ `Toast` ](https://developer.xamarin.com/api/type/Android.Widget.Toast/) viene visualizzato il messaggio "Selezionati", in caso contrario, viene visualizzato "Non è selezionata". Il [ `CheckBox` ](https://developer.xamarin.com/api/type/Android.Widget.CheckBox/) gestisce il proprio cambia lo stato, pertanto è necessario solo eseguire query sullo stato corrente.
+Ciò consente di acquisire il [`CheckBox`](https://developer.xamarin.com/api/type/Android.Widget.CheckBox/)
+elemento del layout, quindi gestisce l'evento Click, che definisce l'azione che deve essere effettuata quando si fa clic sulla casella di controllo. Quando si fa clic, il [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
+proprietà viene chiamata per verificare il nuovo stato della casella di controllo. Se sono stati verificato, quindi un [`Toast`](https://developer.xamarin.com/api/type/Android.Widget.Toast/)
+Visualizza il messaggio "Selezionati", in caso contrario, che viene visualizzato "Non è selezionata". Il [`CheckBox`](https://developer.xamarin.com/api/type/Android.Widget.CheckBox/)
+gestisce il proprio le modifiche dello stato, quindi è sufficiente eseguire una query lo stato corrente.
 
 Eseguire il codice.
 
-**Suggerimento:** se è necessario modificare manualmente lo stato (ad esempio quando il caricamento di un salvato [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference), utilizzare il [ `Checked` ](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked) setter di proprietà o [ `Toggle()` ](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle) metodo.
+**Suggerimento:** se è necessario modificare manualmente lo stato (ad esempio, quando il caricamento di un salvato [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference), usare il [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked)
+setter di proprietà o [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle)
+ProcessOnStatus.
 
-*Parti di questa pagina sono modifiche basate sul lavoro creati e condivisi per il progetto Android di origine aprire e usare in base alle condizioni descritte nel*
-[*Creative Commons 2.5 attribuzione licenza* ](http://creativecommons.org/licenses/by/2.5/).
+*Parti di questa pagina sono modifiche basate sul lavoro creato e condiviso da Android Open Source Project e usate in base a condizioni descritte nel*
+[*licenza Creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/).

@@ -1,40 +1,40 @@
 ---
-title: Tramite il provider di contenuti di contatti
+title: Uso del ContentProvider Contacts
 ms.prod: xamarin
 ms.assetid: 21C5D1B4-3783-6090-33AB-78A484E65925
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 01/22/2018
-ms.openlocfilehash: 754b81cec7f1adbe5c7ff1c820260e162e226b15
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 95d11ef692ec8b43c128cb55a21d0973151cd24a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30765841"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120437"
 ---
-# <a name="using-the-contacts-contentprovider"></a>Tramite il provider di contenuti di contatti
+# <a name="using-the-contacts-contentprovider"></a>Uso del ContentProvider Contacts
 
-Codice che usa accedere ai dati esposti da un `ContentProvider` non richiede un riferimento alla `ContentProvider` classe affatto. Invece utilizzato per creare un cursore tramite i dati esposti da un Uri di `ContentProvider`. Android utilizza l'Uri per la ricerca di sistema per l'applicazione che espone un `ContentProvider` con tale identificatore. L'Uri è una stringa, in genere in un formato DNS inverso, ad esempio `com.android.contacts/data`.
+Codice che usa accedere ai dati esposti da un `ContentProvider` non richiede un riferimento al `ContentProvider` classe affatto. Al contrario, un Uri viene usato per creare un cursore tramite i dati esposti dal `ContentProvider`. Android Usa l'Uri per la ricerca di sistema per l'applicazione che espone un `ContentProvider` con tale identificatore. L'Uri è una stringa, in genere in un formato DNS inverso, ad esempio `com.android.contacts/data`.
 
-Anziché eseguire agli sviluppatori di ricordare questa stringa, di Android *contatti* provider espone i metadati nel `android.provider.ContactsContract` classe. Questa classe viene utilizzata per determinare l'Uri del `ContentProvider` nonché i nomi delle tabelle e colonne che è possibile eseguire query.
+Anziché fare in modo che gli sviluppatori memorizzare questa stringa, Android *contatti* provider espone i relativi metadati nel `android.provider.ContactsContract` classe. Questa classe viene utilizzata per determinare l'Uri del `ContentProvider` , nonché i nomi delle tabelle e colonne che è possibile eseguire query.
 
-Alcuni tipi di dati richiedono anche autorizzazioni speciali per accedere. L'elenco di contatti predefinito richiede il `android.permission.READ_CONTACTS` disporre dell'autorizzazione per la **AndroidManifest.xml** file.
+Alcuni tipi di dati richiedono anche un'autorizzazione speciale per accedere. L'elenco di contatti predefinito richiede il `android.permission.READ_CONTACTS` l'autorizzazione per il **androidmanifest. XML** file.
 
 Esistono tre modi per creare un cursore dall'Uri:
 
-1. **ManagedQuery()** &ndash; la scelta migliore in Android 2.3 (API livello 10) e versioni precedenti, un `ManagedQuery` restituisce un cursore e gestisce automaticamente anche l'aggiornamento dei dati e di chiusura del cursore. Questo metodo è deprecato in Android 3.0 (API livello 11).
+1. **ManagedQuery()** &ndash; approccio preferito in Android 2.3 (livello API 10) e versioni precedenti, un `ManagedQuery` restituisce un cursore e gestisce automaticamente anche l'aggiornamento dei dati e la chiusura del cursore. Questo metodo è deprecato in Android 3.0 (API livello 11).
 
 1. **ContentResolver.Query()** &ndash; restituisce un cursore non gestito, ovvero deve essere aggiornato e chiuso in modo esplicito nel codice.
 
-1. **CursorLoader(). LoadInBackground()** &ndash; introdotto in Android 3.0 (API livello 11), `CursorLoader` è ora il modo migliore per utilizzare un `ContentProvider` . `CursorLoader` le query un `ContentResolver` su un thread in background, pertanto l'interfaccia utente non è bloccata.
+1. **CursorLoader(). LoadInBackground()** &ndash; introdotte in Android 3.0 (API livello 11), `CursorLoader` è ora il modo migliore per utilizzare un `ContentProvider` . `CursorLoader` le query un `ContentResolver` su un thread in background in modo che l'interfaccia utente non è bloccato.
    Questa classe sono accessibili nelle versioni precedenti di Android usando la libreria di compatibilità v4.
 
 
 Ognuno di questi metodi ha lo stesso set di base di input:
 
 -  **URI** &ndash; il nome completo del `ContentProvider` .
--  **Proiezione** &ndash; specificando le colonne da selezionare per il cursore.
+-  **Proiezione** &ndash; specificare le colonne da selezionare per il cursore.
 -  **Selezione** &ndash; simile a un database SQL `WHERE` clausola.
 -  **SelectionArgs** &ndash; parametri deve essere sostituito nella selezione.
 -  **SortOrder** &ndash; colonne da ordinare.
@@ -43,9 +43,9 @@ Ognuno di questi metodi ha lo stesso set di base di input:
 
 ## <a name="creating-inputs-for-a-query"></a>Creazione di input per una Query
 
-Il `ContactsProvider` codice di esempio esegue una semplice query sul provider contatti predefinito di Android. Non è necessario conoscere i nomi di colonna o Uri effettivi - tutte le informazioni necessarie per eseguire una query i contatti `ContentProvider` è disponibile come costanti esposte dalla `ContactsContract` classe.
+Il `ContactsProvider` codice di esempio esegue una query molto semplice sul provider contatti incorporato di Android. Non è necessario conoscere i nomi di colonna o Uri effettivi - tutte le informazioni necessarie per eseguire query sui contatti `ContentProvider` è disponibile come costanti esposte dal `ContactsContract` classe.
 
-Indipendentemente da quale metodo viene usato per recuperare il cursore, come illustrato nel come parametri vengono utilizzati questi stessi oggetti di *ContactsProvider/ContactsAdapter.cs* file:
+Indipendentemente da quale metodo viene usato per recuperare il cursore, questi stessi oggetti vengono utilizzati come parametri, come illustrato nella *ContactsProvider/ContactsAdapter.cs* file:
 
 ```csharp
 var uri = ContactsContract.Contacts.ContentUri;
@@ -56,11 +56,11 @@ string[] projection = {
 };
 ```
 
-Per questo esempio, il `selection`, `selectionArgs` e `sortOrder` verranno ignorati, impostarli su `null`.
+Per questo esempio, il `selection`, `selectionArgs` e `sortOrder` verranno ignorate impostandoli su `null`.
 
 
 
-## <a name="creating-a-cursor-from-a-content-provider-uri"></a>Creazione di un cursore da un Uri del Provider di contenuti
+## <a name="creating-a-cursor-from-a-content-provider-uri"></a>Creazione di un cursore da un Uri di Provider di contenuti
 
 Dopo avere creati gli oggetti parametro, possono essere utilizzati in uno dei tre modi seguenti:
 
@@ -68,55 +68,55 @@ Dopo avere creati gli oggetti parametro, possono essere utilizzati in uno dei tr
 
 ### <a name="using-a-managed-query"></a>Utilizzo di una Query gestita
 
-Applicazioni destinate a Android 2.3 (API livello 10) o versioni precedenti devono utilizzare questo metodo:
+Le applicazioni destinate a Android 2.3 (livello API 10) o versioni precedenti devono usare questo metodo:
 
 ```csharp
 var cursor = activity.ManagedQuery(uri, projection, null, null, null);
 ```
 
-Questo cursore verrà gestito da Android in modo non è necessario chiuderlo.
+Questo cursore verrà gestito da Android in modo che non è necessario chiuderlo.
 
 
 
-### <a name="using-contentresolver"></a>Utilizzando ContentResolver
+### <a name="using-contentresolver"></a>Usando ContentResolver
 
-L'accesso a `ContentResolver` direttamente per ottenere un cursore su un `ContentProvider` può essere come segue:
+L'accesso a `ContentResolver` direttamente per ottenere un cursore su un `ContentProvider` può essere simile al seguente:
 
 ```csharp
 var cursor = activity.ContentResolver(uri, projection, null, null, null);
 ```
 
-Questo cursore non è gestito, pertanto deve essere chiuso quando non è più necessario.
+Questo cursore non è gestito, in modo che deve essere chiuso quando non è più necessario.
 Assicurarsi che il codice consente di chiudere un cursore aperto, in caso contrario si verificherà un errore.
 
 ```csharp
 cursor.Close();
 ```
 
-In alternativa, è possibile chiamare `StartManagingCursor()` e `StopManagingCursor()` per gestire il cursore. I cursori gestiti sono disattivati e nuovamente eseguita una query quando le attività sono arrestate e riavviate automaticamente.
+In alternativa, è possibile chiamare `StartManagingCursor()` e `StopManagingCursor()` per gestire il cursore. I cursori gestiti automaticamente disattivati e nuovamente la query quando le attività sono arrestate e riavviate.
 
 
 
-### <a name="using-cursorloader"></a>Utilizzando CursorLoader
+### <a name="using-cursorloader"></a>Usando CursorLoader
 
-Le applicazioni compilate per Android 3.0 (API livello 11) o più recente deve utilizzare questo metodo:
+Le applicazioni compilate per Android 3.0 (API livello 11) o versioni successive devono utilizzare questo metodo:
 
 ```csharp
 var loader = new CursorLoader (activity, uri, projection, null, null, null);
 var cursor = (ICursor)loader.LoadInBackground();
 ```
 
-Il `CursorLoader` assicura che tutte le operazioni del cursore vengono eseguite in un thread in background e in modo intelligente riutilizzare un cursore esistente tra istanze di attività quando un'attività viene riavviata (ad esempio a causa di una modifica della configurazione) piuttosto che ricaricare i dati nuovamente.
+Il `CursorLoader` garantisce che tutte le operazioni del cursore vengono eseguite in un thread in background e possono in modo intelligente usare nuovamente un cursore esistente tra istanze di attività quando un'attività viene riavviata (ad esempio a causa di una modifica della configurazione) piuttosto che ricaricare i dati anche in questo caso.
 
-Inoltre è possono utilizzare le versioni precedenti di Android di `CursorLoader` classe utilizzando il [v4 supporto librerie](http://developer.android.com/tools/support-library/index.html).
+Le versioni precedenti di Android possono anche usare il `CursorLoader` classe usando il [v4 supporto librerie](http://developer.android.com/tools/support-library/index.html).
 
 
 
-## <a name="displaying-the-cursor-data-with-a-custom-adapter"></a>La visualizzazione dei dati di cursore con un Adapter personalizzato
+## <a name="displaying-the-cursor-data-with-a-custom-adapter"></a>Visualizzazione dei dati di cursore con un Adapter personalizzato
 
-Per visualizzare l'immagine di contatto si userà un adapter personalizzato, in modo che è possibile risolvere manualmente il `PhotoId` riferimento a un percorso del file di immagine.
+Per visualizzare l'immagine di contatto si userà un adapter personalizzato, in modo che è possibile risolvere manualmente il `PhotoId` riferimento a un percorso di file di immagine.
 
-Per visualizzare i dati con un adapter personalizzato, nell'esempio viene utilizzato un `CursorLoader` per recuperare tutti i dati di contatto in una raccolta in locale il **FillContacts** metodo **ContactsProvider/ContactsAdapter.cs**:
+Per visualizzare i dati con un adapter personalizzato, l'esempio Usa un' `CursorLoader` per recuperare tutti i dati di contatto in una raccolta locale nel **FillContacts** metodo **ContactsProvider/ContactsAdapter.cs**:
 
 ```csharp
 void FillContacts ()
@@ -143,7 +143,7 @@ void FillContacts ()
 }
 ```
 
-Quindi implementare metodi di BaseAdapter usando il `contactList` insieme. L'adapter viene implementato come sarebbe con qualsiasi altra raccolta &ndash; non è qui alcuna gestione particolare poiché i dati proviene da un `ContentProvider`:
+Quindi implementare metodi di BaseAdapter utilizzando il `contactList` raccolta. L'adapter viene implementato proprio come con qualsiasi altra raccolta sarebbe &ndash; non è presente alcuna gestione speciale qui poiché i dati di origine sono un `ContentProvider`:
 
 ```csharp
 Activity activity;
@@ -181,18 +181,18 @@ public override View GetView (int position, View convertView, ViewGroup parent)
 }
 ```
 
-(Se presente), viene visualizzata l'immagine usando l'Uri del file di immagine nel dispositivo. L'applicazione è simile al seguente:
+Viene visualizzata l'immagine (se presente) usando l'Uri del file di immagine nel dispositivo. L'applicazione è simile alla seguente:
 
-[![Schermata dell'app la visualizzazione dei contatti in un controllo ListView; viene visualizzata un'immagine a sinistra di una voce](contacts-contentprovider-images/contactsprovider.png)](contacts-contentprovider-images/contactsprovider.png#lightbox)
+[![Screenshot dell'app per la visualizzazione di contatti in un ListView; viene visualizzata un'immagine a sinistra di una voce](contacts-contentprovider-images/contactsprovider.png)](contacts-contentprovider-images/contactsprovider.png#lightbox)
 
-Usando un modello di codice simile, l'applicazione può accedere a un'ampia gamma di dati di sistema, tra cui l'utente foto, video e musica.
-Alcuni tipi di dati richiedono autorizzazioni speciali a essere richiesti del progetto **AndroidManifest.xml**.
+Usa un modello di codice simile, l'applicazione possa accedere a un'ampia gamma di dati di sistema, tra cui foto, video e musica dell'utente.
+Alcuni tipi di dati richiedono autorizzazioni speciali che verrà richiesto di progetto **androidmanifest. XML**.
 
 
 
-## <a name="displaying-the-cursor-data-with-a-simplecursoradapter"></a>La visualizzazione dei dati di cursore con un SimpleCursorAdapter
+## <a name="displaying-the-cursor-data-with-a-simplecursoradapter"></a>Visualizzazione dei dati di cursore con un SimpleCursorAdapter
 
-Il cursore potrebbe inoltre essere visualizzato con un `SimpleCursorAdapter` (anche se verrà visualizzato solo il nome, non la foto). Questo codice viene illustrato come utilizzare un `ContentProvider` con `SimpleCursorAdapter` (questo codice non vengono visualizzati nell'esempio):
+Il cursore è stato possibile visualizzare anche con un `SimpleCursorAdapter` (anche se solo il nome verrà visualizzato, non la foto). Questo codice illustra come usare un `ContentProvider` con `SimpleCursorAdapter` (questo codice non sia presente nell'esempio):
 
 ```csharp
 var uri = ContactsContract.Contacts.ContentUri;
@@ -208,9 +208,9 @@ adapter = new SimpleCursorAdapter (this, Android.Resource.Layout.SimpleListItem1
 listView.Adapter = adapter;
 ```
 
-Consultare il [controlli ListView e schede](~/android/user-interface/layouts/list-view/index.md) per ulteriori informazioni sull'implementazione `SimpleCursorAdapter`.
+Vedere le [ListView e adapter](~/android/user-interface/layouts/list-view/index.md) per altre informazioni sull'implementazione `SimpleCursorAdapter`.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo di ContactsAdapter (esempio)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ContactsAdapterDemo/)
+- [ContactsAdapter Demo (esempio)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ContactsAdapterDemo/)

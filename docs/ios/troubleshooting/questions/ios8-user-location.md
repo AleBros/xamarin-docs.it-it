@@ -1,22 +1,22 @@
 ---
-title: Percorso dell'utente non funziona in iOS 8
+title: Posizione dell'utente non funziona in iOS 8
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9BE92C99-C9C5-427E-ADE4-789DF258BACE
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: f6597fc3a2476de2aa7f191810e5dbaf2f6903bb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8b800d0c5639d4679b5e17c6c6a4689690529b85
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30776066"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118214"
 ---
-# <a name="user-location-not-working-in-ios-8"></a>Percorso dell'utente non funziona in iOS 8
+# <a name="user-location-not-working-in-ios-8"></a>Posizione dell'utente non funziona in iOS 8
 
-All'interno di un editor di testo: aprire il file Info. plist di backup e aggiungere le seguenti:
+All'interno di un editor di testo: aprire backup file Info. plist e aggiungere quanto segue:
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
@@ -26,13 +26,13 @@ All'interno di un editor di testo: aprire il file Info. plist di backup e aggiun
 <string>This will be called if location is used behind the scenes</string>
 ```
 
-E, all'interno di MainViewController.cs è necessario chiamare le operazioni seguenti:
+E all'interno di MainViewController.cs è necessario chiamare la seguente:
 
 ```csharp
 iPhoneLocationManager.RequestWhenInUseAuthorization ();
 ```
 
-EX:
+AD ESEMPIO:
 
 ```cs
 if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {

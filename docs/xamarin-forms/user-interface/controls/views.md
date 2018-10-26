@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/12/2016
-ms.openlocfilehash: 52d8d5f6eb38e5cb501d6284d08f7317981e0dcf
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 18/10/2018
+ms.openlocfilehash: a51a3bb7726baa9142579a518767dc722870ee06
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998973"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107527"
 ---
 # <a name="xamarinforms-views"></a>Visualizzazioni di xamarin. Forms
 
@@ -93,7 +93,7 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio i dispositiv
 
 |     |     |
 | --- | --- |
-| [`Stepper`](xref:Xamarin.Forms.Stepper) consente all'utente di selezionare una `double` valore da un intervallo di valori incrementali specificato con il [ `Minimum` ](xref:Xamarin.Forms.Stepper.Minimum), [ `Maximum` ](xref:Xamarin.Forms.Stepper.Maximum), e [ `Increment` ](xref:Xamarin.Forms.Stepper.Increment) delle proprietà.<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.Stepper) | [![Esempio di gestore di istruzioni](views-images/Stepper.png "esempio di gestore di istruzioni")](views-images/Stepper-Large.png#lightbox "esempio di gestore di istruzioni")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
+| [`Stepper`](xref:Xamarin.Forms.Stepper) consente all'utente di selezionare una `double` valore da un intervallo di valori incrementali specificato con il [ `Minimum` ](xref:Xamarin.Forms.Stepper.Minimum), [ `Maximum` ](xref:Xamarin.Forms.Stepper.Maximum), e [ `Increment` ](xref:Xamarin.Forms.Stepper.Increment) delle proprietà.<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.Stepper)  / [Guida](~/xamarin-forms/user-interface/stepper.md) / [esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) | [![Esempio di gestore di istruzioni](views-images/Stepper.png "esempio di gestore di istruzioni")](views-images/Stepper-Large.png#lightbox "esempio di gestore di istruzioni")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
 |     |     |
 
 ### <a name="switch"></a>Opzione
@@ -114,7 +114,7 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio i dispositiv
 
 |     |     |
 | --- | --- |
-| [`TimePicker`](xref:Xamarin.Forms.TimePicker) consente all'utente di selezionare un'ora con la selezione di tempo della piattaforma. Il [ `Time` ](xref:Xamarin.Forms.TimePicker.Time) proprietà è l'ora selezionata. Un'applicazione può monitorare le modifiche nel `Time` proprietà installando un gestore per il [ `PropertyChanged` ](xref:Xamarin.Forms.BindableObject.PropertyChanged) evento.<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.TimePicker) | [![Esempio di controllo TimePicker](views-images/TimePicker.png "esempio TimePicker")](views-images/TimePicker-Large.png#lightbox "TimePicker esempio")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TimePickerDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TimePickerDemoPage.xaml) |
+| [`TimePicker`](xref:Xamarin.Forms.TimePicker) consente all'utente di selezionare un'ora con la selezione di tempo della piattaforma. Il [ `Time` ](xref:Xamarin.Forms.TimePicker.Time) proprietà è l'ora selezionata. Un'applicazione può monitorare le modifiche nel `Time` proprietà installando un gestore per il [ `PropertyChanged` ](xref:Xamarin.Forms.BindableObject.PropertyChanged) evento.<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.TimePicker) / [Guida](~/xamarin-forms/user-interface/timepicker.md) / [esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker) | [![Esempio di controllo TimePicker](views-images/TimePicker.png "esempio TimePicker")](views-images/TimePicker-Large.png#lightbox "TimePicker esempio")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TimePickerDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TimePickerDemoPage.xaml) |
 |     |     |
 
 ## <a name="views-for-editing-text"></a>Viste per la modifica del testo

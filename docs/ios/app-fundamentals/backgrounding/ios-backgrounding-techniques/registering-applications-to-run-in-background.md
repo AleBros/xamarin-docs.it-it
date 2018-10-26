@@ -1,54 +1,54 @@
 ---
 title: La registrazione di App xamarin. IOS per l'esecuzione in Background
-description: Questo documento viene descritto come registrare un'applicazione di xamarin. IOS per l'esecuzione in background. Viene descritto Audio App, VoIP App, accessori esterni e bluetooth e altro ancora.
+description: Questo documento descrive come registrare un'applicazione xamarin. IOS per l'esecuzione in background. Viene descritto Audio App, VoIP le app, accessori esterni e bluetooth e altro ancora.
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: f4774f6b4f5412c44dc985bd40129a178b1e813c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a0a66571d0249ef6fd65ff382f14c38f48a8af37
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783675"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105168"
 ---
 # <a name="registering-xamarinios-apps-to-run-in-the-background"></a>La registrazione di App xamarin. IOS per l'esecuzione in Background
 
-Registrazione di singole attività per sfondo privilegi funziona per alcune applicazioni, ma cosa accade se un'applicazione costantemente viene chiamata per eseguire attività importanti, con esecuzione prolungata, ad esempio ottenere indicazioni per l'utente attraverso GPS? Applicazioni di questo tipo invece devono essere registrate come le applicazioni in background necessarie.
+La registrazione di singole attività di background works privilegi per alcune applicazioni, ma cosa accade se un'applicazione viene chiamata costantemente per eseguire attività importanti e a esecuzione prolungata, ad esempio per ottenere indicazioni per l'utente attraverso GPS? Le applicazioni come i seguenti invece devono essere registrate come le applicazioni in background necessarie.
 
-Registrazione di un'app segnala a iOS che l'applicazione deve avere privilegi speciali necessari per eseguire attività in background.
+Registrazione di un'app segnala ai dispositivi iOS che l'applicazione deve essere assegnata speciali dei privilegi necessari per eseguire attività in background.
 
 ## <a name="application-registration-categories"></a>Categorie di registrazione dell'applicazione
 
-App registrata può rientrano in diverse categorie:
+Le app registrate possono rientrare in diverse categorie:
 
--  **Audio** -lettori di musica e altre applicazioni che funzionano con contenuto audio possono essere registrati per continuare la riproduzione audio anche quando l'app non è più in primo piano. Se un'app in questa categoria tenta di eseguire alcuna operazione diverso da riprodurre l'audio o di download in background, iOS verrà chiuderla.
--  **VoIP** -applicazioni Voice Over Internet Protocol (VoIP) ottengono gli stessi privilegi concessi alle applicazioni audio per mantenere l'elaborazione di audio in background. Sono consentiti anche per rispondere alle esigenze ai servizi VoIP fondamentali in modo da mantenere attive le connessioni.
--  **Esterni accessori e Bluetooth** -riservato per le applicazioni che devono comunicare con dispositivi Bluetooth e altri accessori hardware esterno, la registrazione in queste categorie consente all'app di rimanere connessi all'hardware.
+-  **Audio** -gli assegnatari di musica e altre applicazioni che funzionano con contenuti audio possono essere registrati per continuare la riproduzione audio anche quando l'app non è più in primo piano. Se un'app in questa categoria tenta di eseguire qualsiasi operazione diversa da riprodurre l'audio o download mentre è in background, iOS verrà terminarlo.
+-  **VoIP** -applicazioni Voice Over Internet Protocol (VoIP) ottengono gli stessi privilegi concessi alle applicazioni audio per mantenere l'elaborazione di audio in background. Sono consentiti anche per rispondere come necessario per i servizi VoIP se l'alimentazione, in modo da mantenere le connessioni attivo.
+-  **External accessori e Bluetooth** -riservato per le applicazioni che devono comunicare con dispositivi Bluetooth e altri accessori di hardware esterno, in queste categorie di registrazione consente all'app di rimanere connessi all'hardware.
 -  **Newsstand** -Newsstand di un'applicazione può continuare a sincronizzare il contenuto in background.
--  **Percorso** : applicazioni che utilizzano di GPS o dati di percorso di rete inviare e ricevere gli aggiornamenti di percorso in background.
--  **Operazione di recupero (iOS 7 +)** : un'applicazione registrato per un provider per nuovo contenuto controllare i privilegi di recupero in background a intervalli regolari, presentate all'utente con contenuto aggiornato quando viene restituita all'applicazione.
--  **Le notifiche remote (iOS 7 +)** -applicazioni possono registrarsi per ricevere notifiche da un provider e utilizzare la notifica per avviare un aggiornamento prima che l'utente apre l'applicazione. Le notifiche possono provenire sotto forma di notifiche push o consenso esplicito per riattivare l'applicazione automaticamente.
+-  **Percorso** - applicazioni che utilizzano di GPS o dati sulla località rete possono inviare e ricevere aggiornamenti della posizione in background.
+-  **Operazione di recupero (iOS 7 +)** : un'applicazione di registrazione per i privilegi di recupero in background possono selezionare un provider per nuovo contenuto a intervalli regolari, presentazione all'utente di contenuto aggiornato quando vengono restituiti all'applicazione.
+-  **Notifiche remote (iOS 7 +)** -applicazioni possono registrarsi per ricevere notifiche da un provider e usare la notifica per avviare un aggiornamento prima che l'utente apre l'applicazione. Le notifiche possono provenire sotto forma di notifiche push o consenso esplicito per riattivare l'applicazione in modo invisibile.
 
 
-Le applicazioni possono essere registrate mediante l'impostazione di **la modalità di Background necessarie** proprietà dell'applicazione *Info. plist*. Un'applicazione può registrare in tutte le categorie richiede:
+Le applicazioni possono essere registrate impostando il **modalità in Background obbligatorie** proprietà dell'applicazione *Info. plist*. Un'applicazione può registrare in tutte le categorie richiede:
 
- [![](registering-applications-to-run-in-background-images/bgmodes.png "Impostare la modalità di background")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
+ [![](registering-applications-to-run-in-background-images/bgmodes.png "Impostare la modalità in background")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
 
-Per una Guida dettagliata alla registrazione di un'applicazione per gli aggiornamenti di percorso in background, vedere il [procedura dettagliata percorso Background](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md).
+Per una Guida dettagliata per la registrazione di un'applicazione per aggiornamenti della posizione in background, vedere la [procedura dettagliata di posizione in Background](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md).
 
 ## <a name="application-does-not-run-in-background-property"></a>Applicazione non viene eseguito in Background proprietà
 
-Un'altra proprietà che può essere impostata nella *Info. plist* è il *applicazione non viene eseguito in background*, o `UIApplicationExitsOnSuspend` proprietà:
+Un'altra proprietà che può essere impostata nella *Info. plist* è la *dell'applicazione non viene eseguito in background*, o `UIApplicationExitsOnSuspend` proprietà:
 
- [![](registering-applications-to-run-in-background-images/plist.png "La disabilitazione di Background in esecuzione")](registering-applications-to-run-in-background-images/plist.png#lightbox)
+ [![](registering-applications-to-run-in-background-images/plist.png "La disabilitazione in Background in esecuzione")](registering-applications-to-run-in-background-images/plist.png#lightbox)
 
-Questo ha lo stesso effetto esattamente come l'impostazione aggiornamento App sfondo su off in iOS 7 +, ad eccezione del fatto che può essere modificata solo sul lato di sviluppatore ed è disponibile per iOS 4 e versioni successive. L'applicazione verrà sospeso immediatamente dopo l'immissione di background e non sarà in grado di eseguire qualsiasi elaborazione.
+Ciò ha lo stesso effetto esattamente come l'impostazione in Background Aggiorna App sia stata disattivata in iOS 7 +, ad eccezione del fatto può essere modificata solo sul lato per gli sviluppatori ed è disponibile per iOS 4 e versioni successive. L'applicazione verrà sospesa immediatamente dopo aver immesso il background e non sarà in grado di eseguire qualsiasi elaborazione.
 
-Utilizzare questa proprietà se l'applicazione non è progettato per gestire l'elaborazione in background, perché consente di evitare un comportamento imprevisto.
+Utilizzare questa proprietà se l'applicazione non è progettata per gestire l'elaborazione in background, poiché aiuta a evitare un comportamento imprevisto.
 
-## <a name="background-fetch-and-remote-notifications"></a>Recupero in background e notifiche Remote
+## <a name="background-fetch-and-remote-notifications"></a>Recupero in background e le notifiche Remote
 
-Recupero in background e notifiche remote sono le categorie di registrazione speciali introdotte in iOS 7. Queste categorie consentono alle applicazioni di ricevere di nuovo contenuto da un provider e l'aggiornamento in background. La sezione successiva viene esaminata fetch e notifiche remote in modo più dettagliato e introduce anche il riconoscimento presenza in come mezzo per l'aggiornamento di un'applicazione in background in iOS 6.
+Recupero in background e le notifiche remote sono categorie di registrazione speciale introdotte in iOS 7. Queste categorie consentono alle applicazioni ricevere il nuovo contenuto da un provider e aggiornare in background. Nella sezione successiva illustra fetch e notifiche remote in modo più dettagliato e introduce anche riconoscimento presenza come mezzo per l'aggiornamento di un'applicazione in background in iOS 6.

@@ -1,194 +1,194 @@
 ---
-title: MacOS ulteriori modifiche al Framework Sierra
-description: Questo documento descrive i miglioramenti e modifiche secondarie al Framework esistenti introdotto in macOS Sierra. Esamina le modifiche in framework accelerazione, AppKit, AVFoundation, dati principali, immagine di Core, Foundation e molto altro.
+title: Aggiuntive macOS Sierra Framework modifiche
+description: Questo documento descrive i miglioramenti e modifiche minori alle infrastrutture esistenti, introdotti in macOS Sierra. Esamina le modifiche per il framework Accelerate AppKit, AVFoundation, Core Data, immagine di base, Foundation e più.
 ms.prod: xamarin
 ms.assetid: CA701269-D11E-4DE3-89C1-58EF8993A482
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 3cfa2e9bcb0be4d65462914215045c9c7f01da5b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 6ed827c018931e5b79887dc355f136e2a84623d6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792593"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111051"
 ---
-# <a name="additional-macos-sierra-framework-changes"></a>MacOS ulteriori modifiche al Framework Sierra
+# <a name="additional-macos-sierra-framework-changes"></a>Aggiuntive macOS Sierra Framework modifiche
 
 <a name="Accelerate-Framework-Enhancements" />
 
-## <a name="accelerate-framework-enhancements"></a>Accelerare i miglioramenti apportati a Framework
+## <a name="accelerate-framework-enhancements"></a>Accelera i miglioramenti apportati Framework
 
-Il seguente miglioramento sono state apportate a Framework accelerare per macOS Sierra:
+I miglioramenti seguenti apportati a Framework accelerare per macOS Sierra:
 
 - Aggiunta crominanza (integrale calcolo).
-- Funzioni di base aggiunti per la creazione di reti neurali.
-- Aggiuntive geometrica le funzioni di predicato per eseguire il test per elementi come l'intersezione di due oggetti geometrici.
+- Funzioni di base aggiunte per la creazione di reti neurali.
+- Aggiunte le funzioni di predicato geometriche da testare per operazioni come l'intersezione di due oggetti geometrici.
 
 <a name="AppKit-Framework-Enhancements" />
 
-## <a name="appkit-framework-enhancements"></a>Miglioramenti apportati a AppKit Framework
+## <a name="appkit-framework-enhancements"></a>Miglioramenti apportati AppKit Framework
 
-Il seguente miglioramento sono state apportate a AppKit Framework per macOS Sierra:
+Sono stati apportati i miglioramenti seguenti per il Framework di AppKit per macOS Sierra:
 
 - Numerosi miglioramenti al `NSCollectionView` , ad esempio:
-    - **Le sezioni comprimibili** -consente di comprimere una sezione di visualizzazione della raccolta in una singola riga orizzontale.
-    - **Mobile intestazioni** -intestazioni e piè di pagina può ora essere resa mobile (in un layout di flusso) utilizzando la stessa API di [UICollectionView](https://developer.apple.com/reference/uikit/uicollectionview) in iOS.
-    - **Viste di sfondo scorrevole** -ora è possibile impostare uno sfondo di viste di raccolta da scorrere insieme al contenuto.
-- Il passaggio di layout visualizzazione posticipata è stato ottimizzato ed esteso.
-- L'API di trascinamento e rilascio include ora il nuovo `NSFilePromiseProvider` e `NSFilePromiseReceiver` classi per il supporto trascinare floccaggio.
-- Molti costruttori comodità sono state aggiunte a controlli esistenti:
-    -  `NSButton` include nuovi costruttori per la creazione di pulsanti, caselle di controllo e dei pulsanti.
-    -  `NSTextField` include nuovi costruttori per la creazione di etichette di sovrascrittura e senza ritorno a capo, etichette con gli attributi e i campi di testo modificabile.
-    -  `NSSegmentedControl` include nuovi costruttori per la creazione di controlli segmentati da un gruppo di etichette o immagini.
-    -  `NSSlider` include nuovi costruttori per la creazione di dispositivi di scorrimento orizzontale lineare.
-    -  `NSImageView` include nuovi costruttori per la creazione di viste di immagine non modificabile da una determinata `NSImage`.
--  Il nuovo `NSGridView` è stato aggiunto in un insieme di viste sub in una griglia con una variabile di dimensioni di righe e colonne che possono essere nascoste o visualizzate in modo dinamico il layout automatico.
+    - **Le sezioni comprimibili** -consente all'utente di comprimere una sezione di visualizzazione dell'insieme in una singola riga orizzontale.
+    - **Mobile intestazioni** -le intestazioni e piè di pagina possono essere spostate ora (in un layout di flusso) usando la stessa API [UICollectionView](https://developer.apple.com/reference/uikit/uicollectionview) in iOS.
+    - **Viste in Background scorrevole** -uno sfondo di viste di raccolta può ora essere impostato su scorrere insieme al contenuto.
+- Il passaggio di layout di visualizzazione rinviata è stato ottimizzato ed esteso.
+- L'API di trascinamento e rilascio include ora il nuovo `NSFilePromiseProvider` e `NSFilePromiseReceiver` trascinare classi di supporto uccelli.
+- Diversi costruttori di praticità sono state aggiunte a controlli esistenti:
+    -  `NSButton` include i nuovi costruttori per la creazione di pulsanti di comando, pulsanti di opzione e caselle di controllo.
+    -  `NSTextField` include i nuovi costruttori per la creazione di etichette di ritorno a capo e non a capo automatico, le etichette con Attribute e i campi di testo modificabile.
+    -  `NSSegmentedControl` include i nuovi costruttori per la creazione di controlli segmentati da un gruppo di etichette o immagini.
+    -  `NSSlider` include i nuovi costruttori per la creazione di dispositivi di scorrimento orizzontale lineare.
+    -  `NSImageView` include nuovi costruttori per creare le visualizzazioni di immagini non modificabili da un determinato `NSImage`.
+-  Il nuovo `NSGridView` è stato aggiunto al layout automatico dimensioni di una raccolta di visualizzazioni secondarie in una griglia con variabile di righe e colonne che possono essere nascoste o visualizzate in modo dinamico.
 
 <a name="AVFoundation-Framework-Enhancements" />
 
-## <a name="avfoundation-framework-enhancements"></a>Miglioramenti apportati a Framework AVFoundation
+## <a name="avfoundation-framework-enhancements"></a>Miglioramenti apportati AVFoundation Framework
 
-Il seguente miglioramento sono state apportate a AVFoundation Framework per macOS Sierra:
+I miglioramenti seguenti apportati a AVFoundation Framework per macOS Sierra:
 
-- In macOS, l'applicazione non deve implementare diversi [AVPlayerItem](https://developer.apple.com/reference/avfoundation/avplayeritem) comportamenti in base al tipo di contenuto. È sufficiente impostare la `Rate` proprietà e AVFoundation determinerà se sufficiente contenuto è disponibile per la riproduzione senza bloccare.
-- Il nuovo `AVPlayerLooper` classe rende più semplice eseguire una determinata parte del supporto di un ciclo durante la riproduzione.
-- Il `AVAssetDownloadURLSession` consente di classe per il download e una riproduzione successiva di FairPlay crittografati flussi HLS.
+- In macOS, l'app non è più necessario implementare diversi [AVPlayerItem](https://developer.apple.com/reference/avfoundation/avplayeritem) comportamenti in base al tipo di contenuto. È sufficiente impostare il `Rate` proprietà e AVFoundation determineranno quando sufficiente contenuto è disponibile per la riproduzione senza blocco.
+- Il nuovo `AVPlayerLooper` classe rende più semplice eseguire il ciclo di una determinata parte del supporto durante la riproduzione.
+- Il `AVAssetDownloadURLSession` classe consente il download e la successiva riproduzione di FairPlay crittografati flussi HLS.
 
 <a name="Core-Data-Framework-Enhancements" />
 
-## <a name="core-data-framework-enhancements"></a>Miglioramenti di Framework dati di base
+## <a name="core-data-framework-enhancements"></a>Miglioramenti apportati a Framework core Data
 
-Il seguente miglioramento sono state apportate al Framework di dati principale per macOS Sierra:
+Sono stati apportati i miglioramenti seguenti per il Framework di dati di Core per macOS Sierra:
 
-- Radice [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) oggetti supporta simultaneo di generare un errore e di recupero senza serializzazione.
+- Radice [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) oggetti supporta simultaneo di eventi di errore e il recupero senza serializzazione.
 - Il [NSPersistentStoreCoordinator](https://developer.apple.com/reference/coredata/nspersistentstorecoordinator) classe gestisce un pool di archivi dati di SQLite.
-- Il [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) oggetti con archivi dati SQLite il supporto di modalità Journal WAL la generazione di query nuove funzionalità in contesti di oggetto gestito (MOC) possono essere aggiunti a versioni specifiche di database per il recupero futuro e generare un errore per le transazioni.
-- Utilizzo di alto livello `NSPersistenceContainer` al riferimento di `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) e altre risorse di configurazione di dati di base.
-- Sono stati aggiunti numerosi nuovi metodi pratici `NSManagedObject` rendendo più semplice eseguire operazioni di recupero e di creare sottoclassi.
+- Il [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) oggetti con gli archivi dati di SQLite nel supporto della modalità di registrazione log write-AHEAD di nuova generazione di query in cui i contesti di oggetto gestito (MOC) possono essere aggiunti alle versioni di database specifico per il recupero futuro delle funzionalità e generare un errore per le transazioni.
+- Utilizzo di alto livello `NSPersistenceContainer` per fare riferimento al `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) e altre risorse di configurazione di Core Data.
+- Sono stati aggiunti alcuni nuovi metodi pratici per `NSManagedObject` rendendo più semplice eseguire operazioni di recupero e creare sottoclassi.
 
-Per ulteriori informazioni, vedere Apple [Core dati Framework Reference](https://developer.apple.com/reference/coredata).
+Per altre informazioni, vedere di Apple [riferimento a Framework di Core Data](https://developer.apple.com/reference/coredata).
 
 <a name="Core-Image-Framework-Enhancements" />
 
-## <a name="core-image-framework-enhancements"></a>Miglioramenti apportati a Framework core immagine
+## <a name="core-image-framework-enhancements"></a>Miglioramenti apportati a Framework immagine core
 
-Il seguente miglioramento sono state apportate al Framework immagine principale per macOS Sierra:
+Sono stati apportati i miglioramenti seguenti per il Framework di immagine di Core per macOS Sierra:
 
-- Il `ImageWithExtent` metodo il [CIFilter](https://developer.apple.com/reference/coreimage/cifilter) classe può essere utilizzata per inserire un'elaborazione personalizzata l'operazione di filtro. Immagine di base visualizzato o richiamare il callback specificato tra filtri durante l'elaborazione di un'immagine per l'output.
-- L'app può ora elaborare immagini in uno spazio di colori di fuori di spazio colore di lavoro del contesto dell'immagine di base tramite la conversione da e verso lo spazio colore prima e dopo l'elaborazione.
-- Il kernel Core immagine ora può richiedere un formato di output di pixel specifico.
+- Il `ImageWithExtent` metodo per il [CIFilter](https://developer.apple.com/reference/coreimage/cifilter) classe può essere utilizzata per inserire istruzioni di elaborazione personalizzata nell'operazione di filtro. Immagine di base visualizzato o richiamare il callback specificato da un filtro durante l'elaborazione di un'immagine per l'output.
+- L'app può ora elaborare immagini in uno spazio dei colori di fuori di spazio dei colori del contesto l'immagine di base funzionante mediante la conversione da e verso lo spazio colore prima e dopo l'elaborazione.
+- Il kernel di immagine di base può ora richiedere un formato di output di pixel specifico.
 - Sono stati aggiunti i nuovi filtri di immagine seguenti: `CINinePartTitled`, `CINinePartStretched`, `CIHueSaturationValueGradient`, `CIEdgePreserveUpsampleFilter` e `CIClamp`.
 
 <a name="Foundation-Framework-Enhancements" />
 
 ## <a name="foundation-framework-enhancements"></a>Miglioramenti apportati a Framework Foundation
 
-Il seguente miglioramento sono state apportate a Framework Foundation per macOS Sierra:
+I miglioramenti seguenti apportati a Framework Foundation per macOS Sierra:
 
-- Utilizzare il [NSDimentions](https://developer.apple.com/reference/foundation/nsdimension) massa API per la rappresentazione, conversione e la visualizzazione di molte delle unità fisica più comuni, ad esempio, lunghezza, velocità, la durata e temperatura.
-- Utilizzare il [NSISO8601DateFormatter](https://developer.apple.com/reference/foundation/nsiso8601dateformatter) classe per l'analisi e la generazione di ISO 8601 formattato date.
-- Usare il nuovo [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) classe per eseguire calcoli di intervallo di data e ora, ad esempio le durate, per il confronto di intervalli e test per le intersezioni di intervallo.
-- Utilizzare il [NSPersonNameComponentsFormatter](https://developer.apple.com/reference/foundation/nspersonnamecomponentsformatter) classe per analizzare gli elementi di un nome di persona da una stringa.
-- Usare il nuovo [NSURLSessionTaskMetrics](https://developer.apple.com/reference/foundation/nsurlsessiontaskmetrics) classe per ottenere le metriche per un URL di sessione di rete.
+- Usare la [NSDimentions](https://developer.apple.com/reference/foundation/nsdimension) massa di API per la rappresentazione, conversione e la visualizzazione di molte delle unità fisiche più comuni, ad esempio, lunghezza, velocità, la durata e temperature.
+- Usare la [NSISO8601DateFormatter](https://developer.apple.com/reference/foundation/nsiso8601dateformatter) classe per l'analisi e generazione di ISO 8601 formattato date.
+- Usare le nuove [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) classe per rendere i calcoli degli intervalli di data e ora, ad esempio le durate, per il confronto di intervalli e i test per le intersezioni di intervallo.
+- Usare la [NSPersonNameComponentsFormatter](https://developer.apple.com/reference/foundation/nspersonnamecomponentsformatter) classe analizzare gli elementi del nome di una persona da una stringa.
+- Usare le nuove [NSURLSessionTaskMetrics](https://developer.apple.com/reference/foundation/nsurlsessiontaskmetrics) classe per ottenere le metriche per un URL della sessione di rete.
 
-Per ulteriori informazioni, vedere Apple [note sulla versione di base per OS X v10.12 e iOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/Miscellaneous/RN-Foundation-OSX10.12/index.html).
+Per altre informazioni, vedere di Apple [Foundation note sulla versione per iOS 10 e OS X v10.12](https://developer.apple.com/library/prerelease/content/releasenotes/Miscellaneous/RN-Foundation-OSX10.12/index.html).
 
 <a name="GameKit-Framework-Enhancements" />
 
-## <a name="gamekit-framework-enhancements"></a>Miglioramenti apportati a Framework GameKit
+## <a name="gamekit-framework-enhancements"></a>Miglioramenti apportati GameKit Framework
 
-Il seguente miglioramento sono state apportate a GameKit Framework per macOS Sierra:
+I miglioramenti seguenti apportati a GameKit Framework per macOS Sierra:
 
-- Il **Game Center App** è stato deprecato e rimosso dalla macOS. Se l'app Usa GameKit, si _deve_ presentare la propria interfaccia per visualizzare le caratteristiche di GameKit come classifiche e così via. 
-- È stato implementato un nuovo tipo di account iCloud solo per il [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) classe.
-- Il nuovo [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) classe fornisce una soluzione generalizzata per gestire l'archiviazione di dati persistenti in Game Center. `GKGameSession` gestisce un elenco di lettori e l'applicazione è responsabile implementazione come e quando viene archiviata data partecipante, recuperati o scambiati tra i lettori. In molti casi le sessioni di gioco può sostituire corrispondenze esistenti basato su, corrispondenze in tempo reale o persistente gioco Salva metodi.
+- Il **Game Center App** è deprecato ed è stato rimosso da macOS. Se l'app Usa GameKit, si _necessario_ presentare la propria interfaccia per visualizzare le funzionalità GameKit come tabelloni punteggi e così via. 
+- È stato implementato un nuovo tipo di account iCloud-solo per i [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) classe.
+- Il nuovo [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) classe fornisce una soluzione generalizzata per la gestione di archiviazione persistente dei dati in Game Center. `GKGameSession` gestisce un elenco di giocatori e l'app è responsabile della forma che implementa i casi in cui è archiviato data partecipante, recuperato o scambiati tra i lettori. In molti casi è possibile sostituire le sessioni di giochi corrispondenze esistente basata su turni, corrispondenze in tempo reale o gioco permanente Salva i metodi.
 
 <a name="GamePlayKit-Framework-Enhancements" />
 
-## <a name="gameplaykit-framework-enhancements"></a>Miglioramenti apportati a Framework GamePlayKit
+## <a name="gameplaykit-framework-enhancements"></a>Miglioramenti apportati GamePlayKit Framework
 
-Il seguente miglioramento sono state apportate a GamePlayKit Framework per macOS Sierra:
+I miglioramenti seguenti apportati a GamePlayKit Framework per macOS Sierra:
 
-- Generazione di disturbo procedurale è stato aggiunto e può essere utilizzata per migliorare il realismo nelle trame naturali, aggiungere realismo ai movimenti fotocamera e la creazione di gioco avanzati.
-- Utilizzo del partizionamento spaziali per partizionare i dati di gioco world per la ricerca efficiente.
-- Nuovo responsabile delle strategie Monte Carlo ([GKMonteCarloStrategist](https://developer.apple.com/reference/gameplaykit/gkmontecarlostrategist)) è stato aggiunto per il calcolo di spostamento possibili completo.
-- È stata aggiunta una nuova API di albero delle decisioni ([GKDecisionTree](https://developer.apple.com/reference/gameplaykit/gkdecisiontree) e [GKDecisionNode](https://developer.apple.com/reference/gameplaykit/gkdecisionnode)) per migliorare al compilazione di gioco.
-- È stato aggiunto il supporto 3D per l'agente esistente e i comportamenti di ricerca di percorso utilizzando il nuovo [GKAgent3D](https://developer.apple.com/reference/gameplaykit/gkagent3d) e [GKGraphNode3D](https://developer.apple.com/reference/gameplaykit/gkgraphnode3d) classi.
-- Usare il nuovo [GKMeshGraph](https://developer.apple.com/reference/gameplaykit/gkmeshgraph) classe per fornire i percorsi di ricerca naturale ad alte prestazioni.
-- Il nuovo [GKScene](https://developer.apple.com/reference/gameplaykit/gkscene) e [GKSKNodeComponent](https://developer.apple.com/reference/gameplaykit/gksknodecomponent) crea classi combinazione GameplayKit e SpriteKit più semplice che mai.
+- Generazione di rumore procedurale è stato aggiunto e può essere usata per migliorare il realismo nelle trame realistiche, aggiungere più realistiche per i movimenti della fotocamera e generare scenari di gioco avanzati.
+- Usare il partizionamento spaziali per partizionare i dati del mondo di giochi per la ricerca efficiente.
+- Un nuovo strategist Monte Carlo ([GKMonteCarloStrategist](https://developer.apple.com/reference/gameplaykit/gkmontecarlostrategist)) è stato aggiunto per il calcolo completo spostamento possibili.
+- È stata aggiunta una nuova API di albero delle decisioni ([GKDecisionTree](https://developer.apple.com/reference/gameplaykit/gkdecisiontree) e [GKDecisionNode](https://developer.apple.com/reference/gameplaykit/gkdecisionnode)) per migliorare la compilazione di gioco per intelligenza artificiale.
+- È stato aggiunto supporto 3D per l'agente esistente e i comportamenti di percorso di ricerca usando le nuove [GKAgent3D](https://developer.apple.com/reference/gameplaykit/gkagent3d) e [GKGraphNode3D](https://developer.apple.com/reference/gameplaykit/gkgraphnode3d) classi.
+- Usare le nuove [GKMeshGraph](https://developer.apple.com/reference/gameplaykit/gkmeshgraph) classe per fornire percorsi realistiche ad alte prestazioni.
+- Il nuovo [GKScene](https://developer.apple.com/reference/gameplaykit/gkscene) e [GKSKNodeComponent](https://developer.apple.com/reference/gameplaykit/gksknodecomponent) marca classi combinazione GameplayKit e SpriteKit più facile che mai.
 
 <a name="Metal-Framework-Enhancements" />
 
-## <a name="metal-framework-enhancements"></a>Miglioramenti apportati a Framework Metal
+## <a name="metal-framework-enhancements"></a>Miglioramenti apportati Framework bare metal
 
-Il seguente miglioramento sono state apportate a Framework Metal per macOS Sierra:
+I miglioramenti seguenti apportati a Framework bare Metal per macOS Sierra:
 
-- App e giochi 3D ora è possono usare _a mosaico_ per il rendering in modo efficiente scene complesse e geometria tramite GPU.
-- Usare la specializzazione di funzione per creare una raccolta altamente ottimizzato di materiali e funzioni di combinazione di luce per una scena.
-- Fornire un controllo accurato di allocazione delle risorse per ottimizzare le prestazioni di metallo basati su App con risorse heap e Memoryless destinazioni di rendering.
+- App e giochi 3D ora è possono usare _dello schema a mosaico_ eseguire in modo efficiente il rendering di scene complesse e geometry tramite GPU.
+- Utilizzare la specializzazione di funzione per creare una raccolta altamente ottimizzato di materiale e funzioni di combinazione di luce per una scena.
+- Fornire un controllo accurato di allocazione delle risorse per ottimizzare le prestazioni di Metal basati su App con risorse heap e Memoryless destinazioni di rendering.
 
-Per ulteriori informazioni, vedere Apple [Guida per programmatori Metal](https://developer.apple.com/library/prerelease/content/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221).
+Per altre informazioni, vedere di Apple [Guida per programmatori Metal](https://developer.apple.com/library/prerelease/content/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221).
 
 <a name="ModelIO-Framework-Enhancements" />
 
 ## <a name="model-io-framework-enhancements"></a>Miglioramenti al modello di Framework dei / o
 
-Il seguente miglioramento sono state apportate per il Framework dei / o del modello per macOS Sierra:
+Sono stati apportati i miglioramenti seguenti per il Framework dei / o del modello per macOS Sierra:
 
-- È ora supportato il formato del file EUR.
-- Usare il nuovo `MDLMaterialPropertyGraph` classe di runtime di supportare facilmente modifiche ai modelli.
-- Firma distanza campo è stato aggiunto il supporto di [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) classe.
-- Usare il nuovo `MDLLightProbeIrradianceDataSource` classe per semplificare il posizionamento luce Probe.
+- È ora supportato il formato di file USD.
+- Usare il nuovo `MDLMaterialPropertyGraph` classe per agevolare il supporto runtime modifiche ai modelli.
+- Accesso automatico a distanza campo è stato aggiunto il supporto per la [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) classe.
+- Usare il nuovo `MDLLightProbeIrradianceDataSource` classe per assistere nella selezione host per il Probe di luce.
 
 <a name="Photos-Framework-Enhancements" />
 
 ## <a name="photos-framework-enhancements"></a>Miglioramenti apportati a Framework foto
 
-Il seguente miglioramento sono state apportate a Framework foto per macOS Sierra:
+I miglioramenti seguenti apportati a Framework foto per macOS Sierra:
 
-- Modifica di foto in tempo reale è ora disponibile per le applicazioni che supportano il framework di foto e per le estensioni di modifica (per l'utilizzo all'interno di foto e fotocamera App).
-- Usare il nuovo [PHLivePhotoEditingContext](https://developer.apple.com/reference/photos/phlivephotoeditingcontext) classe per applicare le modifiche per il video sia ancora il contenuto delle foto in tempo reale.
-- Utilizzare il [CIImageProcessorInput](https://developer.apple.com/reference/coreimage/ciimageprocessorinput) e [CIImageProcessorOutput](https://developer.apple.com/reference/coreimage/ciimageprocessoroutput) classi per sfruttare la nuova funzionalità di immagine Core del processore per eseguire modifiche.
-- Per supportare le foto in tempo reale, il [PHLivePhoto](https://developer.apple.com/reference/photos/phlivephoto) e [PHLivePhotoView](https://developer.apple.com/reference/photosui/phlivephotoview) classi sono state trasferite da iOS per macOS.
+- Modifica foto in tempo reale è ora disponibile per le app che supportano il framework di foto e per le estensioni di modifica foto (per l'uso all'interno di foto e fotocamera App).
+- Usare le nuove [PHLivePhotoEditingContext](https://developer.apple.com/reference/photos/phlivephotoeditingcontext) classe per applicare le modifiche per il video sia ancora il contenuto della foto in tempo reale.
+- Usare la [CIImageProcessorInput](https://developer.apple.com/reference/coreimage/ciimageprocessorinput) e [CIImageProcessorOutput](https://developer.apple.com/reference/coreimage/ciimageprocessoroutput) classi possa sfruttare i vantaggi della nuova funzionalità di immagine di Core del processore per eseguire modifiche.
+- Per supportare Live foto, il [PHLivePhoto](https://developer.apple.com/reference/photos/phlivephoto) e [PHLivePhotoView](https://developer.apple.com/reference/photosui/phlivephotoview) classi sono state convertite da iOS per macOS.
 
 <a name="SceneKit-Framework-Enhancements" />
 
-## <a name="scenekit-framework-enhancements"></a>Miglioramenti apportati a Framework SceneKit
+## <a name="scenekit-framework-enhancements"></a>Miglioramenti apportati a Framework di SceneKit
 
-Il seguente miglioramento sono state apportate a SceneKit Framework per macOS Sierra:
+I miglioramenti seguenti apportati a SceneKit Framework per macOS Sierra:
 
-- Include ora un nuovo sistema fisicamente base per il Rendering PBR () per ottenere risultati più realistici con più semplice la creazione di asset.
-- Usare il nuovo [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) ombreggiatura del modello di prodotto un'ampia gamma di effetti di ombreggiatura realistica richiedere solo tre proprietà fondamentali (`Diffuse`, `Metalness` e `Roughness`).
-- Poiché PBR ombreggiatura funziona meglio con illuminazione basato sull'ambiente, utilizzare il `LightingEnvironment` proprietà per l'assegnazione basata su immagini illuminazione tan intera scena.
-- Utilizzare il `IESProfileURL` proprietà da importare impianti di illuminazione reali che definiscono l'illuminazione base ai valori del mondo reale, ad esempio intensità (in lumen) e il colore di temperatura (in gradi Kelvin).
-- Il [SCNCamera](https://developer.apple.com/reference/scenekit/scncamera) classe può fornire maggiore realismo utilizzando funzioni HDR ed effetti. Utilizzare l'esposizione adattivo per creare effetti automatica o utilizzare vignettatura, la smarginatura colore e la classificazione di colore per aggiungere effetti filmatic per il gioco.
-- Funzionalità di fotocamera PBR sia HDR fornire risultati migliori rispetto a tecniche tradizionali per il rendering e, di conseguenza, SceneKit ora esegue tutti i calcoli di colore in uno spazio colore lineare (tramite la gamma di colori P3 su schermi di dispositivi di livello di colore).
+- Include ora un nuovo sistema fisicamente basato su Rendering PBR () per ottenere risultati più realistici con più semplice la creazione di asset.
+- Usare le nuove [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) ombreggiatura del modello di prodotto una vasta gamma di effetti di ombreggiatura realistica questa tecnologia richiede solo tre proprietà fondamentali (`Diffuse`, `Metalness` e `Roughness`).
+- Poiché PBR ombreggiatura funziona meglio con illuminazione basata su ambiente, usare il `LightingEnvironment` proprietà per l'assegnazione basata su immagini di illuminazione per tan intera scena.
+- Usare il `IESProfileURL` proprietà da importare impianti reali che definiscono l'illuminazione di base sui valori reali, ad esempio intensità (in lumen) e il colore di temperatura (in gradi Kelvin).
+- Il [SCNCamera](https://developer.apple.com/reference/scenekit/scncamera) classe può offrire maggiore realismo usando funzionalità HDR e gli effetti. Usare l'esposizione adattivo per creare effetti automatico o usare vignettatura, la smarginatura colore e la classificazione di colore per aggiungere effetti filmatic al gioco.
+- Le funzionalità di fotocamera PBR sia HDR offrono risultati migliori rispetto a tecniche tradizionali per il rendering e, di conseguenza, SceneKit esegue ora tutti i calcoli di colore in uno spazio dei colori lineare (usando la gamma di colori P3 su schermi di dispositivi a livello di colore).
 - SceneKit ora tutti i colori corrisponde al colore, leggere le informazioni sul profilo del colore.
-- SceneKit interpreta i valori dei componenti di colore in uno spazio colore RGB lineare per tutti i tipi di shader.
-- Poiché SceneKit legge e modificare informazioni del profilo colori nelle immagini di trama, utilizzare Asset cataloghi per tutte le immagini per verificare che queste informazioni vengono fornite.
-- Entrambi lineare per il rendering dello spazio dei colori e colore di livello può essere disabilitata specificando il `SCNDisableLinearSpaceRendering` e `SCNDisableWideGamut` chiavi dell'app `Info.plist`.
+- SceneKit interpreta i valori di componente di colore in uno spazio dei colori RGB lineare per tutti i tipi di shader.
+- Poiché SceneKit legge e modificare informazioni sul profilo di colore nelle immagini di trama, utilizzare cataloghi Asset per tutte le immagini per assicurarsi che queste informazioni sono disponibili.
+- Entrambi lineare per il rendering dello spazio dei colori e a livello di colore può essere disabilitata specificando il `SCNDisableLinearSpaceRendering` e `SCNDisableWideGamut` le chiavi dell'app `Info.plist`.
 - Compilare primati poligono arbitrario (caricato da file o a livello di codice generati) per specificare la geometria con il nuovo [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) classe.
 
 <a name="Security-Framework-Enhancements" />
 
-## <a name="security-framework-enhancements"></a>Miglioramenti della sicurezza Framework
+## <a name="security-framework-enhancements"></a>Miglioramenti apportati ai Framework di sicurezza
 
-Il seguente miglioramento sono state apportate per il Framework di sicurezza per macOS Sierra:
+Sono stati apportati i miglioramenti seguenti per il Framework di sicurezza per macOS Sierra:
 
 - Il `SecKey` interfaccia è stata modernizzata e unificata per tutte le piattaforme (iOS, tvOS, watchOS e macOS).
 
 <a name="SpriteKit-Framework-Enhancements" />
 
-## <a name="spritekit-framework-enhancements"></a>Miglioramenti apportati a Framework SpriteKit
+## <a name="spritekit-framework-enhancements"></a>Miglioramenti apportati Framework SpriteKit
 
-Il seguente miglioramento sono state apportate a SpriteKit Framework per macOS Sierra:
+I miglioramenti seguenti apportati a SpriteKit Framework per macOS Sierra:
 
-- Tilemaps ora supportano forme riquadro quadrato, vite ed effetto per 2D, D 2.5 e giochi di scorrimento sul lato utilizzando il `SKTileMapMode`, `SKTileGroup`, `SKTileGroupRule` e `SKTileSet` classi.
-- Usare il nuovo `SKWarpGeometry` classe per estendere o falsare [SKSpriteNode](https://developer.apple.com/reference/spritekit/skspritenode) o [SKEffectNode](https://developer.apple.com/reference/spritekit/skeffectnode) per il rendering. Il nuovo [SKAction](https://developer.apple.com/reference/spritekit/skaction) classe può essere utilizzata per aggiungere un'animazione transizioni tra gli effetti warp.
-- Shader personalizzato può fornire attributi (`SKAttribute`) che può essere configurata separatamente per ogni nodo che utilizza lo shader fornendo un valore di attributo (`SKAttributeValue`).
-- Il [SKView](https://developer.apple.com/reference/spritekit/skview) classe fornisce numerosi nuovi metodi per fornire un controllo accurato quando e come viene eseguito il rendering di una scena.
+- Tilemaps supportano ora le forme di riquadro quadrato, esagonale e isometrica per 2D, 2,5 D e lo scorrimento laterale giochi usando il `SKTileMapMode`, `SKTileGroup`, `SKTileGroupRule` e `SKTileSet` classi.
+- Usare le nuove `SKWarpGeometry` classe per estendere o distorcere [SKSpriteNode](https://developer.apple.com/reference/spritekit/skspritenode) oppure [SKEffectNode](https://developer.apple.com/reference/spritekit/skeffectnode) per il rendering. Il nuovo [SKAction](https://developer.apple.com/reference/spritekit/skaction) classe può essere utilizzata per aggiungere un'animazione transizioni tra gli effetti di warp.
+- Gli shader personalizzati possono fornire attributi (`SKAttribute`) che può essere configurata separatamente per ogni nodo che utilizza lo shader fornendo un valore di attributo (`SKAttributeValue`).
+- Il [SKView](https://developer.apple.com/reference/spritekit/skview) classe fornisce numerosi nuovi metodi per garantire il controllo con granularità fine su come e quando viene eseguito il rendering di una scena.
 
 <a name="New-Frameworks" />
 
@@ -196,10 +196,10 @@ Il seguente miglioramento sono state apportate a SpriteKit Framework per macOS S
 
 I framework seguenti sono state aggiunte a macOS Sierra:
 
-- **Framework intenti** -questo framework consente all'app di esaminare le interazioni (ad esempio, le azioni di percorso o utente) ed eseguire l'azione in base a tali informazioni.
-- **SafariServices Framework** -questo framework consente l'app per lo sviluppo di estensioni dell'app per Safari (ad esempio blocchi di contenuto) per iOS e Mac OS.
+- **Framework Intent** -questo framework consentire all'app esaminare le interazioni (ad esempio le azioni di percorso o un utente) e agire su tali informazioni.
+- **SafariServices Framework** -questo framework consentire all'app sviluppare le estensioni dell'app per Safari (ad esempio blocchi di contenuto) per iOS e macOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempi di Mac](https://developer.xamarin.com/samples/mac/)
-- [Novità di OS X 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)
+- [Novità in OS X 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

@@ -1,33 +1,33 @@
 ---
-title: Controllo installazione e requisiti
-description: Questo documento viene descritto come installare il controllo di Xamarin e ne illustra il sistema operativo supportato, IDE e piattaforme di app.
+title: Requisiti e installazione inspector
+description: Questo documento viene descritto come installare Xamarin Inspector e illustra il sistema operativo supportato, ambienti di sviluppo integrato e piattaforme di app.
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 690329aa1577c66b3aa2794342a8e367477d3a74
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 2357003e3a855981f053c48a596b932d9ba36d90
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066923"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104960"
 ---
-# <a name="inspector-installation-and-requirements"></a>Controllo installazione e requisiti
+# <a name="inspector-installation-and-requirements"></a>Requisiti e installazione inspector
 
 ## <a name="download-and-installation"></a>Download e installazione
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-1. Scaricare e installare [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) e selezionare il **sviluppo per dispositivi Mobile con .NET** carico di lavoro.
-1. [Accedi](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) per abilitare la sottoscrizione dell'organizzazione.
-1. [Controllare](~/tools/inspector/inspect.md) la propria app.
+1. Scaricare e installare [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) e selezionare il **sviluppo per dispositivi mobili con .NET** carico di lavoro.
+1. [Accedi](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) per abilitare la sottoscrizione Enterprise.
+1. [Esaminare](~/tools/inspector/inspect.md) la tua app!
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 1. Scaricare e installare [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/mac/).
-1. [Accedi](https://docs.microsoft.com/visualstudio/mac/activation) per abilitare la sottoscrizione dell'organizzazione.
-1. [Controllare](~/tools/inspector/inspect.md) la propria app.
+1. [Accedi](https://docs.microsoft.com/visualstudio/mac/activation) per abilitare la sottoscrizione Enterprise.
+1. [Esaminare](~/tools/inspector/inspect.md) la tua app!
 
 -----
 
@@ -36,24 +36,24 @@ ms.locfileid: "37066923"
 ### <a name="supported-operating-systems"></a>Supported Operating Systems
 
 - **Mac** -OS X 10.11 o versione successiva
-- **Windows** -Windows 7 o versione successiva (con Internet Explorer 11 o versione successiva e .NET 4.6.1 o versione successiva)
+- **Windows** -Windows 7 o versione successiva (in Internet Explorer 11 o versione successiva e .NET 4.6.1 o versioni successive)
 
 ### <a name="supported-ides"></a>IDE supportati
 
 - Visual Studio per Mac
-- Visual Studio 2017 con **sviluppo per dispositivi Mobile con .NET** carico di lavoro
+- Visual Studio 2017 con **sviluppo di applicazioni per dispositivi mobili con .NET** carico di lavoro
 
-L'ispezione applicazione in tempo reale è disponibile per i clienti aziendali.
+L'ispezione delle app in tempo reale è disponibile per i clienti aziendali.
 
 <a name="supported-platforms" />
 
-### <a name="supported-app-platforms"></a>Piattaforme di App supportate
+### <a name="supported-app-platforms"></a>Piattaforme di App supportati
 
-|App della piattaforma|Supporto IDE|Note|
+|Piattaforma per App|Supporto IDE|Note|
 |--- |--- |--- |
 |Mac|Supportato solo in Visual Studio per Mac|
-|iOS|Supportata in Visual Studio 2017 e Visual Studio per Mac| |
-|Android|Supportata in Visual Studio 2017 e Visual Studio per Mac|Deve avere come destinazione Android > = 4.0.3, con **fastdev** abilitato.<br />È necessario usare gli emulatori di Google, Visual Studio o Xamarin Android. Emulatori Android 7 potrebbero non consentire il controllo in questo momento.|
+|iOS|Supportato in Visual Studio 2017 e Visual Studio per Mac| |
+|Android|Supportato in Visual Studio 2017 e Visual Studio per Mac|Deve avere come destinazione Android > = 4.0.3, con **fastdev** abilitata.<br />È necessario usare gli emulatori di Google, Visual Studio o Xamarin. Android. Emulatori Android 7 non possono consentire di ispezione in questo momento.|
 |WPF|Supportato solo in Visual Studio 2017|
 
 <a name="reporting-bugs" />
@@ -62,7 +62,7 @@ L'ispezione applicazione in tempo reale è disponibile per i clienti aziendali.
 
 I bug devono essere segnalati direttamente tramite Visual Studio:
 
-- **Guida > Invia commenti e suggerimenti > segnala un problema**
+- **Guida in linea > Invia commenti e suggerimenti > segnala un problema**
 
 Includere tutte le informazioni seguenti:
 
@@ -72,17 +72,17 @@ Queste informazioni sono fondamentali.
 
 Visual Studio per Mac
 
-- **Visual Studio > su Visual Studio > Mostra dettagli > Copia informazioni**
-- Incollare in report di bug
+- **Visual Studio > informazioni su Visual Studio > Mostra dettagli > Copia informazioni**
+- Incollare nel report sui bug
 
 Visual Studio
 
-- **Guida > su Visual Studio > Copia informazioni**
-- Inviare suggerimenti versione del sistema operativo e che sia in esecuzione Windows a 32 o 64 bit.
+- **Guida > informazioni su Visual Studio > Copia informazioni**
+- Inviaci la versione del sistema operativo e che sia in esecuzione Windows a 32 o 64 bit.
 
 ### <a name="log-files"></a>File di registro
 
-Collegare sempre file di log client IDE e di controllo.
+Collegare sempre i file di log client sia IDE sia Inspector.
 
 Client di controllo
 
@@ -91,7 +91,7 @@ Client di controllo
 
 1.4.x offre inoltre la possibilità di selezionare il file di log in Finder (macOS) o Esplora risorse (Windows) direttamente dal menu principale:
 
-- **Guida > Visualizza File di Log**
+- **Guida > informazioni sul File di Log**
 
 Visual Studio per Mac
 
@@ -100,23 +100,23 @@ Visual Studio per Mac
 Visual Studio
 
 - `%LOCALAPPDATA%\Xamarin\Logs\{VS version}\Inspector {date}.log`
-- Il contenuto di Visual Studio **Output** riquadro può anche essere informativo.
+- Il contenuto di Visual Studio **Output** riquadro potrebbe risultare informativo.
 
 ### <a name="project-settings"></a>Impostazioni progetto
 
-Se è possibile collegare il **csproj** per il progetto che si desidera controllare, sarebbe molto utile. Questo è più semplice rispetto a cui viene richiesto sulle singole impostazioni.
+Se è possibile collegare il **file con estensione csproj** per il progetto che si desidera controllare, sarebbe estremamente utile. Questo è più facile che vuole porre riguardo le singole impostazioni.
 
-Anche confermare che sei in configurazione di Debug.
+Verificare anche che si trova in configurazione di Debug.
 
 ### <a name="selected-devices"></a>Dispositivi selezionati
 
-Per Android e iOS, è essenziale che si sa quale periferica si esegue il debug quando si desidera controllare. È necessario conoscere:
+Per Android e iOS, è fondamentale che sappiamo quale dispositivo si esegue il debug quando si desidera esaminare. È necessario conoscere:
 
-- Nome del dispositivo come illustrato dell'IDE
+- Nome del dispositivo come illustrato nell'IDE
 - Versione del sistema operativo del dispositivo
-- Android: Verificare che si sta utilizzando un x86 emulator
-- Android: Quale piattaforma emulatore usi? Emulatore di Google? Emulatore Android di Visual Studio? Xamarin Android Player?
-- L'app che si esegue il debug correttamente vengono visualizzati e funzione nel dispositivo?
-- Il dispositivo dispone di connettività di rete (controllo tramite browser web)?
+- Android: Verificare che si utilizza un x86 dell'emulatore
+- Android: Piattaforma emulatore si sta usando? Emulatore Google? Emulatore Android di Visual Studio? Xamarin Android Player?
+- L'app che si esegue il debug in modo corretto vengono visualizzati e funzionare nel dispositivo?
+- Il dispositivo dispone di connettività di rete (controllo tramite web browser)?
 
 [client-bugs]: https://github.com/Microsoft/workbooks/issues/new

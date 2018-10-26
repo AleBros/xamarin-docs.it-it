@@ -5,13 +5,14 @@ ms.prod: xamarin
 ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: conceptdev
 ms.author: crdun
+ms.custom: video
 ms.date: 07/18/2018
-ms.openlocfilehash: 65ba1915a2a968a14f0ce21bcada76e1b83531b0
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.openlocfilehash: d07b248b36feee909db9c863eb17f1a900f58e60
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270660"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105831"
 ---
 # <a name="net-standard-library-code-sharing"></a>La condivisione del codice di libreria .NET standard
 
@@ -27,7 +28,7 @@ In questa sezione illustra in dettaglio come creare e usare una libreria .NET St
 
 ### <a name="creating-a-net-standard-library"></a>Creazione di una libreria .NET Standard
 
-Aggiunta di una libreria .NET Standard per la soluzione è abbastanza semplice.
+È possibile aggiungere una libreria .NET Standard per la soluzione con questi passaggi:
 
 1. Nel **Aggiungi nuovo progetto** finestra di dialogo, seleziona la **.NET Core** categoria e quindi selezionare **libreria .NET Standard**:
 
@@ -86,6 +87,10 @@ Dopo aver creata una libreria .NET Standard, è possibile aggiungere un riferime
 ![Riferimento a una libreria .NET Standard](net-standard-images/vs04.png "In Visual Studio, fare doppio clic sul nodo Riferimenti e scegliere Aggiungi riferimento... quindi passare alla scheda dei progetti della soluzione, come mostrato")
 
 -----
+
+## <a name="net-standard-and-xamarinforms-for-the-net-developer-video"></a>.NET standard e xamarin. Forms per gli sviluppatori .NET (video)
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/NET-Standard-and-XamarinForms-for-the-NET-Developer/player]
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,71 +1,71 @@
 ---
-title: Notifiche utente avanzato in xamarin. IOS
-description: In questo articolo vengono esaminati i framework, le notifiche utente, introdotto in iOS 10. Illustra le notifiche utente, l'interfaccia di notifica utente, allegati multimediali, le interfacce utente personalizzate e altro ancora.
+title: Notifiche utente avanzate in xamarin. IOS
+description: Questo articolo viene approfondito il framework per le notifiche utente, introdotto in iOS 10. Viene descritto notifiche utente, interfaccia utente di notifica, gli allegati multimediali, le interfacce utente personalizzate e altro ancora.
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 09a73ebc3dab90e6342a45c0f1fb5a40184d18a6
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: b0571f826101576b402368923c2147e35aa9299e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788530"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116329"
 ---
-# <a name="advanced-user-notifications-in-xamarinios"></a>Notifiche utente avanzato in xamarin. IOS
+# <a name="advanced-user-notifications-in-xamarinios"></a>Notifiche utente avanzate in xamarin. IOS
 
-Nuovo a 10, la notifica all'utente consente di framework per la gestione delle notifiche locali e remote e il recapito di iOS. Usando questo framework, un'app o l'estensione dell'app può pianificare il recapito delle notifiche locale specificando un set di condizioni, ad esempio percorso o l'ora del giorno.
+Novità di iOS 10, la notifica all'utente consente a framework per il recapito e la gestione delle notifiche locali e remote. Uso di questo framework, un'app o l'estensione dell'app può pianificare il recapito di notifiche locali specificando un set di condizioni, ad esempio posizione o l'ora del giorno.
 
 ## <a name="about-user-notifications"></a>Informazioni sulle notifiche utente
 
-Il nuovo framework di notifica utente consente per la gestione delle notifiche locali e remote e il recapito. Usando questo framework, un'app o l'estensione dell'App può pianificare il recapito delle notifiche locale specificando un set di condizioni, ad esempio percorso o l'ora del giorno.
+Il nuovo framework di notifica all'utente consente il recapito e la gestione delle notifiche locali e remote. Uso di questo framework, un'app o l'estensione dell'App può pianificare il recapito di notifiche locali specificando un set di condizioni, ad esempio posizione o l'ora del giorno.
 
-Inoltre, l'app o l'estensione può ricevere (e potenzialmente modificare) le notifiche locali e remote come vengano recapitati a dispositivo iOS dell'utente.
+Inoltre, l'app o l'estensione può ricevere (e potenzialmente modificare) le notifiche locali e remote quando vengono recapitate al dispositivo iOS dell'utente.
 
 Il nuovo framework di interfaccia utente di notifica utente consente a un'app o l'estensione dell'App per personalizzare l'aspetto delle notifiche locali e remote quando sono presentati all'utente.
 
-Questo framework fornisce le seguenti che un'app è possibile recapitare le notifiche a un utente:
+Questo framework offre le seguenti modalità che un'app può recapitare le notifiche a un utente:
 
-- **Avvisi Visual** , in cui la notifica esegue il roll verso il basso dalla parte superiore della schermata come un'intestazione.
-- **Audio e alle vibrazioni** -può essere associato a una notifica.
-- **Icona di App Badging** : se l'icona dell'applicazione consente di visualizzare una notifica che indica che il nuovo contenuto è disponibile. Ad esempio il numero di messaggi di posta elettronica non letta.
+- **Avvisi Visual** , in cui la notifica esegue il roll verso il basso dalla parte superiore dello schermo sotto forma di banner.
+- **File audio e alle vibrazioni** -può essere associato a una notifica.
+- **Badge sull'icona di app** : se l'icona dell'app Visualizza una notifica che mostra che diventano disponibili nuovi contenuti. Ad esempio il numero di messaggi di posta elettronica non letta.
 
 Inoltre, a seconda del contesto corrente dell'utente, esistono diversi modi in cui verrà visualizzata una notifica:
 
-- Se il dispositivo è sbloccato, la notifica viene continuata verso il basso dalla parte superiore della schermata come banner.
+- Se il dispositivo è sbloccato, la notifica viene continuata verso il basso dalla parte superiore dello schermo sotto forma di banner.
 - Se il dispositivo è bloccato, la notifica verrà visualizzata nella schermata di blocco dell'utente.
-- Se l'utente venga persa una notifica, possono aprire il centro notifiche e visualizzare le notifiche di attesa disponibili, non esiste.
+- Se l'utente ha perso una notifica, possono aprire il centro notifiche e visualizzare le notifiche di attesa disponibili, non esiste.
 
-Un'app xamarin è disponibili due tipi di notifiche utente che è in grado di inviare:
+Un'app xamarin. IOS include due tipi di notifiche utente che è in grado di inviare:
 
-- **Le notifiche locale** -queste vengono inviate da applicazioni installate localmente nel dispositivo dell'utente.
-- **Le notifiche remote** - vengono inviati da un server remoto e non è presentato all'utente o un aggiornamento in background di contenuto dell'applicazione attiva.
+- **Le notifiche locali** -questi vengono inviati dall'App installate in locale nel dispositivo dell'utente.
+- **Notifiche remote** : vengono inviati da un server remoto e non presentata all'utente o attiva un aggiornamento in background di contenuto dell'app.
 
-Per ulteriori informazioni, vedere il nostro [avanzata notifiche utente](~/ios/platform/user-notifications/enhanced-user-notifications.md) documentazione.
+Per altre informazioni, vedere la [notifiche utente avanzato](~/ios/platform/user-notifications/enhanced-user-notifications.md) documentazione.
 
 ## <a name="the-new-user-notification-interface"></a>La nuova interfaccia notifica utente
 
-Le notifiche utente in iOS 10 vengono visualizzate una nuova progettazione dell'interfaccia utente che fornisce una maggiore quantità di contenuto, ad esempio un titolo, sottotitolo e allegati multimediali facoltativo che può essere visualizzato nella schermata di blocco, come un'intestazione nella parte superiore del dispositivo o nel centro notifiche.
+Notifiche utente in iOS 10 vengono visualizzate una nuova progettazione dell'interfaccia utente che fornisce altri contenuti, ad esempio un titolo, sottotitolo e allegati multimediali facoltativo che può essere visualizzato nella schermata di blocco, come Banner nella parte superiore del dispositivo o nel centro notifiche.
 
-Indipendentemente da dove una notifica all'utente viene visualizzata in iOS 10, viene visualizzato con lo stesso aspetto e comportamento e le stesse caratteristiche e funzionalità.
+Indipendentemente da dove viene visualizzata una notifica utente in iOS 10, viene presentato con lo stesso aspetto e comportamento e le stesse caratteristiche e funzionalità.
 
-In iOS 8, Apple ha introdotto le notifiche utilizzabili in cui lo sviluppatore può collegare azioni personalizzate a una notifica e consentire all'utente di eseguire azioni su una notifica senza la necessità di avviare l'app. In iOS 9, Apple migliorate utilizzabili notifiche con risposta rapida che consente all'utente di rispondere a una notifica con la voce di testo.
+In iOS 8, Apple ha introdotto le notifiche di utilità pratica in cui lo sviluppatore può collegare azioni personalizzate a una notifica e consentire all'utente di agire su una notifica senza avviare l'app. In iOS 9, Apple migliorate le notifiche di utilità pratica con risposta rapida che consente all'utente di rispondere a una notifica con l'immissione di testo.
 
-Poiché le notifiche utente sono una parte integrante più l'esperienza utente in iOS 10, Apple ha esteso ulteriormente le notifiche utilizzabili supportano 3D Touch, in cui l'utente preme una notifica e un'interfaccia utente personalizzata è visualizzato per fornire una notevole interazione con la notifica.
+Poiché le notifiche utente sono una parte più integrante dell'esperienza utente in iOS 10, Apple ha ampliato ulteriormente le notifiche di utilità pratica per supportare funzionalità Touch 3D, in cui l'utente preme su una notifica e un'interfaccia utente personalizzata viene visualizzato per fornire elevata interazione con la notifica.
 
-Quando viene visualizzata l'interfaccia utente personalizzata notifica utente, se l'utente interagisce con eventuali azioni associate alla notifica, è possibile aggiornare immediatamente l'interfaccia utente personalizzata per fornire commenti e suggerimenti da cosa è stata modificata.
+Quando viene visualizzata l'interfaccia utente notifica utente personalizzata, se l'utente interagisce con qualsiasi azione associati alla notifica, l'interfaccia utente personalizzata può essere immediatamente aggiornato per fornire commenti e suggerimenti per quanto riguarda ciò che è stato modificato.
 
-Nuovo in iOS 10, l'API dell'interfaccia utente di notifica utente consente a un'app xamarin facilmente in modo da sfruttare queste nuove funzionalità dell'interfaccia utente notifica utente.
+Nuovo ai dispositivi iOS 10, l'API dell'interfaccia utente di notifica utente consente a un'app xamarin. IOS sfruttare facilmente i vantaggi di queste nuove funzionalità dell'interfaccia utente notifica utente.
 
 ## <a name="adding-media-attachments"></a>Aggiunta di allegati multimediali
 
-Uno degli elementi più comuni che ottengano condivisi tra gli utenti è foto, in modo iOS 10 aggiunta la possibilità di collegare un elemento multimediale (ad esempio una foto) direttamente a una notifica, in cui sarà disponibile immediatamente disponibili per l'utente insieme al resto del Crete della notifica NT.
+Uno degli elementi più comuni che ottengano condivisi tra gli utenti è foto, in modo che iOS 10 aggiunta la possibilità di collegare un elemento multimediale (ad esempio, una foto) direttamente a una notifica, dove sarà presentata e immediatamente disponibili per l'utente insieme al resto del conte della notifica NT.
 
-Tuttavia, a causa delle dimensioni per l'invio anche una piccola immagine, collegarlo a un Payload di notifica remoto diventa poco pratica. Per gestire questa situazione, lo sviluppatore può utilizzare la nuova estensione servizio in iOS 10 per scaricare l'immagine da un'altra origine (ad esempio, un archivio dati CloudKit) e collegarlo al contenuto della notifica prima che venga visualizzato all'utente.
+Tuttavia, a causa delle dimensioni per l'invio diventa impraticabile anche un'immagine piccola, collegarlo a un Payload di notifica remota. Per gestire questa situazione, lo sviluppatore può utilizzare la nuova estensione servizio in iOS 10 per scaricare l'immagine di un'altra origine (ad esempio, un archivio dati CloudKit) e collegarlo al contenuto della notifica prima che venga visualizzato all'utente.
 
-Per una notifica remoto deve essere modificato dall'estensione del servizio, il payload deve essere contrassegnato come modificabile. Ad esempio:
+Per una notifica remota deve essere modificato dall'estensione del servizio, il payload deve essere contrassegnato come modificabile. Ad esempio:
 
 ```csharp
 {
@@ -77,11 +77,11 @@ Per una notifica remoto deve essere modificato dall'estensione del servizio, il 
 }
 ```
 
-Guardare la panoramica del processo seguente:
+Dare un'occhiata nella panoramica del processo seguente:
 
-[![](advanced-user-notifications-images/extension02.png "Aggiunta di allegati multimediali processo")](advanced-user-notifications-images/extension02.png#lightbox)
+[![](advanced-user-notifications-images/extension02.png "Gli allegati multimediali processo di aggiunta")](advanced-user-notifications-images/extension02.png#lightbox)
 
-Dopo la notifica remoto viene recapitata al dispositivo (tramite APNs), l'estensione del servizio può quindi scaricare l'immagine necessaria tramite qualsiasi mezzo desiderato (ad esempio un `NSURLSession`) e dopo aver ricevuto l'immagine, è possibile modificare il contenuto della notifica e la visualizzazione l'utente.
+Una volta remoto e viene recapitata al dispositivo (tramite il servizio APN), l'estensione del servizio può quindi scaricare le immagini necessarie in alcun modo desiderato (ad esempio un `NSURLSession`) e dopo aver ricevuto l'immagine, è possibile modificare il contenuto della notifica e la visualizzazione si tratta all'utente.
 
 Di seguito è riportato un esempio di come questo processo potrebbe essere gestito nel codice:
 
@@ -134,64 +134,64 @@ namespace MonkeyNotification
 }
 ```
 
-Quando viene ricevuta la notifica da APNs, l'indirizzo personalizzato dell'immagine viene letto dal contenuto e file viene scaricato dal server. Un `UNNotificationAttachement` viene creato con un ID univoco e il percorso locale dell'immagine (come un `NSUrl`). Viene creata una copia modificabile di contenuto di notifica e vengono aggiunti gli allegati di supporto. Infine, la notifica viene visualizzata all'utente chiamando il `contentHandler`.
+Quando la notifica viene ricevuta da APNs, l'indirizzo dell'immagine personalizzata viene letto dal contenuto e file viene scaricato dal server. Un' `UNNotificationAttachement` viene creato con un ID univoco e il percorso locale dell'immagine (come un `NSUrl`). Viene creata una copia modificabile di contenuto per le notifiche e gli allegati multimediali vengono aggiunti. Infine, viene visualizzata la notifica all'utente chiamando il `contentHandler`.
 
-Dopo aver aggiunto un allegato a una notifica, il sistema assume lo spostamento e la gestione del file.
+Dopo aver aggiunto un allegato a una notifica, il sistema subentra lo spostamento e la gestione del file.
 
-Oltre alle notifiche remoto presentato in precedenza, allegati multimediali sono supportati anche dalle notifiche locale, in cui il `UNNotificationAttachement` viene creato e collegato alla notifica e il relativo contenuto.
+Oltre a ricevere le notifiche Remote presentata nell'esempio precedente, gli allegati multimediali sono supportati anche dalle notifiche locali, in cui il `UNNotificationAttachement` viene creato e collegato alla notifica insieme ai relativi contenuti.
 
-Notifica in iOS 10 supporta gli allegati di supporto di immagini (statico e gif), audio o video e il sistema visualizzerà automaticamente la corretta dell'interfaccia utente personalizzata per ognuno di questi tipi di allegati quando la notifica viene presentata all'utente.
+Notifica in iOS 10 supporta gli allegati multimediali delle immagini (statico e gif), audio o video e il sistema visualizzerà automaticamente l'interfaccia utente personalizzata corretta per ognuno di questi tipi di allegati durante la notifica viene presentata all'utente.
 
 > [!NOTE]
-> Si deve prestare attenzione per ottimizzare la dimensione dei supporti e il tempo che necessario per scaricare il supporto dal server remoto (o per assemblare il supporto per le notifiche locale) come sistema impone limiti strict sia quando si esegue l'estensione servizio Web dell'app. Si consideri ad esempio l'invio di una versione ridimensionata verso il basso dell'immagine o un clip piccoli di un video a essere presentati nella notifica.
+> Dovrebbe prestare attenzione a ottimizzare sia le dimensioni di supporti e il tempo che necessario per scaricare il supporto dal server remoto (o per assemblare il supporto per le notifiche locali) come sistema impone limiti strict sia quando si esegue l'estensione del servizio dell'app. Si consideri ad esempio l'invio di una versione ridimensionata verso il basso dell'immagine o una clip di piccole dimensioni di un video da presentare nella notifica.
 
 ## <a name="creating-custom-user-interfaces"></a>Creazione di interfacce utente personalizzate
 
-Per creare un'interfaccia utente personalizzata per le notifiche utente, lo sviluppatore deve aggiungere un'estensione di contenuto di notifica (nuovo in iOS 10) per la soluzione dell'app.
+Per creare un'interfaccia utente personalizzata per le notifiche utente, lo sviluppatore deve aggiungere un'estensione per contenuto notifiche (nuova in iOS 10) alla soluzione dell'app.
 
-L'estensione di contenuto di notifica consente allo sviluppatore di aggiungere le visualizzazioni per l'interfaccia utente di notifica e disegnare qualsiasi contenuto desiderato. Tuttavia, i widget dell'interfaccia utente interattivi (ad esempio i pulsanti o i campi di testo) sono **non** supportata dall'interfaccia utente di notifica e non devono essere aggiunti a una progettazione dell'interfaccia utente personalizzata.
+L'estensione per contenuto notifiche consente allo sviluppatore di aggiungere le proprie visualizzazioni all'interfaccia utente di notifica e disegnare qualsiasi contenuto desiderato. A partire da iOS 12, le estensioni del contenuto di notifica supporta i controlli dell'interfaccia utente interattivi, quali pulsanti e i dispositivi di scorrimento. Per altre informazioni, vedere la [interattive notifiche in iOS 12](~/ios/platform/introduction-to-ios12/notifications/interactive.md) documentazione.
 
-Per supportare l'interazione dell'utente con una notifica all'utente, azioni personalizzate deve essere create, registrate con il sistema e connesso alla notifica prima che venga pianificata con il sistema. L'estensione di contenuto di notifica verrà chiamato per gestire l'elaborazione di tali azioni. Vedere il [utilizzo di azioni di notifica](~/ios/platform/user-notifications/enhanced-user-notifications.md) sezione il [avanzata notifiche utente](~/ios/platform/user-notifications/enhanced-user-notifications.md) documento per ulteriori informazioni sulle azioni personalizzate.
+Per supportare l'interazione dell'utente con una notifica all'utente, azioni personalizzate deve essere create, registrate con il sistema e associate alla notifica prima che venga pianificata nel sistema. L'estensione per contenuto notifiche verrà chiamato per gestire l'elaborazione di queste azioni. Vedere le [uso di azioni di notifica](~/ios/platform/user-notifications/enhanced-user-notifications.md) sezione del [notifiche utente avanzato](~/ios/platform/user-notifications/enhanced-user-notifications.md) documento per altri dettagli sulle azioni personalizzate.
 
 Quando una notifica all'utente con un'interfaccia utente personalizzata viene presentata all'utente, avrà gli elementi seguenti:
 
-[![](advanced-user-notifications-images/customui01.png "Una notifica all'utente con gli elementi di un'interfaccia utente personalizzata")](advanced-user-notifications-images/customui01.png#lightbox)
+[![](advanced-user-notifications-images/customui01.png "Una notifica all'utente con un elementi dell'interfaccia utente personalizzata")](advanced-user-notifications-images/customui01.png#lightbox)
 
-Se l'utente interagisce con le azioni personalizzate (riportati di seguito la notifica), l'interfaccia utente possono essere aggiornato per informare l'utente come la cosa è successo quando vengono richiamati una determinata azione.
+Se l'utente interagisce con le azioni personalizzate (riportati di seguito la notifica), l'interfaccia utente può essere aggiornato per informare l'utente come la cosa è successo quando è richiamato una determinata azione.
 
-### <a name="adding-a-notification-content-extension"></a>Aggiunta di un'estensione di contenuto di notifica
+### <a name="adding-a-notification-content-extension"></a>Aggiunta di un'estensione per contenuto notifiche
 
-Per implementare un'interfaccia di notifica utente personalizzato in un'app xamarin. IOS, eseguire le operazioni seguenti:
+Per implementare un'interfaccia utente notifica utente personalizzata in un'app xamarin. IOS, effettuare le operazioni seguenti:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Aprire la soluzione dell'app in Visual Studio per Mac.
-2. Fare clic sul nome della soluzione nel **soluzione riempimento** e selezionare **Aggiungi** > **Aggiungi nuovo progetto**.
-3. Selezionare **iOS** > **estensioni** > **notifica contenuto estensioni** e fare clic su di **Avanti** pulsante: 
+2. Fare clic sul nome della soluzione nel **riquadro della soluzione** e selezionare **Add** > **Aggiungi nuovo progetto**.
+3. Selezionare **iOS** > **estensioni** > **estensioni contenuto notifica** e fare clic su di **successivo** pulsante: 
 
-    [![](advanced-user-notifications-images/notify01.png "Selezionare le estensioni di contenuto di notifica")](advanced-user-notifications-images/notify01.png#lightbox)
-4. Immettere un **nome** per l'estensione e fare clic su di **Avanti** pulsante: 
+    [![](advanced-user-notifications-images/notify01.png "Selezionare le estensioni del contenuto di notifica")](advanced-user-notifications-images/notify01.png#lightbox)
+4. Immettere un **Name** per l'estensione e fare clic sui **successivo** pulsante: 
 
     [![](advanced-user-notifications-images/notify02.png "Immettere un nome per l'estensione")](advanced-user-notifications-images/notify02.png#lightbox)
-5. Regolare il **nome progetto** e/o **Nome soluzione** se necessario, fare clic su di **crea** pulsante: 
+5. Modificare il **nome progetto** e/o **Nome soluzione** se necessario e fare clic sui **crea** pulsante: 
 
     [![](advanced-user-notifications-images/notify03.png "Modificare il nome del progetto e/o il nome della soluzione")](advanced-user-notifications-images/notify03.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Aprire la soluzione dell'app in Visual Studio per Mac.
 2. Fare clic sul nome della soluzione nel **Esplora soluzioni** e selezionare **Aggiungi > Nuovo progetto...** .
-3. Selezionare **Visual c# > iOS estensioni > estensione di contenuto notifica**:
+3. Selezionare **Visual C# > estensioni iOS > estensione per contenuto notifiche**:
 
-    [![](advanced-user-notifications-images/notify01.w157-sml.png "Selezionare le estensioni di contenuto di notifica")](advanced-user-notifications-images/notify01.w157.png#lightbox)
-4. Immettere un **nome** per l'estensione e fare clic su di **OK** pulsante.
+    [![](advanced-user-notifications-images/notify01.w157-sml.png "Selezionare le estensioni del contenuto di notifica")](advanced-user-notifications-images/notify01.w157.png#lightbox)
+4. Immettere un **Name** per l'estensione e fare clic sui **OK** pulsante.
 
 -----
 
-Quando l'estensione di contenuto di notifica viene aggiunto alla soluzione, verranno creati nel progetto dell'estensione tre file:
+Quando l'estensione per contenuto notifiche viene aggiunto alla soluzione, tre file verranno creati nel progetto dell'estensione:
 
-1. `NotificationViewController.cs` -Questo è il controller di visualizzazione principale per l'estensione di contenuto di notifica.
-2. `MainInterface.storyboard` -In cui lo sviluppatore definisce il layout di interfaccia utente visibile per l'estensione di contenuto di notifica nella finestra di progettazione iOS.
+1. `NotificationViewController.cs` -Si tratta del controller di visualizzazione principale per l'estensione per contenuto notifiche.
+2. `MainInterface.storyboard` -In cui lo sviluppatore definisce il layout di interfaccia utente visibile per l'estensione per contenuto notifiche in iOS Designer.
 3. `Info.plist` : Controlla la configurazione dell'estensione di contenuto di notifica.
 
 Il valore predefinito `NotificationViewController.cs` file avrà un aspetto simile al seguente:
@@ -239,54 +239,54 @@ namespace MonkeyChatNotifyExtension
 }
 ```
 
-Il `DidReceiveNotification` viene chiamato durante la notifica viene espanso dall'utente in modo che l'estensione di contenuto di notifica è possibile popolare l'interfaccia utente personalizzata con il contenuto del `UNNotification`. Per l'esempio precedente, un'etichetta è stato aggiunto alla vista, esposta al codice con il nome `label` e viene utilizzato per visualizzare il corpo della notifica.
+Il `DidReceiveNotification` metodo viene chiamato quando la notifica viene espanso dall'utente in modo che l'estensione per contenuto notifiche possibile popolare l'UI personalizzata con il contenuto del `UNNotification`. Nell'esempio precedente, un'etichetta è stato aggiunto alla vista, esposta al codice con il nome `label` e consente di visualizzare il corpo della notifica.
 
-### <a name="setting-the-notification-content-extensions-categories"></a>Impostazione categorie dell'estensione di contenuto notifica
+### <a name="setting-the-notification-content-extensions-categories"></a>Impostazione delle categorie di estensione per contenuto le notifiche
 
-Il sistema deve essere informati su come trovare l'estensione di contenuto di notifica dell'app in base che risponda alle categorie specifiche. Seguire questa procedura:
+Il sistema deve essere informati su come trovare l'estensione per contenuto notifiche dell'app basato su che risponda alle categorie specifiche. Seguire questa procedura:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Fare doppio clic sull'estensione `Info.plist` file nel **soluzione riempimento** per aprirlo e modificarlo.
-2. Passare il **origine** visualizzazione.
+1. Fare doppio clic dell'estensione `Info.plist` del file nei **riquadro della soluzione** per aprirlo e modificarlo.
+2. Passare al **origine** visualizzazione.
 3. Espandere il `NSExtension` chiave.
-4. Aggiungere il `UNNotificationExtensionCategory` chiave come tipo **stringa** con il valore della categoria a cui appartiene l'estensione (in questo esempio "evento invito): 
+4. Aggiungere il `UNNotificationExtensionCategory` chiave come tipo **stringa** con il valore della categoria a cui appartiene l'estensione (in questo esempio '-invito a un evento): 
 
     [![](advanced-user-notifications-images/customui02.png "Aggiungere la chiave UNNotificationExtensionCategory")](advanced-user-notifications-images/customui02.png#lightbox)
 5. Salvare le modifiche.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Fare doppio clic sull'estensione `Info.plist` file nel **Esplora** per aprirlo e modificarlo.
+1. Fare doppio clic dell'estensione `Info.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo.
 3. Espandere il `NSExtension` chiave.
-4. Aggiungere il `UNNotificationExtensionCategory` chiave come tipo **stringa** con il valore della categoria a cui appartiene l'estensione (in questo esempio "evento invito): 
+4. Aggiungere il `UNNotificationExtensionCategory` chiave come tipo **stringa** con il valore della categoria a cui appartiene l'estensione (in questo esempio '-invito a un evento): 
 
     [![](advanced-user-notifications-images/customui02w.png "Aggiungere la chiave UNNotificationExtensionCategory")](advanced-user-notifications-images/customui02w.png#lightbox)
 5. Salvare le modifiche.
 
 -----
 
-Notifica alle categorie di estensione contenuti (`UNNotificationExtensionCategory`) utilizzare gli stessi valori di categoria che consentono di registrare le azioni di notifica. Nel caso in cui l'app userà la stessa interfaccia utente per più categorie, passare il `UNNotificationExtensionCategory` al tipo di **matrice** e fornire tutte le categorie necessarie. Ad esempio:
+Notifica alle categorie di estensione contenuti (`UNNotificationExtensionCategory`) usino gli stessi valori di categoria che vengono usati per registrare le azioni di notifica. Nel caso in cui l'app userà la stessa interfaccia utente per più categorie, passare il `UNNotificationExtensionCategory` al tipo **matrice** e fornire tutte le categorie necessari. Ad esempio:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![](advanced-user-notifications-images/customui03.png "Categorie di estensione di contenuto di notifica")](advanced-user-notifications-images/customui03.png#lightbox)
+[![](advanced-user-notifications-images/customui03.png "Categorie di estensione per contenuto notifiche")](advanced-user-notifications-images/customui03.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](advanced-user-notifications-images/customui03w.png "Categorie di estensione di contenuto di notifica")](advanced-user-notifications-images/customui03w.png#lightbox)
+[![](advanced-user-notifications-images/customui03w.png "Categorie di estensione per contenuto notifiche")](advanced-user-notifications-images/customui03w.png#lightbox)
 
 -----
 
-### <a name="hiding-the-default-notification-content"></a>Nascondere il contenuto di notifica predefinito
+### <a name="hiding-the-default-notification-content"></a>Se si nasconde il contenuto della notifica predefinito
 
-Nel caso in cui l'interfaccia utente notifica personalizzata verrà visualizzando il contenuto stesso come il valore predefinito di notifica (titolo, sottotitolo e corpo visualizzato automaticamente nella parte inferiore dell'interfaccia utente di notifica), queste informazioni predefinite possono essere nascosti tramite l'aggiunta di `UNNotificationExtensionDefaultContentHidden`chiave per la `NSExtensionAttributes` chiave come tipo **booleano** con un valore di `YES` l'estensione `Info.plist` file:
+Nel caso in cui l'interfaccia utente di notifica personalizzato venga visualizzato il contenuto stesso come il valore predefinito di notifica (titolo, sottotitolo e corpo visualizzate automaticamente nella parte inferiore dell'interfaccia utente di notifica), queste informazioni predefinite possono essere nascosti aggiungendo il `UNNotificationExtensionDefaultContentHidden`chiave per il `NSExtensionAttributes` principali come tipo **booleano** con il valore `YES` dell'estensione `Info.plist` file:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 [![](advanced-user-notifications-images/customui04.png "Ricerca di informazioni predefinite")](advanced-user-notifications-images/customui04.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](advanced-user-notifications-images/customui04w.png "Ricerca di informazioni predefinite")](advanced-user-notifications-images/customui04w.png#lightbox)
 
@@ -294,12 +294,12 @@ Nel caso in cui l'interfaccia utente notifica personalizzata verrà visualizzand
 
 ### <a name="designing-the-custom-ui"></a>Progettare l'interfaccia utente personalizzata
 
-Per progettare l'interfaccia utente personalizzata dell'estensione di contenuto notifica, fare doppio clic su di `MainInterface.storyboard` file per aprirlo e modificarlo in iOS, progettazione trascinare gli elementi che è necessario compilare l'interfaccia desiderata (ad esempio `UILabels` e `UIImageViews`).
+Per progettare un'interfaccia utente personalizzata dell'estensione per contenuto le notifiche, fare doppio clic il `MainInterface.storyboard` file per aprirlo e modificarlo in iOS Designer, trascinare gli elementi che occorre per creare l'interfaccia desiderata (ad esempio `UILabels` e `UIImageViews`).
 
 > [!NOTE]
-> L'interfaccia utente notifica _non_ supportano controlli interattivi, ad esempio i campi di testo o i pulsanti in un'estensione di contenuto di notifica. Anche se possono essere aggiunti allo storyboard, l'utente non sarà in grado di interagire con essi. Per aggiungere l'interazione dell'utente a un'interfaccia utente di notifica personalizzata, utilizzare le azioni personalizzate.
+> A partire da iOS 12, un'estensione per contenuto notifiche può includere controlli interattivi quali pulsanti e campi di testo. Per altre informazioni, vedere la [interattive notifiche in iOS 12](~/ios/platform/introduction-to-ios12/notifications/interactive.md) documentazione.
 
-Una volta è disposto l'interfaccia utente e i controlli necessari esposta al codice c#, aprire il `NotificationViewController.cs` per la modifica e modificare il `DidReceiveNotification` metodo per popolare l'interfaccia utente quando l'utente lo espande la notifica. Ad esempio:
+Dopo che l'interfaccia utente è stato disposto e i controlli necessari esposti a C# code, aprire il `NotificationViewController.cs` per la modifica e modificare le `DidReceiveNotification` metodo per popolare l'interfaccia utente quando l'utente espande la notifica. Ad esempio:
 
 ```csharp
 using System;
@@ -355,29 +355,29 @@ namespace MonkeyChatNotifyExtension
 }
 ```
 
-### <a name="setting-the-content-area-size"></a>Impostazione delle dimensioni dell'Area del contenuto
+### <a name="setting-the-content-area-size"></a>Impostare le dimensioni dell'area del contenuto
 
-Per regolare le dimensioni dell'area del contenuto visualizzato all'utente, il codice riportato di seguito è l'impostazione di `PreferredContentSize` proprietà il `ViewDidLoad` metodo fino alle dimensioni desiderate. Impossibile regolata anche la dimensione tramite l'applicazione di vincoli per la visualizzazione nella finestra di progettazione iOS, viene lasciato agli sviluppatori di scegliere il metodo adatto alle loro.
+Per regolare le dimensioni dell'area del contenuto visualizzato all'utente, il codice seguente è l'impostazione di `PreferredContentSize` proprietà nel `ViewDidLoad` metodo fino alle dimensioni desiderate. Questa dimensione potrebbe essere modificata anche applicando i vincoli per la visualizzazione in iOS Designer, è affidata allo sviluppatore di selezionare il metodo adatto alle proprie esigenze.
 
-Poiché la notifica di sistema è già in esecuzione prima della notifica viene richiamato l'estensione di contenuto, l'area del contenuto verrà inizialmente full dimensioni e animato fino alle dimensioni richieste quando presentato all'utente.
+Perché inizi la notifica di sistema è già in esecuzione prima della notifica viene richiamato l'estensione di contenuto, l'area di contenuto full ridimensionato e animare fino alla dimensione richiesta quando viene visualizzata all'utente.
 
-Per evitare questo effetto, è possibile modificare il `Info.plist` file per l'estensione e impostare il `UNNotificationExtensionInitialContentSizeRatio` la chiave del `NSExtensionAttributes` chiave nel tipo **numero** con un valore che rappresenta il rapporto desiderato. Ad esempio:
+Per eliminare questo effetto, modificare il `Info.plist` file per l'estensione e impostare il `UNNotificationExtensionInitialContentSizeRatio` la chiave delle `NSExtensionAttributes` chiave al tipo **numero** con un valore che rappresenta il rapporto desiderato. Ad esempio:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 [![](advanced-user-notifications-images/customui05.png "La chiave UNNotificationExtensionInitialContentSizeRatio")](advanced-user-notifications-images/customui05.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](advanced-user-notifications-images/customui05w.png "La chiave UNNotificationExtensionInitialContentSizeRatio")](advanced-user-notifications-images/customui05w.png#lightbox)
 
 -----
 
-### <a name="using-media-attachments-in-custom-ui"></a>Utilizzo degli allegati di supporto nell'interfaccia utente personalizzata
+### <a name="using-media-attachments-in-custom-ui"></a>Usando gli allegati multimediali nell'interfaccia utente personalizzata
 
-Perché allegati multimediali (come illustrato nel [aggiunta di allegati multimediali](#Adding-Media-Attachments) sezione precedente) sono parte del Payload di notifica, accessibili e visualizzati nell'estensione di contenuto di notifica, esattamente come si troveranno nel valore predefinito Notifica dell'interfaccia utente.
+Poiché gli allegati multimediali (come illustrato nel [aggiunta di allegati multimediali](#Adding-Media-Attachments) sezione precedente) fanno parte del Payload della notifica, possono essere accessibili e visualizzati nell'estensione per contenuto notifiche esattamente come si troveranno nel valore predefinito Notifica dell'interfaccia utente.
 
-Ad esempio, se l'interfaccia utente personalizzata precedente è incluso un `UIImageView` che è stato esposto al codice c#, il codice seguente può essere utilizzato per da popolare con l'allegato di supporto:
+Se, ad esempio, inclusa l'interfaccia utente personalizzata precedente un `UIImageView` che sono state esposte al C# di codice, il seguente codice può essere utilizzato per popolare il database da con il file multimediale allegato:
 
 ```csharp
 using System;
@@ -440,22 +440,20 @@ namespace MonkeyChatNotifyExtension
 }
 ```
 
-Poiché l'allegato di supporti viene gestito dal sistema, è di fuori di sandbox dell'app. L'estensione deve informare il sistema che deve accedere al file tramite la chiamata di `StartAccessingSecurityScopedResource` metodo. Quando l'estensione viene eseguita con il file, è necessario chiamare il `StopAccessingSecurityScopedResource` per rilasciare la connessione.
+Poiché il file multimediale allegato è gestito dal sistema, è di fuori di sandbox dell'app. L'estensione deve fornire informazioni al sistema che deve accedere al file chiamando la `StartAccessingSecurityScopedResource` (metodo). Quando l'estensione viene eseguita con il file, è necessario chiamare il `StopAccessingSecurityScopedResource` per rilasciare la connessione.
 
 ### <a name="adding-custom-actions-to-a-custom-ui"></a>Aggiunta di azioni personalizzate per un'interfaccia utente personalizzata
 
-Come descritto in precedenza, l'interfaccia utente di notifica non supporta l'interazione dell'utente in modo controlli, ad esempio i campi di testo o pulsanti non sono supportati nella progettazione dell'interfaccia utente.
+Pulsanti di azione personalizzato utilizzabile per aggiungere interattività a un'interfaccia utente notifica personalizzata. Vedere le [uso di azioni di notifica](~/ios/platform/user-notifications/enhanced-user-notifications.md) sezione del [notifiche utente avanzato](~/ios/platform/user-notifications/enhanced-user-notifications.md) documento per altri dettagli sulle azioni personalizzate.
 
-Il meccanismo standard di azioni personalizzate, invece, viene utilizzato per aggiungere interattività a un'interfaccia utente di notifica personalizzata. Vedere il [utilizzo di azioni di notifica](~/ios/platform/user-notifications/enhanced-user-notifications.md) sezione del [avanzata notifiche utente](~/ios/platform/user-notifications/enhanced-user-notifications.md) per ulteriori informazioni dettagliate sulle azioni personalizzate.
+Oltre alle azioni personalizzate, l'estensione per contenuto notifiche può rispondere a anche le azioni predefinite seguenti:
 
-Oltre alle azioni personalizzate, l'estensione di contenuto di notifica può rispondere a nonché le azioni predefinite seguenti:
+- **Azione predefinita** -si tratta di quando l'utente tocca una notifica per aprire l'app e visualizzare i dettagli di notifica specifica.
+- **Elimina azione** -questa azione viene inviata all'app quando l'utente chiude una notifica specifica.
 
-- **Azione predefinita** -si tratta di quando l'utente digita una notifica per aprire l'app e visualizzare i dettagli della notifica specificato.
-- **Elimina azione** -questa azione viene inviata all'app quando l'utente chiude una notifica specificata.
+Estensioni contenuto notifica hanno anche la possibilità di aggiornare l'interfaccia utente quando l'utente richiama una delle azioni personalizzate, ad esempio che mostra una data come accettato quando l'utente tocca il **Accept** pulsante di azione personalizzata. Inoltre, le estensioni del contenuto di notifica può indicare al sistema di ritardo di licenziamento dell'interfaccia utente di notifica in modo che l'utente può visualizzare l'effetto del loro azione prima che la notifica viene chiuso.
 
-Le estensioni di contenuto di notifica anche avere la possibilità di aggiornare l'interfaccia utente quando l'utente richiama una delle azioni personalizzate, ad esempio che illustra una data come accettato quando l'utente tocca il **Accept** pulsante di azione personalizzata. Inoltre, le estensioni del contenuto di notifica può indicare al sistema di ritardare il licenziamento dell'interfaccia utente di notifica in modo che l'utente può visualizzare l'effetto della loro azione prima che la notifica viene chiuso.
-
-Questa operazione viene eseguita mediante l'implementazione di una versione di secondo il `DidReceiveNotification` metodo che include un gestore di completamento. Ad esempio:
+Questa operazione viene eseguita mediante l'implementazione di una seconda versione del `DidReceiveNotification` metodo che include un gestore di completamento. Ad esempio:
 
 ```csharp
 using System;
@@ -529,16 +527,16 @@ namespace myApp {
 }
 ```
 
-Aggiungendo il `Server.PostEventResponse` gestore per il `DidReceiveNotification` metodo di estensione di contenuto notifica, l'estensione *deve* gestire tutte le azioni personalizzate. L'estensione può inoltre inviare le azioni personalizzate per l'applicazione contenitore modificando il `UNNotificationContentExtensionResponseOption`. Ad esempio:
+Aggiungendo il `Server.PostEventResponse` gestore per il `DidReceiveNotification` metodo per l'estensione per contenuto notifiche, l'estensione *deve* gestire tutte le azioni personalizzate. L'estensione può anche inoltrare le azioni personalizzate con l'app contenitore modificando il `UNNotificationContentExtensionResponseOption`. Ad esempio:
 
 ```csharp
 // Close Notification
 completionHandler (UNNotificationContentExtensionResponseOption.DismissAndForwardAction);
 ```
 
-### <a name="working-with-the-text-input-action-in-custom-ui"></a>Utilizzo con l'azione di Input di testo personalizzato dell'interfaccia utente
+### <a name="working-with-the-text-input-action-in-custom-ui"></a>Utilizzo con l'azione di input di testo nell'interfaccia utente personalizzata
 
-A seconda della progettazione dell'app e la notifica, potrebbe essere volte in cui l'utente deve immettere il testo nella notifica (ad esempio per rispondere a un messaggio). Un'estensione di contenuto di notifica ha accesso all'azione di input di testo incorporato proprio come una notifica standard.
+A seconda della progettazione dell'app e la notifica, talvolta potrebbe essere che richiedono all'utente di immettere testo nella notifica (ad esempio per rispondere a un messaggio). Un'estensione per contenuto notifiche ha accesso all'operazione di input di testo integrato proprio come una notifica standard.
 
 Ad esempio:
 
@@ -679,7 +677,7 @@ namespace MonkeyChatNotifyExtension
 }
 ```
 
-Questo codice crea una nuova azione di input di testo e lo aggiunge alla categoria dell'estensione (nel `MakeExtensionCategory`) metodo. Nel `DidReceive` override del metodo gestisce l'immissione di testo con il codice seguente:
+Questo codice crea una nuova azione di input di testo e lo aggiunge alla categoria dell'estensione (nelle `MakeExtensionCategory`) (metodo). Nel `DidReceive` override del metodo che gestisce l'utente di immettere testo con il codice seguente:
 
 ```csharp
 // Is text input?
@@ -692,7 +690,7 @@ if (response is UNTextInputNotificationResponse) {
 }
 ```
 
-Se il progetto richiede per l'aggiunta di pulsanti personalizzati al campo di Input di testo, aggiungere il codice seguente per includerli:
+Se la progettazione chiama per l'aggiunta di pulsanti personalizzati per il campo di Input di testo, aggiungere il codice seguente per includerli:
 
 ```csharp
 // Allow to take input
@@ -707,7 +705,7 @@ public override UIView InputAccessoryView {
 }
 ```
 
-Quando l'azione di commento viene attivato dall'utente, è necessario attivare sia il controller di visualizzazione e il campo di input di testo personalizzato:
+Quando l'azione di commento viene attivato dall'utente, sia il controller di visualizzazione e il campo di input di testo personalizzato devono essere attivati:
 
 ```csharp
 // Update UI when the user interacts with the
@@ -728,16 +726,13 @@ Server.PostEventResponse += (response) {
 };
 ```
 
-<a name="Summary" />
-
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo è stato applicato un aspetto avanzato in usando il nuovo framework di notifica all'utente in un'app xamarin. IOS. Che trattato Media per aggiungere allegati locali e remoti notifica ed coperto utilizzando l'interfaccia utente nuova notifica utente di creare interfacce utente personalizzate di notifica.
-
+Questo articolo è stato applicato uno sguardo avanzato di uso del nuovo framework di notifica all'utente in un'app xamarin. IOS. Che trattato gli allegati multimediali in locali e remoti notifica l'aggiunta ed coperto utilizzando la nuova interfaccia utente notifica utente per creare le interfacce utente personalizzate di notifica.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempi di iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
-- [Riferimento di Framework UserNotifications](https://developer.apple.com/reference/usernotifications)
+- [Riferimento a Framework di UserNotifications](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
-- [Guida per programmatori notifica locali e remoti](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html)
+- [Guida alla programmazione di notifiche locali e remoti](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html)

@@ -1,39 +1,39 @@
 ---
-title: Procedura dettagliata - percorso di sfondo in xamarin. IOS
-description: Questo documento fornisce una procedura dettagliata di come usare le informazioni sul percorso in un'applicazione di xamarin. IOS backgrounded. Viene descritto il programma di installazione necessario, interfaccia utente e gli Stati dell'applicazione.
+title: Procedura dettagliata - il percorso in Background in xamarin. IOS
+description: Questo documento fornisce una procedura dettagliata di come usare le informazioni sul percorso in un'applicazione xamarin. IOS backgrounded. Descrive il programma di installazione necessario, interfaccia utente e gli Stati dell'applicazione.
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: aef39ef435bbbad6f643b2376832d8f8132d6a4c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 0d6dac02ac82b74c9b0e33f5fff0b82223df1f47
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784094"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108678"
 ---
-# <a name="walkthrough---background-location-in-xamarinios"></a>Procedura dettagliata - percorso di sfondo in xamarin. IOS
+# <a name="walkthrough---background-location-in-xamarinios"></a>Procedura dettagliata - il percorso in Background in xamarin. IOS
 
-In questo esempio verrà per compilare iOS dell'applicazione di percorso che stampa informazioni il percorso corrente: latitudine, longitudine e altri parametri alla schermata. Questa applicazione verrà illustrato come eseguire correttamente gli aggiornamenti di percorso, mentre l'applicazione è attivo o Backgrounded.
+In questo esempio si intende compilare iOS dell'applicazione di percorso che visualizza informazioni sul nostro percorso corrente: latitudine, longitudine e altri parametri sullo schermo. Questa applicazione verrà illustrato come eseguire correttamente gli aggiornamenti di percorso mentre l'applicazione è attivo o Backgrounded.
 
-Questa procedura dettagliata vengono illustrate alcune chiave backgrounding concetti, tra cui registrazione di un'app come un'applicazione in background necessarie, la sospensione di aggiornamenti dell'interfaccia utente quando l'app è backgrounded e l'utilizzo con il `WillEnterBackground` e `WillEnterForeground` `AppDelegate` metodi .
+Questa procedura dettagliata illustra i principali funzionalità di elaborazione in background in concetti, tra cui la registrazione di un'app come un'applicazione in background necessari, la sospensione degli aggiornamenti dell'interfaccia utente quando l'app è supportata da un background e l'utilizzo con il `WillEnterBackground` e `WillEnterForeground` `AppDelegate` metodi .
 
-## <a name="application-set-up"></a>Configurazione di applicazione
+## <a name="application-set-up"></a>Applicazione configurata
 
 
-1. Innanzitutto, creare un nuovo **iOS > App > singola applicazione di visualizzazione (c#)**. Chiamarlo _percorso_ e assicurarsi che siano stati selezionati sia iPad e iPhone.
+1. In primo luogo, creare una nuova **iOS > App > Single View Application (C#)**. Chiamarla _posizione_ e assicurarsi che siano stati selezionati sia iPad e iPhone.
 
-1. Un'applicazione di percorso qualificato come un'applicazione in background necessarie in iOS. Registrare l'applicazione come applicazione percorso modificando il **Info. plist** file per il progetto.
+1. Un'applicazione di posizione corrente, un'applicazione in background necessarie in iOS. Registrare l'applicazione come applicazione percorso modificando la **Info. plist** file per il progetto.
 
-    In Esplora soluzioni, fare doppio clic su di **Info. plist** file per aprirlo e scorrere fino alla fine dell'elenco. Inserire un segno di spunta da entrambi i **abilitare la modalità di Background** e **percorso aggiornamenti** caselle di controllo.
+    In Esplora soluzioni fare doppio clic sui **Info. plist** file per aprirlo e scorrere fino alla fine dell'elenco. Inserire un segno di spunta da entrambe le **abilitare la modalità di Background** e il **aggiornamenti della posizione** caselle di controllo.
 
     In Visual Studio per Mac, avrà un aspetto simile al seguente:
 
-    [![](location-walkthrough-images/image7.png "Inserire un segno di spunta sia la modalità di Background attiva e le caselle di controllo degli aggiornamenti di percorso")](location-walkthrough-images/image7.png#lightbox)
+    [![](location-walkthrough-images/image7.png "Inserire un segno di spunta per la modalità di Background abilitare sia le caselle di controllo di aggiornamenti della posizione")](location-walkthrough-images/image7.png#lightbox)
 
-    In Visual Studio, **Info. plist** deve essere aggiornato manualmente aggiungendo la seguente coppia chiave/valore:
+    In Visual Studio **Info. plist** deve essere aggiornato manualmente aggiungendo la coppia chiave/valore seguente:
 
     ```xml
     <key>UIBackgroundModes</key>
@@ -42,9 +42,9 @@ Questa procedura dettagliata vengono illustrate alcune chiave backgrounding conc
     </array>
     ```
 
-1. Ora che l'applicazione è registrata, è possibile ottenere i dati sulla località dal dispositivo. In iOS, il `CLLocationManager` classe viene utilizzata per accedere alle informazioni di percorso e può generare eventi che forniscono gli aggiornamenti di percorso.
+1. Ora che l'applicazione è registrata, è possibile ottenere dati sulla località dal dispositivo. In iOS, il `CLLocationManager` classe viene utilizzata per accedere alle informazioni sulla posizione e può generare eventi che forniscono aggiornamenti della posizione.
 
-1. Nel codice, creare una nuova classe denominata `LocationManager` che fornisce un'unica posizione per diverse schermate e codice per sottoscrivere gli aggiornamenti di percorso. Nel `LocationManager` di classi, creare un'istanza della classe di `CLLocationManager` chiamato `LocMgr`:
+1. Nel codice, creare una nuova classe denominata `LocationManager` che fornisce un'unica posizione per varie schermate e codice per sottoscrivere aggiornamenti della posizione. Nel `LocationManager` classe, creare un'istanza della classe la `CLLocationManager` chiamato `LocMgr`:
 
     ```csharp
     public class LocationManager
@@ -72,21 +72,21 @@ Questa procedura dettagliata vengono illustrate alcune chiave backgrounding conc
     }
     ```
 
-    Il codice precedente imposta il numero di proprietà e le autorizzazioni nel [CLLocationManager](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/) classe:
+    Il codice precedente imposta un numero di proprietà e le autorizzazioni nel [CLLocationManager](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/) classe:
 
-    - `PausesLocationUpdatesAutomatically` – Questo è un valore booleano che può essere impostato a seconda se il sistema è possibile sospendere gli aggiornamenti di percorso. Su alcuni dispositivi per impostazione predefinita `true`, che può causare problemi di recupero in background gli aggiornamenti di percorso dopo circa 15 minuti.
-    - `RequestAlwaysAuthorization` -È necessario passare questo metodo per consentire all'utente di app per consentire il percorso a cui accedere in background. `RequestWhenInUseAuthorization` può essere passato anche se si desidera assegnare all'utente la possibilità di consentire il percorso a cui accedere solo quando l'applicazione è in primo piano.
-    - `AllowsBackgroundLocationUpdates` – Questo è una proprietà booleana, introdotta in iOS 9 che possono essere impostati per consentire un'app di ricevere aggiornamenti di percorso quando è sospeso.
+    - `PausesLocationUpdatesAutomatically` – Questo è un valore booleano che può essere impostato a seconda del fatto che il sistema è consentito sospendere gli aggiornamenti di percorso. In alcuni dispositivi viene impostata automaticamente su `true`, che può causare il dispositivo interrompere la ricezione di aggiornamenti della posizione dopo circa 15 minuti in background.
+    - `RequestAlwaysAuthorization` -È necessario passare questo metodo per offrire la possibilità di consentire la posizione per accedervi in background l'utente dell'app. `RequestWhenInUseAuthorization` può essere passato anche se si vuole concedere all'utente la possibilità di consentire la posizione per accedervi solo quando l'app è in primo piano.
+    - `AllowsBackgroundLocationUpdates` – Questo è una proprietà booleana, introdotta in iOS 9 che può essere impostata su Consenti un'app di ricevere aggiornamenti della posizione quando sospesa.
 
     > [!IMPORTANT]
-    > iOS 8 (e versione successiva) richiede inoltre una voce nella **Info. plist** file per indicare all'utente come parte della richiesta di autorizzazione.
+    > iOS 8 (e versioni successive) richiede inoltre una voce nella **Info. plist** file da visualizzare all'utente come parte della richiesta di autorizzazione.
 
 1. Aggiungere una chiave `NSLocationAlwaysUsageDescription` o `NSLocationWhenInUseUsageDescription` con una stringa che verrà visualizzata all'utente nell'avviso che richiede l'accesso ai dati di posizione.
 
-1. iOS 9 richiede che, quando si utilizza `AllowsBackgroundLocationUpdates` il **Info. plist** include la chiave `UIBackgroundModes` con il valore `location`. Se è stata completata, passaggio 2 di questa procedura dettagliata, questo deve già essere stati nel file Info. plist.
+1. richiede iOS 9 che quando si usa `AllowsBackgroundLocationUpdates` il **Info. plist** include la chiave `UIBackgroundModes` con il valore `location`. Se sono state completate, passaggio 2 di questa procedura dettagliata, deve essere già stato nel file Info. plist.
 
 
-1. All'interno di `LocationManager` di classi, creare un metodo denominato `StartLocationUpdates` con il codice seguente. Questo codice viene illustrato il modo per iniziare a ricevere gli aggiornamenti di percorso dal `CLLocationManager`:
+1. All'interno di `LocationManager` classe, creare un metodo chiamato `StartLocationUpdates` con il codice seguente. Questo codice viene illustrato il modo per iniziare a ricevere aggiornamenti della posizione dal `CLLocationManager`:
 
     ```csharp
     if (CLLocationManager.LocationServicesEnabled) {
@@ -101,20 +101,20 @@ Questa procedura dettagliata vengono illustrate alcune chiave backgrounding conc
     }
     ```
 
-    Esistono diversi aspetti importanti in questo metodo in corso. In primo luogo, si esegue un controllo per verificare se l'applicazione ha accesso ai dati di posizione del dispositivo. Si verifica, chiamare `LocationServicesEnabled` sul `CLLocationManager`. Questo metodo restituirà **false** se l'utente ha negato l'accesso all'applicazione per informazioni sul percorso.
+    Esistono diversi aspetti importanti che accade in questo metodo. Prima di tutto, eseguiamo un controllo per verificare se l'applicazione ha accesso ai dati del percorso nel dispositivo. Si verifica, chiamare `LocationServicesEnabled` nella `CLLocationManager`. Questo metodo restituirà **false** se l'utente ha negato l'accesso all'applicazione per informazioni sulla posizione.
 
-1. Successivamente, indicano la frequenza con la gestione del percorso per l'aggiornamento. `CLLocationManager` fornisce numerose opzioni per il filtraggio e la configurazione dei dati di posizione, tra cui la frequenza degli aggiornamenti. In questo esempio, impostare il `DesiredAccuracy` per aggiornare ogni volta che cambia il percorso da un misuratore. Per ulteriori informazioni sulla configurazione di frequenza di aggiornamento di posizione e le altre preferenze, consultare il [riferimento alla classe CLLocationManager](http://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) nella documentazione di Apple.
+1. Successivamente, indicare quanto spesso la gestione di posizione per l'aggiornamento. `CLLocationManager` offre molte opzioni per il filtraggio e la configurazione di dati sulla località, tra cui la frequenza degli aggiornamenti. In questo esempio, impostare il `DesiredAccuracy` aggiornare ogni volta che viene modificato il percorso da un misuratore. Per altre informazioni su come configurare la frequenza di aggiornamento di località e altre preferenze, vedere la [riferimento alla classe CLLocationManager](http://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) nella documentazione di Apple.
 
-1. Infine, chiamare `StartUpdatingLocation` sul `CLLocationManager` istanza. In questo modo la gestione di percorsi per ottenere una correzione iniziale alla posizione corrente e avviare l'invio degli aggiornamenti
+1. Infine, chiamare `StartUpdatingLocation` nella `CLLocationManager` istanza. Ciò indica al gestore di percorso per ottenere una correzione rapida iniziale sulla posizione corrente e per iniziare a inviare gli aggiornamenti
 
-Fino a questo punto, il percorso manager è stato creato, configurato con i tipi di dati che si desidera ricevere, e ha determinato il percorso iniziale. Ora il codice deve eseguire il rendering di dati del percorso per l'interfaccia utente. È possibile farlo con un evento personalizzato che accetta un `CLLocation` come argomento:
+Finora, il percorso gestore è stato creato, configurato con i tipi di dati si desidera ricevere, e ha determinato la posizione iniziale. A questo punto il codice deve eseguire il rendering di dati sulla località per l'interfaccia utente. È possibile farlo con un evento personalizzato che accetta un `CLLocation` come argomento:
 
 ```csharp
 // event for the location changing
 public event EventHandler<LocationUpdatedEventArgs>LocationUpdated = delegate { };
 ```
 
-Il passaggio successivo consiste nel sottoscrivere gli aggiornamenti di percorso dal `CLLocationManager`e generare personalizzata `LocationUpdated` evento quando nuovi dati di posizione diventano disponibili, passando il percorso come argomento. A tale scopo, creare una nuova classe **LocationUpdateEventArgs.cs**. Questo codice è accessibile all'interno dell'applicazione principale e restituisce il percorso del dispositivo quando viene generato l'evento:
+Il passaggio successivo consiste nel sottoscrivere aggiornamenti della posizione dal `CLLocationManager`e generare l'oggetto personalizzato `LocationUpdated` evento quando nuovi dati di posizione diventano disponibili, passando il percorso come argomento. A tale scopo, creare una nuova classe **LocationUpdateEventArgs.cs**. Questo codice è accessibile all'interno dell'applicazione principale e restituisce la posizione del dispositivo quando viene generato l'evento:
 
 ```csharp
 public class LocationUpdatedEventArgs : EventArgs
@@ -135,16 +135,16 @@ public class LocationUpdatedEventArgs : EventArgs
 
 ## <a name="user-interface"></a>Interfaccia utente
 
-1. Utilizzare la finestra di progettazione iOS per la schermata che consente di visualizzare le informazioni sul percorso di compilazione. Fare doppio clic su di **Main** file da cui iniziare.
+1. Utilizzare la finestra di progettazione di iOS per creare la schermata che visualizzerà le informazioni sulla posizione. Fare doppio clic sulla **Main. Storyboard** file da cui iniziare.
 
-    Nello storyboard, trascinare più etichette nella schermata di agire come segnaposto per le informazioni sul percorso. In questo esempio sono presenti etichette per latitudine, longitudine, altitudine, corsi e velocità.
+    Sullo storyboard, trascinare più etichette nella schermata per fungere da segnaposto per le informazioni sul percorso. In questo esempio sono presenti etichette per la latitudine, longitudine, altitudine, corsi e velocità.
 
     Il layout sarà simile al seguente:
 
-    ![](location-walkthrough-images/image8.png "Un esempio di layout dell'interfaccia utente nella finestra di progettazione iOS")
+    ![](location-walkthrough-images/image8.png "Un layout di interfaccia utente di esempio in iOS Designer")
 
-1. Nel riquadro di soluzioni, fare doppio clic su di `ViewController.cs` file e modificarlo per creare una nuova istanza della LocationManager e chiamare metodo `StartLocationUpdates`su di esso.
-  Modificare il codice simile al seguente:
+1. Nel riquadro della soluzione, fare doppio clic il `ViewController.cs` file e modificarlo per creare una nuova istanza della LocationManager e chiamare metodo `StartLocationUpdates`su di esso.
+  Modificare il codice come illustrato di seguito:
 
     ```csharp
     #region Computed Properties
@@ -168,7 +168,7 @@ public class LocationUpdatedEventArgs : EventArgs
 
     Gli aggiornamenti di percorso verrà avviato all'avvio dell'applicazione, anche se non verrà visualizzato alcun dato.
 
-1. Ora che vengono ricevuti gli aggiornamenti di percorso, è possibile aggiornare la schermata con le informazioni sul percorso. Il metodo seguente ottiene il percorso dal nostro `LocationUpdated` evento e la visualizza nell'interfaccia utente:
+1. Ora che vengono ricevuti gli aggiornamenti di percorso, aggiornare la schermata con le informazioni sul percorso. Il metodo seguente ottiene il percorso dal nostro `LocationUpdated` evento e la visualizza nell'interfaccia utente:
 
     ```csharp
     #region Public Methods
@@ -188,7 +188,7 @@ public class LocationUpdatedEventArgs : EventArgs
     #endregion
     ```
 
-È necessario sottoscrivere il `LocationUpdated` evento AppDelegate, e chiamare il metodo nuovo per aggiornare l'interfaccia utente. Aggiungere il codice seguente in `ViewDidLoad,` subito dopo il `StartLocationUpdates` chiamare:
+Tuttavia è necessario sottoscrivere il `LocationUpdated` evento nel nostro AppDelegate e chiamare il nuovo metodo per aggiornare l'interfaccia utente. Aggiungere il codice seguente nel `ViewDidLoad,` subito dopo il `StartLocationUpdates` chiamare:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -209,7 +209,7 @@ A questo punto, quando viene eseguita l'applicazione, dovrebbe essere simile al 
 
 ## <a name="handling-active-and-background-states"></a>Gestione degli stati attivo e in Background
 
-1. L'applicazione è l'output aggiornamenti di posizione, mentre è in primo piano e attiva. Per illustrare cosa accade quando l'app passa lo sfondo, eseguire l'override di `AppDelegate` modifiche dello stato di metodi che tengono traccia dell'applicazione in modo che l'applicazione viene scritto nella console quando esegue la transizione tra il primo piano e sfondo:
+1. L'applicazione è l'output aggiornamenti della posizione, mentre è in primo piano e attiva. Per illustrare cosa accade quando l'app passa lo sfondo, eseguire l'override di `AppDelegate` modifiche dello stato di metodi che tengono traccia dell'applicazione in modo che l'applicazione scrive nella console quando esegue la transizione tra il primo piano e sfondo:
 
     ```csharp
     public override void DidEnterBackground (UIApplication application)
@@ -223,7 +223,7 @@ A questo punto, quando viene eseguita l'applicazione, dovrebbe essere simile al 
     }
     ```
 
-    Aggiungere il codice seguente nel `LocationManager` continuamente stampare posizione aggiornata sono ancora disponibili in background i dati dell'output dell'applicazione, per verificare le informazioni sul percorso:
+    Aggiungere il codice seguente nel `LocationManager` continuamente stampare posizione aggiornata sono ancora disponibili in background i dati per l'output dell'applicazione, per verificare le informazioni sul percorso:
 
     ```csharp
     public class LocationManager
@@ -247,11 +247,11 @@ A questo punto, quando viene eseguita l'applicazione, dovrebbe essere simile al 
     }
     ```
 
-1. Si verifica un problema rimanente con il codice: il tentativo di aggiornare l'interfaccia utente quando l'app è backgrounded causa iOS verrà terminerà il. Quando l'app passa in background, il codice necessario annullare la sottoscrizione da aggiornamenti di posizione e arrestare l'aggiornamento dell'interfaccia utente.
+1. Si verifica un problema rimanente con il codice: tentativo di aggiornare l'interfaccia utente quando l'app è supportata da un background verrà causa iOS verrà terminarlo. Quando l'app passa in background, il codice deve annullare la sottoscrizione agli aggiornamenti della posizione e interrompere l'aggiornamento dell'interfaccia utente.
 
-    iOS fornisce notifiche quando l'app sta per eseguire la transizione a un'altra applicazione stati. In questo caso, è possibile sottoscrivere il `ObserveDidEnterBackground` notifica.
+    iOS ci fornisce notifiche quando l'app si trova sulla transizione a un'altra applicazione stati. In questo caso, è possibile sottoscrivere il `ObserveDidEnterBackground` notifica.
 
-    Frammento di codice seguente viene illustrato come utilizzare una notifica per consentire la visualizzazione di sapere quando interrompere gli aggiornamenti dell'interfaccia utente. Questo entra `ViewDidLoad`:
+    Il frammento di codice seguente viene illustrato come usare una notifica per informare la visualizzazione quando si arresta gli aggiornamenti dell'interfaccia utente. Dovrà essere inserito `ViewDidLoad`:
 
     ```csharp
     UIApplication.Notifications.ObserveDidEnterBackground ((sender, args) => {
@@ -263,11 +263,11 @@ A questo punto, quando viene eseguita l'applicazione, dovrebbe essere simile al 
 
     ![](location-walkthrough-images/image6.png "Esempio di percorso output nella console di")
 
-1. L'applicazione visualizza gli aggiornamenti di posizione sullo schermo quando si opera in primo piano e continua a stampare dati alla finestra di output dell'applicazione durante il funzionamento in background.
+1. L'applicazione stampa aggiornamenti della posizione sullo schermo quando si opera in primo piano e continua a stampare i dati alla finestra di output dell'applicazione durante il funzionamento in background.
 
-Rimane solo uno dei problemi in sospeso: la schermata avvio aggiornamenti dell'interfaccia utente quando viene caricata l'app, ma non ha modo di sapere quando l'app nuovamente entrato in primo piano. Se l'applicazione backgrounded viene ripristinata in primo piano, non verranno effettuati aggiornamenti dell'interfaccia utente.
+Rimane solo uno dei problemi in sospeso: la schermata di avvio aggiornamenti dell'interfaccia utente quando l'app viene caricata, ma non ha alcun modo di sapere quando l'app è rientrato in primo piano. Se l'applicazione backgrounded viene portata nuovamente in primo piano, non verranno effettuati aggiornamenti dell'interfaccia utente.
 
-Per risolvere questo problema, nidificare una chiamata per avviare gli aggiornamenti dell'interfaccia utente all'interno di un'altra notifica, che verrà generato quando l'applicazione passa allo stato attivo:
+Per risolvere questo problema, annidare una chiamata per avviare gli aggiornamenti dell'interfaccia utente all'interno di un'altra notifica, che verrà generato quando l'applicazione passa allo stato attivo:
 
 ```csharp
 UIApplication.Notifications.ObserveDidBecomeActive ((sender, args) => {
@@ -275,12 +275,12 @@ UIApplication.Notifications.ObserveDidBecomeActive ((sender, args) => {
 });
 ```
 
-L'interfaccia utente verrà iniziare l'aggiornamento quando prima dell'avvio dell'applicazione e riprendere l'aggiornamento ogni volta che l'applicazione torna in primo piano.
+Ora l'interfaccia utente inizierà l'aggiornamento quando l'applicazione prima di tutto viene avviata e riprendere l'aggiornamento ogni volta che l'app torna in primo piano.
 
-In questa procedura dettagliata, è creata un'applicazione iOS ben progettate, in grado di riconoscere sfondo che visualizza i dati sulla località per la schermata sia nella finestra di output dell'applicazione.
+In questa procedura dettagliata, abbiamo creato un'applicazione iOS ben progettate, in grado di riconoscere in background che consente di stampare dati sulla località per la schermata sia la finestra di output dell'applicazione.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Posizione (parte 4) (esempio)](https://developer.xamarin.com/samples/monotouch/Location/)
-- [Riferimento al Framework di percorso di base](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/_index.html)
+- [Riferimento al Framework di percorso core](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/_index.html)

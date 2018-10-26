@@ -6,13 +6,13 @@ ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: 47cd79611cfeaf48c0422772d8f3e75eb57ba771
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/04/2018
+ms.openlocfilehash: b8e851e735fa39d015e22ce511c39ad825bc97c9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996053"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119994"
 ---
 # <a name="xamarinforms-tableview"></a>Xamarin. Forms TableView
 
@@ -216,7 +216,67 @@ Il codice c# sopra esegue molto. È consigliabile analizzarne ogni:
 
 Si noti che non viene definita una classe per la cella personalizzata. Al contrario, il `ViewCell`della visualizzazione viene impostata per una particolare istanza di `ViewCell`.
 
+## <a name="row-height"></a>Altezza di riga
 
+Il [ `TableView` ](xref:Xamarin.Forms.TableView) classe ha due proprietà che possono essere utilizzate per modificare l'altezza della riga di celle:
+
+- [`RowHeight`](xref:Xamarin.Forms.TableView.RowHeight) : imposta l'altezza di ogni riga a un `int`.
+- [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) -righe hanno altezza diversa se impostato su `true`. Si noti che quando si imposta questa proprietà su `true`, altezze delle righe verrà automaticamente calcolati e applicate da xamarin. Forms.
+
+Quando l'altezza del contenuto in una cella in una [ `TableView` ](xref:Xamarin.Forms.TableView) viene modificata, la riga in modo implicito l'altezza viene aggiornata in Android e Universal Windows Platform (UWP). Tuttavia, in iOS che deve essere costretto ad aggiornare impostando il [ `HasUnevenRows` ](xref:Xamarin.Forms.TableView.HasUnevenRows) proprietà `true` e chiamando i [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) (metodo).
+
+L'esempio XAML seguente viene illustrato un [ `TableView` ](xref:Xamarin.Forms.TableView) contenente una [ `ViewCell` ](xref:Xamarin.Forms.ViewCell):
+
+```xaml
+<ContentPage ...>
+    <TableView ...
+               HasUnevenRows="true">
+        <TableRoot>
+            ...
+            <TableSection ...>
+                ...
+                <ViewCell x:Name="_viewCell"
+                          Tapped="OnViewCellTapped">
+                    <Grid Margin="15,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Text="Tap this cell." />
+                        <Label x:Name="_target"
+                               Grid.Row="1"
+                               Text="The cell has changed size."
+                               IsVisible="false" />
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
+```
+
+Quando la [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) toccando, il `OnViewCellTapped` viene eseguito il gestore eventi:
+
+```csharp
+void OnViewCellTapped(object sender, EventArgs e)
+{
+    _target.IsVisible = !_target.IsVisible;
+    _viewCell.ForceUpdateSize();
+}
+```
+
+Il `OnViewCellTapped` gestore dell'evento Mostra o nasconde il secondo [ `Label` ](xref:Xamarin.Forms.Label) nel [ `ViewCell` ](xref:Xamarin.Forms.ViewCell)e aggiorna le dimensioni della cella in modo esplicito chiamando la [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) (metodo).
+
+Le schermate seguenti illustrano la cella prima vengano utilizzate al momento:
+
+![](tableview-images/cell-beforeresize.png "Elemento ViewCell prima che venga ridimensionata")
+
+Le schermate seguenti illustrano la cella dopo vengano utilizzate al momento:
+
+![](tableview-images/cell-afterresize.png "Elemento ViewCell dopo il ridimensionamento")
+
+> [!IMPORTANT]
+> È possibile sicuro di riduzione delle prestazioni se questa funzionalità è eccessivo.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

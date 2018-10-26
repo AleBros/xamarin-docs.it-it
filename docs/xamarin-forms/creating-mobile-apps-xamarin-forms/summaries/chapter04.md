@@ -7,12 +7,12 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 07/19/2018
-ms.openlocfilehash: 49f2d96fb7f95ab880d5cfafa420afbbe933c1ad
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 17e62d68f8ad2c7deff500216c0bb095ca8f4275
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156717"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117447"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Riepilogo del capitolo 4. Scorrimento dello stack
 
@@ -95,7 +95,7 @@ Il [ `BoxView` ](xref:Xamarin.Forms.BoxView) verrà visualizzata un'area rettang
 
 Se il `BoxView` è limitato (relativo `HorizontalOptions` e `VerticalOptions` proprietà hanno valori predefiniti dei `LayoutOptions.Fill`), il `BoxView` riempie lo spazio disponibile per tale. Se il `BoxView` non è vincolata (con `HorizontalOptions` e `LayoutOptions` le impostazioni del `Start`, `Center`, o `End`), ha una dimensione predefinita del quadrato 40 unità. Oggetto `BoxView` può essere vincolato in una dimensione e non vincolato in altro.
 
-Spesso, si imposterà il il [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) le proprietà di `BoxView` per assegnargli una dimensione specifica. Questo comportamento è illustrato il [ **SizedBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) esempio.
+Spesso, si imposterà il [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) le proprietà di `BoxView` per assegnargli una dimensione specifica. Questo comportamento è illustrato il [ **SizedBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) esempio.
 
 È possibile usare più istanze di `StackLayout` per combinare un `BoxView` e diverse `Label` istanze in un `Frame` per visualizzare un determinato colore e quindi inserire ognuna di queste visualizzazioni in un `StackLayout` in un `ScrollView` per creare le interessanti elenco di colori nella [ **ColorBlocks** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) esempio:
 

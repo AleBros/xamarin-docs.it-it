@@ -1,25 +1,25 @@
 ---
-title: Supporto UrhoSharp Mac
-description: Questo documento viene descritto il supporto di macOS per UrhoSharp. Viene descritto come creare un progetto e viene fornito un collegamento a un codice di esempio.
+title: Supporto di UrhoSharp Mac
+description: Questo documento viene descritto il supporto di macOS di UrhoSharp. Descrive come creare un progetto e viene fornito un collegamento al codice di esempio.
 ms.prod: xamarin
 ms.assetid: 95FFBD36-14E9-4C17-B1E8-9A04E81E824D
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: aae7b09231ae0e8f88bb9435f50fadd2ff822c1a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 6d0a048020284319682c1bee0f9a1d7f9af00977
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783343"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113872"
 ---
-# <a name="urhosharp-mac-support"></a>Supporto UrhoSharp Mac
+# <a name="urhosharp-mac-support"></a>Supporto di UrhoSharp Mac
 
-_Funzionalità e installazione di Mac specifico_
+_Funzionalità e il programma di installazione specifiche di Mac_
 
-Mentre Urho è una libreria di classi portabile e consente la stessa API da utilizzare nella piattaforma diversi per la logica di gioco, è comunque necessario inizializzare Urho nel driver specifico della piattaforma in alcuni casi, è possibile sfruttare le funzionalità specifiche della piattaforma .
+Sebbene Urho è una libreria di classi portabile e consente la stessa API da usare nell'intera piattaforma diverse per la logica del gioco, devi comunque inizializzare Urho nel driver specifici della piattaforma e in alcuni casi, è possibile sfruttare le funzionalità specifiche della piattaforma .
 
-Nelle pagine, si supponga che `MyGame` è una sottoclasse di `Application` classe.
+Nelle pagine seguenti, si supponga che `MyGame` è una sottoclasse del `Application` classe.
 
 ## <a name="macos"></a>macOS
 
@@ -27,7 +27,7 @@ Nelle pagine, si supponga che `MyGame` è una sottoclasse di `Application` class
 
 ## <a name="creating-a-project"></a>Creazione di un progetto
 
-Creare un progetto console, fare riferimento a Urho NuGet e quindi assicurarsi che sia possibile individuare le risorse (la directory contenente la directory dei dati).
+Creare un progetto console, fare riferimento a Urho NuGet e quindi assicurarsi che sia possibile individuare gli asset (la directory che contiene la directory dati).
 
 ```csharp
 DesktopUrhoInitializer.AssetsDirectory = "../Assets";

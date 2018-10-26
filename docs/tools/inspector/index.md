@@ -1,32 +1,32 @@
 ---
 title: Xamarin Inspector
-description: Questo documento include collegamenti ad guide che descrivono come installare e usare il controllo di Xamarin per esplorare ed eseguire il debug di applicazioni.
+description: Questo documento include collegamenti alle guide che descrivono come installare e usare Xamarin Inspector per esplorare ed eseguire il debug delle applicazioni.
 ms.prod: xamarin
 ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 823905c425b74659bbc0733ebb1f86eb1ce5fa11
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: 41111a0ae87b2b1c4a7b1c77bfeeeb3c9e5fa000
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36268791"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119410"
 ---
 # <a name="xamarin-inspector"></a>Xamarin Inspector
 
-Il controllo Xamarin si integra con l'app debug del flusso di lavoro dell'IDE, consentendo di eseguire il codice c# o controllare le proprietà dell'interfaccia utente, che funge da un supporto per il debug o di diagnostica durante il controllo dell'app in esecuzione in modo interattivo.
+Xamarin Inspector si integra con l'app di debug del flusso di lavoro dell'IDE dell'utente, consentendo di eseguire in modo interattivo C# del codice o esaminare le proprietà dell'interfaccia utente, che servono come supporto per il debug o la diagnostica durante il controllo dell'app in esecuzione.
 
-L'ispezione applicazione in tempo reale è disponibile per i clienti aziendali. Inviare suggerimenti Se si [in qualsiasi bug](~/tools/inspector/install.md#reporting-bugs). Abbiamo un [forum](https://forums.xamarin.com/categories/inspector) troppo!
+L'ispezione delle app in tempo reale è disponibile per i clienti aziendali. Facci sapere se si [riscontrano bug](~/tools/inspector/install.md#reporting-bugs). È disponibile un' [forum](https://forums.xamarin.com/categories/inspector) troppo!
 
-[![](images/interactive-1.0.0-bike-inspect-3d-small.png "L'applicazione in tempo reale ispezione è disponibile per i clienti aziendali")](images/interactive-1.0.0-bike-inspect-3d.png#lightbox)
+[![](images/interactive-1.0.0-bike-inspect-3d-small.png "Ispezione dell'app attiva è disponibile per clienti enterprise")](images/interactive-1.0.0-bike-inspect-3d.png#lightbox)
 
 ## <a name="installation-and-requirementstoolsinspectorinstallmd"></a>[Installazione e requisiti](~/tools/inspector/install.md)
 
-Informazioni su come ottenere Xamarin Inspector installati nel computer Mac o Windows.
+Informazioni su come ottenere Xamarin Inspector è installato nel computer Mac o Windows.
 
 ## <a name="inspecting-live-applicationstoolsinspectorinspectmd"></a>[Ispezione delle applicazioni in tempo reale](~/tools/inspector/inspect.md)
 
-Viene illustrato come utilizzare il controllo per connettersi a un'app, mentre è in esecuzione dall'IDE, consentendo lo stato di esplorare e modificare senza la sospensione.
+Viene illustrato come usare il controllo per connettersi a un'app, mentre è in esecuzione dall'IDE, che consente di essere esplorato e modificato senza sospendere il relativo stato.
 
 

@@ -1,39 +1,39 @@
 ---
 title: Opzioni di layout in xamarin. IOS
-description: Questo documento descrive diversi modi per disporre le interfacce utente in xamarin. IOS. Viene descritto ridimensionamento automatico e il Layout automatico.
+description: Questo documento descrive diversi modi per definire il layout interfacce utente in xamarin. IOS. Viene descritto il Layout automatico e ridimensionamento automatico.
 ms.prod: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: bad29eae308c8ca9f7228a1cbdfd69940894cf34
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: b35149028763691c17fe526673d023cc9b707c28
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790116"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116654"
 ---
 # <a name="layout-options-in-xamarinios"></a>Opzioni di layout in xamarin. IOS
 
-Sono disponibili due meccanismi diversi per controllare il layout quando una vista è stata ridimensionata o ruotata:
+Esistono due diversi meccanismi per controllare il layout quando una visualizzazione viene ridimensionata o ruotata:
 
--  **Ridimensionamento automatico** : ridimensionamento automatico del controllo nella finestra di progettazione fornisce un modo per impostare il `AutoresizingMask` proprietà. Ciò consente un controllo di essere ancorato al bordo del relativo contenitore e/o correggere le dimensioni. Ridimensionamento automatico funziona in tutte le versioni di iOS. Questo aspetto viene descritto in dettaglio più avanti
--  **Auto Layout** – una funzionalità introdotta in iOS 6 che consente un controllo accurato le relazioni dei controlli dell'interfaccia utente. Consentirà di controllo delle posizioni all'interno di elementi relazione ad altri elementi nell'area di progettazione. Questo argomento viene descritto più dettagliatamente il [Layout automatico con Xamarin iOS progettazione](~/ios/user-interface/designer/designer-auto-layout.md) Guida.
+-  **Ridimensionamento automatico** – il ridimensionamento automatico controllo nella finestra di progettazione fornisce un modo per impostare il `AutoresizingMask` proprietà. In questo modo un controllo essere agganciato ai bordi del relativo contenitore e/o eliminare le relative dimensioni. Ridimensionamento automatico funziona in tutte le versioni di iOS. Come descritto in dettaglio più avanti
+-  **Layout automatico** – una funzionalità introdotta in iOS 6 che consente un controllo con granularità fine sulle relazioni di controlli dell'interfaccia utente. Consentirne il controllo delle posizioni degli elementi relazione ad altri elementi nell'area di progettazione. In questo argomento viene descritta più dettagliatamente la [Layout automatico con Xamarin iOS Designer](~/ios/user-interface/designer/designer-auto-layout.md) Guida.
 
 ## <a name="autosizing"></a>Ridimensionamento automatico
 
-Quando un utente ridimensiona una finestra, ad esempio quando il dispositivo viene ruotato e le modifiche di orientamento, il sistema verrà ridimensionato automaticamente le visualizzazioni all'interno di tale finestra secondo le regole di ridimensionamento automatico. Queste regole possono essere impostate in c# tramite la `AutoresizingMask` proprietà del `UIView` o nel **proprietà riempimento** di iOS progettazione, come illustrato di seguito:
+Quando un utente ridimensiona una finestra, ad esempio quando il dispositivo viene ruotato e le modifiche di orientamento, il sistema viene ridimensionato automaticamente le visualizzazioni all'interno di tale finestra secondo le regole di ridimensionamento automatico. Queste regole possono essere impostate nella C# utilizzando il `AutoresizingMask` proprietà del `UIView` o nel **riquadro delle proprietà** di iOS Designer, come illustrato di seguito:
 
- [![](layout-options-images/image41.png "Visual Studio per Mac finestra di progettazione")](layout-options-images/image41.png#lightbox)
+ [![](layout-options-images/image41.png "Visual Studio per Mac Designer")](layout-options-images/image41.png#lightbox)
 
-Se un controllo è selezionato, consente di specificare manualmente il percorso e le dimensioni del controllo, nonché scegliere **ridimensionamento automatico** comportamento. Come illustrato nella schermata seguente, è possibile utilizzare il springs e un strutture nel controllo di ridimensionamento automatico per definire la relazione della vista selezionata padre:
+Quando un controllo è selezionato, in questo modo è possibile specificare manualmente il percorso e le dimensioni del controllo, oltre a scelta **ridimensionamento automatico** comportamento. Come illustrato nello screenshot seguente, è possibile usare il springs e strutture del controllo di ridimensionamento automatico per definire relazioni della vista selezionata per il relativo elemento padre:
 
- [![](layout-options-images/image42.png "Visual Studio per Mac finestra di progettazione")](layout-options-images/image42.png#lightbox)
+ [![](layout-options-images/image42.png "Visual Studio per Mac Designer")](layout-options-images/image42.png#lightbox)
 
-Modifica un *spring* causerà la visualizzazione ridimensionare in base alla larghezza o altezza della visualizzazione padre. Modifica un *strut* renderà la visualizzazione di mantenere una distanza costante tra l'elemento e della visualizzazione padre, per il bordo particolare.
+Regolazione un' *primavera* causerà la visualizzazione di ridimensionare in base alla larghezza o all'altezza della visualizzazione padre. Regolazione un' *strut* renderà la visualizzazione di mantenere una distanza costante tra se stesso e la relativa visualizzazione padre, tale bordo particolare.
 
-Queste impostazioni possono anche essere impostata nel codice:
+Queste impostazioni possono essere impostate anche nella finestra di codice:
 
 ```csharp
 textfield1.Frame = new RectangleF(15, 277, 79, 27);
@@ -41,11 +41,11 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAut
 ```
 
 
-Per verificare le impostazioni di ridimensionamento automatico, abilitare diversi **orientamenti di dispositivi supportati** nelle opzioni del progetto:
+Per verificare le impostazioni di ridimensionamento automatico, attivare diversi **orientamenti dispositivo supportati** nelle opzioni del progetto:
 
  [![](layout-options-images/image43a.png "Impostazioni di ridimensionamento automatico")](layout-options-images/image43a.png#lightbox)
 
-Nel code-behind è possibile utilizzare il codice seguente, che fa sì che i controlli di testo da ridimensionare in orizzontale:
+Code-behind è possibile usare il codice seguente, che fa sì che i controlli due text ridimensionare in senso orizzontale:
 
 ```csharp
 textview1.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
@@ -54,15 +54,15 @@ imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutor
 ```
 
 
-È inoltre possibile regolare i controlli usando la finestra di progettazione. La selezione di strutture come illustrato di seguito provocherà l'immagine di rimanere allineato a destra senza essere troncata dalla parte inferiore della visualizzazione:
+È anche possibile modificare i controlli usando la finestra di progettazione. Se si seleziona il struts come anomalo sotto provocherà l'immagine rimanere allineato a destra senza essere troncata dal margine inferiore della visualizzazione:
 
  [![](layout-options-images/autoresize.png "Rotazione automatica")](layout-options-images/autoresize.png#lightbox)
 
-Questi screenshot mostrano come i controlli ridimensionare o si riposizionano quando viene ruotata la schermata:
+Questi screenshot mostrano come i controlli ridimensionano o riposizionano stessi quando viene ruotata la schermata:
 
  [![](layout-options-images/image44a.png "Rotazione automatica")](layout-options-images/image44a.png#lightbox)
 
-Si noti che la visualizzazione di testo e il campo di testo sia adattata per mantenere lo stesso a sinistra e destra i margini, a causa di `FlexibleWidth` impostazione. L'immagine include il superiore e sinistro margine flessibile, il che significa che consente di preservare i margini inferiore e destro: mantenendo l'immagine visualizzata quando viene ruotata la schermata. Layout complessi richiedono in genere una combinazione di queste impostazioni in tutti i controlli visibili per mantenere la coerenza l'interfaccia utente e per impedire che i controlli sovrapposti quando i limiti della visualizzazione della modifica (a causa di rotazione o un altro evento ridimensionamento).
+Si noti che la visualizzazione di testo e un campo di testo sia adattata per mantenere lo stesso a sinistra e destra i margini, a causa dell'errore di `FlexibleWidth` impostazione. L'immagine include il superiore e sinistro margine flessibile, il che significa che mantiene i margini inferiore e destro – mantenendo l'immagine visualizzata quando viene ruotata la schermata. Layout complessi richiedono in genere una combinazione di queste impostazioni in tutti i controlli visibili per mantenere l'interfaccia utente coerente e per impedire la sovrapposizione quando cambiano i limiti della visualizzazione (a causa della rotazione o altri eventi di ridimensionamento) i controlli.
 
 
 

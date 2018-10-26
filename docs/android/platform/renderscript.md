@@ -4,15 +4,15 @@ description: Questa guida presenta Renderscript e spiega come usare la funzione 
 ms.prod: xamarin
 ms.assetid: 378793C7-5E3E-40E6-ABEE-BEAEF64E6A47
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 3331eb579f0aa2d7f29508773c588455c134f56a
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 5369542552a41100443c5e91ceca9e110c5c7c3c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241188"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108730"
 ---
 # <a name="an-introduction-to-renderscript"></a>Un'introduzione a Renderscript
 
@@ -48,11 +48,12 @@ Esistono tre concetti importanti per l'uso Renderscripts in un'applicazione Andr
 
 3. **Memoria allocata** &ndash; dei dati sono passati da e verso un kernel attraverso un  _[allocazione](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)_. Un kernel può avere un solo input e/o un output di allocazione.
 
-Il [Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/) dello spazio dei nomi contiene le classi per l'interazione con il runtime Renderscript. In particolare, il [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/) classe gestiranno le risorse del motore di Renderscript e ciclo di vita. L'app Android deve inizializzare uno o più [ `Android.Renderscripts.Allocation` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/) oggetti. Un'allocazione è un'API gestita che è responsabile dell'allocazione e accedere alla memoria che verrà condivisi tra app Android e il runtime Renderscript. In genere, viene creata un'allocazione per l'input e, facoltativamente, un'altra allocazione viene creato per contenere l'output del kernel. Il motore di runtime Renderscript e le classi wrapper gestito associato verranno gestire l'accesso per la memoria utilizzata dalle allocazioni, non è necessario per gli sviluppatori di app Android eseguire operazioni aggiuntive.
+Il [Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/) dello spazio dei nomi contiene le classi per l'interazione con il runtime Renderscript. In particolare, il [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/) classe gestiranno le risorse del motore di Renderscript e ciclo di vita. L'app Android deve inizializzare uno o più [`Android.Renderscripts.Allocation`](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)
+Oggetti. Un'allocazione è un'API gestita che è responsabile dell'allocazione e accedere alla memoria che verrà condivisi tra app Android e il runtime Renderscript. In genere, viene creata un'allocazione per l'input e, facoltativamente, un'altra allocazione viene creato per contenere l'output del kernel. Il motore di runtime Renderscript e le classi wrapper gestito associato verranno gestire l'accesso per la memoria utilizzata dalle allocazioni, non è necessario per gli sviluppatori di app Android eseguire operazioni aggiuntive.
 
 Un'allocazione conterrà una o più [Android.Renderscripts.Elements](https://developer.xamarin.com/api/type/Android.Renderscripts.Element/).
 Gli elementi sono un tipo specializzato che descrivono i dati in ogni allocazione.
-I tipi di elemento di output deve corrispondere l'allocazione di tipi di elemento di input. Durante l'esecuzione, un Renderscript sarà l'iterazione di ogni elemento nell'allocazione di input in parallelo e scrivere i risultati nell'output di allocazione. Esistono due tipi di elementi:
+I tipi di elemento dell'output allocazione deve corrispondere ai tipi di elemento di input. Durante l'esecuzione, un Renderscript sarà l'iterazione di ogni elemento nell'allocazione di input in parallelo e scrivere i risultati nell'output di allocazione. Esistono due tipi di elementi:
 
 - **tipo semplice** &ndash; concettualmente è lo stesso come un tipo di dati C `float` o un `char`.
 
@@ -60,7 +61,8 @@ I tipi di elemento di output deve corrispondere l'allocazione di tipi di element
 
 Il motore Renderscript eseguirà un controllo di runtime per garantire che gli elementi in ogni allocazione siano compatibili con quelle richieste dal kernel. Se il tipo di dati degli elementi nell'allocazione non corrisponde al tipo di dati che prevede il kernel, verrà generata un'eccezione.
 
-Tutti i kernel Renderscript verranno racchiusi in un tipo che è un discendente del [ `Android.Renderscripts.Script` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Script/) classe. Il `Script` classe viene utilizzata per impostare i parametri per un Renderscript, impostare appropriato `Allocations`, ed eseguire il Renderscript. Esistono due `Script` sottoclassi in Android SDK:
+Tutti i kernel Renderscript verranno racchiusi in un tipo che è un discendente del [`Android.Renderscripts.Script`](https://developer.xamarin.com/api/type/Android.Renderscripts.Script/)
+. Il `Script` classe viene utilizzata per impostare i parametri per un Renderscript, impostare appropriato `Allocations`, ed eseguire il Renderscript. Esistono due `Script` sottoclassi in Android SDK:
 
 
 - **`Android.Renderscripts.ScriptIntrinsic`** &ndash; Alcune delle attività più comuni Renderscript aggregati in Android SDK e sono accessibili da una sottoclasse di [ScriptIntrinsic](https://developer.xamarin.com/api/type/Android.Renderscripts.ScriptIntrinsic/) classe. Non è necessario per uno sviluppatore di eseguire eventuali passaggi aggiuntivi per utilizzare questi script nella propria applicazione, perché sono già fornite.
@@ -107,13 +109,15 @@ Per informazioni dettagliate su ogni script intrinseci, vedere la documentazione
 
 I passaggi di base per l'uso Renderscript in un'applicazione Android sono descritto di seguito.
 
-**Creare un contesto Renderscript** &ndash; le [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/) classe è un wrapper gestito per il contesto Renderscript e controllano l'inizializzazione, gestione delle risorse e la pulizia. L'oggetto Renderscript viene creato utilizzando il `RenderScript.Create` un metodo factory, che accetta un contesto Android (ad esempio, un'attività) come parametro. La riga di codice seguente viene illustrato come inizializzare il contesto Renderscript:
+**Creare un contesto Renderscript** &ndash; il [`Renderscript`](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/)
+classe è un wrapper gestito per il contesto Renderscript e controllano l'inizializzazione, gestione delle risorse e la pulizia. L'oggetto Renderscript viene creato utilizzando il `RenderScript.Create` un metodo factory, che accetta un contesto Android (ad esempio, un'attività) come parametro. La riga di codice seguente viene illustrato come inizializzare il contesto Renderscript:
 
 ```csharp
 Android.Renderscripts.RenderScript renderScript = RenderScript.Create(this);
 ```
 
-**Creare le allocazioni** &ndash; a seconda lo script intrinseco, potrebbe essere necessario creare uno o due `Allocation`s. Il [ `Android.Renderscripts.Allocation` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/) classe include diversi metodi factory per facilitare la creazione di un'allocazione per un intrinseco. Ad esempio, il frammento di codice seguente viene illustrato come creare allocazione per le immagini bitmap.
+**Creare le allocazioni** &ndash; a seconda lo script intrinseco, potrebbe essere necessario creare uno o due `Allocation`s. Il [`Android.Renderscripts.Allocation`](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)
+classe ha diversi metodi factory per facilitare la creazione di un'allocazione per un intrinseco. Ad esempio, il frammento di codice seguente viene illustrato come creare allocazione per le immagini bitmap.
 
 ```csharp
 Android.Graphics.Bitmap originalBitmap;

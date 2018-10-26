@@ -1,116 +1,116 @@
 ---
-title: Dettagli di gioco ora moneta
-description: Questa guida vengono illustrati i dettagli di implementazione del gioco moneta tempo, tra cui usano le mappe di riquadro, creazione di entità, animazione Sprite e implementazione di collisione efficiente.
+title: Dettagli di moneta della fase di gioco
+description: Questa guida illustra i dettagli di implementazione in gioco moneta tempo, tra cui utilizzano le mappe di riquadro, la creazione delle entità, l'animazione Sprite e implementazione efficiente collisione.
 ms.prod: xamarin
 ms.assetid: 5D285684-0417-4E16-BD14-2D1F6DEFBB8B
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 2687b1c8eca8cfb68660c8a622278aa628459d07
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: af914e10eb93aa0668743a113ffe647a939fea75
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33921937"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112624"
 ---
-# <a name="coin-time-game-details"></a>Dettagli di gioco ora moneta
+# <a name="coin-time-game-details"></a>Dettagli di moneta della fase di gioco
 
-_Questa guida vengono illustrati i dettagli di implementazione del gioco moneta tempo, tra cui usano le mappe di riquadro, creazione di entità, animazione Sprite e implementazione di collisione efficiente._
+_Questa guida illustra i dettagli di implementazione in gioco moneta tempo, tra cui utilizzano le mappe di riquadro, la creazione delle entità, l'animazione Sprite e implementazione efficiente collisione._
 
-Ora di moneta è un platformer completo giochi per iOS e Android. L'obiettivo del gioco è per raccogliere tutti monete in un livello e quindi raggiungere la porta di uscita evitando nemici e ostacoli.
+Medaglia tempo è un gioco per iOS e Android di platformer completo. L'obiettivo del gioco è per raccogliere tutti i monete in un livello e quindi raggiungere la porta di uscita e si evitano nemici e ostacoli.
 
-![](cointime-images/image1.png "L'obiettivo del gioco consiste nel raccogliere tutte le monete in un livello e quindi a raggiungere la porta di uscita evitando nemici e ostacoli")
+![](cointime-images/image1.png "L'obiettivo del gioco è per raccogliere tutti i monete in un livello e quindi raggiungere la porta di uscita e si evitano nemici e ostacoli")
 
-Questa guida vengono illustrati i dettagli di implementazione in fase di moneta relativa agli argomenti seguenti:
+Questa guida vengono illustrati i dettagli di implementazione in fase di moneta che copre gli argomenti seguenti:
 
-- [Utilizzo dei file tmx](#working-with-tmx-files)
-- [Il caricamento del livello](#level-loading)
+- [Uso dei file tmx](#working-with-tmx-files)
+- [Il livello di caricamento](#level-loading)
 - [Aggiunta di nuove entità](#adding-new-entities)
 - [Entità animata](#animated-entities)
 
 
 ## <a name="content-in-coin-time"></a>Contenuto in fase di moneta
 
-Ora di moneta è un progetto di esempio che rappresenta l'organizzazione potrebbe essere un intero progetto CocosSharp. Coin-ora struttura mira a semplificare l'aggiunta e la manutenzione del contenuto. Usa **.tmx** file creati da [affiancato](http://www.mapeditor.org) per livelli e i file XML per definire le animazioni. Modifica o aggiunta di nuovo contenuto può essere ottenuto con il minimo sforzo. 
+Medaglia tempo è un progetto di esempio che rappresenta la modalità potrebbe essere organizzato in un progetto CocosSharp completo. Coin Time struttura mira a semplificare l'aggiunta e la manutenzione del contenuto. Viene utilizzato **.tmx** i file creati da [affiancato](http://www.mapeditor.org) per i livelli e i file XML per definire animazioni. Con il minimo sforzo, è possibile modificare o aggiungere nuovo contenuto. 
 
-Sebbene questo approccio rende moneta ora un progetto efficace per l'apprendimento e sperimentazione, riflette inoltre come professional giochi vengono apportate. Questa guida illustra alcuni degli approcci per semplificare l'aggiunta e modifica del contenuto.
+Sebbene questo approccio rende moneta ora un progetto efficace per apprendimento e sperimentazione, e riflette giochi professionali modo in cui vengono apportate. Questa guida illustra alcuni degli approcci adottati per semplificare l'aggiunta e modifica del contenuto.
 
 
-## <a name="working-with-tmx-files"></a>Utilizzo dei file tmx
+## <a name="working-with-tmx-files"></a>Uso dei file tmx
 
-Livelli di tempo moneta vengono definiti utilizzando il formato di file .tmx, verrà restituito dal [affiancato](http://www.mapeditor.org) tessera mappa editor. Per una descrizione dettagliata dell'utilizzo affiancato, vedere il [utilizzando affiancato con Guida Cocos acuto](~/graphics-games/cocossharp/tiled.md). 
+Livelli temporali moneta vengono definiti utilizzando il formato di file .tmx, che verrà restituito dalle [affiancato](http://www.mapeditor.org) tessera mappa editor. Per una descrizione dettagliata dell'utilizzo affiancato, vedere la [uso di Tiled con Cocos Sharp Guida](~/graphics-games/cocossharp/tiled.md). 
 
-Ogni livello è definito nel proprio file .tmx contenuti nel **CoinTime/attività/contenuto/livelli** cartella. Tutti i livelli di tempo moneta condividono un file tileset, definito nel **mastersheet.tsx** file. Questo file definisce le proprietà personalizzate per ogni riquadro, ad esempio se il riquadro ha una collisione a tinta unita o se il riquadro deve essere sostituito da un'istanza di entità. Il file mastersheet.tsx consente di definire una sola volta e utilizzata per tutti i livelli proprietà. 
+Ogni livello è definito nel proprio file .tmx contenuti nel **CoinTime/risorse/contenuto/livelli** cartella. Tutti i livelli di tempo moneta condividono un file tileset, che viene definito nel **mastersheet.tsx** file. Questo file definisce le proprietà personalizzate per ogni sezione, ad esempio se il riquadro ha collisioni a tinta unita o se il riquadro deve essere sostituito da un'istanza di entità. Il file mastersheet.tsx consente proprietà definito una sola volta e usarla per tutti i livelli. 
 
 
 ### <a name="editing-a-tile-map"></a>Modifica di una tessera mappa
 
-Per modificare una mappa di riquadro, aprire il file .tmx doppio clic sul file .tmx o l'apertura del file tramite il menu File in affiancato affiancato. Ora di moneta livello tessera mappe contengono tre livelli: 
+Per modificare una mappa di riquadro, aprire il file .tmx in affiancato facendo doppio clic il file .tmx oppure l'apertura del file tramite il menu File in affiancato. Coin Time livello tessere mappe contengono tre livelli: 
 
-- **Entità** : questo livello contiene i riquadri che verranno sostituiti con istanze di entità in fase di esecuzione. Sono esempi di Windows Media player, nemici e moderne, lo sportello di livello finale.
-- **Terrain** : questo livello contiene i riquadri in cui sono in genere conflitto a tinta unita. Collisione a tinta unita consente il lettore per spostarti in questi riquadri senza passare. Con conflitti a tinta unita possono fungere anche pareti e limiti.
-- **Sfondo** : il livello di sfondo contiene riquadri che vengono utilizzati come sfondo statico. Questo livello non scorre quando si sposta la fotocamera in tutto il livello, l'impressione di profondità tramite parallasse.
+- **Le entità** : questo livello contiene i riquadri che verranno sostituiti con le istanze delle entità in fase di esecuzione. Sono esempi di Windows Media player, monete, nemici e lo sportello della fine-di-level.
+- **Terreno** : questo livello contiene i riquadri che normalmente presentano conflitti a tinta unita. Collisione Solid consente di scorrere su questi riquadri senza passare. Riquadri con conflitto solid possono anche agire come pareti e parte intera superiore.
+- **Sfondo** : il livello di sfondo contiene riquadri che vengono usati come lo sfondo statico. Questo livello non scorre quando si sposta la fotocamera in tutto il livello, creazione dell'aspetto di profondità tramite parallasse.
 
-Come verranno analizzati in un secondo momento, il codice di caricamento del livello prevede che questi tre livelli in tutti i livelli di moneta ora.
+Come verrà presa in esame in un secondo momento, il codice a livello di caricamento si aspetta che questi tre livelli in tutti i livelli di tempo medaglia.
 
 #### <a name="editing-terrain"></a>Modifica di terreno
 
-Riquadri possono essere inseriti facendo clic di **mastersheet** tileset e quindi fare clic sul riquadro mappa. Ad esempio, per disegnare terrain nuovo in un livello:
+I riquadri possono essere effettuati dal facendo clic nel **mastersheet** tileset e quindi fare clic sul riquadro della mappa. Ad esempio, per disegnare nuovi terreno in un livello:
 
 1. Selezionare il livello di terreno
 1. Fare clic sul riquadro per disegnare
-1. Fare clic o premere e trascinare sulla mappa per disegnare il riquadro
+1. Fare clic o effettuare il push e trascinare sulla mappa per disegnare il riquadro
 
     ![](cointime-images/image2.png "Fare clic sul riquadro per disegnare 1")
 
-In alto a sinistra del tileset contiene tutti i terrain moneta specifico. Terrain, ovvero a tinta unita, include il **SolidCollision** proprietà, come illustrato nelle proprietà del riquadro a sinistra dello schermo:
+In alto a sinistra del tileset contiene tutti il terreno temporizzato medaglia. Territorio, che è solido, include il **SolidCollision** proprietà, come illustrato nelle proprietà del riquadro a sinistra della schermata:
 
-![](cointime-images/image3.png "Terrain, ovvero a tinta unita, include la proprietà SolidCollision, come illustrato nelle proprietà del riquadro a sinistra della schermata")
+![](cointime-images/image3.png "Territorio, che è solido, include la proprietà SolidCollision, come illustrato nelle proprietà del riquadro a sinistra della schermata")
 
 #### <a name="editing-entities"></a>La modifica delle entità
 
-Le entità possono essere aggiunti o rimossi da un livello – come terreno. Il **mastersheet** tileset dispone di tutte le entità posizionate sulla metà in senso orizzontale, in modo che potrebbero non essere visibili senza scorrere verso destra:
+Le entità possono essere aggiunti o rimossi da un livello – come terreno. Il **mastersheet** tileset è posizionate a metà orizzontalmente, tutte le entità in modo che potrebbero non essere visibili senza dover scorrere a destra:
 
-![](cointime-images/image4.png "Il tileset mastersheet dispone di tutte le entità posizionate sulla metà in senso orizzontale, in modo che potrebbero non essere visibili senza scorrere verso destra")
+![](cointime-images/image4.png "Il tileset mastersheet è posizionate a metà orizzontalmente, tutte le entità in modo che potrebbero non essere visibili senza dover scorrere a destra")
 
 Nuove entità devono essere posizionate nel **entità** livello.
 
-![](cointime-images/image5.png "Nuove entità deve essere posizionata sul livello di entità")
+![](cointime-images/image5.png "Nuove entità deve essere posizionata nel livello di entità")
 
-Codice CoinTime viene cercato il **EntityType** quando un livello viene caricato per identificare i riquadri che devono essere sostituiti da entità: 
+CoinTime codice cerca il **EntityType** quando viene caricato un livello per identificare i riquadri che devono essere sostituiti da entità: 
 
 ![](cointime-images/image6.png "Codice CoinTime Cerca l'elemento EntityType quando viene caricato un livello per identificare i riquadri che devono essere sostituiti da entità")
 
-Una volta modificato e salvato il file, le modifiche verranno visualizzati automaticamente se il progetto viene compilato ed eseguire:
+Dopo aver modificato e salvato il file, le modifiche verranno automaticamente visualizzata se il progetto viene compilato ed eseguire:
 
-![](cointime-images/image7.png "Una volta modificato e salvato il file, le modifiche verranno visualizzati automaticamente se il progetto viene compilato ed eseguire")
+![](cointime-images/image7.png "Dopo che il file modificato e salvato, le modifiche verranno automaticamente visualizzate se il progetto viene compilato ed eseguire")
 
 
 ### <a name="adding-new-levels"></a>Aggiunta di nuovi livelli
 
-Il processo di aggiunta di livelli all'ora di moneta richiede alcuna modifica del codice e solo alcune piccole modifiche al progetto. Per aggiungere un nuovo livello:
+Il processo di aggiunta livelli moneta ora richiede alcuna modifica al codice e solo alcune piccole modifiche al progetto. Per aggiungere un nuovo livello:
 
-1. Aprire la cartella di livello si trova in <**CoinTime Root > \CoinTime\Assets\Content\levels**
+1. Aprire la cartella di livello disponibile nel <**CoinTime Root > \CoinTime\Assets\Content\levels**
 1. Copiare e incollare uno dei livelli, ad esempio **level0.tmx**
-1. Rinominare il nuovo file .tmx in modo continua la sequenza di numero di livello con livelli esistenti, ad esempio **level8.tmx**
+1. Rinominare il nuovo file .tmx in modo da continuare la sequenza di numeri di livello con livelli esistenti, ad esempio **level8.tmx**
 1. In Visual Studio o Visual Studio per Mac, aggiungere il nuovo file .tmx nella cartella di livelli di Android. Verificare che il file utilizza il **AndroidAsset** azione di compilazione.
 
-    ![](cointime-images/image8.png "Verificare che il file utilizza l'azione di compilazione AndroidAsset")
+    ![](cointime-images/image8.png "Verificare che il file Usa l'azione di compilazione AndroidAsset")
 
-1. Aggiungere il nuovo file .tmx alla cartella iOS livelli. Assicurarsi di collegare il file dal percorso originale e verificare che utilizzi il **BundleResource** azione di compilazione.
+1. Aggiungere il nuovo file .tmx nella cartella di livelli di iOS. Assicurarsi di collegare il file dal percorso originale e verificare che usa il **BundleResource** azione di compilazione.
 
     ![](cointime-images/image9.png "Assicurarsi di collegare il file dal percorso originale e verificare che usa l'azione di compilazione BundleResource")
 
-Il nuovo livello verrà visualizzata nella schermata di seleziona di livello come livello 9 (nomi di file a livello iniziano da 0, ma i pulsanti di livello iniziano con il numero 1):
+Il nuovo elemento level dovrebbe essere visualizzato nella schermata di selezione a livello come livello 9 (il livello di nomi di file iniziano da 0, ma i pulsanti di livello iniziano con il numero 1):
 
-![](cointime-images/image10.png "Il nuovo livello verrà visualizzata nella schermata di seleziona di livello come livello 9 avvio di nomi file di livello 0, ma i pulsanti di livello iniziano con il numero 1")
+![](cointime-images/image10.png "Il nuovo elemento level dovrebbe essere visualizzato nella schermata di selezione a livello come livello 9 a livello di file i nomi partono da 0, ma i pulsanti di livello iniziano con il numero 1")
 
 
-## <a name="level-loading"></a>Il caricamento del livello
+## <a name="level-loading"></a>Il livello di caricamento
 
-Come illustrato in precedenza, nuovi livelli non richiedono alcuna modifica nel codice: il gioco rileva automaticamente i livelli se sono denominati correttamente e aggiungere il **livelli** cartella con l'azione di compilazione corretta (**BundleResource**o **AndroidAsset**).
+Come illustrato in precedenza, i nuovi livelli non necessitano di modifiche nel codice: il gioco rileva automaticamente i livelli se sono corretti e aggiunto al **livelli** cartella con l'azione di compilazione corretto (**BundleResource**oppure **AndroidAsset**).
 
-Cui è contenuta la logica per determinare il numero di livelli di `LevelManager` classe. Quando un'istanza del `LevelManager` viene costruita (usando il modello singleton), il `DetermineAvailbleLevels` metodo viene chiamato:
+Cui è contenuta la logica per determinare il numero di livelli di `LevelManager` classe. Quando un'istanza del `LevelManager` viene costruito (usando il modello singleton), il `DetermineAvailbleLevels` viene chiamato il metodo:
 
 
 ```csharp
@@ -148,9 +148,9 @@ private void DetermineAvailableLevels()
 }
 ```
 
-CocosSharp non fornisce un approccio multipiattaforma per rilevare se i file sono presenti, quindi è necessario affidarsi la `TitleContainer` classe per tentare di aprire un flusso. Se il codice per l'apertura di un flusso genera un'eccezione, il file esiste e il ciclo while interruzioni. Una volta terminato il ciclo, il `NumberOfLevels` proprietà riporta il numero di livelli valido è parte del progetto.
+CocosSharp non fornisce un approccio multipiattaforma per rilevare se i file sono presenti, quindi dobbiamo fare affidamento su di `TitleContainer` classe per tentare di aprire un flusso. Se il codice per l'apertura di un flusso genera un'eccezione, il file esiste e il ciclo while interruzioni. Al termine del ciclo, il `NumberOfLevels` proprietà segnala quanti livelli validi è parte del progetto.
 
-Il `LevelSelectScene` utilizzato dalla classe di `LevelManager.NumberOfLevels` per determinare il numero di pulsanti per la creazione nel `CreateLevelButtons` metodo:
+Il `LevelSelectScene` classe Usa il `LevelManager.NumberOfLevels` per determinare il numero di pulsanti per creare nel `CreateLevelButtons` (metodo):
 
 
 ```csharp
@@ -170,7 +170,7 @@ private void CreateLevelButtons()
 }
 ```
 
-Il `NumberOflevels` proprietà viene utilizzata per determinare quali pulsanti devono essere creati. Questo codice prende in considerazione la pagina, l'utente sta attualmente visualizzando e crea solo un massimo di sei pulsanti per pagina. Facendo clic sul pulsante istanze chiamata il `HandleButtonClicked` metodo:
+Il `NumberOflevels` proprietà viene utilizzata per determinare quali pulsanti devono essere creati. Questo codice considera quale pagina l'utente sta attualmente visualizzando e consente di creare solo un massimo di sei pulsanti per ogni pagina. Quando si fa clic, il pulsante istanze chiamata il `HandleButtonClicked` metodo:
 
 
 ```csharp
@@ -183,9 +183,9 @@ private void HandleButtonClicked(object sender, EventArgs args)
 }
 ```
 
-Questo metodo assegna il `CurrentLevel` proprietà che viene utilizzata il `GameScene` durante il caricamento di un livello. Dopo aver impostato il `CurrentLevel`, `GoToGameScene` metodo generato, cambio di scena da `LevelSelectScene` per `GameScene`.
+Questo metodo assegna il `CurrentLevel` proprietà che vengono usati dal `GameScene` durante il caricamento di un livello. Dopo aver impostato la `CurrentLevel`, il `GoToGameScene` metodo viene generato, cambio di scena `LevelSelectScene` a `GameScene`.
 
-Il `GameScene` chiamate al costruttore `GoToLevel`, che esegue la logica di caricamento di livello:
+Il `GameScene` chiamate al costruttore `GoToLevel`, che consente di eseguire la logica a livello di caricamento:
 
 
 ```csharp
@@ -199,12 +199,12 @@ private void GoToLevel(int levelNumber)
 }
 ```
 
-Successivamente si verrà esaminato un metodi chiamati negli `GoToLevel`.
+Quindi prenderemo in esame metodi chiamati negli `GoToLevel`.
 
 
 ### <a name="loadlevel"></a>LoadLevel
 
-Il `LoadLevel` metodo è responsabile per il caricamento del file .tmx e aggiungendolo al `GameScene`. Questo metodo non crea tutti gli oggetti interattivi, ad esempio conflitti o entità: semplicemente crea gli oggetti visivi per il livello, detta anche il *ambiente*.
+Il `LoadLevel` metodo è responsabile per il caricamento del file .tmx e aggiungendolo al `GameScene`. Questo metodo non crea tutti gli oggetti interattivi, ad esempio collisione o entità, viene semplicemente creato gli oggetti visivi per il livello, noto anche come il *ambiente*.
 
 
 ```csharp
@@ -223,14 +223,14 @@ private void LoadLevel(int levelNumber)
 }
 ```
 
-Il `CCTileMap` costruttore accetta un nome di file, viene creato utilizzando il numero del livello passato a `LoadLevel`. Per ulteriori informazioni sulla creazione e utilizzo di `CCTileMap` istanze, vedere il [utilizzando affiancato con CocosSharp Guida](~/graphics-games/cocossharp/tiled.md).
+Il `CCTileMap` costruttore accetta un nome di file, che viene creato tramite il numero del livello passato alla `LoadLevel`. Per altre informazioni sulla creazione e utilizzo con `CCTileMap` istanze, vedere la [uso di Tiled con CocosSharp Guida](~/graphics-games/cocossharp/tiled.md).
 
-Attualmente, CocosSharp non consente il riordinamento dei livelli senza rimuovere e aggiungere nuovamente al padre `CCScene` (ovvero il `GameScene` in questo caso), pertanto sono necessarie le ultime righe del metodo per riordinare i livelli.
+Attualmente, CocosSharp non consente il riordinamento dei livelli senza rimuoverla e aggiungerli nuovamente al relativo elemento padre `CCScene` (ovvero il `GameScene` in questo caso), in modo che le ultime righe del metodo sono necessari per riordinare i livelli.
 
 
 ### <a name="createcollision"></a>CreateCollision
 
-Il `CreateCollision` metodo costruisce una `LevelCollision` istanza che viene utilizzata per eseguire *collisione a tinta unita* tra il lettore e un ambiente.
+Il `CreateCollision` metodo costruisce una `LevelCollision` istanza che viene usato per eseguire *collisione solid* tra l'ambiente e Windows Media player.
 
 
 ```csharp
@@ -241,14 +241,14 @@ private void CreateCollision()
 }
 ```
 
-Senza questa collisione, il lettore rientrerebbero tramite il livello e il gioco potrebbe risultare non riproducibile. Collisione a tinta unita consente di scorrere su zero il lettore e impedisce che il lettore attraverso pareti o il passaggio di attraverso i limiti massimi.
+Senza questa collisione, il giocatore rientrerebbero attraverso il livello e il gioco potrebbe risultare non riproducibile. Collisione Solid consente il giocatore scorrere su zero e impedisce che il lettore illustrando le pareti o il passaggio di attraverso limiti.
 
-È possibile aggiungere conflitti in fase di moneta senza codice aggiuntivo: solo le modifiche apportate ai file affiancati. 
+È possibile aggiungere dei conflitti nel tempo moneta senza codice aggiuntivo – solo le modifiche apportate ai file affiancati. 
 
 
 ### <a name="processtileproperties"></a>ProcessTileProperties
 
-Una volta che viene caricato un livello e viene creato il conflitto, `ProcessTileProperties` viene chiamato per eseguire la logica in base alle proprietà di riquadro. Tempo moneta include un `PropertyLocation` struttura per la definizione di proprietà e le coordinate del riquadro con queste proprietà:
+Una volta che viene caricato un livello e il conflitto viene creato, `ProcessTileProperties` viene chiamato per eseguire una logica basata su proprietà del riquadro. Medaglia ora include un `PropertyLocation` struct per la definizione di proprietà e le coordinate del riquadro con queste proprietà:
 
 
 ```csharp
@@ -262,7 +262,7 @@ public struct PropertyLocation
 }
 ```
 
-Questo struct viene utilizzato per costruire le istanze di entità di creare e rimuovere i riquadri non necessari nel `ProcessTileProperties` metodo:
+Questo struct viene usato per costruire istanze dell'entità di creare e rimuovere i riquadri non necessari nel `ProcessTileProperties` metodo:
 
 
 ```csharp
@@ -297,7 +297,7 @@ private void ProcessTileProperties()
 }
 ```
 
-Il ciclo foreach restituisce ogni proprietà di sezione, verifica se la chiave `EntityType` o `RemoveMe`. `EntityType` indica che deve essere creata un'istanza di entità. `RemoveMe` indica che il riquadro deve essere rimosso completamente in fase di esecuzione.
+Il ciclo foreach restituisce ogni proprietà di riquadro, controlla se la chiave è uno `EntityType` o `RemoveMe`. `EntityType` indica che è necessario creare un'istanza di entità. `RemoveMe` indica che il riquadro deve essere rimosso completamente in fase di esecuzione.
 
 Se una proprietà con il `EntityType` chiave viene trovata, quindi `TryCreateEntity` viene chiamato, quali tenta di creare un'entità mediante le proprietà corrispondenti di `EntityType` chiave:
 
@@ -346,55 +346,55 @@ private bool TryCreateEntity(string entityType, float worldX, float worldY)
 
 ## <a name="adding-new-entities"></a>Aggiunta di nuove entità
 
-Tempo moneta utilizza il modello di entità per gli oggetti di giochi (illustrata nella [Guida le entità in CocosSharp](~/graphics-games/cocossharp/entities.md)). Tutte le entità di ereditano da `CCNode`, ovvero possono essere aggiunti come elementi figlio del `gameplayLayer`.
+Medaglia ora Usa il modello di entità per gli oggetti giochi (illustrata nella [guidano per le entità in CocosSharp](~/graphics-games/cocossharp/entities.md)). Tutte le entità di ereditano `CCNode`, ovvero possono essere aggiunti come elementi figlio del `gameplayLayer`.
 
-Ogni tipo di entità viene inoltre fare riferimento direttamente tramite un elenco o una singola istanza. Ad esempio, il `Player` fa riferimento il `player` campo e il `Coin` istanze vengono fatto riferimento in un `coins` elenco. Mantenere riferimenti diretti alle entità (anziché fare riferimento tramite il `gameLayer.Children` elenco) rende il codice che accede a queste entità più facile da leggere ed elimina il cast di tipo potenzialmente dispendiosa.
+Ogni tipo di entità viene anche fatto riferimento direttamente tramite un elenco o una singola istanza. Ad esempio, il `Player` fa riferimento il `player` campo e tutte `Coin` istanze vengono fatto riferimento in un `coins` elenco. Mantenimento dei riferimenti diretti alle entità (anziché fare riferimento a essi tramite il `gameLayer.Children` elenco) rende il codice che accede a queste entità più facile da leggere ed elimina il cast dei tipi potenzialmente dispendiosa.
 
-Il codice esistente fornisce una serie di tipi di entità come esempi su come creare nuove entità. Per creare una nuova entità, è possibile utilizzare la procedura seguente:
+Il codice esistente fornisce una serie di tipi di entità come esempi su come creare nuove entità. La procedura seguente consente di creare una nuova entità:
 
 
-### <a name="1---define-a-new-class-using-the-entity-pattern"></a>1: definire una nuova classe utilizzando il modello di entità
+### <a name="1---define-a-new-class-using-the-entity-pattern"></a>1: definire una nuova classe usando il modello di entità
 
-L'unico requisito per la creazione di un'entità consiste nel creare una classe che eredita da `CCNode`. La maggior parte delle entità presentano alcuni visivo, ad esempio un `CCSprite`, che deve essere aggiunto come elemento figlio dell'entità nel relativo costruttore.
+L'unico requisito per la creazione di un'entità consiste nel creare una classe che eredita da `CCNode`. La maggior parte delle entità dispongono di un oggetto visivo, ad esempio un `CCSprite`, che deve essere aggiunto come elemento figlio dell'entità nel relativo costruttore.
 
-CoinTime fornisce la `AnimatedSpriteEntity` classe che semplifica la creazione di entità animata. Animazioni verranno descritta più dettagliatamente il [sezione animata entità](#animated-entities).
+CoinTime fornisce il `AnimatedSpriteEntity` classe che semplifica la creazione di entità animata. Animazioni verranno trattate più dettagliatamente la [sezione animato entità](#animated-entities).
 
 
 ### <a name="2--add-a-new-entry-to-the-trycreateentity-switch-statement"></a>2: aggiungere una nuova voce per l'istruzione switch TryCreateEntity
 
-Le istanze della nuova entità devono essere creata un'istanza nel `TryCreateEntity`. Se l'entità richiede una logica di ogni fotogramma come conflitto, AI o la lettura di input, il `GameScene` deve mantenere un riferimento all'oggetto. Se sono necessarie più istanze (ad esempio `Coin` o `Enemy` istanze), quindi un nuovo `List` devono essere aggiunti alla `GameScene` classe.
+Le istanze della nuova entità devono essere inizializzate nel `TryCreateEntity`. Se l'entità richiede una logica di ogni frame come conflitto, intelligenza artificiale o la lettura di input, il `GameScene` deve mantenere un riferimento all'oggetto. Se sono necessarie più istanze (ad esempio `Coin` o `Enemy` istanze), quindi un nuovo `List` devono essere aggiunte al `GameScene` classe.
 
 
 ### <a name="3--modify-tile-properties-for-the-new-entity"></a>3: modificare le proprietà del riquadro per la nuova entità
 
-Una volta il codice supporta la creazione della nuova entità, la nuova entità deve essere aggiunto il tileset. Il tileset può essere modificato tramite l'apertura di qualsiasi livello `.tmx` file. 
+Una volta il codice supporta la creazione della nuova entità, deve essere aggiunto al tileset la nuova entità. Il tileset possono essere modificate tramite l'apertura di qualsiasi livello `.tmx` file. 
 
-Il tileset è memorizzate separatamente dal .tmx nel **mastersheet.tsx** file, pertanto deve essere importato prima che possa essere modificato:
+Il tileset viene archiviato separato dal .tmx nel **mastersheet.tsx** file, in modo che non deve essere importato prima che possa essere modificato:
 
-![](cointime-images/image11.png "Il tileset vengono archiviati separato dal file. TSX, pertanto deve essere importato prima che possa essere modificato")
+![](cointime-images/image11.png "Il tileset è archiviata separato dal file TSX, pertanto deve essere importato prima che possa essere modificato")
 
-Una volta importati, le proprietà nei riquadri selezionati sono modificabili, è possibile aggiungere l'elemento EntityType:
+Una volta importati, le proprietà per i riquadri selezionati sono modificabili e l'elemento EntityType può essere aggiunto:
 
-![](cointime-images/image12.png "Una volta importati, le proprietà nei riquadri selezionati sono modificabili e può essere aggiunti all'elemento EntityType")
+![](cointime-images/image12.png "Una volta importati, le proprietà per i riquadri selezionati sono modificabili e può essere aggiunto l'elemento EntityType")
 
-Dopo aver creata la proprietà, il relativo valore può essere impostato corrisponda al nuovo `case` in `TryCreateEntity`:
+Dopo aver creata la proprietà, il valore può essere impostato in modo che corrisponda il nuovo `case` in `TryCreateEntity`:
 
-![](cointime-images/image13.png "Dopo aver creata la proprietà, il relativo valore può essere impostato in modo che corrisponda al nuovo case in TryCreateEntity")
+![](cointime-images/image13.png "Dopo aver creata la proprietà, il valore può essere impostato in modo che corrisponda al nuovo case in TryCreateEntity")
 
-Dopo aver modificato il tileset, che deve essere esportato – in questo modo le modifiche disponibili per tutti gli altri livelli:
+Dopo aver modificato il tileset, che deve essere esportato, che in questo modo le modifiche disponibili per tutti gli altri livelli:
 
 ![](cointime-images/image14.png "Dopo aver modificato il tileset, deve essere esportato")
 
 Deve sovrascrivere il tileset esistente **mastersheet.tsx** tileset:
 
-![](cointime-images/image15.png "egli tileset deve sovrascrivere il tileset mastersheet.tsx esistente")
+![](cointime-images/image15.png "he tileset deve sovrascrivere il tileset mastersheet.tsx esistente")
 
 
-## <a name="entity-tile-removal"></a>Rimozione di riquadro entità
+## <a name="entity-tile-removal"></a>Rimozione di entità riquadro
 
-Quando si mappa un riquadro verrà caricata in un gioco, i singoli riquadri sono oggetti statici. Poiché le entità richiedono un comportamento personalizzato, ad esempio lo spostamento, codice in fase di moneta rimuove i riquadri quando vengono create le entità.
+Quando una tessera mappa verrà caricata in un gioco, i singoli riquadri sono gli oggetti statici. Poiché le entità richiedono un comportamento personalizzato, ad esempio lo spostamento, codice in fase di moneta rimuove i riquadri quando vengono create le entità.
 
-`ProcessTileProperties` include una logica per rimuovere i riquadri in cui creare le entità utilizzando il `RemoveTile` metodo:
+`ProcessTileProperties` include logica per rimuovere i riquadri che creare entità con la `RemoveTile` metodo:
 
 
 ```csharp
@@ -418,19 +418,19 @@ private void ProcessTileProperties()
 }
 ```
 
-La rimozione automatica dei riquadri è sufficiente per le entità che occupano un solo riquadro nel tileset, ad esempio monete e nemici. Entità di dimensioni maggiori richiedono le proprietà e la logica aggiuntiva.
+La rimozione automatica dei riquadri è sufficiente per le entità che occupano un solo riquadro nel tileset, ad esempio monete e nemici. Entità di dimensioni maggiori richiedono logica aggiuntiva e proprietà.
 
 Lo sportello richiede due riquadri da disegnare completamente:
 
 ![](cointime-images/image16.png "Lo sportello richiede due riquadri da disegnare completamente")
 
-Il riquadro inferiore in una porta contiene le proprietà per la creazione di un'entità (**EntityType** impostato su **porta**):
+Il riquadro inferiore in una porta contiene le proprietà per la creazione di un'entità (**EntityType** impostata su **sportello**):
 
-![](cointime-images/image17.png "Il riquadro inferiore in una porta contiene le proprietà per la creazione di un set di EntityType lo sportello di entità")
+![](cointime-images/image17.png "Il riquadro inferiore in una porta contiene le proprietà per la creazione di una set di entità EntityType a sportello")
 
-Quando viene creata l'istanza di porta, viene rimosso solo il riquadro inferiore in una porta, la logica aggiuntiva è necessaria per rimuovere il riquadro superiore in fase di esecuzione. Il riquadro superiore è un **RemoveMe** proprietà impostata su **true**:
+Poiché solo il riquadro inferiore in una porta viene rimosso quando viene creata l'istanza di porta, sarà necessaria logica aggiuntiva per rimuovere il riquadro superiore in fase di esecuzione. Il riquadro superiore è un **RemoveMe** impostata su **true**:
 
-![](cointime-images/image18.png "Il riquadro superiore è una proprietà RemoveMe impostata su true")
+![](cointime-images/image18.png "Il riquadro superiore include una proprietà RemoveMe impostata su true")
 
 
 
@@ -456,15 +456,15 @@ private void ProcessTileProperties()
 
 ## <a name="entity-offsets"></a>Offset di entità
 
-Le entità create dai riquadri vengono posizionate allineando il centro dell'entità con il centro del riquadro. Le entità di dimensioni maggiori, come `Door`, utilizzare proprietà aggiuntive e la logica per essere inserito correttamente. 
+Le entità create dai riquadri sono posizionate per allineare il centro dell'entità con il centro del riquadro. Entità di dimensioni maggiori, ad esempio `Door`, usare le proprietà aggiuntive e per la logica da inserire in modo corretto. 
 
-Il riquadro inferiore porta, che definisce il `Door` la selezione di entità, specifica una **OffsetY** valore 4. Senza questa proprietà, il `Door` istanza viene posizionata al centro del riquadro:
+Il riquadro di porta nella parte inferiore, che definisce il `Door` posizionamento di entità, specifica una **OffsetY** valore 4. Senza questa proprietà, il `Door` istanza viene posizionata al centro del riquadro:
 
 ![](cointime-images/image19.png "Senza questa proprietà, l'istanza di porta viene posizionato al centro del riquadro")
 
  
 
-Questo è corretto applicando il **OffsetY** valore `ProcessTileProperties`:
+Ciò è corretto, applicando il **OffsetY** valore `ProcessTileProperties`:
 
 
 ```csharp
@@ -496,12 +496,12 @@ private void ProcessTileProperties()
 
 ## <a name="animated-entities"></a>Entità animata
 
-Tempo di moneta include varie entità animata. Il `Player` e `Enemy` entità Riproduci animazioni di percorso e il `Door` entità svolge un'animazione di apertura dopo che sono stati raccolti monete tutti.
+Tempo moneta include varie entità animata. Il `Player` e `Enemy` entità riprodurre animazioni di percorso e il `Door` entità svolge un'animazione di apertura dopo che sono state raccolte monete tutti.
 
 
 ### <a name="achx-files"></a>file .achx
 
-Le animazioni ora moneta sono definite nel file .achx. Ogni animazione viene definito tra `AnimationChain` tag, come illustrato nella seguente animazione definito in **propanimations.achx**:
+Medaglia ora animazioni definite nei file .achx. Ogni animazione viene definito tra `AnimationChain` tag, come illustrato nell'animazione seguente definito in **propanimations.achx**:
 
 
 ```xml
@@ -523,27 +523,27 @@ Le animazioni ora moneta sono definite nel file .achx. Ogni animazione viene def
 </AnimationChain> 
 ```
 
-Questa animazione contiene solo un singolo frame, determinando l'entità di picco la visualizzazione di un'immagine statica. Entità consente .achx file indipendentemente dal fatto che visualizzano le animazioni di unica o più frame. I frame aggiuntivi possono essere aggiunte ai file .achx senza richiedere alcuna modifica nel codice. 
+Questa animazione contiene solo un singolo fotogramma, causando la visualizzazione di un'immagine statica all'entità di picco. Le entità possono usare file .achx se vengano visualizzate le animazioni singola o a più frame. I frame aggiuntivi possono essere aggiunti ai file .achx senza richiedere alcuna modifica nel codice. 
 
-Frame definiscono quale immagine da visualizzare il `TextureName` parametro e le coordinate dello schermo nel `LeftCoordinate`, `RightCoordinate`, `TopCoordinate`, e `BottomCoordinate` tag. Rappresentano le coordinate di pixel del frame di animazione dell'immagine di cui è in uso: **mastersheet.png** in questo caso.
+Frame di definiscono l'immagine da visualizzare nella `TextureName` parametro e le coordinate dello schermo nel `LeftCoordinate`, `RightCoordinate`, `TopCoordinate`, e `BottomCoordinate` tag. Queste rappresentano le coordinate di pixel del frame di animazione nell'immagine che viene usato – **mastersheet.png** in questo caso.
 
-![](cointime-images/image20.png "Rappresentano le coordinate di pixel del frame di animazione dell'immagine")
+![](cointime-images/image20.png "Queste rappresentano le coordinate di pixel del frame di animazione nell'immagine")
 
-Il `FrameLength` proprietà definisce il numero di secondi che deve essere visualizzato un frame in un'animazione. Le animazioni di fotogrammi singoli ignorano questo valore.
+Il `FrameLength` proprietà definisce il numero di secondi che deve essere visualizzato un frame in un'animazione. Le animazioni con fotogrammi singolo ignorano questo valore.
 
-Ignora tutte le altre proprietà AnimationChain nel file .achx moneta ora.
+Tutte le altre proprietà AnimationChain nel file .achx vengono ignorati dal tempo medaglia.
 
 
 ### <a name="animatedspriteentity"></a>AnimatedSpriteEntity
 
-Animazione logica è contenuta nel `AnimatedSpriteEntity` (classe), che funge da classe base per la maggior parte delle entità utilizzato per il `GameScene`. Fornisce le funzionalità seguenti:
+Logica dell'animazione è contenuta nel `AnimatedSpriteEntity` classe, che funge da classe base per la maggior parte delle entità nel `GameScene`. Fornisce le funzionalità seguenti:
 
  - Il caricamento di `.achx` file
  - Cache di animazione delle animazioni caricate
- - Istanza di CCSprite per la visualizzazione dell'animazione
- - Logica per modificare il frame corrente
+ - Istanza CCSprite per la visualizzazione dell'animazione
+ - Per la logica per modificare il frame corrente
 
-Il costruttore picchi fornisce un semplice esempio di come caricare e utilizzare le animazioni:
+Il costruttore picchi offre un semplice esempio di come caricare e usare le animazioni:
 
 
 ```csharp
@@ -554,7 +554,7 @@ public Spikes ()
 }
 ```
 
-Il **propAnimations.achx** contiene solo un'animazione, pertanto il costruttore accede a questa animazione in base all'indice. Se un file .achx contiene più animazioni, quindi le animazioni è possibile fare riferimento in base al nome, come illustrato nel `Enemy` costruttore:
+Il **propAnimations.achx** contiene solo un'animazione, in modo che il costruttore accede a questa animazione in base all'indice. Se un file .achx contiene più animazioni, allora le animazioni possono farvi riferimento in base al nome, come illustrato nel `Enemy` costruttore:
 
 
 ```csharp
@@ -565,7 +565,7 @@ walkRightAnimation = animations.Find (item => item.Name == "WalkRight");
 
 ## <a name="summary"></a>Riepilogo
 
-Questa guida illustra i dettagli di implementazione di tempo moneta. Tempo moneta viene creata come un gioco completo, ma è anche un progetto che può essere facilmente modificato ed espanso. I lettori sono invitati a spesa modifiche della fase di esecuzione a livelli, aggiunta di nuovi livelli e la creazione di nuove entità per comprendere meglio come moneta è implementata.
+Questa guida illustra i dettagli di implementazione di tempo medaglia. Medaglia ora viene creato da un gioco completo, ma è anche un progetto che può essere facilmente modificato ed espanso. I lettori sono invitati a dedicare apportate modifiche di tempo a livelli, aggiunta di nuovi livelli e la creazione di nuove entità per comprendere a fondo la modalità di implementazione ora medaglia.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

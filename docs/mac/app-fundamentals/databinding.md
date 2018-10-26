@@ -4,15 +4,15 @@ description: Questo articolo viene illustrato l'utilizzo chiave-valore di codifi
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 0adb8cda71ca8803c535679da2aecf00f3fa46a5
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 4a391160f2102fd1f069a45eb7c16aec91dfd7e0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251262"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110381"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Data binding e codifica di chiave-valore in xamarin. Mac
 
@@ -334,7 +334,7 @@ public NSArray People {
 Due aspetti da notare:
 
 1. È stato usato un `NSMutableArray` anziché un matrice c# standard o una raccolta poiché si tratta, ad esempio un requisito per associare dati a controlli AppKit **viste delle tabelle**, **visualizzazioni della struttura** e **raccolte** .
-2. La matrice dei dipendenti è esposta eseguendo il cast a un `NSArray` per nome, in formato di dati ai fini dell'associazione e modificato il linguaggio c# `People`, che prevede l'associazione dati, `personModelArray` nel formato **{class_name} matrice** (nota che il primo carattere è stato apportato lettere minuscole).
+2. La matrice dei dipendenti è esposta eseguendo il cast a un `NSArray` per i dati a scopo di associazione e modificato relativo C# nome, in formato `People`, che prevede l'associazione dati, `personModelArray` nel formato **{class_name} matrice**(si noti che è stato effettuato il primo carattere minuscolo).
 
 Successivamente, è necessario aggiungere alcuni appositamente nome metodi pubblici per supportare **controller di Array** e **albero controller**:
 
@@ -904,4 +904,4 @@ Questo articolo ha fatto un quadro dettagliato di utilizzo di data binding e cod
 - [Introduzione alle associazioni Cocoa argomenti di programmazione](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CocoaBindings/CocoaBindings.html)
 - [Introduzione a Cocoa associazioni riferimento](https://developer.apple.com/library/content/documentation/Cocoa/Reference/CocoaBindingsRef/CocoaBindingsRef.html)
 - [NSCollectionView](https://developer.apple.com/documentation/appkit/nscollectionview)
-- [macOS Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [Linee guida dell'interfaccia umana macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

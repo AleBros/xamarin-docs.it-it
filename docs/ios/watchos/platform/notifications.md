@@ -1,132 +1,132 @@
 ---
-title: watchOS le notifiche di Xamarin
-description: Questo documento viene descritto come utilizzare le notifiche di watchOS in Xamarin. Illustra la creazione i controller di notifica, la generazione di notifiche e il test delle notifiche.
+title: le notifiche in Xamarin watchOS
+description: Questo documento descrive come usare le notifiche di watchOS in Xamarin. Vengono illustrati la creazione i controller di notifica, la generazione di notifiche e notifiche di test.
 ms.prod: xamarin
 ms.assetid: 0BC1306E-0713-4592-996E-7530CCF281E7
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 42b0354f19a9e0c31b7a859d598526fddad726cd
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 53ec1b0777827e7f4faf81110507787c65dfaf63
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791910"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103933"
 ---
-# <a name="watchos-notifications-in-xamarin"></a>watchOS le notifiche di Xamarin
+# <a name="watchos-notifications-in-xamarin"></a>le notifiche in Xamarin watchOS
 
-Controllare l'App possono ricevere notifiche se l'app iOS contenitore supportarle. È presente la gestione di notifica predefinita in modo da non *necessario* per aggiungere il supporto di notifica aggiuntive descritto di seguito, tuttavia se si desidera personalizzare il comportamento di notifica e la lettura in aspetto.
+Le app Watch possono ricevere notifiche se l'app per iOS contiene supportarle. È presente gestione delle notifiche incorporate in modo che non si *necessario* per aggiungere il supporto per le notifiche aggiuntive descritto di seguito, tuttavia se si vuole personalizzare il comportamento di notifica e l'aspetto, continuare a leggere.
 
-Consultare la [iOS notifiche](~/ios/platform/user-notifications/deprecated/index.md) doc per ulteriori informazioni sull'aggiunta di supporto di notifica all'app di iOS nella soluzione.
+Vedere le [notifiche di iOS](~/ios/platform/user-notifications/deprecated/index.md) doc per altre informazioni sull'aggiunta di supporto per le notifiche all'app iOS nella soluzione.
 
 ## <a name="creating-notification-controllers"></a>Creazione di controller di notifica
 
-Nello storyboard i controller di notifiche hanno un tipo speciale di definire l'attivazione di essi. Quando si trascina un nuovo **Controller di interfaccia di notifica** in uno storyboard automaticamente avrà un segue collegato:
+Sullo storyboard controller notifiche hanno un tipo speciale di elemento segue attivandoli in. Quando si trascina un nuovo **Controller di interfaccia di notifica** in uno storyboard avranno automaticamente un elemento segue collegato:
 
-![](notifications-images/notification-storyboard1.png "Un nuovo Controller di interfaccia di notifica con un segue collegato")
+![](notifications-images/notification-storyboard1.png "Un nuovo Controller di interfaccia di notifica con un elemento segue collegato")
 
-Definire i la notifica quando è selezionata è possibile modificarne le proprietà:
+Quando segue la notifica viene selezionata è possibile modificare le relative proprietà:
 
-![](notifications-images/notification-storyboard2.png "La notifica definire selezionato")
+![](notifications-images/notification-storyboard2.png "La notifica Visualizza selezionato")
 
-Dopo aver personalizzato il controller di calcolo potrebbe essere simile a questo esempio dal WatchKitCatalog:
+Dopo aver personalizzato il controller sarà simile a questo esempio dal WatchKitCatalog:
 
 ![](notifications-images/notifications-segue.png "Le proprietà di notifica")
 
 
 Esistono due tipi di notifica:
 
-- **La funzione di ricerca breve** -non scorrevole visualizzazione statica definita dal sistema.
+- **La funzione di ricerca breve** -visualizzazione statica non scorrevole definito dal sistema.
 
-- **Prolungata aspetto** - scorrevole, Vista personalizzabile definito dall'utente. È possibile specificare una versione più semplice, statica e una versione dinamica più complessa.
+- **Aspetto prolungata** - scorrevole, personalizzabile vista definita dall'utente. Una versione più semplice, statica e una versione dinamica più complessa possono essere specificati.
 
-### <a name="short-look-notification-controller"></a>La funzione di ricerca breve notifica Controller
+### <a name="short-look-notification-controller"></a>Funzione di ricerca breve Controller di notifica
 
-L'interfaccia utente breve la ricerca è costituita dall'icona di app, il nome dell'app e la stringa del titolo di notifica.
+L'interfaccia utente breve sguardo è costituita da solo l'icona dell'app, nome dell'app e la stringa del titolo di notifica.
 
-Se l'utente non ignora la notifica, il sistema passerà automaticamente a una notifica prolungata aspetto che fornisce ulteriori informazioni.
+Se l'utente non ignora la notifica, il sistema passerà automaticamente alla notifica prolungata aspetto che fornisce informazioni aggiuntive.
 
 
-### <a name="long-look-notification-controller"></a>Notifica prolungata aspetto Controller
+### <a name="long-look-notification-controller"></a>Funzione di ricerca prolungata Controller di notifica
 
-Il sistema operativo determina se visualizzare la visualizzazione statica o dinamica in base a una serie di fattori. È necessario fornire un'interfaccia statica e può facoltativamente includere anche un'interfaccia dinamica per le notifiche.
+Il sistema operativo decide se mostrare la visualizzazione statica o dinamica in base a diversi fattori. È necessario fornire un'interfaccia statica e può facoltativamente includere anche un'interfaccia dinamica per le notifiche.
 
 #### <a name="static"></a>Static
 
-La visualizzazione statica deve essere semplice e rapido da visualizzare.
+La visualizzazione statica deve essere semplice e rapida da visualizzare.
 
 ![](notifications-images/notification-static.png "La visualizzazione statica")
 
 #### <a name="dynamic"></a>Dynamic
 
-La visualizzazione dinamica può visualizzare più dati e fornire altre interattività.
+La visualizzazione dinamica può visualizzare più dati e fornire maggiore interattività.
 
 ![](notifications-images/notification-dynamic.png "La visualizzazione dinamica")
 
 
 ## <a name="generating-notifications"></a>Generazione di notifiche
 
-Le notifiche possono provenire da un server remoto ([Apple Push Notification Service](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html), o APNS) o possono essere generati in locale nell'app iOS.
+Le notifiche possono provenire da un server remoto ([servizio di notifiche Push di Apple](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html), o servizio APN) o possono essere generati in locale nell'app per iOS.
 
-Fare riferimento al [iOS procedura dettagliata notifiche](~/ios/platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md) per un esempio di come generare notifiche locale e [WatchNotifications esempio](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/) per un esempio funzionante.
+Fare riferimento al [procedura dettagliata di notifiche di iOS](~/ios/platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md) per un esempio di come generare le notifiche locali e il [esempio WatchNotifications](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/) per un esempio funzionante.
 
-Notifiche locale devono disporre di `AlertTitle` impostato da visualizzare nella finestra di Apple Watch - il `AlertTitle` stringa viene visualizzata nell'interfaccia breve aspetto. Sia il `AlertTitle` e `AlertBody` vengono visualizzati nell'elenco; le notifiche e `AlertBody` viene visualizzato nell'interfaccia prolungata aspetto.
+Le notifiche locali devono avere il `AlertTitle` impostato da visualizzare nella finestra di di Apple Watch - il `AlertTitle` stringa viene visualizzata nell'interfaccia breve sguardo. Sia la `AlertTitle` e `AlertBody` vengono visualizzati nell'elenco delle notifiche; e il `AlertBody` viene visualizzato nell'interfaccia prolungata la ricerca.
 
-Questa schermata è riportato il `AlertTitle` visualizzate nell'elenco di notifiche e `AlertBody` visualizzate nell'interfaccia prolungata aspetto (utilizzando il [codice di esempio](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)):
+In questo screenshot appare il `AlertTitle` visualizzati nell'elenco delle notifiche e la `AlertBody` visualizzata nell'interfaccia di aspetto prolungata (usando la [esempi di codice](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)):
 
-![](notifications-images/watch-notificationslist-sml.png "Questa schermata è riportato il AlertTitle visualizzate nell'elenco delle notifiche di") ![ ] (notifications-images/watch-notificationcontroller-sml.png "AlertBody il visualizzate nell'interfaccia prolungata aspetto")
+![](notifications-images/watch-notificationslist-sml.png "In questo screenshot appare il AlertTitle visualizzati nell'elenco delle notifiche") ![](notifications-images/watch-notificationcontroller-sml.png "The AlertBody visualizzata nell'interfaccia di Long-Cerca")
 
-## <a name="testing-notifications"></a>Test di notifiche
+## <a name="testing-notifications"></a>Le notifiche di test
 
-Le notifiche (locali e remote) possono essere correttamente verificate solo in un dispositivo, ma può essere simulati mediante un **JSON** file nel simulatore iOS.
+Notifiche (locali e remote) possono essere correttamente testate solo in un dispositivo, ma può essere simulati usando un **JSON** file nel simulatore iOS.
 
 ### <a name="testing-on-apple-watch"></a>Test su Apple Watch
 
-Durante il test di notifiche in un Apple Watch, tenere presente che [documentazione di Apple](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html) indica le operazioni seguenti:
+Quando si testa le notifiche in un Apple Watch, tenere presente che [documentazione di Apple](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html) indica quanto segue:
 
-> Quando una delle notifiche dell'app locale o remoto arriva in un iPhone dell'utente, iOS determina se visualizzare la notifica su iPhone o l'Apple Watch.
+> Quando una delle notifiche locali o remoti dell'app viene recapitato in un iPhone dell'utente, iOS decide se visualizzare la notifica per iPhone o per l'Apple Watch.
 
-Questo è alluding al fatto che iOS decide se viene visualizzata una notifica su iPhone o l'espressione di controllo. Se l'iPhone associata è attiva quando viene ricevuta una notifica, la notifica è probabile che vengano visualizzati su iPhone e *non* indirizzato per l'espressione di controllo.
+Ciò è alluding al fatto che iOS decide se verrà visualizzata una notifica per iPhone o per le espressioni di controllo. Se l'iPhone associato è attiva quando viene ricevuta una notifica, la notifica è probabile che vengano visualizzati su iPhone e *non* indirizzato per l'espressione di controllo.
 
-Per garantire che la notifica viene visualizzata nell'orologio, disattivare la schermata di iPhone (premendo il pulsante di alimentazione, una volta) o si lascia passare alla modalità sospensione. Se l'orologio associato è compreso nell'intervallo, offre una potenza e attrezzatura su in alcun modo, la notifica verrà indirizzato sono sul e le espressioni di controllo (accompagnato da un tipo complesso).
+Per garantire che la notifica viene visualizzata nell'orologio, disattivare lo schermo di iPhone (premendo il pulsante di alimentazione, una volta) o lasciare che vanno in sospensione. Se Watch associato è compreso nell'intervallo, alimentazione e indossato su in alcun modo, la notifica verrà indirizzato esiste e vengono visualizzati nella finestra di espressioni di controllo (accompagnati da un sottile).
 
 ### <a name="testing-on-the-ios-simulator"></a>Il test nel simulatore iOS
 
-Si *deve* forniscono un payload JSON test durante il test in modalità di notifica nel simulatore iOS. Impostare il percorso di **gli argomenti di esecuzione personalizzato** finestra in Visual Studio per Mac.
+Si *necessario* fornire un payload JSON di test durante il test in modalità di notifica nel simulatore iOS. Impostare il percorso nel **gli argomenti di esecuzione personalizzata** finestra in Visual Studio per Mac.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Visual Studio per Mac visualizzerà le opzioni aggiuntive quando un'estensione di espressioni di controllo è impostata come il **progetto di avvio**.
-Fare clic sul progetto di estensione delle espressioni di controllo e scegliere **eseguire con > parametri personalizzato...** :
+Visual Studio per Mac visualizzerà le opzioni aggiuntive quando un'estensione di espressioni di controllo è impostata come la **progetto di avvio**.
+Pulsante destro del mouse sul progetto di estensione di espressioni di controllo e scegliere **eseguire con > parametri personalizzati...** :
     
-[![](notifications-images/runwith-customparams-sml.png "In esecuzione con le proprietà personalizzate")](notifications-images/runwith-customparams.png#lightbox)
+[![](notifications-images/runwith-customparams-sml.png "Esecuzione con le proprietà personalizzate")](notifications-images/runwith-customparams.png#lightbox)
     
-Verrà visualizzata la **argomenti esecuzione** finestra che contiene un **WatchKit** scheda. Selezionare **notifica** e fornire un payload JSON, quindi premere **Execute** per avviare l'applicazione di espressioni di controllo nel simulatore:
+Verrà visualizzata la **gli argomenti di esecuzione** finestra che contiene un **WatchKit** scheda. Selezionare **Notification** e specificare un payload JSON, quindi premere **Execute** per avviare l'app watch nel simulatore:
     
 [![](notifications-images/runwith-execargs-sml.png "Selezionare l'impostazione predefinita di Payload di notifica")](notifications-images/runwith-execargs.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Per impostare l'estensione di espressioni di controllo per modificare il payload di notifica di prova rapida di Visual Studio il **le proprietà del progetto**. Passare al **Debug** sezione e selezionare un file JSON notifiche nell'elenco (verranno automaticamente visualizzate tutti i file JSON inclusi nel progetto).
+Per impostare il payload di notifica di prova nella scelta di Visual Studio sull'estensione di espressioni di controllo per modificare la **proprietà del progetto**. Andare alla **Debug** sezione e selezionare un file JSON delle notifiche nell'elenco (verrà elencato automaticamente tutti i file JSON inclusi nel progetto).
     
-[![](notifications-images/runwith-execargs-sml-vs.png "Selezionare un file JSON di notifiche")](notifications-images/runwith-execargs-vs.png#lightbox)
+[![](notifications-images/runwith-execargs-sml-vs.png "Selezionare un file JSON delle notifiche")](notifications-images/runwith-execargs-vs.png#lightbox)
 
-Quando l'estensione di espressioni di controllo è il **progetto di avvio**, Visual Studio visualizzerà le opzioni aggiuntive, come illustrato di seguito. Scegliere una del **notifica** opzioni per avviare l'applicazione di espressioni di controllo **notifica** modalità (utilizzando il file JSON selezionato nella finestra proprietà):
+Quando l'estensione di espressioni di controllo è il **progetto di avvio**, Visual Studio visualizzerà le opzioni aggiuntive, come illustrato di seguito. Scegliere una delle **Notification** le opzioni per avviare l'app watch in **notifica** modalità (usando il file JSON selezionato nella finestra proprietà):
     
-![](notifications-images/runwith-vs.png "Il menu di dispositivo")
+![](notifications-images/runwith-vs.png "Menu del dispositivo")
 
 -----
 
-Quando si verifica nel simulatore con il file JSON di payload predefinito, il controller di notifica predefinito è simile al seguente:
+Il controller di notifica predefinito aspetto simile al seguente durante il test nel simulatore con il file JSON di payload predefinito:
 
-![](notifications-images/notification-debug-sml.png "Una notifica di esempio")
+![](notifications-images/notification-debug-sml.png "Un esempio di notifica")
 
-È anche possibile usare il [riga di comando](~/ios/watchos/troubleshooting.md#command_line) per avviare il simulatore iOS.
+È anche possibile usare la [riga di comando](~/ios/watchos/troubleshooting.md#command_line) per avviare il simulatore iOS.
 
 ### <a name="example-notification-payload"></a>Payload di notifica di esempio
 
-Nel [Watch Kit catalogo](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/) esempio vi è un esempio di file payload JSON **NotificationPayload.json** (elencati di seguito).
+Nel [catalogo Kit Watch](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/) esempio vi è un file JSON di esempio payload **NotificationPayload.json** (elencati di seguito).
 
 ```csharp
 {
@@ -151,6 +151,6 @@ Nel [Watch Kit catalogo](https://developer.xamarin.com/samples/monotouch/WatchKi
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [WatchNotifications (notifiche locale) (esempio)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)
+- [WatchNotifications (notifiche locali) (esempio)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)
 - [WatchKitCatalog (esempio)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/)
-- [Documenti di Apple Watch Kit notifiche](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)
+- [Documentazione di Apple Watch Kit notifiche](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

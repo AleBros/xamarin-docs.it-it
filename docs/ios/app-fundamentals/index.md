@@ -4,15 +4,15 @@ description: Questo documento include collegamenti alle varie guide che descrivo
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/21/2017
-ms.openlocfilehash: de337291554e81a2434dcc30c163f4789fc832eb
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: a40227454b597578ff1c1c247b326e523c23493b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111212"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110472"
 ---
 # <a name="xamarinios-application-fundamentals"></a>Nozioni fondamentali dell'applicazione xamarin. IOS
 
@@ -48,7 +48,7 @@ Questo articolo esamina come usare le immagini in xamarin. IOS, le immagini di s
 
 ## <a name="localizationiosapp-fundamentalslocalizationindexmd"></a>[Localizzazione](~/ios/app-fundamentals/localization/index.md)
 
-Questa guida illustra l'aggiunta di codifiche a un'applicazione xamarin. IOS per il supporto di internazionalizzazione.
+Questa guida illustra l'aggiunta delle codifiche a un'applicazione xamarin. IOS per il supporto di internazionalizzazione.
 
 ## <a name="working-with-property-listsiosapp-fundamentalsindexmd"></a>[Utilizzo degli elenchi di proprietà](~/ios/app-fundamentals/index.md)
 
@@ -60,7 +60,7 @@ Apple ha introdotto numerosi miglioramenti al sia sicurezza e privacy in iOS 10 
 
 ## <a name="threadingiosapp-fundamentalsthreadingmd"></a>[Threading](~/ios/app-fundamentals/threading.md)
 
-Questo articolo illustra il threading in un'applicazione xamarin. IOS e un po' parla il pool di thread .NET, applicazioni reattive e operazioni di garbage collection.
+Questo articolo illustra il threading in un'applicazione xamarin. IOS e comunica con un po' sui pool di thread .NET, applicazioni reattive e operazioni di garbage collection.
 
 ## <a name="touchiosapp-fundamentalstouchindexmd"></a>[Tocco](~/ios/app-fundamentals/touch/index.md)
 

@@ -3,30 +3,30 @@ title: Tipi di carattere
 ms.prod: xamarin
 ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
-author: topgenorth
-ms.author: toopge
-ms.date: 04/13/2018
-ms.openlocfilehash: 086576ea7d806bb0768fbe4563df7fca99244ccb
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+author: conceptdev
+ms.author: crdun
+ms.date: 09/0/2018
+ms.openlocfilehash: fb0e1c42efc6bb51dcd899c7e6017007a82d5c7f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31044821"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105935"
 ---
 # <a name="fonts"></a>Tipi di carattere
 
 ## <a name="overview"></a>Panoramica
 
-A partire da livello API 26, Android SDK consente i tipi di carattere deve essere trattato come risorse, come un layout o drawables. Il [Android supporto libreria 26 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/26.1.0.1) verrà backport il nuovo tipo di carattere dell'API per le app destinate a livello di API 14 o versione successiva.
+A partire da 26 a livello di API, i tipi di carattere da trattare come risorse, come un layout consente di Android SDK o drawable. Il [Android NuGet 26 della libreria di supporto](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/26.1.0.1) verrà esegue il backporting nuovo tipo di carattere dell'API per le app destinate a livello API 14 o successivo.
 
-Dopo aver interessati a 26 API o installando v26 la libreria di supporto per Android, esistono due modi per utilizzare i tipi di carattere in un'applicazione Android:
+Dopo aver destinata ad API 26 o installare la libreria di supporto Android v26, esistono due modi per usare i tipi di carattere in un'applicazione Android:
 
-1. **Il tipo di carattere come risorsa Android pacchetto** &ndash; questo modo si garantisce che il tipo di carattere sia sempre disponibile per l'applicazione, ma aumenterà le dimensioni del file APK. 
-2. **Scaricare i tipi di carattere** &ndash; Android supporta inoltre il download di un tipo di carattere da un _provider carattere_. Il provider di tipi di carattere controlla se nel dispositivo è già il tipo di carattere. Se necessario, il tipo di carattere verrà scaricato e memorizzato nella cache del dispositivo. Questo tipo di carattere può essere condiviso tra più applicazioni.
+1. **Creare un pacchetto il tipo di carattere come una risorsa di Android** &ndash; ciò garantisce che il tipo di carattere è sempre disponibile per l'applicazione, ma aumenterà le dimensioni dell'APK. 
+2. **Scaricare i tipi di carattere** &ndash; Android supporta anche il download di un tipo di carattere da un _provider del tipo di carattere_. Il provider del tipo di carattere controlla se il tipo di carattere è già presente nel dispositivo. Se necessario, il tipo di carattere verrà scaricato e memorizzato nella cache del dispositivo. Questo tipo di carattere può essere condivisi tra più applicazioni.
 
-Tipi di carattere simili (o un tipo di carattere che può avere diversi stili diversi) può essere raggruppato in _famiglie_. Ciò consente agli sviluppatori di specificare determinati attributi del tipo di carattere, ad esempio il peso, e Android verrà selezionato automaticamente il tipo di carattere appropriato dalla famiglia di caratteri.
+I tipi di carattere simile (o un tipo di carattere che può avere diversi stili diversi) possa essere raggruppato in _famiglie di caratteri_. Ciò consente agli sviluppatori di specificare determinati attributi del tipo di carattere, ad esempio di peso relativo, e Android selezionerà automaticamente il tipo di carattere appropriato dalla famiglia di caratteri.
 
-V26 la libreria di supporto Android verrà backport supporto per i tipi di carattere per il livello di API 26. Se la destinazione i precedenti livelli di API, è necessario dichiarare il `app` spazio dei nomi XML e di assegnare i vari attributi di tipo di carattere utilizzando il `android:` dello spazio dei nomi e `app:` dello spazio dei nomi. Se solo il `android:` viene utilizzato lo spazio dei nomi, quindi i tipi di carattere non saranno visualizzati i dispositivi che eseguono il livello API 25 o inferiore. Questo frammento XML dichiara, ad esempio, un nuovo [ _famiglia di caratteri_ ](#font_families) risorse di livello API 14 e versioni successiva:
+La libreria di supporto Android v26 verrà esegue il backporting supporto per i tipi di carattere a livello di API 26. Quando la destinazione i livelli API precedenti, è necessario dichiarare la `app` spazio dei nomi XML e denominare i vari attributi del tipo di carattere usando la `android:` dello spazio dei nomi e il `app:` dello spazio dei nomi. Se solo il `android:` viene usato lo spazio dei nomi, quindi i tipi di carattere non saranno visualizzati i dispositivi che eseguono livello API 25 o inferiore. Ad esempio, questo frammento di codice XML dichiara una nuova [ _famiglia di caratteri_ ](#font_families) risorsa che funzionerà nel livello API 14 e versioni successiva:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -44,7 +44,7 @@ V26 la libreria di supporto Android verrà backport supporto per i tipi di carat
 </font-family>
 ```
 
-Come tipi di carattere forniti da un'applicazione Android in modo corretto, può essere applicati a un widget dell'interfaccia utente impostando il [ `fontFamily` attributo](https://developer.android.com/reference/android/widget/TextView.html#attr_android:fontFamily). Ad esempio, il frammento di codice seguente viene illustrato come visualizzare un tipo di carattere in un oggetto TextView:
+Purché i tipi di carattere vengono forniti da un'applicazione Android in modo corretto, può essere applicati a un widget dell'interfaccia utente impostando il [ `fontFamily` attributo](https://developer.android.com/reference/android/widget/TextView.html#attr_android:fontFamily). Ad esempio, il frammento di codice seguente viene illustrato come visualizzare un tipo di carattere in un controllo TextView:
 
 ```xml
 <TextView
@@ -56,26 +56,26 @@ Come tipi di carattere forniti da un'applicazione Android in modo corretto, può
     android:layout_height="wrap_content" />
 ```
 
-Questa Guida verrà innanzitutto illustrato come utilizzare i tipi di carattere come risorsa di Android e passare quindi illustrato come scaricare i tipi di carattere in fase di esecuzione.
+Questa Guida verrà innanzitutto illustrato come utilizzare i tipi di carattere come una risorsa di Android e quindi passare a illustrare come scaricare i tipi di carattere in fase di esecuzione.
 
 ## <a name="fonts-as-a-resource"></a>Tipi di carattere come una risorsa
 
-Assemblaggio di un tipo di carattere in un file APK di Android garantisce che sia sempre disponibile per l'applicazione. Un file di caratteri (entrambi una. TTF o un oggetto. File OTF) viene aggiunto a un'applicazione di xamarin come qualsiasi altra risorsa, copiando i file in una sottodirectory nella **risorse** cartella di un progetto xamarin. Risorse di tipi di carattere vengono mantenute un **carattere** sottodirectory del **risorse** nella cartella del progetto. 
+Creazione del pacchetto di un tipo di carattere in un file APK Android assicura che sia sempre disponibile per l'applicazione. Un file del tipo di carattere (entrambi una. TTF o un oggetto. File OTF) viene aggiunto a un'applicazione xamarin. Android come qualsiasi altra risorsa, copiando i file in una sottodirectory il **risorse** nella cartella di un progetto xamarin. Android. Le risorse di tipi di carattere vengono mantenute in un **font** sottodirectory delle **risorse** cartella del progetto. 
 
 > [!NOTE]
-> I tipi di carattere deve essere un **azione di compilazione** di **AndroidResource** o non sono verranno inserite nell'APK finale. L'operazione di compilazione deve essere impostato automaticamente dall'IDE.
+> I tipi di carattere deve avere una **Build Action** dei **AndroidResource** o verranno non inserite nell'APK finale. L'azione di compilazione deve essere impostata automaticamente dall'IDE.
 
-Quando sono presenti molti file di caratteri simili (ad esempio, lo stesso carattere con diversi fattori di ponderazione o stili) è possibile raggrupparli in una famiglia di caratteri.
+Quando sono presenti molti file di caratteri simili (ad esempio, lo stesso carattere con pesi diversi o stili) è possibile raggrupparle in una famiglia di caratteri.
 
 <a name="font_families" />
 
 ### <a name="font-families"></a>Famiglie di caratteri
 
-Una famiglia di caratteri è un set di tipi di carattere con stili e il peso. Ad esempio, potrebbero essere presenti i file del tipo di carattere per i tipi di carattere grassetto o corsivo. La famiglia di caratteri è definita da `font` elementi in un file XML che viene mantenuto nel **risorse/tipo di carattere** directory. Ogni famiglia di caratteri deve avere i propri file XML.
+Una famiglia di caratteri è un set di tipi di carattere dotati di stili e pesi diversi. Ad esempio, potrebbero essere presenti file del tipo di carattere per i tipi di carattere grassetto o corsivo. La famiglia di caratteri è definita da `font` elementi in un file XML che viene mantenuta nel **risorse/tipo di carattere** directory. Ogni famiglia di caratteri deve avere i propri file XML.
 
-Per creare una famiglia di caratteri, prima di aggiungere tutti i tipi di carattere per il **risorse/tipo di carattere** cartella. Creare quindi un nuovo file XML nella cartella del carattere per la famiglia di caratteri. Il nome del file XML non dispone di alcuna affinità o la relazione per i tipi di carattere viene fatto riferimento; il file di risorse può essere qualsiasi nome di file di risorse di Android valido. Il file XML contiene una radice `font-family` elemento che contiene uno o più `font` elementi. Ogni `font` elemento dichiara gli attributi di un tipo di carattere.
+Per creare una famiglia di caratteri, aggiungere prima tutti i tipi di carattere per il **risorse/tipo di carattere** cartella. Creare quindi un nuovo file XML nella cartella del tipo di carattere per la famiglia di caratteri. Il nome del file XML non ha alcuna relazione o affinità per i tipi di carattere viene fatto riferimento. il file di risorse può essere qualsiasi nome di file di risorse Android legali. Questo file XML avranno una radice `font-family` elemento che contiene uno o più `font` elementi. Ogni `font` elemento dichiara gli attributi di un tipo di carattere.
 
-Il codice XML seguente è riportato un esempio di una famiglia di caratteri per il _origini SAN Pro_ carattere che definisce molti pesi di diverso tipo di carattere. Viene salvato come file di **risorse/tipo di carattere** cartella denominata **sourcesanspro.xml**:
+Il codice XML seguente è riportato un esempio di una famiglia di caratteri per il _origini nomi alternativi del soggetto Pro_ carattere che definisce molti pesi di diverso tipo di carattere. Il valore viene salvato come file nei **risorse/tipo di carattere** cartella denominata **sourcesanspro.xml**:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -102,24 +102,24 @@ Il codice XML seguente è riportato un esempio di una famiglia di caratteri per 
 </font-family>
 ```
 
-Il `fontStyle` attributo dispone di due valori possibili:
+Il `fontStyle` attributo è possibili due valori:
 
-* **normale** &ndash; un tipo di carattere normale
-* **corsivo** &ndash; un tipo di carattere corsivo
+* **Normal** &ndash; un tipo di carattere normale
+* **corsivo** &ndash; un carattere corsivo
 
-Il `fontWeight` attributo corrisponde al foglio di stile CSS `font-weight` attributo e si intende lo spessore del carattere. Si tratta di un valore compreso nell'intervallo da 100 a 900. Nell'elenco seguente vengono descritti i valori di peso comuni del tipo di carattere e il nome:
+Il `fontWeight` attributo corrisponde al foglio di stile CSS `font-weight` attributo e si intende lo spessore del tipo di carattere. Si tratta di un valore compreso nell'intervallo da 100 a 900. Nell'elenco seguente descrive i valori di peso comuni del tipo di carattere e il relativo nome:
 
 * **Thin** &ndash; 100
-* **Molto chiaro** &ndash; 200
-* **Luce** &ndash; 300
-* **Normale** &ndash; 400
-* **Media** &ndash; 500
-* **Semi grassetto** &ndash; 600
-* **Grassetto** &ndash; 700
-* **Nero** &ndash; 800
+* **Estremamente leggero** &ndash; 200
+* **Light** &ndash; 300
+* **Normal** &ndash; 400
+* **Medium** &ndash; 500
+* **Semi Bold** &ndash; 600
+* **Bold** &ndash; 700
+* **Grassetto extra** &ndash; 800
 * **Nero** &ndash; 900
 
-Dopo avere definita una famiglia di caratteri, può essere utilizzato in modo dichiarativo mediante l'impostazione di `fontFamily`, `textStyle`, e `fontWeight` attributi nel file di layout.  Ad esempio il frammento XML seguente imposta un tipo di carattere 400 peso (normale) e uno stile di testo in corsivo:
+Dopo aver definita una famiglia di caratteri, può essere utilizzato in modo dichiarativo impostando il `fontFamily`, `textStyle`, e `fontWeight` attributi nel file di layout.  Ad esempio il frammento XML seguente imposta un tipo di carattere 600 peso (normale) e uno stile del testo in corsivo:
 
 ```xml
 <TextView
@@ -136,7 +136,7 @@ Dopo avere definita una famiglia di caratteri, può essere utilizzato in modo di
 
 ### <a name="programmatically-assigning-fonts"></a>Assegnazione a livello di programmazione di tipi di carattere
 
-Tipi di carattere possibile impostare a livello di codice utilizzando il [ `Resources.GetFont` ](https://developer.android.com/reference/android/content/res/Resources.html#getFont(int)) metodo per recuperare un [ `Typeface` ](https://developer.android.com/reference/android/graphics/Typeface.html) oggetto. Molte visualizzazioni hanno un `TypeFace` proprietà che può essere utilizzato per assegnare il tipo di carattere per il widget. Frammento di codice seguente viene illustrato come impostare a livello di codice il tipo di carattere in un oggetto TextView:
+I tipi di carattere può essere impostate a livello di programmazione tramite le [ `Resources.GetFont` ](https://developer.android.com/reference/android/content/res/Resources.html#getFont(int)) metodo per recuperare un [ `Typeface` ](https://developer.android.com/reference/android/graphics/Typeface.html) oggetto. Molte visualizzazioni hanno un `TypeFace` proprietà che può essere usata per assegnare il tipo di carattere per il widget. Questo frammento di codice mostra come impostare a livello di codice il tipo di carattere in un controllo TextView:
 
 ```csharp
 Android.Graphics.Typeface typeface = this.Resources.GetFont(Resource.Font.caveat_regular);
@@ -144,7 +144,7 @@ textView1.Typeface = typeface;
 textView1.Text = "Changed the font";
 ```
 
-Il `GetFont` metodo caricherà automaticamente il primo tipo di carattere all'interno di una famiglia di caratteri.  Per caricare un tipo di carattere che corrisponde a uno stile specifico, utilizzare il `Typeface.Create` metodo. Questo metodo tenterà di caricare un tipo di carattere che corrisponde allo stile specificato. Ad esempio, questo frammento di codice tenterà di caricare in grassetto `Typeface` oggetto da una famiglia di caratteri che è definita in **risorse/tipi di carattere**:
+Il `GetFont` metodo lo caricherà automaticamente il primo tipo di carattere all'interno di una famiglia di caratteri.  Per caricare un tipo di carattere che corrisponde a uno stile specifico, usare il `Typeface.Create` (metodo). Questo metodo tenterà di caricare un tipo di carattere che corrisponde a uno stile specificato. Ad esempio, questo frammento di codice tenterà di caricare un bold `Typeface` da una famiglia di caratteri che è definita nell'oggetto **risorse/tipi di carattere**:
 
 ```csharp
 var typeface = Typeface.Create("<FONT FAMILY NAME>", Android.Graphics.TypefaceStyle.Bold);
@@ -153,20 +153,20 @@ textView1.Typeface = typeface;
 
 ## <a name="downloading-fonts"></a>Download di tipi di carattere
 
-Invece di creazione del pacchetto dei tipi di carattere come una risorsa dell'applicazione, Android è possibile scaricare i tipi di carattere da un'origine remota. Ciò avrà l'effetto della riduzione delle dimensioni dell'APK auspicabile. 
+Invece di packaging i tipi di carattere come una risorsa applicazione, Android è possibile scaricare i tipi di carattere da un'origine remota. Ciò avrà l'effetto di ridurre le dimensioni dell'APK auspicabile. 
 
-Tipi di carattere vengono scaricati con l'assistenza di un _provider carattere_. Si tratta di un provider di contenuti specializzato che gestisce il download e memorizzazione nella cache dei tipi di carattere per tutte le applicazioni nel dispositivo. 8.0 Android include un provider di tipi di carattere per i tipi di carattere da scaricare il [Google carattere Repository](http://fonts.google.com). Questo provider di tipi di carattere predefinito è backported a livello di API 14 con v26 la libreria di supporto per Android.
+I tipi di carattere vengono scaricati con l'assistenza di un _provider di tipo di carattere_. Si tratta di un provider di contenuti specializzato che gestisce il download e la memorizzazione nella cache dei tipi di carattere per tutte le applicazioni nel dispositivo. Android 8.0 è incluso un provider del tipo di carattere per i tipi di carattere da scaricare il [Font Google Repository](http://fonts.google.com). Questo provider di tipo di carattere predefinito viene eseguito il backport per il livello API 14 con v26 la libreria di supporto per Android.
 
-Quando un'app esegue una richiesta per un tipo di carattere, il provider di tipi di carattere verrà innanzitutto verificare se nel dispositivo è già il tipo di carattere. In caso contrario, tenterà di scaricare il tipo di carattere. Se il tipo di carattere non può essere scaricato, quindi Android verrà utilizzato il carattere di sistema predefinito. Dopo aver scaricato il tipo di carattere, è disponibile per tutte le applicazioni nel dispositivo, non solo dell'applicazione che ha effettuato la richiesta iniziale.
+Quando un'app effettua una richiesta per un tipo di carattere, il provider del tipo di carattere verrà prima di tutto verificare se il tipo di carattere è già presente nel dispositivo. In caso contrario tenterà quindi di scaricare il tipo di carattere. Se il tipo di carattere non può essere scaricato, quindi Android userà il carattere di sistema predefinito. Dopo aver scaricato il tipo di carattere, è disponibile per tutte le applicazioni sul dispositivo, non solo le app che ha effettuato la richiesta iniziale.
 
-Quando viene effettuata una richiesta per il download di un tipo di carattere, l'app non direttamente una query il provider di tipi di carattere. App utilizza invece un'istanza di [ `FontsContract` ](https://developer.android.com/reference/android/provider/FontsContract.html) API (o [ `FontsContractCompat` ](https://developer.android.com/reference/android/support/v4/provider/FontsContractCompat.html) se viene utilizzato il 26 libreria di supporto).  
+Quando viene effettuata una richiesta per il download di un tipo di carattere, l'app non direttamente una query del provider del tipo di carattere. Al contrario, le app usano un'istanza del [ `FontsContract` ](https://developer.android.com/reference/android/provider/FontsContract.html) API (o il [ `FontsContractCompat` ](https://developer.android.com/reference/android/support/v4/provider/FontsContractCompat.html) se viene utilizzato il 26 Library di supporto).  
 
-8.0 Android supporta i caratteri in corso in due modi diversi:
+Android 8.0 supporta i caratteri in corso in due modi diversi:
 
-1. **Dichiarare i tipi di carattere trasferibili come risorsa** &ndash; un'app può dichiarare i tipi di carattere scaricabile per Android tramite file di risorse XML. Questi file conterrà tutti i metadati che è necessario scaricare in modo asincrono i tipi di carattere quando l'app viene avviata e memorizzarli nella cache nel dispositivo Android.
-2. **A livello di programmazione** &ndash; API nel livello API Android 26 consentono di scaricare i tipi di carattere a livello di programmazione, mentre l'applicazione è in esecuzione. App creerà un `FontRequest` per un determinato tipo di carattere, quindi passare questo oggetto per il `FontsContract` classe. Il `FontsContract` accetta il `FontRequest` e recupera il tipo di carattere da un _provider carattere_. Android in modo sincrono scaricherà il tipo di carattere. Un esempio di creazione di un `FontRequest` verrà illustrato più avanti in questa Guida.
+1. **Dichiarare i tipi di carattere scaricabile come una risorsa** &ndash; un'app può dichiarare tipi di carattere scaricabile per Android tramite i file di risorse XML. Tali file conterrà tutti i metadati da scaricare in modo asincrono i tipi di carattere quando l'app viene avviata e memorizzarli nella cache nel dispositivo Android.
+2. **A livello di programmazione** &ndash; API nel livello API Android 26 consentono a un'applicazione per il download a livello di codice, i tipi di carattere mentre è in esecuzione l'applicazione. App verranno creata una `FontRequest` per un determinato tipo di carattere, quindi passare questo oggetto per il `FontsContract` classe. Il `FontsContract` accetta il `FontRequest` e recupera il tipo di carattere da un _provider del tipo di carattere_. Android verrà scaricato in modo sincrono il tipo di carattere. Un esempio di creazione di un `FontRequest` verrà illustrato più avanti in questa Guida.
 
-Indipendentemente da quale approccio è usato, è possibile scaricare i file di risorse che devono essere aggiunte all'applicazione xamarin prima i tipi di carattere. In primo luogo, il tipo di carattere deve essere dichiarato in un file XML di **risorse/tipo di carattere** directory come parte di una famiglia di caratteri. Questo frammento è riportato un esempio di come i tipi di carattere da scaricare il [raccolta di tipi di carattere di Google Open Source](https://fonts.google.com) utilizzando il provider di tipi di carattere predefinito che viene fornito con Android 8.0 (o libreria di supporto v26):
+Indipendentemente da quale approccio viene usata, è possibile scaricare i file di risorse che devono essere aggiunto all'applicazione xamarin. Android prima i tipi di carattere. In primo luogo, il tipo di carattere deve essere dichiarati in un file XML nel **risorse/tipo di carattere** directory come parte di una famiglia di caratteri. Questo frammento di codice è riportato un esempio di come i tipi di carattere da scaricare il [raccolta Open Source di Google i tipi di carattere](https://fonts.google.com) usando il provider del tipo di carattere predefinito che viene fornito con Android 8.0 (o libreria di supporto v26):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -184,20 +184,20 @@ Indipendentemente da quale approccio è usato, è possibile scaricare i file di 
 </font-family>
 ```
 
-Il `font-family` elemento contiene i seguenti attributi, le informazioni che è necessario per scaricare i tipi di carattere Android di dichiarazione:
+Il `font-family` elemento contiene gli attributi seguenti, dichiarare le informazioni che Android richiede di scaricare i tipi di carattere:
 
-1. **fontProviderAuthority** &ndash; l'autorità del Provider di tipi di carattere da utilizzare per la richiesta.
-2. **fontPackage** &ndash; il pacchetto per il Provider di tipi di carattere da utilizzare per la richiesta. Viene utilizzato per verificare l'identità del provider.
-3. **fontQuery** &ndash; è una stringa che consentirà il provider di tipi di carattere di individuare il tipo di carattere richiesto. Dettagli sulla query di tipo di carattere sono specifici del provider di tipi di carattere. Il [ `QueryBuilder` ](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/DownloadableFonts/QueryBuilder.cs) classe il [tipi di carattere trasferibili](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/) app di esempio fornisce alcune informazioni sul formato di query per i tipi di carattere da Google caratteri aprire raccolta di origine.
+1. **fontProviderAuthority** &ndash; l'autorità del Provider del tipo di carattere da utilizzare per la richiesta.
+2. **fontPackage** &ndash; il pacchetto per il Provider del tipo di carattere da utilizzare per la richiesta. Ciò consente di verificare l'identità del provider.
+3. **fontQuery** &ndash; questa è una stringa che consenta il provider del tipo di carattere di individuare il tipo di carattere richiesto. Informazioni dettagliate sulla query di tipo di carattere sono specifiche del provider del tipo di carattere. Il [ `QueryBuilder` ](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/DownloadableFonts/QueryBuilder.cs) classe il [tipi di carattere scaricabile](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/) app di esempio fornisce alcune informazioni sul formato di query per i tipi di carattere della raccolta di origine aprire Google i tipi di carattere.
 4. **fontProviderCerts** &ndash; con l'elenco dei set di hash per i certificati che il provider deve essere firmato con una matrice di risorse.
 
-Una volta definiti i tipi di carattere, potrebbe essere necessario fornire informazioni di _i certificati di tipo di carattere_ coinvolti con il download.
+Una volta definiti i tipi di carattere, potrebbe essere necessario fornire informazioni sul _i certificati di tipo di carattere_ coinvolti con il download.
 
 ### <a name="font-certificates"></a>Certificati di tipo di carattere
 
-Se il provider di tipi di carattere non è stato preinstallato sul dispositivo o se l'app Usa la `Xamarin.Android.Support.Compat` libreria Android richiede i certificati di sicurezza del provider di tipi di carattere. Questi certificati verranno elencati in un file di risorse di matrice che viene mantenuto in **risorse/valori** directory. 
+Se il provider del tipo di carattere non è già preinstallato nel dispositivo o se l'app Usa il `Xamarin.Android.Support.Compat` , la libreria Android richiede i certificati di sicurezza del provider del tipo di carattere. Questi certificati verranno elencati in un file di risorse di matrice che viene mantenuto nel **risorse/valori** directory. 
 
-Ad esempio, il seguente codice XML è denominato **Resources/values/fonts_cert.xml** e archivia i certificati per il provider di tipi di carattere Google: 
+Ad esempio, il codice XML seguente è denominato **Resources/values/fonts_cert.xml** e archivia i certificati per il provider del tipo di carattere Google: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -219,11 +219,11 @@ Ad esempio, il seguente codice XML è denominato **Resources/values/fonts_cert.x
 </resources>
 ```
 
-Questi file di risorse sul posto, l'applicazione è in grado di scaricare i tipi di carattere.
+Con questi file di risorse posto, l'app è in grado di scaricare i tipi di carattere.
 
-### <a name="declaring-downloadable-fonts-as-resources"></a>Dichiarazione di tipi di carattere trasferibili come risorse
+### <a name="declaring-downloadable-fonts-as-resources"></a>La dichiarazione di tipi di carattere scaricabile come risorse
 
-Elencando i tipi di carattere scaricabile di **AndroidManifest.XML**, Android scaricherà i tipi di carattere in modo asincrono al primo avvio dell'app. Il tipo di carattere le stesse sono elencati in un file di risorse di matrice, simile al seguente: 
+Elencando i tipi di carattere scaricabile nel **androidmanifest. XML**, Android scaricherà i tipi di carattere in modo asincrono al primo avvio dell'app. Il tipo di carattere le stesse sono elencati in un file di risorse di matrice, simile alla seguente: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -234,37 +234,37 @@ Elencando i tipi di carattere scaricabile di **AndroidManifest.XML**, Android sc
 </resources>
 ```
 
-Per scaricare questi tipi di carattere, essi devono essere dichiarati **AndroidManifest.XML** aggiungendo `meta-data` come elemento figlio di `application` elemento. Ad esempio, se i tipi di carattere scaricabile vengono dichiarati in un file di risorse in **Resources/values/downloadable_fonts.xml**, quindi questo frammento di codice avrebbero dovuto essere aggiunto al manifesto: 
+Per scaricare questi tipi di carattere, essi devono essere dichiarati **androidmanifest. XML** aggiungendo `meta-data` come elemento figlio di `application` elemento. Ad esempio, se i tipi di carattere scaricabile vengono dichiarati in un file di risorse al **Resources/values/downloadable_fonts.xml**, quindi questo frammento di codice dovrà essere aggiunto al manifesto: 
 
 ```xml
 <meta-data android:name="downloadable_fonts" android:resource="@array/downloadable_fonts" />
 ```
 
-### <a name="downloading-a-font-with-the-font-apis"></a>Download di un tipo di carattere con le API di tipo di carattere
+### <a name="downloading-a-font-with-the-font-apis"></a>Download di un tipo di carattere con le API del tipo di carattere
 
-È possibile scaricare a livello di programmazione un tipo di carattere creando un [ `FontRequest` ](https://developer.android.com/reference/android/support/v4/provider/FontRequest.html) oggetto e passando che per il `FontContractCompat.RequestFont` metodo. Il `FontContractCompat.RequestFont` metodo sarà controllare innanzitutto se il tipo di carattere esistente nel dispositivo e quindi se necessario verrà in modo asincrono query il provider di tipi di carattere e provare a scaricare il tipo di carattere per l'app. Se `FontRequest` è riuscito a scaricare il tipo di carattere, Android verrà utilizzato il carattere di sistema predefinito. 
+È possibile scaricare a livello di codice un tipo di carattere creando un [ `FontRequest` ](https://developer.android.com/reference/android/support/v4/provider/FontRequest.html) oggetto e passandolo al `FontContractCompat.RequestFont` (metodo). Il `FontContractCompat.RequestFont` metodo prima di tutto controllare per verificare se il tipo di carattere presente nel dispositivo e quindi se necessario verranno in modo asincrono query il provider del tipo di carattere e provare a scaricare il tipo di carattere per l'app. Se `FontRequest` è in grado di scaricare il tipo di carattere Android userà il carattere di sistema predefinito. 
 
-Oggetto `FontRequest` oggetto contiene informazioni che verranno utilizzate dal provider di tipi di carattere per individuare e scaricare un tipo di carattere. Oggetto `FontRequest` richiede quattro tipi di informazioni:
+Oggetto `FontRequest` oggetto contiene informazioni che verranno utilizzate dal provider del tipo di carattere per individuare e scaricare un tipo di carattere. Oggetto `FontRequest` richiede quattro tipi di informazioni:
 
-1. **Tipo di carattere Provider autorità** &ndash; l'autorità del Provider di tipi di carattere da utilizzare per la richiesta.
-2. **Tipo di carattere pacchetto** &ndash; il pacchetto per il Provider di tipi di carattere da utilizzare per la richiesta. Viene utilizzato per verificare l'identità del provider.
-3. **Query di tipo di carattere** &ndash; è una stringa che consentirà il provider di tipi di carattere di individuare il tipo di carattere richiesto. Dettagli sulla query di tipo di carattere sono specifici del provider di tipi di carattere. I dettagli della stringa sono specifici del provider di tipi di carattere. Il [ `QueryBuilder` ](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/DownloadableFonts/QueryBuilder.cs) classe il [tipi di carattere trasferibili](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/) app di esempio fornisce alcune informazioni sul formato di query per i tipi di carattere da Google caratteri aprire raccolta di origine.
-4. **Tipo di carattere Provider certificati** &ndash; con l'elenco dei set di hash per i certificati che il provider deve essere firmato con una matrice di risorse. 
+1. **Tipo di carattere Provider autorità** &ndash; l'autorità del Provider del tipo di carattere da utilizzare per la richiesta.
+2. **Pacchetto del tipo di carattere** &ndash; il pacchetto per il Provider del tipo di carattere da utilizzare per la richiesta. Ciò consente di verificare l'identità del provider.
+3. **Query di tipo di carattere** &ndash; questa è una stringa che consenta il provider del tipo di carattere di individuare il tipo di carattere richiesto. Informazioni dettagliate sulla query di tipo di carattere sono specifiche del provider del tipo di carattere. I dettagli della stringa sono specifici del provider del tipo di carattere. Il [ `QueryBuilder` ](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/DownloadableFonts/QueryBuilder.cs) classe il [tipi di carattere scaricabile](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/) app di esempio fornisce alcune informazioni sul formato di query per i tipi di carattere della raccolta di origine aprire Google i tipi di carattere.
+4. **I certificati del Provider del tipo di carattere** &ndash; con l'elenco dei set di hash per i certificati il provider deve essere firmato con una matrice di risorse. 
 
-Questo frammento è riportato un esempio di un'istanza di un nuovo `FontRequest` oggetto:
+Questo frammento di codice è riportato un esempio di un'istanza di un nuovo `FontRequest` oggetto:
 
 ```csharp
 FontRequest request = new FontRequest("com.google.android.gms.fonts", "com.google.android.gms", <FontToDownload>, Resource.Array.com_google_android_gms_fonts_certs);
 ```
 
-Nel frammento precedente `FontToDownload` è una query che consentirà il tipo di carattere dalla raccolta di tipi di carattere di Google Open Source. 
+Nel frammento precedente `FontToDownload` è una query che consenta il tipo di carattere dalla raccolta Open Source di Google i tipi di carattere. 
 
-Prima di passarla il `FontRequest` per il `FontContractCompat.RequestFont` (metodo), sono presenti due oggetti che devono essere creati:
+Prima di passare il `FontRequest` per il `FontContractCompat.RequestFont` (metodo), sono presenti due oggetti che devono essere creati:
 
-* **`FontsContractCompat.FontRequestCallback`** &ndash; Questa è una classe astratta che deve essere esteso. È un callback che verrà richiamato quando `RequestFont` è terminato. Un'app xamarin deve creare una sottoclasse `FontsContractCompat.FontRequestCallback` ed eseguire l'override di `OnTypefaceRequestFailed` e `OnTypefaceRetrieved`, fornendo le azioni da intraprendere quando il download non riesce o riesce rispettivamente.
-* **`Handler`** &ndash; Si tratta di un `Handler` che verrà usato da `RequestFont` per scaricare il tipo di carattere in un thread, se necessario. Tipi di carattere deve **non** scaricate nel thread UI.
+* **`FontsContractCompat.FontRequestCallback`** &ndash; Si tratta di una classe astratta che deve essere esteso. Si tratta di un callback che verrà richiamato quando `RequestFont` viene completata. Un'app xamarin. Android deve creare una sottoclasse `FontsContractCompat.FontRequestCallback` ed eseguire l'override di `OnTypefaceRequestFailed` e `OnTypefaceRetrieved`, fornendo le azioni da intraprendere quando il download non riesce o riesce rispettivamente.
+* **`Handler`** &ndash; Si tratta di un `Handler` che verrà usato da `RequestFont` per scaricare il tipo di carattere in un thread, se necessario. I tipi di carattere dovrebbe **non** essere scaricato nel thread dell'interfaccia utente.
 
-Questo frammento è riportato un esempio di una classe c# che scarica in modo asincrono un carattere dalla raccolta di tipi di carattere di Google Open Source. Implementa il `FontRequestCallback` di interfaccia e genera un evento c# quando `FontRequest` è terminata. 
+Questo frammento di codice è riportato un esempio di un C# classe che scarica in modo asincrono un tipo di carattere da raccolta Open Source di Google i tipi di carattere. Implementa il `FontRequestCallback` interfaccia e genera un C# evento quando `FontRequest` ha terminato. 
 
 ```csharp
 public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
@@ -327,7 +327,7 @@ public class FontDownloadEventArg : EventArgs
 }
 ```
 
-Per usare questo supporto, un nuovo `FontDownloadHelper` viene creato e viene assegnato un gestore eventi:  
+Usare questo helper, un nuovo `FontDownloadHelper` viene creato e viene assegnato un gestore eventi:  
 
 ```csharp
 var fontHelper = new FontDownloadHelper();
@@ -341,7 +341,7 @@ fontHelper.DownloadFonts(this); // this is an Android Context instance.
 
 ## <a name="summary"></a>Riepilogo
 
-Questa guida illustrate le nuove API di Android 8.0 per supportare i tipi di carattere scaricabile e i tipi di carattere come risorse. È stato illustrato come incorporare i tipi di carattere in un file APK e il loro utilizzo in un layout. È stato inoltre illustrato come 8.0 Android supporta i caratteri in corso di un provider di tipi di carattere, a livello di programmazione o mediante la dichiarazione di tipo di carattere i metadati nel file di risorse.
+Questa guida ha illustrato le nuove API di Android 8.0 per supportare i tipi di carattere scaricabile e i tipi di carattere come risorse. È stato illustrato come incorporare i tipi di carattere esistente in un file APK e usarli in un layout. È stato inoltre illustrato come Android 8.0 supporta i tipi di carattere download da un provider del tipo di carattere, a livello di programmazione o mediante la dichiarazione del tipo di carattere i metadati nei file di risorse.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
@@ -351,8 +351,8 @@ Questa guida illustrate le nuove API di Android 8.0 per supportare i tipi di car
 - [FontsContractCompat](https://developer.android.com/reference/android/support/v4/provider/FontsContractCompat.html)
 - [Resources.GetFont](https://developer.android.com/reference/android/content/res/Resources.html#getFont(int))
 - [Carattere tipografico](https://developer.android.com/reference/android/graphics/Typeface.html)
-- [Supporto Android libreria 26 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/)
-- [Utilizzo di tipi di carattere in Android](https://www.youtube.com/watch?v=TfB-TsLFJdM)
+- [Podpora androidu NuGet della libreria 26](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/)
+- [Usando tipi di carattere in Android](https://www.youtube.com/watch?v=TfB-TsLFJdM)
 - [Specifica di spessore carattere CSS](https://www.w3.org/TR/css-fonts-3/#font-weight-numeric-values)
 - [Raccolta di tipi di carattere di Google Open Source](https://fonts.google.com/)
 - [Origine Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro)

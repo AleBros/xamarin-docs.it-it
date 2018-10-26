@@ -6,12 +6,12 @@ ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 256d5c81475be095c8fa0ab0408cbcf673c6b301
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f397cf595a9ae151c5f105341733b2c57023fe99
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997084"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109718"
 ---
 # <a name="xamarinforms-using-visual-basicnet"></a>Xamarin. Forms con Visual Basic.NET
 
@@ -27,7 +27,7 @@ Xamarin non supportano direttamente Visual Basic, seguire le istruzioni in quest
 Seguire questi passaggi per creare un progetto xamarin. Forms semplice che Usa Visual Basic:
 
 1. Creare una nuova *xamarin. Forms c#* soluzione che usa le librerie di classi portabile (PCL).
-Passare a **File > Nuovo progetto** e nel **nuovo progetto** finestra passare a **installati > Modelli > Visual c# > multipiattaforma** quindi scegliere  **Tra le App multipiattaforma (xamarin. Forms o Native) > xamarin. Forms**.
+Passare a **File > Nuovo progetto** e nel **nuovo progetto** finestra passare a **installati > Modelli > Visual C# > multipiattaforma** quindi scegliere **Tra App multipiattaforma (xamarin. Forms o Native) > xamarin. Forms**.
 
 2. Pulsante destro del mouse sulla soluzione e **Aggiungi > Nuovo progetto**.
 
@@ -79,7 +79,7 @@ Passare a **File > Nuovo progetto** e nel **nuovo progetto** finestra passare a 
     ```
 
 9. A questo punto è necessario in modo da puntare il nuovo progetto di Visual Basic i progetti iOS e Android.
-Fare clic sui **riferimenti** nodo i progetti iOS e Android per aprire il **gestione riferimenti**. Annullamento apice il la libreria portabile in c# e segni di graduazione nella libreria portabile di Visual Basic (non dimenticare, eseguire questa operazione per entrambi i progetti Android e iOS).
+Fare clic sui **riferimenti** nodo i progetti iOS e Android per aprire il **gestione riferimenti**. Annullamento apice il C# libreria portabile e segni di graduazione nella libreria portabile di Visual Basic (non dimenticare, eseguire questa operazione per entrambi i progetti Android e iOS).
 
    [![](xamarin-forms-images/add-vb-8-sml.png "Rimuovere il riferimento di progetto precedente, aggiungere riferimenti di Visual Basic")](xamarin-forms-images/add-vb-8.png#lightbox)
 
