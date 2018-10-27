@@ -1,31 +1,26 @@
 ---
-title: Ricaricamento in tempo reale
+title: Livereload Xamarin (anteprima)
 description: Verificare che le modifiche per il XAML riportato in tempo reale, senza richiedere un'altra compilazione e distribuzione.
 ms.prod: xamarin
 ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
 ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
-ms.date: 05/11/2018
-ms.openlocfilehash: f05b79e58a9fa87e13aeb45af2dbb46139051005
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+robots: noindex
+ms.date: 10/26/2018
+ms.openlocfilehash: bb30f9264cb5f3b762088e3523223b2bff8416b9
+ms.sourcegitcommit: ebc0b3838836ee5cf9e54d58866d23916664a43d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109991"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50142336"
 ---
-# <a name="xamarin-live-reload"></a>Xamarin Live Reload
-
-![Anteprima](~/media/shared/preview.png)
-
-Xamarin Live Reload consente **apportare modifiche a di XAML e visualizzarli in tempo reale, senza richiedere un'altra compilazione e distribuzione**. Eventuali modifiche apportate al XAML verranno ridistribuiti nella Salva e riportate nella destinazione di distribuzione.
-
-Dal momento che l'app viene compilato quando si usa Live Reload, funziona con tutte le librerie e i controlli di terze parti. Live works Ricarica su tutte le piattaforme xamarin. Forms supporta, tra cui Android, iOS e UWP e funziona su tutte le destinazioni di distribuzione valido, inclusi simulatori, emulatori e dispositivi fisici.
+# <a name="xamarin-live-reload-preview"></a>Livereload Xamarin (anteprima)
 
 > [!NOTE]
-> [L'anteprima di ricaricamento in tempo reale è terminata](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
->
-> È una discussione su questo sul [ ![partecipare a chat in https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+> L'anteprima di Xamarin Live Reload è terminato e desideriamo ringraziare tutti gli utenti per i commenti e suggerimenti. Leggere nostri [roadmap](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap) per Visual Studio 2019 per altre informazioni sulle nuove funzionalità di produttività che Microsoft sta lavorando per xamarin. Forms. Questa estensione rimarrà disponibile per Visual Studio 2017, ma non riceveranno gli aggiornamenti futuri.
+
+Xamarin Live Reload consente **apportare modifiche a di XAML e visualizzarli in tempo reale, senza richiedere un'altra compilazione e distribuzione**. Eventuali modifiche apportate al XAML verranno ridistribuiti nella Salva e riportate nella destinazione di distribuzione.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -86,7 +81,7 @@ Live works Ricarica con le modifiche apportate a qualsiasi file XAML. Le modific
 ## <a name="frequently-asked-questions"></a>Domande frequenti 
 ### <a name="is-xamarin-live-reload-available-on-visual-studio-for-mac"></a>È disponibile in Visual Studio per Mac Xamarin Live Reload? 
 
-La versione di anteprima iniziale di Xamarin Live Reload è disponibile solo per Visual Studio 2017. Supporto per Visual Studio per Mac è previsto per una versione futura.
+No, versione di anteprima di Xamarin Live Reload è disponibile solo per Visual Studio 2017.
 
 ### <a name="does-this-work-with-all-libraries-such-as-prism"></a>Ciò funziona con tutte le librerie, ad esempio Prism? 
 
@@ -94,7 +89,7 @@ Poiché è stata compilata, Live Reload funziona con tutte le librerie, ad esemp
 
 ### <a name="what-changes-does-live-reload-redeploy"></a>Le modifiche ridistribuisce ricaricamento in tempo reale? 
 
-Livereload si applica solo le modifiche apportate a XAML o CSS. Se si apportano modifiche a un file c#, sarà necessaria una ricompilazione. Supporto per il ricaricamento in c# è previsto per una versione futura.
+Livereload si applica solo le modifiche apportate a XAML o CSS. Se si apportano modifiche a un file c#, sarà necessaria una ricompilazione. 
 
 ### <a name="what-platforms-are-supported"></a>Quali piattaforme sono supportate? 
 
@@ -121,8 +116,8 @@ No. In effetti, è possibile anche avviare tutte le destinazioni di applicazioni
 
 * Supportato solo in Visual Studio.
 * Il collegamento deve essere impostato su **non collegare** o **solo collegamento Framework SDK** 
-* Ricaricamento delle risorse a livello di app (vale a dire **app** o i dizionari risorse condivisi), spostamento di app viene reimpostato. Questo problema verrà risolto nella prossima versione di anteprima.
-* Ricaricamento del ContentView attualmente è necessario ricaricare la pagina che lo contiene. Questo problema verrà risolto nella prossima versione di anteprima.
+* Ricaricamento delle risorse a livello di app (vale a dire **app** o i dizionari risorse condivisi), spostamento di app viene reimpostato. 
+* Ricaricamento del ContentView attualmente è necessario ricaricare la pagina che lo contiene.
 * Gli elementi contenenti AutomationId potrebbero verificarsi un errore di ricaricamento.
 * Modificando XAML durante il debug di UWP può causare un arresto anomalo del sistema di runtime. Soluzione alternativa: Utilizzare **Avvia senza eseguire debug (CTRL+F5)** invece di **Avvia debug (F5)**.
 
