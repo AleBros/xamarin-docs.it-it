@@ -1,0 +1,134 @@
+items:
+- name: Grafica SkiaSharp in Xamarin.Forms
+  href: index.md
+  items:
+  - name: Nozioni di base sul disegno
+    href: basics/index.md
+    items:
+    - name: Disegno di un cerchio semplice
+      href: basics/circle.md
+    - name: Integrazione con Xamarin.Forms
+      href: basics/integration.md
+    - name: Pixel e unità di misura indipendenti dal dispositivo
+      href: basics/pixels.md
+    - name: Animazione di base
+      href: basics/animation.md
+    - name: Integrazione di testo e grafica
+      href: basics/text.md
+    - name: Nozioni di base sulle bitmap
+      href: basics/bitmaps.md
+    - name: Trasparenza
+      href: basics/transparency.md
+    expanded: true
+  - name: Linee e tracciati
+    href: paths/index.md
+    items:
+    - name: Linee ed estremità dei tratti
+      href: paths/lines.md
+    - name: Nozioni di base sui tracciati
+      href: paths/paths.md
+    - name: Tipi di riempimento dei tracciati
+      href: paths/fill-types.md
+    - name: Polilinee ed equazioni parametriche
+      href: paths/polylines.md
+    - name: Punti e trattini
+      href: paths/dots.md
+    - name: Disegno con le dita
+      href: paths/finger-paint.md
+  - name: Trasformazioni
+    href: transforms/index.md
+    items:
+    - name: Trasformazione di traslazione
+      href: transforms/translate.md
+    - name: Trasformazione di ridimensionamento
+      href: transforms/scale.md
+    - name: Trasformazione di rotazione
+      href: transforms/rotate.md
+    - name: Trasformazione di inclinazione
+      href: transforms/skew.md
+    - name: Trasformazioni con matrice
+      href: transforms/matrix.md
+    - name: Manipolazioni tramite tocco
+      href: transforms/touch.md
+    - name: Trasformazioni non affini
+      href: transforms/non-affine.md
+    - name: Rotazione 3D
+      displayName: Three-D Rotation
+      href: transforms/3d-rotation.md
+  - name: Curve e tracciati
+    href: curves/index.md
+    items:
+    - name: Tre modi per disegnare un arco
+      href: curves/arcs.md
+    - name: Tre tipi di curve di Bézier
+      href: curves/beziers.md
+    - name: Dati del tracciato SVG
+      href: curves/path-data.md
+    - name: Ritaglio con tracciati e aree
+      href: curves/clipping.md
+    - name: Effetti per il tracciato
+      href: curves/effects.md
+    - name: Tracciati e testo
+      href: curves/text-paths.md
+    - name: Informazioni sui tracciati ed enumerazione
+      href: curves/information.md
+  - name: Bitmap
+    href: bitmaps/index.md
+    items:
+    - name: Visualizzazione di bitmap
+      href: bitmaps/displaying.md
+    - name: Creazione e disegno nelle bitmap
+      href: bitmaps/drawing.md
+    - name: Ritaglio di bitmap
+      href: bitmaps/cropping.md
+    - name: Visualizzazione segmentata delle bitmap
+      href: bitmaps/segmented.md
+    - name: Salvataggio di bitmap nei file
+      href: bitmaps/saving.md
+    - name: Accesso ai bit dei pixel delle bitmap
+      href: bitmaps/pixel-bits.md
+    - name: Animazione di bitmap
+      href: bitmaps/animating.md
+  - name: Effetti
+    href: effects/index.md
+    items:
+    - name: Shader
+      href: effects/shaders/index.md
+      items:
+      - name: Sfumatura lineare
+        href: effects/shaders/linear-gradient.md
+      - name: Sfumature circolari
+        href: effects/shaders/circular-gradients.md
+      - name: Affiancamento di bitmap
+        href: effects/shaders/bitmap-tiling.md
+      - name: Rumore
+        href: effects/shaders/noise.md
+    - name: Modalità di fusione
+      href: effects/blend-modes/index.md
+      items:
+      - name: Modalità di fusione Porter-Duff
+        href: effects/blend-modes/porter-duff.md
+      - name: Modalità di fusione separabili
+        href: effects/blend-modes/separable.md
+      - name: Modalità di fusione non separabili
+        href: effects/blend-modes/non-separable.md
+    - name: Filtri con maschera
+      href: effects/mask-filters.md
+    - name: Filtri di immagini
+      href: effects/image-filters.md
+    - name: Filtri di colore
+      href: effects/color-filters.md
+  - name: Esempi indipendenti dalla piattaforma
+    href: ~/graphics-games/skiasharp/introduction.md
+    items:
+    - name: Note specifiche della piattaforma
+      href: ~/graphics-games/skiasharp/platform.md
+  - name: API (riferimento)
+    href: /dotnet/api/skiasharp/
+  expanded: true
+ms.openlocfilehash: 59cc8bbb28a912ae32ef189c83c5d2e4f3209f31
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50130225"

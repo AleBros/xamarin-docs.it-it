@@ -6,12 +6,12 @@ description: Xamarin consente di creare app native per Android, iOS e macOS usan
 ms.date: 08/08/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: d8a93775e448a9cbb12f7aafc1ca51f37107305f
-ms.sourcegitcommit: 00a3505a73ce2213ba35bc85c06738edd1155060
+ms.openlocfilehash: 79bf14362d142c5db4c590cc547bfafdd3100682
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "43780481"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121220"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -91,7 +91,7 @@ ms.locfileid: "43780481"
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Getting Started" src="~/media/index/xamarin-cross-platform-get-started.svg?branch=master" data-linktype="external">
+                                                        <img alt="Get Started" src="~/media/index/xamarin-cross-platform-get-started.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -256,25 +256,6 @@ ms.locfileid: "43780481"
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/samples/index.yml">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Samples" src="https://docs.microsoft.com/en-us/media/illustrations/team-services-dev-ops-test.svg" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>App di esempio</h3>
-                                                    <p>App complete e demo di codice per Xamarin.Forms, eseguibili in Android, iOS e Windows.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -312,6 +293,44 @@ ms.locfileid: "43780481"
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="~/xamarin-forms/user-interface/graphics/skiasharp/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter x-hidden-focus">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img alt="SkiaSharp Graphics in Xamarin.Forms" src="~/media/index/xamarin-graphics-skia.svg?branch=master" data-linktype="external">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>E-book sulla grafica SkiaSharp</h3>
+                                                    <p>Grafica vettoriale e animazione multipiattaforma con SkiaSharp.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/xamarin-forms/samples/index.yml">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter x-hidden-focus">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img alt="Samples" src="https://docs.microsoft.com/en-us/media/illustrations/team-services-dev-ops-test.svg" data-linktype="external">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>App di esempio</h3>
+                                                    <p>App complete e demo di codice per Xamarin.Forms, eseguibili in Android, iOS e Windows.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -324,7 +343,7 @@ ms.locfileid: "43780481"
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Getting Started" src="~/media/index/xamarin-android-get-started.svg?branch=master" data-linktype="external">
+                                                        <img alt="Get Started" src="~/media/index/xamarin-android-get-started.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -519,7 +538,7 @@ ms.locfileid: "43780481"
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Getting Started" src="~/media/index/xamarin-ios-get-started.svg?branch=master" data-linktype="external">
+                                                        <img alt="Get Started" src="~/media/index/xamarin-ios-get-started.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -733,7 +752,7 @@ ms.locfileid: "43780481"
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Getting Started" src="~/media/index/xamarin-mac-get-started.svg?branch=master" data-linktype="external">
+                                                        <img alt="Get Started" src="~/media/index/xamarin-mac-get-started.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -871,7 +890,7 @@ ms.locfileid: "43780481"
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Getting Started" src="~/media/index/xamarin-cross-platform-get-started.svg?branch=master" data-linktype="external">
+                                                        <img alt="Get Started" src="~/media/index/xamarin-cross-platform-get-started.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -1008,7 +1027,7 @@ ms.locfileid: "43780481"
                         <a href="#architecture1"></a>
                         <ul id="architecture1" class="cardsC">
                             <li>
-                                <a href="~/graphics-games/skiasharp/index.md">
+                                <a href="~/xamarin-forms/user-interface/graphics/skiasharp/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -1094,7 +1113,7 @@ ms.locfileid: "43780481"
                         <a href="#architecture1"></a>
                         <ul id="architecture1" class="cardsC">
                             <li>
-                                <a href="~/tools/ios-simulator.md">
+                                <a href="~/tools/ios-simulator/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
