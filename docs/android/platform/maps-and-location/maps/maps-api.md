@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 69fc4fe8f8cd6031d592289e81d4c8a5ee14e054
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
-ms.translationtype: HT
+ms.openlocfilehash: a89211e4576b8d22b45bb4f675241d47c49270e6
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "36935139"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235038"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>Usando l'API di Google Maps nell'applicazione
 
-Utilizzando l'applicazione esegue il mapping è molto utile, ma talvolta si desidera includere esegue il mapping direttamente nell'applicazione. Oltre a predefinito viene eseguito il mapping dell'applicazione, Google offre anche un [mapping API nativo per Android](hhttps://developers.google.com/maps/documentation/android-sdk/intro).
+Utilizzando l'applicazione esegue il mapping è molto utile, ma talvolta si desidera includere esegue il mapping direttamente nell'applicazione. Oltre a predefinito viene eseguito il mapping dell'applicazione, Google offre anche un [mapping API nativo per Android](https://developers.google.com/maps/documentation/android-sdk/intro).
 L'API di mappe è appropriata nei casi in cui si desidera esercitare un maggiore controllo dell'esperienza di mapping delle. Operazioni possibili con l'API di Maps includono:
 
 -  A livello di codice modifica punto di vista della mappa.
