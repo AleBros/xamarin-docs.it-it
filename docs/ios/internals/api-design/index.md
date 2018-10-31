@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: cd25e5c78885f53902c577a900958b842a70219c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 56f9cbdae565f0d89463742377ec2311d8e375ac
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116953"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235051"
 ---
 # <a name="xamarinios-api-design"></a>Progettazione di API xamarin. IOS
 
@@ -107,7 +107,7 @@ Per altre informazioni sull'associazione delle API, vedere la [generatore di Bin
 
 ##### <a name="nsobject"></a>NSObject
 
-Il [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) tipo costituisce la base per tutti i binding di Objective-C. Tipi di xamarin. IOS il mirroring a due classi dei tipi da iOS CocoaTouch APIs: i tipi C (in genere definita come tipi CoreFoundation) e i tipi di Objective-C (questi derivano dalla classe NSObject tutte).
+Il [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) tipo costituisce la base per tutti i binding di Objective-C. Tipi di xamarin. IOS il mirroring a due classi dei tipi da iOS CocoaTouch APIs: i tipi C (in genere definiti come tipi CoreFoundation) e i tipi di Objective-C (questi derivano dalla classe NSObject tutte).
 
 Per ogni tipo che rispecchia un tipo non gestito, è possibile ottenere l'oggetto nativo tramite il [gestire](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/) proprietà.
 

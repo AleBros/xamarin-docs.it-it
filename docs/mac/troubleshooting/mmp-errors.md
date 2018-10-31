@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
-ms.openlocfilehash: 3c7b7c39eb714dbd47049c9440c188667a75e48f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 640d1adc048bec167508d8c288b62d498f061b0d
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106273"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50234973"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Messaggi di errore di xamarin. Mac (mmp)
 
@@ -23,9 +23,9 @@ Ad esempio, parametri, ambiente, mancano gli strumenti.
 
 <a name="MM0000" />
 
-#### <a name="mm0000-unexpected-error---please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MM0000: Errore imprevisto. file di un bug segnalare in http://bugzilla.xamarin.com
+#### <a name="mm0000-unexpected-error---please-file-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MM0000: Errore imprevisto. file di un bug segnalare in https://github.com/xamarin/xamarin-macios/issues/new
 
-Si è verificata una condizione di errore imprevisto. Verificare [inviare un report sui bug](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) quante più informazioni possibili, tra cui:
+Si è verificata una condizione di errore imprevisto. Verificare [inviare un report sui bug](https://github.com/xamarin/xamarin-macios/issues/new) quante più informazioni possibili, tra cui:
 
 * Compilazione completa dei log, con massimo livello di dettaglio (ad esempio `-v -v -v -v` nella **argomenti aggiuntivi di mmp**);
 * Un test case minimo riprodurre l'errore. e

@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: 01359d8b5fc402c83006c1c227375557fd2d7149
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a9d7f1eb0051035d6bfcc47e18fb0bdd00b60f5d
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122452"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235116"
 ---
 # <a name="xamarinios-errors"></a>Errori di xamarin. IOS
 
@@ -28,9 +28,9 @@ Ad esempio, parametri, ambiente, mancano gli strumenti.
 
 <a name="MT0000" />
 
-### <a name="mt0000-unexpected-error---please-fill-a-bug-report-at-httpbugzillaxamarincom"></a>MT0000: Errore imprevisto. compilare un report sui bug a http://bugzilla.xamarin.com
+### <a name="mt0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MT0000: Errore imprevisto. compilare un report sui bug a https://github.com/xamarin/xamarin-macios/issues/new
 
-Si è verificata una condizione di errore imprevisto. Verificare [inviare un report sui bug](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) quante più informazioni possibili, tra cui:
+Si è verificata una condizione di errore imprevisto. Verificare [inviare un report sui bug](https://github.com/xamarin/xamarin-macios/issues/new) quante più informazioni possibili, tra cui:
 
 * Compilazione completa dei log, con massimo livello di dettaglio (ad esempio `-v -v -v -v` nella **argomenti aggiuntivi di mtouch**);
 * Un test case minimo riprodurre l'errore. e

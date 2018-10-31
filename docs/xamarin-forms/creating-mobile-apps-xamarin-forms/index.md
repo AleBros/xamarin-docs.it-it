@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/19/2018
-ms.openlocfilehash: cf85f8d64026b436c7552033525b9d0f381fd687
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: c7a84a8bd00c5685feef84bfc4aacf02e5891c55
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156977"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50234986"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Creazione di App per dispositivi mobili con xamarin. Forms libro
 
-<p><img src="Images/Cover-sml.png" title="Creazione di App per dispositivi mobili con xamarin. Forms libro" align="left" />Il libro <i>creazione di App per dispositivi mobili con xamarin. Forms</i> di Charles Petzold è una Guida per imparare a scrivere applicazioni xamarin. Forms. L'unico prerequisito è a conoscenza del linguaggio di programmazione c#. Il libro offre un'esplorazione estesa all'interfaccia utente di xamarin. Forms e illustra anche l'animazione, MVVM, trigger, comportamenti, i layout personalizzati, renderer personalizzati e altro ancora. 
+<p><img src="images/cover-sml.png" title="Creazione di App per dispositivi mobili con xamarin. Forms libro" align="left" />Il libro <i>creazione di App per dispositivi mobili con xamarin. Forms</i> di Charles Petzold è una Guida per imparare a scrivere applicazioni xamarin. Forms. L'unico prerequisito è la conoscenza del C# linguaggio di programmazione. Il libro offre un'esplorazione estesa all'interfaccia utente di xamarin. Forms e illustra anche l'animazione, MVVM, trigger, comportamenti, i layout personalizzati, renderer personalizzati e altro ancora. 
 
 Il libro è stato pubblicato nella primavera del 2016 e non è stato aggiornato da quel momento. C'è molto del libro che siano utili rimane, ma alcuni il [materiale è obsoleto](#ways-in-which-the-book-is-outdated), e alcuni argomenti non sono più interamente corretto o è stata completata. 
 
