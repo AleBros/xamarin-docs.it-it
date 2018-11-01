@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/15/2018
-ms.openlocfilehash: 28c6daa361b7de09a0d9332b21f1b6f75e035850
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 3c8cc31c21f354b60001cefb919b51bf4d42da9f
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38995414"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675016"
 ---
 # <a name="introduction-to-dependencyservice"></a>Introduzione a DependencyService
 
@@ -42,7 +42,7 @@ La struttura dell'applicazione è illustrata nel diagramma seguente:
 
 ### <a name="interface"></a>Interfaccia
 
-L'interfaccia di che progettazione verrà definita l'interazione dell'utente con funzionalità specifiche della piattaforma. Prestare attenzione se si sta sviluppando un componente per essere condivisi così come un componente o un pacchetto Nuget. Progettazione di API possa stabilire o interrompere un pacchetto. L'esempio seguente specifica un'interfaccia semplice per pronunciare il testo che consente una flessibilità nello specificare le parole da pronunciare ma lascia l'implementazione per essere personalizzati per ogni piattaforma:
+L'interfaccia di che progettazione verrà definita l'interazione dell'utente con funzionalità specifiche della piattaforma. Prestare attenzione se si sta sviluppando un componente per essere condivisi così come un componente o un pacchetto NuGet. Progettazione di API possa stabilire o interrompere un pacchetto. L'esempio seguente specifica un'interfaccia semplice per pronunciare il testo che consente una flessibilità nello specificare le parole da pronunciare ma lascia l'implementazione per essere personalizzati per ogni piattaforma:
 
 ```csharp
 public interface ITextToSpeech {

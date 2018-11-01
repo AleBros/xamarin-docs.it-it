@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 954a0967e034e0321964e12ca0725ae2a85e3bc6
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: e9ec9288e2b8ea991ef8d41f9b601d0897631b9d
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995537"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675211"
 ---
 # <a name="xamarinforms-triggers"></a>Trigger di xamarin. Forms
 
@@ -85,7 +85,8 @@ Le parti importanti della dichiarazione del trigger sono:
 
 Trigger di dati utilizzano l'associazione dati a un altro controllo per fare in modo di monitorare il `Setter`s richiamato. Anziché il `Property` in un trigger di proprietà dell'attributo, impostare il `Binding` attributo per il monitoraggio per il valore specificato.
 
-L'esempio seguente usa la sintassi di associazione dati `{Binding Source={x:Reference entry}, Path=Text.Length}` che è come si fa riferimento alle proprietà di un altro controllo. Quando la lunghezza del `entry` è uguale a zero, il trigger viene attivato. In questo esempio il trigger disabilita il pulsante quando l'input è vuota.
+L'esempio seguente usa la sintassi di associazione dati `{Binding Source={x:Reference entry}, Path=Text.Length}`
+come avviene in modo in cui si fa riferimento alle proprietà di un altro controllo. Quando la lunghezza del `entry` è uguale a zero, il trigger viene attivato. In questo esempio il trigger disabilita il pulsante quando l'input è vuota.
 
 ```xaml
 <!-- the x:Name is referenced below in DataTrigger-->
@@ -164,7 +165,7 @@ Possono impostare le proprietà esposte dall'azione del trigger nella dichiarazi
 
 Prestare attenzione quando si condividono i trigger in un `ResourceDictionary`, un'istanza viene condivisa tra i controlli in modo che qualsiasi stato una volta configurato verrà applicata a tutti.
 
-Si noti che i trigger di evento non supportano `EnterActions` e `ExitActions` [descritto di seguito](#enterexit).    
+Si noti che i trigger di evento non supportano `EnterActions` e `ExitActions` [descritto di seguito](#enterexit).
 
 <a name="multi" />
 
@@ -202,7 +203,6 @@ Il trigger di più Aggiorna relativo controllo solo quando tutte le condizioni s
 
 Questa operazione può essere eseguita con un `IValueConverter`. Il codice del convertitore sotto le trasformazioni di `Text.Length` binding in un `bool` che indica se un campo è vuoto o non:
 
-
 ```csharp
 public class MultiTriggerConverter : IValueConverter
 {
@@ -234,7 +234,7 @@ Per usare il convertitore in un trigger di più, aggiungerlo innanzitutto al diz
 il XAML è illustrato di seguito. Tenere presente le seguenti differenze del primo esempio di trigger più:
 
 * Il pulsante presenta `IsEnabled="false"` impostato per impostazione predefinita.
-* Le condizioni di attivazione con più usano il convertitore per attivare il `Text.Length` valore in un valore booleano.
+* Le condizioni di attivazione con più usano il convertitore per attivare i `Text.Length` valore in un `boolean`.
 * Quando tutte le condizioni vengono `true`, il setter rende il pulsante `IsEnabled` proprietà `true`.
 
 ```xaml
@@ -266,7 +266,6 @@ il XAML è illustrato di seguito. Tenere presente le seguenti differenze del pri
 
 Questi screenshot mostrano la differenza tra i due esempi di trigger più. Nella parte superiore delle schermate, testo di input in uno solo `Entry` è sufficiente per abilitare il **salvare** pulsante.
 Nella parte inferiore delle schermate, i **account di accesso** pulsante rimane inattivo fino a quando entrambi i campi contengono dati.
-
 
 ![](triggers-images/multi-requireall.png "MultiTrigger esempi")
 

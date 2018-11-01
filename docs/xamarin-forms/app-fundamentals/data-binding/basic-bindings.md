@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b52f249b184d49731fd5decdb5877c70e29a3b84
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: e31cba5c61624b0bca03443262b95d7497564750
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38998072"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675198"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Associazioni di base di xamarin. Forms
 
@@ -94,7 +94,7 @@ Tuttavia, tra cui il nome della classe è un buon promemoria dell'oggetto di des
 
 Come modificano le `Slider`, il `Label` ruota conseguenza:
 
-[![Codice Basice Binding](basic-bindings-images/basiccodebinding-small.png "associazione di base del codice")](basic-bindings-images/basiccodebinding-large.png#lightbox "associazione di base del codice")
+[![Associazione di base del codice](basic-bindings-images/basiccodebinding-small.png "associazione di base del codice")](basic-bindings-images/basiccodebinding-large.png#lightbox "associazione di base del codice")
 
 Il **associazione di base Xaml** è identica alla pagina **associazione di base codice** ad eccezione del fatto che definisce l'associazione di tutti i dati in XAML:
 

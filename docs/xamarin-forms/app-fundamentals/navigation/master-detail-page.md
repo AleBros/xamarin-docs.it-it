@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: a3d0edbd933339ee8b8a0a277a4f2493cc8dc70e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 25f6cf341fcf47d5dc5320f73855bb2a4e29a9e8
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675523"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Pagina Master-Detail xamarin. Forms
 
@@ -45,7 +45,7 @@ La pagina di dettaglio contiene una barra di spostamento, il cui contenuto è di
 Il comportamento dell'esperienza di navigazione tra le pagine master e di dettaglio è dipendente dalla piattaforma:
 
 - In iOS, la pagina di dettaglio *diapositive* verso destra a sinistra e la parte sinistra del dettaglio come le diapositive della pagina master pagina sia ancora visibile.
-- In Android, le pagine di dettaglio e master sono *negozi* tra loro.
+- In Android, le pagine di dettaglio e master sono *sovrapposto* tra loro.
 - Nella piattaforma UWP, le pagine di dettaglio e master sono *scambiato*.
 
 Viene rispettato un comportamento simile in modalità orizzontale, ad eccezione del fatto che la pagina master in iOS e Android ha una larghezza simile come pagina master in modalità verticale, in modo più nella pagina dei dettagli saranno visibili.

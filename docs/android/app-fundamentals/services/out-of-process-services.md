@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3a11fe56da6076ba53e97643e6890f0fa14b8036
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8514d3b2c423e524d03a800f5f56359f3aee4b75
+ms.sourcegitcommit: 650fd5813e243d67eea13c4bc76683c0f8134123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113937"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50737193"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Servizi di Android in esecuzione in processi remoti
 
@@ -56,7 +56,7 @@ Una comunicazione unidirezionale si verifica quando un client crea un `Message` 
 Questa guida illustra i dettagli di implementazione di un servizio out-of-process. Illustra come implementare un servizio che deve essere eseguito nel proprio processo e modo in cui un client può comunicare con tale servizio utilizzando il `Messenger` framework. Inoltre descrive brevemente le comunicazioni bidirezionali: il client invia un messaggio a un servizio e il servizio invia un messaggio di risposta al client. Poiché i servizi possono essere condivisi tra diverse applicazioni, questa guida illustra anche una tecnica per la limitazione dell'accesso client al servizio mediante le autorizzazioni di Android.
 
 > [!IMPORTANT]
-> [Bugzilla 51940 - servizi con processi isolati e classe di applicazione personalizzata non venga risolto correttamente gli overload](https://bugzilla.xamarin.com/show_bug.cgi?id=51940) i report che un servizio di xamarin. Android non si avvia correttamente quando il `IsolatedProcess` è impostata su `true`. Questa guida viene fornita per un riferimento. Un'applicazione xamarin. Android debba ancora essere in grado di comunicare con un servizio out-of-process è scritto in Java.
+> [Bugzilla 1950 51940/GitHub - servizi con processi isolati e classe di applicazione personalizzata non venga risolto correttamente gli overload](https://github.com/xamarin/xamarin-android/issues/1950) i report che un servizio di xamarin. Android non si avvia correttamente quando il `IsolatedProcess` è impostata su `true`. Questa guida viene fornita per un riferimento. Un'applicazione xamarin. Android debba ancora essere in grado di comunicare con un servizio out-of-process è scritto in Java.
 
 ## <a name="requirements"></a>Requisiti
 
