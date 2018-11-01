@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b18d042e34146a72b488da9017648a430c9cd353
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 68c7869254ae861cef8307431d925368082be921
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996373"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675255"
 ---
 # <a name="the-xamarinforms-command-interface"></a>L'interfaccia di comando di xamarin. Forms
 
@@ -22,7 +22,7 @@ L'esecuzione dei comandi interfaccia fornisce un approccio alternativo all'imple
 
 Per consentire un'associazione di dati tra un `Button` e un elemento ViewModel, la `Button` definisce due proprietà:
 
-- [`Command`](xref:Xamarin.Forms.Button.Command) di tipo <xref:System.Windows.Input.ICommand>
+- [`Command`](xref:Xamarin.Forms.Button.Command) di tipo [`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand)
 - [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter) di tipo `Object`
 
 Per utilizzare l'interfaccia di comando, si definisce un'associazione di dati che ha come destinazione il `Command` proprietà del `Button` in cui l'origine è una proprietà nel ViewModel di tipo `ICommand`. L'elemento ViewModel contiene codice associato che `ICommand` proprietà che viene eseguito quando si fa clic sul pulsante. È possibile impostare `CommandParameter` ai dati arbitrari per distinguere tra più pulsanti, se sono tutti associato alla stessa `ICommand` proprietà nel ViewModel.
@@ -39,7 +39,7 @@ Tutti questi comandi possono essere gestiti all'interno di un elemento ViewModel
 
 ## <a name="the-icommand-interface"></a>L'interfaccia ICommand
 
-Il <xref:System.Windows.Input.ICommand> interfaccia non fa parte di xamarin. Forms. In cui è definito invece di [spazi](xref:System.Windows.Input) dello spazio dei nomi ed è costituito da un evento e due metodi:
+Il [ `System.Windows.Input.ICommand` ](xref:System.Windows.Input.ICommand) interfaccia non fa parte di xamarin. Forms. In cui è definito invece di [spazi](xref:System.Windows.Input) dello spazio dei nomi ed è costituito da un evento e due metodi:
 
 ```csharp
 public interface ICommand
@@ -76,7 +76,7 @@ Il `Button` associa anche un gestore nel `CanExecuteChanged` eventi di `ICommand
 
 ## <a name="the-command-class"></a>La classe di comando
 
-Quando i ViewModel definisce una (proprietà) di tipo `ICommand`, l'elemento ViewModel deve inoltre contengono o fanno riferimento a una classe che implementa il `ICommand` interfaccia. Questa classe deve contengono o fanno riferimento le `Execute` e `CanExecute` metodi e attivare il `CanExecuteChanged` evento ogni volta che il `CanExecute` metodo può restituire un valore diverso.
+Quando i ViewModel definisce una proprietà di tipo `ICommand`, l'elemento ViewModel deve inoltre contengono o fanno riferimento a una classe che implementa il `ICommand` interfaccia. Questa classe deve contengono o fanno riferimento le `Execute` e `CanExecute` metodi e attivare il `CanExecuteChanged` evento ogni volta che il `CanExecute` metodo può restituire un valore diverso.
 
 È possibile scrivere una classe di questo tipo manualmente, oppure è possibile usare una classe che qualcun altro ha scritto. Poiché `ICommand` fa parte di Microsoft Windows, è stato usato per anni con applicazioni MVVM Windows. Usando una classe di Windows che implementa `ICommand` consente di condividere i ViewModel tra le applicazioni di Windows e le applicazioni xamarin. Forms.
 
@@ -378,7 +378,7 @@ Il `canExecute` per funziona `SubmitCommand` viene chiamato ogni volta che è di
 
 Il `execute` funzionare per **Submit** rimuove il gestore di modifica della proprietà dal `PersonViewModel`, aggiunge l'oggetto al `Persons` insieme e restituisce tutti gli elementi e le condizioni iniziali.
 
-Il `execute` funzionare per il **annullare** pulsante effettua le operazioni necessarie che il **Submit** pulsante esegue execept aggiungere l'oggetto alla raccolta:
+Il `execute` funzionare per il **annullare** pulsante effettua le operazioni necessarie che il **Submit** pulsante tranne che aggiungere l'oggetto alla raccolta:
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -693,7 +693,6 @@ Se si vuole usare l'interfaccia dei comandi con le visualizzazioni che non la su
 
 L'esecuzione di comandi è utile per l'implementazione del menu di navigazione, ad esempio che nel [ **Data Binding Demo** ](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) programma stesso. Di seguito è parte della **MainPage. XAML**:
 
-
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -763,8 +762,6 @@ L'ordine del codice in questo costruttore fa la differenza: I `InitializeCompone
 Se si impostano entrambe `NavigateCommand` e `BindingContext` (in qualsiasi ordine) prima della chiamata a `InitializeComponent` funzionerà poiché entrambi i componenti dell'associazione vengono impostati quando il parser XAML rileva la definizione di associazione.
 
 Data Binding in alcuni casi può essere difficile, ma come si è visto in questa serie di articoli, sono potenti e versatili e contribuire notevolmente a organizzare il codice mediante la separazione logica sottostante dall'interfaccia utente.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
