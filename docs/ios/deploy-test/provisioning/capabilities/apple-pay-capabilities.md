@@ -4,15 +4,15 @@ description: L'aggiunta di funzionalità a un'applicazione spesso richiede un'ul
 ms.prod: xamarin
 ms.assetid: 735CC916-16A4-471B-87F7-0535E24288D7
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: a3d2e6179dde1583e0fd4d175c46582bed9a2e07
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: c7a2d347970d4edfe713edab264647fb644ff74a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785070"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112350"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Funzionalità Apple Pay in Xamarin.iOS
 
@@ -40,11 +40,11 @@ Un ID esercente viene usato per comunicare ad Apple Pay che è possibile accetta
 
 2.  In **Identifiers** (Identificatori) selezionare **ID esercente** e quindi selezionare **+** per creare un nuovo ID esercente:  
 
-3.  Compilare il modulo, illustrato sotto, con una nuova descrizione e un nuovo identificatore. La descrizione consente di identificare l'ID e può essere modificata in seguito. L'identificatore deve essere univoco e iniziare con la stringa `merchant`. Apple consiglia il formato seguente per l'identificatore: `merchant.com.[Your-App-Name]`:
+3.  Compilare il modulo, illustrato sotto, con una nuova descrizione e un nuovo identificatore. La descrizione consente di identificare l'ID e può essere modificata in seguito. L'identificatore deve essere univoco e iniziare con la stringa  `merchant`. Apple consiglia il formato seguente per l'identificatore: `merchant.com.[Your-App-Name]`:
    
     ![Dettagli del nuovo ID esercente](apple-pay-capabilities-images/image58.png)
 
-4.  Confermare i dettagli e **registrare** l'ID: 
+4.  Confermare i dettagli e  **registrare**  l'ID: 
     
     ![Conferma dell'ID esercente](apple-pay-capabilities-images/image59.png)
 
@@ -154,6 +154,6 @@ Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero esse
 
 * Usare lo spazio dei nomi del framework nell'app.
 * Aggiungere all'app gli entitlement necessari. Per informazioni dettagliate sugli entitlement necessari e su come aggiungerli, vedere la guida [Uso degli entitlement](~/ios/deploy-test/provisioning/entitlements.md).
-* In **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
+* In  **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
 
 In caso di problemi con i servizi app, vedere la sezione [Troubleshooting](~/ios/deploy-test/provisioning/capabilities/index.md) (Risoluzione dei problemi) della guida principale.

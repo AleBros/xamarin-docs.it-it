@@ -1,18 +1,19 @@
 ---
 title: Guida rapida di Xamarin.Forms Multiscreen
 description: Questo articolo illustra come estendere l'applicazione Phoneword aggiungendo una seconda schermata per tenere traccia del registro chiamate per l'applicazione.
+zone_pivot_groups: platform
 ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: a4e27f1810a16b5d13838d2e2c1067950586fab3
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 957c3e0d3b0637c8b536d920a05397bc711dfb7d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996181"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123479"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Guida rapida di Xamarin.Forms Multiscreen
 
@@ -20,9 +21,9 @@ Questa guida rapida illustra come estendere l'applicazione Phoneword aggiungendo
 
 [![](quickstart-images/intro-app-examples-sml.png "Applicazione Phoneword")](quickstart-images/intro-app-examples.png#lightbox "Applicazione Phoneword")
 
-Estendere l'applicazione Phoneword come indicato di seguito:
+::: zone pivot="windows"
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+## <a name="update-the-app-with-visual-studio"></a>Aggiornare l'app con Visual Studio
 
 1. Avviare Visual Studio. Nella pagina iniziale fare clic su **Apri progetto...**  e nella finestra di dialogo **Apri progetto** selezionare il file della soluzione per il progetto Phoneword:
 
@@ -153,18 +154,22 @@ Estendere l'applicazione Phoneword come indicato di seguito:
 
     In caso di errori, ripetere i passaggi precedenti e correggere gli errori fino a quando l'applicazione non viene compilata correttamente.
 
-12. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante Riproduci, per avviare l'applicazione:
+12. Nella barra degli strumenti di Visual Studio, premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante Riproduci, per avviare l'applicazione:
 
     ![](quickstart-images/vs/start.png "Barra degli strumenti di Visual Studio")
     ![](quickstart-images/vs/phone-result-uwp.png "UWP applicazione Phoneword")
 
 13. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **Phoneword.Droid** e selezionare **Imposta come progetto di avvio**.
-14. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante Riproduci, per avviare l'applicazione all'interno di un emulatore Android.
-15. Se si ha un dispositivo iOS e si soddisfano i requisiti di sistema Mac per lo sviluppo in Xamarin.Forms, usare una tecnica simile per distribuire l'app al dispositivo iOS. In alternativa, distribuire l'app nel [simulatore remoto per iOS](~/tools/ios-simulator.md).
+14. Nella barra degli strumenti di Visual Studio, premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante Riproduci, per avviare l'applicazione all'interno di un emulatore Android.
+15. Se si ha un dispositivo iOS e si soddisfano i requisiti di sistema Mac per lo sviluppo in Xamarin.Forms, usare una tecnica simile per distribuire l'app al dispositivo iOS. In alternativa, distribuire l'app nel [simulatore remoto per iOS](~/tools/ios-simulator/index.md).
 
-    Nota: non tutti i simulatori supportano le chiamate telefoniche.
+    > [!NOTE]
+    > Gli emulatori dispositivo non supportano le chiamate telefoniche.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
+
+## <a name="update-the-app-with-visual-studio-for-mac"></a>Aggiornare l'app con Visual Studio per Mac
 
 1. Avviare Visual Studio per Mac. Nella pagina iniziale fare clic su **Apri...**  e nella finestra di dialogo selezionare il file della soluzione per il progetto Phoneword:
 
@@ -256,7 +261,7 @@ Estendere l'applicazione Phoneword come indicato di seguito:
 
     Salvare le modifiche apportate a **MainPage.xaml** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
-10. Nel **riquadro della soluzione** fare doppio clic su **MainPage.xaml.cs** per aprirlo:
+10. Nel **riquadro della soluzione**, fare doppio clic su **MainPage.xaml.cs** per aprirlo:
 
     ![](quickstart-images/xs/open-mainpage-codebehind.png "Aprire MainPage.xaml.cs")
 
@@ -314,12 +319,12 @@ Estendere l'applicazione Phoneword come indicato di seguito:
 
     ![](quickstart-images/xs/phone-result-android.png "Emulatore Android")
 
-    Nota: gli emulatori Android non supportano le chiamate telefoniche.
+    > [!NOTE]
+    > Gli emulatori dispositivo non supportano le chiamate telefoniche.
 
------
+::: zone-end
 
 L'applicazione Xamarin.Forms Multiscreen è stata completata. Nell'[argomento successivo](~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/deepdive.md) di questa guida vengono esaminati i passaggi eseguiti in questa procedura dettagliata per comprendere la navigazione tra le pagine e il data binding con Xamarin.Forms.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

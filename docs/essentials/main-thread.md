@@ -5,12 +5,12 @@ ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 06/26/2018
-ms.openlocfilehash: 608cd00a2134e6e3fee89c7ae25bf4627d8b23be
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: db2e79ed5c471c11e2d3dc1afe360843e5dfea6a
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112314"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675445"
 ---
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: Thread principale
 
@@ -23,6 +23,10 @@ La classe **MainThread** consente alle applicazioni di eseguire il codice sul th
 La maggior parte dei sistemi operativi, tra cui iOS, Android e la piattaforma UWP, usa un modello a thread singolo per il codice che coinvolge l'interfaccia utente. Questo modello è necessario per serializzare correttamente gli eventi dell'interfaccia utente, inclusi l'input tocco e le sequenze di tasti. Questo thread viene spesso definito _thread principale_ o _thread dell'interfaccia utente_ o _thread UI_. Lo svantaggio di questo modello è che tutto il codice che accede a elementi dell'interfaccia utente deve essere eseguito sul thread principale dell'applicazione. 
 
 Le applicazioni devono talvolta usare eventi che chiamano il gestore dell'evento su un thread secondario di esecuzione. (Tutte le classi Xamarin.Essentials [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md) e [`OrientationSensor`](orientation-sensor.md) potrebbero restituire informazioni su un thread secondario in caso d'uso con velocità maggiori.) Se il gestore eventi deve accedere a elementi dell'interfaccia utente, deve eseguire tale codice sul thread principale. La classe **MainThread** consente all'applicazione di eseguire questo codice sul thread principale.
+
+## <a name="get-started"></a>Introduzione
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="running-code-on-the-main-thread"></a>Esecuzione del codice sul thread principale
 

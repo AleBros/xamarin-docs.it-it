@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: c897b1f5fbdf950e6858d7b73ebed60049f60e8e
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f051becad7b6ef329d57417214eb976589386970
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785557"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120944"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Uso delle funzionalità in Xamarin.iOS
 
@@ -73,7 +73,7 @@ Questa sezione illustra come usare il provisioning automatico di Visual Studio o
 
 ## <a name="using-the-ide"></a>Utilizzo di IDE
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Le funzionalità vengono aggiunte a **Entitlements.plist** in Visual Studio per Mac. Per aggiungere funzionalità, seguire questa procedura:
 
@@ -93,7 +93,7 @@ Le funzionalità vengono aggiunte a **Entitlements.plist** in Visual Studio per 
 
     ![Aggiungere le funzionalità al file entitlements.plist](images/image18.png)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Le funzionalità vengono aggiunte a **Entitlements.plist**. Per aggiungere funzionalità in Visual Studio 2017, seguire questa procedura:
 
@@ -206,12 +206,12 @@ Dopo che una funzionalità è stata abilitata sul lato server, sono necessarie a
 
 Il seguente è un elenco dettagliato di alcuni dei problemi più comuni che possono costituire un ostacolo quando si sviluppa un'app con un servizio app abilitato.
 
--   Assicurarsi che l'ID corretto sia stato creato e registrato accuratamente nella sezione **Certificates, IDs & Profiles** (Certificati, ID e profili) del portale per sviluppatori di Apple.
--   Assicurarsi che il servizio sia stato aggiunto all'ID dell'app (o dell'estensione) e che il servizio sia configurato per usare il gruppo di app/ID esercente/contenitore creato sopra in **Certificates, IDs & Profiles** (Certificati, ID e profili) del portale per sviluppatori di Apple.
--   Assicurarsi che i profili di provisioning e gli ID delle app siano stati installati e che il file **Info.plist** dell'app (nel progetto Xamarin) usi uno degli ID app configurati sopra.
--   Assicurarsi che il file **Entitlements.plist** dell'app (nel progetto Xamarin) abbia il servizio corretto abilitato.
+-   Assicurarsi che l'ID corretto sia stato creato e registrato accuratamente nella sezione  **Certificates, IDs & Profiles** (Certificati, ID e profili) del portale per sviluppatori di Apple.
+-   Assicurarsi che il servizio sia stato aggiunto all'ID dell'app (o dell'estensione) e che il servizio sia configurato per usare il gruppo di app/ID esercente/contenitore creato sopra in  **Certificates, IDs & Profiles**  (Certificati, ID e profili) del portale per sviluppatori di Apple.
+-   Assicurarsi che i profili di provisioning e gli ID delle app siano stati installati e che il file  **Info.plist**  dell'app (nel progetto Xamarin) usi uno degli ID app configurati sopra.
+-   Assicurarsi che il file  **Entitlements.plist**  dell'app (nel progetto Xamarin) abbia il servizio corretto abilitato.
 -   Assicurarsi che in info.plist siano impostate le chiavi per la privacy appropriate
--   In **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
+-   In  **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
 
 <a name="summary" />
 

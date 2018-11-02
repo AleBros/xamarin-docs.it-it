@@ -4,15 +4,15 @@ description: Questo documento descrive come configurare, compilare e pubblicare 
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: 7560f66acc3a3ea683e75be2ae85f908036e008c
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: 944b10c579abd3fa6e68a2c0497602600af4f4c1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43780518"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111434"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Pubblicazione di app Xamarin.iOS nell'App Store
 
@@ -89,7 +89,7 @@ Per istruzioni dettagliate, vedere [Creazione di un profilo di provisioning di s
 
 I nuovi progetti Xamarin.iOS impostano automaticamente le _configurazioni della build_ di **debug** e **versione**. Per configurare correttamente la build di **versione**, seguire questa procedura:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Dal **riquadro della soluzione** aprire **Info.plist**. Selezionare **Provisioning manuale**. Salvare e chiudere il file.
 2. Fare clic con il pulsante destro del mouse su **Nome progetto** nel **riquadro della soluzione**, selezionare **Opzioni** e passare alla scheda **Compilazione iOS**.
@@ -119,7 +119,7 @@ I nuovi progetti Xamarin.iOS impostano automaticamente le _configurazioni della 
 
 15. Fare clic su **OK** per salvare le modifiche alle proprietà del progetto.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Assicurarsi che Visual Studio 2017 sia stato [associato a un host di compilazione Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Fare clic con il pulsante destro del mouse sul **nome del progetto** in **Esplora soluzioni** e scegliere **Proprietà**.
@@ -171,7 +171,7 @@ Per informazioni su come eseguire questa operazione, vedere la guida [Configuraz
 
 Con le impostazioni di compilazione configurate correttamente e iTunes Connect in attesa dell'invio, è possibile compilare l'app e inviarla ad Apple.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. In Visual Studio per Mac selezionare la configurazione della build **Versione** e un dispositivo (non un simulatore) per la compilazione.
 
@@ -230,7 +230,7 @@ Con le impostazioni di compilazione configurate correttamente e iTunes Connect i
     >
     > Per risolvere questo problema, vedere [questo post nei forum di Xamarin](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 > [!NOTE]
 > Visual Studio 2017 non supporta attualmente il flusso di lavoro **Archivia per la pubblicazione** disponibile in Visual Studio per Mac.
@@ -247,12 +247,12 @@ Con le impostazioni di compilazione configurate correttamente e iTunes Connect i
 
 4. Per trovare il file con estensione ipa nel computer Windows, fare clic con il pulsante destro del mouse sul nome del progetto Xamarin.iOS in **Esplora soluzioni** in Visual Studio 2017 e scegliere **Apri cartella in Esplora file**. Quindi, in **Esplora file** in Windows passare alla sottodirectory **bin/iPhone/Release**. Se non è stato [personalizzato il percorso di output del file con estensione ipa](#customize-the-ipa-location), la directory dovrebbe corrispondere.
 5. Per visualizzare il file con estensione ipa nell'host di compilazione Mac, fare clic con il pulsante destro del mouse sul nome del progetto Xamarin.iOS in **Esplora soluzioni** in Visual Studio 2017 (Windows) e selezionare **Mostra il file IPA nel server di compilazione**. Verrà aperta una finestra **Finder** nell'host di compilazione Mac con il file con estensione ipa selezionato.
-6. Nell'host di compilazione Mac aprire il **Launcher di applicazione**. In Xcode selezionare **Xcode > Open Developer Tool (Apri strumento di sviluppo) > Application Launcher (Launcher di applicazione)**.
+6. Nell'host di compilazione Mac aprire il **Caricatore di applicazione**. In Xcode selezionare **Xcode > Open Developer Tool (Apri strumento di sviluppo) > Application Loader (Caricatore di applicazione)**.
 
     > [!NOTE]
     > Per altre informazioni sullo strumento, vedere la [documentazione di Apple relativa ad Application Loader](https://help.apple.com/itc/apploader/#/apdS673accdb).
 
-7. Accedere al Launcher di applicazione (si noti che è necessario [creare una password specifica dell'app](https://support.apple.com/ht204397) per l'ID Apple).
+7. Accedere al Caricatore di applicazione (si noti che è necessario [creare una password specifica dell'app](https://support.apple.com/ht204397) per l'ID Apple).
 8. Selezionare **Deliver Your App** (Invia l'app) e fare clic sul pulsante **Choose** (Scegli):
 
     ![Selezionare la distribuzione dell'app](publishing-to-the-app-store-images/publishvs01.png "Selezionare la distribuzione dell'app")

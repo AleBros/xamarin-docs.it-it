@@ -4,15 +4,15 @@ description: Questa guida esplora come temporizzare le app e usare metodi che pe
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4145368281c2967bd1311389e5e1b1432af2c9b8
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: 602a530e1c185ffeda2c6ac80a96f7795cec4cae
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43780530"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104843"
 ---
 # <a name="ios-build-mechanics"></a>Meccanismi di compilazione per iOS
 
@@ -27,7 +27,7 @@ Le velocità di compilazione di Xamarin possono anche dipendere dalle diverse ca
 
 ## <a name="timing-apps"></a>Temporizzazione delle app
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Per abilitare l'output di MSBuild di diagnostica in Visual Studio per Mac:
 
@@ -40,7 +40,7 @@ Per abilitare l'output di MSBuild di diagnostica in Visual Studio per Mac:
 7. Visualizzare l'output di diagnostica nel riquadro degli errori (Visualizza > Riquadri > Errori) facendo clic sul pulsante Output di compilazione
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Per abilitare l'output di MSBuild di diagnostica in Visual Studio:
 
@@ -69,7 +69,7 @@ Total time: 1554 ms
 
 Gli strumenti di Xamarin funzionano tecnicamente su qualsiasi Mac che esegue OS X 10.10 Yosemite o versioni successive. Tuttavia, le prestazioni del Mac possono influire negativamente sulle esperienze di sviluppo e sui tempi di compilazione.
 
-Nello stato disconnesso Visual Studio in Windows esegue solo la fase di compilazione in C# e non tenta di eseguire il collegamento o la compilazione AOT, di creare un pacchetto dell'app in un bundle con estensione _app_ o di firmare il bundle dell'app. Raramente la fase di compilazione in C# è un collo di bottiglia per le prestazioni. Provare a individuare il punto nella pipeline in cui la compilazione viene rallentata eseguendo la compilazione direttamente nell'host di compilazione Mac in Visual Studio per Mac.
+Nello stato disconnesso Visual Studio in Windows esegue solo la fase di compilazione in C# e non tenta di eseguire il collegamento o la compilazione AOT, di creare un pacchetto dell'app in un bundle con estensione  _app_  o di firmare il bundle dell'app. Raramente la fase di compilazione in C# è un collo di bottiglia per le prestazioni. Provare a individuare il punto nella pipeline in cui la compilazione viene rallentata eseguendo la compilazione direttamente nell'host di compilazione Mac in Visual Studio per Mac.
 
 
 Inoltre, uno dei motivi di rallentamento più comuni è la connessione di rete tra il computer Windows e l'host di compilazione Mac. Questo problema può essere dovuto a un impedimento fisico nella rete, all'uso di una connessione wireless o alla necessità di eseguire la connessione tramite un computer già troppo carico, ad esempio un servizio Mac nel cloud.
@@ -131,7 +131,7 @@ Riducendo al minimo le dimensioni dell'app, è anche possibile ridurre i tempi d
   - La compilazione di un'unica architettura, ad esempio ARM64, è più veloce di un file binario FAT, ad esempio ARMv7 + ARM64
   - Evitare di ottimizzare i file PNG durante il debug
   - Valutare se collegare tutti gli assembly. Ottimizzare ogni assembly 
-  - Disabilitare la creazione dei simboli di debug usando `--dsym=false`. Tuttavia, tenere presente che la disabilitazione di questa opzione significa che sarà possibile aggiungere simboli alle segnalazioni di arresti anomali solo nel computer che ha compilato l'app e solo se nell'app non è stata eseguita la rimozione.
+  - Disabilitare la creazione dei simboli di debug usando  `--dsym=false`. Tuttavia, tenere presente che la disabilitazione di questa opzione significa che sarà possibile aggiungere simboli alle segnalazioni di arresti anomali solo nel computer che ha compilato l'app e solo se nell'app non è stata eseguita la rimozione.
 
  
 Alcune cose da evitare:

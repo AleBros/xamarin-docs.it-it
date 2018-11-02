@@ -4,15 +4,15 @@ description: Questa guida descrive come usare Associa a Mac per connettere Visua
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/29/2018
-ms.openlocfilehash: c4e28c1f3e058977d6f9072b70f17717a2b27585
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: d55760f1fdd6912b973cc1e7a65415a0f2c6eb47
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786077"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104089"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Associa a Mac per lo sviluppo di Xamarin.iOS
 
@@ -246,6 +246,6 @@ Questo articolo descrive come usare Associa a Mac per la connessione di Visual S
 - [Risoluzione dei problemi di connessione](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.md)
 - [Agente di compilazione Xamarin Mac - Xamarin University Lightning Lecture](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
 - [Introduzione a Xamarin.iOS per Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
-- [Simulatore iOS remoto per Windows](~/tools/ios-simulator.md)
+- [Simulatore iOS remoto per Windows](~/tools/ios-simulator/index.md)
 - [Distribuzione wireless](~/ios/deploy-test/wireless-deployment.md)
 

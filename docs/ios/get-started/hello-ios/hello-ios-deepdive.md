@@ -1,19 +1,20 @@
 ---
 title: Hello, iOS - Approfondimento
 description: Questo documento esamina in modo dettagliato l'applicazione di esempio Hello, iOS, prendendo in considerazione l'architettura, l'interfaccia utente, la gerarchia di visualizzazione del contenuto, il test, la distribuzione e molto altro.
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 61ba3a7e-fe11-4439-8bc8-9809512b8eff
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 03/19/2017
-ms.openlocfilehash: 16920f27a1830dc6a3ab1a3cb0a267eb3b1d90ea
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: 15c3f83601c4eeb8365422b6d8d9bad73ed37666
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203023"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118448"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - Approfondimento
 
@@ -21,7 +22,7 @@ La procedura dettagliata Guida introduttiva ha presentato la compilazione e l'es
 
 Questa guida consente di sviluppare le competenze e le conoscenze necessarie per creare un'applicazione iOS a schermata singola. Al termine di questa guida, si sarà in grado di comprendere le diverse parti di un'applicazione Xamarin.iOS e il modo in cui si integrano tra loro.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 ## <a name="introduction-to-visual-studio-for-mac"></a>Introduzione a Visual Studio per Mac
 
@@ -31,46 +32,48 @@ Visual Studio per Mac segue la prassi di Visual Studio di organizzare il codice 
 
 ![](hello-ios-deepdive-images/image30.png "Screenshot della soluzione iniziale")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 ## <a name="introduction-to-visual-studio"></a>Introduzione a Visual Studio
 
-Visual Studio è un potente ambiente di sviluppo integrato di Microsoft. Include una finestra di progettazione visiva completamente integrata, un editor di testo completo di strumenti di refactoring, un browser di assembly, l'integrazione del codice sorgente e altro ancora. Questa guida introduce alcune funzionalità di Visual Studio di base con il plug-in Xamarin.
+Visual Studio è un potente ambiente di sviluppo integrato di Microsoft. Include una finestra di progettazione visiva completamente integrata, un editor di testo completo di strumenti di refactoring, un browser di assembly, l'integrazione del codice sorgente e altro ancora. Questa guida introduce alcune funzionalità di Visual Studio di base con gli Strumenti Xamarin per Visual Studio.
 
-Visual Studio consente di organizzare il codice in _soluzioni_ e *progetti*. Una soluzione è un contenitore per uno o più progetti. Un progetto può essere un'applicazione (ad esempio per iOS o Android), una libreria di supporto, un'applicazione di test e altro ancora. Nell'app Phoneword è stato aggiunto un nuovo progetto di iPhone tramite il modello **App visualizzazione singola**. La soluzione iniziale era simile a quanto segue:
+Visual Studio consente di organizzare il codice in soluzioni e progetti. Una soluzione è un contenitore per uno o più progetti. Un progetto può essere un'applicazione (ad esempio per iOS o Android), una libreria di supporto, un'applicazione di test e altro ancora. Nell'app Phoneword è stato aggiunto un nuovo progetto di iPhone tramite il modello **App visualizzazione singola**. La soluzione iniziale era simile a quanto segue:
 
 ![](hello-ios-deepdive-images/vs-image30.png "Screenshot della soluzione iniziale")
 
------
+::: zone-end
 
 ## <a name="anatomy-of-a-xamarinios-application"></a>Anatomia di un'applicazione Xamarin.iOS
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+::: zone pivot="macos"
 
-A sinistra è presente il *riquadro della soluzione*, che contiene la struttura di directory e tutti i file associati alla soluzione:
+A sinistra è presente il **Pad della soluzione**, che contiene la struttura di directory e tutti i file associati alla soluzione:
 
-![](hello-ios-deepdive-images/image31.png "Riquadro della soluzione, che contiene la struttura di directory e tutti i file associati alla soluzione")
+![](hello-ios-deepdive-images/image31.png "Pad della soluzione, che contiene la struttura di directory e tutti i file associati alla soluzione")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
-A destra è presente il *riquadro della soluzione*, che contiene la struttura di directory e tutti i file associati alla soluzione:
+A destra è presente il **riquadro della soluzione**, che contiene la struttura di directory e tutti i file associati alla soluzione:
 
 ![](hello-ios-deepdive-images/vs-image31.png "Riquadro della soluzione, che contiene la struttura di directory e tutti i file associati alla soluzione")
 
------
+::: zone-end
 
 Nella procedura dettagliata [Hello, iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md) è stata creata la soluzione **Phoneword** ed è stato inserito un progetto iOS, **Phoneword_iOS**, all'interno di questa. Gli elementi all'interno del progetto sono:
 
--  **Riferimenti**: contiene gli assembly necessari per compilare ed eseguire l'applicazione. Espandere la directory per visualizzare riferimenti ad assembly .NET quali [System](http://msdn.microsoft.com/library/system%28v=vs.110%29.aspx), System.Core e [System.Xml](http://msdn.microsoft.com/library/system.xml%28v=vs.110%29.aspx), nonché un riferimento all'assembly Xamarin.iOS di Xamarin.
--  **Pacchetti**: la directory Pacchetti contiene pacchetti NuGet pronti all'uso.
--  **Risorse**: nella cartella Risorse sono archiviati altri file multimediali.
--  **Main.cs**: contiene il punto di ingresso principale dell'applicazione. Per avviare l'applicazione, è necessario passare il nome della classe principale dell'applicazione, `AppDelegate`.
--  **AppDelegate.cs**: questo file contiene la classe principale dell'applicazione ed è responsabile della creazione della finestra, della compilazione dell'interfaccia utente e dell'ascolto di eventi generati dal sistema operativo.
--  **Main.storyboard**: lo Storyboard contiene la progettazione visiva dell'interfaccia utente dell'applicazione. I file dello Storyboard vengono aperti in un editor grafico, iOS Designer.
--  **ViewController.cs**: il controller di visualizzazione aziona la schermata (visualizzazione) che viene visualizzata e toccata dall'utente. Il controller di visualizzazione è responsabile della gestione delle interazioni tra l'utente e la visualizzazione.
--  **ViewController.designer.cs**: `designer.cs` è un file generato automaticamente che funge da elemento di associazione tra i controlli nella visualizzazione controlli e le relative rappresentazioni in codice nel controller di visualizzazione. Poiché si tratta di un file di meccanismi interni, l'IDE sovrascriverà tutte le modifiche manuali e nella maggior parte dei casi questo file può essere ignorato. Per altre informazioni sulla relazione tra la finestra di progettazione visiva e il codice di supporto, vedere la guida [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) (Introduzione a iOS Designer).
--  **Info.plist**: in `Info.plist` vengono impostate le proprietà dell'applicazione, ad esempio il nome, le icone, le immagini di avvio e così via. Si tratta di un file avanzato, per il quale è disponibile un'introduzione completa nella guida [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) (Uso degli elenchi di proprietà).
--  **Entitlements.plist**: l'elenco delle proprietà di entitlement consente di specificare le *funzionalità* dell'applicazione (dette anche tecnologie dell'App Store), ad esempio iCloud, PassKit e così via. Altre informazioni sul file `Entitlements.plist` sono disponibili nella guida [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) (Uso degli elenchi di proprietà). Per un'introduzione generale agli entitlement, vedere la guida [Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md).
+- **Riferimenti**: contiene gli assembly necessari per compilare ed eseguire l'applicazione. Espandere la directory per visualizzare riferimenti ad assembly .NET quali [System](https://docs.microsoft.com/dotnet/api/system), System.Core e [System.Xml](https://docs.microsoft.com/dotnet/api/system.xml), nonché un riferimento all'assembly Xamarin.iOS.
+- **Pacchetti**: la directory Pacchetti contiene pacchetti NuGet pronti all'uso.
+- **Risorse**: nella cartella Risorse sono archiviati altri file multimediali.
+- **Main.cs**: contiene il punto di ingresso principale dell'applicazione. Per avviare l'applicazione, è necessario passare il nome della classe principale dell'applicazione, `AppDelegate`.
+- **AppDelegate.cs**: questo file contiene la classe principale dell'applicazione ed è responsabile della creazione della finestra, della compilazione dell'interfaccia utente e dell'ascolto di eventi generati dal sistema operativo.
+- **Main.storyboard**: lo Storyboard contiene la progettazione visiva dell'interfaccia utente dell'applicazione. I file dello Storyboard vengono aperti in un editor grafico, iOS Designer.
+- **ViewController.cs**: il controller di visualizzazione aziona la schermata (visualizzazione) che viene visualizzata e toccata dall'utente. Il controller di visualizzazione è responsabile della gestione delle interazioni tra l'utente e la visualizzazione.
+- **ViewController.designer.cs**: `designer.cs` è un file generato automaticamente che funge da elemento di associazione tra i controlli nella visualizzazione e le relative rappresentazioni in codice nel controller di visualizzazione. Poiché si tratta di un file di meccanismi interni, l'IDE sovrascriverà tutte le modifiche manuali e nella maggior parte dei casi questo file può essere ignorato. Per altre informazioni sulla relazione tra la finestra di progettazione visiva e il codice di supporto, vedere la guida [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) (Introduzione a iOS Designer).
+- **Info.plist**: in **Info.plist** vengono impostate le proprietà dell'applicazione, ad esempio il nome, le icone, le immagini di avvio e così via. Si tratta di un file avanzato, per il quale è disponibile un'introduzione completa nella guida [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) (Uso degli elenchi di proprietà).
+- **Entitlements.plist**: l'elenco delle proprietà di entitlement consente di specificare le *funzionalità* dell'applicazione (dette anche tecnologie dell'App Store), ad esempio iCloud, PassKit e così via. Altre informazioni sul file **Entitlements.plist** sono disponibili nella guida [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) (Uso degli elenchi di proprietà). Per un'introduzione generale agli entitlement, vedere la guida [Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md).
 
 ## <a name="architecture-and-app-fundamentals"></a>Concetti fondamentali dell'architettura e delle app
 
@@ -80,11 +83,9 @@ Questa sezione studia le relazioni illustrate nel diagramma seguente:
 
 [![](hello-ios-deepdive-images/image32.png "In questo diagramma sono illustrate le relazioni dei concetti fondamentali dell'architettura e delle app")](hello-ios-deepdive-images/image32.png#lightbox)
 
-La trattazione inizia dalle operazioni che vengono eseguite all'avvio dell'applicazione.
+### <a name="main-method"></a>metodo Main
 
-### <a name="main"></a>Main
-
-Il punto di ingresso principale di un'applicazione iOS è il file `Main.cs`. `Main.cs` contiene un metodo Main statico che crea una nuova istanza dell'applicazione Xamarin.iOS e passa il nome della classe *delegata dell'applicazione* che gestirà gli eventi del sistema operativo. Di seguito è riportato il codice del modello per il metodo statico `Main`:
+Il punto di ingresso principale di un'applicazione iOS è la classe `Application`. La classe `Application` è definita nel file **Main.cs** e contiene un metodo `Main` statico. Contiene una nuova istanza dell'applicazione Xamarin.iOS e passa il nome della classe *delegata dell'applicazione* che gestirà gli eventi del sistema operativo. Di seguito è riportato il codice del modello per il metodo statico `Main`:
 
 ```csharp
 using System;
@@ -104,7 +105,7 @@ namespace Phoneword_iOS
 
 ### <a name="application-delegate"></a>Classe delegata dell'applicazione
 
-In iOS, la classe *delegata dell'applicazione* gestisce gli eventi di sistema. questa classe si trova all'interno di `AppDelegate.cs`. La classe `AppDelegate` gestisce la finestra (*Window*) dell'applicazione. Questa finestra è una singola istanza della classe `UIWindow` che funge da contenitore per l'interfaccia utente. Per impostazione predefinita, un'applicazione ha una sola finestra in cui caricare il contenuto e tale finestra è associata a una *schermata* (una singola istanza di `UIScreen`) che fornisce il rettangolo delimitatore corrispondente alle dimensioni dello schermo fisico del dispositivo.
+In iOS, la classe *delegata dell'applicazione* gestisce gli eventi di sistema. Questa classe si trova all'interno di **AppDelegate.cs**. La classe `AppDelegate` gestisce la finestra (*Window*) dell'applicazione. Questa finestra è una singola istanza della classe `UIWindow` che funge da contenitore per l'interfaccia utente. Per impostazione predefinita, un'applicazione ha una sola finestra in cui caricare il contenuto e tale finestra è associata a una *schermata* (una singola istanza di `UIScreen`) che fornisce il rettangolo delimitatore corrispondente alle dimensioni dello schermo fisico del dispositivo.
 
 *AppDelegate* è anche responsabile della sottoscrizione agli aggiornamenti di sistema relativi a eventi importanti dell'applicazione, ad esempio il completamento dell'avvio o una riduzione eccessiva della memoria disponibile.
 
@@ -143,7 +144,7 @@ Questa sezione approfondisce l'argomento dell'interfaccia utente descrivendo le 
 
 iOS Designer è uno strumento visivo per la creazione di interfacce utente in Xamarin. È possibile avviare iOS Designer facendo doppio clic su un qualsiasi file Storyboard (con estensione storyboard), che verrà aperto in una visualizzazione simile allo screenshot seguente:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 ![](hello-ios-deepdive-images/image33.png "Interfaccia di iOS Designer")
 
@@ -155,7 +156,8 @@ Uno *Storyboard* è un file che contiene le progettazioni visive delle schermate
 
 ![](hello-ios-deepdive-images/image35.png "Riquadro Proprietà")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 ![](hello-ios-deepdive-images/vs-image33.png "Interfaccia di iOS Designer")
 
@@ -167,7 +169,7 @@ Uno *Storyboard* è un file che contiene le progettazioni visive delle schermate
 
 ![](hello-ios-deepdive-images/vs-image35.png "Riquadro Proprietà")
 
------
+::: zone-end
 
 La _visualizzazione_ può essere selezionata facendo clic all'interno della parte bianca della scena. La visualizzazione è un'istanza della classe `UIView` che definisce un'area della schermata e fornisce le interfacce da usare con il contenuto in tale area. La visualizzazione predefinita corrisponde a una *visualizzazione radice* singola che riempie l'intero schermo del dispositivo.
 
@@ -175,43 +177,46 @@ A sinistra della scena si trova una freccia grigia con l'icona della bandierina,
 
  [![](hello-ios-deepdive-images/image37.png "Freccia grigia con l'icona della bandierina")](hello-ios-deepdive-images/image37.png#lightbox)
 
-La freccia grigia rappresenta una transizione dello Storyboard denominata *Segue*. Poiché questa transizione non ha origine, viene detta *Sourceless Segue*(Segue senza origine). Un Sourceless Segue punta alla prima scena le cui visualizzazioni vengono caricate nella finestra dell'applicazione all'avvio di quest'ultima. Tale scena e le visualizzazioni all'interno di questa sono i primi elementi che l'utente vede quando l'applicazione viene caricata.
+La freccia grigia rappresenta una transizione dello Storyboard denominata *Segue* (si pronuncia "seg-way"). Poiché questa transizione non ha origine, viene detta *Sourceless Segue*. Un Sourceless Segue punta alla prima scena le cui visualizzazioni vengono caricate nella finestra dell'applicazione all'avvio di quest'ultima. Tale scena e le visualizzazioni all'interno di questa sono i primi elementi che l'utente vede quando l'applicazione viene caricata.
 
 Quando si crea un'interfaccia utente, è possibile trascinare visualizzazioni aggiuntive dalla **casella degli strumenti** alla visualizzazione principale nell'area di progettazione, come illustrato nello screenshot seguente:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 ![](hello-ios-deepdive-images/image38.png "È possibile trascinare visualizzazioni aggiuntive dalla casella degli strumenti alla visualizzazione principale nell'area di progettazione")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 ![](hello-ios-deepdive-images/vs-image38.png "È possibile trascinare visualizzazioni aggiuntive dalla casella degli strumenti alla visualizzazione principale nell'area di progettazione")
 
------
+::: zone-end
 
 Queste visualizzazioni aggiuntive sono dette *visualizzazioni secondarie*. La visualizzazione radice e le visualizzazioni secondarie fanno parte di una *gerarchia di visualizzazione del contenuto* gestita da `ViewController`. La struttura di tutti gli elementi presenti nella scena può essere esaminata nel riquadro **Struttura documento**:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 ![](hello-ios-deepdive-images/image39.png "Riquadro Struttura documento")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 ![](hello-ios-deepdive-images/vs-image39.png "Riquadro Struttura documento")
 
------
+::: zone-end
 
 Le visualizzazioni secondarie sono evidenziate nel diagramma seguente:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 ![](hello-ios-deepdive-images/image40.png "Le visualizzazioni secondarie sono evidenziate nel diagramma")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 ![](hello-ios-deepdive-images/vs-image40.png "Le visualizzazioni secondarie sono evidenziate nel diagramma")
 
------
+::: zone-end
 
 La prossima sezione analizza la gerarchia di visualizzazione del contenuto rappresentato da questa scena.
 
@@ -223,19 +228,20 @@ Una _gerarchia di visualizzazione del contenuto_ è una serie di visualizzazioni
 
 È possibile facilitare la visualizzazione della gerarchia di visualizzazione del contenuto di `ViewController` modificando temporaneamente in giallo il colore di sfondo della visualizzazione radice nella sezione di visualizzazione del **riquadro delle proprietà**, come illustrato nello screenshot seguente:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 ![](hello-ios-deepdive-images/image42.png "Modifica del colore di sfondo della visualizzazione radice in giallo nella sezione di visualizzazione del riquadro delle proprietà")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 ![](hello-ios-deepdive-images/vs-image42.png "Modifica del colore di sfondo della visualizzazione radice in giallo nella sezione di visualizzazione del riquadro delle proprietà")
 
------
+::: zone-end
 
 Il diagramma seguente illustra le relazioni tra la finestra, le visualizzazioni, le visualizzazioni secondarie e il controller di visualizzazione che visualizzano l'interfaccia utente sullo schermo del dispositivo:
 
- [![](hello-ios-deepdive-images/image43.png "Relazioni tra la finestra, le visualizzazioni, le visualizzazioni secondarie e il controller di visualizzazione")](hello-ios-deepdive-images/image43.png#lightbox)
+[![](hello-ios-deepdive-images/image43.png "Relazioni tra la finestra, le visualizzazioni, le visualizzazioni secondarie e il controller di visualizzazione")](hello-ios-deepdive-images/image43.png#lightbox)
 
 La prossima sezione illustra come usare le visualizzazioni nel codice e come creare un programma per l'interazione utente usando i controller di visualizzazione e il ciclo di vita della visualizzazione.
 
@@ -245,7 +251,7 @@ A ogni gerarchia di visualizzazione del contenuto corrisponde un controller di v
 
 ### <a name="view-controllers-and-storyboards"></a>Controller di visualizzazione e storyboard
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 All'interno di uno Storyboard il controller di visualizzazione è rappresentato sotto forma di una barra nella parte inferiore della scena. Quando si seleziona il controller di visualizzazione, vengono visualizzate le proprietà nel **riquadro delle proprietà**:
 
@@ -255,7 +261,8 @@ All'interno di uno Storyboard il controller di visualizzazione è rappresentato 
 
 ![](hello-ios-deepdive-images/image45new.png "L'applicazione Phoneword imposta ViewController come controller di visualizzazione")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 All'interno di uno Storyboard il controller di visualizzazione è rappresentato sotto forma di una barra nella parte inferiore della scena. Quando si seleziona il controller di visualizzazione, vengono visualizzate le proprietà nel **riquadro Proprietà**:
 
@@ -265,7 +272,7 @@ All'interno di uno Storyboard il controller di visualizzazione è rappresentato 
 
 ![](hello-ios-deepdive-images/vs-image45.png "L'applicazione Phoneword imposta ViewController come controller di visualizzazione")
 
------
+::: zone-end
 
 Questa operazione collega la rappresentazione del controller di visualizzazione nello Storyboard alla classe C# `ViewController`. Aprire il file `ViewController.cs`. Si noti che ViewController è una *sottoclasse* di `UIViewController`, come illustrato nel codice seguente:
 
@@ -290,11 +297,10 @@ Il controller di visualizzazione ha il compito di caricare e scaricare le gerarc
 
 Ecco i metodi di base del ciclo di vita e le funzioni corrispondenti:
 
--  **ViewDidLoad**: viene chiamato *una volta* la prima volta che il controller di visualizzazione carica la propria gerarchia di visualizzazione del contenuto in memoria. Questo è un ottimo momento per eseguire la configurazione iniziale, perché è il momento in cui le visualizzazioni secondarie diventano disponibili nel codice.
--  **ViewWillAppear**: viene chiamato ogni volta che una visualizzazione del controller di visualizzazione sta per essere aggiunta a una gerarchia di visualizzazione del contenuto e compare sullo schermo.
--  **ViewWillDisappear**: viene chiamato ogni volta che una visualizzazione del controller di visualizzazione sta per essere rimossa da una gerarchia di visualizzazione del contenuto e scompare dallo schermo. Questo evento del ciclo di vita viene usato per la pulizia e il salvataggio dello stato.
--  **ViewDidAppear** e **ViewDidDisappear**: vengono chiamati quando una visualizzazione viene rispettivamente aggiunta o rimossa dalla gerarchia di visualizzazione del contenuto.
-
+- **ViewDidLoad**: viene chiamato *una volta* la prima volta che il controller di visualizzazione carica la propria gerarchia di visualizzazione del contenuto in memoria. Questo è un ottimo momento per eseguire la configurazione iniziale, perché è il momento in cui le visualizzazioni secondarie diventano disponibili nel codice.
+- **ViewWillAppear**: viene chiamato ogni volta che una visualizzazione del controller di visualizzazione sta per essere aggiunta a una gerarchia di visualizzazione del contenuto e compare sullo schermo.
+- **ViewWillDisappear**: viene chiamato ogni volta che una visualizzazione del controller di visualizzazione sta per essere rimossa da una gerarchia di visualizzazione del contenuto e scompare dallo schermo. Questo evento del ciclo di vita viene usato per la pulizia e il salvataggio dello stato.
+- **ViewDidAppear** e **ViewDidDisappear**: vengono chiamati quando una visualizzazione viene rispettivamente aggiunta o rimossa dalla gerarchia di visualizzazione del contenuto.
 
 Quando si aggiunge codice personalizzato a una qualsiasi fase del ciclo di vita, è necessario *eseguire l'override* dell'*implementazione di base* del metodo corrispondente del ciclo di vita. A questo scopo, toccare il metodo del ciclo di vita esistente, a cui è già associato del codice, e ampliare quest'ultimo con codice aggiuntivo. L'implementazione di base viene chiamata dall'interno del metodo per assicurarsi che il codice originale venga eseguito prima del nuovo codice. Un esempio di queste operazioni è illustrato nella prossima sezione.
 
@@ -307,7 +313,7 @@ Il ruolo più importante del controller di visualizzazione è rispondere all'int
 Ora che si è acquisita una comprensione più approfondita delle visualizzazioni e dei controller di visualizzazione, è possibile esaminarne il funzionamento.
 Nel progetto `Phoneword_iOS`, è stato aggiunto il pulsante `TranslateButton` alla gerarchia di visualizzazione del contenuto:
 
- [![](hello-ios-deepdive-images/image1.png "È stato aggiunto il pulsante TranslateButton alla gerarchia di visualizzazione del contenuto")](hello-ios-deepdive-images/image1.png#lightbox)
+[![](hello-ios-deepdive-images/image1.png "È stato aggiunto il pulsante TranslateButton alla gerarchia di visualizzazione del contenuto")](hello-ios-deepdive-images/image1.png#lightbox)
 
 Quando viene assegnato un **Nome** al controllo **Pulsante** nel **riquadro delle proprietà**, iOS Designer ne esegue automaticamente il mapping a un controllo in  **ViewController.designer.cs**, rendendo disponibile il pulsante `TranslateButton` all'interno della classe `ViewController`. I controlli diventano disponibili a partire dalla fase `ViewDidLoad` del ciclo di vita della visualizzazione. Per rispondere al tocco dell'utente viene quindi usato questo metodo del ciclo di vita:
 
@@ -354,8 +360,23 @@ L'applicazione Phoneword ha introdotto alcuni concetti non trattati in questa gu
     ```csharp
     CallButton.SetTitle ("Call", UIControlState.Normal);
     ```
-- **Abilitazione e disabilitazione dei pulsanti**: lo stato degli elementi **Pulsante** può essere `Enabled` o `Disabled`. Un **Pulsante** disabilitato non risponde all'input dell'utente. Il codice seguente, ad esempio, disabilita l'elemento `CallButton`: CallButton.Enabled = false; Per altre informazioni sui pulsanti, vedere la guida [Pulsanti](~/ios/user-interface/controls/buttons.md).
-- **Chiusura della tastiera**: quando l'utente tocca il campo di testo, iOS visualizza la tastiera per consentire all'utente di immettere input. Non esiste una funzionalità incorporata che consenta di chiudere la tastiera. Il codice seguente viene aggiunto all'elemento `TranslateButton` per chiudere la tastiera quando l'utente preme l'elemento `TranslateButton` stesso: PhoneNumberText.ResignFirstResponder (); Per un altro esempio di chiusura della tastiera, vedere il recipe [Dismiss the Keyboard](https://github.com/xamarin/recipes/tree/master/Recipes/ios/input/keyboards/dismiss_the_keyboard) (Chiudere la tastiera).
+
+- **Abilitazione e disabilitazione dei pulsanti**: lo stato degli elementi **Pulsante** può essere `Enabled` o `Disabled`. Un **Pulsante** disabilitato non risponde all'input dell'utente. Ad esempio, il codice seguente disabilita `CallButton`:
+
+    ```csharp
+    CallButton.Enabled = false;
+    ```
+
+    Per altre informazioni sui pulsanti, vedere la guida relativa ai [pulsanti](~/ios/user-interface/controls/buttons.md).
+
+- **Chiusura della tastiera**: quando l'utente tocca il campo di testo, iOS visualizza la tastiera per consentire all'utente di immettere input. Non esiste una funzionalità incorporata che consenta di chiudere la tastiera. Il codice seguente viene aggiunto a `TranslateButton` per nascondere la tastiera quando l'utente preme `TranslateButton`:
+
+    ```csharp
+    PhoneNumberText.ResignFirstResponder ();
+    ```
+
+    Per un altro esempio di rimozione della tastiera, fare riferimento alla sezione [Dismiss the Keyboard](https://github.com/xamarin/recipes/tree/master/Recipes/ios/input/keyboards/dismiss_the_keyboard) (Nascondere la tastiera).
+
 - **Chiamata telefonica con URL**: nell'app Phoneword per avviare l'app telefono di sistema viene usato uno schema URL Apple. Lo schema URL personalizzato è costituito dal prefisso "tel:" e dal numero di telefono convertito, come illustrato nel codice seguente:
 
     ```csharp
@@ -365,6 +386,7 @@ L'applicazione Phoneword ha introdotto alcuni concetti non trattati in questa gu
         // show alert Controller
     }
     ```
+
 - **Visualizzazione di un avviso**: quando un utente tenta di effettuare una chiamata telefonica in un dispositivo che non supporta tali chiamate, ad esempio il simulatore o un iPod Touch, viene visualizzata una finestra di dialogo di avviso che informa l'utente che la chiamata non può essere effettuata. Il codice seguente crea e popola un controller di avvisi:
 
     ```csharp
@@ -375,7 +397,7 @@ L'applicazione Phoneword ha introdotto alcuni concetti non trattati in questa gu
                 }
     ```
 
-Per altre informazioni sulla visualizzazione di avvisi in iOS, vedere [Alert Controller recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller) (Recipe controller di avvisi).
+    Per altre informazioni sulla visualizzazione di avvisi in iOS, vedere [Alert Controller recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller) (Recipe controller di avvisi).
 
 ## <a name="testing-deployment-and-finishing-touches"></a>Test, distribuzione e finalizzazione
 
@@ -396,15 +418,16 @@ Il provisioning di un dispositivo richiede tempo e un account sviluppatore Apple
 
 Dopo il provisioning del dispositivo, per usare il dispositivo stesso come destinazione della distribuzione è necessario collegarlo, modificare la destinazione sulla barra degli strumenti di compilazione per il dispositivo iOS e premere **Avvia** ( **Riproduci**) come illustrato nello screenshot seguente:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 ![](hello-ios-deepdive-images/image46new.png "Premere Avvia/Riproduci")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 ![](hello-ios-deepdive-images/vs-image46.png "Premere Avvia/Riproduci")
 
------
+::: zone-end
 
 L'app verrà distribuita nel dispositivo iOS:
 
@@ -414,20 +437,21 @@ L'app verrà distribuita nel dispositivo iOS:
 
 Non tutti hanno a disposizione un designer che crei le icone e le immagini di avvio personalizzate necessarie per mettere in risalto un'app. Ecco alcuni approcci alternativi per la generazione di grafica personalizzata per le app:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+::: zone pivot="macos"
 
 - [**Sketch**](https://www.sketchapp.com"): Sketch è un'app Mac per la progettazione di interfacce utente, icone e altro ancora. Questa è l'app con cui è stato progettato il set delle icone e delle immagini di avvio dell'app di Xamarin. Sketch 3 è disponibile nell'App Store. È anche possibile provare lo [strumento Sketch](http://bohemiancoding.com/sketch/tool/) gratuito.
 - [**Pixelmator**](http://www.pixelmator.com/): versatile app di modifica delle immagini per Mac a un costo di circa 30 dollari.
 - [**Glyphish**](http://www.glyphish.com/): set di icone predefinito di alta qualità disponibile per il download gratuito e l'acquisto.
 - [**Fiverr**](http://www.fiverr.com/): consente di scegliere all'interno di un ampio pool un designer che crei il set di icone dell'applicazione, a partire da 5 dollari.  I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
 * Visual Studio: è possibile usare questo strumento per creare un set di icone semplici per l'app direttamente nell'IDE.
 - [**Glyphish**](http://www.glyphish.com/): set di icone predefinito di alta qualità disponibile per il download gratuito e l'acquisto.
 - [**Fiverr**](http://www.fiverr.com/): consente di scegliere all'interno di un ampio pool un designer che crei il set di icone dell'applicazione, a partire da 5 dollari.  I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi
 
------
+::: zone-end
 
 Per altre informazioni sulle dimensioni e sui requisiti delle icone, vedere la [guida Uso delle immagini](~/ios/app-fundamentals/images-icons/index.md).
 
@@ -435,7 +459,6 @@ Per altre informazioni sulle dimensioni e sui requisiti delle icone, vedere la [
 
 La procedura è stata completata. A questo punto si ha una solida conoscenza dei componenti delle applicazioni Xamarin.iOS e degli strumenti necessari per creare tali applicazioni.
 Nella [prossima esercitazione della serie introduttiva](~/ios/get-started/hello-ios-multiscreen/index.md), l'applicazione verrà estesa in modo da gestire più schermate. Nello stesso tempo, verrà implementato un controller di spostamento, verranno illustrati gli Storyboard Segue e verrà presentato lo schema MVC (Model, View, Controller).
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

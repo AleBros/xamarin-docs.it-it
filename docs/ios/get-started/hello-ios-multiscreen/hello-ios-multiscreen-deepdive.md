@@ -5,15 +5,15 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 12/02/2016
-ms.openlocfilehash: eaf77dd68895a3fbf677e1d0aa68125d81d709c1
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: d698cd1511e82116180a8af46891973f5f90343b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111225"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118968"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS Multiscreen - approfondimento
 
@@ -21,8 +21,6 @@ Nella procedura dettagliata di avvio rapido è stata compilata ed eseguita la pr
 
 In questa guida verrà introdotto lo schema *MVC (Model, View, Controller)* e il suo ruolo nell'architettura e nella navigazione di iOS.
 Approfondiremo quindi il controller di spostamento e spiegheremo come offrire un'esperienza di navigazione intuitiva in iOS.
-
-<a name="Model_View_Controller" />
 
 ## <a name="model-view-controller-mvc"></a>MVC (Model-View-Controller)
 

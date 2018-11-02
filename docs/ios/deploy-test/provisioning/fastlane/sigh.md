@@ -4,17 +4,17 @@ description: Questo documento descrive il comando sigh di fastlane, che consente
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 8eedc86807035887cade48c42868649b362b7cb2
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 88cc4899956b03d7236d7aa5c2bd30a5f6880507
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785502"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119514"
 ---
-# <a name="fastlane-for-ios--sigh"></a>fastlane per iOS: sigh
+# <a name="fastlane-for-ios-sigh"></a>fastlane per iOS: sigh
 
 > [!IMPORTANT]
 > fastlane consiglia di usare [`match`](~/ios/deploy-test/provisioning/fastlane/match.md) per generare e gestire i profili di provisioning. Usare sigh direttamente solo se si vuole il controllo completo e si hanno conoscenze sufficienti sulla firma del codice.

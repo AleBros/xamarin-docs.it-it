@@ -4,15 +4,15 @@ description: Questo documento descrive il linker Xamarin.iOS, che consente di el
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/24/2017
-ms.openlocfilehash: 4bcfc821359e74b34dc2ee11419e8ee86f8cccee
-ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
+ms.openlocfilehash: 7f45ea53429b30e634c99403b4159606fc616a4a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36321457"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120112"
 ---
 # <a name="linking-xamarinios-apps"></a>Collegamento di app Xamarin.iOS
 
@@ -26,13 +26,13 @@ Poiché il linker è uno strumento statico, non può contrassegnare per l'inclus
 
 ## <a name="linker-behavior"></a>Comportamento del linker
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Il processo di collegamento può essere personalizzato tramite l'elenco a discesa Comportamento del linker in **Opzioni progetto**. Per accedere a questo elenco, fare doppio clic sul progetto iOS e passare a **Compilazione iOS > Opzioni linker**, come mostrato di seguito:
 
 [![](linker-images/image1.png "Opzioni linker")](linker-images/image1.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Il processo di collegamento può essere personalizzato tramite l'elenco a discesa Comportamento del linker in **Proprietà progetto** in Visual Studio.
 

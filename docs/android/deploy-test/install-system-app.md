@@ -4,15 +4,15 @@ description: Questa guida illustra le differenze tra un'app di sistema e un'app 
 ms.prod: xamarin
 ms.assetid: 0113143B-7D8D-4C4C-B2F5-B966A2E7CE1F
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 94f2108a55cea520782aa5eac959195be09929b5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5a6f950ec7c9af0422beeb2d1af2be602fcaf947
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30767206"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113807"
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>Installazione di Xamarin.Android come app di sistema
 
@@ -52,7 +52,7 @@ I passaggi seguenti illustrano come installare un'app Xamarin.Android come app d
 
 3. **Copiare i file SO in /system/lib**: copiare i file **SO** estratti dall'APK nel passaggio precedente nella cartella **/system/lib/** della ROM personalizzata.
 
-4. **Copiare il file APK in /system/app**: nel passaggio finale si copia il file APK nella cartella **/system/app** della ROM.
+4. **Copiare il file APK in /system/app** &ndash;: nel passaggio finale si copia il file APK nella cartella **/system/app** della ROM.
 
 
 ## <a name="summary"></a>Riepilogo

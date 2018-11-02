@@ -4,15 +4,15 @@ description: Gli entitlement sono funzionalità speciali delle app e autorizzazi
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 03/15/2017
-ms.openlocfilehash: 7e5ace306b580ba76986e89367de84e5bfd9cc40
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 08/13/2018
+ms.openlocfilehash: 6e45f87b3c64abb9de22e09150935e3e5065fea4
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785304"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103413"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Uso degli entitlement in Xamarin.iOS
 
@@ -20,12 +20,11 @@ _Gli entitlement sono funzionalità speciali delle app e autorizzazioni di sicur
 
 In iOS le app vengono eseguite in una _sandbox_, che fornisce un set di regole che limitano l'accesso tra l'applicazione e determinate risorse di sistema o dati utente. Gli _entitlement_ vengono usati per richiedere al sistema di espandere la sandbox per fornire all'app funzionalità aggiuntive.
 
-Per estendere le funzionalità dell'app, è necessario specificare un entitlement nel file Entitlements.plist dell'app. Possono essere estese solo determinate funzionalità, elencate nella guida [Uso delle funzionalità](~/ios/deploy-test/provisioning/capabilities/index.md) e descritte [sotto](#keyreference). Gli entitlement vengono passati al sistema come coppia di chiave/valore e in genere ne è necessario solo uno per ogni funzionalità. Le chiavi e i valori specifici sono descritti nella sezione [Informazioni di riferimento sulle chiavi degli entitlement](#keyreference) più avanti in questa guida.
+Per estendere le funzionalità dell'app, è necessario specificare un entitlement nel file Entitlements.plist dell'app. Possono essere estese solo determinate funzionalità, elencate nella guida [Uso delle funzionalità](~/ios/deploy-test/provisioning/capabilities/index.md) e descritte [sotto](#entitlement-key-reference). Gli entitlement vengono passati al sistema come coppia di chiave/valore e in genere ne è necessario solo uno per ogni funzionalità. Le chiavi e i valori specifici sono descritti nella sezione [Informazioni di riferimento sulle chiavi degli entitlement](#entitlement-key-reference) più avanti in questa guida.
 Visual Studio per Mac e Visual Studio offrono un'interfaccia chiara per l'aggiunta di entitlement in un'app Xamarin.iOS tramite l'editor Entitlements.plist.
 Questa guida illustra l'editor Entitlements.plist e come usarlo. Fornisce anche informazioni di riferimento su tutti gli entitlement che possono essere aggiunti a un progetto iOS per ogni funzionalità.
 
 ## <a name="entitlements-and-provisioning"></a>Entitlement e provisioning
-
 
 Il file Entitlements.plist viene usato per specificare gli entitlement e per firmare il bundle dell'applicazione.
 
@@ -38,7 +37,7 @@ Il file Entitlements.plist viene usato per specificare gli entitlement e per fir
 
 Durante la definizione dell'ID app, oltre a selezionare e configurare i servizi dell'applicazione richiesti, è anche necessario configurare gli entitlement nel progetto Xamarin.iOS modificando i file **Info.plist** e **Entitlements.plist**.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Per configurare gli entitlement in Visual Studio per Mac, seguire questa procedura:
 
@@ -55,7 +54,7 @@ Per configurare gli entitlement in Visual Studio per Mac, seguire questa procedu
 5. Selezionare e configurare gli entitlement richiesti per l'applicazione Xamarin.iOS in modo che corrispondano alla configurazione definita durante la creazione dell'ID app.
 6. Salvare le modifiche apportate al file **Entitlements.plist**.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Per configurare gli entitlement in Visual Studio, seguire questa procedura:
 
@@ -74,10 +73,7 @@ Per configurare gli entitlement in Visual Studio, seguire questa procedura:
 5. Selezionare e configurare gli entitlement richiesti per l'applicazione Xamarin.iOS in modo che corrispondano alla configurazione definita durante la creazione dell'ID app.
 6. Salvare le modifiche apportate al file **Entitlements.plist**.
 
-
 -----
-
-<a name="add-new" />
 
 ## <a name="adding-a-new-entitlementsplist-file"></a>Aggiunta di un nuovo file Entitlements.plist
 
@@ -91,8 +87,6 @@ Per aggiungere un file Entitlements.plist a Xamarin.iOS, seguire questa procedur
 2.  Nella finestra di dialogo Nuovo file selezionare **iOS > Elenco proprietà** e assegnargli il nome Entitlements:
 
     ![Finestra di dialogo Nuovo file](entitlements-images/image2.png)
-
-<a name="keyreference" />
 
 ## <a name="entitlement-key-reference"></a>Informazioni di riferimento sulle chiavi degli entitlement
 
@@ -150,7 +144,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 ### <a name="push-notifications"></a>Notifiche push
 
 - **Chiave**: aps-environment
-- **Stringa**: `production` OPPURE `development`
+- **Stringa**: `development` oppure `production`
 
 ### <a name="siri"></a>Siri
 
@@ -203,6 +197,12 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 - **Descrizione**: l'uso di Configurazione accessori wireless consente all'app di configurare gli accessori Wi-Fi MFi
     - **Chiave**: com.apple.external-accessory.wireless-configuration
     - **Valore booleano**: YES
+
+### <a name="classkit"></a>ClassKit
+
+- **Descrizione**: ClassKit consente ai docenti di visualizzare l'avanzamento degli studenti nelle attività assegnate nell'app.
+    - **Key**: com.apple.developer.ClassKit-environment
+    - **Stringa**: `development` oppure `production`
 
 ## <a name="summary"></a>Riepilogo
 

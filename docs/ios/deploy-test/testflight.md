@@ -4,15 +4,15 @@ description: TestFlight ora è di proprietà di Apple ed è lo strumento princip
 ms.prod: xamarin
 ms.assetid: BA880768-2BC8-41E4-B57E-A56F8EED4690
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: efb0a59ac43ca3e0c4959caa8478a51512e29a3a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 87be250bdc425558a8e386a8209596e18f13b3ed
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785687"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120520"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso di TestFlight per distribuire app Xamarin.iOS
 
@@ -98,7 +98,7 @@ Dopo aver creato il record iTunes Connect, è possibile caricare le nuove compil
 
 Prima compilare il [file distribuibile finale](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) nell'IDE, quindi [inviare l'app ad Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) tramite Application Loader o la funzione di archiviazione in Xcode.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ###  <a name="create-an-archive"></a>Creare un archivio
 
@@ -126,7 +126,7 @@ Prima compilare il [file distribuibile finale](~/ios/deploy-test/app-distributio
 
  Fare riferimento alla sezione [Invio dell'app ad Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) per altre informazioni su questi passaggi.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ###  <a name="building-your-final-distributable"></a>Compilazione del file distribuibile finale
  Il plug-in di Xamarin per Visual Studio non supporta l'archiviazione di app Xamarin.iOS per la pubblicazione nell'App Store. Esistono però due opzioni per pubblicare un'applicazione iOS da Visual Studio. Questi sono:

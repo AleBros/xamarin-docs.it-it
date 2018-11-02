@@ -7,14 +7,14 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 35c7605f9682bef9e93fb4f25404659662126a9d
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 3b1769dec78f65544e8996e21cb8ae003e4af198
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242027"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111330"
 ---
-# <a name="getting-started-with-xamarin"></a>Introduzione a Xamarin
+# <a name="get-started-with-xamarin"></a>Introduzione a Xamarin
 
 Prima di iniziare, verificare i [requisiti di sistema](requirements.md) e le [istruzioni di installazione](installation/index.md) per assicurarsi che tutto sia pronto.
 
@@ -27,7 +27,6 @@ Per compilare un'app usando tecnologie di interfaccia utente native (ad esempio 
 
 - [Android Quick Start](~/android/get-started/hello-android/hello-android-quickstart.md) (Guida introduttiva di Android)
 - [iOS Quick Start](~/ios/get-started/hello-ios/hello-ios-quickstart.md) (Guida introduttiva di iOS)
-- [Introduzione a Mac](~/mac/get-started/hello-mac.md)
 
 ## <a name="getting-started-with-mobile-development"></a>Introduzione allo sviluppo per dispositivi mobili
 

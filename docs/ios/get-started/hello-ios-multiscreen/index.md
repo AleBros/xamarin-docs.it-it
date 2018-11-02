@@ -5,25 +5,25 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 79f57ac0-37d0-4593-9dcf-fca93ad0be65
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 12/02/2016
-ms.openlocfilehash: 573ab05c066c7ecd064942ba502634c97224d1d7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: 0e3a37364b5715650fc893ec4549749b0788087a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786035"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119774"
 ---
 # <a name="hello-ios-multiscreen"></a>Hello, iOS Multiscreen
 
-##  <a name="part-1-quickstartiosget-startedhello-ios-multiscreenhello-ios-multiscreen-quickstartmd"></a>[Parte 1: guida introduttiva](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
+## <a name="part-1-quickstartiosget-startedhello-ios-multiscreenhello-ios-multiscreen-quickstartmd"></a>[Parte 1: guida introduttiva](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
 
-Nella prima parte della guida si aggiungerà una seconda schermata all'applicazione Phoneword per tenere traccia della cronologia dei numeri chiamati usando l'app.
+Nella prima parte della guida si aggiungerà una seconda schermata all'applicazione Phoneword di esempio per tenere traccia della cronologia dei numeri immessi.
 
-##  <a name="part-2-deep-diveiosget-startedhello-ios-multiscreenhello-ios-multiscreen-deepdivemd"></a>[Part 2: Deep Dive](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md) (Parte 2: approfondimento)
+## <a name="part-2-deep-diveiosget-startedhello-ios-multiscreenhello-ios-multiscreen-deepdivemd"></a>[Parte 2: approfondimento](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
 
-Nella seconda parte del documento viene rivista l'applicazione compilata e vengono analizzati l'architettura, la navigazione e altri concetti di iOS nuovi incontrati durante il procedimento.
+Nella seconda parte del documento viene descritta l'applicazione compilata e vengono analizzati l'architettura, la navigazione e altri concetti di iOS nuovi incontrati durante il procedimento.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

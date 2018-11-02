@@ -4,15 +4,15 @@ description: Questo documento contiene i collegamenti alle guide che descrivono 
 ms.prod: xamarin
 ms.assetid: E5A29963-C8BD-465B-BFC1-7FAC9CC64BD3
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 12/02/2016
-ms.openlocfilehash: 58eb2c348530e6ed3caa04c5a367e01d3b98beaa
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: 5ce074e3659d4c380bd02537ef2cb8ac5734aede
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785938"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112026"
 ---
 # <a name="xamarinios-installation"></a>Installazione di Xamarin.iOS
 
@@ -20,9 +20,9 @@ ms.locfileid: "34785938"
 
 Per compilare per Xamarin.iOS, sono necessari i componenti seguenti:
 
--    l'SDK di iOS più recente.
--    l'ultima versione di Xcode.
--    Mac OS X Sierra (10.12) e versioni successive.
+- l'SDK di iOS più recente
+- l'ultima versione di Xcode
+- macOS High Sierra (10.13) versioni successive
 
 La versione più recente di Xcode può essere scaricata da [iOS Developer Center](https://developer.apple.com/devcenter/ios/index.action#downloads) (accesso richiesto) o tramite Mac App Store:
 

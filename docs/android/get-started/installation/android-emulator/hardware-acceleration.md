@@ -1,201 +1,246 @@
 ---
-title: Accelerazione hardware per le prestazioni dell'emulatore
+title: Accelerazione hardware per le prestazioni dell'emulatore (Hyper-V e HAXM)
 description: Questo articolo descrive come usare le funzionalità di accelerazione hardware del computer per ottimizzare le prestazioni dell'emulatore Android.
+zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 06/22/2018
-ms.openlocfilehash: c2bef2c614d4cc0655deb9732ccefec223a8318a
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+author: conceptdev
+ms.author: crdun
+ms.date: 08/27/2018
+ms.openlocfilehash: 5c79ffd824033f528eb65d07581efefcf3895a9b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38848467"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113222"
 ---
-# <a name="hardware-acceleration-for-emulator-performance"></a>Accelerazione hardware per le prestazioni dell'emulatore
+# <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Accelerazione hardware per le prestazioni dell'emulatore (Hyper-V e HAXM)
 
 _Questo articolo descrive come usare le funzionalità di accelerazione hardware del computer per ottimizzare le prestazioni dell'emulatore Android._
 
-## <a name="overview"></a>Panoramica
-
 Per gli sviluppatori, Visual Studio semplifica il test e il debug del codice delle applicazioni Xamarin.Android con l'emulatore Android nelle situazioni in cui un dispositivo Android non è disponibile o risulta poco pratico.
-Tuttavia, l'emulatore Android viene eseguito troppo lentamente se nel computer che lo esegue non è disponibile l'accelerazione hardware. È possibile migliorare notevolmente le prestazioni dell'emulatore Android usando immagini del dispositivo virtuale speciali destinate all'hardware x86 insieme a una delle due tecnologie di virtualizzazione:
+Tuttavia, l'emulatore Android viene eseguito troppo lentamente se nel computer che lo esegue non è disponibile l'accelerazione hardware. È possibile migliorare notevolmente le prestazioni dell'emulatore Android usando immagini x86 speciali del dispositivo virtuale insieme alle funzionalità di virtualizzazione del computer.
 
-1. **Microsoft Hyper-V e piattaforma Hypervisor**. Hyper-V è una funzionalità di virtualizzazione di Windows che consente l'esecuzione di sistemi di computer virtualizzati in un computer host fisico. Questa è la tecnologia di virtualizzazione consigliata da usare per l'accelerazione dell'emulatore Android. Per altre informazioni su Hyper-V, vedere [Hyper-V in Windows 10](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/).
+::: zone pivot="windows"
+
+## <a name="accelerating-android-emulators-on-windows"></a>Accelerazione di emulatori Android in Windows
+
+Le tecnologie di virtualizzazione seguenti sono disponibili per l'accelerazione dell'emulatore Android:
+
+1. **Microsoft Hyper-V e piattaforma Hypervisor**.
+   [Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/) è una funzionalità di virtualizzazione di Windows che consente l'esecuzione di sistemi di computer virtualizzati in un computer host fisico.
 
 2. **Intel Hardware Accelerated Execution Manager (HAXM)**. 
-   HAXM è un motore di virtualizzazione per i computer che eseguono CPU Intel.
-   Questo è il motore di virtualizzazione consigliato per i computer che non possono eseguire Hyper-V.
+   [HAXM](https://software.intel.com/articles/intel-hardware-accelerated-execution-manager-intel-haxm) è un motore di virtualizzazione per i computer che eseguono CPU Intel.
 
-L'emulatore Android usa automaticamente l'accelerazione hardware se vengono soddisfatti i criteri seguenti:
+Per ottenere prestazioni ottimali, è consigliabile l'uso di Hyper-V per accelerare l'emulatore Android. Se Hyper-V non è disponibile nel computer in uso, è possibile usare HAXM. L'emulatore Android usa automaticamente l'accelerazione hardware se vengono soddisfatti i criteri seguenti:
 
--   L'accelerazione hardware è disponibile e abilitata nel computer di sviluppo.
+- L'accelerazione hardware è disponibile e abilitata nel computer di sviluppo.
 
--   L'emulatore esegue un'immagine dell'emulatore creata appositamente per un dispositivo virtuale basato su **x86**.
+- L'emulatore esegue un'immagine del sistema creata per un dispositivo virtuale basato su **x86**.
 
-Per informazioni sull'avvio e il debug con l'emulatore Android, vedere [Debug nell'emulatore Android](~/android/deploy-test/debugging/debug-on-emulator.md).
-
-## <a name="hyper-v"></a>Hyper-V
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-![](~/media/shared/preview.png)
-
-> [!NOTE]
-> Il supporto di Hyper-V è attualmente in anteprima.
-
-L'uso di Microsoft Hyper-V è vivamente consigliato agli sviluppatori che usano l'Aggiornamento di Windows 10 (aprile 2018 o versione successiva) per accelerare l'emulatore Android. Per usare l'emulatore Android con Hyper-V:
-
-1. **Eseguire l'aggiornamento all'Aggiornamento di Windows 10 - aprile 2018 (build 1803) o versione successiva**.
-   Per verificare la versione di Windows in esecuzione, fare clic sulla barra di ricerca di Cortana e digitare **Informazioni su**. Nei risultati della ricerca selezionare **Informazioni sul PC**. Scorrere verso il basso la finestra **Informazioni su** fino a visualizzare la sezione **Specifiche Windows**. Il valore di **Versione** non deve essere inferiore a 1803:
-
-    [![Specifiche Windows](hardware-acceleration-images/win/12-about-windows.w10-sml.png)](hardware-acceleration-images/win/12-about-windows.w10.png#lightbox)
-
-2. **Abilitare la piattaforma Windows Hypervisor** .
-   Nella barra di ricerca di Cortana digitare **Attiva o disattiva funzionalità di Windows**.
-   Scorrere verso il basso la finestra **Funzionalità Windows** e assicurarsi che sia abilitata l'opzione **Windows Hypervisor Platform** (Piattaforma Windows Hypervisor):
-
-    [![Piattaforma Windows Hypervisor abilitata](hardware-acceleration-images/win/13-windows-features.w10-sml.png)](hardware-acceleration-images/win/13-windows-features.w10.png#lightbox)
-
-   L'abilitazione della **piattaforma Windows Hypervisor** abilita automaticamente Hyper-V. È consigliabile riavviare Windows dopo avere apportato questa modifica.
-
-3. **Installare [Visual Studio 15.8 Preview 1 o versione successiva](https://visualstudio.microsoft.com/vs/preview/)**.
-   Questa versione di Visual Studio offre il supporto IDE per l'esecuzione dell'emulatore Android con Hyper-V.
- 
-4. **Installare il pacchetto dell'emulatore Android 27.2.7 o versione successiva**. Per installare questo pacchetto, passare a **Strumenti > Android > Android SDK Manager** in Visual Studio. Selezionare la scheda **Strumenti** e verificare che la versione dell'emulatore Android non sia inferiore alla 27.2.7. Verificare anche che la versione di Android SDK Tools corrisponda alla 26.1.1 o versione successiva:
-
-    [![Finestra di dialogo Android SDK e strumenti Android](hardware-acceleration-images/win/14-sdk-manager.w158-sml.png)](hardware-acceleration-images/win/14-sdk-manager.w158.png#lightbox)
-
-5. Se la versione dell'emulatore è almeno 27.2.7 ma inferiore a 27.3.1, per usare Hyper- V è necessaria la soluzione alternativa seguente:
-
-    1.  Nella cartella **C:\\Utenti\\_nomeutente_\\.android** creare il file **advancedFeatures.ini**, se non esiste già.
-
-    2.  Aggiungere la seguente riga ad **advancedFeatures.ini**:
-        ```
-        WindowsHypervisorPlatform = on
-        ```
-
-
-### <a name="known-issues"></a>Problemi noti
-
--   Se non si è in grado di eseguire l'aggiornamento alla versione dell'emulatore 27.2.7 o successiva dopo l'aggiornamento a Visual Studio Preview, potrebbe essere necessario installare direttamente il [programma di installazione della versione Preview](http://aka.ms/hyperv-emulator-dl) per abilitare le versioni più recenti dell'emulatore.
-
--   Le prestazioni possono risultare ridotte quando si usano determinati processori Intel e AMD.
-
--   Il caricamento dell'applicazione Android può richiedere un periodo di tempo molto lungo al momento della distribuzione.
-
--   Un errore di accesso MMIO può impedire in modo intermittente un avvio dell'emulatore Android. Riavviare l'emulatore per risolvere il problema.
-
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
-
-Per il supporto di Hyper-V è necessario Windows 10. Per altri dettagli, vedere [Requisiti di Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#check-requirements).
-
------
-
-## <a name="haxm"></a>HAXM
-
-HAXM è un motore di virtualizzazione assistita mediante hardware (hypervisor) che usa Intel Virtualization Technology (VT) per velocizzare l'emulazione delle app Android in un computer host. L'uso di HAXM in combinazione con le immagini x86 dell'emulatore Android fornite da Intel consente di velocizzare l'emulazione di Android nei sistemi abilitati per VT.
-
-Se si sviluppa in un computer con una CPU Intel che dispone di funzionalità VT, è possibile usare HAXM per velocizzare notevolmente l'emulatore Android (se non si è certi che la CPU supporti VT, vedere [Il mio processore supporta Intel Virtualization Technology?](https://www.intel.com/content/www/us/en/support/processors/000005486.html)).
-
-> [!NOTE]
+> [!IMPORTANT]
 > Non è possibile eseguire un emulatore con accelerazione della macchina virtuale all'interno di un'altra macchina virtuale, ad esempio una macchina ospitata da VirtualBox, VMWare o Docker. È necessario eseguire l'emulatore Android [direttamente nell'hardware del sistema](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
-Prima di usare l'emulatore Android per la prima volta, è consigliabile verificare che HAXM sia installato e disponibile per l'uso con l'emulatore Android.
+Per informazioni sull'avvio e sul debug con l'emulatore Android, vedere [Debug nell'emulatore Android](~/android/deploy-test/debugging/debug-on-emulator.md).
 
-### <a name="verifying-haxm-installation"></a>Verifica dell'installazione di HAXM
+<a name="hyper-v-win" />
 
-È possibile verificare se HAXM è disponibile visualizzando la finestra **Avvio dell'emulatore Android** durante l'avvio dell'emulatore. Per avviare l'emulatore Android, seguire questa procedura:
+## <a name="accelerating-with-hyper-v"></a>Accelerazione con Hyper-V
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+Hyper-V è la scelta consigliata per accelerare l'emulatore di Android.
+Prima di abilitare Hyper-V, leggere la sezione seguente per verificare che il computer supporti Hyper-V.
 
-1. Avviare Android Device Manager facendo clic su **Strumenti > Android > Android Device Manager**:
+### <a name="verifying-support-for-hyper-v"></a>Verifica del supporto per Hyper-V
 
-    [![Voce di menu Android Device Manager](hardware-acceleration-images/win/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/win/01-avd-manager-menu-item.png#lightbox)
+Hyper-V viene eseguito nella piattaforma Windows Hypervisor. Per usare l'emulatore Android con Hyper-V, il computer deve soddisfare i criteri seguenti per supportare la piattaforma Windows Hypervisor:
 
-2. Se viene visualizzata una finestra di dialogo **Avviso prestazioni** simile alla seguente, HAXM non è ancora installato o configurato correttamente nel computer:
+- L'hardware del computer deve soddisfare i requisiti seguenti:
 
-    ![Finestra di dialogo Avviso prestazioni che indica che HAXM non è pronto](hardware-acceleration-images/win/11-perf-warn.png)
+    - CPU Intel o AMD Ryzen a 64 bit con Second Level Address Translation (SLAT).
+    - Supporto di CPU per estensione della modalità di monitoraggio VM (VT-c nelle CPU Intel).
+    - Almeno 4 GB di memoria.
 
-   Se viene visualizzata una finestra di dialogo **Avviso prestazioni** simile alla seguente, vedere [Avvisi di prestazioni](~/android/get-started/installation/android-emulator/troubleshooting.md#perfwarn) per identificare la causa e risolvere il problema.
+- Nel BIOS del computer è necessario abilitare gli elementi seguenti:
 
-3. Selezionare un'immagine **x86** (ad esempio, **VisualStudio\_android-23\_x86\_phone**) e fare clic su **Avvia**:
+    - Tecnologia di virtualizzazione (potrebbe avere un'etichetta diversa a seconda del produttore della scheda madre).
+    - Protezione esecuzione programmi basata su hardware.
 
-    ![Avvio dell'emulatore Android con un'immagine di dispositivo virtuale predefinita](hardware-acceleration-images/win/02-start-default-avd.png)
+- Il computer deve disporre dell'Aggiornamento di Windows 10 - aprile 2018 (build 1803) o versione successiva. È possibile verificare se la versione di Windows è aggiornata usando la procedura seguente: 
 
-4. Controllare la finestra di dialogo **Avvio dell'emulatore Android** durante l'avvio dell'emulatore. Se HAXM è installato, verrà visualizzato il messaggio **HAX is working and emulator runs in fast virt mode** (HAX è in funzione e l'emulatore viene eseguito in modalità di virtualizzazione rapida), come illustrato in questo screenshot:
+    1. Nella casella di ricerca Windows digitare **informazioni**. 
+    2. Nei risultati della ricerca selezionare **Informazioni sul PC**. 
+    3. Scorrere verso il basso la finestra **Informazioni su** fino a visualizzare la sezione **Specifiche Windows**. 
+    4. Verificare che la **versione** sia almeno 1803:
 
-    ![HAXM è indicato come disponibile nella finestra di dialogo Avvio dell'emulatore Android](hardware-acceleration-images/win/03-haxm-detected.png)
+        [![Specifiche Windows](hardware-acceleration-images/win/01-about-windows-w10-sml.png)](hardware-acceleration-images/win/01-about-windows-w10.png#lightbox)
 
-   Se non viene visualizzato questo messaggio, HAXM probabilmente non è installato. Ecco ad esempio uno screenshot di un messaggio che potrebbe essere visualizzato se HAXM non è disponibile:
+Per verificare che l'hardware e il software del computer siano compatibili con Hyper-V, aprire un prompt dei comandi e digitare il comando seguente:
 
-    ![HAXM non è disponibile su questo computer](hardware-acceleration-images/win/04-haxm-error.png)
+```cmd
+systeminfo
+```
 
-   Se HAXM non è disponibile nel computer, usare la procedura descritta nella sezione successiva per installare HAXM.
+Se tutti i requisiti di Hyper-V elencati hanno un valore **Yes**, i computer possono supportare Hyper-V. Ad esempio:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+[![Output di systeminfo di esempio](hardware-acceleration-images/win/02-systeminfo-w158-sml.png)](hardware-acceleration-images/win/02-systeminfo-w158.png#lightbox)
 
-1. Avviare Android Device Manager facendo clic su **Strumenti > Device Manager**:
 
-    [![Voce di menu Android Device Manager](hardware-acceleration-images/mac/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/mac/01-avd-manager-menu-item.png#lightbox)
+### <a name="enabling-hyper-v-acceleration"></a>Abilitazione dell'accelerazione di Hyper-V
 
-2. Se viene visualizzata una finestra di dialogo **Avviso prestazioni** simile alla seguente, HAXM non è ancora installato o configurato correttamente nel computer:
+Se il computer soddisfa i criteri sopra riportati, seguire questa procedura per accelerare l'emulatore Android con Hyper-v:
 
-    ![Finestra di dialogo Avviso prestazioni che indica che HAXM non è pronto](hardware-acceleration-images/mac/04-avd-warning.png)
+1. Immettere **funzionalità di windows** nella casella di ricerca Windows e selezionare **Attivazione o disattivazione delle funzionalità Windows** nei risultati della ricerca. Nella finestra di dialogo **Funzionalità Windows** abilitare **Hyper-V** e **Piattaforma Windows Hypervisor**:
 
-   Se viene visualizzata una finestra di dialogo **Avviso prestazioni** simile alla seguente, vedere [Avvisi di prestazioni](~/android/get-started/installation/android-emulator/troubleshooting.md#perfwarn) per identificare la causa e risolvere il problema.
+    [![Abilitazione di Hyper-V e Piattaforma Windows Hypervisor](hardware-acceleration-images/win/03-hyper-v-settings-w158-sml.png)](hardware-acceleration-images/win/03-hyper-v-settings-w158.png#lightbox)
 
-3. Selezionare l'immagine **x86** (ad esempio, **Android\_Accelerated\_x86**) e fare clic su **Avvia**:
+   Dopo aver apportato queste modifiche, riavviare il computer.
 
-    [![Avvio dell'emulatore Android con un'immagine di dispositivo virtuale predefinita](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png#lightbox)
+2. **Installare [Visual Studio 15.8 o versioni successive](https://visualstudio.microsoft.com/vs/)**. Questa versione di Visual Studio offre il supporto IDE per l'esecuzione dell'emulatore Android con Hyper-V.
 
-3. Controllare la finestra di dialogo **Avvio dell'emulatore Android** durante l'avvio dell'emulatore. Se HAXM è installato, verrà visualizzato il messaggio **HAX is working and emulator runs in fast virt mode** (HAX è in funzione e l'emulatore viene eseguito in modalità di virtualizzazione rapida), come illustrato in questo screenshot:
+3. **Installare il pacchetto dell'emulatore Android 27.2.7 o versione successiva**. Per installare questo pacchetto, passare a **Strumenti > Android > Android SDK Manager** in Visual Studio. Selezionare la scheda **Strumenti** e verificare che la versione dell'emulatore Android non sia inferiore alla 27.2.7. Verificare anche che la versione di Android SDK Tools corrisponda alla 26.1.1 o versione successiva:
 
-    ![HAXM è indicato come disponibile nella finestra di dialogo Avvio dell'emulatore Android](hardware-acceleration-images/mac/03-haxm-detected.png)
+    [![Finestra di dialogo Android SDK e strumenti Android](hardware-acceleration-images/win/04-sdk-manager-w158-sml.png)](hardware-acceleration-images/win/04-sdk-manager-w158.png#lightbox)
 
-   Se HAXM non è disponibile nel computer, ad esempio se viene visualizzato un messaggio di errore simile a _Please ensure Intel HAXM is properly installed and usable_ (Verificare che Intel HAXM sia installato correttamente e utilizzabile), usare la procedura descritta nella sezione successiva per installare HAXM.
 
------
+Quando si crea un dispositivo virtuale (vedere [Gestione di dispositivi virtuali con Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), assicurarsi di selezionare un'immagine del sistema basata su **x86**. Se si usa un'immagine del sistema basata su ARM, il dispositivo virtuale non verrà accelerato e verrà eseguito lentamente.
 
-<a name="install-haxm" />
+
+## <a name="accelerating-with-haxm"></a>Accelerazione con HAXM
+
+Usare HAXM per accelerare l'emulatore Android se il computer non supporta Hyper-V. È necessario [disabilitare Device Guard](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vswin#disable-devguard) se si intende usare HAXM.
+
+### <a name="verifying-haxm-support"></a>Verifica del supporto HAXM
+
+Per determinare se l'hardware supporta HAXM, seguire i passaggi descritti in [Il mio processore supporta Intel Virtualization Technology?](https://www.intel.com/content/www/us/en/support/processors/000005486.html).
+Se l'hardware supporta HAXM, è possibile controllare se HAXM è già installato usando la procedura seguente:
+
+1. Aprire una finestra del prompt dei comandi e digitare il comando seguente:
+
+    ```cmd
+    sc query intelhaxm
+    ```
+
+2. Esaminare l'output per vedere se il processo HAXM è in esecuzione. In caso affermativo, lo stato di `intelhaxm` verrà visualizzato come `RUNNING`. Ad esempio:
+
+    ![Output del comando sc query se HAXM è disponibile](hardware-acceleration-images/win/05-sc_query-w158.png)
+
+   Se `STATE` non è impostato su `RUNNING`, HAXM non è installato.
+
+Se il computer può supportare HAXM, ma quest'ultimo non è installato, usare la procedura descritta nella sezione successiva per installare HAXM.
+
+<a name="install-haxm-win" />
 
 ### <a name="installing-haxm"></a>Installazione di HAXM
 
-Se l'emulatore non viene avviato, potrebbe essere necessario installare HAXM manualmente. I pacchetti di installazione di HAXM per Windows e macOS sono disponibili nella pagina [Intel Hardware Accelerated Execution Manager](https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager). Usare la procedura seguente per scaricare e installare manualmente HAXM:
+I pacchetti di installazione di HAXM per Windows sono disponibili nella pagina [Intel Hardware Accelerated Execution Manager](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager). Usare la procedura seguente per scaricare e installare HAXM:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-1. Scaricare dal sito Web di Intel la versione più recente del programma di installazione del [motore di virtualizzazione HAXM](https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager/) per Windows. Scaricando il programma di installazione di HAXM direttamente dal sito Web di Intel, si può essere certi di usare la versione più recente.
-
-   In alternativa, è possibile usare SDK Manager per scaricare il programma di installazione di HAXM: in SDK Manager fare clic su **Strumenti > Funzionalità aggiuntive > Intel x86 Emulator Accelerator (HAXM installer)** (Acceleratore emulatore Intel x86 (programma di installazione di HAXM)). Android SDK in genere scarica il programma di installazione di HAXM nel percorso seguente:
-
-   **C:\\Program Files (x86)\\Android\\android-sdk\\extras\\intel\\Hardware\_Accelerated\_Execution\_Manager**
-
-   Si noti che SDK Manager non installa HAXM, ma scarica semplicemente il programma di installazione HAXM nel percorso precedente. È comunque necessario avviarlo manualmente.
+1. Scaricare dal sito Web di Intel la versione più recente del programma di installazione del [motore di virtualizzazione HAXM](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager/) per Windows. Scaricando il programma di installazione di HAXM direttamente dal sito Web di Intel, si può essere certi di usare la versione più recente.
 
 2. Eseguire **intelhaxm-android.exe** per avviare il programma di installazione di HAXM. Accettare i valori predefiniti nelle finestre di dialogo del programma di installazione:
 
-   ![Finestra di installazione di Intel Hardware Accelerated Execution Manager](hardware-acceleration-images/win/05-haxm-installer.png)
-
-## <a name="hardware-acceleration-and-amd-cpus"></a>Accelerazione hardware e CPU AMD
-
-Poiché l'emulatore Android attualmente supporta l'accelerazione hardware AMD [solo in Linux](https://developer.android.com/studio/run/emulator-acceleration.html#dependencies), l'accelerazione hardware non è disponibile per i computer basati su processori AMD che eseguono Windows.
+   ![Finestra di installazione di Intel Hardware Accelerated Execution Manager](hardware-acceleration-images/win/06-haxm-installer.png)
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+Quando si crea un dispositivo virtuale (vedere [Gestione di dispositivi virtuali con Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), assicurarsi di selezionare un'immagine del sistema basata su **x86**. Se si usa un'immagine del sistema basata su ARM, il dispositivo virtuale non verrà accelerato e verrà eseguito lentamente.
 
-1. Scaricare dal sito Web di Intel la versione più recente del programma di installazione del [motore di virtualizzazione HAXM](https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager/) per macOS.
+## <a name="troubleshooting"></a>Risoluzione dei problemi
+
+Per informazioni su come risolvere i problemi di accelerazione hardware, vedere la guida alla [risoluzione dei problemi](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vswin#accel-issues-win) dell'emulatore Android.
+
+::: zone-end
+::: zone pivot="macos"
+
+## <a name="accelerating-android-emulators-on-macos"></a>Accelerazione di emulatori Android in macOS
+
+Le tecnologie di virtualizzazione seguenti sono disponibili per l'accelerazione dell'emulatore Android:
+
+1. **Framework di Hypervisor di Apple**.
+   [Hypervisor](https://developer.apple.com/documentation/hypervisor) è una funzionalità di macOS 10.10 e versioni successive che consente di eseguire macchine virtuali in un computer Mac.
+
+2. **Intel Hardware Accelerated Execution Manager (HAXM)**. 
+   [HAXM](https://software.intel.com/articles/intel-hardware-accelerated-execution-manager-intel-haxm) è un motore di virtualizzazione per i computer che eseguono CPU Intel.
+
+Per ottenere prestazioni ottimali, è consigliabile l'uso del framework Hypervisor per accelerare l'emulatore Android. Se il framework Hypervisor non è disponibile nel computer Mac, è possibile usare HAXM. L'emulatore Android usa automaticamente l'accelerazione hardware se vengono soddisfatti i criteri seguenti:
+
+- L'accelerazione hardware è disponibile e abilitata nel computer di sviluppo.
+
+- L'emulatore esegue un'immagine del sistema creata per un dispositivo virtuale basato su **x86**.
+
+> [!IMPORTANT]
+> 
+> Non è possibile eseguire un emulatore con accelerazione della macchina virtuale all'interno di un'altra macchina virtuale, ad esempio una macchina ospitata da VirtualBox, VMware o Docker. È necessario eseguire l'emulatore Android [direttamente nell'hardware del sistema](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
+
+Per informazioni sull'avvio e sul debug con l'emulatore Android, vedere [Debug nell'emulatore Android](~/android/deploy-test/debugging/debug-on-emulator.md).
+
+<a name="hypervisor" />
+
+## <a name="accelerating-with-the-hypervisor-framework"></a>Accelerazione con il framework Hypervisor
+
+Per usare l'emulatore Android con il framework Hypervisor, il computer Mac deve soddisfare i criteri seguenti:
+
+- Il computer Mac deve eseguire macOS 10.10 o versioni successive.
+
+- La CPU del Mac deve essere in grado di supportare il framework Hypervisor.
+
+Se il computer Mac soddisfa questi criteri, l'emulatore Android userà automaticamente il framework Hypervisor per l'accelerazione (anche se è installato HAXM). Se non si è certi che il framework Hypervisor sia supportato nel computer Mac, vedere la guida alla [risoluzione dei problemi](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vsmac#hypervisor-issues) per informazioni su come verificare se il Mac supporta Hypervisor.
+
+Se il framework Hypervisor non è supportato da Mac, è possibile usare HAXM per accelerare l'emulatore Android (descritto di seguito).
+
+<a name="haxm-mac" />
+
+## <a name="accelerating-with-haxm"></a>Accelerazione con HAXM
+
+Se il computer Mac non supporta il framework Hypervisor (o si usa una versione di macOS precedente a 10.10), è possibile usare **Intel Hardware Accelerated Execution Manager** ([HAXM](https://software.intel.com/articles/intel-hardware-accelerated-execution-manager-intel-haxm)) per velocizzare l'emulatore Android.
+
+Prima di usare l'emulatore Android con HAXM per la prima volta, è consigliabile verificare che HAXM sia installato e disponibile per l'uso con l'emulatore Android.
+
+### <a name="verifying-haxm-support"></a>Verifica del supporto HAXM
+
+È possibile controllare se HAXM è già installato usando la procedura seguente:
+
+1. Aprire un terminale e immettere il comando seguente:
+
+    ```bash
+    ~/Library/Developer/Xamarin/android-sdk-macosx/tools/emulator -accel-check
+    ```
+
+   Questo comando presuppone che Android SDK sia installato nel percorso predefinito **~/Library/Developer/Xamarin/android-sdk-macosx**; in caso contrario, modificare il percorso e selezionare la posizione di Android SDK nel computer Mac.
+
+2. Se HAXM è installato, il comando precedente restituirà un messaggio simile al risultato seguente:
+
+    ```bash
+    HAXM version 7.2.0 (3) is installed and usable.
+    ```
+
+   Se HAXM *non* è installato, verrà restituito un messaggio simile all'output seguente:
+
+    ```bash
+    HAXM is not installed on this machine (/dev/HAX is missing).
+    ```
+
+Se HAXM non è installato, usare la procedura descritta nella sezione successiva per installare HAXM.
+
+<a name="install-haxm-mac" />
+
+### <a name="installing-haxm"></a>Installazione di HAXM
+
+I pacchetti di installazione di HAXM per macOS sono disponibili nella pagina [Intel Hardware Accelerated Execution Manager](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager). Usare la procedura seguente per scaricare e installare HAXM:
+
+
+1. Scaricare dal sito Web di Intel la versione più recente del programma di installazione del [motore di virtualizzazione HAXM](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager/) per macOS.
 
 2. Eseguire il programma di installazione di HAXM. Accettare i valori predefiniti nelle finestre di dialogo del programma di installazione:
 
-   [![Finestra di installazione di Intel Hardware Accelerated Execution Manager](hardware-acceleration-images/mac/05-haxm-installer-sml.png)](hardware-acceleration-images/win/05-haxm-installer.png#lightbox)
+   [![Finestra di installazione di Intel Hardware Accelerated Execution Manager](hardware-acceleration-images/mac/01-haxm-installer-sml.png)](hardware-acceleration-images/mac/01-haxm-installer.png#lightbox)
 
------
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
+Per informazioni su come risolvere i problemi di accelerazione hardware, vedere la guida alla [risoluzione dei problemi](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vsmac#accel-issues-mac) dell'emulatore Android.
+
+::: zone-end
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-* [Run Apps on the Android Emulator](https://developer.android.com/studio/run/emulator) (Eseguire app nell'emulatore Android)
+- [Run Apps on the Android Emulator](https://developer.android.com/studio/run/emulator) (Eseguire app nell'emulatore Android)
