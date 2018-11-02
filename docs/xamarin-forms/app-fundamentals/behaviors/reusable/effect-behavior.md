@@ -1,22 +1,22 @@
 ---
 title: EffectBehavior riutilizzabili
-description: I comportamenti sono un approccio utile per l'aggiunta di un effetto a un controllo, la rimozione effettiva boilerplate codice da file code-behind per la gestione. Questo articolo illustra l'uso di un comportamento di xamarin. Forms per aggiungere un effetto di un controllo.
+description: I comportamenti sono un approccio utile per l'aggiunta di un effetto a un controllo, la rimozione effettiva boilerplate codice da file code-behind per la gestione. Questo articolo illustra la creazione e utilizzo di un comportamento di xamarin. Forms per aggiungere un effetto di un controllo.
 ms.prod: xamarin
 ms.assetid: A909B24D-960A-4023-AFF6-4B9256C55ADD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 1ce7eda6f556041cbffc3793b00e8e2cba44d3d0
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 2696f0103ce1aa969039c982fb9b82f89b37811e
+ms.sourcegitcommit: 06a52ac36031d0d303ac7fc8163a59c178799c80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995781"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50911593"
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior riutilizzabili
 
-_I comportamenti sono un approccio utile per l'aggiunta di un effetto a un controllo, la rimozione effettiva boilerplate codice da file code-behind per la gestione. Questo articolo illustra l'uso di un comportamento di xamarin. Forms per aggiungere un effetto di un controllo._
+_I comportamenti sono un approccio utile per l'aggiunta di un effetto a un controllo, la rimozione effettiva boilerplate codice da file code-behind per la gestione. Questo articolo illustra la creazione e utilizzo di un comportamento di xamarin. Forms per aggiungere un effetto di un controllo._
 
 ## <a name="overview"></a>Panoramica
 
@@ -28,6 +28,9 @@ Utilizzare il comportamento, è necessario impostare le proprietà del comportam
 - **Nome** – il valore della [ `ExportEffect` ](xref:Xamarin.Forms.ExportEffectAttribute) attributo per la classe di effetto.
 
 Per altre informazioni sugli effetti, vedere [effetti](~/xamarin-forms/app-fundamentals/effects/index.md).
+
+> [!NOTE]
+> Il `EffectBehavior` è una classe personalizzata che può trovarsi nel [esempio di comportamento effetto](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/), e non fa parte di xamarin. Forms.
 
 ## <a name="creating-the-behavior"></a>La creazione del comportamento
 

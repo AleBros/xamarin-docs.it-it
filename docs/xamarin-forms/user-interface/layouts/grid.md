@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 392a0e6c76357ce106477ec4d5037673e5702b43
-ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
+ms.openlocfilehash: 0a1aa16aca1507153d691d5ec801a75e49e5d3ad
+ms.sourcegitcommit: 06a52ac36031d0d303ac7fc8163a59c178799c80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50301240"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50911580"
 ---
 # <a name="xamarinforms-grid"></a>Griglia di xamarin. Forms
 
@@ -152,10 +152,10 @@ grid.Children.Add(bottomRight, 1, 2, 1, 2);
 
 ### <a name="spacing"></a>Spacing (Spaziatura)
 
-`Grid` dispone di proprietà per controllare la spaziatura tra colonne e righe.  Le proprietà seguenti sono disponibili per la personalizzazione di `Grid`:
+`Grid` dispone di proprietà per controllare la spaziatura tra colonne e righe. Le proprietà seguenti sono disponibili per la personalizzazione di `Grid`:
 
-- **Spaziatura** &ndash; la quantità di spazio tra le colonne.
-- **RowSpacing** &ndash; la quantità di spazio tra le righe.
+- **Spaziatura** &ndash; la quantità di spazio tra le colonne. Il valore predefinito di questa proprietà è 6.
+- **RowSpacing** &ndash; la quantità di spazio tra le righe. Il valore predefinito di questa proprietà è 6.
 
 Il seguente XAML specifica una `Grid` con due colonne, una riga e 5 pixel di spaziatura tra le colonne:
 
