@@ -5,18 +5,22 @@ ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 53e7ca70184270662d27043387da836ad44432fe
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 70f41e6242b62577b6aa42cc207802ead020499e
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40184428"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674763"
 ---
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: Accelerometer
 
 ![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
 La classe **Accelerometer** consente di monitorare il sensore dell'accelerometro del dispositivo, che indica l'accelerazione del dispositivo nello spazio tridimensionale.
+
+## <a name="get-started"></a>Introduzione
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-accelerometer"></a>Uso della classe Accelerometer
 
@@ -77,11 +81,11 @@ L'asse X è orizzontale e punta verso destra, l'asse Y è verticale e punta vers
 
 Esempi:
 
-* Quando il dispositivo è piatto su un piano e viene spinto dal lato sinistro verso destra, il valore di accelerazione x è positivo.
+- Quando il dispositivo è piatto su un piano e viene spinto dal lato sinistro verso destra, il valore di accelerazione x è positivo.
 
-* Quando il dispositivo è piatto su un piano, il valore di accelerazione è +1,00 G o (+9,81 m/s^2), che corrisponde all'accelerazione del dispositivo (0 m/s^2) meno la forza di gravità (-9,81 m/s^2) normalizzata in G.
+- Quando il dispositivo è piatto su un piano, il valore di accelerazione è +1,00 G o (+9,81 m/s^2), che corrisponde all'accelerazione del dispositivo (0 m/s^2) meno la forza di gravità (-9,81 m/s^2) normalizzata in G.
 
-* Quando il dispositivo è piatto su un piano e viene spinto verso il cielo con un'accelerazione di A m/s^2, il valore di accelerazione è uguale a A+9,81 che corrisponde all'accelerazione del dispositivo (+A m/s^2) meno la forza di gravità (-9,81 m/s^2) normalizzata in G.
+- Quando il dispositivo è piatto su un piano e viene spinto verso il cielo con un'accelerazione di A m/s^2, il valore di accelerazione è uguale a A+9,81 che corrisponde all'accelerazione del dispositivo (+A m/s^2) meno la forza di gravità (-9,81 m/s^2) normalizzata in G.
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

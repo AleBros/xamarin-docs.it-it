@@ -1,68 +1,69 @@
 ---
 title: Xamarin.Essentials
-description: Questo documento include collegamenti alle varie guide che descrivono Xamarin.Essentials, che offre agli sviluppatori API multipiattaforma per le proprie applicazioni per dispositivi mobili.
+description: Questo documento include collegamenti alle varie guide che descrivono Xamarin.Essentials, che offre agli sviluppatori API multipiattaforma per le applicazioni per dispositivi mobili.
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 07/30/2018
-ms.openlocfilehash: 5c625e32a70e196b5562225bdf985cd4b3a6f5db
-ms.sourcegitcommit: 0e1b64b0aa8fc0e78f0feff3c8b39a4cb8c1da61
+ms.openlocfilehash: b81102c6c0e0d65aaa46b2d32e34db536ab58e03
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2018
+ms.lasthandoff: 10/25/2018
 ms.locfileid: "39361002"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-Xamarin.Essentials fornisce agli sviluppatori API multipiattaforma per le proprie applicazioni per dispositivi mobili.
+Xamarin.Essentials offre agli sviluppatori API multipiattaforma per le applicazioni per dispositivi mobili.
 
-Android, iOS e UWP offrono un unico sistema operativo e le API della piattaforma a cui gli sviluppatori possono accedere in Xamarin sfruttando C#. Xamarin.Essentials fornisce un'API singola multipiattaforma, utilizzabile con Xamarin.Forms, Android, iOS o applicazione UWP a cui si può effettuare l'accesso da codice condiviso, indipendentemente da come viene creata l'interfaccia utente.
+Android, iOS e UWP offrono API specifiche del sistema operativo e della piattaforma a cui gli sviluppatori hanno accesso in C# con Xamarin. Xamarin.Essentials offre una singola API multipiattaforma supportata da qualsiasi applicazione Xamarin.Forms, Android, iOS o UWP accessibile da codice condiviso, indipendentemente dal modo in cui viene creata l'interfaccia utente.
 
 ## <a name="get-started-with-xamarinessentialsget-startedmdcontextxamarinxamarin-forms"></a>[Introduzione a Xamarin.Essentials](get-started.md?context=xamarin/xamarin-forms)
 
-Seguire la [Guida introduttiva](get-started.md) per installare il pacchetto NuGet di **Xamarin.Essentials** in un progetto esistente o nuovo di tipo Xamarin.Forms , Android, iOS o UWP.
+Seguire le [guida introduttiva](get-started.md) per installare il pacchetto NuGet di **Xamarin.Essentials** in progetti nuovi o esistenti di Xamarin.Forms, Android, iOS o UWP.
 
 ## <a name="feature-guides"></a>Guide sulle funzionalità
 
-Seguire le guide per integrare queste funzionalità Xamarin.Essentials nelle applicazioni:
+Seguire le guide per integrare queste funzionalità di Xamarin.Essentials nelle applicazioni:
 
-* [Accelerometro](accelerometer.md?context=xamarin/xamarin-forms) : recupera i dati di accelerazione del dispositivo in uno spazio tridimensionale.
-* [Informazioni sull'app](app-information.md?context=xamarin/xamarin-forms) : reperire informazioni sull'applicazione.
-* [Batteria](battery.md?context=xamarin/xamarin-forms) : rileva il livello della batteria, l'origine e lo stato
-* [Appunti](clipboard.md?context=xamarin/xamarin-forms) : imposta o legge rapidamente e facilmente il testo negli Appunti.
-* [Compass](compass.md?context=xamarin/xamarin-forms) : monitora la bussola per le modifiche.
-* [Connettività](connectivity.md?context=xamarin/xamarin-forms) : controllare lo stato di connettività e rilevare le modifiche.
-* [Trasferimento dati](data-transfer.md?context=xamarin/xamarin-forms) : invia testo e gli URI dei siti Web ad altre app.
-* [Informazioni di visualizzazione dispositivo](device-display.md?context=xamarin/xamarin-forms) – ottenere metriche dello schermo e l'orientamento del dispositivo.
-* [Informazioni sul dispositivo](device-information.md?context=xamarin/xamarin-forms) : scoprire il dispositivo con facilità.
-* [Messaggio di posta elettronica](email.md?context=xamarin/xamarin-forms) : è possibile inviare messaggi di posta elettronica.
-* [Helper di file System](file-system-helpers.md?context=xamarin/xamarin-forms) : salva facilmente i file per i dati dell'app.
-* [Torcia](flashlight.md?context=xamarin/xamarin-forms) - un modo semplice di attivare/disattivare la torcia.
-* [Geocodifica](geocoding.md?context=xamarin/xamarin-forms) – Geocode e gli indirizzi di codifica geografica inversa e coordinate.
-* [Georilevazione](geolocation.md?context=xamarin/xamarin-forms) : recuperare la posizione GPS del dispositivo.
-* [Il Giroscopio](gyroscope.md?context=xamarin/xamarin-forms) : tiene traccia della rotazione intorno ai tre assi primari del dispositivo.
-* [Utilità di avvio](launcher.md?context=xamarin/xamarin-forms) – consente a un'applicazione aprire un URI dal sistema.
-* [Magnetometro](magnetometer.md?context=xamarin/xamarin-forms) : rilevare l'orientamento del dispositivo rispetto al campo magnetico della terra.
-* [MainThread](main-thread.md?content=xamarin/xamarin-forms) : eseguire codice nel thread principale dell'applicazione.
-* [Esegue il mapping](maps.md?content=xamarin/xamarin-forms) -aprire l'applicazione esegue il mapping a una posizione specifica.
-* [Apri Browser](open-browser.md?context=xamarin/xamarin-forms) : apri rapidamente e facilmente un sito Web specifico.
-* [Sensore di orientamento](orientation-sensor.md?context=xamarin/xamarin-forms) : recupera l'orientamento del dispositivo in uno spazio tridimensionale.
-* [Connessione telefonica](phone-dialer.md?context=xamarin/xamarin-forms) : aprire la connessione telefonica.
-* [Risparmio energia](power.md?context=xamarin/xamarin-forms) : ottenere lo stato di risparmio energetico del dispositivo.
-* [Preferenze](preferences.md?context=xamarin/xamarin-forms) : aggiunge rapidamente e facilmente le preferenze del dispositivo in modo permanente.
-* [Schermata di blocco](screen-lock.md?context=xamarin/xamarin-forms) : mantiene attivo lo schermo del dispositivo.
-* [Archiviazione sicura](secure-storage.md?context=xamarin/xamarin-forms) : archivia i dati in modo sicuro.
-* [SMS](sms.md?context=xamarin/xamarin-forms) : creare un messaggio SMS per l'invio.
-* [Sintesi vocale](text-to-speech.md?context=xamarin/xamarin-forms) : legge il testo sul dispositivo.
-* [Monitoraggio delle versioni](version-tracking.md?context=xamarin/xamarin-forms) : tenere traccia della versione delle applicazioni e i numeri di build.
-* [Vibrazione](vibrate.md?context=xamarin/xamarin-forms) : fa vibrare il dispositivo.
+* [Accelerometro](accelerometer.md?context=xamarin/xamarin-forms) - Recuperare i dati di accelerazione del dispositivo in uno spazio tridimensionale.
+* [Informazioni sull'app](app-information.md?context=xamarin/xamarin-forms) - Trovare informazioni sull'applicazione.
+* [Barometro](barometer.md?context=xamarin/xamarin-forms) - Monitorare il barometro per rilevare modifiche della pressione.
+* [Batteria](battery.md?context=xamarin/xamarin-forms) - Rilevare facilmente livello della batteria, fonte di alimentazione e stato.
+* [Appunti](clipboard.md?context=xamarin/xamarin-forms) - Impostare e leggere rapidamente e facilmente testo negli Appunti.
+* [Bussola](compass.md?context=xamarin/xamarin-forms) - Monitorare le variazioni della bussola.
+* [Connettività](connectivity.md?context=xamarin/xamarin-forms) - Controllare lo stato di connettività e rilevare le modifiche.
+* [Trasferimento dati](data-transfer.md?context=xamarin/xamarin-forms) - Inviare testo e URI di siti Web ad altre app.
+* [Informazioni sullo schermo del dispositivo](device-display.md?context=xamarin/xamarin-forms) - Ottenere metriche e orientamento dello schermo del dispositivo.
+* [Informazioni sul dispositivo](device-information.md?context=xamarin/xamarin-forms) - Ottenere facilmente informazioni sul dispositivo.
+* [Posta elettronica](email.md?context=xamarin/xamarin-forms) - Inviare facilmente messaggi di posta elettronica.
+* [Helper di file system](file-system-helpers.md?context=xamarin/xamarin-forms) - Salvare facilmente file e dati dell'app.
+* [Torcia](flashlight.md?context=xamarin/xamarin-forms) - Un modo semplice per accendere/spegnere la torcia.
+* [Geocodifica](geocoding.md?context=xamarin/xamarin-forms) - Geocodifica e geocodifica inversa di indirizzi e coordinate.
+* [Georilevazione](geolocation.md?context=xamarin/xamarin-forms) - Recuperare la posizione GPS del dispositivo.
+* [Giroscopio](gyroscope.md?context=xamarin/xamarin-forms) - Tenere traccia della rotazione attorno ai tre assi primari del dispositivo.
+* [Utilità di avvio](launcher.md?context=xamarin/xamarin-forms) - Consente a un'applicazione di aprire un URI dal sistema.
+* [Magnetometro](magnetometer.md?context=xamarin/xamarin-forms) - Rilevare l'orientamento del dispositivo rispetto al campo magnetico della terra.
+* [Thread principale](main-thread.md?content=xamarin/xamarin-forms) - Eseguire codice sul thread principale dell'applicazione.
+* [Mappe](maps.md?content=xamarin/xamarin-forms) - Aprire l'applicazione per le mappe su una posizione specifica.
+* [Apertura browser](open-browser.md?context=xamarin/xamarin-forms) - Aprire rapidamente e facilmente un browser su un sito Web specifico.
+* [Sensore di orientamento](orientation-sensor.md?context=xamarin/xamarin-forms) - Recuperare l'orientamento del dispositivo in uno spazio tridimensionale.
+* [Dialer telefono](phone-dialer.md?context=xamarin/xamarin-forms) - Aprire una connessione telefonica.
+* [Risparmio energia](power.md?context=xamarin/xamarin-forms) - Ottenere lo stato di risparmio energia del dispositivo.
+* [Preferenze](preferences.md?context=xamarin/xamarin-forms) - Aggiungere rapidamente e facilmente preferenze permanenti.
+* [Blocco dello schermo](screen-lock.md?context=xamarin/xamarin-forms) – Mantenere attivo lo schermo del dispositivo.
+* [Archiviazione sicura](secure-storage.md?context=xamarin/xamarin-forms) - Archiviare i dati in modo sicuro.
+* [SMS](sms.md?context=xamarin/xamarin-forms) - Creare un messaggio SMS per l'invio.
+* [Sintesi vocale](text-to-speech.md?context=xamarin/xamarin-forms) - Convertire il testo in voce nel dispositivo.
+* [Rilevamento versione](version-tracking.md?context=xamarin/xamarin-forms) - Tenere traccia della versione e dei numeri di build delle applicazioni.
+* [Vibrazione](vibrate.md?context=xamarin/xamarin-forms) - Attivare la vibrazione per il dispositivo.
 
 ## <a name="troubleshootingtroubleshootingmdcontextxamarinxamarin-forms"></a>[Risoluzione dei problemi](troubleshooting.md?context=xamarin/xamarin-forms)
 
-Usare la Guida se si verificano problemi.
+Informazioni utili se si verificano problemi.
 
-## <a name="api-documentationxrefxamarinessentials"></a>[Documentazione dell'API](xref:Xamarin.Essentials)
+## <a name="api-documentationxrefxamarinessentials"></a>[Documentazione delle API](xref:Xamarin.Essentials)
 
-Esplorare la documentazione delle API per tutte le funzionalità di Xamarin.Essentials.
+Esplorare la documentazione delle API per informazioni su tutte le funzionalità di Xamarin.Essentials.

@@ -1,30 +1,30 @@
 ---
-title: 'Xamarin.Essentials: MainThread'
-description: La classe MainThread consente alle applicazioni di eseguire il codice nel thread principale di esecuzione.
+title: 'Xamarin.Essentials: Thread principale'
+description: La classe MainThread consente alle applicazioni di eseguire il codice sul thread principale di esecuzione.
 ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
-author: charlespetzold
-ms.author: chape
+author: jamesmontemagno
+ms.author: jamont
 ms.date: 06/26/2018
-ms.openlocfilehash: e07d36d3e9a5492e6e170b62dbacb36be44dbfa9
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
-ms.translationtype: MT
+ms.openlocfilehash: 608cd00a2134e6e3fee89c7ae25bf4627d8b23be
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831425"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112314"
 ---
-# <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
+# <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: Thread principale
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-Il **MainThread** classe consente di eseguire codice nel thread principale dell'esecuzione di applicazioni e per determinare se un particolare blocco di codice è attualmente in esecuzione sul thread principale.
+La classe **MainThread** consente alle applicazioni di eseguire il codice sul thread principale di esecuzione e di determinare se un particolare blocco di codice è attualmente in esecuzione sul thread principale.
 
 ## <a name="background"></a>Sfondo
 
-La maggior parte dei sistemi operativi, tra cui iOS, Android e la piattaforma Windows universale, usare un modello a thread singolo per il codice che coinvolgono l'interfaccia utente. Questo modello è necessario serializzare gli eventi di interfaccia utente, inclusi le sequenze di tasti e input tocco correttamente. Questo thread viene spesso definito il _thread principale_ o il _thread dell'interfaccia utente_ o nella _thread dell'interfaccia utente_. Lo svantaggio di questo modello è che tutto il codice che accede a elementi dell'interfaccia utente deve eseguire sul thread principale dell'applicazione. 
+La maggior parte dei sistemi operativi, tra cui iOS, Android e la piattaforma UWP, usa un modello a thread singolo per il codice che coinvolge l'interfaccia utente. Questo modello è necessario per serializzare correttamente gli eventi dell'interfaccia utente, inclusi l'input tocco e le sequenze di tasti. Questo thread viene spesso definito _thread principale_ o _thread dell'interfaccia utente_ o _thread UI_. Lo svantaggio di questo modello è che tutto il codice che accede a elementi dell'interfaccia utente deve essere eseguito sul thread principale dell'applicazione. 
 
-Le applicazioni, talvolta è necessario usare gli eventi che richiamano il gestore dell'evento in un thread secondario dell'esecuzione. (Le classi Xamarin.Essentials [ `Accelerometer` ](accelerometer.md), [ `Compass` ](compass.md), [ `Gyroscope` ](gyroscope.md), [ `Magnetometer` ](magnetometer.md), e [ `OrientationSensor` ](orientation-sensor.md) tutti potrebbero restituire informazioni su un thread secondario se usato con maggiore velocità.) Se il gestore eventi deve accedere a elementi dell'interfaccia utente, è necessario eseguire tale codice sul thread principale. Il **MainThread** classe consente l'esecuzione di questo codice nel thread principale dell'applicazione.
+Le applicazioni devono talvolta usare eventi che chiamano il gestore dell'evento su un thread secondario di esecuzione. (Tutte le classi Xamarin.Essentials [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md) e [`OrientationSensor`](orientation-sensor.md) potrebbero restituire informazioni su un thread secondario in caso d'uso con velocità maggiori.) Se il gestore eventi deve accedere a elementi dell'interfaccia utente, deve eseguire tale codice sul thread principale. La classe **MainThread** consente all'applicazione di eseguire questo codice sul thread principale.
 
-## <a name="running-code-on-the-main-thread"></a>Codice in esecuzione sul Thread principale
+## <a name="running-code-on-the-main-thread"></a>Esecuzione del codice sul thread principale
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -32,7 +32,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-Per eseguire codice nel thread principale, chiamare il metodo statico `MainThread.BeginInvokeOnMainThread` (metodo). L'argomento è un [ `Action` ](xref:System.Action) oggetto, che è semplicemente un metodo con nessun argomento e restituisce alcun valore:
+Per eseguire codice sul thread principale, chiamare il metodo statico `MainThread.BeginInvokeOnMainThread`. L'argomento è un oggetto [`Action`](xref:System.Action), che è semplicemente un metodo con nessun argomento e nessun valore restituito:
 
 ```csharp
 MainThread.BeginInvokeOnMainThread(() =>
@@ -50,18 +50,19 @@ void MyMainThreadCode()
 }
 ```
 
-Sarà quindi possibile eseguire questo metodo sul thread principale per farvi riferimento nel `BeginInvokeOnMainThread` metodo:
+Sarà quindi possibile eseguire questo metodo sul thread principale facendovi riferimento nel metodo `BeginInvokeOnMainThread`:
 
 ```csharp
 MainThread.BeginInvokeOnMainThread(MyMainThreadCode);
 ```
 
 > [!NOTE]
-> Xamarin. Forms ha un metodo denominato [ `Device.BeginInvokeOnMainThread(Action)` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.device.begininvokeonmainthread) che esegue la stessa operazione come `MainThread.BeginInvokeOnMainThread(Action)`. Sebbene sia possibile usare uno dei due metodi in un'app xamarin. Forms, si consideri il codice chiamante ha o meno qualsiasi altra esigenza per una dipendenza su xamarin. Forms. In caso contrario, `MainThread.BeginInvokeOnMainThread(Action)` è probabilmente un'opzione migliore.
+> Xamarin.Forms include un metodo denominato [`Device.BeginInvokeOnMainThread(Action)`](https://docs.microsoft.com/dotnet/api/xamarin.forms.device.begininvokeonmainthread)
+> che esegue la stessa operazione di `MainThread.BeginInvokeOnMainThread(Action)`. Sebbene sia possibile usare uno dei due metodi in un'app Xamarin.Forms, valutare se il codice chiamante ha o meno altre esigenze per una dipendenza da Xamarin.Forms. In caso negativo, `MainThread.BeginInvokeOnMainThread(Action)` è probabilmente un'opzione migliore.
 
-## <a name="determining-if-code-is-running-on-the-main-thread"></a>Determinare se codice è in esecuzione il Thread principale
+## <a name="determining-if-code-is-running-on-the-main-thread"></a>Determinare se il codice è in esecuzione sul thread principale
 
-Il `MainThread` classe consente inoltre di determinare se un particolare blocco di codice è in esecuzione sul thread principale. Il `IsMainThread` restituisce proprietà `true` se il codice che chiama la proprietà è in esecuzione sul thread principale. Un programma può usare questa proprietà per eseguire codice diverso per il thread principale o un thread secondario:
+La classe `MainThread` consente anche a un'applicazione di determinare se un particolare blocco di codice è in esecuzione sul thread principale. La proprietà `IsMainThread` restituisce `true` se il codice che chiama la proprietà è in esecuzione sul thread principale. Un programma può usare questa proprietà per eseguire codice diverso per il thread principale o un thread secondario:
 
 ```csharp
 if (MainThread.IsMainThread)
@@ -74,7 +75,7 @@ else
 }
 ```
 
-Ci si potrebbe chiedere se è necessario controllare se codice è in esecuzione su un thread secondario prima di chiamare `BeginInvokeOnMainThread`, ad esempio, come segue:
+Ci si potrebbe chiedere se è necessario controllare se il codice è in esecuzione su un thread secondario prima di chiamare `BeginInvokeOnMainThread`, ad esempio, come segue:
 
 ```csharp
 if (MainThread.IsMainThread)
@@ -87,11 +88,11 @@ else
 }
 ```
 
-Si potrebbe sospettare che questo controllo potrebbe migliorare le prestazioni se il blocco di codice è già in esecuzione sul thread principale.
+Si potrebbe credere che questo controllo possa migliorare le prestazioni se il blocco di codice è già in esecuzione sul thread principale.
 
-_Tuttavia, questo controllo non è necessario._ Le implementazioni della piattaforma di `BeginInvokeOnMainThread` stessi controllare se viene effettuata la chiamata sul thread principale. È molto piccolo riduzione delle prestazioni se si chiama `BeginInvokeOnMainThread` quando non è effettivamente necessario.
+_Tuttavia, questo controllo non è necessario._ Le implementazioni della piattaforma di `BeginInvokeOnMainThread` stesse controllano se la chiamata viene eseguita sul thread principale. L'impatto sulle prestazioni è molto limitato se si chiama `BeginInvokeOnMainThread` quando non è effettivamente necessario.
 
 ## <a name="api"></a>API
 
-- [Codice sorgente MainThread](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/MainThread)
+- [Codice sorgente di MainThread](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/MainThread)
 - [Documentazione dell'API MainThread](xref:Xamarin.Essentials.MainThread)

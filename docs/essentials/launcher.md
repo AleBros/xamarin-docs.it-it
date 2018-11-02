@@ -1,22 +1,22 @@
 ---
-title: Utilità di avvio Xamarin.Essentials
-description: La classe di utilità di avvio in Xamarin.Essentials consente a un'applicazione aprire un URI dal sistema.
+title: 'Xamarin.Essentials: Utilità di avvio'
+description: La classe Launcher in Xamarin.Essentials consente a un'applicazione di aprire un URI dal sistema.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 07/25/2018
-ms.openlocfilehash: 252bb873c1494265aafb2285057490ca29ce7419
-ms.sourcegitcommit: bf51592be39b2ae3d63d029be1d7745ee63b0ce1
-ms.translationtype: MT
+ms.openlocfilehash: 8f5ef8ef97999e9e85944d9fa9d4e57660779a48
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39573633"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115783"
 ---
-# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: utilità di avvio
+# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Launcher
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-Il **utilità di avvio** classe consente a un'applicazione aprire un URI dal sistema. Viene spesso utilizzata quando si completa il collegamento in schemi URI personalizzati di un'altra applicazione. Se si sta cercando di aprire il browser a un sito Web, è consigliabile consultare il **[Browser](open-browser.md)** API.
+La classe **Launcher** consente a un'applicazione di aprire un URI dal sistema. Questa funzionalità viene usata spesso per il deep linking negli schemi URI personalizzati di un'altra applicazione. Se lo scopo è aprire il browser su un sito Web specifico, vedere l'API **[Browser](open-browser.md)**.
 
 ## <a name="using-launcher"></a>Uso dell'utilità di avvio
 
@@ -26,7 +26,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-Per usare la chiamata di funzionalità di utilità di avvio di `OpenAsync` metodo e passare un `string` o `Uri` aprire. Facoltativamente, il `CanOpenAsync` metodo può essere utilizzato per verificare se lo schema URI può essere gestito da un'applicazione nel dispositivo.
+Per usare la funzionalità Launcher, chiamare il metodo `OpenAsync` e passare un valore `string` o `Uri` da aprire. Facoltativamente, il metodo `CanOpenAsync` può essere usato per verificare se lo schema URI può essere gestito da un'applicazione nel dispositivo.
 
 ```csharp
 public class LauncherTest
@@ -40,7 +40,27 @@ public class LauncherTest
 }
 ```
 
+## <a name="platform-differences"></a>Differenze tra le piattaforme
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+L'attività restituita da `CanOpenAsync` viene completata immediatamente.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+Se l'applicazione di destinazione in questo dispositivo non è mai stata aperta da `OpenAsync` dall'applicazione in precedenza, iOS richiederà all'utente una volta di consentire all'app di aprirla.
+
+L'attività restituita da `CanOpenAsync` viene completata immediatamente.
+
+Altre informazioni sull'implementazione di iOS sono disponibili [qui](https://developer.xamarin.com/api/member/UIKit.UIApplication.CanOpenUrl/p/Foundation.NSUrl/)
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+Non esistono differenze per questa piattaforma.
+
+-----
+
 ## <a name="api"></a>API
 
-- [Codice sorgente dell'utilità di avvio](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
-- [Documentazione API dell'utilità di avvio](xref:Xamarin.Essentials.Launcher)
+- [Codice sorgente di Launcher](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
+- [Documentazione dell'API Launcher](xref:Xamarin.Essentials.Launcher)

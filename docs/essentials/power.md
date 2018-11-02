@@ -1,30 +1,30 @@
 ---
-title: "Xamarin.Essentials: Stato Saver dell'energia"
-description: La classe Power consente un programma ottenere lo stato di risparmio energetico per determinare se il dispositivo funziona in modalità basso consumo.
+title: 'Xamarin.Essentials: Stato di risparmio energia'
+description: La classe Power consente a un programma di ottenere lo stato di risparmio energia per determinare se il dispositivo funziona in modalità a basso consumo.
 ms.assetid: C176D177-8B77-4A9C-9F3B-27852A8DCD5F
-author: charlespetzold
-ms.author: chape
+author: jamesmontemagno
+ms.author: jamont
 ms.date: 06/27/2018
-ms.openlocfilehash: 760a305280269734034a817182a8c2a07894ca2b
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 5a89dba16a93b007c5d7312221d8d33e00c7404a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353490"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110004"
 ---
-# <a name="xamarinessentials-power-energy-saver-status"></a>Xamarin.Essentials: Stato Saver dell'energia
+# <a name="xamarinessentials-power-energy-saver-status"></a>Xamarin.Essentials: Stato di risparmio energia
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-Il **Power** classe fornisce informazioni sullo stato di risparmio energetico del dispositivo, che indica se il dispositivo è in esecuzione in modalità basso consumo. Le applicazioni è consigliabile evitare l'elaborazione in background se lo stato di risparmio energetico del dispositivo è on.
+La classe **Power** offre informazioni sullo stato di risparmio energia del dispositivo, che indica se il dispositivo è in esecuzione in modalità a basso consumo. Le applicazioni dovrebbero evitare l'elaborazione in background se lo stato di risparmio energia del dispositivo è attivo.
 
 ## <a name="background"></a>Sfondo
 
-I dispositivi che eseguono batterie possono essere memorizzati in una modalità di risparmio energetico basso consumo. In alcuni casi i dispositivi vengono scambiati in questa modalità automaticamente, ad esempio, quando la batteria scende sotto il 20% della capacità. Il sistema operativo risponde alla modalità di risparmio energetico, riducendo le attività che tendono a ridurre la batteria. Le applicazioni possono aiutare, evitando l'elaborazione in background o altre attività ad elevata potenza quando è in modalità di risparmio energetico.
+I dispositivi eseguiti a batteria possono essere messi in modalità di risparmio energia a basso consumo. In alcuni casi, questa modalità viene attivata automaticamente per i dispositivi, ad esempio quando la carica della batteria scende sotto il 20%. Il sistema operativo risponde alla modalità di risparmio energia riducendo le attività che tendono a scaricare la batteria. Le applicazioni possono contribuire evitando l'elaborazione in background o altre attività con un consumo elevato di energia, quando è attiva la modalità di risparmio energia.
 
-Per i dispositivi Android, il **Power** classe restituisce informazioni significative solo per la versione di Android 5.0 (Lollipop) e versioni successive.
+Per i dispositivi Android, la classe **Power** restituisce informazioni significative solo per Android versione 5.0 (Lollipop) e successive.
 
-## <a name="using-the-power-class"></a>Utilizzo della classe di risparmio energia
+## <a name="using-the-power-class"></a>Uso della classe Power
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -32,16 +32,16 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-Ottenere lo stato corrente di risparmio energetico del dispositivo usando il metodo statico `Power.EnergySaverStatus` proprietà:
+Ottenere lo stato corrente di risparmio energia del dispositivo usando la proprietà statica `Power.EnergySaverStatus`:
 
 ```csharp
 // Get energy saver status
 var status = Power.EnergySaverStatus;
 ```
 
-Questa proprietà restituisce un membro del `EnergySaverStatus` enumerazione, vale a dire `On`, `Off`, o `Unknown`. Se la proprietà restituisce `On`, l'applicazione deve evitare l'elaborazione in background o altre attività che potrebbe utilizzare una grande quantità di energia.
+Questa proprietà restituisce un membro dell'enumerazione `EnergySaverStatus`, ovvero `On`, `Off` o `Unknown`. Se la proprietà restituisce `On`, l'applicazione deve evitare l'elaborazione in background o altre attività che potrebbero usare molta energia.
 
-L'applicazione deve inoltre installare un gestore eventi. Il **Power** classe espone un evento che viene attivato quando viene modificato lo stato di risparmio energetico:
+L'applicazione deve anche installare un gestore eventi. La classe **Power** espone un evento che viene attivato quando cambia lo stato di risparmio energia:
 
 ```csharp
 public class EnergySaverTest
@@ -60,9 +60,9 @@ public class EnergySaverTest
 }
 ```
 
-Se lo stato di risparmio energetico diventa `On`, l'applicazione deve interrompere l'elaborazione in background. Se lo stato diventa `Unknown` o `Off`, l'applicazione possa riprendere l'elaborazione in background.
+Se lo stato di risparmio energia diventa `On`, l'applicazione deve interrompere l'elaborazione in background. Se lo stato diventa `Unknown` o `Off`, l'applicazione può riprendere l'elaborazione in background.
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di risparmio energia](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Power)
+- [Codice sorgente di Power](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Power)
 - [Documentazione dell'API Power](xref:Xamarin.Essentials.Power)

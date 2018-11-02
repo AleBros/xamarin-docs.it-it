@@ -1,24 +1,28 @@
 ---
-title: 'Xamarin.Essentials: sintesi vocale'
-description: La classe TextToSpeech in Xamarin.Essentials consente un'applicazione usare incorporato nei motori di sintesi vocale da pronunciare il testo nascosto dal dispositivo, nonché di lingue disponibili di query in grado di supportare il motore.
+title: 'Xamarin.Essentials: Sintesi vocale'
+description: La classe TextToSpeech in Xamarin.Essentials consente a un'applicazione di usare i motori di sintesi vocale predefiniti per pronunciare il testo dal dispositivo, nonché per recuperare le lingue disponibili supportate dal motore.
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: ba822870edafce44140caa66b01f4da242fb7779
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.date: 08/30/2018
+ms.openlocfilehash: 29eab430ae3d42934cedfdbd36d7be08e55b5d54
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353613"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675367"
 ---
-# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: sintesi vocale
+# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Sintesi vocale
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-Il **TextToSpeech** classe consente a un'applicazione usare incorporato nei motori di sintesi vocale da pronunciare il testo nascosto dal dispositivo, nonché di lingue disponibili di query in grado di supportare il motore.
+La classe **TextToSpeech** consente a un'applicazione di usare i motori di sintesi vocale predefiniti pronunciare il testo dal dispositivo, nonché per recuperare le lingue disponibili supportate dal motore.
 
-## <a name="using-text-to-speech"></a>Utilizzo della sintesi vocale
+## <a name="get-started"></a>Introduzione
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-text-to-speech"></a>Uso della sintesi vocale
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -26,7 +30,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La funzionalità di sintesi vocale funziona chiamando il `SpeakAsync` metodo con testo e i parametri facoltativi e restituisce il utterance termine. 
+La sintesi vocale funziona chiamando il metodo `SpeakAsync` con testo e parametri facoltativi e restituisce il controllo al termine della riproduzione vocale.
 
 ```csharp
 public async Task SpeakNowDefaultSettings()
@@ -46,7 +50,7 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-Questo metodo accetta un facoltativa `CancellationToken` per arrestare il utterance dopo l'avvio.
+Questo metodo accetta un `CancellationToken` facoltativo per arrestare la riproduzione vocale dopo l'avvio.
 
 ```csharp
 CancellationTokenSource cts;
@@ -67,7 +71,7 @@ public void CancelSpeech()
 }
 ```
 
-Sintesi vocale verrà automaticamente messi in coda le richieste vocali dallo stesso thread.
+La sintesi vocale accoda automaticamente le richieste vocali dallo stesso thread.
 
 ```csharp
 bool isBusy = false;
@@ -91,9 +95,9 @@ public void SpeakMultiple()
 }
 ```
 
-### <a name="speech-settings"></a>Impostazioni di riconoscimento vocale
+### <a name="speech-settings"></a>Impostazioni della sintesi vocale
 
-Per maggiore controllo sul modo in cui l'audio viene pronunciata eseguire il backup con `SpeakSettings` che consente di impostare il Volume del passo e delle impostazioni locali.
+Per un maggiore controllo sul modo in cui l'audio viene pronunciato, usare in combinazione con `SpeakSettings` che consente di impostare il volume, la tonalità e le impostazioni locali.
 
 ```csharp
 public async Task SpeakNow()
@@ -108,16 +112,16 @@ public async Task SpeakNow()
 }
 ```
 
-Di seguito sono supportati i valori per questi parametri:
+Di seguito sono riportati i valori supportati per questi parametri:
 
 | Parametro | Minimo | Massimo |
 | --- | :---: | :---: |
-| Passo | 0 | 2.0 |
+| Tonalità | 0 | 2.0 |
 | Volume | 0 | 1.0 |
 
-### <a name="speech-locales"></a>Impostazioni locali di riconoscimento vocale
+### <a name="speech-locales"></a>Impostazioni locali per la voce
 
-Ogni piattaforma sono disponibili le impostazioni locali per pronunciare il testo nascosto in più lingue e le evidenziazioni. Ogni piattaforma ha diversi codici e sui metodi per la definizione di questo, motivo per cui multi-piattaforma di fornisce Essentials `Locale` classe e un modo per eseguire query con `GetLocalesAsync`.
+Ogni piattaforma supporta impostazioni locali diverse, per pronunciare il testo in lingue e con accenti diversi. Le piattaforme usano codici e modalità diversi per specificare le impostazioni locali e per questo motivo Xamarin.Essentials offre una classe `Locale` multipiattaforma e un modo per recuperarle con `GetLocalesAsync`.
 
 ```csharp
 public async Task SpeakNow()
@@ -140,10 +144,10 @@ public async Task SpeakNow()
 
 ## <a name="limitations"></a>Limitazioni
 
-- Coda utterance non è garantita se viene chiamato attraverso più thread.
-- Riproduzione audio in background non è ufficialmente supportata.
+- L'accodamento delle riproduzioni vocali non è garantito in caso di chiamata su più thread.
+- La riproduzione di audio in background non è ufficialmente supportata.
 
 ## <a name="api"></a>API
 
-- [Codice sorgente TextToSpeech](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
+- [Codice sorgente di TextToSpeech](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
 - [Documentazione dell'API TextToSpeech](xref:Xamarin.Essentials.TextToSpeech)
