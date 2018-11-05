@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 08/08/2018
-ms.openlocfilehash: dd48d917b669e5f83eaafa2f1ba5af5d9a19a342
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 78b7235d8c9e45c2179b1cca2827f45fe6edd8b2
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107221"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675107"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Introduzione a Xamarin.Essentials
 
@@ -66,7 +66,7 @@ Xamarin.Essentials è disponibile come pacchetto NuGet che può essere aggiunto 
     # <a name="androidtabandroid"></a>[Android](#tab/android)
 
     Xamarin.Essentials supporta la versione minima di Android 4.4, corrispondente al livello API 19, ma la versione Android di destinazione per la compilazione deve essere 8.1, corrispondente al livello API 27. (In Visual Studio, queste due versioni vengono impostate nella finestra di dialogo Proprietà del progetto per il progetto Android, nella scheda Manifesto Android. In Visual Studio per Mac, l'impostazione viene eseguita nella finestra di dialogo Opzioni progetto per il progetto Android, nella scheda Applicazione Android.) 
-    
+
     Xamarin.Essentials installa la versione 27.0.2.1 delle librerie Xamarin.Android.Support richieste. Anche qualsiasi altra libreria Xamarin.Android.Support richiesta dall'applicazione deve essere aggiornata alla versione 27.0.2.1 usando Gestione pacchetti NuGet. Tutte le librerie Xamarin.Android.Support usate dall'applicazione deve essere uguali e almeno nella versione 27.0.2.1. Fare riferimento alla [pagina di risoluzione dei problemi](troubleshooting.md) in caso di problemi durante l'aggiunta dei pacchetti NuGet di Xamarin.Essentials o l'aggiornamento dei pacchetti NuGet nella soluzione.
 
     In `MainLauncher` o per qualsiasi `Activity` avviata del progetto Android, Xamarin.Essentials deve essere inizializzato nel metodo `OnCreate`:
@@ -108,7 +108,7 @@ Xamarin.Essentials è disponibile come pacchetto NuGet che può essere aggiunto 
 
 ## <a name="other-resources"></a>Altre risorse
 
-Si consiglia agli sviluppatori che non hanno familiarità con Xamarin di leggere [Introduzione a Xamarin.Forms](~/cross-platform/getting-started/index.md).
+Si consiglia agli sviluppatori che non hanno familiarità con Xamarin di leggere l'[introduzione allo sviluppo con Xamarin](~/cross-platform/getting-started/index.md).
 
 Visitare il [repository GitHub Xamarin.Essentials](http://github.com/xamarin/Essentials) per vedere il codice sorgente corrente, le novità previste, eseguire gli esempi e clonare il repository. I contributi della community sono benvenuti.
 
