@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: d161a267c8ffa5040327db8e6e4f867a324b04f2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 303c96ae6cdbc9f5b327c971f962d6eac75a6fa1
+ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105807"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983614"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Uso di tabelle in iOS Designer
 
@@ -73,7 +73,7 @@ La prima modifica allo storyboard è l'eliminazione la visualizzazione dettagli 
 
 1.  Selezionare la barra nella parte inferiore del Controller di visualizzazione ed eliminarlo.
 2.  Trascinare un **Controller di spostamento** e una **Controller di visualizzazione tabella** nello Storyboard dalla casella degli strumenti. 
-3.  Creare un elemento segue da Controller visualizzazione radice per il secondo Controller di visualizzazione tabella appena aggiunto. Per creare l'elemento segue, controllo + trascina *rispetto alla cella di dettaglio* al UITableViewController appena aggiunto. Scegliere l'opzione **mostrare*** sotto **Selezione elemento Segue**. 
+3.  Creare un elemento segue da Controller visualizzazione radice per il secondo Controller di visualizzazione tabella appena aggiunto. Per creare l'elemento segue, controllo + trascina *rispetto alla cella di dettaglio* al UITableViewController appena aggiunto. Scegliere l'opzione **mostrare** sotto **Selezione elemento Segue**. 
 4.  Selezionare il nuovo elemento segue creato e assegnargli un identificatore di riferimento in questo elemento segue nel codice. Fare clic sull'elemento segue e immettere `TaskSegue` per il **identificatore** nel **riquadro delle proprietà**, simile al seguente:    
   [![Denominazione segue nel Pannello proprietà](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
