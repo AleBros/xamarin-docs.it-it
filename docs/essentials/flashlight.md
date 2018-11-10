@@ -1,50 +1,52 @@
 ---
-title: 'Xamarin.Essentials: torcia'
-description: Questo documento descrive la classe torcia in Xamarin.Essentials, che ha la possibilità di attivare o disattivare la fotocamera del dispositivo flash per trasformarlo in un torcia.
+title: 'Xamarin.Essentials: Flashlight'
+description: Questo documento descrive la classe Flashlight in Xamarin.Essentials, che può attivare o disattivare il flash della fotocamera del dispositivo per trasformarlo in una torcia.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 8c471f64c14a2e41693c450e02f89e7ac845d060
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: d1a2ad675d615b48b8e8f8433065c5bd0bbae1d0
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353360"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675081"
 ---
-# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: torcia
+# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Flashlight
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-Il **torcia** classe ha la possibilità di attivare o disattivare la fotocamera del dispositivo flash per trasformarlo in un torcia.
+La classe **Flashlight** può attivare o disattivare il flash della fotocamera del dispositivo per trasformarlo in una torcia.
 
-## <a name="getting-started"></a>Introduzione
+## <a name="get-started"></a>Introduzione
 
-Per l'accesso di **torcia** è necessaria la funzionalità le seguenti impostazioni specifiche della piattaforma.
+[!include[](~/essentials/includes/get-started.md)]
+
+Per accedere alla funzionalità **Flashlight**, è necessaria la configurazione seguente specifica della piattaforma.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Le autorizzazioni torcia e fotocamera sono necessari e devono essere configurate nel progetto Android. Ciò è possibile aggiungere nei modi seguenti:
+Le autorizzazioni Flashlight e Camera sono obbligatorie e devono essere configurate nel progetto Android. È possibile aggiungerla nei modi seguenti:
 
-Aprire il **AssemblyInfo.cs** file sotto il **proprietà** cartella e aggiungere:
+Aprire il file **AssemblyInfo.cs** nella cartella **Proprietà** e aggiungere:
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Flashlight)]
 [assembly: UsesPermission(Android.Manifest.Permission.Camera)]
 ```
 
-In alternativa, aggiornare il manifesto di Android:
+OPPURE aggiornare il manifesto di Android:
 
-Aprire il **androidmanifest. XML** file sotto il **proprietà** cartella e aggiungere il codice seguente all'interno del **manifesto** nodo.
+Aprire il file **AndroidManifest.xml** nella cartella **Proprietà** e aggiungere quanto segue all'interno del nodo **manifest**.
 
 ```xml
 <uses-permission android:name="android.permission.FLASHLIGHT" />
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-Oppure fare clic con il pulsante destro sul progetto Android e aprire le proprietà del progetto. Sotto **manifesto Android** trovare il **autorizzazioni necessarie:** area e selezionare il **TORCIA** e **fotocamera** autorizzazioni. Si aggiornerà automaticamente il **androidmanifest. XML** file.
+Oppure fare clic con il pulsante destro del mouse sul progetto Android e aprire le proprietà del progetto. In **Manifesto Android** trovare l'area **Autorizzazioni necessarie** e selezionare le autorizzazioni **FLASHLIGHT** e **CAMERA**. Il file **AndroidManifest.xml** verrà aggiornato automaticamente.
 
-Aggiungendo queste autorizzazioni [Google Play verranno automaticamente esclusi i dispositivi](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) senza hardware specifico. È possibile evitare questo problema aggiungendo il codice seguente al file AssemblyInfo.cs nel progetto Android:
+Aggiungendo queste autorizzazioni, [Google Play filtrerà automaticamente i dispositivi](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) senza hardware specifico. Per aggirare questo problema, aggiungere il codice seguente al file AssemblyInfo.cs nel progetto Android:
 
 ```csharp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]
@@ -55,13 +57,13 @@ Aggiungendo queste autorizzazioni [Google Play verranno automaticamente esclusi 
 
 Non è necessaria alcuna configurazione aggiuntiva.
 
-# <a name="uwptabuwp"></a>[PIATTAFORMA UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 Non è necessaria alcuna configurazione aggiuntiva.
 
 -----
 
-## <a name="using-flashlight"></a>Usando torcia
+## <a name="using-flashlight"></a>Uso di Flashlight
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -69,7 +71,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-Il torcia può essere attivata e disattivata tramite il `TurnOnAsync` e `TurnOffAsync` metodi:
+La torcia può essere attivata o disattivata tramite i metodi `TurnOnAsync` e `TurnOffAsync`:
 
 ```csharp
 try
@@ -94,31 +96,31 @@ catch (Exception ex)
 }
 ```
 
-## <a name="platform-implementation-specifics"></a>Funzionalità specifiche di implementazione della piattaforma
+## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
 ### <a name="androidtabandroid"></a>[Android](#tab/android)
 
-La classe torcia è stata ottimizzata basato sul sistema operativo del dispositivo.
+La classe Flashlight è stata ottimizzata in base al sistema operativo del dispositivo.
 
-#### <a name="api-level-23-and-higher"></a>Livello API 23 e versioni successive
+#### <a name="api-level-23-and-higher"></a>API livello 23 e successivi
 
-Livelli di API più recenti, [Torch modalità](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode) verrà usato per attivare o disattivare l'unità flash del dispositivo.
+Nei livelli API più recenti verrà usata la [modalità torcia](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode) per attivare o disattivare l'unità flash nel dispositivo.
 
-#### <a name="api-level-22-and-lower"></a>Livello API 22 e inferiore
+#### <a name="api-level-22-and-lower"></a>API livello 22 e precedenti
 
-Viene creata una trama della superficie della fotocamera per attivare o disattivare il `FlashMode` dell'unità della fotocamera. 
+Viene creata una trama della superficie della fotocamera per attivare o disattivare l'elemento `FlashMode` dell'unità fotocamera. 
 
 ### <a name="iostabios"></a>[iOS](#tab/ios)
 
-[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) consente di attivare e disattivare il Torch e la modalità Flash del dispositivo.
+Viene usata la classe [AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) per attivare e disattivare la modalità torcia e flash del dispositivo.
 
-### <a name="uwptabuwp"></a>[PIATTAFORMA UWP](#tab/uwp)
+### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp) viene usato per rilevare il primo lamp nella parte posteriore del dispositivo da attivare o disattivare.
+Viene usata la classe [Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp) per rilevare la prima lampada nella parte posteriore del dispositivo da attivare o disattivare.
 
 -----
 
 ## <a name="api"></a>API
 
-- [Codice sorgente torcia](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
-- [Documentazione di torcia API](xref:Xamarin.Essentials.Flashlight)
+- [Codice sorgente di Flashlight](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
+- [Documentazione dell'API Flashlight](xref:Xamarin.Essentials.Flashlight)

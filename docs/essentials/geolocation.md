@@ -1,32 +1,34 @@
 ---
-title: 'Xamarin.Essentials: Georilevazione'
-description: Questo documento descrive la classe di Georilevazione in Xamarin.Essentials, che fornisce le API per recuperare le coordinate di georilevazione corrente del dispositivo.
+title: 'Xamarin.Essentials: Geolocation'
+description: Questo documento descrive la classe Geolocation in Xamarin.Essentials, che fornisce le API per recuperare le coordinate di georilevazione correnti del dispositivo.
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 0aeb2ed96e6c21def69eb2e6f305b26e2e478825
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 533620fbfca9f2a7a235fe65e038b6dd89aa95a9
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353854"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674900"
 ---
-# <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Georilevazione
+# <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocation
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-Il **Georilevazione** classe fornisce le API per recuperare le coordinate di georilevazione corrente del dispositivo.
+La classe **Geolocation** fornisce le API per recuperare le coordinate di georilevazione correnti del dispositivo.
 
-## <a name="getting-started"></a>Introduzione
+## <a name="get-started"></a>Introduzione
 
-Per l'accesso di **Georilevazione** funzionalità, è necessaria la configurazione seguente specifica della piattaforma:
+[!include[](~/essentials/includes/get-started.md)]
+
+Per accedere alla funzionalità **Geolocation**, è necessaria la configurazione seguente specifica della piattaforma:
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Bassa e il percorso corretto le autorizzazioni sono necessarie e devono essere configurate nel progetto Android. Inoltre, se l'app è destinata Android 5.0 (livello API 21) o versioni successive, è necessario dichiarare che l'app Usa le funzionalità hardware nel file manifesto. Ciò è possibile aggiungere nei modi seguenti:
+Le autorizzazioni Coarse e Fine Location sono obbligatorie e devono essere configurate nel progetto Android. Se inoltre l'app usa come destinazione Android 5.0 (livello API 21) o versione successiva, è necessario dichiarare che l'app usa le funzionalità hardware nel file manifesto. È possibile aggiungerla nei modi seguenti:
 
-Aprire il **AssemblyInfo.cs** file sotto il **proprietà** cartella e aggiungere:
+Aprire il file **AssemblyInfo.cs** nella cartella **Proprietà** e aggiungere:
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.AccessCoarseLocation)]
@@ -36,9 +38,9 @@ Aprire il **AssemblyInfo.cs** file sotto il **proprietà** cartella e aggiungere
 [assembly: UsesFeature("android.hardware.location.network", Required = false)]
 ```
 
-In alternativa, aggiornare il manifesto Android:
+Oppure aggiornare il manifesto di Android:
 
-Aprire il **androidmanifest. XML** file sotto il **proprietà** cartella e aggiungere il codice seguente all'interno del **manifesto** nodo:
+Aprire il file **AndroidManifest.xml** nella cartella **Proprietà** e aggiungere quanto segue all'interno del nodo **manifest**:
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -48,28 +50,28 @@ Aprire il **androidmanifest. XML** file sotto il **proprietà** cartella e aggiu
 <uses-feature android:name="android.hardware.location.network" android:required="false" />
 ```
 
-O destro del mouse sul progetto Android e aprire le proprietà del progetto. Sotto **manifesto Android** trovare il **autorizzazioni necessarie:** area e selezionare il **ACCESS_COARSE_LOCATION** e **ACCESS_FINE_LOCATION**le autorizzazioni. Si aggiornerà automaticamente il **androidmanifest. XML** file.
+Oppure fare clic con il pulsante destro del mouse sul progetto Android e aprire le proprietà del progetto. In **Manifesto Android** trovare l'area **Autorizzazioni necessarie** e selezionare le autorizzazioni **ACCESS_COARSE_LOCATION** e **ACCESS_FINE_LOCATION**. Il file **AndroidManifest.xml** verrà aggiornato automaticamente.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-L'app **Info. plist** deve contenere il `NSLocationWhenInUseUsageDescription` chiave per accedere alla posizione del dispositivo.
+Il file **Info.plist** dell'app deve contenere la chiave `NSLocationWhenInUseUsageDescription` per accedere alla posizione del dispositivo.
 
-Aprire l'editor plist e aggiungere il **Privacy - quando In uso descrizione utilizzo posizione** proprietà e il riempimento in un valore da visualizzare all'utente.
+Aprire l'editor plist, aggiungere la proprietà **Privacy - Location When In Use Usage Description** (Privacy - Posizione quando è in uso la descrizione dell'utilizzo) e immettere un valore per visualizzare l'utente.
 
-O modificare il file manualmente e aggiungere quanto segue:
+Oppure modificare manualmente il file e aggiungere quanto segue:
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
 <string>This app needs access location when open.</string>
 ```
 
-# <a name="uwptabuwp"></a>[PIATTAFORMA UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-È necessario impostare il `Location` l'autorizzazione per l'applicazione. Questa operazione può essere eseguita aprendo il **package. appxmanifest** e selezionando le **funzionalità** scheda e il controllo **percorso**.
+È necessario impostare l'autorizzazione `Location` per l'applicazione. A tale scopo, aprire **Package.appxmanifest**, selezionare la scheda **Capabilities** (Capacità) e selezionare **Location** (Posizione).
 
 -----
 
-## <a name="using-geolocation"></a>Uso di Georilevazione
+## <a name="using-geolocation"></a>Uso di Geolocation
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -77,9 +79,9 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-L'API Geoloation anche richiederà all'utente le autorizzazioni quando necessario.
+L'API Geolocation richiederà anche le autorizzazioni all'utente quando necessario.
 
-È possibile ottenere l'ultimo valore noto [ubicazione](xref:Xamarin.Essentials.Location) del dispositivo tramite la chiamata di `GetLastKnownLocationAsync` (metodo). Ciò è spesso più veloce effettuando quindi una query completa, ma può essere meno accurata.
+È possibile ottenere l'ultima [posizione](xref:Xamarin.Essentials.Location) conosciuta del dispositivo chiamando il metodo `GetLastKnownLocationAsync`. Questa procedura è spesso più veloce che eseguire una query completa, ma può essere meno accurata.
 
 ```csharp
 try
@@ -105,9 +107,9 @@ catch (Exception ex)
 }
 ```
 
-Altitudine non è sempre disponibile. Se non è disponibile, il `Altitude` proprietà potrebbe essere `null` o il valore potrebbe essere zero. Se è disponibile l'altitudine, il valore è in metri sopra livello del mare. 
+L'altitudine non è sempre disponibile. Se non è disponibile, la proprietà `Altitude` potrebbe essere `null` o il valore potrebbe essere pari a zero. Se l'altitudine è disponibile, il valore è espresso in metri sopra il livello del mare. 
 
-Per eseguire una query del dispositivo corrente [ubicazione](xref:Xamarin.Essentials.Location) coordinate, il `GetLocationAsync` può essere utilizzato. È consigliabile passare un completamente `GeolocationRequest` e `CancellationToken` poiché potrebbe richiedere alcuni minuti per ottenere il percorso del dispositivo.
+Per eseguire una query delle coordinate [geografiche](xref:Xamarin.Essentials.Location) del dispositivo corrente, si può usare `GetLocationAsync`. È preferibile passare `GeolocationRequest` e `CancellationToken` completi perché l'acquisizione della posizione del dispositivo potrebbe richiedere tempo.
 
 ```csharp
 try
@@ -134,55 +136,55 @@ catch (Exception ex)
 }
 ```
 
-## <a name="geolocation-accuracy"></a>Accuratezza di Georilevazione
+## <a name="geolocation-accuracy"></a>Accuratezza della georilevazione
 
-Nella tabella seguente vengono indicati l'accuratezza per ogni piattaforma:
+La tabella seguente indica l'accuratezza per ogni piattaforma:
 
 ### <a name="lowest"></a>Più bassa
 
-| Piattaforma | Distanza (espressa in metri) |
+| Piattaforma | Distanza (in metri) |
 | --- | --- |
 | Android | 500 |
 | iOS | 3000 |
-| UWP | 1000: 5000 |
+| UWP | 1000 - 5000 |
 
 ### <a name="low"></a>Bassa
 
-| Piattaforma | Distanza (espressa in metri) |
+| Piattaforma | Distanza (in metri) |
 | --- | --- |
 | Android | 500 |
 | iOS | 1000 |
-| UWP | 300: 3000 |
+| UWP | 300 - 3000 |
 
-### <a name="medium-default"></a>Media (predefinita)
+### <a name="medium-default"></a>Media (impostazione predefinita)
 
-| Piattaforma | Distanza (espressa in metri) |
+| Piattaforma | Distanza (in metri) |
 | --- | --- |
 | Android | 100 - 500 |
 | iOS | 100 |
-| UWP | 30-500 |
+| UWP | 30 - 500 |
 
 ### <a name="high"></a>High
 
-| Piattaforma | Distanza (espressa in metri) |
+| Piattaforma | Distanza (in metri) |
 | --- | --- |
-| Android | 0: 100 |
+| Android | 0 - 100 |
 | iOS | 10 |
-| UWP | < = 10 |
+| UWP | <= 10 |
 
-### <a name="best"></a>Migliore
+### <a name="best"></a>Ottimale
 
-| Piattaforma | Distanza (espressa in metri) |
+| Piattaforma | Distanza (in metri) |
 | --- | --- |
-| Android | 0: 100 |
+| Android | 0 - 100 |
 | iOS | ~0 |
-| UWP | < = 10 |
+| UWP | <= 10 |
 
 <a name="calculate-distance" />
 
-## <a name="distance-between-two-locations"></a>Distanza tra due posizioni
+## <a name="distance-between-two-locations"></a>Distanza tra due località
 
-Il [ `Location` ](xref:Xamarin.Essentials.Location) e [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) classi definiscono `CalculateDistance` metodi che consentono di calcolare la distanza tra due aree geografiche. Questa calcolata strade o altri percorsi non preso in considerazione, distanza e viene semplicemente la distanza più breve tra i due punti lungo la superficie della terra, noto anche come il _distanza ortodromica_ o il prelievo, il distanza "come file linea d'aria."
+Le classi [`Location`](xref:Xamarin.Essentials.Location) e [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) definiscono i metodi `CalculateDistance` che consentono di calcolare la distanza tra due località geografiche. Questa distanza calcolata non tiene in considerazione le strade o altri percorsi, ma è semplicemente la distanza più breve tra due punti sulla superficie terrestre, nota anche come _ortodromia_ o, colloquialmente, distanza "a volo d'uccello".
 
 Di seguito è riportato un esempio:
 
@@ -192,9 +194,9 @@ Location sanFrancisco = new Location(37.783333, -122.416667);
 double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Miles);
 ```
 
-Il `Location` costruttore ha argomenti di latitudine e longitudine in quell'ordine. I valori di latitudine positivo sono a nord dell'equatore e sono i valori della longitudine positivo est meridiano principale. Usare l'argomento finale `CalculateDistance` specificare chilometri o miglia. Il `Location` classe definisce inoltre `KilometersToMiles` e `MilesToKilometers` metodi per la conversione tra le due unità.
+Il costruttore `Location` ha gli argomenti di latitudine e longitudine in quest'ordine. I valori di latitudine positiva sono a nord dell'equatore e i valori di longitudine positiva sono a est del Meridiano di Greenwich. Usare l'argomento finale per `CalculateDistance` per specificare miglia o chilometri. La classe `Location` definisce anche i metodi `KilometersToMiles` e `MilesToKilometers` per eseguire la conversione da un'unità di misura all'altra.
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di Georilevazione](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geolocation)
-- [Documentazione dell'API di Georilevazione](xref:Xamarin.Essentials.Geolocation)
+- [Codice sorgente di Geolocation](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geolocation)
+- [Documentazione dell'API Geolocation](xref:Xamarin.Essentials.Geolocation)

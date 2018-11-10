@@ -1,24 +1,28 @@
 ---
-title: 'Xamarin.Essentials: Informazioni di visualizzazione dispositivo'
-description: Questo documento descrive la classe DeviceDisplay in Xamarin.Essentials, che fornisce metriche dello schermo del dispositivo in cui viene eseguita l'applicazione.
+title: 'Xamarin.Essentials: Device Display Information'
+description: Questo documento descrive la classe DeviceDisplay in Xamarin.Essentials, che fornisce le metriche dello schermo per il dispositivo cui viene eseguita l'applicazione.
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: cb42da4c8c2d0e381a5b00f7e60da6f427d19c66
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: ebe97cf7fbb78bff17196110e835bd35ff76b826
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353828"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674886"
 ---
-# <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: Informazioni di visualizzazione dispositivo
+# <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: Device Display Information
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-Il **DeviceDisplay** classe fornisce informazioni sulle metriche di schermo del dispositivo cui è in esecuzione l'applicazione.
+La classe **DeviceDisplay** fornisce informazioni sulle metriche dello schermo del dispositivo in cui viene eseguita l'applicazione.
 
-## <a name="using-devicedisplay"></a>Usando DeviceDisplay
+## <a name="get-started"></a>Introduzione
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-devicedisplay"></a>Uso di DeviceDisplay
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -28,7 +32,7 @@ using Xamarin.Essentials;
 
 ## <a name="screen-metrics"></a>Metriche dello schermo
 
-Oltre alle informazioni di base del dispositivo le **DeviceDisplay** classe contiene informazioni su schermo e l'orientamento del dispositivo.
+Oltre alle informazioni di base sul dispositivo, la classe **DeviceDisplay** contiene informazioni sullo schermo e l'orientamento del dispositivo.
 
 ```csharp
 // Get Metrics
@@ -50,7 +54,7 @@ var height = metrics.Height;
 var density = metrics.Density;
 ```
 
-Il **DeviceDisplay** classe espone inoltre un evento che può essere sottoscritti che viene attivato ogni volta che una schermata di modifiche delle metriche:
+La classe **DeviceDisplay** espone anche un evento che è possibile sottoscrivere, attivato quando le metriche dello schermo vengono modificate:
 
 ```csharp
 public class ScreenMetricsTest
@@ -69,7 +73,24 @@ public class ScreenMetricsTest
 }
 ```
 
+## <a name="platform-differences"></a>Differenze tra le piattaforme
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+Nessuna differenza.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+* L'accesso a `ScreenMetrics` deve essere eseguito nel thread dell'interfaccia utente. In caso contrario, verrà generata un'eccezione. È possibile usare il metodo [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) per eseguire tale codice nel thread dell'interfaccia utente.
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+Nessuna differenza.
+
+--------------
+
+
 ## <a name="api"></a>API
 
-- [Codice sorgente DeviceDisplay](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DeviceDisplay)
+- [Codice sorgente di DeviceDisplay](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DeviceDisplay)
 - [Documentazione dell'API DeviceDisplay](xref:Xamarin.Essentials.DeviceDisplay)

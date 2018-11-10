@@ -1,24 +1,28 @@
 ---
-title: 'Xamarin.Essentials: Dialer telefono'
-description: La classe PhoneDialer in Xamarin.Essentials consente a un'applicazione aprire un numero di telefono per la connessione
+title: 'Xamarin.Essentials: Phone Dialer'
+description: La classe PhoneDialer in Xamarin.Essentials consente a un'applicazione di aprire un numero di telefono dal dialer
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 34a6c80836d8cb42b1f8fd95718fe248d4701c0f
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
-ms.translationtype: MT
+ms.openlocfilehash: bccc76e1602c475a5e4cc9a95d498d11f9a379b1
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130793"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675419"
 ---
-# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Dialer telefono
+# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Phone Dialer
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-Il **PhoneDialer** classe consente a un'applicazione aprire un numero di telefono per la connessione.
+La classe **PhoneDialer** consente a un'applicazione di aprire un numero di telefono dal dialer.
 
-## <a name="using-phone-dialer"></a>Utilizzando telefonica
+## <a name="get-started"></a>Introduzione
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-phone-dialer"></a>Uso di Phone Dialer
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -26,7 +30,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La funzionalità Dialer telefono funziona chiamando il `Open` metodo con un numero di telefono per aprire la connessione con. Quando si `Open` è richiesto l'API tenterà automaticamente di formattare il numero basato il codice paese, se specificato.
+La funzionalità Phone Dialer opera chiamando il metodo `Open` con un numero di telefono con cui aprire il dialer. Quando `Open` viene richiesto, l'API prova automaticamente a formattare il numero in base al prefisso internazionale, se specificato.
 
 ```csharp
 public class PhoneDialerTest
@@ -55,5 +59,5 @@ public class PhoneDialerTest
 
 ## <a name="api"></a>API
 
-- [Connessione telefonica codice sorgente](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/PhoneDialer)
-- [Documentazione dell'API Dialer telefono](xref:Xamarin.Essentials.PhoneDialer)
+- [Codice sorgente di Phone Dialer](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/PhoneDialer)
+- [Documentazione dell'API Phone Dialer](xref:Xamarin.Essentials.PhoneDialer)

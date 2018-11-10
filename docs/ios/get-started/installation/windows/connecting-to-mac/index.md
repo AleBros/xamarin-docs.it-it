@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
-ms.openlocfilehash: d55760f1fdd6912b973cc1e7a65415a0f2c6eb47
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: befeb92529aa066f6106e855ed1fbdfe49c51e66
+ms.sourcegitcommit: c59e1882aa4af3ce36fba5c6eaeb5cf73a9cb289
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104089"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50919042"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Associa a Mac per lo sviluppo di Xamarin.iOS
 
@@ -22,7 +22,7 @@ _Questa guida descrive come usare Associa a Mac per connettere Visual Studio 201
 
 La compilazione di applicazioni iOS native richiede l'accesso agli strumenti di compilazione di Apple, che vengono eseguiti solo su Mac. Per questo motivo, Visual Studio 2017 deve connettersi a un Mac accessibile dalla rete per compilare le applicazioni Xamarin.iOS.
 
-La funzionalità Associa a Mac di Visual Studio 2017 consente di individuare, connettersi, eseguire l'autenticazione e ricordare gli host di compilazione Mac, in modo che gli sviluppatori iOS basati su Windows possano lavorare in modo produttivo. 
+La funzionalità Associa a Mac di Visual Studio 2017 consente di individuare, connettersi, eseguire l'autenticazione e ricordare gli host di compilazione Mac, in modo che gli sviluppatori iOS basati su Windows possano lavorare in modo produttivo.
 
 Associa a Mac consente il flusso di lavoro di sviluppo seguente:
 
@@ -40,12 +40,14 @@ Associa a Mac consente il flusso di lavoro di sviluppo seguente:
 
 > [!NOTE]
 > 
-> Prima di seguire le istruzioni riportate in questa guida, completare i passaggi seguenti: 
+> Prima di seguire le istruzioni riportate in questa guida, completare i passaggi seguenti:
 > 
 > - In un computer Windows [installare Visual Studio 2017](~/cross-platform/get-started/installation/windows.md)
 > - In un Mac [installare Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) e [Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/installation)
+>    - _È necessario aprire manualmente Xcode dopo l'installazione_ per poter aggiungere componenti aggiuntivi.
 >
 > Se si preferisce non installare Visual Studio per Mac, Visual Studio 2017 può configurare automaticamente l'host di compilazione Mac con Xamarin.iOS e Mono.
+> È comunque necessario installare ed eseguire Xcode.
 > Per altre informazioni, vedere [Provisioning automatico del Mac](#automatic-mac-provisioning).
 
 ## <a name="enable-remote-login-on-the-mac"></a>Abilitare l'accesso remoto nel Mac
@@ -87,7 +89,7 @@ Ora che l'accesso remoto è abilitato, Visual Studio 2017 può essere connesso a
 3. Selezionare un Mac dall'elenco. Fare clic su **Connetti**. 
 
 4. Immettere il nome utente e la password.
-    
+
     - La prima volta che ci si connette a uno specifico Mac, viene chiesto di immettere il nome utente e la password per tale macchina:
 
         ![Immissione di nome utente e password per il Mac](images/auth.png "Immissione di nome utente e password per il Mac")
@@ -102,7 +104,7 @@ Ora che l'accesso remoto è abilitato, Visual Studio 2017 può essere connesso a
     [A partire da Visual Studio 2017 versione 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Visual Studio 2017 installa o aggiorna Mono e Xamarin.iOS in un host di compilazione Mac connesso in base alle esigenze (si noti che Xcode deve comunque essere installato manualmente). Vedere [Provisioning automatico del Mac](#automatic-mac-provisioning) per maggiori dettagli.
 
 6. Controllare l'icona dello stato della connessione.
-    
+
     - Quando Visual Studio 2017 è connesso a un Mac, alla voce relativa al Mac nella finestra di dialogo **Associa al Mac** è associata un'icona che indica che è attualmente connesso:
 
         ![Mac connesso](images/connected.png "Mac connesso")
@@ -112,7 +114,7 @@ Ora che l'accesso remoto è abilitato, Visual Studio 2017 può essere connesso a
       > [!TIP]
       > Facendo clic con il pulsante destro del mouse su un Mac qualsiasi nell'elenco **Associa a Mac**, viene visualizzato un menu di scelta rapida in cui è possibile scegliere **Connetti...**, **Rimuovi questo Mac** oppure **Disconnetti**:
       >
-      > ![Menu di scelta rapida di Associa a Mac](images/contextmenu.png "Menu di scelta rapida di Associa a Mac") 
+      > ![Menu di scelta rapida di Associa a Mac](images/contextmenu.png "Menu di scelta rapida di Associa a Mac")
       >
       > Se si sceglie **Rimuovi questo Mac**, le credenziali per il Mac selezionato verranno rimosse. Per riconnettersi a tale Mac, sarà necessario immettere di nuovo il nome utente e la password.
 
@@ -131,7 +133,7 @@ Se nella finestra di dialogo **Associa a Mac** non viene visualizzato un partico
         [![Indirizzo IP del Mac in Preferenze di Sistema > Condivisione](images/sharing-ipaddress.png "Indirizzo IP del Mac in Preferenze di Sistema > Condivisione")](images/sharing.png#lightbox)
 
     - In alternativa, usare la riga di comando. Nel terminale eseguire questo comando: 
-   
+
         ```bash
         $ ipconfig getifaddr en0
         196.168.1.8
@@ -177,7 +179,7 @@ Lo stato di avanzamento è indicato da vari prompt, come illustrato nelle scherm
 |---|---|---|---|
 |Mono|[![Installazione di Mono mancante](images/mono-missing.png "Installazione di Mono mancante")](images/mono-missing-large.png#lightbox)|[![Download di Mono](images/mono-downloading.png "Download di Mono")](images/mono-downloading-large.png#lightbox)|[![Installazione di Mono](images/mono-installing.png "Installazione di Mono")](images/mono-installing-large.png#lightbox)|
 
-### <a name="xamarinios"></a>Xamarin.iOS 
+### <a name="xamarinios"></a>Xamarin.iOS
 
 Associa a Mac aggiorna Xamarin.iOS nel Mac in modo che corrisponda alla versione installata nel computer Windows.
 
@@ -216,22 +218,23 @@ L'installazione di questi pacchetti avviene rapidamente e senza un prompt.
 
 Se si verificano problemi con il provisioning automatico del Mac, esaminare i log dell'IDE di Visual Studio 2017, archiviati in **%LOCALAPPDATA%\Xamarin\Logs\15.0**. Questi log possono contenere messaggi di errore che consentono di diagnosticare meglio l'errore o di richiedere assistenza.
 
-## <a name="build-ios-apps-from-the-windows-command-line"></a>Compilare app iOS dalla riga di comando di Windows 
+## <a name="build-ios-apps-from-the-windows-command-line"></a>Compilare app iOS dalla riga di comando di Windows
 
 Associa a Mac supporta la compilazione di applicazioni Xamarin.iOS dalla riga di comando. Ad esempio:
 
 ```bash
 C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamUser /p:Platform=iPhoneSimulator /p:ServerPassword=mypassword
 ```
+
 I parametri passati a `msbuild` nell'esempio precedente sono:
 
 - `ServerAddress`: indirizzo IP dell'host di compilazione Mac.
 - `ServerUser`: nome utente da usare durante l'accesso all'host di compilazione Mac.
   Usare il nome utente di sistema anziché nome e cognome.
 - `ServerPassword`: password da usare durante l'accesso all'host di compilazione Mac.
- 
+
 > [!NOTE]
-> Visual Studio 2017 archivia `msbuild` nella directory seguente: **C:\Programmi (x86)\Microsoft Visual Studio\2017\<Versione> \MSBuild\15.0\Bin**
+> Visual Studio 2017 archivia `msbuild` nella directory seguente: **C:\Programmi (x86)\Microsoft Visual Studio\2017\\&lt;Versione&gt;\MSBuild\15.0\Bin**
 
 La prima volta che Associa a Mac accede a uno specifico host di compilazione Mac da Visual Studio 2017 o dalla riga di comando, imposta le chiavi SSH. Con queste chiavi, gli accessi futuri non richiederanno nome utente o password. Le chiavi appena create vengono archiviate in **%LOCALAPPDATA%\Xamarin\MonoTouch**.
 
@@ -248,4 +251,3 @@ Questo articolo descrive come usare Associa a Mac per la connessione di Visual S
 - [Introduzione a Xamarin.iOS per Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 - [Simulatore iOS remoto per Windows](~/tools/ios-simulator/index.md)
 - [Distribuzione wireless](~/ios/deploy-test/wireless-deployment.md)
-

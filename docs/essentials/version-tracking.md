@@ -1,24 +1,28 @@
 ---
-title: 'Xamarin.Essentials: Rilevamento versione'
-description: La classe VersionTracking in Xamarin.Essentials consente di controllare la versione delle applicazioni e i numeri di build e visualizzare informazioni aggiuntive tali come se fosse la prima ora l'applicazione avviata mai o per la versione corrente, ottengono la compilazione precedente informazioni e altro ancora.
+title: 'Xamarin.Essentials: Version Tracking'
+description: La classe VersionTracking in Xamarin.Essentials consente di controllare la versione delle applicazioni e i numeri di build e di visualizzare informazioni aggiuntive, ad esempio se l'applicazione è stata avviata per la prima volta in assoluto o, per la versione corrente, di ottenere informazioni sulla build precedente e altro ancora.
 ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 81dc67fa5a4975f31d0fbf9f7219637596a827ce
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 1eae0bf7c21dd7efa7655633896bdb2897f9d782
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353659"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674860"
 ---
-# <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: Rilevamento versione
+# <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: Version Tracking
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-Il **VersionTracking** classe consente di controllare la versione delle applicazioni e i numeri di build e visualizzare informazioni aggiuntive tali come se fosse la prima ora l'applicazione avviata mai o per la versione corrente, ottengono il precedente le informazioni di compilazione e altro ancora.
+La classe **VersionTracking** consente di controllare la versione delle applicazioni e i numeri di build e di visualizzare informazioni aggiuntive, ad esempio se l'applicazione è stata avviata per la prima volta in assoluto o, per la versione corrente, di ottenere informazioni sulla build precedente e altro ancora.
 
-## <a name="using-version-tracking"></a>Uso del rilevamento di versione
+## <a name="get-started"></a>Introduzione
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-version-tracking"></a>Uso di Version Tracking
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -26,13 +30,13 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La prima volta che utilizza il **VersionTracking** classe verrà avviata la versione corrente di rilevamento. È necessario chiamare `Track` anticipata solo all'interno dell'applicazione ogni volta che viene caricato per assicurarsi che le informazioni sulla versione corrente viene tenuta traccia:
+La prima volta che viene usata, la classe **VersionTracking** inizierà a tenere traccia della versione corrente. È necessario chiamare `Track` in anticipo solo nell'applicazione ogni volta che viene caricata per assicurarsi che venga tenuta traccia delle informazioni sulla versione corrente:
 
 ```csharp
 VersionTracking.Track();
 ```
 
-Dopo l'iniziale `Track` viene chiamato possono leggere le informazioni di versione:
+Dopo la chiamata iniziale a `Track`, è possibile leggere le informazioni sulla versione:
 
 ```csharp
 
@@ -70,11 +74,11 @@ var versionHistory = VersionTracking.VersionHistory;
 var buildHistory = VersionTracking.BuildHistory;
 ```
 
-## <a name="platform-implementation-specifics"></a>Funzionalità specifiche di implementazione della piattaforma
+## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
-Tutte le informazioni sulla versione vengono archiviati utilizzando il [preferenze](preferences.md) API in Xamarin.Essentials e viene archiviato con il nome della **.xamarinessentials.versiontracking [YOUR-APP-PACKAGE-ID]** e segue lo stesso persistenza dei dati descritti nella [preferenze](preferences.md#persistence) documentazione.
+Tutte le informazioni sulla versione vengono archiviate usando l'API [Preferences](preferences.md) in Xamarin.Essentials e con il nome file **[YOUR-APP-PACKAGE-ID].xamarinessentials.versiontracking** e usano lo stesso salvataggio permanente dei dati illustrato nella documentazione di [Preferences](preferences.md#persistence).
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di rilevamento versione](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/VersionTracking)
-- [Documentazione dell'API di rilevamento versione](xref:Xamarin.Essentials.VersionTracking)
+- [Codice sorgente di Version Tracking](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/VersionTracking)
+- [Documentazione dell'API Version Tracking](xref:Xamarin.Essentials.VersionTracking)

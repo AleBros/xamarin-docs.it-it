@@ -1,24 +1,28 @@
 ---
 title: 'Xamarin.Essentials: Compass'
-description: Questo documento descrive la classe bussola nella Xamarin.Essentials, che consente di monitorare intestazione Nord magnetico del dispositivo.
+description: Questo documento descrive la classe Compass in Xamarin.Essentials, che consente di monitorare la direzione del nord magnetico del dispositivo.
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: c3fe98c384a87bdc08ce94e7537d1a6343767561
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
+ms.openlocfilehash: 51812f9b4f88d77bf553a26ef3a6802239e338e0
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353883"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675497"
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Compass
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-La classe **Compass** consente di monitorare la posizione del Nord magnetico rispetto al dispositivo.
+La classe **Compass** consente di monitorare la direzione del nord magnetico del dispositivo.
 
-## <a name="using-compass"></a>Usando Compass
+## <a name="get-started"></a>Introduzione
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-compass"></a>Uso di Compass
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -26,7 +30,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La classe Compass funziona chiamando i metodi `Start` e `Stop` per l'ascolto delle modifiche relative alla bussola. Eventuali modifiche vengono inviate attraverso l'evento `ReadingChanged`. Ecco un esempio:
+La funzionalità Compass opera chiamando i metodi `Start` e `Stop` per attivare l'ascolto dei cambi della bussola. Le eventuali modifiche vengono inviate tramite l'evento `ReadingChanged`. Ecco un esempio:
 
 ```csharp
 public class CompassTest
@@ -70,29 +74,29 @@ public class CompassTest
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
-## <a name="platform-implementation-specifics"></a>Funzionalità specifiche di implementazione della piattaforma
+## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Android non fornisce le API per recuperare lo stato della bussola. Viene utilizzato l'accelerometro e il magnetometro per calcolare la posizione del Nord magnetico, come consigliato da Google.
+Android non fornisce un'API per recuperare la direzione della bussola. Vengono utilizzati l'accelerometro e il magnetometro per calcolare la direzione del nord magnetico, come consigliato da Google.
 
-In rari casi è possibile che vengano visualizzati risultati incoerenti poiché i sensori devono essere calibrati effettuando un movimento a forma di otto con il dispositivo. Il modo migliore per eseguire questa operazione consiste nell'aprire Google Maps, toccare il punto della propria posizione e selezionare **Calibra bussola**.
+In rari casi, si potrebbero osservare risultati non coerenti perché i sensori devono essere calibrati e a questo scopo è necessario muovere il dispositivo disegnando una forma a 8. Il modo migliore per eseguire questa operazione consiste nell'aprire Google Maps, toccare il punto corrispondente alla propria posizione e selezionare **Calibrate compass** (Calibra bussola).
 
-Tenere presente che esegue più sensori dalla propria app allo stesso tempo possono regolare la velocità del sensore.
+Tenere presente che l'esecuzione simultanea di più sensori dalla propria app può modificare la velocità del sensore.
 
 ## <a name="low-pass-filter"></a>Filtro passa basso
 
-A causa di un procedura alla bussola Android valori vengano aggiornati e calcolati in potrebbe essere necessario per rendere uniformi i valori. A _filtro passa basso_ possono essere applicati che calcola la media di valori seno e il coseno degli angoli e può essere attivata impostando il `ApplyLowPassFilter` proprietà il `Compass` classe:
+A causa di come vengono aggiornati e calcolati i valori della bussola in Android, potrebbe essere necessario uniformare i valori. Si può applicare un _filtro passa basso_ che calcola la media dei valori di seno e coseno degli angoli e può essere attivato impostando la proprietà `ApplyLowPassFilter` nella classe `Compass`:
 
 ```csharp
 Compass.ApplyLowPassFilter = true;
 ```
 
-Questo viene applicato solo nella piattaforma Android. È possibile leggere altre informazioni [qui](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
+Questo filtro viene applicato solo nella piattaforma Android. Per altre informazioni, vedere [qui](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
 
 --------------
 
 ## <a name="api"></a>API
 
-- [Codice sorgente della bussola](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
-- [Documentazione dell'API della bussola](xref:Xamarin.Essentials.Compass)
+- [Codice sorgente di Compass](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
+- [Documentazione dell'API Compass](xref:Xamarin.Essentials.Compass)

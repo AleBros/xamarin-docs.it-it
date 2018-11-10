@@ -1,24 +1,28 @@
 ---
-title: 'Xamarin.Essentials: Blocco dello schermo'
-description: Questo documento descrive la classe ScreenLock in Xamarin.Essentials, che può richiedere per evitare che la schermata che rientrano in stato di sospensione quando l'applicazione è in esecuzione.
+title: 'Xamarin.Essentials: Screen Lock'
+description: Questo documento descrive la classe ScreenLock in Xamarin.Essentials, che può richiedere di evitare che lo schermo entri in modalità di sospensione quando l'applicazione è in esecuzione.
 ms.assetid: 6B67C114-315E-4199-AA72-3F90E85A4909
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 3c8110b7abc86fe1d12485579f134997718540e6
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
-ms.translationtype: MT
+ms.openlocfilehash: 3bf8c949650cf9f039a5a516366a90e717dc944b
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38848570"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675315"
 ---
-# <a name="xamarinessentials-screen-lock"></a>Xamarin.Essentials: Blocco dello schermo
+# <a name="xamarinessentials-screen-lock"></a>Xamarin.Essentials: Screen Lock
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-Il **ScreenLock** classe può richiedere per evitare che la schermata che rientrano in stato di sospensione quando l'applicazione è in esecuzione.
+La classe **ScreenLock** può richiedere di evitare che lo schermo entri in modalità di sospensione quando l'applicazione è in esecuzione.
 
-## <a name="using-screenlock"></a>Usando ScreenLock
+## <a name="get-started"></a>Introduzione
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-screenlock"></a>Uso di ScreenLock
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -26,7 +30,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La funzionalità di blocco dello schermo funziona chiamando il `RequestActive` e `RequestRelease` metodi per richiedere la schermata di disattivazione.
+La funzionalità di blocco dello schermo opera chiamando i metodi `RequestActive` e `RequestRelease` per evitare la disattivazione dello schermo.
 
 ```csharp
 public class ScreenLockTest
@@ -43,5 +47,5 @@ public class ScreenLockTest
 
 ## <a name="api"></a>API
 
-- [Schermata di codice sorgente di blocco](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/ScreenLock)
-- [Documentazione dell'API di blocco dello schermo](xref:Xamarin.Essentials.ScreenLock)
+- [Codice sorgente di Screen Lock](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/ScreenLock)
+- [Documentazione dell'API Screen Lock](xref:Xamarin.Essentials.ScreenLock)

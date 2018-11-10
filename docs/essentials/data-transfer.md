@@ -1,24 +1,28 @@
 ---
-title: 'Xamarin.Essentials: Trasferimento dati'
-description: La classe DataTransfer in Xamarin.Essentials consente a un'applicazione condividere i dati, ad esempio testo e web collegamenti ad altre applicazioni nel dispositivo.
+title: 'Xamarin.Essentials: Data Transfer'
+description: La classe DataTransfer in Xamarin.Essentials consente a un'applicazione di condividere dati, ad esempio testo e collegamenti Web, con altre applicazioni nel dispositivo.
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 31e27556a6681b144084d2177cf3fde8fe8e5459
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 179d4327aa768e7aa2c81dbbffd694d078327400
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353519"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674834"
 ---
-# <a name="xamarinessentials-data-transfer"></a>Xamarin.Essentials: Trasferimento dati
+# <a name="xamarinessentials-data-transfer"></a>Xamarin.Essentials: Data Transfer
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-Il **DataTransfer** classe consente a un'applicazione condividere i dati, ad esempio testo e web collegamenti ad altre applicazioni nel dispositivo.
+La classe **DataTransfer** consente a un'applicazione di condividere dati, ad esempio testo e collegamenti Web, con altre applicazioni nel dispositivo.
 
-## <a name="using-data-transfer"></a>Utilizzare il trasferimento di dati
+## <a name="get-started"></a>Introduzione
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-data-transfer"></a>Uso del trasferimento dei dati
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -26,7 +30,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La funzionalità di trasferimento dei dati funziona chiamando il `RequestAsync` metodo con un payload di richiesta di dati che include le informazioni da condividere ad altre applicazioni. È possibile combinare testo e l'Uri e ogni piattaforma gestirà il filtro basato sul contenuto.
+La funzionalità Data Transfer opera chiamando il metodo `RequestAsync` con un payload di richiesta dati che include le informazioni da condividere con le altre applicazioni. È possibile combinare testo e URI e ogni piattaforma gestirà i filtri in base al contenuto.
 
 ```csharp
 
@@ -52,7 +56,7 @@ public class DataTransferTest
 }
 ```
 
-Interfaccia utente per condividere all'applicazione esterna che viene visualizzato quando viene richiesto:
+Interfaccia utente per la condivisione nell'applicazione esterna visualizzata quando viene effettuata la richiesta:
 
 ![Trasferimento dati](data-transfer-images/data-transfer.png)
 
@@ -60,21 +64,21 @@ Interfaccia utente per condividere all'applicazione esterna che viene visualizza
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-* `Subject` proprietà viene utilizzata per l'oggetto desiderato di un messaggio.
+* La proprietà `Subject` viene usata per l'oggetto desiderato di un messaggio.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* `Subject` Non utilizzato.
-* `Title` Non utilizzato.
+* `Subject` non viene usata.
+* `Title` non viene usata.
 
-# <a name="uwptabuwp"></a>[PIATTAFORMA UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* `Title` sarà il nome dell'applicazione per impostazione predefinita se non impostato.
-* `Subject` Non utilizzato.
+* Se non impostata, `Title` userà il nome dell'applicazione per impostazione predefinita.
+* `Subject` non viene usata.
 
 -----
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di trasferimento dei dati](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DataTransfer)
-- [Documentazione dell'API di trasferimento dei dati](xref:Xamarin.Essentials.DataTransfer)
+- [Codice sorgente di Data Transfer](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DataTransfer)
+- [Documentazione dell'API Data Transfer](xref:Xamarin.Essentials.DataTransfer)

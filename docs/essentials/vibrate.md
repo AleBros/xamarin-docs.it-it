@@ -1,58 +1,60 @@
 ---
-title: 'Xamarin.Essentials: vibrazione'
-description: Questo documento descrive la classe di vibrazione in Xamarin.Essentials, che consente di avviare e arrestare le funzionalità di vibrazione per un periodo di tempo desiderato.
+title: 'Xamarin.Essentials: Vibration'
+description: Questo documento descrive la classe Vibration in Xamarin.Essentials, che consente di avviare e arrestare la funzionalità di vibrazione per un periodo di tempo desiderato.
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 622689342dd961a63318a88f098dea4d1a60e277
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: ff2e718953d86eb59b28fcaa8640e04f6bf422f3
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353867"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675302"
 ---
-# <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: vibrazione
+# <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: Vibration
 
-![Versione non definitiva NuGet](~/media/shared/pre-release.png)
+![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
-Il **vibrazione** classe consente di avviare e arrestare le funzionalità di vibrazione per un periodo di tempo desiderato.
+La classe **Vibration** consente di avviare e arrestare la funzionalità di vibrazione per un periodo di tempo desiderato.
 
-## <a name="getting-started"></a>Introduzione
+## <a name="get-started"></a>Introduzione
 
-Per l'accesso di **vibrazione** è necessaria la funzionalità le seguenti impostazioni specifiche della piattaforma.
+[!include[](~/essentials/includes/get-started.md)]
+
+Per accedere alla funzionalità **Vibration**, è necessaria la configurazione seguente specifica della piattaforma.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-L'autorizzazione di vibrazione è obbligatorio e deve essere configurato nel progetto Android. Ciò è possibile aggiungere nei modi seguenti:
+L'autorizzazione Vibrate è obbligatoria e deve essere configurata nel progetto Android. È possibile aggiungerla nei modi seguenti:
 
-Aprire il **AssemblyInfo.cs** file sotto il **proprietà** cartella e aggiungere:
+Aprire il file **AssemblyInfo.cs** nella cartella **Proprietà** e aggiungere:
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Vibrate)]
 ```
 
-In alternativa, aggiornare il manifesto di Android:
+OPPURE aggiornare il manifesto di Android:
 
-Aprire il **androidmanifest. XML** file sotto il **proprietà** cartella e aggiungere il codice seguente all'interno del **manifesto** nodo.
+Aprire il file **AndroidManifest.xml** nella cartella **Proprietà** e aggiungere quanto segue all'interno del nodo **manifest**.
 
 ```xml
 <uses-permission android:name="android.permission.VIBRATE" />
 ```
 
-Oppure fare clic con il pulsante destro sul progetto Android e aprire le proprietà del progetto. Sotto **manifesto Android** trovare il **autorizzazioni necessarie:** area e selezionare il **VIBRAZIONE** l'autorizzazione. Si aggiornerà automaticamente il **androidmanifest. XML** file.
+Oppure fare clic con il pulsante destro del mouse sul progetto Android e aprire le proprietà del progetto. In **Manifesto Android** trovare l'area **Autorizzazioni necessarie** e selezionare l'autorizzazione **VIBRATE**. Il file **AndroidManifest.xml** verrà aggiornato automaticamente.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
 Non è necessaria alcuna configurazione aggiuntiva.
 
-# <a name="uwptabuwp"></a>[PIATTAFORMA UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Nessuna differenza di piattaforma.
+Non esistono differenze per questa piattaforma.
 
 -----
 
-## <a name="using-vibration"></a>Uso di vibrazione
+## <a name="using-vibration"></a>Uso di Vibration
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -60,7 +62,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La funzionalità di vibrazione può essere richiesta per un determinato periodo di tempo o il valore predefinito di 500 millisecondi.
+La funzionalità Vibration può essere richiesta per un periodo di tempo impostato o per 500 millisecondi, che è l'impostazione predefinita.
 
 ```csharp
 try
@@ -82,7 +84,7 @@ catch (Exception ex)
 }
 ```
 
-Può essere richiesto l'annullamento di vibrazione dispositivo con il `Cancel` metodo:
+L'annullamento della vibrazione del dispositivo può essere richiesto con il metodo `Cancel`:
 
 ```csharp
 try
@@ -103,21 +105,21 @@ catch (Exception ex)
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Nessuna differenza di piattaforma.
+Non esistono differenze per questa piattaforma.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* Solo emissione degli avvisi visivi quando il dispositivo viene impostato su "In suoneria, vibrazione".
-* Emissione sempre degli avvisi visivi per 500 millisecondi.
-* Non è possibile annullare vibrazione.
+* Vibra solo quando il dispositivo è impostato su "Quando non silenzioso".
+* Vibra sempre per 500 millisecondi.
+* Non è possibile annullare la vibrazione.
 
-# <a name="uwptabuwp"></a>[PIATTAFORMA UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Nessuna differenza di piattaforma.
+Non esistono differenze per questa piattaforma.
 
 -----
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di esempio sulle vibrazioni](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Vibration)
-- [Documentazione di vibrazione API](xref:Xamarin.Essentials.Vibration)
+- [Codice sorgente di Vibration](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Vibration)
+- [Documentazione dell'API Vibration](xref:Xamarin.Essentials.Vibration)
