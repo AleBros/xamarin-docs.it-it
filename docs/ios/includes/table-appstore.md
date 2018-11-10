@@ -23,7 +23,7 @@
 |6021|Newsstand|
 |6022|Cataloghi|
 
-Generi secondario giochi (6014):
+Sottogeneri giochi (6014):
 
 |ID genere|Nome genere|
 |---|---|
@@ -47,7 +47,7 @@ Generi secondario giochi (6014):
 |7018|Trivia|
 |7019|Word|
 
-Generi secondario Newstand (6021):
+Sottogeneri Newstand (6021):
 
 |ID genere|Nome genere|
 |---|---|
