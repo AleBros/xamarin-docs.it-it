@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: def46f69b139ef52bb6e65a1c415b9c899e63897
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1b6e1c8ce91eaad46e779527c5ba12e2187cad24
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109419"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528429"
 ---
 # <a name="viewpager-with-fragments"></a>ViewPager con frammenti
 
@@ -21,7 +21,7 @@ _ViewPager è un gestore di layout che consente di implementare l'esplorazione g
  
 ## <a name="overview"></a>Panoramica
 
-`ViewPager` viene spesso usato in combinazione con frammenti in modo che risulti più facile da gestire il ciclo di vita di ogni pagina la `ViewPager`. In questa procedura dettagliata `ViewPager` viene usato per creare un un'app denominata **FlashCardPager** che presenta una serie di problemi matematici per le schede flash. Ogni scheda flash viene implementato come un frammento. L'utente passa a sinistra e destra nelle schede flash e tocca un problema di matematica per visualizzare la relativa risposta. Questa app crea un `Fragment` istanza per ogni scheda flash e implementa un adattatore derivato da `FragmentPagerAdapter`. Nelle [Viewpager e viste](~/android/user-interface/controls/view-pager/viewpager-and-views.md), la maggior parte del lavoro è stata eseguita `MainActivity` metodi del ciclo di vita. Nelle **FlashCardPager**, la maggior parte del lavoro viene eseguita da un `Fragment` in uno dei relativi metodi del ciclo di vita. 
+`ViewPager` viene spesso usato in combinazione con frammenti in modo che risulti più facile da gestire il ciclo di vita di ogni pagina la `ViewPager`. In questa procedura dettagliata `ViewPager` viene usato per creare un'app denominata **FlashCardPager** che presenta una serie di problemi matematici per le schede flash. Ogni scheda flash viene implementato come un frammento. L'utente passa a sinistra e destra nelle schede flash e tocca un problema di matematica per visualizzare la relativa risposta. Questa app crea un `Fragment` istanza per ogni scheda flash e implementa un adattatore derivato da `FragmentPagerAdapter`. Nelle [Viewpager e viste](~/android/user-interface/controls/view-pager/viewpager-and-views.md), la maggior parte del lavoro è stata eseguita `MainActivity` metodi del ciclo di vita. Nelle **FlashCardPager**, la maggior parte del lavoro viene eseguita da un `Fragment` in uno dei relativi metodi del ciclo di vita. 
 
 Questa Guida non illustra le nozioni di base di frammenti &ndash; se non ha ancora familiarità con frammenti in xamarin. Android, vedere [frammenti](~/android/platform/fragments/index.md) che consentono di iniziare con frammenti. 
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 745c39dab1f73870ce036791434ed9a0b05d681b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e3eb4e3454aeab08d1333c5dbc3d4808fa4d676c
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122621"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528404"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>Modifiche di Framework aggiuntivi watchOS 3
 
@@ -38,7 +38,7 @@ Per altre informazioni, vedere di Apple [riferimento a Framework di Core Data](h
 
 I miglioramenti seguenti sono apportate al framework del movimento di Core per watch OS 3:
 
-- Il nuovo evento del movimento del dispositivo usa l'accelerometro e il Giroscopio per fornire aggiornamenti lo spostamento e l'orientamento. l'app è possibile registrarsi per questo aggiornamento (in base alle tariffe di fino a 100Hz).
+- Il nuovo evento del movimento del dispositivo usa l'accelerometro e il Giroscopio per fornire aggiornamenti lo spostamento e l'orientamento. L'app è possibile registrarsi per questo aggiornamento (in base alle tariffe di fino a 100Hz).
 - Il nuovo evento Pedometer consente veloci e notifiche in tempo reale quando l'utente mette in pausa e viene ripresa l'esecuzione. Usare la [CMPedometer](https://developer.apple.com/reference/coremotion/cmpedometer) per registrare gli eventi pedometer foreground o background.
 
 
@@ -48,7 +48,7 @@ I miglioramenti seguenti sono apportate al framework Foundation per watch OS 3:
 
 - Usare le nuove [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) classe per rendere i calcoli degli intervalli di data e ora, ad esempio le durate, per il confronto di intervalli e i test per le intersezioni di intervallo.
 - Diverse nuove proprietà sono stati aggiunti per il [NSLocal](https://developer.apple.com/reference/foundation/nslocale) classe di acquisire informazioni locali e i formati di visualizzazione disponibile.
-- Usare le nuove [NSMeasuerment](https://developer.apple.com/reference/foundation/nsmeasurement) classe convertire tra diverse unità di misura (UDM) o eseguire calcoli sui valori di unità diversa.
+- Usare le nuove [NSMeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) classe convertire tra diverse unità di misura (UDM) o eseguire calcoli sui valori di unità diversa.
 - Usare le nuove [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) classe per formattare le misurazioni localizzate per la visualizzazione all'utente finale.
 - Usare le nuove [NSUnit](https://developer.apple.com/reference/foundation/nsunit) e [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) classi per la rappresentazione di unità specifica.
 

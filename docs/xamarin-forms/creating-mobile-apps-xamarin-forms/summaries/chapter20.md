@@ -4,15 +4,15 @@ description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepil
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: d606432174807498fd458470647109de4fa0b6b4
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 527ecfa03adb78d8b97e95d0b6b81ceb12f0a107
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156730"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563771"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Riepilogo del capitolo 20. / O asincrono e file
 
@@ -28,7 +28,7 @@ Alcuni programmi di esempio in questo libro è sono usato il [ `WebRequest` ](xr
 > [!NOTE]
 > Programmi di xamarin. Forms devono utilizzare [ `HttpClient` ](xref:System.Net.Http.HttpClient) anziché [ `WebRequest` ](xref:System.Net.WebRequest) per accedere ai file tramite internet. `HttpClient` supporta le operazioni asincrone.
 
-Un approccio più moderno per l'elaborazione asincrona è disponibile in .NET e c#. Ciò comporta il [ `Task` ](xref:System.Threading.Tasks.Task) e [ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1) classi e altri tipi all'interno di [ `System.Threading` ](xref:System.Threading) e [ `System.Threading.Tasks` ](xref:System.Threading.Tasks) spazi dei nomi, nonché il linguaggio c# 5.0 `async` e `await` parole chiave. Questo è ciò che in questo capitolo è incentrato sulla.
+Un approccio più moderno per l'elaborazione asincrona è disponibile in .NET e c#. Ciò comporta il [ `Task` ](xref:System.Threading.Tasks.Task) e [ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1) classi e altri tipi all'interno di [ `System.Threading` ](xref:System.Threading) e [ `System.Threading.Tasks` ](xref:System.Threading.Tasks) spazi dei nomi, nonché il C# 5.0 `async` e `await` parole chiave. Questo è ciò che in questo capitolo è incentrato sulla.
 
 ## <a name="from-callbacks-to-await"></a>Dal callback in attesa
 

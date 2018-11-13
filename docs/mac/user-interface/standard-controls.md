@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 9f5bdc9a79c514f0310d29b3d054fb7e9659d669
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.openlocfilehash: 150d5a35a2ccae63a1ff9969f5751b0e93c12454
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123791"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527001"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Controlli standard in xamarin. Mac
 
 _Questo articolo descrive l'uso di controlli AppKit standard, ad esempio pulsanti, etichette, campi di testo, caselle di controllo e segmentata i controlli in un'applicazione xamarin. Mac. Descrive aggiungendoli a un'interfaccia con Interface Builder e sull'interazione con essi nel codice._
 
-Quando si usa c# e .NET in un'applicazione xamarin. Mac, è possibile utilizzare lo stesso AppKit controlla che gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire i controlli Appkit (oppure crearle direttamente nel codice c#).
+Quando si lavora con C# e .NET in un'applicazione xamarin. Mac, è possibile utilizzare la stessa AppKit controlla che gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire i controlli Appkit (oppure crearle direttamente nel codice c#).
 
 I controlli AppKit sono gli elementi dell'interfaccia utente che vengono usati per creare l'interfaccia utente dell'applicazione xamarin. Mac. Sono costituiti da elementi, ad esempio pulsanti, etichette, campi di testo, caselle di controllo e controlli segmentati e causare azioni immediate o risultati visibili quando un utente le manipola.
 

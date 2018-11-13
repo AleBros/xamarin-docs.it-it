@@ -7,12 +7,12 @@ ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: charlespetzold
 ms.author: chape
 ms.date: 07/18/2018
-ms.openlocfilehash: 01985cf253c0f33c52128386b36c11af50381ee1
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
-ms.translationtype: MT
+ms.openlocfilehash: 84d21738298360eb8829a569b152a131e6543709
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156691"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526780"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>Riepilogo del capitolo 19. Visualizzazioni di raccolta
 
@@ -60,7 +60,7 @@ Il [ **ListViewList** ](https://github.com/xamarin/xamarin-forms-book-samples/tr
 
 ### <a name="the-row-separator"></a>Il separatore di riga
 
-In iOS e Android consente di visualizzare, una linea sottile separa le righe. È possibile controllare questo valore con il [ `SeparatorVisibiliy` ](xref:Xamarin.Forms.ListView.SeparatorVisibility) e [ `SeparatorColor` ](xref:Xamarin.Forms.ListView.SeparatorColor) proprietà. `SeparatorVisibility` proprietà JE typu [ `SeparatorVisbility` ](xref:Xamarin.Forms.SeparatorVisibility), un'enumerazione con due membri:
+In iOS e Android consente di visualizzare, una linea sottile separa le righe. È possibile controllare questo valore con il [ `SeparatorVisibility` ](xref:Xamarin.Forms.ListView.SeparatorVisibility) e [ `SeparatorColor` ](xref:Xamarin.Forms.ListView.SeparatorColor) proprietà. `SeparatorVisibility` proprietà JE typu [ `SeparatorVisibility` ](xref:Xamarin.Forms.SeparatorVisibility), un'enumerazione con due membri:
 
 - [`Default`](xref:Xamarin.Forms.SeparatorVisibility.Default), l'impostazione predefinita
 - [`None`](xref:Xamarin.Forms.SeparatorVisibility.None)

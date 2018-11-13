@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: a0738b03c4fa0ad975b872307bb17f387b1c5fd5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7d626b8a968835813d87c93e3cead57a00c14000
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120957"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528598"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Distribuzione e test delle App watchOS con Xamarin
 
@@ -50,7 +50,7 @@ Tutti e tre i progetti richiedono un corrispondente distribuzione profilo di Pro
 
 ### <a name="explicit-app-ids"></a>ID App esplicito
 
-Creare un **App ID** per l'ID Bundle ogni di ogni progetto (che avrà un aspetto simile al seguente nel centro per sviluppatori iOS):
+Creare un **App ID** per l'ID Bundle di ogni progetto (che avrà un aspetto simile al seguente nel centro per sviluppatori iOS):
 
 ![Gli ID Bundle nel centro per sviluppatori iOS](images/appids-specific-sml.png)
 
@@ -88,7 +88,7 @@ Il gruppo di app verrà quindi visualizzato nell'elenco:
 
 Dopo aver creato il gruppo, è possibile farvi riferimento nel **App ID** configurazione. Ricordarsi di includerlo iOS entrambe le App e l'estensione Watch **App ID**.
 
-![Consifurations disponibili](images/appgroups-sml.png)
+![Configurazioni disponibili](images/appgroups-sml.png)
 
 Effettuare **non** Abilita gruppi di App nell'ID dell'App Apple Watch. Non è necessaria l'attivazione nella stesso Apple watch.
 

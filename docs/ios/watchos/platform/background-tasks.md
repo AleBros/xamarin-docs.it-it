@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/13/2017
-ms.openlocfilehash: 4105193ea69eaf369ae62632090a281e641303f7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 45886d787ecc40c9e11ce0c713ffa22819e29db2
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110368"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528819"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>Attività in Background in Xamarin watchOS
 
@@ -691,7 +691,7 @@ Apple ha i suggerimenti seguenti:
 - Durante il test di un'app nel simulatore watchOS, nessuno dei budget di attività verranno applicate in modo che un'app può aggiornare come necessario per verificare correttamente una funzionalità.
 - Testare sempre sulll'hardware effettivo di Apple Watch per assicurarsi che l'app non è in esecuzione oltre i relativi budget prima della pubblicazione a iTunes Connect.
 - Mantenere l'Apple Watch on caricabatterie durante il test e debug suggerite da Apple.
-- Assicurarsi che sia ad accesso sporadico l'avvio e ripresa di un'app vengono testati accurati.
+- Assicurarsi che sia ad accesso sporadico l'avvio e ripresa di un'app viene testate.
 - Verificare che vengono completate tutte le attività di app.
 - Variare il numero di App che sono stati bloccati nel Dock per testare il migliori e peggiori caso di scenari.
 

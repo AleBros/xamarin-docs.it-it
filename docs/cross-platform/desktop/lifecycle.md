@@ -5,12 +5,12 @@ description: Questo documento vengono confrontate le analogie e differenze tra i
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: cf25cf956fbf9fd566520d9067f0d98a9a7624aa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 653e2f849a74948d3636f594eae91cdeabfae138
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107119"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526793"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>Visual Studio WPF. Ciclo di vita App xamarin. Forms
 
@@ -53,7 +53,7 @@ Entrambi WPFs `Window` e xamarin. Forms `Page` includono un `Title` dispone di p
 
 ### <a name="views"></a>Visualizzazioni
 
-La gerarchia visual per entrambi i Framework è simile. WPF è un po' più approfondito a causa di un relativo supporto per i documenti WYSIWYG.
+La gerarchia visiva per entrambi i Framework è simile. WPF è un po' più approfondito a causa di un proprio supporto per i documenti WYSIWYG.
 
 **WPF**
 
@@ -83,7 +83,7 @@ Xamarin. Forms è orientato principalmente su scenari per dispositivi mobili. Di
 |--- |--- |--- |
 |Attivazione iniziale|ctor + Window.OnLoaded|ctor + Page.OnStart|
 |Illustrato|Window.IsVisibleChanged|Page.Appearing|
-|Hidden|Window.IsVisibleChanged|Page.Disapearing|
+|Hidden|Window.IsVisibleChanged|Page.Disappearing|
 |Sospendere/Lost messa a fuoco|Window.OnDeactivated|Page.OnSleep|
 |Stato attivo/ottenuto attivato|Window.OnActivated|Page.OnResume|
 |Chiuso|Window. OnClosing + Window.OnClosed|N/D|
@@ -139,7 +139,7 @@ Entrambe le piattaforme usano _le proprietà associate_ per ottimizzare gli elem
 
 I meccanismi di rendering per WPF e xamarin. Forms sono completamente diversi. In WPF, i controlli che si crea direttamente il rendering del contenuto pixel sullo schermo. WPF gestisce due oggetti grafici (_alberi_) per rappresentare questa - il _albero logico_ rappresenta i controlli, come definito nel codice o XAML e il _struttura ad albero visuale_ rappresenta il il rendering effettivo che si verifica nella schermata di cui è eseguito direttamente tramite l'elemento visivo (tramite un metodo di disegno virtuale), o tramite un XAML definito `ControlTemplate` che possono essere sostituiti o personalizzati. In genere, la struttura visiva è più complessa perché questo include, ad esempio i bordi intorno a controlli, le etichette per contenuto implicito e così via. WPF include un set di API (`LogicalTreeHelper` e `VisualTreeHelper`) per esaminare questi due grafici di oggetti.
 
-In xamarin. Forms, i controlli di definire in una `Page` sono oggetti di dati molto semplici. Questi sono simili alla rappresentazione dell'albero logico, ma mai il rendering del contenuto in modo indipendente. In questo caso sono le _modello di dati_ che influenza il rendering degli elementi. Il rendering effettivo avviene tramite un [separare set di _renderer visual_ che viene eseguito il mapping a ogni tipo di controllo](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Tali renderer vengono registrate in ogni progetto specifico della piattaforma da assembly specifici della piattaforma xamarin. Forms. È possibile visualizzare un elenco [qui](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md). Oltre a sostituire o estendere il renderer, xamarin. Forms include anche il supporto per [effetti](~/xamarin-forms/app-fundamentals/effects/index.md) usabili per influenzare il rendering in base a una per ogni piattaforma nativo.
+In xamarin. Forms, i controlli di definire in una `Page` sono oggetti di dati molto semplici. Questi sono simili alla rappresentazione dell'albero logico, ma mai il rendering del contenuto in modo indipendente. In questo caso sono le _modello di dati_ che influenza il rendering degli elementi. Il rendering effettivo avviene tramite un [separare set di _renderer visual_ che viene eseguito il mapping a ogni tipo di controllo](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Tali renderer vengono registrate in ogni progetto specifico della piattaforma da assembly specifici della piattaforma xamarin. Forms. È possibile visualizzare un elenco [qui](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md). Oltre a sostituire o estendere il renderer, xamarin. Forms include anche il supporto per [effetti](~/xamarin-forms/app-fundamentals/effects/index.md) che può essere usato per influenzare il rendering in base a ogni piattaforma nativo.
 
 #### <a name="the-logicalvisual-tree"></a>L'albero logico e Visual
 
@@ -179,11 +179,11 @@ Se non si definisce la `ResourceDictionary`, viene generato un errore di runtime
 
 ## <a name="styles"></a>Stili
 
-Gli stili sono completamente supportati in xamarin. Forms e può essere utilizzata al tema gli elementi di xamarin. Forms che costituiscono l'interfaccia utente. Supportano l'ereditarietà di proprietà, eventi e dati, i trigger tramite `BasedOn`e le ricerche di risorse per i valori. Gli stili vengono applicati agli elementi entrambe in modo esplicito tramite il `Style` proprietà o implicitamente a non fornire una chiave di risorsa - come WPF.
+Gli stili sono completamente supportati in xamarin. Forms e può essere utilizzata al tema gli elementi di xamarin. Forms che costituiscono l'interfaccia utente. Supportano l'ereditarietà di proprietà, eventi e dati, i trigger tramite `BasedOn`e le ricerche di risorse per i valori. Gli stili vengono applicati agli elementi, ovvero in modo esplicito tramite il `Style` proprietà, oppure in modo implicito non specificando una chiave di risorsa - come WPF.
 
 ### <a name="device-styles"></a>Stili di dispositivo
 
-WPF include un set di proprietà predefinite (archiviati come valori statici in un set di classi statiche, ad esempio `SystemColors`) che definiscono i colori di sistema, i tipi di carattere e le metriche in forma di valori e le chiavi di risorsa. Xamarin. Forms è simile, ma definisce un set di [stili di dispositivo](~/xamarin-forms/user-interface/styles/device.md) per rappresentare gli stessi elementi. Questi stili sono forniti dal Framework anche e impostati sui valori in base all'ambiente di runtime (ad esempio accessibilità).
+WPF include un set di proprietà predefinite (archiviati come valori statici in un set di classi statiche, ad esempio `SystemColors`) che definiscono i colori di sistema, i tipi di carattere e le metriche in forma di valori e le chiavi di risorsa. Xamarin. Forms è simile, ma definisce un set di [stili di dispositivo](~/xamarin-forms/user-interface/styles/device.md) per rappresentare gli stessi elementi. Questi stili sono forniti dal framework e impostati sui valori in base all'ambiente di runtime (ad esempio accessibilità).
 
 **WPF**
 

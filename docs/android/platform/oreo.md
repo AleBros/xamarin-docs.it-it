@@ -8,18 +8,18 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: e4f0138c0177c046c1e967a3d3625604f73327d6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0c5e048dd3f3496691b83eb10d377d012efedc72
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103192"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528767"
 ---
 # <a name="oreo-features"></a>Funzionalità di Oreo
 
 _Come iniziare a usare xamarin. Android per sviluppare App per la versione più recente di Android._
 
-[Android 8.0 Oreo](https://developer.android.com/index.html) è la versione più recente di Android disponibile da Google. Android Oreo offre molte nuove funzionalità di interesse per gli sviluppatori di xamarin. Android. Queste funzionalità includono i canali di notifica, notifiche sulla notifica, i tipi di carattere personalizzati in XML, i tipi di carattere scaricabile, riempimento automatico e picture in picture (PIP). Android Oreo include nuove API per questi nuovi avanzata e queste API sono disponibili per le app xamarin. Android quando si usa xamarin. Android 8.0 e versioni successive.
+[Android 8.0 Oreo](https://developer.android.com/index.html) è la versione più recente di Android disponibile da Google. Android Oreo offre molte nuove funzionalità di interesse per gli sviluppatori di xamarin. Android. Queste funzionalità includono i canali di notifica, notifiche sulla notifica, i tipi di carattere personalizzati in XML, i tipi di carattere scaricabile, riempimento automatico e picture in picture (PIP). Android Oreo include nuove API per queste nuove funzionalità e queste API sono disponibili per le app xamarin. Android quando si usa xamarin. Android 8.0 e versioni successive.
 
 [![Immagine hero di Android Oreo](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
 
@@ -66,7 +66,7 @@ Per aggiungere il supporto di Android Oreo a Visual Studio, eseguire le operazio
 
     2. Usare la [SDK Manager](~/android/get-started/installation/android-sdk.md) per installare il livello API 26.0 o versione successivo.
 
--   Se si usa Visual Studio 2015, è consigliabile il downgrade di SDK Tools su 25 e usando la GUI di Gestione emulatori Google precedente. Strumenti SDK 25 possono essere comunque usati insieme alle API 26, 27 e successive e non influisce su sviluppo per nuove piattaforme. Ciò fornirà un'interfaccia per la gestione di Android SDK per le versioni precedenti di Visual Studio.
+-   Se si usa Visual Studio 2015, è consigliabile il downgrade di SDK Tools a 25 e tramite la GUI di Gestione emulatori Google precedente. Strumenti SDK 25 possono essere comunque usati insieme alle API 26, 27 e successive e non influisce su sviluppo per nuove piattaforme. Ciò fornirà un'interfaccia per la gestione di Android SDK per le versioni precedenti di Visual Studio.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 

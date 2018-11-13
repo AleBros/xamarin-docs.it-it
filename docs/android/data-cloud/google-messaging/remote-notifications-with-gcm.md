@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/12/2018
-ms.openlocfilehash: e361444f2c717ff44e0771710836f156f90cfcb8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: be96683a2e63ed802169543dcee55a3431e42130
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118890"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528806"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notifiche remote con Google Cloud Messaging
 
@@ -91,7 +91,7 @@ Un'applicazione Android debba avere le autorizzazioni seguenti configurate per p
 -   `com.google.android.c2dm.permission.RECEIVE` &ndash; Concede l'autorizzazione per l'App nell'app per registrare e ricevere messaggi da Google Cloud Messaging. (Cosa `c2dm` significa? Questo è l'acronimo _dispositivo messaggistica da Cloud a_, che è il predecessore attualmente deprecata a GCM. 
     Usa ancora GCM `c2dm` in molte delle relative stringhe di autorizzazione.) 
 
--   `android.permission.WAKE_LOCK` &ndash; (Facoltativo) Impedisce al dispositivo CPU dal passaggio alla modalità sospensione mentre era in ascolto di un messaggio. 
+-   `android.permission.WAKE_LOCK` &ndash; (Facoltativo) Impedisce che il dispositivo CPU lo stato di sospensione mentre era in ascolto di un messaggio. 
 
 -   `android.permission.INTERNET` &ndash; Concede l'accesso a internet in modo che l'app client può comunicare con GCM. 
 
@@ -649,7 +649,7 @@ D/MyGcmListenerService(16103): Message: Hello, Xamarin!
 
 Inoltre, si noterà che una nuova icona di notifica è stato visualizzato nella barra di notifica: 
 
-[![Notiication icona viene visualizzata sul dispositivo](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
+[![Icona di notifica visualizzato nel dispositivo](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
 
 Quando si apre la barra di notifica per visualizzare le notifiche, verrà visualizzata la notifica remota:
 
@@ -657,7 +657,7 @@ Quando si apre la barra di notifica per visualizzare le notifiche, verrà visual
 
 Complimenti, l'app ha ricevuto la prima notifica remota.
 
-Si noti che i messaggi GCM non verranno ricevuti non sono più se l'app è arrestata force. Per riprendere le notifiche dopo un forzare l'arresto, l'app deve essere riavviato manualmente. Per altre informazioni su questi criteri di Android, vedere [avviare controlli per le applicazioni arrestate](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) e ciò [stack overflow post](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
+Si noti che i messaggi GCM non verranno ricevuti non sono più se l'app è arrestata force. Per riprendere le notifiche dopo un forzare l'arresto, è necessario riavviare manualmente l'app. Per altre informazioni su questi criteri di Android, vedere [avviare controlli per le applicazioni arrestate](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) e ciò [stack overflow post](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
 
  
 ## <a name="summary"></a>Riepilogo

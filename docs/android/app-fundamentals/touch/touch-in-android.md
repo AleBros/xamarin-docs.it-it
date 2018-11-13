@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 9a6f7f5c82808b6430ba1aa6178a543945ae2634
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a25a1c3be8c952536c0ef40b7f7c4a64f5748516
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104908"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527235"
 ---
 # <a name="touch-in-android"></a>Tocco in Android
 
@@ -80,7 +80,7 @@ Questa interfaccia fornisce sei metodi per i movimenti diversi:
 -  *OnSingleTapUp* -chiamati quando si verifica un singolo tocco.
 
 
-In molti casi le applicazioni possono risultare utili solo un subset dei movimenti. In questo caso, le applicazioni devono estendere la classe GestureDetector.SimpleOnGestureListener ed eseguire l'override di metodi che corrispondono agli eventi che sono interessati.
+In molti casi le applicazioni possono risultare utili solo un subset dei movimenti. In questo caso, applicazioni devono estendere la classe GestureDetector.SimpleOnGestureListener ed eseguire l'override di metodi che corrispondono agli eventi che sono interessati.
 
 ## <a name="custom-gestures"></a>Movimenti personalizzati
 
@@ -134,7 +134,7 @@ Il frammento XML seguente viene illustrato come aggiungere un GestureOverlayView
     android:layout_height="match_parent" />
 ```
 
-Il `GestureOverlayView` ha diversi eventi che verranno generati durante il processo di disegno un movimento. L'evento più interessante è `GesturePeformed`. Questo evento viene generato quando l'utente ha completato i movimenti di disegno.
+Il `GestureOverlayView` ha diversi eventi che verranno generati durante il processo di disegno un movimento. L'evento più interessante è `GesturePerformed`. Questo evento viene generato quando l'utente ha completato i movimenti di disegno.
 
 Quando questo evento viene generato, l'attività richiede un `GestureLibrary` per prova e far corrispondere il movimento creati dall'utente con uno dei movimenti dallo strumento di movimento. `GestureLibrary` Restituisce un elenco di oggetti di stima.
 

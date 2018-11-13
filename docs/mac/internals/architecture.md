@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 04/12/2017
-ms.openlocfilehash: b51dd4f2a6bf0e3e5ec206953e60c264c70107a5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.openlocfilehash: 7b9b3b648f6ac66859714052e916407026da10d4
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122283"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526936"
 ---
 # <a name="xamarinmac-architecture"></a>Architettura di xamarin. Mac
 
@@ -105,7 +105,7 @@ La logica di avvio di xamarin. Mac variano a seconda se incorporato o sistema Mo
 
 ## <a name="generator"></a>Generator
 
-Xamarin. Mac contiene definizioni per tutte le API Mac. È possibile esplorare tramite uno di questi sul [repository github MaciOS](https://github.com/xamarin/xamarin-macios/tree/master/src). Queste definizioni contengono si interfaccia con attributi, nonché qualsiasi proprietà e metodi necessari. Ad esempio, il codice seguente è viene usato per definire un NSBox nel [dello spazio dei nomi di AppKit](https://github.com/xamarin/xamarin-macios/blob/master/src/appkit.cs#L1465-L1526). Si noti che è un'interfaccia con un numero di metodi e proprietà:
+Xamarin. Mac contiene definizioni per tutte le API Mac. È possibile esplorare tramite uno di questi sul [repository github MaciOS](https://github.com/xamarin/xamarin-macios/tree/master/src). Queste definizioni contengono si interfaccia con attributi, nonché qualsiasi proprietà e metodi necessari. Ad esempio, il codice seguente consente di definire un NSBox nel [dello spazio dei nomi di AppKit](https://github.com/xamarin/xamarin-macios/blob/master/src/appkit.cs#L1465-L1526). Si noti che è un'interfaccia con un numero di metodi e proprietà:
 
 ```csharp
 [BaseType (typeof (NSView))]

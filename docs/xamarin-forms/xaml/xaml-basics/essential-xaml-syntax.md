@@ -1,26 +1,26 @@
 ---
-title: Parte 2. Sintassi XAML essenziali
-description: In questo articolo illustra le funzionalità di sintassi XAML essenziali degli elementi di proprietà e le proprietà associate.
+title: Parte 2. Sintassi XAML essenziale
+description: Questo articolo illustra le funzionalità della sintassi XAML essenziale degli elementi di proprietà e le proprietà associate.
 ms.prod: xamarin
 ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: ea448708403478cdaf565bc7abbed2af28c7a9bf
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: 985ca3b34b4b85ef234f12fe3f25edd1d1556e23
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36268849"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563238"
 ---
-# <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintassi XAML essenziali
+# <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintassi XAML essenziale
 
-_XAML è progettato principalmente per la creazione e inizializzazione di oggetti. Spesso, devono essere impostate su oggetti complessi che non possono facilmente essere rappresentati come stringhe XML, ma in alcuni casi è necessario impostare le proprietà definite da una classe in una classe figlio. Queste due esigenze richiedono le funzionalità essenziali della sintassi XAML di elementi di proprietà e le proprietà associate._
+_XAML è progettato principalmente per la creazione di istanze e inizializzazione di oggetti. Ma spesso devono essere impostate su oggetti complessi che non possono essere rappresentati facilmente sotto forma di stringhe XML e a volte le proprietà definite da una classe devono essere impostate su una classe figlio. Queste due esigenze richiedono la funzionalità della sintassi XAML essenziale di elementi di proprietà e le proprietà associate._
 
-## <a name="property-elements"></a>Elementi proprietà
+## <a name="property-elements"></a>Proprietà elementi
 
-In XAML, le proprietà delle classi vengono normalmente definite come attributi XML:
+In XAML, proprietà delle classi in genere sono impostate come attributi XML:
 
 ```xaml
 <Label Text="Hello, XAML!"
@@ -30,7 +30,7 @@ In XAML, le proprietà delle classi vengono normalmente definite come attributi 
        TextColor="Aqua" />
 ```
 
-Tuttavia, è un modo alternativo per impostare una proprietà in XAML. Per provare questa alternativa con `TextColor`, prima di eliminare quello esistente `TextColor` impostazione:
+Tuttavia, vi è un modo alternativo per impostare una proprietà in XAML. Per provare questa alternativa con `TextColor`, prima di tutto eliminare quello esistente `TextColor` impostazione:
 
 ```xaml
 <Label Text="Hello, XAML!"
@@ -39,7 +39,7 @@ Tuttavia, è un modo alternativo per impostare una proprietà in XAML. Per prova
        FontSize="Large" />
 ```
 
-Apre un elemento vuoto `Label` tag in base che lo separa in tag di inizio e fine:
+Aprire l'elemento vuoto `Label` tag da separandolo in tag di inizio e fine:
 
 ```xaml
 <Label Text="Hello, XAML!"
@@ -50,7 +50,7 @@ Apre un elemento vuoto `Label` tag in base che lo separa in tag di inizio e fine
 </Label>
 ```
 
-All'interno di tali tag, aggiungere i tag di inizio e fine costituita il nome della classe e un nome di proprietà separati da un punto:
+All'interno di questi tag, aggiungere i tag di inizio e fine costituiti da un nome di proprietà separati da un punto e il nome della classe:
 
 ```xaml
 <Label Text="Hello, XAML!"
@@ -76,20 +76,20 @@ Impostare il valore della proprietà come contenuto di questi nuovi tag, simile 
 </Label>
 ```
 
-Questi due modi per specificare il `TextColor` proprietà sono funzionalmente equivalenti, ma non utilizzare due modalità per la stessa proprietà perché che verrebbe in modo efficace impostando la proprietà due volte e potrebbe essere ambigua.
+Questi due modi per specificare il `TextColor` proprietà sono funzionalmente equivalenti, ma non usare i due modi per la stessa proprietà in quanto che sarebbe effettivamente impostando la proprietà due volte e potrebbe essere ambigua.
 
 Con questa nuova sintassi, è possono che vengano introdotti alcuni termini utili:
 
--  `Label` è un *elemento oggetto*. È un oggetto di xamarin. Forms espresso come un elemento XML.
--  `Text`, `VerticalOptions`, `FontAttributes` e `FontSize` sono *attributi della proprietà*. Sono proprietà di xamarin. Forms espressa come attributi XML.
--  In questo frammento di codice finale, `TextColor` è diventato un *elemento proprietà*. È una proprietà di xamarin. Forms, ma ora è un elemento XML.
+-  `Label` è un' *elemento oggetto*. È un oggetto di xamarin. Forms espresso come un elemento XML.
+-  `Text`, `VerticalOptions`, `FontAttributes` e `FontSize` sono *gli attributi della proprietà*. Sono le proprietà di xamarin. Forms espresse come attributi XML.
+-  In questo frammento di codice finale `TextColor` è diventato un *property (elemento)*. Si tratta di una proprietà di xamarin. Forms, ma ora è un elemento XML.
 
 
-La definizione di proprietà di elementi potrebbero sembrare innanzitutto come una violazione della sintassi XML, ma non. Il periodo di hanno alcun significato speciale in XML. A un decodificatore XML, `Label.TextColor` è semplicemente un elemento figlio normale.
+La definizione della proprietà di elementi potrebbero a prima di tutto sembra essere una violazione della sintassi XML, ma non è. Il periodo di ha alcun significato speciale in XML. Per un decodificatore XML, `Label.TextColor` è semplicemente un elemento figlio normale.
 
-In XAML, tuttavia, questa sintassi è molto speciale. Una delle regole per gli elementi di proprietà è che può essere inclusi nessun altro elemento di `Label.TextColor` tag. Il valore della proprietà è sempre definito come contenuto tra i tag di fine e l'inizio elemento proprietà.
+In XAML, tuttavia, questa sintassi è molto speciale. Una delle regole per gli elementi di proprietà è che nessun altro elemento può essere visualizzate nel `Label.TextColor` tag. Il valore della proprietà è sempre definito come contenuto tra l'inizio di elemento di proprietà e i tag di fine.
 
-È possibile utilizzare la sintassi dell'elemento di proprietà in più di una proprietà:
+È possibile usare la sintassi dell'elemento di proprietà in più di una proprietà:
 
 ```xaml
 <Label Text="Hello, XAML!"
@@ -106,7 +106,7 @@ In XAML, tuttavia, questa sintassi è molto speciale. Una delle regole per gli e
 </Label>
 ```
 
-In alternativa, è possibile usare la sintassi dell'elemento di proprietà per tutte le proprietà:
+Oppure è possibile usare la sintassi dell'elemento di proprietà per tutte le proprietà:
 
 ```xaml
 <Label>
@@ -128,9 +128,9 @@ In alternativa, è possibile usare la sintassi dell'elemento di proprietà per t
 </Label>
 ```
 
-Inizialmente, la sintassi dell'elemento di proprietà potrebbe sembrare una sostituzione di operazioni tediose non necessaria per un elemento relativamente semplice e in questi esempi è certamente il caso.
+Inizialmente, la sintassi dell'elemento di proprietà può sembrare una sostituzione di operazioni tediose non necessaria per un elemento relativamente semplice e in questi esempi è certamente il caso.
 
-Tuttavia, la sintassi dell'elemento di proprietà diventa essenziale quando il valore di una proprietà è troppo complesso per essere espresso come una stringa semplice. All'interno dei tag di elemento di proprietà è possibile creare un'istanza di un altro oggetto e impostare le relative proprietà. Ad esempio, è possibile in modo esplicito impostare una proprietà, ad esempio `VerticalOptions` per un `LayoutOptions` valore con le impostazioni delle proprietà:
+Tuttavia, la sintassi dell'elemento di proprietà diventa essenziale quando il valore di una proprietà è troppo complesso per essere espresso come una stringa semplice. All'interno dei tag di elemento di proprietà è possibile creare un'istanza di un altro oggetto e impostare le relative proprietà. Ad esempio, è possibile impostare esplicitamente una proprietà, ad esempio `VerticalOptions` a un `LayoutOptions` valore con le impostazioni delle proprietà:
 
 ```xaml
 <Label>
@@ -141,9 +141,9 @@ Tuttavia, la sintassi dell'elemento di proprietà diventa essenziale quando il v
 </Label>
 ```
 
-Un altro esempio: il `Grid` ha due proprietà denominate `RowDefinitions` e `ColumnDefinitions`. Queste due proprietà sono di tipo `RowDefinitionCollection` e `ColumnDefinitionCollection`, che sono raccolte di `RowDefinition` e `ColumnDefinition` oggetti. È necessario utilizzare la sintassi degli elementi di proprietà per impostare queste raccolte.
+Un altro esempio: la `Grid` ha due proprietà denominate `RowDefinitions` e `ColumnDefinitions`. Queste due proprietà sono di tipo `RowDefinitionCollection` e `ColumnDefinitionCollection`, che sono raccolte di `RowDefinition` e `ColumnDefinition` oggetti. È necessario utilizzare la sintassi degli elementi di proprietà per impostare queste raccolte.
 
-Di seguito è l'inizio del file XAML per un `GridDemoPage` (classe), che mostra i tag di elemento di proprietà per il `RowDefinitions` e `ColumnDefinitions` raccolte:
+In questo caso è l'inizio del file XAML per un `GridDemoPage` (classe), che mostra i tag di elemento di proprietà per il `RowDefinitions` e `ColumnDefinitions` raccolte:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -166,25 +166,25 @@ Di seguito è l'inizio del file XAML per un `GridDemoPage` (classe), che mostra 
 </ContentPage>
 ```
 
-Si noti la sintassi abbreviata per la definizione di celle ridimensionamento automatico, le celle di larghezza in pixel e l'altezza delle impostazioni a stella.
+Si noti che la sintassi abbreviata per la definizione delle celle di ridimensionamento automatico, le celle dei pixel larghezze e altezze e impostazioni a stella.
 
 ## <a name="attached-properties"></a>Proprietà associate
 
-Abbiamo già visto che il `Grid` richiede che gli elementi di proprietà per il `RowDefinitions` e `ColumnDefinitions` raccolte per definire le righe e colonne. Tuttavia, è inoltre necessario un modo per i programmatori indicare la riga e colonna in cui ogni elemento figlio del `Grid` risiede.
+Si è appena visto che il `Grid` richiede che gli elementi di proprietà per il `RowDefinitions` e `ColumnDefinitions` raccolte per definire le righe e colonne. Tuttavia, deve anche esserci un modo per i programmatori indicare la riga e colonna in cui ogni figlio le `Grid` si trova.
 
-All'interno del tag di ogni figlio di `Grid` si specifica la riga e la colonna di tale elemento figlio utilizzando i seguenti attributi:
+All'interno del tag per ogni figlio le `Grid` si specifica la riga e la colonna di tale elemento figlio usando gli attributi seguenti:
 
 -  `Grid.Row`
 -  `Grid.Column`
 
-I valori predefiniti di questi attributi sono di 0. È inoltre possibile indicare se un elemento figlio si estende su più di una riga o colonna con questi attributi:
+I valori predefiniti di questi attributi sono 0. È inoltre possibile indicare se un elemento figlio si estende su più di una riga o colonna con questi attributi:
 
 -  `Grid.RowSpan`
 -  `Grid.ColumnSpan`
 
-Questi due attributi presentano valori predefiniti di 1.
+Questi due attributi hanno valori predefiniti pari a 1.
 
-Di seguito è riportato il file GridDemoPage.xaml completo:
+Ecco il file GridDemoPage.xaml completo:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -249,21 +249,21 @@ Di seguito è riportato il file GridDemoPage.xaml completo:
 </ContentPage>
 ```
 
-Il `Grid.Row` e `Grid.Column` impostazioni pari a 0 non sono obbligatori ma in genere incluse per maggiore chiarezza.
+Il `Grid.Row` e `Grid.Column` impostazioni pari a 0 non sono necessarie, ma sono in genere incluse per maggiore chiarezza.
 
-Ecco l'aspetto in tutte e tre le piattaforme:
+Ecco l'effetto su tutte e tre le piattaforme:
 
-[![](essential-xaml-syntax-images/griddemo.png "Layout di griglia")](essential-xaml-syntax-images/griddemo-large.png#lightbox "Layout di griglia")
+[![](essential-xaml-syntax-images/griddemo.png "Layout griglia")](essential-xaml-syntax-images/griddemo-large.png#lightbox "Layout griglia")
 
-Giudicare esclusivamente dalla sintassi, questi `Grid.Row`, `Grid.Column`, `Grid.RowSpan`, e `Grid.ColumnSpan` gli attributi vengono visualizzati come campi statici o le proprietà di `Grid`, ma è interessante, `Grid` non definisce alcun elemento denominato `Row`, `Column`, `RowSpan`, o `ColumnSpan`.
+A giudicare esclusivamente dalla sintassi, questi `Grid.Row`, `Grid.Column`, `Grid.RowSpan`, e `Grid.ColumnSpan` gli attributi sembrano essere di proprietà o campi statici `Grid`, ma è interessante, `Grid` non definisce un valore denominato `Row`, `Column`, `RowSpan`, o `ColumnSpan`.
 
-In alternativa, `Grid` definisce quattro proprietà associabile denominata `RowProperty`, `ColumnProperty`, `RowSpanProperty`, e `ColumnSpanProperty`. Questi sono tipi speciali di proprietà associabile, noto come *le proprietà associate*. Vengono definiti dal `Grid` classe ma impostare negli elementi figlio del `Grid`.
+Al contrario, `Grid` definisce quattro proprietà associabile denominata `RowProperty`, `ColumnProperty`, `RowSpanProperty`, e `ColumnSpanProperty`. Questi sono tipi speciali di proprietà associabili noto come *le proprietà associate*. Sono definiti dal `Grid` classe ma impostato nell'elemento figlio del `Grid`.
 
-Quando si desidera utilizzare queste proprietà nel codice, associate il `Grid` classe fornisce metodi statici denominati `SetRow`, `GetColumn`e così via. Ma in XAML, le proprietà associate vengono impostate come attributi in elementi figlio del `Grid` utilizzando nomi di proprietà semplici.
+Quando si vuole usare queste proprietà nel codice, associate le `Grid` classe fornisce metodi statici denominati `SetRow`, `GetColumn`e così via. Ma in XAML, tali proprietà vengono impostate come attributi in elementi figlio del `Grid` usando nomi di proprietà semplici.
 
-Le proprietà associate sono sempre riconoscibile nei file XAML come attributi che contiene una classe sia un nome di proprietà separati da un punto. Vengono chiamati *le proprietà associate* perché vengono definiti da una classe (in questo caso, `Grid`) ma collegato ad altri oggetti (in questo caso, i figli la `Grid`). Durante il layout di `Grid` può interrogare i valori di queste proprietà associate per conoscere la posizione di ogni elemento figlio.
+Le proprietà associate sono sempre riconoscibile nei file XAML come attributi che contiene una classe sia un nome di proprietà separati da un punto. Vengono chiamati *le proprietà associate* perché sono definiti da una classe (in questo caso `Grid`) ma collegato ad altri oggetti (in questo caso, gli elementi figlio del `Grid`). Durante il layout, il `Grid` può interrogare i valori di queste proprietà associate a sapere dove posizionare ogni elemento figlio.
 
-Il `AbsoluteLayout` classe definisce le proprietà associate due denominate `LayoutBounds` e `LayoutFlags`. Ecco un motivo a scacchi realizzato tramite il posizionamento proporzionale e funzionalità di ridimensionamento di `AbsoluteLayout`:
+Il `AbsoluteLayout` classe definisce due proprietà associata denominata `LayoutBounds` e `LayoutFlags`. Ecco un motivo a scacchi realizzato con il posizionamento proporzionale e le funzionalità di ridimensionamento di `AbsoluteLayout`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -308,19 +308,19 @@ Il `AbsoluteLayout` classe definisce le proprietà associate due denominate `Lay
 </ContentPage>
 ```
 
-E in questo caso è:
+Ed è qui:
 
 [![](essential-xaml-syntax-images/absolutedemo-large.png "Layout assoluto")](essential-xaml-syntax-images/absolutedemo-large.png#lightbox "Layout assoluto")
 
-Per simile al seguente, si potrebbero domanda le conoscenze della tramite XAML. Ovviamente la ripetizione e regolarità del `LayoutBounds` rettangolo suggerisce potrebbe essere realizzato meglio in codice.
+Per codice simile al seguente, si potrebbero mettere in dubbio le conoscenze dell'uso di XAML. Certamente, la ripetizione e sistematicità del `LayoutBounds` rettangolo suggerisce potrà essere realizzato meglio in codice.
 
-È certamente un problema legittimo e nessun problema con bilanciamento del carico l'uso di codice e markup, quando si definiscono le interfacce utente. È facile definire alcuni degli oggetti visivi in XAML e quindi utilizzare il costruttore del file code-behind per aggiungere alcune più oggetti visivi che potrebbero essere meglio generati nei cicli.
+Si tratta di un problema legittimo e non determina alcun problema con bilanciamento del carico l'uso di codice e markup durante la definizione delle interfacce utente. È facile definire alcuni degli oggetti visivi in XAML e quindi usare il costruttore del file code-behind per aggiungere alcuni altri oggetti visivi che potrebbero essere generati meglio nei cicli.
 
 ## <a name="content-properties"></a>Proprietà di contenuto
 
-Negli esempi precedenti, il `StackLayout`, `Grid`, e `AbsoluteLayout` oggetti vengono impostati il `Content` proprietà del `ContentPage`, e gli elementi figlio di questi layout sono elementi effettivamente il `Children` insieme. Ma queste `Content` e `Children` non sono nel file XAML.
+Negli esempi precedenti, il `StackLayout`, `Grid`, e `AbsoluteLayout` gli oggetti vengono impostati il `Content` proprietà del `ContentPage`, e gli elementi figlio di questi layout sono effettivamente gli elementi nel `Children` raccolta. Ma questi `Content` e `Children` proprietà sono disponibile una destinazione nel file XAML.
 
-È certamente possibile includere il `Content` e `Children` proprietà come elementi di proprietà, ad esempio nel **XamlPlusCode** esempio:
+È certamente possibile includere il `Content` e `Children` delle proprietà come elementi di proprietà, ad esempio nel **XamlPlusCode** esempio:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -349,31 +349,31 @@ Negli esempi precedenti, il `StackLayout`, `Grid`, e `AbsoluteLayout` oggetti ve
 </ContentPage>
 ```
 
-La domanda reale è: perché sono questi elementi proprietà *non* necessarie nel file XAML?
+La domanda reale è: perché sono questi elementi property *non* obbligatorio nel file XAML?
 
-Gli elementi definiti in xamarin. Forms per l'utilizzo in XAML possono avere una proprietà contrassegnata nel `ContentProperty` attributo della classe. Se ricerca la `ContentPage` classe xamarin. Forms nella documentazione in linea, verrà visualizzato questo attributo:
+Gli elementi definiti in xamarin. Forms per l'utilizzo in XAML possono avere una proprietà contrassegnata nella `ContentProperty` attributo della classe. Se cerca di `ContentPage` classe nella documentazione online di xamarin. Forms, si noterà questo attributo:
 
 ```csharp
 [Xamarin.Forms.ContentProperty("Content")]
 public class ContentPage : TemplatedPage
 ```
 
-Ciò significa che il `Content` i tag di elemento di proprietà non sono obbligatori. Qualsiasi contenuto XML che viene visualizzato tra l'inizio e fine `ContentPage` tag si presuppone che per è possibile assegnare il `Content` proprietà.
+Ciò significa che il `Content` i tag di elemento di proprietà non sono necessari. Qualsiasi contenuto XML visualizzato tra l'inizio e fine `ContentPage` si presuppone che i tag per è possibile assegnare il `Content` proprietà.
 
- `StackLayout`, `Grid`, `AbsoluteLayout`, e `RelativeLayout` derivano tutte dalla `Layout<View>`, e se la ricerca di `Layout<T>` nella documentazione di xamarin. Forms, si noterà un altro `ContentProperty` attributo:
+ `StackLayout`, `Grid`, `AbsoluteLayout`, e `RelativeLayout` derivano tutte dalla `Layout<View>`, e se è cercare `Layout<T>` nella documentazione di xamarin. Forms, si noterà un altro `ContentProperty` attributo:
 
 ```csharp
 [Xamarin.Forms.ContentProperty("Children")]
 public abstract class Layout<T> : Layout ...
 ```
 
-Che consente contenuto del layout di aggiungere automaticamente il `Children` insieme senza esplicita `Children` tag di elemento di proprietà.
+Che consente il contenuto del layout di essere automaticamente aggiunti per il `Children` insieme senza esplicita `Children` i tag di elemento di proprietà.
 
-Altre classi hanno `ContentProperty` le definizioni di attributo. Ad esempio, la proprietà content del `Label` è `Text`. Controllare la documentazione dell'API di altri utenti.
+Altre classi dispongono inoltre `ContentProperty` definizioni dell'attributo. Ad esempio, la proprietà content del `Label` è `Text`. Controllare la documentazione dell'API per altri utenti.
 
-## <a name="platform-differences-with-onplatform"></a>Differenze di piattaforma con OnPlatform
+## <a name="platform-differences-with-onplatform"></a>Differenze tra le piattaforme con OnPlatform
 
-In applicazioni a pagina singola, è comune per impostare il `Padding` proprietà nella pagina per evitare di sovrascrivere la barra di stato di iOS. Nel codice, è possibile utilizzare il `Device.RuntimePlatform` proprietà per questo scopo:
+Nelle applicazioni a pagina singola, è comune per impostare il `Padding` proprietà nella pagina per evitare di sovrascrivere la barra di stato iOS. Nel codice, è possibile usare il `Device.RuntimePlatform` proprietà per questo scopo:
 
 ```csharp
 if (Device.RuntimePlatform == Device.iOS)
@@ -382,7 +382,7 @@ if (Device.RuntimePlatform == Device.iOS)
 }
 ```
 
-È inoltre possibile eseguire un comportamento simile in XAML tramite il `OnPlatform` e `On` classi. Per prima cosa includere elementi di proprietà per il `Padding` proprietà nella parte superiore della pagina:
+È anche possibile eseguire un'operazione simile in XAML usando il `OnPlatform` e `On` classi. Prima di tutto includere gli elementi di proprietà per il `Padding` proprietà nella parte superiore della pagina:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -396,7 +396,7 @@ if (Device.RuntimePlatform == Device.iOS)
 </ContentPage>
 ```
 
-All'interno di tali tag, includere un `OnPlatform` tag. `OnPlatform` è una classe generica. È necessario specificare l'argomento di tipo generico, in questo caso, `Thickness`, ovvero il tipo di `Padding` proprietà. Fortunatamente, è un attributo XAML in modo specifico per definire argomenti generici chiamati `x:TypeArguments`. Questo deve corrispondere al tipo della proprietà a cui che si sta impostando:
+All'interno di questi tag includono un `OnPlatform` tag. `OnPlatform` è una classe generica. È necessario specificare l'argomento tipo generico, in questo caso `Thickness`, ovvero il tipo di `Padding` proprietà. Fortunatamente, è un attributo XAML in modo specifico per definire argomenti generici chiamati `x:TypeArguments`. Questo deve corrispondere al tipo della proprietà che si imposta:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -412,7 +412,7 @@ All'interno di tali tag, includere un `OnPlatform` tag. `OnPlatform` è una clas
 </ContentPage>
 ```
 
-`OnPlatform` contiene una proprietà denominata `Platforms` vale a dire un `IList` di `On` oggetti. Utilizzare il tag di elemento di proprietà per la proprietà:
+`OnPlatform` include una proprietà denominata `Platforms` vale a dire un' `IList` di `On` oggetti. Usare i tag di elemento di proprietà per la proprietà:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -430,7 +430,7 @@ All'interno di tali tag, includere un `OnPlatform` tag. `OnPlatform` è una clas
 </ContentPage>
 ```
 
-A questo punto aggiungere `On` elementi. Per ognuno di essi impostato il `Platform` proprietà e il `Value` proprietà al markup per il `Thickness` proprietà:
+A questo punto aggiungere `On` elementi. Per ciascuna di esse impostata la `Platform` proprietà e il `Value` proprietà di markup per il `Thickness` proprietà:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -450,7 +450,7 @@ A questo punto aggiungere `On` elementi. Per ognuno di essi impostato il `Platfo
 </ContentPage>
 ```
 
-Questo codice può essere semplificato. La proprietà content del `OnPlatform` è `Platforms`, pertanto è possibile rimuovere i tag di elemento di proprietà:
+Questo markup può essere semplificato. La proprietà content del `OnPlatform` è `Platforms`, in modo che i tag di elemento di proprietà possono essere rimossi:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -468,7 +468,7 @@ Questo codice può essere semplificato. La proprietà content del `OnPlatform` �
 </ContentPage>
 ```
 
-Il `Platform` proprietà di `On` è di tipo `IList<string>`, pertanto se i valori sono uguali, è possibile includere più piattaforme:
+Il `Platform` proprietà di `On` JE typu `IList<string>`, pertanto se i valori sono uguali, è possibile includere più piattaforme:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -485,7 +485,7 @@ Il `Platform` proprietà di `On` è di tipo `IList<string>`, pertanto se i valor
 </ContentPage>
 ```
 
-Android e UWP sono impostate sul valore predefinito di `Padding`, che può essere rimosso tag:
+Poiché Android e UWP sono impostate sul valore predefinito di `Padding`, che può essere rimosso tag:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -501,7 +501,7 @@ Android e UWP sono impostate sul valore predefinito di `Padding`, che può esser
 </ContentPage>
 ```
 
-Questo è il modo standard per impostare un dipendente dalla piattaforma `Padding` proprietà in XAML. Se il `Value` impostazione non può essere rappresentata da un'unica stringa, è possibile definire elementi di proprietà per tale:
+Questo è il modo standard per impostare un dipendente dalla piattaforma `Padding` proprietà in XAML. Se il `Value` impostazione non può essere rappresentata da un'unica stringa, è possibile definire gli elementi di proprietà per tale:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -523,7 +523,7 @@ Questo è il modo standard per impostare un dipendente dalla piattaforma `Paddin
 
 ## <a name="summary"></a>Riepilogo
 
-Con gli elementi di proprietà e le proprietà associate, gran parte della sintassi XAML base è stata stabilita. Tuttavia, talvolta è necessario impostare le proprietà per oggetti in un modo indiretto, ad esempio, da un dizionario risorse. Questo approccio viene descritta nella sezione successiva, parte [3. Le estensioni di Markup XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md).
+Con gli elementi di proprietà e le proprietà associate, gran parte della sintassi XAML di base è stata stabilita. Tuttavia, talvolta è necessario impostare le proprietà agli oggetti in modo indiretto, ad esempio, da un dizionario risorse. Questo approccio è descritto nella prossima parte parte [3. Le estensioni di Markup XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md).
 
 
 
@@ -533,4 +533,4 @@ Con gli elementi di proprietà e le proprietà associate, gran parte della sinta
 - [Parte 1. Introduzione a XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Parte 3. Estensioni di markup XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Parte 4. Nozioni di base sul data binding](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-- [Parte 5. Da un'associazione dati a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [Parte 5. Da Data Binding a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)

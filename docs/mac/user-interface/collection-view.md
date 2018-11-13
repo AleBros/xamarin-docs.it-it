@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 05/24/2017
-ms.openlocfilehash: 904db0b97a8b21fd51722b70a63386a53e3f5347
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 82dd175222289676c3dacd80522c55e71ba12180
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104037"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526833"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Visualizzazioni raccolta in xamarin. Mac
 
 _Questo articolo descrive l'utilizzo con le visualizzazioni di raccolta in un'app xamarin. Mac. Viene descritto come creare e gestire le visualizzazioni raccolta in Xcode e Interface Builder e usare le loro a livello di codice._
 
-Quando si lavora con c# e .NET di un'app xamarin. Mac, lo sviluppatore ha accesso alla stessa visualizzazione di raccolta di AppKit controlla che uno sviluppatore che lavora in *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, lo sviluppatore Usa Xcode _Interface Builder_ per creare e gestire le visualizzazioni di raccolta.
+Quando si lavora con C# e .NET in un'app xamarin. Mac, lo sviluppatore ha accesso alla stessa visualizzazione raccolta AppKit controlla che gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, lo sviluppatore Usa Xcode _Interface Builder_ per creare e gestire le visualizzazioni di raccolta.
 
 Oggetto `NSCollectionView` viene visualizzata una griglia delle visualizzazioni secondarie organizzate mediante un `NSCollectionViewLayout`. Ogni visualizzazione secondaria nella griglia è rappresentato da un `NSCollectionViewItem` che gestisce il caricamento del contenuto della visualizzazione da un `.xib` file.
 

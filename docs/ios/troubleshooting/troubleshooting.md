@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 80f37e1753362ec0503b70e49a2206684c0fedb5
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
+ms.openlocfilehash: 4d887d5a57aa3a632bd2f6795052c5b38f66a75a
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "50675328"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527170"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Suggerimenti di risoluzione dei problemi per xamarin. IOS 
 
@@ -187,7 +187,7 @@ Ciò significa che si sta collegando una libreria statica compilata con codice t
 
 ## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System. ExecutionEngineException: Tentativo di Foo[]:System.Collections.Generic.ICollection'1.get_Count di metodo (wrapper gestito a codice gestito) (compilazione JIT)
 
-Il suffisso [] indica che è la libreria di classi o chiama un metodo su una matrice tramite una raccolta generica, ad esempio <> IEnumerable, <> ICollection o <> IList. In alternativa, è possibile forzare in modo esplicito il compilatore AOT per includere tale metodo chiamando il metodo manualmente e assicurandosi che viene eseguito questo codice prima della chiamata che ha attivato l'eccezione. In questo caso, è possibile scrivere:
+Il suffisso [] indica che è la libreria di classi o chiama un metodo su una matrice tramite una raccolta generica, ad esempio <> IEnumerable, <> ICollection o <> IList. In alternativa, è possibile forzare in modo esplicito al compilatore AOT di includere tale metodo chiamando il metodo manualmente e assicurandosi che viene eseguito questo codice prima della chiamata che ha attivato l'eccezione. In questo caso, è possibile scrivere:
 
 ```csharp
 Foo [] array = null;
@@ -354,11 +354,11 @@ Per risolvere questo problema, è necessario mantenere un riferimento al "action
 
 ## <a name="project-always-runs-in-the-ipad-simulator"></a>Progetto sempre viene eseguito nell'iPad simulatore
 
-Il programma di installazione di iPhone SDK 4.0 viene installato 2 SDK - SDK 3,2, per la creazione di App solo iPad e il SDK 4.0, usato per creare ospitarla iPhone e App universali. Inoltre, viene installato un simulatore 3.2, che simula soltanto un iPad, e un simulatore 4.0 che simula un iPhone o iPhone 4. Tutti gli SDK e simulatori meno recenti vengono rimossi.
+Il programma di installazione di iPhone SDK 4.0 viene installato 2 SDK - SDK 3,2, per la creazione di App solo iPad e il SDK 4.0, usato per creare App universali e iPhone. Inoltre, viene installato un simulatore 3.2, che simula soltanto un iPad, e un simulatore 4.0 che simula un iPhone o iPhone 4. Tutti gli SDK e simulatori meno recenti vengono rimossi.
 
 Visual Studio per le opzioni di compilazione Mac iPhone progetto includono un'impostazione per la versione del SDK che verrà usata nella creazione dell'app. Questa impostazione è disponibile nel **opzioni progetto -> Build -> iPhone compilazione**.
 
-I nuovi progetti in Visual Studio per Mac usano meno recente SDK installato come impostazione predefinita SDK e se il SDK specificato non esiste, verrà utilizzato il più vicino per compilare l'app è possibile trovare Visual Studio per Mac. Questa operazione è stata eseguita in modo che i progetti non sempre verrebbe requre il SDK più recente. Tuttavia, attualmente è nel SDK 3,2 da utilizzato - conseguente simulatore iPad in uso.
+I nuovi progetti in Visual Studio per Mac usano meno recente SDK installato come impostazione predefinita SDK e se il SDK specificato non esiste, verrà utilizzato il più vicino per compilare l'app è possibile trovare Visual Studio per Mac. Questa operazione è stata eseguita in modo che i progetti non richiede sempre il SDK più recente. Tuttavia, attualmente è nel SDK 3,2 da utilizzato - conseguente simulatore iPad in uso.
 
 Per risolvere questo problema usando il SDK 4.0, passare a **opzioni progetto -> Build -> iPhone compilazione**> e modificare il valore SDK su "4.0" usando la casella a discesa. Questa operazione è necessaria per ogni configurazione e la combinazione di piattaforma, accedere usando gli elenchi a discesa nella parte superiore del pannello.
 

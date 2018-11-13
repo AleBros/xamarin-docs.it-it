@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 7fde60d48c23bc48ce1602a0643a3af8ad492ec6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 015c1e315b6070777542a8f8c5871c00cf336b5c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104011"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527066"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Creazione di controlli personalizzati in xamarin. Mac
 
-Quando si usa c# e .NET in un'applicazione xamarin. Mac, è possibile utilizzare lo stesso utente consente di controllare che gli sviluppatori che lavorano *Objective-C*, *Swift* e *Xcode* viene . Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire i propri controlli utente (oppure crearle direttamente nel codice c#).
+Quando si lavora con C# e .NET in un'applicazione xamarin. Mac, è possibile utilizzare lo stesso account utente consente di controllare che gli sviluppatori che lavorano *Objective-C*, *Swift* e *Xcode*viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire i propri controlli utente (oppure crearle direttamente nel codice c#).
 
 Anche se macOS offre un'ampia gamma di controlli utente incorporati, potrebbero esserci di volte in cui è necessario creare un controllo personalizzato per fornire funzionalità fornita non out-of-the-box o in modo che corrisponda un tema dell'interfaccia utente personalizzato (ad esempio, un'interfaccia del gioco).
 
@@ -221,7 +221,7 @@ Esistono due modi di base che possiamo aggiungere input dell'utente per il contr
 
 #### <a name="handling-user-input-with-override-methods"></a>Gestione dell'Input dell'utente con i metodi di Override
 
-Gli oggetti da cui ereditare `NSControl` (o `NSView`) invece avere diversi l'override di metodi per la gestione mouse o i tasti di input. Per il controllo di esempio, si desidera invertire lo stato dell'opzione tra **sul** e **Off** quando l'utente fa clic sul controllo con il pulsante sinistro del mouse. Possiamo aggiungere quanto segue l'override di metodi per il `NSFliwSwitch` classe per gestire questa situazione:
+Gli oggetti da cui ereditare `NSControl` (o `NSView`) invece avere diversi l'override di metodi per la gestione mouse o i tasti di input. Per il controllo di esempio, si desidera invertire lo stato dell'opzione tra **sul** e **Off** quando l'utente fa clic sul controllo con il pulsante sinistro del mouse. Possiamo aggiungere quanto segue l'override di metodi per il `NSFlipSwitch` classe per gestire questa situazione:
 
 ```csharp
 #region Mouse Handling Methods
@@ -344,7 +344,7 @@ Con la vista personalizzata ancora selezionato, passare al **Identity Inspector*
 
 [![](custom-controls-images/custom04.png "Setting-classe della visualizzazione")](custom-controls-images/custom04.png#lightbox)
 
-Passare al **Assistente dell'Editor** e creare un **Outlet** per il controllo personalizzato (assicurandosi di eseguirne l'associazione nel `ViewControler.h` file e non il `.m` file):
+Passare al **Assistente dell'Editor** e creare un **Outlet** per il controllo personalizzato (assicurandosi di eseguirne l'associazione nel `ViewController.h` file e non il `.m` file):
 
 [![](custom-controls-images/custom05.png "Configurazione di un nuovo Negozio")](custom-controls-images/custom05.png#lightbox)
 

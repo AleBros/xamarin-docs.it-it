@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: b29820cb69702f7570e10a555ebe9e3e0824653f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 325f4e99e70f88ccf642253720f4229142a169ec
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104154"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526560"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Visualizzazione di un'immagine in xamarin. IOS
 
@@ -41,7 +41,7 @@ Per creare un nuovo set di immagini e aggiungervi immagini, eseguire le operazio
 3. Selezionare il nuovo set di immagini e verrà visualizzato l'editor:
 
     ![](displaying-an-image-images/imageset03.png "L'editor Set di immagini")
-4. A questo punto, trascinare nelle immagini per ognuno dei diversi dispositivi ed e le risoluzioni necessarie. 
+4. A questo punto, trascinare nelle immagini per ognuno dei diversi dispositivi e risoluzioni necessarie. 
 5. Fare doppio clic sul nuovo set di immagini **Name** nel **elenco Assets** modificarla: ![](displaying-an-image-images/imageset04.png "modifica il nome del nuovo set di immagini")
 
 Quando si usa un' **Set di immagini** in iOS Designer, è sufficiente selezionare il nome del set di nell'Editor di proprietà nell'elenco a discesa:
@@ -54,7 +54,7 @@ Quando si usa un' **Set di immagini** in iOS Designer, è sufficiente selezionar
 
     ![](displaying-an-image-images/asset5.png "Fare clic sul segno più pulsante")
 
-2. Selezionare **Aggiungi immagine insieme** e verrà visualizzato l'editor Set di immagini per il nuovo set di immagini. A questo punto, trascinare nelle immagini per ognuno dei diversi dispositivi ed e le risoluzioni necessarie. 
+2. Selezionare **Aggiungi immagine insieme** e verrà visualizzato l'editor Set di immagini per il nuovo set di immagini. A questo punto, trascinare nelle immagini per ognuno dei diversi dispositivi e risoluzioni necessarie. 
 
     ![](displaying-an-image-images/asset7.png "L'editor set di immagini")
 

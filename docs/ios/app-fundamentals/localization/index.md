@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
-ms.openlocfilehash: 0c52db61689dd640332fb1e02e2260dda08e4686
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 906489aa3947df24662cbbd0473333caccc032c7
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115926"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527261"
 ---
 # <a name="localization-in-xamarinios"></a>Localizzazione in xamarin. IOS
 
@@ -248,7 +248,7 @@ Fare riferimento a Apple [formattatori data](https://developer.apple.com/library
 
 iOS offre una serie di funzionalità per semplificare la creazione di App con riconoscimento da destra a sinistra:
 
-- Layout di uso automatico `leading` e `trailing` attributi per aligment controllo (che corrisponde a sinistra e destra per la lingua inglese, ma viene invertito per le lingue RTL).
+- Layout di uso automatico `leading` e `trailing` attributi per l'allineamento del controllo (che corrisponde a sinistra e destra per la lingua inglese, ma viene invertito per le lingue RTL).
   Il [ `UIStackView` ](~/ios/user-interface/controls/uistackview.md) controllo risulta particolarmente utile per disporre i controlli da tenere presenti da destra a sinistra.
 - Usare `TextAlignment = UITextAlignment.Natural` per l'allineamento del testo (che verrà lasciato per la maggior parte dei linguaggi, ma a destra per da destra a sinistra).
 - `UINavigationController` Capovolge il pulsante Indietro e scorrere rapidamente direzione viene invertita automaticamente.

@@ -7,12 +7,12 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
-ms.openlocfilehash: 6f7236a3650c04098edbef92f3d6ed620be501c3
-ms.sourcegitcommit: a635312ffec816ba357a92b66c8c5221c8d9044c
+ms.openlocfilehash: 747c04d028b4c4ee142de04abd118572c5bea781
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "39615392"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527105"
 ---
 # <a name="touch-manipulations"></a>Manipolazioni tramite tocco
 
@@ -229,7 +229,7 @@ public partial class BitmapScalingPage : ContentPage
                         if (!float.IsNaN(scaleX) && !float.IsInfinity(scaleX) &&
                             !float.IsNaN(scaleY) && !float.IsInfinity(scaleY))
                         {
-                            // If smething bad hasn't happened, calculate a scale and translation matrix
+                            // If something bad hasn't happened, calculate a scale and translation matrix
                             SKMatrix scaleMatrix = 
                                 SKMatrix.MakeScale(scaleX, scaleY, pivotPoint.X, pivotPoint.Y);
 
@@ -1060,7 +1060,7 @@ Il codice scorre la raccolta e visualizza l'accumulo delle bitmap dall'inizio de
 
 Un'operazione di ridimensionamento richiede in genere un movimento di zoom indietro usando due dita. Tuttavia, è possibile implementare la scalabilità con un singolo dito facendo in modo che il dito spostare gli angoli di una bitmap.
 
-Questa funzionalità viene illustrata la **singolo dito angolo scalabilità** pagina. Poiché in questo esempio utilizza un tipo leggermente diverso di ridimensionamento che che implementati nel `TouchManipulationManager` (classe), non usa tale classe o il `TouchManipulationBitmap` classe. È invece tutta la logica di tocco nel file code-behind. Questo è un po' più semplice per la logica superiore al normale perché tiene traccia di un solo dito alla volta e viene semplicemente ignorato qualsiasi dita secondarie che potrebbero essere toccare lo schermo.
+Questa funzionalità viene illustrata la **singolo dito angolo scalabilità** pagina. Poiché questo esempio Usa un tipo di scalabilità rispetto a un po' diverso che implementati nel `TouchManipulationManager` (classe), non usa tale classe o il `TouchManipulationBitmap` classe. È invece tutta la logica di tocco nel file code-behind. Questo è un po' più semplice per la logica superiore al normale perché tiene traccia di un solo dito alla volta e viene semplicemente ignorato qualsiasi dita secondarie che potrebbero essere toccare lo schermo.
 
 Il [ **SingleFingerCornerScale.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SingleFingerCornerScalePage.xaml) pagina Crea un'istanza il `SKCanvasView` classe e viene creato un `TouchEffect` oggetto per la gestione degli eventi tocco:
 

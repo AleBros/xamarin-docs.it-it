@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: 67bf38c11fd6e82e05b2a10704973ca10de03083
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d71c4f0f3221d06c22876329a5933273d8d6f92d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108652"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526767"
 ---
 # <a name="a-basic-recyclerview-example"></a>Un esempio di RecyclerView base
 
@@ -118,7 +118,7 @@ mRecyclerView.SetLayoutManager (mLayoutManager);
 
 Questo codice si trova nell'attività principale `OnCreate` (metodo). Il costruttore per la gestione di layout richiede un *contesto*, pertanto il `MainActivity` viene passato usando `this` come nell'esempio precedente.
 
-Invece di usare il predefind `LinearLayoutManager`, è possibile collegare un gestore di layout personalizzato che consente di visualizzare due `CardView` side-by-side, che implementa un effetto di animazione page-turning attraversare la raccolta di foto di elementi. Più avanti in questa Guida, si noterà un esempio di come modificare il layout mediante lo scambio in un gestore di layout diversi.
+Invece di usare l'oggetto predefinito `LinearLayoutManager`, è possibile collegare un gestore di layout personalizzato che consente di visualizzare due `CardView` side-by-side, che implementa un effetto di animazione page-turning attraversare la raccolta di foto di elementi. Più avanti in questa Guida, si noterà un esempio di come modificare il layout mediante lo scambio in un gestore di layout diversi.
 
 <a name="view-holder" />
 

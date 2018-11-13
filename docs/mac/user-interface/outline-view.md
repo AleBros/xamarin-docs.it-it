@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: a202dd32bcde5cf91cce3f597c9ea7c17f4adbcd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fd97dbbe102c5a755c4a8974cf1a952c0050ac7c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113575"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527183"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Visualizzazione della struttura in xamarin. Mac
 
 _Questo articolo descrive l'uso delle visualizzazioni struttura in un'applicazione xamarin. Mac. Descrive la creazione e gestire le visualizzazioni struttura in Xcode e Interface Builder e utilizzarli a livello di codice._
 
-Quando si usa c# e .NET in un'applicazione xamarin. Mac, è possibile utilizzare la stessa struttura vede che gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire le visualizzazioni di struttura (oppure crearle direttamente nel codice c#).
+Quando si lavora con C# e .NET in un'applicazione xamarin. Mac, è possibile utilizzare la stessa struttura vede che gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire le visualizzazioni di struttura (oppure crearle direttamente nel codice c#).
 
 Una visualizzazione della struttura è un tipo di tabella che consente all'utente di espandere o comprimere le righe di dati gerarchici. Ad esempio la visualizzazione di una tabella, una visualizzazione della struttura sono visualizzati i dati per un set di elementi correlati, le righe che rappresentano singoli elementi e le colonne che rappresentano gli attributi di tali elementi. A differenza di una visualizzazione tabella, gli elementi in una visualizzazione della struttura non sono in un elenco semplice, sono organizzati in una gerarchia, ad esempio file e cartelle su un disco rigido.
 

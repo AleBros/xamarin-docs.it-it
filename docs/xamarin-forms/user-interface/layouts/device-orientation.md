@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: a008b270d4ff670a03f18318186ca038c5c0348d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 881b465643b576f5d3f4fc8121c5a873087a876c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118877"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527335"
 ---
 # <a name="device-orientation"></a>Orientamento del dispositivo
 
@@ -96,7 +96,7 @@ Xamarin. Forms non offre tutti gli eventi nativi per inviare la notifica delle m
 > [!NOTE]
 > È un pacchetto NuGet esistente, gratuito per la ricezione di notifiche delle modifiche apportate orientamento nel codice condiviso. Vedere le [repository GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) per altre informazioni.
 
-In alternativa, è possibile eseguire l'override di [ `OnSizeAllocated` ](xref:Xamarin.Forms.Page.OnSizeAllocated*) metodo su un `Page`, inserimento di qualsiasi layout modificare qui la logica. Il `OnSizeAllocated` viene chiamato ogni volta che un `Page` viene allocata una nuova dimensione, cosa che accade whenver il dispositivo viene ruotato. Si noti che l'implementazione di base di `OnSizeAllocated` esegue funzioni layout importante, pertanto è importante chiamare l'implementazione di base nell'override:
+In alternativa, è possibile eseguire l'override di [ `OnSizeAllocated` ](xref:Xamarin.Forms.Page.OnSizeAllocated*) metodo su un `Page`, inserimento di qualsiasi layout modificare qui la logica. Il `OnSizeAllocated` viene chiamato ogni volta che un `Page` viene allocata una nuova dimensione, che si verifica ogni volta che il dispositivo viene ruotato. Si noti che l'implementazione di base di `OnSizeAllocated` esegue funzioni layout importante, pertanto è importante chiamare l'implementazione di base nell'override:
 
 ```csharp
 protected override void OnSizeAllocated(double width, double height)

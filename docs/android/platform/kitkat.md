@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b62943fce8a1137c3bde1c629cc4cee9b2b44f3f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b1ea26afff1477d762d106db004be82010a2d557
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103309"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527332"
 ---
 # <a name="kitkat-features"></a>Funzionalità KitKat
 
@@ -282,7 +282,7 @@ TransitionManager.Go (scene1, transition);
 
 ### <a name="translucent-ui"></a>Interfaccia utente semitrasparente
 
-KitKat consente un maggiore controllo sul tema dell'app con le barre di stato e la navigazione transclucent facoltativo. È possibile modificare la traslucidità di elementi dell'interfaccia utente di sistema nello stesso file XML utilizzato per definire il tema di Android. KitKat introduce le seguenti proprietà:
+KitKat consente un maggiore controllo sul tema dell'app con barre di stato e la navigazione semitrasparente facoltative. È possibile modificare la traslucidità di elementi dell'interfaccia utente di sistema nello stesso file XML utilizzato per definire il tema di Android. KitKat introduce le seguenti proprietà:
 
 -  `windowTranslucentStatus` -Se impostato su true, rende la barra di stato superiore semitrasparente.
 
@@ -322,7 +322,7 @@ La schermata seguente mostra il tema in precedenza con lo stato semitrasparente 
 
 Il Framework di accesso di archiviazione (SAF) è un nuovo modo per gli utenti di interagire con il contenuto archiviato, ad esempio immagini, video e documenti. Anziché presentare agli utenti con una finestra di dialogo per scegliere un'applicazione per gestire il contenuto, KitKat apre una nuova interfaccia utente che consente agli utenti di accedere ai propri dati in un'unica posizione di aggregazione. Dopo che il contenuto è stato scelto, l'utente verrà restituito all'applicazione che ha richiesto il contenuto e l'esperienza delle app continua come di consueto.
 
-Questa modifica richiede due azioni sul lato per gli sviluppatori: in primo luogo, le app che richiedono il contenuto da provider devono essere aggiornati a un nuovo modo di reqesting contenuto. Secondo, applicazioni che scrivono dati in un `ContentProvider` devono essere modificati per utilizzare il nuovo framework. Entrambi questi scenari dipendono dal nuovo [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
+Questa modifica richiede due azioni sul lato per gli sviluppatori: prima di tutto necessario aggiornare a un nuovo modo di contenuto che richiede le app che richiedono contenuto dal provider. Secondo, applicazioni che scrivono dati in un `ContentProvider` devono essere modificati per utilizzare il nuovo framework. Entrambi questi scenari dipendono dal nuovo [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
 API.
 
 #### <a name="documentsprovider"></a>DocumentsProvider
@@ -344,7 +344,7 @@ StartActivityForResult (intent, save_request_code);
 
 La chiamata a `StartActivityForResult` avvia la UI SAF, quale l'utente può quindi Sfoglia per scegliere un'immagine:
 
-[![Screenshot di esempio di un'app usando il Framework di accesso di archiviazione per la selezione di un'immagine](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
+[![Screenshot di esempio di un'app usando il Framework di accesso di archiviazione per l'esplorazione di un'immagine](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
 
 Dopo che l'utente ha scelto un'immagine `OnActivityResult` restituisce il `Android.Net.Uri` del file scelto. Esempio di codice seguente consente di visualizzare la selezione di immagini dell'utente:
 
@@ -424,10 +424,10 @@ Si noti che il caricamento e la stampa di contenuti web richiede l'autorizzazion
 In genere verrà visualizzata l'opzione stampa dell'attività [dal menu Opzioni](http://developer.android.com/guide/topics/ui/menus.html#options-menu).
 Il menu di opzioni consente agli utenti di eseguire azioni su un'attività. È in alto a destra della schermata e si presenta come segue:
 
-[![Screenshot di esempio dell'applicato all'intero elemento menu Stampa nell'angolo superiore destro dello schermo](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
+[![Screenshot di esempio di voce di menu Stampa visualizzata nell'angolo superiore destro dello schermo](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
 
 
-Voci di menu aggiuntive possono essere definite nel *dal menu*directory sotto *risorse*. Il codice seguente definisce un menu di esempio chiamato [stampa](https://developer.xamarin.com/api/type/Android.Print.PrintManager/):
+Altre voci di menu possono essere definite nel *dal menu*directory sotto *risorse*. Il codice seguente definisce un menu di esempio chiamato [stampa](https://developer.xamarin.com/api/type/Android.Print.PrintManager/):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -505,7 +505,7 @@ void PrintPage ()
 
 `Print` accetta come argomenti: un nome per il processo di stampa ("MyWebPage" in questo esempio), un [`PrintDocumentAdapter`](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/)
 che genera il documento di stampa dal contenuto, e [`PrintAttributes`](https://developer.xamarin.com/api/type/Android.Print.PrintAttributes/)
-(`null` nell'esempio precedente). È possibile specificare `PrintAttributes` per definire il layout del contenuto della pagina stampata, anche se gli attributi predefiniti devono gestire la maggior parte delle scenarions.
+(`null` nell'esempio precedente). È possibile specificare `PrintAttributes` per definire il layout del contenuto della pagina stampata, anche se gli attributi predefiniti devono gestire la maggior parte degli scenari.
 
 La chiamata a `Print` carica l'interfaccia utente di stampa, che elenca le opzioni per il processo di stampa. L'interfaccia utente offre agli utenti la possibilità di stampare o salvare il contenuto HTML in un file PDF, come illustrato schermate riportate di seguito:
 
@@ -547,7 +547,7 @@ Un servizio HCE deve anche essere registrati con il manifesto dell'applicazione 
 ```csharp
 [Service(Exported=true, Permission="android.permissions.BIND_NFC_SERVICE"),
     IntentFilter(new[] {"android.nfc.cardemulation.HOST_APDU_SERVICE"}),
-    MetaData("andorid.nfc.cardemulation.host.apdu_service",
+    MetaData("android.nfc.cardemulation.host.apdu_service",
     Resource="@xml/hceservice")]
 
 class HceService : HostApduService
@@ -599,7 +599,7 @@ Lo screenshot seguente illustra il contatore di passaggio in azione:
 
 [![Screenshot dell'app SensorsActivity la visualizzazione di un contatore di passaggio](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png#lightbox)
 
-È possibile creare un `SensorManager` chiamando `GetSystemService(SensorService)` e il cast del risultato come un `SensorManager`. Per usare il contatore di passaggio, chiamare `GetDeafultSensor` nella `SensorManager`. È possibile registrare il sensore e l'ascolto delle modifiche nel conteggio di passaggio con l'aiuto del [`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
+È possibile creare un `SensorManager` chiamando `GetSystemService(SensorService)` e il cast del risultato come un `SensorManager`. Per usare il contatore di passaggio, chiamare `GetDefaultSensor` nella `SensorManager`. È possibile registrare il sensore e l'ascolto delle modifiche nel conteggio di passaggio con l'aiuto del [`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
 interfaccia, come illustrato nell'esempio di codice riportato di seguito:
 
 ```csharp
@@ -689,7 +689,7 @@ Oltre alle modifiche descritte sopra, KitKat consente di:
 -  *Sospendere le animazioni* -sospendere e riprendere le animazioni create con il [`Animator`](https://developer.xamarin.com/api/type/Android.Animation.Animator/)
    .
 
--  *Testo in modo dinamico la modifica lettura* -indicano le parti dell'interfaccia utente che aggiorna in modo dinamico con il nuovo testo come "le aree dinamiche" con il nuovo [ `accesibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+-  *Testo in modo dinamico la modifica lettura* -indicano le parti dell'interfaccia utente che aggiorna in modo dinamico con il nuovo testo come "le aree dinamiche" con il nuovo [ `accessibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
    attributo in modo che leggerà il nuovo testo automaticamente in modalità di accesso facilitato.
 
 -  *Migliorare l'esperienza di Audio* -tiene traccia di rendere più alto con il [`LoudnessEnhancer`](https://developer.xamarin.com/api/type/Android.Media.Audiofx.LoudnessEnhancer/)
@@ -703,7 +703,7 @@ Oltre alle modifiche descritte sopra, KitKat consente di:
 -  *Controllo remoto* -KitKat con poche modifiche sul lato di hardware e software, consente di attivare un dispositivo dotato di un strumento di trasmissione di runtime di integrazione in un controllo remoto usando il `ConsumerIrService`e interagire con i dispositivi con il nuovo [`RemoteController`](https://developer.xamarin.com/api/type/Android.Media.RemoteController/)
    API.
 
-Per altre informazioni sulle modifiche API precedente, consultare il Google [API di Android 4.4](http://developer.android.com/about/versions/android-4.4.html) Panoramica.
+Per altre informazioni sulle modifiche API precedente, fare riferimento a Google [API di Android 4.4](http://developer.android.com/about/versions/android-4.4.html) Panoramica.
 
 
 ## <a name="summary"></a>Riepilogo

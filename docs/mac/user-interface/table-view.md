@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a8c55c8b4ff3fbd515aad8bf45c52a0b549af9f
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
-ms.translationtype: MT
+ms.openlocfilehash: 0d89fff81d1d13baa578068bcaef11dd5af00e14
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285599"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527053"
 ---
 # <a name="table-views-in-xamarinmac"></a>Visualizzazioni di tabelle in xamarin. Mac
 
 _Questo articolo descrive l'uso delle visualizzazioni tabella in un'applicazione xamarin. Mac. Descrive la creazione di viste di tabella in Xcode e Interface Builder e sull'interazione con essi nel codice._
 
-Quando si usa c# e .NET in un'applicazione xamarin. Mac, si ha accesso alla stessa tabella che visualizza gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire le visualizzazioni di tabella (oppure crearle direttamente nel codice c#).
+Quando si lavora con C# e .NET in un'applicazione xamarin. Mac, è possibile utilizzare la stessa tabella che visualizza gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire le visualizzazioni di tabella (oppure crearle direttamente nel codice c#).
 
 Visualizzazione di una tabella consente di visualizzare i dati in un formato tabulare che contiene uno o più colonne di informazioni in più righe. In base al tipo della visualizzazione di tabella viene creato, l'utente può ordinare per colonna, riorganizzare le colonne, aggiungere colonne, rimuovere le colonne o modificare i dati contenuti all'interno della tabella.
 

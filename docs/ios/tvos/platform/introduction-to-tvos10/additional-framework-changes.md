@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 8f7094cebf284f301e08faae8d94c99a73964d55
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4ca9856251d35a741d496b6e8b45b07e851e0e89
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114288"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528611"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>Modifiche di Framework aggiuntivi tvOS 10
 
@@ -85,7 +85,7 @@ I miglioramenti seguenti sono stato apportati a framework Foundation per tvOS 10
 
  - Usare le nuove [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) classe per rendere i calcoli degli intervalli di data e ora, ad esempio le durate, per il confronto di intervalli e i test per le intersezioni di intervallo.
  - Diverse nuove proprietà sono stati aggiunti per il [NSLocal](https://developer.apple.com/reference/foundation/nslocale) classe di acquisire informazioni locali e i formati di visualizzazione disponibile.
- - Usare le nuove [NSMeasuerment](https://developer.apple.com/reference/foundation/nsmeasurement) classe convertire tra diverse unità di misura (UDM) o eseguire calcoli sui valori di unità diversa.
+ - Usare le nuove [NSMeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) classe convertire tra diverse unità di misura (UDM) o eseguire calcoli sui valori di unità diversa.
  - Usare le nuove [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) classe per formattare le misurazioni localizzate per la visualizzazione all'utente finale.
  - Usare le nuove [NSUnit](https://developer.apple.com/reference/foundation/nsunit) e [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) classi per la rappresentazione di unità specifica.
 
@@ -182,7 +182,7 @@ I miglioramenti seguenti sono stato apportati a framework UIKit tvOS 10:
  - Il nuovo `UIGraphicsRender` classe fornisce un metodo di creazione di bitmap o file PDF da UIKit rendering o Core Graphics orientate a oggetti e sostituisce deprecate `UIGraphicsBeginImageContext` (metodo).
  - Il `UIUserInterfaceStyle` classe è stata aggiunta per determinare quali tema dell'interfaccia utente (chiaro o scuro) è attualmente attivo.
  - È stato aggiunto il nuovo supporto di animazione completamente interattive, basato su oggetti, interrompibili e van essere collegato a movimenti. Del pleas vedere Apple [UIViewAnimating Protocol Reference](https://developer.apple.com/reference/uikit/uiviewanimating), [riferimento alla classe UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [UITimingCurveProvider Protocol Reference](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [Riferimento alla classe UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) e [riferimento alla classe UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) per altre informazioni.
- - Il nuovo `UIPreviewInteraction` e `UIPreviewInteractionDelegate` consentire all'app di app fornire un'interfaccia personalizzata per le operazioni peek e pop.
+ - Il nuovo `UIPreviewInteraction` e `UIPreviewInteractionDelegate` consentire all'app fornire un'interfaccia personalizzata per le operazioni peek e pop.
  - Il nuovo `UIAccessibilityCustomRotor` classe consente all'app fornire funzionalità personalizzate e specifici del contesto di Assistive Technology, ad esempio VoiceOver.
  - Usare la `UIAccessibilityIsAssistiveTouchRunning` e `UIAccessibilityAssistiveTouchStatusDidChangeNotification` simboli per determinare se AssistiveTouch è abilitato.
  - Usare la `UIAccessibilityHearingDevicePairedEar` e `UIAccessibilityHearingDevicePairedEarDidChangeNotification` simboli per ottenere lo stato di qualsiasi abbinate accessori MFi problemi visivi.

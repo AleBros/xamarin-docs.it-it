@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: 4bbb217fa8a3192905d016763b961e182224aa67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c0f638afbf044a2e3e6f309839cb22137cf95912
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108769"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527014"
 ---
 # <a name="android-job-scheduler"></a>Utilità di pianificazione di processo Android
 
@@ -42,7 +42,7 @@ Il pianificatore di processi Android è un framework incorporato per il sistema 
 * Un `Android.App.Job.JobService` è una classe astratta che deve essere esteso con la logica che il processo verrà eseguito sul thread principale dell'applicazione. Ciò significa che il `JobService` riguarda il modo in cui il lavoro deve essere eseguita in modo asincrono.
 * Un `Android.App.Job.JobInfo` oggetto contiene i criteri di supporto Android quando si desidera eseguire il processo.
 
-Per pianificare il lavoro con l'utilità di pianificazione di processo Android, un'applicazione xamarin. Android è necessario incapsulare il codice in una classe che estende il `JobService` classe. `JobService` dispone di tre metodi del ciclo di vita che può essere chiamato nel corso della durata del processo:
+Per pianificare il lavoro con l'utilità di pianificazione di processo Android, un'applicazione xamarin. Android è necessario incapsulare il codice in una classe che estende il `JobService` classe. `JobService` ha tre metodi del ciclo di vita che possono essere chiamati nel corso della durata del processo:
 
 * **bool (parametri JobParameters) OnStartJob** &ndash; questo metodo viene chiamato dal `JobScheduler` per eseguire il lavoro e in esecuzione sul thread principale dell'applicazione. È responsabilità del `JobService` per eseguire in modo asincrono il lavoro e `true` se è presente lavoro rimanente, o `false` se il lavoro viene eseguito.
     
@@ -130,10 +130,10 @@ public static class JobSchedulerHelpers
     }
 }
 
-// Sample usage - creates a JobBuilder for a DownloadJob andsets the Job ID to 1.
+// Sample usage - creates a JobBuilder for a DownloadJob and sets the Job ID to 1.
 var jobBuilder = this.CreateJobBuilderUsingJobId<DownloadJob>(1);
 
-var jobInfo = jobBuilder.Build();  // creats a JobInfo object.
+var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 ```
 
 Una potente funzionalità dell'utilità di pianificazione di processo Android è la possibilità di controllare quando viene eseguito un processo o in quali condizioni di un processo possono essere eseguite. Nella tabella seguente vengono descritti alcuni dei metodi su `JobInfo.Builder` che consentire a un'app influenzare quando eseguire un processo:  
@@ -211,7 +211,7 @@ else
 
 ```csharp
 // Cancel all jobs
-jobSchduler.CancelAll(); 
+jobScheduler.CancelAll(); 
 
 // to cancel a job with jobID = 1
 jobScheduler.Cancel(1)

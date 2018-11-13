@@ -1,5 +1,5 @@
 ---
-title: Dispatcher di processo di firebase
+title: Firebase Job Dispatcher
 description: Questa guida illustra come pianificare l'attività in background usando la libreria di Firebase processo Dispatcher da Google.
 ms.prod: xamarin
 ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 4ae1fb71209f8116b17ee7e2cb44318ef790d831
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 91bafbbdaee805ad128766bf0a770cb711597a85
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116173"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526923"
 ---
-# <a name="firebase-job-dispatcher"></a>Dispatcher di processo di firebase
+# <a name="firebase-job-dispatcher"></a>Firebase Job Dispatcher
 
 _Questa guida illustra come pianificare l'attività in background usando la libreria di Firebase processo Dispatcher da Google._
 
@@ -44,9 +44,9 @@ Il Dispatcher processo Firebase è una libreria da Google che fornisce un'API fl
 * Oggetto `Firebase.JobDispatcher.RetryStrategy` contiene informazioni su ciò che deve essere eseguita quando un processo non riesce a garantire la corretta esecuzione. La strategia di ripetizione dei tentativi specifica quanto tempo di attesa prima di provare a eseguire nuovamente il processo. 
 * Oggetto `Firebase.JobDispatcher.Constraint` è un valore facoltativo che descrive una condizione che deve essere soddisfatti prima di poter eseguire il processo, ad esempio il dispositivo è in una rete unmetered e degli addebiti.
 * Il `Firebase.JobDispatcher.Job` è un'API che unifica le API precedenti a un'unità di lavoro che può essere pianificata dal `JobDispatcher`. Il `Job.Builder` classe viene utilizzata per creare un'istanza di un `Job`.
-* Oggetto `Firebasee.JobDispatcher.JobDispatcher` Usa le API di tre precedente per pianificare il lavoro con il sistema operativo e per fornire un modo per annullare i processi, se necessario.
+* Oggetto `Firebase.JobDispatcher.JobDispatcher` Usa le API di tre precedente per pianificare il lavoro con il sistema operativo e per fornire un modo per annullare i processi, se necessario.
 
-Per pianificare il lavoro con il Dispatcher processo Firebase, un'applicazione xamarin. Android è necessario incapsulare il codice in un tipo che estende il `JobService` classe. `JobService` dispone di tre metodi del ciclo di vita che può essere chiamato nel corso della durata del processo:
+Per pianificare il lavoro con il Dispatcher processo Firebase, un'applicazione xamarin. Android è necessario incapsulare il codice in un tipo che estende il `JobService` classe. `JobService` ha tre metodi del ciclo di vita che possono essere chiamati nel corso della durata del processo:
 
 * **`bool OnStartJob(IJobParameters parameters)`** &ndash; Questo metodo è dove il lavoro verrà eseguito e deve sempre essere implementato. Viene eseguito sul thread principale. Questo metodo restituirà `true` se è presente lavoro rimanente, o `false` se il lavoro viene eseguito. 
 * **`bool OnStopJob(IJobParameters parameters)`** &ndash; Viene chiamato quando il processo è stato arrestato per ragioni. Il metodo deve restituire `true` se il processo dovrebbe essere riprogrammato per un uso successivo.
@@ -177,7 +177,7 @@ Ognuno di questi argomenti verrà discusso più nelle sezioni seguenti.
 
 <a name="Passing_Parameters_to_a_Job" />
 
-#### <a name="passing-jarameters-to-a-job"></a>Jarameters passando a un processo
+#### <a name="passing-parameters-to-a-job"></a>Passaggio di parametri a un processo
 
 I parametri vengono passati a un processo tramite la creazione di un `Bundle` che viene passato con la `Job.Builder.SetExtras` metodo:
 
@@ -252,7 +252,7 @@ I due tipi di criteri di ripetizione dei tentativi sono identificabili tramite q
 È possibile definire una classe personalizzata `RetryStrategy` con il `FirebaseJobDispatcher.NewRetryStrategy` (metodo). Accetta tre parametri:
 
 1. `int policy` &ndash; Il _criterio_ è uno dei precedenti `RetryStrategy` valori `RetryStrategy.RetryPolicyLinear`, o `RetryStrategy.RetryPolicyExponential`.
-2. `int intialBackoffSeconds` &ndash; Il _backoff iniziale_ un ritardo, in secondi, che è necessario prima di provare a eseguire nuovamente il processo. Il valore predefinito è 30 secondi. 
+2. `int initialBackoffSeconds` &ndash; Il _backoff iniziale_ un ritardo, in secondi, che è necessario prima di provare a eseguire nuovamente il processo. Il valore predefinito è 30 secondi. 
 3. `int maximumBackoffSeconds` &ndash; Il _backoff massimo_ valore dichiara il numero massimo di secondi di ritardo prima di provare a eseguire nuovamente il processo. Il valore predefinito è 3600 secondi. 
 
 ```csharp

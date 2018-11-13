@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 2d129c72366224cedca26df6fa1499f65d04e92d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ec907e71074a97bd5d1714e79dd504013f5c8a4b
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106975"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526975"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows in xamarin. Mac
 
 _Questo articolo descrive l'uso delle finestre e pannelli in un'applicazione xamarin. Mac. Descrive la creazione di windows e pannelli in Xcode e Interface Builder, caricarli dai file con estensione xib e storyboard e utilizzarli a livello di codice._
 
-Quando si usa c# e .NET in un'applicazione xamarin. Mac, si ha accesso a Windows la stessa e i pannelli che uno sviluppatore che lavora in *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire i pannelli e Windows (oppure crearle direttamente nel codice c#).
+Quando si lavora con C# e .NET in un'applicazione xamarin. Mac, si ha accesso a Windows la stessa e i pannelli che gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire i pannelli e Windows (oppure crearle direttamente nel codice c#).
 
 Base il suo scopo, un'applicazione xamarin. Mac può presentare uno o più Windows nella schermata per la gestione e coordinano le informazioni viene visualizzata e funziona con. Le funzioni dell'entità di una finestra sono:
 
@@ -284,7 +284,7 @@ Ad esempio:
 MyWindow.PerformClose(this);
 ```
 
-Tenterebbe di chiudere il `MyWindow` `NSWindow` istanza. Se eseguita correttamente, la finestra verrà chiusa, altrimenti il segnale acustico di avviso verrà generato e l'ha resterà aperta.
+Tenterebbe di chiudere il `MyWindow` `NSWindow` istanza. Se eseguita correttamente, la finestra verrà chiusa, altrimenti verrà generato il segnale acustico di avviso e l'ha rimangono aperti.
 
 <a name="Close" />
 
@@ -377,7 +377,7 @@ namespace SourceWriter
                 alert.AddButton ("Cancel");
                 var result = alert.RunSheetModal (Window);
 
-                // Take action based on resu;t
+                // Take action based on result
                 switch (result) {
                 case 1000:
                     // Grab controller
@@ -758,7 +758,7 @@ Per aggiungere un nuovo pannello, eseguire le operazioni seguenti:
 3. Immettere `DocumentPanel` in **Nome** e fare clic sul pulsante **Nuovo**.
 4. Fare doppio clic il `DocumentPanel.xib` file per aprirlo e modificarlo in Interface Builder: 
 
-    [![](window-images/new02.png "Modifica il pannel")](window-images/new02.png#lightbox)
+    [![](window-images/new02.png "Il pannello di modifica")](window-images/new02.png#lightbox)
 5. Eliminare la finestra esistente e trascinare un pannello dal **Library Inspector** nel **Interface Editor**: 
 
     [![](window-images/panels01.png "L'eliminazione di finestra esistente")](window-images/panels01.png#lightbox)

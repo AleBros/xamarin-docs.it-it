@@ -4,15 +4,15 @@ description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepil
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: d863ce1c6195ddaef164c3a15817a4ff87a3c332
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: ac4dd8ffc0ce407aeb9dbc36fe705a809a9c4058
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156626"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563596"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Riepilogo del capitolo 13. Bitmap
 

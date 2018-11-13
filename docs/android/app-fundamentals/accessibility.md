@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 4eb4a97a346f3906c925dc9e324ed9378af0b560
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3cce3270b9df2aad0037b1ab96f169cc4b564766
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116186"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528130"
 ---
 # <a name="accessibility-on-android"></a>Accessibilità in Android
 
@@ -74,7 +74,7 @@ Per associare un'etichetta a un controllo input di dati, usare il `LabelFor` pro
 
 **C#**
 
-In C#, impostare la `LabelFor` vengono descritti proprietà per l'ID risorsa del controllo questo è il contenuto (in genere questa proprietà è impostata su un'etichetta e fa riferimento a un altro controllo di input):
+In C#, impostare la `LabelFor` proprietà per l'ID risorsa del controllo che descrive il contenuto (in genere questa proprietà è impostata su un'etichetta e fa riferimento a un altro controllo di input):
 
 ```csharp
 EditText edit = FindViewById<EditText> (Resource.Id.editFirstName);

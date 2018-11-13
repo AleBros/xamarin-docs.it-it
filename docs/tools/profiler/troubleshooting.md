@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: lobrien
 ms.author: laobri
 ms.date: 10/27/2017
-ms.openlocfilehash: 34406ce8d4276ba36ab2ddd49e73681ff2fef773
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9b4da5b6dfe3f0254340d9175b08198bd52a45a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103751"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563342"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin Profiler risoluzione dei problemi
 
@@ -79,7 +79,7 @@ In genere è dovuto all'impossibilità di avviare il simulatore / emulatore. Pro
 
 #### <a name="to-watch-a-specific-thread"></a>Per guardare un thread specifico
 
-Se si dispone di un thread che si vuole controllare in particolare, l'ideale sarebbe per denominare il thread in corrispondenza di inizio molto della sua creazione in modo da ottenere get `ThreadName` invece di `0x0`. Ad esempio per impostare il nome del thread come interfaccia utente, è possibile usare il codice seguente:
+Se si dispone di un thread che si vuole controllare in particolare, l'ideale sarebbe per denominare il thread all'inizio della creazione per ottenere `ThreadName` invece di `0x0`. Ad esempio per impostare il nome del thread come `UI`, è possibile usare il codice seguente:
 
 ```csharp
 RunOnUiThread (() => {

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/04/2018
-ms.openlocfilehash: 420fabf7b1f4c5bf4cacdeaf10823ae3233f5bd0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c0adee0dae1135bdfd076082e85a471db1cd1ecf
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113235"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528559"
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Servizi associati in xamarin. Android
 
@@ -234,7 +234,7 @@ Per usare un servizio associato, è necessario creare un client (ad esempio, un'
 
 * **Un' `Intent`**  &ndash; l'intento deve identificare in modo esplicito quali servizio a cui connettersi.
 * **Un' `IServiceConnection` oggetti** &ndash; questo oggetto è un intermediario che fornisce i metodi di callback per notificare al client quando il servizio associato viene avviato e arrestato.
-* **[`Android.Content.Bind`](https://developer.xamarin.com/api/type/Android.Content.Bind/) enum** &ndash; questo parametro è un set di flag vengono utilizzate dal sistema per l'associazione quando l'oggetto. È il valore più diffuso [ `Bind.AutoCreate` ](https://developer.xamarin.com/api/field/Android.Content.Bind.AutoCreate/), che avvierà automaticamente il servizio se non è già in esecuzione.
+* **[`Android.Content.Bind`](https://developer.xamarin.com/api/type/Android.Content.Bind/) enum** &ndash; questo parametro è un set di flag usati dal sistema quando associare l'oggetto. È il valore più diffuso [ `Bind.AutoCreate` ](https://developer.xamarin.com/api/field/Android.Content.Bind.AutoCreate/), che avvierà automaticamente il servizio se non è già in esecuzione.
 
 Il frammento di codice seguente è un esempio di come avviare un servizio associato in un'attività tramite un intent esplicito:
 

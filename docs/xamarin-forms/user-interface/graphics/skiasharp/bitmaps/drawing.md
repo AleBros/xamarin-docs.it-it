@@ -7,12 +7,12 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: acdee7d34f913b125887f021dab39220c9560191
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a4fbf2bc38726ad50a07744ed4c2512efbb615bc
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109237"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527248"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Creazione e disegno nella bitmap di SkiaSharp
 
@@ -494,7 +494,7 @@ La bitmap ruotata è sufficiente a includere l'intera bitmap originale, ma non s
 
 Un'altra operazione comunemente eseguita su bitmap viene chiamata _capovolgimento_. Concettualmente, la bitmap viene ruotata in tre dimensioni intorno a un asse verticale o asse orizzontale tramite il centro della bitmap. Capovolgimento verticale viene creata un'immagine speculare.
 
-Il **Bitmap Flipper** pagina il **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** seguito dell'applicazione viene questi processi. Il file XAML contiene una `SKCanvasView` e due pulsanti per capovolgere verticalmente e orizzontalmente:
+Il **Bitmap Flipper** pagina il **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** applicazione illustra questi processi. Il file XAML contiene una `SKCanvasView` e due pulsanti per capovolgere verticalmente e orizzontalmente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

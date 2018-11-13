@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 8c176944d1bec4850f084043fdab81b5c2d51ceb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.openlocfilehash: 0c95e4bcecb2ae787714b8ac6973646caada1b3e
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105207"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528858"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Finestre di dialogo in xamarin. Mac
 
-Quando si usa c# e .NET in un'applicazione xamarin. Mac, si ha accesso allo stesso modale di Windows e le finestre di dialogo che gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire il Windows modale (oppure crearle direttamente nel codice c#).
+Quando si lavora con C# e .NET in un'applicazione xamarin. Mac, è possibile utilizzare le stesse finestre di dialogo e modale di Windows che gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire il Windows modale (oppure crearle direttamente nel codice c#).
 
 Una finestra di dialogo viene visualizzata in risposta a un'azione dell'utente e in genere fornisce agli utenti di modi possano completare l'azione. Una finestra di dialogo richiede una risposta da parte dell'utente prima di chiuderla.
 

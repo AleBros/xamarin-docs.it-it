@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: e3cfc9a345c8ab92b35ad428b550ec42de6312e5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bc7da76084075b03ca346949b7bb764ae1313c2a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120294"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563511"
 ---
 # <a name="location-services"></a>Servizi di posizione
 
@@ -190,7 +190,7 @@ Questo metodo accetta due parametri:
 
 Per notificare a un'applicazione xamarin. Android di un aggiornamento del percorso, il provider di posizione congiunta richiamerà il `LocationCallBack.OnLocationResult(LocationResult result)`. Il `Android.Gms.Location.LocationResult` parametro conterrà le informazioni sul percorso di aggiornamento.
 
-Quando il provider di posizione congiunta rileva una modifica la disponibilità di dati sulla località, verrà chiamato il `LocationProvider.OnLocationAvaibility(LocationAvailability
+Quando il provider di posizione congiunta rileva una modifica la disponibilità di dati sulla località, verrà chiamato il `LocationProvider.OnLocationAvailability(LocationAvailability
 locationAvailability)` (metodo). Se il `LocationAvailability.IsLocationAvailable` proprietà restituisce `true`, quindi è possibile presupporre che i risultati di posizione del dispositivo è segnalato dalla `OnLocationResult` come accurate e sempre aggiornati in base alle esigenze di `LocationRequest`. Se `IsLocationAvailable` è false, nessun risultato percorso verrà utilizzato come restituito dallo strumento `OnLocationResult`.
 
 Questo frammento di codice è un esempio di implementazione del `LocationCallback` oggetto:
@@ -253,9 +253,9 @@ LocationManager locationManager = (LocationManager) GetSystemService(Context.Loc
 
 ### <a name="request-location-updates-from-the-locationmanager"></a>Aggiornamenti di percorso di richiesta dal LocationManager
 
-Una volta che l'applicazione contiene un riferimento al `LocationManager`, deve indicare il `LocationManager` sul tipo di informazioni di percorso che sono necessari e con quale frequenza sono necessario aggiornare tali informazioni. Eseguire questa operazione chiamando `RequestionLocationUpdates` nella `LocationManager` oggetto e passando ad alcuni criteri per gli aggiornamenti e un callback che riceverà gli aggiornamenti di percorso. Questo callback è un tipo che deve implementare il `ILocationListener` interfaccia (descritto in dettaglio più avanti in questa Guida).
+Una volta che l'applicazione contiene un riferimento al `LocationManager`, deve indicare il `LocationManager` sul tipo di informazioni di percorso che sono necessari e con quale frequenza sono necessario aggiornare tali informazioni. Eseguire questa operazione chiamando `RequestLocationUpdates` nella `LocationManager` oggetto e passando ad alcuni criteri per gli aggiornamenti e un callback che riceverà gli aggiornamenti di percorso. Questo callback è un tipo che deve implementare il `ILocationListener` interfaccia (descritto in dettaglio più avanti in questa Guida).
 
-Il `RequestionLocationUpdates` metodo indica il percorso di sistema del servizio che l'applicazione desidera iniziare a ricevere aggiornamenti della posizione. Questo metodo consente di specificare il provider, nonché le soglie di tempo e la distanza per controllare la frequenza di aggiornamento. Ad esempio, aggiorna il metodo seguente sotto la posizione delle richieste dal provider di posizione GPS ogni 2000 millisecondi, e solo quando il percorso viene modificato più di 1 metro:
+Il `RequestLocationUpdates` metodo indica il percorso di sistema del servizio che l'applicazione desidera iniziare a ricevere aggiornamenti della posizione. Questo metodo consente di specificare il provider, nonché le soglie di tempo e la distanza per controllare la frequenza di aggiornamento. Ad esempio, il metodo riportato di seguito richiede posizione gli aggiornamenti dal provider di posizione GPS ogni 2000 millisecondi, e solo quando il percorso viene modificato più di 1 metro:
 
 ```csharp
 // For this example, this method is part of a class that implements ILocationListener, described below

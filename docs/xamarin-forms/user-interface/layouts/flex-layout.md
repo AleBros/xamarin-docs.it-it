@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: 49a0d1dd67959c5949ebe500036b849180795660
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.openlocfilehash: c4c7dc0db3112efa3ef02a51d4bc96939b714da9
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108743"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527092"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>FlexLayout di xamarin. Forms
 
@@ -385,7 +385,7 @@ All'interno di ognuno dei tre `FlexLayout` viste, uno spazio vuoto `Label` prece
 ## <a name="the-bindable-properties-in-detail"></a>Le proprietà associabili in dettaglio
 
 Ora che si sono appreso alcune applicazioni comuni di `FlexLayout`, le proprietà di `FlexLayout` possono essere esaminate in maggiore dettaglio. 
-`FlexLayout` Definisce i sei proprietà associabili che è nastavit il `FlexLayout` stessa, nel codice o XAML, per l'allineamento e controllo orientatin. (Una di queste proprietà, [ `Position` ](xref:Xamarin.Forms.FlexLayout.Position), non è illustrata in questo articolo.)
+`FlexLayout` Definisce i sei proprietà associabili che è nastavit il `FlexLayout` stessa, nel codice o XAML, allineamento e orientamento del controllo. (Una di queste proprietà, [ `Position` ](xref:Xamarin.Forms.FlexLayout.Position), non è illustrata in questo articolo.)
 
 È possibile provare con cinque rimanenti proprietà associabili usando il **sperimentare** pagina della **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** esempio. Questa pagina consente di aggiungere o rimuovere gli elementi figlio da un `FlexLayout` e impostare le combinazioni di cinque proprietà associabili. Tutti gli elementi figlio del `FlexLayout` vengono `Label` le viste di diversi colori e dimensioni, con la `Text` proprietà è impostata su un numero corrispondente alla relativa posizione nel `Children` raccolta.
 
@@ -584,7 +584,7 @@ Nella schermata iOS a sinistra mostra i due `Label` elementi viene forniti l'alt
 
 Il [ `Grow` ](xref:Xamarin.Forms.FlexLayout.GrowProperty) proprietà associabili associata è di tipo `int`. Il valore predefinito è 0 e il valore deve essere maggiore o uguale a 0.
 
-Il `Grow` proprietà svolge un ruolo quando si il `Wrap` è impostata su `NoWrap` e la riga degli elementi figlio ha una larghezza totale minore di quella del `FlexLayout`, o la colonna di elementi figlio ha un'altezza inferiore rispetto al `FlexLayout`. Il `Grow` proprietà indica come eseguire la ripartizione di spazi vuoti tra gli elementi figlio.
+Il `Grow` proprietà svolge un ruolo quando il `Wrap` è impostata su `NoWrap` e la riga degli elementi figlio ha una larghezza totale minore di quella del `FlexLayout`, o la colonna di elementi figlio ha un'altezza inferiore rispetto al `FlexLayout`. Il `Grow` proprietà indica come eseguire la ripartizione di spazi vuoti tra gli elementi figlio.
 
 Nel **esperimento di aumento delle dimensioni** pagina, cinque `Label` elementi di colori alternati sono disposti in una colonna e due `Slider` elementi consentono di regolare il `Grow` proprietà del secondo e il quarto `Label`. La schermata iOS all'estrema sinistra mostra il valore predefinito `Grow` proprietà pari a 0:
 

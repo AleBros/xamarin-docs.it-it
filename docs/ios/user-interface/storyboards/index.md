@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e1e5ec5d064ad7610c5b7be8d18284d3610352c9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 554c96cdb46041b75a48523cc2952f05d2a7b1db
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106884"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51564005"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in xamarin. IOS
 
@@ -100,11 +100,11 @@ NSObject sender)
 {
     base.PrepareForSegue (segue, sender);
 
-    var callHistoryContoller = segue.DestinationViewController 
+    var callHistoryController = segue.DestinationViewController 
                                   as CallHistoryController;
 
-    if (callHistoryContoller != null) {
-        callHistoryContoller.PhoneNumbers = PhoneNumbers;
+    if (callHistoryController != null) {
+        callHistoryController.PhoneNumbers = PhoneNumbers;
     }
 }
 ```
@@ -112,14 +112,14 @@ NSObject sender)
 In questo esempio, il `PrepareForSegue` metodo verrà chiamato quando l'elemento segue viene attivato dall'utente. È innanzitutto necessario creare un'istanza del controller di visualizzazione 'ricezione' e impostarla come destinazione dell'elemento segue il Controller di visualizzazione. Questa operazione viene eseguita dalla riga di codice riportato di seguito:
 
 ```csharp
-var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+var callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
 Il metodo ora ha la possibilità di impostare le proprietà di `DestinationViewController`. In questo esempio sono state prese vantaggio di questo approccio passando un elenco denominato `PhoneNumbers` per il `CallHistoryController` e assegnarlo a un oggetto con lo stesso nome:
 
 ```csharp
-if (callHistoryContoller != null) {
-        callHistoryContoller.PhoneNumbers = PhoneNumbers;
+if (callHistoryController != null) {
+        callHistoryController.PhoneNumbers = PhoneNumbers;
     }
 ```
 
@@ -368,7 +368,7 @@ Fare riferimento alla soluzione Storyboards.Conditional nel [esempio di storyboa
 
 ## <a name="using-storyboard-references"></a>Utilizzo di riferimenti a uno Storyboard
 
-Un riferimento di Storyboard consente di prendere una progettazione dello Storyboard grande e complessa e suddividerla in più piccoli storyboard che ottenere cui viene fatto riferimento dall'originale, pertanto di rimozione rimuovendo la complessità e rendendo risultante singoli storyboard più semplice alla progettazione e Consente di gestire.
+Un riferimento di Storyboard consente di prendere una progettazione dello Storyboard grande e complessa e di suddividerlo in più piccoli storyboard che ottenere cui viene fatto riferimento dall'originale, pertanto la rimozione di complessità e rendendo più semplice progettare e gestire gli storyboard singoli risultanti.
 
 Inoltre, fornisce un riferimento di Storyboard un' _ancoraggio_ alla scena un altro all'interno dello stesso Storyboard o una scena specifica in una diversa.
 

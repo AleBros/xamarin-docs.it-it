@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 4f50efb7b78db67b310ccddec3eb94bfe4d2e521
-ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
-ms.translationtype: MT
+ms.openlocfilehash: 833bdc0fd087fcf8dbb8cce3b8b23f427302f5e7
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50301253"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526871"
 ---
 # <a name="android-localization"></a>Localizzazione di Android
 
@@ -207,7 +207,7 @@ In questo screenshot, quattro immagini vengono salvate nel **drawable** director
 
 È anche possibile fornire altri tipi di alternative, risorse specifiche della lingua, inclusi i layout, animazioni e i file non elaborati. Questo significa che è possibile fornire un layout di schermata specifica per uno o più delle lingue di destinazione, ad esempio è possibile creare un layout in modo specifico per il tedesco che consente di etichette di testo molto lunghi.
 
-Ha introdotto il supporto per Android 4.2 [lingue destra-sinistra (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) se si imposta l'impostazione dell'applicazione `android:supportsRtl="true"`. Il qualificatore delle risorse `"ldrtl"` possono essere inclusi in un nome di directory: per contenere i layout personalizzati che sono progettati per la visualizzazione destra-sinistra.
+Ha introdotto il supporto per Android 4.2 [lingue destra-sinistra (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) se si imposta l'impostazione dell'applicazione `android:supportsRtl="true"`. Il qualificatore delle risorse `"ldrtl"` possono essere inclusi in un nome di directory per contenere i layout personalizzati che sono progettati per la visualizzazione destra-sinistra.
 
 Per ulteriori informazioni sulla denominazione directory delle risorse e del fallback, vedere la documentazione di Android [offrire risorse alternative](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
@@ -225,7 +225,7 @@ Il nome dell'applicazione è semplice da localizzare utilizzando un `@string/id`
 
 Android 4.2 e versioni successive fornisce supporto completo per i layout da destra a sinistra, descritti dettagliatamente nel [blog di supporto da destra a sinistra Native](http://android-developers.blogspot.dk/2013/03/native-rtl-support-in-android-42.html).
 
-Quando si usa Android 4.2 (livello API 17) e versioni più recenti, aligment valori possono essere specificati con `start` e `end` invece di `left` e `right` (ad esempio `android:paddingStart`). Sono disponibili anche nuove API, ad esempio `LayoutDirection`, `TextDirection`, e `TextAlignment` per la creazione di schermate adattabili per i lettori da destra a sinistra.
+Quando si usa Android 4.2 (livello API 17) e l'allineamento più recente, i valori possono essere specificati con `start` e `end` invece di `left` e `right` (ad esempio `android:paddingStart`). Sono disponibili anche nuove API, ad esempio `LayoutDirection`, `TextDirection`, e `TextAlignment` per la creazione di schermate adattabili per i lettori da destra a sinistra.
 
 La schermata seguente mostra le [localizzata **Tasky** esempio](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in arabo:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/05/2018
-ms.openlocfilehash: 4d121c2dfcca380e1735da1a4ca47c42d1957b8a
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: ac8e5323a2a2e05ac03294bb6919e8dfadc93655
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854740"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526520"
 ---
 # <a name="consuming-and-creating-xamarinforms-plugins"></a>Utilizzo e la creazione di plug-in xamarin. Forms
 
@@ -53,7 +53,7 @@ In passato, un plug-in multipiattaforma costituito in genere i componenti seguen
 
 Lettura James Montemagno [post di blog](https://blog.xamarin.com/creating-reusable-plugins-for-xamarin-forms/) che descrive il processo di creazione di plug-in per Xamarin.
 
-Più di recente, i plug-in è possibile essere creare con una singola piattaforma di multitargeting. Questo approccio è descritto di James Montemagno [post di blog](https://montemagno.com/converting-xamarin-libraries-to-sdk-style-multi-targeted-projects/). Questo approccio viene usato nel plug-in di James Montemagno collegati indicati sopra, e viene inoltre utilizzato il formato **Xamarin.Essentials**.
+Più di recente, è possibile creare plug-in con una singola piattaforma di multitargeting. Questo approccio è descritto di James Montemagno [post di blog](https://montemagno.com/converting-xamarin-libraries-to-sdk-style-multi-targeted-projects/). Questo approccio viene usato nel plug-in di James Montemagno collegati indicati sopra, e viene inoltre utilizzato il formato **Xamarin.Essentials**.
 
 È preferibile usare per evitare che fanno riferimento a xamarin. Forms direttamente da un plug-in.
 Ciò può creare problemi di conflitto di versione durante il tentativo di usare il plug-in altri sviluppatori. Provare invece a progettare l'API in modo che può essere utilizzato da qualsiasi applicazione basata su Xamarin o .NET.

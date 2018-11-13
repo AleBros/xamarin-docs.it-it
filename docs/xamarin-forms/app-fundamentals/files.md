@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: e31bb46569ed96d514ec87eacaf9f3912dcf3237
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 87084a0ccc2970f56e7ef7a6d2f4c59c49032aa0
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675159"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527365"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Gestione di file in xamarin. Forms
 
@@ -20,7 +20,7 @@ _File di gestione delle eccezioni con xamarin. Forms può essere ottenuto tramit
 
 ## <a name="overview"></a>Panoramica
 
-Il codice Xamarin.Forms viene eseguito in più piattaforme, ognuna delle quali ha un proprio file system. In precedenza, questo significava che la lettura e scrittura di file era più facilmente eseguita usando l'API di file native in ciascuna piattaforma. In alternativa, le risorse incorporate sono una soluzione più semplice per distribuire i file di dati con un'app. Tuttavia, con .NET Standard 2.0 è possibile condividere il codice di accesso ai file nelle librerie .NET Standard.
+Il codice Xamarin.Forms viene eseguito in più piattaforme, ognuna delle quali ha un proprio file system. In precedenza, questo significava che la lettura e scrittura di file è stata più semplice eseguita tramite l'API di file native in ogni piattaforma. In alternativa, le risorse incorporate sono una soluzione più semplice per distribuire i file di dati con un'app. Tuttavia, con .NET Standard 2.0 è possibile condividere il codice di accesso ai file nelle librerie .NET Standard.
 
 Per informazioni sulla gestione di file di immagine, vedere la [utilizzo di immagini](~/xamarin-forms/user-interface/images.md) pagina.
 

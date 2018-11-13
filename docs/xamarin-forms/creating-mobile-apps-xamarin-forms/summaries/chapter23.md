@@ -7,12 +7,12 @@ ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 83a445555f9f184f735c105370de20665ad704a3
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
-ms.translationtype: MT
+ms.openlocfilehash: 0e8d666d9da9878d2af3a21903fa0884e09199d8
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156756"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527131"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Riepilogo del capitolo 23. I trigger e comportamenti
 
@@ -152,7 +152,7 @@ Il [ **ToggleLabel** ](https://github.com/xamarin/xamarin-forms-book-samples/tre
 
 Il [ **FormattedTextToggle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/FormattedTextToggle) esempio estende questo concetto passando tra due `FormattedString` oggetti.
 
-Il [ `ToggleBase` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) classe la **Xamarin.FormsBook.Toolkit** libreria deriva da `ContentView`, definisce un `IsToggled` proprietà e incorpora un `ToggleBehavior` per l'elemento toggle per la logica. Questo rende più semplice definire l'interruttore in XAML, come dimostrato dal [ **TranditionalCheckBox** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox) esempio.
+Il [ `ToggleBase` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) classe la **Xamarin.FormsBook.Toolkit** libreria deriva da `ContentView`, definisce un `IsToggled` proprietà e incorpora un `ToggleBehavior` per l'elemento toggle per la logica. Questo rende più semplice definire l'interruttore in XAML, come dimostrato dal [ **TraditionalCheckBox** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox) esempio.
 
 Il [ **SwitchCloneDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/SwitchCloneDemo) include un [ `SwitchClone` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter23/SwitchCloneDemo/SwitchCloneDemo/SwitchCloneDemo/SwitchClone.cs) classe che deriva da `ToggleBase` e Usa un [ `TranslateAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TranslateAction.cs)classi per costruire un interruttore che è simile a xamarin. Forms `Switch`.
 

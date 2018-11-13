@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: b9aa29507ebb37e3912b1027419e47c82832dfa9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dfc0e1cb7239381ef2f495b0f9774d390b0dc82e
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116511"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527196"
 ---
 # <a name="creating-android-services"></a>Creazione di servizi di Android
 
@@ -47,7 +47,7 @@ Esistono quattro tipi diversi di servizi Android:
 
 * **`IntentService`** &ndash; Un' _`IntentService`_ è una sottoclasse specializzata del `Service` classe che semplifica la creazione di un servizio e l'utilizzo. Un `IntentService` è progettato per gestire singole chiamate autonome. A differenza di un servizio, che può gestire simultaneamente più chiamate, un' `IntentService` è più simile a un _processori di coda di lavoro_ &ndash; lavoro è in coda e un `IntentService` elabora ogni processo uno alla volta in un unico thread. In genere, un`IntentService` non è associato a un'attività o un frammento. 
 
-* **Servizio avviato** &ndash; oggetto _avviati servizio_ è un servizio che è stato avviato da un altro componente Android (ad esempio, un'attività) e viene eseguito costantemente in background fino a quando non si indica in modo esplicito il arresto del servizio. A differenza di un servizio associato, un servizio avviato non dispone di tutti i client associati direttamente a esso. Per questo motivo, è importante progettare i servizi avviati in modo che potrebbe essere riavviati normalmente in base alle esigenze.
+* **Servizio avviato** &ndash; oggetto _avviati servizio_ è un servizio che è stato avviato da un altro componente Android (ad esempio, un'attività) e viene eseguito in modo continuo in background fino a quando non si indica in modo esplicito il arresto del servizio. A differenza di un servizio associato, un servizio avviato non dispone di tutti i client associati direttamente a esso. Per questo motivo, è importante progettare i servizi avviati in modo che potrebbe essere riavviati normalmente in base alle esigenze.
 
 * **Servizio ibrido** &ndash; oggetto _servizio ibrido_ è un servizio che ha le caratteristiche di un _avviati servizio_ e un _associato servizio_. Un servizio ibrido può essere avviato da quando si associa un componente o può essere avviato da un evento. Un componente client può o non può essere associato a questo servizio ibrido. Un servizio ibrido verrà eseguiti fino a quando non viene informato in modo esplicito per arrestare o fino a quando non sono presenti più client a esso associati.
 
@@ -59,7 +59,7 @@ Anche se la maggior parte dei servizi vengono eseguiti in background, è necessa
 
 ### <a name="background-execution-limits-in-android-80"></a>Limiti di esecuzione in background in Android 8.0
 
-Partire da Android 8.0 (livello API 26), non è più un'applicazione Android hanno la possibilità di eseguire liberamente in background. Quando è in primo piano, un'app può avviare ed eseguire i servizi senza alcuna restrizione. Quando si sposta un'applicazione in background, Android comporterà la concessione all'app un determinato periodo di tempo per avviare e usare i servizi. Dopo tale periodo di tempo, l'app non è più possibile avviare eventuali servizi e i servizi che sono stati avviati verranno terminati. A questo punto non è possibile che l'app eseguire qualsiasi attività. Android prende in considerazione un'applicazione può essere in primo piano se viene soddisfatta una delle condizioni seguenti:
+Partire da Android 8.0 (livello API 26), non è più un'applicazione Android hanno la possibilità di eseguire liberamente in background. Quando è in primo piano, un'app può avviare ed eseguire i servizi senza alcuna restrizione. Quando si sposta un'applicazione in background, Android comporterà la concessione all'app un determinato periodo di tempo per avviare e usare i servizi. Dopo tale periodo di tempo, l'app non è più possibile avviare eventuali servizi e i servizi che sono stati avviati verranno terminati. A questo punto non è possibile per l'app eseguire qualsiasi attività. Android prende in considerazione un'applicazione può essere in primo piano se viene soddisfatta una delle condizioni seguenti:
 
 * È presente un'attività visibile (avviato o sospeso).
 * L'app ha avviato un servizio di primo piano.
@@ -70,7 +70,7 @@ Esistono alcune situazioni in cui, anche se un'app è in background, Android ver
 * L'app riceve una trasmissione. 
 * L'applicazione riceve un viene eseguito un `PendingIntent` in risposta a una notifica.
 
-Le applicazioni xamarin. Android esistente potrebbero essere necessario modificare il modo di operare di attività in background per evitare eventuali problemi che potrebbero verificarsi in Android 8.0. Ecco alcuni pratici alterantives a un servizio di Android:
+Le applicazioni xamarin. Android esistente potrebbero essere necessario modificare il modo di operare di attività in background per evitare eventuali problemi che potrebbero verificarsi in Android 8.0. Di seguito sono riportate alcune alternative pratiche per un servizio di Android:
 
 * **Pianificare il lavoro eseguito in background mediante l'utilità di pianificazione di processo Android o il [Firebase processo Dispatcher](~/android/platform/firebase-job-dispatcher.md)**  &ndash; questi due librerie di forniscono un framework per le applicazioni separare le attività in background a _processi_, un'unità di lavoro discreta. Le app possono quindi pianificare il processo con il sistema operativo e alcuni criteri su quando eseguire il processo.
 * **Avviare il servizio in primo piano** &ndash; un servizio di primo piano è utile per quando l'app deve eseguire alcune attività in background e l'utente potrebbe essere necessario periodicamente interagire con tale attività. Il servizio di primo piano visualizzerà una notifica persistente in modo che l'utente è a conoscenza che l'app è in esecuzione un'attività in background e fornisce anche un modo per monitorare o interagire con l'attività. Un esempio di questo sarebbe un'app il podcast riproduzione di un podcast all'utente o forse il download di un episodio di podcast, in modo che può essere soddisfacenti in un secondo momento. 

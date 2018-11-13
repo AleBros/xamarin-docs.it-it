@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: d755160043191f93247fd09e99f23eb85831fa8b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fd677aa802adf32ac81396f81c67264d88639967
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113898"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528780"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>le App per gli allenamenti in Xamarin watchOS
 
@@ -469,7 +469,7 @@ public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkou
 
 Anche nuovi a watchOS 3, viene messo in pausa il movimento (`HKWorkoutEventType.MotionPaused`) e la ripresa di movimento (`HKWorkoutEventType.MotionResumed`) gli eventi. Questi eventi vengono generati automaticamente da HealthKit durante accinge in esecuzione quando l'utente avvia e interrompe lo spostamento.
 
-Quando l'app riceve un evento di movimento in pausa, è necessario arrestare la raccolta dei dati fino a quando l'utente viene riattivato movimento e viene ricevuto l'evento movimento riprende. App per le app non devono sospendere la sessione per gli allenamenti in risposta a un evento sospeso movimento.
+Quando l'app riceve un evento di movimento in pausa, è necessario arrestare la raccolta dei dati fino a quando l'utente viene riattivato movimento e viene ricevuto l'evento movimento riprende. App non devono sospendere la sessione per gli allenamenti in risposta a un evento sospeso movimento.
 
 > [!IMPORTANT]
 > Gli eventi di movimento sospesa e ripresa di movimento sono supportati solo per il tipo di attività RunningWorkout (`HKWorkoutActivityType.Running`).

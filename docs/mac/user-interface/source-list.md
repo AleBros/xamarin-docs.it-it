@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 7fa6b128572490ce1fe330b722181e33bbad1ffd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 82e4dfb9add7002fd7d3568d0ec946ea38dfd530
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122049"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526408"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Elenchi di origine in xamarin. Mac
 
 _Questo articolo descrive come usare gli elenchi di origine in un'applicazione xamarin. Mac. Descrive la creazione e la gestione di elenchi di origine in Xcode e Interface Builder e sull'interazione con essi nel codice c#._
 
-Quando si usa c# e .NET in un'applicazione xamarin. Mac, è possibile utilizzare lo stesso gli elenchi di origine che gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire gli elenchi di origine (oppure crearle direttamente nel codice c#).
+Quando si lavora con C# e .NET in un'applicazione xamarin. Mac, è possibile utilizzare la stessa origine che elenca gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire gli elenchi di origine (oppure crearle direttamente nel codice c#).
 
 Un elenco di origine è un tipo speciale della visualizzazione struttura consente di visualizzare l'origine di un'azione, ad esempio la barra laterale in Finder o iTunes.
 

@@ -4,15 +4,15 @@ description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepil
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 464fbdb043ac35eba7a4cc2d9ec76b78cc91ac5b
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 0f1da94031e658d42205e6346d41b02c5822d992
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156512"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563680"
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>Riepilogo del capitolo 6. Clic sui pulsanti
 
@@ -87,5 +87,5 @@ Il [ **PersistentKeypad** ](https://github.com/xamarin/xamarin-forms-book-sample
 
 - [Capitolo 6 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf)
 - [Esempi di capitolo 6](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
-- [Esempi di capitolo 6 F #](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
+- [Capitolo 6 F# esempi](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
 - [Pulsante di xamarin. Forms](~/xamarin-forms/user-interface/button.md)

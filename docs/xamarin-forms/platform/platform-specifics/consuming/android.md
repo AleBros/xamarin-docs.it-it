@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 50c7b05261cf3f07ea37373cdcdcc8f250243647
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3249a9706ba96ec3690a3a3a6b80a5eb261625e4
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108977"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527274"
 ---
 # <a name="android-platform-specifics"></a>Funzionalità specifiche della piattaforma Android
 
@@ -270,7 +270,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 Il risultato è che lo scorrimento veloce tra i dati in un [ `ListView` ](xref:Xamarin.Forms.ListView) può essere abilitata, che modifica la dimensione dello scorrimento:
 
-[![](android-images/fastscroll.png "ListView FastScroll specifiche della piattaforma")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
+[![](android-images/fastscroll.png "Specifica della piattaforma FastScroll ListView")](android-images/fastscroll-large.png#lightbox "ListView FastScroll specifiche della piattaforma")
 
 <a name="webview-mixed-content" />
 
@@ -490,7 +490,7 @@ Il `Application.On<Android>` metodo consente di specificare che questo specifico
 
 Il risultato è che la tastiera area modalità operativa può essere impostata quando un controllo di input ha lo stato attivo di input:
 
-[![](android-images/pan-resize.png "Tastiera funziona in modalità specifiche della piattaforma")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
+[![](android-images/pan-resize.png "Tasti di tipo \"soft\" operativa modalità specifiche della piattaforma")](android-images/pan-resize-large.png#lightbox "tastiera funziona in modalità specifiche della piattaforma")
 
 <a name="disable_lifecycle_events" />
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 469ae19021ae524c302b8a9920aaa64bb4a681f4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 61d598f90747cf47b613012328f77b4bd8953a41
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117291"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528458"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Utilizzo degli storyboard in xamarin. Mac
 
@@ -68,7 +68,7 @@ Sono stati aggiunti diversi nuovi metodi per il `NSViewController` classe per su
 - `ViewDidDisappear` -Questo metodo viene chiamato direttamente dopo la visualizzazione è stato rimosso dallo schermo.
 - `UpdateViewConstraints` -Questo metodo viene chiamato quando i vincoli che definiscono una vista auto layout posizione e le dimensioni devono essere aggiornati.
 - `ViewWillLayout` -Questo metodo viene chiamato poco prima che le visualizzazioni secondarie di questa visualizzazione sono visualizzate sullo schermo.
-- `ViewDidLayout` -Questo metodo viene chiamato direttamente dopo le visualizzazioni secondarie della visualizzazione di visualizzazione sono visualizzate sullo schermo.
+- `ViewDidLayout` -Questo metodo viene chiamato direttamente dopo le visualizzazioni secondarie della visualizzazione sono visualizzate sullo schermo.
 
 <a name="The-Responder-Chain" />
 
@@ -150,7 +150,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 }
 ```
 
-Facoltativamente, è possibile eseguire l'override di `ShouldPerfromSegue` metodo e il controllo o meno l'elemento Segue viene effettivamente eseguita tramite C# codice. Per i controller di visualizzazione manualmente presentata, chiamare il metodo loro `DismissController` metodo rimuoverle da visualizzare quando non sono più necessari.
+Facoltativamente, è possibile eseguire l'override di `ShouldPerformSegue` metodo e il controllo o meno l'elemento Segue viene effettivamente eseguita tramite C# codice. Per i controller di visualizzazione manualmente presentata, chiamare il metodo loro `DismissController` metodo rimuoverle da visualizzare quando non sono più necessari.
 
 <a name="Creating-Custom-Segues" />
 
@@ -227,7 +227,7 @@ I controller di finestra contengono e controllano i diversi tipi di finestra in 
 2. Il `Storyboard` proprietà conterrà lo Storyboard il Controller di finestra caricato da, altrimenti `null` se non è stato caricato da uno Storyboard.
 3. È possibile chiamare il `DismissController` metodo per chiudere la finestra specificata e lo rimuove dalla visualizzazione.
 
-Come i controller di visualizzazione, i controller di finestra implementano la `PerformSegue`, `PrepareForSegue` e il `ShouldPerfromSegue` metodi e può essere usato come origine di un'operazione di elemento Segue.
+Come i controller di visualizzazione, i controller di finestra implementano la `PerformSegue`, `PrepareForSegue` e il `ShouldPerformSegue` metodi e può essere usato come origine di un'operazione di elemento Segue.
 
 Controller di finestra sono responsabili per le caratteristiche seguenti di un'app macOS:
 
@@ -259,7 +259,7 @@ I riconoscitori di movimento seguenti sono disponibili in macOS:
 
 ## <a name="using-storyboard-references"></a>Utilizzo di riferimenti a uno Storyboard
 
-Un riferimento di Storyboard consente di prendere una progettazione dello Storyboard grande e complessa e suddividerla in più piccoli storyboard che ottenere cui viene fatto riferimento dall'originale, pertanto di rimozione rimuovendo la complessità e rendendo risultante singoli storyboard più semplice alla progettazione e Consente di gestire.
+Un riferimento di Storyboard consente di prendere una progettazione dello Storyboard grande e complessa e di suddividerlo in più piccoli storyboard che ottenere cui viene fatto riferimento dall'originale, pertanto la rimozione di complessità e rendendo più semplice progettare e gestire gli storyboard singoli risultanti.
 
 Inoltre, fornisce un riferimento di Storyboard un' _ancoraggio_ alla scena un altro all'interno dello stesso Storyboard o una scena specifica in una diversa.
 
