@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: f9034799355d01a3ade20a78540d6ecac43d9cc8
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 38e71914d9f7f6bb46ebeee8d548968c207d3b16
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526897"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617761"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Tasti di scelta rapida Siri in xamarin. IOS
 
@@ -43,7 +43,7 @@ Per usare l'app di esempio:
 - Selezionare un tipo di MINESTRONE, specificare una quantità e le opzioni e toccare **effettuare l'ordine**.
 - Nel **cronologia degli ordini** toccare l'ordine appena creata per visualizzarne i dettagli.
 - Nella parte inferiore della schermata dei dettagli dell'ordine, toccare **Aggiungi a Siri**.
-- Registrare una frase vocali per associare l'ordine e toccare **.**
+- Registrare una frase vocali per associare l'ordine e toccare **Fine**.
 - Ridurre al minimo MINESTRONE Chef, richiamare Siri e inserire nuovamente l'ordine usando la frase vocale che appena registrata.
 - Al termine dell'ordine di Siri, aprire nuovamente MINESTRONE Chef e notare che il nuovo ordine viene elencato nella **cronologia degli ordini** dello schermo.
 
@@ -695,7 +695,7 @@ Con queste modifiche nella posizione, l'app verrà eseguita in un dispositivo iO
 
 ### <a name="automatic-provisioning"></a>Il provisioning automatico
 
-Si noti che è possibile usare [provisioning automatico](https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning) per eseguire molte di queste attività direttamente nell'IDE di provisioning.
+Si noti che è possibile usare [provisioning automatico](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning) per eseguire molte di queste attività direttamente nell'IDE di provisioning.
 Tuttavia, il provisioning automatico non configurare i gruppi di app. È necessario configurare manualmente il **entitlements. plist** file con il nome del gruppo di app da usare, visitare il portale per sviluppatori di Apple per creare il gruppo di app, assegnare a tale gruppo di app per ogni ID App creato da automatico il provisioning, rigenerare i profili di provisioning (app, estensione per Intent, estensione dell'interfaccia utente Intent) per includere il gruppo di app appena creata e scaricarli e installarli.
 
 ## <a name="related-links"></a>Collegamenti correlati

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 04/12/2017
-ms.openlocfilehash: 7b9b3b648f6ac66859714052e916407026da10d4
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
-ms.translationtype: HT
+ms.openlocfilehash: 1ea38b527acaa89b9f25690de4e55664a7afd9e8
+ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526936"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51579830"
 ---
 # <a name="xamarinmac-architecture"></a>Architettura di xamarin. Mac
 
@@ -145,7 +145,7 @@ A livello generale, raggiunge questo eseguendo le attività seguenti:
 - Creare una struttura di bundle dell'app.
 - Copiare negli assembly gestiti.
 - Se il collegamento è abilitato, eseguire il linker gestito per ottimizzare gli assembly rimuovendo le parti non utilizzate.
-- Creare un'applicazione di utilità di avvio, il collegamento nel codice dell'utilità di avvio parlato con il codice di registro se in modalità statica.
+- Creare un'applicazione di utilità di avvio, il collegamento nel codice dell'utilità di avvio parlato con il codice di registrar se in modalità statica.
 
 Si tratta quindi Esegui come parte dell'utente che fanno riferimento a xamarin ed esecuzioni processo che viene compilato il codice utente in un assembly di compilazione. `mmp` per renderlo un pacchetto
 

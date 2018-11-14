@@ -1,74 +1,74 @@
 ---
 ms.assetid: 814857C5-D54E-469F-97ED-EE1CAA0156BB
-title: Guida al porting app desktop
-description: Una spiegazione semplice come separare i moduli di Windows esistenti o App WPF per creare App multipiattaforma per l'esecuzione su Mac OS, iOS, Android, nonché UWP/Windows 10.
+title: Indicazioni sulla portabilità di app desktop
+description: Una semplice spiegazione della procedura di disaccoppiare i moduli di Windows esistenti o le applicazioni WPF per creare App multipiattaforma per l'esecuzione in macOS, iOS, Android, nonché UWP o Windows 10.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: b9cfad9c046d4f2ad89506f7172a0418e90478f5
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 3d3af9c78b7486e7ebfb063a3cb00fabdbd0f5b7
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781046"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617540"
 ---
-# <a name="desktop-app-porting-guidance"></a>Guida al porting app desktop
+# <a name="desktop-app-porting-guidance"></a>Indicazioni sulla portabilità di app desktop
 
-Gran parte del codice dell'applicazione possono essere suddivisi in categorie in una delle seguenti aree:
+Gran parte del codice dell'applicazione possono essere suddivise in una delle seguenti aree:
 
-* Codice dell'interfaccia utente (ad es. Windows e i pulsanti)
-* controlli di terze parti di 3 (ad es. grafici)
+* Codice dell'interfaccia utente (ad es. finestre e pulsanti)
+* 3 controlli di terze parti (ad es. grafici)
 * Logica di business (ad es. regole di convalida)
-* L'accesso e l'archiviazione di dati locali
-* Servizi Web e accesso a dati remoti
+* Accesso e archiviazione locale dei dati
+* Servizi Web e accesso ai dati remoti
 
-Per Windows Form e WPF applicazioni scritte con c# (o Visual Basic.NET) una considerevole quantità di logica di business, accedere a dati locali e codice di servizi web può essere condivise tra le piattaforme.
+Per le applicazioni Windows Forms e WPF scritte con C# (o Visual Basic.NET) una quantità sorprendente della logica di business, accesso ai dati locali e il codice di servizi web può essere condivisi tra piattaforme.
 
 ## <a name="net-portability-analyzer"></a>.NET portability Analyzer
 
-Supporto di Visual Studio 2015 e 2017 il [.NET Portability Analyzer](https://docs.microsoft.com/en-us/dotnet/articles/standard/portability-analyzer) ([scaricare per Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)) che può esaminare le applicazioni esistenti e richiedere di specificare la quantità di codice possono essere trasferite "così com'è" ad altre piattaforme . Altre informazioni relative a essa da questo [video di Channel 9](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
+Supporto di Visual Studio 2015 e 2017 il [.NET Portability Analyzer](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([download per Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)) che può esaminare le applicazioni esistenti e stabilire quanto codice può essere trasferito "così com'è" in altre piattaforme . Sono disponibili informazioni su di essa da questo [video di Channel 9](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
 
-È inoltre disponibile uno strumento da riga di comando può essere scaricato dal [Portability Analyzer su GitHub](https://github.com/Microsoft/dotnet-apiport) e consentono di fornire agli stessi report.
+È inoltre disponibile uno strumento da riga di comando può essere scaricato dal [Portability Analyzer in GitHub](https://github.com/Microsoft/dotnet-apiport) e usato per fornire gli stessi report.
 
-## <a name="x-of-my-code-is-portable-what-next"></a>"x % di codice è portabile. Come procedere?"
+## <a name="x-of-my-code-is-portable-what-next"></a>"x % del mio codice sia portabile. Come procedere?"
 
-Probabilmente l'analizzatore viene illustrato un grande parte del codice sia portabile, ma è sicuramente occorra da alcune parti di tutte le applicazioni che _Impossibile_ essere spostati in altre piattaforme.
+Probabilmente l'analizzatore Mostra una grande parte del codice sia portabile, ma esiste senz'altro sarà alcune parti di ogni app che _non è possibile_ essere spostati in altre piattaforme.
 
-Diversi blocchi di codice verranno probabilmente rientrano in uno di questi bucket illustrati in dettaglio più avanti:
+Diversi blocchi di codice probabilmente rientra in uno di questi bucket, illustrato in dettaglio più avanti:
 
-* Codice portabile generiche riutilizzabili
-* Codice che richiede le modifiche
-* Codice che non è portabile e richiede la riscrittura
+* Generiche riutilizzabili di codice portabile
+* Codice che richiede modifiche
+* Codice non portabile e richiede la riscrittura
 
-### <a name="re-useable-portable-code"></a>Codice portabile generiche riutilizzabili
+### <a name="re-useable-portable-code"></a>Generiche riutilizzabili di codice portabile
 
-È possibile portare il codice .NET viene scritto usando API disponibile in tutte le piattaforme multipiattaforma invariata. In teoria, sarà possibile spostare tutto il codice in una libreria di classi portabile, una libreria condivisa o la libreria Standard di .NET e quindi eseguirne il test all'interno dell'app esistente.
+Il codice .NET scritto rispetto alle API disponibile in tutte le piattaforme può essere eseguito multipiattaforma senza modificato. In teoria, è possibile spostare tutto il codice in una libreria di classi portabile, libreria condiviso o libreria .NET Standard e quindi testarla all'interno di un'app esistente.
 
-Tale libreria condivisa può quindi essere aggiunta per i progetti di applicazione per altre piattaforme (ad esempio Android, iOS, Mac OS).
+Tale libreria condivisa può quindi essere aggiunti ai progetti di applicazione per altre piattaforme (ad esempio Android, iOS, macOS).
 
-### <a name="code-that-requires-changes"></a>Codice che richiede le modifiche
+### <a name="code-that-requires-changes"></a>Codice che richiede modifiche
 
-Alcune API .NET potrebbe non essere disponibili in tutte le piattaforme. Se queste API presenti nel codice, è necessario scrivere nuovamente tali sezioni per usare le API multipiattaforma.
+Alcune API .NET potrebbero non essere disponibili in tutte le piattaforme. Se queste API esistono nel codice, è necessario riscrivere tali sezioni per usare le API multipiattaforma.
 
-Alcuni esempi sono l'utilizzo di API di Reflection che sono disponibili in .NET 4.6, ma non sono disponibili in tutte le piattaforme.
+Alcuni esempi sono utilizzano le API di Reflection che sono disponibili in .NET 4.6, ma non sono disponibili in tutte le piattaforme.
 
-Dopo aver nuovamente scritto il codice che usa le API portabile, deve essere in grado di creare un pacchetto di codice in una libreria condivisa ed eseguirne il test all'interno dell'app esistente.
+Dopo avere scritto nuovamente il codice che usa API portabili, deve essere in grado di creare un pacchetto di codice in una libreria condivisa ed eseguirne il test all'interno di un'app esistente.
 
-### <a name="code-that-isnt-portable-and-requires-a-re-write"></a>Codice che non è portabile e richiede la riscrittura
+### <a name="code-that-isnt-portable-and-requires-a-re-write"></a>Codice non portabile e richiede la riscrittura
 
-Esempi di codice che non è probabilmente multipiattaforma includono:
+Esempi di codice che non è probabile che essere multi-piattaforma:
 
-- **Interfaccia utente** – schermate WPF o Windows Form non possono essere usate nei progetti in Android o iOS, ad esempio. L'interfaccia utente dovrà essere riscritto utilizzando questa [confronto controlli](~/cross-platform/desktop/controls/index.md) come riferimento.
+- **Interfaccia utente** : le schermate di Windows Forms o WPF non possono essere usate in progetti su Android o iOS, ad esempio. L'interfaccia utente dovranno essere riscritto usando questo [confronto tra i controlli](~/cross-platform/desktop/controls/index.md) come riferimento.
 
-- **Archiviazione specifiche per la piattaforma** -codice che si basa su una tecnologia specifica della piattaforma (ad esempio un database di SQL Server Express locale). È necessario scrivere nuovamente questo utilizzando un'alternativa più piattaforme (ad esempio, SQLite per il motore di database).
-Alcune operazioni del file system potrebbe essere necessario anche essere modificate, poiché UWP è leggermente diverse API per Android e iOS (ad es. alcuni file System alcuna distinzione tra maiuscole e altri utenti non sono).
+- **Archiviazione specifiche della piattaforma** -codice che si basa su una tecnologia specifica della piattaforma (ad esempio, un database di SQL Server Express locale). È necessario riscrivere questa usando un'alternativa più piattaforme (ad esempio SQLite per il motore di database).
+Alcune operazioni del file system potrebbe essere necessario anche essere modificato, in quanto piattaforma UWP offre API leggermente diverse per Android e iOS (ad es. alcuni file System sono tra maiuscole e minuscole e ad altri utenti non sono).
 
-- **componenti di terze parti 3rd** : verifica se i componenti di terze parti 3rd nelle applicazioni sono disponibili in altre piattaforme. Altri, ad esempio pacchetti di NuGet non visivi, potrebbero essere disponibili, ma altri utenti (soprattutto visual controlli, ad esempio lettori multimediali o grafici)
+- **componenti di terze parti 3rd** : verifica se i componenti di terze parti 3rd nelle applicazioni sono disponibili in altre piattaforme. Altri, ad esempio i pacchetti NuGet non visivo, potrebbe essere disponibile ma ad altri utenti (in particolare visual controlli, ad esempio lettori multimediali o grafici)
 
 ## <a name="tips-for-making-code-portable"></a>Suggerimenti per rendere portabile un codice
 
 - **Inserimento di dipendenze** – fornire implementazioni diverse per ogni piattaforma, e
 
-- **Approccio a più livelli** : indica se MVVM, MVC, MVP o alcuni altri modelli che consente di separare il codice portabile dal codice specifico della piattaforma.
+- **Approccio a più livelli** : indica se MVVM, MVC, MVP o un altro modello che consente di separare il codice portabile dal codice specifico della piattaforma.
 
-- **Messaggistica** – è possibile utilizzare un passaggio di messaggi nel codice per deallocare accoppiato le interazioni tra le diverse parti dell'applicazione.
+- **Messaggistica** – è possibile usare un passaggio di messaggi nel codice deprovisioning accoppiare le interazioni tra le diverse parti dell'applicazione.

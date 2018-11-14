@@ -5,12 +5,12 @@ ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 3562ec840f824f6a8aeed1a61c7b27985a5ddf72
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: d50fe3853ab87d5bc14ac15a442140218a1b0fe0
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675471"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617553"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferences
 
@@ -80,11 +80,11 @@ Tutti i dati vengono archiviati nelle [preferenze condivise](https://developer.a
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-[NSUserDefaults](https://docs.microsoft.com/en-us/xamarin/ios/app-fundamentals/user-defaults) viene usato per archiviare i valori nei dispositivi iOS. Se non vengono specificati `sharedName`, viene usato `StandardUserDefaults`, altrimenti viene usato il nome per creare un nuovo `NSUserDefaults` con il nome specificato usato per `NSUserDefaultsType.SuiteName`.
+[NSUserDefaults](https://docs.microsoft.com/xamarin/ios/app-fundamentals/user-defaults) viene usato per archiviare i valori nei dispositivi iOS. Se non vengono specificati `sharedName`, viene usato `StandardUserDefaults`, altrimenti viene usato il nome per creare un nuovo `NSUserDefaults` con il nome specificato usato per `NSUserDefaultsType.SuiteName`.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdatacontainer) viene usato per archiviare i valori nel dispositivo. Se non vengono specificati `sharedName`, viene usato `LocalSettings`, altrimenti viene usato il nome per creare un nuovo contenitore in `LocalSettings`.
+[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) viene usato per archiviare i valori nel dispositivo. Se non vengono specificati `sharedName`, viene usato `LocalSettings`, altrimenti viene usato il nome per creare un nuovo contenitore in `LocalSettings`.
 
 --------------
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 911101d44e3ae401910b35b93d85ba3f79ddd35a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 08fa9000a1fd9c97f7881a4a13c15fabfa6dda47
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103985"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617670"
 ---
 # <a name="time-picker"></a>Selezione ora
 
@@ -279,7 +279,7 @@ Questa modifica forza il flag passato per il `TimePickerDialog` costruttore sia 
 
 [![Finestra di dialogo di controllo TimePicker in formato 24 ore](time-picker-images/05-24hr-time-dialog-sml.png)](time-picker-images/05-24hr-time-dialog.png#lightbox)
 
-Poiché il gestore chiama [DateTime.ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring%28v=vs.110%29.aspx) per stampare il tempo necessario per l'attività `TextView`, il tempo è ancora stampato nel formato predefinito 12 ore AM/PM.
+Poiché il gestore chiama [DateTime.ToShortTimeString](xref:System.DateTime.ToShortDateString*) per stampare il tempo necessario per l'attività `TextView`, il tempo è ancora stampato nel formato predefinito 12 ore AM/PM.
 
 
 

@@ -7,12 +7,12 @@ author: conceptdev
 ms.author: crdun
 ms.custom: video
 ms.date: 08/08/2018
-ms.openlocfilehash: 3c7f3558557c5ecf4df961b58c2dd147a6f89691
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d8dd6927daab563b4331e9e87c7b069d84078f66
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111616"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617436"
 ---
 # <a name="get-started-with-azure-functions"></a>Introduzione a funzioni di Azure
 
@@ -24,7 +24,7 @@ _Iniziare a creare la prima funzione di Azure che interagisce con xamarin. Forms
 
 ## <a name="step-by-step-instructions"></a>Istruzioni dettagliate
 
-Oltre a tutto il video, è possibile seguire queste istruzioni per [compilare la prima funzione usando Visual Studio 2017](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-your-first-function-visual-studio).
+Oltre a tutto il video, è possibile seguire queste istruzioni per [compilare la prima funzione usando Visual Studio 2017](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
 
 ## <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -32,7 +32,7 @@ Oltre a tutto il video, è possibile seguire queste istruzioni per [compilare la
 
 ## <a name="step-by-step-instructions"></a>Istruzioni dettagliate
 
-Oltre a questo video, vi è una [esercitazione dettagliata](https://docs.microsoft.com/en-us/visualstudio/mac/azure-functions-lab) che mostra come creare ed eseguire il debug di funzioni di Azure all'interno di Visual Studio per Mac.
+Oltre a questo video, vi è una [esercitazione dettagliata](https://docs.microsoft.com/visualstudio/mac/azure-functions-lab) che mostra come creare ed eseguire il debug di funzioni di Azure all'interno di Visual Studio per Mac.
 
 -----
 

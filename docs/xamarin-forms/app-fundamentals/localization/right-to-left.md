@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 6c0de68f974c704b5f43232a1fc98065c90ee4f7
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 67b0d90290b18c7a5b55c5e3496b54970a8cfc38
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995723"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617605"
 ---
 # <a name="right-to-left-localization"></a>Localizzazione da destra a sinistra
 
@@ -72,7 +72,7 @@ Le richieste dalle impostazioni locali da destra a sinistra devono essere aggiun
 
 ![Lingue supportate Info. plist](rtl-images/ios-locales.png "Info. plist lingue supportate")
 
-Per altre informazioni, vedere [nozioni fondamentali di localizzazione in iOS](https://docs.microsoft.com/en-gb/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios).
+Per altre informazioni, vedere [nozioni fondamentali di localizzazione in iOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios).
 
 Right-to-left localizzazione può essere testata, modificare la lingua e area geografica in un dispositivo o simulatore da destra a sinistra delle impostazioni locali specificato nel **Info. plist**.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/15/2018
-ms.openlocfilehash: 79215d84307c03c0d34e6314b1c8b07e4f83fdd0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2d62e42e755a0d3088283adb863dfd684ddeae28
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131576"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617579"
 ---
 # <a name="core-ml-2-in-xamarinios"></a>Core ML 2 in xamarin. IOS
 
@@ -125,6 +125,6 @@ Simulatore sia sul dispositivo, `GetPredictions` termine più rapidamente le sti
 - [App di esempio: MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer)
 - [Nuove funzionalità di ML Core, parte 1 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/708/)
 - [Nuove funzionalità di ML Core, parte 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/709/)
-- [Introduzione a Core ML in xamarin. IOS](https://docs.microsoft.com/en-us/xamarin/ios/platform/introduction-to-ios11/coreml)
+- [Introduzione a Core ML in xamarin. IOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)
 - [Core ML (Apple)](https://developer.apple.com/documentation/coreml?language=objc)
 - [Utilizzo dei modelli di ML Core](https://developer.apple.com/machine-learning/build-run-models/)

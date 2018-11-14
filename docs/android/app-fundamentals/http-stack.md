@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 47c9ddf3f1a61b0ec7e2a8ed993ad665267993fd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 680fe2f8980d66b6dc80ec9a98898f9925df25f4
+ms.sourcegitcommit: f3f28722198e172d81c16bdeab0cb0a581a08dd0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114275"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598886"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Stack HttpClient e selettore dell'implementazione di SSL/TLS per Android
 
@@ -143,7 +143,7 @@ Tuttavia, se il **implementazione di HttpClient** è impostata su `AndroidHttpCl
 
 Esistono tre modi che un'applicazione xamarin. Android possa controllare le impostazioni di TLS:
 
-1. Selezionare la libreria TLS predefiniti e sull'implementazione di HttpClient nelle opzioni del progetto.
+1. Selezionare la libreria HttpClient predefinito e implementazione di TLS nelle opzioni del progetto.
 2. A livello di codice usando `Xamarin.Android.Net.AndroidClientHandler`.
 3. Dichiarare le variabili di ambiente (facoltativo).
 

@@ -5,12 +5,12 @@ description: Questo documento vengono confrontate e contrapposte WPF a xamarin. 
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 43eadacebf7ed877dfa28381ad77117d5988ca4b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d3e772c270f6003d01e3e7b487f69f682fec2d61
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119849"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617592"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>Visual Studio WPF. Xamarin. Forms: Analogie e differenze
 
@@ -60,7 +60,7 @@ Come WPF, è il metodo richiesto solo un `ProvideValue` metodo per restituire il
 
 ## <a name="binding-infrastructure"></a>Infrastruttura di associazione
 
-Uno dei concetti di base trasferiti è un'infrastruttura di associazione dati per la connessione proprietà visive alle proprietà di dati .NET. In questo modo, i modelli di architettura, ad esempio MVVM. La progettazione di base è identica, si dispone di una classe di base associabile [BindableObject](xref:Xamarin.Forms.BindableObject), in WPF questo è il [DependencyObject](https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx) classe. Questa classe di base viene utilizzata come il predecessore di radice per tutti gli oggetti che parteciperanno come destinazioni nel data binding. Le classi derivate quindi espongono [BindableProperty](xref:Xamarin.Forms.BindableProperty) gli oggetti che agiscono come spazio di archiviazione sottostante per i valori delle proprietà (questi vengono definiti [DependencyProperty](https://msdn.microsoft.com/library/system.windows.dependencyproperty(v=vs.110).aspx) agli oggetti in WPF).
+Uno dei concetti di base trasferiti è un'infrastruttura di associazione dati per la connessione proprietà visive alle proprietà di dati .NET. In questo modo, i modelli di architettura, ad esempio MVVM. La progettazione di base è identica, si dispone di una classe di base associabile [BindableObject](xref:Xamarin.Forms.BindableObject), in WPF questo è il [DependencyObject](xref:System.Windows.DependencyObject) classe. Questa classe di base viene utilizzata come il predecessore di radice per tutti gli oggetti che parteciperanno come destinazioni nel data binding. Le classi derivate quindi espongono [BindableProperty](xref:Xamarin.Forms.BindableProperty) gli oggetti che agiscono come spazio di archiviazione sottostante per i valori delle proprietà (questi vengono definiti [DependencyProperty](xref:System.Windows.DependencyProperty) agli oggetti in WPF).
 
 ### <a name="defining-bindable-properties"></a>La definizione di proprietà associabili
 

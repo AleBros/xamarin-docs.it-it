@@ -1,5 +1,5 @@
 ---
-title: Regolando i parametri di memoria Java per Android designer
+title: Modifica dei parametri di memoria Java per Android Designer
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: cf0df42ba398944a99cc4179b94f0d3cb8ba503e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c564789f704180e9acc9f96dcba5e7d6eb20634
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118058"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617241"
 ---
-# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Regolando i parametri di memoria Java per Android designer
+# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Modifica dei parametri di memoria Java per Android Designer
 
 I parametri di memoria predefiniti che vengono usati quando si avvia il `java` elaborare per Android designer potrebbe essere incompatibile con alcune configurazioni di sistema.
 
@@ -35,7 +35,7 @@ I nomi delle proprietà seguenti corrispondono a java indicato [opzione della ri
 
 1.  Aprire la soluzione in Visual Studio.
 
-2.  Selezionare ciascun progetto Android uno alla volta in Esplora soluzioni e fare clic su [Mostra tutti i file](https://msdn.microsoft.com/en-us/library/4afxey9h.aspx) due volte su ogni progetto. È possibile ignorare i progetti che non contengono alcuna `.axml` i file di layout. Questo passaggio garantisce che ogni directory di progetto contiene un `.csproj.user` file.
+2.  Selezionare ciascun progetto Android uno alla volta in Esplora soluzioni e fare clic su [Mostra tutti i file](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90)) due volte su ogni progetto. È possibile ignorare i progetti che non contengono alcuna `.axml` i file di layout. Questo passaggio garantisce che ogni directory di progetto contiene un `.csproj.user` file.
 
 3.  Uscire da Visual Studio.
 
