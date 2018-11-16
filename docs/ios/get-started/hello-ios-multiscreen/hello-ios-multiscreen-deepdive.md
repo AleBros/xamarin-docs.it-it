@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 61a90632849787e28526f83d53247a0491148148
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: e8b3881db99d569008ce1290f81891f1b3b183d7
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235090"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563810"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS Multiscreen - approfondimento
 
@@ -125,13 +125,13 @@ iOS chiama `PrepareForSegue` appena prima del verificarsi della transizione e pa
 A questo punto, è necessario impostare manualmente il controller di visualizzazione di destinazione dell'elemento Segue. Il codice seguente ottiene un punto di controllo per il controller di visualizzazione di destinazione e ne esegue il cast alla classe appropriata, in questo caso CallHistoryController:
 
 ```csharp
-CallHistoryController callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+CallHistoryController callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
 Passiamo infine l'elenco di numeri di telefono (il modello) da `ViewController` a `CallHistoryController` impostando la proprietà `PhoneHistory` di `CallHistoryController` sull'elenco dei numeri di telefono composti:
 
 ```csharp
-callHistoryContoller.PhoneNumbers = PhoneNumbers;
+callHistoryController.PhoneNumbers = PhoneNumbers;
 ```
 
 Il codice completo per il passaggio dei dati tramite un elemento Segue è il seguente:
@@ -141,10 +141,10 @@ public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
 {
     base.PrepareForSegue (segue, sender);
 
-    var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+    var callHistoryController = segue.DestinationViewController as CallHistoryController;
 
-    if (callHistoryContoller != null) {
-         callHistoryContoller.PhoneNumbers = PhoneNumbers;
+    if (callHistoryController != null) {
+         callHistoryController.PhoneNumbers = PhoneNumbers;
     }
  }
 ```

@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 4d887d5a57aa3a632bd2f6795052c5b38f66a75a
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 4ab6b217190ea633611a9c869ec7e93befcc3c56
+ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527170"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681566"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Suggerimenti di risoluzione dei problemi per xamarin. IOS 
 
@@ -46,9 +46,10 @@ Con l'introduzione della finestra di progettazione di Xamarin per iOS in Visual 
 
 Il membro probabilmente è stato rimosso dal linker e pertanto non esiste nell'assembly in fase di esecuzione.  Esistono diverse soluzioni a questo:
 
--  Aggiungere il [[mantenere]](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) al membro dell'attributo.  Ciò impedirà al linker di rimuoverlo.
--  Quando si richiama [mtouch](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29) , utilizzare il **- nolink** oppure **- linksdkonly** opzioni. -    **-nolink** Disabilita tutti i collegamenti.
--    **-linksdkonly** verranno collegati, ad esempio solo gli assembly fornita da xamarin. IOS, *monotouch* o DLL.
+- Aggiungere il [ `[Preserve]` ](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) al membro dell'attributo.  Ciò impedirà al linker di rimuoverlo.
+- Quando si richiama [ **mtouch**](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29), usare il **- nolink** oppure **- linksdkonly** opzioni:
+  - **-nolink** Disabilita tutti i collegamenti.
+  - **-linksdkonly** verranno collegati, ad esempio solo gli assembly fornita da xamarin. IOS, **DLL**, mantenendo tutti i tipi negli assembly creato dall'utente (ie. i progetti di app).
 
 Si noti che gli assembly vengono collegati in modo che il file eseguibile risultante è più piccolo; di conseguenza, la disabilitazione del collegamento può comportare un file eseguibile maggiore rispetto a cui è auspicabile.
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 219c6bb4cd5718c969ba83a55596ad7b0bab8baf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 815e3ddf44ae94b6b26a325599de1f4c1f6714a8
+ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121126"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681540"
 ---
 # <a name="architecture"></a>Architettura
 
@@ -33,7 +33,8 @@ Per altre informazioni su come le classi Android comunicano con le classi di Run
 
 Pacchetti di applicazioni Android sono contenitori con estensione ZIP con un *file con estensione apk* estensione di file. I pacchetti dell'applicazione xamarin. Android hanno la stessa struttura e il layout come normali pacchetti Android, con le aggiunte seguenti:
 
--   Gli assembly dell'applicazione (livello di integrità contenente) sono *archiviate* non compresso all'interno di *assembly* cartella. Durante il processo di avvio nella versione si basa il *file con estensione apk* viene *mmap()* ed nel processo e gli assembly vengono caricati dalla memoria. Ciò consente all'avvio dell'app più veloce, come gli assembly non sono necessario essere estratto prima dell'esecuzione. - *Nota:* le informazioni sul percorso di Assembly, ad esempio [Assembly.Location](xref:System.Reflection.Assembly.Location) e [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
+-   Gli assembly dell'applicazione (livello di integrità contenente) sono *archiviate* non compresso all'interno di *assembly* cartella. Durante il processo di avvio nella versione si basa il *file con estensione apk* viene *mmap()* ed nel processo e gli assembly vengono caricati dalla memoria. Ciò consente all'avvio dell'app più veloce, come gli assembly non sono necessario essere estratto prima dell'esecuzione.  
+-   *Nota:* le informazioni sul percorso di Assembly, ad esempio [Assembly.Location](xref:System.Reflection.Assembly.Location) e [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
     *non può essere ritenuto affidabile* nella versione compilazioni. Non sono presenti come voci di file System distinti e non dispongono di alcun percorso utilizzabile.
 
 
