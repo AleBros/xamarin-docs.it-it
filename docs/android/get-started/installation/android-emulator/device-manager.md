@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: 8cf11056881af6fd622cae901d518fe27f61d08f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 67ab5b9bd711cb10a20b1365effea1627d0f7688
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115393"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526988"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Gestione di dispositivi virtuali con Android Device Manager
 
@@ -307,7 +307,7 @@ Per configurare un nuovo dispositivo nella schermata **New Device** (Nuovo dispo
 
 9. Android Device Manager aggiunge il nuovo dispositivo all'elenco dei dispositivi virtuali installati, visualizzando un indicatore di stato **Creating** (Creazione in corso) durante la creazione del dispositivo:
 
-   [![Indicatore Stato creazione](device-manager-images/mac/19-creating-the-device-m76-sml.png)](device-manager-images/mac/19-creating-the-device-m76.png#lightbox)
+   [![Indicatore di stato creazione](device-manager-images/mac/19-creating-the-device-m76-sml.png)](device-manager-images/mac/19-creating-the-device-m76.png#lightbox)
 
 10. Dopo aver completato il processo di creazione, il nuovo dispositivo viene visualizzato nell'elenco di dispositivi virtuali installati, con un pulsante **Avvia** che consente di avviarlo:
 
@@ -492,7 +492,7 @@ Se si rileva un problema in Android Device Manager che non può essere risolto c
 
 ## <a name="summary"></a>Riepilogo
 
-Questa guida ha presentato Android Device Manager, disponibile in Strumenti di Visual Studio per Xamarin e in Visual Studio per Mac. Sono state presentate funzionalità essenziali come l'avvio e l'arresto dell'emulatore Android, la selezione di un dispositivo virtuale Android (AVD) per l'esecuzione, la creazione di nuovi dispositivi virtuali e la modifica di un dispositivo virtuale. È stato illustrato come modificare le proprietà di profilo hardware per un'ulteriore personalizzazione e sono stati offerti suggerimenti per la risoluzione dei problemi comuni.
+Questa guida ha presentato Android Device Manager, disponibile in Strumenti di Visual Studio per Xamarin e Visual Studio per Mac. Sono state presentate funzionalità essenziali come l'avvio e l'arresto dell'emulatore Android, la selezione di un dispositivo virtuale Android (AVD) per l'esecuzione, la creazione di nuovi dispositivi virtuali e la modifica di un dispositivo virtuale. È stato illustrato come modificare le proprietà di profilo hardware per un'ulteriore personalizzazione e sono stati offerti suggerimenti per la risoluzione dei problemi comuni.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

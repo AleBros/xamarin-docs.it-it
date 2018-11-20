@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/31/2016
-ms.openlocfilehash: cd46aac653d6477f3fc8240e4f193ec1c4a7bb4c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 215aa88b7e97a67242bd991dde0e66c445b47b0a
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122439"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526422"
 ---
 # <a name="automate-xamarinforms-testing-with-app-center"></a>Automatizzare i test di Xamarin.Forms con App Center
 
@@ -28,7 +28,7 @@ Questa guida presuppone che l'utente abbia familiarità con Xamarin.UITest. Per 
 - [Introduction to App Center Test](/appcenter/test-cloud/) (Introduzione ad App Center Test)
 - [Introduction to UITest](/appcenter/test-cloud/preparing-for-upload/uitest/) (Introduzione a UITest)
 
-Dopo avere aggiunto un progetto UITest a una soluzione Xamarin.Forms, le operazioni richieste per la scrittura e l'esecuzione dei test per un'applicazione Xamarin.Forms sono le stesse per un'applicazione Xamarin.Android o Xamarin.iOS.
+Dopo aver aggiunto un progetto UITest a una soluzione Xamarin.Forms, le operazioni richieste per la scrittura e l'esecuzione dei test per un'applicazione Xamarin.Forms sono le stesse per un'applicazione Xamarin.Android o Xamarin.iOS.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -200,7 +200,7 @@ Dopo avere aggiunto Xamarin.UITest alla soluzione Xamarin.Forms, è possibile cr
 
 ## <a name="summary"></a>Riepilogo
 
-Le applicazioni Xamarin.Forms possono essere facilmente sottoposte a test con **Xamarin.UITest** usando un semplice meccanismo per esporre l'`AutomationId` come identificatore della visualizzazione univoco per l'automazione di test. Dopo avere aggiunto un progetto UITest a una soluzione Xamarin.Forms, le operazioni richieste per la scrittura e l'esecuzione dei test per un'applicazione Xamarin.Forms sono le stesse per un'applicazione Xamarin.Android o Xamarin.iOS.
+Le applicazioni Xamarin.Forms possono essere facilmente sottoposte a test con **Xamarin.UITest** usando un semplice meccanismo per esporre l'`AutomationId` come identificatore della visualizzazione univoco per l'automazione di test. Dopo aver aggiunto un progetto UITest a una soluzione Xamarin.Forms, le operazioni richieste per la scrittura e l'esecuzione dei test per un'applicazione Xamarin.Forms sono le stesse per un'applicazione Xamarin.Android o Xamarin.iOS.
 
 Per informazioni su come inviare test ad App Center Test, vedere [Submitting UITests](/appcenter/test-cloud/preparing-for-upload/uitest/) (Invio di test dell'interfaccia utente). Per altre informazioni su UITest, fare riferimento alla [documentazione di App Center Test](/appcenter/test-cloud/).
 
