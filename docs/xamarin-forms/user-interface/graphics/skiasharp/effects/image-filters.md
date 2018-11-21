@@ -7,12 +7,12 @@ ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: b55067f7b4df66ccce23a7409281f4b8bbc4e9e9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d4029cbd4100b3ad83343b3bee73868b385a02e5
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111644"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171820"
 ---
 # <a name="skiasharp-image-filters"></a>Filtri immagini di SkiaSharp
 
@@ -29,8 +29,8 @@ Questo articolo illustra anche l'utilizzo di un filtro di immagini per creare un
 L'effetto di sfocatura creato dal [ `SKImageFilter.CreateBlur` ](xref:SkiaSharp.SKImageFilter.CreateBlur*) metodo statica ha un vantaggio significativo rispetto ai metodi sfocatura nel [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) classe: filtro dell'immagine può blur un'intera bitmap. Il metodo ha la sintassi seguente:
 
 ```csharp
-public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY, 
-                                                  SKImageFilter input = null, 
+public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
+                                                  SKImageFilter input = null,
                                                   SKImageFilter.CropRect cropRect = null);
 ```
 
@@ -44,7 +44,7 @@ Il **immagine Blur sperimentare** nella pagina il [ **SkiaSharpFormsDemos** ](ht
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Effects.ImageBlurExperimentPage"
              Title="Image Blur Experiment">
-    
+
     <StackLayout>
         <skia:SKCanvasView x:Name="canvasView"
                            VerticalOptions="FillAndExpand"
@@ -59,7 +59,7 @@ Il **immagine Blur sperimentare** nella pagina il [ **SkiaSharpFormsDemos** ](ht
                               Path=Value,
                               StringFormat='Sigma X = {0:F1}'}"
                HorizontalTextAlignment="Center" />
-        
+
         <Slider x:Name="sigmaYSlider"
                 Maximum="10"
                 Margin="10, 0"
@@ -145,11 +145,11 @@ Per mantenere la sfocatura coerenti tra le diverse dimensioni e risoluzioni, imp
 Il [ `SKImageFilter.CreateDropShadow` ](xref:SkiaSharp.SKImageFilter.CreateDropShadow*) metodo statico crea un' `SKImageFilter` oggetto per un'ombreggiatura:
 
 ```csharp
-public static SKImageFilter CreateDropShadow (float dx, float dy, 
-                                              float sigmaX, float sigmaY, 
-                                              SKColor color, 
-                                              SKDropShadowImageFilterShadowMode shadowMode, 
-                                              SKImageFilter input = null, 
+public static SKImageFilter CreateDropShadow (float dx, float dy,
+                                              float sigmaX, float sigmaY,
+                                              SKColor color,
+                                              SKDropShadowImageFilterShadowMode shadowMode,
+                                              SKImageFilter input = null,
                                               SKImageFilter.CropRect cropRect = null);
 ```
 
@@ -159,7 +159,7 @@ Il `dx` e `dy` parametri indicano gli offset orizzontali e verticali dell'ombreg
 
 Il `sigmaX` e `sigmaY` parametri sono più netti fattori per l'ombreggiatura.
 
-Il `color` parametro corrisponde al colore dell'ombreggiatura. Ciò `SKColor` valore può includere la trasparenza. Una possibilità è il valore del colore `SKColors.Black.WithAlpha(0x80)` viene resa più scura qualsiasi colore di sfondo. 
+Il `color` parametro corrisponde al colore dell'ombreggiatura. Ciò `SKColor` valore può includere la trasparenza. Una possibilità è il valore del colore `SKColors.Black.WithAlpha(0x80)` viene resa più scura qualsiasi colore di sfondo.
 
 I due parametri finali sono facoltativi.
 
@@ -265,7 +265,7 @@ public partial class DropShadowExperimentPage : ContentPage
                                     sigmaX,
                                     sigmaY,
                                     SKColors.Red,
-                                    SKDropShadowImageFilterShadowMode.DrawShadowAndForeground); 
+                                    SKDropShadowImageFilterShadowMode.DrawShadowAndForeground);
 
             SKRect textBounds = new SKRect();
             paint.MeasureText(TEXT, ref textBounds);
@@ -280,7 +280,7 @@ public partial class DropShadowExperimentPage : ContentPage
 }
 ```
 
-Ecco il programma in esecuzione in tutti e tre le piattaforme:
+Ecco il programma in esecuzione:
 
 [![Eliminare l'esperimento Shadow](image-filters-images/DropShadowExperiment.png "Drop Shadow esperimento")](image-filters-images/DropShadowExperiment-Large.png#lightbox)
 
@@ -299,22 +299,22 @@ Il `SKImageFilter` classe definisce i sei metodi che hanno nomi e parametri, ele
 
 Questi metodi creano i filtri di immagine che simulano l'effetto di tipi diversi di luce su superfici tridimensionale. Filtro dell'immagine risultante bidimensionali illumina gli oggetti presenti come se fosse presentato nello spazio 3D, che può causare questi oggetti vengano visualizzati con privilegi elevati o scollegato, o con l'illuminazione speculare.
 
-Il `Distant` chiari metodi presuppongono che la luce proviene da una distanza decisamente. Ai fini di illuminanti oggetti, la luce presuppone in modo che punti in un'unica direzione coerente nello spazio 3D, in modo analogo il sole a una piccola superficie della terra. Il `Point` metodi chiari simulano una lampadina nello spazio 3D che emette luce in tutte le direzioni. Il `Spot` light dispone di una posizione e una direzione, molto simile a un torcia. 
+Il `Distant` chiari metodi presuppongono che la luce proviene da una distanza decisamente. Ai fini di illuminanti oggetti, la luce presuppone in modo che punti in un'unica direzione coerente nello spazio 3D, in modo analogo il sole a una piccola superficie della terra. Il `Point` metodi chiari simulano una lampadina nello spazio 3D che emette luce in tutte le direzioni. Il `Spot` light dispone di una posizione e una direzione, molto simile a un torcia.
 
-Percorsi e le direzioni nello spazio 3D sono entrambi specificate con valori del [ `SKPoint3` ](xref:SkiaSharp.SKPoint3) struttura, che è simile a `SKPoint` ma con tre proprietà denominate `X`, `Y`, e `Z`. 
+Percorsi e le direzioni nello spazio 3D sono entrambi specificate con valori del [ `SKPoint3` ](xref:SkiaSharp.SKPoint3) struttura, che è simile a `SKPoint` ma con tre proprietà denominate `X`, `Y`, e `Z`.
 
 Il numero e la complessità dei parametri a questi metodi complicare la sperimentazione con essi. Per iniziare a usare, il **sperimentare luce lontano** pagina consente di sperimentare i parametri per il `CreateDistantLightDiffuse` metodo:
 
 ```csharp
-public static SKImageFilter CreateDistantLitDiffuse (SKPoint3 direction, 
-                                                     SKColor lightColor, 
-                                                     float surfaceScale, 
-                                                     float kd, 
-                                                     SKImageFilter input = null, 
+public static SKImageFilter CreateDistantLitDiffuse (SKPoint3 direction,
+                                                     SKColor lightColor,
+                                                     float surfaceScale,
+                                                     float kd,
+                                                     SKImageFilter input = null,
                                                      SKImageFilter.CropRect cropRect = null);
 ```
 
-La pagina non usa gli ultimi due parametri facoltativi. 
+La pagina non usa gli ultimi due parametri facoltativi.
 
 Tre `Slider` visualizzazioni in XAML i file consentono selezionare il `Z` coordinate del `SKPoint3` valore, il `surfaceScale` parametro e il `kd` parametro, che viene definito nella documentazione dell'API come costante di illuminazione con riflessione diffusa"":
 
@@ -331,7 +331,7 @@ Tre `Slider` visualizzazioni in XAML i file consentono selezionare il `Z` coordi
                            PaintSurface="OnCanvasViewPaintSurface"
                            VerticalOptions="FillAndExpand" />
 
-        <Slider x:Name="zSlider" 
+        <Slider x:Name="zSlider"
                 Minimum="-10"
                 Maximum="10"
                 Margin="10, 0"
@@ -342,7 +342,7 @@ Tre `Slider` visualizzazioni in XAML i file consentono selezionare il `Z` coordi
                               StringFormat='Z = {0:F0}'}"
                HorizontalTextAlignment="Center" />
 
-        <Slider x:Name="surfaceScaleSlider" 
+        <Slider x:Name="surfaceScaleSlider"
                 Minimum="-1"
                 Maximum="1"
                 Margin="10, 0"
@@ -353,7 +353,7 @@ Tre `Slider` visualizzazioni in XAML i file consentono selezionare il `Z` coordi
                               StringFormat='Surface Scale = {0:F1}'}"
                HorizontalTextAlignment="Center" />
 
-        <Slider x:Name="lightConstantSlider" 
+        <Slider x:Name="lightConstantSlider"
                 Minimum="-1"
                 Maximum="1"
                 Margin="10, 0"

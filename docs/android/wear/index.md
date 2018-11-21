@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: bd8973b59853a4898336ba153de4835bad46e232
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 75b78f27fd6b3a726de9075ce36364168401ec60
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113053"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171472"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -51,7 +51,7 @@ Il sito per sviluppatori Android fornisce informazioni dettagliate sulla chiave,
 |Esempio|Descrizione|Schermata|
 |--- |--- |--- |
 |[SkeletonWear](https://developer.xamarin.com/samples/SkeletonWear/)|Un semplice esempio di base dei progetti indossabile, tra cui GridViewPager e notifiche interattive.|![Screenshot della Skeletonwear](images/skeleton.png)|
-|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|Una semplice dimostrazione del controllo WatchViewStub che rileva la forma dello schermo e carica automaticamente il layout corretto.  Verificare il funzionamento WatchViewStub il **Resources/layout/main_actvity.xml** layout.|![Screenshot della WatchViewStub](images/watchview.png)|
+|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|Una semplice dimostrazione del controllo WatchViewStub che rileva la forma dello schermo e carica automaticamente il layout corretto.  Verificare il funzionamento WatchViewStub il **Resources/layout/main_activity.xml** layout.|![Screenshot della WatchViewStub](images/watchview.png)|
 |[RecipeAssistant](https://developer.xamarin.com/samples/RecipeAssistant/)|Dimostrazione delle pagine di notifica Wear, sotto forma di passaggi di "ricetta". Le notifiche vengono create in RecipeService.cs.|![Screenshot della RecipeAssistant](images/recipeassist.png)|
 |[ElizaChat](https://developer.xamarin.com/samples/ElizaChat/)|Esempio divertente dell'interazione con un "assistente personale" chiamato Eliza, uso delle notifiche di interattiva Wear per creare una conversazione che utilizza le risposte scatola.|![Screenshot della ElizaChat](images/eliza.png)|
 |[GridViewPager](https://developer.xamarin.com/samples/GridViewPager/)|GridViewPager implementa il modello di spostamento 2D, in cui l'utente passa verticalmente e orizzontalmente per spostarsi tra le opzioni e il contenuto.|![Screenshot della GridViewPager](images/gridviewpager.png)|

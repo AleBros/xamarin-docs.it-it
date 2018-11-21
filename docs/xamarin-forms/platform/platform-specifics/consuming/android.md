@@ -6,13 +6,13 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/01/2018
-ms.openlocfilehash: 3249a9706ba96ec3690a3a3a6b80a5eb261625e4
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 11/19/2018
+ms.openlocfilehash: 5de5899b01965a33025c8af0c1ae6c09ac60dc9b
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527274"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171287"
 ---
 # <a name="android-platform-specifics"></a>Funzionalità specifiche della piattaforma Android
 
@@ -143,6 +143,7 @@ In Android, per le visualizzazioni di xamarin. Forms viene fornita le funzionali
 
 - Utilizzando la spaziatura interna predefinita e i valori dell'ombreggiatura di pulsanti di Android. Per altre informazioni, vedere [usando i pulsanti Android](#button-padding-shadow).
 - L'impostazione di opzioni dell'editor per la tastiera per il metodo di input un [ `Entry` ](xref:Xamarin.Forms.Entry). Per altre informazioni, vedere [opzioni di impostazione voce Input Method Editor](#entry-imeoptions).
+- Abilitare un'ombreggiatura in una `ImageButton`. Per altre informazioni, vedere [l'abilitazione di un'ombreggiatura in un ImageButton](#imagebutton-drop-shadow).
 - Abilitare lo scorrimento rapido in un [ `ListView` ](xref:Xamarin.Forms.ListView) per altre informazioni, vedere [abilitare lo scorrimento rapido in un ListView](#fastscroll).
 - Controllare se un [ `WebView` ](xref:Xamarin.Forms.WebView) può visualizzare il contenuto misto. Per altre informazioni, vedere [abilitazione contenuto misto in una visualizzazione Web](#webview-mixed-content).
 
@@ -227,6 +228,67 @@ Il `Entry.On<Android>` metodo consente di specificare che questo specifico della
 Il risultato è che un oggetto specificato [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) valore viene applicato per la tastiera per il [ `Entry` ](xref:Xamarin.Forms.Entry), il metodo di input che imposta le opzioni dell'editor:
 
 [![Metodo editor specifici della piattaforma di input voce](android-images/entry-imeoptions.png "movimento di input metodo editor specifici della piattaforma")](android-images/entry-imeoptions-large.png#lightbox "movimento di input specifico della piattaforma editor (metodo)")
+
+<a name="imagebutton-drop-shadow" />
+
+### <a name="enabling-a-drop-shadow-on-a-imagebutton"></a>Abilitazione di un'ombreggiatura in un ImageButton
+
+Questo specifico della piattaforma viene usato per abilitare un'ombreggiatura in una `ImageButton`. Vengono utilizzati in XAML, impostando il `ImageButton.IsShadowEnabled` la proprietà associabile per `true`, insieme a un numero di altre proprietà associabili facoltativi che controllano l'ombreggiatura:
+
+```xaml
+<ContentPage ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout Margin="20">
+       <ImageButton ...
+                    Source="XamarinLogo.png"
+                    BackgroundColor="GhostWhite"
+                    android:ImageButton.IsShadowEnabled="true"
+                    android:ImageButton.ShadowColor="Gray"
+                    android:ImageButton.ShadowRadius="12">
+            <android:ImageButton.ShadowOffset>
+                <Size>
+                    <x:Arguments>
+                        <x:Double>10</x:Double>
+                        <x:Double>10</x:Double>
+                    </x:Arguments>
+                </Size>
+            </android:ImageButton.ShadowOffset>
+        </ImageButton>
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+var imageButton = new Xamarin.Forms.ImageButton { Source = "XamarinLogo.png", BackgroundColor = Color.GhostWhite, ... };
+imageButton.On<Android>()
+           .SetIsShadowEnabled(true)
+           .SetShadowColor(Color.Gray)
+           .SetShadowOffset(new Size(10, 10))
+           .SetShadowRadius(12);
+```
+
+> [!IMPORTANT]
+> Viene disegnata un'ombreggiatura come parte del `ImageButton` in background e lo sfondo viene disegnato solo se il `BackgroundColor` è impostata. Pertanto, un'ombreggiatura non verrà creata se il `ImageButton.BackgroundColor` proprietà non è impostata.
+
+Il `ImageButton.On<Android>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in Android. Il `ImageButton.SetIsShadowEnabled` metodo, nel [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) dello spazio dei nomi, viene usata per controllare se un'ombreggiatura è abilitata nel `ImageButton`. Inoltre, è possibile richiamare i metodi seguenti per controllare l'ombreggiatura:
+
+- `SetShadowColor` : imposta il colore dell'ombreggiatura. Il colore predefinito è [ `Color.Default` ](xref:Xamarin.Forms.Color.Default*).
+- `SetShadowOffset` : imposta l'offset dell'ombreggiatura. L'offset viene modificato la direzione dell'ombreggiatura viene eseguito il cast e viene specificato come un [ `Size` ](xref:Xamarin.Forms.Size) valore. Il `Size` struttura valori sono espressi in unità indipendenti dal dispositivo, con il primo valore in corso la distanza a sinistra (valore negativo) o a destra (valore positivo) e il secondo valore da precedente distanza (negativo) o di sotto (positivo) . Il valore predefinito di questa proprietà è (0,0, 0,0), che comporta l'ombreggiatura viene eseguito il cast intorno a ogni lato del `ImageButton`.
+- `SetShadowRadius`: imposta il raggio sfocatura utilizzato per il rendering dell'ombreggiatura. Il valore del raggio predefinito è 10,0.
+
+> [!NOTE]
+> Lo stato di un'ombreggiatura è possibile eseguire query chiamando il `GetIsShadowEnabled`, `GetShadowColor`, `GetShadowOffset`, e `GetShadowRadius` metodi.
+
+Il risultato è che è possibile abilitare un'ombreggiatura per un `ImageButton`:
+
+![](android-images/imagebutton-drop-shadow.png "Elemento ImageButton con ombreggiatura")
 
 <a name="fastscroll" />
 

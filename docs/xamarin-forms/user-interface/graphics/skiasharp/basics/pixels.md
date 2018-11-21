@@ -1,5 +1,5 @@
 ---
-title: Pixel e unità indipendenti dal dispositivo
+title: Pixel e unità di misura indipendenti dal dispositivo
 description: Questo articolo vengono esaminate le differenze tra coordinate SkiaSharp e xamarin. Forms e questo concetto è illustrato con esempio di codice.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -7,14 +7,14 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: 9da46f128eeb502e0f40e5861f3d04c66491565b
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: d4c890853cb6db334416fc31feb2205a203faa4a
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615301"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171924"
 ---
-# <a name="pixels-and-device-independent-units"></a>Pixel e unità indipendenti dal dispositivo
+# <a name="pixels-and-device-independent-units"></a>Pixel e unità di misura indipendenti dal dispositivo
 
 _Esplorare le differenze tra coordinate SkiaSharp e xamarin. Forms_
 
@@ -97,7 +97,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Il metodo inizia la prima riga del testo con una coordinata X di 20 (per un piccolo margine a sinistra) e una coordinata Y di `fontSpacing`, che è un po' più di ciò che è necessario visualizzare all'altezza della prima riga del testo nella parte superiore dell'area di visualizzazione. Dopo ogni chiamata a `DrawText`, la coordinata Y è aumentata di uno o due incrementi di `fontSpacing`.
 
-Ecco il programma in esecuzione in tutti e tre le piattaforme:
+Ecco il programma in esecuzione:
 
 [![](pixels-images/surfacesize-small.png "Tripla screenshot della pagina di dimensioni di superficie")](pixels-images/surfacesize-large.png#lightbox "tripla screenshot della pagina di dimensioni di Surface")
 
@@ -140,7 +140,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Qui è in esecuzione sulle tre piattaforme:
+Qui è in esecuzione:
 
 [![](pixels-images/ellipsefill-small.png "Tripla screenshot della pagina di dimensioni di superficie")](pixels-images/ellipsefill-large.png#lightbox "tripla screenshot della pagina di dimensioni di Surface")
 

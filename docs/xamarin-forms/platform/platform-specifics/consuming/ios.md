@@ -6,13 +6,13 @@ ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/01/2018
-ms.openlocfilehash: afecf5c173e919bd20015aadd8a874f492dc4e34
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 10/24/2018
+ms.openlocfilehash: 12fd9e477e24058d36128e52b7b5dd9074598be8
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527079"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171794"
 ---
 # <a name="ios-platform-specifics"></a>funzionalità specifiche della piattaforma iOS
 
@@ -783,7 +783,34 @@ Il risultato è che un [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) possibile
 
 In iOS, le funzionalità specifiche della piattaforma seguenti viene fornita per xamarin. Forms [ `Application` ](xref:Xamarin.Forms.Application) classe:
 
+- L'abilitazione di layout del controllo e gli aggiornamenti da eseguire sul thread principale di rendering. Per altre informazioni, vedere [la gestione degli aggiornamenti di controllo nel Thread principale](#update-on-main-thread).
 - Abilitazione di un [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) in una visualizzazione a scorrimento per acquisire e condividere il movimento di zoom con la visualizzazione a scorrimento. Per altre informazioni, vedere [abilitazione di riconoscimento del movimento di zoom simultanee](#simultaneous-pan-gesture).
+
+<a name="update-on-main-thread" />
+
+### <a name="handling-control-updates-on-the-main-thread"></a>Gestione degli aggiornamenti di controllo sul Thread principale
+
+Questo specifico della piattaforma consente il layout dei controlli e gli aggiornamenti da eseguire sul thread principale, invece di viene eseguita su un thread in background di rendering. Si dovrebbe essere necessario raramente, ma in alcuni casi potrebbe impedire arresti anomali del sistema. Relativo utilizzate in XAML, impostando il `Application.HandleControlUpdatesOnMainThread` la proprietà associabile per `true`:
+
+```xaml
+<Application ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Application.HandleControlUpdatesOnMainThread="true">
+    ...
+</Application>
+```
+
+In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+Xamarin.Forms.Application.Current.On<iOS>().SetHandleControlUpdatesOnMainThread(true);
+```
+
+Il `Application.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il `Application.SetHandleControlUpdatesOnMainThread` metodo, nelle [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dello spazio dei nomi, viene usata per controllare se il layout dei controlli e gli aggiornamenti di rendering vengono eseguiti nel thread principale, invece di viene eseguita su un thread in background. Inoltre, il `Application.GetHandleControlUpdatesOnMainThread` metodo può essere utilizzato da restituire se il layout dei controlli e gli aggiornamenti di rendering sono eseguiti sul thread principale.
 
 <a name="simultaneous-pan-gesture" />
 

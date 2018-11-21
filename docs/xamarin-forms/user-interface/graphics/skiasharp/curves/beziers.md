@@ -7,12 +7,12 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 1da0ee6155548a38057e4c7bf49ae5b90d445d79
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 60024be0c39bd215a828acfd8a4ac6294eeac9d8
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615340"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172353"
 ---
 # <a name="three-types-of-bzier-curves"></a>Tre tipi di curve di Bézier
 
@@ -89,7 +89,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Qui è in esecuzione in tutti e tre le piattaforme:
+Qui è in esecuzione:
 
 [![](beziers-images/beziercurve-small.png "Tripla screenshot della pagina della curva di Bézier")](beziers-images/beziercurve-large.png#lightbox "tripla screenshot della pagina della curva di Bezier")
 
@@ -207,7 +207,7 @@ float Magnitude(SKPoint v)
 
 I punti iniziale e finale (`point0` e `point3`) vengono calcolati in base a equazioni parametriche normale per il controllo circle. Poiché il cerchio è centrato al (0, 0), questi aspetti possono anche essere considerati come vettori radiali dal centro del cerchio per la circonferenza. I punti di controllo sono nelle righe che vengono tangente al controllo circle, pertanto sono ad angolo retto per questi vettori radiali. Un vettore ad angolo retto a un altro è semplicemente il vettore originale con le coordinate X e Y scambiate e uno di essi effettuate negativo.
 
-Ecco il programma in esecuzione sulle tre piattaforme con tre diverse angolazioni:
+Ecco il programma in esecuzione con diverse angolazioni:
 
 [![](beziers-images/beziercirculararc-small.png "Tripla screenshot della pagina di arco circolare Bezier")](beziers-images/beziercirculararc-large.png#lightbox "tripla screenshot della pagina di arco circolare curva di Bezier")
 
@@ -289,7 +289,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-I punti sono interpolati basata su un valore sinusoidally intermittenti di `t`. I punti interpolati vengono quindi utilizzati per costruire una serie di quattro curve di Bézier collegate. Di seguito è riportata l'animazione in esecuzione su tre piattaforme che mostra lo stato di avanzamento da un cerchio un quadrato:
+I punti sono interpolati basata su un valore sinusoidally intermittenti di `t`. I punti interpolati vengono quindi utilizzati per costruire una serie di quattro curve di Bézier collegate. Di seguito è riportata l'animazione in esecuzione:
 
 [![](beziers-images/squaringthecircle-small.png "Schermata triplo del Squaring pagina cerchio")](beziers-images/squaringthecircle-large.png#lightbox "tripla screenshot del Squaring pagina cerchio")
 
@@ -338,7 +338,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Potrebbe essere un esercizio ottimo per tracciare queste coordinate su carta grafico per visualizzare il tipo di correlazione. Il simbolo di infinito è centrato intorno al punto (0, 0) e dispone di due cicli centri di (–150, 0) e (150, 0) e raggio pari a 100. Nella serie di `CubicTo` comandi, è possibile visualizzare coordinate dei punti di controllo in modo semplice i valori –95 e –205 X, tali valori sono –150 + /-55, 205 e 95 (150 + /-55), oltre 250 e –250 per i lati destro e sinistro. L'unica eccezione è quando il simbolo di infinito incrocia al centro. In tal caso, i punti di controllo hanno coordinate con una combinazione di 50 e da – 50 per appiattire la curva vicino al centro.
 
-Ecco il simbolo di infinito in tutti e tre le piattaforme:
+Ecco il simbolo di infinito:
 
 [![](beziers-images/bezierinfinity-small.png "Tripla screenshot della pagina di Bézier Infinity")](beziers-images/bezierinfinity-large.png#lightbox "tripla screenshot della pagina del numero infinito di Bézier")
 
@@ -401,7 +401,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-E qui viene eseguita su tutti e tre le piattaforme:
+E qui è in esecuzione:
 
 [![](beziers-images/quadraticcurve-small.png "Tripla screenshot della pagina della curva quadratica")](beziers-images/quadraticcurve-large.png#lightbox "tripla screenshot della pagina della curva quadratica")
 
@@ -479,7 +479,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Qui è in esecuzione in tutti e tre le piattaforme:
+Qui è in esecuzione:
 
 [![](beziers-images/coniccurve-small.png "Tripla screenshot della pagina della curva conica")](beziers-images/coniccurve-large.png#lightbox "tripla screenshot della pagina della curva conica")
 

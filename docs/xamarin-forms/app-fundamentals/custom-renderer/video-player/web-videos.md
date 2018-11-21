@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 566f056bd616c918ce274b9c7406d94fdc265ea2
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7f40d0d11fc932121b4ff7789969bbb1e354024c
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994559"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172210"
 ---
 # <a name="playing-a-web-video"></a>Riproduzione di un video Web
 
@@ -465,7 +465,7 @@ Il `VideoSourceConverter` classe converte la stringa in un `UriVideoSource`. Qua
 
 [![Riproduci Video Web](web-videos-images/playwebvideo-small.png "riprodurre Video Web")](web-videos-images/playwebvideo-large.png#lightbox "riprodurre Video Web")
 
-In ognuna delle tre piattaforme, i controlli di trasporto dissolvenza se non si è abituati, ma può essere ripristinati per visualizzare toccando il video.
+In ognuna delle piattaforme, i controlli di trasporto dissolvenza se non si è abituati, ma può essere ripristinati per visualizzare toccando il video.
 
 È possibile impedire il video di avvio automatico impostando il `AutoPlay` proprietà `false`:
 

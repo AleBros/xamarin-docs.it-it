@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
-ms.openlocfilehash: f46e0d27a39c7734e63bf5603ef2e47cd5fa7aa9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 067a39838fbfe3f1b33ac0d30b5069366b11e407
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105532"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172002"
 ---
-# <a name="creating-a-watch-face"></a>Creazione di una Watch Face
+# <a name="creating-a-watch-face"></a>Creazione di una watch face
 
 _Questa guida illustra come implementare un servizio di volti espressioni di controllo personalizzato per Android Wear 1.0. Vengono fornite istruzioni dettagliate per la creazione di un' servizio faccia watch digitale, seguito da altro codice per creare un quadrante orologio analogico-style._
 
@@ -302,7 +302,7 @@ Questo codice XML esegue le operazioni seguenti:
 
 3.  Dichiara un'immagine drawable chiamata `preview` che verranno visualizzati dalla schermata di selezione selettore di espressioni di controllo.
 
-4.  Include un' `intent-filter` informare Android che `MyWatchFaceSevice` venga visualizzato una watch face.
+4.  Include un' `intent-filter` informare Android che `MyWatchFaceService` venga visualizzato una watch face.
 
 È stata completata il codice per basic `WatchFace` esempio. Il passaggio successivo consiste nell'aggiungere le risorse necessarie.
 

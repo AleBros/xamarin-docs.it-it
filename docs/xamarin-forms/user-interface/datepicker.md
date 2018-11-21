@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/04/2018
-ms.openlocfilehash: 104985a4221cc6e5e6aa56420c1a41ee4c736b8d
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: b5d01aa451c9ab9be081b666e8c7ce51f58a3096
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563693"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172314"
 ---
 # <a name="xamarinforms-datepicker"></a>Xamarin. Forms DatePicker
 
@@ -181,7 +181,7 @@ Quando si esegue l'esempio prima di tutto, entrambi `DatePicker` viste vengono i
 
 [![Giorni tra le date di inizio](datepicker-images/DaysBetweenDatesStart.png "giorni tra le date di inizio")](datepicker-images/DaysBetweenDatesStart-Large.png#lightbox "giorni tra le date di inizio")
 
-Toccando uno del `DatePicker` Visualizza richiama selezione data platform. Tre piattaforme implementano questo controllo selezione data in modi molto diversi, ma ogni approccio è noto agli utenti di tale piattaforma:
+Toccando uno del `DatePicker` Visualizza richiama selezione data platform. Le piattaforme implementano questo controllo selezione data in modi molto diversi, ma ogni approccio è noto agli utenti di tale piattaforma:
 
 [![Selezionare giorni compresi tra date](datepicker-images/DaysBetweenDatesSelect.png "giorni compresi tra le date selezionate")](datepicker-images/DaysBetweenDatesSelect-Large.png#lightbox "giorni compresi tra le date selezionate")
 

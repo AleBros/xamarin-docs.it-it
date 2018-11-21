@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: e0ad67db0671996e594f9c5d48b329a5d676fc1d
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: aa576e4af5d804eb5b8d78643ffa762b8a15c6dc
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563433"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171768"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Nozioni fondamentali sull'associazione dati
 
@@ -327,7 +327,7 @@ Molto meglio. A questo punto è sufficiente consiste arricchisce il modello di e
 </ContentPage>
 ```
 
-Si noti l'uso di `OnPlatform` per definire le dimensioni di un `BoxView` e l'altezza del `ListView` righe. Sebbene i valori per tutte e tre le piattaforme siano gli stessi, il markup può essere facilmente adattato per altri valori ottimizzare la visualizzazione.
+Si noti l'uso di `OnPlatform` per definire le dimensioni di un `BoxView` e l'altezza del `ListView` righe. Sebbene i valori per tutte le piattaforme siano gli stessi, il markup può essere facilmente adattato per altri valori ottimizzare la visualizzazione.
 
 ## <a name="binding-value-converters"></a>Convertitori di valori di associazione
 

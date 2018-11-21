@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 8340e952d30e21a5249edd0fa3319462bbd5ff8b
-ms.sourcegitcommit: 913763498b5d23fa4a92e877760c51164bf1aa41
+ms.openlocfilehash: 5ffc167b1e5695663dff6005f3d7e0ba0ea958db
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150236"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172106"
 ---
 # <a name="xamarinforms-binding-path"></a>Percorso di associazione di xamarin. Forms
 
@@ -134,7 +134,7 @@ Infine, nell'ultimo esempio è simile al secondo, ad eccezione del fatto che fa 
 
 Tale elemento figlio è un `Label`, che dispone di un `Text` vlastnosti typu `String`, che ha un `Length` proprietà. Il primo `Label` report il `TimeSpan` impostato `TimePicker`, pertanto quando viene modificato, che il testo finale `Label` anche le modifiche.
 
-Ecco il programma in esecuzione in tutti e tre le piattaforme:
+Ecco il programma in esecuzione:
 
 [![Percorso variazioni](binding-path-images/pathvariations-small.png "percorso variazioni")](binding-path-images/pathvariations-large.png#lightbox "variazioni di percorso")
 

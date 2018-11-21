@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 0c5e048dd3f3496691b83eb10d377d012efedc72
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: ca9c4ed0871b91bed82f746ccb36af9fb32816c0
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528767"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171781"
 ---
 # <a name="oreo-features"></a>Funzionalità di Oreo
 
@@ -131,7 +131,7 @@ Se si tenta di avviare l'impostazione predefinita basata su GUI Google AVD Manag
 
 -----
 
-Questo messaggio viene visualizzato perché Google non è più disponibile un autonoma GUI AVD manager che supporta le API 26.0 e versioni successive. Per Android Oreo 8.0, è necessario usare Xamarin Android Emulator Manager o la riga di comando `avdmanager` dello strumento per creare dispositivi virtuali per Android Oreo.
+Questo messaggio viene visualizzato perché Google non è più disponibile un computer autonomo GUI AVD manager che supporta le API 26.0 e versioni successive. Per Android Oreo 8.0, è necessario usare Xamarin Android Emulator Manager o la riga di comando `avdmanager` dello strumento per creare dispositivi virtuali per Android Oreo.
 
 Per usare la gestione di dispositivi Android per creare e gestire i dispositivi virtuali, vedere [gestione dei dispositivi virtuali con Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 Per creare dispositivi virtuali senza Android Device Manager, seguire i passaggi nella sezione successiva.
@@ -248,7 +248,7 @@ Android Oreo introduce *tipi di carattere in formato XML*, che rende possibile i
 
 ### <a name="downloadable-fonts"></a>Tipi di carattere scaricabile
 
-A partire da Android Oreo, le app possono richiedere tipi di carattere da un provider, piuttosto che da raggruppare i file in file APK. I tipi di carattere vengono scaricati dalla rete solo in base alle esigenze. Questa funzionalità riduce le dimensioni APK, risparmiando utilizzo telefono cellulare e memoria dei dati. È anche possibile utilizzare questa funzionalità nelle versioni API Android 14 e versioni successive installando il pacchetto Android 26 Libary supporto.
+A partire da Android Oreo, le app possono richiedere tipi di carattere da un provider, piuttosto che da raggruppare i file in file APK. I tipi di carattere vengono scaricati dalla rete solo in base alle esigenze. Questa funzionalità riduce le dimensioni APK, risparmiando utilizzo telefono cellulare e memoria dei dati. È anche possibile usare questa funzionalità nelle versioni API Android 14 e versioni successive installando il pacchetto Android 26 Library di supporto.
 
 Quando l'app necessita di un tipo di carattere, si crea una `FontsRequest` (che specifica il tipo di carattere per il download) e quindi passarlo a un `FontsContract` metodo per scaricare il tipo di carattere. I passaggi seguenti descrivono il processo di download del tipo di carattere in modo più dettagliato:
 

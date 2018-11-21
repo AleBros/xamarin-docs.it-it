@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/27/2018
-ms.openlocfilehash: 8952f98045d9830e9b8f25a7d4b93a5e4310cb32
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 9226e1d26dcc49b6ec82b71f7757eb0e22cd66ec
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351583"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171976"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Risoluzione delle dipendenze in xamarin. Forms
 
@@ -149,7 +149,7 @@ public VideoPlayerRenderer(ILogger logger)
 }
 ```
 
-In tutti e tre le piattaforme, registrazione di tipo con il contenitore di inserimento delle dipendenze viene eseguita mediante il `RegisterTypes` metodo, che viene richiamato prima la piattaforma il caricamento dell'applicazione con il `LoadApplication(new App())` (metodo). L'esempio seguente illustra il `RegisterTypes` metodo nella piattaforma iOS:
+In tutte le piattaforme, registrazione di tipo con il contenitore di inserimento delle dipendenze viene eseguita mediante il `RegisterTypes` metodo, che viene richiamato prima la piattaforma il caricamento dell'applicazione con il `LoadApplication(new App())` (metodo). L'esempio seguente illustra il `RegisterTypes` metodo nella piattaforma iOS:
 
 ```csharp
 void RegisterTypes()
@@ -196,7 +196,7 @@ boxView.Effects.Add(touchEffect);
 
 Il `TouchEffect` classe è una [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) che viene implementato in ogni piattaforma da un `TouchEffect` classe che ha un `PlatformEffect`. La piattaforma `TouchEffect` classe fornisce la funzionalità per il trascinamento di `BoxView` intorno alla pagina. Per altre informazioni su queste classi effetto, vedere [richiamo di eventi dagli effetti](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
 
-In tutti e tre le piattaforme, il `TouchEffect` classe ha il seguente costruttore, che richiede un `ILogger` argomento:
+In tutte le piattaforme, il `TouchEffect` classe ha il seguente costruttore, che richiede un `ILogger` argomento:
 
 ```csharp
 public TouchEffect(ILogger logger)
@@ -205,7 +205,7 @@ public TouchEffect(ILogger logger)
 }
 ```
 
-In tutti e tre le piattaforme, registrazione di tipo con il contenitore di inserimento delle dipendenze viene eseguita mediante il `RegisterTypes` metodo, che viene richiamato prima la piattaforma il caricamento dell'applicazione con il `LoadApplication(new App())` (metodo). L'esempio seguente illustra il `RegisterTypes` metodo nella piattaforma Android:
+In tutte le piattaforme, registrazione di tipo con il contenitore di inserimento delle dipendenze viene eseguita mediante il `RegisterTypes` metodo, che viene richiamato prima la piattaforma il caricamento dell'applicazione con il `LoadApplication(new App())` (metodo). L'esempio seguente illustra il `RegisterTypes` metodo nella piattaforma Android:
 
 ```csharp
 void RegisterTypes()
@@ -240,7 +240,7 @@ public PhotoPicker(ILogger logger)
 }
 ```
 
-In tutti e tre le piattaforme, registrazione di tipo con il contenitore di inserimento delle dipendenze viene eseguita mediante il `RegisterTypes` metodo, che viene richiamato prima la piattaforma il caricamento dell'applicazione con il `LoadApplication(new App())` (metodo). L'esempio seguente illustra il `RegisterTypes` metodo nella piattaforma UWP:
+In tutte le piattaforme, registrazione di tipo con il contenitore di inserimento delle dipendenze viene eseguita mediante il `RegisterTypes` metodo, che viene richiamato prima la piattaforma il caricamento dell'applicazione con il `LoadApplication(new App())` (metodo). L'esempio seguente illustra il `RegisterTypes` metodo nella piattaforma UWP:
 
 ```csharp
 void RegisterTypes()

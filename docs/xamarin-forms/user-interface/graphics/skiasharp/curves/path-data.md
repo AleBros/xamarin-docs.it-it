@@ -7,12 +7,12 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: 5e059cc6ef3a127ae79bd2ed97ade7a8045958f1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3571da005f48bda630b4202b804f3efe9c892f60
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116172"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172327"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Dati del tracciato SVG in SkiaSharp
 
@@ -286,7 +286,7 @@ public class PathDataCatPage : ContentPage
 }
 ```
 
-Ecco il programma in esecuzione in tutti e tre le piattaforme:
+Ecco il programma in esecuzione:
 
 [![](path-data-images/pathdatacat-small.png "Tripla screenshot della pagina del percorso dati Cat")](path-data-images/pathdatacat-large.png#lightbox "tripla screenshot della pagina del percorso dati Cat")
 

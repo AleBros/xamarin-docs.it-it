@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: ecb0adb09c7d6b8bca2f1ee228b8cbdaad1d0314
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 2ab7381baefc6ca013b6c8a5c9f7bf7b5cae8b10
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563953"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171716"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilizzo di estensioni di Markup XAML
 
@@ -137,7 +137,7 @@ L'esempio finale visualizza il `Device.RuntimePlatform` valore. Il `Environment.
 </Label>
 ```
 
-Ecco il codice di esempio in esecuzione in tutti e tre le piattaforme:
+Ecco il codice di esempio in esecuzione:
 
 [![Demo X:Static](consuming-images/staticdemo-small.png "X:Static Demo")](consuming-images/staticdemo-large.png#lightbox "X:Static Demo")
 
@@ -181,7 +181,7 @@ Il **X:Reference Demo** pagina mostra due usi di `x:Reference` con le associazio
 </ContentPage>
 ```
 
-Entrambe `x:Reference` espressioni di usano la versione abbreviata del `ReferenceExtension` nome della classe ed eliminare il `Name=` fa parte dell'espressione. Nel primo esempio, il `x:Reference` estensione di markup è incorporato nel `Binding` estensione di markup. Si noti che il `Source` e `StringFormat` impostazioni sono separate da virgole. Ecco il programma in esecuzione in tutti e tre le piattaforme:
+Entrambe `x:Reference` espressioni di usano la versione abbreviata del `ReferenceExtension` nome della classe ed eliminare il `Name=` fa parte dell'espressione. Nel primo esempio, il `x:Reference` estensione di markup è incorporato nel `Binding` estensione di markup. Si noti che il `Source` e `StringFormat` impostazioni sono separate da virgole. Ecco il programma in esecuzione:
 
 [![Demo X:Reference](consuming-images/referencedemo-small.png "X:Reference Demo")](consuming-images/referencedemo-large.png#lightbox "X:Reference Demo")
 
@@ -449,7 +449,7 @@ Il **X:null Demo** pagina viene illustrato uno scenario quando `x:Null` potrebbe
 
 Quindi si scopre che per uno dei `Label` elementi, si desidera che tutte le impostazioni delle proprietà in implicita `Style` ad eccezione del `FontFamily`, che potrebbe essere il valore predefinito. È possibile definire un'altra `Style` per tale scopo, ma un approccio più semplice consiste nell'impostare il `FontFamily` proprietà del particolare `Label` a `x:Null`, come dimostrato nel centro `Label`.
 
-Ecco il programma in esecuzione su tre piattaforme:
+Ecco il programma in esecuzione:
 
 [![Demo X:null](consuming-images/nulldemo-small.png "X:null Demo")](consuming-images/nulldemo-large.png#lightbox "Demo x: Null")
 
@@ -493,7 +493,7 @@ Il **OnPlatform Demo** pagina viene illustrato come utilizzare il `OnPlatform` e
 
 In questo esempio, tutte e tre `OnPlatform` espressioni di usano la versione abbreviata del `OnPlatformExtension` nome della classe. I tre `OnPlatform` set di estensioni di markup il [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) proprietà del [ `BoxView` ](xref:Xamarin.Forms.BoxView) su valori diversi per iOS, Android e UWP. Le estensioni di markup anche forniscono valori predefiniti per queste proprietà sulle piattaforme che non sono specificate, eliminando la `Default=` fa parte dell'espressione. Si noti che le proprietà di estensione di markup che vengono impostate sono separate da virgole.
 
-Ecco il programma in esecuzione in tutti e tre le piattaforme:
+Ecco il programma in esecuzione:
 
 [![Demo OnPlatform](consuming-images/onplatformdemo-small.png "OnPlatform Demo")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform Demo")
 
@@ -531,7 +531,7 @@ Il **OnIdiom Demo** pagina viene illustrato come utilizzare il `OnIdiom` estensi
 
 In questo esempio, tutte e tre `OnIdiom` espressioni di usano la versione abbreviata del `OnIdiomExtension` nome della classe. I tre `OnIdiom` set di estensioni di markup il [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) proprietà del [ `BoxView` ](xref:Xamarin.Forms.BoxView) su valori diversi per il telefono, tablet e desktop idiomi. Le estensioni di markup anche forniscono valori predefiniti per queste proprietà in termini che non sono specificati, eliminando la `Default=` fa parte dell'espressione. Si noti che le proprietà di estensione di markup che vengono impostate sono separate da virgole.
 
-Ecco il programma in esecuzione in tutti e tre le piattaforme:
+Ecco il programma in esecuzione:
 
 [![Demo OnIdiom](consuming-images/onidiomdemo-small.png "OnIdiom Demo")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom Demo")
 

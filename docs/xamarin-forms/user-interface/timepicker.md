@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2018
-ms.openlocfilehash: 9a534c39d514fec9a0de4bc810f33c972453baa2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f5fdaa55f91656d8560fb9ad2eb2b938d5c9a02f
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111655"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171846"
 ---
 # <a name="xamarinforms-timepicker"></a>Controllo TimePicker xamarin. Forms
 
@@ -158,7 +158,7 @@ Il `SetTriggerTime` metodo calcola un tempo di timer in base il `DateTime.Today`
 
 I segni di graduazione del timer ogni secondo, l'esecuzione di `OnTimerTick` metodo che verifica se il [ `Switch` ](xref:Xamarin.Forms.Switch) è d'e indica se l'ora corrente è maggiore o uguale all'ora di timer. Quando si verifica il tempo di timer, il [ `DisplayAlert` ](xref:Xamarin.Forms.Page.DisplayAlert*) metodo presenta una finestra di dialogo di avviso all'utente un promemoria.
 
-Alla prima esecuzione dell'esempio, il [ `TimePicker` ](xref:Xamarin.Forms.TimePicker) visualizzazione viene inizializzata su 11 am. Se si tocca il `TimePicker` richiama la selezione di tempo della piattaforma. Tre piattaforme implementano la selezione di tempo in modi molto diversi, ma ogni approccio è noto agli utenti di tale piattaforma:
+Alla prima esecuzione dell'esempio, il [ `TimePicker` ](xref:Xamarin.Forms.TimePicker) visualizzazione viene inizializzata su 11 am. Se si tocca il `TimePicker` richiama la selezione di tempo della piattaforma. Le piattaforme di implementano il controllo di selezione ora in modi molto diversi, ma ogni approccio è noto agli utenti di tale piattaforma:
 
 [![Selezionare ora](timepicker-images/timepicker-open.png "selezionare intervallo di tempo")](timepicker-images/timepicker-open-large.png#lightbox "selezionare ora")
 

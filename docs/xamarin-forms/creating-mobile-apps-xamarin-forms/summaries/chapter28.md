@@ -7,16 +7,16 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 1e42fdfdf7f90a4efb639ce8ca94f45a49f59c35
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: eaee5d7921b99ea5e14cca9f03e33699a74b06f3
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563979"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172249"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Riepilogo dei capitoli 28. Posizione e mappe
 
-> [!NOTE] 
+> [!NOTE]
 > Le note in questa pagina indicano le aree in cui xamarin. Forms è diversa dal materiale presentato nel libro.
 
 Xamarin. Forms supporta un [ `Map` ](xref:Xamarin.Forms.Maps.Map) elemento che deriva da `View`. A causa dei requisiti della piattaforma speciali coinvolti nell'uso di mappe, vengono implementate in un assembly separato, **verifica**e prevedono uno spazio dei nomi diversi: `Xamarin.Forms.Maps`.
@@ -194,7 +194,7 @@ Il [LongitudeZoomPage.xaml](https://github.com/xamarin/xamarin-forms-book-sample
 
 ### <a name="the-phones-location"></a>Posizione del telefono
 
-Il [ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser) proprietà della `Map` leggermente differente sulle tre piattaforme come le [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) file illustra:
+Il [ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser) proprietà della `Map` leggermente differente in ciascuna piattaforma come il [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) file illustra:
 
 - In iOS, un punto blu indica la posizione del telefono, ma è necessario passare manualmente non esiste
 - In Android, viene visualizzata un'icona che, quando il push si sposta la mappa alla posizione del telefono

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b1ea26afff1477d762d106db004be82010a2d557
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 7b7fa2ea99a58b875bc1dc579455511aa9bf72d1
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527332"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172093"
 ---
 # <a name="kitkat-features"></a>Funzionalità KitKat
 
@@ -413,7 +413,7 @@ La maggior parte dei dispositivi fornite automaticamente con KitKat scaricare ap
 
 #### <a name="printing-html-content"></a>Contenuto HTML di stampa
 
-KitKat crea automaticamente un [ `PrintDocumentAdapter` ](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/) per una visualizzazione web con `WebView.CreatePrintDocumentAdapter`. Contenuto web di stampa viene eseguita una volta coordinata tra un [ `WebViewClient` ](https://developer.xamarin.com/api/type/Android.Webkit.WebViewClient/) che attende che il contenuto HTML per caricare e consente l'attività in grado di rendere disponibile nel menu di opzioni l'opzione di stampa e il Actvity, che è in attesa per l'utente Selezionare l'opzione di stampa e le chiamate `Print`nella `PrintManager`. In questa sezione descrive la configurazione di base necessaria per stampare sullo schermo contenuto HTML.
+KitKat crea automaticamente un [ `PrintDocumentAdapter` ](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/) per una visualizzazione web con `WebView.CreatePrintDocumentAdapter`. Contenuto web di stampa viene eseguita una volta coordinata tra un [ `WebViewClient` ](https://developer.xamarin.com/api/type/Android.Webkit.WebViewClient/) che attende che il contenuto HTML per caricare e consente l'attività in grado di rendere disponibile nel menu di opzioni l'opzione di stampa e l'attività, che è in attesa per l'utente Selezionare l'opzione di stampa e le chiamate `Print`nella `PrintManager`. In questa sezione descrive la configurazione di base necessaria per stampare sullo schermo contenuto HTML.
 
 Si noti che il caricamento e la stampa di contenuti web richiede l'autorizzazione Internet:
 

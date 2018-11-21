@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 08fa9000a1fd9c97f7881a4a13c15fabfa6dda47
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: faf2c35b49b0b02b9f3b16e19494d2e447361d84
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617670"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171651"
 ---
 # <a name="time-picker"></a>Selezione ora
 
@@ -45,7 +45,7 @@ Quando si fa clic il **PICK ora** pulsante avvii dell'app di esempio di `TimePic
 Nel `TimePickerDialog`, selezionando un'ora e facendo clic sui **OK** pulsante causa il `TimePickerDialog` per richiamare il metodo [IOnTimeSetListener.OnTimeSet](https://developer.xamarin.com/api/member/Android.App.TimePickerDialog+IOnTimeSetListener.OnTimeSet/p/Android.Widget.TimePicker/System.Int32/System.Int32/System.Int32/).
 Questa interfaccia viene implementata per l'hosting `DialogFragment` (`TimePickerFragment`, come descritto di seguito). Facendo clic sui **annullare** pulsante fa sì che il frammento e la finestra di dialogo per essere chiusa.
 
-`DialogFragment` Restituisce l'ora selezionata per l'hosting Actvity in uno dei tre modi:
+`DialogFragment` Restituisce l'ora selezionata per l'host attività in uno dei tre modi:
 
 1. **Richiama un metodo o una proprietà di impostazione** &ndash; l'attività può fornire una proprietà o metodo in modo specifico per l'impostazione di questo valore.
 
