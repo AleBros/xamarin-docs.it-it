@@ -1,54 +1,54 @@
 ---
-title: Il caricamento di applicazione risorse video
-description: In questo articolo viene illustrato come caricare video archiviati come risorse dell'applicazione in un'applicazione di lettore video, usare xamarin. Forms.
+title: Il caricamento di risorse dell'applicazione video
+description: Questo articolo illustra come caricare video archiviati come risorse dell'applicazione in un'applicazione di lettore video con xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: F75BD540-9354-4C17-A119-57F3DEC66D54
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: f28b0dc8e25cb2e498f4101175005f05a5c5a6ef
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 17e9e7061e4329431a0f34abdbbb616a1aff1b43
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241032"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171326"
 ---
-# <a name="loading-application-resource-videos"></a>Il caricamento di applicazione risorse video
+# <a name="loading-application-resource-videos"></a>Il caricamento di risorse dell'applicazione video
 
-Il renderer personalizzato per il `VideoPlayer` visualizzati sono in grado di riprodurre i file video che sono stati incorporati nei progetti singoli piattaforma come risorse dell'applicazione. Tuttavia, la versione corrente di `VideoPlayer` non può accedere alle risorse incorporate in una libreria .NET Standard.
+Il renderer personalizzati per il `VideoPlayer` visualizzazione sono in grado di riprodurre file video che sono stati incorporati nei singoli progetti di piattaforma come risorse dell'applicazione. Tuttavia, la versione corrente di `VideoPlayer` non è possibile accedere alle risorse incorporate in una libreria .NET Standard.
 
-Per caricare queste risorse, creare un'istanza di `ResourceVideoSource` impostando il `Path` proprietà per il nome del file (o la cartella e il nome) della risorsa. In alternativa, è possibile chiamare il metodo statico `VideoSource.FromResource` metodo facciano riferimento alla risorsa. Quindi, impostare il `ResourceVideoSource` dell'oggetto per il `Source` proprietà di `VideoPlayer`.
+Per caricare queste risorse, creare un'istanza di `ResourceVideoSource` impostando la `Path` proprietà per il nome del file (o la cartella e nome file) della risorsa. In alternativa, è possibile chiamare il metodo statico `VideoSource.FromResource` metodo facciano riferimento alla risorsa. Quindi, impostare il `ResourceVideoSource` dell'oggetto per il `Source` proprietà di `VideoPlayer`.
 
 ## <a name="storing-the-video-files"></a>Archiviare i file video
 
-L'archiviazione di un file video nel progetto di piattaforma sarà diverso per le piattaforme di tre:
+L'archiviazione di un file video nel progetto di piattaforma è diversa per ogni piattaforma.
 
 ### <a name="ios-video-resources"></a>risorse video iOS
 
-In un progetto iOS, è possibile archiviare un video nel **risorse** cartella o una sottocartella della cartella di **risorse** cartella. Il file video deve avere un `Build Action` di `BundleResource`. Impostare il `Path` proprietà di `ResourceVideoSource` al nome del file, ad esempio, **MyFile.mp4** per un file nel **risorse** cartella o **MyFolder/MyFile.mp4**, dove **cartella** è una sottocartella della **risorse**.
+In un progetto iOS, è possibile archiviare un video nel **le risorse** cartella o una sottocartella della **risorse** cartella. Il file video deve avere una `Build Action` di `BundleResource`. Impostare il `Path` proprietà di `ResourceVideoSource` al nome del file, ad esempio, **MyFile.mp4** per un file nei **risorse** cartella, o **MyFolder/MyFile.mp4**, in cui **MyFolder** è una sottocartella della **risorse**.
 
-Nel **VideoPlayerDemos** soluzione, il **VideoPlayerDemos.iOS** progetto contiene una sottocartella della cartella **risorse** denominato **video** che contiene un file denominato **iOSApiVideo.mp4**. Si tratta di un breve video che illustra come utilizzare il sito web di Xamarin per individuare la documentazione per iOS `AVPlayerViewController` classe.
+Nel **VideoPlayerDemos** soluzione, il **VideoPlayerDemos.iOS** progetto contiene una sottocartella della **risorse** denominato **video** che contiene un file denominato **iOSApiVideo.mp4**. Si tratta di un breve video che illustra come usare il sito web Xamarin per trovare la documentazione per iOS `AVPlayerViewController` classe.
 
 ### <a name="android-video-resources"></a>Risorse video Android
 
-In un progetto Android, video devono essere archiviati in una sottocartella della **risorse** denominato **raw**. Il **raw** cartella non può contenere le sottocartelle. Assegnare al file video un `Build Action` di `AndroidResource`. Impostare il `Path` proprietà di `ResourceVideoSource` al nome del file, ad esempio, **MyFile.mp4**.
+In un progetto Android, devono essere archiviati i video in una sottocartella della **le risorse** denominate **raw**. Il **raw** non è possibile creare sottocartelle nella cartella. Assegnare al file video un' `Build Action` di `AndroidResource`. Impostare il `Path` proprietà di `ResourceVideoSource` al nome del file, ad esempio **MyFile.mp4**.
 
-Il **VideoPlayerDemos.Android** progetto contiene una sottocartella della cartella **risorse** denominato **raw**, che contiene un file denominato **AndroidApiVideo.mp4**.
+Il **VideoPlayerDemos.Android** progetto contiene una sottocartella della **risorse** denominato **raw**, che contiene un file denominato **AndroidApiVideo.mp4**.
 
 ### <a name="uwp-video-resources"></a>Risorse video UWP
 
-In un progetto Universal Windows Platform, è possibile archiviare i video in qualsiasi cartella nel progetto. Assegnare al file un `Build Action` di `Content`. Impostare il `Path` proprietà di `ResourceVideoSource` per la cartella e il nome, ad esempio, **MyFolder/MyVideo.mp4**.
+In un progetto Universal Windows Platform, è possibile archiviare i video in qualsiasi cartella del progetto. Assegnare al file un' `Build Action` di `Content`. Impostare il `Path` proprietà di `ResourceVideoSource` per la cartella e il nome di file, ad esempio **MyFolder/MyVideo.mp4**.
 
 Il **VideoPlayerDemos.UWP** progetto contiene una cartella denominata **video** con il file **UWPApiVideo.mp4**.
 
 ## <a name="loading-the-video-files"></a>Il caricamento dei file video
 
-Ognuna delle classi renderer piattaforma contiene codice nel relativo `SetSource` metodo di caricamento dei file video archiviati come risorse.
+Ognuna delle classi renderer platform contiene codice nella relativa `SetSource` metodo di caricamento dei file video archiviati come risorse.
 
-### <a name="ios-resource-loading"></a>caricamento delle risorse iOS
+### <a name="ios-resource-loading"></a>caricamento delle risorse di iOS
 
-La versione di iOS `VideoPlayerRenderer` utilizza il `GetUrlForResource` metodo `NSBundle` per il caricamento della risorsa. Il percorso completo deve essere suddiviso in un nome file, l'estensione e directory. Il codice Usa il `Path` classe .NET `System.IO` spazio dei nomi per dividere il percorso del file in questi componenti:
+La versione di iOS `VideoPlayerRenderer` utilizza le `GetUrlForResource` metodo `NSBundle` per il caricamento della risorsa. Il percorso completo deve essere suddiviso in un nome file, estensione e directory. Il codice Usa il `Path` classe in .NET `System.IO` dello spazio dei nomi per dividere il percorso del file in questi componenti:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -80,9 +80,9 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-### <a name="android-resource-loading"></a>Caricamento delle risorse di Android
+### <a name="android-resource-loading"></a>Caricamento delle risorse Android
 
-Il Android `VideoPlayerRenderer` utilizza il nome del pacchetto e nome file per costruire un `Uri` oggetto. Il nome del pacchetto è il nome dell'applicazione, in questo caso **VideoPlayerDemos.Android**, che può essere ottenuto da statico `Context.PackageName` proprietà. I risultanti `Uri` oggetto viene quindi passato al `SetVideoURI` metodo `VideoView`:
+Android `VideoPlayerRenderer` utilizza il nome del pacchetto e nome file per costruire un `Uri` oggetto. Il nome del pacchetto è il nome dell'applicazione, in questo caso **VideoPlayerDemos.Android**, che può essere ottenuto da statico `Context.PackageName` proprietà. I risultanti `Uri` oggetto viene quindi passato per il `SetVideoURI` metodo `VideoView`:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -115,9 +115,9 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-### <a name="uwp-resource-loading"></a>Caricamento delle risorse UWP
+### <a name="uwp-resource-loading"></a>Caricamento delle risorse di piattaforma UWP
 
-La piattaforma UWP `VideoPlayerRenderer` costruisce una `Uri` oggetto per il percorso e lo imposta sul `Source` proprietà di `MediaElement`:
+La piattaforma UWP `VideoPlayerRenderer` costruisce una `Uri` oggetto per il percorso e lo imposta sulle `Source` proprietà della `MediaElement`:
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -147,7 +147,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="playing-the-resource-file"></a>La riproduzione del file di risorse
 
-Il **riprodurre Video risorsa** nella pagina di **VideoPlayerDemos** soluzione utilizza il `OnPlatform` classe per specificare il file video per ogni piattaforma:
+Il **riprodurre Video Resource** nella pagina il **VideoPlayerDemos** soluzione utilizza il `OnPlatform` classe per specificare il file video per ogni piattaforma:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -171,15 +171,15 @@ Il **riprodurre Video risorsa** nella pagina di **VideoPlayerDemos** soluzione u
 </ContentPage>
 ```
 
-Se la risorsa iOS viene archiviata nel **risorse** cartella, e se la risorsa UWP è archiviata nella cartella radice del progetto, è possibile utilizzare lo stesso nome file per tre piattaforme. Se in questo caso, è possibile impostare direttamente a tale nome la `Source` proprietà `VideoPlayer`.
+Se la risorsa di iOS è archiviata nel **risorse** cartella, e se la risorsa UWP viene archiviata nella cartella radice del progetto, è possibile usare lo stesso nome file per ogni piattaforma. Se in questo caso, quindi è possibile impostare direttamente a tale nome la `Source` proprietà di `VideoPlayer`.
 
-Di seguito è in esecuzione in tre piattaforme pagina:
+Ecco la pagina in esecuzione:
 
-[![Riprodurre Video risorsa](loading-resources-images/playvideoresource-small.png "riprodurre Video risorsa")](loading-resources-images/playvideoresource-large.png#lightbox "riprodurre risorse Video")
+[![Riprodurre Video Resource](loading-resources-images/playvideoresource-small.png "riprodurre Video Resource")](loading-resources-images/playvideoresource-large.png#lightbox "riprodurre risorse Video")
 
-Abbiamo visto come [caricare video da un URI Web](web-videos.md) e illustrato come riprodurre le risorse incorporate. È inoltre possibile [caricare video dalla libreria video del dispositivo](accessing-library.md).
+Abbiamo visto come [video vengono caricati da un URI Web](web-videos.md) nonché come riprodurre le risorse incorporate. Inoltre, è possibile [video vengono caricati dal Catalogo video del dispositivo](accessing-library.md).
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo di lettore video (esempio)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demo video Windows Media Player (esempio)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)

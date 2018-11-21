@@ -6,13 +6,13 @@ ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2017
-ms.openlocfilehash: 3eb978780222da2050fc91dfa41c68ef4bd3b6f4
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/24/2018
+ms.openlocfilehash: 85a6bce8a1021c75064ba06f3a5daf69b7fe3e57
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996295"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171378"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Pagina a schede di xamarin. Forms
 
@@ -32,13 +32,13 @@ Il layout di un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)e le relative sch
 
 - In iOS, verrà visualizzato l'elenco di schede nella parte inferiore dello schermo e l'area dei dettagli è sopra. Ogni scheda è presente anche un'immagine dell'icona che deve essere un 30 x 30 PNG con trasparenza per la risoluzione del normale, 60x60 per ad alta risoluzione e 90 x 90 per iPhone 6 Plus risoluzione. Se sono presenti più di cinque schede, una *altre* verrà visualizzata la scheda, che può essere utilizzato per accedere le schede aggiuntive. Per altre informazioni sul caricamento di immagini in un'applicazione xamarin. Forms, vedere [utilizzo di immagini](~/xamarin-forms/user-interface/images.md). Per altre informazioni sui requisiti di icona, vedere [creazione di applicazioni a schede](~/ios/user-interface/controls/creating-tabbed-applications.md).
 
-    > [!NOTE]
+  > [!NOTE]
   > Si noti che il `TabbedRenderer` per iOS ha un sottoponibile a override `GetIcon` metodo che può essere utilizzato per caricare le icone di scheda da un'origine specificata. Questa sostituzione consente di usare le immagini SVG come icone su una `TabbedPage`. Inoltre, possono essere fornite selezionate e le versioni di un'icona.
 
 - In Android, viene visualizzato l'elenco di schede nella parte superiore della schermata per impostazione predefinita, e l'area dei dettagli è inferiore. Elenco di schede, tuttavia, può essere spostato nella parte inferiore della schermata con una specifica della piattaforma. Per altre informazioni, vedere [posizionamento di impostazione TabbedPage sulla barra degli strumenti e il colore](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar).
 
-    > [!NOTE]
-  > Si noti che quando si usa AppCompat in Android, ciascuna scheda verrà anche visualizzata un'icona. Inoltre, il `TabbedPageRenderer` per AppCompat Android ha un sottoponibile a override `SetTabIcon` metodo che può essere utilizzato per caricare le icone di scheda da una classe personalizzata `Drawable`. Questa sostituzione consente di usare le immagini SVG come icone su una `TabbedPage`.
+  > [!NOTE]
+  > Si noti che quando si usa AppCompat in Android, ciascuna scheda verrà anche visualizzata un'icona. Inoltre, il `TabbedPageRenderer` per AppCompat Android ha un sottoponibile a override `GetIconDrawable` metodo che può essere utilizzato per caricare le icone di scheda da una classe personalizzata `Drawable`. Questa sostituzione consente di usare le immagini SVG come icone su una `TabbedPage`, e funziona con entrambi in alto e basso barre schede. In alternativa, l'elemento overridable `SetTabIcon` metodo può essere utilizzato per caricare le icone di scheda da una classe personalizzata `Drawable` per le barre di scheda superiore.
 
 - In Windows tablet fattori di forma, le schede non sono sempre visibili e gli utenti devono scorrere rapidamente verso il basso (o destro del mouse e se dispongono di un mouse collegato) per visualizzare le schede in una `TabbedPage` (come illustrato di seguito).
 

@@ -7,12 +7,12 @@ ms.assetid: 90C2D00A-2876-43EA-A836-538C3318CF93
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 6ad9c099f3a517a4667c0ea8635fbbc3001ae7ca
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3c0ee238e0fc72aaea2f73e11317fea7b7a63fb7
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131665"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171495"
 ---
 # <a name="skiasharp-noise-and-composing"></a>SkiaSharp rumore e composizione
 
@@ -20,7 +20,7 @@ Grafica vettoriale semplice tende a prospettiche. Le linee rette, curve smooth e
 
 ![Esempio Perlin Noise](noise-images/NoiseSample.png "Perlin Noise esempio")
 
-Come si può notare, ogni pixel contenuto non è un valore di colore casuale. La continuità dal pixel per pixel comporta forme casuale. 
+Come si può notare, ogni pixel contenuto non è un valore di colore casuale. La continuità dal pixel per pixel comporta forme casuale.
 
 Il supporto di Perlin noise in Skia è basato su una specifica del W3C per CSS e SVG. Sezione 8.20 dei [ **a livello di modulo di filtro effetti 1** ](http://www.w3.org/TR/filter-effects-1/#feTurbulenceElement) include gli algoritmi di sottostante Perlin noise nel codice C.
 
@@ -36,7 +36,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
 
 Entrambi i metodi sono inclusi anche in versioni di overload con un'ulteriore `SKPointI` parametro. La sezione [ **affiancamento Perlin noise** ](#tiling-perlin-noise) descrive questi overload.
 
-I due `baseFrequency` gli argomenti sono definiti nella documentazione di SkiaSharp compreso tra 0 e 1 i valori positivi, ma possono essere impostati per i valori più alti. Maggiore è questo valore, maggiore è la modifica dell'immagine casuale nelle direzioni orizzontale e verticale. 
+I due `baseFrequency` gli argomenti sono definiti nella documentazione di SkiaSharp compreso tra 0 e 1 i valori positivi, ma possono essere impostati per i valori più alti. Maggiore è questo valore, maggiore è la modifica dell'immagine casuale nelle direzioni orizzontale e verticale.
 
 Il `numOctaves` valore è un numero intero pari a 1 o versione successiva. In relazione a un fattore di iterazione per gli algoritmi. Ciascuna ottava aggiuntiva favorisce un effetto pari alla metà dell'ottava precedente, in modo che l'effetto diminuisca con i valori più alti octave.
 
@@ -51,7 +51,7 @@ Il **Perlin Noise** pagina il [ **SkiaSharpFormsDemos**)](https://developer.xama
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Effects.PerlinNoisePage"
              Title="Perlin Noise">
-    
+
     <StackLayout>
         <skia:SKCanvasView x:Name="canvasView"
                            VerticalOptions="FillAndExpand"
@@ -64,7 +64,7 @@ Il **Perlin Noise** pagina il [ **SkiaSharpFormsDemos**)](https://developer.xama
 
         <Label x:Name="baseFrequencyXText"
                HorizontalTextAlignment="Center" />
-        
+
         <Slider x:Name="baseFrequencyYSlider"
                 Maximum="4"
                 Margin="10, 0"
@@ -72,7 +72,7 @@ Il **Perlin Noise** pagina il [ **SkiaSharpFormsDemos**)](https://developer.xama
 
         <Label x:Name="baseFrequencyYText"
                HorizontalTextAlignment="Center" />
-        
+
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="Center"
                      Margin="10">
@@ -81,7 +81,7 @@ Il **Perlin Noise** pagina il [ **SkiaSharpFormsDemos**)](https://developer.xama
                                   Path=Value,
                                   StringFormat='Number of Octaves: {0:F0}'}"
                    VerticalOptions="Center" />
-            
+
             <Stepper x:Name="octavesStepper"
                      Minimum="1"
                      ValueChanged="OnStepperValueChanged" />
@@ -141,7 +141,7 @@ public partial class PerlinNoisePage : ContentPage
 
         using (SKPaint paint = new SKPaint())
         {
-            paint.Shader = 
+            paint.Shader =
                 SKShader.CreatePerlinNoiseFractalNoise(baseFreqX,
                                                        baseFreqY,
                                                        numOctaves,
@@ -150,7 +150,7 @@ public partial class PerlinNoisePage : ContentPage
             SKRect rect = new SKRect(0, 0, info.Width, info.Height / 2);
             canvas.DrawRect(rect, paint);
 
-            paint.Shader = 
+            paint.Shader =
                 SKShader.CreatePerlinNoiseTurbulence(baseFreqX,
                                                      baseFreqY,
                                                      numOctaves,
@@ -193,7 +193,7 @@ Questi metodi creano un motivo ripetuto della dimensione specificata. In ogni ri
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Effects.TiledPerlinNoisePage"
              Title="Tiled Perlin Noise">
-             
+
     <StackLayout>
         <skia:SKCanvasView x:Name="canvasView"
                            VerticalOptions="FillAndExpand"
@@ -257,7 +257,7 @@ public partial class TiledPerlinNoisePage : ContentPage
                 using (SKPaint paint = new SKPaint())
                 {
                     paint.Shader = SKShader.CreatePerlinNoiseTurbulence(
-                                        0.02f, 0.02f, 1, seed, 
+                                        0.02f, 0.02f, 1, seed,
                                         new SKPointI(TILE_SIZE, TILE_SIZE));
 
                     bitmapCanvas.DrawRect(tileRect, paint);
@@ -267,13 +267,13 @@ public partial class TiledPerlinNoisePage : ContentPage
             // Draw tiled bitmap shader on canvas
             using (SKPaint paint = new SKPaint())
             {
-                paint.Shader = SKShader.CreateBitmap(bitmap, 
-                                                     SKShaderTileMode.Repeat, 
+                paint.Shader = SKShader.CreateBitmap(bitmap,
+                                                     SKShaderTileMode.Repeat,
                                                      SKShaderTileMode.Repeat);
                 canvas.DrawRect(info.Rect, paint);
             }
 
-            // Draw rectangle showing tile 
+            // Draw rectangle showing tile
             using (SKPaint paint = new SKPaint())
             {
                 paint.Style = SKPaintStyle.Stroke;
@@ -290,22 +290,22 @@ public partial class TiledPerlinNoisePage : ContentPage
 Dopo che la bitmap è stato creato, un altro `SKPaint` oggetto viene usato per creare un modello affiancato bitmap chiamando `SKShader.CreateBitmap`. Si noti che i due argomenti di `SKShaderTileMode.Repeat`:
 
 ```csharp
-paint.Shader = SKShader.CreateBitmap(bitmap, 
-                                     SKShaderTileMode.Repeat, 
+paint.Shader = SKShader.CreateBitmap(bitmap,
+                                     SKShaderTileMode.Repeat,
                                      SKShaderTileMode.Repeat);
 ```
 
-Questo shader viene utilizzato per coprire l'area di disegno. Infine, un'altra `SKPaint` oggetto viene usato per disegnare un rettangolo che mostra le dimensioni della bitmap originale. 
+Questo shader viene utilizzato per coprire l'area di disegno. Infine, un'altra `SKPaint` oggetto viene usato per disegnare un rettangolo che mostra le dimensioni della bitmap originale.
 
-Solo il `seed` parametro è selezionabile dall'interfaccia utente. Se lo stesso `seed` modello viene usato in tre piattaforme, Visualizza lo stesso modello. Diversi `seed` valori determinano in modi diversi:
+Solo il `seed` parametro è selezionabile dall'interfaccia utente. Se lo stesso `seed` modello viene usato in ogni piattaforma, Visualizza lo stesso modello. Diversi `seed` valori determinano in modi diversi:
 
 [![Affiancato Perlin Noise](noise-images/TiledPerlinNoise.png "affiancato Perlin Noise")](noise-images/TiledPerlinNoise-Large.png#lightbox)
 
-Il modello di 200 pixel quadrato nell'angolo superiore sinistro vengono trasmessi senza problemi gli altri riquadri. 
+Il modello di 200 pixel quadrato nell'angolo superiore sinistro vengono trasmessi senza problemi gli altri riquadri.
 
 ## <a name="combining-multiple-shaders"></a>La combinazione di più gli shader
 
-Il `SKShader` classe include una [ `CreateColor` ](xref:SkiaSharp.SKShader.CreateColor*) metodo che consente di creare uno shader con un colore a tinta unita specificato. Questo shader non è molto utile di per sé perché è sufficiente impostare il colore il `Color` proprietà del `SKPaint` dell'oggetto e impostare il `Shader` proprietà su null. 
+Il `SKShader` classe include una [ `CreateColor` ](xref:SkiaSharp.SKShader.CreateColor*) metodo che consente di creare uno shader con un colore a tinta unita specificato. Questo shader non è molto utile di per sé perché è sufficiente impostare il colore il `Color` proprietà del `SKPaint` dell'oggetto e impostare il `Shader` proprietà su null.
 
 Ciò `CreateColor` metodo risulta utile in un altro metodo che `SKShader` definisce. Questo metodo è [ `CreateCompose` ](xref:SkiaSharp.SKShader.CreateCompose(SkiaSharp.SKShader,SkiaSharp.SKShader)), che combina due degli shader. Di seguito è riportata la sintassi:
 

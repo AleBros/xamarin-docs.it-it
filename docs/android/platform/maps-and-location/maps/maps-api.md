@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: fb7d18e6434e32941531d2c37cd8b938ec21ba90
-ms.sourcegitcommit: 28dbb5fa2fbcc7e66cd09c1d0077496fcdefac56
+ms.openlocfilehash: 8df8a4f5e59675164e7d06b682c61094078edc4f
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51027327"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171040"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>Usando l'API di Google Maps nell'applicazione
 
@@ -223,7 +223,7 @@ public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
 
 Esistono cinque tipi diversi di mappe disponibili dall'API di Google viene eseguito il mapping:
 
--  **Normale** -si tratta del tipo di mappa predefinito. Visualizza le strade e importante funzionalità naturale con alcuni punti di vista di interesse (ad esempio i bridge di edifici e).
+-  **Normale** -si tratta del tipo di mappa predefinito. Visualizza le strade e importante funzionalità naturale con alcuni punti fittizi di interesse (ad esempio i bridge di edifici e).
 
 -  **Satellite** -questa mappa Mostra fotografia satellite.
 

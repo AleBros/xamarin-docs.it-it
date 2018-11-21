@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: f79ee7af9106eea8a4792c0e4bb10c5ad5a367a9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 53179170afa1381a562699a39baaa716ecc6a5a6
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111077"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171196"
 ---
 # <a name="images-in-xamarinforms"></a>Immagini in xamarin. Forms
 
@@ -40,7 +40,7 @@ Il [ `Aspect` ](xref:Xamarin.Forms.Image.Aspect) proprietà determina come l'imm
 
 - [`Fill`](xref:Xamarin.Forms.Aspect.Fill) -Si estende sull'immagine per completamente ed esattamente riempire l'area di visualizzazione. Questo può comportare l'immagine venga distorta.
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -Ritaglia l'immagine in modo da riempire l'area di visualizzazione mantenendo le proporzioni (ie. Nessun distorsioni).
-- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -Consegna l'immagine, se necessario, in modo che l'intera immagine rientri nell'area di visualizzazione, con uno spazio vuoto aggiunto per i primi/ultimi o i lati a seconda se l'immagine è ampia e un'altezza.
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -Consegna l'immagine, se necessario, in modo che l'intera immagine rientri nell'area di visualizzazione, con uno spazio vuoto aggiunto per i primi/ultimi o i lati a seconda che l'immagine è ampia e un'altezza.
 
 È possibile caricare le immagini da un [file locale](#Local_Images), un [risorsa incorporata](#embedded-images), o [scaricato](#Downloading_Images).
 

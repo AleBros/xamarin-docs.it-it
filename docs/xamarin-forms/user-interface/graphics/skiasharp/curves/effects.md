@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: bd865471e3efe42c44a8996a8e364b1c478b69e7
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 8354539288613353dcb7a792ace335daa5dc8f27
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615678"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171144"
 ---
 # <a name="path-effects-in-skiasharp"></a>Effetti per il tracciato in SkiaSharp
 
@@ -923,7 +923,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-È possibile usare questo effetto con riempimento in base o che traccia il `Style` proprietà del `SKPaint` oggetto. Ecco in tutte e tre le piattaforme:
+È possibile usare questo effetto con riempimento in base o che traccia il `Style` proprietà del `SKPaint` oggetto. Qui è in esecuzione:
 
 [![](effects-images/anotherroundedheptagon-small.png "Tripla screenshot della pagina di un altro Heptagon arrotondato")](effects-images/anotherroundedheptagon-large.png#lightbox "tripla screenshot della pagina di un altro Heptagon arrotondato")
 
@@ -1068,7 +1068,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Qui è in esecuzione in modalità orizzontale in tutti e tre le piattaforme:
+Qui è in esecuzione in modalità orizzontale:
 
 [![](effects-images/jittertext-small.png "Screenshot della pagina di instabilità testo è pari al triplo")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
 

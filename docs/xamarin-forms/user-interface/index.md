@@ -6,13 +6,13 @@ ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/17/2018
-ms.openlocfilehash: 62e170558fc908b0ec13669b60eb08495c183b09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/14/2018
+ms.openlocfilehash: 452596d3eda9daae4b985490929c1e920a9d936e
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104953"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170910"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Viste di interfaccia utente di xamarin. Forms
 
@@ -53,6 +53,10 @@ Come incorporare la grafica in un'applicazione xamarin. Forms usando SkiaSharp.
 ## <a name="imagesimagesmd"></a>[Immagini](images.md)
 
 Le immagini possono essere condivisi tra piattaforme con xamarin. Forms, possano essere caricate in modo specifico per ogni piattaforma, o possono essere scaricati per la visualizzazione.
+
+## <a name="imagebutonimagebuttonmd"></a>[ImageButon](imagebutton.md)
+
+Il `ImageButton` Visualizza un'immagine e risponde a un tocco o clic che indirizza un'applicazione per eseguire una determinata attività.
 
 ## <a name="layoutslayoutsindexmd"></a>[Layout](layouts/index.md)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: a876e81c67b6ec61a2cb29143cb001a7d6160032
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 8efd93204b848113e0ed95c8066a5506eb517ac6
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998147"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170949"
 ---
 # <a name="xamarinforms-string-formatting"></a>Formattazione delle stringhe di xamarin. Forms
 
@@ -119,7 +119,7 @@ Se è necessario per la visualizzazione verso sinistra o parentesi graffe nella 
 
 L'ultimo gruppo sezione la `BindingContext` al valore di `Math.PI` e li visualizza con formattazione predefinita e due tipi diversi di formattazione numerica.
 
-Ecco il programma in esecuzione in tutti e tre le piattaforme:
+Ecco il programma in esecuzione:
 
 [![Formattazione delle stringhe](string-formatting-images/stringformatting-small.png "formattazione delle stringhe")](string-formatting-images/stringformatting-large.png#lightbox "formattazione delle stringhe")
 

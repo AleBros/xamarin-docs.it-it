@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 12a97989ac675d2504a2c626da73ebccb596b99b
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: d83b2f249bb0afe4257544d6da731dbc9ac3e317
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563563"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170936"
 ---
 # <a name="xamarinforms-slider"></a>Dispositivo di scorrimento di xamarin. Forms
 
@@ -109,7 +109,7 @@ Ecco il programma in esecuzione in iOS, Android e Universal Windows Platform (UW
 
 [![Codice di base Slider](slider-images/BasicSliderCode.png "Slider base codice")](slider-images/BasicSliderCode-Large.png#lightbox)
 
-Il secondo `Label` Visualizza il testo "(non inizializzato)" finché non la `Slider` manipolato, in modo che il primo `ValueChanged` evento generato. Si noti che il numero di posizioni decimali a cui vengono visualizzati diverso per tre piattaforme. Queste differenze riguardano le implementazioni della piattaforma del `Slider` e sono descritti più avanti in questo articolo nella sezione [differenze di implementazione della piattaforma](#implementations).
+Il secondo `Label` Visualizza il testo "(non inizializzato)" finché non la `Slider` manipolato, in modo che il primo `ValueChanged` evento generato. Si noti che il numero di posizioni decimali a cui vengono visualizzati diverso per ogni piattaforma. Queste differenze riguardano le implementazioni della piattaforma del `Slider` e sono descritti più avanti in questo articolo nella sezione [differenze di implementazione della piattaforma](#implementations).
 
 ### <a name="creating-a-slider-in-xaml"></a>Creazione di un dispositivo di scorrimento in XAML
 
