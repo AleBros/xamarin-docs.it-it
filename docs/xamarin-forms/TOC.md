@@ -134,6 +134,7 @@
 ### [DatePicker](user-interface/datepicker.md)
 ### [Grafica con SkiaSharp](user-interface/graphics/skiasharp/index.md)
 ### [Immagini](user-interface/images.md)
+### [ImageButton](user-interface/imagebutton.md)
 ### [Layout](user-interface/layouts/index.md)
 #### [StackLayout](user-interface/layouts/stack-layout.md)
 #### [AbsoluteLayout](user-interface/layouts/absolute-layout.md)
