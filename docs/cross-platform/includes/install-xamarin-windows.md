@@ -1,11 +1,11 @@
 ---
 ms.topic: include
 ms.openlocfilehash: bcf68de7261e25c94f042f4479a39e449c1929fb
-ms.sourcegitcommit: 28dbb5fa2fbcc7e66cd09c1d0077496fcdefac56
+ms.sourcegitcommit: 676c5a6795ab4896ccd1b288424bf2040b1208aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51210584"
+ms.lasthandoff: 11/25/2018
+ms.locfileid: "52295074"
 ---
 Xamarin può essere installato durante una _nuova_ installazione di Visual Studio 2017 seguendo questa procedura:
 
