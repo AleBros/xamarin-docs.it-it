@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: df6ef208957d8dae229ebb8aee2304444b7d18fe
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4f0378f7e2fe29a5d11c2cbc02fc736adf12577c
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111284"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171729"
 ---
 # <a name="manually-uploading-the-apk"></a>Caricamento manuale dell'APK
 
@@ -169,7 +169,7 @@ Quando gli utenti cercano le applicazioni sul sito Web di Google Play sono in gr
 
 -   [uses-feature](http://developer.android.com/guide/topics/manifest/uses-feature-element.html) &ndash; Questo elemento del manifesto dichiara le funzionalità hardware o software che un dispositivo deve avere affinché l'applicazione funzioni. Questo attributo è solo informativo. Google Play non visualizzerà l'applicazione nei dispositivi che non soddisfano questo filtro. È comunque possibile scaricare l'applicazione o installarla manualmente. Questo elemento deve essere aggiunto al file **AndroidManifest.xml** manualmente. 
 
--   [uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html) &ndash; Questo elemento specifica che determinate librerie devono essere presenti nel dispositivo, ad esempio Google Maps. Questo elemento può anche essere specificato con `Android.App.UsesLibaryAttribute`. Ad esempio: 
+-   [uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html) &ndash; Questo elemento specifica che determinate librerie devono essere presenti nel dispositivo, ad esempio Google Maps. Questo elemento può anche essere specificato con `Android.App.UsesLibraryAttribute`. Ad esempio: 
 
     ```csharp
     [assembly: UsesLibrary("com.google.android.maps", true)]
