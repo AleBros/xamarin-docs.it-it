@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: 5165d8f61973b82105c1b2e39d8bf316d0c2b42b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c61ed731f22122637963c28c42f44b84ec7fa9f4
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121425"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459954"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>Certified società di consulenza partner per offrire soluzioni per dispositivi mobili
 
@@ -290,7 +290,7 @@ _Nell'elenco dalla località primaria, molti partner di fornire servizi tra i bo
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
-|[Vista di alto Software](http://www.highviewsoft.com)|Pechino, Cina|Visionsoft Software si concentra sulla capacità di fornire APP multipiattaforma e progettazione di programma un servizio basato sul cloud, sviluppo, implementazione, corsi di formazione tecnica e altri servizi di consulenza|
+|[Vista di alto Software](http://www.highviewsoft.com)|Pechino, Cina|Visualizzazione elevata del Software si concentra sulla capacità di fornire APP multipiattaforma e progettazione di programma un servizio basato sul cloud, sviluppo, implementazione, corsi di formazione tecnica e altri servizi di consulenza|
 
 
 ## <a name="colombia"></a>Colombia

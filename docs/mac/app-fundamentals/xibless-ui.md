@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: e41f19c1a2d02537f300ae82b7f3d45bc6571e1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 076c6464359a58c2b36d157d9620673b0644cd4a
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112462"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459837"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>progettazione dell'interfaccia utente.Storyboard/.xib-less in xamarin. Mac
 
@@ -34,7 +34,7 @@ Quando si crea una nuova applicazione xamarin. Mac Cocoa, si ottiene una normale
 
 Per passare a una finestra Xibless per un'applicazione, effettuare le operazioni seguenti:
 
-1. Aprire l'applicazione che si desidera interrompere l'uso di `.stroyboard` o file con estensione xib per definire l'interfaccia utente in Visual Studio per Mac.
+1. Aprire l'applicazione che si desidera interrompere l'uso di `.storyboard` o file con estensione xib per definire l'interfaccia utente in Visual Studio per Mac.
 2. Nel **riquadro della soluzione**, fare clic sul **Main. Storyboard** oppure **MainWindow.xib** file e selezionare **rimuovere**: 
 
     ![Rimozione di storyboard principale o nella finestra](xibless-ui-images/switch01.png "rimuovendo dello storyboard principale o la finestra")

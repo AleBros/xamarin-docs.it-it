@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: e4ab46994ed25daaef95a709e4f9df94f3a21cd0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6a0081a9d4ee4df72dc3eecfd5c4da318c5c5d78
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114678"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459915"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barre schede e controller di barra schede in xamarin. IOS
 
@@ -87,7 +87,7 @@ namespace TabbedApplication {
 
                 public TabController ()
                 {
-                        tab1 = new UIViewController();
+            tab1 = new UIViewController();
                         tab1.Title = "Green";
                         tab1.View.BackgroundColor = UIColor.Green;
 
@@ -121,23 +121,23 @@ Per ottenere il `UITabController` per caricare come prima schermata, è necessar
 
 ```csharp
 [Register ("AppDelegate")]
-        public partial class AppDelegate : UIApplicationDelegate
-        {
-                UIWindow window;
-                TabController tabController;
+public partial class AppDelegate : UIApplicationDelegate
+{
+    UIWindow window;
+    TabController tabController;
 
-                public override bool FinishedLaunching (UIApplication app, NSDictionary options)
-                {
-                        window = new UIWindow (UIScreen.MainScreen.Bounds);
+    public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+    {
+        window = new UIWindow (UIScreen.MainScreen.Bounds);
 
-                        var tabController = new TabController ();
-                        window.RootViewController = tabController;
+        tabController = new TabController ();
+        window.RootViewController = tabController;
 
-                        window.MakeKeyAndVisible ();
-            
-                        return true;
-                }
-        }
+        window.MakeKeyAndVisible ();
+
+        return true;
+    }
+}
 ```
 
 Se si esegue l'applicazione a questo punto, il `UITabBarController` verrà caricato con la prima scheda selezionata per impostazione predefinita. Selezione di una delle altre schede del controller associato visualizzazione risultati presentati dal `UITabBarController,` come illustrato di seguito in cui l'utente finale è selezionata la seconda scheda:
@@ -309,9 +309,9 @@ Quando l'utente rilascia il `aButton`, vogliamo un evento TouchUpInside venga at
 
 ```csharp
 partial void InitialActionCompleted (UIButton sender)
-    {
-      aButton.Hidden = true;  
-    }
+{
+    aButton.Hidden = true;  
+}
 ```
 
 Salvare il file ed eseguire l'applicazione. Dovrebbe essere visualizzato uno viene visualizzato sullo schermo e il pulsante non si ripresenta al ritocchi.
@@ -352,7 +352,6 @@ public override void ViewDidLoad ()
      if (ParentViewController != null){
        aButton.Hidden = true;
      }
-
 }
 ```
 
