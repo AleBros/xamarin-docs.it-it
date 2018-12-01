@@ -1,5 +1,5 @@
 ---
-title: Grafico a torta 9 Android
+title: Android 9 Pie
 description: Come iniziare a sviluppare App per Android a torta 9 usando xamarin. Android.
 ms.prod: xamarin
 ms.assetid: 6575DD32-9DC8-44E6-85EF-1F8BD07D3780
@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: c353341af8899960b12437d55602415a02953cbc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cd1c374fa68420e1923ef4dee0bb37a4665f3535
+ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111675"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710023"
 ---
 # <a name="android-pie-features"></a>Funzionalità di Android a torta
 
@@ -24,9 +24,7 @@ _Come iniziare a sviluppare App per Android a torta 9 usando xamarin. Android._
 
 Questo articolo è strutturato per aiutarti a iniziare lo sviluppo di App xamarin. Android per Android a torta. Viene spiegato come installare gli aggiornamenti necessari, configurare il SDK e preparare un emulatore o dispositivo per il test. Inoltre fornisce una descrizione delle nuove funzionalità in Android a torta e fornisce codice sorgente di esempio che illustra come usare alcune delle principali funzionalità di Android a torta.
 
-![Anteprima](~/media/shared/preview.png)
-
-Xamarin. Android 9.0 fornisce supporto in anteprima per Android a torta. Per altre informazioni sul supporto di xamarin. Android per Android a torta, vedere la [Preview 3 per gli sviluppatori di Android P](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) note sulla versione.
+Xamarin. Android 9.0 fornisce il supporto per Android a torta. Per altre informazioni sul supporto di xamarin. Android per Android a torta, vedere la [Preview 3 per gli sviluppatori di Android P](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) note sulla versione.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -142,7 +140,7 @@ Si noti che uno sfondo bianco dell'app non è consentito estendere nell'area di 
 
 Se sono necessarie informazioni più dettagliate sull'area di ritaglio nel dispositivo, è possibile usare le nuove [DisplayCutout](https://developer.android.com/reference/android/view/DisplayCutout.html) classe. `DisplayCutout` rappresenta l'area di visualizzazione non può essere usata per visualizzare il contenuto. È possibile usare queste informazioni per recuperare la posizione e la forma del ritaglio in modo che l'app non tenta di visualizzare il contenuto in quest'area non funzionali.
 
-Per altre informazioni sulle nuove funzionalità di ritaglio P Android, vedere [visualizzare il supporto di ritaglio](https://developer.android.com/preview/features#cutout).
+Per altre informazioni sulle nuove funzionalità di ritaglio P Android, vedere [visualizzare il supporto di ritaglio](https://developer.android.com/about/versions/pie/android-9.0#cutout).
 
 
 
@@ -223,12 +221,12 @@ Il nuovo [WifiRttManager](https://developer.android.com/reference/android/net/wi
 
 ### <a name="multi-camera-support"></a>Supporto multi-della fotocamera
 
-Molti dispositivi Android più recenti sono provvisti di videocamera dual-front e/o dual-back che sono utili per funzionalità quali visione stereo, effetti visivi avanzati e funzionalità migliorate di zoom. P Android introduce una nuova [multi-fotocamera](https://developer.android.com/preview/features#camera) API che rende possibile all'app di usare un *fotocamera logica* (o *fotocamera più logica*) supportata da due o più fotocamere fisici.
+Molti dispositivi Android più recenti sono provvisti di videocamera dual-front e/o dual-back che sono utili per funzionalità quali visione stereo, effetti visivi avanzati e funzionalità migliorate di zoom. P Android introduce una nuova [multi-fotocamera](https://developer.android.com/about/versions/pie/android-9.0#camera) API che rende possibile all'app di usare un *fotocamera logica* (o *fotocamera più logica*) supportata da due o più fotocamere fisici.
 Per determinare se il dispositivo supporta una fotocamera più logico, è possibile esaminare le funzionalità di ogni della fotocamera del dispositivo per verificare se supporta [RequestAvailableCapabilitiesLogicalMultiCamera](https://developer.android.com/reference/android/hardware/camera2/CameraMetadata#REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA).
 
 Grafico a torta Android include anche una nuova [SessionConfiguration](https://developer.android.com/reference/android/hardware/camera2/params/SessionConfiguration.html) classe che può essere usata per ridurre ritardi durante l'acquisizione iniziale ed eliminano la necessità di avviare e avviare il flusso della fotocamera.
 
-Per altre informazioni su multi-fotocamera supporto p Android, vedere [fotocamera più supporto e fotocamera aggiornamenti](https://developer.android.com/preview/features#camera).
+Per altre informazioni su multi-fotocamera supporto p Android, vedere [fotocamera più supporto e fotocamera aggiornamenti](https://developer.android.com/about/versions/pie/android-9.0#camera).
 
 
 ### <a name="other-features"></a>Altre funzionalità
@@ -256,7 +254,7 @@ Quando la versione Android di destinazione viene impostata a livello di API 28, 
 
 -  Accedere direttamente alla directory dei dati dell'app dal percorso non è più consentita.
 
-Per altre informazioni sulle modifiche di comportamento per le app destinate ad Android P, vedere [modifiche del comportamento](https://developer.android.com/preview/behavior-changes.html#p-apps).
+Per altre informazioni sulle modifiche di comportamento per le app destinate ad Android P, vedere [modifiche del comportamento](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps).
 
 
 ## <a name="sample-code"></a>Codice di esempio
