@@ -258,5 +258,5 @@ In questo documento sono state illustrate le diverse architetture della CPU in c
 - [Architettura MIPS](http://www.mips.com/products/product-materials/processor/mips-architecture)
 - [Interfaccia ABI per l'architettura ARM (PDF)](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0036b/IHI0036B_bsabi.pdf)
 - [Android NDK](http://developer.android.com/tools/sdk/ndk/index.html)
-- [Issue 9089:Nexus One - Won't load ANY native libraries from armeabi if there's at least one library at armeabi-v7a](http://code.google.com/p/android/issues/detail?id=9089) (Problema 9089:Nexus One non carica alcuna libreria nativa da armeabi se è presente almeno una libreria in armeabi v7a)
-- [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](http://code.google.com/p/android/issues/detail?id=25321) (Problema 24321: Galaxy Nexus 4.0.2 usa il codice nativo armeabi quando sia armeabi che armeabi-v7a sono inclusi nel file apk)
+- [Problema 9089:Nexus One non carica alcuna libreria nativa da armeabi se è presente almeno una libreria in armeabi v7a](http://code.google.com/p/android/issues/detail?id=9089)
+- [Problema 24321: Galaxy Nexus 4.0.2 usa il codice nativo armeabi quando sia armeabi che armeabi-v7a sono inclusi nel file apk](http://code.google.com/p/android/issues/detail?id=25321) 
