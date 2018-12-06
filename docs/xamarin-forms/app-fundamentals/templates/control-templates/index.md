@@ -1,6 +1,6 @@
 ---
-title: Modelli di controllo di xamarin. Forms
-description: Modelli di controllo forniscono una netta separazione tra l'aspetto di una pagina e il relativo contenuto, che consente la creazione di pagine che possono essere facilmente con temi.
+title: Modelli del controllo Xamarin.Forms
+description: I modelli del controllo offrono una separazione netta tra l'aspetto di una pagina e il relativo contenuto, consentendo la creazione di pagine facilmente associabili a temi.
 ms.prod: xamarin
 ms.assetid: 836C8D57-ABBC-4D5A-B3CF-0B723E069A2B
 ms.technology: xamarin-forms
@@ -9,23 +9,23 @@ ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: a667f952eead5bed8305f4c9f4201fd6235b883a
 ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/08/2018
 ms.locfileid: "35239971"
 ---
-# <a name="xamarinforms-control-templates"></a>Modelli di controllo di xamarin. Forms
+# <a name="xamarinforms-control-templates"></a>Modelli del controllo Xamarin.Forms
 
-_Modelli di controllo forniscono una netta separazione tra l'aspetto di una pagina e il relativo contenuto, che consente la creazione di pagine che possono essere facilmente con temi._
+_I modelli del controllo offrono una separazione netta tra l'aspetto di una pagina e il relativo contenuto, consentendo la creazione di pagine facilmente associabili a temi._
 
 ## <a name="introductionintroductionmd"></a>[Introduzione](introduction.md)
 
-Modelli di controllo di xamarin. Forms consentono di tema facilmente e il tema di ambiente ripristino pagine dell'applicazione in fase di esecuzione. In questo articolo viene fornita un'introduzione ai modelli di controllo.
+I modelli del controllo Xamarin.Forms consentono di applicare e riapplicare facilmente un tema alle pagine dell'applicazione in fase di esecuzione. Questo articolo offre un'introduzione ai modelli del controllo.
 
-## <a name="creating-a-controltemplatecreatingmd"></a>[Creazione di un oggetto ControlTemplate](creating.md)
+## <a name="creating-a-controltemplatecreatingmd"></a>[Creazione di un ControlTemplate](creating.md)
 
-Modelli di controllo possono essere definiti a livello di applicazione o a livello di pagina. In questo articolo viene illustrato come creare e utilizzare modelli di controllo.
+È possibile definire i modelli del controllo a livello di applicazione o a livello di pagina. Questo articolo illustra come creare e usare i modelli del controllo.
 
-## <a name="binding-from-a-controltemplatetemplate-bindingmd"></a>[Associazione di ControlTemplate](template-binding.md)
+## <a name="binding-from-a-controltemplatetemplate-bindingmd"></a>[Associazione a un ControlTemplate](template-binding.md)
 
-Associazioni a modello consentono di associare i controlli in un modello di controllo ai dati a proprietà pubbliche, abilitare i valori delle proprietà dei controlli nel modello di controllo per modificare con facilità. In questo articolo viene illustrato l'utilizzo di associazioni a modello per eseguire l'associazione di dati da un modello di controllo.
+Le associazioni a modello consentono di associare dati dei controlli di un modello del controllo a proprietà pubbliche, permettendo la modifica intuitiva dei valori delle proprietà dei controlli nel modello del controllo. Questo articolo illustra come usare le associazioni a modello per eseguire data binding da un modello del controllo.

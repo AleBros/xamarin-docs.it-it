@@ -1,6 +1,6 @@
 ---
-title: Movimenti di xamarin. Forms
-description: Questa guida illustra come i riconoscitori di movimento di xamarin. Forms possono essere usati per rilevare l'interazione dell'utente con le visualizzazioni in un'applicazione xamarin. Forms.
+title: Movimenti di Xamarin.Forms
+description: Questa guida spiega come usare i sistemi di riconoscimento del movimento di Xamarin.Forms per rilevare l'interazione dell'utente con le viste in un'applicazione Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 0E197A51-2304-4C09-A710-C7FF24A89F15
 ms.technology: xamarin-forms
@@ -9,29 +9,29 @@ ms.author: dabritch
 ms.date: 07/25/2018
 ms.openlocfilehash: 33968fb935e8b69736ac338bfa0479e4f278e64a
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50106182"
 ---
-# <a name="xamarinforms-gestures"></a>Movimenti di xamarin. Forms
+# <a name="xamarinforms-gestures"></a>Movimenti di Xamarin.Forms
 
-_I riconoscitori di movimento possono essere utilizzati per rilevare l'interazione dell'utente con le visualizzazioni in un'applicazione xamarin. Forms._
+_È possibile usare i sistemi di riconoscimento del movimento per rilevare l'interazione dell'utente con le viste in un'applicazione Xamarin.Forms._
 
-Xamarin. Forms [ `GestureRecognizer` ](xref:Xamarin.Forms.GestureRecognizer) classe supporta tap, zoom indietro, pan e i movimenti di scorrere rapidamente su [ `View` ](xref:Xamarin.Forms.View) istanze.
+La classe [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) di Xamarin.Forms supporta i movimenti di tocco, avvicinamento delle dita, panoramica e scorrimento rapido nelle istanze di [`View`](xref:Xamarin.Forms.View).
 
-## <a name="adding-a-tap-gesture-recognizertapmd"></a>[Aggiunta di un riconoscimento di movimento tap](tap.md)
+## <a name="adding-a-tap-gesture-recognizertapmd"></a>[Aggiunta di un sistema di riconoscimento del movimento di tocco](tap.md)
 
-Un gesto tocco viene usato per il rilevamento di tocco e viene riconosciuto con il [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) classe.
+Il movimento di tocco viene usato per il rilevamento del tocco e viene riconosciuto con la classe [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer).
 
-## <a name="adding-a-pinch-gesture-recognizerpinchmd"></a>[Aggiunta di un sistema di riconoscimento di movimento zoom indietro](pinch.md)
+## <a name="adding-a-pinch-gesture-recognizerpinchmd"></a>[Aggiunta di un sistema di riconoscimento del movimento di avvicinamento delle dita](pinch.md)
 
-Un movimento zoom indietro viene utilizzato per l'esecuzione interattivo zoom e viene riconosciuto con il [ `PinchGestureRecognizer` ](xref:Xamarin.Forms.PinchGestureRecognizer) classe.
+Il movimento di avvicinamento delle dita viene usato per lo zoom avanti interattivo e viene riconosciuto con la classe [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer).
 
-## <a name="adding-a-pan-gesture-recognizerpanmd"></a>[Aggiunta di un riconoscitore di movimento di zoom](pan.md)
+## <a name="adding-a-pan-gesture-recognizerpanmd"></a>[Aggiunta di un sistema di riconoscimento del movimento di panoramica](pan.md)
 
-Un movimento di zoom viene utilizzato per rilevare il movimento della dita sullo schermo e applicare lo spostamento al contenuto e viene riconosciuto con il [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) classe.
+Il movimento di panoramica viene usato per rilevare il movimento delle dita sullo schermo e applicare tale movimento al contenuto; viene riconosciuto con la classe [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer).
 
-## <a name="adding-a-swipe-gesture-recognizerswipemd"></a>[Aggiunta di un riconoscimento di movimento scorrimento rapido](swipe.md)
+## <a name="adding-a-swipe-gesture-recognizerswipemd"></a>[Aggiunta di un sistema di riconoscimento del movimento di scorrimento rapido](swipe.md)
 
-Un gesto di scorrimento rapido si verifica quando un dito viene spostato sullo schermo in senso orizzontale o verticale e viene spesso usato per avviare la navigazione tra il contenuto. Vengono riconosciuti i movimenti di scorrere rapidamente con il [ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer) classe.
+Il movimento di scorrimento rapido si verifica quando si muove un dito sullo schermo in senso orizzontale o verticale e viene spesso usato per avviare la navigazione nel contenuto. I movimenti di scorrimento rapido vengono riconosciuti con la classe [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer).

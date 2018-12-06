@@ -1,6 +1,6 @@
 ---
-title: Associazione dati di xamarin. Forms
-description: Associazione dati è la tecnica di collegamento tra le proprietà di due oggetti in modo che una proprietà vengono automaticamente riflesse in altra proprietà. Associazione dati è parte integrante dell'architettura dell'applicazione Model-View-ViewModel (MVVM).
+title: Data binding di Xamarin.Forms
+description: Il data binding è la tecnica che consente di collegare le proprietà di due oggetti in modo che le modifiche apportate a una proprietà vengano automaticamente riflesse nell'altra proprietà. Il data binding è parte integrante dell'architettura dell'applicazione Model-View-ViewModel (MVVM).
 ms.prod: xamarin
 ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
@@ -9,41 +9,41 @@ ms.author: dabritch
 ms.date: 10/23/2018
 ms.openlocfilehash: def97ab77781c7a7156d4c4178097184614f3e8b
 ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/24/2018
 ms.locfileid: "35240353"
 ---
-# <a name="xamarinforms-data-binding"></a>Associazione dati di xamarin. Forms
+# <a name="xamarinforms-data-binding"></a>Data binding di Xamarin.Forms
 
-_Associazione dati è la tecnica di collegamento tra le proprietà di due oggetti in modo che una proprietà vengono automaticamente riflesse in altra proprietà. Associazione dati è parte integrante dell'architettura dell'applicazione Model-View-ViewModel (MVVM)._
+_Il data binding è la tecnica che consente di collegare le proprietà di due oggetti in modo che le modifiche apportate a una proprietà vengano automaticamente riflesse nell'altra proprietà. Il data binding è parte integrante dell'architettura dell'applicazione Model-View-ViewModel (MVVM)._
 
-## <a name="the-data-linking-problem"></a>Il problema di collegamento dati
+## <a name="the-data-linking-problem"></a>Il problema del collegamento dei dati
 
-Un'applicazione xamarin. Forms è costituito da una o più pagine, ognuna delle quali contiene in genere più oggetti dell'interfaccia utente denominati *viste*. Una delle attività principale del programma consiste nel mantenere queste viste sincronizzate e per tenere traccia dei diversi valori o selezioni che rappresentano. Spesso le viste rappresentano i valori da un'origine dati sottostante e l'utente modifica queste viste per modificare i dati. Quando si modifica la visualizzazione, i dati sottostanti devono riflettere tale modifica, e in modo analogo, quando i dati sottostanti cambiano, tale modifica deve essere riflessa nella visualizzazione.
+Un'applicazione Xamarin.Forms è costituita da una o più pagine, ognuna delle quali in genere contiene più oggetti dell'interfaccia utente denominati *viste*. Una delle attività principali del programma consiste nel mantenere sincronizzate le viste e tenere traccia dei diversi valori o selezioni che rappresentano. Spesso le viste rappresentano i valori di un'origine dati sottostante e l'utente effettua operazioni sulle viste per modificare i dati. Quando una vista viene modificata, i dati sottostanti devono riflettere la modifica e, in modo analogo, quando i dati sottostanti cambiano, la modifica deve essere riflessa nella vista.
 
-Per gestire correttamente il processo, il programma deve essere notificato delle modifiche in queste viste o i dati sottostanti. La soluzione comune consiste nel definire gli eventi che indicano quando si verifica una modifica. Quindi è possibile installare un gestore eventi che riceve una notifica di queste modifiche. Il servizio risponde al trasferimento dei dati da un oggetto a un altro. Tuttavia, quando sono presenti numerose visualizzazioni, deve anche esserci molti gestori degli eventi e una grande quantità di codice viene coinvolto.
+Per gestire correttamente il processo, è necessario segnalare al programma le modifiche apportate nelle viste o nei dati sottostanti. La soluzione comune consiste nel definire gli eventi che segnalano quando si verifica una modifica. Si può quindi installare un gestore dell'evento che riceve le notifiche relative alle modifiche. Il gestore risponde trasferendo i dati da un oggetto a un altro. Tuttavia, se sono presenti molte viste, è necessario usare anche molti gestori degli eventi ed è richiesta una grande quantità di codice.
 
-## <a name="the-data-binding-solution"></a>La soluzione di Data Binding
+## <a name="the-data-binding-solution"></a>La soluzione offerta dal data binding
 
-Consente di automatizzare questo processo il data binding e rende inutile i gestori di eventi. (Gli eventi sono ancora necessari, tuttavia, poiché li usa l'infrastruttura di data binding). Le associazioni dati possono essere implementate nel codice o in XAML, ma sono molto più comune in XAML in cui contribuiscono a ridurre le dimensioni del file code-behind. Sostituendo il codice procedurale nei gestori eventi con codice dichiarativo o markup, l'applicazione è semplificato e spiegazione.
+Il data binding consente di automatizzare questo processo ed elimina la necessità di usare gestori degli eventi. Gli eventi tuttavia continuano a essere necessari, perché vengono usati dall'infrastruttura di data binding. I data binding possono essere implementati nel codice o in XAML, ma sono molto più comuni in XAML dove contribuiscono alla riduzione delle dimensioni del file code-behind. Sostituendo il codice procedurale nei gestori degli eventi con codice dichiarativo o markup, l'applicazione diventa più semplice e chiara.
 
-Uno dei due oggetti coinvolti in un data binding è quasi sempre un elemento che deriva da `View` e fa parte dell'interfaccia visiva di una pagina. L'altro oggetto è:
+Uno dei due oggetti coinvolti in un data binding è quasi sempre un elemento che deriva da `View` e fa parte dell'interfaccia visiva di una pagina. L'altro oggetto può essere:
 
-- Un altro `View` derivativo, in genere nella stessa pagina.
+- Un altro oggetto `View` derivato, in genere nella stessa pagina.
 - Un oggetto in un file di codice.
 
-Nei programmi di dimostrazione, ad esempio quelli di [ **DataBindingDemos** ](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) di esempio, le associazioni di dati tra due `View` derivazioni vengono spesso visualizzati ai fini della semplicità e chiarezza. Tuttavia, gli stessi principi valgono possono essere applicati alle associazioni di dati tra un `View` e altri oggetti. Quando viene compilata un'applicazione usando l'architettura Model-View-ViewModel (MVVM), la classe con dati di sottostante è spesso definita un elemento ViewModel.
+Nei programmi di dimostrazione, ad esempio quelli dell'esempio [**DataBindingDemos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/), i data binding tra due `View` derivati vengono spesso visualizzati per motivi di semplicità e chiarezza. Tuttavia, gli stessi principi possono essere applicati ai data binding tra un oggetto `View` e altri oggetti. Se un'applicazione viene compilata usando l'architettura Model-View-ViewModel (MVVM), la classe con dati sottostanti è spesso definita ViewModel.
 
-Le associazioni dati sono illustrate nelle serie di articoli seguenti:
+I data binding sono illustrati nelle seguenti serie di articoli:
 
 ## <a name="basic-bindingsbasic-bindingsmd"></a>[Binding di base](basic-bindings.md)
 
-Informazioni sulla differenza tra origine e destinazione di associazione dati e visualizzare dati semplici binding nel codice e XAML.
+Informazioni sulla differenza tra l'origine e la destinazione del data binding con esempi di data binding semplici nel codice e in XAML.
 
 ## <a name="binding-modebinding-modemd"></a>[Modalità di binding](binding-mode.md)
 
-Scopri come la modalità di associazione può controllare il flusso di dati tra i due oggetti.
+Illustra in che modo la modalità di binding può controllare il flusso di dati tra i due oggetti.
 
 ## <a name="string-formattingstring-formattingmd"></a>[Formattazione delle stringhe](string-formatting.md)
 
@@ -51,26 +51,26 @@ Usare un data binding per formattare e visualizzare gli oggetti come stringhe.
 
 ## <a name="binding-pathbinding-pathmd"></a>[Percorso di binding](binding-path.md)
 
-Approfondita la `Path` proprietà dell'associazione dati per accedere alle proprietà secondarie e i membri della raccolta.
+Informazioni dettagliate sulla proprietà `Path` del data binding per l'accesso a proprietà secondarie e ai membri della raccolta.
 
 ## <a name="binding-value-convertersconvertersmd"></a>[Convertitori di valori per i binding](converters.md)
 
-Per modificare i valori all'interno dell'associazione di dati, usare convertitori di valori di associazione.
+Usare i convertitori di valori dei binding per modificare i valori all'interno del data binding.
 
-## <a name="binding-fallbacksbinding-fallbacksmd"></a>[Fallback associazione](binding-fallbacks.md)
+## <a name="binding-fallbacksbinding-fallbacksmd"></a>[Fallback di binding](binding-fallbacks.md)
 
-Rendere più affidabili i data binding mediante la definizione di valori di fallback da usare se il processo di associazione ha esito negativo.
+Per rendere più solidi i data binding, definire i valori di fallback da usare se il processo di binding ha esito negativo.
 
 ## <a name="the-command-interfacecommandingmd"></a>[Interfaccia di comando](commanding.md)
 
-Implementare il `Command` proprietà con il data binding.
+Implementare la proprietà `Command` con i data binding.
 
-## <a name="compiled-bindingscompiled-bindingsmd"></a>[Associazioni compilate](compiled-bindings.md)
+## <a name="compiled-bindingscompiled-bindingsmd"></a>[Binding compilati](compiled-bindings.md)
 
-Usare le associazioni compilate per migliorare le prestazioni di associazione dati.
+Usare binding compilati per migliorare le prestazioni del data binding.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Data Binding Demo (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Capitolo di associazione di dati dal libro di xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Demo sul data binding (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Capitolo sul data binding nella documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 - [Estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

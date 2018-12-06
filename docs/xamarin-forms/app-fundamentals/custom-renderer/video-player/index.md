@@ -1,6 +1,6 @@
 ---
 title: Implementazione di un lettore video
-description: In questo articolo viene illustrato come implementare un'applicazione di lettore video con xamarin. Forms.
+description: Questo articolo illustra come implementare un'applicazione lettore video con Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 0CE9BEE7-4F81-4A00-B9B3-5E2535CD3050
 ms.technology: xamarin-forms
@@ -9,60 +9,60 @@ ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 00697ca0adf3a34abec90c2f96d9fd9c273d06bb
 ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/08/2018
 ms.locfileid: "35239784"
 ---
 # <a name="implementing-a-video-player"></a>Implementazione di un lettore video
 
-Talvolta è utile per riprodurre i file video in un'applicazione di xamarin. Forms. Questa serie di articoli viene illustrato come scrivere un renderer personalizzato per iOS, Android e la piattaforma UWP (Universal Windows) per una classe di xamarin. Forms denominata `VideoPlayer`.
+Talvolta è utile riprodurre file video in un'applicazione Xamarin.Forms. Questa serie di articoli illustra come scrivere un renderer personalizzato per iOS, Android e la piattaforma UWP (Universal Windows Platform) per una classe di Xamarin.Forms denominata `VideoPlayer`.
 
-Nel [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) di esempio, tutti i file che implementano e supportano `VideoPlayer` si trovano in cartelle denominate `FormsVideoLibrary` e identificato con lo spazio dei nomi `FormsVideoLibrary` o spazi dei nomi che iniziano `FormsVideoLibrary`. Questa organizzazione e denominazione deve rendono più semplice copiare i file video player nella propria soluzione xamarin. Forms.
+Nell'esempio [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) tutti i file che implementano e supportano `VideoPlayer` si trovano in cartelle denominate `FormsVideoLibrary` e identificate con lo spazio dei nomi `FormsVideoLibrary` o con spazi dei nomi che iniziano con `FormsVideoLibrary`. Questa organizzazione e denominazione semplifica la copia dei file del lettore video nella propria soluzione Xamarin.Forms.
 
-`VideoPlayer` possibile riprodurre i file video da tre tipi di origini:
+`VideoPlayer` può riprodurre file video da tre tipi di origini:
 
-- Internet tramite un URL
+- Internet, tramite un URL
 - Una risorsa incorporata nell'applicazione della piattaforma
-- Catalogo video del dispositivo
+- La raccolta di video del dispositivo
 
-Lettori video richiedono *controlli di trasporto*, quali sono i pulsanti per la riproduzione e la sospensione del video, e un posizionamento barre che mostra lo stato di avanzamento tramite il video e consente all'utente di passare rapidamente a un percorso diverso. `VideoPlayer` può utilizzare entrambi i controlli di trasporto e posizionamento barra fornita per la piattaforma (come illustrato di seguito), oppure è possibile fornire controlli di trasporto personalizzato e una barra di posizionamento. Di seguito è riportato il programma in esecuzione in iOS, Android e la piattaforma Windows universale:
+I lettori video richiedono *controlli del trasporto*, che sono pulsanti per la riproduzione e la messa in pausa del video, e una barra di posizionamento che indica l'avanzamento nel video e consente all'utente di passare rapidamente a una posizione diversa. `VideoPlayer` può usare i controlli del trasporto e la barra di posizionamento forniti dalla piattaforma (come illustrato di seguito) oppure è possibile fornire una barra di posizionamento e controlli del trasporto personalizzati. Ecco il programma in esecuzione in iOS, Android e nella piattaforma UWP (Universal Windows Platform):
 
-[![Riprodurre Video Web](web-videos-images/playwebvideo-small.png "riprodurre Video Web")](web-videos-images/playwebvideo-large.png#lightbox "riprodurre Video Web")
+[![Riproduci video Web](web-videos-images/playwebvideo-small.png "Riproduci video Web")](web-videos-images/playwebvideo-large.png#lightbox "Riproduci video Web")
 
-Naturalmente, è possibile attivare il telefono lateralmente per una visualizzazione più grande.
+È possibile collocare il telefono in posizione orizzontale per espandere la visualizzazione.
 
-Un lettore video più sofisticato avrebbe alcune funzionalità aggiuntive, ad esempio controllo volume, un meccanismo per interrompere il video quando arriva una telefonata e un modo di mantenere attiva la schermata durante la riproduzione.
+Un lettore video più sofisticato può avere funzionalità aggiuntive, ad esempio il controllo volume, un meccanismo che interrompe il video quando arriva una chiamata telefonica o un metodo per mantenere la schermata attiva durante la riproduzione del video.
 
-La seguente serie di articoli progressivamente Mostra la modalità di compilazione il renderer di piattaforma e classi di supporto:
+La serie di articoli seguente illustra in modo progressivo le modalità di compilazione dei renderer di piattaforma e delle classi di supporto:
 
-## <a name="creating-the-platform-video-playersplayer-creationmd"></a>[Creazione di lettori video piattaforma](player-creation.md)
+## <a name="creating-the-platform-video-playersplayer-creationmd"></a>[Creazione di lettori video per le piattaforme](player-creation.md)
 
-Ogni piattaforma richiede un `VideoPlayerRenderer` classe che crea e gestisce un controllo di lettore video supportato dalla piattaforma. Questo articolo illustra la struttura del renderer di classi e come creare i lettori.
+Ogni piattaforma richiede una classe `VideoPlayerRenderer` che crea e gestisce un controllo lettore video supportato dalla piattaforma. Questo articolo illustra la struttura delle classi renderer e le modalità per la creazione dei lettori.
 
 ## <a name="playing-a-web-videoweb-videosmd"></a>[Riproduzione di un video Web](web-videos.md)
 
-L'origine più comune di video per un lettore video è probabilmente Internet. In questo articolo viene descritto come un video Web può essere fatto riferimento e utilizzato come origine per il lettore video.
+L'origine più comune di video per un lettore video è probabilmente Internet. Questo articolo descrive come creare un riferimento a un video Web e usarlo come origine per il lettore video.
 
-## <a name="binding-video-sources-to-the-playersource-bindingsmd"></a>[Associazione origini video al lettore](source-bindings.md)
+## <a name="binding-video-sources-to-the-playersource-bindingsmd"></a>[Associazione di origini video al lettore](source-bindings.md)
 
-Questo articolo viene utilizzato un `ListView` per presentare una raccolta di video da riprodurre. Un programma mostra come il file code-behind possibile impostare l'origine video del lettore video, ma un programma secondo come è possibile utilizzare l'associazione tra il `ListView` e il lettore video.
+Questo articolo usa un elemento `ListView` per presentare una raccolta di video da riprodurre. Un programma illustra come il file code-behind può impostare l'origine video del lettore video, mentre un altro programma indica come usare il data binding tra `ListView` e il lettore video.
 
-## <a name="loading-application-resource-videosloading-resourcesmd"></a>[Il caricamento di applicazione risorse video](loading-resources.md)
+## <a name="loading-application-resource-videosloading-resourcesmd"></a>[Caricamento delle risorse dell'applicazione video](loading-resources.md)
 
-Video possono essere incorporati come risorse nei progetti di piattaforma. In questo articolo viene illustrato come archiviare tali risorse e caricarli in un secondo momento nel programma per essere riprodotte dal lettore video.
+I video possono essere incorporati come risorse nei progetti della piattaforma. Questo articolo illustra come archiviare le risorse e come caricarle in un secondo momento nel programma per la riproduzione nel lettore video.
 
-## <a name="accessing-the-devices-video-libraryaccessing-librarymd"></a>[L'accesso a Catalogo video del dispositivo](accessing-library.md)
+## <a name="accessing-the-devices-video-libraryaccessing-librarymd"></a>[Accesso alla raccolta di video del dispositivo](accessing-library.md)
 
-Quando viene creato un video con la fotocamera del dispositivo, il file video viene archiviato nella libreria di immagini del dispositivo. In questo articolo viene illustrato come accedere selettore immagine del dispositivo per selezionare il video e quindi riprodurla utilizzando il lettore video.
+Quando un video viene creato usando la fotocamera del dispositivo, il file video viene archiviato nella libreria immagini del dispositivo. Questo articolo illustra come accedere al selettore immagini del dispositivo, per selezionare il video e quindi riprodurlo usando il lettore video.
 
-## <a name="custom-video-transport-controlscustom-transportmd"></a>[Controlli di trasporto personalizzato di video](custom-transport.md)
+## <a name="custom-video-transport-controlscustom-transportmd"></a>[Controlli di trasporto video personalizzati](custom-transport.md)
 
-Sebbene i lettori video in ciascuna piattaforma di forniscono i propri controlli di trasporto sotto forma di pulsanti per **riprodurre** e **pausa**, è possibile disattivare la visualizzazione dei pulsanti e fornire la propria. In questo articolo illustra come.
+Anche se i lettori video in ogni piattaforma includono i propri controlli del trasporto, sotto forma di pulsanti **Riproduci** e **Sospendi**, è possibile eliminare la visualizzazione di questi pulsanti e aggiungere pulsanti personalizzati. Questo articolo spiega come fare.
 
-## <a name="custom-video-positioningcustom-positioningmd"></a>[Il posizionamento video personalizzato](custom-positioning.md)
+## <a name="custom-video-positioningcustom-positioningmd"></a>[Posizionamento del video personalizzato](custom-positioning.md)
 
-Ognuno dei lettori video piattaforma è un indicatore di posizione che mostra lo stato di avanzamento del video e consente di spostarsi avanti e indietro in una posizione specifica. In questo articolo viene illustrato come è possibile sostituire tale barra posizione con un controllo personalizzato.
+I lettori video per le diverse piattaforme dispongono di una barra di posizionamento, che visualizza l'avanzamento del video e consente di spostarsi avanti e indietro in una posizione specifica. Questo articolo illustra come sostituire la barra di posizionamento con un controllo personalizzato.
 
 
 
@@ -70,4 +70,4 @@ Ognuno dei lettori video piattaforma è un indicatore di posizione che mostra lo
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo di lettore video (esempio)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demo lettore video (esempio)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)

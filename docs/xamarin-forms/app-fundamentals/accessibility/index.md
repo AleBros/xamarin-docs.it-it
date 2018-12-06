@@ -1,6 +1,6 @@
 ---
-title: Accessibilità di xamarin. Forms
-description: Creazione di un'applicazione accessibile assicura che l'applicazione sia utilizzabile da persone che l'interfaccia utente con una gamma di esigenze e le esperienze di approccio.
+title: Accessibilità di Xamarin.Forms
+description: La creazione di un'applicazione accessibile garantisce che l'applicazione possa essere usata da persone che si avvicinano all'interfaccia utente con una gamma di esigenze ed esperienze diverse.
 ms.prod: xamarin
 ms.assetid: 99B8A8E8-6F5E-46BC-9639-1C4A6D301049
 ms.technology: xamarin-forms
@@ -9,35 +9,35 @@ ms.author: dabritch
 ms.date: 10/15/2018
 ms.openlocfilehash: ac0ffbdce6b0c55e8ad9d774d80e3d9b8bf84089
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50116446"
 ---
-# <a name="xamarinforms-accessibility"></a>Accessibilità di xamarin. Forms
+# <a name="xamarinforms-accessibility"></a>Accessibilità di Xamarin.Forms
 
-_Creazione di un'applicazione accessibile assicura che l'applicazione sia utilizzabile da persone che l'interfaccia utente con una gamma di esigenze e le esperienze di approccio._
+_La creazione di un'applicazione accessibile garantisce che l'applicazione possa essere usata da persone che si avvicinano all'interfaccia utente con una gamma di esigenze ed esperienze diverse._
 
-Rendere accessibile un'applicazione xamarin. Forms significa pensare il layout e progettazione di molti elementi dell'interfaccia utente. Per linee guida sugli aspetti da considerare, vedere la [elenco di controllo di accesso facilitato](~/cross-platform/app-fundamentals/accessibility.md). È possibile risolvere diversi problemi di accessibilità, ad esempio i tipi di carattere di grandi dimensioni e le impostazioni di colore e il contrasto appropriate già Xamarin.Forms APIs.
+Rendere accessibile un'applicazione Xamarin.Forms significa progettare il layout e la struttura di molti elementi dell'interfaccia utente. Per le linee guida sugli aspetti da considerare, vedere l'[elenco di controllo per l'accessibilità](~/cross-platform/app-fundamentals/accessibility.md). Molti aspetti dell'accessibilità, ad esempio i tipi di carattere di grandi dimensioni e le impostazioni di colore e contrasto appropriate, sono gestibili direttamente tramite le API di Xamarin.Forms.
 
-Il [Android accessibilità](~/android/app-fundamentals/accessibility.md) e [iOS accessibilità](~/ios/app-fundamentals/accessibility.md) Guide contengono i dettagli delle API native esposte da Xamarin e il [Guida accessibilità UWP su MSDN](https://msdn.microsoft.com/windows/uwp/accessibility/basic-accessibility-information) spiega il approccio nativo nella piattaforma. Queste API vengono usate per l'implementazione completa di applicazioni accessibili per ogni piattaforma.
+Le guide [Accessibilità in Android](~/android/app-fundamentals/accessibility.md) e [Accessibilità in iOS](~/ios/app-fundamentals/accessibility.md) includono dettagli delle API native disponibili in Xamarin, mentre la [guida all'accessibilità UWP in MSDN](https://msdn.microsoft.com/windows/uwp/accessibility/basic-accessibility-information) illustra l'approccio nativo in tale piattaforma. Queste API vengono usate per implementare completamente le applicazioni accessibili in ogni piattaforma.
 
-Xamarin. Forms non ha attualmente alcuna *incorporati* il supporto per tutte le API disponibili in ognuna delle piattaforme sottostanti di accessibilità. Tuttavia, supporta impostazione delle proprietà di automazione in elementi dell'interfaccia utente per supportare screen reader e navigazione strumenti di assistenza, vale a dire una delle parti più importanti della compilazione di applicazioni accessibili. Per altre informazioni, vedere [le proprietà di automazione](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md).
+Xamarin.Forms non dispone attualmente di supporto *incorporato* per tutte le API di accessibilità disponibili in ogni piattaforma sottostante. Supporta invece l'impostazione di proprietà di automazione in elementi dell'interfaccia utente per utilità per la lettura dello schermo e strumenti di assistenza alla navigazione, che sono tra i componenti più importanti nella costruzione di applicazioni accessibili. Per altre informazioni, vedere [Proprietà di automazione](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md).
 
-Le applicazioni xamarin. Forms possono avere anche l'ordine di tabulazione dei controlli specificata. Per altre informazioni, vedere [navigazione tramite tastiera](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md).
+Nelle applicazioni Xamarin.Forms è anche possibile specificare l'ordine di tabulazione dei controlli. Per altre informazioni, vedere [Navigazione tramite tastiera](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md).
 
-Le API di accessibilità (ad esempio [PostNotification in iOS](~/ios/app-fundamentals/accessibility.md)) potrebbe essere più adatto a un [ `DependencyService` ](~/xamarin-forms/app-fundamentals/dependency-service/index.md) o [Renderer personalizzati](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) implementazione. Questi non sono trattati in questa Guida.
+Altre API per l'accessibilità (ad esempio [PostNotification in iOS](~/ios/app-fundamentals/accessibility.md)) possono essere più adatte a un'implementazione [`DependencyService`](~/xamarin-forms/app-fundamentals/dependency-service/index.md) o [Renderer personalizzato](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Questi argomenti non sono trattati nella presente guida.
 
-## <a name="testing-accessibility"></a>Verifica dell'accessibilità
+## <a name="testing-accessibility"></a>Test dell'accessibilità
 
-Le applicazioni xamarin. Forms in genere più piattaforme di destinazione, ovvero le funzionalità di accessibilità a seconda della piattaforma di test. Usare i collegamenti seguenti per informazioni su come testare l'accessibilità in ogni piattaforma:
+Le applicazioni Xamarin.Forms in genere sono destinate a più piattaforme. Di conseguenza è necessario eseguire il test delle funzionalità di accessibilità per ogni piattaforma. Per informazioni su come eseguire il test dell'accessibilità in ogni piattaforma, visitare i collegamenti seguenti:
 
-- [**iOS test**](~/ios/app-fundamentals/accessibility.md)
-- [**Test di Android**](~/android/app-fundamentals/accessibility.md)
-- [**AccScope Windows (MSDN)**](https://msdn.microsoft.com/library/windows/desktop/dn433239)
+- [**Test in iOS**](~/ios/app-fundamentals/accessibility.md)
+- [**Test in Android**](~/android/app-fundamentals/accessibility.md)
+- [**Visualizzatore ambito accessibilità di Windows (MSDN)**](https://msdn.microsoft.com/library/windows/desktop/dn433239)
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Accessibilità multipiattaforma](~/cross-platform/app-fundamentals/accessibility.md)
 - [Proprietà di automazione](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md)
-- [Accessibilità dalla tastiera](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md)
+- [Accessibilità tastiera](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md)
