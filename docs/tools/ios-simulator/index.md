@@ -6,12 +6,12 @@ ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2018
-ms.openlocfilehash: 21229bc9d56865d6365f8ddfe4dd2046fbabc03d
-ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
+ms.openlocfilehash: 4a45d4fb7aaad504c7bb5628f1e521a39463b06f
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681527"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899070"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Simulatore iOS remoto per Windows
 
@@ -34,7 +34,7 @@ Barra degli strumenti nella parte superiore della finestra del simulatore contie
 
 - **Home** – simula il pulsante home in un dispositivo iOS.
 - **Blocco** : blocca l'applicazione client simulator (scorrere rapidamente per sbloccare).
-- **Screenshot** – consente di salvare uno screenshot del simulatore (archiviati in **simulatore Pictures\Xamarin\iOS\**).
+- **Screenshot** – consente di salvare uno screenshot del simulatore (archiviato in **simulatore Pictures\Xamarin\iOS\\**).
 - [**Le impostazioni** ](#settings) – Visualizza della tastiera, la posizione e altre impostazioni.
 - [**Altre opzioni** ](#other-options) : consente di visualizzare diverse opzioni di simulatore, ad esempio la rotazione, i movimenti muovendosi e ID tocco.
 
