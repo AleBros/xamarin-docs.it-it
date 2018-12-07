@@ -4,17 +4,15 @@ description: Questo documento descrive la classe Compass in Xamarin.Essentials, 
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 51812f9b4f88d77bf553a26ef3a6802239e338e0
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 55dd10bff21b7d082b225277d0100232d5efd4f3
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675497"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898784"
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Compass
-
-![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
 La classe **Compass** consente di monitorare la direzione del nord magnetico del dispositivo.
 
@@ -86,13 +84,13 @@ Tenere presente che l'esecuzione simultanea di più sensori dalla propria app pu
 
 ## <a name="low-pass-filter"></a>Filtro passa basso
 
-A causa di come vengono aggiornati e calcolati i valori della bussola in Android, potrebbe essere necessario uniformare i valori. Si può applicare un _filtro passa basso_ che calcola la media dei valori di seno e coseno degli angoli e può essere attivato impostando la proprietà `ApplyLowPassFilter` nella classe `Compass`:
+A causa di come vengono aggiornati e calcolati i valori della bussola in Android, potrebbe essere necessario uniformare i valori. Si può applicare un _filtro passa basso_ che calcola la media dei valori di seno e coseno degli angoli e può essere attivato usando l'overload del metodo `Start` che accetta il parametro `bool applyLowPassFilter`:
 
 ```csharp
-Compass.ApplyLowPassFilter = true;
+Compass.Start(SensorSpeed.UI, applyLowPassFilter: true);
 ```
 
-Questo filtro viene applicato solo nella piattaforma Android. Per altre informazioni, vedere [qui](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
+Il parametro viene applicato solo alla piattaforma Android e ignorato nei sistemi iOS e UWP.  Per altre informazioni, vedere [qui](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
 
 --------------
 

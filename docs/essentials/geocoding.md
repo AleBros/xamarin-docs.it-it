@@ -4,17 +4,15 @@ description: La classe Geocoding in Xamarin.Essentials fornisce le API sia per e
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 3202d4ace85c68042425ca5f23641ca7a76a6c7e
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.date: 11/04/2018
+ms.openlocfilehash: 0f44f179588c564ac9fa46d42ec18de6d303e239
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528390"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898979"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Geocoding
-
-![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
 La classe **Geocoding** fornisce le API sia per eseguire la codifica geografica di un indicatore di posizione in coordinate posizionali che per riconvertire le coordinate posizionali in un indicatore di posizione.
 
@@ -36,10 +34,10 @@ Non è necessaria alcuna configurazione aggiuntiva.
 
 Una chiave API di Mappe di Bing è necessaria per usare la funzionalità di codifica geografica. Iscriversi per un account [Mappe di Bing](https://www.bingmapsportal.com/) gratuito. In **Account personale > My keys** (Chiavi personali) creare una nuova chiave e immettere le informazioni in base al tipo di applicazione, che dovrebbe essere un'**app di Windows pubblica (UWP, 8.x e versioni successive)** per le app UWP.
 
-Prima di chiamare qualsiasi metodo **Geocoding**, impostare subito la chiave API dell'applicazione:
+Prima di chiamare qualsiasi metodo **Geocoding**, impostare subito la chiave API dell'applicazione (disponibile solo nella piattaforma UWP):
 
 ```csharp
-Geocoding.MapKey = "YOUR-KEY-HERE";
+Platform.MapServiceToken = "YOUR-KEY-HERE";
 ```
 
 -----

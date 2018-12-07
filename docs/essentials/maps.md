@@ -1,28 +1,26 @@
 ---
-title: 'Xamarin.Essentials: Mappe'
-description: La classe Maps in Xamarin.Essentials consente a un'applicazione di aprire l'applicazione per le mappe installata su una località o un indicatore di posizione specifici.
+title: 'Xamarin.Essentials: Map'
+description: La classe Map in Xamarin.Essentials consente a un'applicazione di aprire l'applicazione per le mappe installata su una località o un indicatore di posizione specifici.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 07/25/2018
-ms.openlocfilehash: fb4cbc2fd334d574abc57a3359fa346bc6795408
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 9797244a9f89d0658b65b132eaf541ed763be97b
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674774"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898966"
 ---
-# <a name="xamarinessentials-maps"></a>Xamarin.Essentials: Mappe
+# <a name="xamarinessentials-map"></a>Xamarin.Essentials: Map
 
-![NuGet in versione non definitiva](~/media/shared/pre-release.png)
-
-La classe **Maps** consente a un'applicazione di aprire l'applicazione per le mappe installata su una località o un indicatore di posizione specifici.
+La classe **Map** consente a un'applicazione di aprire l'applicazione per le mappe installata su una località o un indicatore di posizione specifici.
 
 ## <a name="get-started"></a>Introduzione
 
 [!include[](~/essentials/includes/get-started.md)]
 
-## <a name="using-maps"></a>Uso di Maps
+## <a name="using-map"></a>Uso di Map
 
 Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
@@ -30,17 +28,17 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La funzionalità Maps opera chiamando il metodo `OpenAsync` con `Location` o `Placemark` per l'apertura con le opzioni facoltative `MapsLaunchOptions`.
+La funzionalità Map opera chiamando il metodo `OpenAsync` con `Location` o `Placemark` per l'apertura con le opzioni facoltative `MapLaunchOptions`.
 
 ```csharp
-public class MapsTest
+public class MapTest
 {
     public async Task NavigateToBuilding25()
     {
         var location = new Location(47.645160, -122.1306032);
-        var options =  new MapsLaunchOptions { Name = "Microsoft Building 25" };
+        var options =  new MapLaunchOptions { Name = "Microsoft Building 25" };
 
-        await Maps.OpenAsync(location, options);
+        await Map.OpenAsync(location, options);
     }
 }
 ```
@@ -53,7 +51,7 @@ In caso di apertura con `Placemark`, sono necessarie le informazioni seguenti:
 - `Locality`
 
 ```csharp
-public class MapsTest
+public class MapTest
 {
     public async Task NavigateToBuilding25()
     {
@@ -64,40 +62,40 @@ public class MapsTest
                 Thoroughfare = "Microsoft Building 25",
                 Locality = "Redmond"
             };
-        var options =  new MapsLaunchOptions { Name = "Microsoft Building 25" };
+        var options =  new MapLaunchOptions { Name = "Microsoft Building 25" };
 
-        await Maps.OpenAsync(placemark, options);
+        await Map.OpenAsync(placemark, options);
     }
 }
 ```
 
 ## <a name="extension-methods"></a>Metodi di estensione
 
-Se è già disponibile un riferimento a `Location` oppure `Placemark`, è possibile usare il metodo di estensione predefinito `OpenMapsAsync` con le opzioni facoltative `MapsLaunchOptions`:
+Se è già disponibile un riferimento a `Location` oppure `Placemark`, è possibile usare il metodo di estensione predefinito `OpenMapAsync` con le opzioni facoltative `MapLaunchOptions`:
 
 ```csharp
-public class MapsTest
+public class MapTest
 {
-    public async Task OpenPlacemarkOnMaps(Placemark placemark)
+    public async Task OpenPlacemarkOnMap(Placemark placemark)
     {
-        await placemark.OpenMapsAsync();
+        await placemark.OpenMapAsync();
     }
 }
 ```
 
 ## <a name="directions-mode"></a>Modalità indicazioni
 
-Se si chiama `OpenMapsAsync` senza `MapsLaunchOptions`, la mappa verrà avviata sulla posizione specificata. Facoltativamente, è possibile calcolare un percorso dalla posizione corrente del dispositivo. Questa operazione viene eseguita impostando `MapDirectionsMode` in `MapsLaunchOptions`:
+Se si chiama `OpenMapAsync` senza `MapLaunchOptions`, la mappa verrà avviata sulla posizione specificata. Facoltativamente, è possibile calcolare un percorso dalla posizione corrente del dispositivo. Questa operazione viene eseguita impostando `NavigationMode` in `MapLaunchOptions`:
 
 ```csharp
-public class MapsTest
+public class MapTest
 {
     public async Task NavigateToBuilding25()
     {
         var location = new Location(47.645160, -122.1306032);
-        var options =  new MapsLaunchOptions { MapDirectionsMode = MapDirectionsMode.Driving };
+        var options =  new MapLaunchOptions { NavigationMode = NavigationMode.Driving };
 
-        await Maps.OpenAsync(location, options);
+        await Map.OpenAsync(location, options);
     }
 }
 ```
@@ -106,15 +104,15 @@ public class MapsTest
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-- `MapDirectionsMode` supporta Bicycling, Driving e Walking.
+- `NavigationMode` supporta Bicycling, Driving e Walking.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-- `MapDirectionsMode` supporta Driving, Transit e Walking.
+- `NavigationMode` supporta Driving, Transit e Walking.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-- `MapDirectionsMode` supporta Driving, Transit e Walking.
+- `NavigationMode` supporta Driving, Transit e Walking.
 
 --------------
 
@@ -136,5 +134,5 @@ Nessun dettaglio di implementazione specifico della piattaforma.
 
 ## <a name="api"></a>API
 
-- [Codice sorgente di Maps](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Maps)
-- [Documentazione dell'API Maps](xref:Xamarin.Essentials.Maps)
+- [Codice sorgente di Map](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Map)
+- [Documentazione dell'API Map](xref:Xamarin.Essentials.Map)

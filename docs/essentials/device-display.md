@@ -4,19 +4,17 @@ description: Questo documento descrive la classe DeviceDisplay in Xamarin.Essent
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: ebe97cf7fbb78bff17196110e835bd35ff76b826
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: d3102f0a4ed5f16c77c4a4768feb4a1565f2dd1a
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674886"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898891"
 ---
 # <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: Device Display Information
 
-![NuGet in versione non definitiva](~/media/shared/pre-release.png)
-
-La classe **DeviceDisplay** fornisce informazioni sulle metriche dello schermo del dispositivo in cui viene eseguita l'applicazione.
+La classe **DeviceDisplay** fornisce informazioni sulle metriche dello schermo del dispositivo in cui è in esecuzione l'applicazione e può richiedere di evitare la sospensione dello schermo quando l'applicazione è in esecuzione.
 
 ## <a name="get-started"></a>Introduzione
 
@@ -30,45 +28,57 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-## <a name="screen-metrics"></a>Metriche dello schermo
+## <a name="main-display-info"></a>Informazioni sullo schermo principale
 
 Oltre alle informazioni di base sul dispositivo, la classe **DeviceDisplay** contiene informazioni sullo schermo e l'orientamento del dispositivo.
 
 ```csharp
 // Get Metrics
-var metrics = DeviceDisplay.ScreenMetrics;
+var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
 
 // Orientation (Landscape, Portrait, Square, Unknown)
-var orientation = metrics.Orientation;
+var orientation = mainDisplayInfo.Orientation;
 
 // Rotation (0, 90, 180, 270)
-var rotation = metrics.Rotation;
+var rotation = mainDisplayInfo.Rotation;
 
 // Width (in pixels)
-var width = metrics.Width;
+var width = mainDisplayInfo.Width;
 
 // Height (in pixels)
-var height = metrics.Height;
+var height = mainDisplayInfo.Height;
 
 // Screen density
-var density = metrics.Density;
+var density = mainDisplayInfo.Density;
 ```
 
 La classe **DeviceDisplay** espone anche un evento che è possibile sottoscrivere, attivato quando le metriche dello schermo vengono modificate:
 
 ```csharp
-public class ScreenMetricsTest
+public class DisplayInfoTest
 {
-    public ScreenMetricsTest()
+    public DisplayInfoTest()
     {
         // Subscribe to changes of screen metrics
-        DeviceDisplay.ScreenMetricsChanged += OnScreenMetricsChanged;
+        DeviceDisplay.MainDisplayInfoChanged += OnMainDisplayInfoChanged;
     }
 
-    void OnScreenMetricsChanged(ScreenMetricsChangedEventArgs  e)
+    void OnMainDisplayInfoChanged(DisplayInfoChangedEventArgs  e)
     {
         // Process changes
-        var metrics = e.Metrics;
+        var displayInfo = e.DisplayInfo;
+    }
+}
+```
+
+La classe **DeviceDisplay** espone una proprietà `bool` denominata `KeepScreenOn` che può essere impostata per evitare lo spegnimento o il blocco dello schermo del dispositivo.
+
+```csharp
+public class KeepScreenOnTest
+{
+    public void ToggleScreenLock()
+    {
+        DeviceDisplay.KeepScreenOn = !DeviceDisplay.KeepScreenOn;
     }
 }
 ```
@@ -81,7 +91,7 @@ Nessuna differenza.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* L'accesso a `ScreenMetrics` deve essere eseguito nel thread dell'interfaccia utente. In caso contrario, verrà generata un'eccezione. È possibile usare il metodo [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) per eseguire tale codice nel thread dell'interfaccia utente.
+* L'accesso a `DeviceDisplay` deve essere eseguito nel thread dell'interfaccia utente. In caso contrario, verrà generata un'eccezione. È possibile usare il metodo [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) per eseguire tale codice nel thread dell'interfaccia utente.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
