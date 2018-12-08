@@ -7,14 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2017
-ms.openlocfilehash: 6efefe11b31428f41bfa945aff93aa70aa764870
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 98975d51c31b8e8c52d184c631194388cd6cfa87
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615275"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053900"
 ---
 # <a name="path-information-and-enumeration"></a>Informazioni sui tracciati ed enumerazione
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Ottenere informazioni sui percorsi ed enumerare il contenuto_
 

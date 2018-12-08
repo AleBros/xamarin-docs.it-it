@@ -7,14 +7,16 @@ ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 008c1b5eb30c3bae05d0d88b37fdef54be4066c5
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: db6c329c029f52180fe508f277a1cf4834ab493a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563004"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059165"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>Riepilogo del capitolo 25. Tipi di pagina
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25)
 
 Finora si sono visto due classi che derivano da `Page`: `ContentPage` e `NavigationPage`. Questo capitolo vengono illustrati altri due controlli:
 

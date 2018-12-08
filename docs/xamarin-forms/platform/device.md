@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 084c0c292cb7e527d74c77937bc69f76fc8c0658
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4ba4bd7528b635d099868f093268d2d83e44dae0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114320"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059756"
 ---
 # <a name="xamarinforms-device-class"></a>Classe di dispositivi di xamarin. Forms
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
 
 Il [ `Device` ](xref:Xamarin.Forms.Device) classe contiene un numero di proprietà e metodi che consentono agli sviluppatori di personalizzare i layout e le funzionalità in base a ogni piattaforma.
 
@@ -113,7 +115,7 @@ In alternativa, il `OnIdiom` estensione di markup è utilizzabile in XAML per pe
 
 ## <a name="deviceflowdirection"></a>Device.FlowDirection
 
-Il [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) valore recupera una [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) valore di enumerazione che rappresenta la direzione del flusso corrente utilizzata dal dispositivo. Direzione del flusso è la direzione in cui gli elementi dell'interfaccia utente nella pagina vengono analizzati dall'occhio del lettore. I valori dell'enumerazione sono:
+Il [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) valore recupera una [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) valore di enumerazione che rappresenta la direzione del flusso corrente utilizzata dal dispositivo. La direzione del flusso è la direzione in cui gli elementi dell'interfaccia utente della pagina vengono analizzati dall'occhio del lettore. I valori dell'enumerazione sono:
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
 - [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)

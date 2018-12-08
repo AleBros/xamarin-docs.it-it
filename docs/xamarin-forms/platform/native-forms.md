@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
-ms.openlocfilehash: 6232c6b561a791f170ebedd4d441f7be2a8ef92e
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: e02c04afe656b0eca3b7ae12b8b30f35836b9368
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563732"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054813"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin. Forms in progetti Xamarin Native
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/Native2Forms/)
 
 _Form nativi consentire derivate da xamarin. Forms ContentPage pagine devono essere utilizzate dai progetti xamarin. IOS, xamarin. Android e Universal Windows Platform (UWP) nativi. Progetti nativi possono utilizzare pagine derivate ContentPage che vengono aggiunti direttamente al progetto, o da una libreria .NET Standard, libreria .NET Standard o progetto condiviso. Questo articolo illustra come usare pagine derivate ContentPage che vengono aggiunti direttamente a progetti nativi e come spostarsi tra di essi._
 

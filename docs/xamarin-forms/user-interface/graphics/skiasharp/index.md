@@ -1,19 +1,21 @@
 ---
-title: Grafici di SkiaSharp in xamarin. Forms
+title: Grafica SkiaSharp in Xamarin.Forms
 description: SkiaSharp è un sistema di grafica 2D per .NET e c# con tecnologia il motore della grafica Skia open source che viene ampiamente usato nei prodotti di Google. Questa guida illustra come usare SkiaSharp per la grafica 2D nelle applicazioni xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 05c4b00f1551ffe21b3042a7da6bf0483dacf620
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 9cd5a25c598a25500aee595439aeecd648d50526
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615873"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055841"
 ---
-# <a name="skiasharp-graphics-in-xamarinforms"></a>Grafici di SkiaSharp in xamarin. Forms
+# <a name="skiasharp-graphics-in-xamarinforms"></a>Grafica SkiaSharp in Xamarin.Forms
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Uso di SkiaSharp per la grafica 2D nelle applicazioni xamarin. Forms_
 

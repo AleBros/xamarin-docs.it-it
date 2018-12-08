@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: ff485774b8e9ee47aae4808701e8b9d20c308e03
-ms.sourcegitcommit: 676c5a6795ab4896ccd1b288424bf2040b1208aa
+ms.openlocfilehash: 25c5077b3637c54370fa1a42a9b652ef211c0ed9
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52280478"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059340"
 ---
 # <a name="xamarinforms-grid"></a>Griglia di xamarin. Forms
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
 [`Grid`](xref:Xamarin.Forms.Grid) supporta la disposizione di visualizzazioni in righe e colonne. Per avere dimensioni proporzionale o dimensioni assolute, è possono impostare righe e colonne. Il `Grid` layout non vanno confuso con le tabelle tradizionali e non può presentare i dati tabulari. `Grid` non è il concetto di riga, colonna o di formattazione delle celle. A differenza delle tabelle HTML, `Grid` è destinato esclusivamente per la disposizione del contenuto.
 

@@ -7,14 +7,16 @@ ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 2c9493706930bd3c2ffd54835d963d9847e82e76
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: f326d0434fd2565c30890dea0838168c9d8b4287
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563797"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054741"
 ---
 # <a name="summary-of-chapter-10-xaml-markup-extensions"></a>Riepilogo del capitolo 10. Estensioni di markup XAML
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
 
 In genere, il parser XAML converte qualsiasi stringa impostata come valore di attributo per il tipo della proprietà in base a conversioni standard per i tipi di dati .NET di base, o un [ `TypeConverter` ](xref:Xamarin.Forms.TypeConverter) derivato associata alla proprietà o il relativo tipo con un [`TypeConverterAttribute`](xref:Xamarin.Forms.TypeConverterAttribute).
 

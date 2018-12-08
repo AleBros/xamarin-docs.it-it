@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 881b465643b576f5d3f4fc8121c5a873087a876c
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 762d4752eb3882398f212e634c66305f74d5a459
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527335"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052663"
 ---
 # <a name="device-orientation"></a>Orientamento del dispositivo
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
 
 È importante da considerare come verrà usato l'applicazione e come incorporarli con orientamento orizzontale per migliorare l'esperienza utente. Layout delle singole possono essere progettate per contenere vari orientamenti e migliore utilizzo dello spazio disponibile. A livello di applicazione, la rotazione può essere disabilitata o abilitata.
 

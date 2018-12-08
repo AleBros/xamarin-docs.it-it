@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 02ea94fa67491384e6ca6768e429ee96b46c6143
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 6d3355b1ebac5001984677eb8cc527fe619b8349
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171339"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052251"
 ---
 # <a name="xamarinforms-webview"></a>WebView di xamarin. Forms
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
 
 [`WebView`](xref:Xamarin.Forms.WebView) è una vista per la visualizzazione del contenuto HTML e web nell'app. A differenza `OpenUri`, che accetta l'utente per il web browser nel dispositivo, `WebView` consente di visualizzare il contenuto HTML all'interno dell'app.
 
