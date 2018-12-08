@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: b6989782c438ec41911cc9317d9f911d6518132d
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 7c12136a0dad0165c46f1559e7a2d61abaf7af1e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38872722"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059704"
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>Autenticazione degli utenti con Azure Active Directory B2C
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureADB2CAuth/)
 
 _Azure Active B2C di Directory è una soluzione di gestione identità cloud per applicazioni rivolte agli utenti web e mobili. Questo articolo illustra come usare Microsoft Authentication Library e Azure Active Directory B2C per l'integrazione di gestione delle identità degli utenti in un'applicazione per dispositivi mobili._
 
@@ -61,13 +63,13 @@ La libreria NuGet di Microsoft Authentication Library (MSAL) deve essere aggiunt
 
 ### <a name="portable-class-library"></a>Libreria di classi portabile
 
-In grado di gestire lo scenario in cui un token appropriato potrebbe essere già presente nella cache dalle sessioni precedenti. Per altre informazioni sulle librerie di classi portabili, vedere l'[introduzione alle librerie di classi portabili](~/cross-platform/app-fundamentals/pcl.md).
+Librerie di classi portabili che utilizzano MSAL dovranno essere reindirizzati per l'uso Profile7. Per altre informazioni sulle librerie di classi portabili, vedere l'[introduzione alle librerie di classi portabili](~/cross-platform/app-fundamentals/pcl.md).
 
 ### <a name="ios"></a>iOS
 
 In iOS, lo schema URL personalizzato che è stato registrato con Azure Active Directory B2C deve essere registrato nella **Info. plist**, come illustrato nello screenshot seguente:
 
-![](azure-ad-b2c-images/customurl-ios.png "Se il tentativo di ottenere un token ha esito negativo, non accade nulla e l'utente avrà la possibilità di avviare un nuovo flusso di autenticazione.")
+![](azure-ad-b2c-images/customurl-ios.png "Registrazione di uno schema URL personalizzato in iOS")
 
 Al termine di richiesta di autorizzazione, Azure Active Directory B2C reindirizza all'URL di reindirizzamento registrato. Poiché l'URL viene utilizzato uno schema personalizzato comporta l'avvio dell'applicazione per dispositivi mobili iOS, passando in URL come parametro di avvio, in cui viene elaborato dal `OpenUrl` eseguire l'override dell'applicazione `AppDelegate` (classe), illustrato nel codice seguente esempio:
 

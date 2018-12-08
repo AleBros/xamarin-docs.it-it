@@ -8,14 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: f73760e2dc2310a9c1cd7a63a03ead37283a415f
-ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
+ms.openlocfilehash: c4e634ce51080ad38b093e1355767c73c72e837a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710010"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059626"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Applicazione di indicizzazione e Deep Linking
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/deeplinking/)
 
 _L'indicizzazione dell'applicazione consente alle applicazioni in caso contrario, può essere dimenticate dopo poche Usa per rimanere al passo dalla visualizzazione nei risultati della ricerca. Il collegamento completo consente alle applicazioni rispondere a un risultato di ricerca che contiene i dati dell'applicazione, in genere passando a una pagina di cui viene fatto riferimento da un collegamento diretto. Questo articolo illustra come usare l'applicazione di indicizzazione e deep linking per rendere disponibili per la ricerca in dispositivi iOS e Android il contenuto dell'applicazione xamarin. Forms._
 

@@ -7,14 +7,16 @@ ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 4bfa2bed7061e031c55ccbdb7f576aa02c17581a
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: ddbb96836fa1aa9611701bd7d645d9e85ad28027
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563992"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058636"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Riepilogo del capitolo 23. I trigger e comportamenti
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
 
 I trigger e i comportamenti sono simili, in quanto entrambe sono concepite per essere usati nei file XAML per semplificare le interazioni elemento oltre l'uso di associazioni dati e per estendere la funzionalità degli elementi XAML. Trigger e i comportamenti sono quasi sempre usati con oggetti dell'interfaccia utente visual.
 

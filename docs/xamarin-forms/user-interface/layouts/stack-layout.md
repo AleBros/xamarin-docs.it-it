@@ -1,34 +1,36 @@
 ---
-title: Xamarin. Forms StackLayout
-description: In questo articolo viene illustrato come utilizzare la classe StackLayout xamarin. Forms per presentare le raccolte di viste su una dimensione.
+title: StackLayout xamarin. Forms
+description: Questo articolo illustra come usare la classe StackLayout xamarin. Forms per presentare le raccolte di visualizzazioni in una dimensione.
 ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 6e278c466c352ad19575cd3a84d6e38e14ec2587
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: bdc03721569682cd5b4f72908fcab1e4a567b83c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244597"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055802"
 ---
-# <a name="xamarinforms-stacklayout"></a>Xamarin. Forms StackLayout
+# <a name="xamarinforms-stacklayout"></a>StackLayout xamarin. Forms
 
-`StackLayout` Consente di organizzare le visualizzazioni in una riga unidimensionale ("stack"), orizzontalmente o verticalmente. Viste di un `StackLayout` può essere dimensionato in base allo spazio del layout utilizzando le opzioni di layout. Posizionamento è determinato dall'ordine viste sono state aggiunte per il layout e le opzioni di layout delle viste.
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+
+`StackLayout` Consente di organizzare le visualizzazioni in una riga unidimensionale ("stack"), orizzontalmente o verticalmente. Viste di un `StackLayout` può essere dimensionato base allo spazio del layout usando le opzioni di layout. Il posizionamento è determinato dall'ordine con le visualizzazioni sono stati aggiunti al layout e le opzioni di layout delle visualizzazioni.
 
 [![](stack-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](stack-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 ## <a name="purpose"></a>Scopo
 
-`StackLayout` è meno complesso altre visualizzazioni. È possibile creare interfacce lineare semplice semplicemente aggiungendo le visualizzazioni per un `StackLayout`e le interfacce più complesse create nidificate.
+`StackLayout` è meno complesso altre viste. È possibile creare interfacce lineare semplice semplicemente aggiungendo visualizzazioni da un `StackLayout`e le interfacce più complesse create da loro di annidamento.
 
-## <a name="usage--behavior"></a>Utilizzo e comportamento
+## <a name="usage--behavior"></a>L'utilizzo e comportamento
 
 ### <a name="spacing"></a>Spacing (Spaziatura)
 
-Per impostazione predefinita, `StackLayout` aggiungerà un margine 6px tra le visualizzazioni. Questo può essere controllato o impostato come non margine impostando il `Spacing` proprietà StackLayout. Di seguito viene illustrato come impostare la spaziatura e l'effetto delle opzioni di spaziatura diversi:
+Per impostazione predefinita, `StackLayout` aggiungerà un margine 6px tra le visualizzazioni. Ciò può essere controllata o configurata in modo non margine impostando il `Spacing` proprietà StackLayout. Di seguito viene illustrato come impostare la spaziatura e l'effetto delle opzioni di spaziatura diversa:
 
 In XAML:
 
@@ -82,29 +84,29 @@ Spaziatura = 0:
 
 ![](stack-layout-images/spacing-zero.png "StackLayout con spaziatura = 0")
 
-Spaziatura di dieci:
+Spaziatura a dieci:
 
 ![](stack-layout-images/spacing-ten.png "StackLayout con spaziatura = 10")
 
 ### <a name="sizing"></a>Ridimensionamento
 
-Le dimensioni di una vista in un StackLayout dipendono l'altezza e larghezza di richieste e le opzioni di layout. `StackLayout` Consente di applicare la spaziatura interna. Le operazioni seguenti `LayoutOption`s causerà viste occupare tutto lo spazio disponibile dal layout:
+Le dimensioni di una vista in un StackLayout dipendono sia le richieste di altezza e la larghezza e le opzioni di layout. `StackLayout` impone la spaziatura interna. Nell'esempio `LayoutOption`s determinerà le viste a occupare tutto lo spazio disponibile del layout:
 
-- **CenterAndExpand** &ndash; Centra la visualizzazione all'interno del layout e si espande in modo da occupare tutto lo spazio il layout verrà assegnato automaticamente.
-- **EndAndExpand** &ndash; posiziona la vista alla fine del layout (in basso o limite più a destra) e si espande in modo da occupare tutto lo spazio il layout verrà assegnato automaticamente.
-- **FillAndExpand** &ndash; posiziona la vista in modo che non ha alcun riempimento e occupa tutto lo spazio il layout verrà assegnato automaticamente.
-- **StartAndExpand** &ndash; posiziona la vista all'inizio del layout e occupa tutto lo spazio fornirà l'elemento padre.
+- **CenterAndExpand** &ndash; Centra la visualizzazione all'interno del layout e si espande in modo da occupare tutto lo spazio verrà assegnato automaticamente il layout.
+- **EndAndExpand** &ndash; posiziona la visualizzazione al termine del layout (in basso o un limite più a destra) e si espande in modo da occupare tutto lo spazio verrà assegnato automaticamente il layout.
+- **FillAndExpand** &ndash; posiziona la visualizzazione in modo che non ha alcun riempimento e occupa tutto lo spazio verrà assegnato automaticamente il layout.
+- **StartAndExpand** &ndash; posiziona la visualizzazione all'inizio del layout e occupa tutto lo spazio fornirà l'elemento padre.
 
-Per ulteriori informazioni, vedere [espansione](~/xamarin-forms/user-interface/layouts/layout-options.md#expansion).
+Per altre informazioni, vedere [espansione](~/xamarin-forms/user-interface/layouts/layout-options.md#expansion).
 
 ### <a name="positioning"></a>Posizionamento
 
-Visualizzazioni in un StackLayout può essere posizionate e dimensioni tramite `LayoutOptions`. È possibile assegnare ogni visualizzazione `VerticalOptions` e `HorizontalOptions`, che definisce come le viste verranno posizionano in base il layout. I seguenti predefiniti `LayoutOptions` sono disponibili:
+Viste in un StackLayout può essere posizionate e dimensioni tramite `LayoutOptions`. Ogni vista può essere fornito `VerticalOptions` e `HorizontalOptions`, che definisce come le viste verranno posizionano in base al layout. Predefinite seguenti `LayoutOptions` disponibili:
 
-- **Center** &ndash; Centra la visualizzazione all'interno del layout.
-- **Fine** &ndash; posiziona la vista alla fine del layout (in basso o limite più a destra).
-- **Riempimento** &ndash; posiziona la vista in modo che non disponga di alcun riempimento.
-- **Avviare** &ndash; posiziona la vista all'inizio del layout.
+- **Centro** &ndash; Centra la visualizzazione all'interno del layout.
+- **Estremità** &ndash; posiziona la visualizzazione al termine del layout (in basso o un limite più a destra).
+- **Riempire** &ndash; posiziona la visualizzazione in modo che non includa alcun riempimento.
+- **Avviare** &ndash; posiziona la visualizzazione all'inizio del layout.
 
 Il codice seguente illustra l'impostazione delle opzioni di layout:
 
@@ -154,13 +156,13 @@ public class StackLayoutCode : ContentPage
 }
 ```
 
-Per ulteriori informazioni, vedere [allineamento](~/xamarin-forms/user-interface/layouts/layout-options.md#alignment).
+Per altre informazioni, vedere [allineamento](~/xamarin-forms/user-interface/layouts/layout-options.md#alignment).
 
 ## <a name="exploring-a-complex-layout"></a>Esplorazione di un Layout complesso
 
-Ogni layout di disporre di vantaggi e svantaggi per la creazione di un layout specifico. Questa serie di articoli di layout, un'app di esempio è stata creata con lo stesso layout di pagina implementato utilizzando tre layout diversi.
+Ognuno dei layout presentano vantaggi e svantaggi per la creazione di layout specifico. In questa serie di articoli di layout, un'app di esempio è stata creata con lo stesso layout di pagina implementato usando tre layout diversi.
 
-Si consideri il codice XAML seguente:
+Si consideri il seguente XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -213,11 +215,11 @@ Title="StackLayouts">
 
 ```
 
-Il codice precedente produce lo schema seguente:
+Il codice precedente genera il layout seguente:
 
 ![](stack-layout-images/stack.png "StackLayout complessi")
 
-Si noti che `StackLayouts`s sono annidate, perché in alcuni casi la nidificazione di layout può essere più semplice rispetto a tutti gli elementi all'interno del layout stesso presentazione. Si noti inoltre che, in quanto `StackLayout` non supporta elementi sovrapposti, la pagina non sono alcuni niceties il layout presenti nelle pagine per gli altri layout.
+Si noti che `StackLayouts`s sono annidate, in quanto in alcuni casi i layout di annidamento può risultare più semplice rispetto a presentare tutti gli elementi all'interno del layout stesso. Si noti inoltre che, in quanto `StackLayout` non supporta elementi sovrapposti, trovare la pagina non sono in parte il niceties layout nelle pagine per gli altri layout.
 
 
 

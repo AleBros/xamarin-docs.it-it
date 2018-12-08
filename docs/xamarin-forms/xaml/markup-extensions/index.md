@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 3a28963852b2b36be0a9751722b7f184c340d3e9
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: cfdd639672f7fa624c7c8e30f17fbfc9dad403af
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563394"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060161"
 ---
 # <a name="xaml-markup-extensions"></a>Estensioni di Markup XAML
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 
 Le estensioni di markup XAML consentono ad ampliare la potenza e flessibilità di XAML, consentendo di attributi dell'elemento da impostare da origini diverse dalle stringhe di testo letterale.
 

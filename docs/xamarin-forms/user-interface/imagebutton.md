@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 26f69f9ac2d315e1076cab6f7c1534cbdd39a9b3
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: f97cd3030b865b53b82845ff8941e3f0a10f0320
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52173897"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050136"
 ---
 # <a name="xamarinforms-imagebutton"></a>Xamarin. Forms ImageButton
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 
 _Elemento ImageButton Visualizza un'immagine e risponde a un tocco o clic che indirizza un'applicazione per eseguire una determinata attività._
 

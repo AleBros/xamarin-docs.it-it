@@ -7,14 +7,16 @@ ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: ebd4db28b2c20bd2b9e1d93e03dd101ebc5da663
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f988c16e933214b3ce737febb89d05a451eb2f14
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131681"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055037"
 ---
 # <a name="porter-duff-blend-modes"></a>Metodi di fusione porter Duff
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 I metodi di fusione Porter Duff sono nominati a Thomas Porter e Tom Duff, che ha sviluppato un algebra di composizione durante l'utilizzo per Lucasfilm. La carta [ _la composizione di immagini digitali_ ](https://graphics.pixar.com/library/Compositing/paper.pdf) è stato pubblicato nel numero di luglio 1984 di _infografica_, pagine da 253 a 259. Queste modalità di blend sono essenziali per la composizione di cui è assemblando diverse immagini in una scena composita:
 

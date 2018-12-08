@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 0d49b8c50db08ad07952425492591ee246de4f8b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: e2abb37a69fc059cea499814eb48453f3bbbed72
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998348"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051056"
 ---
 # <a name="xamarinforms-absolutelayout"></a>Xamarin. Forms AbsoluteLayout
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) posizione e dimensioni proporzionale alle dimensioni e posizione o per i valori assoluti di elementi figlio. Visualizzazioni figlio possono essere posizionato e dimensione usando valori proporzionali o valori statici, pertanto proporzionale e possono essere combinati valori statici.
 

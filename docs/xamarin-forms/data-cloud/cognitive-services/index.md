@@ -1,86 +1,88 @@
 ---
-title: Aggiunta di funzionalità con servizi cognitivi
-description: In questo articolo viene fornita un'introduzione a un'applicazione di esempio che illustra come richiamare alcune delle API dei servizi Microsoft cognitivi.
+title: Aggiunta di funzionalità di Intelligence con servizi cognitivi
+description: Questo articolo fornisce un'introduzione a un'applicazione di esempio che illustra come richiamare alcune delle API servizi cognitivi Microsoft.
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: c577aaf1991082baaf34248ee31899902f692d0b
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 0c09063b55a14f9f22feb91d2a6f9d3f9417ecee
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241523"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052478"
 ---
-# <a name="adding-intelligence-with-cognitive-services"></a>Aggiunta di funzionalità con servizi cognitivi
+# <a name="adding-intelligence-with-cognitive-services"></a>Aggiunta di funzionalità di Intelligence con servizi cognitivi
 
-_Servizi cognitivi Microsoft sono un set di API e SDK di servizi disponibili per gli sviluppatori per rendere le applicazioni più intelligenti aggiungendo funzionalità quali il riconoscimento facciale, riconoscimento vocale e comprensione del linguaggio. In questo articolo viene fornita un'introduzione all'applicazione di esempio che illustra come richiamare alcune delle API dei servizi Microsoft cognitivi._
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+
+_Servizi cognitivi Microsoft sono un set di API, SDK e servizi disponibili per gli sviluppatori a rendere più intelligenti le applicazioni tramite l'aggiunta di funzionalità, ad esempio il riconoscimento facciale, vocale e language Understanding Intelligent Service. Questo articolo fornisce un'introduzione all'applicazione di esempio che illustra come richiamare alcune delle API servizi cognitivi Microsoft._
 
 ## <a name="overview"></a>Panoramica
 
-L'esempio di accompagnamento è un'applicazione di elenco todo che fornisce funzionalità per:
+Esempio di accompagnamento è un'applicazione elenco attività che fornisce funzionalità per:
 
-- Consente di visualizzare un elenco di attività.
-- Aggiungere e modificare le attività tramite la tastiera su schermo, oppure eseguendo il riconoscimento vocale con l'API di riconoscimento vocale Microsoft. Per ulteriori informazioni sull'esecuzione di riconoscimento vocale, vedere [riconoscimento vocale utilizzando l'API di riconoscimento vocale Microsoft](speech-recognition.md).
-- Digitare il nome di attività di controllo utilizzando l'API di controllo ortografico Bing. Per ulteriori informazioni, vedere [il controllo ortografico tramite l'API di controllo ortografico Bing](spell-check.md).
-- Tradurre attività dall'inglese, tedesco tramite l'API di conversione. Per ulteriori informazioni, vedere [la conversione di testo tramite l'API di conversione](text-translation.md).
+- Visualizzare un elenco di attività.
+- Aggiungere e modificare le attività tramite la tastiera, oppure eseguendo il riconoscimento vocale con l'API traduzione vocale Microsoft. Per altre informazioni sull'esecuzione di riconoscimento vocale, vedere [riconoscimento vocale usando l'API traduzione vocale Microsoft](speech-recognition.md).
+- Digitare il nome di attività di controllo usando l'API controllo ortografico Bing. Per altre informazioni, vedere [ortografico usando l'API controllo ortografico Bing](spell-check.md).
+- Tradurre le attività dall'inglese in tedesco utilizzando l'API Microsoft Translator. Per altre informazioni, vedere [traduzione testuale tramite l'API Microsoft Translator](text-translation.md).
 - Eliminare le attività.
 - Impostare lo stato dell'attività su "OK".
-- Frequenza dell'applicazione con riconoscimento del emozioni, tramite l'API di tipo di carattere. Per altre informazioni, vedere [riconoscimento emozioni usando l'API viso](emotion-recognition.md).
+- Valutare l'applicazione con riconoscimento delle emozioni, tramite l'API viso. Per altre informazioni, vedere [riconoscimento delle emozioni tramite l'API viso](emotion-recognition.md).
 
-Le attività vengono archiviate in un database locale di SQLite. Per ulteriori informazioni sull'utilizzo di un database locale di SQLite, vedere [utilizzo di un Database locale](~/xamarin-forms/app-fundamentals/databases.md).
+Le attività vengono archiviate in un database SQLite locale. Per altre informazioni sull'uso di un database SQLite locale, vedere [utilizzo di un Database locale](~/xamarin-forms/app-fundamentals/databases.md).
 
-Il `TodoListPage` viene visualizzata quando viene avviata l'applicazione. Questa pagina consente di visualizzare un elenco di tutte le attività archiviate nel database locale e consente all'utente di creare una nuova attività o per valutare l'applicazione:
+Il `TodoListPage` viene visualizzata quando viene avviata l'applicazione. Questa pagina viene visualizzato un elenco di tutte le attività archiviati nel database locale e consente all'utente per creare una nuova attività o di frequenza dell'applicazione:
 
 ![](images/sample-application-1.png "TodoListPage")
 
-Possono essere creati nuovi elementi facendo clic su di *+* pulsante che consente di passare al `TodoItemPage`. Questa pagina inoltre per spostarsi selezionando un'attività:
+Possono essere creati nuovi elementi facendo clic sui *+* pulsante che consente di passare al `TodoItemPage`. Questa pagina anche per spostarsi selezionando un'attività:
 
 ![](images/sample-application-2.png "TodoItemPage")
 
-Il `TodoItemPage` consente alle attività di essere creato, modificato, ortografia, convertite, salvate ed eliminato. Il riconoscimento vocale consente di creare o modificare un'attività. A questo scopo facendo clic sul pulsante microfono per avviare la registrazione e facendo clic sul pulsante stesso una seconda volta per arrestare la registrazione, che invia la registrazione per l'API di riconoscimento vocale Bing.
+Il `TodoItemPage` consente alle attività di essere creato, modificato, ortografia, convertite, salvate ed eliminate. Riconoscimento vocale è utilizzabile per creare o modificare un'attività. Questo risultato viene ottenuto premendo il pulsante del microfono per avviare la registrazione e premendo il pulsante stesso una seconda volta per arrestare la registrazione, che invia la registrazione per l'API di riconoscimento vocale Bing.
 
-Facendo clic sul pulsante smilies sul `TodoListPage` passa al `RateAppPage`, che consente di eseguire il riconoscimento emozioni in un'immagine di un'espressione facciale:
+Facendo clic sul pulsante smilies sul `TodoListPage` passa al `RateAppPage`, che consente di eseguire il riconoscimento delle emozioni su un'immagine di un'espressione del viso:
 
 ![](images/sample-application-3.png "RateAppPage")
 
-Il `RateAppPage` consente all'utente di richiedere una foto del loro faccia, viene inviata all'API viso con l'emozioni restituita venga visualizzata nuovamente.
+Il `RateAppPage` consente all'utente di scattare una foto della loro visi, che viene inviata all'API viso con le emozioni restituito viene visualizzato.
 
-## <a name="understanding-the-application-anatomy"></a>Comprendere l'anatomia di applicazione
+## <a name="understanding-the-application-anatomy"></a>Comprendere la composizione dell'applicazione
 
-Il progetto libreria di classe portabile (PCL) per l'applicazione di esempio è costituito da cinque cartelle principali:
+Il progetto libreria di classi portabile (PCL) per l'applicazione di esempio è costituito da cinque cartelle principali:
 
 |Cartella|Scopo|
 |--- |--- |
-|Modelli|Contiene le classi del modello di dati per l'applicazione. Ciò include la `TodoItem` classe, che modella un singolo elemento di dati utilizzati dall'applicazione. La cartella contiene inoltre le classi utilizzate per le risposte JSON modello restituite dall'API dei servizi cognitivi Microsoft diverso.|
-|Repository|Contiene il `ITodoItemRepository` interfaccia e `TodoItemRepository` classe utilizzata per eseguire operazioni di database.|
-|Servizi|Contiene le interfacce e classi che consentono di accedere a diversi cognitivi servizio API di Microsoft, insieme alle interfacce utilizzate per la `DependencyService` per individuare le classi che implementano le interfacce nei progetti di piattaforma.|
-|Utils|Contiene il `Timer` (classe), che viene utilizzato il `AuthenticationService` classe per rinnovare un token di accesso JWT 9 minuti.|
+|Modelli|Contiene le classi di modello di dati per l'applicazione. Ciò include la `TodoItem` (classe), che modella un singolo elemento di dati usati dall'applicazione. La cartella contiene inoltre le classi usate per modellare le risposte JSON restituite da diverse API servizi cognitivi Microsoft.|
+|Repository|Contiene il `ITodoItemRepository` interfaccia e `TodoItemRepository` classi che consentono di eseguire operazioni di database.|
+|Servizi|Contiene le interfacce e classi che consentono di accedere a diversi Microsoft le API servizi cognitivi, insieme alle interfacce utilizzate dal `DependencyService` classe per individuare le classi che implementano le interfacce nei progetti di piattaforma.|
+|Utils|Contiene il `Timer` (classe), che viene usato dal `AuthenticationService` classe per rinnovare un token di accesso JWT ogni 9 minuti.|
 |Visualizzazioni|Contiene le pagine dell'applicazione.|
 
-Il progetto di libreria di classi Portabile contiene anche alcuni file importanti:
+Il progetto libreria di classi Portabile contiene anche alcuni file importanti:
 
 |File|Scopo|
 |--- |--- |
-|Constants.cs|Il `Constants` (classe), che specifica le chiavi API e gli endpoint per le API del servizio Microsoft cognitivi che vengono richiamati. Le costanti di chiave API devono essere aggiornati per accedere alle API servizio cognitivi diversi.|
-|App.xaml.cs|Il `App` è responsabile della creazione di un'istanza sia la prima pagina che verrà visualizzata dall'applicazione in ogni piattaforma, e `TodoManager` classe utilizzata per richiamare le operazioni di database.|
+|Constants.cs|Il `Constants` (classe), che specifica gli endpoint e le chiavi API per le API di servizi cognitivi Microsoft che vengono richiamati. Le costanti di chiavi API richiedono l'aggiornamento per accedere alle API di servizi cognitivi diversi.|
+|App.xaml.cs|Il `App` classe è responsabile della creazione di un'istanza sia la prima pagina visualizzata dall'applicazione in ogni piattaforma, e il `TodoManager` classe che viene utilizzato per richiamare operazioni del database.|
 
 ### <a name="nuget-packages"></a>Pacchetti NuGet
 
-L'applicazione di esempio utilizza i pacchetti NuGet seguenti:
+L'applicazione di esempio Usa i pacchetti NuGet seguenti:
 
 - `Newtonsoft.Json` : fornisce un framework JSON per .NET.
-- `PCLStorage` : fornisce un set di API dei / o dei file locale multipiattaforma.
-- `sqlite-net-pcl` : fornisce l'archiviazione del database SQLite.
-- `Xam.Plugin.Media` : consente di acquisire foto multipiattaforma e API di prelievo.
+- `PCLStorage` : fornisce un set di file locale multipiattaforma con le API dei / o.
+- `sqlite-net-pcl` – Consente di memorizzare database SQLite.
+- `Xam.Plugin.Media` – Consente di acquisire foto multipiattaforma e il prelievo di API.
 
-Inoltre, questi pacchetti NuGet inoltre installare le proprie dipendenze.
+Inoltre, questi pacchetti NuGet installano anche le proprie dipendenze.
 
 ### <a name="modeling-the-data"></a>Modellazione dei dati
 
-Applicazione di esempio utilizza la `TodoItem` classe per modellare i dati visualizzati e archiviati nel database locale di SQLite. L'esempio di codice seguente visualizza la classe `TodoItem`:
+L'applicazione di esempio Usa il `TodoItem` classe per modellare i dati visualizzati e archiviati nel database SQLite locale. L'esempio di codice seguente visualizza la classe `TodoItem`:
 
 ```csharp
 public class TodoItem
@@ -92,35 +94,35 @@ public class TodoItem
 }
 ```
 
-Il `ID` proprietà viene utilizzata per identificare in modo univoco ogni `TodoItem` istanza ed è decorato con attributi di SQLite che rendono la proprietà di una chiave primaria con incremento automatico del database.
+Il `ID` proprietà viene utilizzata per identificare in modo univoco ogni `TodoItem` di istanza ed è decorato con attributi di SQLite che rendono la proprietà di una chiave primaria con incremento automatico nel database.
 
 ### <a name="invoking-database-operations"></a>Richiamo di operazioni di Database
 
-Il `TodoItemRepository` classe implementa le operazioni di database e un'istanza della classe sono accessibili tramite il `App.TodoManager` proprietà. La `TodoItemRepository` classe fornisce i metodi seguenti per richiamare le operazioni di database:
+Il `TodoItemRepository` classe implementa le operazioni di database e un'istanza della classe sono accessibili tramite il `App.TodoManager` proprietà. Il `TodoItemRepository` classe fornisce i metodi seguenti per richiamare le operazioni di database:
 
-- **GetAllItemsAsync** – recupera tutti gli elementi del database locale di SQLite.
-- **GetItemAsync** – recupera un elemento specificato dal database locale di SQLite.
-- **SaveItemAsync** : crea o aggiorna una voce nel database locale di SQLite.
-- **DeleteItemAsync** -Elimina l'elemento specificato dal database locale di SQLite.
+- **GetAllItemsAsync** -recupera tutti gli elementi dal database SQLite locale.
+- **GetItemAsync** : recupera un elemento specificato dal database SQLite locale.
+- **SaveItemAsync** : crea o aggiorna un elemento nel database SQLite locale.
+- **DeleteItemAsync** – Elimina l'elemento specificato dal database SQLite locale.
 
 ### <a name="platform-project-implementations"></a>Implementazioni di progetto della piattaforma
 
-Il `Services` cartella nel progetto libreria di classi Portabile contiene il `IFileHelper` e `IAudioRecorderService` le interfacce utilizzate per la `DependencyService` per individuare le classi che implementano le interfacce nei progetti di piattaforma.
+Il `Services` cartella nel progetto libreria di classi Portabile contiene il `IFileHelper` e `IAudioRecorderService` interfacce utilizzate per il `DependencyService` classe per individuare le classi che implementano le interfacce nei progetti di piattaforma.
 
-Il `IFileHelper` viene implementata mediante la `FileHelper` classe in ogni progetto della piattaforma. Questa classe è costituita da un singolo metodo, `GetLocalFilePath`, che restituisce un percorso file locale per archiviare il database di SQLite.
+Il `IFileHelper` viene implementata mediante il `FileHelper` classe in ogni progetto della piattaforma. Questa classe è costituito da un singolo metodo, `GetLocalFilePath`, che restituisce un percorso file locale per memorizzare database SQLite.
 
-Il `IAudioRecorderService` viene implementata mediante la `AudioRecorderService` classe in ogni progetto della piattaforma. Questa classe è costituita `StartRecording`, `StopRecording`e i metodi, utilizzano le API della piattaforma per registrare l'audio dal microfono del dispositivo e salvarlo come file wav di supporto. In iOS, il `AudioRecorderService` utilizza il `AVFoundation` API per registrare l'audio. In Android, il `AudioRecordService` utilizza il `AudioRecord` API per registrare l'audio. Nel Windows piattaforma UWP (Universal), il `AudioRecorderService` utilizza il `AudioGraph` API per registrare l'audio.
+Il `IAudioRecorderService` viene implementata mediante il `AudioRecorderService` classe in ogni progetto della piattaforma. Questa classe è costituita `StartRecording`, `StopRecording`e il supporto di metodi che usano le API della piattaforma di registrare l'audio dal microfono del dispositivo e archiviano come un file wav. In iOS, il `AudioRecorderService` utilizza il `AVFoundation` API per registrare l'audio. In Android, il `AudioRecordService` utilizza il `AudioRecord` API per registrare l'audio. In Universal Windows Platform (UWP), il `AudioRecorderService` utilizza il `AudioGraph` API per registrare l'audio.
 
-### <a name="invoking-cognitive-services"></a>Richiamare i servizi cognitivi
+### <a name="invoking-cognitive-services"></a>Richiamo di servizi cognitivi
 
-L'applicazione di esempio richiama servizi cognitivi Microsoft seguenti:
+L'applicazione di esempio richiama i servizi cognitivi Microsoft seguenti:
 
-- API riconoscimento vocale Microsoft. Per altre informazioni, vedere [riconoscimento vocale utilizzando l'API di riconoscimento vocale Microsoft](speech-recognition.md).
-- Controllo ortografico Bing API. Per ulteriori informazioni, vedere [il controllo ortografico tramite l'API di controllo ortografico Bing](spell-check.md).
-- Tradurre API. Per ulteriori informazioni, vedere [la conversione di testo tramite l'API di conversione](text-translation.md).
-- API viso. Per altre informazioni, vedere [riconoscimento emozioni usando l'API viso](emotion-recognition.md).
+- API traduzione vocale di Microsoft. Per altre informazioni, vedere [riconoscimento vocale usando l'API traduzione vocale Microsoft](speech-recognition.md).
+- API del controllo ortografico Bing. Per altre informazioni, vedere [ortografico usando l'API controllo ortografico Bing](spell-check.md).
+- API traduzione. Per altre informazioni, vedere [traduzione testuale tramite l'API Microsoft Translator](text-translation.md).
+- API viso. Per altre informazioni, vedere [riconoscimento delle emozioni tramite l'API viso](emotion-recognition.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Documentazione di Microsoft servizi cognitivi](https://www.microsoft.com/cognitive-services/documentation)
+- [Documentazione dei servizi cognitivi Microsoft](https://www.microsoft.com/cognitive-services/documentation)
 - [Servizi cognitivi TODO (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)

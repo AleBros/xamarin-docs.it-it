@@ -7,14 +7,16 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: 3571da005f48bda630b4202b804f3efe9c892f60
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 690d3c15d7ad2aad06be5b499bae1a94107414f4
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172327"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053623"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Dati del tracciato SVG in SkiaSharp
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Definire i percorsi di uso delle stringhe di testo in formato Scalable Vector Graphics_
 

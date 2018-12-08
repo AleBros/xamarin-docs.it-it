@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
-ms.openlocfilehash: a2fbb44587eed7f7158c813e45b810cf7f15d0d4
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: fc3a30473b4a38b21f89c5be201c8191658aae63
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50234895"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050322"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Installazione e uso watchOS in Xamarin
 
@@ -45,7 +45,7 @@ Il [esempio Watch Kit Catalog](https://developer.xamarin.com/samples/monotouch/w
 
 -----
 
-Scaricare ed eseguire la [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/) esempio per iniziare.
+Scaricare ed eseguire la [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) esempio per iniziare.
 Le schermate dell'esempio sono reperibile nella [controlli](~/ios/watchos/user-interface/index.md) pagina.
 
 

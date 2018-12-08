@@ -7,16 +7,18 @@ ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: fcb832e851d7467679d979841dad60d117240b59
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 948d25ce379944691053a5ff76ba3b2284385251
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563876"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052637"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Riepilogo del capitolo 2. Anatomia di un'app
 
-> [!NOTE] 
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
+
+> [!NOTE]
 > Le note in questa pagina indicano le aree in cui xamarin. Forms è diversa dal materiale presentato nel libro.
 
 In un'applicazione xamarin. Forms, gli oggetti che occupano spazio sullo schermo vengono definiti *gli elementi visivi*, incapsulati dalle [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe. Gli elementi visivi possono essere suddivisa in tre categorie corrispondenti a queste classi:
@@ -31,9 +33,9 @@ Questo capitolo viene illustrato come creare un'applicazione focalizzando l'atte
 
 ## <a name="say-hello"></a>Dal benvenuto
 
-Con la piattaforma Xamarin installata, è possibile creare una nuova soluzione xamarin. Forms in Visual Studio o Visual Studio per Mac. Il [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) soluzione Usa una libreria di classi portabile per il codice comune. 
+Con la piattaforma Xamarin installata, è possibile creare una nuova soluzione xamarin. Forms in Visual Studio o Visual Studio per Mac. Il [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) soluzione Usa una libreria di classi portabile per il codice comune.
 
-> [!NOTE] 
+> [!NOTE]
 > Librerie di classi portabili sono state sostituite dalle librerie .NET Standard. Tutto il codice di esempio dal libro è stato convertito per utilizzare le librerie .NET standard.
 
 Questo esempio illustra una soluzione xamarin. Forms creata in Visual Studio senza modifiche. La soluzione è costituita da sei progetti:
@@ -45,8 +47,8 @@ Questo esempio illustra una soluzione xamarin. Forms creata in Visual Studio sen
 - [**Hello.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Windows), un progetto di applicazione per Windows 8.1
 - [**Hello.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.WinPhone), un progetto di applicazione per Windows Phone 8.1
 
-> [!NOTE] 
-> Xamarin. Forms non supporta più Windows 8.1, Windows Phone 8.1 o Windows 10 Mobile, ma le applicazioni xamarin. Forms vengono eseguite sul desktop di Windows 10. 
+> [!NOTE]
+> Xamarin. Forms non supporta più Windows 8.1, Windows Phone 8.1 o Windows 10 Mobile, ma le applicazioni xamarin. Forms vengono eseguite sul desktop di Windows 10.
 
 È possibile apportare qualsiasi di questi progetti di applicazione il progetto di avvio e quindi compilare ed eseguire il programma in un dispositivo o simulatore.
 
@@ -56,7 +58,7 @@ In molti dei propri programmi di xamarin. Forms, non modifica i progetti dell'ap
 
 Gli oggetti visivi visualizzati per il **Hello** programma sono definiti nel costruttore della [ `App` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs) classe. `App` deriva dalla classe di xamarin. Forms [ `Application` ](xref:Xamarin.Forms.Application).
 
-> [!NOTE] 
+> [!NOTE]
 > I modelli di soluzione Visual Studio per xamarin. Forms creano una pagina con un file XAML. XAML non è illustrata in questo libro fino alla [capitolo 7](chapter07.md).
 
 Il **riferimenti** sezione il **Hello** progetto PCL include i seguenti assembly xamarin. Forms:
@@ -74,8 +76,8 @@ Il **riferimenti** sezioni dei progetti del cinque applicazione includono assemb
 - **Xamarin.Forms.Platform.WinRT.Tablet**
 - **Xamarin.Forms.Platform.WinRT.Phone**
 
-> [!NOTE] 
-> Il **riferimenti** nelle sezioni di questi progetti non sono elencati gli assembly. Al contrario, il file di progetto contiene un **PackageReference** tag facendo riferimento al pacchetto NuGet di xamarin. Forms. Il **riferimenti** sezione negli elenchi di Visual Studio il **xamarin. Forms** package anziché l'assembly xamarin. Forms. 
+> [!NOTE]
+> Il **riferimenti** nelle sezioni di questi progetti non sono elencati gli assembly. Al contrario, il file di progetto contiene un **PackageReference** tag facendo riferimento al pacchetto NuGet di xamarin. Forms. Il **riferimenti** sezione negli elenchi di Visual Studio il **xamarin. Forms** package anziché l'assembly xamarin. Forms.
 
 Ognuno dei progetti dell'applicazione contiene una chiamata alla proprietà statica `Forms.Init` metodo nella `Xamarin.Forms` dello spazio dei nomi. Ciò consente di inizializzare la libreria xamarin. Forms. Una versione diversa di `Forms.Init` definita per ogni piattaforma. Le chiamate a questo metodo sono reperibili nelle seguenti classi:
 
@@ -95,7 +97,7 @@ In caso contrario, questi progetti di applicazione sono normali programmi "do no
 
 È possibile creare una soluzione xamarin. Forms con il codice comune in una libreria di classi portabile (PCL) o in un progetto di Asset condivisi (SAP). Per creare una soluzione SAP, selezionare l'opzione Shared in Visual Studio. Il [ **HelloSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/HelloSap) soluzione illustra il modello SAP senza modifiche.
 
-> [!NOTE] 
+> [!NOTE]
 > Librerie di classi portabile è stata sostituita dalle librerie .NET Standard. Tutto il codice di esempio dal libro è stato convertito per utilizzare le librerie .NET standard. In caso contrario, le librerie PCL e .NET Standard sono concettualmente molto simile.
 
 I bundle di approccio libreria tutti i più comuni di codice in un progetto di libreria a cui fanno riferimento i progetti di applicazione della piattaforma. Con l'approccio SAP, il codice comune in modo efficace è presente in tutti i progetti di applicazione della piattaforma ed è condiviso tra di essi.

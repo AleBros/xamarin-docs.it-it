@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/04/2018
-ms.openlocfilehash: b5d01aa451c9ab9be081b666e8c7ce51f58a3096
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 263cbb4aed47794a09341bb8c78c4835510e50c0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172314"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059574"
 ---
 # <a name="xamarinforms-datepicker"></a>Xamarin. Forms DatePicker
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
 
 _Una vista di xamarin. Forms che consente all'utente di selezionare una data._
 

@@ -7,14 +7,16 @@ ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 07df66e69186803e3322bd71a4b3b37710655de4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9b94db14a197ca31be42e8712c2170fd66b86579
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131492"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055011"
 ---
 # <a name="the-non-separable-blend-modes"></a>Le modalità di blend non separabili
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Come illustrato nell'articolo [ **modalità di blend in SkiaSharp separabili**](separable.md), le modalità di blend separabili eseguono operazioni sui canali di colore rosso, verde e blu separatamente. Le modalità di blend non separabili non lo sono. Operando al momento i livelli di tonalità, saturazione e luminosità del colore, le modalità di blend non separabili possono modificare i colori in modi interessanti:
 

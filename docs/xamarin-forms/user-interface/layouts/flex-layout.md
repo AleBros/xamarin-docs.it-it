@@ -8,14 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 731eb8cbcf062556e4c37b444376825527f662df
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: b37070ca627e535f9470916e9f84cdf55bb2aed3
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171560"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056136"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>FlexLayout di xamarin. Forms
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)
 
 _Usare FlexLayout per la sovrapposizione o il wrapping di una raccolta di visualizzazioni figlio._
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 2f336bff19302228b9c8c3a1aa87930414c44ac2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f1c491bd2e19f44151e2efb317fe40d2d122ecae
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108405"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058524"
 ---
 # <a name="dynamic-styles-in-xamarinforms"></a>Stili dinamici in xamarin. Forms
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
 
 _Gli stili non rispondere alle modifiche delle proprietà e rimangono invariati per la durata di un'applicazione. Dopo l'assegnazione di uno stile a un elemento visivo, se una delle istanze del Setter modificata, rimossi o una nuova istanza di Setter aggiunto, ad esempio, le modifiche non verrà applicate all'elemento visivo. Tuttavia, le applicazioni possono rispondere alle modifiche di stile in modo dinamico in fase di esecuzione usando le risorse dinamiche._
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/04/2018
-ms.openlocfilehash: b8e851e735fa39d015e22ce511c39ad825bc97c9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0561c2a08aa96755d6d6caa9a3c683a5ce83ae10
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119994"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053986"
 ---
 # <a name="xamarinforms-tableview"></a>Xamarin. Forms TableView
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TableView)
 
 [TableView](xref:Xamarin.Forms.TableView) è una vista per la visualizzazione di elenchi scorrevoli di dati o le opzioni in cui sono presenti righe che non condividono lo stesso modello. A differenza [ListView](~/xamarin-forms/user-interface/listview/index.md), TableView non prevedono il concetto di un `ItemsSource`, in modo che gli elementi devono essere aggiunti come elementi figlio manualmente.
 

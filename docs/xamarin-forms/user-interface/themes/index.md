@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 0f49eeba072d6aeb7ead40d5d56d4af9e9bf5e27
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 1c5b2635dca6aa74fd0dfb92d7e62e6da3140538
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38814707"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051108"
 ---
 # <a name="xamarinforms-themes"></a>Temi di xamarin. Forms
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/Themes/ThemesDemo)
 
 ![](~/media/shared/preview.png "Questa API è attualmente in anteprima")
 
@@ -103,7 +105,7 @@ Oltre a automaticamente lo stile comune controlla la luce e i temi scuri support
 
 **Etichetta**
 
-* Header
+* Intestazione
 * Sottotitolo
 * Body
 * Collegamento

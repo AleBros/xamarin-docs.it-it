@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 504b2789ef61b0339d1c32e92c852a779a193b52
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: 786f1503fcc0cc07f76a7cdc55731d341607429f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854766"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053196"
 ---
 # <a name="authenticating-users-with-an-identity-provider"></a>Autenticazione degli utenti con un Provider di identità
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
 
 _AUTH è una versione di SDK multipiattaforma per l'autenticazione degli utenti e i propri account di archiviazione. Include gli autenticatori di OAuth che forniscono il supporto per l'utilizzo del provider di identità, ad esempio Google, Microsoft, Facebook e Twitter. Questo articolo illustra come usare AUTH per gestire il processo di autenticazione in un'applicazione xamarin. Forms._
 

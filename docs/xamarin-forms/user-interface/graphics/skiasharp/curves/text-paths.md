@@ -7,14 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2017
-ms.openlocfilehash: 74bd4b5600f3d5ef8b64556a9e454bb7fb0e2d21
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 366a6e9585817c5a47ba5bec14fb2f238ab23a6b
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615457"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050194"
 ---
 # <a name="paths-and-text-in-skiasharp"></a>Tracciati e testo in SkiaSharp
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Esplorare l'intersezione dei tracciati e testo_
 

@@ -7,14 +7,16 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: aa576e4af5d804eb5b8d78643ffa762b8a15c6dc
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: bd13163b513ea1f6b0381e99e65d0bd727f97735
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171768"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055728"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Nozioni fondamentali sull'associazione dati
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _Le associazioni dati consentono di proprietà di due oggetti da collegare in modo che una modifica in una causa una modifica in altro. Questo è uno strumento molto utile e mentre i data binding può essere definito completamente nel codice, XAML fornisce tasti di scelta rapida e convenience. Di conseguenza, una delle estensioni di markup più importanti in xamarin. Forms è associato._
 

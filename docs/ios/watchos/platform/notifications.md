@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 53ec1b0777827e7f4faf81110507787c65dfaf63
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f5961987e28c09ad703988083f1b127cd7b9dbd0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103933"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057327"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>le notifiche in Xamarin watchOS
 
@@ -126,7 +126,7 @@ Il controller di notifica predefinito aspetto simile al seguente durante il test
 
 ### <a name="example-notification-payload"></a>Payload di notifica di esempio
 
-Nel [catalogo Kit Watch](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/) esempio vi è un file JSON di esempio payload **NotificationPayload.json** (elencati di seguito).
+Nel [catalogo Kit Watch](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) esempio vi è un file JSON di esempio payload **NotificationPayload.json** (elencati di seguito).
 
 ```csharp
 {
@@ -152,5 +152,5 @@ Nel [catalogo Kit Watch](https://developer.xamarin.com/samples/monotouch/WatchKi
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [WatchNotifications (notifiche locali) (esempio)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)
-- [WatchKitCatalog (esempio)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/)
+- [WatchKitCatalog (esempio)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 - [Documentazione di Apple Watch Kit notifiche](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

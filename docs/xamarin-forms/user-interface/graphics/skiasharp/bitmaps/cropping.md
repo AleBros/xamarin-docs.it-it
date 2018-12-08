@@ -7,14 +7,16 @@ ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 653904da37354db52ef6bbd303355e98ddc1582f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cf31f3bd6f84a040d21420e865737417c374d947
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122634"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056571"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>Il ritaglio di immagini bitmap in SkiaSharp
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Il [ **creazione e disegno in SkiaSharp bitmap** ](drawing.md) articolo descritta come un `SKBitmap` oggetto può essere passato a un `SKCanvas` costruttore. Qualsiasi metodo di disegno chiamato sull'oggetto grafico cause tale area di disegno deve essere sottoposto a rendering nella bitmap. Questi metodi di disegno includono `DrawBitmap`, il che significa che questa tecnica permette di trasferimento o parte di una singola bitmap a un'altra mappa di bit, probabilmente con trasformazioni applicate.
 

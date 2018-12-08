@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 54fdec74a6e1d0aee71ec0ca6809a5b40680de9f
-ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
+ms.openlocfilehash: 34339b9ca3a15c7f7f24edee5401c542fd09ba74
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39360812"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53048987"
 ---
 # <a name="xamarinforms-scrollview"></a>Xamarin. Forms ScrollView
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
 [`ScrollView`](xref:Xamarin.Forms.ScrollView) include layout e consente loro di scorrimento fuori schermo. `ScrollView` viene inoltre utilizzato per consentire le visualizzazioni spostare automaticamente per la parte visibile dello schermo quando viene visualizzata la tastiera.
 
