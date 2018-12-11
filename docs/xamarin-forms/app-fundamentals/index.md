@@ -6,13 +6,13 @@ ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/28/2017
-ms.openlocfilehash: 515dbd2683619cfcfb7a6c8ecac6bc147265ef7d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 12/03/2018
+ms.openlocfilehash: 015a7dfa3d55b411e6626ae2ac70fd2930661e65
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995612"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898992"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Nozioni di base sulle applicazioni Xamarin.Forms
 
@@ -58,7 +58,7 @@ La classe [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) di Xamarin
 
 ## <a name="localizationlocalizationindexmd"></a>[Localizzazione](localization/index.md)
 
-Il framework di localizzazione .NET incorporato può essere usato per compilare applicazioni multilingue multipiattaforma con Xamarin.Forms.
+Il framework di localizzazione .NET incorporato può essere usato per compilare applicazioni multilingue e multipiattaforma con Xamarin.Forms.
 
 ## <a name="local-databasesdatabasesmd"></a>[Database locali](databases.md)
 
@@ -71,6 +71,10 @@ Xamarin.Forms supporta applicazioni basate su database con il motore di database
 ## <a name="navigationnavigationindexmd"></a>[Navigazione](navigation/index.md)
 
 Xamarin.Forms offre diverse esperienze di navigazione tra le pagine, a seconda del tipo `Page` in uso.
+
+## <a name="shellshellmd"></a>[Shell](shell.md)
+
+Xamarin.Forms Shell è un contenitore per applicazioni, che rende disponibili le principali funzionalità dell'interfaccia utente richieste dalla maggior parte delle applicazioni, consentendo all'utente di concentrarsi sul carico di lavoro essenziale dell'applicazione.
 
 ## <a name="templatestemplatesindexmd"></a>[Modelli](templates/index.md)
 
