@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 140307dbfe55d5445c329ea83eafedd467fe58fa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ccf5d97ff553fd304c4a3af158085d490bb665b7
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109354"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267599"
 ---
 # <a name="troubleshooting-tips"></a>Suggerimenti per la risoluzione dei problemi
 
@@ -91,28 +91,28 @@ Le proprietà di sistema vengono letti durante l'avvio del processo e pertanto d
 
 Xamarin. Android supporta le proprietà di sistema seguenti:
 
--   *debug.mono.Debug*: se una stringa non vuota, ciò equivale a `*mono-debug*`.
+-   *debug.mono.Debug*: Se una stringa non vuota, ciò equivale a `*mono-debug*`.
 
--   *debug.mono.env*: un delimitati da pipe ('*|*') elenco delle variabili di ambiente durante l'avvio dell'applicazione, esportare *prima* mono è stato inizializzato. Ciò consente di impostare le variabili di ambiente che la registrazione mono di controllo.
+-   *debug.mono.env*: Delimitato da barra verticale ('*|*') elenco delle variabili di ambiente durante l'avvio dell'applicazione, esportare *prima* mono è stato inizializzato. Ciò consente di impostare le variabili di ambiente che la registrazione mono di controllo.
 
-    - *Nota*: poiché il valore è '*|*'-separate, il valore deve avere un livello aggiuntivo di evitarlo, come il \` *shell adb* \` comando rimuoverà un set di virgolette.
+    - *Nota*: Poiché il valore è '*|*'-separate, il valore deve avere un livello aggiuntivo di evitarlo, come il \` *shell adb* \` comando rimuoverà un set di virgolette.
 
-    - *Nota*: i valori delle proprietà di sistema di Android possono essere composto 92 caratteri di lunghezza.
+    - *Nota*: I valori delle proprietà di sistema di Android possono essere composto 92 caratteri di lunghezza.
 
     - Esempio:
 
             adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
 
--   *debug.mono.log*: un delimitati da virgola ('*,*') elenco dei componenti che dovrebbe visualizzare messaggi aggiuntivi nel log di Debug Android. Per impostazione predefinita, viene effettuata alcuna impostazione. I componenti includono:
+-   *debug.mono.log*: Separati da virgola ('*,*') elenco dei componenti che dovrebbe visualizzare messaggi aggiuntivi nel log di Debug Android. Per impostazione predefinita, viene effettuata alcuna impostazione. I componenti includono:
 
-    -   *tutti i*: tutti i messaggi di stampa
-    -   *GC*: messaggi relativi a GC di stampa.
-    -   *gref*: stampare i messaggi di allocazione e deallocazione di riferimento (vulnerabili e globali).
-    -   *lref*: stampare i messaggi di allocazione e deallocazione di riferimento locale.
+    -   *tutti i*: Stampare tutti i messaggi
+    -   *GC*: Stampare i messaggi relativi a GC.
+    -   *gref*: Stampare i messaggi di allocazione e deallocazione di riferimento (vulnerabili e globali).
+    -   *lref*: Stampare i messaggi di allocazione e deallocazione di riferimento locale.
 
     *Nota*: si tratta *estremamente* verbose. Non abilitare a meno che non è strettamente necessario.
 
--   *debug.mono.Trace*: consente di impostare il [mono - trace](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` impostazione.
+-   *debug.mono.Trace*: Consente di impostare il [mono - trace](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` impostazione.
 
 
 
@@ -250,63 +250,6 @@ Android 4.0, tuttavia, ha un agente di raccolta dati in movimento e non incarica
 
 
 
-## <a name="offline-activation"></a>Attivazione offline
-
-Se si è possibile eseguire l'attivazione di xamarin. Android in Windows, o non è possibile installare la versione completa di xamarin. Android in Mac OS X, consultare il [attivazione Offline](~/android/get-started/installation/index.md) pagina.
-
-
-
-## <a name="cant-upgrade-to-indiebusiness-from-trial-account"></a>Non è possibile eseguire l'aggiornamento a Indie/Business dalla versione di valutazione Account
-
-Se si ha recentemente acquistato xamarin. Android e avviata in precedenza una versione di valutazione di xamarin. Android, si potrebbe essere necessario completare i passaggi seguenti per ottenere questa modifica licenza prelevata da Visual Studio per Mac o Visual Studio.
-
--  Chiudere Visual Studio per Mac/Visual Studio
--  Rimuovere tutti i file da ~/Library/MonoAndroid in Mac o %PROGRAMDATA%\Mono per Android\License\ per Windows
--  Riaprire Visual Studio per Mac/Visual Studio e compila un progetto xamarin. Android
-
-
-Questo dovrebbe essere visualizzata è attivo e in esecuzione. Se si continuano ad avere problemi, è possibile provare un' [attivazione Offline](~/android/get-started/installation/index.md) per completare l'attivazione della workstation.
-
-
-
-## <a name="receiving-activation-incomplete-error-message"></a>Ricezione di ' messaggio di errore incompleto di attivazione
-
-Questo problema può verificarsi quando si usa xamarin. Android per Visual Studio. Per risolvere questo problema, dal percorso seguente per inviare i log *contact@xamarin.com*.
-
--  Percorso file di registro: **% LocalAppData %\\Xamarin\\log**
-
-
-
-
-## <a name="receiving-error-retrieving-update-information-error-message"></a>Ricezione di messaggi di errore 'Errore di recupero delle informazioni sugli aggiornamenti'
-
-Di tanto in tanto, un aggiornamento avrà esito negativo con l'errore seguente, che spesso si verificano durante il controllo degli aggiornamenti:
-
-La maggior parte dei casi, questo errore può essere risolto semplicemente eseguendo la registrazione senza accesso all'account Xamarin e quindi di nuovo la registrazione.
-
-A tale scopo, individuare la piattaforma preferita di seguito e seguire i passaggi:
-
-**In Mac:**
-1. Aprire Visual Studio per Mac
-2. Selezionare Visual Studio per Mac > Account...
-3. Fare clic su per la disconnessione
-4. Fare clic su Accedi
-5. Immettere le credenziali
-6. Zkontrolovat aktualizace
-
-**Uso di Visual Studio su PC:**
-1. Aprire Visual Studio
-2. Selezionare gli strumenti > Account Xamarin
-3. Fare clic su per la disconnessione
-4. Fare clic su Accedi
-5. Immettere le credenziali
-6. Zkontrolovat aktualizace
-
-Se questo messaggio di errore viene nuovamente visualizzato, per posta elettronica **contact@xamarin.com**.
-
-
-
-
 ## <a name="android-debug-logs"></a>Log di Debug Android
 
 Il [log di Debug Android](~/android/deploy-test/debugging/android-debug-log.md) possono fornire contesto aggiuntive riguardanti eventuali errori di runtime si verificano.
@@ -365,7 +308,7 @@ Ciò significa che il percorso non contiene la directory in cui si trova nella d
 
 ## <a name="monodroidexe-or-aresgenexe-exited-with-code-1"></a>monodroid.exe o aresgen.exe terminato con codice 1
 
-Che consentono di eseguire il debug di questo problema, passare a Visual Studio e cambiare il livello di dettaglio di MSBuild, a tale scopo, selezionare: **strumenti > Opzioni > progetti** e **soluzioni > compilare** e **eseguire > Dettaglio di Output di compilazione progetto MSBuild** e impostare questo valore su **normale**.
+Che consentono di eseguire il debug di questo problema, passare a Visual Studio e cambiare il livello di dettaglio di MSBuild, a tale scopo, selezionare: **Strumenti > Opzioni > progetto** e **soluzioni > compilare** e **eseguire > dettaglio di Output di compilazione progetto MSBuild** e impostare questo valore su **normale**.
 
 Ricompilare e controllo riquadro di Output di Visual Studio, che deve contenere l'errore completo.
 

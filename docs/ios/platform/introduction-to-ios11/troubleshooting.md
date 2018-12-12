@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/31/2017
-ms.openlocfilehash: ce0e61bdda9f163b25e5152e7012944765a5ac39
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 61aa360e91c3881c77c4bc3776e2cfdc36efb61b
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103023"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267359"
 ---
 # <a name="troubleshooting-tips-for-ios-11-and-xamarinios"></a>Suggerimenti per iOS 11 e xamarin. IOS
 
@@ -20,7 +20,7 @@ Usare le risorse seguenti per risolvere i problemi quando si usa Xamarin IOS 11:
 
 ## <a name="known-issues-and-troubleshooting"></a>Problemi noti e risoluzione dei problemi
 
-Se si verificano problemi creare App iOS 11 con Xamarin, controllare la [note sulla versione](http://releases.xamarin.com/), [forum di xamarin. IOS](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS), e [ GitHub](https://github.com/xamarin/xamarin-macios/issues) per problemi esistenti.
+Se si verificano problemi creare App iOS 11 con Xamarin, controllare la [note sulla versione](https://docs.microsoft.com/xamarin/ios/release-notes/), [forum di xamarin. IOS](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS), e [ GitHub](https://github.com/xamarin/xamarin-macios/issues) per problemi esistenti.
 
 Se si ritiene di aver trovato un bug in xamarin. IOS, segnalare il problema [su GitHub](https://github.com/xamarin/xamarin-macios/issues).
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: cd1c374fa68420e1923ef4dee0bb37a4665f3535
-ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
+ms.openlocfilehash: 49e3a0189d0887343f2636d6931a00cc819800c0
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710023"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267638"
 ---
 # <a name="android-pie-features"></a>Funzionalità di Android a torta
 
@@ -24,7 +24,7 @@ _Come iniziare a sviluppare App per Android a torta 9 usando xamarin. Android._
 
 Questo articolo è strutturato per aiutarti a iniziare lo sviluppo di App xamarin. Android per Android a torta. Viene spiegato come installare gli aggiornamenti necessari, configurare il SDK e preparare un emulatore o dispositivo per il test. Inoltre fornisce una descrizione delle nuove funzionalità in Android a torta e fornisce codice sorgente di esempio che illustra come usare alcune delle principali funzionalità di Android a torta.
 
-Xamarin. Android 9.0 fornisce il supporto per Android a torta. Per altre informazioni sul supporto di xamarin. Android per Android a torta, vedere la [Preview 3 per gli sviluppatori di Android P](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) note sulla versione.
+Xamarin. Android 9.0 fornisce il supporto per Android a torta. Per altre informazioni sul supporto di xamarin. Android per Android a torta, vedere la [Preview 3 per gli sviluppatori di Android P](https://docs.microsoft.com/xamarin/android/release-notes/9/9.0/#android-p-dp1) note sulla versione.
 
 ## <a name="requirements"></a>Requisiti
 
