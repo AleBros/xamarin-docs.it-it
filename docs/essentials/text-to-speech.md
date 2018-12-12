@@ -4,17 +4,15 @@ description: La classe TextToSpeech in Xamarin.Essentials consente a un'applicaz
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 08/30/2018
-ms.openlocfilehash: 29eab430ae3d42934cedfdbd36d7be08e55b5d54
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: a7f40fc652c6f02d68a9f01dcdd0f4132893a6ca
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675367"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898537"
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Sintesi vocale
-
-![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
 La classe **TextToSpeech** consente a un'applicazione di usare i motori di sintesi vocale predefiniti pronunciare il testo dal dispositivo, nonché per recuperare le lingue disponibili supportate dal motore.
 
@@ -97,12 +95,12 @@ public void SpeakMultiple()
 
 ### <a name="speech-settings"></a>Impostazioni della sintesi vocale
 
-Per un maggiore controllo sul modo in cui l'audio viene pronunciato, usare in combinazione con `SpeakSettings` che consente di impostare il volume, la tonalità e le impostazioni locali.
+Per un maggiore controllo sul modo in cui l'audio viene pronunciato, usare in combinazione con `SpeechOptions` che consente di impostare il volume, la tonalità e le impostazioni locali.
 
 ```csharp
 public async Task SpeakNow()
 {
-    var settings = new SpeakSettings()
+    var settings = new SpeechOptions()
         {
             Volume = .75,
             Pitch = 1.0
@@ -131,7 +129,7 @@ public async Task SpeakNow()
     // Grab the first locale
     var locale = locales.FirstOrDefault();
 
-    var settings = new SpeakSettings()
+    var settings = new SpeechOptions()
         {
             Volume = .75,
             Pitch = 1.0,

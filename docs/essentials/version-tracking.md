@@ -4,17 +4,15 @@ description: La classe VersionTracking in Xamarin.Essentials consente di control
 ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 1eae0bf7c21dd7efa7655633896bdb2897f9d782
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 7d3877577523ed17c78fd5d2ad02923bd3d821e2
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674860"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898831"
 ---
 # <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: Version Tracking
-
-![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
 La classe **VersionTracking** consente di controllare la versione delle applicazioni e i numeri di build e di visualizzare informazioni aggiuntive, ad esempio se l'applicazione è stata avviata per la prima volta in assoluto o, per la versione corrente, di ottenere informazioni sulla build precedente e altro ancora.
 

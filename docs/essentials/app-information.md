@@ -4,17 +4,15 @@ description: Questo documento descrive la classe AppInfo in Xamarin.Essentials, 
 ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 00419fb746609464b49be343938905614c59ab29
-ms.sourcegitcommit: 704d4cfd418c17b0e85a20c33a16d2419db0be71
+ms.date: 11/04/2018
+ms.openlocfilehash: 3e67b605e485b724ec11f2ac94dcf3d1aa77d5cf
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51691763"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057298"
 ---
 # <a name="xamarinessentials-app-information"></a>Xamarin.Essentials: App Information
-
-![NuGet in versione non definitiva](~/media/shared/pre-release.png)
 
 La classe **AppInfo** fornisce informazioni sull'applicazione.
 
@@ -54,10 +52,42 @@ La classe **AppInfo** può anche visualizzare una pagina di impostazioni gestite
 
 ```csharp
 // Display settings page
-AppInfo.OpenSettings();
+AppInfo.ShowSettingsUI();
 ```
 
 Questa pagina di impostazioni consente all'utente di modificare le autorizzazioni dell'applicazione e di eseguire altre attività specifiche della piattaforma.
+
+## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+Le informazioni sull'app vengono ottenute da `AndroidManifest.xml` per i campi seguenti:
+
+- **Build**: `android:versionCode` nel nodo `manifest`
+- **Name** - `android:label` nel nodo `application`
+- **PackageName**: `package` nel nodo `manifest`
+- **VersionString**: `android:versionName` nel nodo `application`
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+Le informazioni sull'app vengono ottenute da `Info.plist` per i campi seguenti:
+
+- **Build**: `CFBundleVersion`
+- **Name** - `CFBundleDisplayName` se impostato. In caso contrario, `CFBundleName`.
+- **PackageName**: `CFBundleIdentifier`
+- **VersionString**: `CFBundleShortVersionString`
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+Le informazioni sull'app vengono ottenute da `Package.appxmanifest` per i campi seguenti:
+
+- **Build**: usa `Build` di `Version` nel nodo `Identity`
+- **Name** - `DisplayName` nel nodo `Properties`
+- **PackageName**: `Name` nel nodo `Identity`
+- **VersionString**: `Version` nel nodo `Identity`
+
+
+--------------
 
 ## <a name="api"></a>API
 
