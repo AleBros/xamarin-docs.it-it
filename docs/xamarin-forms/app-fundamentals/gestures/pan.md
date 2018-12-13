@@ -1,6 +1,6 @@
 ---
-title: Aggiunta di un riconoscitore di movimento di zoom
-description: Questo articolo illustra come usare un movimento di zoom da orizzontalmente e verticalmente pan in un'immagine, in modo che tutto il contenuto di immagine possono essere visualizzati quando viene visualizzata in un viewport inferiore alle dimensioni immagine.
+title: Aggiunta di un sistema di riconoscimento del movimento di panoramica
+description: Questo articolo illustra come usare un movimento di panoramica per eseguire una panoramica in orizzontale e in verticale di un'immagine, in modo da poter vedere tutto il contenuto dell'immagine quando è visualizzata in un viewport più piccolo rispetto alle dimensioni dell'immagine.
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
 ms.technology: xamarin-forms
@@ -9,16 +9,16 @@ ms.author: dabritch
 ms.date: 01/21/2016
 ms.openlocfilehash: 59e9f4c61bda86faa5a55d70ef91411adb14da6d
 ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/18/2018
 ms.locfileid: "38996806"
 ---
-# <a name="adding-a-pan-gesture-recognizer"></a>Aggiunta di un riconoscitore di movimento di zoom
+# <a name="adding-a-pan-gesture-recognizer"></a>Aggiunta di un sistema di riconoscimento del movimento di panoramica
 
-_Il movimento di zoom viene utilizzato per rilevare il movimento della dita sullo schermo e applicare lo spostamento al contenuto e viene implementato con il `PanGestureRecognizer` classe. Uno scenario comune per il movimento di zoom è orizzontalmente e verticalmente pan in un'immagine, in modo che tutto il contenuto di immagine possono essere visualizzati quando viene visualizzata in un viewport inferiore alle dimensioni immagine. Ciò avviene spostando l'immagine all'interno del viewport e viene illustrato in questo articolo._
+_Il movimento di panoramica viene usato per rilevare il movimento delle dita sullo schermo e applicare tale movimento al contenuto e viene implementato con la classe `PanGestureRecognizer`. Uno scenario comune per questo movimento è l'esecuzione di una panoramica in orizzontale e in verticale di un'immagine, in modo da poter vedere tutto il contenuto dell'immagine quando è visualizzata in un viewport più piccolo rispetto alle dimensioni dell'immagine. Questa operazione viene eseguita spostando l'immagine all'interno del viewport ed è illustrata in questo articolo._
 
-Per rendere un elemento dell'interfaccia utente spostabile con il movimento di zoom, creare un [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) dell'istanza, gestire la [ `PanUpdated` ](xref:Xamarin.Forms.PanGestureRecognizer.PanUpdated) evento, e aggiungere il nuovo riconoscitore di movimento per il [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) raccolta nell'elemento dell'interfaccia utente. Nell'esempio di codice riportato di seguito viene illustrato un `PanGestureRecognizer` collegato a un [ `Image` ](xref:Xamarin.Forms.Image) elemento:
+Per supportare lo spostamento di un elemento dell'interfaccia utente tramite il movimento di panoramica, creare un'istanza di [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer), gestire l'evento [`PanUpdated`](xref:Xamarin.Forms.PanGestureRecognizer.PanUpdated) e aggiungere il nuovo sistema di riconoscimento dei movimenti alla raccolta [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) nell'elemento dell'interfaccia utente. L'esempio di codice seguente visualizza un `PanGestureRecognizer` associato a un elemento [`Image`](xref:Xamarin.Forms.Image):
 
 ```csharp
 var panGesture = new PanGestureRecognizer();
@@ -28,7 +28,7 @@ panGesture.PanUpdated += (s, e) => {
 image.GestureRecognizers.Add(panGesture);
 ```
 
-Ciò può anche essere ottenuto in XAML, come illustrato nell'esempio di codice seguente:
+Questo risultato può essere ottenuto anche in XAML, come illustrato nell'esempio di codice seguente:
 
 ```xaml
 <Image Source="MonoMonkey.jpg">
@@ -38,7 +38,7 @@ Ciò può anche essere ottenuto in XAML, come illustrato nell'esempio di codice 
 </Image>
 ```
 
-Il codice per il `OnPanUpdated` gestore eventi viene quindi aggiunto al file code-behind:
+Il codice del gestore eventi `OnPanUpdated` viene quindi aggiunto al file code-behind:
 
 ```csharp
 void OnPanUpdated (object sender, PanUpdatedEventArgs e)
@@ -48,11 +48,11 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
 ```
 
 > [!NOTE]
-> La panoramica corretto in Android richiede la [pacchetto NuGet di xamarin. Forms 2.1.0-pre1](https://www.nuget.org/packages/Xamarin.Forms/2.1.0.6501-pre1) minimo.
+> Per eseguire correttamente la panoramica in Android è richiesto almeno il [pacchetto NuGet di Xamarin.Forms 2.1.0-pre1](https://www.nuget.org/packages/Xamarin.Forms/2.1.0.6501-pre1).
 
-## <a name="creating-a-pan-container"></a>Creazione di un contenitore di zoom
+## <a name="creating-a-pan-container"></a>Creazione di un contenitore di panoramica
 
-In questa sezione contiene una classe helper generalizzato che consente di eseguire la panoramica a mano libera, in genere adatto per spostarsi all'interno di immagini o mappe. Gestisce il movimento di zoom per eseguire questa operazione richiede alcuni calcoli matematici per trasformare l'interfaccia utente. Questo math viene usato per fare una panoramica solo entro i limiti dell'elemento di interfaccia utente sottoposta a wrapping. L'esempio di codice seguente visualizza la classe `PanContainer`:
+Questa sezione contiene una classe helper generalizzata che consente di eseguire la panoramica a mano libera, adatta in genere agli spostamenti all'interno di immagini o mappe. La gestione del movimento di panoramica per eseguire questa operazione richiede alcuni calcoli matematici per la trasformazione dell'interfaccia utente. Questi calcoli matematici vengono usati per eseguire la panoramica solo entro i limiti dell'elemento di interfaccia utente sottoposto a wrapping. L'esempio di codice seguente visualizza la classe `PanContainer`:
 
 ```csharp
 public class PanContainer : ContentView
@@ -75,7 +75,7 @@ public class PanContainer : ContentView
 }
 ```
 
-Questa classe può essere eseguito il wrapping intorno a un elemento dell'interfaccia utente in modo che il movimento verrà pan l'elemento dell'interfaccia utente sottoposta a wrapping. L'esempio di codice XAML seguente mostra le `PanContainer` wrapping di un' [ `Image` ](xref:Xamarin.Forms.Image) elemento:
+È possibile eseguire il wrapping di questa classe per un elemento dell'interfaccia utente, in modo che il movimento esegua la panoramica dell'elemento dell'interfaccia utente sottoposto a wrapping. L'esempio di codice XAML seguente mostra il wrapping `PanContainer` di un elemento [`Image`](xref:Xamarin.Forms.Image):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -92,7 +92,7 @@ Questa classe può essere eseguito il wrapping intorno a un elemento dell'interf
 </ContentPage>
 ```
 
-Nell'esempio di codice riportato di seguito viene illustrato come la `PanContainer` esegue il wrapping di un' [ `Image` ](xref:Xamarin.Forms.Image) elemento in una pagina in c#:
+L'esempio di codice seguente illustra come `PanContainer` esegue il wrapping di un elemento [`Image`](xref:Xamarin.Forms.Image) in una pagina C#:
 
 ```csharp
 public class HomePageCS : ContentPage
@@ -115,9 +115,9 @@ public class HomePageCS : ContentPage
 }
 ```
 
-In entrambi gli esempi, il [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) proprietà vengono impostate sui valori di larghezza e altezza dell'immagine viene visualizzata.
+In entrambi gli esempi, le proprietà [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) e [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) vengono impostate sui valori di larghezza e altezza dell'immagine visualizzata.
 
-Quando la [ `Image` ](xref:Xamarin.Forms.Image) elemento riceve un movimento di zoom, verrà visualizzati in panoramica dell'immagine visualizzata. Il pan avviene mediante il `PanContainer.OnPanUpdated` metodo, che viene visualizzato nell'esempio di codice seguente:
+Quando l'elemento [`Image`](xref:Xamarin.Forms.Image) riceve un movimento di panoramica, verrà eseguita la panoramica dell'immagine visualizzata. La panoramica viene eseguita dal metodo `PanContainer.OnPanUpdated`, visualizzato nell'esempio di codice seguente:
 
 ```csharp
 void OnPanUpdated (object sender, PanUpdatedEventArgs e)
@@ -140,15 +140,15 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
 }
 ```
 
-Questo metodo aggiorna il contenuto dell'elemento dell'interfaccia utente sottoposta a wrapping, il movimento di zoom dell'utente in base visibile. Questo avviene utilizzando i valori del [ `TotalX` ](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalX) e [ `TotalY` ](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalY) le proprietà del [ `PanUpdatedEventArgs` ](xref:Xamarin.Forms.PanUpdatedEventArgs) istanza per cui calcolare la direzione e distanza di zoom. Il `App.ScreenWidth` e `App.ScreenHeight` proprietà forniscono l'altezza e la larghezza del viewport e sono configurate per la larghezza dello schermo e i valori di altezza dello schermo del dispositivo per i rispettivi progetti specifici della piattaforma. L'elemento dell'utente con wrapping viene quindi visualizzati in panoramica, impostando il [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX) e [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY) i valori calcolati delle proprietà.
+Questo metodo aggiorna il contenuto visualizzabile dell'elemento dell'interfaccia utente sottoposto a wrapping in base al movimento di panoramica dell'utente. Questo avviene usando i valori delle proprietà [`TotalX`](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalX) e [`TotalY`](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalY) dell'istanza di [`PanUpdatedEventArgs`](xref:Xamarin.Forms.PanUpdatedEventArgs) per calcolare la direzione e la distanza della panoramica. Le proprietà `App.ScreenWidth` e `App.ScreenHeight` specificano l'altezza e la larghezza del viewport e vengono impostate sui valori di larghezza e altezza dello schermo del dispositivo dai rispettivi progetti specifici della piattaforma. Viene quindi eseguita la panoramica dell'elemento dell'interfaccia utente sottoposto a wrapping impostandone le proprietà [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) e [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) sui valori calcolati.
 
-La panoramica del contenuto in un elemento che non occupa l'intero schermo, l'altezza e la larghezza del riquadro di visualizzazione può essere ottenute dell'elemento [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) e [ `Width` ](xref:Xamarin.Forms.VisualElement.Width) proprietà.
+Per la panoramica del contenuto in un elemento che non occupa l'intero schermo, l'altezza e la larghezza del viewport possono essere ottenuti dalle proprietà [`Height`](xref:Xamarin.Forms.VisualElement.Height) e [`Width`](xref:Xamarin.Forms.VisualElement.Width) dell'elemento.
 
 > [!NOTE]
-> Visualizzazione di immagini ad alta risoluzione può aumentare notevolmente il footprint di memoria dell'app. Di conseguenza, essi devono essere creati solo quando necessario e devono essere rilasciate non appena l'app non richiede più. Per altre informazioni, vedere [Optimize Image Resources](~/xamarin-forms/deploy-test/performance.md#optimizeimages) (Ottimizzare le risorse immagine).
+> La visualizzazione di immagini ad alta risoluzione può aumentare notevolmente il footprint della memoria dell'app. Di conseguenza, tali risorse devono essere create solo se necessario e rilasciate non appena l'app non le richiede più. Per altre informazioni, vedere [Optimize Image Resources](~/xamarin-forms/deploy-test/performance.md#optimizeimages) (Ottimizzare le risorse immagine).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [PanGesture (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PanGesture/)
+- [PanGesture (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PanGesture/) (Esempio di PanGesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [PanGestureRecognizer](xref:Xamarin.Forms.PanGestureRecognizer)

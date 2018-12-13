@@ -1,6 +1,6 @@
 ---
-title: L'evidenziazione di un'Area circolare su una mappa
-description: Questo articolo illustra come aggiungere una sovrapposizione circolare a una mappa, per evidenziare un'area circolare della mappa. IOS e Android fornire API per l'aggiunta di sovrapposizione circolare alla mappa, sulla piattaforma UWP la sovrimpressione viene visualizzata come un poligono.
+title: Evidenziazione di un'area circolare su una mappa
+description: Questo articolo illustra come aggiungere una sovrimpressione circolare a una mappa per evidenziare un'area circolare della mappa stessa. iOS e Android includono API per l'aggiunta della sovrimpressione circolare alla mappa, ma nella piattaforma UWP la sovrimpressione viene visualizzata come poligono.
 ms.prod: xamarin
 ms.assetid: 6FF8BD15-074E-4E6A-9522-F9E2BE32EF12
 ms.technology: xamarin-forms
@@ -9,37 +9,37 @@ ms.author: dabritch
 ms.date: 11/29/2017
 ms.openlocfilehash: 3064296d4c78a3342fb27afc971c37a029987e5e
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38998557"
 ---
-# <a name="highlighting-a-circular-area-on-a-map"></a>L'evidenziazione di un'Area circolare su una mappa
+# <a name="highlighting-a-circular-area-on-a-map"></a>Evidenziazione di un'area circolare su una mappa
 
-_Questo articolo illustra come aggiungere una sovrapposizione circolare a una mappa, per evidenziare un'area circolare della mappa._
+_Questo articolo illustra come aggiungere una sovrimpressione circolare a una mappa per evidenziare un'area circolare della mappa stessa._
 
 ## <a name="overview"></a>Panoramica
 
-Un controllo overlay è un'immagine a più livelli in una mappa. Le sovrimpressioni supportano disegno contenuto grafico che viene ridimensionata con la mappa come si esegue lo zoom. Gli screenshot seguenti mostrano il risultato dell'aggiunta di una sovrimpressione circolare a una mappa:
+Una sovrimpressione è un elemento grafico a più livelli su una mappa. Le sovrimpressioni supportano contenuto grafico di tipo disegno che viene ridimensionato con la mappa quando si esegue lo zoom. Gli screenshot seguenti mostrano il risultato dell'aggiunta di una sovrimpressione circolare a una mappa:
 
 ![](circle-map-overlay-images/screenshots.png)
 
-Quando un [ `Map` ](xref:Xamarin.Forms.Maps.Map) rendering del controllo da un'applicazione xamarin. Forms, in iOS il `MapRenderer` viene creata un'istanza di classe, che a sua volta crea un'istanza di nativo `MKMapView` controllo. La piattaforma Android, il `MapRenderer` un'istanza nativa `MapView` controllo. In Universal Windows Platform (UWP), il `MapRenderer` un'istanza nativa `MapControl`. Il processo di rendering possibile avvantaggiarsi di implementare le personalizzazioni specifiche della piattaforma mappe mediante la creazione di un renderer personalizzato per un `Map` in ogni piattaforma. Il processo per eseguire questa operazione è come segue:
+Quando un'applicazione Xamarin.Forms eseguire il rendering di un controllo [`Map`](xref:Xamarin.Forms.Maps.Map), in iOS viene creata un'istanza della classe `MapRenderer`, che a sua volta crea un'istanza di un controllo `MKMapView` nativo. Nella piattaforma Android la classe `MapRenderer` crea un'istanza di un controllo `MapView` nativo. Nella piattaforma UWP (Universal Windows Platform) la classe `MapRenderer` crea un'istanza di un controllo `MapControl` nativo. È possibile sfruttare il processo di rendering per implementare personalizzazioni della mappa specifiche della piattaforma creando un renderer personalizzato per `Map` in ogni piattaforma. Il processo per eseguire questa operazione è il seguente:
 
-1. [Creare](#Creating_the_Custom_Map) una mappa personalizzata di xamarin. Forms.
-1. [Utilizzare](#Consuming_the_Custom_Map) la mappa personalizzata da xamarin. Forms.
-1. [Personalizzare](#Customizing_the_Map) mappa mediante la creazione di un renderer personalizzato per la mappa su ogni piattaforma.
+1. [Creare](#Creating_the_Custom_Map) una mappa personalizzata Xamarin.Forms.
+1. [Utilizzare](#Consuming_the_Custom_Map) la mappa personalizzata da Xamarin.Forms.
+1. [Personalizzare](#Customizing_the_Map) la mappa creando un renderer personalizzato per la mappa su ogni piattaforma.
 
 > [!NOTE]
 > [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) deve essere inizializzato e configurato prima dell'uso. Per altre informazioni, vedere [`Maps Control`](~/xamarin-forms/user-interface/map.md)
 
-Per informazioni sulla personalizzazione di una mappa usando un renderer personalizzato, vedere [personalizzazione di un Pin di mappa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
+Per informazioni sulla personalizzazione di una mappa usando un renderer personalizzato, vedere [Personalizzazione di una puntina per la mappa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
 
 <a name="Creating_the_Custom_Map" />
 
 ### <a name="creating-the-custom-map"></a>Creazione della mappa personalizzata
 
-Creare un `CustomCircle` classe avente `Position` e `Radius` proprietà:
+Creare una classe `CustomCircle` con le proprietà `Position` e `Radius`:
 
 ```csharp
 public class CustomCircle
@@ -49,7 +49,7 @@ public class CustomCircle
 }
 ```
 
-Quindi, creare una sottoclasse di [ `Map` ](xref:Xamarin.Forms.Maps.Map) (classe), che aggiunge una proprietà di tipo `CustomCircle`:
+Creare quindi una sottoclasse della classe [`Map`](xref:Xamarin.Forms.Maps.Map) che aggiunge una proprietà di tipo `CustomCircle`:
 
 ```csharp
 public class CustomMap : Map
@@ -60,9 +60,9 @@ public class CustomMap : Map
 
 <a name="Consuming_the_Custom_Map" />
 
-### <a name="consuming-the-custom-map"></a>Utilizza la mappa personalizzata
+### <a name="consuming-the-custom-map"></a>Utilizzo della mappa personalizzata
 
-Utilizzare il `CustomMap` controllo dichiarando un'istanza dell'istanza di pagina XAML:
+Utilizzare il controllo `CustomMap` dichiarandone un'istanza nell'istanza della pagina XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -75,7 +75,7 @@ Utilizzare il `CustomMap` controllo dichiarando un'istanza dell'istanza di pagin
 </ContentPage>
 ```
 
-In alternativa, utilizzare il `CustomMap` controllo dichiarando un'istanza dell'istanza di pagina in c#:
+In alternativa, utilizzare il controllo `CustomMap` dichiarandone un'istanza nell'istanza della pagina C#:
 
 ```csharp
 public class MapPageCS : ContentPage
@@ -93,7 +93,7 @@ public class MapPageCS : ContentPage
 }
 ```
 
-Inizializzare il `CustomMap` controllo in base alle esigenze:
+Inizializzare il controllo `CustomMap` come richiesto:
 
 ```csharp
 public partial class MapPage : ContentPage
@@ -120,17 +120,17 @@ public partial class MapPage : ContentPage
 }
 ```
 
-Questa inizializzazione aggiunge [ `Pin` ](xref:Xamarin.Forms.Maps.Pin) e `CustomCircle` istanze alla mappa personalizzata e posiziona la visualizzazione della mappa con il [ `MoveToRegion` ](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) metodo, che modifica la posizione e zoom livello della mappa mediante la creazione di un [ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan) da una [ `Position` ](xref:Xamarin.Forms.Maps.Position) e un [ `Distance` ](xref:Xamarin.Forms.Maps.Distance).
+Questa inizializzazione aggiunge le istanze di [`Pin`](xref:Xamarin.Forms.Maps.Pin) e `CustomCircle` alla mappa personalizzata e posiziona la visualizzazione della mappa con il metodo [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*), che modifica la posizione e il livello di zoom della mappa mediante la creazione di [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) da [`Position`](xref:Xamarin.Forms.Maps.Position) e [`Distance`](xref:Xamarin.Forms.Maps.Distance).
 
 <a name="Customizing_the_Map" />
 
 ### <a name="customizing-the-map"></a>Personalizzazione della mappa
 
-Un renderer personalizzato deve ora essere aggiunti a ogni progetto di applicazione per aggiungere l'immagine sovrapposta al circolare alla mappa.
+È ora necessario aggiungere un renderer personalizzato a ogni progetto di applicazione per aggiungere la sovrimpressione circolare alla mappa.
 
-#### <a name="creating-the-custom-renderer-on-ios"></a>Creare il Renderer personalizzati in iOS
+#### <a name="creating-the-custom-renderer-on-ios"></a>Creazione del renderer personalizzato in iOS
 
-Creare una sottoclasse del `MapRenderer` classe ed eseguire l'override relativo `OnElementChanged` metodo per aggiungere l'immagine sovrapposta al circolare:
+Creare una sottoclasse della classe `MapRenderer` ed eseguire l'override del metodo `OnElementChanged` per aggiungere la sovrimpressione circolare:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -170,13 +170,13 @@ namespace MapOverlay.iOS
 
 ```
 
-Questo metodo esegue la configurazione seguente, a condizione che il renderer personalizzato è allegato a un nuovo elemento di xamarin. Forms:
+Questo metodo esegue la configurazione seguente, a condizione che il renderer personalizzato sia associato a un nuovo elemento di Xamarin.Forms:
 
-- Il `MKMapView.OverlayRenderer` è impostata su un delegato corrispondente.
-- Il cerchio viene creato impostando un valore statico `MKCircle` oggetto che specifica il centro del cerchio e il raggio del cerchio in metri.
-- Il cerchio viene aggiunto alla mappa chiamando il `MKMapView.AddOverlay` (metodo).
+- La proprietà `MKMapView.OverlayRenderer` viene impostata su un delegato corrispondente.
+- Il cerchio viene creato impostando un oggetto `MKCircle` statico che specifica il centro del cerchio e il raggio del cerchio in metri.
+- Il cerchio viene aggiunto alla mappa chiamando il metodo `MKMapView.AddOverlay`.
 
-Implementare poi il `GetOverlayRenderer` metodo per personalizzare il rendering della sovrimpressione:
+Implementare poi il metodo `GetOverlayRenderer` per personalizzare il rendering della sovrimpressione:
 
 ```csharp
 public class CustomMapRenderer : MapRenderer
@@ -198,9 +198,9 @@ public class CustomMapRenderer : MapRenderer
 }
 ```
 
-#### <a name="creating-the-custom-renderer-on-android"></a>Creare il Renderer personalizzati in Android
+#### <a name="creating-the-custom-renderer-on-android"></a>Creazione del renderer personalizzato in Android
 
-Creare una sottoclasse del `MapRenderer` classe ed eseguire l'override relativo `OnElementChanged` e `OnMapReady` metodi per aggiungere l'immagine sovrapposta al circolare:
+Creare una sottoclasse della classe `MapRenderer` ed eseguire l'override dei metodi `OnElementChanged` e `OnMapReady` per aggiungere la sovrimpressione circolare:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -248,11 +248,11 @@ namespace MapOverlay.Droid
 }
 ```
 
-Il `OnElementChanged` chiamate al metodo il `MapView.GetMapAsync` metodo, che ottiene l'oggetto sottostante `GoogleMap` che è associato alla visualizzazione, condizione che il renderer personalizzato è allegato a un nuovo elemento di xamarin. Forms. Una volta il `GoogleMap` istanza è disponibile, il `OnMapReady` metodo verrà richiamato, in cui il controllo circle viene creato creando un `CircleOptions` oggetto che specifica il centro del cerchio e il raggio del cerchio in metri. Il cerchio viene quindi aggiunto alla mappa chiamando il `NativeMap.AddCircle` (metodo).
+Il metodo `OnElementChanged` chiama il metodo `MapView.GetMapAsync`, che ottiene l'oggetto sottostante `GoogleMap` associato alla visualizzazione, a condizione che il renderer personalizzato sia associato a un nuovo elemento di Xamarin.Forms. Quando l'istanza `GoogleMap` è disponibile, verrà richiamato il metodo `OnMapReady` con il quale viene creato il cerchio creando un'istanza di un oggetto `CircleOptions` che specifica il centro del cerchio e il raggio del cerchio in metri. Il cerchio viene quindi aggiunto alla mappa chiamando il metodo `NativeMap.AddCircle`.
 
-#### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Creare il Renderer personalizzato sulla piattaforma Windows universale
+#### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Creare il renderer personalizzato sulla piattaforma UWP (Universal Windows Platform)
 
-Creare una sottoclasse del `MapRenderer` classe ed eseguire l'override relativo `OnElementChanged` metodo per aggiungere l'immagine sovrapposta al circolare:
+Creare una sottoclasse della classe `MapRenderer` ed eseguire l'override del metodo `OnElementChanged` per aggiungere la sovrimpressione circolare:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -296,12 +296,12 @@ namespace MapOverlay.UWP
 }
 ```
 
-Questo metodo esegue le operazioni seguenti, a condizione che il renderer personalizzato è allegato a un nuovo elemento di xamarin. Forms:
+Questo metodo esegue le operazioni seguenti, a condizione che il renderer personalizzato sia associato a un nuovo elemento di Xamarin.Forms:
 
-- La posizione di cerchio e radius vengono recuperati dal `CustomMap.Circle` proprietà e passato al `GenerateCircleCoordinates` metodo, che genera latitudine e longitudine coordinate per consentire il perimetro del cerchio. Seguito è riportato il codice per questo metodo di supporto.
-- Le coordinate di perimetro del cerchio vengono convertite in un `List` di `BasicGeoposition` coordinate.
-- Il cerchio viene creato creando un `MapPolygon` oggetto. Il `MapPolygon` classe viene utilizzata per visualizzare una forma di multi-punto sulla mappa mediante l'impostazione relativa `Path` proprietà su un `Geopath` oggetto che contiene le coordinate di forma.
-- Il poligono viene eseguito il rendering sulla mappa, aggiungerlo al `MapControl.MapElements` raccolta.
+- La posizione e il raggio del cerchio vengono recuperati dalla proprietà `CustomMap.Circle` e passati al metodo `GenerateCircleCoordinates`, che genera le coordinate di latitudine e longitudine per il perimetro del cerchio. Il codice per questo metodo helper è riportato di seguito.
+- Le coordinate del perimetro del cerchio vengono convertite in un elenco (`List`) di coordinate `BasicGeoposition`.
+- Il cerchio viene creato creando un'istanza di un oggetto `MapPolygon`. La classe `MapPolygon` viene usata per visualizzare una forma multipunto sulla mappa mediante l'impostazione della relativa proprietà `Path` su un oggetto `Geopath` che contiene le coordinate della forma.
+- Viene eseguito il rendering del poligono sulla mappa aggiungendolo alla raccolta `MapControl.MapElements`.
 
 
 ```
@@ -328,11 +328,11 @@ List<Position> GenerateCircleCoordinates(Position position, double radius)
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato come aggiungere una sovrapposizione circolare a una mappa, per evidenziare un'area circolare della mappa.
+In questo articolo è stato illustrato come aggiungere una sovrimpressione circolare a una mappa per evidenziare un'area circolare della mappa stessa.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Circolare mappa Ovlerlay (esempio)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/)
+- [Circular Map Ovlerlay (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/) (Esempio di sovrimpressione circolare sulla mappa)
 - [Personalizzazione di una puntina per la mappa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

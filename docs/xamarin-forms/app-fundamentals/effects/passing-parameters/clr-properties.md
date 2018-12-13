@@ -1,6 +1,6 @@
 ---
-title: Passaggio di parametri effetto come Common Language Runtime proprietà
-description: Le proprietà di Common Language Runtime (CLR) sono utilizzabile per definire i parametri di effetto che non rispondono alle modifiche delle proprietà di runtime. Questo articolo illustra l'uso delle proprietà CLR per passare parametri a un effetto.
+title: Passaggio dei parametri di un effetto come proprietà Common Language Runtime
+description: Le proprietà CLR (Common Language Runtime) possono essere usate per definire parametri per gli effetti che non rispondono alle modifiche delle proprietà in fase di esecuzione. Questo articolo illustra l'uso delle proprietà CLR per il passaggio di parametri a un effetto.
 ms.prod: xamarin
 ms.assetid: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27
 ms.technology: xamarin-forms
@@ -9,34 +9,34 @@ ms.author: dabritch
 ms.date: 08/05/2016
 ms.openlocfilehash: 1bb357b256a7cc6d52d1d92613f38cbf48400c4c
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38995768"
 ---
-# <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Passaggio di parametri effetto come Common Language Runtime proprietà
+# <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Passaggio dei parametri di un effetto come proprietà Common Language Runtime
 
-_Le proprietà di Common Language Runtime (CLR) sono utilizzabile per definire i parametri di effetto che non rispondono alle modifiche delle proprietà di runtime. Questo articolo illustra l'uso delle proprietà CLR per passare parametri a un effetto._
+_Le proprietà CLR (Common Language Runtime) possono essere usate per definire parametri per gli effetti che non rispondono alle modifiche delle proprietà in fase di esecuzione. Questo articolo illustra l'uso delle proprietà CLR per il passaggio di parametri a un effetto._
 
-Il processo di creazione dei parametri di effetto che non rispondono a modifiche alle proprietà runtime è come segue:
+Il processo di creazione dei parametri per un effetto che non rispondono a modifiche delle proprietà in fase di esecuzione è il seguente:
 
-1. Creare un `public` classe che rappresenta una sottoclasse di [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) classe. Il `RoutingEffect` classe rappresenta un effetto indipendente dalla piattaforma che esegue il wrapping di un effetto interno che è in genere specifica della piattaforma.
-1. Creare un costruttore che chiama il costruttore di classe di base, passando una concatenazione del nome del gruppo di risoluzione e l'ID univoco che è stata specificata in ogni classe effetto specifico della piattaforma.
-1. Aggiungere proprietà alla classe per ogni parametro deve essere passato l'effetto.
+1. Creare una classe `public` come sottoclasse della classe [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect). La classe `RoutingEffect` rappresenta un effetto indipendente dalla piattaforma che esegue il wrapping di un effetto interno, in genere specifico della piattaforma.
+1. Creare un costruttore che chiama il costruttore della classe di base, passando una concatenazione del nome del gruppo di risoluzione e dell'ID univoco specificato per ogni classe di effetto specifica della piattaforma.
+1. Aggiungere proprietà alla classe per ogni parametro da passare all'effetto.
 
-I parametri possono quindi essere passati all'effetto specificando i valori per ogni proprietà quando si crea l'effetto.
+I parametri possono quindi essere passati all'effetto specificando i valori per ogni proprietà quando si crea un'istanza dell'effetto.
 
-L'applicazione di esempio viene illustrato un `ShadowEffect` che aggiunge un'ombreggiatura per il testo visualizzato da un [ `Label` ](xref:Xamarin.Forms.Label) controllo. Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, con le relazioni tra di essi:
+L'applicazione di esempio illustra un `ShadowEffect` che aggiunge un'ombreggiatura al testo visualizzato da un controllo [`Label`](xref:Xamarin.Forms.Label). Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, insieme alle relazioni tra di essi:
 
-![](clr-properties-images/shadow-effect.png "Responsabilità di progetto effetto ombreggiatura")
+![](clr-properties-images/shadow-effect.png "Responsabilità dei progetti per l'effetto di ombreggiatura")
 
-Oggetto [ `Label` ](xref:Xamarin.Forms.Label) control per il `HomePage` personalizzato dal `LabelShadowEffect` in ogni progetto specifico della piattaforma. I parametri vengono passati a ciascun `LabelShadowEffect` tramite le proprietà nel `ShadowEffect` classe. Ciascuna `LabelShadowEffect` deriva dalla classe di `PlatformEffect` classe per ogni piattaforma. Il risultato è un'ombreggiatura da aggiungere al testo visualizzato per il `Label` controllare, come illustrato negli screenshot seguenti:
+Un controllo [`Label`](xref:Xamarin.Forms.Label) per la `HomePage` è personalizzato da `LabelShadowEffect` in ogni progetto specifico della piattaforma. I parametri vengono passati a ogni `LabelShadowEffect` tramite le proprietà nella classe `ShadowEffect`. Ogni classe `LabelShadowEffect` deriva dalla classe `PlatformEffect` per ogni piattaforma. Il risultato è l'aggiunta di un'ombreggiatura al testo visualizzato dal controllo `Label`, come illustrato negli screenshot seguenti:
 
 ![](clr-properties-images/screenshots.png "Effetto di ombreggiatura per ogni piattaforma")
 
-## <a name="creating-effect-parameters"></a>Creazione di parametri di effetto
+## <a name="creating-effect-parameters"></a>Creazione di parametri per l'effetto
 
-Oggetto `public` classe che rappresenta una sottoclasse di [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) classe deve essere creata per rappresentare i parametri di effetto, come illustrato nell'esempio di codice seguente:
+È necessario creare una classe `public` come sottoclasse della classe [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) per rappresentare i parametri dell'effetto, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 public class ShadowEffect : RoutingEffect
@@ -55,11 +55,11 @@ public class ShadowEffect : RoutingEffect
 }
 ```
 
-Il `ShadowEffect` contiene quattro proprietà che rappresentano i parametri da passare per ogni specifico della piattaforma `LabelShadowEffect`. Il costruttore della classe chiama il costruttore di classe di base, passando un parametro costituito da una concatenazione del nome del gruppo di risoluzione e l'ID univoco che è stata specificata in ogni classe effetto specifico della piattaforma. Pertanto, una nuova istanza della `MyCompany.LabelShadowEffect` verrà aggiunto a un controllo [ `Effects` ](xref:Xamarin.Forms.Element.Effects) raccolta quando un `ShadowEffect` viene creata un'istanza.
+`ShadowEffect` contiene quattro proprietà che rappresentano i parametri da passare a ogni `LabelShadowEffect` specifico della piattaforma. Il costruttore della classe chiama il costruttore della classe di base, passando un parametro costituito da una concatenazione del nome del gruppo di risoluzione e dell'ID univoco specificato per ogni classe di effetto specifica della piattaforma. Verrà quindi aggiunta una nuova istanza di `MyCompany.LabelShadowEffect` alla raccolta [`Effects`](xref:Xamarin.Forms.Element.Effects) di un controllo quando viene creata un'istanza di `ShadowEffect`.
 
-## <a name="consuming-the-effect"></a>L'effetto di utilizzo
+## <a name="consuming-the-effect"></a>Utilizzo dell'effetto
 
-L'esempio di codice XAML seguente mostra una [ `Label` ](xref:Xamarin.Forms.Label) controllo a cui il `ShadowEffect` collegato:
+L'esempio di codice XAML seguente mostra un controllo [`Label`](xref:Xamarin.Forms.Label) a cui è associato `ShadowEffect`:
 
 ```xaml
 <Label Text="Label Shadow Effect" ...>
@@ -77,7 +77,7 @@ L'esempio di codice XAML seguente mostra una [ `Label` ](xref:Xamarin.Forms.Labe
 </Label>
 ```
 
-L'equivalente [ `Label` ](xref:Xamarin.Forms.Label) nel linguaggio c# viene illustrato nell'esempio di codice seguente:
+Il codice C# equivalente per [`Label`](xref:Xamarin.Forms.Label) è visualizzato nell'esempio seguente:
 
 ```csharp
 var label = new Label {
@@ -107,15 +107,15 @@ label.Effects.Add (new ShadowEffect {
 });
 ```
 
-In entrambi gli esempi di codice, un'istanza di `ShadowEffect` viene creata un'istanza di classe con i valori specificati per ogni proprietà, prima di essere aggiunti al controllo [ `Effects` ](xref:Xamarin.Forms.Element.Effects) raccolta. Si noti che il `ShadowEffect.Color` proprietà Usa i valori di colore specifici della piattaforma. Per altre informazioni, vedere [classe Device](~/xamarin-forms/platform/device.md).
+In entrambi gli esempi di codice viene creata un'istanza della classe `ShadowEffect` con i valori specificati per ogni proprietà, prima dell'aggiunta alla raccolta [`Effects`](xref:Xamarin.Forms.Element.Effects) del controllo. Si noti che la proprietà `ShadowEffect.Color` usa valori di colore specifici della piattaforma. Per altre informazioni, vedere [Classe Device](~/xamarin-forms/platform/device.md).
 
-## <a name="creating-the-effect-on-each-platform"></a>Creare l'effetto in ogni piattaforma
+## <a name="creating-the-effect-on-each-platform"></a>Creazione dell'effetto in ogni piattaforma
 
-Le sezioni seguenti illustrano l'implementazione specifica della piattaforma del `LabelShadowEffect` classe.
+Le sezioni seguenti illustrano l'implementazione specifica della piattaforma della classe `LabelShadowEffect`.
 
 ### <a name="ios-project"></a>Progetto iOS
 
-Nell'esempio di codice riportato di seguito viene illustrato il `LabelShadowEffect` implementazione per il progetto iOS:
+L'esempio di codice seguente mostra l'implementazione di `LabelShadowEffect` per il progetto iOS:
 
 ```csharp
 [assembly:ResolutionGroupName ("MyCompany")]
@@ -146,11 +146,11 @@ namespace EffectsDemo.iOS
 }
 ```
 
-Il `OnAttached` recuperata dal metodo di `ShadowEffect` istanza e imposta `Control.Layer` proprietà ai valori della proprietà specificata per creare l'ombreggiatura. Questa funzionalità viene eseguito il wrapping un `try` / `catch` blocco nel caso in cui il controllo cui è collegata l'effetto non dispone di `Control.Layer` proprietà. Nessuna implementazione avviene tramite il `OnDetached` metodo perché non è necessaria alcuna operazione di pulizia.
+Il metodo `OnAttached` recupera l'istanza di `ShadowEffect` e imposta le proprietà `Control.Layer` sui valori di proprietà specificati per creare l'ombreggiatura. Questa funzionalità viene sottoposta a wrapping in un blocco `try`/`catch`, nel caso il controllo a cui è associato l'effetto non abbia le proprietà `Control.Layer`. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
 
 ### <a name="android-project"></a>Progetto Android
 
-Nell'esempio di codice riportato di seguito viene illustrato il `LabelShadowEffect` implementazione per il progetto Android:
+L'esempio di codice seguente mostra l'implementazione di `LabelShadowEffect` per il progetto Android:
 
 ```csharp
 [assembly:ResolutionGroupName ("MyCompany")]
@@ -183,11 +183,11 @@ namespace EffectsDemo.Droid
 }
 ```
 
-Il `OnAttached` recuperata dal metodo il `ShadowEffect` istanza e chiama il [ `TextView.SetShadowLayer` ](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/) metodo per creare un'ombreggiatura usando i valori di proprietà specificato. Questa funzionalità viene eseguito il wrapping un `try` / `catch` blocco nel caso in cui il controllo cui è collegata l'effetto non dispone di `Control.Layer` proprietà. Nessuna implementazione avviene tramite il `OnDetached` metodo perché non è necessaria alcuna operazione di pulizia.
+Il metodo `OnAttached` recupera l'istanza di `ShadowEffect` e chiama il metodo [`TextView.SetShadowLayer`](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/) per creare un'ombreggiatura usando i valori di proprietà specificati. Questa funzionalità viene sottoposta a wrapping in un blocco `try`/`catch`, nel caso il controllo a cui è associato l'effetto non abbia le proprietà `Control.Layer`. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
 
-### <a name="universal-windows-platform-project"></a>Progetto della piattaforma Windows universale
+### <a name="universal-windows-platform-project"></a>Progetto UWP (Universal Windows Platform)
 
-Nell'esempio di codice riportato di seguito viene illustrato il `LabelShadowEffect` implementazione per il progetto Universal Windows Platform (UWP):
+L'esempio di codice seguente mostra l'implementazione di `LabelShadowEffect` per il progetto UWP (Universal Windows Platform):
 
 ```csharp
 [assembly: ResolutionGroupName ("Xamarin")]
@@ -230,17 +230,17 @@ namespace EffectsDemo.UWP
 }
 ```
 
-La piattaforma Windows universale non fornisce un effetto di ombreggiatura e pertanto `LabelShadowEffect` implementazione su entrambe le piattaforme simula uno tramite l'aggiunta di un offset secondo [ `Label` ](xref:Xamarin.Forms.Label) dietro quelle primarie `Label`. Il `OnAttached` recuperata dal metodo di `ShadowEffect` dell'istanza, crea il nuovo `Label`e configura alcune proprietà del layout nel `Label`. Crea quindi l'ombreggiatura impostando il [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor), [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX), e [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY) le proprietà per controllare il colore e il percorso del `Label`. Il `shadowLabel` viene quindi inserito offset dietro quelle primarie `Label`. Questa funzionalità viene eseguito il wrapping un `try` / `catch` blocco nel caso in cui il controllo cui è collegata l'effetto non dispone di `Control.Layer` proprietà. Nessuna implementazione avviene tramite il `OnDetached` metodo perché non è necessaria alcuna operazione di pulizia.
+La piattaforma UWP non include un effetto di ombreggiatura, pertanto l'implementazione di `LabelShadowEffect` in entrambe le piattaforme ne simula uno tramite l'aggiunta di un secondo elemento [`Label`](xref:Xamarin.Forms.Label) sfalsato dietro all'elemento `Label` primario. Il metodo `OnAttached` recupera l'istanza di `ShadowEffect`, crea il nuovo elemento `Label` e imposta alcune proprietà di layout per `Label`. Crea quindi l'ombreggiatura impostando le proprietà [`TextColor`](xref:Xamarin.Forms.Label.TextColor), [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) e [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) per controllare il colore e la posizione di `Label`. `shadowLabel` viene quindi inserito sfalsato dietro all'elemento `Label` primario. Questa funzionalità viene sottoposta a wrapping in un blocco `try`/`catch`, nel caso il controllo a cui è associato l'effetto non abbia le proprietà `Control.Layer`. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha dimostrato l'utilizzo delle proprietà CLR per passare parametri a un effetto. Proprietà CLR sono utilizzabile per definire i parametri di effetto che non rispondono alle modifiche delle proprietà di runtime.
+In questo articolo è stato illustrato l'uso delle proprietà CLR per passare parametri a un effetto. Le proprietà CLR possono essere usate per definire i parametri dell'effetto che non rispondono a modifiche delle proprietà in fase di esecuzione.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Renderer personalizzati](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
-- [Effetto](xref:Xamarin.Forms.Effect)
+- [Effect](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [Effetto di ombreggiatura (esempio)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+- [Shadow Effect (sample)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/) (Esempio di effetto di ombreggiatura)

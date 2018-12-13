@@ -1,6 +1,6 @@
 ---
-title: L'associazione da un oggetto ControlTemplate xamarin. Forms
-description: Associazioni a modello consentono di associare i controlli in un modello di controllo per i dati a proprietà pubbliche, l'abilitazione di valori delle proprietà dei controlli nel modello del controllo da modificare con facilità. Questo articolo illustra l'uso di associazioni a modello per eseguire il data binding da un modello di controllo.
+title: Associazione da un ControlTemplate Xamarin.Forms
+description: Le associazioni a modello consentono di associare dati dei controlli di un modello del controllo a proprietà pubbliche, permettendo la modifica intuitiva dei valori delle proprietà dei controlli nel modello del controllo. Questo articolo illustra come usare le associazioni a modello per eseguire data binding da un modello del controllo.
 ms.prod: xamarin
 ms.assetid: 794A663C-3A8D-438A-BD02-8E97C919B55F
 ms.technology: xamarin-forms
@@ -9,22 +9,22 @@ ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: 13730dce5d4698085abe10cb93da5ba50b87ab01
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50106429"
 ---
-# <a name="binding-from-a-xamarinforms-controltemplate"></a>L'associazione da un oggetto ControlTemplate xamarin. Forms
+# <a name="binding-from-a-xamarinforms-controltemplate"></a>Associazione da un ControlTemplate Xamarin.Forms
 
-_Associazioni a modello consentono di associare i controlli in un modello di controllo per i dati a proprietà pubbliche, l'abilitazione di valori delle proprietà dei controlli nel modello del controllo da modificare con facilità. Questo articolo illustra l'uso di associazioni a modello per eseguire il data binding da un modello di controllo._
+_Le associazioni a modello consentono di associare dati dei controlli di un modello del controllo a proprietà pubbliche, permettendo la modifica intuitiva dei valori delle proprietà dei controlli nel modello del controllo. Questo articolo illustra come usare le associazioni a modello per eseguire data binding da un modello del controllo._
 
-Oggetto [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) viene utilizzato per associare una proprietà del controllo in un modello di controllo a una proprietà associabile dell'elemento padre del *destinazione* visualizzazione a cui appartiene il modello di controllo. Ad esempio, invece di definire il testo visualizzato da [ `Label` ](xref:Xamarin.Forms.Label) istanze all'interno di [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate), è possibile usare un'associazione di modelli per eseguire l'associazione il [ `Label.Text` ](xref:Xamarin.Forms.Label.Text) proprietà per proprietà associabili che definiscono il testo da visualizzare.
+[`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) viene usato per associare una proprietà di un controllo in un modello di controllo a una proprietà associabile nel padre della visualizzazione di *destinazione* a cui appartiene il modello del controllo. Ad esempio, invece di definire il testo visualizzato dalle istanze di [`Label`](xref:Xamarin.Forms.Label) all'interno di [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate), è possibile usare un'associazione a modello per associare la proprietà [`Label.Text`](xref:Xamarin.Forms.Label.Text) alle proprietà associabili che definiscono il testo da visualizzare.
 
-Oggetto [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) è simile a un oggetto esistente [ `Binding` ](xref:Xamarin.Forms.Binding), ad eccezione del fatto che il *origine* di un `TemplateBinding` è impostato sempre automaticamente al padre del *destinazione* visualizzazione a cui appartiene il modello di controllo. Si noti tuttavia che l'utilizzo un `TemplateBinding` all'esterno di un [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) non è supportato.
+[`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) è simile a un [`Binding`](xref:Xamarin.Forms.Binding) esistente, ad eccezione del fatto che l'*origine* di un `TemplateBinding` viene sempre impostata automaticamente sul padre della visualizzazione di *destinazione* a cui appartiene il modello del controllo. Si noti, tuttavia, che l'uso di un `TemplateBinding` all'esterno di un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) non è supportato.
 
 ## <a name="creating-a-templatebinding-in-xaml"></a>Creazione di un TemplateBinding in XAML
 
-In XAML, un [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) viene creato utilizzando la [ `TemplateBinding` ](xref:Xamarin.Forms.Xaml.TemplateBindingExtension) estensione di markup, come illustrato nell'esempio di codice seguente:
+In XAML, un [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) viene creato usando l'estensione di markup [`TemplateBinding`](xref:Xamarin.Forms.Xaml.TemplateBindingExtension), come illustrato nell'esempio di codice seguente:
 
 ```xaml
 <ControlTemplate x:Key="TealTemplate">
@@ -37,7 +37,7 @@ In XAML, un [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) viene crea
 </ControlTemplate>
 ```
 
-Anziché impostare il [ `Label.Text` ](xref:Xamarin.Forms.Label.Text) le proprietà di testo statico, le proprietà possono usare le associazioni a modello da associare alla proprietà associabili dell'elemento padre del *destinazione* visualizzazione a cui appartiene il [ `ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). Si noti tuttavia che le associazioni del modello associato al `Parent.HeaderText` e `Parent.FooterText`, anziché `HeaderText` e `FooterText`. Infatti, in questo esempio, le proprietà associabili sono definite nel nodo padre del padre di *destinazione* visualizzare, anziché l'elemento padre, come illustrato nell'esempio di codice seguente:
+Anziché impostare le proprietà [`Label.Text`](xref:Xamarin.Forms.Label.Text) su testo statico, le proprietà possono usare le associazioni a modello per l'associazione a proprietà associabili nel padre della visualizzazione di *destinazione* a cui appartiene [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). Si noti, tuttavia, che le associazioni a modello si associano a `Parent.HeaderText` e `Parent.FooterText`, anziché a `HeaderText` e `FooterText`. Il motivo è che, in questo esempio, le proprietà associabili sono definite nel padre del padre della visualizzazione di *destinazione*, anziché nel padre, come illustrato nell'esempio di codice seguente:
 
 ```xaml
 <ContentPage ...>
@@ -47,7 +47,7 @@ Anziché impostare il [ `Label.Text` ](xref:Xamarin.Forms.Label.Text) le proprie
 </ContentPage>
 ```
 
-Il *origine* il modello di associazione è sempre impostata automaticamente al padre delle *destinazione* visualizzazione a cui appartiene il modello di controllo, di seguito è riportato il [ `ContentView` ](xref:Xamarin.Forms.ContentView) istanza. Il modello di associazione Usa la [ `Parent` ](xref:Xamarin.Forms.Element.Parent) proprietà per restituire l'elemento padre del `ContentView` istanza, che è la [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) istanza. Di conseguenza, usando un [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) nel [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) da associare alla `Parent.HeaderText` e `Parent.FooterText` individua le proprietà associabili che sono definite nel `ContentPage`, come illustrato nell'esempio di codice seguente:
+L'*origine* dell'associazione a modello viene sempre impostata automaticamente sul padre della visualizzazione di *destinazione* a cui appartiene il modello di controllo, che in questo caso è l'istanza [`ContentView`](xref:Xamarin.Forms.ContentView). L'associazione a modello usa la proprietà [`Parent`](xref:Xamarin.Forms.Element.Parent) per restituire l'elemento padre dell'istanza di `ContentView`, che è l'istanza di [`ContentPage`](xref:Xamarin.Forms.ContentPage). Di conseguenza, usando un [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) in [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) per l'associazione a `Parent.HeaderText` e a `Parent.FooterText` vengono individuate le proprietà associabili definite in `ContentPage`, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 public static readonly BindableProperty HeaderTextProperty =
@@ -64,13 +64,13 @@ public string FooterText {
 }
 ```
 
-Ciò comporta l'aspetto illustrato negli screenshot seguenti:
+Il risultato è l'aspetto illustrato negli screenshot seguenti:
 
-![](template-binding-images/teal-theme.png "Modello di controllo verde acqua con associazioni a modello")
+![](template-binding-images/teal-theme.png "Modello del controllo verde acqua con associazioni a modello")
 
 ## <a name="creating-a-templatebinding-in-c35"></a>Creazione di un TemplateBinding in C&#35;
 
-In c#, un [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) viene creato usando il `TemplateBinding` costruttore, come illustrato nell'esempio di codice seguente:
+In C#, un [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) viene creato tramite il costruttore `TemplateBinding`, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 class TealTemplate : Grid
@@ -88,7 +88,7 @@ class TealTemplate : Grid
 }
 ```
 
-Anziché impostare il [ `Label.Text` ](xref:Xamarin.Forms.Label.Text) le proprietà di testo statico, le proprietà possono usare le associazioni a modello da associare alla proprietà associabili dell'elemento padre del *destinazione* visualizzazione a cui appartiene il [ `ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). L'associazione di modelli viene creato usando il [ `SetBinding` ](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) metodo, specificando un [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) istanza come secondo parametro. Si noti che le associazioni del modello associati a `Parent.HeaderText` e `Parent.FooterText`, perché le proprietà associabili sono definite nel nodo padre del padre le *destinazione* visualizzare, anziché l'elemento padre, come illustrato nell'esempio di codice seguente:
+Anziché impostare le proprietà [`Label.Text`](xref:Xamarin.Forms.Label.Text) su testo statico, le proprietà possono usare le associazioni a modello per l'associazione a proprietà associabili nel padre della visualizzazione di *destinazione* a cui appartiene [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). L'associazione a modello viene creata tramite il metodo [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)), specificando un'istanza di [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) come secondo parametro. Si noti che le associazioni a modello impostano l'associazione a `Parent.HeaderText` e a `Parent.FooterText`, perché le proprietà associabili sono definite nel padre del padre della visualizzazione di *destinazione*, anziché nel padre, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 public class HomePageCS : ContentPage
@@ -108,13 +108,13 @@ public class HomePageCS : ContentPage
 }
 ```
 
-Le proprietà associabili sono definite nel `ContentPage`, come indicato in precedenza.
+Le proprietà associabili sono definite in `ContentPage`, come indicato in precedenza.
 
-### <a name="binding-a-bindableproperty-to-a-viewmodel-property"></a>Associazione di un BindableProperty a una proprietà ViewModel
+### <a name="binding-a-bindableproperty-to-a-viewmodel-property"></a>Associazione di una BindableProperty a una proprietà ViewModel
 
-Come già indicato, una [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) associa una proprietà del controllo in un modello di controllo a una proprietà associabile dell'elemento padre del *destinazione* visualizzazione a cui appartiene il modello di controllo. Queste proprietà associabili a sua volta, può essere associata alle proprietà nel ViewModel.
+Come già indicato, un [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) consente di associare una proprietà di un controllo in un modello del controllo a una proprietà associabile nel padre della visualizzazione di *destinazione* a cui appartiene il modello di controllo. A sua volta, queste proprietà associabili possono essere associate alle proprietà in ViewModel.
 
-Esempio di codice seguente definisce due proprietà in un elemento ViewModel:
+L'esempio di codice seguente definisce due proprietà per un ViewModel:
 
 ```csharp
 public class HomePageViewModel
@@ -124,7 +124,7 @@ public class HomePageViewModel
 }
 ```
 
-Il `HeaderText` e `FooterText` proprietà ViewModel può essere associata, come illustrato nell'esempio di codice XAML seguente:
+Le proprietà `HeaderText` e `FooterText` di ViewModel possono essere la destinazione dell'associazione, come illustrato nell'esempio di codice XAML seguente:
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:SimpleTheme;assembly=SimpleTheme"
@@ -138,7 +138,7 @@ Il `HeaderText` e `FooterText` proprietà ViewModel può essere associata, come 
 </ContentPage>
 ```
 
-Il `HeaderText` e `FooterText` proprietà associabili sono associate ai `HomePageViewModel.HeaderText` e `HomePageViewModel.FooterText` le proprietà, a causa dell'impostazione il [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) a un'istanza del `HomePageViewModel` classe. In generale, di conseguenza le proprietà di controllo nel [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) a cui è associata [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) istanze il [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), che a sua volta associare a Proprietà ViewModel.
+Le proprietà associabili `HeaderText` e `FooterText` vengono associate alle proprietà `HomePageViewModel.HeaderText` e `HomePageViewModel.FooterText`, a causa dell'impostazione di [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) su un'istanza della classe `HomePageViewModel`. In generale, il risultato è che le proprietà del controllo nel [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) vengono associate alle istanze di [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) in [`ContentPage`](xref:Xamarin.Forms.ContentPage), a loro volta associate a proprietà di ViewModel.
 
 Il codice C# equivalente è visualizzato nell'esempio seguente:
 
@@ -156,7 +156,7 @@ public class HomePageCS : ContentPage
 }
 ```
 
-È anche possibile associare alle proprietà del modello di visualizzazione direttamente, in modo che non è necessario dichiarare `BindableProperty`istanze `HeaderText` e `FooterText` sul `ContentPage`, associando il modello di controllo a Parent.BindingContext. _PropertyName_ , ad esempio:
+È anche possibile impostare un'associazione diretta alle proprietà del modello di visualizzazione, in modo da non dover dichiarare `BindableProperty`per `HeaderText` e `FooterText` in `ContentPage`, associando il modello del controllo a Parent.BindingContext._NomeProprietà_, ad esempio:
 
 ```xaml
 <ControlTemplate x:Key="TealTemplate">
@@ -169,18 +169,18 @@ public class HomePageCS : ContentPage
 </ControlTemplate>
 ```
 
-Per altre informazioni sul data binding al ViewModel, vedere [dal Data Binding a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
+Per altre informazioni sul data binding a ViewModel, vedere [Da data binding a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo illustrato l'uso di associazioni di modello per eseguire l'associazione di dati da un modello di controllo. Associazioni a modello consentono di associare i controlli in un modello di controllo per i dati a proprietà pubbliche, l'abilitazione di valori delle proprietà dei controlli nel modello del controllo da modificare con facilità.
+In questo articolo è stato illustrato come usare le associazioni a modello per eseguire data binding da un modello del controllo. Le associazioni a modello consentono di associare dati dei controlli di un modello del controllo a proprietà pubbliche, permettendo la modifica intuitiva dei valori delle proprietà dei controlli nel modello del controllo.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Nozioni fondamentali sull'associazione dati](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-- [Da Data Binding a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
-- [Tema semplice con modello di associazione (esempio)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebinding/)
-- [Tema semplice con l'associazione di modelli e ViewModel (esempio)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebindingandviewmodel/)
+- [Nozioni di base sul data binding](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+- [Da data binding a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [Simple Theme with Template Binding (sample)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebinding/) (Esempio di tema semplice con associazione a modello)
+- [Simple Theme with Template Binding and ViewModel (sample)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebindingandviewmodel/) (Esempio di tema semplice con associazione a modello e ViewModel)
 - [TemplateBinding](xref:Xamarin.Forms.TemplateBinding)
-- [Oggetto ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
+- [ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
 - [ContentView](xref:Xamarin.Forms.ContentView)
