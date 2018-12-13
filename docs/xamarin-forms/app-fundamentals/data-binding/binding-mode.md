@@ -1,6 +1,6 @@
 ---
-title: Modalità di associazione di xamarin. Forms
-description: Questo articolo illustra come controllare il flusso di informazioni tra origine e di destinazione tramite una modalità di associazione, che viene specificata con un membro dell'enumerazione BindingMode. Tutte le proprietà associabili ha una modalità di associazione predefinito, che indica la modalità attivo quando tale proprietà è una destinazione di associazione dati.
+title: Modalità di binding di Xamarin.Forms
+description: Questo articolo illustra come controllare il flusso di informazioni tra origine e destinazione tramite una modalità di binding, che viene specificata con un membro dell'enumerazione BindingMode. Tutte le proprietà con binding presentano una modalità di binding predefinita, che indica la modalità attiva quando questa proprietà è una destinazione per il data binding.
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
 ms.technology: xamarin-forms
@@ -9,16 +9,16 @@ ms.author: dabritch
 ms.date: 05/01/2018
 ms.openlocfilehash: 03dbaa36cc1fa4a6a169f9456e0fd5b0fdc0d295
 ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/12/2018
 ms.locfileid: "51563940"
 ---
-# <a name="xamarinforms-binding-mode"></a>Modalità di associazione di xamarin. Forms
+# <a name="xamarinforms-binding-mode"></a>Modalità di binding di Xamarin.Forms
 
-Nel [articolo precedente](basic-bindings.md), il **alternativa codice associazione** e **associazione XAML alternativa** pagine in primo piano una `Label` con relativo `Scale` proprietà associato ai `Value` proprietà di un `Slider`. Poiché il `Slider` valore iniziale è 0, questo ha causato il `Scale` proprietà del `Label` sia impostato su 0 anziché 1 e il `Label` è scomparso.
+Nell'[articolo precedente](basic-bindings.md) le pagine **Alternative Code Binding** (Binding di codice alternativo) e **Alternative XAML Binding** (Binding XAML alternativo) presentavano un elemento `Label` con la proprietà `Scale` associata alla proprietà `Value` di un elemento `Slider`. Poiché il valore iniziale di `Slider` è 0, la proprietà `Scale` di `Label` è stata impostata su 0 anziché su 1 e `Label` è scomparso.
 
-Nel [ **DataBindingDemos** ](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) esempio, il **associazione inversa** pagina è simile ai programmi nell'articolo precedente, ad eccezione del fatto che il data binding è definito nel `Slider` piuttosto che scegliere il `Label`:
+Nell'esempio [**DataBindingDemos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/), la pagina **Reverse Binding** (Binding inverso) è simile ai programmi nell'articolo precedente, ma il data binding è definito su `Slider` anziché su `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -41,78 +41,78 @@ Nel [ **DataBindingDemos** ](https://developer.xamarin.com/samples/xamarin-forms
 </ContentPage>
 ```
 
-Inizialmente, questo potrebbe sembrare con le versioni precedenti: ora il `Label` è l'origine di associazione dati e il `Slider` è la destinazione. I riferimenti di associazione la `Opacity` proprietà del `Label`, che ha il valore predefinito pari a 1.
+Inizialmente l'ordine potrebbe apparire invertito, con `Label` che è ora l'origine del data binding mentre `Slider` è la destinazione. Il binding fa riferimento alla proprietà `Opacity` di `Label`, che ha come valore predefinito 1.
 
-Come è prevedibile, il `Slider` viene inizializzato sul valore 1 da iniziale `Opacity` pari a `Label`. Come illustrato nella schermata iOS a sinistra:
+Come prevedibile, l'elemento `Slider` viene inizializzato sul valore 1 in base al valore `Opacity` iniziale di `Label`. Questo è illustrato nello screenshot iOS a sinistra:
 
-[![Annullare l'associazione](binding-mode-images/reversebinding-small.png "inverso associazione")](binding-mode-images/reversebinding-large.png#lightbox "invertire associazione")
+[![Reverse Binding (Binding inverso)](binding-mode-images/reversebinding-small.png "Reverse Binding (Binding inverso)")](binding-mode-images/reversebinding-large.png#lightbox "Reverse Binding (Binding inverso)")
 
-Ma potrebbe essere sorprendente che il `Slider` continua a funzionare, come illustrano gli screenshot di Android e UWP. Che si tratti di suggerire che il data binding funziona meglio quando le `Slider` è la destinazione del binding anziché il `Label` perché può essere eseguita l'inizializzazione, come prevedibile.
+Tuttavia, sorprendentemente `Slider` continua a funzionare, come dimostrato dagli screenshot per Android e per la piattaforma UWP. Questo potrebbe suggerire che il data binding funziona meglio quando la destinazione di binding è `Slider` anziché `Label`, perché l'inizializzazione funziona come previsto.
 
-La differenza tra il **associazione inversa** campione e gli esempi precedenti comporta il *modalità di associazione*.
+La differenza tra l'esempio **Reverse Binding** (Binding inverso) e gli esempi precedenti sta nella *modalità di binding*.
 
-## <a name="the-default-binding-mode"></a>La modalità di associazione predefinita
+## <a name="the-default-binding-mode"></a>Modalità di binding predefinita
 
-La modalità di associazione è specificata con un membro con il [ `BindingMode` ](xref:Xamarin.Forms.BindingMode) enumerazione:
+La modalità di binding viene specificata con un membro dell'enumerazione [`BindingMode`](xref:Xamarin.Forms.BindingMode):
 
 - [`Default`](xref:Xamarin.Forms.BindingMode.Default)
-- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; i dati vengono inseriti in entrambe le direzioni tra origine e destinazione
-- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; dati vengono inviati dall'origine alla destinazione
-- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; dati vengono inviati dalla destinazione all'origine
-- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; dati vengono inviati dall'origine alla destinazione, ma solo quando il `BindingContext` modifiche (nuove con xamarin. Forms 3.0)
+- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; i dati vengono trasferiti in entrambi i sensi tra origine e destinazione
+- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; i dati vengono trasferiti dall'origine alla destinazione
+- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; i dati vengono trasferiti dalla destinazione all'origine
+- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; i dati vengono trasferiti dall'origine alla destinazione, ma solo quando `BindingContext` cambia (nuova funzionalità di Xamarin.Forms 3.0)
 
-Tutte le proprietà associabili ha un valore predefinito modalità di associazione che viene impostata quando la proprietà associabile viene creata e disponibile dal [ `DefaultBindingMode` ](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) proprietà del `BindableProperty` oggetto. Questa modalità di associazione predefinita indica la modalità attivo quando tale proprietà è una destinazione di associazione dati.
+Ogni proprietà con binding ha un valore di binding predefinito che viene impostato quando viene creata la proprietà con binding, ed è disponibile nella proprietà [`DefaultBindingMode`](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) dell'oggetto `BindableProperty`. Questa modalità di binding predefinita indica la modalità attiva quando la proprietà è una destinazione per il data binding.
 
-La modalità di associazione predefinita per la maggior parte delle proprietà, ad esempio `Rotation`, `Scale`, e `Opacity` è `OneWay`. Quando queste proprietà sono le destinazioni di data binding, quindi impostare la proprietà di destinazione dall'origine.
+La modalità di binding predefinita per la maggior parte delle proprietà, come `Rotation`, `Scale` e `Opacity` è `OneWay`. Quando queste proprietà sono destinazioni per il data binding, la proprietà di destinazione è impostata dall'origine.
 
-Tuttavia, la modalità di associazione predefinita per il `Value` proprietà di `Slider` è `TwoWay`. Ciò significa che quando il `Value` proprietà è una destinazione di associazione dati, quindi la destinazione è impostata dall'origine (come di consueto) ma l'origine viene anche impostata dalla destinazione. Ciò consente la `Slider` impostarla da iniziale `Opacity` valore.
+Tuttavia la modalità di binding predefinita per la proprietà `Value` di `Slider` è `TwoWay`. Ciò significa che quando la proprietà `Value` è una destinazione per il data binding, la destinazione è impostata dall'origine (come di consueto) ma nel contempo l'origine è impostata dalla destinazione. Questo consente l'impostazione di `Slider` dal valore `Opacity` iniziale.
 
-Per creare un ciclo infinito potrebbe sembrare questa associazione bidirezionale, ma ciò non avviene. Proprietà associabili non segnalano una modifica della proprietà, a meno che la proprietà viene modificata. Ciò impedisce che un ciclo infinito.
+Si può pensare che questo binding bidirezionale crei un ciclo infinito, ma non è così. Le proprietà con binding segnalano una modifica della proprietà solo se la proprietà viene di fatto modificata. In questo modo viene impedito il ciclo infinito.
 
-### <a name="two-way-bindings"></a>Associazioni bidirezionali
+### <a name="two-way-bindings"></a>Binding bidirezionali
 
-Proprietà associabili più hanno una modalità di associazione predefinita del `OneWay` ma le proprietà seguenti hanno una modalità di associazione predefinita di `TwoWay`:
+Per la maggior parte delle proprietà con binding la modalità di binding predefinita è `OneWay`, ma per le proprietà seguenti la modalità di binding predefinita è `TwoWay`:
 
-- `Date` proprietà di `DatePicker`
-- `Text` proprietà del `Editor`, `Entry`, `SearchBar`, e `EntryCell`
-- `IsRefreshing` proprietà di `ListView`
-- `SelectedItem` proprietà di `MultiPage`
-- `SelectedIndex` e `SelectedItem` le proprietà di `Picker`
-- `Value` proprietà di `Slider` e `Stepper`
-- `IsToggled` proprietà di `Switch`
-- `On` proprietà di `SwitchCell`
-- `Time` proprietà di `TimePicker`
+- Proprietà `Date` di `DatePicker`
+- Proprietà `Text` di `Editor`, `Entry`, `SearchBar` e `EntryCell`
+- Proprietà `IsRefreshing` di `ListView`
+- Proprietà `SelectedItem` di `MultiPage`
+- Proprietà `SelectedIndex` e `SelectedItem` di `Picker`
+- Proprietà `Value` di `Slider` e `Stepper`
+- Proprietà `IsToggled` di `Switch`
+- Proprietà `On` di `SwitchCell`
+- Proprietà `Time` di `TimePicker`
 
 Queste particolari proprietà sono definite come `TwoWay` per un motivo molto valido:
 
-Quando le associazioni dati vengono usate con l'architettura dell'applicazione Model-View-ViewModel (MVVM), la classe ViewModel è l'origine di associazione dati e la visualizzazione, che è costituito, ad esempio viste `Slider`, sono le destinazioni dell'associazione dati. Sono simili alle associazioni MVVM il **inversa associazione** esempio più di associazioni negli esempi precedenti. È molto probabile che si desidera che ogni visualizzazione della pagina per essere inizializzato con il valore della proprietà corrispondente nel ViewModel, ma le modifiche nella visualizzazione devono influiscono anche sulla proprietà ViewModel.
+Quando i data binding vengono usati con l'architettura dell'applicazione Model-View-ViewModel (MVVM), la classe ViewModel è l'origine del data binding e View, che è costituita da viste come `Slider`, è la destinazione del data binding. I binding MVVM sono più simili all'esempio **Reverse Binding** (Binding inverso) dei binding negli esempi precedenti. Probabilmente si vuole che ogni vista della pagina sia inizializzata con il valore della proprietà corrispondente in ViewModel, ma che anche le modifiche nella vista abbiano effetto sulla proprietà ViewModel.
 
-Le proprietà con le modalità di associazione predefinito di `TwoWay` sono quelle più probabile essere usata negli scenari MVVM.
+Le proprietà con le modalità di binding predefinite `TwoWay` hanno le maggiori probabilità di essere usate negli scenari MVVM.
 
-### <a name="one-way-to-source-bindings"></a>Associazioni uno-bidirezionali all'origine
+### <a name="one-way-to-source-bindings"></a>Binding OneWayToSource
 
-Proprietà associabile in sola lettura hanno una modalità di associazione predefinito di `OneWayToSource`. È solo una proprietà associabile lettura/scrittura con una modalità di associazione predefinita di `OneWayToSource`:
+Le proprietà con binding di sola lettura hanno la modalità di binding predefinita `OneWayToSource`. Una sola proprietà con binding di lettura/scrittura ha la modalità di binding predefinita `OneWayToSource`:
 
-- `SelectedItem` proprietà di `ListView`
+- Proprietà `SelectedItem` di `ListView`
 
-La logica alla base è che un'associazione nel `SelectedItem` proprietà dovrebbe comportare impostando l'origine di associazione. Un esempio più avanti in questo articolo esegue l'override di tale comportamento.
+La logica di base è che un binding per la proprietà `SelectedItem` dovrebbe dare come risultato l'impostazione dell'origine del binding. Un esempio più avanti in questo articolo esegue l'override di tale comportamento.
 
-### <a name="one-time-bindings"></a>Associazioni monouso
+### <a name="one-time-bindings"></a>Binding OneTime
 
-Molte proprietà hanno una modalità di associazione predefinito di `OneTime`. Questi sono:
+Diverse proprietà hanno come modalità di binding predefinita `OneTime`. Questi sono:
 
-- `IsTextPredictionEnabled` proprietà di `Entry`
-- `Text`, `BackgroundColor`, e `Style` delle proprietà di `Span`.
+- Proprietà `IsTextPredictionEnabled` di `Entry`
+- Proprietà `Text`, `BackgroundColor` e `Style` di `Span`.
 
-Specificare come destinazione con una modalità di associazione di proprietà `OneTime` vengono aggiornati solo quando cambia il contesto di associazione. Per le associazioni su queste proprietà di destinazione, questa operazione semplifica l'infrastruttura di associazione perché non è necessario monitorare le modifiche nelle proprietà dell'origine.
+Le proprietà di destinazione con modalità di binding `OneTime` vengono aggiornate solo quando il contesto di binding cambia. Per i binding in queste proprietà di destinazione, l'operazione semplifica l'infrastruttura di binding, perché non è necessario monitorare le modifiche nelle proprietà di origine.
 
-## <a name="viewmodels-and-property-change-notifications"></a>ViewModel e le notifiche di modifica delle proprietà
+## <a name="viewmodels-and-property-change-notifications"></a>ViewModel e notifiche di modifica delle proprietà
 
-Il **selettore colori semplice** pagina viene illustrato l'utilizzo di un elemento ViewModel semplice. Le associazioni dati consentono all'utente di selezionare un colore utilizzando tre `Slider` elementi per la tonalità, saturazione e luminosità.
+La pagina **Simple Color Selector** (Selettore colori semplice) illustra l'uso di un elemento ViewModel semplice. I data binding consentono all'utente di selezionare un colore usando tre elementi `Slider` per tonalità, saturazione e luminosità.
 
-L'elemento ViewModel è l'origine di associazione dati. L'elemento ViewModel viene *non* definire proprietà associabile, ma utilizzarla per implementare un meccanismo di notifica che consente all'infrastruttura di associazione ricevere una notifica quando viene modificato il valore di una proprietà. Questo meccanismo di notifica è il [ `INotifyPropertyChanged` ](xref:System.ComponentModel.INotifyPropertyChanged) interfaccia che definisce una singola proprietà denominata [ `PropertyChanged` ](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). Una classe che implementa questa interfaccia in genere viene generato l'evento quando una delle sue proprietà pubbliche modificato il valore. L'evento non dovrà essere generato se la proprietà non cambia mai. (Il `INotifyPropertyChanged` viene anche implementata mediante `BindableObject` e un `PropertyChanged` evento viene generato ogni volta che un valore della proprietà associabile.)
+ViewModel è l'origine del data binding. L'elemento ViewModel *non* definisce proprietà con binding, ma implementa un meccanismo di notifica che consente all'infrastruttura di binding di ricevere una notifica quando viene modificato il valore di una proprietà. Questo meccanismo di notifica è l'interfaccia [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged), interfaccia che definisce una singola proprietà denominata [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). In genere una classe che implementa questa interfaccia attiva l'evento quando il valore di una delle sue proprietà pubbliche viene modificato. Non è necessario che l'evento venga attivato se la proprietà non cambia mai. (L'interfaccia `INotifyPropertyChanged` viene anche implementata da `BindableObject` e viene attivato un evento `PropertyChanged` ogni volta che il valore di una proprietà con binding cambia.)
 
-Il `HslColorViewModel` classe definisce cinque proprietà: il `Hue`, `Saturation`, `Luminosity`, e `Color` sono correlati tra loro proprietà. Quando uno dei tre colori componenti modifica il valore, il `Color` proprietà viene ricalcolata e `PropertyChanged` gli eventi vengono attivati per tutti i quattro proprietà:
+La classe `HslColorViewModel` definisce cinque proprietà: le proprietà `Hue`, `Saturation`, `Luminosity` e `Color` sono correlate tra loro. Quando il valore di uno dei tre componenti del colore cambia, la proprietà `Color` viene ricalcolata e gli eventi `PropertyChanged` vengono attivati per tutte e quattro le proprietà:
 
 ```csharp
 public class HslColorViewModel : INotifyPropertyChanged
@@ -206,13 +206,13 @@ public class HslColorViewModel : INotifyPropertyChanged
 }
 ```
 
-Quando il `Color` le modifiche alle proprietà, il metodo statico `GetNearestColorName` metodo nel `NamedColor` classe (inclusi anche nel **DataBindingDemos** soluzione) Ottiene il colore denominato più vicino e imposta il `Name` proprietà. Ciò `Name` possieda un proprietà `set` della funzione di accesso, in modo che non può essere impostata dall'esterno della classe.
+Quando la proprietà `Color` cambia, il metodo statico `GetNearestColorName` nella classe `NamedColor` (incluso anche nella soluzione **DataBindingDemos**) ottiene il colore con il nome più simile e imposta la proprietà `Name`. Questa proprietà `Name` ha una funzione di accesso `set` privata, pertanto non può essere impostata dall'esterno della classe.
 
-Quando un elemento ViewModel viene impostato come origine del binding, l'infrastruttura di associazione associa un gestore per il `PropertyChanged` evento. In questo modo, l'associazione può essere notificata le modifiche apportate alle proprietà e quindi è possibile impostare le proprietà di destinazione tra i valori modificati.
+Quando un elemento ViewModel viene impostato come origine del binding, l'infrastruttura di binding associa un gestore all'evento `PropertyChanged`. In questo modo il binding può ricevere notifiche in caso di modifiche alle proprietà e può quindi impostare le proprietà di destinazione in base ai valori modificati.
 
-Tuttavia, quando una proprietà di destinazione (o la `Binding` definition per una proprietà di destinazione) ha un `BindingMode` di `OneTime`, non è necessario per l'infrastruttura di associazione associare un gestore del `PropertyChanged` evento. La proprietà di destinazione viene aggiornata solo quando il `BindingContext` le modifiche e non quando viene modificata la proprietà di origine stessa.
+Tuttavia, quando una proprietà di destinazione (o la definizione `Binding` in una proprietà di destinazione) ha l'elemento `BindingMode` impostato su `OneTime`, non è necessario per l'infrastruttura di binding associare un gestore all'evento `PropertyChanged`. La proprietà di destinazione viene aggiornata solo quando cambia `BindingContext` e non quando cambia la proprietà di origine stessa.
 
-Il **selettore colori semplice** file XAML crea un'istanza di `HslColorViewModel` nel dizionario risorse della pagina e inizializza il `Color` proprietà. Il `BindingContext` proprietà del `Grid` è impostata su un `StaticResource` estensione a cui fare riferimento alla risorsa di binding:
+Il file XAML **Simple Color Selector** (Selettore colori semplice) crea un'istanza di `HslColorViewModel` nel dizionario risorse della pagina e inizializza la proprietà `Color`. La proprietà `BindingContext` di `Grid` è impostata su un'estensione di binding `StaticResource` per il riferimento a quella risorsa:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -256,17 +256,17 @@ Il **selettore colori semplice** file XAML crea un'istanza di `HslColorViewModel
 </ContentPage>
 ```
 
-Il `BoxView`, `Label`e tre `Slider` viste ereditano il contesto di associazione dal `Grid`. Queste viste sono tutte le destinazioni di associazione che fanno riferimento a proprietà di origine nel ViewModel. Per il `Color` proprietà del `BoxView`e il `Text` proprietà del `Label`, le associazioni dati sono `OneWay`: le proprietà nella vista vengono impostate dalle proprietà nel ViewModel.
+`BoxView`, `Label` e tre viste `Slider` ereditano il contesto di binding da `Grid`. Tutte queste viste sono destinazioni di binding che fanno riferimento a proprietà di origine in ViewModel. Per la proprietà `Color` di `BoxView` e la proprietà `Text` di `Label` i data binding sono `OneWay`: le proprietà nella vista vengono impostate dalle proprietà in ViewModel.
 
-Il `Value` proprietà del `Slider`, è tuttavia `TwoWay`. In questo modo ognuna `Slider` da impostare da ViewModel, nonché per l'elemento ViewModel da impostare da ogni `Slider`.
+Tuttavia la proprietà `Value` di `Slider` è `TwoWay`. In questo modo ogni elemento `Slider` può essere impostato da ViewModel, e a sua volta ViewModel può essere impostato da ogni `Slider`.
 
-Quando il programma viene eseguito prima di tutto, il `BoxView`, `Label`e tre `Slider` elementi sono tutti impostati dal ViewModel basata iniziale `Color` proprietà impostata quando è stata creata un'istanza l'elemento ViewModel. Come illustrato nella schermata iOS a sinistra:
+Alla prima esecuzione del programma, `BoxView`, `Label` e tre elementi `Slider` vengono impostati da ViewModel sulla base della proprietà iniziale `Color` definita al momento della creazione dell'istanza di ViewModel. Questo è illustrato nello screenshot iOS a sinistra:
 
-[![Selettore colori semplice](binding-mode-images/simplecolorselector-small.png "selettore colori semplice")](binding-mode-images/simplecolorselector-large.png#lightbox "selettore colori semplice")
+[![Simple Color Selector (Selettore colori semplice)](binding-mode-images/simplecolorselector-small.png "Simple Color Selector (Selettore colori semplice)")](binding-mode-images/simplecolorselector-large.png#lightbox "Simple Color Selector (Selettore colori semplice)")
 
-Come si modificano i dispositivi di scorrimento, il `BoxView` e `Label` vengono aggiornati di conseguenza, come illustrato negli screenshot di Android e UWP.
+Quando si azionano i dispositivi di scorrimento `BoxView` e `Label` vengono aggiornate di conseguenza, come illustrato negli screenshot per Android e la piattaforma UWP.
 
-Creazione di istanze di ViewModel nel dizionario risorse è un approccio comune. È anche possibile creare un'istanza l'elemento ViewModel all'interno dei tag di elemento di proprietà per il `BindingContext` proprietà. Nel **selettore colori semplice** XAML file, provare a rimuovere le `HslColorViewModel` dal dizionario risorse e impostarlo sul `BindingContext` proprietà del `Grid` simile al seguente:
+La creazione di istanze di ViewModel nel dizionario risorse è un approccio comune. È anche possibile creare un'istanza di ViewModel nei tag elemento proprietà per la proprietà `BindingContext`. Nel file XAML **Simple Color Selector** (Selettore colori semplice), provare a rimuovere `HslColorViewModel` dal dizionario risorse e impostarlo sulla proprietà `BindingContext` di `Grid` come illustrato di seguito:
 
 ```xaml
 <Grid>
@@ -279,13 +279,13 @@ Creazione di istanze di ViewModel nel dizionario risorse è un approccio comune.
 </Grid>
 ```
 
-Il contesto di associazione può essere impostato in modi diversi. In alcuni casi, il file code-behind crea un'istanza di ViewModel e lo imposta sul `BindingContext` proprietà della pagina. Questi sono tutti validi approcci.
+Il contesto di binding può essere impostato in modi diversi. In alcuni casi il file code-behind crea un'istanza di ViewModel e la imposta sulla proprietà `BindingContext` della pagina. Tutti questi approcci sono validi.
 
-## <a name="overriding-the-binding-mode"></a>La modalità di associazione viene sottoposto a override
+## <a name="overriding-the-binding-mode"></a>Override della modalità di binding
 
-Se la modalità di associazione predefinito nella proprietà di destinazione non è adatta per una determinata associazione dati, è possibile eseguirne l'override impostando il [ `Mode` ](xref:Xamarin.Forms.BindingBase.Mode) proprietà della `Binding` (o nella [ `Mode` ](xref:Xamarin.Forms.Xaml.BindingExtension.Mode) proprietà del `Binding` estensione di markup) a uno dei membri del `BindingMode` enumerazione.
+Se la modalità di binding predefinita nella proprietà di destinazione non è adatta a un determinato data binding, è possibile eseguirne l'override impostando la proprietà [`Mode`](xref:Xamarin.Forms.BindingBase.Mode) di `Binding` (o la proprietà [`Mode`](xref:Xamarin.Forms.Xaml.BindingExtension.Mode) dell'estensione di markup `Binding`) su uno dei membri dell'enumerazione `BindingMode`.
 
-Tuttavia, impostando il `Mode` proprietà `TwoWay` non sempre funziona come previsto. Ad esempio, provare a modificare la **associazione XAML alternativa** file XAML per includere `TwoWay` nella definizione dell'associazione:
+Tuttavia l'impostazione della proprietà `Mode` su `TwoWay` non funziona sempre come previsto. Ad esempio, provare a modificare il file XAML **Alternative XAML Binding** in modo da includere `TwoWay` nella definizione del binding:
 
 ```xaml
 <Label Text="TEXT"
@@ -297,9 +297,9 @@ Tuttavia, impostando il `Mode` proprietà `TwoWay` non sempre funziona come prev
                        Mode=TwoWay}" />
 ```
 
-È possibile prevedere che il `Slider` verrebbe inizializzata sul valore iniziale del `Scale` proprietà, ovvero 1, ma ciò non avviene. Quando un `TwoWay` associazione viene inizializzata, la destinazione è impostata dall'origine prima di tutto, vale a dire che il `Scale` è impostata sul `Slider` il valore predefinito di 0. Quando il `TwoWay` binding è nastavit il `Slider`, il `Slider` è inizialmente impostato dall'origine.
+Si prevede che `Slider` sia inizializzato sul valore iniziale della proprietà `Scale`, ovvero 1, ma questo non avviene. Quando un binding `TwoWay` viene inizializzato, in primo luogo la destinazione viene impostata dall'origine, ovvero la proprietà `Scale` viene impostata sul valore predefinito di `Slider`, pari a 0. Quando il binding `TwoWay` è impostato per `Slider`, `Slider` viene inizialmente impostato dall'origine.
 
-È possibile impostare la modalità di associazione su `OneWayToSource` nella **associazione XAML alternativa** esempio:
+È possibile impostare la modalità di binding su `OneWayToSource` nel file di esempio **Alternative XAML Binding**:
 
 ```xaml
 <Label Text="TEXT"
@@ -311,14 +311,14 @@ Tuttavia, impostando il `Mode` proprietà `TwoWay` non sempre funziona come prev
                        Mode=OneWayToSource}" />
 ```
 
-A questo punto il `Slider` viene inizializzata su 1 (il valore predefinito di `Scale`) ma la modifica la `Slider` non ha alcun effetto il `Scale` proprietà, in modo che questo non è molto utile.
+Ora `Slider` viene inizializzato con 1 (valore predefinito di `Scale`) ma l'azionamento di `Slider` non ha effetto sulla proprietà `Scale`, pertanto questa impostazione non risulta molto utile.
 
 > [!NOTE]
-> Il [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe definisce anche [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) e [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) proprietà, che è possibile ridimensionare il `VisualElement` in modo diverso nel direzioni orizzontale e verticale.
+> La classe [`VisualElement`](xref:Xamarin.Forms.VisualElement) definisce anche le proprietà [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) e [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY), che possono modificare in scala `VisualElement` in modi diversi in direzione orizzontale e verticale.
 
-Un'applicazione molto utile di override la modalità di associazione predefinita con `TwoWay` comporta la `SelectedItem` proprietà di `ListView`. La modalità di associazione predefinita è `OneWayToSource`. Quando un data binding è impostato sul `SelectedItem` per fare riferimento a una proprietà di origine in un elemento ViewModel, tale proprietà di origine viene impostato dalla proprietà di `ListView` selezione. Tuttavia, in alcuni casi, è anche possibile la `ListView` da inizializzare da ViewModel.
+Un'applicazione molto utile della sostituzione della modalità di binding predefinita con `TwoWay` include la proprietà `SelectedItem` di `ListView`. La modalità di binding predefinita è `OneWayToSource`. Quando un data binding è impostato sulla proprietà `SelectedItem` per il riferimento a una proprietà di origine in un elemento ViewModel, tale proprietà di origine viene impostata dalla selezione `ListView`. Tuttavia in alcuni casi può essere utile che `ListView` sia inizializzata da ViewModel.
 
-Il **le impostazioni di esempio** questa tecnica è dimostrata pagina. Questa pagina rappresenta un'implementazione semplice di impostazioni dell'applicazione, molto spesso definite in un elemento ViewModel, come questo `SampleSettingsViewModel` file:
+La pagina **Sample Settings** (Impostazioni di esempio) illustra questa tecnica. Questa pagina rappresenta un'implementazione semplice di impostazioni dell'applicazione, molto spesso definite in un elemento ViewModel, come questo file `SampleSettingsViewModel`:
 
 ```csharp
 public class SampleSettingsViewModel : INotifyPropertyChanged
@@ -412,13 +412,13 @@ public class SampleSettingsViewModel : INotifyPropertyChanged
 }
 ```
 
-Ogni impostazione dell'applicazione è una proprietà che viene salvata il dizionario delle proprietà di xamarin. Forms in un metodo denominato `SaveState` e caricato da tale dizionario nel costruttore. Nella parte inferiore della classe sono due metodi che consentono di semplificare i ViewModel e li rendono meno soggetto a errori. Il `OnPropertyChanged` metodo nella parte inferiore ha un parametro facoltativo che è stato impostato la proprietà chiama. Ciò consente di evitare gli errori di ortografia quando si specifica il nome della proprietà sotto forma di stringa.
+Ogni impostazione dell'applicazione è una proprietà che viene salvata nel dizionario delle proprietà di Xamarin.Forms in un metodo denominato `SaveState` e caricata da tale dizionario al costruttore. Nella parte inferiore della classe sono disponibili due metodi che contribuiscono a semplificare i ViewModel e a renderli meno soggetti agli errori. Il metodo `OnPropertyChanged` nella parte inferiore ha un parametro facoltativo che è impostato sulla proprietà chiamante. Ciò consente di evitare gli errori di ortografia quando si specifica il nome della proprietà sotto forma di stringa.
 
-Il `SetProperty` metodo nella classe va anche oltre: il valore che viene impostato per la proprietà con il valore archiviato come campo di confronto e chiama solo `OnPropertyChanged` quando i due valori non sono uguali.
+Il metodo `SetProperty` nella classe confronta anche il valore impostato per la proprietà con il valore archiviato come campo e chiama `OnPropertyChanged` solo quando i due valori non sono uguali.
 
-Il `SampleSettingsViewModel` classe definisce due proprietà per il colore di sfondo: il `BackgroundNamedColor` proprietà è di tipo `NamedColor`, che una classe include anche il **DataBindingDemos** soluzione. Il `BackgroundColor` proprietà è di tipo `Color`e viene ottenuto dal `Color` proprietà del `NamedColor` oggetto.
+La classe `SampleSettingsViewModel` definisce due proprietà per il colore di sfondo: la proprietà `BackgroundNamedColor` è di tipo `NamedColor`, una classe che è inclusa anche nella soluzione **DataBindingDemos**. La proprietà `BackgroundColor` è di tipo `Color` e viene ottenuta dalla proprietà `Color` dell'oggetto `NamedColor`.
 
-Il `NamedColor` classe utilizza la reflection .NET per enumerare tutti i campi pubblici statici in xamarin. Forms `Color` struttura e per l'archiviazione con i relativi nomi in una raccolta accessibile da statico `All` proprietà:
+La classe `NamedColor` usa la reflection .NET per enumerare tutti i campi pubblici statici nella struttura Xamarin.Forms `Color` e archiviarli con i relativi nomi in una raccolta accessibile dalla proprietà `All` statica:
 
 ```csharp
 public class NamedColor : IEquatable<NamedColor>, IComparable<NamedColor>
@@ -526,7 +526,7 @@ public class NamedColor : IEquatable<NamedColor>, IComparable<NamedColor>
 }
 ```
 
-Il `App` classe la **DataBindingDemos** progetto definisce una proprietà denominata `Settings` di tipo `SampleSettingsViewModel`. Questa proprietà viene inizializzata quando il `App` viene creata un'istanza di classe e il `SaveState` metodo viene chiamato quando il `OnSleep` viene chiamato il metodo:
+La classe `App` nel progetto **DataBindingDemos** definisce una proprietà denominata `Settings` di tipo `SampleSettingsViewModel`. Questa proprietà viene inizializzata quando viene creata un'istanza della classe `App` e il metodo `SaveState` viene chiamato quando viene chiamato il metodo `OnSleep`:
 
 ```csharp
 public partial class App : Application
@@ -560,9 +560,9 @@ public partial class App : Application
 }
 ```
 
-Per altre informazioni sui metodi del ciclo di vita dell'applicazione, vedere l'articolo [ **ciclo di vita**](~/xamarin-forms/app-fundamentals/app-lifecycle.md).
+Per altre informazioni sui metodi del ciclo di vita dell'applicazione, vedere l'articolo [**Ciclo di vita dell'app**](~/xamarin-forms/app-fundamentals/app-lifecycle.md).
 
-Quasi tutto il resto viene gestito nel **SampleSettingsPage.xaml** file. Il `BindingContext` della pagina viene impostato utilizzando un `Binding` estensione di markup: l'origine del binding è il metodo statico `Application.Current` proprietà, ovvero l'istanza del `App` classe nel progetto e il `Path` è impostata sul `Settings` proprietà, ovvero il `SampleSettingsViewModel` oggetto:
+Quasi tutti gli altri elementi sono gestiti nel file **SampleSettingsPage.xaml**. L'elemento `BindingContext` della pagina viene impostato usando un'estensione di markup `Binding`: l'origine del binding è la proprietà statica `Application.Current`, ovvero l'istanza della classe `App` nel progetto, mentre l'elemento `Path` è impostato sulla proprietà `Settings`, che corrisponde all'oggetto `SampleSettingsViewModel`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -643,19 +643,19 @@ Quasi tutto il resto viene gestito nel **SampleSettingsPage.xaml** file. Il `Bin
 </ContentPage>
 ```
 
-Tutti i nodi figlio della pagina ereditano il contesto di associazione. La maggior parte delle altre associazioni in questa pagina sono alle proprietà in `SampleSettingsViewModel`. Il `BackgroundColor` proprietà viene utilizzata per impostare il `BackgroundColor` proprietà delle `StackLayout`e il `Entry`, `DatePicker`, `Switch`, e `Stepper` proprietà sono associate ad altre proprietà nel ViewModel.
+Tutti gli elementi figlio della pagina ereditano il contesto di binding. La maggior parte degli altri binding in questa pagina viene eseguita con le proprietà in `SampleSettingsViewModel`. La proprietà `BackgroundColor` viene usata per impostare la proprietà `BackgroundColor` di `StackLayout`, mentre le proprietà `Entry`, `DatePicker`, `Switch` e `Stepper` sono associate ad altre proprietà in ViewModel.
 
-Il `ItemsSource` proprietà del `ListView` è impostato su statico `NamedColor.All` proprietà. Si riempie il `ListView` con tutte le `NamedColor` istanze. Per ogni elemento di `ListView`, il contesto di associazione per l'elemento è impostato su un `NamedColor` oggetto. Il `BoxView` e `Label` nel `ViewCell` sono associati alle proprietà in `NamedColor`.
+La proprietà `ItemsSource` di `ListView` è impostata sulla proprietà statica `NamedColor.All`. In tal modo `ListView` viene compilato con tutte le istanze `NamedColor`. Per ogni elemento in `ListView` il contesto di binding per l'elemento è impostato su un oggetto `NamedColor`. Gli elementi `BoxView` e `Label` in `ViewCell` sono associati a proprietà `NamedColor`.
 
-Il `SelectedItem` proprietà del `ListView` JE typu `NamedColor`e viene associato al `BackgroundNamedColor` proprietà di `SampleSettingsViewModel`:
+La proprietà `SelectedItem` di `ListView` è di tipo `NamedColor` ed è associata alla proprietà `BackgroundNamedColor` di `SampleSettingsViewModel`:
 
 ```xaml
 SelectedItem="{Binding BackgroundNamedColor, Mode=TwoWay}"
 ```
 
-La modalità di associazione predefinita per `SelectedItem` è `OneWayToSource`, che imposta la proprietà ViewModel dall'elemento selezionato. Il `TwoWay` modalità consente il `SelectedItem` da inizializzare da ViewModel.
+La modalità di binding predefinita per `SelectedItem` è `OneWayToSource`, che imposta la proprietà ViewModel dall'elemento selezionato. La modalità `TwoWay` consente l'inizializzazione di `SelectedItem` da ViewModel.
 
-Tuttavia, quando la `SelectedItem` è impostato in questo modo, il `ListView` non scorre automaticamente per mostrare l'elemento selezionato. È necessario disporre di codice nel file code-behind:
+Tuttavia, quando `SelectedItem` è impostato in questo modo, `ListView` non scorre automaticamente per visualizzare l'elemento selezionato. È necessario aggiungere un piccolo frammento di codice nel file code-behind:
 
 ```csharp
 public partial class SampleSettingsPage : ContentPage
@@ -674,16 +674,16 @@ public partial class SampleSettingsPage : ContentPage
 }
 ```
 
-La schermata iOS a sinistra mostra il programma in esecuzione prima di tutto. Il costruttore nella `SampleSettingsViewModel` Inizializza il colore di sfondo sul bianco e questo è l'elemento selezionato nel `ListView`:
+La schermata iOS a sinistra visualizza il programma alla prima esecuzione. Il costruttore in `SampleSettingsViewModel` inizializza come colore di sfondo il bianco e questa impostazione è quella selezionata in `ListView`:
 
-[![Le impostazioni di esempio](binding-mode-images/samplesettings-small.png "impostazioni di esempio")](binding-mode-images/samplesettings-large.png#lightbox "le impostazioni di esempio")
+[![Sample Settings (Impostazioni di esempio)](binding-mode-images/samplesettings-small.png "Sample Settings (Impostazioni di esempio)")](binding-mode-images/samplesettings-large.png#lightbox "Sample Settings (Impostazioni di esempio)")
 
-I due screenshot Mostra le impostazioni modificate. Quando si sperimentano questa pagina, ricordare di inserire il programma in sospensione o interruzione nel dispositivo o emulatore in esecuzione. Terminare il programma dal debugger di Visual Studio non genererà il `OnSleep` esegue l'override nel `App` classe da chiamare.
+Gli altri due screenshot visualizzano le impostazioni modificate. Quando si eseguono prove con questa pagina, ricordare di impostare il programma in sospensione o di terminarlo nel dispositivo o nell'emulatore in esecuzione. La terminazione del programma nel debugger di Visual Studio non genererà la chiamata della sostituzione `OnSleep` nella classe `App`.
 
-Nel prossimo articolo verrà illustrato come specificare [ **formattazione della stringa** ](string-formatting.md) delle associazioni di dati che sono impostate sul `Text` proprietà `Label`.
+L'articolo successivo illustra come specificare la [**Formattazione delle stringhe** ](string-formatting.md) dei data binding impostate sulla proprietà `Text` di `Label`.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Data Binding Demo (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Capitolo di associazione di dati dal libro di xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Demo sul data binding (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Capitolo sul data binding nella documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

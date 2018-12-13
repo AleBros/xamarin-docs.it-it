@@ -1,6 +1,6 @@
 ---
 title: Creazione di un effetto
-description: Gli effetti di semplificare la personalizzazione di un controllo. Questo articolo illustra come creare un effetto che cambia il colore di sfondo del controllo voce quando il controllo riceve lo stato attivo.
+description: Gli effetti semplificano la personalizzazione di un controllo. Questo articolo spiega come creare un effetto che cambia il colore di sfondo del controllo Entry quando il controllo riceve lo stato attivo.
 ms.prod: xamarin
 ms.assetid: 9E2C8DB0-36A2-4F13-8E3C-A66D7021DB13
 ms.technology: xamarin-forms
@@ -9,44 +9,44 @@ ms.author: dabritch
 ms.date: 10/24/2016
 ms.openlocfilehash: b29d83999724a35293882f7b9efc0158171c4fd2
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38998160"
 ---
 # <a name="creating-an-effect"></a>Creazione di un effetto
 
-_Gli effetti di semplificare la personalizzazione di un controllo. Questo articolo illustra come creare un effetto che cambia il colore di sfondo del controllo voce quando il controllo riceve lo stato attivo._
+_Gli effetti semplificano la personalizzazione di un controllo. Questo articolo spiega come creare un effetto che cambia il colore di sfondo del controllo Entry quando il controllo riceve lo stato attivo._
 
 Il processo per la creazione di un effetto in ogni progetto specifico della piattaforma è come segue:
 
-1. Creare una sottoclasse del `PlatformEffect` classe.
-1. Eseguire l'override di `OnAttached` per la logica al metodo e scrittura per personalizzare il controllo.
-1. Eseguire l'override di `OnDetached` per la logica al metodo e scrittura per pulire la personalizzazione dei controlli, se necessario.
-1. Aggiungere un [ `ResolutionGroupName` ](xref:Xamarin.Forms.ResolutionGroupNameAttribute) attributo alla classe effettiva. Questo attributo imposta uno spazio dei nomi a livello di società per gli effetti, evitare conflitti con altri effetti con lo stesso nome. Si noti che questo attributo può essere applicato solo una volta per ogni progetto.
-1. Aggiungere un [ `ExportEffect` ](xref:Xamarin.Forms.ExportEffectAttribute) attributo alla classe effettiva. Questo attributo registra l'effetto con un ID univoco che viene usato da xamarin. Forms, insieme al nome di gruppo, per individuare l'effetto prima di applicarla a un controllo. L'attributo accetta due parametri: il nome del tipo di effetto e una stringa univoca che verrà usata per individuare l'effetto prima di applicarla a un controllo.
+1. Creare una sottoclasse della classe `PlatformEffect`.
+1. Eseguire l'override del metodo `OnAttached` scrivere la logica per personalizzare il controllo.
+1. Eseguire l'override del metodo `OnDetached` e scrivere la logica per pulire la personalizzazione del controllo, se necessario.
+1. Aggiungere un attributo [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) alla classe di effetto. Questo attributo imposta uno spazio dei nomi a livello di società per gli effetti, per evitare che si verifichino conflitti con altri effetti omonimi. Si noti che questo attributo può essere applicato solo una volta per ogni progetto.
+1. Aggiungere un attributo [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) alla classe di effetto. Questo attributo registra l'effetto con un ID univoco che viene usato da Xamarin.Forms, insieme al nome gruppo, per individuare l'effetto prima di applicarlo a un controllo. L'attributo accetta due parametri: il nome del tipo di effetto e una stringa univoca che consente di individuare l'effetto prima di applicarlo a un controllo.
 
 L'effetto può quindi essere utilizzato associandolo al controllo appropriato.
 
 > [!NOTE]
-> È facoltativo per fornire un effetto in ogni progetto della piattaforma. Tenta di usare un effetto di quando uno non è registrato, restituirà un valore non null che non esegue alcuna operazione.
+> La specifica di un effetto nel progetto di ogni piattaforma è facoltativa. Se si tenta di usare un effetto quando non ne sono stati registrati, verrà restituito un valore non null che non esegue alcuna operazione.
 
-L'applicazione di esempio viene illustrato un `FocusEffect` che cambia il colore di sfondo di un controllo quando ottiene lo stato attivo. Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, con le relazioni tra di essi:
+L'applicazione di esempio illustra un `FocusEffect` che cambia il colore di sfondo di un controllo quando ottiene lo stato attivo. Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, insieme alle relazione tra di esse:
 
-![](creating-images/focus-effect.png "Responsabilità di progetto effetto messa a fuoco")
+![](creating-images/focus-effect.png "Responsabilità dei progetti per l'effetto stato attivo")
 
-Un' [ `Entry` ](xref:Xamarin.Forms.Entry) control per il `HomePage` personalizzato dal `FocusEffect` classe in ogni progetto specifico della piattaforma. Ciascuna `FocusEffect` deriva dalla classe di `PlatformEffect` classe per ogni piattaforma. Di conseguenza il `Entry` controllo viene eseguito il rendering con un colore di sfondo specifico della piattaforma, che cambia quando il controllo riceve lo stato attivo, come illustrato negli screenshot seguenti:
+Un controllo [`Entry`](xref:Xamarin.Forms.Entry) in `HomePage` è personalizzato dalla classe `FocusEffect` in ogni progetto specifico della piattaforma. Ogni classe `FocusEffect` deriva dalla classe `PlatformEffect` per ogni piattaforma. Di conseguenza il rendering di ogni controllo `Entry` viene eseguito con un colore di sfondo specifico della piattaforma, che cambia quando il controllo ottiene lo stato attivo, come illustrato negli screenshot seguenti:
 
-![](creating-images/screenshots-1.png "Effetto su ogni piattaforma di concentrarsi")
-![](creating-images/screenshots-2.png "concentrarsi effetto in ogni piattaforma")
+![](creating-images/screenshots-1.png "Effetto stato attivo su ogni piattaforma")
+![](creating-images/screenshots-2.png "Effetto stato attivo su ogni piattaforma")
 
-## <a name="creating-the-effect-on-each-platform"></a>Creare l'effetto in ogni piattaforma
+## <a name="creating-the-effect-on-each-platform"></a>Creazione dell'effetto in ogni piattaforma
 
-Le sezioni seguenti illustrano l'implementazione specifica della piattaforma del `FocusEffect` classe.
+Le sezioni seguenti illustrano l'implementazione specifica della piattaforma della classe `FocusEffect`.
 
 ## <a name="ios-project"></a>Progetto iOS
 
-Nell'esempio di codice riportato di seguito viene illustrato il `FocusEffect` implementazione per il progetto iOS:
+L'esempio di codice seguente mostra l'implementazione di `FocusEffect` per il progetto iOS:
 
 ```csharp
 using Xamarin.Forms;
@@ -93,13 +93,13 @@ namespace EffectsDemo.iOS
 }
 ```
 
-Il `OnAttached` metodo imposta la `BackgroundColor` proprietà del controllo in viola chiaro con la `UIColor.FromRGB` (metodo) e archivia anche questo colore in un campo. Questa funzionalità viene eseguito il wrapping un `try` / `catch` blocco nel caso in cui il controllo è collegata l'effetto non dispone di un `BackgroundColor` proprietà. Nessuna implementazione avviene tramite il `OnDetached` metodo perché non è necessaria alcuna operazione di pulizia.
+Il metodo`OnAttached` imposta la proprietà `BackgroundColor` del controllo su viola chiaro con il metodo `UIColor.FromRGB` e archivia questo colore in un campo. Questa funzionalità è incapsulata in un blocco `try`/`catch`, nell'evenienza in cui il controllo a cui l'effetto è associato non avesse una proprietà `BackgroundColor`. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
 
-Il `OnElementPropertyChanged` override risponde alle modifiche di proprietà associabili del controllo di xamarin. Forms. Quando la [ `IsFocused` ](xref:Xamarin.Forms.VisualElement.IsFocused) le modifiche alle proprietà, il `BackgroundColor` proprietà del controllo viene modificato al bianco se il controllo ha lo stato attivo, in caso contrario viene modificato in viola chiaro. Questa funzionalità viene eseguito il wrapping un `try` / `catch` blocco nel caso in cui il controllo è collegata l'effetto non dispone di un `BackgroundColor` proprietà.
+L'override di `OnElementPropertyChanged` risponde alle modifiche delle proprietà associabili nel controllo di Xamarin.Forms. Quando la proprietà [`IsFocused`](xref:Xamarin.Forms.VisualElement.IsFocused) cambia, la proprietà `BackgroundColor` del controllo imposta bianco, se il controllo ha lo stato attivo, oppure viola chiaro in caso contrario. Questa funzionalità è incapsulata in un blocco `try`/`catch`, nell'evenienza in cui il controllo a cui l'effetto è associato non avesse una proprietà `BackgroundColor`.
 
 ## <a name="android-project"></a>Progetto Android
 
-Nell'esempio di codice riportato di seguito viene illustrato il `FocusEffect` implementazione per il progetto Android:
+L'esempio di codice seguente mostra l'implementazione di `FocusEffect` per il progetto Android:
 
 ```csharp
 using Xamarin.Forms;
@@ -147,13 +147,13 @@ namespace EffectsDemo.Droid
 }
 ```
 
-Il `OnAttached` chiamate al metodo il `SetBackgroundColor` metodo per impostare il colore di sfondo del controllo alla luce verde e archivia anche questo colore in un campo. Questa funzionalità viene eseguito il wrapping un `try` / `catch` blocco nel caso in cui il controllo è collegata l'effetto non dispone di un `SetBackgroundColor` proprietà. Nessuna implementazione avviene tramite il `OnDetached` metodo perché non è necessaria alcuna operazione di pulizia.
+Il metodo `OnAttached` esegue una chiamata al metodo `SetBackgroundColor` per impostare il colore di sfondo del controllo su verde chiaro e archivia anche questo colore in un campo. Questa funzionalità è incapsulata in un blocco `try`/`catch`, nell'evenienza in cui il controllo a cui l'effetto è associato non avesse una proprietà `SetBackgroundColor`. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
 
-Il `OnElementPropertyChanged` override risponde alle modifiche di proprietà associabili del controllo di xamarin. Forms. Quando la [ `IsFocused` ](xref:Xamarin.Forms.VisualElement.IsFocused) le modifiche alle proprietà, il colore di sfondo del controllo viene modificato al bianco se il controllo ha lo stato attivo, in caso contrario diventa verde chiaro. Questa funzionalità viene eseguito il wrapping un `try` / `catch` blocco nel caso in cui il controllo è collegata l'effetto non dispone di un `BackgroundColor` proprietà.
+L'override di `OnElementPropertyChanged` risponde alle modifiche delle proprietà associabili nel controllo di Xamarin.Forms. Quando la proprietà [`IsFocused`](xref:Xamarin.Forms.VisualElement.IsFocused) cambia, il colore di sfondo del controllo imposta bianco, se il controllo ha lo stato attivo, oppure verde chiaro in caso contrario. Questa funzionalità è incapsulata in un blocco `try`/`catch`, nell'evenienza in cui il controllo a cui l'effetto è associato non avesse una proprietà `BackgroundColor`.
 
-## <a name="universal-windows-platform-projects"></a>Progetti di Universal Windows Platform
+## <a name="universal-windows-platform-projects"></a>Progetti della piattaforma UWP (Universal Windows Platform)
 
-Nell'esempio di codice riportato di seguito viene illustrato il `FocusEffect` implementazione per i progetti Universal Windows Platform (UWP):
+L'esempio di codice seguente mostra l'implementazione di `FocusEffect` per il progetto UWP (Universal Windows Platform):
 
 ```csharp
 using Xamarin.Forms;
@@ -185,21 +185,21 @@ namespace EffectsDemo.UWP
 }
 ```
 
-Il `OnAttached` metodo imposta la `Background` proprietà del controllo ciano, e i set di `BackgroundFocusBrush` proprietà verso il bianco. Questa funzionalità viene eseguito il wrapping un `try` / `catch` blocco nel caso in cui il controllo è collegata l'effetto non dispone di queste proprietà. Nessuna implementazione avviene tramite il `OnDetached` metodo perché non è necessaria alcuna operazione di pulizia.
+Il metodo `OnAttached` imposta la proprietà `Background` del controllo su ciano e imposta la proprietà `BackgroundFocusBrush` su bianco. Questa funzionalità è incapsulata in un blocco `try`/`catch`, nell'evenienza in cui il controllo a cui l'effetto è associato non avesse queste proprietà. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
 
-## <a name="consuming-the-effect"></a>L'effetto di utilizzo
+## <a name="consuming-the-effect"></a>Utilizzo dell'effetto
 
-Il processo per l'utilizzo di un effetto da un progetto di libreria condivisa o la libreria xamarin. Forms .NET Standard è come segue:
+Il processo per l'utilizzo di un effetto da un progetto di libreria condiviso o da una libreria .NET Standard di Xamarin.Forms è come segue:
 
-1. Dichiarare un controllo personalizzato per l'effetto.
-1. Collegare l'effetto sul controllo, aggiungerlo al controllo [ `Effects` ](xref:Xamarin.Forms.Element.Effects) raccolta.
+1. Dichiarare un controllo che verrà personalizzato dall'effetto.
+1. Associare l'effetto al controllo aggiungendolo alla raccolta [`Effects`](xref:Xamarin.Forms.Element.Effects) del controllo.
 
 > [!NOTE]
-> Un'istanza di effetto può essere associata solo a un singolo controllo. Pertanto, un effetto deve essere risolto due volte per usarlo in due controlli.
+> Un'istanza dell'effetto può essere associata solo a un singolo controllo. Pertanto, per poter essere usato su due controlli, un effetto deve essere risolto due volte.
 
-## <a name="consuming-the-effect-in-xaml"></a>Utilizzo l'effetto in XAML
+## <a name="consuming-the-effect-in-xaml"></a>Utilizzo dell'effetto in XAML
 
-L'esempio di codice XAML seguente mostra un' [ `Entry` ](xref:Xamarin.Forms.Entry) controllo a cui il `FocusEffect` collegato:
+L'esempio di codice XAML seguente mostra un controllo [`Entry`](xref:Xamarin.Forms.Entry) a cui è associato `FocusEffect`:
 
 ```xaml
 <Entry Text="Effect attached to an Entry" ...>
@@ -210,7 +210,7 @@ L'esempio di codice XAML seguente mostra un' [ `Entry` ](xref:Xamarin.Forms.Entr
 </Entry>
 ```
 
-Il `FocusEffect` classe nella libreria .NET Standard supporta il consumo di effetto in XAML e viene illustrato nell'esempio di codice seguente:
+La classe `FocusEffect` nella libreria .NET Standard supporta l'utilizzo dell'effetto in XAML, come viene illustrato nell'esempio di codice seguente:
 
 ```csharp
 public class FocusEffect : RoutingEffect
@@ -221,13 +221,13 @@ public class FocusEffect : RoutingEffect
 }
 ```
 
-Il `FocusEffect` classe sottoclassi il [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) classe che rappresenta un effetto indipendente dalla piattaforma che esegue il wrapping di un effetto interno che è in genere specifica della piattaforma. Il `FocusEffect` classe chiama il costruttore di classe di base, passando un parametro costituito da una concatenazione del nome del gruppo di risoluzione (specificata tramite il [ `ResolutionGroupName` ](xref:Xamarin.Forms.ResolutionGroupNameAttribute) attributo della classe effetto), e l'ID univoco che è stato specificato usando il [ `ExportEffect` ](xref:Xamarin.Forms.ExportEffectAttribute) attributo della classe effettiva. Pertanto, quando la [ `Entry` ](xref:Xamarin.Forms.Entry) viene inizializzata in fase di esecuzione, una nuova istanza della `MyCompany.FocusEffect` viene aggiunto al controllo [ `Effects` ](xref:Xamarin.Forms.Element.Effects) raccolta.
+La classe `FocusEffect` crea una sottoclasse della classe [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect), che rappresenta un effetto indipendente dalla piattaforma che esegue il wrapping di un effetto interno, in genere specifico della piattaforma. La classe `FocusEffect` chiama il costruttore della classe di base, passando un parametro costituito da una concatenazione del nome del gruppo di risoluzione, specificato usando l'attributo [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) della classe di effetto, e dell'ID univoco specificato usando l'attributo [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) sulla classe di effetto. Pertanto, quando il controllo [`Entry`](xref:Xamarin.Forms.Entry) viene inizializzato in fase di esecuzione, una nuova istanza di `MyCompany.FocusEffect` viene aggiunta alla raccolta [`Effects`](xref:Xamarin.Forms.Element.Effects) del controllo.
 
-Gli effetti possono inoltre essere collegati ai controlli con un comportamento o utilizzando le proprietà associate. Per altre informazioni sul collegamento di un effetto a un controllo utilizzando un comportamento, vedere [riutilizzabile EffectBehavior](~/xamarin-forms/app-fundamentals/behaviors/reusable/effect-behavior.md). Per altre informazioni sul collegamento di un effetto a un controllo usando le proprietà associate, vedere [passaggio di parametri per un effetto](~/xamarin-forms/app-fundamentals/effects/passing-parameters/index.md).
+Gli effetti possono inoltre essere associati ai controlli per mezzo di un comportamento o utilizzando le proprietà associate. Per altre informazioni sull'associazione di un effetto a un controllo utilizzando un comportamento, vedere [Reusable EffectBehavior](~/xamarin-forms/app-fundamentals/behaviors/reusable/effect-behavior.md) (EffectBehavior riutilizzabile). Per altre informazioni sull'associazione di un effetto a un controllo usando le proprietà associate, vedere [Passing Parameters to an Effect](~/xamarin-forms/app-fundamentals/effects/passing-parameters/index.md) (Passare parametri a un effetto).
 
-## <a name="consuming-the-effect-in-cnum"></a>Utilizzo l'effetto in C&num;
+## <a name="consuming-the-effect-in-cnum"></a>Utilizzo dell'effetto in C&num;
 
-L'equivalente [ `Entry` ](xref:Xamarin.Forms.Entry) nel linguaggio c# viene illustrato nell'esempio di codice seguente:
+Il codice C# equivalente per il controllo [`Entry`](xref:Xamarin.Forms.Entry) è visualizzato nell'esempio seguente:
 
 ```csharp
 var entry = new Entry {
@@ -236,7 +236,7 @@ var entry = new Entry {
 };
 ```
 
-Il `FocusEffect` collegata al `Entry` istanza aggiungendo l'effetto del controllo [ `Effects` ](xref:Xamarin.Forms.Element.Effects) insieme, come illustrato nell'esempio di codice seguente:
+`FocusEffect` viene associato all'istanza di `Entry` aggiungendo l'effetto alla raccolta [`Effects`](xref:Xamarin.Forms.Element.Effects) del controllo, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 public HomePageCS ()
@@ -247,17 +247,17 @@ public HomePageCS ()
 }
 ```
 
-Il [ `Effect.Resolve` ](xref:Xamarin.Forms.Effect.Resolve(System.String)) restituisce un [ `Effect` ](xref:Xamarin.Forms.Effect) per il nome specificato, che è una concatenazione del nome del gruppo risoluzione (specificato utilizzando il [ `ResolutionGroupName` ](xref:Xamarin.Forms.ResolutionGroupNameAttribute) attributo della classe effetto) e l'ID univoco che è stato specificato usando il [ `ExportEffect` ](xref:Xamarin.Forms.ExportEffectAttribute) attributo della classe effettiva. Se una piattaforma non fornisce l'effetto, la `Effect.Resolve` metodo verrà restituito un non -`null` valore.
+[`Effect.Resolve`](xref:Xamarin.Forms.Effect.Resolve(System.String)) restituisce un valore [`Effect`](xref:Xamarin.Forms.Effect) per il nome specificato, costituito da una concatenazione del nome del gruppo di risoluzione, specificato usando l'attributo [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) della classe di effetto, e dell'ID univoco specificato usando l'attributo [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) sulla classe di effetto. Se una piattaforma non fornisce l'effetto, il metodo `Effect.Resolve` restituirà un valore non `null`.
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo viene illustrato come creare un effetto che cambia il colore di sfondo di [ `Entry` ](xref:Xamarin.Forms.Entry) controllare quando il controllo riceve lo stato attivo.
+Questo articolo ha spiegato come creare un effetto che cambia il colore di sfondo del controllo [`Entry`](xref:Xamarin.Forms.Entry) quando il controllo riceve lo stato attivo.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Renderer personalizzati](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
-- [Effetto](xref:Xamarin.Forms.Effect)
+- [Effect](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
-- [Effetto colore di sfondo (esempio)](https://developer.xamarin.com/samples/xamarin-forms/effects/backgroundcoloreffect/)
-- [Effetto messa a fuoco (esempio)](https://developer.xamarin.com/samples/xamarin-forms/effects/focuseffect/)
+- [Background Color Effect (esempio)](https://developer.xamarin.com/samples/xamarin-forms/effects/backgroundcoloreffect/) (Effetto colore di sfondo)
+- [Focus Effect (esempio)](https://developer.xamarin.com/samples/xamarin-forms/effects/focuseffect/) (Effetto stato attivo)

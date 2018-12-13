@@ -1,6 +1,6 @@
 ---
-title: Aggiunta di un sistema di riconoscimento di movimento zoom indietro
-description: Questo articolo illustra come usare il movimento zoom indietro per eseguire lo zoom interattivo di un'immagine in corrispondenza della posizione zoom indietro.
+title: Aggiunta di un sistema di riconoscimento del movimento di avvicinamento delle dita
+description: Questo articolo illustra come usare il movimento di avvicinamento delle dita per eseguire lo zoom interattivo di un'immagine in corrispondenza della posizione di avvicinamento delle dita.
 ms.prod: xamarin
 ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
 ms.technology: xamarin-forms
@@ -9,16 +9,16 @@ ms.author: dabritch
 ms.date: 01/21/2016
 ms.openlocfilehash: f67cbb136c42a4bc476c1715ea6fd15255d71dc7
 ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/18/2018
 ms.locfileid: "38998702"
 ---
-# <a name="adding-a-pinch-gesture-recognizer"></a>Aggiunta di un sistema di riconoscimento di movimento zoom indietro
+# <a name="adding-a-pinch-gesture-recognizer"></a>Aggiunta di un sistema di riconoscimento del movimento di avvicinamento delle dita
 
-_Il movimento zoom indietro viene utilizzato per l'esecuzione interattivo zoom e viene implementato con la classe PinchGestureRecognizer. Uno scenario comune per il movimento zoom indietro consiste nell'eseguire lo zoom interattivo di un'immagine in corrispondenza della posizione zoom indietro. Questa operazione viene eseguita scalando il contenuto del riquadro di visualizzazione e viene illustrata in questo articolo._
+_Il movimento di avvicinamento delle dita viene usato per lo zoom interattivo e viene implementato con la classe PinchGestureRecognizer. Uno scenario comune per il movimento di avvicinamento delle dita è l'esecuzione dello zoom interattivo di un'immagine in corrispondenza della posizione di avvicinamento delle dita. Questa operazione viene eseguita modificando in scala il contenuto del riquadro di visualizzazione ed è illustrata in questo articolo._
 
-Per rendere un elemento dell'interfaccia utente Ingrandibile con il movimento zoom indietro, creare un [ `PinchGestureRecognizer` ](xref:Xamarin.Forms.PinchGestureRecognizer) dell'istanza, gestire la [ `PinchUpdated` ](xref:Xamarin.Forms.PinchGestureRecognizer.PinchUpdated) evento, e aggiungere il nuovo riconoscitore di movimento per il [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) raccolta nell'elemento dell'interfaccia utente. Nell'esempio di codice riportato di seguito viene illustrato un `PinchGestureRecognizer` collegato a un [ `Image` ](xref:Xamarin.Forms.Image) elemento:
+Per abilitare per lo zoom di un elemento dell'interfaccia utente con il movimento di avvicinamento delle dita, creare un'istanza [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer), gestire l'evento [`PinchUpdated`](xref:Xamarin.Forms.PinchGestureRecognizer.PinchUpdated) e aggiungere il nuovo riconoscitore di movimento alla raccolta [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) nell'elemento dell'interfaccia utente. L'esempio di codice seguente visualizza un `PinchGestureRecognizer` associato a un elemento [`Image`](xref:Xamarin.Forms.Image):
 
 ```csharp
 var pinchGesture = new PinchGestureRecognizer();
@@ -28,7 +28,7 @@ pinchGesture.PinchUpdated += (s, e) => {
 image.GestureRecognizers.Add(pinchGesture);
 ```
 
-Ciò può anche essere ottenuto in XAML, come illustrato nell'esempio di codice seguente:
+Questo risultato può essere ottenuto anche in XAML, come illustrato nell'esempio di codice seguente:
 
 ```xaml
 <Image Source="waterfront.jpg">
@@ -38,7 +38,7 @@ Ciò può anche essere ottenuto in XAML, come illustrato nell'esempio di codice 
 </Image>
 ```
 
-Il codice per il `OnPinchUpdated` gestore eventi viene quindi aggiunto al file code-behind:
+Il codice del gestore eventi `OnPinchUpdated` viene quindi aggiunto al file code-behind:
 
 ```csharp
 void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
@@ -49,7 +49,7 @@ void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
 
 ## <a name="creating-a-pinchtozoom-container"></a>Creazione di un contenitore PinchToZoom
 
-La gestione del movimento zoom indietro per eseguire un'operazione di zoom richiede alcuni calcoli matematici per trasformare l'interfaccia utente. In questa sezione contiene una classe di supporto generalizzato per eseguire le operazioni matematiche, che possono essere utilizzata per qualsiasi elemento dell'interfaccia utente di zoom in modo interattivo. L'esempio di codice seguente visualizza la classe `PinchToZoomContainer`:
+La gestione del movimento di avvicinamento delle dita per eseguire un'operazione di zoom richiede alcuni calcoli matematici per la trasformazione dell'interfaccia utente. Questa sezione contiene una classe helper generica per l'esecuzione dei calcoli, che può essere usata per lo zoom avanti interattivo su qualsiasi elemento dell'interfaccia utente. L'esempio di codice seguente visualizza la classe `PinchToZoomContainer`:
 
 ```csharp
 public class PinchToZoomContainer : ContentView
@@ -70,7 +70,7 @@ public class PinchToZoomContainer : ContentView
 }
 ```
 
-Questa classe può essere eseguito il wrapping intorno a un elemento dell'interfaccia utente in modo che il movimento zoom indietro eseguirà lo zoom l'elemento dell'interfaccia utente sottoposta a wrapping. L'esempio di codice XAML seguente mostra le `PinchToZoomContainer` wrapping di un' [ `Image` ](xref:Xamarin.Forms.Image) elemento:
+È possibile eseguire il wrapping di questa classe intorno a un elemento dell'interfaccia utente, in modo che il movimento di avvicinamento delle dita esegua lo zoom sull'elemento dell'interfaccia utente sottoposto a wrapping. L'esempio di codice XAML seguente visualizza il wrapping `PinchToZoomContainer` di un elemento [`Image`](xref:Xamarin.Forms.Image):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -89,7 +89,7 @@ Questa classe può essere eseguito il wrapping intorno a un elemento dell'interf
 </ContentPage>
 ```
 
-Nell'esempio di codice riportato di seguito viene illustrato come la `PinchToZoomContainer` esegue il wrapping di un' [ `Image` ](xref:Xamarin.Forms.Image) elemento in una pagina in c#:
+L'esempio di codice seguente illustra come `PinchToZoomContainer` esegue il wrapping di un elemento [`Image`](xref:Xamarin.Forms.Image) in una pagina C#:
 
 ```csharp
 public class HomePageCS : ContentPage
@@ -108,7 +108,7 @@ public class HomePageCS : ContentPage
 }
 ```
 
-Quando la [ `Image` ](xref:Xamarin.Forms.Image) elemento riceve un movimento zoom indietro, l'immagine visualizzata sarà essere ingrandito-in o out. Il valore di zoom viene eseguita mediante il `PinchZoomContainer.OnPinchUpdated` metodo, che viene visualizzato nell'esempio di codice seguente:
+Quando l'elemento [`Image`](xref:Xamarin.Forms.Image) riceve un movimento di avvicinamento delle dita, viene eseguito lo zoom avanti o indietro sull'immagine visualizzata. Lo zoom viene eseguito mediante il metodo `PinchZoomContainer.OnPinchUpdated`, visualizzato nell'esempio di codice seguente:
 
 ```csharp
 void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
@@ -158,7 +158,7 @@ void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
 }
 ```
 
-Questo metodo aggiorna il livello di zoom dell'elemento di interfaccia utente sottoposta a wrapping basata movimento zoom indietro dell'utente. Questo avviene utilizzando i valori del [ `Scale` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Scale), [ `ScaleOrigin` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.ScaleOrigin) e [ `Status` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Status) proprietà del [ `PinchGestureUpdatedEventArgs` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs) istanza per cui calcolare il fattore di scala da applicare all'origine del movimento zoom indietro. L'elemento dell'utente con wrapping viene quindi applicato lo zoom in corrispondenza dell'origine del movimento zoom indietro impostando relativi [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX), [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY), e [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) proprietà per i valori calcolati.
+Questo metodo aggiorna il livello di zoom dell'elemento dell'interfaccia utente sottoposto a wrapping in base al movimento di avvicinamento delle dita dell'utente. Questo risultato viene ottenuto usando i valori delle proprietà [`Scale`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Scale), [`ScaleOrigin`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.ScaleOrigin) e [`Status`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Status) dell'istanza [`PinchGestureUpdatedEventArgs`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs) per calcolare il fattore di scala da applicare all'origine del movimento di avvicinamento delle dita. L'elemento utente con wrapping viene quindi sottoposto a zoom in corrispondenza dell'origine del movimento di avvicinamento delle dita mediante l'impostazione delle proprietà [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX), [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) e [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) dell'elemento sui valori calcolati.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

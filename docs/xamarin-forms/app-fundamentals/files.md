@@ -1,6 +1,6 @@
 ---
-title: Gestione di file in xamarin. Forms
-description: File di gestione delle eccezioni con xamarin. Forms può essere ottenuto tramite codice in una libreria .NET Standard, o utilizzando le risorse incorporate.
+title: Gestione di file in Xamarin.Forms
+description: In Xamarin.Forms è possibile gestire i file usando il codice disponibile in una libreria .NET Standard o usando le risorse incorporate.
 ms.prod: xamarin
 ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
 ms.technology: xamarin-forms
@@ -9,72 +9,72 @@ ms.author: dabritch
 ms.date: 06/21/2018
 ms.openlocfilehash: 87084a0ccc2970f56e7ef7a6d2f4c59c49032aa0
 ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/11/2018
 ms.locfileid: "51527365"
 ---
-# <a name="file-handling-in-xamarinforms"></a>Gestione di file in xamarin. Forms
+# <a name="file-handling-in-xamarinforms"></a>Gestione di file in Xamarin.Forms
 
-_File di gestione delle eccezioni con xamarin. Forms può essere ottenuto tramite codice in una libreria .NET Standard, o utilizzando le risorse incorporate._
+_In Xamarin.Forms è possibile gestire i file usando il codice disponibile in una libreria .NET Standard o usando le risorse incorporate._
 
 ## <a name="overview"></a>Panoramica
 
-Il codice Xamarin.Forms viene eseguito in più piattaforme, ognuna delle quali ha un proprio file system. In precedenza, questo significava che la lettura e scrittura di file è stata più semplice eseguita tramite l'API di file native in ogni piattaforma. In alternativa, le risorse incorporate sono una soluzione più semplice per distribuire i file di dati con un'app. Tuttavia, con .NET Standard 2.0 è possibile condividere il codice di accesso ai file nelle librerie .NET Standard.
+Il codice Xamarin.Forms viene eseguito in più piattaforme, ognuna delle quali ha un proprio file system. In passato, questo comportava che la lettura e la scrittura di file risultasse molto semplice con le API di file native in ogni piattaforma. In alternativa, le risorse incorporate sono una soluzione più semplice per distribuire file di dati con un'app. Con .NET Standard 2.0, tuttavia, è possibile condividere il codice di accesso ai file nelle librerie .NET Standard.
 
-Per informazioni sulla gestione di file di immagine, vedere la [utilizzo di immagini](~/xamarin-forms/user-interface/images.md) pagina.
+Per informazioni sulla gestione dei file di immagine, vedere la pagina [Uso delle immagini](~/xamarin-forms/user-interface/images.md).
 
 <a name="Loading_and_Saving_Files" />
 
 ## <a name="saving-and-loading-files"></a>Salvataggio e caricamento di file
 
-Il `System.IO` classi possono essere utilizzate per accedere al file system in ogni piattaforma. Il `File` classe consente di creare, eliminare e leggere i file e il `Directory` classe consente di creare, eliminare o enumerare il contenuto delle directory. È anche possibile usare il `Stream` sottoclassi, che possono fornire un livello maggiore di controllo sulle operazioni di file (ad esempio, cercare la compressione o la posizione all'interno di un file).
+In ogni piattaforma è possibile usare le classi `System.IO` per accedere al file system. La classe `File` consente di creare, eliminare e leggere i file e la classe `Directory` consente di creare, eliminare o enumerare il contenuto delle directory. È anche possibile usare le sottoclassi `Stream` che possono offrire un livello di controllo più elevato sulle operazioni sui file, ad esempio la compressione o la ricerca di una posizione all'interno di un file.
 
-Un file di testo può essere scritte utilizzando la `File.WriteAllText` metodo:
+È possibile scrivere un file di testo usando il metodo `File.WriteAllText`:
 
 ```csharp
 File.WriteAllText(fileName, text);
 ```
 
-Un file di testo può essere letto utilizzando i `File.ReadAllText` metodo:
+È possibile leggere un file di testo usando il metodo `File.ReadAllText`:
 
 ```csharp
 string text = File.ReadAllText(fileName);
 ```
 
-Inoltre, il `File.Exists` metodo determina se il file specificato è presente:
+Il metodo `File.Exists`, inoltre, determina se il file specificato esiste:
 
 ```csharp
 bool doesExist = File.Exists(fileName);
 ```
 
-Il percorso del file in ogni piattaforma può essere determinato da una libreria .NET Standard con un valore dei [ `Environment.SpecialFolder` ](xref:System.Environment.SpecialFolder) enumerazione come primo argomento per il `Environment.GetFolderPath` (metodo). Ciò può quindi essere combinato con un nome di file con il `Path.Combine` metodo:
+Il percorso del file in ogni piattaforma può essere determinato da una libreria .NET Standard usando un valore dell'enumerazione [`Environment.SpecialFolder`](xref:System.Environment.SpecialFolder) come primo argomento per il metodo `Environment.GetFolderPath`. Questo può quindi essere combinato con un nome di file con il metodo `Path.Combine`:
 
 ```csharp
 string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "temp.txt");
 ```
 
-Queste operazioni sono illustrate nell'app di esempio, che include una pagina che salva e carica il testo:
+Queste operazioni sono illustrate nell'app di esempio che include una pagina che salva e carica il testo:
 
-[![Salvataggio e caricamento di testo](files-images/saveandload-sml.png "salvataggio e caricamento di file nell'App")](files-images/saveandload.png#lightbox "salvataggio e caricamento di file nell'App")
+[![Salvataggio e caricamento di testo](files-images/saveandload-sml.png "Salvataggio e caricamento di file nell'app")](files-images/saveandload.png#lightbox "Salvataggio e caricamento di file nell'app")
 
 <a name="Loading_Files_Embedded_as_Resources" />
 
-## <a name="loading-files-embedded-as-resources"></a>Il caricamento dei file incorporati come risorse
+## <a name="loading-files-embedded-as-resources"></a>Caricamento di file incorporati come risorse
 
-Per incorporare un file in una **.NET Standard** assembly, creare o aggiungere un file e assicurarsi che **azione di compilazione: EmbeddedResource**.
+Per incorporare un file in un assembly **.NET Standard**, creare o aggiungere un file e assicurarsi di selezionare **Azione compilazione: Risorsa incorporata**.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Configurazione di azione di compilazione risorsa incorporata](files-images/vs-embeddedresource-sml.png "impostazione EmbeddedResource BuildAction")](files-images/vs-embeddedresource.png#lightbox "EmbeddedResource BuildAction impostazione")
+[![Configurazione azione di compilazione risorsa incorporata](files-images/vs-embeddedresource-sml.png "Impostazione azione di compilazione risorsa incorporata")](files-images/vs-embeddedresource.png#lightbox "Impostazione azione di compilazione risorsa incorporata")
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![File di testo incorporato nella libreria di classi Portabile, la configurazione di azione di compilazione risorsa incorporata](files-images/xs-embeddedresource-sml.png "impostazione EmbeddedResource BuildAction")](files-images/xs-embeddedresource.png#lightbox "EmbeddedResource BuildAction impostazione")
+[![File di testo incorporato nella libreria di classi portabile, configurazione azione di compilazione risorsa incorporata](files-images/xs-embeddedresource-sml.png "Impostazione azione di compilazione risorsa incorporata")](files-images/xs-embeddedresource.png#lightbox "Impostazione azione di compilazione risorsa incorporata")
 
 -----
 
-`GetManifestResourceStream` Consente di accedere ai file incorporati utilizzando relativi **ID risorsa**. Per impostazione predefinita, l'ID risorsa è il nome del file con lo spazio dei nomi predefinito per il progetto è incorporato nella - preceduta in questo caso l'assembly viene **WorkingWithFiles** e il nome del file viene **PCLTextResource.txt**, in modo che l'ID risorsa è `WorkingWithFiles.PCLTextResource.txt`.
+`GetManifestResourceStream` viene usato per accedere al file incorporato usando il relativo **ID risorsa**. Per impostazione predefinita, l'ID della risorsa è il nome del file preceduto dallo spazio dei nomi predefinito per il progetto in cui è incorporato. In questo caso, l'assembly è **WorkingWithFiles** e il nome del file è **PCLTextResource.txt**, quindi l'ID della risorsa è `WorkingWithFiles.PCLTextResource.txt`.
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
@@ -85,11 +85,11 @@ using (var reader = new System.IO.StreamReader (stream)) {
 }
 ```
 
-Il `text` variabile può quindi essere utilizzata per visualizzare il testo o in caso contrario, usarla nel codice. Questo screenshot del [app di esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/) viene visualizzato il testo viene eseguito il rendering un `Label` controllo.
+La variabile `text` può quindi essere usata per visualizzare il testo oppure è possibile usarla nel codice. Questo screenshot dell'[app di esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/) illustra il testo visualizzabile in un controllo `Label`.
 
- [![File di testo incorporato nella libreria di classi Portabile](files-images/pcltext-sml.png "File di testo incorporato nella libreria di classi Portabile visualizzati nell'App")](files-images/pcltext.png#lightbox "File di testo incorporato nella libreria di classi Portabile visualizzati nell'App")
+ [![File di testo incorporato nella libreria di classi portabile](files-images/pcltext-sml.png "File di testo incorporato nella libreria di classi portabile visualizzato nell'app")](files-images/pcltext.png#lightbox "File di testo incorporato nella libreria di classi portabile visualizzato nell'app")
 
-Il caricamento e la deserializzazione di un file XML è ugualmente semplice. Il codice seguente illustra un file XML che viene caricata e deserializzata da una risorsa, quindi associato a un `ListView` per la visualizzazione. Il file XML contiene una matrice di `Monkey` oggetti (la classe è definita nel codice di esempio).
+Il caricamento e la deserializzazione di un file XML è ugualmente semplice. Il codice seguente illustra un file XML che viene caricato e deserializzato da una risorsa e quindi associato a un elemento `ListView` per la visualizzazione. Il file XML contiene una matrice di oggetti `Monkey` (la classe è definita nel codice di esempio).
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
@@ -103,21 +103,21 @@ var listView = new ListView ();
 listView.ItemsSource = monkeys;
 ```
 
- [![File XML incorporato nella libreria di classi Portabile, visualizzato in ListView](files-images/pclxml-sml.png "File XML incorporato in libreria di classi Portabile visualizzata in ListView")](files-images/pclxml.png#lightbox "File XML incorporato in libreria di classi Portabile visualizzata in ListView")
+ [![File XML incorporato nella libreria di classi portabile, visualizzato in ListView](files-images/pclxml-sml.png "File XML incorporato nella libreria di classi portabile visualizzato in ListView")](files-images/pclxml.png#lightbox "File XML incorporato nella libreria di classi portabile visualizzato in ListView")
 
 <a name="Embedding_in_Shared_Projects" />
 
 ## <a name="embedding-in-shared-projects"></a>Incorporamento in progetti condivisi
 
-Progetti condivisi possono anche contenere file come risorse incorporate, tuttavia, poiché il contenuto di un progetto condiviso viene compilato in progetti di riferimento, il prefisso usato per incorporati possono modificare gli ID risorsa del file. Ciò significa che l'ID risorsa per ogni file incorporato può essere diverso per ogni piattaforma.
+I progetti condivisi possono anche contenere file come risorse incorporate. Tuttavia, poiché il contenuto di un progetto condiviso viene compilato nei progetti di riferimento, il prefisso usato per gli ID risorsa del file incorporato può cambiare. Ciò significa che l'ID risorsa per ogni file incorporato può essere diverso per ogni piattaforma.
 
-Esistono due soluzioni a questo problema con i progetti condivisi:
+Nei progetti condivisi questo problema ha due soluzioni:
 
--  **Sincronizzare i progetti** -modificare le proprietà di progetto per ogni piattaforma per usare il **stesso** spazio dei nomi predefinito e nome di assembly. Questo valore può quindi essere "hardcoded" come prefisso di risorsa incorporata ID nel progetto condiviso.
--  **le direttive del compilatore #if** -usare le direttive del compilatore per impostare il prefisso dell'ID risorsa corretto e usare tale valore per costruire in modo dinamico l'ID risorsa corretto.
+-  **Sincronizzare i progetti**: modificare le proprietà del progetto per ogni piattaforma in modo da usare lo **stesso** nome di assembly e spazio dei nomi predefinito. Questo valore può quindi essere impostato come "hardcoded" e usato come prefisso per gli ID della risorsa incorporata nel progetto condiviso.
+-  **Direttive #if del compilatore**: usare le direttive del compilatore per impostare il prefisso di ID risorsa corretto e usare questo valore per costruire in modo dinamico l'ID risorsa corretto.
 
 
-Il codice che illustra che la seconda opzione è illustrata di seguito. Le direttive del compilatore vengono utilizzate per selezionare il prefisso della risorsa hardcoded (che è in genere lo stesso come spazio dei nomi predefinito per il progetto di riferimento). Il `resourcePrefix` variabile viene quindi usata per creare un ID di risorsa valida concatenando il file con il nome di risorsa incorporata.
+Il codice che illustra la seconda opzione è riportato di seguito. Le direttive del compilatore vengono usate per selezionare il prefisso hardcoded della risorsa che in genere corrisponde allo spazio dei nomi predefinito per il progetto di riferimento. Viene quindi usata la variabile `resourcePrefix` per creare un ID risorsa valido concatenandolo con il nome file della risorsa incorporata.
 
 ```csharp
 #if __IOS__
@@ -138,15 +138,15 @@ Stream stream = assembly.GetManifestResourceStream
 
 ### <a name="organizing-resources"></a>Organizzazione delle risorse
 
-Gli esempi precedenti presuppongono che il file è incorporato nella radice del progetto di libreria .NET Standard, nel qual caso l'ID risorsa è nel formato **Namespace.Filename.Extension**, ad esempio `WorkingWithFiles.PCLTextResource.txt` e `WorkingWithFiles.iOS.SharedTextResource.txt`.
+Negli esempi precedenti si presuppone che il file sia incorporato nella radice del progetto libreria .NET Standard. In questo caso, il formato dell'ID risorsa è **Namespace.Filename.Extension**, ad esempio `WorkingWithFiles.PCLTextResource.txt` e `WorkingWithFiles.iOS.SharedTextResource.txt`.
 
-È possibile organizzare le risorse incorporate nelle cartelle. Se una risorsa incorporata viene inserita in una cartella, il nome della cartella diventa parte dell'ID risorsa (separati da punti), in modo che il formato dell'ID risorsa diventi **Namespace.Folder.Filename.Extension**. Il posizionamento dei file usati nell'app di esempio in una cartella **MyFolder** renderebbero l'ID di risorsa corrispondente `WorkingWithFiles.MyFolder.PCLTextResource.txt` e `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
+È possibile organizzare le risorse incorporate in cartelle. Quando una risorsa incorporata viene inserita in una cartella, il nome di quest'ultima diventa parte dell'ID della risorsa (separato da punti), in modo tale che il formato dell'ID della risorsa diventa **Namespace.Folder.Filename.Extension**. Se si inseriscono i file usati nell'app di esempio in una cartella **MyFolder**, gli ID risorsa corrispondenti saranno `WorkingWithFiles.MyFolder.PCLTextResource.txt` e `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
 
 <a name="Debugging_Embedded_Resources" />
 
-### <a name="debugging-embedded-resources"></a>Debug di risorse incorporate
+### <a name="debugging-embedded-resources"></a>Debug delle risorse incorporate
 
-Poiché a volte è difficile da comprendere il motivo per cui una determinata risorsa non viene caricata, il seguente codice di debug è aggiungere temporaneamente a un'applicazione per verificare che le risorse siano configurate correttamente. Verranno visualizzate tutte le note risorse incorporate nell'assembly specificato per il **errori** pad per facilitare il debug dei problemi di caricamento delle risorse.
+A volte è difficile comprendere il motivo per cui una determinata risorsa non viene caricata. Per verificare che le risorse siano configurate correttamente è possibile aggiungere temporaneamente a un'applicazione il codice di debug seguente. Tutte le risorse note incorporate nell'assembly specificato verranno visualizzate nel riquadro **Errori** per facilitare il debug dei problemi di caricamento delle risorse.
 
 ```csharp
 using System.Reflection;
@@ -160,11 +160,11 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato alcune operazioni di file semplice per salvare e caricare il testo nel dispositivo e per il caricamento delle risorse incorporate. Con .NET Standard 2.0 è possibile condividere il codice di accesso ai file nelle librerie .NET Standard.
+Questo articolo ha illustrato semplici operazioni su file per il salvataggio e il caricamento di testo nel dispositivo e per il caricamento delle risorse incorporate. Con .NET Standard 2.0 è possibile condividere il codice di accesso ai file nelle librerie .NET Standard.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [FilesSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
+- [Esempio di file](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
 - [Esempi di Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
-- [Utilizzo di File System in xamarin. IOS](~/ios/app-fundamentals/file-system.md)
+- [Working with the File System in Xamarin.iOS](~/ios/app-fundamentals/file-system.md) (Uso del file system in Xamarin.iOS)
 

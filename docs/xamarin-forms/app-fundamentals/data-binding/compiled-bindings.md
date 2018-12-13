@@ -1,6 +1,6 @@
 ---
-title: Xamarin. Forms compilate le associazioni
-description: Questo articolo illustra come usare le associazioni compilate per migliorare le prestazioni di associazione dati nelle applicazioni xamarin. Forms.
+title: Binding compilati in Xamarin.Forms
+description: Questo articolo illustra come usare i binding compilati per migliorare le prestazioni di data binding nelle applicazioni Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
 ms.technology: xamarin-forms
@@ -9,38 +9,38 @@ ms.author: dabritch
 ms.date: 10/25/2018
 ms.openlocfilehash: 0b350082c834076a1d69427644259087d64bf26a
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50111608"
 ---
-# <a name="xamarinforms-compiled-bindings"></a>Xamarin. Forms compilate le associazioni
+# <a name="xamarinforms-compiled-bindings"></a>Binding compilati in Xamarin.Forms
 
-_Le associazioni compilate vengono risolti più rapidamente rispetto a binding classico, migliorando pertanto le prestazioni di associazione dati nelle applicazioni xamarin. Forms._
+_I binding compilati vengono risolti più rapidamente rispetto ai binding classici, migliorando pertanto le prestazioni di data binding nelle applicazioni Xamarin.Forms._
 
-Le associazioni dati sono due problemi principali:
+I data binding presentano due problemi principali:
 
-1. Non è prevista alcuna convalida in fase di compilazione di espressioni di associazione. Al contrario, le associazioni vengono risolte in fase di esecuzione. Di conseguenza, tutti i binding non validi non vengono rivelati fino alla fase di esecuzione quando l'applicazione non si comporta come previsto o i messaggi di errore vengono visualizzati.
-1. Non sono economicamente efficiente. Le associazioni vengono risolti in fase di esecuzione tramite verifica degli oggetti per utilizzo generico (reflection) e l'overhead di questa operazione varia a seconda della piattaforma.
+1. Non è prevista la convalida in fase di compilazione delle espressioni di binding. I binding vengono invece risolti in fase di runtime. Di conseguenza tutti i binding non validi non vengono rilevati fino alla fase di runtime, quando l'applicazione non si comporta come previsto o vengono visualizzati messaggi di errore.
+1. Non sono efficienti a livelli di costi. I binding vengono risolti in fase di runtime mediante l'ispezione oggetti di carattere generale (reflection) e il carico di lavoro necessario varia a seconda della piattaforma.
 
-Le associazioni compilate migliorare le prestazioni di associazione dati nelle applicazioni xamarin. Forms risolvendo le espressioni di associazione in fase di compilazione anziché di runtime. Inoltre, la convalida in fase di compilazione di espressioni di associazione consente agli sviluppatori una migliore risoluzione ottimale dei problemi perché associazioni non valide vengono segnalate come errori di compilazione.
+I binding compilati migliorano le prestazioni di data binding nelle applicazioni Xamarin.Forms risolvendo le espressioni di binding in fase di compilazione anziché in fase di runtime. Questa convalida delle espressioni di binding in fase di compilazione consente anche agli sviluppatori una risoluzione dei problemi più agevole, perché i binding non validi vengono segnalati come errori di compilazione.
 
-Il processo per l'uso di associazioni compilate consiste nel:
+Il processo per l'uso dei binding compilati è il seguente:
 
-1. Abilitare la compilazione XAML. Per altre informazioni sulla compilazione XAML, vedere [compilazione XAML](~/xamarin-forms/xaml/xamlc.md).
-1. Impostare un' `x:DataType` dell'attributo su una [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) per il tipo dell'oggetto che il `VisualElement` e i relativi elementi figlio verrà associato a. Si noti che questo attributo può essere definito nuovamente in qualsiasi posizione in una gerarchia di visualizzazione.
+1. Abilitare la compilazione XAML. Per altre informazioni sulla compilazione XAML, vedere [Compilazione XAML](~/xamarin-forms/xaml/xamlc.md).
+1. Impostare un attributo `x:DataType` in un [`VisualElement`](xref:Xamarin.Forms.VisualElement) sul tipo dell'oggetto al quale `VisualElement` e gli elementi figlio eseguiranno il binding. Si noti che questo attributo può essere ridefinito in qualsiasi posizione di una gerarchia di visualizzazione.
 
 > [!NOTE]
-> Si consiglia di impostare il `x:DataType` attributo allo stesso livello nella gerarchia di visualizzazione come i [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) è impostata.
+> È consigliabile impostare l'attributo `x:DataType` sullo stesso livello della gerarchia di visualizzazione sul quale è impostato [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext).
 
-In fase di compilazione XAML, tutte le espressioni di associazione non valida. verranno segnalate come errori di compilazione. Tuttavia, il compilatore XAML solo segnalerà un errore di compilazione per la prima espressione di associazione non valida rilevata. Tutte le espressioni di binding valido che sono definite nel `VisualElement` o i relativi elementi figlio verranno compilate, indipendentemente dal fatto che il [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) è impostato in XAML o codice. La compilazione di un'espressione di associazione che genera l'errore codice compilato che verrà visualizzato un valore da una proprietà nel *origine*e impostata sulla proprietà per il *destinazione* specificato nel markup. Inoltre, in base all'espressione di associazione, il codice generato potrebbe osservare le modifiche al valore del *origine* proprietà e l'aggiornamento di *destinazione* proprietà e può eseguire il push delle modifiche dal *destinazione* verso la *origine*.
+In fase di compilazione XAML, le espressioni di binding non valide vengono segnalate come errori di compilazione. Tuttavia il compilatore XAML segnala un errore di compilazione solo per la prima espressione di binding non valida rilevata. Tutte le espressioni di binding valido definite in `VisualElement` o negli elementi figlio verranno compilate, indipendentemente dal fatto che [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) sia impostato in XAML o nel codice. La compilazione di un'espressione di binding genera codice compilato che ottiene un valore da una proprietà in *source*e lo imposta sulla proprietà in *target* specificata nel markup. Inoltre a seconda dell'espressione di binding il codice generato potrebbe rilevare modifiche nel valore della proprietà *source* e aggiornare la proprietà *target*, nonché eseguire il push delle modifiche dalla proprietà *target* alla proprietà *source*.
 
 > [!IMPORTANT]
-> Le associazioni compilate sono attualmente disabilitate per le espressioni di associazione che definiscono i [ `Source` ](xref:Xamarin.Forms.Binding.Source) proprietà. Infatti il `Source` viene sempre impostata usando i `x:Reference` estensione di markup, che non può essere risolto in fase di compilazione.
+> I binding compilati sono attualmente disabilitati per le espressioni di binding che definiscono la proprietà [`Source`](xref:Xamarin.Forms.Binding.Source). Il motivo è che la proprietà `Source` viene sempre impostata usando l'estensione di markup `x:Reference`, che non può essere risolta in fase di compilazione.
 
-## <a name="using-compiled-bindings"></a>Uso di associazioni compilate
+## <a name="using-compiled-bindings"></a>Uso di binding compilati
 
-Il **compilato selettore colori** pagina viene illustrato come utilizzare le associazioni compilate tra le visualizzazioni di xamarin. Forms e proprietà ViewModel:
+La pagina **Compiled Color Selector** (Selettore colori compilato) illustrato come usare i binding compilati tra le visualizzazioni di Xamarin.Forms e le proprietà ViewModel:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -68,26 +68,26 @@ Il **compilato selettore colori** pagina viene illustrato come utilizzare le ass
 </ContentPage>
 ```
 
-La radice [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) crea un'istanza di `HslColorViewModel` e inizializza il `Color` proprietà all'interno dei tag di elemento di proprietà per il [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) proprietà. Questa radice `StackLayout` definisce anche il `x:DataType` dell'attributo come tipo di elemento ViewModel, che indica che tutte le espressioni di associazione nella radice `StackLayout` gerarchia di visualizzazione verrà compilata. Ciò può essere verificato modificando le espressioni di associazione per l'associazione a una proprietà ViewModel inesistenti, che verrà generato un errore di compilazione.
+L'elemento radice [`StackLayout`](xref:Xamarin.Forms.StackLayout) crea un'istanza di `HslColorViewModel` e inizializza la proprietà `Color` all'interno dei tag proprietà dell'elemento per la proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext). Questo elemento radice `StackLayout` definisce anche l'attributo `x:DataType` come tipo ViewModel, a indicare che tutte le espressioni di binding nella gerarchia di visualizzazione radice `StackLayout` verranno compilate. È possibile verificare questa impostazione modificando le espressioni di binding per impostare il binding a una proprietà ViewModel inesistente, che produrrà un errore di compilazione.
 
 > [!IMPORTANT]
-> Il `x:DataType` attributo può essere ridefinito in qualsiasi punto in una gerarchia di visualizzazione.
+> L'attributo `x:DataType` può essere ridefinito in qualsiasi posizione di una gerarchia di visualizzazione.
 
-Il [ `BoxView` ](xref:Xamarin.Forms.BoxView), [ `Label` ](xref:Xamarin.Forms.Label) elementi, e [ `Slider` ](xref:Xamarin.Forms.Slider) viste ereditano il contesto di associazione dal [ `StackLayout` ](xref:Xamarin.Forms.StackLayout). Queste viste sono tutte le destinazioni di associazione che fanno riferimento a proprietà di origine nel ViewModel. Per il [ `BoxView.Color` ](xref:Xamarin.Forms.BoxView.Color) proprietà e il [ `Label.Text` ](xref:Xamarin.Forms.Label.Text) sono di proprietà, le associazioni dati `OneWay` : le proprietà nella vista vengono impostate dalle proprietà nel ViewModel. Tuttavia, il [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) utilizzata dalla proprietà un `TwoWay` associazione. In questo modo ognuna `Slider` da impostare da ViewModel, nonché per l'elemento ViewModel da impostare da ogni `Slider`.
+Gli elementi [`BoxView`](xref:Xamarin.Forms.BoxView) e [`Label`](xref:Xamarin.Forms.Label) e le viste [`Slider`](xref:Xamarin.Forms.Slider) ereditano il contesto di binding da [`StackLayout`](xref:Xamarin.Forms.StackLayout). Tutte queste viste sono destinazioni di binding che fanno riferimento a proprietà di origine in ViewModel. Per la proprietà [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) e la proprietà [`Label.Text`](xref:Xamarin.Forms.Label.Text) i data binding sono `OneWay`: le proprietà nella vista vengono impostate dalle proprietà in ViewModel. Tuttavia la proprietà [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) usa un binding `TwoWay`. In questo modo ogni elemento `Slider` può essere impostato da ViewModel, e a sua volta ViewModel può essere impostato da ogni `Slider`.
 
-Quando l'applicazione viene eseguita prima di tutto, il [ `BoxView` ](xref:Xamarin.Forms.BoxView), [ `Label` ](xref:Xamarin.Forms.Label) elementi, e [ `Slider` ](xref:Xamarin.Forms.Slider) elementi sono tutti impostati dal ViewModel basata iniziale `Color` proprietà impostata quando è stata creata un'istanza l'elemento ViewModel. Come illustrato negli screenshot seguenti:
+Alla prima esecuzione dell'applicazione gli elementi [`BoxView`](xref:Xamarin.Forms.BoxView), [`Label`](xref:Xamarin.Forms.Label) e gli elementi [`Slider`](xref:Xamarin.Forms.Slider) vengono impostati da ViewModel sulla base della proprietà iniziale `Color` definita al momento della creazione dell'istanza di ViewModel. Questa impostazione è illustrata negli screenshot seguenti:
 
-[![Compilato selettore colori](compiled-bindings-images/compiledcolorselector-small.png "compilate selettore colori")](compiled-bindings-images/compiledcolorselector-large.png#lightbox "compilato selettore colori")
+[![Compiled Color Selector (Selettore colori compilato)](compiled-bindings-images/compiledcolorselector-small.png "Compiled Color Selector (Selettore colori compilato)")](compiled-bindings-images/compiledcolorselector-large.png#lightbox "Compiled Color Selector (Selettore colori compilato)")
 
-Come vengono modificati i dispositivi di scorrimento, il [ `BoxView` ](xref:Xamarin.Forms.BoxView) e [ `Label` ](xref:Xamarin.Forms.Label) gli elementi vengono aggiornati di conseguenza.
+Se si azionano i dispositivi di scorrimento, gli elementi [`BoxView`](xref:Xamarin.Forms.BoxView) e [`Label`](xref:Xamarin.Forms.Label) vengono aggiornati di conseguenza.
 
-Per altre informazioni su questo selettore di colore, vedere [ViewModel e le notifiche di modifica delle proprietà](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#viewmodels-and-property-change-notifications).
+Per altre informazioni su questo selettore colori, vedere [ViewModels and Property-Change Notifications](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#viewmodels-and-property-change-notifications) (ViewModel e notifiche di modifica delle proprietà).
 
-## <a name="using-compiled-bindings-in-a-datatemplate"></a>Uso di associazioni compilate in un DataTemplate
+## <a name="using-compiled-bindings-in-a-datatemplate"></a>Uso di binding compilati in un DataTemplate
 
-Le associazioni in un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) vengono interpretati nel contesto dell'oggetto basato su modelli. Pertanto, quando tramite compilata associazioni in un `DataTemplate`, il `DataTemplate` è necessario dichiarare il tipo del relativo oggetto dati usando il `x:DataType` attributo.
+I binding in un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) sono interpretati nel contesto dell'oggetto basato su modelli. Pertanto quando si usano binding compilati in un `DataTemplate`, `DataTemplate` deve dichiarare il tipo del relativo oggetto dati usando l'attributo `x:DataType`.
 
-Il **elenco di colori compilato** pagina viene illustrato come utilizzare le associazioni compilate in un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate):
+La pagina **Compiled Color List** (Elenco colori compilato) visualizza come usare i binding compilati in un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -120,21 +120,21 @@ Il **elenco di colori compilato** pagina viene illustrato come utilizzare le ass
 </ContentPage>
 ```
 
-Il [ `ListView.ItemsSource` ](xref:Xamarin.Forms.ListView) è impostata su statico `NamedColor.All` proprietà. Il `NamedColor` classe utilizza la reflection .NET per enumerare tutti i campi pubblici statici nel [ `Color` ](xref:Xamarin.Forms.Color) struttura e per l'archiviazione con i relativi nomi in una raccolta che è accessibile da statico `All` proprietà. Pertanto, il `ListView` viene riempita con tutte le `NamedColor` istanze. Per ogni elemento di `ListView`, il contesto di associazione per l'elemento è impostato su un `NamedColor` oggetto. Il [ `BoxView` ](xref:Xamarin.Forms.BoxView) e [ `Label` ](xref:Xamarin.Forms.Label) elementi il [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) sono associati a `NamedColor` proprietà.
+La proprietà [`ListView.ItemsSource`](xref:Xamarin.Forms.ListView) è impostata sulla proprietà `NamedColor.All` statica. La classe `NamedColor` usa la reflection .NET per enumerare tutti i campi pubblici statici nella struttura [`Color`](xref:Xamarin.Forms.Color) e archiviarli con i relativi nomi in una raccolta accessibile dalla proprietà `All` statica. Di conseguenza l'elemento `ListView` viene riempito con tutte le istanze `NamedColor`. Per ogni elemento in `ListView` il contesto di binding per l'elemento è impostato su un oggetto `NamedColor`. Gli elementi [`BoxView`](xref:Xamarin.Forms.BoxView) e [`Label`](xref:Xamarin.Forms.Label) in [`ViewCell`](xref:Xamarin.Forms.ViewCell) sono associati a proprietà `NamedColor`.
 
-Si noti che il [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) definisce il `x:DataType` attributo sia il `NamedColor` tipo, che indica che qualsiasi nelle espressioni di associazione la `DataTemplate` gerarchia di visualizzazione verrà compilata. Ciò può essere verificato modificando le espressioni di associazione per l'associazione a un inesistenti `NamedColor` proprietà, che verrà generato un errore di compilazione.
+Si noti che [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definisce l'attributo `x:DataType` come tipo `NamedColor`, a indicare che tutte le espressioni di binding nella gerarchia di visualizzazione `DataTemplate` verranno compilate. È possibile verificare questa impostazione modificando le espressioni di binding per impostare il binding a una proprietà `NamedColor` inesistente, che produrrà un errore di compilazione.
 
-Quando l'applicazione viene eseguita prima di tutto, il [ `ListView` ](xref:Xamarin.Forms.ListView) viene popolata con `NamedColor` istanze. Quando un elemento di `ListView` è selezionata, il [ `BoxView.Color` ](xref:Xamarin.Forms.BoxView.Color) viene impostata sul colore dell'elemento selezionato nel `ListView`:
+Quando l'applicazione viene eseguita per la prima volta, [`ListView`](xref:Xamarin.Forms.ListView) viene popolata con istanze `NamedColor`. Quando viene selezionato un elemento in `ListView`, la proprietà [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) viene impostata sul colore dell'elemento selezionato in `ListView`:
 
-[![Compilato l'elenco dei colori](compiled-bindings-images/compiledcolorlist-small.png "compilato l'elenco dei colori]")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Compiled Color List")
+[![Compiled Color List (Elenco colori compilato)](compiled-bindings-images/compiledcolorlist-small.png "Compiled Color List (Elenco colori compilato)]")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Compiled Color List")
 
-Selezionando gli altri elementi di [ `ListView` ](xref:Xamarin.Forms.BoxView) aggiorna il colore del [ `BoxView` ](xref:Xamarin.Forms.BoxView).
+Se si selezionano altri elementi in [`ListView`](xref:Xamarin.Forms.BoxView) viene aggiornato il colore di [`BoxView`](xref:Xamarin.Forms.BoxView).
 
-## <a name="combining-compiled-bindings-with-classic-bindings"></a>Binding compilato in combinazione con le associazioni classiche
+## <a name="combining-compiled-bindings-with-classic-bindings"></a>Combinazione di binding compilati con binding classici
 
-Le espressioni di associazione vengono compilate solo per la gerarchia di visualizzazione che di `x:DataType` attributo viene definito per. Al contrario, tutte le viste in una gerarchia in cui il `x:DataType` attributo non è definito userà associazioni classiche. È pertanto possibile combinare associazioni compilate e classiche in una pagina. Ad esempio, nella precedente sezione viste all'interno di [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) usare le associazioni compilate, mentre il [ `BoxView` ](xref:Xamarin.Forms.BoxView) che è impostato sul colore selezionato nel [ `ListView` ](xref:Xamarin.Forms.ListView) non esiste.
+Le espressioni di binding vengono compilate solo per la gerarchia di visualizzazione in cui è definito l'attributo `x:DataType`. Al contrario, tutte le viste in una gerarchia in cui l'attributo `x:DataType` non è definito usa i binding classici. È pertanto possibile combinare binding compilati e classici in una pagina. Ad esempio nella sezione precedente le viste in [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) usano i binding compilati, mentre l'elemento [`BoxView`](xref:Xamarin.Forms.BoxView) impostato sul colore selezionato in [`ListView`](xref:Xamarin.Forms.ListView) non usa tali binding.
 
-Un'attenta strutturazione dei `x:DataType` attributi possono pertanto generare una pagina utilizzando le associazioni compilate e la distribuzione classiche. In alternativa, il `x:DataType` attributo può essere ridefinito in qualsiasi punto in una gerarchia di visualizzazione per `null` usando il `x:Null` estensione di markup. Questa operazione indica che tutte le espressioni di associazione all'interno della gerarchia di visualizzazione utilizzano associazioni classiche. Il *associazioni misto* è illustrato questo approccio:
+Un'attenta strutturazione degli attributi `x:DataType` può dare origine a una pagina che usa binding sia compilati che classici. In alternativa l'attributo `x:DataType` può essere ridefinito in qualsiasi punto di una gerarchia di visualizzazione come `null` usando l'estensione di markup `x:Null`. Questa operazione indica che tutte le espressioni di binding all'interno della gerarchia di visualizzazione useranno i binding classici. La pagina *Mixed Bindings* (Binding misti) dimostra questo approccio:
 
 ```xaml
 <StackLayout x:DataType="local:HslColorViewModel">
@@ -156,21 +156,21 @@ Un'attenta strutturazione dei `x:DataType` attributi possono pertanto generare u
 </StackLayout>   
 ```
 
-La radice [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) imposta la `x:DataType` attributo sia il `HslColorViewModel` tipo, che indica che qualsiasi espressione di associazione nella radice `StackLayout` gerarchia di visualizzazione verrà compilata. Tuttavia, interna `StackLayout` ridefinisce il `x:DataType` dell'attributo `null` con il `x:Null` espressione di markup. Di conseguenza, le espressioni di associazione all'interno di interna `StackLayout` usare le associazioni di classiche. Solo le [ `BoxView` ](xref:Xamarin.Forms.BoxView), nell'ambito della radice `StackLayout` visualizzare la gerarchia, le associazioni compilate viene utilizzato.
+L'elemento radice [`StackLayout`](xref:Xamarin.Forms.StackLayout) definisce l'attributo `x:DataType` come tipo `HslColorViewModel`, a indicare che tutte le espressioni di binding nella gerarchia di visualizzazione radice `StackLayout` verranno compilate. Tuttavia l'elemento `StackLayout` interno ridefinisce l'attributo `x:DataType` come `null` con l'espressione di markup `x:Null`. Di conseguenza le espressioni di binding nell'elemento `StackLayout` interno usano i binding classici. Solo [`BoxView`](xref:Xamarin.Forms.BoxView) nell'ambito della gerarchia di visualizzazione radice `StackLayout` usa i binding compilati.
 
-Per altre informazioni sul `x:Null` espressione di markup, vedere [estensione di Markup X:null](~/xamarin-forms/xaml/markup-extensions/consuming.md#null).
+Per altre informazioni sull'espressione di markup `x:Null`, vedere [Estensione di markup x:Null](~/xamarin-forms/xaml/markup-extensions/consuming.md#null).
 
 ## <a name="performance"></a>Prestazioni
 
-Le associazioni compilate di migliorare le prestazioni, con il vantaggio di prestazioni diversi di associazione dati. Gli unit test rivela che:
+I binding compilati migliorano le prestazioni di data binding e il vantaggio in termini di prestazioni può variare. Gli unit test rivelano che:
 
-- Un binding compilato che utilizza la notifica di modifica delle proprietà (ad esempio un `OneWay`, `OneWayToSource`, o `TwoWay` binding) viene risolto circa 8 volte più veloci rispetto a un'associazione classica.
-- Un binding compilato che non utilizza la notifica di modifica delle proprietà (vale a dire un `OneTime` binding) viene risolto circa 20 volte più veloci rispetto a un'associazione classica.
-- Impostando il [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) su un binding compilato che Usa proprietà notifica di modifica (vale a dire una `OneWay`, `OneWayToSource`, o `TwoWay` associazione) è circa 5 volte più veloce rispetto all'impostazione di `BindingContext`su un'associazione classica.
-- Impostazione la [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) su un binding compilato che non utilizza proprietà notifica di modifica (vale a dire un `OneTime` associazione) è di circa 7 volte più veloce rispetto a impostazione il `BindingContext` su un'associazione classica.
+- Un binding compilato che usa la notifica di modifica delle proprietà (ovvero un binding `OneWay`, `OneWayToSource` o `TwoWay`) viene risolto circa 8 volte più rapidamente rispetto a un binding classico.
+- Un binding compilato che non usa la notifica di modifica delle proprietà (ovvero un binding `OneTime`) viene risolto circa 20 volte più rapidamente rispetto a un binding classico.
+- L'impostazione di [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) per un binding compilato che usa la notifica di modifica delle proprietà (ovvero un binding `OneWay`, `OneWayToSource` o `TwoWay`) è circa 5 volte più rapida rispetto all'impostazione di `BindingContext` per un binding classico.
+- L'impostazione di [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) per un binding compilato che non usa la notifica di modifica delle proprietà (ovvero un binding `OneTime`) è circa 7 volte più rapida rispetto all'impostazione di `BindingContext` per un binding classico.
 
-Queste differenze di prestazioni possono essere ingrandite sui dispositivi mobili, dipendenti la piattaforma in uso, la versione del sistema operativo in uso e il dispositivo in cui viene eseguita l'applicazione.
+Queste variazioni di prestazioni possono risultare più importanti nei dispositivi mobili a seconda della piattaforma usata, della versione del sistema operativo e del dispositivo in cui viene eseguita l'applicazione.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Data Binding Demo (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demo sul data binding (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)

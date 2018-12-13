@@ -1,6 +1,6 @@
 ---
-title: Trigger di xamarin. Forms
-description: Questo articolo illustra come usare i trigger di xamarin. Forms per rispondere alle modifiche all'interfaccia con XAML. I trigger consentono di esprimere le azioni in modo dichiarativo in XAML che modificano l'aspetto dei controlli basato su eventi o modifiche alle proprietà.
+title: Trigger Xamarin.Forms
+description: Questo articolo illustra come usare i trigger Xamarin.Forms per rispondere alle modifiche all'interfaccia utente con XAML. I trigger consentono di esprimere in modo dichiarativo in XAML le azioni che modificano l'aspetto dei controlli in base a eventi o modifiche delle proprietà.
 ms.prod: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
@@ -9,33 +9,33 @@ ms.author: dabritch
 ms.date: 07/01/2016
 ms.openlocfilehash: e9ec9288e2b8ea991ef8d41f9b601d0897631b9d
 ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50675211"
 ---
-# <a name="xamarinforms-triggers"></a>Trigger di xamarin. Forms
+# <a name="xamarinforms-triggers"></a>Trigger Xamarin.Forms
 
-I trigger consentono di esprimere le azioni in modo dichiarativo in XAML che modificano l'aspetto dei controlli basato su eventi o modifiche alle proprietà.
+I trigger consentono di esprimere in modo dichiarativo in XAML le azioni che modificano l'aspetto dei controlli in base a eventi o modifiche delle proprietà.
 
-È possibile assegnare un trigger direttamente a un controllo o aggiungerlo a un dizionario risorse a livello di pagina o a livello di app da applicare a più controlli.
+È possibile assegnare un trigger direttamente a un controllo o aggiungerlo a un dizionario risorse a livello di pagina o a livello di app perché sia applicato a più controlli.
 
 Esistono quattro tipi di trigger:
 
-* [Trigger di proprietà](#property) -si verifica quando una proprietà su un controllo è impostata su un particolare valore.
+* [Trigger di proprietà](#property): si verifica quando una proprietà su un controllo è impostata su un particolare valore.
 
-* [Trigger data](#data) : Usa i dati di associazione di trigger basato sulle proprietà di un altro controllo.
+* [Trigger di dati](#data) : usa il data binding per eseguire il trigger sulla base delle proprietà di un altro controllo.
 
-* [Trigger di evento](#event) -si verifica quando si verifica un evento del controllo.
+* [Trigger di evento](#event): si verifica quando un evento avviene su un controllo.
 
-* [Più Trigger](#multi) -consente a più condizioni di trigger da impostare prima che venga eseguita un'azione.
+* [MultiTrigger](#multi): consente di impostare più condizioni di trigger prima che si verifichi un'azione.
 
 <a name="property" />
 
 ## <a name="property-triggers"></a>Trigger di proprietà
 
-Un semplice trigger può essere espressa esclusivamente in XAML, aggiungere un `Trigger` elemento a un controllo Attiva collection.
-Questo esempio viene illustrato un trigger che modifica un `Entry` quando riceve lo stato attivo al colore di sfondo:
+È possibile esprimere un trigger semplice puramente in XAML aggiungendo un elemento `Trigger` a una raccolta di trigger del controllo.
+Questo esempio illustra un trigger che modifica il colore di sfondo di un oggetto `Entry` quando riceve lo stato attivo:
 
 ```xaml
 <Entry Placeholder="enter name">
@@ -48,21 +48,21 @@ Questo esempio viene illustrato un trigger che modifica un `Entry` quando riceve
 </Entry>
 ```
 
-Le parti importanti della dichiarazione del trigger sono:
+Le parti importanti della dichiarazione del trigger sono le seguenti:
 
-* **TargetType** -tipo di controllo che il trigger viene applicato a.
+* **TargetType**: tipo di controllo a cui viene applicato il trigger.
 
-* **Proprietà** -la proprietà del controllo che viene monitorato.
+* **Property**: proprietà del controllo sottoposta a monitoraggio.
 
-* **Valore** -il valore, quando si verifica per la proprietà monitorata, che attiva il trigger da attivare.
+* **Value**: se si verifica per la proprietà monitorata, valore che determina l'attivazione del trigger.
 
-* **Setter** -una raccolta di `Setter` è possibile aggiungere elementi e quando viene soddisfatta la condizione del trigger. È necessario specificare il `Property` e `Value` da impostare.
+* **Setter**: è possibile aggiungere una raccolta di elementi `Setter` quando la condizione di trigger è soddisfatta. È necessario specificare gli oggetti `Property` e `Value` da impostare.
 
-* **EnterActions ed ExitActions** (non illustrato): vengono scritti nel codice e può essere usato oltre a (o anziché) `Setter` elementi. Si trovano [descritto di seguito](#enterexit).
+* **EnterActions ed ExitActions** (non illustrate): parti scritte nel codice che possono essere usate in aggiunta o al posto degli elementi `Setter`. Sono [descritte di seguito](#enterexit).
 
-### <a name="applying-a-trigger-using-a-style"></a>Applicazione di un Trigger utilizzando uno stile
+### <a name="applying-a-trigger-using-a-style"></a>Applicazione di un trigger usando lo stile
 
-È inoltre possibile aggiungere trigger per un `Style` dichiarazione in un controllo, in una pagina o un'applicazione `ResourceDictionary`. In questo esempio dichiara uno stile implicito (ie. Nessun `Key` è impostato) vale a dire che verranno applicate a tutti `Entry` controlli della pagina.
+È anche possibile aggiungere trigger a una dichiarazione `Style` in un controllo, in una pagina o in un oggetto `ResourceDictionary` dell'applicazione. In questo esempio viene dichiarato uno stile implicito, vale a dire `Key` non è impostato. In questo caso sarà applicato a tutti i controlli `Entry` della pagina.
 
 ```xaml
 <ContentPage.Resources>
@@ -83,10 +83,10 @@ Le parti importanti della dichiarazione del trigger sono:
 
 ## <a name="data-triggers"></a>Trigger di dati
 
-Trigger di dati utilizzano l'associazione dati a un altro controllo per fare in modo di monitorare il `Setter`s richiamato. Anziché il `Property` in un trigger di proprietà dell'attributo, impostare il `Binding` attributo per il monitoraggio per il valore specificato.
+I trigger di dati usano il data binding per monitorare un altro controllo affinché esegua la chiamata di elementi `Setter`. Anziché impostare l'attributo `Property` in un trigger di proprietà, impostare l'attributo `Binding` per monitorare il valore specificato.
 
-L'esempio seguente usa la sintassi di associazione dati `{Binding Source={x:Reference entry}, Path=Text.Length}`
-come avviene in modo in cui si fa riferimento alle proprietà di un altro controllo. Quando la lunghezza del `entry` è uguale a zero, il trigger viene attivato. In questo esempio il trigger disabilita il pulsante quando l'input è vuota.
+L'esempio seguente usa la sintassi del data binding `{Binding Source={x:Reference entry}, Path=Text.Length}`
+che fa riferimento alle proprietà di un altro controllo. Quando la lunghezza di `entry` è zero, il trigger viene attivato. In questo esempio il trigger disabilita il pulsante quando l'input è vuoto.
 
 ```xaml
 <!-- the x:Name is referenced below in DataTrigger-->
@@ -109,15 +109,15 @@ come avviene in modo in cui si fa riferimento alle proprietà di un altro contro
 </Button>
 ```
 
-Suggerimento: quando si valuta `Path=Text.Length` sempre fornire un valore predefinito per la proprietà di destinazione (ad es. `Text=""`) perché in caso contrario sarà `null` e il trigger non funzionerà come previsto.
+Suggerimento: quando viene valutato `Path=Text.Length`, specificare sempre un valore predefinito per la proprietà di destinazione, ad esempio `Text=""`). In caso contrario, il valore sarà `null` e il trigger non funzionerà come previsto.
 
-Oltre a specificare `Setter`s è anche possibile fornire [ `EnterActions` e `ExitActions` ](#enterexit).
+Oltre a specificare elementi `Setter`, è anche possibile scrivere le parti [`EnterActions` e `ExitActions`](#enterexit).
 
 <a name="event" />
 
 ## <a name="event-triggers"></a>Trigger di evento
 
-Il `EventTrigger` elemento richiede solo un' `Event` proprietà, ad esempio `"Clicked"` nell'esempio seguente.
+L'elemento `EventTrigger` richiede solo una proprietà `Event`. Nell'esempio riportato di seguito è `"Clicked"`.
 
 ```xaml
 <EventTrigger Event="Clicked">
@@ -125,7 +125,7 @@ Il `EventTrigger` elemento richiede solo un' `Event` proprietà, ad esempio `"Cl
 </EventTrigger>
 ```
 
-Si noti che esistono nessun `Setter` elementi, ma piuttosto un riferimento a una classe definita dal `local:NumericValidationTriggerAction` che richiede il `xmlns:local` per essere dichiarata nella pagina del XAML:
+Si noti che non esistono elementi `Setter`, ma piuttosto un riferimento a una classe definita da `local:NumericValidationTriggerAction` che richiede `xmlns:local` per essere dichiarata nel linguaggio XAML della pagina:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -133,15 +133,15 @@ Si noti che esistono nessun `Setter` elementi, ma piuttosto un riferimento a una
              xmlns:local="clr-namespace:WorkingWithTriggers;assembly=WorkingWithTriggers"
 ```
 
-Implementa la classe stessa `TriggerAction` vale a dire che deve fornire una sostituzione per il `Invoke` metodo che viene chiamato ogni volta che si verifica l'evento di attivazione.
+Questa classe implementa `TriggerAction` che dovrà specificare un override per il metodo `Invoke` chiamato ogni volta che si verifica un evento di trigger.
 
-Un'implementazione di azione di trigger deve:
+L'implementazione di un'azione trigger deve eseguire le operazioni seguenti:
 
-* Implementare il modello generico `TriggerAction<T>` (classe), con il parametro generico corrispondente con il tipo di controllo verrà applicato per il trigger. È possibile usare come superclasse `VisualElement` azioni del trigger che funziona con un'ampia gamma di controlli o specificare un tipo di controllo, ad esempio scrivere `Entry`.
+* Implementare la classe `TriggerAction<T>` generica con il parametro generico corrispondente al tipo di controllo a cui verrà applicato il trigger. È possibile usare superclassi, ad esempio `VisualElement` per scrivere azioni trigger che funzionano con una serie di controlli, oppure specificare un controllo, ad esempio `Entry`.
 
-* Eseguire l'override di `Invoke` - questo viene chiamato ogni volta che vengono soddisfatti i criteri di trigger.
+* Eseguire l'override del metodo `Invoke`. Viene chiamato ogni volta che vengono soddisfatti i criteri di trigger.
 
-* Se lo si desidera esporre le proprietà che possono essere impostate nella finestra di XAML quando viene dichiarato il trigger (ad esempio `Anchor`, `Scale`, e `Length` in questo esempio).
+* In alternativa, esporre le proprietà che possono essere impostata in XAML quando viene dichiarato il trigger. Nell'esempio sono `Anchor`, `Scale` e `Length`.
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -155,7 +155,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
-Possono impostare le proprietà esposte dall'azione del trigger nella dichiarazione di XAML come segue:
+Le proprietà esposte dall'azione trigger possono essere impostate nella dichiarazione XAML nel modo seguente:
 
 ```xaml
 <EventTrigger Event="TextChanged">
@@ -163,17 +163,17 @@ Possono impostare le proprietà esposte dall'azione del trigger nella dichiarazi
 </EventTrigger>
 ```
 
-Prestare attenzione quando si condividono i trigger in un `ResourceDictionary`, un'istanza viene condivisa tra i controlli in modo che qualsiasi stato una volta configurato verrà applicata a tutti.
+Considerare che quando i trigger vengono condivisi in un oggetto `ResourceDictionary`, un'istanza viene condivisa tra i controlli, in modo che gli stati configurati una volta vengano applicati a tutti.
 
-Si noti che i trigger di evento non supportano `EnterActions` e `ExitActions` [descritto di seguito](#enterexit).
+Si noti che i trigger di evento non supportano le raccolte `EnterActions` e `ExitActions`    [descritte di seguito](#enterexit).
 
 <a name="multi" />
 
-## <a name="multi-triggers"></a>Più trigger
+## <a name="multi-triggers"></a>MultiTrigger
 
-Oggetto `MultiTrigger` ha un aspetto simile a un `Trigger` o `DataTrigger` ma possono essere presenti più di una condizione. Tutte le condizioni devono essere vere prima il `Setter`s vengono attivati.
+L'oggetto `MultiTrigger` è simile a `Trigger` o `DataTrigger`, ma possono esistere più condizioni. È necessario che tutte le condizioni siano soddisfatte, perché gli elementi `Setter` siano attivati.
 
-Di seguito è riportato un esempio di un trigger per un pulsante che viene associata a due diversi input (`email` e `phone`):
+Di seguito viene riportato un esempio di un trigger per un pulsante che associa due input diversi (`email` e `phone`):
 
 ```xaml
 <MultiTrigger TargetType="Button">
@@ -191,17 +191,17 @@ Di seguito è riportato un esempio di un trigger per un pulsante che viene assoc
 </MultiTrigger>
 ```
 
-Il `Conditions` può contenere anche dati raccolta `PropertyCondition` elementi simile al seguente:
+La raccolta `Conditions` può anche contenere elementi `PropertyCondition` come nell'esempio seguente:
 
 ```xaml
 <PropertyCondition Property="Text" Value="OK" />
 ```
 
-### <a name="building-a-require-all-multi-trigger"></a>Creazione di un trigger con più "richiedere tutto"
+### <a name="building-a-require-all-multi-trigger"></a>Associazione di un MultiTrigger con richiesta di "tutto"
 
-Il trigger di più Aggiorna relativo controllo solo quando tutte le condizioni sono vere. Test per "tutte le lunghezze di campo sono zero" (ad esempio una pagina di accesso in cui tutti gli input devono essere completati) è difficile perché si desidera che una condizione "dove Text.Length > 0", ma ciò non può essere espressi in XAML.
+L'elemento MultiTrigger aggiorna soltanto il relativo controllo quando tutte le condizioni vengono soddisfatte. Il test di "tutte le lunghezze dei campi sono zero", ad esempio in un pagina di accesso in cui tutti gli input devono essere completi, è un'operazione complessa, poiché si richiedere una condizione "dove Text.Length > 0" che non può tuttavia essere espressa in XAML.
 
-Questa operazione può essere eseguita con un `IValueConverter`. Il codice del convertitore sotto le trasformazioni di `Text.Length` binding in un `bool` che indica se un campo è vuoto o non:
+È possibile invece usare un oggetto `IValueConverter`. Il codice del convertitore riportato di seguito trasforma il binding `Text.Length` in `bool`, il quale indica se un campo è vuoto o meno:
 
 ```csharp
 public class MultiTriggerConverter : IValueConverter
@@ -223,7 +223,7 @@ public class MultiTriggerConverter : IValueConverter
 }
 ```
 
-Per usare il convertitore in un trigger di più, aggiungerlo innanzitutto al dizionario risorse della pagina (insieme a un oggetto personalizzato `xmlns:local` definizione dello spazio dei nomi):
+Per usare il convertitore in un MultiTrigger, aggiungere prima l'elemento al dizionario risorse della pagina (insieme a una definizione dello spazio dei nomi `xmlns:local` personalizzato):
 
 ```xaml
 <ResourceDictionary>
@@ -231,11 +231,11 @@ Per usare il convertitore in un trigger di più, aggiungerlo innanzitutto al diz
 </ResourceDictionary>
 ```
 
-il XAML è illustrato di seguito. Tenere presente le seguenti differenze del primo esempio di trigger più:
+Il linguaggio XAML è illustrato di seguito. Si notino le differenze rispetto al primo esempio MultiTrigger:
 
-* Il pulsante presenta `IsEnabled="false"` impostato per impostazione predefinita.
-* Le condizioni di attivazione con più usano il convertitore per attivare i `Text.Length` valore in un `boolean`.
-* Quando tutte le condizioni vengono `true`, il setter rende il pulsante `IsEnabled` proprietà `true`.
+* Il pulsante ha `IsEnabled="false"` impostato per impostazione predefinita.
+* Le condizioni MultiTrigger usano il convertitore per trasformare il valore `Text.Length` in un valore `boolean`.
+* Quando tutte le condizioni sono `true`, l'elemento Setter imposta la proprietà `IsEnabled` del pulsante su `true`.
 
 ```xaml
 <Entry x:Name="user" Text="" Placeholder="user name" />
@@ -264,18 +264,18 @@ il XAML è illustrato di seguito. Tenere presente le seguenti differenze del pri
 </Button>
 ```
 
-Questi screenshot mostrano la differenza tra i due esempi di trigger più. Nella parte superiore delle schermate, testo di input in uno solo `Entry` è sufficiente per abilitare il **salvare** pulsante.
-Nella parte inferiore delle schermate, i **account di accesso** pulsante rimane inattivo fino a quando entrambi i campi contengono dati.
+Questi screenshot illustrano la differenza tra i due esempi di MultiTrigger illustrati sopra. Nella parte superiore delle schermate l'input di testo in un oggetto `Entry` è sufficiente per abilitare il pulsante **Save** (Salva).
+Nella parte inferiore delle schermate il pulsante **Login** (Accesso) rimane inattivo finché nei due campi sono contenuti dati.
 
-![](triggers-images/multi-requireall.png "MultiTrigger esempi")
+![](triggers-images/multi-requireall.png "Esempi di MultiTrigger")
 
 <a name="enterexit" />
 
 ## <a name="enteractions-and-exitactions"></a>EnterActions ed ExitActions
 
-Un altro modo per implementare le modifiche quando si verifica un trigger è aggiungendo `EnterActions` e `ExitActions` raccolte e specificando `TriggerAction<T>` implementazioni.
+Un altro modo per implementare le modifiche quando si verifica un trigger consiste nell'aggiungere le raccolte `EnterActions` e `ExitActions` e specificare le implementazioni `TriggerAction<T>`.
 
-È possibile fornire *entrambe* `EnterActions` e `ExitActions` nonché `Setter`s in un trigger, ma tenere presente che il `Setter`s viene chiamato immediatamente (non attendono il `EnterAction` o `ExitAction` a completamento). In alternativa è possibile eseguire tutti gli elementi nel codice e non usare `Setter`s affatto.
+In un trigger è possibile specificare *sia* `EnterActions` che `ExitActions` ma anche gli elementi `Setter`. Si consideri tuttavia che gli elementi `Setter` vengono chiamati immediatamente, non attendono che `EnterAction` o `ExitAction` siano completate. In alternativa è possibile eseguire tutti gli oggetti nel codice e non usare affatto gli elementi `Setter`.
 
 ```xaml
 <Entry Placeholder="enter job title">
@@ -295,7 +295,7 @@ Un altro modo per implementare le modifiche quando si verifica un trigger è agg
 </Entry>
 ```
 
-Come sempre, quando una classe viene fatto riferimento in XAML è necessario dichiarare uno spazio dei nomi, ad esempio `xmlns:local` come illustrato di seguito:
+Come sempre, quando si fa riferimento a una classe in XAML, è necessario dichiarare uno spazio dei nomi, ad esempio `xmlns:local`, come illustrato di seguito:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -303,7 +303,7 @@ Come sempre, quando una classe viene fatto riferimento in XAML è necessario dic
              xmlns:local="clr-namespace:WorkingWithTriggers;assembly=WorkingWithTriggers"
 ```
 
-Il `FadeTriggerAction` codice è illustrato di seguito:
+Il codice `FadeTriggerAction` è illustrato di seguito:
 
 ```csharp
 public class FadeTriggerAction : TriggerAction<VisualElement>
@@ -325,11 +325,11 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 }
 ```
 
-Nota: `EnterActions` e `ExitActions` vengono ignorate **i trigger di evento**.
+Nota: `EnterActions` e `ExitActions` vengono ignorate nei  **trigger di evento**.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempio di trigger](https://developer.xamarin.com/samples/WorkingWithTriggers)
-- [Documentazione di xamarin. Forms API](xref:Xamarin.Forms.TriggerAction`1)
+- [Documentazione per le API di Xamarin.Forms](xref:Xamarin.Forms.TriggerAction`1)

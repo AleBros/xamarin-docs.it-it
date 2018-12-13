@@ -1,6 +1,6 @@
 ---
-title: Fallback associazione di xamarin. Forms
-description: Questo articolo illustra come rendere più affidabili i binding mediante la definizione di valori di fallback che verranno usati se l'associazione non riesce.
+title: Fallback per i binding di Xamarin.Forms
+description: Questo articolo illustra come rendere più affidabili i binding mediante la definizione di valori di fallback, che vengono usati se il binding non riesce.
 ms.prod: xamarin
 ms.assetid: 637ACD9D-3E5D-4014-86DE-A77D1FEF238A
 ms.technology: xamarin-forms
@@ -9,32 +9,32 @@ ms.author: dabritch
 ms.date: 08/16/2018
 ms.openlocfilehash: 2a4b29df9148ce695f8f3ca5377e5848af1b775a
 ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52171599"
 ---
-# <a name="xamarinforms-binding-fallbacks"></a>Fallback associazione di xamarin. Forms
+# <a name="xamarinforms-binding-fallbacks"></a>Fallback per i binding di Xamarin.Forms
 
-In alcuni casi le associazioni dati esito negativo, perché l'origine del binding non può essere risolto o perché l'associazione ha esito positivo ma restituisce un `null` valore. Anche se questi scenari possono essere gestiti con convertitori di valori o altro codice aggiuntivo, i data binding è assicurare maggiore affidabilità mediante la definizione di valori di fallback da usare se il processo di associazione ha esito negativo. Questa operazione può essere eseguita definendo le [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackValue) e [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetNullValue) proprietà in un'espressione di associazione. Perché queste proprietà si trovano nel [ `BindingBase` ](xref:Xamarin.Forms.BindingBase) (classe), possono essere usati con le associazioni, le associazioni compilate e con il `Binding` estensione di markup.
+In alcuni casi i data binding non riescono perché l'origine del binding non può essere risolta o perché il binding ha esito positivo ma restituisce un valore `null`. Anche se questi scenari possono essere gestiti con convertitori di valori o altro codice aggiuntivo, i data binding possono essere resi più solidi mediante la definizione di valori di fallback da usare se il processo di binding ha esito negativo. Questa operazione può essere eseguita definendo le proprietà [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) e [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) in un'espressione di binding. Dato che queste proprietà risiedono nella classe [`BindingBase`](xref:Xamarin.Forms.BindingBase) possono essere usate con binding, binding compilati e con l'estensione di markup `Binding`.
 
 > [!NOTE]
-> Usare la [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackValue) e [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetNullValue) proprietà in un'espressione di associazione è facoltativo.
+> L'uso delle proprietà [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) e [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) in un'espressione di binding è facoltativa.
 
 ## <a name="defining-a-fallback-value"></a>Definizione di un valore di fallback
 
-Il [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackValue) proprietà consente a un valore di fallback definire che verrà utilizzato quando l'associazione *origine* non può essere risolto. Uno scenario comune per l'impostazione di questa proprietà è durante l'associazione alle proprietà di origine che non esista su tutti gli oggetti in una raccolta associata di tipi eterogenei.
+La proprietà [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) consente di definire un valore di fallback che verrà usato nel caso in cui non sia possibile risolvere l'*origine* del binding. Uno scenario classico per l'impostazione di questa proprietà è il caso di un binding a proprietà di origine che potrebbero non esistere per tutti gli oggetti in una raccolta associata di tipi eterogenei.
 
-Il **MonkeyDetail** pagina viene illustrata l'impostazione di [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackValue) proprietà:
+La pagina **MonkeyDetail** illustra l'impostazione della proprietà [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue):
 
 ```xaml
 <Label Text="{Binding Population, FallbackValue='Population size unknown'}"
        ... />   
 ```
 
-L'associazione per il [ `Label` ](xref:Xamarin.Forms.Label) definisce una [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackValue) valore che verrà impostata la destinazione se l'origine del binding non può essere risolto. Pertanto, il valore definito dal `FallbackValue` proprietà verrà visualizzata se il `Population` proprietà non esiste per l'oggetto associato. Si noti che qui il `FallbackValue` valore della proprietà è delimitato da caratteri di virgoletta singola (apostrofo).
+Il binding su [`Label`](xref:Xamarin.Forms.Label) definisce un valore [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) che verrà impostato nella destinazione se non è possibile risolvere l'origine del binding. Pertanto il valore definito dalla proprietà `FallbackValue` viene visualizzato se la proprietà `Population` non esiste per l'oggetto associato. Si noti che qui il valore della proprietà `FallbackValue` è delimitato da caratteri virgoletta singola (apostrofo).
 
-Invece di definire [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackValue) valori di proprietà inline, si consiglia di definirli come risorse in un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary). Il vantaggio di questo approccio è che tali valori sono definiti una volta in un'unica posizione e sono più facilmente localizzabili. Le risorse possono quindi essere recuperate tramite il `StaticResource` estensione di markup:
+Invece di definire i valori della proprietà [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) inline, è consigliabile definirli come risorse in un elemento [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). Il vantaggio di questo approccio è che questi valori vengono definiti una sola volta in un'unica posizione e sono più facilmente localizzabili. È quindi possibile recuperare le risorse tramite l'estensione di markup `StaticResource`:
 
 ```xaml
 <Label Text="{Binding Population, FallbackValue={StaticResource populationUnknown}}"
@@ -42,22 +42,22 @@ Invece di definire [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackVa
 ```
 
 > [!NOTE]
-> Non è possibile impostare il `FallbackValue` proprietà con un'espressione di associazione.
+> Non è possibile impostare la proprietà `FallbackValue` con un'espressione di binding.
 
 Ecco il programma in esecuzione:
 
-![Associazione FallbackValue](binding-fallbacks-images/bindingunavailable-detail-cropped.png "FallbackValue associazione")
+![Binding FallbackValue](binding-fallbacks-images/bindingunavailable-detail-cropped.png "Binding FallbackValue")
 
-Quando la `FallbackValue` non è impostata in un'espressione di associazione e il percorso di associazione o parte del percorso non viene risolta, [ `BindableProperty.DefaultValue` ](xref:Xamarin.Forms.BindableProperty.DefaultValue) è impostato sulla destinazione. Tuttavia, quando la `FallbackValue` proprietà viene impostata e il percorso di associazione o parte del percorso non viene risolta, il valore della `FallbackValue` proprietà value viene impostata nella destinazione. Pertanto, nelle **MonkeyDetail** pagina il [ `Label` ](xref:Xamarin.Forms.Label) Visualizza "Dimensione della popolazione sconosciuto" perché manca l'oggetto associato un `Population` proprietà.
+Quando la proprietà `FallbackValue` non è impostata in un'espressione di binding e il percorso di binding o una parte di esso non viene risolta, nella destinazione viene impostato [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue). Tuttavia, quando la proprietà `FallbackValue` è impostata e il percorso di binding o una parte di esso non viene risolta, nella destinazione viene impostato il valore della proprietà `FallbackValue`. Di conseguenza, nella pagina **MonkeyDetail** l'elemento [`Label`](xref:Xamarin.Forms.Label) visualizza "Population size unknown" (Dimensioni popolazione sconosciute) perché l'oggetto associato non dispone di una proprietà `Population`.
 
 > [!IMPORTANT]
-> Un convertitore di tipi di valore definito non viene eseguita in un'espressione di associazione quando il [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackValue) è impostata.
+> Un convertitore di valori definito non viene eseguito in un'espressione di binding quando è impostata la proprietà [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue).
 
 ## <a name="defining-a-null-replacement-value"></a>Definizione di un valore di sostituzione null
 
-Il [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetNullValue) proprietà consente di definire un valore di sostituzione che verrà utilizzato quando l'associazione *origine* viene risolto, ma il valore è `null`. Uno scenario comune per l'impostazione di questa proprietà è durante l'associazione a proprietà di origine che potrebbero essere `null` in una raccolta associata.
+La proprietà [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) consente di definire un valore di sostituzione che viene usato nel caso in cui l'*origine* del binding viene risolta, ma il valore è `null`. Uno scenario classico per l'impostazione di questa proprietà è il caso di un binding a proprietà di origine che potrebbero essere `null` in una raccolta associata.
 
-Il **esistono programmatori** pagina viene illustrata l'impostazione di [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetNullValue) proprietà:
+La pagina **Monkeys** illustra l'impostazione della proprietà [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue):
 
 ```xaml
 <ListView ItemsSource="{Binding Monkeys}"
@@ -79,9 +79,9 @@ Il **esistono programmatori** pagina viene illustrata l'impostazione di [ `Targe
 </ListView>
 ```
 
-Le associazioni sul [ `Image` ](xref:Xamarin.Forms.Image) e [ `Label` ](xref:Xamarin.Forms.Label) definiscono entrambi [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetNullValue) valori che verranno applicati se il percorso di associazione restituisce `null`. Pertanto, i valori definiti dal `TargetNullValue` verranno visualizzate le proprietà per tutti gli oggetti nella raccolta in cui il `ImageUrl` e `Location` proprietà non sono definite. Si noti che qui il `TargetNullValue` i valori delle proprietà sono delimitati da caratteri di virgoletta singola (apostrofo).
+Entrambi i binding su [`Image`](xref:Xamarin.Forms.Image) e [`Label`](xref:Xamarin.Forms.Label) definiscono i valori [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) che verranno applicati se il percorso di binding restituisce `null`. Pertanto i valori definiti dalle proprietà `TargetNullValue` vengono visualizzati per tutti gli oggetti della raccolta in cui le proprietà `ImageUrl` e `Location` non sono definite. Si noti che qui i valori della proprietà `TargetNullValue` sono delimitati da caratteri virgoletta singola (apostrofo).
 
-Invece di definire [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetNullValue) valori di proprietà inline, si consiglia di definirli come risorse in un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary). Il vantaggio di questo approccio è che tali valori sono definiti una volta in un'unica posizione e sono più facilmente localizzabili. Le risorse possono quindi essere recuperate tramite il `StaticResource` estensione di markup:
+Invece di definire i valori della proprietà [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) inline, è consigliabile definirli come risorse in un elemento [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). Il vantaggio di questo approccio è che questi valori vengono definiti una sola volta in un'unica posizione e sono più facilmente localizzabili. È quindi possibile recuperare le risorse tramite l'estensione di markup `StaticResource`:
 
 ```xaml
 <Image Source="{Binding ImageUrl, TargetNullValue={StaticResource fallbackImageUrl}}"
@@ -91,17 +91,17 @@ Invece di definire [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetNu
 ```
 
 > [!NOTE]
-> Non è possibile impostare il `TargetNullValue` proprietà con un'espressione di associazione.
+> Non è possibile impostare la proprietà `TargetNullValue` con un'espressione di binding.
 
 Ecco il programma in esecuzione:
 
-[![Associazione TargetNullValue](binding-fallbacks-images/bindingunavailable-small.png "associazione TargetNullValue")](binding-fallbacks-images/bindingunavailable-large.png#lightbox "TargetNullValue associazione")
+[![Binding TargetNullValue](binding-fallbacks-images/bindingunavailable-small.png "Binding TargetNullValue")](binding-fallbacks-images/bindingunavailable-large.png#lightbox "Binding TargetNullValue")
 
-Quando la `TargetNullValue` non è impostata in un'espressione di associazione, un valore di origine di `null` verranno convertite se viene definito un convertitore di valori, formattati se un `StringFormat` è definito, e il risultato viene quindi impostato sulla destinazione. Tuttavia, quando la `TargetNullValue` è impostata, un valore di origine di `null` verrà convertito se è definito un convertitore di valori, e se è ancora `null` dopo la conversione, il valore della `TargetNullValue` viene impostata nella destinazione.
+Quando la proprietà `TargetNullValue` non è impostata in un'espressione di binding, un valore di origine `null` viene convertito se è definito un convertitore di valori, formattato se è definito un `StringFormat` e quindi il risultato viene impostato nella destinazione. Tuttavia, quando la proprietà `TargetNullValue` è impostata, il valore di origine `null` viene convertito se è definito un convertitore di valori, e se è ancora `null` dopo la conversione, nella destinazione viene impostato il valore della proprietà `TargetNullValue`.
 
 > [!IMPORTANT]
-> Formattazione della stringa non viene applicata in un'espressione di associazione quando il `TargetNullValue` è impostata.
+> La formattazione della stringa non viene applicata in un'espressione di binding quando è impostata la proprietà `TargetNullValue`.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Data Binding Demo (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demo sul data binding (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)

@@ -1,6 +1,6 @@
 ---
 title: Comportamenti associati
-description: Comportamenti associati sono le classi statiche con uno o più proprietà associate. Questo articolo illustra come creare e utilizzare i comportamenti associati.
+description: I comportamenti associati sono classi statiche con una o più proprietà associate. Questo articolo illustra come creare e usare i comportamenti associati.
 ms.prod: xamarin
 ms.assetid: ECEE6AEC-44FA-4AF7-BAD0-88C6EE48422E
 ms.technology: xamarin-forms
@@ -9,29 +9,29 @@ ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: 2c9bd9ad4e7572b9eae6f0073da8a2c8f1e7c9fc
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38995346"
 ---
 # <a name="attached-behaviors"></a>Comportamenti associati
 
-_Comportamenti associati sono le classi statiche con uno o più proprietà associate. Questo articolo illustra come creare e utilizzare i comportamenti associati._
+_I comportamenti associati sono classi statiche con una o più proprietà associate. Questo articolo illustra come creare e usare i comportamenti associati._
 
 ## <a name="overview"></a>Panoramica
 
-Una proprietà associata è un tipo speciale di proprietà associabili. Sono definiti in una classe ma collegati ad altri oggetti, e sono riconoscibili in XAML come attributi che contengono una classe e un nome di proprietà separati da un punto.
+Le proprietà associate sono un tipo speciale di proprietà associabili. Sono definite in una classe ma associate ad altri oggetti. Sono riconoscibili in XAML perché si presentano come attributi che contengono una classe e un nome di proprietà separati da un punto.
 
-Una proprietà associata è possibile definire un `propertyChanged` delegato che verrà eseguita quando cambia il valore della proprietà, ad esempio quando la proprietà è impostata su un controllo. Quando il `propertyChanged` delegato viene eseguita, è passato un riferimento ai parametri che contengono i valori vecchi e nuovi per la proprietà e il controllo su cui è associato. Questo delegato può essere utilizzato per aggiungere nuove funzionalità al controllo che ha la proprietà è associata a modificando il riferimento che viene passato, come indicato di seguito:
+Una proprietà associata può definire un delegato `propertyChanged` che verrà eseguito quando cambia il valore della proprietà, ad esempio quando la proprietà è impostata su un controllo. Quando viene eseguito, il delegato `propertyChanged` passa un riferimento al controllo a cui è associato e ai parametri che contengono i valori vecchi e nuovi della proprietà. Questo delegato può essere utilizzato per aggiungere nuove funzionalità al controllo a cui la proprietà è associata modificando il riferimento con cui viene passato, come indicato di seguito:
 
-1. Il `propertyChanged` delegato esegue il cast il riferimento di controllo, come è stato ricevuto un [ `BindableObject` ](xref:Xamarin.Forms.BindableObject)al tipo di controllo che il comportamento è progettato per migliorare.
-1. Il `propertyChanged` delegato modifica le proprietà del controllo, chiama i metodi del controllo o registra i gestori di eventi per gli eventi esposti dal controllo, per implementare le funzionalità di comportamento di base.
+1. Il delegato `propertyChanged` esegue il cast del riferimento del controllo, ricevuto come [`BindableObject`](xref:Xamarin.Forms.BindableObject), convertendolo nel tipo di controllo che il comportamento è progettato per migliorare.
+1. Il delegato `propertyChanged` modifica le proprietà del controllo, chiama i metodi del controllo o registra i gestori di eventi per gli eventi esposti dal controllo allo scopo di implementare le funzionalità del comportamento di base.
 
-Un problema con comportamenti associati è che sono definiti un `static` (classe), con `static` proprietà e metodi. Questo rende difficile creare comportamenti associati che dispongono dello stato. Inoltre, i comportamenti di xamarin. Forms sono sostituite comportamenti associati come approccio preferito per la costruzione di comportamento. Per altre informazioni sui comportamenti di xamarin. Forms, vedere [comportamenti di xamarin. Forms](~/xamarin-forms/app-fundamentals/behaviors/creating.md) e [comportamenti riutilizzabili](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
+Un problema che può sorgere con comportamenti associati è che sono definiti in una classe `static` con proprietà e metodi di tipo `static`. Ciò rende difficile creare comportamenti associati che presentano uno stato. Inoltre, i comportamenti associati sono stati sostituiti dai comportamenti di Xamarin.Forms come strategia preferita per la costruzione dei comportamenti. Per altre informazioni sui comportamenti di Xamarin.Forms, vedere [Comportamenti di Xamarin.Forms](~/xamarin-forms/app-fundamentals/behaviors/creating.md) e [Comportamenti riutilizzabili](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
 
-## <a name="creating-an-attached-behavior"></a>Creazione di un comportamento dell'allegato
+## <a name="creating-an-attached-behavior"></a>Creazione di un comportamento associato
 
-L'applicazione di esempio viene illustrato un `NumericValidationBehavior`, che evidenzia il valore immesso dall'utente in un [ `Entry` ](xref:Xamarin.Forms.Entry) in rosso, il controllo se non è un `double`. Il comportamento è illustrato nell'esempio di codice seguente:
+L'applicazione di esempio illustra un `NumericValidationBehavior`, che evidenzia in rosso il valore immesso dall'utente in un controllo [`Entry`](xref:Xamarin.Forms.Entry), se non ha valore `double`. Il comportamento è illustrato nell'esempio di codice riportato di seguito:
 
 ```csharp
 public static class NumericValidationBehavior
@@ -78,11 +78,11 @@ public static class NumericValidationBehavior
 }
 ```
 
-Il `NumericValidationBehavior` classe contiene una proprietà associata denominata `AttachBehavior` con un `static` getter e setter, che controlla l'aggiunta o la rimozione del comportamento per il controllo a cui verrà collegato. Ciò collegato proprietà registri il `OnAttachBehaviorChanged` metodo che verrà eseguito quando viene modificato il valore della proprietà. Questo metodo registra o deprovisioning registra un gestore eventi per il [ `TextChanged` ](xref:Xamarin.Forms.Entry.TextChanged) evento, in base al valore della `AttachBehavior` proprietà associata. Le funzionalità di base del comportamento avviene tramite il `OnEntryTextChanged` metodo, che analizza il valore immesso nel [ `Entry` ](xref:Xamarin.Forms.Entry) dall'utente e i set del `TextColor` proprietà in rosso se il valore non è un `double`.
+La classe `NumericValidationBehavior` contiene una proprietà associata denominata `AttachBehavior` con un getter e un setter `static`, che controlla l'aggiunta o la rimozione del comportamento del controllo a cui verrà associata. Tale proprietà associata registra il metodo `OnAttachBehaviorChanged` che verrà eseguito quando cambia il valore della proprietà. Questo metodo registra, o annulla la registrazione di, un gestore eventi per l'evento [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged), in base al valore della proprietà associata `AttachBehavior`. La funzionalità di base del comportamento è fornita dal metodo `OnEntryTextChanged`, che analizza il valore immesso nel controllo [`Entry`](xref:Xamarin.Forms.Entry) dall'utente e imposta la proprietà `TextColor` su rosso se il valore non è `double`.
 
-## <a name="consuming-an-attached-behavior"></a>Utilizzo di un comportamento dell'allegato
+## <a name="consuming-an-attached-behavior"></a>Uso di un comportamento associato
 
-Il `NumericValidationBehavior` classe può essere usata aggiungendo il `AttachBehavior` proprietà associata un' [ `Entry` ](xref:Xamarin.Forms.Entry) controllare, come illustrato nell'esempio di codice XAML seguente:
+La classe `NumericValidationBehavior` può essere usata aggiungendo la proprietà associata `AttachBehavior` a un controllo [`Entry`](xref:Xamarin.Forms.Entry), come illustrato nell'esempio di codice XAML seguente:
 
 ```xaml
 <ContentPage ... xmlns:local="clr-namespace:WorkingWithBehaviors;assembly=WorkingWithBehaviors" ...>
@@ -92,40 +92,40 @@ Il `NumericValidationBehavior` classe può essere usata aggiungendo il `AttachBe
 </ContentPage>
 ```
 
-L'equivalente [ `Entry` ](xref:Xamarin.Forms.Entry) nel linguaggio c# viene illustrato nell'esempio di codice seguente:
+Il codice C# equivalente per il controllo [`Entry`](xref:Xamarin.Forms.Entry) è visualizzato nell'esempio seguente:
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter a System.Double" };
 NumericValidationBehavior.SetAttachBehavior (entry, true);
 ```
 
-In fase di esecuzione, il comportamento risponderà all'interazione con il controllo, in base all'implementazione del comportamento. Gli screenshot seguenti dimostrano il comportamento associato rispondono a input non valido:
+In fase di esecuzione, il comportamento risponderà all'interazione con il controllo in base all'implementazione del comportamento. Gli screenshot seguenti illustrano il comportamento associato che risponde a input non valido:
 
-[![](attached-images/screenshots-sml.png "Esempio di applicazione con comportamento collegato")](attached-images/screenshots.png#lightbox "applicazione con comportamento collegato di esempio")
+[![](attached-images/screenshots-sml.png "Esempio di applicazione con comportamento associato")](attached-images/screenshots.png#lightbox "Esempio di applicazione con comportamento associato")
 
 > [!NOTE]
-> Comportamenti associati vengono scritti per un tipo di controllo specifici (o una superclasse che è possibile applicare a molti controlli) e devono essere aggiunte solo a un controllo compatibile. Tentativo di associare un comportamento a un controllo incompatibile determineranno un comportamento sconosciuto e dipende dall'implementazione comportamento.
+> I comportamenti associati vengono scritti per un tipo di controllo specifico, o per una superclasse che è possibile applicare a molti controlli, e devono essere aggiunti solo a controlli compatibili. Il tentativo di associare un comportamento a un controllo incompatibile genererà un comportamento imprevisto dettato dall'implementazione del comportamento.
 
-### <a name="removing-an-attached-behavior-from-a-control"></a>Rimozione di un comportamento dell'allegato da un controllo
+### <a name="removing-an-attached-behavior-from-a-control"></a>Rimozione di un comportamento associato da un controllo
 
-Il `NumericValidationBehavior` classe può essere rimosso da un controllo impostando la `AttachBehavior` proprietà associata `false`, come illustrato nell'esempio di codice XAML seguente:
+La classe `NumericValidationBehavior` può essere rimossa da un controllo impostando la proprietà associata `AttachBehavior` su `false`, come illustrato nell'esempio di codice XAML seguente:
 
 ```xaml
 <Entry Placeholder="Enter a System.Double" local:NumericValidationBehavior.AttachBehavior="false" />
 ```
 
-L'equivalente [ `Entry` ](xref:Xamarin.Forms.Entry) nel linguaggio c# viene illustrato nell'esempio di codice seguente:
+Il codice C# equivalente per il controllo [`Entry`](xref:Xamarin.Forms.Entry) è visualizzato nell'esempio seguente:
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter a System.Double" };
 NumericValidationBehavior.SetAttachBehavior (entry, false);
 ```
 
-In fase di esecuzione, il `OnAttachBehaviorChanged` metodo sarà eseguita quando il valore della `AttachBehavior` associata è impostata su `false`. Il `OnAttachBehaviorChanged` metodo verrà quindi annullare la registrazione del gestore eventi per il [ `TextChanged` ](xref:Xamarin.Forms.Entry.TextChanged) evento, assicurando che il comportamento non viene eseguito quando l'utente interagisce con il controllo.
+In fase di esecuzione, il metodo `OnAttachBehaviorChanged` sarà eseguito quando il valore della proprietà associata `AttachBehavior` è impostato su `false`. Il metodo `OnAttachBehaviorChanged` eseguirà quindi l'annullamento della registrazione del gestore eventi per l'evento [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged), affinché il comportamento non venga eseguito quando l'utente interagisce con il controllo.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo è stato illustrato come creare e utilizzare i comportamenti associati. Comportamenti associati sono `static` classi con uno o più proprietà associate.
+Questo articolo ha illustrato come creare e usare i comportamenti associati. I comportamenti associati sono classi `static` con una o più proprietà associate.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
