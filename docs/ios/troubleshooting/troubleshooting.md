@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 4ab6b217190ea633611a9c869ec7e93befcc3c56
-ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
+ms.openlocfilehash: 146b05cf7ca2bbd05e952ecc9064fbb9168d179a
+ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681566"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53609935"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Suggerimenti di risoluzione dei problemi per xamarin. IOS 
 
@@ -98,7 +98,7 @@ public partial class MyImageView : UIView {
    public MyImageView (IntPtr handle) : base (handle {}
 }
 ```
-## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System. MissingMethodException: Non sono stati trovati costruttori per Foo.Bar::ctor(System.IntPtr)
+## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System. MissingMethodException: Non sono stati trovati per Foo.Bar::ctor(System.IntPtr) costruttori
 
 Questo errore viene generato in fase di esecuzione quando il codice tenta di creare un'istanza delle classi che si è fatto riferimento dal file di Interface Builder. Ciò significa che si sia dimenticato di aggiungere un costruttore che accetta un singolo elemento IntPtr come parametro.
 
@@ -123,13 +123,13 @@ Vengono generati i file della finestra di progettazione utilizzando le impostazi
 
 Le impostazioni di Namespace sono reperibile nella finestra di dialogo Opzioni progetto. Spazio dei nomi predefinito viene trovato nel **generale -> Impostazioni principali** sezione. Se è vuota, l'impostazione predefinita viene utilizzato il nome del progetto. Le impostazioni dello spazio dei nomi più avanzate sono reperibile nella **codice sorgente -> Criteri di denominazione .NET** sezione.
 
-## <a name="warning-for-actions-the-private-method-foo-is-never-used-cs0169"></a>Per le azioni di avviso: il metodo privato 'Foo' non è mai utilizzato. (CS0169)
+## <a name="warning-for-actions-the-private-method-foo-is-never-used-cs0169"></a>Avviso per le azioni: Il metodo privato 'Foo' non è mai utilizzato. (CS0169)
 
 Azioni per i file generatore dell'interfaccia sono connesse per i widget tramite reflection in fase di esecuzione, in modo che questo avviso sia previsto.
 
 È possibile usare "avviso #pragma Disabilita 0169" "Abilita avviso #pragma 0169" per le azioni se si desidera eliminare l'avviso solo per questi metodi oppure aggiungere 0169 al campo "Ignora gli avvisi" nelle opzioni del compilatore se si desidera disabilitarlo per l'intero progetto (non scelta consigliata).
 
-## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mtouch non è riuscita con messaggio analogo al seguente: Impossibile aprire l'assembly ' / path/to/yourproject.exe'
+## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mtouch non è riuscita con messaggio analogo al seguente: Non è possibile aprire l'assembly ' / path/to/yourproject.exe'
 
 Se viene visualizzato questo messaggio di errore, in genere il problema è che il percorso assoluto per il progetto contiene uno spazio. Questo problema verrà risolto in una futura versione di xamarin. IOS, ma è possibile risolvere il problema tramite lo spostamento del progetto in una cartella senza spazi.
 
@@ -144,7 +144,7 @@ Ciò si verifica quando si esegue l'operazione di tutti gli elementi seguenti:
 
 Il problema è che Mono preleva per OS X `libsqlite3.dylib`, del non il iPhoneSimulator `libsqlite3.dylib` file. L'app *verranno* operano con il dispositivo, ma non il simulatore.
 
-## <a name="deploy-to-device-fails-with-systemexception-amdeviceinstallapplication-returned-3892346901"></a>Distribuire a ha esito negativo di periferica e System. Exception: AMDeviceInstallApplication restituito 3892346901
+## <a name="deploy-to-device-fails-with-systemexception-amdeviceinstallapplication-returned-3892346901"></a>Distribuire avrà esito negativo di periferica e System. Exception: AMDeviceInstallApplication restituito 3892346901
 
 Questo errore indica che la configurazione di firma codice per l'id bundle/certificato non corrisponde al profilo di provisioning installato nel dispositivo.  Verificare che sia il certificato appropriato selezionato in Opzioni progetto -> firma del Bundle iPhone e l'id bundle corrette specificata in Opzioni progetto -> applicazione iPhone
 
@@ -212,7 +212,7 @@ Questo problema è molto raro ed estremamente difficili da riprodurre: in genere
 
 Allegare i log, XS **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}. log**, e **componenti-{TIMESTAMP}. log**(nelle versioni precedenti di MonoDevelop/XS, è sufficiente inviare **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**).
 
- **Nota: È stato risolto il problema sopra indicato in XS 2.2 finale**
+ **NOTA: È stato risolto il problema sopra indicato in XS 2.2 finale**
 
 ## <a name="compiled-application-is-very-large"></a>Applicazione compilata è molto grande
 
@@ -317,7 +317,7 @@ Attenersi ai passaggi riportati di seguito.
 -  Creare un file Info. plist personalizzato per il progetto e impostare in modo esplicito MinimumOSVersion 3.0 in esso.   Sostituirà il valore 3.2 MinimumOSVersion impostato da xamarin. IOS.   Se non eseguire questa operazione, l'app non sarà in grado di eseguire in un iPhone.
 -  Ricompilazione, zip e caricare in iTunes connect.
 
-## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>Eccezione non gestita: System. Exception: Impossibile trovare il selettore someSelector: su {type}
+## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>Eccezione non gestita: System.Exception: Impossibile trovare il selettore someSelector: su {type}
 
 Questa eccezione è causata da una delle tre operazioni:
 
@@ -398,7 +398,7 @@ Ciò non è consentita come nome del file eseguibile in CFBundleExecutable - anc
 
  * "Il valore non può includere qualsiasi estensione del nome." - [http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
 
-## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>Errore: "tipo di attributo personalizzato 0x43 non è supportato" quando si fa doppio clic su file con estensione xib
+## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>Errore: "Non è supportato il tipo di attributo personalizzato 0x43" quando si fa doppio clic su file con estensione xib
 
 Ciò è causato dal tentativo di aprire file con estensione xib quando le variabili di ambiente vengono impostate in modo non corretto. Ciò non dovrebbe accadere con il normale utilizzo di Visual Studio per Mac/Xamarin.iOS e riaprire Visual Studio per Mac da /Applications dovrebbe risolvere il problema.
 
@@ -411,28 +411,8 @@ Questo problema può manifestarsi in diversi moduli e non sempre produce un erro
 Per controllare l'azione di compilazione, fare clic con il pulsante destro sul file con estensione xib, scegliere **azione di compilazione**.
 
 
-## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System. NotSupportedException: Non sono disponibili dati per la codifica 437
+## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System. NotSupportedException: Dati non sono disponibili per la codifica 437
 
-Quando si include librerie di terze parti 3rd nell'app xamarin. IOS, è possibile ottenere un errore nel modulo "System. NotSupportedException: dati non sono disponibili per la codifica 437" quando si tenta di compilare ed eseguire l'app. Ad esempio, le librerie, ad esempio `Ionic.Zip.ZipFile`, possono generare questa eccezione durante l'operazione.
+Quando si include librerie di terze parti 3rd nell'app xamarin. IOS, è possibile ottenere un errore nel modulo "System. NotSupportedException: Non sono disponibili dati per la codifica 437" quando si tenta di compilare ed eseguire l'app. Ad esempio, le librerie, ad esempio `Ionic.Zip.ZipFile`, possono generare questa eccezione durante l'operazione.
 
 Questo problema può essere risolto, aprire le opzioni per il progetto xamarin. IOS, passare a **compilazione iOS** > **internazionalizzazione** e controllando il **occidentale** internazionalizzazione.
-
-
-
-<a name="Can't_upgrade_to_Indie/Business_from_Trial_Account" />
-
-
-## <a name="cant-upgrade-to-indiebusiness-from-trial-account"></a>Non è possibile eseguire l'aggiornamento a Indie/Business dalla versione di valutazione Account
-
-Se si ha recentemente acquistato xamarin. IOS e avviata in precedenza una versione di valutazione di xamarin. IOS, si potrebbe essere necessario completare i passaggi seguenti per ottenere questa modifica licenza prelevata da Visual Studio per Mac o Visual Studio.
-
--  Chiudere Visual Studio per Mac/Visual Studio
--  Rimuovere tutti i file da ~/Library/MonoTouch in Mac o %PROGRAMDATA%\MonoTouch\License\ per Windows
--  Riaprire Visual Studio per Mac/Visual Studio e compila un progetto xamarin. IOS
-
-
-## <a name="receiving-activation-incomplete-error-message"></a>Riceve il messaggio di errore 'Attivazione incompleto'
-
-Questo problema può verificarsi quando si usa xamarin. IOS per Visual Studio. Per risolvere questo problema, dal percorso seguente per inviare i log [ contact@xamarin.com ](mailto:contact@xamarin.com).
-
--  Percorso file di registro: %LocalAppData%/Xamarin/Logs

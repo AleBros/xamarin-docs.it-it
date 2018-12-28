@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: bd13163b513ea1f6b0381e99e65d0bd727f97735
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 65316bde1d1c709028eae39c19e5dc318821ff70
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055728"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746882"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Nozioni fondamentali sull'associazione dati
 
@@ -22,7 +22,7 @@ _Le associazioni dati consentono di proprietà di due oggetti da collegare in mo
 
 ## <a name="data-bindings"></a>Associazioni dati
 
-Le associazioni dati connettono le proprietà di due oggetti, denominati il *origine* e il *destinazione*. Nel codice, sono necessari due passaggi: il `BindingContext` proprietà dell'oggetto di destinazione deve essere impostata per l'oggetto di origine e il `SetBinding` metodo (spesso usato in combinazione con il `Binding` classe) deve essere chiamato sull'oggetto di destinazione per associare una proprietà di tale oggetto da una proprietà dell'oggetto di origine.
+Le associazioni dati connettono le proprietà di due oggetti, denominati il *origine* e il *destinazione*. Nel codice, sono necessari due passaggi: Il `BindingContext` proprietà dell'oggetto di destinazione deve essere impostata per l'oggetto di origine e il `SetBinding` metodo (spesso usato in combinazione con il `Binding` classe) deve essere chiamato sull'oggetto di destinazione per associare una proprietà di tale oggetto a una proprietà dell'origine oggetto.
 
 La proprietà di destinazione deve essere una proprietà associabile, il che significa che l'oggetto di destinazione deve derivare da `BindableObject`. La documentazione online di xamarin. Forms indica le proprietà che sono proprietà associabili. Una proprietà del `Label` , ad esempio `Text` associata con la proprietà associabile `TextProperty`.
 
@@ -71,7 +71,7 @@ Il `Slider` contiene un `x:Name` attributo cui viene fatto riferimento dai due `
 
 Il `x:Reference` estensione di binding definisce una proprietà denominata `Name` per impostare il nome dell'elemento di cui viene fatto riferimento, in questo caso `slider`. Tuttavia, il `ReferenceExtension` classe che definisce il `x:Reference` estensione di markup definisce anche un `ContentProperty` attributo per `Name`, il che significa che non è richiesta in modo esplicito. Solo per diverse, il primo `x:Reference` include "Name =" ma non il secondo:
 
-```csharp
+```xaml
 BindingContext="{x:Reference Name=slider}"
 …
 BindingContext="{x:Reference slider}"
@@ -79,7 +79,7 @@ BindingContext="{x:Reference slider}"
 
 Il `Binding` estensione di markup stesso può avere diverse proprietà, come i `BindingBase` e `Binding` classe. Il `ContentProperty` per `Binding` viene `Path`, ma il "percorso =" parte dell'estensione di markup può essere omesso se il percorso è il primo elemento nel `Binding` estensione di markup. Nel primo esempio è "percorso =", ma omette il secondo esempio:
 
-```csharp
+```xaml
 Rotation="{Binding Path=Value}"
 …
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
@@ -87,7 +87,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 Le proprietà possono essere tutti su una riga o suddivisi in più righe:
 
-```csharp
+```xaml
 Text="{Binding Value,
                StringFormat='The angle is {0:F0} degrees'}"
 ```
@@ -96,7 +96,7 @@ Eseguire le operazioni pratica.
 
 Si noti che il `StringFormat` proprietà nella seconda `Binding` estensione di markup. In xamarin. Forms, le associazioni non eseguono alcuna conversione implicita del tipo e se è necessario visualizzare un oggetto non di tipo stringa sotto forma di stringa deve fornire un convertitore di tipi o usare `StringFormat`. Dietro le quinte, il metodo statico `String.Format` metodo viene usato per implementare `StringFormat`. Questo metodo è potenzialmente un problema, perché comportano la parentesi graffe, che vengono usate anche per delimitare le estensioni di markup specifiche di formato .NET. In questo modo viene creata un rischio di confondere il parser XAML. Per evitare questo problema, inserire l'intera stringa di formattazione tra virgolette singole:
 
-```csharp
+```xaml
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 ```
 
@@ -117,7 +117,7 @@ La soluzione a questo e altri problemi prevede la `Mode` proprietà, che è impo
 
 Il programma seguente viene illustrato un caso frequente il `OneWayToSource` e `TwoWay` modalità di associazione. Quattro `Slider` viste sono destinate al controllo il `Scale`, `Rotate`, `RotateX`, e `RotateY` le proprietà di un `Label`. Inizialmente, può sembrare come se questi quattro proprietà del `Label` deve essere destinazioni di associazione dati, perché ognuno viene impostata un `Slider`. Tuttavia, il `BindingContext` di `Label` può essere solo un oggetto e non esistono quattro diversi dispositivi di scorrimento.
 
-Per questo motivo, tutte le associazioni vengono impostate apparentemente con le versioni precedenti modi: il `BindingContext` della ognuno dei quattro i dispositivi di scorrimento è impostato sul `Label`, e le associazioni vengono impostate per il `Value` le proprietà di scorrimento. Tramite il `OneWayToSource` e `TwoWay` modalità, queste `Value` proprietà possono impostare le proprietà di origine, che sono il `Scale`, `Rotate`, `RotateX`, e `RotateY` le proprietà del `Label`:
+Per questo motivo, tutte le associazioni vengono impostate apparentemente con le versioni precedenti modi: Il `BindingContext` della ognuno dei quattro i dispositivi di scorrimento è impostato sul `Label`, e le associazioni vengono impostate per il `Value` le proprietà di scorrimento. Tramite il `OneWayToSource` e `TwoWay` modalità, queste `Value` proprietà possono impostare le proprietà di origine, che sono il `Scale`, `Rotate`, `RotateX`, e `RotateY` le proprietà del `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

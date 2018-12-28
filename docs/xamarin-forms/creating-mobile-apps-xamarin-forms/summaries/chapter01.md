@@ -1,18 +1,18 @@
 ---
 title: Riepilogo del capitolo 1. Xamarin. Forms?
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 1. Xamarin. Forms?'
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 1. Xamarin. Forms?'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 552cff71911b0f5ee118e15cb543e16bbfa19bd3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 40f319a67ecc2ca81243c8ac7c415266c1ea0b5c
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050965"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746856"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Riepilogo del capitolo 1. Xamarin. Forms?
 
@@ -25,9 +25,9 @@ Uno dei processi più spiacevoli nella programmazione consiste nel porting di un
 
 ## <a name="cross-platform-mobile-development"></a>Sviluppo di app per dispositivi mobili multipiattaforma
 
-Questo problema è comune quando la destinazione di piattaforme per dispositivi mobili. Attualmente, esistono due principali piattaforme per dispositivi mobili, la famiglia di Apple iPhone e iPad che eseguono il sistema operativo iOS e il sistema operativo Android che viene eseguito su una vasta gamma di telefoni e Tablet. Un'altra piattaforma significativa è Microsoft Windows della piattaforma UWP (Universal), che consente a un singolo programma di destinazione Windows 10 e Windows 10 Mobile.
+Questo problema è comune quando la destinazione di piattaforme per dispositivi mobili. Attualmente, esistono due principali piattaforme per dispositivi mobili, la famiglia di Apple iPhone e iPad che eseguono il sistema operativo iOS e il sistema operativo Android che viene eseguito su una vasta gamma di telefoni e Tablet. Un'altra piattaforma significativa è Microsoft Windows della piattaforma UWP (Universal), che consente a un singolo programma di destinazione sia Windows 10.
 
-Un fornitore di software che vuole che per queste piattaforme di destinazione deve affrontare paradigmi di interfaccia utente diverso, tre ambienti di sviluppo diverso, tre interfacce di programmazione diversi, e&mdash;forse più considerato&mdash;tre diversi linguaggi di programmazione: Objective-C per iPhone e iPad, per Android, Java e C# per Windows.
+Un fornitore di software che vuole che per queste piattaforme di destinazione deve affrontare paradigmi di interfaccia utente diverso, tre ambienti di sviluppo diverso, tre interfacce di programmazione diversi, e&mdash;forse più considerato&mdash;tre linguaggi di programmazione diversi: Objective-C per iPhone e iPad, per Android, Java e C# per Windows.
 
 ## <a name="the-c-and-net-solution"></a>La soluzione c# e .NET
 
@@ -42,16 +42,14 @@ Gli sviluppatori possono usare la piattaforma Xamarin per scrivere applicazioni 
 
 ## <a name="introducing-xamarinforms"></a>Introduzione a xamarin. Forms
 
-Quando la destinazione più piattaforme per dispositivi mobili, xamarin. Forms consente la condivisione del codice ancora più. Un singolo programma scritto per xamarin. Forms è utilizzabile cinque piattaforme distinte:
+Quando la destinazione più piattaforme per dispositivi mobili, xamarin. Forms consente la condivisione del codice ancora più. Un singolo programma scritto per xamarin. Forms è utilizzabile queste piattaforme:
 
 - per i programmi eseguiti su iPhone, iPad e iPod touch iOS
 - Android per i programmi eseguiti su telefoni e Tablet Android
-- la piattaforma Windows universale per Windows 10 Mobile e di destinazione Windows 10
-- l'API del Runtime di Windows di Windows 8.1
-- l'API del Runtime di Windows di Windows Phone 8.1
+- la piattaforma universale di Windows di destinazione Windows 10
 
 > [!NOTE]
-> Xamarin. Forms non supporta più Windows 8.1, Windows Phone 8.1 o Windows 10 Mobile, ma le applicazioni xamarin. Forms vengono eseguite sul desktop di Windows 10. È inoltre disponibile il supporto di anteprima per il [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK #](~/xamarin-forms/platform/gtk.md), e [Tizen](/xamarin-forms/platform/tizen.md) piattaforme.
+> Xamarin. Forms non supporta più Windows 8.1, Windows Phone 8.1 o Windows 10 Mobile, ma le applicazioni xamarin. Forms vengono eseguite sul desktop di Windows 10. È inoltre disponibile il supporto di anteprima per il [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK #](~/xamarin-forms/platform/gtk.md), e [Tizen](~/xamarin-forms/platform/tizen.md) piattaforme.
 
 La maggior parte di un'applicazione xamarin. Forms esistente in una libreria o un SAP. Ognuna delle piattaforme è costituito da uno stub piccola applicazione che chiama il codice condiviso.
 
@@ -59,10 +57,7 @@ Eseguire il mapping APIs Xamarin.Forms in controlli nativi in ciascuna piattafor
 
 [![Schermata tripla degli oggetti visivi di piattaforma di condivisione](images/ch01fg03-small.png "xamarin. Forms Controls on Each Platform")](images/ch01fg03-large.png#lightbox "xamarin. Forms Controls on Each Platform")
 
-Gli screenshot da sinistra a destra mostrano un iPhone, un telefono Android e un telefono Windows 10 Mobile.
-
-> [!NOTE]
-> Xamarin. Forms non supporta più Windows 10 Mobile.
+Gli screenshot da sinistra a destra mostrano un iPhone e un telefono Android:
 
 In ogni schermata, la pagina contiene un xamarin. Forms [ `Label` ](xref:Xamarin.Forms.Label) per la visualizzazione di testo, una [ `Button` ](xref:Xamarin.Forms.Button) per l'inizializzazione di azioni, un [ `Switch` ](xref:Xamarin.Forms.Switch) per scelta di un valore di attivazione/disattivazione e un [ `Slider` ](xref:Xamarin.Forms.Slider) per specificare un valore all'interno di un intervallo continuo. Tutti e quattro le visualizzazioni sono elementi figlio di un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) su un [ `ContentPage` ](xref:Xamarin.Forms.ContentPage).
 

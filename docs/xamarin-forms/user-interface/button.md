@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 7108b24f73d1f7389bf37fe8640061ae3e077300
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 250b3de2ef41ce488165f3149c72ce28c39e53a3
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054424"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746895"
 ---
 # <a name="xamarinforms-button"></a>Pulsante di xamarin. Forms
 
@@ -138,7 +138,7 @@ button.Clicked += OnButtonClicked;
 
 ## <a name="disabling-the-button"></a>Disattivazione del pulsante
 
-In alcuni casi un'applicazione è in un determinato stato in cui un determinato `Button` clic non è un'operazione valida. In questi casi, il `Button` deve essere disabilitata impostando relativi `IsEnabled` proprietà `false`. L'esempio classico è un `Entry` controllo per un nome di file accompagnato da un file-Apri `Button`: le `Button` deve essere abilitata solo se è stato digitato del testo nella `Entry`.
+In alcuni casi un'applicazione è in un determinato stato in cui un determinato `Button` clic non è un'operazione valida. In questi casi, il `Button` deve essere disabilitata impostando relativi `IsEnabled` proprietà `false`. L'esempio classico è un `Entry` controllo per un nome di file accompagnato da un file-Apri `Button`: Il `Button` deve essere abilitata solo se è stato digitato del testo nella `Entry`.
 È possibile usare una `DataTrigger` per questa attività, come illustrato nella [ **i trigger Data** ](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers) articolo.
 
 ## <a name="using-the-command-interface"></a>Tramite l'interfaccia di comando
@@ -409,7 +409,7 @@ Il risultato è che il `Label` rotazione solo quando un dito è a contatto con i
 
 [![Premere e rilasciare sul pulsante](button-images/PressAndReleaseButton.png "premere e rilasciare pulsante")](button-images/PressAndReleaseButton-Large.png)
 
-Questo tipo di comportamento dispone di applicazioni per i giochi: un dito mantenuto su un `Button` potrebbe rendere un oggetto schermata su Sposta in una direzione particolare.
+Questo tipo di comportamento dispone di applicazioni per i giochi: Un dito mantenuto su un `Button` potrebbe rendere un oggetto schermata su Sposta in una direzione particolare.
 
 <a name="button-appearance" />
 
@@ -573,7 +573,7 @@ Nell'esempio XAML seguente viene illustrato come definire uno stato di visualizz
 
         </VisualStateGroup>
     </VisualStateManager.VisualStateGroups>
-</ImageButton>
+</Button>
 ```
 
 Il `Pressed` [ `VisualState` ](xref:Xamarin.Forms.VisualState) specifica che quando il [ `Button` ](xref:Xamarin.Forms.Button) viene premuto, relativo [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) proprietà verrà modificata da relativo valore predefinito di 1 a 0,8. Il `Normal` `VisualState` specifica che quando il `Button` è in uno stato normale, relativo `Scale` verrà impostata su 1. Pertanto, il risultato complessivo è che quando la `Button` è premuto, viene ridimensionata per essere leggermente più piccoli e quando il `Button` viene rilasciato, viene ridimensionata alle dimensioni predefinite.
@@ -582,7 +582,7 @@ Per altre informazioni sugli stati visual, vedere [di xamarin. Forms Visual Stat
 
 ## <a name="creating-a-toggle-button"></a>Creazione di un pulsante di attivazione/disattivazione
 
-È possibile per creare una sottoclasse `Button` così da poterla utilizzare ad esempio un interruttore on / off: toccare il pulsante di una sola volta per attivare il pulsante e toccare di nuovo per essere disattivata.
+È possibile per creare una sottoclasse `Button` così da poterla utilizzare ad esempio un interruttore attiva / non attiva: Toccare il pulsante di una sola volta per attivare il pulsante e toccare di nuovo per essere disattivata.
 
 Quanto segue `ToggleButton` deriva dalla classe `Button` e definisce un nuovo evento denominato `Toggled` e una proprietà booleana denominata `IsToggled`. Queste sono le stesse due proprietà definite da xamarin. Forms [ `Switch` ](xref:Xamarin.Forms.Switch):
 

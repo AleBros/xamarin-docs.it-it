@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 8df7e14088486d0eff9a6370303e83c5e69d4484
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8bc319b53e4a93d5cac35c4f8c3263b72dfe45e2
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119102"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746908"
 ---
 # <a name="images-in-xamarinmac"></a>Immagini in xamarin. Mac
 
@@ -219,22 +219,23 @@ MyIcon.Image = NSImage.ImageNamed ("MessageIcon");
 Aggiungere la seguente funzione pubblica per il Controller di visualizzazione:
 
 ```csharp
-public NSImage ImageTintedWithColor (NSImage image, NSColor tint)
-{
-    var tintedImage = image.Copy () as NSImage;
-    var frame = new CGRect (0, 0, image.Size.Width, image.Size.Height);
+public NSImage ImageTintedWithColor(NSImage sourceImage, NSColor tintColor)
+    => NSImage.ImageWithSize(sourceImage.Size, false, rect => {
+        // Draw the original source image
+        sourceImage.DrawInRect(rect, CGRect.Empty, NSCompositingOperation.SourceOver, 1f);
 
-    // Apply tint
-    tintedImage.LockFocus ();
-    tint.Set ();
-    NSGraphics.RectFill (frame, NSCompositingOperation.SourceAtop);
-    tintedImage.UnlockFocus ();
-    tintedImage.Template = false;
+        // Apply tint
+        tintColor.Set();
+        NSGraphics.RectFill(rect, NSCompositingOperation.SourceAtop);
 
-    // Return tinted image
-    return tintedImage;
-}
+        return true;
+    });
 ```
+
+> [!IMPORTANT]
+> In particolare con l'avvento della modalità scura in macOS Mojave, è importante evitare il `LockFocus` API quando esegue il rendering personalizzata reating `NSImage` oggetti. Tali immagini diventano statiche e non verranno aggiornate automaticamente per mostrare le modifiche di densità di aspetto o la visualizzazione.
+>
+> Usando il meccanismo precedente basato su gestore, re-rendering dinamico condizioni viene eseguita automaticamente quando il `NSImage` è ospitato, ad esempio, in un `NSImageView`.
 
 Infine, per tingere un'immagine modello, chiamare questa funzione con l'immagine da colorare:
 

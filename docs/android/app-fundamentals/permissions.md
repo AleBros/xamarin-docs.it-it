@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 1a73896e4f98a6535bcd7ed66f478d168b01157f
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 204dd903586164691d068a956e741c406df10b36
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526884"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746869"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Autorizzazioni In xamarin. Android
 
@@ -139,7 +139,7 @@ else
 
 È consigliabile informare l'utente per quanto riguarda il motivo per cui un'autorizzazione è necessaria per un'applicazione per consentire una decisione consapevole può essere effettuata per concedere l'autorizzazione. Un esempio di questo potrebbe essere un'app che accetta le foto e geo-tags li. È chiaro per l'utente che è necessaria l'autorizzazione di fotocamera, ma potrebbe non essere chiaro il motivo per cui l'app deve anche la posizione del dispositivo. La base logica deve visualizzare un messaggio di aiuto all'utente di comprendere il motivo per cui l'autorizzazione di posizione è auspicabile e che è necessaria l'autorizzazione di fotocamera.
 
-Il `ActivityCompat.ShouldShowRequestPermissionRational` metodo viene utilizzato per determinare se la base logica deve essere visualizzata all'utente. Questo metodo restituirà `true` se deve essere visualizzata la base logica per un'autorizzazione specificata. Questo screenshot Mostra un esempio di un Snackbar visualizzata da un'applicazione che spiega il motivo per cui l'app deve conoscere il percorso del dispositivo:
+Il `ActivityCompat.ShouldShowRequestPermissionRationale` metodo viene utilizzato per determinare se la base logica deve essere visualizzata all'utente. Questo metodo restituirà `true` se deve essere visualizzata la base logica per un'autorizzazione specificata. Questo screenshot Mostra un esempio di un Snackbar visualizzata da un'applicazione che spiega il motivo per cui l'app deve conoscere il percorso del dispositivo:
 
 ![Motivi per percorso](permissions-images/07-rationale-snackbar.png) 
 

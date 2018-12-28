@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: c2c0e516c864ec4073d5bb54b77754f58064d6b0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f498aab5bfaffc08a22f62a318f8f9f73ab0afca
+ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116745"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53609909"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Suggerimenti sulla risoluzione dei problemi di xamarin. Mac
 
@@ -77,7 +77,7 @@ Il **Consenti rete le connessioni in uscita (Client)** autorizzazione è necessa
 
 ### <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System. NotSupportedException: non sono disponibili dati per la codifica 437
  
-Quando si include librerie di terze parti 3rd nell'app xamarin. Mac, è possibile ottenere un errore nel modulo "System. NotSupportedException: dati non sono disponibili per la codifica 437" quando si tenta di compilare ed eseguire l'app. Ad esempio, le librerie, ad esempio `Ionic.Zip.ZipFile`, possono generare questa eccezione durante l'operazione.
+Quando si include librerie di terze parti 3rd nell'app xamarin. Mac, è possibile ottenere un errore nel modulo "System. NotSupportedException: Non sono disponibili dati per la codifica 437" quando si tenta di compilare ed eseguire l'app. Ad esempio, le librerie, ad esempio `Ionic.Zip.ZipFile`, possono generare questa eccezione durante l'operazione.
 
 Questo problema può essere risolto, aprire le opzioni per il progetto xamarin. Mac, passare a **compilazione Mac** > **internazionalizzazione** e controllando il **occidentale** internazionalizzazione:
 
@@ -110,10 +110,6 @@ Per i progetti xamarin. Mac esistenti, è necessario creare manualmente il **ent
 Immettere `Entitlements` per il nome, quindi scegliere il **New** pulsante. Se il progetto incluso in precedenza un file dei diritti, verrà richiesto di aggiungerlo al progetto invece di creare un nuovo file:
 
 [![Verifica per determinare se la sovrascrittura di un file](troubleshooting-images/entitlements04.png "verifica per determinare se la sovrascrittura di un file")](troubleshooting-images/entitlements04-large.png#lightbox)
-
-## <a name="contacting-support-business-or-enterprise-licenses"></a>Contattare il supporto tecnico (licenze di business o enterprise)
-
-Se si dispone di un'azienda o una licenza enterprise, sei idoneo per richiedere assistenza direttamente dai tecnici di Xamarin tramite i ticket di supporto. Visualizzare [xamarin.com/support](http://xamarin.com/support) per informazioni dettagliate.
 
 ## <a name="community-support-on-the-forums"></a>Supporto della community nei forum
 
