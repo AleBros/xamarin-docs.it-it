@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 11/04/2018
-ms.openlocfilehash: 5cb53006d7cc965f378f6e971bfc623f0c4cbd60
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: c40762ad4d165c1e5a29bdf9dc6d3c0fdb8581f7
+ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899108"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411726"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Introduzione a Xamarin.Essentials
 
@@ -33,7 +33,7 @@ Xamarin.Essentials è disponibile come pacchetto NuGet che può essere aggiunto 
 
 1. Scaricare e installare [Visual Studio](http://visualstudio.com) con [Visual Studio Tools per Xamarin](~/cross-platform/get-started/installation/index.md).
 
-2. Aprire un progetto esistente o creare un nuovo progetto usando il modello Applicazione vuota in **Visual Studio C#**  (Android, iPhone e iPad o multipiattaforma). **Importante**: in caso di aggiunta a un progetto UWP assicurarsi che nelle proprietà del progetto sia impostata la Build 16299 o versione successiva.
+2. Aprire un progetto esistente o creare un nuovo progetto usando il modello Applicazione vuota in **Visual Studio C#**  (Android, iPhone e iPad o multipiattaforma). **Importante**: in caso di aggiunta a un progetto della piattaforma UWP assicurarsi che nelle proprietà del progetto sia impostata la build 16299 o versione successiva.
 
 3. Aggiungere il pacchetto NuGet **Xamarin.Essentials** a ogni progetto:
 
@@ -47,9 +47,6 @@ Xamarin.Essentials è disponibile come pacchetto NuGet che può essere aggiunto 
     # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
     Nel pannello Esplora soluzioni fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi > Aggiungi pacchetti NuGet**. Cercare **Xamarin.Essentials** e installare il pacchetto in **TUTTI** i progetti, incluse le librerie Android, iOS e .NET Standard.
-
-    > [!TIP]
-    > Selezionare la casella di controllo **Mostra pacchetti di versioni non definitive** durante il periodo di anteprima di [**Xamarin.Essentials** NuGet](https://www.nuget.org/packages/Xamarin.Essentials).
 
     -----
 
