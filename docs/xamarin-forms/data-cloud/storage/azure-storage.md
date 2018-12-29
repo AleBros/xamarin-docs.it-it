@@ -6,21 +6,19 @@ ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2017
-ms.openlocfilehash: 1f920eb36eab3e451b20aa91734f00cee5ba6485
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/28/2018
+ms.openlocfilehash: 4ecffa0902d186b659e7df07dbcf17053e29c818
+ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059220"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814011"
 ---
 # <a name="storing-and-accessing-data-in-azure-storage"></a>L'archiviazione e accesso ai dati in archiviazione di Azure
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
 
 _Archiviazione di Azure è una soluzione di archiviazione cloud scalabile che può essere utilizzata per archiviare i dati non strutturati e strutturati. Questo articolo illustra come usare xamarin. Forms per archiviare dati di testo e binari in archiviazione di Azure e come accedere ai dati._
-
-## <a name="overview"></a>Panoramica
 
 Archiviazione di Azure offre quattro servizi di archiviazione:
 
@@ -69,9 +67,6 @@ Il processo per l'integrazione di un account di archiviazione di Azure in un'app
 1. Aggiungere il [Azure Storage Client Library](https://www.nuget.org/packages/WindowsAzure.Storage/) all'applicazione xamarin. Forms.
 1. Configurare la stringa di connessione di archiviazione. Per altre informazioni, vedere [ci si connette ad archiviazione di Azure](#connecting).
 1. Aggiungere `using` direttive per il `Microsoft.WindowsAzure.Storage` e `Microsoft.WindowsAzure.Storage.Blob` spazi dei nomi per le classi che avrà accesso archiviazione di Azure.
-
-> [!NOTE]
-> Mentre in questo esempio Usa un progetto di accesso condiviso, la libreria Client di archiviazione di Azure supporta ora anche consumata da un progetto libreria di classi portabile (PCL).
 
 <a name="connecting" />
 
@@ -263,15 +258,10 @@ public static async Task<bool> DeleteFileAsync(ContainerType containerType, stri
 
 Dopo aver recuperato un riferimento al contenitore, il metodo recupera un riferimento al blob per il blob specificato. Il blob viene quindi eliminato con il `DeleteIfExistsAsync` (metodo).
 
-## <a name="summary"></a>Riepilogo
-
-L'articolo descrive come usare xamarin. Forms per archiviare dati di testo e binari in archiviazione di Azure e come accedere ai dati. Archiviazione di Azure è una soluzione di archiviazione cloud scalabile che può essere usata per archiviare dati non strutturati e strutturati.
-
-
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Archiviazione di Azure (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
 - [Introduzione all'archiviazione](https://azure.microsoft.com/documentation/articles/storage-introduction/)
 - [Come usare archiviazione Blob da Xamarin](https://azure.microsoft.com/documentation/articles/storage-xamarin-blob-storage/)
 - [Uso delle firme di accesso condiviso (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
-- [Windows archiviazione di Azure](https://www.nuget.org/packages/WindowsAzure.Storage/)
+- [Windows Azure Storage (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/18/2018
-ms.openlocfilehash: adebd5fe7e05d6698a7d69cef56a1d4035b6d8e7
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 9924e588808783fe35dbd830bbc9af288f37e7ea
+ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563075"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53813960"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>eXtensible Application Markup Language (XAML)
 
@@ -20,7 +20,7 @@ _XAML è un linguaggio di markup dichiarativo che possa essere usato per definir
 
 > [!VIDEO https://youtube.com/embed/H6UOrSyhTEE]
 
-**Evoluzione 2016: Sta diventando uno schema XAML**
+**Evoluzione 2016: Diventando un Master di XAML**
 
 > [!NOTE]
 > Provare il [anteprima Standard XAML](standard/index.md)
@@ -66,3 +66,7 @@ Una proprietà associata è un tipo speciale di proprietà associabile, definito
 ## <a name="resource-dictionariesresource-dictionariesmd"></a>[Dizionari di risorse](resource-dictionaries.md)
 
 Risorse XAML sono definizioni di oggetti che possono essere utilizzati più di una volta. Oggetto [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) consente alle risorse di essere definito in un'unica posizione e usata nuovamente in un'applicazione xamarin. Forms. Questo articolo illustra come creare e utilizzare un `ResourceDictionary`e su come unire un `ResourceDictionary` in un altro.
+
+## <a name="loading-xaml-at-runtimeruntime-loadmd"></a>[Il caricamento di XAML in fase di esecuzione](runtime-load.md)
+
+XAML può essere caricato e analizzato in fase di esecuzione con il [ `LoadFromXaml` ](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) i metodi di estensione.
