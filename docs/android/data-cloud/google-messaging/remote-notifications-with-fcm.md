@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: de0e2c5ff10de9136c4cb5987c80ce22c7b18c4d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0c84f530f759285c2cfc71f60d7b6f80fba6a03d
+ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105545"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814037"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notifiche remote con Firebase Cloud Messaging
 
@@ -137,7 +137,7 @@ Per ricevere messaggi da FCM, il [Xamarin Firebase - messaggistica](https://www.
 
 1.  In Visual Studio per Mac, fare doppio clic **pacchetti > Aggiungi pacchetti...** .
 
-2.  Controllare **Mostra i pacchetti di versioni non definitive** e cercare **firebase**.
+2.  Cercare **firebase**.
 
 3.  Installare questo pacchetto nel **FCMClient** progetto:
 
@@ -793,8 +793,7 @@ Java.Lang.IllegalStateException: Default FirebaseApp is not initialized in this 
 Make sure to call FirebaseApp.initializeApp(Context) first.
 ```
 
-Si tratta di un problema noto che è possibile risolvere la soluzione di pulizia e ricompilazione del progetto (**compilazione > Pulisci soluzione**, **compilazione > Ricompila soluzione**). Per altre informazioni, vedere questo [forum di discussione](https://forums.xamarin.com/discussion/96263/default-firebaseapp-is-not-initialized-in-this-process).
-
+Si tratta di un problema noto che è possibile risolvere la soluzione di pulizia e ricompilazione del progetto (**compilazione > Pulisci soluzione**, **compilazione > Ricompila soluzione**).
 
 ## <a name="summary"></a>Riepilogo
 
