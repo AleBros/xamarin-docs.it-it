@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 85a6bce8a1021c75064ba06f3a5daf69b7fe3e57
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: d19d8590171e585b6f65b2a63fc9847d7d672a56
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171378"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058409"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Pagina a schede di Xamarin.Forms
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
 
 _TabbedPage di Xamarin.Forms è costituita da un elenco di schede e un'area dei dettagli più grande con ogni scheda che carica il contenuto nell'area dei dettagli. Questo articolo illustra come usare una classe TabbedPage per spostarsi in una raccolta di pagine._
 

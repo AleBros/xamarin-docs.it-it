@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: 1bb357b256a7cc6d52d1d92613f38cbf48400c4c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 71d38cf0408af9f52a675aa381c8187ebfe9cc85
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995768"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051903"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Passaggio dei parametri di un effetto come proprietà Common Language Runtime
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
 
 _Le proprietà CLR (Common Language Runtime) possono essere usate per definire parametri per gli effetti che non rispondono alle modifiche delle proprietà in fase di esecuzione. Questo articolo illustra l'uso delle proprietà CLR per il passaggio di parametri a un effetto._
 
@@ -111,7 +113,7 @@ In entrambi gli esempi di codice viene creata un'istanza della classe `ShadowEff
 
 ## <a name="creating-the-effect-on-each-platform"></a>Creazione dell'effetto in ogni piattaforma
 
-Le sezioni seguenti illustrano l'implementazione specifica della piattaforma della classe `LabelShadowEffect`.
+Le sezioni seguenti illustrano l'implementazione specifica per la piattaforma della classe `LabelShadowEffect`.
 
 ### <a name="ios-project"></a>Progetto iOS
 
@@ -230,7 +232,7 @@ namespace EffectsDemo.UWP
 }
 ```
 
-La piattaforma UWP non include un effetto di ombreggiatura, pertanto l'implementazione di `LabelShadowEffect` in entrambe le piattaforme ne simula uno tramite l'aggiunta di un secondo elemento [`Label`](xref:Xamarin.Forms.Label) sfalsato dietro all'elemento `Label` primario. Il metodo `OnAttached` recupera l'istanza di `ShadowEffect`, crea il nuovo elemento `Label` e imposta alcune proprietà di layout per `Label`. Crea quindi l'ombreggiatura impostando le proprietà [`TextColor`](xref:Xamarin.Forms.Label.TextColor), [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) e [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) per controllare il colore e la posizione di `Label`. `shadowLabel` viene quindi inserito sfalsato dietro all'elemento `Label` primario. Questa funzionalità viene sottoposta a wrapping in un blocco `try`/`catch`, nel caso il controllo a cui è associato l'effetto non abbia le proprietà `Control.Layer`. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
+La piattaforma UWP non include un effetto di ombreggiatura, pertanto l'implementazione di `LabelShadowEffect` in entrambe le piattaforme ne simula uno tramite l'aggiunta di un secondo elemento [`Label`](xref:Xamarin.Forms.Label) sfalsato dietro all'elemento `Label` primario. Il metodo `OnAttached` recupera l'istanza di `ShadowEffect`, crea il nuovo elemento `Label` e imposta alcune proprietà di layout per `Label`. Crea quindi l'ombreggiatura impostando le proprietà [`TextColor`](xref:Xamarin.Forms.Label.TextColor), [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) e [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) per controllare il colore e la posizione di `Label`. `shadowLabel` viene quindi inserito sfalsato dietro all'elemento `Label` primario. Questa funzionalità è incapsulata in un blocco `try`/`catch`, nell'evenienza in cui il controllo a cui l'effetto è associato non avesse le proprietà `Control.Layer`. Il metodo `OnDetached` non fornisce alcuna implementazione perché non sono necessarie operazioni di pulizia.
 
 ## <a name="summary"></a>Riepilogo
 

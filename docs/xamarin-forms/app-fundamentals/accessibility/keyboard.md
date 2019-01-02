@@ -1,5 +1,5 @@
 ---
-title: Spostamenti tramite tastiera
+title: Navigazione tramite tastiera
 description: Anziché usare la sequenza di tabulazione predefinita, è talvolta necessario ottimizzare l'interfaccia utente specificando la sequenza di tabulazione con una combinazione delle proprietà TabIndex e IsTabStop.
 ms.prod: xamarin
 ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/15/2018
-ms.openlocfilehash: f703dff56d2947c35a9bc76e0eb909bfe9023bac
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 69fc1cd146227e464e70c347d3e28d250a7f1346
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131555"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050439"
 ---
 # <a name="keyboard-navigation-in-xamarinforms"></a>Spostamenti tramite tastiera in Xamarin.Forms
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
 
 Alcuni utenti possono avere difficoltà nell'usare le applicazioni che non forniscono un accesso tramite tastiera appropriato. Specificare un ordine di tabulazione per i controlli consente gli spostamenti e prepara le pagine dell'applicazione per ricevere l'input in un ordine particolare.
 

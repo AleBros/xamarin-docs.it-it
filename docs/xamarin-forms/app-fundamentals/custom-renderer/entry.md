@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/26/2018
-ms.openlocfilehash: 7fea736b0a04a69fd64100ae1d6bcd42c244359f
-ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
+ms.openlocfilehash: 775ef2a38cf423536072358299ac4f30db974d9a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52459850"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056996"
 ---
 # <a name="customizing-an-entry"></a>Personalizzazione di una voce
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/entry/)
 
 _Il controllo Entry di Xamarin.Forms consente la modifica di una singola riga di testo. Questo articolo illustra come creare un renderer personalizzato per il controllo Entry che consenta agli sviluppatori di eseguire l'override del rendering nativo predefinito usando la propria personalizzazione specifica della piattaforma._
 

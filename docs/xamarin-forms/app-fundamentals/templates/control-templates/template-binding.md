@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 13730dce5d4698085abe10cb93da5ba50b87ab01
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 49f66164c707f91f298b2e5cb09b35f1767186cf
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106429"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051581"
 ---
 # <a name="binding-from-a-xamarinforms-controltemplate"></a>Associazione da un ControlTemplate Xamarin.Forms
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebinding/)
 
 _Le associazioni a modello consentono di associare dati dei controlli di un modello del controllo a proprietà pubbliche, permettendo la modifica intuitiva dei valori delle proprietà dei controlli nel modello del controllo. Questo articolo illustra come usare le associazioni a modello per eseguire data binding da un modello del controllo._
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 2369b249681b926476cf3938c51c99745eba9098
-ms.sourcegitcommit: 8888cb7d75f4469f2a1195b9a426a2e1fbf46bd8
+ms.openlocfilehash: e310726ae4ad72d10e8e2890e9fbf07dda9bc48e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "38995742"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052329"
 ---
 # <a name="customizing-a-contentpage"></a>Personalizzazione di un elemento ContentPage
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/)
 
 _ContentPage è un elemento visivo con visualizzazione singola che occupa la maggior parte dello schermo. Questo articolo illustra come creare un renderer personalizzato per la pagina ContentPage che consente agli sviluppatori di eseguire l'override del rendering nativo predefinito usando una personalizzazione specifica della piattaforma._
 

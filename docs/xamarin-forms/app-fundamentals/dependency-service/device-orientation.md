@@ -7,22 +7,24 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 52b82033cbd6fe0e1a44f5729c815074852230bf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a63d0d4c90bff36e55d98b731217133fe5958c1f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115419"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051471"
 ---
 # <a name="checking-device-orientation"></a>Controllo dell'orientamento del dispositivo
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/UsingDependencyService)
 
 Questo articolo illustrerà come usare [`DependencyService`](xref:Xamarin.Forms.DependencyService) per controllare l'orientamento del dispositivo da codice condiviso usando le API native in ciascuna piattaforma. Questa procedura dettagliata è basata su sul plug-in `DeviceOrientation` esistente di Ali Özgür. Vedere il [repository GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) per altre informazioni.
 
 - **[Creazione dell'interfaccia](#Creating_the_Interface)** &ndash; Informazioni sulla creazione dell'interfaccia nel codice condiviso.
 - **[Implementazione in iOS](#iOS_Implementation)** &ndash; Informazioni su come implementare l'interfaccia nel codice nativo per iOS.
-- **[Implementazione in Android](#Android_Implementation)** &ndash; Informazioni su come implementare l'interfaccia nel codice nativo per Android.
-- **[Implementazione UWP](#WindowsImplementation)** &ndash; Informazioni su come implementare l'interfaccia nel codice nativo per la piattaforma UWP (Universal Windows Platform).
-- **[Implementazione nel codice condiviso](#Implementing_in_Shared_Code)** &ndash; Informazioni su come usare `DependencyService` per una chiamata all'implementazione nativa dal codice condiviso.
+- **[Implementazione in Android](#Android_Implementation)**: informazioni su come implementare l'interfaccia nel codice nativo per Android.
+- **[Implementazione nella piattaforma UWP](#WindowsImplementation)**: informazioni su come implementare l'interfaccia nel codice nativo per la piattaforma UWP (Universal Windows Platform).
+- **[Implementazione nel codice condiviso](#Implementing_in_Shared_Code)**: informazioni su come usare `DependencyService` per eseguire chiamate nell'implementazione nativa dal codice condiviso.
 
 L'applicazione che usa `DependencyService` avrà la struttura seguente:
 

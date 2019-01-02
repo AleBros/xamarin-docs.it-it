@@ -7,21 +7,23 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: cbb4a01ac2c6d933fe40a0b3c2571d1fe3ce75c0
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: bdfef88e0cf5916b1eec08ddfaa09165a057765a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998395"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058578"
 ---
 # <a name="checking-battery-status"></a>Controllo dello stato della batteria
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/DependencyService)
 
 Questo articolo illustra la creazione di un'applicazione che controlla lo stato della batteria. Questo articolo si basa sul plug-in Battery di James Montemagno. Per altre informazioni, vedere il [repository GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery).
 
 Dato che Xamarin.Forms non include la funzionalità per controllare lo stato della batteria corrente, questa applicazione dovrà usare [`DependencyService`](xref:Xamarin.Forms.DependencyService) per sfruttare le API native.  Questo articolo illustra i passaggi seguenti per l'uso di `DependencyService`:
 
 - **[Creazione dell'interfaccia](#Creating_the_Interface)** &ndash; Informazioni sulla creazione dell'interfaccia nel codice condiviso.
-- **[Implementazione in iOS](#iOS_Implementation)** &ndash; Informazioni su come implementare l'interfaccia nel codice nativo per iOS.
+- **[Implementazione in iOS](#iOS_Implementation)**: informazioni su come implementare l'interfaccia nel codice nativo per iOS.
 - **[Implementazione in Android](#Android_Implementation)** &ndash; Informazioni su come implementare l'interfaccia nel codice nativo per Android.
 - **[Implementazione nella piattaforma UWP (Universal Windows Platform)](#UWPImplementation)** &ndash; Informazioni su come implementare l'interfaccia nel codice nativo per la piattaforma UWP (Universal Windows Platform).
 - **[Implementazione nel codice condiviso](#Implementing_in_Shared_Code)** &ndash; Informazioni su come usare `DependencyService` per una chiamata all'implementazione nativa dal codice condiviso.

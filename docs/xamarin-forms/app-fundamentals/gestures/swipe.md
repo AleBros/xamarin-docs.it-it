@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: 95e95d8849824cd2dc31c2019627cc5adbbefeec
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2e28d3e7035eb570b2053d39cec8b8d91dada6f0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131525"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059418"
 ---
 # <a name="adding-a-swipe-gesture-recognizer"></a>Aggiunta di un sistema di riconoscimento del movimento di scorrimento rapido
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
 
 _Il movimento di scorrimento rapido si verifica quando si muove un dito sullo schermo in senso orizzontale o verticale e viene spesso usato per avviare la navigazione nel contenuto. Gli esempi di codice in questo articolo sono tratti da [SwipeGesture](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)._
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 129ce7a04b93bfb3cb1b9a1639aee61cd56d09d5
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: bcea44688a64e741868e7ad2adf6c4dc65a5071a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998917"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052277"
 ---
 # <a name="introduction-to-xamarinforms-data-templates"></a>Introduzione ai modelli di dati Xamarin.Forms
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
 
 _I modelli di dati Xamarin.Forms consentono di definire la presentazione dei dati nei controlli supportati. Questo articolo offre un'introduzione ai modelli di dati e spiega perché sono necessari._
 

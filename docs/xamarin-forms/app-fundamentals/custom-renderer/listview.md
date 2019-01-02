@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: b3b73d542faebdb8ab85c989d7812368f4f3ffac
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 39ba281f036b9c57f85629390f5ba76377c99dd8
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997487"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054211"
 ---
 # <a name="customizing-a-listview"></a>Personalizzazione di un oggetto ListView
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/listview/)
 
 _L'oggetto ListView di Xamarin.Forms è una vista che visualizza una raccolta di dati sotto forma di elenco verticale. Questo articolo spiega come creare un renderer personalizzato che incapsula gli elenchi specifici della piattaforma e i layout di cella nativi, consentendo un maggiore controllo sulle prestazioni dei controlli nativi._
 
@@ -27,7 +29,7 @@ Il diagramma seguente illustra la relazione tra il controllo [`ListView`](xref:X
 È possibile sfruttare il processo di rendering per implementare personalizzazioni specifiche della piattaforma creando un renderer personalizzato per un elemento [`ListView`](xref:Xamarin.Forms.ListView) in ogni piattaforma. Il processo per eseguire questa operazione è il seguente:
 
 1. [Creare](#Creating_the_Custom_ListView_Control) un controllo personalizzato Xamarin.Forms.
-1. [Usare](#Consuming_the_Custom_Control) il controllo personalizzato da Xamarin.Forms.
+1. [Utilizzare](#Consuming_the_Custom_Control) il controllo personalizzato da Xamarin.Forms.
 1. [Creare](#Creating_the_Custom_Renderer_on_each_Platform) il renderer personalizzato per il controllo in ogni piattaforma.
 
 Ogni elemento verrà trattato separatamente, per implementare un renderer `NativeListView` che si avvale di elenchi specifici della piattaforma e di layout di cella nativi. Questo scenario è utile quando si trasferisce un'app nativa esistente che contiene codice di elenco e cella che può essere nuovamente usato. Inoltre, consente di personalizzare in modo dettagliato le funzionalità di elenco che possono influire sulle prestazioni, ad esempio la virtualizzazione dei dati.

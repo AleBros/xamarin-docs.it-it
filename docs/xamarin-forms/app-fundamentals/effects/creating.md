@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: b29d83999724a35293882f7b9efc0158171c4fd2
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 9d19890dbd6a2b729d035f5a79431b02eb42af62
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998160"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050738"
 ---
 # <a name="creating-an-effect"></a>Creazione di un effetto
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/effects/focuseffect/)
 
 _Gli effetti semplificano la personalizzazione di un controllo. Questo articolo spiega come creare un effetto che cambia il colore di sfondo del controllo Entry quando il controllo riceve lo stato attivo._
 

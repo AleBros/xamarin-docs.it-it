@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 59e9f4c61bda86faa5a55d70ef91411adb14da6d
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 36f01fb309f174e0ed7c709fb77f133b101ef8e0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38996806"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061093"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>Aggiunta di un sistema di riconoscimento del movimento di panoramica
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PanGesture/)
 
 _Il movimento di panoramica viene usato per rilevare il movimento delle dita sullo schermo e applicare tale movimento al contenuto e viene implementato con la classe `PanGestureRecognizer`. Uno scenario comune per questo movimento è l'esecuzione di una panoramica in orizzontale e in verticale di un'immagine, in modo da poter vedere tutto il contenuto dell'immagine quando è visualizzata in un viewport più piccolo rispetto alle dimensioni dell'immagine. Questa operazione viene eseguita spostando l'immagine all'interno del viewport ed è illustrata in questo articolo._
 

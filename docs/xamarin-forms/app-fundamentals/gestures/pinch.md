@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: f67cbb136c42a4bc476c1715ea6fd15255d71dc7
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 2eb6e6f94887301b78f401bf73a4ffaa01559c37
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38998702"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059392"
 ---
 # <a name="adding-a-pinch-gesture-recognizer"></a>Aggiunta di un sistema di riconoscimento del movimento di avvicinamento delle dita
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PinchGesture/)
 
 _Il movimento di avvicinamento delle dita viene usato per lo zoom interattivo e viene implementato con la classe PinchGestureRecognizer. Uno scenario comune per il movimento di avvicinamento delle dita è l'esecuzione dello zoom interattivo di un'immagine in corrispondenza della posizione di avvicinamento delle dita. Questa operazione viene eseguita modificando in scala il contenuto del riquadro di visualizzazione ed è illustrata in questo articolo._
 

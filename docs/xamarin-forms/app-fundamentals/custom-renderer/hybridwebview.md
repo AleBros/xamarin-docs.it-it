@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/19/2018
-ms.openlocfilehash: aa060bd16bc0220f6a6026106ff6c8d786daebc1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f3b8cf7ec8a42ed031699d8f5e02f32c6eb61458
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105038"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053862"
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementazione di un elemento HybridWebView
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
 
 _I controlli dell'interfaccia utente personalizzata di Xamarin.Forms devono derivare dalla classe View, che viene usata per posizionare layout e controlli sullo schermo. Questo articolo spiega come creare un renderer personalizzato per un controllo personalizzato HybridWebView, che dimostra come si possono ottimizzare i controlli Web specifici della piattaforma per consentire al codice C# di essere richiamato da JavaScript._
 
@@ -161,7 +163,7 @@ Il rendering del controllo personalizzato `HybridWebView` viene eseguito dalle c
 
 ![](hybridwebview-images/screenshots.png "HybridWebView in ogni piattaforma")
 
-La classe `ViewRenderer` espone il metodo `OnElementChanged` che viene chiamato quando si crea il controllo personalizzato Xamarin.Forms per eseguire il rendering del controllo Web nativo corrispondente. Questo metodo accetta un parametro `ElementChangedEventArgs` che contiene le proprietà `OldElement` e `NewElement`. Queste proprietà rappresentano rispettivamente l'elemento di Xamarin.Forms a cui il renderer *era* associato e l'elemento di Xamarin.Forms a cui il renderer *è* associato. Nell'applicazione di esempio la proprietà `OldElement` sarà `null` e la proprietà `NewElement` conterrà un riferimento all'istanza di `HybridWebView`.
+La classe `ViewRenderer` espone il metodo `OnElementChanged` che viene chiamato quando si crea il controllo personalizzato Xamarin.Forms per eseguire il rendering del controllo Web nativo corrispondente. Questo metodo accetta un parametro `ElementChangedEventArgs` che contiene le proprietà `OldElement` e `NewElement`. Queste proprietà rappresentano rispettivamente l'elemento Xamarin.Forms a cui il renderer *era* collegato e l'elemento Xamarin.Forms a cui il renderer *è* collegato. Nell'applicazione di esempio la proprietà `OldElement` sarà `null` e la proprietà `NewElement` conterrà un riferimento all'istanza di `HybridWebView`.
 
 La creazione dell'istanza e la personalizzazione del controllo Web nativo devono essere eseguite in una versione sostituita del metodo `OnElementChanged` in ogni classe di renderer specifica della piattaforma. Il metodo `SetNativeControl` deve essere usato per creare un'istanza del controllo Web nativo e assegna anche il riferimento al controllo alla proprietà `Control`. È inoltre possibile ottenere un riferimento al controllo Xamarin.Forms di cui viene eseguito il rendering usando la proprietà `Element`.
 

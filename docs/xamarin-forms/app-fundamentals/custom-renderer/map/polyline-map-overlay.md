@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 786f050495d4682b719178f2723c482929544678
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 184aa18ac8c0f27ce92a23b06b9dd0364f977abc
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998721"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050884"
 ---
 # <a name="highlighting-a-route-on-a-map"></a>Evidenziazione di un percorso su una mappa
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polyline/)
 
 _Questo articolo illustra come aggiungere una sovrimpressione polilinea a una mappa. Una sovrimpressione polilinea è una serie di segmenti di linea collegati che sono in genere usati per visualizzare un percorso su una mappa o per definire una qualsiasi forma richiesta._
 
@@ -31,9 +33,9 @@ Quando un'applicazione Xamarin.Forms eseguire il rendering di un controllo [`Map
 1. [Personalizzare](#Customizing_the_Map) la mappa creando un renderer personalizzato per la mappa su ogni piattaforma.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) deve essere inizializzato e configurato prima dell'uso. Per altre informazioni, vedere [`Maps Control`](~/xamarin-forms/user-interface/map.md).
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) deve essere inizializzato e configurato prima di poter essere utilizzato. Per altre informazioni, vedere [`Maps Control`](~/xamarin-forms/user-interface/map.md).
 
-Per informazioni sulla personalizzazione di una mappa usando un renderer personalizzato, vedere [Personalizzazione di una puntina per la mappa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
+Per informazioni sulla personalizzazione di una mappa usando un renderer personalizzato, vedere [Customizing a Map Pin](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md) (Personalizzazione di una puntina per la mappa).
 
 <a name="Creating_the_Custom_Map" />
 

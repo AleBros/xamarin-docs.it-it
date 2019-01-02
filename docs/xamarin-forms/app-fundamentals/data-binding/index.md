@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2018
-ms.openlocfilehash: def97ab77781c7a7156d4c4178097184614f3e8b
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: c607cecf6c7044fa4c8d0270a5b8d1471d3f9227
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "35240353"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059061"
 ---
 # <a name="xamarinforms-data-binding"></a>Data binding di Xamarin.Forms
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 _Il data binding è la tecnica che consente di collegare le proprietà di due oggetti in modo che le modifiche apportate a una proprietà vengano automaticamente riflesse nell'altra proprietà. Il data binding è parte integrante dell'architettura dell'applicazione Model-View-ViewModel (MVVM)._
 
@@ -71,6 +73,6 @@ Usare binding compilati per migliorare le prestazioni del data binding.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo sul data binding (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Capitolo sul data binding nella documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Data Binding Demos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demo di data binding)
+- [Capitolo sul data binding della documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 - [Estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

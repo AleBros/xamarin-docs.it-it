@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/05/2016
-ms.openlocfilehash: 0a67c03a86c66f4264187dc8cb31a9ee9e552779
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 95f4ef1c5690aad9795181eb57448c9d97b44113
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996691"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057986"
 ---
 # <a name="xamarinforms-templates"></a>Modelli Xamarin.Forms
 
@@ -23,11 +23,3 @@ I modelli del controllo Xamarin.Forms consentono di applicare e riapplicare faci
 ## <a name="data-templatesdata-templatesindexmd"></a>[Modelli di dati](data-templates/index.md)
 
 I modelli di dati Xamarin.Forms consentono di definire la presentazione dei dati nei controlli supportati.
-
-
-## <a name="related-links"></a>Collegamenti correlati
-
-- [Introduction to Xamarin.Forms (Introduzione a Xamarin.Forms)](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [Raccolta di Xamarin.Forms (esempio)](https://developer.xamarin.com/samples/FormsGallery/)
-- [Esempi di Xamarin.Forms](https://developer.xamarin.com/samples/tag/Xamarin.Forms/)
-- [Documentazione per le API di Xamarin.Forms](xref:Xamarin.Forms)

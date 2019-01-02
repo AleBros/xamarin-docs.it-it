@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: b0efdc1a20f52231f15b7a08eb86962e2079c678
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 0fe170aaa880aebcaff7899c440a0522e1f83a0c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240030"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051121"
 ---
 # <a name="binding-video-sources-to-the-player"></a>Associazione di origini video al lettore
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 Quando la proprietà `Source` della visualizzazione di `VideoPlayer` viene impostata su un nuovo file video, la riproduzione del video esistente viene arrestata e inizia il nuovo video. Questa funzionalità è dimostrata dalla pagina **Select Web Video** dell'esempio [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/). La pagina include un controllo `ListView` con i titoli dei tre video a cui fa riferimento il file **App.xaml**:
 
@@ -140,4 +142,4 @@ Come con la prima pagina **Select Web Video**, inizialmente non è selezionato a
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Video Player Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) (Esempio di demo di lettore video)
+- [Demo lettore video (esempio)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
