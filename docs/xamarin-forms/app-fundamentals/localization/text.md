@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 09fe3587e4e435383822e50bd12616747b807f82
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7eea0a4eba201d7332c5e3e5222729bcb5e14a07
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108457"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054061"
 ---
 # <a name="localization"></a>Localizzazione
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
 
 _Le app Xamarin.Forms possono essere localizzate mediante i file di risorse di .NET._
 
@@ -73,7 +75,7 @@ Nell'albero della soluzione vengono visualizzati i file correlati. Il file RESX 
 
 Per impostazione predefinita, quando vengono generati i riferimenti alle stringhe fortemente tipizzate, saranno `internal` all'assembly. Questo accade perché lo strumento di compilazione predefinito per i file RESX genera il file **.designer.cs** con le proprietà `internal`.
 
-Selezionare il file **AppResources.resx** e visualizzare il riquadro **Proprietà** per visualizzare dove viene configurato lo strumento di compilazione. Lo screenshot seguente illustra **Strumento personalizzato: ResXFileCodeGenerator**.
+Selezionare il file **AppResources.resx** e visualizzare il riquadro **Proprietà** per visualizzare dove viene configurato lo strumento di compilazione. Lo screenshot seguente mostra **Strumento personalizzato: ResXFileCodeGenerator**.
 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -154,7 +156,7 @@ I file specifici della lingua devono seguire una convenzione di denominazione sp
 
 Il modello generale consiste nell'usare i codici della lingua a due lettere, ma vi sono alcuni esempi, come il cinese, in cui viene usato un formato diverso e altri, come il portoghese brasiliano, in cui è richiesto un identificatore a quattro caratteri.
 
-Questi file di risorse specifici della lingua *non* richiedono una classe parziale **.designer.cs** per essere aggiunti come normali file XML, se **Azione compilazione: EmbeddedResource** è stata impostata. Lo screenshot seguente illustra una soluzione che include file di risorse specifici della lingua:
+Questi file di risorse specifici della lingua *non* richiedono una classe parziale **.designer.cs** per essere aggiunti come normali file XML, se è stata impostata **Azione compilazione: EmbeddedResource**. Lo screenshot seguente illustra una soluzione che include file di risorse specifici della lingua:
 
 ![](text-images/appresources-langs.png "File di risorse specifici della lingua")
 
@@ -556,7 +558,7 @@ namespace UsingResxLocalization.Android
 Dopo aver aggiunto questo codice al progetto dell'applicazione Android, sarà possibile visualizzare automaticamente le stringhe tradotte.
 
 > [!NOTE]
->**Attenzione:** se le stringhe tradotte vengono usate nelle compilazioni VERSIONE di Android, ma non durante il debug, fare clic con il pulsante destro del mouse sul **progetto Android** e selezionare **Opzioni > Compilazione > Compilazione Android** e assicurarsi che l'opzione **Distribuzione rapida di assembly** non sia selezionata. Questa opzione può causare problemi con il caricamento delle risorse e non deve essere usata se si stanno testando app localizzate.
+>️ **AVVISO:** Se le stringhe tradotte vengono usate nelle compilazioni VERSIONE di Android, ma non durante il debug, fare clic con il pulsante destro del mouse sul **progetto Android** e selezionare **Opzioni > Compilazione > Compilazione Android** e assicurarsi che l'opzione **Distribuzione rapida di assembly** non sia selezionata. Questa opzione può causare problemi con il caricamento delle risorse e non deve essere usata se si stanno testando app localizzate.
 
 Per altre informazioni sulla localizzazione in Android, vedere [Localizzazione in Android](~/android/app-fundamentals/localization.md).
 

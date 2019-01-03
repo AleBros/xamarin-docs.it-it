@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 28892692133020de1fa5a6eb007bb3f9bcf2612b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4594da09d48a0888a88cbce9ab135a007eb6f4cd
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997484"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054331"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Convertitori dei valori di binding di Xamarin.Forms
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 In genere i data binding trasferiscono i dati da una proprietà di origine a una proprietà di destinazione e in alcuni casi dalla proprietà di destinazione alla proprietà di origine. Si tratta di un semplice trasferimento quando la proprietà di origine e quella di destinazione sono dello stesso tipo o quando un tipo può essere convertito nell'altro tipo tramite una conversione implicita. Se non è questo il caso, è necessaria una conversione del tipo.
 
@@ -465,5 +467,5 @@ Il risultato è il seguente:
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demo di esempio del data binding)
-- [Capitolo sul data binding nella documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Data Binding Demos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demo di data binding)
+- [Capitolo sul data binding della documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

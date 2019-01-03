@@ -6,13 +6,13 @@ ms.assetid: 1A674212-72DB-4AA4-B626-A4EC135AD1A0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2018
-ms.openlocfilehash: 933368f7ca1435ece4f20945b2f8e905f7584217
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 12/11/2018
+ms.openlocfilehash: 422311c766584cbd27d0ab0c42adee042e9aac3e
+ms.sourcegitcommit: 408b78dd6eded4696469e316af7922a5991f2211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899384"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246295"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
 
@@ -50,7 +50,7 @@ All'interno di ogni `ContentPage` è possibile aggiungere e rimuovere istanze ag
 
 ## <a name="bootstrapping-a-shell-application"></a>Bootstrap di un'applicazione Shell
 
-Il bootstrap di un'applicazione Shell viene eseguito impostando la proprietà `MainPage` della classe `App` su una nuova istanza di `Shell`:
+Il bootstrap di un'applicazione Shell viene eseguito impostando la proprietà `MainPage` della classe `App` su un'istanza di un file Shell:
 
 ```csharp
 namespace TailwindTraders.Mobile
@@ -62,13 +62,13 @@ namespace TailwindTraders.Mobile
             InitializeComponent();
 
             Forms.SetFlags("Shell_Experimental");
-            MainPage = new Shell();
+            MainPage = new TheShell();
         }
     }
 }
 ```
 
-La classe `Shell` è un file XAML che descrive la struttura visiva dell'applicazione.
+La classe `TheShell` è un file XAML che descrive la struttura visiva dell'applicazione.
 
 > [!IMPORTANT]
 > Shell è attualmente in fase di sperimentazione e può essere usato solo aggiungendo `Forms.SetFlags("Shell_Experimental");` alla classe `App`, prima di creare l'istanza di `Shell`, o al progetto di piattaforma, prima di richiamare il metodo `Forms.Init`.
@@ -83,13 +83,13 @@ Un file di Shell è costituito da tre elementi gerarchici:
 
 Nessuno di questi elementi rappresenta un'interfaccia utente, ma piuttosto l'organizzazione della struttura visiva dell'applicazione. Shell accetta questi elementi e genera l'interfaccia utente di navigazione per il contenuto.
 
-Il codice XAML seguente rappresenta un esempio semplice di file `Shell`:
+Il codice XAML seguente mostra un esempio semplice di file Shell:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:TailwindTraders"
-       x:Class=" TailwindTraders.Shell"
+       xmlns:local="clr-namespace:TailwindTraders.Mobile.Features.Shell"
+       x:Class="TailwindTraders.Mobile.Features.Shell.TheShell"
        Title="TailwindTraders">
     <ShellItem Title="Home">
         <ShellSection>
@@ -97,7 +97,7 @@ Il codice XAML seguente rappresenta un esempio semplice di file `Shell`:
                 <local:HomePage />
             </ShellContent>
         </ShellSection>
-    <ShellItem>
+    </ShellItem>
 </Shell>
 ```
 
@@ -117,8 +117,8 @@ Il numero di elementi nel riquadro a comparsa può essere aumentato aggiungendo 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:TailwindTraders"
-       x:Class=" TailwindTraders.Shell"
+       xmlns:local="clr-namespace:TailwindTraders.Mobile.Features.Shell"
+       x:Class="TailwindTraders.Mobile.Features.Shell.TheShell"
        Title="TailwindTraders">
     <ShellItem Title="Home">
         <ShellSection>
@@ -349,7 +349,7 @@ Le schede possono essere personalizzate usando gli stili XAML oppure specificand
 
 Shell include un'esperienza di navigazione basata su URI. Gli URI offrono un'esperienza di navigazione ottimizzata che consente di passare a qualsiasi pagina nell'applicazione senza dover seguire una gerarchia di navigazione specifica. Offre inoltre la possibilità di navigare all'indietro senza dover visitare tutte le pagine dello stack di navigazione.
 
-La navigazione basata su URI viene eseguita con le route, ovvero i segmenti di URI usati per spostarsi all'interno dell'applicazione. Il file `Shell` deve dichiarare uno schema di route, un host di route e una route:
+La navigazione basata su URI viene eseguita con le route, ovvero i segmenti di URI usati per spostarsi all'interno dell'applicazione. Il file Shell deve dichiarare uno schema di route, un host di route e una route:
 
 ```xaml
 <Shell ...
@@ -362,9 +362,9 @@ La navigazione basata su URI viene eseguita con le route, ovvero i segmenti di U
 
 Combinati tra loro, i valori della proprietà `RouteScheme`, `RouteHost` e `Route` formano l'URI principale di `app://www.microsoft.com/tailwindtraders`.
 
-Ogni elemento della classe `Shell` può anche definire una proprietà di route che può essere usata nella navigazione a livello di codice.
+Ogni elemento nel file Shell può anche definire una proprietà di route che può essere usata nella navigazione a livello di codice.
 
-Nel costruttore `Shell`, o in qualsiasi altra posizione eseguita prima che venga richiamata una route, è possibile registrare in modo esplicito altre route per tutte le pagine che non sono rappresentate da un elemento Shell (ad esempio le istanze di `MenuItem`):
+Nel costruttore del file Shell, o in qualsiasi altra posizione eseguita prima che venga richiamata una route, è possibile registrare in modo esplicito altre route per tutte le pagine che non sono rappresentate da un elemento Shell (ad esempio le istanze di `MenuItem`):
 
 ```csharp
 Routing.RegisterRoute("productcategory", typeof(ProductCategoryPage));
@@ -435,7 +435,7 @@ void OnShellNavigating(object sender, ShellNavigatingEventArgs e)
 
 La classe `ShellNavigatingEventArgs` specifica le seguenti proprietà:
 
-| Proprietà | Tipo | Descrizione |
+| Proprietà | Tipo | Description |
 |---|---|---|
 | Corrente | `ShellNavigationState` | URI della pagina corrente. |
 | Origine | `ShellNavigationState` | URI che rappresenta il punto in cui ha origine la navigazione. |
@@ -447,7 +447,7 @@ Inoltre, la classe `ShellNavigatingEventArgs` specifica un metodo `Cancel`.
 
 La classe `ShellNavigatedEventArgs` specifica le seguenti proprietà:
 
-| Proprietà | Tipo | Descrizione |
+| Proprietà | Tipo | Description |
 |---|---|---|
 | Corrente | `ShellNavigationState` | URI della pagina corrente. |
 | Precedente| `ShellNavigationState` | URI della pagina precedente. |

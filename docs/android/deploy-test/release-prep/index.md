@@ -6,15 +6,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: a8858839c51e519ac50dd59d223a6c15cee9e6bf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dff57b142745729d5d38db4cce892bb1d55796a6
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123453"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059730"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparazione di un'applicazione per il rilascio
-
 
 Dopo aver scritto il codice di un'applicazione e averla testata, è necessario preparare il pacchetto per la distribuzione. La prima attività di preparazione del pacchetto è la compilazione dell'applicazione per il rilascio, che essenzialmente comporta l'impostazione di alcuni attributi dell'applicazione.
 
@@ -63,7 +62,6 @@ In questi esempi, `@drawable/icon` fa riferimento a un file di icona disponibile
 ```
 
 In genere, `using Android.App` viene dichiarato all'inizio di **AssemblyInfo.cs** (lo spazio dei nomi dell'attributo `Application` è `Android.App`). Tuttavia, potrebbe essere necessario aggiungere l'istruzione `using` se non è già presente.
-
 
 <a name="Versioning" />
 
@@ -137,7 +135,6 @@ Di seguito sono riportate le opzioni di controllo del linker:
 
 Il collegamento può produrre alcuni effetti collaterali imprevisti, quindi è importante che un'applicazione venga di nuovo testata in modalità di rilascio in un dispositivo fisico.
 
-
 ### <a name="proguard"></a>ProGuard
 
 *ProGuard* è uno strumento Android SDK che si collega al codice Java e consente di offuscarlo. ProGuard viene in genere usato per creare applicazioni più piccole, riducendo la superficie delle raccolte di grandi dimensioni incluse, come ad esempio Google Play Services, nell'APK. ProGuard rimuove i bytecode Java inutilizzati, riducendo le dimensioni dell'app risultante. Ad esempio, se si usa ProGuard su app Xamarin.Android di piccole dimensioni, in genere si ottiene una riduzione delle dimensioni pari al 24%. Se si usa ProGuard in app di grandi dimensioni con diverse dipendenze di raccolte, la riduzione delle dimensioni ottenuta è nettamente superiore. 
@@ -184,7 +181,6 @@ Il Manifesto Android contiene l'attributo `android:debuggable`, che controlla se
 ```
 
 Si noti che le compilazioni di debug impostano automaticamente alcune autorizzazioni per semplificare l'esecuzione del debug, ad esempio **Internet** e **ReadExternalStorage**. Le compilazioni di rilascio, tuttavia, usano solo le autorizzazioni configurate in modo esplicito. Se si ritiene che il passaggio a una compilazione di rilascio comporti la perdita nell'app di un'autorizzazione che era disponibile nella compilazione di debug, verificare che tale autorizzazione sia stata attivata in modo esplicito nell'elenco **Autorizzazioni necessarie** come descritto in [Permissions](~/android/app-fundamentals/permissions.md) (Autorizzazioni). 
- 
 
 <a name="dotfuscator" id="dotfuscator" />
 
@@ -228,14 +224,13 @@ L'opzione **Compilazione AOT** nella pagina [Proprietà per creazione pacchetto]
 
 L'opzione **Compilazione AOT** richiede una licenza Enterprise o superiore. L'opzione **Compilazione AOT** è disponibile solo quando il progetto è configurato per la modalità di rilascio, ed è disabilitata per impostazione predefinita. Per altre informazioni sulla compilazione AOT, vedere [AOT](http://www.mono-project.com/docs/advanced/aot/).
 
-
 #### <a name="llvm-optimizing-compiler"></a>Compilatore ottimizzatore LLVM
 
 Il _Compilatore ottimizzatore LLVM_  crea codice compilato più rapido e di dimensioni minori e converte gli assembly compilati con AOT in codice nativo, ma a scapito di tempi di compilazione più lunghi. Il compilatore LLVM è disabilitato per impostazione predefinita. Per usare il compilatore LLVM, è necessario per prima cosa abilitare l'opzione **Compilazione AOT** nella pagina [Proprietà per creazione pacchetto](#Set_Packaging_Properties).
 
 
 > [!NOTE]
-> L'opzione **Compilatore ottimizzatore LLVM** richiede una licenza Business.  
+> L'opzione **Compilatore ottimizzatore LLVM** richiede una licenza Enterprise.  
 
 <a name="Set_Packaging_Properties" />
 
@@ -257,16 +252,13 @@ Le proprietà per la creazione di pacchetti possono essere impostate in **Opzion
 
 Molte di queste proprietà, ad esempio **Usa runtime condiviso** e **Usa Fast Deployment** sono destinate alla modalità di debug. Tuttavia, quando l'applicazione è configurata per la modalità di rilascio, esistono altre impostazioni che determinano il modo in cui l'app [viene ottimizzata in termini di dimensioni e velocità di esecuzione](#shrink_apk), [è protetta da eventuali manomissioni](#protect_app) e può essere inserita in un pacchetto per supportare diverse architetture e limitazioni di dimensione.
 
-
 ### <a name="specify-supported-architectures"></a>Specificare le architetture supportate
 
 Quando si prepara un'app Xamarin.Android per il rilascio, è necessario specificare le architetture della CPU supportate. Un singolo APK può contenere codice macchina per supportare più architetture diverse. Vedere [Architetture CPU](~/android/app-fundamentals/cpu-architectures.md) per informazioni dettagliate sul supporto di più architetture della CPU.
 
-
 ### <a name="generate-one-package-apk-per-selected-abi"></a>Generare un pacchetto (file APK) per ogni ABI selezionato
 
 Quando questa opzione è abilitata, viene creato un APK per ogni ABI supportato, selezionato nella scheda **Avanzate**, come descritto in [Architetture CPU](~/android/app-fundamentals/cpu-architectures.md), anziché un singolo APK di grandi dimensioni per tutti gli ABI supportati. L'opzione è disponibile solo quando il progetto è configurato per la modalità di rilascio, ed è disabilitata per impostazione predefinita.
-
 
 ### <a name="multi-dex"></a>Multidex
 
@@ -292,7 +284,6 @@ Al termine di tutti i passaggi precedenti, compilare l'applicazione, selezionand
 
 -----
 
-
 <a name="archive" />
 
 ## <a name="archive-for-publishing"></a>Archiviare per la pubblicazione
@@ -310,7 +301,6 @@ Per iniziare il processo di pubblicazione, fare clic con il pulsante destro del 
 Un altro modo per creare un archivio è fare clic con il pulsante destro del mouse sulla soluzione nel **riquadro della soluzione** e selezionare **Archivia tutti...**  per compilare la soluzione e archiviare tutti i progetti Xamarin in grado di generare un archivio:
 
 [![Archivia tutti](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
-
 
 Sia **Archivio** che **Archivia tutti** avviano automaticamente **Gestione archivi**. Per avviare direttamente **Gestione archivi**, fare clic sulla voce di menu **Strumenti > Gestione archivi...** :
 
@@ -370,7 +360,6 @@ In questo esempio **Gestione archivi** elenca solo un'applicazione archiviata, *
 
 [![Firma e distribuisci](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 
-
 Da qui è possibile selezionare il canale di distribuzione:
 
 -   **Ad hoc**: salva su disco un pacchetto dell'applicazione Android firmato in modo che possa essere trasferito localmente ai dispositivi Android. Passare alla sezione relativa alla [firma del pacchetto dell'app](~/android/deploy-test/signing/index.md) per sapere come creare un'identità di firma di Android, creare un nuovo certificato di firma per le applicazioni Android e pubblicare una versione &ldquo;ad hoc&rdquo; nel disco. Questo è un buon metodo per creare un file APK per il test.
@@ -380,7 +369,6 @@ Da qui è possibile selezionare il canale di distribuzione:
     Vedere la sezione relativa alla [pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) per informazioni su come firmare e pubblicare un file APK in Google Play Store.
 
 -----
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

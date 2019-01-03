@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: e31cba5c61624b0bca03443262b95d7497564750
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 62dae2f85abb7327e133f008e27e2519ccdc2f68
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675198"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051983"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Binding di base di Xamarin.Forms
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Un data binding di Xamarin.Forms collega una coppia di proprietà tra due oggetti, almeno uno dei quali è in genere un oggetto di interfaccia utente. Questi due oggetti vengono chiamati *destinazione* e *origine*:
 
@@ -252,7 +254,7 @@ Le estensioni di markup XAML sono in genere delimitate da parentesi graffe, ma p
 </Label>
 ```
 
-Ora le proprietà `Source` e `Path` sono attributi XAML normali: i valori vengono visualizzati all'interno di virgolette e gli attributi non sono separati da una virgola. Anche l'estensione di markup `x:Reference` può trasformarsi in un elemento oggetto:
+Ora le proprietà `Source` e `Path` sono attributi XAML normali: i valori vengono visualizzati racchiusi tra virgolette e gli attributi non sono separati da una virgola. Anche l'estensione di markup `x:Reference` può trasformarsi in un elemento oggetto:
 
 ```xaml
 <Label Text="TEXT"
@@ -329,5 +331,5 @@ Nell'[articolo seguente](binding-mode.md) si vedrà come la *modalità di bindin
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo sul data binding (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Capitolo sul data binding nella documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Data Binding Demos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demo di data binding)
+- [Capitolo sul data binding della documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

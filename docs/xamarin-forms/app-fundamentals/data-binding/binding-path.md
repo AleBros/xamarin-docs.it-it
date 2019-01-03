@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 5ffc167b1e5695663dff6005f3d7e0ba0ea958db
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 0c63e33309802f0945ad94a858af45f6b29b2cc4
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172106"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050779"
 ---
 # <a name="xamarinforms-binding-path"></a>Percorso di binding di Xamarin.Forms
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 In tutti gli esempi di data binding precedenti, la proprietà [`Path`](xref:Xamarin.Forms.Binding.Path) della classe `Binding` (o la proprietà [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) dell'estensione di markup `Binding`) è stata impostata su una singola proprietà. È in effetti possibile impostare `Path` su una *proprietà secondaria* (una proprietà di una proprietà) o su un membro di una raccolta.
 
@@ -140,7 +142,7 @@ Ecco il programma in esecuzione:
 
 ## <a name="debugging-complex-paths"></a>Debug di percorsi complessi
 
-Le definizioni di percorso complesse possono essere difficili da costruire. È necessario conoscere il tipo di ogni proprietà secondaria o il tipo di elementi nella raccolta per aggiungere correttamente la proprietà secondaria successiva, ma i tipi stesso non compaiono nel percorso. Una buona tecnica consiste nel costruire il percorso in modo incrementale ed esaminare i risultati intermedi. Per l'ultimo esempio si potrebbe iniziare senza alcuna definizione di `Path`:
+Le definizioni di percorso complesse possono essere difficili da costruire. È necessario conoscere il tipo di ogni proprietà secondaria o il tipo di elementi nella raccolta per aggiungere correttamente la proprietà secondaria successiva, ma i tipi stessi non compaiono nel percorso. Una buona tecnica consiste nel costruire il percorso in modo incrementale ed esaminare i risultati intermedi. Per l'ultimo esempio si potrebbe iniziare senza alcuna definizione di `Path`:
 
 ```xaml
 <Label Text="{Binding Source={x:Reference page},
@@ -165,5 +167,5 @@ Se una proprietà nel percorso di binding non implementa `INotifyPropertyChanged
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demo di esempio del data binding)
-- [Capitolo sul data binding nella documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Data Binding Demos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demo di data binding)
+- [Capitolo sul data binding della documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

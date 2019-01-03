@@ -6,15 +6,17 @@ ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/01/2017
-ms.openlocfilehash: 0a5e2c1a7a7807da91fd98e617467ea251a25bc0
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 12/14/2018
+ms.openlocfilehash: 9b5150eff0290ef5858198459108699be9f9b273
+ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527404"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411765"
 ---
 # <a name="invoking-events-from-effects"></a>Richiamo di eventi da effetti
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)
 
 _Un effetto può definire e richiamare un evento, segnalando le modifiche nella visualizzazione nativa sottostante. Questo articolo illustra come implementare il rilevamento del tocco nel multitouch di basso livello e come generare eventi che segnalino attività tocco._
 
@@ -351,6 +353,9 @@ static Dictionary<long, TouchRecognizer> idToTouchDictionary =
 ```
 
 Buona parte della struttura della classe `TouchRecognizer` è simile alla classe Android `TouchEffect`.
+
+> [!IMPORTANT]
+> Per molte delle visualizzazioni in `UIKit` il tocco non è abilitato per impostazione predefinita. Il tocco può essere abilitato aggiungendo `view.UserInteractionEnabled = true;` all'override `OnAttached` nella classe `TouchEffect` nel progetto iOS. Questa operazione dovrebbe avvenire dopo aver ottenuto l'elemento `UIView` corrispondente all'elemento a cui è associato l'effetto.
 
 ## <a name="putting-the-touch-effect-to-work"></a>Mettere in azione l'effetto di tocco
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 4ce04f21a3e520fea9da5d538fb7cc0ac098ad31
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 56284f1d3c5fec479badf91852acba2bf538bddd
+ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119857"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411739"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Funzionalità Gruppo di app in Xamarin.iOS
 
@@ -34,12 +34,12 @@ Per creare un nuovo Gruppo di app, eseguire le operazioni seguenti:
 
 1.  Visitare  [iOS Developer Center](https://developer.apple.com/account/) di Apple, aprire il proprio  **account** e accedere.
 2.  Selezionare **Certificates, IDs & Profiles** (Certificati, ID e profili).
-3.  Sotto **Identificatori** selezionare **Gruppi di app** e fare clic sul pulsante **+** per creare un nuovo gruppo.
+3.  In **Identifiers** (Identificatori) selezionare **App Groups** (Gruppi di app) e fare clic sul pulsante **+** per creare un nuovo gruppo.
 4.  Immettere un **Nome** e un **Identificatore** per il nuovo gruppo e fare clic sul pulsante **Continua** : 
    
     ![Aggiungere i dettagli del Gruppo di app](app-groups-capabilities-images/image52.png)
 
-5.  Fare clic sul pulsante  **Registra** per creare il gruppo e quindi su **Chiudi** per tornare all'elenco dei Gruppi di app registrati.
+5.  Fare clic sul pulsante **Register** (Registra) per creare il gruppo e quindi su **Done** (Chiudi) per tornare all'elenco dei Gruppi di app registrati.
 
 ## <a name="configure-an-app-to-use-app-groups"></a>Configurare un'app per l'uso dei Gruppi di app
 
@@ -48,15 +48,15 @@ Dopo aver creato il Gruppo di app, configurare gli ID delle app in modo che le a
 Seguire questa procedura:
 
 1.  Visitare  [iOS Developer Center](https://developer.apple.com/account/) di Apple e accedere con un account sviluppatore Apple.
-2.  Nel menu **Program Resources** (Risorse del programma) selezionare  **Certificates, IDs & Profiles**(Certificati, ID e profili).
-3.  Sotto **Identificatori** selezionare **App IDs** (ID app) e fare clic sul pulsante **+** per creare un nuovo ID.
+2.  Nel menu **Program Resources** (Risorse del programma) selezionare **Certificates, IDs & Profiles** (Certificati, ID e profili).
+3.  In **Identifiers** (Identificatori) selezionare **App IDs** (ID app) e fare clic sul pulsante **+** per creare un nuovo ID.
 4.  Immettere un nome per l'ID app e assegnargli un ID app esplicito.
-5.  In **Servizi app** abilitare **Gruppi di app**e fare clic sul pulsante Continua:
+5.  In **App Services** (Servizi app) abilitare **App Groups** (Gruppi di app) e quindi fare clic sul pulsante Continue (Continua):
 
     ![Aggiungere i servizi app del Gruppo di app](app-groups-capabilities-images/image53.png)
 
 6.  Verificare le impostazioni e fare clic sul pulsante **Registra** per creare l'ID app.
-7.  Fare clic sul pulsante **Chiudi** per tornare all'elenco degli ID app registrati.
+7.  Fare clic sul pulsante **Done** (Chiudi) per tornare all'elenco degli ID app registrati.
 8.  Selezionare dall'elenco l'ID app appena creato e fare clic sul pulsante **Modifica** :
 
     ![Selezionare l'ID app dall'elenco](app-groups-capabilities-images/image54.png)
@@ -69,7 +69,7 @@ Seguire questa procedura:
 
     ![Aggiungere il Gruppo di app](app-groups-capabilities-images/image56.png)
 
-11. Fare clic sul pulsante **Assegna** , quindi sul pulsante  **Chiudi** per tornare all'elenco degli ID app registrati.
+11. Fare clic sul pulsante **Assign** (Assegna) e quindi sul pulsante **Done** (Chiudi) per tornare all'elenco degli ID app registrati.
 12. Ripetere questi passaggi per tutte le app o le estensioni che useranno il Gruppo di app.
 
 ## <a name="next-steps"></a>Passaggi successivi

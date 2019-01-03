@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: f3b1f5c11a02710de8d0ffd09741acb3017f5cb6
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: cefcc7084b2abab4af61f07ef1f33a4f4c363f69
+ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "43780493"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "53815204"
 ---
 # <a name="introduction-to-mobile-development"></a>Introduzione allo sviluppo per dispositivi mobili
 
@@ -49,7 +49,7 @@ Grazie a questo set di funzionalità avanzate e complete, Xamarin costituisce la
 
 ## <a name="how-does-xamarin-work"></a>Funzionamento di Xamarin
 
-Xamarin offre due prodotti commerciali, Xamarin.iOS e Xamarin.Android, entrambi progettati basandosi su *Mono*, una versione open source di .NET Framework basata sugli standard ECMA .NET pubblicati. Mono è sul mercato quasi da quanto lo è .NET Framework e viene eseguito in qualsiasi piattaforma tra cui Linux, Unix, FreeBSD e Mac OS X.
+Xamarin offre due prodotti commerciali: Xamarin.iOS e Xamarin.Android. entrambi progettati basandosi su *Mono*, una versione open source di .NET Framework basata sugli standard ECMA .NET pubblicati. Mono è sul mercato quasi da quanto lo è .NET Framework e viene eseguito in qualsiasi piattaforma tra cui Linux, Unix, FreeBSD e Mac OS X.
 
 In iOS il compilatore *Ahead Of Time* (*AOT*) di Xamarin compila le applicazioni Xamarin.iOS direttamente nel codice assembly ARM nativo. In Android il compilatore di Xamarin consente di compilare fino al *linguaggio intermedio* (*IL*), che viene quindi compilato *Just-in-Time* (*JIT*) in assembly nativo all'avvio dell'applicazione.
 
@@ -61,7 +61,7 @@ In entrambi i casi le applicazioni Xamarin impiegano un runtime che gestisce aut
 
 Le applicazioni Xamarin sono compilate in base a un subset della libreria di classi base .NET noto come profilo per dispositivi mobili Xamarin. Questo profilo è stato creato in modo specifico per applicazioni per dispositivi mobili e inserito in un pacchetto in MonoTouch.dll e Mono.Android.dll (rispettivamente per iOS e Android). Questo processo è analogo al modo in cui le applicazioni Silverlight (e Moonlight) vengono compilate in base al profilo .NET Silverlight/Moonlight. In realtà, il profilo per dispositivi mobili Xamarin è equivalente al profilo Silverlight 4.0 con una serie di classi aggiunte dalla libreria di classi base.
 
-Per un elenco completo di assembly e classi disponibili, vedere l'[elenco di assembly Xamarin.iOS](~/cross-platform/internals/available-assemblies.md) e l'[elenco di assembly Xamarin.Android](~/cross-platform/internals/available-assemblies.md).
+Per un elenco completo di assembly e classi disponibili, vedere l'[elenco di assembly Xamarin.iOS](~/cross-platform/internals/available-assemblies.md?context=xamarin/ios) e l'[elenco di assembly Xamarin.Android](~/cross-platform/internals/available-assemblies.md?context=xamarin/android).
 
 Oltre alla libreria di classi base, questi file con estensione dll includono wrapper per iOS SDK e Android SDK che consentono di richiamare le API SDK sottostanti direttamente da C#.
 

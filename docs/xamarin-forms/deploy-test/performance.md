@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: d7719f231a6d70594985a1158340104d68367ffe
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 347d0eebf7340bb8dc7234275d0f58acf7ab16c6
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998613"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061031"
 ---
 # <a name="xamarinforms-performance"></a>Prestazioni di Xamarin.Forms
 
@@ -329,6 +329,5 @@ Questo articolo ha descritto e illustrato le tecniche per ottimizzare le prestaz
 - [Prestazioni di ListView](~/xamarin-forms/user-interface/listview/performance.md)
 - [Renderer veloci](~/xamarin-forms/internals/fast-renderers.md)
 - [Compressione del layout](~/xamarin-forms/user-interface/layouts/layout-compression.md)
-- [Esempio di ridimensionamento delle immagini di Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/XamFormsImageResize/)
 - [XamlCompilation](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute)
 - [XamlCompilationOptions](xref:Xamarin.Forms.Xaml.XamlCompilationOptions)

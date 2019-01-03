@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 03dbaa36cc1fa4a6a169f9456e0fd5b0fdc0d295
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 0e8b727fb520b6901bf397c9cfb67947897cbc8b
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563940"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056959"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modalità di binding di Xamarin.Forms
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Nell'[articolo precedente](basic-bindings.md) le pagine **Alternative Code Binding** (Binding di codice alternativo) e **Alternative XAML Binding** (Binding XAML alternativo) presentavano un elemento `Label` con la proprietà `Scale` associata alla proprietà `Value` di un elemento `Slider`. Poiché il valore iniziale di `Slider` è 0, la proprietà `Scale` di `Label` è stata impostata su 0 anziché su 1 e `Label` è scomparso.
 
@@ -112,7 +114,7 @@ La pagina **Simple Color Selector** (Selettore colori semplice) illustra l'uso d
 
 ViewModel è l'origine del data binding. L'elemento ViewModel *non* definisce proprietà con binding, ma implementa un meccanismo di notifica che consente all'infrastruttura di binding di ricevere una notifica quando viene modificato il valore di una proprietà. Questo meccanismo di notifica è l'interfaccia [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged), interfaccia che definisce una singola proprietà denominata [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). In genere una classe che implementa questa interfaccia attiva l'evento quando il valore di una delle sue proprietà pubbliche viene modificato. Non è necessario che l'evento venga attivato se la proprietà non cambia mai. (L'interfaccia `INotifyPropertyChanged` viene anche implementata da `BindableObject` e viene attivato un evento `PropertyChanged` ogni volta che il valore di una proprietà con binding cambia.)
 
-La classe `HslColorViewModel` definisce cinque proprietà: le proprietà `Hue`, `Saturation`, `Luminosity` e `Color` sono correlate tra loro. Quando il valore di uno dei tre componenti del colore cambia, la proprietà `Color` viene ricalcolata e gli eventi `PropertyChanged` vengono attivati per tutte e quattro le proprietà:
+La classe `HslColorViewModel` definisce cinque proprietà: Le proprietà `Hue`, `Saturation`, `Luminosity` e `Color` sono correlate tra loro. Quando il valore di uno dei tre componenti del colore cambia, la proprietà `Color` viene ricalcolata e gli eventi `PropertyChanged` vengono attivati per tutte e quattro le proprietà:
 
 ```csharp
 public class HslColorViewModel : INotifyPropertyChanged
@@ -256,7 +258,7 @@ Il file XAML **Simple Color Selector** (Selettore colori semplice) crea un'istan
 </ContentPage>
 ```
 
-`BoxView`, `Label` e tre viste `Slider` ereditano il contesto di binding da `Grid`. Tutte queste viste sono destinazioni di binding che fanno riferimento a proprietà di origine in ViewModel. Per la proprietà `Color` di `BoxView` e la proprietà `Text` di `Label` i data binding sono `OneWay`: le proprietà nella vista vengono impostate dalle proprietà in ViewModel.
+`BoxView`, `Label` e tre viste `Slider` ereditano il contesto di binding da `Grid`. Tutte queste viste sono destinazioni di binding che fanno riferimento a proprietà di origine in ViewModel. Per la proprietà `Color` di `BoxView` e la proprietà `Text` di `Label`, i data binding sono `OneWay`: Le proprietà nella vista vengono impostate dalle proprietà in ViewModel.
 
 Tuttavia la proprietà `Value` di `Slider` è `TwoWay`. In questo modo ogni elemento `Slider` può essere impostato da ViewModel, e a sua volta ViewModel può essere impostato da ogni `Slider`.
 
@@ -685,5 +687,5 @@ L'articolo successivo illustra come specificare la [**Formattazione delle string
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo sul data binding (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Capitolo sul data binding nella documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Data Binding Demos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demo di data binding)
+- [Capitolo sul data binding della documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

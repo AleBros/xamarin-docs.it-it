@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 3397c931dcb23a29b0682699512a5b4c9018de38
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: b0d202ff7743361207795d342b29243130f4f056
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171066"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058730"
 ---
 # <a name="custom-video-transport-controls"></a>Controlli di trasporto video personalizzati
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 I controlli di trasporto di un lettore video includono i pulsanti che eseguono le funzioni di **riproduzione**, **pausa** e **arresto**. Questi pulsanti sono identificati in genere con icone note anziché testo e le funzioni di **riproduzione** e **pausa** sono in genere unite in un unico pulsante.
 
@@ -358,7 +360,7 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-È necessario che venga eseguito l'accesso a due proprietà di `AVPlayer`: la proprietà [`Status`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.Status/) di tipo `AVPlayerStatus` e la proprietà [`TimeControlStatus`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.TimeControlStatus/) di tipo `AVPlayerTimeControlStatus`. Si noti che è necessario che venga eseguito il cast della proprietà `Element` (ovvero `VideoPlayer`) in `IVideoPlayerController` per impostare la proprietà `Status`.
+È richiesto l'accesso a due proprietà di `AVPlayer`: la proprietà [`Status`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.Status/) di tipo `AVPlayerStatus` e la proprietà [`TimeControlStatus`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.TimeControlStatus/) di tipo `AVPlayerTimeControlStatus`. Si noti che è necessario che venga eseguito il cast della proprietà `Element` (ovvero `VideoPlayer`) in `IVideoPlayerController` per impostare la proprietà `Status`.
 
 ### <a name="the-android-status-setting"></a>Impostazione di stato Android
 

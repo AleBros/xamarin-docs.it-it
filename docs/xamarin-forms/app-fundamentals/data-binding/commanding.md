@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 68c7869254ae861cef8307431d925368082be921
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 37fbc0107414521a87c263d327ffd9b8940384eb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675255"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053464"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Interfaccia di comando di Xamarin.Forms
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Nell'architettura Model-View-ViewModel (MVVM), vengono definiti data binding tra le proprietà in ViewModel, che in genere è una classe che deriva da `INotifyPropertyChanged`, e le proprietà in View, che in genere è il file XAML. In alcuni casi un'applicazione ha esigenze che vanno oltre queste associazioni di proprietà, richiedendo che l'utente avvii comandi che hanno un effetto all'interno di ViewModel. Questi comandi vengono in genere segnalati dal clic su un pulsante o dal tocco con un dito e in genere vengono elaborati nel file code-behind in un gestore per l'evento `Clicked` dell'elemento `Button` o per l'evento `Tapped` di un elemento `TapGestureRecognizer`.
 
@@ -765,5 +767,5 @@ I data binding possono essere complessi in alcuni casi, ma, come si è visto in 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demo di esempio del data binding)
-- [Capitolo sul data binding nella documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)
+- [Data Binding Demos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demo di data binding)
+- [Capitolo sul data binding della documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)
