@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: d19d8590171e585b6f65b2a63fc9847d7d672a56
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 4e2d33276c865695d70abb2d8e00b3b80d446839
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058409"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207986"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Pagina a schede di Xamarin.Forms
 
@@ -37,7 +37,7 @@ Il layout di una [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) e delle relative 
   > [!NOTE]
   > Si noti che l'elemento `TabbedRenderer` per iOS include un metodo `GetIcon` sottoponibile a override che può essere usato per caricare le icone delle schede da un'origine specificata. Questo override rende possibile l'uso di immagini SVG come icone in una `TabbedPage`. È anche possibile specificare versioni selezionate e non selezionate di un'icona.
 
-- In Android l'elenco delle schede è visualizzato, per impostazione predefinita, nella parte superiore dello schermo e l'area dei dettagli è al di sotto di essa. L'elenco di schede, tuttavia, può essere spostato nella parte inferiore dello schermo con una specifica della piattaforma. Per altre informazioni, vedere [Setting TabbedPage Toolbar Placement and Color](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar) (Impostazione del posizionamento e del colore della barra degli strumenti di TabbedPage).
+- In Android l'elenco delle schede è visualizzato, per impostazione predefinita, nella parte superiore dello schermo e l'area dei dettagli è al di sotto di essa. L'elenco di schede, tuttavia, può essere spostato nella parte inferiore dello schermo con una specifica della piattaforma. Per altre informazioni, vedere [Setting TabbedPage Toolbar Placement and Color](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md) (Impostazione del posizionamento e del colore della barra degli strumenti di TabbedPage).
 
   > [!NOTE]
   > Si noti che quando si usa AppCompat in Android, ogni scheda visualizzerà anche un'icona. L'elemento `TabbedPageRenderer` per Android AppCompat include inoltre un metodo `GetIconDrawable` sottoponibile a override che può essere usato per caricare le icone delle schede da un elemento `Drawable` personalizzato. Questo override rende possibile l'uso di immagini SVG come icone in una `TabbedPage` e funziona sia con le barre delle schede superiori sia con quelle inferiori. In alternativa, si può usare il metodo `SetTabIcon` sottoponibile a override per caricare le icone delle schede da un elemento `Drawable` personalizzato per le barre delle schede superiori.

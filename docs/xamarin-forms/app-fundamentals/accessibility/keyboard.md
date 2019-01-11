@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/15/2018
-ms.openlocfilehash: 69fc1cd146227e464e70c347d3e28d250a7f1346
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 3e3331489c3b437366f4bdcc6990fe282d213a6a
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050439"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207882"
 ---
 # <a name="keyboard-navigation-in-xamarinforms"></a>Spostamenti tramite tastiera in Xamarin.Forms
 
@@ -58,7 +58,7 @@ Lo screenshot seguente mostra l'ordine di tabulazione predefinito per questo ese
 In questo caso l'ordine di tabulazione è basato su riga e corrisponde all'ordine in cui sono elencati i controlli in XAML. Di conseguenza, premendo TAB ci si sposta tra le istanze di [`Entry`](xref:Xamarin.Forms.Entry) per forename (nome), poi tra le istanze di `Entry` per surname (cognome). Tuttavia, l'uso di spostamenti tramite TAB basati su colonna offrirebbe un'esperienza più intuitiva, ovvero premendo TAB ci si potrebbe spostare in progressione tra le coppie di nome e cognome. Si può ottenere questo comportamento specificando l'ordine di tabulazione dei controlli di input.
 
 > [!NOTE]
-> Nella piattaforma UWP (Universal Windows Platform) è possibile definire tasti di scelta rapida che offrono agli utenti un modo intuitivo per spostarsi e interagire nell'interfaccia utente visibile dell'applicazione tramite tastiera anziché tramite tocco o mouse. Per altre informazioni, vedere [Impostazione delle chiavi di accesso VisualElement](~/xamarin-forms/platform/platform-specifics/consuming/windows.md#visualelement-accesskeys).
+> Nella piattaforma UWP (Universal Windows Platform) è possibile definire tasti di scelta rapida che offrono agli utenti un modo intuitivo per spostarsi e interagire nell'interfaccia utente visibile dell'applicazione tramite tastiera anziché tramite tocco o mouse. Per altre informazioni, vedere [Impostazione delle chiavi di accesso VisualElement](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
 ## <a name="setting-the-tab-order"></a>Impostazione dell'ordine di tabulazione
 
