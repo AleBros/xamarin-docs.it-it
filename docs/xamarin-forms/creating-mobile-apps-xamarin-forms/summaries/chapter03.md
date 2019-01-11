@@ -1,18 +1,18 @@
 ---
 title: Riepilogo del capitolo 3. Dettagli della gestione del testo
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 3. Dettagli della gestione del testo'
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 3. Dettagli della gestione del testo'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: db1ab31249cc40d3496770877e492d652bcfc517
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 11b0a9c5b165df2b0d02bb09fb282cc18290e6ca
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052595"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207848"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Riepilogo del capitolo 3. Dettagli della gestione del testo
 
@@ -99,9 +99,9 @@ Infine, due proprietà statiche di sola lettura definire il valore di colore spe
 
 `Color.Default` Consente di applicare la combinazione di colori della piattaforma e, di conseguenza, ha un significato diverso in contesti diversi su piattaforme diverse. Per impostazione predefinita le combinazioni di colori della piattaforma sono:
 
-- iOS: scuro testo sullo sfondo chiaro
+- iOS: Testo scuro su uno sfondo chiaro
 - Android: Chiaro di testo su uno sfondo scuro (nel libro) o scuro su uno sfondo chiaro (per Material Design tramite AppCompat nel **master** ramo del repository di codice di esempio)
-- Piattaforma UWP: Testo scuro su uno sfondo chiaro
+- PIATTAFORMA UWP: Testo scuro su uno sfondo chiaro
 
 Il `Color.Accent` valore i risultati in un colore specifico della piattaforma (e talvolta selezionabili dall'utente) che è visibile su uno sfondo chiaro o scuro.
 
@@ -109,7 +109,7 @@ Il `Color.Accent` valore i risultati in un colore specifico della piattaforma (e
 
 Le diverse piattaforme hanno una combinazione di colori predefiniti, come mostrato nell'elenco precedente.
 
-Quando la destinazione è Android, è possibile passare a uno schema dark-sul-light specificando un tema chiaro nel file Android.Manifest.xml o dal [aggiunta AppCompat e Material Design](~/xamarin-forms/platform/android/appcompat.md).
+Quando la destinazione è Android, è possibile passare a uno schema dark-sul-light specificando un tema chiaro nel file Android.Manifest.xml o dal [aggiunta AppCompat e Material Design](~/xamarin-forms/platform/android/appcompat-material-design.md).
 
 Per le piattaforme Windows, il tema colori viene in genere selezionato dall'utente, ma è possibile aggiungere un `RequestedTheme` attributo è impostata né `Light` o `Dark` nel file app della piattaforma. Per impostazione predefinita, il file app. XAML nel progetto UWP contiene un `RequestedTheme` attributo è impostato su `Light`.
 

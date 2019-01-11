@@ -7,12 +7,12 @@ ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 40f319a67ecc2ca81243c8ac7c415266c1ea0b5c
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.openlocfilehash: 58d3b3ae067913a85c3ada5f5b35e64511523ff8
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746856"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207908"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Riepilogo del capitolo 1. Xamarin. Forms?
 
@@ -49,7 +49,7 @@ Quando la destinazione più piattaforme per dispositivi mobili, xamarin. Forms c
 - la piattaforma universale di Windows di destinazione Windows 10
 
 > [!NOTE]
-> Xamarin. Forms non supporta più Windows 8.1, Windows Phone 8.1 o Windows 10 Mobile, ma le applicazioni xamarin. Forms vengono eseguite sul desktop di Windows 10. È inoltre disponibile il supporto di anteprima per il [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK #](~/xamarin-forms/platform/gtk.md), e [Tizen](~/xamarin-forms/platform/tizen.md) piattaforme.
+> Xamarin. Forms non supporta più Windows 8.1, Windows Phone 8.1 o Windows 10 Mobile, ma le applicazioni xamarin. Forms vengono eseguite sul desktop di Windows 10. È inoltre disponibile il supporto di anteprima per il [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md), e [Tizen](~/xamarin-forms/platform/other/tizen.md) piattaforme.
 
 La maggior parte di un'applicazione xamarin. Forms esistente in una libreria o un SAP. Ognuna delle piattaforme è costituito da uno stub piccola applicazione che chiama il codice condiviso.
 

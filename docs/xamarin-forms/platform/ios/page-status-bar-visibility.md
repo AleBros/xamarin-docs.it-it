@@ -1,0 +1,58 @@
+---
+title: Pagina visibilità delle barre di stato in iOS
+description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare iOS specifico della piattaforma che consente di impostare la visibilità della barra di stato in una pagina.
+ms.prod: xamarin
+ms.assetid: D8BB7C24-A27F-4758-8557-6A81F909ABD9
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+ms.openlocfilehash: 98eba6dea1fb528aa15a1fb242b0fb0eb7dada56
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54208706"
+---
+# <a name="page-status-bar-visibility-on-ios"></a>Pagina visibilità delle barre di stato in iOS
+
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+
+Questo specifico della piattaforma iOS consente di impostare la visibilità della barra di stato in una [ `Page` ](xref:Xamarin.Forms.Page), e include la possibilità di controllare come la barra di stato entra o esce dal `Page`. Vengono utilizzati in XAML mediante l'impostazione di `Page.PrefersStatusBarHidden` proprietà associata a un valore del `StatusBarHiddenMode` enumerazione e, facoltativamente, il `Page.PreferredStatusBarUpdateAnimation` proprietà associata a un valore del `UIStatusBarAnimation` enumerazione:
+
+```xaml
+<ContentPage ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.PrefersStatusBarHidden="True"
+             ios:Page.PreferredStatusBarUpdateAnimation="Fade">
+  ...
+</ContentPage>
+```
+
+In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+On<iOS>().SetPrefersStatusBarHidden(StatusBarHiddenMode.True)
+         .SetPreferredStatusBarUpdateAnimation(UIStatusBarAnimation.Fade);
+```
+
+Il `Page.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il `Page.SetPrefersStatusBarHidden` metodo, nel `Xamarin.Forms.PlatformConfiguration.iOSSpecific` dello spazio dei nomi, viene usato per impostare la visibilità della barra di stato in un [ `Page` ](xref:Xamarin.Forms.Page) specificando uno del `StatusBarHiddenMode` valori di enumerazione: `Default`, `True` , o `False`. Il `StatusBarHiddenMode.True` e `StatusBarHiddenMode.False` i valori impostati indipendentemente dall'orientamento del dispositivo, la visibilità della barra di stato e il `StatusBarHiddenMode.Default` valore nasconde la barra di stato in un ambiente verticalmente compact.
+
+Il risultato è che la visibilità della barra di stato in una [ `Page` ](xref:Xamarin.Forms.Page) può essere impostato:
+
+![](page-status-bar-visibility-images/hide-status-bar.png "Barra di stato visibilità specifico della piattaforma")
+
+> [!NOTE]
+> In un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage), specificato `StatusBarHiddenMode` valore di enumerazione verrà aggiornato anche la barra di stato di tutte le pagine figlio. In tutti gli altri [ `Page` ](xref:Xamarin.Forms.Page)-tipi derivati, l'oggetto specificati `StatusBarHiddenMode` valore di enumerazione verrà aggiornati solo la barra di stato nella pagina corrente.
+
+Il `Page.SetPreferredStatusBarUpdateAnimation` metodo viene utilizzato per impostare la modalità barra di stato entra o esce dal [ `Page` ](xref:Xamarin.Forms.Page) specificando uno dei `UIStatusBarAnimation` valori di enumerazione: `None`, `Fade`, o `Slide`. Se il `Fade` oppure `Slide` viene specificato il valore di enumerazione, una seconda 0,25 animazione viene eseguita come la barra di stato entra o esce dal `Page`.
+
+## <a name="related-links"></a>Collegamenti correlati
+
+- [PlatformSpecifics (esempio)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [Creazione di funzionalità specifiche della piattaforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
+- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

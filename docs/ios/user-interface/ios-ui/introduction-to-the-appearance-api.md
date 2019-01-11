@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/15/2018
-ms.openlocfilehash: 86055932edf82f04e11c9ae8dd684a3d77c3d830
-ms.sourcegitcommit: da2260a882dbda02732e21cad5cc9a9dd35e27e7
+ms.openlocfilehash: bfbc902b0912527fea6aaa58c6706ef5a0ccbf8e
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51709228"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207921"
 ---
 # <a name="appearance-api-in-xamarinios"></a>API Appearance in xamarin. IOS
 
@@ -69,7 +69,7 @@ progress2.TrackTintColor = UIColor.FromRGB (197,255,132);
 
 ## <a name="using-uiappearance-in-xamarinforms"></a>Uso di UIAppearance in xamarin. Forms
 
-L'API di aspetto può essere utile quando [lo stile dell'app iOS](~/xamarin-forms/platform/ios/theme.md#uiappearance) nelle soluzioni xamarin. Forms. Alcune righe nel `AppDelegate` classe può rivelarsi utile per implementare uno schema di colore specifico senza dover creare un [renderer personalizzati](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
+L'API di aspetto può essere utile quando [lo stile dell'app iOS](~/xamarin-forms/platform/ios/formatting.md#uiappearance) nelle soluzioni xamarin. Forms. Alcune righe nel `AppDelegate` classe può rivelarsi utile per implementare uno schema di colore specifico senza dover creare un [renderer personalizzati](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
 ### <a name="custom-themes-and-uiappearance"></a>UIAppearance e temi personalizzati
 
@@ -83,7 +83,7 @@ Per modificare uno specifico `UISegmentedControl` per avere una tonalità di col
 sg1.TintColor = UIColor.Magenta;
 ```
 
-In alternativa, impostare il valore nel riquadro delle proprietà della finestra di progettazione: 
+In alternativa, impostare il valore nel riquadro delle proprietà della finestra di progettazione:
 
 [![](introduction-to-the-appearance-api-images/propertiespadtint.png "Proprietà riempimento tinta")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
 
@@ -109,4 +109,4 @@ Vedere le [Introduzione all'API di aspetto](~/ios/user-interface/ios-ui/introduc
 
 - [Aspetto (esempio)](https://developer.xamarin.com/samples/monotouch/Appearance/)
 - [Riferimento al protocollo UIAppearance](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/)
-- [Aspetto in xamarin. Forms](~/xamarin-forms/platform/ios/theme.md#uiappearance)
+- [Aspetto in xamarin. Forms](~/xamarin-forms/platform/ios/formatting.md#uiappearance)

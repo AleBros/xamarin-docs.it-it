@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 102ff15ea0e0002b783f993c59eb50d03a5ece63
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8e05a5f1c52183f29f22cbcd9655c26dc934e7d8
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051069"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207853"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>L'impostazione di proprietà ItemsSource del controllo di selezione
 
@@ -66,7 +66,7 @@ picker.ItemsSource = monkeyList;
 Oggetto [ `Picker` ](xref:Xamarin.Forms.Picker) supporta la selezione di un elemento alla volta. Quando un utente seleziona un elemento, il [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) viene generato l'evento, il [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) proprietà viene aggiornata in un intero che rappresenta l'indice dell'elemento selezionato nell'elenco e il [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) proprietà viene aggiornata per il `object` che rappresenta l'elemento selezionato. Il [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) proprietà è un numero in base zero che indica l'elemento selezionato dall'utente. Se è selezionato alcun elemento, che non viene soddisfatta quando la [ `Picker` ](xref:Xamarin.Forms.Picker) prima di tutto viene creato e inizializzato, `SelectedIndex` sarà -1.
 
 > [!NOTE]
-> Elemento comportamento di selezione in un [ `Picker` ](xref:Xamarin.Forms.Picker) possono essere personalizzati in iOS con una specifica della piattaforma. Per altre informazioni, vedere [controllo di selezione Item Selection](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#picker_update_mode).
+> Elemento comportamento di selezione in un [ `Picker` ](xref:Xamarin.Forms.Picker) possono essere personalizzati in iOS con una specifica della piattaforma. Per altre informazioni, vedere [controllo di selezione Item Selection](~/xamarin-forms/platform/ios/picker-selection.md).
 
 Esempio di codice seguente viene illustrato come recuperare il [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) valore della proprietà dal [ `Picker` ](xref:Xamarin.Forms.Picker) in XAML:
 
@@ -178,10 +178,9 @@ Il [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) esegue l'associazi
 
 Il [ `Picker` ](xref:Xamarin.Forms.Picker) Vista è un controllo per la selezione di un elemento di testo da un elenco di dati. Questo articolo ha illustrato come popolare una `Picker` con i dati impostando i [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) proprietà e su come rispondere alla selezione di elementi dall'utente. Questo approccio, che è stata introdotta in xamarin. Forms 2.3.4, è l'approccio consigliato per l'interazione con un `Picker`.
 
-
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Demo di selezione (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
 - [Monkey App (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/MonkeyAppPicker/)
 - [Selezione associabile (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindablePicker/)
-- [Selezione](xref:Xamarin.Forms.Picker)
+- [Selezione API](xref:Xamarin.Forms.Picker)

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 53348e15d1ecc74f50cacdd422da5c80af802d1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 54479a7ed66c83d1d97d51cc93e3df3241ec740f
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110719"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207934"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Principi di progettazione di API xamarin. Android
 
@@ -322,6 +322,6 @@ Ad esempio, prendere in considerazione [Activity.requestWindowFeature (int featu
 In questi casi, Microsoft si impegna a raggruppare costanti correlate in un'enumerazione di .NET e modificare il mapping del metodo per eseguire invece l'enumerazione.
 In questo modo, siamo in grado di offrire la selezione di IntelliSense dei valori possibili.
 
-Nell'esempio precedente diventa: [Activity.RequestWindowFeature (WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/)).
+Nell'esempio precedente diventa: [Activity.RequestWindowFeature (WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/).
 
-Si tratta di un processo molto manuale a capire quali costanti formano insieme e quali API utilizzano queste costanti. Inviare bug per qualsiasi utilizzo costanti nell'API che sarebbe meglio espresso sotto forma di enumerazione.
+Si tratta di un processo molto manuale a capire quali costanti formano insieme e quali API utilizzano queste costanti. Inviare bug per tutte le costanti usate nell'API che sarebbe meglio espresso sotto forma di enumerazione.
