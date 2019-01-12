@@ -6,12 +6,12 @@ ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 2357003e3a855981f053c48a596b932d9ba36d90
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2bbf0bda42b7bce483d9d036ebf39314dcb73072
+ms.sourcegitcommit: fabd3b51dca6d904009d0670137c5fb5ee6c32ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104960"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249190"
 ---
 # <a name="inspector-installation-and-requirements"></a>Requisiti e installazione inspector
 
@@ -52,7 +52,7 @@ L'ispezione delle app in tempo reale è disponibile per i clienti aziendali.
 |Piattaforma per App|Supporto IDE|Note|
 |--- |--- |--- |
 |Mac|Supportato solo in Visual Studio per Mac|
-|iOS|Supportato in Visual Studio 2017 e Visual Studio per Mac| |
+|iOS|Supportato in Visual Studio 2017 e Visual Studio per Mac| Comportamento del linker deve essere impostato su **non collegare** (sotto **compilazione iOS** opzioni progetto) |
 |Android|Supportato in Visual Studio 2017 e Visual Studio per Mac|Deve avere come destinazione Android > = 4.0.3, con **fastdev** abilitata.<br />È necessario usare gli emulatori di Google, Visual Studio o Xamarin. Android. Emulatori Android 7 non possono consentire di ispezione in questo momento.|
 |WPF|Supportato solo in Visual Studio 2017|
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 1c88a5c16dbe5559f0b551a97a27ebb893991187
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 119fd478727a002622861c94462b93b75720a992
+ms.sourcegitcommit: fabd3b51dca6d904009d0670137c5fb5ee6c32ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120502"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249203"
 ---
 # <a name="ios-security-and-privacy-features"></a>iOS funzionalità di sicurezza e Privacy
 
@@ -27,7 +27,7 @@ Apple ha introdotto numerosi miglioramenti al sia sicurezza e privacy in iOS 10 
 Le seguenti modifiche generali sono state apportate alla sicurezza e Privacy in iOS 10:
 
 - Common Data Security Architecture (CDSA) API è obsoleta e deve essere sostituito con l'API SecKey per generare le chiavi asimmetriche.
-- Il nuovo `NSAllowsArbitraryLoadsInWebContent` chiave possono aggiungere a di un'app **Info. plist** file e consentirà alle pagine web di caricare correttamente mentre protezione Apple Transport Security (ATS) è ancora abilitata per il resto dell'app. Per altre informazioni, vedere la [App Transport Security](~/ios/app-fundamentals/ats.md) documentazione.
+- Il nuovo `NSAllowsArbitraryLoadsInWebContent` chiave può essere aggiunti a di un'app **Info. plist** file e consentirà alle pagine web di caricare correttamente mentre protezione Apple Transport Security (ATS) è ancora abilitata per il resto dell'app. Per altre informazioni, vedere la [App Transport Security](~/ios/app-fundamentals/ats.md) documentazione.
 - Poiché nuovi negli Appunti in iOS 10 e macOS Sierra consente all'utente di copia e incolla tra i dispositivi, l'API è stata estesa per consentire gli Appunti essere limitata a un dispositivo specifico e che timestamp da cancellare automaticamente in un determinato punto. Inoltre, pasteboards denominati non sono più persistenti e devono essere sostituiti con i contenitori tavolo di montaggio condivisi.
 - Per tutte le connessioni SSL/TLS, la crittografia simmetrica RC4 è disabilitata per impostazione predefinita. Inoltre, l'API di trasporto sicuro non supporta più SSLv3 ed è consigliabile che lo sviluppatore di interrompere l'uso della crittografia SHA-1 e 3DES appena possibile.
 
@@ -51,9 +51,9 @@ La Privacy seguente relative chiavi sono disponibili:
 - **Privacy - descrizione utilizzo aggiornamento informazioni salute** (`NSHealthUpdateUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera modificare i dati di integrità dell'utente. Per altre informazioni, vedere di Apple [riferimento alla classe HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore).
 - **Privacy - descrizione utilizzo HomeKit** (`NSHomeKitUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere ai dati di configurazione dell'utente HomeKit.
 - **Privacy - descrizione utilizzo di percorso sempre** (`NSLocationAlwaysUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera abbiano sempre accesso alla posizione dell'utente.
-- [Deprecato] **Privacy - descrizione utilizzo posizione** (`NSLocationUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere al percorso utente. *Nota: Questa chiave è stata deprecata in iOS 8 (e versioni successive). Uso `NSLocationAlwaysUsageDescription` o `NSLocationWhenInUseUsageDescription` invece.*
+- [Deprecato] **Privacy - descrizione utilizzo posizione** (`NSLocationUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere al percorso utente. *NOTA: Questa chiave è stata deprecata in iOS 8 (e versioni successive). Uso `NSLocationAlwaysUsageDescription` o `NSLocationWhenInUseUsageDescription` invece.*
 - **Privacy - quando In uso descrizione utilizzo posizione** (`NSLocationWhenInUseUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere al percorso dell'utente durante l'esecuzione.
-- [Deprecato] **Privacy - descrizione utilizzo libreria multimediale** -consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere al catalogo multimediale dell'utente. *Nota: Questa chiave è stata deprecata in iOS 8 (e versioni successive). Usare `NSAppleMusicUsageDescription` invece.*
+- [Deprecato] **Privacy - descrizione utilizzo libreria multimediale** -consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere al catalogo multimediale dell'utente. *NOTA: Questa chiave è stata deprecata in iOS 8 (e versioni successive). Usare `NSAppleMusicUsageDescription` invece.*
 - **Privacy - descrizione utilizzo microfono** (`NSMicrophoneUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere al microfono di dispositivi.
 - **Privacy - descrizione utilizzo movimento** (`NSMotionUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere a accelerometro del dispositivo.
 - **Privacy - descrizione utilizzo raccolta foto** (`NSPhotoLibraryUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui vuole che l'app per accedere alla libreria di foto dell'utente.
