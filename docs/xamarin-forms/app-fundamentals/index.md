@@ -6,13 +6,13 @@ ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/03/2018
-ms.openlocfilehash: 015a7dfa3d55b411e6626ae2ac70fd2930661e65
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 01/08/2018
+ms.openlocfilehash: a65946f21f8ced00e9ad64aec590df37acab1528
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898992"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207817"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Nozioni di base sulle applicazioni Xamarin.Forms
 
@@ -27,6 +27,10 @@ La classe `Application` è il punto di partenza per Xamarin.Forms: ogni app deve
 ## <a name="app-lifecycleapp-lifecyclemd"></a>[Ciclo di vita dell'app](app-lifecycle.md)
 
 I metodi `OnStart`, `OnSleep` e `OnResume` della classe `Application` nonché gli eventi di navigazione modale, consentono di gestire gli eventi del ciclo di vita dell'applicazione con codice personalizzato.
+
+## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[Indicizzazione e deep linking delle applicazioni](deep-linking.md)
+
+L'indicizzazione delle applicazioni consente di mantenere rilevanti, visualizzandole nei risultati della ricerca, le applicazioni che verrebbero altrimenti dimenticate dopo pochi usi. Il deep linking consente alle applicazioni di rispondere a un risultato di ricerca che contiene dati dell'applicazione, in genere passando a una pagina a cui fa riferimento un collegamento diretto.
 
 ## <a name="behaviorsbehaviorsindexmd"></a>[Comportamenti](behaviors/index.md)
 
@@ -50,7 +54,7 @@ Gli effetti consentono di personalizzare i controlli nativi di ogni piattaforma 
 
 ## <a name="filesfilesmd"></a>[File](files.md)
 
-La gestione di file con Xamarin.Forms può essere ottenuta tramite codice in una libreria .NET Standard o tramite le risorse incorporate.
+In Xamarin.Forms è possibile gestire i file usando il codice disponibile in una libreria .NET Standard o usando le risorse incorporate.
 
 ## <a name="gesturesgesturesindexmd"></a>[Movimenti](gestures/index.md)
 
@@ -66,7 +70,7 @@ Xamarin.Forms supporta applicazioni basate su database con il motore di database
 
 ## <a name="messaging-centermessaging-centermd"></a>[Centro di messaggistica](messaging-center.md)
 
-`MessagingCenter` di Xamarin.Forms consente di visualizzare modelli e altri componenti con cui comunicare senza che sia necessario conoscere nulla reciprocamente, al di fuori di un semplice contratto di messaggio.
+`MessagingCenter` di Xamarin.Forms abilita modelli di visualizzazione e altri componenti con cui comunicare senza la necessità di alcuna conoscenza reciproca, se non un semplice contratto di messaggio.
 
 ## <a name="navigationnavigationindexmd"></a>[Navigazione](navigation/index.md)
 
