@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 741e18d84c25bb4479480949a271a5845e99daa1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3c552d97f64b28ed47a9226047862bffcfa8c9e3
+ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118461"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418686"
 ---
 # <a name="using-sqlitenet-with-android"></a>Uso di SQLite.NET con Android
 
@@ -22,8 +22,8 @@ Per includere la libreria di SQLite.NET in un'app Xamarin, aggiungere il pacchet
 
 - **Nome del pacchetto:** sqlite-net-libreria di classi portabile
 - **Autore:** Frank A. Krueger
-- **ID:** sqlite-net-libreria di classi portabile
-- **URL:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **ID:** sqlite-net-pcl
+- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 [![Pacchetto NuGet di SQLite.NET](using-sqlite-orm-images/image1a-sml.png "SQLite.NET mobileengagement")](using-sqlite-orm-images/image1a.png#lightbox)
 
@@ -136,7 +136,7 @@ Attributi comuni che è possibile applicare alle classi per controllare come ven
 -   **[MaxLength(value)]**  &ndash; Limitare la lunghezza di una proprietà di testo, quando viene tentata l'inserimento di un database. Utilizzo di codice deve convalidare questo prima dell'inserimento dell'oggetto quando questo attributo è solo 'checked' quando l'inserimento di un database o l'operazione di aggiornamento viene tentata.
 
 -   **[Ignorare]**  &ndash; SQLite.NET fa sì che per ignorare questa proprietà.
-    Ciò è particolarmente utile per le proprietà che hanno un tipo che non può essere archiviato nel database o le proprietà che le raccolte di modello che non possono essere risolti automaticamente essere SQLite.
+    Ciò è particolarmente utile per le proprietà che hanno un tipo che non possa essere archiviato nel database, o proprietà che definiscono raccolte non possono essere risolti automaticamente SQLite.
 
 -   **[Unique]**  &ndash; Assicura che i valori nella colonna del database sottostante siano univoci.
 
@@ -205,7 +205,7 @@ var rowcount = db.Delete<Stock>(someStock.Id); // Id is the primary key
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>Uso di SQLite.NET con più thread
 
-SQLite supporta tre diverse modalità di threading: *singoli thread*, *multithread*, e *serializzata*. Se si desidera accedere al database da più thread senza restrizioni, è possibile configurare SQLite per usare la **serializzata** threading modalità. È importante impostare questa modalità nelle prime fasi dell'applicazione (ad esempio, all'inizio del `OnCreate` (metodo)).
+SQLite supporta tre diverse modalità di threading: *Thread singolo*, *multithread*, e *serializzato*. Se si desidera accedere al database da più thread senza restrizioni, è possibile configurare SQLite per usare la **serializzata** threading modalità. È importante impostare questa modalità nelle prime fasi dell'applicazione (ad esempio, all'inizio del `OnCreate` (metodo)).
 
 Per modificare la modalità di threading, chiamare `SqliteConnection.SetConfig`. Ad esempio, questa riga di codice Configura per SQLite **serializzata** modalità: 
 
