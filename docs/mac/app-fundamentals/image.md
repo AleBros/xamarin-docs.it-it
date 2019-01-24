@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 8bc319b53e4a93d5cac35c4f8c3263b72dfe45e2
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.openlocfilehash: 719efc87b8843d0d2fcd2643aab23aa6849d940a
+ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746908"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841380"
 ---
 # <a name="images-in-xamarinmac"></a>Immagini in xamarin. Mac
 
@@ -82,7 +82,7 @@ Di seguito deve prendere in considerazione quando si usano immagini vettoriali P
 - Questo non è supporto vettore completo come il formato PDF sarà rasterizzato a una bitmap in fase di compilazione e le bitmap fornite con l'applicazione finale.
 - Dopo che è stata impostata nel catalogo di Asset non è possibile modificare le dimensioni dell'immagine. Se si prova a ridimensionare l'immagine (nel codice oppure utilizzando Layout automatico e le classi di dimensioni) l'immagine verrà distorta esattamente come qualsiasi altra immagine bitmap.
 
-Quando si usa un' **immagine impostata** in Interface Builder di Xcode, è possibile selezionare semplicemente il relativo nome nell'elenco a discesa nel **attributo Inspector**: * *
+Quando si usa un' **immagine impostata** in Interface Builder di Xcode, è possibile selezionare semplicemente il relativo nome nell'elenco a discesa nel **attributo Inspector**:
 
 ![Se si seleziona un'immagine impostato in Interface Builder di Xcode](image-images/imageset06.png "selezionando un'immagine impostata in Interface Builder di Xcode")
 
