@@ -46,7 +46,7 @@ items:
         href: app-fundamentals/building-cross-platform-applications/practical-code-sharing-strategies.md
       - name: Parte 6 - Test e approvazioni per App Store
         href: app-fundamentals/building-cross-platform-applications/testing-and-app-store-approvals.md
-      - name: 'Case Study: Tasky'
+      - name: 'Case study: Tasky'
         href: app-fundamentals/building-cross-platform-applications/case-study-tasky.md
     expanded: true
   - name: Condivisione del codice
@@ -74,6 +74,8 @@ items:
         href: app-fundamentals/nuget-multiplatform-libraries/metadata.md
     - name: Pacchetti NuGet (manuali)
       href: app-fundamentals/nuget-manual.md
+    - name: Usare le librerie C/C++ nelle app multipiattaforma
+      href: cpp/index.md
   - name: Supporto per le lingue
     href: platform/index.md
     items:
@@ -190,9 +192,9 @@ items:
   - name: Esempi
     href: samples/index.yml
   expanded: true
-ms.openlocfilehash: 6de69aacc37d17086e49ae1a7571879686168a42
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5eb01503b809979ebbc6598cf1cde985d3431bad
+ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130241"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841328"
