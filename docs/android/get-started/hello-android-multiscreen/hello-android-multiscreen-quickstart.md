@@ -1,5 +1,5 @@
 ---
-title: 'Hello, Android Multiscreen: guida introduttiva'
+title: 'Hello, Android Multiscreen: Guida rapida'
 description: Questa guida in due parti consente di ampliare l'applicazione Phoneword per gestire una seconda schermata. Nel corso della trattazione, è stato introdotto il concetto fondamentale dei blocchi predefiniti per le applicazioni Android, con un approfondimento dell'architettura Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -9,14 +9,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 774661b36a41e4791207a54892663af13de3b3d3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dcc60243957bb1a7720c08dc7a5ce51caf585ce8
+ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120489"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418660"
 ---
-# <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: guida introduttiva
+# <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: Guida rapida
 
 _Questa guida in due parti consente di ampliare l'applicazione Phoneword per gestire una seconda schermata. Nel corso della trattazione, è stato introdotto il concetto fondamentale dei blocchi predefiniti per le applicazioni Android, con un approfondimento dell'architettura Android._
 
@@ -143,7 +143,7 @@ translationHistoryButton.Click += (sender, e) =>
 };
 ```
 
-Aggiornare il pulsante **Translate** (Converti) per aggiungere il numero di telefono all'elenco `phoneNumbers`. Il gestore `Click` per `TranslateHistoryButton` deve essere simile al codice seguente:
+Aggiornare il pulsante **Translate** (Converti) per aggiungere il numero di telefono all'elenco `phoneNumbers`. Il gestore `Click` per `translateButton` deve essere simile al codice seguente:
 
 ```csharp
 // Add code to translate number

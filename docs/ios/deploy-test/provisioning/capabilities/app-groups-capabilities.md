@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 56284f1d3c5fec479badf91852acba2bf538bddd
-ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
+ms.openlocfilehash: f75c4777ce7a47e983683bf3d92ac20ab1b15c1c
+ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411739"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841354"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Funzionalità Gruppo di app in Xamarin.iOS
 
@@ -26,16 +26,16 @@ Un Gruppo di app consente a diverse applicazioni o a un'applicazione e alle rela
 
 ## <a name="configure-a-new-app-group"></a>Configurare un nuovo Gruppo di app
 
-Il percorso condiviso viene configurato usando un  [Gruppo di app](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19) configurato nella sezione  **Certificates, Identifiers & Profiles**  (Certificati, identificatori e profili) del  [centro sviluppatori Apple](https://developer.apple.com/account/). È necessario fare riferimento a questo valore anche nel file Entitlements.plist di ogni progetto.
+Il percorso condiviso viene configurato usando un [Gruppo di app](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19) configurato nella sezione **Certificates, Identifiers & Profiles** (Certificati, identificatori e profili) del [centro sviluppatori Apple](https://developer.apple.com/account/). È necessario fare riferimento a questo valore anche nel file Entitlements.plist di ogni progetto.
 
 Il gruppo di app avrà un identificatore che in genere corrisponde all'ID bundle con il prefisso group. Per l'ID bundle `com.xamarin.WatchSettings` , ad esempio, il gruppo di app sarà `group.com.xamarin.WatchSettings`.
 
 Per creare un nuovo Gruppo di app, eseguire le operazioni seguenti:
 
-1.  Visitare  [iOS Developer Center](https://developer.apple.com/account/) di Apple, aprire il proprio  **account** e accedere.
+1.  Visitare  [iOS Developer Center](https://developer.apple.com/account/) di Apple, aprire il proprio **account** e accedere.
 2.  Selezionare **Certificates, IDs & Profiles** (Certificati, ID e profili).
 3.  In **Identifiers** (Identificatori) selezionare **App Groups** (Gruppi di app) e fare clic sul pulsante **+** per creare un nuovo gruppo.
-4.  Immettere un **Nome** e un **Identificatore** per il nuovo gruppo e fare clic sul pulsante **Continua** : 
+4.  Immettere un **nome** e un **identificatore** per il nuovo gruppo e fare clic sul pulsante **Continue** (Continua): 
    
     ![Aggiungere i dettagli del Gruppo di app](app-groups-capabilities-images/image52.png)
 
@@ -55,17 +55,17 @@ Seguire questa procedura:
 
     ![Aggiungere i servizi app del Gruppo di app](app-groups-capabilities-images/image53.png)
 
-6.  Verificare le impostazioni e fare clic sul pulsante **Registra** per creare l'ID app.
+6.  Verificare le impostazioni e fare clic sul pulsante **Register** (Registra) per creare l'ID app.
 7.  Fare clic sul pulsante **Done** (Chiudi) per tornare all'elenco degli ID app registrati.
-8.  Selezionare dall'elenco l'ID app appena creato e fare clic sul pulsante **Modifica** :
+8.  Selezionare dall'elenco l'ID app appena creato e fare clic sul pulsante **Edit** (Modifica):
 
     ![Selezionare l'ID app dall'elenco](app-groups-capabilities-images/image54.png)
 
-9.  Nel servizio **App Group** (Gruppo di app), fare clic sul pulsante **Modifica** :
+9.  In Service (Servizio) **App Group** (Gruppo di app) fare clic sul pulsante **Edit** (Modifica):
 
     ![Selezionare l'ID app dall'elenco](app-groups-capabilities-images/image55.png)
 
-10. Selezionare il Gruppo di app creato in precedenza e fare clic sul pulsante **Continua** :
+10. Selezionare il Gruppo di app creato in precedenza e fare clic sul pulsante **Continue** (Continua):
 
     ![Aggiungere il Gruppo di app](app-groups-capabilities-images/image56.png)
 
@@ -78,6 +78,6 @@ Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero esse
 
 * Usare lo spazio dei nomi del framework nell'app.
 * Aggiungere all'app gli entitlement necessari. Per informazioni dettagliate sugli entitlement necessari e su come aggiungerli, vedere la guida [Uso degli entitlement](~/ios/deploy-test/provisioning/entitlements.md).
-* In  **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
+* In **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
 
 In caso di problemi con i servizi app, vedere la sezione [Troubleshooting](~/ios/deploy-test/provisioning/capabilities/index.md) (Risoluzione dei problemi) della guida principale.

@@ -6,13 +6,14 @@ ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 02/09/2018
-ms.openlocfilehash: 6e63d60d12a80abb8f229b2daf0767ad54a83314
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.custom: video
+ms.date: 01/22/2019
+ms.openlocfilehash: 6d64acdcc84c16f33a1f543bf1c9506ae7c8e347
+ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54479693"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Distribuzione wireless per app Xamarin.iOS e tvOS
 
@@ -58,7 +59,7 @@ Il processo di associazione seguente deve essere eseguito una sola volta per ogn
 
 1. Aprire Xcode e passare a **Window > Devices and Simulators** (Finestra > Dispositivi e simulatori).
 2. Collegare il dispositivo iOS al Mac tramite un cavo Lightning. Potrebbe essere necessario selezionare **Trust This Computer** (Considera attendibile il computer) sul dispositivo.
-3. Selezionare il dispositivo e quindi selezionare la casella di controllo **Connect via network** (Connetti tramite la rete) per associare il dispositivo: ![Finestra di dispositivi e simulatori con l'opzione per la connessione tramite la rete](wireless-deployment-images/image2.png)
+3. Selezionare il dispositivo e quindi selezionare la casella di controllo **Connect via network** (Connetti tramite rete) per associare il dispositivo:  ![Finestra Devices and Simulators (Dispositivi e simulatori) che mostra l'opzione Connect via network (Connetti tramite rete) ](wireless-deployment-images/image2.png)
 
 ### <a name="pairing-an-apple-tv-with-xcode"></a>Associazione di una Apple TV con Xcode
 
@@ -105,3 +106,9 @@ Il debug wireless viene abilitato automaticamente dopo la distribuzione wireless
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Pair a wireless device with Xcode](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/devbc48d1bad) (Associare un dispositivo wireless con Xcode)
+
+## <a name="related-video"></a>Video correlato
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Debug-to-iOS-Devices-Over-Wi-Fi/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
