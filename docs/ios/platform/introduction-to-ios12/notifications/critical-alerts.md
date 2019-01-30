@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 9/4/2018
-ms.openlocfilehash: 4f847a86f3f92bcf7168c2e104471e1ca052969c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 699d19228d2dee92f7a730bba4186a3aa5f21b04
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131454"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233237"
 ---
 # <a name="critical-alerts-in-xamarinios"></a>Avvisi critici in xamarin. IOS
 
@@ -28,8 +28,8 @@ Dopo la ricezione di questo diritto da Apple e seguire le istruzioni su come con
 
 Richiesta di autorizzazione di notifica di un'app chiede all'utente di attivare o disattivare le notifiche dell'app. Se la richiesta di autorizzazione notifica chiede l'autorizzazione per inviare gli avvisi critici, l'app anche fornirà all'utente la possibilità di fornire il consenso esplicito per gli avvisi critici.
 
-Il codice seguente richiede l'autorizzazione per inviare gli avvisi critici e notifiche standard e suoni passando appropriato [`UNAuthorizationOptions`](https://developer.xamarin.com/api/type/UserNotifications.UNAuthorizationOptions/)
-i valori per [ `RequestAuthorization` ](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.RequestAuthorization/):
+Il codice seguente richiede l'autorizzazione per inviare gli avvisi critici e notifiche standard e suoni passando appropriato [`UNAuthorizationOptions`](xref:UserNotifications.UNAuthorizationOptions)
+i valori per [ `RequestAuthorization` ](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*):
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -45,7 +45,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 
 ## <a name="local-critical-alerts"></a>Avvisi critici locali
 
-Per inviare un avviso critico locale, creare un [`UNMutableNotificationContent`](https://developer.xamarin.com/api/type/UserNotifications.UNMutableNotificationContent/)
+Per inviare un avviso critico locale, creare un [`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
 e impostare il `Sound` a una delle due proprietà:
 
 - `UNNotificationSound.DefaultCriticalSound`, che utilizza il segnale acustico predefinito critici.

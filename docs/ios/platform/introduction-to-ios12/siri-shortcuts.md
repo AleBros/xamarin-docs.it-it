@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 38e71914d9f7f6bb46ebeee8d548968c207d3b16
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 8b3b9a5b110432f33e06edf7ab51c582681e4ea3
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617761"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233731"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Tasti di scelta rapida Siri in xamarin. IOS
 
@@ -24,7 +24,7 @@ iOS 12 aggiunge collegamenti Siri, consentendo tutti i tipi di App per esporre l
 
 Tasti di scelta rapida consente di accelerare la capacità di un utente per completare un'attività comune, in molti casi senza aprire l'app in questione.
 
-## <a name="sample-app-soup-chef"></a>App di esempio: MINESTRONE Chef
+## <a name="sample-app-soup-chef"></a>App di esempio: Considerazioni su Chef
 
 Per comprendere meglio i tasti di scelta rapida Siri, esaminiamo il [Chef MINESTRONE](https://developer.xamarin.com/samples/monotouch/ios12/SoupChef/) app di esempio. MINESTRONE Chef consente agli utenti di effettuare ordini da un ristorante MINESTRONE immaginaria, visualizzare la cronologia degli ordini e definire le frasi da utilizzare quando si ordina MINESTRONE interagendo con Siri.
 
@@ -72,9 +72,9 @@ Il **Info. plist** file contiene inoltre quanto segue:
 </array>
 ```
 
-Ciò `NSUserActivityTypes` coppia chiave/valore indica che MINESTRONE Chef sa come gestire un' `OrderSoupIntent`e un [ `NSUserActivity` ](https://developer.xamarin.com/api/type/Foundation.NSUserActivity/) aventi un [ `ActivityType` ](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.ActivityType/) di "com.xamarin.SoupChef.viewMenu".
+Ciò `NSUserActivityTypes` coppia chiave/valore indica che MINESTRONE Chef sa come gestire un' `OrderSoupIntent`e un [ `NSUserActivity` ](xref:Foundation.NSUserActivity) aventi un [ `ActivityType` ](xref:Foundation.NSUserActivity.ActivityType) di "com.xamarin.SoupChef.viewMenu".
 
-Le attività e scopi personalizzati passati all'app stessa, in contrapposizione alle relative estensioni, vengono gestiti nel `AppDelegate` (una [ `UIApplicationDelegate` ](https://developer.xamarin.com/api/type/UIKit.UIApplicationDelegate/)) per il [ `ContinueUserActivity` ](https://developer.xamarin.com/api/member/UIKit.UIApplicationDelegate.ContinueUserActivity/) (metodo).
+Le attività e scopi personalizzati passati all'app stessa, in contrapposizione alle relative estensioni, vengono gestiti nel `AppDelegate` (una [ `UIApplicationDelegate` ](xref:UIKit.UIApplicationDelegate) per il [ `ContinueUserActivity` ](xref:UIKit.UIApplicationDelegate.ContinueUserActivity*) (metodo).
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
@@ -89,7 +89,7 @@ Il **entitlements. plist** del file nei **SoupChef** progetto contiene quanto se
 <true/>
 ```
 
-Questa configurazione indica che l'app Usa il gruppo di app "group.com.xamarin.SoupChef". Il **SoupChefIntents** estensione dell'app Usa questo stesso gruppo di app, che consente i due progetti da condividere [`NSUserDefaults`](https://developer.xamarin.com/api/type/Foundation.NSUserDefaults/)
+Questa configurazione indica che l'app Usa il gruppo di app "group.com.xamarin.SoupChef". Il **SoupChefIntents** estensione dell'app Usa questo stesso gruppo di app, che consente i due progetti da condividere [`NSUserDefaults`](xref:Foundation.NSUserDefaults)
 dati.
 
 Il `com.apple.developer.siri` chiave indica che l'app interagisce con Siri.
@@ -103,7 +103,7 @@ Per creare un collegamento che apre un'app per visualizzare il contenuto specifi
 
 ### <a name="setting-up-an-nsuseractivity"></a>Configurazione di un NSUserActivity
 
-Nella schermata menu `SoupMenuViewController` crea un' `NSUserActivity` e la assegna al controller di visualizzazione [ `UserActivity` ](https://developer.xamarin.com/api/property/UIKit.UIResponder.UserActivity/) proprietà:
+Nella schermata menu `SoupMenuViewController` crea un' `NSUserActivity` e la assegna al controller di visualizzazione [ `UserActivity` ](xref:UIKit.UIResponder.UserActivity) proprietà:
 
 ```csharp
 public override void ViewDidLoad()
@@ -149,8 +149,8 @@ public static NSUserActivity ViewMenuActivity {
 Notare in particolare quanto segue:
 
 - L'impostazione `EligibleForPrediction` a `true` indica che Siri può prevedere questa attività e della superficie di attacco, come collegamento.
-- Il [ `ContentAttributeSet` ](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.ContentAttributeSet/) matrice è uno standard [ `CSSearchableItemAttributeSet` ](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/) utilizzato per includere un `NSUserActivity` nei risultati della ricerca di iOS.
-- [`SuggestedInvocationPhrase`](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.SuggestedInvocationPhrase/) è una frase che Siri suggerirà all'utente come una potenziale scelta quando si assegna una frase a un scelta rapida.
+- Il [ `ContentAttributeSet` ](xref:Foundation.NSUserActivity.ContentAttributeSet) matrice è uno standard [ `CSSearchableItemAttributeSet` ](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/) utilizzato per includere un `NSUserActivity` nei risultati della ricerca di iOS.
+- [`SuggestedInvocationPhrase`](xref:Foundation.NSUserActivity.SuggestedInvocationPhrase) è una frase che Siri suggerirà all'utente come una potenziale scelta quando si assegna una frase a un scelta rapida.
 
 ### <a name="handling-an-nsuseractivity-shortcut"></a>La gestione di un collegamento NSUserActivity
 
@@ -600,7 +600,7 @@ public void ConfigureView(
 
 MINESTRONE Chef fornisce un'interfaccia per assegnare un collegamento di voce per ogni ordine, permettendo così di MINESTRONE ordine con Siri. In effetti, l'interfaccia utilizzata per registrare e assegnare tasti di scelta rapida voice viene fornito da iOS e richiede poco codice personalizzato.
 
-Nelle `OrderDetailViewController`, quando un utente tocca la tabella **aggiungere a Siri** riga, il [ `RowSelected` ](https://developer.xamarin.com/api/member/UIKit.UITableViewSource.RowSelected/) metodo visualizza una schermata per aggiungere o modificare un collegamento vocale:
+Nelle `OrderDetailViewController`, quando un utente tocca la tabella **aggiungere a Siri** riga, il [ `RowSelected` ](xref:UIKit.UITableViewSource.RowSelected*) metodo visualizza una schermata per aggiungere o modificare un collegamento vocale:
 
 ```csharp
 public override void RowSelected(UITableView tableView, NSIndexPath indexPath)

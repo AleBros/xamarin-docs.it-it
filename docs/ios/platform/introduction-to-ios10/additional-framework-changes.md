@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: 6ae08264218c8f959b351f059d73fc0aebfea39e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a7b029aad69e65192d48d969dba2b9bb9a0d7a50
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118084"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233900"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>Modifiche aggiuntive iOS 10 Framework
 
@@ -156,7 +156,7 @@ I miglioramenti seguenti sono stato apportati a framework ReplayKit in iOS 10:
 
 I miglioramenti seguenti sono stato apportati al framework di SceneKit in iOS 10:
 
-- Il [SCNCamera](https://developer.xamarin.com/api/type/SceneKit.SCNCamera/) classe può offrire maggiore realismo usando funzionalità HDR e gli effetti. Usare l'esposizione adattivo per creare effetti automatico o usare vignettatura, la smarginatura colore e la classificazione di colore per aggiungere effetti fillmatic al gioco.
+- Il [SCNCamera](xref:SceneKit.SCNCamera) classe può offrire maggiore realismo usando funzionalità HDR e gli effetti. Usare l'esposizione adattivo per creare effetti automatico o usare vignettatura, la smarginatura colore e la classificazione di colore per aggiungere effetti fillmatic al gioco.
 - SceneKit include ora un nuovo sistema fisicamente basato su Rendering PBR () per ottenere risultati più realistici con più semplice la creazione di asset.
 - Usare le nuove [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) ombreggiatura del modello di prodotto una vasta gamma di effetti di ombreggiatura realistica questa tecnologia richiede solo tre proprietà fondamentali (`Diffuse`, `Metalness` e `Roughness`).
 - Poiché PBR ombreggiatura funziona meglio con illuminazione basata su ambiente, usare il `LightingEnvironment` proprietà per l'assegnazione basata su immagini di illuminazione per un'intera scena.
@@ -191,8 +191,8 @@ Vedere le [iOSTenThree esempio](https://developer.xamarin.com/samples/monotouch/
 
 I miglioramenti seguenti sono stato apportati a framework UIKit in iOS 10:
 
-- Il nuovo [UIPasteboard](https://developer.xamarin.com/api/type/UIKit.UIPasteboard/) API sono disponibili nuove opzioni (ad esempio, le limitazioni di durata) e verrà automaticamente dichiarare tipi di contenuto compatibili comuni per tipi di classe.
-- Nuovo supporto per l'animazione completamente interattive, basato su oggetti, interrompibili è stato aggiunto e può essere collegato ai movimenti. Del pleas vedere Apple [UIViewAnimating Protocol Reference](https://developer.apple.com/reference/uikit/uiviewanimating), [riferimento alla classe UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [UITimingCurveProvider Protocol Reference](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [Riferimento alla classe UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) e [riferimento alla classe UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) per altre informazioni.
+- Il nuovo [UIPasteboard](xref:UIKit.UIPasteboard) API sono disponibili nuove opzioni (ad esempio, le limitazioni di durata) e verrà automaticamente dichiarare tipi di contenuto compatibili comuni per tipi di classe.
+- Nuovo supporto per l'animazione completamente interattive, basato su oggetti, interrompibili è stato aggiunto e può essere collegato ai movimenti. Vedere di Apple [UIViewAnimating Protocol Reference](https://developer.apple.com/reference/uikit/uiviewanimating), [riferimento alla classe UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [UITimingCurveProvider Protocol Reference](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [Riferimento alla classe UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) e [riferimento alla classe UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) per altre informazioni.
 - Il nuovo `UIPreviewInteraction` e `UIPreviewInteractionDelegate` consentire all'app per gli sviluppatori di fornire un'interfaccia personalizzata per le operazioni peek e pop.
 - Il nuovo `UIAccessibilityCustomRotor` classe consente all'app fornire funzionalità personalizzate e specifici del contesto di Assistive Technology, ad esempio VoiceOver.
 - Usare la `UIAccessibilityIsAssistiveTouchRunning` e `UIAccessibilityAssistiveTouchStatusDidChangeNotification` simboli per determinare se AssistiveTouch è abilitato.

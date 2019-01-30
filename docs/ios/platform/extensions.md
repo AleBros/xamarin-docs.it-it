@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: f892774b4899fcbac46e8cc7bc2b0dd0336cc036
-ms.sourcegitcommit: f5fce8308b2e7c39c5b0c904e5f38a4ce2b55c87
+ms.openlocfilehash: 10b692099bae6f444474394144eb7e8bb46d749f
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012282"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233926"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>estensioni di iOS in xamarin. IOS
 
@@ -30,7 +30,7 @@ Tutte le estensioni vengono installate insieme a un'app contenitore (con entramb
 |Tipo|Descrizione|Punto di estensione|Host App|
 |--- |--- |--- |--- |
 |Operazione|Editor specializzato o un visualizzatore per un determinato tipo di supporto|`com.apple.ui-services`|Qualsiasi|
-|Provider di documento|Consente di usare un archivio remoto documenti dell'app|`com.apple.fileprovider-ui`|Le app usando un [UIDocumentPickerViewController](https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/)|
+|Provider di documento|Consente di usare un archivio remoto documenti dell'app|`com.apple.fileprovider-ui`|Le app usando un [UIDocumentPickerViewController](xref:UIKit.UIDocumentPickerViewController)|
 |Tastiera|Tastiere alternative|`com.apple.keyboard-service`|Qualsiasi|
 |Modifica foto|Modifica foto e la modifica|`com.apple.photo-editing`|Editor Photos.app|
 |Condividi|Condivide i dati con i social network, messaggistica di servizi e così via.|`com.apple.share-services`|Qualsiasi|
@@ -48,8 +48,8 @@ Le limitazioni universali sono:
 - Non è possibile usare le estensioni [estesi modalità in background](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_3_ios_backgrounding_techniques/registering_applications_to_run_in_background/)
 - Le estensioni non possono accedere fotocamere o microfoni del dispositivo (anche se potrebbero accedere al file di supporto esistenti)
 - Le estensioni non possono ricevere dati Drop Air (anche se è possibile trasmettere i dati tramite Drop aria)
-- [UIActionSheet](https://developer.xamarin.com/api/type/UIKit.UIActionSheet/) e [UIAlertView](https://developer.xamarin.com/api/type/UIKit.UIAlertView/) non sono disponibili; è necessario usare le estensioni [UIAlertController](https://developer.xamarin.com/api/type/UIKit.UIAlertController/)
-- Diversi membri della [UIApplication](https://developer.xamarin.com/api/type/UIKit.UIApplication/) non sono disponibili: [UIApplication.SharedApplication](https://developer.xamarin.com/api/property/UIKit.UIApplication.SharedApplication/), `UIApplication.OpenURL`, `UIApplication.BeginIgnoringInteractionEvents` e `UIApplication.EndIgnoringInteractionEvents`
+- [UIActionSheet](xref:UIKit.UIActionSheet) e [UIAlertView](xref:UIKit.UIAlertView) non sono disponibili; è necessario usare le estensioni [UIAlertController](xref:UIKit.UIAlertController)
+- Diversi membri della [UIApplication](xref:UIKit.UIApplication) non sono disponibili: [UIApplication.SharedApplication](xref:UIKit.UIApplication.SharedApplication), [UIApplication.OpenUrl](xref:UIKit.UIApplication.OpenUrl(Foundation.NSUrl)), [UIApplication.BeginIgnoringInteractionEvents](xref:UIKit.UIApplication.BeginIgnoringInteractionEvents) and [UIApplication.EndIgnoringInteractionEvents](xref:UIKit.UIApplication.EndIgnoringInteractionEvents)
 - iOS impone un limite di utilizzo di memoria 16 MB per le estensioni di oggi.
 - Per impostazione predefinita le estensioni della tastiera non hanno accesso alla rete. Questo fattore influisce sul debug nel dispositivo (la restrizione non viene applicata nel simulatore), poiché xamarin. IOS richiede l'accesso alla rete affinché il debug. È possibile richiedere l'accesso di rete impostando il `Requests Open Access` valore nel file Info. plist del progetto per `Yes`. Vedere di Apple [Guida per tastiera personalizzata](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html) per altre informazioni sulle limitazioni di estensione della tastiera.
 
@@ -65,11 +65,11 @@ In genere, l'app contenitore descrive l'estensione e assiste l'utente attraverso
 
 ## <a name="extension-lifecycle"></a>Ciclo di vita di estensione
 
-Un'estensione può essere semplice come una singola [UIViewController](https://developer.xamarin.com/api/type/UIKit.UIViewController/) o le estensioni più complesse che presentano più schermate dell'interfaccia utente. Quando l'utente rileva un _punti di estensione_ (ad esempio, quando la condivisione di un'immagine), hanno la possibilità di scegliere tra le estensioni registrate per tale punto di estensione. 
+Un'estensione può essere semplice come una singola [UIViewController](xref:UIKit.UIViewController) o le estensioni più complesse che presentano più schermate dell'interfaccia utente. Quando l'utente rileva un _punti di estensione_ (ad esempio, quando la condivisione di un'immagine), hanno la possibilità di scegliere tra le estensioni registrate per tale punto di estensione. 
 
 Se si sceglie una delle app di estensioni, relativo `UIViewController` verranno create istanze e iniziare il ciclo di vita del Controller di visualizzazione normale. Tuttavia, a differenza una normale app che vengono sospesi ma in genere non vengono terminate quando l'utente termina l'interazione con essi, estensioni sono caricate, eseguite e quindi terminate ripetutamente.
 
-Le estensioni possono comunicare con le proprie applicazioni Host tramite un [NSExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) oggetto. Alcune estensioni sono disponibili operazioni che ricevono richiamate asincrone con i risultati. Questi callback verranno eseguiti sul thread in background e l'estensione deve tenere in considerazione questo; ad esempio, usando [NSObject.InvokeOnMainThread](https://developer.xamarin.com/api/member/Foundation.NSObject.InvokeOnMainThread/) se desiderano aggiornare l'interfaccia utente. Vedere le [comunica con l'App Host](#Communicating-with-the-Host-App) sezione di seguito per altri dettagli.
+Le estensioni possono comunicare con le proprie applicazioni Host tramite un [NSExtensionContext](xref:Foundation.NSExtensionContext) oggetto. Alcune estensioni sono disponibili operazioni che ricevono richiamate asincrone con i risultati. Questi callback verranno eseguiti sul thread in background e l'estensione deve tenere in considerazione questo; ad esempio, usando [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) se desiderano aggiornare l'interfaccia utente. Vedere le [comunica con l'App Host](#Communicating-with-the-Host-App) sezione di seguito per altri dettagli.
 
 Per impostazione predefinita, le estensioni e le loro applicazioni contenitore non possono comunicare, pur essendo installati insieme. In alcuni casi, l'app contenitore è essenzialmente un "shipping" contenitore vuoto con lo scopo verrà resi disponibili dopo aver installato l'estensione. Tuttavia, se seconda delle circostanze, l'app contenitore e l'estensione può condividere le risorse da un'area comune. Inoltre, un **estensione per oggi** potrebbe richiedere l'app di contenitore per aprire un URL. Questo comportamento è illustrato nella [evolvere Widget del conto alla rovescia](http://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
 
@@ -264,11 +264,11 @@ Verrà aggiunto il nuovo widget per la **oggi stesso** Vista e i risultati verra
 
 ## <a name="communicating-with-the-host-app"></a>Comunicazione con l'applicazione host
 
-L'esempio oggi estensione creato in precedenza non comunica con l'app di host (il **oggi stesso** schermata). In caso affermativo, viene utilizzato il [ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) proprietà delle `TodayViewController` o `CodeBasedViewController` classi. 
+L'esempio oggi estensione creato in precedenza non comunica con l'app di host (il **oggi stesso** schermata). In caso affermativo, viene utilizzato il [ExtensionContext](xref:Foundation.NSExtensionContext) proprietà delle `TodayViewController` o `CodeBasedViewController` classi. 
 
-Per le estensioni che verranno inviati dati dal loro hosting delle App, i dati sono in forma di una matrice di [NSExtensionItem](https://developer.xamarin.com/api/type/Foundation.NSExtensionItem/) gli oggetti archiviati nel [InputItems](https://developer.xamarin.com/api/property/Foundation.NSExtensionContext.InputItems/) proprietà del [ExtensionContext ](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) dell'estensione `UIViewController`.
+Per le estensioni che verranno inviati dati dal loro hosting delle App, i dati sono in forma di una matrice di [NSExtensionItem](xref:Foundation.NSExtensionItem) gli oggetti archiviati nel [InputItems](xref:Foundation.NSExtensionContext.InputItems) proprietà del [ExtensionContext ](xref:Foundation.NSExtensionContext) dell'estensione `UIViewController`.
 
-Altre estensioni, ad esempio le estensioni modifica foto, possono distinguere tra l'utente il completamento o l'annullamento dell'utilizzo. Questo verrà segnalato all'host di App tramite il [CompleteRequest](https://developer.xamarin.com/api/member/Foundation.NSExtensionContext.CompleteRequest/) e [CancelRequest](https://developer.xamarin.com/api/member/Foundation.NSExtensionContext.CancelRequest/) metodi [ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) proprietà.
+Altre estensioni, ad esempio le estensioni modifica foto, possono distinguere tra l'utente il completamento o l'annullamento dell'utilizzo. Questo verrà segnalato all'host di App tramite il [CompleteRequest](xref:Foundation.NSExtensionContext.CompleteRequest*) e [CancelRequest](xref:Foundation.NSExtensionContext.CancelRequest*) metodi [ExtensionContext](xref:Foundation.NSExtensionContext) proprietà.
 
 Per altre informazioni, vedere di Apple [Guida alla programmazione di estensione App](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW1).
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/20/2018
-ms.openlocfilehash: b0a5d3e75ebbcd70a60a3e4e76eebe166117d31c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0b3fb7d467ae64e2cbfdb61644b1537bc5ae1161
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131409"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233068"
 ---
 # <a name="using-the-natural-language-framework-with-xamarinios"></a>Usando il framework del linguaggio naturale con xamarin. IOS
 
@@ -20,7 +20,7 @@ Introdotto in iOS 12, il framework del linguaggio naturale consente l'elaborazio
 
 Il framework del linguaggio naturale anche possibile usare modelli personalizzati Core ML per classificare ed etichettare il testo in contesti specializzati.
 
-Il [NSLinguisticTagger](https://developer.xamarin.com/api/type/Foundation.NSLinguisticTagger/) classe sia ancora disponibile. Tuttavia, il framework del linguaggio naturale è il meccanismo preferito da usare per l'elaborazione in linguaggio naturale.
+Il [NSLinguisticTagger](xref:Foundation.NSLinguisticTagger) classe sia ancora disponibile. Tuttavia, il framework del linguaggio naturale è il meccanismo preferito da usare per l'elaborazione in linguaggio naturale.
 
 ## <a name="sample-app-xamarinnl"></a>App di esempio: XamarinNL
 
@@ -151,7 +151,7 @@ Il **Tokenizer** della scheda dell'app di esempio viene illustrato come separare
 Toccare il **parole** oppure **frasi** pulsante per recuperare un elenco di token. Ogni token è associato a una parola o frase nel testo originale.
 
 `ShowTokens` Divide l'input dell'utente in token chiamando il [`GetTokens`](https://developer.xamarin.com/api/member/NaturalLanguage.NLTokenizer.GetTokens/)
-metodo di un `NLTokenizer`. Questo metodo restituisce una matrice di [`NSValue`](https://developer.xamarin.com/api/type/Foundation.NSValue/)
+metodo di un `NLTokenizer`. Questo metodo restituisce una matrice di [`NSValue`](xref:Foundation.NSValue)
 gli oggetti, ogni ritorno a capo un `NSRange` valore corrispondente a un token nel testo originale.
 
 ```csharp

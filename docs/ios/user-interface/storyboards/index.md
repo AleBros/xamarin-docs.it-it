@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 554c96cdb46041b75a48523cc2952f05d2a7b1db
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 6294d696fe309e1952124caaaace89d40ad24bc6
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51564005"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233562"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in xamarin. IOS
 
@@ -249,7 +249,7 @@ public MainViewController (IntPtr handle) : base (handle)
 ```
 
 
-Quando si crea uno Storyboard usando la finestra di progettazione, l'IDE aggiungerà automaticamente il [[registrare]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) attributo all'inizio del `designer.cs` classe e passare un identificatore di stringa, che è identico all'ID di Storyboard specificato di passaggio precedente. Il codice c# verranno collegati alla scena rilevante nello Storyboard.
+Quando si crea uno Storyboard usando la finestra di progettazione, l'IDE aggiungerà automaticamente il [[registrare]](xref:Foundation.RegisterAttribute) attributo all'inizio del `designer.cs` classe e passare un identificatore di stringa, che è identico all'ID di Storyboard specificato di passaggio precedente. Il codice c# verranno collegati alla scena rilevante nello Storyboard.
 
 A un certo punto si potrebbe voler aggiungere una classe esistente che è stata **non** creata nella finestra di progettazione. In questo caso, si potrebbe registrare questa classe come di consueto:
 
@@ -320,11 +320,11 @@ Prima di iniziare, seguire i passaggi da 1-8. In questi passaggi è creare nostr
 1. A questo punto, è possibile creare l'interfaccia utente e aggiungere le visualizzazioni aggiuntive elencate per il `MainViewController` in modo che appaia come quello nello screenshot seguente:
 
     - UITextField
-        - Name: PasswordTextField
+        - Nome: PasswordTextField
         - Segnaposto: 'Immettere la Password segreta'
     - UILabel
-        - Testo: ' errore: Password errata. Non deve passare!'
-        - Colori: rosso
+        - Testo: ' Errore: Password errata. Non deve passare!'
+        - Colore: Rosso
         - Allineamento: Center
         - Righe: 2
         - Casella di controllo 'Hidden' selezionata 

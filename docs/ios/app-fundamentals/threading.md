@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: b90c59f09217077262c3aced9ee9e5d07849c25c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2dc56d9c5b63d428663d98bae4c8687c1f621a04
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106585"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233194"
 ---
 # <a name="threading-in-xamarinios"></a>Il threading in xamarin. IOS
 
@@ -35,7 +35,7 @@ In genere gli sviluppatori di utilizzano i thread quando hanno bisogno per crear
 
 ## <a name="developing-responsive-applications"></a>Lo sviluppo di applicazioni reattive
 
-Accesso a elementi dell'interfaccia utente deve essere limitata allo stesso thread che esegue il ciclo principale per l'applicazione. Se si desidera apportare modifiche all'interfaccia utente principale da un thread, è necessario accodare il codice usando [NSObject.InvokeOnMainThread](https://developer.xamarin.com/api/type/Foundation.NSObject/), simile al seguente:
+Accesso a elementi dell'interfaccia utente deve essere limitata allo stesso thread che esegue il ciclo principale per l'applicazione. Se si desidera apportare modifiche all'interfaccia utente principale da un thread, è necessario accodare il codice usando [NSObject.InvokeOnMainThread](xref:Foundation.NSObject), simile al seguente:
 
 ```csharp
 MyThreadedRoutine ()  
@@ -72,7 +72,7 @@ void MyThreadStart (object arg)
 }
 ```
 
-Nota: Poiché xamarin. IOS 5.2 non è necessario specificare il proprio `NSAutoReleasePool` più come una riceveranno automaticamente per l'utente.
+Nota: Poiché xamarin. IOS 5.2 non è necessario fornire il proprio `NSAutoReleasePool` più come una riceveranno automaticamente per l'utente.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

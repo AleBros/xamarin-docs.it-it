@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 9/4/2018
-ms.openlocfilehash: 8a2755de3dc43ccff88cbdf4dc9c4f9ba2d532c0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ddd3e1e6cc3a3a9b42ddb7a597ed2db0ee495d41
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111625"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233315"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Pulsanti di azione di notifica dinamica in xamarin. IOS
 
@@ -35,9 +35,9 @@ Creare e registrare le categorie di notifica, mentre un'applicazione viene avvia
 Ad esempio, nel [app di esempio](#sample-app-redgreennotifications), il `FinishedLaunching` metodo `AppDelegate` esegue le operazioni seguenti:
 
 - Definisce una categoria per le notifiche di colore rosso e l'altro per le notifiche di colore verde
-- Registra queste categorie tramite una chiamata di [`SetNotificationCategories`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.SetNotificationCategories/)
+- Registra queste categorie tramite una chiamata di [`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
 metodo di `UNUserNotificationCenter`
-- Associa un singolo [`UNNotificationAction`](https://developer.xamarin.com/api/type/UserNotifications.UNNotificationAction/)
+- Associa un singolo [`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
 a ogni categoria
 
 Esempio di codice seguente viene illustrato il funzionamento:
@@ -74,12 +74,12 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-Basato su questo codice, qualsiasi notifica la cui proprietà [`Content.CategoryIdentifier`](https://developer.xamarin.com/api/property/UserNotifications.UNNotificationContent.CategoryIdentifier/)
+Basato su questo codice, qualsiasi notifica la cui proprietà [`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
 sarà "red-categoria di" o "verde-", per impostazione predefinita, Mostra un **ruotare 20°** pulsante di azione.
 
 ## <a name="in-app-handling-of-notification-action-buttons"></a>Gestione di in-app dei pulsanti di azione di notifica
 
-`UNUserNotificationCenter` è un `Delegate` vlastnosti typu [ `IUNUserNotificationCenterDelegate` ](https://developer.xamarin.com/api/type/UserNotifications.UNUserNotificationCenterDelegate_Extensions/).
+`UNUserNotificationCenter` è un `Delegate` vlastnosti typu [ `IUNUserNotificationCenterDelegate` ](xref:UserNotifications.IUNUserNotificationCenterDelegate).
 
 Nell'app di esempio, `AppDelegate` si configura come delegato del centro notifiche utente in `FinishedLaunching`:
 
@@ -95,7 +95,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
         // ...
 ```
 
-Quindi, `AppDelegate` implementa [`DidReceiveNotificationResponse`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse/)
+Quindi, `AppDelegate` implementa [`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
 per gestire dispositivi Tap di sul pulsante di azione:
 
 ```csharp
@@ -125,7 +125,7 @@ Questa implementazione di `DidReceiveNotificationResponse` non consente di gesti
 
 Un'estensione per contenuto notifiche contiene un controller di visualizzazione che definisce l'interfaccia personalizzata per una notifica.
 
-Questo controller di visualizzazione è possibile usare la `GetNotificationActions` e `SetNotificationActions` metodi nel relativo [`ExtensionContext`](https://developer.xamarin.com/api/property/UIKit.UIViewController.ExtensionContext/)
+Questo controller di visualizzazione è possibile usare la `GetNotificationActions` e `SetNotificationActions` metodi nel relativo [`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
 proprietà per accedere e modificare i pulsanti di azione della notifica.
 
 Nell'app di esempio, il controller di visualizzazione dell'estensione per contenuto di notifica consente di modificare i pulsanti di azione solo quando si risponde a una scelta di un pulsante di azione già esistente.

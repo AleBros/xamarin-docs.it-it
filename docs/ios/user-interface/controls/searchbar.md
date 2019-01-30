@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: 923eebc2674abdbbd66d9db11bebf9f503928569
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3c46aa1244699671d46560b0029197981a86d005
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107326"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233328"
 ---
 # <a name="search-bars-in-xamarinios"></a>Le barre di ricerca in xamarin. IOS
 
@@ -84,7 +84,7 @@ Queste proprietà vengono spiegate di seguito:
 
 - **Testo segnaposto, prompt dei comandi** – queste proprietà vengono usate per suggerire e indicare come gli utenti devono usare la barra di ricerca. Se l'app è visualizzato un elenco degli archivi, ad esempio, è possibile utilizzare la proprietà prompt per indicare che gli utenti possono "Immettere una città, nome del brano o codice postale"
 - **Stile di visualizzazione di ricerca** – è possibile impostare la barra di ricerca per essere **Prominent** oppure **minimo**. Usando il notificate all'utente verrà tingere tutto il resto sullo schermo, fatta eccezione per la ricerca della barra, causando lo stato attivo su cui disegnare la barra di ricerca. La barra di ricerca di stile minimo si mescoleranno con adatto al contesto.
-- **Funzionalità** : abilitazione di queste proprietà vengono visualizzate solo l'elemento dell'interfaccia utente. La funzionalità deve essere implementata per questi generando l'evento corretto come illustrato in dettaglio nella [documentazione delle API di barra di ricerca](https://developer.xamarin.com/api/type/UIKit.UISearchBar/)
+- **Funzionalità** : abilitazione di queste proprietà vengono visualizzate solo l'elemento dell'interfaccia utente. La funzionalità deve essere implementata per questi generando l'evento corretto come illustrato in dettaglio nella [documentazione delle API di barra di ricerca](xref:UIKit.UISearchBar)
     - Mostra i risultati della ricerca / pulsante dei segnalibri – Mostra un'icona di segnalibri o i risultati della ricerca nella barra di ricerca
     - Mostra pulsante Annulla: consente agli utenti di uscire dalla funzione di ricerca. È consigliabile che questa opzione è selezionata.
     - Mostra barra ambito – ciò consente agli utenti di limitare l'ambito della ricerca. Ad esempio, durante la ricerca nell'app music l'utente può selezionare se si desidera cercare la libreria per un brano musicale particolare o di un artista o Apple Music. Per visualizzare diverse opzioni, aggiungere una matrice di titoli per il **ScopeBarTitles** proprietà.

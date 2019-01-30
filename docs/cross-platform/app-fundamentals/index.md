@@ -6,12 +6,12 @@ ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
 author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
-ms.openlocfilehash: 3a2c3f98e3ba83db0794a68ff1d62a9845a111c0
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.openlocfilehash: bfca620848bef174e78d9d34b6fdc497dda8f1de
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270189"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233224"
 ---
 # <a name="sharing-code-on-multiple-platforms"></a>Condivisione del codice su più piattaforme
 
@@ -33,10 +33,14 @@ Progetti condivisi consentono di scrivere codice comune a cui viene fatto riferi
 
 Progetti libreria di classi portabili consentono di compilare e distribuire gli assembly contenenti codice condiviso per l'esecuzione su più piattaforme. Per creare una libreria di classi portabile (o "Libreria di classi Portabile") prima di tutto selezionare quali piattaforme di destinazione, quindi scrivere codice in base a un sottoinsieme di .NET Framework che è disponibile nel profilo è definito per tali piattaforme. Librerie di classi portabili sono considerati a essere deprecata nelle versioni più recenti di Visual Studio. gli sviluppatori sono invitati a usare invece di .NET Standard 2.0.
 
-## <a name="nuget-projects-multiplatform-libraries-for-code-sharingcross-platformapp-fundamentalsnuget-multiplatform-librariesindexmd"></a>[Progetti NuGet: librerie multipiattaforma per la condivisione del codice](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)
+## <a name="nuget-projects-multiplatform-libraries-for-code-sharingcross-platformapp-fundamentalsnuget-multiplatform-librariesindexmd"></a>[Progetti NuGet: Librerie multipiattaforma per la condivisione del codice](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)
 
 I pacchetti NuGet possono essere generati automaticamente da progetti libreria di classi Portabile o .NET standard. e i progetti condivisi possono essere inseriti in pacchetti NuGet "specchietto per le allodole" utilizzando il tipo di progetto NuGet separato. In questa sezione illustra come creare pacchetti NuGet per ogni scenario di condivisione del codice.
 
 ## <a name="manually-creating-nuget-packages-for-xamarincross-platformapp-fundamentalsnuget-manualmd"></a>[Creazione manuale di pacchetti NuGet per Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
 
 Suggerimenti per la creazione di pacchetti NuGet che funzionano con la piattaforma Xamarin.
+
+## <a name="use-cc-libraries-in-cross-platform-xamarin-projectscross-platformcppindexmd"></a>[Usare le librerie C/C++ in progetti multipiattaforma con Xamarin](~/cross-platform/cpp/index.md)
+
+Questa tecnica consente di disaccoppiare l'evoluzione delle librerie di C/C++, un C# binding nel pacchetto NuGet e le applicazioni Xamarin. Funzionalità viene fornita dalla libreria di C/C++ nativo multipiattaforma, ma tutto il codice specifico della piattaforma è isolato da applicazioni Xamarin finale, consentendo prestazioni più elevata possibile con nessun duplicazione del codice. 

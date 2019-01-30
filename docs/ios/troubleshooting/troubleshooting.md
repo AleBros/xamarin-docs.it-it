@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 146b05cf7ca2bbd05e952ecc9064fbb9168d179a
-ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
+ms.openlocfilehash: 650ed00557a3dd819ab2920a7646f93199b98b9e
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53609935"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233952"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Suggerimenti di risoluzione dei problemi per xamarin. IOS 
 
@@ -75,7 +75,7 @@ TypeName XXXX {
 
 La definizione precedente viene generata automaticamente da Visual Studio per Mac per tutti i file XIB che aggiungono a Visual Studio per Mac nel `NAME_OF_YOUR_XIB_FILE.designer.xib.cs` file.
 
-Inoltre, i tipi che contiene il codice sopra riportato devono essere una sottoclasse [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/).  Se il tipo contenitore è all'interno di uno spazio dei nomi, è necessario che abbia una [[registrare]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) attributo che fornisce un nome di tipo senza uno spazio dei nomi (come Interface Builder non supporta gli spazi dei nomi di tipi):
+Inoltre, i tipi che contiene il codice sopra riportato devono essere una sottoclasse [NSObject](xref:Foundation.NSObject).  Se il tipo contenitore è all'interno di uno spazio dei nomi, è necessario che abbia una [[registrare]](xref:Foundation.RegisterAttribute) attributo che fornisce un nome di tipo senza uno spazio dei nomi (come Interface Builder non supporta gli spazi dei nomi di tipi):
 
 ```csharp
 namespace Samples.GLPaint {
@@ -98,7 +98,7 @@ public partial class MyImageView : UIView {
    public MyImageView (IntPtr handle) : base (handle {}
 }
 ```
-## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System. MissingMethodException: Non sono stati trovati per Foo.Bar::ctor(System.IntPtr) costruttori
+## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System.MissingMethodException: Non sono stati trovati per Foo.Bar::ctor(System.IntPtr) costruttori
 
 Questo errore viene generato in fase di esecuzione quando il codice tenta di creare un'istanza delle classi che si è fatto riferimento dal file di Interface Builder. Ciò significa che si sia dimenticato di aggiungere un costruttore che accetta un singolo elemento IntPtr come parametro.
 
@@ -186,7 +186,7 @@ Stacktrace:
 
 Ciò significa che si sta collegando una libreria statica compilata con codice thumb nel progetto. A partire dalla versione di iPhone SDK 3.1 (o versione successiva al momento della stesura di questo articolo) Apple ha introdotto un bug nel loro linker quando si collega il codice non Thumb (xamarin. IOS) con codice Thumb (la libreria statica). È necessario eseguire il collegamento con una versione non è una casella di scorrimento della libreria statica per attenuare il problema.
 
-## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System. ExecutionEngineException: Tentativo di Foo[]:System.Collections.Generic.ICollection'1.get_Count di metodo (wrapper gestito a codice gestito) (compilazione JIT)
+## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System.ExecutionEngineException: Tentativo di Foo[]:System.Collections.Generic.ICollection'1.get_Count di metodo (wrapper gestito a codice gestito) (compilazione JIT)
 
 Il suffisso [] indica che è la libreria di classi o chiama un metodo su una matrice tramite una raccolta generica, ad esempio <> IEnumerable, <> ICollection o <> IList. In alternativa, è possibile forzare in modo esplicito al compilatore AOT di includere tale metodo chiamando il metodo manualmente e assicurandosi che viene eseguito questo codice prima della chiamata che ha attivato l'eccezione. In questo caso, è possibile scrivere:
 
@@ -411,7 +411,7 @@ Questo problema può manifestarsi in diversi moduli e non sempre produce un erro
 Per controllare l'azione di compilazione, fare clic con il pulsante destro sul file con estensione xib, scegliere **azione di compilazione**.
 
 
-## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System. NotSupportedException: Dati non sono disponibili per la codifica 437
+## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System.NotSupportedException: Dati non sono disponibili per la codifica 437
 
 Quando si include librerie di terze parti 3rd nell'app xamarin. IOS, è possibile ottenere un errore nel modulo "System. NotSupportedException: Non sono disponibili dati per la codifica 437" quando si tenta di compilare ed eseguire l'app. Ad esempio, le librerie, ad esempio `Ionic.Zip.ZipFile`, possono generare questa eccezione durante l'operazione.
 

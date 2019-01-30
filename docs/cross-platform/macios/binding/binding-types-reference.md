@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 369e1a37cc75bb4d10cc71d8f79ed1dd473378ba
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c5a3cdbc8a8d5a046db90ffa48b12709359da98
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119436"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55234030"
 ---
 # <a name="binding-types-reference-guide"></a>Guida di riferimento per i tipi di associazione
 
@@ -246,7 +246,7 @@ Quando questo attributo viene applicato alla definizione dell'interfaccia che co
 
 <a name="CategoryAttribute" />
 
-### <a name="categoryattribute"></a>Attributo CategoryAttribute
+### <a name="categoryattribute"></a>CategoryAttribute
 
 Usare questo attributo su una definizione di tipo per associare le categorie di Objective-C ed esporre come C# metodi di estensione per rispecchiare il modo Objective-C espone la funzionalità.
 
@@ -1137,7 +1137,7 @@ public NSObject this [NSObject idx] {
 
 Questo attributo contrassegna il campo sottostante per una proprietà da annotare con .NET `[ThreadStatic]` attributo. Ciò è utile se il campo è una variabile statica thread.
 
-### <a name="marshalnativeexceptions-xamarinios-606"></a>MarshalNativeExceptions (6.0.6 per xamarin. IOS)
+### <a name="marshalnativeexceptions-xamarinios-606"></a>MarshalNativeExceptions (Xamarin.iOS 6.0.6)
 
 Questo attributo consentirà un metodo supporto nativo (Objective-C) le eccezioni.
 Anziché chiamare `objc_msgSend` direttamente, la chiamata passa attraverso un trampoline personalizzato che intercetta le eccezioni ObjectiveC e ne esegue il marshalling nelle eccezioni gestite.
@@ -1181,7 +1181,7 @@ public class MyClass {
 }
 ```
 
-Gli utenti del codice quindi facilmente richiedere notifiche registrate per il [NSDefaultCenter](https://developer.xamarin.com/api/property/Foundation.NSNotificationCenter.DefaultCenter/) usando codice simile al seguente:
+Gli utenti del codice quindi facilmente richiedere notifiche registrate per il [NSDefaultCenter](xref:Foundation.NSNotificationCenter.DefaultCenter) usando codice simile al seguente:
 
 ```csharp
 var token = MyClass.Notifications.ObserverDidStart ((notification) => {
@@ -1203,7 +1203,7 @@ Il valore restituito da `ObserveDidStart` consente facilmente smettere di riceve
 token.Dispose ();
 ```
 
-Oppure è possibile chiamare [NSNotification.DefaultCenter.RemoveObserver](https://developer.xamarin.com/api/member/Foundation.NSNotificationCenter.RemoveObserver/p/Foundation.NSObject//) e passare il token. Se la notifica contiene parametri, è necessario specificare un helper `EventArgs` interfaccia, simile alla seguente:
+Oppure è possibile chiamare [NSNotification.DefaultCenter.RemoveObserver](xref:Foundation.NSNotificationCenter.RemoveObserver(Foundation.NSObject)) e passare il token. Se la notifica contiene parametri, è necessario specificare un helper `EventArgs` interfaccia, simile alla seguente:
 
 ```csharp
 interface MyClass {
@@ -1226,7 +1226,7 @@ interface MyScreenChangedEventArgs {
 }
 ```
 
-Il codice precedente genererà una `MyScreenChangedEventArgs` classe con il `ScreenX` e `ScreenY` le proprietà che recupero i dati dal [NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/) dizionario usando le chiavi `ScreenXKey` e `ScreenYKey` rispettivamente e applicare le conversioni appropriate. Il `[ProbePresence]` viene usato per il generatore per verificare se la chiave viene impostata nel `UserInfo`, anziché tentare di estrarre il valore. Viene utilizzato per i casi in cui la presenza della chiave è il valore (in genere per i valori booleani).
+Il codice precedente genererà una `MyScreenChangedEventArgs` classe con il `ScreenX` e `ScreenY` le proprietà che recupero i dati dal [NSNotification.UserInfo](xref:Foundation.NSNotification.UserInfo) dizionario usando le chiavi `ScreenXKey` e `ScreenYKey` rispettivamente e applicare le conversioni appropriate. Il `[ProbePresence]` viene usato per il generatore per verificare se la chiave viene impostata nel `UserInfo`, anziché tentare di estrarre il valore. Viene utilizzato per i casi in cui la presenza della chiave è il valore (in genere per i valori booleani).
 
 In questo modo è possibile scrivere codice simile al seguente:
 
@@ -1942,13 +1942,13 @@ interface MyBinding {
 
 Con xamarin. IOS 8.0 è stato introdotto il supporto per la creazione semplificata di classi fortemente tipizzate che eseguono il wrapping `NSDictionaries`.
 
-Sebbene sia sempre stato possibile usare la [DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) del tipo di dati insieme a un'API manuale, è ora molto più semplice eseguire questa operazione.  Per altre informazioni, vedere [esponendo tipi sicuri](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types).
+Sebbene sia sempre stato possibile usare la [DictionaryContainer](xref:Foundation.DictionaryContainer) del tipo di dati insieme a un'API manuale, è ora molto più semplice eseguire questa operazione.  Per altre informazioni, vedere [esponendo tipi sicuri](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types).
 
 <a name="StrongDictionary" />
 
 ### <a name="strongdictionary"></a>StrongDictionary
 
-Quando questo attributo viene applicato a un'interfaccia, il generatore di genererà una classe con lo stesso nome dell'interfaccia che deriva da [DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) e lo trasforma ogni proprietà definita nell'interfaccia nell'oggetto fortemente tipizzato getter e setter per il dizionario.
+Quando questo attributo viene applicato a un'interfaccia, il generatore di genererà una classe con lo stesso nome dell'interfaccia che deriva da [DictionaryContainer](xref:Foundation.DictionaryContainer) e lo trasforma ogni proprietà definita nell'interfaccia nell'oggetto fortemente tipizzato getter e setter per il dizionario.
 
 Questo genera automaticamente una classe che può essere creata un'istanza da un oggetto esistente `NSDictionary` o che è stato creato nuovo.
 

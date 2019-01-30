@@ -6,12 +6,12 @@ ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
-ms.openlocfilehash: 88cbce6dbfee4e7aa1a0711d6da74f6f12abd4b7
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 3946a4ba190e1d8ba5c68a2d8ac36cf42900862f
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40250983"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233978"
 ---
 # <a name="transport-layer-security-tls-12"></a>Transport Layer Security (TLS) 1.2
 
@@ -70,8 +70,8 @@ In Visual Studio per Mac, per abilitare TLS 1.2 in un'app xamarin. Mac, aggiorna
 [![Configurare HttpClient in Visual Studio per Mac](transport-layer-security-images/macos-mac-sml.png)](transport-layer-security-images/macos-mac.png#lightbox)
 
 > [!WARNING]
-> La prossima versione di xamarin. Mac 4.8 supporta solo macOS 10.9 o versione successiva.
-> Le versioni precedenti di xamarin. Mac supportavano macOS 10.7 o versione successiva, ma le versioni precedenti di macOS non dispongono di un'infrastruttura sufficiente TLS per il supporto di TLS 1.2. Per macOS 10.7 o macOS è 10.8 di destinazione, usare xamarin. Mac 4.6 o versioni precedenti.
+> La prossima versione di Xamarin.Mac 4.8 supporterà solo macOS 10.9 o versione successiva.
+> Le versioni precedenti di Xamarin.Mac supportavano macOS 10.7 o versione successiva, ma queste versioni precedenti di macOS non dispongono di un'infrastruttura TLS sufficiente per il supporto di TLS 1.2. Per scegliere come destinazione macOS 10.7 o macOS 10.8, usare Xamarin.Mac 4.6 o versioni precedenti.
 
 ## <a name="alternative-configuration-options"></a>Opzioni di configurazione alternativo
 
@@ -120,7 +120,7 @@ Deve aggiornare le impostazioni nelle applicazioni esistenti seguendo le istruzi
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [ATS (App Transport Security)](~/ios/app-fundamentals/ats.md)
-- [Ambiente xamarin. Android](~/android/deploy-test/environment.md)
+- [Xamarin.Android Environment](~/android/deploy-test/environment.md)
 - [Xamarin ciclo 9 (febbraio 2017)](https://releases.xamarin.com/stable-release-cycle-9/)
 - [TLS (Wikipedia)](https://en.wikipedia.org/wiki/Transport_Layer_Security)
 - [Note sulla versione di mono 4.8 - supporto di TLS 1.2](http://www.mono-project.com/docs/about-mono/releases/4.8.0/#tls-12-support)
@@ -133,7 +133,7 @@ Deve aggiornare le impostazioni nelle applicazioni esistenti seguendo le istruzi
 - [System.Net.WebClient](https://msdn.microsoft.com/library/system.net.webclient(v=vs.110).aspx)
 - [System.Net.WebRequest](https://msdn.microsoft.com/library/system.net.webrequest(v=vs.110).aspx)
 - [java.net.URLConnection](http://developer.android.com/reference/java/net/URLConnection.html)
-- [Foundation.CFNetwork](https://developer.xamarin.com/api/type/CoreFoundation.CFNetwork/)
-- [Foundation.NSUrlConnection](https://developer.xamarin.com/api/type/Foundation.NSUrlConnection/)
+- [Foundation.CFNetwork](xref:CoreFoundation.CFNetwork)
+- [Foundation.NSUrlConnection](xref:Foundation.NSUrlConnection)
 - [System.Net.WebRequest](https://msdn.microsoft.com/library/system.net.webrequest(v=vs.110).aspx)
 - [HTTP Client (esempio)](https://developer.xamarin.com/samples/monotouch/HttpClient/)

@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 39faa4670b17cdf4853bfe24ff104765ca541b9f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 512280e9c298cfbcea6f693b0691236fd1cf5a5f
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106220"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233692"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Sottoclassi generiche di NSObject in xamarin. IOS
 
 ## <a name="using-generics-with-nsobjects"></a>Utilizzo di generics con NSObjects
 
-A partire da xamarin. IOS 7.2.1 è possibile utilizzare i generics in sottoclassi della `NSObject` (ad esempio [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/)).
+A partire da xamarin. IOS 7.2.1 è possibile utilizzare i generics in sottoclassi della `NSObject` (ad esempio [UIView](xref:UIKit.UIView).
 
 È ora possibile creare le classi generiche, simile alla seguente:
 
@@ -54,7 +54,7 @@ class Generic<T> : NSObject where T: NSObject
 }
 ```
 
-**Motivo**: il parametro di tipo generico è un `NSObject`, quindi la firma del selettore per `myMethod:` possono essere esposte in modo sicuro da Objective-C (sarà sempre `NSObject` o una sottoclasse).
+**Motivo**: Il parametro di tipo generico è un `NSObject`, quindi la firma del selettore per `myMethod:` possono essere esposte in modo sicuro da Objective-C (sarà sempre `NSObject` o una sottoclasse).
 
 **Errata**:
 
@@ -151,7 +151,7 @@ class MyClass : NSObject
 }
 ```
 
-**Motivo**: questo non è consentito perché xamarin. IOS non sa quale tipo per usare per l'argomento di tipo `T` quando il metodo viene richiamato da Objective-C.
+**Motivo**: Ciò non è consentito perché xamarin. IOS non sa quale tipo per usare per l'argomento di tipo `T` quando il metodo viene richiamato da Objective-C.
 
 In alternativa è possibile creare un metodo specializzato ed esportare invece che:
 
@@ -188,7 +188,7 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-**Motivo:** esattamente come i metodi generici, la fase di esecuzione xamarin. IOS deve essere in grado di conoscere il tipo da utilizzare per l'argomento di tipo generico T.
+**Motivo:** Esattamente come i metodi generici, il runtime di xamarin. IOS deve essere in grado di conoscere il tipo da utilizzare per l'argomento di tipo generico T.
 
 Ad esempio i membri viene utilizzata l'istanza stessa (poiché non sarà mai un'istanza generica<T>, sarà sempre generico<SomeSpecificClass>), ma per i membri statici non sono presente queste informazioni.
 

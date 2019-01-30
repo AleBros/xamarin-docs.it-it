@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 2f9cc72dcbe506d22c8a986bcf59ddaa6355f043
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: becba36655a5247a11decb7dc54334f9397ecdfc
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103255"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233536"
 ---
 # <a name="introduction-to-ios-9"></a>Introduzione a iOS 9
 
@@ -38,7 +38,7 @@ Per altre informazioni, vedere la [Introduzione a 3D Touch](~/ios/platform/3d-to
 
 Nuovo a iOS 9, App Transport Security (ATS) applica le connessioni sicure tra le risorse internet (ad esempio i server back-end dell'app) e l'app. ATS garantisce che tutte le comunicazioni internet siano conformi per proteggere la connessione le procedure consigliate, evitando la diffusione accidentale di informazioni riservate direttamente tramite l'app o una libreria che sta utilizzando.
 
-Perché è abilitata per impostazione predefinita nelle App per iOS 9 e OS X 10.11 (El Capitan), tutte le connessioni usando la ATS [NSUrlConnection](https://developer.xamarin.com/api/type/Foundation.NSUrlConnection/), [CFUrl](https://developer.xamarin.com/api/type/CoreFoundation.CFUrl/) oppure [NSUrlSession](https://developer.xamarin.com/api/type/Foundation.NSUrlSession/) sarà soggetto a Requisiti di sicurezza ATS. Se le connessioni non soddisfano questi requisiti, si avrà esito negativo con un'eccezione.
+Perché è abilitata per impostazione predefinita nelle App per iOS 9 e OS X 10.11 (El Capitan), tutte le connessioni usando la ATS [NSUrlConnection](xref:Foundation.NSUrlConnection), [CFUrl](xref:CoreFoundation.CFUrl) oppure [NSUrlSession](xref:Foundation.NSUrlSession) sarà soggetto a Requisiti di sicurezza ATS. Se le connessioni non soddisfano questi requisiti, si avrà esito negativo con un'eccezione.
 
 Per altre informazioni sulle ATS, vedere la [App Transport Security](~/ios/app-fundamentals/ats.md) Guida.
 
@@ -78,7 +78,7 @@ Per altre informazioni, vedere la [miglioramenti della ricerca](~/ios/platform/s
 
 ## <a name="new-stack-view"></a>Nuova visualizzazione Stack
 
-Il controllo di visualizzazione dello Stack ([UIStackView](https://developer.xamarin.com/api/type/UIKit.UIStackView/)) sfrutta la potenza del Layout automatico e le classi di dimensioni per gestire una pila di visualizzazioni secondarie (orizzontale o verticale) che risponde dinamicamente alle dimensioni dello schermo e l'orientamento del dispositivo iOS.
+Il controllo di visualizzazione dello Stack ([UIStackView](xref:UIKit.UIStackView) sfrutta la potenza del Layout automatico e le classi di dimensioni per gestire una pila di visualizzazioni secondarie (orizzontale o verticale) che risponde dinamicamente alle dimensioni dello schermo e l'orientamento del dispositivo iOS.
 
 Con controllo di visualizzazione dello Stack, la quantità di lavoro necessari per layout di che un'interfaccia utente è notevolmente ridotte. Il layout di tutte le visualizzazioni secondarie associata a una visualizzazione dello Stack vengono gestite automaticamente in base alle proprietà definite per gli sviluppatori, ad esempio asse, distribuzione, allineamento e spaziatura.
 
@@ -87,7 +87,7 @@ Per altre informazioni, vedere la [Introduzione alla visualizzazione Stack](~/io
 
 ## <a name="collection-view-changes"></a>Modifiche alla vista raccolta
 
-In iOS 9, la visualizzazione di raccolta ([UICollectionView](https://developer.xamarin.com/api/type/UIKit.UICollectionView/)) supporta trascina ora il riordinamento degli elementi predefiniti aggiungendo un nuovo riconoscitore di movimento predefiniti e diversi nuovi metodi di supporti.
+In iOS 9, la visualizzazione di raccolta ([UICollectionView](xref:UIKit.UICollectionView) supporta trascina ora il riordinamento degli elementi predefiniti aggiungendo un nuovo riconoscitore di movimento predefiniti e diversi nuovi metodi di supporti.
 
 Mediante questi nuovi metodi, è possibile facilmente implementare il trascinamento-a-riordinamento nella propria visualizzazione di raccolta e hanno la possibilità di personalizzazione dell'aspetto degli elementi in qualsiasi fase del processo di riordinamento.
 
@@ -150,9 +150,9 @@ Per altre informazioni, vedere la [Introduzione a Touch ID](~/ios/platform/touch
 
 In iOS 9 Apple ha introdotto presentare un'interfaccia utente capovolta più facile che mai, fornendo il supporto completo per lingue da destra a sinistra. Il comportamento predefinito include quanto segue:
 
-- Standard [UIKit](https://developer.xamarin.com/api/namespace/UIKit/) controlli capovolgerà automaticamente le impostazioni di lingua e i dispositivi iOS in base a destra a sinistra.
-- Il [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/) classe fornisce attributi che consentono di definire come devono essere visualizzate quando una determinata visualizzazione capovolto a destra a sinistra.
-- La possibilità di capovolge un'immagine a livello di codice usando il [FlipsForRightToLeftLayoutDirection](https://developer.xamarin.com/api/property/UIKit.UIImage.FlipsForRightToLeftLayoutDirection/) proprietà delle [UIImage](https://developer.xamarin.com/api/type/UIKit.UIImage/) classe.
+- Standard [UIKit](xref:UIKit) controlli capovolgerà automaticamente le impostazioni di lingua e i dispositivi iOS in base a destra a sinistra.
+- Il [UIView](xref:UIKit.UIView) classe fornisce attributi che consentono di definire come devono essere visualizzate quando una determinata visualizzazione capovolto a destra a sinistra.
+- La possibilità di capovolge un'immagine a livello di codice usando il [FlipsForRightToLeftLayoutDirection](xref:UIKit.UIImage.FlipsForRightToLeftLayoutDirection) proprietà delle [UIImage](xref:UIKit.UIImage) classe.
 
 Per altre informazioni, vedere di Apple [linguaggi che supportano Right-to-Left](https://developer.apple.com/library/prerelease/ios/documentation/MacOSX/Conceptual/BPInternational/SupportingRight-To-LeftLanguages/SupportingRight-To-LeftLanguages.html#//apple_ref/doc/uid/10000171i-CH17) documentazione.
 
@@ -193,7 +193,7 @@ Per un elenco completo di deprecati API specifiche, vedere di Apple [iOS 9.0 API
 Alcune [esempi di iOS 9 specifiche](https://developer.xamarin.com/samples/ios/iOS9/) per iniziare:
 
 - [AstroLayout](https://github.com/xamarin/monotouch-samples/tree/master/ios9/AstroLayout)
-- [Visualizzazione di raccolta](https://github.com/xamarin/monotouch-samples/tree/master/ios9/CollectionView)
+- [CollectionView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/CollectionView)
 - [MetalPerformanceShadersHelloWorld](https://developer.xamarin.com/samples/monotouch/ios9/MetalPerformanceShadersHelloWorld/)
 - [MusicMotion](https://developer.xamarin.com/samples/monotouch/ios9/MusicMotion/)
 - [PhotoProgress](https://developer.xamarin.com/samples/monotouch/ios9/PhotoProgress/)

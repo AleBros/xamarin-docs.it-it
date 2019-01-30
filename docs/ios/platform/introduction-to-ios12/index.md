@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/08/2018
-ms.openlocfilehash: 81375e8c66e5504604d0d4cb3be34afd58f4269d
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 99f2b98614c2b8d558dd8744b31a62b787fc955c
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615148"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233835"
 ---
 # <a name="introduction-to-ios-12"></a>Introduzione a iOS 12
 
@@ -28,7 +28,7 @@ ARKit è il framework di realtà aumentata incluso con iOS. ARKit 2 consente a p
 
 Tasti di scelta rapida Siri consentono agli sviluppatori di integrare in modo più approfondito le proprie applicazioni con Siri. Gli utenti possono usare i comandi vocali per aprire il contenuto o avviare le attività in background con tasti di scelta rapida di Siri, oppure può avviare queste attività tramite i tasti di scelta rapida che viene suggerito Siri nella schermata di blocco.
 
-## <a name="core-ml-2coremlmd"></a>[Machine Learning 2 core](coreml.md)
+## <a name="core-ml-2coremlmd"></a>[Core ML 2](coreml.md)
 
 ML Core 2 consente di ridurre le dimensioni dell'applicazione tramite la quantizzazione di modello e i modelli flessibile, migliora le prestazioni dell'applicazione con una nuova API di stima batch e utilizza i modelli personalizzati per supportare i progressi nell'apprendimento automatico.
 
@@ -80,7 +80,7 @@ In iOS 12, le app di terze parti possono fornire mappe e le istruzioni di naviga
 Con 12 iOS, Apple è deprecato:
 
 - OpenGL ES [incoraggiano gli sviluppatori](https://developer.apple.com/ios/whats-new/) adottare bare Metal.
-- [`UIWebView`](https://developer.xamarin.com/api/type/UIKit.UIWebView/), [favore del `WKWebView` ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
+- [`UIWebView`](xref:UIKit.UIWebView), [favore del `WKWebView` ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

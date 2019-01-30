@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/12/2017
-ms.openlocfilehash: b51ee6b547cc53761f23379e7233bb710090a61b
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 5d3c8b6bd8f7f788a1de74feddf7fcb378fa5818
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39351730"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233640"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Selettori Objective-C in xamarin. IOS
 
@@ -36,9 +36,9 @@ La dichiarazione (dalla documentazione di Apple) è:
 Questa API presenta le caratteristiche seguenti:
 
 - Il tipo restituito è `CGSize` per l'API unificata.
-- Il `font` parametro è un [UIFont](https://developer.xamarin.com/api/type/UIKit.UIFont/) (e un tipo derivato (indirettamente) da [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/)) e viene eseguito il mapping a [IntPtr](xref:System.IntPtr).
+- Il `font` parametro è un [UIFont](xref:UIKit.UIFont) (e un tipo derivato (indirettamente) da [NSObject](xref:Foundation.NSObject)e viene eseguito il mapping a [IntPtr](xref:System.IntPtr).
 - Il `width` parametro, un `CGFloat`, viene eseguito il mapping a `nfloat`.
-- Il `lineBreakMode` parametro, un [ `UILineBreakMode` ](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc), è già stato associato in xamarin. IOS come il [`UILineBreakMode`](https://developer.xamarin.com/api/type/UIKit.UILineBreakMode/)
+- Il `lineBreakMode` parametro, un [ `UILineBreakMode` ](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc), è già stato associato in xamarin. IOS come il [`UILineBreakMode`](xref:UIKit.UILineBreakMode)
 Enumerazione.
 
 Riassumendo, il `objc_msgSend` dichiarazione deve corrispondere:
@@ -149,7 +149,7 @@ Dopo aver creato un nome di selettore, è possibile creare un [ `ObjCRuntime.Sel
 
 ### <a name="calling-objcmsgsend"></a>La chiamata a objc_msgSend
 
-`objc_msgSend` Invia un messaggio (selettore) a un oggetto. In questa serie di funzioni richiede almeno due argomenti obbligatori: la destinazione del selettore (un'istanza o una classe di gestione), il selettore di se stesso e gli argomenti necessari per il selettore. Gli argomenti di istanza e del selettore devono essere `System.IntPtr`, e tutti i restanti argomenti devono corrispondere al tipo previsto che il selettore, ad esempio un `nint` per un' `int`, o un' `System.IntPtr` per tutte le `NSObject`-tipi derivati. Usare il [`NSObject.Handle`](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/)
+`objc_msgSend` Invia un messaggio (selettore) a un oggetto. In questa serie di funzioni richiede almeno due argomenti obbligatori: la destinazione del selettore (un'istanza o una classe di gestione), il selettore di se stesso e gli argomenti necessari per il selettore. Gli argomenti di istanza e del selettore devono essere `System.IntPtr`, e tutti i restanti argomenti devono corrispondere al tipo previsto che il selettore, ad esempio un `nint` per un' `int`, o un' `System.IntPtr` per tutte le `NSObject`-tipi derivati. Usare il [`NSObject.Handle`](xref:Foundation.NSObject.Handle)
 proprietà da ottenere un `IntPtr` per un'istanza del tipo di Objective-C.
 
 È presente più di un `objc_msgSend` funzione:

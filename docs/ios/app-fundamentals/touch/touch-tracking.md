@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: a1ddcda84d51b5a8a9220558ddaf9476a2321ee8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 09e895714cb4bbe241e4e14facaaee52079d55d9
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105051"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233187"
 ---
 # <a name="multi-touch-finger-tracking-in-xamarinios"></a>Con un dito multitocco di rilevamento in xamarin. IOS
 
@@ -20,7 +20,7 @@ _Questo documento illustra come tenere traccia degli eventi di tocco da più dit
 
 Vi sono casi quando è necessario che un'applicazione multi-touch per tenere traccia delle singole dita durante lo spostamento contemporaneamente sullo schermo. Una tipica applicazione è un programma finger-paint. Si vuole che l'utente sia in grado di disegnare con un singolo dito, ma anche da disegnare con più dita in una sola volta. Mentre il programma elabora più eventi di tocco, è necessario distinguere tra le dita.
 
-Quando un dito tocca prima di tutto lo schermo, iOS viene creata una [ `UITouch` ](https://developer.xamarin.com/api/type/UIKit.UITouch/) oggetto per il dito. Questo oggetto rimane invariato il dito sullo schermo e quindi solleva dalla schermata, a quel punto l'oggetto è stato eliminato. Per tenere traccia delle dita, un programma deve evitare di archiviare questo `UITouch` direttamente l'oggetto. In alternativa, è possibile usare la [ `Handle` ](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/) vlastnosti typu `IntPtr` in modo da identificare questi `UITouch` oggetti.
+Quando un dito tocca prima di tutto lo schermo, iOS viene creata una [ `UITouch` ](xref:UIKit.UITouch) oggetto per il dito. Questo oggetto rimane invariato il dito sullo schermo e quindi solleva dalla schermata, a quel punto l'oggetto è stato eliminato. Per tenere traccia delle dita, un programma deve evitare di archiviare questo `UITouch` direttamente l'oggetto. In alternativa, è possibile usare la [ `Handle` ](xref:Foundation.NSObject.Handle) vlastnosti typu `IntPtr` in modo da identificare questi `UITouch` oggetti.
 
 Quasi sempre un programma che tiene traccia delle singole dita gestisce un dizionario per il tocco di rilevamento. Per un programma iOS, è la chiave del dizionario di `Handle` valore che identifica un dito particolare. Il valore del dizionario dipende dall'applicazione. Nel [Pittura con le dita](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint) programma, tratto ogni dito (dal tocco alla versione) è associato a un oggetto che contiene tutte le informazioni necessarie per eseguire il rendering la riga disegnata con il dito. Il programma definisce un piccolo `FingerPaintPolyline` classe per questo scopo:
 
@@ -40,7 +40,7 @@ class FingerPaintPolyline
 }
 ```
 
-Ciascuna polilinea dispone di un colore, uno spessore e una grafica di iOS [ `CGPath` ](https://developer.xamarin.com/api/type/CoreGraphics.CGPath/) oggetto accumulare ed eseguire il rendering di più punti della riga che viene viene tracciato.
+Ciascuna polilinea dispone di un colore, uno spessore e una grafica di iOS [ `CGPath` ](xref:CoreGraphics.CGPath) oggetto accumulare ed eseguire il rendering di più punti della riga che viene viene tracciato.
 
 
 Tutto il resto del codice riportato di seguito è contenuto un `UIView` derivative denominato `FingerPaintCanvasView`. Che classe gestisce un dizionario di oggetti di tipo `FingerPaintPolyline` durante l'ora in cui sono attivamente da disegnare da uno o più dita:
@@ -61,11 +61,11 @@ Gli oggetti in questo `List` sono nello stesso ordine che sono stati disegnati.
 
 `FingerPaintCanvasView` esegue l'override di cinque metodi definiti da `View`:
 
-- [`TouchesBegan`](https://developer.xamarin.com/api/member/UIKit.UIResponder.TouchesBegan/p/Foundation.NSSet/UIKit.UIEvent/)
-- [`TouchesMoved`](https://developer.xamarin.com/api/member/UIKit.UIResponder.TouchesMoved/p/Foundation.NSSet/UIKit.UIEvent/)
-- [`TouchesEnded`](https://developer.xamarin.com/api/member/UIKit.UIResponder.TouchesEnded/p/Foundation.NSSet/UIKit.UIEvent/)
-- [`TouchesCancelled`](https://developer.xamarin.com/api/member/UIKit.UIResponder.TouchesCancelled/p/Foundation.NSSet/UIKit.UIEvent/)
-- [`Draw`](https://developer.xamarin.com/api/member/UIKit.UIView.Draw/p/CoreGraphics.CGRect/)
+- [`TouchesBegan`](xref:UIKit.UIResponder.TouchesBegan(Foundation.NSSet,UIKit.UIEvent))
+- [`TouchesMoved`](xref:UIKit.UIResponder.TouchesMoved(Foundation.NSSet,UIKit.UIEvent))
+- [`TouchesEnded`](xref:UIKit.UIResponder.TouchesEnded(Foundation.NSSet,UIKit.UIEvent))
+- [`TouchesCancelled`](xref:UIKit.UIResponder.TouchesCancelled(Foundation.NSSet,UIKit.UIEvent))
+- [`Draw`](xref:UIKit.UIView.Draw(CoreGraphics.CGRect))
 
 I vari `Touches` sostituzioni accumulano i punti che compongono le polilinee.
 

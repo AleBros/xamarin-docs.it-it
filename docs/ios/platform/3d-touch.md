@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 08edd3166df8392a5f3e7485a6572f0c94a38f62
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 60751437b891579c97acee0e032defcca2b510f6
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563656"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233861"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introduzione alla funzionalità Touch 3D in xamarin. IOS
 
@@ -37,13 +37,13 @@ Con funzionalità Touch 3D, un'app per iPhone è ora in grado non solo indicano 
 
 ## <a name="pressure-sensitivity"></a>Rilevamento della pressione
 
-Come indicato in precedenza, con nuove proprietà del [UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/) classe è possibile misurare la quantità di pressione che l'utente applica allo schermo del dispositivo iOS e usare queste informazioni nell'interfaccia utente. Ad esempio, effettua una Pennellata più opaco o trasparente in base alla quantità di pressione.
+Come indicato in precedenza, con nuove proprietà del [UITouch](xref:UIKit.UITouch) classe è possibile misurare la quantità di pressione che l'utente applica allo schermo del dispositivo iOS e usare queste informazioni nell'interfaccia utente. Ad esempio, effettua una Pennellata più opaco o trasparente in base alla quantità di pressione.
 
 [![](3d-touch-images/pressure01.png "Un pennello sottoposto a rendering come più opaco o trasparente in base alla quantità di pressione")](3d-touch-images/pressure01.png#lightbox)
 
 In seguito a 3D Touch, se l'esecuzione dell'app in iOS 9 (o versione successiva) e il dispositivo iOS è in grado di supporto 3D Touch, le modifiche in un utilizzo elevato causa il `TouchesMoved` generazione dell'evento.
 
-Ad esempio, quando viene monitorata il `TouchesMoved` eventi di un [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/), è possibile usare il codice seguente per ottenere la pressione corrente che l'utente applica allo schermo:
+Ad esempio, quando viene monitorata il `TouchesMoved` eventi di un [UIView](xref:UIKit.UIView), è possibile usare il codice seguente per ottenere la pressione corrente che l'utente applica allo schermo:
 
 ```csharp
 public override void TouchesMoved (NSSet touches, UIEvent evt)
@@ -62,7 +62,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 }
 ```
 
-Il `MaximumPossibleForce` proprietà restituisce il valore massimo consentito per il `Force` proprietà del [UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/) in base al dispositivo iOS che viene eseguita l'app.
+Il `MaximumPossibleForce` proprietà restituisce il valore massimo consentito per il `Force` proprietà del [UITouch](xref:UIKit.UITouch) in base al dispositivo iOS che viene eseguita l'app.
 
 > [!IMPORTANT]
 > Causano modifiche in un utilizzo elevato di `TouchesMoved` dell'evento, anche se X / Y coordinate non sono stati modificati. Grazie a questa modifica nel comportamento, le app iOS devono essere preparate per il `TouchesMoved` evento da richiamare più spesso e per X / valore delle coordinate Y sia uguale all'ultimo `TouchesMoved` chiamare.
@@ -70,7 +70,7 @@ Il `MaximumPossibleForce` proprietà restituisce il valore massimo consentito pe
 
 
 
-Per altre informazioni, vedere di Apple [TouchCanvas: utilizzando UITouch efficacemente](https://developer.apple.com/library/prerelease/ios/samplecode/TouchCanvas/) app di esempio e [riferimento alla classe UITouch](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITouch_Class/).
+Per altre informazioni, vedere Apple [TouchCanvas: Usando UITouch efficacemente](https://developer.apple.com/library/prerelease/ios/samplecode/TouchCanvas/) app di esempio e [riferimento alla classe UITouch](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITouch_Class/).
 
 <a name="Peek-and-Pop" />
 
@@ -198,7 +198,7 @@ public override void ViewDidLoad ()
 
 Qui di seguito viene chiamato il `RegisterForPreviewingWithDelegate` metodo con un'istanza del `PreviewingDelegate` creato in precedenza. Nei dispositivi iOS che supportano 3D Touch, l'utente può premere disco rigido su un elemento visualizzazione rapida analizzarlo. Se gli utenti premono ancora più difficile, l'elemento viene visualizzata in esso standard visualizzazione.
 
-Per altre informazioni, vedere nostri [iOS 9 esempio ApplicationShortcuts](https://developer.xamarin.com/samples/monotouch/iOS9/ViewControllerPreview/) e di Apple [ViewControllerPreviews: usando il UIViewController anteprima API](https://developer.apple.com/library/prerelease/ios/samplecode/ViewControllerPreviews/Introduction/Intro.html) app di esempio, [ Riferimento alla classe UIPreviewAction](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewAction_Class/), [riferimento alla classe UIPreviewActionGroup](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionGroup_Class/) e [riferimento al protocollo UIPreviewActionItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionItem_Protocol/).
+Per altre informazioni, vedere la [iOS 9 esempio ApplicationShortcuts](https://developer.xamarin.com/samples/monotouch/iOS9/ViewControllerPreview/) di Apple e [ViewControllerPreviews: Usando il UIViewController anteprima API](https://developer.apple.com/library/prerelease/ios/samplecode/ViewControllerPreviews/Introduction/Intro.html) app di esempio [riferimento alla classe UIPreviewAction](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewAction_Class/), [riferimento alla classe UIPreviewActionGroup](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionGroup_Class/) e [UIPreviewActionItem Riferimento del protocollo](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionItem_Protocol/).
 
 <a name="Quick-Actions" />
 
@@ -429,7 +429,7 @@ Il codice è già stato aggiunto nel [la gestione di un'azione rapida](#Handling
 
 Si noti che è possibile creare una combinazione di elementi di azione rapida statiche e dinamiche (come che stiamo facendo qui), non si è limitati a uno o l'altro.
 
-Per altre informazioni, vedere la [iOS 9 esempio ViewControllerPreview](https://developer.xamarin.com/samples/monotouch/iOS9/ViewControllerPreview/) e vedere Apple [ApplicationShortcuts: UIApplicationShortcutItem usando](https://developer.apple.com/library/prerelease/ios/samplecode/ApplicationShortcuts/) app di esempio, [ Riferimento alla classe UIApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/), [riferimento alla classe UIMutableApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIMutableApplicationShortcutItem_class/) e [riferimento alla classe UIApplicationShortcutIcon](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutIcon_Class/).
+Per altre informazioni, vedere la [iOS 9 esempio ViewControllerPreview](https://developer.xamarin.com/samples/monotouch/iOS9/ViewControllerPreview/) e vedere Apple [ApplicationShortcuts: Usando UIApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/samplecode/ApplicationShortcuts/) app di esempio [riferimento alla classe UIApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/), [riferimento alla classe UIMutableApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIMutableApplicationShortcutItem_class/) e [ Riferimento alla classe UIApplicationShortcutIcon](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutIcon_Class/).
 
 <a name="Testing-3D-Touch-in-the-Simulator" />
 

@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: fc08824ba973f5d50dbe92950d57c4ea8ecc3147
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 020afef6b2eb3743fd17118b2922bac4d4c32239
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054012"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233991"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Tre modi per disegnare un arco
 
@@ -38,7 +38,7 @@ public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
 public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean forceMoveTo)
 ```
 
-Questi metodi sono identici per Android [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) e [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) metodi. IOS [ `AddArc` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArc/p/System.Boolean/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) metodo è simile, ma è limitato agli archi sulla circonferenza del cerchio anziché generalizzata da un'ellisse.
+Questi metodi sono identici per Android [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) e [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) metodi. IOS [ `AddArc` ](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) metodo è simile, ma è limitato agli archi sulla circonferenza del cerchio anziché generalizzata da un'ellisse.
 
 Entrambi i metodi iniziano con un `SKRect` valore che definisce la posizione e dimensioni di un'ellisse:
 
@@ -58,7 +58,7 @@ La curva aggiunta al percorso con il `AddArc` o `ArcTo` metodo è semplicemente 
 
 ![](arcs-images/anglearc.png "L'arco angolo da solo")
 
-Il `startAngle` oppure `sweepAngle` gli argomenti possono essere negativi: l'arco viene in senso orario per i valori positivi di `sweepAngle` e antiorario per i valori negativi.
+Il `startAngle` o `sweepAngle` gli argomenti possono essere negativi: È in senso orario per i valori positivi dell'arco `sweepAngle` e antiorario per i valori negativi.
 
 Tuttavia `AddArc` viene *non* definiscono un contorno chiuso. Se si chiama `LineTo` dopo aver `AddArc`, viene tracciata una linea dalla fine dell'arco al punto nel `LineTo` metodo e lo stesso vale per `ArcTo`.
 
@@ -226,7 +226,7 @@ public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
 public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 ```
 
-Ciò `ArcTo` metodo è simile al PostScript [ `arct` ](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) funzione (pagina 532) e iOS [ `AddArcToPoint` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArcToPoint/p/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) (metodo).
+Ciò `ArcTo` metodo è simile al PostScript [ `arct` ](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) funzione (pagina 532) e iOS [ `AddArcToPoint` ](xref:CoreGraphics.CGPath.AddArcToPoint(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat)) (metodo).
 
 Il `ArcTo` metodo prevede tre punti:
 
@@ -521,7 +521,7 @@ Se questa ellisse inclinata quindi viene posizionata in modo che interessa i due
 
 ![](arcs-images/ellipticalarcellipse1.png "Il primo set di archi ellittici")
 
-Questi due archi possono essere distinti in due modi: l'arco superiore è maggiore dell'arco nella parte inferiore e come l'arco viene disegnato da sinistra a destra, viene disegnato l'arco superiore in senso orario mentre viene disegnato l'arco in basso in senso antiorario.
+Questi due archi possono essere distinte in due modi: Punto finale dell'arco superiore è maggiore di arco nella parte inferiore e come l'arco viene disegnato da sinistra a destra, viene disegnato l'arco superiore in senso orario mentre viene disegnato l'arco in basso in senso antiorario.
 
 È anche possibile adattare i puntini di sospensione tra i due punti in un altro modo:
 

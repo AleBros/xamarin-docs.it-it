@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 00bf7290d5f7165feb5b67cd91c15a96b7d3eaf8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c409fcc018379401c1ab40573495da12a8220c5a
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118370"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233666"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Controlli personalizzati nella finestra di progettazione di Xamarin per iOS
 
@@ -24,8 +24,8 @@ La finestra di progettazione di Xamarin per iOS è uno strumento potente per la 
 
 Nell'area di progettazione verrà visualizzato un controllo che soddisfi i requisiti seguenti:
 
-1.  È una sottoclasse diretta o indiretta di [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/) oppure [UIViewController](https://developer.xamarin.com/api/type/UIKit.UIView/Controller). Altri [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) sottoclassi verranno visualizzato come un'icona nell'area di progettazione.
-2.  Ha un [RegisterAttribute](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) esporlo per Objective-C.
+1.  È una sottoclasse diretta o indiretta di [UIView](xref:UIKit.UIView) oppure [UIViewController](xref:UIKit.UIViewController). Altri [NSObject](xref:Foundation.NSObject) sottoclassi verranno visualizzato come un'icona nell'area di progettazione.
+2.  Ha un [RegisterAttribute](xref:Foundation.RegisterAttribute) esporlo per Objective-C.
 3.  Dispone [il costruttore IntPtr obbligatorio](~/ios/internals/api-design/index.md).
 4.  Ovvero implementa il [IComponent](xref:System.ComponentModel.IComponent) o presenta un [DesignTimeVisibleAttribute](xref:System.ComponentModel.DesignTimeVisibleAttribute) impostata su True.
 
@@ -38,17 +38,17 @@ La finestra di progettazione non supporta il caricamento di librerie Objective-C
 Una proprietà dichiarata da un controllo personalizzato verrà visualizzato nel pannello delle proprietà se vengono soddisfatte le condizioni seguenti:
 
 1.  La proprietà ha un metodo pubblico get e setter.
-1.  La proprietà ha un [ExportAttribute](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) , nonché un' [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) impostata su True.
-1.  Il tipo della proprietà è un tipo numerico, tipo di enumerazione, string, bool, [SizeF](xref:System.Drawing.SizeF), [le proprietà UIColor](https://developer.xamarin.com/api/type/UIKit.UIColor/), o [UIImage](https://developer.xamarin.com/api/type/UIKit.UIImage/). Questo elenco di tipi supportati può essere espanso in futuro.
+1.  La proprietà ha un [ExportAttribute](xref:Foundation.ExportAttribute) , nonché un' [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) impostata su True.
+1.  Il tipo della proprietà è un tipo numerico, tipo di enumerazione, string, bool, [SizeF](xref:System.Drawing.SizeF), [le proprietà UIColor](xref:UIKit.UIColor), o [UIImage](xref:UIKit.UIImage). Questo elenco di tipi supportati può essere espanso in futuro.
 
 
 La proprietà può anche essere decorata con un [attributo DisplayNameAttribute](xref:System.ComponentModel.DisplayNameAttribute) per specificare l'etichetta che viene visualizzato per tale nel pannello delle proprietà.
 
 ## <a name="initialization"></a>Inizializzazione
 
-Per la `UIViewController` sottoclassi, è consigliabile usare il [ViewDidLoad](https://developer.xamarin.com/api/member/UIKit.UIViewController.ViewDidLoad/) metodo per il codice che dipende a viste create nella finestra di progettazione.
+Per la `UIViewController` sottoclassi, è consigliabile usare il [ViewDidLoad](xref:UIKit.UIViewController.ViewDidLoad) metodo per il codice che dipende a viste create nella finestra di progettazione.
 
-Per la `UIView` e altre `NSObject` sottoclassi, il [AwakeFromNib](https://developer.xamarin.com/api/member/Foundation.NSObject.AwakeFromNib/) metodo è la posizione consigliata per eseguire l'inizializzazione del controllo personalizzato dopo essere stato caricato dal file di layout. Infatti, qualsiasi proprietà personalizzate impostate nel pannello delle proprietà viene impostata quando viene eseguito il costruttore del controllo, ma verranno impostati prima `AwakeFromNib` viene chiamato:
+Per la `UIView` e altre `NSObject` sottoclassi, il [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) metodo è la posizione consigliata per eseguire l'inizializzazione del controllo personalizzato dopo essere stato caricato dal file di layout. Infatti, qualsiasi proprietà personalizzate impostate nel pannello delle proprietà viene impostata quando viene eseguito il costruttore del controllo, ma verranno impostati prima `AwakeFromNib` viene chiamato:
 
 
 ```csharp
@@ -138,7 +138,7 @@ Per risolvere la situazione precedente, inizializzare il `Counter` proprietà in
 
 Nell'area di progettazione, un controllo personalizzato deve rispettare alcune restrizioni:
 
--  Risorse di bundle dell'App non sono disponibili in modalità progettazione. Le immagini sono disponibili quando caricate tramite [UIImage metodi](https://developer.xamarin.com/api/type/UIKit.UIImage/%2fM) .
+-  Risorse di bundle dell'App non sono disponibili in modalità progettazione. Le immagini sono disponibili quando caricate tramite [UIImage metodi](xref:UIKit.UIImage) .
 -  Operazioni asincrone, ad esempio richieste web, non devono essere eseguite in modalità progettazione. L'area di progettazione non supporta l'animazione o altri aggiornamenti asincroni dell'interfaccia utente del controllo.
 
 
