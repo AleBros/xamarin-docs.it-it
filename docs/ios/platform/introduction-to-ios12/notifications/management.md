@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 9/4/2018
-ms.openlocfilehash: a7a3bb8f720f1c6a2370a2510659693bb28ea09b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 96fce269784ad0ac41fd1685ac7ac6b957932bd8
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111593"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233172"
 ---
 # <a name="notification-management-in-xamarinios"></a>Gestione delle notifiche in xamarin. IOS
 
@@ -28,8 +28,8 @@ Frammenti di codice in questa guida provengono da questa app di esempio.
 
 ## <a name="notification-management-screen"></a>Schermata di gestione di notifica
 
-Nell'app di esempio, `ManageNotificationsViewController` definisce un'interfaccia utente che consente agli utenti di abilitare e disabilitare il rosso e verde notifiche in modo indipendente. È uno standard [`UIViewController`](https://developer.xamarin.com/api/type/UIKit.UIViewController/)
-che contiene un [ `UISwitch` ](https://developer.xamarin.com/api/type/UIKit.UISwitch/) per ogni tipo di notifica. Attivare e disattivare l'opzione per entrambi i tipi di notifica vengono salvati, nelle impostazioni predefinite dell'utente, alle preferenze dell'utente per il tipo di notifica:
+Nell'app di esempio, `ManageNotificationsViewController` definisce un'interfaccia utente che consente agli utenti di abilitare e disabilitare il rosso e verde notifiche in modo indipendente. È uno standard [`UIViewController`](xref:UIKit.UIViewController)
+che contiene un [ `UISwitch` ](xref:UIKit.UISwitch) per ogni tipo di notifica. Attivare e disattivare l'opzione per entrambi i tipi di notifica vengono salvati, nelle impostazioni predefinite dell'utente, alle preferenze dell'utente per il tipo di notifica:
 
 ```csharp
 partial void HandleRedNotificationsSwitchValueChange(UISwitch sender)
@@ -41,7 +41,7 @@ partial void HandleRedNotificationsSwitchValueChange(UISwitch sender)
 > [!NOTE]
 > Schermata di gestione della notifica verifica anche se l'utente abbia disabilitato completamente le notifiche per l'app. In questo caso, nasconde i controlli per i tipi di notifiche specifiche. A tale scopo, schermata di gestione della notifica:
 >
-> - Le chiamate [ `UNUserNotificationCenter.Current.GetNotificationSettingsAsync` ](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.GetNotificationSettingsAsync()/) ed esamina il [ `AuthorizationStatus` ](https://developer.xamarin.com/api/property/UserNotifications.UNNotificationSettings.AuthorizationStatus/) proprietà.
+> - Le chiamate [ `UNUserNotificationCenter.Current.GetNotificationSettingsAsync` ](xref:UserNotifications.UNUserNotificationCenter.GetNotificationSettingsAsync) ed esamina il [ `AuthorizationStatus` ](xref:UserNotifications.UNNotificationSettings.AuthorizationStatus) proprietà.
 > - Nasconde i controlli per i tipi di notifiche se le notifiche sono state completamente disabilitate per l'app.
 > - Controlli nuovamente se sono state disabilitate le notifiche ogni volta che l'applicazione viene spostata in primo piano, poiché l'utente può abilitare o disabilitare le notifiche nelle impostazioni di iOS in qualsiasi momento.
 
@@ -61,7 +61,7 @@ partial void HandleTapRedNotificationButton(UIButton sender)
 iOS i collegamenti diretti alla schermata di gestione di notifica di un'app dal centro notifiche e le impostazioni di notifica dell'app nell'app impostazioni. Per semplificare questa operazione, un'app deve:
 
 - Indicare che una schermata di gestione di notifica è disponibile tramite il passaggio `UNAuthorizationOptions.ProvidesAppNotificationSettings` alla richiesta di autorizzazione di notifica dell'app.
-- Implementare il `OpenSettings` metodo dalla [ `IUNUserNotificationCenterDelegate` ](https://developer.xamarin.com/api/type/UserNotifications.IUNUserNotificationCenterDelegate/).
+- Implementare il `OpenSettings` metodo dalla [ `IUNUserNotificationCenterDelegate` ](xref:UserNotifications.IUNUserNotificationCenterDelegate).
 
 ### <a name="authorization-request"></a>Richiesta di autorizzazione
 
