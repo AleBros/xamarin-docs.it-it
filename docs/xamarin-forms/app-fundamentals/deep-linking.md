@@ -79,7 +79,7 @@ FirebaseApp.InitializeApp(this);
 AndroidAppLinks.Init(this);
 ```
 
-Quando si aggiunge **google-services.json** al progetto (e si imposta l'azione di compilazione *GoogleServicesJson**), il processo di compilazione estrae l'ID client e la chiave API, quindi aggiunge queste credenziali al file manifesto generato.
+Quando si aggiunge **google-services.json** al progetto (e si imposta l'azione di compilazione *GoogleServicesJson*\*), il processo di compilazione estrae l'ID client e la chiave API, quindi aggiunge queste credenziali al file manifesto generato.
 
 Per altre informazioni, vedere [Deep Link Content with Xamarin.Forms URL Navigation](https://blog.xamarin.com/deep-link-content-with-xamarin-forms-url-navigation/) (Deep linking del contenuto con la navigazione URL di Xamarin.Forms) nel blog di Xamarin.
 
