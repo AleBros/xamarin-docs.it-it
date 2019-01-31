@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 5b3d6f486f802fda1a384b7a8e53b104c1251fdd
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: fcbdeac5ebceccddee68fcca635a3935944ecac8
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058246"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55291934"
 ---
 # <a name="explicit-styles-in-xamarinforms"></a>Stili espliciti in xamarin. Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "53058246"
 
 _Uno stile esplicito è quello che viene applicato in modo selettivo a controlli impostando le relative proprietà di stile._
 
-## <a name="creating-an-explicit-style-in-xaml"></a>Creazione di uno stile esplicito in XAML
+## <a name="create-an-explicit-style-in-xaml"></a>Creare uno stile esplicito in XAML
 
 Per dichiarare un [ `Style` ](xref:Xamarin.Forms.Style) a livello di pagina, un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) deve essere aggiunto alla pagina e quindi uno o più `Style` le dichiarazioni possono essere inclusi nel `ResourceDictionary`. Oggetto `Style` viene effettuata *esplicita* assegnando la dichiarazione di un `x:Key` attributo, che assegna una chiave descrittiva nel `ResourceDictionary`. *Explicit* stili devono quindi essere applicati per specifici elementi visivi impostando loro [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) proprietà.
 
@@ -70,7 +70,7 @@ Il [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) definisce tre
 
 Inoltre, l'elemento finale [ `Label` ](xref:Xamarin.Forms.Label) ha un [ `Style` ](xref:Xamarin.Forms.Style) applicati, ma esegue anche l'override la [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor) proprietà a un diverso `Color`valore.
 
-### <a name="creating-an-explicit-style-at-the-control-level"></a>Creazione di uno stile esplicito il controllo a livello
+### <a name="create-an-explicit-style-at-the-control-level"></a>Creare uno stile esplicito a livello di controllo
 
 Oltre alla creazione *esplicita* stili a livello di pagina, possono anche essere creati a livello di controllo, come illustrato nell'esempio di codice seguente:
 
@@ -97,7 +97,7 @@ In questo esempio, il *esplicita* [ `Style` ](xref:Xamarin.Forms.Style) le istan
 
 Per informazioni sulla creazione di stili in un'applicazione [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), vedere [stili globali](~/xamarin-forms/user-interface/styles/application.md).
 
-## <a name="creating-an-explicit-style-in-c35"></a>Creazione di uno stile esplicito in C&#35;
+## <a name="create-an-explicit-style-in-c35"></a>Creare uno stile esplicito in C&#35;
 
 [`Style`](xref:Xamarin.Forms.Style) le istanze possono essere aggiunte a una pagina [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) raccolta in c# mediante la creazione di un nuovo [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)e quindi aggiungendo il `Style` alle istanze il `ResourceDictionary`, come illustrato di esempio di codice seguente:
 
@@ -180,12 +180,6 @@ public class ExplicitStylesPageCS : ContentPage
 ```
 
 Il costruttore definisce tre *esplicite* stili applicati alla pagina [ `Label` ](xref:Xamarin.Forms.Label) istanze. Ogni `Style` consente di visualizzare il testo in un colore diverso, impostando allo stesso tempo il tipo di carattere opzioni di layout, dimensioni e orizzontali e verticali. Ciascun `Style` viene applicato a un altro `Label` mediante l'impostazione relativa [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) proprietà. Inoltre, l'elemento finale `Label` ha un `Style` applicato, ma esegue anche l'override la `TextColor` proprietà a un altro `Color` valore.
-
-## <a name="summary"></a>Riepilogo
-
-Un [ `Style` ](xref:Xamarin.Forms.Style) viene effettuata *esplicita* assegnando la dichiarazione di un `x:Key` attributo e quindi in modo selettivo applicarla ai controlli impostando loro [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) proprietà.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

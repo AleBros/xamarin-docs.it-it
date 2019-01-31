@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 0f39eb78d46b6156231a165f950f4698e63fc073
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: bd6013a0fc1d4f3dfc2d863860052310fed55e4d
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055741"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292142"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Nozioni fondamentali di XAML di xamarin. Forms
 
@@ -101,17 +101,12 @@ Queste funzionalità sono *non* XML estensioni. XAML è interamente legali XML. 
 
 ## <a name="requirements"></a>Requisiti
 
-Questo articolo presuppone una conoscenza pratica di xamarin. Forms. Leggere [An Introduction to xamarin. Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md) è altamente consigliabile.
-
-Questo articolo presuppone anche una certa conoscenza di XML, incluse informazioni sull'utilizzo di dichiarazioni dello spazio dei nomi XML e i termini *elemento*, *tag*, e *attributo*.
+Questo articolo presuppone una conoscenza pratica di xamarin. Forms. Questo articolo presuppone anche una certa conoscenza di XML, incluse informazioni sull'utilizzo di dichiarazioni dello spazio dei nomi XML e i termini *elemento*, *tag*, e *attributo*.
 
 Quando si ha familiarità con xamarin. Forms e XML, iniziare a leggere [parte 1. Introduzione a XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
-- [Introduzione a xamarin. Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Creazione manuale di App per dispositivi mobili](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
 - [Esempi di Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)

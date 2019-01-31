@@ -6,13 +6,13 @@ ms.assetid: 02A75F3B-4389-49D4-A2F4-AFD473A4A161
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/17/2016
-ms.openlocfilehash: c30e6c0060407720e0324a3327607100db3960d6
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 01/30/2019
+ms.openlocfilehash: 67b8bac62cacb091323d084e1c7cec9accc30844
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056149"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55291973"
 ---
 # <a name="implicit-styles-in-xamarinforms"></a>Stili impliciti in xamarin. Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "53056149"
 
 _Uno stile implicito è quello usato da tutti i controlli di TargetType stesso, senza richiedere ogni controllo per fare riferimento allo stile._
 
-## <a name="creating-an-implicit-style-in-xaml"></a>Creazione di uno stile implicito in XAML
+## <a name="create-an-implicit-style-in-xaml"></a>Creare uno stile implicito in XAML
 
 Per dichiarare un [ `Style` ](xref:Xamarin.Forms.Style) a livello di pagina, un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) deve essere aggiunto alla pagina e quindi uno o più `Style` le dichiarazioni possono essere inclusi nel `ResourceDictionary`. Oggetto `Style` viene effettuata *implicita* se non viene specificata un' `x:Key` attributo. Verrà applicato lo stile per gli elementi visivi che soddisfano il `TargetType` esattamente, ma non per gli elementi che derivano dal `TargetType` valore.
 
@@ -57,7 +57,7 @@ Il [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) definisce un 
 
 Inoltre, la quarta [ `Entry` ](xref:Xamarin.Forms.Entry) esegue l'override la [ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor) e [ `TextColor` ](xref:Xamarin.Forms.Entry.TextColor) proprietà dello stile implicito da diversi `Color`valori.
 
-### <a name="creating-an-implicit-style-at-the-control-level"></a>Creazione di uno stile implicito il controllo a livello
+### <a name="create-an-implicit-style-at-the-control-level"></a>Creare uno stile implicito a livello di controllo
 
 Oltre alla creazione *implicita* stili a livello di pagina, possono anche essere creati a livello di controllo, come illustrato nell'esempio di codice seguente:
 
@@ -84,7 +84,7 @@ In questo esempio, il *implicita* [ `Style` ](xref:Xamarin.Forms.Style) viene as
 
 Per informazioni sulla creazione di stili in un'applicazione [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), vedere [stili globali](~/xamarin-forms/user-interface/styles/application.md).
 
-## <a name="creating-an-implicit-style-in-c35"></a>Creazione di uno stile implicito in C&#35;
+## <a name="create-an-implicit-style-in-c35"></a>Creare uno stile implicito in C&#35;
 
 [`Style`](xref:Xamarin.Forms.Style) le istanze possono essere aggiunte a una pagina [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) raccolta in c# mediante la creazione di un nuovo [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)e quindi aggiungendo il `Style` alle istanze il `ResourceDictionary`, come illustrato di esempio di codice seguente:
 
@@ -119,11 +119,40 @@ public class ImplicitStylesPageCS : ContentPage
 
 Il costruttore definisce una sola *implicita* stile applicato alla pagina [ `Entry` ](xref:Xamarin.Forms.Entry) istanze. Il `Style` consente di visualizzare il testo in blu su uno sfondo giallo, durante l'impostazione anche altre opzioni di visualizzazione. Il `Style` viene aggiunto alla pagina [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) senza specificare un `key` stringa. Di conseguenza, il `Style` applicato a tutti la `Entry` le istanze in modo implicito i valori corrispondono il [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) proprietà del `Style` esattamente. Tuttavia, il `Style` non viene applicato al `CustomEntry` istanza, che è una sottoclasse `Entry`.
 
-## <a name="summary"></a>Riepilogo
+## <a name="apply-a-style-to-derived-types"></a>Applicare uno stile ai tipi derivati
 
-Un' *implicita* stile è quello usato da tutti gli elementi visivi dello stesso [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType), senza richiedere ogni controllo per fare riferimento allo stile. Oggetto `Style` viene effettuata *implicita* se non viene specificata un' `x:Key` attributo. Al contrario, il `x:Key` attributo verrà portato automaticamente il valore della [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) proprietà.
+Il [ `Style.ApplyToDerivedTypes` ](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) proprietà consente a uno stile da applicare ai controlli che derivano dal tipo di base fa riferimento il [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) proprietà. Pertanto, impostando questa proprietà su `true` consente un solo stile come destinazione più tipi, a condizione che i tipi derivano dal tipo di base specificato nel `TargetType` proprietà.
 
+L'esempio seguente mostra uno stile implicito che imposta il colore di sfondo [ `Button` ](xref:Xamarin.Forms.Button) istanze a rosso:
 
+```xaml
+<Style TargetType="Button"
+       ApplyToDerivedTypes="True">
+    <Setter Property="BackgroundColor"
+            Value="Red" />
+</Style>
+```
+
+Inserire questo stile di visualizzazione in un livello di pagina [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) comporterà si applichino a tutti [ `Button` ](xref:Xamarin.Forms.Button) istanze nella pagina, nonché per tutti i controlli che derivano da `Button`. Tuttavia, se il [ `ApplyToDerivedTypes` ](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) proprietà rimasta non impostata, lo stile viene applicato solo a `Button` istanze.
+
+Il codice c# equivalente è:
+
+```csharp
+var buttonStyle = new Style(typeof(Button))
+{
+    ApplyToDerivedTypes = true,
+    Setters =
+    {
+        new Setter
+        {
+            Property = VisualElement.BackgroundColorProperty,
+            Value = Color.Red
+        }
+    }
+};
+
+Resources = new ResourceDictionary { buttonStyle };
+```
 
 ## <a name="related-links"></a>Collegamenti correlati
 

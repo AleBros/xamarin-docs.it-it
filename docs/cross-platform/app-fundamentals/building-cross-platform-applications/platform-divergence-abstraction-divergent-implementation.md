@@ -1,19 +1,19 @@
 ---
-title: Parte 4 - gestione di più piattaforme
+title: Parte 4 - Gestione di più piattaforme
 description: Questo documento descrive come gestire divergenza di applicazioni basata su piattaforme o funzionalità. Viene descritto di dimensioni dello schermo, metafore di navigazione, tocco e i movimenti, le notifiche push e paradigmi di interfaccia, ad esempio gli elenchi e schede.
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: ef224b7410565ae15da7613c04d11e7bd6a44dcb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f4558d5172d7dcbd2e14e6b74a347dd2f1e3a234
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117941"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292129"
 ---
-# <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4 - gestione di più piattaforme
+# <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4 - Gestione di più piattaforme
 
 ## <a name="handling-platform-divergence-amp-features"></a>La gestione della piattaforma divergenza &amp; funzionalità
 
@@ -95,7 +95,7 @@ I vantaggi e svantaggi delle interfacce sono ugualmente applicabili a ereditarie
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-Vedere le [xamarin. Forms](~/xamarin-forms/get-started/index.md) documentazione.
+Vedere le [xamarin. Forms](~/get-started/index.md) documentazione.
 
 ### <a name="other-cross-platform-libraries"></a>Altre librerie multipiattaforma
 

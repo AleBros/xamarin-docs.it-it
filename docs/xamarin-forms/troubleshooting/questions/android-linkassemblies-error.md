@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: 7360ee9064049bcebfd88f0cd36b5938d5337be3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b027dd23b9144a865bc16b55ebac71855bae0725
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105285"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292038"
 ---
 # <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Errore di compilazione Android: LinkAssemblies l'attività non è riuscita
 
-Si può vedere un messaggio di errore `The "LinkAssemblies" task failed unexpectedly` quando la compilazione di un progetto xamarin. Android che utilizza form. Ciò si verifica quando il linker è attivo (in genere in un *rilascio* compilazione per ridurre le dimensioni del pacchetto dell'app); e ciò avviene perché gli obiettivi di Android non sono aggiornati per il framework più recente. (Altre informazioni: [xamarin. Forms per i requisiti di Android](~/xamarin-forms/get-started/installation.md#android))
+Si può vedere un messaggio di errore `The "LinkAssemblies" task failed unexpectedly` quando la compilazione di un progetto xamarin. Android che utilizza form. Ciò si verifica quando il linker è attivo (in genere in un *rilascio* compilazione per ridurre le dimensioni del pacchetto dell'app); e ciò avviene perché gli obiettivi di Android non sono aggiornati per il framework più recente. (Altre informazioni: [Xamarin. Forms per i requisiti di Android](~/get-started/installation.md#android))
 
 La soluzione per questo problema consiste nell'assicurarsi di disporre le ultime versioni supportate di Android SDK e impostare il **Framework di destinazione** al **Usa la piattaforma installata più recente**. È inoltre consigliabile impostare il **la versione Android di destinazione** a **versione Framework di destinazione usare** e il **versione minima di Android** per API 15 o versione successiva. Questa viene considerata la configurazione supportata.
 

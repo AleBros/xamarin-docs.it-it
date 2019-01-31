@@ -6,13 +6,13 @@ ms.assetid: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/17/2016
-ms.openlocfilehash: 2607298bdc0842f60a1d1a3299bed61bbea925a1
-ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
+ms.date: 01/30/2019
+ms.openlocfilehash: ec41955ac15ab23579a5e63b9e17eed61a74e86f
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52459863"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55291986"
 ---
 # <a name="styling-xamarinforms-apps-using-xaml-styles"></a>Stile App xamarin. Forms usando gli stili XAML
 
@@ -43,3 +43,7 @@ Gli stili non rispondere alle modifiche delle proprietà e rimangono invariati p
 ## <a name="device-stylesdevicemd"></a>[Stili di dispositivo](device.md)
 
 Xamarin. Forms include sei *dinamici* stili, noti come *dispositivo* gli stili, il [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) classe. Tutti i sei stili possono essere applicati a [ `Label` ](xref:Xamarin.Forms.Label) solo istanze.
+
+## <a name="style-classesstyle-classmd"></a>[Classi di stile](style-class.md)
+
+Le classi di stile di xamarin. Forms abilitano più stili da applicare a un controllo, senza dover ricorrere a ereditarietà degli stili.

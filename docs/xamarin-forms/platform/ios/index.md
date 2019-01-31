@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2018
-ms.openlocfilehash: e5ec152032a068c0c1e83c8df5e6f128bfa30c83
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 83946929874ae37caab459eed970c50b74154d66
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207765"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292337"
 ---
 # <a name="ios-platform-features"></a>Funzionalità della piattaforma iOS
 
-Sviluppo di applicazioni xamarin. Forms per iOS richiede Visual Studio. Il [pagina dei requisiti](~/xamarin-forms/get-started/installation.md) contiene altre informazioni sui prerequisiti.
+Sviluppo di applicazioni xamarin. Forms per iOS richiede Visual Studio. Il [pagina dei requisiti](~/get-started/installation.md) contiene altre informazioni sui prerequisiti.
 
 ## <a name="platform-specifics"></a>Funzionalità specifiche della piattaforma
 
@@ -61,7 +61,7 @@ Xamarin. Forms consente gli stili dell'interfaccia utente di multi-piattaforma e
 
 [Leggere altre](formatting.md) sulla formattazione l'interfaccia utente usando le API iOS specifici, ad esempio **Info. plist** configuration e `UIAppearance` API.
 
-![](images/status-white-sml.png "iOS dei temi")
+![](images/status-white-sml.png "iOS Theming")
 
 ## <a name="other-ios-features"></a>Altre funzionalità di iOS
 
