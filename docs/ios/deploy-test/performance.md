@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: f01074823f865b1717920d8364c67828453b6437
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 01c743b4b0eff81bbf4c41e1c2f387e0dc40c067
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617741"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233757"
 ---
 # <a name="xamarinios-performance"></a>Prestazioni di Xamarin.iOS
 
@@ -25,7 +25,7 @@ Questo documento descrive tecniche per migliorare le prestazioni e l'uso della m
 
 ## <a name="avoid-strong-circular-references"></a>Evitare riferimenti circolari sicuri
 
-In alcune situazioni è possibile creare cicli di riferimento sicuri che potrebbero impedire al Garbage Collector di recuperare la memoria degli oggetti. Si consideri, ad esempio, il caso in cui una sottoclasse derivata da [`NSObject`](https://developer.xamarin.com/api/type/Foundation.NSObject/), ad esempio una classe che eredita da [`UIView`](https://developer.xamarin.com/api/type/UIKit.UIView/), viene aggiunta a un contenitore derivato da `NSObject` e vi viene fatto riferimento in modo sicuro da Objective-C, come illustrato nell'esempio di codice seguente:
+In alcune situazioni è possibile creare cicli di riferimento sicuri che potrebbero impedire al Garbage Collector di recuperare la memoria degli oggetti. Si consideri, ad esempio, il caso in cui una sottoclasse derivata da [`NSObject`](xref:Foundation.NSObject), ad esempio una classe che eredita da [`UIView`](xref:UIKit.UIView), viene aggiunta a un contenitore derivato da `NSObject` e vi viene fatto riferimento in modo sicuro da Objective-C, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 class Container : UIView
@@ -56,7 +56,7 @@ container.AddSubview (new MyView (container));
 
 Quando questo codice crea l'istanza di `Container`, l'oggetto C# avrà un riferimento sicuro a un oggetto Objective-C. Analogamente, anche l'istanza di `MyView` avrà un riferimento sicuro a un oggetto Objective-C.
 
-La chiamata a `container.AddSubview` aumenterà inoltre il conteggio dei riferimenti nell'istanza non gestita di `MyView`. In questo caso, il runtime di Xamarin.iOS crea un'istanza di `GCHandle` per mantenere attivo l'oggetto `MyView` nel codice gestito, non essendoci garanzia che gli oggetti gestiti manterranno un riferimento a tale oggetto. Dal punto di vista del codice gestito, l'oggetto `MyView` verrebbe recuperato dopo la chiamata ad [`AddSubview`](https://developer.xamarin.com/api/member/UIKit.UIView.AddSubview/p/UIKit.UIView/) se non fosse per `GCHandle`.
+La chiamata a `container.AddSubview` aumenterà inoltre il conteggio dei riferimenti nell'istanza non gestita di `MyView`. In questo caso, il runtime di Xamarin.iOS crea un'istanza di `GCHandle` per mantenere attivo l'oggetto `MyView` nel codice gestito, non essendoci garanzia che gli oggetti gestiti manterranno un riferimento a tale oggetto. Dal punto di vista del codice gestito, l'oggetto `MyView` verrebbe recuperato dopo la chiamata ad [`AddSubview`](xref:UIKit.UIView.AddSubview(UIKit.UIView)) se non fosse per `GCHandle`.
 
 L'oggetto `MyView` non gestito avrà un elemento `GCHandle` che punta all'oggetto gestito, noto come *collegamento sicuro*. L'oggetto gestito conterrà un riferimento all'istanza di `Container`. L'istanza di `Container` avrà a sua volta un riferimento gestito all'oggetto `MyView`.
 
@@ -103,7 +103,7 @@ In questo caso, l'oggetto contenuto non mantiene attivo l'elemento padre. Tuttav
 
 Questo accade anche nelle API iOS che usano il modello del delegato o dell'origine dati, in cui una classe peer contiene l'implementazione. Un esempio è l'impostazione della proprietà [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/)
 Proprietà o metodo [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/)
-nella casse [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/).
+nella casse [`UITableView`](xref:UIKit.UITableView).
 
 Nel caso delle classi create esclusivamente per l'implementazione di un protocollo, ad esempio [`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/), invece di creare una sottoclasse, è sufficiente implementare l'interfaccia nella classe, eseguire l'override del metodo e assegnare la proprietà `DataSource` a `this`.
 
@@ -211,7 +211,7 @@ class MyChild : UIView
 ```
 
 Per altre informazioni sul rilascio di riferimenti sicuri, vedere [Release IDisposable Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable) (Rilasciare risorse IDisposable).
-È anche disponibile una discussione interessante nel post di blog [Xamarin.iOS, the garbage collector and me](http://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/) (Xamarin.iOS, Garbage Collector e l'utente).
+È anche disponibile una discussione interessante in questo post di blog: [Xamarin.iOS, the garbage collector and me](http://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/) (Io, Xamarin.iOS e il Garbage Collector).
 
 ### <a name="more-information"></a>Altre informazioni
 
@@ -219,7 +219,7 @@ Per altre informazioni, vedere [Rules to Avoid Retain Cycles](http://www.cocoawi
 
 ## <a name="optimize-table-views"></a>Ottimizzare le visualizzazioni di tabelle
 
-Gli utenti si aspettano uno scorrimento fluido e tempi di caricamento rapidi per le istanze di [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/). Le prestazioni dello scorrimento possono tuttavia peggiorare quando le celle contengono gerarchie di visualizzazione con molti livelli di annidamento o quando le celle contengono layout complessi. Alcune tecniche consentono tuttavia di evitare un peggioramento delle prestazioni di `UITableView`:
+Gli utenti si aspettano uno scorrimento fluido e tempi di caricamento rapidi per le istanze di [`UITableView`](xref:UIKit.UITableView). Le prestazioni dello scorrimento possono tuttavia peggiorare quando le celle contengono gerarchie di visualizzazione con molti livelli di annidamento o quando le celle contengono layout complessi. Alcune tecniche consentono tuttavia di evitare un peggioramento delle prestazioni di `UITableView`:
 
 - Riutilizzare le celle. Per altre informazioni, vedere [Riutilizzare le celle](#reusecells).
 - Ridurre il numero delle visualizzazioni secondarie.
@@ -228,11 +228,11 @@ Gli utenti si aspettano uno scorrimento fluido e tempi di caricamento rapidi per
 - Rendere opache la cella ed eventuali altre visualizzazioni.
 - Evitare il ridimensionamento e le sfumature delle immagini.
 
-Nel loro insieme, queste tecniche consentono di mantenere uno scorrimento fluido per le istanze di [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/).
+Nel loro insieme, queste tecniche consentono di mantenere uno scorrimento fluido per le istanze di [`UITableView`](xref:UIKit.UITableView).
 
 ### <a name="reuse-cells"></a>Riusare le celle
 
-Se si visualizzano centinaia di righe in [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/), sarebbe uno spreco di memoria creare centinaia di oggetti [`UITableViewCell`](https://developer.xamarin.com/api/type/UIKit.UITableViewCell/) quando poi ne vengono visualizzati contemporaneamente sullo schermo solo alcuni. Solo le celle visibili sullo schermo vengono invece caricate in memoria e il **contenuto** viene caricato in queste celle riutilizzate. Questo impedisce la creazione di istanze di centinaia di oggetti aggiuntivi, con conseguente risparmio di tempo e memoria.
+Se si visualizzano centinaia di righe in [`UITableView`](xref:UIKit.UITableView), sarebbe uno spreco di memoria creare centinaia di oggetti [`UITableViewCell`](xref:UIKit.UITableViewCell) quando poi ne vengono visualizzati contemporaneamente sullo schermo solo alcuni. Solo le celle visibili sullo schermo vengono invece caricate in memoria e il **contenuto** viene caricato in queste celle riutilizzate. Questo impedisce la creazione di istanze di centinaia di oggetti aggiuntivi, con conseguente risparmio di tempo e memoria.
 
 Quando quindi una cella viene rimossa dallo schermo, la visualizzazione può essere inserita in una coda per essere riutilizzata in seguito, come illustrato nell'esempio di codice seguente:
 
@@ -250,13 +250,13 @@ class MyTableSource : UITableViewSource
 }
 ```
 
-Mentre l'utente scorre, [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/) chiama l'override `GetCell` per richiedere nuove visualizzazioni. Questo override chiama quindi il metodo [`DequeueReusableCell`](https://developer.xamarin.com/api/member/UIKit.UITableView.DequeueReusableCell/p/Foundation.NSString/) e, se una cella è disponibile per essere riutilizzata, verrà restituita.
+Mentre l'utente scorre, [`UITableView`](xref:UIKit.UITableView) chiama l'override `GetCell` per richiedere nuove visualizzazioni. Questo override chiama quindi il metodo [`DequeueReusableCell`](xref:UIKit.UITableView.DequeueReusableCell(Foundation.NSString)) e, se una cella è disponibile per essere riutilizzata, verrà restituita.
 
 Per altre informazioni, vedere [Cell Reuse](~/ios/user-interface/controls/tables/populating-a-table-with-data.md) (Riutilizzo delle celle) in [Populating a Table with Data](~/ios/user-interface/controls/tables/populating-a-table-with-data.md) (Popolamento di una tabella con i dati).
 
 ## <a name="use-opaque-views"></a>Usare le visualizzazioni opache
 
-Assicurarsi che la proprietà [`Opaque`](https://developer.xamarin.com/api/property/UIKit.UIView.Opaque/) sia impostata per tutte le visualizzazioni per cui non è definita la trasparenza. Questa opzione garantisce che il sistema di disegno esegua il rendering ottimale delle visualizzazioni. Questa funzionalità è particolarmente importante quando una visualizzazione è incorporata in [`UIScrollView`](https://developer.xamarin.com/api/type/UIKit.UIScrollView/) o fa parte di un'animazione complessa. In caso contrario il sistema di disegno unirà le visualizzazioni con gli altri contenuti, con il rischio di compromettere in modo significativo le prestazioni.
+Assicurarsi che la proprietà [`Opaque`](xref:UIKit.UIView.Opaque) sia impostata per tutte le visualizzazioni per cui non è definita la trasparenza. Questa opzione garantisce che il sistema di disegno esegua il rendering ottimale delle visualizzazioni. Questa funzionalità è particolarmente importante quando una visualizzazione è incorporata in [`UIScrollView`](xref:UIKit.UIScrollView) o fa parte di un'animazione complessa. In caso contrario il sistema di disegno unirà le visualizzazioni con gli altri contenuti, con il rischio di compromettere in modo significativo le prestazioni.
 
 ## <a name="avoid-fat-xibs"></a>Evitare XIB FAT
 
@@ -264,7 +264,7 @@ Anche se i file XIB sono stati in gran parte sostituiti dagli storyboard, in alc
 
 ## <a name="optimize-image-resources"></a>Ottimizzare le risorse immagine
 
-Le immagini sono tra le risorse più dispendiose usate dalle applicazioni e spesso vengono acquisite a risoluzioni elevate. Quando si visualizza un'immagine dal bundle dell'app in [`UIImageView`](https://developer.xamarin.com/api/type/UIKit.UIImageView/), assicurarsi che l'immagine e `UIImageView` abbiano le stesse dimensioni. Il ridimensionamento delle immagini in fase di esecuzione può essere un'operazione costosa, soprattutto se `UIImageView` è incorporato in [`UIScrollView`](https://developer.xamarin.com/api/type/UIKit.UIScrollView/).
+Le immagini sono tra le risorse più dispendiose usate dalle applicazioni e spesso vengono acquisite a risoluzioni elevate. Quando si visualizza un'immagine dal bundle dell'app in [`UIImageView`](xref:UIKit.UIImageView), assicurarsi che l'immagine e `UIImageView` abbiano le stesse dimensioni. Il ridimensionamento delle immagini in fase di esecuzione può essere un'operazione costosa, soprattutto se `UIImageView` è incorporato in [`UIScrollView`](xref:UIKit.UIScrollView).
 
 Per altre informazioni, vedere [Ottimizzare le risorse immagine](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages) nella guida [Prestazioni multipiattaforma](~/cross-platform/deploy-test/memory-perf-best-practices.md).
 

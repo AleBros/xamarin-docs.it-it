@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 4eea0db32bcfae4dc2ecdec8c2e494989515ef00
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 0374d37027546c41305c8cd5f27de593c226fcaa
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060226"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233770"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>Creazione di un DataTemplate in Xamarin.Forms
 
@@ -63,7 +63,7 @@ La proprietà [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) può ess
 </ListView>
 ```
 
-L'elemento figlio di un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) inline deve essere di tipo [`ViewCell`](xref:Xamarin.Forms.ViewCell) o derivare da questo tipo. Il layout all'interno dell'elemento `ViewCell` è gestito in questo caso da un elemento [`Grid`](xref:Xamarin.Forms.Grid). L'elemento `Grid` contiene tre istanze di [`Label`](xref:Xamarin.Forms.Label) che associano le loro proprietà [`Text`](xref:Xamarin.Forms.Label.Text) alle proprietà appropriate di ogni oggetto `Person` della raccolta.
+L'elemento figlio di un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) inline deve essere di tipo [`Cell`](xref:Xamarin.Forms.Cell) o derivare da questo tipo. Questo esempio usa un elemento [`ViewCell`](xref:Xamarin.Forms.ViewCell), che deriva da `Cell`. Il layout all'interno dell'elemento `ViewCell` è gestito in questo caso da un elemento [`Grid`](xref:Xamarin.Forms.Grid). L'elemento `Grid` contiene tre istanze di [`Label`](xref:Xamarin.Forms.Label) che associano le loro proprietà [`Text`](xref:Xamarin.Forms.Label.Text) alle proprietà appropriate di ogni oggetto `Person` della raccolta.
 
 Il codice C# equivalente è visualizzato nell'esempio seguente:
 

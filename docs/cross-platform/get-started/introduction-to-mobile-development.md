@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: cefcc7084b2abab4af61f07ef1f33a4f4c363f69
-ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
+ms.openlocfilehash: 5470a70570a431c1adc3053d9f8f389cec31cf85
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2018
-ms.locfileid: "53815204"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292077"
 ---
 # <a name="introduction-to-mobile-development"></a>Introduzione allo sviluppo per dispositivi mobili
 
@@ -65,13 +65,9 @@ Per un elenco completo di assembly e classi disponibili, vedere l'[elenco di ass
 
 Oltre alla libreria di classi base, questi file con estensione dll includono wrapper per iOS SDK e Android SDK che consentono di richiamare le API SDK sottostanti direttamente da C#.
 
-
-
 ### <a name="application-output"></a>Output dell'applicazione
 
 Quando vengono compilate applicazioni Xamarin, il risultato è un pacchetto dell'applicazione, ovvero un file con estensione app in iOS o con estensione apk in Android. Questi file non sono distinguibili dai pacchetti dell'applicazione compilati con gli ambienti di sviluppo integrato predefiniti della piattaforma e sono distribuibili esattamente nello stesso modo.
-
-
 
 ## <a name="getting-started"></a>Introduzione
 
@@ -83,22 +79,15 @@ Il passaggio successivo consiste nell'iniziare a compilare l'app usando una di q
 
 ![](introduction-to-mobile-development-images/ios.png "Hello, iOS")
 
-
 * [**Hello, Android**](~/android/get-started/hello-android/index.md)
 
 ![](introduction-to-mobile-development-images/android.png "Hello, Android")
 
-
-* [**Introduction to Xamarin.Forms**](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md) (Introduzione a Xamarin.Forms)
-
-
-
-
+* [**Introduzione a Xamarin.Forms**](~/get-started/index.md)
 
 ## <a name="summary"></a>Riepilogo
 
-Questo documento costituisce un'introduzione alla piattaforma Xamarin. Il passaggio successivo consiste nell'iniziare a usare la prima app compilata. Fare riferimento alle guide [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md) e [Introduction to Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md) (Introduzione a Xamarin.Forms) per cominciare.
-
+Questo documento costituisce un'introduzione alla piattaforma Xamarin. Il passaggio successivo consiste nell'iniziare a usare la prima app compilata. Per iniziare, fare riferimento alle guide [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md) e [Introduzione a Xamarin.Forms](~/get-started/index.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
