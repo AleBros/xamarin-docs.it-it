@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/24/2017
-ms.openlocfilehash: 667c98d3140d460a6d4b3a26bd898f4c169d6d85
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: 04f92988d4d367abd5e6e864d4450aee2e6c1df2
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50234882"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233796"
 ---
 # <a name="linking-xamarinios-apps"></a>Collegamento di app Xamarin.iOS
 
@@ -147,7 +147,7 @@ Gli utenti possono scegliere di collegare solo gli assembly SDK, senza eseguire 
 
 Questo avviene in genere quando non si vuole aggiungere manualmente attributi `[Preserve]` al codice.  L'effetto collaterale di questa scelta è che le librerie di terze parti non vengono collegate, che corrisponde in genere a un'impostazione predefinita corretta, in quanto non è possibile determinare se una libreria di terze parti supporti o meno il linker.
 
-Se nel progetto è presente una libreria o se si sviluppano librerie riutilizzabili e si vuole che il linker consideri l'assembly come collegabile, è sufficiente aggiungere l'attributo a livello di assembly [`LinkerSafe`](https://developer.xamarin.com/api/type/Foundation.LinkerSafeAttribute/), in questo modo:
+Se nel progetto è presente una libreria o se si sviluppano librerie riutilizzabili e si vuole che il linker consideri l'assembly come collegabile, è sufficiente aggiungere l'attributo a livello di assembly [`LinkerSafe`](xref:Foundation.LinkerSafeAttribute), in questo modo:
 
 ```csharp
 [assembly:LinkerSafe]

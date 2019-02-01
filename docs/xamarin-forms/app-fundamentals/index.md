@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
-ms.openlocfilehash: a65946f21f8ced00e9ad64aec590df37acab1528
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 2178c9f4115c42396635e22cb0688695b590ec26
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207817"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292155"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Nozioni di base sulle applicazioni Xamarin.Forms
 
@@ -87,8 +87,3 @@ I modelli del controllo offrono la possibilità di applicare e riapplicare facil
 ## <a name="triggerstriggersmd"></a>[Trigger](triggers.md)
 
 Aggiornare i controlli in risposta alle modifiche di proprietà e gli eventi in XAML.
-
-
-## <a name="related-links"></a>Collegamenti correlati
-
-- [Introduction to Xamarin.Forms (Introduzione a Xamarin.Forms)](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
