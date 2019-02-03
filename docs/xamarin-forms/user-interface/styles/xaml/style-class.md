@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: 2de21f19e2789c94c02b5d2e9c13fc06963e1a7f
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: dd749a4a78adbab5317f1ae5ca6334caa009b9b3
+ms.sourcegitcommit: 9dcb7377dc92ad921285fbb857b0be13030bbea3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293020"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55668550"
 ---
 # <a name="xamarinforms-style-classes"></a>Classi di stile di xamarin. Forms
 
@@ -206,7 +206,7 @@ In questo esempio, il primo [ `BoxView` ](xref:Xamarin.Forms.BoxView) è concepi
 ![](style-class-images/boxviews.png "BoxViews uno stile definito con le classi di stile")
 
 > [!IMPORTANT]
-> Più classi di stile possono essere applicate a un controllo perché il [ `StyleClass` ](xref:Xamarin.Forms.VisualElement.StyleClass) proprietà è di tipo `IList<string>`.
+> Più classi di stile possono essere applicate a un controllo perché il [ `StyleClass` ](xref:Xamarin.Forms.VisualElement.StyleClass) proprietà è di tipo `IList<string>`. In questo caso, le classi di stile vengono applicate in modo crescente elenco. Pertanto, quando più classi di stile impostano proprietà identiche, la proprietà nella classe di stile che si trova nella posizione più alta elenco avrà la precedenza.
 
 Il codice c# equivalente è:
 
