@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 7c19cc0f2d1f72706926d640bb7fad9323a9e17f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 067ff4758ca78f7d706c7be96ffecd10e4e57965
+ms.sourcegitcommit: d8edb1b9e7fd61979014d5f5f091ee135ab70e34
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53049456"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55712072"
 ---
 # <a name="customizing-listview-cell-appearance"></a>Personalizzazione dell'aspetto di cella ListView
 
@@ -120,6 +120,7 @@ il XAML riportato sopra esegue molto. È consigliabile analizzarne ogni:
 - La cella personalizzata è annidata all'interno di un `DataTemplate`, che si trova all'interno `ListView.ItemTemplate`. Questo è lo stesso processo usando qualsiasi altra cella.
 - `ViewCell` è il tipo di cella personalizzato. L'elemento figlio del `DataTemplate` deve essere di o derivare dal tipo di elemento `ViewCell`.
 - Si noti che all'interno di `ViewCell`, layout è gestito da un `StackLayout`. Questo layout consente di personalizzare il colore di sfondo. Si noti che tutte le proprietà di `StackLayout` vale a dire associabile possono essere associate all'interno di una cella personalizzata, sebbene non indicata di seguito.
+- All'interno di `ViewCell`, layout può essere gestito da qualsiasi layout di xamarin. Forms. 
 
 ### <a name="cnum"></a>C&num;
 
