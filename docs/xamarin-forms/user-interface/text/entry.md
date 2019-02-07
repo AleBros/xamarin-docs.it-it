@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/27/2018
-ms.openlocfilehash: 39af3b0e28bbbf9397ceece55adc330e364dcc3d
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 303cca48defdadd69449edbd6c4c3f5e4410bbbb
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061785"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831963"
 ---
 # <a name="xamarinforms-entry"></a>Voce di xamarin. Forms
 
@@ -44,6 +44,18 @@ Per leggere il testo, accedere il `Text` proprietà in c#:
 var text = MyEntry.Text;
 ```
 
+### <a name="setting-placeholder-text"></a>Impostazione del testo segnaposto
+
+Il [ `Entry` ](xref:Xamarin.Forms.Entry) può essere impostato su Mostra il testo del segnaposto quando non l'archiviazione dell'input dell'utente. Questa operazione viene eseguita impostando il [ `Placeholder` ](xref:Xamarin.Forms.Entry.Placeholder) proprietà a un `string`e viene spesso usato per indicare il tipo di contenuto appropriato per il `Entry`. Inoltre, il colore del testo segnaposto può essere controllato definendo i [ `PlaceholderColor` ](xref:Xamarin.Forms.Entry.PlaceholderColor) proprietà a un [ `Color` ](xref:Xamarin.Forms.Color):
+
+```xaml
+<Entry Placeholder="Username" PlaceholderColor="Olive" />
+```
+
+```csharp
+var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive };
+```
+
 > [!NOTE]
 > La larghezza di un `Entry` può essere definita impostando relativo `WidthRequest` proprietà. Non basarsi sulla larghezza di un `Entry` definito in base al valore del relativo `Text` proprietà.
 
@@ -60,6 +72,40 @@ var entry = new Entry { ... MaxLength = 10 };
 ```
 
 Oggetto [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) ha valore 0 indica che non sarà consentito alcun input e il valore `int.MaxValue`, che è il valore predefinito per un [ `Entry` ](xref:Xamarin.Forms.Entry), indica che è presente alcun limite effettivo per il numero di caratteri che possono essere immessi.
+
+### <a name="password-fields"></a>Campi di password
+
+`Entry` fornisce il `IsPassword` proprietà. Quando `IsPassword` è `true`, verrà visualizzato il contenuto del campo come cerchi neri:
+
+In XAML:
+
+```xaml
+<Entry IsPassword="true" />
+```
+
+In C#:
+
+```csharp
+var MyEntry = new Entry { IsPassword = true };
+```
+
+![](entry-images/password.png "Esempio di voce IsPassword")
+
+Segnaposto possono essere utilizzati con istanze di `Entry` che sono configurati come campi di password:
+
+In XAML:
+
+```xaml
+<Entry IsPassword="true" Placeholder="Password" />
+```
+
+In C#:
+
+```csharp
+var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
+```
+
+![](entry-images/passwordplaceholder.png "Esempio di segnaposto e IsPassword voce")
 
 ### <a name="setting-the-cursor-position-and-text-selection-length"></a>Impostazione posizione del cursore e lunghezza selezione testo
 
@@ -207,52 +253,6 @@ var entry = new Entry { ... IsTextPredictionEnabled = false };
 
 > [!NOTE]
 > Quando la [ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) è impostata su `false`, e non è in corso una tastiera personalizzata usato, il completamento del testo e automatizzate la correzione del testo è disabilitata. Tuttavia, se un [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) è stato impostato il completamento del testo che viene disabilitato, il `IsTextPredictionEnabled` proprietà viene ignorata. Pertanto, la proprietà non consente di abilitare il completamento del testo per un `Keyboard` che disabilita in modo esplicito.
-
-### <a name="setting-placeholder-text"></a>Impostazione del testo segnaposto
-
-Il [ `Entry` ](xref:Xamarin.Forms.Entry) può essere impostato su Mostra il testo del segnaposto quando non l'archiviazione dell'input dell'utente. Questa operazione viene eseguita impostando il [ `Placeholder` ](xref:Xamarin.Forms.Entry.Placeholder) proprietà a un `string`e viene spesso usato per indicare il tipo di contenuto appropriato per il `Entry`. Inoltre, il colore del testo segnaposto può essere controllato definendo i [ `PlaceholderColor` ](xref:Xamarin.Forms.Entry.PlaceholderColor) proprietà a un [ `Color` ](xref:Xamarin.Forms.Color):
-
-```xaml
-<Entry Placeholder="Username" PlaceholderColor="Olive" />
-```
-
-```csharp
-var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive };
-```
-
-### <a name="password-fields"></a>Campi di password
-
-`Entry` fornisce il `IsPassword` proprietà. Quando `IsPassword` è `true`, verrà visualizzato il contenuto del campo come cerchi neri:
-
-In XAML:
-
-```xaml
-<Entry IsPassword="true" />
-```
-
-In C#:
-
-```csharp
-var MyEntry = new Entry { IsPassword = true };
-```
-
-![](entry-images/password.png "Esempio di voce IsPassword")
-
-Segnaposto possono essere utilizzati con istanze di `Entry` che sono configurati come campi di password:
-
-In XAML:
-
-```xaml
-<Entry IsPassword="true" Placeholder="Password" />
-```
-
-In C#:
-
-```csharp
-var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
-```
-
-![](entry-images/passwordplaceholder.png "Esempio di segnaposto e IsPassword voce")
 
 ### <a name="colors"></a>Colori
 
