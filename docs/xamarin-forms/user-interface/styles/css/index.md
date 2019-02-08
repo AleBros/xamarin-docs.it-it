@@ -7,13 +7,13 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/19/2018
-ms.openlocfilehash: d56cf660fb5aa73b300a36c5abd8ff9338791747
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/13/2018
+ms.openlocfilehash: f84a6dac64300eb17a45576ae83f9b94208f5732
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054855"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831924"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Stile App xamarin. Forms con Cascading Style Sheets (CSS)
 
@@ -376,8 +376,8 @@ Le proprietà CSS seguenti sono supportate da xamarin. Forms (nelle **valori** s
 |`background-color`|`VisualElement`|_Colore_ \| `initial` |`background-color: springgreen;`|
 |`background-image`|`Page`|_Stringa_ \| `initial` |`background-image: bg.png;`|
 |`border-color`|`Button`, `Frame`, `ImageButton`|_Colore_ \| `initial`|`border-color: #9acd32;`|
-|`border-radius`|`BoxView`|_Valore Double_ \| `initial` |`border-radius: 10;`|
-|`border-width`|`Button`|_Valore Double_ \| `initial` |`border-width: .5;`|
+|`border-radius`|`BoxView`, `Button`, `Frame`, `ImageButton`|_Valore Double_ \| `initial` |`border-radius: 10;`|
+|`border-width`|`Button`, `ImageButton`|_Valore Double_ \| `initial` |`border-width: .5;`|
 |`color`|`ActivityIndicator`, `BoxView`, `Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_Colore_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
 |`column-gap`|`Grid`|_Valore Double_ \| `initial`|`column-gap: 9;`|
 |`direction`|`VisualElement`|`ltr` \| `rtl` \| `inherit` \| `initial` |`direction: rtl;`|

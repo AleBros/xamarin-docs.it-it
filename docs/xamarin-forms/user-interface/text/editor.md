@@ -6,13 +6,13 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/31/2018
-ms.openlocfilehash: 2fe1ad168186740fd71d25814e68b1109e097597
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/13/2018
+ms.openlocfilehash: 4011863553935052c230def403f4ebc281c51d92
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052624"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831872"
 ---
 # <a name="xamarinforms-editor"></a>Editor di xamarin. Forms
 
@@ -45,6 +45,18 @@ Per leggere il testo, accedere il `Text` proprietà in c#:
 
 ```csharp
 var text = MyEditor.Text;
+```
+
+### <a name="setting-placeholder-text"></a>Impostazione del testo segnaposto
+
+Il [ `Editor` ](xref:Xamarin.Forms.Editor) può essere impostato su Mostra il testo del segnaposto quando non l'archiviazione dell'input dell'utente. Questa operazione viene eseguita impostando il [ `Placeholder` ](xref:Xamarin.Forms.Editor.Placeholder) proprietà a un `string`e viene spesso usato per indicare il tipo di contenuto appropriato per il `Editor`. Inoltre, il colore del testo segnaposto può essere controllato definendo i [ `PlaceholderColor` ](xref:Xamarin.Forms.Editor.PlaceholderColor) proprietà a un [ `Color` ](xref:Xamarin.Forms.Color):
+
+```xaml
+<Editor Placeholder="Enter text here" PlaceholderColor="Olive" />
+```
+
+```csharp
+var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Color.Olive };
 ```
 
 ### <a name="limiting-input-length"></a>Limitazione della lunghezza di Input
@@ -159,17 +171,22 @@ var editor = new Editor { ... IsSpellCheckEnabled = false };
 > [!NOTE]
 > Quando la [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) è impostata su `false`e non viene usata una tastiera personalizzata, il correttore ortografico nativo verrà disabilitato. Tuttavia, se un [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) ha stato gruppo che disabilita il controllo ortografico controllo, ad esempio [ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat), il `IsSpellCheckEnabled` proprietà viene ignorata. Pertanto, la proprietà non è utilizzabile per abilitare il controllo ortografico per un `Keyboard` che disabilita in modo esplicito.
 
-### <a name="setting-placeholder-text"></a>Impostazione del testo segnaposto
+### <a name="enabling-and-disabling-text-prediction"></a>Abilitazione e disabilitazione di completamento del testo
 
-Il [ `Editor` ](xref:Xamarin.Forms.Editor) può essere impostato su Mostra il testo del segnaposto quando non l'archiviazione dell'input dell'utente. Questa operazione viene eseguita impostando il [ `Placeholder` ](xref:Xamarin.Forms.Editor.Placeholder) proprietà a un `string`e viene spesso usato per indicare il tipo di contenuto appropriato per il `Editor`. Inoltre, il colore del testo segnaposto può essere controllato definendo i [ `PlaceholderColor` ](xref:Xamarin.Forms.Editor.PlaceholderColor) proprietà a un [ `Color` ](xref:Xamarin.Forms.Color):
+Il `IsTextPredictionEnabled` proprietà controlla se il completamento del testo e automatico è abilitata la correzione del testo. Per impostazione predefinita, la proprietà è impostata su `true`. Quando l'utente ne immette di testo, vengono presentate le stime di word.
+
+Tuttavia, per alcuni scenari di immissione di testo, quali l'immissione di un nome utente, il completamento del testo e testo automatico correzione offre un'esperienza negativa e devono essere disabilitata impostando il `IsTextPredictionEnabled` proprietà `false`:
 
 ```xaml
-<Editor Placeholder="Enter text here" PlaceholderColor="Olive" />
+<Editor ... IsTextPredictionEnabled="false" />
 ```
 
 ```csharp
-var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Color.Olive };
+var editor = new Editor { ... IsTextPredictionEnabled = false };
 ```
+
+> [!NOTE]
+> Quando la `IsTextPredictionEnabled` è impostata su `false`, e non è in corso una tastiera personalizzata usato, il completamento del testo e automatizzate la correzione del testo è disabilitata. Tuttavia, se un [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) è stato impostato il completamento del testo che viene disabilitato, il `IsTextPredictionEnabled` proprietà viene ignorata. Pertanto, la proprietà non consente di abilitare il completamento del testo per un `Keyboard` che disabilita in modo esplicito.
 
 ### <a name="colors"></a>Colori
 

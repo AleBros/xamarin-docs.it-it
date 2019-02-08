@@ -7,21 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/30/2018
-ms.openlocfilehash: 06cf5d2a862a5db2f94fca655b69c45d16375854
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 4f69e88e0abff1236dc8365d88c8efbdf58b4031
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059152"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831704"
 ---
 # <a name="listview-data-sources"></a>Origini dati ListView
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
 
 Oggetto [ `ListView` ](xref:Xamarin.Forms.ListView) viene utilizzato per visualizzare gli elenchi di dati. Si apprenderanno informazioni sul popolamento di un ListView con dati e come è possibile associare all'elemento selezionato.
-
-- **[Impostazione proprietà ItemsSource](#ItemsSource)**  &ndash; Usa un elenco semplice o una matrice.
-- **[Data Binding](#Data_Binding)**  &ndash; stabilisce una relazione tra un modello e il ListView. L'associazione è ideale per il modello MVVM.
 
 ## <a name="itemssource"></a>ItemsSource
 

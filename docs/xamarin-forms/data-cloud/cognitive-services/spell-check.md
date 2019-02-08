@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 08ac86674e4f10d6bd17d765de2bcdf7c2d3f901
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 79b973784dd978bff15c7a706083c70df83ba1c8
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061759"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831846"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Controllo ortografico usando l'API controllo ortografico Bing
 
@@ -154,6 +154,9 @@ Questo codice esegue l'iterazione attraverso la `FlaggedTokens` insieme e sostit
 ![](spell-check-images/before-spell-check.png "Prima di controllo ortografico")
 
 ![](spell-check-images/after-spell-check.png "Dopo il controllo ortografico")
+
+> [!NOTE]
+> L'esempio precedente Usa `Replace` per motivi di semplicità, ma in una grande quantità di testo è stato possibile sostituire il token non corretto. L'API fornisce il `offset` valore che deve essere utilizzato nelle app di produzione per identificare la posizione corretta nel testo di origine per eseguire un aggiornamento.
 
 ## <a name="summary"></a>Riepilogo
 

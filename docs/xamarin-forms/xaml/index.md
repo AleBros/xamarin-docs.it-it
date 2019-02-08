@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/18/2018
-ms.openlocfilehash: 9924e588808783fe35dbd830bbc9af288f37e7ea
-ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
+ms.openlocfilehash: 7195d56cfee91544f0626a8f89c886cde36752e5
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "53813960"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831717"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>eXtensible Application Markup Language (XAML)
 
@@ -43,6 +43,10 @@ Il [Visualizzatore anteprima XAML](~/xamarin-forms/xaml/xaml-previewer.md) esegu
 
 XAML Usa le `xmlns` attributo XML per le dichiarazioni dello spazio dei nomi. Questo articolo presenta la sintassi dello spazio dei nomi XAML e viene illustrato come dichiarare uno spazio dei nomi XAML per un tipo di accesso.
 
+## <a name="xaml-custom-namespace-schemascustom-namespace-schemasmd"></a>[Schemi personalizzati Namespace XAML](custom-namespace-schemas.md)
+
+Uno schema personalizzato dello spazio dei nomi XAML può essere definito con la `XmlnsDefinitionAttribute` (classe), che specifica un mapping tra un URL personalizzato e uno o più spazi dei nomi CLR. Schema spazio dei nomi personalizzato è quindi utilizzabile nelle dichiarazioni dello spazio dei nomi XAML.
+
 ## <a name="xaml-markup-extensionsmarkup-extensionsindexmd"></a>[Estensioni di markup XAML](markup-extensions/index.md)
 
 XAML include le estensioni di markup per impostare gli attributi su oggetti oltre quelle che possono essere espresse con semplici stringhe o valori. Ad esempio che fanno riferimento a costanti, le proprietà statiche e i campi, i dizionari risorse e le associazioni dati.
@@ -67,6 +71,6 @@ Una proprietà associata è un tipo speciale di proprietà associabile, definito
 
 Risorse XAML sono definizioni di oggetti che possono essere utilizzati più di una volta. Oggetto [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) consente alle risorse di essere definito in un'unica posizione e usata nuovamente in un'applicazione xamarin. Forms. Questo articolo illustra come creare e utilizzare un `ResourceDictionary`e su come unire un `ResourceDictionary` in un altro.
 
-## <a name="loading-xaml-at-runtimeruntime-loadmd"></a>[Il caricamento di XAML in fase di esecuzione](runtime-load.md)
+## <a name="loading-xaml-at-runtimeruntime-loadmd"></a>[Caricamento di XAML in fase di esecuzione](runtime-load.md)
 
 XAML può essere caricato e analizzato in fase di esecuzione con il [ `LoadFromXaml` ](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) i metodi di estensione.

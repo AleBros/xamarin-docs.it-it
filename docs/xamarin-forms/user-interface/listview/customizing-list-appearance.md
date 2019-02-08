@@ -6,24 +6,19 @@ ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: 8adac1711271324b70731a085088bd8805391d31
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/13/2018
+ms.openlocfilehash: 71962c5e7d2f4c360e14b2040779498d4be95282
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059457"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831795"
 ---
 # <a name="customizing-listview-appearance"></a>Personalizzazione dell'aspetto di ListView
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
 
-`ListView` sono disponibili opzioni per controllare la presentazione dell'elenco globale, oltre a sottostante `ViewCell`s. Le opzioni includono:
-
-- [**Raggruppamento** ](#Grouping) &ndash; raggruppare gli elementi in ListView per semplificare l'esplorazione e organizzazione migliorata.
-- [**Informazioni sulle intestazioni e piè di pagina** ](#Headers_and_Footers) &ndash; visualizzare le informazioni all'inizio e alla fine della visualizzazione che supporta lo scorrimento con gli altri elementi.
-- [**Separatori di riga** ](#Row_Separators) &ndash; mostrare o nascondere le righe di separazione tra gli elementi.
-- [**Righe di altezza variabile** ](#Row_Heights) &ndash; per impostazione predefinita tutte le righe sono della stessa altezza, ma può essere modificato per consentire le righe con altezze diverse da visualizzare.
+[`ListView`](xref:Xamarin.Forms.ListView) ha la possibilità di controllare la presentazione dell'elenco, oltre al [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) istanze per ogni riga nell'elenco.
 
 <a name="Grouping" />
 
@@ -83,7 +78,7 @@ static PageTypeGroup()
 }
 ```
 
-Nel codice precedente è anche possibile chiamare `Add` sugli elementi della `groups`, che sono istanze del tipo `PageTypeGroup`. Ciò è possibile in quanto `PageTypeGroup` eredita da `List<PageModel>`. Questo è un esempio dell'elenco di elenchi modello indicato in precedenza.
+Nel codice precedente, è anche possibile chiamare `Add` sugli elementi della `groups`, che sono istanze del tipo `PageTypeGroup`. Ciò è possibile in quanto `PageTypeGroup` eredita da `List<PageModel>`. Questo è un esempio dell'elenco di elenchi modello indicato in precedenza.
 
 Ecco il XAML per la visualizzazione elenco raggruppato:
 
@@ -205,6 +200,14 @@ Per creare un'intestazione personalizzata e un piè di pagina, definire le visua
 ```
 
 ![](customizing-list-appearance-images/header-custom.png "ListView con intestazione personalizzata e un piè di pagina")
+
+## <a name="scrollbar-visibility"></a>Visibilità della barra di scorrimento
+
+[`ListView`](xref:Xamarin.Forms.ListView) ha `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` le proprietà, che ottiene o imposta un [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valore che rappresenta quando la barra di scorrimento orizzontale o verticale, è visibile. Entrambe le proprietà possono essere impostate sui valori seguenti:
+
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica il comportamento di barra di scorrimento predefinito per la piattaforma ed è il valore predefinito per il `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` proprietà.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica che le barre di scorrimento sarà visibile, anche quando il contenuto non rientra nella visualizzazione.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica che le barre di scorrimento non saranno visibili, se il contenuto non rientra nella visualizzazione di eventi.
 
 <a name="Row_Separators" />
 

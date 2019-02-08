@@ -6,23 +6,19 @@ ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/13/2018
-ms.openlocfilehash: f5b5a8a2d7adf207a583d71953ead1e0e7306b3f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/14/2018
+ms.openlocfilehash: 939df6cfd17de82e28958363cfa51cd199f928cb
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052316"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831691"
 ---
 # <a name="listview-interactivity"></a>Interattività ListView
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
 
-ListView supporta l'interazione con i dati in esso contenute tramite gli approcci seguenti:
-
-- [**Selezione & scelte** ](#selectiontaps) &ndash; rispondere alle selezioni/deselezioni non di elementi e scelte. Abilitare o disabilitare la selezione della riga (abilitato per impostazione predefinita).
-- [**Azioni di contesto** ](#Context_Actions) &ndash; espongono funzionalità per ogni elemento, ad esempio, scorrere rapidamente-a-delete.
-- [**Pull per aggiornare** ](#Pull_to_Refresh) &ndash; implementare l'espressione idiomatica pull per aggiornare che gli utenti hanno aspettano dalle esperienze native.
+[`ListView`](xref:Xamarin.Forms.ListView) supporta l'interazione con i dati in esso contenute.
 
 <a name="selectiontaps" />
 
@@ -66,6 +62,7 @@ var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 <a name="Context_Actions" />
 
 ## <a name="context-actions"></a>Azioni di contesto
+
 Spesso, gli utenti desiderano intervenire su un elemento in un `ListView`. Si consideri ad esempio un elenco di messaggi di posta elettronica nell'app di posta elettronica. In iOS, è possibile scorrere rapidamente per eliminare un messaggio::
 
 ![](interactivity-images/context-default.png "ListView con azioni di contesto")
@@ -149,30 +146,47 @@ public void OnDelete (object sender, EventArgs e) {
 <a name="Pull_to_Refresh" />
 
 ## <a name="pull-to-refresh"></a>Eseguire il pull per l'aggiornamento
-Gli utenti sono ormai si aspettano che scorrere verso il basso in un elenco di dati verrà aggiorna tale elenco. `ListView` supporta questa out-of-the-box. Per abilitare la funzionalità di pull per aggiornare, impostare `IsPullToRefreshEnabled` su true:
+
+Gli utenti sono ormai si aspettano che scorrere verso il basso in un elenco di dati verrà aggiorna tale elenco. [`ListView`](xref:Xamarin.Forms.ListView) supporta questa out-of-the-box. Per abilitare la funzionalità di pull per aggiornare, impostare [ `IsPullToRefreshEnabled` ](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) a `true`:
+
+```xaml
+<ListView ...
+          IsPullToRefreshEnabled="true" />
+```
+
+Il codice c# equivalente è:
 
 ```csharp
 listView.IsPullToRefreshEnabled = true;
 ```
 
-Effettua il pull di pull per aggiornare l'utente:
+Durante l'aggiornamento, ovvero nera per impostazione predefinita viene visualizzata una casella di selezione. Tuttavia, il colore di casella di selezione può essere modificato in iOS e Android impostando il `RefreshControlColor` proprietà per un [ `Color` ](xref:Xamarin.Forms.Color):
+
+```xaml
+<ListView ...
+          IsPullToRefreshEnabled="true"
+          RefreshControlColor="Red" />
+```
+
+Il codice c# equivalente è:
+
+```csharp
+listView.RefreshControlColor = Color.Red;
+```
+
+Le schermate seguenti illustrano pull per aggiornare, come l'utente effettua il pull:
 
 ![](interactivity-images/refresh-start.png "ListView Pull per aggiornare In corso")
 
-Pull per aggiornare l'utente ha rilasciato il pull. Questo è ciò che l'utente vede quando si aggiorna elenco: ![](interactivity-images/refresh-in-progress.png "ListView Pull, aggiornare completo")
+Le schermate seguenti illustrano pull per aggiornare dopo che l'utente ha rilasciato il pull, con la casella di selezione da visualizzare durante la [ `ListView` ](xref:Xamarin.Forms.ListView) sta aggiornando:
 
-ListView espone alcuni eventi che consentono di rispondere agli eventi di pull per aggiornare.
+![](interactivity-images/refresh-in-progress.png "Pull di ListView per aggiornamento completato")
 
--  Il `RefreshCommand` verranno richiamati e il `Refreshing` evento denominato. `IsRefreshing` verrà impostato su `true`.
--  È consigliabile eseguire qualsiasi codice è necessario per aggiornare il contenuto della visualizzazione elenco, nel comando o evento.
--  Durante l'aggiornamento è completo, chiamare `EndRefresh` o impostare `IsRefreshing` a `false` per indicare la visualizzazione elenco che termine.
+[`ListView`](xref:Xamarin.Forms.ListView) viene attivato il [ `Refreshing` ](xref:Xamarin.Forms.ListView.Refreshing) evento per avviare l'aggiornamento e il [ `IsRefreshing` ](xref:Xamarin.Forms.ListView.IsRefreshing) verrà impostata su `true`. È necessario aggiornare il contenuto di qualsiasi riga di codice il `ListView` devono quindi essere eseguiti dal gestore dell'evento per il `Refreshing` evento, o dal metodo eseguito dal [ `RefreshCommand` ](xref:Xamarin.Forms.ListView.RefreshCommand). Una volta il `ListView` viene aggiornato, il `IsRefreshing` deve essere impostata su `false`, o il [ `EndRefresh` ](xref:Xamarin.Forms.ListView.EndRefresh) metodo deve essere chiamato per indicare che l'aggiornamento è stato completato.
 
-Il `CanExecute` proprietà viene rispettata, che offre un modo per controllare se il comando pull da aggiornare deve essere attivato.
-
-
+> [!NOTE]
+> Quando si definisce una [ `RefreshCommand` ](xref:Xamarin.Forms.ListView.RefreshCommand), il `CanExecute` metodo del comando può essere specificato per abilitare o disabilitare il comando.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Interattività ListView (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
-- [note sulla versione 1.4](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
-- [note sulla versione 1.3](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

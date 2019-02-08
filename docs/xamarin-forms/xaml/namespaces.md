@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
-ms.openlocfilehash: 85b9297a62cfb90485be2cbd927abfdcfec2f13c
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: be6154631b8b51ec61feb4c713d925ff30505b7d
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563043"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831755"
 ---
 # <a name="xaml-namespaces-in-xamarinforms"></a>Spazi dei nomi XAML in xamarin. Forms
 
@@ -96,10 +96,11 @@ Il prefisso dello spazio dei nomi viene specificato quando si dichiara un'istanz
 </ListView>
 ```
 
+Per informazioni sulla definizione di uno schema spazio dei nomi personalizzato, vedere [XAML personalizzato Namespace schemi](custom-namespace-schemas.md).
+
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo introdotto la sintassi dello spazio dei nomi XAML e illustrato come dichiarare uno spazio dei nomi XAML per un tipo di accesso. XAML Usa le `xmlns` attributo XML per le dichiarazioni dello spazio dei nomi e tipi è reperibile in XAML con la dichiarazione di uno spazio dei nomi XAML con un prefisso.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
