@@ -6,13 +6,13 @@ ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2017
-ms.openlocfilehash: f59a528916d2cc5efd19ba7c35a7b4f041ecbe09
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/18/2018
+ms.openlocfilehash: 284e10af41429d320ce08b8d45ccd5bbcec851d1
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056162"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831989"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Proprietà di automazione in Xamarin.Forms
 
@@ -138,6 +138,43 @@ AutomationProperties.SetLabeledBy(entry, nameLabel);
 
 > [!NOTE]
 > Si noti che il metodo [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) può essere utilizzato anche per impostare la proprietà associata `AutomationProperties.IsInAccessibleTree` – `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`
+
+## <a name="accessibility-intricacies"></a>Aspetti complessi dell'accessibilità
+
+Le sezioni seguenti descrivono aspetti complessi dell'impostazione dei valori di accessibilità su determinati controlli.
+
+### <a name="navigationpage"></a>NavigationPage
+
+In Android, per impostare il testo dello schermo che viene letto per la freccia Indietro nella barra delle azioni in un elemento [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), impostare le proprietà `AutomationProperties.Name` e `AutomationProperties.HelpText` su [`Page`](xref:Xamarin.Forms.Page). Tenere tuttavia presente che questo non ha nessun effetto sui pulsanti Indietro del sistema operativo.
+
+### <a name="masterdetailpage"></a>MasterDetailPage
+
+In iOS e nella piattaforma UWP (Universal Windows Platform), per impostare il testo letto dalle utilità per la lettura dello schermo per l'interruttore in un elemento [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), impostare le proprietà `AutomationProperties.Name` e `AutomationProperties.HelpText` su `MasterDetailPage`, oppure sulla proprietà `Icon` della pagina `Master`.
+
+In Android, per impostare il testo che le utilità per la lettura dello schermo leggono per l'interruttore in un elemento [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), aggiungere risorse stringa al progetto Android:
+
+```xml
+<resources>
+        <string name="app_name">Xamarin Forms Control Gallery</string>
+        <string name="btnMDPAutomationID_open">Open Side Menu message</string>
+        <string name="btnMDPAutomationID_close">Close Side Menu message</string>
+</resources>
+```
+
+Impostare quindi la proprietà `AutomationId` della proprietà `Icon` della pagina `Master` sulla stringa appropriata:
+
+```csharp
+var master = new ContentPage { ... };
+master.Icon.AutomationId = "btnMDPAutomationID";
+```
+
+### <a name="toolbaritem"></a>ToolbarItem
+
+In iOS, Android e nella piattaforma UWP (Universal Windows Platform) le utilità per la lettura dello schermo leggono il valore della proprietà `Text` delle istanze [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem), a condizione che i valori `AutomationProperties.Name` o `AutomationProperties.HelpText` non siano definiti.
+
+In iOS e nella piattaforma UWP il valore della proprietà `AutomationProperties.Name` sostituisce il valore della proprietà `Text` che viene letto dall'utilità per la lettura dello schermo.
+
+In Android i valori delle proprietà `AutomationProperties.Name` e/o `AutomationProperties.HelpText` sostituiranno completamente il valore della proprietà `Text` che è visibile e viene letto dall'utilità per la lettura dello schermo. Si noti che questa è una limitazione per le API inferiori alla 26.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

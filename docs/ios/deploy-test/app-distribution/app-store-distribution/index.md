@@ -7,19 +7,20 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: de3af76b8479562ba048c5b62167df0f2b2a51f9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 14cf2910767e9c205e5ddc8f580020505f54ef46
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115133"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832028"
 ---
 # <a name="app-store-distribution"></a>Distribuzione tramite l'App Store
 
 Dopo che un'app Xamarin.iOS è stata sviluppata, il passaggio successivo del ciclo di vita dello sviluppo software è la distribuzione dell'app agli utenti tramite l'App Store iTunes. Questa è la modalità di distribuzione più comune per le applicazioni. Pubblicando un'applicazione nell'App Store di Apple, è possibile renderla disponibile per gli utenti di tutto il mondo.
 
 > [!IMPORTANT]
-> Apple [ha indicato](https://developer.apple.com/news/?id=05072018a) che a partire da luglio 2018, tutte le app e gli aggiornamenti inviati all'App Store devono essere stati compilati con iOS 11 SDK e devono [supportare il display di iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+> Apple [ha indicato](https://developer.apple.com/ios/submit/) che a partire da marzo 2019 tutte le app e gli aggiornamenti inviati all'App Store devono essere stati compilati con iOS 12.1 SDK o versioni successive, disponibili in Xcode 10.1 o versioni successive.
+> Le app devono anche supportare iPhone Xs e le dimensioni dello schermo 12,9" di iPad Pro.
 
 Per distribuire un'applicazione, come per sviluppare un'applicazione, è necessario effettuare il provisioning dell'applicazione con il *profilo di provisioning* appropriato. I profili di provisioning sono file che contengono le informazioni sulla firma del codice, oltre all'identità dell'applicazione e al meccanismo di distribuzione previsto. Contengono anche informazioni sui dispositivi in cui l'app può essere distribuita per la distribuzione senza App Store.
 
@@ -63,7 +64,7 @@ Indipendentemente da come si prevede di rilasciare un'applicazione Xamarin.iOS, 
 
 In alternativa, è possibile richiedere un certificato tramite la finestra di dialogo Preferences (Preferenze) in Xcode. A tale scopo, seguire questa procedura:
 
-1.   Selezionare il team e fare clic su **Manage Certificates…** (Gestisci certificati): [![](images/selectteam.png "Selezionare il team e visualizzare i dettagli")](images/selectteam.png#lightbox)
+1.   Selezionare il team e fare clic su **Manage Certificates…** (Gestisci certificati): [![](images/selectteam.png "Selezionare il team e View Details (Visualizza dettagli)")](images/selectteam.png#lightbox)
 
 2.   Fare quindi clic sul pulsante **Create** (Crea) accanto a **iOS Distribution Certificate** (Certificato di distribuzione iOS): [![](images/selectcert.png "Creare un certificato di distribuzione iOS")](images/selectcert.png#lightbox)
 

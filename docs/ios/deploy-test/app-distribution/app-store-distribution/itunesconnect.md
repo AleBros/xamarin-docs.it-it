@@ -7,17 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 97b3e5323329d2df024e05f1829b12b239b37299
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 52cd8a15f1b5b232deef62a8e87910b092aad94c
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103049"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831950"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configurazione di un'app in iTunes Connect
 
 > [!IMPORTANT]
-> Apple [ha indicato](https://developer.apple.com/news/?id=05072018a) che a partire da luglio 2018, tutte le app e gli aggiornamenti inviati all'App Store devono essere stati compilati con iOS 11 SDK e devono [supportare il display di iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+> Apple [ha indicato](https://developer.apple.com/ios/submit/) che a partire da marzo 2019 tutte le app e gli aggiornamenti inviati all'App Store devono essere stati compilati con iOS 12.1 SDK o versioni successive, disponibili in Xcode 10.1 o versioni successive.
+> Le app devono anche supportare iPhone Xs e le dimensioni dello schermo 12,9" di iPad Pro.
 
 iTunes Connect comprende una serie di strumenti basati sul Web, con i quali, tra le altre cose, è possibile gestire le applicazioni iOS nell'App Store. È necessario che l'applicazione Xamarin.iOS sia correttamente impostata e configurata in iTunes Connect prima di poter inviare l'app ad Apple per la revisione e, infine, essere rilasciata come app gratuita o in vendita nell'App Store.
 
@@ -188,7 +189,7 @@ Eseguire le operazioni seguenti [iTunes Connect](https://itunesconnect.apple.com
 6. Fare clic sul pulsante **Save** (Salva) nella parte superiore dello schermo per salvare le modifiche.
 
 > [!IMPORTANT]
-> Nota: Apple rifiuterà l'invio se nome, descrizione, novità, parole chiave e URL non corrispondono all'effettiva funzionalità dell'applicazione.
+> Nota: Apple rifiuterà l'invio se nome, descrizione, novità, parole chiave o URL non corrispondono all'effettiva funzionalità dell'applicazione.
 
 <a name="general" />
 
@@ -208,7 +209,7 @@ Per la progettazione dell'icona di un'applicazione, attenersi alle linee guida s
 - Creare un'icona appropriata per l'applicazione.
 - Creare un'icona semplice che sia in linea con la progettazione dell'applicazione.
 - Non usare parole all'interno dell'icona.
-- Pensare a livello globale: un'unica icona dell'app in tutti i territori dello Store.
+- Considerare un pubblico globale: un'unica icona dell'app viene usata in tutti i territori dello Store.
 
 Per un'icona dell'app che sarà visualizzata nell'App Store, è necessaria un'immagine di 1024 x 1024 pixel.
 
@@ -359,7 +360,7 @@ Questo articolo descrive come usare iTunes Connect per preparare un'applicazione
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Uso delle immagini](~/ios/app-fundamentals/images-icons/index.md)
-- [iOS App Development Workflow Guide: Distributing Applications](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html) (Guida al flusso di lavoro di sviluppo di app iOS: distribuzione delle applicazioni)
+- [iOS App Development Workflow Guide: Distributing Applications](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html) (Guida al flusso di lavoro di sviluppo di iOS: distribuzione di applicazioni)
 - [App Store Submission Tips](https://developer.apple.com/appstore/resources/submission/tips.html) (Suggerimenti per l'invio nell'App Store)
 - [App Store Review Guidelines](https://developer.apple.com/appstore/resources/approval/guidelines.html) (Linee guida sulle recensioni nell'App Store)
 - [iTunes Connect Developer Guide](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/About.html#//apple_ref/doc/uid/TP40011225-CH1-SW1) (Guida per sviluppatori di iTunes Connect)
