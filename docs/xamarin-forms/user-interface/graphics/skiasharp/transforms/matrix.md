@@ -7,12 +7,12 @@ ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/12/2017
-ms.openlocfilehash: dd38d91a808bed715c92c0fc7d98d6786fc43f67
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 192f0745874b54989ab9070014dae2a5e9e98110
+ms.sourcegitcommit: 605f7c480c3f7b5dd364fdb1bd4d983de8f7ed25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054648"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56213777"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>Trasformazioni con matrice in SkiaSharp
 
@@ -64,11 +64,11 @@ Questa matrice dal-1-3 viene quindi moltiplicata per la matrice di trasformazion
 
 I punti convertiti utilizzando moltiplicazione di matrici standard, sono i seguenti:
 
-x' = x
+`x' = x`
 
-y' = y
+`y' = y`
 
-z' = 1
+`z' = 1`
 
 Che è la trasformazione predefinito.
 
@@ -90,9 +90,9 @@ La moltiplicazione viene ora come indicato di seguito:
 
 Di seguito sono le formule di trasformazione:
 
-x' = x + tx
+`x' = x + tx`
 
-y' = y + ty
+`y' = y + ty`
 
 Fattori di scalabilità hanno un valore predefinito pari a 1. Quando si chiama il `Scale` su un nuovo metodo `SKCanvas` dell'oggetto, matrice di trasformazione risultante contiene il `sx` e `sy` argomenti nelle celle diagonale:
 
@@ -104,9 +104,9 @@ Fattori di scalabilità hanno un valore predefinito pari a 1. Quando si chiama i
 
 Le formule di trasformazione sono i seguenti:
 
-x' = sx · x
+`x' = sx · x`
 
-y' = · sy y
+`y' = sy · y`
 
 Matrice di trasformazione dopo la chiamata `Skew` contiene i due argomenti nelle celle della matrice accanto ai fattori di scala:
 
@@ -118,9 +118,9 @@ Matrice di trasformazione dopo la chiamata `Skew` contiene i due argomenti nelle
 
 Le formule di trasformazione sono:
 
-x' = x + xSkew · y
+`x' = x + xSkew · y`
 
-y' = · ySkew x + y
+`y' = ySkew · x + y`
 
 Per una chiamata a `RotateDegrees` o `RotateRadians` per un angolo di α, la matrice di trasformazione è come segue:
 
@@ -132,9 +132,9 @@ Per una chiamata a `RotateDegrees` o `RotateRadians` per un angolo di α, la mat
 
 Di seguito sono le formule di trasformazione:
 
-x' = cos(α) · x - sin(α) · y
+`x' = cos(α) · x - sin(α) · y`
 
-y' = · sin(α) x - cos(α) · y
+`y' = sin(α) · x - cos(α) · y`
 
 Una volta α 0 gradi, è la matrice di identità. Una volta α 180 gradi, la matrice di trasformazione è come indicato di seguito:
 
@@ -228,11 +228,11 @@ Il `Persp0`, `Persp1`, e `Persp2` le celle sono descritti nell'articolo [ **tras
               │ TransX  TransY  1 │
 </pre>
 
-x' = · ScaleX x + · SkewX y + TransX
+`x' = ScaleX · x + SkewX · y + TransX`
 
-y' = · SkewX x + · ScaleY y + TransY
+`y' = SkewX · x + ScaleY · y + TransY`
 
-z' = 1
+`z' = 1`
 
 Si tratta di trasformazione affine bidimensionale completata. La trasformazione affine mantiene linee parallele, il che significa che un rettangolo mai viene trasformato in un valore diverso da un parallelogramma.
 
@@ -259,7 +259,7 @@ SKMatrix.Concat(ref R, ref A, ref B);
 
 Che eseguono la moltiplicazione seguente:
 
-R = B × A
+`R = B × A`
 
 Gli altri metodi hanno solo due parametri. Il primo parametro è modificato e al ritorno dalla chiamata al metodo, contiene il prodotto di due matrici. I due `PostConcat` metodi vengono chiamati simile al seguente:
 
@@ -271,7 +271,7 @@ SKMatrix.PostConcat(ref A, ref B);
 
 Queste chiamate di eseguono l'operazione seguente:
 
-A = A × B
+`A = A × B`
 
 I due `PreConcat` metodi sono simili:
 
@@ -283,7 +283,7 @@ SKMatrix.PreConcat(ref A, ref B);
 
 Queste chiamate di eseguono l'operazione seguente:
 
-A = B × A
+`A = B × A`
 
 Le versioni di questi metodi con tutti i `ref` gli argomenti sono leggermente più efficienti chiamare le implementazioni sottostanti, ma potrebbe essere poco chiaro a chiunque la lettura del codice e supponendo che qualsiasi operazione in un `ref` sta modificando l'argomento il metodo. Inoltre, è spesso utile passare un argomento che è il risultato di uno del `Make` metodi, ad esempio:
 
@@ -361,7 +361,7 @@ SKMatrix.PostConcat(ref A, C);
 
 Si tratta di una serie di moltiplicazioni successivi, in modo che il risultato è il seguente:
 
-A × B × C
+`A × B × C`
 
 Facilitano la comprensione del funzionamento di ogni trasformazione moltiplicazioni consecutivi. Trasformazione di ridimensionamento aumenta la dimensione delle coordinate di percorso di un fattore pari a 3, in modo da variare le coordinate da –300 su 300. Trasformazione di rotazione consente di ruotare la stella intorno relativa origine. La trasformazione di traslazione passa quindi il pulsante destro del mouse 300 pixel e verso il basso, in modo che tutte le coordinate diventare positive.
 
