@@ -7,12 +7,12 @@ ms.assetid: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/28/2018
-ms.openlocfilehash: 7edb504a228612d7f1f1fee10a50a467fbb5fc6c
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 71c0495520a5dd596be2e9cafec6b63e316fb627
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057100"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240318"
 ---
 # <a name="skiasharp-color-filters"></a>Filtri di colore in SkiaSharp
 
@@ -68,13 +68,13 @@ Matrice 4 × 5 viene moltiplicata per la matrice di 5 × 1 e il prodotto è una 
 
 Di seguito sono le formule separate per R', G', 'B e A':
 
-R' = M11· R + M12· G + M13· B + M14· OGGETTO + M15 
+`R' = M11·R + M12·G + M13·B + M14·A + M15` 
 
-G' = M21· R + M22· G + M23· B + M24· OGGETTO + M25 
+`G' = M21·R + M22·G + M23·B + M24·A + M25` 
 
-'B = M31· R + M32· G + M33· B + M34· OGGETTO + M35 
+`B' = M31·R + M32·G + M33·B + M34·A + M35` 
 
-OGGETTO ' = M41· R + M42· G + M43· B + M44· OGGETTO + M45 
+`A' = M41·R + M42·G + M43·B + M44·A + M45` 
 
 La maggior parte della matrice è costituita da moltiplicazione fattori che sono in genere compreso nell'intervallo compreso tra 0 e 2. Tuttavia, l'ultima colonna (M15 tramite M45) contiene valori che vengono aggiunti nelle formule. Questi valori in genere compresa tra 0 e 255. I risultati sono compresi tra i valori 0 e 255.
 
@@ -89,13 +89,13 @@ Matrice di identità è:
 
 Ciò non comporta alcuna modifica ai colori. Le formule di trasformazione sono:
 
-R' = R 
+`R' = R` 
 
-G' = G
+`G' = G`
 
-'B = B
+`B' = B`
 
-OGGETTO ' = OGGETTO
+`A' = A`
 
 La cella M44 è molto importante perché mantiene opacità. È in genere il caso che M41 M42 e M43 sono tutti pari a zero perché non è opportuno opacità deve essere basato sui valori rossi, verdi e blu. Tuttavia, se M44 è zero, l'oggetto ' sarà zero e non sarà visibile.
 
@@ -232,13 +232,13 @@ public static SKColorFilter CreateTable (byte[] table);
 public static SKColorFilter CreateTable (byte[] tableA, byte[] tableR, byte[] tableG, byte[] tableB);
 ```
 
-Le matrici sempre contengono le voci di 256. Nel `CreateTable` metodo con una tabella, la stessa tabella viene utilizzato per i componenti rossi, verdi e blu. Si tratta di una tabella di ricerca semplice: se il colore di origine (R, G, B) e il colore di destinazione è (R', 'B, G'), quindi i componenti di destinazione vengono ottenuti dall'indicizzazione `table` con i componenti di origine:
+Le matrici sempre contengono le voci di 256. Nel `CreateTable` metodo con una tabella, la stessa tabella viene utilizzato per i componenti rossi, verdi e blu. È una tabella di ricerca semplice: Se il colore di origine (R, G, B) e il colore di destinazione è (R', 'B, G'), quindi i componenti di destinazione vengono ottenuti dall'indicizzazione `table` con i componenti di origine:
 
-R' = la tabella [R]
+`R' = table[R]`
 
-G' = la tabella [G]
+`G' = table[G]`
 
-'B = tabella [B]
+`B' = table[B]`
 
 Il secondo metodo, ognuno dei quattro componenti di colore può avere una tabella separata o le tabelle dei colori stesso potrebbero essere condivisa tra due o più componenti.
 

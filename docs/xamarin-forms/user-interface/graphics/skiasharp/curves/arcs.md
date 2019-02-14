@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: 020afef6b2eb3743fd17118b2922bac4d4c32239
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: cfa96273b6c23d755925b08c9daec22c94627be7
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233991"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240435"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Tre modi per disegnare un arco
 
@@ -107,9 +107,9 @@ Come può notare, i valori negativi può assumere entrambi l'angolo iniziale e a
 
 Questo approccio per la generazione di un arco è modo algoritmico la più semplice ed è facile derivare le equazioni parametriche che descrivono l'arco. Conoscendo le dimensioni e posizione dei puntini di sospensione e gli angoli di avvio e durante lo sweep, i punti iniziale e finale dell'arco può essere calcolati usando trigonometria semplice:
 
-x = oval. MidX + (oval. Larghezza / 2) * cos(angle)
+`x = oval.MidX + (oval.Width / 2) * cos(angle)`
 
-y = oval. MidY + (oval. Altezza / 2) * sin(angle)
+`y = oval.MidY + (oval.Height / 2) * sin(angle)`
 
 Il `angle` valore è `startAngle` o `startAngle + sweepAngle`.
 
@@ -606,9 +606,9 @@ Il raggio del cerchio è 100 unità e l'ipotenusa del triangolo è 150 unità, i
 
 Le coordinate del punto tangente possono quindi essere calcolate usando queste informazioni:
 
-x = 112·cos(41.8) = 83
+`x = 112·cos(41.8) = 83`
 
-y = 112·sin(41.8) = 75
+`y = 112·sin(41.8) = 75`
 
 I quattro punti tangenti sono tutto ciò che è necessario disegnare un segno di un numero infinito centrato sul punto (0, 0) con raggi cerchio pari a 100:
 

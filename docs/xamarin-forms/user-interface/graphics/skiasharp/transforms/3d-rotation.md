@@ -7,12 +7,12 @@ ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: a4f69287a6f97f3181d88a2d93d308df2676476a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7ac9ec458f16357ef50e23c459a9b0e1f79bdd97
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052689"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240370"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>Rotazioni 3D in SkiaSharp
 
@@ -63,25 +63,25 @@ In un sistema di grafica 3D, un punto 3D (x, y, z) viene convertito in una matri
 
 Analogo a 2D Trasforma che si verificano in tre dimensioni, trasformazioni 3D si presuppone che si verificano in quattro dimensioni. La quarta dimensione è detta W, e si presuppone che lo spazio 3D esiste nello spazio di 4D in coordinate W sono uguali a 1. Le formule di trasformazione sono i seguenti:
 
-x' = M11·x + M21·y + M31·z + M41
+`x' = M11·x + M21·y + M31·z + M41`
 
-y' = M12·x M22·y M32·z + M42
+`y' = M12·x + M22·y + M32·z + M42`
 
-z' = M13·x + M23·y + M33·z + M43
+`z' = M13·x + M23·y + M33·z + M43`
 
-w' = M14·x + M24·y + M34·z + M44
+`w' = M14·x + M24·y + M34·z + M44`
 
 È ovvio dalle formule di trasformazione che le celle `M11`, `M22`, `M33` sono fattori di scala nelle direzioni X, Y e Z, e `M41`, `M42`, e `M43` sono fattori di traslazione X, Y e Z direzioni.
 
 Per convertire tali coordinate allo spazio 3D dove W uguale a 1, x', y', e z 'le coordinate sono tutti diviso w':
 
-x" = x' / w'
+`x" = x' / w'`
 
-'y = y' / w'
+`y" = y' / w'`
 
-z" = z' / w'
+`z" = z' / w'`
 
-w" = w' / w' = 1
+`w" = w' / w' = 1`
 
 La divisione per w' fornisce un punto di vista nello spazio 3D. Se l ' è uguale a 1, quindi si verifica alcuna prospettiva.
 
@@ -140,7 +140,7 @@ Il motivo per il nome dell'argomento `depth` sarà evidente a breve. Questo codi
 
 Le formule di trasformazione comportare il calcolo seguente di w':
 
-w' = – z / profondità + 1
+`w' = –z / depth + 1`
 
 Ciò serve a ridurre le coordinate X e Y, quando i valori di Z sono minore di zero (concettualmente dietro al piano XY) e per aumentare le coordinate X e Y per i valori positivi di Z. Quando la coordinata Z è uguale a `depth`, quindi l ' è pari a zero e le coordinate diventano infinite. I sistemi di grafica tridimensionale sono basati su una metafora della fotocamera e il `depth` valore in questo campo rappresenta la distanza della fotocamera rispetto all'origine del sistema di coordinate. Se un oggetto grafico è incluso un Z coordinare vale a dire `depth` unità dall'origine, a livello concettuale tocca l'obiettivo della fotocamera e diventa elevato all'infinito.
 
@@ -173,9 +173,9 @@ w' = M14·x M24·y + M44
 
 Inoltre, il valore z' coordinata è irrilevante qui anche. Quando un oggetto 3D viene visualizzato in un sistema di grafica 2D, ignorando i valori delle coordinate Z è compresso in un oggetto bidimensionale. Le formule di trasformazione sono semplicemente questi due:
 
-x" = x' / w'
+`x" = x' / w'`
 
-'y = y' / w'
+`y" = y' / w'`
 
 Ciò significa che la terza riga *e* terza colonna della matrice 4 per 4 può essere ignorata.
 
@@ -208,17 +208,17 @@ A questo punto può essere utilizzato per trasformare un punto 2D:
 
 Le formule di trasformazione sono:
 
-x' = cos(α)·x
+`x' = cos(α)·x`
 
-y' = y
+`y' = y`
 
-z' = (sin (α) / profondità) ·x + 1
+`z' = (sin(α)/depth)·x + 1`
 
 A questo punto tutto dividere z':
 
-"x = cos ·x (α) / ((sin (α) / profondità) ·x + 1)
+`x" = cos(α)·x / ((sin(α)/depth)·x + 1)`
 
-"y = y / ((sin (α) / profondità) ·x + 1)
+`y" = y / ((sin(α)/depth)·x + 1)`
 
 Quando gli oggetti 2D vengono ruotati con un angolo positivo intorno all'asse Y, quindi positivo valori X spariscono sullo sfondo mentre negativo X valori provengono in primo piano. I valori X sembrano di avvicinarsi all'asse Y (ovvero in base al valore del coseno) come coordinate più lontano dall'asse Y diventa più piccoli o ingrandita man mano che si spostano più lontano dal visualizzatore o più vicino al visualizzatore.
 

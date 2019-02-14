@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: c6328135e0310c7b10b89bf2e32ce62869b15cfb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e7327deead917f55d1e7ac8af5302b6dccf6fead
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059986"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240357"
 ---
 # <a name="polylines-and-parametric-equations"></a>Polilinee ed equazioni parametriche
 
@@ -26,21 +26,21 @@ Nel [ **SkiaSharp curve e tracciati** ](../curves/index.md) sezione di questa Gu
 
 In genere è preferibile definire una curva in termini di una coppia di equazioni parametriche. Queste sono le equazioni per X e Y coordinate che dipendono da una terza variabile, talvolta denominata `t` per volta. Ad esempio, di definire un cerchio con raggio pari a 1 centrato al punto (0, 0) per le equazioni parametriche seguenti *t* compreso tra 0 e 1:
 
-x = cos(2πt)
+`x = cos(2πt)`
 
-y = sin(2πt)
+`y = sin(2πt)`
 
  Se si desidera un raggio di dimensioni superiori a 1, è possibile moltiplicare i seno e il coseno di valori per tale radius semplicemente e se è necessario passare al centro in un'altra posizione, aggiungere tali valori:
 
-x = Centrox + radius·cos(2πt)
+`x = xCenter + radius·cos(2πt)`
 
-y = Centroy + radius·sin(2πt)
+`y = yCenter + radius·sin(2πt)`
 
 Per un'ellisse con parallelo di assi orizzontale e verticale, sono coinvolti due raggi:
 
-x = Centrox + xRadius·cos(2πt)
+`x = xCenter + xRadius·cos(2πt)`
 
-y = Centroy + yRadius·sin(2πt)
+`y = yCenter + yRadius·sin(2πt)`
 
 È quindi possibile inserire il codice equivalente di SkiaSharp in un ciclo che calcola i vari punti e aggiunge quelle per un percorso. Il codice di SkiaSharp seguente crea un `SKPath` oggetto per un'ellisse che riempie l'area di visualizzazione. Il ciclo scorre 360 gradi direttamente. Il centro è metà della larghezza e altezza dell'area di visualizzazione, e quindi i due raggi:
 

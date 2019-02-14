@@ -7,12 +7,12 @@ ms.assetid: 66D1A537-A247-484E-B5B9-FBCB7838FBE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 594e98230d4f4bd8aca27f92f4544f8c59b5f0a2
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8c86782d5b8b8250049d0ae060ca7bd548c5a4ef
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061455"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240409"
 ---
 # <a name="the-separable-blend-modes"></a>I metodi di fusione separabili
 
@@ -127,19 +127,21 @@ Gli screenshot da sinistra a destra mostrano sempre più grandi `Slider` i valor
 
 [![Rendere più chiari e più scura](separable-images/LightenAndDarken.png "rendere più chiari e più scura")](separable-images/LightenAndDarken-Large.png#lightbox)
 
-Questo programma illustra il modo normale che vengono usati i metodi di fusione separabili: la destinazione è un'immagine di qualche tipo, molto spesso una bitmap. L'origine è un rettangolo visualizzato utilizzando un `SKPaint` dell'oggetto con relativo `BlendMode` proprietà è impostata su una modalità blend separabili. Il rettangolo può essere un colore a tinta unita (come succede qui) o una sfumatura. La trasparenza _non_ generalmente usati con le modalità di blend separabili.
+Questo programma illustra il modo consueto in cui vengono usati i metodi di fusione separabili: La destinazione è un'immagine di qualche tipo, molto spesso una bitmap. L'origine è un rettangolo visualizzato utilizzando un `SKPaint` dell'oggetto con relativo `BlendMode` proprietà è impostata su una modalità blend separabili. Il rettangolo può essere un colore a tinta unita (come succede qui) o una sfumatura. La trasparenza _non_ generalmente usati con le modalità di blend separabili.
 
 Durante l'esperimento con questo programma, si scoprirà che queste modalità due blend non rendere più chiari e quale scurire l'immagine in modo uniforme. Al contrario, il `Slider` sembra impostare una soglia di qualche tipo. Ad esempio, quando si aumenta il `Slider` per il `Lighten` modalità, le aree più scure dell'immagine di accedervi light prima mentre le aree più chiare rimangono invariati.
 
 Per il `Lighten` modalità, se il pixel di destinazione è il valore di colore RGB (ripristino di emergenza, gruppo di distribuzione, Db) e il pixel di origine corrisponde al colore (Sr, gruppo di protezione, Service Bus), quindi l'output è (o Og, Ob) calcolato come segue:
 
- O = max (ripristino di emergenza, Sr) Og = max (gruppo di distribuzione, Sg) Ob = max (Db, Service Bus)
+ `Or = max(Dr, Sr)` `Og = max(Dg, Sg)`
+ `Ob = max(Db, Sb)`
 
 Per il rosso, verde e blu separatamente, il risultato è il valore maggiore di origine e destinazione. Questa operazione produce l'effetto di con l'opzione prima di tutto le aree note della destinazione.
 
 Il `Darken` modalità è simile ad eccezione del fatto che il risultato è il valore inferiore tra l'origine e destinazione:
 
- O = min (ripristino di emergenza, Sr) Og Ob min (gruppo di distribuzione, Sg) = = min (Db, Service Bus)
+ `Or = min(Dr, Sr)` `Og = min(Dg, Sg)`
+ `Ob = min(Db, Sb)`
 
 I componenti rossi, verdi e blu sono ognuno gestite separatamente, motivo per cui queste modalità di blend sono detti il _separabili_ le modalità di blend. Per questo motivo, le abbreviazioni **Dc** e **Sc** può essere utilizzato per i colori di origine e destinazione e si noti che i calcoli vengono applicate separatamente a ogni componente rossi, verde e blu.
 
@@ -147,9 +149,9 @@ La tabella seguente illustra tutte le modalità di blend separabili con una brev
 
 | Modalità di blend   | Nessuna modifica | Operazione |
 | ------------ | --------- | --------- |
-| `Plus`       | Nero     | Lo schiarisce mediante l'aggiunta di colori: Sc + controller di dominio |
-| `Modulate`   | Bianco     | Diventa più scura moltiplicando colori: Sc· Controller di dominio | 
-| `Screen`     | Nero     | Si integra con prodotti di integra: Sc + Dc &ndash; Sc· Controller di dominio |
+| `Plus`       | Nero     | Schiarisce mediante l'aggiunta di colori: Sc + Dc |
+| `Modulate`   | Bianco     | Diventa più scura moltiplicando colori: Sc·Dc | 
+| `Screen`     | Nero     | Si integra con prodotti di integra: SC + Dc &ndash; Sc· Controller di dominio |
 | `Overlay`    | Grigio      | Inverso della `HardLight` |
 | `Darken`     | Bianco     | Minimo dei colori: min (Sc, controller di dominio) |
 | `Lighten`    | Nero     | Numero massimo di colori: max (Sc, controller di dominio) |
@@ -157,9 +159,9 @@ La tabella seguente illustra tutte le modalità di blend separabili con una brev
 | `ColorBurn`  | Bianco     | Diventa più scura basata sull'origine di destinazione | 
 | `HardLight`  | Grigio      | Simile all'effetto di spotlight harsh |
 | `SoftLight`  | Grigio      | Simile all'effetto di software spotlight | 
-| `Difference` | Nero     | Sottrae il colore più scuro dal più chiaro: Abs (controller di dominio &ndash; Sc) | 
+| `Difference` | Nero     | Sottrae il colore più scuro dal più chiaro: Abs(Dc &ndash; Sc) | 
 | `Exclusion`  | Nero     | Simile a `Difference` ma inferiore a contrasto elevato |
-| `Multiply`   | Bianco     | Diventa più scura moltiplicando colori: Sc· Controller di dominio |
+| `Multiply`   | Bianco     | Diventa più scura moltiplicando colori: Sc·Dc |
 
 Algoritmi più dettagliati sono reperibili nel W3C [ **la composizione e fusione 1 livello** ](https://www.w3.org/TR/compositing-1/) specifica e il Skia [ **SkBlendMode riferimento** ](https://skia.org/user/api/SkBlendMode_Reference), anche se la notazione in queste due origini non corrisponde. Tenere presente che `Plus` comunemente viene considerato come una modalità di blend-Duff Porter, e `Modulate` non fa parte della specifica W3C.
 
