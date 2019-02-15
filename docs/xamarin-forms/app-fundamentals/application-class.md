@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 9acd1b8f25696267578f5cc269eb1b0c738be571
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: dbee8d3f55edee9c862b4c883b63b55f98972b48
+ms.sourcegitcommit: 0c2745c1593eee3ecb40ab882e854a13ca72bc86
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675094"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078420"
 ---
 # <a name="xamarinforms-app-class"></a>Classe App di Xamarin.Forms
 
@@ -149,7 +149,6 @@ public class App : Xamarin.Forms.Application
 Un'istanza di questa classe viene creata in ogni progetto specifico della piattaforma e passata al metodo `LoadApplication`, che rappresenta la posizione in cui l'elemento `MainPage` viene caricato e visualizzato all'utente.
 Nelle sezioni seguenti viene illustrato il codice per ogni piattaforma. I modelli più recenti di soluzioni Xamarin.Forms contengono già tutto questo codice, preconfigurato per l'app.
 
-
 ### <a name="ios-project"></a>Progetto iOS
 
 La classe `AppDelegate` di iOS eredita da `FormsApplicationDelegate`. Deve:
@@ -196,8 +195,6 @@ public class MainActivity : FormsAppCompatActivity
 
 ### <a name="universal-windows-project-uwp-for-windows-10"></a>Progetto UWP per Windows 10
 
-Per informazioni sul supporto per la piattaforma UWP in Xamarin.Forms, vedere [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md) (Configurare progetti per Windows).
-
 La pagina principale nel progetto UWP deve ereditare da `WindowsPage`:
 
 ```xaml
@@ -222,4 +219,6 @@ public sealed partial class MainPage
  }
 ```
 
-`Forms.Init()` deve essere denominato **App.xaml.cs** intorno alla riga 63.
+Si noti che `Forms.Init()` deve essere chiamato da **App.xaml.cs** nel progetto UWP.
+
+Per altre informazioni, vedere [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md) (Impostazione di progetti Windows), che include i passaggi per aggiungere un progetto UWP a una soluzione Xamarin.Forms esistente non destinata a UWP.
