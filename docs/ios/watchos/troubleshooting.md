@@ -8,16 +8,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 7bfb0cad8bbc025bc5dba39abe3699ae77ee83ba
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 70ef341c066c77e214761d75c173faef00266e4c
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526481"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321155"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS risoluzione dei problemi
 
-Questa pagina contiene informazioni aggiuntive e soluzioni alternative per funzionalità ancora in fase di sviluppo. Alcune di queste soluzioni alternative valide solo per i rilasci di anteprima.
+Questa pagina contiene informazioni aggiuntive e soluzioni alternative per problemi che possono verificarsi.
 
 - [Problemi noti](#knownissues)
 
@@ -45,7 +45,7 @@ Questa pagina contiene informazioni aggiuntive e soluzioni alternative per funzi
 - iOS Designer non mostra le frecce di punto di ingresso per i controller di interfaccia di riepilogo o una notifica.
 
 - Non è possibile aggiungere due `WKNotificationControllers` di uno storyboard.
-    Soluzione alternativa: I `notificationCategory` elemento nello storyboard XML viene sempre inserito con lo stesso `id`. Per risolvere questo problema è possibile aggiungere i controller di notifica di due (o più), aprire il file storyboard in un editor di testo e quindi modificare manualmente il `id` elemento sia univoco.
+    Soluzione alternativa: Il `notificationCategory` elemento nello storyboard XML viene sempre inserito con lo stesso `id`. Per risolvere questo problema è possibile aggiungere i controller di notifica di due (o più), aprire il file storyboard in un editor di testo e quindi modificare manualmente il `id` elemento sia univoco.
 
     [![](troubleshooting-images/duplicate-id-sml.png "Aprire storyboard di file in un editor di testo e modificare manualmente l'elemento id per essere univoco")](troubleshooting-images/duplicate-id.png#lightbox)
 
@@ -227,7 +227,7 @@ Ecco un esempio completo (eseguito come una singola riga nel terminale):
 
 Il parametro è necessario aggiornare in modo da riflettere l'app è `launchsimwatch`:
 
-### <a name="--launchsimwatch"></a>-launchsimwatch
+### <a name="--launchsimwatch"></a>--launchsimwatch
 
 Il percorso completo per il bundle dell'app principale *per l'app iOS che contiene l'app e l'estensione*.
 
@@ -268,7 +268,7 @@ Esempio:
  --sdkroot /Applications/Xcode.app/Contents/Developer/
 ```
 
-### <a name="--device"></a>-dispositivo
+### <a name="--device"></a>--device
 
 Il dispositivo di simulatore per l'esecuzione. Questo valore può essere specificato in due modi, utilizzando il valore udid del dispositivo specifico, o una combinazione del tipo di runtime e dispositivo.
 

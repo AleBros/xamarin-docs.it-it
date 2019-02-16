@@ -1,27 +1,24 @@
 ---
 title: Introduzione a watchOS 5
-description: Questo documento fornisce una descrizione dettagliata di alcune API watchOS 5 per l'anteprima di Xamarin, quale versione fornisce le associazioni c#.
+description: Questo documento fornisce una descrizione dettagliata di alcuni watchOS 5 API per Xamarin.
 ms.prod: xamarin
 ms.assetid: 775BE4E4-F408-4620-AED9-2B48C7B27F38
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 6fbbd75c0daf960fd9fd01670bdea35126abfabe
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 5df751f683c530ee9f7ec58d9d6393d9f089314d
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615509"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321116"
 ---
 # <a name="introduction-to-watchos-5"></a>Introduzione a watchOS 5
 
 Questo documento fornisce una descrizione dettagliata di alcuni watchOS 5 API.
 
-Per iniziare a creare App watchOS 5 con Xamarin, dare un'occhiata:
-
-- Il [Guida introduttiva](~/ios/platform/introduction-to-ios12/get-started.md)
-- L'anteprima di Xamarin [post di blog di rilascio](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
+Per iniziare a creare App watchOS 5 con Xamarin, vedere il [Guida introduttiva](~/ios/platform/introduction-to-ios12/get-started.md)
 
 ## <a name="workout-improvements"></a>Miglioramenti per gli allenamenti
 
