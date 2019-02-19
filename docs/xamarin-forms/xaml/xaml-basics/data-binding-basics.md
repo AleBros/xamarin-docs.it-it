@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 65316bde1d1c709028eae39c19e5dc318821ff70
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.openlocfilehash: 4a24c8dbb9ab4e23afa03de4ae2dbc55ddfb5fa4
+ms.sourcegitcommit: e000cc0765857c1d7f49538df9e62e9d3aa60775
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746882"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334566"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Nozioni fondamentali sull'associazione dati
 
@@ -114,6 +114,7 @@ La soluzione a questo e altri problemi prevede la `Mode` proprietà, che è impo
 - `OneWay` ovvero i valori vengono trasferiti dall'origine alla destinazione
 - `OneWayToSource` ovvero i valori vengono trasferiti dalla destinazione all'origine
 - `TwoWay` ovvero i valori vengono trasferiti in entrambe le direzioni tra origine e destinazione
+- `OneTime` ovvero dati vengono inviati dall'origine alla destinazione, ma solo quando il `BindingContext` modifiche
 
 Il programma seguente viene illustrato un caso frequente il `OneWayToSource` e `TwoWay` modalità di associazione. Quattro `Slider` viste sono destinate al controllo il `Scale`, `Rotate`, `RotateX`, e `RotateY` le proprietà di un `Label`. Inizialmente, può sembrare come se questi quattro proprietà del `Label` deve essere destinazioni di associazione dati, perché ognuno viene impostata un `Slider`. Tuttavia, il `BindingContext` di `Label` può essere solo un oggetto e non esistono quattro diversi dispositivi di scorrimento.
 
