@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: fa0ad282fedecec8f5ca4e94e7119c36ef182261
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 846a8fd45b8e39fb11270374af47a5b6cb83fa01
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116017"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666935"
 ---
 # <a name="external-storage"></a>Archiviazione esterna
 
@@ -53,16 +53,16 @@ Il parametro per `GetExternalFilesDir()` è una stringa che specifica un' _direc
 
 | `Android.OS.Environment` | Directory |
 |-|-|
-| DirectoryAlarms | **_PRIVATO\_esterne\_archiviazione_  /allarmi** |
-| DirectoryDcim | **_PRIVATO\_ESTERNE\_ARCHIVIAZIONE_/DCIM** |
-| DirectoryDownloads | **_PRIVATO\_esterne\_archiviazione_download** |
-| DirectoryDocuments | **_PRIVATO\_esterne\_archiviazione_  /documenti** |
-| DirectoryMovies | **_PRIVATO\_esterne\_archiviazione_/Movies** |
-| DirectoryMusic | **_PRIVATO\_esterne\_archiviazione_/Music** |
-| DirectoryNotifications | **_PRIVATO\_esterne\_archiviazione_  /notifiche** |
-| DirectoryPodcasts | **_PRIVATO\_esterne\_archiviazione_/Podcasts** |
-| DirectoryRingtones | **_PRIVATO\_esterne\_archiviazione_/Ringtones** |
-| DirectoryPictures | **_PRIVATO\_esterne\_archiviazione_  /immagini** |
+| DirectoryAlarms | **_PRIVATE\_EXTERNAL\_STORAGE_/Alarms** |
+| DirectoryDcim | **_PRIVATE\_EXTERNAL\_STORAGE_/DCIM** |
+| DirectoryDownloads | **_PRIVATE\_EXTERNAL\_STORAGE_/Download** |
+| DirectoryDocuments | **_PRIVATE\_EXTERNAL\_STORAGE_/Documents** |
+| DirectoryMovies | **_PRIVATE\_EXTERNAL\_STORAGE_/Movies** |
+| DirectoryMusic | **_PRIVATE\_EXTERNAL\_STORAGE_/Music** |
+| DirectoryNotifications | **_PRIVATE\_EXTERNAL\_STORAGE_/Notifications** |
+| DirectoryPodcasts | **_PRIVATE\_EXTERNAL\_STORAGE_/Podcasts** |
+| DirectoryRingtones | **_PRIVATE\_EXTERNAL\_STORAGE_/Ringtones** |
+| DirectoryPictures | **_PRIVATE\_EXTERNAL\_STORAGE_/Pictures** |
 
 Per i dispositivi con più partizioni di archiviazione esterna, ogni partizione avrà una directory in cui è destinata a file privati. Il metodo `Android.Content.Context.GetExternalFilesDirs(string type)` restituirà una matrice di `Java.IO.Files`. Ogni oggetto rappresenta una directory specifiche dell'applicazione privata in tutti i dispositivi di archiviazione condiviso ed esterni in cui l'applicazione può inserire i file di sua proprietà.
 
@@ -80,7 +80,7 @@ File pubblici sono i file esistenti nella risorsa di archiviazione esterna che n
 Questo documento si farà riferimento alla directory di archiviazione per i file pubblici nell'archiviazione esterna come _pubbliche\_esterni\_archiviazione_.
 
 
-Android supporta inoltre il concetto di directory applicative nei _pubbliche\_esterni\_archiviazione_. Tali directory sono esattamente le stesse diretories l'applicazione per `_PRIVATE\_EXTERNAL\_STORAGE_` e sono descritte nella tabella nella sezione precedente. Il metodo `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` restituirà un `Java.IO.File` oggetti che corrispondono a una directory pubblico dell'applicazione. Il `directoryType` parametro è un parametro obbligatorio e non può essere `null`.
+Android supporta inoltre il concetto di directory applicative nei _pubbliche\_esterni\_archiviazione_. Tali directory sono esattamente le stesse directory delle applicazioni per `_PRIVATE\_EXTERNAL\_STORAGE_` e sono descritte nella tabella nella sezione precedente. Il metodo `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` restituirà un `Java.IO.File` oggetti che corrispondono a una directory pubblico dell'applicazione. Il `directoryType` parametro è un parametro obbligatorio e non può essere `null`.
 
 Ad esempio, la chiamata `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath` restituirà una stringa che sarà simile a:
 
@@ -181,4 +181,4 @@ System.IO.File.Delete("/storage/emulated/0/Android/data/com.companyname.app/file
 ## <a name="related-links"></a>Collegamenti correlati
 
 * [File locali di xamarin. Android di esempio su **monodroid-samples**](https://github.com/xamarin/monodroid-samples/tree/master/LocalFiles)
-* [Autorizzazioni In xamarin. Android](~/android/app-fundamentals/permissions.md)
+* [Permissions In Xamarin.Android](~/android/app-fundamentals/permissions.md)
