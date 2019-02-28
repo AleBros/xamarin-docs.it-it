@@ -16,9 +16,9 @@ ms.locfileid: "56321129"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>watchOS controlli immagine in Xamarin
 
-watchOS fornisce una [ `WKInterfaceImage` ](xref:WatchKit.WKInterfaceImage) controllo per visualizzare immagini e animazioni semplici. Alcuni controlli possono avere anche un'immagine di sfondo (ad esempio pulsanti, gruppi e i controller di interfaccia).
+watchOS fornisce una [`WKInterfaceImage`](xref:WatchKit.WKInterfaceImage) controllo per visualizzare immagini e animazioni semplici. Alcuni controlli possono avere anche un'immagine di sfondo (ad esempio pulsanti, gruppi e i controller di interfaccia).
 
-![](image-images/image-walkway.png "Immagine che mostra di Apple Watch") ![ ] (image-images/image-animation.png "Apple Watch con animazione semplice")
+![](image-images/image-walkway.png "Immagine che mostra di Apple Watch") ![](image-images/image-animation.png "Apple Watch con animazione semplice")
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 Usare le immagini di catalogo di asset per aggiungere immagini per le app Watch Kit.
