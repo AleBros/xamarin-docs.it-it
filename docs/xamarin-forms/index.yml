@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 00d8e1459501b4643dea12b1d36939534a66833f
-ms.sourcegitcommit: 5405a376fe1b1e08c834eb565aaa5b1849a0fcdc
+ms.openlocfilehash: ccd085c8b1cf824f24d4677ed2e44ebc54b690bd
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55986487"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197173"
 documentType: LandingData
 title: Xamarin.Forms
 metadata:
@@ -35,7 +35,7 @@ sections:
     - image:
         src: https://docs.microsoft.com/media/common/i_setup.svg
       text: Configurazione
-      href: ~/get-started/installation.md
+      href: ~/get-started/requirements.md
     - image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       text: Prima app
@@ -62,18 +62,6 @@ sections:
     style: cards
     className: cardsB
     items:
-    - href: ~/get-started/index.md
-      html: Esercitazioni per imparare velocemente a conoscere e usare Xamarin.Forms. Assicurarsi che tutti gli elementi siano installati correttamente e creare le prime app Xamarin.Forms.
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/get-started/index.md
-      title: Introduzione
-    - href: ~/xamarin-forms/xaml/
-      html: Creare interfacce utente in modo dichiarativo e condividerle tra le piattaforme per dispositivi mobili e desktop.
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-        href: ~/xamarin-forms/xaml/
-      title: XAML
     - href: ~/xamarin-forms/app-fundamentals/
       html: Tutto quello che serve sapere per creare app Xamarin.Forms, come l'utilizzo di file, immagini, database e altri elementi.
       image:
@@ -86,6 +74,12 @@ sections:
         src: ~/media/icons/i_user-interface.svg
         href: ~/xamarin-forms/user-interface/
       title: Interfaccia utente
+    - href: ~/xamarin-forms/xaml/
+      html: Creare interfacce utente in modo dichiarativo e condividerle tra le piattaforme per dispositivi mobili e desktop.
+      image:
+        src: ~/media/icons/i_xaml-forms.svg
+        href: ~/xamarin-forms/xaml/
+      title: XAML
     - href: ~/xamarin-forms/platform/
       html: Utilizzo delle funzionalità della piattaforma Xamarin.Forms, ad esempio renderer personalizzati e altre importanti funzionalità di ogni versione.
       image:
