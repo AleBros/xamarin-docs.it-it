@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 3bfb8a10eab1a8a75a3f2048de1ce219df9bde66
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 854b3fdbd34444cfb052d36287cf5cd47a36a2e0
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057665"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666909"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Pagina master-dettagli di Xamarin.Forms
 
@@ -48,7 +48,7 @@ Il comportamento dell'esperienza di navigazione tra le pagine master e di dettag
 
 - In iOS la pagina di dettaglio *scorre* verso destra mentre la pagina master scorre verso sinistra e la parte sinistra della pagina di dettaglio è ancora visibile.
 - In Android le pagine di dettaglio e master vengono *sovrapposte* le une alle altre.
-- Nella piattaforma UWP le pagine di dettaglio e master vengono *scambiate*.
+- Nella piattaforma UWP, la pagina master scorre da sinistra su parte della pagina di dettaglio, a condizione che la proprietà [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) sia impostata su `Popover`. Per altre informazioni, vedere [Controllo del comportamento di visualizzazione della pagina di dettaglio](#Controlling_the_Detail_Page_Display_Behavior).
 
 Un comportamento simile si osserverà in modalità orizzontale, ad eccezione del fatto che la pagina master in iOS e Android ha una larghezza simile alla pagina master in modalità verticale, quindi sarà visibile una parte maggiore della pagina di dettaglio.
 
@@ -291,7 +291,6 @@ Il valore della proprietà [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPag
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato come usare una classe [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) e come spostarsi tra le pagine di informazioni. `MasterDetailPage` di Xamarin.Forms è una pagina che gestisce due pagine di informazioni correlate: una pagina master che presenta gli elementi e una pagina di dettaglio che presenta i dettagli relativi agli elementi della pagina master.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
