@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: 7696ece64da28f05bb15866214de4a7f1103d06f
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: dddd41f064be5e7840b6b86d86faec8045b476bf
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293019"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197225"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Creare un'applicazione xamarin. Forms pagina singola
 
@@ -38,7 +38,7 @@ La Guida introduttiva illustra come creare un'applicazione xamarin. Forms multip
 - Conoscenza di C#.
 - (facoltativo) Un Mac associato per compilare l'applicazione in iOS.
 
-Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin](~/cross-platform/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2017 a un host di compilazione Mac, vedere [associa a Mac per lo sviluppo di xamarin. IOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin](~/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2017 a un host di compilazione Mac, vedere [associa a Mac per lo sviluppo di xamarin. IOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 ## <a name="get-started-with-visual-studio"></a>Introduzione a Visual Studio
 
@@ -92,7 +92,7 @@ Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin]
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, costituita da un oggetto [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un oggetto [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione in modo da salvare o eliminare un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per altre informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nel [approfondimento di avvio rapido di xamarin. Forms](deepdive.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina nella quale è costituito da un [ `Label` ](xref:Xamarin.Forms.Label) per visualizzare il testo, un' [ `Editor` ](xref:Xamarin.Forms.Editor) per input di testo e due [ `Button` ](xref:Xamarin.Forms.Button) istanze che indirizzano l'applicazione per salvare o eliminare un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per altre informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nel [approfondimento di avvio rapido di xamarin. Forms](deepdive.md).
 
     Salvare le modifiche apportate a **MainPage.xaml** premendo **CTRL+S**, e chiudere il file.
 
@@ -188,7 +188,7 @@ Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin]
 - Xcode (versione più recente).
 - Conoscenza di C#.
 
-Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin](~/cross-platform/get-started/installation/index.md).
+Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin](~/get-started/installation/index.md).
 
 ## <a name="get-started-with-visual-studio-for-mac"></a>Introduzione a Visual Studio per Mac
 
@@ -246,7 +246,7 @@ Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin]
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, costituita da un oggetto [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un oggetto [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione in modo da salvare o eliminare un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per altre informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nel [approfondimento di avvio rapido di xamarin. Forms](deepdive.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina nella quale è costituito da un [ `Label` ](xref:Xamarin.Forms.Label) per visualizzare il testo, un' [ `Editor` ](xref:Xamarin.Forms.Editor) per input di testo e due [ `Button` ](xref:Xamarin.Forms.Button) istanze che indirizzano l'applicazione per salvare o eliminare un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per altre informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nel [approfondimento di avvio rapido di xamarin. Forms](deepdive.md).
 
     Salvare le modifiche apportate a **MainPage.xaml** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
 

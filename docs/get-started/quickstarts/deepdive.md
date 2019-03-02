@@ -9,16 +9,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: aacc63af53d7408b61f01054d49fa2b436588fc7
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 8e466c80468551f8262cfe49556d9527a147de4c
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293043"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197550"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Approfondimento di Guida introduttiva di xamarin. Forms
 
-Nel [Guida introduttiva di xamarin. Forms](~/get-started/index.md), è stata compilata l'applicazione di Lotus Notes. Questo articolo esamina ciò che è stato compilato per comprendere meglio le nozioni di base del funzionamento delle applicazioni Xamarin.Forms.
+Nel [Guida introduttiva di xamarin. Forms](~/get-started/index.yml), è stata compilata l'applicazione di Lotus Notes. Questo articolo esamina ciò che è stato compilato per comprendere meglio le nozioni di base del funzionamento delle applicazioni Xamarin.Forms.
 
 ::: zone pivot="windows"
 
@@ -373,7 +373,7 @@ Per altre informazioni sulla navigazione gerarchica, vedere [Navigazione gerarch
 
 Il data binding viene usato per semplificare il modo in cui un'applicazione Xamarin.Forms visualizza i propri dati e interagisce con essi. Stabilisce una connessione tra l'interfaccia utente e l'applicazione sottostante. La classe [`BindableObject`](xref:Xamarin.Forms.BindableObject) contiene la maggior parte dell'infrastruttura per supportare il data binding.
 
-Il data binding (o associazione di dati) consente di connettere due oggetti, detti oggetti di *origine* e di *destinazione*. L'oggetto di *origine* visualizza i dati. L'oggetto di *destinazione* usa (e spesso visualizza) i dati dall'oggetto di origine. Ad esempio un elemento [`Editor`](xref:Xamarin.Forms.Editor) (oggetto di *destinazione*) associa comunemente la sua proprietà [`Text`](xref:Xamarin.Forms.Editor.Text) a una proprietà `string` pubblica in un oggetto di *origine*. Il diagramma che segue illustra la relazione di associazione:
+Il data binding (o associazione di dati) consente di connettere due oggetti, detti oggetti di *origine* e di *destinazione*. L'oggetto di *origine* visualizza i dati. L'oggetto di *destinazione* usa (e spesso visualizza) i dati dall'oggetto di origine. Ad esempio, un' [ `Editor` ](xref:Xamarin.Forms.Editor) (*destinazione* oggetto) associa comunemente la [ `Text` ](xref:Xamarin.Forms.Editor.Text) proprietà a un pubblico `string` proprietà in un *origine* oggetto. Il diagramma che segue illustra la relazione di associazione:
 
 ![](deepdive-images/data-binding.png "Data Binding")
 

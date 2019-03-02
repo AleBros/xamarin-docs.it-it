@@ -7,12 +7,12 @@ ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 2236faa67367fa2104280f42ee28056613d1901b
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 95defd11a9e568d1089cb2f262cb323045b6c247
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292259"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197264"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Riepilogo del capitolo 2. Anatomia di un'app
 
@@ -206,4 +206,4 @@ Queste due proprietà sono definite solo da `Label`, mentre la `HorizontalAlignm
 - [Capitolo 2 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf)
 - [Esempi di capitolo 2](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
 - [Capitolo 2 F# esempi](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
-- [Introduzione a xamarin. Forms](~/get-started/index.md)
+- [Introduzione a xamarin. Forms](~/get-started/index.yml)
