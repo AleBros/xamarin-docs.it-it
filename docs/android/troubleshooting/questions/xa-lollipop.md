@@ -1,5 +1,5 @@
 ---
-title: Quale versione di xamarin. Android aggiunto il supporto di Lollipop?
+title: In quale versione di Xamarin.Android è stato aggiunto il supporto di Lollipop?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 63B6E10C-098D-4C82-9253-07CA62EA85A5
@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: ffae20f3e62d8f735e4645143f08a94fd04744b1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7e31f9ad46a04b648a6a1f24c075426f7d98a663
+ms.sourcegitcommit: 6655cccf9d3be755773c2f774b5918e0b141bf84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105272"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305607"
 ---
-# <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>Quale versione di xamarin. Android aggiunto il supporto di Lollipop?
+# <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>In quale versione di Xamarin.Android è stato aggiunto il supporto di Lollipop?
 
-**Nota:** questa guida è stato scritto originariamente per l'anteprima L Android.
+**Nota:** Questa guida è stato scritto originariamente per l'anteprima L Android.
 
 -   [Xamarin. Android 4.17](https://developer.xamarin.com/releases/android/xamarin.android_4/xamarin.android_4.17/) ha aggiunto il supporto di Android L anteprima.
 -   [Xamarin. Android 4.20](https://developer.xamarin.com/releases/android/xamarin.android_4/xamarin.android_4.20/) ha aggiunto il supporto di Android Lollipop.
@@ -33,7 +33,7 @@ Il seguente messaggio di errore (o simile) potrebbe essere visualizzato:
 Error 1 Could not find android.jar for API Level 21.
 ```
 
-Questo messaggio indica che la piattaforma Android SDK per API livello 21 non è installata. Installarla in Android SDK Manager (Strumenti > Apri Android SDK Manager...), o modificare il progetto xamarin. Android come destinazione una versione API installata.
+Questo messaggio indica che la piattaforma Android SDK per API livello 21 non è installata. Installarla in Android SDK Manager (**strumenti > Apri Android SDK Manager...** ), o modificare il progetto xamarin. Android come destinazione una versione API installata.
 
 Esistono alcune soluzioni alternative per risolvere questo problema:
 
@@ -46,7 +46,7 @@ Esistono alcune soluzioni alternative per risolvere questo problema:
 3. Effettuare il downgrade temporaneamente nuovamente all'anteprima di Android API livello 21 "L" [1]:
 
     1.  Eliminare il **% LOCALAPPDATA %\\Android\\android-sdk\\piattaforme\\21 di android** 
-    2.  Estrarre [1] in **c:\\gli utenti\\<username>\\AppData\\locale\\Android\\android-sdk\\piattaforme** per creare un **android-L** cartella.
+    2.  Estrarre [1] in **c:\\gli utenti\\&lt;username&gt;\\AppData\\locale\\Android\\android-sdk\\piattaforme**  per creare un' **android-L** cartella.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
