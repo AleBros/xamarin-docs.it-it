@@ -1,30 +1,13 @@
 items:
-- name: Cross-Platform
+- name: Multipiattaforma
   href: index.yml
   items:
-  - name: Introduzione
+  - name: Creazione di app per dispositivi mobili
     href: get-started/index.md
     items:
     - name: Requisiti
       displayName: System requirements
       href: get-started/requirements.md
-    - name: Installazione
-      href: get-started/installation/index.md
-      items:
-      - name: Installazione di Xamarin in Windows
-        href: get-started/installation/windows.md
-        items:
-        - name: Installazione delle anteprime di Xamarin (Windows)
-          href: get-started/installation/windows-preview.md
-      - name: Installazione di Visual Studio per Mac 
-        href: /visualstudio/mac/installation/
-        items:
-        - name: Installazione delle anteprime di Xamarin (Mac)
-          href: /visualstudio/mac/update/
-      - name: Istruzioni di configurazione del firewall di Xamarin
-        href: get-started/installation/firewall.md
-      - name: Disinstallazione di Xamarin
-        href: get-started/installation/uninstalling-xamarin.md
     - name: Introduzione allo sviluppo per dispositivi mobili
       href: get-started/introduction-to-mobile-development.md
     - name: Introduzione al ciclo di vita di sviluppo del software per i dispositivi mobili
@@ -192,9 +175,9 @@ items:
   - name: Esempi
     href: samples/index.yml
   expanded: true
-ms.openlocfilehash: 5eb01503b809979ebbc6598cf1cde985d3431bad
-ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
+ms.openlocfilehash: 083bc3dc1dbd392977b0d4902e37fe0f78513c29
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54841328"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197329"

@@ -1,0 +1,38 @@
+### YamlMime:Tutorial
+title: Esercitazione per ListView di Xamarin.Forms
+metadata:
+  title: Esercitazione per ListView di Xamarin.Forms
+  description: Informazioni su come presentare elenchi di dati usando ListView di Xamarin.Forms.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 06/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 5c0621fe10b02ef29a4b426a441221b00c845830
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198027"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Creare una visualizzazione elenco
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/create.md)]
+- title: Popolare con i dati
+  durationInMinutes: 4
+  content: >
+    [!INCLUDE [](includes/populate-data.md)]
+- title: Rispondere alla selezione di elementi
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/item-selection.md)]
+- title: Personalizzare l'aspetto delle celle
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/customize-cell-appearance.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'
