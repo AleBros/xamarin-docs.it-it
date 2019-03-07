@@ -1,0 +1,112 @@
+### YamlMime:YamlDocument
+ms.openlocfilehash: 8df0acd20f07235608520c09897b6faf3e1eb99e
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57198747"
+documentType: LandingData
+title: Esercitazioni Xamarin.Forms
+metadata:
+  title: Esercitazioni Xamarin.Forms
+  description: Esercitazioni sullo sviluppo di applicazioni Xamarin.Forms con Visual Studio e Visual Studio per Mac.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 8E3D88AE-923E-4B7C-ABAC-058A25A48BBF
+  ms.technology: xamarin-forms
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 02/14/2018
+abstract:
+  description: Questa pagina si collega alle esercitazioni per informazioni sulle nozioni di base per la creazione di applicazioni per dispositivi mobili con Xamarin.Forms. Per la documentazione completa di Xamarin.Forms, vedere <a href="/xamarin/xamarin-forms/">Documentazione di Xamarin.Forms</a>.
+sections:
+- title: Layout
+  items:
+  - type: list
+    style: cards
+    className: cardsB
+    items:
+    - href: stacklayout/
+      html: Informazioni su come organizzare le viste in uno stack unidimensionale, orizzontalmente o verticalmente.
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: stacklayout/
+      title: StackLayout
+    - href: grid/
+      html: Informazioni su come organizzare le visualizzazioni in righe e colonne, che può avere dimensioni proporzionali o assolute.
+      image:
+        src: https://docs.microsoft.com/media/common/i_table.svg
+        href: grid/
+      title: Grid
+- title: Visualizzazioni
+  items:
+  - type: list
+    style: cards
+    className: cardsB
+    items:
+    - href: label/
+      html: Informazioni su come visualizzare il testo, in una o più righe.
+      image:
+        src: ~/media/icons/i_form-label.svg
+        href: label/
+      title: Label
+    - href: button/
+      html: Informazioni su come rispondere a un tocco o fare clic su un pulsante che indirizza un'applicazione per eseguire una determinata attività.
+      image:
+        src: https://docs.microsoft.com/media/common/i_button.svg
+        href: button/
+      title: Button
+    - href: entry/
+      html: Informazioni su come accettare l'input di testo a riga singola.
+      image:
+        src: ~/media/icons/i_form-entry.svg
+        href: entry/
+      title: Voce
+    - href: editor/
+      html: Informazioni su come accettare l'input di testo a riga multipla.
+      image:
+        src: ~/media/icons/i_form-editor.svg
+        href: editor/
+      title: Editor
+    - href: image/
+      html: Informazioni su come visualizzare le immagini in una pagina.
+      image:
+        src: https://docs.microsoft.com/media/common/i_account-management.svg
+        href: image/
+      title: Image
+    - href: listview/
+      html: Informazioni su come presentare elenchi di dati.
+      image:
+        src: https://docs.microsoft.com/media/common/i_sharepoint-list.svg
+        href: listview/
+      title: ListView
+- title: Nozioni fondamentali sulle app
+  items:
+  - type: list
+    style: cards
+    className: cardsB
+    items:
+    - href: pop-ups/
+      html: Informazioni su come visualizzare gli avvisi e i fogli di azione con Xamarin.Forms, per porre semplici domande agli utenti e per guidare gli utenti nelle attività.
+      image:
+        src: https://docs.microsoft.com/media/common/i_alert.svg
+        href: pop-ups/
+      title: Popup
+    - href: app-lifecycle/
+      html: Informazioni sul ciclo di vita dell'app Xamarin.Forms e su come rendere persistenti i dati tra le modifiche dello stato del ciclo di vita.
+      image:
+        src: https://docs.microsoft.com/media/common/i_agile.svg
+        href: app-lifecycle/
+      title: Ciclo di vita dell'app
+    - href: local-database/
+      html: Informazioni su come usare il pacchetto NuGet SQLite.NET per integrare le operazioni del database locale in un'app.
+      image:
+        src: https://docs.microsoft.com/media/common/i_generic-database.svg
+        href: local-database/
+      title: Database locale
+    - href: web-service/
+      html: Informazioni su come usare i servizi Web basati su REST da Xamarin.Forms.
+      image:
+        src: https://docs.microsoft.com/media/common/i_server.svg
+        href: web-service/
+      title: Servizi Web

@@ -1,0 +1,30 @@
+### YamlMime:Tutorial
+title: Esercitazione del ciclo di vita delle app Xamarin.Forms
+metadata:
+  title: Esercitazione del ciclo di vita delle app Xamarin.Forms
+  description: Informazioni sul ciclo di vita dell'app Xamarin.Forms e su come rendere persistenti i dati tra le modifiche dello stato del ciclo di vita.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 08/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 5c41d91f9d41eadfd7dc574c8cffc4f63f6f7575
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198897"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Rispondere alle modifiche apportate dello stato del ciclo di vita
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/lifecycle.md)]
+- title: Rendere persistenti i dati nelle modifiche di stato del ciclo di vita
+  durationInMinutes: 4
+  content: >
+    [!INCLUDE [](includes/persist-data.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

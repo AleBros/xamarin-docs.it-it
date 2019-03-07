@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Esercitazione su Etichetta Xamarin.Forms
+metadata:
+  title: Esercitazione su Etichetta Xamarin.Forms
+  description: Informazioni su come visualizzare il testo, con la visualizzazione etichetta di Xamarin.Forms, in una o più righe.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 01/31/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 6fa07fb712669607dad404cbe093001611f98a54
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198697"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Creare un'etichetta
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/create.md)]
+- title: Salvare aspetto
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/appearance.md)]
+- title: Presentare testo formattato
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/formatted-text.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

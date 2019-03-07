@@ -1,0 +1,65 @@
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+1. Avviare Visual Studio e creare una nuova app Xamarin.Forms vuota denominata **GridTutorial**. Assicurarsi che l'app usi .NET Standard come meccanismo di codice condiviso.
+
+    > [!IMPORTANT]
+    > I frammenti di codice C# e XAML in questa esercitazione richiedono che la soluzione sia denominata **GridTutorial**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa esercitazione alla soluzione.
+
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](~/get-started/first-app/index.md) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](~/get-started/first-app/index.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
+
+1. Fare doppio clic su **MainPage.xaml** nel progetto **GridTutorial** in **Esplora soluzioni** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+
+    ```xaml
+    <?xml version="1.0" encoding="utf-8"?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="GridTutorial.MainPage">
+        <Grid Margin="20,35,20,20">
+            <Label Text="The Grid has its Margin property set, to control the rendering position of the Grid." />
+        </Grid>
+    </ContentPage>
+    ```
+
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Label`](xref:Xamarin.Forms.Label) in un elemento [`Grid`](xref:Xamarin.Forms.Grid). Per impostazione predefinita, `Grid` posiziona le relative visualizzazioni figlio in un'unica posizione. Pertanto, un `Grid` che contiene più elementi figlio deve specificare colonne e righe, che verranno trattate nel prossimo esercizio. Inoltre la proprietà [`Margin`](xref:Xamarin.Forms.View.Margin) indica la posizione di rendering di `Grid` all'interno di [`ContentPage`](xref:Xamarin.Forms.ContentPage).
+
+    > [!NOTE]
+    > Oltre alla proprietà [`Margin`](xref:Xamarin.Forms.View.Margin), anche la proprietà [`Padding`](xref:Xamarin.Forms.Layout.Padding) può essere impostata su un [`Grid`](xref:Xamarin.Forms.Grid). Il valore della proprietà [`Padding`](xref:Xamarin.Forms.Layout.Padding) specifica la distanza tra le visualizzazioni in `Grid`. Per altre informazioni, vedere l'articolo sulle proprietà [Margin e Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+
+1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore remoto iOS o dell'emulatore Android prescelto:
+
+    [![Schermata di un'etichetta in una griglia, in iOS e Android](../images/create-grid.png "Griglia che contiene un'etichetta")](../images/create-grid-large.png#lightbox "Griglia che contiene un'etichettas")
+
+    Per altre informazioni su [`Grid`](xref:Xamarin.Forms.Grid), vedere [Griglia di Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+
+1. Avviare Visual Studio per Mac e creare una nuova app Xamarin.Forms vuota denominata **GridTutorial**. Assicurarsi che l'app usi .NET Standard come meccanismo di codice condiviso.
+
+    > [!IMPORTANT]
+    > I frammenti di codice C# e XAML in questa esercitazione richiedono che la soluzione sia denominata **GridTutorial**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa esercitazione alla soluzione.
+
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](~/get-started/first-app/index.md) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](~/get-started/first-app/index.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
+
+1. Fare doppio clic su **MainPage.xaml** nel progetto **GridTutorial** nel **riquadro della soluzione** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+
+    ```xaml
+    <?xml version="1.0" encoding="utf-8"?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="GridTutorial.MainPage">
+        <Grid Margin="20,35,20,20">
+            <Label Text="The Grid has its Margin property set, to control the rendering position of the Grid." />
+        </Grid>
+    </ContentPage>
+    ```
+
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Label`](xref:Xamarin.Forms.Label) in un elemento [`Grid`](xref:Xamarin.Forms.Grid). Per impostazione predefinita, `Grid` posiziona le relative visualizzazioni figlio in un'unica posizione. Pertanto, un `Grid` che contiene più elementi figlio deve specificare colonne e righe, che verranno trattate nel prossimo esercizio. Inoltre la proprietà [`Margin`](xref:Xamarin.Forms.View.Margin) indica la posizione di rendering di `Grid` all'interno di [`ContentPage`](xref:Xamarin.Forms.ContentPage).
+
+    > [!NOTE]
+    > Oltre alla proprietà [`Margin`](xref:Xamarin.Forms.View.Margin), anche la proprietà [`Padding`](xref:Xamarin.Forms.Layout.Padding) può essere impostata su un [`Grid`](xref:Xamarin.Forms.Grid). Il valore della proprietà [`Padding`](xref:Xamarin.Forms.Layout.Padding) specifica la distanza tra le visualizzazioni in `Grid`. Per altre informazioni, vedere l'articolo sulle proprietà [Margin e Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+
+1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
+
+    [![Schermata di un'etichetta in una griglia, in iOS e Android](../images/create-grid.png "Griglia che contiene un'etichetta")](../images/create-grid-large.png#lightbox "Griglia che contiene un'etichettas")
+
+    Per altre informazioni su [`Grid`](xref:Xamarin.Forms.Grid), vedere [Griglia di Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).

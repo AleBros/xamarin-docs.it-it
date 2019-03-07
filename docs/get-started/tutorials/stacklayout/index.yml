@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Esercitazione su StackLayout di Xamarin.Forms
+metadata:
+  title: Esercitazione su StackLayout di Xamarin.Forms
+  description: Informazioni su come organizzare le viste orizzontalmente o verticalmente in uno stack unidimensionale con StackLayout di Xamarin.Forms.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 07/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 24ab316baf8a0be14d78d35e52698e2bff224dcc
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57197847"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Creare un elemento StackLayout
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/create.md)]
+- title: Specificare l'orientamento
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/orientation.md)]
+- title: Controllare l'allineamento e l'espansione
+  durationInMinutes: 4
+  content: >
+    [!INCLUDE [](includes/alignment-expansion.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

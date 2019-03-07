@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Esercitazione su Image di Xamarin.Forms
+metadata:
+  title: Esercitazione su Image di Xamarin.Forms
+  description: Informazioni su come visualizzare immagini in una pagina usando la vista Image di Xamarin.Forms.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 05/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 77ad9afcc82f27c78973c279af70ab735dd067f6
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198387"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Creare un'immagine
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/create.md)]
+- title: Personalizzare l'aspetto
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/customize-appearance.md)]
+- title: Visualizzare un'immagine locale
+  durationInMinutes: 4
+  content: >
+    [!INCLUDE [](includes/local-file.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

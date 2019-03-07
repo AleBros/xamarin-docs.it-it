@@ -1,0 +1,30 @@
+### YamlMime:Tutorial
+title: Esercitazione di popup di Xamarin.Forms
+metadata:
+  title: Esercitazione di popup di Xamarin.Forms
+  description: Informazioni su come visualizzare gli avvisi e i fogli di azione con Xamarin.Forms, per porre semplici domande agli utenti e per guidare gli utenti nelle attività.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 02/19/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 7943f6caf94328d265ba03f90821a0075d1b02fe
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198917"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Visualizzare un avviso
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/display-alert.md)]
+- title: Visualizzare una finestra delle azioni
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/display-action-sheet.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'
