@@ -7,13 +7,8 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
-ms.openlocfilehash: 0563921a59bc698e2360a06b482c7f4994e56f6e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060012"
 ---
+
 # <a name="text-in-xamarinforms"></a>Testo in xamarin. Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
@@ -66,7 +61,7 @@ Vedere le [Editor](editor.md) per altre informazioni.
 
 ## <a name="fontsfontsmd"></a>[Tipi di carattere](fonts.md)
 
-Il `Label` controllo supporta le impostazioni del tipo di carattere diversi con i tipi di carattere incorporati in ogni piattaforma o tipi di carattere personalizzati inclusi con l'app. Vedere le [tipi di carattere](fonts.md) articolo per informazioni più dettagliate.
+Molti controlli supportano le impostazioni del tipo di carattere diversi con i tipi di carattere incorporati in ogni piattaforma o tipi di carattere personalizzati inclusi con l'app. Vedere le [tipi di carattere](fonts.md) articolo per informazioni più dettagliate.
 
 <a name="Styles" />
 

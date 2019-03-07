@@ -6,13 +6,13 @@ ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: ac5ad85f7bdd08b0d071e7c333c959e94dcbc53f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 02/27/2019
+ms.openlocfilehash: fa339d9fd404cf74aa603d853abde5f9128e57b5
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057490"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557308"
 ---
 # <a name="xamarinforms-slider"></a>Dispositivo di scorrimento di xamarin. Forms
 
@@ -38,6 +38,8 @@ Il `Slider` assegna le `Value` proprietà in modo che sia tra `Minimum` e `Maxim
 `Slider` definisce un [ `ValueChanged` ](xref:Xamarin.Forms.Slider.ValueChanged) evento generato quando il `Value` modifiche, tramite la modifica dell'utente del `Slider` o quando il programma imposta la `Value` proprietà direttamente. Oggetto `ValueChanged` evento viene generato quando il `Value` proprietà viene convertita come descritto nel paragrafo precedente.
 
 Il [ `ValueChangedEventArgs` ](xref:Xamarin.Forms.ValueChangedEventArgs) oggetti che accompagna il `ValueChanged` evento ha due proprietà, entrambi di tipo `double`: [ `OldValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.OldValue) e [ `NewValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.NewValue). Al momento viene generato l'evento, il valore di `NewValue` equivale al `Value` proprietà del `Slider` oggetto.
+
+`Slider` definisce inoltre `DragStarted` e `DragCompleted` , gli eventi generati all'inizio e alla fine dell'azione di trascinamento. A differenza di [ `ValueChanged` ](xref:Xamarin.Forms.Slider.ValueChanged) evento, il `DragStarted` e `DragCompleted` gli eventi vengono attivati solo tramite la modifica dell'utente del `Slider`. Quando la `DragStarted` viene generato l'evento, il `DragStartedCommand`, di tipo `ICommand`, viene eseguita. Analogamente, quando la `DragCompleted` viene generato l'evento, il `DragCompletedCommand`, di tipo `ICommand`, viene eseguita.
 
 > [!WARNING]
 > Non usare opzioni di layout orizzontale non vincolato della `Center`, `Start`, o `End` con `Slider`. In Android e UWP, il `Slider` viene compressa per un indicatore di lunghezza zero e in iOS, la barra è molto breve. Mantenere il valore predefinito `HorizontalOptions` impostazione di `Fill`e non usare una larghezza pari `Auto` quando si inserisce `Slider` in un `Grid` layout.
@@ -203,7 +205,7 @@ Il **associazioni di base dispositivo di scorrimento** pagina viene illustrato c
 </ContentPage>
 ```
 
-Il `Rotation` proprietà del primo `Label` è associato ai `Value` proprietà del `Slider`, come è la `Text` proprietà del secondo `Label` con un `StringFormat` specifica. Il **associazioni di base Slider** pagina funzioni un po' diverso da due pagine precedenti: quando la pagina viene visualizzata prima di tutto, il secondo `Label` consente di visualizzare la stringa di testo con il valore. Si tratta di un vantaggio dell'uso del data binding. Per visualizzare il testo senza l'associazione di dati, è necessario inizializzare in modo specifico la `Text` proprietà del `Label` o si simula un'attivazione del `ValueChanged` evento chiamando il gestore dell'evento dal costruttore della classe.
+Il `Rotation` proprietà del primo `Label` è associato ai `Value` proprietà del `Slider`, come è la `Text` proprietà del secondo `Label` con un `StringFormat` specifica. Il **associazioni di dispositivo di scorrimento base** pagina funzioni un po' diverso da due pagine precedenti: Quando la pagina viene visualizzata prima di tutto, il secondo `Label` consente di visualizzare la stringa di testo con il valore. Si tratta di un vantaggio dell'uso del data binding. Per visualizzare il testo senza l'associazione di dati, è necessario inizializzare in modo specifico la `Text` proprietà del `Label` o si simula un'attivazione del `ValueChanged` evento chiamando il gestore dell'evento dal costruttore della classe.
 
 <a name="precautions" />
 

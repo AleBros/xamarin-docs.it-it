@@ -6,13 +6,13 @@ ms.assetid: 3C840F64-A430-457D-A4B2-3D7AF46F9DBE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/11/2017
-ms.openlocfilehash: 6eb1e9a6f9c46fd7337003e05daa10d408fb5108
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.date: 02/26/2019
+ms.openlocfilehash: 3bbea036efef44077ccbd28a16af06c97cd7026b
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208012"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557230"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Aggiunta di dati alla raccolta di elementi del controllo di selezione
 
@@ -25,7 +25,8 @@ _La visualizzazione di selezione è un controllo per la selezione di un elemento
 Prima di xamarin. Forms 2.3.4, il processo per l'inserimento in una [ `Picker` ](xref:Xamarin.Forms.Picker) con i dati è stata per aggiungere i dati da visualizzare per la sola lettura [ `Items` ](xref:Xamarin.Forms.Picker.Items) raccolta, che è di tipo `IList<string>`. Ogni elemento della raccolta deve essere di tipo `string`. È possibile aggiungere elementi in XAML inizializzando il `Items` con un elenco di proprietà `x:String` elementi:
 
 ```xaml
-<Picker Title="Select a monkey">
+<Picker Title="Select a monkey"
+        TitleColor="Red">
   <Picker.Items>
     <x:String>Baboon</x:String>
     <x:String>Capuchin Monkey</x:String>
@@ -41,7 +42,7 @@ Prima di xamarin. Forms 2.3.4, il processo per l'inserimento in una [ `Picker` ]
 Seguito è riportato il codice c# equivalente:
 
 ```csharp
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.Items.Add("Baboon");
 picker.Items.Add("Capuchin Monkey");
 picker.Items.Add("Blue Monkey");
@@ -79,11 +80,6 @@ Questo metodo consente di ottenere il [ `SelectedIndex` ](xref:Xamarin.Forms.Pic
 
 > [!NOTE]
 > Oggetto [ `Picker` ](xref:Xamarin.Forms.Picker) possono essere inizializzati per visualizzare un elemento specifico impostando le [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) proprietà. Tuttavia, il `SelectedIndex` deve essere impostata dopo l'inizializzazione di [ `Items` ](xref:Xamarin.Forms.Picker.Items) raccolta.
-
-## <a name="summary"></a>Riepilogo
-
-Il [ `Picker` ](xref:Xamarin.Forms.Picker) Vista è un controllo per la selezione di un elemento di testo da un elenco di dati. Questo articolo ha illustrato come popolare una `Picker` con i dati, aggiungerlo al [ `Items` ](xref:Xamarin.Forms.Picker.Items) insieme e su come rispondere alla selezione di elementi dall'utente. Questo è il processo per l'uso di un `Picker` prima di xamarin. Forms 2.3.4.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

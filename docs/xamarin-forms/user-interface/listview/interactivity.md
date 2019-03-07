@@ -6,13 +6,13 @@ ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/14/2018
-ms.openlocfilehash: 939df6cfd17de82e28958363cfa51cd199f928cb
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.date: 02/27/2019
+ms.openlocfilehash: 1447526ef925431e3cad5f36d4ce7a528c8ab07c
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831691"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557191"
 ---
 # <a name="listview-interactivity"></a>Interattività ListView
 
@@ -34,8 +34,10 @@ Quando un utente tocca un elemento, vengono generati due eventi:
 - [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) generato quando viene selezionato un nuovo elemento.
 - [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) generato quando si tocca un elemento.
 
+Toccare due volte lo stesso elemento genereranno due [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) gli eventi, ma verrà attivare solo una singola [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) evento.
+
 > [!NOTE]
-> Toccare due volte lo stesso elemento genereranno due [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) gli eventi, ma verrà attivare solo una singola [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) evento.
+> Il [ `ItemTappedEventArgs` ](xref:Xamarin.Forms.ItemTappedEventArgs) classe, che contiene gli argomenti dell'evento per il [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) evento, ha [ `Group` ](xref:Xamarin.Forms.ItemTappedEventArgs.Group) e [ `Item` ](xref:Xamarin.Forms.ItemTappedEventArgs.Item) delle proprietà e un `ItemIndex` proprietà il cui valore rappresenta l'indice nel [ `ListView` ](xref:Xamarin.Forms.ListView) dell'elemento scelte. Allo stesso modo, il [ `SelectedItemChangedEventArgs` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs) classe, che contiene gli argomenti dell'evento per il [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) evento, dispone di un [ `SelectedItem` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) proprietà e un `SelectedItemIndex` proprietà il cui valore rappresenta l'indice nel `ListView` dell'elemento selezionato.
 
 Quando la [ `SelectionMode` ](xref:Xamarin.Forms.ListView.SelectionMode) è impostata su [ `Single` ](xref:Xamarin.Forms.ListViewSelectionMode.Single), gli elementi nel [ `ListView` ](xref:Xamarin.Forms.ListView) può essere selezionato, il [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) e [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) verranno generati eventi e il [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) proprietà verrà impostata sul valore dell'elemento selezionato.
 

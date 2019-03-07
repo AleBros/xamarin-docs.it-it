@@ -1,19 +1,14 @@
 ---
 title: eXtensible Application Markup Language (XAML)
-description: XAML è un linguaggio di markup dichiarativo che possa essere usato per definire le interfacce utente. L'interfaccia utente è definito in un file XML usando la sintassi XAML, mentre il comportamento di runtime viene definito in un file code-behind distinto.
+description: 'XAML è un linguaggio di markup dichiarativo che possa essere usato per definire le interfacce utente. L''interfaccia utente è definito in un file XML usando la sintassi XAML, mentre il comportamento di runtime viene definito in un file code-behind distinto.'
 ms.prod: xamarin
 ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/18/2018
-ms.openlocfilehash: 7195d56cfee91544f0626a8f89c886cde36752e5
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831717"
+ms.date: 02/28/2019
 ---
+
 # <a name="extensible-application-markup-language-xaml"></a>eXtensible Application Markup Language (XAML)
 
 _XAML è un linguaggio di markup dichiarativo che possa essere usato per definire le interfacce utente. L'interfaccia utente è definito in un file XML usando la sintassi XAML, mentre il comportamento di runtime viene definito in un file code-behind distinto._
@@ -43,9 +38,13 @@ Il [Visualizzatore anteprima XAML](~/xamarin-forms/xaml/xaml-previewer.md) esegu
 
 XAML Usa le `xmlns` attributo XML per le dichiarazioni dello spazio dei nomi. Questo articolo presenta la sintassi dello spazio dei nomi XAML e viene illustrato come dichiarare uno spazio dei nomi XAML per un tipo di accesso.
 
-## <a name="xaml-custom-namespace-schemascustom-namespace-schemasmd"></a>[Schemi personalizzati Namespace XAML](custom-namespace-schemas.md)
+## <a name="xaml-custom-namespace-schemascustom-namespace-schemasmd"></a>[Schemi spazio dei nomi personalizzati XAML](custom-namespace-schemas.md)
 
 Uno schema personalizzato dello spazio dei nomi XAML può essere definito con la `XmlnsDefinitionAttribute` (classe), che specifica un mapping tra un URL personalizzato e uno o più spazi dei nomi CLR. Schema spazio dei nomi personalizzato è quindi utilizzabile nelle dichiarazioni dello spazio dei nomi XAML.
+
+## <a name="xaml-namespace-recommended-prefixescustom-prefixmd"></a>[XAML Namespace consigliato prefissi](custom-prefix.md)
+
+Il `XmlnsPrefixAttribute` classe può essere utilizzata dagli autori di controlli per specificare un prefisso consigliato da associare a uno spazio dei nomi XAML, per l'utilizzo XAML.
 
 ## <a name="xaml-markup-extensionsmarkup-extensionsindexmd"></a>[Estensioni di markup XAML](markup-extensions/index.md)
 

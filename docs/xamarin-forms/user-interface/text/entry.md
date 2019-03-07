@@ -6,13 +6,13 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/27/2018
-ms.openlocfilehash: 303cca48defdadd69449edbd6c4c3f5e4410bbbb
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.date: 02/26/2018
+ms.openlocfilehash: bc404986a83d0150c490486c20f780bf4e7f5a9e
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831963"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557204"
 ---
 # <a name="xamarinforms-entry"></a>Voce di xamarin. Forms
 
@@ -58,6 +58,22 @@ var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive
 
 > [!NOTE]
 > La larghezza di un `Entry` può essere definita impostando relativo `WidthRequest` proprietà. Non basarsi sulla larghezza di un `Entry` definito in base al valore del relativo `Text` proprietà.
+
+### <a name="preventing-text-entry"></a>Impedisce l'immissione di testo
+
+Gli utenti è possibile impedire la modifica del testo in un [ `Entry` ](xref:Xamarin.Forms.Entry) impostando il `IsReadOnly` proprietà, che ha un valore predefinito di `false`, a `true`:
+
+```xaml
+<Entry Text="This is a read-only Entry"
+       IsReadOnly="true" />
+```
+
+```csharp
+var entry = new Entry { Text = "This is a read-only Entry", IsReadOnly = true });
+```
+
+> [!NOTE]
+> Il `IsReadonly` proprietà non altera l'aspetto visivo di un [ `Entry` ](xref:Xamarin.Forms.Entry), a differenza il `IsEnabled` proprietà che viene modificato anche l'aspetto visivo del `Entry` in grigio.
 
 ### <a name="limiting-input-length"></a>Limitazione della lunghezza di Input
 

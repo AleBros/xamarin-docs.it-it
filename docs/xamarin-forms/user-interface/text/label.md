@@ -6,13 +6,13 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/13/2018
-ms.openlocfilehash: ce1ba235a309e2388bd5eea7d70a1d72852fc615
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.date: 02/26/2019
+ms.openlocfilehash: e57135c5a9a90ec75ae610ad92cecaa2a9b1e482
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831859"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557038"
 ---
 # <a name="xamarinforms-label"></a>Etichetta di xamarin. Forms
 
@@ -157,10 +157,13 @@ Il `FormattedText` proprietà è di tipo [ `FormattedString` ](xref:Xamarin.Form
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – le dimensioni del carattere per il testo nel controllo span.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) : il colore del testo nel controllo span. Questa proprietà è obsoleta ed è stata sostituita dal `TextColor` proprietà.
 - [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) -il moltiplicatore da applicare per l'altezza della riga predefinita dell'intervallo. Per altre informazioni, vedere [altezza riga](#line-height).
-- [`Style`](xref:Xamarin.Forms.Span.Style) – lo stile da applicare all'intervallo.
+- [`Text`](xref:Xamarin.Forms.Span.Text)  – lo stile da applicare all'intervallo.
 - [`Text`](xref:Xamarin.Forms.Span.Text) -il testo dell'intervallo.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) : il colore del testo nel controllo span.
 - `TextDecorations` -gli effetti da applicare al testo nel controllo span. Per altre informazioni, vedere [decorazioni di testo](#text-decorations).
+
+> [!NOTE]
+> Il [ `BackgroundColor` ](xref:Xamarin.Forms.Span.BackgroundColor), [ `Text` ](xref:Xamarin.Forms.Span.Text), e [ `Text` ](xref:Xamarin.Forms.Span.Text) proprietà associabili hanno una modalità di associazione predefinito di [ `OneWay` ](xref:Xamarin.Forms.BindingMode). Per altre informazioni su questa modalità di associazione, vedere [la modalità di associazione predefinito](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#the-default-binding-mode) nel [modalità di associazione](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md) Guida.
 
 Inoltre, il [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) proprietà può essere utilizzata per definire una raccolta di riconoscitori di movimento che risponde ai movimenti nella [ `Span` ](xref:Xamarin.Forms.Span).
 

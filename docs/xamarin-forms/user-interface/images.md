@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: f6815b54867b47bb32ede41470712dac65b6d410
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 1a08803930eaaa3c2c5c5f8b8aa9561a9a7b8d88
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062178"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557243"
 ---
 # <a name="images-in-xamarinforms"></a>Immagini in xamarin. Forms
 
@@ -44,7 +44,7 @@ Il [ `Aspect` ](xref:Xamarin.Forms.Image.Aspect) proprietà determina come l'imm
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -Ritaglia l'immagine in modo da riempire l'area di visualizzazione mantenendo le proporzioni (ie. Nessun distorsioni).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -Consegna l'immagine, se necessario, in modo che l'intera immagine rientri nell'area di visualizzazione, con uno spazio vuoto aggiunto per i primi/ultimi o i lati a seconda che l'immagine è ampia e un'altezza.
 
-È possibile caricare le immagini da un [file locale](#Local_Images), un [risorsa incorporata](#embedded-images), o [scaricato](#Downloading_Images).
+È possibile caricare le immagini da un [file locale](#Local_Images), un [risorsa incorporata](#embedded-images), o [scaricato](#Downloading_Images). Inoltre, le icone del tipo di carattere possono essere visualizzate dal [ `Image` ](xref:Xamarin.Forms.Image) visualizzazione specificando i dati dell'icona del tipo di carattere in un `FontImageSource` oggetto. Per altre informazioni, vedere [visualizzare le icone del tipo di carattere](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) nel [tipi di carattere](~/xamarin-forms/user-interface/text/fonts.md) Guida.
 
 ## <a name="local-images"></a>Immagini locali
 
@@ -54,7 +54,7 @@ Usare una singola immagine in tutte le app, *lo stesso nome file deve essere usa
 
 - **iOS** - il preferito consente di gestire e supportare immagini poiché iOS 9 consiste nell'usare **set di immagini di catalogo di Asset**, che deve contenere tutte le versioni di un'immagine che sono necessari per supportare vari tipi di dispositivi e per fattori di scala di un applicazione. Per altre informazioni, vedere [aggiunta di immagini da un catalogo Asset immagine Set](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 - **Android** -collocare le immagini nel **risorse/drawable** directory con **azione di compilazione: AndroidResource**. È possibile fornire anche le versioni ad alta e bassa risoluzione di un'immagine (in denominato in modo appropriato **le risorse** sottodirectory, ad esempio **drawable ldpi**, **drawable hdpi**e **drawable xhdpi**).
-- **Universal Windows Platform (UWP)** -collocare le immagini nella directory radice dell'applicazione con **azione di compilazione: contenuto**.
+- **Universal Windows Platform (UWP)** -collocare le immagini nella directory radice dell'applicazione con **azione di compilazione: Content**.
 
 > [!IMPORTANT]
 > Prima di iOS 9, le immagini in genere inserite nel **le risorse** cartella con **azione di compilazione: BundleResource**. Tuttavia, questo metodo di utilizzo di immagini in un'app per iOS è stato deprecato da Apple. Per altre informazioni, vedere [le dimensioni delle immagini e i nomi file](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
@@ -114,7 +114,7 @@ Alcuni controlli dispongono di proprietà che consentono di visualizzare un'imma
 
 Immagini incorporate vengono anche fornite con un'applicazione (ad esempio immagini locali), ma invece di avere una copia dell'immagine nella struttura di file di ogni applicazione l'immagine del file è incorporato nell'assembly come risorsa. Questo metodo di distribuzione delle immagini è consigliato quando vengono utilizzate immagini identiche in ogni piattaforma ed è particolarmente appropriato per la creazione di componenti, come l'immagine è in bundle con il codice.
 
-Per incorporare un'immagine in un progetto, fare doppio clic per aggiungere nuovi elementi e selezionare l'immagine/s che si desidera aggiungere. Per impostazione predefinita l'immagine presenterà **azione di compilazione: nessuna**; questa operazione deve essere impostata su **azione di compilazione: EmbeddedResource**.
+Per incorporare un'immagine in un progetto, fare doppio clic per aggiungere nuovi elementi e selezionare l'immagine/s che si desidera aggiungere. Per impostazione predefinita l'immagine presenterà **azione di compilazione: None**; questa operazione deve essere impostato su **azione di compilazione: EmbeddedResource**.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -297,6 +297,8 @@ L'impostazione delle icone e schermate iniziali per le app xamarin. Forms viene 
 ## <a name="icons"></a>Icone
 
 Vedere le [iOS utilizzo delle immagini](~/ios/app-fundamentals/images-icons/index.md), [Google visualizzato](http://developer.android.com/design/style/iconography.html), e [linee guida per gli asset riquadro e icona](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) per altre informazioni sulla creazione di queste risorse dell'applicazione.
+
+Inoltre, le icone del tipo di carattere possono essere visualizzate dal [ `Image` ](xref:Xamarin.Forms.Image) visualizzazione specificando i dati dell'icona del tipo di carattere in un `FontImageSource` oggetto. Per altre informazioni, vedere [visualizzare le icone del tipo di carattere](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) nel [tipi di carattere](~/xamarin-forms/user-interface/text/fonts.md) Guida.
 
 ## <a name="splash-screens"></a>Schermate iniziali
 
