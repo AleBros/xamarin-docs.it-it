@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
-ms.openlocfilehash: 396c6a19a86c3c8f5429d5da1251d69fc8d57309
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5f2617272cfdc84fa2b835ce44919d2599a1dce6
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114080"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197199"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introduzione a Xamarin.iOS per Visual Studio
 
@@ -35,12 +35,12 @@ Esistono alcuni requisiti che devono essere rispettati durante lo sviluppo per i
 Sono disponibili alcune opzioni di configurazione, quindi è possibile scegliere quella più adatta alle proprie esigenze di sviluppo. Gli scenari possibili sono i seguenti:
 
 -  Usare un Mac come computer di sviluppo principale ed eseguire una macchina virtuale Windows con Visual Studio installato. Si consiglia di usare software per macchina virtuale, ad esempio [Parallels](http://www.parallels.com/products/desktop/) o [VMWare](http://www.vmware.com/products/fusion/).
--  Usare un Mac solo come host di compilazione. In questo scenario verrebbe connesso alla stessa rete come computer Windows con gli strumenti [necessari](~/cross-platform/get-started/installation/windows.md#installation) installati.
+-  Usare un Mac solo come host di compilazione. In questo scenario verrebbe connesso alla stessa rete come computer Windows con gli strumenti [necessari](~/get-started/installation/windows.md#installation) installati.
 
 In entrambi i casi è necessario seguire questi passaggi:
 
 - [Installare Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/installation)
-- [Installare gli strumenti di Xamarin in Windows](~/cross-platform/get-started/installation/windows.md)
+- [Installare gli strumenti di Xamarin in Windows](~/get-started/installation/windows.md)
 
 ## <a name="connecting-to-the-mac"></a>Connessione al Mac
 

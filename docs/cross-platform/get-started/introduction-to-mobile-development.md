@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: 5470a70570a431c1adc3053d9f8f389cec31cf85
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 0062c5da4db206a9fe4dc0030a104ec034ab97f1
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292077"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197160"
 ---
 # <a name="introduction-to-mobile-development"></a>Introduzione allo sviluppo per dispositivi mobili
 
@@ -83,11 +83,11 @@ Il passaggio successivo consiste nell'iniziare a compilare l'app usando una di q
 
 ![](introduction-to-mobile-development-images/android.png "Hello, Android")
 
-* [**Introduzione a Xamarin.Forms**](~/get-started/index.md)
+* [**Introduzione a Xamarin.Forms**](~/get-started/index.yml)
 
 ## <a name="summary"></a>Riepilogo
 
-Questo documento costituisce un'introduzione alla piattaforma Xamarin. Il passaggio successivo consiste nell'iniziare a usare la prima app compilata. Per iniziare, fare riferimento alle guide [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md) e [Introduzione a Xamarin.Forms](~/get-started/index.md).
+Questo documento costituisce un'introduzione alla piattaforma Xamarin. Il passaggio successivo consiste nell'iniziare a usare la prima app compilata. Per iniziare, fare riferimento alle guide [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md) e [Introduzione a Xamarin.Forms](~/get-started/index.yml).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

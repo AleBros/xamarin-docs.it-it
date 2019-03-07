@@ -1,19 +1,14 @@
 ---
 title: Installazione di Xamarin.iOS in Windows
-description: Questo documento descrive come configurare un computer Windows, configurare un host di compilazione Mac e associare Windows al Mac per lo sviluppo di Xamarin.iOS.
+description: 'Questo documento descrive come configurare un computer Windows, configurare un host di compilazione Mac e associare Windows al Mac per lo sviluppo di Xamarin.iOS.'
 ms.prod: xamarin
 ms.assetid: abf85d3e-a365-44a2-b1a4-6c572c7f76dd
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/16/2018
-ms.openlocfilehash: 5e7b8a3fb703d8857312b15f4884399ee951b2d4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118539"
 ---
+
 # <a name="installing-xamarinios-on-windows"></a>Installazione di Xamarin.iOS in Windows
 
 _Questo articolo descrive come configurare un computer Windows e un host di compilazione Mac per lo sviluppo con Xamarin.iOS._
@@ -36,7 +31,7 @@ Per predisporre la configurazione per lo sviluppo con Xamarin.iOS in Visual Stud
 
     Xamarin.iOS può essere usato con Visual Studio 2017 Community, Professional ed Enterprise Edition, in un computer autonomo o una macchina virtuale.
     
-    - [Installare Visual Studio 2017](~/cross-platform/get-started/installation/windows.md).
+    - [Installare Visual Studio 2017](~/get-started/installation/windows.md).
 
 2. Configurare il Mac (Installare Xcode e Visual Studio per Mac)
 

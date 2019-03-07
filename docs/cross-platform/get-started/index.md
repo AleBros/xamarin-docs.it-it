@@ -1,24 +1,19 @@
 ---
 title: Introduzione a Xamarin
-description: Questo documento contiene i collegamenti a varie guide che descrivono come iniziare a sviluppare con Xamarin. Il contenuto collegato descrive come compilare una prima app, fornisce un'introduzione generale allo sviluppo per dispositivi mobili e illustra le opzioni di training disponibili con Xamarin University.
+description: 'Questo documento contiene i collegamenti a varie guide che descrivono come iniziare a sviluppare con Xamarin. Il contenuto collegato descrive come compilare una prima app, fornisce un''introduzione generale allo sviluppo per dispositivi mobili e illustra le opzioni di training disponibili con Xamarin University.'
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 1b98dcb175c7e28e0ae101bea172aa2a98d3502e
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292168"
 ---
-# <a name="get-started-with-xamarin"></a>Introduzione a Xamarin
 
-Prima di iniziare, verificare i [requisiti di sistema](requirements.md) e le [istruzioni di installazione](installation/index.md) per assicurarsi che tutto sia pronto.
+# <a name="building-mobile-apps"></a>Creazione di app per dispositivi mobili
 
-## <a name="build-your-first-app"></a>Compilare la prima app
+Prima di iniziare, verificare i [requisiti di sistema](requirements.md) e le [istruzioni di installazione](~/get-started/installation/index.md) per assicurarsi che tutto sia pronto.
+
+## <a name="build-your-first-app"></a>Creare la prima app
 
 > [!div class="nextstepaction"]
 > [Guida introduttiva di Xamarin.Forms](~/get-started/quickstarts/single-page.md)
@@ -57,4 +52,4 @@ Altre informazioni su Visual Studio per Mac, l'ambiente di sviluppo integrato (I
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Requisiti di sistema](requirements.md)
-- [Istruzioni di installazione](~/cross-platform/get-started/installation/index.md)
+- [Istruzioni di installazione](~/get-started/installation/index.md)
