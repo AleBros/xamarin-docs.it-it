@@ -1,18 +1,13 @@
 ---
 title: Introduzione a Java
-description: Questo documento descrive come iniziare a usare l'incorporamento di .NET con Java. Illustra i requisiti di sistema, installazione e le piattaforme supportate.
+description: 'Questo documento descrive come iniziare a usare l''incorporamento di .NET con Java. Illustra i requisiti di sistema, installazione e le piattaforme supportate.'
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
 author: lobrien
 ms.author: laobri
 ms.date: 03/28/2018
-ms.openlocfilehash: 74146378d2ee534b357abd73ff7e1563a49a7e4a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121750"
 ---
+
 # <a name="getting-started-with-java"></a>Introduzione a Java
 
 Questa è la pagina introduttiva per Java, che illustra le nozioni di base per tutte le piattaforme supportate.
@@ -22,7 +17,7 @@ Questa è la pagina introduttiva per Java, che illustra le nozioni di base per t
 Per usare l'incorporamento di .NET con Java è necessario:
 
 * Java versione 1.8 o versione successiva
-* [Mono 5.0](http://www.mono-project.com/download/)
+* [Mono 5.0](https://www.mono-project.com/download/)
 
 Per Mac:
 
@@ -36,7 +31,7 @@ Per Windows:
 Per Android:
 
 * [Xamarin. Android 7.5](https://visualstudio.microsoft.com/xamarin/) o versione successiva
-* [Android Studio 3.x](https://developer.android.com/studio/index.html) con Java 1.8
+* [Android Studio 3.x](https://developer.android.com/studio/index.html) with Java 1.8
 
 È possibile usare [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/mac/) per modificare e compilare il C# codice.
 

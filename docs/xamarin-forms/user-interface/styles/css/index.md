@@ -8,12 +8,6 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: f84a6dac64300eb17a45576ae83f9b94208f5732
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831924"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Stile App xamarin. Forms con Cascading Style Sheets (CSS)
 
@@ -466,7 +460,7 @@ Una, due, tre o quattro `thickness` sono supportati i valori, separati da spazi 
 - Quattro valori indicano superiore, destro, quindi nella parte inferiore e quindi spessore a sinistra.
 
 > [!NOTE]
-> CSS `thickness` i valori sono diversi da XAML [ `Thickness` ](/api/type/Xamarin.Forms.Thickness/) valori. Ad esempio, in XAML, un valore di due `Thickness` indica lo spessore orizzontale e verticale, mentre un valore di quattro `Thickness` indica a sinistra, superiore e quindi a destra, quindi bottom spessore. Inoltre, XAML `Thickness` i valori sono delimitati da virgole.
+> CSS `thickness` i valori sono diversi da XAML [ `Thickness` ](xref:Xamarin.Forms.Thickness) valori. Ad esempio, in XAML, un valore di due `Thickness` indica lo spessore orizzontale e verticale, mentre un valore di quattro `Thickness` indica a sinistra, superiore e quindi a destra, quindi bottom spessore. Inoltre, XAML `Thickness` i valori sono delimitati da virgole.
 
 ### <a name="namedsize"></a>NamedSize
 

@@ -1,5 +1,5 @@
 ---
-title: È possibile connettersi a emulatori Android in esecuzione in un computer Mac da una macchina virtuale Windows?
+title: È possibile connettersi a emulatori Android in esecuzione in un Mac da una macchina virtuale Windows?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/21/2018
-ms.openlocfilehash: 6e66bf4edb4269aa0f3b765df4a08b78c128f763
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 35bfdb92ccfffe54f0ca10dc001d8919703a5bd8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115640"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668153"
 ---
-# <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>È possibile connettersi a emulatori Android in esecuzione in un computer Mac da una macchina virtuale Windows?
+# <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>È possibile connettersi a emulatori Android in esecuzione in un Mac da una macchina virtuale Windows?
 
 Per connettersi all'emulatore Android in esecuzione in un computer Mac da una macchina virtuale Windows, usare la procedura seguente:
 
@@ -35,9 +35,9 @@ Per connettersi all'emulatore Android in esecuzione in un computer Mac da una ma
     emulator6 94105 macuser   21u  IPv4 0xa8dacfb1d845a51f      0t0  TCP localhost:5554 (LISTEN)
     ```
 
-    La porta numero dispari è quello usato per connettersi a `adb`. Vedere anche [ http://developer.android.com/tools/devices/emulator.html#emulatornetworking ](http://developer.android.com/tools/devices/emulator.html#emulatornetworking).
+    La porta numero dispari è quello usato per connettersi a `adb`. Vedere anche [ https://developer.android.com/tools/devices/emulator.html#emulatornetworking ](https://developer.android.com/tools/devices/emulator.html#emulatornetworking).
 
-4.  _Opzione 1_: uso [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
+4.  _Opzione 1_: Usare [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
     per inoltrare i pacchetti TCP in ingresso ricevuto dall'esterno sulla porta 5555 (o qualsiasi altra porta desiderato) alla porta dispari nell'interfaccia di loopback (**127.0.0.1 5555** in questo esempio), e inoltrare i pacchetti in uscita di nuovo l'altro modo:
 
     ```bash
@@ -50,7 +50,7 @@ Per connettersi all'emulatore Android in esecuzione in un computer Mac da una ma
 
     (Opzione 1 è in genere più semplice rispetto a Option 2, soprattutto se **preferenze di sistema > sicurezza e Privacy > Firewall** è attivata.) 
 
-    _Opzione 2_: uso [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
+    _Opzione 2_: Usare [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
     Per reindirizzare i pacchetti TCP dalla porta `5555` (o qualsiasi altra porta desiderato) nella [connessione di rete condivisa](http://kb.parallels.com/en/4948) interfaccia per la porta dispari nell'interfaccia di loopback (`127.0.0.1:5555` in questo esempio):
 
     ```bash
@@ -95,7 +95,7 @@ Una certa cautela: se si usa la porta `5555` per la porta locale, `adb` consider
 
 ### <a name="alternate-technique-using-adb--h-is-not-yet-supported"></a>Tecnica alternativa usando `adb -H` non è ancora supportata
 
-In teoria, un altro approccio, è possibile usare `adb`della funzionalità predefinita per la connessione a un' `adb` server in esecuzione in un computer remoto (vedere ad esempio [ http://stackoverflow.com/a/18551325 ](http://stackoverflow.com/a/18551325)).
+In teoria, un altro approccio, è possibile usare `adb`della funzionalità predefinita per la connessione a un' `adb` server in esecuzione in un computer remoto (vedere ad esempio [ https://stackoverflow.com/a/18551325 ](https://stackoverflow.com/a/18551325)).
 Tuttavia, le estensioni dell'IDE di xamarin. Android non forniscono attualmente un modo per configurare tale opzione.
 
 ## <a name="contact-information"></a>Le informazioni di contatto

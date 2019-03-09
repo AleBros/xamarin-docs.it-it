@@ -1,19 +1,13 @@
 ---
-title: UrhoSharp - motore 3D/2D
-description: UrhoSharp è una multipiattaforma ad alto livello 2D e 3D motore può essere utilizzato per creare scene 2D e 3D animate per le applicazioni che usano le geometrie, materiali, luci e fotocamere.
+title: UrhoSharp - 3D/2D Engine
+description: 'UrhoSharp è una multipiattaforma ad alto livello 2D e 3D motore può essere utilizzato per creare scene 2D e 3D animate per le applicazioni che usano le geometrie, materiali, luci e fotocamere.'
 ms.prod: xamarin
 ms.assetid: E6C5B86C-3756-49DF-843B-0B3D981E1C01
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 8a3663a6fb0e9bfe3970bcca5769181fca34ae43
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "33920520"
 ---
-# <a name="urhosharp---3d2d-engine"></a>UrhoSharp - motore 3D/2D
+# <a name="urhosharp---3d2d-engine"></a>UrhoSharp - 3D/2D Engine
 
 _UrhoSharp è una multipiattaforma ad alto livello 2D e 3D motore può essere utilizzato per creare scene 2D e 3D animate per le applicazioni che usano le geometrie, materiali, luci e fotocamere._
 
@@ -33,17 +27,17 @@ In questo documento vengono descritti i concetti principali di UrhoSharp che uti
 
 Queste guide descrivono le istruzioni di installazione per Urho in ogni piattaforma di destinazione e descrivono come integrare Urho con le applicazioni di iOS e Android esistenti.
 
-## <a name="programming-urhosharp-with-fgraphics-gamesurhosharpfsharpmd"></a>[Programmazione di UrhoSharp con F #](~/graphics-games/urhosharp/fsharp.md)
+## <a name="programming-urhosharp-with-fgraphics-gamesurhosharpfsharpmd"></a>[Programmazione di UrhoSharp conF#](~/graphics-games/urhosharp/fsharp.md)
 
-Questa guida descrive in dettaglio la creazione di un semplice "Hello, World!" Soluzione di UrhoSharp con F # e Visual Studio per Mac.
+Questa guida descrive in dettaglio la creazione di un semplice "Hello, World!" Soluzione di UrhoSharp con F# e Visual Studio per Mac.
 
-## <a name="api-documentationhttpsdeveloperxamarincomapirooturho"></a>[Documentazione dell'API](https://developer.xamarin.com/api/root/Urho/)
+## <a name="api-documentationhttpsdeveloperxamarincomapirooturho"></a>[Documentazione delle API](https://developer.xamarin.com/api/root/Urho/)
 
 È possibile esplorare le [documentazione dell'API per UrhoSharp](https://developer.xamarin.com/api/root/Urho/) sul nostro sito web.
 
 ## <a name="samples"></a>Esempi
 
-Sono stati creati [esempi in GitHub](http://github.com/xamarin/urho-samples) illustrano l'uso di UrhoSharp.
+Sono stati creati [esempi in GitHub](https://github.com/xamarin/urho-samples) illustrano l'uso di UrhoSharp.
 
 - **FeatureSamples** Mostra più di 40 singoli esempi che illustrano le funzionalità specifiche di Urho.
 

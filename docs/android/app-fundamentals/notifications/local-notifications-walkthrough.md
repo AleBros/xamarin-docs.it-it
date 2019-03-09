@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 7cf1dde6c65d2971cecd0a59a2e11d6c2d50ee2a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e60ed6cc49921fc7b6e8e2616a6b0bf6f8abb401
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119189"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670090"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>Procedura dettagliata - uso delle notifiche locali in xamarin. Android
 
@@ -255,7 +255,7 @@ Quando si sceglie la notifica, deve essere nascosto e l'altra attività deve ess
 
 [![Seconda schermata di attività](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png#lightbox)
 
-La procedura è stata completata. A questo punto hai completato la procedura dettagliata di Android notifica locale e si dispone di un esempio funzionante che è possibile fare riferimento a. C'è molto più alle notifiche che sono stati mostrati in questo caso, pertanto, se si desiderano altre informazioni, dare un'occhiata [documentazione di Google in notifiche](http://developer.android.com/guide/topics/ui/notifiers/notifications.html).
+La procedura è stata completata. A questo punto hai completato la procedura dettagliata di Android notifica locale e si dispone di un esempio funzionante che è possibile fare riferimento a. C'è molto più alle notifiche che sono stati mostrati in questo caso, pertanto, se si desiderano altre informazioni, dare un'occhiata [documentazione di Google in notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
 
 ## <a name="summary"></a>Riepilogo

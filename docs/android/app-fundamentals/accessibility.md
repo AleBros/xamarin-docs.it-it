@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 3cce3270b9df2aad0037b1ab96f169cc4b564766
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: d004b753c89f3995e8dc511877bd115a894396fc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528130"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671624"
 ---
 # <a name="accessibility-on-android"></a>Accessibilità in Android
 
@@ -172,9 +172,9 @@ Nel layout XML, ad esempio gli attributi di accessibilità `hint` e `contentDesc
 Il vantaggio dell'archiviazione di testo in un file separato è che più traduzioni di lingua del file possono essere fornite nell'app. Vedere le [Guida di Android localizzazione](~/android/app-fundamentals/localization.md) per informazioni su come aggiungere file di stringhe localizzate in un progetto di applicazione.
 
 
-## <a name="testing-accessibility"></a>Verifica dell'accessibilità
+## <a name="testing-accessibility"></a>Test dell'accessibilità
 
-Seguire [questi passaggi](http://developer.android.com/training/accessibility/testing.html#how-to) abilitare TalkBack ed Esplora direttamente da Touch testare l'accessibilità nei dispositivi Android.
+Seguire [questi passaggi](https://developer.android.com/training/accessibility/testing.html#how-to) abilitare TalkBack ed Esplora direttamente da Touch testare l'accessibilità nei dispositivi Android.
 
 Potrebbe essere necessario installare [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) da Google Play se non viene visualizzato nelle **Impostazioni > accesso facilitato**.
 
@@ -182,4 +182,4 @@ Potrebbe essere necessario installare [TalkBack](https://play.google.com/store/a
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Accessibilità multipiattaforma](~/cross-platform/app-fundamentals/accessibility.md)
-- [API di Android accessibilità](http://developer.android.com/guide/topics/ui/accessibility/index.html)
+- [API di Android accessibilità](https://developer.android.com/guide/topics/ui/accessibility/index.html)

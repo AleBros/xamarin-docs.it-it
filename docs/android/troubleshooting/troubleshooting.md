@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: ccf5d97ff553fd304c4a3af158085d490bb665b7
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: b2f11bd09e1b1b3fd7af29a026229494a081ad11
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267599"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668556"
 ---
 # <a name="troubleshooting-tips"></a>Suggerimenti per la risoluzione dei problemi
 
@@ -77,7 +77,7 @@ Visual Studio per Mac scrive sempre i registri di distribuzione del dispositivo.
 ## <a name="android-debug-log-output"></a>Output del Log di Debug Android
 
 Android scriverà numero di messaggi per il [Log di Debug Android](~/android/deploy-test/debugging/android-debug-log.md).
-Xamarin. Android Usa le proprietà di sistema di Android per controllare la generazione di messaggi aggiuntivi nel log di Debug Android. Proprietà di sistema Android può essere impostata tramite il *setprop* comando all'interno di [Android Debug Bridge (adb)](http://developer.android.com/guide/developing/tools/adb.html):
+Xamarin. Android Usa le proprietà di sistema di Android per controllare la generazione di messaggi aggiuntivi nel log di Debug Android. Proprietà di sistema Android può essere impostata tramite il *setprop* comando all'interno di [Android Debug Bridge (adb)](https://developer.android.com/guide/developing/tools/adb.html):
 
 ```shell
 adb shell setprop PROPERTY_NAME PROPERTY_VALUE
@@ -91,7 +91,7 @@ Le proprietà di sistema vengono letti durante l'avvio del processo e pertanto d
 
 Xamarin. Android supporta le proprietà di sistema seguenti:
 
--   *debug.mono.Debug*: Se una stringa non vuota, ciò equivale a `*mono-debug*`.
+-   *debug.mono.debug*: Se una stringa non vuota, ciò equivale a `*mono-debug*`.
 
 -   *debug.mono.env*: Delimitato da barra verticale ('*|*') elenco delle variabili di ambiente durante l'avvio dell'applicazione, esportare *prima* mono è stato inizializzato. Ciò consente di impostare le variabili di ambiente che la registrazione mono di controllo.
 
@@ -106,13 +106,13 @@ Xamarin. Android supporta le proprietà di sistema seguenti:
 -   *debug.mono.log*: Separati da virgola ('*,*') elenco dei componenti che dovrebbe visualizzare messaggi aggiuntivi nel log di Debug Android. Per impostazione predefinita, viene effettuata alcuna impostazione. I componenti includono:
 
     -   *tutti i*: Stampare tutti i messaggi
-    -   *GC*: Stampare i messaggi relativi a GC.
+    -   *gc*: Stampare i messaggi relativi a GC.
     -   *gref*: Stampare i messaggi di allocazione e deallocazione di riferimento (vulnerabili e globali).
     -   *lref*: Stampare i messaggi di allocazione e deallocazione di riferimento locale.
 
     *Nota*: si tratta *estremamente* verbose. Non abilitare a meno che non è strettamente necessario.
 
--   *debug.mono.Trace*: Consente di impostare il [mono - trace](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` impostazione.
+-   *debug.mono.trace*: Consente di impostare il [mono - trace](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` impostazione.
 
 
 
@@ -327,7 +327,7 @@ Assicurarsi di usare il nome del simulatore corretta, vale a dire [il nome usato
 
 I nomi di pacchetto Android *devono* contengono un punto ('*.*'). Modificare il nome del pacchetto in modo che contenga un periodo.
 
--   All'interno di Visual Studio:
+-   Within Visual Studio:
     -   Fare clic con il pulsante destro del progetto > proprietà
     -   Fare clic sulla scheda manifesto Android a sinistra.
     -   Aggiornare il campo del nome del pacchetto.

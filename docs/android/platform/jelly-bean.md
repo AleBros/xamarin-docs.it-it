@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 9e83c9a8c1e2740596a981598cafbbfb65e2caf2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 24fc14b0342591c56f5bf91862b0d94759a42834
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119241"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670103"
 ---
 # <a name="jelly-bean-features"></a>Jelly Bean funzionalità
 
@@ -79,7 +79,7 @@ Come le `TimeAnimator` istanza è in esecuzione, verrà richiamato `ITimeAnimato
 
 ### <a name="application-stack-navigation"></a>Navigazione tramite applicazione Stack
 
-Android 4.1 migliora la navigazione dello stack dell'applicazione che è stato introdotto in Android 3.0. Specificando il `ParentName` proprietà del `ActivityAttribute`, Android è possibile aprire l'attività padre appropriata quando l'utente preme il [pulsante](http://developer.android.com/design/patterns/navigation.html#up-vs-back) sulla barra delle azioni - Android verrà creata un'istanza di attività specificata per il `ParentName`proprietà. Ciò consente alle applicazioni mantenere una gerarchia di attività che rendono una determinata attività.
+Android 4.1 migliora la navigazione dello stack dell'applicazione che è stato introdotto in Android 3.0. Specificando il `ParentName` proprietà del `ActivityAttribute`, Android è possibile aprire l'attività padre appropriata quando l'utente preme il [pulsante](https://developer.android.com/design/patterns/navigation.html#up-vs-back) sulla barra delle azioni - Android verrà creata un'istanza di attività specificata per il `ParentName`proprietà. Ciò consente alle applicazioni mantenere una gerarchia di attività che rendono una determinata attività.
 
 Per la maggior parte delle applicazioni impostando la `ParentName` sull'attività sono informazioni sufficienti per Android fornire il comportamento corretto per l'esplorazione dello stack dell'applicazione; Android verrà sintetizzare stack indietro necessari creando una serie di Intent per ogni attività padre. Tuttavia, poiché si tratta di uno stack di applicazioni artificiali, ogni attività sintetico non avrà lo stato salvato che potrebbe avere un'attività naturale. Per fornire lo stato salvato per un'attività padre sintetica, un'attività può eseguire l'override di `OnPrepareNavigationUpTaskStack` (metodo). Questo metodo riceve un `TaskStackBuilder` oggetti dell'istanza che disporrà di una raccolta di Intent che Android userà per creare lo stack indietro. L'attività può modificare questi Intent in modo che, quando viene creata l'attività sintetica, riceveranno le informazioni di stato appropriato.
 
@@ -145,11 +145,11 @@ mediaActionPlayer.Release();
 
 
 
-### <a name="connectivity"></a>connettività
+### <a name="connectivity"></a>Connettività
 
 
 
-#### <a name="android-beam"></a>Trasmetti Android
+#### <a name="android-beam"></a>Android Beam
 
 Trasmetti Android sono una tecnologia NFC basata che consente di comunicare tra loro i due dispositivi Android. Android 4.1 fornisce un supporto migliore per il trasferimento dei file di grandi dimensioni. Quando si usa il nuovo metodo `NfcAdapter.SetBeamPushUris()` Android passa tra i meccanismi di trasporto alternativo (ad esempio Bluetooth) per ottenere una velocità di trasferimento rapido.
 
@@ -186,7 +186,7 @@ In Jelly Bean, `WifiP2pManager` può individuare i dispositivi usando circostant
 
 
 
-### <a name="content-providers"></a>Provider di contenuti
+### <a name="content-providers"></a>Provider di contenuto
 
 Il `ContentResolver` classe ha ricevuto un nuovo metodo, `AcquireUnstableContentProvider`. Questo metodo consente a un'applicazione acquisire un provider di contenuti "instabile". In genere, quando un'applicazione acquisisca un provider di contenuti e gli arresti anomali di tale provider di contenuti, pertanto, sarà l'applicazione. Con questa chiamata al metodo, un'applicazione non viene interrotta se si blocca al provider di contenuti. Al contrario, `Android.OS.DeadObjectionException` verranno generate da chiamate nel provider di contenuti per informare un'applicazione che il provider di contenuti è stata chiusa. Un provider di contenuti "instabile" è utile quando si interagisce con i provider di contenuti da altre applicazioni, è meno probabile che un codice difettoso da un'altra applicazione avrà effetto su un'altra applicazione.
 
@@ -284,6 +284,6 @@ In questo articolo è verificato un errore per introdurre gli aggiornamenti per 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempio di animazione di tempo (esempio)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TimeAnimatorExample/)
-- [Android 4.1 le API](http://developer.android.com/about/versions/android-4.1.html)
-- [Le attività e stack indietro](http://developer.android.com/guide/components/tasks-and-back-stack.html)
-- [Navigazione con pulsanti Indietro e backup](http://developer.android.com/design/patterns/navigation.html)
+- [Android 4.1 le API](https://developer.android.com/about/versions/android-4.1.html)
+- [Le attività e stack indietro](https://developer.android.com/guide/components/tasks-and-back-stack.html)
+- [Navigazione con pulsanti Indietro e backup](https://developer.android.com/design/patterns/navigation.html)

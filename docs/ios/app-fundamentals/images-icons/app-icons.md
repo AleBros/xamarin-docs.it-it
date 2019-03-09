@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: ef8e694bc3c617774035ad5cf7902ca3f5b06813
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 51ccf3faa2524035a30b26af6652959699663e24
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118513"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672534"
 ---
 # <a name="application-icons-in-xamarinios"></a>Icone dell'applicazione xamarin. IOS
 
@@ -48,7 +48,7 @@ Le dimensioni di asset di immagini e le risoluzioni seguenti saranno necessarie 
     |---|---|
     |Icona dell'applicazione|180x180|
     |In primo piano|120x120|
-    |Impostazioni|87 x 87|
+    |Impostazioni|87x87|
 
 - **iPhone: iOS 7 e 8**
 
@@ -76,7 +76,7 @@ Le dimensioni di asset di immagini e le risoluzioni seguenti saranno necessarie 
     |In primo piano|120x120<sup>6</sup>|
     |Impostazioni|58x58<sup>5</sup>|
 
-- **iPad: iOS 7 e 8**
+- **iPad: iOS 7 & 8**
 
     ||1x|2x|
     |---|---|---|
@@ -212,4 +212,4 @@ Per specificare l'illustrazione di iTunes, seguire questa procedura:
 
 - [Utilizzo di immagini (esempio)](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Icona personalizzata e linee guida per la creazione di immagini](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))
+- [Icona personalizzata e linee guida per la creazione di immagini](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))

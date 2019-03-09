@@ -1,18 +1,13 @@
 ---
 title: Introduzione allo sviluppo di giochi con Xamarin
-description: Questo documento fornisce una panoramica generale dello sviluppo di gioco con Xamarin, che descrivono come devono essere apportati giochi e un campionamento di tecnologie disponibili per l'uso con xamarin. IOS e xamarin. Android.
+description: 'Questo documento fornisce una panoramica generale dello sviluppo di gioco con Xamarin, che descrivono come devono essere apportati giochi e un campionamento di tecnologie disponibili per l''uso con xamarin. IOS e xamarin. Android.'
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: d6e9fd03025e00da5cff5ed284bdc5f0f268a22b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122608"
 ---
+
 # <a name="introduction-to-game-development-with-xamarin"></a>Introduzione allo sviluppo di giochi con Xamarin
 
 Sviluppo di giochi può essere molto interessante, soprattutto considerando può essere facile per pubblicare il lavoro su piattaforme per dispositivi mobili. Questo articolo illustra i concetti e tecnologie correlate allo sviluppo di giochi che consenta di creare giochi, se l'obiettivo consiste nel creare una qualità AAA giochi o semplicemente al programma per divertimento.
@@ -25,12 +20,12 @@ Questo articolo illustra gli argomenti seguenti:
 - **Tecnologia per lo sviluppo di giochi** : qui sono elencati alcune delle tecnologie cross-platform disponibili che consentono di migliorare la produttività come uno sviluppatore di gioco.
 
 
-# <a name="game-vs-non-game-programming-concepts"></a>Visual Studio di giochi. Concetti di programmazione non di gioco
+## <a name="game-vs-non-game-programming-concepts"></a>Visual Studio di giochi. Concetti di programmazione non di gioco
 
 Lo spostamento in sviluppo di gioco per i programmatori spesso devono affrontare nuovi concetti e modelli di sviluppo. In questa sezione viene fornita una panoramica di alcuni di questi concetti.
 
 
-## <a name="the-game-loop"></a>Il ciclo del gioco
+### <a name="the-game-loop"></a>Il ciclo del gioco
 
 Un tipico gioco richiede costante spostamento o modifica per la causa del problema sullo schermo in risposta all'interazione dell'utente sia automatica per la logica del gioco. Questo risultato viene ottenuto tramite ciò che viene generalmente indicato come un *ciclo del gioco*. Un ciclo del gioco è un tipo di istruzione (ad esempio un ciclo while) che viene eseguito con una frequenza molto elevata, ad esempio 30 o 60 cicli *fotogrammi al secondo*.
 
@@ -54,7 +49,7 @@ I tipi di logica che può essere eseguita ogni frame comuni includono:
 Tenere presente che molte delle attività elencate in precedenza può modificare lo stato dell'intera applicazione, mentre molte app di gioco non tendono a cambiare lo stato in risposta a eventi generati.
 
 
-## <a name="content-loading-and-unloading"></a>Caricamento del contenuto e lo scaricamento
+### <a name="content-loading-and-unloading"></a>Caricamento del contenuto e lo scaricamento
 
 Contenuto manualmente il caricamento e scaricamento (o eliminazione) potrebbe essere necessari in base alla quale tecnologia si usa in fase di sviluppo. Manuale di caricamento e scaricamento di asset possono essere necessarie per una serie di motivi:
 
@@ -65,7 +60,7 @@ Contenuto manualmente il caricamento e scaricamento (o eliminazione) potrebbe es
 Formati di file personalizzato potrebbe essere necessario l'elaborazione in fase di caricamento, che richiedono il caricamento personalizzato codice.
 
 
-## <a name="math"></a>Math
+### <a name="math"></a>Math
 
 Molti giochi richiedono matematica più avanzata rispetto alle applicazioni non di gioco. Naturalmente, il livello dei calcoli matematici dipende dalla complessità del gioco. In genere giochi 3D richiedono ulteriori math rispetto a 2D. Fortunatamente è possibile iniziare sempre con semplici giochi e informazioni su consumo. Sviluppo di giochi può essere un ottimo modo per apprendere matematico.
 
@@ -82,14 +77,14 @@ Funzioni trigonometriche (ad esempio seno e il coseno) vengono comunemente usate
 Se si prevede di sviluppare un gioco 3D si sarà probabilmente necessario acquisire familiarità con i concetti di Algebra lineare (per la rotazione e spostamento nello spazio 3D), nonché alcuni calcolo (per l'implementazione di accelerazione).
 
 
-## <a name="content-pipelines"></a>Pipeline di contenuti
+### <a name="content-pipelines"></a>Pipeline di contenuti
 
 Il termine *pipeline di contenuti* si riferisce al processo che un file necessario per ottenere dal rispettivo formato quando creato (ad esempio un file di immagine PNG) nel relativo formato finale quando utilizzato in un gioco. Il formato finale dipende sul quale contenuto viene usato il tipo, nonché quale tecnologia viene usata per presentare il contenuto.
 
 Alcuni le pipeline di contenuti possono essere molto veloci e richiedono un intervento manuale. Ad esempio, la maggior parte dei motori di gioco e le API possono caricare il formato di file con estensione png nel relativo formato non elaborato. D'altra parte, potrebbe essere necessario più complicati formati (ad esempio, modelli 3D) da elaborare in un formato diverso prima in fase di caricamento e l'elaborazione può richiedere alcuni minuti a seconda delle dimensioni e la complessità dell'asset.
 
 
-# <a name="game-development-teams"></a>Team di sviluppo di giochi
+## <a name="game-development-teams"></a>Team di sviluppo di giochi
 
 Sviluppo di giochi introduce nuovi ruoli e i titoli per gli utenti coinvolti nel processo. La maggior parte degli sviluppatori di giochi non sono in grado di soddisfare l'ampia gamma di competenze necessarie per rilasciare un gioco completo, in modo che esiste un numero di discipline. Tenere presente che questo non è un elenco completo delle aree di sviluppo-solo alcune delle più comuni.
 
@@ -100,7 +95,7 @@ Sviluppo di giochi introduce nuovi ruoli e i titoli per gli utenti coinvolti nel
 - **Finestra di progettazione di suoni** – audio finestre di progettazione sono responsabili per gli asset audio del gioco. Alcuni team può distinguere tra personale responsabile della creazione di effetti sonori e biografie, anche se i team più piccoli possono avere un singolo utente responsabile per tutti i file audio.
 
 
-# <a name="creating-a-game-idea"></a>Creazione di un'Idea del gioco
+## <a name="creating-a-game-idea"></a>Creazione di un'Idea del gioco
 
 Progettazione di un gioco risulti facili da eseguire altre operazioni dopo che tutti l'unico requisito è "lo qualificano divertente". Sfortunatamente, molti sviluppatori trovano in perdita quando giunge il momento di creare un'idea dal quale avviare lo sviluppo.
 
@@ -115,12 +110,12 @@ Un'altra tecnica per la generazione di nuove idee consiste nel considerare un ge
 Per rieseguire giochi esistenti è anche un'esperienza di apprendimento, anche se tale condizione può limitare la vitalità commerciale del prodotto finito. Il processo di creazione di un gioco, anche uno che è un clone accurato, offre un'esperienza didattico preziosa.
 
 
-# <a name="game-development-technology"></a>Tecnologia di sviluppo di giochi
+## <a name="game-development-technology"></a>Tecnologia di sviluppo di giochi
 
 Gli sviluppatori che usano xamarin. Android e xamarin. IOS hanno una vasta gamma di tecnologie disponibili per facilitare lo sviluppo di giochi. In questa sezione verrà illustrate alcune delle più diffuse soluzioni multipiattaforma.
 
 
-## <a name="cocossharp"></a>CocosSharp
+### <a name="cocossharp"></a>CocosSharp
 
 CocosSharp è una versione open source e multipiattaforma del motore di gioco 2D Cocos. Il modulo di gestione fornisce l'accesso per Android, iOS, Mac OS X, Windows Desktop, Windows RT e Windows Phone.
 
@@ -135,7 +130,7 @@ Il gioco Ninjas pecora viene creato con CocosSharp e può essere un buon punto d
 È possibile scaricarlo e ottenere altre informazioni, vedere la [pagina AngryNinjas Github](https://github.com/xamarin/AngryNinjas).
 
 
-## <a name="monogame"></a>MonoGame
+### <a name="monogame"></a>MonoGame
 
 MonoGame è un open-source, multipiattaforma versione della piattaforma dell'API di Microsoft XNA. MonoGame è utilizzabile per creare giochi per iOS, Android, Mac OS X, Linux, Windows, Windows RT, PS4, PSVita, Xbox One e commutatore.
 
@@ -156,7 +151,7 @@ Bastion:
 Per iniziare a lavorare con MonoGame, passare a nostro [Guide MonoGame](~/graphics-games/monogame/index.md).
 
 
-## <a name="urhosharp"></a>UrhoSharp
+### <a name="urhosharp"></a>UrhoSharp
 
 UrhoSharp è una multipiattaforma ad alto livello 2D e 3D motore può essere utilizzato per creare scene 2D e 3D animate per le applicazioni che usano le geometrie, materiali, luci e fotocamere.
 
@@ -164,18 +159,13 @@ UrhoSharp è una multipiattaforma ad alto livello 2D e 3D motore può essere uti
 
 Consultare il [guide di UrhoSharp](~/graphics-games/urhosharp/index.md) per iniziare.
 
-## <a name="additional-technology"></a>Tecnologie aggiuntive
+### <a name="additional-technology"></a>Tecnologie aggiuntive
 
 Le tecnologie evidenziate sopra è solo un esempio delle tecnologie disponibili. Altre tecnologie rilevanti includono:
 
-- **Spritekit** : Xamarin offre supporto per framework gioco Spritekit, Apple che consente di accedere a tutte le funzionalità dell'API native. Poiché Spritekit è la tecnologia di Apple, offre una stretta integrazione con il resto dell'ecosistema di iOS. Naturalmente, Spritekit non lo sviluppo multipiattaforma in modo che non può essere usato in Android. Per altre informazioni sull'uso Spritekit, vedere questo post di:  [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
-- **Scenekit** : Xamarin offre inoltre supporto per framework di Scenekit Apple, che semplifica l'implementazione di grafica 3D nelle App iOS. Scenekit è anche la tecnologia fornita da Apple, pertanto dispone di integrazione e considerazioni specifiche della piattaforma indicato in precedenza per Spritekit. Per altre informazioni sul Kit di scena, vedere questo post di: [http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
+- **Spritekit** : Xamarin offre supporto per framework gioco Spritekit, Apple che consente di accedere a tutte le funzionalità dell'API native. Poiché Spritekit è la tecnologia di Apple, offre una stretta integrazione con il resto dell'ecosistema di iOS. Naturalmente, Spritekit non lo sviluppo multipiattaforma in modo che non può essere usato in Android. Per altre informazioni sull'uso Spritekit, vedere questo post di:  [https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
+- **Scenekit** : Xamarin offre inoltre supporto per framework di Scenekit Apple, che semplifica l'implementazione di grafica 3D nelle App iOS. Scenekit è anche la tecnologia fornita da Apple, pertanto dispone di integrazione e considerazioni specifiche della piattaforma indicato in precedenza per Spritekit. Per altre informazioni sul Kit di scena, vedere questo post di: [https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
 - **OpenTK –** OpenTK (che è l'acronimo di Open Tool Kit) offre accesso OpenGL a basso livello per iOS, Apple e Mac hardware. Per altre informazioni su OpenTK, vedere la pagina principale in:  [http://www.opentk.com/](http://www.opentk.com/)
-
-
-# <a name="summary"></a>Riepilogo
-
-Questo articolo illustra i concetti principali di sviluppo di giochi e fornisce informazioni su come iniziare a creare il tuo primo gioco. Dopo aver completato questo articolo, i passaggi successivi sono per scegliere la tecnologia e iniziare a lavorare tramite la serie di esercitazioni collegate in appropriati nelle sezioni precedenti.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

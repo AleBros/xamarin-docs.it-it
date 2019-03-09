@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 7bef5de57b7ac709ebab4c39feedbec369e6bd14
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b1303f21225d3ae7b7d3a796e4845afbfe554a22
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122426"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667711"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Requisiti e installazione di cartelle di lavoro
 
@@ -105,8 +105,8 @@ Se si verificano problemi di connessione cartella di lavoro di Android o iOS e s
 - Android: Verificare che si utilizza un x86 dell'emulatore
 - Android: Piattaforma emulatore si sta usando? Emulatore Google?
   Emulatore Android di Visual Studio? Xamarin Android Player?
-- iOS in Windows: quale versione di Xamarin REMOTED iOS Simulator è installato (controllare **Aggiungi/Rimuovi programmi** nelle **Pannello di controllo**)?
-- iOS in Windows: inviare anche le informazioni sulla versione della piattaforma per l'host di compilazione Mac
+- iOS in Windows: Quale versione di Xamarin REMOTED iOS Simulator è installato (controllare **Aggiungi/Rimuovi programmi** nelle **Pannello di controllo**)?
+- iOS in Windows: Specificare anche le informazioni sulla versione della piattaforma per l'host di compilazione Mac
 - Il dispositivo dispone di connettività di rete (controllo tramite web browser)?
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
@@ -160,5 +160,5 @@ A causa di un bug in programmi di installazione precedente, non è possibile eff
 
 Effettuare il downgrade da 1.4 o versione successiva a 1.3.2 o versioni precedenti:
 
-1. [Disinstallare Workbooks e Inspector manualmente](#macOS)
+1. [Disinstallare Workbooks e Inspector manualmente](#uninstall-macos)
 2. Eseguire il 1.3.2 o versioni precedenti `.pkg` programma di installazione

@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 16ef0d5a309281767f0fff27436dd5bec322169d
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: e71e79b58d912ecb697576e92ae921a848f24f4c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527391"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671169"
 ---
 # <a name="alternate-resources"></a>Risorse alternative
 
 Risorse alternative sono le risorse destinate a una configurazione di runtime, ad esempio la lingua corrente, dimensioni dello schermo particolare o densità in pixel o un dispositivo specifico. Se Android può corrispondere a una risorsa che è più specifica per un determinato dispositivo o la configurazione della risorsa predefinita, verrà invece usata tale risorsa. Se non trova un'altra risorsa che corrisponde alla configurazione corrente, quindi le risorse predefinite verranno caricate. Come Android decide quali risorse verranno utilizzate da un'applicazione verrà trattata più dettagliatamente di seguito, nella sezione di percorso della risorsa
 
-Risorse alternative sono organizzate come una sottodirectory all'interno della cartella di risorse in base al tipo di risorsa, proprio come le risorse predefinite. Il nome della sottodirectory risorsa alternativo è nel formato: _ResourceType_-_qualificatore_
+Risorse alternative sono organizzate come una sottodirectory all'interno della cartella di risorse in base al tipo di risorsa, proprio come le risorse predefinite. Il nome della sottodirectory risorsa alternativo è nel formato: _ResourceType_-_Qualifier_
 
 *Qualificatore* è un nome che identifica una configurazione del dispositivo specifico.
 Potrebbero esserci più di un qualificatore in un nome, ognuno di essi separati da un trattino. Ad esempio, la schermata seguente mostra un semplice progetto che dispone di risorse alternative per le varie configurazioni, ad esempio le impostazioni locali, densità dello schermo, dimensioni dello schermo e l'orientamento:
@@ -43,10 +43,10 @@ Le regole seguenti si applicano quando si aggiungono i qualificatori a un tipo d
 
 I qualificatori possibili sono elencati di seguito per riferimento:
 
-- **MCC e MNC** &ndash; le [codice paese mobile](http://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) e, facoltativamente, il [codice rete mobile](http://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). La scheda SIM fornirà MCC, mentre il dispositivo è connesso alla rete fornirà le MNC. Sebbene sia possibile alle impostazioni locali di destinazione usando il codice paese mobile, l'approccio consigliato consiste nell'usare il qualificatore della lingua specificato di seguito. Ad esempio, per le risorse di destinazione per la Germania, il qualificatore sarebbe `mcc262`. Per le risorse di destinazione per dispositivi mobili T negli Stati Uniti, il qualificatore è `mcc310-mnc026`.
+- **MCC e MNC** &ndash; le [codice paese mobile](https://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) e, facoltativamente, il [codice rete mobile](https://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). La scheda SIM fornirà MCC, mentre il dispositivo è connesso alla rete fornirà le MNC. Sebbene sia possibile alle impostazioni locali di destinazione usando il codice paese mobile, l'approccio consigliato consiste nell'usare il qualificatore della lingua specificato di seguito. Ad esempio, per le risorse di destinazione per la Germania, il qualificatore sarebbe `mcc262`. Per le risorse di destinazione per dispositivi mobili T negli Stati Uniti, il qualificatore è `mcc310-mnc026`.
   Per un elenco completo dei codici di rete per dispositivi mobili e i codici paese per dispositivi mobili vedere <http://mcc-mnc.com/>.
 
-- **Linguaggio** &ndash; di due lettere [codice ISO 639-1 language](http://en.wikipedia.org/wiki/ISO_639-1) e facoltativamente seguito da due lettere [paese ISO 3166-alpha 2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
+- **Linguaggio** &ndash; di due lettere [codice ISO 639-1 language](https://en.wikipedia.org/wiki/ISO_639-1) e facoltativamente seguito da due lettere [paese ISO 3166-alpha 2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
   Se vengono forniti entrambi qualificatori, quindi sono separati da un `-r`. Ad esempio, per le impostazioni locali di destinazione francese quindi il qualificatore di `fr` viene usato. Come destinazione le impostazioni locali del francese canadese li, il `fr-rCA` verrebbe utilizzato. Per un elenco completo dei codici di lingua e i codici di area, vedere [codici per la rappresentazione dei nomi delle lingue](http://www.loc.gov/standards/iso639-2/php/English_list.php) e [elementi di codice e i nomi di paese](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm).
 
 - **Larghezza minima** &ndash; specifica la larghezza minima dell'applicazione deve eseguire in. Illustrate in dettaglio nelle [creazione di risorse per schermi diversi](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
@@ -123,7 +123,7 @@ I qualificatori possibili sono elencati di seguito per riferimento:
 -  **Versione della piattaforma (livello API)** &ndash; a livello di API supportato dal dispositivo nel formato v*N*, dove *N* è il livello API di destinazione. Ad esempio, sarà destinato a un livello di API 11 (Android 3.0) v11 dispositivo.
 
 
-Per informazioni più complete sulle risorse vedere qualificatori [fornendo risorse](http://developer.android.com/guide/topics/resources/providing-resources.html) sul sito Web gli sviluppatori per Android.
+Per informazioni più complete sulle risorse vedere qualificatori [fornendo risorse](https://developer.android.com/guide/topics/resources/providing-resources.html) sul sito Web gli sviluppatori per Android.
 
 
 ## <a name="how-android-determines-what-resources-to-use"></a>Come Android determina le risorse da usare

@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
-ms.date: 3/27/2018
-ms.openlocfilehash: a93503762528885dfc7d3b5400bf4ec716ea9fab
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 03/27/2018
+ms.openlocfilehash: 86abe932e9c244e1a959042cfc995bc184f89cc9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056214"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671286"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Estensioni di Markup XAML
 
@@ -403,7 +403,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Si noti che la parola chiave `clr-namespace` è seguita da due punti e quindi il nome dello spazio dei nomi .NET, seguito da un punto e virgola, la parola chiave `assembly`, un segno di uguale e il nome dell'assembly.
 
-Sì, seguono i due punti `clr-namespace` ma segno di uguale seguito `assembly`. La sintassi è stata definita in questo modo deliberatamente: le dichiarazioni dello spazio dei nomi XML più fare riferimento a un URI che inizia come un nome di schema URI `http`, che è sempre seguito da due punti. Il `clr-namespace` parte di questa stringa consente di simulare tale convenzione.
+Sì, seguono i due punti `clr-namespace` ma segno di uguale seguito `assembly`. La sintassi è stata definita in questo modo deliberatamente: La maggior parte delle dichiarazioni di spazi dei nomi XML di fare riferimento a un URI che inizia come un nome di schema URI `http`, che è sempre seguito da due punti. Il `clr-namespace` parte di questa stringa consente di simulare tale convenzione.
 
 Entrambe queste dichiarazioni dello spazio dei nomi inclusi nel **StaticConstantsPage** esempio. Si noti che il `BoxView` dimensioni sono impostate su `Math.PI` e `Math.E`, ma in scala di un fattore pari a 100:
 
@@ -547,7 +547,7 @@ Di seguito è riportato un esempio:
 </ContentPage>
 ```
 
-Forse la lezione più importante da eseguire da questo esempio è riportata la sintassi dell'estensione di markup: virgolette non deve essere racchiuso tra parentesi graffe in un'estensione di markup. Quando si digita l'estensione di markup in un file XAML, è naturale a racchiuderlo tra virgolette i valori delle proprietà. Resistere alla tentazione!
+Probabilmente la lezione più importante da eseguire da questo esempio è la sintassi dell'estensione di markup: Virgolette non deve essere racchiuso tra parentesi graffe in un'estensione di markup. Quando si digita l'estensione di markup in un file XAML, è naturale a racchiuderlo tra virgolette i valori delle proprietà. Resistere alla tentazione!
 
 Ecco il programma in esecuzione:
 

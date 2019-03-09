@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
-ms.openlocfilehash: 4258eca8e18229420ceb043a010c896137187653
-ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
+ms.openlocfilehash: 7834b87687db8fd1a3d51a40a4657b24e46bac17
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240383"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670402"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizzatore anteprima XAML per xamarin. Forms
 
@@ -21,7 +21,7 @@ _Vedere i layout di xamarin. Forms viene eseguito il rendering durante la digita
 
 ## <a name="requirements"></a>Requisiti
 
-I progetti richiedono il pacchetto NuGet di xamarin. Forms più recente per il Visualizzatore anteprima XAML a funzionare. Richiede la visualizzazione in anteprima le app Android [JDK 1.8 x64](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+I progetti richiedono il pacchetto NuGet di xamarin. Forms più recente per il Visualizzatore anteprima XAML a funzionare. Richiede la visualizzazione in anteprima le app Android [JDK 1.8 x64](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Altre informazioni, è il [note sulla versione](https://developer.xamarin.com/releases/studio/xamarin.studio_6.2/xamarin.studio_6.2/#Xamarin_Forms_Previewer).
 

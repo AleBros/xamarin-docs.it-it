@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
-ms.openlocfilehash: be6154631b8b51ec61feb4c713d925ff30505b7d
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: d307c128826775e6d4f7129c79e17522e7e05d6a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831755"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671572"
 ---
 # <a name="xaml-namespaces-in-xamarinforms"></a>Spazi dei nomi XAML in xamarin. Forms
 
@@ -50,6 +50,9 @@ La tabella seguente descrive il `x` attributi dello spazio dei nomi supportati d
 |`x:TypeArguments`|Specifica gli argomenti di tipo generico per il costruttore di un tipo generico.|
 
 Per altre informazioni sul `x:DataType` dell'attributo, vedere [associazioni compilate](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md). Per altre informazioni sul `x:FieldModifier` dell'attributo, vedere [modificatori di campo](~/xamarin-forms/xaml/field-modifiers.md). Per altre informazioni sul `x:Arguments`, `x:FactoryMethod`, e `x:TypeArguments` attributi, vedere [passando gli argomenti in XAML](~/xamarin-forms/xaml/passing-arguments.md).
+
+> [!NOTE]
+> Oltre agli attributi dello spazio dei nomi sopra elencati, xamarin. Forms include anche le estensioni di markup che possono essere utilizzate tramite il `x` prefisso dello spazio dei nomi. Per altre informazioni, vedere [utilizzano le estensioni di Markup XAML](~/xamarin-forms/xaml/markup-extensions/consuming.md).
 
 In XAML, le dichiarazioni dello spazio dei nomi ereditano da elemento padre all'elemento figlio. Pertanto, quando si definisce uno spazio dei nomi nell'elemento radice di un file XAML, tutti gli elementi all'interno del file ereditano la dichiarazione dello spazio dei nomi.
 

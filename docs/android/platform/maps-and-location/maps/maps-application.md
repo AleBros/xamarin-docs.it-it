@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: cd80154602cc22668768fe217da7371b77ded003
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fa32783617fce99514560677184f17be904cd42d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112381"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670324"
 ---
 # <a name="launching-the-maps-application"></a>L'avvio dell'applicazione di mappe
 
@@ -42,7 +42,7 @@ Il codice precedente usato lo schema geografico per creare un URI. Questo schema
 
 -   `geo:latitude,longitude` &ndash; Apre l'applicazione mappe centrato nella forma di/lon lat. 
 
--   `geo:latitude,longitude?z=zoom` &ndash; Consente di aprire le mappe applicazione centrati nella forma di/lon lat e aver fatto zoom avanti al livello specificato. Il livello di zoom può variare da 1 a 23: 1 consente di visualizzare la terra intera e 23 è il livello di zoom più vicino.
+-   `geo:latitude,longitude?z=zoom` &ndash; Consente di aprire le mappe applicazione centrati nella forma di/lon lat e aver fatto zoom avanti al livello specificato. Il livello di zoom può variare da 1 a 23: 1 mostra la terra intera e 23 è il livello di zoom più vicino.
 
 -   `geo:0,0?q=my+street+address` &ndash; Apre l'applicazione esegue il mapping al percorso di un indirizzo. 
 
@@ -55,7 +55,7 @@ Le versioni dell'URI che accetta una query (vale a dire la stradali indirizzo o 
 
 
 
-Per altre informazioni su schemi URI geografica, vedere [Mostra una posizione in una mappa](http://developer.android.com/guide/components/intents-common.html#Maps).
+Per altre informazioni su schemi URI geografica, vedere [Mostra una posizione in una mappa](https://developer.android.com/guide/components/intents-common.html#Maps).
 
 
 ## <a name="street-view"></a>Visualizzazione stradale

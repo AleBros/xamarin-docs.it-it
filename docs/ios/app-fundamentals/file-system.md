@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/12/2018
-ms.openlocfilehash: 38422682849de60a3f43e513ef48011d32b030ef
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.openlocfilehash: 09e05fcfe10a994e14aa605b203ea67efae80d62
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579869"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672625"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Accesso al file system in xamarin. IOS
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/FileSystemSampleCode/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/FileSystemSampleCode/)
 
-È possibile usare xamarin. IOS e il `System.IO` le classi di *libreria di classi Base (BCL) .NET* per accedere al file system iOS. Il `File` classe consente di creare, eliminare e leggere i file e il `Directory` classe consente di creare, eliminare o enumerare il contenuto delle directory. È anche possibile usare `Stream` sottoclassi, che possono fornire un livello maggiore di controllo sulle operazioni di file (ad esempio, cercare la compressione o la posizione all'interno di un file).
+È possibile usare xamarin. IOS e il `System.IO` le classi di *libreria di classi Base (BCL) .NET* per accedere al file system iOS. La classe `File` consente di creare, eliminare e leggere i file e la classe `Directory` consente di creare, eliminare o enumerare il contenuto delle directory. È anche possibile usare `Stream` sottoclassi, che possono fornire un livello maggiore di controllo sulle operazioni di file (ad esempio, cercare la compressione o la posizione all'interno di un file).
 
 iOS impone alcune limitazioni sulle funzionalità di un'applicazione con il file system per mantenere la sicurezza dei dati di un'applicazione e per proteggere gli utenti dalle App maligni. Queste restrizioni fanno parte del *dell'applicazione Sandbox* : un set di regole che limita l'accesso di un'applicazione a file, le preferenze, risorse di rete, hardware, e così via. Un'applicazione è limitata alla lettura e scrittura di file all'interno di relativa home directory (percorso di installazione); non può accedere a file dell'applicazione.
 
@@ -357,5 +357,5 @@ Questo articolo ha illustrato che operazioni del file system con xamarin. IOS so
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Codice di esempio del file System](https://developer.xamarin.com/samples/FileSystemSampleCode/)
-- [Guida alla programmazione di file System](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
-- [Registra il File di tipi supportata dall'App](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)
+- [Guida alla programmazione di file System](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
+- [Registra il File di tipi supportata dall'App](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)

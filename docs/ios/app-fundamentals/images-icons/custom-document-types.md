@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/23/2017
-ms.openlocfilehash: 51abd00f9a21b702811bb3897f273deff54f7d01
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 155847b4f5f6b3e6070f1afb6219db2d3789a075
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110485"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668465"
 ---
 # <a name="custom-document-icons-in-xamarinios"></a>Icone personalizzate dei documenti in xamarin. IOS
 
@@ -44,11 +44,11 @@ Scegliere il **Aggiungi tipo di documento** pulsante e compilare i campi obbliga
 -----
 
 
-Per altre informazioni sui tipi di documenti, vedere di Apple [riferimento a identificatori di tipo Uniform](http://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) e [gli argomenti di programmazione del documento interazione per iOS](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
+Per altre informazioni sui tipi di documenti, vedere di Apple [riferimento a identificatori di tipo Uniform](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) e [gli argomenti di programmazione del documento interazione per iOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Utilizzo di immagini (esempio)](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Icona personalizzata e linee guida per la creazione di immagini](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)
+- [Icona personalizzata e linee guida per la creazione di immagini](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

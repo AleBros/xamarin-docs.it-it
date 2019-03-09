@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 60751437b891579c97acee0e032defcca2b510f6
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 6a12d157b3de7c3841f5d69d209c01fbc612f79b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233861"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668738"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introduzione alla funzionalità Touch 3D in xamarin. IOS
 
@@ -86,7 +86,7 @@ Se l'utente preme più difficile, dovrà immettere la vista messaggio normale (c
 
 ### <a name="checking-for-3d-touch-availability"></a>Controllo per la disponibilità di funzionalità Touch 3D
 
-Quando si lavora con un [UIViewController]() è possibile usare il codice seguente per verificare se il dispositivo iOS viene eseguita l'app supporta funzionalità Touch 3D:
+Quando si lavora con un `UIViewController` è possibile usare il codice seguente per verificare se il dispositivo iOS viene eseguita l'app supporta funzionalità Touch 3D:
 
 ```csharp
 public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
@@ -101,7 +101,7 @@ public override void TraitCollectionDidChange(UITraitCollection previousTraitCol
         ...
 ```
 
-Questo metodo può essere chiamato prima *o successiva* `ViewDidLoad()`. 
+Questo metodo può essere chiamato prima *o successiva* `ViewDidLoad()`.
 
 ### <a name="handling-peek-and-pop"></a>Visualizza la gestione e POP
 
@@ -281,7 +281,7 @@ Di seguito viene definita due elementi di azione rapida statici con le chiavi se
 * `UIApplicationShortcutItemType` -È un valore stringa che verrà usato per identificare l'elemento nell'app. Per altre informazioni, vedere la sezione successiva.
 
 > [!IMPORTANT]
-> Rapido azione di scelta rapida che viene impostate nel `Info.plist` non è possibile accedere al file con il `Application.ShortcutItems` proprietà. Vengono passati solo al `HandleShortcutItem` gestore dell'evento. 
+> Rapido azione di scelta rapida che viene impostate nel `Info.plist` non è possibile accedere al file con il `Application.ShortcutItems` proprietà. Vengono passati solo al `HandleShortcutItem` gestore dell'evento.
 
 
 

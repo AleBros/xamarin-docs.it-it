@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: bbc764adc204a1f5b9ef4674a183473995be55c1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 45e625b28bbdf0009b5cfcf661b00ce17638771d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115159"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667230"
 ---
 # <a name="gridlayout"></a>GridLayout
 
@@ -245,6 +245,6 @@ Questa operazione comporta un layout per la `TextViews` che è simile al layout 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [GridLayoutDemo (esempio)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ICS_Samples/GridLayoutDemo/)
+- [GridLayoutDemo (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ICS_Samples/GridLayoutDemo/)
 - [Introduzione a Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Piattaforma Android 4.0](http://developer.android.com/sdk/android-4.0.html)
+- [Piattaforma Android 4.0](https://developer.android.com/sdk/android-4.0.html)

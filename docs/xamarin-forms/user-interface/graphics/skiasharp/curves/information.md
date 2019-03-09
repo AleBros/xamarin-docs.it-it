@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2017
-ms.openlocfilehash: 98975d51c31b8e8c52d184c631194388cd6cfa87
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: b5d32f486b45005534adc8929caf6158d1c62a4b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053900"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671403"
 ---
 # <a name="path-information-and-enumeration"></a>Informazioni sui tracciati ed enumerazione
 
@@ -24,7 +24,7 @@ Il [ `SKPath` ](xref:SkiaSharp.SKPath) classe definisce diverse proprietà e met
 
 È talvolta utile determinare la lunghezza totale di tutte le linee e curve che costituiscono un percorso. Calcolare la lunghezza non è un'attività semplice modo algoritmico, in modo che un'intera classe denominata [ `PathMeasure` ](xref:SkiaSharp.SKPathMeasure) è dedicato ad esso.
 
-È anche talvolta utile ottenere tutte le operazioni e punti che compongono un percorso di disegno. Inizialmente, questa funzionalità potrebbe sembrare non necessaria: se il programma ha creato il percorso, il programma è già noto il contenuto. Tuttavia, si è visto che i percorsi possono essere creati anche da [effetti per il tracciato](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) e dalla conversione [stringhe di testo in tracciati](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md). È anche possibile ottenere tutte le operazioni e punti che compongono queste percorsi di disegno. Una possibilità è per applicare una trasformazione algoritmica per tutti i punti, ad esempio, per disporre testo intorno a un emisfero:
+È anche talvolta utile ottenere tutte le operazioni e punti che compongono un percorso di disegno. Inizialmente, questa funzionalità potrebbe sembrare non necessaria: Se il programma ha creato il percorso, il programma conosce già il contenuto. Tuttavia, si è visto che i percorsi possono essere creati anche da [effetti per il tracciato](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) e dalla conversione [stringhe di testo in tracciati](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md). È anche possibile ottenere tutte le operazioni e punti che compongono queste percorsi di disegno. Una possibilità è per applicare una trasformazione algoritmica per tutti i punti, ad esempio, per disporre testo intorno a un emisfero:
 
 ![](information-images/pathenumerationsample.png "Testo disposto su un emisfero")
 
@@ -140,7 +140,7 @@ Il **Pipe con metà del monociclo si trova** pagina consente di animare una figu
 
 [![](information-images/unicyclehalfpipe-small.png "Tripla screenshot della pagina del monociclo si trova Pipe con metà")](information-images/unicyclehalfpipe-large.png#lightbox "tripla screenshot della pagina di Pipe con metà del monociclo si trova")
 
-Il `SKPaint` oggetto utilizzato per che traccia la metà-pipe sia del monociclo si trova è definito come un campo il [ `UnicycleHalfPipePage` ]() classe. È anche definito il `SKPath` oggetto per del monociclo si trova:
+Il `SKPaint` oggetto utilizzato per che traccia la metà-pipe sia del monociclo si trova è definito come un campo il `UnicycleHalfPipePage` classe. È anche definito il `SKPath` oggetto per del monociclo si trova:
 
 ```csharp
 public class UnicycleHalfPipePage : ContentPage
@@ -253,7 +253,7 @@ In alcuni casi è preferibile applicare un algoritmico trasformarlo in un percor
 
 La maggior parte di queste lettere sono costituiti da linee rette, ma tali linee rette hanno stati twisted apparentemente in curve. Come è possibile?
 
-La chiave è che le linee rette originale sono suddivisi in una serie di linee rette più piccole. Quindi queste singole linee rette più piccole possono essere modificate in modi diversi in modo da formare una curva. 
+La chiave è che le linee rette originale sono suddivisi in una serie di linee rette più piccole. Quindi queste singole linee rette più piccole possono essere modificate in modi diversi in modo da formare una curva.
 
 Per facilitare questo processo, il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) esempio contiene un valore statico [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) classe con un `Interpolate` metodo che suddivide un linea retta in numerose le righe brevi che sono solo un'unità di lunghezza. Inoltre, la classe contiene diversi metodi che convertono i tre tipi di curve di Bézier in una serie di linee rette piccole dimensioni che si avvicinano della curva. (Nell'articolo sono state presentate le formule parametriche [ **tre tipi di curve di Bézier**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) Questo processo è detto _bidimensionalità_ curva:
 

@@ -1,19 +1,19 @@
 ---
-title: Uso di librerie Native
+title: Uso di librerie native
 ms.prod: xamarin
 ms.assetid: 7AA6CEC8-C09E-BBDA-FDD6-E40559143548
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 0df39dc51cf17e1b9ecfd2279d047020f0237cb6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1195685db9e85e7fba006272ef300e22d47d1fa6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123092"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666367"
 ---
-# <a name="using-native-libraries"></a>Uso di librerie Native
+# <a name="using-native-libraries"></a>Uso di librerie native
 
 Xamarin. Android supporta l'uso di librerie native tramite il meccanismo standard di PInvoke. È anche possibile raggruppare le librerie native aggiuntive che non fanno parte del sistema operativo nel file con estensione apk.
 
@@ -40,7 +40,7 @@ In alternativa, è possibile modificare il file di progetto per specificare in m
 </ItemGroup>
 ```
 
-Per altre informazioni sull'uso di librerie native, vedere [interoperabilità con le librerie native](http://www.mono-project.com/docs/advanced/pinvoke/).
+Per altre informazioni sull'uso di librerie native, vedere [interoperabilità con le librerie native](https://www.mono-project.com/docs/advanced/pinvoke/).
 
 ## <a name="debugging-native-code-with-visual-studio-2017"></a>Debug del codice nativo con Visual Studio 2017
 
@@ -59,5 +59,5 @@ Gli sviluppatori di Visual Studio C++ possono vedere le [SanAngeles_NativeDebug]
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [SanAngeles_NativeDebug (esempio)](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)
+- [SanAngeles_NativeDebug (sample)](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)
 - [Lo sviluppo di applicazioni Native di Xamarin. Android](https://blogs.msdn.microsoft.com/vcblog/2015/02/23/developing-xamarin-android-native-applications/)

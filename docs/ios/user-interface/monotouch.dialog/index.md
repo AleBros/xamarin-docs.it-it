@@ -1,19 +1,14 @@
 ---
 title: Introduzione a monotouch. Dialog per xamarin. IOS
-description: Questo documento descrive monotouch. Dialog (MT. D), un framework per lo sviluppo di interfaccia utente rapida e dichiarativo con xamarin. IOS. Descrive come usare le APIs MonoTouch.Dialog per creare un'interfaccia nel codice o JSON e usare funzionalità quali pull per aggiornare, ricerca, caricamento dell'immagine di sfondo e altro ancora.
+description: 'Questo documento descrive monotouch. Dialog (MT. D), un framework per lo sviluppo di interfaccia utente rapida e dichiarativo con xamarin. IOS. Descrive come usare le APIs MonoTouch.Dialog per creare un''interfaccia nel codice o JSON e usare funzionalità quali pull per aggiornare, ricerca, caricamento dell''immagine di sfondo e altro ancora.'
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: c291a440a1937d2b0f1c229e3fa969caedba9ab9
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675458"
 ---
+
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introduzione a monotouch. Dialog per xamarin. IOS
 
 Monotouch. Dialog, detto MT. D in breve, è un toolkit di sviluppo dell'interfaccia utente rapida che consente agli sviluppatori di compilare le schermate dell'applicazione e navigazione usando le informazioni, anziché l'attività ripetitive di creazione di controller di visualizzazione, le tabelle e così via. Di conseguenza, fornisce una significativa semplificazione della riduzione del codice e lo sviluppo dell'interfaccia utente. Ad esempio, si consideri lo screenshot seguente:
@@ -55,7 +50,7 @@ Ad esempio, ogni volta che è necessaria una tabella, un'origine dati è necessa
 MT. 1!d semplifica che incapsulando tutto il codice in un'API generica per la creazione della tabella. Fornisce quindi un'astrazione basata su tale API che consente di un oggetto dichiarativo che rende ancora più semplice sintassi di associazione. Di conseguenza, esistono due API disponibili in MT. UNITÀ D:
 
 -   **API di basso livello gli elementi** : tramite il *API Elements* si basa sulla creazione di un albero gerarchico di elementi che rappresentano le schermate e i relativi componenti. L'API Elements offre agli sviluppatori la massima flessibilità e controllo per la creazione di interfacce utente. Inoltre, l'API Elements con supporto avanzato per definizione dichiarativa tramite JSON, che consente la dichiarazione incredibilmente veloce sia, nonché la generazione dinamica dell'interfaccia utente da un server. 
--   **Ad alto livello API di Reflection** , noto anche come i *associazione**API* , in cui le classi vengono annotate con hint dell'interfaccia utente e quindi MT. D automaticamente consente di creare schermate basate sugli oggetti e fornisce un'associazione tra ciò che viene visualizzata (e facoltativamente modificata) nella schermata e l'oggetto sottostante il backup.   Nell'esempio precedente viene illustrato l'uso dell'API di Reflection. Questa API non fornisce il controllo con granularità fine che esegue gli elementi API, ma riduce ulteriormente la complessità creando automaticamente out la gerarchia degli elementi in base agli attributi di classe. 
+-   **Ad alto livello API di Reflection** , noto anche come i *associazione**API* , in cui le classi vengono annotate con hint dell'interfaccia utente e quindi MT. D automaticamente consente di creare schermate basate sugli oggetti e fornisce un'associazione tra ciò che viene visualizzata (e facoltativamente modificata) nella schermata e l'oggetto sottostante il backup. Nell'esempio precedente viene illustrato l'uso dell'API di Reflection. Questa API non fornisce il controllo con granularità fine che esegue gli elementi API, ma riduce ulteriormente la complessità creando automaticamente out la gerarchia degli elementi in base agli attributi di classe. 
 
 
 MT. 1!d proviene compressa con un numero elevato di compilato negli elementi dell'interfaccia utente per la creazione dello schermo, ma riconosce anche la necessità per gli elementi personalizzati e i layout di schermata avanzata. Di conseguenza, l'estendibilità è che un eccellente in primo piano virtuali create con bake all'API. Gli sviluppatori possono estendere gli elementi esistenti o crearne uno nuovo e quindi si integrano perfettamente.
@@ -263,7 +258,7 @@ In qualsiasi momento, accedendo alla relativa proprietà valore possibile recupe
 Inoltre il `KeyboardType` proprietà può essere impostata in fase di creazione allo stile della tastiera desiderato per l'immissione di dati. Ciò può essere utilizzato per configurare la tastiera usando i valori di `UIKeyboardType` come indicato di seguito:
 
 -  Numerico
--  Telefono
+-  Phone
 -  URL
 -  Email
 
@@ -393,7 +388,7 @@ Il `JsonElement` è una sottoclasse di `RootElement` che estende un `RootElement
 Il `JsonElement` è un `RootElement` che è possibile creare istanze in due forme. Crea una versione una `RootElement` che verrà caricato il contenuto su richiesta. Questi vengono creati tramite il `JsonElement` costruttori che accettano un argomento aggiuntivo al termine, l'url per il contenuto da caricare:
 
 ```csharp
-var je = new JsonElement ("Dynamic Data", "http://tirania.org/tmp/demo.json");
+var je = new JsonElement ("Dynamic Data", "https://tirania.org/tmp/demo.json");
 ```
 
 L'altra forma crea i dati da un file locale o un oggetto esistente `System.Json.JsonObject` che sono già analizzate:
@@ -594,5 +589,5 @@ Questo articolo ha illustrato numerose informazioni sulle monotouch. Dialog. È 
 - [Procedura dettagliata: Uso di un elemento JSON per creare un'interfaccia utente](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
 - [Markup JSON per monotouch. Dialog](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)
 - [Finestra di dialogo di MonoTouch su Github](https://github.com/migueldeicaza/MonoTouch.Dialog)
-- [Riferimento alla classe UITableViewController](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
-- [Riferimento alla classe UINavigationController](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
+- [Riferimento alla classe UITableViewController](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
+- [Riferimento alla classe UINavigationController](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

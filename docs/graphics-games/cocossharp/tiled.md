@@ -6,12 +6,12 @@ ms.assetid: 804C042C-F62A-4E6C-B10F-06528637F0E2
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 4582b59a8a441c9e22761d498126898e66db08c1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8e7ef890af264bb08827d86c635d555184f1ec00
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117928"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672508"
 ---
 # <a name="using-tiled-with-cocossharp"></a>Uso di Tiled con CocosSharp
 
@@ -35,7 +35,7 @@ Mappe di riquadro presenti nello sviluppo di giochi per decenni, ma vengono anco
 
 ![](tiled-images/image2.png "Una vista visualizzata di come vengono usati set riquadro mediante l'aggiunta di che una griglia nel riquadro del set che verrà usata nella demo")
 
-Riquadro mappe disporre i singoli riquadri dai affiancata set. Si noti che ogni riquadro mappa non è necessario archiviare la propria copia della tessera di dover impostare – invece più tessere mappe possono fare riferimento allo stesso set di riquadro. Ciò significa che oltre il set di riquadro, le mappe di riquadro richiedono poca memoria. Ciò consente la creazione di un numero elevato di mappe di riquadro, anche quando vengono usati per creare un'area di gioco di grandi dimensioni, ad esempio un [scorrimento platformer](http://en.wikipedia.org/wiki/Platform_game) ambiente. Possibili disposizioni usando lo stesso set di riquadro seguente:
+Riquadro mappe disporre i singoli riquadri dai affiancata set. Si noti che ogni riquadro mappa non è necessario archiviare la propria copia della tessera di dover impostare – invece più tessere mappe possono fare riferimento allo stesso set di riquadro. Ciò significa che oltre il set di riquadro, le mappe di riquadro richiedono poca memoria. Ciò consente la creazione di un numero elevato di mappe di riquadro, anche quando vengono usati per creare un'area di gioco di grandi dimensioni, ad esempio un [scorrimento platformer](https://en.wikipedia.org/wiki/Platform_game) ambiente. Possibili disposizioni usando lo stesso set di riquadro seguente:
 
 ![](tiled-images/image3.png "Questa immagine Mostra possibili disposizioni usando lo stesso set di riquadro")
 

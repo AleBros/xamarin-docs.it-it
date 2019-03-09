@@ -6,12 +6,12 @@ ms.assetid: 1F71F3E8-2397-4C6A-8163-6731ECFB7E03
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: badd23ebb78e61e7d7650ff6d0973226359fd9d5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c1c03e0ec17ade57536b4ed121469e3ae2274e75
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117109"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668972"
 ---
 # <a name="monogame-gamepad-reference"></a>Riferimento su GamePad MonoGame
 
@@ -30,7 +30,7 @@ Il `GamePad` classe fornisce una modalità standardizzata per la lettura di inpu
 - `GetState` : restituisce lo stato corrente dei pulsanti, bastoncini analogici e d-riempimento del controller.
 - `GetCapabilities` : restituisce informazioni sulle funzionalità dell'hardware, ad esempio se il controller ha alcuni pulsanti o supporta vibrazione.
 
-### <a name="example-moving-a-character"></a>Esempio: Spostamento di un carattere
+### <a name="example-moving-a-character"></a>Esempio: Lo spostamento di un carattere
 
 Il codice seguente illustra come la chiavetta thumb a sinistra consente di spostare un carattere impostando relativi `XVelocity` e `YVelocity` proprietà. Questo codice si presuppone che `characterInstance` è un'istanza di un oggetto che ha `XVelocity` e `YVelocity` proprietà:
 
@@ -44,7 +44,7 @@ characterInstance.YVelocity = gamePadState.ThumbSticks.Left.Y * characterInstanc
 
 ### <a name="example-detecting-pushes"></a>Esempio: Rilevamento di notifiche push
 
-`GamePadState` fornisce informazioni sullo stato corrente del controller, ad esempio se un determinato pulsante viene premuto. Determinate azioni, ad esempio per rendere un carattere jump, richiedono la verifica se il pulsante è stato eseguito il push (non è stato premuto ultimo fotogramma, ma non è attivo questo frame) o del rilascio (era premuto ultimo fotogramma, ma non verso il basso il frame). 
+`GamePadState` fornisce informazioni sullo stato corrente del controller, ad esempio se un determinato pulsante viene premuto. Determinate azioni, ad esempio per rendere un carattere jump, richiedono la verifica se il pulsante è stato eseguito il push (non è stato premuto ultimo fotogramma, ma non è attivo questo frame) o del rilascio (era premuto ultimo fotogramma, ma non verso il basso il frame).
 
 Per eseguire questo tipo di logica, le variabili locali che archiviano i frame precedente `GamePadState` e il frame corrente `GamePadState` deve essere creato. Nell'esempio seguente viene illustrato come archiviare e utilizzare il frame precedente `GamePadState` implementare del passaggio:
 
@@ -59,7 +59,7 @@ protected override void Update(GameTime gameTime)
     // store off the last state before reading the new one:
     lastFrameGamePadState = currentGamePadState;
     currentGamePadState = GamePad.GetState(PlayerIndex.One);
-    bool wasAButtonPushed = 
+    bool wasAButtonPushed =
 currentGamePadState.Buttons.A == ButtonState.Pressed
         && lastFrameGamePadState.Buttons.A == ButtonState.Released;
     if(wasAButtonPushed)
@@ -70,7 +70,7 @@ currentGamePadState.Buttons.A == ButtonState.Pressed
 }
 ```
 
-### <a name="example-checking-for-buttons"></a>Esempio: Controllo per i pulsanti
+### <a name="example-checking-for-buttons"></a>Esempio: Verifica per i pulsanti
 
 `GetCapabilities` può essere utilizzato per controllare se un controller dispone di hardware specifico, ad esempio un particolare pulsante o un joystick analogico. Il codice seguente viene illustrato come cercare i pulsanti B e Y in un controller in un gioco che richiede la presenza di entrambi i pulsanti:
 
@@ -89,7 +89,7 @@ if(!hasBButton || !hasXButton)
 le app iOS supportano l'input di gioco senza fili.
 
 > [!IMPORTANT]
-> I pacchetti NuGet per MonoGame 3.5 non includono il supporto per periferiche di gioco senza fili. Utilizzo della classe GamePad in iOS richiede compilazione 3.5 MonoGame dall'origine o usando i file binari NuGet 3.6 MonoGame. 
+> I pacchetti NuGet per MonoGame 3.5 non includono il supporto per periferiche di gioco senza fili. Utilizzo della classe GamePad in iOS richiede compilazione 3.5 MonoGame dall'origine o usando i file binari NuGet 3.6 MonoGame.
 
 ### <a name="ios-game-controller"></a>Controller di gioco iOS
 
@@ -105,7 +105,7 @@ Giochi Apple TV possono usare il remoti per Siri o periferiche di gioco wireless
 
 *Remoti per Siri* è il dispositivo di input nativo per Apple TV. Anche se i valori da Siri remoto possono essere letti tramite eventi (come illustrato nella [Guida controller Bluetooth e remoti per Siri](~/ios/tvos/platform/remote-bluetooth.md)), il `GamePad` classe può restituire valori da remoto Siri.
 
-Si noti che `GamePad` può solo leggere l'input dal pulsante di riproduzione e touch area: 
+Si noti che `GamePad` può solo leggere l'input dal pulsante di riproduzione e touch area:
 
 ![](input-images/image2.png "Si noti che GamePad può solo leggere l'input dal pulsante di riproduzione e touch area")
 
@@ -113,7 +113,7 @@ Poiché il tocco superficie dello spostamento è di lettura il `DPad` proprietà
 
 ### <a name="apple-tv-game-controller"></a>Gioco di Apple TV
 
-Periferiche di gioco per Apple TV si comportano in modo identico a periferiche di gioco per le app iOS. Per altre informazioni, vedere la [un controller di gioco iOS](#iOS_Game_Controller). 
+Periferiche di gioco per Apple TV si comportano in modo identico a periferiche di gioco per le app iOS. Per altre informazioni, vedere la [un controller di gioco iOS](#iOS-game-controller). 
 
 ## <a name="xbox-one"></a>Xbox One
 

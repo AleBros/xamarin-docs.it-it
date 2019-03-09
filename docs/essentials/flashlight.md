@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: Flashlight'
+title: 'Xamarin.Essentials: Torcia elettrica'
 description: Questo documento descrive la classe Flashlight in Xamarin.Essentials, che può attivare o disattivare il flash della fotocamera del dispositivo per trasformarlo in una torcia.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 3f8e9e2e8608467367af6523c8b89bd8f757d491
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: c2caf1583e3099903cb0b05628ed6b2984a954d9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899057"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671416"
 ---
-# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Flashlight
+# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Torcia elettrica
 
 La classe **Flashlight** può attivare o disattivare il flash della fotocamera del dispositivo per trasformarlo in una torcia.
 
@@ -44,7 +44,7 @@ Aprire il file **AndroidManifest.xml** nella cartella **Proprietà** e aggiunger
 
 Oppure fare clic con il pulsante destro del mouse sul progetto Android e aprire le proprietà del progetto. In **Manifesto Android** trovare l'area **Autorizzazioni necessarie** e selezionare le autorizzazioni **FLASHLIGHT** e **CAMERA**. Il file **AndroidManifest.xml** verrà aggiornato automaticamente.
 
-Aggiungendo queste autorizzazioni, [Google Play filtrerà automaticamente i dispositivi](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) senza hardware specifico. Per aggirare questo problema, aggiungere il codice seguente al file AssemblyInfo.cs nel progetto Android:
+Aggiungendo queste autorizzazioni, [Google Play filtrerà automaticamente i dispositivi](https://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) senza hardware specifico. Per aggirare questo problema, aggiungere il codice seguente al file AssemblyInfo.cs nel progetto Android:
 
 ```csharp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]

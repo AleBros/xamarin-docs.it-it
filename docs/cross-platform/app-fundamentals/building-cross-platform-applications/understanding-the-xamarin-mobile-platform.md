@@ -1,237 +1,237 @@
 ---
-title: 'Parte 1: informazioni sulla piattaforma Xamarin Mobile'
-description: Questo documento descrive la piattaforma Xamarin a un livello elevato, esaminando il processo di compilazione, l'accesso di platform SDK, la condivisione del codice, creazione dell'interfaccia utente, finestre di progettazione visiva e altro ancora.
+title: 'Parte 1: informazioni sulla piattaforma per dispositivi mobili Xamarin'
+description: Questo documento descrive la piattaforma Xamarin a livello generale, esamina il processo di compilazione, l'accesso di platform SDK, la condivisione del codice, creazione di un'interfaccia utente, finestre di progettazione visiva e altro.
 ms.prod: xamarin
 ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 40183e5f18ee589adaf2ea903f6948293c8680f7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 2765ab0c697d977eb332e47cfbc413e3e0adafb7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781894"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668816"
 ---
-# <a name="part-1--understanding-the-xamarin-mobile-platform"></a>Parte 1: informazioni sulla piattaforma Xamarin Mobile
+# <a name="part-1--understanding-the-xamarin-mobile-platform"></a>Parte 1: informazioni sulla piattaforma per dispositivi mobili Xamarin
 
-La piattaforma di Xamarin è costituita da un numero di elementi che consentono di sviluppare applicazioni per iOS e Android:
+La piattaforma Xamarin è costituito da un numero di elementi che consentono di sviluppare applicazioni per iOS e Android:
 
--   **Linguaggio c#** : consente di utilizzare una sintassi familiare e caratteristiche avanzate quali i Generics, LINQ e Task Parallel Library.
--   **Mono .NET framework** – fornisce un'implementazione di più piattaforme di funzionalità complete di Microsoft .NET Framework.
--   **Compilatore** : a seconda della piattaforma, produce un'app nativa (ad es. iOS) o un'applicazione .NET integrata e runtime (ad es. Android). Il compilatore esegue inoltre molte ottimizzazioni per la distribuzione per dispositivi mobili, ad esempio il collegamento di stoccaggio codice non usato.
--   **Strumenti IDE** : Visual Studio su Mac e Windows consente di creare, compilare e distribuire progetti di Xamarin.
+-   **C#linguaggio** : consente di usare una sintassi familiare e funzionalità sofisticate come Generics, LINQ e la libreria Task Parallel Library.
+-   **.NET framework mono** – fornisce un'implementazione multipiattaforma di funzionalità complete in Microsoft .NET framework.
+-   **Compilatore** : a seconda della piattaforma, produce un'app nativa (ad es. per iOS) o un'applicazione .NET integrata e runtime (ad es. Android). Il compilatore esegue anche numerose ottimizzazioni per la distribuzione per dispositivi mobili, ad esempio il collegamento di stoccaggio codice non usato.
+-   **Gli strumenti dell'IDE** – The Visual Studio su Mac e Windows consente di creare, compilare e distribuire i progetti Xamarin.
 
 
-Inoltre, poiché la lingua sottostante è c# con .NET framework, i progetti possono essere strutturati per condividere il codice che può essere distribuito anche per Windows Phone.
+Inoltre, poiché la lingua sottostante è C# con .NET framework, i progetti possono essere strutturati per condividere il codice che può essere distribuito anche in Windows Phone.
 
  <a name="Under_the_Hood" />
 
 
 ## <a name="under-the-hood"></a>Dietro le quinte
 
-Sebbene Xamarin consente di scrivere applicazioni in c# e condividere lo stesso codice su più piattaforme, l'implementazione effettiva in ogni sistema è molto diversa.
+Sebbene Xamarin consente di scrivere le app C#e condividono lo stesso codice su più piattaforme, l'implementazione effettiva in ogni sistema è molto diverso.
 
  <a name="Compilation" />
 
 
 ## <a name="compilation"></a>Compilazione
 
-Il codice sorgente c# procede in un'applicazione nativa in modi molto diversi in ogni piattaforma:
+Il C# origine trasforma il modo in un'app nativa in modi molto diversi in ogni piattaforma:
 
--   **iOS** – c# è ahead di tempo (AOT) compilata in linguaggio assembly ARM. .NET framework è incluso, con classi inutilizzate viene rimosse durante il collegamento per ridurre le dimensioni dell'applicazione. Apple non consente la generazione del codice di runtime in iOS, alcune funzionalità del linguaggio non disponibili (vedere [xamarin limitazioni](~/ios/internals/limitations.md) ).
--   **Android** – c# viene compilata a livello di integrità e incluso nel pacchetto MonoVM + JIT'ing. Classi inutilizzate in framework vengono rimossi durante il collegamento. L'applicazione viene eseguito side-by-side con Java/ART (runtime di Android) e interagisce con i tipi nativi tramite JNI (vedere [xamarin limitazioni](~/android/internals/limitations.md) ).
--   **Windows** – c# viene compilato in linguaggio intermedio eseguito dal runtime predefinito e non richiede gli strumenti di Xamarin. Progettazione di applicazioni di Windows linee guida seguenti di Xamarin, è più semplice riutilizzare il codice in iOS e Android.
-  Si noti che la piattaforma Windows universale ha anche un **.NET Native** opzione che si comporta in modo analogo alla compilazione AOT di xamarin.
+-   **iOS** – C# è ahead of time (AOT) compilate in linguaggio assembly ARM. .NET framework è incluso, le classi non usate vengono rimosse durante il collegamento per ridurre le dimensioni dell'applicazione. Apple non consente la generazione del codice runtime su iOS, in modo che non sono disponibili alcune funzionalità del linguaggio (vedere [limitazioni di xamarin. IOS](~/ios/internals/limitations.md) ).
+-   **Android** – C# viene compilata a livello di integrità e incluso nel pacchetto con MonoVM + JIT'ing. Classi non usate in framework vengono rimosse durante il collegamento. L'applicazione viene eseguito side-by-side con Java/ART (runtime di Android) e interagisce con i tipi nativi tramite JNI (vedere [xamarin. Android le limitazioni](~/android/internals/limitations.md) ).
+-   **Windows** – C# viene compilato a livello di integrità eseguite dal runtime incorporato e non richiede gli strumenti di Xamarin. Progettazione di applicazioni Windows linee guida di Xamarin seguente rende più semplice riutilizzare il codice in iOS e Android.
+  Si noti che la piattaforma universale di Windows ha anche un **.NET Native** opzione che si comporta in modo analogo alla compilazione AOT di xamarin. IOS.
 
 
-La documentazione del linker [xamarin](~/ios/deploy-test/linker.md) e [xamarin](~/android/deploy-test/linker.md) fornisce ulteriori informazioni su questa parte del processo di compilazione.
+La documentazione del linker [xamarin. IOS](~/ios/deploy-test/linker.md) e [xamarin. Android](~/android/deploy-test/linker.md) vengono fornite ulteriori informazioni relative a questa parte del processo di compilazione.
 
-Runtime 'compilation': la generazione di codice in modo dinamico con `System.Reflection.Emit` : deve essere evitato.
+Runtime 'compilation: la generazione di codice in modo dinamico con `System.Reflection.Emit` : deve essere evitata.
 
-Il kernel di Apple impedisce la generazione del codice dinamico nei dispositivi iOS, pertanto la creazione di codice il volo non funzionano in xamarin. IOS. Analogamente, le funzionalità di Dynamic Language Runtime non possono essere utilizzate con strumenti Xamarin.
+Kernel di Apple impedisce la generazione dinamica del codice nei dispositivi iOS, pertanto la creazione di codice su immediatamente non funzionerà in xamarin. IOS. Analogamente, le funzionalità di Dynamic Language Runtime non sono utilizzabile con gli strumenti di Xamarin.
 
-Alcune funzionalità di reflection di lavoro (ad es. MonoTouch.Dialog utilizza per l'API di Reflection), ma non la generazione di codice.
+Alcune funzionalità di reflection disponibili (ad es. Monotouch. Dialog usarlo per l'API di Reflection), ma non la generazione di codice.
 
  <a name="Platform_SDK_Access" />
 
 
-## <a name="platform-sdk-access"></a>Accesso SDK della piattaforma
+## <a name="platform-sdk-access"></a>Accesso di Platform SDK
 
-Xamarin esegue le funzionalità fornite dal SDK specifici della piattaforma facilmente accessibili con sintassi familiare c#:
+Xamarin consente le funzionalità fornite dal SDK specifici della piattaforma facilmente accessibili con familiare C# sintassi:
 
--   **iOS** – xamarin espone Framework SDK CocoaTouch Apple come spazi dei nomi che è possibile fare riferimento da c#. Ad esempio il framework UIKit che contiene tutti i controlli dell'interfaccia utente può essere incluso con un semplice `using UIKit;` istruzione.
--   **Android** – xamarin espone Google Android SDK come spazi dei nomi, pertanto è possibile fare riferimento a qualsiasi parte del SDK supportato con un'istruzione, ad esempio `using Android.Views;` per i controlli dell'interfaccia utente di accedere.
--   **Windows** : app di Windows vengono compilate utilizzando Visual Studio in Windows. Tipi di progetto includono Windows Form, WPF, WinRT e la piattaforma UWP (Universal Windows).
+-   **iOS** – xamarin. IOS espone Framework CocoaTouch SDK di Apple come spazi dei nomi che è possibile fare riferimento da C#. Ad esempio il framework UIKit che contiene tutti i controlli dell'interfaccia utente può essere incluso con un semplice `using UIKit;` istruzione.
+-   **Android** – xamarin. Android espone Android SDK di Google come spazi dei nomi, è possibile fare riferimento a qualsiasi parte del SDK supportati con un utilizzo istruzione, ad esempio `using Android.Views;` per accedere ai controlli dell'interfaccia utente.
+-   **Windows** : le app di Windows vengono compilate usando Visual Studio in Windows. Tipi di progetto includono Windows Form, WPF, WinRT e Universal Windows Platform (UWP).
 
 
  <a name="Seamless_Integration_for_Developers" />
 
 
-## <a name="seamless-integration-for-developers"></a>Integrazione perfetta per gli sviluppatori
+## <a name="seamless-integration-for-developers"></a>Integrazione senza problemi per gli sviluppatori
 
-Il vantaggio di Xamarin è che nonostante le differenze dietro le quinte, xamarin. IOS e xamarin (associato a Windows SDK Microsoft) offrono un'esperienza trasparente per la scrittura di codice c# che può essere riutilizzato in tutte e tre le piattaforme.
+La bellezza di Xamarin è che nonostante le differenze dietro le quinte, xamarin. IOS e xamarin. Android (accoppiato con Windows SDK Microsoft) offrono un'esperienza senza problemi per la scrittura C# il codice che possa essere riutilizzato in tutti e tre le piattaforme.
 
-Logica di business, l'utilizzo del database, accesso alla rete e altre funzioni comuni di essere scritti una sola volta e riutilizzate in ogni piattaforma, fornire una base per le interfacce utente specifiche della piattaforma che osservare ed eseguono come applicazioni native.
+La logica di business, utilizzo del database, l'accesso alla rete e altre comuni funzioni possono essere scritte una sola volta e riutilizzate in ogni piattaforma, fornire una base per le interfacce utente specifiche della piattaforma che osservare ed eseguono come applicazioni native.
 
  <a name="Integrated_Development_Environment_(IDE)_Availability" />
 
 
 ## <a name="integrated-development-environment-ide-availability"></a>Disponibilità di sviluppo integrato (IDE) di ambiente
 
-In Visual Studio in Windows o Mac, è possibile eseguire lo sviluppo con Xamarin. L'IDE scelto verrà determinata dalle piattaforme di destinazione desiderato.
+È possibile lo sviluppo con Xamarin in Visual Studio in Mac o Windows. L'IDE scelto verrà determinata dalle piattaforme di destinazione desiderato.
 
-Poiché le app di Windows possono essere sviluppate solo in Windows, di compilazione per iOS, Android, _e_ Windows richiede Visual Studio per Windows. Tuttavia è possibile condividere file tra i computer Windows e Mac, in modo App iOS e Android può essere compilata in un Mac e il codice condiviso in un secondo momento può essere aggiunto a un progetto di Windows e progetti.
+Poiché è possibile sviluppare app di Windows solo in Windows, per la compilazione per iOS, Android, _e_ Windows richiede Visual Studio per Windows. Tuttavia è possibile condividere i progetti e i file tra i computer Mac e Windows, in modo che App per iOS e Android può essere compilata in un computer Mac e codice condiviso in un secondo momento può essere aggiunto a un progetto di Windows.
 
-I requisiti di sviluppo per ogni piattaforma vengono descritti più dettagliatamente il [requisito](~/cross-platform/get-started/requirements.md) Guida.
+I requisiti di sviluppo per ogni piattaforma sono descritti più dettagliatamente la [requisito](~/cross-platform/get-started/requirements.md) Guida.
 
 
 <a name="iOS" />
 
 ### <a name="ios"></a>iOS
 
-Lo sviluppo di applicazioni iOS richiede un computer Mac, macOS. È inoltre possibile utilizzare Visual Studio per scrivere e distribuire applicazioni iOS con Xamarin in Visual Studio. Tuttavia, un computer Mac è ancora necessario per la compilazione e scopi di gestione delle licenze.
+Lo sviluppo di applicazioni iOS richiede un computer Mac che eseguono macOS. È anche possibile usare Visual Studio per scrivere e distribuire applicazioni iOS con Xamarin in Visual Studio. Tuttavia, un computer Mac è ancora necessario per scopi di gestione delle licenze e compilazione.
 
-Apple Xcode IDE deve essere installato per fornire il compilatore e il simulatore per il test. È possibile testare nei propri dispositivi [gratuitamente](~/ios/get-started/installation/device-provisioning/free-provisioning.md), ma per compilare applicazioni per la distribuzione (ad es. App Store) è necessario aggiungere il programma per sviluppatori di Apple (99 dollari all'anno). Ogni volta che si invia o si aggiorna un'applicazione, deve essere rivisto e approvato da Apple prima di renderlo disponibile per il download.
+Deve essere installato Xcode IDE di Apple per fornire il compilatore e il simulatore per il test. È possibile testare in your own Device [gratuitamente](~/ios/get-started/installation/device-provisioning/free-provisioning.md), ma per compilare applicazioni per la distribuzione (ad es. l'App di Store) è necessario aggiungere il programma per sviluppatori di Apple ($99 USD all'anno). Ogni volta che si invia o si aggiorna un'applicazione, debba essere esaminato e approvato da Apple prima di renderlo disponibile per il download.
 
-Codice è scritto con l'IDE di Visual Studio e layout dello schermo può essere compilato a livello di codice o modificati con iOS della Xamarin finestra di progettazione nell'IDE.
+Codice è scritto con l'IDE di Visual Studio e i layout di schermata possono essere compilati a livello di codice o modificati di Xamarin IOS Designer nell'IDE.
 
-Consultare la [Guida all'installazione di xamarin](~/ios/get-started/installation/index.md) per istruzioni dettagliate sulla configurazione.
+Vedere le [Guida all'installazione di xamarin. IOS](~/ios/get-started/installation/index.md) per istruzioni dettagliate sulla configurazione.
 
 <a name="Android" />
 
 ### <a name="android"></a>Android
 
-Sviluppo di applicazioni Android richiede Java e Android SDK sia installato. Che forniscono il compilatore, l'emulatore e altri strumenti richiesti per la compilazione, distribuzione e test. Gli strumenti Java, Google Android SDK e di Xamarin possono tutti essere installati ed eseguiti le seguenti configurazioni:
+Sviluppo di applicazioni Android richiede Java e Android SDK da installare. Questi fornire al compilatore, emulatori e altri strumenti necessari per la compilazione, distribuzione e test. Strumenti Java di Google Android SDK e di Xamarin possono tutti essere installati ed eseguiti nelle configurazioni seguenti:
 
--  Mac OS X montagna di El Capitan e versioni successive (10.11 +) con Visual Studio per Mac
+-  Mac OS X El Capitan e versioni successive (10.11 +) con Visual Studio per Mac
 -  Windows 7 e versioni successive con Visual Studio 2015 o 2017
 
 
-Xamarin offre un programma di installazione unificata che configurerà il sistema con Java prerequisito, strumenti di Android e Xamarin (incluso un finestra di progettazione visiva per il layout dello schermo). Consultare la [Guida all'installazione di xamarin](~/android/get-started/installation/index.md) per istruzioni dettagliate.
+Xamarin offre un programma di installazione unificata che configurerà il sistema con il prerequisito Java, Android e Xamarin strumenti (tra cui una finestra di progettazione visiva per layout dello schermo). Vedere le [Guida all'installazione di xamarin. Android](~/android/get-started/installation/index.md) per istruzioni dettagliate.
 
-È possibile compilare e testare applicazioni in un dispositivo effettivo senza alcuna licenza da Google, tuttavia per distribuire l'applicazione tramite un archivio (ad esempio Google Play, Amazon o Barnes &amp; Noble) una tariffa di registrazione può essere dovuta all'operatore. Google Play pubblicherà l'applicazione immediatamente, mentre altri archivi di dispongono di un processo di approvazione simile in Apple.
+È possibile compilare e testare applicazioni in un dispositivo reale senza alcuna licenza da Google, tuttavia per distribuire l'applicazione attraverso un archivio (ad esempio Google Play, Amazon o Barnes &amp; Noble) una tariffa di registrazione può essere dovuta all'operatore. Google Play pubblicherà l'app immediatamente, mentre altri archivi di dispongono di un processo di approvazione simile a Apple.
 
  <a name="Windows_Phone" />
 
 
 ### <a name="windows"></a>WINDOWS
 
-App di Windows (Windows Form, WPF o UWP) vengono compilate con Visual Studio. Non utilizzare Xamarin direttamente. Tuttavia, il codice c# può essere condivise tra Windows, iOS e Android.
-Visitare Microsoft [Dev Center](https://developer.microsoft.com/) per apprendere gli strumenti necessari per lo sviluppo di Windows.
+Le app di Windows (Windows Form, WPF o UWP) vengono compilate con Visual Studio. Non usano direttamente Xamarin. Tuttavia, C# codice può essere condivisi tra Windows, iOS e Android.
+Visita Microsoft [Dev Center](https://developer.microsoft.com/) per conoscere gli strumenti necessari per lo sviluppo di Windows.
 
  <a name="Creating_the_User_Interface_(UI)" />
 
 
 ## <a name="creating-the-user-interface-ui"></a>Creazione dell'interfaccia utente
 
-Un vantaggio chiave con Xamarin è che l'interfaccia utente dell'applicazione utilizza controlli nativi in ciascuna piattaforma, creazione di App che non sono distinguibili da un'applicazione scritta in Objective-C o Java (per iOS e Android rispettivamente).
+Dei vantaggi principali dell'uso di Xamarin è che l'interfaccia utente dell'applicazione utilizza i controlli nativi in ciascuna piattaforma, creazione di App che non sono distinguibili da un'applicazione scritta in Objective-C o Java (per iOS e Android rispettivamente).
 
-Quando si compila le schermate dell'App, è possibile disporre i controlli nel codice o creare schermate completate utilizzando gli strumenti di progettazione disponibili per ogni piattaforma.
+Durante la creazione di schermate nell'app, è possibile disporre i controlli nel codice o creare schermate completate usando gli strumenti di progettazione disponibili per ogni piattaforma.
 
  <a name="Programmatically_Create_Controls" />
 
 
 ### <a name="create-controls-programmatically"></a>Creare i controlli a livello di codice
 
-Ogni piattaforma consente a controlli dell'interfaccia da aggiungere a una schermata tramite codice utente. Può essere molto tempo poiché può essere difficile visualizzare il progetto finito quando pixel a livello di codice le coordinate per dimensioni e posizioni del controllo.
+Ogni piattaforma consente a controlli dell'interfaccia da aggiungere a una schermata tramite codice utente. Può trattarsi di richiede molto tempo poiché può essere difficile identificare la progettazione terminata quando impostare come hardcoded pixel le coordinate per le posizioni di controllo e dimensioni.
 
-Creazione di controlli a livello di programmazione dispone vantaggi, tuttavia, in particolare in iOS per la creazione di viste che ridimensionare o eseguire il rendering in modo diverso tra le dimensioni dello schermo di iPhone e iPad.
+Creazione di controlli a livello di codice è necessario che i vantaggi, tuttavia, in particolare in iOS per la creazione di viste che ridimensionare o eseguire il rendering in modo diverso tra le dimensioni dello schermo di iPhone e iPad.
 
  <a name="Visual_Designer" />
 
 
 ### <a name="visual-designer"></a>Finestra di progettazione visiva
 
-Ogni piattaforma presenta un metodo diverso per il layout visivo degli schermi:
+Ogni piattaforma ha un metodo diverso per la disposizione visiva schermate:
 
--   **iOS** – iOS di Xamarin Designer facilita la creazione di viste utilizzando i campi di proprietà e funzionalità di trascinamento e rilascio. Queste viste collettivamente costituiscono uno Storyboard e sono accessibili nel **. Storyboard** file incluso nel progetto.
--   **Android** – Xamarin offre una progettazione dell'interfaccia utente di trascinamento e rilascio Android di Visual Studio. Layout dello schermo Android vengono salvati come **. AXML** file quando si utilizzano strumenti di Xamarin.
--   **Windows** – Microsoft fornisce una finestra di progettazione dell'interfaccia utente trascinamento e rilascio in Visual Studio e Blend. Il layout dello schermo vengono archiviati come. File XAML.
+-   **iOS** – iOS di Xamarin Designer semplifica la creazione di viste utilizzando i campi di proprietà e funzionalità di trascinamento e rilascio. Collettivamente costituiscono uno Storyboard, queste visualizzazioni ed è possibile accedervi nel **. Storyboard** file incluso nel progetto.
+-   **Android** : Xamarin offre una progettazione di interfaccia utente di trascinamento e rilascio Android per Visual Studio. Layout dello schermo Android vengono salvati come **. AXML** file quando si usano gli strumenti di Xamarin.
+-   **Windows** – Microsoft fornisce una progettazione di interfaccia utente di trascinamento e rilascio in Visual Studio e Blend. Come vengono archiviati i layout di schermata. File XAML.
 
 
-Queste schermate mostrano le finestre di progettazione schermata visual disponibile in ogni piattaforma:
+Questi screenshot mostrano le finestre di progettazione schermata visual disponibili in ogni piattaforma:
 
- [ ![](understanding-the-xamarin-mobile-platform-images/designer-all1.png "Queste schermate mostrano le finestre di progettazione schermata visual disponibili in ciascuna piattaforma")](understanding-the-xamarin-mobile-platform-images/designer-all1.png#lightbox)
+ [ ![](understanding-the-xamarin-mobile-platform-images/designer-all1.png "Questi screenshot mostrano le finestre di progettazione schermata visual disponibili in ogni piattaforma")](understanding-the-xamarin-mobile-platform-images/designer-all1.png#lightbox)
 
-In tutti i casi, gli elementi creati visivamente possono fare riferimento nel codice.
+In tutti i casi gli elementi che si crea in modo visivo possono farvi riferimento nel codice.
 
  <a name="User_Interface_Considerations" />
 
 
 ### <a name="user-interface-considerations"></a>Considerazioni sull'interfaccia utente
 
-Un vantaggio chiave con Xamarin per compilare applicazioni multipiattaforma è che è possibile sfruttare Toolkit dell'interfaccia utente nativo per presentare un'interfaccia familiare all'utente. L'interfaccia utente verrà inoltre risulteranno meno veloci come qualsiasi altra applicazione nativa.
+Dei vantaggi principali dell'uso di Xamarin per compilare applicazioni multipiattaforma è che è possibile sfruttare i vantaggi di Toolkit dell'interfaccia utente nativo per presentare un'interfaccia familiare all'utente. L'interfaccia utente eseguirà anche la stessa velocità come qualsiasi altra applicazione nativa.
 
-Alcuni metafore dell'interfaccia utente di lavoro su più piattaforme (ad esempio, tutti e tre le piattaforme utilizzano un controllo elenco scorrimento simile) ma affinché l'applicazione ' sentirsi ' destra dell'interfaccia utente deve sfruttare utente specifico della piattaforma elementi dell'interfaccia quando appropriato. Esempi di metafore dell'interfaccia utente specifiche della piattaforma:
+Alcuni metafore dell'interfaccia utente di lavoro tra più piattaforme (ad esempio, tutte e tre le piattaforme usano un controllo elenco lo scorrimento simile), ma nell'ordine dall'applicazione per 'difficoltà nell'utilizzare' l'interfaccia utente deve sfruttare i vantaggi dell'utente specifiche della piattaforma gli elementi dell'interfaccia quando appropriato. Esempi di metafore dell'interfaccia utente specifiche della piattaforma:
 
--   **iOS** : navigazione gerarchica con pulsante Indietro soft schede nella parte inferiore della schermata.
--   **Android** hardware o software del sistema, eseguire il pulsante, dal menu azione, le schede nella parte superiore di schermata.
--   **Windows** : app di Windows possono essere eseguite sul desktop, Tablet (ad esempio Microsoft Surface) e telefoni. I dispositivi Windows 10 possono disporre di hardware pulsante Indietro e riquadri in tempo reale, ad esempio.
+-   **iOS** : navigazione gerarchica con pulsante Indietro soft, schede nella parte inferiore della schermata.
+-   **Android** hardware/sistema software, eseguire il pulsante, dal menu azione, le schede nella parte superiore della schermata.
+-   **Windows** : app di Windows possono essere eseguite sul desktop, Tablet (ad esempio Microsoft Surface) e telefoni. I dispositivi Windows 10 possono disporre di hardware pulsante Indietro e i riquadri animati, ad esempio.
 
 
 È consigliabile leggere le linee guida di progettazione rilevanti per le piattaforme di destinazione:
 
--   **iOS** – [linee guida dell'interfaccia umana Apple](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html)
--   **Android** – [linee guida dell'interfaccia utente di Google](http://developer.android.com/guide/practices/ui_guidelines/index.html)
--   **Windows** – [indicazioni per la progettazione di esperienza utente per Windows](https://developer.microsoft.com/windows/design)
+-   **iOS** – [Human Interface Guidelines di Apple](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html)
+-   **Android** – [linee guida dell'interfaccia utente di Google](https://developer.android.com/guide/practices/ui_guidelines/index.html)
+-   **Windows** – [User Experience Design Guidelines for Windows](https://developer.microsoft.com/windows/design)
 
 
  <a name="Library_and_Code_Re-use" />
 
 
-## <a name="library-and-code-re-use"></a>Raccolta e il riutilizzo del codice
+## <a name="library-and-code-re-use"></a>Libreria e riutilizzo del codice
 
-Sulla piattaforma Xamarin consente il riutilizzo del codice c# esistente tra tutte le piattaforme, nonché l'integrazione di librerie scritte in modo nativo per ogni piattaforma.
+La piattaforma Xamarin consente di utilizzare nuovamente esistente C# codice tra tutte le piattaforme, nonché l'integrazione di librerie scritte in modo nativo per ogni piattaforma.
 
  <a name="C#_Source_and_Libraries" />
 
 
-### <a name="c-source-and-libraries"></a>Librerie e codice sorgente c#
+### <a name="c-source-and-libraries"></a>C#Origine e librerie
 
-Perché Xamarin prodotti usano c# e .NET framework, un numero elevato di codice sorgente esistente (entrambi aprire progetti interni e origine) può essere riutilizzato in progetti di xamarin. IOS o xamarin. Spesso l'origine può semplicemente aggiunto a una soluzione Xamarin e verrà applicata immediatamente. Se è stata utilizzata una funzionalità di .NET framework non supportata, è possibile che alcune modifiche di entità potrebbero essere necessari.
+Perché usano i prodotti Xamarin C# e .NET framework, una grande quantità di codice sorgente esistente (entrambi aprire progetti interni e origine) può essere riusata in progetti xamarin. IOS o xamarin. Android. Spesso l'origine può semplicemente essere aggiunto a una soluzione Xamarin e funzionerà immediatamente. Se è stata utilizzata una funzionalità non supportata di .NET framework, alcune modifiche potrebbero essere necessari.
 
-Esempi di codice sorgente c# che può essere utilizzato in xamarin. IOS o xamarin: SQLite NET, newtonsoft. JSON e SharpZipLib.
+Esempi di C# origine che può essere utilizzati in xamarin. IOS o xamarin. Android includono: SQLite-NET, newtonsoft. JSON e SharpZipLib.
 
  <a name="Objective-C_Bindings_+_Binding_Projects" />
 
 
-### <a name="objective-c-bindings--binding-projects"></a>Associazioni Objective-C + progetti di associazione
+### <a name="objective-c-bindings--binding-projects"></a>Binding Objective-C + progetti di Binding
 
-Xamarin offre uno strumento denominato *btouch* che consente di creare associazioni che consentono a librerie Objective-C essere utilizzata nei progetti di xamarin. IOS. Consultare il [documentazione sui tipi di associazione di Objective-C](~/cross-platform/macios/binding/binding-types-reference.md) per informazioni dettagliate su questa procedura.
+Xamarin offre uno strumento denominato *btouch* che facilita la creazione di associazioni che consentono di librerie Objective-C da utilizzare nei progetti xamarin. IOS. Vedere il [documentazione sui tipi Objective-C di associazione](~/cross-platform/macios/binding/binding-types-reference.md) per informazioni dettagliate sul modo in cui questa operazione viene eseguita.
 
-Esempi di librerie Objective-C che possono essere usate in xamarin. ios: codice a barre RedLaser l'analisi, l'integrazione Analitica Google e PayPal. Binding xamarin open source disponibili in [github](https://github.com/mono/monotouch-bindings).
+Esempi di librerie Objective-C che possono essere usate in xamarin. ios: Codice a barre RedLaser l'analisi, l'integrazione di PayPal e Google Analitica. Binding xamarin. IOS open source sono disponibili nel [github](https://github.com/mono/monotouch-bindings).
 
  <a name=".jar_Bindings_+_Binding_Projects" />
 
 
-### <a name="jar-bindings--binding-projects"></a>associazioni JAR + progetti di associazione
+### <a name="jar-bindings--binding-projects"></a>le associazioni con estensione jar + progetti di Binding
 
-Xamarin supporta l'utilizzo delle librerie di Java esistente in xamarin. Fare riferimento al [una documentazione Java libreria associazione](~/android/platform/binding-java-library/index.md) per informazioni dettagliate su come usare una. File JAR di xamarin.
+Xamarin supporta l'uso di librerie Java esistenti in xamarin. Android. Vedere il [associazione una documentazione della libreria Java](~/android/platform/binding-java-library/index.md) per informazioni dettagliate su come usare un. File JAR da xamarin. Android.
 
-Binding xamarin open source disponibili in [github](https://github.com/mono/monodroid-bindings).
+Binding xamarin. Android open source sono disponibili nel [github](https://github.com/mono/monodroid-bindings).
 
  <a name="C_via_PInvoke" />
 
 
 ### <a name="c-via-pinvoke"></a>C tramite PInvoke
 
-Tecnologia "Platform Invoke" (P/Invoke) consente al codice gestito (c#) per chiamare i metodi nelle librerie native, nonché il supporto per librerie native chiamare nuovamente nel codice gestito.
+La tecnologia "Platform Invoke" (P/Invoke) consente al codice gestito (C#) per chiamare metodi nelle librerie native, nonché supporto per le librerie native richiamare il codice gestito.
 
-Ad esempio, il [SQLite NET](https://github.com/praeclarum/sqlite-net) libreria utilizza istruzioni simile al seguente:
+Ad esempio, il [SQLite-NET](https://github.com/praeclarum/sqlite-net) libreria Usa istruzioni simile al seguente:
 
 ```csharp
 [DllImport("sqlite3", EntryPoint = "sqlite3_open", CallingConvention=CallingConvention.Cdecl)]
 public static extern Result Open (string filename, out IntPtr db);
 ```
 
-In questo viene associato all'implementazione del linguaggio C SQLite nativa in iOS e Android.
-Gli sviluppatori esperti in un'API C esistente è possono costruire un set di classi c# per eseguire il mapping all'API native e utilizzare il codice di piattaforma esistente. È la documentazione relativa a [collegamento librerie native](~/ios/platform/native-interop.md) in xamarin. IOS, simile principi per xamarin.
+Ciò consente di associare all'implementazione del linguaggio C SQLite nativo in iOS e Android.
+Gli sviluppatori esperti in un'API C esistente è possono costruire un set di C# classi di eseguire il mapping all'API nativa e usare il codice di piattaforma esistente. Documentazione per [collegamento di librerie native](~/ios/platform/native-interop.md) in xamarin. IOS, principi analoghi si applicano a xamarin. Android.
 
  <a name="C++_via_Cxxi" />
 
 
 ### <a name="c-via-cppsharp"></a>C++ tramite CppSharp
 
-Miguel spiega CXXI (ora chiamato [CppSharp](https://github.com/mono/CppSharp)) su his [blog](http://tirania.org/blog/archive/2011/Dec-19.html). Un'alternativa all'associazione direttamente a una libreria di C++ consiste nel creare un wrapper di C e associare a quella tramite P/Invoke.
+Miguel spiega CXXI (ora denominato [CppSharp](https://github.com/mono/CppSharp)) sul suo [blog](https://tirania.org/blog/archive/2011/Dec-19.html). Un'alternativa all'associazione direttamente a una libreria di C++ consiste nel creare un wrapper di C ed effettuare l'associazione tramite P/Invoke.
 

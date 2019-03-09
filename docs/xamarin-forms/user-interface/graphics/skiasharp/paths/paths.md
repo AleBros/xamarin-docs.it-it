@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 006e4c2b2de56fef96c561e788992649f6582d24
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 833e24e91a37b92eb5025aacdc9509f092b823cd
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054939"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672086"
 ---
 # <a name="path-basics-in-skiasharp"></a>Nozioni di base di percorso in SkiaSharp
 
@@ -28,26 +28,26 @@ Un percorso di grafica viene incapsulato dal [ `SKPath` ](xref:SkiaSharp.SKPath)
 
 Una distribuzione a livello generale inizia con una chiamata al metodo seguente della `SKPath`:
 
-- [`MoveTo`](SkiaSharp.SKPath.MoveTo*) Per iniziare una nuova distribuzione
+- [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo*) Per iniziare una nuova distribuzione
 
 L'argomento al metodo è un singolo punto, è possibile esprimere come un `SKPoint` come separato X e Y coordinate o valore. Il `MoveTo` chiamata stabilisce un punto all'inizio di un'iniziale e il contorno *punto corrente*. È possibile chiamare i metodi seguenti per continuare la distribuzione con una riga o una curva dal punto corrente a un punto specificato nel metodo, che diventa il nuovo punto corrente:
 
-- [`LineTo`](SkiaSharp.SKPath.LineTo*) Per aggiungere una linea retta nel percorso
-- [`ArcTo`](SkiaSharp.SKPath.ArcTo*) Per aggiungere un arco, vale a dire una riga nella circonferenza di un cerchio o dell'ellisse
-- [`CubicTo`](SkiaSharp.SKPath.CubicTo*) Per aggiungere una spline di Bézier cubica
-- [`QuadTo`](SkiaSharp.SKPath.QuadTo*) Per aggiungere una spline di Bézier quadratica
-- [`ConicTo`](SkiaSharp.SKPath.ConicTo*) Per aggiungere una razionale spline Bezier quadratica, che può eseguire in modo accurato il rendering di sezioni conica (puntini di sospensione, parabolas e hyperbolas)
+- [`LineTo`](xref:SkiaSharp.SKPath.LineTo*) Per aggiungere una linea retta nel percorso
+- [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*) Per aggiungere un arco, vale a dire una riga nella circonferenza di un cerchio o dell'ellisse
+- [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo*) Per aggiungere una spline di Bézier cubica
+- [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo*) Per aggiungere una spline di Bézier quadratica
+- [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo*) Per aggiungere una razionale spline Bezier quadratica, che può eseguire in modo accurato il rendering di sezioni conica (puntini di sospensione, parabolas e hyperbolas)
 
 Nessuno di questi cinque metodi contengono tutte le informazioni necessarie per descrivere la riga o una curva. Ognuno di questi cinque metodi funziona in combinazione con il punto corrente stabilito dalla chiamata al metodo precede immediatamente. Ad esempio, il `LineTo` metodo aggiunge una linea retta per la distribuzione basata sul punto corrente di, il parametro `LineTo` è solo un singolo punto.
 
 Il `SKPath` classe definisce anche i metodi che hanno gli stessi nomi di questi sei metodi ma con un `R` all'inizio:
 
-- [`RMoveTo`]((SkiaSharp.SKPath.RMoveTo*))
-- [`RLineTo`](SkiaSharp.SKPath.RLineTo*)
-- [`RArcTo`](SkiaSharp.SKPath.RArcTo*)
-- [`RCubicTo`](SkiaSharp.SKPath.RCubicTo*)
-- [`RQuadTo`](SkiaSharp.SKPath.RQuadTo*)
-- [`RConicTo`](SkiaSharp.SKPath.RConicTo*)
+- [`RMoveTo`](xref:SkiaSharp.SKPath.RMoveTo*)
+- [`RLineTo`](xref:SkiaSharp.SKPath.RLineTo*)
+- [`RArcTo`](xref:SkiaSharp.SKPath.RArcTo*)
+- [`RCubicTo`](xref:SkiaSharp.SKPath.RCubicTo*)
+- [`RQuadTo`](xref:SkiaSharp.SKPath.RQuadTo*)
+- [`RConicTo`](xref:SkiaSharp.SKPath.RConicTo*)
 
 Il `R` è l'acronimo *relativo*. Questi metodi hanno la stessa sintassi dei metodi corrispondenti senza il `R` ma sono relativo al punto corrente. Questi strumenti sono utili per la creazione di parti simili di un percorso in un metodo che viene chiamato più volte.
 

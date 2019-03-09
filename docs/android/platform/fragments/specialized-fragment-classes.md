@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 1011d74be971a3acba33c8f2f811e8f89e20cfc4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 75d95d630415cdaa4c0c1ed3b8ddebb32b8e3c4d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108444"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670065"
 ---
 # <a name="specialized-fragment-classes"></a>Classi di frammenti specializzate
 
@@ -191,7 +191,7 @@ public class AlertDialogFragment : DialogFragment
 
 ## <a name="preferencefragment"></a>PreferenceFragment
 
-Per gestire le preferenze, fornisce l'API di frammenti di `PreferenceFragment` sottoclasse. Il `PreferenceFragment` è simile al [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/) &ndash; mostrerà una gerarchia di preferenze per l'utente in un frammento. Quando l'utente interagisce con le preferenze, essi verranno salvate automaticamente a [SharedPreferences](http://developer.android.com/reference/android/content/SharedPreferences.html).
+Per gestire le preferenze, fornisce l'API di frammenti di `PreferenceFragment` sottoclasse. Il `PreferenceFragment` è simile al [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/) &ndash; mostrerà una gerarchia di preferenze per l'utente in un frammento. Quando l'utente interagisce con le preferenze, essi verranno salvate automaticamente a [SharedPreferences](https://developer.android.com/reference/android/content/SharedPreferences.html).
 In Android 3.0 o versioni successive delle applicazioni, usare il `PreferenceFragment` per gestire le preferenze nelle applicazioni. L'immagine seguente illustra un esempio di un `PreferenceFragment`:
 
 [![Esempio PreferencesFragment inline, finestra di dialogo e le preferenze di avvio](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png#lightbox)

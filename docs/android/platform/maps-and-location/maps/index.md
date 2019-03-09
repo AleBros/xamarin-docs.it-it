@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: fa7fff86e9a7e23bf332f2d62c3ec1a6ed3c54e1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117136"
 ---
+
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Come usare Google Maps e il percorso con xamarin. Android
 
 _Questo articolo illustra come usare le mappe e posizione con xamarin. Android. Viene descritto come tutti i dati da sfruttando l'applicazione mappe predefinite per mediante direttamente viene eseguito il mapping API V2 Android di Google._
@@ -32,8 +27,8 @@ In primo luogo, in cui viene spiegato come sfruttare i vantaggi dell'applicazion
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [MapsAndLocationDemo_v3 (esempio)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
+- [MapsAndLocationDemo_v3 (sample)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
 - [Ciclo di vita dell'attività](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Ottenere una chiave API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Elenco di Intent: Richiamo di applicazioni Google nei dispositivi Android](http://developer.android.com/guide/appendix/g-app-intents.html)
-- [Posizione e mappe](http://developer.android.com/guide/topics/location/index.html)
+- [Elenco di scopi: La chiamata di applicazioni Google nei dispositivi Android](https://developer.android.com/guide/appendix/g-app-intents.html)
+- [Posizione e mappe](https://developer.android.com/guide/topics/location/index.html)

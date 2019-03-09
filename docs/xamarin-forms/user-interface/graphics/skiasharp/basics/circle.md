@@ -7,12 +7,12 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 63379a9a4195bf5128c96caaf8745df8dd0addf3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: b4cd84e9134db2b2106af3205f189fbc2a92bdcc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050712"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669449"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Disegnare un cerchio semplice in SkiaSharp
 
@@ -108,7 +108,7 @@ Il [ `Style` ](xref:SkiaSharp.SKPaint.Style) proprietà indica che si desidera *
 
 Il valore predefinito è `Fill`. Utilizzare la terza opzione per disegnare la linea e riempire l'area interna con lo stesso colore.
 
-Impostare il [ `Color` ](xref:SkiaSharp.SKPaint.Color) la proprietà su un valore di tipo [ `SKColor` ](xref:SkiaSharp.SKColor). Un modo per ottenere un `SKColor` valore è convertendo un xamarin. Forms `Color` valore a un `SKColor` valore usando il metodo di estensione [ `ToSKColor` ](SkiaSharp.Views.Forms.Extensions.ToSKColor*). Il [ `Extensions` ](xref:SkiaSharp.Views.Forms.Extensions) classe la `SkiaSharp.Views.Forms` dello spazio dei nomi include altri metodi per la conversione tra valori di xamarin. Forms e SkiaSharp.
+Impostare il [ `Color` ](xref:SkiaSharp.SKPaint.Color) la proprietà su un valore di tipo [ `SKColor` ](xref:SkiaSharp.SKColor). Un modo per ottenere un `SKColor` valore è convertendo un xamarin. Forms `Color` valore a un `SKColor` valore usando il metodo di estensione [ `ToSKColor` ](xref:SkiaSharp.Views.Forms.Extensions.ToSKColor*). Il [ `Extensions` ](xref:SkiaSharp.Views.Forms.Extensions) classe la `SkiaSharp.Views.Forms` dello spazio dei nomi include altri metodi per la conversione tra valori di xamarin. Forms e SkiaSharp.
 
 Il [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) proprietà indica lo spessore della linea. In questo caso è impostato su 25 pixel.
 
@@ -153,7 +153,7 @@ Un `SKPaint` oggetto è poco più di una raccolta di proprietà di disegno delle
 > [!NOTE]
 > Il `SKPaint` classe definisce un [ `IsAntialias` ](xref:SkiaSharp.SKPaint.IsAntialias) per abilitare l'anti-aliasing per il rendering degli elementi grafici. Anti-aliasing comporta in genere archi visivamente più uniforme, pertanto è opportuno impostare questa proprietà su `true` nella maggior parte dei `SKPaint` oggetti. Per motivi di semplicità, questa proprietà è _non_ impostare nella maggior parte delle pagine di esempio.
 
-Anche se la larghezza del contorno del cerchio è specificata come 25 pixel &mdash; o un quarto del raggio del cerchio &mdash; risulta essere più sottili e vi è un buon motivo per cui: metà della larghezza della riga è nascosto dai cerchio blu. Gli argomenti per il `DrawCircle` metodo definirà le coordinate geometriche astratte di un cerchio. L'interno blu viene ridimensionato su tale dimensione per il pixel più vicino, ma la struttura di larghezza di 25 pixel attraversa il cerchio geometrico &mdash; metà su interno e il metà all'esterno.
+Anche se la larghezza del contorno del cerchio è specificata come 25 pixel &mdash; o un quarto del raggio del cerchio &mdash; risulta essere più sottili e vi è un buon motivo per cui: Metà della larghezza della riga è nascosto dai cerchio blu. Gli argomenti per il `DrawCircle` metodo definirà le coordinate geometriche astratte di un cerchio. L'interno blu viene ridimensionato su tale dimensione per il pixel più vicino, ma la struttura di larghezza di 25 pixel attraversa il cerchio geometrico &mdash; metà su interno e il metà all'esterno.
 
 Nell'esempio successivo nel [l'integrazione con xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) articolo viene illustrata questa visivamente.
 

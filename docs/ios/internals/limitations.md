@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: bb8aec5a5054c28cf7862d14148e7f2000fa3a35
-ms.sourcegitcommit: c77f84a0686d16de6ac630271fccac719fd9eec4
+ms.openlocfilehash: a6a4ef9fb36fde067fa58fec9a6206b1dbc1fbf0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56307918"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668348"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitazioni di xamarin. IOS
 
@@ -27,7 +27,7 @@ Queste sono le limitazioni di xamarin. IOS rispetto al desktop Mono:
 
 A differenza di Mono/.NET tradizionali, codice su iPhone è compilato in modo statico anticipo anziché in fase di compilazione su richiesta tramite un compilatore JIT.
 
-Mono [AOT completo](http://www.mono-project.com/docs/advanced/aot/#full-aot) tecnologia presenta alcune limitazioni per quanto riguarda i generics, questi errori sono causati poiché non tutte le possibili istanza generica può essere determinato fin dall'inizio in fase di compilazione. Ciò non è un problema per i Runtime .NET o Mono regolari perché il codice viene sempre compilato in fase di esecuzione usando il Just nel compilatore ora. Ma ciò costituisce una sfida per un compilatore statico, ad esempio xamarin. IOS.
+Mono [AOT completo](https://www.mono-project.com/docs/advanced/aot/#full-aot) tecnologia presenta alcune limitazioni per quanto riguarda i generics, questi errori sono causati poiché non tutte le possibili istanza generica può essere determinato fin dall'inizio in fase di compilazione. Ciò non è un problema per i Runtime .NET o Mono regolari perché il codice viene sempre compilato in fase di esecuzione usando il Just nel compilatore ora. Ma ciò costituisce una sfida per un compilatore statico, ad esempio xamarin. IOS.
 
 Alcuni dei problemi comuni che gli sviluppatori verificarsi, includono:
 

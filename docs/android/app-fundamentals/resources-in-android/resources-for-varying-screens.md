@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: df8ee3da8a1341cd1dd879e8e70687d9fbd9957b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63cbe556783ffe22512ff5312817d522120bd15e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117434"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670571"
 ---
 # <a name="creating-resources-for-varying-screens"></a>Creazione di risorse per schermi diversi
 
@@ -50,21 +50,21 @@ Tuttavia, è possibile che la scalabilità genererà le bitmap venga visualizzat
 
 ### <a name="declare-the-supported-screen-size"></a>Dichiarare le dimensioni dello schermo supportate
 
-Dichiarare le dimensioni dello schermo assicura che solo i dispositivi supportati possono scaricare l'applicazione. Questa operazione viene eseguita impostando il [supporta le schermate](http://developer.android.com/guide/topics/manifest/supports-screens-element.html) elemento il **androidmanifest. XML** file. Questo elemento viene usato per specificare le dimensioni dello schermo sono supportate dall'applicazione. Una determinata schermata è considerata supportato se l'applicazione può posizionare in modo corretto il layout a schermo. Tramite questo elemento del manifesto, l'applicazione non appariranno nella [ *Google Play* ](https://play.google.com/) per i dispositivi che non soddisfano le specifiche dello schermo. Tuttavia, l'applicazione verrà comunque eseguito sui dispositivi con schermate non supportate, ma il layout potrebbe sembrare sfocati e disturbate.
+Dichiarare le dimensioni dello schermo assicura che solo i dispositivi supportati possono scaricare l'applicazione. Questa operazione viene eseguita impostando il [supporta le schermate](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) elemento il **androidmanifest. XML** file. Questo elemento viene usato per specificare le dimensioni dello schermo sono supportate dall'applicazione. Una determinata schermata è considerata supportato se l'applicazione può posizionare in modo corretto il layout a schermo. Tramite questo elemento del manifesto, l'applicazione non appariranno nella [ *Google Play* ](https://play.google.com/) per i dispositivi che non soddisfano le specifiche dello schermo. Tuttavia, l'applicazione verrà comunque eseguito sui dispositivi con schermate non supportate, ma il layout potrebbe sembrare sfocati e disturbate.
 
 Schermata supportata sixes vengono dichiarati nel **Properites/AndroidManifest.xml** file della soluzione:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Manifesto Android](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
+[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Manifesto Android](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
+[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
 
 -----
 
-Modificare **androidmanifest. XML** includere [supporta schermate](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+Modificare **androidmanifest. XML** includere [supporta schermate](https://developer.android.com/guide/topics/manifest/supports-screens-element.html):
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -178,7 +178,7 @@ Questo sito Web consentirà la creazione di bitmap destinate le quattro densità
 
 Android viene eseguito su un elevatissimo numero di dispositivi e la combinazione di dimensioni dello schermo e densità dello schermo può sembrare eccessiva. I suggerimenti seguenti possono aiutare a ridurre al minimo lo sforzo necessario per supportare vari tipi di dispositivi:
 
-- **Solo progettare e sviluppare adatto alle proprie necessità** &ndash; sono disponibili molti dispositivi diversi, ma alcuni esistono rari fattori di forma che possono richiedere una notevole impegno per progettare e sviluppare per. Il [ **dimensioni dello schermo e densità** ](http://developer.android.com/resources/dashboard/screens.html) dashboard è una pagina fornita da Google che fornisce dati sulla scomposizione della matrice densità dello schermo/schermo. Questa suddivisione fornisce informazioni dettagliate sull'attività di sviluppo al supporto di schermate.
+- **Solo progettare e sviluppare adatto alle proprie necessità** &ndash; sono disponibili molti dispositivi diversi, ma alcuni esistono rari fattori di forma che possono richiedere una notevole impegno per progettare e sviluppare per. Il [ **dimensioni dello schermo e densità** ](https://developer.android.com/resources/dashboard/screens.html) dashboard è una pagina fornita da Google che fornisce dati sulla scomposizione della matrice densità dello schermo/schermo. Questa suddivisione fornisce informazioni dettagliate sull'attività di sviluppo al supporto di schermate.
 
 - **Usare punti di distribuzione anziché pixel** -pixel diventano problematico quando vengono modificati densità dello schermo. Non impostare come hardcoded i valori dei pixel. Evitare di pixel a favore di punto di distribuzione (in pixel indipendenti dalla densità).
 

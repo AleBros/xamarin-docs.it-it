@@ -1,5 +1,5 @@
 ---
-title: Dove posso trovare my registri e le informazioni sulla versione?
+title: Dove si possono trovare informazioni sulla versione e i log?
 description: Questo documento descrive la posizione per la ricerca per trovare i log e le informazioni sulla versione di Xamarin. Queste informazioni sono utili quando si diagnosticano problemi, invio di bug, o per ottenere supporto.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -7,16 +7,16 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 2c3ded2233810ff4e903596d65f64097aa3b0445
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ee4b39aed64d7339bd561cccc49a2959a6daba5c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118227"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668309"
 ---
-# <a name="where-can-i-find-my-version-information-and-logs"></a>Dove posso trovare my registri e le informazioni sulla versione?
+# <a name="where-can-i-find-my-version-information-and-logs"></a>Dove si possono trovare informazioni sulla versione e i log?
 
-## <a name="outline"></a>Struttura
+## <a name="outline"></a>Contorno
 
 - [Informazioni sulla versione](#version-information)
     - Informazioni sulla versione di Windows
@@ -100,7 +100,7 @@ Questi sono i registri di `XamarinInstaller.exe` programma di installazione.
 msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 ```
 
-Informazioni di riferimento: [opzioni della riga di comando](http://msdn.microsoft.com/library/aa367988.aspx)
+Informazioni di riferimento: [Opzioni della riga di comando](https://msdn.microsoft.com/library/aa367988.aspx)
 
 #### <a name="a-idvisual-studio-startup-verbose-logs-namevisual-studio-startup-verbose-logs-visual-studio-startup-verbose-logs"></a><a id="visual-studio-startup-verbose-logs" name="visual-studio-startup-verbose-logs" />Avvio di Visual Studio, i log dettagliati
 
@@ -108,7 +108,7 @@ Informazioni di riferimento: [opzioni della riga di comando](http://msdn.microso
 devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 ```
 
-Informazioni di riferimento: [/Log (devenv.exe)](http://msdn.microsoft.com/library/ms241272.aspx)
+Informazioni di riferimento: [/Log (devenv.exe)](https://msdn.microsoft.com/library/ms241272.aspx)
 
 ### <a name="a-idmac-logs-namemac-logs-mac-logs"></a><a id="mac-logs" name="mac-logs" />Log a Mac
 
@@ -145,8 +145,8 @@ Questi sono i registri di `XamarinInstaller.dmg` programma di installazione.
 3.  Pulire e ricompilare il progetto.
 
 4.  Copiare e incollare l'output di compilazione dall'IDE in un file di testo.
-     - Visual Studio (Windows): **visualizzazione > Output > Mostra output di: compilazione**
-     - Visual Studio per Mac: **Vista > riquadri > errori > Output di compilazione (scheda)**
+     - Visual Studio (Windows): **Visualizzazione > Output > Mostra output di: Compilazione**
+     - Visual Studio per Mac: **Visualizzazione > riquadri > errori > Output di compilazione (scheda)**
 
 ## <a name="a-iddebug-logs-for-xamarin-apps-namedebug-logs-for-xamarin-apps-debug-logs-for-xamarinandroid-and-xamarinios-apps"></a><a id="debug-logs-for-xamarin-apps" name="debug-logs-for-xamarin-apps" />Eseguire il debug dei log per le app xamarin. Android e xamarin. IOS
 
@@ -158,9 +158,9 @@ Si noti che questa voce di menu verrà visualizzato solo dopo che l'app è stata
 
 ### <a name="visual-studio"></a>Visual Studio
 
-**Visualizzazione > Output > Mostra output di: eseguire il Debug**
+**Visualizzazione > Output > Mostra output di: Debug**
 
-### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />Android [ `adb` ](http://developer.android.com/tools/help/adb.html) i log di logcat
+### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpsdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />Android [ `adb` ](https://developer.android.com/tools/help/adb.html) i log di logcat
 
 Dopo aver eseguito il `adb` comando, ricollegarli il **android_logcat.txt** file dal Desktop. Queste istruzioni presuppongono che sia un solo dispositivo collegato.
 
@@ -194,7 +194,7 @@ Vedere anche il [Log di Debug Android](~/android/deploy-test/debugging/android-d
 
 #### <a name="xcode"></a>Xcode
 
-**Finestra > dispositivi > ${DeviceName}**
+**Window > Devices > ${DeviceName}**
 
 Report sugli arresti anomali sono disponibili sotto il **Visualizza i log del dispositivo** pulsante. Il Registro di sistema per il dispositivo viene visualizzato nella parte inferiore della finestra sotto la freccia di divulgazione.
 

@@ -1,19 +1,14 @@
 ---
 title: Frammenti
-description: Android 3.0 ha introdotto i frammenti, che illustra come supportare le progettazioni più flessibile per le dimensioni dello schermo diverse molti trovate su telefoni e Tablet. Questo articolo illustra come usare i frammenti per sviluppare applicazioni xamarin. Android, nonché come supportare frammenti dispositivi precedenti ad Android 3.0 (API livello 11).
+description: 'Android 3.0 ha introdotto i frammenti, che illustra come supportare le progettazioni più flessibile per le dimensioni dello schermo diverse molti trovate su telefoni e Tablet. Questo articolo illustra come usare i frammenti per sviluppare applicazioni xamarin. Android, nonché come supportare frammenti dispositivi precedenti ad Android 3.0 (API livello 11).'
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: bc4441c7ee0c36af990297bad1b0c2f0e77123f3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113287"
 ---
+
 # <a name="fragments"></a>Frammenti
 
 _Android 3.0 ha introdotto i frammenti, che illustra come supportare le progettazioni più flessibile per le dimensioni dello schermo diverse molti trovate su telefoni e Tablet. Questo articolo illustra come usare i frammenti per sviluppare applicazioni xamarin. Android, nonché come supportare frammenti dispositivi precedenti ad Android 3.0 (API livello 11)._
@@ -63,6 +58,6 @@ I frammenti sono disponibili in xamarin. Android 4.0 e versioni successive. Un'a
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Raccolta honeycomb (esempio)](https://developer.xamarin.com/samples/monodroid/HoneycombGallery)
-- [Frammenti](http://developer.android.com/guide/topics/fundamentals/fragments.html)
-- [Pacchetto di supporto](http://developer.android.com/sdk/compatibility-library.html)
-- [MOTODEV Webinar: Introduzione a frammenti](http://motodev.adobeconnect.com/p9h1aqk3ttn/)
+- [Frammenti](https://developer.android.com/guide/topics/fundamentals/fragments.html)
+- [Pacchetto di supporto](https://developer.android.com/sdk/compatibility-library.html)
+- [Webinar MOTODEV: Introduzione a frammenti](http://motodev.adobeconnect.com/p9h1aqk3ttn/)

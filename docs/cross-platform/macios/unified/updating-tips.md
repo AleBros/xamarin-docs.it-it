@@ -6,12 +6,12 @@ ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ce5c8f7cf30407e64464c412359263b52e134675
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: a5083e1d31377caece1b8fb4faf33b6e3ff88202
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267391"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672456"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>Suggerimenti per l'aggiornamento del codice per l'API unificata
 
@@ -88,7 +88,7 @@ Le operazioni che potrebbero dover essere risolti manualmente includono:
 
  * `NSAction` è stata [sostituiti](~/cross-platform/macios/unified/overview.md#NSAction) con il .NET starndard `Action`. Alcuni delegati semplice (singolo parametro) sono anche stati sostituiti con `Action<T>`.
 
-Infine, fare riferimento al [differenze tra API unificata classica v](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) per cercare le modifiche alle API nel codice. La ricerca [questa pagina](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) aiuterà a trovare le API classiche e ciò che è stato aggiornati a.
+Infine, fare riferimento al [differenze tra API unificata classica v](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) per cercare le modifiche alle API nel codice. La ricerca [questa pagina](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) aiuterà a trovare le API classiche e ciò che è stato aggiornati a.
 
 **Nota:** il `MonoTouch.Dialog` rimane invariato dopo la migrazione. Se il codice Usa **monotouch. Dialog** è necessario continuare a usare tale spazio dei nomi, eseguire *non* modificare `MonoTouch.Dialog` a `Dialog`!
 
@@ -98,15 +98,15 @@ Altri esempi di errori comuni sono elencati di seguito, insieme alla soluzione:
 
 **Errore CS0012: Il tipo 'MonoTouch.UIKit.UIView' è definito in un assembly che non viene fatto riferimento.**
 
-Correzione: Ciò significa in genere il progetto fa riferimento a un componente o pacchetto NuGet che non è stato compilato con l'API unificata. È necessario eliminare e aggiungere di nuovo tutti i componenti e NuGet pacchetti. Se non viene risolto l'errore, la libreria esterna potrebbe non supportare ancora l'API unificata.
+Fix: Ciò significa in genere il progetto fa riferimento a un componente o pacchetto NuGet che non è stato compilato con l'API unificata. È necessario eliminare e aggiungere di nuovo tutti i componenti e NuGet pacchetti. Se non viene risolto l'errore, la libreria esterna potrebbe non supportare ancora l'API unificata.
 
 **Errore MT0034: Non può includere sia 'monotouch' e 'Dll' nello stesso progetto xamarin. IOS - 'Dll' viene fatto riferimento in modo esplicito, mentre 'monotouch' viene fatto riferimento da ' xamarin, versione = 0.6.3.0, Culture = neutral, PublicKeyToken = null'.**
 
-Correzione: Eliminare il componente che ha causato l'errore e aggiungere di nuovo al progetto.
+Fix: Eliminare il componente che ha causato l'errore e aggiungere di nuovo al progetto.
 
 **Errore CS0234: Il nome del tipo o spazio dei nomi 'Base' non esiste nello spazio dei nomi 'MonoTouch'. Un riferimento all'assembly mancante?**
 
-Correzione: Lo strumento di migrazione automatica in Visual Studio per Mac *dovrebbe* Aggiorna tutto `MonoTouch.Foundation` fa riferimento a `Foundation`, ma in alcuni casi questi dovranno essere aggiornate manualmente. È possibile visualizzare errori simili per altri spazi dei nomi precedentemente contenute nel `MonoTouch`, ad esempio `UIKit`.
+Fix: Lo strumento di migrazione automatica in Visual Studio per Mac *dovrebbe* Aggiorna tutto `MonoTouch.Foundation` fa riferimento a `Foundation`, ma in alcuni casi questi dovranno essere aggiornate manualmente. È possibile visualizzare errori simili per altri spazi dei nomi precedentemente contenute nel `MonoTouch`, ad esempio `UIKit`.
 
 **Errore CS0266: Impossibile convertire implicitamente il tipo 'double' a 'System.float'**
 
@@ -118,11 +118,11 @@ nfloat scale = (nfloat)Math.Min(rect.Width, rect.Height);
 
 **Errore CS0266: Impossibile convertire implicitamente il tipo 'CoreGraphics.CGRect' a 'System.Drawing.RectangleF'. Esiste una conversione esplicita (probabilmente manca un cast)**
 
-Correzione: Modificare le istanze di `RectangleF` al `CGRect`, `SizeF` a `CGSize`, e `PointF` a `CGPoint`. Lo spazio dei nomi `using System.Drawing;` deve essere sostituito con `using CoreGraphics;` (se non è già presenta).
+Fix: Modificare le istanze di `RectangleF` al `CGRect`, `SizeF` a `CGSize`, e `PointF` a `CGPoint`. Lo spazio dei nomi `using System.Drawing;` deve essere sostituito con `using CoreGraphics;` (se non è già presenta).
 
 **errore CS1502: La migliore corrispondenza del metodo per l'overload ' CoreGraphics.CGContext.SetLineDash (System.nfloat, System.nfloat[])' presenta alcuni argomenti non validi**
 
-Correzione: Modifica tipo di matrice `nfloat[]` e assegnato in modo esplicito `Math.PI`.
+Fix: Modifica tipo di matrice `nfloat[]` e assegnato in modo esplicito `Math.PI`.
 
 ```csharp
 grphc.SetLineDash (0, new nfloat[] { 0, 3 * (nfloat)Math.PI });
@@ -130,7 +130,7 @@ grphc.SetLineDash (0, new nfloat[] { 0, 3 * (nfloat)Math.PI });
 
 **Errore CS0115: 'WordsTableSource.RowsInSection (UIKit.UITableView, int)' è contrassegnato come override, ma nessun metodo appropriato trovato per eseguire l'override**
 
-Correzione: Modificare i tipi di parametro e valore restituiti a `nint`. Questa eventualità si verifica nell'override dei metodi, ad esempio quelli sul `UITableViewSource`, tra cui `RowsInSection`, `NumberOfSections`, `GetHeightForRow`, `TitleForHeader`, `GetViewForHeader`e così via.
+Fix: Modificare i tipi di parametro e valore restituiti a `nint`. Questa eventualità si verifica nell'override dei metodi, ad esempio quelli sul `UITableViewSource`, tra cui `RowsInSection`, `NumberOfSections`, `GetHeightForRow`, `TitleForHeader`, `GetViewForHeader`e così via.
 
 ```csharp
 public override nint RowsInSection (UITableView tableview, nint section) {
@@ -138,7 +138,7 @@ public override nint RowsInSection (UITableView tableview, nint section) {
 
 **Errore CS0508: `WordsTableSource.NumberOfSections(UIKit.UITableView)': return type must be 'System.nint' to match overridden member `UIKit.UITableViewSource.NumberOfSections(UIKit.UITableView)'**
 
-Correzione: Quando il tipo restituito viene impostato su `nint`, eseguire il cast del valore restituito in `nint`.
+Fix: Quando il tipo restituito viene impostato su `nint`, eseguire il cast del valore restituito in `nint`.
 
 ```csharp
 public override nint NumberOfSections (UITableView tableView)
@@ -149,7 +149,7 @@ public override nint NumberOfSections (UITableView tableView)
 
 **Errore CS1061: Tipo 'CoreGraphics.CGPath' non contiene una definizione per 'AddElipseInRect'**
 
-Correzione: Correggere l'ortografia di `AddEllipseInRect`. Altre modifiche di nome includono:
+Fix: Correggere l'ortografia di `AddEllipseInRect`. Altre modifiche di nome includono:
 
 * Modificare 'Black' `NSColor.Black`.
 * Utilizzare MapKit 'AddAnnotation' `AddAnnotations`.
@@ -163,14 +163,14 @@ Correzione: Correggere l'ortografia di `AddEllipseInRect`. Altre modifiche di no
 
 Durante la creazione di un'annotazione personalizzata tramite sottoclassi MKAnnotation il campo delle Coordinate non dispone di alcun setter, solo un getter.
 
-[Correggere](https://forums.xamarin.com/discussion/comment/109505/#Comment_109505):
+[Fix](https://forums.xamarin.com/discussion/comment/109505/#Comment_109505):
 
 * Aggiungere un campo per tenere traccia della coordinata
 * restituire questo campo nel getter della proprietà Coordinate
 * L'override del metodo SetCoordinate e impostare il campo
 * Chiamare SetCoordinate nei ctor con il parametro passato in coordinate
 
-Dovrebbe essere simile al seguente:
+Il file dovrebbe essere simile al seguente:
 
 ```csharp
 class BasicPinAnnotation : MKAnnotation

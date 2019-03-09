@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 1a08803930eaaa3c2c5c5f8b8aa9561a9a7b8d88
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 5c1d73acfef7a4384db7220daf7319251eb61f85
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557243"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670987"
 ---
 # <a name="images-in-xamarinforms"></a>Immagini in xamarin. Forms
 
@@ -44,7 +44,7 @@ Il [ `Aspect` ](xref:Xamarin.Forms.Image.Aspect) proprietà determina come l'imm
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -Ritaglia l'immagine in modo da riempire l'area di visualizzazione mantenendo le proporzioni (ie. Nessun distorsioni).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -Consegna l'immagine, se necessario, in modo che l'intera immagine rientri nell'area di visualizzazione, con uno spazio vuoto aggiunto per i primi/ultimi o i lati a seconda che l'immagine è ampia e un'altezza.
 
-È possibile caricare le immagini da un [file locale](#Local_Images), un [risorsa incorporata](#embedded-images), o [scaricato](#Downloading_Images). Inoltre, le icone del tipo di carattere possono essere visualizzate dal [ `Image` ](xref:Xamarin.Forms.Image) visualizzazione specificando i dati dell'icona del tipo di carattere in un `FontImageSource` oggetto. Per altre informazioni, vedere [visualizzare le icone del tipo di carattere](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) nel [tipi di carattere](~/xamarin-forms/user-interface/text/fonts.md) Guida.
+È possibile caricare le immagini da un [file locale](#local-images), un [risorsa incorporata](#embedded-images), o [scaricato](#downloading-images). Inoltre, le icone del tipo di carattere possono essere visualizzate dal [ `Image` ](xref:Xamarin.Forms.Image) visualizzazione specificando i dati dell'icona del tipo di carattere in un `FontImageSource` oggetto. Per altre informazioni, vedere [visualizzare le icone del tipo di carattere](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) nel [tipi di carattere](~/xamarin-forms/user-interface/text/fonts.md) Guida.
 
 ## <a name="local-images"></a>Immagini locali
 
@@ -92,7 +92,7 @@ Il modo migliore per gestire le immagini poiché iOS 9 consiste nel trascinare l
 
 Prima di iOS 9, le versioni retina dell'immagine può essere inserite nel **le risorse** cartella - due e tre volte la risoluzione con un **@2x** oppure **@3x**suffissi il nome del file prima dell'estensione di file (ad es. **myimage@2x.png**). Tuttavia, questo metodo di utilizzo di immagini in un'app per iOS è stato deprecato da Apple. Per altre informazioni, vedere [le dimensioni delle immagini e i nomi file](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
-Le immagini di Android risoluzione alternativo devono essere inserite in [opportunamente denominato Directory](http://developer.android.com/guide/practices/screens_support.html) nel progetto Android, come illustrato nello screenshot seguente:
+Le immagini di Android risoluzione alternativo devono essere inserite in [opportunamente denominato Directory](https://developer.android.com/guide/practices/screens_support.html) nel progetto Android, come illustrato nello screenshot seguente:
 
 [![Percorso dell'immagine multiplo con risoluzione Android](images-images/xs-highdpisolution-sml.png "percorso di Android immagine multiplo con risoluzione")](images-images/xs-highdpisolution.png#lightbox "percorso dell'immagine multiplo con risoluzione Android")
 
@@ -296,7 +296,7 @@ L'impostazione delle icone e schermate iniziali per le app xamarin. Forms viene 
 
 ## <a name="icons"></a>Icone
 
-Vedere le [iOS utilizzo delle immagini](~/ios/app-fundamentals/images-icons/index.md), [Google visualizzato](http://developer.android.com/design/style/iconography.html), e [linee guida per gli asset riquadro e icona](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) per altre informazioni sulla creazione di queste risorse dell'applicazione.
+Vedere le [iOS utilizzo delle immagini](~/ios/app-fundamentals/images-icons/index.md), [Google visualizzato](https://developer.android.com/design/style/iconography.html), e [linee guida per gli asset riquadro e icona](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) per altre informazioni sulla creazione di queste risorse dell'applicazione.
 
 Inoltre, le icone del tipo di carattere possono essere visualizzate dal [ `Image` ](xref:Xamarin.Forms.Image) visualizzazione specificando i dati dell'icona del tipo di carattere in un `FontImageSource` oggetto. Per altre informazioni, vedere [visualizzare le icone del tipo di carattere](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) nel [tipi di carattere](~/xamarin-forms/user-interface/text/fonts.md) Guida.
 
@@ -316,5 +316,5 @@ Immagini della schermata iniziale e l'icona dell'applicazione sono configurazion
 
 - [WorkingWithImages (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/)
 - [iOS utilizzo delle immagini](~/ios/app-fundamentals/images-icons/index.md)
-- [Android visualizzato](http://developer.android.com/design/style/iconography.html)
+- [Android visualizzato](https://developer.android.com/design/style/iconography.html)
 - [Linee guida per gli asset riquadro e icona](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/)

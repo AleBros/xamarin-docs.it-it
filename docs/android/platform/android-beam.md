@@ -1,19 +1,19 @@
 ---
-title: Trasmetti Android
+title: Android Beam
 ms.prod: xamarin
 ms.assetid: 4172A798-89EC-444D-BC0C-0A7DD67EF98C
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 13a0a0d9c6a9d1d5f49020b1a8096f5e054d415c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9fcabc90875dda28ecdd5d94f1ca2f263ffe4886
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114925"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670850"
 ---
-# <a name="android-beam"></a>Trasmetti Android
+# <a name="android-beam"></a>Android Beam
 
 Trasmetti Android sono una tecnologia di quasi Field Communication (NFC) introdotta in Android 4.0 che consente alle applicazioni di condividere informazioni tramite NFC quando in stretta vicinanza.
 
@@ -85,4 +85,4 @@ Per un esempio di codice completo che usa Android Trasmetti, illustrato in esecu
 
 - [Demo per Android Trasmetti (esempio)](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/)
 - [Introduzione a Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Piattaforma Android 4.0](http://developer.android.com/sdk/android-4.0.html)
+- [Piattaforma Android 4.0](https://developer.android.com/sdk/android-4.0.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: bc7da76084075b03ca346949b7bb764ae1313c2a
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 05a2187a5e8dc010f04e89757b566eaf44cb5fd6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563511"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668940"
 ---
 # <a name="location-services"></a>Servizi di posizione
 
@@ -32,7 +32,7 @@ In Android, indipendentemente da quali API scelto per l'utilizzo di dati sulla l
 
 Diverse tecnologie vengono utilizzate internamente per individuare la posizione dell'utente. L'hardware usato dipende dal tipo della *provider di posizione* selezionato per il processo di raccolta dei dati. Android Usa tre provider di posizione:
 
--   **Provider GPS** &ndash; GPS fornisce la posizione più accurata, Usa della massima potenza e funziona in modo ottimale in ambienti esterni. Questo provider Usa una combinazione di GPS e assistito GPS ([aGPS](http://en.wikipedia.org/wiki/Assisted_GPS)), che restituisce dati GPS raccolti da torri cellulari.
+-   **Provider GPS** &ndash; GPS fornisce la posizione più accurata, Usa della massima potenza e funziona in modo ottimale in ambienti esterni. Questo provider Usa una combinazione di GPS e assistito GPS ([aGPS](https://en.wikipedia.org/wiki/Assisted_GPS)), che restituisce dati GPS raccolti da torri cellulari.
 
 -   **Provider di rete** &ndash; fornisce una combinazione di dati Wi-Fi e cellulare, inclusi quelli raccolti dalla cella towers aGPS. Usa meno energia rispetto del Provider GPS, ma restituisce dati sulla località di precisione diverse.
 
@@ -59,7 +59,7 @@ Per impostare le autorizzazioni, espandere la **delle proprietà** cartella nel 
 L'impostazione di una di queste autorizzazioni indica Android che l'applicazione necessita dell'autorizzazione da parte dell'utente per accedere ai provider di posizione. Dispositivi che il livello API 22 (Android 5.1) di esecuzione o lower chiederà all'utente per concedere queste autorizzazioni ogni volta che l'app viene installata. Nei dispositivi che eseguono API livello 23 (Android 6.0) o versioni successive, l'app deve eseguire una verifica delle autorizzazioni in fase di esecuzione prima di effettuare una richiesta del provider di posizione. 
 
 > [!NOTE]
->Nota: L'impostazione `ACCESS_FINE_LOCATION` implica l'accesso a entrambi dati sulla località approssimativa e accurato. Non dovrebbe essere mai necessario impostare entrambe le autorizzazioni, solo il *minimo* app richiesto per il funzionamento dell'autorizzazione.
+>Nota: Impostazione `ACCESS_FINE_LOCATION` implica l'accesso a entrambi dati sulla località approssimativa e accurato. Non dovrebbe essere mai necessario impostare entrambe le autorizzazioni, solo il *minimo* app richiesto per il funzionamento dell'autorizzazione.
 
 Questo frammento di codice è riportato un esempio di come verificare che un'app disponga dell'autorizzazione per il `ACCESS_FINE_LOCATION` autorizzazione:
 
@@ -84,7 +84,7 @@ Il provider di posizione congiunta è il modo migliore per le applicazioni Andro
  
 L'API del provider di posizione congiunta offre un'ampia gamma di altri strumenti per migliorare la produttività applicazioni con riconoscimento della posizione, tra cui geofencing e monitoraggio dell'attività. In questa sezione verrà messa a fuoco nelle Nozioni di base di configurazione di `LocationClient`, stabilire i provider e ottenere la posizione dell'utente.
 
-Il provider di posizione congiunta fa parte di [Google Play Services](http://developer.android.com/google/play-services/index.html).
+Il provider di posizione congiunta fa parte di [Google Play Services](https://developer.android.com/google/play-services/index.html).
 Il pacchetto di Google Play Services deve essere installato e configurato correttamente nel funzionamento dell'applicazione per l'API del provider di posizione congiunta e il dispositivo deve avere l'APK Google Play Services installato.
 
 Prima di xamarin. Android applicazione può usare il provider di posizione congiunta, è necessario aggiungere il **Xamarin.GooglePlayServices.Maps** pacchetto al progetto. Inoltre, i seguenti `using` istruzioni devono essere aggiunti ai file di origine che fanno riferimento le classi descritte di seguito:
@@ -231,7 +231,7 @@ Il servizio di percorso di Android è un'API precedente per l'utilizzo di inform
 
 Il servizio di percorso è ideale per le applicazioni che devono essere eseguito sui dispositivi che non dispongono di Google Play Services.
 
-Il servizio di percorso è un tipo speciale di [servizio](http://developer.android.com/guide/components/services.html) gestiti dal sistema. Un servizio di sistema interagisce con l'hardware del dispositivo ed è sempre in esecuzione. Per la scelta in aggiornamenti della posizione nella nostra applicazione, verrà effettuata la sottoscrizione agli aggiornamenti della posizione dal servizio di individuazione sistema usando una `LocationManager` e un `RequestLocationUpdates` chiamare.
+Il servizio di percorso è un tipo speciale di [servizio](https://developer.android.com/guide/components/services.html) gestiti dal sistema. Un servizio di sistema interagisce con l'hardware del dispositivo ed è sempre in esecuzione. Per la scelta in aggiornamenti della posizione nella nostra applicazione, verrà effettuata la sottoscrizione agli aggiornamenti della posizione dal servizio di individuazione sistema usando una `LocationManager` e un `RequestLocationUpdates` chiamare.
 
 Per ottenere la posizione dell'utente usando il servizio di percorso di Android sono necessari diversi passaggi:
 
@@ -356,11 +356,11 @@ Questa guida sono stati illustrati come ottenere la posizione dell'utente usando
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Location (esempio)](https://developer.xamarin.com/samples/Location/)
-- [FusedLocationProvider (esempio)](https://developer.xamarin.com/samples/FusedLocationProvider/)
-- [Google Play Services](http://developer.android.com/google/play-services/index.html)
+- [FusedLocationProvider (sample)](https://developer.xamarin.com/samples/FusedLocationProvider/)
+- [Google Play Services](https://developer.android.com/google/play-services/index.html)
 - [Classe criteri](https://developer.xamarin.com/api/type/Android.Locations.Criteria/)
 - [Classe LocationManager](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/)
 - [Classe LocationListener](https://developer.xamarin.com/api/type/Android.Locations.ILocationListener/)
-- [LocationClient API](http://developer.android.com/reference/com/google/android/gms/location/LocationClient.html)
-- [LocationListener API](http://developer.android.com/reference/com/google/android/gms/location/LocationListener.html)
+- [LocationClient API](https://developer.android.com/reference/com/google/android/gms/location/LocationClient.html)
+- [LocationListener API](https://developer.android.com/reference/com/google/android/gms/location/LocationListener.html)
 - [LocationRequest API](https://developer.android.com/reference/com/google/android/gms/location/LocationRequest.html)

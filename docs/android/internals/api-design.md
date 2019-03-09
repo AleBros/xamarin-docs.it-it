@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 54479a7ed66c83d1d97d51cc93e3df3241ec740f
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: e762a286069d5ef1db90f3c45808eee0a7a04a7f
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207934"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668491"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Principi di progettazione di API xamarin. Android
 
@@ -76,13 +76,13 @@ I binding per la piattaforma Android sono contenuti nel `Mono.Android.dll` assem
 
 Le API di Android usare le raccolte di Java. util in modo esteso per fornire elenchi, set e mappe. È necessario esporre tali elementi utilizzando il [System.Collections.Generic](xref:System.Collections.Generic) interfacce nell'associazione. I mapping fondamentali sono:
 
--   [java.util.Set<E> ](http://developer.android.com/reference/java/util/Set.html) esegue il mapping al tipo di sistema [ICollection<T>](xref:System.Collections.Generic.ICollection`1), la classe helper [Android.Runtime.JavaSet<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaSet%601/).
+-   [java.util.Set<E> ](https://developer.android.com/reference/java/util/Set.html) esegue il mapping al tipo di sistema [ICollection<T>](xref:System.Collections.Generic.ICollection`1), la classe helper [Android.Runtime.JavaSet<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaSet%601/).
 
--   [java.util.List<E> ](http://developer.android.com/reference/java/util/List.html) esegue il mapping al tipo di sistema [IList<T>](xref:System.Collections.Generic.IList`1), la classe helper [Android.Runtime.JavaList<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaList%601/).
+-   [java.util.List<E> ](https://developer.android.com/reference/java/util/List.html) esegue il mapping al tipo di sistema [IList<T>](xref:System.Collections.Generic.IList`1), la classe helper [Android.Runtime.JavaList<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaList%601/).
 
--   [java.util.Map < K, V >](http://developer.android.com/reference/java/util/Map.html) viene eseguito il mapping al tipo di sistema [IDictionary < TKey, TValue >](xref:System.Collections.Generic.IDictionary`2), la classe helper [Android.Runtime.JavaDictionary < K, V >](https://developer.xamarin.com/api/type/Android.Runtime.JavaDictionary%602/).
+-   [java.util.Map < K, V >](https://developer.android.com/reference/java/util/Map.html) viene eseguito il mapping al tipo di sistema [IDictionary < TKey, TValue >](xref:System.Collections.Generic.IDictionary`2), la classe helper [Android.Runtime.JavaDictionary < K, V >](https://developer.xamarin.com/api/type/Android.Runtime.JavaDictionary%602/).
 
--   [java.util.Collection<E> ](http://developer.android.com/reference/java/util/Collection.html) esegue il mapping al tipo di sistema [ICollection<T>](xref:System.Collections.Generic.ICollection`1), la classe helper [Android.Runtime.JavaCollection<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaCollection%601/).
+-   [java.util.Collection<E> ](https://developer.android.com/reference/java/util/Collection.html) esegue il mapping al tipo di sistema [ICollection<T>](xref:System.Collections.Generic.ICollection`1), la classe helper [Android.Runtime.JavaCollection<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaCollection%601/).
 
 Sono state fornite le classi helper per semplificare più velocemente copyless marshalling di questi tipi. Quando possibile, è consigliabile usare questi fornito raccolte anziché l'implementazione di framework fornito, ad esempio [ `List<T>` ](xref:System.Collections.Generic.List`1) oppure [ `Dictionary<TKey, TValue>` ](xref:System.Collections.Generic.Dictionary`2). Il [Android.Runtime](https://developer.xamarin.com/api/namespace/Android.Runtime/) implementazioni usano una raccolta nativa di Java internamente e non richiedono la copia verso e da una raccolta nativa quando si passa a un membro dell'API Android.
 
@@ -240,11 +240,11 @@ I tipi annidati sono "spostati" per essere elementi di pari livello dell'interfa
 
 Si consideri, ad esempio, il [android.os.Parcelable](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) interfaccia.
 Il *Parcelable* interfaccia contiene i metodi, i tipi annidati e costanti. Il *Parcelable* metodi di interfaccia vengono inseriti nel [Android.OS.IParcelable](https://developer.xamarin.com/api/type/Android.OS.IParcelable/) interfaccia.
-Il *Parcelable* costanti di interfaccia vengono inserite nel [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) tipo. Annidato [android.os.Parcelable.ClassLoaderCreator <t> </t> ](http://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) e [android.os.Parcelable.Creator <t> </t> ](http://developer.android.com/reference/android/os/Parcelable.Creator.html) typy nejsou attualmente associato a causa delle limitazioni nel nostro supporto dei generics; Se sono state supportate, potrebbe essere presente come il *Android.OS.IParcelableClassLoaderCreator* e *Android.OS.IParcelableCreator* interfacce. Ad esempio, annidata [android.os.IBinder.DeathRecpient](http://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) interfaccia viene associata come le [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) interfaccia.
+Il *Parcelable* costanti di interfaccia vengono inserite nel [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) tipo. Annidato [android.os.Parcelable.ClassLoaderCreator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) e [android.os.Parcelable.Creator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.Creator.html) typy nejsou attualmente associato a causa delle limitazioni nel nostro supporto dei generics; Se sono state supportate, potrebbe essere presente come il *Android.OS.IParcelableClassLoaderCreator* e *Android.OS.IParcelableCreator* interfacce. Ad esempio, annidata [android.os.IBinder.DeathRecpient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) interfaccia viene associata come le [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) interfaccia.
 
 
 > [!NOTE]
-> A partire da xamarin. Android 1.9, le costanti di interfaccia di Java sono <em>duplicato</em> allo scopo di semplificare la portabilità di linguaggio del codice. Ciò consente di migliorare la portabilità codice Java che si basa su [provider android](http://developer.android.com/reference/android/provider/package-summary.html) costanti dell'interfaccia.
+> A partire da xamarin. Android 1.9, le costanti di interfaccia di Java sono <em>duplicato</em> allo scopo di semplificare la portabilità di linguaggio del codice. Ciò consente di migliorare la portabilità codice Java che si basa su [provider android](https://developer.android.com/reference/android/provider/package-summary.html) costanti dell'interfaccia.
 
 Oltre ai tipi sopra, sono disponibili quattro ulteriori modifiche:
 
@@ -257,9 +257,9 @@ Oltre ai tipi sopra, sono disponibili quattro ulteriori modifiche:
 1. Il *Consts* tipo è obsoleto.
 
 
-Per il *android.os.Parcelable* interfaccia, ciò significa che ora sia un [ *Android.OS.Parcelable* ](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) tipo per contenere le costanti. Ad esempio, il [Parcelable.CONTENTS_FILE_DESCRIPTOR](http://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) costante verrà associata come il [ *Parcelable.ContentsFileDescriptor* ](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/) costante, anziché come il  *ParcelableConsts.ContentsFileDescriptor* costante.
+Per il *android.os.Parcelable* interfaccia, ciò significa che ora sia un [ *Android.OS.Parcelable* ](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) tipo per contenere le costanti. Ad esempio, il [Parcelable.CONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) costante verrà associata come il [ *Parcelable.ContentsFileDescriptor* ](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/) costante, anziché come il  *ParcelableConsts.ContentsFileDescriptor* costante.
 
-Per le interfacce che contiene le costanti che implementano altre interfacce che contiene ancora più costanti, viene generato l'unione di tutte le costanti. Ad esempio, il [android.provider.MediaStore.Video.VideoColumns](http://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) interfaccia implementa la [android.provider.MediaStore.MediaColumns](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumns/) interfaccia. Tuttavia, prima di 1.9, il [Android.Provider.MediaStore.Video.VideoColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+Video+VideoColumnsConsts/) tipo non è in grado di accesso alle costanti dichiarate nel [Android.Provider.MediaStore.MediaColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumnsConsts/).
+Per le interfacce che contiene le costanti che implementano altre interfacce che contiene ancora più costanti, viene generato l'unione di tutte le costanti. Ad esempio, il [android.provider.MediaStore.Video.VideoColumns](https://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) interfaccia implementa la [android.provider.MediaStore.MediaColumns](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumns/) interfaccia. Tuttavia, prima di 1.9, il [Android.Provider.MediaStore.Video.VideoColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+Video+VideoColumnsConsts/) tipo non è in grado di accesso alle costanti dichiarate nel [Android.Provider.MediaStore.MediaColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumnsConsts/).
 Di conseguenza, l'espressione del linguaggio *MediaStore.Video.VideoColumns.TITLE* deve essere associato all'espressione c# *MediaStore.Video.MediaColumnsConsts.Title* che è di difficile individuazione senza la lettura numero elevato di documentazione Java. Nella versione 1.9, l'espressione c# equivalente saranno [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/).
 
 Inoltre, prendere in considerazione la [android.os.Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/) tipo che implementa il linguaggio *Parcelable* interfaccia. Poiché implementa l'interfaccia, tutte le costanti in quell'interfaccia sono accessibili "tramite" del tipo di aggregazione, ad esempio *Bundle.CONTENTS_FILE_DESCRIPTOR* è un'espressione di Java perfettamente valida.
@@ -270,8 +270,8 @@ Infine, i tipi con una *Consts* suffisso, ad esempio *Android.OS.ParcelableConst
 
 ## <a name="resources"></a>Risorse
 
-Immagini, descrizioni di layout, i BLOB binari e i dizionari delle stringhe possono essere inclusi nell'applicazione come [file di risorse](http://developer.android.com/guide/topics/resources/providing-resources.html).
-Varie API di Android sono progettate per [operano sugli ID risorsa](http://developer.android.com/guide/topics/resources/accessing-resources.html) anziché gestire le immagini, stringhe o binary BLOB direttamente.
+Immagini, descrizioni di layout, i BLOB binari e i dizionari delle stringhe possono essere inclusi nell'applicazione come [file di risorse](https://developer.android.com/guide/topics/resources/providing-resources.html).
+Varie API di Android sono progettate per [operano sugli ID risorsa](https://developer.android.com/guide/topics/resources/accessing-resources.html) anziché gestire le immagini, stringhe o binary BLOB direttamente.
 
 Ad esempio, un'app Android di esempio che contiene un layout di interfaccia utente ( `main.axml`), una stringa di internazionalizzazione della tabella ( `strings.xml`) e alcune icone ( `drawable-*/icon.png`) consigliabile mantenere le relative risorse nella directory "Resources" dell'applicazione:
 
@@ -317,7 +317,7 @@ Si utilizzerà quindi `Resource.Drawable.icon` per fare riferimento al `drawable
 
 L'oggetto nativo API Android hanno molti metodi che accettano o restituiscono un valore int che deve essere mappato a un campo costante per determinare il significato di int. Per usare questi metodi, l'utente viene richiesto di consultare la documentazione per vedere quali le costanti sono valori appropriati, che è inferiore a quello ideale.
 
-Ad esempio, prendere in considerazione [Activity.requestWindowFeature (int featureID)](http://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int)).
+Ad esempio, prendere in considerazione [Activity.requestWindowFeature (int featureID)](https://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int)).
 
 In questi casi, Microsoft si impegna a raggruppare costanti correlate in un'enumerazione di .NET e modificare il mapping del metodo per eseguire invece l'enumerazione.
 In questo modo, siamo in grado di offrire la selezione di IntelliSense dei valori possibili.

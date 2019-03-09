@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: a203975545c9f6e258505404d76e3fd5519a5a31
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 14711f9cc2c34d72765e28db158379bc2a26849b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674731"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670288"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Creazione di un'applicazione xamarin. IOS mediante l'API Elements
 
@@ -153,6 +153,6 @@ Questo articolo è presentata una procedura dettagliata ha illustrato come usare
 - [Procedura dettagliata sull'API di Reflection](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [Procedura dettagliata elemento JSON](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
 - [Finestra di dialogo di MonoTouch su Github](https://github.com/migueldeicaza/MonoTouch.Dialog)
-- [Applicazione TweetStation](https://github.com/migueldeicaza/TweetStation)
-- [Riferimento alla classe UITableViewController](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
-- [Riferimento alla classe UINavigationController](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
+- [TweetStation Application](https://github.com/migueldeicaza/TweetStation)
+- [Riferimento alla classe UITableViewController](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
+- [Riferimento alla classe UINavigationController](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

@@ -7,13 +7,8 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 75904ad91df7795c538e736eabb6c6000847b449
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233653"
 ---
+
 # <a name="xamarinios-api-design"></a>Progettazione di API xamarin. IOS
 
 Oltre alle librerie di classi di Base che fanno parte di Mono, il nucleo [xamarin. IOS](http://www.xamarin.com/iOS) viene fornito con le associazioni per iOS varie API per consentire agli sviluppatori di creare applicazioni iOS native con Mono.
@@ -94,11 +89,11 @@ Si tratta di una nuova associazione, progettata specificamente per iOS, basati s
 
 Il [Foundation](xref:Foundation) dello spazio dei nomi fornisce i tipi di dati di base progettato per interagire con il framework di Objective-C Foundation che fa parte di iOS ed è la base per orientate a oggetti di programmazione in Objective-C.
 
-Xamarin. IOS rispecchia in c# la gerarchia di classi da Objective-C. Ad esempio, la classe di base di Objective-C [NSObject](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) può essere usata da c# tramite [Foundation.NSObject](xref:Foundation.NSObject).
+Xamarin. IOS rispecchia in c# la gerarchia di classi da Objective-C. Ad esempio, la classe di base di Objective-C [NSObject](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) può essere usata da c# tramite [Foundation.NSObject](xref:Foundation.NSObject).
 
 Anche se questo spazio dei nomi fornisce le associazioni per i tipi di Objective-C Foundation sottostante, in alcuni casi è stato eseguito il mapping di tipi sottostanti ai tipi .NET. Ad esempio:
 
-- Invece di occuparsi [NSString](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) e [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), il runtime espone queste informazioni come c# [stringa](xref:System.String)s e fortemente tipizzata [matrice](xref:System.Array)s in tutto l'API.
+- Invece di occuparsi [NSString](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) e [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), il runtime espone queste informazioni come c# [stringa](xref:System.String)s e fortemente tipizzata [matrice](xref:System.Array)s in tutto l'API.
 
 - Varie API di supporto sono esposti di seguito per consentire agli sviluppatori di eseguire l'associazione di terze parti, le API Objective-C, altri iOS le API o le API che non sono attualmente associate da xamarin. IOS.
 
@@ -293,7 +288,7 @@ In xamarin. IOS sono disponibili tre meccanismi si escludono a vicenda per assoc
 2.  [Fortemente tipizzati tramite un `Delegate` proprietà](#StrongDelegate)
 3.  [Non tipizzate tramite un `WeakDelegate` proprietà](#WeakDelegate)
 
-Si consideri, ad esempio, il [UIWebView](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html) classe. Ciò lo invia a un [UIWebViewDelegate](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html) istanza, che viene assegnato alle [delegare](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate) proprietà.
+Si consideri, ad esempio, il [UIWebView](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html) classe. Ciò lo invia a un [UIWebViewDelegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html) istanza, che viene assegnato alle [delegare](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate) proprietà.
 
 <a name="Via_Events" />
 
@@ -301,9 +296,9 @@ Si consideri, ad esempio, il [UIWebView](http://developer.apple.com/iphone/libra
 
 Per molti tipi di xamarin. IOS creerà automaticamente un delegato appropriato che inoltrerà i `UIWebViewDelegate` chiamate in c# gli eventi. Per `UIWebView`:
 
--  Il [webViewDidStartLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) metodo viene eseguito il mapping per il [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) evento.
--  Il [webViewDidFinishLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) metodo viene eseguito il mapping per il [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) evento.
--  Il [webView:didFailLoadWithError](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) metodo viene eseguito il mapping per il [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) evento.
+-  Il [webViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) metodo viene eseguito il mapping per il [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) evento.
+-  Il [webViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) metodo viene eseguito il mapping per il [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) evento.
+-  Il [webView:didFailLoadWithError](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) metodo viene eseguito il mapping per il [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) evento.
 
 Ad esempio, questo semplice programma registra ora di inizio e fine durante il caricamento di un sito web di visualizzazione:
 
@@ -674,7 +669,7 @@ Questo costruttore viene utilizzato per inizializzare l'istanza, ma impedisce ch
 public Foo (NSCoder coder)
 ```
 
-Questo costruttore viene fornito per i casi in cui l'oggetto viene inizializzato da un'istanza di NSCoding. Per altre informazioni, vedere Apple [archivi e Guida alla programmazione di serializzazione.](http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/Archiving/index.html#//apple_ref/doc/uid/10000047i)
+Questo costruttore viene fornito per i casi in cui l'oggetto viene inizializzato da un'istanza di NSCoding. Per altre informazioni, vedere Apple [archivi e Guida alla programmazione di serializzazione.](https://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/Archiving/index.html#//apple_ref/doc/uid/10000047i)
 
 #### <a name="exceptions"></a>Eccezioni
 
@@ -694,7 +689,7 @@ Xamarin. IOS include un garbage collector che si occuperà di rilascio delle ris
 
 Esponendo le `IDisposable` interfaccia è un modo pratico di assistere gli sviluppatori nel rilascio di oggetti che potrebbero incapsulare grandi blocchi di memoria (ad esempio, un `UIImage` potrebbe essere simile a un puntatore di inoffensivo, ma può fare riferimento a un'immagine di 2 megabyte ) e altre risorse importanti e finiti (ad esempio, un buffer di decodifica video).
 
-NSObject implementa l'interfaccia IDisposable e anche il [modello Dispose .NET](http://msdn.microsoft.com/library/fs2xkftw.aspx). In questo modo gli sviluppatori che sottoclasse NSObject per eseguire l'override del comportamento di Dispose e rilasciare le proprie risorse su richiesta. Si consideri, ad esempio, questo controller di visualizzazione che dispone di una serie di immagini:
+NSObject implementa l'interfaccia IDisposable e anche il [modello Dispose .NET](https://msdn.microsoft.com/library/fs2xkftw.aspx). In questo modo gli sviluppatori che sottoclasse NSObject per eseguire l'override del comportamento di Dispose e rilasciare le proprie risorse su richiesta. Si consideri, ad esempio, questo controller di visualizzazione che dispone di una serie di immagini:
 
 ```csharp
 class MenuViewController : UIViewController {

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/12/2018
-ms.openlocfilehash: be96683a2e63ed802169543dcee55a3431e42130
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: e5a5e44a61d352b5de05564ebb7192d21ed83dfa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528806"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668894"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notifiche remote con Google Cloud Messaging
 
@@ -617,7 +617,7 @@ GCM, a sua volta, inoltra questo messaggio per l'app client. Creiamo **MessageSe
 
 ### <a name="try-it"></a>Prova
 
-A questo punto siamo pronti per testare l'app client. Se si usa un emulatore o se il dispositivo per comunicare con GCM Wi-Fi, è necessario aprire le seguenti porte TCP nel firewall per i messaggi GCM svolgere: 5228 5229 e 5230.
+A questo punto siamo pronti per testare l'app client. Se si usa un emulatore o dispositivo per comunicare con GCM Wi-Fi, è necessario aprire le seguenti porte TCP nel firewall per i messaggi GCM ottenere: 5228 5229 e 5230.
 
 Avviare l'app client e osservare la finestra di output. Dopo il `RegistrationIntentService` riceva correttamente una registrazione di token da GCM, la finestra di output deve visualizzare il token di output di registro simile a quello riportato di seguito:
 
@@ -657,7 +657,7 @@ Quando si apre la barra di notifica per visualizzare le notifiche, verrà visual
 
 Complimenti, l'app ha ricevuto la prima notifica remota.
 
-Si noti che i messaggi GCM non verranno ricevuti non sono più se l'app è arrestata force. Per riprendere le notifiche dopo un forzare l'arresto, è necessario riavviare manualmente l'app. Per altre informazioni su questi criteri di Android, vedere [avviare controlli per le applicazioni arrestate](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) e ciò [stack overflow post](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
+Si noti che i messaggi GCM non verranno ricevuti non sono più se l'app è arrestata force. Per riprendere le notifiche dopo un forzare l'arresto, è necessario riavviare manualmente l'app. Per altre informazioni su questi criteri di Android, vedere [avviare controlli per le applicazioni arrestate](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) e ciò [stack overflow post](https://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
 
  
 ## <a name="summary"></a>Riepilogo

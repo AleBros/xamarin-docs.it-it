@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: c41aecf5f8c65ad5bfba5361b77d7c7fc047cda4
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171612"
 ---
+
 # <a name="binding-a-java-library"></a>Associazione di una libreria Java
 
 _La community Android ha molte librerie Java che vuoi usare nell'app; Questa guida illustra come incorporare librerie Java nell'applicazione xamarin. Android tramite la creazione di una libreria di binding._
@@ -103,7 +98,7 @@ La documentazione dell'API deve essere il doclet predefinito da Java8, Java7 o S
 
 ## <a name="including-a-native-library-in-a-binding"></a>Inclusione di una libreria nativa in un'associazione
 
-Potrebbe essere necessario includere un **SO** libreria in un progetto di associazione di xamarin. Android come parte dell'associazione di una libreria Java. Quando viene eseguito il codice Java sottoposto a wrapping, xamarin. Android avrà esito negativo rendere il messaggio di errore e la chiamata JNI _java.lang.UnsatisfiedLinkError: metodo nativo non trovato:_ verranno visualizzati nella finestra di logcat out per l'applicazione.
+Potrebbe essere necessario includere un **SO** libreria in un progetto di associazione di xamarin. Android come parte dell'associazione di una libreria Java. Quando viene eseguito il codice Java sottoposto a wrapping, xamarin. Android riuscirà a effettuare la chiamata JNI e il messaggio di errore _java.lang.UnsatisfiedLinkError: Metodo nativo non trovato:_ verranno visualizzati nella finestra di logcat out per l'applicazione.
 
 La soluzione per questo problema consiste nel caricare manualmente il **SO** libreria con una chiamata a `Java.Lang.JavaSystem.LoadLibrary`. Ad esempio presupponendo che un progetto xamarin. Android ha condiviso library **libpocketsphinx_jni.so** incluso nel progetto di associazione con un'azione di compilazione **EmbeddedNativeLibrary**, il seguente frammento di codice (eseguito prima di usare la libreria condivisa) verranno caricati i **SO** libreria:
 
@@ -145,5 +140,5 @@ Guide relative agli scenari di associazione seguenti consentono di associare una
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Utilizzo di JNI](~/android/platform/java-integration/working-with-jni.md)
-- [Metadati GAPI](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [Metadati GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
 - [Uso di librerie native](~/android/platform/native-libraries.md)

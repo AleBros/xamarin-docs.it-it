@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 655f988cc54cf54e346e68109271775dee2918a9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5e354f8271257ab21a855bdf5d576ce3062fadc7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111252"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668244"
 ---
 # <a name="working-with-the-android-manifest"></a>Utilizzo di manifesto Android
 
@@ -84,7 +84,7 @@ Questo esempio produce il frammento xml seguente:
 
 ### <a name="activity-title-bar"></a>Barra del titolo attività
 
-Per impostazione predefinita, Android offre all'applicazione una barra del titolo quando viene eseguito. Il valore usato per l'oggetto è [ `/manifest/application/activity/@android:label` ](http://developer.android.com/guide/topics/manifest/activity-element.html#label). Nella maggior parte dei casi, questo valore sarà diverso dal nome classe. Per specificare l'etichetta della tua app sulla barra del titolo, usare il [ `Label` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Label/) proprietà.
+Per impostazione predefinita, Android offre all'applicazione una barra del titolo quando viene eseguito. Il valore usato per l'oggetto è [ `/manifest/application/activity/@android:label` ](https://developer.android.com/guide/topics/manifest/activity-element.html#label). Nella maggior parte dei casi, questo valore sarà diverso dal nome classe. Per specificare l'etichetta della tua app sulla barra del titolo, usare il [ `Label` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Label/) proprietà.
 Ad esempio: 
 
 ```csharp
@@ -178,7 +178,7 @@ Nella versione di versione del manifesto di compilazione (in **obj/Debug/android
 
 ### <a name="intent-actions-and-features"></a>Funzioni e azioni di tipo intent
 
-Manifesto Android fornisce un modo per descrivere le funzionalità dell'attività. Questa operazione viene eseguita tramite [Intent](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) e [`[IntentFilter]`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 
+Manifesto Android fornisce un modo per descrivere le funzionalità dell'attività. Questa operazione viene eseguita tramite [Intent](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) e [`[IntentFilter]`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 
 attributo personalizzato. È possibile specificare quali azioni siano appropriate per l'attività con il [`IntentFilter`](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) 
 costruttore e quali categorie sono appropriate con il [`Categories`](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) 
 . È necessario fornire almeno un'attività (per questo motivo le attività vengono fornite nel costruttore). `[IntentFilter]` è possibile offrire più volte e ogni uso genera un oggetto separato `<intent-filter/>` elemento all'interno di `<activity/>`. Ad esempio:
@@ -240,18 +240,18 @@ Esistono molti attributi a livello di applicazione che è possibile configurare 
 
 ## <a name="list-of-custom-attributes"></a>Elenco di attributi personalizzati
 
--   [Android.App.ActivityAttribute](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/) : genera una [/manifest/application/activity](http://developer.android.com/guide/topics/manifest/activity-element.html) frammento XML 
--   [Android.App.ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/) : genera una [/manifesto/applicazione](http://developer.android.com/guide/topics/manifest/application-element.html) frammento XML 
--   [Android.App.InstrumentationAttribute](https://developer.xamarin.com/api/type/Android.App.InstrumentationAttribute/) : genera una [manifesto/strumentazione](http://developer.android.com/guide/topics/manifest/instrumentation-element.html) frammento XML 
--   [Android.App.IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) : genera una [//intent-filter](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) frammento XML 
--   [Android.App.MetaDataAttribute](https://developer.xamarin.com/api/type/Android.App.MetaDataAttribute/) : genera una [//meta-data](http://developer.android.com/guide/topics/manifest/meta-data-element.html) frammento XML 
--   [Android.App.PermissionAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionAttribute/) : genera una [//permission](http://developer.android.com/guide/topics/manifest/permission-element.html) frammento XML 
--   [Android.App.PermissionGroupAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionGroupAttribute/) : genera una [//permission-group](http://developer.android.com/guide/topics/manifest/permission-group-element.html) frammento XML 
--   [Android.App.PermissionTreeAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionTreeAttribute/) : genera una [//permission-tree](http://developer.android.com/guide/topics/manifest/permission-tree-element.html) frammento XML 
--   [Android.App.ServiceAttribute](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute/) : genera una [/manifest/application/service](http://developer.android.com/guide/topics/manifest/service-element.html) frammento XML 
--   [Android.App.UsesLibraryAttribute](https://developer.xamarin.com/api/type/Android.App.UsesLibraryAttribute/) : genera una [/manifest/application/uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html) frammento XML 
--   [Android.App.UsesPermissionAttribute](https://developer.xamarin.com/api/type/Android.App.UsesPermissionAttribute/) : genera una [/manifest/uses-permission](http://developer.android.com/guide/topics/manifest/uses-permission-element.html) frammento XML 
--   [Android.Content.BroadcastReceiverAttribute](https://developer.xamarin.com/api/type/Android.Content.BroadcastReceiverAttribute/) : genera una [/manifest/application/receiver](http://developer.android.com/guide/topics/manifest/receiver-element.html) frammento XML 
--   [Android.Content.ContentProviderAttribute](https://developer.xamarin.com/api/type/Android.Content.ContentProviderAttribute/) : genera una [/manifest/application/provider](http://developer.android.com/guide/topics/manifest/provider-element.html) frammento XML 
--   [Android.Content.GrantUriPermissionAttribute](https://developer.xamarin.com/api/type/Android.Content.GrantUriPermissionAttribute/) : genera una [/manifest/application/provider/grant-uri-permission](http://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) frammento XML
+-   [Android.App.ActivityAttribute](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/) : Genera una [/manifest/application/activity](https://developer.android.com/guide/topics/manifest/activity-element.html) frammento XML 
+-   [Android.App.ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/) : Genera una [/manifesto/applicazione](https://developer.android.com/guide/topics/manifest/application-element.html) frammento XML 
+-   [Android.App.InstrumentationAttribute](https://developer.xamarin.com/api/type/Android.App.InstrumentationAttribute/) : Genera una [/manifesto/strumentazione](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) frammento XML 
+-   [Android.App.IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) : Genera una [//intent-filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) frammento XML 
+-   [Android.App.MetaDataAttribute](https://developer.xamarin.com/api/type/Android.App.MetaDataAttribute/) : Genera una [//meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html) frammento XML 
+-   [Android.App.PermissionAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionAttribute/) : Genera una [//permission](https://developer.android.com/guide/topics/manifest/permission-element.html) frammento XML 
+-   [Android.App.PermissionGroupAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionGroupAttribute/) : Genera una [//permission-group](https://developer.android.com/guide/topics/manifest/permission-group-element.html) frammento XML 
+-   [Android.App.PermissionTreeAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionTreeAttribute/) : Genera una [//permission-tree](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) frammento XML 
+-   [Android.App.ServiceAttribute](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute/) : Genera una [/manifest/application/service](https://developer.android.com/guide/topics/manifest/service-element.html) frammento XML 
+-   [Android.App.UsesLibraryAttribute](https://developer.xamarin.com/api/type/Android.App.UsesLibraryAttribute/) : Genera una [/manifest/application/uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) frammento XML 
+-   [Android.App.UsesPermissionAttribute](https://developer.xamarin.com/api/type/Android.App.UsesPermissionAttribute/) : Genera una [/manifest/uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) frammento XML 
+-   [Android.Content.BroadcastReceiverAttribute](https://developer.xamarin.com/api/type/Android.Content.BroadcastReceiverAttribute/) : Genera una [/manifest/application/receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) frammento XML 
+-   [Android.Content.ContentProviderAttribute](https://developer.xamarin.com/api/type/Android.Content.ContentProviderAttribute/) : Genera una [/manifest/application/provider](https://developer.android.com/guide/topics/manifest/provider-element.html) frammento XML 
+-   [Android.Content.GrantUriPermissionAttribute](https://developer.xamarin.com/api/type/Android.Content.GrantUriPermissionAttribute/) : Genera una [/manifest/application/provider/grant-uri-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) frammento XML
 

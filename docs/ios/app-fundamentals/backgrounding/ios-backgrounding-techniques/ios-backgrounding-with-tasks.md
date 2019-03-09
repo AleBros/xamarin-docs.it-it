@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 48859afe2c988c1afe67d5c4350cef734f879fdf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c8d1abebf6dec2b7b5fe76d57ff851fad457f2a8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120996"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669830"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS elaborazione in background in attività
 
@@ -67,7 +67,7 @@ public override void DidEnterBackground (UIApplication application) {
 Iniziare eseguendo l'override di `DidEnterBackground` metodo nella `AppDelegate`, in cui si registra l'attività tramite `BeginBackgroundTask` come è stato fatto nell'esempio precedente. Successivamente, è possibile distribuire un nuovo thread ed eseguire l'attività a esecuzione prolungata. Si noti che il `EndBackgroundTask` viene ora effettuata all'interno di attività a esecuzione prolungata, poiché il `DidEnterBackground` metodo sarà ritornato già.
 
 > [!IMPORTANT]
-> iOS Usa una [sorveglianza meccanismo](http://developer.apple.com/library/ios/qa/qa1693/_index.html) per assicurare che rimanga reattiva dell'interfaccia utente di un'applicazione. Un'applicazione che impiega troppo tempo in `DidEnterBackground` risponderanno nell'interfaccia utente. Consente l'avvio di attività da eseguire in background `DidEnterBackground` da restituire in modo tempestivo, mantenere reattiva l'interfaccia utente e impedire che il watchdog terminazione dell'applicazione.
+> iOS Usa una [sorveglianza meccanismo](https://developer.apple.com/library/ios/qa/qa1693/_index.html) per assicurare che rimanga reattiva dell'interfaccia utente di un'applicazione. Un'applicazione che impiega troppo tempo in `DidEnterBackground` risponderanno nell'interfaccia utente. Consente l'avvio di attività da eseguire in background `DidEnterBackground` da restituire in modo tempestivo, mantenere reattiva l'interfaccia utente e impedire che il watchdog terminazione dell'applicazione.
 
 
 ## <a name="handling-background-task-time-limits"></a>Limiti di tempo di attività in Background la gestione

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: a4cdb76ac1ecea3ee21e7b74314b6d3bfae09719
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fcf4e6d9b281eaac4be888c499e537f7397528a0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118994"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669271"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procedura dettagliata: Associazione di una libreria Objective-C iOS
 
@@ -81,11 +81,11 @@ In base a Apple [compilazione dalla riga di comando con domande frequenti su Xco
     Europa:~ kmullins$ xcode-select --install
     ```
 
-    - Verrà richiesto di installare gli strumenti da riga di comando, fare clic sui **installare** pulsante: [ ![](walkthrough-images/xcode01.png "installando gli strumenti da riga di comando")](walkthrough-images/xcode01.png#lightbox)
+    - Verrà richiesto per installare gli strumenti da riga di comando, scegliere il **installare** pulsante:   [![](walkthrough-images/xcode01.png "Installare gli strumenti da riga di comando")](walkthrough-images/xcode01.png#lightbox)
 
-    - Gli strumenti verranno scaricati e installati dai server Apple: [ ![](walkthrough-images/xcode02.png "download degli strumenti")](walkthrough-images/xcode02.png#lightbox)
+    - Gli strumenti verranno scaricati e installati dai server Apple:   [![](walkthrough-images/xcode02.png "Download degli strumenti")](walkthrough-images/xcode02.png#lightbox)
 
-- **Download per sviluppatori Apple** -il pacchetto di strumenti da riga di comando è disponibile la [download per sviluppatori Apple]() pagina web. Accedere con l'ID Apple, quindi cercare e scaricare gli strumenti da riga di comando: [ ![](walkthrough-images/xcode03.png "trovare gli strumenti da riga di comando")](walkthrough-images/xcode03.png#lightbox)
+- **Download per sviluppatori Apple** -il pacchetto di strumenti da riga di comando è disponibile la [download per sviluppatori Apple](https://developer.apple.com/downloads/index.action) pagina web. Accedere con l'ID Apple, quindi cercare e scaricare gli strumenti da riga di comando: [![](walkthrough-images/xcode03.png "Trovare gli strumenti da riga di comando")](walkthrough-images/xcode03.png#lightbox)
 
 Con gli strumenti da riga di comando installata, siamo pronti per continuare con la procedura dettagliata.
 
@@ -184,7 +184,7 @@ Creazione di una file System fat binario è un processo in tre passaggi:
 
 Mentre questi tre passaggi sono piuttosto semplici e potrebbe essere necessario ripetere tali in futuro quando la libreria Objective-C viene costantemente aggiornato o se si richiedono le correzioni di bug. Se si decide di automatizzare questi passaggi, semplificherà le operazioni di manutenzione future e il supporto del progetto di associazione di iOS.
 
-Sono disponibili molti strumenti per automatizzare attività quali: uno script della shell, [rake](http://rake.rubyforge.org/), [xbuild](http://www.mono-project.com/docs/tools+libraries/tools/xbuild/), e [rendere](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Quando è stato installato gli strumenti da riga di comando Xcode, è stata installata anche verificare, in modo che sia il sistema di compilazione che verrà usato per questa procedura dettagliata. Di seguito è riportato un **Makefile** che è possibile usare per creare una libreria condivisa multi-architettura che funzionerà su un dispositivo iOS e il simulatore per qualsiasi libreria:
+Sono disponibili molti strumenti per automatizzare attività quali: uno script della shell, [rake](http://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/), e [rendere](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Quando è stato installato gli strumenti da riga di comando Xcode, è stata installata anche verificare, in modo che sia il sistema di compilazione che verrà usato per questa procedura dettagliata. Di seguito è riportato un **Makefile** che è possibile usare per creare una libreria condivisa multi-architettura che funzionerà su un dispositivo iOS e il simulatore per qualsiasi libreria:
 
 ```bash
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
@@ -311,7 +311,7 @@ Seguire questi passaggi per aggiungere la libreria:
 
 1. Passare al Fat binari sono stati apportati in precedenza (`libInfColorPickerSDK.a`) e premere la **Open** pulsante:
 
-    ![](walkthrough-images/bind05.png "Selezionare il file libInfColorPickerSDK.a")
+    ![](walkthrough-images/bind05.png "Select the libInfColorPickerSDK.a file")
 1. Il file verrà incluso nel progetto:
 
     ![](walkthrough-images/bind04.png "Inclusione di un file")
@@ -467,7 +467,7 @@ E il **InfColorPicker.enums.cs** e **InfColorPicker.cs** verranno creati file ne
 
 Aprire entrambi i file nel progetto di associazione creati in precedenza. Copiare il contenuto del **InfColorPicker.cs** del file e incollarlo nella **ApiDefinition.cs** file, sostituendo l'oggetto esistente `namespace ...` blocco di codice con il contenuto del  **InfColorPicker.cs** file (lasciando il `using` istruzioni intatte):
 
-![](walkthrough-images/os07.png "Il file InfColorPickerControllerDelegate")
+![](walkthrough-images/os07.png "The InfColorPickerControllerDelegate file")
 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -708,7 +708,7 @@ public override void ViewDidLoad ()
 
 ```
 
-**Gestire il colorPickerControllerDidFinish: messaggio** : se il `ViewController` è finito, iOS invierà il messaggio `colorPickerControllerDidFinish:` per il `WeakDelegate`. È necessario creare un C# metodo in grado di gestire questo messaggio. A tale scopo, viene creato un C# (metodo) e quindi per decorare con il `ExportAttribute`. Modifica `ViewController`e aggiungere il metodo seguente alla classe:
+**Gestire il colorPickerControllerDidFinish: Messaggio** : se il `ViewController` viene completato, iOS invierà il messaggio `colorPickerControllerDidFinish:` per il `WeakDelegate`. È necessario creare un C# metodo in grado di gestire questo messaggio. A tale scopo, viene creato un C# (metodo) e quindi per decorare con il `ExportAttribute`. Modifica `ViewController`e aggiungere il metodo seguente alla classe:
 
 ```csharp
 [Export("colorPickerControllerDidFinish:")]
@@ -733,6 +733,6 @@ Questo articolo è stato illustrato il processo di creazione e utilizzo di un pr
 - [Informazioni dettagliate sull'associazione](~/cross-platform/macios/binding/overview.md)
 - [Guida di riferimento per i tipi di associazione](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin per sviluppatori Objective-C](~/ios/get-started/objective-c-developers/index.md)
-- [Linee guida per la progettazione di Framework](http://msdn.microsoft.com/library/ms229042.aspx)
-- [Corso di Xamarin University: Creazione di una libreria di binding di Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Corsi di Xamarin University: Compilare una libreria di binding Objective-C con Sharpie obiettivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Linee guida per la progettazione di Framework](https://msdn.microsoft.com/library/ms229042.aspx)
+- [Corsi di Xamarin University: Compila una libreria di binding Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Corsi di Xamarin University: Creazione di una libreria di binding Objective-C con Sharpie obiettivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 250b3de2ef41ce488165f3149c72ce28c39e53a3
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.openlocfilehash: 3b23a1a07741cd048ea034b2b39b5f9cde902dc6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746895"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672768"
 ---
 # <a name="xamarinforms-button"></a>Pulsante di xamarin. Forms
 
@@ -150,7 +150,7 @@ In alcuni casi un'applicazione è in un determinato stato in cui un determinato 
 
 Questo approccio è particolarmente adatto in relazione al data binding e in particolare quando si implementa l'architettura Model-View-ViewModel (MVVM). Questi argomenti sono illustrati negli articoli [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md), [dal Data Binding a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md), e [MVVM](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 
-In un'applicazione MVVM, l'elemento ViewModel definisce le proprietà di tipo `ICommand` che vengono quindi connessi al XAML `Button` gli elementi con data binding. Xamarin. Forms definisce inoltre [ `Command` ]((xref:Xamarin.Forms.Command`1)) e [ `Command<T>` ](xref:Xamarin.Forms.Command`1) le classi che implementano il `ICommand` l'interfaccia e utili per l'elemento ViewModel che definisce le proprietà di tipo `ICommand`.
+In un'applicazione MVVM, l'elemento ViewModel definisce le proprietà di tipo `ICommand` che vengono quindi connessi al XAML `Button` gli elementi con data binding. Xamarin. Forms definisce inoltre [ `Command` ]((xref:Xamarin.Forms.Command)) e [ `Command<T>` ](xref:Xamarin.Forms.Command`1) le classi che implementano il `ICommand` l'interfaccia e utili per l'elemento ViewModel che definisce le proprietà di tipo `ICommand`.
 
 L'esecuzione di comandi è descritto più dettagliatamente nell'articolo [ **l'interfaccia di comando** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) ma la **base pulsante di comando** nella pagina di [  **ButtonDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) esempio viene illustrato l'approccio di base.
 

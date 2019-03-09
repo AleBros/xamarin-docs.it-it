@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
 ms.date: 11/25/2015
-ms.openlocfilehash: c68cdc443f11ec6709a9d6fdde8ce10cd9db6733
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 4f08468d08e12ad77cacbac66b55ad8fc6ead433
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233679"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667964"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Panoramica dei binding di Objective-C
 
@@ -74,7 +74,7 @@ Leggere il [docs Sharpie obiettivo](~/cross-platform/macios/binding/objective-sh
 
 È possibile usare la [[registrare]](xref:Foundation.RegisterAttribute) attributo [[esportare]](xref:Foundation.ExportAttribute) attributo, e [chiamata selettori Objective-C manuale](~/ios/internals/objective-c-selectors.md) interagiscono per associare manualmente nuove (in precedenza tipi di Objective-C non associati).
 
-Prima di tutto, trovare un tipo che si desidera associare. Per scopi discussione (e alla semplicità), eseguiremo l'associazione di [NSEnumerator](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) tipo (che è già stato associato [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); l'implementazione seguente è sufficiente, ad esempio a scopo).
+Prima di tutto, trovare un tipo che si desidera associare. Per scopi discussione (e alla semplicità), eseguiremo l'associazione di [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) tipo (che è già stato associato [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); l'implementazione seguente è sufficiente, ad esempio a scopo).
 
 In secondo luogo, è necessario creare il C# tipo. È probabile che si desideri inserire tale impostazione in uno spazio dei nomi; Poiché Objective-C non supporta gli spazi dei nomi, è necessario usare il `[Register]` attributo da cambiare il nome del tipo che xamarin. IOS verranno registrati con il runtime di Objective-C. Il C# tipo deve anche ereditare [Foundation.NSObject](xref:Foundation.NSObject):
 

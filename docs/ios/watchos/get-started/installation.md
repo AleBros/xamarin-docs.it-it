@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
-ms.openlocfilehash: fc3a30473b4a38b21f89c5be201c8191658aae63
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 13fd84d8e23c18606696532b1c6e8db301b52f3c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050322"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668543"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Installazione e uso watchOS in Xamarin
 
@@ -178,7 +178,7 @@ Per impostazione predefinita un'app viene avviata in modalità normale **app** m
 
 Quando si usa Xcode 6, solo l'iPhone 5, 5S iPhone, iPhone 6 e iPhone 6 Plus possono attivare il monitor esterno per uno **Apple Watch - 38mm** oppure **Apple Watch - 42mm** in cui le applicazioni di espressioni di controllo sarà visualizzato.
 
-**Nota:** tenere presente che le espressioni di controllo non viene automaticamente visualizzata nel simulatore iOS quando si usa Xcode 6.
+**Nota:** Tenere presente che le espressioni di controllo non viene automaticamente visualizzata nel simulatore iOS quando si usa Xcode 6.
 Usare la **Hardware > Visualizza esterno** menu per visualizzare la schermata di espressioni di controllo.
 
 <a name="custommodes" />
@@ -232,5 +232,5 @@ I file di modello watchOS (ad esempio `InterfaceController`, `ExtensionDelegate`
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [WatchKitCatalog (esempio)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [Primo video App Watch](http://blog.xamarin.com/your-first-watch-kit-app/)
+- [Primo video App Watch](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Suggerimenti di Apple WatchKit](https://developer.apple.com/watchkit/tips/)

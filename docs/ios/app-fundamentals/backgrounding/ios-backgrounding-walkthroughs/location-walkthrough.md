@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 0d6dac02ac82b74c9b0e33f5fff0b82223df1f47
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b857ee97951f0abfdf8e082ca9a826d5580d24ab
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108678"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669193"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Procedura dettagliata - il percorso in Background in xamarin. IOS
 
@@ -103,7 +103,7 @@ Questa procedura dettagliata illustra i principali funzionalità di elaborazione
 
     Esistono diversi aspetti importanti che accade in questo metodo. Prima di tutto, eseguiamo un controllo per verificare se l'applicazione ha accesso ai dati del percorso nel dispositivo. Si verifica, chiamare `LocationServicesEnabled` nella `CLLocationManager`. Questo metodo restituirà **false** se l'utente ha negato l'accesso all'applicazione per informazioni sulla posizione.
 
-1. Successivamente, indicare quanto spesso la gestione di posizione per l'aggiornamento. `CLLocationManager` offre molte opzioni per il filtraggio e la configurazione di dati sulla località, tra cui la frequenza degli aggiornamenti. In questo esempio, impostare il `DesiredAccuracy` aggiornare ogni volta che viene modificato il percorso da un misuratore. Per altre informazioni su come configurare la frequenza di aggiornamento di località e altre preferenze, vedere la [riferimento alla classe CLLocationManager](http://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) nella documentazione di Apple.
+1. Successivamente, indicare quanto spesso la gestione di posizione per l'aggiornamento. `CLLocationManager` offre molte opzioni per il filtraggio e la configurazione di dati sulla località, tra cui la frequenza degli aggiornamenti. In questo esempio, impostare il `DesiredAccuracy` aggiornare ogni volta che viene modificato il percorso da un misuratore. Per altre informazioni su come configurare la frequenza di aggiornamento di località e altre preferenze, vedere la [riferimento alla classe CLLocationManager](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) nella documentazione di Apple.
 
 1. Infine, chiamare `StartUpdatingLocation` nella `CLLocationManager` istanza. Ciò indica al gestore di percorso per ottenere una correzione rapida iniziale sulla posizione corrente e per iniziare a inviare gli aggiornamenti
 

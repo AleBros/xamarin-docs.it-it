@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 85e4e98cfbc96936c19642a200885b54cf745aa4
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 4799d6aaa095127e242c5e0750db686519d0c21d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617514"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670792"
 ---
 # <a name="localization"></a>Localizzazione
 
@@ -111,7 +111,7 @@ Se i dati immesso dall'utente dell'app, analizzarlo usando un'istanza di Culture
 double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 ```
 
-Vedere le [l'analisi di stringhe numeriche](http://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) e [l'analisi di stringhe di data e ora](http://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) articoli MSDN per ulteriori informazioni.
+Vedere le [l'analisi di stringhe numeriche](https://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) e [l'analisi di stringhe di data e ora](https://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) articoli MSDN per ulteriori informazioni.
 
 <a name="rtl" />
 
@@ -131,7 +131,7 @@ IOS e Android supportano layout da destra a sinistra e il rendering del tipo di 
 
 Lingue diverse definiscono l'ordinamento degli alfabeti in modo diverso, anche quando si usa lo stesso set di caratteri.
 
-Vedere il [dettaglio del confronto tra stringhe](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) nelle [procedure consigliate per l'uso di stringhe in .NET Framework](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) per un esempio in linguaggio (CultureInfo) influiscono sull'ordinamento.
+Vedere il [dettaglio del confronto tra stringhe](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) nelle [procedure consigliate per l'uso di stringhe in .NET Framework](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) per un esempio in linguaggio (CultureInfo) influiscono sull'ordinamento.
 
 È improbabile che le funzionalità di database incorporati nelle piattaforme per dispositivi mobili supporterà ordinamento specifiche della lingua di ordinamento in modo che potrebbe essere necessario implementare codice aggiuntivo nella logica di business.
 
@@ -312,5 +312,5 @@ Continuare a leggere i dettagli tecnici per la piattaforma che si è interessati
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Panoramica sulla localizzazione di Apple](https://developer.apple.com/internationalization/)
-- [Elenco di controllo per la localizzazione di Android](http://developer.android.com/distribute/tools/localization-checklist.html)
-- [Le procedure consigliate per lo sviluppo di applicazioni internazionalizzate (MSDN)](http://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)
+- [Elenco di controllo per la localizzazione di Android](https://developer.android.com/distribute/tools/localization-checklist.html)
+- [Le procedure consigliate per lo sviluppo di applicazioni internazionalizzate (MSDN)](https://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)

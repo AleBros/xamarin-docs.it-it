@@ -6,12 +6,12 @@ ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: 213632ae26ae60797e39bc718a95057fb7238609
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8882a7cd36eab5e7905585f5de4d6585dfb53439
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113352"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672261"
 ---
 # <a name="available-assemblies"></a>Assembly disponibili
 
@@ -53,22 +53,22 @@ Questi sono gli assembly disponibile nel **gestione riferimenti > assembly > Fra
 > |System.&#8203;ComponentModel.&#8203;Composition.dll| |✓|✓|✓|
 > |System.&#8203;ComponentModel.&#8203;DataAnnotations.dll| |✓|✓|✓|
 > |System.Core.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.Data.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx) , con [alcune delle funzionalità rimosse](~/ios/data-cloud/system.data.md).|✓|✓|✓|
+> |System.Data.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx) , con [alcune delle funzionalità rimosse](~/ios/data-cloud/system.data.md).|✓|✓|✓|
 > |System.Data.&#8203;Services.&#8203;Client.dll|Client oData completo.|✓|✓|✓|
 > |System.IO.&#8203;Compression| |✓|✓|✓|
 > |System.IO.&#8203;Compression.&#8203;FileSystem| |✓|✓|✓|
-> |System.Json.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Json.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |System.Net.&#8203;Http.dll| |✓|✓|✓|
 > |System.&#8203;Numerics.dll| |✓|✓|✓|
-> |System.Runtime.&#8203;Serialization.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.&#8203;ServiceModel.dll|Stack WCF come presente in [Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Runtime.&#8203;Serialization.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.&#8203;ServiceModel.dll|Stack WCF come presente in [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |System.&#8203;ServiceModel.&#8203;Internals.dll| |✓|✓|✓|
-> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), oltre a tipi degli spazi dei nomi seguenti: <br />System<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
-> |System.&#8203;Transactions.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx); in parte [System. Data](~/ios/data-cloud/system.data.md) supportano.|✓|✓|✓|
+> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), oltre a tipi degli spazi dei nomi seguenti: <br />System<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
+> |System.&#8203;Transactions.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx); in parte [System. Data](~/ios/data-cloud/system.data.md) supportano.|✓|✓|✓|
 > |System.Web.&#8203;Services.dll|Servizi Web di base dal profilo .NET 3.5, con le funzionalità server rimossi.|✓|✓|✓|
 > |System.&#8203;Windows.dll| |✓|✓|✓|
-> |System.&#8203;Xml.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
-> |System.Xml.&#8203;Linq.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
+> |System.&#8203;Xml.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
+> |System.Xml.&#8203;Linq.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
 > |System.Xml.Serialization.dll| |✓|✓|✓|
 > |Xamarin.iOS.dll|Questo assembly contiene l'associazione all'API cocoatouch usano c#. Viene usato solo nei progetti iOS unificato.|✓| | |
 > |Java.Interop.dll| | |✓| |

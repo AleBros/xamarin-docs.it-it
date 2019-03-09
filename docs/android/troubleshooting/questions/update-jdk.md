@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: aa04d944f803dded0e9448de27ed7d5ced2efb54
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 290a7deef4fdc10163bdb09881382f011b0dcd32
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109185"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670851"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>Come si aggiorna la versione di Java Development Kit (JDK)?
 
@@ -27,7 +27,7 @@ Per aggiornare a OpenJDK per dispositivi mobili Microsoft, vedere [Microsoft Mob
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1.  Download di JDK 8 (1.8) dal [sito Web Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1.  Download di JDK 8 (1.8) dal [sito Web Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
     ![Screenshot del JDK download nel sito Web Oracle](update-jdk-images/image1.png)
 
@@ -47,7 +47,7 @@ Assicurarsi di riavviare Visual Studio dopo avere aggiornato la posizione.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1.  Download di JDK 8 (1.8) dal [sito Web Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1.  Download di JDK 8 (1.8) dal [sito Web Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
     ![Screenshot del JDK download nel sito Web Oracle](update-jdk-images/image1.png)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 5369542552a41100443c5e91ceca9e110c5c7c3c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8364310d23739c05ff97ea8aa8fa4c56f89ea40c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108730"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670727"
 ---
 # <a name="an-introduction-to-renderscript"></a>Un'introduzione a Renderscript
 
@@ -20,7 +20,7 @@ _Questa guida presenta Renderscript e spiega come usare la funzione intrinseca R
 
 ## <a name="overview"></a>Panoramica
 
-Renderscript è un framework di programmazione creato da Google allo scopo di migliorare le prestazioni delle applicazioni Android che richiedono notevoli risorse di calcolo. Si tratta di un basso livello e ad alte prestazioni basata su API [C99](http://en.wikipedia.org/wiki/C99). Poiché si tratta di un basso livello API che verrà eseguito su CPU, GPU o dai DSP, Renderscript è particolarmente adatto per le app Android che potrebbe essere necessario eseguire nessuna delle operazioni seguenti:
+Renderscript è un framework di programmazione creato da Google allo scopo di migliorare le prestazioni delle applicazioni Android che richiedono notevoli risorse di calcolo. Si tratta di un basso livello e ad alte prestazioni basata su API [C99](https://en.wikipedia.org/wiki/C99). Poiché si tratta di un basso livello API che verrà eseguito su CPU, GPU o dai DSP, Renderscript è particolarmente adatto per le app Android che potrebbe essere necessario eseguire nessuna delle operazioni seguenti:
 
 * Grafica
 * Elaborazione di immagini
@@ -161,4 +161,4 @@ Questa guida ha presentato Renderscript e come usarlo in un'applicazione xamarin
 - [Spazio dei nomi Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/)
 - [L'effetto di un'immagine con Renderscript](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/drawing/blur_an_image_with_renderscript)
 - [Renderscript](https://developer.android.com/guide/topics/renderscript/compute.html)
-- [Esercitazione: Introduzione a Renderscript](https://software.intel.com/en-us/articles/renderscript-basic-sample-for-android-os)
+- [Esercitazione: Guida introduttiva a Renderscript](https://software.intel.com/en-us/articles/renderscript-basic-sample-for-android-os)

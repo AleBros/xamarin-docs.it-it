@@ -6,16 +6,16 @@ ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: affebab9bb6b07f204beef24cce2b57444d45e49
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 55c08c1bd0d82f8458e0c07b4202b6275600ff38
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527300"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671104"
 ---
 # <a name="visual-basicnet-in-xamarin-ios-and-android"></a>Visual Basic.NET in Xamarin iOS e Android
 
-Il [TaskyPortable](/samples/mobile/VisualBasic/TaskyPortableVB/) applicazione di esempio viene illustrato come utilizzare il codice Visual Basic compilato in una libreria di classi portabile con Xamarin. Ecco alcune schermate delle App risultante che eseguono iOS, Android e Windows Phone:
+Il [TaskyPortableVB](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB) applicazione di esempio viene illustrato come utilizzare il codice Visual Basic compilato in una libreria di classi portabile con Xamarin. Ecco alcune schermate delle App risultante che eseguono iOS, Android e Windows Phone:
 
  [![](native-apps-images/image5.png "per Android, iOS e Windows Phone che esegue un'app compilata con Visual Basic")](native-apps-images/image5.png#lightbox)
 
@@ -26,7 +26,7 @@ IOS, Android e Windows Phone progetti nell'esempio sono scritti in C#. L'interfa
 Questa guida viene illustrato come Visual Basic è stato implementato nel [TaskyPortableVB](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB) esempio di Xamarin per iOS e Android.
 
 > [!NOTE]
-> Esaminare le istruzioni nella [librerie di classi portabili Visual Basic.NET](/guides/cross-platform/application_fundamentals/pcl/portable_visual_basic_net/) prima di continuare con questa Guida.
+> Esaminare le istruzioni nella [portabile Visual Basic.NET](index.md) prima di continuare con questa Guida.
 
 ## <a name="visualbasicportablelibrary"></a>VisualBasicPortableLibrary
 
@@ -335,4 +335,4 @@ Questo articolo ha illustrato come utilizzare il codice Visual Basic nelle appli
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [TaskyPortableVB (esempio)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB)
-- [Sviluppo multipiattaforma con .NET Framework (Microsoft)](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)
+- [Sviluppo multipiattaforma con .NET Framework (Microsoft)](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)

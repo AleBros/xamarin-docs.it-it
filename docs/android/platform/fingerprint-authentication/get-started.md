@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/17/2018
-ms.openlocfilehash: 05069272bfa25cc1f003d4aeb83e15bd223c2830
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 731aeaf0ad89a44211072962bf9891851a44ffcc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118474"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667724"
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>Guida introduttiva con autenticazione tramite impronta digitale
 
@@ -99,19 +99,19 @@ if (permissionResult == Android.Content.PM.Permission.Granted)
 else
 {
     // No permission. Go and ask for permissions and don't start the scanner. See
-    // http://developer.android.com/training/permissions/requesting.html
+    // https://developer.android.com/training/permissions/requesting.html
 }
 ```
 
 Verifica tutte le condizioni seguenti ogni volta che l'applicazione offre le opzioni di autenticazione assicura che l'utente ottiene la migliore esperienza utente. Le modifiche o aggiornamenti al dispositivo o al sistema operativo potrebbero influire sulla disponibilità dell'autenticazione tramite impronta digitale. Se si sceglie di memorizzare nella cache i risultati di uno di questi controlli, assicurarsi di soddisfare per scenari di aggiornamento.
 
-Per altre informazioni su come richiedere le autorizzazioni in Android 6.0, consultare la Guida di Android [richiesta di autorizzazioni in fase di esecuzione](http://developer.android.com/training/permissions/requesting.html).
+Per altre informazioni su come richiedere le autorizzazioni in Android 6.0, consultare la Guida di Android [richiesta di autorizzazioni in fase di esecuzione](https://developer.android.com/training/permissions/requesting.html).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Contesto](https://developer.xamarin.com/api/type/Android.Content.Context/)
+- [Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
 - [ContextCompat](https://developer.xamarin.com/api/type/Android.Support.V4.Content.ContextCompat/)
 - [KeyguardManager](https://developer.xamarin.com/api/type/Android.App.KeyguardManager/)
-- [FingerprintManager](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
-- [FingerprintManagerCompat](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
-- [Richiesta di autorizzazioni in fase di esecuzione](http://developer.android.com/training/permissions/requesting.html)
+- [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
+- [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
+- [Richiesta di autorizzazioni in fase di esecuzione](https://developer.android.com/training/permissions/requesting.html)

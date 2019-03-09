@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 10b692099bae6f444474394144eb7e8bb46d749f
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: e02d7a13a1fd5b554943f9facd6c9f120096a6a5
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233926"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667815"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>estensioni di iOS in xamarin. IOS
 
@@ -45,7 +45,7 @@ Le estensioni con un numero di limiti, alcuni dei quali sono universale a tutti 
 Le limitazioni universali sono:
 
 - Il [integrità Kit](~/ios/platform/healthkit.md) e [evento Kit UI](~/ios/platform/eventkit.md) non sono disponibili Framework
-- Non è possibile usare le estensioni [estesi modalità in background](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_3_ios_backgrounding_techniques/registering_applications_to_run_in_background/)
+- Non è possibile usare le estensioni [estesi modalità in background](https://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_3_ios_backgrounding_techniques/registering_applications_to_run_in_background/)
 - Le estensioni non possono accedere fotocamere o microfoni del dispositivo (anche se potrebbero accedere al file di supporto esistenti)
 - Le estensioni non possono ricevere dati Drop Air (anche se è possibile trasmettere i dati tramite Drop aria)
 - [UIActionSheet](xref:UIKit.UIActionSheet) e [UIAlertView](xref:UIKit.UIAlertView) non sono disponibili; è necessario usare le estensioni [UIAlertController](xref:UIKit.UIAlertController)
@@ -71,11 +71,11 @@ Se si sceglie una delle app di estensioni, relativo `UIViewController` verranno 
 
 Le estensioni possono comunicare con le proprie applicazioni Host tramite un [NSExtensionContext](xref:Foundation.NSExtensionContext) oggetto. Alcune estensioni sono disponibili operazioni che ricevono richiamate asincrone con i risultati. Questi callback verranno eseguiti sul thread in background e l'estensione deve tenere in considerazione questo; ad esempio, usando [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) se desiderano aggiornare l'interfaccia utente. Vedere le [comunica con l'App Host](#Communicating-with-the-Host-App) sezione di seguito per altri dettagli.
 
-Per impostazione predefinita, le estensioni e le loro applicazioni contenitore non possono comunicare, pur essendo installati insieme. In alcuni casi, l'app contenitore è essenzialmente un "shipping" contenitore vuoto con lo scopo verrà resi disponibili dopo aver installato l'estensione. Tuttavia, se seconda delle circostanze, l'app contenitore e l'estensione può condividere le risorse da un'area comune. Inoltre, un **estensione per oggi** potrebbe richiedere l'app di contenitore per aprire un URL. Questo comportamento è illustrato nella [evolvere Widget del conto alla rovescia](http://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
+Per impostazione predefinita, le estensioni e le loro applicazioni contenitore non possono comunicare, pur essendo installati insieme. In alcuni casi, l'app contenitore è essenzialmente un "shipping" contenitore vuoto con lo scopo verrà resi disponibili dopo aver installato l'estensione. Tuttavia, se seconda delle circostanze, l'app contenitore e l'estensione può condividere le risorse da un'area comune. Inoltre, un **estensione per oggi** potrebbe richiedere l'app di contenitore per aprire un URL. Questo comportamento è illustrato nella [evolvere Widget del conto alla rovescia](https://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
 
 ## <a name="creating-an-extension"></a>Creazione di un'estensione
 
-Estensioni (e le proprie App contenitore) devono essere file binari a 64 bit e compilato utilizzando la xamarin. IOS [Unified API](http://developer.xamarin.com/guides/cross-platform/macios/unified). Quando si sviluppa un'estensione, le soluzioni conterrà almeno due progetti: l'app contenitore e una per ogni estensione per il contenitore include del progetto. 
+Estensioni (e le proprie App contenitore) devono essere file binari a 64 bit e compilato utilizzando la xamarin. IOS [Unified API](https://developer.xamarin.com/guides/cross-platform/macios/unified). Quando si sviluppa un'estensione, le soluzioni conterrà almeno due progetti: l'app contenitore e una per ogni estensione per il contenitore include del progetto. 
 
 ### <a name="container-app-project-requirements"></a>Requisiti del progetto app contenitore
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 1ac68992d36627eb5d6aee0d4d19564ce63a3936
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8bd77ec4975fae3cc7245c5adc2b5ef18568b9e1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052135"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667582"
 ---
 # <a name="consuming-an-azure-mobile-app"></a>Utilizzo di un'App per dispositivi mobili di Azure
 
@@ -21,7 +21,7 @@ ms.locfileid: "53052135"
 _Le App per dispositivi mobili di Azure consentono di sviluppare App con back-end scalabile ospitati nel servizio App di Azure con supporto per l'autenticazione per dispositivi mobili, la sincronizzazione offline e notifiche push. Questo articolo, che è applicabile solo alle App per dispositivi mobili di Azure che usano un back-end Node. js, illustra come eseguire una query, inserire, aggiornare ed eliminare i dati archiviati in una tabella in un'istanza di App per dispositivi mobili di Azure._
 
 > [!NOTE]
-> A partire dal 30 giugno, tutte le nuove app per dispositivi mobili di Azure verrà creata con TLS 1.2 per impostazione predefinita. Inoltre, è anche consigliabile esistenti per usare TLS 1.2 riconfigurare le App per dispositivi mobili di Azure. Per informazioni su come applicare TLS 1.2 in un'App per dispositivi mobili di Azure, vedere [imporre TLS 1.2](/azure/app-service/app-service-web-tutorial-custom-ssl#enforce-tls-1112). Per informazioni su come configurare i progetti Xamarin per usare TLS 1.2, vedere [Transport Layer Security (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md).
+> A partire dal 30 giugno, tutte le nuove app per dispositivi mobili di Azure verrà creata con TLS 1.2 per impostazione predefinita. Inoltre, è anche consigliabile esistenti per usare TLS 1.2 riconfigurare le App per dispositivi mobili di Azure. Per informazioni su come applicare TLS 1.2 in un'App per dispositivi mobili di Azure, vedere [le versioni di TLS imporre](/azure/app-service/app-service-web-tutorial-custom-ssl#enforce-tls-versions). Per informazioni su come configurare i progetti Xamarin per usare TLS 1.2, vedere [Transport Layer Security (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md).
 
 Per informazioni su come creare un'istanza di App per dispositivi mobili di Azure che può essere usata da xamarin. Forms, vedere [creare un'app xamarin. Forms](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started/). Dopo aver seguito le istruzioni che seguono, l'applicazione di esempio scaricabili può essere configurata per utilizzare l'istanza di App per dispositivi mobili di Azure tramite l'impostazione di `Constants.ApplicationURL` all'URL dell'istanza di App per dispositivi mobili di Azure. Quindi, quando viene eseguita l'applicazione di esempio si connetterà all'istanza di App per dispositivi mobili di Azure, come illustrato nello screenshot seguente:
 

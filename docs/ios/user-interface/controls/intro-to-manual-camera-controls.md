@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 84c4b699ba2c046eeb70963f3df71ca9a4760f3b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c61b3fee9009afb86ccd3fd0e16d7812a8e90feb
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104180"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672794"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Controlli della fotocamera manuali in xamarin. IOS
 
@@ -276,7 +276,7 @@ Con questo codice, i controlli della fotocamera manuali può essere facilmente i
 
 Consentendo all'utente finale di eseguire direttamente i controlli dello stato attivo, un'applicazione può fornire più artisticamente dotati controllare l'immagine ottenuta.
 
-Ad esempio, una Fotografa professionista possibile sfumare lo stato attivo di un'immagine da ottenere un [effetto Bokeh](http://en.wikipedia.org/wiki/Bokeh):
+Ad esempio, una Fotografa professionista possibile sfumare lo stato attivo di un'immagine da ottenere un [effetto Bokeh](https://en.wikipedia.org/wiki/Bokeh):
 
 [![](intro-to-manual-camera-controls-images/image2.png "Un effetto Bokeh")](intro-to-manual-camera-controls-images/image2.png#lightbox)
 
@@ -517,7 +517,7 @@ Prima di discutere i dettagli del controllo dell'esposizione in un'applicazione 
 I tre elementi di base che si uniscono per controllare l'esposizione sono:
 
 -  **Velocità dell'otturatore** – si tratta della lunghezza di tempo in cui il ridimensionamento è aperta per consentire a luce sul sensore di fotocamera. Più è breve l'ora che di ridimensionamento è visualizzato, minore è la luce è consentire e di nitida dell'immagine è (meno sfocatura movimento). Più è lunga il ridimensionamento è aperto, è consentire la luce più in e più di movimento sfocatura che si verifica.
--  **Mapping di ISO** – questo è un termine preso in prestito da fotografia di film e si riferisce al livello di riservatezza delle sostanze chimiche nel film alla luce. I valori ISO limitati nei film hanno minore livello di dettaglio e la riproduzione dei colori più preciso; valori bassi di ISO su sensori digitali sono meno rumore sensore ma meno la luminosità. Maggiore è questo valore ISO, luminoso l'immagine, ma con ulteriori rumore sensore. "ISO" su un sensore digitale è una misura della [guadagno electronic](http://en.wikipedia.org/wiki/Gain), non una funzionalità fisica. 
+-  **Mapping di ISO** – questo è un termine preso in prestito da fotografia di film e si riferisce al livello di riservatezza delle sostanze chimiche nel film alla luce. I valori ISO limitati nei film hanno minore livello di dettaglio e la riproduzione dei colori più preciso; valori bassi di ISO su sensori digitali sono meno rumore sensore ma meno la luminosità. Maggiore è questo valore ISO, luminoso l'immagine, ma con ulteriori rumore sensore. "ISO" su un sensore digitale è una misura della [guadagno electronic](https://en.wikipedia.org/wiki/Gain), non una funzionalità fisica. 
 -  **Apertura dell'obiettivo** : queste sono le dimensioni di apertura dell'obiettivo. In tutti i dispositivi iOS dell'obiettivo è stato risolto, in modo che solo due valori che possono essere utilizzati per regolare l'esposizione siano velocità e ISO.
 
 
@@ -817,7 +817,7 @@ La nuova iOS 8 API l'esposizione consente all'applicazione di assumere il contro
 
 Prima di discutere i dettagli del controllo del bianco in un'applicazione IOS 8. Diamo un'occhiata vuoti come saldo works:
 
-Nello studio di percezione di colore, il [CIE 1931 RGB dei colori spazio e lo spazio colore XYZ CIE 1931](http://en.wikipedia.org/wiki/CIE_1931_color_space) sono il primo matematicamente definiti gli spazi colore. Sono stati creati dalla Commissione internazionale in illuminazione (CIE) in 1931.
+Nello studio di percezione di colore, il [CIE 1931 RGB dei colori spazio e lo spazio colore XYZ CIE 1931](https://en.wikipedia.org/wiki/CIE_1931_color_space) sono il primo matematicamente definiti gli spazi colore. Sono stati creati dalla Commissione internazionale in illuminazione (CIE) in 1931.
 
 [![](intro-to-manual-camera-controls-images/image17.png "La spazio colori RGB CIE 1931 e CIE 1931 XYZ spazio colore")](intro-to-manual-camera-controls-images/image17.png#lightbox)
 
@@ -825,7 +825,7 @@ Il grafico precedente mostra tutti i colori visibili all'occhio umano, da blu a 
 
 Come si può vedere nel grafico, i valori X e Y possono essere tracciati sul grafico che sarebbe di fuori dell'intervallo di visione artificiale umani e di conseguenza questi colori non possono essere riprodotti da una fotocamera.
 
-La curva minore nel grafico precedente viene chiamata il [luogo Planckian](http://en.wikipedia.org/wiki/Planckian_locus), che esprime la temperatura di colore (in gradi kelvin), i valori più alti sul lato blu (caldo) e i numeri di basso sul lato rosso (refrigeratore). Queste sono utili in situazioni di illuminazione tipico.
+La curva minore nel grafico precedente viene chiamata il [luogo Planckian](https://en.wikipedia.org/wiki/Planckian_locus), che esprime la temperatura di colore (in gradi kelvin), i valori più alti sul lato blu (caldo) e i numeri di basso sul lato rosso (refrigeratore). Queste sono utili in situazioni di illuminazione tipico.
 
 Nelle condizioni di illuminazione mista, saranno necessario le regolazioni del bianco si discostano dal luogo Planckian per apportare le modifiche necessarie. In queste situazioni che sarà necessario la regolazione per essere spostati in verde o rosso/magenta CIE sul lato di scalabilità.
 

@@ -6,13 +6,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a0778de5dcc7e21ba011fe144be703b3b83b8247
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114041"
 ---
+
 # <a name="notifications-in-xamarinandroid"></a>Notifiche in xamarin. Android
 
 
@@ -36,7 +31,7 @@ Questa procedura dettagliata illustra come usare le notifiche locali in un'appli
 
 [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; Firebase Cloud Messaging (FCM) è un servizio che semplifica la messaggistica tra App per dispositivi mobili e applicazioni server. Firebase Cloud Messaging è utilizzabile per implementare le notifiche remote (detta anche le notifiche push) nelle applicazioni xamarin. Android.
 
-[Le notifiche](http://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; per sviluppatori Android questo argomento è la Guida definitiva per le notifiche di Android. Include una progettazione sezione considerazioni che consente di progettare le notifiche in modo che siano conformi alle linee guida dell'interfaccia utente di Android. Fornisce informazioni complementari sulla navigazione preserviing quando si avvia un'attività e viene descritto come visualizzare lo stato di avanzamento della riproduzione multimediale una notifica e il controllo nella schermata di blocco. 
+[Le notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; per sviluppatori Android questo argomento è la Guida definitiva per le notifiche di Android. Include una progettazione sezione considerazioni che consente di progettare le notifiche in modo che siano conformi alle linee guida dell'interfaccia utente di Android. Fornisce informazioni complementari sulla navigazione preserviing quando si avvia un'attività e viene descritto come visualizzare lo stato di avanzamento della riproduzione multimediale una notifica e il controllo nella schermata di blocco. 
 
 [NotificationListenerService](https://developer.xamarin.com/api/type/Android.Service.Notification.NotificationListenerService/) &ndash; Android questo servizio rende possibile all'app di ascolto (e interagire con) registrate tutte le notifiche sul dispositivo Android, non solo le notifiche all'app registrata in ricezione. Si noti che l'utente in modo esplicito debba concedere l'autorizzazione per l'app per poter essere in grado di restare in ascolto per le notifiche sul dispositivo.
 

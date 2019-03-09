@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 7523862f3677eb775f59af0091ed59fec8c85e31
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 8897736878d0ddee22cdad073cc16deb8ce824e1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209816"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671741"
 ---
 # <a name="webview-mixed-content-on-android"></a>WebView in Android contenuto misto
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 
-Questo specifico della piattaforma Android controlla se un [ `WebView` ](xref:Xamarin.Forms.WebView) può Visualizza contenuto misto in applicazioni che hanno come destinazione API 21 o versione successiva. Il contenuto misto pone contenuto che viene caricato inizialmente tramite una connessione HTTPS, ma che carica le risorse (ad esempio immagini, audio, video, fogli di stile, script) su una connessione HTTP. Vengono utilizzati in XAML, impostando il [ `WebView.MixedContentMode` ](x:ref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.MixedContentModeProperty) proprietà associata a un valore del [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) enumerazione:
+Questo specifico della piattaforma Android controlla se un [ `WebView` ](xref:Xamarin.Forms.WebView) può Visualizza contenuto misto in applicazioni che hanno come destinazione API 21 o versione successiva. Il contenuto misto pone contenuto che viene caricato inizialmente tramite una connessione HTTPS, ma che carica le risorse (ad esempio immagini, audio, video, fogli di stile, script) su una connessione HTTP. Vengono utilizzati in XAML, impostando il [ `WebView.MixedContentMode` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.MixedContentModeProperty) proprietà associata a un valore del [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) enumerazione:
 
 ```xaml
 <ContentPage ...

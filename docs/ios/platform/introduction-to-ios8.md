@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 8e95e674f52cb23be769473e27dc8eb785a77820
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9299322eb20561444262c2b2ba87191d2bddcde4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116043"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668751"
 ---
 # <a name="introduction-to-ios-8"></a>Introduzione a iOS 8
 
@@ -101,7 +101,7 @@ Funzionamento della selezione documento con un'unità di iCloud degli utenti per
 
 Per informazioni sulla selezione di documenti in modo più approfondito e per informazioni su come integrare un'applicazione xamarin. IOS, vedere la [Introduzione a selezione documento The](~/ios/platform/document-picker.md) Guida.
 
-### <a name="handoff"></a>Esegui handoff
+### <a name="handoff"></a>Handoff
 
 Passaggio di consegne, che fa parte della funzionalità di continuità aziendale più grande, accetta un passo avanti verso l'integrazione di OS X e iOS. Ciò include lo sviluppo multipiattaforma AirDrop, la possibilità di rispondere alle chiamate di iPhone, SMS su iPad e Mac e i miglioramenti in tethering dall'iPhone.
 
@@ -151,7 +151,7 @@ Per altre informazioni, vedere la [SpriteKit](~/ios/platform/gaming/spritekit.md
 ## <a name="other-changes"></a>Altre modifiche
 Nonché le modifiche principali in iOS 8 che sono descritte in precedenza, Apple ha inoltre aggiornato molti Framework esistenti. Questi sono descritti di seguito:
 
-- **[Immagine di base](https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImagingRef/index.html#//apple_ref/doc/uid/TP40001171)**  : Apple ha espanso il framework di elaborazione di immagini mediante l'aggiunta di un supporto migliore per il rilevamento di aree rettangolari e i codici a matrice all'interno di immagini. Mike Bluestein esamina questo nel suo blog post intitolato [rilevamento immagine in iOS 8](http://blog.xamarin.com/image-detection-in-ios-8/)
+- **[Immagine di base](https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImagingRef/index.html#//apple_ref/doc/uid/TP40001171)**  : Apple ha espanso il framework di elaborazione di immagini mediante l'aggiunta di un supporto migliore per il rilevamento di aree rettangolari e i codici a matrice all'interno di immagini. Mike Bluestein esamina questo nel suo blog post intitolato [rilevamento immagine in iOS 8](https://blog.xamarin.com/image-detection-in-ios-8/)
 
 ## <a name="deprecated-apis"></a>API deprecate
 Con tutti i miglioramenti apportati in iOS 8, una serie di API è deprecata. Di seguito sono descritte alcune di queste.

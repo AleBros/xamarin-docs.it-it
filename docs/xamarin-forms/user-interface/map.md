@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2018
-ms.openlocfilehash: edba18eea3ea2b7b843dba70ff0b4b67cbab1ab1
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 20b09ab44eaaaa21535d50b947449e253652cc62
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557116"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672482"
 ---
 # <a name="xamarinforms-map"></a>Mappa di xamarin. Forms
 
@@ -127,7 +127,7 @@ Alcuni di questi vengono visualizzati nella schermata seguente:
 
 ![Autorizzazioni necessarie per Android](map-images/android-map-permissions.png "autorizzazioni necessarie per Android")
 
-Gli ultimi due sono necessari perché le applicazioni richiedono una connessione di rete per scaricare i dati della mappa. Leggere informazioni su Android [autorizzazioni](http://developer.android.com/reference/android/Manifest.permission.html) per altre informazioni.
+Gli ultimi due sono necessari perché le applicazioni richiedono una connessione di rete per scaricare i dati della mappa. Leggere informazioni su Android [autorizzazioni](https://developer.android.com/reference/android/Manifest.permission.html) per altre informazioni.
 
 ### <a name="universal-windows-platform"></a>Piattaforma UWP (Universal Windows Platform)
 

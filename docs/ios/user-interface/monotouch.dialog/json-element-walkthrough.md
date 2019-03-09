@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 24d73bfcc28601f6a7ebbecb71d8c0e9f6864ac3
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 07bcbfe046fd689e08eed4e64495b56d083ceeb8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675341"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671520"
 ---
 # <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>Uso di JSON per creare un'interfaccia utente in xamarin. IOS
 
@@ -176,6 +176,6 @@ Questo articolo ha illustrato come creare una con interfaccia con MT. 1!d da JSO
 - [Procedura dettagliata sull'API di elementi](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
 - [Procedura dettagliata sull'API di Reflection](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [Finestra di dialogo di MonoTouch su Github](https://github.com/migueldeicaza/MonoTouch.Dialog)
-- [Applicazione TweetStation](https://github.com/migueldeicaza/TweetStation)
-- [Riferimento alla classe UITableViewController](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
-- [Riferimento alla classe UINavigationController](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
+- [TweetStation Application](https://github.com/migueldeicaza/TweetStation)
+- [Riferimento alla classe UITableViewController](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
+- [Riferimento alla classe UINavigationController](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

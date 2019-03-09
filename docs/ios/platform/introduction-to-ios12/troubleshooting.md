@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/5/2018
-ms.openlocfilehash: 02c95fbdde8b264fc34d5a8785be03b2dfcddba7
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: 2f46638afe1aca74b572050e00bfc4a85d1d963d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267358"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669154"
 ---
 # <a name="troubleshooting-ios-12-development-with-xamarin"></a>Risoluzione dei problemi di sviluppo 12 di iOS con Xamarin
 
@@ -26,7 +26,7 @@ Controllare le risorse seguenti per i problemi noti:
     - Il [le versioni di Xamarin](http://releases.xamarin.com/) blog
     - Xamarin [note sulla versione](https://docs.microsoft.com/xamarin/ios/release-notes/) archive
     - Visual Studio per Mac ([stabile](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-relnotes), [anteprima](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-preview-relnotes))
-    - Visual Studio 2017 ([stabile](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes), [anteprima](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-preview-relnotes))
+    - Visual Studio 2017 ([stable](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes), [preview](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-preview-relnotes))
 - [Community degli sviluppatori](https://developercommunity.visualstudio.com/search.html)
 - [GitHub](https://github.com/xamarin/xamarin-macios/issues)
 - [Xamarin Bugzilla](https://bugzilla.xamarin.com/query.cgi?product=iOS)
@@ -41,4 +41,4 @@ Segnalare nuovi problemi [Community degli sviluppatori](https://developercommuni
 Per discutere le domande su come implementare le funzionalità di 12 specifico di iOS in xamarin. IOS, dare un'occhiata:
 
 - Il [forum di Xamarin](http://forums.xamarin.com/categories/ios)
-- [Overflow dello stack](http://stackoverflow.com/search?tab=newest&q=xamarin)
+- [Overflow dello stack](https://stackoverflow.com/search?tab=newest&q=xamarin)

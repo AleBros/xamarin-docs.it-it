@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 815e3ddf44ae94b6b26a325599de1f4c1f6714a8
-ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
+ms.openlocfilehash: ea66cda0e2a1935a430c064c9cebd4134d295729
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681540"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669232"
 ---
 # <a name="architecture"></a>Architettura
 
@@ -34,8 +34,8 @@ Per altre informazioni su come le classi Android comunicano con le classi di Run
 Pacchetti di applicazioni Android sono contenitori con estensione ZIP con un *file con estensione apk* estensione di file. I pacchetti dell'applicazione xamarin. Android hanno la stessa struttura e il layout come normali pacchetti Android, con le aggiunte seguenti:
 
 -   Gli assembly dell'applicazione (livello di integrità contenente) sono *archiviate* non compresso all'interno di *assembly* cartella. Durante il processo di avvio nella versione si basa il *file con estensione apk* viene *mmap()* ed nel processo e gli assembly vengono caricati dalla memoria. Ciò consente all'avvio dell'app più veloce, come gli assembly non sono necessario essere estratto prima dell'esecuzione.  
--   *Nota:* le informazioni sul percorso di Assembly, ad esempio [Assembly.Location](xref:System.Reflection.Assembly.Location) e [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
-    *non può essere ritenuto affidabile* nella versione compilazioni. Non sono presenti come voci di file System distinti e non dispongono di alcun percorso utilizzabile.
+-   *Nota:* Informazioni sul percorso di assembly, ad esempio [Assembly.Location](xref:System.Reflection.Assembly.Location) e [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
+    *non può essere ritenuto affidabile* nelle build di rilascio. Non sono presenti come voci di file System distinti e non dispongono di alcun percorso utilizzabile.
 
 
 -   Le librerie native che contiene il runtime di Mono sono presenti all'interno di *file con estensione apk* . Un'applicazione xamarin. Android deve contenere le librerie native per le architetture di Android desired/destinazione, ad esempio *armeabi* , *armeabi-v7a* , *x86* . Le applicazioni xamarin. Android non è possibile eseguire su una piattaforma a meno che non contiene le librerie di runtime appropriato.
@@ -47,7 +47,7 @@ Contengono anche le applicazioni xamarin. Android *Android Callable Wrapper* per
 
 ## <a name="android-callable-wrappers"></a>Android Callable Wrapper
 
-- **Android callable wrapper** sono una [JNI](http://en.wikipedia.org/wiki/Java_Native_Interface) bridge usati in qualsiasi momento il runtime di Android deve richiamare il codice gestito. Android callable wrapper sono metodi come virtuali può essere sottoposto a override e possono essere implementate interfacce Java. Vedere le [Java Integration Overview](~/android/platform/java-integration/index.md) doc per altre informazioni.
+- **Android callable wrapper** sono una [JNI](https://en.wikipedia.org/wiki/Java_Native_Interface) bridge usati in qualsiasi momento il runtime di Android deve richiamare il codice gestito. Android callable wrapper sono metodi come virtuali può essere sottoposto a override e possono essere implementate interfacce Java. Vedere le [Java Integration Overview](~/android/platform/java-integration/index.md) doc per altre informazioni.
 
 
 <a name="Managed_Callable_Wrappers" />
@@ -88,7 +88,7 @@ Esistono due scenari in cui il *(IntPtr, JniHandleOwnership)* costruttore deve e
 2. Chiamata del metodo virtuale da un costruttore di classe di base.
 
 
-Si noti che (2) è un'astrazione debole. In Java, c#, le chiamate ai metodi virtuali da un costruttore richiamano sempre l'implementazione del metodo più derivato. Ad esempio, il [costruttore TextView (contesto, AttributeSet, int)](https://developer.xamarin.com/api/constructor/Android.Widget.TextView.TextView/p/Android.Content.Context/Android.Util.IAttributeSet/System.Int32/) richiama il metodo virtuale [TextView.getDefaultMovementMethod()](http://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()), che viene associato come il [ Proprietà TextView.DefaultMovementMethod](https://developer.xamarin.com/api/property/Android.Widget.TextView.DefaultMovementMethod/).
+Si noti che (2) è un'astrazione debole. In Java, c#, le chiamate ai metodi virtuali da un costruttore richiamano sempre l'implementazione del metodo più derivato. Ad esempio, il [costruttore TextView (contesto, AttributeSet, int)](https://developer.xamarin.com/api/constructor/Android.Widget.TextView.TextView/p/Android.Content.Context/Android.Util.IAttributeSet/System.Int32/) richiama il metodo virtuale [TextView.getDefaultMovementMethod()](https://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()), che viene associato come il [ Proprietà TextView.DefaultMovementMethod](https://developer.xamarin.com/api/property/Android.Widget.TextView.DefaultMovementMethod/).
 Di conseguenza, se un tipo [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) dovesse (1) [sottoclasse TextView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26), (2) [override TextView.DefaultMovementMethod](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45)e (3) [attivare un'istanza di quel classe tramite il codice XML,](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) sottoposto a override *DefaultMovementMethod* proprietà sarebbe possibile richiamare prima che il costruttore ACW soddisfacente per l'esecuzione e che verrebbe eseguito prima il C# soddisfacente costruttore eseguire.
 
 Questo è supportato da un'istanza LogTextBox tramite il [LogTextView (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L28) costruttore quando l'istanza ACW LogTextBox innanzitutto entra in codice gestito e quindi richiamando il [ (Contesto, IAttributeSet, int) LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L41) costruttore *sulla stessa istanza* quando viene eseguito il costruttore ACW.
@@ -99,7 +99,7 @@ Ordine degli eventi:
 
 2.  Crea un'istanza dell'oggetto grafico di Layout Android e crea un'istanza di un'istanza di *monodroid.apidemo.LogTextBox* , per il ACW *LogTextBox* .
 
-3.  Il *monodroid.apidemo.LogTextBox* costruttore esegue le [android.widget.TextView](http://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) costruttore.
+3.  Il *monodroid.apidemo.LogTextBox* costruttore esegue le [android.widget.TextView](https://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) costruttore.
 
 4.  Il *TextView* costruttore richiama *monodroid.apidemo.LogTextBox.getDefaultMovementMethod()* .
 
@@ -178,8 +178,8 @@ Solo *Dispose ()* di gestiti sottoclassi callable wrapper quando si è certi che
 
 ## <a name="application-startup"></a>Avvio dell'applicazione
 
-Quando un'attività, servizio, e così via viene avviato, Android dapprima il controllo per verificare se è già presente un processo in esecuzione per ospitare le attività/service/e così via. Se tale processo non esiste, verrà creato un nuovo processo, il [androidmanifest. XML](http://developer.android.com/guide/topics/manifest/manifest-intro.html) è di lettura e il tipo specificato nella [ /manifest/application/@android:name ](http://developer.android.com/guide/topics/manifest/application-element.html#nm) attributo viene caricato e creare un'istanza. Successivamente, tutti i tipi specificati dal [ /manifest/application/provider/@android:name ](http://developer.android.com/guide/topics/manifest/provider-element.html#nm) valori di attributo vengono create istanze e hanno loro [ContentProvider.attachInfo%28)](https://developer.xamarin.com/api/member/Android.Content.ContentProvider.AttachInfo/p/Android.Content.Context/Android.Content.PM.ProviderInfo/) metodo richiamato. Hook di xamarin. Android in ciò aggiungendo una *mono. MonoRuntimeProvider* *ContentProvider* al file androidmanifest. XML durante il processo di compilazione. Il *mono. MonoRuntimeProvider.attachInfo()* metodo è responsabile per il caricamento di runtime di Mono nel processo.
-Qualsiasi tentativo di usare Mono prima che questo avrà esito negativo. ( *Nota*: è per questo motivo i tipi cui sottoclasse [Android](https://developer.xamarin.com/api/type/Android.App.Application/) necessario fornire un [(IntPtr, JniHandleOwnership) costruttore](https://github.com/xamarin/monodroid-samples/blob/a9e8ef23/SanityTests/Hello.cs#L103), poiché è l'istanza dell'applicazione creata prima può essere inizializzato Mono).
+Quando un'attività, servizio, e così via viene avviato, Android dapprima il controllo per verificare se è già presente un processo in esecuzione per ospitare le attività/service/e così via. Se tale processo non esiste, verrà creato un nuovo processo, il [androidmanifest. XML](https://developer.android.com/guide/topics/manifest/manifest-intro.html) è di lettura e il tipo specificato nella [ /manifest/application/@android:name ](https://developer.android.com/guide/topics/manifest/application-element.html#nm) attributo viene caricato e creare un'istanza. Successivamente, tutti i tipi specificati dal [ /manifest/application/provider/@android:name ](https://developer.android.com/guide/topics/manifest/provider-element.html#nm) valori di attributo vengono create istanze e hanno loro [ContentProvider.attachInfo%28)](https://developer.xamarin.com/api/member/Android.Content.ContentProvider.AttachInfo/p/Android.Content.Context/Android.Content.PM.ProviderInfo/) metodo richiamato. Hook di xamarin. Android in ciò aggiungendo una *mono. MonoRuntimeProvider* *ContentProvider* al file androidmanifest. XML durante il processo di compilazione. Il *mono. MonoRuntimeProvider.attachInfo()* metodo è responsabile per il caricamento di runtime di Mono nel processo.
+Qualsiasi tentativo di usare Mono prima che questo avrà esito negativo. ( *Nota*: È per questo motivo i tipi cui sottoclasse [Android](https://developer.xamarin.com/api/type/Android.App.Application/) necessario fornire un' [(IntPtr, JniHandleOwnership) costruttore](https://github.com/xamarin/monodroid-samples/blob/a9e8ef23/SanityTests/Hello.cs#L103), come l'istanza dell'applicazione viene creata prima può essere inizializzato Mono.)
 
-Dopo aver completato l'inizializzazione del processo, `AndroidManifest.xml` viene consultato per trovare il nome della classe di attività/service/ECC da avviare. Ad esempio, il [ /manifest/application/activity/@android:name attributo](http://developer.android.com/guide/topics/manifest/activity-element.html#nm) viene usato per determinare il nome di un'attività da caricare. Per le attività, questo tipo deve ereditare [android.app.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/).
-Il tipo specificato viene caricato tramite [forName ()](http://developer.android.com/reference/java/lang/Class.html#forName(java.lang.String)) (che è necessario che il tipo sia un linguaggio, quindi digitare Android Callable Wrapper), quindi creata un'istanza. Creazione di un'istanza di Android Callable Wrapper attiverà la creazione di un'istanza del tipo c# corrispondente. Android quindi richiamerà [Activity.onCreate(Bundle)](http://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle)) , che produrrà il corrispondente [Activity.OnCreate(Bundle)](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/) verrà richiamato e si è per le competizioni.
+Dopo aver completato l'inizializzazione del processo, `AndroidManifest.xml` viene consultato per trovare il nome della classe di attività/service/ECC da avviare. Ad esempio, il [ /manifest/application/activity/@android:name attributo](https://developer.android.com/guide/topics/manifest/activity-element.html#nm) viene usato per determinare il nome di un'attività da caricare. Per le attività, questo tipo deve ereditare [android.app.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/).
+Il tipo specificato viene caricato tramite [forName ()](https://developer.android.com/reference/java/lang/Class.html#forName(java.lang.String)) (che è necessario che il tipo sia un linguaggio, quindi digitare Android Callable Wrapper), quindi creata un'istanza. Creazione di un'istanza di Android Callable Wrapper attiverà la creazione di un'istanza del tipo c# corrispondente. Android quindi richiamerà [Activity.onCreate(Bundle)](https://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle)) , che produrrà il corrispondente [Activity.OnCreate(Bundle)](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/) verrà richiamato e si è per le competizioni.

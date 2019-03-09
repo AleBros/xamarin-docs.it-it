@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/28/2016
-ms.openlocfilehash: a94c70bb7068847ed1b410dd7eddc70921fdf307
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 42cf10e592a37f9a979d05d7784553059923646c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106039"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667321"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Riferimenti alle librerie Native in xamarin. IOS
 
@@ -115,7 +115,7 @@ Sono disponibili due tipi di librerie native in iOS:
 -  Librerie statiche che è fornito con l'applicazione.
 
 
-Per accedere ai metodi definiti in uno di questi, si utilizza [funzionalità di P/Invoke di Mono](http://www.mono-project.com/docs/advanced/pinvoke/) che è la stessa tecnologia che verrebbero utilizzate in .NET, che corrisponde approssimativamente a:
+Per accedere ai metodi definiti in uno di questi, si utilizza [funzionalità di P/Invoke di Mono](https://www.mono-project.com/docs/advanced/pinvoke/) che è la stessa tecnologia che verrebbero utilizzate in .NET, che corrisponde approssimativamente a:
 
 -  Determinare quale funzione C si vuole richiamare
 -  Determinare la firma

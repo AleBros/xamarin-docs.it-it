@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: eb636c3b7a41adbab9162e192ead65def377a1a0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5e6d7b4bdfdf7ea48d26537cb41c763656b050e0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118981"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669651"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Funzionalità di xamarin. Android Designer Material Design
 
@@ -90,7 +90,7 @@ Come illustrato nell'esempio seguente, il **eredita** Elenca l'ereditarietà di 
 [![Ereditare scheda](material-design-features-images/vs/06-inherit-tab-w158-sml.png)](material-design-features-images/vs/06-inherit-tab-w158.png#lightbox)
 
 In questo esempio, il **tema predefinito** eredita da uno stile che usa `@color/background_material_light` ma ne esegue l'override con `color/material_grey_50`, che ha un valore del codice colore `#fffafafa`.
-Per altre informazioni sull'ereditarietà degli stili, vedere [stili e temi](http://developer.android.com/guide/topics/ui/themes.html#Inheritance).
+Per altre informazioni sull'ereditarietà degli stili, vedere [stili e temi](https://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 ### <a name="color-picker"></a>Selezione dei colori
 
@@ -125,7 +125,7 @@ Il **materiale tavolozza** verrà visualizzata la scheda le **tavolozza dei colo
 La parte superiore della tavolozza dei colori Visualizza colori primari Material Design mentre la parte inferiore della tavolozza Mostra un intervallo di tonalità del colore primario selezionato. Ad esempio, quando si seleziona **Indigo**, una raccolta di **Indigo** tonalità viene visualizzato nella parte inferiore della finestra di dialogo.
 Quando si seleziona un hue, il colore della proprietà viene modificato in tonalità selezionata. Nell'esempio seguente, il `Background Tint` del pulsante viene modificato in *500 Indigo*:
 
-![Selezionare 500 Indigo](material-design-features-images/vs/10-indigo-w158.png)
+![Select Indigo 500](material-design-features-images/vs/10-indigo-w158.png)
 
 `Background Tint` è impostato per il codice per il colore *500 Indigo* (`#ff3f51b5`), e la finestra di progettazione aggiorna il colore di sfondo per riflettere questa modifica:
 
@@ -214,7 +214,7 @@ Quando si fa clic su questa icona, viene aperto nel popover una finestra di dial
 La parte superiore della tavolozza dei colori Visualizza colori primari Material Design mentre la parte inferiore della tavolozza Mostra un intervallo di tonalità del colore primario selezionato. Ad esempio, quando si seleziona **Indigo**, una raccolta di **Indigo** tonalità viene visualizzato nella parte inferiore della finestra di dialogo.
 Quando si seleziona un hue, il colore della proprietà viene modificato in tonalità selezionata. Nell'esempio seguente, il `Background Tint` del pulsante viene modificato in *500 Indigo*:
 
-[![Scegliere 500 Indigo](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
+[![Choose Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
 
 `Background Tint` è impostato per il codice per il colore *500 Indigo* (`#ff3f51b5`), e la finestra di progettazione aggiorna il colore di sfondo del pulsante in modo da riflettere questa modifica:
 
@@ -271,7 +271,7 @@ Come illustrato nell'esempio seguente, il **eredita** Elenca l'ereditarietà di 
 [![Ereditare scheda](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
 
 In questo esempio, il **tema predefinito** eredita da uno stile che usa `@color/background_material_dark` ma ne esegue l'override con `color/material_grey_850`, che ha un valore del codice colore `#ff303030`.
-Per altre informazioni sull'ereditarietà degli stili, vedere [stili e temi](http://developer.android.com/guide/topics/ui/themes.html#Inheritance).
+Per altre informazioni sull'ereditarietà degli stili, vedere [stili e temi](https://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 ### <a name="color-picker"></a>Selezione dei colori
 

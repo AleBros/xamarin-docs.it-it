@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/04/2019
-ms.openlocfilehash: fc989ef73c9248bd359c9b1d35aaa9bdde846690
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 530fcf638454373ae68391e4e11bca85dd2fff63
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557053"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669557"
 ---
 # <a name="fonts-in-xamarinforms"></a>Tipi di carattere in xamarin. Forms
 
@@ -140,7 +140,7 @@ Di seguito sono illustrati i passaggi necessari per ogni piattaforma. Se i file 
 ### <a name="ios"></a>iOS
 
 È possibile visualizzare un tipo di carattere personalizzato prima di tutto verificare che sia stata caricata, quindi facendovi riferimento per nome usando xamarin. Forms `Font` metodi.
-Seguire le istruzioni in [questo post di blog](http://blog.xamarin.com/custom-fonts-in-ios/):
+Seguire le istruzioni in [questo post di blog](https://blog.xamarin.com/custom-fonts-in-ios/):
 
 1. Aggiungere il file del tipo di carattere con **azione di compilazione: BundleResource**, e
 2. Aggiorna il **Info. plist** file (**tipi di carattere forniti dall'applicazione**, o `UIAppFonts`, key), quindi

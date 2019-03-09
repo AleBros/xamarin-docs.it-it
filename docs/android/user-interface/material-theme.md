@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 4b9c39a0ced9a264f501d78142c3bdfd556593ed
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: ff94211086956e36da377445d90359789b62fc60
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "30771320"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668322"
 ---
 # <a name="material-theme"></a>Tema Material
 
@@ -45,7 +45,7 @@ Di seguito è necessario usare le nuove funzionalità di Android 5.0 materiale t
 
 -  **Android SDK** &ndash; Android 5.0 (API 21) o versione successiva deve essere installato tramite Android SDK Manager.
 
--  **Java JDK 1.8** &ndash; JDK 1.7 può essere usato se si è specificamente a livello di destinazione è API 23 e versioni precedente. È disponibile dal JDK 1.8 [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+-  **Java JDK 1.8** &ndash; JDK 1.7 può essere usato se si è specificamente a livello di destinazione è API 23 e versioni precedente. È disponibile dal JDK 1.8 [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Per informazioni su come configurare un progetto di app Android 5.0, vedere [impostazione di un progetto Android 5.0](~/android/platform/lollipop.md).
 

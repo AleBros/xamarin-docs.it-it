@@ -7,13 +7,8 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 5dae8f1907b9a61018e335a8fe19ad319d95741d
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207869"
 ---
+
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Creazione di App per dispositivi mobili con xamarin. Forms libro
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples)
@@ -113,7 +108,7 @@ In alcuni casi il libro viene fatto riferimento per la _Windows Runtime_. Questo
 
 Una libreria .NET Standard 2.0 non supporta tutte le versioni di Windows 10 Mobile. Pertanto, un'applicazione xamarin. Forms usando una libreria .NET Standard non verrà eseguito in un dispositivo Windows 10 Mobile. Le applicazioni xamarin. Forms continuano l'esecuzione in versioni 10.0.16299.0 desktop di Windows 10 e versioni successive.
 
-Xamarin. Forms offre il supporto di anteprima per il [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md), e [Tizen](/xamarin-forms/platform/other/tizen.md) piattaforme.
+Xamarin. Forms offre il supporto di anteprima per il [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md), e [Tizen](~/xamarin-forms/platform/other/tizen.md) piattaforme.
 
 ### <a name="chapter-summaries"></a>Riassunti dei capitoli
 

@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 12a07be4adb32e8d9461a00e5fdea52d9b930848
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b8eafc3c9c85ba8067b5da7b568ed7c91c9e170c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117850"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666425"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Crea un progetto UWP MonoGame
 
@@ -40,11 +40,11 @@ Per altre informazioni, vedere questo [pagina sulla configurazione per lo svilup
 Dopo che tutte le risorse necessarie sono state installate e la modalità sviluppatore è stata abilitata nel computer Windows 10, è possibile creare un nuovo progetto MonoGame usando Visual Studio seguendo questa procedura:
 
 1. Selezionare **File** > **nuova** > **progetto...**
-1. Selezionare il **installata** > **modelli** > **Visual C#**   >  **MonoGame** categoria: 
+1. Selezionare il **installata** > **modelli** > **Visual C#**   >  **MonoGame** categoria:
 
     ![](uwp-images/image1.png "Categoria MonoGame")
 
-1. Selezionare il **MonoGame Windows 10 Universal progetto** opzione: 
+1. Selezionare il **MonoGame Windows 10 Universal progetto** opzione:
 
     ![](uwp-images/image2.png "Selezionare l'opzione di progetto universale MonoGame Windows 10")
 
@@ -76,7 +76,7 @@ I progetti UWP è possono distribuire in qualsiasi dispositivo Windows 10 dallo 
 
 ![](uwp-images/remote.png "Le app UWP possono essere distribuite, passando la destinazione al computer remoto e immettere l'indirizzo IP di quelle Xbox")
 
-In Xbox One, il bordo bianco rappresenta l'area non safe per TV. Per altre informazioni, vedere la [sezione di area sicura](#Safe_Area_on_Xbox_One).
+In Xbox One, il bordo bianco rappresenta l'area non safe per TV. Per altre informazioni, vedere la [sezione di area sicura](#safe-area-on-xbox-one).
 
 ![](uwp-images/safearea.png "In Xbox One, il bordo bianco rappresenta l'area non safe per TV")
 
@@ -92,7 +92,7 @@ Il modello MonoGame per Xbox One prende in considerazione l'area sicura e ne ese
 
 Il contenuto nei progetti MonoGame è possibile fare riferimento direttamente dal file o tramite il [Pipeline di contenuti MonoGame](~/graphics-games/cocossharp/content-pipeline/index.md). Progetti di gioco di piccole dimensioni possono trarre vantaggio dalla semplicità di caricamento file. Progetti di grandi dimensioni trarranno vantaggio dall'uso della pipeline di contenuti per ottimizzare il contenuto per ridurre le dimensioni e tempi di caricamento. A differenza di XNA su Xbox 360, di `System.IO.File` classe è disponibile nelle App UWP per Xbox One.
 
-Per altre informazioni sul caricamento di contenuti mediante la pipeline di contenuti, vedere la [Guida alla Pipeline di contenuti](~/graphics-games/cocossharp/content-pipeline/index.md). 
+Per altre informazioni sul caricamento di contenuti mediante la pipeline di contenuti, vedere la [Guida alla Pipeline di contenuti](~/graphics-games/cocossharp/content-pipeline/index.md).
 
 ### <a name="loading-content-from-file"></a>Caricamento del contenuto da File
 

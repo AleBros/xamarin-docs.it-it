@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: d9cd6bf3ae51c6e27be88481e412995bd4113c17
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117261"
 ---
+
 # <a name="android-resources"></a>Risorse Android
 
 _Questo articolo introduce il concetto di risorse Android in xamarin. Android e verrà documentati come usarli. Viene illustrato come usare le risorse nell'applicazione Android per supportare la localizzazione dell'applicazione e più dispositivi tra cui densità e dimensioni dello schermo diverse._
@@ -71,6 +66,6 @@ Questo articolo verrà accettano un quadro completo di utilizzo delle risorse e 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Uso di asset Android](~/android/app-fundamentals/resources-in-android/android-assets.md)
-- [Nozioni di base sulle applicazioni](http://developer.android.com/guide/topics/fundamentals.html)
-- [Risorse di applicazioni](http://developer.android.com/guide/topics/resources/index.html)
-- [Supporto di più schermate](http://developer.android.com/guide/practices/screens_support.html)
+- [Nozioni di base sulle applicazioni](https://developer.android.com/guide/topics/fundamentals.html)
+- [Risorse di applicazioni](https://developer.android.com/guide/topics/resources/index.html)
+- [Supporto di più schermate](https://developer.android.com/guide/practices/screens_support.html)

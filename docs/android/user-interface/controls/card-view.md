@@ -1,5 +1,5 @@
 ---
-title: Widget CardView
+title: CardView
 description: Il widget Cardview è un componente dell'interfaccia utente che presenta il contenuto di testo e immagine in viste che sono simili a schede. Questa guida illustra come usare e personalizzare i widget CardView nelle applicazioni xamarin. Android, mantenendo la compatibilità con le versioni precedenti di Android.
 ms.prod: xamarin
 ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 019d89261687d1139ebced9400afbdf5eaf7a128
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cdb75207bff3f15a54d0cdd90fa0833da9c145e6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109198"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670649"
 ---
-# <a name="cardview"></a>Widget CardView
+# <a name="cardview"></a>CardView
 
 _Il widget Cardview è un componente dell'interfaccia utente che presenta il contenuto di testo e immagine in viste che sono simili a schede. Questa guida illustra come usare e personalizzare i widget CardView nelle applicazioni xamarin. Android, mantenendo la compatibilità con le versioni precedenti di Android._
 
@@ -37,7 +37,7 @@ Per usare nuovi Android 5.0 e versioni successive funzionalità è necessario qu
 
 -  **Android SDK** &ndash; Android 5.0 (API 21) o versione successiva deve essere installato tramite Android SDK Manager.
 
--  **Java JDK 1.8** &ndash; JDK 1.7 può essere usato se si è specificamente a livello di destinazione è API 23 e versioni precedente. È disponibile dal JDK 1.8 [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+-  **Java JDK 1.8** &ndash; JDK 1.7 può essere usato se si è specificamente a livello di destinazione è API 23 e versioni precedente. È disponibile dal JDK 1.8 [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 L'app deve includere anche il `Xamarin.Android.Support.v7.CardView` pacchetto. Per aggiungere il `Xamarin.Android.Support.v7.CardView` pacchetto in Visual Studio per Mac:
 
@@ -56,7 +56,7 @@ Per aggiungere il `Xamarin.Android.Support.v7.CardView` pacchetto in Visual Stud
 3. Quando **libreria di supporto di Xamarin v7 CardView** viene visualizzata, fare clic su **installare**.
 
 Per informazioni su come configurare un progetto di app Android 5.0, vedere [impostazione di un progetto Android 5.0](~/android/platform/lollipop.md).
-Per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: inclusi a NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+Per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: Inserimento di pacchetto NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
 
 ## <a name="introducing-cardview"></a>Introduzione a CardView

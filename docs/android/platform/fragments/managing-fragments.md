@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: 107877d0e92d3a46101812b78bc0b414c0fbb320
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3e0430b8ed9c42030441021e71c3b08b1ddccc57
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105467"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670545"
 ---
 # <a name="managing-fragments"></a>Gestione dei frammenti
 
@@ -40,7 +40,7 @@ fragmentTx.Commit();
 
 Se una transazione viene eseguito il commit dopo `Activity.OnSaveInstanceState()` viene chiamato, verrà generata un'eccezione. Ciò accade perché quando l'attività Salva lo stato, Android salva anche lo stato di eventuali frammenti ospitati. Se tutte le transazioni frammento vengono eseguito il commit dopo questo punto, lo stato di queste transazioni andranno perse quando l'attività viene ripristinato.
 
-È possibile salvare le transazioni di frammento dell'attività [stack Indietro](http://developer.android.com/guide/topics/fundamentals/tasks-and-back-stack.html) effettuando una chiamata a `FragmentTransaction.AddToBackStack()`. Ciò consente all'utente di spostarsi all'indietro tramite frammento viene modificato quando il **nuovamente** pulsante viene premuto. Senza una chiamata a questo metodo, frammenti che sono state rimosse verranno eliminato definitivamente e non sarà disponibili se l'utente passa attraverso l'attività.
+È possibile salvare le transazioni di frammento dell'attività [stack Indietro](https://developer.android.com/guide/topics/fundamentals/tasks-and-back-stack.html) effettuando una chiamata a `FragmentTransaction.AddToBackStack()`. Ciò consente all'utente di spostarsi all'indietro tramite frammento viene modificato quando il **nuovamente** pulsante viene premuto. Senza una chiamata a questo metodo, frammenti che sono state rimosse verranno eliminato definitivamente e non sarà disponibili se l'utente passa attraverso l'attività.
 
 Nell'esempio seguente viene illustrato come utilizzare il `AddToBackStack` metodo di un `FragmentTransaction` per sostituire un frammento, mantenendo lo stato del primo frammento nello stack indietro:
 

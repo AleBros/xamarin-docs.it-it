@@ -1,5 +1,5 @@
 ---
-title: "Errore IBTool: Impossibile completare l'operazione."
+title: "Errore IBTool: Non è stato possibile completare l'operazione."
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A804EBC4-2BBF-4A98-A4E8-A455DB2E8A17
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
-ms.openlocfilehash: 9458c1f8efa36199b21127123f0013b494a224b6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c2f727b55b21dc3bd976f0b41c71b794841cfca4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103738"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667893"
 ---
-# <a name="ibtool-error-the-operation-couldnt-be-completed"></a>Errore IBTool: Impossibile completare l'operazione.
+# <a name="ibtool-error-the-operation-couldnt-be-completed"></a>Errore IBTool: Non è stato possibile completare l'operazione.
 
 ## <a name="fixed-in-xcode-611"></a>Risolto in Xcode 6.1.1
 
@@ -26,7 +26,7 @@ Apple [fissa](https://developer.apple.com/library/content/documentation/Xcode/Co
 
 Il `ibtool` comando Xcode 6.0 presenta un bug in OS X 10.10 Yosemite. Xamarin. IOS Usa Xcode `ibtool` per compilare gli storyboard e `XIB` file.
 
-Altre informazioni sui bug in relazione a Xcode sono reperibili nel seguente post di Stack Overflow: [http://stackoverflow.com/questions/25754763/cant-open-storyboard](http://stackoverflow.com/questions/25754763/cant-open-storyboard)
+Altre informazioni sui bug in relazione a Xcode sono reperibili nel seguente post di Stack Overflow: [https://stackoverflow.com/questions/25754763/cant-open-storyboard](https://stackoverflow.com/questions/25754763/cant-open-storyboard)
 
 ### <a name="error-message"></a>Messaggio di errore
 
@@ -56,7 +56,7 @@ Ad esempio supponga originale `.csproj` file contiene la voce seguente:
 </BundleResource>
 ```
 
-In Visual Studio per Mac la `LogicalName` possono essere impostate anche usando il `Resource ID` campo per l'immagine in **visualizzazione > riquadri > proprietà**. (Vedere anche: [ http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545 ](http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545))
+In Visual Studio per Mac la `LogicalName` possono essere impostate anche usando il `Resource ID` campo per l'immagine in **visualizzazione > riquadri > proprietà**. (Vedere anche: [ https://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545 ](https://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545))
 
 Dopo questa modifica, sarà necessario aggiornare lo storyboard e `.xib` file da utilizzare i nuovi percorsi di primo livello immagine. Visual Studio per Mac verrà automaticamente aggiornato l'elenco di autocompletions per il `Image` proprietà in iOS Designer. In Visual Studio, è necessario modificare manualmente il percorso. IOS Designer, verrà visualizzato ciò come un'immagine manca, ma il progetto viene compilato ed eseguito correttamente.
 

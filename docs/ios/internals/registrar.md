@@ -6,13 +6,13 @@ ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 8/29/2018
-ms.openlocfilehash: cd9e92e2c96d0a0696633e49869f2661e410d343
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.date: 08/29/2018
+ms.openlocfilehash: 83340ce2d5db145c29166d90d3a5180b1767d7ca
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233588"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672495"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Programma di registrazione di tipo per xamarin. IOS
 
@@ -144,7 +144,7 @@ Di seguito sono riportati alcuni esempi dei messaggi di errore rilevati dal prog
 
     ```csharp
     [Register]
-    class MyDemo : NSObject 
+    class MyDemo : NSObject
     {
         [Export ("foo:")]
         void Foo (NSString str);
@@ -178,7 +178,7 @@ Di seguito sono riportati alcuni esempi dei messaggi di errore rilevati dal prog
 
 Alcuni aspetti da tenere in mente riguardo il nuovo programma di registrazione:
 
-- Alcune librerie di terze parti devono essere aggiornate per funzionare con il nuovo sistema di registrazione. Visualizzare [necessarie modifiche](#required_modifications) sotto per altri dettagli.
+- Alcune librerie di terze parti devono essere aggiornate per funzionare con il nuovo sistema di registrazione. Visualizzare [necessarie modifiche](#required-modifications) sotto per altri dettagli.
 
 - È anche un risvolto a breve termine che Clang deve essere utilizzata se viene usato il framework di account (infatti Apple **accounts.h** intestazione può essere compilata solo da Clang). Aggiungere `--compiler:clang` agli argomenti aggiuntivi di mtouch usare Clang se si usa Xcode 4.6 o versioni precedenti (xamarin. IOS selezionerà automaticamente Clang in Xcode 5.0 o versioni successive.)
 
@@ -203,6 +203,8 @@ Il sistema di registrazione precedente presenta i seguenti svantaggi:
 - È possibile esportare due metodi con la stessa firma di Objective-C. Anche in questo caso quello che viene chiamato da Objective-C è casuale, ma questo problema non è stato operazione tanto comune quanto quello precedente, principalmente perché l'unico modo in cui si verifica effettivamente questo bug è stato l'override del metodo gestito sfortunato.
 - Il set di metodi che è stato esportato è leggermente diverso tra compilazioni statiche e dinamiche.
 - Non funziona correttamente quando si esportano le classi generiche (quale implementazione generica esatta eseguita in fase di esecuzione sarebbe random, producendo un comportamento non determinato).
+
+<a name="required-modifications" />
 
 ## <a name="new-registrar-required-changes-to-bindings"></a>Nuovo programma di registrazione: ha richiesto modifiche alle associazioni
 

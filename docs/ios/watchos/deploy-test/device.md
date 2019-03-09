@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f4a21e25f418cc81d5f210098ded648b3d70ae14
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c15e9205b96a02caa182e47b71c6d36c8bff1aa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116732"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671052"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Test su dispositivi di Apple Watch
 
@@ -93,7 +93,7 @@ Dopo aver configurato il dispositivo, gli ID App e i profili di Provisioning, si
 
 Se si verifica un errore durante la distribuzione Usa la **Vista > riquadri > Log del dispositivo** per visualizzare altre informazioni sull'errore. Di seguito sono elencate alcuni errori e le relative cause:
 
-### <a name="error-mt3001-could-not-aot-the-assembly"></a>Errore MT3001: Impossibile non AOT di assembly
+### <a name="error-mt3001-could-not-aot-the-assembly"></a>Errore MT3001: Potrebbe non AOT di assembly
 
 Ciò può verificarsi durante la compilazione in modalità di DEBUG per distribuire un dispositivo Apple Watch.
 
@@ -152,7 +152,7 @@ Se il **Output applicazione** si blocca finestra che mostra
 waiting for debugger to connect
 ```
 
-Verificare se uno qualsiasi dei pacchetti NuGet che sono stati inclusi nel progetto hanno una dipendenza **Microsoft.Bcl.Build**. Questo viene aggiunto automaticamente con alcune librerie pubblicate da Microsoft, tra cui i diffusi [Microsoft Http Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http/).
+Verificare se uno qualsiasi dei pacchetti NuGet che sono stati inclusi nel progetto hanno una dipendenza **Microsoft.Bcl.Build**. Questo viene aggiunto automaticamente con alcune librerie pubblicate da Microsoft, tra cui i diffusi [Microsoft Http Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http/).
 
 Il **Microsoft.Bcl.Build.targets** file che viene aggiunto per il **csproj** può interferire con la creazione di pacchetti di estensioni iOS durante la distribuzione. È possibile tenere traccia di [bug](https://bugzilla.xamarin.com/show_bug.cgi?id=29912).
 Una possibile soluzione alternativa consiste nel modificare il file con estensione csproj e spostare manualmente il **Microsoft.Bcl.Build.targets** per essere l'ultimo elemento.

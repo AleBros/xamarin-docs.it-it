@@ -1,79 +1,79 @@
 ---
 title: Accessibilità in App Xamarin
-description: Questo documento vengono forniti suggerimenti diversi per la creazione di applicazioni accessibili. Ad esempio, include suggerimenti sulle caratteri grandi, contrasto elevato, le interfacce autodescrittive e molto altro.
+description: Questo documento offre diversi suggerimenti per la creazione di App accessibili. Ad esempio, include le raccomandazioni sui grandi tipi di carattere, contrasto elevato, autodescrittive interfacce e altro ancora.
 ms.prod: xamarin
 ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 97cd3655ac47a017d9590e1890b93d74f10a9c34
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 0ec264e0f3d381fdac46c79dd479da2bc768954f
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780304"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668335"
 ---
 # <a name="accessibility-in-xamarin-apps"></a>Accessibilità in App Xamarin
 
-_Verificare che le app siano utilizzabile per la più ampia possibile di destinatari_
+_Assicurarsi che le app sono utilizzabili per il pubblico più ampio possibile_
 
-Accessibilità si intende il concetto di progettazione di interfacce utente di app che funzionano anche funzionalità di assistenza di input e di visualizzazione del sistema operativo, ad esempio tipi di grandi dimensioni, contrasto elevato, eseguire lo zoom avanti, la lettura dello schermo (sintesi vocale), segnali feedback visivo o tattili, e metodi di input alternativi.
+Accessibilità si riferisce al concetto di progettazione delle interfacce utente di app che funzionano anche funzionalità di assistenza di input e di visualizzazione del sistema operativo, ad esempio tipo di grandi dimensioni, contrasto elevato, fare zoom avanti, durante la lettura dello schermo (sintesi vocale), segnali visivi feedback visivo o aptico, e metodi di input alternativi.
 
-Desktop e mobile piattaforme come iOS, Android e Windows offrono compilato nelle API che consentono agli sviluppatori di compilare App accessibile, ad esempio [Google TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) e [Voice over Apple](http://www.apple.com/accessibility/ios/voiceover/).
+Piattaforme desktop e per dispositivi mobili come iOS, Android e Windows forniscono compilato per le API che consentono agli sviluppatori di creare App accessibili, ad esempio [Google TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) e [Apple VoiceOver](http://www.apple.com/accessibility/ios/voiceover/).
 
 ## <a name="platform-specific-apis"></a>API specifiche della piattaforma
 
-Per implementare le indicazioni in questo documento, usare le API fornite da ogni piattaforma:
+Per implementare le linee guida in questo documento, usare le API fornite da ogni piattaforma:
 
-- [**Accessibilità Android**](~/android/app-fundamentals/accessibility.md)
+- [**Accessibilità di Android**](~/android/app-fundamentals/accessibility.md)
 - [**iOS accessibilità**](~/ios/app-fundamentals/accessibility.md)
-- [**Accesso facilitato di OS X**](~/mac/app-fundamentals/accessibility.md)
+- [**Accessibilità di OS X**](~/mac/app-fundamentals/accessibility.md)
 - [**Xamarin.Forms**](~/xamarin-forms/app-fundamentals/accessibility/index.md)
 
 <a name="checklist" />
 
 ## <a name="accessibility-checklist"></a>Elenco di controllo di accesso facilitato
 
-Seguire questi suggerimenti per verificare che le app siano accessibili al gruppo di destinatari più ampio possibile. Estrarre il [Android accessibilità test Checklist](http://developer.android.com/training/accessibility/testing.html) e [pagina di accesso facilitato di Apple](http://www.apple.com/accessibility/) per ulteriori informazioni.
+Seguire questi suggerimenti per assicurarsi che le app siano accessibili al pubblico più vasto possibile. Consultare il [Android accessibilità test Checklist](https://developer.android.com/training/accessibility/testing.html) e [pagina di accesso facilitato di Apple](http://www.apple.com/accessibility/) per altre informazioni.
 
-### <a name="support-large-fonts-and-high-contrast"></a>Supporta i tipi di carattere di grandi dimensioni e contrasto elevato
+### <a name="support-large-fonts-and-high-contrast"></a>Supporta i tipi di carattere di grandi dimensioni e il contrasto elevato
 
-Evitare dimensioni del controllo a livello di codice e, invece, preferire layout che è possibile ridimensionare per contenere i caratteri di dimensioni maggiori.
-Testare le combinazioni di colori nella modalità a contrasto elevato per verificare che siano leggibili.
+Evitare dimensioni del controllo a livello di codice e, invece, preferire i layout che è possono ridimensionare per contenere i caratteri di dimensioni maggiori.
+Testare le combinazioni di colori nella modalità a contrasto elevato per assicurarsi che siano leggibili.
 
-### <a name="make-the-user-interface-self-describing"></a>Verificare che l'utente interfaccia autodescrittivi
+### <a name="make-the-user-interface-self-describing"></a>Rendere l'utente interfaccia autodescrittivi
 
-Contrassegnare tutti gli elementi dell'interfaccia utente con un testo descrittivo e gli hint che sono compatibili con la schermata lettura API in ciascuna piattaforma.
+Contrassegnare tutti gli elementi dell'interfaccia utente con un testo descrittivo e gli hint che sono compatibili con la schermata leggere le API in ciascuna piattaforma.
 
-### <a name="ensure-that-images-and-icons-have-an-alternate-text-description"></a>Verificare che le immagini e icone abbiano una descrizione di testo alternativo
+### <a name="ensure-that-images-and-icons-have-an-alternate-text-description"></a>Assicurarsi che le immagini e icone hanno una descrizione di testo alternativo
 
 Immagini e icone che fanno parte dell'interfaccia utente dell'applicazione, quali pulsanti o indicatori di stato, ad esempio, devono essere contrassegnate con una descrizione accessibile.
 
-### <a name="design-the-visual-tree-with-accessible-navigation-in-mind"></a>La struttura ad albero visuale con navigazione accessibile in considerazione di progettazione
+### <a name="design-the-visual-tree-with-accessible-navigation-in-mind"></a>Progettare la struttura ad albero visuale con navigazione accessibile presente
 
-Utilizzare i controlli di layout appropriato o le API in modo che la navigazione tra i controlli usando metodi alternativi di input seguono lo stesso flusso logico come usando il touchscreen.
+Usare i controlli di layout appropriato o le API in modo che lo spostamento tra i controlli usando metodi di input alternativi seguono lo stesso flusso logico come tramite il touchscreen.
 
-Escludere gli elementi non necessari dalla lettura dello schermo (decorative immagini o le etichette per i campi che sono già accessibili, ad esempio).
+Escludere gli elementi non necessari dai lettori dello schermo (immagini decorative o etichette per i campi che sono già accessibili, ad esempio).
 
-### <a name="dont-rely-on-audio-or-color-cues-alone"></a>Non affidarsi solo segnali audio o di colore
+### <a name="dont-rely-on-audio-or-color-cues-alone"></a>Non fare affidamento sugli segnali audio o il colore da solo
 
-Evitare situazioni in cui l'unica indicazione di stato di avanzamento, completamento o un altro stato è un suono o la modifica del colore. La progettazione dell'interfaccia utente includono segnali visivi deselezionare (con audio e il colore per amplificazione solo) o aggiungere indicatori accessibilità specifico.
+Evitare situazioni in cui l'unica indicazione riguardo lo stato di avanzamento, completamento o qualche altro stato è un file audio o modifica del colore. Sia l'interfaccia utente includono segnali visivi Cancella (con file audio e il colore per rinforzo solo) o aggiungere indicatori accessibilità specifiche di progettazione.
 
-Quando si scelgono colori, tentare di evitare una tavolozza che è difficile distinguere cecità colore per gli utenti.
+Quando si scelgono colori, provare a evitare una tavolozza che è difficile distinguere per gli utenti con cecità colore.
 
-### <a name="captioning-for-video-text-for-audio"></a>Le didascalie per testo video, audio
+### <a name="captioning-for-video-text-for-audio"></a>I sottotitoli codificati per video o testo per l'audio
 
-Fornire le didascalie per contenuto video e uno script leggibile per il contenuto audio. È inoltre utile fornire i controlli che regolare la velocità del contenuto audio o video e assicurarsi che il volume e sono facili da trovare e utilizzare i pulsanti di Riproduci/Pausa.
+Fornire le didascalie per contenuti video e uno script leggibile per il contenuto audio. È inoltre utile fornire i controlli che regolano la velocità di contenuti audio o video e assicurarsi che il volume e sono facili da trovare e usare i pulsanti play/pausa.
 
 ### <a name="localize"></a>Localize
 
-Le descrizioni di accessibilità può (e deve) essere localizzate in cui l'applicazione supporta più lingue.
+Le descrizioni di accessibilità possono (e dovrebbero) essere localizzate in cui l'applicazione supporta più lingue.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Accessibilità Android](~/android/app-fundamentals/accessibility.md)
+- [Accessibilità di Android](~/android/app-fundamentals/accessibility.md)
 - [iOS accessibilità](~/ios/app-fundamentals/accessibility.md)
-- [Accesso facilitato di OS X](~/mac/app-fundamentals/accessibility.md)
-- [Accessibilità xamarin. Forms](~/xamarin-forms/app-fundamentals/accessibility/index.md)
+- [Accessibilità di OS X](~/mac/app-fundamentals/accessibility.md)
+- [Accessibilità di xamarin. Forms](~/xamarin-forms/app-fundamentals/accessibility/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dei problemi di associazioni
+title: Risoluzione dei problemi delle associazioni
 description: Questo articolo vengono riepilogati i vari errori comuni che possono verificarsi durante la generazione di associazioni, insieme a possibili cause e metodi consigliati per risolverli.
 ms.prod: xamarin
 ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: f54da980834b44bbca7dc8619943769f8f429a7a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b0bb7cbb6160865af5b1e40d40c7b999a8bd5ebc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115289"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668517"
 ---
-# <a name="troubleshooting-bindings"></a>Risoluzione dei problemi di associazioni
+# <a name="troubleshooting-bindings"></a>Risoluzione dei problemi delle associazioni
 
 _Questo articolo vengono riepilogati i vari errori comuni che possono verificarsi durante la generazione di associazioni, insieme a possibili cause e metodi consigliati per risolverli._
 
@@ -74,12 +74,12 @@ Questo file fornisce un elenco di tutte le API di Java che sta tentando di bindi
 Questa sezione vengono elencati alcuni messaggi di errore comuni o i sintomi che mio si verificano durante il tentativo di eseguire l'associazione di una libreria Android.
 
 
-### <a name="problem-java-version-mismatch"></a>Problema: Mancata corrispondenza tra versione di Java
+### <a name="problem-java-version-mismatch"></a>Problema: Mancata corrispondenza tra versione Java
 
 In alcuni casi i tipi non verranno generati o arresti anomali del sistema imprevisto potrebbe verificarsi se si usa una versione più recente o meno recente di Java rispetto a ciò che è stata compilata con la libreria. Ricompilare la libreria Android con la stessa versione di JDK che utilizza il progetto xamarin. Android.
 
 
-### <a name="problem-at-least-one-java-library-is-required"></a>Problema: è necessaria almeno una libreria Java
+### <a name="problem-at-least-one-java-library-is-required"></a>Problema: È necessaria almeno una libreria Java
 
 Viene visualizzato l'errore "è obbligatorio, almeno una libreria Java" anche se una. File JAR è stato aggiunto.
 
@@ -88,7 +88,7 @@ Viene visualizzato l'errore "è obbligatorio, almeno una libreria Java" anche se
 Verificare che l'azione di compilazione è impostata su `EmbeddedJar`. Poiché sono presenti più azioni di compilazione per. File con estensione JAR (ad esempio `InputJar`, `EmbeddedJar`, `ReferenceJar` e `EmbeddedReferenceJar`), il generatore di binding non può dedurre automaticamente quello da usare per impostazione predefinita. Per altre informazioni sulle azioni di compilazione, vedere [azioni di compilazione](~/android/platform/binding-java-library/index.md).
 
 
-### <a name="problem-binding-tools-cannot-load-the-jar-library"></a>Problema: Gli strumenti di associazione non è possibile caricare il. Libreria JAR
+### <a name="problem-binding-tools-cannot-load-the-jar-library"></a>Problema: Strumenti di associazione non è possibile caricare il. Libreria JAR
 
 Il generatore di libreria di binding non è possibile caricare il. Libreria JAR.
 
@@ -98,7 +98,7 @@ Alcuni. Impossibile caricare le librerie JAR che usano offuscamento codice (tram
 
 
 
-### <a name="problem-missing-c-types-in-generated-output"></a>Problema: Non è presente C# tipi di output generato.
+### <a name="problem-missing-c-types-in-generated-output"></a>Problema: Mancanti C# tipi di output generato.
 
 L'associazione **. dll** compilazioni ma mancati riscontri alcuni tipi di Java o generate C# origine non viene compilato a causa di un errore che indica che esistono tipi mancanti.
 
@@ -142,9 +142,9 @@ Xamarin. Android include una vasta gamma di campi di Java che vengono mappate al
 
 #### <a name="possible-causes"></a>Possibili cause:
 
-Il motivo più probabile di questo errore è che una libreria Java obbligatoria deve essere aggiunto al progetto di applicazione (**file con estensione csproj**). . File con estensione JAR non vengono risolti automaticamente. Un'associazione di libreria Java non viene sempre generata in base a un assembly utente che non esiste nel dispositivo di destinazione o un emulatore (ad esempio Google Maps **maps.jar**). Ciò non avviene per il supporto di progetto di libreria Android, come la libreria. Con estensione JAR sono incorporati nella dll della libreria. Ad esempio: [4288 Bug](https://bugzilla.xamarin.com/show_bug.cgi?id=4288)
+Il motivo più probabile di questo errore è che una libreria Java obbligatoria deve essere aggiunto al progetto di applicazione (**file con estensione csproj**). . File con estensione JAR non vengono risolti automaticamente. Un'associazione di libreria Java non viene sempre generata in base a un assembly utente che non esiste nel dispositivo di destinazione o un emulatore (ad esempio Google Maps **maps.jar**). Ciò non avviene per il supporto di progetto di libreria Android, come la libreria. Con estensione JAR sono incorporati nella dll della libreria. Ad esempio: [Bug 4288](https://bugzilla.xamarin.com/show_bug.cgi?id=4288)
 
-### <a name="problem-duplicate-custom-eventargs-types"></a>Problema: Duplica i tipi personalizzati EventArgs
+### <a name="problem-duplicate-custom-eventargs-types"></a>Problema: Tipi di EventArgs personalizzati duplicati
 
 Compilazione non riesce a causa di tipi di EventArgs personalizzati duplicati. Si verifica un errore simile al seguente:
 
@@ -222,7 +222,7 @@ Si tratta di un problema che si verifica con binding metodi Java con tipi restit
     </attr>
     ```
 
-### <a name="problem-name-collisions-on-inner-classes--properties"></a>Problema: Assegnare un nome conflitti per le classi interne / proprietà
+### <a name="problem-name-collisions-on-inner-classes--properties"></a>Problema: Conflitti nelle classi interne di nome / proprietà
 
 Visibilità in conflitto negli oggetti ereditati.
 
@@ -236,9 +236,9 @@ In Java, non è necessario che una classe derivata hanno la stessa visibilità d
 <attr path="/api/package[@name='namespace']/class[@name='ClassName']/method[@name='MethodName']" name="visibility">public</attr>
 ```
 
-### <a name="problem-a-so-library-required-by-the-binding-is-not-loading"></a>Problema: Un **SO** libreria richiesta per l'associazione è il caricamento non
+### <a name="problem-a-so-library-required-by-the-binding-is-not-loading"></a>Problema: Oggetto **SO** libreria richiesta per l'associazione è il caricamento non
 
-Alcuni progetti di binding possono anche dipendere da funzionalità in un **SO** libreria. È possibile che xamarin. Android non verrà automaticamente caricata la **SO** libreria. Quando viene eseguito il codice Java sottoposto a wrapping, xamarin. Android avrà esito negativo rendere il messaggio di errore e la chiamata JNI _java.lang.UnsatisfiedLinkError: metodo nativo non trovato:_ verranno visualizzati nella finestra di logcat out per l'applicazione.
+Alcuni progetti di binding possono anche dipendere da funzionalità in un **SO** libreria. È possibile che xamarin. Android non verrà automaticamente caricata la **SO** libreria. Quando viene eseguito il codice Java sottoposto a wrapping, xamarin. Android riuscirà a effettuare la chiamata JNI e il messaggio di errore _java.lang.UnsatisfiedLinkError: Metodo nativo non trovato:_ verranno visualizzati nella finestra di logcat out per l'applicazione.
 
 La soluzione per questo problema consiste nel caricare manualmente il **SO** libreria con una chiamata a `Java.Lang.JavaSystem.LoadLibrary`. Ad esempio presupponendo che un progetto xamarin. Android ha condiviso library **libpocketsphinx_jni.so** incluso nel progetto di associazione con un'azione di compilazione **EmbeddedNativeLibrary**, il seguente frammento di codice (eseguito prima di usare la libreria condivisa) verranno caricati i **SO** libreria:
 
@@ -253,7 +253,7 @@ In questo articolo sono elencati i problemi di risoluzione dei problemi comuni a
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Progetti di libreria](http://developer.android.com/tools/projects/index.html#LibraryProjects)
+- [Progetti di libreria](https://developer.android.com/tools/projects/index.html#LibraryProjects)
 - [Utilizzo di JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Abilitare l'Output di diagnostica](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output)
 - [Xamarin per sviluppatori Android](~/android/get-started/java-developers.md)

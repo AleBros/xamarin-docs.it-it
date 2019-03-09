@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 9b7e9354250881074fc6f0db5d97dc83e4d3fa77
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a1a9dd06fb3cd6899dd3a564072bb63e413edf22
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114665"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667556"
 ---
 # <a name="android-audio"></a>Audio Android
 
@@ -124,7 +124,7 @@ La registrazione dell'audio con il `MediaRecorder` sono necessari i passaggi seg
 
 2. Specificare quale dispositivo hardware da usare per acquisire l'input audio tramite il [SetAudioSource](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetAudioSource/p/Android.Media.AudioSource/) (metodo).
 
-3. Impostare l'output di file di formato audio usando la [SetOutputFormat](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetOutputFormat/p/Android.Media.OutputFormat/) (metodo). Per un elenco dei tipi audio supportati, vedere [Android formati multimediali supportati](http://developer.android.com/guide/appendix/media-formats.html).
+3. Impostare l'output di file di formato audio usando la [SetOutputFormat](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetOutputFormat/p/Android.Media.OutputFormat/) (metodo). Per un elenco dei tipi audio supportati, vedere [Android formati multimediali supportati](https://developer.android.com/guide/appendix/media-formats.html).
 
 4. Chiamare il [SetAudioEncoder](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetAudioEncoder/p/Android.Media.AudioEncoder/) metodo per impostare il tipo di codifica audio.
 
@@ -210,7 +210,7 @@ Lo stato attivo audio è un concetto simile e impedisce a più di un'applicazion
 
 Audio messa a fuoco può essere soddisfatta immediatamente, o inizialmente negato e concesse in un secondo momento. Ad esempio, se un'applicazione richieste audio messa a fuoco durante una chiamata telefonica, verranno rifiutate, ma lo stato attivo può essere concessa anche al termine della chiamata telefonica. In questo caso, un listener è registrato per poter rispondere di conseguenza se lo stato attivo audio non viene eseguito da subito. La richiesta dello stato attivo audio viene utilizzata per determinare se è sufficiente riprodurre o registrare l'audio.
 
-Per altre informazioni sullo stato attivo audio, vedere [la gestione dello stato di attivo Audio](http://developer.android.com/training/managing-audio/audio-focus.html).
+Per altre informazioni sullo stato attivo audio, vedere [la gestione dello stato di attivo Audio](https://developer.android.com/training/managing-audio/audio-focus.html).
 
 
 
@@ -428,7 +428,7 @@ Il sistema operativo Android fornisce un framework potente per la riproduzione, 
 
 - [Utilizzo con Audio (esempio)](https://developer.xamarin.com/samples/Example_WorkingWithAudio/)
 - [Media Player](https://developer.xamarin.com/api/type/Android.Media.MediaPlayer/)
-- [Registrazione supporti](https://developer.xamarin.com/api/type/Android.Media.MediaRecorder/)
-- [Gestione audio](https://developer.xamarin.com/api/type/Android.Media.AudioManager/)
+- [Media Recorder](https://developer.xamarin.com/api/type/Android.Media.MediaRecorder/)
+- [Audio Manager](https://developer.xamarin.com/api/type/Android.Media.AudioManager/)
 - [Traccia audio](https://developer.xamarin.com/api/type/Android.Media.AudioTrack/)
-- [Registrazione audio](https://developer.xamarin.com/api/type/Android.Media.AudioRecord/)
+- [Audio Recorder](https://developer.xamarin.com/api/type/Android.Media.AudioRecord/)

@@ -8,13 +8,8 @@ ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 95f259ce054b14a2301bb9549f809d5e4f407884
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109900"
 ---
+
 # <a name="2d-drawing-with-skiasharp"></a>Disegno con SkiaSharp 2D
 
 SkiaSharp fornisce un'API c# ed efficace per l'esecuzione di grafica 2D. È alimentato dalle [libreria Skia Google](http://skia.org), la stessa libreria che consente il funzionamento gli stack di grafici di Google Chrome, Firefox e di Android.
@@ -35,7 +30,7 @@ Informazioni su come usare i cross-platform grafica che eseguono il rendering in
 
 Questa pagina descrive le istruzioni di installazione di SkiaSharp in diverse piattaforme, tra cui iOS, Android, macOS e Windows.
 
-## <a name="api-documentationhttpsdocsmicrosoftcomdotnetapiskiasharp"></a>[Documentazione dell'API](https://docs.microsoft.com/dotnet/api/skiasharp)
+## <a name="api-documentationhttpsdocsmicrosoftcomdotnetapiskiasharp"></a>[Documentazione delle API](https://docs.microsoft.com/dotnet/api/skiasharp)
 
 È possibile esplorare le [documentazione dell'API](https://docs.microsoft.com/dotnet/api/skiasharp) per SkiaSharp.
 
@@ -43,4 +38,4 @@ Questa pagina descrive le istruzioni di installazione di SkiaSharp in diverse pi
 
 SkiaSharp è in corso che viene condiviso con la community. Anche se è stata associata parti importanti dell'API Skia, lavoro rimanente per essere eseguita. Si sta usando l'API C stabile presentato dal Skia e il nostro piano consiste nel continuare aggiunta come contributo nostro lavoro per le associazioni di C di Skia per fornire una copertura completa per le API.
 
-Per aiutarci a guidare i nostri sforzi di associazione, inviaci commenti o suggerimenti come problemi nel repository di GitHub [ http://github.com/mono/SkiaSharp ](http://github.com/mono/SkiaSharp).
+Per aiutarci a guidare i nostri sforzi di associazione, inviaci commenti o suggerimenti come problemi nel repository di GitHub [ https://github.com/mono/SkiaSharp ](https://github.com/mono/SkiaSharp).

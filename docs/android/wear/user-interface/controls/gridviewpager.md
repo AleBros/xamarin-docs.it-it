@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 1cb71fa2c73b9ab151555559b22def4be1cf5c73
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 81bb4e302f81b58eec91ea2a2aef985adbf72e2c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112767"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670922"
 ---
 # <a name="gridviewpager"></a>GridViewPager
 
@@ -19,7 +19,7 @@ Il [GridViewPager](https://developer.xamarin.com/samples/GridViewPager/) esempio
 
 ![Screenshot di esempio del GridViewPager su uno schermo quadrato](gridviewpager-images/gridviewpager.png)
 
-Aggiungere prima la [supporto di Xamarin Android Wear](http://www.nuget.org/packages/Xamarin.Android.Wear/) pacchetto NuGet al progetto.
+Aggiungere prima la [supporto di Xamarin Android Wear](https://www.nuget.org/packages/Xamarin.Android.Wear/) pacchetto NuGet al progetto.
 
 Il layout XML simile al seguente:
 
@@ -31,8 +31,8 @@ Il layout XML simile al seguente:
     android:keepScreenOn="true" />
 ```
 
-Creare un [`GridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
-(o una sottoclasse, ad esempio [`FragmentGridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
+Creare un [`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
+(o una sottoclasse, ad esempio [`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
 per fornire visualizzazioni da visualizzare come l'utente si sposta.
 
 Il [adapter di esempio](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) illustra come implementare i metodi richiesti, incluso gli override per `RowCount`, `GetColumnCount`, `GetBackground`, e `GetFragment`

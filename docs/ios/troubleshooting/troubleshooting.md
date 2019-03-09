@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 650ed00557a3dd819ab2920a7646f93199b98b9e
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 1a98cf854ffdd1d4904981f85fd8e33ad486743c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233952"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672749"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Suggerimenti di risoluzione dei problemi per xamarin. IOS 
 
@@ -396,7 +396,7 @@ Se si verifica un arresto anomalo del runtime (SIGSEGV) all'interno del simulato
 Questa situazione può verificarsi quando i nomi delle applicazioni includono un '.' (punto) nel nome.
 Ciò non è consentita come nome del file eseguibile in CFBundleExecutable - anche se possibile funziona in molti altri casi (ad esempio i dispositivi).
 
- * "Il valore non può includere qualsiasi estensione del nome." - [http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
+ * "Il valore non può includere qualsiasi estensione del nome." - [https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
 
 ## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>Errore: "Non è supportato il tipo di attributo personalizzato 0x43" quando si fa doppio clic su file con estensione xib
 

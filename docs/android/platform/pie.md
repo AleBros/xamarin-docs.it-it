@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 49e3a0189d0887343f2636d6931a00cc819800c0
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: fa41affc57714254a12623f79da3dc1396ecd009
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267638"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670141"
 ---
 # <a name="android-pie-features"></a>Funzionalità di Android a torta
 
@@ -34,7 +34,7 @@ Per utilizzare le funzionalità di Android a torta nelle App basate su Xamarin, 
 
 -   **Xamarin. Android** &ndash; xamarin. Android 9.0.0.17 o versioni successive deve essere installato con Visual Studio (xamarin. Android viene installato automaticamente come parte delle **sviluppo per dispositivi mobili con .NET** carico di lavoro).
 
--   **Java Developer Kit** &ndash; richiede lo sviluppo di Xamarin Android 9.0 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (o è possibile provare l'anteprima di distribuzione Microsoft del [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 viene installato automaticamente come parte del **sviluppo di applicazioni per dispositivi mobili con .NET** carico di lavoro.
+-   **Java Developer Kit** &ndash; richiede lo sviluppo di Xamarin Android 9.0 [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (o è possibile provare l'anteprima di distribuzione Microsoft del [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 viene installato automaticamente come parte del **sviluppo di applicazioni per dispositivi mobili con .NET** carico di lavoro.
 
 -   **Android SDK** &ndash; API di Android SDK 28 o versioni successiva deve essere installato tramite Android SDK Manager.
 

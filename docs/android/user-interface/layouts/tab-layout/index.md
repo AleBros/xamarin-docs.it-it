@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2017
-ms.openlocfilehash: 5d88ffb44d12ee142314c74ca8e749164cbfe3b9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105961"
 ---
+
 # <a name="tabbed-layouts"></a>Layout a schede
 
 
@@ -34,6 +29,6 @@ Le schede sono un modello di interfaccia utente comuni nelle applicazioni per di
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Material Design - schede](https://material.io/guidelines/components/tabs.html)- [ActionBar](http://developer.android.com/guide/topics/ui/actionbar.html)
+- [Material Design - schede](https://material.io/guidelines/components/tabs.html)- [ActionBar](https://developer.android.com/guide/topics/ui/actionbar.html)
 - [Pacchetto NuGet AppCompat v7 della libreria di supporto per Android](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
-- [libreria appcompat V7](http://developer.android.com/tools/support-library/features.html#v7-appcompat)
+- [libreria appcompat V7](https://developer.android.com/tools/support-library/features.html#v7-appcompat)

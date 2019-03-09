@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: d40c932c560b3827cccacd4f9bafa155dcf26056
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 68375dfc5b7baa4726739d40eb77c1fcb7500fb4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113326"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668881"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Uso di iCloud con xamarin. IOS
 
@@ -45,7 +45,7 @@ Le applicazioni devono essere configurate per usare iCloud in entrambi i [portal
 
 Per configurare correttamente un'applicazione per accedere a iCloud:
 
--   **Trovare il TeamID** -account di accesso a [developer.apple.com](http://developer.apple.com) e visitare il **Member Center > di un Account > Developer Account Summary** per ottenere l'ID Team (o l'ID individuale per i singoli sviluppatori ). Sarà una stringa di 10 caratteri ( **A93A5CM278** , ad esempio), ciò fa parte dell'identificatore del contenitore"".
+-   **Trovare il TeamID** -account di accesso a [developer.apple.com](https://developer.apple.com) e visitare il **Member Center > di un Account > Developer Account Summary** per ottenere l'ID Team (o l'ID individuale per i singoli sviluppatori ). Sarà una stringa di 10 caratteri ( **A93A5CM278** , ad esempio), ciò fa parte dell'identificatore del contenitore"".
 
 -   **Creare un nuovo ID App** : per creare un ID App, seguire i passaggi descritti nel [Provisioning per la sezione di tecnologie Store della Guida di Device Provisioning](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)e assicurarsi di controllare **iCloud** come un consentiti del servizio:
 
@@ -144,7 +144,7 @@ NSNotificationCenter.DefaultCenter.AddObserver (
 
 Il codice può quindi eseguire un'azione con l'elenco di chiavi modificate, ad esempio l'aggiornamento di una copia locale di esse o l'interfaccia utente con i nuovi valori.
 
-Modifica possibili motivi sono: ServerChange (0), InitialSyncChange (1) o QuotaViolationChange (2). È possibile il motivo di accesso ed eseguire l'elaborazione diversa se necessario (ad esempio, potrebbe essere necessario rimuovere alcuni tasti in seguito a un *QuotaViolationChange*).
+Modifica possibili motivi sono: ServerChange (0), InitialSyncChange (1), or QuotaViolationChange (2). È possibile il motivo di accesso ed eseguire l'elaborazione diversa se necessario (ad esempio, potrebbe essere necessario rimuovere alcuni tasti in seguito a un *QuotaViolationChange*).
 
 ## <a name="document-storage"></a>Archiviazione di documenti
 
@@ -417,7 +417,7 @@ Gli utenti riceveranno anche diversi tipi di avvisi quando si tenta di rimuovere
 ## <a name="icloud-backup"></a>Backup di iCloud
 
 Durante il backup in iCloud non è una funzionalità a cui si accede direttamente dagli sviluppatori, la modalità di progettazione dell'applicazione può influenzare l'esperienza utente.
-Apple offre [linee guida di archiviazione dei dati iOS](http://developer.apple.com/icloud/documentation/data-storage/) gli sviluppatori dovranno attenersi nelle proprie applicazioni iOS.
+Apple offre [linee guida di archiviazione dei dati iOS](https://developer.apple.com/icloud/documentation/data-storage/) gli sviluppatori dovranno attenersi nelle proprie applicazioni iOS.
 
 L'aspetto più importante è che l'app archivia i file di grandi dimensioni che non sono generati dall'utente (ad esempio, un'applicazione lettore magazine che archivia hundred-plus megabyte del contenuto per ogni problema). Apple si preferisce non archiviare questo tipo di dati in cui verrà essere sottoposti a backup in iCloud e riempire inutilmente la quota dell'utente iCloud.
 
@@ -437,6 +437,6 @@ Infine inclusa una breve descrizione sul modo in cui l'aggiunta di iCloud Backup
 
 - [Introduzione a iCloud (esempio)](https://developer.xamarin.com/samples/monotouch/IntroductionToiCloud)
 - [Codice di esempio seminario iCloud](https://github.com/xamarin/Seminars/tree/master/2012-03-22-iCloud)
-- [iCloud seminario diapositive](http://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
+- [iCloud seminario diapositive](https://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
 - [iCloud NSUbiquitousKeyValueStore](https://developer.apple.com/library/prerelease/ios/)
-- [Archiviazione iCloud](http://support.apple.com/kb/HT4847)
+- [Archiviazione iCloud](https://support.apple.com/kb/HT4847)

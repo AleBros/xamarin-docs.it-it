@@ -6,13 +6,7 @@ ms.assetid: 137C719D-6D97-4D5B-9877-F6F35BF85FF0
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 9/4/2018
-ms.openlocfilehash: f4abc3c87a4c38da8863347fa08f198dece791a8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111634"
+ms.date: 09/04/2018
 ---
 # <a name="notifications-in-ios-12"></a>Notifiche di iOS 12
 

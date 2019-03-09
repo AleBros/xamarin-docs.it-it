@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 7056f7beb623bee32c767a3f2827efa6eb2a6136
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 87015163eca9fdb2fb8cee35e74d5031314fd42e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118799"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670825"
 ---
 # <a name="working-with-property-lists-in-xamarinios"></a>Utilizzo degli elenchi di proprietà in xamarin. IOS
 
@@ -101,7 +101,7 @@ Per ulteriori informazioni sulla modalità in Background, vedere il Xamarin [ela
 
 Pannello Avanzate controlla i tipi di documento e schemi URL supportate dall'applicazione.
 
- [![](property-lists-images/image34.png "Pannello Avanzate")](property-lists-images/image34.png#lightbox)
+ [![](property-lists-images/image34.png "Advanced Panel")](property-lists-images/image34.png#lightbox)
 
  <a name="Document_Types" />
 
@@ -110,7 +110,7 @@ Pannello Avanzate controlla i tipi di documento e schemi URL supportate dall'app
 
 Per le applicazioni che supportano l'apertura di determinati tipi di file, iOS fornisce il `CFBundleDocumentTypes` chiave. Se si vuole che l'applicazione per supportare determinati tipi di file note, ad esempio PDF - aggiungiamo il valore PDF per la chiave. In questa sezione fornisce un modo pratico per immettere i dati che verrà archiviato nel `CFBundleDocumentTypes` chiavi nel `Info.plist` file.
 
-Vedere la documentazione sul [registrare il File di tipi di App supporta](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html) per informazioni dettagliate su come configurare questi valori.
+Vedere la documentazione sul [registrare il File di tipi di App supporta](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html) per informazioni dettagliate su come configurare questi valori.
 
 ## <a name="utis"></a>Uti
 
@@ -146,7 +146,7 @@ Visual Studio per Mac rileva anche il tipo di proprietà, come illustrato:
 
  [![](property-lists-images/image33.png "I tipi di proprietà disponibili")](property-lists-images/image33.png#lightbox)
 
-Revisione di Apple [le risorse correlate di App](http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) collegamenti per ulteriori informazioni sulla proprietà facoltative.
+Revisione di Apple [le risorse correlate di App](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) collegamenti per ulteriori informazioni sulla proprietà facoltative.
 
  <a name="Entitlements" />
 
@@ -158,7 +158,7 @@ Questo articolo illustrato utilizzando l'editor plist con interfaccia grafica e 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [IDE](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide)
-- [Le risorse correlate alle App](http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html)
-- [Registra il File di tipi supportata dall'App](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html)
+- [Le risorse correlate alle App](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html)
+- [Registra il File di tipi supportata dall'App](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html)
 - [Implementazione di schemi URL personalizzato](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html)
 - [Riferimento a un formato catalogo Asset](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format/index.html#//apple_ref/doc/uid/TP40015170-CH18-SW1)

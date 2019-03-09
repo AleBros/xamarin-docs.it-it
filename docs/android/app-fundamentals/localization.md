@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 634131025b322b64e89ece3b4c9d092e6b17a373
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.openlocfilehash: 1f3e6dcc81c75d12a1dbba8fefc62a85178c8c24
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579817"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670663"
 ---
 # <a name="android-localization"></a>Localizzazione di Android
 
@@ -32,7 +32,7 @@ Le impostazioni locali correnti è possibile eseguire query tramite il contesto 
 var lang = Resources.Configuration.Locale; // eg. "es_ES"
 ```
 
-Questo valore sarà un identificatore delle impostazioni locali che contiene un codice di lingua e un codice impostazioni locali, separati da un carattere di sottolineatura. Per riferimento, ecco una [elenco delle impostazioni locali di Java](http://www.oracle.com/technetwork/java/javase/locales-137662.html) e [impostazioni locali supportato da Android tramite StackOverflow](http://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android).
+Questo valore sarà un identificatore delle impostazioni locali che contiene un codice di lingua e un codice impostazioni locali, separati da un carattere di sottolineatura. Per riferimento, ecco una [elenco delle impostazioni locali di Java](https://www.oracle.com/technetwork/java/javase/locales-137662.html) e [impostazioni locali supportato da Android tramite StackOverflow](https://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android).
 
 Ecco alcuni esempi comuni:
 
@@ -110,7 +110,7 @@ Ogni stringa traducibile è un elemento XML con la risorsa con ID specificato co
 
 La directory spagnolo **valori-es** contiene un file con lo stesso nome (**Strings. XML**) che contiene le traduzioni:
 
-**i valori-es/Strings. Xml**
+**values-es/Strings.xml**
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -190,7 +190,7 @@ Valido `quantity` le opzioni sono:
 * many
 * altro
 
-Descritto più dettagliatamente la [documentazione Android](http://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Se una determinata lingua non richiede gestione 'speciale', quelli `quantity` stringhe verranno ignorate (in inglese, ad esempio, utilizza solo `one` e `other`; specificando un `zero` stringa non ha alcun effetto, non verrà utilizzato).
+Descritto più dettagliatamente la [documentazione Android](https://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Se una determinata lingua non richiede gestione 'speciale', quelli `quantity` stringhe verranno ignorate (in inglese, ad esempio, utilizza solo `one` e `other`; specificando un `zero` stringa non ha alcun effetto, non verrà utilizzato).
 
 ### <a name="images"></a>Immagini
 
@@ -209,7 +209,7 @@ In questo screenshot, quattro immagini vengono salvate nel **drawable** director
 
 Ha introdotto il supporto per Android 4.2 [lingue destra-sinistra (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) se si imposta l'impostazione dell'applicazione `android:supportsRtl="true"`. Il qualificatore delle risorse `"ldrtl"` possono essere inclusi in un nome di directory per contenere i layout personalizzati che sono progettati per la visualizzazione destra-sinistra.
 
-Per ulteriori informazioni sulla denominazione directory delle risorse e del fallback, vedere la documentazione di Android [offrire risorse alternative](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
+Per ulteriori informazioni sulla denominazione directory delle risorse e del fallback, vedere la documentazione di Android [offrire risorse alternative](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
 
 ### <a name="app-name"></a>Nome dell'App
@@ -252,7 +252,7 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 ### <a name="device-testing"></a>Test del dispositivo
 
 Per eseguire il test in un dispositivo, modificare la lingua nel **impostazioni** app.
-**Suggerimento:** prendere nota delle icone e del percorso delle voci di menu in modo che è possibile ripristinare la lingua per l'impostazione originale.
+**Suggerimento:** Prendere nota delle icone e del percorso delle voci di menu in modo che è possibile ripristinare la lingua per l'impostazione originale.
 
 
 ## <a name="summary"></a>Riepilogo
@@ -264,7 +264,7 @@ Questo articolo tratta i fondamenti della localizzazione di applicazioni Android
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Tasky (localizzato in codice) (esempio)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
-- [Android con le risorse di localizzazione](http://developer.android.com/guide/topics/resources/localization.html)
+- [Android con le risorse di localizzazione](https://developer.android.com/guide/topics/resources/localization.html)
 - [Panoramica sulla localizzazione multipiattaforma](~/cross-platform/app-fundamentals/localization.md)
 - [Localizzazione di xamarin. Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
-- [Localizzazione di iOS](~/ios/app-fundamentals/localization/index.md)
+- [Localizzazione in iOS](~/ios/app-fundamentals/localization/index.md)

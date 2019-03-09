@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 9ec27402aefd28ded4cf53e7e9fa52eedd2b86b6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63164d90419f3a49d9eb52a52d02e05fbee43dbf
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103011"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667620"
 ---
 # <a name="gridview"></a>GridView
 
@@ -22,7 +22,7 @@ In questa esercitazione si creerà una griglia di anteprime delle immagini. Quan
 
 Avviare un nuovo progetto denominato **HelloGridView**.
 
-Trovare alcuni foto da usare, oppure [scaricare queste immagini di esempio](http://developer.android.com/shareables/sample_images.zip). Aggiungere i file di immagine al progetto **risorse/Drawable** directory. Nel **delle proprietà** finestra, impostare l'azione di compilazione per ognuno di essi al **AndroidResource**.
+Trovare alcuni foto da usare, oppure [scaricare queste immagini di esempio](https://developer.android.com/shareables/sample_images.zip). Aggiungere i file di immagine al progetto **risorse/Drawable** directory. Nel **delle proprietà** finestra, impostare l'azione di compilazione per ognuno di essi al **AndroidResource**.
 
 Aprire il **Resources/Layout/Main.axml** file e inserire il codice seguente:
 
@@ -130,7 +130,7 @@ public class ImageAdapter : BaseAdapter
 ```
 
 In primo luogo, si implementa alcuni metodi necessari ereditati dalla [ `BaseAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/). Il costruttore e il [ `Count` ](https://developer.xamarin.com/api/property/Android.Widget.BaseAdapter.Count/) proprietà sono di chiara interpretazione. In genere, [`GetItem(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItem/)
-deve restituire l'oggetto effettivo in corrispondenza della posizione specificata nell'adapter, ma viene ignorata per questo esempio. Analogamente, [`GetItemId(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItemId/)
+deve restituire l'oggetto effettivo in corrispondenza della posizione specificata nell'adapter, ma viene ignorata per questo esempio. Likewise, [`GetItemId(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItemId/)
 dovrebbe restituire l'id di riga dell'elemento, ma non è necessaria in questo caso.
 
 Il primo metodo necessario consiste [ `GetView()` ](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetView/).

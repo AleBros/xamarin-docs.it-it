@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 858f1e5c0bd2af85b419bb9a1cffb7d484f3f7e4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ce9bf0293b846299cc7cd06773ce936f725715fa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113404"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669895"
 ---
 # <a name="java-bindings-metadata"></a>Metadati per le associazioni Java
 
@@ -77,7 +77,7 @@ Consente di passare ad discutere **Metadata. XML** in modo più dettagliato.
 ## <a name="metadataxml-transform-file"></a>File di trasformazione Metadata. Xml
 
 Come abbiamo già illustrato in precedenza, il file **Metadata. XML** viene utilizzato dal generatore di associazioni per influenzare la creazione dell'assembly dell'associazione.
-Usa il formato dei metadati [XPath](https://www.w3.org/TR/xpath/) sintassi ed è quasi identico al *GAPI metadati* descritto in [GAPI metadati](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) Guida. Questa implementazione è quasi un'implementazione completa di XPath 1.0 e pertanto supporta gli elementi in 1.0 standard. Questo file è un meccanismo potente basati su XPath per modificare, aggiungere, nascondere o spostare qualsiasi elemento o attributo nel file di API. Tutti gli elementi della regola nella specifica i metadati includono un attributo path per identificare il nodo a cui si desidera applicare la regola. Le regole vengono applicate nell'ordine seguente:
+Usa il formato dei metadati [XPath](https://www.w3.org/TR/xpath/) sintassi ed è quasi identico al *GAPI metadati* descritto in [GAPI metadati](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) Guida. Questa implementazione è quasi un'implementazione completa di XPath 1.0 e pertanto supporta gli elementi in 1.0 standard. Questo file è un meccanismo potente basati su XPath per modificare, aggiungere, nascondere o spostare qualsiasi elemento o attributo nel file di API. Tutti gli elementi della regola nella specifica i metadati includono un attributo path per identificare il nodo a cui si desidera applicare la regola. Le regole vengono applicate nell'ordine seguente:
 
 * **aggiunta di nodi** &ndash; aggiunge un nodo figlio al nodo specificato dall'attributo del percorso.
 * **Attr** &ndash; imposta il valore di un attributo dell'elemento specificato dall'attributo path.
@@ -223,7 +223,7 @@ L'esempio seguente illustra un'espressione XPath per il metodo di ridenominazion
 
 `managedType` Consente di modificare il tipo restituito di un metodo. In alcuni casi il generatore di associazioni in modo non corretto dedurrà il tipo restituito di un metodo di Java, che provocheranno un errore in fase di compilazione. Una possibile soluzione in questa situazione consiste nel modificare il tipo restituito del metodo.
 
-Ad esempio, il generatore di associazioni ritiene che il metodo di Java `de.neom.neoreadersdk.resolution.compareTo()` deve restituire un `int`, che comporta il messaggio di errore **errore CS0535: ' Germania. Neom.Neoreadersdk.Resolution' non implementa il membro di interfaccia 'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. Il frammento di codice seguente viene illustrato come modificare il tipo restituito dell'oggetto generato C# metodo da un `int` a un `Java.Lang.Object`: 
+Ad esempio, il generatore di associazioni ritiene che il metodo di Java `de.neom.neoreadersdk.resolution.compareTo()` deve restituire un `int`, che comporta il messaggio di errore **errore CS0535: ' GERMANIA. Neom.Neoreadersdk.Resolution' non implementa il membro di interfaccia 'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. Il frammento di codice seguente viene illustrato come modificare il tipo restituito dell'oggetto generato C# metodo da un `int` a un `Java.Lang.Object`: 
 
 ```xml
 <attr path="/api/package[@name='de.neom.neoreadersdk']/
@@ -255,7 +255,8 @@ Questo frammento di codice è riportato un esempio di come generare un "non offu
     name="obfuscated">false</attr>
 ```
 
-### <a name="propertyname"></a>propertyName
+### <a name="propertyname"></a>
+  propertyName
 
 Questo attributo può essere utilizzato per modificare il nome di una proprietà gestita.
 
@@ -347,4 +348,4 @@ In questo articolo viene illustrato come xamarin. Android Usa i metadati per tra
 
 - [Utilizzo di JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Associazione di una libreria Java](~/android/platform/binding-java-library/index.md)
-- [Metadati GAPI](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [Metadati GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
