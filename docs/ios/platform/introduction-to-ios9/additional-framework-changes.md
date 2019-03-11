@@ -6,12 +6,13 @@ ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: da7064997b8a10d4a4604861a405e13dd23a08cf
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.date: 03/19/2017
+ms.openlocfilehash: f7106c9b23fa71b32043ef8190691d798c36370d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233913"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672573"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Modifiche aggiuntive iOS 9 Framework
 
@@ -173,7 +174,7 @@ Vedere la [Introduzione a PassKit](~/ios/platform/passkit.md) per altre informaz
 
 Apple includeva le seguenti modifiche per il [Safari servizi](https://developer.xamarin.com/api/namespace/SafariServices/) framework in iOS 9:
 
-- È ora possibile usare le nuove [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) classe per visualizzare il contenuto web in un'app xamarin. IOS. Offre la possibilità di condividere i cookie e dati del sito Web con l'app Safari e include diverse funzionalità di Safari (ad esempio lettore e il riempimento automatico). [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) funzionalità di un **Done** pulsante che restituirà gli utenti all'App quando hanno terminato la visualizzazione del contenuto web.
+- È ora possibile usare le nuove [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) classe per visualizzare il contenuto web in un'app xamarin. IOS. Offre la possibilità di condividere i cookie e dati del sito Web con l'app Safari e include diverse funzionalità di Safari (ad esempio lettore e il riempimento automatico). [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) funzionalità di un **pulsante** che restituirà gli utenti all'App quando hanno terminato la visualizzazione del contenuto web.
 
 Poiché il [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) classe è concepita per la visualizzazione di una singola pagina del contenuto web, è consigliabile utilizzarlo per sostituire ciascun [WKWebKit](xref:WebKit.WKWebView) o [UIWebView](xref:UIKit.UIWebView)i controlli all'interno delle App xamarin. IOS esistente.
 
@@ -195,9 +196,9 @@ Apple ha incluso molti miglioramenti a diversi elementi del [UIKit](xref:UIKit) 
 
 ### <a name="3d-touch-events"></a>Eventi di tocco 3D
 
-Novità di iOS 9 e iPhone 6s e iPhone 6s Plus, 3D Touch aggiunge i movimenti di pressione sensibili per le app iOS. Di conseguenza, se l'esecuzione dell'app in iOS 9 (o versione successiva) e il dispositivo iOS è in grado di supporto 3D Touch, le modifiche in un utilizzo elevato causa il `TouchesMoved` generazione dell'evento. 
+Novità di iOS 9 e iPhone 6s e iPhone 6s Plus, 3D Touch aggiunge i movimenti di pressione sensibili per le app iOS. Di conseguenza, se l'esecuzione dell'app in iOS 9 (o versione successiva) e il dispositivo iOS è in grado di supporto 3D Touch, le modifiche in un utilizzo elevato causa il `TouchesMoved` generazione dell'evento.
 
-Grazie a questa modifica nel comportamento, le app iOS devono essere preparate per il `TouchesMoved` evento da richiamare più spesso, anche se X / Y coordinate non sono stati modificati. 
+Grazie a questa modifica nel comportamento, le app iOS devono essere preparate per il `TouchesMoved` evento da richiamare più spesso, anche se X / Y coordinate non sono stati modificati.
 
 Per altre informazioni, vedere la [Introduzione a 3D Touch](~/ios/platform/3d-touch.md) Guida.
 

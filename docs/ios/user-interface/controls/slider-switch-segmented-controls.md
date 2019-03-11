@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: f3315563725da7c54febd852298c60003eb056a4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2ed14752cc5906b68d277b4f492875f7e281b053
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104895"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671455"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>I dispositivi di scorrimento, commutatori e controlli segmentati in xamarin. IOS
 
@@ -22,7 +22,7 @@ ms.locfileid: "50104895"
 
 Controllo dispositivo di scorrimento consente la semplice selezione di un valore numerico in un intervallo. Valore predefinito è il controllo su un valore compreso tra 0 e 1, ma questi limiti possono essere personalizzati.
 
- [![](slider-switch-segmented-controls-images/image25a.png "Dispositivo di scorrimento")](slider-switch-segmented-controls-images/image25a.png#lightbox)
+ [![](slider-switch-segmented-controls-images/image25a.png "Slider")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
 Lo screenshot seguente mostra le proprietà che possono essere modificate nella finestra di progettazione:
 
@@ -50,7 +50,7 @@ Il dispositivo di scorrimento personalizzato è simile alla seguente:
  [![](slider-switch-segmented-controls-images/image27a.png "Dispositivo di scorrimento personalizzato")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
-> Attualmente non è disponibile un' [bug](http://stackoverflow.com/a/19496179) causando il `ThumbTint` per non eseguire il rendering in fase di esecuzione come previsto. È possibile aggiungere la seguente riga di codice **prima di** il codice precedente come soluzione alternativa. [[Origine](http://stackoverflow.com/a/21396794)]:
+> Attualmente non è disponibile un' [bug](https://stackoverflow.com/a/19496179) causando il `ThumbTint` per non eseguire il rendering in fase di esecuzione come previsto. È possibile aggiungere la seguente riga di codice **prima di** il codice precedente come soluzione alternativa. [Origine](https://stackoverflow.com/a/21396794)]:
 >
 > `slider1.SetThumbImage(UIImage.FromBundle("thumb.png"),UIControlState.Normal);`
 > 
@@ -62,7 +62,7 @@ Il dispositivo di scorrimento personalizzato è simile alla seguente:
 
 iOS Usa il `UISwitch` come input un valore booleano che può essere rappresentato da un pulsante di opzione in altre piattaforme. L'utente può modificare il controllo spostando le *thumb* tra il **On/Off** posizioni.
 
- [![](slider-switch-segmented-controls-images/image28a.png "Commutatore")](slider-switch-segmented-controls-images/image28a.png#lightbox)
+ [![](slider-switch-segmented-controls-images/image28a.png "Switch")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 L'aspetto del commutatore può essere personalizzato nel **riquadro delle proprietà** della finestra di progettazione, quale sarà consentono di controllare lo stato predefinito, **On/Off tint** dei colori e un **on/off immagine**. Come illustrato nell'immagine seguente:
 

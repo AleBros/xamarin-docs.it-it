@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: vyedin
 ms.author: vyedin
 ms.date: 07/22/2018
-ms.openlocfilehash: aad88ad883dea1e0430a047a71a2c191195efffe
-ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
+ms.openlocfilehash: a24edbc10d529878092b474df7f186d14049d5e0
+ms.sourcegitcommit: f8e22a3b0642179bf44a312e9a2fac0fbad8683c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52459902"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57239113"
 ---
 # <a name="microsofts-mobile-openjdk-distribution"></a>Distribuzione di Microsoft Mobile OpenJDK
 
@@ -36,9 +36,9 @@ Se si vuole passare prima all'esperienza migliorata, sono disponibili build dell
 
 ## <a name="download"></a>Download
 
-La distribuzione di OpenJDK per dispositivi mobili è installata automaticamente se si selezionano i pacchetti di Android SDK nel programma di installazione di Visual Studio in Windows. Verrà inclusa nell'aggiornamento alla versione 15.9 per gli utenti con Android SDK selezionato.
+La distribuzione di OpenJDK per dispositivi mobili è installata automaticamente se si selezionano i pacchetti di Android SDK nel programma di installazione di Visual Studio in Windows.
 
-In Mac OpenJDK per dispositivi mobili verrà installato automaticamente come parte del carico di lavoro Android per le nuove installazioni. Agli utenti esistenti di Visual Studio per Mac verrà richiesta l'installazione come parte dell'aggiornamento alla versione 7.7. L'IDE richiederà di passare al nuovo JDK che verrà usato al successivo riavvio.
+In Mac OpenJDK per dispositivi mobili verrà installato automaticamente come parte del carico di lavoro Android per le nuove installazioni. Agli utenti esistenti di Visual Studio per Mac verrà richiesta l'installazione come parte dell'aggiornamento. L'IDE richiederà di passare al nuovo JDK che verrà usato al successivo riavvio.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
@@ -46,34 +46,24 @@ Se si verificano problemi di installazione in Mac o Windows, è possibile esegui
 
 Controllare se OpenJDK è installato nel computer nel percorso corretto:
 
-- **Mac** &ndash; **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.9**
-- **Windows** &ndash; **C:\\Programmi\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.9**
-
-Se il percorso è vuoto, è possibile scaricare uno dei pacchetti seguenti:
-
-- **Mac** &ndash; https://dl.xamarin.com/OpenJDK/mac/microsoft-dist-openjdk-1.8.0.9.zip
-- **Windows x86** &ndash; https://dl.xamarin.com/OpenJDK/win32/microsoft-dist-openjdk-1.8.0.9.zip
-- **Windows x64** &ndash; https://dl.xamarin.com/OpenJDK/win64/microsoft-dist-openjdk-1.8.0.9.zip
+- **Mac** &ndash; **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.x**
+- **Windows** &ndash; **C:\\Programmi\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.x**
 
 Puntare l'IDE al nuovo JDK:
 
-- **Mac** &ndash; Fare clic su **Strumenti > SDK Manager > Percorsi** e impostare **Percorso di Java SDK (JDK)** sul percorso completo dell'installazione di OpenJDK. Nell'esempio seguente questo percorso è impostato su **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.9**.
+- **Mac** &ndash; Fare clic su **Strumenti > SDK Manager > Percorsi** e impostare **Percorso di Java SDK (JDK)** sul percorso completo dell'installazione di OpenJDK. Nell'esempio seguente questo percorso è impostato su **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.9**, ma la versione in uso potrebbe essere più recente.
 
 ![Impostazione del percorso di JDK per la distribuzione di Microsoft Mobile OpenJDK in Mac](openjdk-images/vsm.png)
 
-- **Windows** &ndash; fare clic su **Strumenti > Opzioni > Xamarin > Impostazioni Android** e impostare **Percorso di Java Development Kit** sul percorso completo dell'installazione di OpenJDK. Nell'esempio seguente questo percorso è impostato su **C:\\Programmi\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.9**:
+- **Windows** &ndash; fare clic su **Strumenti > Opzioni > Xamarin > Impostazioni Android** e impostare **Percorso di Java Development Kit** sul percorso completo dell'installazione di OpenJDK. Nell'esempio seguente questo percorso è impostato su **C:\\Programmi\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.9**, ma la versione in uso potrebbe essere più recente:
 
 ![Impostazione del percorso di JDK per la distribuzione di Microsoft Mobile OpenJDK in Windows](openjdk-images/vs.png)
 
 ## <a name="known-issues"></a>Problemi noti
 
-### <a name="package-openjdkv1regkeyversion1809chipx64-failed-to-install"></a>Non è stato possibile installare il pacchetto 'OpenJDKV1.RegKey,version=1.8.0.9,chip=x64'
+### <a name="package-openjdkv1regkeyversion18025chipx64-failed-to-install"></a>Non è stato possibile installare il pacchetto 'OpenJDKV1.RegKey,version=1.8.0.25,chip=x64'
 
 Questo problema potrebbe verificarsi in alcuni ambienti aziendali. OpenJDK è già presente nel computer. Seguire la [procedura di risoluzione dei problemi precedente](#troubleshooting) per indirizzare l'IDE al percorso corretto. È possibile seguire lo stato dei problemi [qui](https://developercommunity.visualstudio.com/content/problem/382549/packageidopenjdkv1regkeypackageactioninstallreturn.html).
-
-### <a name="unknown-update-type-zip-when-upgrading-visual-studio-for-mac-to-77"></a>"tipo di aggiornamento sconosciuto: zip" durante l'aggiornamento di Visual Studio per Mac alla versione 7.7
-
-Questo problema può verificarsi se si tenta di aggiornare una versione precedente di Visual Studio per Mac alla versione 7.7. Per risolvere questo problema, deselezionare OpenJDK nello strumento di aggiornamento, installare la parte rimanente dell'aggiornamento e cercare nuovamente gli aggiornamenti per ottenere il pacchetto OpenJDK. Se si verificano ancora problemi, è possibile seguire la [procedura di risoluzione dei problemi precedente](#troubleshooting) per installare OpenJDK manualmente. Se si verifica questo problema, segnalare un bug allegando i log.
 
 ## <a name="summary"></a>Riepilogo
 

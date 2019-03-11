@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 0e8b727fb520b6901bf397c9cfb67947897cbc8b
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 1a8611e5dd0be77eeef065d546f6a0642f384b00
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056959"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557282"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modalità di binding di Xamarin.Forms
 
@@ -101,10 +101,7 @@ La logica di base è che un binding per la proprietà `SelectedItem` dovrebbe da
 
 ### <a name="one-time-bindings"></a>Binding OneTime
 
-Diverse proprietà hanno come modalità di binding predefinita `OneTime`. Questi sono:
-
-- Proprietà `IsTextPredictionEnabled` di `Entry`
-- Proprietà `Text`, `BackgroundColor` e `Style` di `Span`.
+Diverse proprietà hanno come modalità di binding predefinita `OneTime`, inclusa la proprietà `IsTextPredictionEnabled` di `Entry`.
 
 Le proprietà di destinazione con modalità di binding `OneTime` vengono aggiornate solo quando il contesto di binding cambia. Per i binding in queste proprietà di destinazione, l'operazione semplifica l'infrastruttura di binding, perché non è necessario monitorare le modifiche nelle proprietà di origine.
 

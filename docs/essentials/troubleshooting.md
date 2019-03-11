@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: risoluzione dei problemi'
+title: 'Xamarin.Essentials: Risoluzione dei problemi'
 description: Questo documento descrive come risolvere i problemi riscontrati durante lo sviluppo con la libreria Xamarin.Essentials.
 ms.assetid: 2E474FAF-F841-4E3C-B815-F7ABD8EE3361
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 3440b572514c02c8c2240dc99b09aecfde06fcb9
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: d13589680161de4c9b5d77eef6d5f823cc884136
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898746"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671429"
 ---
-# <a name="xamarinessentials-troubleshooting"></a>Xamarin.Essentials: risoluzione dei problemi
+# <a name="xamarinessentials-troubleshooting"></a>Xamarin.Essentials: Risoluzione dei problemi
 
 ## <a name="error-version-conflict-detected-for-xamarinandroidsupportcompat"></a>Errore: Conflitto di versioni rilevato per Xamarin.Android.Support.Compat
 
@@ -30,4 +30,4 @@ A tale scopo, aggiungere manualmente il NuGet che rappresenta l'origine del conf
 
 Fare riferimento al [post di questo blog](https://redth.codes/how-to-fix-the-dreaded-version-conflict-nuget-error-in-your-xamarin-android-projects/) per altre informazioni e un video sulle procedure per risolvere il problema.
 
-Se si verificano problemi o si trova un bug segnalarlo nel [repository Xamarin.Essentials GitHub](http://github.com/xamarin/Essentials).
+Se si verificano problemi o si trova un bug segnalarlo nel [repository Xamarin.Essentials GitHub](https://github.com/xamarin/Essentials).

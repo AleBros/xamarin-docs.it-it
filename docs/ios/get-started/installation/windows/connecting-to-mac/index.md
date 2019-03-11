@@ -1,19 +1,14 @@
 ---
 title: Associa a Mac per lo sviluppo di Xamarin.iOS
-description: Questa guida descrive come usare Associa a Mac per connettere Visual Studio 2017 a un host di compilazione Mac. Illustra come abilitare l'accesso remoto nel Mac, connettersi al Mac da Visual Studio 2017, aggiungere manualmente un host di compilazione Mac al computer Windows e molto altro.
+description: 'Questa guida descrive come usare Associa a Mac per connettere Visual Studio 2017 a un host di compilazione Mac. Illustra come abilitare l''accesso remoto nel Mac, connettersi al Mac da Visual Studio 2017, aggiungere manualmente un host di compilazione Mac al computer Windows e molto altro.'
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
-ms.openlocfilehash: 8e87a284e684dff14a2ea0fcfbf34158ed8adefa
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899135"
 ---
+
 # <a name="pair-to-mac-for-xamarinios-development"></a>Associa a Mac per lo sviluppo di Xamarin.iOS
 
 _Questa guida descrive come usare Associa a Mac per connettere Visual Studio 2017 a un host di compilazione Mac._
@@ -42,7 +37,7 @@ Associa a Mac consente il flusso di lavoro di sviluppo seguente:
 > 
 > Prima di seguire le istruzioni riportate in questa guida, completare i passaggi seguenti:
 > 
-> - In un computer Windows [installare Visual Studio 2017](~/cross-platform/get-started/installation/windows.md)
+> - In un computer Windows [installare Visual Studio 2017](~/get-started/installation/windows.md)
 > - In un Mac [installare Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) e [Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 >    - _È necessario aprire manualmente Xcode dopo l'installazione_ per poter aggiungere componenti aggiuntivi.
 >
@@ -160,7 +155,7 @@ Se nella finestra di dialogo **Associa a Mac** non viene visualizzato un partico
 
 ## <a name="automatic-mac-provisioning"></a>Provisioning automatico del Mac
 
-A partire da [Visual Studio 2017 versione 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Associa a Mac esegue automaticamente il provisioning di un Mac con il software necessario per la compilazione di applicazioni Xamarin.iOS: Mono, Xamarin.iOS (il framework del software, non l'IDE di Visual Studio per Mac) e diversi strumenti relativi a Xcode (ma non Xcode stesso).
+A partire da [Visual Studio 2017 versione 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Associa a Mac esegue automaticamente il provisioning in un computer Mac del software necessario per la compilazione di applicazioni Xamarin.iOS: Mono, Xamarin.iOS (il framework del software, non l'IDE di Visual Studio per Mac) e i vari strumenti relativi a Xcode (ma non l'ambiente Xcode).
 
 > [!IMPORTANT]
 > - Associa a Mac non può installare Xcode; è necessario installarlo manualmente nell'host di compilazione Mac perché è richiesto per lo sviluppo con Xamarin.iOS.
@@ -234,7 +229,7 @@ I parametri passati a `msbuild` nell'esempio precedente sono:
 - `ServerPassword`: password da usare durante l'accesso all'host di compilazione Mac.
 
 > [!NOTE]
-> Visual Studio 2017 archivia `msbuild` nella directory seguente: **C:\Programmi (x86)\Microsoft Visual Studio\2017\\&lt;Versione&gt;\MSBuild\15.0\Bin**
+> Visual Studio 2017 archivia `msbuild` nella directory seguente: **C:\Programmi (x86)\Microsoft Visual Studio\2017\\&lt;Version&gt;\MSBuild\15.0\Bin**
 
 La prima volta che Associa a Mac accede a uno specifico host di compilazione Mac da Visual Studio 2017 o dalla riga di comando, imposta le chiavi SSH. Con queste chiavi, gli accessi futuri non richiederanno nome utente o password. Le chiavi appena create vengono archiviate in **%LOCALAPPDATA%\Xamarin\MonoTouch**.
 
