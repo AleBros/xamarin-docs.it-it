@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 6f12670dd463471ba1e337802453c775adbe16a7
-ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
+ms.openlocfilehash: 31992c7d9219289847ebc3e9c8af755d54dc18ab
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56666948"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672716"
 ---
 # <a name="localization"></a>Localizzazione
 
@@ -22,7 +22,7 @@ _Le app Xamarin.Forms possono essere localizzate mediante i file di risorse di .
 
 ## <a name="overview"></a>Panoramica
 
-Il meccanismo incorporato per la localizzazione delle applicazioni .NET usa i [file con estensione resx](http://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx) e le classi negli spazi dei nomi `System.Resources` e `System.Globalization`. I file con estensione resx che contengono le stringhe tradotte sono incorporati nell'assembly Xamarin.Forms, insieme a una classe generata dal compilatore che fornisce l'accesso fortemente tipizzato alle traduzioni. Il testo tradotto può quindi essere recuperato nel codice.
+Il meccanismo incorporato per la localizzazione delle applicazioni .NET usa i [file con estensione resx](https://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx) e le classi negli spazi dei nomi `System.Resources` e `System.Globalization`. I file con estensione resx che contengono le stringhe tradotte sono incorporati nell'assembly Xamarin.Forms, insieme a una classe generata dal compilatore che fornisce l'accesso fortemente tipizzato alle traduzioni. Il testo tradotto può quindi essere recuperato nel codice.
 
 ### <a name="sample-code"></a>Codice di esempio
 
@@ -761,7 +761,7 @@ In questo screenshot viene visualizzato l'esempio Android di esempio con alcune 
 
 Si noti che Android non usa i codici zh-Hans e zh-Hant per il cinese semplificato e il cinese tradizionale. Supporta solo i codici paese zh-CN e zh-TW.
 
-Per supportare immagini con una risoluzione diversa per schermi ad alta densità, creare cartelle di lingue aggiuntive con il suffisso `-*dpi`, ad esempio **drawable-es-mdpi**, **drawable-es-xdpi**, **drawable-es-xxdpi** e così via. Per altre informazioni, vedere [Providing Alternative Android Resources](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources) (Specificare risorse Android alternative).
+Per supportare immagini con una risoluzione diversa per schermi ad alta densità, creare cartelle di lingue aggiuntive con il suffisso `-*dpi`, ad esempio **drawable-es-mdpi**, **drawable-es-xdpi**, **drawable-es-xxdpi** e così via. Per altre informazioni, vedere [Providing Alternative Android Resources](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources) (Specificare risorse Android alternative).
 
 #### <a name="app-name"></a>Nome app
 
@@ -811,5 +811,5 @@ Le immagini vengono generalmente gestite in modo specifico per la piattaforma pe
 - [Localizzazione in iOS](~/ios/app-fundamentals/localization/index.md)
 - [Localizzazione in Android](~/android/app-fundamentals/localization.md)
 - [Localizzazione nella piattaforma UWP](/windows/uwp/design/globalizing/globalizing-portal/)
-- [Uso della classe CultureInfo](http://msdn.microsoft.com/library/87k6sx8t%28v=vs.90%29.aspx)
-- [Individuazione e uso di risorse per impostazioni cultura specifiche](http://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)
+- [Uso della classe CultureInfo](https://msdn.microsoft.com/library/87k6sx8t%28v=vs.90%29.aspx)
+- [Individuazione e uso di risorse per impostazioni cultura specifiche](https://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)

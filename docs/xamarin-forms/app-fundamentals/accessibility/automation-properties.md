@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 284e10af41429d320ce08b8d45ccd5bbcec851d1
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: 142c22cd239d6b66e5139346b45994ef2f20bdc8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831989"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672560"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Proprietà di automazione in Xamarin.Forms
 
@@ -36,7 +36,7 @@ In ogni piattaforma è presente un'utilità per la lettura dello schermo diversa
 
 - iOS ha VoiceOver. Per altre informazioni, vedere [Test Accessibility on Your Device with VoiceOver](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html) (Testare l'accessibilità sul dispositivo con VoiceOver) su developer.apple.com.
 - Android ha TalkBack. Per altre informazioni, vedere [Test Your App's Accessibility](https://developer.android.com/training/accessibility/testing.html#talkback) (Testare l'accessibilità dell'app) su developer.android.com.
-- Windows ha Assistente vocale. Per altre informazioni, vedere [Verify main app scenarios by using Narrator](/windows/uwp/accessibility/accessibility-testing#verify-main-app-scenarios-by-using-narrator/) (Verificare gli scenari app principali usando Assistente vocale).
+- Windows ha Assistente vocale. Per altre informazioni, vedere [Verify main app scenarios by using Narrator](/windows/uwp/accessibility/accessibility-testing#verify-main-app-scenarios-by-using-narrator) (Verificare gli scenari app principali usando Assistente vocale).
 
 Tuttavia, il comportamento esatto di un'utilità per la lettura dello schermo dipende dal software e dalla relativa configurazione scelta dall'utente. La maggior parte delle utilità per la lettura dello schermo, ad esempio, leggono il testo associato a un controllo quando questo riceve lo stato attivo, consentendo agli utenti di orientarsi mentre si spostano tra i controlli della pagina. Alcune utilità per la lettura dello schermo leggono anche l'intera interfaccia utente dell'applicazione quando viene visualizzata una pagina, così che l'utente conosca tutto il contenuto informativo della pagina prima di iniziare a spostarsi al suo interno.
 

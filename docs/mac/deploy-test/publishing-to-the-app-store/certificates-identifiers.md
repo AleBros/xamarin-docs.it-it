@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 2f60c15ba4b57ed61405b7081ed1cc3cee99c372
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5ba09afc477ddaadc07aa415376860eea3c8c28d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115549"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671468"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Certificati e identificatori in Xamarin.Mac
 
@@ -20,7 +20,7 @@ _Questa guida descrive come creare i certificati e gli identificatori necessari 
 
 ## <a name="certificates-and-identifiers"></a>Certificati e identificatori
 
-Visitare [Apple Developer Member Center](http://developer.apple.com) per configurare il Mac per lo sviluppo. Il menu principale è riportato di seguito:
+Visitare [Apple Developer Member Center](https://developer.apple.com) per configurare il Mac per lo sviluppo. Il menu principale è riportato di seguito:
 
 [![Apple Developer Member Center](certificates-identifiers-images/devcenter01.png "Apple Developer Member Center")](certificates-identifiers-images/devcenter01-large.png#lightbox)
 

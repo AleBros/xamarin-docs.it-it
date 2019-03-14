@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: bb9be2140c69578de85128cf7c3a013ad12aa511
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: d5d4274adad64e8555659645533a8e58b845bfa7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617566"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667906"
 ---
 # <a name="building-abi-specific-apks"></a>Compilazione di APK specifici di ABI
 
@@ -29,7 +29,7 @@ In alcune situazioni può risultare utile per un'applicazione avere più APK. Og
 -  **Supportare architetture CPU diverse**: se l'applicazione ha librerie condivise per CPU specifiche, è possibile distribuire solo le librerie condivise una determinata CPU.
 
 
-Più APK possono complicare la distribuzione, ma questo problema viene risolto da Google Play. Google Play verificherà che a un dispositivo venga distribuito l'APK corretto in base al codice della versione dell'applicazione e ad altri metadati contenuti in **AndroidManifest.XML**. Per informazioni dettagliate specifiche e per conoscere le restrizioni al supporto di più APK per un'applicazione in Google Play, vedere la [documentazione di Google sul supporto di più APK](http://developer.android.com/google/play/publishing/multiple-apks.html).
+Più APK possono complicare la distribuzione, ma questo problema viene risolto da Google Play. Google Play verificherà che a un dispositivo venga distribuito l'APK corretto in base al codice della versione dell'applicazione e ad altri metadati contenuti in **AndroidManifest.XML**. Per informazioni dettagliate specifiche e per conoscere le restrizioni al supporto di più APK per un'applicazione in Google Play, vedere la [documentazione di Google sul supporto di più APK](https://developer.android.com/google/play/publishing/multiple-apks.html).
 
 Questa guida illustra come creare lo script di compilazione di più APK per un'applicazione Xamarin.Android e come fare in modo che ogni APK specifichi come destinazione un determinato ABI. Verranno illustrati gli argomenti seguenti:
 
@@ -45,7 +45,7 @@ Alla fine di questa guida è disponibile una procedura dettagliata che illustra 
 
 ### <a name="creating-the-version-code-for-the-apk"></a>Creazione del codice versione per l'APK
 
-Google consiglia un particolare algoritmo che usa un codice versione a sette cifre. Vedere la sezione *Using a version code scheme* (Uso di uno schema di codice versione) nel documento [Multiple APK support](http://developer.android.com/google/play/publishing/multiple-apks.html) (Supporto di più APK).
+Google consiglia un particolare algoritmo che usa un codice versione a sette cifre. Vedere la sezione *Using a version code scheme* (Uso di uno schema di codice versione) nel documento [Multiple APK support](https://developer.android.com/google/play/publishing/multiple-apks.html) (Supporto di più APK).
 Espandendo a otto cifre questo schema del codice versione, è possibile includere nel codice versione alcune informazioni sull'ABI che garantiranno che Google Play distribuisca il file APK corretto in un dispositivo. L'elenco seguente illustra questo formato del codice versione a otto cifre (indicizzato da sinistra a destra):
 
 -   **Indice 0** (in rosso nel diagramma sotto): intero per l'ABI:
@@ -187,4 +187,4 @@ Questa guida ha fornito alcuni suggerimenti su come creare APK Android per un AB
 
 - [OneABIPerAPK (sample)](https://developer.xamarin.com/samples/OneABIPerAPK/) (OneABIPerAPK - Esempio)
 - [Publishing an Application](~/android/deploy-test/publishing/index.md) (Pubblicazione di un'applicazione)
-- [Multiple APK Support for Google Play](http://developer.android.com/google/play/publishing/multiple-apks.html) (Supporto di più APK per Google Play)
+- [Multiple APK Support for Google Play](https://developer.android.com/google/play/publishing/multiple-apks.html) (Supporto di più APK per Google Play)

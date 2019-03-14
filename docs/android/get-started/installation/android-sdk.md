@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: 6023bb4ebcc9d4adcd3408ca09bf9118d14351d4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d0eb5d1c2c45ce347a7ddf9ed0e72bddc57e4188
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120814"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668790"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configurazione di Android SDK per Xamarin.Android
 
@@ -42,9 +42,9 @@ Xamarin Android SDK Manager non è compatibile con Visual Studio 2015. Gli utent
 
 In Xamarin Android SDK Manager è anche necessario Java Development Kit, che viene installato automaticamente con Xamarin.Android. Sono disponibili numerose alternative di JDK:
 
--   Per impostazione predefinita Xamarin.Android usa [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), versione necessaria per sviluppare il livello API 24 o un livello superiore. JDK 8 supporta anche i livelli API precedenti al livello 24.
+-   Per impostazione predefinita Xamarin.Android usa [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), versione necessaria per sviluppare il livello API 24 o un livello superiore. JDK 8 supporta anche i livelli API precedenti al livello 24.
 
--   È possibile continuare a usare [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) per attività di sviluppo specifiche per il livello API 23 o un livello precedente.
+-   È possibile continuare a usare [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) per attività di sviluppo specifiche per il livello API 23 o un livello precedente.
 
 -   Se si usa Visual Studio 15.8 Preview 5 o versioni successive, è possibile provare a usare la [distribuzione Microsoft di Mobile OpenJDK](openjdk.md) (attualmente in anteprima) invece di JDK 8.
 
@@ -139,9 +139,9 @@ Per usare Xamarin Android SDK Manager sono necessari i componenti seguenti:
 
 In Xamarin Android SDK Manager è anche necessario Java Development Kit, che viene installato automaticamente con Xamarin.Android. Sono disponibili numerose alternative di JDK:
 
--   Per impostazione predefinita Xamarin.Android usa [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), versione necessaria per sviluppare il livello API 24 o un livello superiore. JDK 8 supporta anche i livelli API precedenti al livello 24.
+-   Per impostazione predefinita Xamarin.Android usa [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), versione necessaria per sviluppare il livello API 24 o un livello superiore. JDK 8 supporta anche i livelli API precedenti al livello 24.
 
--   È possibile continuare a usare [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) per attività di sviluppo specifiche per il livello API 23 o un livello precedente.
+-   È possibile continuare a usare [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) per attività di sviluppo specifiche per il livello API 23 o un livello precedente.
 
 -   Se si usa Visual Studio per Mac 7.7 o versioni successive, è possibile provare a usare la [distribuzione di Microsoft Mobile OpenJDK](openjdk.md) (attualmente in anteprima) invece di JDK 8.
 

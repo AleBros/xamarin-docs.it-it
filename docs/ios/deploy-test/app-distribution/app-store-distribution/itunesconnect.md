@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 52cd8a15f1b5b232deef62a8e87910b092aad94c
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: ff4c72eaaf856083ab8e2e240ac8ce3eff37470c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831950"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669638"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configurazione di un'app in iTunes Connect
 
@@ -136,7 +136,7 @@ Per la scelta del nome di un'applicazione, attenersi alle linee guida seguenti s
 - Verificare che sia adatto alle funzionalità dell'applicazione.
 - Localizzare i nomi per i mercati esteri quando opportuno.
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 Scrivere una descrizione chiara, concisa e informativa dell'applicazione e delle sue funzionalità. Le prime righe sono le più importanti, devono dare una buona impressione e attirare l'utente. Descrivere ciò che rende speciale l'applicazione e la distingue da altre app simili.
 
@@ -360,7 +360,7 @@ Questo articolo descrive come usare iTunes Connect per preparare un'applicazione
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Uso delle immagini](~/ios/app-fundamentals/images-icons/index.md)
-- [iOS App Development Workflow Guide: Distributing Applications](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html) (Guida al flusso di lavoro di sviluppo di iOS: distribuzione di applicazioni)
+- [iOS App Development Workflow Guide: Distributing Applications](https://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html) (Guida al flusso di lavoro di sviluppo di iOS: distribuzione di applicazioni)
 - [App Store Submission Tips](https://developer.apple.com/appstore/resources/submission/tips.html) (Suggerimenti per l'invio nell'App Store)
 - [App Store Review Guidelines](https://developer.apple.com/appstore/resources/approval/guidelines.html) (Linee guida sulle recensioni nell'App Store)
 - [iTunes Connect Developer Guide](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/About.html#//apple_ref/doc/uid/TP40011225-CH1-SW1) (Guida per sviluppatori di iTunes Connect)

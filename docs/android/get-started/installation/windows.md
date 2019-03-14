@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 26865fdbfc1cc6f11a978a70bd768e63771bcd4b
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 0053bf97dbcc98c5ffbd6fbddb1e40f884810e60
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197472"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670753"
 ---
 # <a name="windows-installation"></a>Installazione di Windows
 
@@ -47,7 +47,7 @@ Xamarin.Android usa Java Development Kit (JDK) e Android SDK per compilare le ap
 
 La maggior parte degli utenti potrà usare questi percorsi predefiniti senza apportare ulteriori modifiche. Tuttavia, potrebbe essere necessario configurare Visual Studio con percorsi personalizzati per questi strumenti (ad esempio, se Java JDK, Android SDK o NDK è stato installato in un percorso diverso). Fare clic su **Modifica** accanto al percorso che si vuole modificare e quindi selezionare il nuovo percorso.
 
-Xamarin.Android usa [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), la versione necessaria per le attività di sviluppo per il livello API 24 o un livello superiore (JDK 8 supporta anche i livelli API precedenti al livello 24). È possibile continuare a usare [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) per attività di sviluppo specifiche per il livello API 23 o un livello precedente.
+Xamarin.Android usa [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), la versione necessaria per le attività di sviluppo per il livello API 24 o un livello superiore (JDK 8 supporta anche i livelli API precedenti al livello 24). È possibile continuare a usare [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) per attività di sviluppo specifiche per il livello API 23 o un livello precedente.
 
 > [!IMPORTANT]
 > Xamarin.Android non supporta JDK 9.

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 38568fa9258c7e3de2c3333cdca5dc7d5867319c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 56c5aa7f0f8db746fbc6d7f8b5409f7d6c0f5d0d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117102"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666892"
 ---
 # <a name="apk-expansion-files"></a>File di espansione APK
 
@@ -73,7 +73,7 @@ Quando un'applicazione viene installata da Google Play, i file di espansione dev
 
 [![Diagramma di flusso dell'espansione dell'APK](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png#lightbox)
 
-All'avvio, un'applicazione deve controllare se i file di espansione appropriati esistono nel dispositivo corrente. Se non sono disponibili, l'applicazione deve effettuare una richiesta dal [servizio di licenza per le applicazioni](http://developer.android.com/google/play/licensing/index.html) di Google Play. Questo controllo viene eseguito tramite la *libreria LVL (License Verification Library)* e deve essere eseguito sia per le applicazioni gratuite che per quelle con licenza. La libreria LVL viene usata principalmente dalle applicazioni a pagamento per applicare restrizioni di licenza. Tuttavia, Google ha esteso la libreria LVL in modo che possa essere usata anche con le librerie di espansione. Anche le applicazioni gratuite devono eseguire il controllo LVL, ma possono ignorare le restrizioni di licenza. La richiesta LVL deve fornire le informazioni seguenti relative ai file di espansione richieste dall'applicazione: 
+All'avvio, un'applicazione deve controllare se i file di espansione appropriati esistono nel dispositivo corrente. Se non sono disponibili, l'applicazione deve effettuare una richiesta dal [servizio di licenza per le applicazioni](https://developer.android.com/google/play/licensing/index.html) di Google Play. Questo controllo viene eseguito tramite la *libreria LVL (License Verification Library)* e deve essere eseguito sia per le applicazioni gratuite che per quelle con licenza. La libreria LVL viene usata principalmente dalle applicazioni a pagamento per applicare restrizioni di licenza. Tuttavia, Google ha esteso la libreria LVL in modo che possa essere usata anche con le librerie di espansione. Anche le applicazioni gratuite devono eseguire il controllo LVL, ma possono ignorare le restrizioni di licenza. La richiesta LVL deve fornire le informazioni seguenti relative ai file di espansione richieste dall'applicazione: 
 
 -   **Dimensioni del file**: le dimensioni dei file di espansione vengono usate nell'ambito del controllo che determina se sono già stati scaricati i file di espansione corretti.
 -   **Nomi di file**: si tratta del nome di file (nel dispositivo corrente) in cui devono essere salvati i pacchetti di espansione.

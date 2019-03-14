@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: e8b3881db99d569008ce1290f81891f1b3b183d7
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 953f626774c02a2861d0d9b3be1f1234f181c622
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563810"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670597"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS Multiscreen - approfondimento
 
@@ -206,5 +206,5 @@ In seguito spiegheremo come compilare applicazioni multipiattaforma con Xamarin 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Hello, iOS (sample)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/) (Hello, iOS - Esempio)
-- [Linee guida dell'interfaccia umana iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
+- [Linee guida dell'interfaccia umana iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portale di provisioning iOS](https://developer.apple.com/ios/manage/overview/index.action)

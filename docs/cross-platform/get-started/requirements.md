@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 4ea9690812675c48524393576e5509ab37e26981
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 486c5c57961e897eae59df66b216a9078d5df517
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197147"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667990"
 ---
 # <a name="system-requirements"></a>Requisiti di sistema
 
@@ -70,7 +70,7 @@ Per le attività di test e debug è possibile distribuire le applicazioni Xamari
 
 È possibile scaricare la versione più recente di Xamarin per macOS da [xamarin.com/download](http://xamarin.com/download). Per Windows seguire le istruzioni di installazione di [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
 
-Nella [pagina delle versioni correnti](http://developer.xamarin.com/releases/current/) è disponibile un elenco completo delle attuali versioni del prodotto. La pagina include anche le singole versioni del prodotto e i collegamenti alle note sulla versione per i canali alfa e beta.
+Nella [pagina delle versioni correnti](https://developer.xamarin.com/releases/current/) è disponibile un elenco completo delle attuali versioni del prodotto. La pagina include anche le singole versioni del prodotto e i collegamenti alle note sulla versione per i canali alfa e beta.
 
 Istruzioni di [installazione](~/get-started/installation/index.md) specifiche per ogni piattaforma sono disponibili qui:
 

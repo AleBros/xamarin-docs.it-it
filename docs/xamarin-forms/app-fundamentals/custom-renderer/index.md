@@ -7,13 +7,8 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: c7ae25688b2f8635a9a89318e0b307e58add7a5a
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998744"
 ---
+
 # <a name="xamarinforms-custom-renderers"></a>Renderer personalizzati di Xamarin.Forms
 
 _In Xamarin.Forms il rendering delle interfacce utente viene eseguito con i controlli nativi della piattaforma di destinazione, consentendo alle applicazioni Xamarin.Forms di mantenere l'aspetto appropriato per ogni piattaforma. I renderer personalizzati consentono agli sviluppatori di eseguire l'override di questo processo per personalizzare l'aspetto e il comportamento dei controlli di Xamarin.Forms in ogni piattaforma._
@@ -40,7 +35,7 @@ Xamarin.Forms.Maps offre un'astrazione multipiattaforma per la visualizzazione d
 
 ## <a name="customizing-a-listviewlistviewmd"></a>[Personalizzazione di un elemento ListView](listview.md)
 
-L'oggetto [`ListView`](xref:Xamarin.Forms.ListView) di Xamarin.Forms è una vista che visualizza una raccolta di dati sotto forma di elenco verticale. Questo articolo spiega come creare un renderer personalizzato che incapsula i controlli List e i layout di cella nativi specifici della piattaforma, consentendo un maggiore controllo sulle prestazioni dei controlli List nativi.
+L'oggetto [`ListView`](xref:Xamarin.Forms.ListView) di Xamarin.Forms è una vista che visualizza una raccolta di dati sotto forma di elenco verticale. Questo articolo spiega come creare un renderer personalizzato che incapsula gli elenchi specifici della piattaforma e i layout di cella nativi, consentendo un maggiore controllo sulle prestazioni dei controlli nativi.
 
 ## <a name="customizing-a-viewcellviewcellmd"></a>[Personalizzazione di un elemento ViewCell](viewcell.md)
 
@@ -62,5 +57,4 @@ Questo articolo illustra come scrivere i renderer per implementare un controllo 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Effetti](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Renderer personalizzati (video di Xamarin University)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)
-- [Esempio di renderer personalizzati (video di Xamarin University)](http://bit.ly/xf-customrenderer)
+- [Custom Renderers (Xamarin University Video)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/) (Video di Xamarin University sui renderer personalizzati)

@@ -6,13 +6,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: ef504e4bef22ac5b2bec5b6a57eb46e8b2f1baff
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102542"
 ---
+
 # <a name="publishing-an-application"></a>Pubblicazione di un'applicazione
 
 Quando viene creata un'ottima applicazione, tutti vogliono usarla. Questa sezione illustra i passaggi necessari per la distribuzione pubblica di un'applicazione creata con Xamarin.Android tramite canali quali la posta elettronica, un server Web privato, Google Play o Amazon Appstore per Android.
@@ -60,8 +55,8 @@ Questa sezione illustra come caricare l'applicazione in uno store, ad esempio in
 - [Collegamento](~/android/deploy-test/linker.md)
 - [Ottenere una chiave API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
 - [Firma dell'applicazione](https://source.android.com/security/apksigning/)
-- [Pubblicazione in Google Play](http://developer.android.com/distribute/googleplay/publish/index.html)
-- [Licenze di applicazioni Google](http://developer.android.com/guide/google/play/licensing/index.html)
+- [Pubblicazione in Google Play](https://developer.android.com/distribute/googleplay/publish/index.html)
+- [Licenze di applicazioni Google](https://developer.android.com/guide/google/play/licensing/index.html)
 - [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary)
 - [Portale di distribuzione di app per dispositivi mobili](https://developer.amazon.com/welcome.html)
 - [Domande frequenti sulla distribuzione di app per dispositivi mobili Amazon](https://developer.amazon.com/help/faq.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d1a3090318649e6f04a5b8f44dc4a9b2689a870
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a6cc7ffe52711f4e65f0191f8dc556760e8817ea
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119631"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668777"
 ---
 # <a name="debugging-xamarinios-apps"></a>Debug di app Xamarin.iOS
 
@@ -26,7 +26,7 @@ Usare il supporto di debug nativo di Visual Studio per Mac per eseguire il debug
 
 Il debugger Xamarin.iOS è integrato nell'IDE e consente agli sviluppatori di eseguire il debug delle applicazioni Xamarin.iOS compilate con uno dei linguaggi gestiti supportati da Xamarin.iOS nel simulatore e sul dispositivo.
 
-Il debugger Xamarin.iOS usa il [debugger Mono Soft](http://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/), quindi il codice generato e il runtime di Mono cooperano con l'IDE per offrire un'esperienza di debug. È diverso dai debugger hard, come LLDB o MDB, che controllano un programma senza le informazioni o la cooperazione del programma di cui viene eseguito il debug.
+Il debugger Xamarin.iOS usa il [debugger Mono Soft](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/), quindi il codice generato e il runtime di Mono cooperano con l'IDE per offrire un'esperienza di debug. È diverso dai debugger hard, come LLDB o MDB, che controllano un programma senza le informazioni o la cooperazione del programma di cui viene eseguito il debug.
 
 ## <a name="setting-breakpoints"></a>Impostazione di punti di interruzione
 
