@@ -255,8 +255,7 @@ Questo frammento di codice è riportato un esempio di come generare un "non offu
     name="obfuscated">false</attr>
 ```
 
-### <a name="propertyname"></a>
-  propertyName
+### <a name="propertyname"></a>propertyName
 
 Questo attributo può essere utilizzato per modificare il nome di una proprietà gestita.
 
