@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: Geocoding'
+title: 'Xamarin.Essentials: Geocodifica'
 description: La classe Geocoding in Xamarin.Essentials fornisce le API sia per eseguire la codifica geografica di un indicatore di posizione in coordinate posizionali che per riconvertire le coordinate posizionali in un indicatore di posizione.
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 0f44f179588c564ac9fa46d42ec18de6d303e239
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: bc08554f0060ca5de8d7ffc90ea5c65463b93f3b
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898979"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972598"
 ---
-# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Geocoding
+# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Geocodifica
 
 La classe **Geocoding** fornisce le API sia per eseguire la codifica geografica di un indicatore di posizione in coordinate posizionali che per riconvertire le coordinate posizionali in un indicatore di posizione.
 
@@ -76,7 +76,9 @@ catch (Exception ex)
 
 L'altitudine non è sempre disponibile. Se non è disponibile, la proprietà `Altitude` potrebbe essere `null` o il valore potrebbe essere pari a zero. Se l'altitudine è disponibile, il valore è espresso in metri sopra il livello del mare.
 
-Acquisizione degli [indicatori di posizione](xref:Xamarin.Essentials.Placemark) per un set esistente di coordinate:
+## <a name="using-reverse-geocoding"></a>Uso della geocodifica inversa
+
+La geocodifica inversa è il processo di acquisizione degli [indicatori di posizione](xref:Xamarin.Essentials.Placemark) per un set esistente di coordinate:
 
 ```csharp
 try
@@ -116,7 +118,7 @@ catch (Exception ex)
 
 ## <a name="distance-between-two-locations"></a>Distanza tra due località
 
-Le classi [`Location`](xref:Xamarin.Essentials.Location) e [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) definiscono i metodi per calcolare la distanza tra due località. Per un esempio, vedere l'articolo [**Xamarin.Essentials: Geolocation**](geolocation.md#calculate-distance).
+Le classi [`Location`](xref:Xamarin.Essentials.Location) e [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) definiscono i metodi per calcolare la distanza tra due località. Per un esempio, vedere l'articolo [**Xamarin.Essentials: Georilevazione**](geolocation.md#calculate-distance).
 
 ## <a name="api"></a>API
 
