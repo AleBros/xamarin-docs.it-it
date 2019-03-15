@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: 4f5f32871c273fc7ac3bab8fd9bcbcac03fc47fa
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: cf04c3e89e3effdd317fa98beb46f9075a1defcd
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233809"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972663"
 ---
 # <a name="native-views-in-xaml"></a>Visualizzazioni native in XAML
 
@@ -325,7 +325,7 @@ La pagina contiene un [ `Label` ](xref:Xamarin.Forms.Label) che visualizza i fru
 
 La pagina contiene anche una visualizzazione di selezione nativo per ogni piattaforma. Ogni visualizzazione nativa consente di visualizzare la raccolta di frutta mediante l'associazione relativa `ItemSource` proprietà per il `SubclassedNativeControlsPageViewModel.Fruits` raccolta. In questo modo l'utente può selezionare un fruit, come illustrato negli screenshot seguenti:
 
-![](xaml-images/sub-classed.png "Sottoclasse le visualizzazioni Native")
+![](xaml-images/sub-classed.png "Visualizzazioni Native sottoclasse")
 
 In iOS e Android i controlli di selezione native usare metodi per configurare i controlli. Di conseguenza, questi controlli di selezione deve essere sottoclassati per esporre le proprietà per fare in modo facile integrazione con XAML. In Universal Windows Platform (UWP), il `ComboBox` è già facile integrazione con XAML e pertanto non richiede la creazione di sottoclassi.
 

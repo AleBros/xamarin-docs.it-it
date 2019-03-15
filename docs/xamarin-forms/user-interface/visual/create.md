@@ -1,31 +1,98 @@
 ---
 title: Creare un renderer oggetti visivi di xamarin. Forms
-description: Oggetto visivo xamarin. Forms consente renderer essere applicate selettivamente alle VisualElement oggetti, senza la necessità di controlli di xamarin. Forms sottoclasse.
+description: Oggetto visivo xamarin. Forms consente renderer essere applicate selettivamente alle VisualElement oggetti, senza la necessità di visualizzazioni di xamarin. Forms sottoclasse.
 ms.prod: xamarin
 ms.assetid: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/05/2019
-ms.openlocfilehash: 3c614bcd0044a0aa4a698c830d2f2af5aba6c65a
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.date: 03/12/2019
+ms.openlocfilehash: 1bd56d09932c97508dd0a05fbc0eb2bad3af3f0e
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557513"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972585"
 ---
-# <a name="xamarinforms-visual"></a>Oggetto visivo xamarin. Forms
+# <a name="create-a-xamarinforms-visual-renderer"></a>Creare un renderer oggetti visivi di xamarin. Forms
 
-Oggetto visivo xamarin. Forms consente renderer essere applicate selettivamente alle `VisualElement` oggetti, senza la necessità di controlli di xamarin. Forms sottoclasse. Tutti i renderer che specificano una `VisualType` come parte di `ExportRendererAttribute` verrà usato per le visualizzazioni di renderer, anziché il renderer predefinito. In fase di selezione del renderer, il `Visual` proprietà della vista vengono ispezionate e inclusi nel processo di selezione del renderer.
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VisualDemos/)
+
+Oggetto visivo xamarin. Forms consente renderer essere create e applicate selettivamente alle [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) oggetti, senza la necessità di visualizzazioni di xamarin. Forms sottoclasse. Un renderer che specifica un `IVisual` tipo, come parte della relativa `ExportRendererAttribute`, verrà usato per eseguire il rendering scelto in viste, anziché il renderer predefinito. In fase di selezione del renderer, il `Visual` proprietà della vista vengono ispezionate e inclusi nel processo di selezione del renderer.
 
 > [!IMPORTANT]
-> Attualmente il `Visual` non può essere modificato dopo il controllo è stato eseguito il rendering, ma verrà modificato in una versione futura.
+> Attualmente le [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) proprietà non può essere modificata dopo la visualizzazione è stato eseguito il rendering, ma verrà modificato in una versione futura.
 
-Xamarin. Forms include un aspetto visivo di base di progettazione dei materiali. Per altre informazioni, vedere [xamarin. Forms materiale Visual](material-visual.md).
+Il processo di creazione e l'utilizzo di un renderer oggetti visivi di xamarin. Forms è:
 
-## <a name="create-a-visual"></a>Creare un oggetto visivo
+1. Creare i renderer di piattaforma per la visualizzazione desiderata. Per altre informazioni, vedere [creare renderer](#create-platfomr-renderers).
+1. Creare un tipo che deriva da `IVisual`. Per altre informazioni, vedere [creare un tipo IVisual](#create-an-ivisual-type).
+1. Registrare il `IVisual` tipo come parte del `ExportRendererAttribute` che decora il renderer. Per altre informazioni, vedere [registrare il tipo IVisual](#register-the-ivisual-type).
+1. Utilizzare il renderer Visual impostando il [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) proprietà nella vista per la `IVisual` nome. Per altre informazioni, vedere [utilizzare il renderer Visual](#consume-the-visual-renderer).
+1. [facoltativo] Registrare un nome per il `IVisual` tipo. Per altre informazioni, vedere [registrare un nome per il tipo IVisual](#register-a-name-for-the-ivisual-type).
 
-Nella libreria cross-platform, creare un tipo che deriva da `IVisual`:
+## <a name="create-platform-renderers"></a>Creare i renderer di piattaforma
+
+Per informazioni sulla creazione di una classe di rendering, vedere [renderer personalizzati](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Tuttavia, si noti che un renderer oggetti visivi di xamarin. Forms viene applicato a una visualizzazione senza la necessità per creare una sottoclasse della visualizzazione.
+
+Le classi renderer descritte in questo argomento implementano una classe personalizzata [ `Button` ](xref:Xamarin.Forms.Button) che visualizza il testo con un'ombreggiatura.
+
+### <a name="ios"></a>iOS
+
+Esempio di codice seguente illustra il renderer di pulsante per iOS:
+
+```csharp
+public class CustomButtonRenderer : ButtonRenderer
+{
+    protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
+    {
+        base.OnElementChanged(e);
+
+        if (e.OldElement != null)
+        {
+            // Cleanup
+        }
+
+        if (e.NewElement != null)
+        {
+            Control.TitleShadowOffset = new CoreGraphics.CGSize(1, 1);
+            Control.SetTitleShadowColor(Color.Black.ToUIColor(), UIKit.UIControlState.Normal);
+        }
+    }
+}
+```
+
+### <a name="android"></a>Android
+
+Esempio di codice seguente illustra il renderer di pulsante per Android:
+
+```csharp
+public class CustomButtonRenderer : Xamarin.Forms.Platform.Android.AppCompat.ButtonRenderer
+{
+    public CustomButtonRenderer(Context context) : base(context)
+    {
+    }
+
+    protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
+    {
+        base.OnElementChanged(e);
+
+        if (e.OldElement != null)
+        {
+            // Cleanup
+        }
+
+        if (e.NewElement != null)
+        {
+            Control.SetShadowLayer(5, 3, 3, Color.Black.ToAndroid());
+        }
+    }
+}
+```
+
+## <a name="create-an-ivisual-type"></a>Creare un tipo IVisual
+
+Nella libreria multipiattaforma, creare un tipo che deriva da `IVisual`:
 
 ```csharp
 public class CustomVisual : IVisual
@@ -33,59 +100,75 @@ public class CustomVisual : IVisual
 }
 ```
 
-## <a name="register-the-visual-type"></a>Registrare il tipo di oggetto visivo
+Il `CustomVisual` tipo può quindi essere registrato in classi renderer, permettendo [ `Button` ](xref:Xamarin.Forms.Button) oggetti per acconsentire esplicitamente tramite il renderer.
 
-Creare un renderer per la visualizzazione desiderata e registrare il tipo di oggetto visivo come parte delle piattaforme `ExportRenderAttribute`:
+## <a name="register-the-ivisual-type"></a>Registrare il tipo IVisual
+
+Nei progetti di piattaforma, le classi renderer con decorare il `ExportRendererAttribute`:
 
 ```csharp
-using Xamarin.Forms.Material.Android;
-
-[assembly: ExportRenderer(typeof(ContentPage), typeof(CustomPageRenderer), new[] { typeof(CustomVisual) })]
-namespace MyApp.Android
+[assembly: ExportRenderer(typeof(Xamarin.Forms.Button), typeof(CustomButtonRenderer), new[] { typeof(CustomVisual) })]
+public class CustomButtonRenderer : ButtonRenderer
 {
-    public class CustomPageRenderer : PageRenderer
+    protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
     {
         ...
     }
 }
 ```
 
-## <a name="consume-the-visual"></a>Utilizzare l'oggetto visivo
+In questo esempio, il `ExportRendererAttribute` specifica che il `CustomButtonRenderer` classe viene usata per eseguire il rendering utilizzano [ `Button` ](xref:Xamarin.Forms.Button) oggetti, con la `IVisual` tipo registrato come terzo argomento. Un renderer che specifica un `IVisual` tipo, come parte della relativa `ExportRendererAttribute`, verrà usato per eseguire il rendering scelto in viste, anziché il renderer predefinito.
 
-Le applicazioni possono acconsentire esplicitamente tramite l'oggetto visivo personalizzato tramite il `Visual` proprietà:
+## <a name="consume-the-visual-renderer"></a>Utilizzare il renderer Visual
+
+Oggetto [ `Button` ](xref:Xamarin.Forms.Button) oggetto possa acconsentire esplicitamente utilizzando le classi renderer impostando relativo [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) proprietà `Custom`:
 
 ```xaml
-<ContentPage ...
-             Visual="Custom">
-    ...
-</ContentPage>
+<Button Visual="Custom"
+        Text="CUSTOM BUTTON"
+        BackgroundColor="{StaticResource PrimaryColor}"
+        TextColor="{StaticResource SecondaryTextColor}"
+        HorizontalOptions="FillAndExpand" />
 ```
+
+> [!NOTE]
+> In XAML, un convertitore di tipi Elimina la necessità di includere il suffisso "Visual" nel [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) valore della proprietà. Tuttavia, il nome completo del tipo può anche essere specificato.
 
 Il codice c# equivalente è:
 
 ```csharp
-ContentPage contentPage = new ContentPage();
-contentPage.Visual = new CustomVisual();
+Button button = new Button { Text = "CUSTOM BUTTON", ... };
+button.Visual = new CustomVisual();
 ```
 
-## <a name="register-a-name-for-a-visual"></a>Registrare un nome per un oggetto visivo
+In fase di selezione del renderer, il [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) proprietà della [ `Button` ](xref:Xamarin.Forms.Button) vengono ispezionati e inclusi nel processo di selezione del renderer. Se non si trova un renderer, verrà utilizzato il renderer predefinito di xamarin. Forms.
 
-Potrebbe esserci conflitti tra le librerie Visual diversi o forse è sufficiente fare riferimento a un oggetto visivo tramite un nome diverso. In questo scenario, è possibile usare un attributo dell'assembly per registrare un nome diverso per un determinato oggetto visivo:
+Le schermate seguenti illustrano il rendering [ `Button` ](xref:Xamarin.Forms.Button), che consente di visualizzare il testo con un'ombreggiatura:
+
+[![Screenshot del pulsante personalizzato con il testo dell'ombreggiatura, in iOS e Android](material-visual-images/custom-button.png "pulsante con il testo con ombreggiatura")](material-visual-images/custom-button-large.png#lightbox)
+
+## <a name="register-a-name-for-the-ivisual-type"></a>Registrare un nome per il tipo IVisual
+
+Il [ `VisualAttribute` ](xref:Xamarin.Forms.VisualAttribute) può essere utilizzato per registrare facoltativamente un nome diverso per il `IVisual` tipo. Questo approccio è utilizzabile per risolvere i conflitti di denominazione tra diverse librerie di Visual o in situazioni in cui si vuole semplicemente fare riferimento a un oggetto visivo con un nome diverso rispetto al relativo nome tipo.
+
+Il [ `VisualAttribute` ](xref:Xamarin.Forms.VisualAttribute) devono essere definiti a livello di assembly nella libreria multipiattaforma o nel progetto di piattaforma:
 
 ```csharp
-[assembly: Visual("MyMaterialName", typeof(VisualMarker.MaterialVisual))]
+[assembly: Visual("MyVisual", typeof(CustomVisual))]
 ```
 
-L'oggetto visivo personalizzato può quindi essere utilizzato con il nome registrato:
+Il `IVisual` tipo può quindi essere utilizzato con il nome registrato:
 
 ```xaml
-<ContentPage ...
-             Visual="MyMaterialName">
-    ...
-</ContentPage>
-````
+<Button Visual="MyVisual"
+        ... />
+```
+
+> [!NOTE]
+> Durante l'utilizzo di un oggetto visivo con il nome registrato, è necessario incluso un suffisso "Visual".
 
 ## <a name="related-links"></a>Collegamenti correlati
 
+- [Oggetto visivo Material (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VisualDemos/)
 - [Oggetto visivo materiali di xamarin. Forms](material-visual.md)
 - [Renderer personalizzati](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

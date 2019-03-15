@@ -336,7 +336,7 @@ I selettori CSS seguenti sono supportati da xamarin. Forms:
 |`.class`|`.header`|Seleziona tutti gli elementi di `StyleClass` proprietà che contiene 'header'. Si noti che questo selettore distinzione maiuscole / minuscole.|
 |`#id`|`#email`|Seleziona tutti gli elementi `StyleId` impostato su `email`. Se `StyleId` non è impostata, il fallback a `x:Name`. Quando si usa XAML, `x:Name` è preferibile a `StyleId`. Si noti che questo selettore distinzione maiuscole / minuscole.|
 |`*`|`*`|Seleziona tutti gli elementi.|
-|`element`|`label`|Seleziona tutti gli elementi di tipo `Label`, ma non delle classi secondarie. Si noti che questo selettore maiuscole e minuscole.|
+|`element`|`label`|Seleziona tutti gli elementi di tipo `Label`, ma non alle sottoclassi. Si noti che questo selettore maiuscole e minuscole.|
 |`^base`|`^contentpage`|Seleziona tutti gli elementi `ContentPage` come classe di base, tra cui `ContentPage` stesso. Si noti che questo selettore non distingue tra maiuscole e non fa parte della specifica di CSS.|
 |`element,element`|`label,button`|Seleziona tutti gli elementi `Button` elementi e i `Label` elementi. Si noti che questo selettore maiuscole e minuscole.|
 |`element element`|`stacklayout label`|Seleziona tutti gli elementi `Label` elementi all'interno di un `StackLayout`. Si noti che questo selettore maiuscole e minuscole.|

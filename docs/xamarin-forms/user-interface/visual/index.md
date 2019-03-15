@@ -1,6 +1,6 @@
 ---
 title: Oggetto visivo xamarin. Forms
-description: 'Oggetto visivo xamarin. Forms consente renderer essere applicate selettivamente alle VisualElement oggetti, senza la necessità di controlli di xamarin. Forms sottoclasse.'
+description: 'Oggetto visivo xamarin. Forms consente renderer essere applicate selettivamente alle VisualElement oggetti, senza la necessità di visualizzazioni di xamarin. Forms sottoclasse.'
 ms.prod: xamarin
 ms.assetid: 69228A9C-39C4-46AE-A803-C38EED6FB965
 ms.technology: xamarin-forms
@@ -17,4 +17,4 @@ Oggetto visivo materiali di xamarin. Forms è utilizzabile per creare applicazio
 
 ## <a name="create-a-xamarinforms-visual-renderercreatemd"></a>[Creare un renderer oggetti visivi di xamarin. Forms](create.md)
 
-Oggetto visivo xamarin. Forms consente renderer essere applicate selettivamente alle `VisualElement` oggetti, senza la necessità di controlli di xamarin. Forms sottoclasse.
+Oggetto visivo xamarin. Forms consente renderer essere applicate selettivamente alle [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) oggetti, senza la necessità di visualizzazioni di xamarin. Forms sottoclasse.

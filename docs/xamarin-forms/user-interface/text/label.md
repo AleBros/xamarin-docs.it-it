@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: e57135c5a9a90ec75ae610ad92cecaa2a9b1e482
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: e220abc575270f483c0a822ae01f979966691432
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557038"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972676"
 ---
 # <a name="xamarinforms-label"></a>Etichetta di xamarin. Forms
 
@@ -356,7 +356,7 @@ Il `TapCommand` viene eseguita la `OpenBrowser` , passando il [ `TapGestureRecog
 
 ### <a name="creating-a-reusable-hyperlink-class"></a>Creazione di una classe riutilizzabile collegamento ipertestuale
 
-L'approccio precedente per creare un collegamento ipertestuale richiede la scrittura di codice ripetitivo ogni volta che è necessario un collegamento ipertestuale nell'applicazione. Tuttavia, entrambi i [ `Label` ](xref:Xamarin.Forms.Label) e [ `Span` ](xref:Xamarin.Forms.Span) possono essere una sottoclasse per creare classi `HyperlinkLabel` e `HyperlinkSpan` classi, con il riconoscitore di movimento e la formattazione del testo codice aggiunto qui.
+L'approccio precedente per creare un collegamento ipertestuale richiede la scrittura di codice ripetitivo ogni volta che è necessario un collegamento ipertestuale nell'applicazione. Tuttavia, entrambe le [ `Label` ](xref:Xamarin.Forms.Label) e [ `Span` ](xref:Xamarin.Forms.Span) classi possono essere sottoclassate per creare `HyperlinkLabel` e `HyperlinkSpan` classi, con il riconoscitore di movimento e codice di formattazione del testo aggiunto qui.
 
 Esempio di codice seguente, tratto dal [demo di collegamento ipertestuale](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) esempio, viene illustrata una `HyperlinkSpan` classe:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 71962c5e7d2f4c360e14b2040779498d4be95282
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: 270191890e8747ecad7d250fb0fe18ce253d3823
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831795"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972650"
 ---
 # <a name="customizing-listview-appearance"></a>Personalizzazione dell'aspetto di ListView
 
@@ -206,8 +206,8 @@ Per creare un'intestazione personalizzata e un piè di pagina, definire le visua
 [`ListView`](xref:Xamarin.Forms.ListView) ha `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` le proprietà, che ottiene o imposta un [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valore che rappresenta quando la barra di scorrimento orizzontale o verticale, è visibile. Entrambe le proprietà possono essere impostate sui valori seguenti:
 
 - [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica il comportamento di barra di scorrimento predefinito per la piattaforma ed è il valore predefinito per il `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` proprietà.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica che le barre di scorrimento sarà visibile, anche quando il contenuto non rientra nella visualizzazione.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica che le barre di scorrimento non saranno visibili, se il contenuto non rientra nella visualizzazione di eventi.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica che le barre di scorrimento sarà visibile, anche quando il contenuto viene adattato nella visualizzazione.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica che le barre di scorrimento non sarà visibile, anche se il contenuto non rientra nella visualizzazione.
 
 <a name="Row_Separators" />
 
