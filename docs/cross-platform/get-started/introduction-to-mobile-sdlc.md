@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: 8a95f89ad41ab793d8c26631f1a967180b4c1779
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: b8f36ef407c3acc9b3472539735816649e13b7db
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782333"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672664"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introduzione al ciclo di vita di sviluppo del software per dispositivi mobili
 
@@ -19,7 +19,7 @@ La compilazione di applicazioni per dispositivi mobili può essere un'operazione
 
 In questo documento vengono fornite informazioni introduttive dettagliate sulla creazione di applicazioni per dispositivi mobili che includono:
 
-1.   **Processo**: il processo di sviluppo del software è chiamato ciclo di vita di sviluppo del software (SDLC, Software Development Lifecycle). Verranno descritte tutte le fasi del ciclo di vita di sviluppo del software relativo allo sviluppo di applicazioni per dispositivi mobili, tra cui: ispirazione, progettazione, sviluppo, stabilizzazione, distribuzione e manutenzione.
+1.   **Processo**: il processo di sviluppo del software è chiamato ciclo di vita di sviluppo del software (SDLC, Software Development Lifecycle). Verranno esaminate tutte le fasi del ciclo di vita di sviluppo del software relative allo sviluppo di applicazioni per dispositivi mobili, tra cui ispirazione, progettazione, sviluppo, stabilizzazione, distribuzione e manutenzione.
 1.   **Considerazioni**: sono numerose le considerazioni da tenere presente durante la creazione di applicazioni per dispositivi mobili, che si distingue in particolare da quella di applicazioni Web o desktop tradizionali. Queste considerazioni verranno prese in esame e ne verrà descritto l'effetto sullo sviluppo per applicazioni mobili.
 
 Questo documento si propone di rispondere alle domande fondamentali sullo sviluppo di app per dispositivi mobili degli sviluppatori di ogni livello. La maggior parte dei concetti relativi all'intero ciclo di vita di sviluppo del software (SDLC) sono descritti con un approccio sostanzialmente completo. È possibile tuttavia che questo documento non sia adatto a tutti. Coloro che sono impazienti di iniziare possono passare direttamente alla guida [Introduzione allo sviluppo per dispositivi mobili](~/cross-platform/get-started/introduction-to-mobile-development.md) e tornare più tardi a questo documento.
@@ -58,7 +58,7 @@ Le app dovranno anche essere valutate rispetto al fattore di forma dei dispositi
 -   **Valore**: qual è il valore offerto agli utenti? Come useranno l'app?
 -   **Forma/Mobilità**: come funzionerà l'app nel fattore di forma di un dispositivo mobile? Com'è possibile aggiungere valore usando tecnologie per dispositivi mobili come il riconoscimento della posizione, la videocamera e così via?
 
-Per rendere più semplice la progettazione delle funzionalità di un'app può essere utile definire gli attori e i [casi d'uso](http://en.wikipedia.org/wiki/Use_case). Gli attori sono i ruoli all'interno di un'applicazione e sono spesso utenti. I casi d'uso sono in genere azioni o scopi.
+Per rendere più semplice la progettazione delle funzionalità di un'app può essere utile definire gli attori e i [casi d'uso](https://en.wikipedia.org/wiki/Use_case). Gli attori sono i ruoli all'interno di un'applicazione e sono spesso utenti. I casi d'uso sono in genere azioni o scopi.
 
 Ad esempio, un'applicazione di verifica delle attività può avere due attori: l'*utente* e un *amico*. L'utente può *creare un'attività* e *condividere un'attività* con un amico. In questo caso, la creazione di un'attività e la condivisione di un'attività sono due casi d'uso distinti che, in associazione agli attori, indicano le schermate che è necessario creare e le entità di business e la logica che è necessario sviluppare.
 
@@ -77,7 +77,7 @@ L'esperienza utente viene in genere creata con wireframe o mockup usando uno dei
 Quando si creano i mockup di esperienza utente, è importante tenere presente le linee guida dell'interfaccia per le varie piattaforme a cui è destinata l'app. L'app deve adattarsi a ogni piattaforma. Le linee guida di progettazione ufficiali per ogni piattaforma sono le seguenti:
 
 1.   **Apple** -  [Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
-1.   **Android** -  [Design Guidelines](http://developer.android.com/design/index.html)
+1.   **Android** -  [Design Guidelines](https://developer.android.com/design/index.html)
 1.   **UWP** - [UWP Design basics](https://docs.microsoft.com/windows/uwp/design/basics/) (Nozioni di base sulla progettazione per la piattaforma UWP)
 
 Ad esempio, ogni app ha una metafora per il passaggio da una sezione all'altra in un'applicazione. iOS usa una barra di schede nella parte inferiore della schermata, Android usa una barra di schede nella parte superiore della schermata e la piattaforma UWP usa la visualizzazione con [pivot o schede](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot).
@@ -108,7 +108,7 @@ La maggior parte delle esercitazioni che seguono è incentrata sulla fase di svi
 
 ### <a name="stabilization"></a>Stabilizzazione
 
-La stabilizzazione è il processo di risoluzione dei bug presenti nell'applicazione. La stabilizzazione non viene eseguita solo da un punto di vista funzionale (ad esempio un arresto dell'applicazione quando si fa clic su un pulsante) ma riguarda anche l'usabilità e le prestazioni. È consigliabile iniziare la stabilizzazione in una fase iniziale del processo di sviluppo in modo da eseguire immediatamente le correzioni prima che i problemi diventino un costo . In genere le applicazioni prevedono le fasi di *prototipo*, *alfa*, *beta* e *versione finale candidata*. Sebbene possano essere chiamate in modo diverso, queste fasi seguono in genere il modello seguente:
+La stabilizzazione è il processo di risoluzione dei bug presenti nell'applicazione. Non soltanto da un punto di vista funzionale (ad esempio, l'arresto anomalo dell'applicazione quando si fa clic su un pulsante), ma riguarda anche l'usabilità e le prestazioni. È consigliabile iniziare la stabilizzazione in una fase iniziale del processo di sviluppo in modo da eseguire immediatamente le correzioni prima che i problemi diventino un costo . In genere le applicazioni prevedono le fasi di *prototipo*, *alfa*, *beta* e *versione finale candidata*. Sebbene possano essere chiamate in modo diverso, queste fasi seguono in genere il modello seguente:
 
 1.   **Prototipo**: l'app è ancora nella fase di modello di verifica e solo la funzionalità principale e parti specifiche dell'applicazione sono funzionanti. Sono presenti i bug maggiori.
 1.   **Alfa**: il codice delle funzionalità principali è stato completato (le funzionalità sono state compilate ma non testate completamente). I bug maggiori sono ancora presenti e le funzionalità periferiche potrebbero non essere ancora presenti.
@@ -227,7 +227,7 @@ A causa di questa frammentazione estrema dei dispositivi Android, nella maggior 
 #### <a name="security-considerations"></a>Considerazioni sulla sicurezza
 
 Tutte le applicazioni nel sistema operativo Android vengono eseguite in un'identità distinta isolata con autorizzazioni limitate. Per impostazione predefinita, le applicazioni possono eseguire un numero molto limitato di operazioni. Ad esempio, senza autorizzazioni speciali, un'applicazione non può inviare un messaggio di testo, determinare lo stato del telefono o accedere a Internet. Per accedere a queste funzioni, è necessario che nel file manifesto dell'applicazione siano specificate le autorizzazioni richieste dall'applicazione al momento dell'installazione; il sistema operativo legge le autorizzazioni, notifica all'utente che l'applicazione richiede le autorizzazioni e consente all'utente di scegliere se continuare o annullare l'installazione.
-A causa del modello di Store delle applicazioni aperto, questo è un passaggio essenziale nel modello di distribuzione Android poiché ad esempio le applicazioni non sono controllate come in iOS. Per un elenco delle autorizzazioni delle applicazioni, vedere l'articolo di riferimento [Manifest Permissions](http://developer.android.com/reference/android/Manifest.permission.html) (Autorizzazioni del manifesto) nella documentazione di Android.
+A causa del modello di Store delle applicazioni aperto, questo è un passaggio essenziale nel modello di distribuzione Android poiché ad esempio le applicazioni non sono controllate come in iOS. Per un elenco delle autorizzazioni delle applicazioni, vedere l'articolo di riferimento [Manifest Permissions](https://developer.android.com/reference/android/Manifest.permission.html) (Autorizzazioni del manifesto) nella documentazione di Android.
 
 ### <a name="windows-considerations"></a>Considerazioni su Windows
 
@@ -253,5 +253,5 @@ Questa guida ha offerto un'introduzione al ciclo di vita di sviluppo del softwar
 
 - [Introduzione allo sviluppo per dispositivi mobili](~/cross-platform/get-started/introduction-to-mobile-development.md)
 - [Hello, iOS](~/ios/get-started/hello-ios/index.md)
-- [Hello, Android](http://developer.xamarin.com/get-started-droid/)
+- [Hello, Android](https://developer.xamarin.com/get-started-droid/)
 - [Nozioni di base sulle applicazioni](~/cross-platform/app-fundamentals/index.md)

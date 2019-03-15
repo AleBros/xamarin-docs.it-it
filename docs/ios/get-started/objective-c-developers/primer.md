@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: bfb20e8eddb4969f3418d0a0dddfcd19f2eeba02
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: df477dc0e4708a1d309810b5b8d4f755f3c49afb
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117551"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669817"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Introduzione a C# per sviluppatori Objective-C
 
@@ -123,7 +123,7 @@ Quando la parola chiave static viene applicata a una variabile in Objective-C, l
 
 Anche C# dispone di una parola chiave static. Quando viene applicata a un metodo, svolge in modo efficace la stessa funzione del modificatore `+` in Objective-C. In particolare, crea un metodo di classe. Analogamente, se applicato ad altri costrutti come campi, proprietà ed eventi, rende tali elementi parte del tipo in cui vengono dichiarati, anziché di qualsiasi istanza del tipo. È inoltre possibile creare una classe statica, in cui anche tutti i metodi definiti nella classe devono essere statici.
 
-### <a name="nsarray-vs-list-initialization"></a>NSArray e Inizializzazione elenco
+### <a name="nsarray-vs-list-initialization"></a>NSArray e inizializzazione elenco
 
 Objective-C include ora la sintassi dei valori letterali per l'uso con `NSArray`, che rende più semplice l'inizializzazione. C# tuttavia dispone di un tipo più completo denominato `List`, che è *generic*, vale a dire che il tipo contenuto nell'elenco può essere fornito dal codice che crea l'elenco, ad esempio i modelli in C++. Inoltre, gli elenchi supportano la sintassi di inizializzazione automatica, come illustrato di seguito:
 
@@ -143,7 +143,7 @@ Objective-C usa i *blocchi* per creare le chiusure, in cui è possibile creare u
 };
 ```
 
-Per altre informazioni sulle espressioni lambda, vedere la [Guida per programmatori C#](http://msdn.microsoft.com/library/vstudio/bb397687.aspx) di Microsoft.
+Per altre informazioni sulle espressioni lambda, vedere la [Guida per programmatori C#](https://msdn.microsoft.com/library/vstudio/bb397687.aspx) di Microsoft.
 
 ## <a name="summary"></a>Riepilogo
 

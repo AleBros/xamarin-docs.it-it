@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 0ec24e49e03237829474515a9abe9b014d10014f
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 336f1ec4e4406d2ab40c5e8aea247bd3be9ed765
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527118"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672729"
 ---
 # <a name="hello-ios--quickstart"></a>Hello, iOS - Guida introduttiva
 
@@ -496,5 +496,5 @@ La prima applicazione Xamarin.iOS è stata completata.
 
 - [Icone e immagini di avvio e dell'app Xamarin (esempio)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
 - [Hello, iOS (sample)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/) (Hello, iOS - Esempio)
-- [Linee guida dell'interfaccia umana iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
+- [Linee guida dell'interfaccia umana iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portale di provisioning iOS](https://developer.apple.com/ios/manage/overview/index.action)

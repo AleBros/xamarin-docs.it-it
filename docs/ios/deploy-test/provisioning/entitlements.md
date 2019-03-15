@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/13/2018
-ms.openlocfilehash: 6e45f87b3c64abb9de22e09150935e3e5065fea4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5ce778d0e6c2d023362ca5c9c691d77548dd7383
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103413"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672599"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Uso degli entitlement in Xamarin.iOS
 
@@ -68,7 +68,7 @@ Per configurare gli entitlement in Visual Studio, seguire questa procedura:
 
     ![](entitlements-images/servicevs02.png "Modifica degli entitlement")
 
-    In alternativa, facendo doppio clic sul file **Entitlements.plist**, si aprirà l'editor origine XML che consentirà di impostare la proprietà Entitlement e il valore della chiave, come illustrato in dettaglio nella sezione [Informazioni di riferimento sugli entitlement](#keyreference) più avanti.
+    In alternativa, facendo doppio clic sul file **Entitlements.plist**, si aprirà l'editor origine XML che consentirà di impostare la proprietà Entitlement e il valore della chiave, come illustrato in dettaglio nella sezione [Informazioni di riferimento sulle chiavi degli entitlement](#entitlement-key-reference) più avanti.
 
 5. Selezionare e configurare gli entitlement richiesti per l'applicazione Xamarin.iOS in modo che corrispondano alla configurazione definita durante la creazione dell'ID app.
 6. Salvare le modifiche apportate al file **Entitlements.plist**.
@@ -128,7 +128,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 
 ### <a name="app-groups"></a>Gruppi di app
 
-- **Descrizione**: un gruppo di app consente a diverse applicazioni o a un'applicazione e alle relative estensioni di accedere a un percorso di archiviazione file condiviso.
+- **Descrizione**: Un Gruppo di app consente a diverse applicazioni o a un'applicazione e alle relative estensioni di accedere a un percorso di archiviazione file condiviso.
 
     - **Chiave**: com.apple.security.application-groups
     - **Stringa**: group.$(CFBundleIdentifier)
@@ -148,7 +148,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 
 ### <a name="siri"></a>Siri
 
-- **Descrizione**: SiriKit consente a un'app iOS di fornire servizi accessibili a Siri e all'app Mappe su un dispositivo iOS usando le estensioni app e i nuovi framework Intent e Interfaccia utente Intent. Per altre informazioni, vedere la guida introduttiva a SiriKit.
+- **Descrizione**: SiriKit consente a un'app iOS di offrire servizi accessibili a Siri e all'app Mappe in un dispositivo iOS usando le estensioni app e i nuovi framework Intent e Interfaccia utente Intent. Per altre informazioni, vedere la guida introduttiva a SiriKit.
     - **Chiave**: com.apple.developer.siri
 
 ### <a name="personal-vpn"></a>VPN personale
@@ -158,7 +158,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 
 ### <a name="keychain-sharing"></a>Condivisione del keychain
 
-- **Descrizione**: la condivisione del keychain consente agli sviluppatori di app di condividere le password archiviate nel keychain di un dispositivo con le altre app sviluppate dallo stesso team. L'accesso può essere limitato passando un identificatore di gruppo di accesso keychain nella stringa.
+- **Descrizione**: la condivisione del keychain consente agli sviluppatori di app di condividere le password archiviate nel keychain di un dispositivo con altre app sviluppate dallo stesso team. L'accesso può essere limitato passando un identificatore di gruppo di accesso keychain nella stringa.
     - **Chiave**: keychain-access-groups
     - **Stringa**: $(AppIdentifierPrefix) $(CFBundleIdentifier)
 
@@ -182,25 +182,25 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 
 ### <a name="homekit"></a>HomeKit
 
-- **Descrizione**: il framework HomeKit fornisce una piattaforma per l'impostazione, la configurazione e la gestione dei dispositivi di domotica supportati da un solo dispositivo iOS. Per altre informazioni sull'uso di HomeKit, vedere la guida introduttiva a HomeKit.
+- **Descrizione**: il framework HomeKit offre una piattaforma per l'installazione, la configurazione e la gestione dei dispositivi di domotica supportati, tutto da un dispositivo iOS. Per altre informazioni sull'uso di HomeKit, vedere la guida introduttiva a HomeKit.
     - **Chiave**: com.apple.developer.homekit
     - **Valore booleano**: YES
 
 ### <a name="healthkit"></a>HealthKit
 
-- **Descrizione**: HealthKit è un framework introdotto in iOS 8 che fornisce un archivio dati centralizzato, coordinato e sicuro per le informazioni relative alla salute. Per altre informazioni sull'uso di HealthKit, vedere la guida introduttiva a HealthKit.
+- **Descrizione**: HealthKit è un framework introdotto in iOS 8 che offre un archivio dati centralizzato, coordinato e sicuro per le informazioni sanitarie. Per altre informazioni sull'uso di HealthKit, vedere la guida introduttiva a HealthKit.
     - **Chiave**: com.apple.developer.healthkit
     - **Valore booleano**: YES
 
 ### <a name="wireless-accessory-configuration"></a>Configurazione accessori wireless
 
-- **Descrizione**: l'uso di Configurazione accessori wireless consente all'app di configurare gli accessori Wi-Fi MFi
+- **Descrizione**: l'uso della Configurazione accessori wireless consente all'app di configurare gli accessori Wi-Fi MFi
     - **Chiave**: com.apple.external-accessory.wireless-configuration
     - **Valore booleano**: YES
 
 ### <a name="classkit"></a>ClassKit
 
-- **Descrizione**: ClassKit consente ai docenti di visualizzare l'avanzamento degli studenti nelle attività assegnate nell'app.
+- **Descrizione**: ClassKit consente ai docenti di visualizzare nell'app i progressi degli studenti nelle attività assegnate.
     - **Key**: com.apple.developer.ClassKit-environment
     - **Stringa**: `development` oppure `production`
 

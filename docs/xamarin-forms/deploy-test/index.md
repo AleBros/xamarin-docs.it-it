@@ -6,20 +6,31 @@ ms.assetid: 705c9fa4-12ef-4ee0-ab3e-8319ee9944c5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/31/2016
-ms.openlocfilehash: 74a80183c29b4f1681fdce85ed9debd9ee9fbce2
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35243222"
+ms.date: 03/04/2019
 ---
+
 # <a name="xamarinforms-deployment-and-testing"></a>Distribuzione e test di Xamarin.Forms
+
+## <a name="publishing-ios-appsiosdeploy-testapp-distributionindexmd"></a>[Pubblicazione di app iOS](~/ios/deploy-test/app-distribution/index.md)
+
+Le app iOS possono essere distribuite tramite l'App Store di Apple, internamente e tramite canali ad hoc.
+
+## <a name="publishing-android-appsandroiddeploy-testpublishingindexmd"></a>[Pubblicazione di app Android](~/android/deploy-test/publishing/index.md)
+
+Le app Android possono essere distribuite tramite canali quali la posta elettronica, un server Web privato, Google Play o Amazon Appstore per Android.
+
+## <a name="publishing-universal-windows-platform-appswindowsuwppackaging"></a>[Pubblicazione di app della piattaforma UWP (Universal Windows Platform)](/windows/uwp/packaging/)
+
+Le app UWP possono essere distribuite tramite Microsoft Store, il sideload diretto del pacchetto dell'app in un dispositivo o tramite installazione Web.
+
+## <a name="publishing-mac-appsmacdeploy-testpublishing-to-the-app-storeindexmd"></a>[Pubblicazione di app Mac](~/mac/deploy-test/publishing-to-the-app-store/index.md)
+
+Le app Mac possono essere distribuite tramite Mac App Store oppure direttamente.
 
 ## <a name="performanceperformancemd"></a>[Prestazioni](performance.md)
 
 Esistono molte tecniche per incrementare le prestazioni delle app Xamarin.Forms. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 
-## <a name="automated-testing-with-xamarinuitest-and-app-centeruitest-and-test-cloudmd"></a>[Test automatizzati con Xamarin.UITest e App Center](uitest-and-test-cloud.md)
+## <a name="automated-testing-with-visual-studio-app-centerappcentertest-cloud"></a>[Test automatizzati con Visual Studio App Center](/appcenter/test-cloud/)
 
-Per scrivere test dell'interfaccia utente da eseguire nel cloud su centinaia di dispositivi, è possibile usare il componente **UITest** di Xamarin Test Cloud.
+Test App Center è un servizio di automazione dei test per app per dispositivi mobili native e ibride, noto anche come Test Cloud.

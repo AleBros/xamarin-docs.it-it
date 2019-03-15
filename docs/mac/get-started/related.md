@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 12/02/2016
-ms.openlocfilehash: 745328aeb884031863d8d85caca1e4a6563fc916
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 87987e79fce2bd5277f8092d09752fe715e2f2ce
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526949"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667652"
 ---
 # <a name="xamarinmac-related-documentation"></a>Xamarin.Mac - Documentazione correlata
 
@@ -22,7 +22,7 @@ Oltre alla sezione Mac di [developer.xamarin.com](~/mac/get-started/index.md) so
 
 - [Mac Dev Center](https://developer.apple.com/devcenter/mac/) di **Apple**: spesso un esempio di quali API chiamare in Objective-C può essere convertito in C# in modo semplice. Per altri dettagli su come eseguire questa operazione, vedere [Understanding Mac APIs](~/mac/app-fundamentals/mac-apis.md) (Informazioni sulle API Mac).
 
-- [**Stack Overflow**](http://stackoverflow.com/): un'ottima risorsa per trovare domande e risposte dirette, ad esempio ["Come espandere automaticamente tutti i nodi in un elemento NSOutlineView"](http://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes). Questi esempi sono spesso in Objective-C e devono essere convertiti in C#, ma è presente anche un subset delle risposte in C#.
+- [**Stack Overflow**](https://stackoverflow.com/): un'ottima risorsa per trovare domande e risposte dirette, ad esempio ["Come espandere automaticamente tutti i nodi in un elemento NSOutlineView"](https://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes). Questi esempi sono spesso in Objective-C e devono essere convertiti in C#, ma è presente anche un subset delle risposte in C#.
 
 ## <a name="user-interface"></a>Interfaccia utente
 

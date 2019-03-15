@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 1a2739d1a3848303b3086c23c0a28a889250ee2e
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: b89f5329430fed0387443bf923c45cd40181b22e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675510"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668387"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Dispositivi multi-core e Xamarin.Android
 
@@ -154,7 +154,7 @@ lib/armeabi-v7a/libone.so
 lib/armeabi-v7a/libtwo.so
 ```
 
-#### <a name="installing-native-libraries-android-40-ndash-android-403"></a>Installazione delle librerie native: Android 4.0 e Android 4.0.3
+#### <a name="installing-native-libraries-android-40-ndash-android-403"></a>Installazione delle librerie native: Android 4.0 - Android 4.0.3
 
 In Android 4.0 Ice Cream Sandwich è stata cambiata la logica di estrazione. Vengono enumerate tutte le librerie native, viene verificato se il nome base del file è già stato estratto e, se sono soddisfatte entrambe le condizioni seguenti, viene estratta la libreria:
 
@@ -177,7 +177,7 @@ $APP/lib/libone.so
 $APP/lib/libtwo.so
 ```
 
-Sfortunatamente, questo comportamento è dipendente dall'ordine, come descritto nel documento seguente: [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](http://code.google.com/p/android/issues/detail?id=25321) (Problema 24321: Galaxy Nexus 4.0.2 usa il codice nativo armeabi quando sia armeabi che armeabi-v7a sono inclusi nel file apk).
+Sfortunatamente, questo comportamento è dipendente dall'ordine, come descritto nel documento [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](http://code.google.com/p/android/issues/detail?id=25321) (Problema 24321: Galaxy Nexus 4.0.2 usa il codice nativo armeabi quando sia armeabi che armeabi-v7a sono inclusi nel file apk).
 
 Le librerie native vengono elaborate "in ordine" (come sono elencate, ad esempio, da unzip) e viene estratta la *prima corrispondenza*. Poiché il file `.apk` contiene le versioni `armeabi` e `armeabi-v7a` di `libtwo.so` e `armeabi` è elencato per primo, viene estratta la versione `armeabi`, *non* la versione `armeabi-v7a`:
 
@@ -257,6 +257,6 @@ In questo documento sono state illustrate le diverse architetture della CPU in c
 
 - [Architettura MIPS](http://www.mips.com/products/product-materials/processor/mips-architecture)
 - [Interfaccia ABI per l'architettura ARM (PDF)](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0036b/IHI0036B_bsabi.pdf)
-- [Android NDK](http://developer.android.com/tools/sdk/ndk/index.html)
+- [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)
 - [Problema 9089:Nexus One non carica alcuna libreria nativa da armeabi se è presente almeno una libreria in armeabi v7a](http://code.google.com/p/android/issues/detail?id=9089)
-- [Problema 24321: Galaxy Nexus 4.0.2 usa il codice nativo armeabi quando sia armeabi che armeabi-v7a sono inclusi nel file apk](http://code.google.com/p/android/issues/detail?id=25321) 
+- [Problema 24321: Galaxy Nexus 4.0.2 usa il codice nativo armeabi quando sia armeabi che armeabi-v7a sono inclusi nel file apk](http://code.google.com/p/android/issues/detail?id=25321)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: 870a9cb20ea962b3c1a342e7222c5e9322537dd1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4f545893ca4cde441cd05fc3d8e52ecf0f6aae98
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109211"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669492"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Uso di mtouch per creare un bundle di app Xamarin.iOS
 
@@ -66,7 +66,7 @@ Per compilare il software per il dispositivo, è necessario compilare l'applicaz
 $ mtouch -dev -c "iPhone Developer: Miguel de Icaza" foo.exe
 ```
 
-In questo caso specifico, viene usato il certificato "iPhone Developer: Miguel de Icaza" per firmare l'applicazione. Questo passaggio è molto importante o il dispositivo fisico rifiuterà di caricare l'applicazione.
+In questo caso specifico viene usato il certificato "iPhone Developer: Miguel de Icaza" per firmare l'applicazione. Questo passaggio è molto importante o il dispositivo fisico rifiuterà di caricare l'applicazione.
 
  <a name="Running_your_Application" />
 
@@ -110,7 +110,7 @@ Se l'applicazione non riesce, è possibile visualizzare l'output e l'errore per 
 
 ### <a name="deploying-to-a-device"></a>Distribuzione a un dispositivo
 
-Per distribuire l'applicazione nel dispositivo, è necessario effettuare il provisioning del dispositivo in base a quanto descritto nel documento sulla [gestione dei dispositivi](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html) di Apple. Dopo aver completato correttamente il provisioning del dispositivo, è possibile usare il comando mtouch per distribuire un bundle ".app" compilato nel dispositivo. A questo scopo, usare questo comando:
+Per distribuire l'applicazione nel dispositivo, è necessario effettuare il provisioning del dispositivo in base a quanto descritto nel documento sulla [gestione dei dispositivi](https://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html) di Apple. Dopo aver completato correttamente il provisioning del dispositivo, è possibile usare il comando mtouch per distribuire un bundle ".app" compilato nel dispositivo. A questo scopo, usare questo comando:
 
 ```bash
 $ mtouch —sdkroot /Applications/Xcode.app -installdev=MyApp.app

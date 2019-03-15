@@ -1,5 +1,5 @@
 ---
-title: 'Hello, Android: approfondimenti'
+title: 'Hello, Android: Approfondimenti'
 description: In questa guida in due parti è possibile creare un'applicazione Xamarin.Android per la prima volta e comprendere le nozioni di base dello sviluppo di applicazioni Android con Xamarin. Verranno descritti gli strumenti, i concetti e i passaggi necessari per creare e distribuire un'applicazione Xamarin.Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -9,14 +9,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: cdd0a792a76fa411fdc010c3d662a3d1acc2f373
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3d34ce3d5cb6e8e4931eafcc7cd82d141f5db8d7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108814"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670181"
 ---
-# <a name="hello-android-deep-dive"></a>Hello, Android: approfondimenti
+# <a name="hello-android-deep-dive"></a>Hello, Android: Approfondimenti
 
 _In questa guida in due parti è possibile creare un'applicazione Xamarin.Android per la prima volta e comprendere le nozioni di base dello sviluppo di applicazioni Android con Xamarin. Verranno descritti gli strumenti, i concetti e i passaggi necessari per creare e distribuire un'applicazione Xamarin.Android._
 
@@ -113,7 +113,7 @@ La directory **Risorse** contiene quattro cartelle denominate **drawable**, **la
 
 Gli elementi sono riepilogati nella tabella riportata di seguito:
 
-- **drawable** &ndash; La directory drawable contiene le [risorse drawable](http://developer.android.com/guide/topics/resources/drawable-resource.html), ad esempio immagini e bitmap.
+- **drawable** &ndash; La directory drawable contiene le [risorse drawable](https://developer.android.com/guide/topics/resources/drawable-resource.html), ad esempio immagini e bitmap.
 
 - **mipmap** &ndash; La directory mipmap contiene i file drawable per icone di avvio con densità diverse. Nel modello predefinito, la directory drawable contiene il file dell'icona dell'applicazione, **Icon.png**.
 
