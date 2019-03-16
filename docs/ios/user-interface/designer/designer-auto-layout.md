@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: cfb684df89bf800a0d32607b119d1bd3fc297c58
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 41a9ec90b4b734dde7a982ac3d4b2e7b2082321c
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123739"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070866"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automatico con la finestra di progettazione di Xamarin per iOS
 
@@ -22,7 +22,7 @@ In questa guida vengono presentati i vincoli e come utilizzarle in Xamarin iOS D
 
 ## <a name="requirements"></a>Requisiti
 
-La finestra di progettazione di Xamarin per iOS è disponibile in Visual Studio per Mac in Visual Studio 2015 e 2017 in Windows.
+La finestra di progettazione di Xamarin per iOS è disponibile in Visual Studio per Mac in Visual Studio 2017 e versioni successive su Windows.
 
 Questa guida presuppone una conoscenza dei componenti della finestra di progettazione dal [Introduzione a iOS Designer](~/ios/user-interface/designer/introduction.md) Guida.
 
@@ -56,11 +56,11 @@ Per impostazione predefinita, vincoli non vengono creati o visibile sulla superf
 
 La barra degli strumenti di vincoli è stata aggiornata e ora è costituito da due parti principali:
 
-- **Un elemento toggle pulsante modalità vincoli**: in precedenza, immesso la modalità dei vincoli facendo nuovamente clic su una visualizzazione selezionata nell'area di progettazione. È ora consigliabile usare questo interruttore nella barra di vincoli:
+- **Un elemento toggle pulsante modalità vincoli**: Immesso in precedenza, la modalità dei vincoli facendo nuovamente clic su una visualizzazione selezionata nell'area di progettazione. È ora consigliabile usare questo interruttore nella barra di vincoli:
 
   ![Attiva/Disattiva modalità di vincoli](designer-auto-layout-images/constraints.png)
 
-- **Un pulsante di "Aggiornamento dei vincoli":** è importante notare che le modifiche a seconda se si è in modalità di modifica di vincoli.
+- **Un pulsante di "Aggiornamento dei vincoli":** È importante notare che le modifiche a seconda se si è in modalità di modifica di vincoli.
   - In modalità di modifica vincolo questo pulsante consente di modificare i vincoli in modo che corrisponda il frame di elemento.
   - In modalità di modifica Frame questo pulsante si regola il frame di elemento in modo che corrisponda alla posizione che definiscono i vincoli.
 

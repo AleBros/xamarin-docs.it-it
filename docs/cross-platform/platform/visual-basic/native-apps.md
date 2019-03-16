@@ -6,12 +6,12 @@ ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 55c08c1bd0d82f8458e0c07b4202b6275600ff38
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: f62d3cb076019ba49303f2c82f009975d9fbdc50
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671104"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070969"
 ---
 # <a name="visual-basicnet-in-xamarin-ios-and-android"></a>Visual Basic.NET in Xamarin iOS e Android
 
@@ -284,18 +284,6 @@ Per assicurarsi che il sistema di controllo della versione può archiviare l'out
 2. Aggiungere un _post-compilazione_ script che copia la DLL di output da questo progetto nella directory radice del progetto (che è di fuori del **/bin/**). A seconda della configurazione di controllo di versione, la DLL dovrebbe ora essere possibile da aggiungere al controllo del codice sorgente.
 
   [![](native-apps-images/image6-vs-sml.png "Gli eventi di compilazione post script di compilazione per copiare la DLL VB")](native-apps-images/image6-vs.png#lightbox)
-
-#### <a name="visual-studio-2015"></a>Visual Studio 2015
-
-1.  Pulsante destro del mouse sul progetto e scegliere **proprietà > compilare** , quindi verificare che tutte le configurazioni sia selezionata nella parte superiore sinistra pettine-casella. Fare clic su di **gli eventi di compilazione...**  pulsante in basso a destra.
-
-    [![](native-apps-images/image6.png "Sezione di compilare le proprietà del progetto")](native-apps-images/image6.png#lightbox)
-
-1.  Aggiungere uno script di post-compilazione che copia la DLL di output da questo progetto nella directory radice del progetto (che è di fuori di **/bin/** ). A seconda della configurazione di controllo di versione, la DLL dovrebbe ora essere possibile da aggiungere al controllo del codice sorgente.
-
-    [![](native-apps-images/image7.png "Finestra degli eventi di compilazione")](native-apps-images/image7.png#lightbox)
-
-#### <a name="all-versions"></a>Tutte le versioni
 
 Prossima volta che si compila il progetto, verrà copiato l'assembly di libreria di classi portabile alla radice del progetto e quando è check-in, commit o push delle modifiche della DLL saranno archiviati (in modo che può essere scaricato in un computer Mac con Visual Studio per Mac).
 

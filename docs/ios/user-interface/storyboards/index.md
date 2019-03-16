@@ -20,7 +20,7 @@ Uno Storyboard può essere creato, aperti e modificato con Xamarin iOS Designer.
 
 ## <a name="requirements"></a>Requisiti
 
-Gli storyboard sono utilizzabile con iOS Designer in Visual Studio per Mac o Visual Studio 2015 e 2017 con i carichi di lavoro Xamarin installati.
+Gli storyboard sono utilizzabile con iOS Designer in Visual Studio per Mac o Visual Studio 2017 con i carichi di lavoro Xamarin installati.
 
 ## <a name="what-is-a-storyboard"></a>Che cos'è uno Storyboard?
 

@@ -1,5 +1,5 @@
 ---
-title: Domande frequenti
+title: Domande frequenti su xamarin. IOS
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 65E04188-185D-493D-BA3C-A89711CB6CAF
@@ -7,14 +7,9 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d2d0af5a69920f392eba1cd655f1d8ab74971be6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107508"
 ---
-# <a name="frequently-asked-questions"></a>Domande frequenti
+
+# <a name="ios-frequently-asked-questions"></a>Domande frequenti su iOS
 
 ## <a name="general-questions"></a>Domande generali
 
@@ -58,7 +53,7 @@ Sì, è possibile, ma in genere è necessario firmare nuovamente il `.app` bundl
 ### <a name="is-it-possible-to-create-a-xcarchive-archive-from-visual-studiocreate-xcarchivemd"></a>[È possibile creare un archivio xcarchive da Visual Studio?](create-xcarchive.md)
 A partire da Xamarin 4, è ora possibile creare un `.xcarchive` da Windows, impostare il `ArchiveOnBuild` proprietà `true`.
 
-### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[Perché l'invio dell'app non riesce con l'errore: "Percorsi non consentiti ( "iTunesMetadata.plist" ) in ..." ?](itunesmetadata-disallowed-paths.md)
+### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[Perché l'invio app non riesce con l'errore: "Disallowed paths ( "iTunesMetadata.plist" ) found at ..." (Percorsi non consentiti ( "iTunesMetadata.plist" ) rilevati in...)?](itunesmetadata-disallowed-paths.md)
 Questo errore è il risultato di una modifica nel processo di verifica App Store di Apple. Questo errore specifico viene _non_ correlata a una versione particolare di aver installato Xamarin, pertanto il downgrade saranno _non_ Guida in linea. In questa guida il collegamento per altre informazioni su come risolvere il problema.
 
 
@@ -70,10 +65,10 @@ Gli errori con `RegisterServicePort` e messaggi di errore simile come in precede
 ### <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychainno-codesigning-keysmd"></a>[Perché la compilazione iOS non riesce con l'errore: nessuna chiave di firma del codice iPhone valida trovata nel keychain?](no-codesigning-keys.md)
 Questo messaggio di errore si verifica quando il progetto in questione esegue la ricerca di credenziali di firma codice valide ma non è possibile trovarli. La firma del codice è necessaria per il test e le distribuzioni nei dispositivi iOS fisici; così come App e Ad-hoc archiviare le compilazioni.
 
-### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[Perché l'app iOS 9 genera l'errore: System.Exception: impossibile effettuare il marshalling dell'oggetto Objective-C?](exception-marshal-obj-c.md)
+### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[Perché l'app iOS 9 restituisce l'errore: System.Exception: Failed to marshal the Objective-C object (System.Exception: marshalling oggetto Objective-C non riuscito)?](exception-marshal-obj-c.md)
 Modifiche apportate all'API in iOS 9 richiede l'utilizzo di un costruttore di callback quando la chiamata a codice non gestito, come l'API sottostante a questo punto si aspetta.
 
-### <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loadederror-mscorlib-not-foundmd"></a>[Errore di runtime: impossibile trovare o caricare l'assembly mscorlib.dll](error-mscorlib-not-found.md)
+### <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loadederror-mscorlib-not-foundmd"></a>[Errore di runtime: Impossibile trovare o caricare l'assembly mscorlib.dll](error-mscorlib-not-found.md)
 Questo problema si verifica quando la *nascosto* `.monotouch-32` e `.monotouch-64` cartelle non sono presenti il `.xcarchive` per la firma / creazione pacchetto IPA, ha attivato l'errore di runtime.
 
 ## <a name="deprecated"></a>Deprecato
@@ -86,7 +81,7 @@ Questo problema si verifica quando la *nascosto* `.monotouch-32` e `.monotouch-6
 ### <a name="ipa-file-is-0-bytesipa-zero-bytesmd"></a>[Il file IPA è di 0 byte](ipa-zero-bytes.md)
 Si sono verificati alcuni problemi noti nelle versioni precedenti di Xamarin che potrebbe causare il file IPA nel Windows sia pari a 0 byte.
 
-### <a name="ibtool-error-the-operation-couldnt-be-completederror-ibtoolmd"></a>[Errore IBTool: Impossibile completare l'operazione.](error-ibtool.md)
+### <a name="ibtool-error-the-operation-couldnt-be-completederror-ibtoolmd"></a>[Errore IBTool: Non è stato possibile completare l'operazione.](error-ibtool.md)
 Apple [fissa](https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Chapters/xc6_release_notes.html) ciò `ibtool` bug in Xcode 6.1.1, pertanto, l'aggiornamento a Xcode 6.1.1 o versione successiva è la soluzione più semplice.
 
 ### <a name="error-mt1009-could-not-copy-the-assemblyerror-mt1009md"></a>[Errore MT1009: Impossibile copiare l'assembly](error-mt1009.md)

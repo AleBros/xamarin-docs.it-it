@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 0401c2c05677c719bbe4914cc7e008b650fdd198
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 98504c9d5f210d55a2be4c85c52d4bc1418fc223
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526241"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070826"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>Uso di controlli personalizzati con iOS Designer
 
 ## <a name="requirements"></a>Requisiti
 
-La finestra di progettazione di Xamarin per iOS è disponibile in Visual Studio per Mac e Visual Studio 2015 e 2017 in Windows.
+La finestra di progettazione di Xamarin per iOS è disponibile in Visual Studio per Mac e Visual Studio 2017 e versioni successive su Windows.
 
 Questa guida presuppone una familiarità con il contenuto illustrato nel [Guida introduttiva descrive](~/ios/get-started/index.md).
 
@@ -277,5 +277,5 @@ In questo articolo viene descritto come creare un controllo personalizzato e com
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [ScratchTicket (esempio)](https://developer.xamarin.com/samples/monotouch/ScratchTicket/)
+- [ScratchTicket (sample)](https://developer.xamarin.com/samples/monotouch/ScratchTicket/)
 - [immagini necessarie (esempio)](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)

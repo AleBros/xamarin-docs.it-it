@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: b37070ca627e535f9470916e9f84cdf55bb2aed3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7626c49b2267cbd087a16c310f1b85aea7139823
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056136"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981731"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>FlexLayout di xamarin. Forms
 
@@ -486,11 +486,11 @@ Il [ `AlignContent` ](xref:Xamarin.Forms.FlexLayout.AlignContent) proprietà è 
 
 Ad esempio `AlignItems`, il `AlignContent` proprietà inoltre consente di allineare gli elementi figlio sull'asse incrociato, ma influisce sulle righe o colonne intere:
 
-[![La pagina dell'esperimento: Allineamento del contenuto](flex-layout-images/ExperimentAlignContent.png "allineare il contenuto, la pagina dell'esperimento:")](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
+[![La pagina dell'esperimento: Allineare il contenuto](flex-layout-images/ExperimentAlignContent.png "allineare il contenuto, la pagina dell'esperimento:")](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
 
 Nella schermata iOS, entrambe le righe sono in alto. Nella schermata Android in cui si trovano al centro; e nella schermata UWP sono nella parte inferiore. Le righe possono anche essere separate da uno spazio in vari modi:
 
-[![La pagina dell'esperimento: Allinea contenuto 2](flex-layout-images/ExperimentAlignContent2.png "pagina dell'esperimento - Allinea contenuto 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
+[![La pagina dell'esperimento:  Allinea contenuto 2](flex-layout-images/ExperimentAlignContent2.png "pagina dell'esperimento - Allinea contenuto 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
 
 Il `AlignContent` non ha alcun effetto quando si verifica solo una riga o colonna.
 
@@ -517,13 +517,13 @@ Di qualsiasi singolo figlio di `FlexLayout`, questa proprietà di impostazione d
 Per un `Label` elemento denominato `label` (o esempio), è possibile impostare il `AlignSelf` proprietà nel codice simile al seguente:
 
 ```csharp
-FlexAlign.SetAlignSelf(label, FlexAlignSelf.Center);
+FlexLayout.SetAlignSelf(label, FlexAlignSelf.Center);
 ```
 
 Si noti che non sono presenti riferimenti per il `FlexLayout` padre del `Label`. In XAML, è impostare la proprietà simile al seguente:
 
 ```xaml
-<Label ... FlexAlign.AlignSelf="Center" ... />
+<Label ... FlexLayout.AlignSelf="Center" ... />
 ```
 
 ### <a name="the-order-property"></a>La proprietà dell'ordine
@@ -580,7 +580,7 @@ Il **base sperimentare** pagina della **[FlexLayoutDemos](https://developer.xama
 
 [![Pagina di sperimentare le basi](flex-layout-images/BasisExperiment.png "base sperimentare pagina")](flex-layout-images/BasisExperiment-Large.png#lightbox)
 
-Nella schermata iOS a sinistra mostra i due `Label` elementi viene forniti l'altezza in unità indipendenti dal dispositivo. Visualizza lo schermo Android viene fornito l'altezza delle righe che sono una frazione dell'altezza totale del `FlexLayout`. Se il `Basis` è impostato su 100%, quindi l'elemento figlio è l'altezza del `FlexLayout`e a capo nella colonna successiva e occupare l'intera altezza della colonna, come illustrato nella schermata di piattaforma UWP: viene visualizzato come se cinque elementi figlio vengono disposte in una riga , ma in realtà sono disposti in cinque colonne.
+Nella schermata iOS a sinistra mostra i due `Label` elementi viene forniti l'altezza in unità indipendenti dal dispositivo. Visualizza lo schermo Android viene fornito l'altezza delle righe che sono una frazione dell'altezza totale del `FlexLayout`. Se il `Basis` è impostato su 100%, quindi l'elemento figlio è l'altezza del `FlexLayout`e a capo nella colonna successiva e occupare l'intera altezza della colonna, come illustrato nella schermata di piattaforma UWP: Viene visualizzato come se cinque elementi figlio vengono disposte in una riga, ma in realtà sono disposti in cinque colonne.
 
 ### <a name="the-grow-property"></a>L'aumento delle dimensioni di proprietà
 

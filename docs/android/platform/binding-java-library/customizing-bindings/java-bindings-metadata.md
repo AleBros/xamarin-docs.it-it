@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: ce9bf0293b846299cc7cd06773ce936f725715fa
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 06a7a3b00934b7a2f3eeb4fcfa6fc90071901ba0
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669895"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070904"
 ---
 # <a name="java-bindings-metadata"></a>Metadati per le associazioni Java
 
@@ -246,7 +246,10 @@ Modifica il tipo restituito di un metodo. Ciò non modifica l'attributo restitui
 
 ### <a name="obfuscated"></a>offuscati
 
-Gli strumenti che coprono le librerie Java possono interferire con il generatore di Binding xamarin. Android e la possibilità di generare C# classi wrapper. Caratteristiche delle classi offuscate includono: * include il nome della classe una **$**, vale a dire **una class $** * il nome della classe è compromesso interamente di caratteri minuscoli, ad esempio  **a.Class**
+Gli strumenti che coprono le librerie Java possono interferire con il generatore di Binding xamarin. Android e la possibilità di generare C# classi wrapper. Caratteristiche delle classi offuscate includono: 
+
+* Il nome della classe include una **$**, vale a dire **una class $**
+* Il nome della classe è compromesso interamente di caratteri minuscoli, ad esempio **a.class**
 
 Questo frammento di codice è riportato un esempio di come generare un "non offuscata" C# tipo:
 

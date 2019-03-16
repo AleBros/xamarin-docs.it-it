@@ -6,21 +6,18 @@ ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
 author: asb3993
 ms.author: amburns
 ms.date: 03/20/2017
-ms.openlocfilehash: 7b1f96807d77d9db0a892c5e78124eb3a9890edc
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 3e3d426e7b00725eafeba139de5bc46d416c368a
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251093"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070891"
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>Estensioni di Visual Studio mancanti dopo l'installazione
 
 ## <a name="error-message-this-project-is-incompatible-with-the-current-edition-of-visual-studio"></a>Messaggio di errore: Questo progetto è incompatibile con la versione attuale di Visual Studio
 
-Verificare che sia installata una versione compatibile di Visual Studio:
-
--   Visual Studio 2017 (Community, Professional o Enterprise)
--   Visual Studio 2015 (Community, Professional o Enterprise)
+Verificare che Visual Studio 2017 (Community, Professional o Enterprise) o versioni successive è installato.
 
 Vedere anche il [requisiti di Windows](~/cross-platform/get-started/requirements.md#windows-requirements).
 
@@ -55,7 +52,7 @@ In alcuni casi, il programma di installazione di Xamarin potrebbe automaticament
 
     `"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe" /setup`
 
-## <a name="possible-fix-3-try-a-fresh-reinstall-of-xamarin"></a>Correzione di possibili 3: Provare una reinstallazione aggiornata di Xamarin
+## <a name="possible-fix-3-try-a-fresh-reinstall-of-xamarin"></a>Correzione di possibili 3: Provare a reinstallare aggiornata di Xamarin
 
 1.  Dal Pannello di controllo di Windows, disinstallare uno qualsiasi dei seguenti elementi, che sono presenti:
 
@@ -99,7 +96,7 @@ In alcuni casi, il programma di installazione di Xamarin potrebbe automaticament
 
 10.  Reinstallare la versione stabile corrente di Xamarin da [visualstudio.com](https://visualstudio.com/xamarin).
 
-## <a name="possible-fix-4-repair-visual-studio-installation"></a>Correzione possibili 4: Installazione ripristinare Visual Studio
+## <a name="possible-fix-4-repair-visual-studio-installation"></a>Correzione di possibili 4: Ripristinare l'installazione di Visual Studio
 
 1.  Aprire il Windows **programmi e funzionalità** Pannello di controllo.
 

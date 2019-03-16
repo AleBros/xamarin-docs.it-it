@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/31/2018
-ms.openlocfilehash: 8622c40e41071d6c05b05abbe2d5d8a8a844ebde
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
+ms.openlocfilehash: 2c6409410ecba7df8559c07c3231f5e493c98897
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285586"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071078"
 ---
 # <a name="ios-designer-basics"></a>Nozioni fondamentali sulla progettazione di iOS
 
 _Questa guida illustra la finestra di progettazione di Xamarin per iOS. Viene illustrato come usare iOS Designer per visivamente il layout dei controlli, come accedere a tali controlli nel codice e come modificare le proprietà._
 
-La finestra di progettazione di Xamarin per iOS è una finestra di progettazione interfaccia visiva grafica, simile a Interface Builder di Xcode e Android Designer. Alcune delle numerose funzionalità includono integrazione perfetta con Visual Studio per Mac e Visual Studio 2015 e 2017, la modifica di trascinamento e rilascio, un'interfaccia per l'impostazione dei gestori eventi e la possibilità di eseguire il rendering di controlli personalizzati.
+La finestra di progettazione di Xamarin per iOS è una finestra di progettazione interfaccia visiva grafica, simile a Interface Builder di Xcode e Android Designer. Alcune delle numerose funzionalità includono integrazione senza problemi con Visual Studio per Windows e Mac, la modifica di trascinamento e rilascio, un'interfaccia per l'impostazione dei gestori eventi e la possibilità di eseguire il rendering di controlli personalizzati.
 
 ## <a name="requirements"></a>Requisiti
 
-IOS Designer è disponibile in Visual Studio per Mac e in Visual Studio 2015 e 2017 in Windows. In Visual Studio 2015 o 2017, iOS Designer richiede una connessione a un host di compilazione Mac configurato correttamente, anche se è necessario Xcode non sia in esecuzione.
+IOS Designer è disponibile in Visual Studio per Mac e Visual Studio 2017 e versioni successive su Windows. In Visual Studio per Windows, iOS Designer richiede una connessione a un host di compilazione Mac configurato correttamente, anche se è necessario Xcode non sia in esecuzione.
 
 Questa guida presuppone una familiarità con il contenuto illustrato nel [Guida introduttiva descrive](~/ios/get-started/index.md).
 
@@ -151,7 +151,7 @@ Progetti xamarin. IOS creati con Visual Studio per Mac include uno storyboard. P
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-La maggior parte dei progetti xamarin. IOS creati con Visual Studio 2015 o 2017 includono uno storyboard. Per visualizzare il contenuto di uno storyboard, fare doppio clic sul file storyboard nel **Esplora soluzioni**:
+La maggior parte dei progetti xamarin. IOS creati con Visual Studio includono uno storyboard. Per visualizzare il contenuto di uno storyboard, fare doppio clic sul file storyboard nel **Esplora soluzioni**:
 
 [![Apre uno storyboard in iOS Designer](introduction-images/7-storyboardopen-vs.png "apre uno storyboard in iOS Designer")](introduction-images/7-storyboardopen-vs-large.png#lightbox)
 

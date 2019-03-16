@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/01/2017
-ms.openlocfilehash: 435ca560eee4f8f44443816c2a4ccec195ba5395
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b02ecc8a40f6ff8a1862d50202439d369003a53d
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103894"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981601"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Uso di ARKit con UrhoSharp in xamarin. IOS
 
@@ -207,11 +207,11 @@ void OnTouchEnd(TouchEndEventArgs e)
 
 A seconda delle condizioni di illuminazione reale, la scena virtuale deve essere più chiaro o scuro per adattarlo meglio dell'ambiente circostante. ARFrame contiene una proprietà LightEstimate che è possibile usare per regolare l'illuminazione ambientale Urho, questa operazione viene eseguita come segue:
 
-
-    var ambientIntensity = (float) frame.LightEstimate.AmbientIntensity / 1000f;
-    var zone = Scene.GetComponent<Zone>();
-    zone.AmbientColor = Color.White * ambientIntensity;
-
+```csharp
+var ambientIntensity = (float) frame.LightEstimate.AmbientIntensity / 1000f;
+var zone = Scene.GetComponent<Zone>();
+zone.AmbientColor = Color.White * ambientIntensity;
+```
 
 ### <a name="beyond-ios---hololens"></a>Oltre a iOS - HoloLens
 
