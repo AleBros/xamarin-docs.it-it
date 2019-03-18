@@ -483,11 +483,11 @@ _Nell'elenco dalla località primaria, molti partner di fornire servizi tra i bo
 |[AGILUX](https://agilux.lu)|Pommerloch, Lussemburgo|Agilux è una società di consulenza di computer specializzato nell'integrazione di soluzioni IT per la gestione commerciale e l'accounting della materia, lo sviluppo di siti Web, e-commerce e applicazioni per dispositivi mobili|
 
 
-## <a name="macedonia"></a>Macedonia
+## <a name="macedonia"></a>Macedonia del Nord
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
-|[Anche gli equilibri interni di codice](http://www.codechem.com)|Skopje, Macedonia|Anche gli equilibri interni codice fornisce lo sviluppo di software, gestione progetto e consulting services. |
+|[Anche gli equilibri interni di codice](http://www.codechem.com)|Macedonia del Nord, Skopje|Anche gli equilibri interni codice fornisce lo sviluppo di software, gestione progetto e consulting services. |
 
 
 ## <a name="mexico"></a>Messico
