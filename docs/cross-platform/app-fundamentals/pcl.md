@@ -6,18 +6,18 @@ ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
 author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
-ms.openlocfilehash: a1e7152ca0f24d1ac660742e97907ea9300df9a7
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 221ee49e282b3b038d03f659d238336710283a66
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57666879"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175408"
 ---
 # <a name="portable-class-libraries-pcl"></a>Librerie di classi portabili
 
-> [!WARNING]
+> [!TIP]
 > Librerie di classi portabili (librerie di classi portabili) sono considerate obsoleti nelle ultime versioni di Visual Studio.
-> Mentre è ancora possibile aprire, modificare e compilare librerie di classi portabili, per i nuovi progetti è consigliabile usare [librerie .NET Standard](~/cross-platform/app-fundamentals/net-standard.md).
+> Mentre è ancora possibile aprire, modificare e compilare librerie di classi portabili, per i nuovi progetti è consigliabile usare [librerie .NET Standard](~/cross-platform/app-fundamentals/net-standard.md) per accedere a una superficie API più grande.
 
 Un componente fondamentale della compilazione di applicazioni multipiattaforma è la possibilità di condividere codice tra progetti specifici delle piattaforme diverse. Tuttavia, ciò è ulteriormente complicata dal fatto che usano spesso un sottoinsieme diverso della libreria di classi Base (BCL) .NET, piattaforme diverse e sono effettivamente compilate da un altro profilo di libreria .NET Core. Ciò significa che ogni piattaforma può usare solo le librerie di classi che sono destinate allo stesso profilo in modo che compaiono in modo da richiedere progetti libreria di classi separata per ogni piattaforma.
 

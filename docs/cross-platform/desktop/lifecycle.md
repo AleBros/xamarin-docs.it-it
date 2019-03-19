@@ -1,22 +1,22 @@
 ---
 ms.assetid: 7C132A7C-4973-4B2D-98DC-3661C08EA33F
-title: Visual Studio WPF. Ciclo di vita App xamarin. Forms
+title: Visual Studio WPF. Ciclo di vita delle app Xamarin.Forms
 description: Questo documento vengono confrontate le analogie e differenze tra il ciclo di vita dell'applicazione per le applicazioni xamarin. Forms e WPF. Descrive anche la struttura ad albero visuale, grafica, risorse e stili.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 653e2f849a74948d3636f594eae91cdeabfae138
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 5f157f2bbf36076e542a5f96b912cb1788a99052
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526793"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175226"
 ---
-# <a name="wpf-vs-xamarinforms-app-lifecycle"></a>Visual Studio WPF. Ciclo di vita App xamarin. Forms
+# <a name="wpf-vs-xamarinforms-app-lifecycle"></a>Visual Studio WPF. Ciclo di vita delle app Xamarin.Forms
 
 Xamarin. Forms richiede molte indicazioni per la progettazione dal framework basati su XAML prima di essa, in particolare WPF. Tuttavia, in altri modi esso devia in modo significativo che può essere un punto permanente per gli utenti il tentativo di eseguire la migrazione tramite. Questo documento tenta di identificare alcuni di questi problemi e fornire indicazioni laddove possibile per bridge della Knowledge base WPF a xamarin. Forms.
 
-## <a name="app-lifecycle"></a>Ciclo di vita App
+## <a name="app-lifecycle"></a>Ciclo di vita dell'app
 
 Il ciclo di vita dell'applicazione tra WPF e xamarin. Forms è simile. Entrambi avviare nel codice esterno (piattaforma) e avviare l'interfaccia utente tramite una chiamata al metodo. La differenza è che xamarin. Forms viene sempre avviato in un assembly specifico della piattaforma che quindi inizializza e crea l'interfaccia utente per l'app.
 
@@ -31,7 +31,7 @@ Il ciclo di vita dell'applicazione tra WPF e xamarin. Forms è simile. Entrambi 
 
 - **iOS** &ndash; `Main method > AppDelegate > App > ContentPage`
 - **Android** &ndash; `MainActivity > App > ContentPage`
-- **PIATTAFORMA UWP** &ndash; `Main method > App(UWP) > MainPage(UWP) > App > ContentPage`
+- **UWP** &ndash; `Main method > App(UWP) > MainPage(UWP) > App > ContentPage`
 
 ### <a name="application-class"></a>Classe dell'applicazione
 
@@ -137,7 +137,7 @@ Entrambe le piattaforme usano _le proprietà associate_ per ottimizzare gli elem
 
 ### <a name="rendering"></a>Rendering
 
-I meccanismi di rendering per WPF e xamarin. Forms sono completamente diversi. In WPF, i controlli che si crea direttamente il rendering del contenuto pixel sullo schermo. WPF gestisce due oggetti grafici (_alberi_) per rappresentare questa - il _albero logico_ rappresenta i controlli, come definito nel codice o XAML e il _struttura ad albero visuale_ rappresenta il il rendering effettivo che si verifica nella schermata di cui è eseguito direttamente tramite l'elemento visivo (tramite un metodo di disegno virtuale), o tramite un XAML definito `ControlTemplate` che possono essere sostituiti o personalizzati. In genere, la struttura visiva è più complessa perché questo include, ad esempio i bordi intorno a controlli, le etichette per contenuto implicito e così via. WPF include un set di API (`LogicalTreeHelper` e `VisualTreeHelper`) per esaminare questi due grafici di oggetti.
+I meccanismi di rendering per WPF e xamarin. Forms sono completamente diversi. In WPF, i controlli che si crea direttamente il rendering del contenuto pixel sullo schermo. WPF gestisce due oggetti grafici (_alberi_) per rappresentare questa - il _albero logico_ rappresenta i controlli, come definito nel codice o XAML e il _struttura ad albero visuale_ rappresenta il il rendering effettivo che si verifica nella schermata di cui è eseguito direttamente tramite l'elemento visivo (tramite un metodo di disegno virtuale), o tramite un XAML definito `ControlTemplate` che possono essere sostituiti o personalizzati. In genere, la struttura visiva è più complessa man mano che sono incluse informazioni quali i bordi intorno a controlli, le etichette per contenuto implicito e così via. WPF include un set di API (`LogicalTreeHelper` e `VisualTreeHelper`) per esaminare questi due grafici di oggetti.
 
 In xamarin. Forms, i controlli di definire in una `Page` sono oggetti di dati molto semplici. Questi sono simili alla rappresentazione dell'albero logico, ma mai il rendering del contenuto in modo indipendente. In questo caso sono le _modello di dati_ che influenza il rendering degli elementi. Il rendering effettivo avviene tramite un [separare set di _renderer visual_ che viene eseguito il mapping a ogni tipo di controllo](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Tali renderer vengono registrate in ogni progetto specifico della piattaforma da assembly specifici della piattaforma xamarin. Forms. È possibile visualizzare un elenco [qui](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md). Oltre a sostituire o estendere il renderer, xamarin. Forms include anche il supporto per [effetti](~/xamarin-forms/app-fundamentals/effects/index.md) che può essere usato per influenzare il rendering in base a ogni piattaforma nativo.
 
@@ -151,7 +151,7 @@ Xamarin. Forms non include un sistema di grafica per le primitive di oltre un se
 
 ## <a name="resources"></a>Risorse
 
-Xamarin. Forms e WPF prevedono il concetto di risorse e dizionari risorse. È possibile inserire qualsiasi tipo di oggetto in un `ResourceDictionary` con una chiave e quindi cercare con `{StaticResource}` per operazioni che non verranno modificata, o `{DynamicResource}` per operazioni che possono cambiare nel dizionario in fase di esecuzione. I meccanismi e utilizzo sono gli stessi con una differenza: xamarin. Forms che è necessario definire il `ResourceDictionary` per assegnare al `Resources` proprietà mentre WPF pre-crea uno e lo assegna automaticamente.
+Xamarin. Forms e WPF prevedono il concetto di risorse e dizionari risorse. È possibile inserire qualsiasi tipo di oggetto in un `ResourceDictionary` con una chiave e quindi cercare con `{StaticResource}` per operazioni che non verranno modificata, o `{DynamicResource}` per operazioni che possono cambiare nel dizionario in fase di esecuzione. I meccanismi e utilizzo sono gli stessi con una differenza: Xamarin. Forms che è necessario definire il `ResourceDictionary` per assegnare al `Resources` proprietà mentre WPF pre-crea uno e lo assegna automaticamente.
 
 Ad esempio, vedere la definizione seguente:
 

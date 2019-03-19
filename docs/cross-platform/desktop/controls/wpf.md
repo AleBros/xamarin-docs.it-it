@@ -1,18 +1,18 @@
 ---
 ms.assetid: 1BB412D1-FC3D-4E69-8B01-B976A3DB6328
-title: 'Visual Studio WPF. Xamarin. Forms: Analogie e differenze'
+title: 'Visual Studio WPF. Xamarin.Forms: Analogie e differenze'
 description: Questo documento vengono confrontate e contrapposte WPF a xamarin. Forms. Illustra i modelli di controllo, XAML, l'infrastruttura di associazione, i modelli di dati, ItemsControl, UserControl, navigazione e navigazione URL con.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: d3e772c270f6003d01e3e7b487f69f682fec2d61
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 990253cbd31ad79bc47f086dc5bd2b99233f2032
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617592"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175239"
 ---
-# <a name="wpf-vs-xamarinforms-similarities--differences"></a>Visual Studio WPF. Xamarin. Forms: Analogie e differenze
+# <a name="wpf-vs-xamarinforms-similarities--differences"></a>Visual Studio WPF. Xamarin.Forms: Analogie e differenze
 
 ## <a name="control-templates"></a>Modelli di controllo
 
@@ -154,7 +154,7 @@ Inoltre, non sono abbastanza flessibile come loro controparte WPF.
 
 ## <a name="itemscontrol"></a>ItemsControl
 
-Non vi è alcun equivelente predefinite per un `ItemsControl` in xamarin. Forms, ma non esiste un [uno personalizzato per xamarin. Forms disponibile qui](https://github.com/xamarinhq/xamu-infrastructure/blob/master/src/XamU.Infrastructure/Controls/ItemsControl.cs).
+Non è disponibile predefinita equivalente a un `ItemsControl` in xamarin. Forms; ma non esiste un [uno personalizzato per xamarin. Forms disponibile qui](https://github.com/xamarinhq/xamu-infrastructure/blob/master/src/XamU.Infrastructure/Controls/ItemsControl.cs).
 
 ## <a name="user-controls"></a>Controlli utente
 
@@ -169,11 +169,11 @@ Nei dispositivi di telefono, diversi _schermate_ rappresentano spesso la soluzio
 | Stile di navigazione | Tipo di pagina |
 |--- |--- |
 |Basato su stack (push/pop)|NavigationPage|
-|Master-Details|MasterDetailPage|
+|Report master o di dettaglio|MasterDetailPage|
 |Schede|TabbedPage|
 |Scorrere verso sinistra/destra|CarouselView|
 
-Il `NavigationPage` è l'approccio più comune e ogni pagina possiede un `Navigation` proprietà che può essere utilizzato per eseguire il push o Apri nuova finestra pagine e disattivare lo stack di navigazione. Questo è il più vicino equivelente al `NavigationService` disponibili in WPF.
+Il `NavigationPage` è l'approccio più comune e ogni pagina possiede un `Navigation` proprietà che può essere utilizzato per eseguire il push o Apri nuova finestra pagine e disattivare lo stack di navigazione. Si tratta dell'equivalente più vicina per il `NavigationService` disponibili in WPF.
 
 ### <a name="url-navigation"></a>Navigazione URL con
 
