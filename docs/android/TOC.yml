@@ -390,10 +390,14 @@ items:
       href: ~/essentials/battery.md?context=xamarin/android
     - name: Appunti
       href: ~/essentials/clipboard.md?context=xamarin/android
+    - name: Convertitori di colori
+      href: ~/essentials/color-converters.md?context=xamarin/android
     - name: Bussola
       href: ~/essentials/compass.md?context=xamarin/android
     - name: Connettività
       href: ~/essentials/connectivity.md?context=xamarin/android
+    - name: Rileva stretta
+      href: ~/essentials/detect-shake.md?context=xamarin/android
     - name: Informazioni sullo schermo del dispositivo
       href: ~/essentials/device-display.md?context=xamarin/android
     - name: Informazioni sul dispositivo
@@ -424,6 +428,8 @@ items:
       href: ~/essentials/orientation-sensor.md?context=xamarin/android
     - name: Dialer telefono
       href: ~/essentials/phone-dialer.md?context=xamarin/android
+    - name: Estensioni piattaforma (dimensioni, rettangolo, punto)
+      href: ~/essentials/platform-extensions.md?context=xamarin/android
     - name: Preferenze
       href: ~/essentials/preferences.md?context=xamarin/android
     - name: Archiviazione sicura
@@ -434,6 +440,8 @@ items:
       href: ~/essentials/sms.md?context=xamarin/android
     - name: Sintesi vocale
       href: ~/essentials/text-to-speech.md?context=xamarin/android
+    - name: Convertitori di unità
+      href: ~/essentials/unit-converters.md?context=xamarin/android
     - name: Rilevamento versione
       href: ~/essentials/version-tracking.md?context=xamarin/android
     - name: Vibrazione
@@ -650,9 +658,9 @@ items:
   - name: Esempi
     href: samples/index.yml
   expanded: true
-ms.openlocfilehash: 40bbc9dbf2a05212c1a901492520ff83f06c974c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7621bf3950c58cb4ffd6f33b73e9153409f93c9e
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671598"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58175382"

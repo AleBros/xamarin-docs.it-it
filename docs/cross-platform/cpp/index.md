@@ -153,8 +153,8 @@ Questa fase richiede la [precompilato librerie](https://github.com/xamarin/mobca
 
 11. Dal **Esplora soluzioni**, fare doppio clic sulla **MathFuncs.Standard** progetto.
 12. Passare a **impostazioni principali**, quindi aggiornare **Namespace predefinito** al **MathFuncs**.
-13. Passare al **Output** le impostazioni, quindi aggiornare **il nome dell'Assembly** al **MathFuncs** quindi fare clic su **OK**.
-14. Passare al **compilatore** cambiano le impostazioni la **Configuration** a **versione**, l'impostazione **informazioni di Debug** a  **Solo i simboli**.
+13. Passare al **Output** le impostazioni, quindi aggiornare **il nome dell'Assembly** al **MathFuncs**.
+14. Passare al **compilatore** cambiano le impostazioni la **Configuration** a **versione**, l'impostazione **informazioni di Debug** a  **Solo i simboli** quindi fare clic su **OK**.
 15. Eliminare **Class1.cs/Getting avviato** dal progetto (se uno di questi è stata incluso come parte del modello).
 16. **CTRL + clic** sul progetto **dipendenze/References** cartella, quindi scegliere **Modifica riferimenti**.
 17. Selezionare **MathFuncs.Shared** dalle **progetti** tab, quindi fare clic su **OK**.
