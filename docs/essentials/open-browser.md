@@ -4,15 +4,15 @@ description: La classe Browser in Xamarin.Essentials consente a un'applicazione 
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: ea2a10c11a77fcb2b3ce142d176522ebf0310725
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 03/13/2019
+ms.openlocfilehash: 4a822b4b6738e261b9ddaee02334ad629e1d4879
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898876"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175317"
 ---
-# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Apertura browser
+# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Browser
 
 La classe **Browser** consente a un'applicazione di aprire un collegamento Web nel browser preferito del sistema ottimizzato o in un browser esterno.
 
@@ -42,6 +42,24 @@ public class BrowserTest
 ```
 
 Questo metodo restituisce il controllo dopo l'_avvio_ del browser e non necessariamente dopo la _chiusura_ del browser da parte dell'utente.  Il risultato `bool` indica l'esito positivo o negativo dell'avvio.
+
+## <a name="customization"></a>Personalizzazione
+
+Quando si usa il browser preferito del sistema, sono disponibili diverse opzioni di personalizzazione per iOS e Android. Tra queste c'è `TitleMode` (solo Android) e le opzioni dei colori preferiti per la `Toolbar` (iOS e Android) e i `Controls` (solo iOS). 
+
+Queste opzioni vengono specificate usando `BrowserLaunchOptions` quando si chiama `OpenAsync`.
+
+```csharp
+await Browser.OpenAsync(uri, new BrowserLaunchOptions
+                {
+                    LaunchMode = BrowserLaunchMode.SystemPreferred,
+                    TitleMode = BrowserTitleMode.Show,
+                    PreferredToolbarColor = Color.AliceBlue,
+                    PreferredControlColor = Color.Violet
+                });
+```
+
+![Opzioni del browser](images/browser-options.png)
 
 ## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
