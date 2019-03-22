@@ -27,7 +27,7 @@ Il `BoxView` è semplicemente un rettangolo colorato semplice, ma può essere us
 
 Il `Button` risponde a un tocco o clic che indirizza un'applicazione per eseguire una determinata attività.
 
-## <a name="collectionviewcollectionviewmd"></a>[CollectionView](collectionview.md)
+## <a name="collectionviewcollectionviewindexmd"></a>[CollectionView](collectionview/index.md)
 
 Il `CollectionView` è una visualizzazione flessibile ed efficiente per presentare elenchi di dati usando le specifiche di un layout diverso.
 

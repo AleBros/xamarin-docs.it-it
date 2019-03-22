@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: 8e466c80468551f8262cfe49556d9527a147de4c
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 8674ef47867acf3bca4d05fd6628a58e2f9ad90e
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197550"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329364"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Approfondimento di Guida introduttiva di xamarin. Forms
 
@@ -353,7 +353,7 @@ public App ()
 }
 ```
 
-Tutte le istanze di [`ContentPage`](xref:Xamarin.Forms.ContentPage) hanno una proprietà [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) che espone i metodi per modificare lo stack della pagina. Questi metodi dovrebbero essere richiamati solo se l'applicazione include una [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). Per passare alla `NoteEntryPage`, è necessario richiamare il metodo [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)) come illustrato nell'esempio di codice seguente:
+Tutte le istanze di [`ContentPage`](xref:Xamarin.Forms.ContentPage) hanno una proprietà [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) che espone i metodi per modificare lo stack della pagina. Questi metodi dovrebbero essere richiamati solo se l'applicazione include una [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). Per passare alla `NoteEntryPage`, è necessario richiamare il metodo [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)) come illustrato nell'esempio di codice seguente:
 
 ```csharp
 await Navigation.PushAsync(new NoteEntryPage());
@@ -424,7 +424,7 @@ Il [ `Editor` ](xref:Xamarin.Forms.Editor) in `NoteEntryPage` associa quindi il 
 
 Viene definita un'associazione tra la proprietà [`Editor.Text`](xref:Xamarin.Forms.Editor.Text) e la proprietà `Text` dell'oggetto di *origine*. Le modifiche apportate nel `Editor` verrà propagato automaticamente al `Note` oggetto. Allo stesso modo, se vengono apportate modifiche per il `Note.Text` proprietà, il motore di binding xamarin. Forms verrà aggiornato anche il contenuto del `Editor`. Questa funzionalità è detta *associazione bidirezionale*.
 
-Per altre informazioni sul data binding, vedere [associazione di dati di xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+Per altre informazioni sul data binding, vedere [Data binding di Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
 ## <a name="styling"></a>Stile
 
@@ -509,14 +509,14 @@ I simulatori sono un ottimo strumento per iniziare a distribuire e testare e off
 
 In questo approfondimento è stati esaminati i concetti fondamentali dello sviluppo di applicazioni mediante xamarin. Forms. I passaggi suggeriti che seguono includono informazioni sulle funzionalità seguenti:
 
-- Per creare l'interfaccia utente di un'applicazione in Xamarin.Forms è possibile usare quattro gruppi di controlli principali. Per altre informazioni, vedere [riferimento ai controlli](~/xamarin-forms/user-interface/controls/index.md).
-- Associazione dati è una tecnica per il collegamento di proprietà di due oggetti in modo che una proprietà vengono automaticamente riflesse in altra proprietà. Per altre informazioni, vedere [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- Xamarin. Forms fornisce una serie di esperienze di navigazione pagina diversa, in base al tipo di pagina utilizzato. Per altre informazioni, vedere [Navigazione](~/xamarin-forms/app-fundamentals/navigation/index.md).
-- Gli stili consentono di ridurre il markup ripetitiva e consentire un aspetto delle applicazioni da modificare più facilmente. Per altre informazioni, vedere [stile App xamarin. Forms](~/xamarin-forms/user-interface/styles/index.md).
-- Le estensioni di markup XAML estendono la potenza e flessibilità di XAML, consentendo di attributi dell'elemento da impostare da origini diverse dalle stringhe di testo letterale. Per altre informazioni, vedere [estensioni di Markup XAML](~/xamarin-forms/xaml/markup-extensions/index.md).
-- I modelli di dati offrono la possibilità di definire la presentazione dei dati in visualizzazioni supportate. Per altre informazioni, vedere [Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md) (Modelli di dati).
-- Ogni pagina, layout e visualizzazione viene eseguito il rendering in modo diverso in ogni piattaforma usando un `Renderer` classe che a sua volta crea un controllo nativo, lo dispone sullo schermo e aggiunge il comportamento specificato nel codice condiviso. Gli sviluppatori possono implementare le proprie classi `Renderer` per personalizzare l'aspetto e/o il comportamento di un controllo. Per altre informazioni, vedere [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) (Renderer personalizzati).
-- Anche gli effetti consentono la personalizzazione dei controlli nativi in ogni piattaforma. Gli effetti vengono creati nei progetti specifici della piattaforma creando sottoclassi il [ `PlatformEffect` ](xref:Xamarin.Forms.PlatformEffect`2) classe e vengono usati associandoli a un controllo di xamarin. Forms appropriato. Per altre informazioni, vedere [Effects](~/xamarin-forms/app-fundamentals/effects/index.md) (Effetti).
+- Per creare l'interfaccia utente di un'applicazione in Xamarin.Forms è possibile usare quattro gruppi di controlli principali. Per altre informazioni, vedere [Riferimento per i controlli](~/xamarin-forms/user-interface/controls/index.md).
+- Il data binding è una tecnica che consente di collegare le proprietà di due oggetti in modo che le modifiche apportate a una proprietà vengano automaticamente riflesse nell'altra proprietà. Per altre informazioni, vedere [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+- Xamarin.Forms offre diverse esperienze di navigazione delle pagine, a seconda del tipo di pagina in uso. Per altre informazioni, vedere [Navigazione](~/xamarin-forms/app-fundamentals/navigation/index.md).
+- Gli stili consentono di ridurre il markup ripetitivo e di modificare facilmente l'aspetto di un'applicazione. Per altre informazioni, vedere [Applicazione di stili alle app Xamarin.Forms](~/xamarin-forms/user-interface/styles/index.md).
+- Le estensioni di markup XAML estendono le potenzialità e la flessibilità di XAML consentendo di impostare gli attributi degli elementi da origini diverse dalle stringhe di testo letterali. Per altre informazioni, vedere [Estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/index.md).
+- I modelli di dati consentono di definire la presentazione dei dati nelle viste supportate. Per altre informazioni, vedere [Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md) (Modelli di dati).
+- Il rendering di ogni pagina, layout e vista viene eseguito in modo diverso su ogni piattaforma usando una classe `Renderer` che a sua volta crea un controllo nativo, lo dispone sullo schermo e aggiunge il comportamento specificato nel codice condiviso. Gli sviluppatori possono implementare le proprie classi `Renderer` per personalizzare l'aspetto e/o il comportamento di un controllo. Per altre informazioni, vedere [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) (Renderer personalizzati).
+- Anche gli effetti consentono la personalizzazione dei controlli nativi in ogni piattaforma. Gli effetti vengono creati in processi specifici per la piattaforma creando sottoclassi della classe [`PlatformEffect`](xref:Xamarin.Forms.PlatformEffect`2) e vengono utilizzati associandoli a un controllo Xamarin.Forms appropriato. Per altre informazioni, vedere [Effects](~/xamarin-forms/app-fundamentals/effects/index.md) (Effetti).
 - Il codice condiviso può accedere alle funzionalità native tramite la classe [`DependencyService`](xref:Xamarin.Forms.DependencyService). Per altre informazioni, vedere [Accessing Native Features with DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md) (Accesso alle funzionalità native con DependencyService).
 
 In alternativa, per informazioni aggiuntive su Xamarin.Forms un buon punto di partenza è il libro [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) (Creazione di app per dispositivi mobili con Xamarin.Forms) di Charles Petzold. Il libro è disponibile in formato PDF o in un'ampia gamma di formati di eBook.
