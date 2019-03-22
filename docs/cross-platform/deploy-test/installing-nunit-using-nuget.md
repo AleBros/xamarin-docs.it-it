@@ -6,12 +6,12 @@ ms.assetid: 7683F2B8-7FDF-48C4-8E7D-649D4D4E79F0
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: c43b3f3204cba890cb2fa9c4cfc33a23250e0550
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b6b95f730b966ef5edaabbe7b0f333c2cacf5bc5
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112052"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58070839"
 ---
 # <a name="installing-nunit-264-using-nuget"></a>Installazione di NUnit 2.6.4 tramite NuGet
 
@@ -25,7 +25,7 @@ Questa guida illustra l'installazione di NUnit 2.6.4 tramite NuGet per Visual St
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Questa guida illustra come effettuare il downgrade di NUnit 3.0 a NUnit 2.6.4 tramite NuGet in Visual Studio 2015.
+Questa guida illustra come effettuare il downgrade di NUnit 3.0 a NUnit 2.6.4 tramite NuGet in Visual Studio 2015 o versioni successive.
 
 -----
 
@@ -62,7 +62,7 @@ In questa guida è stato illustrato come effettuare il downgrade di NUnit 3.0 a 
 
 ## <a name="installing-nunit-264-in-visual-studio"></a>Installazione di NUnit 2.6.4 in Visual Studio
 
-In questa sezione l'accento verrà posto sull'uso della _console di Gestione pacchetti NuGet_ in Visual Studio 2015 per disinstallare NUnit 3.0 e installare NUnit 2.6.4.
+In questa sezione l'accento verrà posto sull'uso della _console di Gestione pacchetti NuGet_ in Visual Studio 2015 o versioni successive per disinstallare NUnit 3.0 e installare NUnit 2.6.4.
 
 
 1. **Avviare la console di Gestione pacchetti NuGet**, selezionare **Strumenti > Gestione pacchetti NuGet > Console di Gestione pacchetti**:
@@ -105,7 +105,7 @@ Se viene visualizzato NUnit 3.0 o versione successiva sarà necessario effettuar
     
 ## <a name="summary"></a>Riepilogo
 
-In questa guida è stato illustrato come effettuare il downgrade di NUnit 3.0 a NUnit 2.6.4 in Visual Studio 2015 tramite la console di Gestione pacchetti.
+In questa guida è stato illustrato come effettuare il downgrade di NUnit 3.0 a NUnit 2.6.4 in Visual Studio 2015 o versioni successive tramite la console di Gestione pacchetti.
 
 -----
 

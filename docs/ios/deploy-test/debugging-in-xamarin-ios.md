@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: a6cc7ffe52711f4e65f0191f8dc556760e8817ea
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: f11e727edd5101d332f8452a26056f15e3587d8b
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668777"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58070995"
 ---
 # <a name="debugging-xamarinios-apps"></a>Debug di app Xamarin.iOS
 
@@ -121,7 +121,7 @@ Per impostare un punto di interruzione condizionale, accedere alla **finestra Pr
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Per impostare un punto di interruzione condizionale in Visual Studio 2015, prima [impostare un normale punto di interruzione](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). Fare clic con il pulsante destro del mouse sul punto di interruzione per visualizzare il menu di scelta rapida:
+Per impostare un punto di interruzione condizionale in Visual Studio, prima [impostare un normale punto di interruzione](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). Fare clic con il pulsante destro del mouse sul punto di interruzione per visualizzare il menu di scelta rapida:
 
  [![](debugging-in-xamarin-ios-images/image4vs.png "Menu di scelta rapida del punto di interruzione")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
 

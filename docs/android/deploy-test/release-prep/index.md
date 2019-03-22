@@ -38,7 +38,7 @@ Ognuno di questi passaggi è descritto in dettaglio di seguito.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-In Visual Studio 2015 e versioni successive specificare l'icona dell'applicazione usando la sezione **Manifesto Android** delle **proprietà** del progetto, come illustrato nello screenshot seguente:
+In Visual Studio 2017 e versioni successive specificare l'icona dell'applicazione usando la sezione **Manifesto Android** delle **proprietà** del progetto, come illustrato nello screenshot seguente:
 
 [![Impostare l'icona dell'applicazione](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png#lightbox)
 
@@ -186,7 +186,8 @@ Si noti che le compilazioni di debug impostano automaticamente alcune autorizzaz
 Anche con il [debug disabilitato](#Disable_Debugging), è comunque possibile che gli utenti malintenzionati riescano a creare un nuovo pacchetto di un'applicazione, aggiungendo o rimuovendo opzioni di configurazione o autorizzazioni. Ciò consente di decodificare o manomettere l'applicazione o di eseguirne il debug.
 [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) consente di nascondere il codice gestito e inserire il codice di rilevamento dello stato di sicurezza del runtime in un'app Xamarin.Android in fase di compilazione, per rilevare e rispondere nel caso in cui l'app venga eseguita in un dispositivo rooted.
 
-Dotfuscator CE è incluso in Visual Studio, tuttavia solo in Visual Studio 2015 Update 3 (e versioni successive) è disponibile la versione corretta per Xamarin.Android. Per usare Dotfuscator, fare clic su **Strumenti > PreEmptive Protection - Dotfuscator**.
+Dotfuscator CE è incluso in Visual Studio 2017.
+Per usare Dotfuscator, fare clic su **Strumenti > PreEmptive Protection - Dotfuscator**.
 
 Per configurare Dotfuscator CE, vedere le istruzioni relative all'[uso di Dotfuscator Community Edition con Xamarin](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator).
 Dopo la configurazione, Dotfuscator CE proteggerà automaticamente ogni build creata.
