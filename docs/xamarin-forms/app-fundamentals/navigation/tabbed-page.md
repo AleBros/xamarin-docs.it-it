@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 4e2d33276c865695d70abb2d8e00b3b80d446839
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 0f0c2e9f3e0a2309db1ad96ff286d6ac17f78bc5
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207986"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329299"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Pagina a schede di Xamarin.Forms
 
@@ -115,7 +115,7 @@ Per informazioni sul layout di una [`NavigationPage`](xref:Xamarin.Forms.Navigat
 
 #### <a name="navigation-inside-a-tab"></a>Navigazione all'interno di una scheda
 
-La navigazione può essere eseguita dalla seconda scheda richiamando il metodo [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) sulla proprietà [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) dell'istanza di [`ContentPage`](xref:Xamarin.Forms.ContentPage), come illustrato nell'esempio di codice seguente:
+La navigazione può essere eseguita dalla seconda scheda richiamando il metodo [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) sulla proprietà [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) dell'istanza di [`ContentPage`](xref:Xamarin.Forms.ContentPage), come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnUpcomingAppointmentsButtonClicked (object sender, EventArgs e)

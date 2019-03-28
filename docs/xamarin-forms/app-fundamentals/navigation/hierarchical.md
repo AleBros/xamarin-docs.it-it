@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: f69acd60d7a80607528e4a39ee6a8bfbc19711f5
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: c5eeb00d4dc5992666a7ba5f9fef2685d5056447
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207973"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329273"
 ---
 # <a name="hierarchical-navigation"></a>Navigazione gerarchica
 
@@ -28,7 +28,7 @@ Per tornare alla pagina precedente, l'applicazione preleva la pagina corrente da
 
 ![](hierarchical-images/popping.png "Prelievo di una pagina dallo stack di navigazione")
 
-I metodi di navigazione sono esposti dalla proprietà [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) in qualsiasi tipo di [`Page`](xref:Xamarin.Forms.Page) derivata. Questi metodi consentono di eseguire il push di pagine nello stack di navigazione, di prelevare pagine dallo stack di navigazione e di eseguire la manipolazione dello stack.
+I metodi di navigazione sono esposti dalla proprietà [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) in qualsiasi tipo di [`Page`](xref:Xamarin.Forms.Page) derivata. Questi metodi consentono di eseguire il push di pagine nello stack di navigazione, di prelevare pagine dallo stack di navigazione e di eseguire la manipolazione dello stack.
 
 <a name="Performing_Navigation" />
 
@@ -69,7 +69,7 @@ Di conseguenza l'istanza `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentP
 
 ### <a name="pushing-pages-to-the-navigation-stack"></a>Eseguire il push delle pagine nello stack di navigazione
 
-Per passare a `Page2Xaml` è necessario chiamare il metodo [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) sulla proprietà [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) della pagina corrente, come illustrato nell'esempio di codice seguente:
+Per passare a `Page2Xaml` è necessario chiamare il metodo [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) sulla proprietà [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) della pagina corrente, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -114,7 +114,7 @@ Di conseguenza l'istanza `Page2Xaml` viene rimossa dallo stack di navigazione e 
 
 Tuttavia, l'ordine preciso in cui si verificano questi eventi è dipendente dalla piattaforma. Per altre informazioni, vedere il [capitolo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del manuale di Xamarin.Forms redatto da Charles Petzold.
 
-Analogamente ai metodi [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) e [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync), la proprietà [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) di ogni pagina fornisce anche un metodo [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync), che viene visualizzato nell'esempio di codice seguente:
+Analogamente ai metodi [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) e [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync), la proprietà [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) di ogni pagina fornisce anche un metodo [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync), che viene visualizzato nell'esempio di codice seguente:
 
 ```csharp
 async void OnRootPageButtonClicked (object sender, EventArgs e)
@@ -127,7 +127,7 @@ Questo metodo preleva tutto tranne la radice [`Page`](xref:Xamarin.Forms.Page) d
 
 ### <a name="animating-page-transitions"></a>Animazione delle transizioni di pagina
 
-La proprietà [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) di ogni pagina offre anche metodi di push e di prelievo sottoposti a override, che includono un parametro `boolean` che controlla la visualizzazione di un'animazione di pagina durante gli spostamenti, come illustrato nell'esempio di codice seguente:
+La proprietà [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) di ogni pagina offre anche metodi di push e di prelievo sottoposti a override, che includono un parametro `boolean` che controlla la visualizzazione di un'animazione di pagina durante gli spostamenti, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -276,7 +276,7 @@ Per altre informazioni sul data binding, vedere [Data Binding Basics](~/xamarin-
 
 ## <a name="manipulating-the-navigation-stack"></a>Modifica dello stack di navigazione
 
-La proprietà [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) espone una proprietà [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack) dalla quale è possibile ottenere le pagine nello stack di navigazione. Sebbene Xamarin.Forms mantenga l'accesso allo stack di navigazione, la proprietà `Navigation` fornisce i metodi [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) e [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) per modificare lo stack mediante l'inserimento o la rimozione di pagine.
+La proprietà [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) espone una proprietà [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack) dalla quale è possibile ottenere le pagine nello stack di navigazione. Sebbene Xamarin.Forms mantenga l'accesso allo stack di navigazione, la proprietà `Navigation` fornisce i metodi [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) e [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) per modificare lo stack mediante l'inserimento o la rimozione di pagine.
 
 Il metodo [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) inserisce una pagina specificata nello stack di navigazione prima di una pagina specificata esistente, come illustrato nel diagramma seguente:
 

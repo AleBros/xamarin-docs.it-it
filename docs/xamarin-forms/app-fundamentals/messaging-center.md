@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 2e87142594da8f028323b5dc81afb0e9f8021028
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 6af392988b8ffa5f01ef07f81be53ea8f82e8fb5
+ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667055"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477330"
 ---
 # <a name="xamarinforms-messagingcenter"></a>MessagingCenter di Xamarin.Forms
 
@@ -35,7 +35,7 @@ _Xamarin.Forms include un servizio di messaggistica semplice per l'invio e la ri
 -  **Subscribe**: ascolto dei messaggi con una determinata firma ed esecuzione di un'azione alla ricezione. Più sottoscrittori possono essere in ascolto dello stesso messaggio.
 -  **Send**: pubblicazione di un messaggio che richiede un'azione da parte dei listener. Se nessun listener ha effettuato la sottoscrizione, il messaggio viene ignorato.
 
-`MessagingService` è una classe statica con i metodi `Subscribe` e `Send` che vengono usati in tutta la soluzione.
+`MessagingCenter` è una classe statica con i metodi `Subscribe` e `Send` che vengono usati in tutta la soluzione.
 
 I messaggi includono un parametro `message` di stringa che viene usato per *indirizzare* i messaggi. I metodi `Subscribe` e `Send` usano parametri generici per controllare ulteriormente le modalità di recapito dei messaggi: due messaggi con lo stesso testo `message`, ma con argomenti di tipo generico diversi non verranno recapitati allo stesso sottoscrittore.
 

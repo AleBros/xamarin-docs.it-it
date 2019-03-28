@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 32d0775baa75b70ebc118457945efc0f6c0acec2
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: c84995e210d61e735d12a089f40bf9afa720acb5
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057061"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329286"
 ---
 # <a name="xamarinforms-modal-pages"></a>Pagine modali Xamarin.Forms
 
@@ -39,9 +39,9 @@ Per tornare alla pagina precedente, l'applicazione preleverà la pagina corrente
 
 ## <a name="performing-navigation"></a>Esecuzione degli spostamenti
 
-I metodi di navigazione modale sono esposti dalla proprietà [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) in qualsiasi tipo derivato [`Page`](xref:Xamarin.Forms.Page). Questi metodi offrono la possibilità di eseguire il [push delle pagine modali](#Pushing_Pages_to_the_Modal_Stack) nello stack modale e di [prelevare le pagine modali](#Popping_Pages_from_the_Modal_Stack) dallo stack modale.
+I metodi di navigazione modale sono esposti dalla proprietà [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) in qualsiasi tipo derivato [`Page`](xref:Xamarin.Forms.Page). Questi metodi offrono la possibilità di eseguire il [push delle pagine modali](#Pushing_Pages_to_the_Modal_Stack) nello stack modale e di [prelevare le pagine modali](#Popping_Pages_from_the_Modal_Stack) dallo stack modale.
 
-La proprietà [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) espone anche una proprietà [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) dalla quale è possibile ottenere le pagine modali nello stack modale. Tuttavia non esiste nessun concetto di gestione modale dello stack o di prelievo e attivazione della pagina radice nella navigazione modale. Queste operazioni non sono supportate in tutti i casi sulle piattaforme sottostanti.
+La proprietà [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) espone anche una proprietà [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) dalla quale è possibile ottenere le pagine modali nello stack modale. Tuttavia non esiste nessun concetto di gestione modale dello stack o di prelievo e attivazione della pagina radice nella navigazione modale. Queste operazioni non sono supportate in tutti i casi sulle piattaforme sottostanti.
 
 > [!NOTE]
 > Per la navigazione modale nelle pagine non è necessaria un'istanza di [`NavigationPage`](xref:Xamarin.Forms.NavigationPage).
@@ -50,7 +50,7 @@ La proprietà [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) espone
 
 ### <a name="pushing-pages-to-the-modal-stack"></a>Push delle pagine nello stack modale
 
-Per passare a `ModalPage`, è necessario richiamare il metodo [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) sulla proprietà [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) della pagina corrente, come illustrato nell'esempio di codice seguente:
+Per passare a `ModalPage`, è necessario richiamare il metodo [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) sulla proprietà [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) della pagina corrente, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
@@ -107,7 +107,7 @@ In Android, l'utente può sempre tornare alla pagina precedente premendo il puls
 
 ### <a name="animating-page-transitions"></a>Animazione delle transizioni di pagina
 
-La proprietà [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) di ogni pagina offre anche metodi di push e di prelievo sottoposti a override, che includono un parametro `boolean` che controlla la visualizzazione di un'animazione di pagina durante gli spostamenti, come illustrato nell'esempio di codice seguente:
+La proprietà [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) di ogni pagina offre anche metodi di push e di prelievo sottoposti a override, che includono un parametro `boolean` che controlla la visualizzazione di un'animazione di pagina durante gli spostamenti, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)

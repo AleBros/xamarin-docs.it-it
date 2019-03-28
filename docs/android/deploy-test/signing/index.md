@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/02/2018
-ms.openlocfilehash: f05de5185f224f8606f38011d8f307ed62d64541
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112871"
 ---
+
 # <a name="signing-the-android-application-package"></a>Firma del pacchetto dell'applicazione Android
 
 In [Preparazione di un'applicazione per il rilascio](~/android/deploy-test/release-prep/index.md) è stato usato lo strumento **Gestione archivi** per compilare l'app e inserirla in un archivio per la firma e la pubblicazione. Questa sezione spiega come creare un'identità di firma di Android e un nuovo certificato di firma per le applicazioni Android e come pubblicare l'app archiviata *ad hoc* nel disco. Il pacchetto dell'applicazione Android (APK) risultante può essere trasferito localmente in dispositivi Android senza passare attraverso un app store.
@@ -42,7 +37,7 @@ In [Archivia per la pubblicazione](~/android/deploy-test/release-prep/index.md#a
 
 Dopo la selezione di **Ad hoc**, Visual Studio apre la pagina **Identità di firma** della finestra di dialogo, come illustrato nello screenshot seguente. Perché possa essere pubblicato, il file con estensione APK deve prima essere firmato con una chiave di firma (detta anche certificato).
 
-È possibile usare un certificato esistente facendo clic sul pulsante **Importa** e quindi passando a [Firma APK](#signapkvs). In alternativa, fare clic sul pulsante **+** per creare un nuovo certificato:
+È possibile usare un certificato esistente facendo clic sul pulsante **Importa** e quindi passando a [Firma APK](#sign-the-apk). In alternativa, fare clic sul pulsante **+** per creare un nuovo certificato:
 
 [![Identità di firma ad hoc](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png#lightbox)
 
@@ -69,7 +64,7 @@ Per altre informazioni sull'archivio chiavi, vedere [Ricerca della firma SHA1 o 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Dopo che si è fatto clic su **Ad hoc**, Visual Studio per Mac apre la finestra di dialogo **Identità di firma Android**, come illustrato nel prossimo screenshot. Perché possa essere pubblicato, il file con estensione APK deve prima essere firmato con una chiave di firma (detta anche certificato). Se un certificato esiste già, fare clic sul pulsante **Importa una chiave esistente** per importarlo e quindi passare a [Firma APK](#signapkxs). In alternativa, fare clic sul pulsante **Crea una nuova chiave** per creare un nuovo certificato: 
+Dopo che si è fatto clic su **Ad hoc**, Visual Studio per Mac apre la finestra di dialogo **Identità di firma Android**, come illustrato nel prossimo screenshot. Perché possa essere pubblicato, il file con estensione APK deve prima essere firmato con una chiave di firma (detta anche certificato). Se un certificato esiste già, fare clic sul pulsante **Importa una chiave esistente** per importarlo e quindi passare a [Firma APK](#sign-the-apk). In alternativa, fare clic sul pulsante **Crea una nuova chiave** per creare un nuovo certificato:
 
 [![Finestra di dialogo Identità di firma Android](images/xs/02-android-signing-identity-sml.png)](images/xs/02-android-signing-identity.png#lightbox)
 
@@ -92,8 +87,6 @@ I passaggi precedenti, ad esempio, consentono di creare una nuova chiave di firm
 Per altre informazioni sull'archivio chiavi, vedere [Ricerca della firma SHA1 o MD5 dell'archivio chiavi](~/android/deploy-test/signing/keystore-signature.md).
 
 -----
-
-<a name="signapkvs" />
 
 ## <a name="sign-the-apk"></a>Firmare il pacchetto APK
 
@@ -137,7 +130,7 @@ La finestra di dialogo **File APK di output** salva il pacchetto APK nel percors
 
 ![Finestra di dialogo File APK di output](images/xs/06-output-apk-file.png)
 
-Immettere quindi la password per il certificato (la password usata nella finestra di dialogo **Crea nuovo certificato**) e fare clic su **OK**: 
+Immettere quindi la password per il certificato (la password usata nella finestra di dialogo **Crea nuovo certificato**) e fare clic su **OK**:
 
 ![Immettere la password del certificato](images/xs/07-signing-certificate.png)
 

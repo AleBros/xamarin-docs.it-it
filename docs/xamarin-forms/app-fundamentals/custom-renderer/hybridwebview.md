@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: b88226dda14e2ae5cd21bb066e107fb4bcad78f6
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 0b91aae1456827625526d7568176a07e7e61f225
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672521"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507123"
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementazione di un elemento HybridWebView
 
@@ -30,7 +30,7 @@ Il diagramma seguente illustra la relazione tra la classe [`View`](xref:Xamarin.
 
 1. [Creare](#Creating_the_HybridWebView) il controllo personalizzato `HybridWebView`.
 1. [Usare](#Consuming_the_HybridWebView) `HybridWebView` da Xamarin.Forms.
-1. [Creare](#Creating_the_Custom_Renderer_on_each_Platform) il renderer personalizzato per `HybridWebView` in ogni piattaforma.
+1. [Creare](#creating-the-custom-renderer-on-each-platform) il renderer personalizzato per `HybridWebView` in ogni piattaforma.
 
 Ogni elemento verrà trattato separatamente per implementare un renderer `HybridWebView` che ottimizza i controlli Web specifici della piattaforma per consentire al codice C# di essere richiamato da JavaScript. L'istanza di `HybridWebView` verrà usata per visualizzare una pagina HTML in cui viene chiesto all'utente di immettere il proprio nome. Quindi, quando l'utente fa clic su un pulsante HTML, una funzione JavaScript richiama un elemento `Action` di C# che visualizza una finestra popup contenente il nome dell'utente.
 
@@ -141,8 +141,6 @@ public partial class HybridWebViewPage : ContentPage
 Questa azione chiama il metodo [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) per visualizzare un popup modale che presenta il nome immesso nella pagina HTML visualizzata dall'istanza di `HybridWebView`.
 
 Ora è possibile aggiungere un renderer personalizzato a ogni progetto di applicazione per ottimizzare i controlli Web specifici della piattaforma, consentendo al codice C# di essere richiamato da JavaScript.
-
-<a nane="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>Creazione del renderer personalizzato in ogni piattaforma
 
