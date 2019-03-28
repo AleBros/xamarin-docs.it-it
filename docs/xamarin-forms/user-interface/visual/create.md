@@ -1,18 +1,18 @@
 ---
 title: Creare un renderer oggetti visivi di xamarin. Forms
-description: Oggetto visivo xamarin. Forms consente renderer essere applicate selettivamente alle VisualElement oggetti, senza la necessità di visualizzazioni di xamarin. Forms sottoclasse.
+description: Creare oggetti visivi di xamarin. Forms in modo selettivo da applicare agli oggetti VisualElement, senza la necessità di visualizzazioni di xamarin. Forms sottoclasse.
 ms.prod: xamarin
 ms.assetid: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: 1bd56d09932c97508dd0a05fbc0eb2bad3af3f0e
-ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
+ms.openlocfilehash: a11c2045fa6119d0689834c35794bc8913c80bd6
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57972585"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58506967"
 ---
 # <a name="create-a-xamarinforms-visual-renderer"></a>Creare un renderer oggetti visivi di xamarin. Forms
 
@@ -25,7 +25,7 @@ Oggetto visivo xamarin. Forms consente renderer essere create e applicate selett
 
 Il processo di creazione e l'utilizzo di un renderer oggetti visivi di xamarin. Forms è:
 
-1. Creare i renderer di piattaforma per la visualizzazione desiderata. Per altre informazioni, vedere [creare renderer](#create-platfomr-renderers).
+1. Creare i renderer di piattaforma per la visualizzazione desiderata. Per altre informazioni, vedere [creare renderer](#create-platform-renderers).
 1. Creare un tipo che deriva da `IVisual`. Per altre informazioni, vedere [creare un tipo IVisual](#create-an-ivisual-type).
 1. Registrare il `IVisual` tipo come parte del `ExportRendererAttribute` che decora il renderer. Per altre informazioni, vedere [registrare il tipo IVisual](#register-the-ivisual-type).
 1. Utilizzare il renderer Visual impostando il [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) proprietà nella vista per la `IVisual` nome. Per altre informazioni, vedere [utilizzare il renderer Visual](#consume-the-visual-renderer).

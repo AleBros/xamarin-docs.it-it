@@ -1,19 +1,14 @@
 ---
 title: Funzionalità specifiche della piattaforma
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare e creare funzionalità specifiche della piattaforma.
+description: 'Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare e creare funzionalità specifiche della piattaforma.'
 ms.prod: xamarin
 ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 44d0cf3a257c00b448a6c70064af2f8e3ba63f69
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207791"
 ---
+
 # <a name="platform-specifics"></a>Funzionalità specifiche della piattaforma
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
@@ -43,10 +38,10 @@ I fornitori possono creare le proprie funzionalità specifiche della piattaforma
 Il processo per la creazione di una specifica della piattaforma è come segue:
 
 1. Implementare la funzionalità specifica come un effetto. Per altre informazioni, vedere [creando un effetto](~/xamarin-forms/app-fundamentals/effects/creating.md).
-1. Creare una classe specifica della piattaforma che esporrà l'effetto. Per altre informazioni, vedere [creazione di una classe specifica della piattaforma](#creating).
-1. Nella classe specifica della piattaforma, implementare una proprietà associata per consentire la specifica della piattaforma devono essere usati tramite XAML. Per altre informazioni, vedere [aggiunta di una proprietà associata](#attached_property).
-1. Nella classe specifica della piattaforma, implementare i metodi di estensione per consentire la specifica della piattaforma devono essere usati tramite un codice fluent API. Per altre informazioni, vedere [aggiunta di metodi di estensione](#extension_methods).
-1. Modificare l'implementazione effettiva in modo che l'effetto viene applicato solo se la specifica della piattaforma è stata richiamata sulla stessa piattaforma come l'effetto. Per altre informazioni, vedere [creando l'effetto](#creating_the_effect).
+1. Creare una classe specifica della piattaforma che esporrà l'effetto. Per altre informazioni, vedere [creazione di una classe specifica della piattaforma](#creating-a-platform-specific-class).
+1. Nella classe specifica della piattaforma, implementare una proprietà associata per consentire la specifica della piattaforma devono essere usati tramite XAML. Per altre informazioni, vedere [aggiunta di una proprietà associata](#adding-an-attached-property).
+1. Nella classe specifica della piattaforma, implementare i metodi di estensione per consentire la specifica della piattaforma devono essere usati tramite un codice fluent API. Per altre informazioni, vedere [aggiunta di metodi di estensione](#adding-extension-methods).
+1. Modificare l'implementazione effettiva in modo che l'effetto viene applicato solo se la specifica della piattaforma è stata richiamata sulla stessa piattaforma come l'effetto. Per altre informazioni, vedere [creando l'effetto](#creating-the-effect).
 
 Il risultato derivante dall'esposizione di un effetto di una specifica della piattaforma è che gli effetti possono essere utilizzati più facilmente tramite XAML e un codice fluent API.
 

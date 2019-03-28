@@ -6,12 +6,12 @@ ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 7d07733ebf62e6e12ccee05f9b72eaf1a74afad2
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 5e5c4f1545d39befde6574338ec4c1ca4037ad8b
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "34784039"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507162"
 ---
 # <a name="using-urhosharp-to-build-a-3d-game"></a>Uso di UrhoSharp per creare un gioco 3D
 
@@ -23,7 +23,7 @@ Prima di scrivere il tuo primo gioco, si desidera acquisire familiarità con le 
 
 Il modello di scena può essere descritta come un grafico della scena in base al componente. La scena è costituito da una gerarchia di nodi della scena, a partire dal nodo radice, che rappresenta anche dell'intera scena. Ciascuna [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node/) dispone di una trasformazione 3D (posizione, scala e rotazione), un nome, un ID, oltre a un numero arbitrario di componenti.  Componenti di portare un nodo di ciclo di vita, rendono possibile aggiungere una rappresentazione visiva ([`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)), possono generare file audio ([`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource)), forniscono un limite di conflitto e così via.
 
-È possibile creare scene e nodi di programma di installazione tramite il [Urho Editor](#UrhoEditor), oppure è possibile eseguire operazioni dal codice c#.  In questo documento verranno analizzati aspetti impostazione usando il codice, come illustrano gli elementi necessari per svolgere il proprio compaia sullo schermo
+È possibile creare scene e nodi di programma di installazione tramite il [Urho Editor](#urhoeditor), oppure è possibile eseguire operazioni dal codice c#.  In questo documento verranno analizzati aspetti impostazione usando il codice, come illustrano gli elementi necessari per svolgere il proprio compaia sullo schermo
 
 Oltre a configurare la scena, è necessario configurare un [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera/), questo è ciò che determina ciò che verrà ottenere visualizzato all'utente.
 
@@ -192,7 +192,7 @@ Queste sono le azioni supportate di UrhoSharp:
 * A dissolvenza nodi: [ `FadeIn` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeIn), [ `FadeTo` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeTo), [ `FadeOut` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeOut), [ `Hide` ](https://developer.xamarin.com/api/type/Urho.Actions.Hide), [`Blink`](https://developer.xamarin.com/api/type/Urho.Actions.Blink)
 * Tinte: [ `TintTo` ](https://developer.xamarin.com/api/type/Urho.Actions.TintTo), [`TintBy`](https://developer.xamarin.com/api/type/Urho.Actions.TintBy)
 * Istanti: [ `Hide` ](https://developer.xamarin.com/api/type/Urho.Actions.Hide), [ `Show` ](https://developer.xamarin.com/api/type/Urho.Actions.Show), [ `Place` ](https://developer.xamarin.com/api/type/Urho.Actions.Place), [ `RemoveSelf` ](https://developer.xamarin.com/api/type/Urho.Actions.RemoveSelf), [`ToggleVisibility`](https://developer.xamarin.com/api/type/Urho.Actions.ToggleVisibility)
-* Cicli: [ `Repeat` ](https://developer.xamarin.com/api/type/Urho.Actions.Repeat), [ `RepeatForever` ](https://developer.xamarin.com/api/type/Urho.Actions.RepeatForever), [`ReverseTime`](https://developer.xamarin.com/api/type/Urho.Actions.ReverseTime)
+* Looping: [`Repeat`](https://developer.xamarin.com/api/type/Urho.Actions.Repeat), [`RepeatForever`](https://developer.xamarin.com/api/type/Urho.Actions.RepeatForever), [`ReverseTime`](https://developer.xamarin.com/api/type/Urho.Actions.ReverseTime)
 
 Altre funzionalità avanzate includono la combinazione dei [ `Spawn` ](https://developer.xamarin.com/api/type/Urho.Actions.Spawn) e [ `Sequence` ](https://developer.xamarin.com/api/type/Urho.Actions.Sequence) azioni.
 

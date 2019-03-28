@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 30c507a1b78600ef1b9a96e37f88904daaf82987
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: 22b5fe703486f0ded3a5b91241e3fe5ce41bbc98
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528572"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507097"
 ---
 # <a name="validation-in-enterprise-apps"></a>Convalida nelle App aziendali
 
@@ -22,7 +22,7 @@ Nel contesto di Model-View-ViewModel (MVVM) modello, un modello di visualizzazio
 
 [![](validation-images/validation.png "Classi di convalida nell'app eShopOnContainers")](validation-images/validation-large.png#lightbox "classi di convalida nell'app eShopOnContainers")
 
-**Figura 6-1**: classi di convalida nell'app eShopOnContainers
+**Figura 6-1**: Classi di convalida nell'app eShopOnContainers
 
 Proprietà modello di visualizzazione che richiede la convalida sono di tipo `ValidatableObject<T>`e ogni `ValidatableObject<T>` istanza dispone di regole di convalida aggiunto al relativo `Validations` proprietà. La convalida viene richiamata dal modello di visualizzazione chiamando il `Validate` metodo del `ValidatableObject<T>` regole di istanza, che recupera la convalida e li esegue sul `ValidatableObject<T>` `Value` proprietà. Eventuali errori di convalida vengono inseriti nel `Errors` proprietà del `ValidatableObject<T>` istanza e il `IsValid` proprietà del `ValidatableObject<T>` istanza viene aggiornata per indicare se la convalida ha avuto esito positivo o negativo.
 
@@ -216,7 +216,7 @@ L'app per dispositivi mobili di eShopOnContainers notifica all'utente eventuali 
 
 ![](validation-images/validation-login.png "La visualizzazione degli errori di convalida durante l'accesso")
 
-**Figura 6-2:** visualizzare gli errori di convalida durante l'accesso
+**Figura 6-2:** La visualizzazione degli errori di convalida durante l'accesso
 
 ### <a name="highlighting-a-control-that-contains-invalid-data"></a>Evidenziare un controllo che contiene dati non validi
 
@@ -248,7 +248,7 @@ Il [ `Entry` ](xref:Xamarin.Forms.Entry) controllo utilizza uno stile esplicito,
 </Style>
 ```
 
-Imposta questo stile il `ApplyLineColor` e `LineColor` le proprietà associate del `LineColorBehavior` collegato comportamento nel [ `Entry` ](xref:Xamarin.Forms.Entry) controllo. Per altre informazioni sugli stili, vedere [stili](~/xamarin-forms/user-interface/styles/index.md).
+Imposta questo stile il `ApplyLineColor` e `LineColor` le proprietà associate del `LineColorBehavior` collegato comportamento nel [ `Entry` ](xref:Xamarin.Forms.Entry) controllo. Per altre informazioni sugli stili, vedere [Stili](~/xamarin-forms/user-interface/styles/index.md).
 
 Quando il valore della `ApplyLineColor` proprietà associata è impostata oppure le modifiche, il `LineColorBehavior` comportamento collegato viene eseguita la `OnApplyLineColorChanged` metodo, che viene visualizzato nell'esempio di codice seguente:
 
@@ -296,7 +296,7 @@ public class EntryLineColorEffect : RoutingEffect
 }
 ```
 
-Il [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) classe rappresenta un effetto indipendente dalla piattaforma che esegue il wrapping di un effetto interno che è specifica della piattaforma. Ciò semplifica il processo di rimozione effetto, poiché non è possibile accedere in fase di compilazione per le informazioni sul tipo per un effetto specifico della piattaforma. Il `EntryLineColorEffect` chiama il costruttore di classe di base, passando un parametro costituito da una concatenazione del nome del gruppo di risoluzione e l'ID univoco specificata su ogni classe effetto specifico della piattaforma.
+Il [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) classe rappresenta un effetto indipendente dalla piattaforma che esegue il wrapping di un effetto interno che è specifica della piattaforma. Ciò semplifica il processo di rimozione dell'effetto, poiché non è previsto l'accesso alle informazioni sul tipo in fase di compilazione per un effetto specifico della piattaforma. Il `EntryLineColorEffect` chiama il costruttore di classe di base, passando un parametro costituito da una concatenazione del nome del gruppo di risoluzione e l'ID univoco specificata su ogni classe effetto specifico della piattaforma.
 
 Nell'esempio di codice riportato di seguito viene illustrato il `eShopOnContainers.EntryLineColorEffect` implementazione per iOS:
 
@@ -374,13 +374,13 @@ namespace eShopOnContainers.iOS.Effects
 }
 ```
 
-Il `OnAttached` metodo recupera il controllo nativo per xamarin. Forms [ `Entry` ](xref:Xamarin.Forms.Entry) controllano e aggiorna il colore della linea chiamando il `UpdateLineColor` (metodo). Il `OnElementPropertyChanged` override risponde alle modifiche di proprietà associabili sul `Entry` controllo aggiornando il colore della linea, se l'oggetto associato `LineColor` le modifiche alle proprietà, o il [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) proprietà il `Entry`le modifiche. Per altre informazioni sugli effetti, vedere [effetti](~/xamarin-forms/app-fundamentals/effects/index.md).
+Il `OnAttached` metodo recupera il controllo nativo per xamarin. Forms [ `Entry` ](xref:Xamarin.Forms.Entry) controllano e aggiorna il colore della linea chiamando il `UpdateLineColor` (metodo). Il `OnElementPropertyChanged` override risponde alle modifiche di proprietà associabili sul `Entry` controllo aggiornando il colore della linea, se l'oggetto associato `LineColor` le modifiche alle proprietà, o il [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) proprietà il `Entry`le modifiche. Per altre informazioni sugli effetti, vedere [Effetti](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 Quando in cui vengono immessi dati validi nel [ `Entry` ](xref:Xamarin.Forms.Entry) (controllo), verrà applicata una linea nera nella parte inferiore del controllo, per indicare che non sono presenti errori di convalida. Figura 6-3 mostra un esempio di questo oggetto.
 
 ![](validation-images/validation-blackline.png "Linea nera che indica nessun errore di convalida")
 
-**Figura 6-3**: linea nera che indica nessun errore di convalida
+**Figura 6-3**: Linea nera che indica nessun errore di convalida
 
 Il [ `Entry` ](xref:Xamarin.Forms.Entry) controllo dispone anche di un [ `DataTrigger` ](xref:Xamarin.Forms.DataTrigger) aggiunto al relativo [ `Triggers` ](xref:Xamarin.Forms.VisualElement.Triggers) raccolta. Nell'esempio di codice riportato di seguito viene illustrato il `DataTrigger`:
 
@@ -403,7 +403,7 @@ Ciò [ `DataTrigger` ](xref:Xamarin.Forms.DataTrigger) monitoraggi il `UserName.
 
 ![](validation-images/validation-redline.png "Linea rossa che indica errore di convalida")
 
-**Figura 6-4**: linea rossa che indica errore di convalida
+**Figura 6-4**: Linea rossa che indica errore di convalida
 
 La riga nel [ `Entry` ](xref:Xamarin.Forms.Entry) controllo rimarrà rosso mentre i dati immessi non sono validi, in caso contrario, verrà modificato in nero per indicare che i dati immessi siano validi.
 
@@ -414,7 +414,7 @@ Per altre informazioni sui trigger, vedere [trigger](~/xamarin-forms/app-fundame
 L'interfaccia utente vengono visualizzati i messaggi di errore di convalida in controlli etichetta sotto ogni controllo i cui dati non è riuscita la convalida. Nell'esempio di codice riportato di seguito viene illustrato il [ `Label` ](xref:Xamarin.Forms.Label) che visualizza un messaggio di errore di convalida se l'utente non ha immesso un nome utente valido:
 
 ```xaml
-<Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}"  
+<Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}}"  
        Style="{StaticResource ValidationErrorLabelStyle}" />
 ```
 

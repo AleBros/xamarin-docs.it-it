@@ -21,21 +21,21 @@ Funzionalità specifiche della piattaforma consentono di utilizzare funzionalit�
 
 Le funzionalità specifiche della piattaforma seguenti viene fornita per xamarin. Forms visualizzazioni pagine e i layout in Universal Windows Platform (UWP):
 
-- L'impostazione di una chiave di accesso per un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Per altre informazioni, vedere [VisualElement chiavi di accesso Windows](#visualelement-accesskeys).
-- Disattivazione della modalità colore legacy in supportato [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Per altre informazioni, vedere [modalità di colore VisualElement Legacy in Windows](#legacy-color-mode).
+- L'impostazione di una chiave di accesso per un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Per altre informazioni, vedere [VisualElement chiavi di accesso Windows](visualelement-access-keys.md).
+- Disattivazione della modalità colore legacy in supportato [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Per altre informazioni, vedere [modalità di colore VisualElement Legacy in Windows](legacy-color-mode.md).
 
 Le funzionalità specifiche della piattaforma seguenti viene fornita per le visualizzazioni di xamarin. Forms nella piattaforma UWP:
 
-- Rilevamento di ordine di lettura dal testo contenuto nel [ `Entry` ](xref:Xamarin.Forms.Entry), [ `Editor` ](xref:Xamarin.Forms.Editor), e [ `Label` ](xref:Xamarin.Forms.Label) istanze. Per altre informazioni, vedere [ordine di lettura InputView su Windows](#inputview-readingorder).
-- Abilitazione del supporto di movimenti tocco in una [ `ListView` ](xref:Xamarin.Forms.ListView). Per altre informazioni, vedere [ListView SelectionMode su Windows](#listview-selectionmode).
-- Abilitazione di un [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) per interagire con il motore di controllo ortografico. Per altre informazioni, vedere [SearchBar controllo ortografico in Windows](#searchbar-spellcheck).
-- Abilitazione di un [ `WebView` ](xref:Xamarin.Forms.WebView) per visualizzare gli avvisi di JavaScript in una finestra di dialogo messaggio UWP. Per altre informazioni, vedere [gli avvisi di JavaScript di WebView in Windows](#webview-javascript-alert).
+- Rilevamento di ordine di lettura dal testo contenuto nel [ `Entry` ](xref:Xamarin.Forms.Entry), [ `Editor` ](xref:Xamarin.Forms.Editor), e [ `Label` ](xref:Xamarin.Forms.Label) istanze. Per altre informazioni, vedere [ordine di lettura InputView su Windows](inputview-reading-order.md).
+- Abilitazione del supporto di movimenti tocco in una [ `ListView` ](xref:Xamarin.Forms.ListView). Per altre informazioni, vedere [ListView SelectionMode su Windows](listview-selectionmode.md).
+- Abilitazione di un [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) per interagire con il motore di controllo ortografico. Per altre informazioni, vedere [SearchBar controllo ortografico in Windows](searchbar-spell-check.md).
+- Abilitazione di un [ `WebView` ](xref:Xamarin.Forms.WebView) per visualizzare gli avvisi di JavaScript in una finestra di dialogo messaggio UWP. Per altre informazioni, vedere [gli avvisi di JavaScript di WebView in Windows](webview-javascript-alert.md).
 
 Le funzionalità specifiche della piattaforma seguenti viene fornita per le pagine di xamarin. Forms nella piattaforma UWP:
 
-- Comprimere il [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) barra di spostamento. Per altre informazioni, vedere [MasterDetailPage sulla barra di spostamento a Windows](#collapsable_navigation_bar).
-- Impostazione delle opzioni di posizionamento della barra degli strumenti. Per altre informazioni, vedere [posizione della barra degli strumenti pagina su Windows](#toolbar_placement).
-- Abilitazione di icone da visualizzare in una [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) sulla barra degli strumenti. Per altre informazioni, vedere [icone TabbedPage sul Windows](#tabbedpage-icons).
+- Comprimere il [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) barra di spostamento. Per altre informazioni, vedere [MasterDetailPage sulla barra di spostamento a Windows](masterdetailpage-navigation-bar.md).
+- Impostazione delle opzioni di posizionamento della barra degli strumenti. Per altre informazioni, vedere [posizione della barra degli strumenti pagina su Windows](page-toolbar-placement.md).
+- Abilitazione di icone da visualizzare in una [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) sulla barra degli strumenti. Per altre informazioni, vedere [icone TabbedPage sul Windows](tabbedpage-icons.md).
 
 ## <a name="platform-support"></a>Supporto per piattaforme
 

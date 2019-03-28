@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 5e6d7b4bdfdf7ea48d26537cb41c763656b050e0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 59c61cc637a435f8107256ddcd6bfacfb0466867
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669651"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507019"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Funzionalità di xamarin. Android Designer Material Design
 
@@ -145,9 +145,9 @@ Quando viene modificata una risorsa di colore, un messaggio viene visualizzata c
 
 Il **sfondo** è cambiato colore nella finestra di progettazione per la nuova selezione di colore, ma questa modifica non è ancora stata salvata. A questo punto, è possibile eseguire una delle operazioni seguenti:
 
--   Fare clic su **Ignora modifiche** per annullare il nuovo colore scelto (o scelte) e ripristinare il tema allo stato originale. 
+-   Fare clic su **Ignora modifiche** per annullare il nuovo colore scelto (o scelte) e ripristinare il tema allo stato originale.
 
--   Premere <kbd>CTRL + S</kbd> per salvare le modifiche per il tema attualmente. 
+-   Premere <kbd>CTRL + S</kbd> per salvare le modifiche per il tema attualmente.
 
 Nell'esempio riportato di seguito <kbd>CTRL + S</kbd> è stato fatto in modo che le modifiche sono state salvate **AppTheme**:
 
@@ -300,7 +300,7 @@ Usando il **risorse** scheda vincola le scelte effettuate a questo elenco di col
 
 ### <a name="material-palette"></a>Pannello materiali
 
-Il **materiale tavolozza** verrà visualizzata la scheda le **tavolozza dei colori di Material Design** descritto [precedenti](#material_palette). Scelta di un valore di colore dalla tavolozza a questa vincola la scelta di colori in modo che sia coerenza con le linee guida Material Design.
+Il **materiale tavolozza** verrà visualizzata la scheda le **tavolozza dei colori di Material Design** descritto [precedenti](#material-design-color-palette). Scelta di un valore di colore dalla tavolozza a questa vincola la scelta di colori in modo che sia coerenza con le linee guida Material Design.
 
 [![Pannello materiali](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
 
@@ -316,9 +316,9 @@ Quando viene modificata una risorsa di colore, un messaggio viene visualizzata c
 
 È stata apportata la modifica di colori nella finestra di progettazione, ma questa modifica non è ancora stata salvata. A questo punto, è possibile eseguire una delle operazioni seguenti:
 
--   Fare clic su **Ignora modifiche** per annullare il nuovo colore scelto (o scelte) e ripristinare il tema allo stato originale. 
+-   Fare clic su **Ignora modifiche** per annullare il nuovo colore scelto (o scelte) e ripristinare il tema allo stato originale.
 
--   Premere  **&#8984; + S** per salvare le modifiche a un nuovo tema chiamato **Custom**. 
+-   Premere  **&#8984; + S** per salvare le modifiche a un nuovo tema chiamato **Custom**.
 
 
 ## <a name="summary"></a>Riepilogo
