@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: fda8c08cdbdab01f5d68b7f349d5f28f31316290
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: c18eba873dc1a1dae36c401507d55652ed233b00
+ms.sourcegitcommit: 236a346838c421c7d8951f50abbf4f5365559372
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832002"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58641439"
 ---
 # <a name="xamarinforms-tableview"></a>Xamarin. Forms TableView
 
@@ -115,7 +115,7 @@ Tutte queste proprietà sono associabili.
 [`EntryCell`](xref:Xamarin.Forms.EntryCell) è utile quando è necessario visualizzare i dati di testo che l'utente può modificare. Definisce le proprietà seguenti:
 
 - `Keyboard` – La tastiera per visualizzare durante la modifica. Sono disponibili opzioni per elementi come i valori numerici, messaggio di posta elettronica, i numeri di telefono e così via. [Vedere la documentazione delle API](xref:Xamarin.Forms.Keyboard).
-- `Label` : Il testo dell'etichetta da visualizzare a destra del campo di immissione di testo.
+- `Label` : Il testo dell'etichetta da visualizzare a sinistra del campo di immissione di testo.
 - `LabelColor` : Il colore del testo dell'etichetta.
 - `Placeholder` : Testo da visualizzare nel campo di immissione quando è null o vuoto. Questo testo scomparirà quando viene avviata l'immissione di testo.
 - `Text` : Il testo nel campo di immissione.
