@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: a8b31d9f2e9c8921420b1fd50c4092273962f54b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3e7fc3d627b5d7a1dc73caa395a9181efb0b5f08
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105896"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58678002"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Utilizzo di tvOS viste delle tabelle in Xamarin
 
@@ -101,7 +101,7 @@ Per iniziare, eseguire le operazioni seguenti:
 1. Per ogni **cella prototipo**, selezionarlo e assegnare un valore univoco **identificatore** nel **Widget** scheda della finestra di **Esplora proprietà**. Questo passaggio viene _molto importante_ perché sarà necessario questo identificatore in un secondo momento quando si popola la tabella. Ad esempio `AttrCell`: 
 
     [![](table-views-images/table12.png "La scheda di Widget")](table-views-images/table12.png#lightbox)
-1. È anche possibile selezionare per presentare la cella come una del [visualizzazione di tabella predefinito di tipi di cella](#Table-View-Cell-Types) tramite il **stile** elenco a discesa o impostarlo su **personalizzato** e utilizzare l'area di progettazione al layout della cella mediante il trascinamento di altri widget dell'interfaccia utente dal **casella degli strumenti**: 
+1. È anche possibile selezionare per presentare la cella come una del [visualizzazione di tabella predefinito di tipi di cella](#table-view-cell-types) tramite il **stile** elenco a discesa o impostarlo su **personalizzato** e utilizzare l'area di progettazione al layout della cella mediante il trascinamento di altri widget dell'interfaccia utente dal **casella degli strumenti**: 
 
     [![](table-views-images/table13.png "Il layout della cella")](table-views-images/table13.png#lightbox)
 1. Assegnare un valore univoco **nome** a ogni elemento dell'interfaccia utente nella soluzione il prototipo cella nel **Widget** scheda della finestra di **Esplora proprietà** in modo che sia possibile accedervi successivamente in C# codice: 
@@ -142,7 +142,7 @@ Per iniziare, eseguire le operazioni seguenti:
 1. Per ogni **cella prototipo**, selezionarlo e assegnare un valore univoco **identificatore** nel **Widget** scheda della finestra di **Esplora proprietà**. Questo passaggio viene _molto importante_ perché sarà necessario questo identificatore in un secondo momento quando si popola la tabella. Ad esempio `AttrCell`: 
 
     [![](table-views-images/table12-vs.png "Assegnare un identificatore")](table-views-images/table12-vs.png#lightbox)
-1. È anche possibile selezionare per presentare la cella come una del [visualizzazione di tabella predefinito di tipi di cella](#Table-View-Cell-Types) tramite il **stile** elenco a discesa o impostarlo su **personalizzato** e utilizzare l'area di progettazione al layout della cella mediante il trascinamento di altri widget dell'interfaccia utente dal **casella degli strumenti**: 
+1. È anche possibile selezionare per presentare la cella come una del [visualizzazione di tabella predefinito di tipi di cella](#table-view-cell-types) tramite il **stile** elenco a discesa o impostarlo su **personalizzato** e utilizzare l'area di progettazione al layout della cella mediante il trascinamento di altri widget dell'interfaccia utente dal **casella degli strumenti**: 
 
     [![](table-views-images/table13-vs.png "L'elenco a discesa stile")](table-views-images/table13-vs.png#lightbox)
 1. Assegnare un valore univoco **nome** a ogni elemento dell'interfaccia utente nella soluzione il prototipo cella nel **Widget** scheda della finestra di **Esplora proprietà** in modo che sia possibile accedervi successivamente in C# codice: 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 40d4a6cbd3bb8e3bd4c55c50c69f85f91d94feac
-ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
+ms.openlocfilehash: 6db9ff0085c17f07d07a7591f5d735793bfbc5f9
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52459928"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58678041"
 ---
 # <a name="callkit-in-xamarinios"></a>CallKit in xamarin. IOS
 
@@ -48,7 +48,7 @@ Le sezioni seguenti vengano illustrano l'architettura CallKit, l'ingresso e in u
 
 In iOS 10, Apple ha adottato CallKit in tutti i servizi di sistema in modo che le chiamate effettuate a CarPlay, ad esempio, sono noti all'interfaccia utente di sistema tramite CallKit. Nell'esempio riportato di seguito, poiché MonkeyCall adotta CallKit, è noto al sistema nello stesso modo come questi servizi di sistema predefinite e ottiene tutte le stesse funzionalità:
 
-[![](callkit-images/callkit01.png "Lo Stack del servizio CallKit")](callkit-images/callkit01.png#lightbox)
+[![](callkit-images/callkit01.png "The CallKit Service Stack")](callkit-images/callkit01.png#lightbox)
 
 Esaminiamo più da vicino l'App MonkeyCall dal diagramma precedente. L'app contiene tutto il codice per comunicare con la propria rete e le proprie interfacce utente. Collega in CallKit per comunicare con il sistema:
 
@@ -278,7 +278,7 @@ namespace MonkeyCall
 }
 ```
 
-Il `CallHandleFromURL` e `CallHandleFromActivity` classi vengono utilizzate in AppDelegate per ottenere l'handle contatto della persona chiamata in una chiamata in uscita. Per altre informazioni, vedere la [gestisce le chiamate in uscita](#Handling-Outgoing-Calls) sezione riportata di seguito.
+Il `CallHandleFromURL` e `CallHandleFromActivity` classi vengono utilizzate in AppDelegate per ottenere l'handle contatto della persona chiamata in una chiamata in uscita. Per altre informazioni, vedere la [gestisce le chiamate in uscita](#handling-outgoing-calls) sezione riportata di seguito.
 
 ### <a name="the-activecallmanager-class"></a>La classe ActiveCallManager
 
@@ -392,7 +392,7 @@ namespace MonkeyCall
 }
 ```
 
-Anche in questo caso, poiché si tratta di una simulazione, solo il `ActiveCallManager` solo gestisce una raccolta di `ActiveCall` degli oggetti e dispone di una routine per la ricerca di una determinata chiamata dal relativo `UUID` proprietà. Include anche metodi per avviare, terminare e modificare lo stato in attesa di una chiamata in uscita. Per altre informazioni, vedere la [gestisce le chiamate in uscita](#Handling-Outgoing-Calls) sezione riportata di seguito.
+Anche in questo caso, poiché si tratta di una simulazione, solo il `ActiveCallManager` solo gestisce una raccolta di `ActiveCall` degli oggetti e dispone di una routine per la ricerca di una determinata chiamata dal relativo `UUID` proprietà. Include anche metodi per avviare, terminare e modificare lo stato in attesa di una chiamata in uscita. Per altre informazioni, vedere la [gestisce le chiamate in uscita](#handling-outgoing-calls) sezione riportata di seguito.
 
 ### <a name="the-providerdelegate-class"></a>La classe ProviderDelegate
 
@@ -728,7 +728,7 @@ namespace MonkeyCall
 }
 ```
 
-Il `OpenUrl` e `ContinueUserActivity` sostituzione metodi vengono utilizzati quando l'app sta elaborando una chiamata in uscita. Per altre informazioni, vedere la [gestisce le chiamate in uscita](#Handling-Outgoing-Calls) sezione riportata di seguito.
+Il `OpenUrl` e `ContinueUserActivity` sostituzione metodi vengono utilizzati quando l'app sta elaborando una chiamata in uscita. Per altre informazioni, vedere la [gestisce le chiamate in uscita](#handling-outgoing-calls) sezione riportata di seguito.
 
 ## <a name="handling-incoming-calls"></a>La gestione delle chiamate in ingresso
 
@@ -945,9 +945,9 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 }
 ```
 
-In questo caso il `CallHandleFromActivity` metodo della classe helper `StartCallRequest` viene utilizzata per ottenere l'handle alla persona chiamata (vedere [classe StartCallRequest](#The-StartCallRequest-Class) sopra). 
+In questo caso il `CallHandleFromActivity` metodo della classe helper `StartCallRequest` viene utilizzata per ottenere l'handle alla persona chiamata (vedere [classe StartCallRequest](#the-startcallrequest-class) sopra).
 
-Il `PerformStartCallAction` metodo per il [ProviderDelegate classe](#The-ProviderDelegate-Class) viene usato per avviare la chiamata in uscita effettiva infine e informare il sistema del ciclo di vita:
+Il `PerformStartCallAction` metodo per il [ProviderDelegate classe](#the-providerdelegate-class) viene usato per avviare la chiamata in uscita effettiva infine e informare il sistema del ciclo di vita:
 
 ```csharp
 public override void PerformStartCallAction (CXProvider provider, CXStartCallAction action)

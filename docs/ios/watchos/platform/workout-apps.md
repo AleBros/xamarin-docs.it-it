@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: fd677aa802adf32ac81396f81c67264d88639967
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: 02db7dce6ba38b6c1e943ff189ff69efb7cc1c08
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528780"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677833"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>le App per gli allenamenti in Xamarin watchOS
 
@@ -636,7 +636,7 @@ Facoltativamente, l'app può calcolare e creare un subset ridotto di campioni o 
 
 ## <a name="workouts-and-ios-10"></a>Allenamenti e iOS 10
 
-Ogni app allenamenti watchOS 3 è un'app di base allenamenti iOS 10 padre, nuovi e a 10, iOS app iOS può essere utilizzata per avviare accinge che inserirà l'Apple Watch in modalità allenamenti (senza intervento dell'utente) ed eseguire l'app watchOS nella modalità di esecuzione in Background (vedere [su in esecuzione in Background](#About-Background-Running) sopra per altri dettagli).
+Ogni app allenamenti watchOS 3 è un'app di base allenamenti iOS 10 padre, nuovi e a 10, iOS app iOS può essere utilizzata per avviare accinge che inserirà l'Apple Watch in modalità allenamenti (senza intervento dell'utente) ed eseguire l'app watchOS nella modalità di esecuzione in Background (vedere [su in esecuzione in Background](#about-background-running) sopra per altri dettagli).
 
 Mentre è in esecuzione l'app watchOS, WatchConnectivity può usare per la messaggistica e comunicazione con l'app per iOS padre.
 
@@ -649,7 +649,7 @@ Ottenere un quadro di come funziona questo processo:
 3. Utilizzando i valori passati nella configurazione per gli allenamenti, l'app watchOS 3 viene avviata una nuova sessione per gli allenamenti (`HKWorkoutSession`).
 
 > [!IMPORTANT]
-> Affinché l'app iPhone padre per l'avvio accinge nel Apple Watch, l'app watchOS 3 deve essere in esecuzione in Background abilitata. Vedi [abilitazione in esecuzione in Background](#Enabling-Background-Running) sopra per altri dettagli.
+> Affinché l'app iPhone padre per l'avvio accinge nel Apple Watch, l'app watchOS 3 deve essere in esecuzione in Background abilitata. Vedi [abilitazione in esecuzione in Background](#enabling-background-running) sopra per altri dettagli.
 
 Questo processo è molto simile al processo di avvio di una sessione per gli allenamenti nell'app watchOS 3 direttamente. In un iPhone, usare il codice seguente:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 7b7564e3b94062c2294919121f32c4f830346bda
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bb6b47f7936745b00e2b7e6095662a7e8273e1bd
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105337"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677898"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introduzione a suggerimenti proattivi in xamarin. IOS
 
@@ -397,7 +397,7 @@ namespace MonkeyNotification
 }
 ```
 
-Esaminando questo codice in modo dettagliato, crea e popola un'istanza della `NSUserActivity` (come illustrato nella [creazione di un'attività](#Creating-an-Activity) sezione precedente). Successivamente, crea un'istanza di `INSendMessageIntent` (che eredita da `INIntent`) e lo popola con i dettagli del messaggio inviato:
+Esaminando questo codice in modo dettagliato, crea e popola un'istanza della `NSUserActivity` (come illustrato nella [creazione di un'attività](#creating-an-activity) sezione precedente). Successivamente, crea un'istanza di `INSendMessageIntent` (che eredita da `INIntent`) e lo popola con i dettagli del messaggio inviato:
 
 ```csharp
 var intent = new INSendMessageIntent (to, text, "", "MonkeyChat", from);
@@ -481,7 +481,7 @@ Se l'utente visita questa pagina in Safari e quindi passato a un'altra app, le i
 Safari consentirà di estrarre qualsiasi elemento in una pagina web che rispetti le proprietà dello schema seguenti:
 
 - **PostalAddress**
-- **Coordinate geografiche**
+- **GeoCoordinates**
 - Proprietà di un telefono.
 
 Per altre informazioni, vedere la [eseguire una ricerca con Markup Web](~/ios/platform/search/web-markup.md) Guida.

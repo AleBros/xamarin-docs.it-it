@@ -7,13 +7,8 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: f2a612eea39a3447cae03e2d7b675a46c47aad52
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233744"
 ---
+
 # <a name="introduction-to-ios-10"></a>Introduzione a iOS 10
 
 _Questo articolo illustra tutte le nuove e modificate le API e funzionalità disponibili in iOS 10 per gli sviluppatori di xamarin. IOS._
@@ -49,7 +44,7 @@ Apple ha fornito alcuni nuovi punti di estensione di App in iOS 10:
 
 - Directory di chiamata
 - Gli Intent e interfaccia utente Intent
-- Messages
+- Messaggi
 - Contenuto della notifica
 - Notification Services
 - Pack adesivi
@@ -231,7 +226,7 @@ Le API seguenti sono state deprecate in iOS 10:
 - [NSPersistentStoreCoordnator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) i simboli relativi al contenuto diffuso sono stati deprecati.
 - `ADBannerView`, `ADInterstitialAd` e i simboli in relativi il [UIViewController](xref:UIKit.UIViewController) classe sono state deprecate.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) simboli associati a valori a virgola mobile sono stati deprecati.
-- Il `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` e `UIUserNotificationSettings` classi di UIKit sono state deprecate. Usare la [notifiche utente](#User-Notifications) framework invece.
+- Il `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` e `UIUserNotificationSettings` classi di UIKit sono state deprecate. Usare la [notifiche utente](#user-notifications) framework invece.
 - Il `HandleActionForLocalNotification`, `HandleActionForRemoteNotification`, `DidReceiveLocalNotification` e `DidReceiveRemoteNotification` WatchKit metodi deprecati. Usare la `HandleActionForNotification` e `DidReceiveNotification` metodi invece.
 - Il `DidReceiveLocalNotification` e `DidReceiveRemoteNotification` metodi delle [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) sono state deprecate. Creare un'istanza di [UNUserNotificationCenterDelegate](https://developer.apple.com/reference/usernotifications/unusernotificationcenterdelegate) che implementa i metodi appropriati e assegnarlo al `Delegate` proprietà della [UNUserNotificationCenter](https://developer.apple.com/reference/usernotifications/unusernotificationcenter) oggetto.
 - Il **Game Center App** è deprecato ed è stato rimosso da iOS. Se l'app Usa GameKit, si _necessario_ presentare la propria interfaccia per visualizzare le funzionalità GameKit come tabelloni punteggi e così via.

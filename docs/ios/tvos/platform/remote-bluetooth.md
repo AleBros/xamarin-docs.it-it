@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 14c62051afd7489389f154c21b3a76b9aad3f32e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 79022f7a454ea423fa3112a4c4ade2bcd471fbb8
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115536"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677950"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controller Bluetooth per tvOS in Xamarin e remoti per Siri
 
@@ -51,7 +51,7 @@ Il remoti per Siri sono gli utilizzi previsto all'interno dell'app tvOS e le fun
 
 È in grado di rilevare un'ampia gamma di movimenti di un singolo dito che è possibile rispondere a nell'app xamarin. tvos Touch area di Siri Remote:
 
-|Scorrere rapidamente|Clic|Toccare|
+|Scorrere rapidamente|Fare clic su|Toccare|
 |---|---|---|
 |![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
 |Selezione (dello stato attivo) viene spostata tra gli elementi dell'interfaccia utente sullo schermo (verso l'alto, in basso a sinistra, pulsante destro del mouse). Scorrendo rapidamente è utilizzabile per scorrere gli elenchi di grandi dimensioni del contenuto rapidamente con l'inerzia.|Attiva l'elemento selezionato (messa a fuoco) o funge da pulsante primario in un gioco. Facendo clic e tenendo premuto può attivare funzioni secondarie o i menu contestuali.|Certamente preso alla leggera toccando la superficie Touch sui bordi funziona come pulsanti direzionali su un D-blocco note, lo stato attivo passa alto, basso, a sinistra o destra a seconda dell'area toccato. A seconda dell'app, è utilizzabile per visualizzare i controlli nascosti.|
@@ -310,7 +310,7 @@ Come indicato in precedenza, oltre a standard remoti per Siri fornito con Apple 
 Se l'app è necessario input di basso livello di controller, si può usare Apple [Framework di Controller di gioco](https://developer.apple.com/library/prerelease/tvos/documentation/ServicesDiscovery/Conceptual/GameControllerPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013276) che ha le seguenti modifiche per tvOS:
 
 - Il profilo del Controller di gioco Micro (`GCMicroGamepad`) è stato aggiunto come destinazione il remoti per Siri.
-- Il nuovo `GCEventViewController` classe può essere utilizzata per instradare gli eventi del gioco tramite l'app. Vedere le [Input di Controller di gioco determinazione](#Determining-Game-Controller-Input) sezione di seguito per altri dettagli.
+- Il nuovo `GCEventViewController` classe può essere utilizzata per instradare gli eventi del gioco tramite l'app. Vedere le [Input di Controller di gioco determinazione](#determining-game-controller-input) sezione di seguito per altri dettagli.
 
 <a name="Game-Controller-Support-Requirements" />
 

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: d04ce6827f6695163c7d9a8d34acc3891d854c8d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6d5be72a9329675a65b0d6873d13894b314b50e7
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122673"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677846"
 ---
 # <a name="stack-views-in-xamarinios"></a>Viste dello stack in xamarin. IOS
 
@@ -233,7 +233,7 @@ Esistono diverse proprietà che controllano il modo in cui una visualizzazione d
 - **Linea di base relativi** : se `true`, la spaziatura verticale di ogni visualizzazione secondaria verrà derivata dal relativo della linea di base.
 - **Layout dei margini relativo** – inserisce le visualizzazioni secondarie relativo ai margini layout standard.
 
-In genere si utilizzerà una visualizzazione dello Stack per disporre di un numero ridotto di visualizzazioni secondarie. Interfacce utente più complesse possono essere create da una o più visualizzazioni dello Stack all'interno di altre di annidamento (come abbiamo fatto [UIStackView Quickstart](#UIStackView-Quickstart) sopra).
+In genere si utilizzerà una visualizzazione dello Stack per disporre di un numero ridotto di visualizzazioni secondarie. Interfacce utente più complesse possono essere create da una o più visualizzazioni dello Stack all'interno di altre di annidamento (come abbiamo fatto [UIStackView Quickstart](#uistackview-quickstart) sopra).
 
 È possibile ottimizzare ulteriormente l'aspetto delle interfacce utente mediante l'aggiunta di vincoli aggiuntivi per le visualizzazioni secondarie (ad esempio al controllo larghezza o all'altezza). Tuttavia, necessario fare attenzione a non includere i vincoli in conflitto a quelle introdotte dalla visualizzazione Stack se stesso.
 

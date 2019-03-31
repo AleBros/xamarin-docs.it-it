@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: b0571f826101576b402368923c2147e35aa9299e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4472654064812142e3281374754ace0042b542bf
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116329"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677755"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Notifiche utente avanzate in xamarin. IOS
 
@@ -365,17 +365,17 @@ Per eliminare questo effetto, modificare il `Info.plist` file per l'estensione e
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![](advanced-user-notifications-images/customui05.png "La chiave UNNotificationExtensionInitialContentSizeRatio")](advanced-user-notifications-images/customui05.png#lightbox)
+[![](advanced-user-notifications-images/customui05.png "The UNNotificationExtensionInitialContentSizeRatio key")](advanced-user-notifications-images/customui05.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](advanced-user-notifications-images/customui05w.png "La chiave UNNotificationExtensionInitialContentSizeRatio")](advanced-user-notifications-images/customui05w.png#lightbox)
+[![](advanced-user-notifications-images/customui05w.png "The UNNotificationExtensionInitialContentSizeRatio key")](advanced-user-notifications-images/customui05w.png#lightbox)
 
 -----
 
 ### <a name="using-media-attachments-in-custom-ui"></a>Usando gli allegati multimediali nell'interfaccia utente personalizzata
 
-Poiché gli allegati multimediali (come illustrato nel [aggiunta di allegati multimediali](#Adding-Media-Attachments) sezione precedente) fanno parte del Payload della notifica, possono essere accessibili e visualizzati nell'estensione per contenuto notifiche esattamente come si troveranno nel valore predefinito Notifica dell'interfaccia utente.
+Poiché gli allegati multimediali (come illustrato nel [aggiunta di allegati multimediali](#adding-media-attachments) sezione precedente) fanno parte del Payload della notifica, possono essere accessibili e visualizzati nell'estensione per contenuto notifiche esattamente come si troveranno nel valore predefinito Notifica dell'interfaccia utente.
 
 Se, ad esempio, inclusa l'interfaccia utente personalizzata precedente un `UIImageView` che sono state esposte al C# di codice, il seguente codice può essere utilizzato per popolare il database da con il file multimediale allegato:
 
