@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: c8d5c1394bee2ca2419904b077522fac9d03d825
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2c3bddc89348b46c9bba277580071cb8ac3d6943
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669445"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58678054"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementazione di SiriKit in xamarin. IOS
 
@@ -635,7 +635,7 @@ Per aggiungere un'estensione per Intent alla soluzione, eseguire le operazioni s
     
 -----
 
-Ripetere questi passaggi per il numero di estensioni di Intent (basato su [architettura dell'App per le estensioni](#Architecting-the-App-for-Extensions) sezione precedente) che l'app richiederà.
+Ripetere questi passaggi per il numero di estensioni di Intent (basato su [architettura dell'App per le estensioni](#architecting-the-app-for-extensions) sezione precedente) che l'app richiederà.
 
 ### <a name="configuring-the-infoplist"></a>Configurazione di Info. plist
 

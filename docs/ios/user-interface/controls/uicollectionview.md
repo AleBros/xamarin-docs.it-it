@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 8e114f39a01c2243889c53c855acd7fa8061ed09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f57f2a2bc17690b7a1e0a72c583b0e94519ca4db
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114730"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677989"
 ---
 # <a name="collection-views-in-xamarinios"></a>Visualizzazioni raccolta in xamarin. IOS
 
@@ -443,7 +443,7 @@ In questo articolo prenderemo in illustrata l'implementazione di trascinamento-a
     - [Esempio di riordinamento semplice](#Simple-Reordering-Example)
     - [Utilizzando un riconoscimento di movimenti personalizzati](#Using-a-Custom-Gesture-Recognizer)
     - [Layout personalizzati e riordinamento](#Custom-Layouts-and-Reording)
-- [Modifiche alla vista raccolta](#Collection-View-Changes)
+- [Modifiche alla vista raccolta](#collection-view-changes)
 
 <a name="Easy-Reordering-of-Items" />
 
@@ -475,7 +475,7 @@ Selezionare la visualizzazione di raccolta (potrebbe essere più semplice esegui
 - **Dimensioni della cella**: Width: 60 | Height: 60
 - **Dimensioni massime dell'intestazione**: Width: 0 | Height: 0
 - **Dimensioni del piè di pagina**: Width: 0 | Height: 0
-- **Spaziatura min**: per le celle – 8 | Per le righe, 8
+- **Spaziatura min**: Per le celle – 8 | Per le righe, 8
 - **Sezione Inset**: Top: 16 | Nella parte inferiore – 16 | Left: 16 | Right-16
 
 [![](uicollectionview-images/quick04.png "Impostare le dimensioni di visualizzazione raccolta")](uicollectionview-images/quick04.png#lightbox)
