@@ -49,10 +49,6 @@ Questa guida illustra i metodi quando si usa l'emulatore di Android.
 
 Questa guida illustra i passaggi per la configurazione di un progetto di test Android NUnit _non_ un progetto xamarin. UITest. Sono disponibili le guide di xamarin. UITest [qui](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
 
-### <a name="how-do-i-enable-intellisense-in-android-axml-filesenable-axml-intellisensemd"></a>[Come si abilita IntelliSense nei file axml Android?](enable-axml-intellisense.md)
-
-Questa guida viene descritto come attivare Intellisense di Visual Studio per i file axml Android.
-
 ### <a name="why-cant-my-android-release-build-connect-to-the-internetandroid-internetmd"></a>[Perché non è possibile connettere la build di versione Android a Internet?](android-internet.md)
 
 La causa più comune di questo problema è che il **INTERNET** autorizzazione viene automaticamente incluso in una build di debug, ma deve essere impostato manualmente per una build di rilascio. Questa guida descrive come abilitare l'autorizzazione per le build di rilascio.
