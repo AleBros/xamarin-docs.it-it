@@ -1,5 +1,5 @@
 ---
-title: Eseguire l'esplorazione in un'applicazione xamarin. Forms con più pagine
+title: Eseguire spostamenti in un'applicazione Xamarin.Forms a più pagine
 description: Questo articolo illustra come attivare l'applicazione a singola pagina, in grado di archiviare una nota singola, in un'applicazione a più pagine, in grado di archiviare più note.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -8,17 +8,17 @@ ms.assetid: 9DC3B3D6-6CBC-4705-BE80-3D86A9E65F92
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/02/2019
-ms.openlocfilehash: f3c5ec1c6d37c74fd9b4fb4980c68a59c9864c05
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.date: 04/01/2019
+ms.openlocfilehash: 855962560897789dadba535f69c4a7da42bb4742
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197368"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854977"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Eseguire navigazione in un'applicazione xamarin. Forms con più pagine
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+[![Download esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 
 In questa Guida introduttiva si apprenderà come:
 
@@ -39,7 +39,7 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](sing
 
 ## <a name="update-the-app-with-visual-studio"></a>Aggiornare l'app con Visual Studio
 
-1. Avviare Visual Studio. Nella pagina iniziale fare clic su **Apri progetto / soluzione**e nel **aprire il progetto** finestra di dialogo selezionare il file di soluzione per il progetto note:
+1. Avviare Visual Studio. Nella finestra di avvio, fare clic sulla **note** soluzione nell'elenco di progetti e soluzioni recenti, o fare clic su **apre un progetto o soluzione**e nel **Apri progetto/soluzione** finestra di dialogo Selezionare il file di soluzione per il progetto note:
 
     ![](multi-page-images/vs/open-solution.png "Aprire il progetto")
 
@@ -285,9 +285,7 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](sing
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -324,7 +322,7 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](sing
 
 ## <a name="update-the-app-with-visual-studio-for-mac"></a>Aggiornare l'app con Visual Studio per Mac
 
-1. Avviare Visual Studio per Mac. Nella pagina iniziale fare clic su **aprire...** e nella finestra di dialogo selezionare il file di soluzione per il progetto note:
+1. Avviare Visual Studio per Mac. Nella finestra di avvio fare clic su **aperto**e nella finestra di dialogo selezionare il file di soluzione per il progetto note:
 
     ![](multi-page-images/vsmac/open-solution.png "Aprire la soluzione")
 
@@ -570,9 +568,7 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](sing
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -617,9 +613,9 @@ In questa Guida introduttiva si è appreso come:
 Per modificare l'applicazione in modo che archivia i dati in un database locale di SQLite.NET, continuare per la successiva Guida introduttiva.
 
 > [!div class="nextstepaction"]
-> [avanti](database.md)
+> [Successivo](database.md)
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Notes (esempio)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+- [Note (esempio)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 - [Approfondimento di Guida introduttiva di xamarin. Forms](deepdive.md)

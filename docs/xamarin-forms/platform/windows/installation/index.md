@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: fb166b69c76ca4c87746358258d97f1cb81cb301
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b0f06cf15d3a3ec7eae4742d5d037e233be46d08
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123232"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855185"
 ---
 # <a name="setup-windows-projects"></a>Progetti di Windows il programma di installazione
 
@@ -22,7 +22,7 @@ Soluzioni più vecchie in xamarin. Forms (o quelle create in macOS) non avrà i 
 
 ## <a name="add-a-universal-windows-platform-app"></a>Aggiungere un Windows Universal app della piattaforma
 
-È consigliabile eseguire **Visual Studio 2017** sul **Windows 10** per compilare le app UWP. Per altre informazioni sulla piattaforma Windows universale, vedere [Introduzione alla piattaforma Windows Universal](/windows/uwp/get-started/universal-application-platform-guide/).
+**Visual Studio 2019** sul **Windows 10** è consigliabile compilare le app UWP. Per altre informazioni sulla piattaforma Windows universale, vedere [Introduzione alla piattaforma Windows Universal](/windows/uwp/get-started/universal-application-platform-guide/).
 
 La piattaforma UWP è disponibile in xamarin. Forms 2.1 e versioni successive e verifica è supportata in xamarin. Forms 2.2 e successive.
 

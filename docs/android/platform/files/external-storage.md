@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 846a8fd45b8e39fb11270374af47a5b6cb83fa01
-ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
+ms.openlocfilehash: 78051fce44239eea86948988a4d19ac37c5ea0d5
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56666935"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854899"
 ---
 # <a name="external-storage"></a>Archiviazione esterna
 
@@ -140,17 +140,17 @@ Tutte le app Android devono dichiarare una delle due autorizzazioni per l'archiv
 > [!NOTE]
 > Se l'utente concede `WRITE_EXTERNAL_STORAGE`, quindi `READ_EXTERNAL_STORAGE` è inoltre in modo implicito concesso. Non è necessario richiedere entrambe le autorizzazioni in **androidmanifest. XML**.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 Le autorizzazioni possono essere aggiunti anche tramite il **manifesto Android** scheda della finestra di **proprietà della soluzione**:
 
-![Esplora soluzioni - delle autorizzazioni necessarie per Visual Studio 2017](./images/required-permissions.w157.png)
+![Esplora soluzioni - delle autorizzazioni necessarie per Visual Studio](./images/required-permissions.w157.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
 
 Le autorizzazioni possono essere aggiunti anche tramite il **manifesto Android** scheda della finestra di **riquadro delle proprietà di soluzione**:
 
-[![Riquadro della soluzione - delle autorizzazioni necessarie per Visual Studio per Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
+[![Soluzione - riquadro autorizzazioni necessarie per Visual Studio per Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
 
 -----
 

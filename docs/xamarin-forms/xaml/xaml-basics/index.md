@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: bd6013a0fc1d4f3dfc2d863860052310fed55e4d
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: e85eb64099ba60a2b3663730a6fb058efdac6c60
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292142"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854704"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Nozioni fondamentali di XAML di xamarin. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Download esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 XAML (eXtensible Application Markup Language) consente agli sviluppatori di definire le interfacce utente nelle applicazioni Xamarin.Forms tramite markup anziché codice. XAML non è mai obbligatorio in un programma di xamarin. Forms, ma spesso è più conciso e visivamente più coerenti rispetto al codice equivalente e potenzialmente ricco di strumenti. XAML è particolarmente adatto per l'uso con l'architettura delle applicazioni MVVM (Model-View-ViewModel) più diffusi: XAML definisce la vista collegata al ViewModel codice tramite le associazioni di dati basati su XAML.
 
@@ -25,13 +25,13 @@ XAML (eXtensible Application Markup Language) consente agli sviluppatori di defi
 * [Panoramica](#Overview)
 * [Parte 1. Introduzione a XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 * [Parte 2. Sintassi XAML essenziale](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
-* [Parte 3. Estensioni di markup XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-* [Parte 4. Nozioni di base sul data binding](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+* [Parte 3. Estensioni di Markup XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+* [Parte 4. Nozioni fondamentali sull'associazione dati](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
 * [Parte 5. Da Data Binding a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
 
 Oltre a questi articoli nozioni fondamentali di XAML, è possibile scaricare capitoli del libro [creazione di App per dispositivi mobili con xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md):
 
-[![](images/cover-sml.png "Copertina")](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
+[![](images/cover-sml.png "Book Cover")](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
 
 XAML argomenti sono trattati in modo più approfondito in molte capitoli del libro, tra cui:
 
@@ -89,7 +89,7 @@ Naturalmente, esistono anche svantaggi, per lo più correlati a limitazioni intr
 -  XAML a livello generale non è possibile creare un'istanza di classi che non si definiscono un costruttore senza parametri. (Tuttavia, vi è a volte come risolvere questa limitazione).
 -  XAML in genere non è possibile chiamare i metodi. (Anche in questo caso, questa restrizione può talvolta essere risolti.)
 
-Non è stato ancora una finestra di progettazione visiva per la generazione di XAML in applicazioni xamarin. Forms. XAML tutti devono essere scritti a mano, ma è presente una [Visualizzatore anteprima XAML](~/xamarin-forms/xaml/xaml-previewer.md). I programmatori di nuovo a XAML potrebbero voler spesso compilare ed eseguire le applicazioni, in particolare dopo tutto ciò che potrebbe non essere ovviamente corretto. Anche gli sviluppatori con molta esperienza in XAML sapere che sperimentazione è gratificante.
+Non è stato ancora una finestra di progettazione visiva per la generazione di XAML in applicazioni xamarin. Forms. XAML tutti devono essere scritti a mano, ma è presente una [Visualizzatore anteprima XAML](~/xamarin-forms/xaml/xaml-previewer/index.md). I programmatori di nuovo a XAML potrebbero voler spesso compilare ed eseguire le applicazioni, in particolare dopo tutto ciò che potrebbe non essere ovviamente corretto. Anche gli sviluppatori con molta esperienza in XAML sapere che sperimentazione è gratificante.
 
 XAML è fondamentalmente XML, ma XAML ha alcune funzionalità della sintassi univoco. I più importanti sono:
 

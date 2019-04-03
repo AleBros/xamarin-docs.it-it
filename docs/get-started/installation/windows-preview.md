@@ -1,27 +1,27 @@
 ---
 title: Installazione di Xamarin Preview in Windows
-description: Questo documento descrive come installare una versione di anteprima di Xamarin in Visual Studio 2017 usando il canale della versione di anteprima.
+description: Questo documento descrive come installare una versione di anteprima di Xamarin in Visual Studio 2019 tramite il canale della versione di anteprima.
 ms.prod: xamarin
 ms.assetid: 9F730444-06E8-4B3F-8A19-CA95CD484FFA
 author: asb3993
 ms.author: amburns
 ms.date: 03/20/2018
-ms.openlocfilehash: 12a661a7cb0e92046e56c5c2ece6e8504252ca10
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 9ce56891eeab73f661a9c22cc047c4d0bcb10337
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57199707"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854795"
 ---
 # <a name="installing-xamarin-preview-on-windows"></a>Installazione di Xamarin Preview in Windows
 
-Visual Studio 2017 non supporta canali alfa, beta e stabili nello stesso modo delle versioni precedenti. Sono invece disponibili solo due opzioni:
+Visual Studio 2019 e Visual Studio 2017 non supporta canali stabili, beta e alfa nello stesso modo delle versioni precedenti. Sono invece disponibili solo due opzioni:
 
 - **Release** - equivalente al canale _stabile_ in Visual Studio per Mac
 - **Preview** - equivalente ai canali _alfa_ e _beta_ in Visual Studio per Mac
 
-> [!TIP] 
-> Per provare le funzionalità non definitive, è necessario [scaricare il programma di installazione di Visual Studio 2017 Preview](https://visualstudio.microsoft.com/vs/preview/), che offre la possibilità di installare le versioni **Preview** di Visual Studio side-by-side con la versione stabile (Release). Altre informazioni sulle novità in Visual Studio 2017 sono disponibili nelle [note sulla versione](/visualstudio/releasenotes/vs2017-preview-relnotes).
+> [!TIP]
+> Per provare le funzionalità di versioni non definitive, dovrebbe [scaricare il programma di installazione di Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/), che offre la possibilità di installare **anteprima** versioni di Visual Studio side-by-Side con il (stabile Versione di rilascio). Altre informazioni sulle novità in Visual Studio 2019 sono reperibile nel [note sulla versione](https://docs.microsoft.com/visualstudio/releases/2019/release-notes).
 
 La versione Preview di Visual Studio può includere le versioni di anteprima corrispondenti delle funzionalità di Xamarin, tra cui:
 
@@ -29,7 +29,6 @@ La versione Preview di Visual Studio può includere le versioni di anteprima cor
 - Xamarin.iOS
 - Xamarin.Android
 - Xamarin Profiler
-- Xamarin Workbooks
 - Xamarin Inspector
 - Xamarin Remoted iOS Simulator
 
@@ -39,8 +38,8 @@ Lo screenshot seguente del **programma di installazione della versione Preview**
 
 Durante il processo di installazione è possibile applicare un **Nome alternativo dell'installazione** all'installazione side-by-side, in modo da poter distinguere le installazioni nel menu Start, come illustrato di seguito:
 
-[![modificare il nome alternativo prima dell'installazione](windows-images/vs2017-nickname-sml.png "modificare il nome alternativo prima dell'installazione")](windows-images/vs2017-nickname.png#lightbox)
+[![enome alternativo DIT prima di installare](windows-images/vs2017-nickname-sml.png "modificare il nome alternativo prima dell'installazione")](windows-images/vs2017-nickname.png#lightbox)
 
-### <a name="uninstalling-visual-studio-2017-preview"></a>Disinstallazione di Visual Studio Preview 2017
+### <a name="uninstalling-visual-studio-2019-preview"></a>Disinstallazione di Visual Studio 2019 Preview
 
-Il **programma di installazione di Visual Studio** deve essere usato anche per disinstallare le versioni di anteprima di Visual Studio 2017. Per altre informazioni, leggere la [guida alla disinstallazione di Xamarin](uninstalling-xamarin.md#uninstallvs2017).
+Il **programma di installazione di Visual Studio** deve inoltre essere utilizzato per disinstallare le versioni di anteprima di Visual Studio 2019. Per altre informazioni, leggere la [guida alla disinstallazione di Xamarin](uninstalling-xamarin.md#uninstallvs2017).

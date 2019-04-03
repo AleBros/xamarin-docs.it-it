@@ -1,5 +1,5 @@
 ---
-title: Come e quando è opportuno registrare un report sui bug?
+title: Quando e come è opportuno registrare un report sui bug?
 description: Questo documento viene descritto quando, dove e come a un report sui bug. Fornisce inoltre report sui bug procedure consigliate che consentono agli ingegneri di meglio diagnosticare il problema.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -7,19 +7,19 @@ ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
 author: conceptdev
 ms.author: crdun
 ms.date: 08/01/2018
-ms.openlocfilehash: f20740ff1e16187be3d3703b3da07329f6f52daf
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.openlocfilehash: 1224d38a2230fa2f5c7ca08f6e33c5468886c206
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514338"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855211"
 ---
-# <a name="when-and-how-should-i-file-a-bug-report"></a>Come e quando è opportuno registrare un report sui bug?
+# <a name="when-and-how-should-i-file-a-bug-report"></a>Quando e come è opportuno registrare un report sui bug?
 
 > [!TIP]
 > Usare la **segnalare un problema** voce di menu in Visual Studio &ndash; questa invierà le informazioni di diagnostica insieme ai report bug per consentire di risolvere il problema.
 >
-> Sono disponibili istruzioni dettagliate sul [Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) e [Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/report-a-problem).
+> Sono disponibili istruzioni dettagliate sul [2019 di Visual Studio o Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio) e [Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/report-a-problem).
 >
 > È possibile cercare i report esistenti nel [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) sito Web.
 
@@ -47,7 +47,7 @@ OR
 
 ## <a name="additional-details"></a>Dettagli aggiuntivi
 
-1. <a name="note-1" />[*^*](#ref-1) In teoria la descrizione dei "Sintomi visibile" deve includere dettagli sufficienti in modo che altri clienti possono verificare se si riscontrano lo stesso problema (stessi messaggi di errore, una riduzione delle prestazioni stesso, stessa analisi dello stack da un arresto anomalo, _e così via._ ). Per "precisi circostanze", un buon esempio sarebbe se è possibile dire qualcosa, ad esempio: "scelgo normalmente il problema il 75% del tempo, ma se è possibile modificare questa condizione quindi è possibile evitare il problema completamente". Un altro esempio simile di "circostanza preciso" è se il downgrade a una versione precedente di Xamarin si arresta il problema.
+1. <a name="note-1" />[*^*](#ref-1) In teoria la descrizione dei "Sintomi visibile" deve includere dettagli sufficienti in modo che altri clienti possono verificare se si riscontrano lo stesso problema (stessi messaggi di errore, una riduzione delle prestazioni stesso, stessa analisi dello stack da un arresto anomalo, _e così via._ ). Per "precisi circostanze", un buon esempio sarebbe se è possibile dire qualcosa di simile: "Scelgo normalmente il problema il 75% del tempo, ma se è possibile modificare questa condizione quindi è possibile evitare il problema completamente". Un altro esempio simile di "circostanza preciso" è se il downgrade a una versione precedente di Xamarin si arresta il problema.
 
 1. <a name="note-2" />[*^*](#ref-2) Come si può immaginare, frammenti di testo di errore (o qualsiasi altro testo descrittivo univoco) sono in genere i termini di ricerca migliori. Se il report sui bug esistenti è incompleto, quindi siete invitati a file nuovo o aggiungere i dettagli, meglio report sui bug.
 

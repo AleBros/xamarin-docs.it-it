@@ -6,18 +6,59 @@ ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: eb9d758d72febe0fc0b705d66246c99ade1fc80f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5eb0dcead230e0bb2e7d99241e5d8e5a4115f838
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109692"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855263"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>Risoluzione dei problemi di Xamarin Live Player
 
 ![Funzionalità di anteprima](~/media/shared/preview.png)
 
-Questo articolo illustra alcuni problemi comuni e viene descritta la procedura per correggerli.
+> [!NOTE]
+> Live Player anteprima è disponibile solo in Visual Studio 2017.
+
+Questo articolo illustra le limitazioni di Live Player e alcuni problemi comuni con i passaggi per correggerli.
+
+## <a name="limitations-of-xamarin-live-player"></a>Limitazioni di Xamarin Live Player
+
+### <a name="ide-requirements"></a>Requisiti per gli IDE
+
+L'anteprima di Windows Media Player in tempo reale è disponibile solo in Visual Studio 2017.
+
+### <a name="device-requirements"></a>Requisiti del dispositivo
+
+L'app Xamarin Live Player supporta i dispositivi Android seguenti:
+
+- Android 4.2 o versione successiva.
+- ARM-v7a, v8a a ARM, ARM64-v8a, x86 o processore x86_64.
+
+### <a name="ios-limitations"></a>limitazioni di iOS
+
+Live Player non è disponibile per iOS.
+
+### <a name="xamarinforms-limitations"></a>Limitazioni di xamarin. Forms
+
+- Renderer personalizzati non sono supportati.
+- Gli effetti non sono supportati.
+- Controlli personalizzati con proprietà associabili personalizzati non sono supportati.
+- Le risorse incorporate non supportate (ie. l'incorporamento di immagini o altre risorse in una libreria di classi Portabile).
+- Framework MVVM di terze parti non sono supportati (ad esempio, Prism, Mvvm Cross, Mvvm Light e così via).
+
+### <a name="other-project-type-limitations"></a>Altre limitazioni del tipo di progetto
+
+- Live Player non è destinato a progetti Android nativi (che usano Android XML per l'interfaccia utente).
+
+### <a name="miscellaneous-limitations"></a>Varie limitazioni
+
+- Supporto limitato per la reflection (attualmente influisce su alcuni pacchetti NuGet più diffusi, come Json.NET e SQLite). Altri pacchetti NuGet potrebbe ancora essere supportata.
+- Impossibile eseguire l'override di alcune classi di sistema (ad esempio, è Impossibile implementare una sottoclasse).
+- Non è possibile usare alcune funzionalità della piattaforma che richiedono il provisioning nell'app Xamarin Live Player (tuttavia è stato configurato per le operazioni comuni quale l'accesso alla raccolta di foto).
+- Istruzioni di compilazione e destinazioni personalizzate vengono ignorate. Ad esempio, non sarà possibile incorporarle strumenti come Fody, Riadatta, AutoFac e AutoMapper.
+- F#progetti non sono supportati
+- Scenari avanzati con le interfacce e classi generiche personalizzate potrebbero non essere supportati.
 
 ## <a name="mobile-device-does-not-connect-after-scanning-barcode-or-entering-code"></a>Dispositivo mobile non si connette dopo l'analisi del codice a barre (o l'inserimento del codice)
 
@@ -30,7 +71,7 @@ Si verifica quando il dispositivo mobile in esecuzione di Xamarin Live Player no
 
 ## <a name="error-while-trying-to-deploy-message-in-ide"></a>Messaggio "Errore durante il tentativo di distribuire" nell'IDE
 
-**"IOException: Impossibile leggere i dati dalla connessione del trasporto: blocca l'operazione su socket non bloccante"**
+**"IOException: Impossibile leggere i dati dalla connessione del trasporto: Operazione su socket non bloccante bloccherà"**
 
 Questo errore si verifica spesso quando il dispositivo mobile in esecuzione di Xamarin Live Player non è presente nella stessa rete del computer che esegue Visual Studio. Ciò accade spesso quando ci si connette a un dispositivo che in precedenza è stato associato correttamente.
 
@@ -43,7 +84,7 @@ Questo errore si verifica spesso quando il dispositivo mobile in esecuzione di X
 
 Se non è possibile connettersi al dispositivo tramite Wi-Fi per provare a configurare manualmente il dispositivo tramite il file di configurazione con i passaggi seguenti:
 
-**Passaggio 1: Aprire file di configurazione**
+**Passaggio 1: Apri file di configurazione**
 
 Passare alla cartella di dati dell'applicazione:
 
@@ -62,7 +103,7 @@ Prendere nota dell'indirizzo IP, è necessario l'indirizzo IP elencato quando si
 
 All'interno della scelta di Xamarin Live Player **coppia** oppure **coppia nuovamente**, quindi premere **Immetti manualmente**. Un codice numerico verrà visualizzato, è necessario aggiornare il file di configurazione.
 
-**Passaggio 4: Generare GUID**
+**Passaggio 4: Genera GUID**
 
 Passare a: https://www.guidgenerator.com/online-guid-generator.aspx e generare un nuovo guid e assicurarsi che sia lettere maiuscole in.
 
@@ -110,7 +151,7 @@ Alcune classi di sistema non possono essere sottoposto a override, ad esempio:
 public class SomeCustomButton : Xamarin.Forms.Button { ... }
 ```
 
-## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs: 'Resource.Layout' non contiene una definizione per 'Main'"
+## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs: "Resource.Layout' non contiene una definizione per 'Main'"
 
 Questo errore si verifica per i progetti Android con le interfacce utente definite nei file AXML.
 File AXML non sono attualmente supportati in Xamarin Live Player.
@@ -119,9 +160,7 @@ File AXML non sono attualmente supportati in Xamarin Live Player.
 
 I progetti Android di xamarin. Forms è necessario usare "Toolbar.axml" e "Tabbar.axml" per i nomi dei file di layout pertinenti. Il modello predefinito utilizza questi nomi. ridenominazione di essi causerà problemi di rendering.
 
-Segnalare eventuali problemi aggiuntivi sul [bugzilla](https://aka.ms/live-player-report-issue).
-
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Limitazioni](~/tools/live-player/limitations.md)
 - [Configurazione](~/tools/live-player/install.md)
+- [Campioni da utilizzare con Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)

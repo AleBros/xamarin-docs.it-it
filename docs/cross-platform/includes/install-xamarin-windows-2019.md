@@ -1,11 +1,11 @@
 ---
 ms.topic: include
-ms.openlocfilehash: cfb387f452939bf72ca3606f9f88f482f6622202
+ms.openlocfilehash: 0270f4a5ddab593372eb6687650e24d627f97c62
 ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/02/2019
-ms.locfileid: "58855346"
+ms.locfileid: "58855343"
 ---
 Xamarin può essere installato come parte di un _nuovo_ installazione di Visual Studio 2019, con i passaggi seguenti:
 
@@ -15,25 +15,21 @@ Xamarin può essere installato come parte di un _nuovo_ installazione di Visual 
 
 3. Selezionare il carico di lavoro **Sviluppo di applicazioni per dispositivi mobili con .NET** dalla schermata di installazione:
 
-    ![Selezione di Sviluppo di applicazioni per dispositivi mobili con .NET nella schermata Carichi di lavoro](~/get-started/installation/windows-images/01-mobile-dev-workload.png)
+    [![Msviluppo di portatili con selezione .NET](~/get-started/installation/windows-images/vs2019-mobile-dev-workload-sml.png)](~/get-started/installation/windows-images/vs2019-mobile-dev-workload.png#lightbox)
 
-4. Mentre **Sviluppo di applicazioni per dispositivi mobili con .NET** è selezionato, esaminare il pannello **Dettagli installazione** a destra. Qui è possibile deselezionare le opzioni di sviluppo di applicazioni per dispositivi mobili che non si vuole installare.
+4. Quando si è pronti a iniziare l'installazione di Visual Studio 2019, scegliere il **installare** pulsante nell'angolo inferiore destro:
 
-    ![Pannello dei dettagli di installazione con l'elenco delle opzioni Xamarin da installare](~/get-started/installation/windows-images/02-summary.png)
-
-5. Quando si è pronti a iniziare l'installazione di Visual Studio 2019, scegliere il **installare** pulsante nell'angolo inferiore destro:
-
-    ![Pulsante Installa](~/get-started/installation/windows-images/03-click-install.png)
+    ![Pulsante Installa](~/get-started/installation/windows-images/vs2019-click-install.png)
 
    A seconda di quale edizione di Visual Studio 2019 si sta installando, il processo di installazione può richiedere molto tempo per il completamento. È possibile usare gli indicatori di stato per monitorare l'installazione:
 
-    ![Indicatori di stato durante l'installazione](~/get-started/installation/windows-images/04-progress-bars.png)
+    ![Indicatori di stato durante l'installazione](~/get-started/installation/windows-images/vs2019-progress-bars.png)
 
-6. Al termine dell'installazione di Visual Studio 2019, fare clic sui **avviare** per avviare Visual Studio:
+5. Al termine dell'installazione di Visual Studio 2019, fare clic sui **avviare** per avviare Visual Studio:
 
-    ![Posizione del pulsante Avvia](~/get-started/installation/windows-images/05-launch.png)
+    ![Posizione del pulsante Avvia](~/get-started/installation/windows-images/vs2019-launch.png)
 
-<a name="vs2017" />
+<a name="vs2019" />
 
 ### <a name="adding-xamarin-to-visual-studio-2019"></a>Aggiunta di Xamarin a Visual Studio 2019
 

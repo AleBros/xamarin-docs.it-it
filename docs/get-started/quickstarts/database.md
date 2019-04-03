@@ -1,5 +1,5 @@
 ---
-title: Data Store in un database locale di SQLite.NET
+title: Archiviare i dati in un database locale di SQLite.NET
 description: Questo articolo illustra come archiviare i dati in un database di SQLite.NET locale.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -8,17 +8,17 @@ ms.assetid: 5BF901BD-FDE8-4B74-B4AB-418E81745A3B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/02/2019
-ms.openlocfilehash: 3cea41aa3c021dbb03f851a4deb443ee86fcad25
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.date: 04/01/2019
+ms.openlocfilehash: 5c3daf04c08e2109c46b24c198fef8e71fac2f3d
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293056"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854990"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Store dei dati in un Database locale di SQLite.NET
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+[![Download esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 
 In questa Guida introduttiva si apprenderà come:
 
@@ -44,19 +44,19 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](mult
 
     ![](database-images/vs/add-nuget-packages.png "Aggiunta di pacchetti NuGet")    
 
-3. Nel **Gestione pacchetti NuGet**, selezionare la **Sfoglia** scheda, cercare il **sqlite-net-libreria di classi portabile** pacchetto NuGet, selezionarlo e fare clic su di **installare**pulsante per aggiungerlo al progetto:
+3. In **Gestione pacchetti NuGet** selezionare la scheda **Sfoglia**, cercare il pacchetto NuGet **sqlite-net-pcl**, selezionarlo e fare clic sul pulsante **Installa** per aggiungerlo al progetto:
 
     ![](database-images/vs/add-package.png "Aggiungi pacchetto")
 
     > [!NOTE]
-    > Esistono una serie di pacchetti NuGet con nomi simili. Il pacchetto corretto con questi attributi:
-    > - **Autori:** Frank A. Krueger
+    > Esiste una serie di pacchetti NuGet con nomi simili. Il pacchetto corretto ha questi attributi:
+    > - **Autore/i:** Frank A. Krueger
     > - **ID:** sqlite-net-pcl
     > - **Collegamento NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
-    > Nonostante il nome del pacchetto, il pacchetto NuGet è utilizzabile nei progetti .NET Standard.
+    > Nonostante il nome del pacchetto, questo pacchetto NuGet può essere usato anche nei progetti .NET Standard.
 
-    Questo pacchetto verrà usato per incorporare le operazioni di database all'applicazione.
+    Il pacchetto verrà usato per integrare le operazioni di database nell'applicazione.
 
 4. In **Esplora soluzioni**, nella **note** progetto aprire **Note.cs** nel **modelli** cartella e sostituire l'oggetto esistente del codice con il codice seguente:
 
@@ -139,7 +139,7 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](mult
     }
     ```
 
-    Questa classe contiene il codice per creare il database, leggerli da quest'ultimo, scrivere i dati ad esso ed eliminare dati da esso. Il codice Usa APIs SQLite.NET asincrone che gestiscono lo spostamento delle operazioni di database per i thread in background. Inoltre, il `NoteDatabase` costruttore accetta il percorso del file di database come argomento. Questo percorso viene fornito mediante il `App` classe nel passaggio successivo.
+    Questa classe contiene il codice per creare il database, leggerli da quest'ultimo, scrivere i dati ad esso ed eliminare dati da esso. Il codice usa API SQLite.NET asincrone che spostano le operazioni sul database in thread in background. Inoltre, il costruttore `NoteDatabase` accetta il percorso del file di database come argomento. Questo percorso viene fornito mediante il `App` classe nel passaggio successivo.
 
     Salvare le modifiche apportate a **NoteDatabase.cs** premendo **CTRL + S**e chiudere il file.
 
@@ -152,10 +152,8 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](mult
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     using Notes.Data;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -249,19 +247,19 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](mult
 
     ![](database-images/vsmac/add-nuget-packages.png "Aggiunta di pacchetti NuGet")    
 
-3. Nel **Aggiungi pacchetti** (finestra), cercare il **sqlite-net-libreria di classi portabile** pacchetto NuGet, selezionarlo e fare clic sui **Add Package** pulsante per aggiungerlo al progetto:
+3. Nella finestra **Aggiungi pacchetti** cercare il pacchetto NuGet **sqlite-net-pcl**, selezionarlo e fare clic sul pulsante **Aggiungi pacchetto** per aggiungerlo al progetto:
 
     ![](database-images/vsmac/add-package.png "Aggiungi pacchetto")
 
     > [!NOTE]
-    > Esistono una serie di pacchetti NuGet con nomi simili. Il pacchetto corretto con questi attributi:
+    > Esiste una serie di pacchetti NuGet con nomi simili. Il pacchetto corretto ha questi attributi:
     > - **Autore:** Frank A. Krueger
     > - **ID:** sqlite-net-pcl
     > - **Collegamento NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
-    > Nonostante il nome del pacchetto, il pacchetto NuGet è utilizzabile nei progetti .NET Standard.
+    > Nonostante il nome del pacchetto, questo pacchetto NuGet può essere usato anche nei progetti .NET Standard.
 
-    Questo pacchetto verrà usato per incorporare le operazioni di database all'applicazione.
+    Il pacchetto verrà usato per integrare le operazioni di database nell'applicazione.
 
 4. Nel **riquadro della soluzione**, nella **note** progetto aprire **Note.cs** nel **modelli** cartella e sostituire il codice esistente con il codice seguente codice:
 
@@ -344,7 +342,7 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](mult
     }
     ```
 
-    Questa classe contiene il codice per creare il database, leggerli da quest'ultimo, scrivere i dati ad esso ed eliminare dati da esso. Il codice Usa APIs SQLite.NET asincrone che gestiscono lo spostamento delle operazioni di database per i thread in background. Inoltre, il `NoteDatabase` costruttore accetta il percorso del file di database come argomento. Questo percorso viene fornito mediante il `App` classe nel passaggio successivo.
+    Questa classe contiene il codice per creare il database, leggerli da quest'ultimo, scrivere i dati ad esso ed eliminare dati da esso. Il codice usa API SQLite.NET asincrone che spostano le operazioni sul database in thread in background. Inoltre, il costruttore `NoteDatabase` accetta il percorso del file di database come argomento. Questo percorso viene fornito mediante il `App` classe nel passaggio successivo.
 
     Salvare le modifiche apportate a **NoteDatabase.cs** scegliendo **File > Salva** (o premendo  **&#8984; + S**) e chiudere il file.
 
@@ -357,10 +355,8 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](mult
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     using Notes.Data;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -455,9 +451,9 @@ In questa Guida introduttiva si è appreso come:
 Per definire lo stile dell'applicazione con gli stili XAML, continuare per la successiva Guida introduttiva.
 
 > [!div class="nextstepaction"]
-> [avanti](styling.md)
+> [Successivo](styling.md)
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Notes (esempio)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+- [Note (esempio)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 - [Approfondimento di Guida introduttiva di xamarin. Forms](deepdive.md)

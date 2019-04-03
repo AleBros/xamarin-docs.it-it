@@ -1,10 +1,16 @@
 ---
 ms.assetid: EA2D979E-9151-4CE9-9289-13B6A979838B
 title: Usare le librerie C/C++ con Xamarin
-description: 'Visual Studio per Mac può essere usato per compilare e integrare codice C/C++ multipiattaforma in App per dispositivi mobili per Android e iOS, usando Xamarin e C#. Questo articolo illustra come configurare ed eseguire il debug di un progetto C++ in un''app Xamarin.'
+description: Visual Studio per Mac può essere usato per compilare e integrare codice C/C++ multipiattaforma in App per dispositivi mobili per Android e iOS, usando Xamarin e C#. Questo articolo illustra come configurare ed eseguire il debug di un progetto C++ in un'app Xamarin.
 author: mikeparker104
 ms.author: miparker
 ms.date: 12/17/2018
+ms.openlocfilehash: a235a24d544e938d4bf29e6569564aface2f6972
+ms.sourcegitcommit: 1c2565c372207bfa257cadac2a2d23d4f90b0cea
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58866384"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Usare le librerie C/C++ con Xamarin
 
@@ -12,7 +18,7 @@ ms.date: 12/17/2018
 
 Xamarin consente agli sviluppatori di creare App per dispositivi mobili native multipiattaforma con Visual Studio. In generale, C# associazioni vengono utilizzate per esporre i componenti esistenti di piattaforma per gli sviluppatori. Tuttavia, esistono volte quando necessità di App Xamarin di lavorare con le basi di codice. In alcuni casi i team semplicemente non hanno il tempo, budget o risorse alla porta a grandi dimensioni, ben collaudato e altamente ottimizzata codebase per C#.
 
-[Visual C++ per lo sviluppo per dispositivi mobili multipiattaforma](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) Abilita C/C++ e C# codice da compilare come parte della stessa soluzione, che offre numerosi vantaggi tra cui un'esperienza di debug unificata. Microsoft ha usato in questo modo per distribuire le app, ad esempio C/C++ e Xamarin [Hyperlapse Mobile](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) e [fotocamera Pix](https://www.microsoft.com/microsoftpix).
+[Visual C++ per lo sviluppo per dispositivi mobili multipiattaforma](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) consente di C/C++ e C# codice da compilare come parte della stessa soluzione, che offre numerosi vantaggi tra cui un'esperienza di debug unificata. Microsoft ha usato in questo modo per distribuire le app, ad esempio C/C++ e Xamarin [Hyperlapse Mobile](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) e [fotocamera Pix](https://www.microsoft.com/microsoftpix).
 
 Tuttavia, in alcuni casi vi è un desiderio (o requisito) mantenere strumenti C/C++ e i processi e per mantenere il codice della libreria di disaccoppiare l'applicazione, considerando la libreria come se fosse analoga a un componente di terze parti esistenti. In queste situazioni, la richiesta di verifica non solo espone i membri rilevanti da C# , ma la libreria come una dipendenza di gestione. E, naturalmente, automatizzare la maggior parte di questo processo possibili.  
 
@@ -42,7 +48,7 @@ Le 4 fasi sono:
 
 L'obiettivo di questa fase consiste nel creare librerie native che possono essere chiamate per il C# wrapper. Può supportare o potrebbe non essere pertinente a seconda della situazione. Molti strumenti e processi che possono essere attivati da ricordare in questo scenario comune non rientrano nell'ambito di questo articolo. Le principali considerazioni sono mantenere C/C++ codebase sincronizzato con qualsiasi codice wrapper nativo, unit test, sufficienti e automazione della compilazione. 
 
-Le librerie nella procedura dettagliata sono state create usando Visual Studio Code con uno script shell associato. Una versione estesa di questa procedura dettagliata è reperibile nella [repository GitHub CAT Mobile](https://github.com/xamarin/mobcat/blob/dev/samples/cppwithxamarin/README.md) che illustra questa parte dell'esempio nel modo più approfondito. Le librerie native viene considerate come una dipendenza di terze parti in questo caso tuttavia questa fase è illustrata per il contesto.
+Le librerie nella procedura dettagliata sono state create usando Visual Studio Code con uno script shell associato. Una versione estesa di questa procedura dettagliata è reperibile nella [repository GitHub CAT Mobile](https://github.com/xamarin/mobcat/blob/dev/samples/cppwithxamarin/README.md) che illustra questa parte dell'esempio nel modo più approfondito. Le librerie native viene considerate come una dipendenza di terze parti in questo caso tuttavia questa fase è illustrata per il contesto.
 
 
 Per semplicità, la procedura dettagliata ha come destinazione solo un subset delle architetture. Per iOS, Usa l'utilità lipo per creare una singola file System fat binario dai singoli file binari specifici dell'architettura. Android userà dinamico dei file binari con estensione SO e iOS userà una file System fat statica binaria con estensione a estensione. 
@@ -71,7 +77,7 @@ Repository del codice sorgente contiene un' [elenco di letture di approfondiment
 
 ## <a name="walk-through"></a>Procedura dettagliata
 
-I passaggi descritti sono specifici di **Visual Studio per Mac**, ma il funzionamento della struttura **Visual Studio 2017** anche.
+I passaggi descritti sono specifici di **Visual Studio per Mac**, ma il funzionamento della struttura **Visual Studio 2017** anche.
 
 ### <a name="prerequisites"></a>Prerequisiti
 
@@ -82,17 +88,17 @@ Per seguire la procedura, lo sviluppatore avrà bisogno:
 -   [*Visual Studio* *per Mac*](https://visualstudio.microsoft.com/downloads)
 
 > [!NOTE]
-> Un oggetto attivo [**Account per sviluppatore Apple**](https://developer.apple.com/) è necessaria per distribuire le App in un iPhone.
+> Un oggetto attivo [ **Account per sviluppatore Apple** ](https://developer.apple.com/) è necessaria per distribuire le App in un iPhone.
 
 ## <a name="creating-the-native-libraries-stage-1"></a>Creazione di librerie native (fase 1)
 
-La funzionalità della libreria nativa è basata sull'esempio [procedura dettagliata: Creazione e utilizzo di una libreria statica (C++)](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017).
+La funzionalità della libreria nativa è basata sull'esempio [procedura dettagliata: Creazione e utilizzo di una libreria statica (C++)](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017).
 
-Questa procedura dettagliata ignora la prima fase, la creazione di librerie native, poiché la libreria viene fornita come una dipendenza di terze parti in questo scenario. Le librerie native precompilate sono incluso con il [esempi di codice](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin) oppure può essere [scaricato](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) direttamente.
+Questa procedura dettagliata ignora la prima fase, la creazione di librerie native, poiché la libreria viene fornita come una dipendenza di terze parti in questo scenario. Le librerie native precompilate sono incluso con il [esempi di codice](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin) oppure può essere [scaricato](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) direttamente.
 
 ### <a name="working-with-the-native-library"></a>Utilizzo della libreria nativa di
 
-Originale *MathFuncsLib* esempio include una sola classe denominata MyMathFuncs con la definizione seguente: 
+Originale *MathFuncsLib* esempio include una sola classe denominata MyMathFuncs con la definizione seguente: 
 
 ```cpp
 namespace MathFuncs
@@ -124,11 +130,11 @@ extern "C" {
 }
 ```
 
-Sarà queste funzioni wrapper che vengono usate nel [Xamarin](https://visualstudio.microsoft.com/xamarin/) lato.
+Sarà queste funzioni wrapper che vengono usate nel [Xamarin](https://visualstudio.microsoft.com/xamarin/) lato.
 
 ## <a name="wrapping-the-native-library-stage-2"></a>Ritorno a capo la libreria nativa (fase 2)
 
-Questa fase richiede la [precompilato librerie](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) descritti nel [sezione precedente](https://docs.microsoft.com/xamarin/cross-platform/cpp/index).
+Questa fase richiede la [precompilato librerie](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) descritti nel [sezione precedente](https://docs.microsoft.com/xamarin/cross-platform/cpp/index).
 
 ### <a name="creating-the-visual-studio-solution"></a>Creazione della soluzione di Visual Studio
 
@@ -185,7 +191,7 @@ Il processo di aggiunta di librerie native per la soluzione wrapper varia legger
 
 1. **CTRL + clic** nella **MathFuncs.Android** del progetto, quindi scegliere **nuova cartella** dal **Add** menu denominarlo **libs**.
 
-2. Per ognuno **ABI** (Application Binary Interface), **CTRL + clic** nel **libs** cartella, quindi scegliere ** Nuova cartella** dalle **Add** menu, denominarlo in seguito rispettivi **ABI**. In questo caso:
+2. Per ognuno **ABI** (Application Binary Interface), **CTRL + clic** sul **libs** cartella, quindi scegliere **nuova cartella** dal  **Aggiungere** menu, denominarlo in seguito rispettivi **ABI**. In questo caso:
 
     - arm64-v8a
     - armeabi-v7a
@@ -193,7 +199,7 @@ Il processo di aggiunta di librerie native per la soluzione wrapper varia legger
     - x86_64  
 
     > [!NOTE]
-    > Per una panoramica più dettagliata, vedere la [architetture e le CPU](https://developer.android.com/ndk/guides/arch) argomento dal [Guida per gli sviluppatori NDK](https://developer.android.com/ndk/guides/), in particolare la sezione su come rispondere [codice nativo in pacchetti di applicazioni ](https://developer.android.com/ndk/guides/abis#native-code-in-app-packages).
+    > Per una panoramica più dettagliata, vedere la [architetture e le CPU](https://developer.android.com/ndk/guides/arch) argomento dalle [Guida di developer NDK](https://developer.android.com/ndk/guides/), in particolare la sezione su come rispondere [codice nativo in pacchetti di applicazioni](https://developer.android.com/ndk/guides/abis#native-code-in-app-packages) .
 
 3. Verificare che la struttura di cartelle:  
 
@@ -220,7 +226,7 @@ Il processo di aggiunta di librerie native per la soluzione wrapper varia legger
 
 5. Per ognuno del **SO** i file, **CTRL + clic** quindi scegliere il **EmbeddedNativeLibrary** opzione il **azione di compilazione** menu.
 
-A questo punto il **libs** cartella apparirà come segue:
+A questo punto il **libs** cartella apparirà come segue:
 
 ```bash
 - lib
@@ -468,12 +474,12 @@ Ora che il wrapper è completo, creare una classe MyMathFuncs che gestirà il ri
 
 #### <a name="creating-the-nuspec"></a>La creazione del nuspec
 
-Per avere la libreria incluso nel pacchetto e distribuiti tramite NuGet, la soluzione richiede un **nuspec** file. Si identificherà cui assembly risultante verrà incluso per ogni piattaforma supportata.
+Per avere la libreria incluso nel pacchetto e distribuiti tramite NuGet, la soluzione richiede un **nuspec** file. Si identificherà cui assembly risultante verrà incluso per ogni piattaforma supportata.
 
-1.  **CTRL + clic** della soluzione **MathFuncs**, quindi scegliere **Aggiungi cartella soluzione** dal **Aggiungi** menu denominarlo  **SolutionItems**.
-2.  **CTRL + clic** nel **SolutionItems** cartella, quindi scegliere **nuovo File... **  dalle **Add** menu.
-3.  Scegliere **File XML vuoto** dal **nuovo File** finestra, denominarla **MathFuncs.nuspec** e quindi fare clic su **Nuovi**.
-4.  Update **MathFuncs.nuspec** con i metadati del pacchetto di base da visualizzare per il **NuGet** consumer. Ad esempio:
+1.  **CTRL + clic** sulla soluzione **MathFuncs**, quindi scegliere **Aggiungi cartella soluzione** dal **Add** menu denominarlo **SolutionItems**.
+2.  **CTRL + clic** nella **SolutionItems** cartella, quindi scegliere **nuovo File...**  dal **Add** menu.
+3.  Scegliere **File XML vuoto** dalle **nuovo File** finestra, denominarlo **MathFuncs.nuspec** e quindi fare clic su **New**.
+4.  Update **MathFuncs.nuspec** con i metadati del pacchetto di base da visualizzare per il **NuGet** consumer. Ad esempio:
 
 
     ```xml
@@ -563,9 +569,9 @@ Per avere la libreria incluso nel pacchetto e distribuiti tramite NuGet, la solu
     ```
 
     > [!NOTE]
-    > Questo file specifica i percorsi di output di assembly da un **Release** di compilazione, pertanto assicurarsi di compilare la soluzione usando tale configurazione.
+    > Questo file specifica i percorsi di output di assembly da un **rilascio** di compilazione, pertanto assicurarsi di compilare la soluzione usando tale configurazione.
 
-A questo punto, la soluzione contiene 3 assembly .NET e un tipo di supporto **nuspec** manifesto.
+A questo punto, la soluzione contiene 3 assembly .NET e un tipo di supporto **nuspec** manifesto.
 
 ## <a name="distributing-the-net-wrapper-with-nuget"></a>Distribuire il wrapper .NET con NuGet
 
@@ -575,33 +581,33 @@ Il passaggio successivo è assemblare e distribuire il pacchetto NuGet, pertanto
 
 La forma più semplice dei feed NuGet è una directory locale:
 
-1.  Nelle **Finder**, passare a una directory pratica. Ad esempio, **/Users**.
-2.  Scegli **nuova cartella** dal **File** menu, fornire un nome significativo, ad esempio **locale-nuget-feed**.
+1.  Nelle **Finder**, passare a una directory pratica. Ad esempio, **/Users**.
+2.  Scegli **nuova cartella** dalle **File** menu, fornire un nome significativo, ad esempio **locale-nuget-feed**.
 
 ### <a name="creating-the-package"></a>Creazione del pacchetto
 
-1.  Impostare il **configurazione compilazione** al **Release**ed esegue una compilazione usando **comando + B**.
-2.  Aprire **terminale** e passare alla directory alla cartella contenente il **nuspec** file.
-3.  Nelle **Terminal**, eseguire il **nuget pack** comando specificando il **nuspec** file, il **versione**  (ad esempio, 1.0.0) e il **OutputDirectory** utilizzo della cartella creata nel [passaggio precedente](https://docs.microsoft.com/xamarin/cross-platform/cpp/index#creating-a-local-nuget-feed), vale a dire ** Local-nuget-feed**. Ad esempio:
+1.  Impostare il **configurazione compilazione** al **Release**ed esegue una compilazione usando **comando + B**.
+2.  Aprire **terminale** e passare alla directory alla cartella contenente il **nuspec** file.
+3.  Nella **Terminal**, eseguire il **nuget pack** comando specificando il **nuspec** file, il **versione** (ad esempio, 1.0.0) e la  **OutputDirectory** Usa la cartella creata nel [passaggio precedente](https://docs.microsoft.com/xamarin/cross-platform/cpp/index#creating-a-local-nuget-feed), vale a dire **locale-nuget-feed**. Ad esempio:
 
     ```bash
     nuget pack MathFuncs.nuspec -Version 1.0.0 -OutputDirectory ~/local-nuget-feed
     ```
 
-4. **Confermare** che **MathFuncs.1.0.0.nupkg** creato nel **locale-nuget-feed** directory.
+4. **Confermare** che **MathFuncs.1.0.0.nupkg** creato nel **locale-nuget-feed** directory.
 
 ### <a name="optional-using-a-private-nuget-feed-with-azure-devops"></a>[FACOLTATIVO] Uso privato del feed NuGet con la metodologia DevOps di Azure
 
-Una tecnica più solida è descritta nella [Introduzione a pacchetti NuGet in Azure DevOps](https://docs.microsoft.com/azure/devops/artifacts/get-started-nuget?view=vsts&tabs=new-nav#publish-a-package), che mostra come creare un feed privato e il push del pacchetto (generato nel passaggio precedente) per tale feed.
+Una tecnica più solida è descritta nella [Introduzione a pacchetti NuGet in Azure DevOps](https://docs.microsoft.com/azure/devops/artifacts/get-started-nuget?view=vsts&tabs=new-nav#publish-a-package), che mostra come creare un feed privato e il push del pacchetto (generato nel passaggio precedente) per tale feed.
 
-È consigliabile che questo flusso di lavoro completamente automatizzata, ad esempio tramite [pipeline di Azure](https://docs.microsoft.com/azure/devops/pipelines/index?view=vsts). Per altre informazioni, vedere [iniziare con le pipeline di Azure](https://docs.microsoft.com/azure/devops/pipelines/get-started/index?view=vsts).
+È consigliabile che questo flusso di lavoro completamente automatizzata, ad esempio tramite [pipeline di Azure](https://docs.microsoft.com/azure/devops/pipelines/index?view=vsts). Per altre informazioni, vedere [iniziare con le pipeline di Azure](https://docs.microsoft.com/azure/devops/pipelines/get-started/index?view=vsts).
 
 ## <a name="consuming-the-net-wrapper-from-a-xamarinforms-app"></a>Utilizzo del wrapper .NET da un'app xamarin. Forms
-Per completare la procedura dettagliata, creare un **xamarin. Forms** utilizzare semplicemente il pacchetto dell'app pubblicata in locale **NuGet** feed.
+Per completare la procedura dettagliata, creare un **xamarin. Forms** utilizzare semplicemente il pacchetto dell'app pubblicata in locale **NuGet** feed.
 
 ### <a name="creating-the-xamarinforms-project"></a>Creazione di **xamarin. Forms** progetto
 
-1. Aprire una nuova istanza della **Visual Studio per Mac**. Questa operazione può essere eseguita dal **Terminal**:
+1. Aprire una nuova istanza della **Visual Studio per Mac**. Questa operazione può essere eseguita dal **Terminal**:
 
     ```bash
     open -n -a "Visual Studio"
@@ -639,7 +645,7 @@ Per completare la procedura dettagliata, creare un **xamarin. Forms** utilizza
     - **Percorso:** Specificare il **local-nuget-feed** creato nella cartella le [passaggio precedente](#preparing-a-local-packages-directory).
 
     > [!NOTE]
-    > In questo caso non è necessario specificare una **nomeutente** e **Password**. 
+    > In questo caso non è necessario specificare una **nomeutente** e **Password**. 
 
 4. Fare clic su **OK**.
 
@@ -654,10 +660,10 @@ Ripetere i passaggi seguenti per ogni progetto (**MathFuncsApp**, **MathFuncsApp
 
 ### <a name="using-the-library-functions"></a>Usando le funzioni della libreria
 
-A questo punto, con un riferimento per il **MathFuncs** package in ogni progetto, le funzioni sono disponibili per il C# codice.
+A questo punto, con un riferimento per il **MathFuncs** package in ogni progetto, le funzioni sono disponibili per il C# codice.
 
-1.  Aprire **MainPage.xaml.cs** dall'interno di **MathFuncsApp** comuni **xamarin. Forms**progetto (a cui fanno riferimento entrambi **MathFuncsApp.Android** e **MathFuncsApp.iOS**).
-2.  Aggiungere **usando** le istruzioni per **System. Diagnostics** e **MathFuncs** nella parte superiore del file:
+1.  Aprire **MainPage.xaml.cs** dall'interno di **MathFuncsApp** comuni **xamarin. Forms**progetto (a cui fanno riferimento entrambi **MathFuncsApp.Android**e **MathFuncsApp.iOS**).
+2.  Aggiungere **usando** istruzioni **System. Diagnostics** e **MathFuncs** nella parte superiore del file:
 
     ```csharp
     using System.Diagnostics;

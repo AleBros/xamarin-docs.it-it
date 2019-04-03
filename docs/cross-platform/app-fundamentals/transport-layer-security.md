@@ -1,17 +1,17 @@
 ---
 title: Transport Layer Security (TLS) 1.2
-description: Questo documento descrive come abilitare TLS 1.2 per i progetti xamarin. IOS, xamarin. Android e xamarin. Mac. Viene illustrato come eseguire questa operazione in Visual Studio 2017 e Visual Studio per Mac.
+description: Questo documento descrive come abilitare TLS 1.2 per i progetti xamarin. IOS, xamarin. Android e xamarin. Mac. Viene illustrato come eseguire questa operazione in Visual Studio 2019 e Visual Studio per Mac.
 ms.prod: xamarin
 ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
-ms.openlocfilehash: 889eaf2b2f87b22010315f5e92dcfd1cd4c7c446
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 26870ae0e84a84a7b78f7766a8e134ecfc7b223e
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668270"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855003"
 ---
 # <a name="transport-layer-security-tls-12"></a>Transport Layer Security (TLS) 1.2
 
@@ -31,17 +31,17 @@ Aggiorna il **implementazione di HttpClient** e **implementazione di SSL/TLS** o
 > [!NOTE]
 > È necessario Android 5.0 o versione successiva.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 Queste impostazioni sono disponibili **proprietà progetto > Opzioni Android** e fare clic sui **avanzate** pulsante:
 
-[![Configurare TLS e HttpClient in Visual Studio](transport-layer-security-images/android-win-sml.png)](transport-layer-security-images/android-win.png#lightbox)
+[![Configurare HttpClient e TLS in Visual Studio](transport-layer-security-images/android-win-sml.png)](transport-layer-security-images/android-win.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
 
 Queste impostazioni sono disponibili nel **opzioni progetto > compilazione > compilazione Android** scheda:
 
-[![Configurare TLS e HttpClient in Visual Studio per Mac](transport-layer-security-images/android-mac-sml.png)](transport-layer-security-images/android-mac.png#lightbox)
+[![Configurare HttpClient e TLS in Visual Studio per Mac](transport-layer-security-images/android-mac-sml.png)](transport-layer-security-images/android-mac.png#lightbox)
 
 -----
 
@@ -49,13 +49,13 @@ Queste impostazioni sono disponibili nel **opzioni progetto > compilazione > com
 
 Aggiorna il **implementazione di HttpClient** opzione per abilitare la sicurezza TSL 1.2.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 Questa impostazione è disponibile nel **proprietà progetto > compilazione iOS**:
 
-[![Configurare TLS e HttpClient in Visual Studio](transport-layer-security-images/ios-win-sml.png)](transport-layer-security-images/ios-win.png#lightbox)
+[![Configurare HttpClient e TLS in Visual Studio](transport-layer-security-images/ios-win-sml.png)](transport-layer-security-images/ios-win.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
 
 Questa impostazione è disponibile nel **opzioni progetto > compilazione > compilazione iOS** scheda:
 
@@ -119,8 +119,8 @@ Deve aggiornare le impostazioni nelle applicazioni esistenti seguendo le istruzi
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [ATS (App Transport Security)](~/ios/app-fundamentals/ats.md)
-- [Xamarin.Android Environment](~/android/deploy-test/environment.md)
+- [Sicurezza del trasporto di App](~/ios/app-fundamentals/ats.md)
+- [Ambiente Xamarin.Android](~/android/deploy-test/environment.md)
 - [Xamarin ciclo 9 (febbraio 2017)](https://releases.xamarin.com/stable-release-cycle-9/)
 - [TLS (Wikipedia)](https://en.wikipedia.org/wiki/Transport_Layer_Security)
 - [Note sulla versione di mono 4.8 - supporto di TLS 1.2](https://www.mono-project.com/docs/about-mono/releases/4.8.0/#tls-12-support)
