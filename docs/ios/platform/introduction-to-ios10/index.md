@@ -7,8 +7,13 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
+ms.openlocfilehash: b018fe343a7d46f1323119b03a22cc3831a02d9f
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870248"
 ---
-
 # <a name="introduction-to-ios-10"></a>Introduzione a iOS 10
 
 _Questo articolo illustra tutte le nuove e modificate le API e funzionalità disponibili in iOS 10 per gli sviluppatori di xamarin. IOS._
@@ -221,9 +226,9 @@ Per altre informazioni, vedere la [modifiche aggiuntive del Framework](~/ios/pla
 
 Le API seguenti sono state deprecate in iOS 10:
 
-- Il `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` e `CKFetchRecordChangesOperation` classi sono state deprecate in CloudKit per iOS 10. Usare la [CKDiscoverAllUserIdentitiesOperation](https://developer.xamarin.com/api/type/CloudKit.CKDiscoverUserIdentitiesOperation/), [CKUserIdentity](https://developer.xamarin.com/api/type/CloudKit.CKUserIdentity/) e [CKFetchRecordZoneChangesOperation](https://developer.xamarin.com/api/type/CloudKit.CKFetchRecordZoneChangesOperation/) classi (che supportano la condivisione di record) alternativa.
-- Numerosi [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) API (ad esempio una sottoscrizione basata sull'area e basati su query) sono state deprecate. Usare la [CKRecordZoneSubscription](https://developer.xamarin.com/api/type/CloudKit.CKRecordZoneSubscription/) e [CKQuerySubscription](https://developer.xamarin.com/api/type/CloudKit.CKQuerySubscription/) API invece.
-- [NSPersistentStoreCoordnator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) i simboli relativi al contenuto diffuso sono stati deprecati.
+- Il `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` e `CKFetchRecordChangesOperation` classi sono state deprecate in CloudKit per iOS 10. Usare la [CKDiscoverAllUserIdentitiesOperation](xref:CloudKit.CKDiscoverUserIdentitiesOperation), [CKUserIdentity](xref:CloudKit.CKUserIdentity) e [CKFetchRecordZoneChangesOperation](xref:CloudKit.CKFetchRecordZoneChangesOperation) classi (che supportano la condivisione di record) alternativa.
+- Numerosi [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) API (ad esempio una sottoscrizione basata sull'area e basati su query) sono state deprecate. Usare la [CKRecordZoneSubscription](xref:CloudKit.CKRecordZoneSubscription) e [CKQuerySubscription](xref:CloudKit.CKQuerySubscription) API invece.
+- [NSPersistentStoreCoordnator](xref:CoreData.NSPersistentStoreCoordinator) i simboli relativi al contenuto diffuso sono stati deprecati.
 - `ADBannerView`, `ADInterstitialAd` e i simboli in relativi il [UIViewController](xref:UIKit.UIViewController) classe sono state deprecate.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) simboli associati a valori a virgola mobile sono stati deprecati.
 - Il `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` e `UIUserNotificationSettings` classi di UIKit sono state deprecate. Usare la [notifiche utente](#user-notifications) framework invece.

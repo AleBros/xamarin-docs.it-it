@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/28/2016
-ms.openlocfilehash: 42cf10e592a37f9a979d05d7784553059923646c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7ed8fc18624f46abd4a9fc293d8c33a1722da7dd
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667321"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870261"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Riferimenti alle librerie Native in xamarin. IOS
 
@@ -122,8 +122,7 @@ Per accedere ai metodi definiti in uno di questi, si utilizza [funzionalità di 
 -  Determinare quale libreria si trova in
 -  Scrivere la dichiarazione P/Invoke appropriata
 
-
-Quando si utilizza P/Invoke è necessario specificare il percorso della libreria che si desidera collegarsi. Quando con iOS librerie condivise, è possibile impostare come hardcoded il percorso o è possibile usare le costanti di praticità che abbiamo definito nel nostro [classe costanti](https://developer.xamarin.com/api/type/Constants/), queste costanti devono coprire le librerie di iOS condivisi.
+Quando si utilizza P/Invoke è necessario specificare il percorso della libreria che si desidera collegarsi. Quando con iOS librerie condivise, è possibile impostare come hardcoded il percorso o è possibile usare le costanti di praticità che abbiamo definito nel nostro `Constants`, queste costanti devono coprire le librerie di iOS condivisi.
 
 Ad esempio, se si desidera richiamare il metodo UIRectFrameUsingBlendMode dalla libreria UIKit di Apple che ha la firma in c:
 

@@ -1,5 +1,5 @@
 ---
-title: Core ML 2 in xamarin. IOS
+title: Core ML 2 in Xamarin.iOS
 description: Questo documento descrive gli aggiornamenti da Core ML disponibili come parte di iOS è 12. In particolare, analizza i miglioramenti delle prestazioni associati con la nuova API di stima batch.
 ms.prod: xamarin
 ms.assetid: 408E752C-2C78-4B20-8B43-A6B89B7E6D1B
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/15/2018
-ms.openlocfilehash: 2d62e42e755a0d3088283adb863dfd684ddeae28
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 50d59f0b6ff2133c5870d84a1d740547768116e0
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617579"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869728"
 ---
-# <a name="core-ml-2-in-xamarinios"></a>Core ML 2 in xamarin. IOS
+# <a name="core-ml-2-in-xamarinios"></a>Core ML 2 in Xamarin.iOS
 
 ML core è una tecnologia disponibile in iOS, macOS, tvOS e watchOS di apprendimento. Consente alle app di eseguire stime basate sui modelli di machine learning.
 
@@ -74,7 +74,7 @@ async void RunTest(int num)
 
 ## <a name="for-loop"></a>for (ciclo)
 
-Il `for` versione loop del test gestire scorre il numero specificato di input, chiamare [ `GetPrediction` ](https://developer.xamarin.com/api/member/CoreML.MLModel.GetPrediction/) per ognuno ed eliminando il risultato. Il metodo si verifica il tempo necessario per eseguire le stime:
+Il `for` versione loop del test gestire scorre il numero specificato di input, chiamare [ `GetPrediction` ](xref:CoreML.MLModel.GetPrediction*) per ognuno ed eliminando il risultato. Il metodo si verifica il tempo necessario per eseguire le stime:
 
 ```csharp
 async Task FetchNonBatchResults(int num)
@@ -94,7 +94,7 @@ async Task FetchNonBatchResults(int num)
 
 ## <a name="getpredictions-new-batch-api"></a>GetPredictions (batch nuova API)
 
-La versione di batch di test crea un `MLArrayBatchProvider` oggetto della matrice di input (poiché si tratta di un parametro di input obbligatorio per il `GetPredictions` (metodo)), crea un [`MLPredictionOptions`](https://developer.xamarin.com/api/type/CoreML.MLPredictionOptions/)
+La versione di batch di test crea un `MLArrayBatchProvider` oggetto della matrice di input (poiché si tratta di un parametro di input obbligatorio per il `GetPredictions` (metodo)), crea un [`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
 oggetto che impedisce che i calcoli di stima vengano limitate alla CPU e Usa il `GetPredictions` dell'API per recuperare le stime, anche in questo caso ignorando il risultato:
 
 ```csharp

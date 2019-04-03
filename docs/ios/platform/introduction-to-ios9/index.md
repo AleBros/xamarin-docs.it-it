@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: becba36655a5247a11decb7dc54334f9397ecdfc
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: d0ad25a1ecff7262b9b4b41a5f9d73a5931bbd1c
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233536"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870196"
 ---
 # <a name="introduction-to-ios-9"></a>Introduzione a iOS 9
 
@@ -58,7 +58,7 @@ Per altre informazioni sulle nuove funzionalità il multitasking di iOS 9, veder
 
 ## <a name="new-contacts-and-contacts-ui-frameworks"></a>Nuovi contatti e i framework dell'interfaccia utente di contatti
 
-Con l'introduzione di iOS 9, Apple ha rilasciato due nuovi Framework, [contatti](https://developer.xamarin.com/api/namespace/Contacts/) e [ContactsUI](https://developer.xamarin.com/api/namespace/ContactsUI/), che sostituisce la Rubrica esistente e Framework dell'interfaccia utente della Rubrica indirizzi usati da iOS 8 e versioni precedenti.
+Con l'introduzione di iOS 9, Apple ha rilasciato due nuovi Framework, [contatti](xref:Contacts) e [ContactsUI](xref:ContactsUI), che sostituisce la Rubrica esistente e Framework dell'interfaccia utente della Rubrica indirizzi usati da iOS 8 e versioni precedenti.
 
 Questi Framework nuovo e orientato a forniscono gli elementi seguenti:
 
@@ -103,7 +103,7 @@ Per altre informazioni, vedere la [miglioramenti di gioco](~/ios/platform/gaming
 
 ## <a name="homekit-framework-changes"></a>Modifiche del Framework HomeKit
 
-Il [HomeKit](https://developer.xamarin.com/api/namespace/HomeKit/) framework, introdotto in iOS 8, offre la possibilità di configurare e controllare varie accessori HomeKit abilitato (ad esempio luci automatizzate, serrature e ciò sportello garage) da un'app xamarin. IOS. Oltre a essere facile da installare e configurare, accessori HomeKit possono essere controllati tramite i comandi vocali Siri.
+Il [HomeKit](xref:HomeKit) framework, introdotto in iOS 8, offre la possibilità di configurare e controllare varie accessori HomeKit abilitato (ad esempio luci automatizzate, serrature e ciò sportello garage) da un'app xamarin. IOS. Oltre a essere facile da installare e configurare, accessori HomeKit possono essere controllati tramite i comandi vocali Siri.
 
 In iOS 9 Apple ha semplificato il programma di installazione, espansi i tipi di accessori supportati e altre interazioni degli accessori (ad esempio il controllo un accessorio in modalità remota tramite iCloud) fornito.
 
@@ -212,7 +212,7 @@ Vedere anche le parti di iOS di questi esempi (complementare Mac OS X versioni p
 
 - [Esempi di iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
 - [Introduzione a 3D Touch](~/ios/platform/3d-touch.md)
-- [ATS (App Transport Security)](~/ios/app-fundamentals/ats.md)
+- [Sicurezza del trasporto di App](~/ios/app-fundamentals/ats.md)
 - [Multitasking per iPad](~/ios/platform/multitasking.md)
 - [Contatti e interfaccia utente](~/ios/platform/contacts.md)
 - [Nuove API di ricerca](~/ios/platform/search/index.md)
@@ -221,7 +221,7 @@ Vedere anche le parti di iOS di questi esempi (complementare Mac OS X versioni p
 - [Miglioramenti della modalità di gioco](~/ios/platform/gaming/index.md)
 - [Introduzione a HomeKit](~/ios/platform/homekit.md)
 - [Introduzione a Handoff](~/ios/platform/handoff.md)
-- [Modifiche aggiuntive del framework iOS 9](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
+- [Modifiche del Framework aggiuntivi iOS 9](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
 - [Risoluzione dei problemi](~/ios/platform/introduction-to-ios9/troubleshooting.md)
 - [per gli sviluppatori iOS 9](https://developer.apple.com/ios/pre-release/)
 - [What ' s New in iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

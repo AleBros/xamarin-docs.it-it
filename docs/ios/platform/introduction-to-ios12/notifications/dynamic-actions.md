@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
-ms.openlocfilehash: edaf9d90e019729f69f721c0a92826c0148db8df
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 5611d673ecc7af896fd3a9e566e184e408b6b367
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669628"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870092"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Pulsanti di azione di notifica dinamica in xamarin. IOS
 
@@ -131,15 +131,15 @@ proprietà per accedere e modificare i pulsanti di azione della notifica.
 Nell'app di esempio, il controller di visualizzazione dell'estensione per contenuto di notifica consente di modificare i pulsanti di azione solo quando si risponde a una scelta di un pulsante di azione già esistente.
 
 > [!NOTE]
-> Una notifica di estensione di contenuto può rispondere a un tocco del pulsante di azione nel relativo controller di visualizzazione [ `DidReceiveNotificationResponse` ](https://developer.xamarin.com/api/member/UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse/) metodo dichiarato come parte del [IUNNotificationContentExtension](https://developer.xamarin.com/api/type/UserNotificationsUI.IUNNotificationContentExtension/).
+> Una notifica di estensione di contenuto può rispondere a un tocco del pulsante di azione nel relativo controller di visualizzazione [ `DidReceiveNotificationResponse` ](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) metodo dichiarato come parte del [IUNNotificationContentExtension](xref:UserNotificationsUI.IUNNotificationContentExtension).
 >
 > Anche se condivide un nome con il `DidReceiveNotificationResponse` metodo [descritti in precedenza](#in-app-handling-of-notification-action-buttons), si tratta di un metodo diverso.
 >
-> Dopo che un'estensione per contenuto notifiche completa l'elaborazione di tocco di un pulsante, è possibile scegliere se visualizzare o meno indicare all'applicazione principale per gestire tale tocco del pulsante stesso. A tale scopo, è necessario passare un valore appropriato del [UNNotificationContentExtensionResponseOption](https://developer.xamarin.com/api/type/UserNotificationsUI.UNNotificationContentExtensionResponseOption/) al proprio gestore di completamento:
+> Dopo che un'estensione per contenuto notifiche completa l'elaborazione di tocco di un pulsante, è possibile scegliere se visualizzare o meno indicare all'applicazione principale per gestire tale tocco del pulsante stesso. A tale scopo, è necessario passare un valore appropriato del [UNNotificationContentExtensionResponseOption](xref:UserNotificationsUI.UNNotificationContentExtensionResponseOption) al proprio gestore di completamento:
 >
-> - [`Dismiss`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.Dismiss/) indica che l'interfaccia di notifica deve essere chiusa e che l'app principale non è necessario gestire il tocco del pulsante.
-> - [`DismissAndForwardAction`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.DismissAndForwardAction/) indica che l'interfaccia di notifica deve essere chiusa e che l'app principale deve gestire anche il tocco del pulsante.
-> - [`DoNotDismiss`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.DoNotDismiss/) indica che l'interfaccia di notifica non deve essere chiusa e che l'app principale non è necessario gestire il tocco del pulsante.
+> - `Dismiss` indica che l'interfaccia di notifica deve essere chiusa e che l'app principale non è necessario gestire il tocco del pulsante.
+> - `DismissAndForwardAction` indica che l'interfaccia di notifica deve essere chiusa e che l'app principale deve gestire anche il tocco del pulsante.
+> - `DoNotDismiss` indica che l'interfaccia di notifica non deve essere chiusa e che l'app principale non è necessario gestire il tocco del pulsante.
 
 L'estensione di contenuto `DidReceiveNotificationResponse` metodo determina viene toccato il pulsante di azione, consente di ruotare l'immagine nell'interfaccia della notifica e Mostra o nasconde una **reimpostare** pulsante di azione:
 

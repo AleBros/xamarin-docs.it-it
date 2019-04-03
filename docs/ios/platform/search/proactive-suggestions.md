@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: bb6b47f7936745b00e2b7e6095662a7e8273e1bd
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.openlocfilehash: 2ab0147f918b36dc47ef6eed7d9bf1b6295d9733
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677898"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870404"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introduzione a suggerimenti proattivi in xamarin. IOS
 
@@ -51,7 +51,7 @@ Ad esempio, se l'utente sta immettendo il testo in un campo di testo contrassegn
 
 ## <a name="media-based-suggestions"></a>Suggerimenti basati sulla Media
 
-Se l'app riproduce supporti tramite il [MPPlayableContentManager](https://developer.xamarin.com/api/type/MediaPlayer.MPPlayableContentManager/) API iOS 10 consente agli utenti di visualizzare le immagini e riprodurre file multimediali tramite l'app nella schermata di blocco.
+Se l'app riproduce supporti tramite il [MPPlayableContentManager](xref:MediaPlayer.MPPlayableContentManager) API iOS 10 consente agli utenti di visualizzare le immagini e riprodurre file multimediali tramite l'app nella schermata di blocco.
 
 ## <a name="contextual-siri-reminders"></a>Promemoria di Siri contestuali
 
@@ -63,12 +63,12 @@ Consente all'app contatti (e informazioni correlate contatto) venga visualizzato
 
 ## <a name="ride-sharing-based-suggestions"></a>Suggerimenti basati sulla condivisione Rani
 
-Se un'app per la condivisione rani Usa il [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API iOS 10 presenterà come un'opzione nel cambio modalità per le app nei momenti in cui l'utente è presumibile che si desideri una corsa. L'app deve essere registrato come un'applicazione di condivisione rani anche specificando il `MKDirectionsModeRideShare` per il [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) chiave nel relativo `Info.plist` file.
+Se un'app per la condivisione rani Usa il [MKDirectionsRequest](xref:MapKit.MKDirectionsRequest) API iOS 10 presenterà come un'opzione nel cambio modalità per le app nei momenti in cui l'utente è presumibile che si desideri una corsa. L'app deve essere registrato come un'applicazione di condivisione rani anche specificando il `MKDirectionsModeRideShare` per il [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) chiave nel relativo `Info.plist` file.
 
 Se l'app supporta solo la condivisione rani, inizierà con il suggerimento di sistema *"Ottieni una giostra per..."*, se sono supportati altri tipi di routing direzione (ad esempio, the Walking o biciclette), il sistema userà *"Indicazioni stradali per..."*
 
 > [!IMPORTANT]
-> Il [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/) oggetto che riceve l'app non può includere informazioni di latitudine e longitudine e richiederà la geocodifica.
+> Il [MKMapItem](xref:MapKit.MKMapItem) oggetto che riceve l'app non può includere informazioni di latitudine e longitudine e richiederà la geocodifica.
 
 ## <a name="implementing-proactive-suggestions"></a>Implementazione di suggerimenti proattivi
 
@@ -481,7 +481,7 @@ Se l'utente visita questa pagina in Safari e quindi passato a un'altra app, le i
 Safari consentirà di estrarre qualsiasi elemento in una pagina web che rispetti le proprietà dello schema seguenti:
 
 - **PostalAddress**
-- **GeoCoordinates**
+- **Coordinate geografiche**
 - Proprietà di un telefono.
 
 Per altre informazioni, vedere la [eseguire una ricerca con Markup Web](~/ios/platform/search/web-markup.md) Guida.

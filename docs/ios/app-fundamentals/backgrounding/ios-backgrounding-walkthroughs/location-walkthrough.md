@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: b857ee97951f0abfdf8e082ca9a826d5580d24ab
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: fa8a48e165764a449af4bc5414d2e66aecea8269
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669193"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870144"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Procedura dettagliata - il percorso in Background in xamarin. IOS
 
@@ -72,7 +72,7 @@ Questa procedura dettagliata illustra i principali funzionalità di elaborazione
     }
     ```
 
-    Il codice precedente imposta un numero di proprietà e le autorizzazioni nel [CLLocationManager](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/) classe:
+    Il codice precedente imposta un numero di proprietà e le autorizzazioni nel [CLLocationManager](xref:CoreLocation.CLLocationManager) classe:
 
     - `PausesLocationUpdatesAutomatically` – Questo è un valore booleano che può essere impostato a seconda del fatto che il sistema è consentito sospendere gli aggiornamenti di percorso. In alcuni dispositivi viene impostata automaticamente su `true`, che può causare il dispositivo interrompere la ricezione di aggiornamenti della posizione dopo circa 15 minuti in background.
     - `RequestAlwaysAuthorization` -È necessario passare questo metodo per offrire la possibilità di consentire la posizione per accedervi in background l'utente dell'app. `RequestWhenInUseAuthorization` può essere passato anche se si vuole concedere all'utente la possibilità di consentire la posizione per accedervi solo quando l'app è in primo piano.

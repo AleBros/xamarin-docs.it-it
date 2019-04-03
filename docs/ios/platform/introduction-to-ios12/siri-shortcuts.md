@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 8b3b9a5b110432f33e06edf7ab51c582681e4ea3
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: e37fd88f0d5fcf02ece0ae2f5e3164a507067e29
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233731"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869824"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Tasti di scelta rapida Siri in xamarin. IOS
 
@@ -149,7 +149,7 @@ public static NSUserActivity ViewMenuActivity {
 Notare in particolare quanto segue:
 
 - L'impostazione `EligibleForPrediction` a `true` indica che Siri può prevedere questa attività e della superficie di attacco, come collegamento.
-- Il [ `ContentAttributeSet` ](xref:Foundation.NSUserActivity.ContentAttributeSet) matrice è uno standard [ `CSSearchableItemAttributeSet` ](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/) utilizzato per includere un `NSUserActivity` nei risultati della ricerca di iOS.
+- Il [ `ContentAttributeSet` ](xref:Foundation.NSUserActivity.ContentAttributeSet) matrice è uno standard [ `CSSearchableItemAttributeSet` ](xref:CoreSpotlight.CSSearchableItemAttributeSet) utilizzato per includere un `NSUserActivity` nei risultati della ricerca di iOS.
 - [`SuggestedInvocationPhrase`](xref:Foundation.NSUserActivity.SuggestedInvocationPhrase) è una frase che Siri suggerirà all'utente come una potenziale scelta quando si assegna una frase a un scelta rapida.
 
 ### <a name="handling-an-nsuseractivity-shortcut"></a>La gestione di un collegamento NSUserActivity
@@ -227,7 +227,8 @@ Compilazione del progetto Xcode che contiene questa definizione preventivo perso
 Per visualizzare il codice generato:
 
 - Aprire **appdelegate. M**.
-- Aggiungere un'importazione al file di intestazione dell'intento personalizzato: `#import "OrderSoupIntent.h"`
+- Aggiungere un'importazione al file di intestazione dell'intento personalizzato:
+`#import "OrderSoupIntent.h"`
 - In qualsiasi metodo nella classe, aggiungere un riferimento a `OrderSoupIntent`.
 - Fare clic su `OrderSoupIntent` e scegliere **passare alla definizione**.
 - Fare doppio clic nel file appena aperta **OrderSoupIntent.h**e selezionare **Mostra nel Finder**.
@@ -318,7 +319,7 @@ Affinché Siri suggerire un scelta rapida, innanzitutto necessario comprendere q
 Per consentire a Siri di questa comprensione, Chef MINESTRONE _donates_ intenzione di Siri ogni volta che l'utente posiziona un ordine basata su acronimi. Basato su questo donation: quando è stato donato, in cui è stato donato, i parametri che contiene: Siri apprende quando per i suggerimenti per lo scelta rapida in futuro.
 
 **SoupChef** utilizza il `SoupOrderDataManager` classe per posizionare le donazioni.
-Quando viene chiamato per inserire un ordine MINESTRONE per un utente, il `PlaceOrder` metodo chiama a sua volta [ `DonateInteraction` ](https://developer.xamarin.com/api/member/Intents.INInteraction.DonateInteraction/):
+Quando viene chiamato per inserire un ordine MINESTRONE per un utente, il `PlaceOrder` metodo chiama a sua volta [ `DonateInteraction` ](xref:Intents.INInteraction.DonateInteraction*):
 
 ```csharp
 void DonateInteraction(Order order)
@@ -332,8 +333,8 @@ void DonateInteraction(Order order)
 }
 ```
 
-Dopo il recupero di un intent, ne viene eseguito il wrapping un' [ `INInteraction` ](https://developer.xamarin.com/api/type/Intents.INInteraction/).
-Il `INInteraction` viene assegnato un [`Identifier`](https://developer.xamarin.com/api/property/Intents.INInteraction.Identifier/)
+Dopo il recupero di un intent, ne viene eseguito il wrapping un' [ `INInteraction` ](xref:Intents.INInteraction).
+Il `INInteraction` viene assegnato un [`Identifier`](xref:Intents.INInteraction.Identifier*)
 che corrisponde all'ID univoco dell'ordine (ciò sarà utile in un secondo momento durante l'eliminazione di donazioni preventivi che non sono più valide). Quindi, l'interazione viene donata in Siri.
 
 La chiamata al `order.Intent` getter recuperi un `OrderSoupIntent` che rappresenta l'ordine impostando relativo `Quantity`, `Soup`, `Options`e l'immagine e una frase di chiamata da utilizzare come un suggerimento quando l'utente registra una frase di Siri associare con lo scopo di:
@@ -469,7 +470,7 @@ MINESTRONE Chef rende persistenti i dati con `NSUserDefaults`. Per condividere d
 
 Un'estensione per Intent esegue le attività in background necessarie per creare un collegamento basato su una finalità personalizzato.
 
-Siri chiama il [ `GetHandler` ](https://developer.xamarin.com/api/member/Intents.INExtension.GetHandler/) metodo del `IntentHandler` classe (definito nel **Info. plist** come il `NSExtensionPrincipalClass`) per ottenere un'istanza di una classe che estende `OrderSoupIntentHandling`, che può essere usato per gestire un `OrderSoupIntent`:
+Siri chiama il [ `GetHandler` ](xref:Intents.INExtension.GetHandler*) metodo del `IntentHandler` classe (definito nel **Info. plist** come il `NSExtensionPrincipalClass`) per ottenere un'istanza di una classe che estende `OrderSoupIntentHandling`, che può essere usato per gestire un `OrderSoupIntent`:
 
 ```csharp
 [Register("IntentHandler")]
@@ -563,9 +564,9 @@ In questo storyboard, è disponibile un controller di visualizzazione singolo, d
 > [!NOTE]
 > Per le interfacce **invoiceView** e **confirmationView** sono definite nel **Main. Storyboard** come visualizzazioni secondarie. IOS Designer in Visual Studio per Mac e Visual Studio 2017 non fornisce il supporto per la visualizzazione o modifica delle visualizzazioni secondarie; a tale scopo, aprire **Main. Storyboard** in Interface Builder di Xcode.
 
-`IntentViewController` implementa il [`IINUIHostedViewControlling`](https://developer.xamarin.com/api/type/IntentsUI.IINUIHostedViewControlling/)
-interfaccia utilizzata per fornire un'interfaccia personalizzata quando si lavora con finalità di Siri. Il [`ConfigureView`](https://developer.xamarin.com/api/member/IntentsUI.INUIHostedViewControlling_Extensions.ConfigureView/)
-metodo viene chiamato per personalizzare l'interfaccia, la visualizzazione di conferma o la fattura, a seconda del fatto che è in corso confermata l'interazione ([`INIntentHandlingStatus.Ready`](https://developer.xamarin.com/api/type/Intents.INIntentHandlingStatus/)) o è stata eseguita correttamente ([ `INIntentHandlingStatus.Success`](https://developer.xamarin.com/api/type/Intents.INIntentHandlingStatus/)):
+`IntentViewController` implementa il [`IINUIHostedViewControlling`](xref:IntentsUI.IINUIHostedViewControlling)
+interfaccia utilizzata per fornire un'interfaccia personalizzata quando si lavora con finalità di Siri. Il [`ConfigureView`](xref:IntentsUI.INUIHostedViewControlling_Extensions.ConfigureView*)
+metodo viene chiamato per personalizzare l'interfaccia, la visualizzazione di conferma o la fattura, a seconda del fatto che è in corso confermata l'interazione ([`INIntentHandlingStatus.Ready`](xref:Intents.INIntentHandlingStatus)) o è stata eseguita correttamente ([ `INIntentHandlingStatus.Success`](xref:Intents.INIntentHandlingStatus)):
 
 ```csharp
 [Export("configureViewForParameters:ofInteraction:interactiveBehavior:context:completion:")]
@@ -631,9 +632,9 @@ public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 }
 ```
 
-O meno è presente un collegamento a voce esistente per l'ordine attualmente visualizzata, in base `RowSelected` presenta un controller di visualizzazione di tipo [ `INUIEditVoiceShortcutViewController` ](https://developer.xamarin.com/api/type/IntentsUI.INUIEditVoiceShortcutViewController/) oppure [ `INUIAddVoiceShortcutViewController` ](https://developer.xamarin.com/api/type/IntentsUI.INUIAddVoiceShortcutViewController/).
-In ogni caso `OrderDetailViewController` si configura come il controller di visualizzazione `Delegate`, motivo per cui implementa inoltre [`IINUIAddVoiceShortcutViewControllerDelegate`](https://developer.xamarin.com/api/type/IntentsUI.IINUIAddVoiceShortcutViewControllerDelegate/)
-e [ `IINUIEditVoiceShortcutViewControllerDelegate` ](https://developer.xamarin.com/api/type/IntentsUI.IINUIEditVoiceShortcutViewControllerDelegate/).
+O meno è presente un collegamento a voce esistente per l'ordine attualmente visualizzata, in base `RowSelected` presenta un controller di visualizzazione di tipo [ `INUIEditVoiceShortcutViewController` ](xref:IntentsUI.INUIEditVoiceShortcutViewController) oppure [ `INUIAddVoiceShortcutViewController` ](xref:IntentsUI.INUIAddVoiceShortcutViewController).
+In ogni caso `OrderDetailViewController` si configura come il controller di visualizzazione `Delegate`, motivo per cui implementa inoltre [`IINUIAddVoiceShortcutViewControllerDelegate`](xref:IntentsUI.IINUIAddVoiceShortcutViewControllerDelegate)
+e [ `IINUIEditVoiceShortcutViewControllerDelegate` ](xref:IntentsUI.IINUIEditVoiceShortcutViewControllerDelegate).
 
 ## <a name="testing-on-device"></a>Test su dispositivo
 

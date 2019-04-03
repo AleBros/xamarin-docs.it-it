@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: a6a4ef9fb36fde067fa58fec9a6206b1dbc1fbf0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: b79d3683c8e4979cbbd13550f3df86c39622ad2b
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668348"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870179"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitazioni di xamarin. IOS
 
@@ -83,7 +83,7 @@ Tuttavia, l'intera API di Reflection, tra cui Type. GetType ("someClass"), elenc
 Per chiamare una funzione nativa tramite un delegato c#, la dichiarazione del delegato deve essere decorata con uno dei seguenti attributi:
 
 - [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (scelta consigliata, poiché è multipiattaforma e compatibile con .NET Standard 1.1 +)
-- [MonoNativeFunctionWrapperAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoNativeFunctionWrapperAttribute)
+- [MonoNativeFunctionWrapperAttribute](xref:ObjCRuntime.MonoNativeFunctionWrapperAttribute)
 
 Incapacità di fornire uno di questi attributi genererà un errore di runtime, ad esempio:
 
@@ -100,8 +100,8 @@ In Mono standard è possibile passare istanze dei delegati c# al codice non gest
 
 In Mono questi adattatori vengono implementati da Just-in-Time compilatore. Quando tramite il compilatore ahead of time richiesto da iPhone esistono due importanti limitazioni a questo punto:
 
--  È necessario contrassegnare tutti i metodi di callback con la [MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoPInvokeCallbackAttribute) 
--  I metodi devono essere metodi statici, non è supportato, ad esempio i metodi. 
+-  È necessario contrassegnare tutti i metodi di callback con la [MonoPInvokeCallbackAttribute](xref:ObjCRuntime.MonoPInvokeCallbackAttribute)
+-  I metodi devono essere metodi statici, non è supportato, ad esempio i metodi.
  
 <a name="No_Remoting" />
 

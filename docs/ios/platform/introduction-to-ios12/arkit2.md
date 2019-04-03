@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 7f3c196eafd71e8571ea49a17784e5290e7ef44e
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 559ef9cc9a3e5ace7a4023e81363825c6861f6d4
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233602"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870313"
 ---
 # <a name="arkit-2-in-xamarinios"></a>ARKit 2 in Xamarin.iOS
 
@@ -394,7 +394,7 @@ In Xamarin, è il tipo comune per la modifica di matrici di trasformazione `NVec
 
 ![Visual Studio per lunghezza di riga per lunghezza di colonna](images/arkit_row_vs_column.png)
 
-La coerenza con la scelta di interpretazione di matrice è fondamentale per comportamento corretto. Poiché le matrici di trasformazione 3D sono 4x4, gli errori di coerenza non produrrà alcun tipo di eccezione in fase di compilazione o anche in fase di esecuzione, è sufficiente che saranno operazioni vengono eseguite in modo imprevisto. Se il SceneKit / oggetti ARKit sembrano bloccarsi, veloce da subito o instabilità, una matrice di trasformazione non corretta è una buona opzione. La soluzione è semplice: [ `NMatrix4.Transpose` ](https://developer.xamarin.com/api/member/OpenTK.NMatrix4.Transpose) eseguirà una posto trasposizione di elementi.
+La coerenza con la scelta di interpretazione di matrice è fondamentale per comportamento corretto. Poiché le matrici di trasformazione 3D sono 4x4, gli errori di coerenza non produrrà alcun tipo di eccezione in fase di compilazione o anche in fase di esecuzione, è sufficiente che saranno operazioni vengono eseguite in modo imprevisto. Se il SceneKit / oggetti ARKit sembrano bloccarsi, veloce da subito o instabilità, una matrice di trasformazione non corretta è una buona opzione. La soluzione è semplice: [ `NMatrix4.Transpose` ](xref:OpenTK.NMatrix4.Transpose*) eseguirà una posto trasposizione di elementi.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
