@@ -1,22 +1,22 @@
 ---
 title: Riepilogo del capitolo 18. MVVM
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 18. MVVM'
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 18. MVVM'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: db837ac8bfa1b7a946ee606e9481f9feb2a8a31f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 6379bafb8c879237171951756441d1227f65b825
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050121"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870222"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>Riepilogo del capitolo 18. MVVM
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
+[![Download esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
 
 Uno dei modi migliori per progettare un'applicazione consiste nel separare l'interfaccia utente dal codice sottostante, che talvolta viene denominato il *logica di business*. Esistono diverse tecniche, ma quello che è progettato appositamente per gli ambienti basati su XAML è noto come Model-View-ViewModel o MVVM.
 
@@ -87,7 +87,7 @@ Il `Button` gli elementi possono essere facilmente sostituiti con `TapGestureRec
 
 ### <a name="a-calculator-almost"></a>Una calcolatrice, quasi
 
-Il [ **AddingMachine** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/AddingMachine) rende di esempio usano entrambi il `Execute` e `CanExecute` metodi `ICommand`. Usa un' [ `AdderViewModel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) classe la [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) libreria. ViewModel contiene sei proprietà di tipo `ICommand`. Questi sono inizializzati dal [ `Command` costruttore](xref:Xamarin.Forms.Command.%23ctor(System.Action)) e [ `Command` costruttore](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) del `Command` e il [ `Command<T>` costruttore](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Command%3CT%3E.Command%3CT%3E/p/System.Action%7BT%7D/System.Func%7BT,System.Boolean%7D/) di `Command<T>`. I tasti numerici della calcolatrice sono associati alla proprietà che viene inizializzata con `Command<T>`e una `string` argomento `Execute` e `CanExecute` identifica la chiave specifica.
+Il [ **AddingMachine** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/AddingMachine) rende di esempio usano entrambi il `Execute` e `CanExecute` metodi `ICommand`. Usa un' [ `AdderViewModel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) classe la [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) libreria. ViewModel contiene sei proprietà di tipo `ICommand`. Questi sono inizializzati dal [ `Command` costruttore](xref:Xamarin.Forms.Command.%23ctor(System.Action)) e [ `Command` costruttore](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) del `Command` e il [ `Command<T>` costruttore](https://docs.microsoft.com/dotnet/api/xamarin.forms.command.-ctor?view=xamarin-forms#Xamarin_Forms_Command__ctor_System_Action_System_Object__System_Func_System_Object_System_Boolean__) di `Command<T>`. I tasti numerici della calcolatrice sono associati alla proprietà che viene inizializzata con `Command<T>`e una `string` argomento `Execute` e `CanExecute` identifica la chiave specifica.
 
 ## <a name="viewmodels-and-the-application-lifecycle"></a>ViewModel e il ciclo di vita dell'applicazione
 

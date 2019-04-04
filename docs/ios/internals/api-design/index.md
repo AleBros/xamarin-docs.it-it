@@ -7,8 +7,13 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
+ms.openlocfilehash: 9425b26b5cc8fcd9b8a80df422d932c96d52889b
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870365"
 ---
-
 # <a name="xamarinios-api-design"></a>Progettazione di API xamarin. IOS
 
 Oltre alle librerie di classi di Base che fanno parte di Mono, il nucleo [xamarin. IOS](http://www.xamarin.com/iOS) viene fornito con le associazioni per iOS varie API per consentire agli sviluppatori di creare applicazioni iOS native con Mono.
@@ -26,7 +31,7 @@ Questi sono alcuni dei nostri principi di progettazione per i binding xamarin. I
 
   - Derivare da una classe esistente
   - Chiamare il costruttore di base per catena
-  - L'override dei metodi deve essere eseguita con override sistema #
+  - L'override dei metodi devono essere eseguite con C#di eseguire l'override del sistema
   - Creazione di una sottoclasse dovrebbero funzionare con costrutti di linguaggio c# standard
 
 - Non esporre agli sviluppatori di selettori Objective-C
@@ -80,7 +85,7 @@ Xamarin. IOS include una serie di assembly che costituiscono il *profilo di xama
 
 #### <a name="objcruntime"></a>ObjCRuntime
 
-Il [ObjCRuntime](https://developer.xamarin.com/api/namespace/ObjCRuntime/) dello spazio dei nomi consente agli sviluppatori di colmare i mondi tra c# e Objective-C.
+Il [ObjCRuntime](xref:ObjCRuntime) dello spazio dei nomi consente agli sviluppatori di colmare i mondi tra c# e Objective-C.
 Si tratta di una nuova associazione, progettata specificamente per iOS, basati sull'esperienza di Cocoa # e Gtk #.
 
 <a name="MonoTouch.Foundation" />
@@ -201,13 +206,13 @@ Delegati c# sono disponibili per le operazioni comuni. Vedere le [delegati](#Del
 
 #### <a name="opengles"></a>OpenGLES
 
-Per OpenGLES, si distribuisce un [modificato per versione](https://developer.xamarin.com/api/namespace/OpenTK/) delle [OpenTK](http://www.opentk.com/) API, un'associazione e orientato a OpenGL che è stato modificato per usare i tipi di dati CoreGraphics e strutture, nonché esporre solo il funzionalità disponibile in iOS.
+Per OpenGLES, si distribuisce un [modificato per versione](xref:OpenTK) delle [OpenTK](http://www.opentk.com/) API, un'associazione e orientato a OpenGL che è stato modificato per usare i tipi di dati CoreGraphics e strutture, nonché esporre solo il funzionalità disponibile in iOS.
 
-OpenGLES 1.1 è disponibile tramite il tipo ES11.GL, documentato [qui](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES11.GL/) tipo.
+OpenGLES 1.1 è disponibile tramite il tipo ES11.GL, documentato [qui](xref:OpenTK.Graphics.ES11.GL) tipo.
 
-Funzionalità OpenGLES 2.0 è disponibile tramite il tipo ES20.GL, documentato [qui](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES20.GL/) tipo.
+Funzionalità OpenGLES 2.0 è disponibile tramite il tipo ES20.GL, documentato [qui](xref:OpenTK.Graphics.ES20.GL) tipo.
 
-OpenGLES 3.0 è disponibile tramite il tipo ES30.GL, documentato [qui](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES30.GL/) tipo.
+OpenGLES 3.0 è disponibile tramite il tipo ES30.GL, documentato [qui](xref:OpenTK.Graphics.ES30.GL) tipo.
 
 
 ### <a name="binding-design"></a>Progettazione di associazione
