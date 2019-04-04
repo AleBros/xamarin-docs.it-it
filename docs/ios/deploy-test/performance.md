@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 1f7f2af19c6faad32f94d82dbc58f140f45dea5d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2cacf429efb11c5dd19276d62b997acae767516e
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671118"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870391"
 ---
 # <a name="xamarinios-performance"></a>Prestazioni di Xamarin.iOS
 
@@ -101,11 +101,11 @@ container.AddSubview (new MyView (container));
 
 In questo caso, l'oggetto contenuto non mantiene attivo l'elemento padre. Tuttavia l'elemento padre mantiene attivo l'elemento figlio tramite la chiamata eseguita a `container.AddSubView`.
 
-Questo accade anche nelle API iOS che usano il modello del delegato o dell'origine dati, in cui una classe peer contiene l'implementazione. Un esempio è l'impostazione della proprietà [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/)
-Proprietà o metodo [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/)
+Questo accade anche nelle API iOS che usano il modello del delegato o dell'origine dati, in cui una classe peer contiene l'implementazione. Un esempio è l'impostazione della proprietà [`Delegate`](xref:UIKit.UITableView.Delegate*)
+Proprietà o metodo [`DataSource`](xref:UIKit.UITableView.DataSource*)
 nella casse [`UITableView`](xref:UIKit.UITableView).
 
-Nel caso delle classi create esclusivamente per l'implementazione di un protocollo, ad esempio [`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/), invece di creare una sottoclasse, è sufficiente implementare l'interfaccia nella classe, eseguire l'override del metodo e assegnare la proprietà `DataSource` a `this`.
+Nel caso delle classi create esclusivamente per l'implementazione di un protocollo, ad esempio [`IUITableViewDataSource`](xref:UIKit.IUITableViewDataSource), invece di creare una sottoclasse, è sufficiente implementare l'interfaccia nella classe, eseguire l'override del metodo e assegnare la proprietà `DataSource` a `this`.
 
 #### <a name="weak-attribute"></a>Attributo Weak
 
@@ -278,7 +278,7 @@ In particolare il simulatore non simula in alcun modo le restrizioni di memoria 
 
 I giochi hanno tendenzialmente cicli rigidi per eseguire la logica del gioco e aggiornare la schermata. Le frequenze dei fotogrammi tipiche sono comprese tra trenta e sessanta fotogrammi al secondo. Alcuni sviluppatori ritengono di dover aggiornare la schermata il maggior numero possibile di volte al secondo, combinando la simulazione del gioco con gli aggiornamenti della schermata, e potrebbero avere la tentazione di andare oltre i sessanta fotogrammi al secondo.
 
-Il server di visualizzazione esegue tuttavia gli aggiornamenti della schermata non più di sessanta volte al secondo. Se quindi si prova ad aggiornare la schermata più velocemente, potrebbero verificarsi problemi di screen tearing e microstuttering. È meglio strutturare il codice in modo che gli aggiornamenti della schermata siano sincronizzati con l'aggiornamento della visualizzazione. A questo scopo, è possibile usare la classe [`CoreAnimation.CADisplayLink`](https://developer.xamarin.com/api/type/CoreAnimation.CADisplayLink/), un timer idoneo per la visualizzazione e i giochi che viene eseguito a sessanta fotogrammi al secondo.
+Il server di visualizzazione esegue tuttavia gli aggiornamenti della schermata non più di sessanta volte al secondo. Se quindi si prova ad aggiornare la schermata più velocemente, potrebbero verificarsi problemi di screen tearing e microstuttering. È meglio strutturare il codice in modo che gli aggiornamenti della schermata siano sincronizzati con l'aggiornamento della visualizzazione. A questo scopo, è possibile usare la classe [`CoreAnimation.CADisplayLink`](xref:CoreAnimation.CADisplayLink), un timer idoneo per la visualizzazione e i giochi che viene eseguito a sessanta fotogrammi al secondo.
 
 ## <a name="avoid-core-animation-transparency"></a>Evitare la trasparenza di Core Animation
 
