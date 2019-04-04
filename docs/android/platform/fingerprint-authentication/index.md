@@ -1,14 +1,19 @@
 ---
 title: Autenticazione con impronta digitale
-description: 'Questa guida illustra come aggiungere l''autenticazione tramite impronta digitale, introdotto in Android 6.0, per un''applicazione xamarin. Android.'
+description: Questa guida illustra come aggiungere l'autenticazione tramite impronta digitale, introdotto in Android 6.0, per un'applicazione xamarin. Android.
 ms.prod: xamarin
 ms.assetid: 6742D874-4988-4516-A946-D5C714B20A10
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
+ms.openlocfilehash: 70e12abdf61a6a0bfb36d281bcaa6214199e567d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667334"
 ---
-
 # <a name="fingerprint-authentication"></a>Autenticazione con impronta digitale
 
 _Questa guida illustra come aggiungere l'autenticazione tramite impronta digitale, introdotto in Android 6.0, per un'applicazione xamarin. Android._

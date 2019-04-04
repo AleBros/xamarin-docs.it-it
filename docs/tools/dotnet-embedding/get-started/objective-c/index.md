@@ -1,13 +1,18 @@
 ---
 title: Introduzione a Objective-C
-description: 'Questo documento descrive come iniziare a usare .NET incorporamento con Objective-C. Vengono illustrati i requisiti, l''installazione di incorporamento di .NET da NuGet e piattaforme supportate.'
+description: Questo documento descrive come iniziare a usare .NET incorporamento con Objective-C. Vengono illustrati i requisiti, l'installazione di incorporamento di .NET da NuGet e piattaforme supportate.
 ms.prod: xamarin
 ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
+ms.openlocfilehash: 92b11db2ee566bcd9f3f8a3ee3771e163a47589b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670220"
 ---
-
 # <a name="getting-started-with-objective-c"></a>Introduzione a Objective-C
 
 Questa è la pagina introduttiva per Objective-C, che illustra le nozioni di base per tutte le piattaforme supportate.

@@ -1,14 +1,19 @@
 ---
 title: Xamarin.Forms Picker
-description: 'La selezione di xamarin. Forms consente di visualizzare un breve elenco di elementi, da cui l''utente può selezionare un elemento. Questo articolo illustra come usare la classe di selezione per selezionare un elemento di testo da un elenco di dati.'
+description: La selezione di xamarin. Forms consente di visualizzare un breve elenco di elementi, da cui l'utente può selezionare un elemento. Questo articolo illustra come usare la classe di selezione per selezionare un elemento di testo da un elenco di dati.
 ms.prod: xamarin
 ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
+ms.openlocfilehash: dc39fd9c129fb63fa4a3a73b15aea4204a38cdbd
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557269"
 ---
-
 # <a name="xamarinforms-picker"></a>Xamarin.Forms Picker
 
 _La visualizzazione di selezione è un controllo per la selezione di un elemento di testo da un elenco di dati._

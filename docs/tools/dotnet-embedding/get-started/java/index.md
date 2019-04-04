@@ -1,13 +1,18 @@
 ---
 title: Introduzione a Java
-description: 'Questo documento descrive come iniziare a usare l''incorporamento di .NET con Java. Illustra i requisiti di sistema, installazione e le piattaforme supportate.'
+description: Questo documento descrive come iniziare a usare l'incorporamento di .NET con Java. Illustra i requisiti di sistema, installazione e le piattaforme supportate.
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
 author: lobrien
 ms.author: laobri
 ms.date: 03/28/2018
+ms.openlocfilehash: 79a483743946c4f7509833867f2afe4b1e055183
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667178"
 ---
-
 # <a name="getting-started-with-java"></a>Introduzione a Java
 
 Questa è la pagina introduttiva per Java, che illustra le nozioni di base per tutte le piattaforme supportate.

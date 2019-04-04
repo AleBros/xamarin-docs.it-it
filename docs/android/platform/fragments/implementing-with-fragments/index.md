@@ -8,8 +8,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
+ms.openlocfilehash: 2ff4729e68497391d41521da26917571c146b541
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667265"
 ---
-
 # <a name="implementing-fragments---walkthrough"></a>Implementazione di frammenti - procedura dettagliata
 
 _I frammenti sono componenti indipendenti e modulari che possono aiutare a risolvere la complessità delle App Android destinate a dispositivi con un'ampia gamma di dimensioni dello schermo. Questo articolo illustra come creare e usare i frammenti quando si sviluppano applicazioni xamarin. Android._

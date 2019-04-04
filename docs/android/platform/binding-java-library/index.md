@@ -7,8 +7,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
+ms.openlocfilehash: 0f4ec3cfd7c154e43db9f8e123259317c0d17e21
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670532"
 ---
-
 # <a name="binding-a-java-library"></a>Associazione di una libreria Java
 
 _La community Android ha molte librerie Java che vuoi usare nell'app; Questa guida illustra come incorporare librerie Java nell'applicazione xamarin. Android tramite la creazione di una libreria di binding._

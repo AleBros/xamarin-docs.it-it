@@ -1,14 +1,19 @@
 ---
 title: Introduzione a monotouch. Dialog per xamarin. IOS
-description: 'Questo documento descrive monotouch. Dialog (MT. D), un framework per lo sviluppo di interfaccia utente rapida e dichiarativo con xamarin. IOS. Descrive come usare le APIs MonoTouch.Dialog per creare un''interfaccia nel codice o JSON e usare funzionalità quali pull per aggiornare, ricerca, caricamento dell''immagine di sfondo e altro ancora.'
+description: Questo documento descrive monotouch. Dialog (MT. D), un framework per lo sviluppo di interfaccia utente rapida e dichiarativo con xamarin. IOS. Descrive come usare le APIs MonoTouch.Dialog per creare un'interfaccia nel codice o JSON e usare funzionalità quali pull per aggiornare, ricerca, caricamento dell'immagine di sfondo e altro ancora.
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
+ms.openlocfilehash: d5dda3cc22d91248cc31cc526e898a5eabbbefd0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670142"
 ---
-
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introduzione a monotouch. Dialog per xamarin. IOS
 
 Monotouch. Dialog, detto MT. D in breve, è un toolkit di sviluppo dell'interfaccia utente rapida che consente agli sviluppatori di compilare le schermate dell'applicazione e navigazione usando le informazioni, anziché l'attività ripetitive di creazione di controller di visualizzazione, le tabelle e così via. Di conseguenza, fornisce una significativa semplificazione della riduzione del codice e lo sviluppo dell'interfaccia utente. Ad esempio, si consideri lo screenshot seguente:

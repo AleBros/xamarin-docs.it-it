@@ -7,8 +7,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
+ms.openlocfilehash: 78908e1b1ad6d3f572ce45c8189d8f4ee48ad6ee
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666366"
 ---
-
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Come usare Google Maps e il percorso con xamarin. Android
 
 _Questo articolo illustra come usare le mappe e posizione con xamarin. Android. Viene descritto come tutti i dati da sfruttando l'applicazione mappe predefinite per mediante direttamente viene eseguito il mapping API V2 Android di Google._
