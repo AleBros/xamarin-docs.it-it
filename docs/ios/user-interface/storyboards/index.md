@@ -7,8 +7,13 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
+ms.openlocfilehash: f24be635afcba181efcab85d81a984d93dae4bc8
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071112"
 ---
-
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in xamarin. IOS
 
 In questa Guida verrà spiegato quali uno Storyboard è ed esaminare alcuni dei componenti principali, come segue. Verrà esaminato come gli storyboard possono essere creati e usati, e sui vantaggi che dispongono di uno sviluppatore.

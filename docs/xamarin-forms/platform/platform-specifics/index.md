@@ -1,14 +1,19 @@
 ---
 title: Funzionalità specifiche della piattaforma
-description: 'Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare e creare funzionalità specifiche della piattaforma.'
+description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare e creare funzionalità specifiche della piattaforma.
 ms.prod: xamarin
 ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
+ms.openlocfilehash: 69c730462d6b277f8ec5a4eb7390aaeb50575a39
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507136"
 ---
-
 # <a name="platform-specifics"></a>Funzionalità specifiche della piattaforma
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)

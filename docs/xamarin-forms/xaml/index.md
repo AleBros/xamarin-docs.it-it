@@ -6,13 +6,13 @@ ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/28/2019
-ms.openlocfilehash: fa93cb86867cb8539fb7ce4db45ad4751bfe6e04
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.date: 04/03/2019
+ms.openlocfilehash: 1f6bdfb1aed87f8a2dabdc0efcea3a1b8bf2ecf2
+ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58854224"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59019347"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>eXtensible Application Markup Language (XAML)
 
@@ -24,6 +24,10 @@ _XAML è un linguaggio di markup dichiarativo che possa essere usato per definir
 
 > [!NOTE]
 > Provare il [anteprima Standard XAML](standard/index.md)
+
+## [<a name="xaml-controls"></a>Controlli XAML](xaml-controls.md)
+
+Tutte le viste definite in xamarin. Forms possono farvi riferimento dai file XAML.
 
 <a name="xaml" />
 
@@ -43,15 +47,15 @@ Il [Visualizzatore anteprima XAML](~/xamarin-forms/xaml/xaml-previewer/index.md)
 
 XAML Usa le `xmlns` attributo XML per le dichiarazioni dello spazio dei nomi. Questo articolo presenta la sintassi dello spazio dei nomi XAML e viene illustrato come dichiarare uno spazio dei nomi XAML per un tipo di accesso.
 
-## [<a name="xaml-custom-namespace-schemas"></a>Schemi personalizzati Namespace XAML](custom-namespace-schemas.md)
+## [<a name="xaml-custom-namespace-schemas"></a>Schemi spazio dei nomi personalizzati XAML](custom-namespace-schemas.md)
 
 Uno schema personalizzato dello spazio dei nomi XAML può essere definito con la `XmlnsDefinitionAttribute` (classe), che specifica un mapping tra un URL personalizzato e uno o più spazi dei nomi CLR. Schema spazio dei nomi personalizzato è quindi utilizzabile nelle dichiarazioni dello spazio dei nomi XAML.
 
-## [<a name="xaml-namespace-recommended-prefixes"></a>XAML Namespace consigliato prefissi](custom-prefix.md)
+## [<a name="xaml-namespace-recommended-prefixes"></a>Prefissi consigliati per lo spazio dei nomi XAML](custom-prefix.md)
 
 Il `XmlnsPrefixAttribute` classe può essere utilizzata dagli autori di controlli per specificare un prefisso consigliato da associare a uno spazio dei nomi XAML, per l'utilizzo XAML.
 
-## [<a name="xaml-markup-extensions"></a>Estensioni di Markup XAML](markup-extensions/index.md)
+## [<a name="xaml-markup-extensions"></a>Estensioni di markup XAML](markup-extensions/index.md)
 
 XAML include le estensioni di markup per impostare gli attributi su oggetti oltre quelle che possono essere espresse con semplici stringhe o valori. Ad esempio che fanno riferimento a costanti, le proprietà statiche e i campi, i dizionari risorse e le associazioni dati.
 
@@ -71,10 +75,10 @@ In xamarin. Forms, la funzionalità delle proprietà di common language runtime 
 
 Una proprietà associata è un tipo speciale di proprietà associabile, definito in una classe ma collegato ad altri oggetti e riconoscibile in XAML come attributo che contiene una classe e un nome di proprietà separati da un punto. Questo articolo fornisce un'introduzione alle proprietà associate e viene illustrato come creare e il loro uso.
 
-## [<a name="resource-dictionaries"></a>Dizionari risorse](resource-dictionaries.md)
+## [<a name="resource-dictionaries"></a>Dizionari di risorse](resource-dictionaries.md)
 
 Risorse XAML sono definizioni di oggetti che possono essere utilizzati più di una volta. Oggetto [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) consente alle risorse di essere definito in un'unica posizione e usata nuovamente in un'applicazione xamarin. Forms. Questo articolo illustra come creare e utilizzare un `ResourceDictionary`e su come unire un `ResourceDictionary` in un altro.
 
-## [<a name="loading-xaml-at-runtime"></a>Il caricamento di XAML in fase di esecuzione](runtime-load.md)
+## [<a name="loading-xaml-at-runtime"></a>Caricamento di XAML in fase di esecuzione](runtime-load.md)
 
 XAML può essere caricato e analizzato in fase di esecuzione con il [ `LoadFromXaml` ](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) i metodi di estensione.

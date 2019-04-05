@@ -6,8 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
+ms.openlocfilehash: 605db1c2e0dc0cf41288f9d6c9252582ce91d525
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58071066"
 ---
-
 # <a name="preparing-an-application-for-release"></a>Preparazione di un'applicazione per il rilascio
 
 Dopo aver scritto il codice di un'applicazione e averla testata, è necessario preparare il pacchetto per la distribuzione. La prima attività di preparazione del pacchetto è la compilazione dell'applicazione per il rilascio, che essenzialmente comporta l'impostazione di alcuni attributi dell'applicazione.

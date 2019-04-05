@@ -7,8 +7,13 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/14/2018
+ms.openlocfilehash: f2b569b3e38284db15eac0f4e182dfb38796cce9
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329209"
 ---
-
 # <a name="xamarinforms-user-interface-views"></a>Viste di interfaccia utente di xamarin. Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/FormsGallery/)

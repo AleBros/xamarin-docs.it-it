@@ -7,8 +7,13 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
+ms.openlocfilehash: 24e2ae456e478585f30aa704917f66bb0bf11da9
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981640"
 ---
-
 # <a name="xamarinforms-frequently-asked-questions"></a>Domande frequenti su xamarin. Forms
 
 ## <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-packageupdate-forms-templatemd"></a>[È possibile aggiornare il modello predefinito di Xamarin.Forms a un pacchetto NuGet più recente?](update-forms-template.md)
