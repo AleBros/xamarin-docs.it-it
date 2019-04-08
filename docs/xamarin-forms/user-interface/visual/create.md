@@ -134,7 +134,7 @@ Oggetto [ `Button` ](xref:Xamarin.Forms.Button) oggetto possa acconsentire espli
 > [!NOTE]
 > In XAML, un convertitore di tipi Elimina la necessità di includere il suffisso "Visual" nel [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) valore della proprietà. Tuttavia, il nome completo del tipo può anche essere specificato.
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 Button button = new Button { Text = "CUSTOM BUTTON", ... };

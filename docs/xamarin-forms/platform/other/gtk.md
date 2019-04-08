@@ -35,7 +35,7 @@ Seguire queste istruzioni per aggiungere un'app di GTK # che verrà eseguito sul
 
 1. In Visual Studio 2019, fare doppio clic sul nome della soluzione in **Esplora soluzioni** e scegliere **Aggiungi > Nuovo progetto...** .
 
-2. Nel **nuovo progetto** finestra, l'istruzione select a sinistra **Visual c#** e **Desktop classico di Windows**. Nell'elenco dei tipi di progetto, scegliere **libreria di classi (.NET Framework)** e assicurarsi che le **Framework** elenco a discesa è impostata su un minimo di .NET Framework 4.7.
+2. Nel **nuovo progetto** finestra, l'istruzione select a sinistra **Visual C#** e **Desktop classico di Windows**. Nell'elenco dei tipi di progetto, scegliere **libreria di classi (.NET Framework)** e assicurarsi che le **Framework** elenco a discesa è impostata su un minimo di .NET Framework 4.7.
 
 3. Digitare un nome per il progetto con un **GTK** estensione, ad esempio **GameOfLife.GTK**. Fare clic sui **esplorare** pulsante, selezionare la cartella che contiene l'altra piattaforma progetti, quindi premere **Seleziona cartella**. Il progetto GTK verrà impostato nella stessa directory in altri progetti nella soluzione.
 

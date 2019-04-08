@@ -57,7 +57,7 @@ L'argomento `AbsoluteLayout.SetLayoutFlags` e il valore restituito di `AbsoluteL
 - [`SizeProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.SizeProportional) (12)
 - [`All`](xref:Xamarin.Forms.AbsoluteLayoutFlags.All) (\xFFFFFFFF)
 
-È possibile combinare questi valori con il linguaggio c# operatore OR.
+È possibile combinare questi valori con il linguaggio C# operatore OR.
 
 Con questi set di flag, determinate proprietà del `Rectangle` struttura dei limiti di layout utilizzato per posizionare e ridimensionare l'elemento figlio vengono interpretati in modo proporzionale.
 

@@ -117,7 +117,7 @@ In alternativa, questa può essere eseguita anche impostando il `ItemsLayout` pr
 </CollectionView>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -185,7 +185,7 @@ In alternativa, questa può essere eseguita anche impostando il `ItemsLayout` pr
 </CollectionView>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -241,7 +241,7 @@ Ciò comporta in un elenco di singola riga, che si espande orizzontalmente man m
 </CollectionView>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -297,7 +297,7 @@ Per impostazione predefinita, un parametro vertical `GridItemsLayout` visualizze
 </CollectionView>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -355,7 +355,7 @@ Esempio di codice riportato di seguito viene illustrata l'impostazione di `ItemS
 </CollectionView>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 CollectionView collectionView = new CollectionView

@@ -20,7 +20,7 @@ In questa Guida verrà spiegato quali uno Storyboard è ed esaminare alcuni dei 
 
 Prima che il formato di file Storyboard è stato introdotto da Apple come una rappresentazione visiva dell'interfaccia utente di un'applicazione iOS, gli sviluppatori creati i file XIB per ogni controller di visualizzazione e programmate manualmente la navigazione tra ogni visualizzazione.  Utilizzare uno Storyboard consente allo sviluppatore di definire i controller di visualizzazione e la navigazione tra di essi in un'area di progettazione e offre funzionalità di modifica WYSIWYG dell'interfaccia utente dell'applicazione.
 
-Uno Storyboard può essere creato, aperti e modificato con Xamarin iOS Designer. Questa Guida che è possibile ottenere questa procedura dettagliata come usare la finestra di progettazione per creare storyboard quando si usa c# per la navigazione del programma.
+Uno Storyboard può essere creato, aperti e modificato con Xamarin iOS Designer. Questa Guida che è possibile ottenere questa procedura dettagliata come usare la finestra di progettazione per creare storyboard quando si usa C# per la navigazione del programma.
 
 
 ## <a name="requirements"></a>Requisiti
@@ -249,7 +249,7 @@ public MainViewController (IntPtr handle) : base (handle)
 ```
 
 
-Quando si crea uno Storyboard usando la finestra di progettazione, l'IDE aggiungerà automaticamente il [[registrare]](xref:Foundation.RegisterAttribute) attributo all'inizio del `designer.cs` classe e passare un identificatore di stringa, che è identico all'ID di Storyboard specificato di passaggio precedente. Il codice c# verranno collegati alla scena rilevante nello Storyboard.
+Quando si crea uno Storyboard usando la finestra di progettazione, l'IDE aggiungerà automaticamente il [[registrare]](xref:Foundation.RegisterAttribute) attributo all'inizio del `designer.cs` classe e passare un identificatore di stringa, che è identico all'ID di Storyboard specificato di passaggio precedente. Il codice C# verranno collegati alla scena rilevante nello Storyboard.
 
 A un certo punto si potrebbe voler aggiungere una classe esistente che è stata **non** creata nella finestra di progettazione. In questo caso, si potrebbe registrare questa classe come di consueto:
 

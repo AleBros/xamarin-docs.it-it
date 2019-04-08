@@ -46,7 +46,7 @@ Il `EmptyView` proprietà può essere impostata su una stringa, in cui è visual
                 EmptyView="No items to display" />
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -95,7 +95,7 @@ Il `EmptyView` può essere impostata su una vista, che sarà visualizzato quando
 </StackLayout>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
@@ -150,7 +150,7 @@ Il `EmptyView` può essere impostata su un tipo personalizzato, il cui modello �
 </StackLayout>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };

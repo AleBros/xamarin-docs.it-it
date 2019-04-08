@@ -51,7 +51,7 @@ Gli elementi in un [ `TableView` ](xref:Xamarin.Forms.TableView) sono organizzat
 </TableView>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 Content = new TableView
@@ -164,7 +164,7 @@ Nell'esempio seguente viene illustrato il XAML utilizzato per creare il [ `Table
 </ContentPage>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 var table = new TableView();

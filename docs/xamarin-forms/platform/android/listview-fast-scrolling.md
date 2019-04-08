@@ -35,7 +35,7 @@ Questo specifico della piattaforma Android consente di abilitare lo scorrimento 
 </ContentPage>
 ```
 
-In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
+In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

@@ -36,7 +36,7 @@ Questo specifico della piattaforma può essere usata in XAML, impostando il [ `A
 </Application>
 ```
 
-In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
+In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

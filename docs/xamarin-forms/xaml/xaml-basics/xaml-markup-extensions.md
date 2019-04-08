@@ -389,7 +389,7 @@ xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-È necessario ulteriori dichiarazioni dello spazio dei nomi XML per accedere ad altre classi. Ogni dichiarazione dello spazio dei nomi XML aggiuntivi definisce un nuovo prefisso. Per accedere alle classi locali per la libreria .NET Standard condivisa dell'applicazione, ad esempio `AppConstants`, i programmatori XAML usano spesso il prefisso `local`. La dichiarazione dello spazio dei nomi deve indicare il nome dello spazio dei nomi CLR (Common Language Runtime), noto anche come il nome di spazio dei nomi .NET, che è il nome visualizzato nel linguaggio c# `namespace` definizione o in un `using` direttiva:
+È necessario ulteriori dichiarazioni dello spazio dei nomi XML per accedere ad altre classi. Ogni dichiarazione dello spazio dei nomi XML aggiuntivi definisce un nuovo prefisso. Per accedere alle classi locali per la libreria .NET Standard condivisa dell'applicazione, ad esempio `AppConstants`, i programmatori XAML usano spesso il prefisso `local`. La dichiarazione dello spazio dei nomi deve indicare il nome dello spazio dei nomi CLR (Common Language Runtime), noto anche come il nome di spazio dei nomi .NET, che è il nome visualizzato nel linguaggio C# `namespace` definizione o in un `using` direttiva:
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"

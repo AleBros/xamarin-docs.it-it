@@ -28,7 +28,7 @@ In base alle proprietà definite per gli sviluppatori, ad esempio asse, distribu
 
 [![](uistackview-images/stacked01.png "Diagramma del layout visualizzazione stack")](uistackview-images/stacked01.png#lightbox)
 
-Quando si usa un `UIStackView` in un'app xamarin. IOS, lo sviluppatore può definire le visualizzazioni secondarie sia all'interno di uno Storyboard in iOS Designer, o aggiungendo e rimuovendo le visualizzazioni secondarie nel codice c#.
+Quando si usa un `UIStackView` in un'app xamarin. IOS, lo sviluppatore può definire le visualizzazioni secondarie sia all'interno di uno Storyboard in iOS Designer, o aggiungendo e rimuovendo le visualizzazioni secondarie nel codice C#.
 
 Questo documento è costituito da due parti: una Guida introduttiva che consentono di visualizzare lo stack prima di implementare e quindi alcune informazioni tecniche più dettagliate sul funzionamento.
 

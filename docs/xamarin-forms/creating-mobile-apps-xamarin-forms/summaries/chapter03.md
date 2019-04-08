@@ -22,7 +22,7 @@ In questo capitolo esamina le [ `Label` ](xref:Xamarin.Forms.Label) vista in mod
 
 ## <a name="wrapping-paragraphs"></a>Ritorno a capo paragrafi
 
-Quando la [ `Text` ](xref:Xamarin.Forms.Label.Text) proprietà della `Label` contiene testo lungo, `Label` automaticamente ne esegue il wrapping su più righe come dimostrato dal [ **Baskervilles** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles) esempio. È possibile incorporare i codici Unicode, ad esempio '\u2014' per il lineetta o c# caratteri, ad esempio '\r' per interrompere a una nuova riga.
+Quando la [ `Text` ](xref:Xamarin.Forms.Label.Text) proprietà della `Label` contiene testo lungo, `Label` automaticamente ne esegue il wrapping su più righe come dimostrato dal [ **Baskervilles** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles) esempio. È possibile incorporare i codici Unicode, ad esempio '\u2014' per il lineetta o C# caratteri, ad esempio '\r' per interrompere a una nuova riga.
 
 Quando la [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) e [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) le proprietà di un `Label` sono impostate su `LayoutOptions.Fill`, alle dimensioni complessive del `Label` è regolato dallo spazio che del relativo contenitore rende disponibili. Il `Label` è detta *vincolata*. Le dimensioni del `Label` è la dimensione del relativo contenitore.
 
@@ -121,7 +121,7 @@ Impostare il [ `FontSize` ](xref:Xamarin.Forms.Label.FontSize) proprietà della 
 
 In alternativa è possibile ottenere una delle diverse dimensioni predefinite del carattere dipendente dalla piattaforma. Statica [ `Device.GetNamedSize` ](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type)) (metodo) e [overload](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,Xamarin.Forms.Element)) restituiscono entrambi un `double` valore delle dimensioni del carattere appropriato per la piattaforma basate sui membri del [ `NamedSize` ](xref:Xamarin.Forms.NamedSize)enumerazione ([`Default`](xref:Xamarin.Forms.NamedSize.Default), [ `Micro` ](xref:Xamarin.Forms.NamedSize.Micro), [ `Small` ](xref:Xamarin.Forms.NamedSize.Small), [ `Medium` ](xref:Xamarin.Forms.NamedSize.Medium),  e [ `Large` ](xref:Xamarin.Forms.NamedSize.Large)). Il valore restituito dal `Medium` membro non è necessariamente identico `Default`. Il [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) esempio visualizza il testo con questi denominato sizes.
 
-Impostare il [ `FontAttributes` ](xref:Xamarin.Forms.Label.FontAttributes) proprietà della `Label` a un membro di questi [ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes) enumerazione [ `Bold` ](xref:Xamarin.Forms.FontAttributes.Bold), [ `Italic` ](xref:Xamarin.Forms.FontAttributes.Italic), oppure [ `None` ](xref:Xamarin.Forms.FontAttributes.None). È possibile combinare le `Bold` e `Italic` membri con il linguaggio c# operatore OR.
+Impostare il [ `FontAttributes` ](xref:Xamarin.Forms.Label.FontAttributes) proprietà della `Label` a un membro di questi [ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes) enumerazione [ `Bold` ](xref:Xamarin.Forms.FontAttributes.Bold), [ `Italic` ](xref:Xamarin.Forms.FontAttributes.Italic), oppure [ `None` ](xref:Xamarin.Forms.FontAttributes.None). È possibile combinare le `Bold` e `Italic` membri con il linguaggio C# operatore OR.
 
 ## <a name="formatted-text"></a>Testo formattato
 

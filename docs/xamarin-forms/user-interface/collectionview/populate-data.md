@@ -53,7 +53,7 @@ Oggetto `CollectionView` viene popolata con i dati tramite l'impostazione relati
 > [!NOTE]
 > Si noti che l'elemento `x:Array` richiede un attributo `Type` che indica il tipo degli elementi nella matrice.
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -86,7 +86,7 @@ Per informazioni su come modificare la `CollectionView` layout, vedere [specific
 <CollectionView ItemsSource="{Binding Monkeys}" />
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -137,7 +137,7 @@ L'aspetto di ogni elemento nel `CollectionView` può essere definita impostando 
 </CollectionView>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 CollectionView collectionView = new CollectionView();

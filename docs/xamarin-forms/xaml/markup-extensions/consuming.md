@@ -191,7 +191,7 @@ Entrambe `x:Reference` espressioni di usano la versione abbreviata del `Referenc
 
 ## <a name="xtype-markup-extension"></a>Estensione del markup x:Type
 
-Il `x:Type` estensione di markup è l'equivalente XAML del linguaggio c# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) (parola chiave). È supportato dal [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) (classe), che definisce una proprietà denominata [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) typu `string` che è impostato su un nome di classe o struttura. Il `x:Type` markup estensione restituisce il [ `System.Type` ](xref:System.Type) oggetto di tale classe o struttura. `TypeName` è la proprietà content del `TypeExtension`, pertanto `TypeName=` non è obbligatorio quando `x:Type` viene visualizzato tra parentesi graffe.
+Il `x:Type` estensione di markup è l'equivalente XAML del linguaggio C# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) (parola chiave). È supportato dal [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) (classe), che definisce una proprietà denominata [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) typu `string` che è impostato su un nome di classe o struttura. Il `x:Type` markup estensione restituisce il [ `System.Type` ](xref:System.Type) oggetto di tale classe o struttura. `TypeName` è la proprietà content del `TypeExtension`, pertanto `TypeName=` non è obbligatorio quando `x:Type` viene visualizzato tra parentesi graffe.
 
 All'interno di xamarin. Forms, esistono diverse proprietà che hanno argomenti di tipo `Type`. Gli esempi includono la [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) proprietà della `Style`e il [X:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) attributo utilizzato per specificare gli argomenti in classi generiche. Tuttavia, il parser XAML consente di eseguire la `typeof` operazione automaticamente e il `x:Type` estensione di markup non viene usato in questi casi.
 
@@ -406,7 +406,7 @@ Quando si definiscono le matrici di tipi comuni, ad esempio stringhe o numeri, u
 
 ## <a name="xnull-markup-extension"></a>Estensione del markup x:Null
 
-Il `x:Null` estensione di markup è supportato per il [ `NullExtension` ](xref:Xamarin.Forms.Xaml.NullExtension) classe. Il non dispone di proprietà ed è semplicemente l'equivalente XAML del linguaggio c# [ `null` ](/dotnet/csharp/language-reference/keywords/null/) (parola chiave).
+Il `x:Null` estensione di markup è supportato per il [ `NullExtension` ](xref:Xamarin.Forms.Xaml.NullExtension) classe. Il non dispone di proprietà ed è semplicemente l'equivalente XAML del linguaggio C# [ `null` ](/dotnet/csharp/language-reference/keywords/null/) (parola chiave).
 
 Il `x:Null` estensione di markup viene raramente richiesti e usati raramente, ma se si trova una necessità per tale, sarà valeva che è presente.
 

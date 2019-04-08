@@ -39,7 +39,7 @@ Un timer implicito viene attivato quando un gesto tocco viene avviata in un [ `S
 </MasterDetailPage>
 ```
 
-In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
+In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

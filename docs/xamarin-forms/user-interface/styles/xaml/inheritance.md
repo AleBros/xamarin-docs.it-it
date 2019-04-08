@@ -22,7 +22,7 @@ _Stili possono ereditare da altri stili per ridurre la duplicazione e consentire
 
 ## <a name="style-inheritance-in-xaml"></a>Ereditarietà degli stili in XAML
 
-L'ereditarietà dello stile viene eseguita impostando il [ `Style.BasedOn` ](xref:Xamarin.Forms.Style.BasedOn) proprietà a un oggetto esistente [ `Style` ](xref:Xamarin.Forms.Style). In XAML, questo si ottiene impostando il `BasedOn` proprietà per un `StaticResource` estensione di markup che fa riferimento a una creata in precedenza `Style`. In c#, questo si ottiene impostando il `BasedOn` proprietà su un `Style` istanza.
+L'ereditarietà dello stile viene eseguita impostando il [ `Style.BasedOn` ](xref:Xamarin.Forms.Style.BasedOn) proprietà a un oggetto esistente [ `Style` ](xref:Xamarin.Forms.Style). In XAML, questo si ottiene impostando il `BasedOn` proprietà per un `StaticResource` estensione di markup che fa riferimento a una creata in precedenza `Style`. In C#, questo si ottiene impostando il `BasedOn` proprietà su un `Style` istanza.
 
 Gli stili che ereditano da uno stile di base possono includere [ `Setter` ](xref:Xamarin.Forms.Setter) istanze per nuove proprietà, oppure usarli per eseguire l'override degli stili dallo stile di base. Inoltre, gli stili che ereditano da uno stile di base devono avere come destinazione lo stesso tipo o un tipo da cui deriva il tipo di destinazione per lo stile di base. Ad esempio, se è destinato a una base di stile [ `View` ](xref:Xamarin.Forms.View) istanze, gli stili che si basano sullo stile di base possono avere come destinazione `View` istanze o tipi che derivano dal `View` classe, ad esempio [ `Label` ](xref:Xamarin.Forms.Label) e [ `Button` ](xref:Xamarin.Forms.Button) istanze.
 
@@ -110,7 +110,7 @@ In questo esempio `labelStyle` e `buttonStyle` sono i controlli di risorse di li
 
 ## <a name="style-inheritance-in-c35"></a>Ereditarietà degli stili in C&#35;
 
-Equivalenti c# pagina, dove [ `Style` ](xref:Xamarin.Forms.Style) istanze sono assegnate direttamente al [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) proprietà dei controlli necessari, è illustrato nell'esempio di codice seguente:
+Equivalenti C# pagina, dove [ `Style` ](xref:Xamarin.Forms.Style) istanze sono assegnate direttamente al [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) proprietà dei controlli necessari, è illustrato nell'esempio di codice seguente:
 
 ```csharp
 public class StyleInheritancePageCS : ContentPage

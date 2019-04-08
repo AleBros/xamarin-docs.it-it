@@ -16,7 +16,7 @@ ms.locfileid: "58870066"
 ---
 # <a name="xamarinios-api-overview"></a>Panoramica dell'API xamarin. IOS
 
-Xamarin. IOS espone c# / CIL binding all'API cocoatouch usano e fornisce inoltre l'accesso per le API di elenco CIL ECMA e diverse altre API di .NET.
+Xamarin. IOS espone C# / CIL binding all'API cocoatouch usano e fornisce inoltre l'accesso per le API di elenco CIL ECMA e diverse altre API di .NET.
 
  **Riferimento all'API**: Il riferimento all'API è disponibile all'indirizzo [docs.microsoft.com/dotnet/api/](https://docs.microsoft.com/dotnet/api/), partono dalle [xamarin. IOS riferimento](https://docs.microsoft.com/dotnet/api/?view=xamarin-ios-sdk-12) per le associazioni di API per l'iPhone native API oppure passare a [librerie di classi Base nodo](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8) per la documentazione sull'API .NET.
 

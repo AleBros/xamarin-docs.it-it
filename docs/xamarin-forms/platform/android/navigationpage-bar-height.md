@@ -28,7 +28,7 @@ Questo specifico della piattaforma Android imposta l'altezza della barra di spos
 </NavigationPage>
 ```
 
-In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
+In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

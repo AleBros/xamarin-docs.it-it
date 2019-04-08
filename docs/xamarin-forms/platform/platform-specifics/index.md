@@ -264,7 +264,7 @@ Il `Shadow` specifiche della piattaforma verrà utilizzati in XAML mediante l'im
 </ContentPage>
 ```
 
-In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
+In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

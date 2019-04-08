@@ -42,7 +42,7 @@ Queste gerarchie di visualizzazione possono essere costruite utilizzando il [fin
 
 ## <a name="ios-blank-project-template"></a>modello di progetto vuoto di iOS
 
-In primo luogo, creare un progetto iOS in Visual Studio usando il **File > Nuovo progetto > Visual c# > iPhone & iPad > App iOS (Xamarin)** progetto, illustrato di seguito:
+In primo luogo, creare un progetto iOS in Visual Studio usando il **File > Nuovo progetto > Visual C# > iPhone & iPad > App iOS (Xamarin)** progetto, illustrato di seguito:
 
 [![Finestra di dialogo Nuovo progetto](ios-code-only-images/blankapp.w157-sml.png)](ios-code-only-images/blankapp.w157.png#lightbox)
 

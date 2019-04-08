@@ -28,7 +28,7 @@ Questa guida presuppone una familiarità con il contenuto illustrato nel [Guida 
 > Il modo in cui vengono creati i controlli personalizzati a partire da xamarin Studio 5.5, è leggermente diverso rispetto a versioni precedenti. Per creare un controllo personalizzato, ovvero il `IComponent` interfaccia è necessaria (con i metodi di implementazione associata) o la classe può essere annotata con `[DesignTimeVisible(true)]`. Il secondo metodo è utilizzato nell'esempio seguente questa procedura dettagliata.
 
 
-1. Creare una nuova soluzione dal **iOS > App > Single View Application > c#** modello, denominarlo `ScratchTicket`e continuare tramite la procedura guidata nuovo progetto:
+1. Creare una nuova soluzione dal **iOS > App > Single View Application > C#** modello, denominarlo `ScratchTicket`e continuare tramite la procedura guidata nuovo progetto:
 
     [![](ios-designable-controls-walkthrough-images/01new.png "Creare una nuova soluzione")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
 

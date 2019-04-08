@@ -1,6 +1,6 @@
 ---
 title: Selettori Objective-C in xamarin. IOS
-description: Questo documento illustra come interagire con i selettori Objective-C da c#. Viene descritto come richiamare i selettori e considerazioni tecniche che devono essere presi in considerazione quando si esegue questa operazione.
+description: Questo documento illustra come interagire con i selettori Objective-C da C#. Viene descritto come richiamare i selettori e considerazioni tecniche che devono essere presi in considerazione quando si esegue questa operazione.
 ms.prod: xamarin
 ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
 ms.technology: xamarin-ios

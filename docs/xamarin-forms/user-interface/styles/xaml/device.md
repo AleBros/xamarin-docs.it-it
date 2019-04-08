@@ -71,7 +71,7 @@ Gli stili di dispositivo associati all'uso di `DynamicResource` estensione di ma
 
 *Periferica* stili possono anche essere derivati dalle impostando il [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) proprietà per il nome della chiave per lo stile di dispositivo. Nell'esempio di codice precedente, `myBodyStyle` eredita da [ `BodyStyle` ](xref:Xamarin.Forms.Device.Styles.BodyStyle) e imposta un colore del testo accentate. Per altre informazioni sull'ereditarietà degli stili dinamici, vedere [ereditarietà degli stili dinamici](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance).
 
-Esempio di codice seguente illustra la pagina equivalente nel linguaggio c#:
+Esempio di codice seguente illustra la pagina equivalente nel linguaggio C#:
 
 ```csharp
 public class DeviceStylesPageCS : ContentPage

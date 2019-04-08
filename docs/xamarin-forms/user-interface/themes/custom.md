@@ -71,7 +71,7 @@ Il codice per questo effetto è indicato sotto - farvi riferimento in modo corre
 xmlns:local="clr-namespace:ThemesDemo;assembly=ThemesDemo"
 ```
 
-### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>Codice c# nel progetto di libreria .NET Standard o nel progetto condiviso
+### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>Codice C# nel progetto di libreria .NET Standard o nel progetto condiviso
 
 Il codice per la creazione di un angolo di arrotondamento `BoxView` viene utilizzato [effetti](~/xamarin-forms/app-fundamentals/effects/index.md).
 Il raggio dell'angolo viene applicato usando un `BindableProperty` e viene implementato applicando un' [effetto](~/xamarin-forms/app-fundamentals/effects/index.md). L'effetto è necessario codice specifico della piattaforma nel [iOS](#ios) e [Android](#android) progetti (mostrati sotto).
@@ -128,7 +128,7 @@ namespace ThemesDemo
 
 <a name="ios" />
 
-### <a name="c-code-in-the-ios-project"></a>Codice c# nel progetto iOS
+### <a name="c-code-in-the-ios-project"></a>Codice C# nel progetto iOS
 
 ```csharp
 using System;
@@ -184,7 +184,7 @@ namespace ThemesDemo.iOS
 
 <a name="android" />
 
-### <a name="c-code-in-the-android-project"></a>Codice c# nel progetto Android
+### <a name="c-code-in-the-android-project"></a>Codice C# nel progetto Android
 
 ```csharp
 using System;

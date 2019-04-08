@@ -352,7 +352,7 @@ Alcuni esempi di xamarin. Android sono disponibili per mostrarvi come sfruttare 
 
 > [!VIDEO https://youtube.com/embed/OuvEcaMO-Ho]
 
-**Sviluppo Android 8.0 Oreo con c#**
+**Sviluppo Android 8.0 Oreo con C#**
 
 
 ## <a name="summary"></a>Riepilogo

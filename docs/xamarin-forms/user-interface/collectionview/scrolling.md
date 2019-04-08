@@ -166,7 +166,7 @@ Per impostazione predefinita, la proprietà `SnapPointsAlignment` è impostata s
 </CollectionView>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -210,7 +210,7 @@ Il `SnapPointsAlignment.Center` membro indica che i punti di bloccaggio siano al
 </CollectionView>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -254,7 +254,7 @@ Il `SnapPointsAlignment.End` membro indica che i punti di bloccaggio siano allin
 </CollectionView>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 CollectionView collectionView = new CollectionView

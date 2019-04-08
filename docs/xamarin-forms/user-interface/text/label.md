@@ -38,7 +38,7 @@ Nell'esempio XAML seguente viene illustrata l'impostazione di `Label.TextDecorat
 <Label Text="This is underlined text with strikethrough." TextDecorations="Underline, Strikethrough" />
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 var underlineLabel = new Label { Text = "This is underlined text.", TextDecorations = TextDecorations.Underline };
@@ -72,7 +72,7 @@ Nell'esempio XAML seguente imposta il colore del testo di un `Label`:
 </ContentPage>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 public partial class LabelPage : ContentPage
@@ -128,7 +128,7 @@ Nell'esempio XAML seguente viene illustrata l'impostazione di `MaxLines` proprie
        MaxLines="2" />
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 var label =
@@ -193,7 +193,7 @@ L'esempio XAML seguente illustra un `FormattedText` proprietà che è costituito
 </ContentPage>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 public class LabelPageCode : ContentPage
@@ -242,7 +242,7 @@ Nell'esempio XAML seguente viene illustrata l'impostazione di [ `LineHeight` ](x
        LineHeight="1.8" />
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 var label =
@@ -271,7 +271,7 @@ Nell'esempio XAML seguente viene illustrata l'impostazione di [ `LineHeight` ](x
 </Label>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 var formattedString = new FormattedString();

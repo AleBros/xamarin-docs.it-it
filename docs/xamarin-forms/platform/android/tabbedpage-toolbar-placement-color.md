@@ -30,7 +30,7 @@ Queste funzionalità specifiche della piattaforma vengono usate per impostare il
 </TabbedPage>
 ```
 
-In alternativa, può essere usati da c# usando l'API fluent:
+In alternativa, può essere usati da C# usando l'API fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

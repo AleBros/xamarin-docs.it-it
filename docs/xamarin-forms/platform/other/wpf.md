@@ -35,7 +35,7 @@ Seguire queste istruzioni per aggiungere un'app WPF che verrà eseguita sui desk
 
 1. In Visual Studio 2019, fare doppio clic sul nome della soluzione nel **Esplora soluzioni** e scegliere **Aggiungi > Nuovo progetto...** .
 
-2. Nel **nuovo progetto** finestra, l'istruzione select a sinistra **Visual c#** e **Desktop classico di Windows**. Nell'elenco dei tipi di progetto, scegliere **App WPF (.NET Framework)**. 
+2. Nel **nuovo progetto** finestra, l'istruzione select a sinistra **Visual C#** e **Desktop classico di Windows**. Nell'elenco dei tipi di progetto, scegliere **App WPF (.NET Framework)**. 
 
 3. Digitare un nome per il progetto con un **WPF** estensione, ad esempio **BoxViewClock.WPF**. Fare clic sul **esplorare** pulsante, seleziona il **BoxViewClock** cartella, quindi premere **selezionare la cartella**. Il progetto WPF verrà impostato nella stessa directory in altri progetti nella soluzione.
 

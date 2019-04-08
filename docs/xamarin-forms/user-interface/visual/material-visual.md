@@ -77,7 +77,7 @@ Le applicazioni possono acconsentire esplicitamente tramite i renderer di materi
 </ContentPage>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 ContentPage contentPage = new ContentPage();

@@ -42,7 +42,7 @@ Un layout associabile viene popolato con i dati tramite l'impostazione relativa 
 <Grid BindableLayout.ItemsSource="{Binding Items}" />
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 IEnumerable<string> items = ...;
@@ -72,7 +72,7 @@ L'aspetto di ogni elemento nel layout associabile può essere definita impostand
 </StackLayout>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 DataTemplate circleImageTemplate = ...;
@@ -97,7 +97,7 @@ Per altre informazioni sui modelli di dati, vedere [modelli di dati di xamarin. 
             ... />
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 DataTemplateSelector dataTemplateSelector = new TechItemTemplateSelector { ... };
