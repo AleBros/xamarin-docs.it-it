@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: b8f36ef407c3acc9b3472539735816649e13b7db
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 74a9fc59b395d68db9b116106cc9fa63d3969c3b
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672664"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855237"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introduzione al ciclo di vita di sviluppo del software per dispositivi mobili
 
@@ -151,7 +151,7 @@ Ciò offre agli sviluppatori un canale di distribuzione per le applicazioni più
 1.  [Handango](http://www.handango.com/)
 1.  [GetJar](http://www.getjar.com/)
 
-#### <a name="uwp"></a>UWP 
+#### <a name="uwp"></a>UWP
 
 Le applicazioni UWP vengono distribuite agli utenti tramite Microsoft Store. Gli sviluppatori inviano le proprie app per l'approvazione. Una volta approvate, le app sono visibili nello Store. Per altre informazioni sulla pubblicazione di app di Windows, vedere la documentazione sulla [pubblicazione](https://docs.microsoft.com/windows/uwp/publish/) della piattaforma UWP (Universal Windows Platform).
 
@@ -229,11 +229,11 @@ A causa di questa frammentazione estrema dei dispositivi Android, nella maggior 
 Tutte le applicazioni nel sistema operativo Android vengono eseguite in un'identità distinta isolata con autorizzazioni limitate. Per impostazione predefinita, le applicazioni possono eseguire un numero molto limitato di operazioni. Ad esempio, senza autorizzazioni speciali, un'applicazione non può inviare un messaggio di testo, determinare lo stato del telefono o accedere a Internet. Per accedere a queste funzioni, è necessario che nel file manifesto dell'applicazione siano specificate le autorizzazioni richieste dall'applicazione al momento dell'installazione; il sistema operativo legge le autorizzazioni, notifica all'utente che l'applicazione richiede le autorizzazioni e consente all'utente di scegliere se continuare o annullare l'installazione.
 A causa del modello di Store delle applicazioni aperto, questo è un passaggio essenziale nel modello di distribuzione Android poiché ad esempio le applicazioni non sono controllate come in iOS. Per un elenco delle autorizzazioni delle applicazioni, vedere l'articolo di riferimento [Manifest Permissions](https://developer.android.com/reference/android/Manifest.permission.html) (Autorizzazioni del manifesto) nella documentazione di Android.
 
-### <a name="windows-considerations"></a>Considerazioni su Windows
+### <a name="windows-considerations"></a>Considerazioni per Windows
 
 #### <a name="multitasking"></a>Multitasking
 
-Anche nella piattaforma UWP il multitasking è suddiviso in due parti: il ciclo di vita per le pagine e le applicazioni e i processi in background. Ogni schermata di un'applicazione è un'istanza di una classe Page che include eventi associati all'attivazione o alla disattivazione (con regole speciali per la gestione dello stato inattivo o il contrassegno per la rimozione). 
+Anche nella piattaforma UWP il multitasking è suddiviso in due parti: il ciclo di vita per le pagine e le applicazioni e i processi in background. Ogni schermata di un'applicazione è un'istanza di una classe Page che include eventi associati all'attivazione o alla disattivazione (con regole speciali per la gestione dello stato inattivo o il contrassegno per la rimozione).
 
 La seconda parte consiste nella specifica di agenti in background per l'elaborazione delle attività anche quando l'applicazione non è in esecuzione in primo piano. 
 
@@ -249,9 +249,8 @@ Per informazioni su importanti considerazioni di sicurezza per la piattaforma UW
 
 Questa guida ha offerto un'introduzione al ciclo di vita di sviluppo del software relativo allo sviluppo per dispositivi mobili. La guida ha fornito considerazioni generali sulla creazione di applicazioni per dispositivi mobili e ha esaminato diverse considerazioni specifiche delle piattaforme relative alla progettazione, al test e alla distribuzione.
 
-## <a name="related-links"></a>Collegamenti correlati
+## <a name="next-steps"></a>Passaggi successivi
 
 - [Introduzione allo sviluppo per dispositivi mobili](~/cross-platform/get-started/introduction-to-mobile-development.md)
-- [Hello, iOS](~/ios/get-started/hello-ios/index.md)
-- [Hello, Android](https://developer.xamarin.com/get-started-droid/)
-- [Nozioni di base sulle applicazioni](~/cross-platform/app-fundamentals/index.md)
+- [Introduzione a Xamarin](~/get-started/index.yml)
+- [Condivisione del codice tra piattaforme diverse](~/cross-platform/app-fundamentals/index.md)

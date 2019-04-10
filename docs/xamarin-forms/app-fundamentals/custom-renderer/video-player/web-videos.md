@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 06b95c40b12aa93b79f25c3adf12b74bda232267
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: bb58866a0fc0ddb542c0a40eb7a0bd9b37562776
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056626"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869668"
 ---
 # <a name="playing-a-web-video"></a>Riproduzione di un video Web
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![D[Scarica esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
-La classe `VideoPlayer` definisce una proprietà `Source`, che viene usata per specificare l'origine del file video, e una proprietà `AutoPlay`. Il valore predefinito della proprietà `AutoPlay` è `true`, vale a dire il video verrà riprodotto automaticamente dopo aver impostato la proprietà `Source`:
+La classe `VideoPlayer` definisce una proprietà `Source`, che viene usata per specificare l'origine del file video, e una proprietà `AutoPlay`. `AutoPlay` ha il valore predefinito `true` pertanto il video verrà riprodotto automaticamente dopo l'impostazione della proprietà `Source`:
 
 ```csharp
 using System;
@@ -225,7 +225,7 @@ namespace FormsVideoLibrary.iOS
 
 In un secondo momento, quando la proprietà `Source` viene cambiata, il metodo `OnElementPropertyChanged` viene chiamato con una proprietà `PropertyName` di "Source" e viene nuovamente chiamato il metodo `SetSource`.
 
-Per riprodurre un file video in iOS, viene prima creato un oggetto di tipo [`AVAsset`](https://developer.xamarin.com/api/type/AVFoundation.AVAsset/) per incapsulare il file video, il quale viene usato per creare un oggetto [`AVPlayerItem`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayerItem/), che sarà poi passato all'oggetto `AVPlayer`. Di seguito è riportato come il metodo `SetSource` gestisce la proprietà `Source` quando è di tipo `UriVideoSource`:
+Per riprodurre un file video in iOS, viene prima creato un oggetto di tipo [`AVAsset`](xref:AVFoundation.AVAsset) per incapsulare il file video, il quale viene usato per creare un oggetto [`AVPlayerItem`](xref:AVFoundation.AVPlayerItem), che sarà poi passato all'oggetto `AVPlayer`. Di seguito è riportato come il metodo `SetSource` gestisce la proprietà `Source` quando è di tipo `UriVideoSource`:
 
 ```csharp
 namespace FormsVideoLibrary.iOS

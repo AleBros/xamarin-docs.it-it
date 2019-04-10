@@ -4,13 +4,14 @@ description: La classe Browser in Xamarin.Essentials consente a un'applicazione 
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 03/13/2019
-ms.openlocfilehash: 4a822b4b6738e261b9ddaee02334ad629e1d4879
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.date: 04/02/2019
+ms.custom: video
+ms.openlocfilehash: 3f9e5a7a1e20b8e7d708ff80712e6262bae4baa7
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175317"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869587"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Browser
 
@@ -63,7 +64,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 ## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# [<a name="android"></a>Android](#tab/android)
 
 La modalità di avvio determina il modo in cui viene avviato il browser:
 
@@ -75,17 +76,17 @@ Verrà tentato l'uso delle [schede personalizzate di Chrome](https://developer.c
 
 Verrà usato un `Intent` per richiedere l'apertura dell'URI tramite il browser normale del sistema.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# [<a name="ios"></a>iOS](#tab/ios)
 
 ## <a name="system-preferred"></a>Preferita dal sistema
 
-Viene usato [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) per caricare l'URI e mantenere la consapevolezza di navigazione.
+Viene usato [SFSafariViewController](xref:SafariServices.SFSafariViewController) per caricare l'URI e mantenere la consapevolezza di navigazione.
 
 ## <a name="external"></a>Altre informazioni
 
 Viene usato il metodo `OpenUrl` standard sull'applicazione principale per avviare il browser predefinito all'esterno dell'applicazione.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# [<a name="uwp"></a>UWP](#tab/uwp)
 
 Verrà sempre avviato il browser predefinito dell'utente indipendentemente da `BrowserLaunchMode`.
 
@@ -95,3 +96,10 @@ Verrà sempre avviato il browser predefinito dell'utente indipendentemente da `B
 
 - [Codice sorgente di Browser](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Browser)
 - [Documentazione dell'API Browser](xref:Xamarin.Essentials.Browser)
+
+## <a name="related-video"></a>Video correlato
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Open-Browser-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
+

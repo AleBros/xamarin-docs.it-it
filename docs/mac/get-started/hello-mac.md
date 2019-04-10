@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 09/02/2018
-ms.openlocfilehash: 02e0484a417b5d42129fa4e7a6ab9576c1817d74
-ms.sourcegitcommit: 8e8f83da636b63d14d1305c43a99736a00b9f590
+ms.openlocfilehash: 9175c60c436f2e808f3658bae717a747e0401c28
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55969593"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855315"
 ---
 # <a name="hello-mac-walkthrough"></a>Hello, Mac - Procedura dettagliata
 
@@ -77,7 +77,7 @@ Visual Studio per Mac crea la nuova app Xamarin.Mac e visualizza i file predefin
 
 [![](hello-mac-images/project01-sml.png "Visualizzazione predefinita della nuova soluzione")](hello-mac-images/project01.png#lightbox)
 
-Visual Studio per Mac usa la stessa struttura basata su **soluzione** e **progetto** di Visual Studio 2017. Una soluzione è un contenitore che può includere uno o più progetti. I progetti possono includere applicazioni, librerie di supporto, applicazioni di test e così via. Il modello **File > Nuovo progetto** crea automaticamente una soluzione e un progetto di applicazione.
+Visual Studio per Mac usa la stessa struttura basata su **soluzione** e **progetto** di Visual Studio 2019. Una soluzione è un contenitore che può includere uno o più progetti. I progetti possono includere applicazioni, librerie di supporto, applicazioni di test e così via. Il modello **File > Nuovo progetto** crea automaticamente una soluzione e un progetto di applicazione.
 
 ## <a name="anatomy-of-a-xamarinmac-application"></a>Anatomia di un'applicazione Xamarin.Mac
 
@@ -316,7 +316,7 @@ Seguire questa procedura per usare Interface Builder:
 
 1. In Xcode trascinare **Push Button** (Pulsante Push) da **Library Section** (Sezione librerie):
 
-    [![](hello-mac-images/xcode07.png "Selezione di NSButton da Library Inspector")](hello-mac-images/xcode07.png#lightbox)
+    [![](hello-mac-images/xcode07.png "Selezione di NSButton dal controllo librerie")](hello-mac-images/xcode07.png#lightbox)
 
 2. Trascinare il pulsante in **View** (visualizzazione) in **Window Controller** (Controller finestre) in **Interface Editor** (Editor interfaccia):
 
@@ -591,5 +591,5 @@ Questo articolo ha descritto i componenti di base di un'app Xamarin.Mac standard
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Hello, Mac (sample)](https://developer.xamarin.com/samples/mac/Hello_Mac/) (Hello, Mac - Esempio)
+- [Hello, Mac (esempio)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
 - [Linee guida dell'interfaccia umana macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

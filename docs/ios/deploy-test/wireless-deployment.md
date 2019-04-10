@@ -1,6 +1,6 @@
 ---
 title: Distribuzione wireless per app Xamarin.iOS e tvOS
-description: Questo documento descrive come distribuire in modalità wireless un'app Xamarin.iOS in un dispositivo iOS da Visual Studio per Mac o Visual Studio 2017.
+description: Questo documento descrive come distribuire in modalità wireless un'app Xamarin.iOS in un dispositivo iOS da Visual Studio per Mac o Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
@@ -8,12 +8,12 @@ author: lobrien
 ms.author: laobri
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 6d64acdcc84c16f33a1f543bf1c9506ae7c8e347
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.openlocfilehash: 82bdd2c160572b0d813fb87d81b09c00996cef18
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479693"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854834"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Distribuzione wireless per app Xamarin.iOS e tvOS
 
@@ -27,14 +27,14 @@ La distribuzione wireless è disponibile come funzionalità sia in Visual Studio
 
 Per usare la distribuzione wireless, è necessario quanto segue:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
 
 - macOS 10.12.4
 - Ultima versione di Visual Studio per Mac
 - Xcode 9.0 o versione successiva
 - Un dispositivo con iOS 11.0 o tvOS 11.0 e versioni successive
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 - Ultima versione di Visual Studio
 - Un dispositivo con iOS 11.0 o tvOS 11.0 e versioni successive
@@ -105,7 +105,7 @@ Il debug wireless viene abilitato automaticamente dopo la distribuzione wireless
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Pair a wireless device with Xcode](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/devbc48d1bad) (Associare un dispositivo wireless con Xcode)
+- [Pair a wireless device with Xcode (Associare un dispositivo wireless con Xcode)](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/devbc48d1bad)
 
 ## <a name="related-video"></a>Video correlato
 

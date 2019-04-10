@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
-ms.openlocfilehash: 5f2617272cfdc84fa2b835ce44919d2599a1dce6
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: e6f95713fdf3dbe8983c9f51554df7165637fc9a
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197199"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855133"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introduzione a Xamarin.iOS per Visual Studio
 
@@ -22,11 +22,9 @@ In questo articolo sono illustrate le procedure di installazione e configurazion
 
 Lo sviluppo per iOS in Visual Studio offre diversi vantaggi:
 
--  Creazione di soluzioni multipiattaforma per applicazioni iOS, Android e Windows.
--  Possibilità di usare gli strumenti preferiti di Visual Studio, ad esempio **ReSharper** e **Team Foundation Server**, per tutti i progetti multipiattaforma, incluso il codice sorgente di iOS.
--  Uso di un ambiente di sviluppo integrato familiare, sfruttando i data binding di Xamarin.iOS di tutte le API di Apple.
-
-<a name="Requirements_and_Installation" />
+- Creazione di soluzioni multipiattaforma per applicazioni iOS, Android e Windows.
+- Possibilità di usare gli strumenti preferiti di Visual Studio, ad esempio **ReSharper** e **Team Foundation Server**, per tutti i progetti multipiattaforma, incluso il codice sorgente di iOS.
+- Uso di un ambiente di sviluppo integrato familiare, sfruttando i data binding di Xamarin.iOS di tutte le API di Apple.
 
 ## <a name="requirements-and-installation"></a>Requisiti e installazione
 
@@ -34,8 +32,8 @@ Esistono alcuni requisiti che devono essere rispettati durante lo sviluppo per i
 
 Sono disponibili alcune opzioni di configurazione, quindi è possibile scegliere quella più adatta alle proprie esigenze di sviluppo. Gli scenari possibili sono i seguenti:
 
--  Usare un Mac come computer di sviluppo principale ed eseguire una macchina virtuale Windows con Visual Studio installato. Si consiglia di usare software per macchina virtuale, ad esempio [Parallels](http://www.parallels.com/products/desktop/) o [VMWare](http://www.vmware.com/products/fusion/).
--  Usare un Mac solo come host di compilazione. In questo scenario verrebbe connesso alla stessa rete come computer Windows con gli strumenti [necessari](~/get-started/installation/windows.md#installation) installati.
+- Usare un Mac come computer di sviluppo principale ed eseguire una macchina virtuale Windows con Visual Studio installato. Si consiglia di usare software per macchina virtuale, ad esempio [Parallels](http://www.parallels.com/products/desktop/) o [VMWare](http://www.vmware.com/products/fusion/).
+- Usare un Mac solo come host di compilazione. In questo scenario verrebbe connesso alla stessa rete come computer Windows con gli strumenti [necessari](~/get-started/installation/windows.md#installation) installati.
 
 In entrambi i casi è necessario seguire questi passaggi:
 
@@ -55,11 +53,11 @@ Le funzioni di queste barre degli strumenti sono illustrate di seguito.
 
 I controlli relativi allo sviluppo con Xamarin iOS sono cerchiati in rosso:
 
- [![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "I controlli relativi allo sviluppo con Xamarin iOS sono cerchiati in rosso")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "I controlli relativi allo sviluppo con Xamarin iOS sono cerchiati in rosso")
+[![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "I controlli relativi allo sviluppo con Xamarin iOS sono cerchiati in rosso")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "I controlli relativi allo sviluppo con Xamarin iOS sono cerchiati in rosso")
 
--  **Avvio**: avvia il debug o l'esecuzione dell'applicazione nella piattaforma selezionata. Deve essere presente un Mac connesso (vedere l'indicatore di stato nella barra degli strumenti iOS).
--  **Configurazioni soluzione**: consente di selezionare la configurazione da usare, ad esempio debug o rilascio.
--  **Piattaforme soluzione**: consente di selezionare iPhone o iPhoneSimulator per la distribuzione.
+- **Avvio**: avvia il debug o l'esecuzione dell'applicazione nella piattaforma selezionata. Deve essere presente un Mac connesso (vedere l'indicatore di stato nella barra degli strumenti iOS).
+- **Configurazioni soluzione**: consente di selezionare la configurazione da usare, ad esempio debug o rilascio.
+- **Piattaforme soluzione**: consente di selezionare iPhone o iPhoneSimulator per la distribuzione.
 
 ### <a name="ios-toolbar"></a>Barra degli strumenti iOS
 
@@ -69,9 +67,9 @@ La barra degli strumenti iOS in Visual Studio è simile in ogni versione di Visu
 
 Ogni elemento viene illustrato di seguito:
 
--  **Gestione connessione/Mac Agent**: consente di visualizzare la finestra di dialogo Xamarin Mac Agent. Questa icona è *arancione* mentre è in corso la connessione e *verde* quando è stabilita la connessione.
--  **Mostra il simulatore iOS** : visualizza la finestra del simulatore iOS in primo piano nel Mac.
--  **Mostra il file IPA nel server di compilazione**: apre il Finder nel Mac in corrispondenza del percorso del file di output IPA dell'applicazione.
+- **Gestione connessione/Mac Agent**: consente di visualizzare la finestra di dialogo Xamarin Mac Agent. Questa icona è *arancione* mentre è in corso la connessione e *verde* quando è stabilita la connessione.
+- **Mostra il simulatore iOS** : visualizza la finestra del simulatore iOS in primo piano nel Mac.
+- **Mostra il file IPA nel server di compilazione**: apre il Finder nel Mac in corrispondenza del percorso del file di output IPA dell'applicazione.
 
 ## <a name="ios-output-options"></a>Opzioni di output iOS
 
@@ -85,39 +83,39 @@ Nello screenshot seguente sono riportate le finestre di output disponibili, che 
 
 - **Xamarin**: contiene informazioni che riguardano esclusivamente Xamarin, ad esempio la connessione al Mac e lo stato di attivazione.
 
-    [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Informazioni che riguardano esclusivamente Xamarin, ad esempio la connessione al Mac e lo stato di attivazione")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Informazioni che riguardano esclusivamente Xamarin, ad esempio la connessione al Mac e lo stato di attivazione")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 - **Xamarin Diagnostics**: visualizza informazioni dettagliate sul progetto Xamarin, ad esempio l'interazione con e per Android.
 
-    [![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Informazioni dettagliate sul progetto Xamarin")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Informazioni dettagliate sul progetto Xamarin")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 Altri riquadri di output predefiniti di Visual Studio, ad esempio Debug e Build, sono disponibili all'interno della visualizzazione Output e vengono usati per l'output di debug e l'output di MSBuild:
 
--  **Debug**
+- **Debug**
 
-    [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Output di debug")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Debug dell'output")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
 
 - **Build** & **Ordine di compilazione**
 
-    [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "Output di MSBuild")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "Output di MSBuild")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
 ## <a name="ios-project-properties"></a>Proprietà del progetto iOS
 
 Per accedere alle proprietà del progetto di Visual Studio, fare clic con il pulsante destro del mouse sul nome del progetto e selezionare *Proprietà* nel menu di scelta rapida. Ciò consente di configurare l'applicazione iOS, come illustrato nello screenshot seguente:
 
- ![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Configurazione di un'applicazione iOS")
+![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Configurazione di un'applicazione iOS")
 
--  *Firma bundle iOS*: consente di connettersi al Mac per popolare le identità di firma del codice e i profili di provisioning:
+- *Firma bundle iOS*: consente di connettersi al Mac per popolare le identità di firma del codice e i profili di provisioning:
 
- ![](introduction-to-xamarin-ios-for-visual-studio-images/bundlesigning.png "Popolare le identità di firma del codice e i profili di provisioning")
+  ![Popolare le identità di firma del codice e i profili di provisioning](introduction-to-xamarin-ios-for-visual-studio-images/bundlesigning.png)
 
--  *Opzioni IPA iOS*: il file IPA verrà salvato nel file system del Mac:
+- *Opzioni IPA iOS*: il file IPA verrà salvato nel file system del Mac:
 
- ![](introduction-to-xamarin-ios-for-visual-studio-images/ipaoptions.png "Opzioni IPA iOS")
+  ![Opzioni IPA iOS](introduction-to-xamarin-ios-for-visual-studio-images/ipaoptions.png)
 
--  *Opzioni esecuzione iOS*: configurare i parametri aggiuntivi:
+- *Opzioni esecuzione iOS*: configurare i parametri aggiuntivi:
 
- ![](introduction-to-xamarin-ios-for-visual-studio-images/iosrunoptions.png "Opzioni di esecuzione iOS")
+  ![Opzioni di esecuzione iOS](introduction-to-xamarin-ios-for-visual-studio-images/iosrunoptions.png)
 
 ## <a name="creating-a-new-project-for-ios-applications"></a>Creazione di un nuovo progetto per applicazioni iOS
 
@@ -151,9 +149,9 @@ In Visual Studio 2017 i riquadri dei log di Android e iOS sono unificati.
 
 La finestra del nuovo strumento Log del dispositivo per Visual Studio consente di visualizzare i log per i dispositivi Android e iOS. È possibile visualizzarla eseguendo uno dei comandi seguenti:
 
-- **Visualizza -> Altre finestre -> Log del dispositivo**
+- **Visualizza -> Altre finestre > Log del dispositivo**
 - **Strumenti > iOS > Log del dispositivo**
-- **Barra degli strumenti iOS -> Log del dispositivo**
+- **Barra degli strumenti iOS > Log del dispositivo**
 
 Quando viene visualizzata la finestra degli strumenti, l'utente può selezionare il dispositivo fisico dall'elenco a discesa dei dispositivi. Quando si seleziona un dispositivo, i log vengono automaticamente aggiunti alla tabella. Il passaggio da un dispositivo all'altro arresta e avvia la registrazione del dispositivo.
 
@@ -169,13 +167,13 @@ In qualsiasi punto dell'applicazione è possibile impostare punti di interruzion
 
 Avviare il debug e usare il simulatore o il dispositivo per portare l'applicazione a un punto di interruzione. Quando viene raggiunto un punto di interruzione, la riga viene evidenziata e viene abilitato il normale comportamento di debug di Visual Studio: è possibile eseguire, ignorare o uscire dall'istruzione, esaminare le variabili locali o usare la finestra di controllo immediato.
 
-In questo screenshot appare il simulatore iOS in esecuzione accanto a Visual Studio usando Parallels su OS X:
+Questo screenshot mostra il simulatore iOS in esecuzione accanto a Visual Studio usando Parallels in macOS:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/image19.png "In questo screenshot appare il simulatore iOS in esecuzione accanto a Visual Studio usando Parallels su OS X")
+![Questo screenshot mostra il simulatore iOS in esecuzione accanto a Visual Studio usando Parallels in macOS](introduction-to-xamarin-ios-for-visual-studio-images/image19.png)
 
 ### <a name="examine-local-variables"></a>Esaminare le variabili locali
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/image20.png "Analisi delle variabili locali con il debug")
+![Analisi delle variabili locali con il debug](introduction-to-xamarin-ios-for-visual-studio-images/image20.png)
 
 ## <a name="summary"></a>Riepilogo
 
@@ -185,5 +183,5 @@ Questo articolo ha illustrato l'uso di Xamarin iOS per Visual Studio. Sono state
 
 - [Installazione di Xamarin.iOS](~/ios/get-started/installation/windows/index.md)
 - [Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md)
-- [Creazione di un'interfaccia utente di iOS nel codice](~/ios/app-fundamentals/ios-code-only.md)
+- [Creazione dell'interfaccia utente di iOS nel codice](~/ios/app-fundamentals/ios-code-only.md)
 - [Connessione di un Mac all'ambiente di Visual Studio in uso con XMA (video)](https://university.xamarin.com/lightninglectures/xamarin-mac-agent)

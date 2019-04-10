@@ -4,13 +4,13 @@ description: Questo documento descrive come risolvere i problemi riscontrati dur
 ms.assetid: 2E474FAF-F841-4E3C-B815-F7ABD8EE3361
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: d13589680161de4c9b5d77eef6d5f823cc884136
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.date: 04/02/2019
+ms.openlocfilehash: a9546923c9a17aade58d830ea2504406ad09d7d7
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671429"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870079"
 ---
 # <a name="xamarinessentials-troubleshooting"></a>Xamarin.Essentials: Risoluzione dei problemi
 
@@ -20,13 +20,13 @@ Potrebbe verificarsi l'errore seguente durante l'aggiornamento dei pacchetti NuG
 
 ```error
 NU1107: Version conflict detected for Xamarin.Android.Support.Compat. Reference the package directly from the project to resolve this issue. 
- MyApp -> Xamarin.Essentials 0.8.0-preview -> Xamarin.Android.Support.CustomTabs 27.0.2.1 -> Xamarin.Android.Support.Compat (= 27.0.2.1) 
+ MyApp -> Xamarin.Essentials 1.1.0 -> Xamarin.Android.Support.CustomTabs 28.0.0.1 -> Xamarin.Android.Support.Compat (= 28.0.0.1) 
  MyApp -> Xamarin.Forms 3.1.0.583944 -> Xamarin.Android.Support.v4 25.4.0.2 -> Xamarin.Android.Support.Compat (= 25.4.0.2).
 ```
 
 Il problema è la non corrispondenza delle dipendenze per i due pacchetti NuGet. Ciò può essere risolto aggiungendo manualmente una versione specifica della dipendenza (in questo caso **Xamarin.Android.Support.Compat**) in grado di supportare entrambi.
 
-A tale scopo, aggiungere manualmente il NuGet che rappresenta l'origine del conflitto e usare l'elenco **Versione** per selezionare una versione specifica. Attualmente l'errore viene risolto dalla versione 27.0.2.1 di Xamarin.Android.Support.Compat & Xamarin.Android.Support.Core.Util NuGet.
+A tale scopo, aggiungere manualmente il NuGet che rappresenta l'origine del conflitto e usare l'elenco **Versione** per selezionare una versione specifica. Attualmente l'errore viene risolto dalla versione 28.0.0.1 di Xamarin.Android.Support.Compat & Xamarin.Android.Support.Core.Util NuGet.
 
 Fare riferimento al [post di questo blog](https://redth.codes/how-to-fix-the-dreaded-version-conflict-nuget-error-in-your-xamarin-android-projects/) per altre informazioni e un video sulle procedure per risolvere il problema.
 

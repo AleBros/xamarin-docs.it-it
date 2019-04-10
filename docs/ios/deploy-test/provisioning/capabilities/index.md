@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: f051becad7b6ef329d57417214eb976589386970
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7049cc36f5f661152e027beb53180d793078beff
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120944"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855029"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Uso delle funzionalità in Xamarin.iOS
 
@@ -44,14 +44,13 @@ Queste funzionalità possono essere usate con i progetti Xamarin.iOS. L'elenco c
 * A percorsi multipli
 * Lettura di tag NFC
 
-
-Le funzionalità possono essere abilitate tramite Visual Studio per Mac e Visual Studio 2017 oppure manualmente in Apple Developer Portal. Per alcune funzionalità, ad esempio, Wallet, Apple Pay e iCloud, è necessaria una configurazione aggiuntiva degli ID delle app.
+Le funzionalità possono essere abilitate tramite Visual Studio per Mac e Visual Studio 2019 oppure manualmente in Apple Developer Portal. Per alcune funzionalità, ad esempio, Wallet, Apple Pay e iCloud, è necessaria una configurazione aggiuntiva degli ID delle app.
 
 Questa guida illustra come abilitare ognuno di questi servizi app nell'applicazione sia automaticamente in Visual Studio sia manualmente tramite il centro sviluppatori, inclusa l'eventuale configurazione aggiuntiva necessaria. 
 
 ## <a name="adding-app-services"></a>Aggiunta di servizi app
 
-Per usare le funzionalità, l'app deve avere un profilo di provisioning valido contenente un ID app con il servizio corretto abilitato. La creazione di questo profilo di provisioning può essere eseguita in Visual Studio per Mac e Visual Studio 2017 o manualmente nel centro sviluppatori Apple.
+Per usare le funzionalità, l'app deve avere un profilo di provisioning valido contenente un ID app con il servizio corretto abilitato. La creazione di questo profilo di provisioning può essere eseguita in Visual Studio per Mac e Visual Studio 2019 oppure manualmente nel centro Apple Developer.
 
 Questa sezione illustra come usare il provisioning automatico di Visual Studio o il centro sviluppatori per abilitare la maggior parte delle funzionalità. Alcune funzionalità, ad esempio Wallet, iCloud, Apple Pay e i gruppi di app, che richiedono una configurazione aggiuntiva, sono illustrate in dettaglio nelle guide specifiche.
 
@@ -73,7 +72,7 @@ Questa sezione illustra come usare il provisioning automatico di Visual Studio o
 
 ## <a name="using-the-ide"></a>Utilizzo di IDE
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
 
 Le funzionalità vengono aggiunte a **Entitlements.plist** in Visual Studio per Mac. Per aggiungere funzionalità, seguire questa procedura:
 
@@ -93,11 +92,11 @@ Le funzionalità vengono aggiunte a **Entitlements.plist** in Visual Studio per 
 
     ![Aggiungere le funzionalità al file entitlements.plist](images/image18.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-Le funzionalità vengono aggiunte a **Entitlements.plist**. Per aggiungere funzionalità in Visual Studio 2017, seguire questa procedura:
+Le funzionalità vengono aggiunte a **Entitlements.plist**. Per aggiungere funzionalità in Visual Studio 2019, seguire questa procedura:
 
-1. Associare Visual Studio 2017 a un computer Mac, come descritto nella guida [Associazione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Associare Visual Studio 2019 a un computer Mac, come descritto nella guida [Associazione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 2. Aprire le opzioni di provisioning, selezionando **Progetto > Provisioning Properties (Proprietà di provisioning)**
 
@@ -142,7 +141,7 @@ L'uso del centro sviluppatori è un processo in due passaggi che richiede la cre
     ![Pagina di selezione dei servizi app](images/image8.png)
 
 7.  Fare clic su **Continue** (Continua).
-8.  Confermare l'ID app. Ogni servizio presenterà uno degli stati seguenti: **Enabled** (Abilitato), **Disabled** (Disabilitato) o **Configurable** (Configurabile), come illustrato sotto. Se è **Enabled** (Abilitato), è possibile usarlo in un profilo di provisioning. Se è **Configurable** (Configurabile), è necessaria un'ulteriore configurazione per questa funzionalità. Questi passaggi aggiuntivi sono descritti più dettagliatamente nelle sezioni successive.
+8.  Confermare l'ID app. Ogni servizio può essere in uno dei seguenti stati: **Enabled** (Abilitato), **Disabled** (Disabilitato) o **Configurable** (Configurabile), come illustrato di seguito. Se è **Enabled** (Abilitato), è possibile usarlo in un profilo di provisioning. Se è **Configurable** (Configurabile), è necessaria un'ulteriore configurazione per questa funzionalità. Questi passaggi aggiuntivi sono descritti più dettagliatamente nelle sezioni successive.
 
     ![Conferma dell'ID app](images/image9.png)
 

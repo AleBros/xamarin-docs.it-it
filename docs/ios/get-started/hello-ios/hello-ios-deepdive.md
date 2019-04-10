@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 12fcf6ff1b289c773e0dce03be4ac62105f6acd4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7f40671cd37ba88834698dea8cdaba267c96600c
+ms.sourcegitcommit: c77d4257f8a35c8d931538b78a2ebc2aa48c0db9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669466"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58751255"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - Approfondimento
 
@@ -310,7 +310,7 @@ Per altre informazioni sull'uso dei controller di visualizzazione, vedere [View 
 
 Il ruolo più importante del controller di visualizzazione è rispondere all'interazione dell'utente, ad esempio alla pressione di pulsanti, allo spostamento e così via. Il modo più semplice per gestire l'interazione dell'utente è di associare un controllo per l'ascolto dell'input dell'utente e di collegare un gestore dell'evento per rispondere all'input. È ad esempio possibile associare un pulsante per rispondere a un evento di tocco, come illustrato nell'app Phoneword.
 
-Ora che si è acquisita una comprensione più approfondita delle visualizzazioni e dei controller di visualizzazione, è possibile esaminarne il funzionamento.
+Verrà ora esaminato il funzionamento.
 Nel progetto `Phoneword_iOS`, è stato aggiunto il pulsante `TranslateButton` alla gerarchia di visualizzazione del contenuto:
 
 [![](hello-ios-deepdive-images/image1.png "È stato aggiunto il pulsante TranslateButton alla gerarchia di visualizzazione del contenuto")](hello-ios-deepdive-images/image1.png#lightbox)

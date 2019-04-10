@@ -4,13 +4,14 @@ description: Questo documento descrive la classe SecureStorage in Xamarin.Essent
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 7ba7fc6cabc2e3684476c216ca65d3824a35e8aa
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 04/02/2019
+ms.custom: video
+ms.openlocfilehash: aa051a0f94853b39077738a7b22383192aa32e87
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898914"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870287"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Archiviazione sicura
 
@@ -22,7 +23,7 @@ La classe **SecureStorage** consente di archiviare in modo sicuro semplici coppi
 
 Per accedere alla funzionalità **SecureStorage**, è necessaria la configurazione seguente specifica della piattaforma:
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# [<a name="android"></a>Android](#tab/android)
 
 > [!TIP]
 > Il [backup automatico per le app](https://developer.android.com/guide/topics/data/autobackup) è una funzionalità di Android 6.0 (livello API 23) e versioni successive per il backup dei dati delle app dell'utente (preferenze condivise, file nello spazio di archiviazione interno dell'app e altri file specifici). I dati vengono ripristinati quando un'app viene reinstallata o installata in un nuovo dispositivo. Ciò può influire su `SecureStorage` che usa preferenze condivise incluse nel backup e che non possono essere decrittografate quando viene eseguito il ripristino. Xamarin.Essentials gestisce automaticamente questo caso rimuovendo la chiave in modo che sia possibile reimpostarla, ma è possibile procedere oltre disabilitando il backup automatico.
@@ -60,7 +61,7 @@ Il backup automatico può essere configurato per disabilitare contenuto specific
     </full-backup-content>
     ```
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# [<a name="ios"></a>iOS](#tab/ios)
 
 Quando si sviluppa nel **simulatore iOS**, abilitare l'entitlement **Keychain** e aggiungere un gruppo di accesso keychain per l'identificatore del bundle dell'applicazione. 
 
@@ -71,7 +72,7 @@ Nelle proprietà del progetto, in **Firma del bundle iOS** impostare **Entitleme
 > [!TIP]
 > Per la distribuzione in un dispositivo iOS questo entitlement non è richiesto e deve essere rimosso.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# [<a name="uwp"></a>UWP](#tab/uwp)
 
 Non è necessaria alcuna configurazione aggiuntiva.
 
@@ -129,7 +130,7 @@ SecureStorage.RemoveAll();
 
 ## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# [<a name="android"></a>Android](#tab/android)
 
 L'[archivio chiavi Android](https://developer.android.com/training/articles/keystore.html) viene usato per archiviare la chiave di crittografia usata per crittografare il valore prima di salvarlo nelle [preferenze condivise](https://developer.android.com/training/data-storage/shared-preferences.html) con il nome di file **[ID-PACCHETTO-APP].xamarinessentials**.  La chiave usata nel file delle preferenze condivise è un _Hash MD5_ della chiave passata nelle API `SecureStorage`.
 
@@ -143,13 +144,13 @@ Nei livelli API precedenti, l'archivio chiavi Android supporta solo l'archiviazi
 
 **SecureStorage** usa l'API [Preferences](preferences.md) e segue gli stessi criteri di persistenza dei dati descritti nella documentazione per [Preferences](preferences.md#persistence). Se un dispositivo viene aggiornato dal livello API 22 o precedente al livello API 23 e successivi, questo tipo di crittografia continuerà a essere usata a meno che l'app non venga disinstallata oppure non venga chiamato **RemoveAll**.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# [<a name="ios"></a>iOS](#tab/ios)
 
-[KeyChain](https://developer.xamarin.com/api/type/Security.SecKeyChain/) viene usato per archiviare i valori in modo sicuro nei dispositivi iOS.  Il `SecRecord` usato per archiviare il valore ha un valore `Service` impostato su **[ID-BUNDLE-APP].xamarinessentials**.
+[KeyChain](xref:Security.SecKeyChain) viene usato per archiviare i valori in modo sicuro nei dispositivi iOS.  Il `SecRecord` usato per archiviare il valore ha un valore `Service` impostato su **[ID-BUNDLE-APP].xamarinessentials**.
 
 In alcuni casi i dati KeyChain sono sincronizzati con iCloud e la disinstallazione dell'applicazione potrebbe non rimuovere i valori sicuri da iCloud e altri dispositivi dell'utente.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# [<a name="uwp"></a>UWP](#tab/uwp)
 
 Per crittografare i valori in modo sicuro nei dispositivi UWP, si usa [DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider).
 
@@ -167,3 +168,9 @@ Questa API è progettata per l'archiviazione di piccole quantità di testo.  Le 
 
 - [Codice sorgente di SecureStorage](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/SecureStorage)
 - [Documentazione dell'API SecureStorage](xref:Xamarin.Essentials.SecureStorage)
+
+## <a name="related-video"></a>Video correlato
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Secure-Storage-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
