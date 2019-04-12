@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 5e47799e704dfbe2c4088016d7055fc616215ea2
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8c831dfa45c5028e4f1422467bf3be9210452335
+ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056464"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59019373"
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior riusabili
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
+[![D[Scarica esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
 
 _I comportamenti sono un approccio utile per l'aggiunta di un effetto a un controllo e la rimozione del codice boilerplate di gestione degli effetti dai file code-behind. Questo articolo illustra la creazione e l'uso di un comportamento di Xamarin.Forms per l'aggiunta di un effetto a un controllo._
 
@@ -169,6 +169,6 @@ In questo articolo è stato illustrato l'uso di un comportamento per aggiungere 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Effetti](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Effect Behavior (sample)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/) (Esempio di comportamento di effetto)
-- [Behavior](xref:Xamarin.Forms.Behavior)
-- [Classe Behavior <T><T>](xref:Xamarin.Forms.Behavior`1)
+- [Esempio di comportamento di effetto](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
+- [Comportamento](xref:Xamarin.Forms.Behavior)
+- [Behavior&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)
