@@ -6,12 +6,12 @@ ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: lobrien
 ms.author: laobri
 ms.date: 07/19/2017
-ms.openlocfilehash: 35c5811d57ade1d320e56e292c1eeed094963a0d
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.openlocfilehash: 44e45d38ecd98be6f75c619125f9c14ce707b251
+ms.sourcegitcommit: 9e9340999d569a3db01b4b59a0fcf24b8caa869c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58070917"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59509888"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Introduzione all'integrazione continua con Xamarin
 
@@ -40,9 +40,13 @@ Il [Test App Center](https://docs.microsoft.com/appcenter/test-cloud) risolve qu
 
 [![](intro-to-ci-images/intro02-small.png "Una volta che questi test vengono caricati in App Center, il server CI possibile eseguirli automaticamente come parte di un processo di integrazione continua come illustrato nella figura seguente")](intro-to-ci-images/intro02.png#lightbox)
 
-## <a name="version-control"></a>Controllo della versione
+## <a name="components-of-continuous-integration"></a>Componenti di integrazione continua
 
-### <a name="azure-devops-and-team-foundation-server"></a>Azure DevOps e Team Foundation Server
+È presente un esteso ecosistema di strumenti commerciali e open source progettata per supportare CI. Questa sezione illustra alcune delle cause più comuni.
+
+### <a name="version-control"></a>Controllo della versione
+
+#### <a name="azure-devops-and-team-foundation-server"></a>Azure DevOps e Team Foundation Server
 
 [Azure DevOps](https://azure.microsoft.com/services/devops/) e [Team Foundation Server](https://visualstudio.microsoft.com/tfs/) (TFS) sono strumenti di collaborazione di Microsoft per l'integrazione continua di compilazione servizi, attività di rilevamento, agile planning e gli strumenti e il controllo della versione di reporting. Il controllo della versione, Azure DevOps e TFS possono lavorare con il proprio sistema (controllo della versione di Team Foundation o TFVC) o con i progetti ospitati in GitHub.
 
@@ -55,11 +59,11 @@ TFS e DevOps di Azure sono strettamente integrati con Visual Studio e consentono
 
 Un riepilogo completo di tutte le funzionalità di Application Lifecycle Management (ALM) di Visual Studio, Azure DevOps e Team Foundation Server, vedere [DevOps con le app Xamarin](https://docs.microsoft.com/visualstudio/cross-platform/application-lifecycle-management-alm-with-xamarin-apps).
 
-### <a name="team-explorer-everywhere"></a>Team Explorer Everywhere
+#### <a name="team-explorer-everywhere"></a>Team Explorer Everywhere
 
 [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) estende le potenzialità di Team Foundation Server e Visual Studio Team Services per team che sviluppano soluzioni esternamente a Visual Studio. Consente agli sviluppatori di connettersi ai progetti team in locale o nel cloud da Eclipse o il client della riga di comando multipiattaforma per OS X e Linux. Accedere al controllo della versione (incluso Git), gli elementi di lavoro di Team Explorer Everywhere offre completo e funzionalità di compilazione per piattaforme non Windows.
 
-### <a name="git"></a>Git
+#### <a name="git"></a>Git
 
 [GIT](http://git-scm.com) è una soluzione di controllo di versione open source molto diffuso che è stato originariamente sviluppata per gestire il codice sorgente per il kernel Linux. È un sistema molto veloce e flessibile che è comune con i progetti software di qualsiasi dimensione. Lo Ridimensiona facilmente dal singoli sviluppatore con accesso a Internet scadente al team di grandi dimensioni che si estendono su tutto il mondo. GIT consente anche di creazione di rami molto semplice, che a sua volta possono incoraggiare flussi paralleli di sviluppo al minimo i rischi.
 
@@ -67,11 +71,11 @@ GIT possono operare interamente tramite un web browser o tramite [client GUI](ht
 
 Le versioni correnti di Visual Studio per Windows e Mac offrono supporto nativo per Git. Microsoft fornisce una [estensione scaricabile per Git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) per le versioni precedenti di Visual Studio. Come indicato in precedenza, Visual Studio Team Services e TFS possono usare Git per il controllo della versione anziché TFVC.
 
-### <a name="subversion"></a>Subversion
+#### <a name="subversion"></a>Subversion
 
 [Subversion](http://subversion.apache.org) (SVN) è un sistema di controllo di versione open source molto diffuso che è stata utilizzata dal 2000. SVN viene eseguito su tutte le versioni moderne di OS X, Windows, FreeBSD, Linux e Unix. Visual Studio per Mac offre supporto nativo per SVN. Sono disponibili estensioni di terze parti che offrono supporto SVN a Visual Studio.
 
-## <a name="continuous-integration-environments"></a>Ambienti di integrazione continua
+### <a name="continuous-integration-environments"></a>Ambienti di integrazione continua
 
 Configurazione di un ambiente di integrazione continuata si intende la combinazione di un sistema di controllo della versione con un servizio di compilazione.  Nel secondo caso, le due cause più comuni sono:
 
@@ -80,7 +84,7 @@ Configurazione di un ambiente di integrazione continuata si intende la combinazi
 
 È possibile usare TFS, Azure DevOps autonomamente oppure è possibile usare Jenkins in combinazione con Git o TFS, Azure DevOps, come descritto nelle sezioni seguenti.
 
-### <a name="visual-studio-team-services-and-team-foundation-server"></a>Visual Studio Team Services e Team Foundation Server
+#### <a name="visual-studio-team-services-and-team-foundation-server"></a>Visual Studio Team Services e Team Foundation Server
 
 Come illustrato, Visual Studio Team Services e Team Foundation Server fornisce le versioni di controllo e creazione di servizi. Servizi di compilazione richiedono sempre una licenza di Xamarin Business o Enterprise per ogni piattaforma di destinazione.
 
@@ -97,13 +101,13 @@ Il diagramma seguente illustra la topografia di:
 
 È anche possibile collegare un server TFS locale a un Visual Studio Team Services project, in modo che Azure DevOps crea vengono delegati al server locale. Per informazioni dettagliate, vedere [Build e release Agent](https://docs.microsoft.com/azure/devops/pipelines/agents/agents/).
 
-### <a name="visual-studio-team-services-and-jenkins"></a>Jenkins e visual Studio Team Services
+#### <a name="visual-studio-team-services-and-jenkins"></a>Jenkins e visual Studio Team Services
 
 Se si userà Jenkins per compilare le app, è possibile archiviare il codice in Visual Studio Team Services o Team Foundation Server e continuare a usare Jenkins per le compilazioni di integrazione continua. Quando si effettua il push di codice al repository Git del progetto team o quando si archivia codice in TFVC, è possibile attivare una compilazione di Jenkins. Per informazioni dettagliate, vedere [Jenkins con Azure DevOps](https://docs.microsoft.com/azure/devops/service-hooks/services/jenkins).
 
 [![](intro-to-ci-images/intro04-small.png "Se si userà Jenkins per compilare le app, è possibile archiviare il codice in Visual Studio Team Services o Team Foundation Server e continuare a usare Jenkins per le compilazioni di integrazione continua")](intro-to-ci-images/intro04.png#lightbox)
 
-### <a name="git-and-jenkins"></a>GIT e Jenkins
+#### <a name="git-and-jenkins"></a>GIT e Jenkins
 
 Un altro ambiente CI comune può essere completamente OS X in base. Questo scenario prevede l'uso di Git per controllo del codice sorgente e Jenkins per il server di compilazione. Entrambi sono in esecuzione in un singolo computer Mac OS X con Visual Studio per Mac installati. Ciò è molto simile a Visual Studio Team Services + ambiente Jenkins illustrate nella sezione precedente:
 
