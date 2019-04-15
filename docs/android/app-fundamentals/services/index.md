@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: dfc0e1cb7239381ef2f495b0f9774d390b0dc82e
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 4ae86ca5fa47169bb5d78eb9d1116e419c23ed6d
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527196"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574806"
 ---
 # <a name="creating-android-services"></a>Creazione di servizi di Android
 
@@ -22,7 +22,7 @@ _Questa guida illustra i servizi di xamarin. Android, che sono componenti di And
 
 App per dispositivi mobili non sono ad esempio le app desktop. Desktop sono abbondanti quantità di risorse, ad esempio l'area dello schermo, memoria, spazio di archiviazione e un alimentatore connesso, non i dispositivi mobili. Questi vincoli forzare l'App per dispositivi mobili per ottenere un comportamento diverso. Ad esempio, schermo di piccole dimensioni in un dispositivo mobile significa in genere che un solo app (ad esempio attività) è visibile alla volta. Altre attività sono spostata in background e il push in uno stato sospeso in cui non possono eseguire alcuna operazione. Tuttavia, solo perché un'applicazione Android è in background non significa che è Impossibile per l'app continuare a lavorare. 
 
-Android le applicazioni sono costituite da almeno uno dei quattro componenti principali seguenti: _impegni_, _ricevitori di trasmissione_, _provider di contenuti_e _Servizi_. Le attività sono il fulcro di molte applicazioni Android eccezionali perché forniscono l'interfaccia utente che consente agli utenti di interagire con l'applicazione. Tuttavia, se si desidera eseguire simultanee o operazioni in background, le attività non sono sempre la scelta migliore.
+Le applicazioni Android sono costituite da almeno uno dei quattro componenti principali seguenti: _Le attività_, _ricevitori di trasmissione_, _provider di contenuto_, e _Services_. Le attività sono il fulcro di molte applicazioni Android eccezionali perché forniscono l'interfaccia utente che consente agli utenti di interagire con l'applicazione. Tuttavia, se si desidera eseguire simultanee o operazioni in background, le attività non sono sempre la scelta migliore.
  
 Il meccanismo principale per attività in background in Android è il _servizio_. Un servizio di Android è un componente che è progettato per eseguire alcune operazioni senza un'interfaccia utente. Un servizio può scaricare un file, riprodurre musica o applicare un filtro a un'immagine. Servizi nonché per la comunicazione interprocesso (_IPC_) tra le applicazioni Android. Ad esempio un'app per Android può usare il servizio di Windows Media player musica che proviene da un'altra app o un'app potrebbe esporre i dati (ad esempio, le informazioni di contatto della persona) ad altre App tramite un servizio. 
 
@@ -68,7 +68,7 @@ Partire da Android 8.0 (livello API 26), non è più un'applicazione Android han
 Esistono alcune situazioni in cui, anche se un'app è in background, Android verrà riattivare l'app e ridurre le restrizioni per alcuni minuti, consentendo all'app di eseguire alcune operazioni:
 * Una priorità alta Firebase Cloud e il messaggio viene ricevuta dall'app.
 * L'app riceve una trasmissione. 
-* L'applicazione riceve un viene eseguito un `PendingIntent` in risposta a una notifica.
+* L'applicazione riceve ed esegue un `PendingIntent` in risposta a una notifica.
 
 Le applicazioni xamarin. Android esistente potrebbero essere necessario modificare il modo di operare di attività in background per evitare eventuali problemi che potrebbero verificarsi in Android 8.0. Di seguito sono riportate alcune alternative pratiche per un servizio di Android:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 476f1c50a2f1a4199dfaf1996fc9c16615b40598
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2978f0b2bcbdd463876784a9addd7dec055b8af9
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116797"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574819"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Archiviazione dei file e l'accesso con xamarin. Android
 
@@ -66,13 +66,12 @@ Per ottimizzare la condivisione del codice, le app xamarin. Android (o le app xa
 
 | System.Environment.SpecialFolder | Path  |
 |----------------------|---|
-| `ApplicationData` | **_INTERNI\_archiviazione_/.config** |
-| `Desktop` | **_INTERNI\_archiviazione_  /Desktop** |
-| `LocalApplicationData` | **_INTERNI\_archiviazione_/.local/share** |
-| `MyComputer` | **_INTERNI\_archiviazione_/.local/share** |
+| `ApplicationData` | **_INTERNAL\_STORAGE_/.config** |
+| `Desktop` | **_INTERNAL\_STORAGE_/Desktop** |
+| `LocalApplicationData` | **_INTERNAL\_STORAGE_/.local/share** |
 | `MyDocuments` | **_INTERNO\_ARCHIVIAZIONE_** |
-| `MyMusic` | **_INTERNI\_archiviazione_/Music** |
-| `MyPictures` | **_INTERNI\_archiviazione_/Music** |
+| `MyMusic` | **_INTERNAL\_STORAGE_/Music** |
+| `MyPictures` | **_INTERNI\_archiviazione_  /immagini** |
 | `MyVideos` | **_INTERNI\_archiviazione_/Videos** |
 | `Personal` | **_INTERNO\_ARCHIVIAZIONE_** |
 
