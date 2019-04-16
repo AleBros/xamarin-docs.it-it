@@ -10,15 +10,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 5c3daf04c08e2109c46b24c198fef8e71fac2f3d
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/16/2019
 ms.locfileid: "58854990"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Store dei dati in un Database locale di SQLite.NET
 
-[![Download esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 
 In questa Guida introduttiva si apprenderà come:
 
@@ -451,9 +451,9 @@ In questa Guida introduttiva si è appreso come:
 Per definire lo stile dell'applicazione con gli stili XAML, continuare per la successiva Guida introduttiva.
 
 > [!div class="nextstepaction"]
-> [Successivo](styling.md)
+> [avanti](styling.md)
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Note (esempio)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+- [Notes (esempio)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 - [Approfondimento di Guida introduttiva di xamarin. Forms](deepdive.md)
