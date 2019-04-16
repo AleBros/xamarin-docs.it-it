@@ -10,10 +10,10 @@ ms.author: crdun
 ms.custom: video
 ms.date: 01/22/2019
 ms.openlocfilehash: 3dad36dc93f5c23e5d9ef1e05a1b9419b7a724b6
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/16/2019
 ms.locfileid: "58855107"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Gestione di dispositivi virtuali con Android Device Manager
@@ -28,7 +28,7 @@ Dopo la verifica dell'abilitazione dell'accelerazione hardware (come descritto i
 
 Questo articolo spiega come usare Android Device Manager per creare, duplicare, personalizzare e avviare i dispositivi virtuali Android.
 
-[![SScreenshot di Android Device Manager nella scheda Dispositivi(device-manager-images/win/01-devices-dialog-sml.png)](device-manager-images/win/01-devices-dialog.png#lightbox)
+[![Screenshot di Android Device Manager nella scheda Dispositivi](device-manager-images/win/01-devices-dialog-sml.png)](device-manager-images/win/01-devices-dialog.png#lightbox)
 
 È possibile usare Android Device Manager per creare e configurare _dispositivi virtuali Android_ (AVD) eseguibili nell'[emulatore Android](~/android/deploy-test/debugging/debug-on-emulator.md).
 Ogni AVD è una configurazione dell'emulatore che simula un dispositivo Android fisico. In questo modo è possibile eseguire e sottoporre a test l'applicazione in varie configurazioni che simulano dispositivi Android fisici diversi.
@@ -54,14 +54,14 @@ Per usare Android Device Manager sono necessari i componenti seguenti:
 
   Questi pacchetti devono essere visualizzati con lo stato **Installato** come illustrato nello screenshot seguente:
 
-  [![IInstallazione di Android SDK Tools(device-manager-images/win/02-sdk-tools-sml.png)](device-manager-images/win/02-sdk-tools.png#lightbox)
+  [![Installazione di Android SDK Tools](device-manager-images/win/02-sdk-tools-sml.png)](device-manager-images/win/02-sdk-tools.png#lightbox)
 
 
 ## <a name="launching-the-device-manager"></a>Avvio di Gestione dispositivi
 
 Avviare Android Device Manager dal menu **Strumenti** facendo clic su **Strumenti > Android > Android Device Manager**:
 
-[![LAvvio di Device Manager dal menu Strumenti(device-manager-images/win/03-tools-menu-sml.png)](device-manager-images/win/03-tools-menu.png#lightbox)
+[![Avvio di Device Manager dal menu Strumenti](device-manager-images/win/03-tools-menu-sml.png)](device-manager-images/win/03-tools-menu.png#lightbox)
 
 Se all'avvio viene visualizzato il messaggio di errore seguente, vedere la sezione [Risoluzione dei problemi](#troubleshooting) per informazioni sulle soluzioni alternative:
 
@@ -72,44 +72,44 @@ Se all'avvio viene visualizzato il messaggio di errore seguente, vedere la sezio
 
 Al primo avvio di Gestione dispositivi di Xamarin Android una schermata visualizza tutti i dispositivi virtuali attualmente configurati. Per ogni dispositivo virtuale vengono visualizzati i parametri **Nome**, **Sistema operativo** (versione di Android), **Processore**, **Memoria** e la **Risoluzione** dello schermo:
 
-[![LElenco dei dispositivi installati e relativi parametri(device-manager-images/win/05-installed-list-sml.png)](device-manager-images/win/05-installed-list.png#lightbox)
+[![Elenco dei dispositivi installati e relativi parametri](device-manager-images/win/05-installed-list-sml.png)](device-manager-images/win/05-installed-list.png#lightbox)
 
 Quando si fa clic su un dispositivo nell'elenco, a destra del nome viene visualizzato il pulsante **Avvia**. Fare clic su **Avvia** per avviare l'emulatore con questo dispositivo virtuale:
 
-[![SPulsante Avvia per un'immagine del dispositivo(device-manager-images/win/06-start-button-sml.png)](device-manager-images/win/06-start-button.png#lightbox)
+[![Pulsante Avvia per un'immagine del dispositivo](device-manager-images/win/06-start-button-sml.png)](device-manager-images/win/06-start-button.png#lightbox)
 
 Dopo che l'emulatore viene avviato con il dispositivo virtuale selezionato, il pulsante **Avvia** diventa **Arresta** e può essere usato per interrompere l'esecuzione dell'emulatore:
 
-[![SPulsante Arresta per il dispositivo in esecuzione(device-manager-images/win/07-stop-button-sml.png)](device-manager-images/win/07-stop-button.png#lightbox)
+[![Pulsante Arresta per il dispositivo in esecuzione](device-manager-images/win/07-stop-button-sml.png)](device-manager-images/win/07-stop-button.png#lightbox)
 
 ### <a name="new-device"></a>Nuovo dispositivo
 
 Per creare un nuovo dispositivo fare clic sul pulsante **Nuovo** nell'angolo superiore destro della schermata:
 
-[![NPulsante Nuovo per creare un nuovo dispositivo(device-manager-images/win/08-new-button-sml.png)](device-manager-images/win/08-new-button.png#lightbox)
+[![Pulsante Nuovo per creare un nuovo dispositivo](device-manager-images/win/08-new-button-sml.png)](device-manager-images/win/08-new-button.png#lightbox)
 
 Quando si fa clic su **Nuovo** viene visualizzata la schermata **New Device** (Nuovo dispositivo):
 
-[![NSchermata Nuovo dispositivo di Gestione dispositivi(device-manager-images/win/09-new-device-editor-sml.png)](device-manager-images/win/09-new-device-editor.png#lightbox)
+[![Schermata New Device (Nuovo dispositivo) di Gestione dispositivi](device-manager-images/win/09-new-device-editor-sml.png)](device-manager-images/win/09-new-device-editor.png#lightbox)
 
 Per configurare un nuovo dispositivo nella schermata **New Device** (Nuovo dispositivo) seguire questa procedura:
 
 1. Assegnare un nuovo nome al dispositivo. Nell'esempio seguente, al nuovo dispositivo viene assegnato il nome **Pixel_API_27**:
 
-   [![NAssegnazione di un nome al nuovo dispositivo(device-manager-images/win/10-device-name-sml.png)](device-manager-images/win/10-device-name.png#lightbox)
+   [![Assegnazione di un nome al nuovo dispositivo](device-manager-images/win/10-device-name-sml.png)](device-manager-images/win/10-device-name.png#lightbox)
 
 2. Selezionare un dispositivo fisico da emulare facendo clic sul menu a discesa **Dispositivo di base**:
 
-   [![SSelezione del dispositivo fisico da emulare(device-manager-images/win/11-device-menu-sml.png)](device-manager-images/win/11-device-menu.png#lightbox)
+   [![Selezione del dispositivo fisico da emulare](device-manager-images/win/11-device-menu-sml.png)](device-manager-images/win/11-device-menu.png#lightbox)
 
 3. Selezionare un tipo di processore per questo dispositivo virtuale facendo clic sul menu a discesa **Processore**. La selezione di **x86** migliora al massimo le prestazioni in quanto consente all'emulatore di sfruttare [l'accelerazione hardware](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
    Anche l'opzione **x86_64** sfrutterà l'accelerazione hardware, ma funzionerà un po' più lentamente della **x86** (l'opzione **x86_64** in genere viene usata per testare app a 64-bit):
 
-   [![SSelezione del tipo di processore(device-manager-images/win/12-processor-type-menu-sml.png)](device-manager-images/win/12-processor-type-menu.png#lightbox)
+   [![Selezione del tipo di processore](device-manager-images/win/12-processor-type-menu-sml.png)](device-manager-images/win/12-processor-type-menu.png#lightbox)
 
 4. Selezionare la versione di Android (livello API) facendo clic sul menu a discesa **Sistema operativo**. Ad esempio, selezionare **Oreo 8.1 - API 27** per creare un dispositivo virtuale per il livello API 27:
 
-   [![SSelezione della versione di Android(device-manager-images/win/13-android-version-w158-sml.png)](device-manager-images/win/13-android-version-w158.png#lightbox)
+   [![Selezione della versione di Android](device-manager-images/win/13-android-version-w158-sml.png)](device-manager-images/win/13-android-version-w158.png#lightbox)
 
    Se si seleziona un livello API di Android non ancora installato, Device Manager visualizzerà il messaggio **A new device will be downloaded** (Verrà scaricato un nuovo dispositivo) nella parte inferiore della schermata &ndash; lo scaricherà e installerà i file necessari durante la creazione del nuovo dispositivo virtuale:
 
@@ -117,7 +117,7 @@ Per configurare un nuovo dispositivo nella schermata **New Device** (Nuovo dispo
 
 5. Se si desidera includere le API di Google Play Services nel dispositivo virtuale, abilitare l'opzione **Google APIs** (API Google). Per includere l'app Google Play Store, abilitare l'opzione **Google Play Store**:
 
-   [![SSelezione di Google Play Services e Google Play Store(device-manager-images/win/15-google-play-services-sml.png)](device-manager-images/win/15-google-play-services.png#lightbox)
+   [![Selezione di Google Play Services e Google Play Store](device-manager-images/win/15-google-play-services-sml.png)](device-manager-images/win/15-google-play-services.png#lightbox)
 
    Le immagini di Google Play Store sono disponibili solo per alcuni tipi di dispositivi di base, ad esempio Pixel, Pixel 2, Nexus 5 e Nexus 5X.
 
@@ -125,43 +125,43 @@ Per configurare un nuovo dispositivo nella schermata **New Device** (Nuovo dispo
 
 7. Aggiungere le eventuali proprietà addizionali che è necessario impostare in modo esplicito. La schermata **New Device** (Nuovo dispositivo) elenca solo le proprietà modificate più di frequente. Per aggiungere altre proprietà fare clic sul menu a discesa **Aggiungi proprietà** nella parte inferiore della schermata:
 
-   [![AMenu a discesa Aggiungi proprietà(device-manager-images/win/16-add-property-menu-sml.png)](device-manager-images/win/16-add-property-menu.png#lightbox)
+   [![Menu a discesa Aggiungi proprietà](device-manager-images/win/16-add-property-menu-sml.png)](device-manager-images/win/16-add-property-menu.png#lightbox)
 
     È anche possibile definire una proprietà personalizzata selezionando **Personalizza...** nella parte superiore dell'elenco.
 
 8. Fare clic sul pulsante **Crea** nell'angolo inferiore destro per creare il nuovo dispositivo:
 
-   [![CPulsante Crea(device-manager-images/win/17-create-button-sml.png)](device-manager-images/win/17-create-button.png#lightbox)
+   [![Pulsante Crea](device-manager-images/win/17-create-button-sml.png)](device-manager-images/win/17-create-button.png#lightbox)
 
 9. È possibile che venga visualizzata una schermata **Accettazione della licenza**. Se si accettano le condizioni di licenza, fare clic su **Accetta**:
 
-   [![LSchermata Accettazione della licenza(device-manager-images/win/18-license-acceptance-sml.png)](device-manager-images/win/18-license-acceptance.png#lightbox)
+   [![Schermata Accettazione della licenza](device-manager-images/win/18-license-acceptance-sml.png)](device-manager-images/win/18-license-acceptance.png#lightbox)
 
 10. Android Device Manager aggiunge il nuovo dispositivo all'elenco dei dispositivi virtuali installati, visualizzando un indicatore di stato **Creating** (Creazione in corso) durante la creazione del dispositivo:
 
-    [![CIndicatore di stato della creazione(device-manager-images/win/19-creating-the-device-sml.png)](device-manager-images/win/19-creating-the-device.png#lightbox)
+    [![Indicatore di stato Creazione in corso](device-manager-images/win/19-creating-the-device-sml.png)](device-manager-images/win/19-creating-the-device.png#lightbox)
 
 11. Dopo aver completato il processo di creazione, il nuovo dispositivo viene visualizzato nell'elenco di dispositivi virtuali installati, con un pulsante **Avvia** che consente di avviarlo:
 
-    [![NDispositivo appena creato pronto per l'avvio(device-manager-images/win/20-created-device-sml.png)](device-manager-images/win/20-created-device.png#lightbox)
+    [![Dispositivo appena creato pronto per l'avvio](device-manager-images/win/20-created-device-sml.png)](device-manager-images/win/20-created-device.png#lightbox)
 
 
 ### <a name="edit-device"></a>Modificare il dispositivo
 
 Per modificare un dispositivo virtuale esistente, selezionare il dispositivo e fare clic sul pulsante **Modifica** nell'angolo superiore destro dello schermo:
 
-[![EPulsante Modifica per modificare un dispositivo(device-manager-images/win/21-edit-button-sml.png)](device-manager-images/win/21-edit-button.png#lightbox)
+[![Pulsante Modifica per modificare un dispositivo](device-manager-images/win/21-edit-button-sml.png)](device-manager-images/win/21-edit-button.png#lightbox)
 
 Quando si fa clic su **Modifica** viene avviata la schermata Device Editor (Editor dispositivi) per il dispositivo virtuale selezionato:
 
-[![DSchermata Device Editor (Editor dispositivi)(device-manager-images/win/22-device-editor-sml.png)](device-manager-images/win/22-device-editor.png#lightbox)
+[![Schermata Device Editor (Editor dispositivi)](device-manager-images/win/22-device-editor-sml.png)](device-manager-images/win/22-device-editor.png#lightbox)
 
 La schermata **Device Editor** (Editor dispositivi) elenca le proprietà del dispositivo virtuale nella colonna **Proprietà** e i valori corrispondenti di ogni proprietà nella colonna **Valore**. Quando si seleziona una proprietà, sul lato destro viene visualizzata una descrizione dettagliata di tale proprietà.
 
 Per modificare una proprietà, modificarne il valore nella colonna **Valore**.
 Ad esempio, nello screenshot seguente il valore della proprietà `hw.lcd.density` viene modificato da **480** a **240**:
 
-[![DEsempio di modifica dispositivo(device-manager-images/win/23-device-editing-sml.png)](device-manager-images/win/23-device-editing.png#lightbox)
+[![Esempio di modifica dispositivo](device-manager-images/win/23-device-editing-sml.png)](device-manager-images/win/23-device-editing.png#lightbox)
 
 Dopo aver apportato le modifiche di configurazione necessarie, fare clic sul pulsante **Salva**.
 Per altre informazioni sulla modifica delle proprietà del dispositivo virtuale, vedere [Modifica delle proprietà del dispositivo virtuale Android](~/android/get-started/installation/android-emulator/device-properties.md).
@@ -171,17 +171,17 @@ Per altre informazioni sulla modifica delle proprietà del dispositivo virtuale,
 
 Opzioni aggiuntive per l'uso dei dispositivi sono disponibili nel menu a discesa **Opzioni aggiuntive** (&hellip;) nell'angolo superiore destro della schermata:
 
-[![LPosizione del menu delle opzioni aggiuntive(device-manager-images/win/24-overflow-menu-sml.png)](device-manager-images/win/24-overflow-menu.png#lightbox)
+[![Posizione del menu delle opzioni aggiuntive](device-manager-images/win/24-overflow-menu-sml.png)](device-manager-images/win/24-overflow-menu.png#lightbox)
 
 Il menu delle opzioni aggiuntive contiene le voci seguenti:
 
 - **Duplicate and Edit** (Duplica e modifica): duplica il dispositivo selezionato attualmente e lo apre nella schermata **New Device** (Nuovo dispositivo) con un nome univoco diverso. Se ad esempio si seleziona **Pixel_API_27** e si fa clic su **Duplicate and Edit** (Duplica e modifica) viene accodato un contatore al nome del dispositivo:
 
-  [![DSchermata Duplicate and Edit (Duplica e modifica)(device-manager-images/win/25-dupe-and-edit-sml.png)](device-manager-images/win/25-dupe-and-edit.png#lightbox)
+  [![Schermata Duplicate and Edit (Duplica e modifica)](device-manager-images/win/25-dupe-and-edit-sml.png)](device-manager-images/win/25-dupe-and-edit.png#lightbox)
 
 - **Visualizza in Esplora risorse**: apre una finestra di Esplora risorse con la cartella contenente i file del dispositivo virtuale. Se ad esempio si seleziona **Pixel_API_27** e si fa clic su **Visualizza in Esplora risorse** viene visualizzata una finestra simile alla seguente:
 
-  [![RRisultato del clic su Visualizza in Esplora risorse(device-manager-images/win/26-reveal-in-explorer-sml.png)](device-manager-images/win/26-reveal-in-explorer.png#lightbox)
+  [![Risultato del clic su Visualizza in Esplora risorse](device-manager-images/win/26-reveal-in-explorer-sml.png)](device-manager-images/win/26-reveal-in-explorer.png#lightbox)
 
 - **Factory Reset** (Ripristino delle impostazioni predefinite): ripristina le impostazioni predefinite del dispositivo selezionato, eliminando tutte le modifiche apportate dall'utente allo stato interno del dispositivo mentre era in esecuzione (eliminando anche l'eventuale snapshot per l'[avvio rapido](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) corrente). Questa modifica non annulla le modifiche apportate al dispositivo virtuale durante la creazione e la modifica. Un messaggio ricorda che questa operazione di reimpostazione non può essere annullata. Fare clic su **Ripristino delle impostazioni predefinite** per confermare la reimpostazione:
 
@@ -199,7 +199,7 @@ Il menu delle opzioni aggiuntive contiene le voci seguenti:
 
 Questo articolo spiega come usare Android Device Manager per creare, duplicare, personalizzare e avviare i dispositivi virtuali Android.
 
-[![SScreenshot di Android Device Manager nella scheda Dispositivi(device-manager-images/mac/01-devices-dialog-sml.png)](device-manager-images/mac/01-devices-dialog.png#lightbox)
+[![Screenshot di Android Device Manager nella scheda Dispositivi](device-manager-images/mac/01-devices-dialog-sml.png)](device-manager-images/mac/01-devices-dialog.png#lightbox)
 
 > [!NOTE]
 > Questa guida è applicabile solo a Visual Studio per Mac.
@@ -223,14 +223,14 @@ Per usare Android Device Manager sono necessari i componenti seguenti:
 
   Questi pacchetti devono essere visualizzati con lo stato **Installato** come illustrato nello screenshot seguente:
 
-  [![IInstallazione di Android SDK Tools(device-manager-images/mac/02-sdk-tools-sml.png)](device-manager-images/mac/02-sdk-tools.png#lightbox)
+  [![Installazione di Android SDK Tools](device-manager-images/mac/02-sdk-tools-sml.png)](device-manager-images/mac/02-sdk-tools.png#lightbox)
 
 
 ## <a name="launching-the-device-manager"></a>Avvio di Gestione dispositivi
 
 Avviare Android Device Manager facendo clic su **Strumenti > Device Manager**:
 
-[![LAvvio di Device Manager dal menu Strumenti(device-manager-images/mac/03-tools-menu-sml.png)](device-manager-images/mac/03-tools-menu.png#lightbox)
+[![Avvio di Device Manager dal menu Strumenti](device-manager-images/mac/03-tools-menu-sml.png)](device-manager-images/mac/03-tools-menu.png#lightbox)
 
 Se all'avvio viene visualizzato il messaggio di errore seguente, vedere la sezione [Risoluzione dei problemi](#troubleshooting) per informazioni sulle soluzioni alternative:
 
@@ -241,15 +241,15 @@ Se all'avvio viene visualizzato il messaggio di errore seguente, vedere la sezio
 
 Al primo avvio di Gestione dispositivi di Xamarin Android una schermata visualizza tutti i dispositivi virtuali attualmente configurati. Per ogni dispositivo virtuale vengono visualizzati i parametri **Nome**, **Sistema operativo** (versione di Android), **Processore**, **Memoria** e la **Risoluzione** dello schermo:
 
-[![LElenco dei dispositivi installati e relativi parametri(device-manager-images/mac/05-devices-list-sml.png)](device-manager-images/mac/05-devices-list.png#lightbox)
+[![Elenco dei dispositivi installati e relativi parametri](device-manager-images/mac/05-devices-list-sml.png)](device-manager-images/mac/05-devices-list.png#lightbox)
 
 Quando si fa clic su un dispositivo nell'elenco, a destra del nome viene visualizzato il pulsante **Riproduci**. Fare clic su **Riproduci** per avviare l'emulatore con questo dispositivo virtuale:
 
-[![PPulsante Riproduci per un'immagine del dispositivo(device-manager-images/mac/06-start-button-sml.png)](device-manager-images/mac/06-start-button.png#lightbox)
+[![Pulsante Riproduci per un'immagine del dispositivo](device-manager-images/mac/06-start-button-sml.png)](device-manager-images/mac/06-start-button.png#lightbox)
 
 Dopo che l'emulatore viene avviato con il dispositivo virtuale selezionato, il pulsante **Play** (Riproduci) diventa **Arresta** e può essere usato per interrompere l'esecuzione dell'emulatore:
 
-[![SPulsante Arresta per il dispositivo in esecuzione(device-manager-images/mac/07-stop-button-sml.png)](device-manager-images/mac/07-stop-button.png#lightbox)
+[![Pulsante Arresta per il dispositivo in esecuzione](device-manager-images/mac/07-stop-button-sml.png)](device-manager-images/mac/07-stop-button.png#lightbox)
 
 Quando si arresta l'emulatore, si può ricevere un messaggio che chiede se si desidera salvare lo stato corrente per il prossimo avvio rapido:
 
@@ -261,30 +261,30 @@ Il salvataggio dello stato corrente accelererà l'avvio dell'emulatore al riavvi
 
 Per creare un nuovo dispositivo fare clic sul pulsante **Nuovo dispositivo** (nell'angolo superiore a sinistra della schermata):
 
-[![NPulsante Nuovo per creare un nuovo dispositivo(device-manager-images/mac/09-new-button-sml.png)](device-manager-images/mac/09-new-button.png#lightbox)
+[![Pulsante Nuovo per creare un nuovo dispositivo](device-manager-images/mac/09-new-button-sml.png)](device-manager-images/mac/09-new-button.png#lightbox)
 
 Quando si fa clic su **New Device** (Nuovo dispositivo) viene visualizzata la schermata **New Device** (Nuovo dispositivo):
 
-[![NSchermata Nuovo dispositivo di Gestione dispositivi(device-manager-images/mac/10-new-device-editor-sml.png)](device-manager-images/mac/10-new-device-editor.png#lightbox)
+[![Schermata New Device (Nuovo dispositivo) di Gestione dispositivi](device-manager-images/mac/10-new-device-editor-sml.png)](device-manager-images/mac/10-new-device-editor.png#lightbox)
 
 Per configurare un nuovo dispositivo nella schermata **New Device** (Nuovo dispositivo) seguire questa procedura:
 
 1. Assegnare un nuovo nome al dispositivo. Nell'esempio seguente, al nuovo dispositivo viene assegnato il nome **Pixel_API_27**:
 
-   [![NAssegnazione di un nome al nuovo dispositivo(device-manager-images/mac/11-device-name-m76-sml.png)](device-manager-images/mac/11-device-name-m76.png#lightbox)
+   [![Assegnazione di un nome al nuovo dispositivo](device-manager-images/mac/11-device-name-m76-sml.png)](device-manager-images/mac/11-device-name-m76.png#lightbox)
 
 2. Selezionare un dispositivo fisico da emulare facendo clic sul menu a discesa **Dispositivo di base**:
 
-   [![SSelezione del dispositivo fisico da emulare(device-manager-images/mac/12-device-menu-m76-sml.png)](device-manager-images/mac/12-device-menu-m76.png#lightbox)
+   [![Selezione del dispositivo fisico da emulare](device-manager-images/mac/12-device-menu-m76-sml.png)](device-manager-images/mac/12-device-menu-m76.png#lightbox)
 
 3. Selezionare un tipo di processore per questo dispositivo virtuale facendo clic sul menu a discesa **Processore**. La selezione di **x86** migliora al massimo le prestazioni in quanto consente all'emulatore di sfruttare [l'accelerazione hardware](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
    Anche l'opzione **x86_64** sfrutterà l'accelerazione hardware, ma funzionerà un po' più lentamente della **x86** (l'opzione **x86_64** in genere viene usata per testare app a 64-bit):
 
-   [![SSelezione del tipo di processore(device-manager-images/mac/13-processor-type-menu-m76-sml.png)](device-manager-images/mac/13-processor-type-menu-m76.png#lightbox)
+   [![Selezione del tipo di processore](device-manager-images/mac/13-processor-type-menu-m76-sml.png)](device-manager-images/mac/13-processor-type-menu-m76.png#lightbox)
 
 4. Selezionare la versione di Android (livello API) facendo clic sul menu a discesa **Sistema operativo**. Ad esempio, selezionare **Oreo 8.1 - API 27** per creare un dispositivo virtuale per il livello API 27:
 
-   [![SSelezione della versione di Android(device-manager-images/mac/14-android-screenshot-m76-sml.png)](device-manager-images/mac/14-android-screenshot-m76.png#lightbox)
+   [![Selezione della versione di Android](device-manager-images/mac/14-android-screenshot-m76-sml.png)](device-manager-images/mac/14-android-screenshot-m76.png#lightbox)
 
    Se si seleziona un livello API di Android non ancora installato, Device Manager visualizzerà il messaggio **A new device will be downloaded** (Verrà scaricato un nuovo dispositivo) nella parte inferiore della schermata &ndash; lo scaricherà e installerà i file necessari durante la creazione del nuovo dispositivo virtuale:
 
@@ -292,7 +292,7 @@ Per configurare un nuovo dispositivo nella schermata **New Device** (Nuovo dispo
 
 5. Se si desidera includere le API di Google Play Services nel dispositivo virtuale, abilitare l'opzione **Google APIs** (API Google). Per includere l'app Google Play Store, abilitare l'opzione **Google Play Store**:
 
-   [![SSelezione di Google Play Services e Google Play Store(device-manager-images/mac/16-google-play-services-m76-sml.png)](device-manager-images/mac/16-google-play-services-m76.png#lightbox)
+   [![Selezione di Google Play Services e Google Play Store](device-manager-images/mac/16-google-play-services-m76-sml.png)](device-manager-images/mac/16-google-play-services-m76.png#lightbox)
 
    Le immagini di Google Play Store sono disponibili solo per alcuni tipi di dispositivi di base, ad esempio Pixel, Pixel 2, Nexus 5 e Nexus 5X.
 
@@ -300,7 +300,7 @@ Per configurare un nuovo dispositivo nella schermata **New Device** (Nuovo dispo
 
 7. Aggiungere le eventuali proprietà addizionali che è necessario impostare in modo esplicito. La schermata **New Device** (Nuovo dispositivo) elenca solo le proprietà modificate più di frequente. Per aggiungere altre proprietà fare clic sul menu a discesa **Aggiungi proprietà** nella parte inferiore della schermata:
 
-   [![AMenu a discesa Aggiungi proprietà(device-manager-images/mac/17-add-property-menu-m76-sml.png)](device-manager-images/mac/17-add-property-menu-m76.png#lightbox)
+   [![Menu a discesa Aggiungi proprietà](device-manager-images/mac/17-add-property-menu-m76-sml.png)](device-manager-images/mac/17-add-property-menu-m76.png#lightbox)
 
    È anche possibile definire una proprietà personalizzata facendo clic su **Personalizza...** nella parte superiore dell'elenco.
 
@@ -310,29 +310,29 @@ Per configurare un nuovo dispositivo nella schermata **New Device** (Nuovo dispo
 
 9. Android Device Manager aggiunge il nuovo dispositivo all'elenco dei dispositivi virtuali installati, visualizzando un indicatore di stato **Creating** (Creazione in corso) durante la creazione del dispositivo:
 
-   [![CIndicatore di stato della creazione(device-manager-images/mac/19-creating-the-device-m76-sml.png)](device-manager-images/mac/19-creating-the-device-m76.png#lightbox)
+   [![Indicatore di stato creazione](device-manager-images/mac/19-creating-the-device-m76-sml.png)](device-manager-images/mac/19-creating-the-device-m76.png#lightbox)
 
 10. Dopo aver completato il processo di creazione, il nuovo dispositivo viene visualizzato nell'elenco di dispositivi virtuali installati, con un pulsante **Avvia** che consente di avviarlo:
 
-    [![NDispositivo appena creato pronto per l'avvio(device-manager-images/mac/20-created-device-m76-sml.png)](device-manager-images/mac/20-created-device-m76.png#lightbox)
+    [![Dispositivo appena creato pronto per l'avvio](device-manager-images/mac/20-created-device-m76-sml.png)](device-manager-images/mac/20-created-device-m76.png#lightbox)
 
 
 ### <a name="edit-device"></a>Modificare il dispositivo
 
 Per modificare un dispositivo virtuale esistente, selezionare il menu a discesa **Opzioni aggiuntive** (icona a forma di ingranaggio) e selezionare **Modifica**:
 
-[![EComando di menu Modifica per la modifica di un nuovo dispositivo(device-manager-images/mac/21-edit-button-m76-sml.png)](device-manager-images/mac/21-edit-button-m76.png#lightbox)
+[![Comando di menu Modifica per la modifica di un nuovo dispositivo](device-manager-images/mac/21-edit-button-m76-sml.png)](device-manager-images/mac/21-edit-button-m76.png#lightbox)
 
 Quando si fa clic su **Modifica** viene avviata la schermata Device Editor (Editor dispositivi) per il dispositivo virtuale selezionato:
 
-[![DSchermata Device Editor (Editor dispositivi)(device-manager-images/mac/22-device-editor-sml.png)](device-manager-images/mac/22-device-editor.png#lightbox)
+[![Schermata Device Editor (Editor dispositivi)](device-manager-images/mac/22-device-editor-sml.png)](device-manager-images/mac/22-device-editor.png#lightbox)
 
 La schermata **Device Editor** (Editor dispositivi) elenca le proprietà del dispositivo virtuale nella colonna **Proprietà** e i valori corrispondenti di ogni proprietà nella colonna **Valore**. Quando si seleziona una proprietà, sul lato destro viene visualizzata una descrizione dettagliata di tale proprietà.
 
 Per modificare una proprietà, modificarne il valore nella colonna **Valore**.
 Ad esempio, nello screenshot seguente il valore della proprietà `hw.lcd.density` viene modificato da **480** a **240**:
 
-[![DEsempio di modifica dispositivo(device-manager-images/mac/23-device-editing-sml.png)](device-manager-images/mac/23-device-editing.png#lightbox)
+[![Esempio di modifica dispositivo](device-manager-images/mac/23-device-editing-sml.png)](device-manager-images/mac/23-device-editing.png#lightbox)
 
 Dopo aver apportato le modifiche di configurazione necessarie, fare clic sul pulsante **Salva**.
 Per altre informazioni sulla modifica delle proprietà del dispositivo virtuale, vedere [Modifica delle proprietà del dispositivo virtuale Android](~/android/get-started/installation/android-emulator/device-properties.md).
@@ -342,7 +342,7 @@ Per altre informazioni sulla modifica delle proprietà del dispositivo virtuale,
 
 Opzioni aggiuntive per l'uso dei dispositivi sono disponibili nel menu a discesa visualizzato a sinistra del pulsante **Play** (Riproduci):
 
-[![LPosizione del menu delle opzioni aggiuntive(device-manager-images/mac/24-overflow-menu-sml.png)](device-manager-images/mac/24-overflow-menu.png#lightbox)
+[![Posizione del menu delle opzioni aggiuntive](device-manager-images/mac/24-overflow-menu-sml.png)](device-manager-images/mac/24-overflow-menu.png#lightbox)
 
 Il menu delle opzioni aggiuntive contiene le voci seguenti:
 
@@ -350,11 +350,11 @@ Il menu delle opzioni aggiuntive contiene le voci seguenti:
 
 - **Duplicate and Edit** (Duplica e modifica): duplica il dispositivo selezionato attualmente e lo apre nella schermata **New Device** (Nuovo dispositivo) con un nome univoco diverso. Se ad esempio si seleziona **Pixel 2 API 28** e si fa clic su **Duplicate and Edit** (Duplica e modifica) viene accodato un contatore al nome del dispositivo:
 
-  [![DSchermata Duplicate and Edit (Duplica e modifica)(device-manager-images/mac/25-dupe-and-edit-sml.png)](device-manager-images/mac/25-dupe-and-edit.png#lightbox)
+  [![Schermata Duplicate and Edit (Duplica e modifica)](device-manager-images/mac/25-dupe-and-edit-sml.png)](device-manager-images/mac/25-dupe-and-edit.png#lightbox)
 
 - **Visualizza in Finder**: apre una finestra del Finder di macOS con la cartella contenente i file del dispositivo virtuale. Se ad esempio si seleziona **Pixel 2 API 28** e si fa clic su **Reveal in Finder** (Visualizza in Finder) viene visualizzata una finestra simile alla seguente:
 
-  [![RRisultato della selezione di Visualizza in Finder(device-manager-images/mac/26-reveal-in-finder-sml.png)](device-manager-images/mac/26-reveal-in-finder.png#lightbox)
+  [![Risultato della selezione di Reveal in Finder (Visualizza in Finder)](device-manager-images/mac/26-reveal-in-finder-sml.png)](device-manager-images/mac/26-reveal-in-finder.png#lightbox)
 
 - **Factory Reset** (Ripristino delle impostazioni predefinite): ripristina le impostazioni predefinite del dispositivo selezionato, eliminando tutte le modifiche apportate dall'utente allo stato interno del dispositivo mentre era in esecuzione (eliminando anche l'eventuale snapshot per l'[avvio rapido](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) corrente). Questa modifica non annulla le modifiche apportate al dispositivo virtuale durante la creazione e la modifica. Un messaggio ricorda che questa operazione di reimpostazione non può essere annullata. Fare clic su **Ripristino delle impostazioni predefinite** per confermare la reimpostazione.
 
@@ -373,7 +373,7 @@ Il menu delle opzioni aggiuntive contiene le voci seguenti:
 
 Le sezioni seguenti descrivono come diagnosticare e risolvere i problemi che possono verificarsi quando si usa Android Device Manager per configurare i dispositivi virtuali.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ### <a name="android-sdk-in-non-standard-location"></a>Android SDK in un percorso non standard
 
@@ -393,7 +393,7 @@ Per risolvere il problema, effettuare i passaggi seguenti:
 
 2. Fare doppio clic per aprire uno dei file di log e trovare il **percorso del file di configurazione**. Ad esempio:
 
-   [![CPercorso del file di configurazione nel file di log(device-manager-images/win/31-config-file-path-sml.png)](device-manager-images/win/31-config-file-path.png#lightbox)
+   [![Percorso del file di configurazione nel file di log](device-manager-images/win/31-config-file-path-sml.png)](device-manager-images/win/31-config-file-path.png#lightbox)
 
 3. Passare a questo percorso e fare doppio clic su **user.config** per aprirlo.
 
@@ -440,7 +440,7 @@ Per risolvere il problema:
 Dopo aver apportato queste modifiche, l'AVD verrà riavviato in uno stato che consente di nuovo il funzionamento dell'accesso Wi-Fi.
 
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ### <a name="wrong-version-of-android-sdk-tools"></a>Versione errata di Android SDK Tools
 
@@ -468,7 +468,7 @@ Per risolvere il problema:
 
 4. Eliminare il file **snapshot.pb**:
 
-   [![LPercorso del file snapshot.pb(device-manager-images/mac/30-delete-snapshot-sml.png)](device-manager-images/mac/30-delete-snapshot.png#lightbox)
+   [![Percorso del file snapshot.pb](device-manager-images/mac/30-delete-snapshot-sml.png)](device-manager-images/mac/30-delete-snapshot.png#lightbox)
 
 5. Riavviare l'AVD.
 
@@ -478,18 +478,18 @@ Dopo aver apportato queste modifiche, l'AVD verrà riavviato in uno stato che co
 
 ### <a name="generating-a-bug-report"></a>Generazione di un report sui bug
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Se si rileva un problema in Android Device Manager che non può essere risolto con i suggerimenti sopra elencati, inoltrare un report sui bug facendo clic con il pulsante destro del mouse sulla barra del titolo e selezionando **Generate Bug Report** (Genera report sui bug):
 
-[![LVoce di menu per l'inoltro di un report sui bug(device-manager-images/win/34-bug-report-sml.png)](device-manager-images/win/34-bug-report.png#lightbox)
+[![Voce di menu per l'inoltro di un report sui bug](device-manager-images/win/34-bug-report-sml.png)](device-manager-images/win/34-bug-report.png#lightbox)
 
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Se si rileva un problema in Android Device Manager che non può essere risolto con i suggerimenti sopra elencati, inoltrare un report sui bug facendo clic su **Help > Report a Problem** (Aiuto > Segnala un problema):
 
-[![LVoce di menu per l'inoltro di un report sui bug(device-manager-images/mac/31-bug-report-sml.png)](device-manager-images/mac/31-bug-report.png#lightbox)
+[![Voce di menu per l'inoltro di un report sui bug](device-manager-images/mac/31-bug-report-sml.png)](device-manager-images/mac/31-bug-report.png#lightbox)
 
 ::: zone-end
 
