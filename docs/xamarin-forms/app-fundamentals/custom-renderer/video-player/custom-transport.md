@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: c6aa4aed134667f25b3822c7604b85e27a404a3a
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/15/2019
 ms.locfileid: "58870157"
 ---
 # <a name="custom-video-transport-controls"></a>Controlli di trasporto video personalizzati
 
-[![D[Scarica esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 I controlli di trasporto di un lettore video includono i pulsanti che eseguono le funzioni di **riproduzione**, **pausa** e **arresto**. Questi pulsanti sono identificati in genere con icone note anziché testo e le funzioni di **riproduzione** e **pausa** sono in genere unite in un unico pulsante.
 
@@ -540,7 +540,7 @@ Questo elemento è supportato da ogni piattaforma ma è costituito da un triango
 
 Questa è la soluzione usata nel markup illustrato di seguito. In iOS viene applicata al simbolo **Play** la stessa rappresentazione 3D dei pulsanti **Pause** e **Stop**, ma il codice variante non può essere usato in Android e UWP.
 
-La pagina **Custom Transport** (Trasporto personalizzato) imposta la proprietà **AreTransportControlsEnabled** su **false** e include `ActivityIndicator` visualizzato durante il caricamento del video e due pulsanti. `DataTrigger` sono oggetti usati per abilitare e disabilitare `ActivityIndicator` e i pulsanti e per cambiare il primo pulsante in **Play** e **Pause**:
+La pagina **Custom Transport** (Trasporto personalizzato) imposta la proprietà **AreTransportControlsEnabled** su **false** e include `ActivityIndicator` visualizzato durante il caricamento del video e due pulsanti. Gli oggetti `DataTrigger` sono usati per abilitare e disabilitare `ActivityIndicator` e i pulsanti e per cambiare il primo pulsante in **Play** e **Pause**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

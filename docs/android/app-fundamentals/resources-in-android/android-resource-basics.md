@@ -1,19 +1,19 @@
 ---
-title: Concetti fondamentali sulle risorse Android
+title: Nozioni di base sulle risorse Android
 ms.prod: xamarin
 ms.assetid: ED32E7B5-D552-284B-6385-C3EDDCC30A4B
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 2673021fae2f0a0b45761bf4ed619c92fb826b13
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b0f747c37362997563a35d9b94f8e677d4104ee1
+ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110134"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59587764"
 ---
-# <a name="android-resource-basics"></a>Concetti fondamentali sulle risorse Android
+# <a name="android-resource-basics"></a>Nozioni di base sulle risorse Android
 
 Quasi tutte le Android applicazioni avranno una sorta di risorse. come minimo hanno spesso il layout di interfaccia utente sotto forma di file XML. Quando viene creata un'applicazione xamarin. Android, le risorse predefinite sono configurati dal modello di progetto xamarin. Android:
 
@@ -96,8 +96,8 @@ In questo modo, il file **Icon. PNG** a fare riferimento nel codice come `Resour
 
 Quando si fa riferimento alle risorse a livello di codice (nel codice), è possibile accedervi tramite la gerarchia di classi di risorse che usa la sintassi seguente:
 
-```xml
-@[<PackageName>.]Resource.<ResourceType>.<ResourceName>
+```csharp
+[<PackageName>.]Resource.<ResourceType>.<ResourceName>
 ```
 
 -  **PackageName** &ndash; il pacchetto che fornisce la risorsa ed è solo necessario quando vengono utilizzate le risorse da altri pacchetti.
@@ -112,7 +112,7 @@ Quando si fa riferimento alle risorse a livello di codice (nel codice), è possi
 Accesso alle risorse in un file XML da un segue una sintassi speciale:
 
 ```xml
-@[<PackageName>:]<ResourceType>/<ResourceName>.
+@[<PackageName>:]<ResourceType>/<ResourceName>
 ```
 
 -  **PackageName** &ndash; il pacchetto che fornisce la risorsa ed è solo necessario quando vengono utilizzate le risorse da altri pacchetti.
@@ -136,8 +136,7 @@ Ad esempio il contenuto di un file di layout **Main. axml**, sono i seguenti:
 </LinearLayout>
 ```
 
-Questo esempio è costituito da un [ `ImageView` ](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) che richiede una risorsa drawable denominata **flag**. Il `ImageView` ha relativi `src` attributo impostato su **@drawable/flag**. All'avvio, l'attività Android avrà un aspetto all'interno della directory **risorsa/Drawable** per un file denominato **flag.png** (l'estensione di file potrebbe essere un altro formato di immagine, ad esempio **flag.jpg**) e caricare tale file e lo visualizza nel `ImageView`.
+Questo esempio è costituito da un [ `ImageView` ](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) che richiede una risorsa drawable denominata **flag**. Il `ImageView` ha relativi `src` attributo impostato su `@drawable/flag`. All'avvio, l'attività Android avrà un aspetto all'interno della directory **risorsa/Drawable** per un file denominato **flag.png** (l'estensione di file potrebbe essere un altro formato di immagine, ad esempio **flag.jpg**) e caricare tale file e lo visualizza nel `ImageView`.
 Quando si esegue questa applicazione, che sarebbe simile all'immagine seguente:
 
 ![ImageView localizzato](android-resource-basics-images/03-localized-screenshot.png)
-

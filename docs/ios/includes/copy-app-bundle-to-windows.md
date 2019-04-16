@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 5bcf548c0ff907df0913e77a1def2fe27f3eecfd
+ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "52295054"
+---
 
 Quando si compilano app iOS in Visual Studio e con l'agente di compilazione Mac, il bundle dell'app non viene copiato nuovamente nel computer Windows. Gli strumenti Xamarin per Visual Studio 7.4 aggiungono una nuova proprietà `CopyAppBundle` che consente alle compilazioni CI di copiare nuovamente i bundle delle app in Windows.
 
