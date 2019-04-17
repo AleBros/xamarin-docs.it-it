@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/16/2018
-ms.openlocfilehash: 12066b25ff3e5f02cf4ad17e7c8cbfdb31395405
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.openlocfilehash: 7c7a3e311a6c5f19242b51dd14f59bcdc9a75c64
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58854886"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574715"
 ---
 # <a name="installing-xamarinios-on-windows"></a>Installazione di Xamarin.iOS in Windows
 
@@ -32,6 +32,11 @@ Per compilare le app Xamarin.iOS con Visual Studio 2019 in Windows, è necessari
 - Un Mac accessibile dalla rete configurato con strumenti di compilazione Apple e Xamarin.iOS. Visual Studio 2019 accede a questa macchina tramite una connessione di rete per usare gli strumenti di compilazione Apple, necessari per la compilazione di applicazioni iOS native.
 
   - [Requisiti di sistema Mac](~/cross-platform/get-started/requirements.md#macos-requirements)
+
+  > [!TIP]
+  > Nessun accesso a un computer Mac
+  >
+  > Se non si ha accesso a un computer Mac, è possibile usare [MacinCloud](https://www.macincloud.com/pages/visual-studio-mac.html) oppure [MacStadium](https://www.macstadium.com/). Entrambi i servizi offrono hardware Mac basato sul cloud con il quale è possibile compilare progetti Xamarin.iOS.
 
 ## <a name="setup"></a>Configurazione
 

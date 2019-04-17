@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 6af392988b8ffa5f01ef07f81be53ea8f82e8fb5
-ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
+ms.openlocfilehash: 6b1df62aec12c1c34d49bd6dfa16368a6b0092f9
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477330"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574728"
 ---
 # <a name="xamarinforms-messagingcenter"></a>MessagingCenter di Xamarin.Forms
 
@@ -24,7 +24,7 @@ _Xamarin.Forms include un servizio di messaggistica semplice per l'invio e la ri
 
 ## <a name="overview"></a>Panoramica
 
-`MessagingCenter` di Xamarin.Forms abilita modelli di visualizzazione e altri componenti con cui comunicare senza la necessità di alcuna conoscenza reciproca, se non un semplice contratto di messaggio.
+`MessagingCenter` di Xamarin.Forms abilita modelli di visualizzazione e altri componenti per comunicare senza che sia necessaria una conoscenza reciproca. È sufficiente un contratto di messaggio.
 
 <a name="How_the_MessagingCenter_Works" />
 
