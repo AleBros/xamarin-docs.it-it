@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 2ab0147f918b36dc47ef6eed7d9bf1b6295d9733
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870404"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introduzione a suggerimenti proattivi in xamarin. IOS
@@ -481,7 +481,7 @@ Se l'utente visita questa pagina in Safari e quindi passato a un'altra app, le i
 Safari consentirà di estrarre qualsiasi elemento in una pagina web che rispetti le proprietà dello schema seguenti:
 
 - **PostalAddress**
-- **Coordinate geografiche**
+- **GeoCoordinates**
 - Proprietà di un telefono.
 
 Per altre informazioni, vedere la [eseguire una ricerca con Markup Web](~/ios/platform/search/web-markup.md) Guida.

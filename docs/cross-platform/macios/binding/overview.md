@@ -7,10 +7,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 11/25/2015
 ms.openlocfilehash: d29239d986ebfe153381915dbe0f4bfbbe738007
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870339"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Panoramica dei binding di Objective-C
@@ -189,5 +189,5 @@ namespace Example.Binding {
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Xamarin University Course: Compila una libreria di binding Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University Course: Creazione di una libreria di binding Objective-C con Sharpie obiettivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Corsi di Xamarin University: Compila una libreria di binding Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Corsi di Xamarin University: Creazione di una libreria di binding Objective-C con Sharpie obiettivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

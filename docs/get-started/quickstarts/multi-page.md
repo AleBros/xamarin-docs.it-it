@@ -10,15 +10,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 855962560897789dadba535f69c4a7da42bb4742
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854977"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Eseguire navigazione in un'applicazione xamarin. Forms con più pagine
 
-[![Download esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 
 In questa Guida introduttiva si apprenderà come:
 
@@ -613,9 +613,9 @@ In questa Guida introduttiva si è appreso come:
 Per modificare l'applicazione in modo che archivia i dati in un database locale di SQLite.NET, continuare per la successiva Guida introduttiva.
 
 > [!div class="nextstepaction"]
-> [Successivo](database.md)
+> [avanti](database.md)
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Note (esempio)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+- [Notes (esempio)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 - [Approfondimento di Guida introduttiva di xamarin. Forms](deepdive.md)

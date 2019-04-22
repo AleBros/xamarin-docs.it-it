@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/23/2018
 ms.openlocfilehash: 66785fcd4b38f29ca0358e1e8885e6b7da59f5a7
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854742"
 ---
 # <a name="xamarinforms-requirements"></a>Requisiti di Xamarin.Forms
@@ -43,7 +43,7 @@ Lo stato di queste piattaforme è disponibile in [Xamarin.Forms GitHub](https://
 
 Queste piattaforme non sono supportate quando si usa Xamarin.Forms 3.0:
 
-- *Windows 8.1/Windows Phone 8.1 WinRT*
+- *Windows 8.1 / Windows Phone 8.1 WinRT*
 - *Windows Phone 8 Silverlight*
 
 ### <a name="android"></a>Android
@@ -52,19 +52,19 @@ Queste piattaforme non sono supportate quando si usa Xamarin.Forms 3.0:
 
 La versione di destinazione/compilazione per i progetti Android **deve** inoltre essere impostata su *Usa la piattaforma installata più recente*. La versione minima può tuttavia essere impostata su API 19 in modo da poter continuare a supportare i dispositivi che usano Android 4.4 e versioni successive. Questi valori vengono impostati in **Opzioni progetto**:
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-**Opzioni progetto > applicazione > proprietà dell'applicazione**
+**Opzioni progetto > Applicazione > Proprietà dell'applicazione**
 
 ![Opzioni di compilazione Android in Visual Studio](requirements-images/options-android-vs-sml.png)
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-**Compilazione > generale**
+**Compila > Generale**
 
 ![Selezionare il framework di destinazione più recente](requirements-images/options-general-sml.png)
 
-**Compilazione > applicazione Android**
+**Compila > Applicazione Android**
 
 ![Selezionare il valore minimo e di destinazione le versioni di Android per la tua app](requirements-images/options-android-sml.png)
 

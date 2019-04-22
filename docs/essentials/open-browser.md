@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: 3f9e5a7a1e20b8e7d708ff80712e6262bae4baa7
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869587"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Browser
@@ -64,7 +64,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 ## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 La modalità di avvio determina il modo in cui viene avviato il browser:
 
@@ -76,7 +76,7 @@ Verrà tentato l'uso delle [schede personalizzate di Chrome](https://developer.c
 
 Verrà usato un `Intent` per richiedere l'apertura dell'URI tramite il browser normale del sistema.
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 ## <a name="system-preferred"></a>Preferita dal sistema
 
@@ -86,7 +86,7 @@ Viene usato [SFSafariViewController](xref:SafariServices.SFSafariViewController)
 
 Viene usato il metodo `OpenUrl` standard sull'applicazione principale per avviare il browser predefinito all'esterno dell'applicazione.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 Verrà sempre avviato il browser predefinito dell'utente indipendentemente da `BrowserLaunchMode`.
 

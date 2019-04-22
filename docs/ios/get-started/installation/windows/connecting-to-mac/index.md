@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
 ms.openlocfilehash: 9456686157f10d81e36b908cb0a2441e64d47663
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855146"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Associa a Mac per lo sviluppo di Xamarin.iOS
@@ -130,7 +130,7 @@ Se nella finestra di dialogo **Associa a Mac** non viene visualizzato un partico
 
     - Aprire **Preferenze di Sistema > Condivisione > Login remoto** nel Mac:
 
-        [![TIndirizzo IP del Mac in Preferenze di Sistema > Condivisione(images/sharing-ipaddress.png "Indirizzo IP del Mac in Preferenze di Sistema > Condivisione")](images/sharing.png#lightbox)
+        [![Indirizzo IP del Mac in Preferenze di Sistema > Condivisione](images/sharing-ipaddress.png "Indirizzo IP del Mac in Preferenze di Sistema > Condivisione")](images/sharing.png#lightbox)
 
     - In alternativa, usare la riga di comando. Nel terminale eseguire questo comando: 
 
@@ -143,7 +143,7 @@ Se nella finestra di dialogo **Associa a Mac** non viene visualizzato un partico
 
 2. Nella finestra di dialogo **Associa a Mac** di Visual Studio 2019 selezionare **Aggiungi Mac**:
 
-    [![TPulsante Aggiungi Mac nella finestra di dialogo Associa a Mac(images/addtomac.png "Pulsante Aggiungi Mac nella finestra di dialogo Associa a Mac")](images/addtomac-large.png#lightbox)
+    [![Pulsante Aggiungi Mac nella finestra di dialogo Associa a Mac](images/addtomac.png "Pulsante Aggiungi Mac nella finestra di dialogo Associa a Mac")](images/addtomac-large.png#lightbox)
 
 3. Immettere l'indirizzo IP del Mac e fare clic su **Aggiungi**:
 
@@ -177,7 +177,7 @@ Lo stato di avanzamento è indicato da vari prompt, come illustrato nelle scherm
 
 ||Verifica dell'installazione|Download|Installazione di
 |---|---|---|---|
-|Mono|[![M[Installazione di Mono mancante](images/mono-missing.png "Installazione di Mono mancante")](images/mono-missing-large.png#lightbox)|[![D[Download di Mono](images/mono-downloading.png "Download di Mono")](images/mono-downloading-large.png#lightbox)|[![I[Installazione di Mono](images/mono-installing.png "Installazione di Mono")](images/mono-installing-large.png#lightbox)|
+|Mono|[![Installazione di Mono mancante](images/mono-missing.png "Installazione di Mono mancante")](images/mono-missing-large.png#lightbox)|[![Download di Mono](images/mono-downloading.png "Download di Mono")](images/mono-downloading-large.png#lightbox)|[![Installazione di Mono](images/mono-installing.png "Installazione di Mono")](images/mono-installing-large.png#lightbox)|
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
@@ -192,7 +192,7 @@ Lo stato di avanzamento è indicato da vari prompt, come illustrato nelle scherm
 
 ||Verifica dell'installazione|Download|Installazione di
 |---|---|---|---|
-|Xamarin.iOS|[![M[Installazione di Xamarin.iOS mancante](images/xamios-missing.png "Installazione di Xamarin.iOS mancante")](images/xamios-missing-large.png#lightbox)|[![D[Download di Xamarin.iOS](images/xamios-downloading.png "Download di Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![I[Installazione di Xamarin.iOS](images/xamios-installing.png "Installazione di Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
+|Xamarin.iOS|[![Installazione di Xamarin.iOS mancante](images/xamios-missing.png "Installazione di Xamarin.iOS mancante")](images/xamios-missing-large.png#lightbox)|[![Download di Xamarin.iOS](images/xamios-downloading.png "Download di Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Installazione di Xamarin.iOS](images/xamios-installing.png "Installazione di Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
 
 ### <a name="xcode-tools-and-license"></a>Strumenti e licenza Xcode
 
@@ -200,7 +200,7 @@ Associa a Mac verificherà inoltre se Xcode è stato installato e la relativa li
 
 ||Verifica dell'installazione|Accettazione della licenza|
 |---|---|---|
-|Xcode|[![M[Installazione di Xcode mancante](images/xcode-missing.png "Installazione di Xcode mancante")](images/xcode-missing-large.png#lightbox)|[![X[Licenza di Xcode](images/xcode-license.png "Licenza di Xcode")](images/xcode-license-large.png#lightbox)|
+|Xcode|[![Installazione di Xcode mancante](images/xcode-missing.png "Installazione di Xcode mancante")](images/xcode-missing-large.png#lightbox)|[![Licenza Xcode](images/xcode-license.png "Licenza Xcode")](images/xcode-license-large.png#lightbox)|
 
 Inoltre, Associa a Mac installerà o aggiornerà i diversi pacchetti distribuiti con Xcode. Ad esempio:
 
@@ -228,10 +228,10 @@ C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamU
 
 I parametri passati a `msbuild` nell'esempio precedente sono:
 
-- `ServerAddress` : indirizzo IP dell'host di compilazione Mac.
-- `ServerUser` : nome utente da usare durante l'accesso all'host di compilazione Mac.
+- `ServerAddress`: indirizzo IP dell'host di compilazione Mac.
+- `ServerUser`: nome utente da usare durante l'accesso all'host di compilazione Mac.
   Usare il nome utente di sistema anziché nome e cognome.
-- `ServerPassword` : password da usare durante l'accesso all'host di compilazione Mac.
+- `ServerPassword`: password da usare durante l'accesso all'host di compilazione Mac.
 
 > [!NOTE]
 > Visual Studio 2019 archivia `msbuild` nella directory seguente: **C:\Programmi (x86)\Microsoft Visual Studio\2017\\&lt;Version&gt;\MSBuild\15.0\Bin**

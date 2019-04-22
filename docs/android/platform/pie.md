@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
 ms.openlocfilehash: e08324d5a905639e7ecd59bc4c7a5c0f02d0adfe
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854717"
 ---
 # <a name="android-pie-features"></a>Funzionalità di Android a torta
@@ -43,7 +43,7 @@ Per utilizzare le funzionalità di Android a torta nelle App basate su Xamarin, 
 
 Per iniziare a sviluppare le app Pie Android con xamarin. Android, è necessario scaricare e installare gli strumenti più recenti e i pacchetti SDK prima di poter creare il primo progetto di Android a torta:
 
-1. È consigliabile Visual Studio 2019. Se si usa Visual Studio 2017, l'aggiornamento alla [Visual Studio 2017 versione 15.8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) o versione successiva. Se si usa Visual Studio per Mac, l'aggiornamento alla [Visual Studio 2017 per Mac versione 7.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) o versione successiva.
+1. È consigliato Visual Studio 2019. Se si usa Visual Studio 2017, l'aggiornamento alla [Visual Studio 2017 versione 15.8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) o versione successiva. Se si usa Visual Studio per Mac, l'aggiornamento alla [Visual Studio 2017 per Mac versione 7.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) o versione successiva.
 
 2. Installare **grafico a torta Android (API 28)** pacchetti e strumenti tramite SDK Manager.
 
@@ -67,11 +67,11 @@ Per creare un progetto xamarin. Android 9.0, è necessario usare Android SDK Man
 
 2. Nell'angolo inferiore destro, fare clic sull'icona a forma di ingranaggio e selezionare **Repository > Google (non supportata)**:
 
-    [![Sgradazioni di grigio il Repository di Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
+    [![Impostazione del Repository a Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
 
 3. Installare il **Android a torta** pacchetti SDK, che sono elencati come **Android SDK Platform 28** nel **piattaforme** scheda (per altre informazioni sull'uso di SDK Manager, vedere [ Installazione di Android SDK](~/android/get-started/installation/android-sdk.md)):
 
-    [![Ipacchetti di Android a torta nstalling](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
+    [![Installazione di pacchetti Android a torta](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
 
 4. Se si usa un emulatore, creare un dispositivo virtuale che supporta **API a livello di 28**. Per altre informazioni sulla creazione di dispositivi virtuali, vedere [gestione dei dispositivi virtuali con Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 
@@ -111,7 +111,7 @@ Le sezioni seguenti vengono evidenziate queste funzionalità e forniscono brevi 
 Molti dispositivi Android più recente delle schermate di edge-to-edge hanno una *ritaglio visualizzare* (o "elimina banda") nella parte superiore dello schermo per la fotocamera e relatore.
 Nella schermata seguente viene fornito un esempio dell'emulatore di ritaglio:
 
-[![Aemulatore ndroid simulando un ritaglio](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
+[![Emulatore di Android che simulano un ritaglio](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
 
 Per la gestione come la finestra dell'app Visualizza il contenuto nei dispositivi con un display di ritaglio, ha aggiunto un nuovo Android a torta [LayoutInDisplayCutoutMode](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#layoutInDisplayCutoutMode) attributo di layout della finestra. Questo attributo può essere impostato su uno dei valori seguenti:
 
@@ -130,7 +130,7 @@ Window.Attributes.LayoutInDisplayCutoutMode =
 
 Negli esempi seguenti vengono forniti esempi di queste modalità di ritaglio. Il primo screenshot a sinistra è dell'app in modalità non a schermo intero. Nella schermata center, l'app passa a schermo con `LayoutInDisplayCutoutMode` impostato su `LayoutInDisplayCutoutModeShortEdges`. Si noti che uno sfondo bianco dell'app si estende nell'area di ritaglio della visualizzazione:
 
-[![Esempio visualizzare le modalità di ritaglio nell'emulatore](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
+[![Esempio di visualizzare le modalità di ritaglio nell'emulatore](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
 
 Nella schermata finale (in precedenza a destra), `LayoutInDisplayCutoutMode` è impostata su `LayoutInDisplayCutoutModeShortNever` prima di passare allo schermo.
 Si noti che uno sfondo bianco dell'app non è consentito estendere nell'area di ritaglio della visualizzazione.
@@ -155,7 +155,7 @@ Grafico a torta Android introduce i miglioramenti seguenti per migliorare l'espe
 
 L'esempio seguente illustra come usare le nuove API per generare una notifica che contiene un'immagine. Nelle schermate seguenti, una notifica di testo viene inserita ed è seguita da una notifica con un'immagine incorporata. Quando le notifiche vengono espansi (come illustrato a destra), viene visualizzato il testo della prima notifica e l'immagine incorporata in viene ingrandita della seconda notifica:
 
-[![Enotifica sempio con immagine](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
+[![Esempio di notifica con l'immagine](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
 
 L'esempio seguente illustra come includere un'immagine in una notifica a torta Android e viene illustrato l'utilizzo del nuovo `Person` classe:
 
@@ -267,4 +267,4 @@ Inclusi collegamenti alla documentazione API e per sviluppatori Android argoment
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Android 9 Pie](https://developer.android.com/about/versions/pie/)
+- [Grafico a torta 9 Android](https://developer.android.com/about/versions/pie/)

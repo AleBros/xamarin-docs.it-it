@@ -7,10 +7,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
 ms.openlocfilehash: f9cfc69c2cd711460233e609d63bcbb8eb172ccf
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854756"
 ---
 # <a name="xamarin-live-player-setup"></a>Programma di installazione di Xamarin Live Player
@@ -26,7 +26,7 @@ Xamarin Live Player consente di apportare modifiche all'App e che le modifiche i
 
 Xamarin Live Player è disponibile per Android da intalling direttamente dal [HockeyApp](https://aka.ms/xlp-hockeyapp).
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ## <a name="2-get-visual-studio-2017"></a>2. Get Visual Studio 2017
 
@@ -66,7 +66,7 @@ Xamarin Live Player, è necessario:
 
     Se il dispositivo non può essere contattato presupposti per appaiare, potrebbe apparire un errore.
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ## <a name="2-get-visual-studio-for-mac"></a>2. Ottenere Visual Studio per Mac
 
@@ -82,7 +82,7 @@ Xamarin Live Player, è necessario:
 2. Passare a **Visual Studio > Preferenze...**  e selezionare il **progetti > Xamarin Live Player (anteprima)** scheda.
 3. Segni di graduazione **Abilita Xamarin Live Player**:
 
-    [![CControlla la casella Abilita Xamarin Live Player nella finestra di dialogo Opzioni](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
+    [![Selezionare la casella Abilita Xamarin Live Player nella finestra di dialogo Opzioni](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
 
 4. Creare o aprire un progetto Xamarin (o un [esempio](~/tools/live-player/samples.md)).
 5. Scegli **Live Player** nell'elenco dei dispositivi.

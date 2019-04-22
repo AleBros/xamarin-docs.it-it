@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
 ms.openlocfilehash: 67b189254cc08fac0323b7df5fcbab5abd994c05
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855016"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Approfondimento di Guida introduttiva di xamarin. Forms
@@ -421,7 +421,7 @@ async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
 Nel `OnNoteAddedClicked` metodo, che viene eseguita quando viene aggiunta una nuova nota all'applicazione, il [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) dei `NoteEntryPage` è impostata su un nuovo `Note` istanza. Nel `OnListViewItemSelected` metodo, che viene eseguita quando viene selezionata una nota esistente nel [ `ListView` ](xref:Xamarin.Forms.ListView), il `BindingContext` del `NoteEntryPage` è impostata su selezionato `Note` istanza, che è accessibile tramite il [ `e.SelectedItem` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) proprietà.
 
 > [!IMPORTANT]
-> È possibile impostare individualmente la proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) di ogni oggetto di *destinazione*, ma questa operazione non è necessaria. `BindingContext` è una proprietà speciale che viene ereditata da tutti i relativi gruppi figlio. Pertanto, quando il `BindingContext` nella [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) è impostata su un `Note` istanza, tutti i figli del `ContentPage` hanno lo stesso `BindingContext`e consente l'associazione a proprietà pubbliche del `Note`oggetto.
+> È possibile impostare individualmente la proprietà [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) di ogni oggetto di *destinazione*, ma questa operazione non è necessaria. `BindingContext` è una proprietà speciale che viene ereditata da tutti gli elementi figlio. Pertanto, quando il `BindingContext` nella [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) è impostata su un `Note` istanza, tutti i figli del `ContentPage` hanno lo stesso `BindingContext`e consente l'associazione a proprietà pubbliche del `Note`oggetto.
 
 Il [ `Editor` ](xref:Xamarin.Forms.Editor) in `NoteEntryPage` associa quindi il `Text` proprietà del `Note` oggetto:
 
@@ -537,6 +537,6 @@ In alternativa, per informazioni aggiuntive su Xamarin.Forms un buon punto di pa
 - [Riferimento per i controlli](~/xamarin-forms/user-interface/controls/index.md)
 - [Estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Esempi di Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
-- [Esempi iniziali](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/)
-- [Riferimento API di xamarin. Forms](xref:Xamarin.Forms)
+- [Esempi introduttivi](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/)
+- [Informazioni di riferimento sull'API di Xamarin.Forms](xref:Xamarin.Forms)
 - [Apprendimento guidato gratuito (video)](https://university.xamarin.com/self-guided/)

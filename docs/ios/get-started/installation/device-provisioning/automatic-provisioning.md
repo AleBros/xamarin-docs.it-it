@@ -9,24 +9,24 @@ ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
 ms.openlocfilehash: 4d4c9980dd4c7be4ed18f1b6ce015d73b3caf836
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855172"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisioning automatico per Xamarin.iOS
 
-_Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo nello sviluppo iOS consiste nell'eseguire il provisioning del dispositivo iOS. Questa guida illustra l'uso della firma automatica per richiedere profili e certificati di sviluppo._
+_Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo per lo sviluppo iOS consiste nell'eseguire il provisioning del dispositivo iOS. Questa guida illustra l'uso della firma automatica per richiedere profili e certificati di sviluppo._
 
 ## <a name="requirements"></a>Requisiti
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 - Visual Studio per Mac 7.3 o versione successiva
 - Xcode 9 o versione successiva
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - Visual Studio 2019
 - oppure Visual Studio 2017 15.7 o versione successiva
@@ -55,7 +55,7 @@ Prima di avviare il processo di firma automatica, verificare di avere un ID Appl
 
 Per firmare automaticamente l'app per la distribuzione in un dispositivo iOS, seguire questa procedura:
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Aprire un progetto iOS in Visual Studio per Mac.
 
@@ -73,7 +73,7 @@ Per firmare automaticamente l'app per la distribuzione in un dispositivo iOS, se
 
     Se il processo di firma automatica non riesce, nel riquadro **Firma automatica** viene visualizzato il motivo dell'errore.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Associare Visual Studio 2019 a un computer Mac, come descritto nella guida [Associazione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
@@ -133,9 +133,9 @@ Se l'app usa uno di questi entitlement, Visual Studio per Mac proverà a creare 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Provisioning gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
-- [App Distribution (Distribuzione dell'app)](~/ios/deploy-test/app-distribution/index.md)
+- [Distribuzione di app](~/ios/deploy-test/app-distribution/index.md)
 - [Risoluzione dei problemi](~/ios/deploy-test/troubleshooting.md)
-- [Apple - App Distribution Guide (Apple - Guida alla distribuzione dell'app)](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
+- [Apple - App Distribution Guide](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html) (Apple - Guida alla distribuzione dell'app)
 
 ## <a name="related-video"></a>Video correlato
 

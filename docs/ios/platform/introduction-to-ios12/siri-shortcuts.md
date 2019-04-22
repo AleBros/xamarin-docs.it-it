@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
 ms.openlocfilehash: e37fd88f0d5fcf02ece0ae2f5e3164a507067e29
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869824"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Tasti di scelta rapida Siri in xamarin. IOS
@@ -227,8 +227,7 @@ Compilazione del progetto Xcode che contiene questa definizione preventivo perso
 Per visualizzare il codice generato:
 
 - Aprire **appdelegate. M**.
-- Aggiungere un'importazione al file di intestazione dell'intento personalizzato:
-`#import "OrderSoupIntent.h"`
+- Aggiungere un'importazione al file di intestazione dell'intento personalizzato: `#import "OrderSoupIntent.h"`
 - In qualsiasi metodo nella classe, aggiungere un riferimento a `OrderSoupIntent`.
 - Fare clic su `OrderSoupIntent` e scegliere **passare alla definizione**.
 - Fare doppio clic nel file appena aperta **OrderSoupIntent.h**e selezionare **Mostra nel Finder**.

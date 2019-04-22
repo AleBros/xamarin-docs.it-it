@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
 ms.openlocfilehash: 24aa6dae3767255155c6b739e50174214a28d3d8
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855250"
 ---
 # <a name="xamarinios-installation"></a>Installazione di Xamarin.iOS
@@ -40,5 +40,5 @@ Per istruzioni sull'installazione di Xamarin.iOS in un computer Windows, vedere 
 
 Dopo aver completato correttamente l'installazione di Xamarin.iOS, è necessario comprendere come eseguire il provisioning del dispositivo iOS in modo da poter sviluppare e testare un'applicazione Xamarin.iOS nel dispositivo.
 
-* [Set Up Device for Development (Configurare il dispositivo per lo sviluppo)](device-provisioning/index.md)
+* [Set Up Device for Development](device-provisioning/index.md) (Configurare il dispositivo per lo sviluppo)
 * [Provisioning gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md)

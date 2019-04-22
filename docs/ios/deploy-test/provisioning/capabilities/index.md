@@ -8,10 +8,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.openlocfilehash: 7049cc36f5f661152e027beb53180d793078beff
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855029"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Uso delle funzionalità in Xamarin.iOS
@@ -72,7 +72,7 @@ Questa sezione illustra come usare il provisioning automatico di Visual Studio o
 
 ## <a name="using-the-ide"></a>Utilizzo di IDE
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Le funzionalità vengono aggiunte a **Entitlements.plist** in Visual Studio per Mac. Per aggiungere funzionalità, seguire questa procedura:
 
@@ -92,7 +92,7 @@ Le funzionalità vengono aggiunte a **Entitlements.plist** in Visual Studio per 
 
     ![Aggiungere le funzionalità al file entitlements.plist](images/image18.png)
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Le funzionalità vengono aggiunte a **Entitlements.plist**. Per aggiungere funzionalità in Visual Studio 2019, seguire questa procedura:
 

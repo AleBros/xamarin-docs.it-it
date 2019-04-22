@@ -9,10 +9,10 @@ ms.date: 02/12/2019
 featureFlags:
 - clicktale
 ms.openlocfilehash: ee92a3430fcce5bcd389d2bfa78762b71d1d5be9
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854002"
 ---
 <div id="main" class="v2">
@@ -120,7 +120,7 @@ ms.locfileid: "58854002"
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/quickstarts/single-page.md">
                                                                         <img src="~/media/icons/i_xaml-forms.svg" alt="">
-Nuova app per dispositivi mobili </a>
+Nuova app per dispositivi mobili</a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/quickstarts/multi-page.md">
@@ -176,7 +176,7 @@ Layout pila </a>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/label/index.yml">
                                                                         <img src="~/media/icons/i_form-label.svg" alt="">
-Label </a>
+Etichetta </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/button/index.yml">
@@ -743,24 +743,19 @@ Mac</a>
         <h2>Resta sempre in contatto con noi</h2>
         <ul class="links">
            <li>
-                <a href="https://blog.xamarin.com/">
-Blog </a>
+                <a href="https://blog.xamarin.com/"> Blog </a>
             </li>
             <li>
-                <a href="https://forums.xamarin.com/">
-Forum </a>
+                <a href="https://forums.xamarin.com/"> Forum </a>
             </li>
             <li>
-                <a href="https://twitter.com/xamarinhq">
-Twitter </a>
+                <a href="https://twitter.com/xamarinhq"> Twitter </a>
             </li>
             <li>
-                <a href="https://stackoverflow.com/questions/tagged/xamarin">
-Overflow dello stack </a>
+                <a href="https://stackoverflow.com/questions/tagged/xamarin"> Stack Overflow </a>
             </li>
             <li>
-                <a href="https://dotnet.microsoft.com/platform/community">
-Community degli sviluppatori </a>
+                <a href="https://dotnet.microsoft.com/platform/community"> Community degli sviluppatori </a>
             </li>
         </ul>
     </div>

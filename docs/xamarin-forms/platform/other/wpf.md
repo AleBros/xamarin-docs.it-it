@@ -9,10 +9,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
 ms.openlocfilehash: 2bef13e7f465dd213649f88deb572eb661895250
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854808"
 ---
 # <a name="wpf-platform-setup"></a>Programma di installazione piattaforma WPF
@@ -35,7 +35,7 @@ Seguire queste istruzioni per aggiungere un'app WPF che verrà eseguita sui desk
 
 1. In Visual Studio 2019, fare doppio clic sul nome della soluzione nel **Esplora soluzioni** e scegliere **Aggiungi > Nuovo progetto...** .
 
-2. Nel **nuovo progetto** finestra, l'istruzione select a sinistra **Visual C#** e **Desktop classico di Windows**. Nell'elenco dei tipi di progetto, scegliere **App WPF (.NET Framework)**. 
+2. Nel **nuovo progetto** finestra, l'istruzione select a sinistra **Visual c#** e **Desktop classico di Windows**. Nell'elenco dei tipi di progetto, scegliere **App WPF (.NET Framework)**. 
 
 3. Digitare un nome per il progetto con un **WPF** estensione, ad esempio **BoxViewClock.WPF**. Fare clic sul **esplorare** pulsante, seleziona il **BoxViewClock** cartella, quindi premere **selezionare la cartella**. Il progetto WPF verrà impostato nella stessa directory in altri progetti nella soluzione.
 

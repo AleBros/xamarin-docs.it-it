@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 87448c556c66ea086db70699848227e1f671792b
-ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59019386"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>Il modello Model-View-ViewModel
@@ -368,4 +368,4 @@ Modello dell'uso di MVVM, l'interfaccia utente dell'app e la logica di presentaz
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Scarica eBook (PDF 2Mb)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (esempio)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)

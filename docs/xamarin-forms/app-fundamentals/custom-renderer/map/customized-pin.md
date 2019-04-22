@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 54509d0a1133d86727317366b0d229bc218cb263
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870300"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizzazione di un segnaposto per la mappa
 
-[![D[Scarica esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
 
-_Questo articolo illustra come creare un renderer personalizzato per il controllo Mappa che visualizza una mappa nativa con un segnaposto personalizzato e una visualizzazione personalizzata dei dati del segnaposto in ogni piattaforma._
+_Questo articolo illustra come creare un renderer personalizzato per il controllo mappa che visualizza una mappa nativa con un segnaposto personalizzato e una visualizzazione personalizzata dei dati del segnaposto in ogni piattaforma._
 
 A ogni visualizzazione di Xamarin.Forms è associato un renderer per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un'applicazione Xamarin.Forms esegue il rendering di un oggetto [`Map`](xref:Xamarin.Forms.Maps.Map) in iOS, viene creata un'istanza della classe `MapRenderer`, che a sua volta crea un'istanza di un controllo `MKMapView` nativo. Nella piattaforma Android la classe `MapRenderer` crea un'istanza di un controllo `MapView` nativo. Nella piattaforma UWP (Universal Windows Platform) la classe `MapRenderer` crea un'istanza di un controllo `MapControl` nativo. Per altre informazioni sulle classi del renderer e dei controlli nativi di cui Xamarin.Forms controlla il mapping, vedere [Classi di base e controlli nativi del renderer](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
@@ -236,8 +236,8 @@ Il metodo `OnElementChanged` esegue la configurazione seguente dell'istanza [`MK
 
 Il metodo `GetViewForAnnotation` viene chiamato quando la posizione dell'annotazione diventa visibile nella mappa e viene usato per personalizzare l'annotazione prima della visualizzazione. Un'annotazione è costituita da due parti:
 
-- `MkAnnotation` : include il titolo, il sottotitolo e la posizione dell'annotazione.
-- `MkAnnotationView` : contiene l'immagine che rappresenta l'annotazione e facoltativamente un callout che viene visualizzato quando l'utente tocca l'annotazione.
+- `MkAnnotation`: include il titolo, il sottotitolo e la posizione dell'annotazione.
+- `MkAnnotationView`: contiene l'immagine per rappresentare l'annotazione e, facoltativamente, un callout visualizzato quando l'utente tocca l'annotazione.
 
 Il metodo `GetViewForAnnotation` accetta `IMKAnnotation` contenente i dati dell'annotazione e restituisce `MKAnnotationView` per la visualizzazione nella mappa, come illustrato nell'esempio di codice seguente:
 
@@ -403,8 +403,8 @@ Il metodo `OnElementChanged` chiama il metodo `MapView.GetMapAsync`, che ottiene
 
 La classe `CustomMapRenderer` implementa l'interfaccia `GoogleMap.IInfoWindowAdapter` per [personalizzare la finestra informazioni](#Customizing_the_Info_Window). Questa interfaccia consente di specificare l'implementazione dei metodi seguenti:
 
-- `public Android.Views.View GetInfoWindow(Marker marker)` : questo metodo viene chiamato per restituire una finestra informazioni personalizzata per un indicatore. Se restituisce `null`, verrà usato il rendering della finestra predefinito. Se restituisce `View`, `View` verrà inserito all'interno della finestra informazioni.
-- `public Android.Views.View GetInfoContents(Marker marker)` : questo metodo viene chiamato per restituire `View` con il contenuto della finestra informazioni e viene chiamato solo se il metodo `GetInfoWindow` restituisce `null`. Se restituisce `null`, verrà usato il rendering predefinito del contenuto della finestra informazioni.
+- `public Android.Views.View GetInfoWindow(Marker marker)`: questo metodo viene chiamato per restituire una finestra informazioni personalizzata per un indicatore. Se restituisce `null`, verrà usato il rendering della finestra predefinito. Se restituisce `View`, `View` verrà inserito all'interno della finestra informazioni.
+- `public Android.Views.View GetInfoContents(Marker marker)`: questo metodo viene chiamato per restituire `View` con il contenuto della finestra informazioni e viene chiamato solo se il metodo `GetInfoWindow` restituisce `null`. Se restituisce `null`, verrà usato il rendering predefinito del contenuto della finestra informazioni.
 
 Nell'applicazione di esempio poiché viene personalizzato soltanto il contenuto della finestra informazioni, il metodo `GetInfoWindow` restituisce `null` per abilitare questa opzione.
 

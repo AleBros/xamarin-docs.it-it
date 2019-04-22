@@ -9,10 +9,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: db243a9c8dcb25f51bc7926a7aa239531e9c24f6
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58859011"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizzatore anteprima XAML per xamarin. Forms
@@ -39,11 +39,11 @@ Quando si apre un file XAML, si aprirà l'editor ingrandita o successiva per il 
 
 Scegliere se si desidera visualizzare il codice, il Visualizzatore anteprima XAML, o entrambi selezionando questi pulsanti di divisione riquadro di visualizzazione. Il pulsante centrale Scambia cosa lato il Visualizzatore anteprima e il codice si trovano in:
 
-[![Xamarin. Form controlli Visualizzatore anteprima per passare da progettazione, origine e la visualizzazione suddivisa in Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "consente di controllare Visualizzatore anteprima di xamarin. Forms per passare da progettazione, origine e la visualizzazione suddivisa in Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
+[![Consente di controllare Visualizzatore anteprima di xamarin. Forms per passare da progettazione, origine e la visualizzazione suddivisa in Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "consente di controllare Visualizzatore anteprima di xamarin. Forms per passare da progettazione, origine e la visualizzazione suddivisa in Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
 
 È possibile modificare la modalità schermo è suddividere orizzontalmente o verticalmente o comprimere completamente un riquadro:
 
-[![Xamarin. Riquadro del Visualizzatore anteprima orientamento dei controlli Form in Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "controlli orientamento del riquadro di anteprima di xamarin. Forms in Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
+[![I controlli di orientamento riquadro Visualizzatore anteprima di xamarin. Forms in Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "controlli orientamento del riquadro di anteprima di xamarin. Forms in Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -52,7 +52,7 @@ Scegliere se si desidera visualizzare il codice, il Visualizzatore anteprima XAM
 
 Il **Preview** pulsante viene visualizzato nell'editor, quando si apre una pagina XAML. Mostrare o nascondere il Visualizzatore anteprima premendo la **Preview** pulsante nell'angolo superiore destro di qualsiasi finestra del documento XAML:
 
-[![Xamarin. Form Visualizzatore anteprima in Visual Studio per Mac](xaml-previewer-images/xamlp-list-sml.png "Visualizzatore anteprima di xamarin. Forms in Visual Studio per Mac")](xaml-previewer-images/xamlp-list.png#lightbox)
+[![Visualizzatore anteprima di xamarin. Forms in Visual Studio per Mac](xaml-previewer-images/xamlp-list-sml.png "Visualizzatore anteprima di xamarin. Forms in Visual Studio per Mac")](xaml-previewer-images/xamlp-list.png#lightbox)
 
 ::: zone-end
 

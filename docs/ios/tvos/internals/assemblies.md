@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
 ms.openlocfilehash: df50b4280335001f2d27ff23a91e4098eed3ba99
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870209"
 ---
 # <a name="assemblies-supported-by-xamarin-for-tvos"></a>Gli assembly supportati da Xamarin per tvOS
@@ -26,7 +26,7 @@ Questo è un elenco degli assembly supportati da Xamarin per le app xamarin. tvo
 |Mono.Data.Sqlite.dll|1.2|Provider ADO.NET per SQLite; visualizzare [limitazioni](~/ios/data-cloud/system.data.md).|
 |Mono.Data.Tds.dll|1.2|Supporto del protocollo TDS; usato per [SqlClient](xref:System.Data.SqlClient) supportano entro [System. Data](~/ios/data-cloud/system.data.md).|
 |Mono.Security.dll|1.0|API di crittografia.|
-|monotouch.dll|1.0|Questo assembly contiene le [C# l'associazione all'API CocoaTouch](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
+|monotouch.dll|1.0|Questo assembly contiene le [c# l'associazione all'API CocoaTouch](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
 |mscorlib.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |OpenTK.dll|1.0|L'oggetto OpenGL/OpenAL orientata ai servizi API, [esteso per fornire supporto per dispositivi iPhone](xref:OpenGLES).|
 |System.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), oltre a tipi degli spazi dei nomi seguenti: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.ComponentModel.Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System.Net.Cache</li> <li>System.Net.Mail</li> <li>System.Net.Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System.Timers</li></ul>|

@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: 1a9a7b008773255d9d7743a4fcb21f02feb3e116
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869377"
 ---
 # <a name="xamarinessentials-share"></a>Xamarin.Essentials: Condividi
@@ -61,18 +61,18 @@ Interfaccia utente per la condivisione nell'applicazione esterna visualizzata qu
 
 ## <a name="platform-differences"></a>Differenze tra le piattaforme
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
-* `Subject` è la proprietà usata per l'oggetto desiderato di un messaggio.
+* La proprietà `Subject` viene usata per l'oggetto desiderato di un messaggio.
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 * `Subject` non viene usata.
 * `Title` non viene usata.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* `Title` : se non viene impostata, viene usato il nome dell'applicazione per impostazione predefinita.
+* Se non impostata, `Title` userà il nome dell'applicazione per impostazione predefinita.
 * `Subject` non viene usata.
 
 -----

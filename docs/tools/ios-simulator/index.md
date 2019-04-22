@@ -7,17 +7,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/02/2019
 ms.openlocfilehash: b962390d5a5a365ada93d1778e3efb65839f41c5
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854951"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Simulatore iOS remoto per Windows
 
 Il simulatore di Windows di iOS remoto consente di testare le App in un simulatore di iOS zobrazené Windows insieme a Visual Studio 2017 e Visual Studio 2019.
 
-[![iSimulatore del sistema operativo in esecuzione su Windows](images/hero-sml.png "simulatore iOS in esecuzione su Windows")](images/hero.png#lightbox)
+[![simulatore iOS in esecuzione su Windows](images/hero-sml.png "simulatore iOS in esecuzione su Windows")](images/hero.png#lightbox)
 
 ## <a name="getting-started"></a>Per iniziare
 
@@ -38,13 +38,13 @@ Barra degli strumenti nella parte superiore della finestra del simulatore contie
 - [**Le impostazioni** ](#settings) – Visualizza della tastiera, la posizione e altre impostazioni.
 - [**Altre opzioni** ](#other-options) : consente di visualizzare diverse opzioni di simulatore, ad esempio la rotazione, i movimenti muovendosi e ID tocco.
 
-    [![iSimulatore del sistema operativo esegue il mapping di esempio](images/maps-app-sml.png "simulatore iOS esegue il mapping di esempio")](images/maps-app.png#lightbox)
+    [![simulatore iOS viene eseguito il mapping riportato](images/maps-app-sml.png "simulatore iOS esegue il mapping di esempio")](images/maps-app.png#lightbox)
 
 ## <a name="settings"></a>Impostazioni
 
 Facendo clic sull'icona a forma di ingranaggio della barra degli strumenti consente di aprire la **impostazioni** finestra:
 
-[![iImpostazioni di simulatore del sistema operativo](images/settings-sml.png "le impostazione del simulatore iOS")](images/settings.png#lightbox)
+[![impostazioni di iOS simulator](images/settings-sml.png "le impostazione del simulatore iOS")](images/settings.png#lightbox)
 
 Queste impostazioni consentono di abilitare la tastiera hardware, scegliere un percorso a cui il dispositivo deve report (statiche e lo spostamento le posizioni sono entrambi supportate), abilitare Touch ID e reimpostare il contenuto e le impostazioni per il simulatore.
 
@@ -52,7 +52,7 @@ Queste impostazioni consentono di abilitare la tastiera hardware, scegliere un p
 
 Pulsante puntini di sospensione della barra degli strumenti vengono visualizzate altre opzioni, ad esempio la rotazione, i movimenti muovendosi e il riavvio. Queste opzioni stesso possono essere considerate come un elenco facendo clic su un punto qualsiasi nella finestra del simulatore:
 
-[![iImpostazioni aggiuntive del simulatore del sistema operativo](images/more-sml.png "ulteriori impostazioni di iOS simulator")](images/more.png#lightbox)
+[![ulteriori impostazioni di iOS simulator](images/more-sml.png "ulteriori impostazioni di iOS simulator")](images/more.png#lightbox)
 
 ## <a name="touchscreen-support"></a>Supporto touchscreen
 
@@ -64,6 +64,6 @@ Allo stesso modo, il simulatore di Windows di iOS remoto vengono considerati inp
 
 Per disabilitare il simulatore di Windows di iOS remoto, passare a **strumenti > Opzioni > Xamarin > Impostazioni iOS** e deselezionare **simulatore remoto per Windows**.
 
-[![checkbox usare simulatore](images/options-sml.png "casella di controllo per usare simulatore")](images/options.png#lightbox)
+[![casella di controllo per usare simulatore](images/options-sml.png "casella di controllo per usare simulatore")](images/options.png#lightbox)
 
 Questa opzione è disabilitata, il debug viene visualizzata dal simulatore iOS su Mac connesso host di compilazione.

@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 3aaf8e9d1eb8e0d98ad32a6b5a1286f14c7bb906
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869988"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Riepilogo del capitolo 17. Il controllo della griglia
 
-[![Download esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
 
 Il [ `Grid` ](xref:Xamarin.Forms.Grid) è un meccanismo potente layout che dispone i relativi elementi figlio in righe e colonne di celle. A differenza di HTML simile `table` elemento, il `Grid` è esclusivamente per scopi di layout invece di presentazione.
 
@@ -108,4 +108,4 @@ Inizializza il programma `Slider` elementi a un intervallo di 0 e 255 e Usa le a
 
 - [Capitolo 17 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf)
 - [Esempi di capitolo 17](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
-- [Grid](~/xamarin-forms/user-interface/layouts/grid.md)
+- [Griglia](~/xamarin-forms/user-interface/layouts/grid.md)

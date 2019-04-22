@@ -9,10 +9,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/02/2018
 ms.openlocfilehash: 9175c60c436f2e808f3658bae717a747e0401c28
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855315"
 ---
 # <a name="hello-mac-walkthrough"></a>Hello, Mac - Procedura dettagliata
@@ -316,7 +316,7 @@ Seguire questa procedura per usare Interface Builder:
 
 1. In Xcode trascinare **Push Button** (Pulsante Push) da **Library Section** (Sezione librerie):
 
-    [![](hello-mac-images/xcode07.png "Selezione di NSButton dal controllo librerie")](hello-mac-images/xcode07.png#lightbox)
+    [![](hello-mac-images/xcode07.png "Selezione di NSButton da Library Inspector")](hello-mac-images/xcode07.png#lightbox)
 
 2. Trascinare il pulsante in **View** (visualizzazione) in **Window Controller** (Controller finestre) in **Interface Editor** (Editor interfaccia):
 
@@ -591,5 +591,5 @@ Questo articolo ha descritto i componenti di base di un'app Xamarin.Mac standard
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Hello, Mac (esempio)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
+- [Hello, Mac (sample)](https://developer.xamarin.com/samples/mac/Hello_Mac/) (Hello, Mac - Esempio)
 - [Linee guida dell'interfaccia umana macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
 ms.openlocfilehash: 5d9f91300194eb45c5f5f3c52403660cf4898a19
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58853976"
 ---
 # <a name="installing-xamarin-in-visual-studio-2019"></a>Installazione di Xamarin in Visual Studio 2019
@@ -51,7 +51,7 @@ Per informazioni più dettagliate, vedere la guida [Installazione di Xamarin.iOS
 
 Per informazioni più dettagliate, vedere la guida [Installazione di Xamarin.Android in Windows](~/android/get-started/installation/windows.md).
 
-1. [Configurazione di xamarin. Android](~/android/get-started/installation/windows.md#configuration)
-2. [Uso di Xamarin Android SDK Manager](~/android/get-started/installation/android-sdk.md?ide=vs)
-3. [Emulatore di Android SDK](~/android/get-started/installation/android-emulator/index.md)
-4. [Set Up Device for Development (Configurare il dispositivo per lo sviluppo)](~/android/get-started/installation/set-up-device-for-development.md)
+1. [Configurazione di Xamarin.Android](~/android/get-started/installation/windows.md#configuration)
+2. [Using the Xamarin Android SDK Manager](~/android/get-started/installation/android-sdk.md?ide=vs) (Uso di Xamarin Android SDK Manager)
+3. [Android SDK Emulator](~/android/get-started/installation/android-emulator/index.md) (Emulatore di Android SDK)
+4. [Set Up Device for Development](~/android/get-started/installation/set-up-device-for-development.md) (Configurare il dispositivo per lo sviluppo)

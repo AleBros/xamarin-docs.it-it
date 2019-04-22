@@ -7,10 +7,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/08/2017
 ms.openlocfilehash: 89795e5df00b426c0f11c04a0844993071df1e25
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855198"
 ---
 # <a name="xamarin-live-player-app"></a>App Xamarin Live Player
@@ -38,7 +38,7 @@ Se la connessione ha esito positivo, il codice deve eseguire quasi immediatament
 
 Premere il pulsante informazioni **(i)** nella parte inferiore dell'app per visualizzare i **opzioni** menu:
 
-[![Screenshot del menu Opzioni](player-images/options-sml.png)](player-images/options.png#lightbox)
+[![Screenshot del menu di opzioni](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>Log
 
@@ -56,7 +56,7 @@ Visualizzare i log per diagnosticare i problemi.
 
 Per connettere un dispositivo per la prima volta, seguire le istruzioni riportate in [Setup & requisiti](~/tools/live-player/install.md). È possibile associare più dispositivi e gestirli tramite l'IDE.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 In Visual Studio, scegliere **strumenti > Xamarin Live Player > Gestione dei dispositivi...**
 
@@ -70,7 +70,7 @@ In questa finestra consente di eseguire le operazioni seguenti:
 
 È anche possibile accedere a questa finestra dall'elenco dei dispositivi.
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 In Visual Studio per Mac, scegliere **strumenti > (Xamarin Live Player) gestire i dispositivi...**
 

@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
 ms.openlocfilehash: a00b157940cfde8021b92004fe27a4d52bac5e0c
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855159"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Pubblicazione di app Xamarin.iOS nell'App Store
@@ -90,7 +90,7 @@ Per istruzioni dettagliate, vedere [Creazione di un profilo di provisioning di s
 
 I nuovi progetti Xamarin.iOS impostano automaticamente le _configurazioni della build_ di **debug** e **versione**. Per configurare correttamente la build di **versione**, seguire questa procedura:
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Dal **riquadro della soluzione** aprire **Info.plist**. Selezionare **Provisioning manuale**. Salvare e chiudere il file.
 2. Fare clic con il pulsante destro del mouse su **Nome progetto** nel **riquadro della soluzione**, selezionare **Opzioni** e passare alla scheda **Compilazione iOS**.
@@ -120,7 +120,7 @@ I nuovi progetti Xamarin.iOS impostano automaticamente le _configurazioni della 
 
 15. Fare clic su **OK** per salvare le modifiche alle proprietà del progetto.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Assicurarsi che Visual Studio 2019 o Visual Studio 2017 sia stato [associato a un host di compilazione Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Fare clic con il pulsante destro del mouse sul **nome del progetto** in **Esplora soluzioni** e scegliere **Proprietà**.
@@ -172,7 +172,7 @@ Per informazioni su come eseguire questa operazione, vedere la guida [Configuraz
 
 Con le impostazioni di compilazione configurate correttamente e iTunes Connect in attesa dell'invio, è possibile compilare l'app e inviarla ad Apple.
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio per Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. In Visual Studio per Mac selezionare la configurazione della build **Versione** e un dispositivo (non un simulatore) per la compilazione.
 
@@ -231,7 +231,7 @@ Con le impostazioni di compilazione configurate correttamente e iTunes Connect i
     >
     > Per risolvere questo problema, vedere [questo post nei forum di Xamarin](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1).
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 > [!NOTE]
 > Visual Studio 2017 non supporta attualmente il flusso di lavoro **Archivia per la pubblicazione** disponibile in Visual Studio per Mac.
@@ -347,11 +347,11 @@ Questo articolo ha descritto come configurare, compilare e inviare un'app iOS pe
 
 - [Portale Apple Developer (Apple)](https://developer.apple.com/account/)
 - [iTunes Connect (Apple)](https://itunesconnect.apple.com)
-- [App Store Review Guidelines (Linee guida di revisione dell'App Store) - Apple](https://developer.apple.com/appstore/resources/approval/guidelines.html)
-- [Common App Rejections (Motivi comuni per il rifiuto di app) - Apple](https://developer.apple.com/app-store/review/rejections/)
+- [App Store Review Guidelines (Apple)](https://developer.apple.com/appstore/resources/approval/guidelines.html) (Linee guida di revisione dell'App Store)
+- [Common App Rejections (Apple)](https://developer.apple.com/app-store/review/rejections/) (Rifiuti comuni di app)
 - [Uso delle funzionalità in Xamarin.iOS](~/ios/deploy-test/provisioning/capabilities/index.md)
 - [Uso degli entitlement in Xamarin.iOS](~/ios/deploy-test/provisioning/entitlements.md)
 - [Configurazione di un'app in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Icone dell'applicazione in Xamarin.iOS](~/ios/app-fundamentals/images-icons/app-icons.md)
 - [Schermate di avvio per le app Xamarin.iOS](~/ios/app-fundamentals/images-icons/launch-screens.md)
-- [Documentazione di Application Loader (Apple)](https://help.apple.com/itc/apploader/#/apdS673accdb)
+- [Application Loader documentation (Apple)](https://help.apple.com/itc/apploader/#/apdS673accdb) (Documentazione di Application Loader)

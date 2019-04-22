@@ -8,10 +8,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
 ms.openlocfilehash: 0ff9f8b5ee6f9468650b6535745706bee8f96536
-ms.sourcegitcommit: 1c2565c372207bfa257cadac2a2d23d4f90b0cea
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58866358"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usare i dati della fase di progettazione con il Visualizzatore anteprima XAML
@@ -36,7 +36,7 @@ Ad esempio, è possibile aggiungere testo a un'etichetta che in genere è associ
 <Label Text={Binding Name} d:Text="Name" />
 ```
 
-[![Ddati di ora etta con testo in un'etichetta](xaml-previewer-images/designtimedata-label-sm.png "Design-time di dati con il testo di un'etichetta")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
+[![Progettazione di dati della fase con il testo in un'etichetta](xaml-previewer-images/designtimedata-label-sm.png "Design-time di dati con il testo di un'etichetta")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
  In questo esempio, senza `d:Text`, il Visualizzatore anteprima XAML mostrerebbe nothing per l'etichetta. Al contrario, verrà visualizzato "Nome" in cui l'etichetta avranno i dati reali in fase di esecuzione.
 
@@ -46,7 +46,7 @@ Ad esempio, è possibile aggiungere testo a un'etichetta che in genere è associ
 <d:Button Text="Design Time Button" />
 ```
 
-[![Ddati di ora etta con un controllo pulsante](xaml-previewer-images/designtimedata-controls-sm.png "dati temporali con un controllo pulsante di progettazione")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
+[![Progettare i dati temporali con un controllo Button](xaml-previewer-images/designtimedata-controls-sm.png "dati temporali con un controllo pulsante di progettazione")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
 
 In questo esempio, il pulsante viene visualizzata solo in fase di progettazione. Usare questo metodo per inserire un segnaposto in per un [controllo personalizzato non è supportata per il Visualizzatore anteprima XAML](render-custom-controls.md).
 
@@ -57,7 +57,7 @@ In questo esempio, il pulsante viene visualizzata solo in fase di progettazione.
 ```csharp
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
-[![Ddati di ora etta con immagini](xaml-previewer-images/designtimedata-image-sm.png "progettare dati temporali con iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
+[![I dati ora con le immagini di progettazione](xaml-previewer-images/designtimedata-image-sm.png "progettare dati temporali con iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
 
 ## <a name="design-time-data-for-listviews"></a>Dati della fase di progettazione per controlli ListView
 
@@ -83,7 +83,7 @@ ListView che rappresentano una modalità comune per visualizzare i dati in un'ap
 </StackLayout>
 ```
 
-[![Ddati di ora etta con un ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "progettare dati temporali con un ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
+[![Progettare i dati di tempo con un ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "progettare dati temporali con un ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
 
 Questo esempio viene illustrato un ListView di tre TextCells nel Visualizzatore anteprima XAML. È possibile modificare `x:String` a un modello di dati esistente nel progetto.
 

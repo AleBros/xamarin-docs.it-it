@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
 ms.openlocfilehash: b018fe343a7d46f1323119b03a22cc3831a02d9f
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870248"
 ---
 # <a name="introduction-to-ios-10"></a>Introduzione a iOS 10
@@ -49,7 +49,7 @@ Apple ha fornito alcuni nuovi punti di estensione di App in iOS 10:
 
 - Directory di chiamata
 - Gli Intent e interfaccia utente Intent
-- Messaggi
+- Messages
 - Contenuto della notifica
 - Notification Services
 - Pack adesivi
@@ -61,7 +61,7 @@ Inoltre, 3rd party tastiera App estensioni disponibili i miglioramenti seguenti:
 
 Per altre informazioni, vedere la [Introduzione alle estensioni](~/ios/platform/extensions.md), [messaggio App Integration](~/ios/platform/message-app-integration/index.md), [Introduzione ai suggerimenti proattivi](~/ios/platform/search/proactive-suggestions.md), [ Introduzione a SiriKit](~/ios/platform/sirikit/index.md), [Introduzione alle notifiche utente](~/ios/platform/user-notifications/index.md) e di Apple [Guida per programmatori dell'estensione App](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
 
-## <a name="app-search-enhancements"></a>Miglioramenti della ricerca di App
+## <a name="app-search-enhancements"></a>Miglioramenti per la ricerca nelle app
 
 Core Spotlight in iOS 10 offre numerosi miglioramenti alla ricerca di App, ad esempio:
 
@@ -83,7 +83,7 @@ Inoltre, il framework di PassKit è stato ampliato per supportare Apple Pay di f
 
 Per altre informazioni, vedere la [Apple pagare miglioramenti](~/ios/platform/apple-pay.md) Guida.
 
-## <a name="alternate-app-icons"></a>Icone dell'App alternativo
+## <a name="alternate-app-icons"></a>Icone alternative per le app
 
 Apple ha aggiunti numerosi miglioramenti a iOS 10.3 che consentono a un'app gestire la relativa icona:
 
@@ -103,7 +103,7 @@ Inoltre, l'API CallKit offre la possibilità di creare estensioni App che è pos
 
 Per altre informazioni, vedere la [Introduzione a Callkit](~/ios/platform/callkit.md) Guida.
 
-## <a name="message-app-integration"></a>Integrazione dell'App messaggi
+## <a name="message-app-integration"></a>Integrazione dell'app Messaggi
 
 iOS 10 consente l'inclusione di un'estensione dell'App messaggi della soluzione xamarin. IOS che si integra con il **messaggi** app e presenta nuove funzionalità per l'utente. L'estensione può inviare testo, le etichette, i file multimediali e i messaggi interattivi. Sono disponibili due tipi di estensione per App i messaggi:
 
@@ -116,7 +116,7 @@ Per altre informazioni, vedere la [integrazione di App messaggio](~/ios/platform
 
 Con iOS 10, Apple verrà consentire a chiunque di principali riviste e nuove organizzazioni blogger e indipendente dal server di pubblicazione per l'iscrizione e prodotto e Distribuisci i contenuti dell'app Apple News. Per altre informazioni, vedere di Apple [notizie risorse](https://newsresources.apple.com/) documentazione.
 
-## <a name="providing-haptic-feedback"></a>Feedback Aptico
+## <a name="providing-haptic-feedback"></a>Implementazione del feedback aptico
 
 Sull'iPhone 7 e iPhone 7 Plus, Apple ha incluso nuove risposte haptics che forniscono altri modi per fisicamente coinvolgere l'utente. Usare le nuove opzioni tattili commenti e suggerimenti per rafforzare le relative azioni e ottenere l'attenzione dell'utente.
 
@@ -139,7 +139,7 @@ Un'app espone la funzionalità per il sistema utilizzando, ad esempio una raccol
 
 Per altre informazioni, vedere la [Introduzione ai suggerimenti proattivi](~/ios/platform/search/proactive-suggestions.md) Guida.
 
-## <a name="request-app-review"></a>Richiesta di revisione dell'App
+## <a name="request-app-review"></a>Richiedere una recensione per un'app
 
 Novità di iOS 10.3, il `RequestReview()` metodo consente a un'app iOS chiedere all'utente valutare o esaminarlo. Sebbene questo metodo può essere chiamato in qualsiasi punto in cui avrebbe senso nell'esperienza dell'utente, il processo di revisione è disciplinato e gestito da criteri di App Store. Di conseguenza, questo metodo può o potrebbe non essere visualizzato un avviso e non dovrebbe mai essere chiamato in risposta a un'azione dell'utente, ad esempio se si tocca un pulsante.
 
@@ -194,7 +194,7 @@ Per altre informazioni, vedere la [Framework per le notifiche utente](~/ios/plat
 
 Nuovo per iOS 10, il framework di Account sottoscrittore Video consente App tale supporto autenticato streaming o video on Demand per eseguire l'autenticazione con i rispettivi provider TV satellite o cable usando un'esperienza Single-Sign-in per l'utente finale.
 
-## <a name="wide-color"></a>Ampia gamma di colori
+## <a name="wide-color"></a>Wide Color
 
 iOS 10 estende il supporto per formati pixel intervalli estesi e gli spazi colore a livello di gamma in tutto il sistema, tra cui Framework quali Core Graphics, immagine di base, bare Metal e AVFoundation. Supporto per i dispositivi dotati di schermi di ampia gamma di colori viene diminuito ulteriormente fornendo questo comportamento in tutto lo stack di grafica intero.
 

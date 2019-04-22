@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: b94ba73b334ac68b256ca840956f987a4ef670ce
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870105"
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Torcia elettrica
@@ -22,7 +22,7 @@ La classe **Flashlight** può attivare o disattivare il flash della fotocamera d
 
 Per accedere alla funzionalità **Flashlight**, è necessaria la configurazione seguente specifica della piattaforma.
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 Le autorizzazioni Flashlight e Camera sono obbligatorie e devono essere configurate nel progetto Android. È possibile aggiungerla nei modi seguenti:
 
@@ -51,11 +51,11 @@ Aggiungendo queste autorizzazioni, [Google Play filtrerà automaticamente i disp
 [assembly: UsesFeature("android.hardware.camera.autofocus", Required = false)]
 ```
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 Non è necessaria alcuna configurazione aggiuntiva.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 Non è necessaria alcuna configurazione aggiuntiva.
 
@@ -96,7 +96,7 @@ catch (Exception ex)
 
 ## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
-### [<a name="android"></a>Android](#tab/android)
+### <a name="androidtabandroid"></a>[Android](#tab/android)
 
 La classe Flashlight è stata ottimizzata in base al sistema operativo del dispositivo.
 
@@ -108,11 +108,11 @@ Nei livelli API più recenti verrà usata la [modalità torcia](https://develope
 
 Viene creata una trama della superficie della fotocamera per attivare o disattivare l'elemento `FlashMode` dell'unità fotocamera. 
 
-### [<a name="ios"></a>iOS](#tab/ios)
+### <a name="iostabios"></a>[iOS](#tab/ios)
 
 Viene usata la classe [AVCaptureDevice](xref:AVFoundation.AVCaptureDevice) per attivare e disattivare la modalità torcia e flash del dispositivo.
 
-### [<a name="uwp"></a>UWP](#tab/uwp)
+### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 Viene usata la classe [Lamp](https://docs.microsoft.com/uwp/api/windows.devices.lights.lamp) per rilevare la prima lampada nella parte posteriore del dispositivo da attivare o disattivare.
 

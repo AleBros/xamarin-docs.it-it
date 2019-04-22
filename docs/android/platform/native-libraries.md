@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
 ms.openlocfilehash: 1b0771a0ccc2597ebd800468b82044e4020d9d94
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854613"
 ---
 # <a name="using-native-libraries"></a>Uso di librerie native
@@ -53,11 +53,11 @@ Per eseguire il debug di codice nativo C++ nel progetto, seguire questa procedur
 2. Scorrere verso il basso **opzioni di debug**.
 3. Nel **Debugger** dal menu a discesa, seleziona **C++** (anziché il valore predefinito **.Net (Xamarin)**).
 
-Gli sviluppatori di Visual Studio C++ possono vedere le [SanAngeles_NativeDebug](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/) di esempio per provare il debug di C++ da Visual Studio 2019 o Visual Studio 2017 con Xamarin; e fare riferimento al nostro [post di blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) per altre informazioni.
+Visual Studio C++ gli sviluppatori possono vedere il [SanAngeles_NativeDebug](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/) esempio per provare il debug di C++ da Visual Studio 2019 o Visual Studio 2017 con Xamarin; e fare riferimento al nostro [post di blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) per altre informazioni informazioni.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [SanAngeles_NativeDebug (esempio)](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)
+- [SanAngeles_NativeDebug (sample)](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)
 - [Lo sviluppo di applicazioni Native di Xamarin. Android](https://blogs.msdn.microsoft.com/vcblog/2015/02/23/developing-xamarin-android-native-applications/)
