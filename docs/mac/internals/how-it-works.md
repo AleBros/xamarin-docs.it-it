@@ -1,5 +1,5 @@
 ---
-title: Come funziona xamarin. Mac
+title: Come funziona Xamarin.Mac
 description: Questo documento descrive i meccanismi interni di xamarin. Mac. In particolare, analizza i costruttori, gestione della memoria, in anticipo rispetto alla compilazione e il programma di registrazione.
 ms.prod: xamarin
 ms.assetid: C2053ABB-6DBF-4233-AEEA-B72FC6A81FE1
@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 05/25/2017
-ms.openlocfilehash: cd5371cde1dfcbe3cb1aea5dbdf8439816d66d95
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0635e110cb2aa7bc00234d3d06df57e0fd6f966e
+ms.sourcegitcommit: 6f728aa0c1775224e16c0f3e583cf843d34270f9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111317"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59893231"
 ---
-# <a name="how-xamarinmac-works"></a>Come funziona xamarin. Mac
+# <a name="how-xamarinmac-works"></a>Come funziona Xamarin.Mac
 
 La maggior parte dei casi lo sviluppatore non sarà mai necessario preoccuparsi di interno "magic" di xamarin. Mac, tuttavia, avere una conoscenza approssimativa del modo in cui funziona cose dietro le quinte fornirà assistenza nell'entrambi interpretazione documentazione esistente con un C# obiettivo e il debug problemi quando si verificano.
 
-In xamarin. Mac, un'applicazione bridge tra due mondi: non è presente il runtime di Objective-C basata contenente istanze di classi native (`NSString`, `NSApplication`e così via) ed è presente il C# runtime che contiene le istanze di classi gestite (`System.String` `HttpClient`e così via). Tra questi due mondi, xamarin. Mac consente di creare un bridge bidirezionali in modo che un'app può chiamare metodi (selettori) in Objective-C (ad esempio `NSApplication.Init`) e Objective-C possono chiamare l'app C# eseguire il backup di metodi (ad esempio, i metodi in un delegato dell'app). In generale, le chiamate in Objective-C vengono gestite in modo trasparente attraverso **P/Invoke** e codice runtime Xamarin offre.
+In xamarin. Mac, un'applicazione bridge tra due mondi: Non è presente il runtime di Objective-C basata contenente istanze di classi native (`NSString`, `NSApplication`e così via) ed è presente il C# runtime che contiene le istanze di classi gestite (`System.String`, `HttpClient`e così via). Tra questi due mondi, xamarin. Mac consente di creare un bridge bidirezionali in modo che un'app può chiamare metodi (selettori) in Objective-C (ad esempio `NSApplication.Init`) e Objective-C possono chiamare l'app C# eseguire il backup di metodi (ad esempio, i metodi in un delegato dell'app). In generale, le chiamate in Objective-C vengono gestite in modo trasparente attraverso **P/Invoke** e codice runtime Xamarin offre.
 
 <a name="exposing-classes" />
 
@@ -120,7 +120,7 @@ Esistono diverse opzioni che possono essere modificate quando si abilita la comp
 - `core` -Compilazione AOT i `Xamarin.Mac`, `System` e `mscorlib` assembly.
 - `sdk` -AOT viene compilato il `Xamarin.Mac` e gli assembly di librerie di classi Base (BCL).
 - `|hybrid` -Aggiunta a una delle opzioni precedenti in questo modo ibrido AOT che consente la rimozione dei livello di integrità, ma verrà comporterà tempi di compilazione più.
-- `+` -Include un'unica per la compilazione AOT.
+- `+` -Include un singolo file per la compilazione AOT.
 - `-` -Rimuove un singolo file dalla compilazione AOT.
 
 Ad esempio, `--aot:all,-MyAssembly.dll` avrebbero consentito la compilazione AOT in tutti gli assembly di MonoBundle _tranne_ `MyAssembly.dll` e `--aot:core|hybrid,+MyOtherAssembly.dll,-mscorlib.dll` consentirebbe ibrida, includere codice AOT il `MyOtherAssembly.dll` ed esclusione di `mscorlib.dll`.
