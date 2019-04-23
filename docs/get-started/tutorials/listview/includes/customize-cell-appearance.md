@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3c88b71cea834f5e6ef20d43332904c052c6e3a6
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037624"
+---
 In precedenza [`ListView`](xref:Xamarin.Forms.ListView) veniva popolata con i dati tramite data binding. Tuttavia, nonostante il data binding in una raccolta in cui ogni oggetto definiva più elementi di dati, veniva visualizzato solo un singolo elemento di dati per ogni oggetto (proprietà `Name` dell'oggetto `Monkey`).
 
 In questo esercizio il progetto **ListViewTutorial** verrà modificato in modo che [`ListView`](xref:Xamarin.Forms.ListView) visualizzi più elementi di dati in ogni riga.

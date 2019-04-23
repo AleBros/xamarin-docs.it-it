@@ -1,9 +1,17 @@
+---
+ms.openlocfilehash: 1433246ee892d7642cb012a1aa9372153741f2b0
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037580"
+---
 L'esercitazione è stata completata. Si è appreso come:
 
 > [!div class="checklist"]
 > - Creare una classe [`ListView`](xref:Xamarin.Forms.ListView) Xamarin.Forms in XAML.
-> - Popolare la classe `ListView` con i dati.
-> - Rispondere agli elementi di `ListView` selezionati.
+> - Popolare l'elemento `ListView` con dati.
+> - Rispondere alla selezioni di voci dell'elemento `ListView`.
 > - Personalizzare l'aspetto delle celle di `ListView`.
 
 ## <a name="next-steps"></a>Passaggi successivi

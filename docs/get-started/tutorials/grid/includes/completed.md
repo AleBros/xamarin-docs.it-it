@@ -1,8 +1,16 @@
+---
+ms.openlocfilehash: d7af34feb7ca9526efef067bdce79a59164d0e3f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61375378"
+---
 L'esercitazione è stata completata. Si è appreso come:
 
 > [!div class="checklist"]
 > - Creare una classe [`Grid`](xref:Xamarin.Forms.Grid) Xamarin.Forms in XAML.
-> - Specificare le colonne e le righe per `Grid`.
+> - Specificare le colonne e le righe per l'elemento `Grid`.
 > - Estendere il contenuto su più colonne o righe in `Grid`.
 
 ## <a name="next-steps"></a>Passaggi successivi

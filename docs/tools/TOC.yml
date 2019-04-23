@@ -1,130 +1,123 @@
-items:
 - name: Strumenti
   href: index.yml
-  items:
-  - name: Simulatore iOS
-    href: ios-simulator/index.md
-    items:
-    - name: Distribuire nel simulatore iOS
-      href: ios-simulator/deploy.md
-    - name: Note sulla versione
-      href: /xamarin/tools/ios-simulator/release-notes/?context=xamarin/tools
-  - name: Inspector
-    href: inspector/index.md
-    items:
-    - name: Installazione e requisiti
-      href: inspector/install.md
-    - name: Ispezione delle applicazioni in tempo reale
-      href: inspector/inspect.md
-    - name: Note sulla versione
-      href: /xamarin/tools/inspector/release-notes/
-  - name: Live Player
-    href: live-player/index.md
-    items:
-    - name: Configurazione
-      href: live-player/install.md
-    - name: App Xamarin Live Player
-      href: live-player/player.md
-    - name: Risoluzione dei problemi
-      href: live-player/troubleshooting.md
-  - name: Profiler
-    href: profiler/index.md
-    items:
-    - name: Risoluzione dei problemi
-      href: profiler/troubleshooting.md
-    - name: Note sulla versione
-      href: /xamarin/tools/profiler/release-notes/
-  - name: Cartelle di lavoro
-    href: workbooks/index.md
-    items:
-    - name: Installazione e requisiti
-      href: workbooks/install.md
-    - name: Cartelle di lavoro interattive
-      href: workbooks/workbook.md
-    - name: Tasti di scelta rapida per l'editor
-      href: workbooks/keybindings.md
-    - name: Cartelle di lavoro di esempio
-      href: workbooks/samples/index.md
-      items:
-      - name: TinyRenderer
-        href: workbooks/samples/tinyrenderer.md
-    - name: Risoluzione dei problemi
-      href: workbooks/troubleshooting/index.md
-      items:
-      - name: Problemi noti generali e soluzioni alternative
-        href: workbooks/troubleshooting/general.md
-      - name: Problemi con Android Workbooks
-        href: workbooks/troubleshooting/android.md
-    - name: SDK per le integrazioni
-      href: workbooks/sdk/index.md
-      items:
-      - name: Panoramica dell'architettura
-        href: workbooks/sdk/architecture.md
-      - name: Argomenti avanzati sulle integrazioni
-        href: workbooks/sdk/integrations.md
-      - name: Rappresentazioni in Xamarin Workbooks
-        href: workbooks/sdk/representations.md
-      - name: Debug delle integrazioni
-        href: workbooks/sdk/debugging.md
-      - name: Integrazioni di esempio
-        href: workbooks/sdk/samples.md
-    - name: Note sulla versione
-      href: /xamarin/tools/inspector/release-notes/
-  - name: .NET Embedding
-    href: dotnet-embedding/index.md
-    items:
-    - name: Introduzione
-      href: dotnet-embedding/get-started/index.md
-      items:
-      - name: Installazione
-        href: dotnet-embedding/get-started/install/install.md
-      - name: C
-        href: dotnet-embedding/get-started/c.md
-      - name: Java
-        href: dotnet-embedding/get-started/java/index.md
-        items:
-        - name: Android
-          href: dotnet-embedding/get-started/java/android.md
-      - name: Objective-C
-        href: dotnet-embedding/get-started/objective-c/index.md
-        items:
-        - name: iOS
-          href: dotnet-embedding/get-started/objective-c/ios.md
-        - name: macOS
-          href: dotnet-embedding/get-started/objective-c/macos.md
-    - name: Android
-      href: dotnet-embedding/android/index.md
-      items:
-      - name: Callback di Android
-        href: dotnet-embedding/android/callbacks.md
-    - name: Objective-C
-      href: dotnet-embedding/objective-c/index.md
-      items:
-      - name: Suggerimenti
-        href: dotnet-embedding/objective-c/best-practices.md
-      - name: Piattaforme
-        href: dotnet-embedding/objective-c/platforms.md
-    - name: Limitazioni
-      href: dotnet-embedding/limitations.md
-    - name: Note sulla versione
-      href: /xamarin/tools/dotnet-embedding/release-notes/
-  - name: Integrazione continua
-    href: ci/index.md
-    items:
-    - name: Introduzione all'integrazione continua
-      href: ci/intro-to-ci.md
-    - name: DevOps con Xamarin
-      href: ci/devops.md
-    - name: Uso di App Center Build con Xamarin
-      href: /appcenter/build/xamarin/
-    - name: Uso di TeamCity con Xamarin
-      href: ci/teamcity.md
-    - name: Uso di Jenkins con Xamarin
-      href: ci/jenkins-walkthrough.md
   expanded: true
-ms.openlocfilehash: d5645302045dd5b7552f79bcddbcb60b43c74d7a
-ms.sourcegitcommit: 6f728aa0c1775224e16c0f3e583cf843d34270f9
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59893049"
+  items:
+    - name: Simulatore iOS
+      href: ios-simulator/index.md
+      items:
+        - name: Distribuire nel simulatore iOS
+          href: ios-simulator/deploy.md
+        - name: Note sulla versione
+          href: /xamarin/tools/ios-simulator/release-notes/?context=xamarin/tools
+    - name: Inspector
+      href: inspector/index.md
+      items:
+        - name: Installazione e requisiti
+          href: inspector/install.md
+        - name: Ispezione delle applicazioni in tempo reale
+          href: inspector/inspect.md
+        - name: Note sulla versione
+          href: /xamarin/tools/inspector/release-notes/
+    - name: Live Player
+      href: live-player/index.md
+      items:
+        - name: Configurazione
+          href: live-player/install.md
+        - name: App Xamarin Live Player
+          href: live-player/player.md
+        - name: Risoluzione dei problemi
+          href: live-player/troubleshooting.md
+    - name: Profiler
+      href: profiler/index.md
+      items:
+        - name: Risoluzione dei problemi
+          href: profiler/troubleshooting.md
+        - name: Note sulla versione
+          href: /xamarin/tools/profiler/release-notes/
+    - name: Cartelle di lavoro
+      href: workbooks/index.md
+      items:
+        - name: Installazione e requisiti
+          href: workbooks/install.md
+        - name: Cartelle di lavoro interattive
+          href: workbooks/workbook.md
+        - name: Tasti di scelta rapida per l'editor
+          href: workbooks/keybindings.md
+        - name: Cartelle di lavoro di esempio
+          href: workbooks/samples/index.md
+          items:
+            - name: TinyRenderer
+              href: workbooks/samples/tinyrenderer.md
+        - name: Risoluzione dei problemi
+          href: workbooks/troubleshooting/index.md
+          items:
+            - name: Problemi noti generali e soluzioni alternative
+              href: workbooks/troubleshooting/general.md
+            - name: Problemi con Android Workbooks
+              href: workbooks/troubleshooting/android.md
+        - name: SDK per le integrazioni
+          href: workbooks/sdk/index.md
+          items:
+            - name: Panoramica dell'architettura
+              href: workbooks/sdk/architecture.md
+            - name: Argomenti avanzati sulle integrazioni
+              href: workbooks/sdk/integrations.md
+            - name: Rappresentazioni in Xamarin Workbooks
+              href: workbooks/sdk/representations.md
+            - name: Debug delle integrazioni
+              href: workbooks/sdk/debugging.md
+            - name: Integrazioni di esempio
+              href: workbooks/sdk/samples.md
+        - name: Note sulla versione
+          href: /xamarin/tools/inspector/release-notes/
+    - name: .NET Embedding
+      href: dotnet-embedding/index.md
+      items:
+        - name: Introduzione
+          href: dotnet-embedding/get-started/index.md
+          items:
+            - name: Installazione
+              href: dotnet-embedding/get-started/install/install.md
+            - name: C
+              href: dotnet-embedding/get-started/c.md
+            - name: Java
+              href: dotnet-embedding/get-started/java/index.md
+              items:
+                - name: Android
+                  href: dotnet-embedding/get-started/java/android.md
+            - name: Objective-C
+              href: dotnet-embedding/get-started/objective-c/index.md
+              items:
+                - name: iOS
+                  href: dotnet-embedding/get-started/objective-c/ios.md
+                - name: macOS
+                  href: dotnet-embedding/get-started/objective-c/macos.md
+        - name: Android
+          href: dotnet-embedding/android/index.md
+          items:
+            - name: Callback di Android
+              href: dotnet-embedding/android/callbacks.md
+        - name: Objective-C
+          href: dotnet-embedding/objective-c/index.md
+          items:
+            - name: Suggerimenti
+              href: dotnet-embedding/objective-c/best-practices.md
+            - name: Piattaforme
+              href: dotnet-embedding/objective-c/platforms.md
+        - name: Limitazioni
+          href: dotnet-embedding/limitations.md
+        - name: Note sulla versione
+          href: /xamarin/tools/dotnet-embedding/release-notes/
+    - name: Integrazione continua
+      href: ci/index.md
+      items:
+        - name: Introduzione all'integrazione continua
+          href: ci/intro-to-ci.md
+        - name: DevOps con Xamarin
+          href: ci/devops.md
+        - name: Uso di App Center Build con Xamarin
+          href: /appcenter/build/xamarin/
+        - name: Uso di TeamCity con Xamarin
+          href: ci/teamcity.md
+        - name: Uso di Jenkins con Xamarin
+          href: ci/jenkins-walkthrough.md

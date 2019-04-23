@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8a4fbed10fa52c08a63f3aed306fe5cde21804b4
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384481"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`Image`](xref:Xamarin.Forms.Image) per personalizzarne l'aspetto:

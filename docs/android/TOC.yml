@@ -1,664 +1,657 @@
-items:
 - name: Xamarin.Android
   href: index.yml
-  items:
-  - name: Introduzione
-    href: get-started/index.md
-    items:
-    - name: Installazione e configurazione
-      href: get-started/installation/index.md
-      items:
-      - name: Installazione di Windows
-        href: get-started/installation/windows.md
-      - name: Installazione di Android SDK
-        href: get-started/installation/android-sdk.md
-      - name: Configurazione dell'emulatore Android
-        href: get-started/installation/android-emulator/index.md
-        items:
-        - name: Accelerazione hardware (Hyper-V e HAXM)
-          href: get-started/installation/android-emulator/hardware-acceleration.md
-        - name: Device Manager
-          href: get-started/installation/android-emulator/device-manager.md
-        - name: Proprietà del dispositivo
-          href: get-started/installation/android-emulator/device-properties.md
-        - name: Risoluzione dei problemi
-          href: get-started/installation/android-emulator/troubleshooting.md
-      - name: Installazione di dispositivi Android
-        href: get-started/installation/set-up-device-for-development.md
-      - name: Anteprima di Microsoft Mobile OpenJDK
-        href: get-started/installation/openjdk.md
-    - name: Hello, Android
-      href: get-started/hello-android/index.md
-      items:
-      - name: Parte 1. Guida rapida
-        href: get-started/hello-android/hello-android-quickstart.md
-      - name: Parte 2. Approfondimenti
-        href: get-started/hello-android/hello-android-deepdive.md
-    - name: Hello, Android Multiscreen
-      href: get-started/hello-android-multiscreen/index.md
-      items:
-      - name: Parte 1. Guida rapida
-        href: get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
-      - name: Parte 2. Approfondimenti
-        href: get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md
-    - name: Xamarin per sviluppatori Java
-      href: get-started/java-developers.md
-    expanded: true
-  - name: Nozioni fondamentali sulle applicazioni
-    href: app-fundamentals/index.md
-    items:
-    - name: Accessibilità
-      href: app-fundamentals/accessibility.md
-    - name: Livelli di API Android
-      href: app-fundamentals/android-api-levels.md
-    - name: Risorse Android
-      href: app-fundamentals/resources-in-android/index.md
-      items:
-      - name: Nozioni di base sulle risorse Android
-        href: app-fundamentals/resources-in-android/android-resource-basics.md
-      - name: Risorse predefinite
-        href: app-fundamentals/resources-in-android/default-resources.md
-      - name: Risorse alternative
-        href: app-fundamentals/resources-in-android/alternate-resources.md
-      - name: Creazione di risorse per schermi diversi
-        href: app-fundamentals/resources-in-android/resources-for-varying-screens.md
-      - name: Localizzazione delle applicazioni e risorse di tipo stringa
-        href: app-fundamentals/resources-in-android/application-localization.md
-      - name: Uso di asset Android
-        href: app-fundamentals/resources-in-android/android-assets.md
-      - name: Tipi di carattere
-        href: app-fundamentals/resources-in-android/fonts.md
-    - name: Ciclo di vita dell'attività
-      href: app-fundamentals/activity-lifecycle/index.md
-      items:
-      - name: Procedura dettagliata - Salvataggio dello stato dell'attività
-        href: app-fundamentals/activity-lifecycle/saving-state.md
-    - name: Servizi di Android
-      href: app-fundamentals/services/index.md
-      items:
-      - name: Creazione di un servizio
-        href: app-fundamentals/services/creating-a-service/index.md
-        items:
-        - name: Servizi associati
-          href: app-fundamentals/services/creating-a-service/bound-services.md
-        - name: Servizi Intent
-          href: app-fundamentals/services/creating-a-service/intent-services.md
-        - name: Servizi avviati
-          href: app-fundamentals/services/creating-a-service/started-services.md
-      - name: Servizi in primo piano
-        href: app-fundamentals/services/foreground-services.md
-      - name: Servizi out-of-process
-        href: app-fundamentals/services/out-of-process-services.md
-      - name: Notifiche del servizio
-        href: app-fundamentals/services/service-notifications.md
-    - name: Ricevitori di trasmissione
-      href: app-fundamentals/broadcast-receivers.md
-    - name: Localizzazione
-      href: app-fundamentals/localization.md
-    - name: Autorizzazioni
-      href: app-fundamentals/permissions.md
-    - name: Grafica e animazione
-      href: app-fundamentals/graphics-and-animation.md
-    - name: Architetture CPU
-      href: app-fundamentals/cpu-architectures.md
-    - name: Gestione della rotazione
-      href: app-fundamentals/handling-rotation.md
-    - name: Audio
-      href: app-fundamentals/android-audio.md
-    - name: Notifiche
-      href: app-fundamentals/notifications/index.md
-      items:
-      - name: Notifiche locali
-        href: app-fundamentals/notifications/local-notifications.md
-      - name: Procedura dettagliata per le notifiche locali
-        href: app-fundamentals/notifications/local-notifications-walkthrough.md
-    - name: Tocco
-      href: app-fundamentals/touch/index.md
-      items:
-      - name: Tocco in Android
-        href: app-fundamentals/touch/touch-in-android.md
-      - name: Procedura dettagliata- Uso del tocco in Android
-        href: app-fundamentals/touch/android-touch-walkthrough.md
-      - name: Rilevamento del multitouch
-        href: app-fundamentals/touch/touch-tracking.md
-    - name: Stack HttpClient e SSL/TLS
-      href: app-fundamentals/http-stack.md
-    - name: Scrittura di app reattive
-      href: app-fundamentals/writing-responsive-apps.md
-  - name: Interfaccia utente
-    href: user-interface/index.md
-    items:
-    - name: Android Designer
-      href: user-interface/android-designer/index.md
-      items:
-      - name: Uso di Android Designer
-        href: user-interface/android-designer/designer-walkthrough.md
-      - name: Nozioni di base su Designer
-        href: user-interface/android-designer/designer-basics.md
-      - name: Qualificatori delle risorse e opzioni di visualizzazione
-        href: user-interface/android-designer/resource-qualifiers.md
-      - name: Visualizzazioni con layout alternativi
-        href: user-interface/android-designer/alternative-layout-views.md
-      - name: Funzionalità di Material Design
-        href: user-interface/android-designer/material-design-features.md
-    - name: Tema Material
-      href: user-interface/material-theme.md
-    - name: Profilo utente
-      href: user-interface/user-profile.md
-    - name: Schermata iniziale
-      href: user-interface/splash-screen.md
-    - name: Layout
-      href: user-interface/layouts/index.md
-      items:
-      - name: LinearLayout
-        href: user-interface/layouts/linear-layout.md
-      - name: RelativeLayout
-        href: user-interface/layouts/relative-layout.md
-      - name: TableLayout
-        href: user-interface/layouts/table-layout.md
-      - name: RecyclerView
-        href: user-interface/layouts/recycler-view/index.md
-        items:
-        - name: Parti e funzionalità
-          href: user-interface/layouts/recycler-view/parts-and-functionality.md
-        - name: Esempio di RecyclerView
-          href: user-interface/layouts/recycler-view/recyclerview-example.md
-        - name: Estensione dell'esempio
-          href: user-interface/layouts/recycler-view/extending-the-example.md
-      - name: ListView
-        href: user-interface/layouts/list-view/index.md
-        items:
-        - name: Parti e funzionalità di ListView
-          href: user-interface/layouts/list-view/parts-and-functionality.md
-        - name: Popolamento di un controllo ListView con dati
-          href: user-interface/layouts/list-view/populating.md
-        - name: Personalizzazione dell'aspetto di un controllo ListView
-          href: user-interface/layouts/list-view/customizing-appearance.md
-        - name: Uso di CursorAdapter
-          href: user-interface/layouts/list-view/cursor-adapters.md
-        - name: Uso di un ContentProvider
-          href: user-interface/layouts/list-view/content-provider.md
-        - name: ListView e ciclo di vita delle attività
-          href: user-interface/layouts/list-view/activity-lifecycle.md
-      - name: GridView
-        href: user-interface/layouts/grid-view.md
-      - name: GridLayout
-        href: user-interface/layouts/grid-layout.md
-      - name: Layout a schede
-        href: user-interface/layouts/tab-layout/index.md
-        items:
-        - name: Schede di spostamento con ActionBar
-          href: user-interface/layouts/tab-layout/with-action-bar.md
-    - name: Controlli
-      href: user-interface/controls/index.md
-      items:
-      - name: ActionBar
-        href: user-interface/controls/action-bar.md
-      - name: Completamento automatico
-        href: user-interface/controls/auto-complete.md
-      - name: Pulsanti
-        href: user-interface/controls/buttons/index.md
-        items:
-        - name: RadioButton
-          href: user-interface/controls/buttons/radio-button.md
-        - name: Interruttore
-          href: user-interface/controls/buttons/toggle-button.md
-        - name: CheckBox
-          href: user-interface/controls/buttons/check-box.md
-        - name: Pulsante personalizzato
-          href: user-interface/controls/buttons/custom-button.md
-      - name: Calendar
-        href: user-interface/controls/calendar.md
-      - name: CardView
-        href: user-interface/controls/card-view.md
-      - name: EditText
-        href: user-interface/controls/edit-text.md
-      - name: Raccolta
-        href: user-interface/controls/gallery.md
-      - name: Barra di spostamento
-        href: user-interface/controls/navigation-bar.md
-      - name: Selezioni
-        href: user-interface/controls/pickers/index.md
-        items:
-        - name: Selezione data
-          href: user-interface/controls/pickers/date-picker.md
-        - name: Selezione ora
-          href: user-interface/controls/pickers/time-picker.md
-      - name: Menu popup
-        href: user-interface/controls/popup-menu.md
-      - name: RatingBar
-        href: user-interface/controls/ratingbar.md
-      - name: Spinner
-        href: user-interface/controls/spinner.md
-      - name: Opzione
-        href: user-interface/controls/switch.md
-      - name: TextureView
-        href: user-interface/controls/texture-view.md
-      - name: ToolBar
-        href: user-interface/controls/tool-bar/index.md
-        items:
-        - name: Sostituzione della Barra delle azioni
-          href: user-interface/controls/tool-bar/replacing-the-action-bar.md
-        - name: Aggiunta di una seconda barra degli strumenti
-          href: user-interface/controls/tool-bar/adding-a-second-toolbar.md
-        - name: Compatibilità di Toolbar
-          href: user-interface/controls/tool-bar/toolbar-compatibility.md
-      - name: ViewPager
-        href: user-interface/controls/view-pager/index.md
-        items:
-        - name: ViewPager con visualizzazioni
-          href: user-interface/controls/view-pager/viewpager-and-views.md
-        - name: ViewPager con frammenti
-          href: user-interface/controls/view-pager/viewpager-and-fragments.md
-      - name: WebView
-        href: user-interface/controls/web-view.md
-  - name: Funzionalità della piattaforma
-    href: platform/index.md
-    items:
-    - name: Android Beam
-      href: platform/android-beam.md
-    - name: Manifesto Android
-      href: platform/android-manifest.md
-    - name: Accesso ai file con Xamarin.Android
-      href: platform/files/index.md
-      items:
-      - name: Archiviazione esterna
-        href: platform/files/external-storage.md
-    - name: Autenticazione con impronta digitale
-      href: platform/fingerprint-authentication/index.md
-      items:
-      - name: Introduzione
-        href: platform/fingerprint-authentication/get-started.md
-      - name: Lettura delle impronte digitali
-        href: platform/fingerprint-authentication/scanning.md
-      - name: Creazione di CryptoObject
-        href: platform/fingerprint-authentication/creating-a-cryptoobject.md
-      - name: Risposta ai callback di autenticazione
-        href: platform/fingerprint-authentication/fingerprint-authentication-callbacks.md
-      - name: Linee guida e riepilogo
-        href: platform/fingerprint-authentication/summary.md
-      - name: Registrazione di un'impronta digitale
-        href: platform/fingerprint-authentication/enrolling-fingerprint.md
-    - name: Utilità di pianificazione di processo Android
-      href: platform/android-job-scheduler.md
-    - name: Firebase Job Dispatcher
-      href: platform/firebase-job-dispatcher.md
-    - name: Frammenti
-      href: platform/fragments/index.md
-      items:
-      - name: Implementazione di frammenti
-        href: platform/fragments/implementing-with-fragments/index.md
-        items:
-        - name: Procedura dettagliata Frammenti - Parte 1
-          href: platform/fragments/implementing-with-fragments/walkthrough.md
-        - name: Procedura dettagliata Frammenti - Parte 2
-          href: platform/fragments/implementing-with-fragments/walkthrough-landscape.md
-      - name: Creazione di un frammento
-        href: platform/fragments/creating-a-fragment.md
-      - name: Gestione dei frammenti
-        href: platform/fragments/managing-fragments.md
-      - name: Classi di frammenti specializzate
-        href: platform/fragments/specialized-fragment-classes.md
-      - name: Compatibilità con le versioni precedenti
-        href: platform/fragments/providing-backwards-compatibility.md
-    - name: Collegamento di app
-      href: platform/app-linking.md
-    - name: Android 9 Pie
-      href: platform/pie.md
-    - name: Android 8 Oreo
-      href: platform/oreo.md
-    - name: Android 7 Nougat
-      href: platform/nougat.md
-    - name: Android 6 Marshmallow
-      href: platform/marshmallow.md
-    - name: Android 5 Lollipop
-      href: platform/lollipop.md
-    - name: Android 4.4 KitKat
-      href: platform/kitkat.md
-    - name: Android 4.1 Jelly Bean
-      href: platform/jelly-bean.md
-    - name: Android 4.0 Ice Cream Sandwich
-      href: platform/ice-cream-sandwich.md
-    - name: Provider di contenuto
-      href: platform/content-providers/index.md
-      items:
-      - name: Come funziona
-        href: platform/content-providers/how-it-works.md
-      - name: Uso del ContentProvider Contacts
-        href: platform/content-providers/contacts-contentprovider.md
-      - name: Creazione di un ContentProvider personalizzato
-        href: platform/content-providers/custom-contentprovider.md
-    - name: Mappe e posizione
-      href: platform/maps-and-location/index.md
-      items:
-      - name: Percorso
-        href: platform/maps-and-location/location.md
-      - name: Mappe
-        href: platform/maps-and-location/maps/index.md
-        items:
-        - name: Applicazione Maps
-          href: platform/maps-and-location/maps/maps-application.md
-        - name: API Maps
-          href: platform/maps-and-location/maps/maps-api.md
-        - name: Ottenere una chiave API Google Maps
-          href: platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md
-    - name: Uso di Android.Speech
-      href: platform/speech.md
-    - name: Integrazione di Java
-      href: platform/java-integration/index.md
-      items:
-      - name: Android Callable Wrapper
-        href: platform/java-integration/android-callable-wrappers.md
-      - name: Utilizzo di JNI
-        href: platform/java-integration/working-with-jni.md
-      - name: Convertire Java in C#
-        href: platform/java-integration/porting-java-to-csharp.md
-    - name: Associazione di una libreria Java
-      href: platform/binding-java-library/index.md
-      items:
-      - name: Associazione di un file JAR
-        href: platform/binding-java-library/binding-a-jar.md
-      - name: Associazione di un file AAR
-        href: platform/binding-java-library/binding-an-aar.md
-      - name: Associazione di un progetto di libreria Eclipse
-        href: platform/binding-java-library/binding-a-library-project.md
-      - name: Personalizzazione delle associazioni
-        href: platform/binding-java-library/customizing-bindings/index.md
-        items:
-        - name: Metadati per le associazioni Java
-          href: platform/binding-java-library/customizing-bindings/java-bindings-metadata.md
-        - name: Denominazione dei parametri con Javadoc
-          href: platform/binding-java-library/customizing-bindings/naming-parameters-with-javadoc.md
-      - name: Risoluzione dei problemi delle associazioni
-        href: platform/binding-java-library/troubleshooting-bindings.md
-    - name: Uso di librerie native
-      href: platform/native-libraries.md
-    - name: Renderscript
-      href: platform/renderscript.md
-  - name: Xamarin.Essentials
-    href: ~/essentials/index.md?context=xamarin/android
-    items:
-    - name: Introduzione
-      href: ~/essentials/get-started.md?context=xamarin/android
-    - name: Accelerometro
-      href: ~/essentials/accelerometer.md?context=xamarin/android
-    - name: Informazioni sull'app
-      href: ~/essentials/app-information.md?context=xamarin/android
-    - name: Barometro
-      href: ~/essentials/barometer.md?context=xamarin/android
-    - name: Batteria
-      href: ~/essentials/battery.md?context=xamarin/android
-    - name: Appunti
-      href: ~/essentials/clipboard.md?context=xamarin/android
-    - name: Convertitori di colori
-      href: ~/essentials/color-converters.md?context=xamarin/android
-    - name: Bussola
-      href: ~/essentials/compass.md?context=xamarin/android
-    - name: Connettività
-      href: ~/essentials/connectivity.md?context=xamarin/android
-    - name: Rileva stretta
-      href: ~/essentials/detect-shake.md?context=xamarin/android
-    - name: Informazioni sullo schermo del dispositivo
-      href: ~/essentials/device-display.md?context=xamarin/android
-    - name: Informazioni sul dispositivo
-      href: ~/essentials/device-information.md?context=xamarin/android
-    - name: Email
-      href: ~/essentials/email.md?context=xamarin/android
-    - name: Helper di file system
-      href: ~/essentials/file-system-helpers.md?context=xamarin/android
-    - name: Torcia elettrica
-      href: ~/essentials/flashlight.md?context=xamarin/android
-    - name: Geocodifica
-      href: ~/essentials/geocoding.md?context=xamarin/android
-    - name: Georilevazione
-      href: ~/essentials/geolocation.md?context=xamarin/android
-    - name: Giroscopio
-      href: ~/essentials/gyroscope.md?context=xamarin/android
-    - name: Utilità di avvio
-      href: ~/essentials/launcher.md?context=xamarin/android
-    - name: Magnetometro
-      href: ~/essentials/magnetometer.md?context=xamarin/android
-    - name: Thread principale
-      href: ~/essentials/main-thread.md?context=xamarin/android
-    - name: Mappe
-      href: ~/essentials/maps.md?context=xamarin/android
-    - name: Apri browser
-      href: ~/essentials/open-browser.md?context=xamarin/android
-    - name: Sensore di orientamento
-      href: ~/essentials/orientation-sensor.md?context=xamarin/android
-    - name: Dialer telefono
-      href: ~/essentials/phone-dialer.md?context=xamarin/android
-    - name: Estensioni piattaforma (dimensioni, rettangolo, punto)
-      href: ~/essentials/platform-extensions.md?context=xamarin/android
-    - name: Preferenze
-      href: ~/essentials/preferences.md?context=xamarin/android
-    - name: Archiviazione sicura
-      href: ~/essentials/secure-storage.md?context=xamarin/android
-    - name: Condividi
-      href: ~/essentials/share.md?context=xamarin/android
-    - name: SMS
-      href: ~/essentials/sms.md?context=xamarin/android
-    - name: Sintesi vocale
-      href: ~/essentials/text-to-speech.md?context=xamarin/android
-    - name: Convertitori di unità
-      href: ~/essentials/unit-converters.md?context=xamarin/android
-    - name: Rilevamento versione
-      href: ~/essentials/version-tracking.md?context=xamarin/android
-    - name: Vibrazione
-      href: ~/essentials/vibrate.md?context=xamarin/android
-    - name: Risoluzione dei problemi
-      href: ~/essentials/troubleshooting.md?context=xamarin/android
-  - name: Dati e servizi cloud
-    href: data-cloud/index.md
-    items:
-    - name: Azure Active Directory
-      href: ~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/android
-      items:
-      - name: Introduzione
-        href: ~/cross-platform/data-cloud/active-directory/get-started/index.md?context=xamarin/android
-        items:
-        - name: Passaggio 1. Registrazione
-          href: ~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/android
-        - name: Passaggio 2. Configurazione
-          href: ~/cross-platform/data-cloud/active-directory/get-started/configure.md?context=xamarin/android
-      - name: Accesso all'API Graph
-        href: ~/cross-platform/data-cloud/active-directory/graph.md?context=xamarin/android
-    - name: App per dispositivi mobili di Azure
-      href: ~/cross-platform/data-cloud/mobile-apps.md?context=xamarin/android
-    - name: Accesso ai dati
-      href: data-cloud/data-access/index.md
-      items:
-      - name: Introduzione
-        href: data-cloud/data-access/introduction.md
-      - name: Configurazione
-        href: data-cloud/data-access/configuration.md
-      - name: Uso di SQLite.NET ORM
-        href: data-cloud/data-access/using-sqlite-orm.md
-      - name: Uso di ADO.NET
-        href: data-cloud/data-access/using-adonet.md
-      - name: Uso dei dati in un'app
-        href: data-cloud/data-access/using-data-in-an-app.md
-    - name: Messaggistica di Google
-      href: data-cloud/google-messaging/index.md
-      items:
-      - name: Firebase Cloud Messaging
-        href: data-cloud/google-messaging/firebase-cloud-messaging.md
-      - name: Procedura dettagliata per le notifiche FCM
-        href: data-cloud/google-messaging/remote-notifications-with-fcm.md
-      - name: Google Cloud Messaging
-        href: data-cloud/google-messaging/google-cloud-messaging.md
-      - name: Procedura dettagliata per le notifiche GCM
-        href: data-cloud/google-messaging/remote-notifications-with-gcm.md
-    - name: Servizi Web
-      href: ~/cross-platform/data-cloud/web-services/index.md?context=xamarin/android
-  - name: Distribuzione e test
-    href: deploy-test/index.md
-    items:
-    - name: Dimensione del pacchetto dell'app
-      href: deploy-test/app-package-size.md
-    - name: Creazione di app
-      href: deploy-test/building-apps/index.md
-      items:
-      - name: Processo di compilazione
-        href: deploy-test/building-apps/build-process.md
-      - name: Compilazione di APK specifici di ABI
-        href: deploy-test/building-apps/abi-specific-apks.md
-    - name: Emulatore della riga di comando
-      href: deploy-test/command-line-emulator.md
-    - name: Debug
-      href: deploy-test/debugging/index.md
-      items:
-      - name: Debug nell'emulatore
-        href: deploy-test/debugging/debug-on-emulator.md
-      - name: Debug in un dispositivo
-        href: deploy-test/debugging/debug-on-device.md
-      - name: Log di debug Android
-        href: deploy-test/debugging/android-debug-log.md
-    - name: Attributo Debuggable
-      href: deploy-test/debuggable-attribute.md
-    - name: Ambiente
-      href: deploy-test/environment.md
-    - name: GDB
-      href: deploy-test/gdb.md
-    - name: Impostazioni del linker personalizzate
-      href: deploy-test/linker.md
-    - name: Dispositivi multicore
-      href: deploy-test/multicore-devices.md
-    - name: Prestazioni
-      href: deploy-test/performance.md
-    - name: Profilatura
-      href: deploy-test/profiling.md
-    - name: Preparazione per il rilascio
-      href: deploy-test/release-prep/index.md
-      items:
-      - name: ProGuard
-        href: deploy-test/release-prep/proguard.md
-    - name: Firma del file APK
-      href: deploy-test/signing/index.md
-      items:
-      - name: Firma manuale del file APK
-        href: deploy-test/signing/manually-signing-the-apk.md
-      - name: Individuazione della firma dell'archivio chiavi
-        href: deploy-test/signing/keystore-signature.md
-    - name: Pubblicazione di un'app
-      href: deploy-test/publishing/index.md
-      items:
-      - name: Pubblicazione in Google Play
-        href: deploy-test/publishing/publishing-to-google-play/index.md
-        items:
-        - name: Servizi Google Licensing
-          href: deploy-test/publishing/publishing-to-google-play/google-licensing-services.md
-        - name: File di espansione APK
-          href: deploy-test/publishing/publishing-to-google-play/apk-expansion-files.md
-        - name: Caricamento manuale dell'APK
-          href: deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md
-      - name: Pubblicazione in Amazon
-        href: deploy-test/publishing/publishing-to-amazon.md
-      - name: Pubblicazione indipendente
-        href: deploy-test/publishing/publishing-independently.md
-    - name: Installare come app di sistema
-      href: deploy-test/install-system-app.md
-  - name: Concetti avanzati e meccanismi interni
-    href: internals/index.md
-    items:
-    - name: Architettura
-      href: internals/architecture.md
-    - name: Assembly disponibili
-      href: ~/cross-platform/internals/available-assemblies.md?context=xamarin/android
-    - name: Progettazione dell'API
-      href: internals/api-design.md
-    - name: Garbage Collection
-      href: internals/garbage-collection.md
-    - name: Limitazioni
-      href: internals/limitations.md
-  - name: Risoluzione dei problemi
-    href: troubleshooting/index.md
-    items:
-    - name: Suggerimenti per la risoluzione dei problemi
-      href: troubleshooting/troubleshooting.md
-    - name: Domande frequenti
-      href: troubleshooting/questions/index.md
-      items:
-      - name: Quali pacchetti di Android SDK è necessario installare?
-        href: troubleshooting/questions/install-android-sdk-packages.md
-      - name: Dove è possibile impostare i percorsi di Android SDK?
-        href: troubleshooting/questions/android-sdk-location.md
-      - name: Come si aggiorna la versione di Java Development Kit (JDK)?
-        href: troubleshooting/questions/update-jdk.md
-      - name: È possibile usare la versione 9 o versioni successive di Java Development Kit (JDK)?
-        href: troubleshooting/questions/jdk9-errors.md
-      - name: Come si possono installare manualmente le librerie di supporto Android necessarie per i pacchetti Xamarin.Android.Support?
-        href: troubleshooting/questions/install-android-support-library.md
-      - name: Quali driver USB sono necessari per il debug di Android in Windows?
-        href: troubleshooting/questions/android-drivers-debug-windows.md
-      - name: È possibile connettersi a emulatori Android in esecuzione in un Mac da una macchina virtuale Windows?
-        href: troubleshooting/questions/connect-android-emulator-mac-windows.md
-      - name: Come si può automatizzare un progetto di test Android NUnit?
-        href: troubleshooting/questions/automate-android-nunit-test.md
-      - name: Perché non è possibile connettere la build di versione Android a Internet?
-        href: troubleshooting/questions/android-internet.md
-      - name: Miglioramenti per i pacchetti NuGet Xamarin.Android.Support v4 / v13
-        href: troubleshooting/questions/android-support-v4v13-libraries.md
-      - name: Come si risolve un errore PathTooLongException?
-        href: troubleshooting/questions/path-too-long-exception.md
-      - name: In quale versione di Xamarin.Android è stato aggiunto il supporto di Lollipop?
-        href: troubleshooting/questions/xa-lollipop.md
-      - name: "Android.Support.v7.AppCompat - Nessuna risorsa trovata corrispondente al nome specificato: attr 'android:actionModeShareDrawable'"
-        href: troubleshooting/questions/missing-action-mode-share-drawable.md
-      - name: Modifica dei parametri di memoria Java per Android Designer
-        href: troubleshooting/questions/android-designer-java-memory.md
-      - name: Il file Android Resource.designer.cs non verrà aggiornato
-        href: troubleshooting/questions/resource-designer-wont-update.md
-    - name: Risoluzione degli errori di installazione di librerie
-      href: troubleshooting/resolving-library-installation-errors.md
-    - name: Modifiche agli strumenti di Android SDK
-      href: troubleshooting/sdk-cli-tooling-changes.md
-    - name: Informazioni di riferimento sugli errori Xamarin.Android
-      href: troubleshooting/errors.md
-  - name: Wear
-    href: wear/index.md
-    items:
-    - name: Introduzione
-      href: wear/get-started/index.md
-      items:
-      - name: Introduzione ad Android Wear
-        href: wear/get-started/intro-to-wear.md
-      - name: Configurazione e installazione
-        href: wear/get-started/installation.md
-      - name: Prima app per Wear
-        href: wear/get-started/hello-wear.md
-    - name: Interfaccia utente
-      href: wear/user-interface/index.md
-      items:
-      - name: Controlli
-        href: wear/user-interface/controls/index.md
-        items:
-        - name: GridViewPager
-          href: wear/user-interface/controls/gridviewpager.md
-    - name: Funzionalità della piattaforma
-      href: wear/platform/index.md
-      items:
-      - name: Creazione di una watch face
-        href: wear/platform/creating-a-watchface.md
-    - name: Dimensioni dello schermo
-      href: wear/screen-sizes.md
-    - name: Distribuzione e test
-      href: wear/deploy-test/index.md
-      items:
-      - name: Eseguire il debug in un emulatore
-        href: wear/deploy-test/debug-on-emulator.md
-      - name: Eseguire il debug in un dispositivo Wear
-        href: wear/deploy-test/debug-on-device.md
-      - name: Pacchetto
-        href: wear/deploy-test/packaging.md
-  - name: Note sulla versione
-    href: https://docs.microsoft.com/xamarin/android/release-notes/
-  - name: Esempi
-    href: samples/index.yml
   expanded: true
-ms.openlocfilehash: cf107832a9de0e26af34cda5da52907d6aab4a9c
-ms.sourcegitcommit: 6f728aa0c1775224e16c0f3e583cf843d34270f9
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59893205"
+  items:
+    - name: Introduzione
+      href: get-started/index.md
+      expanded: true
+      items:
+        - name: Installazione e configurazione
+          href: get-started/installation/index.md
+          items:
+            - name: Installazione di Windows
+              href: get-started/installation/windows.md
+            - name: Installazione di Android SDK
+              href: get-started/installation/android-sdk.md
+            - name: Configurazione dell'emulatore Android
+              href: get-started/installation/android-emulator/index.md
+              items:
+                - name: Accelerazione hardware (Hyper-V e HAXM)
+                  href: get-started/installation/android-emulator/hardware-acceleration.md
+                - name: Device Manager
+                  href: get-started/installation/android-emulator/device-manager.md
+                - name: Proprietà del dispositivo
+                  href: get-started/installation/android-emulator/device-properties.md
+                - name: Risoluzione dei problemi
+                  href: get-started/installation/android-emulator/troubleshooting.md
+            - name: Installazione di dispositivi Android
+              href: get-started/installation/set-up-device-for-development.md
+            - name: Anteprima di Microsoft Mobile OpenJDK
+              href: get-started/installation/openjdk.md
+        - name: 'Hello, Android'
+          href: get-started/hello-android/index.md
+          items:
+            - name: Parte 1. Guida rapida
+              href: get-started/hello-android/hello-android-quickstart.md
+            - name: Parte 2. Approfondimenti
+              href: get-started/hello-android/hello-android-deepdive.md
+        - name: 'Hello, Android Multiscreen'
+          href: get-started/hello-android-multiscreen/index.md
+          items:
+            - name: Parte 1. Guida rapida
+              href: get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
+            - name: Parte 2. Approfondimenti
+              href: get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md
+        - name: Xamarin per sviluppatori Java
+          href: get-started/java-developers.md
+    - name: Nozioni fondamentali sulle applicazioni
+      href: app-fundamentals/index.md
+      items:
+        - name: Accessibilità
+          href: app-fundamentals/accessibility.md
+        - name: Livelli di API Android
+          href: app-fundamentals/android-api-levels.md
+        - name: Risorse Android
+          href: app-fundamentals/resources-in-android/index.md
+          items:
+            - name: Nozioni di base sulle risorse Android
+              href: app-fundamentals/resources-in-android/android-resource-basics.md
+            - name: Risorse predefinite
+              href: app-fundamentals/resources-in-android/default-resources.md
+            - name: Risorse alternative
+              href: app-fundamentals/resources-in-android/alternate-resources.md
+            - name: Creazione di risorse per schermi diversi
+              href: app-fundamentals/resources-in-android/resources-for-varying-screens.md
+            - name: Localizzazione delle applicazioni e risorse di tipo stringa
+              href: app-fundamentals/resources-in-android/application-localization.md
+            - name: Uso di asset Android
+              href: app-fundamentals/resources-in-android/android-assets.md
+            - name: Tipi di carattere
+              href: app-fundamentals/resources-in-android/fonts.md
+        - name: Ciclo di vita dell'attività
+          href: app-fundamentals/activity-lifecycle/index.md
+          items:
+            - name: Procedura dettagliata - Salvataggio dello stato dell'attività
+              href: app-fundamentals/activity-lifecycle/saving-state.md
+        - name: Servizi di Android
+          href: app-fundamentals/services/index.md
+          items:
+            - name: Creazione di un servizio
+              href: app-fundamentals/services/creating-a-service/index.md
+              items:
+                - name: Servizi associati
+                  href: app-fundamentals/services/creating-a-service/bound-services.md
+                - name: Servizi Intent
+                  href: app-fundamentals/services/creating-a-service/intent-services.md
+                - name: Servizi avviati
+                  href: app-fundamentals/services/creating-a-service/started-services.md
+            - name: Servizi in primo piano
+              href: app-fundamentals/services/foreground-services.md
+            - name: Servizi out-of-process
+              href: app-fundamentals/services/out-of-process-services.md
+            - name: Notifiche del servizio
+              href: app-fundamentals/services/service-notifications.md
+        - name: Ricevitori di trasmissione
+          href: app-fundamentals/broadcast-receivers.md
+        - name: Localizzazione
+          href: app-fundamentals/localization.md
+        - name: Autorizzazioni
+          href: app-fundamentals/permissions.md
+        - name: Grafica e animazione
+          href: app-fundamentals/graphics-and-animation.md
+        - name: Architetture CPU
+          href: app-fundamentals/cpu-architectures.md
+        - name: Gestione della rotazione
+          href: app-fundamentals/handling-rotation.md
+        - name: Audio
+          href: app-fundamentals/android-audio.md
+        - name: Notifiche
+          href: app-fundamentals/notifications/index.md
+          items:
+            - name: Notifiche locali
+              href: app-fundamentals/notifications/local-notifications.md
+            - name: Procedura dettagliata per le notifiche locali
+              href: app-fundamentals/notifications/local-notifications-walkthrough.md
+        - name: Tocco
+          href: app-fundamentals/touch/index.md
+          items:
+            - name: Tocco in Android
+              href: app-fundamentals/touch/touch-in-android.md
+            - name: Procedura dettagliata- Uso del tocco in Android
+              href: app-fundamentals/touch/android-touch-walkthrough.md
+            - name: Rilevamento del multitouch
+              href: app-fundamentals/touch/touch-tracking.md
+        - name: Stack HttpClient e SSL/TLS
+          href: app-fundamentals/http-stack.md
+        - name: Scrittura di app reattive
+          href: app-fundamentals/writing-responsive-apps.md
+    - name: Interfaccia utente
+      href: user-interface/index.md
+      items:
+        - name: Android Designer
+          href: user-interface/android-designer/index.md
+          items:
+            - name: Uso di Android Designer
+              href: user-interface/android-designer/designer-walkthrough.md
+            - name: Nozioni di base su Designer
+              href: user-interface/android-designer/designer-basics.md
+            - name: Qualificatori delle risorse e opzioni di visualizzazione
+              href: user-interface/android-designer/resource-qualifiers.md
+            - name: Visualizzazioni con layout alternativi
+              href: user-interface/android-designer/alternative-layout-views.md
+            - name: Funzionalità di Material Design
+              href: user-interface/android-designer/material-design-features.md
+        - name: Tema Material
+          href: user-interface/material-theme.md
+        - name: Profilo utente
+          href: user-interface/user-profile.md
+        - name: Schermata iniziale
+          href: user-interface/splash-screen.md
+        - name: Layout
+          href: user-interface/layouts/index.md
+          items:
+            - name: LinearLayout
+              href: user-interface/layouts/linear-layout.md
+            - name: RelativeLayout
+              href: user-interface/layouts/relative-layout.md
+            - name: TableLayout
+              href: user-interface/layouts/table-layout.md
+            - name: RecyclerView
+              href: user-interface/layouts/recycler-view/index.md
+              items:
+                - name: Parti e funzionalità
+                  href: user-interface/layouts/recycler-view/parts-and-functionality.md
+                - name: Esempio di RecyclerView
+                  href: user-interface/layouts/recycler-view/recyclerview-example.md
+                - name: Estensione dell'esempio
+                  href: user-interface/layouts/recycler-view/extending-the-example.md
+            - name: ListView
+              href: user-interface/layouts/list-view/index.md
+              items:
+                - name: Parti e funzionalità di ListView
+                  href: user-interface/layouts/list-view/parts-and-functionality.md
+                - name: Popolamento di un controllo ListView con dati
+                  href: user-interface/layouts/list-view/populating.md
+                - name: Personalizzazione dell'aspetto di un controllo ListView
+                  href: user-interface/layouts/list-view/customizing-appearance.md
+                - name: Uso di CursorAdapter
+                  href: user-interface/layouts/list-view/cursor-adapters.md
+                - name: Uso di un ContentProvider
+                  href: user-interface/layouts/list-view/content-provider.md
+                - name: ListView e ciclo di vita delle attività
+                  href: user-interface/layouts/list-view/activity-lifecycle.md
+            - name: GridView
+              href: user-interface/layouts/grid-view.md
+            - name: GridLayout
+              href: user-interface/layouts/grid-layout.md
+            - name: Layout a schede
+              href: user-interface/layouts/tab-layout/index.md
+              items:
+                - name: Schede di spostamento con ActionBar
+                  href: user-interface/layouts/tab-layout/with-action-bar.md
+        - name: Controlli
+          href: user-interface/controls/index.md
+          items:
+            - name: ActionBar
+              href: user-interface/controls/action-bar.md
+            - name: Completamento automatico
+              href: user-interface/controls/auto-complete.md
+            - name: Pulsanti
+              href: user-interface/controls/buttons/index.md
+              items:
+                - name: RadioButton
+                  href: user-interface/controls/buttons/radio-button.md
+                - name: Interruttore
+                  href: user-interface/controls/buttons/toggle-button.md
+                - name: CheckBox
+                  href: user-interface/controls/buttons/check-box.md
+                - name: Pulsante personalizzato
+                  href: user-interface/controls/buttons/custom-button.md
+            - name: Calendar
+              href: user-interface/controls/calendar.md
+            - name: CardView
+              href: user-interface/controls/card-view.md
+            - name: EditText
+              href: user-interface/controls/edit-text.md
+            - name: Raccolta
+              href: user-interface/controls/gallery.md
+            - name: Barra di spostamento
+              href: user-interface/controls/navigation-bar.md
+            - name: Selezioni
+              href: user-interface/controls/pickers/index.md
+              items:
+                - name: Selezione data
+                  href: user-interface/controls/pickers/date-picker.md
+                - name: Selezione ora
+                  href: user-interface/controls/pickers/time-picker.md
+            - name: Menu popup
+              href: user-interface/controls/popup-menu.md
+            - name: RatingBar
+              href: user-interface/controls/ratingbar.md
+            - name: Spinner
+              href: user-interface/controls/spinner.md
+            - name: Opzione
+              href: user-interface/controls/switch.md
+            - name: TextureView
+              href: user-interface/controls/texture-view.md
+            - name: ToolBar
+              href: user-interface/controls/tool-bar/index.md
+              items:
+                - name: Sostituzione della Barra delle azioni
+                  href: user-interface/controls/tool-bar/replacing-the-action-bar.md
+                - name: Aggiunta di una seconda barra degli strumenti
+                  href: user-interface/controls/tool-bar/adding-a-second-toolbar.md
+                - name: Compatibilità di Toolbar
+                  href: user-interface/controls/tool-bar/toolbar-compatibility.md
+            - name: ViewPager
+              href: user-interface/controls/view-pager/index.md
+              items:
+                - name: ViewPager con visualizzazioni
+                  href: user-interface/controls/view-pager/viewpager-and-views.md
+                - name: ViewPager con frammenti
+                  href: user-interface/controls/view-pager/viewpager-and-fragments.md
+            - name: WebView
+              href: user-interface/controls/web-view.md
+    - name: Funzionalità della piattaforma
+      href: platform/index.md
+      items:
+        - name: Android Beam
+          href: platform/android-beam.md
+        - name: Manifesto Android
+          href: platform/android-manifest.md
+        - name: Accesso ai file con Xamarin.Android
+          href: platform/files/index.md
+          items:
+            - name: Archiviazione esterna
+              href: platform/files/external-storage.md
+        - name: Autenticazione con impronta digitale
+          href: platform/fingerprint-authentication/index.md
+          items:
+            - name: Introduzione
+              href: platform/fingerprint-authentication/get-started.md
+            - name: Lettura delle impronte digitali
+              href: platform/fingerprint-authentication/scanning.md
+            - name: Creazione di CryptoObject
+              href: platform/fingerprint-authentication/creating-a-cryptoobject.md
+            - name: Risposta ai callback di autenticazione
+              href: platform/fingerprint-authentication/fingerprint-authentication-callbacks.md
+            - name: Linee guida e riepilogo
+              href: platform/fingerprint-authentication/summary.md
+            - name: Registrazione di un'impronta digitale
+              href: platform/fingerprint-authentication/enrolling-fingerprint.md
+        - name: Utilità di pianificazione di processo Android
+          href: platform/android-job-scheduler.md
+        - name: Firebase Job Dispatcher
+          href: platform/firebase-job-dispatcher.md
+        - name: Frammenti
+          href: platform/fragments/index.md
+          items:
+            - name: Implementazione di frammenti
+              href: platform/fragments/implementing-with-fragments/index.md
+              items:
+                - name: Procedura dettagliata Frammenti - Parte 1
+                  href: platform/fragments/implementing-with-fragments/walkthrough.md
+                - name: Procedura dettagliata Frammenti - Parte 2
+                  href: platform/fragments/implementing-with-fragments/walkthrough-landscape.md
+            - name: Creazione di un frammento
+              href: platform/fragments/creating-a-fragment.md
+            - name: Gestione dei frammenti
+              href: platform/fragments/managing-fragments.md
+            - name: Classi di frammenti specializzate
+              href: platform/fragments/specialized-fragment-classes.md
+            - name: Compatibilità con le versioni precedenti
+              href: platform/fragments/providing-backwards-compatibility.md
+        - name: Collegamento di app
+          href: platform/app-linking.md
+        - name: Android 9 Pie
+          href: platform/pie.md
+        - name: Android 8 Oreo
+          href: platform/oreo.md
+        - name: Android 7 Nougat
+          href: platform/nougat.md
+        - name: Android 6 Marshmallow
+          href: platform/marshmallow.md
+        - name: Android 5 Lollipop
+          href: platform/lollipop.md
+        - name: Android 4.4 KitKat
+          href: platform/kitkat.md
+        - name: Android 4.1 Jelly Bean
+          href: platform/jelly-bean.md
+        - name: Android 4.0 Ice Cream Sandwich
+          href: platform/ice-cream-sandwich.md
+        - name: Provider di contenuto
+          href: platform/content-providers/index.md
+          items:
+            - name: Come funziona
+              href: platform/content-providers/how-it-works.md
+            - name: Uso del ContentProvider Contacts
+              href: platform/content-providers/contacts-contentprovider.md
+            - name: Creazione di un ContentProvider personalizzato
+              href: platform/content-providers/custom-contentprovider.md
+        - name: Mappe e posizione
+          href: platform/maps-and-location/index.md
+          items:
+            - name: Percorso
+              href: platform/maps-and-location/location.md
+            - name: Mappe
+              href: platform/maps-and-location/maps/index.md
+              items:
+                - name: Applicazione Maps
+                  href: platform/maps-and-location/maps/maps-application.md
+                - name: API Maps
+                  href: platform/maps-and-location/maps/maps-api.md
+                - name: Ottenere una chiave API Google Maps
+                  href: platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md
+        - name: Uso di Android.Speech
+          href: platform/speech.md
+        - name: Integrazione di Java
+          href: platform/java-integration/index.md
+          items:
+            - name: Android Callable Wrapper
+              href: platform/java-integration/android-callable-wrappers.md
+            - name: Utilizzo di JNI
+              href: platform/java-integration/working-with-jni.md
+            - name: 'Convertire Java in C#'
+              href: platform/java-integration/porting-java-to-csharp.md
+        - name: Associazione di una libreria Java
+          href: platform/binding-java-library/index.md
+          items:
+            - name: Associazione di un file JAR
+              href: platform/binding-java-library/binding-a-jar.md
+            - name: Associazione di un file AAR
+              href: platform/binding-java-library/binding-an-aar.md
+            - name: Associazione di un progetto di libreria Eclipse
+              href: platform/binding-java-library/binding-a-library-project.md
+            - name: Personalizzazione delle associazioni
+              href: platform/binding-java-library/customizing-bindings/index.md
+              items:
+                - name: Metadati per le associazioni Java
+                  href: platform/binding-java-library/customizing-bindings/java-bindings-metadata.md
+                - name: Denominazione dei parametri con Javadoc
+                  href: platform/binding-java-library/customizing-bindings/naming-parameters-with-javadoc.md
+            - name: Risoluzione dei problemi delle associazioni
+              href: platform/binding-java-library/troubleshooting-bindings.md
+        - name: Uso di librerie native
+          href: platform/native-libraries.md
+        - name: Renderscript
+          href: platform/renderscript.md
+    - name: Xamarin.Essentials
+      href: ~/essentials/index.md?context=xamarin/android
+      items:
+        - name: Introduzione
+          href: ~/essentials/get-started.md?context=xamarin/android
+        - name: Accelerometro
+          href: ~/essentials/accelerometer.md?context=xamarin/android
+        - name: Informazioni sull'app
+          href: ~/essentials/app-information.md?context=xamarin/android
+        - name: Barometro
+          href: ~/essentials/barometer.md?context=xamarin/android
+        - name: Batteria
+          href: ~/essentials/battery.md?context=xamarin/android
+        - name: Appunti
+          href: ~/essentials/clipboard.md?context=xamarin/android
+        - name: Convertitori di colori
+          href: ~/essentials/color-converters.md?context=xamarin/android
+        - name: Bussola
+          href: ~/essentials/compass.md?context=xamarin/android
+        - name: Connettività
+          href: ~/essentials/connectivity.md?context=xamarin/android
+        - name: Rileva stretta
+          href: ~/essentials/detect-shake.md?context=xamarin/android
+        - name: Informazioni sullo schermo del dispositivo
+          href: ~/essentials/device-display.md?context=xamarin/android
+        - name: Informazioni sul dispositivo
+          href: ~/essentials/device-information.md?context=xamarin/android
+        - name: Email
+          href: ~/essentials/email.md?context=xamarin/android
+        - name: Helper di file system
+          href: ~/essentials/file-system-helpers.md?context=xamarin/android
+        - name: Torcia elettrica
+          href: ~/essentials/flashlight.md?context=xamarin/android
+        - name: Geocodifica
+          href: ~/essentials/geocoding.md?context=xamarin/android
+        - name: Georilevazione
+          href: ~/essentials/geolocation.md?context=xamarin/android
+        - name: Giroscopio
+          href: ~/essentials/gyroscope.md?context=xamarin/android
+        - name: Utilità di avvio
+          href: ~/essentials/launcher.md?context=xamarin/android
+        - name: Magnetometro
+          href: ~/essentials/magnetometer.md?context=xamarin/android
+        - name: Thread principale
+          href: ~/essentials/main-thread.md?context=xamarin/android
+        - name: Mappe
+          href: ~/essentials/maps.md?context=xamarin/android
+        - name: Apri browser
+          href: ~/essentials/open-browser.md?context=xamarin/android
+        - name: Sensore di orientamento
+          href: ~/essentials/orientation-sensor.md?context=xamarin/android
+        - name: Dialer telefono
+          href: ~/essentials/phone-dialer.md?context=xamarin/android
+        - name: 'Estensioni piattaforma (dimensioni, rettangolo, punto)'
+          href: ~/essentials/platform-extensions.md?context=xamarin/android
+        - name: Preferenze
+          href: ~/essentials/preferences.md?context=xamarin/android
+        - name: Archiviazione sicura
+          href: ~/essentials/secure-storage.md?context=xamarin/android
+        - name: Condividi
+          href: ~/essentials/share.md?context=xamarin/android
+        - name: SMS
+          href: ~/essentials/sms.md?context=xamarin/android
+        - name: Sintesi vocale
+          href: ~/essentials/text-to-speech.md?context=xamarin/android
+        - name: Convertitori di unità
+          href: ~/essentials/unit-converters.md?context=xamarin/android
+        - name: Rilevamento versione
+          href: ~/essentials/version-tracking.md?context=xamarin/android
+        - name: Vibrazione
+          href: ~/essentials/vibrate.md?context=xamarin/android
+        - name: Risoluzione dei problemi
+          href: ~/essentials/troubleshooting.md?context=xamarin/android
+    - name: Dati e servizi cloud
+      href: data-cloud/index.md
+      items:
+        - name: Azure Active Directory
+          href: ~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/android
+          items:
+            - name: Introduzione
+              href: ~/cross-platform/data-cloud/active-directory/get-started/index.md?context=xamarin/android
+              items:
+                - name: Passaggio 1. Registrazione
+                  href: ~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/android
+                - name: Passaggio 2. Configurazione
+                  href: ~/cross-platform/data-cloud/active-directory/get-started/configure.md?context=xamarin/android
+            - name: Accesso all'API Graph
+              href: ~/cross-platform/data-cloud/active-directory/graph.md?context=xamarin/android
+        - name: App per dispositivi mobili di Azure
+          href: ~/cross-platform/data-cloud/mobile-apps.md?context=xamarin/android
+        - name: Accesso ai dati
+          href: data-cloud/data-access/index.md
+          items:
+            - name: Introduzione
+              href: data-cloud/data-access/introduction.md
+            - name: Configurazione
+              href: data-cloud/data-access/configuration.md
+            - name: Uso di SQLite.NET ORM
+              href: data-cloud/data-access/using-sqlite-orm.md
+            - name: Uso di ADO.NET
+              href: data-cloud/data-access/using-adonet.md
+            - name: Uso dei dati in un'app
+              href: data-cloud/data-access/using-data-in-an-app.md
+        - name: Messaggistica di Google
+          href: data-cloud/google-messaging/index.md
+          items:
+            - name: Firebase Cloud Messaging
+              href: data-cloud/google-messaging/firebase-cloud-messaging.md
+            - name: Procedura dettagliata per le notifiche FCM
+              href: data-cloud/google-messaging/remote-notifications-with-fcm.md
+            - name: Google Cloud Messaging
+              href: data-cloud/google-messaging/google-cloud-messaging.md
+            - name: Procedura dettagliata per le notifiche GCM
+              href: data-cloud/google-messaging/remote-notifications-with-gcm.md
+        - name: Servizi Web
+          href: ~/cross-platform/data-cloud/web-services/index.md?context=xamarin/android
+    - name: Distribuzione e test
+      href: deploy-test/index.md
+      items:
+        - name: Dimensione del pacchetto dell'app
+          href: deploy-test/app-package-size.md
+        - name: Creazione di app
+          href: deploy-test/building-apps/index.md
+          items:
+            - name: Processo di compilazione
+              href: deploy-test/building-apps/build-process.md
+            - name: Compilazione di APK specifici di ABI
+              href: deploy-test/building-apps/abi-specific-apks.md
+        - name: Emulatore della riga di comando
+          href: deploy-test/command-line-emulator.md
+        - name: Debug
+          href: deploy-test/debugging/index.md
+          items:
+            - name: Debug nell'emulatore
+              href: deploy-test/debugging/debug-on-emulator.md
+            - name: Debug in un dispositivo
+              href: deploy-test/debugging/debug-on-device.md
+            - name: Log di debug Android
+              href: deploy-test/debugging/android-debug-log.md
+        - name: Attributo Debuggable
+          href: deploy-test/debuggable-attribute.md
+        - name: Ambiente
+          href: deploy-test/environment.md
+        - name: GDB
+          href: deploy-test/gdb.md
+        - name: Impostazioni del linker personalizzate
+          href: deploy-test/linker.md
+        - name: Dispositivi multicore
+          href: deploy-test/multicore-devices.md
+        - name: Prestazioni
+          href: deploy-test/performance.md
+        - name: Profilatura
+          href: deploy-test/profiling.md
+        - name: Preparazione per il rilascio
+          href: deploy-test/release-prep/index.md
+          items:
+            - name: ProGuard
+              href: deploy-test/release-prep/proguard.md
+        - name: Firma del file APK
+          href: deploy-test/signing/index.md
+          items:
+            - name: Firma manuale del file APK
+              href: deploy-test/signing/manually-signing-the-apk.md
+            - name: Individuazione della firma dell'archivio chiavi
+              href: deploy-test/signing/keystore-signature.md
+        - name: Pubblicazione di un'app
+          href: deploy-test/publishing/index.md
+          items:
+            - name: Pubblicazione in Google Play
+              href: deploy-test/publishing/publishing-to-google-play/index.md
+              items:
+                - name: Servizi Google Licensing
+                  href: deploy-test/publishing/publishing-to-google-play/google-licensing-services.md
+                - name: File di espansione APK
+                  href: deploy-test/publishing/publishing-to-google-play/apk-expansion-files.md
+                - name: Caricamento manuale dell'APK
+                  href: deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md
+            - name: Pubblicazione in Amazon
+              href: deploy-test/publishing/publishing-to-amazon.md
+            - name: Pubblicazione indipendente
+              href: deploy-test/publishing/publishing-independently.md
+        - name: Installare come app di sistema
+          href: deploy-test/install-system-app.md
+    - name: Concetti avanzati e meccanismi interni
+      href: internals/index.md
+      items:
+        - name: Architettura
+          href: internals/architecture.md
+        - name: Assembly disponibili
+          href: ~/cross-platform/internals/available-assemblies.md?context=xamarin/android
+        - name: Progettazione dell'API
+          href: internals/api-design.md
+        - name: Garbage Collection
+          href: internals/garbage-collection.md
+        - name: Limitazioni
+          href: internals/limitations.md
+    - name: Risoluzione dei problemi
+      href: troubleshooting/index.md
+      items:
+        - name: Suggerimenti per la risoluzione dei problemi
+          href: troubleshooting/troubleshooting.md
+        - name: Domande frequenti
+          href: troubleshooting/questions/index.md
+          items:
+            - name: Quali pacchetti di Android SDK è necessario installare?
+              href: troubleshooting/questions/install-android-sdk-packages.md
+            - name: Dove è possibile impostare i percorsi di Android SDK?
+              href: troubleshooting/questions/android-sdk-location.md
+            - name: Come si aggiorna la versione di Java Development Kit (JDK)?
+              href: troubleshooting/questions/update-jdk.md
+            - name: È possibile usare la versione 9 o versioni successive di Java Development Kit (JDK)?
+              href: troubleshooting/questions/jdk9-errors.md
+            - name: Come si possono installare manualmente le librerie di supporto Android necessarie per i pacchetti Xamarin.Android.Support?
+              href: troubleshooting/questions/install-android-support-library.md
+            - name: Quali driver USB sono necessari per il debug di Android in Windows?
+              href: troubleshooting/questions/android-drivers-debug-windows.md
+            - name: È possibile connettersi a emulatori Android in esecuzione in un Mac da una macchina virtuale Windows?
+              href: troubleshooting/questions/connect-android-emulator-mac-windows.md
+            - name: Come si può automatizzare un progetto di test Android NUnit?
+              href: troubleshooting/questions/automate-android-nunit-test.md
+            - name: Perché non è possibile connettere la build di versione Android a Internet?
+              href: troubleshooting/questions/android-internet.md
+            - name: Miglioramenti per i pacchetti NuGet Xamarin.Android.Support v4 / v13
+              href: troubleshooting/questions/android-support-v4v13-libraries.md
+            - name: Come si risolve un errore PathTooLongException?
+              href: troubleshooting/questions/path-too-long-exception.md
+            - name: In quale versione di Xamarin.Android è stato aggiunto il supporto di Lollipop?
+              href: troubleshooting/questions/xa-lollipop.md
+            - name: 'Android.Support.v7.AppCompat - Nessuna risorsa trovata corrispondente al nome specificato: attr ''android:actionModeShareDrawable'''
+              href: troubleshooting/questions/missing-action-mode-share-drawable.md
+            - name: Modifica dei parametri di memoria Java per Android Designer
+              href: troubleshooting/questions/android-designer-java-memory.md
+            - name: Il file Android Resource.designer.cs non verrà aggiornato
+              href: troubleshooting/questions/resource-designer-wont-update.md
+        - name: Risoluzione degli errori di installazione di librerie
+          href: troubleshooting/resolving-library-installation-errors.md
+        - name: Modifiche agli strumenti di Android SDK
+          href: troubleshooting/sdk-cli-tooling-changes.md
+        - name: Informazioni di riferimento sugli errori Xamarin.Android
+          href: troubleshooting/errors.md
+    - name: Wear
+      href: wear/index.md
+      items:
+        - name: Introduzione
+          href: wear/get-started/index.md
+          items:
+            - name: Introduzione ad Android Wear
+              href: wear/get-started/intro-to-wear.md
+            - name: Configurazione e installazione
+              href: wear/get-started/installation.md
+            - name: Prima app per Wear
+              href: wear/get-started/hello-wear.md
+        - name: Interfaccia utente
+          href: wear/user-interface/index.md
+          items:
+            - name: Controlli
+              href: wear/user-interface/controls/index.md
+              items:
+                - name: GridViewPager
+                  href: wear/user-interface/controls/gridviewpager.md
+        - name: Funzionalità della piattaforma
+          href: wear/platform/index.md
+          items:
+            - name: Creazione di una watch face
+              href: wear/platform/creating-a-watchface.md
+        - name: Dimensioni dello schermo
+          href: wear/screen-sizes.md
+        - name: Distribuzione e test
+          href: wear/deploy-test/index.md
+          items:
+            - name: Eseguire il debug in un emulatore
+              href: wear/deploy-test/debug-on-emulator.md
+            - name: Eseguire il debug in un dispositivo Wear
+              href: wear/deploy-test/debug-on-device.md
+            - name: Pacchetto
+              href: wear/deploy-test/packaging.md
+    - name: Note sulla versione
+      href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
+    - name: Esempi
+      href: samples/index.yml

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: aee7c7eb494af76bb450038453c19ee1ed83f2d3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61388910"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Avviare Visual Studio e creare una nuova app Xamarin.Forms vuota denominata **WebServiceTutorial**. Assicurarsi che l'app usi .NET Standard come meccanismo di codice condiviso.

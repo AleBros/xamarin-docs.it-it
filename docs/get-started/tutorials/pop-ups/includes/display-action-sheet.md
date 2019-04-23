@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: effebf02a7fb84ef955f4dcfda75d5273ef96b29
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384680"
+---
 
 Xamarin.Forms ha un popup modale, noto come foglio delle azioni, che può essere usato per guidare gli utenti per l'esecuzione di un'attività. In questo esercizio si userà il metodo [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) dalla classe [`Page`](xref:Xamarin.Forms.Page) per visualizzare un foglio delle azioni che guida gli utenti per l'esecuzione di un'attività.
 

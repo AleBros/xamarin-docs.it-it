@@ -7,64 +7,58 @@ metadata:
   ms.author: crdun
   ms.date: 02/17/2018
   ms.topic: sample
-  ms.openlocfilehash: 9a22147adbcd59fe7168af8e717d065d6d27b85e
-  ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
-  ms.translationtype: HT
-  ms.contentlocale: it-IT
-  ms.lasthandoff: 04/04/2018
-  ms.locfileid: "30776131"
 abstract:
-  description: App di esempio e demo di codice multipiattaforma Xamarin.iOS per iniziare a creare app per dispositivi mobili con C# e Xamarin.
+  description: 'App di esempio e demo di codice multipiattaforma Xamarin.iOS per iniziare a creare app per dispositivi mobili con C# e Xamarin.'
   menu:
     items:
-    - href: https://developer.xamarin.com/samples/ios/all/
-      text: Tutti gli esempi di Xamarin.iOS
+      - href: 'https://developer.xamarin.com/samples/ios/all/'
+        text: Tutti gli esempi di Xamarin.iOS
 sections:
-- title: 
-  items:
-  - type: list
-    style: cards
-    className: cardsW
+  - title: null
     items:
-    - href: https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/
-      html: Demo di realtà aumentata ARKit per il posizionamento di oggetti su superfici rilevate.
-      image:
-        src: images/arkit.png
-        href: https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/
-      title: ARKit (iOS 11)
-    - href: https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/
-      html: 'Nuove funzionalità iOS 11 in MapKit: raggruppamento e divisione dei marcatori in base al livello di zoom.'
-      image:
-        src: images/mapkit.png
-        href: https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/
-      title: MapKit (iOS 11)
-    - href: https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel/
-      html: Framework Vision e CoreML per iOS 11 con un modello impostato con Servizio visione artificiale personalizzato di Azure.
-      image:
-        src: images/coremlazure.png
-        href: https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel/
-      title: CoreML e Azure (iOS 11)
-    - href: https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/
-      html: Come usare i controller di visualizzazione e le proprietà ContactsUI.
-      image:
-        src: images/contacts.png
-        href: https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/
-      title: QuickContacts
-    - href: https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/
-      html: Suite di controlli dell'interfaccia utente disponibile in watchOS.
-      image:
-        src: images/watchos.png
-        href: https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/
-      title: Catalogo WatchKit
-    - href: https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/
-      html: Illustra come usare molte visualizzazioni e controlli nel framework UIKit su tvOS.
-      image:
-        src: images/tvosui.png
-        href: https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/
-      title: Catalogo UI tvOS
-    - href: https://developer.xamarin.com/samples/ios/all/
-      html: Set completo di app e demo di codice di esempio di Xamarin.iOS.
-      image:
-        src: ~/media/shared/sample-download.svg
-        href: https://developer.xamarin.com/samples/ios/all/
-      title: Tutti gli esempi di Xamarin.iOS
+      - type: list
+        style: cards
+        className: cardsW
+        items:
+          - href: 'https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/'
+            html: Demo di realtà aumentata ARKit per il posizionamento di oggetti su superfici rilevate.
+            image:
+              src: images/arkit.png
+              href: 'https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/'
+            title: ARKit (iOS 11)
+          - href: 'https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/'
+            html: 'Nuove funzionalità iOS 11 in MapKit: raggruppamento e divisione dei marcatori in base al livello di zoom.'
+            image:
+              src: images/mapkit.png
+              href: 'https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/'
+            title: MapKit (iOS 11)
+          - href: 'https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel/'
+            html: Framework Vision e CoreML per iOS 11 con un modello impostato con Servizio visione artificiale personalizzato di Azure.
+            image:
+              src: images/coremlazure.png
+              href: 'https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel/'
+            title: CoreML e Azure (iOS 11)
+          - href: 'https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/'
+            html: Come usare i controller di visualizzazione e le proprietà ContactsUI.
+            image:
+              src: images/contacts.png
+              href: 'https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/'
+            title: QuickContacts
+          - href: 'https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/'
+            html: Suite di controlli dell'interfaccia utente disponibile in watchOS.
+            image:
+              src: images/watchos.png
+              href: 'https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/'
+            title: Catalogo WatchKit
+          - href: 'https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/'
+            html: Illustra come usare molte visualizzazioni e controlli nel framework UIKit su tvOS.
+            image:
+              src: images/tvosui.png
+              href: 'https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/'
+            title: Catalogo UI tvOS
+          - href: 'https://developer.xamarin.com/samples/ios/all/'
+            html: Set completo di app e demo di codice di esempio di Xamarin.iOS.
+            image:
+              src: ~/media/shared/sample-download.svg
+              href: 'https://developer.xamarin.com/samples/ios/all/'
+            title: Tutti gli esempi di Xamarin.iOS

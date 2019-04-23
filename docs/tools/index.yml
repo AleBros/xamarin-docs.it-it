@@ -1,10 +1,4 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 2983dfd895aaaf8560b3e630faacf24b45dd05cd
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292051"
 documentType: LandingData
 title: Strumenti di Xamarin
 metadata:
@@ -17,62 +11,62 @@ abstract:
   description: Strumenti per migliorare l'esperienza di sviluppo con Xamarin.
   menu:
     items:
-    - href: https://visualstudio.com/
-      text: Visual Studio
-    - href: https://docs.microsoft.com/xamarin/mac/release-notes/
-      text: Note sulla versione
+      - href: 'https://visualstudio.com/'
+        text: Visual Studio
+      - href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
+        text: Note sulla versione
 sections:
-- title: Strumenti
-  items:
-  - type: list
-    style: cards
-    className: cardsC
+  - title: Strumenti
     items:
-    - href: ~/tools/ios-simulator/index.md
-      html: Interagire con il simulatore iOS con Visual Studio in Windows.
-      image:
-        src: ~/media/index/xamarin-tools-windows-simulator.svg?branch=master
-        href: ~/tools/ios-simulator/index.md
-      title: Simulatore iOS per Windows
-    - href: ~/tools/inspector/index.md
-      html: Comprendere ed eseguire il debug dell'interfaccia utente.
-      image:
-        src: ~/media/index/xamarin-tools-inspector.svg?branch=master
-        href: ~/tools/inspector/index.md
-      title: Xamarin Inspector
-    - href: ~/tools/profiler/index.md
-      html: Identificare e correggere i problemi di prestazioni.
-      image:
-        src: ~/media/index/xamarin-tools-profiler.svg?branch=master
-        href: ~/tools/profiler/index.md
-      title: Xamarin Profiler
-    - href: ~/tools/workbooks/index.md
-      html: Imparare a usare C# e la piattaforma Xamarin in modo interattivo.
-      image:
-        src: https://docs.microsoft.com/media/illustrations/dynamics-resource-library.svg
-        href: ~/tools/workbooks/index.md
-      title: Xamarin Workbooks
-    - href: ~/tools/dotnet-embedding/index.md
-      html: Consente di utilizzare il codice .NET esistente da altri linguaggi di programmazione.
-      image:
-        src: ~/media/index/xamarin-cross-platform-dotnet-embedding.svg
-        href: ~/tools/dotnet-embedding/index.md
-      title: .NET Embedding
-- title: Piattaforme
-  items:
-  - type: list
-    style: cards
-    className: cardsD
+      - type: list
+        style: cards
+        className: cardsC
+        items:
+          - href: ~/tools/ios-simulator/index.md
+            html: Interagire con il simulatore iOS con Visual Studio in Windows.
+            image:
+              src: ~/media/index/xamarin-tools-windows-simulator.svg?branch=master
+              href: ~/tools/ios-simulator/index.md
+            title: Simulatore iOS per Windows
+          - href: ~/tools/inspector/index.md
+            html: Comprendere ed eseguire il debug dell'interfaccia utente.
+            image:
+              src: ~/media/index/xamarin-tools-inspector.svg?branch=master
+              href: ~/tools/inspector/index.md
+            title: Xamarin Inspector
+          - href: ~/tools/profiler/index.md
+            html: Identificare e correggere i problemi di prestazioni.
+            image:
+              src: ~/media/index/xamarin-tools-profiler.svg?branch=master
+              href: ~/tools/profiler/index.md
+            title: Xamarin Profiler
+          - href: ~/tools/workbooks/index.md
+            html: 'Imparare a usare C# e la piattaforma Xamarin in modo interattivo.'
+            image:
+              src: 'https://docs.microsoft.com/media/illustrations/dynamics-resource-library.svg'
+              href: ~/tools/workbooks/index.md
+            title: Xamarin Workbooks
+          - href: ~/tools/dotnet-embedding/index.md
+            html: Consente di utilizzare il codice .NET esistente da altri linguaggi di programmazione.
+            image:
+              src: ~/media/index/xamarin-cross-platform-dotnet-embedding.svg
+              href: ~/tools/dotnet-embedding/index.md
+            title: .NET Embedding
+  - title: Piattaforme
     items:
-    - title: Xamarin.Forms
-      href: ~/xamarin-forms/index.md
-      html: <p><a href="~/get-started/quickstarts/index.md">Introduzione</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">Nozioni fondamentali sulle app</a><br /><a href="~/xamarin-forms/user-interface/index.md">Interfaccia utente</a><br /><a href="~/xamarin-forms/platform/index.md">Funzionalità della piattaforma</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Distribuzione e test</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Dati e servizi cloud</a><br /><a href="~/xamarin-forms/internals/index.md">Concetti avanzati e meccanismi interni</a></p>
-    - title: Android
-      href: ~/android/index.md
-      html: <p><a href="~/android/get-started/index.md">Introduzione</a><br /><a href="~/android/app-fundamentals/index.md">Nozioni fondamentali sulle app</a><br /><a href="~/android/user-interface/index.md">Interfaccia utente</a><br /><a href="~/android/platform/index.md">Funzionalità della piattaforma</a><br /><a href="~/android/deploy-test/index.md">Distribuzione e test</a><br /><a href="~/android/data-cloud/index.md">Dati e servizi cloud</a><br /><a href="~/android/internals/index.md">Concetti avanzati e meccanismi interni</a></p>
-    - title: iOS
-      href: ~/ios/index.md
-      html: <p><a href="~/ios/get-started/index.md">Introduzione</a><br /><a href="~/ios/app-fundamentals/index.md">Nozioni fondamentali sulle app</a><br /><a href="~/ios/user-interface/index.md">Interfaccia utente</a><br /><a href="~/ios/platform/index.md">Funzionalità della piattaforma</a><br /><a href="~/ios/deploy-test/index.md">Distribuzione e test</a><br /><a href="~/ios/data-cloud/index.md">Dati e servizi cloud</a><br /><a href="~/ios/internals/index.md">Concetti avanzati e meccanismi interni</a></p>
-    - title: Mac
-      href: ~/mac/index.md
-      html: <p><a href="~/mac/get-started/index.md">Introduzione</a><br /><a href="~/mac/app-fundamentals/index.md">Nozioni fondamentali sulle app</a><br /><a href="~/mac/user-interface/index.md">Interfaccia utente</a><br /><a href="~/mac/platform/index.md">Funzionalità della piattaforma</a><br /><a href="~/mac/deploy-test/index.md">Distribuzione e test</a><br /><a href="~/mac/internals/index.md">Concetti avanzati e meccanismi interni</a></p>
+      - type: list
+        style: cards
+        className: cardsD
+        items:
+          - title: Xamarin.Forms
+            href: ~/xamarin-forms/index.md
+            html: <p><a href="~/get-started/quickstarts/index.md">Introduzione</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">Nozioni fondamentali sulle app</a><br /><a href="~/xamarin-forms/user-interface/index.md">Interfaccia utente</a><br /><a href="~/xamarin-forms/platform/index.md">Funzionalità della piattaforma</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Distribuzione e test</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Dati e servizi cloud</a><br /><a href="~/xamarin-forms/internals/index.md">Concetti avanzati e meccanismi interni</a></p>
+          - title: Android
+            href: ~/android/index.md
+            html: <p><a href="~/android/get-started/index.md">Introduzione</a><br /><a href="~/android/app-fundamentals/index.md">Nozioni fondamentali sulle app</a><br /><a href="~/android/user-interface/index.md">Interfaccia utente</a><br /><a href="~/android/platform/index.md">Funzionalità della piattaforma</a><br /><a href="~/android/deploy-test/index.md">Distribuzione e test</a><br /><a href="~/android/data-cloud/index.md">Dati e servizi cloud</a><br /><a href="~/android/internals/index.md">Concetti avanzati e meccanismi interni</a></p>
+          - title: iOS
+            href: ~/ios/index.md
+            html: <p><a href="~/ios/get-started/index.md">Introduzione</a><br /><a href="~/ios/app-fundamentals/index.md">Nozioni fondamentali sulle app</a><br /><a href="~/ios/user-interface/index.md">Interfaccia utente</a><br /><a href="~/ios/platform/index.md">Funzionalità della piattaforma</a><br /><a href="~/ios/deploy-test/index.md">Distribuzione e test</a><br /><a href="~/ios/data-cloud/index.md">Dati e servizi cloud</a><br /><a href="~/ios/internals/index.md">Concetti avanzati e meccanismi interni</a></p>
+          - title: Mac
+            href: ~/mac/index.md
+            html: <p><a href="~/mac/get-started/index.md">Introduzione</a><br /><a href="~/mac/app-fundamentals/index.md">Nozioni fondamentali sulle app</a><br /><a href="~/mac/user-interface/index.md">Interfaccia utente</a><br /><a href="~/mac/platform/index.md">Funzionalità della piattaforma</a><br /><a href="~/mac/deploy-test/index.md">Distribuzione e test</a><br /><a href="~/mac/internals/index.md">Concetti avanzati e meccanismi interni</a></p>

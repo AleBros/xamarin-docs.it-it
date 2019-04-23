@@ -1,10 +1,4 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: fddfe37d306273f10d8f46531f403719119e325a
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57198287"
 documentType: LandingData
 title: Guide di avvio rapido di Xamarin.Forms
 metadata:
@@ -18,41 +12,41 @@ metadata:
   ms.author: dabritch
   ms.date: 02/15/2018
 abstract:
-  description: Questa pagina include collegamenti ad argomenti di avvio rapido per imparare a creare applicazioni per dispositivi mobili con Xamarin.Forms. Per la documentazione completa di Xamarin.Forms, vedere <a href="/xamarin/xamarin-forms/">Documentazione di Xamarin.Forms</a>.
+  description: 'Questa pagina include collegamenti ad argomenti di avvio rapido per imparare a creare applicazioni per dispositivi mobili con Xamarin.Forms. Per la documentazione completa di Xamarin.Forms, vedere <a href="/xamarin/xamarin-forms/">Documentazione di Xamarin.Forms</a>.'
 sections:
-- title: Guide rapide introduttive
-  items:
-  - type: list
-    style: cards
-    className: cardsB
+  - title: Guide rapide introduttive
     items:
-    - href: single-page.md
-      html: Informazioni su come creare un'applicazione Xamarin.Forms multipiattaforma a pagina singola, che consente di immettere una nota e renderla persistente nell'archiviazione del dispositivo.
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-        href: single-page.md
-      title: Creare un'applicazione Xamarin.Forms a pagina singola
-    - href: multi-page.md
-      html: Informazioni su come trasformare l'applicazione a pagina singola, in grado di archiviare una singola nota, in un'applicazione a più pagine, in grado di archiviare più note.
-      image:
-        src: https://docs.microsoft.com/media/common/i_class.svg
-        href: multi-page.md
-      title: Eseguire spostamenti in un'applicazione Xamarin.Forms a più pagine
-    - href: database.md
-      html: Informazioni su come archiviare i dati in un database di SQLite.NET locale.
-      image:
-        src: https://docs.microsoft.com/media/common/i_generic-database.svg
-        href: database.md
-      title: Archiviare i dati in un database locale di SQLite.NET
-    - href: styling.md
-      html: Informazioni su come definire lo stile di un'applicazione Xamarin.Forms multipiattaforma con gli stili XAML.
-      image:
-        src: ~/media/icons/i_user-interface.svg
-        href: styling.md
-      title: Definire lo stile di un'applicazione Xamarin.Forms multipiattaforma
-    - href: deepdive.md
-      html: Informazioni sui concetti di base dello sviluppo di applicazioni mediante Xamarin.Forms, con particolare attenzione all'applicazione sviluppata in tutta le guide di avvio rapido.
-      image:
-        src: https://docs.microsoft.com/media/common/i_overview.svg
-        href: deepdive.md
-      title: Approfondimenti per le guide di avvio rapido
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: single-page.md
+            html: 'Informazioni su come creare un''applicazione Xamarin.Forms multipiattaforma a pagina singola, che consente di immettere una nota e renderla persistente nell''archiviazione del dispositivo.'
+            image:
+              src: ~/media/icons/i_xaml-forms.svg
+              href: single-page.md
+            title: Creare un'applicazione Xamarin.Forms a pagina singola
+          - href: multi-page.md
+            html: 'Informazioni su come trasformare l''applicazione a pagina singola, in grado di archiviare una singola nota, in un''applicazione a più pagine, in grado di archiviare più note.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_class.svg'
+              href: multi-page.md
+            title: Eseguire spostamenti in un'applicazione Xamarin.Forms a più pagine
+          - href: database.md
+            html: Informazioni su come archiviare i dati in un database di SQLite.NET locale.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
+              href: database.md
+            title: Archiviare i dati in un database locale di SQLite.NET
+          - href: styling.md
+            html: Informazioni su come definire lo stile di un'applicazione Xamarin.Forms multipiattaforma con gli stili XAML.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: styling.md
+            title: Definire lo stile di un'applicazione Xamarin.Forms multipiattaforma
+          - href: deepdive.md
+            html: 'Informazioni sui concetti di base dello sviluppo di applicazioni mediante Xamarin.Forms, con particolare attenzione all''applicazione sviluppata in tutta le guide di avvio rapido.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_overview.svg'
+              href: deepdive.md
+            title: Approfondimenti per le guide di avvio rapido

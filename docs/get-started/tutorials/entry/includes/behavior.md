@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 48af50d31013f696879174a5cf108ab9fde92d0b
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61343464"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`Entry`](xref:Xamarin.Forms.Entry) per personalizzarne il comportamento:

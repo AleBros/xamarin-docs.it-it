@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6d99b6ea5d131e80c14789ddc1eda3f57a2f24a1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61343439"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Avviare Visual Studio e creare una nuova app Xamarin.Forms vuota denominata **EntryTutorial**. Assicurarsi che l'app usi .NET Standard come meccanismo di codice condiviso.
@@ -20,7 +28,7 @@
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry) in uno [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) specifica il testo segnaposto mostrato alla prima visualizzazione di `Entry`.
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry) in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) specifica il testo segnaposto mostrato alla prima visualizzazione di `Entry`.
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
@@ -48,7 +56,7 @@
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry) in uno [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) specifica il testo segnaposto mostrato alla prima visualizzazione di `Entry`.
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Entry`](xref:Xamarin.Forms.Entry) in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) specifica il testo segnaposto mostrato alla prima visualizzazione di `Entry`.
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 

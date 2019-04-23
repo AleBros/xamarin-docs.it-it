@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: fe38e13ff4b6c89905769d5ef0e5163a538e1e86
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61388888"
+---
 In questo esercizio si creerà un'interfaccia utente per utilizzare la classe `RestService`, che a sua volta recupera i dati dall'API Web [OpenWeatherMap](https://openweathermap.org/).
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)

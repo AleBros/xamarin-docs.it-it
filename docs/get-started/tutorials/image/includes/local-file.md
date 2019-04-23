@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 93ee0681adcc63fe05b4be88ff67f0aeee3e03ca
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384489"
+---
 È possibile aggiungere file di immagine ai progetti della piattaforma e si può farvi riferimento dal codice Xamarin.Forms condiviso. Questo metodo di distribuzione delle immagini è necessario quando le immagini sono specifiche della piattaforma, ad esempio quando si usano risoluzioni diverse su piattaforme diverse o progettazioni leggermente differenti.
 
 In questo esercizio si modificherà la soluzione **ImageTutorial** per visualizzare un'immagine locale anziché un'immagine scaricata da un URI. L'immagine locale è il logo di Xamarin che deve essere scaricato facendo clic sul pulsante seguente.

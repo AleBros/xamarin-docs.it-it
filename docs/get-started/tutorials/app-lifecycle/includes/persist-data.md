@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2c6c71f5ed46cc1cae66c5d1f412898825805cc6
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61187520"
+---
 La sottoclasse [`Application`](xref:Xamarin.Forms.Application) ha un dizionario statico [`Properties`](xref:Xamarin.Forms.Application.Properties) che può essere usato per archiviare dati fra le modifiche di stato del ciclo di vita. Il dizionario usa una chiave `string` e archivia un valore `object`. Il dizionario viene salvato automaticamente sul dispositivo e non è ripopolato quando l'applicazione viene riavviata.
 
 > [!IMPORTANT]

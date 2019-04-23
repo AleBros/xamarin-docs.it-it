@@ -1,37 +1,30 @@
-items:
 - name: E-book Modelli di applicazioni aziendali
   href: index.md
-  items:
-  - name: Prefazione
-    href: preface.md
-  - name: Introduzione
-    href: introduction.md
-  - name: MVVM
-    displayName: Model, View, ViewModel
-    href: mvvm.md
-  - name: Inserimento di dipendenze
-    displayName: DI
-    href: dependency-injection.md
-  - name: Comunicazioni tra componenti ad accoppiamento debole
-    href: communicating-between-loosely-coupled-components.md
-  - name: Navigazione
-    href: navigation.md
-  - name: Convalida
-    href: validation.md
-  - name: Gestione della configurazione
-    href: configuration-management.md
-  - name: Microservizi in contenitori
-    href: containerized-microservices.md
-  - name: Autenticazione e autorizzazione
-    href: authentication-and-authorization.md
-  - name: Accesso ai dati remoti
-    href: accessing-remote-data.md
-  - name: Testing unità
-    href: unit-testing.md
   expanded: true
-ms.openlocfilehash: bbe9a87553babb954e37138458d1f07b95c1f443
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110437"
+  items:
+    - name: Prefazione
+      href: preface.md
+    - name: Introduzione
+      href: introduction.md
+    - name: MVVM
+      displayName: 'Model, View, ViewModel'
+      href: mvvm.md
+    - name: Inserimento di dipendenze
+      displayName: DI
+      href: dependency-injection.md
+    - name: Comunicazioni tra componenti ad accoppiamento debole
+      href: communicating-between-loosely-coupled-components.md
+    - name: Navigazione
+      href: navigation.md
+    - name: Convalida
+      href: validation.md
+    - name: Gestione della configurazione
+      href: configuration-management.md
+    - name: Microservizi in contenitori
+      href: containerized-microservices.md
+    - name: Autenticazione e autorizzazione
+      href: authentication-and-authorization.md
+    - name: Accesso ai dati remoti
+      href: accessing-remote-data.md
+    - name: Testing unità
+      href: unit-testing.md

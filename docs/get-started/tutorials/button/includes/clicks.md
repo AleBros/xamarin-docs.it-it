@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d1f7d209eaaca62a55b768646f51024609057a63
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61372947"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. In **MainPage.xaml** modificare la dichiarazione [`Button`](xref:Xamarin.Forms.Button) in modo che imposti un gestore per l'evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked):

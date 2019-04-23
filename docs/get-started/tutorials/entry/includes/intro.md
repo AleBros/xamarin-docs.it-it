@@ -1,8 +1,16 @@
+---
+ms.openlocfilehash: ba9ad162730150111c397667df24030fcd0e2c67
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61343452"
+---
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
 > - Creare un elemento [`Entry`](xref:Xamarin.Forms.Entry) di Xamarin.Forms in XAML.
-> - Rispondere al testo nella classe `Entry` in fase di modifica.
+> - Rispondere al cambiamento del testo dell'elemento `Entry`.
 > - Personalizzare il comportamento dell'elemento `Entry`.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
