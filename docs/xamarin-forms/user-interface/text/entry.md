@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
 ms.openlocfilehash: c9be74bcc6e5d149856e06c98d3bef9a841d4bab
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61230234"
 ---
 # <a name="xamarinforms-entry"></a>Voce di xamarin. Forms
 
@@ -38,7 +38,7 @@ In C#:
 var MyEntry = new Entry { Text = "I am an Entry" };
 ```
 
-Per leggere il testo, accedere il `Text` proprietà in c#:
+Per leggere il testo, accedere il `Text` proprietà in C#:
 
 ```csharp
 var text = MyEntry.Text;
@@ -168,7 +168,7 @@ Ciò può essere eseguito in XAML come indicato di seguito:
 <Entry Keyboard="Chat" />
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 var entry = new Entry { Keyboard = Keyboard.Chat };
@@ -201,7 +201,7 @@ Esempio di codice XAML seguente viene illustrato come personalizzare il valore p
 </Entry>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter text here" };
@@ -225,7 +225,7 @@ Nell'esempio XAML seguente viene illustrato come impostare la chiave return:
 <Entry ReturnType="Send" />
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 var entry = new Entry { ReturnType = ReturnType.Send };
@@ -342,7 +342,7 @@ L'evento completato può essere effettuata la sottoscrizione in XAML:
 <Entry Completed="Entry_Completed" />
 ```
 
-e c#:
+e C#:
 
 ```csharp
 var entry = new Entry ();
@@ -371,7 +371,7 @@ Il `TextChanged` possono essere sottoscritti eventi in XAML:
 <Entry TextChanged="Entry_TextChanged" />
 ```
 
-e c#:
+e C#:
 
 ```csharp
 var entry = new Entry ();
