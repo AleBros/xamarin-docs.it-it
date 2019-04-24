@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: eeccded35a1fc776b89e1c96da81d6904d0e11ac
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61303301"
+---
 ||Note sull'esecuzione di test|
 |---|---|
 |**Xamarin.iOS**|<ul><li>Approccio più semplice per iniziare a usare i simulatori per iPhone, iPad, Apple Watch e Apple TV inclusi con Xcode. I simulatori sono accessibili nel Mac connesso durante il debug con Visual Studio.</li> <li>Per usare un dispositivo per il test, seguire <a href="~/ios/get-started/installation/device-provisioning/index.md">queste istruzioni</a> (eseguendo la maggior parte dei passaggi nel computer Mac connesso).</li></ul>|

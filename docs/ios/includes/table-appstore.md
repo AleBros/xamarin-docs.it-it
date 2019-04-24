@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ef7e0e0e0874857786196452de83d7532b80c347
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61079175"
+---
 |ID genere|Nome genere|
 |---|---|
 |6000|Ufficio|
@@ -30,7 +38,7 @@ Sottogeneri giochi (6014):
 |7001|Operazione|
 |7002|Avventura|
 |7003|Arcade|
-|7004|Area|
+|7004|Lavagna|
 |7005|Carte|
 |7006|Casinò|
 |7007|Dadi|
