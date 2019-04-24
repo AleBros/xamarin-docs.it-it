@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: 5156259f8178da69595464f75a10cd8f41965519
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
-ms.translationtype: MT
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870326"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Modifiche aggiuntive iOS 9 Framework
@@ -174,7 +174,7 @@ Vedere la [Introduzione a PassKit](~/ios/platform/passkit.md) per altre informaz
 
 Apple includeva le seguenti modifiche per il [Safari servizi](xref:SafariServices) framework in iOS 9:
 
-- È ora possibile usare le nuove [SFSafariViewController](xref:SafariServices.SFSafariViewController) classe per visualizzare il contenuto web in un'app xamarin. IOS. Offre la possibilità di condividere i cookie e dati del sito Web con l'app Safari e include diverse funzionalità di Safari (ad esempio lettore e il riempimento automatico). [SFSafariViewController](xref:SafariServices.SFSafariViewController) funzionalità di un **Fatto** pulsante che restituirà gli utenti all'App quando hanno terminato la visualizzazione del contenuto web.
+- È ora possibile usare le nuove [SFSafariViewController](xref:SafariServices.SFSafariViewController) classe per visualizzare il contenuto web in un'app xamarin. IOS. Offre la possibilità di condividere i cookie e dati del sito Web con l'app Safari e include diverse funzionalità di Safari (ad esempio lettore e il riempimento automatico). [SFSafariViewController](xref:SafariServices.SFSafariViewController) funzionalità di un pulsante **Fine** che restituirà gli utenti all'App quando hanno terminato la visualizzazione del contenuto web.
 
 Poiché il [SFSafariViewController](xref:SafariServices.SFSafariViewController) classe è concepita per la visualizzazione di una singola pagina del contenuto web, è consigliabile utilizzarlo per sostituire ciascun [WKWebKit](xref:WebKit.WKWebView) o [UIWebView](xref:UIKit.UIWebView)i controlli all'interno delle App xamarin. IOS esistente.
 
