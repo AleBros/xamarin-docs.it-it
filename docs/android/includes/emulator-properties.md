@@ -1,4 +1,12 @@
-|Proprietà|Descrizione|Opzioni|
+---
+ms.openlocfilehash: b39fb6157c247416c85846d4d8e63e6e1b7c6028
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60957033"
+---
+|Proprietà|Description|Opzioni|
 |--- |--- |--- |
 |`abi.type`|**Tipo ABI** &ndash; Specifica il tipo di interfaccia ABI (Application Binary Interface) del dispositivo emulato. L'opzione **x86** è usata per il set di istruzioni comunemente denominato "x86" o "IA-32". L'opzione **x86_64** è usata per il set di istruzioni x86 a 64 bit. L'opzione **armeabi-v7a** è usata per il set di istruzioni ARM con le estensioni ARM v7-a. L'opzione **arm64 v8a** è usata per il set di istruzioni ARM che supporta AArch64.|x86, x86_64, armeabi-v7a, arm64-v8a|
 |`disk.cachePartition`|**Partizione cache** &ndash; Determina se il dispositivo emulato userà una partizione **/cache** nel dispositivo. La partizione **/cache** (inizialmente vuota) è il percorso in cui Android archivia i dati e i componenti dell'app usati di frequente. Se impostato su **no**, l'emulatore non userà una partizione **/cache** e le altre impostazioni `disk.cache` verranno ignorate.|yes, no|
@@ -30,7 +38,7 @@
 |`hw.gsmModem`|**Supporto del modem GSM** &ndash; Determina se il dispositivo emulato include un modem che supporta il sistema di radiotelefonia GSM (Global System for Mobile Communications).|yes, no|
 |`hw.initialOrientation`|**Orientamento iniziale dello schermo** &ndash; Configura l'orientamento iniziale dello schermo nel dispositivo emulato (modalità verticale o orizzontale). In modalità verticale, l'altezza dello schermo è superiore alla larghezza. In modalità orizzontale, la larghezza dello schermo è superiore all'altezza. Quando si esegue il dispositivo emulato, è possibile modificare l'orientamento se sono supportati sia l'orientamento verticale che quello orizzontale nel profilo del dispositivo.|portrait, landscape|
 |`hw.keyboard`|**Supporto della tastiera** &ndash; Determina se il dispositivo emulato supporta una tastiera QWERTY.|yes, no|
-|`hw.keyboard.charmap`|**Nome della mappa caratteri della tastiera** &ndash; Nome della mappa caratteri hardware per il dispositivo. NOTA: deve sempre essere il valore predefinito **qwerty2**, a meno che l'immagine di sistema non sia stata modificata di conseguenza. Questo nome viene inviato al kernel in fase di avvio. L'uso di un nome errato renderà inutilizzabile il dispositivo virtuale.||
+|`hw.keyboard.charmap`|**Nome della mappa caratteri della tastiera** &ndash; Nome della mappa caratteri hardware per il dispositivo. NOTA: Deve sempre essere il valore predefinito **qwerty2**, a meno che l'immagine di sistema non sia stata modificata di conseguenza. Questo nome viene inviato al kernel in fase di avvio. L'uso di un nome errato renderà inutilizzabile il dispositivo virtuale.||
 |`hw.keyboard.lid`|**Supporto per il coperchio della tastiera** &ndash; Se il supporto della tastiera è abilitato, questa impostazione determina se la tastiera QWERTY può essere chiusa/nascosta o aperta/visibile. Questa impostazione verrà ignorata se hw.keyboard è impostato su false. NOTA: il valore predefinito è false se la destinazione del dispositivo emulato è il livello API 12 o superiore.|yes, no|
 |`hw.lcd.backlight`|**Retroilluminazione LCD** &ndash; Determina se la retroilluminazione LCD viene simulata dal dispositivo emulato.|yes, no|
 |`hw.lcd.density`|**Densità LCD** &ndash; Densità dello schermo LCD emulato, misurata in pixel indipendenti dalla densità, o dp (un'unità per i pixel virtuali). Quando l'impostazione è 160 dp, ogni dp corrisponde a un pixel fisico. In fase di esecuzione, Android usa questo valore per selezionare e ridimensionare le risorse o gli asset appropriati per il rendering corretto della visualizzazione.|120, 160, 240, 213, 320|
