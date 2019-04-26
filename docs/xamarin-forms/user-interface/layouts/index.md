@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
 ms.openlocfilehash: 5bd232293c979566faed2856de7287903da94054
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61300399"
 ---
 # <a name="layouts-in-xamarinforms"></a>Layout di xamarin. Forms
 
@@ -204,7 +204,7 @@ Xamarin. Forms e il layout predefinito sono in grado di gestire modifiche apport
 
 iOS, Android e Universal Windows Platform tutte supportano le dimensioni dello schermo più grande su tablet dispositivi (nonché i computer portatili e desktop per Windows). Xamarin. Forms consente di ottimizzare l'app per schermi di dimensioni maggiori rilevamento del tipo di dispositivo e una regolazione del layout di pagina o utilizzando una pagina di completamente diversa completamente per schermi di dimensioni maggiori.
 
-### <a name="bindable-layoutsbindable-layoutsmd"></a>[Layout associabile](bindable-layouts.md)
+### <a name="bindable-layoutsbindable-layoutsmd"></a>[Layout associabili](bindable-layouts.md)
 
 Il `BindableLayout` classe consente a qualsiasi classe di layout da cui deriva il [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) classe per cui generare il contenuto mediante l'associazione a una raccolta di elementi, con l'opzione per impostare l'aspetto di ogni elemento con un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate).
 

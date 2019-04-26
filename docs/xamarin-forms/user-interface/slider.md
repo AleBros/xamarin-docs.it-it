@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
 ms.openlocfilehash: fa339d9fd404cf74aa603d853abde5f9128e57b5
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61250803"
 ---
 # <a name="xamarinforms-slider"></a>Dispositivo di scorrimento di xamarin. Forms
 
@@ -56,7 +56,7 @@ Il `Slider` definisce inoltre diverse proprietà che interessano l'aspetto del c
 
 ## <a name="basic-slider-code-and-markup"></a>Markup e codice di dispositivo di scorrimento di base
 
-Il [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) esempio inizia con tre pagine che sono funzionalmente identici, ma vengono implementate in modi diversi. La prima pagina Usa solo il codice c#, il secondo Usa XAML con un gestore eventi nel codice e il terzo è in grado di evitare il gestore dell'evento usando l'associazione dati nel file XAML.
+Il [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) esempio inizia con tre pagine che sono funzionalmente identici, ma vengono implementate in modi diversi. La prima pagina Usa solo il codice C#, il secondo Usa XAML con un gestore eventi nel codice e il terzo è in grado di evitare il gestore dell'evento usando l'associazione dati nel file XAML.
 
 ### <a name="creating-a-slider-in-code"></a>Creazione di un dispositivo di scorrimento nel codice
 
@@ -222,7 +222,7 @@ Slider slider = new Slider
 };
 ```
 
-Il compilatore c# genera il codice che consente di impostare le due proprietà seguenti nella sequenza, e quando le `Minimum` è impostata su 10, è superiore a quello predefinito `Maximum` valore pari a 1. È possibile evitare l'eccezione in questo caso, impostando il `Maximum` proprietà prima:
+Il compilatore C# genera il codice che consente di impostare le due proprietà seguenti nella sequenza, e quando le `Minimum` è impostata su 10, è superiore a quello predefinito `Maximum` valore pari a 1. È possibile evitare l'eccezione in questo caso, impostando il `Maximum` proprietà prima:
 
 ```csharp
 Slider slider = new Slider

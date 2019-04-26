@@ -1,5 +1,5 @@
 ---
-title: Il file IPA è pari a 0 byte
+title: Il file IPA è di 0 byte
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 376BBA27-8694-4E63-9976-BF60349D42D8
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 4835c980b6b11c92ec1c81dea69f229aa5652275
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61420936"
 ---
-# <a name="ipa-file-is-0-bytes"></a>Il file IPA è pari a 0 byte
+# <a name="ipa-file-is-0-bytes"></a>Il file IPA è di 0 byte
 
 > [!IMPORTANT]
 > Questo problema è stato risolto nelle versioni recenti di Xamarin. Tuttavia, se il problema si verifica la versione più recente del software, inviare un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) il completo controllo delle versioni delle informazioni e full output del log di compilazione.

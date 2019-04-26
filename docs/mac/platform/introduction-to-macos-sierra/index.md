@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 5a944fd8f7dcfdcbb3f025c92b4afac35673416f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61031503"
 ---
 # <a name="introduction-to-macos-sierra"></a>Introduzione a macOS Sierra
 
@@ -48,7 +48,7 @@ Per altre informazioni, vedere di Apple [ApplePay JS Framework](https://develope
 
 <a name="Building-Modern-macOS-Apps" />
 
-### <a name="building-modern-macos-apps"></a>Creazione di App macOS moderne
+### <a name="building-modern-macos-apps"></a>Creazione di app macOS moderne
 
 App macOS moderne, ad esempio browser web Safari, pagine elaboratore di testo e numeri molto foglio utilizzate molte nuove tecnologie per presentare un'interfaccia utente unificata, sensibile al contesto che consente agli elementi dell'interfaccia utente tradizionali, ad esempio pannelli mobili e più aprire Apple Windows.
 
@@ -119,7 +119,7 @@ Per altre informazioni, vedere di Apple [registrazione riferimento](https://deve
 
 <a name="Wide-Color" />
 
-### <a name="wide-color"></a>Ampia gamma di colori
+### <a name="wide-color"></a>Wide Color
 
 macOS Sierra estende il supporto per formati pixel intervalli estesi e gli spazi colore a livello di gamma in tutto il sistema, tra cui Framework quali Core Graphics, immagine di base, bare Metal e AVFoundation. Supporto per i dispositivi dotati di schermi di ampia gamma di colori viene diminuito ulteriormente fornendo questo comportamento in tutto lo stack di grafica intero.
 

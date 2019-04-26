@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/07/2017
 ms.openlocfilehash: 7e895dc2865880ec2789a40f8cdf047a20f8693b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61400302"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>Aggiornamenti di SiriKit in iOS 11
 
@@ -118,7 +118,7 @@ Aggiungere quindi un nuovo progetto di estensione per l'app per gestire le richi
 
 1. Pulsante destro del mouse sulla soluzione e scegliere **Aggiungi > Aggiungi nuovo progetto...** .
 2. Scegliere il **iOS > estensioni > estensione per Intent** modello.
-3. Verranno aggiunti due nuovi progetti: finalità e IntentUI. Personalizzazione dell'interfaccia utente è facoltativa, quindi l'esempio include solo il codice nel **finalità** progetto.
+3. Verranno aggiunti due nuovi progetti: Finalità e IntentUI. Personalizzazione dell'interfaccia utente è facoltativa, quindi l'esempio include solo il codice nel **finalità** progetto.
 
 Il progetto di estensione è in cui verranno elaborate tutte le richieste di SiriKit. Come un'estensione separata, dispone automaticamente alcun modo per comunicare con l'app principale, questo viene in genere risolto mediante l'implementazione di archiviazione file condiviso tramite i gruppi di app.
 
@@ -217,7 +217,7 @@ Alcuni errori che potrebbero verificarsi durante l'esecuzione del campione o l'a
 
 ### <a name="nsinternalinconsistencyexception"></a>NSInternalInconsistencyException
 
-_Generata eccezione di Objective-C.  Nome: NSInternalInconsistencyException motivo: uso della classe < INPreferences: 0x60400082ff00 > da un'app richiede la com.apple.developer.siri entitlement. È stato abilitato la funzionalità di Siri nel progetto Xcode?_
+_Generata eccezione di Objective-C.  Nome: Motivo NSInternalInconsistencyException: Uso della classe < INPreferences: 0x60400082ff00 > da un'app richiede la com.apple.developer.siri entitlement. È stato abilitato la funzionalità di Siri nel progetto Xcode?_
 
 - SiriKit sia selezionata nel **entitlements. plist**.
 - **Entitlements. plist** configurato nel **opzioni progetto > compilazione > firma del Bundle iOS**.

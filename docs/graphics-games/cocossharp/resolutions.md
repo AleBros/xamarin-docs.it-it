@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: 6803dc2668b89ee2d037da8b34e202191dd5465d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61307743"
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>Gestione di più risoluzioni in CocosSharp
 
@@ -25,8 +25,8 @@ Il comportamento di risoluzione predefinito di CocosSharp è la corrispondenza p
 | **Dispositivo** | **Risoluzione dello schermo** | **Screenshot di esempio** |
 |--- | --- |--- |
 |Visualizzazione desiderata|368 x 240 (con barre nere per proporzioni)| ![368 x 240 (con barre nere per proporzioni)](resolutions-images/image1.png) |
-|iPhone 4s|960x640| ![iPhone 4s 960 x 640](resolutions-images/image2.png) |
-|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920 x 1080](resolutions-images/image3.png) |
+|iPhone 4s|960x640| ![iPhone 4s 960x640](resolutions-images/image2.png) |
+|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920x1080](resolutions-images/image3.png) |
 
 Questo documento illustra come usare CocosSharp per risolvere il problema illustrato nella tabella precedente. Vale a dire, illustreremo come rendere tutti i dispositivi di eseguire il rendering come illustrato nella prima riga, indipendentemente dalla risoluzione dello schermo.
 
@@ -277,7 +277,7 @@ Ora se eseguiamo il gioco della trama 1000 x 1000 saranno completamente visibile
 ![](resolutions-images/image12.png "Ora se eseguiamo il gioco della trama 1000 x 1000 saranno completamente visibile")
 
 
-### <a name="defaulttexeltocontentsizeratio-details"></a>Dettagli DefaultTexelToContentSizeRatio
+### <a name="defaulttexeltocontentsizeratio-details"></a>DefaultTexelToContentSizeRatio details
 
 Il `DefaultTexelToContentSizeRatio` è di proprietà `static,` ovvero sprite tutte nell'applicazione condividerà lo stesso valore. L'approccio tipico per i giochi con Asset apportate per diverse risoluzioni deve contenere un set completo degli asset per ogni categoria di risoluzione. Per impostazione predefinita di CocosSharp Visual Studio per i modelli Mac forniscono **ld** e **hd** cartelle per gli asset, che potrebbe essere utile per i giochi che supportano due set di trame. Una cartella del contenuto di esempio con il contenuto potrebbe essere simile:
 

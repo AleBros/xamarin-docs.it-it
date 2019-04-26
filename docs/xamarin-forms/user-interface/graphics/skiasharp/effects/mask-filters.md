@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
 ms.openlocfilehash: d68153cdaad67b407def3ed5bfaddf928ef98bb4
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61289113"
 ---
 # <a name="skiasharp-mask-filters"></a>Filtri di maschera di SkiaSharp
 
@@ -180,9 +180,9 @@ Tutte le schermate hanno illustrato finora sfocatura creato con il `SKBlurStyle.
 
 [![Mascherare esperimento sfocatura](mask-filters-images/MaskBlurExperiment.png "mascherare sfocatura esperimento")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
 
-Nella schermata iOS viene mostrato il `Solid` stile: sono ancora presenti come tratti neri a tinta unita con i caratteri di testo e la sfocatura viene aggiunto all'esterno di questi caratteri di testo. 
+Nella schermata iOS viene mostrato il `Solid` stile: I caratteri di testo sono ancora presenti come tratti neri a tinta unita e la sfocatura viene aggiunto all'esterno di questi caratteri di testo. 
 
-Lo screenshot di Android nei centrale visualizza i `Outer` stile: (come avviene la mappa di bit), sono stati eliminati i tratti di carattere se stessi e la sfocatura racchiude lo spazio vuoto in cui i caratteri di testo è presente una sola volta. 
+Lo screenshot di Android nei centrale visualizza i `Outer` stile: Vengono eliminati i tratti di carattere se stessi (come avviene la bitmap) e la sfocatura racchiude lo spazio vuoto in cui i caratteri di testo è presente una sola volta. 
 
 Nella schermata UWP destra il `Inner` stile. La sfocatura è limitata all'area normalmente occupata dai caratteri di testo.
 

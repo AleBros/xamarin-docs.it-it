@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
 ms.openlocfilehash: 3131963efa3d4ba4de9ff63c741c276a62e9d12d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61229743"
 ---
 # <a name="xamarinforms-editor"></a>Editor di xamarin. Forms
 
@@ -41,7 +41,7 @@ In C#:
 var MyEditor = new Editor { Text = "I am an Editor" };
 ```
 
-Per leggere il testo, accedere il `Text` proprietà in c#:
+Per leggere il testo, accedere il `Text` proprietà in C#:
 
 ```csharp
 var text = MyEditor.Text;
@@ -130,7 +130,7 @@ Ciò può essere eseguito in XAML come indicato di seguito:
 <Editor Keyboard="Chat" />
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 var editor = new Editor { Keyboard = Keyboard.Chat };
@@ -163,7 +163,7 @@ Esempio di codice XAML seguente viene illustrato come personalizzare il valore p
 </Editor>
 ```
 
-Il codice c# equivalente è:
+Il codice C# equivalente è:
 
 ```csharp
 var editor = new Editor();

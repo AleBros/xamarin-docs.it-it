@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/25/2015
 ms.openlocfilehash: 28002ddbab80445757be907b5d9f1cc02fdefd9d
-ms.sourcegitcommit: ee626f215de02707b7a94ba1d0fa1d75b22ab84f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54879355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61035447"
 ---
 # <a name="floating-point-operations-in-xamarinios"></a>Operazioni a virgola mobile in xamarin. IOS
 

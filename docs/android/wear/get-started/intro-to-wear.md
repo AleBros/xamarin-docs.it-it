@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: a35cb82f4f6d20e91f45a782c73d3ef811947c3a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61284250"
 ---
 # <a name="introduction-to-android-wear"></a>Introduzione ad Android Wear
 
@@ -183,10 +183,10 @@ Esistono molte altre funzionalità Wear 2.0, ad esempio azioni inline, risposta 
 
 Di seguito sono riportati alcuni esempi dei dispositivi che è possono eseguire Android Wear:
 
-* [360 Motorola](https://moto360.motorola.com/)
+* [Motorola 360](https://moto360.motorola.com/)
 * [LG G Watch](http://www.lg.com/us/smart-watches/lg-W100-g-watch)
 * [LG G Watch R](http://www.lg.com/us/smartwatch/g-watch-r)
-* [Samsung a forma di ingranaggio in tempo reale](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
+* [Samsung Gear Live](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
 * [Sony SmartWatch 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
 * [ASU ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
@@ -198,7 +198,7 @@ Consultare la documentazione di Google Android Wear:
 
 * [Su Android Wear](http://www.android.com/wear/)
 * [Progettazione di App Android Wear](https://developer.android.com/design/wear/index.html)
-* [libreria Android.support.wearable ](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
+* [android.support.wearable library ](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
 * [Android Wear 2.0](https://developer.android.com/wear/preview/index.html)
 
 

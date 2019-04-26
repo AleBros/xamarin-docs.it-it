@@ -1,5 +1,5 @@
 ---
-title: Compatibilità di ToolBar
+title: Compatibilità di Toolbar
 ms.prod: xamarin
 ms.assetid: A0798CA1-2C7D-43B6-9E91-4435CC7B6683
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
 ms.openlocfilehash: 12c19cf1024b78e8be30b7c9f2652019e9854375
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61300345"
 ---
-# <a name="toolbar-compatibility"></a>Compatibilità di ToolBar
+# <a name="toolbar-compatibility"></a>Compatibilità di Toolbar
 
 
 ## <a name="overview"></a>Panoramica
@@ -49,7 +49,7 @@ Successivamente, aggiungere il [libreria di supporto Android v7 AppCompat](https
 
 [![Schermata di V7 Appcompat pacchetto selezionato in Gestisci pacchetti NuGet](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png#lightbox)
 
-Quando si installa questo NuGet, diversi altri pacchetti NuGet vengono installati anche se non è già presente (ad esempio **Xamarin.Android.Support.Animated.Vector.Drawable**, **Xamarin.Android.Support.v4**, e **Xamarin.Android.Support.Vector.Drawable**). Per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: inclusi a NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
+Quando si installa questo NuGet, diversi altri pacchetti NuGet vengono installati anche se non è già presente (ad esempio **Xamarin.Android.Support.Animated.Vector.Drawable**, **Xamarin.Android.Support.v4**, e **Xamarin.Android.Support.Vector.Drawable**). Per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: Inserimento di pacchetto NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
 
 ## <a name="use-an-appcompat-theme-and-toolbar"></a>Utilizzare un tema AppCompat e barra degli strumenti

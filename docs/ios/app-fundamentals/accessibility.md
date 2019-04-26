@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/18/2016
 ms.openlocfilehash: aa3e15797ae1dac621ea8a78345044be1387ebaa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61179604"
 ---
 # <a name="accessibility-on-ios"></a>Accessibilità in iOS
 
@@ -91,7 +91,7 @@ Se l'interfaccia utente è disposto in uno storyboard, è possibile fornire le t
 
 Questo file potrebbe essere inserito nel **es.lproj** directory per il contenuto spagnolo.
 
-**Localizable.Strings**
+**Localizable.strings**
 
 In alternativa, è possibile aggiungere le traduzioni per il **Localizable.strings** file (ad esempio la directory del contenuto localizzata **es.lproj** per lo spagnolo):
 
@@ -112,7 +112,7 @@ Fare riferimento al [Guida alla localizzazione iOS](~/ios/app-fundamentals/local
 
 <a name="testing" />
 
-## <a name="testing-accessibility"></a>Verifica dell'accessibilità
+## <a name="testing-accessibility"></a>Test dell'accessibilità
 
 Voice over è abilitata nel **le impostazioni** app passando a **generale > Accessibilità > VoiceOver**:
 

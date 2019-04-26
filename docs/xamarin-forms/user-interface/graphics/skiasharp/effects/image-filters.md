@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
 ms.openlocfilehash: 517ebfb529dd26236ba157d40168fa7c75288d27
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61290204"
 ---
 # <a name="skiasharp-image-filters"></a>Filtri immagini di SkiaSharp
 
@@ -28,7 +28,7 @@ Questo articolo illustra anche l'utilizzo di un filtro di immagini per creare un
 
 ## <a name="blurring-vector-graphics-and-bitmaps"></a>Grafica vettoriale e bitmap di sfocatura
 
-L'effetto di sfocatura creato dal [ `SKImageFilter.CreateBlur` ](xref:SkiaSharp.SKImageFilter.CreateBlur*) metodo statica ha un vantaggio significativo rispetto ai metodi sfocatura nel [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) classe: filtro dell'immagine può blur un'intera bitmap. Il metodo ha la sintassi seguente:
+L'effetto di sfocatura creato dal [ `SKImageFilter.CreateBlur` ](xref:SkiaSharp.SKImageFilter.CreateBlur*) metodo statica ha un vantaggio significativo rispetto ai metodi sfocatura nel [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) classe: Filtro dell'immagine può blur un'intera bitmap. Il metodo ha la sintassi seguente:
 
 ```csharp
 public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
@@ -427,7 +427,7 @@ public partial class DistantLightExperimentPage : ContentPage
 }
 ```
 
-Il primo argomento di `SKImageFilter.CreateDistantLitDiffuse` è la direzione della luce. Positivo X e Y coordinate indicano che la luce viene punta a destra e verso il basso. Punti di coordinate Z positivo nella schermata. Il file XAML consente di selezionare i valori Z negativi, ma che è solo in modo da visualizzare ciò che accade: a livello concettuale, le coordinate Z negative causano la luce in modo da puntare all'esterno di schermata. Per qualsiasi altro quindi piccoli valori negativi, l'effetto di illuminazione smette di funzionare.
+Il primo argomento di `SKImageFilter.CreateDistantLitDiffuse` è la direzione della luce. Positivo X e Y coordinate indicano che la luce viene punta a destra e verso il basso. Punti di coordinate Z positivo nella schermata. Il file XAML consente di selezionare i valori Z negativi, ma che è solo in modo da visualizzare ciò che accade: Concettualmente, le coordinate Z negative causano la luce in modo da puntare all'esterno di schermata. Per qualsiasi altro quindi piccoli valori negativi, l'effetto di illuminazione smette di funzionare.
 
 Il `surfaceScale` argomenti sono compresi tra -1 e 1. (I valori superiori o inferiori non hanno alcun effetto). Questi sono valori relativi all'asse Z che indicano lo spostamento dell'oggetto grafico (in questo caso, la stringa di testo) dall'area di disegno. Usare i valori negativi per generare la stringa di testo sopra l'area dell'area di disegno e i valori positivi di deteriorare, nell'area di disegno.
 
@@ -439,7 +439,7 @@ Il `lightConstant` valore deve essere positivo. (Il programma consente i valori 
 
 Lo screenshot di Android ha un valore Z di 0, a indicare che la luce solo che punta verso il basso e a destra. Lo sfondo non viene acceso e non viene acceso area della stringa di testo di entrambi. Alla luce hanno effetto solo il bordo del testo per un effetto molto complesso.
 
-Nell'articolo è stato dimostrato un approccio alternativo al testo in rilievo e incassato [tradurre la trasformazione](../transforms/translate.md): la stringa di testo viene visualizzata due volte con diversi colori di offset leggermente da altra.
+Nell'articolo è stato dimostrato un approccio alternativo al testo in rilievo e incassato [tradurre la trasformazione](../transforms/translate.md): La stringa di testo viene visualizzata due volte con diversi colori di offset leggermente da altra.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

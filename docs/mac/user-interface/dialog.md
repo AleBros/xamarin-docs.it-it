@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 329984d44318b2204f2f5ee253402eb158c85b9f
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61283465"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Finestre di dialogo in xamarin. Mac
 
@@ -87,7 +87,7 @@ In alternativa, può essere visualizzato come un foglio di:
 
 ### <a name="save-dialogs"></a>Salvare le finestre di dialogo
 
-La finestra di dialogo Salva offre agli utenti un modo coerente per salvare un elemento in un'applicazione. La finestra di dialogo Salva dispone di due stati: **minimo** (noto anche come compressa):
+La finestra di dialogo Salva offre agli utenti un modo coerente per salvare un elemento in un'applicazione. La finestra di dialogo Salva dispone di due stati: **Minimo** (noto anche come compressa):
 
 [![](dialog-images/save01.png "Una finestra di dialogo Salva")](dialog-images/save01.png#lightbox)
 
@@ -754,7 +754,7 @@ namespace SourceWriter
 }
 ```
 
-Si noti che questa classe ha svolto due cose qui: in primo luogo, è un helper `App` proprietà per facilitare l'accesso di **AppDelegate** più semplice. Secondo, il `Preferences` proprietà espone globale **AppPreferences** classe per il data binding con tutti i controlli dell'interfaccia utente inseriti in questa vista.
+Si noti che questa classe ha svolto due cose qui: In primo luogo, è un helper `App` proprietà per facilitare l'accesso di **AppDelegate** più semplice. Secondo, il `Preferences` proprietà espone globale **AppPreferences** classe per il data binding con tutti i controlli dell'interfaccia utente inseriti in questa vista.
 
 Successivamente, fare doppio clic sul file di Storyboard per aprirla nuovamente in Interface Builder (e visualizzare le modifiche appena apportate di sopra). Trascinare tutti i controlli dell'interfaccia utente necessari per compilare l'interfaccia preferenze nella visualizzazione. Per ogni controllo, passare al **associazione Inspector** ed eseguire l'associazione per le singole proprietà delle **AppPreference** classe:
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
 ms.openlocfilehash: 7de2c903da40c186560085d61b94fd38ffe9d219
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61361161"
 ---
 # <a name="tabbedpage-page-swiping-on-android"></a>Pagina TabbedPage scorrendo rapidamente in Android
 
@@ -29,7 +29,7 @@ Questo specifico della piattaforma Android consente di abilitare scorrendo rapid
 </TabbedPage>
 ```
 
-In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
+In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

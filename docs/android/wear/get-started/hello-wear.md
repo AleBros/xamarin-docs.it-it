@@ -1,5 +1,5 @@
 ---
-title: App per wear
+title: Prima app per Wear
 description: Creare la prima app Android Wear ed eseguirlo in un dispositivo o emulatore Wear. Questa procedura dettagliata vengono fornite istruzioni dettagliate per la creazione di un progetto Android Wear piccolo che gestisce i clic sui pulsanti e visualizza un contatore di fare clic sul dispositivo Wear. Viene spiegato come eseguire il debug dell'app usando un emulatore Wear o un dispositivo Wear connessa tramite Bluetooth per un telefono Android. Consente inoltre una serie di suggerimenti per il debug di Android Wear.
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/10/2018
 ms.openlocfilehash: a8e27063040ff91f72a1cbf932b1b277a5dee63d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61277394"
 ---
-# <a name="hello-wear"></a>App per wear
+# <a name="hello-wear"></a>Prima app per Wear
 
 _Creare la prima app Android Wear ed eseguirlo in un dispositivo o emulatore Wear. Questa procedura dettagliata vengono fornite istruzioni dettagliate per la creazione di un progetto Android Wear piccolo che gestisce i clic sui pulsanti e visualizza un contatore di fare clic sul dispositivo Wear. Viene spiegato come eseguire il debug dell'app usando un emulatore Wear o un dispositivo Wear connessa tramite Bluetooth per un telefono Android. Consente inoltre una serie di suggerimenti per il debug di Android Wear._
 

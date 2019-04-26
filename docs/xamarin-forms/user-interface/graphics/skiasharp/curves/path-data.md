@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
 ms.openlocfilehash: 690d3c15d7ad2aad06be5b499bae1a94107414f4
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019585"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Dati del tracciato SVG in SkiaSharp
 
@@ -361,7 +361,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-Il [ **da punti e trattini** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) articolo descriveva come è possibile usare il [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) metodo per creare una linea tratteggiata. Il primo argomento è un `float` matrice a livello generale con due elementi: il primo elemento è la lunghezza dei trattini e il secondo elemento è il divario tra i trattini. Quando la `StrokeCap` è impostata su `SKStrokeCap.Round`, quindi le estremità arrotondate del trattino prolungare in modo efficace la lunghezza di dash per lo spessore del tratto su entrambi i lati del trattino. Pertanto, impostando il primo elemento della matrice su 0 consente di creare una linea punteggiata.
+Il [ **da punti e trattini** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) articolo descriveva come è possibile usare il [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) metodo per creare una linea tratteggiata. Il primo argomento è un `float` matrice a livello generale con due elementi: Il primo elemento è la lunghezza dei trattini e il secondo elemento è il divario tra i trattini. Quando la `StrokeCap` è impostata su `SKStrokeCap.Round`, quindi le estremità arrotondate del trattino prolungare in modo efficace la lunghezza di dash per lo spessore del tratto su entrambi i lati del trattino. Pertanto, impostando il primo elemento della matrice su 0 consente di creare una linea punteggiata.
 
 La distanza tra queste punti è disciplinata dal secondo elemento della matrice. Come si vedrà a breve, questi due `SKPaint` gli oggetti vengono utilizzati per disegnare cerchi con un raggio di unità di 90. La circonferenza del cerchio è pertanto 180π, il che significa che i segni di 60 minuti devono essere visualizzati ogni unità di 3 π, che corrisponde al valore nel secondo il `float` matrice `minuteMarkPaint`. I segni di 12 ore devono essere visualizzato ogni unità 15π, ovvero il valore nel secondo `float` matrice.
 

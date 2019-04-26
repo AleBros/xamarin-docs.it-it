@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: f359da6b8744e03cfcbd77d48f5f77f216e828f8
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61250648"
 ---
 # <a name="images-and-icons-in-xamarinios"></a>Immagini e icone in xamarin. IOS
 

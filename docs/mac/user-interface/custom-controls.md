@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 015c1e315b6070777542a8f8c5871c00cf336b5c
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61236191"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Creazione di controlli personalizzati in xamarin. Mac
 
@@ -212,7 +212,7 @@ Si sarà modificando la rappresentazione visiva del controllo quando il relativo
 
 ### <a name="responding-to-user-input"></a>Risponde all'Input dell'utente
 
-Esistono due modi di base che possiamo aggiungere input dell'utente per il controllo personalizzato: **eseguire l'Override di routine di gestione del Mouse** oppure **i riconoscitori di movimento**. Quale metodo viene usato, si baseranno sulle funzionalità necessarie per il controllo.
+Esistono due modalità di base che possiamo aggiungere input dell'utente per il controllo personalizzato: **Eseguire l'override di gestione di routine del Mouse** oppure **riconoscitori di movimento**. Quale metodo viene usato, si baseranno sulle funzionalità necessarie per il controllo.
 
 > [!IMPORTANT]
 > Per qualsiasi controllo personalizzato creato, è consigliabile usare **eseguire l'Override di metodi** _o_ **i riconoscitori di movimento**, ma non entrambi allo stesso tempo come possono entrare in conflitto tra loro.

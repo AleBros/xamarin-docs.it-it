@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2018
 ms.openlocfilehash: e88f6e24cbf4c8b2f0c0486c6408e234e87066cc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61228582"
 ---
 # <a name="android-speech"></a>Riconoscimento vocale di Android
 
@@ -206,7 +206,7 @@ Ad esempio, l'utente potrebbe scegliere francese e fare clic sull'icona di downl
 Installazione di questi dati viene eseguita automaticamente dopo aver completato il download.
 
 
-### <a name="step-5---the-ioninitlistener"></a>Passaggio 5: il IOnInitListener
+### <a name="step-5---the-ioninitlistener"></a>Step 5 - The IOnInitListener
 
 Per un'attività sia in grado di convertire il sintesi vocale, il metodo di interfaccia `OnInit` deve essere implementata (questo è il secondo parametro specificato per la creazione dell'istanza di `TextToSpeech` classe). Ciò consente di inizializzare il listener e si testa il risultato.
 
@@ -233,7 +233,7 @@ In questa guida è stato illustrato le nozioni di base della conversione di sint
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Xamarin. Forms DependencyService](https://developer.xamarin.com/samples/UsingDependencyService/)
+- [Xamarin.Forms DependencyService](https://developer.xamarin.com/samples/UsingDependencyService/)
 - [Sintesi vocale (esempio)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TextToSpeech)
 - [Riconoscimento vocale (esempio)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SpeechToText)
 - [Spazio dei nomi Android. Speech](https://developer.xamarin.com/api/namespace/Android.Speech/)

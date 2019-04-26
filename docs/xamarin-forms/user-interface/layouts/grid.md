@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
 ms.openlocfilehash: 0d5df986caa01bba69b03d6502682889e78ecbc7
-ms.sourcegitcommit: ee464f165eee7b4485266c11f167be557a0bacb2
-ms.translationtype: MT
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61300822"
 ---
 # <a name="xamarinforms-grid"></a>Griglia di xamarin. Forms
 
@@ -54,7 +54,7 @@ Informazioni sulla riga e colonna viene archiviati `Grid`del `RowDefinitions`  &
 - **Assoluto** &ndash; alle dimensioni delle colonne e righe con valori di altezza e larghezza fissi di specifici. Specifica un valore e `GridUnitType.Absolute` in C# e come `#` in XAML, con `#` in corso sul valore desiderato.
 
 > [!NOTE]
-> I valori di larghezza per le colonne vengono impostati come `*` per impostazione predefinita in xamarin. Forms, che assicura che la colonna di tipo esaurisca lo spazio disponibile. I valori di altezza delle righe vengono inoltre impostati come `*` per impostazione predefinita. 
+> I valori di larghezza per le colonne vengono impostati come `*` per impostazione predefinita in xamarin. Forms, che assicura che la colonna di tipo esaurisca lo spazio disponibile. I valori di altezza delle righe vengono inoltre impostati come `*` per impostazione predefinita.
 
 Si consideri un'applicazione che richiede tre righe e due colonne. La riga inferiore deve essere esattamente 200px estesa in altezza e la riga superiore deve essere due volte la stessa altezza alla riga centrale. Nella colonna sinistra deve essere sufficientemente ampio per adattarle al contenuto e la colonna a destra deve riempire lo spazio rimanente.
 
@@ -164,8 +164,8 @@ Il seguente XAML specifica una `Grid` con due colonne, una riga e 5 pixel di spa
 ```xaml
 <Grid ColumnSpacing="5">
   <Grid.ColumnDefinitions>
-    <ColumnDefinitions Width="*" />
-    <ColumnDefinitions Width="*" />
+    <ColumnDefinition Width="*" />
+    <ColumnDefinition Width="*" />
   </Grid.ColumnDefinitions>
 </Grid>
 ```

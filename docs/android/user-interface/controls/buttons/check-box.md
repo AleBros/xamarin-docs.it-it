@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
 ms.openlocfilehash: e03595e8d88a2f12341b9e339d0581c631224848
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61268318"
 ---
 # <a name="checkbox"></a>CheckBox
 
@@ -49,7 +49,7 @@ gestisce il proprio le modifiche dello stato, quindi è sufficiente eseguire una
 
 Eseguire il codice.
 
-**Suggerimento:** se è necessario modificare manualmente lo stato (ad esempio, quando il caricamento di un salvato [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference), usare il [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked)
+**Suggerimento:** Se è necessario modificare manualmente lo stato (ad esempio, quando il caricamento di un salvata [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference), usare il [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked)
 setter di proprietà o [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle)
 ProcessOnStatus.
 

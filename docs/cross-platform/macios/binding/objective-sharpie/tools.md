@@ -7,17 +7,17 @@ author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
 ms.openlocfilehash: 718b5104ddc4593d080b88b062c42d371d9e8e2e
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261168"
 ---
 # <a name="objective-sharpie-tools--commands"></a>I comandi e strumenti Sharpie obiettivo
 
 _Panoramica degli strumenti inclusi con obiettivo Sharpie e gli argomenti della riga di comando per usarli._
 
-<style type="text/css"> .terminal-blu {colore: rgb(10,96,254);} .terminal-verde {color: rgb(12,156,26);} .terminal-magenta {color: rgb(152,12,103);} </style>
+<style type="text/css"> .terminal-blue { color: rgb(10,96,254); } .terminal-green { color: rgb(12,156,26); } .terminal-magenta { color: rgb(152,12,103); } </style>
 
 
 Al termine obiettivo Sharpie correttamente [installata](~/cross-platform/macios/binding/objective-sharpie/get-started.md), aprire un terminale e acquisire familiarità con la <em>comandi</em> obiettivo Sharpie ha da offrire:
@@ -55,7 +55,7 @@ Sharpie obiettivo offre gli strumenti seguenti:
 |Strumento|Descrizione|
 |--- |--- |
 |**xcode**|Vengono fornite informazioni sull'installazione corrente di Xcode e le versioni di iOS e Mac SDK che sono disponibili. Si userà queste informazioni in un secondo momento quando si genera il binding.|
-|**POD**|Cerca, configura, installa (in una directory locale) e associa Objective-C [CocoaPod](https://cocoapods.org/) librerie disponibile dal repository master specifica. Questo strumento viene valutata la CocoaPod installata per dedurre automaticamente l'input corretto da passare al `bind` strumento riportato di seguito. Novità nella versione 3.0|
+|**pod**|Cerca, configura, installa (in una directory locale) e associa Objective-C [CocoaPod](https://cocoapods.org/) librerie disponibile dal repository master specifica. Questo strumento viene valutata la CocoaPod installata per dedurre automaticamente l'input corretto da passare al `bind` strumento riportato di seguito. Novità nella versione 3.0|
 |**bind**|Analizza i file di intestazione (`*.h`) nella libreria Objective-C in iniziale [ApiDefinition.cs e StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) file.|
 |**update**|Verifica la presenza di versioni più recenti di Sharpie obiettivo e scarica e avvia il programma di installazione, se disponibile.|
 |**verify-docs**|Vengono visualizzate informazioni dettagliate relative a `[Verify]` attributi.|
@@ -88,5 +88,5 @@ Da quanto sopra, possiamo vedere che abbiamo la `iphoneos9.1` SDK installato sul
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Corso di Xamarin University: Creazione di una libreria di binding di Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Corsi di Xamarin University: Compilare una libreria di binding Objective-C con Sharpie obiettivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Corsi di Xamarin University: Compila una libreria di binding Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Corsi di Xamarin University: Creazione di una libreria di binding Objective-C con Sharpie obiettivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 3a46b939fa87cd6535c9f86c46981c098542e7c9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61277976"
 ---
 # <a name="accessing-remote-data"></a>Accesso ai dati remoti
 
@@ -55,7 +55,7 @@ Figura 10-1 illustra l'interazione delle classi che leggono i dati del catalogo 
 
 [![](accessing-remote-data-images/catalogdata.png "Recupero di dati dal microservizio catalog")](accessing-remote-data-images/catalogdata-large.png#lightbox "il recupero dei dati dal microservizio catalogo")
 
-**Figura 10-1**: recupero di dati dal microservizio catalogo
+**Figura 10-1**: Recupero di dati dal microservizio catalogo
 
 Quando il `CatalogView` si accede, il `OnInitialize` metodo nel `CatalogViewModel` classe viene chiamata. Questo metodo recupera i dati del catalogo il microservizio catalogo, come illustrato nell'esempio di codice seguente:
 
@@ -68,7 +68,7 @@ public override async Task InitializeAsync(object navigationData)
 }
 ```
 
-Questo metodo chiama il `GetCatalogAsync` metodo del `CatalogService` istanza in cui è stata inserita nel `CatalogViewModel` da Autofac. Nell'esempio di codice riportato di seguito viene illustrato il `GetCatalogAsync` metodo:
+Questo metodo chiama il `GetCatalogAsync` metodo del `CatalogService` istanza in cui è stata inserita nel `CatalogViewModel` da Autofac. L'esempio di codice seguente illustra il metodo `GetCatalogAsync`:
 
 ```csharp
 public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
@@ -160,7 +160,7 @@ Figura 10-2 viene illustrata l'interazione delle classi che inviano i dati del c
 
 [![](accessing-remote-data-images/basketdata.png "L'invio di dati per il microservizio basket")](accessing-remote-data-images/basketdata-large.png#lightbox "l'invio di dati per il microservizio basket")
 
-**Figura 10-2**: invio di dati per il microservizio basket
+**Figura 10-2**: L'invio dei dati per il microservizio basket
 
 Quando un elemento viene aggiunto al carrello degli acquisti, il `ReCalculateTotalAsync` metodo nel `BasketViewModel` classe viene chiamata. Questo metodo aggiorna il valore totale degli elementi nel carrello e invia i dati sugli acquisti per il microservizio basket, come illustrato nell'esempio di codice seguente:
 
@@ -233,7 +233,7 @@ Figura 10-3 mostra le interazioni di classi che eliminare i dati del carrello il
 
 ![](accessing-remote-data-images/checkoutdata.png "Data di eliminazione dal microservizio basket")
 
-**Figura 10-3**: eliminazione di dati dal microservizio basket
+**Figura 10-3**: L'eliminazione dei dati dal microservizio basket
 
 Quando viene richiamato il processo di estrazione, la `CheckoutAsync` metodo nel `CheckoutViewModel` classe viene chiamata. Questo metodo crea un nuovo ordine, prima di cancellare il carrello acquisti, come illustrato nell'esempio di codice seguente:
 
@@ -298,7 +298,7 @@ Le applicazioni distribuite, ad esempio applicazione, di riferimento eShopOnCont
 -   Una cache condivisa, che sono accessibili da più processi o computer.
 -   Una cache privata, in cui i dati vengono conservati in locale nel dispositivo che esegue l'app.
 
-L'app per dispositivi mobili di eShopOnContainers Usa una cache privata, in cui i dati vengono conservati in locale nel dispositivo che esegue un'istanza dell'app. Per informazioni sulla cache usata dall'applicazione di riferimento eShopOnContainers, vedere [Microservizi .NET: architettura per applicazioni .NET in contenitori](https://aka.ms/microservicesebook).
+L'app per dispositivi mobili di eShopOnContainers Usa una cache privata, in cui i dati vengono conservati in locale nel dispositivo che esegue un'istanza dell'app. Per informazioni sulla cache usata dall'applicazione di riferimento eShopOnContainers, vedere [Microservizi .NET: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori).
 
 > [!TIP]
 > La cache può essere paragonato a un archivio dati temporaneo che potrebbe scomparire in qualsiasi momento. Assicurarsi che i dati vengono mantenuti nell'archivio dati originale, nonché della cache. Le probabilità di perdita di dati vengono quindi ridotto se la cache è più disponibile.
@@ -380,7 +380,7 @@ Se una richiesta non riesce dopo diversi tentativi, è preferibile per l'app per
 
 L'app per dispositivi mobili di eShopOnContainers non implementa attualmente il modello di ripetizione dei tentativi quando si effettuano richieste web RESTful. Tuttavia, il `CachedImage` al controllo, tramite il [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) libreria supporta la gestione degli errori temporanei con un nuovo tentativo di caricamento dell'immagine. Se il caricamento dell'immagine non riesce, verranno effettuati tentativi di ulteriore. Il numero di tentativi viene specificato per il `RetryCount` proprietà e i tentativi verranno eseguito dopo un intervallo di tempo specificato dal `RetryDelay` proprietà. Se i valori delle proprietà non sono esplicitamente impostate, valori predefiniti vengono applicati i valori: 3 per il `RetryCount` property e 250 ms per le `RetryDelay` proprietà. Per altre informazioni sul `CachedImage` controllano, vedere [la memorizzazione nella cache immagini](#caching_images).
 
-L'applicazione di riferimento eShopOnContainers implementa il modello di ripetizione dei tentativi. Per altre informazioni, incluse informazioni su come combinare il modello di ripetizione dei tentativi con il `HttpClient` classe, vedere [Microservizi .NET: architettura per applicazioni .NET in contenitori](https://aka.ms/microservicesebook).
+L'applicazione di riferimento eShopOnContainers implementa il modello di ripetizione dei tentativi. Per altre informazioni, incluse informazioni su come combinare il modello di ripetizione dei tentativi con il `HttpClient` classe, vedere [Microservizi .NET: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori).
 
 Per altre informazioni sul modello di ripetizione dei tentativi, vedere la [ripetere](/azure/architecture/patterns/retry/) pattern.
 
@@ -397,7 +397,7 @@ Il modello a interruttore può impedire a un'app ripetutamente il tentativo di e
 
 Un interruttore funge da proxy per le operazioni che potrebbe non riuscire. Il proxy deve monitorare il numero di errori recenti che si sono verificati e usare queste informazioni per decidere se consentire l'operazione per procedere o per restituire subito un'eccezione.
 
-L'app per dispositivi mobili di eShopOnContainers non implementa attualmente lo schema circuit breaker. Tuttavia, non di eShopOnContainers. Per altre informazioni, vedere [Microservizi .NET: architettura per applicazioni .NET in contenitori](https://aka.ms/microservicesebook).
+L'app per dispositivi mobili di eShopOnContainers non implementa attualmente lo schema circuit breaker. Tuttavia, non di eShopOnContainers. Per altre informazioni, vedere [Microservizi .NET: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori).
 
 > [!TIP]
 > Combinare i modelli di ripetizione dei tentativi e l'interruttore di circuito. Un'app è possibile combinare i modelli di ripetizione dei tentativi e l'interruttore di circuito usando lo schema retry per richiamare un'operazione con un interruttore. Tuttavia, la logica di ripetizione dei tentativi deve essere sensibile alle eventuali eccezioni restituite dall'interruttore e abbandonare i tentativi di ripetizione dei tentativi se l'interruttore di circuito indica che un errore non temporaneo.

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
 ms.openlocfilehash: 85d863b19c3bf0302464e371738a2926cc80e8ce
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61290785"
 ---
 # <a name="lines-and-stroke-caps"></a>Linee ed estremità dei tratti
 
@@ -30,7 +30,7 @@ Per disegnare singole righe, `SKCanvas` definisce una semplice [ `DrawLine` ](xr
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-Per impostazione predefinita, il [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) proprietà di una nuova istanza `SKPaint` oggetto è 0, che ha lo stesso effetto di un valore di 1 il rendering di una riga di un pixel in spessore. Questo valore viene visualizzato fette molto sottile dispositivi ad alta risoluzione, ad esempio telefoni, pertanto è opportuno impostare il `StrokeWidth` su un valore maggiore. Ma quando si inizia a creare linee di spessore ridimensionabile, che genera un altro problema: modalità di avvio e finali di queste righe spesse di rendering?
+Per impostazione predefinita, il [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) proprietà di una nuova istanza `SKPaint` oggetto è 0, che ha lo stesso effetto di un valore di 1 il rendering di una riga di un pixel in spessore. Questo valore viene visualizzato fette molto sottile dispositivi ad alta risoluzione, ad esempio telefoni, pertanto è opportuno impostare il `StrokeWidth` su un valore maggiore. Ma una volta iniziato disegno di linee di spessore ridimensionabile, che genera un altro problema: Modalità di avvio e finali di queste righe spesse di rendering?
 
 L'aspetto dell'avvio e fine delle righe viene chiamato un *estremità della linea* o, in Skia, un *estremità della traccia*. La parola "limite" in questo contesto si riferisce a un tipo di hat &mdash; qualcosa che si trova all'estremità della linea. È impostato il [ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap) proprietà della `SKPaint` oggetto in uno dei seguenti membri del [ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap) enumerazione:
 
