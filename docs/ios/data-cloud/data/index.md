@@ -1,5 +1,5 @@
 ---
-title: Accesso ai dati di xamarin. IOS
+title: Xamarin.iOS Data Access
 description: Questo documento include collegamenti alle guide che descrivono come usare i database locali in un'applicazione xamarin. IOS. Contenuto collegato illustra SQLite.NET, ADO.NET e altro ancora.
 ms.prod: xamarin
 ms.assetid: 3AEDFD8D-FB10-4CEF-BE04-CCD14E95F02C
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/11/2016
 ms.openlocfilehash: 8d2513ba1c2ae2769e81659c98f3897f33d83fbf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61218038"
 ---
-# <a name="xamarinios-data-access"></a>Accesso ai dati di xamarin. IOS
+# <a name="xamarinios-data-access"></a>Xamarin.iOS Data Access
 
 Xamarin. IOS supporta l'accesso al database, API, ad esempio:
 

@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
 ms.openlocfilehash: 13678d3b1bca102e6f608ad1c11838db1f14cd08
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61309186"
 ---
 # <a name="recyclerview-parts-and-functionality"></a>Funzionalità e le parti di RecyclerView
 
@@ -101,7 +101,7 @@ Per altre informazioni sulla gestione di layout, vedere la [riferimento alla cla
 
 Il titolare della visualizzazione è una classe definita per la memorizzazione nella cache i riferimenti di visualizzazione. L'adapter utilizza i riferimenti di visualizzazione per associare ogni vista in base al contenuto. Tutti gli elementi di `RecyclerView` dispone di un'istanza del titolare della visualizzazione associata che memorizza nella cache i riferimenti di visualizzazione per quell'elemento. Per creare un contenitore di visualizzazione, usare la procedura seguente per definire una classe che contenga il set esatto delle visualizzazioni per ogni elemento:
 
-1.  Sottoclasse `RecyclerView.ViewHolder`.
+1.  Subclass `RecyclerView.ViewHolder`.
 2.  Implementa un costruttore che cerca e archivia i riferimenti di visualizzazione.
 3.  Implementare proprietà che l'adapter può usare per accedere a tali riferimenti.
 

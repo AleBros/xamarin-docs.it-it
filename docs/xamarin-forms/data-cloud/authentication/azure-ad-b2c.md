@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 7c12136a0dad0165c46f1559e7a2d61abaf7af1e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: MT
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61331487"
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>Autenticazione degli utenti con Azure Active Directory B2C
 
@@ -35,8 +35,8 @@ Azure Active B2C di Directory è un servizio di gestione di identità per le app
 Il processo per integrare il servizio di gestione di identità di Azure Active Directory B2C in un'applicazione per dispositivi mobili è come segue:
 
 1. Creare un tenant di Azure Active Directory B2C. Per altre informazioni, vedere [creare un tenant di Azure Active Directory B2C nel portale di Azure](/azure/active-directory-b2c/active-directory-b2c-get-started/).
-1. Registrare l'applicazione per dispositivi mobili con il tenant di Azure Active Directory B2C. Il processo di registrazione assegna un' **ID applicazione** che identifica in modo univoco l'applicazione e una **URL di reindirizzamento** che può essere utilizzato per indirizzare le risposte all'applicazione. Per altre informazioni, vedere [Azure Active Directory B2C: registrare l'applicazione](/azure/active-directory-b2c/active-directory-b2c-app-registration/).
-1. Creare un criterio di iscrizione e l'accesso. Questo criterio verranno definiti le esperienze consumer passerà attraverso durante l'iscrizione e l'accesso e viene inoltre il contenuto dei token, l'applicazione riceverà corretta iscrizione o accesso. Per altre informazioni, vedere [Azure Active Directory B2C: criteri predefiniti](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
+1. Registrare l'applicazione per dispositivi mobili con il tenant di Azure Active Directory B2C. Il processo di registrazione assegna un' **ID applicazione** che identifica in modo univoco l'applicazione e una **URL di reindirizzamento** che può essere utilizzato per indirizzare le risposte all'applicazione. Per altre informazioni, vedere [Azure Active Directory B2C: Registrare l'applicazione](/azure/active-directory-b2c/active-directory-b2c-app-registration/).
+1. Creare un criterio di iscrizione e l'accesso. Questo criterio verranno definiti le esperienze consumer passerà attraverso durante l'iscrizione e l'accesso e viene inoltre il contenuto dei token, l'applicazione riceverà corretta iscrizione o accesso. Per altre informazioni, vedere [Azure Active Directory B2C: I criteri predefiniti](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
 1. Usare la [Microsoft Authentication Library](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) nell'applicazione per dispositivi mobili per avviare un flusso di lavoro di autenticazione con il tenant di Azure Active Directory B2C.
 
 > [!NOTE]
@@ -55,7 +55,7 @@ Ogni richiesta viene inviata a un tenant di Azure Active Directory B2C specifica
 - Contenuto della pagina di iscrizione.
 - Attestazioni nei token che l'applicazione per dispositivi mobili riceve quando il criterio è stato eseguito.
 
-Un tenant di Azure Active Directory può contenere più criteri di tipi diversi, che possono quindi essere usati nell'applicazione in base alle esigenze. Inoltre, i criteri possono essere riutilizzati tra le applicazioni, consentendo di definire e modificare le esperienze di identità senza modificare il codice. Per altre informazioni sui criteri, vedere [Azure Active Directory B2C: criteri predefiniti](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
+Un tenant di Azure Active Directory può contenere più criteri di tipi diversi, che possono quindi essere usati nell'applicazione in base alle esigenze. Inoltre, i criteri possono essere riutilizzati tra le applicazioni, consentendo di definire e modificare le esperienze di identità senza modificare il codice. Per altre informazioni sui criteri, vedere [Azure Active Directory B2C: I criteri predefiniti](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
 
 ## <a name="setup"></a>Configurazione
 

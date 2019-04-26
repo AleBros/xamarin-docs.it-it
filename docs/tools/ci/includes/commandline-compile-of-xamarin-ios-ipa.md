@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 05f1017f8c4b306996d3e8e165511ff9062a1026
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61047860"
+---
 
 La riga di comando seguente per specificare una build di rilascio della soluzione **SOLUTION_FILE.sln** per iPhone. Il percorso del pacchetto IPA può essere impostato specificando il `IpaPackageDir` proprietà nella riga di comando:
 

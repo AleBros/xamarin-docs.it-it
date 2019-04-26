@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 7f957c9ff5a0e7c3a0821978703860ed2f723a92
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61013137"
 ---
 # <a name="touch-and-gestures-in-xamarinandroid"></a>Tocco e movimenti in xamarin. Android
 

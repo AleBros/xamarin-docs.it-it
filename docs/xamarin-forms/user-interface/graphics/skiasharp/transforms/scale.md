@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2017
 ms.openlocfilehash: 9bc320273df192f9daf2520f451601335731e7b0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61189241"
 ---
 # <a name="the-scale-transform"></a>Trasformazione di ridimensionamento
 
@@ -102,7 +102,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Ci si potrebbe chiedere: modo in cui i fattori di scala influiscono sul valore restituito dal `MeasureText` metodo `SKPaint`? La risposta è: non è affatto. `Scale` è un metodo di `SKCanvas`. Non influiscono sulle operazioni eseguite con un `SKPaint` finché non si utilizza tale oggetto per eseguire il rendering di un elemento nell'area di disegno dell'oggetto.
+Ci si potrebbe chiedere: Modo in cui i fattori di scala influiscono sul valore restituito dal `MeasureText` metodo `SKPaint`? La risposta è: Assolutamente no. `Scale` è un metodo di `SKCanvas`. Non influiscono sulle operazioni eseguite con un `SKPaint` finché non si utilizza tale oggetto per eseguire il rendering di un elemento nell'area di disegno dell'oggetto.
 
 Come può notare, tutti gli elementi disegnata dopo il `Scale` chiamare aumenta in proporzione:
 
@@ -251,7 +251,7 @@ Il `pathBounds` rettangolo viene ottenuto nella parte superiore di questo codice
 
 [![](scale-images/anisotropicscaling-small.png "Tripla screenshot della pagina di ridimensionamento anisotropico")](scale-images/anisotropicscaling-large.png#lightbox "tripla screenshot della pagina di filtraggio anisotropo della scalabilità")
 
-Un altro modo è possibile considerare il `Scale` e `Translate` chiamate consiste nel determinare l'effetto della sequenza inversa: il `Translate` chiamata passa il percorso in modo che diventi completamente visibile ma orientato nell'angolo superiore sinistro dell'area di disegno. Il `Scale` metodo quindi effettua tale star più grandi rispetto all'angolo superiore sinistro.
+Un altro modo è possibile considerare il `Scale` e `Translate` chiamate consiste nel determinare l'effetto della sequenza inversa: Il `Translate` chiamata passa il percorso in modo che diventi completamente visibile ma orientato nell'angolo superiore sinistro dell'area di disegno. Il `Scale` metodo quindi effettua tale star più grandi rispetto all'angolo superiore sinistro.
 
 In realtà, sembra che il registro star è leggermente maggiore area di disegno. Il problema è lo spessore del tratto. Il `Bounds` proprietà di `SKPath` indica le dimensioni delle coordinate codificato nel percorso e che viene usato il programma per la scalabilità. Quando il percorso viene eseguito il rendering con un valore particolare, il percorso viene eseguito il rendering è maggiore di area di disegno.
 

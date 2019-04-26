@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 23. I trigger e comportamenti
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 23. I trigger e comportamenti'
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 23. I trigger e comportamenti'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: ddbb96836fa1aa9611701bd7d645d9e85ad28027
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61332095"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Riepilogo del capitolo 23. I trigger e comportamenti
 

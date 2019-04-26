@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
 ms.openlocfilehash: b0e2d5e3c7923e5c3cf2adcc1dd104a97b78e727
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61321560"
 ---
 # <a name="bindable-layouts-in-xamarinforms"></a>Layout associabile in xamarin. Forms
 
@@ -85,7 +85,7 @@ In questo esempio, tutti gli elementi di `TopFollowers` raccolta verrà visualiz
 
 ![Layout associabili con un DataTemplate](bindable-layouts-images/top-followers.png "associabile layout con un modello di dati")
 
-Per altre informazioni sui modelli di dati, vedere [modelli di dati di xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+Per altre informazioni sui modelli di dati, vedere [Modelli di dati Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="choosing-item-appearance-at-runtime"></a>Scelta dell'aspetto degli elementi in fase di esecuzione
 

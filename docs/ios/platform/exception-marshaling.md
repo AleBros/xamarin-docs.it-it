@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/05/2017
 ms.openlocfilehash: 167d6ac421bdd2652e7f8474e1ea21bd9040723f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075094"
 ---
 # <a name="exception-marshaling-in-xamarinios"></a>Eccezioni di marshalling in xamarin. IOS
 
@@ -263,16 +263,16 @@ Sono disponibili le modalità seguenti:
 
 - `Default`: Il valore predefinito varia a seconda della piattaforma. Si tratta `ThrowObjectiveCException` se il Garbage Collector è in modalità cooperativa (watchOS), e `UnwindNativeCode` in caso contrario (iOS / watchOS / macOS). Il valore predefinito può cambiare in futuro.
 - `UnwindNativeCode`: Questo è il comportamento precedente (undefined). Non è disponibile quando si usa il Garbage Collector in modalità cooperativa (che è l'unica opzione disponibile in watchOS; pertanto, questo non è un'opzione valida in watchOS), ma è l'opzione predefinita per tutte le altre piattaforme.
-- `ThrowObjectiveCException`: Converte le eccezioni gestite in un'eccezione di Objective-C e generare l'eccezione di Objective-C. Questo è l'impostazione predefinita in watchOS.
-- `Abort`: Interrompe il processo.
+- `ThrowObjectiveCException`: Convertire le eccezioni gestite in un'eccezione di Objective-C e generare l'eccezione di Objective-C. Questo è l'impostazione predefinita in watchOS.
+- `Abort`: Interrompere il processo.
 - `Disable`: Disabilita l'intercettazione di eccezioni, in modo che non ha senso per impostare questo valore nel gestore dell'evento, ma una volta che viene generato l'evento è troppo tardi per disabilitarlo. In ogni caso, se impostato, si comportano come `UnwindNativeCode`.
 
 Per effettuare il marshalling delle eccezioni Objective-C al codice gestito, sono disponibili le modalità seguenti:
 
 - `Default`: Il valore predefinito varia a seconda della piattaforma. Si tratta `ThrowManagedException` se il Garbage Collector è in modalità cooperativa (watchOS), e `UnwindManagedCode` in caso contrario (iOS o tvOS / macOS). Il valore predefinito può cambiare in futuro.
 - `UnwindManagedCode`: Questo è il comportamento precedente (undefined). Non è disponibile quando si usa il Garbage Collector in modalità cooperativa, che corrisponde alla modalità GC valida solo in watchOS, pertanto questo non è un'opzione valida in watchOS, ma è il valore predefinito per tutte le altre piattaforme.
-- `ThrowManagedException`: Converte l'eccezione di Objective-C in un'eccezione gestita e genera un'eccezione gestita. Questo è l'impostazione predefinita in watchOS.
-- `Abort`: Interrompe il processo.
+- `ThrowManagedException`: Convertire l'eccezione di Objective-C in un'eccezione gestita e generano un'eccezione gestita. Questo è l'impostazione predefinita in watchOS.
+- `Abort`: Interrompere il processo.
 - `Disable`: Disabilita l'intercettazione di eccezioni, in modo che non ha senso per impostare questo valore nel caso in cui gestore, ma una volta l'evento viene generato, è troppo tardi per disabilitarla. In ogni caso se impostato, verrà interrotto il processo.
 
 Pertanto, per visualizzare ogni volta che viene effettuato il marshalling un'eccezione, è possibile eseguire questa operazione:

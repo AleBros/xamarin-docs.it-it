@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
 ms.openlocfilehash: 1d159d280bd3b8855c32e3e437dfdefcbe0463cb
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261129"
 ---
 # <a name="unified-api-overview"></a>Introduzione all'API unificata
 
@@ -40,8 +40,8 @@ Indipendentemente dal fatto che le applicazioni si esegue la migrazione, consult
 
 Da questo momento, le nostre API verranno visualizzate in due modi:
 
--  **API classica:** limitate a 32-bit (solo) e di esporla nel `monotouch.dll` e `XamMac.dll` assembly.
--  **API unificata:** supporta lo sviluppo di sia 32 e 64 bit con una singola API disponibile nel `Xamarin.iOS.dll` e `Xamarin.Mac.dll` assembly.
+-  **API classica:** Limitato a 32-bit (solo) ed esposti nel `monotouch.dll` e `XamMac.dll` assembly.
+-  **API unificata:** Supporta lo sviluppo di sia 32 e 64 bit con una singola API disponibile nel `Xamarin.iOS.dll` e `Xamarin.Mac.dll` assembly.
 
 Ciò significa che per Enterprise gli sviluppatori (non destinata l'App Store), puoi continuare a usare le API classiche esistenti, come abbiamo mantenere mantenendo li all'infinito, oppure è possano eseguire l'aggiornamento alle nuove API.
 
@@ -55,8 +55,8 @@ Si sta eliminando "MonoTouch" il prefisso dalla prodotto iOS e da "MonoMac" dal 
 
 Questo rende più semplice condividere codice tra le piattaforme Mac e iOS senza ricorrere alla compilazione condizionale e consente di ridurre il rumore nella parte superiore del file del codice sorgente.
 
--  **API classica:** usare gli spazi dei nomi `MonoTouch.` o `MonoMac.` prefisso.
--  **API unificata:** alcun prefisso dello spazio dei nomi
+-  **API classica:** Usare gli spazi dei nomi `MonoTouch.` o `MonoMac.` prefisso.
+-  **API unificata:** Nessun prefisso dello spazio dei nomi
 
 ## <a name="runtime-defaults"></a>Impostazioni predefinite di runtime
 
@@ -179,7 +179,7 @@ public static NSDate DateTimeToNSDate(this DateTime date)
 
 API classica xamarin. IOS interna (monotouch) il `[Obsolete]` attributo è stato usato in due modi diversi:
 
--  **Deprecato API iOS:** ciò è quando gli hint di Apple per è possibile interrompere l'uso di un'API perché si è progressivamente sostituito da una versione più recente. L'API classica sia corretto e spesso obbligatorio (se si supporta la versione precedente di iOS).
+-  **API iOS deprecate:** Questo è quando gli hint di Apple per è possibile interrompere l'uso di un'API perché si è progressivamente sostituito da una versione più recente. L'API classica sia corretto e spesso obbligatorio (se si supporta la versione precedente di iOS).
  Tali API (e `[Obsolete]` attributo) sono inclusi nei nuovi assembly xamarin. IOS.
 -  **API non corretta** alcune API sono stati rilevati errori di digitazione nei relativi nomi.
 
@@ -244,7 +244,7 @@ In alcuni casi dovevano essere modificato da alcune costanti `string` a `NSStrin
 
     public virtual string ReuseIdentifier { get; }
 
-**Unificata**
+**Unified**
 
     public virtual NSString ReuseIdentifier { get; }
 
@@ -262,7 +262,7 @@ Queste limitazioni sono stati rimosse e la pulizia sulle API unificata. La maggi
 
     public virtual AVAssetResourceLoaderDelegate Delegate { get; }
 
-**Unificata**
+**Unified**
 
     public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
 
@@ -274,7 +274,7 @@ Il `I` prefisso significa **unificata** esporre un'interfaccia, anziché un tipo
 
     public virtual void SelectionDidChange (NSObject uiTextInput);
 
-**Unificata**
+**Unified**
 
     public virtual void SelectionDidChange (IUITextInput uiTextInput);
 

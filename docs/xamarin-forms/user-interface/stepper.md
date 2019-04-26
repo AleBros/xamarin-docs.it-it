@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/17/2018
 ms.openlocfilehash: a224d82ed7bb993f51be6cca6ccf09b5331cfac0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61250582"
 ---
 # <a name="xamarinforms-stepper"></a>Gestore di istruzioni di xamarin. Forms
 
@@ -182,7 +182,7 @@ Il **associazioni di gestore di istruzioni di base** pagina viene illustrato com
 </ContentPage>
 ```
 
-Il [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) proprietà del primo [ `Label` ](xref:Xamarin.Forms.Label) è associato ai [ `Value` ](xref:Xamarin.Forms.Stepper.Value) proprietà del [ `Stepper` ](xref:Xamarin.Forms.Stepper), poiché è il [ `Text` ](xref:Xamarin.Forms.Label.Text) proprietà del secondo `Label` con un `StringFormat` specifica. Il **associazioni di gestore di istruzioni di base** pagina funzioni un po' diverso da due pagine precedenti: quando la pagina viene visualizzata prima di tutto, il secondo `Label` consente di visualizzare la stringa di testo con il valore. Si tratta di un vantaggio dell'uso del data binding. Per visualizzare il testo senza l'associazione di dati, è necessario inizializzare in modo specifico la `Text` proprietà del `Label` o si simula un'attivazione del [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) evento chiamando il gestore dell'evento dal costruttore della classe .
+Il [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) proprietà del primo [ `Label` ](xref:Xamarin.Forms.Label) è associato ai [ `Value` ](xref:Xamarin.Forms.Stepper.Value) proprietà del [ `Stepper` ](xref:Xamarin.Forms.Stepper), poiché è il [ `Text` ](xref:Xamarin.Forms.Label.Text) proprietà del secondo `Label` con un `StringFormat` specifica. Il **associazioni di gestore di istruzioni base** pagina funzioni un po' diverso da due pagine precedenti: Quando la pagina viene visualizzata prima di tutto, il secondo `Label` consente di visualizzare la stringa di testo con il valore. Si tratta di un vantaggio dell'uso del data binding. Per visualizzare il testo senza l'associazione di dati, è necessario inizializzare in modo specifico la `Text` proprietà del `Label` o si simula un'attivazione del [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) evento chiamando il gestore dell'evento dal costruttore della classe .
 
 ## <a name="precautions"></a>Precauzioni relative alla
 

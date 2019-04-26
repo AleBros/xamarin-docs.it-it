@@ -1,5 +1,5 @@
 ---
-title: Uso di tabelle in iOS Designer
+title: Utilizzo delle tabelle in iOS Designer
 description: Nelle sezioni precedenti sono stati presentati lo sviluppo con le tabelle. In questo, la quinta e ultima sezione, si verrà aggregare quanto imparato finora e creare un'applicazione elenco attività piuttosto base utilizzando uno Storyboard.
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
@@ -8,17 +8,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 303c96ae6cdbc9f5b327c971f962d6eac75a6fa1
-ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61227553"
 ---
-# <a name="working-with-tables-in-the-ios-designer"></a>Uso di tabelle in iOS Designer
+# <a name="working-with-tables-in-the-ios-designer"></a>Utilizzo delle tabelle in iOS Designer
 
 Gli storyboard sono un modo WYSIWYG per creare applicazioni iOS e sono supportati in Visual Studio su Mac e Windows. Per altre informazioni su storyboard, vedere la [Introduzione a storyboard](~/ios/user-interface/storyboards/index.md) documento. Gli storyboard consentono anche di modificare il layout delle celle *in* la tabella, che semplifica lo sviluppo di tabelle e celle
 
-Quando si configurano le proprietà di una visualizzazione tabella in iOS Designer, esistono due tipi di contenuto della cella è possibile scegliere tra: **dinamici** oppure **statico** contenuto prototipo.
+Quando si configurano le proprietà di una visualizzazione tabella in iOS Designer, esistono due tipi di contenuto della cella che è possibile scegliere tra: **Dynamic** oppure **statici** contenuto prototipo.
 
 <a name="Prototype_Content" />
 
@@ -79,11 +79,11 @@ La prima modifica allo storyboard è l'eliminazione la visualizzazione dettagli 
 
 5. Configurare quindi le due viste delle tabelle selezionandoli e usando il riquadro delle proprietà. Assicurarsi di selezionare una visualizzazione e non i Controller di visualizzazione, è possibile utilizzare la struttura del documento per facilitare la selezione.
 
-6.  Modificare il Controller visualizzazione radice per essere **contenuto: dinamico prototipi** (la visualizzazione nell'area di progettazione verrà etichettata **prototipo contenuto** ):
+6.  Modificare il Controller visualizzazione radice per essere **contenuto: Dinamici prototipi** (la visualizzazione nell'area di progettazione verrà etichettata **prototipo contenuto** ):
 
     [![Impostazione della proprietà del contenuto ai prototipi dinamici](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
-7.  Modificare il nuovo **UITableViewController** essere **contenuto: celle statico**. 
+7.  Modificare il nuovo **UITableViewController** essere **contenuto: Le celle statiche**. 
 
 
 8. Il nuovo UITableViewController deve avere il nome della classe e un identificatore impostato. Selezionare il Controller di visualizzazione e il tipo _TaskDetailViewController_ per il **classe** nel **riquadro delle proprietà** : verrà creato un nuovo `TaskDetailViewController.cs` file della soluzione Riempimento. Immettere il **StoryboardID** come _detail_, come illustrato nell'esempio seguente. Verrà usato in un secondo momento per caricare questa vista in C# code:  
@@ -115,7 +115,7 @@ Successivamente, è necessario creare un pulsante che aggiungerà nuove attivit�
 Seguire questa procedura: 
 
 -  Trascinare un **elemento pulsante della barra** dalla casella degli strumenti per il _lato destro della barra di spostamento_.
--  Nel **riquadro delle proprietà**, in **elemento pulsante della barra** selezionare **identificatore: aggiungere** (per renderlo un *+* plus pulsante). 
+-  Nel **riquadro delle proprietà**, in **elemento pulsante della barra** selezionare **identificatore: Aggiungere** (per renderlo un *+* plus pulsante). 
 -  Assegnare un nome in modo da poter essere identificato nel codice in una fase successiva. Si noti che è necessario assegnare un nome di classe Controller visualizzazione radice (ad esempio **ItemViewController**) che consente di impostare il nome dell'elemento pulsante sulla barra.
 
 
@@ -129,9 +129,9 @@ I passaggi per compilare il layout completo sono:
 
 Selezionare la visualizzazione di tabella e aprire il **Riempi proprietà**. Aggiornare le proprietà seguenti:
 
--  **Le sezioni**: _2_ 
--  **Stile**: _raggruppati_
--  **Separatore**: _None_
+-  **Nelle sezioni**: _2_ 
+-  **Stile**: _Raggruppati_
+-  **Separatore**: _Nessuno_
 -  **Selezione**: _Nessuna selezione_
 
 Selezionare la sezione superiore e in **proprietà > sezione della visualizzazione tabella** cambiare **righe** al _3_, come illustrato di seguito:
@@ -141,15 +141,15 @@ Selezionare la sezione superiore e in **proprietà > sezione della visualizzazio
 
 Per ogni cella aprire il **riquadro delle proprietà** e impostare:
 
--  **Stile**: _personalizzato_
--  **Identificatore**: scegliere un identificatore univoco per ogni cella (ad es. "_title_","_note_","_eseguita_").
+-  **Stile**:  _Personalizzato_
+-  **Identificatore**: Scegliere un identificatore univoco per ogni cella (ad es. "_title_","_note_","_eseguita_").
 -  Trascinare i controlli necessari per produrre il layout mostrato nella schermata (posizionare **UILabel**, **UITextField** e **UISwitch** sulle celle corrette e impostare le etichette in modo appropriato, Internet Explorer. Titolo, note e fatto).
 
 
 Nella seconda sezione, impostare **righe** al _1_ e selezionare l'handle di ridimensionamento inferiore della cella per renderlo più alta.
 
 -  **Impostare l'identificatore**: su un valore univoco (ad es. "Salva"). 
--  **Impostare lo sfondo**: _cancellare il colore_ .
+-  **Impostare lo sfondo**:  _Cancellare il colore_ .
 -  Trascinare due pulsanti sulla cella e impostare i propri titoli in modo appropriato (vale a dire _salvare_ e _eliminare_), come illustrato di seguito:
 
    [![configurare due pulsanti nella parte inferiore](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
@@ -160,11 +160,11 @@ A questo punto è anche possibile impostare vincoli per le celle e i controlli p
 
 Esistono pochi passaggi finali nella creazione nostro Storyboard. Prima di tutto è necessario assegnare a ognuno dei nostri controlli un nome in **identità > nome** quindi possono essere usate in un secondo momento nel codice. Questi nomi come indicato di seguito:
 
--  **Spostare il titolo UITextField** : _esiste_
+-  **Spostare il titolo UITextField** : _TitleText_
 -  **Note sulla UITextField** : _NotesText_
 -  **UISwitch** : _DoneSwitch_
 -  **Eliminare UIButton** : _DeleteButton_
--  **Salvare UIButton** : _PulsanteSalva_
+-  **Salvare UIButton** : _SaveButton_
 
 
 <a name="Adding_Code" />

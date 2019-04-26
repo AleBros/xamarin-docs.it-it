@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: bb9795eb1e77a48b01556c553ae19613d6ab6de6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61267604"
 ---
 # <a name="viewpager"></a>ViewPager
 
@@ -39,7 +39,7 @@ Questa guida illustra entrambi gli approcci:
 
 ## <a name="requirements"></a>Requisiti
 
-Per utilizzare `ViewPager` nel progetto dell'app, è necessario installare il [libreria di supporto Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) pacchetto. Per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: inclusi a NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
+Per utilizzare `ViewPager` nel progetto dell'app, è necessario installare il [libreria di supporto Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) pacchetto. Per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: Inserimento di pacchetto NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
  
 ## <a name="architecture"></a>Architettura
@@ -86,4 +86,4 @@ Questa Guida dimostra come immplement `ViewPager`, adapter e componenti dell'app
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [TreePager (esempio)](https://developer.xamarin.com/samples/monodroid/UserInterface/TreePager)
-- [FlashCardPager (esempio)](https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager)
+- [FlashCardPager (sample)](https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager)

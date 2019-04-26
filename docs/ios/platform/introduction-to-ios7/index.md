@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: db2ce779962947e2121ff03280544a080e193e2e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037414"
 ---
 # <a name="introduction-to-ios-7"></a>Introduzione a iOS 7
 
@@ -112,7 +112,7 @@ Anche se ci sono molte le primitive, il processo generale per l'aggiunta di inte
 1.  Aggiungere i comportamenti per l'animatore dinamica.
 
 
-### <a name="dynamics-example"></a>Esempio di Dynamics
+### <a name="dynamics-example"></a>Dynamics Example
 
 Verrà ora esaminato un esempio che aggiunge la gravità e un limite di conflitto per un `UIView`.
 

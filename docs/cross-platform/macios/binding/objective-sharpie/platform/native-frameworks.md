@@ -1,5 +1,5 @@
 ---
-title: Binding di Framework nativi
+title: Binding di framework nativi
 description: Questo documento viene descritto come utilizzare Sharpie Objective - opzione di framework per creare un'associazione a una libreria distribuito come un framework.
 ms.prod: xamarin
 ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
@@ -7,13 +7,13 @@ author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
 ms.openlocfilehash: ca103ee027597813be51e126aaa05f9aa969af35
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61199128"
 ---
-# <a name="binding-native-frameworks"></a>Binding di Framework nativi
+# <a name="binding-native-frameworks"></a>Binding di framework nativi
 
 In alcuni casi una libreria nativa viene distribuita come un [framework](https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WhatAreFrameworks.html). Sharpie obiettivo offre una comoda funzionalità per la corretta associazione definito Framework tramite la `-framework` opzione.
 
@@ -38,6 +38,6 @@ Di particolare importanza è il `-F .` percorso di ricerca framework fornito da 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Corso di Xamarin University: Creazione di una libreria di binding di Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Corsi di Xamarin University: Compilare una libreria di binding Objective-C con Sharpie obiettivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Corsi di Xamarin University: Compila una libreria di binding Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Corsi di Xamarin University: Creazione di una libreria di binding Objective-C con Sharpie obiettivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
 

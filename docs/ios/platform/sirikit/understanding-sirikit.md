@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
 ms.openlocfilehash: b2a9e757e8a3407bbb19ae0580e5788eabe84cf0
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61188985"
 ---
 # <a name="understanding-sirikit-concepts"></a>Informazioni sui concetti di SiriKit
 
@@ -80,18 +80,18 @@ _Utente: Inviare ulteriori bananas._<br />
 E un altro utente potrebbe eseguire una richiesta ancora più breve:
 
 _Utente: MonkeyChat Bobo, inviare più bananas._<br />
-_Siri: Ok, l'invio di messaggi inviare ulteriori bananas al Bobo su Monkeychat._<br />
+_Siri: OK, l'invio di messaggi, inviare più bananas al Bobo su Monkeychat._<br />
 
 O anche apportare la stessa richiesta in una lingua diversa:
 
 _Utente: MonkeyChat Bobo s'il vous plaît envoyer plus de bananes._<br />
-_Siri: Oui, envoyer plaît di envoi messaggio s'il vous più de bananes à Bobo sur Monkeychat._<br />
+_Siri: OUI, envoyer plaît di envoi messaggio s'il vous più de bananes à Bobo sur Monkeychat._<br />
 
 Ancora un altro utente potrebbe essere molto dettagliato nella conversazione:
 
-_Utente: Salve Siri, possibile, si me un Ottimizza per dimensione e avviare l'app MonkeyChat per inviare un SMS con il messaggio, inviare più bananas._<br />
+_Utente: Salve Siri, possibile, si me un Ottimizza per dimensione e avviare l'app MonkeyChat per ricevere un SMS con il messaggio, inviare più bananas._<br />
 _Siri: A chi?_<br />
-_Utente: Mio migliore alla pubblicazione Bobo._<br />
+_Utente: My pal Bobo migliore._<br />
 
 Inoltre, esistono molti modi che Siri può rispondere a una richiesta, alcuni basato sul modo in cui è stata effettuata la richiesta:
 
@@ -123,7 +123,7 @@ Esistono tre modi principali in cui le app possono essere incluse nella conversa
 
 In base alle informazioni precedenti, esaminare l'interazione della conversazione seguente con l'app MonkeyChat:
 
-_Utente: Salve Siri, invia un messaggio a Bobo su MonkeyChat._<br />
+_Utente: Salve Siri, inviare un messaggio a Bobo su MonkeyChat._<br />
 _Siri: Ciò che si desidera comunicare al Bobo?_<br />
 _Utente: Inviare ulteriori bananas._<br />
 
@@ -133,7 +133,7 @@ Il ruolo prima che l'app si assume nella conversazione consiste nel comprendere 
 
 Siri non ha il nome "Bobo" in un database, ma l'app quindi ha condiviso queste informazioni con Siri tramite il vocabolario. L'app consente anche Siri riconoscere che Bobo è un destinatario, perché ha specificato tali a Siri come un *contatto*.
 
-Siri sa che è necessario eseguire altre per inviare un messaggio a un destinatario, in modo rapido verificherà con l'estensione dell'App per vedere se un messaggio richiede contenuto. Perché non ne MonkeyChat, Siri risponderà all'utente con la domanda: *"Cosa vuoi si dicono Bobo?"*
+Siri sa che è necessario eseguire altre per inviare un messaggio a un destinatario, in modo rapido verificherà con l'estensione dell'App per vedere se un messaggio richiede contenuto. Perché non ne MonkeyChat, Siri risponderà all'utente con la domanda: *"Ciò che si desidera comunicare al Bobo?"*
 
 Nell'esempio precedente, l'utente ha risposto, *", inviare più bananas"*, cui Siri verrà riunire in un strutturato **finalità**:
 
@@ -141,10 +141,10 @@ Nell'esempio precedente, l'utente ha risposto, *", inviare più bananas"*, cui S
 
 L'intento strutturato conterrà le informazioni seguenti:
 
-- **Dominio:** messaggi
+- **Dominio:** Messages
 - **Scopo:** sendMessage
 - **Destinatario:** Bobo
-- **Contenuto:** , inviare più bananas
+- **Contenuto:** Inviare ulteriori bananas
 
 Ogni dominio ha come set di sapere *azioni* che può essere eseguita all'interno di essi e basati su dominio e l'azione, zero a molti parametri potrebbero essere inclusi nell'intenzione inviata all'app.
 
@@ -290,7 +290,7 @@ La specifica terminologia App definisce le parole o frasi specifiche che saranno
 
 Esistono diverse parti di un vocabolario `AppIntentVocabulary.plist` file:
 
-- **App di esempio Usa** -fornisce un insieme di casi d'uso comuni per le richieste che l'utente possa prendere dell'app. Ad esempio: *"Avviare accinge con MonkeyFit".*
+- **App di esempio Usa** -fornisce un insieme di casi d'uso comuni per le richieste che l'utente possa prendere dell'app. Ad esempio: *"Start accinge con MonkeyFit".*
 - **Parametri** -offrono un set di tipi di parametro non standard specifici per l'app. Ad esempio, per gli allenamenti i nomi per l'app MonkeyFit. Questi sono:
     - **Frase** -consente all'app di definire termini univoci per l'app. Ad esempio: il tipo per gli allenamenti "Bananarific" per l'app MonkeyFit. 
     - **Pronuncia** -consente l'hint per la pronuncia a Siri come una semplice ortografia fonetica di una frase specifica. Ad esempio, "ba nana delle istanze riservate fico".
@@ -467,7 +467,7 @@ Questo articolo ha illustrato i concetti principali necessari per usare SiriKit 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio ElizaChat](https://developer.xamarin.com/samples/monotouch/ios10/ElizaChat/)
+- [ElizaChat Sample](https://developer.xamarin.com/samples/monotouch/ios10/ElizaChat/)
 - [Guida per programmatori di SiriKit](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
 - [Riferimento a Framework Intent](https://developer.apple.com/reference/intents)
 - [Riferimento a Framework dell'interfaccia utente Intent](https://developer.apple.com/reference/intentsui)

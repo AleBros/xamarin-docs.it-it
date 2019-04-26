@@ -1,5 +1,5 @@
 ---
-title: È possibile aggiornare il modello predefinito di xamarin. Forms per un pacchetto NuGet più recente?
+title: È possibile aggiornare il modello predefinito di Xamarin.Forms a un pacchetto NuGet più recente?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 160FBE13-26EB-4B4F-9248-A5CBE58FDD7F
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
 ms.openlocfilehash: e439d39dd8591cad14485e64aabab2d6016a8e27
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61345909"
 ---
-# <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>È possibile aggiornare il modello predefinito di xamarin. Forms per un pacchetto NuGet più recente?
+# <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>È possibile aggiornare il modello predefinito di Xamarin.Forms a un pacchetto NuGet più recente?
 
 Questa Guida Usa il modello di libreria xamarin. Forms .NET Standard come esempio, ma lo stesso metodo generale funzioneranno anche per il modello di progetto condiviso xamarin. Forms. Questa guida è stata scritta con l'esempio di aggiornamento da xamarin. Forms 1.5.1.6471 a 2.1.0.6529, ma gli stessi passaggi sono possibili impostare invece altre versioni come impostazione predefinita.
 

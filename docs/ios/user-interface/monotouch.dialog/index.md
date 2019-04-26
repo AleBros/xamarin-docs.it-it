@@ -8,11 +8,11 @@ ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
 ms.openlocfilehash: d5dda3cc22d91248cc31cc526e898a5eabbbefd0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61415550"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introduzione a monotouch. Dialog per xamarin. IOS
 
@@ -463,7 +463,7 @@ La classe ImageLoader espone un metodo di eliminazione che è possibile chiamare
 
 ## <a name="using-linq-to-create-element-hierarchy"></a>Utilizzo di LINQ per creare una gerarchia di elementi
 
-Tramite l'utilizzo di clever della sintassi di inizializzazione di # e LINQ, LINQ può essere utilizzato per creare una gerarchia dell'elemento. Ad esempio, il codice seguente crea una schermata da alcuni matrici di stringhe e gli handle di selezione tramite una funzione anonima che viene passata in ognuna delle celle `StringElement`:
+Tramite l'utilizzo di clever di LINQ e C#della sintassi di inizializzazione, LINQ può essere utilizzata per creare una gerarchia dell'elemento. Ad esempio, il codice seguente crea una schermata da alcuni matrici di stringhe e gli handle di selezione tramite una funzione anonima che viene passata in ognuna delle celle `StringElement`:
 
 ```csharp
 var rootElement = new RootElement ("LINQ root element") {

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/26/2018
 ms.openlocfilehash: 435af10484827826d53b767c2738e3945e0bae42
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61345240"
 ---
 # <a name="working-with-watchos-icons-in-xamarin"></a>Utilizzo di watchOS icone in Xamarin
 
@@ -49,7 +49,7 @@ Verificare che il **Info. plist** ha una `CFBundleName` chiave e il valore (Nota
 <string>Your App Name</string>
 ```
 
-### <a name="apple-watch-app"></a>App di Apple Watch
+### <a name="apple-watch-app"></a>Apple Watch App
 
 Una volta il [app padre](~/ios/watchos/app-fundamentals/parent-app.md) ha configurato le icone, è necessario aggiungere un catalogo di asset di icona dell'applicazione all'app watch.
 

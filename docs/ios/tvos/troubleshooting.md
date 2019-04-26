@@ -9,11 +9,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 60b54ffdce5f6bda2324c08bd3159eefeb5bc7f8
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50234857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61270238"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Risoluzione dei problemi delle App tvOS compilate con Xamarin
 
@@ -129,7 +129,7 @@ Se si usa una libreria di terze parti 3rd (ad esempio MonoGame) e la compilazion
 
 È necessario includere anche `--bitcode=asmonly` nella **gli argomenti aggiuntivi di tocco**, sono le opzioni del linker impostata su **collega tutto** ed eseguire una compilazione pulita.
 
-### <a name="itms-90471-error-the-large-icon-is-missing"></a>Errore 90471 ITMS. Icona di grandi dimensioni è manca
+### <a name="itms-90471-error-the-large-icon-is-missing"></a>ITMS-90471 error. Icona di grandi dimensioni è manca
 
 Se viene visualizzato un messaggio nel formato "ITMS 90471 error. Icona di grandi dimensioni manca"durante il tentativo di inviare un'app xamarin. tvos la Store di App TV Apple per la versione, verificare quanto segue:
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: a40d0911b7dabc900a4c6e50c692e4f091f22be9
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61206260"
 ---
 # <a name="core-animation-in-xamarinios"></a>Animazione di core in xamarin. IOS
 
@@ -45,7 +45,7 @@ Questa sezione vengono illustrate funzionalità di animazione UIKit, tra cui:
 -  Animazione di proprietà di visualizzazione
 
 
-### <a name="view-controller-transitions"></a>Transizioni dei Controller di visualizzazione
+### <a name="view-controller-transitions"></a>Transizioni dei controller di visualizzazione
 
  `UIViewController` fornisce supporto incorporato per la transizione tra i controller di visualizzazione tramite i `PresentViewController` (metodo). Quando si usa `PresentViewController`, la transizione al secondo controller può facoltativamente essere animata.
 

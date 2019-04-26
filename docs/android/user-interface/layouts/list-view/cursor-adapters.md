@@ -1,5 +1,5 @@
 ---
-title: Uso di Cursoradapter
+title: Uso di CursorAdapter
 ms.prod: xamarin
 ms.assetid: 60DE467E-A5DA-4420-52E5-D86AD1678FE6
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 10/25/2017
 ms.openlocfilehash: fbdd0f2ea000f0cf46178c615e7526bf7f210a41
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61187173"
 ---
-# <a name="using-cursoradapters"></a>Uso di Cursoradapter
+# <a name="using-cursoradapters"></a>Uso di CursorAdapter
 
 
 ## <a name="overview"></a>Panoramica

@@ -9,11 +9,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: 6d5be72a9329675a65b0d6873d13894b314b50e7
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61088077"
 ---
 # <a name="stack-views-in-xamarinios"></a>Viste dello stack in xamarin. IOS
 
@@ -28,7 +28,7 @@ In base alle proprietà definite per gli sviluppatori, ad esempio asse, distribu
 
 [![](uistackview-images/stacked01.png "Diagramma del layout visualizzazione stack")](uistackview-images/stacked01.png#lightbox)
 
-Quando si usa un `UIStackView` in un'app xamarin. IOS, lo sviluppatore può definire le visualizzazioni secondarie sia all'interno di uno Storyboard in iOS Designer, o aggiungendo e rimuovendo le visualizzazioni secondarie nel codice C#.
+Quando si usa un `UIStackView` in un'app xamarin. IOS, lo sviluppatore può definire le visualizzazioni secondarie sia all'interno di uno Storyboard in iOS Designer, o aggiungendo e rimuovendo le visualizzazioni secondarie nel codice c#.
 
 Questo documento è costituito da due parti: una Guida introduttiva che consentono di visualizzare lo stack prima di implementare e quindi alcune informazioni tecniche più dettagliate sul funzionamento.
 

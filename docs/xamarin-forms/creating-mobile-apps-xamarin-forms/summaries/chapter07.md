@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 7. XAML e codice
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 7. XAML e codice'
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 7. XAML e codice'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: ce4dde3716176daf826678809339afb84c25d84a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334740"
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>Riepilogo del capitolo 7. XAML e codice
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: f988c16e933214b3ce737febb89d05a451eb2f14
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61205887"
 ---
 # <a name="porter-duff-blend-modes"></a>Metodi di fusione porter Duff
 
@@ -78,10 +78,10 @@ Di seguito sono le modalità Porter Duff 14 come definito in SkiaSharp. La tabel
 | `SrcIn`    |             | Origine       |        |
 | `DstIn`    |             | Destinazione  |        |
 | `SrcOut`   |             |              | x      |
-| `DstOut`   | X           |              |        |
+| `DstOut`   | x           |              |        |
 | `SrcATop`  | x           | Origine       |        |
 | `DstATop`  |             | Destinazione  | x      |
-| `Xor`      | X           |              | X      |
+| `Xor`      | x           |              | x      |
 | `Plus`     | x           | Sum          | x      |
 | `Modulate` |             | Prodotto      |        | 
 
@@ -279,7 +279,7 @@ Potrebbe esserci una tentazione di sostituire le bitmap nel **griglia Porter Duf
 
 ## <a name="using-mattes-with-porter-duff"></a>Uso di mascherini con Porter Duff
 
-Il **composizione dei Brick-Wall** pagina mostra un esempio di un'attività di composizione classico: un'immagine deve essere raccolto da più parti, tra cui una bitmap con uno sfondo che deve essere eliminata. Di seguito è riportato il **SeatedMonkey.jpg** bitmap con lo sfondo problematico:
+Il **composizione dei Brick-Wall** pagina mostra un esempio di un'attività di composizione classico: Un'immagine deve essere raccolto da più parti, tra cui una bitmap con uno sfondo che deve essere eliminata. Di seguito è riportato il **SeatedMonkey.jpg** bitmap con lo sfondo problematico:
 
 ![Seduto Monkey](porter-duff-images/SeatedMonkey.jpg "seduto Monkey")
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/26/2018
 ms.openlocfilehash: 85edbf657382b7c85ab2c5af543431fb51fb0d4e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019612"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin. Forms BoxView
 
@@ -52,7 +52,7 @@ Il `WidthRequest` e `HeightRequest` proprietà svolgono un ruolo solo se il `Box
 
 Il `WidthRequest` e `HeightRequest` le proprietà vengono ignorate se il `BoxView` viene *vincolata* nel layout, nel quale caso il contenitore di layout impone la propria dimensione il `BoxView`.
 
-Oggetto `BoxView` può essere vincolato in una dimensione e non vincolato in altro. Ad esempio, se il `BoxView` è un figlio di un parametro vertical `StackLayout`, la dimensione verticale dello schermo il `BoxView` è non vincolato e la dimensione orizzontale è vincolato a livello generale. Ma esistono delle eccezioni per la dimensione orizzontale: se il `BoxView` ha relativi `HorizontalOptions` proprietà è impostata su un valore diverso da `LayoutOptions.Fill`, quindi la dimensione orizzontale è inoltre non vincolata. È anche possibile che il `StackLayout` in modo da avere una dimensione orizzontale non vincolata, nel qual caso il `BoxView` saranno anche in senso orizzontale non vincolato.
+Oggetto `BoxView` può essere vincolato in una dimensione e non vincolato in altro. Ad esempio, se il `BoxView` è un figlio di un parametro vertical `StackLayout`, la dimensione verticale dello schermo il `BoxView` è non vincolato e la dimensione orizzontale è vincolato a livello generale. Ma esistono delle eccezioni per la dimensione orizzontale: Se il `BoxView` ha relativi `HorizontalOptions` proprietà è impostata su un valore diverso da `LayoutOptions.Fill`, quindi la dimensione orizzontale è inoltre non vincolata. È anche possibile che il `StackLayout` in modo da avere una dimensione orizzontale non vincolata, nel qual caso il `BoxView` saranno anche in senso orizzontale non vincolato.
 
 Il [ **BasicBoxView** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BasicBoxView) nell'esempio vengono visualizzati un quello-pollice-quadrato non vincolato `BoxView` al centro della relativa pagina:
 
@@ -776,7 +776,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-L'icona della mano secondo viene trattato in modo leggermente diverso: una funzione di interpolazione di animazione viene applicata per semplificare lo spostamento sembrano meccanico anziché smooth. Su ciascun tick della seconda lancetta estrae un po' e quindi parcellizzazione relativa destinazione. Questo piccolo frammento di codice aggiunge molto il realismo del movimento.
+L'icona della mano secondo viene trattato in modo leggermente diverso: Una funzione di interpolazione di animazione viene applicata per semplificare lo spostamento sembrano meccanico anziché smooth. Su ciascun tick della seconda lancetta estrae un po' e quindi parcellizzazione relativa destinazione. Questo piccolo frammento di codice aggiunge molto il realismo del movimento.
 
 ## <a name="conclusion"></a>Conclusione
 

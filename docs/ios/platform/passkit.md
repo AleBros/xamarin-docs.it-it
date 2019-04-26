@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/13/2018
 ms.openlocfilehash: d1c640bef41e875b3bb427d657c9c239e4c3e16d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61192674"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit in xamarin. IOS
 
@@ -169,7 +169,7 @@ JSON è il formato che passa in genere viene creato in un server – significa c
 
 ### <a name="barcodes"></a>Codici a barre
 
-Sono supportati i formati solo 2D: PDF417, Aztechi, codici a matrice. Apple richiede che i codici a barre 1D siano inadeguati per l'analisi in una schermata di phone retroilluminazione.
+Sono supportati solo i formati 2D: PDF417, Aztec, QR. Apple richiede che i codici a barre 1D siano inadeguati per l'analisi in una schermata di phone retroilluminazione.
 
 Testo alternativo visualizzato sotto il codice a barre è facoltativo; alcuni merchants desidera essere in grado di leggere/tipo manualmente.
 
@@ -225,9 +225,9 @@ Per creare il seguente do passare ID del tipo.
 
 Il primo passaggio consiste nel configurare un ID del tipo di Pass per ogni diversa _tipo_ della sessione devono essere supportati. L'ID del Pass (o identificatore di tipo passare) crea un identificatore univoco per il passaggio. Si userà questo ID per collegare il passaggio con l'account per sviluppatore usando un certificato.
 
-1. Nel [certificati, identificatori e profili di sezione del portale di Provisioning iOS](https://developer.apple.com/account/overview.action), passare alla **identificatori** e selezionare **passare gli ID di tipo** . Quindi selezionare il **+** per creare un nuovo tipo di pass: [ ![](passkit-images/passid.png "crea un nuovo tipo di pass")](passkit-images/passid.png#lightbox)
+1. Nel [certificati, identificatori e profili di sezione del portale di Provisioning iOS](https://developer.apple.com/account/overview.action), passare alla **identificatori** e selezionare **passare gli ID di tipo** . Quindi selezionare il **+** pulsante per creare un nuovo tipo di pass: [![](passkit-images/passid.png "Creare un nuovo tipo di pass")](passkit-images/passid.png#lightbox)
 
-2.   Fornire una **Description** (nome) e **identificatore** (stringa univoca) per il passaggio. Si noti che tutti gli ID tipo passato deve iniziare con la stringa `pass.` In questo esempio usiamo `pass.com.xamarin.coupon.banana` : [ ![](passkit-images/register.png "fornire una descrizione e un identificatore")](passkit-images/register.png#lightbox)
+2.   Fornire una **Description** (nome) e **identificatore** (stringa univoca) per il passaggio. Si noti che tutti gli ID tipo passato deve iniziare con la stringa `pass.` In questo esempio usiamo `pass.com.xamarin.coupon.banana` : [![](passkit-images/register.png "Fornire una descrizione e un identificatore")](passkit-images/register.png#lightbox)
 
 
 3.   Confermare l'ID del Pass premendo la **registrare** pulsante.
@@ -236,7 +236,7 @@ Il primo passaggio consiste nel configurare un ID del tipo di Pass per ogni dive
 
 Per creare un nuovo certificato per questo ID del tipo di Pass, eseguire le operazioni seguenti:
 
-1.  Selezionare l'ID appena creato passare dall'elenco e fare clic su **Edit** : [ ![](passkit-images/pass-done.png "selezionare il nuovo ID di passare dall'elenco")](passkit-images/pass-done.png#lightbox)
+1.  Selezionare l'ID appena creato passare dall'elenco e fare clic su **modifica** : [![](passkit-images/pass-done.png "Selezionare il nuovo ID di passare dall'elenco")](passkit-images/pass-done.png#lightbox)
 
     Selezionare quindi **Create Certificate...** :
 

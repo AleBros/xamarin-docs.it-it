@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/07/2017
 ms.openlocfilehash: 0428a0df157e359ab34a6a71dbba31bdeb6962fa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61224062"
 ---
 # <a name="introduction-to-watchos-3"></a>Introduzione a watchOS 3
 
@@ -151,7 +151,7 @@ watchOS 3 include numerosi miglioramenti al framework WatchKit incluse le seguen
 - L'app può ottenere lo stato del Crown digitali usando le nuove [WKCrownSequencer](https://developer.apple.com/reference/watchkit/wkcrownsequencer) classe e ricevere gli aggiornamenti quando l'utente ruota il crown usando la [WKCrownDelegate](https://developer.apple.com/reference/watchkit/wkcrowndelegate) classe.
 - Il [WKExtension](https://developer.apple.com/reference/watchkit/wkextension) classe include ora le `ApplicationState` (metodo) e [WKApplicationState](https://developer.apple.com/reference/watchkit/wkapplicationstate) costante che l'app può usare per tenere traccia dello stato di runtime dell'app. `WKExtension` fornisce anche due nuovi metodi che possono essere usati per pianificare le attività in background.
 - Il [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) include ora il nuovo `ApplicationWillEnterForeground`, `ApplicationDidEnterBackground` e `HandleBackgroundTasks` metodi per monitorare le modifiche nello stato dell'app e gestire gli aggiornamenti delle attività in background.
-- Una nuova [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) classe è stata aggiunta per fornire i seguenti tipi di riconoscimento del movimento per le app watch: [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer ](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) e [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer).
+- Una nuova [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) classe è stata aggiunta per fornire i seguenti tipi di riconoscimento del movimento per le app watch: [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) e [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer).
 - Il nuovo [WKinterfaceHMCamera](https://developer.apple.com/reference/watchkit/wkinterfacehmcamera) classe fornisce un'interfaccia per qualsiasi HomeKit collegati fotocamera IP.
 - Il nuovo [WKInterfaceInlineMovie](https://developer.apple.com/reference/watchkit/wkinterfaceinlinemovie) classe consente all'app per la visualizzazione di un film "poster" che viene sostituita con il film in esecuzione quando l'utente tocca il.
 - Il nuovo [WKInterfacePaymentButton](https://developer.apple.com/reference/watchkit/wkinterfacepaymentbutton) classe consente all'app presentare un pulsante di Apple Pay nell'interfaccia utente che avvia una richiesta di pagamento quando si tocca.
@@ -162,7 +162,7 @@ Per altre informazioni, vedere la [tecniche per interazioni rapide per watchOS 3
 
 <a name="Workout-App-Enhancements" />
 
-## <a name="workout-app-enhancements"></a>Miglioramenti delle App per gli allenamenti
+## <a name="workout-app-enhancements"></a>Miglioramenti delle app per gli allenamenti
 
 Nuovo per watchOS 3, per gli allenamenti correlati App hanno la possibilità di eseguire in background nel Apple Watch. Per abilitare questa funzionalità (e ottenere l'accesso ai dati di HealthKit), l'app deve includere il `WKBackgroundModes` chiavi nel `Info.plist` file con il valore `workout-processing`.
 

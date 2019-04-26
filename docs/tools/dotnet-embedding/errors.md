@@ -7,15 +7,15 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/11/2018
 ms.openlocfilehash: 5c3dd406f1132f51a86ddf574ab7ad0b279bc9ec
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61215341"
 ---
 # <a name="net-embedding-errors"></a>Errori di incorporamento di .NET
 
-## <a name="em0xxx-binding-error-messages"></a>EM0xxx: I messaggi di errore di associazione
+## <a name="em0xxx-binding-error-messages"></a>EM0xxx: Messaggi di errore di associazione
 
 Ad esempio, i parametri, ambiente
 
@@ -89,7 +89,7 @@ Si tratta di un problema noto che si intende risolvere in una versione futura de
 
 <a name="EM0010" />
 
-### <a name="em0010-cant-merge-the-frameworks-simulatorframework-and-deviceframework-because-the-file-file-exists-in-both"></a>EM0010: Non è possibile unire i framework '{simulatorFramework}' e '{deviceFramework}' perché il file '{file}' è disponibile in entrambe.
+### <a name="em0010-cant-merge-the-frameworks-simulatorframework-and-deviceframework-because-the-file-file-exists-in-both"></a>EM0010: Impossibile unire il Framework '{simulatorFramework}' e '{deviceFramework}' perché il file '{file}' è disponibile in entrambe.
 
 Lo strumento non è stato possibile unire i Framework indicati nel messaggio di errore, perché è presente un file comune tra di essi.
 
@@ -149,23 +149,23 @@ Questo indica un bug in .NET incorporamento; inviare un report sui bug a [ https
 
 <!-- 1xxx: code processing -->
 
-## <a name="em1xxx-code-processing"></a>EM1xxx: L'elaborazione del Code
+## <a name="em1xxx-code-processing"></a>EM1xxx: Elaborazione del codice
 
 <a name="EM1010" />
 
-### <a name="em1010-type-t-is-not-generated-because-x-are-not-supported"></a>EM1010: Digitare `T` non viene generato perché `X` non sono supportati.
+### <a name="em1010-type-t-is-not-generated-because-x-are-not-supported"></a>EM1010: Tipo di `T` non viene generato perché `X` non sono supportati.
 
 Si tratta di un **avviso** che il tipo `T` verranno ignorate (vale a dire non deve essere generato) perché utilizza `X`, una funzionalità che non è supportata.
 
-Nota: Le funzionalità supportate si evolvono con le nuove versioni dello strumento.
+Nota: Funzionalità supportate si evolvono con le nuove versioni dello strumento.
 
 <a name="EM1011" />
 
-### <a name="em1011-type-t-is-not-generated-because-it-lacks-marshaling-code-with-a-native-counterpart"></a>EM1011: Digitare `T` non viene generato perché manca il codice di marshalling con una controparte di native.
+### <a name="em1011-type-t-is-not-generated-because-it-lacks-marshaling-code-with-a-native-counterpart"></a>EM1011: Tipo `T` non viene generato perché manca il codice di marshalling con una controparte di native.
 
 Si tratta di un **avviso** che il tipo `T` verrà ignorata (vale a dire non deve essere generato) poiché espone un elemento da .NET framework che richiede molto marshalling.
 
-Nota: Questo è qualcosa che potrebbe ottenere supportati, con alcune limitazioni, in una futura versione dello strumento.
+Nota: Si tratta di qualcosa che potrebbe ottenere supportati, con alcune limitazioni, in una futura versione dello strumento.
 
 <a name="EM1020" />
 
@@ -175,7 +175,7 @@ Si tratta di un **avviso** che il costruttore `C` verranno ignorate (ad esempio 
 
 Dovrebbe esserci un precedente avviso contenente il motivo per cui ulteriori informazioni digitare `T` non è supportato.
 
-Nota: Le funzionalità supportate si evolvono con le nuove versioni dello strumento.
+Nota: Funzionalità supportate si evolvono con le nuove versioni dello strumento.
 
 <a name="EM1021" />
 
@@ -200,7 +200,7 @@ Si tratta di un **avviso** che il metodo `M` verranno ignorate (ad esempio nulla
 
 Dovrebbe esserci un precedente avviso contenente il motivo per cui ulteriori informazioni digitare `T` non è supportato.
 
-Nota: Le funzionalità supportate si evolvono con le nuove versioni dello strumento.
+Nota: Funzionalità supportate si evolvono con le nuove versioni dello strumento.
 
 <a name="EM1031" />
 
@@ -210,7 +210,7 @@ Si tratta di un **avviso** che il metodo `M` verranno ignorate (ad esempio nulla
 
 Dovrebbe esserci un precedente avviso contenente il motivo per cui ulteriori informazioni digitare `T` non è supportato.
 
-Nota: Le funzionalità supportate si evolvono con le nuove versioni dello strumento.
+Nota: Funzionalità supportate si evolvono con le nuove versioni dello strumento.
 
 <a name="EM1032" />
 
@@ -235,19 +235,19 @@ Si tratta di un **avviso** che il metodo `M` non viene generato perché un altro
 
 <a name="EM1034" />
 
-### <a name="em1034-extension-method-m-is-not-generated-inside-a-category-because-they-cannot-be-created-on-primitive-type-t-a-normal-static-method-was-generated"></a>: EM1034 Metodo di estensione `M` non viene generato all'interno di una categoria, poiché questi non possono essere creati nel tipo primitivo `T`. È stato generato un normale metodo statico.
+### <a name="em1034-extension-method-m-is-not-generated-inside-a-category-because-they-cannot-be-created-on-primitive-type-t-a-normal-static-method-was-generated"></a>EM1034: Metodo di estensione `M` non viene generato all'interno di una categoria, poiché questi non possono essere creati nel tipo primitivo `T`. È stato generato un normale metodo statico.
 
 Si tratta di un **avviso** che un metodo di estensione in un primivite tipo (ad esempio `System.Int32`) è stato trovato. In Objective-C non è possibile creare categorie di tipo primitivo. Invece il generatore produrrà un normale metodo statico.
 
 <a name="EM1040" />
 
-### <a name="em1040-property-p-is-not-generated-because-of-parameter-type-t-is-not-supported"></a>: EM1040 Proprietà `P` non viene generato a causa del tipo di parametro `T` non è supportato.
+### <a name="em1040-property-p-is-not-generated-because-of-parameter-type-t-is-not-supported"></a>EM1040: Proprietà `P` non viene generato a causa del tipo di parametro `T` non è supportato.
 
 Si tratta di un **avviso** che la proprietà `P` verranno ignorate (vale a dire non deve essere generato) perché il tipo esposto `T` non è supportato.
 
 Dovrebbe esserci un precedente avviso contenente il motivo per cui ulteriori informazioni digitare `T` non è supportato.
 
-Nota: Le funzionalità supportate si evolvono con le nuove versioni dello strumento.
+Nota: Funzionalità supportate si evolvono con le nuove versioni dello strumento.
 
 <a name="EM1041" />
 
@@ -257,13 +257,13 @@ Si tratta di un **avviso** che le proprietà indicizzate in `T` verrà ignorata 
 
 <a name="EM1050" />
 
-### <a name="em1050-field-f-is-not-generated-because-of-field-type-t-is-not-supported"></a>: EM1050 Campo `F` non viene generato a causa del tipo di campo `T` non è supportato.
+### <a name="em1050-field-f-is-not-generated-because-of-field-type-t-is-not-supported"></a>EM1050: Campo `F` non viene generato a causa del tipo di campo `T` non è supportato.
 
 Si tratta di un **avviso** che il campo `F` verranno ignorate (vale a dire non deve essere generato) perché il tipo esposto `T` non è supportato.
 
 Dovrebbe esserci un precedente avviso contenente il motivo per cui ulteriori informazioni digitare `T` non è supportato.
 
-Nota: Le funzionalità supportate si evolvono con le nuove versioni dello strumento.
+Nota: Funzionalità supportate si evolvono con le nuove versioni dello strumento.
 
 <a name="EM1051" />
 
@@ -293,7 +293,7 @@ Provare a rimuovere le `--target` parametro o passare `--target=framework` invec
 
 <!-- 2xxx: code generation -->
 
-## <a name="em2xxx-code-generation"></a>EM2xxx: Generazione di codice
+## <a name="em2xxx-code-generation"></a>EM2xxx: Generazione del codice
 
 <!-- 3xxx: reserved -->
 <!-- 4xxx: reserved -->

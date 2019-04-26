@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
 ms.openlocfilehash: 9299322eb20561444262c2b2ba87191d2bddcde4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61317641"
 ---
 # <a name="introduction-to-ios-8"></a>Introduzione a iOS 8
 
@@ -83,7 +83,7 @@ La finestra di dialogo Nuovo progetto fornisce sette nuovi modelli di progetto p
 
 Per altre informazioni sull'uso delle estensioni di App di Xamarin, vedere la [Introduzione alle App estensioni](~/ios/platform/extensions.md) Guida.
 
-### <a name="touch-id"></a>Touch ID
+### <a name="touch-id"></a>ID tocco
 
 Touch ID è stato introdotto in iOS 7 come mezzo per l'autenticazione dell'utente, simile a un passcode. Tuttavia, era limitato a sbloccare il dispositivo, tramite l'App Store, usando iTunes e l'autenticazione solo il keychain iCloud 
 

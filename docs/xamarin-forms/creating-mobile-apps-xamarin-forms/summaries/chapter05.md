@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 5. Gestione delle dimensioni
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 5. Gestione delle dimensioni'
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 5. Gestione delle dimensioni'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: fd6694de756938ff564bed0923427fe62153116a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334394"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Riepilogo del capitolo 5. Gestione delle dimensioni
 
@@ -80,7 +80,7 @@ Il [ **FitToSizeClock** ](https://github.com/xamarin/xamarin-forms-book-samples/
 
 ## <a name="accessibility-issues"></a>Problemi di accessibilità
 
-Il **EstimatedFontSize** programma e il **FitToSizeClock** programma entrambe contengono un difetto sottile: se l'utente modifica le impostazioni di accessibilità del telefono su Android o Windows 10 Mobile, il programma non sarà più possibile stimare le dimensioni di rendering del testo in base alla dimensione del carattere. Il [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) esempio viene illustrato il problema.
+Il **EstimatedFontSize** programma e il **FitToSizeClock** programma entrambe contengono un difetto meno evidente: Se l'utente modifica le impostazioni di accessibilità del telefono su Android o Windows 10 Mobile, il programma non sarà più possibile stimare il testo viene visualizzato in base alla dimensione del carattere. Il [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) esempio viene illustrato il problema.
 
 ## <a name="empirically-fitting-text"></a>In modo empirico adattamento del testo
 

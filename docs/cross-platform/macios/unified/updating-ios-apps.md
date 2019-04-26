@@ -1,118 +1,118 @@
 ---
-title: Aggiornamento delle App iOS esistente
-description: Questo documento vengono descritti i passaggi che devono essere seguiti per aggiornare un'app xamarin. IOS da API classica a Unified API.
+title: Aggiornamento delle App iOS esistenti
+description: Questo documento vengono descritti i passaggi da seguire per aggiornare un'app xamarin. IOS dall'API classica all'API unificata.
 ms.prod: xamarin
 ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
 ms.openlocfilehash: 4d506232903d4a94ac20a1fb9f93a39884d9099c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61213676"
 ---
-# <a name="updating-existing-ios-apps"></a>Aggiornamento delle App iOS esistente
+# <a name="updating-existing-ios-apps"></a>Aggiornamento delle App iOS esistenti
 
-_Seguire questi passaggi per aggiornare un'app xamarin esistente per utilizzare l'API unificata._
+_Seguire questi passaggi per aggiornare un'app xamarin. IOS esistente per usare l'API unificata._
 
-L'aggiornamento di un'app esistente per utilizzare l'API unificata richiede modifiche al file di progetto e i relativi spazi dei nomi e le API usate nel codice dell'applicazione.
+L'aggiornamento di un'app esistente per usare l'API unificata richiede modifiche al progetto file stesso anche i relativi spazi dei nomi e le API usate nel codice dell'applicazione.
 
-## <a name="the-road-to-64-bits"></a>La strada a 64 bit
+## <a name="the-road-to-64-bits"></a>Il passaggio a 64 bit
 
-Le nuove API unificata sono necessari per supportare le architetture di dispositivo a 64 bit da un'applicazione per dispositivi mobili con xamarin. IOS. A partire dal 1 ° febbraio 2015 Apple richiede che tutti i nuovi invii di applicazione a iTunes App Store supportano architetture a 64 bit.
+Le nuove API unificata sono necessari per supportare le architetture di dispositivo a 64 bit da un'applicazione per dispositivi mobili xamarin. IOS. A partire dal 1 ° febbraio 2015 Apple richiede che tutti i nuovi invii di applicazione a Store l'App iTunes supportano architetture a 64 bit.
 
-Xamarin offre strumenti per Visual Studio per Mac e Visual Studio automatizzare il processo di migrazione dall'API classica all'API unificata o è possibile convertire manualmente i file di progetto. Mentre l'usando gli strumenti automatica è elevata consigliato, in questo articolo verrà illustrate in entrambi i metodi.
+Xamarin offre strumenti per Visual Studio per Mac e Visual Studio automatizzare il processo di migrazione dall'API classica all'API unificata di oppure è possibile convertire manualmente i file di progetto. Mentre l'usando gli strumenti automatici è altamente consigliato, questo articolo verranno illustrati entrambi i metodi.
 
 ### <a name="before-you-start"></a>Prima di iniziare...
 
-Prima di aggiornare il codice esistente per l'API unificata, si consiglia di consente di eliminare tutti *avvisi di compilazione*. Molti *avvisi* nell'API classica diventerà errori quando si esegue la migrazione a unificato. È più semplice correggerli prima di iniziare, poiché i messaggi del compilatore dall'API classica spesso forniscono suggerimenti sulle operazioni da aggiornare.
+Prima di aggiornare il codice esistente per l'API unificata, si consiglia vivamente consente di eliminare tutti i *avvisi di compilazione*. Molte *avvisi* nell'API classica diventerà errori quando si esegue la migrazione a unificato. Risolvere i problemi prima di iniziare è più semplici perché i messaggi del compilatore dall'API classica spesso forniscono suggerimenti sulle operazioni da aggiornare.
 
-## <a name="automated-updating"></a>Automatico l'aggiornamento
+## <a name="automated-updating"></a>Aggiornamenti automatici
 
-Dopo che sono stati corretti gli avvisi, selezionare un progetto iOS in Visual Studio per Mac o Visual Studio e scegliere **migrazione all'API unificata xamarin** dal **progetto** menu. Ad esempio:
+Dopo che sono stati corretti gli avvisi, selezionare un progetto iOS esistente in Visual Studio per Mac o Visual Studio e scegli **eseguire la migrazione all'API unificata di xamarin. IOS** dalle **progetto** menu. Ad esempio:
 
-![](updating-ios-apps-images/beta-tool1.png "Scegliere di eseguire la migrazione di xamarin Unified API dal menu progetto")
+![](updating-ios-apps-images/beta-tool1.png "Scegliere di eseguire la migrazione all'API unificata di xamarin. IOS dal menu progetto")
 
-È necessario accettare l'avviso prima che venga eseguita la migrazione automatica (ovviamente, è necessario disporre del controllo origine/i backup prima di adottare questo adventure):
+È necessario accettare di questo avviso prima che venga eseguita la migrazione automatica (ovviamente è necessario assicurarsi di avere controllo del codice sorgente/backup prima di avventurarsi in questa avventura):
 
 ![](updating-ios-apps-images/beta-tool2.png "Accettare l'avviso prima che venga eseguita la migrazione automatica")
 
-Lo strumento consente di automatizzare fondamentalmente tutti i passaggi descritti nel **aggiornamento manualmente** sezione riportati di seguito ed è il metodo consigliato di conversione di un progetto xamarin esistente per l'API unificata.
+Lo strumento automatizza fondamentalmente tutti i passaggi descritti nel **Update manualmente** sezione riportate di seguito e rappresenta il metodo consigliato di conversione di un progetto xamarin. IOS esistente per l'API unificata.
 
 ## <a name="steps-to-update-manually"></a>Procedura per aggiornare manualmente
 
-Nuovamente, dopo che sono stati corretti gli avvisi, seguire questi passaggi per aggiornare manualmente le app xamarin per utilizzare la nuova API unificata:
+Anche in questo caso, dopo che sono stati corretti gli avvisi, seguire questi passaggi per aggiornare manualmente le app xamarin. IOS per usare la nuova API unificata:
 
-### <a name="1-update-project-type--build-target"></a>1. Tipo di progetto di aggiornamento & destinazione Build
+### <a name="1-update-project-type--build-target"></a>1. Tipo di progetto di aggiornamento & destinazione della compilazione
 
-Modificare la versione del progetto nel **csproj** file `6BC8ED88-2882-458C-8E55-DFD12B67127B` a `FEACFBD2-3405-455C-9665-78FE426C6842`. Modificare il **csproj** file in un editor di testo, sostituendo il primo elemento di `<ProjectTypeGuids>` come illustrato:
+Modificare la versione del progetto nel **csproj** dei file dalla `6BC8ED88-2882-458C-8E55-DFD12B67127B` a `FEACFBD2-3405-455C-9665-78FE426C6842`. Modificare il **csproj** file in un editor di testo, sostituendo il primo elemento nel `<ProjectTypeGuids>` elemento, come illustrato:
 
-![](updating-ios-apps-images/csproj.png "Modificare il file csproj in un editor di testo, sostituendo il primo elemento nell'elemento ProjectTypeGuids, come illustrato")
+![](updating-ios-apps-images/csproj.png "Modificare il file csproj in un editor di testo, sostituendo il primo elemento nell'elemento ProjectTypeGuids come mostrato")
 
-Modifica il **importazione** elemento contenente `Xamarin.MonoTouch.CSharp.targets` per `Xamarin.iOS.CSharp.targets` come illustrato:
+Modifica il **importazione** elemento contenente `Xamarin.MonoTouch.CSharp.targets` a `Xamarin.iOS.CSharp.targets` come illustrato:
 
-![](updating-ios-apps-images/csproj2.png "Modificare l'elemento Import contenente Xamarin.MonoTouch.CSharp.targets per Xamarin.iOS.CSharp.targets, come illustrato")
+![](updating-ios-apps-images/csproj2.png "Modificare l'elemento Import contenente Xamarin.MonoTouch.CSharp.targets a Xamarin.iOS.CSharp.targets come mostrato")
 
-### <a name="2-update-project-references"></a>2. Aggiornare i riferimenti di progetto
+### <a name="2-update-project-references"></a>2. Aggiornare i riferimenti al progetto
 
-Espandere il progetto applicazione iOS **riferimenti** nodo. Inizialmente verrà visualizzato un * interrotti - **monotouch** riferimento simile a questo screenshot (perché è stato appena modificato il tipo di progetto):
+Espandere il progetto di applicazione iOS **riferimenti** nodo. Inizialmente mostrerà un * interrotti - **monotouch** riferimento simile al seguente (perché è stato appena modificato il tipo di progetto):
 
-![](updating-ios-apps-images/references.png "Inizialmente risulterà un riferimento interrotto-monotouch simile a questo screenshot poiché il tipo di progetto modificato")
+![](updating-ios-apps-images/references.png "Inizialmente mostrerà un riferimento interrotto-monotouch simile al seguente perché il tipo di progetto modificato")
 
-Pulsante destro del mouse sul progetto di applicazione iOS per **Modifica riferimenti**, quindi fare clic su di **monotouch** riferimento ed eliminarlo utilizzando il pulsante "X" rossa.
+Pulsante destro del mouse sul progetto dell'applicazione iOS per **Modifica riferimenti**, quindi fare clic sui **monotouch** fanno riferimento a ed eliminarla usando il pulsante "X" rossa.
 
-![](updating-ios-apps-images/references-delete-monotouch-sml.png "Pulsante destro del mouse sul progetto di applicazione iOS per modificare i riferimenti, quindi fare clic sul riferimento monotouch eliminarlo rossa pulsante X")
+![](updating-ios-apps-images/references-delete-monotouch-sml.png "Pulsante destro del mouse sul progetto dell'applicazione iOS per modificare i riferimenti, quindi fare clic sul riferimento monotouch ed eliminarlo di colore rosso pulsante X")
 
-Scorrere fino a questo punto alla fine dell'elenco di riferimenti e segni di graduazione di **xamarin** assembly.
+Ora scorrere fino alla fine dell'elenco di riferimenti e segni di graduazione il **xamarin. IOS** assembly.
 
-![](updating-ios-apps-images/references-add-xamarinios-sml.png "Ora scorrere fino alla fine dell'elenco di riferimenti e segni di graduazione l'assembly xamarin")
+![](updating-ios-apps-images/references-add-xamarinios-sml.png "Ora scorrere fino alla fine dell'elenco di riferimenti e segni di graduazione all'assembly xamarin. IOS")
 
-Premere **OK** per salvare le modifiche di riferimenti di progetto.
+Premere **OK** per salvare il progetto le modifiche di riferimenti.
 
-### <a name="3-remove-monotouch-from-namespaces"></a>3. Rimuovere gli spazi dei nomi di MonoTouch
+### <a name="3-remove-monotouch-from-namespaces"></a>3. Rimuovere MonoTouch dagli spazi dei nomi
 
-Rimuovere il **MonoTouch** prefisso degli spazi dei nomi in `using` istruzioni o ovunque un classname è stato completamente qualificato (ad es. `MonoTouch.UIKit` diventa appena `UIKit`).
+Rimuovere il **MonoTouch** prefisso dagli spazi dei nomi in `using` istruzioni o ovunque un classname è stato completamente qualificato (ad es. `MonoTouch.UIKit` diventa semplicemente `UIKit`).
 
 ### <a name="4-remap-types"></a>4. Modificare il mapping di tipi
 
-[I tipi nativi](~/cross-platform/macios/nativetypes.md) sono state introdotte cui sostituire alcuni tipi che sono stati utilizzati in precedenza, ad esempio le istanze di `System.Drawing.RectangleF` con `CoreGraphics.CGRect` (ad esempio). L'elenco completo dei tipi è reperibile nel [tipi nativi](~/cross-platform/macios/nativetypes.md) pagina.
+[I tipi nativi](~/cross-platform/macios/nativetypes.md) sono state introdotte che sostituiscono alcuni tipi che sono stati usati in precedenza, ad esempio le istanze del `System.Drawing.RectangleF` con `CoreGraphics.CGRect` (ad esempio). L'elenco completo dei tipi sono reperibili nel [i tipi nativi](~/cross-platform/macios/nativetypes.md) pagina.
 
-### <a name="5-fix-method-overrides"></a>5. Risolvere gli override di metodo
+### <a name="5-fix-method-overrides"></a>5. Risolvere gli override dei metodi
 
-Alcuni `UIKit` metodi sono stata modificata per utilizzare la nuova firma [tipi nativi](~/cross-platform/macios/nativetypes.md) (ad esempio `nint`). Se le sottoclassi personalizzate esegue l'override di questi metodi, le firme non corrispondono più e si verificheranno errori. Correggere questi override del metodo modificando la sottoclasse per corrispondere alla firma di nuovo utilizzando i tipi nativi.
+Alcuni `UIKit` metodi sono stata modificata per usare la nuova firma [tipi nativi](~/cross-platform/macios/nativetypes.md) (ad esempio `nint`). Se le sottoclassi personalizzate esegue l'override di questi metodi, le firme non corrisponderanno più e si verificheranno errori. Correggere questi override dei metodi modificando la sottoclasse per corrispondere alla firma di nuovo utilizzando i tipi nativi.
 
-Gli esempi includono la modifica `public override int NumberOfSections (UITableView tableView)` per restituire `nint` e la modifica sia il tipo restituito e i tipi di parametro in `public override int RowsInSection (UITableView tableView, int section)` a `nint`.
+Esempi includono la modifica `public override int NumberOfSections (UITableView tableView)` per restituire `nint` e la modifica sia il tipo restituito e i tipi di parametro nelle `public override int RowsInSection (UITableView tableView, int section)` a `nint`.
 
 ## <a name="considerations"></a>Considerazioni
 
-Le considerazioni seguenti devono tener conto durante la conversione di un progetto xamarin esistente dall'API classica alla nuova API unificata che app si basa su uno o più componenti o pacchetto NuGet.
+Le considerazioni seguenti devono tener conto durante la conversione di un progetto xamarin. IOS esistente dall'API classica alla nuova API unificata che l'app si basa su uno o più componenti o un pacchetto NuGet.
 
 ### <a name="components"></a>Componenti
 
-Qualsiasi componente che sono stati inclusi nell'applicazione sarà necessario aggiornare a Unified API o verrà generato un conflitto quando si tenta di compilare. Per qualsiasi componente incluso, sostituire la versione corrente con una nuova versione dall'archivio di componenti di Xamarin che supporta l'API unificata ed eseguire una compilazione pulita. Qualsiasi componente che non è ancora stato convertito dall'autore, verrà visualizzato un a 32 bit solo avviso nell'archivio del componente.
+Qualsiasi componente che sono stati inclusi nell'applicazione dovrà anche essere aggiornata all'API unificata di caso, verrà generato un conflitto quando si prova a compilare. Per qualsiasi componente incluso, sostituire la versione corrente con una nuova versione da Store il componente Xamarin che supporta l'API unificata ed eseguire una compilazione pulita. Qualsiasi componente che non è ancora stato convertito dall'autore, verrà visualizzato un a 32 bit solo avviso nell'archivio del componente.
 
 ### <a name="nuget-support"></a>Supporto NuGet
 
-Mentre si hanno contribuito modifiche a NuGet per funzionare con il supporto di Unified API, non è stata una nuova versione di NuGet, pertanto ci stiamo la valutazione come ottenere NuGet di riconoscere le nuove API.
+Anche se si ha contribuito con le modifiche apportate a NuGet per lavorare con il supporto per l'API unificata, non è stata una nuova versione di NuGet, in modo che si sta la valutazione di come ottenere NuGet per riconoscere le nuove API.
 
-Fino a quel momento, come i componenti, è necessario passare tutti i pacchetti NuGet sono stati inclusi nel progetto per una versione che supporta le API unificata ed eseguire una compilazione pulita in un secondo momento.
+Fino a quel momento, proprio come i componenti, è necessario passare i pacchetti NuGet sono stati inclusi nel progetto per una versione che supporta le API unificata ed eseguire una compilazione pulita in un secondo momento.
 
 > [!IMPORTANT]
-> Se si dispone di un errore nel modulo _"errore 3 non può includere sia 'monotouch.dll' 'Xamarin.iOS.dll' nello stesso progetto xamarin. IOS - 'Xamarin.iOS.dll' viene fatto riferimento in modo esplicito, mentre si fa riferimento 'monotouch.dll' ' xxx, versione = 0.0.000, Culture = neutral, PublicKeyToken = null'"_ dopo la conversione dell'applicazione per le API unificata, è in genere a causa del componente o un pacchetto NuGet nel progetto che non è stato aggiornato per l'API unificata. È necessario rimuovere il componente/NuGet esistenti, aggiornare a una versione che supporta le API unificata ed eseguire una compilazione pulita.
+> Se si dispone di un errore nel modulo _"errore 3 non può includere sia 'monotouch' e 'Dll' nello stesso progetto xamarin. ios: 'Dll' viene fatto riferimento in modo esplicito, mentre 'monotouch' fa riferimento ' xxx ', versione = 0.0.000, Culture = neutral, PublicKeyToken = null'"_ dopo avere convertito l'applicazione per le API unificata, si tratta in genere con un componente o pacchetto NuGet nel progetto che non è stato aggiornato all'API unificata. È necessario rimuovere il componente/NuGet esistenti, aggiornare a una versione che supporta le API unificata ed eseguire una compilazione pulita.
 
-## <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Abilitazione a 64 Bit build di App xamarin
+## <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Abilitazione a 64 Bit le compilazioni di App xamarin. IOS
 
-Per un'applicazione per dispositivi mobili di xamarin che è stata convertita in Unified API, lo sviluppatore deve comunque consentono di creare l'applicazione per computer a 64 bit delle opzioni dell'applicazione. Vedere il **abilitazione Bit 64 compilazioni di App xamarin** del [considerazioni relative alla piattaforma a 32/64 bit](~/cross-platform/macios/32-and-64/index.md#enable-64) documenti per istruzioni dettagliate sull'abilitazione di a 64 bit.
+Per un'applicazione per dispositivi mobili xamarin. IOS che è stata convertita per l'API unificata, lo sviluppatore deve comunque abilitare la compilazione dell'applicazione per i computer a 64 bit delle opzioni dell'app. Vedere la **abilitazione Bit 64 build dell'App xamarin. IOS** delle [considerazioni sulle piattaforme a 32 o 64 bit](~/cross-platform/macios/32-and-64/index.md#enable-64) compilazioni di documento per istruzioni dettagliate sull'abilitazione di a 64 bit.
 
-## <a name="finishing-up"></a>Completamento della
+## <a name="finishing-up"></a>Completamento dell'operazione
 
-Se si sceglie di utilizzare il metodo automatico o manuale per convertire l'applicazione di xamarin dalla classica per le API unificata, sono presenti più istanze che verranno ulteriormente, richiedono un intervento manuale. Consultare il nostro [suggerimenti per l'aggiornamento del codice Unified API](~/cross-platform/macios/unified/updating-tips.md) dei documenti per i problemi noti e soluzioni alternative.
+Se si sceglie di usare il metodo manuale o automatico per convertire l'applicazione xamarin. IOS dalla distribuzione classica per le API unificata, sono presenti più istanze che richiederanno inoltre, un intervento manuale. Vedere la [suggerimenti per l'aggiornamento di codice all'API unificata di](~/cross-platform/macios/unified/updating-tips.md) documenti per i problemi noti e alternative.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Suggerimenti per l'aggiornamento del codice per l'API unificata](~/cross-platform/macios/unified/updating-tips.md)
 - [Utilizzo di tipi nativi nelle app multipiattaforma](~/cross-platform/macios/native-types-cross-platform.md)
-- [Differenze tra API unificata di vs classico](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
-- [La migrazione all'API unificata (video)](http://university.xamarin.com/lightninglectures/migrating-to-the-unified-api)
+- [Visual Studio classico differenze API unificata](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Eseguire la migrazione all'API unificata (video)](http://university.xamarin.com/lightninglectures/migrating-to-the-unified-api)

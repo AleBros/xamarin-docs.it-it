@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 5086724b565fb95274c4988ca1b6e4bb11064575
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61082323"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Tecniche per interazioni rapide per watchOS 3 in Xamarin
 
@@ -96,7 +96,7 @@ Quando si lavora con i riconoscitori di movimento in watchOS 3, Apple consiglia 
 - Aggiungere i riconoscitori di movimento per raggruppare gli elementi invece di singoli controlli. Poiché l'Apple Watch ha dimensioni dello schermo fisico inferiori, raggruppare gli elementi tendono a essere più grande e più facile destinazioni per l'utente prema. Inoltre, i riconoscitori di movimento possano determinare conflitti con incorporato movimenti già nei controlli dell'interfaccia utente nativa.
 - Impostare le relazioni di dipendenza nello Storyboard dell'app per le espressioni di controllo.
 - Alcuni movimenti hanno la precedenza rispetto ad altri tipi di movimento, ad esempio:
-    - Lo scorrimento
+    - Scorrimento
     - Forzare il tocco
  
 ### <a name="digital-crown-rotation"></a>Rotazione Crown digitale

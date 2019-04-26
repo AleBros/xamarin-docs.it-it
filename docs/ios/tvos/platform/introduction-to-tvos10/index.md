@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 260d01d6aa8344dd3cf107f1ffc34167c457a491
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61269312"
 ---
 # <a name="introduction-to-tvos-10"></a>Introduzione a tvOS 10
 
@@ -48,7 +48,7 @@ Nuovo per tvOS 10, il framework di Account sottoscrittore Video consente App tal
 
 <!--To find out more, please see our [Video Subscriber Account](~/ios/platform-features/introduction-to-ios10/video-subscriber-account/) guide.-->
 
-## <a name="wide-color"></a>Ampia gamma di colori
+## <a name="wide-color"></a>Wide Color
 
 tvOS 10 estende il supporto per formati pixel intervalli estesi e gli spazi colore a livello di gamma in tutto il sistema, tra cui Framework quali Core Graphics, immagine di base, bare Metal e AVFoundation. Supporto per i dispositivi dotati di schermi di ampia gamma di colori viene diminuito ulteriormente fornendo questo comportamento in tutto lo stack di grafica intero.
 
@@ -67,7 +67,7 @@ Per altre informazioni, vedere la [Introduzione a ampia gamma di colori](~/ios/p
 
 Diversi Framework che non erano disponibili in iOS (e tvOS non), sono stati resi disponibili per tvOS 10, ad esempio:
 
- - Accessori esterni
+ - ExternalAccessory
  - HomeKit
  - MultipeerConnectivity
  - Foto

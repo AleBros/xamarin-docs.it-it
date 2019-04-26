@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: ff94211086956e36da377445d90359789b62fc60
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 512775864f5ad55ddfedd53b83dd02d7b0e1d1f8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61309095"
 ---
 # <a name="material-theme"></a>Tema Material
 
@@ -52,7 +52,7 @@ Per informazioni su come configurare un progetto di app Android 5.0, vedere [imp
 
 ## <a name="using-the-built-in-themes"></a>Tramite i temi predefiniti
 
-Il modo più semplice per utilizzare il tema Material consiste nel configurare l'app per usare un tema predefinito senza personalizzazione. Se non si desidera configurare in modo esplicito un tema, l'app predefinita sarà `Theme.Material` (il tema scuro). Se l'app ha una sola attività, è possibile configurare un tema a livello di applicazione. Se l'app ha più attività, è possibile configurare un tema a livello di applicazione in modo che usa lo stesso tema per tutte le attività, oppure è possibile assegnare diversi temi disponibili per diverse attività. Le sezioni seguenti illustrano come configurare i temi a livello di app e a livello di attività.
+Il modo più semplice per utilizzare il tema Material consiste nel configurare l'app per usare un tema predefinito senza personalizzazione. Se non si desidera configurare in modo esplicito un tema, l'app predefinita sarà `Theme.Material` (il tema scuro). Se l'app ha una sola attività, è possibile configurare un tema a livello di attività. Se l'app ha più attività, è possibile configurare un tema a livello di applicazione in modo che usa lo stesso tema per tutte le attività, oppure è possibile assegnare diversi temi disponibili per diverse attività. Le sezioni seguenti illustrano come configurare i temi a livello di app e a livello di attività.
 
 
 ### <a name="theming-an-application"></a>Un'applicazione di temi

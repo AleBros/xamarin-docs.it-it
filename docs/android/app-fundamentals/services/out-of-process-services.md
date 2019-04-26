@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: db312c4c102feb98791109af19185762bb25856e
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61013070"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Servizi di Android in esecuzione in processi remoti
 
@@ -479,7 +479,7 @@ Questa guida è stata una discussione avanzata su come eseguire un servizio di A
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Gestore](https://developer.xamarin.com/api/type/Android.OS.Handler/)
+- [Handler](https://developer.xamarin.com/api/type/Android.OS.Handler/)
 - [Messaggio](https://developer.xamarin.com/api/type/Android.OS.Message/)
 - [Messenger](https://developer.xamarin.com/api/type/Android.OS.Messenger/)
 - [ServiceAttribute](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute)
@@ -488,4 +488,4 @@ Questa guida è stata una discussione avanzata su come eseguire un servizio di A
 - [Processi e thread](https://developer.android.com/guide/components/processes-and-threads.html)
 - [Manifesto Android - le autorizzazioni](https://developer.android.com/guide/topics/manifest/manifest-intro.html#perms)
 - [Suggerimenti per la sicurezza](https://developer.android.com/training/articles/security-tips.html)
-- [MessengerServiceDemo (esempio)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/MessengerServiceDemo/)
+- [MessengerServiceDemo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/MessengerServiceDemo/)

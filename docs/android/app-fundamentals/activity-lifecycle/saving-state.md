@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: salvataggio lo stato dell'attività"
+title: Procedura dettagliata - Salvataggio dello stato dell'attività
 description: Sono stati illustrati il salvataggio dello stato nella Guida all'attività del ciclo di vita; la teoria a questo punto, passiamo a esaminare un esempio.
 ms.prod: xamarin
 ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: c8f92e55648dff469227cc3bad981ad5f6e6d0ac
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019158"
 ---
-# <a name="walkthrough---saving-the-activity-state"></a>Procedura dettagliata: salvataggio lo stato dell'attività
+# <a name="walkthrough---saving-the-activity-state"></a>Procedura dettagliata - Salvataggio dello stato dell'attività
 
 _Sono stati illustrati il salvataggio dello stato nella Guida all'attività del ciclo di vita; la teoria a questo punto, passiamo a esaminare un esempio._
 

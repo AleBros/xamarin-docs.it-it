@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
 ms.openlocfilehash: 7edbdaa5a690a641523cb5baad7909ed01992aa5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61090888"
 ---
 # <a name="android-callable-wrappers"></a>Android Callable Wrapper
 
@@ -96,7 +96,7 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 ```
 
 
-## <a name="implementation-details"></a>Dettagli di implementazione
+## <a name="implementation-details"></a>Dettagli sull'implementazione
 
 *La parte restante di questa pagina fornisce i dettagli di implementazione soggette a modifiche senza preavviso* (e viene presentato in questo caso solo perché gli sviluppatori saranno sono curiosi riguardo cosa sta succedendo). 
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
 ms.openlocfilehash: 0ec1defa29a4fe85c4ae3e809d8733e68cc268ac
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61087537"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Avviare le schermate per le app xamarin. IOS
 
@@ -231,4 +231,4 @@ Per usare il nuovo Storyboard come una schermata di avvio, eseguire le operazion
 - [Nozioni di base su iOS Designer](~/ios/user-interface/designer/index.md)
 - [Aggiunta di immagini di un'immagine di catalogo di Asset impostata](~/ios/app-fundamentals/images-icons/displaying-an-image.md#adding-images-to-an-asset-catalog-image-set)
 - [Layout automatico con la finestra di progettazione di Xamarin per iOS](~/ios/user-interface/designer/designer-auto-layout.md)
-- [Human Interface Guidelines di: Schermata di avvio](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)
+- [Linee guida dell'interfaccia umana: Schermata di avvio](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)

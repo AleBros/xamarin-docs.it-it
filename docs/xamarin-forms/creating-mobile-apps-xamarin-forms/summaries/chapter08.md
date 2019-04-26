@@ -1,6 +1,6 @@
 ---
 title: Riepilogo del capitolo 8. Codice e XAML in armonia
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: riepilogo del capitolo 8. Codice e XAML in armonia'
+description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 8. Codice e XAML in armonia'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 75f153499edb6d979f9a0269a1439eaf8ca53878
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334246"
 ---
 # <a name="summary-of-chapter-8-code-and-xaml-in-harmony"></a>Riepilogo del capitolo 8. Codice e XAML in armonia
 

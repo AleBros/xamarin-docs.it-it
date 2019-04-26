@@ -6,11 +6,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: c6eaf4dd90b172053b4b87e3427cfe35213c6727
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61215878"
 ---
 # <a name="callbacks-on-android"></a>Callback in Android
 
@@ -157,7 +157,7 @@ Per informazioni dettagliate sull'interoperabilità Java, vedere le straordinari
 
 ## <a name="interfaces"></a>Interfacce
 
-Le interfacce sono molto simile alle classi astratte, ad eccezione di un dettaglio: xamarin. Android non genera Java per loro. Infatti, prima dell'incorporamento di .NET, non esistono molti scenari in cui è necessario implementare Java un C# interfaccia.
+Le interfacce sono molto simile alle classi astratte, ad eccezione di un dettaglio: Xamarin. Android non genera Java per loro. Infatti, prima dell'incorporamento di .NET, non esistono molti scenari in cui è necessario implementare Java un C# interfaccia.
 
 Si supponga di avere il seguente C# interfaccia:
 
@@ -264,7 +264,7 @@ public class VirtualClass : Java.Lang.Object
 }
 ```
 
-Se è stata seguita la `abstract` esempio di classe precedente, potrebbe essere adatto ad eccezione di un dettaglio: _xamarin. Android non cercare il `Invoker`_ .
+Se è stata seguita la `abstract` esempio classe precedente, potrebbe essere adatto ad eccezione di un dettaglio: _Xamarin. Android non cercare le `Invoker`_ .
 
 Per risolvere questo problema, modificare il C# classe venga `abstract`:
 

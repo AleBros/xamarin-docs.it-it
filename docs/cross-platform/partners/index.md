@@ -9,11 +9,11 @@ ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
 ms.openlocfilehash: ddf80fb650127b91bef89792fc622267ad1ed0d4
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61211600"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>Certified società di consulenza partner per offrire soluzioni per dispositivi mobili
 
@@ -557,7 +557,7 @@ _Nell'elenco dalla località primaria, molti partner di fornire servizi tra i bo
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
-|[Enlighten progettazioni](https://www.enlighten.co.nz)|Auckland, Nuova Zelanda|Enlighten esiste per portare eccezionalmente progettato e innovative e concentrati sui clienti soluzioni tecnologiche per tutto il mondo. Usano le tecnologie Microsoft per creare un'applicazione in C# per iOS, Android e Windows|
+|[Enlighten progettazioni](https://www.enlighten.co.nz)|Auckland, Nuova Zelanda|Enlighten esiste per portare eccezionalmente progettato e innovative e concentrati sui clienti soluzioni tecnologiche per tutto il mondo. Usano le tecnologie Microsoft per creare un'applicazione in c# per iOS, Android e Windows|
 |[Hydrogen App Ltd](http://www.hydrogenapps.com)|Auckland, Nuova Zelanda|Sfruttando oltre dieci anni di esperienza correttamente le piattaforme su larga scala in tutto il mondo, Hydrogen offre la propria esperienza approfondita della distribuzione del software in sospeso a nuove frontiere dell'App, mobilità e lo sviluppo di giochi|
 |[Campi magnetici soluzioni Ltd](https://www.magnetismsolutions.com/)|Auckland, Nuova Zelanda; Christchurch, Nuova Zelanda|Ottenuta un inizio di ogni implementazione di CRM che sono disponibili ai client. Che è stata avviata più di 1500 di essi, siamo molto orgogliosa del nostro eterogeneo e "wide" che vanno portfolio. La nostra esperienza nell'implementazione a livello internazionale CRM significa che è bene stiamo inseriti per offrire una soluzione CRM. |
 |[Attraversando le](http://zebracrossing.co.nz/)|Taranaki, Nuova Zelanda|Si usa la tecnologia per l'innovazione di business. Collaborare con qualcuno che sarà in ascolto, Scopri gli obiettivi e offrire ciò che è necessario.|

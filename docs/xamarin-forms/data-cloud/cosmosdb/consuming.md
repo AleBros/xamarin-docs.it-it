@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
 ms.openlocfilehash: bc50f3567135d5b1dc805fa691cdd95acadf34f1
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61327923"
 ---
 # <a name="consuming-an-azure-cosmos-db-document-database"></a>Utilizzo di un Database di documenti di Azure Cosmos DB
 

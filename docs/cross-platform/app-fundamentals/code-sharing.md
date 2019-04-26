@@ -1,17 +1,17 @@
 ---
 title: Panoramica del codice di condivisione
-description: 'Questo documento consente di confrontare i diversi metodi di condivisione del codice tra progetti multipiattaforma: progetti condivisi, le librerie di classi portabile e .NET Standard, inclusi i vantaggi e gli svantaggi di ognuna.'
+description: 'Questo documento vengono confrontati i diversi metodi di condivisione del codice tra progetti multipiattaforma: Condiviso progetti di librerie di classi portabili e .NET Standard, inclusi i vantaggi e gli svantaggi di ognuna.'
 ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: conceptdev
 ms.author: crdun
 ms.date: 08/06/2018
 ms.openlocfilehash: 98b5786ae4f071b4d8e8f854561db97aee037fdc
-ms.sourcegitcommit: aa7b0182d117e2af66ffaa4fa29b8c214ceecae1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39520285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61228040"
 ---
 # <a name="sharing-code-overview"></a>Panoramica del codice di condivisione
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 98eba6dea1fb528aa15a1fb242b0fb0eb7dada56
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61258609"
 ---
 # <a name="page-status-bar-visibility-on-ios"></a>Pagina visibilità delle barre di stato in iOS
 
@@ -29,7 +29,7 @@ Questo specifico della piattaforma iOS consente di impostare la visibilità dell
 </ContentPage>
 ```
 
-In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
+In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

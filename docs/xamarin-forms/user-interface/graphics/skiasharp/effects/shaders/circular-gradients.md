@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: a17ddf438856600870c9bb3da60a5f4667128d57
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61218185"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Le sfumature circolare SkiaSharp
 
@@ -140,7 +140,7 @@ Questo codice crea una sfumatura con nero al centro, gradualmente a dissolvenza 
 
 [![Sfumatura radiale](circular-gradients-images/RadialGradient.png "sfumatura radiale")](circular-gradients-images/RadialGradient-Large.png#lightbox)
 
-In tutti i tre casi, la sfumatura riempie l'area di disegno. Nella schermata iOS a sinistra, la sfumatura di oltre il raggio continua con l'ultimo colore, che è il bianco. Che rappresenta il risultato di `SKShaderTileMode.Clamp`. Schermata di Android Mostra l'effetto della `SKShaderTileMode.Repeat`: A 100 pixel dal centro della sfumatura inizia nuovamente con il primo colore, che è nero. La sfumatura viene ripetuta ogni 100 pixel, del raggio. 
+In tutti i tre casi, la sfumatura riempie l'area di disegno. Nella schermata iOS a sinistra, la sfumatura di oltre il raggio continua con l'ultimo colore, che è il bianco. Che rappresenta il risultato di `SKShaderTileMode.Clamp`. Schermata di Android Mostra l'effetto della `SKShaderTileMode.Repeat`: 100 pixel dal centro, la sfumatura inizia nuovamente con il primo colore, che è nero. La sfumatura viene ripetuta ogni 100 pixel, del raggio. 
 
 La schermata (Universal Windows Platform) a destra come `SKShaderTileMode.Mirror` fa sì che le istruzioni alternative per le sfumature. La sfumatura di primo è dal nero al centro su bianco in un raggio pari a 100 pixel. Successivo è il bianco dal raggio 100 pixel su nero a un raggio di 200 pixel e sfumatura successiva viene invertita nuovamente.
 

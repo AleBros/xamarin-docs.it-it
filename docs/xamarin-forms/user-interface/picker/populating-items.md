@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
 ms.openlocfilehash: 3bbea036efef44077ccbd28a16af06c97cd7026b
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61230303"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Aggiunta di dati alla raccolta di elementi del controllo di selezione
 
@@ -39,7 +39,7 @@ Prima di xamarin. Forms 2.3.4, il processo per l'inserimento in una [ `Picker` ]
 </Picker>
 ```
 
-Seguito è riportato il codice c# equivalente:
+Seguito è riportato il codice C# equivalente:
 
 ```csharp
 var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };

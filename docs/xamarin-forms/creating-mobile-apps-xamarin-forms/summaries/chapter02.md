@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
 ms.openlocfilehash: 95defd11a9e568d1089cb2f262cb323045b6c247
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334399"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Riepilogo del capitolo 2. Anatomia di un'app
 
@@ -104,7 +104,7 @@ I bundle di approccio libreria tutti i più comuni di codice in un progetto di l
 
 La maggior parte degli sviluppatori di xamarin. Forms preferiscono l'approccio di libreria. In questo libro, la maggior parte delle soluzioni di usare una libreria. Quelle che usano SAP include un' **Sap** suffisso nel nome del progetto.
 
-L'approccio SAP il codice nel progetto condiviso permette di eseguire codice diverso per varie piattaforme utilizzando direttive del preprocessore c# (`#if`, &`elif`, e `#endif`) con questi identificatori predefiniti:
+L'approccio SAP il codice nel progetto condiviso permette di eseguire codice diverso per varie piattaforme utilizzando direttive del preprocessore C# (`#if`, &`elif`, e `#endif`) con questi identificatori predefiniti:
 
 - iOS: `__IOS__`
 - Android: `__ANDROID__`
@@ -114,7 +114,7 @@ In una libreria condivisa, è possibile determinare quale piattaforma su cui vie
 
 ## <a name="labels-for-text"></a>Etichette di testo
 
-Il [ **Greetings** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings) soluzione illustra come aggiungere un nuovo file c# per il **Greetings** progetto. Questo file definisce una classe denominata `GreetingsPage` che deriva da `ContentPage`. In questo libro, la maggior parte dei progetti contengono un unico `ContentPage` derivato il cui nome è il nome del progetto con il suffisso `Page` aggiunto.
+Il [ **Greetings** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings) soluzione illustra come aggiungere un nuovo file C# per il **Greetings** progetto. Questo file definisce una classe denominata `GreetingsPage` che deriva da `ContentPage`. In questo libro, la maggior parte dei progetti contengono un unico `ContentPage` derivato il cui nome è il nome del progetto con il suffisso `Page` aggiunto.
 
 Il `GreetingsPage` costruttore crea un [ `Label` ](xref:Xamarin.Forms.Label) visualizzazione, che è la visualizzazione di xamarin. Forms che visualizza il testo. Il [ `Text` ](xref:Xamarin.Forms.Label.Text) viene impostata per il testo visualizzato dal `Label`. Imposta questo programma la `Label` per il `Content` proprietà di `ContentPage`. Il costruttore del `App` classe crea quindi un'istanza `GreetingsPage` e lo imposta su relativo `MainPage` proprietà.
 
@@ -133,7 +133,7 @@ Impostare una [ `Padding` ](xref:Xamarin.Forms.Page.Padding) proprietà nella pa
 
 ### <a name="solution-2-include-padding-just-for-ios-sap-only"></a>Soluzione 2. Includere la spaziatura interna solo per iOS (solo SAP)
 
-Impostare una proprietà 'Spaziatura interna' solo in iOS usando un SAP con una direttiva del preprocessore c#. Questa funzionalità viene illustrata la [ **GreetingsSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/GreetingsSap) soluzione.
+Impostare una proprietà 'Spaziatura interna' solo in iOS usando un SAP con una direttiva del preprocessore C#. Questa funzionalità viene illustrata la [ **GreetingsSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/GreetingsSap) soluzione.
 
 ### <a name="solution-3-include-padding-just-for-ios-pcl-or-sap"></a>Soluzione 3. Includere la spaziatura interna solo per iOS (libreria di classi Portabile o SAP)
 
