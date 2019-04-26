@@ -1,5 +1,5 @@
 ---
-title: Nozioni fondamentali sulla progettazione di xamarin. Android
+title: Xamarin.Android Designer Basics
 description: In questo argomento introduce le funzionalità di progettazione di xamarin. Android, viene illustrato come avviare la finestra di progettazione, descrive l'area di progettazione e illustra in dettaglio come usare il riquadro proprietà per modificare le proprietà del widget.
 ms.prod: xamarin
 ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
 ms.openlocfilehash: fe909d72f3c6d6733318b5dcbd1858a1a9e28b37
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61165480"
 ---
-# <a name="xamarinandroid-designer-basics"></a>Nozioni fondamentali sulla progettazione di xamarin. Android
+# <a name="xamarinandroid-designer-basics"></a>Xamarin.Android Designer basics
 
 _In questo argomento introduce le funzionalità di progettazione di xamarin. Android, viene illustrato come avviare la finestra di progettazione, descrive l'area di progettazione e illustra in dettaglio come usare il riquadro proprietà per modificare le proprietà del widget._
 
@@ -45,7 +45,7 @@ Quando si modifica un layout nella finestra di progettazione, per creare e defin
 
 -   **Riquadro di origine** &ndash; consente di visualizzare l'origine XML sottostante che corrisponde alla progettazione nel **nell'area di progettazione**.
 
--   **Finestra di progettazione della barra degli strumenti** &ndash; Visualizza un elenco di selettori: **dispositivo**, **versione**, **tema**, configurazione di layout e le impostazioni della barra delle azioni. Il **sulla barra degli strumenti Progettazione** include anche le icone per avviare l'Editor del tema e per l'abilitazione della griglia di struttura materiali.
+-   **Finestra di progettazione della barra degli strumenti** &ndash; Visualizza un elenco di selettori: **Periferica**, **versione**, **tema**, configurazione di layout e le impostazioni della barra delle azioni. Il **sulla barra degli strumenti Progettazione** include anche le icone per avviare l'Editor del tema e per l'abilitazione della griglia di struttura materiali.
 
 -   **Casella degli strumenti** &ndash; fornisce un elenco di widget e layout che è possibile trascinare e rilasciare il **nell'area di progettazione**.
 
@@ -310,7 +310,7 @@ Quando si modifica un layout nella finestra di progettazione, per creare e defin
 
 -   **Area di progettazione** &ndash; facilita la costruzione visual dell'interfaccia utente fornendo una rappresentazione modificabile di modalità di visualizzazione del layout nel dispositivo.
 
--   **Sulla barra degli strumenti** &ndash; Visualizza un elenco di selettori: **dispositivo**, **versione**, **tema**, configurazione di layout e le impostazioni della barra delle azioni. Barra degli strumenti include anche le icone per avviare l'Editor del tema e per l'abilitazione della griglia di struttura materiali.
+-   **Sulla barra degli strumenti** &ndash; Visualizza un elenco di selettori: **Periferica**, **versione**, **tema**, configurazione di layout e le impostazioni della barra delle azioni. Barra degli strumenti include anche le icone per avviare l'Editor del tema e per l'abilitazione della griglia di struttura materiali.
 
 -   **Casella degli strumenti** &ndash; fornisce un elenco di widget e layout che è possibile trascinare e rilasciare nell'area di progettazione.
 

@@ -1,6 +1,6 @@
 ---
 title: Modificatori di campo XAML in xamarin. Forms
-description: L'attributo namespace X:FieldModifier specifica il livello di accesso per i campi generati per elementi XAML denominati.
+description: L'attributo dello spazio dei nomi X:FieldModifier specifica il livello di accesso per i campi generati per gli elementi denominati XAML.
 ms.prod: xamarin
 ms.assetid: 12357CE0-3C11-4B62-947F-72DB6DFC23A2
 ms.technology: xamarin-forms
@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/18/2018
 ms.openlocfilehash: 8be56524ec1c5331f30418fcc29a4bd2c26ccde1
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075298"
 ---
 # <a name="xaml-field-modifiers-in-xamarinforms"></a>Modificatori di campo XAML in xamarin. Forms
 
-_Il `x:FieldModifier` attributo namespace specifica il livello di accesso per i campi generati per elementi XAML denominati._
+_Il `x:FieldModifier` namespace (attributo) specifica il livello di accesso per i campi generati per gli elementi denominati XAML._
 
 ## <a name="overview"></a>Panoramica
 
@@ -32,7 +32,7 @@ Le condizioni seguenti devono essere soddisfatti per un `x:FieldModifier` attrib
 - Elemento di primo livello XAML deve essere un valore valido `x:Class`.
 - L'elemento XAML corrente ha un `x:Name` specificato.
 
-Il codice XAML seguente vengono illustrati esempi di impostazione dell'attributo:
+il XAML seguente illustra esempi di impostazione dell'attributo:
 
 ```xaml
 <Label x:Name="privateLabel" />

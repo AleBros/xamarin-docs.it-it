@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 48caa70cf2bd408f8afc673b400f7d5a4369e108
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61230848"
 ---
 # <a name="objective-c-support"></a>Supporto di Objective-C
 
@@ -204,7 +204,7 @@ A causa dell'errore `NSDate` fanno riferimento a data, tutte le conversioni tra 
 
 Durante la conversione da `DateTime` al `NSDate`, il `Kind` proprietà `DateTime` viene presa in considerazione:
 
-|Kind|Risultati|
+|Tipo|Risultati|
 |---|---|
 |`Utc`|La conversione viene eseguita utilizzando l'oggetto fornito `DateTime` come è.|
 |`Local`|Il risultato della chiamata al metodo `ToUniversalTime()` nell'oggetto fornito `DateTime` oggetto viene usato per la conversione.|

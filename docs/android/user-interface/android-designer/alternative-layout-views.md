@@ -1,5 +1,5 @@
 ---
-title: Visualizzazioni con Layout alternativi
+title: Visualizzazioni con layout alternativi
 description: Questo argomento viene illustrato come i layout possono essere con controllo delle versioni con qualificatori delle risorse. Ad esempio, è possibile una versione di un layout che viene usato solo quando il dispositivo è in modalità orizzontale e una versione di layout che è solo per la modalità verticale.
 ms.prod: xamarin
 ms.assetid: 5EBF51FC-9048-F0CF-624A-D8782A91C1FD
@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
 ms.openlocfilehash: 03b80d3fb1ed7c8db108f86b3b3923c20e1d908f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61089819"
 ---
 # <a name="alternative-layout-views"></a>Visualizzazioni con layout alternativi
 
@@ -79,7 +79,7 @@ Quando si fa clic il **predefiniti** layout per la visualizzazione, il `TextView
 
 ## <a name="handling-conflicts"></a>Gestione dei conflitti 
 
-Se si decide di modificare il colore del testo nel **predefinito** layout verde, verrà visualizzato un'icona di avviso sul layout collegato. Facendo clic su tale layout viene aperto il layout per rivelare il conflitto. Il widget che ha causato il conflitto viene evidenziato un frame di colore rosso e viene visualizzato il messaggio seguente: *modifiche recenti hanno causato conflitti in questo layout alternativo*. 
+Se si decide di modificare il colore del testo nel **predefinito** layout verde, verrà visualizzato un'icona di avviso sul layout collegato. Facendo clic su tale layout viene aperto il layout per rivelare il conflitto. Il widget che ha causato il conflitto viene evidenziato un frame di colore rosso e viene visualizzato il messaggio seguente: *Le modifiche recenti hanno causato conflitti in questo layout alternativo*. 
 
 [![Modifica in conflitto](alternative-layout-views-images/vs/11-conflicting-change-sml.png "modifica in conflitto")](alternative-layout-views-images/vs/11-conflicting-change.png#lightbox)
  
@@ -101,7 +101,7 @@ Se un `CheckBox` viene aggiunto al **Default** layout, viene generato il conflit
 
 [![Casella di controllo conflitti](alternative-layout-views-images/vs/13-checkbox-conflict-sml.png "conflitto di casella di controllo")](alternative-layout-views-images/vs/13-checkbox-conflict.png#lightbox)
  
-Facendo clic sui **grandi ' s land** layout rivela il conflitto. Viene visualizzato il messaggio seguente: *modifiche recenti hanno causato conflitti in questo layout alternativo*: 
+Facendo clic sui **grandi ' s land** layout rivela il conflitto. Viene visualizzato il seguente messaggio: *Le modifiche recenti hanno causato conflitti in questo layout alternativo*: 
 
 [![Conflitto di layout ALT](alternative-layout-views-images/vs/14-alt-layout-conflict-sml.png "conflitto layout Alt")](alternative-layout-views-images/vs/14-alt-layout-conflict.png#lightbox)
 
@@ -179,7 +179,7 @@ Quando si fa clic il **predefiniti** layout per la visualizzazione, il `TextView
 
 ## <a name="handling-conflicts"></a>Gestione dei conflitti 
 
-Se si decide di modificare il colore del testo nel **predefinito** layout verde, verrà visualizzato un'icona di avviso sul layout collegato. Facendo clic su tale layout viene aperto il layout per rivelare il conflitto. Il widget che ha causato il conflitto viene evidenziato un frame di colore rosso e viene visualizzato il messaggio seguente: *modifiche recenti hanno causato conflitti in questo layout alternativo*. 
+Se si decide di modificare il colore del testo nel **predefinito** layout verde, verrà visualizzato un'icona di avviso sul layout collegato. Facendo clic su tale layout viene aperto il layout per rivelare il conflitto. Il widget che ha causato il conflitto viene evidenziato un frame di colore rosso e viene visualizzato il messaggio seguente: *Le modifiche recenti hanno causato conflitti in questo layout alternativo*. 
 
 [![Modifica in conflitto](alternative-layout-views-images/xs/10-conflict-sml.png)](alternative-layout-views-images/xs/10-conflict.png#lightbox)
 
@@ -201,7 +201,7 @@ Se un `CheckBox` viene aggiunto al **Default** layout, viene generato il conflit
 
 [![Casella di controllo conflitti](alternative-layout-views-images/xs/13-checkbox-conflict-sml.png)](alternative-layout-views-images/xs/13-checkbox-conflict.png#lightbox)
  
-Facendo clic sui **grandi ' s land** layout rivela il conflitto. Viene visualizzato il messaggio seguente: *modifiche recenti hanno causato conflitti in questo layout alternativo*. 
+Facendo clic sui **grandi ' s land** layout rivela il conflitto. Viene visualizzato il seguente messaggio: *Le modifiche recenti hanno causato conflitti in questo layout alternativo*. 
 
 [![Conflitto di layout ALT](alternative-layout-views-images/xs/14-alt-layout-conflict-sml.png)](alternative-layout-views-images/xs/14-alt-layout-conflict.png#lightbox)
  

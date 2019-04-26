@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/04/2019
 ms.openlocfilehash: 530fcf638454373ae68391e4e11bca85dd2fff63
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61093706"
 ---
 # <a name="fonts-in-xamarinforms"></a>Tipi di carattere in xamarin. Forms
 
@@ -28,7 +28,7 @@ Usare le tre proprietà correlate al carattere di tutti i controlli che visualiz
 
 - **FontFamily** &ndash; il `string` nome tipo di carattere.
 - **FontSize** &ndash; le dimensioni del carattere come un `double`.
-- **FontAttributes** &ndash; una stringa che specifica le informazioni sullo stile, ad esempio *corsivo* e **grassetto** (usando il `FontAttributes` enumerazione in c#).
+- **FontAttributes** &ndash; una stringa che specifica le informazioni sullo stile, ad esempio *corsivo* e **grassetto** (usando il `FontAttributes` enumerazione in C#).
 
 Questo codice viene illustrato come creare un'etichetta e specificare le dimensioni del carattere e il peso da visualizzare:
 
@@ -225,7 +225,7 @@ Nell'esempio XAML seguente ha un'icona singolo tipo di carattere viene visualizz
 </Image>
 ```
 
-Questo codice viene visualizzata un'icona di XBox, dalla famiglia di caratteri Ionicons, in un' [ `Image` ](xref:Xamarin.Forms.Image) visualizzazione. Si noti che mentre la versione unicode di caratteri per questa icona è `\uf30c`, dispone di caratteri di escape in XAML e quindi diventa `&#xf30c;`. Il codice c# equivalente è:
+Questo codice viene visualizzata un'icona di XBox, dalla famiglia di caratteri Ionicons, in un' [ `Image` ](xref:Xamarin.Forms.Image) visualizzazione. Si noti che mentre la versione unicode di caratteri per questa icona è `\uf30c`, dispone di caratteri di escape in XAML e quindi diventa `&#xf30c;`. Il codice C# equivalente è:
 
 ```csharp
 Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };

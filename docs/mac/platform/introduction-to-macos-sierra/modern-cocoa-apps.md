@@ -1,5 +1,5 @@
 ---
-title: Creazione di App macOS moderne
+title: Creazione di app macOS moderne
 description: Questo articolo descrive alcuni suggerimenti, funzionalità e tecniche di che uno sviluppatore può utilizzare per creare un'app macOS moderne in xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 53bfc9f147b6cf369b8f5ce8d1257dbaf6b0f807
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61032829"
 ---
-# <a name="building-modern-macos-apps"></a>Creazione di App macOS moderne
+# <a name="building-modern-macos-apps"></a>Creazione di app macOS moderne
 
 _Questo articolo descrive alcuni suggerimenti, funzionalità e tecniche di che uno sviluppatore può utilizzare per creare un'app macOS moderne in xamarin. Mac._
 

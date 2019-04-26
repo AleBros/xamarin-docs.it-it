@@ -1,5 +1,5 @@
 ---
-title: iOS elaborazione in background in attività
+title: Elaborazione in background in iOS con le attività
 description: Questo documento descrive come usare le attività in background per eseguire attività con esecuzione prolungata dopo che un'applicazione viene inserita in background.
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: c8d1abebf6dec2b7b5fe76d57ff851fad457f2a8
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61170681"
 ---
-# <a name="ios-backgrounding-with-tasks"></a>iOS elaborazione in background in attività
+# <a name="ios-backgrounding-with-tasks"></a>Elaborazione in background in iOS con le attività
 
 Il modo più semplice per eseguire l'elaborazione in background in IOS è suddividere i requisiti backgrounding in attività ed eseguire le attività in background. Le attività sono in un limite di tempo strict e ottengono in genere circa 600 secondi (10 minuti) del tempo di elaborazione dopo che un'applicazione è stato spostato in background in iOS 6 e meno di 10 minuti in iOS 7 +.
 

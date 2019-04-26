@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/08/2018
 ms.openlocfilehash: 06aa6569301d1bfdbf9f6fd1e7397a38a9beb6f6
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157193"
 ---
 # <a name="general-frequently-asked-questions"></a>Domande frequenti generali
 
@@ -23,7 +23,7 @@ Questa guida vengono elencati i metodi per determinare se la libreria esistente 
 ### <a name="pcl-reflection-apipcl-reflectionmd"></a>[API Reflection per librerie PCL](pcl-reflection.md)
 Microsoft ha sviluppato una nuova API di Reflection per l'uso nelle librerie di classi portabile. Se hai un codice di Reflection esistente che si desidera spostare in una libreria di classi Portabile, potrebbe non funzionare.
 
-### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Case study per librerie PCL: come è possibile risolvere i problemi correlati a System.Diagnostics.Tracing per il pacchetto NuGet Microsoft TPL Dataflow?](pcl-case-study.md)
+### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Case study di libreria di classi Portabile: Come è possibile risolvere i problemi correlati a Tracing per il pacchetto NuGet Microsoft TPL Dataflow?](pcl-case-study.md)
 Xamarin. IOS e xamarin. Android non implementano 100% di tutti i profili PCL che consentono come riferimenti. Per motivi di praticità pratiche in Visual Studio per Mac, Visual Studio e la gestione pacchetti NuGet, progetti Xamarin consentono l'uso dei diversi profili che hanno solo le implementazioni incomplete. Ad esempio, xamarin. IOS né xamarin. Android attualmente include un'implementazione completa dei tipi nel `System.Diagnostics.Tracing` dello spazio dei nomi di libreria di classi Portabile. È possibile risolvere il problema passando il progetto dell'app per fare riferimento il formato portabile TargetFramework="net45 win8 wp8 + wpa81 versione della libreria del flusso di dati TPL.
 
 ## <a name="nuget-packages--xamarin-components"></a>I pacchetti NuGet e componenti di Xamarin

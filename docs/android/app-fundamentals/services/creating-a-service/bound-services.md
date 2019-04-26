@@ -1,5 +1,5 @@
 ---
-title: Servizi associati in xamarin. Android
+title: Bound Services in Xamarin.Android
 description: Servizi associati sono servizi Android che forniscono un'interfaccia client-server in grado di interagire con un client (ad esempio, un'attività Android). Questa guida illustra i componenti fondamentali coinvolti nella creazione di un servizio associato e come usarlo in un'applicazione xamarin. Android.
 ms.prod: xamarin
 ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/04/2018
 ms.openlocfilehash: c0adee0dae1135bdfd076082e85a471db1cd1ecf
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61013292"
 ---
-# <a name="bound-services-in-xamarinandroid"></a>Servizi associati in xamarin. Android
+# <a name="bound-services-in-xamarinandroid"></a>Bound Services in Xamarin.Android
 
 _Servizi associati sono servizi Android che forniscono un'interfaccia client-server in grado di interagire con un client (ad esempio, un'attività Android). Questa guida illustra i componenti fondamentali coinvolti nella creazione di un servizio associato e come usarlo in un'applicazione xamarin. Android._
 

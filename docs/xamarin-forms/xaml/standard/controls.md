@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/15/2017
 ms.openlocfilehash: b9bf0e1ba14f4e8584bfd8492776ac7c8668df87
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61175178"
 ---
 # <a name="xaml-standard-preview-controls"></a>Controlli XAML Standard (anteprima)
 
@@ -40,13 +40,13 @@ Questa pagina elenca i controlli XAML Standard disponibile in anteprima, insieme
 
 |Controlli di xamarin. Forms con le proprietà aggiornate|Proprietà di xamarin. Forms o un'enumerazione|XAML Standard equivalente|
 |--- |--- |--- |
-|Pulsante, voce, etichetta, DatePicker, Editor, SearchBar, TimePicker|TextColor|Primo piano|
+|Button, Entry, Label, DatePicker, Editor, SearchBar, TimePicker|TextColor|Primo piano|
 |VisualElement|BackgroundColor|Sfondo *|
 |Selezione, pulsante|BorderColor, OutlineColor|BorderBrush|
 |Button|BorderWidth|BorderThickness|
-|ProgressBar|Stato|Valore|
-|Pulsante, voce, etichetta, Editor, SearchBar, intervallo, tipo di carattere|FontAttributesBold, corsivo, None|FontStyleItalic, Normal|
-|Pulsante, voce, etichetta, Editor, SearchBar, intervallo, tipo di carattere|FontAttributes|FontWeights * grassetto, Normal|
+|ProgressBar|Stato|Value|
+|Button, Entry, Label, Editor, SearchBar, Span, Font|FontAttributesBold, corsivo, None|FontStyleItalic, Normal|
+|Button, Entry, Label, Editor, SearchBar, Span, Font|FontAttributes|FontWeights * grassetto, Normal|
 |InputView|KeyboardDefault, Url, numero, telefono, testo, Chat, inviare tramite posta elettronica|InputScopeNameValue * predefinito, Url, numero, TelephoneNumber, testo, Chat, EmailNameOrAddress|
 |StackPanel|StackOrientation|Orientamento *|
 

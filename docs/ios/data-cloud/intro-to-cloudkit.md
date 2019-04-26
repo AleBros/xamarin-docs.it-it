@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/11/2016
 ms.openlocfilehash: daea27472ac7c0578c1cfd79ebd96428212fafb3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61165590"
 ---
 # <a name="cloudkit-in-xamarinios"></a>CloudKit in xamarin. IOS
 
@@ -252,7 +252,7 @@ Di seguito è riportato un esempio di creazione di un riferimento con un Record 
 var reference = new CKReference(newRecord, new CKReferenceAction());
 ```
 
-### <a name="assets"></a>Risorse
+### <a name="assets"></a>Asset
 
 Gli asset consentono di un file di dati di grandi dimensioni, non strutturati da caricare in iCloud e associata a un determinato Record:
 
@@ -883,6 +883,6 @@ Questo articolo ha illustrato una rapida introduzione all'API di CloudKit. Ha il
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [CloudKitAtlas (esempio)](https://developer.xamarin.com/samples/monotouch/ios8/CloudKitAtlas/)
+- [CloudKitAtlas (sample)](https://developer.xamarin.com/samples/monotouch/ios8/CloudKitAtlas/)
 - [Introduzione a iOS 8](~/ios/platform/introduction-to-ios8.md)
 - [Creazione di un profilo di provisioning](~/ios/get-started/installation/device-provisioning/index.md)

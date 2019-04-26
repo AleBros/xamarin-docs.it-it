@@ -1,5 +1,5 @@
 ---
-title: Introduzione a background in iOS
+title: Introduzione all'elaborazione in background in iOS
 description: "Questo documento descrive l'elaborazione in background in iOS: stati dell'applicazione, i metodi del ciclo di vita dell'applicazione e all'aggiornamento di app in background."
 ms.prod: xamarin
 ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/24/2018
 ms.openlocfilehash: c533dd54e3b6b11465cfd7daf5b9a93265dbe7b7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61169762"
 ---
-# <a name="introduction-to-backgrounding-in-ios"></a>Introduzione a background in iOS
+# <a name="introduction-to-backgrounding-in-ios"></a>Introduzione all'elaborazione in background in iOS
 
 iOS regola l'elaborazione attentamente in background e sono disponibili tre metodi per la relativa implementazione:
 

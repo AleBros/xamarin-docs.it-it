@@ -1,23 +1,23 @@
 ---
 title: .NET Embedding
-description: 'Incorporamento di .NET consente al codice .NET esistente (c#, F # e altri utenti) devono essere usati dal codice scritto in altri linguaggi di programmazione.'
+description: Incorporamento di .NET consente il codice .NET esistente (C#, F#e così via) devono essere usati dal codice scritto in altri linguaggi di programmazione.
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 23233ea8b06e0db580ba99edf2705e3dae5b931f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61363485"
 ---
 # <a name="net-embedding"></a>.NET Embedding
 
 ![Anteprima](~/media/shared/preview.png)
 
-Incorporamento di .NET consente al codice .NET esistente (c#, F # e altri utenti) devono essere usati da altri linguaggi di programmazione e in vari ambienti diversi.
+Incorporamento di .NET consente il codice .NET esistente (C#, F#e così via) devono essere usati da altri linguaggi di programmazione e in vari ambienti diversi.
 
 Ciò significa che se si dispone di una libreria .NET che si desidera utilizzare dalla tua app iOS esistente, è possibile farlo.   O se si desidera collegare una libreria nativa C++, è possibile anche farlo.   O utilizzare il codice .NET da Java.
 

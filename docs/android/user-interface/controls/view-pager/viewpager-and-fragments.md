@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: 1b6e1c8ce91eaad46e779527c5ba12e2187cad24
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61038408"
 ---
 # <a name="viewpager-with-fragments"></a>ViewPager con frammenti
 
@@ -29,7 +29,7 @@ Questa Guida non illustra le nozioni di base di frammenti &ndash; se non ha anco
 
 ## <a name="start-an-app-project"></a>Avviare un progetto di App
 
-Creare un nuovo progetto Android chiamato **FlashCardPager**. Successivamente, avviare Gestione pacchetti NuGet (per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: inclusi a NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). Trovare e installare il **Xamarin.Android.Support.v4** del pacchetto come descritto in [insieme Viewpager e visualizzazioni](~/android/user-interface/controls/view-pager/viewpager-and-views.md). 
+Creare un nuovo progetto Android chiamato **FlashCardPager**. Successivamente, avviare Gestione pacchetti NuGet (per altre informazioni sull'installazione di pacchetti NuGet, vedere [procedura dettagliata: Inserimento di pacchetto NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). Trovare e installare il **Xamarin.Android.Support.v4** del pacchetto come descritto in [insieme Viewpager e visualizzazioni](~/android/user-interface/controls/view-pager/viewpager-and-views.md). 
 
 
 
@@ -445,4 +445,4 @@ Questa procedura dettagliata è fornito un esempio dettagliato di come compilare
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [FlashCardPager (esempio)](https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager)
+- [FlashCardPager (sample)](https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager)

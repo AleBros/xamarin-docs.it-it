@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
 ms.openlocfilehash: e1e21fe121fba30755efbabe302ed0f22149e7e0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157396"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Nozioni di base di bitmap in SkiaSharp
 
@@ -104,7 +104,7 @@ Il metodo statico `SKBitmap.Decode` metodo è responsabile per la decodifica di 
 
 In termini di codice, l'approccio più semplice per il caricamento delle bitmap è inclusa una risorsa bitmap direttamente nell'applicazione. Il **SkiaSharpFormsDemos** programma include una cartella denominata **supporti** contenente vari file, tra cui quella denominata bitmap **monkey.png**. Per le bitmap archiviate come risorse del programma, è necessario usare il **delle proprietà** finestra di dialogo per assegnare al file un **azione di compilazione** dei **risorsa incorporata**!
 
-Ogni risorsa incorporata è una *l'ID di risorsa* costituito il nome del progetto, la cartella e il nome del file, connesse tutte le soluzioni da un punto: **SkiaSharpFormsDemos.Media.monkey.png**. È possibile ottenere l'accesso a questa risorsa, specificando tale risorsa ID come argomento per il [ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) metodo per il [ `Assembly` ](xref:System.Reflection.Assembly) classe:
+Ogni risorsa incorporata è una *ID risorsa* costituito il nome del progetto, la cartella e il nome del file, connesse tutte le soluzioni da un punto: **SkiaSharpFormsDemos.Media.monkey.png**. È possibile ottenere l'accesso a questa risorsa, specificando tale risorsa ID come argomento per il [ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) metodo per il [ `Assembly` ](xref:System.Reflection.Assembly) classe:
 
 ```csharp
 string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";

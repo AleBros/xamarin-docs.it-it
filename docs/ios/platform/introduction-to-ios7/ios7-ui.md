@@ -1,5 +1,5 @@
 ---
-title: iOS 7 panoramica dell'interfaccia utente
+title: Panoramica dell'interfaccia utente di iOS 7
 description: iOS 7 introduce una vasta gamma di modifiche all'interfaccia utente. Questo articolo evidenzia alcune delle modifiche più grandi, l'aspetto visivo dei controlli sia nelle API che supportano la nuova progettazione.
 ms.prod: xamarin
 ms.assetid: FADCEA7C-8968-42A1-9E9E-F4BBAB7BCF2C
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 132265c27e1d1ba3b8f3fc8db10d7b3cfa746197
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61039129"
 ---
-# <a name="ios-7-user-interface-overview"></a>iOS 7 panoramica dell'interfaccia utente
+# <a name="ios-7-user-interface-overview"></a>Panoramica dell'interfaccia utente di iOS 7
 
 _iOS 7 introduce una vasta gamma di modifiche all'interfaccia utente. Questo articolo evidenzia alcune delle modifiche più grandi, l'aspetto visivo dei controlli sia nelle API che supportano la nuova progettazione._
 

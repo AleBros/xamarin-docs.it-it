@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: cfdd639672f7fa624c7c8e30f17fbfc9dad403af
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075481"
 ---
 # <a name="xaml-markup-extensions"></a>Estensioni di Markup XAML
 
@@ -36,7 +36,7 @@ In entrambi i casi, la stringa di testo impostato sul `Color` attributo viene co
 
 È preferibile invece impostare il `Color` attributo da un valore archiviato in un dizionario risorse, o dal valore di una proprietà statica di una classe che è stata creata oppure da una proprietà di tipo `Color` di un altro elemento nella pagina o costruiti da separare i valori di tonalità, saturazione e luminosità.
 
-Tutte queste opzioni sono possibili utilizzando le estensioni di markup XAML. Ma non lasciare la frase "estensioni di markup" spaventare: le estensioni di markup XAML vengono *non* XML estensioni. Anche con le estensioni di markup XAML, XAML è sempre XML validi.
+Tutte queste opzioni sono possibili utilizzando le estensioni di markup XAML. Ma non lasciare la frase "estensioni di markup" spaventare: Estensioni di markup XAML sono *non* XML estensioni. Anche con le estensioni di markup XAML, XAML è sempre XML validi.
 
 Un'estensione di markup è semplicemente un modo per esprimere un attributo di un elemento diverso. Le estensioni di markup XAML sono in genere identificabili da un'impostazione dell'attributo che è racchiuso tra parentesi graffe:
 

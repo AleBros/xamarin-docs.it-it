@@ -1,5 +1,5 @@
 ---
-title: 'Errore di runtime: assembly mscorlib. dll non è stato trovato o non può essere caricato'
+title: "Errore di runtime: Impossibile trovare o caricare l'assembly mscorlib.dll"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1027E16C-2C14-4BB5-AAAB-342F3E28E22E
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: 84bb6815c19bcacb4a9d1bddc44d340d51199c32
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61421983"
 ---
-# <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loaded"></a>Errore di runtime: assembly mscorlib. dll non è stato trovato o non può essere caricato
+# <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loaded"></a>Errore di runtime: Impossibile trovare o caricare l'assembly mscorlib.dll
 
 ```
 <Warning>: The assembly mscorlib.dll was not found or could not be loaded.

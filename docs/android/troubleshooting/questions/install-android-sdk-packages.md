@@ -1,5 +1,5 @@
 ---
-title: Quali pacchetti Android SDK è necessario installare?
+title: Quali pacchetti di Android SDK è necessario installare?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F136AAE0-C6D2-4B0F-8F8C-7A6A94877266
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2018
 ms.openlocfilehash: 04a07d5b7f37222515136e5592f31a4583b02fe3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157364"
 ---
-# <a name="which-android-sdk-packages-should-i-install"></a>Quali pacchetti Android SDK è necessario installare?
+# <a name="which-android-sdk-packages-should-i-install"></a>Quali pacchetti di Android SDK è necessario installare?
 
 Installazione di Android SDK non include automaticamente tutti i pacchetti minimi richiesti per lo sviluppo. Mentre devono variare per singoli sviluppatori, i pacchetti seguenti a livello generale sono necessari per lo sviluppo con xamarin. Android:
 

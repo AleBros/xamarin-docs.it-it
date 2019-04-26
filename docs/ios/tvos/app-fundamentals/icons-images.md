@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 96af7fab366c3fd3493cf5adbf183d80b7c1ee26
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61418195"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Utilizzo di tvOS icone e immagini in Xamarin
 
@@ -118,7 +118,7 @@ tvOS funziona con le immagini a più livelli nei formati seguenti:
 
 Apple creato il [Visualizzatore anteprima parallasse](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) anteprima e immagini create su più livelli necessaria per le icone dell'App e gli elementi con stato attivabile facoltativo. Il Visualizzatore anteprima viene visualizzato ogni livello che costituisce l'immagine a più livelli completata:
 
-[![](icons-images-images/layered03.png "Il Visualizzatore anteprima parallasse")](icons-images-images/layered03.png#lightbox)
+[![](icons-images-images/layered03.png "The Parallax Previewer")](icons-images-images/layered03.png#lightbox)
 
 Durante l'anteprima di un'immagine a più livelli, è possibile utilizzare il mouse per ruotare l'immagine e visualizzare in anteprima l'effetto di parallasse. Usare la **+** (segno più) e **-** (pulsanti per aggiungere e rimuovere i livelli meno).
 
@@ -314,7 +314,7 @@ Seguire questa procedura:
     [![](icons-images-images/info01.png "Il file Info. plist")](icons-images-images/info01.png#lightbox)
 2. Nel **Editor Info. plist**, selezionare il catalogo di asset (configurato in precedenza nel [impostando le icone dell'App](#Setting-the-App-Icons) sezione) per il **icone dell'App**: 
 
-    [![](icons-images-images/info02.png "L'Editor Info. plist")](icons-images-images/info02.png#lightbox)
+    [![](icons-images-images/info02.png "The Info.Plist Editor")](icons-images-images/info02.png#lightbox)
 3. Successivamente, selezionare il catalogo di asset (configurato in precedenza nel [l'impostazione dell'immagine di avvio veloce](#Setting-the-Launch-Image) sezione) per il **immagini di avvio**.
 4. Salvare le modifiche.
 

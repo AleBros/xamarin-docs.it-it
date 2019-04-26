@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: b2f4cc71c1993e51ed55b51edd7c50d393e60873
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61412911"
 ---
 # <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Utilizzo di watchOS le dimensioni dello schermo in Xamarin
 

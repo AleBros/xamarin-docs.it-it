@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 02/08/2018
 ms.openlocfilehash: 4da83d5ecc7a54bcd692751e07c81e8e5bb0d94a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60932562"
 ---
 # <a name="introduction-to-tvos-11"></a>Introduzione a tvOS 11
 
@@ -44,5 +44,5 @@ Per un elenco completo delle modifiche Apple ha introdotto in tvOS 11, vedere la
 - [Introduzione a tvOS](~/ios/tvos/index.md)
 - [What ' s New in tvOS 11 (Guida per gli sviluppatori di Apple)](https://developer.apple.com/library/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS_11_0.html)
 - [What ' s New in tvOS 11 (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/209/)
-- [Interazione di messa a fuoco in tvOS 11 (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/224/)
+- [Focus Interaction in tvOS 11 (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/224/)
 - [tvOS per gli sviluppatori (Apple)](https://developer.apple.com/tvos/)

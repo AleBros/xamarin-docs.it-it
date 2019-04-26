@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: 2d67bc71361e335515cfba8b5a20e157ed6b6b05
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61087859"
 ---
 # <a name="touch-id-in-xamarinios"></a>Touch ID in xamarin. IOS
 
@@ -63,7 +63,7 @@ Un nuovo framework iOS 8, chiamato _l'autenticazione locale_, supporta questo pr
 
 Abbiamo definito nella sezione precedente, le applicazioni possono utilizzare l'autenticazione locale per autenticare l'utente in conformità con i criteri di sicurezza che sono stato configurato nel dispositivo.
 
-Attualmente, l'API offre solo due funzionalità: in primo luogo, assiste i servizi di Keychain esistenti tramite l'uso di nuovi Keychain Access Control Lists (ACL). È possibile sbloccarle con l'autenticazione di utenti impronta digitale Keychain dati.
+Attualmente, l'API fornisce solo due funzionalità: In primo luogo, assiste i servizi di Keychain esistenti tramite l'uso di nuovi Keychain Access Control Lists (ACL). È possibile sbloccarle con l'autenticazione di utenti impronta digitale Keychain dati.
 
 In secondo luogo, LocalAuthentication fornisce due metodi per eseguire l'autenticazione dell'applicazione in locale. Gli sviluppatori devono usare `CanEvaluatePolicy` per determinare se il dispositivo è in grado di accettare Touch ID e quindi `EvaluatePolicy` per avviare l'operazione di autenticazione.
 

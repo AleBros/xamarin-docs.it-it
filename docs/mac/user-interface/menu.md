@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 0a14e3e3eb58b264d1909b6576bbbc4f7e8f4068
-ms.sourcegitcommit: 650fd5813e243d67eea13c4bc76683c0f8134123
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50737206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61166594"
 ---
 # <a name="menus-in-xamarinmac"></a>Menu di scelta in xamarin. Mac
 
@@ -1011,7 +1011,7 @@ Quando l'utente fa clic o controllo clic sull'icona dell'applicazione nel dock, 
 1. In Visual Studio per Mac, fare doppio clic sul progetto dell'applicazione e selezionare **Add** > **nuovo File...** Nella finestra di dialogo Nuovo file, selezionare **xamarin. Mac** > **definizione di interfaccia vuota**, usare "DockMenu" per il **nome** e fare clic su di **New**  per creare il nuovo **DockMenu.xib** file:
 
     ![Aggiunta di una definizione di interfaccia vuota](menu-images/dock02.png "aggiungendo una definizione di interfaccia vuota")
-2. Nel **riquadro della soluzione**, fare doppio clic il **DockMenu.xib** file per aprirlo e modificarlo in Xcode. Creare una nuova **dal Menu** con gli elementi seguenti: **indirizzo**, **data**, **Greeting**, e **firma** 
+2. Nel **riquadro della soluzione**, fare doppio clic il **DockMenu.xib** file per aprirlo e modificarlo in Xcode. Creare una nuova **Menu** con gli elementi seguenti: **Indirizzo**, **data**, **Greeting**, e **firma** 
 
     [![Definizione del layout dell'interfaccia utente](menu-images/dock03.png "definizione del layout dell'interfaccia utente")](menu-images/dock03-large.png#lightbox)
 3. Successivamente, ci si connetterà la nuove voci di menu per le azioni esistenti creati per i menu personalizzati nel [aggiunta, modifica e l'eliminazione di menu](#Adding,_Editing_and_Deleting_Menus) sezione precedente. Passare al **connessione Inspector** e selezionare il **risponditore prima** nel **gerarchia delle interfacce**. Scorrere verso il basso e trovare il `phraseAddress:` azione. Trascinare una linea dal controllo circle a tale azione per il **indirizzo** voce di menu:
@@ -1051,7 +1051,7 @@ Creiamo un pulsante personalizzato a comparsa per la nostra applicazione eseguen
 1. Modificare il **Main. Storyboard** file in Xcode e trascinare un **pulsante Popup** dal **Library Inspector** nel **pannello** finestra creata in il [menu di scelta rapida](#Contextual_Menus) sezione: 
 
     [![Aggiunta di un pulsante di finestra popup](menu-images/popup01.png "aggiunta di un pulsante di popup")](menu-images/popup01-large.png#lightbox)
-2. Aggiungere una nuova voce di menu e impostare i titoli degli elementi nella finestra Popup per: **indirizzi**, **data**, **Greeting**, e **firma** 
+2. Aggiungere una nuova voce di menu e impostare i titoli degli elementi nella finestra Popup per: **Indirizzo**, **data**, **Greeting**, e **firma** 
 
     [![Configurare le voci di menu](menu-images/popup02.png "configurazione le voci di menu")](menu-images/popup02-large.png#lightbox)
 3. Successivamente, ci si connetterà la nuove voci di menu per le azioni esistenti creati per i menu personalizzati nel [aggiunta, modifica e l'eliminazione di menu](#Adding,_Editing_and_Deleting_Menus) sezione precedente. Passare al **connessione Inspector** e selezionare il **risponditore prima** nel **gerarchia delle interfacce**. Scorrere verso il basso e trovare il `phraseAddress:` azione. Trascinare una linea dal controllo circle a tale azione per il **indirizzo** voce di menu: 

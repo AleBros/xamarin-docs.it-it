@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2016
 ms.openlocfilehash: 3b8a440617dedfbe23f869e865b3cedae21d6c5b
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60946389"
 ---
 # <a name="adding-ios-specific-formatting"></a>Aggiunta di formattazione specifici iOS
 
@@ -41,11 +41,11 @@ nav.BarTextColor = Color.White;
 
 Il risultato è illustrato nel frammento di schermata seguente. Si noti che le barre di stato sono nere (non può essere impostato all'interno di xamarin. Forms perché è una funzionalità specifiche della piattaforma).
 
-![](theme-images/status-default-sml.png "iOS dei temi")
+![](theme-images/status-default-sml.png "iOS Theming")
 
 In teoria la barra di stato sarà ugualmente bianca - qualcosa permette di eseguire direttamente nel progetto iOS. Aggiungere le voci seguenti per il **Info. plist** per forzare la barra di stato di colore bianco:
 
-![](theme-images/info-plist.png "iOS le voci di Info. plist")
+![](theme-images/info-plist.png "iOS Info.plist Entries")
 
 o si modifica il corrispondente **Info. plist** file direttamente da includere:
 
@@ -58,7 +58,7 @@ o si modifica il corrispondente **Info. plist** file direttamente da includere:
 
 A questo punto quando si esegue l'app, la barra di spostamento è di colore verde e il testo è il bianco (a causa della formattazione di xamarin. Forms) *e* il testo della barra di stato viene inoltre bianchi grazie alla configurazione di iOS specifici:
 
-![](theme-images/status-white-sml.png "iOS dei temi")
+![](theme-images/status-white-sml.png "iOS Theming")
 
 <a name="uiappearance"/>
 

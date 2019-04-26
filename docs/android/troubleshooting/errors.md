@@ -1,5 +1,5 @@
 ---
-title: Matrice di errori di xamarin. Android
+title: Xamarin.Android Errors Matrix
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7EBE4C01-8EFC-4B7E-97BA-D879994F59AB
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
 ms.openlocfilehash: f3721ad661f4b817375b0d625c9b5cc293e6d44c
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60945305"
 ---
-# <a name="xamarinandroid-errors-matrix"></a>Matrice di errori di xamarin. Android
+# <a name="xamarinandroid-errors-matrix"></a>Xamarin.Android Errors Matrix
 
 ## <a name="errors-reference"></a>Riferimento per gli errori
 
@@ -78,7 +78,7 @@ Questo documento fornisce alcune informazioni sui codici di errore diversi da Xa
 |XA1103|Impossibile scollegare.|
 |XA1104|Non è riuscito a inviare il pacchetto: {0}.|
 |XA1105|Tipo di risposta non prevista.|
-|XA1106|Impossibile ottenere l'elenco delle applicazioni nel dispositivo: timeout della richiesta.|
+|XA1106|Impossibile ottenere l'elenco delle applicazioni nel dispositivo: Timeout della richiesta.|
 |XA1107|Impossibile avviare l'applicazione.|
 |XA1201|Non è riuscito a caricare il simulatore: {0}.|
 |XA1301|La libreria nativa di '{0}' ({1}) è stata ignorata perché non corrisponde la architecture(s) compilazione corrente ({2}).|
@@ -101,7 +101,7 @@ Si tratta di errori AOT.
 |Codice di errore|Descrizione|
 |--- |--- |
 |XA3001|Potrebbe non AOT di assembly '{0}'.|
-|XA3002|Restrizione di AOT: metodo '{0}' deve essere statico poiché è decorata con [MonoPInvokeCallback].|
+|XA3002|Restrizione di AOT: Metodo '{0}' deve essere statico poiché è decorata con [MonoPInvokeCallback].|
 |XA3003|In conflitto, le opzioni di debug e - llvm. Disabilitazione del debug soft.|
 
 
@@ -114,7 +114,7 @@ Si tratta di errori di generazione di codice.
 |XA4001|Il modello principale non è stato possibile expansed a '{0}'.|
 |XA4101|Il programma di registrazione non è possibile generare una firma per il tipo '{0}'.|
 |XA4102|Il programma di registrazione trovato un tipo non valido '{0}'nella firma del metodo'{2}'. Usare '{1}' invece.|
-|XA4103|Il programma di registrazione trovato un tipo non valido '{0}'nella firma del metodo'{2}': il tipo implementa INativeObject, ma non dispone di un costruttore che accetta due (IntPtr, bool) argomenti.|
+|XA4103|Il programma di registrazione trovato un tipo non valido '{0}'nella firma del metodo'{2}': Il tipo implementa INativeObject, ma non dispone di un costruttore che accetta due (IntPtr, bool) argomenti.|
 |XA4104|Il programma di registrazione non è possibile effettuare il marshalling il valore restituito per il tipo '{0}'nella firma del metodo'{1}'.|
 |XA4105|Il programma di registrazione non è possibile effettuare il marshalling del parametro di tipo '{0}'nella firma del metodo'{1}'.|
 |XA4106|Il programma di registrazione non è possibile effettuare il marshalling il valore restituito per la struttura '{0}'nella firma del metodo'{1}'.|
@@ -173,24 +173,24 @@ Questi codici di errore sono errori di attivazione e gestione delle licenze.
 
 #### <a name="xa9000"></a>XA9000
 
- **Causa:** licenza scaduta
+ **Causa:** Licenza scaduta
 
- **Controllati durante:** compilazione
+ **Controllati durante:** Compilazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|AVVISO|AVVISO|AVVISO|AVVISO|AVVISO|
+|WARNING|WARNING|WARNING|WARNING|WARNING|
 
 
 #### <a name="xa9001"></a>XA9001
 
- **Causa:** versione di valutazione scaduta
+ **Causa:** Versione di valutazione scaduta
 
- **Controllati durante:** compilazione
+ **Controllati durante:** Compilazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|AVVISO|AVVISO|AVVISO|AVVISO|AVVISO|
+|WARNING|WARNING|WARNING|WARNING|WARNING|
 
 
 
@@ -198,66 +198,66 @@ Questi codici di errore sono errori di attivazione e gestione delle licenze.
 
  **Causa:** AndroidJavaSource
 
- **Controllati durante:** compilazione
+ **Controllati durante:** Compilazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|OK|OK|OK|OK|
+|ERROR|OK|OK|OK|OK|
 
  **Causa:** AndroidJavaLibrary
 
- **Controllati durante:** compilazione
+ **Controllati durante:** Compilazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|OK|OK|OK|OK|
+|ERROR|OK|OK|OK|OK|
 
  **Se un assembly di Binding è il JAR incorporati, questo viene rilevato in fase di pacchetto, non in fase di compilazione.**
 
  **Causa:** AndroidNativeLibrary
 
- **Controllati durante:** compilazione
+ **Controllati durante:** Compilazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|OK|OK|OK|OK|
+|ERROR|OK|OK|OK|OK|
 
 
 #### <a name="xa9003"></a>XA9003
 
- **Causa:** Serialization
+ **Causa:** System.Runtime.Serialization
 
- **Controllati durante:** pacchetto
-
-|Starter|Indie|Business(trial)|Ufficio|Enterprise|
-|--- |--- |--- |--- |--- |
-|ERRORE|ERRORE|OK|OK|OK|
-
- **Causa:** ServiceModel
-
- **Controllati durante:** pacchetto
+ **Controllati durante:** Pacchetto
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|ERRORE|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
+
+ **Causa:** System.ServiceModel.Web
+
+ **Controllati durante:** Pacchetto
+
+|Starter|Indie|Business(trial)|Ufficio|Enterprise|
+|--- |--- |--- |--- |--- |
+|ERROR|ERROR|OK|OK|OK|
 
  **Causa:** Mono.Data.Tds
 
- **Controllati durante:** compilazione
+ **Controllati durante:** Compilazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|ERRORE|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
 
  **Ciò viene fatto riferimento dal System, che è consentito**
 
  **Causa:** Mono.Android.Export
 
- **Controllati durante:** compilazione
+ **Controllati durante:** Compilazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|OK|OK|OK|OK|
+|ERROR|OK|OK|OK|OK|
 
 
 
@@ -265,68 +265,68 @@ Questi codici di errore sono errori di attivazione e gestione delle licenze.
 
  **Causa:** -profilatura
 
- **Controllati durante:** pacchetto
+ **Controllati durante:** Pacchetto
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|ERRORE|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
 
 
 
 #### <a name="xa9005"></a>XA9005
 
- **Causa:** dimensione massima (32 kb).
+ **Causa:** Limite dimensione (32kb).
 
- **Controllati durante:** pacchetto
+ **Controllati durante:** Pacchetto
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|OK|-|-|-|
+|ERROR|OK|-|-|-|
 
 
 
 #### <a name="xa9006"></a>XA9006
 
- **Causa:** dello spazio dei nomi SqlClient.
+ **Causa:** Spazio dei nomi SqlClient.
 
- **Controllati durante:** pacchetto
+ **Controllati durante:** Pacchetto
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|ERRORE|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
 
 
 #### <a name="xa9008"></a>XA9008
 
- **Causa:** compilazione dalla riga di comando.
+ **Causa:** Compilazione dalla riga di comando.
 
- **Controllati durante:** compilazione
+ **Controllati durante:** Compilazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|ERRORE|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
 
 
 #### <a name="xa9009"></a>XA9009
 
- **Causa:** mancante il numero di serie.
+ **Causa:** Numero di serie manca.
 
  **Controllati durante:** Untestable
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|ERRORE|ERRORE|ERRORE|ERRORE|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9010"></a>XA9010
 
- **Causa:** ProductId non valido.
+ **Causa:** ID prodotto non è valido.
 
- **Controllati durante:** compilazione
+ **Controllati durante:** Compilazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|ERRORE|ERRORE|ERRORE|ERRORE|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 Equivalente allo XA9018.
 
@@ -334,65 +334,65 @@ Equivalente allo XA9018.
 
 #### <a name="xa9011"></a>XA9011
 
- **Causa:** non è stato possibile aggiornare il file di licenza (al nuovo formato di file).
+ **Causa:** Non è stato possibile aggiornare il file di licenza (al nuovo formato di file).
 
- **Controllati durante:** attivazione
+ **Controllati durante:** Attivazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|ERRORE|ERRORE|ERRORE|ERRORE|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 #### <a name="xa9012"></a>XA9012
 
- **Causa:** internet assente
+ **Causa:** Nessun internet
 
- **Controllati durante:** attivazione
+ **Controllati durante:** Attivazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|ERRORE|ERRORE|ERRORE|ERRORE|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9013"></a>XA9013
 
- **Causa:** errore sconosciuto
+ **Causa:** Errore sconosciuto
 
- **Controllati durante:** attivazione
+ **Controllati durante:** Attivazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|ERRORE|ERRORE|ERRORE|ERRORE|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9014"></a>XA9014
 
- **Causa:** codice di attivazione non è valido
+ **Causa:** Codice di attivazione non è valido
 
- **Controllati durante:** attivazione
+ **Controllati durante:** Attivazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|ERRORE|ERRORE|ERRORE|ERRORE|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9017"></a>XA9017
 
- **Causa:** server di attivazione non restituisce una licenza valida.
+ **Causa:** Server di attivazione non restituisce una licenza valida.
 
- **Controllati durante:** attivazione
+ **Controllati durante:** Attivazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRORE|ERRORE|ERRORE|ERRORE|ERRORE|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9018"></a>XA9018
 
-**Causa:** licenza non valida
+**Causa:** Licenza non valida
 
-**Controllati durante:** compilazione
+**Controllati durante:** Compilazione
 
 |Starter|Indie|Business(trial)|Ufficio|Enterprise|
 |--- |--- |--- |--- |--- |
-|-|-|ERRORE|-|-|
+|-|-|ERROR|-|-|
 

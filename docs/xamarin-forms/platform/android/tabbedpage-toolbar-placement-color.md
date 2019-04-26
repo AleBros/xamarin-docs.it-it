@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
 ms.openlocfilehash: c68b190e71f83504e20731e9c66571711ced22bc
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61361216"
 ---
 # <a name="tabbedpage-toolbar-placement-and-color-on-android"></a>Barra degli strumenti TabbedPage posizionamento e il colore in Android
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/11/2016
 ms.openlocfilehash: e3127f85841c13422d9674bcf12373af9222afba
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61153732"
 ---
 # <a name="using-data-in-an-ios-app"></a>Uso dei dati in un'app per iOS
 
@@ -107,7 +107,7 @@ Alcune applicazioni vengono forniti con un database già popolato con i dati.
 
 Prestare attenzione quando si crea un file di database per la distribuzione con l'app, con la denominazione di tabelle e colonne per assicurarsi che corrispondano a ciò che prevede che il codice, soprattutto se si usa SQLite.NET che si aspetta di ricevere i nomi in base ai in c# le classi e proprietà (o il attributi personalizzati associati).
 
-Per iOS, includere il file di sqlite nell'applicazione e verificare sia contrassegnata con **azione di compilazione: contenuto**. Inserire il codice nel `FinishedLaunching` copiare il file in una directory scrivibile *prima di* è chiamare qualsiasi metodo dati. Il codice seguente verrà copiato un database esistente denominato **data.sqlite**, solo se non esiste già.
+Per iOS, includere il file di sqlite nell'applicazione e verificare sia contrassegnata con **azione di compilazione: Content**. Inserire il codice nel `FinishedLaunching` copiare il file in una directory scrivibile *prima di* è chiamare qualsiasi metodo dati. Il codice seguente verrà copiato un database esistente denominato **data.sqlite**, solo se non esiste già.
 
 ```csharp
 // Copy the database across (if it doesn't exist)

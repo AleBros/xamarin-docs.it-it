@@ -9,11 +9,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
 ms.openlocfilehash: e6e3a989db922dc2941cca4c888c862ffe159241
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61422052"
 ---
 # <a name="xamarinios-errors"></a>Errori di xamarin. IOS
 
@@ -1758,7 +1758,7 @@ Se si ritiene che xamarin. IOS deve supportare il tipo in questione, inviare una
 
 <a name="MT4102" />
 
-### <a name="mt4102-the-registrar-found-an-invalid-type--in-signature-for-method--use--instead"></a>MT4102: Il programma di registrazione trovato un tipo non valido `*` nella firma del metodo `*`. In alternativa, usare `*`.
+### <a name="mt4102-the-registrar-found-an-invalid-type--in-signature-for-method--use--instead"></a>MT4102: Il programma di registrazione trovato un tipo non valido `*` nella firma del metodo `*`. In alternativa, utilizzare `*`.
 
 Questo attualmente avviene solo con un solo tipo: System.DateTime. Usare invece l'equivalente di Objective-C (NSDate).
 
@@ -2735,7 +2735,7 @@ In alcuni casi, è un problema di "rete locale" e possono essere indirizzato tra
 
 Dove * può essere:
 
-- string
+- stringa
 - array
 - dict
 - bool
@@ -2770,19 +2770,19 @@ Dove * può essere:
 
 <a name="MT7050" />
 
-### <a name="mt7050-delete-cant-delete-entry--from-parent"></a>MT7050: Delete: Non è possibile eliminare una voce, *, dall'elemento padre.
+### <a name="mt7050-delete-cant-delete-entry--from-parent"></a>MT7050: Elimina: Non è possibile eliminare una voce, *, dall'elemento padre.
 
 *Attività di MSBuild: PropertyListEditorTaskBase*
 
 <a name="MT7051" />
 
-### <a name="mt7051-delete-entry--contains-invalid-array-index"></a>MT7051: Delete: Voce, *, contiene l'indice di matrice non valido.
+### <a name="mt7051-delete-entry--contains-invalid-array-index"></a>MT7051: Elimina: Voce, *, contiene l'indice di matrice non valido.
 
 *Attività di MSBuild: PropertyListEditorTaskBase*
 
 <a name="MT7052" />
 
-### <a name="mt7052-delete-entry--does-not-exist"></a>MT7052: Delete: Voce, *, non esiste.
+### <a name="mt7052-delete-entry--does-not-exist"></a>MT7052: Elimina: Voce, *, non esiste.
 
 *Attività di MSBuild: PropertyListEditorTaskBase*
 

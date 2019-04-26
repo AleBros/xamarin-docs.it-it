@@ -1,5 +1,5 @@
 ---
-title: Ottenere una Google Maps chiave API
+title: Ottenere una chiave API Google Maps
 description: Come ottenere una chiave API viene eseguito il mapping di Google per l'aggiunta di esegue il mapping di funzionalità all'app.
 ms.prod: xamarin
 ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
 ms.openlocfilehash: bfeb9d8fa2a0b5a9b18ab8266500586e2e3b6c68
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61155364"
 ---
-# <a name="obtaining-a-google-maps-api-key"></a>Ottenere una Google Maps chiave API
+# <a name="obtaining-a-google-maps-api-key"></a>Ottenere una chiave API Google Maps
 
 Per usare la funzionalità di Google Maps in Android, è necessario registrarsi per una chiave API di mappe con Google. Fino a quando non in questo caso, verranno visualizzati solo una griglia vuota invece di una mappa delle applicazioni. È necessario ottenere una chiave di Google Maps Android API v2 - chiavi dal v1 chiave Google Maps Android API precedenti non funzioneranno.
 
@@ -48,7 +48,7 @@ Per impostazione predefinita i keystore che verrà usato per firmare le versioni
 
 Le informazioni su un archivio chiavi si ottengono eseguendo il comando `keytool` dal JDK. Questo strumento si trova in genere nella directory bin di Java:
 
-**/System/Library/Java/JavaVirtualMachines/[Version].JDK/Contents/home/bin/keytool**
+**/System/Library/Java/JavaVirtualMachines/[VERSION].jdk/Contents/Home/bin/keytool**
 
 -----
 

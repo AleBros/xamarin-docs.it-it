@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 31eb0bfae58ecdca40548e46d1d9d95828be67b4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61347839"
 ---
 # <a name="3264-bit-platform-considerations"></a>Considerazioni sulle piattaforme a 32 o 64 bit
 
@@ -79,7 +79,7 @@ Durante la transizione di Apple da 32 a 64 bit, iOS App dovrà essere eseguite s
 Architetture sia a 32 e 64 bit aumentare notevolmente le dimensioni di un'applicazione. Tuttavia, ciò consente a dispositivi più recenti per l'esecuzione di codice ottimizzato ma continua a supportare i dispositivi meno recenti.
 
 > [!IMPORTANT]
-> Se si riceve il messaggio seguente durante l'invio di un'applicazione iOS a iTunes App Store, _"avviso ITMS-9000: manca il supporto a 64 bit. A partire dall'1 febbraio 2015, nuova iOS caricata per l'App Store di App deve includere il supporto a 64 bit e venga compilata con iOS 8 SDK, incluso in Xcode 6 o versione successiva. Per consentire a 64 bit nel progetto, è consigliabile usare l'impostazione predefinita l'impostazione di "Architetture Standard" compilazione Xcode per creare un unico file binario con il codice sia a 32 e 64 bit. "_ È necessario passare le architetture supportate su uno dei contatori **ARM64** combinazione (come illustrato in precedenza), ricompilazione e inviare di nuovo.
+> Se si riceve il messaggio seguente durante l'invio di un'applicazione iOS a iTunes App Store, _"avviso ITMS-9000: Manca il supporto a 64 bit. A partire dall'1 febbraio 2015, nuova iOS caricata per l'App Store di App deve includere il supporto a 64 bit e venga compilata con iOS 8 SDK, incluso in Xcode 6 o versione successiva. Per consentire a 64 bit nel progetto, è consigliabile usare l'impostazione predefinita l'impostazione di "Architetture Standard" compilazione Xcode per creare un unico file binario con il codice sia a 32 e 64 bit. "_ È necessario passare le architetture supportate su uno dei contatori **ARM64** combinazione (come illustrato in precedenza), ricompilazione e inviare di nuovo.
 
 ## <a name="mac"></a>Mac
 
@@ -90,7 +90,7 @@ I computer Mac più recenti supportano applicazioni a 32 bit sia 64 bit.   10.6 
 
 A differenza di iOS, molti dei nuovi Framework introdotte in versioni recenti di macOS sono supportate solo in modalità a 64 bit (CloudKit, EventKit, GameController, LocalAuthentication, MediaLibrary, MultipeerConnectivity, NotificationCenter, GLKit, SpriteKit, social network, e MapKit, tra gli altri).
 
-L'API unificata consentono agli sviluppatori di scegliere il tipo di applicazioni per produrre: 32 bit o 64 bit.
+L'API unificata consentono agli sviluppatori di scegliere quali applicazioni desiderano generare: 32 bit o 64 bit.
 
 **applicazioni a 32 bit** verranno eseguiti su computer Mac sia a 32 e 64 bit, hanno uno spazio degli indirizzi limitato a 32 bit e richiedono che tutte le raccolte sono a 32 bit.
 

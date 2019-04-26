@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
 ms.openlocfilehash: 8fe5b508bb92d11bc1a76c96ece0b89fd06dd402
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61415741"
 ---
 # <a name="tvos-application-fundamentals"></a>Nozioni fondamentali dell'applicazione tvOS
 
@@ -20,7 +20,7 @@ _Questa sezione vengono presentate le attività più comuni e dei concetti che g
 
 <a name="Xamarin.tvOS-Application-Fundamentals" />
 
-## <a name="xamarintvos-application-fundamentals"></a>Nozioni fondamentali dell'applicazione xamarin. tvos
+## <a name="xamarintvos-application-fundamentals"></a>Xamarin.tvOS Application Fundamentals
 
 I documenti in questa sezione forniscono una conoscenza pratica dei concetti fondamentali e le funzionalità di tvOS che utilizzeranno durante la creazione di un'app xamarin. tvos.
 

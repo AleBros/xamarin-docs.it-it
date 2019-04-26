@@ -9,11 +9,11 @@ ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
 ms.openlocfilehash: 21ff09f2af93ee46578b959111bf744ba05a74d7
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384921"
 ---
 # <a name="xamarin-live-reload-preview"></a>Livereload Xamarin (anteprima)
 
@@ -119,25 +119,25 @@ No. In effetti, è possibile anche avviare tutte le destinazioni di applicazioni
 * Ricaricamento delle risorse a livello di app (vale a dire **app** o i dizionari risorse condivisi), spostamento di app viene reimpostato. 
 * Ricaricamento del ContentView attualmente è necessario ricaricare la pagina che lo contiene.
 * Gli elementi contenenti AutomationId potrebbero verificarsi un errore di ricaricamento.
-* Modificando XAML durante il debug di UWP può causare un arresto anomalo del sistema di runtime. Soluzione alternativa: Utilizzare **Avvia senza eseguire debug (CTRL+F5)** invece di **Avvia debug (F5)**.
+* Modificando XAML durante il debug di UWP può causare un arresto anomalo del sistema di runtime. Soluzione alternativa: Uso **Avvia senza eseguire debug (CTRL+F5)** invece di **Avvia debug (F5)**.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 ### <a name="error-codes"></a>Codici di errore
 
-* **XLR001**: *il progetto corrente fa riferimento a versione del pacchetto NuGet 'Xamarin.LiveReload' '[versione]', ma l'estensione Xamarin Live Reload richiede la versione '[versione]'.*
+* **XLR001**: *Il progetto corrente fa riferimento a versione del pacchetto NuGet 'Xamarin.LiveReload' '[versione]', ma l'estensione Xamarin Live Reload richiede la versione '[versione]'.*
 
   Per consentire un'iterazione rapida e l'evoluzione della funzionalità di Live Reload, il pacchetto nuget e l'estensione di Visual Studio deve corrispondere esattamente. Aggiornare il pacchetto nuget per la stessa versione dell'estensione installata.
 
-* **XLR002**: *ricaricamento in tempo reale richiede almeno la proprietà 'MqttHostname' durante la compilazione dalla riga di comando. In alternativa, impostare 'EnableLiveReload' su 'false' per disabilitare la funzionalità.*
+* **XLR002**: *Livereload richiede almeno la proprietà 'MqttHostname' durante la compilazione dalla riga di comando. In alternativa, impostare 'EnableLiveReload' su 'false' per disabilitare la funzionalità.*
 
   Le proprietà obbligatorie per Live Reload non sono disponibili se la compilazione dalla riga di comando (o in integrazione continua) e pertanto deve essere fornito in modo esplicito. 
 
-* **XLR003**: *pacchetto nuget di ricaricamento in tempo reale è necessario installare l'estensione Xamarin Live Reload Visual Studio.*
+* **XLR003**: *Pacchetto nuget di ricaricamento in tempo reale richiede l'installazione dell'estensione Xamarin Live Reload Visual Studio.*
 
   Tentativo di creare un progetto che fa riferimento il pacchetto nuget di ricaricamento in tempo reale, ma non è installata l'estensione Visual.  
 
-* *Eccezione durante il caricamento degli assembly: System.IO.FileNotFoundException: Impossibile caricare l'assembly ' Xamarin.Live.Reload, versione = 0.3.27.0, Culture = neutral, PublicKeyToken ='.*
+* *Eccezione durante il caricamento degli assembly: System.IO.FileNotFoundException: Could not load assembly 'Xamarin.Live.Reload, Version=0.3.27.0, Culture=neutral, PublicKeyToken='.*
 
   Il progetto host deve usare `PackageReference` invece di `packages.config`
 

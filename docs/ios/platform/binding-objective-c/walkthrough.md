@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Associazione di una libreria Objective-C iOS'
+title: 'Procedura dettagliata: Binding di una libreria Objective-C in iOS'
 description: Questo articolo include procedure dettagliate pratiche di creazione di un'associazione di xamarin. IOS per una libreria Objective-C esistente, InfColorPicker. Vengono trattati argomenti come la compilazione di una libreria Objective-C statica, associazione e utilizzando l'associazione in un'applicazione xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
 ms.openlocfilehash: fcf4e6d9b281eaac4be888c499e537f7397528a0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61392014"
 ---
-# <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procedura dettagliata: Associazione di una libreria Objective-C iOS
+# <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procedura dettagliata: Binding di una libreria Objective-C in iOS
 
 _Questo articolo include procedure dettagliate pratiche di creazione di un'associazione di xamarin. IOS per una libreria Objective-C esistente, InfColorPicker. Vengono trattati argomenti come la compilazione di una libreria Objective-C statica, associazione e utilizzando l'associazione in un'applicazione xamarin. IOS._
 

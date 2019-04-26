@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
 ms.openlocfilehash: fc95c05c1945464cd9cac8565d8a11ff1b4c7e1d
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61175154"
 ---
 # <a name="adding-a-second-toolbar"></a>Aggiunta di una seconda barra degli strumenti
 
@@ -94,7 +94,7 @@ Per aggiungere voci di menu in un database secondario `Toolbar`:
 
 4.  Implementare un gestore di clic in `OnCreate` per nuove voci di menu. 
 
-Le sezioni seguenti illustrano in dettaglio questo processo: **tagliare**, **copia**, e **Incolla** vengono aggiunte voci di menu nella parte inferiore `Toolbar`. 
+Le sezioni seguenti illustrano questo processo in dettaglio: **Tagliare**, **copia**, e **Incolla** vengono aggiunte voci di menu nella parte inferiore `Toolbar`. 
 
 
 

@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 07/24/2018
 ms.openlocfilehash: 7e569aaddef912d9534e98f2f987ad5dfca8a5a6
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61168010"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Visualizzazioni HTML predefiniti con i modelli Razor
 
@@ -487,7 +487,7 @@ HTML può essere molto utile per la creazione di prototipi e visualizzazione di 
 
 Le visualizzazioni web nel modello possono essere integrate facilmente con i controlli specifici della piattaforma: è sufficiente modificare la **Mainstoryboard** nella finestra di progettazione iOS o il **Resources/layout/Main.axml** in Android.
 
-### <a name="razortodo-sample"></a>Esempio RazorTodo
+### <a name="razortodo-sample"></a>RazorTodo Sample
 
 Il [RazorTodo](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo) repository contiene due soluzioni separate per visualizzare le differenze tra un'app completamente basata su HTML e un'app che combina HTML con i controlli nativi:
 
@@ -523,6 +523,6 @@ Infine, ha introdotto RazorTodo esempi che illustrano come combinare le visualiz
 
 ### <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio RazorTodo](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo)
+- [RazorTodo Sample](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo)
 - [MVC 3 - motore di visualizzazione Razor (Microsoft)](http://www.asp.net/mvc/videos/mvc-3/mvc-3-razor-view-engine)
 - [Introduzione alla programmazione Web ASP.NET usando la sintassi Razor (Microsoft)](http://www.asp.net/web-pages/tutorials/basics/2-introduction-to-asp-net-web-programming-using-the-razor-syntax)

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: 9b94db14a197ca31be42e8712c2170fd66b86579
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61162587"
 ---
 # <a name="the-non-separable-blend-modes"></a>Le modalità di blend non separabili
 
@@ -28,7 +28,7 @@ Per comprendere le modalità di blend non separabili, è necessario trattare i p
 
 Il modello di colori HSL illustrato nell'articolo [ **l'integrazione con xamarin. Forms** ](../../basics/integration.md) e un programma di esempio in questo articolo consente la sperimentazione con colori HSL. È possibile creare un `SKColor` valore utilizzando i valori di tonalità, saturazione e luminosità con il metodo statico [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl*) (metodo).
 
-La tonalità rappresenta la lunghezza d'onda dominante del colore. Hue valori compresi tra 0 e 360 e scorrere gli elementi primari additivi e sottrattivi: rosso è il valore 0, giallo è 60, verde è 120, ciano è 180, blu è 240, magenta è 300 e il ciclo ritorna a rosso in 360.
+La tonalità rappresenta la lunghezza d'onda dominante del colore. Hue valori compresi tra 0 e 360 e scorrere gli elementi primari additivi e sottrattivi: Rosso è il valore 0, giallo è 60, verde è 120, ciano è 180, blu è 240, magenta è 300 e il ciclo ritorna a rosso in 360.
 
 Se non vi è alcun colore dominante &mdash; ad esempio, il colore è bianco o il nero o a una gradazione di grigio &mdash; la tonalità è non definita e in genere impostata su 0. 
 
@@ -198,7 +198,7 @@ Il `SKBlendModes.Color` fusione mantiene la luminosità dell'oggetto di destinaz
 
 Si vedrà a breve un'applicazione di questa modalità blend.
 
-Infine, il `SKBlendModes.Luminosity` modalità blend è l'opposto di `SKBlendModes.Color`. Mantiene il colore e la saturazione della destinazione, ma usa la luminosità dell'origine. Il `Luminosity` modalità blend è più misteriosi del batch: i dispositivi di scorrimento il colore e la saturazione influiscono sull'immagine, ma anche a luminosità di medie dimensioni, l'immagine non è distinto:
+Infine, il `SKBlendModes.Luminosity` modalità blend è l'opposto di `SKBlendModes.Color`. Mantiene il colore e la saturazione della destinazione, ma usa la luminosità dell'origine. Il `Luminosity` modalità blend è più misteriosi del batch: I dispositivi di scorrimento colore e la saturazione influiscono sull'immagine, ma anche a luminosità di medie dimensioni, l'immagine non è distinto:
 
 [![Modalità di Blend non separabili - luminosità](non-separable-images/NonSeparableBlendModes-Luminosity.png "modalità Blend Non separabili - luminosità")](non-separable-images/NonSeparableBlendModes-Luminosity-Large.png#lightbox)
 

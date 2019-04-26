@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 79022f7a454ea423fa3112a4c4ade2bcd471fbb8
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60933070"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controller Bluetooth per tvOS in Xamarin e remoti per Siri
 
@@ -51,7 +51,7 @@ Il remoti per Siri sono gli utilizzi previsto all'interno dell'app tvOS e le fun
 
 È in grado di rilevare un'ampia gamma di movimenti di un singolo dito che è possibile rispondere a nell'app xamarin. tvos Touch area di Siri Remote:
 
-|Scorrere rapidamente|Fare clic su|Toccare|
+|Scorrimento rapido|Fare clic su|Tocco|
 |---|---|---|
 |![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
 |Selezione (dello stato attivo) viene spostata tra gli elementi dell'interfaccia utente sullo schermo (verso l'alto, in basso a sinistra, pulsante destro del mouse). Scorrendo rapidamente è utilizzabile per scorrere gli elenchi di grandi dimensioni del contenuto rapidamente con l'inerzia.|Attiva l'elemento selezionato (messa a fuoco) o funge da pulsante primario in un gioco. Facendo clic e tenendo premuto può attivare funzioni secondarie o i menu contestuali.|Certamente preso alla leggera toccando la superficie Touch sui bordi funziona come pulsanti direzionali su un D-blocco note, lo stato attivo passa alto, basso, a sinistra o destra a seconda dell'area toccato. A seconda dell'app, è utilizzabile per visualizzare i controlli nascosti.|

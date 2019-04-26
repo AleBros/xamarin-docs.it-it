@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: b2968399279fe3e9d160471bbcae08ae091be93e
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075652"
 ---
 # <a name="search-apis-in-xamarinios"></a>API di ricerca in xamarin. IOS
 
@@ -59,7 +59,7 @@ Apple offre i seguenti suggerimenti per quanto riguarda il contenuto e le azioni
  - Punti di navigazione e le funzionalità all'interno dell'app.
  - Elementi quali nuovi messaggi, contenuto o altri tipi di elementi visualizzati dall'app che sono stati scaricati di recente nel dispositivo.
 
-## <a name="app-search-enhancements"></a>Miglioramenti della ricerca di App
+## <a name="app-search-enhancements"></a>Miglioramenti per la ricerca nelle app
 
 Core Spotlight in iOS 10 offre numerosi miglioramenti alla ricerca di App, ad esempio:
 

@@ -1,5 +1,5 @@
 ---
-title: Convertire Java inC#
+title: Convertire Java in C#
 description: Una terza opzione per usare Java in un'applicazione xamarin. Android è possibile trasferire il codice sorgente Java in C#.
 ms.prod: xamarin
 ms.assetid: 39E528BD-010F-47FC-BE48-8E7848E30454
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/05/2016
 ms.openlocfilehash: 9beb6d59c9376a404c06af7f0cd1efd985929843
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075144"
 ---
-# <a name="porting-java-to-c"></a>Convertire Java inC#
+# <a name="porting-java-to-c"></a>Convertire Java in C#
 
 _Una terza opzione per usare Java in un'applicazione xamarin. Android è possibile trasferire il codice sorgente Java in C#._
 

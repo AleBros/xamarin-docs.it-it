@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
 ms.openlocfilehash: c1e4a76a70dcac3414d384469f25bad7908ae77f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019948"
 ---
 # <a name="pixels-and-device-independent-units"></a>Pixel e unità di misura indipendenti dal dispositivo
 
@@ -55,7 +55,7 @@ public SurfaceSizePage()
 public void DrawText (String text, Single x, Single y, SKPaint paint)
 ```
 
-Si specifica la stringa di testo, le coordinate X e Y in cui il testo verrà avviato e un `SKPaint` oggetto. Specifica la coordinata X in cui è posizionato il lato sinistro del testo, ma le espressioni di controllo: la coordinata Y specifica la posizione del *baseline* del testo. Se hai mai scritto a mano su carta sottolineato, linea di base è la riga in cui sit di caratteri, e versioni precedenti discendono quali tratti discendenti (ad esempio quelli nelle lettere g, p, q e y).
+Si specifica la stringa di testo, le coordinate X e Y in cui il testo verrà avviato e un `SKPaint` oggetto. La coordinata X specifica in cui è posizionato il lato sinistro del testo, ma le espressioni di controllo: La coordinata Y specifica la posizione del *baseline* del testo. Se hai mai scritto a mano su carta sottolineato, linea di base è la riga in cui sit di caratteri, e versioni precedenti discendono quali tratti discendenti (ad esempio quelli nelle lettere g, p, q e y).
 
 Il `SKPaint` oggetto consente di specificare il colore del testo, la famiglia di caratteri e le dimensioni del testo. Per impostazione predefinita, il [ `TextSize` ](xref:SkiaSharp.SKPaint.TextSize) proprietà ha un valore pari a 12, con conseguente testo piccoli dispositivi ad alta risoluzione, come gli Smartphone. In qualsiasi valore tranne le applicazioni più semplice, è necessario inoltre alcune informazioni sulle dimensioni del testo che viene visualizzato. Il `SKPaint` classe definisce un [ `FontMetrics` ](xref:SkiaSharp.SKPaint.FontMetrics) proprietà e alcuni [ `MeasureText` ](xref:SkiaSharp.SKPaint.MeasureText(System.String)) metodi, ma per le esigenze meno elaborate, il [ `FontSpacing` ](xref:SkiaSharp.SKPaint.FontSpacing) proprietà fornisce un valore consigliato per le righe successive di spaziatura del testo.
 

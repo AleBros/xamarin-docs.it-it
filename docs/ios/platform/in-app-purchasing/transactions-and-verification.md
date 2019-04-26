@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 83f5fd233c004271169a4d00d0a65e70aa925b95
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61369108"
 ---
 # <a name="transactions-and-verification-in-xamarinios"></a>Le transazioni e la verifica in xamarin. IOS
 
@@ -111,7 +111,7 @@ I due esempi in questo documento usa `NSUserDefaults` per tenere traccia degli a
 
 Usando `NSUserDefaults` mantiene il codice di esempio semplice, ma non offre una soluzione molto sicura perché potrebbe essere tecnicamente si occupano di utenti possono aggiornare le impostazioni (ignorando il meccanismo di pagamento).   
    
-Nota: È consigliabile adottare un meccanismo protetto per l'archiviazione acquistati contenuto non soggette alla manomissione utente applicazioni reali. Questa operazione potrebbe comportare la crittografia e/o altre tecniche, inclusa l'autenticazione server remoto.   
+Nota: Applicazioni reali dovrebbero adottare un meccanismo protetto per l'archiviazione acquistati contenuto non soggette alla manomissione utente. Questa operazione potrebbe comportare la crittografia e/o altre tecniche, inclusa l'autenticazione server remoto.   
    
  Il meccanismo deve anche essere progettato per sfruttare le funzionalità di backup e ripristino incorporate di iOS, iTunes e iCloud. Ciò garantisce che dopo che un utente che ripristina un backup degli acquisti precedenti saranno immediatamente disponibili.   
    

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
 ms.openlocfilehash: a51a441aeacf265093b82ddb65237887b0a30719
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382454"
 ---
 # <a name="the-translate-transform"></a>Trasformazione di traslazione
 
@@ -136,7 +136,7 @@ Nel primo esempio consente di chiamare semplicemente `Translate` nuovamente, ma 
 
 Il secondo esempio viene chiamato [ `ResetMatrix` ](xref:SkiaSharp.SKCanvas.ResetMatrix). In questo modo tutte le trasformazioni tornare al relativo stato predefinito.
 
-Nel terzo esempio Salva lo stato del `SKCanvas` oggetto con una chiamata a [ `Save` ](xref:SkiaSharp.SKCanvas.Save) e quindi Ripristina lo stato con una chiamata a [ `Restore` ](xref:SkiaSharp.SKCanvas.Restore). Questo è il modo più versatile per manipolare le trasformazioni per una serie di operazioni di disegno. Questi `Save` e `Restore` funzionano come uno stack di chiamate: È possibile chiamare `Save` più volte e quindi chiamare `Restore` nell'invertire sequenza per tornare agli stati precedenti. Il `Save` metodo restituisce un valore integer, ed è possibile passare tale integer al [ `RestoreToCount` ](xref:SkiaSharp.SKCanvas.RestoreToCount*) per chiamare in modo efficace `Restore` più volte. Il [ `SaveCount` ](xref:SkiaSharp.SKCanvas.SaveCount) proprietà restituisce il numero di stati salvati attualmente nello stack.
+Nel terzo esempio Salva lo stato del `SKCanvas` oggetto con una chiamata a [ `Save` ](xref:SkiaSharp.SKCanvas.Save) e quindi Ripristina lo stato con una chiamata a [ `Restore` ](xref:SkiaSharp.SKCanvas.Restore). Questo è il modo più versatile per manipolare le trasformazioni per una serie di operazioni di disegno. Questi `Save` e `Restore` funzione come uno stack di chiamate: È possibile chiamare `Save` più volte e quindi chiamare `Restore` nell'invertire sequenza per tornare agli stati precedenti. Il `Save` metodo restituisce un valore integer, ed è possibile passare tale integer al [ `RestoreToCount` ](xref:SkiaSharp.SKCanvas.RestoreToCount*) per chiamare in modo efficace `Restore` più volte. Il [ `SaveCount` ](xref:SkiaSharp.SKCanvas.SaveCount) proprietà restituisce il numero di stati salvati attualmente nello stack.
 
 È anche possibile usare la [ `SKAutoCanvasRestore` ](xref:SkiaSharp.SKAutoCanvasRestore) classe per il ripristino dello stato dell'area di disegno. Il costruttore di questa classe è destinato a essere chiamato in un `using` istruzione; l'area di disegno automaticamente ripristinato lo stato in fondo il `using` blocco. 
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 4a391160f2102fd1f069a45eb7c16aec91dfd7e0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61428099"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Data binding e codifica di chiave-valore in xamarin. Mac
 

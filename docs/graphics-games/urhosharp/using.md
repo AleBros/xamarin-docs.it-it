@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 5e5c4f1545d39befde6574338ec4c1ca4037ad8b
-ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58507162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61352122"
 ---
 # <a name="using-urhosharp-to-build-a-3d-game"></a>Uso di UrhoSharp per creare un gioco 3D
 
@@ -23,7 +23,7 @@ Prima di scrivere il tuo primo gioco, si desidera acquisire familiarità con le 
 
 Il modello di scena può essere descritta come un grafico della scena in base al componente. La scena è costituito da una gerarchia di nodi della scena, a partire dal nodo radice, che rappresenta anche dell'intera scena. Ciascuna [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node/) dispone di una trasformazione 3D (posizione, scala e rotazione), un nome, un ID, oltre a un numero arbitrario di componenti.  Componenti di portare un nodo di ciclo di vita, rendono possibile aggiungere una rappresentazione visiva ([`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)), possono generare file audio ([`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource)), forniscono un limite di conflitto e così via.
 
-È possibile creare scene e nodi di programma di installazione tramite il [Urho Editor](#urhoeditor), oppure è possibile eseguire operazioni dal codice C#.  In questo documento verranno analizzati aspetti impostazione usando il codice, come illustrano gli elementi necessari per svolgere il proprio compaia sullo schermo
+È possibile creare scene e nodi di programma di installazione tramite il [Urho Editor](#urhoeditor), oppure è possibile eseguire operazioni dal codice c#.  In questo documento verranno analizzati aspetti impostazione usando il codice, come illustrano gli elementi necessari per svolgere il proprio compaia sullo schermo
 
 Oltre a configurare la scena, è necessario configurare un [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera/), questo è ciò che determina ciò che verrà ottenere visualizzato all'utente.
 
@@ -138,7 +138,7 @@ I nodi e i componenti possono essere esclusi dall'aggiornamento scena disabilita
 
 Il modo migliore per strutturare il gioco è per rendere il componente che incapsula un attore o un elemento nel tuo gioco.  In questo modo la funzionalità autonoma, dagli asset usati per visualizzarlo, il relativo comportamento.
 
-Il modo più semplice di aggiunta del comportamento a un componente è usare le azioni, di cui sono riportate le istruzioni che è possibile accodare e combinare che con la programmazione asincrona in C#.  Questo consente al comportamento per il componente sia di livello molto elevato e rende più semplice da capire cosa sta accadendo.
+Il modo più semplice di aggiunta del comportamento a un componente è usare le azioni, di cui sono riportate le istruzioni che è possibile accodare e combinare che con la programmazione asincrona in c#.  Questo consente al comportamento per il componente sia di livello molto elevato e rende più semplice da capire cosa sta accadendo.
 
 In alternativa, è possibile controllare esattamente cosa accade al componente aggiornando le proprietà del componente su ogni frame (descritto nella sezione comportamenti basati su Frame).
 
@@ -180,7 +180,7 @@ Se si desidera che entrambe le azioni da eseguire sul posto allo stesso tempo, �
 
 Nell'esempio precedente il cloud verrà spostata e dissolvenza nello stesso momento.
 
-Si noterà che si usa C# await, che consente di considerare il comportamento che si desidera ottenere in modo lineare.
+Si noterà che si usa c# await, che consente di considerare il comportamento che si desidera ottenere in modo lineare.
 
 ### <a name="basic-actions"></a>Azioni di base
 
@@ -215,7 +215,7 @@ Esistono molti modalità di interpolazione, il grafico seguente illustra i vari 
 ### <a name="using-actions-and-async-code"></a>Usando le azioni e il codice asincrono
 
 Nel [ `Component` ](https://developer.xamarin.com/api/type/Urho.Component/) sottoclasse, è consigliabile introdurre un metodo asincrono che prepara il comportamento del componente e indirizza la funzionalità per tale.
-Quindi è possibile chiamare questo metodo usando il linguaggio C# `await` parola chiave da un'altra parte del programma, entrambi i `Application.Start` (metodo) o in risposta a una storia utente o un punto all'interno dell'applicazione.
+Quindi è possibile chiamare questo metodo usando il linguaggio c# `await` parola chiave da un'altra parte del programma, entrambi i `Application.Start` (metodo) o in risposta a una storia utente o un punto all'interno dell'applicazione.
 
 Ad esempio:
 
@@ -376,7 +376,7 @@ using (var file = new File(Context, prefabPath, FileMode.Read))
 
 ## <a name="events"></a>Eventi
 
-UrhoObjects generano un numero di eventi, queste vengono rilevate come eventi C# nelle varie classi che generano.  Oltre a C#-modello basato su eventi, è anche possibile usare una di `SubscribeToXXX` metodi che ti permetterà di "subscribe" e mantenere un token di sottoscrizione che è possibile in un secondo momento usare per annullare la sottoscrizione.  La differenza è che il primo consentirà chiamanti molti per la sottoscrizione, mentre il secondo solo consente uno, ma lo stile di lambda coloro approccio da usare e consente ancora, la semplice rimozione della sottoscrizione.  Questi si escludono a vicenda.
+UrhoObjects generano un numero di eventi, queste vengono rilevate come eventi c# nelle varie classi che generano.  Oltre a c#-modello basato su eventi, è anche possibile usare una di `SubscribeToXXX` metodi che ti permetterà di "subscribe" e mantenere un token di sottoscrizione che è possibile in un secondo momento usare per annullare la sottoscrizione.  La differenza è che il primo consentirà chiamanti molti per la sottoscrizione, mentre il secondo solo consente uno, ma lo stile di lambda coloro approccio da usare e consente ancora, la semplice rimozione della sottoscrizione.  Questi si escludono a vicenda.
 
 Quando si sottoscrive un evento, è necessario fornire un metodo che accetta un argomento con gli argomenti dell'evento appropriato.
 
@@ -567,7 +567,7 @@ E questo è il risultato se si usa una trama del:
 UrhoSharp è una libreria a thread singola.  Ciò significa che è consigliabile evitare di richiamare i metodi di UrhoSharp da un thread in background, o si rischia di danneggiare lo stato dell'applicazione e probabilmente di arresto anomalo dell'applicazione.
 
 Se si desidera eseguire il codice in background e quindi aggiornare i componenti Urho nell'interfaccia utente principale, è possibile usare il [`Application.InvokeOnMain(Action)`](https://developer.xamarin.com/api/member/Urho.Application.InvokeOnMain)
-ProcessOnStatus.  Inoltre, è possibile usare await C# e .NET API per garantire che il codice venga eseguito sul thread appropriato di attività.
+ProcessOnStatus.  Inoltre, è possibile usare await c# e .NET API per garantire che il codice venga eseguito sul thread appropriato di attività.
 
 ## <a name="urhoeditor"></a>UrhoEditor
 

@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
 ms.openlocfilehash: 95227689303a8367785202956a6aaef921c1c593
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61085267"
 ---
 # <a name="performance-and-visual-effects-with-ccrendertexture"></a>Prestazioni e gli effetti visivi con CCRenderTexture
 
@@ -67,7 +67,7 @@ Nell'esempio viene codificato per esporre due problemi che possono verificarsi q
 
 ### <a name="card-draw-calls"></a>Chiamate di disegno di smart card
 
-Il codice è una semplificazione di ciò che potrebbero essere presenti in una procedura completa *gioco di carte da raccogliere* (CCG), ad esempio "Magic: la raccolta" o "Hearthstone". Il gioco solo consente di visualizzare tre schede in una sola volta e ha un numero ridotto di unità possibili (blu, verde e arancione). Al contrario, un gioco completo potrebbe essere schede oltre venti sullo schermo in un determinato momento e lettori potrebbero essere centinaia di schede a scegliere durante la creazione i ponti. Anche se il gioco non è attualmente soggetta a problemi di prestazioni, potrebbe essere un gioco completo con un'implementazione simile.
+Il codice è una semplificazione di ciò che potrebbero essere presenti in una procedura completa *gioco di carte da raccogliere* (CCG), ad esempio "Magic: La raccolta"o"Hearthstone". Il gioco solo consente di visualizzare tre schede in una sola volta e ha un numero ridotto di unità possibili (blu, verde e arancione). Al contrario, un gioco completo potrebbe essere schede oltre venti sullo schermo in un determinato momento e lettori potrebbero essere centinaia di schede a scegliere durante la creazione i ponti. Anche se il gioco non è attualmente soggetta a problemi di prestazioni, potrebbe essere un gioco completo con un'implementazione simile.
 
 CocosSharp fornisce alcuni approfondimenti sulle prestazioni di rendering esponendo le chiamate di disegno eseguite per fotogramma. Nostri `GameLayer.AddedToScene` metodo imposta la `GameView.Stats.Enabled` a `true`, ottenendo informazioni sulle prestazioni mostrate in basso a sinistra della schermata:
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
 ms.openlocfilehash: 5b1c9ff709022d6bcae51597a03fe2a71097cd2d
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61076671"
 ---
 # <a name="resource-dictionaries"></a>Dizionari risorse
 
@@ -149,7 +149,7 @@ Originale `PageBackgroundColor` e `NormalTextColor` sostituiscono le istanze, de
 
 Si noti tuttavia che la barra in background del [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) è ancora giallo, perché il [ `BarBackgroundColor` ](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) proprietà è impostata sul valore del `PageBackgroundColor` risorse definite nell'applicazione livello `ResourceDictionary`.
 
-Ecco un altro modo per pensare `ResourceDictionary` precedenza: quando XAML il parser rileva un `StaticResource`, la ricerca di una chiave corrispondente da passano la struttura ad albero visuale, usando la prima corrispondenza trovata. Se questa ricerca termina in corrispondenza della pagina e la chiave non è ancora stata trovata, Cerca il parser XAML il `ResourceDictionary` collegato al `App` oggetto. Se la chiave non viene trovata, viene generata un'eccezione.
+Ecco un altro modo per pensare `ResourceDictionary` precedenza: Quando il parser XAML rileva un `StaticResource`, la ricerca di una chiave corrispondente da passano la struttura ad albero visuale, usando la prima corrispondenza trovata. Se questa ricerca termina in corrispondenza della pagina e la chiave non è ancora stata trovata, Cerca il parser XAML il `ResourceDictionary` collegato al `App` oggetto. Se la chiave non viene trovata, viene generata un'eccezione.
 
 ## <a name="stand-alone-resource-dictionaries"></a>Dizionari risorse autonome
 
@@ -195,7 +195,7 @@ Ciò `ResourceDictionary` contiene una sola risorsa, ovvero un oggetto di tipo `
 
 Un'istanza di `MyResourceDictionary` è impostato sul `Resources` proprietà del `ContentPage` oggetto.
 
-Tuttavia, questo approccio presenta alcune limitazioni: il `Resources` proprietà del `ContentPage` fa riferimento a questo un solo `ResourceDictionary`. Nella maggior parte dei casi, si desidera che la possibilità di includere altri `ResourceDictionary` istanze e forse altre risorse oltre.
+Questo approccio presenta tuttavia alcune limitazioni: Il `Resources` proprietà del `ContentPage` fa riferimento a questo sola `ResourceDictionary`. Nella maggior parte dei casi, si desidera che la possibilità di includere altri `ResourceDictionary` istanze e forse altre risorse oltre.
 
 Questa attività richiede dizionari risorse uniti.
 

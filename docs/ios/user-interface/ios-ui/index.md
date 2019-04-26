@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
 ms.openlocfilehash: efb88ada8a4b4c36dd49de137eb64acd63552968
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382336"
 ---
 # <a name="user-interfaces-in-ios"></a>Interfacce utente in iOS
 
@@ -26,7 +26,7 @@ I gruppi di Apple relative parti di funzionalità in "Framework", che equivalgon
 
 ## <a name="layout-optionsiosuser-interfaceios-uilayout-optionsmd"></a>[Opzioni di layout](~/ios/user-interface/ios-ui/layout-options.md)
 
-Esistono due diversi meccanismi per controllare il layout quando una visualizzazione viene ridimensionata o ruotata: ridimensionamento automatico e il layout automatico.
+Esistono due diversi meccanismi per controllare il layout quando una visualizzazione viene ridimensionata o ruotata: Ridimensionamento automatico e il layout automatico.
 
 ## <a name="providing-haptic-feedbackiosuser-interfaceios-uihaptic-feedbackmd"></a>[Implementazione del feedback aptico](~/ios/user-interface/ios-ui/haptic-feedback.md)
 

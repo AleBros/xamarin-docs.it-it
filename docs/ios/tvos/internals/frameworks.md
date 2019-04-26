@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
 ms.openlocfilehash: 85067d1dc95ee63cf905e81fba7afc973f7ec37e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61395268"
 ---
 # <a name="supported-and-unsupported-frameworks-in-tvos"></a>Framework supportati e non supportati in tvOS
 
@@ -29,7 +29,7 @@ Questo è un elenco dei Framework fornito da Apple per l'uso nelle App xamarin. 
 * AVKit
 * CFNetwork
 * CloudKit
-* Corebluetooth per comunicare
+* CoreBluetooth
 * CoreData
 * CoreFoundation
 * CoreGraphics
@@ -73,7 +73,7 @@ Questo è un elenco dei Framework fornito da Apple per l'uso nelle App xamarin. 
 Di seguito è riportato un elenco dei Framework supportati da iOS 9, ma sono state rimosse dal supporto per tvOS 9 di Apple e di conseguenza, non è possibile usare nelle App xamarin. tvos:
 
 * Account
-* Rubrica
+* AddressBook
 * AddressBookUI
 * AssetsLibrary
 * Contatti
@@ -84,7 +84,7 @@ Di seguito è riportato un elenco dei Framework supportati da iOS 9, ma sono sta
 * CoreTelephony
 * EventKit
 * EventKitUI
-* Accessori esterni
+* ExternalAccessory
 * GSS
 * HealthKit
 * HomeKit
@@ -103,7 +103,7 @@ Di seguito è riportato un elenco dei Framework supportati da iOS 9, ma sono sta
 * QuickLook
 * ReplayKit
 * SafariServices
-* Social networking
+* Sociale
 * Twitter
 * VideoToolbox
 * WatchConnectivity

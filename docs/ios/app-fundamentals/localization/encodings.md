@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
 ms.openlocfilehash: db24c8677b0a3099193132575e92bc43a4c31dea
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61251021"
 ---
 # <a name="internationalization-encodings-in-xamarinios"></a>Codifiche di internazionalizzazione in xamarin. IOS
 
@@ -29,10 +29,10 @@ Questa operazione viene eseguita selezionando le codifiche aggiuntive nel riquad
 È possibile selezionare uno dei seguenti:
 
 -  CJK: per Chineese, giapponese e coreano
--  mideast: arabo, ebraico, turco e Latin5.
--  altri: alfabeto cirillico, Baltico, vietnamita, Ukrainian e Thai
--  rari: EBCDIC codifiche e altre tabelle codici rari
--  occidentale: linguaggi latini, lingue dell'Europa occidentale e Pasqua
+-  mideast: Arabo, ebraico, turco e Latin5.
+-  Altro: Cirillico, Baltico, vietnamita, Ukrainian e Thai
+-  rara: Codifiche EBCDIC e altre tabelle codici rari
+-  ovest: Lingue latine, Pasqua e lingue dell'Europa occidentale
 -  tutti
 
 

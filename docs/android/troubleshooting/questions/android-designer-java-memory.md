@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
 ms.openlocfilehash: 9c564789f704180e9acc9f96dcba5e7d6eb20634
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60946738"
 ---
 # <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Modifica dei parametri di memoria Java per Android Designer
 
@@ -24,11 +24,11 @@ A partire da Xamarin Studio 5.7.2.7 (e versioni successive, Visual Studio per Ma
 
 I nomi delle proprietà seguenti corrispondono a java indicato [opzione della riga di comando](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html)
 
-- **AndroidDesignerJavaRendererMinMemory** Xms -
+- **AndroidDesignerJavaRendererMinMemory** -Xms
 
-- **AndroidDesignerJavaRendererMaxMemory** - Xmx
+- **AndroidDesignerJavaRendererMaxMemory** -Xmx
 
-- **AndroidDesignerJavaRendererPermSize** - XX: MaxPermSize
+- **AndroidDesignerJavaRendererPermSize** -XX:MaxPermSize
 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)

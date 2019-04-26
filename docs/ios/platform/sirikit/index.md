@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 9f7cbb3f7d9e448947ec8163a8660616910e750f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61423462"
 ---
 # <a name="sirikit-in-xamarinios"></a>SiriKit in xamarin. IOS
 
@@ -45,7 +45,7 @@ Questo articolo illustra i passaggi necessari per implementare il supporto di Si
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio ElizaChat](https://developer.xamarin.com/samples/monotouch/ios10/ElizaChat/)
+- [ElizaChat Sample](https://developer.xamarin.com/samples/monotouch/ios10/ElizaChat/)
 - [Guida per programmatori di SiriKit](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
 - [Riferimento a Framework Intent](https://developer.apple.com/reference/intents)
 - [Riferimento a Framework dell'interfaccia utente Intent](https://developer.apple.com/reference/intentsui)

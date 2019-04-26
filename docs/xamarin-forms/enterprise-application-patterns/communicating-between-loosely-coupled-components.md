@@ -1,5 +1,5 @@
 ---
-title: Comunicazioni tra componenti poco accoppiati
+title: Comunicazioni tra componenti ad accoppiamento debole
 description: "Questo capitolo viene illustrato il modo in cui l'app per dispositivi mobili di eShopOnContainers implementa la pubblicazione-sottoscrizione modello, che consente la comunicazione basata su messaggi tra i componenti che sono poco pratici di collegamento dai riferimenti oggetto e il tipo "
 ms.prod: xamarin
 ms.assetid: 1194af33-8a91-48d2-88b5-b84d77f2ce69
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: ddc33d28aad4e00c9259893c0f8e7a1ab40ee429
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61381875"
 ---
-# <a name="communicating-between-loosely-coupled-components"></a>Comunicazioni tra componenti poco accoppiati
+# <a name="communicating-between-loosely-coupled-components"></a>Comunicazioni tra componenti ad accoppiamento debole
 
 La pubblicazione-sottoscrizione pattern è un modello di messaggistica in cui i server di pubblicazione inviano messaggi senza che sia a conoscenza di eventuali destinatari, noto come sottoscrittori. Allo stesso modo, i sottoscrittori in ascolto di messaggi specifici, senza che sia a conoscenza di alcun server di pubblicazione.
 
@@ -28,7 +28,7 @@ Il [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) classe fornisce fun
 
 ![](communicating-between-loosely-coupled-components-images/messagingcenter.png "Funzionalità di pubblicazione-sottoscrizione multicast")
 
-**Figura 4-1:** funzionalità di pubblicazione-sottoscrizione Multicast
+**Figura 4-1:** Funzionalità di pubblicazione-sottoscrizione multicast
 
 I server di pubblicazione inviano messaggi usando la [ `MessagingCenter.Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) (metodo), mentre i sottoscrittori in ascolto dei messaggi utilizzando la [ `MessagingCenter.Subscribe` ](xref:Xamarin.Forms.MessagingCenter.Subscribe*) (metodo). Inoltre, i sottoscrittori possono anche annullare la sottoscrizione dalle sottoscrizioni di messaggio, se necessario, con la [ `MessagingCenter.Unsubscribe` ](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) (metodo).
 
@@ -55,16 +55,16 @@ Per altre informazioni sulle [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingC
 [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) i messaggi sono stringhe che vengono usate per identificare i messaggi. Esempio di codice seguente mostra i messaggi definiti all'interno dell'app per dispositivi mobili di eShopOnContainers:
 
 ```csharp
-public class MessengerKeys  
+public class MessengerKeys  
 {  
-    // Add product to basket  
-    public const string AddProduct = "AddProduct";  
+    // Add product to basket  
+    public const string AddProduct = "AddProduct";  
 
-    // Filter  
-    public const string Filter = "Filter";  
+    // Filter  
+    public const string Filter = "Filter";  
 
-    // Change selected Tab programmatically  
-    public const string ChangeTab = "ChangeTab";  
+    // Change selected Tab programmatically  
+    public const string ChangeTab = "ChangeTab";  
 }
 ```
 
@@ -75,7 +75,7 @@ In questo esempio, i messaggi vengono definiti usando le costanti. Il vantaggio 
 I server di pubblicazione notificare ai sottoscrittori di un messaggio con uno dei [ `MessagingCenter.Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) overload. L'esempio di codice seguente illustra la pubblicazione di `AddProduct` messaggio:
 
 ```csharp
-MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
+MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
 ```
 
 In questo esempio, il [ `Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) metodo specifica tre argomenti:
@@ -94,12 +94,12 @@ Il [ `Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) metodo verrà pubblicato
 I sottoscrittori possono registrarsi per ricevere un messaggio utilizzando uno dei [ `MessagingCenter.Subscribe` ](xref:Xamarin.Forms.MessagingCenter.Subscribe*) overload. Esempio di codice seguente viene illustrato come l'app per dispositivi mobili di eShopOnContainers sottoscrive e processi, il `AddProduct` messaggio:
 
 ```csharp
-MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
-    this, MessageKeys.AddProduct, async (sender, arg) =>  
+MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
+    this, MessageKeys.AddProduct, async (sender, arg) =>  
 {  
-    BadgeCount++;  
+    BadgeCount++;  
 
-    await AddCatalogItemAsync(arg);  
+    await AddCatalogItemAsync(arg);  
 });
 ```
 
@@ -115,7 +115,7 @@ Un sottoscrittore potrebbe non essere necessario gestire tutte le istanze di un 
 I sottoscrittori possono annullare la sottoscrizione che non vuoi più ricevere messaggi. Questo risultato viene ottenuto con uno dei [ `MessagingCenter.Unsubscribe` ](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) esegue l'overload, come illustrato nell'esempio di codice seguente:
 
 ```csharp
-MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys.AddProduct);
+MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys.AddProduct);
 ```
 
 In questo esempio, il [ `Unsubscribe` ](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) la sintassi del metodo riflette gli argomenti di tipo specificati per la sottoscrizione per ricevere il `AddProduct` messaggio.

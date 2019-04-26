@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
 ms.openlocfilehash: 9e76558597928bafa25f6a217c6f0055657e4c22
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61401596"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Creazione e disegno nella bitmap di SkiaSharp
 
@@ -121,7 +121,7 @@ L'aspetto dello sfondo azzurro rivela che la bitmap è trasparente ad eccezione 
 
 La visualizzazione delle **Hello Bitmap** pagina dimostra che la mappa di bit del programma creato è trasparente, ad eccezione di testo di colore nero. Ecco perché viene visualizzato il colore azzurro dell'area di visualizzazione attraverso.
 
-La documentazione del `Clear` metodi di `SKCanvas` descritte tali con l'istruzione: "Sostituisce tutti i pixel nella raccolta corrente di area di disegno". L'uso della parola "sostituisce" rivela una caratteristica importante di questi metodi: tutti i metodi di disegno `SKCanvas` aggiunte all'area di visualizzazione esistente. Il `Clear` metodi _sostituire_ ciò che è già presente.
+La documentazione del `Clear` metodi di `SKCanvas` descritte tali con l'istruzione: "Sostituisce tutti i pixel nella raccolta corrente di area di disegno". L'uso della parola "sostituisce" rivela una caratteristica importante di questi metodi: Tutti i metodi di disegno `SKCanvas` aggiunte all'area di visualizzazione esistente. Il `Clear` metodi _sostituire_ ciò che è già presente.
 
 `Clear` è disponibile in due diverse versioni: 
 
@@ -131,7 +131,7 @@ La documentazione del `Clear` metodi di `SKCanvas` descritte tali con l'istruzio
 
 La chiamata `Clear` senza argomenti in una nuova bitmap Inizializza l'intera bitmap da completamente trasparente. Qualsiasi elemento successivamente disegnare sulla bitmap in genere è opaco o parzialmente opaco.
 
-Ecco alcune informazioni per provare: nel **Hello Bitmap** pagina, sostituire il `Clear` applicato al metodo il `bitmapCanvas` con questo:
+Ecco alcune informazioni per provare: Nel **Hello Bitmap** pagina, sostituire il `Clear` applicato al metodo il `bitmapCanvas` con questo:
 
 ```csharp
 bitmapCanvas.Clear(new SKColor(255, 0, 0, 128));

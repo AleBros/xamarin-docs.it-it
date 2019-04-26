@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
 ms.openlocfilehash: cd7c8484827a038bbcf11180296547ea6fedf929
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61411272"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>L'accesso ai bit di pixel bitmap SkiaSharp
 
@@ -20,7 +20,7 @@ ms.locfileid: "53059204"
 
 Come illustrato nell'articolo [ **SkiaSharp salvataggio di bitmap per i file**](saving.md), generalmente le bitmap vengono archiviate nei file in un formato compresso, come JPEG o PNG. Contrariamente, una bitmap di SkiaSharp archiviata nella memoria non viene compresso. Sono archiviati come una serie sequenziale di pixel. Questo formato non compresso facilita il trasferimento delle bitmap a una superficie di visualizzazione.
 
-Il blocco di memoria occupato da una bitmap di SkiaSharp è organizzato in modo molto semplice: inizia con la prima riga del pixel, da sinistra a destra e continua quindi con la seconda riga. Per le bitmap a colori, ogni pixel costituita da quattro byte, il che significa che lo spazio di memoria totale necessario per la bitmap è quattro volte il prodotto di larghezza e altezza.
+Il blocco di memoria occupato da una bitmap di SkiaSharp è organizzato in modo molto semplice: Inizia con la prima riga del pixel, da sinistra a destra e continua quindi con la seconda riga. Per le bitmap a colori, ogni pixel costituita da quattro byte, il che significa che lo spazio di memoria totale necessario per la bitmap è quattro volte il prodotto di larghezza e altezza.
 
 Questo articolo descrive come un'applicazione può ottenere l'accesso a tali pixel, direttamente tramite l'accesso a blocco di memoria della bitmap in pixel, o indirettamente. In alcuni casi, potrebbe essere necessario un programma analizzare i pixel di un'immagine e creare un istogramma di qualche tipo. Più comunemente, le applicazioni possono costruire immagini univoche creando modo algoritmico i pixel che compongono la bitmap:
 
@@ -280,7 +280,7 @@ SKBitmap FillBitmapUintPtrColor(out string description, out int milliseconds)
 }
 ```
 
-La domanda sola si tratta: È il formato di numero intero del `SKColor` valore nell'ordine del `SKColorType.Rgba8888` colore, tipo o il `SKColorType.Bgra8888` colore tipo, o si tratta di un altro elemento interamente? La risposta alla domanda dovrà essere rivelata al più presto.
+La domanda sola è il seguente: Rappresenta il formato di numero intero del `SKColor` valore nell'ordine del `SKColorType.Rgba8888` colore, tipo o il `SKColorType.Bgra8888` colore tipo, o si tratta di un altro elemento interamente? La risposta alla domanda dovrà essere rivelata al più presto.
 
 ### <a name="the-setpixels-method"></a>Metodo SetPixels
 
@@ -294,7 +294,7 @@ bitmap.SetPixels(intPtr);
 
 Inizialmente, può sembrare come se `SetPixels` ti offre non sono più potenza e prestazioni rispetto a `GetPixels` pur essendo meno utile. Con `GetPixels` è ottenere il blocco di memoria della bitmap e accedervi. Con `SetPixels` è possibile allocare e accedere a parte della memoria e quindi impostare questo valore come il blocco di memoria della bitmap.
 
-Ma tramite `SetPixels` offre un notevole vantaggio sintattico: consente di accedere ai bit di pixel della bitmap utilizzando una matrice. Ecco il metodo `GradientBitmapPage` che illustra questa tecnica. Prima di tutto, il metodo definisce una matrice di byte multidimensionale corrispondenti ai byte di pixel della bitmap. La prima dimensione è la riga, la seconda dimensione è la colonna e corrisponde la terza dimensione a quattro componenti di ogni pixel:
+Ma tramite `SetPixels` offre un vantaggio sintattico distinto: Consente di accedere ai bit di pixel della bitmap utilizzando una matrice. Ecco il metodo `GradientBitmapPage` che illustra questa tecnica. Prima di tutto, il metodo definisce una matrice di byte multidimensionale corrispondenti ai byte di pixel della bitmap. La prima dimensione è la riga, la seconda dimensione è la colonna e corrisponde la terza dimensione a quattro componenti di ogni pixel:
 
 ```csharp
 SKBitmap FillBitmapByteBuffer(out string description, out int milliseconds)
@@ -499,7 +499,7 @@ Ecco una tabella che consolida i tempi di esecuzione in millisecondi:
 
 Come previsto, la chiamata `SetPixel` volte 65.536 è il modo effeicient minimi per impostare i pixel della bitmap. La compilazione un' `SKColor` matrice e impostando il `Pixels` proprietà è molto meglio e persino Confronta agevolmente con alcune del `GetPixels` e `SetPixels` tecniche. Lavora `uint` valori di pixel è veloce rispetto all'impostazione separato `byte` componenti e la conversione il `SKColor` valore intero senza segno aggiunge overhead per il processo.
 
-È interessante confrontare le sfumature diverse: le prime righe di ogni piattaforma sono uguali e mostrare la sfumatura nel modo previsto. Ciò significa che il `SetPixel` metodo e `Pixels` proprietà creare correttamente pixel da colori indipendentemente dal formato pixel sottostante.
+È inoltre interessante confrontare le sfumature diverse: Le prime righe di ogni piattaforma sono uguali e mostrano la sfumatura nel modo previsto. Ciò significa che il `SetPixel` metodo e `Pixels` proprietà creare correttamente pixel da colori indipendentemente dal formato pixel sottostante.
 
 Le due righe successive di iOS e Android schermate sono anche gli stessi, a conferma del fatto che il piccolo `MakePixel` per il valore predefinito è correttamente definito metodo `Rgba8888` formato pixel per queste piattaforme.
 

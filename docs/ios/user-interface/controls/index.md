@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 25b17dbebebf7bcae92ebdc294c798101d39b987
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d5b7d4a372704079343a357c1d341a5260fcf583
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157416"
 ---
 # <a name="user-interface-controls-in-xamarinios"></a>Controlli dell'interfaccia utente in xamarin. IOS
 
@@ -54,13 +54,13 @@ Un utente specifico caso per controlli di selezione per impostare la data e / o 
 
 ## <a name="progress-and-activity-indicatorsprogress-activity-indicatormd"></a>[Indicatori di stato e attività](progress-activity-indicator.md)
 
-iOS offre due modi principali per indicare lo stato di avanzamento nell'app: gli indicatori di attività (tra cui una determinata _rete_ indicatore dell'attività) e le barre di avanzamento.
+iOS offre due modi principali per indicare lo stato di avanzamento nell'app: Gli indicatori di attività (tra cui una determinata _rete_ indicatore dell'attività) e le barre di avanzamento.
 
 ## <a name="search-barssearchbarmd"></a>[Le barre di ricerca](searchbar.md)
 
 Il UISearchBar viene utilizzato per eseguire ricerche in un elenco di valori. 
 
-## <a name="sliders-steppers-and-segmented-controlsslider-switch-segmented-controlsmd"></a>[I dispositivi di scorrimento, i gestori di istruzioni e controlli segmentati](slider-switch-segmented-controls.md)
+## <a name="sliders-switches-and-segmented-controlsslider-switch-segmented-controlsmd"></a>[Dispositivi di scorrimento, interruttori e controlli segmentati](slider-switch-segmented-controls.md)
 
 Controllo dispositivo di scorrimento consente la semplice selezione di un valore numerico in un intervallo. iOS Usa il `UISwitch` come input un valore booleano che può essere rappresentato da un pulsante di opzione in altre piattaforme. Un controllo Segmented è un modo organizzato per consentire agli utenti di interagire con un numero ridotto di opzioni.
 

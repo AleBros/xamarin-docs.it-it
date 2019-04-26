@@ -1,5 +1,5 @@
 ---
-title: Margini e spaziatura interna
+title: Margine e spaziatura interna
 description: I margini e spaziatura proprietà controllare il comportamento di layout quando viene eseguito il rendering di un elemento nell'interfaccia utente. Questo articolo illustra la differenza tra le due proprietà e come impostarli.
 ms.prod: xamarin
 ms.assetid: BEB096BB-51DF-410F-B0F1-D235287B0F4A
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
 ms.openlocfilehash: 595e673c59d23a45cbaf923a0d58faff2000c296
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61370941"
 ---
-# <a name="margin-and-padding"></a>Margini e spaziatura interna
+# <a name="margin-and-padding"></a>Margine e spaziatura interna
 
 _I margini e spaziatura proprietà controllare il comportamento di layout quando viene eseguito il rendering di un elemento nell'interfaccia utente. Questo articolo illustra la differenza tra le due proprietà e come impostarli._
 
@@ -72,6 +72,6 @@ Questo articolo sono state illustrate la differenza tra il [ `Margin` ](xref:Xam
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Margine](xref:Xamarin.Forms.View.Margin)
-- [Spaziatura interna](xref:Xamarin.Forms.Layout.Padding)
+- [Margin](xref:Xamarin.Forms.View.Margin)
+- [Padding](xref:Xamarin.Forms.Layout.Padding)
 - [Spessore](xref:Xamarin.Forms.Thickness)

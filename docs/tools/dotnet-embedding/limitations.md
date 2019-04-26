@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 7a162d632c98b4e412fa1b7b0c0c40ac945ff09f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60945782"
 ---
 # <a name="net-embedding-limitations"></a>Limitazioni di incorporamento di .NET
 
@@ -23,7 +23,7 @@ Questo documento vengono illustrati i limiti di incorporamento, .NET e, se possi
 
 Non è possibile avere due runtime di Mono condiviso esistente all'interno della stessa applicazione. Ciò significa che non è possibile usare due diverse librerie di .NET incorporamento generati all'interno della stessa applicazione.
 
-**Soluzione alternativa:** è possibile usare il generatore per creare una singola raccolta che include diversi assembly (da progetti diversi).
+**Soluzione alternativa:** È possibile utilizzare il generatore per creare una singola raccolta che include diversi assembly (da progetti diversi).
 
 ### <a name="subclassing"></a>Creazione di una sottoclasse
 

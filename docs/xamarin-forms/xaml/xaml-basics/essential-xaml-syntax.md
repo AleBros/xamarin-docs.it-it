@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: 75d3c628a513b81af9dea7308ca49c2b490c4aff
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61407642"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintassi XAML essenziale
 
@@ -143,7 +143,7 @@ Tuttavia, la sintassi dell'elemento di proprietà diventa essenziale quando il v
 </Label>
 ```
 
-Un altro esempio: la `Grid` ha due proprietà denominate `RowDefinitions` e `ColumnDefinitions`. Queste due proprietà sono di tipo `RowDefinitionCollection` e `ColumnDefinitionCollection`, che sono raccolte di `RowDefinition` e `ColumnDefinition` oggetti. È necessario utilizzare la sintassi degli elementi di proprietà per impostare queste raccolte.
+Un altro esempio: Il `Grid` ha due proprietà denominate `RowDefinitions` e `ColumnDefinitions`. Queste due proprietà sono di tipo `RowDefinitionCollection` e `ColumnDefinitionCollection`, che sono raccolte di `RowDefinition` e `ColumnDefinition` oggetti. È necessario utilizzare la sintassi degli elementi di proprietà per impostare queste raccolte.
 
 In questo caso è l'inizio del file XAML per un `GridDemoPage` (classe), che mostra i tag di elemento di proprietà per il `RowDefinitions` e `ColumnDefinitions` raccolte:
 
@@ -351,7 +351,7 @@ Negli esempi precedenti, il `StackLayout`, `Grid`, e `AbsoluteLayout` gli oggett
 </ContentPage>
 ```
 
-La domanda reale è: perché sono questi elementi property *non* obbligatorio nel file XAML?
+La domanda reale è: Perché sono questi elementi property *non* obbligatorio nel file XAML?
 
 Gli elementi definiti in xamarin. Forms per l'utilizzo in XAML possono avere una proprietà contrassegnata nella `ContentProperty` attributo della classe. Se cerca di `ContentPage` classe nella documentazione online di xamarin. Forms, si noterà questo attributo:
 

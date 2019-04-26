@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/05/2018
 ms.openlocfilehash: b59fd7c1a9e5f528878b90e1a76fabe5a79bab81
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60946823"
 ---
 # <a name="embedded-frameworks-in-xamarinios"></a>Framework incorporati in xamarin. IOS
 
@@ -71,7 +71,7 @@ Le app senza estensioni del collegamento continuerà con il runtime di Mono in m
 Questo comportamento può essere ignorato dallo sviluppatore dell'app, aggiungendo il codice seguente come argomento aggiuntivi di mtouch nelle opzioni di compilazione iOS del progetto:
 
 - `--mono:static`: Collega in modo statico con il runtime di Mono.
-- `--mono:framework`: Il collegamento con il runtime di Mono come framework.
+- `--mono:framework`: Collegamenti con il runtime di Mono come framework.
 
 Uno scenario per il collegamento con il runtime di Mono come framework anche per le app senza le estensioni è quello di ridurre le dimensioni dei file eseguibili, per ovviare a eventuali limiti di dimensioni che Apple applica sul file eseguibile. Per riferimento, il runtime di Mono aggiunge circa 1.7MB per ogni architettura (esempio di xamarin. IOS 8.12, tuttavia his varia tra le versioni e anche tra le App). Il framework Mono aggiunge circa 2.3MB per ogni architettura, che significa che per un'applicazione single-architettura senza alcuna estensione, rendendo il collegamento di app con il runtime di Mono risultante come un framework di compattare il file eseguibile da ~1.7MB, ma aggiungere un framework ~2.3MB, in ~0.6MB più grande tutte app.
 

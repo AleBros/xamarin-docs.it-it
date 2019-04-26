@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 835dccaea79467582f56fd4b8b6b3b8f42acd632
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61392356"
 ---
 # <a name="updating-a-xamarinios-app-in-the-background"></a>L'aggiornamento di un'App xamarin. IOS in Background
 
@@ -162,4 +162,4 @@ Tuttavia, APNs consentirà le notifiche silent "occuparsi" insieme a una normale
 
 In questa sezione, abbiamo affrontato le varie opzioni per l'aggiornamento del contenuto in background per eseguire le attività che non rientrano in una categoria in background necessarie. A questo punto, esaminiamo alcune di queste API in azione.
 
- [Passaggio successivo: Parte 4 - procedure dettagliate di elaborazione in background in iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+ [Successivo: Parte 4 - procedure dettagliate di elaborazione in background in iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: 3ea05563ecbca95d26d692d5424c30e961229ac5
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61021212"
 ---
 # <a name="skiasharp-blend-modes"></a>Modalità di blend in SkiaSharp
 
@@ -46,13 +46,13 @@ I membri del 29 il `SKBlendMode` enumerazione può essere suddivisi in tre categ
 
 I nomi di queste tre categorie richiederà più significato nelle discussioni che seguono. L'ordine dei membri sono elencati di seguito è la stessa definizione del `SKBlendMode` enumerazione. I membri dell'13 enumerazione nella prima colonna sono i valori interi da 0 a 12. La seconda colonna sono membri di enumerazione che corrispondono ai numeri interi 13 per 24 e i membri nella terza colonna hanno valori pari a 25 al 28.
 
-Questi blend modalità sono illustrate nella _circa_ stesso ordine nel W3C **la composizione e fusione 1 livello** documento, ma esistono alcune differenze: il `Src` modalità è detta _Copia_ nel documento W3C, e `Plus` viene chiamato _più chiaro_. Definisce il documento W3C una _normale_ fusione che non è incluso nella `SKBlendModes` sarebbe uguale `SrcOver`. Il `Modulate` fusione (nella parte superiore della prima colonna) non è incluso nel documento W3C e discussione del `Multiply` modalità precede `Screen`.
+Questi blend modalità sono illustrate nella _circa_ stesso ordine nel W3C **la composizione e fusione 1 livello** documento, ma esistono alcune differenze: Il `Src` modalità è detta _copia_ nel documento W3C, e `Plus` viene chiamato _più chiaro_. Definisce il documento W3C una _normale_ fusione che non è incluso nella `SKBlendModes` sarebbe uguale `SrcOver`. Il `Modulate` fusione (nella parte superiore della prima colonna) non è incluso nel documento W3C e discussione del `Multiply` modalità precede `Screen`.
 
 Poiché il `Modulate` modalità blend è univoca per Skia, verrà illustrata una modalità Porter Duff aggiuntive e come modalità separabili.
 
 ## <a name="the-importance-of-transparency"></a>L'importanza della trasparenza
 
-In passato, la composizione è stata sviluppata in combinazione con il concetto del _canale alfa_. In una visualizzazione della superficie di attacco, ad esempio il `SKCanvas` oggetto e una bitmap a colori, ogni pixel contenuto costituito da 4 byte: 1 byte, ciascuno per i componenti rossi, verdi e blu e un byte aggiuntivo per la trasparenza. Questo componente alfa è 0 per una completa trasparenza e 0xFF dell'opacità completo, con diversi livelli di trasparenza tra tali valori.
+In passato, la composizione è stata sviluppata in combinazione con il concetto del _canale alfa_. In una visualizzazione della superficie di attacco, ad esempio il `SKCanvas` oggetto e una bitmap a colori, ogni pixel è costituito da 4 byte: 1 byte ciascuno per i componenti rossi, verdi e blu e un byte aggiuntivo per la trasparenza. Questo componente alfa è 0 per una completa trasparenza e 0xFF dell'opacità completo, con diversi livelli di trasparenza tra tali valori.
 
 Molte delle modalità blend si basano sulla trasparenza. In genere, quando un `SKCanvas` viene prima ottenuto una `PaintSurface` gestore, oppure quando un `SKCanvas` viene creato per disegnare in una bitmap, il primo passaggio consiste questa chiamata:
 

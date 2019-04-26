@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: bf135755f64e4d17db2c187d58572c525dfee559
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61420880"
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>È possibile aggiungere file a o rimuovere i file da un file IPA dopo la compilazione in Visual Studio?
 
@@ -46,7 +46,7 @@ Questo esempio presuppone che il nome del progetto xamarin. IOS sia `iPhoneApp1`
 
 9.  Eliminare i file desiderati dal `.ipa`. È possibile spostarli nel Cestino mediante il Finder oppure eliminarle nella riga di comando tramite `Terminal.app`. Per visualizzare il contenuto del `Payload/iPhone` file in Finder, tenendo premuto CTRL e selezionare **Mostra contenuti pacchetto**.
 
-10.  Usando lo stesso approccio generale come indicato nel passaggio 3, individuare il file di log nella `~/Library/Logs/Xamarin/MonoTouchVS/` che contiene sia il nome del progetto e il `generated session id` nel nome: ![](modify-ipa-images/build-log.png "individuare il log di compilazione progetto in Finder")
+10.  Usando lo stesso approccio generale come indicato nel passaggio 3, individuare il file di log nella `~/Library/Logs/Xamarin/MonoTouchVS/` che contiene sia il nome del progetto e il `generated session id` nel nome: ![](modify-ipa-images/build-log.png "Individuare il log di compilazione progetto in Finder")
 
 11.  Aprire il log di compilazione nel passaggio 10, ad esempio facendovi doppio clic.
 
@@ -88,4 +88,4 @@ file missing: /Users/macuser/Library/Caches/Xamarin/mtbs/builds/iPhoneApp1/cc530
 
 E il processo di verifica App Store segnalerà un messaggio di errore simile:
 
-> Errore ITMS-90035: "firma non valida. Una risorsa sealed è mancante o non valido. Il file binario nel percorso [iPhoneApp1.app/iPhoneApp1] contiene una firma non valida. Assicurarsi di che aver effettuato l'accesso all'applicazione con un certificato di distribuzione, non un certificato ad hoc o un certificato di sviluppo. Verificare che le impostazioni di firma codice in Xcode siano corrette a livello di destinazione (che esegue l'override di tutti i valori a livello di progetto). Inoltre, assicurarsi che il bundle di cui che si sta caricando è stato creato usando una destinazione di rilascio in Xcode, non una destinazione simulatore. Se si è certi che le impostazioni di firma codice siano corrette, scegliere "Pulisci tutto" in Xcode, eliminare la directory "build" nel Finder e ricompilare la destinazione di rilascio. Per altre informazioni, consultare [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"
+> ERROR ITMS-90035: "Firma non valida. Una risorsa sealed è mancante o non valido. Il file binario nel percorso [iPhoneApp1.app/iPhoneApp1] contiene una firma non valida. Assicurarsi di che aver effettuato l'accesso all'applicazione con un certificato di distribuzione, non un certificato ad hoc o un certificato di sviluppo. Verificare che le impostazioni di firma codice in Xcode siano corrette a livello di destinazione (che esegue l'override di tutti i valori a livello di progetto). Inoltre, assicurarsi che il bundle di cui che si sta caricando è stato creato usando una destinazione di rilascio in Xcode, non una destinazione simulatore. Se si è certi che le impostazioni di firma codice siano corrette, scegliere "Pulisci tutto" in Xcode, eliminare la directory "build" nel Finder e ricompilare la destinazione di rilascio. Per altre informazioni, consultare [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"

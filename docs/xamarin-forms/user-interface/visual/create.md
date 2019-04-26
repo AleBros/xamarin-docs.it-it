@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
 ms.openlocfilehash: a11c2045fa6119d0689834c35794bc8913c80bd6
-ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58506967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61023729"
 ---
 # <a name="create-a-xamarinforms-visual-renderer"></a>Creare un renderer oggetti visivi di xamarin. Forms
 

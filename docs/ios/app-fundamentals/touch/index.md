@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 01/23/2017
 ms.openlocfilehash: 5aabc3a3c2ffbcffc0e12379989f7eb43b03a902
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61399291"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>La gestione tocco nelle App xamarin. IOS
 
@@ -29,7 +29,7 @@ Tuttavia, esistono casi è necessario usare l'elaborazione di basso livello touc
 ## <a name="sections"></a>Sezioni
 
 -  [Tocco in iOS](touch-in-ios.md)
--  [Procedura dettagliata: uso del tocco in iOS](ios-touch-walkthrough.md)
+-  [Procedura dettagliata: Uso del tocco in iOS](ios-touch-walkthrough.md)
 -  [Rilevamento del multitouch](touch-tracking.md)
 
 Questa guida serve come introduzione a tocco in iOS. Per altre informazioni sull'uso 3D Touch e del Feedback Aptico in iOS, che sono stati introdotti in iOS 9 e 10 rispettivamente, vedere le guide seguenti specifiche:

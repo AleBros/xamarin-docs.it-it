@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
 ms.openlocfilehash: 4f8b6b7ea0db8d46886c3391f1aef3ba20a5be44
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61086057"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Ritaglio con tracciati e aree
 
@@ -24,7 +24,7 @@ In alcuni casi è necessario limitare il rendering della grafica per una determi
 
 ![](clipping-images/clippingsample.png "Monkey tramite un microchirurgia")
 
-Il *area di ritaglio* è l'area dello schermo in cui viene eseguito il rendering di grafica. Tutto ciò che viene visualizzato all'esterno dell'area di ritaglio non viene eseguito il rendering. L'area di ritaglio viene in genere definito da un rettangolo o un' [ `SKPath` ](xref:SkiaSharp.SKPath) oggetto, ma in alternativa possibile definire un'area di ritaglio utilizzando un' [ `SKRegion` ](xref:SkiaSharp.SKRegion) oggetto. Questi due tipi di oggetti con sembrino correlati poiché è possibile creare un'area da un percorso. Tuttavia, non è possibile creare un percorso da un'area e sono molto diversi internamente: un percorso include una serie di linee e curve, mentre una regione è definita da una serie di linee orizzontali analisi.
+Il *area di ritaglio* è l'area dello schermo in cui viene eseguito il rendering di grafica. Tutto ciò che viene visualizzato all'esterno dell'area di ritaglio non viene eseguito il rendering. L'area di ritaglio viene in genere definito da un rettangolo o un' [ `SKPath` ](xref:SkiaSharp.SKPath) oggetto, ma in alternativa possibile definire un'area di ritaglio utilizzando un' [ `SKRegion` ](xref:SkiaSharp.SKRegion) oggetto. Questi due tipi di oggetti con sembrino correlati poiché è possibile creare un'area da un percorso. Tuttavia, non è possibile creare un percorso da un'area e internamente sono molto diversi: Un percorso è costituito da una serie di linee e curve, mentre una regione è definita da una serie di linee orizzontali analisi.
 
 L'immagine precedente è stato creato per il **Monkey tramite microchirurgia** pagina. Il [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) classe definisce un percorso usando i dati SVG e utilizza il costruttore per caricare una bitmap da risorse del programma:
 
@@ -366,7 +366,7 @@ Per comprendere la logica alla base di questa differenza, è utile comprendere q
 
 Questo processo viene semplificato notevolmente se ogni percorso è ridotto a una serie di linee orizzontali analisi, ad esempio quelli nel vecchio vuoto tube TV. Ogni linea di digitalizzazione è semplicemente una riga orizzontale con un punto di partenza e un punto finale. Ad esempio, è possibile scomporre un cerchio con raggio pari a 10 pixel in 20 scansione orizzontale le righe, ognuna delle quali inizia la parte sinistra del cerchio e termina in corrispondenza la parte destra. La combinazione di due cerchi con operazioni area diventa estremamente semplice perché è sufficiente esaminare le coordinate di inizio e fine di ogni coppia corrispondente di linee di digitalizzazione.
 
-Questo è ciò che è un'area: una serie di linee di scansione orizzontali che definiscono un'area.
+Questo è ciò che è un'area: Una serie di linee di scansione orizzontali che definiscono un'area.
 
 Tuttavia, quando un'area viene ridotta a una serie di analisi le righe, queste analisi le righe sono basate su una dimensione particolare pixel. In teoria, l'area non è un oggetto di grafica vettoriale. È più da vicino natura in una bitmap monocromatica compressa rispetto a un percorso. Di conseguenza, le aree non possono essere scalate o ruotate senza perdere in fedeltà e per questo motivo che non vengono trasformate quando viene utilizzato per le aree di ritaglio.
 

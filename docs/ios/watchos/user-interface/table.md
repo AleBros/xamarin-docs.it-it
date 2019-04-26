@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: cd5e7299874bbfb1b652315a549b9d067d58e9a0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60881343"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>i controlli di tabella in Xamarin watchOS
 
@@ -160,7 +160,7 @@ Come [illustrata da Apple](https://developer.apple.com/reference/watchkit/wkinte
 
 <a name="add_row_controller" />
 
-## <a name="appendix-row-controller-code-example"></a>Appendice: Esempio di codice Controller riga
+## <a name="appendix-row-controller-code-example"></a>Appendice: Esempio di codice di Controller di riga
 
 L'IDE creerà due file di codice automaticamente quando viene creato un controller di riga nella finestra di progettazione. Il codice in questi file generati è illustrato di seguito per riferimento.
 

@@ -1,5 +1,5 @@
 ---
-title: Come si automatizza un progetto di Test Android NUnit?
+title: Come si può automatizzare un progetto di test Android NUnit?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: EA3CFCC4-2D2E-49D6-A26C-8C0706ACA045
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2018
 ms.openlocfilehash: b785ef171d2cb00d4f8f5a17f37d49de17fd3da9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61153295"
 ---
-# <a name="how-do-i-automate-an-android-nunit-test-project"></a>Come si automatizza un progetto di Test Android NUnit?
+# <a name="how-do-i-automate-an-android-nunit-test-project"></a>Come si può automatizzare un progetto di test Android NUnit?
 
 > [!NOTE]
 > Questa guida illustra come automatizzare un progetto di test Android NUnit non a un progetto xamarin. UITest. Sono disponibili le guide di xamarin. UITest [qui](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).

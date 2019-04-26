@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: baceb59116dd907918b34eca4f44293051190954
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61155569"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Estensioni dell'App messaggi avanzate in xamarin. IOS
 
@@ -181,7 +181,7 @@ Dopo aver aggiunto il nuovo contenuto del campo di Input, l'utente è in grado d
 
 Un'estensione dell'App messaggi può essere visualizzata in una delle due modalità di visualizzazione diverse:
 
-[![](advanced-message-app-extensions-images/interactive08.png "Un'estensione dell'App messaggi visualizzati in due modalità di visualizzazione diverse: Compact & espansa")](advanced-message-app-extensions-images/interactive08.png#lightbox)
+[![](advanced-message-app-extensions-images/interactive08.png "Un'estensione dell'App messaggi visualizzati in due modalità di visualizzazione diverse: Compact & espanso")](advanced-message-app-extensions-images/interactive08.png#lightbox)
 
 - **Compact** -si tratta della modalità predefinita in cui l'estensione dell'App messaggi occupa il 25% nella parte inferiore della visualizzazione messaggio. In modalità ridotta, l'app non ha accesso alla tastiera, scorrimento orizzontale o i riconoscitori di movimento scorrimento rapido. Le app hanno accesso al campo di Input e le chiamate a `InsertMessage` verrà immediatamente visualizzata all'utente non esiste.
 - **Espanso** -l'estensione per App i messaggi riempie l'intera visualizzazione messaggio. Non ha accesso al campo di Input, ma hanno accesso alla tastiera, scorrimento orizzontale e i riconoscitori di movimento scorrimento rapido.

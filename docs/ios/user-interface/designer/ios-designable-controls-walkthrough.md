@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 98504c9d5f210d55a2be4c85c52d4bc1418fc223
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58070826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61154426"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>Uso di controlli personalizzati con iOS Designer
 
@@ -28,7 +28,7 @@ Questa guida presuppone una familiarità con il contenuto illustrato nel [Guida 
 > Il modo in cui vengono creati i controlli personalizzati a partire da xamarin Studio 5.5, è leggermente diverso rispetto a versioni precedenti. Per creare un controllo personalizzato, ovvero il `IComponent` interfaccia è necessaria (con i metodi di implementazione associata) o la classe può essere annotata con `[DesignTimeVisible(true)]`. Il secondo metodo è utilizzato nell'esempio seguente questa procedura dettagliata.
 
 
-1. Creare una nuova soluzione dal **iOS > App > Single View Application > C#** modello, denominarlo `ScratchTicket`e continuare tramite la procedura guidata nuovo progetto:
+1. Creare una nuova soluzione dal **iOS > App > Single View Application > c#** modello, denominarlo `ScratchTicket`e continuare tramite la procedura guidata nuovo progetto:
 
     [![](ios-designable-controls-walkthrough-images/01new.png "Creare una nuova soluzione")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
 

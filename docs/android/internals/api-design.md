@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: e762a286069d5ef1db90f3c45808eee0a7a04a7f
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60954285"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Principi di progettazione di API xamarin. Android
 
@@ -37,7 +37,7 @@ Questi sono alcuni dei nostri principi di progettazione per l'associazione di xa
 
 -  Chiamare il costruttore base alla catena.
 
--  L'override dei metodi deve essere eseguita con override sistema #.
+-  L'override dei metodi devono essere eseguite con C#di eseguire l'override del sistema.
 
 -  Attività comuni di linguaggio facili e disco rigida attività Java rendono possibile.
 

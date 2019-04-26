@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
 ms.openlocfilehash: 7ac9ec458f16357ef50e23c459a9b0e1f79bdd97
-ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61349035"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>Rotazioni 3D in SkiaSharp
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 9adf514e4fc510617e3f4d801569935ee4a03f25
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61093793"
 ---
 # <a name="web-views-in-xamarinios"></a>Visualizzazioni Web in xamarin. IOS
 
@@ -119,7 +119,7 @@ Lo spostamento di utenti da app a Safari generalmente deve sempre essere evitato
 
 miglioramenti di iOS 9 consentono all'utente di tornare facilmente all'App tramite un pulsante Indietro che viene fornito nell'angolo superiore sinistro della pagina di Safari.
 
-## <a name="app-transport-security"></a>Sicurezza del trasporto di App
+## <a name="app-transport-security"></a>ATS (App Transport Security)
 
 Sicurezza del trasporto App, oppure *ATS* è stato introdotto in iOS 9 per verificare che tutte le comunicazioni internet siano conformi per le procedure consigliate di connessione sicura da Apple.
 

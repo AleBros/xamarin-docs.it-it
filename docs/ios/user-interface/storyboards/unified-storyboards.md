@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: 26aeaa3d230a5c104014edd899b8d9231ced31e9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61430216"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Storyboard unificati in xamarin. IOS
 
@@ -91,10 +91,10 @@ Tutti gli stati precedenti vengono incapsulati in un contenitore che Apple fa ri
 
 Gli ambienti dei tratti sono una nuova interfaccia in iOS 8 e in grado di restituire una raccolta dei tratti per gli oggetti seguenti:
 
--  Le schermate ( `UIScreens` ).
+-  Screens ( `UIScreens` ).
 -  Windows ( `UIWindows` ).
 -  Visualizzare i controller ( `UIViewController` ).
--  Viste ( `UIView` ).
+-  Views ( `UIView` ).
 -  Controller di presentazione ( `UIPresentationController` ).
 
 
@@ -114,18 +114,18 @@ Questa sezione illustra i tipi tipici delle raccolte di tratto l'esperienza uten
 
 Di seguito è una raccolta di tratto tipico che lo sviluppatore potrebbe essere visualizzato in un iPhone:
 
-|Proprietà|Valore|
+|Proprietà|Value|
 |--- |--- |
 |`HorizontalSizeClass`|Compact|
 |`VerticalSizeClass`|Regular|
-|`UserInterfaceIdom`|Telefono|
+|`UserInterfaceIdom`|Phone|
 |`DisplayScale`|2.0|
 
 Il set precedente rappresenterebbe una completamente qualificato tratto di raccolta, purché dispongano di valori per tutte le relative proprietà dei tratti.
 
 È anche possibile disporre di una raccolta dei tratti che mancano alcuni dei relativi valori (che Apple fa riferimento a come *Unspecified*):
 
-|Proprietà|Valore|
+|Proprietà|Value|
 |--- |--- |
 |`HorizontalSizeClass`|Compact|
 |`VerticalSizeClass`|Non specificato|
@@ -625,7 +625,7 @@ Vedere la sezione di classe di dimensioni di questo articolo per altre informazi
 
 ### <a name="adaptive-segue-types"></a>Tipi di elemento Segue adattivo
 
-Se lo sviluppatore ha utilizzato gli storyboard prima, quindi saranno familiarità con i tipi di elemento segue esistente di **Push**, **modale** e **Popover**. Quando le classi di dimensioni sono abilitate in un file Storyboard unificati, adattivo Segue le seguenti (che corrispondono alla nuova API di Controller di visualizzazione indicato in precedenza) vengono resi disponibili: **mostrare** e **Mostra dettaglio** .
+Se lo sviluppatore ha utilizzato gli storyboard prima, quindi saranno familiarità con i tipi di elemento segue esistente di **Push**, **modale** e **Popover**. Quando le classi di dimensioni sono abilitate in un file Storyboard unificati, adattivo Segue le seguenti (che corrispondono alla nuova API di Controller di visualizzazione indicato in precedenza) vengono resi disponibili: **Mostrare** e **Mostra dettaglio**.
 
 > [!IMPORTANT]
 > Quando sono abilitate le classi di dimensioni, tutte le classi esistenti gli elementi segue verranno essere convertiti nei tipi di nuovo.

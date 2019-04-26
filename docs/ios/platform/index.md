@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
 ms.openlocfilehash: fff6620732ffcaccd13dde7ae31ab03a5106da16
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "37066429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61364413"
 ---
 # <a name="ios-platform-features"></a>funzionalità della piattaforma iOS
 
@@ -102,7 +102,7 @@ Nuovo ai dispositivi iOS 10, un'estensione dell'App messaggi si integra con il *
 
 ## <a name="multitasking-for-ipadiosplatformmultitaskingmd"></a>[Multitasking per iPad](~/ios/platform/multitasking.md)
 
-Aggiunge il supporto di multitasking per l'esecuzione di due App nello stesso momento su iPad specifiche hardware per iOS 9. Multitasking per iPad è supportato tramite le funzionalità seguenti: far scorrere su, doppia visualizzazione & immagine nell'immagine.
+Aggiunge il supporto di multitasking per l'esecuzione di due App nello stesso momento su iPad specifiche hardware per iOS 9. Multitasking per iPad è supportato tramite le funzionalità seguenti: Diapositiva di failover, la doppia visualizzazione e Picture in Picture.
 
 ## <a name="passkitiosplatformpasskitmd"></a>[PassKit](~/ios/platform/passkit.md)
 

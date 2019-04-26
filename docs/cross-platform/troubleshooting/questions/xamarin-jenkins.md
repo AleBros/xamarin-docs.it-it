@@ -8,11 +8,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 06/05/2018
 ms.openlocfilehash: c2e409b796d5ef2525079e02aafdd0c6e8db5d81
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61158936"
 ---
 # <a name="why-isnt-jenkins-supported-by-microsoft"></a>Perché Jenkins non è supportato da Microsoft?
 
@@ -32,7 +32,7 @@ Anche se come indicato in precedenza direttamente dal nostro team; non sono supp
 
 Il messaggio di errore per risolvere questo problema è simile al seguente:
 
-> Errore XA5205: la Directory SDK Android non è stata trovata. Impostare tramite /p:AndroidSdkDirectory
+> Errore XA5205: La Directory Android SDK non trovata. Impostare tramite /p:AndroidSdkDirectory
 
 Le opzioni per l'impostazione di percorso del SDK possono variare a seconda del plug-in Jenkins Android esatta in uso; un buon punto di ricerca per informazioni su come impostare questo valore è nella Guida di plug-in. Ad esempio; il [plug-in dell'emulatore Android](https://wiki.jenkins-ci.org/display/JENKINS/Android+Emulator+Plugin#AndroidEmulatorPlugin-Systemconfiguration) cerca automaticamente il SDK, ma se non la trova; il percorso può essere impostato anche tramite la pagina di configurazione di sistema di Jenkins per tale plug-in. 
 
@@ -47,7 +47,7 @@ Le opzioni per l'impostazione di percorso del SDK possono variare a seconda del 
 ### <a name="jenkins-reports-an-invalid-xamarin-license"></a>Jenkins segnala una licenza di Xamarin non valida
 I messaggi di errore per risolvere questo problema sono in genere simile a
 
-> Errore XA9008: compilazione dalla riga di comando richiede una licenza business
+> Errore XA9008: Compilazione dalla riga di comando richiede una licenza business
 
 oppure
 

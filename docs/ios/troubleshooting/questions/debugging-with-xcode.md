@@ -8,11 +8,11 @@ author: migueldeicaza
 ms.author: miguel
 ms.date: 02/22/2018
 ms.openlocfilehash: e0127d4b24236d350e5fa967110316544c320d0f
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61422477"
 ---
 # <a name="debugging-xamarinios-apps-with-xcode"></a>Debug di App xamarin. IOS con Xcode
 
@@ -26,7 +26,7 @@ Se non è presente alcun supporto predefinito per il debug di Xcode in Visual St
    
     - È possibile trovare l'identificatore del bundle del progetto xamarin. IOS, aprire il **Info. plist** file:
 
-        ![Modifica file Info. plist](debugging-with-xcode-images/vsmac-infoplist.png "modifica Info.list")
+        ![Editing Info.plist](debugging-with-xcode-images/vsmac-infoplist.png "Editing Info.list")
 
     - In Xcode, impostare l'identificatore del bundle quando si crea il progetto oppure selezionando la destinazione del progetto:
 

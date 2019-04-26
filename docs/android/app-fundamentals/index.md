@@ -1,5 +1,5 @@
 ---
-title: Nozioni fondamentali dell'applicazione xamarin. Android
+title: Xamarin.Android Application Fundamentals
 description: Concetti di base dell'applicazione
 ms.prod: xamarin
 ms.assetid: 935B8BFE-23B7-4239-5C87-F4A503B889CB
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 1d3bd071eeffb77f94a1b5f35f1df59f2d8c7a8a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61022198"
 ---
-# <a name="xamarinandroid-application-fundamentals"></a>Nozioni fondamentali dell'applicazione xamarin. Android
+# <a name="xamarinandroid-application-fundamentals"></a>Xamarin.Android Application Fundamentals
 
 In questa sezione fornisce una Guida su alcune delle più comuni attività di cose o concetti che gli sviluppatori devono tenere presenti quando si sviluppano applicazioni Android.
 
@@ -77,7 +77,7 @@ Questo articolo descrive come gestire le modifiche apportate orientamento di dis
 
 
 
-##  <a name="android-audioandroidapp-fundamentalsandroid-audiomd"></a>[Audio Android](~/android/app-fundamentals/android-audio.md)
+##  <a name="android-audioandroidapp-fundamentalsandroid-audiomd"></a>[Android Audio](~/android/app-fundamentals/android-audio.md)
 
 Il sistema operativo Android offre ampio supporto per funzionalità multimediali, che comprende sia audio e video. Questa guida è incentrata sul audio in Android e la riproduzione e la registrazione tramite il lettore audio predefinito e le classi di registrazione, nonché l'API di basso livello audio dell'audio. Utilizzo degli eventi Audio broadcast da altre applicazioni, vengono inoltre descritti in modo che gli sviluppatori possono compilare applicazioni ben progettate.
 

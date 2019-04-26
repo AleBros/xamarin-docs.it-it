@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: f24be635afcba181efcab85d81a984d93dae4bc8
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58071112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61429087"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in xamarin. IOS
 
@@ -20,7 +20,7 @@ In questa Guida verrà spiegato quali uno Storyboard è ed esaminare alcuni dei 
 
 Prima che il formato di file Storyboard è stato introdotto da Apple come una rappresentazione visiva dell'interfaccia utente di un'applicazione iOS, gli sviluppatori creati i file XIB per ogni controller di visualizzazione e programmate manualmente la navigazione tra ogni visualizzazione.  Utilizzare uno Storyboard consente allo sviluppatore di definire i controller di visualizzazione e la navigazione tra di essi in un'area di progettazione e offre funzionalità di modifica WYSIWYG dell'interfaccia utente dell'applicazione.
 
-Uno Storyboard può essere creato, aperti e modificato con Xamarin iOS Designer. Questa Guida che è possibile ottenere questa procedura dettagliata come usare la finestra di progettazione per creare storyboard quando si usa C# per la navigazione del programma.
+Uno Storyboard può essere creato, aperti e modificato con Xamarin iOS Designer. Questa Guida che è possibile ottenere questa procedura dettagliata come usare la finestra di progettazione per creare storyboard quando si usa c# per la navigazione del programma.
 
 
 ## <a name="requirements"></a>Requisiti
@@ -249,7 +249,7 @@ public MainViewController (IntPtr handle) : base (handle)
 ```
 
 
-Quando si crea uno Storyboard usando la finestra di progettazione, l'IDE aggiungerà automaticamente il [[registrare]](xref:Foundation.RegisterAttribute) attributo all'inizio del `designer.cs` classe e passare un identificatore di stringa, che è identico all'ID di Storyboard specificato di passaggio precedente. Il codice C# verranno collegati alla scena rilevante nello Storyboard.
+Quando si crea uno Storyboard usando la finestra di progettazione, l'IDE aggiungerà automaticamente il [[registrare]](xref:Foundation.RegisterAttribute) attributo all'inizio del `designer.cs` classe e passare un identificatore di stringa, che è identico all'ID di Storyboard specificato di passaggio precedente. Il codice c# verranno collegati alla scena rilevante nello Storyboard.
 
 A un certo punto si potrebbe voler aggiungere una classe esistente che è stata **non** creata nella finestra di progettazione. In questo caso, si potrebbe registrare questa classe come di consueto:
 

@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
 ms.openlocfilehash: 35efb00a721062ad3217300f7e3a5430b1bd1560
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61357752"
 ---
 # <a name="deploy-checkboxes-disabled-in-configuration-manager"></a>Caselle di controllo Distribuisci disabilitate in Configuration Manager
 
@@ -23,4 +23,4 @@ Per questo motivo, il **Distribuisci** caselle di controllo vengono disabilitate
 
 Questa modifica consente di eliminare un errore che può essere presenti nelle versioni precedenti di Xamarin (versione 3.3 e versioni precedenti) quando il progetto di app xamarin. IOS non è stato impostato per la distribuzione:
 
-![](deploy-checkboxes-images/error.png "Finestra di dialogo di errore: iPhoneApp1 il progetto deve essere distribuita prima di poter essere avviato. Verificare che il progetto sia selezionato per la distribuzione in Gestione configurazione di soluzione.")
+![](deploy-checkboxes-images/error.png "Finestra di dialogo di errore: IPhoneApp1 il progetto deve essere distribuita prima di poter essere avviato. Verificare che il progetto sia selezionato per la distribuzione in Gestione configurazione di soluzione.")

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 98a770d05014e0498b805ed9ffa0c84314efc765
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61374997"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Uso di controlli segmentati tvOS in Xamarin
 
@@ -42,7 +42,7 @@ Uso delle immagini di semplice, riconoscibile per le icone di segmento, ad esemp
 
 Apple rende i suggerimenti seguenti per l'utilizzo del segmento di testo:
 
-- **Usare breve, i sostantivi significativo** -titolo il segmento indicherà chiaramente il tipo di contenuto che l'utente dovrebbe aspettarsi quando si seleziona il segmento specificato. Ad esempio: musica o video.
+- **Usare breve, i sostantivi significativo** -titolo il segmento indicherà chiaramente il tipo di contenuto che l'utente dovrebbe aspettarsi quando si seleziona il segmento specificato. Ad esempio: Musica o video.
 - **Uso di maiuscole/minuscole di tutte le iniziali maiuscole** -tutte le parole del titolo segmenti devono essere in maiuscolo, ad eccezione degli articoli, congiunzioni e preposizioni di meno di quattro (4) caratteri.
 - **Usare breve, con stato attivo titoli** -mantenere i titoli brevi e con lo stato attivo del tipo di contenuto previsto quando è selezionato il segmento.
 

@@ -7,18 +7,18 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/28/2018
 ms.openlocfilehash: e60892edfcf73f3e7cada8923e16bcc1be2c203e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60876929"
 ---
 # <a name="getting-started-with-android"></a>Introduzione ad Android
 
 Oltre ai requisiti dei [Introduzione a Java](~/tools/dotnet-embedding/get-started/java/index.md) Guida è inoltre necessario:
 
 * [Xamarin. Android 7.5](https://visualstudio.microsoft.com/xamarin/) o versione successiva
-* [Android Studio 3.x](https://developer.android.com/studio/index.html) con Java 1.8
+* [Android Studio 3.x](https://developer.android.com/studio/index.html) with Java 1.8
 
 Come una panoramica, si apprenderà come:
 

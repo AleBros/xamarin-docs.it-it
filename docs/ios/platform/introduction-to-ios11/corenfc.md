@@ -1,5 +1,5 @@
 ---
-title: Core NFC in xamarin. IOS
+title: Core NFC in Xamarin.iOS
 description: Questo documento descrive come leggere in prossimità di tag di comunicazione di campo in xamarin. IOS usando le API introdotte in iOS 11.
 ms.prod: xamarin
 ms.technology: xamarin-ios
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/25/2017
 ms.openlocfilehash: 6888f7147796d3c00752d10387c19d0d9f269cad
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61170839"
 ---
-# <a name="core-nfc-in-xamarinios"></a>Core NFC in xamarin. IOS
+# <a name="core-nfc-in-xamarinios"></a>Core NFC in Xamarin.iOS
 
 _Tag di lettura quasi Field Communication (NFC) con iOS 11_
 

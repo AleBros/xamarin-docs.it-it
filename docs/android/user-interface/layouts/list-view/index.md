@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: a30256722647bbea482970d0c4a751954810d99e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61170800"
 ---
 # <a name="listview"></a>ListView
 
@@ -228,7 +228,7 @@ Questo set di argomenti introdotta `ListView` e forniti alcuni esempi di come us
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [AccessoryViews (esempio)](https://developer.xamarin.com/samples/AccessoryViews/)
-- [BasicTableAndroid (esempio)](https://developer.xamarin.com/samples/BasicTableAndroid/)
+- [BasicTableAndroid (sample)](https://developer.xamarin.com/samples/BasicTableAndroid/)
 - [BasicTableAdapter (esempio)](https://developer.xamarin.com/samples/BasicTableAdapter/)
 - [BuiltInViews (esempio)](https://developer.xamarin.com/samples/BuiltInViews/)
 - [CustomRowView (esempio)](https://developer.xamarin.com/samples/CustomRowView/)
