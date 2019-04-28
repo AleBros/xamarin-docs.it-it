@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: f8fae79af654339b54a8df0d2ea32eef38f34adb
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61425220"
 ---
 # <a name="xamarinios-9--troubleshooting"></a>Xamarin. IOS 9-risoluzione dei problemi
 
@@ -159,7 +159,7 @@ Per risolvere questo problema, effettuare le operazioni seguenti:
 6. Fare clic su di **visualizzare i dettagli...**  , quindi scegliere il **Scarica tutto** pulsante: 
 
     [![](troubleshooting-images/untrusted06.png "Scarica tutti i profili")](troubleshooting-images/untrusted06.png#lightbox)
-7. Al termine dell'aggiornamento nell'elenco, fare clic sui **pulsante** e chiudere la finestra Preferenze.
+7. Al termine dell'aggiornamento nell'elenco, fare clic sui **Done** pulsante e chiudere la finestra Preferenze.
 8. Rimuovere la versione esistente dell'app xamarin. IOS che si stava tentando di test dal dispositivo iOS.
 9. Tornare a Visual Studio per Mac, eseguire una compilazione pulita e provare a eseguire nuovamente l'app nel dispositivo.
 

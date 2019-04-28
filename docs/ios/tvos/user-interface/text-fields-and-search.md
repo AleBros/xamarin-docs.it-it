@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: f1085044f2147bec0910a87f8a6174c4648ef9b8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61162431"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Utilizzo di tvOS campi Text e ricerca in Xamarin
 
@@ -59,7 +59,7 @@ Ogni volta che l'utente fa clic su un campo di testo nell'interfaccia utente, li
 
 [![](text-fields-and-search-images/keyboard01.png "La tastiera remoti per Siri")](text-fields-and-search-images/keyboard01.png#lightbox)
 
-Se è presente più di un campo di testo nella visualizzazione corrente, un **successivo** pulsante verrà visualizzato automaticamente per rendere l'utente per il campo di testo successivo. Oggetto pulsante verrà visualizzato per l'ultimo campo di testo che terminerà l'immissione di testo e restituire l'utente alla schermata precedente **.** 
+Se è presente più di un campo di testo nella visualizzazione corrente, un **successivo** pulsante verrà visualizzato automaticamente per rendere l'utente per il campo di testo successivo. Oggetto **Done** pulsante verrà visualizzato per l'ultimo campo di testo che terminerà l'immissione di testo e restituire l'utente alla schermata precedente. 
 
 In qualsiasi momento, l'utente è possibile anche premere il **Menu** pulsante nell'elemento remoto di Siri per terminare l'immissione di testo e restituire nuovamente alla schermata precedente.
 

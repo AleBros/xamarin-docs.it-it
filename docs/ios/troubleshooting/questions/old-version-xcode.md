@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: chamons
 ms.author: chhamo
 ms.date: 04/16/2019
-ms.openlocfilehash: 2a208d39454a33adc849bcccc66802361693e82e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 7cbc14e0a912fe9c55ff672796e839a8dcdfd9b5
+ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61419315"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64347111"
 ---
 # <a name="can-i-use-an-older-version-of-xcode-or-xamarinios"></a>È possibile usare una versione precedente di Xcode o xamarin. IOS?
 
@@ -53,7 +53,7 @@ Aggiornamento di Xcode e xamarin. IOS non è possibile, almeno per un determinat
 In generale, xamarin. IOS supporta versioni precedenti di Xcode, ogni volta che è ragionevolmente possibile. Alcuni potenziali sfide da affrontare includono:
 
 - Di xamarin. IOS più recenti potrebbero supportare alcune funzionalità e le API presentano in Xcode selezionato. 
-- Il **registrar statici** richiede i file di intestazioni di Xcode per creare applicazioni, causando [ `MT0091` ](~/ios/troubleshooting/mtouch-errors.md#MT0091) oppure [ `MT4109` ](~/ios/troubleshooting/mtouch-errors.md#MT4109)' errori se non sono disponibili le API.
+- Il **registrar statici** richiede i file di intestazioni di Xcode per creare applicazioni, causando [ `MT0091` ](~/ios/troubleshooting/mtouch-errors.md#MT0091) oppure [ `MT4109` ](~/ios/troubleshooting/mtouch-errors.md#MT4109) errori se non sono disponibili le API.
   - Nella maggior parte dei casi l'abilitazione del linker gestito aiuterà (rimuovendo le associazioni gestite per la nuova API) se non utilizzato.
 - Le compilazioni Bitcode (per tvOS e watchOS) possono non riuscire per l'App Store submission a meno che non viene utilizzata una toolchain di Xcode 9.0 +.
 

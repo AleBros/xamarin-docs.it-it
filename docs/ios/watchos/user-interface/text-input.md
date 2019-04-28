@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 2092b12254008936f2c5b6a7d9dd610ff751e802
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61207434"
 ---
 # <a name="working-with-watchos-text-input-in-xamarin"></a>Utilizzo di watchOS Input di testo in Xamarin
 
@@ -100,7 +100,7 @@ Quando l'utente sta parlando, la schermata di espressioni di controllo viene vis
 
 ![](text-input-images/dictation.png "Quando l'utente sta parlando, la schermata di espressioni di controllo viene visualizzato il testo viene riconosciuto")
 
-Una volta premono il verrà restituito il testo del pulsante **.**
+Una volta premono il **Done** verrà restituito il testo del pulsante.
 
 
 
