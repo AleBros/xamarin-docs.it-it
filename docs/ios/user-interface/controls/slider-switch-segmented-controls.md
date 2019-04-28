@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 2ed14752cc5906b68d277b4f492875f7e281b053
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61029982"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>I dispositivi di scorrimento, commutatori e controlli segmentati in xamarin. IOS
 
@@ -50,7 +50,7 @@ Il dispositivo di scorrimento personalizzato è simile alla seguente:
  [![](slider-switch-segmented-controls-images/image27a.png "Dispositivo di scorrimento personalizzato")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
-> Attualmente non è disponibile un' [bug](https://stackoverflow.com/a/19496179) causando il `ThumbTint` per non eseguire il rendering in fase di esecuzione come previsto. È possibile aggiungere la seguente riga di codice **prima di** il codice precedente come soluzione alternativa. [Origine](https://stackoverflow.com/a/21396794)]:
+> Attualmente non è disponibile un' [bug](https://stackoverflow.com/a/19496179) causando il `ThumbTint` per non eseguire il rendering in fase di esecuzione come previsto. È possibile aggiungere la seguente riga di codice **prima di** il codice precedente come soluzione alternativa. [[Origine](https://stackoverflow.com/a/21396794)]:
 >
 > `slider1.SetThumbImage(UIImage.FromBundle("thumb.png"),UIControlState.Normal);`
 > 
