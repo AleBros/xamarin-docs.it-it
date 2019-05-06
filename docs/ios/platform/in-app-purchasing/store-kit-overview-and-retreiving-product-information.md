@@ -248,7 +248,7 @@ Un `SKProductsRequest` potrebbero restituire anche un elenco di ID prodotto non 
    
  **Prodotto non è stato approvato** : durante il test, tutti i prodotti che non sono selezionati per la vendita devono essere restituiti da un `SKProductsRequest`; ma nell'ambiente di produzione vengono restituiti solo i prodotti approvato.   
    
- **ID App non è esplicito** – Wildcard App IDs (con un asterisco (*) non consentono acquisti in-app.   
+ **ID App non è esplicito** – Wildcard App IDs (con un asterisco non consentono acquisti in-app.   
    
  **Il profilo di provisioning corretto** : se si apportano modifiche alla configurazione dell'applicazione nel portale di provisioning (ad esempio l'abilitazione di acquisti in-app), ricordare di generare di nuovo e utilizzare il profilo di provisioning corretto quando si compila l'app.   
    
