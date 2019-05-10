@@ -6,12 +6,12 @@ ms.assetid: 1ACB0935-6D5F-4A5F-BE28-08DA1B675F0E
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 4cb2dde4dc23bb9376343b49a091277b667d834e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c3232282b788edbc401f889f5277d0227a1572b8
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61199629"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977747"
 ---
 # <a name="objective-sharpie-examples"></a>Esempi di Sharpie obiettivo
 
@@ -26,8 +26,3 @@ Il [procedura dettagliata completa per iOS](~/ios/platform/binding-objective-c/w
 ## <a name="completed-ios-bindings"></a>IOS completate le associazioni
 
 Un numero di associazioni completate può essere visualizzato o scaricato dal [repository Github di monotouch-bindings](https://github.com/mono/monotouch-bindings/).
-
-## <a name="related-links"></a>Collegamenti correlati
-
-- [Corsi di Xamarin University: Compila una libreria di binding Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Corsi di Xamarin University: Creazione di una libreria di binding Objective-C con Sharpie obiettivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

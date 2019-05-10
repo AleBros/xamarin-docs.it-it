@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 5bd232293c979566faed2856de7287903da94054
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 661f27b90882234ddc629ac280690d534aca499d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61300399"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977789"
 ---
 # <a name="layouts-in-xamarinforms"></a>Layout di xamarin. Forms
 
@@ -23,7 +23,7 @@ Xamarin. Forms dispone di diversi layout e le funzionalità nell'organizzazione 
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
-**Layout di xamarin. Forms, da [Xamarin University](https://university.xamarin.com/)**
+**Video di layout di xamarin. Forms**
 
 Ogni controllo di layout è descritta di seguito, oltre a informazioni dettagliate su come gestire le modifiche apportate orientamento dello schermo:
 

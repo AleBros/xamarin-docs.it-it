@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: 92c068ceb3d382ed4612318dc987d950ec7e7ef2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2cfb15222c33309101366273d5bc9c42db68b436
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61327479"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978112"
 ---
 # <a name="sending-push-notifications-from-azure-mobile-apps"></a>L'invio di notifiche Push dall'App per dispositivi mobili di Azure
 
@@ -23,7 +23,7 @@ _Hub di notifica di Azure forniscono un'infrastruttura push scalabile per l'invi
 
 > [!VIDEO https://youtube.com/embed/le2lDY22xwM]
 
-**Azure Push Hub di notifica e xamarin. Forms, da [Xamarin University](https://university.xamarin.com/)**
+**Video di xamarin. Forms e Hub di notifica Push di Azure**
 
 Consente di fornire informazioni, ad esempio un messaggio da un sistema back-end a un'applicazione in un dispositivo mobile per migliorare l'uso ed engagement applicazione una notifica push. La notifica può essere inviata come in qualsiasi momento, anche quando l'utente non usa attivamente all'applicazione di destinazione.
 

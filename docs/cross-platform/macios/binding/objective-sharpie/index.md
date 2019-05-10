@@ -6,12 +6,12 @@ ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 53fcbbc408ae147405a3285d9391457051d6e16e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cbe0be19e38892d06a79831d7974fbddcb71a9ac
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261197"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978478"
 ---
 # <a name="creating-bindings-with-objective-sharpie"></a>Creazione di associazioni con Sharpie obiettivo
 
@@ -49,5 +49,4 @@ Tuttavia, Sharpie obiettivo è uno strumento molto avanzato che richiede una con
 - [Informazioni dettagliate sull'associazione](~/cross-platform/macios/binding/overview.md)
 - [Guida di riferimento per i tipi di associazione](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin per sviluppatori Objective-C](~/ios/get-started/objective-c-developers/index.md)
-- [Corsi di Xamarin University: Compila una libreria di binding Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Corsi di Xamarin University: Creazione di una libreria di binding Objective-C con Sharpie obiettivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+

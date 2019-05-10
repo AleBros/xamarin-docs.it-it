@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: c0f638afbf044a2e3e6f309839cb22137cf95912
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d69a96ee55b09ef9fcf1485ec34d986dd40e7662
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60956283"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977977"
 ---
 # <a name="android-job-scheduler"></a>Utilità di pianificazione di processo Android
 
@@ -227,4 +227,4 @@ Questa guida ha illustrato come usare l'utilità di pianificazione di processi A
 - [Riferimento all'API JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)
 - [Pianificazione dei processi, ad esempio un vero professionista grazie JobScheduler](https://medium.com/google-developers/scheduling-jobs-like-a-pro-with-jobscheduler-286ef8510129)
 - [Android della batteria e ottimizzazioni della memoria - 2016 dei / o Google (video)](https://www.youtube.com/watch?v=VC2Hlb22mZM&feature=youtu.be)
-- [Android JobScheduler - René Ruppert - Xamarin University](https://www.youtube.com/watch?v=aSjBBPYjelE)
+- [Android JobScheduler - René Ruppert](https://www.youtube.com/watch?v=aSjBBPYjelE)

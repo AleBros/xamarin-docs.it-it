@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: e599d4f99877e24e06de2c26ed2cafe48526f6f5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8c4dcbe0baf74479e94f8663280e7654b4d58a9d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61346937"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978160"
 ---
 # <a name="binding-ios-libraries"></a>Associazione di librerie di iOS
 
@@ -38,15 +38,13 @@ Obiettivo Sharpie 3.0 è stato introdotto la possibilità di associare direttame
 Questa pagina fornisce una procedura dettagliata di creazione di un progetto di binding iOS Usa open source [ **InfColorPicker** ](https://github.com/InfinitApps/InfColorPicker) progetto Objective-C come esempio. Il **InfColorPicker** libreria fornisce un controller di visualizzazione riutilizzabili che consentono all'utente di selezionare un colore di base nella relativa rappresentazione HSB, rendendo più semplice la selezione del colore.
 Obiettivo Sharpie verrà utilizzato per semplificare il processo di associazione.
 
-## <a name="xamarin-university-lightning-lecture"></a>Xamarin University Lightning Lecture
+## <a name="video"></a>Video
 
 > [!VIDEO https://youtube.com/embed/ZUoPLcmnf1o]
 
-**iOS associazioni in C/C++, da [Xamarin University](https://university.xamarin.com/)**
+**iOS associazioni in C /C++ video**
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Binding di Objective-C](~/cross-platform/macios/binding/index.md)
 - [Associazione di Mac](~/mac/platform/binding.md)
-- [Corsi di Xamarin University: Compila una libreria di binding Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Corsi di Xamarin University: Creazione di una libreria di binding Objective-C con Sharpie obiettivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

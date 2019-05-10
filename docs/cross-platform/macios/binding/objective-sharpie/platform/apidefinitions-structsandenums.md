@@ -6,12 +6,12 @@ ms.assetid: AC2087C0-BA54-46D8-B70C-6972941C8F73
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: df8d4508db14116a5b36e893f161ac891d58dc46
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3b991f6105c6053f473b049d195aaef63cbcdd57
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61266367"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977671"
 ---
 # <a name="apidefinitions--structsandenums-files"></a>ApiDefinitions e StructsAndEnums file
 
@@ -34,7 +34,3 @@ Vedere le [associazione di un'API](~/cross-platform/macios/binding/objective-c-l
 
 Vedere la [riferimento ai tipi di associazione](~/cross-platform/macios/binding/binding-types-reference.md) per altre informazioni sul contenuto di questi file.
 
-## <a name="related-links"></a>Collegamenti correlati
-
-- [Corsi di Xamarin University: Compila una libreria di binding Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Corsi di Xamarin University: Creazione di una libreria di binding Objective-C con Sharpie obiettivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

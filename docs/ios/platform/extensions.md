@@ -8,18 +8,18 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 25b27765a35310c5cdbaf5ae19902b1d19eff6ea
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 971effc34716596ec6be3708ac9da4e68d7bdfee
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61322067"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978582"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>estensioni di iOS in xamarin. IOS
 
 > [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
 
-**Creazione di estensioni in iOS, da [Xamarin University](https://university.xamarin.com/)**
+**Creazione di estensioni in iOS video**
 
 Le estensioni, come introdotto in iOS 8, sono specializzate `UIViewControllers` che vengono presentati da iOS all'interno di contesti standard, ad esempio all'interno di **centro notifiche**, come richiesti dall'utente per eseguire i tipi di tastiera personalizzata specializzata input o altri contesti, come la modifica di una foto in cui l'estensione può fornire filtri effetto speciale.
 

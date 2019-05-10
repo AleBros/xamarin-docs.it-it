@@ -1,27 +1,24 @@
 ---
-title: Specificare il Layout di visualizzazione raccolta xamarin. Forms
+title: Layout di visualizzazione di raccolta di xamarin. Forms
 description: Per impostazione predefinita, visualizzazione di una raccolta verranno visualizzati gli elementi contenuti in un elenco verticale. Tuttavia, è possibile specificare grids ed elenchi orizzontali e verticali.
 ms.prod: xamarin
 ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/15/2019
-ms.openlocfilehash: 8ed365ed41ac31c66d41f1a32a7a16929cdc6770
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 5543bcc93f3c38b56a4a6caa0ea23b8ccf434e1c
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367603"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048248"
 ---
-# <a name="specify-xamarinforms-collectionview-layout"></a>Specificare il Layout di visualizzazione raccolta xamarin. Forms
+# <a name="xamarinforms-collectionview-layout"></a>Layout di visualizzazione di raccolta di xamarin. Forms
 
-![Anteprima](~/media/shared/preview.png)
+![](~/media/shared/preview.png "Questa API è ancora in versione definitiva")
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> Il `CollectionView` è attualmente un'anteprima e non dispone di alcune delle proprie funzionalità pianificato. Inoltre, l'API può cambiare quando viene completata l'implementazione.
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 
 `CollectionView` definisce le proprietà seguenti che controllano il layout:
 
@@ -43,7 +40,7 @@ Questi layout possono essere specificati impostando il `ItemsLayout` proprietà 
 - `SnapPointsAlignment`, di tipo `SnapPointsAlignment`, specifica l'allineamento con gli elementi di punti di bloccaggio.
 - `SnapPointsType`, di tipo `SnapPointsType`, specifica il comportamento dei punti di bloccaggio quando lo scorrimento.
 
-Queste proprietà sono supportate da [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) oggetti, che significa che le proprietà possono essere destinazioni di associazioni dati. Per altre informazioni sui punti di bloccaggio, vedere [punti di allineamento](scrolling.md#snap-points) nel [scorrere un elemento all'interno della visualizzazione](scrolling.md) Guida.
+Queste proprietà sono supportate da [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) oggetti, che significa che le proprietà possono essere destinazioni di associazioni dati. Per altre informazioni sui punti di bloccaggio, vedere [punti di allineamento](scrolling.md#snap-points) nel [lo scorrimento di xamarin. Forms CollectionView](scrolling.md) Guida.
 
 Il `ItemsLayoutOrientation` enumerazione definisce i membri seguenti:
 
@@ -344,7 +341,7 @@ Per impostazione predefinita, ogni elemento un `CollectionView` singolarmente mi
 - `MeasureFirstItem` -viene misurato solo il primo elemento, con tutti gli elementi successivi conferimento delle stesse dimensioni del primo elemento.
 
 > [!IMPORTANT]
-> Il `MeasureFirstItem` strategia di ridimensionamento deve essere usato in situazioni in cui è destinata a essere uniforme tra tutti gli elementi, la dimensione dell'elemento, comporterà un miglioramento delle prestazioni.
+> Il `MeasureFirstItem` strategia di ridimensionamento comporterà un miglioramento delle prestazioni quando utilizzata in situazioni in cui la dimensione dell'elemento deve essere uniforme tra tutti gli elementi.
 
 Esempio di codice riportato di seguito viene illustrata l'impostazione di `ItemSizingStrategy` proprietà:
 
@@ -365,8 +362,11 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
+> [!NOTE]
+> L'elemento strategia di ridimensionamento è attualmente solo implementato su iOS.
+
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Visualizzazione di raccolta (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 - [Localizzazione da destra a sinistra](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
-- [Scorrere un elemento all'interno della visualizzazione](scrolling.md)
+- [Xamarin. Forms CollectionView lo scorrimento](scrolling.md)

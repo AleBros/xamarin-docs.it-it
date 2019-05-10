@@ -1,27 +1,24 @@
 ---
-title: Scorrere un elemento all'interno della visualizzazione
+title: Xamarin. Forms CollectionView lo scorrimento
 description: Quando un tessere magnetiche utente per avviare un'operazione di scorrimento, la posizione finale dello scorrimento può essere controllata in modo che gli elementi vengono visualizzati completamente. Inoltre, visualizzazione di raccolta definisce due metodi ScrollTo, che a livello di programmazione scorrere gli elementi all'interno della visualizzazione.
 ms.prod: xamarin
 ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/19/2019
-ms.openlocfilehash: da7f379076b8e193deddc99e9004f051ba006cbb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 888b4f369f67a7d8566640927ba2ae3a395d68d8
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367657"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048173"
 ---
-# <a name="scroll-an-item-into-view"></a>Scorrere un elemento all'interno della visualizzazione
+# <a name="xamarinforms-collectionview-scrolling"></a>Xamarin. Forms CollectionView lo scorrimento
 
-![Anteprima](~/media/shared/preview.png)
+![](~/media/shared/preview.png "Questa API è ancora in versione definitiva")
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> Il `CollectionView` è attualmente un'anteprima e non dispone di alcune delle proprie funzionalità pianificato. Inoltre, l'API può cambiare quando viene completata l'implementazione.
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 
 `CollectionView` vengono definiti due `ScrollTo` metodi, scorrere gli elementi all'interno della visualizzazione. Uno degli overload scorre l'elemento in corrispondenza dell'indice specificato all'interno della visualizzazione, mentre l'altro scorre l'elemento specificato all'interno della visualizzazione. Entrambi gli overload sono argomenti aggiuntivi che possono essere specificati per indicare la posizione esatta dell'elemento dopo lo scorrimento è stata completata e se si desidera animare lo scorrimento.
 

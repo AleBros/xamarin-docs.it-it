@@ -6,12 +6,12 @@ ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 author: asb3993
 ms.author: amburns
 ms.date: 10/19/2016
-ms.openlocfilehash: fcdd712313becd1335479013f44886086dde7bff
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 686ce3b46f268b650c63cace2a29b9d501a4063c
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261243"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977604"
 ---
 # <a name="binding-troubleshooting"></a>Risoluzione dei problemi di associazione
 
@@ -55,9 +55,4 @@ Includere tutte le informazioni disponibili seguenti:
 
 - Un esempio semplice che riproduce il problema. Questo è **molto importante**, ove possibile. 
 - L'analisi dello stack completa dell'arresto anomalo.
-- Il codice C# relativo all'arresto anomalo. 
-
-## <a name="related-links"></a>Collegamenti correlati
-
-- [Corsi di Xamarin University: Compila una libreria di binding Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Corsi di Xamarin University: Creazione di una libreria di binding Objective-C con Sharpie obiettivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- Il codice C# relativo all'arresto anomalo.
