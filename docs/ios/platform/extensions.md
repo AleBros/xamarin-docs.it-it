@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 971effc34716596ec6be3708ac9da4e68d7bdfee
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: fb5cea018180966e914a5bce5e85cb83fbdf901d
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978582"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557253"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>estensioni di iOS in xamarin. IOS
 
@@ -71,7 +71,7 @@ Se si sceglie una delle app di estensioni, relativo `UIViewController` verranno 
 
 Le estensioni possono comunicare con le proprie applicazioni Host tramite un [NSExtensionContext](xref:Foundation.NSExtensionContext) oggetto. Alcune estensioni sono disponibili operazioni che ricevono richiamate asincrone con i risultati. Questi callback verranno eseguiti sul thread in background e l'estensione deve tenere in considerazione questo; ad esempio, usando [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) se desiderano aggiornare l'interfaccia utente. Vedere le [comunica con l'App Host](#communicating-with-the-host-app) sezione di seguito per altri dettagli.
 
-Per impostazione predefinita, le estensioni e le loro applicazioni contenitore non possono comunicare, pur essendo installati insieme. In alcuni casi, l'app contenitore è essenzialmente un "shipping" contenitore vuoto con lo scopo verrà resi disponibili dopo aver installato l'estensione. Tuttavia, se seconda delle circostanze, l'app contenitore e l'estensione può condividere le risorse da un'area comune. Inoltre, un **estensione per oggi** potrebbe richiedere l'app di contenitore per aprire un URL. Questo comportamento è illustrato nella [evolvere Widget del conto alla rovescia](https://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
+Per impostazione predefinita, le estensioni e le loro applicazioni contenitore non possono comunicare, pur essendo installati insieme. In alcuni casi, l'app contenitore è essenzialmente un "shipping" contenitore vuoto con lo scopo verrà resi disponibili dopo aver installato l'estensione. Tuttavia, se seconda delle circostanze, l'app contenitore e l'estensione può condividere le risorse da un'area comune. Inoltre, un **estensione per oggi** potrebbe richiedere l'app di contenitore per aprire un URL. Questo comportamento è illustrato nella [evento conto alla rovescia Widget](https://github.com/xamarin/ios-samples/tree/master/intro-to-extensions).
 
 ## <a name="creating-an-extension"></a>Creazione di un'estensione
 

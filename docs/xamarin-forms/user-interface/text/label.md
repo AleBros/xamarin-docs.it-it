@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: e220abc575270f483c0a822ae01f979966691432
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 31303114ddd829b596569981b5812b91c4e95b30
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61186463"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557448"
 ---
 # <a name="xamarinforms-label"></a>Etichetta di xamarin. Forms
 
@@ -157,7 +157,7 @@ Il `FormattedText` proprietà è di tipo [ `FormattedString` ](xref:Xamarin.Form
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – le dimensioni del carattere per il testo nel controllo span.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) : il colore del testo nel controllo span. Questa proprietà è obsoleta ed è stata sostituita dal `TextColor` proprietà.
 - [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) -il moltiplicatore da applicare per l'altezza della riga predefinita dell'intervallo. Per altre informazioni, vedere [altezza riga](#line-height).
-- [`Text`](xref:Xamarin.Forms.Span.Text)  – lo stile da applicare all'intervallo.
+- [`Style`](xref:Xamarin.Forms.Span.Style)  – lo stile da applicare all'intervallo.
 - [`Text`](xref:Xamarin.Forms.Span.Text) -il testo dell'intervallo.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) : il colore del testo nel controllo span.
 - `TextDecorations` -gli effetti da applicare al testo nel controllo span. Per altre informazioni, vedere [decorazioni di testo](#text-decorations).

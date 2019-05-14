@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: 0ff9f8b5ee6f9468650b6535745706bee8f96536
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 60074c3c1b69a57d313ad0243246ba6db93dde3d
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60876355"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557426"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usare i dati della fase di progettazione con il Visualizzatore anteprima XAML
 
@@ -22,7 +22,7 @@ _Alcuni layout sono difficili da visualizzare senza dati. Usare questi suggerime
 
 Fase i dati sono dati fittizi che è impostato per rendere più semplice visualizzare i controlli nel Visualizzatore anteprima XAML di progettazione. Per iniziare, aggiungere le seguenti righe di codice per l'intestazione della pagina XAML:
 
-```csharp
+```xaml
 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
@@ -32,17 +32,17 @@ Dopo aver aggiunto gli spazi dei nomi, è possibile inserire `d:` davanti a qual
 
 Ad esempio, è possibile aggiungere testo a un'etichetta che in genere è associata a dati.
 
-```csharp
-<Label Text={Binding Name} d:Text="Name" />
+```xaml
+<Label Text="{Binding Name}" d:Text="Name!" />
 ```
 
 [![Progettazione di dati della fase con il testo in un'etichetta](xaml-previewer-images/designtimedata-label-sm.png "Design-time di dati con il testo di un'etichetta")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
- In questo esempio, senza `d:Text`, il Visualizzatore anteprima XAML mostrerebbe nothing per l'etichetta. Al contrario, verrà visualizzato "Nome" in cui l'etichetta avranno i dati reali in fase di esecuzione.
+In questo esempio, senza `d:Text`, il Visualizzatore anteprima XAML mostrerebbe nothing per l'etichetta. Visualizza invece "Name". in cui l'etichetta avrà i dati reali in fase di esecuzione.
 
 È possibile usare `d:` con qualsiasi attributo per un controllo di xamarin. Forms, come i colori, le dimensioni dei caratteri e la spaziatura. È anche possibile aggiungerlo al controllo stesso:
 
-```csharp
+```xaml
 <d:Button Text="Design Time Button" />
 ```
 
@@ -54,7 +54,7 @@ In questo esempio, il pulsante viene visualizzata solo in fase di progettazione.
 
 È possibile impostare una fase di progettazione origine per le immagini che sono associati alla pagina o caricati in modo dinamico. Nel progetto Android, aggiungere l'immagine da visualizzare nel Visualizzatore anteprima XAML per il **risorse > Drawable** cartella. Nel progetto iOS, aggiungere l'immagine per il **risorse** cartella. È quindi possibile visualizzare tale immagine nel Visualizzatore anteprima XAML in fase di progettazione:
 
-```csharp
+```xaml
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
 [![I dati ora con le immagini di progettazione](xaml-previewer-images/designtimedata-image-sm.png "progettare dati temporali con iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
@@ -63,7 +63,7 @@ In questo esempio, il pulsante viene visualizzata solo in fase di progettazione.
 
 ListView che rappresentano una modalità comune per visualizzare i dati in un'app per dispositivi mobili. Tuttavia, sono difficili da visualizzare senza dati reali. Per usare i dati della fase di progettazione con essi, è necessario creare una matrice di fase di progettazione da usare come una proprietà ItemsSource. Il Visualizzatore anteprima XAML viene visualizzato ciò che è in tale array nel ListView in fase di progettazione.
 
-```csharp
+```xaml
 <StackLayout>
     <ListView ItemsSource="{Binding Items}">
         <d:ListView.ItemsSource>
@@ -87,8 +87,7 @@ ListView che rappresentano una modalità comune per visualizzare i dati in un'ap
 
 Questo esempio viene illustrato un ListView di tre TextCells nel Visualizzatore anteprima XAML. È possibile modificare `x:String` a un modello di dati esistente nel progetto.
 
-Fare riferimento a [app Hanselman.Forms di James Montemagno](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L36-L57) per un esempio più complesso.
-
+Fare riferimento a [app Hanselman.Forms di James Montemagno](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L26-L47) per un esempio più complesso.
 
 ## <a name="alternative-hardcode-a-static-viewmodel"></a>In alternativa: Impostare come hardcoded un ViewModel statico
 
