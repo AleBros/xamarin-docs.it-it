@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
-ms.openlocfilehash: 2178c9f4115c42396635e22cb0688695b590ec26
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 1e40b0a71317d8c9cb3de391a0b941a5bb081956
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292155"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048152"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Nozioni di base sulle applicazioni Xamarin.Forms
 
@@ -76,9 +76,9 @@ Xamarin.Forms supporta applicazioni basate su database con il motore di database
 
 Xamarin.Forms offre diverse esperienze di navigazione tra le pagine, a seconda del tipo `Page` in uso.
 
-## <a name="shellshellmd"></a>[Shell](shell.md)
+## <a name="shellshellindexmd"></a>[Shell](shell/index.md)
 
-Xamarin.Forms Shell è un contenitore per applicazioni, che rende disponibili le principali funzionalità dell'interfaccia utente richieste dalla maggior parte delle applicazioni, consentendo all'utente di concentrarsi sul carico di lavoro essenziale dell'applicazione.
+La shell Xamarin.Forms riduce la complessità dello sviluppo di applicazioni per dispositivi mobili offrendo le principali funzionalità richieste dalla maggior parte delle applicazioni per dispositivi mobili. Queste funzionalità includono un'esperienza utente di navigazione comune, uno schema di navigazione basato su URI e un gestore di ricerca integrato.
 
 ## <a name="templatestemplatesindexmd"></a>[Modelli](templates/index.md)
 

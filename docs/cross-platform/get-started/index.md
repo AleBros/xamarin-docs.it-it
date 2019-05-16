@@ -1,18 +1,18 @@
 ---
 title: Introduzione a Xamarin
-description: Questo documento contiene i collegamenti a varie guide che descrivono come iniziare a sviluppare con Xamarin. Il contenuto collegato descrive come compilare una prima app, fornisce un'introduzione generale allo sviluppo per dispositivi mobili e illustra le opzioni di training disponibili con Xamarin University.
+description: Questo documento contiene i collegamenti a varie guide che descrivono come iniziare a sviluppare con Xamarin. Il contenuto collegato descrive come creare una prima app e fornisce un'introduzione generale allo sviluppo per dispositivi mobili.
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: b9b48d83199f83c69a42785d4d0c4008a5c6a5e1
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: da2c927bc7d6943066b6b2541d9af98a560c40b5
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197394"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978426"
 ---
 # <a name="building-mobile-apps"></a>Creazione di app per dispositivi mobili
 
@@ -48,11 +48,11 @@ La scelta di Xamarin e la considerazione di alcuni aspetti durante la progettazi
 
 Altre informazioni su Visual Studio per Mac, l'ambiente di sviluppo integrato (IDE) per macOS.
 
-## <a name="get-started-with-xamarin-university"></a>Introduzione a Xamarin University
+## <a name="get-started-video"></a>Video introduttivo
 
 > [!VIDEO https://youtube.com/embed/NGvn-pGZFPA]
 
-**Building Your First Android App with Xamarin for Visual Studio (Compilazione della prima app Xamarin.Forms con Xamarin per Visual Studio), di [Xamarin University](https://university.xamarin.com)**
+**Building Your First Xamarin.Forms App with Xamarin for Visual Studio** (Creazione della prima app Xamarin.Forms con Xamarin per Visual Studio)
 
 ## <a name="related-links"></a>Collegamenti correlati
 

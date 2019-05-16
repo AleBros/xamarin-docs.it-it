@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: cfc4ecc5bf7ebc5e4c4dae8094fe3eb4ece34068
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f56f2c58195e51e9294948dad85a475e181f99b2
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112501"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978529"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Risoluzione dei problemi di connessione per un host di compilazione Xamarin.iOS
 
@@ -124,7 +124,7 @@ L'host di compilazione Xamarin delle versioni precedenti di Xamarin.iOS non è p
 
 Cause note:
 
-- **Limitazione**: questo errore può essere visualizzato quando si tenta di accedere all'host di compilazione tramite _nome e cognome_, se il nome include un carattere accentato. Si tratta di una limitazione della [libreria SSH.NET](https://sshnet.codeplex.com/) usata da Xamarin per la connessione SSH. **Soluzione alternativa**: vedere il passaggio 5 descritto in precedenza.
+- **Limitazione**: questo errore può essere visualizzato quando si tenta di accedere all'host di compilazione tramite _nome e cognome_, se il nome include un carattere accentato. Si tratta di una limitazione della [libreria SSH.NET](https://sshnet.codeplex.com/) usata da Xamarin per la connessione SSH. **Soluzione temporanea**: vedere il passaggio 5 descritto in precedenza.
 
 #### <a name="unable-to-authenticate-with-ssh-keys-please-try-to-log-in-with-credentials-first"></a>"Non è possibile eseguire l'autenticazione con le chiavi SSH. Provare prima ad accedere con le credenziali"
 
@@ -134,7 +134,7 @@ Causa nota:
 
 #### <a name="trying-to-connect-never-completes"></a>"Tentativo di connessione..." non giunge mai a completamento
 
-- **Bug[ n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: questo problema può verificarsi in Xamarin 4.1 se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema &gt; Utenti &amp; Gruppi** è impostata su un valore diverso da **/bin/bash**. A partire da Xamarin 4.2, questo scenario comporta invece la visualizzazione del messaggio di errore "Non è stato possibile connettersi". **Soluzione alternativa**: modificare la **shell di accesso** impostando di nuovo il valore predefinito originale **/bin/bash**.
+- **Bug[ n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: questo problema può verificarsi in Xamarin 4.1 se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema &gt; Utenti &amp; Gruppi** è impostata su un valore diverso da **/bin/bash**. A partire da Xamarin 4.2, questo scenario comporta invece la visualizzazione del messaggio di errore "Non è stato possibile connettersi". **Soluzione temporanea**: modificare la **shell di accesso** impostando di nuovo il valore predefinito originale **/bin/bash**.
 
 <a name="tryagain" />
 
@@ -144,17 +144,17 @@ Cause segnalate:
 
 - **Bug**: per alcuni utenti questo messaggio di errore è stato visualizzato insieme a un errore più dettagliato nei file di log: "Si è verificato un errore imprevisto durante la configurazione di SSH per l'utente... Session operation has timed out"(Funzionamento della sessione scaduto) durante il tentativo di accedere all'host di compilazione tramite un account utente di un dominio di Active Directory o di un altro servizio directory. **Soluzione alternativa:** accedere all'host di compilazione tramite un account utente locale.
 
-- **Bug**: questo errore è stato visualizzato in alcuni casi quando l'utente tenta di connettersi all'host di compilazione facendo doppio clic sul nome del Mac nella finestra di dialogo di connessione. **Soluzione alternativa possibile**: [aggiungere manualmente il Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac) usando l'indirizzo IP.
+- **Bug**: questo errore è stato visualizzato in alcuni casi quando l'utente tenta di connettersi all'host di compilazione facendo doppio clic sul nome del Mac nella finestra di dialogo di connessione. **Possibile soluzione alternativa**: [aggiungere manualmente il Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac) usando l'indirizzo IP.
 
-- **Bug [n. 35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)** : questo errore si verifica in alcuni casi quando l'utente usa una connessione di rete wireless tra l'host di compilazione Mac e Windows. **Soluzione alternativa possibile**: spostare entrambi i computer in una connessione di rete cablata.
+- **Bug [n. 35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)** : questo errore si verifica in alcuni casi quando l'utente usa una connessione di rete wireless tra l'host di compilazione Mac e Windows. **Possibile soluzione alternativa**: spostare entrambi i computer in una connessione di rete cablata.
 
 - **Bug [n. 36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)** : questo messaggio viene visualizzato in Xamarin 4.0 ogni volta che il file **$HOME/.bashrc** nel Mac contiene un errore. A partire da Xamarin 4.1, gli errori del file con estensione **bashrc** non influiscono più sul processo di connessione. **Soluzione alternativa**: spostare il file con estensione **bashrc** in un percorso di backup o eliminare il file se non è necessario.
 
-- **Bug [n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: questo errore può essere visualizzato se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema > Utenti e Gruppi** è impostata su un valore diverso da **/bin/bash**. **Soluzione alternativa**: modificare la **shell di accesso** impostando di nuovo il valore predefinito originale **/bin/bash**.
+- **Bug [n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: questo errore può essere visualizzato se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema > Utenti e Gruppi** è impostata su un valore diverso da **/bin/bash**. **Soluzione temporanea**: modificare la **shell di accesso** impostando di nuovo il valore predefinito originale **/bin/bash**.
 
 - **Limitazione**: l'errore può verificarsi se l'host di compilazione Mac è connesso a un router che non ha accesso a Internet o se il Mac usa un server DNS nel quale si verifica un timeout a seguito di una ricerca di DNS inverso del computer Windows. Visual Studio impiega circa 30 secondi per recuperare l'impronta digitale SSH e infine non riesce a connettersi.
 
-    **Soluzione alternativa possibile**: aggiungere "UseDNS no" al file **sshd\_config**. Assicurarsi di leggere le informazioni su questa impostazione SSH prima di modificarla. Vedere ad esempio [unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option](http://unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option).
+    **Possibile soluzione alternativa**: aggiungere "UseDNS no" al file **sshd\_config**. Assicurarsi di leggere le informazioni su questa impostazione SSH prima di modificarla. Vedere ad esempio [unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option](http://unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option).
 
     I passaggi seguenti descrivono un modo per modificare l'impostazione. Per completare la procedura, è necessario avere effettuato l'accesso a un account amministratore nel Mac.
 
@@ -210,7 +210,7 @@ Questa sezione illustra alcuni messaggi che possono essere visualizzati nella fi
 
 È possibile ignorare questo avviso, dopo aver verificato che sia Mac che Windows siano aggiornati allo stesso canale di distribuzione di Xamarin.
 
-#### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>"Impossibile eseguire 'ls /usr/bin/mono': ExitStatus = 1"
+#### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>"Non è stato possibile eseguire 'ls /usr/bin/mono': Stato uscita=1"
 
 È possibile ignorare questo messaggio, a condizione che il Mac esegua OS X 10.11 (El Capitan) o versione successiva. Questo messaggio non rappresenta un problema in OS X 10.11, perché Xamarin controlla anche **/usr/local/bin/mono**, ovvero il percorso previsto corretto per `mono` in OS X 10.11.
 
@@ -303,7 +303,7 @@ Questa sezione tratta alcuni problemi che possono verificarsi dopo la connession
 
 Cause note:
 
-- **Funzionalità di sicurezza di Xamarin 4.1**: questo errore _si verifica_ se si esegue il downgrade alla versione 4.0 di Xamarin dopo aver usato Xamarin 4.1 o versione successiva. In questo caso l'errore è associato all'avviso "Private key is encrypted but passphrase is empty" (La chiave privata è crittografata ma la passphrase è vuota). Si tratta di una modifica _intenzionale_ dovuta a una nuova funzionalità di sicurezza in Xamarin 4.1. **Correzione consigliata**: eliminare **id\_rsa** e **id\_rsa.pub** da **%LOCALAPPDATA%\Xamarin\MonoTouch**e quindi riconnettersi all'host di compilazione Mac.
+- **Funzionalità di sicurezza di Xamarin 4.1**: questo errore _si verifica_ se si esegue il downgrade alla versione 4.0 di Xamarin dopo aver usato Xamarin 4.1 o versione successiva. In questo caso l'errore è associato all'avviso "Private key is encrypted but passphrase is empty" (La chiave privata è crittografata ma la passphrase è vuota). Si tratta di una modifica _intenzionale_ dovuta a una nuova funzionalità di sicurezza in Xamarin 4.1. **Correzione consigliata**: eliminare **id\_rsa** e **id\_rsa.pub** da **%LOCALAPPDATA%\Xamarin\MonoTouch** e quindi riconnettersi all'host di compilazione Mac.
 
 - **Restrizione di sicurezza SSH**: quando è accompagnato dall'avviso "Could not authenticate the user using the existing ssh keys" (Non è possibile autenticare l'utente con le chiavi SSH esistenti), questo messaggio nella maggior parte dei casi indica che per uno dei file o delle directory nel percorso completo di **$HOME/.ssh/authorized\_keys** nel Mac sono abilitate le autorizzazioni di scrittura per membri di tipo _other_ o _group_. **Correzione comune**: eseguire `chmod og-w "$HOME"` al prompt dei comandi del terminale nel Mac. Per informazioni dettagliate sul file o sulla directory specifica che causa il problema, eseguire `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` nel terminale e quindi aprire il file **sshd.log** dal desktop e cercare "Authentication refused: bad ownership or modes" (Autenticazione rifiutata: proprietà o modalità non valide).
 
@@ -377,4 +377,4 @@ Se durante la risoluzione di un problema di compilazione ci si vuole assicurare 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Associazione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-- [Agente di compilazione Xamarin Mac - Xamarin University Lightning Lecture](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
+- [Video dell'agente di compilazione Mac Xamarin](https://www.youtube.com/watch?v=MBAPBtxkjFQ)

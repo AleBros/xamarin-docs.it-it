@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: c4098bfe40a252da2adbe7a7a2cd4c0f105ad1c8
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e74231133c0a52ba0fe4e5589f09aab15e1b9924
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050413"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978610"
 ---
 # <a name="right-to-left-localization"></a>Localizzazione da destra a sinistra
 
@@ -150,7 +150,7 @@ La localizzazione da destra a sinistra di Xamarin.Forms presenta attualmente alc
 
 > [!VIDEO https://youtube.com/embed/f2lQ5yw3iiU]
 
-**Supporto da destra a sinistra di Xamarin.Forms 3.0 di [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 3.0 Right-to-Left Support video** (Supporto da destra a sinistra di Xamarin.Forms 3.0 - video)
 
 ## <a name="related-links"></a>Collegamenti correlati
 

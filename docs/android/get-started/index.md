@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 77b721adc4a745a5bf184bfbde1985bce980ddf7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: df4c5f1fe4464f3614c1156f095a803f0d265d70
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110342"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977772"
 ---
 # <a name="get-started-with-xamarinandroid"></a>Introduzione a Xamarin.Android
 
@@ -34,8 +34,8 @@ In questa guida divisa in due parti l'applicazione creata in _Hello, Android_ vi
 
 Questo articolo fornisce un'introduzione al linguaggio C# per sviluppatori Java, con particolare attenzione alle funzionalità del linguaggio C# usate dagli sviluppatori Java per iniziare a sviluppare app Xamarin.Android.
 
-## <a name="xamarin-university-video"></a>Video di Xamarin University
+## <a name="video"></a>Video
 
 > [!VIDEO https://youtube.com/embed/rkNikCa5D48]
 
-**Building Your First Android App with Xamarin for Visual Studio (Compilazione della prima app Android con Xamarin per Visual Studio), di [Xamarin University](https://university.xamarin.com)**
+**Building Your First Android App with Xamarin for Visual Studio** (Creazione della prima app Android con Xamarin per Visual Studio)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
-ms.openlocfilehash: 9456686157f10d81e36b908cb0a2441e64d47663
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: e77a5d7863428d743c536b5aa7b2bb88d12cffc0
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855146"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978331"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Associa a Mac per lo sviluppo di Xamarin.iOS
 
@@ -247,7 +247,7 @@ Questo articolo descrive come usare Associa a Mac per la connessione di Visual S
 ## <a name="next-steps"></a>Passaggi successivi
 
 - [Risoluzione dei problemi di connessione](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.md)
-- [Agente di compilazione Xamarin Mac - Xamarin University Lightning Lecture](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
+- [Video dell'agente di compilazione Mac Xamarin](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
 - [Introduzione a Xamarin.iOS per Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 - [Simulatore iOS remoto per Windows](~/tools/ios-simulator/index.md)
 - [Distribuzione wireless](~/ios/deploy-test/wireless-deployment.md)

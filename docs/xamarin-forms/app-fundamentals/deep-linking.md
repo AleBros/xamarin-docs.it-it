@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: c4e634ce51080ad38b093e1355767c73c72e837a
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: e8bfb01c6f5aa22332d226b8b2768f56a2904a7d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208057"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978514"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indicizzazione e deep linking delle applicazioni
 
@@ -23,7 +23,7 @@ _L'indicizzazione delle applicazioni consente di mantenere rilevanti, visualizza
 
 > [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
 
-**Deep linking con Xamarin.Forms e Azure, di [Xamarin University](https://university.xamarin.com/)**
+**Deep Linking with Xamarin.Forms and Azure video** (Deep linking con Xamarin.Forms e Azure - video)
 
 
 L'indicizzazione e il deep linking delle applicazioni Xamarin.Forms rendono disponibile un'API per pubblicare metadati per l'indicizzazione delle applicazioni man mano che gli utenti si spostano tra le applicazioni. Il contenuto indicizzato può quindi essere cercato nella ricerca Spotlight, in Google Search o in una ricerca Web. Quando si tocca un risultato di ricerca che contiene un collegamento diretto verrà generato un evento che può essere gestito da un'applicazione e viene generalmente usato per passare alla pagina a cui fa riferimento il collegamento diretto.

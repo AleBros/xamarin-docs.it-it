@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 1a8611e5dd0be77eeef065d546f6a0642f384b00
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 4583b703d6c6b15105d60a98e7a1064e6a2e9263
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557282"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977781"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modalità di binding di Xamarin.Forms
 
@@ -109,7 +109,7 @@ Le proprietà di destinazione con modalità di binding `OneTime` vengono aggiorn
 
 La pagina **Simple Color Selector** (Selettore colori semplice) illustra l'uso di un elemento ViewModel semplice. I data binding consentono all'utente di selezionare un colore usando tre elementi `Slider` per tonalità, saturazione e luminosità.
 
-ViewModel è l'origine del data binding. L'elemento ViewModel *non* definisce proprietà con binding, ma implementa un meccanismo di notifica che consente all'infrastruttura di binding di ricevere una notifica quando viene modificato il valore di una proprietà. Questo meccanismo di notifica è l'interfaccia [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged), interfaccia che definisce una singola proprietà denominata [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). In genere una classe che implementa questa interfaccia attiva l'evento quando il valore di una delle sue proprietà pubbliche viene modificato. Non è necessario che l'evento venga attivato se la proprietà non cambia mai. (L'interfaccia `INotifyPropertyChanged` viene anche implementata da `BindableObject` e viene attivato un evento `PropertyChanged` ogni volta che il valore di una proprietà con binding cambia.)
+ViewModel è l'origine del data binding. L'elemento ViewModel *non* definisce proprietà con binding, ma implementa un meccanismo di notifica che consente all'infrastruttura di binding di ricevere una notifica quando viene modificato il valore di una proprietà. Questo meccanismo di notifica è l'interfaccia [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged), che definisce un singolo evento denominato [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). In genere una classe che implementa questa interfaccia attiva l'evento quando il valore di una delle sue proprietà pubbliche viene modificato. Non è necessario che l'evento venga attivato se la proprietà non cambia mai. (L'interfaccia `INotifyPropertyChanged` viene anche implementata da `BindableObject` e viene attivato un evento `PropertyChanged` ogni volta che il valore di una proprietà con binding cambia.)
 
 La classe `HslColorViewModel` definisce cinque proprietà: Le proprietà `Hue`, `Saturation`, `Luminosity` e `Color` sono correlate tra loro. Quando il valore di uno dei tre componenti del colore cambia, la proprietà `Color` viene ricalcolata e gli eventi `PropertyChanged` vengono attivati per tutte e quattro le proprietà:
 
@@ -677,7 +677,7 @@ La schermata iOS a sinistra visualizza il programma alla prima esecuzione. Il co
 
 [![Sample Settings (Impostazioni di esempio)](binding-mode-images/samplesettings-small.png "Sample Settings (Impostazioni di esempio)")](binding-mode-images/samplesettings-large.png#lightbox "Sample Settings (Impostazioni di esempio)")
 
-Gli altri due screenshot visualizzano le impostazioni modificate. Quando si eseguono prove con questa pagina, ricordare di impostare il programma in sospensione o di terminarlo nel dispositivo o nell'emulatore in esecuzione. La terminazione del programma nel debugger di Visual Studio non genererà la chiamata della sostituzione `OnSleep` nella classe `App`.
+Gli altri due screenshot mostrano le impostazioni modificate. Quando si eseguono prove con questa pagina, ricordare di impostare il programma in sospensione o di terminarlo nel dispositivo o nell'emulatore in esecuzione. La terminazione del programma nel debugger di Visual Studio non genererà la chiamata della sostituzione `OnSleep` nella classe `App`.
 
 L'articolo successivo illustra come specificare la [**Formattazione delle stringhe** ](string-formatting.md) dei data binding impostate sulla proprietà `Text` di `Label`.
 
