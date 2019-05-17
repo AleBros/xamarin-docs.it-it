@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: a4cf63b84d0686bc28b02b18a6266908251bdf6f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c24b2c2f0742ee2c6814d9821f3c0603c6e48a96
+ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61154078"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65804923"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Creazione di oggetti dell'interfaccia utente in xamarin. IOS
 
@@ -80,7 +80,7 @@ Quando si progetta l'interfaccia utente con Interface Builder, è necessario cre
 
  [![](creating-ui-objects-images/image6a.png "Pulsante Assistente dell'Editor")](creating-ui-objects-images/image6a.png#lightbox)
 
-Fare clic su un oggetto di interfaccia utente; quindi **trascinamento controllo** nel file con estensione h. A * * controllo trascinare * *, tenere premuto il tasto CTRL, quindi fare clic e tenere sopra l'oggetto di interfaccia utente che si sta creando la presa (o azione) per. Tenere premuto il tasto CTRL mentre si trascina nel file di intestazione. Fine trascinamento di sotto di `@interface` definizione. Una linea blu dovrebbe essere visualizzata con un Outlet Inserisci didascalia o una raccolta di Outlet, come illustrato nello screenshot seguente.
+Fare clic su un oggetto di interfaccia utente; quindi **trascinamento controllo** nel file con estensione h. Per **trascinamento controllo**, tenere premuto il tasto CTRL, quindi fare clic e tenere sopra l'oggetto di interfaccia utente che si sta creando la presa (o azione) per. Tenere premuto il tasto CTRL mentre si trascina nel file di intestazione. Fine trascinamento di sotto di `@interface` definizione. Una linea blu dovrebbe essere visualizzata con un Outlet Inserisci didascalia o una raccolta di Outlet, come illustrato nello screenshot seguente.
 
 Quando si rilascia il clic verrà richiesto di specificare un nome per il Negozio, che verrà usato per creare un C# proprietà che è possibile fare riferimento nel codice:
 

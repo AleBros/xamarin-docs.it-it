@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/21/2019
 ms.openlocfilehash: 5b2e58901d4a850863f68b26ce41e1aa4e8daee4
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.sourcegitcommit: a9c60f50b40203dd784e3e790b0d83e2bfc86129
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 05/16/2019
 ms.locfileid: "61358950"
 ---
 # <a name="xamarinforms-views"></a>Visualizzazioni di xamarin. Forms
@@ -183,7 +183,7 @@ Queste due classi derivano dal [ `InputView` ](xref:Xamarin.Forms.InputView) (cl
 
 |     |     |
 | --- | --- |
-| [`ListView`](xref:Xamarin.Forms.ListView) deriva da [ `ItemsView` ](xref:Xamarin.Forms.ItemsView`1) e visualizza un elenco scorrevole di elementi di dati selezionabile. Impostare il [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) proprietà a una raccolta di oggetti e set il [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) proprietà su un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) oggetto che descrive come gli elementi sono da formattare. Il [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) evento segnala che è stata eseguita alcuna selezione, che è disponibile come le [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) proprietà.<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.ListView) / [Guida](~/xamarin-forms/user-interface/listview/index.md) / [esempio](https://developer.xamarin.com/samples/WorkingWithListview) | [![esempio ListView](views-images/ListView.png "Esempio di ListView")](views-images/ListView-Large.png#lightbox "esempio di ListView")<br />[Codice C# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
+| [`ListView`](xref:Xamarin.Forms.ListView) deriva da [ `ItemsView` ](xref:Xamarin.Forms.ItemsView`1) e visualizza un elenco scorrevole di elementi di dati selezionabile. Impostare il [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) proprietà a una raccolta di oggetti e set il [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) proprietà su un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) oggetto che descrive come gli elementi sono da formattare. Il [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) evento segnala che è stata eseguita alcuna selezione, che è disponibile come le [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) proprietà.<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.ListView) / [Guida](~/xamarin-forms/user-interface/listview/index.md) / [esempio](https://developer.xamarin.com/samples/WorkingWithListview) | [![Esempio di ListView](views-images/ListView.png "esempio di ListView")](views-images/ListView-Large.png#lightbox "esempio di ListView")<br />[Codice C# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="picker"></a>Selezione

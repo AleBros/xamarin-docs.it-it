@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: bdc03721569682cd5b4f72908fcab1e4a567b83c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4e462346c2c0130c972d098aa2c988bdd61fc360
+ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61370635"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65804902"
 ---
 # <a name="xamarinforms-stacklayout"></a>StackLayout xamarin. Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
-`StackLayout` Consente di organizzare le visualizzazioni in una riga unidimensionale ("stack"), orizzontalmente o verticalmente. Viste di un `StackLayout` può essere dimensionato base allo spazio del layout usando le opzioni di layout. Il posizionamento è determinato dall'ordine con le visualizzazioni sono stati aggiunti al layout e le opzioni di layout delle visualizzazioni.
+[StackLayout](xref:Xamarin.Forms.StackLayout) consente di organizzare le visualizzazioni in una riga unidimensionale ("stack"), orizzontalmente o verticalmente. Viste di un `StackLayout` può essere dimensionato base allo spazio del layout usando le opzioni di layout. Il posizionamento è determinato dall'ordine con le visualizzazioni sono stati aggiunti al layout e le opzioni di layout delle visualizzazioni.
 
 [![](stack-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](stack-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 

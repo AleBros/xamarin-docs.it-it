@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: cf04c3e89e3effdd317fa98beb46f9075a1defcd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7a5c09bfe46b9e775383889e07fd93094ba9bf68
+ms.sourcegitcommit: a9c60f50b40203dd784e3e790b0d83e2bfc86129
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61301940"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65731529"
 ---
 # <a name="native-views-in-xaml"></a>Visualizzazioni native in XAML
 
@@ -37,8 +37,8 @@ Per incorporare una visualizzazione nativa in un file XAML di xamarin. Forms:
 1. Aggiungere un `xmlns` dichiarazione dello spazio dei nomi nel file XAML per lo spazio dei nomi che contiene la visualizzazione nativa.
 1. Creare un'istanza della visualizzazione nativa nel file XAML.
 
-> [!NOTE]
-> XAMLC deve essere disattivato per tutte le pagine XAML che usano le visualizzazioni native.
+> [!IMPORTANT]
+> XAML compilato deve essere disabilitata per tutte le pagine XAML che usano le visualizzazioni native. Questa operazione può essere eseguita assegnando la classe code-behind della pagina XAML con il `[XamlCompilation(XamlCompilationOptions.Skip)]` attributo. Per altre informazioni sulla compilazione XAML, vedere [compilazione XAML in xamarin. Forms](~/xamarin-forms/xaml/xamlc.md).
 
 Per fare riferimento a una visualizzazione nativa da un file code-behind, è necessario usare un progetto di Asset condivisi (SAP) e inserire il codice specifico della piattaforma con direttive di compilazione condizionale. Per altre informazioni, vedere [che fa riferimento per le visualizzazioni Native da codice](#native_view_code).
 
