@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2018
-ms.openlocfilehash: 3bd606ae87c524202fd5ea7c141223042e90ec1a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dc02fdc8754db4ae97c29ba2a496804b2263abdc
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61363013"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970736"
 ---
 # <a name="android-platform-features"></a>Funzionalità della piattaforma Android
 
@@ -34,6 +34,7 @@ Le funzionalità specifiche della piattaforma seguenti viene fornita per le visu
 - Abilitare un'ombreggiatura in una `ImageButton`. Per altre informazioni, vedere [ImageButton ombreggiature in Android](imagebutton-drop-shadow.md).
 - Abilitare lo scorrimento rapido in un [ `ListView` ](xref:Xamarin.Forms.ListView) per altre informazioni, vedere [ListView scorrimento rapido in Android](listview-fast-scrolling.md).
 - Controllare se un [ `WebView` ](xref:Xamarin.Forms.WebView) può visualizzare il contenuto misto. Per altre informazioni, vedere [WebView il contenuto misto in Android](webview-mixed-content.md).
+- Abilitare lo zoom in un' [ `WebView` ](xref:Xamarin.Forms.WebView). Per altre informazioni, vedere [WebView Zoom in Android](webview-zoom-controls.md).
 
 Le funzionalità specifiche della piattaforma seguenti viene fornita per le pagine di xamarin. Forms in Android:
 

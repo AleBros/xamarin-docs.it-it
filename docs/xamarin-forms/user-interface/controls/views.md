@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/21/2019
-ms.openlocfilehash: 5b2e58901d4a850863f68b26ce41e1aa4e8daee4
-ms.sourcegitcommit: a9c60f50b40203dd784e3e790b0d83e2bfc86129
+ms.openlocfilehash: 779b39441893324e38843e036614484443e37574
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "61358950"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971295"
 ---
 # <a name="xamarinforms-views"></a>Visualizzazioni di xamarin. Forms
 
@@ -174,7 +174,7 @@ Queste due classi derivano dal [ `InputView` ](xref:Xamarin.Forms.InputView) (cl
 
 |     |     |
 | --- | --- |
-| `CollectionView` Visualizza un elenco scorrevole selezionabile di elementi di dati, in base alle specifiche di un layout diverso. L'obiettivo è fornire una più flessibile ed efficace alternativa per [ `ListView` ](xref:Xamarin.Forms.ListView). Impostare il `ItemsSource` proprietà a una raccolta di oggetti e set il `ItemTemplate` proprietà su un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) oggetto che descrive come gli elementi sono da formattare. Il `SelectionChanged` evento segnala che è stata eseguita alcuna selezione, che è disponibile come il `SelectedItem` proprietà.<br /><br />[Guida](~/xamarin-forms/user-interface/collectionview/index.md) / [esempio](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/) | [![Esempio CollectionView](views-images/CollectionView.png "esempio CollectionView")](views-images/CollectionView-Large.png#lightbox "CollectionView esempio")<br />[Codice C# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CollectionViewDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CollectionViewDemoPage.xaml) |
+| [`CollectionView`](xref:Xamarin.Forms.CollectionView) Visualizza un elenco scorrevole selezionabile di elementi di dati, in base alle specifiche di un layout diverso. L'obiettivo è fornire una più flessibile ed efficace alternativa per [ `ListView` ](xref:Xamarin.Forms.ListView). Impostare il `ItemsSource` proprietà a una raccolta di oggetti e set il `ItemTemplate` proprietà su un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) oggetto che descrive come gli elementi sono da formattare. Il `SelectionChanged` evento segnala che è stata eseguita alcuna selezione, che è disponibile come il `SelectedItem` proprietà.<br /><br />[Guida](~/xamarin-forms/user-interface/collectionview/index.md) / [esempio](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/) | [![Esempio CollectionView](views-images/CollectionView.png "esempio CollectionView")](views-images/CollectionView-Large.png#lightbox "CollectionView esempio")<br />[Codice C# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CollectionViewDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CollectionViewDemoPage.xaml) |
 |     |     |
 
 <a name="listView" />

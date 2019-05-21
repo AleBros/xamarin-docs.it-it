@@ -7,28 +7,26 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 888b4f369f67a7d8566640927ba2ae3a395d68d8
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: b2f32f6695fffa27068fce9d8c12f4ecd9157bc2
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048173"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970536"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Xamarin. Forms CollectionView lo scorrimento
 
-![](~/media/shared/preview.png "Questa API è ancora in versione definitiva")
-
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 
-`CollectionView` vengono definiti due `ScrollTo` metodi, scorrere gli elementi all'interno della visualizzazione. Uno degli overload scorre l'elemento in corrispondenza dell'indice specificato all'interno della visualizzazione, mentre l'altro scorre l'elemento specificato all'interno della visualizzazione. Entrambi gli overload sono argomenti aggiuntivi che possono essere specificati per indicare la posizione esatta dell'elemento dopo lo scorrimento è stata completata e se si desidera animare lo scorrimento.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) vengono definiti due [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) metodi, scorrere gli elementi all'interno della visualizzazione. Uno degli overload scorre l'elemento in corrispondenza dell'indice specificato all'interno della visualizzazione, mentre l'altro scorre l'elemento specificato all'interno della visualizzazione. Entrambi gli overload sono argomenti aggiuntivi che possono essere specificati per indicare la posizione esatta dell'elemento dopo lo scorrimento è stata completata e se si desidera animare lo scorrimento.
 
-`CollectionView` definisce un `ScrollToRequested` evento generato quando uno del `ScrollTo` metodi viene richiamato. Il `ScrollToRequestedEventArgs` che accompagna il `ScrollToRequested` evento dispone di molte proprietà, tra cui `IsAnimated`, `Index`, `Item`, e `ScrollToPosition`. Queste proprietà vengono impostate in base agli argomenti specificati nel `ScrollTo` chiamate al metodo.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) definisce un [ `ScrollToRequested` ](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento generato quando uno del [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) metodi viene richiamato. Il [ `ScrollToRequestedEventArgs` ](xref:Xamarin.Forms.ScrollToRequestedEventArgs) oggetti che accompagna il `ScrollToRequested` evento dispone di molte proprietà, tra cui `IsAnimated`, `Index`, `Item`, e `ScrollToPosition`. Queste proprietà vengono impostate in base agli argomenti specificati nel `ScrollTo` chiamate al metodo.
 
 Quando un tessere magnetiche utente per avviare un'operazione di scorrimento, la posizione finale dello scorrimento può essere controllata in modo che gli elementi vengono visualizzati completamente. Questa funzionalità è noto come blocco, perché gli elementi di allineamento per posizionare durante lo scorrimento viene arrestata. Per altre informazioni, vedere [punti di allineamento](#snap-points).
 
 ## <a name="scroll-an-item-at-an-index-into-view"></a>Scorrere un elemento in corrispondenza di un indice all'interno della visualizzazione
 
-Il primo `ScrollTo` overload del metodo scorre l'elemento in corrispondenza dell'indice specificato all'interno della visualizzazione. Dato un `CollectionView` oggetto denominato `collectionView`, nell'esempio seguente viene illustrato come scorrere l'elemento in corrispondenza dell'indice 12 nella visualizzazione:
+Il primo [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) overload del metodo scorre l'elemento in corrispondenza dell'indice specificato all'interno della visualizzazione. Dato un [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) oggetto denominato `collectionView`, nell'esempio seguente viene illustrato come scorrere l'elemento in corrispondenza dell'indice 12 nella visualizzazione:
 
 ```csharp
 collectionView.ScrollTo(12);
@@ -36,7 +34,7 @@ collectionView.ScrollTo(12);
 
 ## <a name="scroll-an-item-into-view"></a>Scorrere un elemento all'interno della visualizzazione
 
-Il secondo `ScrollTo` overload del metodo scorre l'elemento specificato all'interno della visualizzazione. Dato un `CollectionView` oggetto denominato `collectionView`, nell'esempio seguente viene illustrato come scorrere l'elemento specificato all'interno della visualizzazione:
+La seconda [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) overload del metodo scorre l'elemento specificato all'interno della visualizzazione. Dato un [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) oggetto denominato `collectionView`, nell'esempio seguente viene illustrato come scorrere l'elemento specificato all'interno della visualizzazione:
 
 ```csharp
 MonkeysViewModel viewModel = BindingContext as MonkeysViewModel;
@@ -46,7 +44,7 @@ collectionView.ScrollTo(monkey);
 
 ## <a name="control-scroll-position"></a>Posizione di scorrimento di controllo
 
-Durante lo scorrimento di un elemento in visualizzazione, è possibile specificare la posizione esatta dell'elemento dopo lo scorrimento è stata completata con il `position` argomento del `ScrollTo` metodi. Questo argomento accetta un [ `ScrollToPosition` ](xref:Xamarin.Forms.ScrollToPosition) membro di enumerazione.
+Durante lo scorrimento di un elemento in visualizzazione, è possibile specificare la posizione esatta dell'elemento dopo lo scorrimento è stata completata con il `position` argomento del [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) metodi. Questo argomento accetta un [ `ScrollToPosition` ](xref:Xamarin.Forms.ScrollToPosition) membro di enumerazione.
 
 ### <a name="makevisible"></a>MakeVisible
 
@@ -109,10 +107,10 @@ collectionView.ScrollTo(monkey, animate: false);
 
 ## <a name="snap-points"></a>Punti di allineamento
 
-Quando un tessere magnetiche utente per avviare un'operazione di scorrimento, la posizione finale dello scorrimento può essere controllata in modo che gli elementi vengono visualizzati completamente. Questa funzionalità è nota come blocco, perché gli elementi di allineamento per posizionare quando lo scorrimento sarà arrestato e viene controllato dalle proprietà seguenti dal `ItemsLayout` classe:
+Quando un tessere magnetiche utente per avviare un'operazione di scorrimento, la posizione finale dello scorrimento può essere controllata in modo che gli elementi vengono visualizzati completamente. Questa funzionalità è nota come blocco, perché gli elementi di allineamento per posizionare quando lo scorrimento sarà arrestato e viene controllato dalle proprietà seguenti dal [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) classe:
 
-- `SnapPointsType`, di tipo `SnapPointsType`, specifica il comportamento dei punti di bloccaggio quando lo scorrimento.
-- `SnapPointsAlignment`, di tipo `SnapPointsAlignment`, specifica l'allineamento con gli elementi di punti di bloccaggio.
+- [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType), di tipo [ `SnapPointsType` ](xref:Xamarin.Forms.SnapPointsType), specifica il comportamento dei punti di bloccaggio quando lo scorrimento.
+- [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment), di tipo [ `SnapPointsAlignment` ](xref:Xamarin.Forms.SnapPointsAlignment), specifica l'allineamento con gli elementi di punti di bloccaggio.
 
 Queste proprietà sono supportate da [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) oggetti, che significa che le proprietà possono essere destinazioni di associazioni dati.
 
@@ -121,28 +119,28 @@ Queste proprietà sono supportate da [ `BindableProperty` ](xref:Xamarin.Forms.B
 
 ### <a name="snap-points-type"></a>Tipo di punti di allineamento
 
-Il `SnapPointsType` enumerazione definisce i membri seguenti:
+Il [ `SnapPointsType` ](xref:Xamarin.Forms.SnapPointsType) enumerazione definisce i membri seguenti:
 
 - `None` indica che lo scorrimento non si blocca in elementi.
 - `Mandatory` indica che il contenuto consente di agganciare il più vicino snap fare sempre riferimento per lo scorrimento sarebbe naturalmente arresto, lungo la direzione dell'inerzia.
 - `MandatorySingle` indica lo stesso comportamento `Mandatory`, ma solo scorre un elemento alla volta.
 
-Per impostazione predefinita, il `SnapPointsType` è impostata su `SnapPointsType.None`, che assicura che lo scorrimento non blocca gli elementi, come illustrato negli screenshot seguenti:
+Per impostazione predefinita, il [ `SnapPointsType` ](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) è impostata su `SnapPointsType.None`, che assicura che lo scorrimento non blocca gli elementi, come illustrato negli screenshot seguenti:
 
 [![Screenshot di un elenco verticale di visualizzazione di raccolta senza punti di bloccaggio, su iOS e Android](scrolling-images/snappoints-none.png "elenco verticale di visualizzazione di raccolta senza punti di bloccaggio")](scrolling-images/snappoints-none-large.png#lightbox "elenco verticale di visualizzazione di raccolta senza snap punti")
 
 ### <a name="snap-points-alignment"></a>Allineamento di punti di allineamento
 
-Il `SnapPointsAlignment` enumerazione definisce `Start`, `Center`, e `End` membri.
+Il [ `SnapPointsAlignment` ](xref:Xamarin.Forms.SnapPointsAlignment) enumerazione definisce `Start`, `Center`, e `End` membri.
 
 > [!IMPORTANT]
-> Il valore della `SnapPointsAlignment` proprietà è solo rispettato quando il `SnapPointsType` è impostata su `Mandatory`, o `MandatorySingle`.
+> Il valore della [ `SnapPointsAlignment` ](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) proprietà è solo rispettato quando il [ `SnapPointsType` ](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) è impostata su `Mandatory`, o `MandatorySingle`.
 
 #### <a name="start"></a>Inizia
 
 Il `SnapPointsAlignment.Start` membro indica che i punti di bloccaggio siano allineati con il bordo iniziale di elementi.
 
-Per impostazione predefinita, la proprietà `SnapPointsAlignment` è impostata su `SnapPointsAlignment.Start`. Tuttavia, per motivi di completezza, nell'esempio XAML seguente viene illustrato come impostare questo membro di enumerazione:
+Per impostazione predefinita, il [ `SnapPointsAlignment` ](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) è impostata su `SnapPointsAlignment.Start`. Tuttavia, per motivi di completezza, nell'esempio XAML seguente viene illustrato come impostare questo membro di enumerazione:
 
 ```xaml
 <CollectionView x:Name="collectionView"

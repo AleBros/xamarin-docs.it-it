@@ -7,36 +7,34 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 78e9ddcb1d9dd91dadea94016b206867ac9508e6
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: b5d368a091248ec4cbec3930b878580cf6d18fa8
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048187"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971126"
 ---
 # <a name="xamarinforms-collectionview-emptyview"></a>Xamarin.Forms CollectionView EmptyView
 
-![](~/media/shared/preview.png "Questa API è ancora in versione definitiva")
-
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 
-`CollectionView` definisce le proprietà seguenti che possono essere utilizzate per fornire commenti e suggerimenti utente quando non sono presenti dati da visualizzare:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) definisce le proprietà seguenti che possono essere utilizzate per fornire commenti e suggerimenti utente quando non sono presenti dati da visualizzare:
 
-- `EmptyView`, di tipo `object`, la stringa, associazione o vista che verrà visualizzato quando il `ItemsSource` proprietà è `null`, o quando la raccolta specificata dal `ItemsSource` proprietà è `null` o vuoto. Il valore predefinito è `null`.
-- `EmptyViewTemplate`, di tipo [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), il modello da utilizzare per formattare l'oggetto specificato `EmptyView`. Il valore predefinito è `null`.
+- [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView), di tipo `object`, la stringa, associazione o vista che verrà visualizzato quando il [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) proprietà è `null`, o quando la raccolta specificata dal `ItemsSource` proprietà è `null` o vuoto. Il valore predefinito è `null`.
+- [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate), di tipo [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), il modello da utilizzare per formattare l'oggetto specificato `EmptyView`. Il valore predefinito è `null`.
 
 Queste proprietà sono supportate da [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) oggetti, che significa che le proprietà possono essere destinazioni di associazioni dati.
 
-Gli scenari di utilizzo principali per l'impostazione di `EmptyView` proprietà vengono visualizzati commenti degli utenti quando un'operazione di filtraggio su un `CollectionView` non produce alcuna dati e la visualizzazione dei commenti degli utenti durante il recupero dei dati da un servizio web.
+Gli scenari di utilizzo principali per l'impostazione di [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) proprietà vengono visualizzati commenti degli utenti quando un'operazione di filtraggio su un [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) non produce alcuna dati e la visualizzazione dei commenti degli utenti durante dati vengono recuperati da un servizio web.
 
 > [!NOTE]
-> Il `EmptyView` può essere impostata su una vista che include contenuti interattivi, se necessario.
+> Il [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) può essere impostata su una vista che include contenuti interattivi, se necessario.
 
 Per altre informazioni sui modelli di dati, vedere [Modelli di dati Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="display-a-string-when-data-is-unavailable"></a>Visualizzare una stringa quando i dati non sono disponibili
 
-Il `EmptyView` proprietà può essere impostata su una stringa, in cui è visualizzato quando il `ItemsSource` proprietà è `null`, o quando la raccolta specificata per il `ItemsSource` proprietà è `null` o vuoto. il XAML seguente viene illustrato un esempio di questo scenario:
+Il [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) proprietà può essere impostata su una stringa, in cui è visualizzato quando il [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) proprietà è `null`, o quando la raccolta specificata per il `ItemsSource` è di proprietà `null` o vuoto. il XAML seguente viene illustrato un esempio di questo scenario:
 
 ```xaml
 <CollectionView ItemsSource="{Binding EmptyMonkeys}"
@@ -53,13 +51,13 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "EmptyMonkeys");
 ```
 
-Il risultato è che, perché i dati associati insieme `null`, imposta la stringa come il `EmptyView` viene visualizzato il valore di proprietà:
+Il risultato è che, perché i dati associati insieme `null`, imposta la stringa come il [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) viene visualizzato il valore di proprietà:
 
 [![Screenshot di un elenco verticale di visualizzazione di raccolta con una vista vuota di testo, in iOS e Android](emptyview-images/null-itemssource.png "CollectionView elenco verticale con la visualizzazione di testo vuota")](emptyview-images/null-itemssource-large.png#lightbox "CollectionView elenco verticale con testo vuoto visualizzazione")
 
 ## <a name="display-views-when-data-is-unavailable"></a>Visualizzare le visualizzazioni quando i dati non sono disponibili
 
-Il `EmptyView` può essere impostata su una vista, che sarà visualizzato quando il `ItemsSource` proprietà è `null`, o quando la raccolta specificata per il `ItemsSource` proprietà è `null` o vuoto. Può trattarsi di una singola visualizzazione o una vista contenente più visualizzazioni figlio. L'esempio XAML seguente viene illustrato il `EmptyView` proprietà è impostata su una visualizzazione contenente più visualizzazioni figlio:
+Il [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) può essere impostata su una vista, che sarà visualizzato quando il [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) proprietà è `null`, o quando la raccolta specificata per il `ItemsSource` è di proprietà `null` o vuoto. Può trattarsi di una singola visualizzazione o una vista contenente più visualizzazioni figlio. L'esempio XAML seguente viene illustrato il `EmptyView` proprietà è impostata su una visualizzazione contenente più visualizzazioni figlio:
 
 ```xaml
 <StackLayout Margin="20">
@@ -110,13 +108,13 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-Quando il [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) esegue il `FilterCommand`, la raccolta visualizzata per il `CollectionView` viene filtrato per il termine di ricerca archiviate nel [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) proprietà. Se l'operazione di filtro restituisce dati non sono disponibili i [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) imposta come il `EmptyView` viene visualizzato il valore di proprietà:
+Quando il [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) esegue il `FilterCommand`, la raccolta visualizzata per il [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) viene filtrato per il termine di ricerca archiviate nel [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) proprietà. Se l'operazione di filtro restituisce dati non sono disponibili i [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) imposta come il [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) viene visualizzato il valore di proprietà:
 
 [![Schermata di elenco verticale CollectionView con vista vuota personalizzata, su iOS e Android](emptyview-images/filter-multiple-views.png "CollectionView elenco verticale con vista vuota personalizzata")](emptyview-images/filter-multiple-views-large.png#lightbox "CollectionView elenco verticale con personalizzato vista vuota")
 
 ## <a name="display-a-templated-custom-type-when-data-is-unavailable"></a>Visualizzare un tipo personalizzato basato su modelli quando i dati non sono disponibili
 
-Il `EmptyView` può essere impostata su un tipo personalizzato, il cui modello è visualizzato quando il `ItemsSource` proprietà è `null`, o quando la raccolta specificata per il `ItemsSource` proprietà è `null` o vuoto. Il `EmptyViewTemplate` può essere impostata su una [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) che definisce l'aspetto del `EmptyView`. il XAML seguente viene illustrato un esempio di questo scenario:
+Il [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) può essere impostata su un tipo personalizzato, il cui modello viene visualizzato quando il [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) proprietà è `null`, o quando la raccolta specificata per il `ItemsSource`è di proprietà `null` o vuoto. Il [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) può essere impostata su un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) che definisce l'aspetto del `EmptyView`. il XAML seguente viene illustrato un esempio di questo scenario:
 
 ```xaml
 <StackLayout Margin="20">
@@ -176,16 +174,16 @@ public class FilterData : BindableObject
 }
 ```
 
-Il `EmptyView` è impostata su una `FilterData` oggetto e il `Filter` esegue l'associazione dati di proprietà per il [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) proprietà. Quando il [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) esegue il `FilterCommand`, la raccolta visualizzata per il `CollectionView` viene filtrato per il termine di ricerca archiviate nel `Filter` proprietà. Se l'operazione di filtro restituisce dati non sono disponibili i [ `Label` ](xref:Xamarin.Forms.Label) definito nel [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), che viene impostato come il `EmptyViewTemplate` valore della proprietà, viene visualizzato:
+Il [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) è impostata su un `FilterData` oggetto e il `Filter` esegue l'associazione dati di proprietà per i [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) proprietà. Quando il [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) esegue il `FilterCommand`, la raccolta visualizzata per il [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) viene filtrato per il termine di ricerca archiviate nel `Filter` proprietà. Se l'operazione di filtro restituisce dati non sono disponibili i [ `Label` ](xref:Xamarin.Forms.Label) definito nel [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), che viene impostato come il [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) valore della proprietà, è visualizzato:
 
 [![Screenshot di un elenco verticale di visualizzazione di raccolta con un modello di visualizzazione vuota, in iOS e Android](emptyview-images/emptyviewtemplate.png "CollectionView elenco verticale con modello di vista vuota")](emptyview-images/emptyviewtemplate-large.png#lightbox "CollectionView elenco verticale con modello di vista vuota")
 
 > [!NOTE]
-> La visualizzazione di un tipo personalizzato basato su modelli quando i dati non sono disponibili, il `EmptyViewTemplate` può essere impostata su una visualizzazione contenente più visualizzazioni figlio.
+> La visualizzazione di un tipo personalizzato basato su modelli quando i dati non sono disponibili, il [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) può essere impostata su una visualizzazione contenente più visualizzazioni figlio.
 
 ## <a name="choose-an-emptyview-at-runtime"></a>Scegliere un EmptyView in fase di esecuzione
 
-Le viste che verranno visualizzate come un `EmptyView` quando i dati non sono disponibili, può essere definita come [ `ContentView` ](xref:Xamarin.Forms.ContentView) gli oggetti in un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary). Il `EmptyView` può quindi essere impostata su uno specifico `ContentView`, in base a una logica di business, in fase di esecuzione. Nell'esempio XAML seguente mostra un esempio di questo scenario:
+Le viste che verranno visualizzate come un [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) quando i dati non sono disponibili, può essere definita come [ `ContentView` ](xref:Xamarin.Forms.ContentView) gli oggetti in un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary). Il `EmptyView` può quindi essere impostata su uno specifico `ContentView`, in base a una logica di business, in fase di esecuzione. Nell'esempio XAML seguente mostra un esempio di questo scenario:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -242,7 +240,7 @@ Le viste che verranno visualizzate come un `EmptyView` quando i dati non sono di
 </ContentPage>
 ```
 
-Questo XAML definisce due [ `ContentView` ](xref:Xamarin.Forms.ContentView) oggetti nel livello di pagina [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), con la [ `Switch` ](xref:Xamarin.Forms.Switch) oggetto controllo cui `ContentView` oggetto verrà impostato come il `EmptyView` valore della proprietà. Quando il [ `Switch` ](xref:Xamarin.Forms.Switch) viene attivato/disattivato, il `OnEmptyViewSwitchToggled` gestore eventi viene eseguito il `ToggleEmptyView` metodo:
+Questo XAML definisce due [ `ContentView` ](xref:Xamarin.Forms.ContentView) oggetti nel livello di pagina [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), con la [ `Switch` ](xref:Xamarin.Forms.Switch) oggetto controllo cui `ContentView` oggetto verrà impostato come le [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) valore della proprietà. Quando il [ `Switch` ](xref:Xamarin.Forms.Switch) viene attivato/disattivato, il `OnEmptyViewSwitchToggled` gestore eventi viene eseguito il `ToggleEmptyView` metodo:
 
 ```csharp
 void ToggleEmptyView(bool isToggled)
@@ -251,7 +249,7 @@ void ToggleEmptyView(bool isToggled)
 }
 ```
 
-Il `ToggleEmptyView` metodo imposta la `EmptyView` proprietà del `collectionView` oggetto in uno dei due [ `ContentView` ](xref:Xamarin.Forms.ContentView) gli oggetti archiviati nel [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), basato sul valore della [ `Switch.IsToggled` ](xref:Xamarin.Forms.Switch.IsToggled) proprietà. Quando il [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) esegue il `FilterCommand`, la raccolta visualizzata per il `CollectionView` viene filtrato per il termine di ricerca archiviate nel [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) proprietà. Se l'operazione di filtro restituisce dati non sono disponibili i `ContentView` oggetto impostato come il `EmptyView` proprietà viene visualizzata:
+Il `ToggleEmptyView` metodo imposta la [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) proprietà del `collectionView` oggetto in uno dei due [ `ContentView` ](xref:Xamarin.Forms.ContentView) gli oggetti archiviati nel [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), basato sul valore della [ `Switch.IsToggled` ](xref:Xamarin.Forms.Switch.IsToggled) proprietà. Quando il [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) esegue il `FilterCommand`, la raccolta visualizzata per il [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) viene filtrato per il termine di ricerca archiviate nel [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) proprietà. Se l'operazione di filtro restituisce dati non sono disponibili i `ContentView` oggetto impostato come il `EmptyView` proprietà viene visualizzata:
 
 [![Screenshot di un elenco verticale di visualizzazione di raccolta con visualizzazioni vuote invertite, in iOS e Android](emptyview-images/swap.png "CollectionView elenco verticale con le visualizzazioni vuote invertite")](emptyview-images/swap-large.png#lightbox "CollectionView elenco verticale con scambiare le visualizzazioni vuote")
 
@@ -259,7 +257,7 @@ Per altre informazioni sui dizionari risorse, vedere [dizionari risorse xamarin.
 
 ## <a name="choose-an-emptyviewtemplate-at-runtime"></a>Scegliere un EmptyViewTemplate in fase di esecuzione
 
-L'aspetto del `EmptyView` possono essere scelte in fase di esecuzione, in base al relativo valore, impostando il `CollectionView.EmptyViewTemplate` proprietà su un [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) oggetto:
+L'aspetto del [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) possono essere scelte in fase di esecuzione, in base al relativo valore, impostando il [ `CollectionView.EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) proprietà su un [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) oggetto:
 
 ```xaml
 <ContentPage ...
@@ -302,9 +300,9 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-Il `EmptyView` è impostata sul [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) proprietà e il `EmptyViewTemplate` è impostata su un `SearchTermDataTemplateSelector` oggetto.
+Il [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) è impostata sul [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) proprietà e il [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) è impostata su un `SearchTermDataTemplateSelector` oggetto.
 
-Quando il [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) esegue il `FilterCommand`, la raccolta visualizzata per il `CollectionView` viene filtrato per il termine di ricerca archiviate nel [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) proprietà. Se l'operazione di filtro restituisce dati non sono disponibili i [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) scelti dal `SearchTermDataTemplateSelector` oggetto viene impostato come il `EmptyViewTemplate` proprietà e visualizzati.
+Quando il [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) esegue il `FilterCommand`, la raccolta visualizzata per il [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) viene filtrato per il termine di ricerca archiviate nel [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) proprietà. Se l'operazione di filtro restituisce dati non sono disponibili i [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) scelti dal `SearchTermDataTemplateSelector` oggetto viene impostato come il [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) proprietà e visualizzati.
 
 L'esempio seguente illustra il `SearchTermDataTemplateSelector` classe:
 

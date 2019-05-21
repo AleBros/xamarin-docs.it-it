@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: b0e2d5e3c7923e5c3cf2adcc1dd104a97b78e727
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 28846e6e9590d2adf56114fce8bc6056c0112ac1
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61321560"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970972"
 ---
 # <a name="bindable-layouts-in-xamarinforms"></a>Layout associabile in xamarin. Forms
 
@@ -31,8 +31,10 @@ Queste proprietà possono essere collegate per la [ `AbsoluteLayout` ](xref:Xama
 
 Il `Layout<T>` classe espone un [ `Children` ](xref:Xamarin.Forms.Layout`1.Children) insieme, in cui vengono aggiunti gli elementi figlio di un layout. Quando la `BinableLayout.ItemsSource` proprietà è impostata su una raccolta di elementi e collegato a un [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1)-viene aggiunta la classe derivata, ogni elemento nella raccolta la `Layout<T>.Children` raccolta per la visualizzazione per il layout. Il `Layout<T>`-classe derivata aggiornerà le relative visualizzazioni figlio quando viene modificata la raccolta sottostante. Per altre informazioni sul ciclo di layout di xamarin. Forms, vedere [creazione di un Layout personalizzato](~/xamarin-forms/user-interface/layouts/custom.md).
 
+Layout associabili deve essere utilizzato solo quando la raccolta di elementi da visualizzare è piccola e lo scorrimento e la selezione non è necessaria. Durante lo scorrimento è possibile specificare eseguendo il wrapping di un layout associabile in una [ `ScrollView` ](xref:Xamarin.Forms.ScrollView), ciò non è consigliata perché layout associabile non dispongono di virtualizzazione dell'interfaccia utente. Una visualizzazione scorrevole che comprende la virtualizzazione dell'interfaccia utente, ad esempio, quando lo scorrimento è necessario [ `ListView` ](xref:Xamarin.Forms.ListView) oppure [ `CollectionView` ](xref:Xamarin.Forms.CollectionView), deve essere utilizzato. Il mancato rispetto di questa raccomandazione può causare problemi di prestazioni.
+
 > [!IMPORTANT]
-> Layout associabili deve essere utilizzato solo quando la raccolta di elementi da visualizzare è piccola e lo scorrimento e la selezione non è necessaria. Durante lo scorrimento è possibile specificare eseguendo il wrapping di un layout associabile in una [ `ScrollView` ](xref:Xamarin.Forms.ScrollView), ciò non è consigliata perché layout associabile non dispongono di virtualizzazione dell'interfaccia utente. Una visualizzazione scorrevole che comprende la virtualizzazione dell'interfaccia utente, ad esempio, quando lo scorrimento è necessario [ `ListView` ](xref:Xamarin.Forms.ListView) o `CollectionView`, deve essere utilizzato. Il mancato rispetto di questa raccomandazione può causare problemi di prestazioni.
+>Sebbene sia tecnicamente possibile collegare un layout associabile a qualsiasi classe di layout da cui deriva il [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) (classe), non è sempre pratico eseguire questa operazione, in particolare per il [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) , [ `Grid` ](xref:Xamarin.Forms.Grid), e [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) classi. Ad esempio, si consideri lo scenario di si desideri visualizzare una raccolta di dati in un [ `Grid` ](xref:Xamarin.Forms.Grid) utilizzando un layout associabile, in cui ogni elemento nella raccolta è un oggetto che contiene più proprietà. Ogni riga nel `Grid` dovrebbe visualizzare un oggetto dalla raccolta, con ogni colonna il `Grid` visualizzazione di una delle proprietà dell'oggetto. Poiché il [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) per il layout associabile può contenere solo un singolo oggetto, è necessario per l'oggetto sia una classe di layout che contiene più viste in ciascuno dei quali una delle proprietà dell'oggetto in una determinata `Grid` colonna. Sebbene questo scenario può essere realizzato con layout associabile, il risultato è un elemento padre `Grid` contenente un elemento figlio `Grid` per ciascun elemento della raccolta associata, ovvero un utilizzo estremamente inefficiente e problemi di `Grid` layout.
 
 ## <a name="populating-a-bindable-layout-with-data"></a>Popolamento di un layout con i dati associabile
 

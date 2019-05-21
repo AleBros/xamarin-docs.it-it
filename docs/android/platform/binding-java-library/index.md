@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 0f4ec3cfd7c154e43db9f8e123259317c0d17e21
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 016ac7269f334f6df7fba9635897b9608f459284
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60957439"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970209"
 ---
 # <a name="binding-a-java-library"></a>Associazione di una libreria Java
 
@@ -70,7 +70,7 @@ Quando si associa una libreria Android esistente, è necessario tenere presente 
 
 * **Sono presenti le dipendenze esterne per la libreria?** &ndash; Eventuali dipendenze Java richieste dalla libreria di Android devono essere incluso nel progetto xamarin. Android come un **ReferenceJar** o come un **EmbeddedReferenceJar**. Qualsiasi assembly nativi deve essere aggiunto al progetto di associazione come un **EmbeddedNativeLibrary**.  
 
-* **Versione dell'API Android inclusa se la destinazione di libreria Android.** &ndash; Non è possibile effettuare "il downgrade di" livello di API Android. Assicurarsi che il progetto di associazione di xamarin. Android è destinato alla stessa API livello (o versione successiva) come la libreria Android.
+* **Quale versione dell'API Android non Android destinazione di libreria?** &ndash; Non è possibile effettuare "il downgrade di" livello di API Android. Assicurarsi che il progetto di associazione di xamarin. Android è destinato alla stessa API livello (o versione successiva) come la libreria Android.
 
 * **Quale versione del pacchetto JDK è stato usato per compilare la libreria?** &ndash; Se la libreria Android è stata creata con una versione diversa di JDK più in uso da xamarin. Android, potrebbero verificarsi errori di associazione. Se possibile, ricompilare la libreria Android usando la stessa versione di JDK che viene usato per l'installazione di xamarin. Android.
 
