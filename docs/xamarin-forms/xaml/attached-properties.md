@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 130f4e3efdd7b3792f6458ad28fc85654e6e38c8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c1fb596abb580cf42edda21ab71f2c70de59a547
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60857432"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65924558"
 ---
 # <a name="attached-properties"></a>Proprietà associate
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
 
 _Una proprietà associata è un tipo speciale di proprietà associabile, definito in una classe ma collegato ad altri oggetti e riconoscibile in XAML come attributo che contiene una classe e un nome di proprietà separati da un punto. Questo articolo fornisce un'introduzione alle proprietà associate e viene illustrato come creare e il loro uso._
 
@@ -126,7 +126,7 @@ Le proprietà associate possono anche essere aggiunto a un controllo da uno stil
 </Style>
 ```
 
-Il [ `Style` ](xref:Xamarin.Forms.Style) può essere applicato a un [ `Label` ](xref:Xamarin.Forms.Label) impostando relativo [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) proprietà per il `Style` istanza utilizzando il `StaticResource`estensione di markup, come illustrato nell'esempio di codice seguente:
+Il [ `Style` ](xref:Xamarin.Forms.Style) può essere applicato a un [ `Label` ](xref:Xamarin.Forms.Label) impostando relativo [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) proprietà per il `Style` istanza utilizzando il `StaticResource`estensione di markup, come illustrato nell'esempio di codice seguente:
 
 ```xaml
 <Label Text="Label Shadow Effect" Style="{StaticResource ShadowEffectStyle}" />
@@ -147,6 +147,6 @@ Questo articolo ha presentato le proprietà associate ed è stato illustrato com
 
 - [Proprietà associabili](~/xamarin-forms/xaml/bindable-properties.md)
 - [Spazi dei nomi XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Effetto di ombreggiatura (esempio)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+- [Effetto di ombreggiatura (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
 - [BindableProperty](xref:Xamarin.Forms.BindableProperty)
 - [BindableObject](xref:Xamarin.Forms.BindableObject)

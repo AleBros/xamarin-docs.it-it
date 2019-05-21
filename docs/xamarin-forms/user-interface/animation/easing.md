@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 211f56e0d9f96383670be1d60421d3ac28eabe46
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3532a557c6ed958974326ca79ad160b01e9b5289
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61345574"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926685"
 ---
 # <a name="easing-functions-in-xamarinforms"></a>Funzioni di interpolazione in xamarin. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/easing/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Animation/Easing/)
 
 _Xamarin. Forms include una classe di interpolazione che consente di specificare una funzione di trasferimento che controlla la modalità animazioni velocizzare o rallentano poiché sono in esecuzione. Questo articolo illustra come usare le funzioni di interpolazione predefinite e come creare funzioni di interpolazione personalizzate._
 
@@ -112,6 +112,6 @@ L'articolo descrive come usare le funzioni di interpolazione predefinite e come 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Panoramica del supporto asincrono](~/cross-platform/platform/async.md)
-- [Funzioni di interpolazione (esempio)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/easing/)
+- [Funzioni di interpolazione (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Animation/Easing/)
 - [Interpolazione](xref:Xamarin.Forms.Easing)
 - [ViewExtensions](xref:Xamarin.Forms.ViewExtensions)

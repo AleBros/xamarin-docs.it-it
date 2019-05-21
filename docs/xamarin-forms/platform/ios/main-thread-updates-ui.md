@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 56109cc9064de4b995e75ceb967abe4995504660
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b9f39cd33d660999cfa00f2003edab7af731ca7c
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60953396"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925712"
 ---
 # <a name="main-thread-control-updates-on-ios"></a>Aggiornamenti di controllo del Thread principale in iOS
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Questo specifico della piattaforma iOS consente il layout dei controlli e gli aggiornamenti da eseguire sul thread principale, invece di viene eseguita su un thread in background di rendering. Si dovrebbe essere necessario raramente, ma in alcuni casi potrebbe impedire arresti anomali del sistema. Relativo utilizzate in XAML, impostando il `Application.HandleControlUpdatesOnMainThread` la proprietà associabile per `true`:
 
@@ -42,6 +42,6 @@ Il `Application.On<iOS>` metodo consente di specificare che questo specifico del
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [PlatformSpecifics (esempio)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Creazione di funzionalità specifiche della piattaforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

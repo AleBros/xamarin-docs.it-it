@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: f14014b257ee5061b6dd074719c3ca27577c6013
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c480f398c37ce43b634e0ec1c955b965466757f1
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60854941"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926849"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>VisualElement tasti di Windows
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Chiavi di accesso sono scelte rapide da tastiera che consentono di migliorare l'usabilità e accessibilità dell'App in Universal Windows Platform (UWP), fornendo un modo intuitivo per gli utenti di passare rapidamente e interagire con l'interfaccia utente visibile dell'app tramite la tastiera anziché tramite tocco o un mouse. Sono combinazioni di uno o più tasti alfanumerici, in genere premuti in sequenza e il tasto Alt. Tasti di scelta rapida sono automaticamente supportati per le chiavi di accesso che utilizzano un singolo carattere alfanumerico.
 
@@ -104,6 +104,6 @@ Per altre informazioni sulle chiavi di accesso, vedere [chiavi di accesso](/wind
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [PlatformSpecifics (esempio)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Creazione di funzionalità specifiche della piattaforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

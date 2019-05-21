@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: ec41955ac15ab23579a5e63b9e17eed61a74e86f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: adafcb85f4e3d3bd93f7b2afe69c0ca0bb37f3d0
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61393727"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926614"
 ---
 # <a name="styling-xamarinforms-apps-using-xaml-styles"></a>Applicazione di stili alle app Xamarin.Forms con gli stili XAML
 
@@ -22,7 +22,7 @@ Le applicazioni xamarin. Forms contengono spesso più controlli che hanno un asp
 
 ## <a name="explicit-stylesexplicitmd"></a>[Stili espliciti](explicit.md)
 
-Un' *esplicite* stile di visualizzazione è quello che viene applicato in modo selettivo a controlli impostando loro [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) proprietà.
+Un' *esplicite* stile di visualizzazione è quello che viene applicato in modo selettivo a controlli impostando loro [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) proprietà.
 
 ## <a name="implicit-stylesimplicitmd"></a>[Stili impliciti](implicit.md)
 

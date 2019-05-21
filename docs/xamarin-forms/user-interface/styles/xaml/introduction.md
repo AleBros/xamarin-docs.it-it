@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 4048ec78d48b810b39d46fbcb7708860c478cce3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bc0173df1d4318af7db945d1c5ed6654282e31f5
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61023422"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65927005"
 ---
 # <a name="introduction-to-xamarinforms-styles"></a>Introduzione a xamarin. Forms stili
 
@@ -107,7 +107,7 @@ Ciascuna [ `Style` ](xref:Xamarin.Forms.Style) istanza contiene una raccolta di 
 
 Ciascuna [ `Style` ](xref:Xamarin.Forms.Style) istanza può essere *esplicita*, oppure *implicita*:
 
-- Un' *esplicite* [ `Style` ](xref:Xamarin.Forms.Style) istanza viene definita specificando un [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) e un `x:Key` valore e impostando l'elemento di destinazione [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) proprietà di `x:Key` riferimento. Per altre informazioni sulle *esplicite* stili, vedere [stili espliciti](~/xamarin-forms/user-interface/styles/explicit.md).
+- Un' *esplicite* [ `Style` ](xref:Xamarin.Forms.Style) istanza viene definita specificando un [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) e un `x:Key` valore e impostando l'elemento di destinazione [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) proprietà di `x:Key` riferimento. Per altre informazioni sulle *esplicite* stili, vedere [stili espliciti](~/xamarin-forms/user-interface/styles/explicit.md).
 - Un' *implicita* [ `Style` ](xref:Xamarin.Forms.Style) istanza viene definita specificando solo un [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType). Il `Style` istanza verrà automaticamente applicata a tutti gli elementi di quel tipo. Si noti che rappresenti le sottoclassi del `TargetType` non hanno automaticamente la `Style` applicato. Per altre informazioni sulle *implicita* stili, vedere [stili impliciti](~/xamarin-forms/user-interface/styles/implicit.md).
 
 Quando si crea una [ `Style` ](xref:Xamarin.Forms.Style), il [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) proprietà è sempre obbligatorio. Il codice seguente esempio illustra un' *esplicita* stile (nota di `x:Key`) creati in XAML:

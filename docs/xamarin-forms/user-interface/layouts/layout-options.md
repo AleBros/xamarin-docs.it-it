@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/10/2017
-ms.openlocfilehash: a78911a13ca3682a18b0911d020d98445b4f560c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: afeae9d893b2ebe161943286d348f7a7a1074b0b
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61370986"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925394"
 ---
 # <a name="layout-options-in-xamarinforms"></a>Opzioni di layout in xamarin. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutoptions/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/LayoutOptions/)
 
 _Tutte le visualizzazioni di xamarin. Forms ha proprietà HorizontalOptions e VerticalOptions, di tipo LayoutOptions. Questo articolo illustra l'effetto ogni valore LayoutOptions sull'allineamento e espansione di una vista._
 
@@ -160,5 +160,5 @@ Questo articolo ha illustrato l'effetto che ogni [ `LayoutOptions` ](xref:Xamari
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [LayoutOptions (esempio)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutoptions/)
+- [LayoutOptions (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/LayoutOptions/)
 - [LayoutOptions](xref:Xamarin.Forms.LayoutOptions)
