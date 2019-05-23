@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 68e28fcbe6a64834d3b594f7f639a1cdd990370d
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: d2729250c0f991564ae70ddf6a15b40425ed6c46
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970578"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005272"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Xamarin. Forms visualizzazione di raccolta dati
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+![](~/media/shared/preview.png "Quest'API è attualmente in versione non definitiva")
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) definisce le proprietà seguenti che definiscono i dati da visualizzare e l'aspetto del controllo:
 
@@ -242,7 +244,7 @@ Per altre informazioni sui selettori di modello di dati, vedere [creare un DataT
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Visualizzazione di raccolta (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+- [Visualizzazione di raccolta (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 - [Associazione dati di xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Modelli di dati di xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Creare un DataTemplateSelector xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

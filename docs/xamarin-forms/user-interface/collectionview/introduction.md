@@ -7,20 +7,28 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 2ee7b2c203251e519af088a550e7e26f30aa62c8
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 889c78ea6849cdd094d34ed0cf74ceebd33ce51d
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971092"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005145"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Introduzione a xamarin. Forms CollectionView
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+![](~/media/shared/preview.png "Quest'API è attualmente in versione non definitiva")
+
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) è una vista per presentare elenchi di dati usando le specifiche di un layout diverso. L'obiettivo è fornire una più flessibile ed efficace alternativa per [ `ListView` ](xref:Xamarin.Forms.ListView). Ad esempio, le schermate seguenti illustrano un `CollectionView` che utilizza una griglia verticale a due colonne e che consente la selezione multipla:
 
 [![Screenshot di un layout di griglia verticali CollectionView, su iOS e Android](introduction-images/verticalgrid-multipleselection.png "layout di griglia verticali CollectionView con selezione multipla")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "layout di griglia verticali CollectionView con selezione multipla")
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) è disponibile in xamarin. Forms 4.0. Tuttavia, è attualmente in fase sperimentale e può essere usato solo aggiungendo la riga seguente di codice per il `AppDelegate` classe in iOS o alle `MainActivity` classe in Android, prima di chiamare `Forms.Init`:
+
+```csharp
+Forms.SetFlags("CollectionView_Experimental");
+```
 
 > [!IMPORTANT]
 > [`CollectionView`](xref:Xamarin.Forms.CollectionView) è disponibile solo in iOS e Android.
@@ -57,4 +65,4 @@ Mentre il [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) e [ `ListView`
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Visualizzazione di raccolta (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+- [Visualizzazione di raccolta (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
