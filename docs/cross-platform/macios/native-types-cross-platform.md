@@ -6,12 +6,12 @@ ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 author: asb3993
 ms.author: amburns
 ms.date: 04/07/2016
-ms.openlocfilehash: 489d2a76e6eff661360b24d1872ed1343c74b85e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 847566feec2069dea924bcd2a18abf2b3ddb250b
+ms.sourcegitcommit: b986460787677cf8c2fc7cc8c03f4bc60c592120
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261181"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66213281"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Utilizzo di tipi nativi nelle app multipiattaforma
 
@@ -36,9 +36,9 @@ Come indicato nella [opzioni di condivisione del codice](~/cross-platform/app-fu
 
 ### <a name="portable-class-library-projects"></a>Progetti libreria di classi portabile
 
-Una libreria di classi portabile (PCL) consente di eseguire le piattaforme che si desidera supportare e usare le interfacce per fornire funzionalità specifiche della piattaforma di destinazione.
+Una libreria di classi portabile (PCL) consente di interagire con le piattaforme che si desidera supportare e usare le interfacce per fornire funzionalità specifiche della piattaforma.
 
-Poiché il tipo di progetto libreria di classi Portabile è compilato verso il basso in un `.DLL` e non ha alcun significato dell'API unificata, saranno costretti a continuare a usare i tipi di dati esistente (`int`, `uint`, `float`) libreria di classi Portabile il codice sorgente e il tipo viene eseguito il cast le chiamate per le librerie di classi portabili classi e metodi nelle applicazioni front-end. Di seguito è riportato un esempio:
+Poiché il tipo di progetto libreria di classi Portabile è compilato verso il basso in un `.DLL` e non ha alcun significato dell'API unificata, saranno costretti a continuare a usare i tipi di dati esistente (`int`, `uint`, `float`) libreria di classi Portabile il codice sorgente e il tipo viene eseguito il cast le chiamate per la libreria di classi Portabile classi e metodi nelle applicazioni front-end. Ad esempio:
 
 ```csharp
 using NativePCL;
@@ -52,7 +52,7 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 Il tipo di progetto Asset condiviso consente di organizzare il codice sorgente in un progetto separato che recupera quindi incluso e compilato nelle singole specifiche della piattaforma front-end App e usare `#if` secondo necessità per gestire le direttive del compilatore requisiti specifici della piattaforma.
 
-Dimensioni e della complessità della parte anteriore terminare le applicazioni per dispositivi mobili che utilizzano codice condiviso, oltre a dimensioni e la complessità del codice condiviso, è necessario essere preso in considerazione la scelta del metodo di supporto nativo dei dati dei tipi di cross-platform con di Tipo di progetto Asset condiviso.
+Le dimensioni e complessità delle applicazioni front-end per dispositivi mobili che utilizzano codice condiviso, oltre a dimensioni e la complessità del codice condiviso, è necessario tenere conto quando si sceglie il metodo di supporto per tipi di dati nativi in multi-piattaforma Progetto di Asset condivisi.
 
 In base a questi fattori, i seguenti tipi di soluzioni potrebbero essere implementati utilizzando il `if __UNIFIED__ ... #endif` direttive del compilatore per gestire le modifiche specifiche API unificata per il codice.
 
@@ -103,7 +103,7 @@ Nel codice precedente, poiché il `CalculateArea` routine è molto semplice, abb
 
 #### <a name="using-method-overloads"></a>Overload di metodo
 
-In tal caso, potrebbe essere la soluzione per creare una versione di overload dei metodi mediante i tipi di dati a 32 bit in modo che seguano ora `CGRect` come parametro e/o valore restituito, convertire tale valore a una `RectangleF` (sapendo che la conversione da `nfloat` per `float` è una conversione con perdita di dati) e chiamare la versione originale della routine per svolgere il lavoro effettivo. Ad esempio:
+In tal caso, potrebbe essere la soluzione per creare una versione di overload dei metodi mediante i tipi di dati a 32 bit in modo che seguano ora `CGRect` come parametro e/o un valore restituito, convertire tale valore a una `RectangleF` (sapendo che la conversione da `nfloat` a `float` viene eseguita una conversione con perdita di dati) e chiamare la versione originale della routine per svolgere il lavoro effettivo. Ad esempio:
 
 ```csharp
 using System;
@@ -127,8 +127,8 @@ namespace NativeShared
         #if __UNIFIED__
             public static nfloat CalculateArea(CGRect rect) {
 
-            // Call original routine to calculate area
-            return (nfloat)CalculateArea((RectangleF)rect);
+                // Call original routine to calculate area
+                return (nfloat)CalculateArea((RectangleF)rect);
 
             }
         #endif
@@ -173,12 +173,12 @@ using System;
 using System.Drawing;
 
 #if __UNIFIED__
-    // Mappings Unified CoreGraphic classes to MonoTouch classes
+    // Map Unified CoreGraphic classes to MonoTouch classes
     using RectangleF = global::CoreGraphics.CGRect;
     using SizeF = global::CoreGraphics.CGSize;
     using PointF = global::CoreGraphics.CGPoint;
 #else
-    // Mappings Unified types to MonoTouch types
+    // Map Unified types to MonoTouch types
     using nfloat = global::System.Single;
     using nint = global::System.Int32;
     using nuint = global::System.UInt32;
@@ -207,14 +207,14 @@ namespace NativeShared
 }
 ```
 
-Si noti che qui abbiamo modificato la `CalculateArea` metodo restituiscono una `nfloat` invece dello standard `float`. Tale operazione viene eseguita in modo che non si otterrebbe un errore di compilazione tentando _in modo implicito_ convertire le `nfloat` risultato del calcolo (poiché sono entrambi i valori che viene moltiplicati `nfloat`) in un `float` valore restituito.
+Si noti che qui abbiamo modificato la `CalculateArea` per restituire un' `nfloat` invece dello standard `float`. Tale operazione viene eseguita in modo che non si otterrebbe un errore di compilazione tentando _in modo implicito_ convertire le `nfloat` risultato del calcolo (poiché entrambi i valori che viene moltiplicati sono di tipo `nfloat`) in un `float` valore restituito.
 
 Se il codice viene compilato ed eseguito in un dispositivo non API unificata, il `using nfloat = global::System.Single;` viene eseguito il mapping di `nfloat` a un `Single` che convertirà in modo implicito in un `float` consentendo all'applicazione front-end dispendiosa in termini di chiamare il `CalculateArea` metodo senza modifica.
 
 
 #### <a name="using-type-conversions-in-the-front-end-app"></a>Usa le conversioni di tipo nell'App Front-End
 
-Nel caso in cui le applicazioni front-end solo apportano un numero limitato di chiamate alla libreria di codice condiviso, un'altra soluzione potrebbe essere quello di lasciare la libreria non modificata e cast di tipo nell'applicazione xamarin. IOS o xamarin. Mac quando si chiama la routine esistente. Di seguito è riportato un esempio:
+Nel caso in cui le applicazioni front-end solo apportano un numero limitato di chiamate alla libreria di codice condiviso, un'altra soluzione potrebbe essere quello di lasciare la libreria non modificata e cast di tipo nell'applicazione xamarin. IOS o xamarin. Mac quando si chiama la routine esistente. Ad esempio:
 
 ```csharp
 using NativeShared;
@@ -236,13 +236,13 @@ Di seguito è necessario usare xamarin. Forms per le interfacce utente multipiat
 - L'intera soluzione deve usare versione 1.3.1 (o versione successiva) del pacchetto NuGet xamarin. Forms.
 - Per qualsiasi rendering personalizzato di xamarin. IOS, usare gli stessi tipi di soluzioni presentate nell'esempio precedente basato sul modo in cui il codice dell'interfaccia utente è stato condiviso (progetto condiviso o libreria di classi Portabile).
 
-Come in un'applicazione multipiattaforma standard, l'esistenti a 32 bit i tipi di dati usare in qualsiasi codice condiviso e lo sviluppo multipiattaforma per la maggior parte delle situazioni tutti. Nuovi tipi di dati nativo deve essere utilizzati solo quando si effettua una chiamata a un'API iOS o Mac in cui il supporto per i tipi compatibili con architettura sono necessari.
+Come in un'applicazione multipiattaforma standard, usare i tipi di dati a 32 bit esistenti in qualsiasi codice condiviso e lo sviluppo multipiattaforma per la maggior parte delle situazioni. Nuovi tipi di dati nativo deve essere utilizzati solo quando si effettua una chiamata a un'API iOS o Mac in cui il supporto per i tipi compatibili con architettura è obbligatorio.
 
 Per altre informazioni, vedere la [l'aggiornamento di App xamarin. Forms esistente](https://developer.xamarin.com/guides/cross-platform/macios/updating-xamarin-forms-apps/) documentazione.
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo abbiamo vedere quando è necessario usare i tipi di dati nativi in un'applicazione API unificata e le implicazioni lo sviluppo multipiattaforma. Abbiamo presentato diverse soluzioni che possono essere usate in situazioni in cui è necessario usare nuovi tipi di dati nativi nelle librerie multipiattaforma. E abbiamo visto una Guida rapida per il supporto di Unified API nelle applicazioni multipiattaforma con xamarin. Forms.
+In questo articolo è stato descritto quando utilizzare i tipi di dati nativi in un'applicazione API unificata e le implicazioni lo sviluppo multipiattaforma. Abbiamo presentato diverse soluzioni che possono essere usate in situazioni in cui è necessario usare nuovi tipi di dati nativi nelle librerie multipiattaforma. Inoltre, abbiamo visto una Guida rapida per il supporto di Unified API nelle applicazioni multipiattaforma con xamarin. Forms.
 
 
 

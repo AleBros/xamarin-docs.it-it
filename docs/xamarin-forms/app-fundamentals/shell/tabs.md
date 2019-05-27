@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: bc1ca01f4bf5cb8f7ef51c705319fb2cc1a0bd99
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: a8da1e96bbdf51899b1780265933402da791a03e
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054311"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005151"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Schede della shell Xamarin.Forms
 
-![](~/media/shared/preview.png "Quest'API è attualmente in versione non definitiva")
-
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Dopo il riquadro a comparsa, il livello di navigazione successivo in un'applicazione shell è la barra delle schede inferiore. In alternativa, quando il riquadro a comparsa è chiuso, la barra delle schede inferiore viene considerata il livello di navigazione principale.
 
@@ -112,8 +110,8 @@ In alternativa, è possibile usare gli operatori di conversione implicita della 
        x:Class="Xaminals.AppShell"
        FlyoutBehavior="Disabled">
     <FlyoutItem>
-        <views:CatsPage Icon="cat.png" />
-        <views:DogsPage Icon="dog.png" />
+        <views:CatsPage IconImageSource="cat.png" />
+        <views:DogsPage IconImageSource="dog.png" />
     </FlyoutItem>
 </Shell>
 ```
@@ -228,7 +226,7 @@ In alternativa, è possibile usare gli operatori di conversione implicita della 
             <views:CatsPage />
             <views:DogsPage />
         </Tab>
-        <views:MonkeysPage Icon="monkey.png" />
+        <views:MonkeysPage IconImageSource="monkey.png" />
     </FlyoutItem>
 </Shell>
 ```
@@ -268,11 +266,11 @@ Questo codice XAML crea e visualizza `CatsPage`, perché è il primo elemento de
 
 La classe `Shell` definisce le proprietà seguenti che controllano l'aspetto delle schede:
 
-- `ShellTabBarBackgroundColor`, di tipo `Color`, una proprietà associata che definisce il colore di sfondo per la barra delle schede. Se la proprietà non è impostata, viene usato il valore della proprietà `ShellBackgroundColor`.
-- `ShellTabBarDisabledColor`, di tipo `Color`, una proprietà associata che definisce il colore degli elementi disabilitati per la barra delle schede. Se la proprietà non è impostata, viene usato il valore della proprietà `ShellDisabledColor`.
-- `ShellTabBarForegroundColor`, di tipo `Color`, una proprietà associata che definisce il colore primo piano per la barra delle schede. Se la proprietà non è impostata, viene usato il valore della proprietà `ShellForegroundColor`.
-- `ShellTabBarTitleColor`, di tipo `Color`, una proprietà associata che definisce il colore del titolo per la barra delle schede. Se la proprietà non è impostata, viene usato il valore della proprietà `ShellTitleColor`.
-- `ShellTabBarUnselectedColor`, di tipo `Color`, una proprietà associata che definisce il colore degli elementi non selezionati per la barra delle schede. Se la proprietà non è impostata, viene usato il valore della proprietà `ShellUnselectedColor`.
+- `TabBarBackgroundColor`, di tipo `Color`, una proprietà associata che definisce il colore di sfondo per la barra delle schede. Se la proprietà non è impostata, viene usato il valore della proprietà `BackgroundColor`.
+- `TabBarDisabledColor`, di tipo `Color`, una proprietà associata che definisce il colore degli elementi disabilitati per la barra delle schede. Se la proprietà non è impostata, viene usato il valore della proprietà `DisabledColor`.
+- `TabBarForegroundColor`, di tipo `Color`, una proprietà associata che definisce il colore primo piano per la barra delle schede. Se la proprietà non è impostata, viene usato il valore della proprietà `ForegroundColor`.
+- `TabBarTitleColor`, di tipo `Color`, una proprietà associata che definisce il colore del titolo per la barra delle schede. Se la proprietà non è impostata, viene usato il valore della proprietà `TitleColor`.
+- `TabBarUnselectedColor`, di tipo `Color`, una proprietà associata che definisce il colore degli elementi non selezionati per la barra delle schede. Se la proprietà non è impostata, viene usato il valore della proprietà `UnselectedColor`.
 
 Tutte queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) e ciò significa che tali proprietà possono essere destinazioni di data binding.
 
@@ -281,11 +279,11 @@ Lo stile delle schede può essere quindi definito usando stili XAML. L'esempio s
 ```xaml
 <Style x:Key="BaseStyle"
        TargetType="Element">
-    <Setter Property="Shell.ShellTabBarBackgroundColor"
+    <Setter Property="Shell.TabBarBackgroundColor"
             Value="#3498DB" />
-    <Setter Property="Shell.ShellTabBarTitleColor"
+    <Setter Property="Shell.TabBarTitleColor"
             Value="White" />
-    <Setter Property="Shell.ShellTabBarUnselectedColor"
+    <Setter Property="Shell.TabBarUnselectedColor"
             Value="#B4FFFFFF" />
 </Style>
 ```
@@ -294,6 +292,6 @@ Lo stile delle schede può essere quindi definito usando stili XAML. L'esempio s
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Xaminals (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Navigazione nella shell Xamarin.Forms](navigation.md)
 - [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties) (Proprietà specifiche della shell Xamarin.Forms)

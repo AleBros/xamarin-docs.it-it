@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 142c22cd239d6b66e5139346b45994ef2f20bdc8
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 634ba351d419b1d18dcc5d5bdbf5e248f510329d
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672560"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971255"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Proprietà di automazione in Xamarin.Forms
 
@@ -149,7 +149,7 @@ In Android, per impostare il testo dello schermo che viene letto per la freccia 
 
 ### <a name="masterdetailpage"></a>MasterDetailPage
 
-In iOS e nella piattaforma UWP (Universal Windows Platform), per impostare il testo letto dalle utilità per la lettura dello schermo per l'interruttore in un elemento [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), impostare le proprietà `AutomationProperties.Name` e `AutomationProperties.HelpText` su `MasterDetailPage`, oppure sulla proprietà `Icon` della pagina `Master`.
+In iOS e nella piattaforma UWP (Universal Windows Platform), per impostare il testo letto dalle utilità per la lettura dello schermo per l'interruttore in un elemento [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), impostare le proprietà `AutomationProperties.Name` e `AutomationProperties.HelpText` su `MasterDetailPage`, oppure sulla proprietà `IconImageSource` della pagina `Master`.
 
 In Android, per impostare il testo che le utilità per la lettura dello schermo leggono per l'interruttore in un elemento [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), aggiungere risorse stringa al progetto Android:
 
@@ -161,11 +161,11 @@ In Android, per impostare il testo che le utilità per la lettura dello schermo 
 </resources>
 ```
 
-Impostare quindi la proprietà `AutomationId` della proprietà `Icon` della pagina `Master` sulla stringa appropriata:
+Impostare quindi la proprietà `AutomationId` della proprietà `IconImageSource` della pagina `Master` sulla stringa appropriata:
 
 ```csharp
 var master = new ContentPage { ... };
-master.Icon.AutomationId = "btnMDPAutomationID";
+master.IconImageSource.AutomationId = "btnMDPAutomationID";
 ```
 
 ### <a name="toolbaritem"></a>ToolbarItem

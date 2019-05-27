@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 20d9fb79d03990824dd884b62138a3e29b3ee04f
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: f6662f20485c6671edcb5a1654569cdd8498607e
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054481"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005212"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
 
-![](~/media/shared/preview.png "Quest'API è attualmente in versione non definitiva")
-
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 La shell Xamarin.Forms riduce la complessità dello sviluppo di applicazioni per dispositivi mobili offrendo le principali funzionalità richieste dalla maggior parte delle applicazioni per dispositivi mobili, tra cui:
 
@@ -30,48 +28,7 @@ La shell Xamarin.Forms riduce la complessità dello sviluppo di applicazioni per
 Le applicazioni shell consentono inoltre una velocità di rendering maggiore e un consumo di memoria ridotto.
 
 > [!IMPORTANT]
-> Le applicazioni Android e iOS esistenti possono adottare Shell usufruendo immediatamente dei miglioramenti in termini di navigazione, prestazioni ed estendibilità.
-
-Shell è attualmente in fase di sperimentazione e può essere usato solo aggiungendo `Forms.SetFlags("Shell_Experimental");` al progetto di piattaforma, prima di richiamare il metodo `Forms.Init`.
-
-# <a name="androidtabandroid"></a>[Android](#tab/android)
-
-```csharp
-public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-{
-    protected override void OnCreate(Bundle savedInstanceState)
-    {
-        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
-
-        TabLayoutResource = Resource.Layout.Tabbar;
-        ToolbarResource = Resource.Layout.Toolbar;
-
-        base.OnCreate(savedInstanceState);
-
-        global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-        LoadApplication(new App());
-    }
-}
-```
-
-# <a name="iostabios"></a>[iOS](#tab/ios)
-
-```csharp
-public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
-{
-    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-    {
-        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
-
-        global::Xamarin.Forms.Forms.Init();
-        LoadApplication(new App());
-
-        return base.FinishedLaunching(app, options);
-    }
-}
-```
-
-----
+> La shell Xamarin.Forms è disponibile solo in iOS e Android. Le applicazioni Android e iOS esistenti possono adottare Shell usufruendo immediatamente dei miglioramenti in termini di navigazione, prestazioni ed estendibilità.
 
 ## <a name="shell-navigation-experience"></a>Esperienza di navigazione nella shell
 
@@ -181,11 +138,11 @@ In questo esempio la classe `AppShell` è un file XAML che deriva dalla classe `
 
 La classe `Shell` definisce le proprietà seguenti che controllano l'aspetto di un'applicazione shell:
 
-- `ShellBackgroundColor`, di tipo `Color`, una proprietà associata che definisce il colore di sfondo del riquadro della shell. Il colore non verrà inserito dietro il contenuto della shell.
-- `ShellDisabledColor`, di tipo `Color`, una proprietà associata che definisce il colore per l'ombreggiatura di icone e testo disabilitati.
-- `ShellForegroundColor`, di tipo `Color`, una proprietà associata che definisce il colore per l'ombreggiatura di icone e testo.
-- `ShellTitleColor`, di tipo `Color`, una proprietà associata che definisce il colore usato per il titolo della pagina corrente.
-- `ShellUnselectedColor`, di tipo `Color`, una proprietà associata che definisce il colore per le icone e il testo non selezionati nel riquadro della shell.
+- `BackgroundColor`, di tipo `Color`, una proprietà associata che definisce il colore di sfondo del riquadro della shell. Il colore non verrà inserito dietro il contenuto della shell.
+- `DisabledColor`, di tipo `Color`, una proprietà associata che definisce il colore per l'ombreggiatura di icone e testo disabilitati.
+- `ForegroundColor`, di tipo `Color`, una proprietà associata che definisce il colore per l'ombreggiatura di icone e testo.
+- `TitleColor`, di tipo `Color`, una proprietà associata che definisce il colore usato per il titolo della pagina corrente.
+- `UnselectedColor`, di tipo `Color`, una proprietà associata che definisce il colore per le icone e il testo non selezionati nel riquadro della shell.
 
 Tutte queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) e ciò significa che tali proprietà possono essere destinazioni di data binding.
 
@@ -196,7 +153,6 @@ Queste proprietà possono essere impostate anche usando fogli di stile CSS (Casc
 La classe `Shell` definisce le proprietà seguenti che influiscono sul layout del contenuto di un'applicazione shell:
 
 - `NavBarIsVisible`, di tipo `boolean`, una proprietà associata che definisce se la barra di spostamento deve essere visibile quando viene visualizzata una pagina. Questa proprietà deve essere impostata su una pagina e il suo valore predefinito è `true`.
-- `SetPaddingInsets`, di tipo `bool`, una proprietà associata che controlla se il contenuto della pagina scorre sotto qualsiasi riquadro della shell. Questa proprietà deve essere impostata su una pagina e il suo valore predefinito è `false`.
 - `TabBarIsVisible`, di tipo `bool`, una proprietà associata che definisce se la barra delle schede deve essere visibile quando viene visualizzata una pagina. Questa proprietà deve essere impostata su una pagina e il suo valore predefinito è `true`.
 - `TitleView`, di tipo `View`, una proprietà associata che definisce l'oggetto `TitleView` per una pagina. Questa proprietà deve essere impostata su una pagina.
 
@@ -204,5 +160,5 @@ Tutte queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xam
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Xaminals (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties) (Proprietà specifiche della shell Xamarin.Forms)

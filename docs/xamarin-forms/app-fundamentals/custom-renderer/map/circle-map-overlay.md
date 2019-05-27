@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ed671063aad55cb6c4730494f024a2ec2a016de1
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: f5a7dd9cca006157589f6fc43b41764129d90c86
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051931"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926646"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>Evidenziazione di un'area circolare su una mappa
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Circle/)
 
 _Questo articolo illustra come aggiungere una sovrimpressione circolare a una mappa per evidenziare un'area circolare della mappa stessa._
 
@@ -335,6 +335,6 @@ In questo articolo è stato illustrato come aggiungere una sovrimpressione circo
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Circular Map Ovlerlay (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/) (Esempio di sovrimpressione circolare sulla mappa)
+- [Circular Map Ovlerlay (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Circle/) (Esempio di sovrimpressione circolare sulla mappa)
 - [Personalizzazione di una puntina per la mappa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

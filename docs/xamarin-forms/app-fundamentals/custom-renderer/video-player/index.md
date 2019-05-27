@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 1677f86379310ee6d5e0973108f85db2a328cd23
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 5b48340233304f44b30fb9083b30be5c6c165b18
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53048831"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925983"
 ---
 # <a name="implementing-a-video-player"></a>Implementazione di un lettore video
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
 
 Talvolta è utile riprodurre file video in un'applicazione Xamarin.Forms. Questa serie di articoli illustra come scrivere un renderer personalizzato per iOS, Android e la piattaforma UWP (Universal Windows Platform) per una classe di Xamarin.Forms denominata `VideoPlayer`.
 
-Nell'esempio [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) tutti i file che implementano e supportano `VideoPlayer` si trovano in cartelle denominate `FormsVideoLibrary` e identificate con lo spazio dei nomi `FormsVideoLibrary` o con spazi dei nomi che iniziano con `FormsVideoLibrary`. Questa organizzazione e denominazione semplifica la copia dei file del lettore video nella propria soluzione Xamarin.Forms.
+Nell'esempio [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/) tutti i file che implementano e supportano `VideoPlayer` si trovano in cartelle denominate `FormsVideoLibrary` e identificate con lo spazio dei nomi `FormsVideoLibrary` o con spazi dei nomi che iniziano con `FormsVideoLibrary`. Questa organizzazione e denominazione semplifica la copia dei file del lettore video nella propria soluzione Xamarin.Forms.
 
 `VideoPlayer` può riprodurre file video da tre tipi di origini:
 
@@ -72,4 +72,4 @@ I lettori video per le diverse piattaforme dispongono di una barra di posizionam
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo lettore video (esempio)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demo lettore video (esempio)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)

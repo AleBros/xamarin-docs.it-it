@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: acaa847b61443eff480e2b39e388f5df9de06e42
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: e97dbb993cb108245636ae459a572e18b13d6817
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054421"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005191"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
 
-![](~/media/shared/preview.png "Quest'API è attualmente in versione non definitiva")
-
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 La shell Xamarin.Forms include una funzionalità di ricerca integrata fornita dalla classe `SearchHandler`. La funzionalità di ricerca può essere aggiunta a una pagina impostando la proprietà associata `Shell.SearchHandler` a un oggetto `SearchHandler` sottoclassato. Come conseguenza, viene aggiunta una casella di ricerca nella parte superiore della pagina:
 
@@ -240,5 +238,5 @@ L'esempio seguente illustra come nascondere la casella di ricerca:
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Xaminals (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Navigazione nella shell Xamarin.Forms](navigation.md)

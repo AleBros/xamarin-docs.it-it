@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cff466025306ee5d23b5245e625eba23c5448c15
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1e7b4b2ce4b7592c2350af20cf516436e244d95f
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384691"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66193808"
 ---
 Xamarin.Forms ha un popup modale, conosciuto come avviso, per avvisare l'utente o per rivolgere semplici domande a un utente. In questo esercizio si userà il metodo [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) dalla classe [`Page`](xref:Xamarin.Forms.Page) per visualizzare un avviso all'utente e per porre semplici domande.
 
@@ -67,7 +67,7 @@ Xamarin.Forms ha un popup modale, conosciuto come avviso, per avvisare l'utente 
 
     Si noti che, dopo aver selezionato una risposta alla domanda, la risposta viene visualizzata nella finestra **Output applicazione**  di Visual Studio.
 
-    Per altre informazioni sulla visualizzazione degli avvisi, vedere [Visualizzazione di un avviso](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#displaying-an-alert) nella guida [Visualizzazione di elementi popup](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Per altre informazioni sulla visualizzazione degli avvisi, vedere [Display an alert](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) (Visualizzare un avviso) nella guida [Display Pop-ups](~/xamarin-forms/user-interface/pop-ups.md) (Visualizzare i popup).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -128,4 +128,4 @@ Xamarin.Forms ha un popup modale, conosciuto come avviso, per avvisare l'utente 
 
     Si noti che, dopo aver selezionato una risposta alla domanda, la risposta viene visualizzata nella finestra **Output applicazione**  di Visual Studio per Mac.
 
-    Per altre informazioni sulla visualizzazione degli avvisi, vedere [Visualizzazione di un avviso](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#displaying-an-alert) nella guida [Visualizzazione di elementi popup](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Per altre informazioni sulla visualizzazione degli avvisi, vedere [Display an alert](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) (Visualizzare un avviso) nella guida [Display Pop-ups](~/xamarin-forms/user-interface/pop-ups.md) (Visualizzare i popup).

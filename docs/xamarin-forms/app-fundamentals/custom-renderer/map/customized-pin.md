@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 54509d0a1133d86727317366b0d229bc218cb263
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 0ed4d86054ada0918feccb123ac3a0de8ccf899b
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870300"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926710"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizzazione di un segnaposto per la mappa
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/)
 
 _Questo articolo illustra come creare un renderer personalizzato per il controllo mappa che visualizza una mappa nativa con un segnaposto personalizzato e una visualizzazione personalizzata dei dati del segnaposto in ogni piattaforma._
 
@@ -663,4 +663,4 @@ In questo articolo è stato illustrato come creare un renderer personalizzato pe
 - [Controllo Maps](~/xamarin-forms/user-interface/map.md)
 - [Mappe iOS](~/ios/user-interface/controls/ios-maps/index.md)
 - [API Maps](~/android/platform/maps-and-location/maps/maps-api.md)
-- [Segnaposto personalizzato (esempio)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+- [Segnaposto personalizzato (esempio)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/)

@@ -7,16 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: c1418e581e2896a77d0b83a46ecc8d3a0ce8c510
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 59dba2fed0422db72b0617d9a831e3a9364320bd
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054211"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970783"
 ---
 # <a name="xamarinforms-shell-custom-renderers"></a>Renderer personalizzati della shell Xamarin.Forms
-
-![](~/media/shared/preview.png "Quest'API è attualmente in versione non definitiva")
 
 Uno dei vantaggi delle applicazioni shell Xamarin.Forms è l'elevata possibilità di personalizzarne l'aspetto e il comportamento tramite le proprietà e i metodi esposti dalle diverse classi della shell. Tuttavia, è anche possibile creare un renderer personalizzato della shell quando sono necessarie personalizzazioni specifiche della piattaforma più sofisticate. Come nel caso di altri renderer personalizzati, è possibile aggiungere un renderer personalizzato della shell a un progetto per una sola piattaforma per personalizzarne l'aspetto e il comportamento mantenendo il comportamento predefinito nell'altra piattaforma oppure è possibile aggiungere un renderer personalizzato della shell diverso al progetto di ogni piattaforma, per personalizzare l'aspetto e il comportamento sia in iOS che in Android.
 

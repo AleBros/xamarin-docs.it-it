@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: effebf02a7fb84ef955f4dcfda75d5273ef96b29
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384680"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66193800"
 ---
 
 Xamarin.Forms ha un popup modale, noto come foglio delle azioni, che può essere usato per guidare gli utenti per l'esecuzione di un'attività. In questo esercizio si userà il metodo [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) dalla classe [`Page`](xref:Xamarin.Forms.Page) per visualizzare un foglio delle azioni che guida gli utenti per l'esecuzione di un'attività.
@@ -41,7 +41,7 @@ Xamarin.Forms ha un popup modale, noto come foglio delle azioni, che può essere
 
     Si noti che, dopo aver selezionato un'alternativa nella finestra di dialogo del foglio delle azioni, la selezione viene visualizzata nella finestra **Output** di Visual Studio.
 
-    Per altre informazioni sulla visualizzazione dei fogli delle azioni, vedere [Supporto degli utenti nelle attività](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#guiding-users-through-tasks) nella guida [Visualizzazione di popup](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Per altre informazioni sulla visualizzazione dei fogli delle azioni, vedere [Guide users through tasks](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) (Supporto degli utenti nelle attività) nella guida [Display Pop-ups](~/xamarin-forms/user-interface/pop-ups.md) (Visualizzare popup).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -75,4 +75,4 @@ Xamarin.Forms ha un popup modale, noto come foglio delle azioni, che può essere
 
     Si noti che, dopo aver selezionato un'alternativa nella finestra di dialogo del foglio delle azioni, la selezione viene visualizzata nella finestra **Output applicazione**  di Visual Studio per Mac.
 
-    Per altre informazioni sulla visualizzazione dei fogli delle azioni, vedere [Supporto degli utenti nelle attività](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#guiding-users-through-tasks) nella guida [Visualizzazione di popup](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Per altre informazioni sulla visualizzazione dei fogli delle azioni, vedere [Guide users through tasks](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) (Supporto degli utenti nelle attività) nella guida [Display Pop-ups](~/xamarin-forms/user-interface/pop-ups.md) (Visualizzare popup).

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 0f0c2e9f3e0a2309db1ad96ff286d6ac17f78bc5
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 8926813e8efae72efa9af2221318d6f1ff1e344f
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329299"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970931"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Pagina a schede di Xamarin.Forms
 
@@ -44,9 +44,18 @@ Il layout di una [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) e delle relative 
 
 - Nei fattori di forma tablet Windows le schede non sono sempre visibili e per visualizzare le schede in una `TabbedPage` gli utenti devono scorrere verso il basso o fare clic con il pulsante destro del mouse, se è collegato un mouse, come illustrato di seguito.
 
-![](tabbed-page-images/windows-tabs.png "Schede TabbedPage in Windows")
+    ![](tabbed-page-images/windows-tabs.png "Schede TabbedPage in Windows")
 
 ## <a name="creating-a-tabbedpage"></a>Creazione di una classe TabbedPage
+
+[`TabbedPage`](xref:Xamarin.Forms.TabbedPage) definisce le proprietà seguenti:
+
+- [`BarBackgroundColor`](xref:Xamarin.Forms.TabbedPage.BarBackgroundColor) di tipo [`Color`](xref:Xamarin.Forms.Color), il colore di sfondo della barra schede.
+- [`BarTextColor`](xref:Xamarin.Forms.TabbedPage.BarTextColor) di tipo [`Color`](xref:Xamarin.Forms.Color), il colore del testo nella barra schede.
+- [`SelectedTabColor`](xref:Xamarin.Forms.TabbedPage.SelectedTabColor) di tipo [`Color`](xref:Xamarin.Forms.Color), il colore della scheda quando è selezionata.
+- [`UnselectedTabColor`](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor) di tipo [`Color`](xref:Xamarin.Forms.Color), il colore della scheda quando non è selezionata.
+
+Tutte queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) e ciò significa che supportano l'applicazione di stili e che le proprietà possono essere destinazioni di data binding.
 
 Per creare una [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) è possibile usare due approcci:
 
@@ -70,7 +79,7 @@ L'esempio di codice XAML seguente illustra una [`TabbedPage`](xref:Xamarin.Forms
             xmlns:local="clr-namespace:TabbedPageWithNavigationPage;assembly=TabbedPageWithNavigationPage"
             x:Class="TabbedPageWithNavigationPage.MainPage">
     <local:TodayPage />
-    <NavigationPage Title="Schedule" Icon="schedule.png">
+    <NavigationPage Title="Schedule" IconImageSource="schedule.png">
         <x:Arguments>
             <local:SchedulePage />
         </x:Arguments>
@@ -86,7 +95,7 @@ public class MainPageCS : TabbedPage
   public MainPageCS ()
   {
     var navigationPage = new NavigationPage (new SchedulePageCS ());
-    navigationPage.Icon = "schedule.png";
+    navigationPage.IconImageSource = "schedule.png";
     navigationPage.Title = "Schedule";
 
     Children.Add (new TodayPageCS ());
@@ -148,7 +157,7 @@ L'esempio di codice XAML seguente illustra una [`TabbedPage`](xref:Xamarin.Forms
   </TabbedPage.Resources>
   <TabbedPage.ItemTemplate>
     <DataTemplate>
-      <ContentPage Title="{Binding Name}" Icon="monkeyicon.png">
+      <ContentPage Title="{Binding Name}" IconImageSource="monkeyicon.png">
         <StackLayout Padding="5, 25">
           <Label Text="{Binding Name}" Font="Bold,Large" HorizontalOptions="Center" />
           <Image Source="{Binding PhotoUrl}" WidthRequest="200" HeightRequest="200" />
@@ -204,7 +213,7 @@ public class TabbedPageDemoPageCS : TabbedPage
       ...
 
       var contentPage = new ContentPage {
-        Icon = "monkeyicon.png",
+        IconImageSource = "monkeyicon.png",
         Content = new StackLayout {
           Padding = new Thickness (5, 25),
           Children = {

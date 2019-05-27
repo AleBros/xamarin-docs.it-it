@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: 0b91aae1456827625526d7568176a07e7e61f225
-ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.openlocfilehash: 625a860469c82da6e6986b03b8c3e55503433e67
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58507123"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926681"
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementazione di un elemento HybridWebView
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/HybridWebView/)
 
 _I controlli dell'interfaccia utente personalizzata di Xamarin.Forms devono derivare dalla classe View, che viene usata per posizionare layout e controlli sullo schermo. Questo articolo spiega come creare un renderer personalizzato per un controllo personalizzato HybridWebView, che dimostra come si possono ottimizzare i controlli Web specifici della piattaforma per consentire al codice C# di essere richiamato da JavaScript._
 
@@ -509,5 +509,5 @@ Questo articolo ha spiegato come creare un renderer personalizzato per un contro
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [CustomRendererHybridWebView (esempio)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
+- [CustomRendererHybridWebView (esempio)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/HybridWebView/)
 - [Call C# from JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript) (Chiamare C# da JavaScript)

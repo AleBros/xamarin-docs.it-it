@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: bb58866a0fc0ddb542c0a40eb7a0bd9b37562776
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 784c4d22a112de1adc98d6b7f183f9fa2081a897
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58869668"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926269"
 ---
 # <a name="playing-a-web-video"></a>Riproduzione di un video Web
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
 
 La classe `VideoPlayer` definisce una proprietà `Source`, che viene usata per specificare l'origine del file video, e una proprietà `AutoPlay`. Il valore predefinito della proprietà `AutoPlay` è `true`, vale a dire il video verrà riprodotto automaticamente dopo aver impostato la proprietà `Source`:
 
@@ -449,7 +449,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="setting-a-url-source"></a>Impostazione di un'origine URL
 
-Dopo aver implementato queste proprietà nei tre renderer, è possibile riprodurre un video da un'origine URL. La pagina **Play Web Video** (Riproduci video Web) nel programma [**VideoPlayDemos**]( https://developer.xamarin.com/samples/xamarin-forms/customrenderers/videoplayerdemos/index.md) è definita dal file XAML seguente:
+Dopo aver implementato queste proprietà nei tre renderer, è possibile riprodurre un video da un'origine URL. La pagina **Play Web Video** (Riproduci video Web) nel programma [**VideoPlayDemos**]( https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/) è definita dal file XAML seguente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -525,4 +525,4 @@ In alternativa, è possibile impostare la proprietà `Source` da un file video i
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo lettore video (esempio)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demo lettore video (esempio)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)

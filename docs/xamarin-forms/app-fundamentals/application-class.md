@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: dbee8d3f55edee9c862b4c883b63b55f98972b48
-ms.sourcegitcommit: 0c2745c1593eee3ecb40ab882e854a13ca72bc86
+ms.openlocfilehash: 85e420933cfeffd00f686b0eea537cd0ad2f4ca5
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56078420"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971209"
 ---
 # <a name="xamarinforms-app-class"></a>Classe App di Xamarin.Forms
 
@@ -32,7 +32,9 @@ A seconda del modello scelto, la classe `App` può essere definita in uno dei du
 Per creare una classe **App** usando XAML, è necessario sostituire la classe **App** predefinita con una classe **App** XAML e il code-behind associato, come illustrato nell'esempio di codice seguente:
 
 ```xaml
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Photos.App">
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Photos.App">
 
 </Application>
 ```
@@ -111,8 +113,6 @@ Xamarin.Forms 1.4 ha introdotto un metodo aggiuntivo per la classe `Application`
 
 È possibile trovare riferimenti all'uso del dizionario `Properties` nel libro **Creazione di app per dispositivi mobili con Xamarin.Forms**, capitoli [6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf), [15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf) e [20 ](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf), e negli [esempi](https://github.com/xamarin/xamarin-forms-book-preview-2) associati.
 
-
-
 ## <a name="the-application-class"></a>Classe Application
 
 Un'implementazione completa della classe `Application` è illustrata di seguito per riferimento:
@@ -143,7 +143,6 @@ public class App : Xamarin.Forms.Application
         Debug.WriteLine ("OnResume");
     }
 }
-
 ```
 
 Un'istanza di questa classe viene creata in ogni progetto specifico della piattaforma e passata al metodo `LoadApplication`, che rappresenta la posizione in cui l'elemento `MainPage` viene caricato e visualizzato all'utente.
@@ -193,7 +192,7 @@ public class MainActivity : FormsAppCompatActivity
 }
 ```
 
-### <a name="universal-windows-project-uwp-for-windows-10"></a>Progetto UWP per Windows 10
+### <a name="universal-windows-project-uwp-for-windows-10"></a>Progetto UWP (Universal Windows Platform) per Windows 10
 
 La pagina principale nel progetto UWP deve ereditare da `WindowsPage`:
 

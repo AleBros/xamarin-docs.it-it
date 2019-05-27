@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 4bfbd065c9b17ce402c5a15289c7ff608eb58b23
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 21a707ebd189e9cbfa6735b233a6c0af65138e0c
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870014"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926636"
 ---
 # <a name="creating-the-platform-video-players"></a>Creazione di lettori video per le piattaforme
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
 
-La soluzione [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) contiene tutto il codice necessario per implementare un lettore video per Xamarin.Forms. Contiene anche una serie di pagine che illustrano come usare il lettore video in un'applicazione. Tutto il codice `VideoPlayer` e i renderer di piattaforma si trovano in cartelle di progetto denominate `FormsVideoLibrary` e usano anche lo spazio dei nomi `FormsVideoLibrary`. Questo semplifica la copia dei file nella propria applicazione e la definizione di riferimenti alle classi.
+La soluzione [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/) contiene tutto il codice necessario per implementare un lettore video per Xamarin.Forms. Contiene anche una serie di pagine che illustrano come usare il lettore video in un'applicazione. Tutto il codice `VideoPlayer` e i renderer di piattaforma si trovano in cartelle di progetto denominate `FormsVideoLibrary` e usano anche lo spazio dei nomi `FormsVideoLibrary`. Questo semplifica la copia dei file nella propria applicazione e la definizione di riferimenti alle classi.
 
 ## <a name="the-video-player"></a>Lettore video
 
@@ -467,4 +467,4 @@ Un'altra proprietà è necessaria per avviare la riproduzione di un video: si tr
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo lettore video (esempio)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demo lettore video (esempio)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)

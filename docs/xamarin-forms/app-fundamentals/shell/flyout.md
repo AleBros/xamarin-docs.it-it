@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 05ce2536c04306c2881ccc5dfa5e2016c9025b11
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: a64e96e1ee3804cd7aefd9834486613ba8d09d5f
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054491"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005220"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Riquadro a comparsa della shell Xamarin.Forms
 
-![](~/media/shared/preview.png "Quest'API è attualmente in versione non definitiva")
-
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Il riquadro a comparsa è il menu radice per un'applicazione shell ed è accessibile attraverso un'icona o tramite scorrimento rapido dal lato dello schermo. Il riquadro a comparsa è costituito da un'intestazione facoltativa, elementi del riquadro a comparsa e voci di menu facoltative:
 
@@ -183,8 +181,8 @@ La shell include operatori di conversione implicita che consentono di semplifica
     <Shell.FlyoutHeader>
         <controls:FlyoutHeader />
     </Shell.FlyoutHeader>
-    <views:CatsPage Icon="cat.png" />
-    <views:DogsPage Icon="dog.png" />
+    <views:CatsPage IconImageSource="cat.png" />
+    <views:DogsPage IconImageSource="dog.png" />
 </Shell>
 ```
 
@@ -360,23 +358,18 @@ Facoltativamente, è possibile visualizzare voci di menu nel riquadro a comparsa
 > [!NOTE]
 > La classe `MenuItem` ha un evento [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) e una proprietà [`Command`](xref:Xamarin.Forms.MenuItem.Command). Gli oggetti `MenuItem` consentono quindi scenari in cui viene eseguita un'azione in risposta al tocco di `MenuItem`. Questi scenari includono la navigazione e l'apertura di un Web browser in una pagina Web specifica.
 
-La raccolta `Shell.MenuItems` definisce l'elenco di oggetti [`MenuItem`](xref:Xamarin.Forms.MenuItem) che verranno visualizzati nel riquadro a comparsa. Questa raccolta può essere popolata con oggetti `MenuItem`, come illustrato nell'esempio seguente:
+Gli oggetti [`MenuItem`](xref:Xamarin.Forms.MenuItem) possono essere aggiunti al riquadro a comparsa come illustrato nell'esempio seguente:
 
 ```xaml
-<Shell ...
-       x:Name="self">
+<Shell ...>
     ...            
-    <Shell.MenuItems>
-        <MenuItem Text="Random"
-                  Icon="random.png"
-                  BindingContext="{x:Reference self}"
-                  Command="{Binding RandomPageCommand}" />
-        <MenuItem Text="Help"
-                  Icon="help.png"
-                  BindingContext="{x:Reference self}"
-                  Command="{Binding HelpCommand}"
-                  CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
-    </Shell.MenuItems>    
+    <MenuItem Text="Random"
+              IconImageSource="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              IconImageSource="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />    
 </Shell>
 ```
 
@@ -384,7 +377,10 @@ Questo codice aggiunge due oggetti [`MenuItem`](xref:Xamarin.Forms.MenuItem) al 
 
 [![Screenshot del riquadro a comparsa contenente oggetti MenuItem, in iOS e Android](flyout-images/flyout.png "Riquadro a comparsa della shell contenente oggetti MenuItem")](flyout-images/flyout-large.png#lightbox "Riquadro a comparsa della shell contenente oggetti MenuItem")
 
-Il primo oggetto [`MenuItem`](xref:Xamarin.Forms.MenuItem) esegue un comando `ICommand` denominato `RandomPageCommand`, che passa a una pagina casuale nell'applicazione. Il secondo oggetto `MenuItem` esegue un comando `ICommand` denominato `HelpCommand`, che apre l'URL specificato dalla proprietà `CommandParameter` in un Web browser. L'oggetto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) di ogni elemento `MenuItem` è impostato sull'oggetto `Shell` sottoclassato.
+Il primo oggetto [`MenuItem`](xref:Xamarin.Forms.MenuItem) esegue un comando `ICommand` denominato `RandomPageCommand`, che passa a una pagina casuale nell'applicazione. Il secondo oggetto `MenuItem` esegue un comando `ICommand` denominato `HelpCommand`, che apre l'URL specificato dalla proprietà `CommandParameter` in un Web browser.
+
+> [!NOTE]
+> L'oggetto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) di ogni elemento `MenuItem` viene ereditato dall'oggetto `Shell` sottoclassato.
 
 ## <a name="define-menuitem-appearance"></a>Definire l'aspetto di un oggetto MenuItem
 
@@ -415,8 +411,8 @@ Questo esempio visualizza il titolo di ogni oggetto `MenuItem` in corsivo:
 [![Screenshot degli oggetti MenuItem basati su modello, in iOS e Android](flyout-images/menuitem-templated.png "Oggetti MenuItem della shell basati su modello")](flyout-images/menuitem-templated-large.png#lightbox "Oggetti MenuItem della shell basati su modello")
 
 > [!NOTE]
-> La shell fornisce le proprietà [`Text`](xref:Xamarin.Forms.MenuItem.Text) e [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) all'oggetto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) di `MenuItemTemplate`.
+> La shell fornisce le proprietà [`Text`](xref:Xamarin.Forms.MenuItem.Text) e [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) all'oggetto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) di `MenuItemTemplate`.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Xaminals (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)

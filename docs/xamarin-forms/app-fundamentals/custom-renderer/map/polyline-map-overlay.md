@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 184aa18ac8c0f27ce92a23b06b9dd0364f977abc
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 5c67684f7d8cb763d4698de86c904e2887185361
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050884"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925182"
 ---
 # <a name="highlighting-a-route-on-a-map"></a>Evidenziazione di un percorso su una mappa
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polyline/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polyline/)
 
 _Questo articolo illustra come aggiungere una sovrimpressione polilinea a una mappa. Una sovrimpressione polilinea è una serie di segmenti di linea collegati che sono in genere usati per visualizzare un percorso su una mappa o per definire una qualsiasi forma richiesta._
 
@@ -304,6 +304,6 @@ Questo articolo ha spiegato come aggiungere una sovrimpressione polilinea a una 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Polyline Map Ovlerlay (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polyline/) (Esempio di sovrimpressione polilinea sulla mappa)
+- [Polyline Map Ovlerlay (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polyline/) (Esempio di sovrimpressione polilinea sulla mappa)
 - [Personalizzazione di una puntina per la mappa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

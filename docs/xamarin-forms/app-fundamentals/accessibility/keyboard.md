@@ -1,26 +1,26 @@
 ---
-title: Navigazione tramite tastiera
-description: Anziché usare la sequenza di tabulazione predefinita, è talvolta necessario ottimizzare l'interfaccia utente specificando la sequenza di tabulazione con una combinazione delle proprietà TabIndex e IsTabStop.
+title: Accessibilità tramite tastiera
+description: Anziché usare la sequenza di tabulazione predefinita, è talvolta necessario ottimizzare l'accessibilità dell'interfaccia utente specificando la sequenza di tabulazione con una combinazione delle proprietà TabIndex e IsTabStop.
 ms.prod: xamarin
 ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/15/2018
-ms.openlocfilehash: 3e3331489c3b437366f4bdcc6990fe282d213a6a
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.date: 05/09/2019
+ms.openlocfilehash: 66cd9f9de712583ea4e8fb9304a9f1642e7e3ee1
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207882"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971272"
 ---
-# <a name="keyboard-navigation-in-xamarinforms"></a>Spostamenti tramite tastiera in Xamarin.Forms
+# <a name="keyboard-accessibility-in-xamarinforms"></a>Accessibilità tramite tastiera in Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
 
-Alcuni utenti possono avere difficoltà nell'usare le applicazioni che non forniscono un accesso tramite tastiera appropriato. Specificare un ordine di tabulazione per i controlli consente gli spostamenti e prepara le pagine dell'applicazione per ricevere l'input in un ordine particolare.
+Gli utenti che usano utilità per la lettura dello schermo o con problemi di mobilità possono avere difficoltà nell'usare le applicazioni che non forniscono un accesso tramite tastiera appropriato. Nelle applicazioni Xamarin.Forms è possibile specificare un ordine di tabulazione previsto per migliorare usabilità e accessibilità. Specificare un ordine di tabulazione per i controlli consente gli spostamenti tramite tastiera, prepara le pagine dell'applicazione per ricevere l'input in un ordine particolare e consente alle utilità per la lettura dello schermo di leggere gli elementi su cui è possibile spostare lo stato attivo per gli utenti.
 
-Per impostazione predefinita, l'ordine di tabulazione dei controlli è lo stesso in cui sono elencati in XAML o vengono aggiunti a livello di codice a una raccolta figlio. Questo ordine corrisponde all'ordine su cui ci si sposterà tra i controlli tramite tastiera e spesso l'ordine predefinito è l'ordine ottimale. Tuttavia, l'ordine predefinito non sempre coincide con l'ordine previsto, come illustrato nell'esempio di codice XAML seguente:
+Per impostazione predefinita, l'ordine di tabulazione dei controlli è lo stesso in cui sono elencati in XAML o vengono aggiunti a livello di codice a una raccolta figlio. Questo ordine corrisponde all'ordine con cui ci si sposterà tra i controlli tramite tastiera e all'ordine di lettura delle utilità per la lettura dello schermo e spesso l'ordine predefinito è l'ordine ottimale. Tuttavia, l'ordine predefinito non sempre coincide con l'ordine previsto, come illustrato nell'esempio di codice XAML seguente:
 
 ```xaml
 <Grid>
@@ -113,6 +113,9 @@ Lo screenshot seguente mostra l'ordine di tabulazione per questo esempio di codi
 ![](keyboard-images/correct-tab-order.png "Ordine di tabulazione basato su colonna")
 
 In questo caso l'ordine di tabulazione è basato su colonna. Di conseguenza, premendo TAB ci si sposta tra le coppie di [`Entry`](xref:Xamarin.Forms.Entry) per nome e cognome.
+
+> [!IMPORTANT]
+> Le utilità per la lettura dello schermo in iOS e Android rispetteranno il `TabIndex` di un [`VisualElement`](xref:Xamarin.Forms.VisualElement) durante la lettura degli elementi accessibili sullo schermo.
 
 ## <a name="excluding-controls-from-the-tab-order"></a>Esclusione di controlli dall'ordine di tabulazione
 

@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: e8bfb01c6f5aa22332d226b8b2768f56a2904a7d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: ca9c71d5bdac1900c4f0e5d07898e65b06cdcf90
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978514"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925567"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indicizzazione e deep linking delle applicazioni
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/deeplinking/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/DeepLinking/)
 
 _L'indicizzazione delle applicazioni consente di mantenere rilevanti, visualizzandole nei risultati della ricerca, le applicazioni che verrebbero altrimenti dimenticate dopo pochi usi. Il deep linking consente alle applicazioni di rispondere a un risultato di ricerca che contiene dati dell'applicazione, in genere passando a una pagina a cui fa riferimento un collegamento diretto. Questo articolo illustra come usare indicizzazione e deep linking delle applicazioni per rendere disponibile per la ricerca il contenuto di applicazioni Xamarin.Forms in dispositivi iOS e Android._
 
@@ -248,7 +248,7 @@ In questo articolo è stato illustrato come usare indicizzazione e deep linking 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Deep Linking (sample)](https://developer.xamarin.com/samples/xamarin-forms/deeplinking/) (Esempio di deep linking)
+- [Deep Linking (sample)](https://developer.xamarin.com/samples/xamarin-forms/DeepLinking/) (Esempio di deep linking)
 - [iOS Search APIs](~/ios/platform/search/index.md) (API per la ricerca iOS)
 - [App-Linking in Android 6.0](~/android/platform/app-linking.md)
 - [AppLinkEntry](xref:Xamarin.Forms.AppLinkEntry)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/15/2018
-ms.openlocfilehash: ac0ffbdce6b0c55e8ad9d774d80e3d9b8bf84089
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 20ea72e588e2e3b1d575bd593446bf6724d73d8c
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116446"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971054"
 ---
 # <a name="xamarinforms-accessibility"></a>Accessibilità di Xamarin.Forms
 
@@ -24,7 +24,7 @@ Le guide [Accessibilità in Android](~/android/app-fundamentals/accessibility.md
 
 Xamarin.Forms non dispone attualmente di supporto *incorporato* per tutte le API di accessibilità disponibili in ogni piattaforma sottostante. Supporta invece l'impostazione di proprietà di automazione in elementi dell'interfaccia utente per utilità per la lettura dello schermo e strumenti di assistenza alla navigazione, che sono tra i componenti più importanti nella costruzione di applicazioni accessibili. Per altre informazioni, vedere [Proprietà di automazione](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md).
 
-Nelle applicazioni Xamarin.Forms è anche possibile specificare l'ordine di tabulazione dei controlli. Per altre informazioni, vedere [Navigazione tramite tastiera](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md).
+Nelle applicazioni Xamarin.Forms è anche possibile specificare l'ordine di tabulazione dei controlli per migliorare usabilità e accessibilità. Per altre informazioni, vedere [Accessibilità tramite tastiera](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md).
 
 Altre API per l'accessibilità (ad esempio [PostNotification in iOS](~/ios/app-fundamentals/accessibility.md)) possono essere più adatte a un'implementazione [`DependencyService`](~/xamarin-forms/app-fundamentals/dependency-service/index.md) o [Renderer personalizzato](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Questi argomenti non sono trattati nella presente guida.
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: dc26084b94956ea9bc87384e5fdb79695bc8c2b5
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 86e10f068af14e65b55885488252af756a90652e
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051782"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926969"
 ---
 # <a name="creating-a-controltemplate"></a>Creazione di un ControlTemplate
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simpletheme/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/)
 
 _È possibile definire i modelli del controllo a livello di applicazione o a livello di pagina. Questo articolo illustra come creare e usare i modelli del controllo._
 
@@ -216,7 +216,7 @@ Questo articolo ha illustrato come creare e utilizzare i modelli del controllo. 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Stili](~/xamarin-forms/user-interface/styles/index.md)
-- [Simple Theme (esempio)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simpletheme/) (Tema semplice)
+- [Simple Theme (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/) (Tema semplice)
 - [ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
 - [ContentPresenter](xref:Xamarin.Forms.ContentPresenter)
 - [ContentView](xref:Xamarin.Forms.ContentView)

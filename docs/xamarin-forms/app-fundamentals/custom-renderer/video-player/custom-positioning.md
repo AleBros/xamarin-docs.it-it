@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: cf2de96022366165e726bc3e6447bb88f30a26bb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: a962c61027fa6f9f05c59272c900a3ca32e1b01f
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057139"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926125"
 ---
 # <a name="custom-video-positioning"></a>Posizionamento del video personalizzato
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
 
 I controlli di trasporto implementati da ogni piattaforma includono un indicatore di posizione. L'indicatore è simile a un dispositivo di scorrimento o una barra di scorrimento e mostra la posizione corrente del video all'interno della durata totale. Inoltre, l'utente può modificare l'indicatore di posizione per spostarsi avanti o indietro in una nuova posizione nel video.
 
@@ -481,4 +481,4 @@ Queste informazioni concludono la descrizione di `VideoPlayer`.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo lettore video (esempio)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demo lettore video (esempio)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 0d9f3c9e0608e87258b7f53af3c567155da824d1
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: d0b109e03938fde3225c893bc8309448e543944b
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58782487"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925543"
 ---
 # <a name="creating-an-effect"></a>Creazione di un effetto
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/effects/focuseffect/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/Effects/FocusEffect/)
 
 _Gli effetti semplificano la personalizzazione di un controllo. Questo articolo spiega come creare un effetto che cambia il colore di sfondo del controllo Entry quando il controllo riceve lo stato attivo._
 
@@ -262,4 +262,4 @@ Questo articolo ha spiegato come creare un effetto che cambia il colore di sfond
 - [Effect](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [Background Color Effect (esempio)](https://developer.xamarin.com/samples/xamarin-forms/effects/backgroundcoloreffect/) (Effetto colore di sfondo)
-- [Focus Effect (esempio)](https://developer.xamarin.com/samples/xamarin-forms/effects/focuseffect/) (Effetto stato attivo)
+- [Focus Effect (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Effects/FocusEffect/) (Effetto stato attivo)

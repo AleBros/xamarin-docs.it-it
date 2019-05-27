@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 7bd4a87843852e940da96f688371ddbecbf7e0b4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cdeaae6cb83062f0d84a3605582b9779c9f36145
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153890"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178055"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Nozioni di estensione dell'App messaggi in xamarin. IOS
 
@@ -133,7 +133,7 @@ Per la creazione di un'esperienza di adesivi personalizzato, eseguire le operazi
 
 1. Avviare Visual Studio.
 2. Aprire la soluzione per aggiungere un'estensione dell'App messaggi.
-3. Selezionare * * estensioni iOS > (iOS) di estensione per iMessage * * e fare clic sui **successivo** pulsante:
+3. Selezionare **estensioni iOS > (iOS) di estensione per iMessage** e fare clic sui **successivo** pulsante:
 
     [![Selezionare per IMessage per estensione (iOS)](intro-to-message-app-extensions-images/message01.w157-sml.png)](intro-to-message-app-extensions-images/message01.w157.png#lightbox)
 

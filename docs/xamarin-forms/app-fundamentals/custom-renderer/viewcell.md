@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 1e7a96b2f33d7dc89c4373ab612ac3d26692f64e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 90215be6356722729b441513bf749150c77755ca
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060459"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65924645"
 ---
 # <a name="customizing-a-viewcell"></a>Personalizzazione di un elemento ViewCell
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/viewcell/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ViewCell/)
 
 _Un elemento ViewCell di Xamarin.Forms è una cella che può essere aggiunta a un elemento ListView o TableView che contiene una vista definita dallo sviluppatore. Questo articolo illustra come creare un renderer personalizzato per un elemento ViewCell ospitato all'interno di un controllo ListView di Xamarin.Forms. Questo impedisce che i calcoli di layout di Xamarin.Forms vengano ripetutamente chiamati durante lo scorrimento di ListView._
 
@@ -577,4 +577,4 @@ Questo articolo ha illustrato come si crea un renderer personalizzato per un ogg
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Prestazioni di ListView](~/xamarin-forms/user-interface/listview/performance.md)
-- [CustomRendererViewCell (esempio)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/viewcell/)
+- [CustomRendererViewCell (esempio)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ViewCell/)

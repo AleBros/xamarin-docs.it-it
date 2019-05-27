@@ -5,12 +5,12 @@ ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
-ms.openlocfilehash: 06b4f4b612d0cb44e467a9da6dbee3194338027d
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 5ddbb6f3d1c1ebf16ca5534b7effd1993c3d8b26
+ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58869962"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65804916"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Email
 
@@ -19,6 +19,9 @@ La classe **Email** consente a un'applicazione di aprire l'applicazione di posta
 ## <a name="get-started"></a>Introduzione
 
 [!include[](~/essentials/includes/get-started.md)]
+
+> [!TIP]
+> Per usare l'API Email in iOS, è necessario eseguirla in un dispositivo fisico, altrimenti verrà generata un'eccezione.
 
 ## <a name="using-email"></a>Uso di Email
 
