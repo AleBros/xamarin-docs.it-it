@@ -112,6 +112,7 @@
 #### [Pagine modali](app-fundamentals/navigation/modal.md)
 ### [Shell](app-fundamentals/shell/index.md)
 #### [Introduzione](app-fundamentals/shell/introduction.md)
+#### [Creare un'applicazione shell](app-fundamentals/shell/create.md)
 #### [Riquadro a comparsa](app-fundamentals/shell/flyout.md)
 #### [Schede](app-fundamentals/shell/tabs.md)
 #### [Navigazione](app-fundamentals/shell/navigation.md)
