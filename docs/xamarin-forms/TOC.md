@@ -115,6 +115,7 @@
 #### [Creare un'applicazione shell](app-fundamentals/shell/create.md)
 #### [Riquadro a comparsa](app-fundamentals/shell/flyout.md)
 #### [Schede](app-fundamentals/shell/tabs.md)
+#### [Configurazione della pagina](app-fundamentals/shell/configuration.md)
 #### [Navigazione](app-fundamentals/shell/navigation.md)
 #### [Ricerca](app-fundamentals/shell/search.md)
 #### [Renderer personalizzati](app-fundamentals/shell/customrenderers.md)

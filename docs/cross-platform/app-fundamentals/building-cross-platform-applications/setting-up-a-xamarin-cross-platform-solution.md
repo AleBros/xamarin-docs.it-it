@@ -1,25 +1,25 @@
 ---
-title: Parte 3- Configurazione di una soluzione multipiattaforma Xamarin
-description: Questo documento descrive come configurare una soluzione multipiattaforma in Xamarin. Viene illustrata vari condivisione strategie, ad esempio di codice condiviso progetti e .NET Standard.
+title: 'Parte 3: configurazione di una soluzione Xamarin multipiattaforma'
+description: Questo documento descrive come configurare una soluzione multipiattaforma in Xamarin. Vengono illustrate diverse strategie, ad esempio i progetti condivisi e .NET Standard di condivisione del codice.
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: asb3993
 ms.author: amburns
 ms.date: 03/27/2017
-ms.openlocfilehash: f802e31d851915d33cb6dbf5866f8cba3ab90303
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d20275bab4e4ce90f902a5e72321701d94b1d416
+ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61276626"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354062"
 ---
-# <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3- Configurazione di una soluzione multipiattaforma Xamarin
+# <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3: configurazione di una soluzione Xamarin multipiattaforma
 
 Indipendentemente dalle quali piattaforme sono in uso, tutti i progetti Xamarin usano lo stesso formato di file di soluzione (Visual Studio **sln** formato file). Le soluzioni possono essere condivisi tra gli ambienti di sviluppo, anche quando non è possibile caricare progetti singoli (ad esempio, un progetto di Windows in Visual Studio per Mac).
 
 
 
-Quando si crea un nuovo cross-platform applicazione, il primo passaggio consiste nel creare una soluzione vuota. In questa sezione vengono ciò che accade: configurare progetti per la creazione di App per dispositivi mobili cross-platform.
+Quando si crea una nuova applicazione multi-piattaforma, il primo passaggio consiste nel creare una soluzione vuota. Questa sezione viene illustrato ciò che accade: configurare progetti per la creazione di App per dispositivi mobili multipiattaforma.
 
  <a name="Sharing_Code" />
 
@@ -33,7 +33,7 @@ Vedere le [opzioni di condivisione del codice](~/cross-platform/app-fundamentals
 
 ### <a name="shared-projects"></a>Progetti condivisi
 
-L'approccio più semplice per la condivisione file di codice è usare un [progetto condiviso](~/cross-platform/app-fundamentals/shared-projects.md).
+L'approccio più semplice per la condivisione file di codice Usa un [progetto condiviso](~/cross-platform/app-fundamentals/shared-projects.md).
 
 Questo metodo consente di condividere lo stesso codice nei progetti di piattaforma diversi e usare le direttive del compilatore per includere i percorsi del codice diversi, specifici della piattaforma.
 

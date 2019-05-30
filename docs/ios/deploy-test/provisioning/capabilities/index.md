@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 7049cc36f5f661152e027beb53180d793078beff
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 2536e123cb4bdfd194c573802a91cba7a8c1208d
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855029"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178130"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Uso delle funzionalità in Xamarin.iOS
 
@@ -205,12 +205,12 @@ Dopo che una funzionalità è stata abilitata sul lato server, sono necessarie a
 
 Il seguente è un elenco dettagliato di alcuni dei problemi più comuni che possono costituire un ostacolo quando si sviluppa un'app con un servizio app abilitato.
 
--   Assicurarsi che l'ID corretto sia stato creato e registrato accuratamente nella sezione  **Certificates, IDs & Profiles** (Certificati, ID e profili) del portale per sviluppatori di Apple.
--   Assicurarsi che il servizio sia stato aggiunto all'ID dell'app (o dell'estensione) e che il servizio sia configurato per usare il gruppo di app/ID esercente/contenitore creato sopra in  **Certificates, IDs & Profiles**  (Certificati, ID e profili) del portale per sviluppatori di Apple.
--   Assicurarsi che i profili di provisioning e gli ID delle app siano stati installati e che il file  **Info.plist**  dell'app (nel progetto Xamarin) usi uno degli ID app configurati sopra.
--   Assicurarsi che il file  **Entitlements.plist**  dell'app (nel progetto Xamarin) abbia il servizio corretto abilitato.
+-   Assicurarsi che l'ID corretto sia stato creato e registrato accuratamente nella sezione **Certificates, IDs & Profiles** (Certificati, ID e profili) del portale per sviluppatori di Apple.
+-   Assicurarsi che il servizio sia stato aggiunto all'ID dell'app (o dell'estensione) e che il servizio sia configurato per usare il gruppo di app/ID esercente/contenitore creato sopra in **Certificates, IDs & Profiles** (Certificati, ID e profili) del portale per sviluppatori di Apple.
+-   Assicurarsi che i profili di provisioning e gli ID delle app siano stati installati e che il file **Info.plist** dell'app (nel progetto Xamarin) usi uno degli ID app configurati sopra.
+-   Assicurarsi che il file **Entitlements.plist** dell'app (nel progetto Xamarin) abbia il servizio corretto abilitato.
 -   Assicurarsi che in info.plist siano impostate le chiavi per la privacy appropriate
--   In  **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
+-   In **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
 
 <a name="summary" />
 

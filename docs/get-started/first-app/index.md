@@ -8,13 +8,13 @@ ms.technology: xamarin-forms
 ms.custom: video
 author: conceptdev
 ms.author: crdun
-ms.date: 04/02/2019
-ms.openlocfilehash: 5dc37212facbc5b58b807d3fbcba8650a5b065f8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/23/2019
+ms.openlocfilehash: 3b25be2c929e0f072af2ff563d49ceaf07cae058
+ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61351956"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66252349"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>Creare la prima app Xamarin.Forms
 
@@ -22,11 +22,11 @@ _Guardare questo video e seguire la procedura per creare la prima app per dispos
 
 ::: zone pivot="windows"
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Building-Your-First-Android--iOS-App-in-Visual-Studio-2017/player]
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Build-Your-First-Android-App-with-Visual-Studio-2019-and-Xamarin/player]
 
 ## <a name="step-by-step-instructions-for-windows"></a>Istruzioni dettagliate per Windows
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
 
 Seguire questi passaggi e il video precedente:
 
@@ -74,6 +74,12 @@ Seguire questi passaggi e il video precedente:
     > [!TIP]
     > È possibile compilare ed eseguire il debug dell'app iOS da Visual Studio con un computer Mac in rete. Vedere le [istruzioni di installazione](~/ios/get-started/installation/windows/index.md) per altre informazioni.
 
+## <a name="build-an-ios-app-in-visual-studio-2019"></a>Creare un'app iOS in Visual Studio 2019
+
+In questo video illustra il processo di compilazione e test di un'app iOS usando Visual Studio 2019 su Windows:
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Build-Your-First-iOS-App-with-Visual-Studio-2019-and-Xamarin/player]
+
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
@@ -81,11 +87,11 @@ Seguire questi passaggi e il video precedente:
 
 ## <a name="step-by-step-instructions-for-windows"></a>Istruzioni dettagliate per Windows
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
 
 Seguire questi passaggi e il video precedente:
 
-1. Scegliere **File > Nuovo > Progetto** oppure premere il pulsante **Crea nuovo progetto...**  e quindi selezionare **Visual C# > Multipiattaforma > App per dispositivi mobili (Xamarin.Forms)**:
+1. Scegliere **File > Nuovo > Progetto** oppure premere il pulsante **Crea nuovo progetto...**  e quindi selezionare **Visual C# > Multipiattaforma > App per dispositivi mobili (Xamarin.Forms)** :
 
     [![App per dispositivi mobili (Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
 
@@ -128,7 +134,7 @@ Seguire questi passaggi e il video precedente:
 
 ## <a name="step-by-step-instructions-for-mac"></a>Istruzioni dettagliate per Mac
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
 
 Seguire questi passaggi e il video precedente:
 
