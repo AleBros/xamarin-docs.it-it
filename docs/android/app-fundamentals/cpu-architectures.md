@@ -6,13 +6,13 @@ ms.assetid: D4BC889D-9164-49BB-9B7B-F6C4E4E109F1
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 03/01/2018
-ms.openlocfilehash: f2865858552d4445dff95c85767c41849c19cc29
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/30/2019
+ms.openlocfilehash: 46e628700771864c6a4b99edea550af694bf3a62
+ms.sourcegitcommit: dd73477b1bccbd7ca45c1fb4e794da6b36ca163d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61018266"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66394688"
 ---
 # <a name="cpu-architectures"></a>Architetture CPU
 
@@ -49,6 +49,9 @@ Xamarin.Android supporta le architetture seguenti:
 
 -   **armeabi** &ndash; CPU basate su ARM che supportano almeno il set di istruzioni ARMv5TE. Si noti che `armeabi` non è thread-safe e non deve essere usata nei dispositivi con più CPU.
 
+> [!NOTE]
+> A partire [9.2 di xamarin. Android](https://docs.microsoft.com/xamarin/android/release-notes/9/9.2#removal-of-support-for-armeabi-cpu-architecture), `armeabi` non è più supportata.
+
 -   **armeabi-v7a** &ndash; CPU basate su ARM con operazioni a virgola mobile hardware e di più dispositivi di CPU (SMP). Si noti che `armeabi-v7a` codice macchina non verranno eseguite su dispositivi ARMv5.
 
 -   **arm64 v8a** &ndash; CPU basate sull'architettura di ARMv8 a 64 bit.
@@ -66,7 +69,7 @@ Per impostare come destinazione più architetture della CPU, è possibile selezi
 Non è necessario selezionare **arm64 v8a** oppure **x86_64** di interagire con dispositivi a 64 bit; il supporto a 64 bit non è necessario per eseguire l'app su hardware a 64 bit. Ad esempio, i dispositivi ARM a 64 bit (ad esempio la [Nexus 9](http://www.google.com/nexus/9/)) possono eseguire le app configurate per `armeabi-v7a`. Il vantaggio principale dell'abilitazione del supporto a 64 bit è per rendere possibile per l'app soddisfare una maggiore quantità di memoria.
 
 > [!NOTE]
-> supporto di runtime a 64 bit è attualmente una funzionalità sperimentale. Tenere presente che i Runtime a 64 bit vengono *non* necessari per eseguire l'app nei dispositivi a 64 bit. 
+> Da agosto 2018 le nuove app dovranno usare il livello API 26 come destinazione e da agosto 2019 le app [dovranno fornire versioni a 64 bit](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html) oltre alla versione a 32 bit.
 
 ## <a name="additional-information"></a>Informazioni aggiuntive
 

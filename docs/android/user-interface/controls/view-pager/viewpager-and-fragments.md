@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 1b6e1c8ce91eaad46e779527c5ba12e2187cad24
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 748443352c106fbad88f8eda895cde097ce14a45
+ms.sourcegitcommit: dd73477b1bccbd7ca45c1fb4e794da6b36ca163d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61038408"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66394702"
 ---
 # <a name="viewpager-with-fragments"></a>ViewPager con frammenti
 
@@ -86,7 +86,7 @@ using Android.Support.V4.View;
 using Android.Support.V4.App;
 ```
 
-Modifica il `MainActivity` dichiarazione di classe in modo che derivi da `AppCompatActivity`:
+Modifica il `MainActivity` dichiarazione di classe in modo che derivi da `FragmentActivity`:
 
 ```csharp
 public class MainActivity : FragmentActivity
