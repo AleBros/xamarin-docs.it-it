@@ -6,13 +6,13 @@ ms.assetid: 85B322AA-808F-41B6-953A-5877264AE643
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: 40f955d39799598093060f3230629a099885e4a2
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.date: 05/28/2019
+ms.openlocfilehash: a988a99e20af76d071f55c4cd2c97b135ad077f8
+ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970768"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66252280"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
 
@@ -20,13 +20,21 @@ ms.locfileid: "65970768"
 
 La shell Xamarin.Forms riduce la complessità dello sviluppo di applicazioni per dispositivi mobili offrendo le principali funzionalità richieste dalla maggior parte delle applicazioni per dispositivi mobili. Queste funzionalità includono un'esperienza utente di navigazione comune, uno schema di navigazione basato su URI e un gestore di ricerca integrato.
 
+## <a name="create-a-xamarinforms-shell-applicationcreatemd"></a>[Creare un'applicazione shell Xamarin.Forms](create.md)
+
+Il processo per la creazione di un'applicazione shell Xamarin.Forms prevede la creazione di un file XAML che definisce una sottoclasse della classe `Shell`, l'impostazione della proprietà `MainPage` della classe `App` dell'applicazione sull'oggetto `Shell` sottoclassato e quindi la descrizione della gerarchia visiva dell'applicazione nella classe `Shell` sottoclassata.
+
 ## <a name="flyoutflyoutmd"></a>[Riquadro a comparsa](flyout.md)
 
 Il riquadro a comparsa è il menu radice per un'applicazione shell ed è accessibile attraverso un'icona o tramite scorrimento rapido dal lato dello schermo. Il riquadro a comparsa è costituito da un'intestazione facoltativa, elementi del riquadro a comparsa e voci di menu facoltative.
 
 ## <a name="tabstabsmd"></a>[Schede](tabs.md)
 
-Dopo il riquadro a comparsa, il livello di navigazione successivo in un'applicazione shell è la barra delle schede inferiore. Quando una scheda contiene più di una pagina, è possibile spostarsi tra le pagine tramite le schede superiori.
+Dopo il riquadro a comparsa, il livello di navigazione successivo in un'applicazione shell è la barra delle schede inferiore. In alternativa, il modello di spostamento per un'applicazione può iniziare con le schede nella parte inferiore e non usare un riquadro a comparsa. In entrambi i casi, quando una scheda inferiore contiene più di una pagina, è possibile spostarsi tra le pagine tramite le schede superiori.
+
+## <a name="page-configurationconfigurationmd"></a>[Configurazione della pagina](configuration.md)
+
+La classe `Shell` definisce le proprietà associate che possono essere usate per configurare l'aspetto delle pagine nelle applicazioni shell Xamarin.Forms. Ciò include l'impostazione dei colori delle pagine, la disabilitazione della barra di spostamento, la disabilitazione della barra delle schede e la visualizzazione delle viste nella barra di spostamento.
 
 ## <a name="navigationnavigationmd"></a>[Navigazione](navigation.md)
 

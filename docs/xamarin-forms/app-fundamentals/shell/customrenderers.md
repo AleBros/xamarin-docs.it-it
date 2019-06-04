@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 59dba2fed0422db72b0617d9a831e3a9364320bd
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: ecb68d662c64b65346ffd04f0d3d3cd525533151
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970783"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178041"
 ---
 # <a name="xamarinforms-shell-custom-renderers"></a>Renderer personalizzati della shell Xamarin.Forms
 
@@ -42,6 +42,8 @@ La classe `ShellRenderer` espone i metodi sottoponibili a override seguenti:
 | iOS | Android |
 | --- | --- |
 | `SetElementSize`<br />`CreateFlyoutRenderer`<br />`CreateNavBarAppearanceTracker`<br />`CreatePageRendererTracker`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellItemTransition`<br />`CreateShellSearchResultsRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTabBarAppearanceTracker`<br />`Dispose`<br />`OnCurrentItemChanged`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateBackgroundColor` | `CreateFragmentForPage`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellFlyoutRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTrackerForToolbar`<br />`CreateToolbarAppearanceTracker`<br />`CreateTabLayoutAppearanceTracker`<br />`CreateBottomNavViewAppearanceTracker`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`SwitchFragment`<br />`Dispose` |
+
+Le classi `FlyoutItem` e `TabBar` sono alias per la classe `ShellItem` e la classe `Tab` è un alias per la classe `ShellSection`. Pertanto, il metodo `CreateShellItemRenderer` deve essere sottoposto a override durante la creazione di un renderer personalizzato per gli oggetti `FlyoutItem` e il metodo `CreateShellSectionRenderer` deve essere sottoposto a override durante la creazione di un renderer personalizzato per gli oggetti `Tab`.
 
 > [!IMPORTANT]
 > Ci sono altre classi renderer della shell, ad esempio `ShellSectionRenderer` e `ShellItemRenderer`, sia in iOS che in Android. Tuttavia, queste classi renderer aggiuntive vengono create tramite override nella classe `ShellRenderer`. La personalizzazione del comportamento di queste classi renderer aggiuntive può quindi essere ottenuta tramite la creazione di loro sottoclassi e la creazione di un'istanza della sottoclasse nell'override appropriato nella classe `ShellRenderer` sottoclassata.
