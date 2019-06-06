@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 3592a3027469cb9997d973db53d636ddea9e679d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 48ff30397b2592dd2c4dbd445987392d78ced6f3
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61024269"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740773"
 ---
 # <a name="activity-lifecycle"></a>Ciclo di vita dell'attività
 
@@ -62,12 +62,12 @@ Questi stati possono essere suddivisi in 4 gruppi principali, come indicato di s
 
 Per rendere più complicate è rilevante, Android genera una chiave inglese altre nella combinazione di chiamato le modifiche alla configurazione. Modifiche di configurazione sono attività rapido distruzione di $ / Ripeti-creation cicli che si verificano quando viene modificata la configurazione di un'attività, ad esempio quando il dispositivo viene [ruotata](~/android/app-fundamentals/handling-rotation.md) (e l'attività deve ottenere ricompilato in orizzontale o verticale modalità), quando viene visualizzata la tastiera e l'attività viene presentata l'opportunità di ridimensionamento automatico, o quando il dispositivo viene inserito in un ancoraggio, tra gli altri.
 
-Le modifiche alla configurazione causano comunque le stesse modifiche di stato dell'attività che si verificano durante l'arresto e riavvio di un'attività. Tuttavia, per fare in modo che un'applicazione ritiene reattiva ed esegue anche durante le modifiche alla configurazione, è importante che è gestito nel minor tempo. Per questo motivo, Android offre un'API specifica che può essere utilizzata per rendere persistente lo stato durante le modifiche alla configurazione.
+Le modifiche alla configurazione causano comunque le stesse modifiche di stato dell'attività che si verificano durante l'arresto e riavvio di un'attività. Tuttavia, per fare in modo che un'applicazione ritiene reattiva ed esegue anche durante le modifiche alla configurazione, è importante che vengano gestiti più rapidamente possibile. Per questo motivo, Android offre un'API specifica che può essere utilizzata per rendere persistente lo stato durante le modifiche alla configurazione.
 Si affronterà questo aspetto in un secondo momento le [la gestione dello stato in tutto il ciclo di vita](~/android/app-fundamentals/activity-lifecycle/index.md#Managing_State_Throughout_the_Lifecycle) sezione.
 
 ### <a name="activity-lifecycle-methods"></a>Metodi del ciclo di vita di attività
 
-Android SDK e, di conseguenza, il framework di xamarin. Android offre un potente modello per la gestione dello stato delle attività all'interno di un'applicazione. Quando viene modificato lo stato dell'attività, l'attività viene tenuto aggiornato tramite il sistema operativo, che chiama i metodi specifici su tale attività. Il diagramma seguente illustra questi metodi in relazione al ciclo di vita delle attività:
+Android SDK e, di conseguenza, il framework di xamarin. Android offre un potente modello per la gestione dello stato delle attività all'interno di un'applicazione. Quando viene modificato lo stato dell'attività, l'attività viene tenuto aggiornato tramite il sistema operativo, che chiama i metodi specifici su tale attività. Il diagramma seguente illustra questi metodi in relazione al ciclo di vita di attività:
 
 [![Diagramma di flusso di attività del ciclo di vita](images/image2-sml.png)](images/image2.png#lightbox)
 
@@ -117,7 +117,7 @@ Una volta `OnCreate` ha completato, verrà chiamato Android `OnStart`.
 Le chiamate di sistema [OnResume](https://developer.xamarin.com/api/member/Android.App.Activity.OnResume/) quando l'attività è pronto per iniziare a interagire con l'utente.
 Le attività devono eseguire l'override di questo metodo per eseguire attività quali:
 
--  Imparare a frequenze di fotogrammi (attività comuni nella creazione di giochi)
+-  Imparare a frequenze di fotogrammi (attività comuni nello sviluppo di giochi)
 -  Avviare le animazioni
 -  In attesa di aggiornamenti GPS
 -  Visualizzare gli avvisi pertinenti o le finestre di dialogo

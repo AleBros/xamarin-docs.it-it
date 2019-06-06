@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: 57c69223a01074ed15714026b7e9ec4e995808e0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f3162c4da092048cd409f7b32438bc85dcedff19
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61171308"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740795"
 ---
 # <a name="populating-a-listview-with-data"></a>Popolamento di un controllo ListView con dati
 
@@ -222,6 +222,6 @@ I titoli di indice della sezione non devono eseguire il mapping 1:1 a sezioni de
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [BasicTableAndroid (sample)](https://developer.xamarin.com/samples/BasicTableAndroid/)
-- [BasicTableAdapter (esempio)](https://developer.xamarin.com/samples/BasicTableAdapter/)
-- [FastScroll (esempio)](https://developer.xamarin.com/samples/FastScroll/)
+- [BasicTableAndroid (sample)](https://developer.xamarin.com/samples/monodroid/BasicTableAndroid/)
+- [BasicTableAdapter (esempio)](https://developer.xamarin.com/samples/monodroid/BasicTableAdapter/)
+- [FastScroll (esempio)](https://developer.xamarin.com/samples/monodroid/FastScroll/)

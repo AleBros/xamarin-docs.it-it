@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 74b9243b1b985cba6d815a673d1abed054eda234
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b3a6f45d78c0febb2aacf4f7693bc6e328c3ec0
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61409865"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740956"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Utilizzo di watchOS padre Application in Xamarin
 
@@ -35,7 +35,7 @@ L'App padre viene talvolta anche detto l'App contenitore.
 
 ## <a name="run-code"></a>Eseguire il codice
 
-La comunicazione tra un'estensione di espressioni di controllo e l'app iPhone padre viene illustrata la [GpsWatch esempio](https://developer.xamarin.com/samples/GpsWatch).
+La comunicazione tra un'estensione di espressioni di controllo e l'app iPhone padre viene illustrata la [GpsWatch esempio](https://developer.xamarin.com/samples/monotouch/WatchKit/GpsWatch/).
 L'estensione di espressioni di controllo può richiedere l'app per iOS padre per eseguire alcune operazioni di elaborazione nel relativo per conto dell'utente mediante il `OpenParentApplication` (metodo).
 
 Ciò è particolarmente utile per le attività in corso (tra cui le richieste di rete) - solo l'elemento padre app iOS possono sfruttare i vantaggi dell'elaborazione in background per completare queste attività e salvare i dati recuperati in una posizione accessibile per l'estensione di espressioni di controllo.

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: b07bfd9f9ecbde66dbac3854bdbb611ad89e0ee2
-ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
+ms.openlocfilehash: a1d49639d28e677ebbe2d7cf870a6e91dfff8575
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66469520"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740922"
 ---
 # <a name="colors-in-xamarinforms"></a>Colori in xamarin. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/WorkingWithColors)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithColors)
 
 _Xamarin. Forms fornisce una classe di colore multipiattaforma flessibile._
 
@@ -124,5 +124,5 @@ Xamarin. Forms `Color` classe viene utilizzata per creare riferimenti da riconos
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [ColorsSample](https://developer.xamarin.com/samples/WorkingWithColors)
+- [ColorsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithColors)
 - [Selezione associabile (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindablePicker/)

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 9d9bef6d1a0817abc12b5a9bd266b1e1e7d38348
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 95ebcc8ef436c90e807045bd009b35ff1c3e9c1f
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60949618"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740818"
 ---
 # <a name="actionbar"></a>ActionBar
 
@@ -51,7 +51,7 @@ class SampleTabFragment: Fragment
         ViewGroup container, Bundle savedInstanceState)
     {
         base.OnCreateView (inflater, container, savedInstanceState);
-       
+
         var view = inflater.Inflate (
             Resource.Layout.Tab, container, false);
 
@@ -123,7 +123,7 @@ Per aumento il menu di scelta, viene eseguito l'override `OnCreateOptionsMenu` n
 public override bool OnCreateOptionsMenu (IMenu menu)
 {
     MenuInflater.Inflate (Resource.Menu.ActionBarMenu, menu);       
-           
+
     var shareMenuItem = menu.FindItem (Resource.Id.shareMenuItem);           
     var shareActionProvider =
        (ShareActionProvider)shareMenuItem.ActionProvider;
@@ -153,7 +153,7 @@ L'immagine nell'esempio di codice precedente è incluso come un asset con l'appl
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Hello schede ICS (esempio)](https://developer.xamarin.com/samples/HelloTabsICS/)
+- [Hello schede ICS (esempio)](https://developer.xamarin.com/samples/monodroid/HelloTabsICS/)
 - [ShareActionProvider Demo (esempio)](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)
 - [Introduzione a Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
 - [Piattaforma Android 4.0](https://developer.android.com/sdk/android-4.0.html)

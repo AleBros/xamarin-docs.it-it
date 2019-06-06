@@ -8,16 +8,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/03/2019
-ms.openlocfilehash: a8a61ac505eab8c458c49bde9184d6e96583d37f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8217c6436cc8cfe8f4b9c6cc3445157319e8c0bf
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61222528"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741107"
 ---
 # <a name="xaml-controls"></a>Controlli XAML
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/FormsGallery/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 
 Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio i dispositivi di scorrimento che sono comunemente noti come, pulsanti ed etichette *controlli* oppure *widget* in altri ambienti di programmazione grafiche. Le visualizzazioni supportate da xamarin. Forms derivano da tutte le [ `View` ](xref:Xamarin.Forms.View) classe.
 
@@ -82,6 +82,6 @@ Tutte le viste definite in xamarin. Forms possono farvi riferimento dai file XAM
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di xamarin. Forms FormsGallery](https://developer.xamarin.com/samples/FormsGallery/)
+- [Esempio di xamarin. Forms FormsGallery](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 - [Esempi di Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [Documentazione per le API di Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
