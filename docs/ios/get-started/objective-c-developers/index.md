@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: 415a888a61b4c4ca9164166aadb1983df2d828dd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 949958387ab710cb671cd9874bb9062227f3e3b8
+ms.sourcegitcommit: dd73477b1bccbd7ca45c1fb4e794da6b36ca163d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107339"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66394663"
 ---
 # <a name="xamarin-for-objective-c-developers"></a>Xamarin per sviluppatori Objective-C
 
@@ -29,7 +29,7 @@ Questo non si limita necessariamente al codice non di interfaccia utente. I bind
 Nel sito della documentazione sono disponibili moltissime informazioni sulla transizione a Xamarin, che illustrano come integrare il codice C# con le funzionalità già note. Alcune informazioni importanti per iniziare includono:
 
 -   [Panoramica di C# per sviluppatori Objective-C](primer.md): breve panoramica per gli sviluppatori Objective-C che vogliono passare a Xamarin e al linguaggio C#. 
--   [Walkthrough: Binding an Objective-C Library](~/ios/platform/binding-objective-c/walkthrough.md) (Procedura dettagliata: Binding di una libreria Objective-C): procedura dettagliata per riutilizzare il codice Objective-C esistente in un'applicazione Xamarin.iOS. 
+-   [Procedura dettagliata: Binding an Objective-C Library](~/ios/platform/binding-objective-c/walkthrough.md) (Procedura dettagliata: Binding di una libreria Objective-C): procedura dettagliata per riutilizzare il codice Objective-C esistente in un'applicazione Xamarin.iOS. 
 
 
 ## <a name="binding-objective-c"></a>Binding di Objective-C
