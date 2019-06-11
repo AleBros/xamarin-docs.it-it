@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b3981572e4d2629fd88d1e255fc7459bfe8912f1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f957bd5b361d7287353542186916c7f934ee0490
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60950131"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827792"
 ---
 # <a name="kitkat-features"></a>Funzionalità KitKat
 
@@ -564,7 +564,7 @@ class HceService : HostApduService
 }
 ```
 
-Il precedente servizio offre un modo per il lettore NFC interagire con l'applicazione, ma il lettore NFC ancora non ha modo di sapere se questo servizio emula la scheda NFC da analizzare. Per consentire al lettore NFC identificare il servizio, è possibile assegnare il servizio univoca *ID applicazione (AID)*. Si specifica un aiuto, insieme a altri metadati sul servizio HCE, in un file di risorse xml registrato con il `MetaData` attributo (vedere l'esempio di codice precedente). Questo file di risorse specifica uno o più filtri AID - stringhe dell'identificatore univoco in formato esadecimale che corrispondono agli strumenti di uno o più dispositivi di lettore NFC:
+Il precedente servizio offre un modo per il lettore NFC interagire con l'applicazione, ma il lettore NFC ancora non ha modo di sapere se questo servizio emula la scheda NFC da analizzare. Per consentire al lettore NFC identificare il servizio, è possibile assegnare il servizio univoca *ID applicazione (AID)* . Si specifica un aiuto, insieme a altri metadati sul servizio HCE, in un file di risorse xml registrato con il `MetaData` attributo (vedere l'esempio di codice precedente). Questo file di risorse specifica uno o più filtri AID - stringhe dell'identificatore univoco in formato esadecimale che corrispondono agli strumenti di uno o più dispositivi di lettore NFC:
 
 ```xml
 <host-apdu-service xmlns:android="http://schemas.android.com/apk/res/android"
@@ -713,6 +713,6 @@ Questo articolo introdotte alcune delle nuove API disponibile in Android 4.4 (AP
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio KitKat](https://developer.xamarin.com/samples/KitKat/)
+- [Esempio KitKat](https://developer.xamarin.com/samples/monodroid/KitKat/)
 - [Android 4.4 le API](https://developer.android.com/about/versions/android-4.4.html)
 - [Android KitKat](https://developer.android.com/about/versions/kitkat.html)

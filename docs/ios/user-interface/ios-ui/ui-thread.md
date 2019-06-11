@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 9bde539286b69569b4928bc28b20faecee0f5209
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.openlocfilehash: e4485c485b708bdec06f7f1dc22f0bf33e07e982
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557375"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827752"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Utilizzo di Thread dell'interfaccia utente in xamarin. IOS
 
@@ -96,5 +96,5 @@ Se un metodo asincrono viene chiamato da un thread in background (non il thread 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Controlli (esempio)](https://developer.xamarin.com/samples/Controls/)
+- [Controlli (esempio)](https://developer.xamarin.com/samples/monotouch/Controls/)
 - [Threading](~/ios/app-fundamentals/threading.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/13/2018
-ms.openlocfilehash: bb57dbdb87555fb0b3ab8941024e5a84e4723099
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 25c5595fac2ea2aa7a87d6640cc6b5c399ab5e5e
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61425096"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827812"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Visualizzazione di immagini con xamarin. IOS
 
@@ -84,4 +84,4 @@ File di risorse fa riferimento a mai necessario includere il **risorse** cartell
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Controlli (esempio)](https://developer.xamarin.com/samples/Controls/)
+- [Controlli (esempio)](https://developer.xamarin.com/samples/monotouch/Controls/)

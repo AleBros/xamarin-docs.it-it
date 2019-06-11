@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d5b7d4a372704079343a357c1d341a5260fcf583
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fab653eb24b504fa17e6f2eac32915fd88580817
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61157416"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827821"
 ---
 # <a name="user-interface-controls-in-xamarinios"></a>Controlli dell'interfaccia utente in xamarin. IOS
 
@@ -86,4 +86,4 @@ In questo articolo, verranno analizzati ognuna delle tre visualizzazioni Web for
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Controlli (esempio)](https://developer.xamarin.com/samples/Controls/)
+- [Controlli (esempio)](https://developer.xamarin.com/samples/monotouch/Controls/)

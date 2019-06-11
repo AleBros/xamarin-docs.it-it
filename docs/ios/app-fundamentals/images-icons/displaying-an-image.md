@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 69952b0bac884fe8b14edcbb87aa8fad47594880
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6d584c45288d7e7341a4423c32a6966c6c7f21f3
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61252037"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827907"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Visualizzazione di un'immagine in xamarin. IOS
 
@@ -289,6 +289,6 @@ Questo codice crea un nuovo `UIImageView` e gli assegna una dimensione iniziale 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Utilizzo di immagini (esempio)](https://developer.xamarin.com/samples/WorkingWithImages/)
+- [Utilizzo di immagini (esempio)](https://developer.xamarin.com/samples/monotouch/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
 - [Le dimensioni dell'immagine e la risoluzione (Apple)](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/)
