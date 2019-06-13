@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 512280e9c298cfbcea6f693b0691236fd1cf5a5f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: becdd842f46cc7100bd7d9a6fd7347b541685c35
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61036479"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039629"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Sottoclassi generiche di NSObject in xamarin. IOS
 
@@ -107,7 +107,7 @@ Non è consentita la creazione di istanze di tipi generici da Objective-C. Ciò 
 
 Prendere in considerazione questa definizione di classe, che espone un costruttore che accetta un `IntPtr` (il modo di xamarin. IOS di creazione di un C# oggetto da un'istanza di Objective-C nativa):
     
-```
+```csharp
 class Generic<T> : NSObject where T : NSObject
 {
     public Generic () {}
@@ -121,7 +121,7 @@ Si tratta infatti Objective-C non prevede il concetto di tipi generici e non dev
 
 È possibile trattare questo problema creando una sottoclasse specializzata del tipo generico.   Ad esempio:
     
-```
+```csharp
 class Generic<T> : NSObject where T : NSObject
 {
     public Generic () {}

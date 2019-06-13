@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 982f19eef7b98a05535298430bdfdbe6e54bac10
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 6e64f9c7d0fcebbbc92171f92a5e0ac2f18ce451
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827453"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039712"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introduzione a monotouch. Dialog per xamarin. IOS
 
@@ -120,16 +120,16 @@ Elementi radice inoltre possono essere utilizzati all'interno di sezioni per att
 
 ```csharp
 var root = new RootElement ("Meals") {
-    new Section ("Dinner"){
-            new RootElement ("Dessert", new RadioGroup ("dessert", 2)) {
-                new Section () {
-                    new RadioElement ("Ice Cream", "dessert"),
-                    new RadioElement ("Milkshake", "dessert"),
-                    new RadioElement ("Chocolate Cake", "dessert")
-                }
+    new Section ("Dinner") {
+        new RootElement ("Dessert", new RadioGroup ("dessert", 2)) {
+            new Section () {
+                new RadioElement ("Ice Cream", "dessert"),
+                new RadioElement ("Milkshake", "dessert"),
+                new RadioElement ("Chocolate Cake", "dessert")
             }
         }
     }
+};
 ```
 
 Nell'esempio precedente, quando l'utente tocca "Dessert", monotouch. Dialog verrà creata una nuova pagina e spostarsi su di esso con la radice in corso "Dessert" e disporre di un gruppo di opzione con tre valori.
@@ -151,14 +151,14 @@ Nelle sezioni possono avere intestazioni e piè di pagina come stringhe o come U
 In genere si utilizzerà semplicemente le stringhe, ma per creare le interfacce utente personalizzate è possibile usare qualsiasi UIView come l'intestazione o piè di pagina. È possibile utilizzare una stringa per crearli simile al seguente:
 
 ```csharp
-var section = new Section ("Header", "Footer")
+var section = new Section ("Header", "Footer");
 ```
 
 Per usare le visualizzazioni, è sufficiente passare le viste al costruttore:
 
 ```csharp
 var header = new UIImageView (Image.FromFile ("sample.png"));
-var section = new Section (header)
+var section = new Section (header);
 ```
 
 ### <a name="getting-notified"></a>Ricevere notifiche
@@ -170,8 +170,7 @@ Ad esempio, che si vuole gestire un evento di tocco per una cella della tabella 
 
 ```csharp
 new Section () {
-        new StringElement ("Demo Callback", 
-                delegate { Console.WriteLine ("Handled"); })
+    new StringElement ("Demo Callback", delegate { Console.WriteLine ("Handled"); })
 }
 ```
 
@@ -180,18 +179,14 @@ new Section () {
 Combinato con il `Element.Value` proprietà, il callback può recuperare il valore impostato in altri elementi. Si consideri il codice di esempio seguente:
 
 ```csharp
-var element = new EntryElement (task.Name, "Enter task description",
-        task.Description);
+var element = new EntryElement (task.Name, "Enter task description", task.Description);
                 
-var taskElement = new RootElement (task.Name){
-        new Section () { element },
-        new Section () { 
-                new DateElement ("Due Date", task.DueDate)
-        },
-        new Section ("Demo Retrieving Element Value") {
-                new StringElement ("Output Task Description", 
-                        delegate { Console.WriteLine (element.Value); })
-        }
+var taskElement = new RootElement (task.Name) {
+    new Section () { element },
+    new Section () { new DateElement ("Due Date", task.DueDate) },
+    new Section ("Demo Retrieving Element Value") {
+        new StringElement ("Output Task Description", delegate { Console.WriteLine (element.Value); })
+    }
 };
 ```
 
@@ -223,10 +218,9 @@ Oggetto `StringElement` Mostra un titolo a sinistra di una cella della tabella e
 Usare un `StringElement` come un pulsante, fornire un delegato.
 
 ```csharp
-new StringElement (
-        "Click me",
-        () => { new UIAlertView("Tapped", "String Element Tapped"
-, null, "ok", null).Show(); })
+new StringElement ("Click me", () => { 
+    new UIAlertView("Tapped", "String Element Tapped", null, "ok", null).Show();
+});
 ```
 
  [![](images/image8.png "Per usare un StringElement come un pulsante, fornire un delegato")](images/image8.png#lightbox)
@@ -281,7 +275,7 @@ Inoltre il `KeyboardType` proprietà può essere impostata in fase di creazione 
 Oggetto `RadioElement` richiede un `RadioGroup` dovrà essere specificato nella `RootElement`.
 
 ```csharp
-mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0))
+mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0));
 ```
 
  [![](images/image14.png "Un RadioElement richiede un RadioGroup sia specificato nel RootElement")](images/image14.png#lightbox)
@@ -289,7 +283,7 @@ mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0))
  `RootElements` consentono inoltre di coordinare gli elementi radio. Il `RadioElement` i membri possono estendersi su più sezioni (ad esempio implementare qualcosa di simile al selettore di tono anello e suonerie personalizzato separato dal sistema suonerie). La visualizzazione di riepilogo visualizzerà l'elemento opzione attualmente selezionata. Per usarlo, creare il `RootElement` con il costruttore di gruppo, simile al seguente:
 
 ```csharp
-var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0))
+var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0));
 ```
 
 Il nome del gruppo di nel `RadioGroup` consente di visualizzare il valore selezionato nella pagina che lo contiene (se presente) e il valore, ovvero zero in questo caso, è l'indice del primo elemento selezionato.
@@ -359,16 +353,13 @@ Ecco un esempio molto semplice dell'implementazione della classe:
 
 ```csharp
 public class SampleOwnerDrawnElement : OwnerDrawnElement
- {
+{
     public SampleOwnerDrawnElement (string text) : base(UITableViewCellStyle.Default, "sampleOwnerDrawnElement")
     {
         this.Text = text;
     }
 
-    public string Text
-    {
-        get;set;    
-    }
+    public string Text { get; set; }
 
     public override void Draw (RectangleF bounds, CGContext context, UIView view)
     {
@@ -383,7 +374,7 @@ public class SampleOwnerDrawnElement : OwnerDrawnElement
     {
         return 44.0f;
     }
- }
+}
 ```
 
 ### <a name="json-element"></a>Elemento JSON
@@ -453,9 +444,9 @@ Ad esempio il codice seguente carica un'immagine da un Url in un `BadgeElement`:
 string uriString = "http://some-server.com/some image url";
 
 var rootElement = new RootElement("Image Loader") {
-        new Section(){
-                new BadgeElement( ImageLoader.DefaultRequestImage( new Uri(uriString), this), "Xamarin")
-        }
+    new Section() {
+        new BadgeElement( ImageLoader.DefaultRequestImage( new Uri(uriString), this), "Xamarin")
+    }
 };
 ```
 
@@ -467,12 +458,11 @@ Tramite l'utilizzo di clever di LINQ e C#della sintassi di inizializzazione, LIN
 
 ```csharp
 var rootElement = new RootElement ("LINQ root element") {
-from x in new string [] { "one", "two", "three" }
-select new Section (x) {
-from y in "Hello:World".Split (':')
-select (Element) new StringElement (y,
-delegate { Debug.WriteLine("cell tapped"); })
-}
+    from x in new string [] { "one", "two", "three" }
+    select new Section (x) {
+        from y in "Hello:World".Split (':')
+        select (Element) new StringElement (y, delegate { Debug.WriteLine("cell tapped"); })
+    }
 };
 ```
 
@@ -488,38 +478,40 @@ Per creare un proprio elemento, si dovranno eseguire l'override dei seguenti:
 
 ```csharp
 // To release any heavy resources that you might have
-    void Dispose (bool disposing);
+void Dispose (bool disposing);
 
-    // To retrieve the UITableViewCell for your element
-    // you would need to prepare the cell to be reused, in the
-    // same way that UITableView expects reusable cells to work
-    UITableViewCell GetCell (UITableView tv)
+// To retrieve the UITableViewCell for your element
+// you would need to prepare the cell to be reused, in the
+// same way that UITableView expects reusable cells to work
+UITableViewCell GetCell (UITableView tv);
 
-    // To retrieve a "summary" that can be used with
-    // a root element to render a summary one level up.  
-    string Summary ()
-    // To detect when the user has tapped on the cell
-    void Selected (DialogViewController dvc, UITableView tableView, NSIndexPath path)
-    // If you support search, to probe if the cell matches the user input
-    bool Matches (string text)
+// To retrieve a "summary" that can be used with
+// a root element to render a summary one level up.  
+string Summary ();
+
+// To detect when the user has tapped on the cell
+void Selected (DialogViewController dvc, UITableView tableView, NSIndexPath path);
+
+// If you support search, to probe if the cell matches the user input
+bool Matches (string text);
 ```
 
 Se l'elemento può avere una dimensione variabile, è necessario implementare il `IElementSizing` interfaccia, che contiene un metodo:
 
 ```csharp
 // Returns the height for the cell at indexPath.Section, indexPath.Row
-    float GetHeight (UITableView tableView, NSIndexPath indexPath);
+float GetHeight (UITableView tableView, NSIndexPath indexPath);
 ```
 
 Se si prevede di implementare il `GetCell` metodo chiamando `base.GetCell(tv)` e personalizzare la cella restituita, è necessario eseguire l'override anche di `CellKey` proprietà per restituire una chiave che sia univoca per l'elemento, come segue:
 
 ```csharp
 static NSString MyKey = new NSString ("MyKey");
-    protected override NSString CellKey {
-        get {
-            return MyKey;
-        }
+protected override NSString CellKey {
+    get {
+        return MyKey;
     }
+}
 ```
 
 Questa procedura funziona per la maggior parte degli elementi, ma non per il `StringElement` e `StyledStringElement` come quelli usare il proprio set di chiavi per diversi scenari di rendering. È necessario replicare il codice in tali classi.
@@ -533,9 +525,9 @@ Il `DialogViewController` è semplicemente una sottoclasse del `UITableViewContr
 Ad esempio, se si desidera modificare lo stile di elenco per essere rappresentato `Grouped` o `Plain`, è possibile impostare questo valore modificando la proprietà quando si crea il controller, simile al seguente:
 
 ```csharp
-var myController = new DialogViewController (root, true){
-        Style = UITableViewStyle.Grouped;
-    }
+var myController = new DialogViewController (root, true) {
+    Style = UITableViewStyle.Grouped;
+}
 ```
 
 Per altre informazioni avanzate delle personalizzazioni del `DialogViewController`, ad esempio l'impostazione relativo sfondo, si farebbe sottoclasse ed eseguire l'override appropriate metodi, come illustrato nell'esempio seguente:
