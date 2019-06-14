@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 7a273d43ce43ca2946e1ff3177fc4575cd92a534
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 901bf683f59574d71c035b9635abaa3441152252
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050608"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741055"
 ---
 # <a name="xamarinforms-triggers"></a>Trigger Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/WorkingWithTriggers)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
 
 I trigger consentono di esprimere in modo dichiarativo in XAML le azioni che modificano l'aspetto dei controlli in base a eventi o modifiche delle proprietà.
 
@@ -333,5 +333,5 @@ Nota: `EnterActions` e `ExitActions` vengono ignorate nei  **trigger di evento**
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di trigger](https://developer.xamarin.com/samples/WorkingWithTriggers)
+- [Esempio di trigger](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
 - [Documentazione per le API di Xamarin.Forms](xref:Xamarin.Forms.TriggerAction`1)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 6b1df62aec12c1c34d49bd6dfa16368a6b0092f9
-ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
+ms.openlocfilehash: b6e68f6b99803edd8d50a172d598a3410aa1bbf4
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574728"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740754"
 ---
 # <a name="xamarinforms-messagingcenter"></a>MessagingCenter di Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/UsingMessagingCenter)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UsingMessagingCenter)
 
 _Xamarin.Forms include un servizio di messaggistica semplice per l'invio e la ricezione di messaggi._
 
@@ -113,6 +113,6 @@ MessagingCenter è un modo semplice per ridurre l'accoppiamento, in particolare 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di MessagingCenter](https://developer.xamarin.com/samples/UsingMessagingCenter)
+- [Esempio di MessagingCenter](https://developer.xamarin.com/samples/xamarin-forms/UsingMessagingCenter)
 - [Esempi di Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
 - [Comunicazioni tra componenti poco accoppiati](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)

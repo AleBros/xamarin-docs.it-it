@@ -7,24 +7,24 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: a63d0d4c90bff36e55d98b731217133fe5958c1f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: d8763c6fe8e330181c836bc8d10923ea676a07c1
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051471"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740938"
 ---
 # <a name="checking-device-orientation"></a>Controllo dell'orientamento del dispositivo
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/UsingDependencyService)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 
 Questo articolo illustrerà come usare [`DependencyService`](xref:Xamarin.Forms.DependencyService) per controllare l'orientamento del dispositivo da codice condiviso usando le API native in ciascuna piattaforma. Questa procedura dettagliata è basata su sul plug-in `DeviceOrientation` esistente di Ali Özgür. Vedere il [repository GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) per altre informazioni.
 
 - **[Creazione dell'interfaccia](#Creating_the_Interface)** &ndash; Informazioni sulla creazione dell'interfaccia nel codice condiviso.
 - **[Implementazione in iOS](#iOS_Implementation)** &ndash; Informazioni su come implementare l'interfaccia nel codice nativo per iOS.
-- **[Implementazione in Android](#Android_Implementation)**: informazioni su come implementare l'interfaccia nel codice nativo per Android.
-- **[Implementazione nella piattaforma UWP](#WindowsImplementation)**: informazioni su come implementare l'interfaccia nel codice nativo per la piattaforma UWP (Universal Windows Platform).
-- **[Implementazione nel codice condiviso](#Implementing_in_Shared_Code)**: informazioni su come usare `DependencyService` per eseguire chiamate nell'implementazione nativa dal codice condiviso.
+- **[Implementazione in Android](#Android_Implementation)** : informazioni su come implementare l'interfaccia nel codice nativo per Android.
+- **[Implementazione nella piattaforma UWP](#WindowsImplementation)** : informazioni su come implementare l'interfaccia nel codice nativo per la piattaforma UWP (Universal Windows Platform).
+- **[Implementazione nel codice condiviso](#Implementing_in_Shared_Code)** : informazioni su come usare `DependencyService` per eseguire chiamate nell'implementazione nativa dal codice condiviso.
 
 L'applicazione che usa `DependencyService` avrà la struttura seguente:
 
@@ -224,6 +224,6 @@ Se si esegue questa applicazione sulla piattaforma iOS, Android o Windows e si p
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Using DependencyService (sample)](https://developer.xamarin.com/samples/UsingDependencyService) (Esempio d'uso di DependencyService)
-- [DependencyService (sample)](https://developer.xamarin.com/samples/DependencyService/DependencyServiceSample/) (Esempio di DependencyService)
+- [Using DependencyService (sample)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/) (Esempio d'uso di DependencyService)
+- [DependencyService (sample)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/) (Esempio di DependencyService)
 - [Esempi di Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)

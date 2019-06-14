@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2018
-ms.openlocfilehash: 07f1fbae6c4fbfcfad45fc96970339e34b5de040
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3f22556948fc87dc604870f5a8625b80a4a0b29d
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102841"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827207"
 ---
 # <a name="linking-on-android"></a>Collegamento in Android
 
 Le applicazioni Xamarin.Android usano un *linker* per ridurre le dimensioni dell'applicazione. Il linker esegue un'analisi statica dell'applicazione per determinare gli assembly, i tipi e i membri effettivamente usati. Il linker si comporta quindi come *Garbage Collector*, cercando continuamente gli assembly, i tipi e i membri referenziati, fino a trovare l'intera closure di assembly, tipi e membri referenziati. Tutto quello che è esterno a questa closure viene quindi *rimosso*.
 
-Considerando l'esempio [Hello, Android](https://developer.xamarin.com/samples/HelloM4A/):
+Considerando l'esempio [Hello, Android](https://developer.xamarin.com/samples/monodroid/HelloM4A/):
 
 |Configurazione|Dimensioni 1.2.0|Dimensioni 4.0.1|
 |---|---|---|
