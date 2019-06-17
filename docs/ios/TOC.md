@@ -240,7 +240,8 @@
 ### [Vibrazione](~/essentials/vibrate.md?context=xamarin/ios)
 ### [Risoluzione dei problemi](~/essentials/troubleshooting.md?context=xamarin/ios)
 
-## [Dati e servizi cloud](data-cloud/index.md)
+## Dati e servizi cloud
+### [Panoramica](data-cloud/index.md)
 ### [Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/ios)
 #### [Introduzione](~/cross-platform/data-cloud/active-directory/get-started/index.md?context=xamarin/ios)
 ##### [Passaggio 1. Registrare](~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/ios)
@@ -258,7 +259,8 @@
 ### [CloudKit](data-cloud/intro-to-cloudkit.md)
 
 ### [Introduzione ai servizi Web](~/cross-platform/data-cloud/web-services/index.md?context=xamarin/ios)
-## [Distribuzione e test](deploy-test/index.md)
+## Distribuzione e test
+### [Panoramica](deploy-test/index.md)
 ### [Distribuzione di app](deploy-test/app-distribution/index.md)
 #### [Distribuzione tramite l'App Store](deploy-test/app-distribution/app-store-distribution/index.md)
 ##### [Configurazione dell'app in iTunes Connect](deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
@@ -292,7 +294,8 @@
 ### [Procedura dettagliata: Uso di Apple Instruments](deploy-test/walkthrough-apples-instrument.md)
 ### [Prestazioni](deploy-test/performance.md)
 ### [Risoluzione dei problemi](deploy-test/troubleshooting.md)
-## [Piattaforma Apple](~/cross-platform/macios/index.md?context=xamarin/ios)
+## Piattaforma Apple
+### [Panoramica di iOS e macOS](~/cross-platform/macios/index.md?context=xamarin/ios)
 ### [Gestione degli account Apple](~/cross-platform/macios/apple-account-management.md?context=xamarin/ios)
 ### [API unificata](~/cross-platform/macios/unified/index.md?context=xamarin/ios)
 #### [Panoramica](~/cross-platform/macios/unified/overview.md?context=xamarin/ios)
@@ -326,7 +329,8 @@
 ### [Utilizzo di tipi nativi nelle app multipiattaforma](~/cross-platform/macios/native-types-cross-platform.md?context=xamarin/ios)
 ### [HttpClient e selettore dell'implementazione di SSL/TLS](~/cross-platform/macios/http-stack.md?context=xamarin/ios)
 ### [Ottimizzazioni della build](~/cross-platform/macios/optimizations.md?context=xamarin/ios)
-## [Concetti avanzati e meccanismi interni](internals/index.md)
+## Concetti avanzati e meccanismi interni
+### [Panoramica](internals/index.md)
 ### [API](internals/api.md)
 ### [Progettazione dell'API](internals/api-design/index.md)
 #### [NSString](internals/api-design/nsstring.md)
@@ -339,8 +343,10 @@
 ### [Nuovo sistema di conteggio dei riferimenti](internals/newrefcount.md)
 ### [Selettori Objective-C](internals/objective-c-selectors.md)
 ### [Registrar](internals/registrar.md)
-## [Risoluzione dei problemi](troubleshooting/index.md)
+## Risoluzione dei problemi
+### [Panoramica](troubleshooting/index.md)
 ### [Suggerimenti per la risoluzione dei problemi](troubleshooting/troubleshooting.md)
+### [Anteprima di Xcode 11](~/ios/platform/ios13/troubleshooting/index.md)
 ### [Regole di analisi di Xamarin.iOS](troubleshooting/xamarin-ios-analysis.md)
 ### [Messaggi di errore (mtouch)](troubleshooting/mtouch-errors.md)
 ### [Domande frequenti](troubleshooting/questions/index.md)
@@ -368,7 +374,8 @@
 #### [System. Exception AMDeviceNotificationSubscribe ha restituito...](troubleshooting/questions/exception-amddevicenotificationsubscribe.md)
 #### [MDocArchiveToMsxDocConverter.exe non trovato rver.BaseCommand.OnRequest](troubleshooting/questions/mdocarchivetomsxdocconverter-not-found.md)
 #### [Come si impostano le variabili di ambiente di runtime Mono per i progetti iOS in Xamarin Studio?](troubleshooting/questions/xs-mono-runtime.md)
-## [watchOS](watchos/index.md)
+## watchOS
+### [Panoramica](watchos/index.md)
 ### [Introduzione](watchos/get-started/index.md)
 #### [Introduzione a watchOS](watchos/get-started/intro-to-watchos.md)
 #### [Configurazione e installazione](watchos/get-started/installation.md)
@@ -405,7 +412,8 @@
 #### [Apple Watch](watchos/deploy-test/device.md)
 #### [App Store](watchos/deploy-test/appstore.md)
 ### [Risoluzione dei problemi](watchos/troubleshooting.md)
-## [tvOS](tvos/index.md)
+## tvOS
+### [Panoramica](tvos/index.md)
 ### [Introduzione](tvos/get-started/index.md)
 #### [Installazione del supporto per tvOS](tvos/get-started/installation.md)
 #### [Guida introduttiva alla creazione della prima app tvOS](tvos/get-started/hello-tvos.md)
