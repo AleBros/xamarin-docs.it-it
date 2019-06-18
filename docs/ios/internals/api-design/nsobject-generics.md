@@ -7,20 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: becdd842f46cc7100bd7d9a6fd7347b541685c35
-ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
+ms.openlocfilehash: 4d2ab7a546925e92bb59f626279dcbf9c3c4ab4f
+ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67039629"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67157703"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Sottoclassi generiche di NSObject in xamarin. IOS
 
 ## <a name="using-generics-with-nsobjects"></a>Utilizzo di generics con NSObjects
 
-A partire da xamarin. IOS 7.2.1 è possibile utilizzare i generics in sottoclassi della `NSObject` (ad esempio [UIView](xref:UIKit.UIView).
-
-È ora possibile creare le classi generiche, simile alla seguente:
+È possibile utilizzare i generics in sottoclassi della `NSObject`, ad esempio [UIView](xref:UIKit.UIView):
 
 ```csharp
 class Foo<T> : UIView {
@@ -36,7 +34,7 @@ Poiché gli oggetti che sottoclasse `NSObject` registrati con il runtime di Obje
     
 ## <a name="considerations-for-generic-subclasses-of-nsobject"></a>Considerazioni per sottoclassi generiche di NSObject
 
-Questo documento descrive le limitazioni nel supporto limitato per sottoclassi generiche di `NSObjects` introdotte con xamarin. IOS 7.2.1.
+Questo documento descrive le limitazioni nel supporto limitato per sottoclassi generiche di `NSObjects`.
     
 ### <a name="generic-type-arguments-in-member-signatures"></a>Argomenti di tipo generico nelle firme dei membri
 
@@ -103,7 +101,7 @@ class Generic<T, U> : NSObject where T: NSObject
     
 ### <a name="instantiations-of-generic-types-from-objective-c"></a>Creazioni di istanze di tipi generici da Objective-C
 
-Non è consentita la creazione di istanze di tipi generici da Objective-C. Ciò si verifica in genere quando un file xib viene usato un tipo gestito.
+Non è consentita la creazione di istanze di tipi generici da Objective-C. Ciò si verifica in genere quando un tipo gestito viene usato in un file xib o uno storyboard.
 
 Prendere in considerazione questa definizione di classe, che espone un costruttore che accetta un `IntPtr` (il modo di xamarin. IOS di creazione di un C# oggetto da un'istanza di Objective-C nativa):
     
@@ -119,7 +117,7 @@ Mentre il costrutto sopra riportato è corretto, in fase di esecuzione, verrà g
 
 Si tratta infatti Objective-C non prevede il concetto di tipi generici e non deve specificare il tipo generico esatto da creare.
 
-È possibile trattare questo problema creando una sottoclasse specializzata del tipo generico.   Ad esempio:
+È possibile trattare questo problema creando una sottoclasse specializzata del tipo generico. Ad esempio:
     
 ```csharp
 class Generic<T> : NSObject where T : NSObject
@@ -133,7 +131,7 @@ class GenericUIView : Generic<UIView>
 }
 ```
 
-A questo punto l'assenza di ambiguità più, la classe `GenericUIView` può essere usato in xib.
+A questo punto l'assenza di ambiguità più, la classe `GenericUIView` possono essere utilizzati in xib o gli storyboard.
 
 ## <a name="no-support-for-generic-methods"></a>Nessun supporto per metodi generici
 
@@ -188,11 +186,11 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-**Motivo:** Esattamente come i metodi generici, il runtime di xamarin. IOS deve essere in grado di conoscere il tipo da utilizzare per l'argomento di tipo generico T.
+**Motivo:** Esattamente come i metodi generici, il runtime di xamarin. IOS deve essere in grado di conoscere il tipo da utilizzare per l'argomento tipo generico `T`.
 
-Ad esempio i membri viene utilizzata l'istanza stessa (poiché non sarà mai un'istanza generica<T>, sarà sempre generico<SomeSpecificClass>), ma per i membri statici non sono presente queste informazioni.
+Ad esempio i membri viene utilizzata l'istanza stessa (poiché non sarà mai un'istanza `Generic<T>`, sarà sempre `Generic<SomeSpecificClass>`), ma per i membri statici non sono presente queste informazioni.
 
-Si noti che questo vale anche se il membro in questione non usa l'argomento di tipo T in alcun modo.
+Si noti che questo vale anche se il membro in questione non usa l'argomento di tipo `T` in alcun modo.
 
 L'alternativa in questo caso consiste nel creare una sottoclasse specializzata:
 
@@ -206,7 +204,7 @@ class GenericUIView : Generic<UIView>
     }
 
     [Export ("myProperty")]
-    public static UIView MyUIVIewProperty {
+    public static UIView MyUIViewProperty {
         get { return MyProperty; }
         set { MyProperty = value; }
     }
@@ -219,12 +217,6 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-### <a name="requires-new-static-registrar"></a>Richiede nuovo programma di registrazione statico
-
-Il supporto dei generics richiede le nuove [sistema di registrazione](~/ios/internals/registrar.md).
-
-Se si prova a usare il vecchio sistema legacy di registrazione Visualizza avvisi in presenza di tipi generici (in aggiunta per non generare il codice corretto, causando un comportamento non definito).
-    
 ## <a name="performance"></a>Prestazioni
 
 Il programma di registrazione statico non è possibile risolvere un membro esportato in un tipo generico in fase di compilazione a quanto accade in genere, devono essere cercati in fase di esecuzione. Ciò significa che il richiamo di tale metodo da Objective-C è leggermente più lento rispetto al richiamo di membri di classi non generiche.

@@ -5,22 +5,23 @@ ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: lobrien
 ms.author: laobri
-ms.date: 08/08/2017
-ms.openlocfilehash: 89795e5df00b426c0f11c04a0844993071df1e25
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/13/2019
+ms.openlocfilehash: fce0eeae4ef5776842ea1b45c36163118042dc49
+ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61279417"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67157733"
 ---
 # <a name="xamarin-live-player-app"></a>App Xamarin Live Player
 
 ![Funzionalità di anteprima](~/media/shared/preview.png)
 
-> [!NOTE]
-> Live Player anteprima è disponibile solo in Visual Studio 2017.
+> [!WARNING]
+> Xamarin Live Player Preview è stata terminata. L'app non è più disponibile. Le istruzioni riportate di seguito vengono fornite per i clienti di continuare a usare l'anteprima con Visual Studio 2017.
 
-Dopo aver installato l'app sul telefono, seguire le [istruzioni di installazione](~/tools/live-player/install.md) per connettersi al computer in uso. Provare una delle [app di esempio](~/tools/live-player/samples.md) per renderla funzionante.
+> [!TIP]
+> È possibile usare la [Visualizzatore anteprima XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 o Visual Studio per Mac per visualizzare la progettazione dello schermo durante la modifica.
 
 All'avvio, l'app Xamarin Live Player aspetto simile al seguente:
 
@@ -56,7 +57,7 @@ Visualizzare i log per diagnosticare i problemi.
 
 Per connettere un dispositivo per la prima volta, seguire le istruzioni riportate in [Setup & requisiti](~/tools/live-player/install.md). È possibile associare più dispositivi e gestirli tramite l'IDE.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio-2017tabwindows"></a>[Visual Studio 2017](#tab/windows)
 
 In Visual Studio, scegliere **strumenti > Xamarin Live Player > Gestione dei dispositivi...**
 
@@ -95,4 +96,4 @@ Se si verifica eventuali vedere problemi [limitazioni e risoluzione dei problemi
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Risoluzione dei problemi](~/tools/live-player/troubleshooting.md)
-- [Campioni da utilizzare con Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)
+
