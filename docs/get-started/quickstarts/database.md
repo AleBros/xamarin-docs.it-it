@@ -9,16 +9,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
-ms.openlocfilehash: 5c3daf04c08e2109c46b24c198fef8e71fac2f3d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ebf0f21ed57b7d436721018abb2dca329b56baa4
+ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61262965"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194964"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Store dei dati in un Database locale di SQLite.NET
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 
 In questa Guida introduttiva si apprenderà come:
 
@@ -177,7 +177,7 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](mult
                 InitializeComponent();
                 MainPage = new NavigationPage(new NotesPage());
             }
-            ...
+            //...
         }
     }
     ```
