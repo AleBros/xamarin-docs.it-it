@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f0e2c93c4a6be0e83c9c4f1607b125b8d240ccc1
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.openlocfilehash: db5fd78a7907826bcb60ce1c2635491e01f0c02b
+ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557210"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194932"
 ---
 # <a name="contributing"></a>Contributi al codice
 
@@ -70,13 +70,13 @@ A intervalli stabiliti viene eseguito il push di tutti i commit dal ramo master 
 Di seguito è riportato un breve elenco di regole che è necessario tenere presenti quando si inviano contributi alla documentazione di .NET.
 
 - **NON** inviare richieste pull di grandi dimensioni. Al contrario, segnalare un problema e avviare una discussione in modo che si possa concordare una direzione prima di investire una grande quantità di tempo.
-- **LEGGERE** le linee guida riportate nella [Guida di stile](../contributing-guidelines/template.md) e sulla [voce e tono](../contributing-guidelines/voice-tone.md).
-- **USARE** il file [modello](../contributing-guidelines/template.md) come punto di partenza del proprio lavoro.
+- **LEGGERE** le linee guida riportate nella [Guida di stile](contributing-guidelines/template.md) e sulla [voce e tono](contributing-guidelines/voice-tone.md).
+- **USARE** il file [modello](contributing-guidelines/template.md) come punto di partenza del proprio lavoro.
 - **CREARE** un ramo separato nel fork prima di lavorare sugli articoli.
 - **SEGUIRE** il [flusso di lavoro di GitHub Flow](https://guides.github.com/introduction/flow/).
 - **SCIVERE UN BLOG O INVIARE TWEET** (o usare altri mezzi) frequentemente per informazioni sui contributi.
 
 > [!NOTE]
-> Si potrebbe notare che attualmente alcuni argomenti non seguono tutte le linee guida indicate qui e nella [Guida di stile](./contributing-guidelines/template.md). Ci stiamo impegnando per il raggiungimento della coerenza in tutto il sito. 
+> Si potrebbe notare che attualmente alcuni argomenti non seguono tutte le linee guida indicate qui e nella [Guida di stile](contributing-guidelines/template.md). Ci stiamo impegnando per il raggiungimento della coerenza in tutto il sito. 
 
 
