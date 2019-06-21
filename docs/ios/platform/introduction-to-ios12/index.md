@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/08/2018
-ms.openlocfilehash: 99f2b98614c2b8d558dd8744b31a62b787fc955c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5ac19571bc1f1163539a48ea2689c743445d8047
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035991"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268867"
 ---
 # <a name="introduction-to-ios-12"></a>Introduzione a iOS 12
 
@@ -42,7 +42,7 @@ Le estensioni di contenuto di notifica in iOS 12 consentono le interfacce utente
 
 Il framework del linguaggio naturale consente alle applicazioni di eseguire vari tipi di analisi della lingua. Ad esempio, può identificare le parti del discorso e determinare la lingua rappresentata da un blocco di testo.
 
-## <a name="vision-framework"></a>Framework Vision
+## <a name="vision-frameworkiosplatformintroduction-to-ios11visionmd"></a>[Framework Vision](~/ios/platform/introduction-to-ios11/vision.md)
 
 Il framework Vision include un rilevamento volti migliorate che consentono di rilevare i visi in vari orientamenti. Inoltre, le revisioni di richiesta possono selezionare specifici visione framework algoritmo revisione.
 
@@ -81,7 +81,3 @@ Con 12 iOS, Apple è deprecato:
 
 - OpenGL ES [incoraggiano gli sviluppatori](https://developer.apple.com/ios/whats-new/) adottare bare Metal.
 - [`UIWebView`](xref:UIKit.UIWebView), [favore del `WKWebView` ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
-
-## <a name="related-links"></a>Collegamenti correlati
-
-- [Get Ready per iOS 12 (Apple)](https://developer.apple.com/ios/)

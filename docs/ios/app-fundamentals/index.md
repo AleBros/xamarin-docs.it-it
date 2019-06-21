@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/21/2017
-ms.openlocfilehash: a40227454b597578ff1c1c247b326e523c23493b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 120bbfe0d5fa91e632fc56ee05431f5555653360
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61248517"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268601"
 ---
 # <a name="xamarinios-application-fundamentals"></a>Nozioni fondamentali dell'applicazione xamarin. IOS
 
@@ -33,6 +33,10 @@ In background di elaborazione o l'elaborazione in background in è il processo d
 ## <a name="creating-ios-applications-in-codeiosapp-fundamentalsios-code-onlymd"></a>[Creazione di applicazioni iOS nel codice](~/ios/app-fundamentals/ios-code-only.md)
 
 Questo articolo viene illustrato come creare applicazioni iOS interamente in codice con Visual Studio e Visual Studio per Mac. Viene illustrato come avviare da un modello di progetto vuoto per creare una schermata dell'applicazione in un controller creando una gerarchia di visualizzazioni da UIKit. Quindi, viene illustrato come creare viste personalizzate che possono essere caricate in un controller.
+
+## <a name="exception-marshalingiosplatformexception-marshalingmd"></a>[Marshalling delle eccezioni](~/ios/platform/exception-marshaling.md)
+
+Descrive la modalità di marshalling di Objective-C e le eccezioni gestite tra i frame nativi e gestiti.
 
 ## <a name="events-protocols-and-delegatesiosapp-fundamentalsdelegates-protocols-and-eventsmd"></a>[Gli eventi, protocolli e delegati](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 

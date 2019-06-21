@@ -1,5 +1,5 @@
 ---
-title: Funzionalità della piattaforma iOS
+title: Panoramica delle funzionalità della piattaforma iOS
 description: Questo documento include collegamenti alle varie guide che descrivono le funzionalità introdotte nelle varie versioni di iOS e altre funzionalità della piattaforma iOS.
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
@@ -7,50 +7,32 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: fff6620732ffcaccd13dde7ae31ab03a5106da16
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9628821be5a979777614eb4f7ad8605087093ed3
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61364413"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268848"
 ---
-# <a name="ios-platform-features"></a>funzionalità della piattaforma iOS
+# <a name="ios-platform-features-overview"></a>Panoramica delle funzionalità della piattaforma iOS
 
-## <a name="introduction-to-ios-12iosplatformintroduction-to-ios12indexmd"></a>[Introduzione a iOS 12](~/ios/platform/introduction-to-ios12/index.md)
+Questa pagina Elenca versioni iOS di recente, nonché l'evidenziazione alcuni dei framework Apple per accedere con xamarin. IOS.
 
-Questo documento descrive iOS 12 servizi disponibili per l'uso durante la compilazione di applicazioni xamarin. IOS.
+## <a name="ios-releases"></a>versioni di iOS
 
-## <a name="introduction-to-ios-11iosplatformintroduction-to-ios11indexmd"></a>[Introduzione a iOS 11](~/ios/platform/introduction-to-ios11/index.md)
-
-Questo documento descrive le funzionalità nuove e aggiornate in iOS 11 e Xcode 9, ad esempio ARKit, Core ML, Core NFC, trascinamento e rilascio, MapKit, PDFKit, SiriKit e visione artificiale. Collega alle guide che descrivono come usare queste funzionalità con xamarin. IOS.
-
-## <a name="introduction-to-ios-10iosplatformintroduction-to-ios10indexmd"></a>[Introduzione a iOS 10](~/ios/platform/introduction-to-ios10/index.md)
-
-iOS 10 include diverse nuove API e servizi che consentono di sviluppare App con nuove caratteristiche e funzionalità. Con iOS 10, le app hanno nuove funzionalità come l'estensione di mappe, i messaggi, telefono e Siri. Questa sezione illustra dettagliate necessarie sfruttare i vantaggi di queste funzionalità in un'app xamarin. IOS.
-
-## <a name="introduction-to-ios-9iosplatformintroduction-to-ios9indexmd"></a>[Introduzione a iOS 9](~/ios/platform/introduction-to-ios9/index.md)
-
-Questa sezione definisce le modifiche apportate in iOS 9 durante l'aggiornamento da iOS 8 e su come usare queste funzionalità in un'app xamarin. IOS.
-
-## <a name="introduction-to-ios-8iosplatformintroduction-to-ios8md"></a>[Introduzione a iOS 8](~/ios/platform/introduction-to-ios8.md)
-
-iOS 8 eseguita un numero elevato di modifiche al sistema operativo dal iOS 7. Di seguito viene illustrato che cosa sono e come usarli.
-
-## <a name="introduction-to-ios-7iosplatformintroduction-to-ios7indexmd"></a>[Introduzione a iOS 7](~/ios/platform/introduction-to-ios7/index.md)
-
-Sulle principali nuove API introdotte in iOS 7, tra cui i Controller di visualizzazione esegue la transizione, i miglioramenti per le animazioni UIView UIKit Dynamics e testo Kit.
-
-## <a name="introduction-to-ios-6iosplatformintroduction-to-ios6indexmd"></a>[Introduzione a iOS 6](~/ios/platform/introduction-to-ios6/index.md)
-
-Spiegazioni delle funzionalità introdotte in iOS 6, tra cui le visualizzazioni di raccolta, passare Kit, Kit di eventi e i Framework basati su social network.
+|  |  |
+|-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Introduzione a iOS 12](~/ios/platform/introduction-to-ios12/index.md) | Questo documento descrive iOS 12 utilizzano le funzionalità disponibili per le applicazioni buildingXamarin.iOS.|
+| [Introduzione a iOS 11](~/ios/platform/introduction-to-ios11/index.md) | Questo documento descrive le funzionalità nuove e aggiornate in iOS 11 e Xcode 9, ad esempio ARKit, Core ML, Core NFC, trascinamento e rilascio, MapKit, PDFKit, SiriKit e visione artificiale. Collega alle guide che descrivono come usare questi featureswith xamarin. IOS. |
+| [Introduzione a iOS 10](~/ios/platform/introduction-to-ios10/index.md) | iOS 10 include diverse nuove API e servizi che consentono di sviluppare App con nuove caratteristiche e funzionalità. Con iOS 10, le app hanno nuove funzionalità come l'estensione di mappe, i messaggi, telefono e Siri. Questa sezione illustra dettagliate necessarie sfruttare i vantaggi di queste funzionalità in un'app xamarin. IOS. |
+| [Introduzione a iOS 9](~/ios/platform/introduction-to-ios9/index.md)   | Questa sezione definisce le modifiche apportate in iOS 9 durante l'aggiornamento da iOS 8 e su come usare queste funzionalità in un'app xamarin. IOS. |
+| [Introduzione a iOS 8](~/ios/platform/introduction-to-ios8.md)         | iOS 8 eseguita un numero elevato di modifiche al sistema operativo dal iOS 7. Di seguito viene illustrato che cosa sono e come usarli. |
+| [Introduzione a iOS 7](~/ios/platform/introduction-to-ios7/index.md)   | Sulle principali nuove API introdotte in iOS 7, tra cui i Controller di visualizzazione esegue la transizione, i miglioramenti per le animazioni UIView UIKit Dynamics e testo Kit. |
+| [Introduzione a iOS 6](~/ios/platform/introduction-to-ios6/index.md)   | Spiegazioni delle funzionalità introdotte in iOS 6, tra cui le visualizzazioni di raccolta, passare Kit, Kit di eventi e i Framework basati su social network. |
 
 ## <a name="apple-payiosplatformapple-paymd"></a>[Apple Pay](~/ios/platform/apple-pay.md)
 
 Apple Pay è stata introdotta con iOS 8, consentendo agli utenti di pagare beni, ad esempio food, svago e le appartenenze tramite i propri dispositivi iOS. È disponibile su iPhone 6 e iPhone 6 più (+) e può anche essere abbinato l'Apple Watch per gli acquisti in negozio. Quando usato in un iPhone, Usa ID tocco come un modo per confermare e autorizzare le transazioni per una carta di debito o credito dell'utente.
-
-## <a name="3d-touchiosplatform3d-touchmd"></a>[3D Touch](~/ios/platform/3d-touch.md)
-
-Questo articolo fornisce e Introduzione all'uso di nuove API Touch 3D per aggiungere i movimenti di pressione sensibili per le app xamarin. IOS in esecuzione nel nuovo iPhone 6s e iPhone 6s Plus dispositivi.
 
 ## <a name="callkitiosplatformcallkitmd"></a>[CallKit](~/ios/platform/callkit.md)
 
@@ -138,6 +120,10 @@ iOS 10 include una nuova API di riconoscimento vocale che consente all'app suppo
 
 Testo Kit è una nuova API che offre funzionalità di layout e rendering del testo completa. Si basa su un livello basso Text Core framework, ma è molto più facile da usare rispetto al testo di base.
 
+## <a name="3d-touchiosplatform3d-touchmd"></a>[3D Touch](~/ios/platform/3d-touch.md)
+
+Questo articolo fornisce e Introduzione all'uso di nuove API Touch 3D per aggiungere i movimenti di pressione sensibili per le app xamarin. IOS in esecuzione nel nuovo iPhone 6s e iPhone 6s Plus dispositivi.
+
 ## <a name="touch-idiosplatformtouchidmd"></a>[ID tocco](~/ios/platform/touchid.md)
 
 Touch ID è stato introdotto in iOS 7 come mezzo per autenticare l'utente, simile a un passcode. Tuttavia, era limitato a sbloccare il dispositivo, tramite l'App Store, usando iTunes e l'autenticazione solo il keychain iCloud.
@@ -152,16 +138,12 @@ iOS 10 e macOS Sierra migliora il supporto per formati pixel intervalli estesi e
 
 ## <a name="binding-objective-cbinding-objective-cindexmd"></a>[Binding di Objective-C](binding-objective-c/index.md)
 
-Quando si lavora in iOS, potrebbero verificarsi casi in cui si vuole usare una libreria Objective-C di terze parti. In questi casi, è possibile utilizzare progetti di Binding di MonoTouch per creare un'associazione al codice c# per le librerie native di Objective-C. Il progetto utilizza gli stessi strumenti che utilizziamo per portare l'API di iOS in c#. &nbsp;Questo documento descrive come associare le API Objective-C.
+Quando si lavora in iOS, potrebbero verificarsi casi in cui si vuole usare una libreria Objective-C di terze parti. In questi casi, è possibile utilizzare progetti di Binding di MonoTouch per creare un'associazione al codice c# per le librerie native di Objective-C. Il progetto usa gli stessi strumenti che utilizziamo per portare l'API di iOS per C#. Questo documento descrive come associare le API Objective-C.
 
 ## <a name="referencing-native-librariesnative-interopmd"></a>[Riferimenti alle librerie native](native-interop.md)
 
-Xamarin. IOS supporta il collegamento con le librerie C native e librerie Objective-C. Questo documento illustra come collegare le librerie C native con il progetto xamarin. IOS. 
+Xamarin. IOS supporta il collegamento con le librerie C native e librerie Objective-C. Questo documento illustra come collegare le librerie C native con il progetto xamarin. IOS.
 
 ## <a name="embedded-frameworksembedded-frameworksmd"></a>[Framework incorporati](embedded-frameworks.md)
 
 Viene illustrato come incorporare i framework utente Objective-C nelle App xamarin. IOS.
-
-## <a name="exception-marshalingexception-marshalingmd"></a>[Marshalling delle eccezioni](exception-marshaling.md)
-
-Descrive la modalità di marshalling di Objective-C e le eccezioni gestite tra i frame nativi e gestiti.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/19/2018
-ms.openlocfilehash: 77589d0d644c366fc0feacd874929c7456b4ae30
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 71799e4299f01a881c6bc265baa7ad721ec5fc79
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61398798"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268876"
 ---
 # <a name="get-started-with-ios-12-tvos-12-and-watchos-5"></a>Introduzione a iOS 12, 12 tvOS e watchOS 5
 
@@ -26,7 +26,7 @@ Questo documento descrive come iniziare a compilare App Xamarin che chiamano API
 
 3. **Aggiornare Visual Studio per Mac e Visual Studio 2017** : assicurarsi di aver la versione stabile più recente di Xamarin.
 
-4. _(facoltativo)_  **Installare 12 iOS nei dispositivi iOS** :
+4. _(facoltativo) _ **Installare 12 iOS nei dispositivi iOS** :
 
    Dispositivo di test di App che usano API introdotte con 10 Xcode, gli sviluppatori di Apple registrati possono [scaricare](https://developer.apple.com/download) e installare il sistema operativo nei dispositivi.
 
@@ -40,4 +40,4 @@ Questo documento descrive come iniziare a compilare App Xamarin che chiamano API
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Scarica Xcode 10](https://developer.apple.com/download/)
+- [Scarica Xcode](https://developer.apple.com/download/)
