@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 4a24c8dbb9ab4e23afa03de4ae2dbc55ddfb5fa4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6d8ed5e2ec4707af2b61e299ee8274402f3a88a4
+ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61171823"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67309524"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Nozioni fondamentali sull'associazione dati
 
@@ -253,6 +253,9 @@ Per definire un modello per gli elementi, è opportuno suddividere il `ItemTempl
     </ListView.ItemTemplate>
 </ListView>
 ```
+
+> [!NOTE]
+> L'origine di associazione per le celle e gli elementi figlio di celle, è il `ListView.ItemsSource` raccolta.
 
 Il `Label` elemento è impostato sul `View` proprietà del `ViewCell`. (Il `ViewCell.View` tag non sono necessarie perché il `View` è la proprietà content di `ViewCell`.) Questo markup consente di visualizzare il `FriendlyName` proprietà della ognuno `NamedColor` oggetto:
 

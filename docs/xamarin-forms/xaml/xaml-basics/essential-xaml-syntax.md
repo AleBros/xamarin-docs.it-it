@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 75d3c628a513b81af9dea7308ca49c2b490c4aff
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 60add066d581afffeaa200769efcdff9e0644535
+ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61407642"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67309490"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintassi XAML essenziale
 
@@ -84,7 +84,7 @@ Con questa nuova sintassi, è possono che vengano introdotti alcuni termini util
 
 -  `Label` è un' *elemento oggetto*. È un oggetto di xamarin. Forms espresso come un elemento XML.
 -  `Text`, `VerticalOptions`, `FontAttributes` e `FontSize` sono *gli attributi della proprietà*. Sono le proprietà di xamarin. Forms espresse come attributi XML.
--  In questo frammento di codice finale `TextColor` è diventato un *property (elemento)*. Si tratta di una proprietà di xamarin. Forms, ma ora è un elemento XML.
+-  In questo frammento di codice finale `TextColor` è diventato un *property (elemento)* . Si tratta di una proprietà di xamarin. Forms, ma ora è un elemento XML.
 
 
 La definizione della proprietà di elementi potrebbero a prima di tutto sembra essere una violazione della sintassi XML, ma non è. Il periodo di ha alcun significato speciale in XML. Per un decodificatore XML, `Label.TextColor` è semplicemente un elemento figlio normale.
@@ -384,7 +384,7 @@ if (Device.RuntimePlatform == Device.iOS)
 }
 ```
 
-È anche possibile eseguire un'operazione simile in XAML usando il `OnPlatform` e `On` classi. Prima di tutto includere gli elementi di proprietà per il `Padding` proprietà nella parte superiore della pagina:
+È anche possibile eseguire un'operazione simile in XAML usando il [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) e [ `On` ](xref:Xamarin.Forms.On) classi. Prima di tutto includere gli elementi di proprietà per il `Padding` proprietà nella parte superiore della pagina:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -523,11 +523,12 @@ Questo è il modo standard per impostare un dipendente dalla piattaforma `Paddin
 </ContentPage>
 ```
 
+> [!NOTE]
+> Il `OnPlatform` estensione di markup può essere usato anche in XAML per personalizzare l'aspetto dell'interfaccia utente in base a ogni piattaforma. Fornisce la stessa funzionalità di `OnPlatform` e `On` classi, ma con una rappresentazione più concisa. Per altre informazioni, vedere [estensione di Markup OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
+
 ## <a name="summary"></a>Riepilogo
 
 Con gli elementi di proprietà e le proprietà associate, gran parte della sintassi XAML di base è stata stabilita. Tuttavia, talvolta è necessario impostare le proprietà agli oggetti in modo indiretto, ad esempio, da un dizionario risorse. Questo approccio è descritto nella prossima parte parte [3. Le estensioni di Markup XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
