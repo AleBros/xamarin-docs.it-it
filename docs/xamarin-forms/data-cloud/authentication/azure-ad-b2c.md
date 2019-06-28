@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/17/2019
-ms.openlocfilehash: db44e09e9caa5c35a5e107cfed80d1d30fd7eb7d
-ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.openlocfilehash: 06f5716c8decb21de39fd46abe734b5fdcd6bd43
+ms.sourcegitcommit: 0f78ec17210b915b43ddab75937de8063e472c70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64347153"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67417945"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Autenticare gli utenti con Azure Active Directory B2C
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureADB2CAuth/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureADB2CAuth/)
 
 _Azure Active B2C di Directory consente la gestione di identità cloud per applicazioni rivolte agli utenti web e mobili. Questo articolo illustra come usare Azure Active Directory B2C per integrare la gestione delle identità in un'applicazione per dispositivi mobili con Microsoft Authentication Library._
 
@@ -103,19 +103,26 @@ public static class Constants
 
 ## <a name="use-the-microsoft-authentication-library-msal-for-authentication"></a>Usare Microsoft Authentication Library (MSAL) per l'autenticazione
 
-Il pacchetto NuGet di Microsoft Authentication Library (MSAL) deve essere aggiunto a condiviso, il progetto .NET Standard e i progetti di piattaforma in una soluzione xamarin. Forms. MSAL fornisce un `PublicClientApplication` per semplificare il processo di autenticazione con Azure Active Directory B2C. Nel progetto di esempio, il code-behind per **app. XAML** definisce le proprietà statiche per un' `AuthenticationClient` e un `UiParent` e crea un'istanza di `AuthenticationClient` nel costruttore. Il secondo parametro fornito per il `PublicClientApplication` è il valore predefinito **autorità**, o criteri, che verranno usato per autenticare gli utenti. Nell'esempio seguente viene illustrato come creare un'istanza di `PublicClientApplication`:
+Il pacchetto NuGet di Microsoft Authentication Library (MSAL) deve essere aggiunto a condiviso, il progetto .NET Standard e i progetti di piattaforma in una soluzione xamarin. Forms. MSAL include un' `PublicClientApplicationBuilder` classe costruisce un oggetto attenersi alle suddette il `IPublicClientApplication` interfaccia. Usa MSAL `With` clausole per specificare parametri aggiuntivi per i metodi di costruttore e l'autenticazione.
+
+Nel progetto di esempio, il code-behind per **app. XAML** definisce le proprietà statiche denominate `AuthenticationClient` e `UIParent`e crea un'istanza di `AuthenticationClient` oggetto nel costruttore. Il `WithIosKeychainSecurityGroup` clausola fornisce il nome di un gruppo di sicurezza per le applicazioni iOS. Il `WithB2CAuthority` clausola fornisce il valore predefinito **autorità**, o criteri, che verranno usato per autenticare gli utenti. Nell'esempio seguente viene illustrato come creare un'istanza di `PublicClientApplication`:
 
 ```csharp
 public partial class App : Application
 {
-    public static PublicClientApplication AuthenticationClient { get; private set; }
+    public static IPublicClientApplication AuthenticationClient { get; private set; }
 
-    public static UIParent UiParent { get; set; } = null;
+    public static object UIParent { get; set; } = null;
 
     public App()
     {
         InitializeComponent();
-        AuthenticationClient = new PublicClientApplication(Constants.ClientId, Constants.AuthoritySignin);
+
+        AuthenticationClient = PublicClientApplicationBuilder.Create(Constants.ClientId)
+            .WithIosKeychainSecurityGroup(Constants.IosKeychainSecurityGroups)
+            .WithB2CAuthority(Constants.AuthoritySignin)
+            .Build();
+
         MainPage = new NavigationPage(new LoginPage());
     }
 
@@ -133,11 +140,13 @@ public partial class LoginPage : ContentPage
     {
         try
         {
+            // Look for existing account
             IEnumerable<IAccount> accounts = await App.AuthenticationClient.GetAccountsAsync();
 
-            AuthenticationResult result = await App.AuthenticationClient.AcquireTokenSilentAsync(
-                Constants.Scopes,
-                accounts.FirstOrDefault());
+            AuthenticationResult result = await App.AuthenticationClient
+                .AcquireTokenSilent(Constants.Scopes, accounts.FirstOrDefault())
+                .ExecuteAsync();
+
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch
@@ -163,12 +172,12 @@ public partial class LoginPage : ContentPage
         AuthenticationResult result;
         try
         {
-            result = await App.AuthenticationClient.AcquireTokenAsync(
-                Constants.Scopes,
-                string.Empty,
-                UIBehavior.SelectAccount,
-                string.Empty,
-                App.UiParent);
+            result = await App.AuthenticationClient
+                .AcquireTokenInteractive(Constants.Scopes)
+                .WithPrompt(Prompt.SelectAccount)
+                .WithParentActivityOrWindow(App.UIParent)
+                .ExecuteAsync();
+    
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch (MsalException ex)
@@ -199,15 +208,12 @@ public partial class LoginPage : ContentPage
     {
         try
         {
-            return await App.AuthenticationClient.AcquireTokenAsync(
-                Constants.Scopes,
-                string.Empty,
-                UIBehavior.SelectAccount,
-                string.Empty,
-                null,
-                Constants.AuthorityPasswordReset,
-                App.UiParent
-                );
+            return await App.AuthenticationClient
+                .AcquireTokenInteractive(Constants.Scopes)
+                .WithPrompt(Prompt.SelectAccount)
+                .WithParentActivityOrWindow(App.UIParent)
+                .WithB2CAuthority(Constants.AuthorityPasswordReset)
+                .ExecuteAsync();
         }
         catch (MsalException)
         {
@@ -290,7 +296,7 @@ In Android, lo schema URL personalizzato che è stato registrato con Azure Activ
 </manifest>
 ```
 
-Il `MainActivity` classe deve essere modificata per specificare il `UiParent` all'applicazione durante il `OnCreate` chiamare. Al termine di richiesta di autorizzazione, Azure Active Directory B2C reindirizza sullo schema URL registrato dal **androidmanifest. XML**. Lo schema URI registrato comporta la chiamata di Android `OnActivityResult` con l'URL come parametro di avvio, in cui viene elaborato dal `SetAuthenticationContinuationEventArgs`.
+Il `MainActivity` classe deve essere modificata per specificare il `UIParent` oggetto all'applicazione durante il `OnCreate` chiamare. Al termine di richiesta di autorizzazione, Azure Active Directory B2C reindirizza sullo schema URL registrato dal **androidmanifest. XML**. Lo schema URI registrato risultati nell'Android che chiama il `OnActivityResult` metodo con l'URL come un parametro di avvio, in cui viene elaborato dal `SetAuthenticationContinuationEventArgs` (metodo).
 
 ```csharp
 public class MainActivity : FormsAppCompatActivity
@@ -304,7 +310,7 @@ public class MainActivity : FormsAppCompatActivity
 
         Forms.Init(this, bundle);
         LoadApplication(new App());
-        App.UiParent = new UIParent(this);
+        App.UIParent = this;
     }
 
     protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
