@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 02/12/2019
 ms.custom: video
-ms.openlocfilehash: 3511850391b2be809daf2b70e81fa5b591db8dfa
-ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
+ms.openlocfilehash: c186f5c61bd2fa3df305be92a03135e57e302d02
+ms.sourcegitcommit: 6e04246207aa743820029e8c217a43cfdd24f991
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240344"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67352121"
 ---
 # <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials: Appunti
 
@@ -46,6 +46,9 @@ Per leggere il testo dagli **Appunti**:
 ```csharp
 var text = await Clipboard.GetTextAsync();
 ```
+
+> [!TIP]
+> L'accesso agli Appunti deve essere eseguito sul thread dell'interfaccia utente principale. Vedere l'API [MainThread](~/essentials/main-thread.md) per informazioni su come richiamare i metodi sul thread dell'interfaccia utente principale.
 
 ## <a name="api"></a>API
 
