@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: a7b23e47269ecca4d36a344ce3589443a4a85e31
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8957a75ac693874bfbea738d17fbdd7e013c3199
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382505"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277296"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Per completare questa esercitazione è necessario Visual Studio 2019 (la versione più recente) con installato il carico di lavoro **Sviluppo di applicazioni per dispositivi mobili con .NET**. È inoltre necessario un Mac associato per compilare l'applicazione dell'esercitazione per iOS. Per informazioni sull'installazione della piattaforma Xamarin, vedere [Installazione di Xamarin](~/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2019 a un host di compilazione Mac, vedere [Associa a Mac per lo sviluppo di Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Avviare Visual Studio e creare una nuova app Xamarin.Forms vuota denominata **StackLayoutTutorial**. Assicurarsi che l'app usi .NET Standard come meccanismo di codice condiviso.
 
@@ -42,6 +44,8 @@ ms.locfileid: "61382505"
     Per altre informazioni su [`StackLayout`](xref:Xamarin.Forms.StackLayout), vedere [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md) (StackLayout di Xamarin.Forms).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+
+Per completare questa esercitazione è necessario Visual Studio per Mac, la versione più recente, con installato il supporto della piattaforma Android e iOS. Sarà necessario anche Xcode, la versione più recente. Per altre informazioni sull'installazione della piattaforma Xamarin, vedere [Installazione di Xamarin](~/get-started/installation/index.md).
 
 1. Avviare Visual Studio per Mac e creare una nuova app Xamarin.Forms vuota denominata **StackLayoutTutorial**. Assicurarsi che l'app usi .NET Standard come meccanismo di codice condiviso.
 

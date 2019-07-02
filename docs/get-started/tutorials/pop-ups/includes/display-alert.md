@@ -1,14 +1,16 @@
 ---
-ms.openlocfilehash: 1e7b4b2ce4b7592c2350af20cf516436e244d95f
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.openlocfilehash: 875f00b379879aa131d37018f89e475170e5320e
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66193808"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277298"
 ---
 Xamarin.Forms ha un popup modale, conosciuto come avviso, per avvisare l'utente o per rivolgere semplici domande a un utente. In questo esercizio si userà il metodo [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) dalla classe [`Page`](xref:Xamarin.Forms.Page) per visualizzare un avviso all'utente e per porre semplici domande.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Per completare questa esercitazione è necessario Visual Studio 2019 (la versione più recente) con installato il carico di lavoro **Sviluppo di applicazioni per dispositivi mobili con .NET**. È inoltre necessario un Mac associato per compilare l'applicazione dell'esercitazione per iOS. Per informazioni sull'installazione della piattaforma Xamarin, vedere [Installazione di Xamarin](~/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2019 a un host di compilazione Mac, vedere [Associa a Mac per lo sviluppo di Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Avviare Visual Studio e creare una nuova app Xamarin.Forms vuota denominata **PopupsTutorial**. Assicurarsi che l'app usi .NET Standard come meccanismo di codice condiviso.
 
@@ -70,6 +72,8 @@ Xamarin.Forms ha un popup modale, conosciuto come avviso, per avvisare l'utente 
     Per altre informazioni sulla visualizzazione degli avvisi, vedere [Display an alert](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) (Visualizzare un avviso) nella guida [Display Pop-ups](~/xamarin-forms/user-interface/pop-ups.md) (Visualizzare i popup).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+
+Per completare questa esercitazione è necessario Visual Studio per Mac, la versione più recente, con installato il supporto della piattaforma Android e iOS. Sarà necessario anche Xcode, la versione più recente. Per altre informazioni sull'installazione della piattaforma Xamarin, vedere [Installazione di Xamarin](~/get-started/installation/index.md).
 
 1. Avviare Visual Studio per Mac e creare una nuova app Xamarin.Forms vuota denominata **PopupsTutorial**. Assicurarsi che l'app usi .NET Standard come meccanismo di codice condiviso.
 

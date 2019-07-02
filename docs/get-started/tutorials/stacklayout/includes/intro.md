@@ -1,11 +1,15 @@
 ---
-ms.openlocfilehash: 86c9ce71b72f88b8b920784f72ae572d7f629776
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f171a3f56c7fc516d409400aefa7e097e6ccbff6
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382524"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277294"
 ---
+Prima di provare questa esercitazione è necessario avere completato correttamente:
+
+- Avvio rapido [Creare la prima app Xamarin.Forms](~/get-started/first-app/index.md).
+
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
@@ -13,22 +17,6 @@ In questa esercitazione si imparerà a:
 > - Specificare l'orientamento dell'elemento `StackLayout`.
 > - Controllare l'allineamento e l'espansione della vista figlio all'interno dell'elemento `StackLayout`.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+Si userà Visual Studio 2019 o Visual Studio per Mac per creare un'applicazione semplice che dimostri come allineare i controlli in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Gli screenshot seguenti illustrano l'applicazione finale:
 
-### <a name="prerequisites"></a>Prerequisiti
-
-Per completare questa esercitazione è necessario Visual Studio 2017, la versione più recente, con installato il carico di lavoro **Sviluppo di applicazioni per dispositivi mobili con .NET**. È inoltre necessario un Mac associato per compilare l'applicazione dell'esercitazione per iOS. Per informazioni sull'installazione della piattaforma Xamarin, vedere [Installazione di Xamarin](~/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2017 a un host di compilazione Mac, vedere [Associa a Mac per lo sviluppo di Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-
-Prima di provare questa esercitazione è necessario avere completato correttamente:
-
-- Avvio rapido [Creare la prima app Xamarin.Forms](~/get-started/first-app/index.md).
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
-
-### <a name="prerequisites"></a>Prerequisiti
-
-Per completare questa esercitazione è necessario Visual Studio per Mac, la versione più recente, con installato il supporto della piattaforma Android e iOS. Sarà necessario anche Xcode, la versione più recente. Per altre informazioni sull'installazione della piattaforma Xamarin, vedere [Installazione di Xamarin](~/get-started/installation/index.md).
-
-Prima di provare questa esercitazione è necessario avere completato correttamente:
-
-- Avvio rapido [Creare la prima app Xamarin.Forms](~/get-started/first-app/index.md).
+[![Screenshot delle viste figlio in un elemento StackLayout con opzioni di allineamento ed espansione impostate in iOS e Android](../images/alignment-expansion-reduced.png "Elemento StackLayout contenente istanze Label con allineamento ed espansione impostati")](../images/alignment-expansion-large.png#lightbox "Elemento StackLayout contenente istanze Label con allineamento ed espansione impostati")

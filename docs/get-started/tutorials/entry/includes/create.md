@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: 6d99b6ea5d131e80c14789ddc1eda3f57a2f24a1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 820761111c609f224a6dda14d5853777d22aa259
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61343439"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277281"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Per completare questa esercitazione è necessario Visual Studio 2019 (la versione più recente) con installato il carico di lavoro **Sviluppo di applicazioni per dispositivi mobili con .NET**. È inoltre necessario un Mac associato per compilare l'applicazione dell'esercitazione per iOS. Per informazioni sull'installazione della piattaforma Xamarin, vedere [Installazione di Xamarin](~/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2019 a un host di compilazione Mac, vedere [Associa a Mac per lo sviluppo di Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Avviare Visual Studio e creare una nuova app Xamarin.Forms vuota denominata **EntryTutorial**. Assicurarsi che l'app usi .NET Standard come meccanismo di codice condiviso.
 
@@ -35,6 +37,8 @@ ms.locfileid: "61343439"
     [![Screenshot di un elemento Entry in iOS e Android](../images/create-entry.png "Elemento Entry contenente testo segnaposto")](../images/create-entry-large.png#lightbox "Elemento Entry contenente testo segnaposto")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
+
+Per completare questa esercitazione è necessario Visual Studio per Mac, la versione più recente, con installato il supporto della piattaforma Android e iOS. Sarà necessario anche Xcode, la versione più recente. Per altre informazioni sull'installazione della piattaforma Xamarin, vedere [Installazione di Xamarin](~/get-started/installation/index.md).
 
 1. Avviare Visual Studio per Mac e creare una nuova app Xamarin.Forms vuota denominata **EntryTutorial**. Assicurarsi che l'app usi .NET Standard come meccanismo di codice condiviso.
 

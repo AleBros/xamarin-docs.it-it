@@ -1,11 +1,16 @@
 ---
-ms.openlocfilehash: fac79ed98868c6c6c500ac60d71b89ee64090c72
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 666632ce879440fd05269e86ed05c2813a2d96af
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60896682"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277280"
 ---
+Prima di provare questa esercitazione è necessario avere completato correttamente:
+
+- Avvio rapido [Creare la prima app Xamarin.Forms](~/get-started/first-app/index.md).
+- Esercitazione su [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
+
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
@@ -13,24 +18,6 @@ In questa esercitazione si imparerà a:
 > - Modificare l'aspetto di `Label`.
 > - Presentare testo, in una singola classe `Label`, con più formati.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+Si userà Visual Studio 2019 o Visual Studio per Mac per creare un'applicazione semplice che dimostri come visualizzare il testo in un oggetto [`Label`](xref:Xamarin.Forms.Label). Gli screenshot seguenti illustrano l'applicazione finale:
 
-### <a name="prerequisites"></a>Prerequisiti
-
-Per completare questa esercitazione è necessario Visual Studio 2017, la versione più recente, con installato il carico di lavoro **Sviluppo di applicazioni per dispositivi mobili con .NET**. È inoltre necessario un Mac associato per compilare l'applicazione dell'esercitazione per iOS. Per informazioni sull'installazione della piattaforma Xamarin, vedere [Installazione di Xamarin](~/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2017 a un host di compilazione Mac, vedere [Associa a Mac per lo sviluppo di Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-
-Prima di provare questa esercitazione è necessario avere completato correttamente:
-
-- Avvio rapido [Creare la prima app Xamarin.Forms](~/get-started/first-app/index.md).
-- Esercitazione su [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
-
-### <a name="prerequisites"></a>Prerequisiti
-
-Per completare questa esercitazione è necessario Visual Studio per Mac, la versione più recente, con installato il supporto della piattaforma Android e iOS. Sarà necessario anche Xcode, la versione più recente. Per altre informazioni sull'installazione della piattaforma Xamarin, vedere [Installazione di Xamarin](~/get-started/installation/index.md).
-
-Prima di provare questa esercitazione è necessario avere completato correttamente:
-
-- Avvio rapido [Creare la prima app Xamarin.Forms](~/get-started/first-app/index.md).
-- Esercitazione su [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
+[![Screenshot di Label con testo formattato in iOS e Android](../images/label-formatted-text.png "Label con testo formattato")](../images/label-formatted-text-large.png#lightbox "Label con testo formattato")
