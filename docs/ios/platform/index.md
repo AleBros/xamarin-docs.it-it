@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: 9628821be5a979777614eb4f7ad8605087093ed3
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 6703e922a628504e0afdcf56533d74741131581a
+ms.sourcegitcommit: a6ba6ed086bcde4f52fb05f83c59c68e8aa5e436
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268848"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67540149"
 ---
 # <a name="ios-platform-features-overview"></a>Panoramica delle funzionalità della piattaforma iOS
 
@@ -22,8 +22,9 @@ Questa pagina Elenca versioni iOS di recente, nonché l'evidenziazione alcuni de
 
 |  |  |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Introduzione a iOS 12](~/ios/platform/introduction-to-ios12/index.md) | Questo documento descrive iOS 12 utilizzano le funzionalità disponibili per le applicazioni buildingXamarin.iOS.|
-| [Introduzione a iOS 11](~/ios/platform/introduction-to-ios11/index.md) | Questo documento descrive le funzionalità nuove e aggiornate in iOS 11 e Xcode 9, ad esempio ARKit, Core ML, Core NFC, trascinamento e rilascio, MapKit, PDFKit, SiriKit e visione artificiale. Collega alle guide che descrivono come usare questi featureswith xamarin. IOS. |
+| [Introduzione a iOS 13 anteprima](~/ios/platform/ios13/index.md) | Questo documento descrive anteprima 13 xamarin. IOS.|
+| [Introduzione a iOS 12](~/ios/platform/introduction-to-ios12/index.md) | Questo documento descrive iOS 12 servizi disponibili per l'uso durante la compilazione di applicazioni xamarin. IOS.|
+| [Introduzione a iOS 11](~/ios/platform/introduction-to-ios11/index.md) | Questo documento descrive le funzionalità nuove e aggiornate in iOS 11 e Xcode 9, ad esempio ARKit, Core ML, Core NFC, trascinamento e rilascio, MapKit, PDFKit, SiriKit e visione artificiale. Collega alle guide che descrivono come usare queste funzionalità con xamarin. IOS. |
 | [Introduzione a iOS 10](~/ios/platform/introduction-to-ios10/index.md) | iOS 10 include diverse nuove API e servizi che consentono di sviluppare App con nuove caratteristiche e funzionalità. Con iOS 10, le app hanno nuove funzionalità come l'estensione di mappe, i messaggi, telefono e Siri. Questa sezione illustra dettagliate necessarie sfruttare i vantaggi di queste funzionalità in un'app xamarin. IOS. |
 | [Introduzione a iOS 9](~/ios/platform/introduction-to-ios9/index.md)   | Questa sezione definisce le modifiche apportate in iOS 9 durante l'aggiornamento da iOS 8 e su come usare queste funzionalità in un'app xamarin. IOS. |
 | [Introduzione a iOS 8](~/ios/platform/introduction-to-ios8.md)         | iOS 8 eseguita un numero elevato di modifiche al sistema operativo dal iOS 7. Di seguito viene illustrato che cosa sono e come usarli. |

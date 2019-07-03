@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: ddc33d28aad4e00c9259893c0f8e7a1ab40ee429
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9848d2b832990032bc7eb7f2e3a93c896457134c
+ms.sourcegitcommit: e95296f9e516975f5f32d822c323a71fd84007b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61381875"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67538688"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>Comunicazioni tra componenti ad accoppiamento debole
 
@@ -43,7 +43,7 @@ L'app per dispositivi mobili di eShopOnContainers Usa il [ `MessagingCenter` ](x
 > [!NOTE]
 > Mentre il [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) classe consente la comunicazione tra le classi di accoppiamento, non offre la soluzione architetturale solo a questo problema. Ad esempio, la comunicazione tra un modello di visualizzazione e una visualizzazione anche ottenibile tramite il motore di binding e le notifiche di modifica di proprietà. Inoltre, la comunicazione tra i due modelli di visualizzazione possa essere ottenuta anche eseguendo il passaggio di dati durante la navigazione.
 
-Nell'app per dispositivi mobili di eShopOnContainers[ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) viene usato per aggiornare nell'interfaccia utente in risposta a un'azione che si verificano in un'altra classe. Di conseguenza, i messaggi vengono pubblicati nel thread dell'interfaccia utente, con gli abbonati che ricevono il messaggio sullo stesso thread.
+Nell'app per dispositivi mobili di eShopOnContainers [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) viene usato per aggiornare nell'interfaccia utente in risposta a un'azione che si verificano in un'altra classe. Di conseguenza, i messaggi vengono pubblicati nel thread dell'interfaccia utente, con gli abbonati che ricevono il messaggio sullo stesso thread.
 
 > [!TIP]
 > Effettuare il marshalling nel thread dell'interfaccia utente durante l'esecuzione dell'interfaccia utente di aggiornamenti. Se è necessario aggiornare l'interfaccia utente di un messaggio che viene inviato da un thread in background, elaborare il messaggio sul thread dell'interfaccia utente nel Sottoscrittore richiamando il [ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) (metodo).
