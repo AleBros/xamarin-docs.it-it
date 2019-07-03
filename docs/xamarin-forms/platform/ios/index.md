@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/22/2019
-ms.openlocfilehash: f77b2346808f78e182edc59f9ea92d0a8a99344f
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 7aa9d298c2219dff60ca8ca1f917c72194ad21ca
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971024"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512679"
 ---
 # <a name="ios-platform-features-in-xamarinforms"></a>funzionalità della piattaforma iOS in xamarin. Forms
 
@@ -56,6 +56,7 @@ Le funzionalità specifiche della piattaforma seguenti viene fornita per il layo
 
 Le funzionalità specifiche della piattaforma seguenti viene fornita per xamarin. Forms [ `Application` ](xref:Xamarin.Forms.Application) classe in iOS:
 
+- La disabilitazione di accessibilità di ridimensionamento per le dimensioni dei caratteri denominato. Per altre informazioni, vedere [accessibilità scalabilità per denominato le dimensioni dei caratteri in iOS](named-font-size-scaling.md).
 - L'abilitazione di layout del controllo e gli aggiornamenti da eseguire sul thread principale di rendering. Per altre informazioni, vedere [Main Thread controllare gli aggiornamenti in iOS](main-thread-updates-ui.md).
 - Abilitazione di un [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) in una visualizzazione a scorrimento per acquisire e condividere il movimento di zoom con la visualizzazione a scorrimento. Per altre informazioni, vedere [simultanee riconoscimento del movimento di zoom in iOS](application-pan-gesture.md).
 

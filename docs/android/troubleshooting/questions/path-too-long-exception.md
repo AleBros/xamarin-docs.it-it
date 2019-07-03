@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/29/2018
-ms.openlocfilehash: 4cb3e13ebbe3d9e8aed153528a35ab16c92e2145
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 443c3cc742ceb919e64a781e18c5a97c342abb44
+ms.sourcegitcommit: 450106d5f05b4473bf7f5b9100b2eaf18c9110de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153328"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522930"
 ---
 # <a name="how-do-i-resolve-a-pathtoolongexception-error"></a>Come si risolve un errore PathTooLongException?
 
@@ -28,12 +28,12 @@ In Windows (in cui la lunghezza massima per un percorso viene [260 caratteri](ht
 
 ## <a name="fix"></a>Correggi
 
-A partire da xamarin. Android 8.0, il `UseShortFileNames` proprietà MSBuild può essere impostata per ovviare a questo errore. Quando questa proprietà è impostata su `True` (il valore predefinito è `False`), il processo di compilazione Usa nomi di percorso più brevi per ridurre la probabilità di produrre un **PathTooLongException**.
+Il `UseShortFileNames` MSBuild è impostata su `True` per ovviare a questo errore per impostazione predefinita. Quando questa proprietà è impostata su `True`, il processo di compilazione Usa nomi di percorso più brevi per ridurre la probabilità di produrre un **PathTooLongException**.
 Ad esempio, quando `UseShortFileNames` è impostata su `True`, il percorso precedente viene accorciato al percorso che è simile al seguente:
 
 **C:\\Some\\Directory\\Solution\\Project\\obj\\Debug\\lp\\1\\jl\\assets**
 
-Per impostare questa proprietà, aggiungere la proprietà MSBuild seguente al progetto **file con estensione csproj** file:
+Per impostare questa proprietà manualmente, aggiungere la proprietà MSBuild seguente al progetto **file con estensione csproj** file:
 
 ```xml
 <PropertyGroup>

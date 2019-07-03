@@ -6,13 +6,13 @@ ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/14/2018
-ms.openlocfilehash: 7c3a26854c65de260aa9b3c8ed00966749eb4d9c
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.date: 06/11/2019
+ms.openlocfilehash: c98e1cd9f4095e8310150ceeebd994af2c9b7f87
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66178080"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512923"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Viste di interfaccia utente di xamarin. Forms
 
@@ -31,6 +31,10 @@ Il `BoxView` è semplicemente un rettangolo colorato semplice, ma può essere us
 ## <a name="buttonbuttonmd"></a>[Pulsante](button.md)
 
 Il `Button` risponde a un tocco o clic che indirizza un'applicazione per eseguire una determinata attività.
+
+## <a name="checkboxcheckboxmd"></a>[CheckBox](checkbox.md)
+
+Il `CheckBox` è un tipo di pulsante che può essere selezionato o vuoto. Se una casella di controllo è selezionata, è considerato in. Quando una casella di controllo è vuoto, questo ha considerato per essere disattivato.
 
 ## <a name="collectionviewcollectionviewindexmd"></a>[CollectionView](collectionview/index.md)
 
@@ -52,7 +56,7 @@ DataPages forniscono un'API per rapidamente e facilmente associare un'origine da
 
 Il `DatePicker` consente agli utenti di selezionare una data in un intervallo specificato. Viene implementato tramite la selezione di data supportati da una particolare piattaforma in cui l'applicazione viene eseguita su.
 
-## <a name="display-pop-upspop-upsmd"></a>[Visualizzare i popup](pop-ups.md)
+## <a name="display-pop-upspop-upsmd"></a>[Visualizzare popup](pop-ups.md)
 
 Xamarin.Forms offre due elementi dell'interfaccia utente di tipo popup: un avviso e una finestra delle azioni. Questi elementi dell'interfaccia sono utilizzabile per visualizzare le finestre di dialogo porre semplici domande degli utenti e agli utenti di Guida per le attività.
 

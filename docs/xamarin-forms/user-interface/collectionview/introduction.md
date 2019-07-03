@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 889c78ea6849cdd094d34ed0cf74ceebd33ce51d
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.openlocfilehash: 456c83808ff685a8c2199cf80c96d63b9334675e
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005145"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512730"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Introduzione a xamarin. Forms CollectionView
 
@@ -31,7 +31,7 @@ Forms.SetFlags("CollectionView_Experimental");
 ```
 
 > [!IMPORTANT]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView) è disponibile solo in iOS e Android.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) è disponibile in iOS e Android, ma è parzialmente disponibile solo per la piattaforma Windows universale.
 
 ## <a name="collectionview-and-listview-differences"></a>Differenze di visualizzazione di raccolta e ListView
 
@@ -57,7 +57,7 @@ Mentre il [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) e [ `ListView`
 | Selection | `SelectionMode`, `SelectedItem` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) supporta singolo e selezione multipla. Per altre informazioni, vedere [selezione di xamarin. Forms CollectionView](selection.md). |
 | Altezza di riga | `HasUnevenRows`, `RowHeight` | In un `CollectionView`, l'altezza della riga di ciascun elemento è determinato dal `ItemSizingStrategy` proprietà. Per altre informazioni, vedere [ridimensionamento elemento](layout.md#item-sizing).|
 | Memorizzazione nella cache | `CachingStrategy` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) Usa automaticamente la virtualizzazione fornita dai controlli nativi sottostanti. |
-| Informazioni sulle intestazioni e piè di pagina | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | Informazioni sulle intestazioni e piè di pagina non sono attualmente supportati `CollectionView`, ma verrà aggiunto nelle versioni future.|
+| Intestazioni e piè di pagina | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | Informazioni sulle intestazioni e piè di pagina non sono attualmente supportati `CollectionView`, ma verrà aggiunto nelle versioni future.|
 | Raggruppamento | `GroupDisplayBinding`, `GroupHeaderTemplate`, `GroupShortNameBinding`, `IsGroupingEnabled` | Raggruppamento non è supportato in `CollectionView`, ma verrà aggiunto nelle versioni future. |
 | Pull da aggiornare | `IsPullToRefreshEnabled`, `IsRefreshing`, `RefreshAllowed`, `RefreshCommand`, `RefreshControlColor`, `BeginRefresh()`, `EndRefresh()` | Pull da aggiornare non è supportata in `CollectionView`, ma verrà aggiunto nelle versioni future. |
 | Azioni di contesto | `ContextActions` | Azioni di contesto non sono attualmente supportate `CollectionView`, ma verrà aggiunto nelle versioni future. |

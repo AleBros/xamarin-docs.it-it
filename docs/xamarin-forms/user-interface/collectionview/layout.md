@@ -6,13 +6,13 @@ ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: a64a54d763edc4f02383af686fc8e9386daad572
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.date: 07/01/2019
+ms.openlocfilehash: 786cea04718022847bba2ecffed8f377dd49bd8b
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005230"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512792"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Layout di visualizzazione di raccolta di xamarin. Forms
 
@@ -47,9 +47,15 @@ Il [ `ItemsLayoutOrientation` ](xref:Xamarin.Forms.ItemsLayoutOrientation) enume
 - `Vertical` indica che il [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) espanderà verticalmente man mano che vengono aggiunti gli elementi.
 - `Horizontal` indica che il [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) espanderà orizzontalmente man mano che vengono aggiunti gli elementi.
 
-Il [ `ListItemsLayout` ](xref:Xamarin.Forms.ListItemsLayout) classe eredita dal [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) classe e definisce statica `VerticalList` e `HorizontalList` membri. Questi membri sono utilizzabile per creare elenchi orizzontali o verticali, rispettivamente. In alternativa, un `ListItemsLayout` oggetto può essere creato, specificando un' [ `ItemsLayoutOrientation` ](xref:Xamarin.Forms.ItemsLayoutOrientation) membro di enumerazione come argomento.
+Il [ `ListItemsLayout` ](xref:Xamarin.Forms.ListItemsLayout) classe eredita dal [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) classe e definisce un `ItemSpacing` proprietà, di tipo `double`, che rappresenta lo spazio vuoto attorno a ogni elemento. Il valore predefinito di questa proprietà è 0 e il relativo valore deve sempre essere maggiore o uguale a 0. Il `ListItemsLayout` classe definisce anche statici `Vertical` e `Horizontal` membri. Questi membri sono utilizzabile per creare elenchi orizzontali o verticali, rispettivamente. In alternativa, un `ListItemsLayout` oggetto può essere creato, specificando un' [ `ItemsLayoutOrientation` ](xref:Xamarin.Forms.ItemsLayoutOrientation) membro di enumerazione come argomento.
 
-Il [ `GridItemsLayout` ](xref:Xamarin.Forms.GridItemsLayout) classe eredita dal [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) classe e definisce un `Span` proprietà, di tipo `int`, che rappresenta il numero di colonne o righe da visualizzare Nella griglia. Il valore predefinito di `Span` proprietà è 1 e il relativo valore deve sempre essere maggiore o uguale a 1.
+Il [ `GridItemsLayout` ](xref:Xamarin.Forms.GridItemsLayout) classe eredita dal [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) di classi e definisce le proprietà seguenti:
+
+- `VerticalItemSpacing`, di tipo `double`, che rappresenta lo spazio vuoto verticale intorno a ogni elemento. Il valore predefinito di questa proprietà è 0 e il relativo valore deve sempre essere maggiore o uguale a 0.
+- `HorizontalItemSpacing`, di tipo `double`, che rappresenta lo spazio vuoto orizzontale intorno a ogni elemento. Il valore predefinito di questa proprietà è 0 e il relativo valore deve sempre essere maggiore o uguale a 0.
+- `Span`, di tipo `int`, che rappresenta il numero di colonne o righe da visualizzare nella griglia. Il valore predefinito di questa proprietà è 1 e il relativo valore deve sempre essere maggiore o uguale a 1.
+
+Queste proprietà sono supportate da [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) oggetti, che significa che le proprietà possono essere destinazioni di associazioni dati.
 
 > [!NOTE]
 > [`CollectionView`](xref:Xamarin.Forms.CollectionView) Usa i motori di layout nativa per eseguire il layout.
@@ -90,11 +96,11 @@ Per impostazione predefinita [ `CollectionView` ](xref:Xamarin.Forms.CollectionV
 </CollectionView>
 ```
 
-Tuttavia, per motivi di completezza, un [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) può essere impostato su visualizzare i relativi elementi in un elenco verticale tramite l'impostazione relativa [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) proprietà statica `ListItemsLayout.VerticalList` membro:
+Tuttavia, per motivi di completezza, un [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) può essere impostato per visualizzare i relativi elementi in un elenco verticale impostando relativo [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) proprietà `VerticalList`:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
-                ItemsLayout="{x:Static ListItemsLayout.VerticalList}">
+                ItemsLayout="VerticalList">
     ...
 </CollectionView>
 ```
@@ -120,7 +126,7 @@ Il codice C# equivalente è:
 CollectionView collectionView = new CollectionView
 {
     ...
-    ItemsLayout = ListItemsLayout.VerticalList
+    ItemsLayout = ListItemsLayout.Vertical
 };
 ```
 
@@ -130,11 +136,11 @@ Ciò comporta un elenco a colonna singola, verticalmente aumenta man mano che ve
 
 ## <a name="horizontal-list"></a>Elenco orizzontale
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) può visualizzare i relativi elementi in un elenco orizzontale mediante l'impostazione relativa [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) proprietà statica `ListItemsLayout.HorizontalList` membro:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) può visualizzare i relativi elementi in un elenco orizzontale mediante l'impostazione relativa [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) proprietà `HorizontalList`:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
-                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}">
+                ItemsLayout="HorizontalList">
     <CollectionView.ItemTemplate>
         <DataTemplate>
             <Grid Padding="10">
@@ -188,7 +194,7 @@ Il codice C# equivalente è:
 CollectionView collectionView = new CollectionView
 {
     ...
-    ItemsLayout = ListItemsLayout.HorizontalList
+    ItemsLayout = ListItemsLayout.Horizontal
 };
 ```
 
@@ -308,6 +314,80 @@ Per impostazione predefinita, un controllo orizzontale [ `GridItemsLayout` ](xre
 
 [![Screenshot di un layout di griglia orizzontale CollectionView, su iOS e Android](layout-images/horizontal-grid.png "layout di griglia orizzontale CollectionView")](layout-images/horizontal-grid-large.png#lightbox "CollectionView layout di griglia orizzontale")
 
+## <a name="item-spacing"></a>Spaziatura elementi
+
+Per impostazione predefinita, ogni elemento un [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) non dispone di qualsiasi spazio vuoto circostante. Questo comportamento può essere modificato impostando le proprietà del layout di elementi usato dal `CollectionView`.
+
+Quando un [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) imposta relativo [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) proprietà su un [ `ListItemsLayout` ](xref:Xamarin.Forms.ListItemsLayout) oggetto, il `ListItemsLayout.ItemSpacing` proprietà può essere impostata su un `double` valore che rappresenta lo spazio vuoto attorno a ogni elemento:
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}">
+    <CollectionView.ItemsLayout>
+        <ListItemsLayout ItemSpacing="20">
+            <x:Arguments>
+                <ItemsLayoutOrientation>Vertical</ItemsLayoutOrientation>    
+            </x:Arguments>
+        </ListItemsLayout>
+    </CollectionView.ItemsLayout>
+    ...
+</CollectionView>
+```
+
+> [!NOTE]
+> Il `ListItemsLayout.ItemSpacing` proprietà dispone di un set di callback di convalida, che assicura che il valore della proprietà è sempre maggiore di o uguale a 0.
+
+Il codice C# equivalente è:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    ...
+    ItemsLayout = new ListItemsLayout(ItemsLayoutOrientation.Vertical)
+    {
+        ItemSpacing = 20
+    }
+};
+```
+
+Questo codice genera un elenco verticale singola colonna, contenente una spaziatura 20 intorno a ogni elemento:
+
+[![Screenshot della visualizzazione di una raccolta con elemento spaziatura, in iOS e Android](layout-images/vertical-list-spacing.png "CollectionView elemento spaziatura")](layout-images/vertical-list-spacing-large.png#lightbox "spaziatura di elemento di visualizzazione di raccolta")
+
+Quando un [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) imposta relativo [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) proprietà su un [ `GridItemsLayout` ](xref:Xamarin.Forms.GridItemsLayout) oggetto, il `GridItemsLayout.VerticalItemSpacing` e `GridItemsLayout.HorizontalItemSpacing` le proprietà possono essere Impostare su `double` valori che rappresentano lo spazio vuoto orizzontalmente e verticalmente intorno a ogni elemento:
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}">
+    <CollectionView.ItemsLayout>
+       <GridItemsLayout Orientation="Vertical"
+                        Span="2"
+                        VerticalItemSpacing="20"
+                        HorizontalItemSpacing="30" />
+    </CollectionView.ItemsLayout>
+    ...
+</CollectionView>
+```
+
+> [!NOTE]
+> Il `GridItemsLayout.VerticalItemSpacing` e `GridItemsLayout.HorizontalItemSpacing` proprietà impostato i callback di convalida, che garantiscono che i valori delle proprietà siano sempre maggiore di o uguale a 0.
+
+Il codice C# equivalente è:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    ...
+    ItemsLayout = new GridItemsLayout(2, ItemsLayoutOrientation.Vertical)
+    {
+        VerticalItemSpacing = 20,
+        HorizontalItemSpacing = 30
+    }
+};
+```
+
+Questo codice genera una griglia di due colonne verticale, che presenta una spaziatura verticale 20 intorno a ogni elemento e una spaziatura orizzontale pari a 30 intorno a ogni elemento:
+
+[![Screenshot della visualizzazione di una raccolta con elemento spaziatura, in iOS e Android](layout-images/vertical-grid-spacing.png "CollectionView elemento spaziatura")](layout-images/vertical-grid-spacing-large.png#lightbox "spaziatura di elemento di visualizzazione di raccolta")
+
 ## <a name="item-sizing"></a>Ridimensionamento di elementi
 
 Per impostazione predefinita, ogni elemento un [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) singolarmente misurato e dimensioni, a condizione che gli elementi dell'interfaccia utente nel [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) non specifica dimensioni fisse. Questo comportamento, che può essere modificato, viene specificato per il [ `CollectionView.ItemSizingStrategy` ](xref:Xamarin.Forms.ItemsView.ItemSizingStrategy) valore della proprietà. Questo valore di proprietà può essere impostato su uno dei [ `ItemSizingStrategy` ](xref:Xamarin.Forms.ItemSizingStrategy) membri dell'enumerazione:
@@ -336,9 +416,6 @@ CollectionView collectionView = new CollectionView
     ItemSizingStrategy = ItemSizingStrategy.MeasureFirstItem
 };
 ```
-
-> [!NOTE]
-> L'elemento strategia di ridimensionamento è attualmente solo implementato su iOS.
 
 ## <a name="dynamic-resizing-of-items"></a>Il ridimensionamento dinamico di elementi
 

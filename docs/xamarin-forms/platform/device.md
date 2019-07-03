@@ -6,13 +6,13 @@ ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/01/2018
-ms.openlocfilehash: 4ba4bd7528b635d099868f093268d2d83e44dae0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/12/2019
+ms.openlocfilehash: 671abb0f61a5582a99165aa16c6b99db2ee8b1ee
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61359882"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512868"
 ---
 # <a name="xamarinforms-device-class"></a>Classe di dispositivi di xamarin. Forms
 
@@ -20,9 +20,7 @@ ms.locfileid: "61359882"
 
 Il [ `Device` ](xref:Xamarin.Forms.Device) classe contiene un numero di proprietà e metodi che consentono agli sviluppatori di personalizzare i layout e le funzionalità in base a ogni piattaforma.
 
-Oltre ai metodi e proprietà per il codice di destinazione in tipi di hardware specifico e dimensioni, il `Device` classe include le [BeginInvokeOnMainThread](#Device_BeginInvokeOnMainThread) metodo che deve essere utilizzato durante l'interazione con l'interfaccia utente dei controlli da thread in background.
-
-<a name="providing-platform-values" />
+Oltre ai metodi e proprietà per il codice di destinazione in tipi di hardware specifico e dimensioni, il `Device` classe include metodi che possono essere utilizzati per interagire con i controlli dell'interfaccia utente dei thread di background. Per altre informazioni, vedere [interagire con l'interfaccia utente dei thread di background](#interact-with-the-ui-from-background-threads).
 
 ## <a name="providing-platform-specific-values"></a>Fornendo valori specifici della piattaforma
 
@@ -68,8 +66,6 @@ Il [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) classe è una classe generi
 > Che fornisce un'implementazione non corretta `Platform` nel valore dell'attributo di `On` classe non comporterà un errore. Al contrario, il codice verrà eseguito senza il valore specifico della piattaforma in corso l'applicazione.
 
 In alternativa, il `OnPlatform` estensione di markup può essere utilizzato in XAML per personalizzare l'aspetto dell'interfaccia utente in base a ogni piattaforma. Per altre informazioni, vedere [estensione di Markup OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
-
-<a name="Device_Idiom" />
 
 ## <a name="deviceidiom"></a>Device.Idiom
 
@@ -135,8 +131,6 @@ this.FlowDirection = Device.FlowDirection;
 
 Per altre informazioni sulla direzione del flusso, vedere [localizzazione da destra a sinistra](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
-<a name="Device_Styles" />
-
 ## <a name="devicestyles"></a>Device.Styles
 
 Il [ `Styles` proprietà](~/xamarin-forms/user-interface/styles/index.md) contiene le definizioni di stile incorporato che possono essere applicate a alcuni controlli (ad esempio `Label`) `Style` proprietà. Gli stili disponibili sono:
@@ -147,8 +141,6 @@ Il [ `Styles` proprietà](~/xamarin-forms/user-interface/styles/index.md) contie
 * ListItemTextStyle
 * SubtitleStyle
 * TitleStyle
-
-<a name="Device_GetNamedSize" />
 
 ## <a name="devicegetnamedsize"></a>Device.GetNamedSize
 
@@ -163,8 +155,6 @@ someLabel.FontSize = Device.OnPlatform (
 );
 ```
 
-<a name="Device_OpenUri" />
-
 ## <a name="deviceopenuri"></a>Device.OpenUri
 
 Il `OpenUri` metodo può essere utilizzato per attivare operazioni nella piattaforma sottostante, ad esempio aprire un URL nel browser web nativi (**Safari** in iOS o **Internet** in Android).
@@ -176,8 +166,6 @@ Device.OpenUri(new Uri("https://evolve.xamarin.com/"));
 Il [esempio di WebView](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithWebview/WorkingWithWebview/WebAppPage.cs) include un esempio di utilizzo `OpenUri` per aprire gli URL e anche attivare le chiamate telefoniche.
 
 Il [esempio di mappe](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/MapAppPage.cs) Usa anche `Device.OpenUri` per visualizzare le mappe e le direzioni utilizzando l'oggetto nativo **esegue il mapping** App in iOS e Android.
-
-<a name="Device_StartTimer" />
 
 ## <a name="devicestarttimer"></a>Device.StartTimer
 
@@ -192,26 +180,31 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () => {
 
 Se il codice all'interno del timer interagisce con l'interfaccia utente (ad esempio l'impostazione del testo di un `Label` oppure che venga visualizzato un avviso) deve essere eseguita all'interno di un `BeginInvokeOnMainThread` espressione (vedere sotto).
 
-<a name="Device_BeginInvokeOnMainThread" />
+## <a name="interact-with-the-ui-from-background-threads"></a>Interagire con l'interfaccia utente da thread in background
 
-## <a name="devicebegininvokeonmainthread"></a>Device.BeginInvokeOnMainThread
+La maggior parte dei sistemi operativi, tra cui iOS, Android e la piattaforma Windows universale, usare un modello a thread singolo per il codice che coinvolgono l'interfaccia utente. Questo thread viene spesso definito di *thread principale* o nella *thread dell'interfaccia utente*. Una conseguenza di questo modello è che tutto il codice che accede a elementi dell'interfaccia utente deve eseguire sul thread principale dell'applicazione.
 
-Elementi dell'interfaccia utente non devono mai essere accessibile tramite i thread in background, ad esempio il codice in esecuzione in un timer o un gestore di completamento per le operazioni asincrone, ad esempio richieste web. Qualsiasi codice in background che è necessario aggiornare l'interfaccia utente debba essere incapsulato all'interno [ `BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)). Questo è l'equivalente di `InvokeOnMainThread` in iOS `RunOnUiThread` in Android, e `Dispatcher.RunAsync` sulla piattaforma Windows universale.
+Le applicazioni usano talvolta thread in background per eseguire operazioni potenzialmente lunghe, ad esempio il recupero dei dati da un servizio web. Se il codice in esecuzione in un thread in background deve accedere a elementi dell'interfaccia utente, è necessario eseguire tale codice sul thread principale.
 
-Il codice xamarin. Forms è:
+Il `Device` classe include quanto segue `static` elementi dai thread sfondi dell'interfaccia utente metodi che possono essere usati per interagire con l'utente:
+
+| Metodo | Argomenti | Valore restituito | Scopo |
+|---|---|---|---|
+| `BeginInvokeOnMainThread` | `Action` | `void` | Richiama un `Action` sul thread principale e non attende il completamento. |
+| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Richiama un `Func<T>` nel thread principale e attende il completamento. |
+| `InvokeOnMainThreadAsync` | `Action` | `Task` | Richiama un `Action` nel thread principale e attende il completamento. |
+| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Richiama un `Func<Task<T>>` nel thread principale e attende il completamento. |
+| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Richiama un `Func<Task>` nel thread principale e attende il completamento. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Restituisce il `SynchronizationContext` per il thread principale. |
+
+Il codice seguente illustra un esempio d'uso di `BeginInvokeOnMainThread` metodo:
 
 ```csharp
-Device.BeginInvokeOnMainThread ( () => {
-  // interact with UI elements
+Device.BeginInvokeOnMainThread (() =>
+{
+    // interact with UI elements
 });
 ```
-
-Nota che i metodi utilizzando `async/await` non è necessario usare `BeginInvokeOnMainThread` se vengono eseguiti dal thread principale dell'interfaccia utente.
-
-## <a name="summary"></a>Riepilogo
-
-Xamarin. Forms `Device` classe consente un controllo con granularità fine sulle funzionalità e i layout in base a ogni piattaforma: in comune anche il codice (progetti di libreria .NET Standard o progetti condivisi).
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
