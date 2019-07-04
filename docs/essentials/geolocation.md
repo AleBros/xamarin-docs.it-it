@@ -5,12 +5,12 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 93abf62e5d0b1df48606e4515fca6747146c7777
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: 4ac6344165730bc8c348c16fe8f3a932d4ac3548
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175356"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268627"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Georilevazione
 
@@ -54,13 +54,13 @@ Oppure fare clic con il pulsante destro del mouse sul progetto Android e aprire 
 
 Il file **Info.plist** dell'app deve contenere la chiave `NSLocationWhenInUseUsageDescription` per accedere alla posizione del dispositivo.
 
-Aprire l'editor plist, aggiungere la proprietà **Privacy - Location When In Use Usage Description** (Privacy - Posizione quando è in uso la descrizione dell'utilizzo) e immettere un valore per visualizzare l'utente.
+Aprire l'editor plist, aggiungere la proprietà **Privacy - Location When In Use Usage Description** (Privacy - Descrizione utilizzo Rileva posizione durante l'uso) e immettere un valore per visualizzare l'utente.
 
-Oppure modificare manualmente il file e aggiungere quanto segue:
+Oppure modificare manualmente il file, aggiungere quanto segue e aggiornare la logica:
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
-<string>This app needs access location when open.</string>
+<string>Fill in a reason why your app needs access to location.</string>
 ```
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
