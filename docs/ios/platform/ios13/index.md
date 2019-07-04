@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: ab50bfb2b3f46a6fac37fced5004e2c530d3343c
-ms.sourcegitcommit: a6ba6ed086bcde4f52fb05f83c59c68e8aa5e436
+ms.openlocfilehash: eaa479f220c9cd0115fd2d4496fbfb1202fb3aa0
+ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/03/2019
-ms.locfileid: "67540427"
+ms.locfileid: "67558713"
 ---
 # <a name="introduction-to-ios-13"></a>Introduzione a iOS 13
 
@@ -45,3 +45,7 @@ Con iPadOS, è possibile usare maggiormente la matita Apple usando PencilKit con
 ## <a name="privacy-and-security"></a>Sicurezza e privacy
 
 iOS 13 offre nuove funzionalità per l'accesso delle App usando Accedi con dispositivi di Apple, consentendo di avere la certezza che le informazioni personali non viene rubato o raccolti in alcun modo sfruttando i vantaggi di 2FA e un set limitato di condizione informazioni.
+
+## <a name="related-links"></a>Collegamenti correlati
+
+- [Note sulla versione di anteprima di xamarin. IOS](/xamarin/ios/release-notes/12/12.99)
