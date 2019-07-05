@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a7c2aa15521b89e4930746dc5421ce67fa26b2b9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5a464196c08220158432219d96bf82578789d8e5
+ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382525"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67560002"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -47,3 +47,8 @@ ms.locfileid: "61382525"
     [![Screenshot delle viste figlio orientate orizzontalmente in StackLayout in iOS e Android](../images/orientation.png "StackLayout contenente istanze di Label orientate orizzontalmente")](../images/orientation-large.png#lightbox "StackLayout contenente istanze di Label orientate orizzontalmente")
 
     Si noti che le istanze di [`Label`](xref:Xamarin.Forms.Label) all'interno di [`StackLayout`](xref:Xamarin.Forms.StackLayout) sono ora allineate orizzontalmente anziché verticalmente.
+
+-----
+
+> [!div class="nextstepaction"]
+> [Si è verificato un problema](https://github.com/MicrosoftDocs/xamarin-docs/issues/new?title=StackLayout+Tutorial+Step+2+Feedback&template=tutorial_template.md)

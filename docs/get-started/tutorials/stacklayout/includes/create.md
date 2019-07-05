@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8957a75ac693874bfbea738d17fbdd7e013c3199
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 4ea10a3cc4eca0708d1de1aee68bed74c960cbc2
+ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277296"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67560001"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -79,3 +79,8 @@ Per completare questa esercitazione è necessario Visual Studio per Mac, la vers
     [![Screenshot delle viste figlio in un elemento StackLayout in iOS e Android](../images/create-stacklayout.png "Elemento StackLayout contenente istanze di Label")](../images/create-stacklayout-large.png#lightbox "Elemento StackLayout contenente istanze di Label")
 
     Per altre informazioni su [`StackLayout`](xref:Xamarin.Forms.StackLayout), vedere [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md) (StackLayout di Xamarin.Forms).
+
+-----
+
+> [!div class="nextstepaction"]
+> [Si è verificato un problema](https://github.com/MicrosoftDocs/xamarin-docs/issues/new?title=StackLayout+Tutorial+Step+1+Feedback&template=tutorial_template.md)
