@@ -5,12 +5,12 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 4ac6344165730bc8c348c16fe8f3a932d4ac3548
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 2ee4683bce02e95c52235afa823be21b89863208
+ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268627"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558673"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Georilevazione
 
@@ -79,7 +79,7 @@ using Xamarin.Essentials;
 
 L'API per la georilevazione richiederà anche le autorizzazioni all'utente quando necessario.
 
-È possibile ottenere l'ultima [posizione](xref:Xamarin.Essentials.Location) conosciuta del dispositivo chiamando il metodo `GetLastKnownLocationAsync`. Questa procedura è spesso più veloce che eseguire una query completa, ma può essere meno accurata.
+È possibile ottenere l'ultima [posizione](xref:Xamarin.Essentials.Location) conosciuta del dispositivo chiamando il metodo `GetLastKnownLocationAsync`. Questa procedura è spesso più veloce che eseguire una query completa, ma può essere meno accurata e potrebbe restituire `null` in assenza di un percorso memorizzato nella cache.
 
 ```csharp
 try
