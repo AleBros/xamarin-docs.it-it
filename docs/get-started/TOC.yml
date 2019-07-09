@@ -12,7 +12,7 @@
           items:
             - name: Installazione delle anteprime di Xamarin (Windows)
               href: installation/windows-preview.md
-        - name: "Installazione di Visual Studio per Mac\_"
+        - name: Installazione di Visual Studio per Mac
           href: /visualstudio/mac/installation/
           items:
             - name: Installazione delle anteprime di Xamarin (Mac)
@@ -81,6 +81,6 @@
         - name: Sviluppatori Objective-C
           href: ~/ios/get-started/objective-c-developers/index.md
         - name: Azure
-          href: ~/xamarin-forms/data-cloud/index.md
+          href: ~/xamarin-forms/data-cloud/index.yml
     - name: Linee guida per lo sviluppo
       href: ~/cross-platform/index.yml

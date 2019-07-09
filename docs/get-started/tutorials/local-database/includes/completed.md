@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2e5a45d14529c0b8c25bbf8300b1c00b52a0751f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: da54409bdf0c36984feb1d70d50a718cff36ac95
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61193248"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67659831"
 ---
 L'esercitazione è stata completata. Si è appreso come:
 
@@ -23,5 +23,5 @@ Per altre informazioni sulle nozioni di base della creazione di applicazioni per
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [LocalDatabaseTutorial (esempio)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/LocalDatabaseTutorial)
-- [Database locale Xamarin.Forms (guida)](~/xamarin-forms/app-fundamentals/databases.md)
+- [Database locale Xamarin.Forms (guida)](~/xamarin-forms/data-cloud/data/databases.md)
 - [Pacchetto NuGet SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/)

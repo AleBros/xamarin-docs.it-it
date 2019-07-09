@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7fbd2a81c30726bc6c38586186e9334ddd4ea282
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 27a3393e6eda9f26ea15003edc5022246ff4deff
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61193261"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67659832"
 ---
 In questo esercizio si creerà un'interfaccia utente per l'utilizzo delle classi di accesso ai dati create in precedenza.
 
@@ -76,7 +76,7 @@ In questo esercizio si creerà un'interfaccia utente per l'utilizzo delle classi
 
     [![Screenshot della persistenza di dati del database SQLite.NET locale, in iOS e Android](../images/consume-data-access-classes.png "Persistenza dei dati del database locale")](../images/consume-data-access-classes-large.png#lightbox "Persistenza dei dati del database locale")
 
-    Per altre informazioni sui database locali in Xamarin.Forms, vedere [Database locali di Xamarin.Forms (Guida)](~/xamarin-forms/app-fundamentals/databases.md)
+    Per altre informazioni sui database locali in Xamarin.Forms, vedere [Database locali di Xamarin.Forms (Guida)](~/xamarin-forms/data-cloud/data/databases.md)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -146,4 +146,4 @@ In questo esercizio si creerà un'interfaccia utente per l'utilizzo delle classi
 
     [![Screenshot della persistenza di dati del database SQLite.NET locale, in iOS e Android](../images/consume-data-access-classes.png "Persistenza dei dati del database locale")](../images/consume-data-access-classes-large.png#lightbox "Persistenza dei dati del database locale")
 
-    Per altre informazioni sui database locali in Xamarin.Forms, vedere [Database locali di Xamarin.Forms (Guida)](~/xamarin-forms/app-fundamentals/databases.md)
+    Per altre informazioni sui database locali in Xamarin.Forms, vedere [Database locali di Xamarin.Forms (Guida)](~/xamarin-forms/data-cloud/data/databases.md)
