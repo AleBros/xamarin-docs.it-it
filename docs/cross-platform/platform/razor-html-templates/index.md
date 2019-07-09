@@ -1,27 +1,27 @@
 ---
 title: Visualizzazioni HTML predefiniti con i modelli Razor
-description: " Uso di una pagina Web a schermo intero per il rendering HTML può essere un modo semplice ed efficace per eseguire il rendering di formattazione complessa in modo più piattaforme, specialmente se si dispone già di HTML, Javascript e CSS di un progetto sito Web."
+description: " Uso di una pagina Web a schermo intero per il rendering HTML può essere un modo semplice ed efficace per eseguire il rendering di formattazione complessa in modo più piattaforme, specialmente se si dispone già di HTML, JavaScript e CSS di un progetto sito Web."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 author: asb3993
 ms.author: amburns
 ms.date: 07/24/2018
-ms.openlocfilehash: 7e569aaddef912d9534e98f2f987ad5dfca8a5a6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 539f59b9835cab6281327bcd1a37482ef82b62cc
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61168010"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650173"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Visualizzazioni HTML predefiniti con i modelli Razor
 
 Nell'ambiente di sviluppo per dispositivi mobili il termine "app ibrida" in genere fa riferimento a un'applicazione che presenta alcune (o tutte) le schermate di come pagine HTML all'interno di un controllo Visualizzatore web ospitate.
 
-Esistono alcuni ambienti di sviluppo che consentono di compilare app per dispositivi mobili completamente in HTML e Javascript, tuttavia tali App può essere soggetta a problemi di prestazioni durante il tentativo di eseguire un'elaborazione complessa o gli effetti dell'interfaccia utente e sono anche limitati alla piattaforma funzionalità che possono accedere.
+Esistono alcuni ambienti di sviluppo che consentono di compilare app per dispositivi mobili completamente in HTML e JavaScript, tuttavia tali App può essere soggetta a problemi di prestazioni durante il tentativo di eseguire un'elaborazione complessa o gli effetti dell'interfaccia utente e sono anche limitati alla piattaforma funzionalità che possono accedere.
 
-Xamarin offre il meglio di entrambi gli approcci, soprattutto se si utilizza il motore di creazione di modelli HTML Razor. Con Xamarin è possibile creare visualizzazioni HTML basato su modelli multipiattaforma che usano Javascript e CSS, ma dispongono anche dell'accesso completo per le API della piattaforma sottostante ed elaborazione rapida tramite c#.
+Xamarin offre il meglio di entrambi gli approcci, soprattutto se si utilizza il motore di creazione di modelli HTML Razor. Con Xamarin è possibile creare visualizzazioni HTML basato su modelli multipiattaforma che usano JavaScript e CSS, ma anche hanno accesso completo alle API della piattaforma sottostante e veloce l'elaborazione mediante C#.
 
-Questo documento illustra come usare il motore del modello di generare visualizzazioni di Javascript e HTML + CSS che possono essere usate nelle diverse piattaforme per dispositivi mobili usando Xamarin codice Razor.
+Questo documento illustra come usare il motore di creazione modello Razor per generare visualizzazioni di JavaScript e HTML + CSS che possono essere usate nelle diverse piattaforme per dispositivi mobili usando Xamarin.
 
 ## <a name="using-web-views-programmatically"></a>Tramite le visualizzazioni Web a livello di codice
 
@@ -51,7 +51,7 @@ Visualizzazione HTML in un controllo WebView usando xamarin. Android viene esegu
 // webView is declared in an AXML layout file
 var webView = FindViewById<WebView> (Resource.Id.webView);
 
-// enable Javascript execution in your html view so you can provide "alerts" and other js
+// enable JavaScript execution in your html view so you can provide "alerts" and other js
 webView.SetWebChromeClient(new WebChromeClient());
 
 var html = "<html><h1>Hello</h1><p>World</p></html>";
@@ -104,7 +104,7 @@ L'azione di compilazione per tutti i file di contenuto statici deve essere **And
 
  ![Azione di compilazione progetto Android: AndroidAsset](images/image4_250x71.png)
 
-### <a name="calling-c-from-html-and-javascript"></a>Chiamata di codice c# da HTML e Javascript
+### <a name="calling-c-from-html-and-javascript"></a>La chiamata a C# dal codice HTML e JavaScript
 
 Quando una pagina html viene caricata in una visualizzazione web, considera i collegamenti e il form come se la pagina è stata caricata da un server. Ciò significa che se l'utente fa clic su un collegamento o invia un modulo di visualizzazione web tenteranno di passare alla destinazione specificata.
 
@@ -127,7 +127,7 @@ Le azioni modulo seguono la stessa regola.
 <form method="get" action="somepage.html"></form>
 ```
 
-Non intende ospitare un server web nel client. Tuttavia, è possibile usare le stesse tecniche di comunicazione server utilizzate in modelli di progettazione reattiva attuali per chiamare i servizi tramite HTTP GET e gestire le risposte in modo asincrono con la creazione di Javascript (o chiamante Javascript già ospitata nella visualizzazione web). In questo modo è possibile passare facilmente i dati dal codice HTML al codice c# per l'elaborazione, quindi visualizzare che i risultati nuovamente nella pagina HTML.
+Non intende ospitare un server web nel client. Tuttavia, è possibile usare le stesse tecniche di comunicazione server utilizzate in modelli di progettazione reattiva attuali per chiamare i servizi tramite HTTP GET e gestire le risposte in modo asincrono con la creazione di JavaScript (o chiamante JavaScript già ospitata nella visualizzazione web). In questo modo è possibile passare facilmente i dati dal codice HTML al codice c# per l'elaborazione, quindi visualizzare che i risultati nuovamente nella pagina HTML.
 
 IOS e Android forniscono un meccanismo per il codice dell'applicazione di intercettare questi eventi di navigazione in modo che possa rispondere codice dell'app (se richiesto). Questa funzionalità è fondamentale per la creazione di App ibride perché consente di includere il codice nativo interagire con la visualizzazione web.
 
@@ -167,13 +167,13 @@ e quindi impostare i client nella visualizzazione web:
 webView.SetWebViewClient (new HybridWebViewClient ());
 ```
 
-### <a name="calling-javascript-from-c"></a>La chiamata a Javascript da c#
+### <a name="calling-javascript-from-c"></a>La chiamata da JavaScriptC#
 
-Oltre a indicare una visualizzazione web per caricare una nuova pagina HTML, il codice c# possa anche eseguire Javascript all'interno della pagina attualmente visualizzata. Interi blocchi di codice Javascript possono essere creati utilizzando le stringhe in c# ed eseguiti oppure è possibile elaborare chiamate di metodo per Javascript già disponibile nella pagina tramite `script` tag.
+Oltre a indicare una visualizzazione web per caricare una nuova pagina HTML, C# codice eseguibile anche JavaScript all'interno della pagina attualmente visualizzata. Interi blocchi di codice JavaScript possono essere creati usando C# stringhe ed eseguito, o è possibile elaborare chiamate di metodo per già disponibile nella pagina tramite JavaScript `script` tag.
 
 #### <a name="android"></a>Android
 
-Creare il codice Javascript da eseguire e quindi con prefisso "javascript:" e indicare la visualizzazione web per caricare tale stringa:
+Creare il codice JavaScript da eseguire e quindi con prefisso "javascript:" e indicare la visualizzazione web per caricare tale stringa:
 
 ```csharp
 var js = "alert('test');";
@@ -182,7 +182,7 @@ webView.LoadUrl ("javascript:" + js);
 
 #### <a name="ios"></a>iOS
 
-iOS web viste forniscono un metodo in particolare per chiamare Javascript:
+iOS web viste forniscono un metodo in particolare per chiamare JavaScript:
 
 ```csharp
 var js = "alert('test');";
@@ -194,9 +194,9 @@ webView.EvaluateJavascript (js);
 In questa sezione è state introdotte le funzionalità dei controlli di visualizzazione web su Android e iOS che consentono di creare applicazioni ibride con Xamarin, tra cui:
 
 -  La possibilità di caricare codice HTML da stringhe generate nel codice,
--  La possibilità di fare riferimento a file locali (CSS, Javascript, immagini o altri file HTML),
+-  La possibilità di fare riferimento a file locali (CSS, JavaScript, immagini o altri file HTML),
 -  La possibilità di intercettare le richieste di navigazione nel codice c#,
--  La possibilità di chiamare Javascript dal codice c#.
+-  Consente di chiamare da JavaScript C# codice.
 
 
 Nella sezione successiva introduce Razor, che rende più semplice creare il codice HTML da usare in App ibride.
@@ -205,7 +205,7 @@ Nella sezione successiva introduce Razor, che rende più semplice creare il codi
 
 Razor è un motore di creazione di modelli che è stata introdotta con ASP.NET MVC, originariamente per l'esecuzione nel server e generare codice HTML di essere servite ai web browser.
 
-Il motore di creazione modello Razor estende la sintassi HTML standard con c# in modo che è possibile esprimere il layout e incorporare con facilità i fogli di stile CSS e Javascript. Il modello può fare riferimento a una classe di modello, che può essere qualsiasi tipo personalizzato e le cui proprietà sono accessibili direttamente dal modello. Uno dei vantaggi principali è la possibilità di combinare facilmente sintassi HTML e c#.
+Il motore di creazione modello Razor estende la sintassi standard HTML con C# in modo che è possibile esprimere il layout e incorporare con facilità i fogli di stile CSS e JavaScript. Il modello può fare riferimento a una classe di modello, che può essere qualsiasi tipo personalizzato e le cui proprietà sono accessibili direttamente dal modello. Uno dei vantaggi principali è la possibilità di combinare facilmente sintassi HTML e c#.
 
 I modelli Razor non sono limitati all'utilizzo sul lato server, può essere incluso anche nelle App Xamarin. Usano i modelli Razor e la possibilità di lavorare con visualizzazioni web a livello di codice consente alle applicazioni ibride multipiattaforma sofisticato essere compilata con Xamarin.
 
@@ -369,7 +369,7 @@ Viene riportato l'output del modello precedente che eseguono iOS Simulator e l'e
 
  ![Rupert X Monkey](images/image9_520x277.png)
 
-In questa sezione ha illustrato le nozioni di base dell'utilizzo di modelli Razor per il rendering delle visualizzazioni di sola lettura semplici. Nella sezione successiva illustra come creare app più completa, utilizzando Razor che può accettare input dell'utente e interazione tra Javascript nella visualizzazione HTML e c#.
+In questa sezione ha illustrato le nozioni di base dell'utilizzo di modelli Razor per il rendering delle visualizzazioni di sola lettura semplici. Nella sezione successiva illustra come creare app più completa, utilizzando Razor che può accettare input dell'utente e interazione tra JavaScript nella visualizzazione HTML e C#.
 
 ## <a name="using-razor-templates-with-xamarin"></a>Uso di modelli Razor con Xamarin
 
@@ -391,7 +391,7 @@ Il contenuto di soluzione del modello predefinito per iPhone e i progetti Androi
 
  ![iPhone e Android modelli](images/image10_428x310.png)
 
-I modelli forniscono infrastruttura delle applicazioni pronti per caricare un modello Razor con un oggetto modello di dati, elaborare l'input utente e comunicare all'utente tramite Javascript.
+I modelli forniscono infrastruttura delle applicazioni pronti per caricare un modello Razor con un oggetto modello di dati, elaborare l'input utente e comunicare all'utente tramite JavaScript.
 
 Le parti importanti della soluzione sono:
 
@@ -405,7 +405,7 @@ La sezione seguente viene illustrato come funzionano i progetti.
 
 ### <a name="static-content"></a>Contenuto statico
 
-Il contenuto statico include fogli di stile CSS, immagini, file Javascript o altro contenuto che può essere collegato da o fa riferimento un file HTML visualizzato in una visualizzazione web.
+Il contenuto statico include fogli di stile CSS, immagini, file JavaScript o altro contenuto che può essere collegato da o fa riferimento un file HTML visualizzato in una visualizzazione web.
 
 I progetti del modello includono un foglio di stile minimo per dimostrare come includere contenuto statico nell'app ibrida. Il foglio di stile CSS viene fatto riferimento nel modello simile al seguente:
 
@@ -413,11 +413,11 @@ I progetti del modello includono un foglio di stile minimo per dimostrare come i
 <link rel="stylesheet" href="style.css" />
 ```
 
-È possibile aggiungere qualsiasi foglio di stile e file Javascript necessari, tra cui Framework quali JQuery.
+È possibile aggiungere qualsiasi foglio di stile e file JavaScript necessari, tra cui Framework quali JQuery.
 
 ### <a name="razor-cshtml-templates"></a>Cshtml Razor modelli
 
-Il modello include un Razor **cshtml** file che ha già scritto codice per agevolare la comunicazione tra i dati tra il codice HTML/Javascript e c#. Questo modo sarà possibile eseguire il backup di App ibride sofisticato che non solo la visualizzazione dei dati di sola lettura dal modello, ma anche accettare l'input dell'utente nel codice HTML e passarlo al codice c# per l'elaborazione o archiviazione compilazione.
+Il modello include un Razor **. cshtml** file di codice per agevolare la comunicazione tra i dati tra il codice HTML/JavaScript ha già scritto e C#. Questo modo sarà possibile eseguire il backup di App ibride sofisticato che non solo la visualizzazione dei dati di sola lettura dal modello, ma anche accettare l'input dell'utente nel codice HTML e passarlo al codice c# per l'elaborazione o archiviazione compilazione.
 
 #### <a name="rendering-the-template"></a>Il modello di rendering
 
@@ -435,7 +435,7 @@ Un esempio può essere visualizzato sul pulsante del RazorView viene gestito in 
 <input type="button" name="UpdateLabel" value="Click" onclick="InvokeCSharpWithFormValues(this)" />
 ```
 
-Il `InvokeCSharpWithFormValues` funzione Javascript legge tutti i valori dalla HTML Form e viene impostata la `location.href` per la visualizzazione web:
+Il `InvokeCSharpWithFormValues` funzione JavaScript legge tutti i valori dalla HTML Form e viene impostata la `location.href` per la visualizzazione web:
 
 ```javascript
 location.href = "hybrid:" + elm.name + "?" + qs;
@@ -467,13 +467,13 @@ Dopo la gestione degli URL, il metodo interrompe la navigazione in modo che la v
 
 #### <a name="manipulating-the-template-from-c"></a>Modifica il modello da c#
 
-Comunicazione con una visualizzazione web HTML da c# avviene tramite una chiamata Javascript nella visualizzazione web. In iOS, questa operazione viene eseguita chiamando `EvaluateJavascript` sul UIWebView:
+Comunicazione con una visualizzazione web HTML da C# viene eseguita tramite una chiamata JavaScript nella visualizzazione web. In iOS, questa operazione viene eseguita chiamando `EvaluateJavascript` sul UIWebView:
 
 ```csharp
 webView.EvaluateJavascript (js);
 ```
 
-In Android, Javascript può essere richiamato nella visualizzazione web caricando il codice Javascript come un URL usando il `"javascript:"` lo schema dell'URL:
+In Android, JavaScript può essere richiamato nella visualizzazione web caricando il codice JavaScript come un URL usando il `"javascript:"` lo schema dell'URL:
 
 ```csharp
 webView.LoadUrl ("javascript:" + js);
@@ -483,7 +483,7 @@ webView.LoadUrl ("javascript:" + js);
 
 Questi modelli non dovrà inserire Usa dei controlli nativi in ciascuna piattaforma: l'intera schermata viene compilato con una visualizzazione web single.
 
-HTML può essere molto utile per la creazione di prototipi e visualizzazione di tipi di operazioni web è consigliabile, ad esempio testo con formattazione e layout reattivo. Tuttavia non tutte le attività sono adatti per HTML e Javascript – lo scorrimento di lunghi elenchi di dati, ad esempio, esegue più efficace l'uso di controlli dell'interfaccia utente nativi, ad esempio ListView o (UITableView in iOS) in Android.
+HTML può essere molto utile per la creazione di prototipi e visualizzazione di tipi di operazioni web è consigliabile, ad esempio testo con formattazione e layout reattivo. Tuttavia non tutte le attività sono adatti per HTML e JavaScript – lo scorrimento di lunghi elenchi di dati, ad esempio, esegue più efficace l'uso di controlli dell'interfaccia utente nativi, ad esempio ListView o (UITableView in iOS) in Android.
 
 Le visualizzazioni web nel modello possono essere integrate facilmente con i controlli specifici della piattaforma: è sufficiente modificare la **Mainstoryboard** nella finestra di progettazione iOS o il **Resources/layout/Main.axml** in Android.
 

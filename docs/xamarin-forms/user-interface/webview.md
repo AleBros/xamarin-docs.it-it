@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2019
-ms.openlocfilehash: 658ce23b0aaced8e195461a485f3e846900c2026
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6410be4019772ad11cd97d27c5de3c0300d58519
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61389141"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649640"
 ---
 # <a name="xamarinforms-webview"></a>WebView di xamarin. Forms
 
@@ -109,6 +109,9 @@ browser.Source = htmlSource;
 
 Nel codice precedente, `@` viene usato per contrassegnare il codice HTML sotto forma di stringa letterale, vale a dire tutti i caratteri di escape consueti vengono ignorati.
 
+> [!NOTE]
+> Potrebbe essere necessario impostare il `WidthRequest` e `HeightRequest` proprietà del [ `WebView` ](xref:Xamarin.Forms.WebView) per visualizzare il contenuto HTML, a seconda del layout di `WebView` è un figlio di. Ad esempio, questa operazione è necessaria un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout).
+
 ### <a name="local-html-content"></a>Contenuto HTML locale
 
 WebView può visualizzare il contenuto da HTML, CSS e Javascript incorporato all'interno dell'app. Ad esempio:
@@ -140,7 +143,7 @@ body,p,h1 {
 
 Si noti che i tipi di carattere specificati nel foglio di stile CSS precedente dovranno essere personalizzate per ogni piattaforma, non tutte le piattaforme abbia i tipi di carattere stesso.
 
-Alla visualizzazione locale contenuto usando un `WebView`, è necessario aprire il file HTML come qualsiasi altro, quindi caricare il contenuto sotto forma di stringa nel `Html` proprietà di un `HtmlWebViewSource`. Per altre informazioni su apertura di file, vedere [uso di file](~/xamarin-forms/app-fundamentals/files.md).
+Alla visualizzazione locale contenuto usando un `WebView`, è necessario aprire il file HTML come qualsiasi altro, quindi caricare il contenuto sotto forma di stringa nel `Html` proprietà di un `HtmlWebViewSource`. Per altre informazioni su apertura di file, vedere [uso di file](~/xamarin-forms/data-cloud/data/files.md).
 
 Gli screenshot seguenti mostrano il risultato della visualizzazione del contenuto locale in ogni piattaforma:
 

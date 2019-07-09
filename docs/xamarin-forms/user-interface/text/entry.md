@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: c9be74bcc6e5d149856e06c98d3bef9a841d4bab
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 238ba1853df523ee275de628ebdbd138a6d1d1bf
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61230234"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649605"
 ---
 # <a name="xamarinforms-entry"></a>Voce di xamarin. Forms
 
@@ -327,7 +327,7 @@ Voce espone due eventi:
 
 ### <a name="completed"></a>Operazione completata
 
-Il `Completed` evento viene utilizzato per rispondere al completamento di un'interazione con una voce. `Completed` viene generato quando l'utente termina con un campo di input premendo il tasto INVIO sulla tastiera. Il gestore dell'evento è un gestore eventi generici, accettando il mittente e `EventArgs`:
+Il `Completed` evento viene utilizzato per rispondere al completamento di un'interazione con una voce. `Completed` viene generato quando l'utente termina con un campo di input premendo il tasto INVIO sulla tastiera (o premendo il tasto Tab sulla piattaforma UWP). Il gestore dell'evento è un gestore eventi generici, accettando il mittente e `EventArgs`:
 
 ```csharp
 void Entry_Completed (object sender, EventArgs e)

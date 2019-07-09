@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: c98e1cd9f4095e8310150ceeebd994af2c9b7f87
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: fa53d7253862e696d23289fe3c57f215b29da6c5
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512923"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649571"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Viste di interfaccia utente di xamarin. Forms
 
@@ -99,6 +99,10 @@ Il `Stepper` consente a un utente di selezionare un valore numerico da un interv
 ## <a name="stylesstylesindexmd"></a>[Stili](styles/index.md)
 
 Tipo di carattere, colori e altri attributi possono essere raggruppati in stili che possono essere condivisi tra i controlli, layout o l'intera applicazione usando ResourceDictionary.
+
+## <a name="switchswitchmd"></a>[Switch](switch.md)
+
+Il `Switch` è un tipo di pulsante che può essere attivata/disattivato tra e disattivare gli stati.
 
 ## <a name="tableviewtableviewmd"></a>[TableView](tableview.md)
 

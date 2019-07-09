@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 23deddae61452d532a87c51cc1ec3bc53eb91c9f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 15b4154ad6e95aabb5e88784660a93bb53c0b252
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61279120"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650199"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Case Study di App multipiattaforma con: Tasky
 
@@ -123,7 +123,7 @@ Il `TaskItemDatabase` è un singleton, assicurando che tutti gli accessi si veri
 
 #### <a name="sqlite-on-windows-phone"></a>SQLite in Windows Phone
 
-IOS e Android entrambe fornite con SQLite come parte del sistema operativo, Windows Phone non include un motore di database compatibili. Per condividere codice tra tutti e tre le piattaforme è necessaria una versione di Windows phone native di SQLite. Visualizzare [utilizzo di un Database locale](~/xamarin-forms/app-fundamentals/databases.md) per altre informazioni sulla configurazione di progetto Windows Phone per Sqlite.
+IOS e Android entrambe fornite con SQLite come parte del sistema operativo, Windows Phone non include un motore di database compatibili. Per condividere codice tra tutti e tre le piattaforme è necessaria una versione di Windows phone native di SQLite. Visualizzare [utilizzo di un Database locale](~/xamarin-forms/data-cloud/data/databases.md) per altre informazioni sulla configurazione di progetto Windows Phone per Sqlite.
 
  <a name="Using_an_Interface_to_Generalize_Data_Access" />
 

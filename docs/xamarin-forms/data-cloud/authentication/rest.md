@@ -1,5 +1,5 @@
 ---
-title: L'autenticazione di un servizio Web RESTful
+title: Autenticare un servizio Web RESTful
 description: L'autenticazione di base fornisce l'accesso alle risorse solo ai client che hanno le credenziali corrette. Questo articolo illustra come usare l'autenticazione di base per proteggere l'accesso alle risorse del servizio web RESTful.
 ms.prod: xamarin
 ms.assetid: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: d3f07a72ee26d6be4fafa72137dc9b6c3a724e00
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bf334c7fde8433b7bbe45c8caaf962705c39320d
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61330645"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650391"
 ---
-# <a name="authenticating-a-restful-web-service"></a>L'autenticazione di un servizio Web RESTful
+# <a name="authenticate-a-restful-web-service"></a>Autenticare un servizio Web RESTful
 
 _HTTP supporta l'uso di diversi meccanismi di autenticazione per controllare l'accesso alle risorse. L'autenticazione di base fornisce l'accesso alle risorse solo ai client che hanno le credenziali corrette. Questo articolo illustra come usare l'autenticazione di base per proteggere l'accesso alle risorse del servizio web RESTful._
 
@@ -86,5 +86,5 @@ Nel modulo di autenticazione di base usato da IIS, gli utenti vengono autenticat
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Utilizzo di un servizio web RESTful](~/xamarin-forms/data-cloud/consuming/rest.md)
+- [Utilizzare un servizio web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

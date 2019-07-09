@@ -7,12 +7,12 @@ ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 7d9630840983b36204214927136e0c9efe07d840
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cf870cebfdd29e679b767728d1bea723f9310b17
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61333719"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650456"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Riepilogo del capitolo 20. / O asincrono e file
 
@@ -83,7 +83,7 @@ Tuttavia, se si cerca questi `System.IO` classi in una libreria di classi Portab
 Ciò significa che è necessario usare il [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) (illustrata per prima nella [ **capitolo 9. Chiamate API specifiche della piattaforma** ](chapter09.md) per implementare i/o file.
 
 > [!NOTE]
-> Librerie di classi portabili sono stati sostituiti con le librerie .NET Standard 2.0 e supporta .NET Standard 2.0 [ `System.IO` ](xref:System.IO) tipi per tutte le piattaforme di xamarin. Forms. Non è più necessario usare un `DependencyService` per la maggior parte delle attività dei / o file. Visualizzare [gestione File in xamarin. Forms](~/xamarin-forms/app-fundamentals/files.md) per un approccio più moderno file i/o.
+> Librerie di classi portabili sono stati sostituiti con le librerie .NET Standard 2.0 e supporta .NET Standard 2.0 [ `System.IO` ](xref:System.IO) tipi per tutte le piattaforme di xamarin. Forms. Non è più necessario usare un `DependencyService` per la maggior parte delle attività dei / o file. Visualizzare [gestione File in xamarin. Forms](~/xamarin-forms/data-cloud/data/files.md) per un approccio più moderno file i/o.
 
 ### <a name="a-first-shot-at-cross-platform-file-io"></a>Vengo prima i/o file lo sviluppo multipiattaforma
 
@@ -173,4 +173,4 @@ Il [ `WebRequest` ](xref:System.Net.WebRequest) usato in alcuni esempi di classe
 
 - [Capitolo 20 full-text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf)
 - [Capitolo 20 campioni](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
-- [Uso dei file](~/xamarin-forms/app-fundamentals/files.md)
+- [Uso dei file](~/xamarin-forms/data-cloud/data/files.md)
