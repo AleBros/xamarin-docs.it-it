@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/03/2019
-ms.openlocfilehash: ed2d41ea2d9add658d9f07469568a298cdf8de59
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 22a17f9a916d94a3a0f44a451512de43c943e95a
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649694"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675038"
 ---
 # <a name="xamarinforms-switch"></a>Xamarin.Forms Switch
 
@@ -27,7 +27,7 @@ La schermata seguente mostra una `Switch` controllare in relativi **sul** e **of
 Il `Switch` controllo definisce due proprietà:
 
 * [`OnColor`](xref:Xamarin.Forms.Switch.OnColor) è un `Color` che influisce su come il `Switch` viene eseguito il rendering in attivato/disattivato, o **su**, stato.
-* [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) è un `boolean` valore che indica se il il `Switch` viene **su**.
+* [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) è un `boolean` valore che indica se il `Switch` viene **su**.
 
 Queste proprietà sono supportate da un [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) oggetto, ovvero il `Switch` possono essere personalizzati con stili e può essere la destinazione di associazioni dati.
 
@@ -41,7 +41,7 @@ Oggetto `Switch` può essere inizializzata in XAML. Relativi `IsToggled` proprie
 <Switch IsToggled="true"/>
 ```
 
-Oggetto ' opzione è inoltre possibile creare nel codice:
+Oggetto `Switch` possono anche essere creati nel codice:
 
 ```csharp
 Switch switch = new Switch { IsToggled = true };

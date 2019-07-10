@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 16d3dfaa0169e3a02fcdee0318dc150994c7e59b
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 576de9a46fc89fe01c564c05568d4331a32dbd96
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827882"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674402"
 ---
 # <a name="displaying-alerts-in-xamarinios"></a>La visualizzazione degli avvisi in xamarin. IOS
 
@@ -60,7 +60,7 @@ okayButton.TouchUpInside += (sender, e) => {
 
 La visualizzazione di un avviso con più opzioni, viene eseguito in modo simile, ma aggiungere due azioni. Ad esempio, lo screenshot seguente mostra un avviso con due pulsanti:
 
- ![ Avviso con due pulsanti](alerts-images/alert2.png)
+ ![Avviso con due pulsanti](alerts-images/alert2.png)
 
 ```csharp
 okayCancelButton.TouchUpInside += ((sender, e) => {

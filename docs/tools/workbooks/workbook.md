@@ -6,12 +6,12 @@ ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: 71f46535ffd0a99ad78acb8f0e3bbc5870abf33e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a900d427ad6ac2a0e211ef4f00d2f014b13e5d1c
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61197945"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674412"
 ---
 # <a name="interactive-workbooks"></a>Cartelle di lavoro interattive
 
@@ -27,7 +27,7 @@ Le cartelle di lavoro può essere salvati e aperto in un secondo momento all'int
 
 Finestra di modifica del codice fornisce il completamento del codice, colorazione della sintassi, inline live-diagnostica e supporto di istruzioni a più righe.
 
-[ ![](workbook-images/inspector-0.6.0-repl-small.png "Finestra di modifica del codice fornisce il completamento del codice, colorazione della sintassi, inline live-diagnostica e supporto di istruzioni a più righe")](workbook-images/inspector-0.6.0-repl.png#lightbox)
+[![](workbook-images/inspector-0.6.0-repl-small.png "Finestra di modifica del codice fornisce il completamento del codice, colorazione della sintassi, inline live-diagnostica e supporto di istruzioni a più righe")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
 Xamarin Workbooks vengono salvati in un `.workbook` file, ovvero un file CommonMark con alcuni metadati nella parte superiore (vedere [tipi di File di cartelle di lavoro](#workbooks-files-types) per altri dettagli sul modo in cui le cartelle di lavoro possono essere salvati).
 
@@ -136,7 +136,7 @@ Se un testo normale `.workbook` nelle cartelle di lavoro 0.99.3 è aprire file c
 
 I pacchetti della cartella di lavoro, in fase di directory, possono essere difficili da distribuire con facilità la rete Internet. La soluzione è archivi cartella di lavoro. Un archivio di cartella di lavoro è un pacchetto con estensione zip compresso della cartella di lavoro, denominato con il `.workbook` estensione.
 
-1.1 le cartelle di lavoro, quando si salva un pacchetto di cartella di lavoro, la finestra di dialogo Salva offre la possibilità di salvare invece come un archivio. Le cartelle di lavoro 1.0 prevedeva alcuna funzionalità integrata di creazione o di archivi di salvataggio.
+1\.1 le cartelle di lavoro, quando si salva un pacchetto di cartella di lavoro, la finestra di dialogo Salva offre la possibilità di salvare invece come un archivio. Le cartelle di lavoro 1.0 prevedeva alcuna funzionalità integrata di creazione o di archivi di salvataggio.
 
 Nelle cartelle di lavoro 1.0 quando è stato aperto in un archivio cartella di lavoro, che è stato convertito in modo trasparente in un pacchetto di cartella di lavoro e il file zip è stata perso. Nelle cartelle di lavoro 1.1, rimane il file zip. Quando l'utente salva l'archivio, viene sostituito con un nuovo file zip.
 

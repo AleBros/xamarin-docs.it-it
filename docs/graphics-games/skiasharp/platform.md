@@ -7,16 +7,16 @@ ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/03/2018
-ms.openlocfilehash: 5d6cf6b36d4f454d3124a33ab9cb289e40e0e1ed
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ed80a423506f96972ddf80075379ed6e6dccd0a1
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61160615"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675124"
 ---
 # <a name="skiasharp-platform-specific-notes"></a>Note specifiche della piattaforma di SkiaSharp
 
-Gli esempi seguenti allocare il buffer immagine manualmente, questa operazione viene eseguita per illustrare un modello di piattaforma comune, che consiste nel disegnare su un buffer RBGA esistente fornito dalla piattaforma.
+Gli esempi seguenti allocare il buffer immagine manualmente, questa operazione viene eseguita per illustrare un modello di piattaforma comune, che consiste nel disegnare su un buffer RGBA esistente fornito dalla piattaforma.
 
 Non devi usare questa espressione idiomatica se non desidera.  Si verifica un overload che creerà e gestirà automaticamente spazio di archiviazione sottostante per l'immagine per l'utente.
 

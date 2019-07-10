@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: e762a286069d5ef1db90f3c45808eee0a7a04a7f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c10935f4623fd4455ec5cf8a80c6473c0f69d9b9
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60954285"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674681"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Principi di progettazione di API xamarin. Android
 
@@ -240,7 +240,7 @@ I tipi annidati sono "spostati" per essere elementi di pari livello dell'interfa
 
 Si consideri, ad esempio, il [android.os.Parcelable](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) interfaccia.
 Il *Parcelable* interfaccia contiene i metodi, i tipi annidati e costanti. Il *Parcelable* metodi di interfaccia vengono inseriti nel [Android.OS.IParcelable](https://developer.xamarin.com/api/type/Android.OS.IParcelable/) interfaccia.
-Il *Parcelable* costanti di interfaccia vengono inserite nel [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) tipo. Annidato [android.os.Parcelable.ClassLoaderCreator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) e [android.os.Parcelable.Creator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.Creator.html) typy nejsou attualmente associato a causa delle limitazioni nel nostro supporto dei generics; Se sono state supportate, potrebbe essere presente come il *Android.OS.IParcelableClassLoaderCreator* e *Android.OS.IParcelableCreator* interfacce. Ad esempio, annidata [android.os.IBinder.DeathRecpient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) interfaccia viene associata come le [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) interfaccia.
+Il *Parcelable* costanti di interfaccia vengono inserite nel [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) tipo. Annidato [android.os.Parcelable.ClassLoaderCreator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) e [android.os.Parcelable.Creator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.Creator.html) typy nejsou attualmente associato a causa delle limitazioni nel nostro supporto dei generics; Se sono state supportate, potrebbe essere presente come il *Android.OS.IParcelableClassLoaderCreator* e *Android.OS.IParcelableCreator* interfacce. Ad esempio, annidata [android.os.IBinder.DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) interfaccia viene associata come le [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) interfaccia.
 
 
 > [!NOTE]
@@ -260,7 +260,7 @@ Oltre ai tipi sopra, sono disponibili quattro ulteriori modifiche:
 Per il *android.os.Parcelable* interfaccia, ciò significa che ora sia un [ *Android.OS.Parcelable* ](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) tipo per contenere le costanti. Ad esempio, il [Parcelable.CONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) costante verrà associata come il [ *Parcelable.ContentsFileDescriptor* ](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/) costante, anziché come il  *ParcelableConsts.ContentsFileDescriptor* costante.
 
 Per le interfacce che contiene le costanti che implementano altre interfacce che contiene ancora più costanti, viene generato l'unione di tutte le costanti. Ad esempio, il [android.provider.MediaStore.Video.VideoColumns](https://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) interfaccia implementa la [android.provider.MediaStore.MediaColumns](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumns/) interfaccia. Tuttavia, prima di 1.9, il [Android.Provider.MediaStore.Video.VideoColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+Video+VideoColumnsConsts/) tipo non è in grado di accesso alle costanti dichiarate nel [Android.Provider.MediaStore.MediaColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumnsConsts/).
-Di conseguenza, l'espressione del linguaggio *MediaStore.Video.VideoColumns.TITLE* deve essere associato all'espressione c# *MediaStore.Video.MediaColumnsConsts.Title* che è di difficile individuazione senza la lettura numero elevato di documentazione Java. Nella versione 1.9, l'espressione c# equivalente saranno [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/).
+Di conseguenza, l'espressione del linguaggio *MediaStore.Video.VideoColumns.TITLE* deve essere associato all'espressione c# *MediaStore.Video.MediaColumnsConsts.Title* che è di difficile individuazione senza la lettura numero elevato di documentazione Java. Nella versione 1.9, l'equivalente C# espressione saranno [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/).
 
 Inoltre, prendere in considerazione la [android.os.Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/) tipo che implementa il linguaggio *Parcelable* interfaccia. Poiché implementa l'interfaccia, tutte le costanti in quell'interfaccia sono accessibili "tramite" del tipo di aggregazione, ad esempio *Bundle.CONTENTS_FILE_DESCRIPTOR* è un'espressione di Java perfettamente valida.
 In precedenza, per questa espressione per la porta C# è necessario esaminare tutte le interfacce implementate per verificare da quale tipo di *CONTENTS_FILE_DESCRIPTOR* proviene. A partire da xamarin. Android 1.9, le classi che implementano le interfacce di Java che includono costanti saranno necessario nidificate *InterfaceConsts* tipo, che conterrà tutte le costanti di interfaccia ereditati. Questa operazione consentirà di traduzione *Bundle.CONTENTS_FILE_DESCRIPTOR* al [ *Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/).

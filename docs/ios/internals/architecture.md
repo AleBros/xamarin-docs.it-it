@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d08f7e3a35cd82f4262ef1f145d4b4648f7baef8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 426c5ef5cc32877546ebb88cb485a81723816e6e
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61036130"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675058"
 ---
 # <a name="ios-app-architecture"></a>Architettura di App iOS
 
@@ -20,7 +20,7 @@ Le applicazioni xamarin. IOS eseguire all'interno dell'ambiente di esecuzione Mo
 
 Il diagramma seguente mostra una panoramica di base di questa architettura:
 
-[ ![](architecture-images/ios-arch-small.png "Questo diagramma mostra una panoramica di base dell'architettura la compilazione Ahead of Time (AOT)")](architecture-images/ios-arch.png#lightbox)
+[![](architecture-images/ios-arch-small.png "Questo diagramma mostra una panoramica di base dell'architettura la compilazione Ahead of Time (AOT)")](architecture-images/ios-arch.png#lightbox)
 
 ## <a name="native-and-managed-code-an-explanation"></a>Nativo e codice gestito: Una spiegazione
 

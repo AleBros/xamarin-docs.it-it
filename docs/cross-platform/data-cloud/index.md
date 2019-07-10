@@ -6,16 +6,16 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: 25eec247a0cb664897541a0e6e818a77018fda43
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dd211fecad0bff58cb9ff6c6a99ae6a15c60eb7b
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61187771"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674980"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure e Xamarin
 
-[ ![](images/evolve-mikej-azure-sml.png "Funzionalità di servizi App di Azure sono facili da aggiungere all'app di Xamarin, tra cui archivio dati cloud e le notifiche push multipiattaforma")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
+[![](images/evolve-mikej-azure-sml.png "Funzionalità di servizi App di Azure sono facili da aggiungere all'app di Xamarin, tra cui archivio dati cloud e le notifiche push multipiattaforma")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
 [Evoluzione 2016: Sviluppo di App connesse tramite Azure e Xamarin](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
@@ -28,7 +28,7 @@ Il nuovo [servizi connessi](connected-services.md) funzionalità di Visual Studi
 È una raccolta di [documentazione di Azure Mobile Apps](~/cross-platform/data-cloud/mobile-apps.md) che descrive il processo di implementazione di [Azure Mobile Client](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/).
 Xamarin offre inoltre un NuGet per la messaggistica di Azure pacchetti relativi [iOS](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.iOS/) e [Android](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.Android/) per facilitare l'implementazione di notifiche push tra le piattaforme.
 
-Configurare le app nel [portale di Azure App Services](https://portal.azure.com/) per accedere alle App per dispositivi mobili, API Web, archiviazione e altro ancora. Scopri [quali servizi app sono le differenze](http://azure.microsoft.com/updates/whats-new-with-azure-app-service/) guardare [questi video di Microsoft](http://azure.microsoft.com/campaigns/azure-march-announcement/).
+Configurare le app nel [portale di Azure App Services](https://portal.azure.com/) per accedere alle App per dispositivi mobili, API Web, archiviazione e altro ancora. Scopri [quali servizi app sono le differenze](https://azure.microsoft.com/updates/whats-new-with-azure-app-service/) guardare [questi video di Microsoft](https://azure.microsoft.com/campaigns/azure-march-announcement/).
 
 ## <a name="active-directory-authentication"></a>Autenticazione di Active Directory
 
@@ -61,5 +61,5 @@ Oltre al [esempi di documentazione](https://github.com/xamarin/mobile-samples/tr
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempio di libreria di classi Portabile di Azure (da @paulbatum) (esempio)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
-- [Portale di Azure](http://azure.microsoft.com/)
+- [Portale di Azure](https://azure.microsoft.com/)
 - [Client per dispositivi mobili per Xamarin (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)

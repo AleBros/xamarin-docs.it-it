@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 05/23/2019
-ms.openlocfilehash: 474398922bf00e3a430166d8b2e073d200e6ed6e
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: fb2f108ba115690ca181738486fd8310f26bb909
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659328"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674522"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Inviare e ricevere notifiche push con hub di notifica di Azure e xamarin. Forms
 
@@ -538,7 +538,7 @@ public static class DispatcherConstants
 }
 ```
 
-È necessario configurare il **DispatcherConstants.cs** in modo che corrispondano corrispondano alla configurazione di Hub di notifica di Azure. Il valore della `SubscriptionTags` proprietà deve corrispondere a quelli utilizzati nelle App client. Il `NotificationHubName` proprietà è il nome dell'istanza di Hub di notifica di Azure. Il `FullAccessConnectionString` proprietà è la chiave di accesso disponibile nell'hub di notifica **i criteri di accesso**. Lo screenshot seguente mostra la posizione del `NotificationHubName` e `FullAccessConnectionString` proprietà nel portale di Azure:
+È necessario configurare il **DispatcherConstants.cs** a corrispondano alla configurazione di Hub di notifica di Azure. Il valore della `SubscriptionTags` proprietà deve corrispondere a quelli utilizzati nelle App client. Il `NotificationHubName` proprietà è il nome dell'istanza di Hub di notifica di Azure. Il `FullAccessConnectionString` proprietà è la chiave di accesso disponibile nell'hub di notifica **i criteri di accesso**. Lo screenshot seguente mostra la posizione del `NotificationHubName` e `FullAccessConnectionString` proprietà nel portale di Azure:
 
 ![Schermata del nome dell'Hub di notifica di Azure e FullAccessConnectionString](azure-notification-hub-images/notification-hub-full-access-policy.png "FullAccessConnectionString e nome dell'Hub di notifica di Azure")
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 9425b26b5cc8fcd9b8a80df422d932c96d52889b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5417050daa84197dd7dc2a270ae054a3a73fd3bc
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037458"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675070"
 ---
 # <a name="xamarinios-api-design"></a>Progettazione di API xamarin. IOS
 
@@ -113,7 +113,7 @@ Per ogni tipo che rispecchia un tipo non gestito, è possibile ottenere l'oggett
 
 Mentre Mono fornirà la garbage collection per tutti gli oggetti, il `Foundation.NSObject` implementa la [System. IDisposable](xref:System.IDisposable) interfaccia. Ciò significa che è possibile rilasciare in modo esplicito le risorse di qualsiasi dato NSObject senza dover attendere che il Garbage Collector kick-in. Questo è importante quando si usa NSObjects pesanti, ad esempio, UIImages che potrebbe contenere puntatori a grandi blocchi di dati.
 
-Se il tipo deve effettuare la finalizzazione deterministica, eseguire l'override di [NSObject.Dispose(bool) metodo](xref:Foundation.NSObject.Dispose(System.Boolean)) il parametro al metodo Dispose è "bool disposing", e se impostato su true, significa che viene chiamato il metodo Dispose perché l'utente chiamato in modo esplicito Dispose () sull'oggetto. Se il valore è false, significa che il metodo Dispose (bool disposing) è in corso chiamato dal finalizzatore nel thread finalizzatore. []()
+Se il tipo deve effettuare la finalizzazione deterministica, eseguire l'override di [NSObject.Dispose(bool) metodo](xref:Foundation.NSObject.Dispose(System.Boolean)) il parametro al metodo Dispose è "bool disposing", e se impostato su true, significa che viene chiamato il metodo Dispose perché l'utente chiamato in modo esplicito Dispose () sull'oggetto. Se il valore è false, significa che il metodo Dispose (bool disposing) è in corso chiamato dal finalizzatore nel thread finalizzatore.
 
 
 ##### <a name="categories"></a>Categories

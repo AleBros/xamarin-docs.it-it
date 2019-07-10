@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: 009e061726f655999c08192b5839a5c962d35e24
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c30b5d0b3a02223a8808e57f5d0cdc5e7000e156
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61091438"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674878"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Uso di iCloud con xamarin. IOS
 
@@ -55,7 +55,7 @@ Per configurare correttamente un'applicazione per accedere a iCloud:
 
 - **Aggiungere l'identificatore del contenitore a entitlements. plist** -il formato di identificatore del contenitore è `TeamID.BundleID`. Per altre informazioni vedere la [uso degli Entitlement](~/ios/deploy-test/provisioning/entitlements.md) Guida.
 
-- **Configurare le proprietà del progetto** - In Info. plist file verificare che il **identificatore del Bundle** corrisponde alla **ID Bundle** impostata quando [la creazione di un ID App ](~/ios/deploy-test/provisioning/capabilities/index.md); IOS firma del Bundle Usa una **profilo di Provisioning** che contengono un ID App con servizio App, iCloud e le **Entitlement personalizzati** file selezionato. Questa operazione può tutte essere eseguita in Visual Studio sotto il riquadro Proprietà progetto.
+- **Configurare le proprietà del progetto** - In Info. plist file verificare che il **identificatore del Bundle** corrisponde alla **ID Bundle** impostata quando [la creazione di un ID App](~/ios/deploy-test/provisioning/capabilities/index.md); IOS firma del Bundle Usa una **profilo di Provisioning** che contengono un ID App con servizio App, iCloud e le **Entitlement personalizzati** file selezionato. Questa operazione può tutte essere eseguita in Visual Studio sotto il riquadro Proprietà progetto.
 
 - **Abilita iCloud nel dispositivo** : passare a **Impostazioni > iCloud** e assicurarsi che il dispositivo è connesso.
 Selezionare e attivare i **documenti e dati** opzione.

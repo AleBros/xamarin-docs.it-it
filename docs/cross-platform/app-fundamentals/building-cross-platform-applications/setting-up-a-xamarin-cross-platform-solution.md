@@ -6,12 +6,12 @@ ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: asb3993
 ms.author: amburns
 ms.date: 03/27/2017
-ms.openlocfilehash: d20275bab4e4ce90f902a5e72321701d94b1d416
-ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
+ms.openlocfilehash: 2117eb91f25f2fb890b419fa7c4235b8f646729d
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354062"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675021"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3: configurazione di una soluzione Xamarin multipiattaforma
 
@@ -104,7 +104,7 @@ I progetti specifici della piattaforma devono implementare:
 
 L'architettura dell'applicazione è illustrata nella figura seguente:
 
- [ ![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "Nella figura seguente è illustrata l'architettura dell'applicazione")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
+ [![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "Nella figura seguente è illustrata l'architettura dell'applicazione")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
 
 Questo screenshot illustra una configurazione di soluzione con il progetto Core condiviso, iOS e i progetti applicazione Android. Il progetto condiviso contiene codice che fa riferimento a ciascuno dei livelli architetturali (codice di Business, servizio, i dati e l'accesso ai dati):
 

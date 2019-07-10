@@ -6,12 +6,12 @@ ms.assetid: 0B17991A-4573-4F6C-9E86-D4B9D1A47E4D
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 7f1e743eea81edc0aa45b49f6acb6a9fd461bc80
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fd3cb0e8201a6e84c726b211852013bd5f35fba1
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61188256"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675116"
 ---
 # <a name="step-1-register-an-app-to-use-azure-active-directory"></a>Passaggio 1. Registrare un'app per usare Azure Active Directory
 
@@ -19,11 +19,11 @@ ms.locfileid: "61188256"
 
 2. Dopo l'accesso, vedere la **Active Directory** sezione (1) e scegliere la directory in cui si vuole registrare l'applicazione (2)
 
-  [ ![](register-images/01.-active-directory-in-azure-portal-sml.jpg "sezione e scegliere la directory in cui si vuole registrare l'applicazione")](register-images/01.-active-directory-in-azure-portal.jpg#lightbox)
+  [![](register-images/01.-active-directory-in-azure-portal-sml.jpg "sezione e scegliere la directory in cui si vuole registrare l'applicazione")](register-images/01.-active-directory-in-azure-portal.jpg#lightbox)
 
 3. Fare clic su **Add** per creare una nuova applicazione, quindi selezionare **Aggiungi un'applicazione che l'organizzazione sta sviluppando**
 
-  [ ![](register-images/02.-add-new-application-sml.jpg "Aggiungere un'applicazione che l'organizzazione sta sviluppando")](register-images/02.-add-new-application.jpg#lightbox)
+  [![](register-images/02.-add-new-application-sml.jpg "Aggiungere un'applicazione che l'organizzazione sta sviluppando")](register-images/02.-add-new-application.jpg#lightbox)
 
 4. Nella schermata successiva, assegnare all'app un nome (ad es. XAM-DEMO).
   Assicurarsi di selezionare **applicazione Client nativa** come tipo di applicazione.

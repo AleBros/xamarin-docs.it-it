@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 36164e1e9f92b5a5520d10f769f3953cfa2ceb85
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a8fe2c2765676db52c23fd7c475f218f14697caf
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61412849"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675234"
 ---
 # <a name="working-with-watchos-settings-in-xamarin"></a>Utilizzo di watchOS impostazioni in Xamarin
 
@@ -36,7 +36,7 @@ Nel **app iPhone** all'interno della soluzione (*non* le app watch o estensione)
 
 3. Aggiungere una nuova chiave `ApplicationGroupContainerIdentifier` per il **root. plist** con il valore impostato per il gruppo di app è stato configurato, (ad es. `group.com.xamarin.WatchSettings` Nell'esempio):
 
-   [ ![](settings-images/settings-appgroup-sml.png "Aggiungere una chiave ApplicationGroupContainerIdentifier il root. plist")](settings-images/settings-appgroup.png#lightbox)
+   [![](settings-images/settings-appgroup-sml.png "Aggiungere una chiave ApplicationGroupContainerIdentifier il root. plist")](settings-images/settings-appgroup.png#lightbox)
 
 4. Modificare il **Settings-Watch.bundle/Root.plist** per contenere le opzioni da usare: il file del modello contiene un gruppo.
   TextField, interruttore e dispositivo di scorrimento per impostazione predefinita (che è possibile eliminare e sostituire con le proprie impostazioni):
