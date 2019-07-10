@@ -1,0 +1,171 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Dati e Servizi cloud di Azure
+metadata:
+  title: Dati e Servizi cloud di Azure
+  description: Informazioni su come archiviare i dati e compilare applicazioni Xamarin.Forms connesse con Servizi cloud di Azure.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 0601D9D0-C8D2-4C3B-A749-A340BDBF64A4ß
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 06/28/2019
+abstract:
+  description: Informazioni su come archiviare i dati e compilare applicazioni Xamarin.Forms connesse con Servizi cloud di Azure.
+sections:
+  - title: Archivio dati locale
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: data/files.md
+            html: Informazioni su come eseguire la gestione di file dal codice condiviso in un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
+              href: data/files.md
+            title: Gestione di file
+          - href: data/databases.md
+            html: Informazioni su come le applicazioni Xamarin.Forms possono leggere e scrivere dati in un database SQLite locale usando SQLite.Net.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_common-data-service.svg'
+              href: data/databases.md
+            title: Database locali
+  - title: Servizi di Azure.
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: azure-services/azure-cosmosdb.md
+            html: Informazioni su come archiviare i dati in un database di documenti di Azure Cosmos DB e accedere ai dati da un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
+              href: azure-services/azure-cosmosdb.md
+            title: Database di documenti di Azure Cosmos DB
+          - href: azure-services/azure-notification-hub.md
+            html: Informazioni su come usare Hub di notifica di Azure per gestire la distribuzione delle notifiche push a un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_push-notification.svg'
+              href: azure-services/azure-notification-hub.md
+            title: Hub di notifica di Azure
+          - href: azure-services/azure-storage.md
+            html: Informazioni su come archiviare testo e dati binari in Archiviazione di Azure e accedere ai dati da un'applicazione Xamarin.Forms.
+            image:
+              src: ~/media/icons/i_data-cloud.svg
+              href: azure-services/azure-storage.md
+            title: Archiviazione di Azure
+          - href: azure-services/azure-search.md
+            html: Informazioni su come integrare Ricerca di Azure in un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_search.svg'
+              href: azure-services/azure-search.md
+            title: Ricerca di Azure
+          - href: azure-services/azure-functions.md
+            html: Informazioni su come compilare una funzione di Azure che interagisce con un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_method.svg'
+              href: azure-services/azure-functions.md
+            title: Funzioni di Azure
+          - href: azure-services/azure-signalr.md
+            html: Informazioni su come combinare Servizio Azure SignalR e Funzioni di Azure con Xamarin.Forms per recapitare messaggi in tempo reale ai client connessi.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
+              href: azure-services/azure-signalr.md
+            title: Servizio Azure SignalR
+  - title: Servizi cognitivi di Azure
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: azure-cognitive-services/introduction.md
+            html: Informazioni sull'applicazione Xamarin.Forms di esempio che illustra come richiamare le API Servizi cognitivi di Azure.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_web-apps.svg'
+              href: azure-cognitive-services/index.md
+            title: Introduzione
+          - href: azure-cognitive-services/speech-recognition.md
+            html: Informazioni su come usare l'API REST Riconoscimento vocale Microsoft per convertire audio in testo in un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_blog.svg'
+              href: azure-cognitive-services/speech-recognition.md
+            title: Riconoscimento vocale
+          - href: azure-cognitive-services/spell-check.md
+            html: Informazioni su come usare l'API REST Controllo ortografico Bing per correggere gli errori ortografici in un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_article.svg'
+              href: azure-cognitive-services/spell-check.md
+            title: Controllo ortografico
+          - href: azure-cognitive-services/text-translation.md
+            html: Informazioni su come usare l'API Traduzione testuale di Microsoft Translator per tradurre testo da una lingua a un'altra in un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_reference.svg'
+              href: azure-cognitive-services/text-translation.md
+            title: Traduzione di testi
+          - href: azure-cognitive-services/emotion-recognition.md
+            html: Informazioni su come usare l'API Viso per riconoscere le emozioni in un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_account-management.svg'
+              href: azure-cognitive-services/emotion-recognition.md
+            title: Riconoscimento delle emozioni
+  - title: Servizi Web
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: web-services/introduction.md
+            html: Informazioni sull'applicazione Xamarin.Forms di esempio che illustra come comunicare con diversi servizi Web.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_web-apps.svg'
+              href: web-services/introduction.md
+            title: Introduzione
+          - href: web-services/asmx.md
+            html: Informazioni su come usare un servizio SOAP ASMX da un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_web-color.svg'
+              href: web-services/asmx.md
+            title: ASMX
+          - href: web-services/wcf.md
+            html: Informazioni su come usare un servizio SOAP WCF da un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_web-color.svg'
+              href: web-services/wcf.md
+            title: WCF
+          - href: web-services/rest.md
+            html: Informazioni su come usare un servizio REST da un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_web-color.svg'
+              href: web-services/rest.md
+            title: REST
+  - title: Autenticazione
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: authentication/rest.md
+            html: Informazioni su come usare l'autenticazione di base per proteggere l'accesso alle risorse basate su REST.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_network-protection.svg'
+              href: authentication/rest.md
+            title: REST
+          - href: authentication/oauth.md
+            html: Informazioni su come usare Xamarin.Auth per eseguire l'autenticazione con un provider di identità da un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_identity-protection.svg'
+              href: authentication/oauth.md
+            title: Provider di identità
+          - href: authentication/azure-ad-b2c.md
+            html: Informazioni su come usare Azure Active Directory B2C per integrare la gestione delle identità in un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_security-management.svg'
+              href: authentication/azure-ad-b2c.md
+            title: Azure Active Directory B2C
+          - href: authentication/azure-cosmosdb-auth.md
+            html: Informazioni su come limitare l'accesso degli utenti ai dati di documenti di Cosmos DB specifici da un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_information-protection.svg'
+              href: authentication/azure-cosmosdb-auth.md
+            title: Autenticazione di un database di documenti di Azure Cosmos DB

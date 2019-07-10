@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9520a219d2ac8a86fb33536b374167b09749c27f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4e759917eac2c6d966d8cd577838c311c13b2a9e
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61388911"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67659833"
 ---
 L'esercitazione è stata completata. Si è appreso come:
 
@@ -32,5 +32,5 @@ In alternativa, per informazioni aggiuntive su Xamarin.Forms un buon punto di pa
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [WebServiceTutorial (esempio)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/WebServiceTutorial)
-- [Utilizzo di un servizio Web RESTful (guida)](~/xamarin-forms/data-cloud/consuming/rest.md)
+- [Uso di un servizio Web RESTful (guida)](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [Pacchetto NuGet Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)

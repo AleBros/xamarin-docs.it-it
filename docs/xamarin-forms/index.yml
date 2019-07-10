@@ -87,11 +87,11 @@ sections:
               href: ~/essentials/index.md?context=xamarin/xamarin-forms
             title: Xamarin.Essentials
           - href: ~/xamarin-forms/data-cloud/
-            html: Archiviazione e recupero di dati locali e remoti e altri servizi basati sul cloud.
+            html: Archiviazione e recupero di dati locali e remoti e altri servizi basati sul cloud di Azure.
             image:
               src: ~/media/icons/i_data-cloud.svg
               href: ~/xamarin-forms/data-cloud/
-            title: Dati e servizi cloud
+            title: Dati e Servizi cloud di Azure
           - href: ~/xamarin-forms/deploy-test/
             html: Istruzioni per la compilazione e distribuzione delle app e suggerimenti per i test.
             image:
