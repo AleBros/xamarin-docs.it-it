@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: a00b157940cfde8021b92004fe27a4d52bac5e0c
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: c81c84b8b32bdde6949918f3a31f171983007f39
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855159"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675214"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Pubblicazione di app Xamarin.iOS nell'App Store
 
@@ -52,7 +52,7 @@ Ogni app iOS ha un ID app univoco a cui è associata una serie di servizi di app
 
 Per creare un ID app e selezionare gli entitlement necessari, visitare il [portale Apple Developer](https://developer.apple.com/account/) e seguire questa procedura:
 
-1. Nella sezione **Certificates, IDs & Profiles** (Certificati, ID e profili) selezionare **Identifiers (Identificatori) > App IDs (ID app)**.
+1. Nella sezione **Certificates, IDs & Profiles** (Certificati, ID e profili) selezionare **Identifiers (Identificatori) > App IDs (ID app)** .
 2. Fare clic sul pulsante **+** e specificare **Nome** (Nome) e **Bundle ID** (ID bundle) per la nuova applicazione.
 3. Scorrere fino alla fine della schermata e selezionare un valore per **App Services** (Servizi app) che sarà richiesto dall'applicazione Xamarin.iOS. I servizi app sono descritti in dettaglio nella guida [Uso delle funzionalità in Xamarin.iOS](~/ios/deploy-test/provisioning/capabilities/index.md).
 4. Fare clic sul pulsante **Continue** (Continua) e seguire le istruzioni visualizzate sullo schermo per creare il nuovo ID app.
@@ -77,8 +77,8 @@ iOS usa i *profili di provisioning* per gestire la distribuzione di una build de
 Per creare e installare un profilo di provisioning dell'App Store, seguire questa procedura:
 
 1. Accedere al [portale Apple Developer](https://developer.apple.com/account/).
-2. In **Certificates, IDs & Profiles** (Certificati, ID e profili) selezionare **Provisioning Profiles (Profili di provisioning) > Distribution (Distribuzione)**.
-3. Fare clic sul pulsante **+**, selezionare **App Store** e fare clic su **Continue** (Continua).
+2. In **Certificates, IDs & Profiles** (Certificati, ID e profili) selezionare **Provisioning Profiles (Profili di provisioning) > Distribution (Distribuzione)** .
+3. Fare clic sul pulsante **+** , selezionare **App Store** e fare clic su **Continue** (Continua).
 4. Selezionare l'**App ID** (ID app) dall'elenco e fare clic su **Continue** (Continua).
 5. Selezionare un certificato di firma e fare clic su **Continue** (Continua).
 6. Immettere un **Profile Name** (Nome profilo) e fare clic su **Continue** (Continua) per generare il profilo.
@@ -111,7 +111,7 @@ I nuovi progetti Xamarin.iOS impostano automaticamente le _configurazioni della 
 
 11. Passare alla scheda **Firma del bundle iOS**. Se le opzioni non sono modificabili, assicurarsi che sia selezionato **Provisioning manuale** nel file **Info.plist**.
 12. Verificare che l'opzione **Configurazione** sia impostata su **Versione** e **Piattaforma** sia impostata su **iPhone**.
-13. Impostare **Identità di firma** su **Distribuzione (automatico)**.
+13. Impostare **Identità di firma** su **Distribuzione (automatico)** .
 14. Per **Profilo di provisioning**, selezionare il profilo di provisioning dell'App Store [creato in precedenza](#create-and-install-an-app-store-provisioning-profile).
 
     Le opzioni di firma del bundle del progetto dovrebbero essere simili alle seguenti:
@@ -140,7 +140,7 @@ I nuovi progetti Xamarin.iOS impostano automaticamente le _configurazioni della 
     Vedere anche la guida [Meccanismi di compilazione per iOS](~/ios/deploy-test/ios-build-mechanics.md) per una descrizione dettagliata delle impostazioni di compilazione.
 
 11. Passare alla scheda **Firma del bundle iOS**. Verificare che l'opzione **Configurazione** sia impostata su **Versione**, **Piattaforma** sia impostata su **iPhone** e che **Provisioning manuale** sia selezionato.
-12. Impostare **Identità di firma** su **Distribuzione (automatico)**.
+12. Impostare **Identità di firma** su **Distribuzione (automatico)** .
 13. Per **Profilo di provisioning**, selezionare il profilo di provisioning dell'App Store [creato in precedenza](#create-and-install-an-app-store-provisioning-profile).
 
     Le opzioni di firma del bundle del progetto dovrebbero essere simili alle seguenti:
@@ -149,7 +149,7 @@ I nuovi progetti Xamarin.iOS impostano automaticamente le _configurazioni della 
 
 14. Passare alla scheda **Opzioni IPA iOS**.
 15. Verificare che l'opzione **Configurazione** sia impostata su **Versione** e **Piattaforma** sia impostata su **iPhone**.
-16. Selezionare la casella di controllo **Compila archivio pacchetto iTunes (IPA)**. Questa impostazione farà in modo che ogni build di **versione** (che corrisponde alla configurazione selezionata) generi un file con estensione ipa. Questo file può essere inviato ad Apple per il rilascio nell'App Store.
+16. Selezionare la casella di controllo **Compila archivio pacchetto iTunes (IPA)** . Questa impostazione farà in modo che ogni build di **versione** (che corrisponde alla configurazione selezionata) generi un file con estensione ipa. Questo file può essere inviato ad Apple per il rilascio nell'App Store.
 
     > [!NOTE]
     > I **metadati di iTunes** e **iTunesArtwork** non sono necessari per le versioni dell'App Store. Per altre informazioni, vedere [File iTunesMetadata.plist nelle app Xamarin.iOS](~/ios/deploy-test/app-distribution/itunesmetadata.md) e [iTunes Artwork](~/ios/app-fundamentals/images-icons/app-icons.md#itunes-artwork).
@@ -248,7 +248,7 @@ Con le impostazioni di compilazione configurate correttamente e iTunes Connect i
 
 4. Per trovare il file con estensione ipa nel computer Windows, fare clic con il pulsante destro del mouse sul nome del progetto Xamarin.iOS in **Esplora soluzioni** in Visual Studio 2019 o Visual Studio 2017 e scegliere **Apri cartella in Esplora file**. Quindi, in **Esplora file** in Windows passare alla sottodirectory **bin/iPhone/Release**. Se non è stato [personalizzato il percorso di output del file con estensione ipa](#customize-the-ipa-location), la directory dovrebbe corrispondere.
 5. Per visualizzare il file con estensione ipa nell'host di compilazione Mac, fare clic con il pulsante destro del mouse sul nome del progetto Xamarin.iOS in **Esplora soluzioni** in Visual Studio 2019 o Visual Studio 2017 (Windows) e selezionare **Mostra il file IPA nel server di compilazione**. Verrà aperta una finestra **Finder** nell'host di compilazione Mac con il file con estensione ipa selezionato.
-6. Nell'host di compilazione Mac aprire il **Caricatore di applicazione**. In Xcode selezionare **Xcode > Open Developer Tool (Apri strumento di sviluppo) > Application Loader (Caricatore di applicazione)**.
+6. Nell'host di compilazione Mac aprire il **Caricatore di applicazione**. In Xcode selezionare **Xcode > Open Developer Tool (Apri strumento di sviluppo) > Application Loader (Caricatore di applicazione)** .
 
     > [!NOTE]
     > Per altre informazioni sullo strumento, vedere la [documentazione di Apple relativa ad Application Loader](https://help.apple.com/itc/apploader/#/apdS673accdb).

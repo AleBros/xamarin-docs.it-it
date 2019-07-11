@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: ca9c71d5bdac1900c4f0e5d07898e65b06cdcf90
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: e7b8ae57f127b4c9397ab4e5f7e097fa330e827a
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925567"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650652"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indicizzazione e deep linking delle applicazioni
 
@@ -34,7 +34,7 @@ L'applicazione di esempio è una dimostrazione di un'applicazione di tipo Elenco
 
 Ogni istanza di `TodoItem` creata dall'utente viene indicizzata. È quindi possibile usare la funzionalità di ricerca specifica della piattaforma per individuare dati indicizzati dall'applicazione. Quando l'utente tocca un elemento nei risultati della ricerca per l'applicazione, l'applicazione viene avviata, si passa a `TodoItemPage` e viene visualizzato l'elemento `TodoItem` a cui fa riferimento il collegamento diretto.
 
-Per altre informazioni sull'uso di un database SQLite, vedere [Database locali Xamarin.Forms](~/xamarin-forms/app-fundamentals/databases.md).
+Per altre informazioni sull'uso di un database SQLite, vedere [Database locali Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md).
 
 > [!NOTE]
 > La funzionalità di indicizzazione e deep linking delle applicazioni Xamarin.Forms è disponibile solo per le piattaforme iOS e Android e richiede come minimo rispettivamente iOS 9 e API 23.
