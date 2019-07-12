@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 05f1017f8c4b306996d3e8e165511ff9062a1026
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ef16224b9ef060ff8643211b8e1f0c767c518bdf
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61047860"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67841580"
 ---
 
 La riga di comando seguente per specificare una build di rilascio della soluzione **SOLUTION_FILE.sln** per iPhone. Il percorso del pacchetto IPA può essere impostato specificando il `IpaPackageDir` proprietà nella riga di comando:
 
- - Nel Mac, usando **xbuild**:
+- Nel Mac, usando **xbuild**:
 
         xbuild /p:Configuration="Release" \ 
            /p:Platform="iPhone" \ 
@@ -18,7 +18,7 @@ La riga di comando seguente per specificare una build di rilascio della soluzion
 
 Il **xbuild** comando si trova in genere nella directory **/Library/Frameworks/Mono.framework/Commands**.
 
- - In Windows, utilizzando **msbuild**:
+- In Windows, utilizzando **msbuild**:
 
         msbuild /p:Configuration="Release" 
             /p:Platform="iPhone" 
