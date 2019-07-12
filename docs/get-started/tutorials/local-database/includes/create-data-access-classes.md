@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 83e28796a2c387927dddd708da3ee6623f800a35
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b11a5972c2aabace8a6991a82f5719f34450297d
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61193249"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67841545"
 ---
 In questo esercizio verranno aggiunte classi di accesso ai dati al progetto **LocalDatabaseTutorial**, che verrà usato per rendere persistenti i dati relativi alle persone nel database.
 
@@ -69,9 +69,7 @@ In questo esercizio verranno aggiunte classi di accesso ai dati al progetto **Lo
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace LocalDatabaseTutorial
     {
         public partial class App : Application
@@ -117,7 +115,8 @@ In questo esercizio verranno aggiunte classi di accesso ai dati al progetto **Lo
 
     Questo codice definisce una proprietà `Database` che crea una nuova istanza di `Database` come singleton. Un percorso di file locale e un nome di file, che rappresentano la posizione in cui archiviare il database, vengono passati come argomento per il costruttore della classe `Database`.
 
-    > [!IMPORTANTE Il vantaggio dell'esposizione del database come singleton è la creazione di una singola connessione al database che verrà mantenuta aperta durante l'esecuzione dell'applicazione, evitando così l'onere dell'apertura e della chiusura del file di database ogni volta che viene eseguita un'operazione di database.
+    > [!IMPORTANT]
+    > Il vantaggio dell'esposizione del database come singleton è la creazione di una singola connessione al database che verrà mantenuta aperta durante l'esecuzione dell'applicazione, evitando così l'onere dell'apertura e della chiusura del file di database ogni volta che viene eseguita un'operazione di database.
 
 1. Compilare la soluzione per assicurarsi che non siano presenti errori.
 
@@ -182,9 +181,7 @@ In questo esercizio verranno aggiunte classi di accesso ai dati al progetto **Lo
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace LocalDatabaseTutorial
     {
         public partial class App : Application
@@ -230,6 +227,7 @@ In questo esercizio verranno aggiunte classi di accesso ai dati al progetto **Lo
 
     Questo codice definisce una proprietà `Database` che crea una nuova istanza di `Database` come singleton. Un percorso di file locale e un nome di file, che rappresentano la posizione in cui archiviare il database, vengono passati come argomento per il costruttore della classe `Database`.
 
-    > [!IMPORTANTE Il vantaggio dell'esposizione del database come singleton è la creazione di una singola connessione al database che verrà mantenuta aperta durante l'esecuzione dell'applicazione, evitando così l'onere dell'apertura e della chiusura del file di database ogni volta che viene eseguita un'operazione di database.
-    
+    > [!IMPORTANT]
+    > Il vantaggio dell'esposizione del database come singleton è la creazione di una singola connessione al database che verrà mantenuta aperta durante l'esecuzione dell'applicazione, evitando così l'onere dell'apertura e della chiusura del file di database ogni volta che viene eseguita un'operazione di database.
+
 1. Compilare la soluzione per assicurarsi che non siano presenti errori.
