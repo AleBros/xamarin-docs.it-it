@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: f24be635afcba181efcab85d81a984d93dae4bc8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5c3c9714cb4d6cd077f898778f4388d63018fa00
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61429087"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831691"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in xamarin. IOS
 
@@ -68,7 +68,7 @@ Esistono diversi tipi di transizioni, ogni controllo che fornisce come nuovo con
 
 -  **Mostra / Push** – un push segue aggiunge il controller di visualizzazione per lo stack di navigazione. Si presuppone che il controller di visualizzazione che hanno origine i push fa parte dello stesso controller di spostamento come controller di visualizzazione che viene aggiunto allo stack. Si esegue la stessa operazione come `pushViewController` e viene in genere usate quando non c'è una relazione tra i dati nelle schermate. Usando il push segue ti offre il lusso di una barra di navigazione con un pulsante Indietro e titolo aggiunto a ogni vista nello stack, che consente il drill-down navigazione attraverso la gerarchia di visualizzazione.
 -  **Modale** : un elemento segue modale creare una relazione tra tutti i controller di due visualizzazione nel progetto, con la possibilità di una transizione animata da visualizzare. Il controller di visualizzazione figlio nasconderà completamente il controller di visualizzazione padre quando inserito nella visualizzazione. A differenza di un'operazione push segue, che aggiunge un pulsante Indietro per noi; Quando tramite una finestra modale segue `DismissViewController` devono essere usate per restituire al controller di visualizzazione precedente.
--  **Personalizzato** – personalizzati qualsiasi elemento segue può essere creato come una sottoclasse di ` UIStoryboardSegue`.
+-  **Personalizzato** – personalizzati qualsiasi elemento segue può essere creato come una sottoclasse di `UIStoryboardSegue`.
 -  **Rimozione** : rimozione segue può essere utilizzato per spostarsi indietro tra un push o modale segue – ad esempio, ignorando il controller di visualizzazione presentati come form modale. Inoltre, è possibile rimuovere tramite non solo uno, ma una serie di push e modale gli elementi segue e tornare più passaggi nella gerarchia di navigazione con una singola azione di rimozione. Per informazioni su come usare un'operazione di rimozione segue in iOS, vedere la [creazione di rimozione elementi segue](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) recipe.
 -  **Sourceless** : un elemento sourceless segue indica la scena che contiene il controller di visualizzazione iniziale e pertanto visualizzazione in cui l'utente vedranno per primo. È rappresentato dall'elemento segue illustrato di seguito:  
 

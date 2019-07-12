@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: 8c8bf3f86091f49633913b37ef5108ddbae6d276
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b404d7c27fba38c53ff07207003849445d51118
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60951587"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832471"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>App tvos Guida introduttiva
 
@@ -415,7 +415,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-È necessario usare `ViewDidLoad `, anziché un altro metodo, ad esempio `Initialize`, in quanto `ViewDidLoad ` viene chiamato *dopo* il sistema operativo ha caricato e creare un'istanza dell'interfaccia utente dal `.storyboard` file. Se si tenta di accedere all'etichetta prima la `.storyboard` file è stato completamente caricato e creare un'istanza, si otterrebbe un `NullReferenceException` errore perché il controllo etichetta non verrebbe ancora creato.
+È necessario usare `ViewDidLoad`, anziché un altro metodo, ad esempio `Initialize`, in quanto `ViewDidLoad` viene chiamato *dopo* il sistema operativo ha caricato e creare un'istanza dell'interfaccia utente dal `.storyboard` file. Se si tenta di accedere all'etichetta prima la `.storyboard` file è stato completamente caricato e creare un'istanza, si otterrebbe un `NullReferenceException` errore perché il controllo etichetta non verrebbe ancora creato.
 
 Successivamente, è necessario aggiungere il codice per rispondere all'utente facendo clic sul pulsante. Aggiungere il codice seguente a parziale di classe che è stato creato:
 
@@ -468,7 +468,7 @@ Utilizzo remoto del simulatore, se si fa clic sul pulsante alcune volte l'etiche
 
 [![](hello-tvos-images/run05.png "L'etichetta con conteggio aggiornato")](hello-tvos-images/run05.png#lightbox)
 
-La procedura è stata completata. Abbiamo affrontato molti argomenti qui, ma se è stata seguita l'esercitazione dall'inizio alla fine, è stata acquisita una conoscenza approfondita dei componenti di un'app xamarin. tvos, nonché gli strumenti usati per crearli.
+Congratulazioni! Abbiamo affrontato molti argomenti qui, ma se è stata seguita l'esercitazione dall'inizio alla fine, è stata acquisita una conoscenza approfondita dei componenti di un'app xamarin. tvos, nonché gli strumenti usati per crearli.
 
 ## <a name="where-to-next"></a>Articoli successivi?
 

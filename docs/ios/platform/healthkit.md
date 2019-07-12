@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: df0b0e8dd57129917f2d8dab07115551ca675acf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8dcb478b303c4c73f7e73dc018ad56b1301389c8
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61163320"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830051"
 ---
 # <a name="healthkit-in-xamarinios"></a>HealthKit in xamarin. IOS
 
@@ -142,7 +142,7 @@ L'applicazione di esempio fornito in questo articolo include una preconfigurata 
 
 L'archivio dati di integrità Kit è un archivio dati privato, specifici dell'utente che è condiviso tra le app. Poiché le informazioni di integrità sono così sensibili, l'utente deve eseguire passaggi positivi per consentire l'accesso ai dati. Questo tipo di accesso possono essere parziale (scrittura ma non in lettura, l'accesso per alcuni tipi di dati, ma non altri, e così via) e potrebbero essere revocate in qualsiasi momento. Le applicazioni Kit di integrità devono essere scritto un approccio difensivo, con la consapevolezza che molti utenti saranno convinto circa l'archiviazione delle loro informazioni correlate all'integrità.
 
-I dati di integrità Kit sono limitati a tipi specificati di Apple. Questi tipi sono definiti rigidamente: alcuni, ad esempio tipo di sangue, sono limitati a particolari valori di enumerazione Apple fornito, mentre altri utenti combinare una grandezza con un'unità di misura (ad esempio grammi calorie e litri). Persino i dati che condividono un'unità di misura compatibile sono distinti da loro `HKObjectType`; ad esempio, il sistema di tipi verrà rilevato un tentativo di errata per archiviare un `HKQuantityTypeIdentifier.NumberOfTimesFallen` valore da un campo previsto un `HKQuantityTypeIdentifier.FlightsClimbed` anche se usano entrambi il` HKUnit.Count` unità di misura.
+I dati di integrità Kit sono limitati a tipi specificati di Apple. Questi tipi sono definiti rigidamente: alcuni, ad esempio tipo di sangue, sono limitati a particolari valori di enumerazione Apple fornito, mentre altri utenti combinare una grandezza con un'unità di misura (ad esempio grammi calorie e litri). Persino i dati che condividono un'unità di misura compatibile sono distinti da loro `HKObjectType`; ad esempio, il sistema di tipi verrà rilevato un tentativo di errata per archiviare un `HKQuantityTypeIdentifier.NumberOfTimesFallen` valore da un campo previsto un `HKQuantityTypeIdentifier.FlightsClimbed` anche se usano entrambi il `HKUnit.Count` unità di misura.
 
 I tipi possa essere archiviati nell'archivio dati integrità Kit sono tutte le sottoclassi di `HKObjectType`. `HKCharacteristicType` oggetti archiviano biologici sesso, il tipo di sangue e data di nascita. Tuttavia, sono più comuni `HKSampleType` oggetti che rappresentano i dati campionati in un momento specifico o in un periodo di tempo. 
 

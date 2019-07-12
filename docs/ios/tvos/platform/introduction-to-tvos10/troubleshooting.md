@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3815790cfb73f93f399c14d3da44aa3210725388
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 97cfe7220f8b351ec30a9f2c7a7347d318378fbc
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60932438"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830494"
 ---
 # <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Risoluzione dei problemi relativi a tvOS 10 le app compilate con Xamarin
 
@@ -32,8 +32,8 @@ Le sezioni seguenti elencano alcuni problemi noti che possono verificarsi quando
 
 Problemi noti:
 
- - Quando acquisti In-App di test nell'ambiente sandbox, la finestra di dialogo di autenticazione vengano visualizzati due volte.
- - Durante il test di acquisti In-App con il contenuto ospitato nell'ambiente sandbox, verrà visualizzata la finestra di dialogo password ogni volta che l'app viene portato in primo piano fino a quando non viene completato il download del contenuto.
+- Quando acquisti In-App di test nell'ambiente sandbox, la finestra di dialogo di autenticazione vengano visualizzati due volte.
+- Durante il test di acquisti In-App con il contenuto ospitato nell'ambiente sandbox, verrà visualizzata la finestra di dialogo password ogni volta che l'app viene portato in primo piano fino a quando non viene completato il download del contenuto.
 
 <a name="Binary-Compatibility" />
 
@@ -41,11 +41,11 @@ Problemi noti:
 
 Problemi noti:
 
- - La chiamata `NSObject.ValueForKey` sarà un `null` chiave verrà generata un'eccezione.
- - Riferimento a un tipo di carattere in base al nome quando si chiama `UIFont.WithName` causerà un arresto anomalo del sistema.
- - Entrambe `NSURLSession` NSURLConnection e` no longer RC4 cipher suites during the TLS handshake for `http://' URL.
- - Le app possono bloccarsi se modificano la geometria della superview una in entrambi i `ViewWillLayoutSubviews` o `LayoutSubviews` metodi.
- - Per tutte le connessioni SSL/TLS, la crittografia simmetrica RC4 è disabilitata per impostazione predefinita. Inoltre, l'API di trasporto sicuro non supporta più SSLv3 ed è consigliabile che l'app interrompere l'uso della crittografia SHA-1 e 3DES appena possibile.
+- La chiamata `NSObject.ValueForKey` sarà un `null` chiave verrà generata un'eccezione.
+- Riferimento a un tipo di carattere in base al nome quando si chiama `UIFont.WithName` causerà un arresto anomalo del sistema.
+- Entrambe `NSURLSession` e `NSURLConnection` non è più i pacchetti di crittografia RC4 durante l'handshake TLS per `http://` URL.
+- Le app possono bloccarsi se modificano la geometria della superview una in entrambi i `ViewWillLayoutSubviews` o `LayoutSubviews` metodi.
+- Per tutte le connessioni SSL/TLS, la crittografia simmetrica RC4 è disabilitata per impostazione predefinita. Inoltre, l'API di trasporto sicuro non supporta più SSLv3 ed è consigliabile che l'app interrompere l'uso della crittografia SHA-1 e 3DES appena possibile.
 
 <a name="CFNetwork-HTTP-Protocol" />
 
@@ -77,12 +77,12 @@ Dopo un'operazione di consegna, il `UserInfo` proprietà di un `NSUserActivity` 
 
 Problemi noti:
 
- - Diventa l'aspetto dello sfondo `UINavigationBar`, `UITabBar` o `UIToolBar` può comportare un passaggio di layout per risolvere il nuovo aspetto. Non è possibile modificare questi aspetti visivi all'interno di un `LayoutSubviews`, `UpdateConstraints`, `WillLayoutSubviews` o `DidUpdateSubviews` eventi possono causare un ciclo infinito di layout.
- - In tvOS 10, la chiamata di `RemoveGestureRecognizer` metodo di un `UIView` oggetto Annulla in modo esplicito qualsiasi riconoscitore di movimento in corso.
- - Presentato i controller di visualizzazione possono ora modificare l'aspetto della barra di stato.
- - tvOS 10 richiede allo sviluppatore di chiamare `base.AwakeFromNib` quando si crea una sottoclasse `UIViewController` ed eseguire l'override di `AwakeFromNib` (metodo).
- - Le app con personalizzato `UIView` sottoclassi che eseguono l'override `LayoutSubviews` e il layout prima di chiamare dirty `base.LayoutSubviews` può attivare un ciclo infinito di layout in tvOS 10.
- - Gli asset immagini specifiche direzione o flippable non sono alcun capovolgimento quando assegnato a `UIButton` oggetti.
+- Diventa l'aspetto dello sfondo `UINavigationBar`, `UITabBar` o `UIToolBar` può comportare un passaggio di layout per risolvere il nuovo aspetto. Non è possibile modificare questi aspetti visivi all'interno di un `LayoutSubviews`, `UpdateConstraints`, `WillLayoutSubviews` o `DidUpdateSubviews` eventi possono causare un ciclo infinito di layout.
+- In tvOS 10, la chiamata di `RemoveGestureRecognizer` metodo di un `UIView` oggetto Annulla in modo esplicito qualsiasi riconoscitore di movimento in corso.
+- Presentato i controller di visualizzazione possono ora modificare l'aspetto della barra di stato.
+- tvOS 10 richiede allo sviluppatore di chiamare `base.AwakeFromNib` quando si crea una sottoclasse `UIViewController` ed eseguire l'override di `AwakeFromNib` (metodo).
+- Le app con personalizzato `UIView` sottoclassi che eseguono l'override `LayoutSubviews` e il layout prima di chiamare dirty `base.LayoutSubviews` può attivare un ciclo infinito di layout in tvOS 10.
+- Gli asset immagini specifiche direzione o flippable non sono alcun capovolgimento quando assegnato a `UIButton` oggetti.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

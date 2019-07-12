@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/11/2016
-ms.openlocfilehash: daea27472ac7c0578c1cfd79ebd96428212fafb3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8ef12c8b0822f3d0486f584878f572a266b0d44e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61165590"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831872"
 ---
 # <a name="cloudkit-in-xamarinios"></a>CloudKit in xamarin. IOS
 
@@ -501,7 +501,7 @@ CloudKit supporta i tipi seguenti di `NSPredicates` quando si lavora con le quer
     NSPredicate.FromFormat(string.Format("ALL tokenize({0}, 'Cdl') IN allTokens", "after session"))
     ```
     
- 6. Supporta CloudKit composta predicati uniti tramite il `AND` operatore.
+6. Supporta CloudKit composta predicati uniti tramite il `AND` operatore.
     
     ```
     NSPredicate.FromFormat(string.Format("start > {0} AND name = '{1}'", (NSDate)date, recordName))
@@ -650,7 +650,7 @@ In questa sezione ha illustrato come rispondere i Big Data, problema piccolo dis
 
 Come indicato all'inizio di questo articolo, CloudKit si basa sull'infrastruttura iCloud esistente. La sezione seguente verrà trattate in dettaglio, come gli account sono esposti a uno sviluppatore che usa l'API CloudKit.
 
-### <a name="authentication"></a>Autenticazione
+### <a name="authentication"></a>Authentication
 
 Quando si lavora con gli account utente, la prima considerazione è l'autenticazione. CloudKit supporta l'autenticazione tramite l'utente attualmente connesso in iCloud nel dispositivo. L'autenticazione viene eseguita in background e viene gestita da iOS. In questo modo, gli sviluppatori non devono mai preoccuparsi dei dettagli di implementazione dell'autenticazione. Questi test solo per verificare se un utente è connesso.
 
@@ -701,7 +701,7 @@ CKContainer.DefaultContainer.FetchUserRecordId ((recordID, err) => {
 
 Il codice sopra riportato viene chiesto il contenitore di CloudKit per fornire l'ID dell'utente attualmente connesso. Poiché queste informazioni provengono da iCloud Server, la chiamata è asincrona e la gestione degli errori è obbligatorio.
 
-#### <a name="metadata"></a>Metadati
+#### <a name="metadata"></a>Metadata
 
 Ogni utente in CloudKit dispone i metadati specifici che descrivono tali. Questi metadati vengano rappresentato come un CloudKit Record:
 

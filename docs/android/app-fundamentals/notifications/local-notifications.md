@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 362041efc5a19dfb70430054f3e4636d4fdfbd7e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c36b31e28011bea287903ee0681a316209abd22d
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61021817"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829990"
 ---
 <a name="compatibility"></a>
 
@@ -84,7 +84,8 @@ Android include il supporto per i metadati di notifica in modo che le notifiche 
 
 -   **Categoria** &ndash; informa il sistema come gestire la notifica in diverse circostanze, ad esempio quando il dispositivo viene *non disturbare* modalità.
 
-**Nota:** **Visibilità** e **categoria** introdotti in Android 5.0 e non sono disponibili nelle versioni precedenti di Android. A partire da Android 8.0 [canali di notifica](#notif-chan) consentono di controllare come le notifiche vengono presentate all'utente.
+> [!NOTE]
+> **Visibilità** e **categoria** introdotti in Android 5.0 e non sono disponibili nelle versioni precedenti di Android. A partire da Android 8.0 [canali di notifica](#notif-chan) consentono di controllare come le notifiche vengono presentate all'utente.
 
 
 ### <a name="expanded-layouts"></a>Layout espanso
@@ -483,7 +484,7 @@ In questo formato, viene visualizzato solo un frammento del messaggio, terminate
 
 Questo formato espanso layout include inoltre testo di riepilogo nella parte inferiore della notifica. L'altezza massima del *testo grande* notifica è 256 dp.
 
-Per creare un *testo grande* notifica, si crea un'istanza una `NotificationCompat.Builder` dell'oggetto, come in precedenza e quindi creare un'istanza e aggiungere un [BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/) dell'oggetto per il `NotificationCompat.Builder` oggetto. Ecco un esempio:
+Per creare un *testo grande* notifica, si crea un'istanza una `NotificationCompat.Builder` dell'oggetto, come in precedenza e quindi creare un'istanza e aggiungere un [BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/) dell'oggetto per il `NotificationCompat.Builder` oggetto. Di seguito è fornito un esempio:
 
 ```csharp
 // Instantiate the Big Text style:
@@ -581,7 +582,7 @@ Quando l'utente trascina verso il basso sulla notifica, questa si espande per vi
 
 ![Esempio di notifica di posta in arrivo espanso](local-notifications-images/21-inbox-expanded.png)
 
-Per creare un *posta in arrivo* notifica, si crea un'istanza una `NotificationCompat.Builder` dell'oggetto, come in precedenza e aggiungere un [InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/) dell'oggetto per il `NotificationCompat.Builder`. Ecco un esempio:
+Per creare un *posta in arrivo* notifica, si crea un'istanza una `NotificationCompat.Builder` dell'oggetto, come in precedenza e aggiungere un [InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/) dell'oggetto per il `NotificationCompat.Builder`. Di seguito è fornito un esempio:
 
 ```csharp
 // Instantiate the Inbox style:
@@ -752,7 +753,7 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
 }
 ```
 
-In di questo esempio, l'app **Framework di destinazione** è impostata su Android 5.0 e il **versione minima di Android** è impostata su **Android 4.1 (livello API 16)**. Poiché `SetCategory` è disponibile nel livello API 21 e versioni successiva, questo codice di esempio chiama `SetCategory` solo quando è disponibile &ndash; non lo chiamerà `SetCategory` quando il livello di API è inferiore a 21.
+In di questo esempio, l'app **Framework di destinazione** è impostata su Android 5.0 e il **versione minima di Android** è impostata su **Android 4.1 (livello API 16)** . Poiché `SetCategory` è disponibile nel livello API 21 e versioni successiva, questo codice di esempio chiama `SetCategory` solo quando è disponibile &ndash; non lo chiamerà `SetCategory` quando il livello di API è inferiore a 21.
 
 
 ### <a name="lock-screen-visibility"></a>Visibilità del blocco dello schermo

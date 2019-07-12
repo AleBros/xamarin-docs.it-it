@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 9f39580d282defed354f3b9e5cbe4eb1cdec4796
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7db73759cb4a1b1a8d7fe40426b03a163c3ebdc4
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61161150"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831055"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Crea un progetto UWP MonoGame
 
@@ -90,9 +90,9 @@ Il modello MonoGame per Xbox One prende in considerazione l'area sicura e ne ese
 
 ## <a name="referencing-content-in-uwp-projects"></a>Riferimento ai contenuti nei progetti UWP
 
-Il contenuto nei progetti MonoGame è possibile fare riferimento direttamente dal file o tramite il [Pipeline di contenuti MonoGame](~/graphics-games/cocossharp/content-pipeline/index.md). Progetti di gioco di piccole dimensioni possono trarre vantaggio dalla semplicità di caricamento file. Progetti di grandi dimensioni trarranno vantaggio dall'uso della pipeline di contenuti per ottimizzare il contenuto per ridurre le dimensioni e tempi di caricamento. A differenza di XNA su Xbox 360, di `System.IO.File` classe è disponibile nelle App UWP per Xbox One.
+Il contenuto nei progetti MonoGame è possibile fare riferimento direttamente dal file o tramite il [Pipeline di contenuti MonoGame](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md). Progetti di gioco di piccole dimensioni possono trarre vantaggio dalla semplicità di caricamento file. Progetti di grandi dimensioni trarranno vantaggio dall'uso della pipeline di contenuti per ottimizzare il contenuto per ridurre le dimensioni e tempi di caricamento. A differenza di XNA su Xbox 360, di `System.IO.File` classe è disponibile nelle App UWP per Xbox One.
 
-Per altre informazioni sul caricamento di contenuti mediante la pipeline di contenuti, vedere la [Guida alla Pipeline di contenuti](~/graphics-games/cocossharp/content-pipeline/index.md).
+Per altre informazioni sul caricamento di contenuti mediante la pipeline di contenuti, vedere la [Guida alla Pipeline di contenuti](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
 
 ### <a name="loading-content-from-file"></a>Caricamento del contenuto da File
 

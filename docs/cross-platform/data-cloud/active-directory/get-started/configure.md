@@ -6,12 +6,12 @@ ms.assetid: 8A14A457-F72E-4B08-B4B6-801F7619F893
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 2a9baab9215ae2d30e4daf6800a116c95165da42
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6135740095395d5cd7bde9abc1cbbab1e1072161
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61188267"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832248"
 ---
 # <a name="step-2-configure-service-access-for-mobile-application"></a>Passaggio 2. Configurare l'accesso al servizio per applicazioni per dispositivi mobili
 
@@ -21,7 +21,7 @@ Ogni volta che qualsiasi risorsa, ad esempio l'applicazione web, servizio web, e
 
   ![](configure-images/2.1-configure.png "Nella scheda Configura, individuare sezione autorizzazioni per altre applicazioni")
 
-2.  Fare clic su **aggiungere l'applicazione** pulsante. Nella schermata successiva popup verrà visualizzato l'elenco di tutte le applicazioni che sono protetti da Azure Active Directory. Selezionare le applicazioni che deve essere accessibile dall'applicazione per dispositivi mobili.
+2. Fare clic su **aggiungere l'applicazione** pulsante. Nella schermata successiva popup verrà visualizzato l'elenco di tutte le applicazioni che sono protetti da Azure Active Directory. Selezionare le applicazioni che deve essere accessibile dall'applicazione per dispositivi mobili.
 
   ![](configure-images/2.2-add-application.png "Selezionare le applicazioni che deve essere accessibile dall'applicazione per dispositivi mobili")
 

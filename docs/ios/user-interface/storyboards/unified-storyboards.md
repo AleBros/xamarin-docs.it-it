@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 26aeaa3d230a5c104014edd899b8d9231ced31e9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c9d98d9d3052f52dc7860ba513756e3a33d1dc58
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61430216"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831913"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Storyboard unificati in xamarin. IOS
 
@@ -117,8 +117,8 @@ Di seguito è una raccolta di tratto tipico che lo sviluppatore potrebbe essere 
 |Proprietà|Value|
 |--- |--- |
 |`HorizontalSizeClass`|Compact|
-|`VerticalSizeClass`|Regular|
-|`UserInterfaceIdom`|Phone|
+|`VerticalSizeClass`|Normale|
+|`UserInterfaceIdom`|Telefono|
 |`DisplayScale`|2.0|
 
 Il set precedente rappresenterebbe una completamente qualificato tratto di raccolta, purché dispongano di valori per tutte le relative proprietà dei tratti.
@@ -128,9 +128,9 @@ Il set precedente rappresenterebbe una completamente qualificato tratto di racco
 |Proprietà|Value|
 |--- |--- |
 |`HorizontalSizeClass`|Compact|
-|`VerticalSizeClass`|Non specificato|
-|`UserInterfaceIdom`|Non specificato|
-|`DisplayScale`|Non specificato|
+|`VerticalSizeClass`|Non specificata|
+|`UserInterfaceIdom`|Non specificata|
+|`DisplayScale`|Non specificata|
 
 In generale, tuttavia, quando lo sviluppatore chiede all'ambiente dei tratti per la relativa raccolta di tratto, restituirà un insieme completo come illustrato nell'esempio precedente.
 
@@ -220,7 +220,7 @@ iOS 8 fornisce i callback diversi che lo sviluppatore può utilizzare per partec
 |--- |--- |--- |
 |Configurazione|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Questo metodo viene chiamato all'inizio di una modifica del tratto prima di una raccolta di tratto viene impostata sul nuovo valore.</li><li>Il metodo viene chiamato quando viene modificato il valore della raccolta dei tratti ma prima che venga eseguita qualsiasi animazione.</li></ul>|
 |Animazione|`WillTransitionToTraitCollection`|Il coordinatore di transizione che viene passato a questo metodo ha un `AnimateAlongside` proprietà che consente allo sviluppatore di aggiungere le animazioni che verranno eseguite con le animazioni predefinito.|
-|Pulizia|`WillTransitionToTraitCollection`|Fornisce un metodo per gli sviluppatori di includere il proprio codice di pulizia dopo la transizione ha luogo.|
+|Eliminazione|`WillTransitionToTraitCollection`|Fornisce un metodo per gli sviluppatori di includere il proprio codice di pulizia dopo la transizione ha luogo.|
 
 Il `WillTransitionToTraitCollection` metodo è molto utile per l'animazione di controller di visualizzazione con le modifiche all'insieme dei tratti. Il `WillTransitionToTraitCollection` metodo è disponibile solo nei controller di visualizzazione ( `UIViewController`) e non su altri ambienti di tratto, ad esempio `UIViews`.
 
@@ -258,7 +258,7 @@ Questi metodi funzionano iniziando il Controller di visualizzazione foglia e ris
 
 Gli sviluppatori possono implementare `ShowViewController` e `ShowDetailViewController` nel proprio controller di visualizzazione personalizzata per ottenere lo stesso automatizzata funzionalità che `UINavigationController` e `UISplitViewController` fornisce.
 
-### <a name="how-it-works"></a>Come funziona
+### <a name="how-it-works"></a>Funzionamento
 
 In questa sezione verrà usato un quadro di come questi metodi vengono effettivamente implementati in iOS 8. Primo verrà ora esaminato il nuovo `GetTargetForAction` metodo:
 
@@ -693,12 +693,12 @@ Nuovo ai dispositivi iOS 8, lo sviluppatore può creare un singolo, atomico `.xi
 
 Schermate di avvio dinamico hanno le limitazioni e le considerazioni seguenti:
 
- - Usare solo `UIKit` classi.
- - Usare una visualizzazione singola radice che è un `UIView` o `UIViewController` oggetto.
- - Non apportare tutte le connessioni per il codice dell'applicazione (non aggiungono **azioni** oppure **Outlet**).
- - Non aggiungere `UIWebView` oggetti.
- - Non usare le classi personalizzate.
- - Non usare gli attributi di runtime.
+- Usare solo `UIKit` classi.
+- Usare una visualizzazione singola radice che è un `UIView` o `UIViewController` oggetto.
+- Non apportare tutte le connessioni per il codice dell'applicazione (non aggiungono **azioni** oppure **Outlet**).
+- Non aggiungere `UIWebView` oggetti.
+- Non usare le classi personalizzate.
+- Non usare gli attributi di runtime.
 
 Con le linee guida precedenti mente, esaminiamo l'aggiunta di una schermata di avvio dinamico a un progetto iOS 8 Xamarin esistente.
 

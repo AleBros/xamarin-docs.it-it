@@ -6,12 +6,12 @@ ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 941b88f9109cf2f3a3485311c52b1250bd08e53f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c9e0cf2f29d304f042bc56ee91029adadcaba570
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61162168"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832509"
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>Parte 2: implementazione di WalkingGame
 
@@ -53,7 +53,7 @@ Si noti inoltre che MonoGame non è gestita da Microsoft: nonostante lo spazio d
 
 ### <a name="creating-a-texture2d"></a>Creazione di un Texture2D
 
-È necessario creare un `Texture2D` istanza da utilizzare per il rendering del nostro sprite. Tutto il contenuto del gioco in definitiva è contenuto in una cartella denominata **contenuto,** che si trova nel progetto specifico della piattaforma. I progetti MonoGame condiviso non possono contenere contenuto, come il contenuto deve usare le azioni di compilazione specifiche per la piattaforma. Gli sviluppatori di CocosSharp troveranno nella cartella Content un concetto familiare: si trovano nella stessa posizione in progetti sia CocosSharp MonoGame. La cartella del contenuto è reperibile nel progetto iOS e cartella Assets nel progetto Android.
+È necessario creare un `Texture2D` istanza da utilizzare per il rendering del nostro sprite. Tutto il contenuto del gioco in definitiva è contenuto in una cartella denominata **contenuto,** che si trova nel progetto specifico della piattaforma. I progetti MonoGame condiviso non possono contenere contenuto, come il contenuto deve usare le azioni di compilazione specifiche per la piattaforma. La cartella del contenuto è reperibile nel progetto iOS e cartella Assets nel progetto Android.
 
 Per aggiungere il contenuto del nostro gioco, fare clic sui **contenuti** cartella e selezionare **Aggiungi > Aggiungi file...** Passare al percorso in cui è stato estratto il file content.zip e selezionare il **charactersheet.png** file. Se viene richiesto su come aggiungere file alla cartella, è consigliabile selezionare anche il **copia** opzione:
 
@@ -376,7 +376,7 @@ Esaminiamo alcuni dettagli dal `Animation` classe.
 
 Il `frames` membro è ciò che archivia i dati per l'animazione. Verrà aggiunto il codice che crea un'istanza di animazioni `AnimationFrame` alle istanze di `frames` elenco tramite la `AddFrame` (metodo). Un'implementazione più completa può offrire `public` metodi o proprietà per la modifica `frames`, ma ci limiteremo le funzionalità per l'aggiunta di frame per questa procedura dettagliata.
 
-### <a name="duration"></a>Durata
+### <a name="duration"></a>Duration
 
 La durata viene restituita la durata totale dei `Animation,` cui viene ottenuto aggiungendo la durata di tutti i contenuti `AnimationFrame` istanze. Questo valore potrebbe essere memorizzato nella cache se `AnimationFrame` erano un oggetto non modificabile, ma poiché AnimationFrame viene implementato come una classe che può essere modificata dopo l'aggiunta di animazione, è necessario calcolare tale valore ogni volta che si accede alla proprietà.
 
@@ -548,7 +548,7 @@ Se l'utente tocca la schermata, il carattere a primo tocco, verrà spostato in a
         desiredVelocity.Y = touchCollection [0].Position.Y - this.Y;
 ```
 
-Ciò che segue è un po' di matematica che manterrà il carattere lo spostamento alla stessa velocità. Per spiegare il motivo per cui questo aspetto è importante, si consideri una situazione in cui l'utente tocca il 500 pixel sullo schermo lontano da in cui si trova il carattere. La prima riga dove `desiredVelocity.X` è set necessario assegnare un valore pari a 500. Tuttavia, se l'utente sono state toccare lo schermo a una distanza di solo 100 unità di caratteri, il `desiredVelocity.X `verrebbe impostato su 100. Il risultato sarebbe che velocità del movimento del carattere risponde al modo in cui a portata di mano che il punto di tocco viene dal carattere. Poiché si desidera che il carattere per spostare sempre la stessa velocità, è necessario modificare il desiredVelocity.
+Ciò che segue è un po' di matematica che manterrà il carattere lo spostamento alla stessa velocità. Per spiegare il motivo per cui questo aspetto è importante, si consideri una situazione in cui l'utente tocca il 500 pixel sullo schermo lontano da in cui si trova il carattere. La prima riga dove `desiredVelocity.X` è set necessario assegnare un valore pari a 500. Tuttavia, se l'utente sono state toccare lo schermo a una distanza di solo 100 unità di caratteri, il `desiredVelocity.X` verrebbe impostato su 100. Il risultato sarebbe che velocità del movimento del carattere risponde al modo in cui a portata di mano che il punto di tocco viene dal carattere. Poiché si desidera che il carattere per spostare sempre la stessa velocità, è necessario modificare il desiredVelocity.
 
 Il `if (desiredVelocity.X != 0 || desiredVelocity.Y != 0)` istruzione sta verificando se la velocità è non-zero-in altre parole, verifica per assicurarsi che l'utente non tocca stesso punto come posizione del carattere corrente. Se non, quindi è necessario impostare la velocità del carattere sia costante indipendentemente dalla modalità a portata di mano il tocco è. È effettuare questa operazione normalizzare il vettore di velocità, che comporta un'esecuzione di una lunghezza pari a 1. Un vettore di velocità pari a 1 indica che il carattere verrà spostati a 1 pixel al secondo. È possibile accelerare l'accesso moltiplicando il valore per la velocità desiderata pari a 200.
 

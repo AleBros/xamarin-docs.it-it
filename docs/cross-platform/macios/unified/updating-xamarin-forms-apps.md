@@ -6,12 +6,12 @@ ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: d5c16b034b07d3e9875412f041c16b293557438a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 36a4c6b66f7f724bfccc3c2a3b81c17f1d34a9c5
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61211854"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829740"
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>L'aggiornamento di App xamarin. Forms esistente
 
@@ -52,10 +52,10 @@ Fare clic sul progetto iOS in modo che è selezionata, quindi scegliere **proget
 
 Questo verrà automaticamente:
 
- - Modificare il tipo di progetto per supportare l'API unificata 64 bit.
- - Modificare il riferimento framework **xamarin. IOS** (sostituendo il vecchio **monotouch** riferimento).
- - Modificare i riferimenti di spazio dei nomi nel codice per rimuovere il `MonoTouch` prefisso.
- - Aggiorna il **csproj** file da utilizzare gli obiettivi di build corretta per l'API unificata.
+- Modificare il tipo di progetto per supportare l'API unificata 64 bit.
+- Modificare il riferimento framework **xamarin. IOS** (sostituendo il vecchio **monotouch** riferimento).
+- Modificare i riferimenti di spazio dei nomi nel codice per rimuovere il `MonoTouch` prefisso.
+- Aggiorna il **csproj** file da utilizzare gli obiettivi di build corretta per l'API unificata.
 
 **Clean** e **compilare** il progetto per assicurarsi che non siano presenti altri errori da correggere. Nessuna ulteriore azione deve essere obbligatoria. Questi passaggi sono illustrati più dettagliatamente la [documentazione API unificata](~/cross-platform/macios/unified/updating-ios-apps.md).
 
@@ -67,8 +67,8 @@ Se è stato aggiunto il codice nativo di iOS aggiuntive (ad esempio renderer per
 
 Una volta che l'app per iOS è stato aggiornato all'API unificata di, il resto della soluzione deve essere aggiornato a xamarin. Forms versione 1.3.1. vale a dire:
 
- - Aggiornamento del pacchetto NuGet di xamarin. Forms in ogni progetto.
- - La modifica del codice per usare il nuovo xamarin. Forms `Application`, `FormsApplicationDelegate` (iOS), `FormsApplicationActivity` (Android), e `FormsApplicationPage` classi (Windows Phone).
+- Aggiornamento del pacchetto NuGet di xamarin. Forms in ogni progetto.
+- La modifica del codice per usare il nuovo xamarin. Forms `Application`, `FormsApplicationDelegate` (iOS), `FormsApplicationActivity` (Android), e `FormsApplicationPage` classi (Windows Phone).
 
 Questi passaggi sono illustrati di seguito:
 
@@ -76,7 +76,8 @@ Questi passaggi sono illustrati di seguito:
 
 Aggiornamento di xamarin. Forms alla 1.3.1 non definitive usando Gestione pacchetti NuGet per tutti i progetti nella soluzione: Libreria di classi Portabile (se presente), iOS, Android e Windows Phone. È consigliabile che si **eliminare e aggiungere nuovamente** il pacchetto NuGet di xamarin. Forms per l'aggiornamento alla versione 1.3.
 
-**NOTA:** È attualmente disponibile in versione di xamarin. Forms 1.3.1 *definitive*. Ciò significa che è necessario selezionare la **definitive** opzione NuGet tramite (un tick-finestra in Visual Studio per Mac) o dall'elenco a discesa in Visual Studio per visualizzare la versione più recente di versioni non definitive.
+> [!NOTE]
+> È attualmente disponibile in versione di xamarin. Forms 1.3.1 *definitive*. Ciò significa che è necessario selezionare la **definitive** opzione NuGet tramite (un tick-finestra in Visual Studio per Mac) o dall'elenco a discesa in Visual Studio per visualizzare la versione più recente di versioni non definitive.
 
 > [!IMPORTANT]
 > Se si usa Visual Studio, assicurarsi che sia installata la versione più recente di gestione pacchetti NuGet. Le versioni precedenti di NuGet in Visual Studio non installerà correttamente la versione unificata di xamarin. Forms 1.3.1. Passare a **strumenti > estensioni e aggiornamenti...**  e fare clic sul **Installed** elenco per verificare che il **Gestione pacchetti NuGet per Visual Studio** almeno versione 2.8.5. Se è meno recente, fare clic sui **aggiornamenti** elenco per scaricare la versione più recente.
@@ -87,8 +88,8 @@ Dopo aver aggiornato il pacchetto NuGet per xamarin. Forms 1.3.1, apportare le m
 
 Modifica il **App.cs** file in modo che:
 
- - Il `App` classe ora eredita da `Application`.
- - Il `MainPage` viene impostata per la prima pagina di contenuto che si desidera visualizzare.
+- Il `App` classe ora eredita da `Application`.
+- Il `MainPage` viene impostata per la prima pagina di contenuto che si desidera visualizzare.
 
 ```csharp
 public class App : Application // superclass new in 1.3
@@ -110,8 +111,8 @@ Il `App` classe viene quindi passata a un nuovo `LoadApplication` metodo in ogni
 
 Modifica il **AppDelegate.cs** file in modo che:
 
- - La classe eredita da `FormsApplicationDelegate` (invece di `UIApplicationDelegate` in precedenza).
- - `LoadApplication` viene chiamato con una nuova istanza della `App`.
+- La classe eredita da `FormsApplicationDelegate` (invece di `UIApplicationDelegate` in precedenza).
+- `LoadApplication` viene chiamato con una nuova istanza della `App`.
 
 ```csharp
 [Register ("AppDelegate")]
@@ -133,8 +134,8 @@ public partial class AppDelegate :
 
 Modifica il **MainActivity.cs** file in modo che:
 
- - La classe eredita da `FormsApplicationActivity` (invece di `FormsActivity` in precedenza).
- - `LoadApplication` viene chiamato con una nuova istanza di `App`
+- La classe eredita da `FormsApplicationActivity` (invece di `FormsActivity` in precedenza).
+- `LoadApplication` viene chiamato con una nuova istanza di `App`
 
 ```csharp
 [Activity (Label = "YOURAPPNAM", Icon = "@drawable/icon", MainLauncher = true,
@@ -159,8 +160,8 @@ public class MainActivity :
 
 Modifica il **MainPage. XAML** file in modo che:
 
- - Elemento radice XAML dovrebbe essere `winPhone:FormsApplicationPage`.
- - Il `xmlns:phone` attributo deve essere *modificato* a `xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"`
+- Elemento radice XAML dovrebbe essere `winPhone:FormsApplicationPage`.
+- Il `xmlns:phone` attributo deve essere *modificato* a `xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"`
 
 Seguito è riportato un esempio aggiornato, è necessario solo modificare questi elementi (il resto degli attributi deve rimanere invariato):
 
@@ -174,8 +175,8 @@ Seguito è riportato un esempio aggiornato, è necessario solo modificare questi
 
 Modifica il **MainPage.xaml.cs** file in modo che:
 
- - La classe eredita da `FormsApplicationPage` (invece di `PhoneApplicationPage` in precedenza).
- - `LoadApplication` viene chiamato con una nuova istanza di xamarin. Forms `App` classe. Potrebbe essere necessario qualificare completamente il riferimento poiché Windows Phone ha la propria `App` classe già definito.
+- La classe eredita da `FormsApplicationPage` (invece di `PhoneApplicationPage` in precedenza).
+- `LoadApplication` viene chiamato con una nuova istanza di xamarin. Forms `App` classe. Potrebbe essere necessario qualificare completamente il riferimento poiché Windows Phone ha la propria `App` classe già definito.
 
 ```csharp
 public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
@@ -191,7 +192,7 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
  }
 ```
 
-### <a name="troubleshooting"></a>Risoluzione dei problemi
+### <a name="troubleshooting"></a>risoluzione dei problemi
 
 Si trova talvolta un errore simile al seguente dopo aver aggiornato il pacchetto NuGet di xamarin. Forms. Si verifica quando lo strumento di aggiornamento di NuGet non abbia rimosso completamente i riferimenti alle versioni precedenti dalle **csproj** file.
 

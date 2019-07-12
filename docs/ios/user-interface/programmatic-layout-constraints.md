@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 3d8e69af7f790415343abf464ea2bb22e879e025
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 089ada051b6780a15acfcdd7f9e32ddda1384d05
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61170759"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832042"
 ---
 # <a name="programmatic-layout-constraints-in-xamarinios"></a>Vincoli per il Layout a livello di codice in xamarin. IOS
 
@@ -83,7 +83,7 @@ In cui le parti del C# codice corrispondono alle parti dell'equazione specificat
 |---|---|
 |Elemento 1|PurpleView|
 |Attributo 1|LeadingAnchor|
-|Relationship|ConstraintEqualTo|
+|Relazione|ConstraintEqualTo|
 |Moltiplicatore|Il valore predefinito è 1,0 così non specificato|
 |Elemento 2|OrangeView|
 |Attributo 2|TrailingAnchor|
@@ -119,10 +119,10 @@ A differenza con l'API di ancoraggio, Layout di `NSLayoutConstraint` metodi di c
 Il linguaggio formato visivo consente di definire vincoli mediante la grafica ASCII conferisce simili a stringhe che forniscono una rappresentazione visiva del vincolo viene creato. Ciò comporta i vantaggi e gli svantaggi seguenti:
 
 - Il linguaggio Visual formato impone la creazione di vincoli validi solo.
- - Layout automatico restituisce i vincoli nella console usando il linguaggio formato visivo in modo che i messaggi di debug saranno simile al codice usato per creare il vincolo.
- - Il linguaggio formato visivo consente di creare più vincoli allo stesso tempo con un'espressione molto compatta.
- - Poiché non esiste alcuna convalida sul lato compilazione delle stringhe di linguaggio formato visivo, i problemi possono essere individuati solamente in fase di esecuzione.
- - Poiché il linguaggio Visual formato privilegia visualizzazione rispetto alla completezza alcuni tipi di vincolo non è possibile creare con esso (ad esempio rapporti).
+- Layout automatico restituisce i vincoli nella console usando il linguaggio formato visivo in modo che i messaggi di debug saranno simile al codice usato per creare il vincolo.
+- Il linguaggio formato visivo consente di creare più vincoli allo stesso tempo con un'espressione molto compatta.
+- Poiché non esiste alcuna convalida sul lato compilazione delle stringhe di linguaggio formato visivo, i problemi possono essere individuati solamente in fase di esecuzione.
+- Poiché il linguaggio Visual formato privilegia visualizzazione rispetto alla completezza alcuni tipi di vincolo non è possibile creare con esso (ad esempio rapporti).
 
 Quando si usa il linguaggio visivo di formato per creare un vincolo, è eseguire i passaggi seguenti:
 

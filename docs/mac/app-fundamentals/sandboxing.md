@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 6bf2f63e944e178d80f76fe363ef24410ff052ce
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c51960a24e1277b3faec0905da3b9a5986359681
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61236923"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830668"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Sandboxing un'app xamarin. Mac
 
@@ -226,7 +226,7 @@ A parte la risorsa di blocco, esistono tre modi principali per indicare se un'ap
 
 ### <a name="debugging-a-sandboxed-app"></a>Debug di un'app creata mediante sandbox
 
-Il debugger si connette all'App xamarin. Mac tramite TCP, il che significa che per impostazione predefinita quando si abilita il sandboxing, non è in grado di connettersi all'app, in modo che se si prova a eseguire l'app senza le dovute autorizzazioni abilitate, viene visualizzato un errore *"Unable to connect to il debugger"*. 
+Il debugger si connette all'App xamarin. Mac tramite TCP, il che significa che per impostazione predefinita quando si abilita il sandboxing, non è in grado di connettersi all'app, in modo che se si prova a eseguire l'app senza le dovute autorizzazioni abilitate, viene visualizzato un errore *"Unable to connect to il debugger"* . 
 
 [![Impostare le opzioni necessarie](sandboxing-images/debug01.png "impostando le opzioni necessarie")](sandboxing-images/debug01-large.png#lightbox)
 
@@ -460,7 +460,7 @@ Per consentire la versione firmata Apple dell'app xamarin. Mac per l'esecuzione,
 
 1. Aprire l'app Terminal (nel `/Applications/Utilities`).
 2. Aprire una finestra del Finder per la versione firmata Apple dell'app xamarin. Mac.
-3. Tipo `asctl container acl add -file ` nella finestra del terminale.
+3. Tipo `asctl container acl add -file` nella finestra del terminale.
 4. Trascinare l'icona dell'app xamarin. Mac nella finestra del Finder e rilasciarla nella finestra del terminale.
 5. Il percorso completo del file verrà aggiunto al comando nel terminale.
 6. Premere **invio** per eseguire il comando.

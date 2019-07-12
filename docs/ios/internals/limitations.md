@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: b79d3683c8e4979cbbd13550f3df86c39622ad2b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 86f41bf227b97ef24651f482ff133a065226ee14
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035880"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830393"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitazioni di xamarin. IOS
 
@@ -74,7 +74,8 @@ La mancanza di System. Reflection. **Generare** indica che nessun codice che dip
 -  TransparentProxy dei servizi remoti o qualsiasi altra cosa che provocherebbe la fase di esecuzione generare il codice in modo dinamico. 
 
 
- **Importante:** Non confondere **Reflection. Emit** con **Reflection**. Reflection. Emit sulla generazione di codice in modo dinamico e che hanno tale codice JITed e compilate nel codice nativo. A causa di limitazioni in iOS (Nessuna compilazione JIT) questo non è supportato.
+  > [!IMPORTANT]
+  > Non confondere **Reflection. Emit** con **Reflection**. Reflection. Emit sulla generazione di codice in modo dinamico e che hanno tale codice JITed e compilate nel codice nativo. A causa di limitazioni in iOS (Nessuna compilazione JIT) questo non è supportato.
 
 Tuttavia, l'intera API di Reflection, tra cui Type. GetType ("someClass"), elenco di metodi, elenco delle proprietà, il recupero di attributi e valori funziona alla perfezione.
 

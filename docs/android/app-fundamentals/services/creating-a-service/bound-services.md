@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/04/2018
-ms.openlocfilehash: c0adee0dae1135bdfd076082e85a471db1cd1ecf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 490331663d94a1e3130fc794a11a52acdacca014
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013292"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829750"
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Bound Services in Xamarin.Android
 
@@ -55,8 +55,8 @@ Per creare un servizio usando xamarin. Android, è necessario per creare una sot
 
 * `OnCreate` &ndash; Questo metodo viene richiamato da Android, come lo è creare un'istanza del servizio. E viene usato per inizializzare qualsiasi variabile o gli oggetti che vengono richiesti dal servizio durante il ciclo di vita. È facoltativo.
 * `OnBind` &ndash; Questo metodo deve essere implementato da tutti i servizi associati. Viene richiamato quando il primo client prova a connettersi al servizio. Restituirà un'istanza di `IBinder` in modo che il client può interagire con il servizio. Fino a quando il servizio è in esecuzione, il `IBinder` oggetto verrà utilizzato per soddisfare le richieste client future per l'associazione al servizio.
-* `OnUnbind` &ndash; Questo metodo viene chiamato quando non è avranno associato tutti i client associati. Restituendo `true` da questo metodo, il servizio in un secondo momento chiamerà `OnRebind` con l'intento passato a `OnUnbind` quando i nuovi client associare ad esso. Si potrebbe eseguire questa operazione quando un servizio continua l'esecuzione dopo che è stato non associato. Questa situazione si verifica se il servizio di recente non associati sono stati anche un servizio avviato, e `StopService` o `StopSelf` non era stato chiamato. In tale scenario, `OnRebind` consente l'intento da recuperare. Restituisce il valore predefinito `false` , che non esegue alcuna operazione. Facoltativo.
-* `OnDestroy` &ndash; Questo metodo viene chiamato quando il servizio è eliminazione definitiva di Android. Pulizia eventualmente necessarie, ad esempio il rilascio delle risorse, deve essere eseguita in questo metodo. Facoltativo.
+* `OnUnbind` &ndash; Questo metodo viene chiamato quando non è avranno associato tutti i client associati. Restituendo `true` da questo metodo, il servizio in un secondo momento chiamerà `OnRebind` con l'intento passato a `OnUnbind` quando i nuovi client associare ad esso. Si potrebbe eseguire questa operazione quando un servizio continua l'esecuzione dopo che è stato non associato. Questa situazione si verifica se il servizio di recente non associati sono stati anche un servizio avviato, e `StopService` o `StopSelf` non era stato chiamato. In tale scenario, `OnRebind` consente l'intento da recuperare. Restituisce il valore predefinito `false` , che non esegue alcuna operazione. facoltativo.
+* `OnDestroy` &ndash; Questo metodo viene chiamato quando il servizio è eliminazione definitiva di Android. Pulizia eventualmente necessarie, ad esempio il rilascio delle risorse, deve essere eseguita in questo metodo. facoltativo.
 
 Gli eventi del ciclo di vita di chiavi di un servizio associato sono illustrati nella figura seguente:
 
@@ -230,7 +230,7 @@ Il `OnServiceDisconnected` metodo viene richiamato solo quando la connessione tr
 
 ## <a name="starting-and-binding-to-a-service-with-an-explicit-intent"></a>Avvio e associazione a un servizio con un Intent esplicito
 
-Per usare un servizio associato, è necessario creare un client (ad esempio, un'attività) istanze di un oggetto che implementa `Android.Content.IServiceConnection` e richiamare il `BindService` (metodo).` BindService` restituirà `true` se il servizio è associato, `false` in caso contrario. Il metodo `BindService` accetta tre parametri:
+Per usare un servizio associato, è necessario creare un client (ad esempio, un'attività) istanze di un oggetto che implementa `Android.Content.IServiceConnection` e richiamare il `BindService` (metodo). `BindService` restituirà `true` se il servizio è associato, `false` in caso contrario. Il metodo `BindService` accetta tre parametri:
 
 * **Un' `Intent`**  &ndash; l'intento deve identificare in modo esplicito quali servizio a cui connettersi.
 * **Un' `IServiceConnection` oggetti** &ndash; questo oggetto è un intermediario che fornisce i metodi di callback per notificare al client quando il servizio associato viene avviato e arrestato.

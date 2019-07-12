@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: dda197f71b2a2ab3e0d61a838ab85d79b7a078c7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c4aea5a35fd5db46c9e7ca245b852c988e82f53e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61270354"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830502"
 ---
 # <a name="introduction-to-tvos-9"></a>Introduzione a tvOS 9
 
@@ -32,28 +32,28 @@ Questa guida fornirà un'introduzione a tutte le nuove e modificate le API e fun
 
 App tvOS in esecuzione in Apple TV hanno le seguenti supportate funzionalità e capacità:
 
- - Gruppi di app
- - Modalità in background
- - Protezione dati
- - Game Center
- - Periferiche di gioco
- - iCloud
- - Acquisti in-App
- - Condivisione del keychain
+- Gruppi di app
+- Modalità in background
+- Protezione dati
+- Game Center
+- Periferiche di gioco
+- iCloud
+- Acquisti in-App
+- Condivisione del keychain
 
 Non sono supportate le funzionalità seguenti:
 
- - Apple Pay
- - Sandbox App
- - Domini associati
- - HealthKit
- - HomeKit
- - Audio Inter-App
- - Mappe
- - VPN personale
- - Notifiche push
- - Wallet
- - Configurazione accessori wireless
+- Apple Pay
+- Sandbox App
+- Domini associati
+- HealthKit
+- HomeKit
+- Audio Inter-App
+- Mappe
+- VPN personale
+- Notifiche push
+- Wallet
+- Configurazione accessori wireless
 
 Vedere la [assembly supportati](~/ios/tvos/internals/assemblies.md) e [Framework supportati](~/ios/tvos/internals/frameworks.md) per altre informazioni.
 
@@ -63,15 +63,15 @@ Vedere la [assembly supportati](~/ios/tvos/internals/assemblies.md) e [Framework
 
 Il nuovo televisore Apple presenta le specifiche hardware seguenti:
 
- - processore a 64 bit A8
- - 32GB o a 64GB di spazio di archiviazione
- - 2GB di RAM
- - 10/100Mbps Ethernet
- - 802.11a/b/g/n/ac Wi-Fi
- - risoluzione 1080p
- - HDMI
- - Porta C USB (per gli sviluppatori e solo per uso diagnostica)
- - Remoti per Siri nuove o Apple TV remoto (basato sull'area)
+- processore a 64 bit A8
+- 32GB o a 64GB di spazio di archiviazione
+- 2GB di RAM
+- 10/100Mbps Ethernet
+- 802.11a/b/g/n/ac Wi-Fi
+- risoluzione 1080p
+- HDMI
+- Porta C USB (per gli sviluppatori e solo per uso diagnostica)
+- Remoti per Siri nuove o Apple TV remoto (basato sull'area)
 
 ### <a name="siri-remote"></a>Remoti per Siri
 
@@ -79,14 +79,14 @@ In base alla regione, fornito Apple TV remoto proverranno in entrambe le configu
 
 Il remoti per Siri è attualmente disponibili nei paesi seguenti:
 
- - Australia
- - Canada
- - Francia
- - Germania
- - Giappone
- - Spagna
- - Regno Unito
- - Stati Uniti
+- Australia
+- Canada
+- Francia
+- Germania
+- Giappone
+- Spagna
+- Regno Unito
+- Stati Uniti
 
 Tutti gli altri paesi riceverà la Apple TV remoto che sostituisce il pulsante di Siri con un pulsante di ricerca che consente di visualizzare la schermata di ricerca predefinito con input di testo per la ricerca:
 

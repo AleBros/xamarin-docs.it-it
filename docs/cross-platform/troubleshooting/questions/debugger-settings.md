@@ -6,12 +6,12 @@ ms.assetid: 3A024E4E-ACA3-4C7A-ADEF-541665D15779
 author: asb3993
 ms.author: amburns
 ms.date: 05/08/2018
-ms.openlocfilehash: 9a18c97ba227615ae42529424b5c22b5e144f5e5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e7a383f899fab0400104493fa89b125788d610aa
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61357862"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831328"
 ---
 # <a name="what-project-settings-are-required-for-the-debugger"></a>Quali impostazioni di progetto sono richieste per il debugger?
 
@@ -30,6 +30,6 @@ Seguire questa procedura per verificare le impostazioni di ambiente:
 1. Aprire le opzioni di progetto
 2. Passare a **compilazione > compilatore > Opzioni generali**. Impostare le informazioni di Debug **completo**
 3. Impostazioni per ogni piattaforma:
-  - Passare a **compilazione > compilazione Android > Opzioni di debug**. Segni di graduazione il **abilitare la strumentazione per sviluppatori** casella.
-  - Passare a **compilazione > Debug iOS**. Segni di graduazione il **Abilita debug** casella.
+    - Passare a **compilazione > compilazione Android > Opzioni di debug**. Segni di graduazione il **abilitare la strumentazione per sviluppatori** casella.
+    - Passare a **compilazione > Debug iOS**. Segni di graduazione il **Abilita debug** casella.
 

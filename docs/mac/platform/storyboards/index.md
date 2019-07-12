@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 166a50021c22aa09be3eecdb8b745a70e75c3d51
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8a5a2f87c16a5dd040cefb2fbc615b01431ebcf5
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61031484"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832296"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introduzione agli storyboard in xamarin. Mac
 
@@ -56,9 +56,9 @@ In questo modo, ogni Controller di visualizzazione è un'associazione indipenden
 
 All'interno di una scena specificata, è possibile eseguire tutte le operazioni che verrebbero normalmente sono state gestite da singoli `.xib` file: 
 
- - Posizione subviews e controlli (ad esempio i pulsanti e caselle di testo).
- - Definire le posizioni dell'elemento e i vincoli per il layout automatico.
- - Wireup azioni e gli Outlet per esporre gli elementi dell'interfaccia utente al codice.
+- Posizione subviews e controlli (ad esempio i pulsanti e caselle di testo).
+- Definire le posizioni dell'elemento e i vincoli per il layout automatico.
+- Wireup azioni e gli Outlet per esporre gli elementi dell'interfaccia utente al codice.
 
 <a name="Working-with-Segues" />
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 02aeedd5498c47950e2fbc0d218de05bc0bb3204
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d83cdce7076eac5a022863b583ecb01346ae440a
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61298986"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831089"
 ---
 # <a name="unit-testing-enterprise-apps"></a>Unit test di App aziendali
 
@@ -170,7 +170,8 @@ public void InvalidEventNameShouldThrowArgumentExceptionText()
 
 Questo unit test verrà generata un'eccezione, perché il [ `ListView` ](xref:Xamarin.Forms.ListView) controllo non dispone di un evento denominato `OnItemTapped`. Il `Assert.Throws<T>` è un metodo generico in cui `T` è il tipo dell'eccezione prevista. L'argomento passato al `Assert.Throws<T>` metodo è un'espressione lambda che genererà l'eccezione. Pertanto, lo unit test si passerà a condizione che l'espressione lambda genera un `ArgumentException`.
 
->💡 **Suggerimento**: Evitare la scrittura di unit test che esaminano le stringhe di messaggio eccezione. Le stringhe di messaggio di eccezione possono cambiare nel tempo e quindi gli unit test che si basano sulla loro presenza sono considerati come fragile.
+> [!TIP]
+> Evitare la scrittura di unit test che esaminano le stringhe di messaggio eccezione. Le stringhe di messaggio di eccezione possono cambiare nel tempo e quindi gli unit test che si basano sulla loro presenza sono considerati come fragile.
 
 ### <a name="testing-validation"></a>Test della convalida
 

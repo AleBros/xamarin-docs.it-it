@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 2d67bc71361e335515cfba8b5a20e157ed6b6b05
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 25ace6d7febe495164378b3633f06371806e2f82
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61087859"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832310"
 ---
 # <a name="touch-id-in-xamarinios"></a>Touch ID in xamarin. IOS
 
@@ -52,8 +52,8 @@ A partire da iOS 8, è ora disponibile un nuovo criterio di presenza utente, `Se
 
 |Configurazione del dispositivo|Valutazione dei criteri|Meccanismo di backup|
 |--- |--- |--- |
-|Dispositivo senza Passcode|Nessun accesso|nessuno|
-|Dispositivo con Passcode|Richiede Passcode|nessuno|
+|Dispositivo senza Passcode|Nessun accesso|Nessuna|
+|Dispositivo con Passcode|Richiede Passcode|Nessuna|
 |Dispositivo con Touch ID|Preferisce il Touch ID|Consente di Passcode|
 
 Tutte le operazioni all'interno dell'Enclave protetta possono considerino reciprocamente attendibili. Ciò significa che è possibile usare il risultato dell'autenticazione Touch ID per autorizzare la decrittografia di elemento di Keychain. L'Enclave protetta mantiene anche un contatore di corrispondenze non riuscite di Touch ID, in cui sarà necessario ripristinare l'uso del passcode caso un utente.
@@ -81,10 +81,10 @@ Per usare ACL sarebbe necessario usare il `SecAccessControl` dei criteri e quind
 
 Esistono molti aspetti che si dovrebbe tenere a mente quando si usa ACL con il portachiavi e alcune di queste sono elencati di seguito:
 
--   Usare solo con l'applicazione in primo piano: se si chiama qualsiasi operazione keychain su un thread in background che avrà esito negativo della chiamata.
--   Aggiunta e aggiornamento degli elementi di keychain potrebbero richiedere l'autenticazione.
--   Se una richiesta restituisce più elementi corrispondenti nel portachiavi, l'autenticazione potrebbe essere necessaria.
--   Elementi protetti ACL sono dispositivi e pertanto non sincronizzato o solo sottoposto a backup.
+- Usare solo con l'applicazione in primo piano: se si chiama qualsiasi operazione keychain su un thread in background che avrà esito negativo della chiamata.
+- Aggiunta e aggiornamento degli elementi di keychain potrebbero richiedere l'autenticazione.
+- Se una richiesta restituisce più elementi corrispondenti nel portachiavi, l'autenticazione potrebbe essere necessaria.
+- Elementi protetti ACL sono dispositivi e pertanto non sincronizzato o solo sottoposto a backup.
 
 ### <a name="using-local-authentication-without-keychain-services"></a>Utilizzo dell'autenticazione locale senza servizi Keychain
 

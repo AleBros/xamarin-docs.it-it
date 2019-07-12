@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
-ms.openlocfilehash: 55e5627a492636efaa6eeb6b8c302d143b08e2cc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c493b43edbfa04aafba56c4b47d7c89b455de423
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61400704"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830475"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Uso di CocosSharp in xamarin. Forms
 
@@ -36,20 +36,20 @@ CocosSharp è una tecnologia potente e flessibile per la visualizzazione di graf
 
 ## <a name="what-is-cocossharp"></a>Che cos'è CocosSharp?
 
-[CocosSharp](~/graphics-games/cocossharp/index.md) è un motore di gioco open source che è disponibile nella piattaforma Xamarin.
+[CocosSharp](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md) è un motore di gioco open source che è disponibile nella piattaforma Xamarin.
 CocosSharp è una libreria di runtime efficiente che include le funzionalità seguenti:
 
-* Per il rendering di immagini usando il [CCSprite classe](https://developer.xamarin.com/api/type/CocosSharp.CCSprite/)
-* Forme per il rendering tramite il [classe CCDrawNode](https://developer.xamarin.com/api/type/CocosSharp.CCDrawNode/)
-* Ogni fotogramma per la logica usando il [CCNode.Schedule (metodo)](https://developer.xamarin.com/api/member/CocosSharp.CCNode.Schedule/p/System.Action%7BSystem.Single%7D/)
-* Gestione dei contenuti (caricamento e scaricamento delle risorse, ad esempio file con estensione png) usando il [CCTextureCache classe](https://developer.xamarin.com/api/type/CocosSharp.CCTextureCache/)
-* Le animazioni utilizzando il [classe CCAction](https://developer.xamarin.com/api/type/CocosSharp.CCAction/)
+* Per il rendering di immagini usando il `CCSprite` classe
+* Forme per il rendering tramite il `CCDrawNode` classe
+* Ogni fotogramma per la logica usando il `CCNode.Schedule` classe
+* Gestione dei contenuti (caricamento e scaricamento delle risorse, ad esempio file con estensione png) tramite il `CCTextureCache`
+* Le animazioni utilizzando il `CCAction` classe
 
 Obiettivo principale di CocosSharp consiste nel semplificare la creazione di giochi 2D multipiattaforma; Tuttavia, può essere anche un'aggiunta importante per le applicazioni Xamarin Form. Poiché i giochi richiedono in genere un rendering efficiente e un controllo preciso su oggetti visivi, CocosSharp è utilizzabile per aggiungere potenti funzionalità di visualizzazione e gli effetti alle applicazioni non di gioco.
 
 Xamarin. Forms si basa su sistemi dell'interfaccia utente nativi specifici della piattaforma. Ad esempio, [ `Button`s](xref:Xamarin.Forms.Button) vengono visualizzati in modo diverso in iOS e Android e persino potrebbe differire dalle versioni del sistema operativo. Al contrario, CocosSharp non usare oggetti visivi specifici della piattaforma, in modo che tutti gli oggetti visivi sembrano identici in tutte le piattaforme. Naturalmente, la risoluzione e le proporzioni differiscono tra i dispositivi e ciò può influire sul modo in cui CocosSharp esegue il rendering dei rispettivi oggetti visivi. Questi dettagli verranno descritte più avanti in questa Guida.
 
-Per ulteriori informazioni sono reperibili nel [CocosSharp sezione](~/graphics-games/cocossharp/index.md).
+Per ulteriori informazioni sono reperibili nel [CocosSharp sezione](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md).
 
 <a name="nuget" />
 
@@ -84,7 +84,7 @@ Seguire questi passaggi per aggiungere una visualizzazione semplice di CocosShar
 1. [Aggiunta di un cerchio](#4)
 1. [L'interazione con CocosSharp](#5)
 
-Dopo che è stato aggiunto correttamente una vista di CocosSharp in un'app xamarin. Forms, visitare il [CocosSharp documentazione](~/graphics-games/cocossharp/index.md) per altre informazioni sulla creazione del contenuto con CocosSharp.
+Dopo che è stato aggiunto correttamente una vista di CocosSharp in un'app xamarin. Forms, visitare il [CocosSharp documentazione](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md) per altre informazioni sulla creazione del contenuto con CocosSharp.
 
 <a name="1" />
 
@@ -199,7 +199,7 @@ Il grafico seguente può essere utile visualizzare una gerarchia di CocosSharp t
 
 ![](cocossharp-images/image4.png "Tipica gerarchia CocosSharp")
 
-Un solo `CCScene` possono essere attivi contemporaneamente. La maggior parte dei giochi usano più `CCLayer` istanze per ordinare il contenuto, ma l'applicazione utilizza solo uno. Analogamente, la maggior parte dei giochi utilizzano più oggetti visivi, ma sarà ne abbiamo solo uno nell'app. Più dettagliata e approfondita di CocosSharp gerarchia visiva è reperibile nella [procedura dettagliata di BouncingGame](~/graphics-games/cocossharp/bouncing-game.md).
+Un solo `CCScene` possono essere attivi contemporaneamente. La maggior parte dei giochi usano più `CCLayer` istanze per ordinare il contenuto, ma l'applicazione utilizza solo uno. Analogamente, la maggior parte dei giochi utilizzano più oggetti visivi, ma sarà ne abbiamo solo uno nell'app. Più dettagliata e approfondita di CocosSharp gerarchia visiva è reperibile nella [procedura dettagliata di BouncingGame](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/bouncing-game.md).
 
 Inizialmente il `GameScene` classe sarà quasi vuota, ci limiteremo a creare in modo da soddisfare il riferimento in `HomePage`. Aggiungere una nuova classe al progetto della libreria .NET Standard denominato `GameScene`. Il controller deve ereditare dal `CCScene` classe come indicato di seguito:
 
@@ -231,7 +231,7 @@ GameScene gameScene;
 
 ### <a name="4-adding-a-circle"></a>4. Aggiunta di un cerchio
 
-L'app è attualmente un'istanza del motore di CocosSharp, visualizzazione di un oggetto vuoto in esecuzione `CCScene`. Successivamente, verrà aggiunto un oggetto visivo: un cerchio. Il `CCDrawNode` classe può essere utilizzata per disegnare un'ampia gamma di forme geometriche, come descritto nel [disegno della geometria con CCDrawNode Guida](~/graphics-games/cocossharp/ccdrawnode.md).
+L'app è attualmente un'istanza del motore di CocosSharp, visualizzazione di un oggetto vuoto in esecuzione `CCScene`. Successivamente, verrà aggiunto un oggetto visivo: un cerchio. Il `CCDrawNode` classe può essere utilizzata per disegnare un'ampia gamma di forme geometriche, come descritto nel [disegno della geometria con CCDrawNode Guida](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccdrawnode.md).
 
 Aggiungere un cerchio al nostro `GameScene` classe e crearne un'istanza nel costruttore come illustrato nel codice seguente:
 
@@ -274,13 +274,12 @@ Il `DesignResolution` rappresenta la larghezza e altezza dell'area di CocosSharp
 Il diagramma precedente visualizza le dimensioni in pixel all'esterno della schermata di testo di colore nero. Unità vengono visualizzate all'interno del diagramma nel testo bianco. Ecco alcuni dettagli importanti visualizzati sopra:
 
 * L'origine dello schermo CocosSharp è in basso a sinistra. Spostandosi quindi verso destra aumenta il valore di X, nonché spostando verso l'alto il valore Y. Si noti che il valore Y è invertito rispetto ad alcuni altri motori di layout 2D, in cui (0,0) è in alto a sinistra dell'area di disegno.
-* Il comportamento predefinito di CocosSharp consiste nel mantenere le proporzioni della relativa visualizzazione. Poiché la prima riga della griglia è maggiore dell'altezza, CocosSharp non riempie l'intera larghezza della cella, come mostrato dal rettangolo bianco punteggiato. Questo comportamento può essere modificato, come descritto nel [Guida per la gestione di più risoluzioni in CocosSharp](~/graphics-games/cocossharp/resolutions.md).
+* Il comportamento predefinito di CocosSharp consiste nel mantenere le proporzioni della relativa visualizzazione. Poiché la prima riga della griglia è maggiore dell'altezza, CocosSharp non riempie l'intera larghezza della cella, come mostrato dal rettangolo bianco punteggiato. Questo comportamento può essere modificato, come descritto nel [Guida per la gestione di più risoluzioni in CocosSharp](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/resolutions.md).
 * In questo esempio, si manterrà CocosSharp un'area di visualizzazione di 100 unità di larghezza e altezza indipendentemente dalle dimensioni e le proporzioni del dispositivo. Ciò significa che codice può presupporre che X = 100 è rappresentato dal associato all'estrema destra di CocosSharp visualizzare, layout mantenendo coerenti in tutti i dispositivi.
-
 
 #### <a name="ccdrawnode-details"></a>Dettagli CCDrawNode
 
-L'app semplice Usa il `CCDrawNode` classe per disegnare un cerchio. Questa classe può essere molto utile per le app aziendali poiché viene fornita per il rendering basato su vettore geometry – una funzionalità non presente in xamarin. Forms. Oltre ai cerchi, il `CCDrawNode` classe può essere utilizzata per disegnare rettangoli, spline, linee e poligoni personalizzati. `CCDrawNode` è anche facile da utilizzare poiché non richiede l'uso dei file di immagine (ad esempio con estensione png). Una discussione più dettagliata di CCDrawNode è reperibile nella [disegno della geometria con CCDrawNode Guida](~/graphics-games/cocossharp/ccdrawnode.md).
+L'app semplice Usa il `CCDrawNode` classe per disegnare un cerchio. Questa classe può essere molto utile per le app aziendali poiché viene fornita per il rendering basato su vettore geometry – una funzionalità non presente in xamarin. Forms. Oltre ai cerchi, il `CCDrawNode` classe può essere utilizzata per disegnare rettangoli, spline, linee e poligoni personalizzati. `CCDrawNode` è anche facile da utilizzare poiché non richiede l'uso dei file di immagine (ad esempio con estensione png). Una discussione più dettagliata di CCDrawNode è reperibile nella [disegno della geometria con CCDrawNode Guida](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccdrawnode.md).
 
 <a name="5" />
 
@@ -347,11 +346,8 @@ Il cerchio CocosSharp ora consente di spostarsi in risposta ai clic. È possibil
 
 Questa guida illustra come aggiungere CocosSharp a un xamarin. Forms esistenti del progetto, come creare l'interazione tra xamarin. Forms e CocosSharp e vengono illustrate varie considerazioni quando si creano i layout in CocosSharp.
 
-Il motore di gioco CocosSharp offre numerose funzionalità e la profondità, in modo che questa guida interessa solo alcune delle operazioni che è possibile eseguire CocosSharp. Gli sviluppatori interessati a altre informazioni su CocosSharp possono trovare molti articoli nel [CocosSharp sezione](~/graphics-games/cocossharp/index.md).
-
-
+Il motore di gioco CocosSharp offre numerose funzionalità e la profondità, in modo che questa guida interessa solo alcune delle operazioni che è possibile eseguire CocosSharp. Gli sviluppatori interessati a altre informazioni su CocosSharp possono trovare molti articoli nel [archive CocosSharp](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [API di CocosSharp](https://developer.xamarin.com/api/root/CocosSharp/)
 - [CocosSharpForms (esempio)](https://developer.xamarin.com/samples/xamarin-forms/CocosSharpForms/)

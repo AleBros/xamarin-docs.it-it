@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: e9c18920386cb58f152d7631c52240b4b5b72ff9
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 88496452595f308c97d26d0f27fae305baef894f
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977850"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830831"
 ---
 # <a name="stack-views-in-xamarinios"></a>Viste dello stack in xamarin. IOS
 
@@ -197,16 +197,16 @@ Durante la visualizzazione dello Stack ha il controllo completo sul layout dei q
 
 In genere, ciò comporta l'aggiunta di almeno due bordi della vista dello Stack per espandere e comprimere, definendo pertanto la posizione. Senza i vincoli aggiuntivi, la visualizzazione dello Stack verrà ridimensionata automaticamente per adattare l'intero le visualizzazioni secondarie come indicato di seguito:
 
- - Le dimensioni lungo relativo `Axis` sarà costituito dalla somma di tutte le dimensioni di visualizzazione secondaria e quindi qualsiasi spazio che è stata definita tra ogni visualizzazione secondaria.
- - Se il `LayoutMarginsRelativeArrangement` è di proprietà `true`, la dimensione dello Stack viste includerà anche spazio per i margini.
- - Le dimensioni perpendicolare al `Axis` verrà impostato per la visualizzazione più grande secondaria nella raccolta.
+- Le dimensioni lungo relativo `Axis` sarà costituito dalla somma di tutte le dimensioni di visualizzazione secondaria e quindi qualsiasi spazio che è stata definita tra ogni visualizzazione secondaria.
+- Se il `LayoutMarginsRelativeArrangement` è di proprietà `true`, la dimensione dello Stack viste includerà anche spazio per i margini.
+- Le dimensioni perpendicolare al `Axis` verrà impostato per la visualizzazione più grande secondaria nella raccolta.
 
 Inoltre, è possibile specificare vincoli per la visualizzazione di Stack **altezza** e **larghezza**. In questo caso, le visualizzazioni secondarie verranno disposte (dimensioni) per riempire lo spazio specificato dalla visualizzazione Stack come determinato dal `Distribution` e `Alignment` proprietà.
 
 Se il `BaselineRelativeArrangement` proprietà è `true`, le visualizzazioni secondarie verranno disposte in base della linea di base, della prima o nell'ultima visualizzazione secondaria invece di usare i **Top**, **inferiore** o **Center** -  **Y** posizione. Questi vengono calcolati come indicato di seguito sul contenuto della visualizzazione dello Stack:
 
- - Una visualizzazione Stack verticale restituirà la prima visualizzazione secondaria per la prima linea di base e l'ultimo per l'ultimo. Se una di queste visualizzazioni secondarie fanno visualizzazioni dello Stack, quindi verrà utilizzato il primo o ultimo della linea di base.
- - Una visualizzazione Stack orizzontale userà la più alta secondaria per la previsione e il cognome. Se la vista più alta è anche una visualizzazione dello Stack, è più alta secondaria userà come linea di base.
+- Una visualizzazione Stack verticale restituirà la prima visualizzazione secondaria per la prima linea di base e l'ultimo per l'ultimo. Se una di queste visualizzazioni secondarie fanno visualizzazioni dello Stack, quindi verrà utilizzato il primo o ultimo della linea di base.
+- Una visualizzazione Stack orizzontale userà la più alta secondaria per la previsione e il cognome. Se la vista più alta è anche una visualizzazione dello Stack, è più alta secondaria userà come linea di base.
 
 > [!IMPORTANT]
 > Allineamento della linea di base non funziona sulle dimensioni di visualizzazione secondaria allungata o compressa come verrà calcolato la linea di base alla posizione corretta. Per l'allineamento della linea di base, verificare che la visualizzazione secondaria **altezza** corrisponda alla visualizzazione del contenuto intrinseco **altezza**.
@@ -216,9 +216,9 @@ Se il `BaselineRelativeArrangement` proprietà è `true`, le visualizzazioni sec
 Esistono diversi tipi di layout che funzionano bene con controlli di visualizzazione dello Stack. In base a Apple, ecco alcuni degli usi più comuni:
 
 - **Definire dimensioni lungo l'asse** : per l'aggiunta di entrambi i bordi lungo della visualizzazione Stack `Axis` e uno dei lati adiacenti per impostare la posizione, lo Stack di dimensioni aumentano visualizzazione lungo l'asse per adattarsi allo spazio definito dalle visualizzazioni secondarie.
- -  **Definire la posizione della visualizzazione secondaria** – aggiungendo ai bordi adiacenti della visualizzazione Stack alla relativa visualizzazione padre, la visualizzazione dello Stack aumenteranno in entrambe le dimensioni in base alle relative visualizzazioni secondarie che lo contiene.
+- **Definire la posizione della visualizzazione secondaria** – aggiungendo ai bordi adiacenti della visualizzazione Stack alla relativa visualizzazione padre, la visualizzazione dello Stack aumenteranno in entrambe le dimensioni in base alle relative visualizzazioni secondarie che lo contiene.
 - **Definire le dimensioni e la posizione dello Stack** – aggiungendo le quattro contorni della visualizzazione dello Stack per la visualizzazione padre, la visualizzazione dello Stack organizza le visualizzazioni secondarie basate allo spazio definito all'interno della visualizzazione dello Stack.
- -  **Definire le dimensioni perpendicolari all'asse** : per l'aggiunta di entrambi perpendicolarmente bordi della visualizzazione Stack `Axis` e uno dei bordi lungo l'asse di impostare la posizione, lo Stack di visualizzazione aumenterà perpendicolare all'asse per adattarsi allo spazio definito da relativo visualizzazioni secondarie.
+- **Definire le dimensioni perpendicolari all'asse** : per l'aggiunta di entrambi perpendicolarmente bordi della visualizzazione Stack `Axis` e uno dei bordi lungo l'asse di impostare la posizione, lo Stack di visualizzazione aumenterà perpendicolare all'asse per adattarsi allo spazio definito da relativo visualizzazioni secondarie.
 
 ### <a name="managing-the-appearance"></a>La gestione dell'aspetto
 
@@ -241,14 +241,14 @@ In genere si utilizzerà una visualizzazione dello Stack per disporre di un nume
 
 Fa sì che la visualizzazione dello Stack relativi `ArrangedSubviews` proprietà è sempre un sottoinsieme di relativo `Subviews` proprietà usando le regole seguenti:
 
- - Se una visualizzazione secondaria viene aggiunto al `ArrangedSubviews` raccolta, verrà automaticamente aggiunto per il `Subviews` raccolta (a meno che non fa già parte di tale raccolta).
- - Se una visualizzazione secondaria viene rimosso dal `Subviews` collection (rimosso dalla visualizzazione), viene rimossa anche dal `ArrangedSubviews` raccolta.
- - Rimozione di una visualizzazione secondaria dal `ArrangedSubviews` non comporta la rimozione dall'insieme la `Subviews` raccolta. Quindi non è più essere disposto da parte della vista dello Stack, ma sarà comunque visibile sullo schermo.
+- Se una visualizzazione secondaria viene aggiunto al `ArrangedSubviews` raccolta, verrà automaticamente aggiunto per il `Subviews` raccolta (a meno che non fa già parte di tale raccolta).
+- Se una visualizzazione secondaria viene rimosso dal `Subviews` collection (rimosso dalla visualizzazione), viene rimossa anche dal `ArrangedSubviews` raccolta.
+- Rimozione di una visualizzazione secondaria dal `ArrangedSubviews` non comporta la rimozione dall'insieme la `Subviews` raccolta. Quindi non è più essere disposto da parte della vista dello Stack, ma sarà comunque visibile sullo schermo.
 
 Il `ArrangedSubviews` raccolta è sempre un sottoinsieme del `Subview` raccolta, tuttavia l'ordine delle singole visualizzazioni secondarie all'interno di ogni raccolta è separata e controllato dagli elementi seguenti:
 
- - L'ordine delle visualizzazioni secondarie all'interno di `ArrangedSubviews` raccolta determinarne l'ordine di visualizzazione all'interno dello stack.
- - L'ordine delle visualizzazioni secondarie all'interno di `Subview` raccolta determina loro ordine Z (o dei livelli) all'interno della visualizzazione torna in primo piano.
+- L'ordine delle visualizzazioni secondarie all'interno di `ArrangedSubviews` raccolta determinarne l'ordine di visualizzazione all'interno dello stack.
+- L'ordine delle visualizzazioni secondarie all'interno di `Subview` raccolta determina loro ordine Z (o dei livelli) all'interno della visualizzazione torna in primo piano.
 
 ### <a name="dynamically-changing-content"></a>Modifica dinamica del contenuto
 

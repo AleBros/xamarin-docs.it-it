@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: fb225349b9ffb1c950486a817897b3c26c6ffbe4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 97b95ccb3e756f02c945adc63b9e173a9f9e0226
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61300266"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832682"
 ---
 # <a name="dependency-injection"></a>Inserimento di dipendenze
 
@@ -139,7 +139,8 @@ _container = builder.Build();
 
 Richiama il `Build` metodo su di `ContainerBuilder` istanza compila un nuovo contenitore di inserimento delle dipendenze che contiene le registrazioni che sono state apportate.
 
->💡 **Suggerimento**: Si consideri un `IContainer` come non modificabile. Mentre Autofac fornisce un `Update` metodo per aggiornare le registrazioni in un contenitore esistente, chiamare questo metodo deve essere evitata laddove possibile. Esistono rischi per la modifica di un contenitore dopo che è stata creata, in particolare se il contenitore è stato utilizzato. Per altre informazioni, vedere [considerare un contenitore come non modificabili](http://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) in readthedocs.io.
+> [!TIP]
+> Si consideri un `IContainer` come non modificabile. Mentre Autofac fornisce un `Update` metodo per aggiornare le registrazioni in un contenitore esistente, chiamare questo metodo deve essere evitata laddove possibile. Esistono rischi per la modifica di un contenitore dopo che è stata creata, in particolare se il contenitore è stato utilizzato. Per altre informazioni, vedere [considerare un contenitore come non modificabili](http://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) in readthedocs.io.
 
 <a name="resolution" />
 

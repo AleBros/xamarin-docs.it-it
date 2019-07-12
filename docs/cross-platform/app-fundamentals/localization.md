@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 4799d6aaa095127e242c5e0750db686519d0c21d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a1218d836aad827390d9f5e70de189a869b7c6b8
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61226526"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830991"
 ---
 # <a name="localization"></a>Localizzazione
 
@@ -36,12 +36,12 @@ Internazionalizzazione che viene spesso abbreviato in i18n: sintassi abbreviata 
 Questo documento illustra i concetti associati internazionalizzazione e localizzazione e come si applicano in genere allo sviluppo di applicazioni per dispositivi mobili.
 Durante la progettazione e creazione di un'applicazione, le cose che in precedenza potrebbe essere hardcoded ma che devono aggiungere parametri per la localizzazione includono:
 
--   Layout dello schermo e il testo,
--   Le icone, grafica e i colori,
--   File audio e video
--   Testo dinamico e la formattazione del testo (ad esempio numeri, valuta e date),
- - Le modifiche di layout per le lingue di destra a sinistra (RTL), e
--   L'ordinamento dei dati.
+- Layout dello schermo e il testo,
+- Le icone, grafica e i colori,
+- File audio e video
+- Testo dinamico e la formattazione del testo (ad esempio numeri, valuta e date),
+- Le modifiche di layout per le lingue di destra a sinistra (RTL), e
+- L'ordinamento dei dati.
 
 Indipendentemente da quali piattaforme per dispositivi mobili, l'app è destinata a questi suggerimenti consentono di creare un'app localizzata di alta qualità.
 
@@ -81,9 +81,9 @@ Scrivere regole di convalida con internazionalizzazione mente – scegliere le r
 Non tutte le immagini deve cambiare in base alla scelta della lingua dell'utente. Molte delle icone o foto verrà essere adatto per tutti gli utenti, indipendentemente dal linguaggio cui parlano.
 Alcune risorse ha senso da localizzare, tuttavia, ad esempio:
 
- - Le immagini che descrivono gli utenti o percorsi specifici, l'app potrebbe sentirsi più pertinente per gli utenti se viene visualizzato agli utenti e degli indirizzi locali.
- - Icone per alcuni visualizzato può essere specifico delle impostazioni cultura e può semplificare è l'app Usa localizzandone le immagini in modo da riflettere understanding locale.
- - Colori: alcune impostazioni cultura comprensione i colori in modo diverso: rosso potrebbe significare in un'area, ma un'impresa in un altro avviso. Verificare con madrelingua quando si progetta l'app per determinare se si deve essere la creazione di un meccanismo per localizzare i colori.
+- Le immagini che descrivono gli utenti o percorsi specifici, l'app potrebbe sentirsi più pertinente per gli utenti se viene visualizzato agli utenti e degli indirizzi locali.
+- Icone per alcuni visualizzato può essere specifico delle impostazioni cultura e può semplificare è l'app Usa localizzandone le immagini in modo da riflettere understanding locale.
+- Colori: alcune impostazioni cultura comprensione i colori in modo diverso: rosso potrebbe significare in un'area, ma un'impresa in un altro avviso. Verificare con madrelingua quando si progetta l'app per determinare se si deve essere la creazione di un meccanismo per localizzare i colori.
 
 
 ### <a name="videos-and-sound"></a>Video e audio
@@ -120,10 +120,10 @@ Vedere le [l'analisi di stringhe numeriche](https://msdn.microsoft.com/library/x
 Alcuni linguaggi, quali l'arabo, ebraico e Urdu (ad esempio), vengono letti da destra a sinistra.
 Le applicazioni che supportano questi linguaggi devono usare le progettazioni di schermata che adattano per lettori di destra a sinistra, ad esempio:
 
- - Il testo deve essere allineato a destra.
- - Le etichette devono apparire a destra dei campi di input.
- - Posizionamento del pulsante predefinito in genere viene invertito.
- - Navigazione gerarchica scorrendo rapidamente e animazione (e altri metafore di navigazione e le animazioni) che usano direzione per contesto deve anche essere invertito.
+- Il testo deve essere allineato a destra.
+- Le etichette devono apparire a destra dei campi di input.
+- Posizionamento del pulsante predefinito in genere viene invertito.
+- Navigazione gerarchica scorrendo rapidamente e animazione (e altri metafore di navigazione e le animazioni) che usano direzione per contesto deve anche essere invertito.
 
 IOS e Android supportano layout da destra a sinistra e il rendering del tipo di carattere, con funzionalità incorporate che consentono di apportare le modifiche precedenti. Xamarin. Forms non supporta attualmente automaticamente per il rendering destra-sinistra.
 
@@ -139,10 +139,10 @@ Vedere il [dettaglio del confronto tra stringhe](https://msdn.microsoft.com/libr
 
 Assicurarsi di aver scritto e testato l'algoritmo di ricerca con più lingue in considerazione. Aspetti da considerare includono:
 
- - Completamento automatico, se è stata compilata una funzione di completamento automatico assicurarsi che origina i suggerimenti rilevanti per la lingua dell'utente.
- - La query corrispondente ai dati, ovvero eseguirà la ricerca immesse in una determinata query language da eseguire sul contenuto semplicemente scritto in tale linguaggio o su tutto il contenuto nell'app?
- - Stemming – se la ricerca è stata creata per eseguire la ricerca di parole correlate, le radici di word e altre ottimizzazioni di ricerca, sono le ottimizzazioni compilate per tutte le lingue supportate?
- - L'ordinamento: assicurarsi che i risultati vengono ordinati in modo corretto (vedere sopra).
+- Completamento automatico, se è stata compilata una funzione di completamento automatico assicurarsi che origina i suggerimenti rilevanti per la lingua dell'utente.
+- La query corrispondente ai dati, ovvero eseguirà la ricerca immesse in una determinata query language da eseguire sul contenuto semplicemente scritto in tale linguaggio o su tutto il contenuto nell'app?
+- Stemming – se la ricerca è stata creata per eseguire la ricerca di parole correlate, le radici di word e altre ottimizzazioni di ricerca, sono le ottimizzazioni compilate per tutte le lingue supportate?
+- L'ordinamento: assicurarsi che i risultati vengono ordinati in modo corretto (vedere sopra).
 
 
 ### <a name="data-from-external-sources"></a>Dati da origini esterne
@@ -151,9 +151,9 @@ Molte applicazioni il download dei dati da origini esterne, da Twitter e feed RS
 
 Esistono alcune strategie che è possibile usare per provare e verificare che l'app consente di visualizzare i dati pertinenti per l'utente:
 
- - Origini diverse: l'applicazione può scaricare i dati da un'origine diversa a seconda della lingua o le impostazioni locali dell'utente. I prezzi di notizie, meteo e stock delle impostazioni locali potrebbero essere più utile rispetto a un elemento scaricato da un feed di America del Nord.
- - Visualizzato localizzato: se si sta visualizzando un Twitter o una foto del feed, si deve visualizzare i metadati (ad esempio, il tempo impiegato) in un proprio linguaggio, anche se il contenuto stesso rimane nella lingua originale.
- - Traduzione – è possibile creare un'opzione di conversione nell'app per eseguire un servizio di traduzione automatica dei dati in ingresso. Ciò potrebbe essere automatica o a discrezione dell'utente, assicurarsi di notificare all'utente se questo è in corso, poiché la traduzione non sono mai perfetta!
+- Origini diverse: l'applicazione può scaricare i dati da un'origine diversa a seconda della lingua o le impostazioni locali dell'utente. I prezzi di notizie, meteo e stock delle impostazioni locali potrebbero essere più utile rispetto a un elemento scaricato da un feed di America del Nord.
+- Visualizzato localizzato: se si sta visualizzando un Twitter o una foto del feed, si deve visualizzare i metadati (ad esempio, il tempo impiegato) in un proprio linguaggio, anche se il contenuto stesso rimane nella lingua originale.
+- Traduzione – è possibile creare un'opzione di conversione nell'app per eseguire un servizio di traduzione automatica dei dati in ingresso. Ciò potrebbe essere automatica o a discrezione dell'utente, assicurarsi di notificare all'utente se questo è in corso, poiché la traduzione non sono mai perfetta!
 
 Ciò può influire anche su collegamenti esterni alle tracce audio o video: quando si progetta un'applicazione assicurarsi di pianificare in anticipo per generare convertita contenuto o assicurandosi che gli utenti vengono informati in modo adeguato dall'interfaccia utente quando il contenuto non verrà presentato nella loro lingua.
 
@@ -162,10 +162,10 @@ Ciò può influire anche su collegamenti esterni alle tracce audio o video: quan
 
 Alcune stringhe nell'app potrebbero non tradurre minimo necessario oppure particolare attenzione dal convertitore. Alcuni esempi:
 
- - URL: se si specifica un URL, può o non potrebbe essere necessario affinché venga regolato dal linguaggio. Ad esempio facebook.com non richiede la traduzione automatica-Rileva lingua nella sede principale. Altri siti con contenuto specifico delle impostazioni locali e si potrebbe voler un URL diverso, ad esempio yahoo.com invece yahoo.fr o yahoo.it dell'offerta.
- - Numeri di telefono, soprattutto quelli con i codici paese diversi o i numeri dei chiamanti che parlano una determinata lingua.
- - I dettagli dei contatti, indirizzi e altre informazioni possono variare dalla lingua e impostazioni locali.
- - Marchi e i nomi dei prodotti – alcune stringhe non necessario tradurre perché sono sempre scritto nella stessa lingua.
+- URL: se si specifica un URL, può o non potrebbe essere necessario affinché venga regolato dal linguaggio. Ad esempio facebook.com non richiede la traduzione automatica-Rileva lingua nella sede principale. Altri siti con contenuto specifico delle impostazioni locali e si potrebbe voler un URL diverso, ad esempio yahoo.com invece yahoo.fr o yahoo.it dell'offerta.
+- Numeri di telefono, soprattutto quelli con i codici paese diversi o i numeri dei chiamanti che parlano una determinata lingua.
+- I dettagli dei contatti, indirizzi e altre informazioni possono variare dalla lingua e impostazioni locali.
+- Marchi e i nomi dei prodotti – alcune stringhe non necessario tradurre perché sono sempre scritto nella stessa lingua.
 
 Infine, assicurarsi di includere le istruzioni dettagliate per la funzione di conversione se determinate stringhe richiedono un trattamento speciale.
 
@@ -264,16 +264,16 @@ O più precisamente, non riutilizzi stringhe solo perché sono simili quando la 
 
 Ad esempio: si supponga si dispone di un'opzione di attivazione/disattivazione nell'app e il controllo commutatore richiede il testo per 'on' e 'off' deve essere localizzata. È inoltre visualizzare il valore di tale impostazione in un' posizione nell'app in un'etichetta di testo. Si devono usare stringhe diverse per la visualizzazione del commutatore e lo stato dell'opzione (anche se sono la stessa stringa nel linguaggio predefinito), ad esempio:
 
--   "Sì" – visualizzato sullo stesso commutatore
--   "Off": visualizzato sullo stesso commutatore
--   "Sì", visualizzato in un'etichetta
--   "Off": visualizzati in un'etichetta
+- "Sì" – visualizzato sullo stesso commutatore
+- "Off": visualizzato sullo stesso commutatore
+- "Sì", visualizzato in un'etichetta
+- "Off": visualizzati in un'etichetta
 
 Ciò fornisce flessibilità massima per la funzione di conversione:
 
--   Per motivi legati alla progettazione, ad esempio l'opzione Usa lettere minuscole "on" e "off" ma l'etichetta per la visualizzazione Usa lettere maiuscole "On" e "Off".
--   Alcuni linguaggi potrebbe essere necessario il valore dell'opzione deve essere abbreviato per adattarla a controllo dell'interfaccia utente, mentre la completa parola (tradotta) può essere visualizzato nell'etichetta.
--   In alternativa, per alcune lingue potrebbe essere il rendering del commutatore usano "I" e "O" per acquisire familiarità con relative alla lingua, ma può comunque risultare utile l'etichetta da leggere "On" o "Off".
+- Per motivi legati alla progettazione, ad esempio l'opzione Usa lettere minuscole "on" e "off" ma l'etichetta per la visualizzazione Usa lettere maiuscole "On" e "Off".
+- Alcuni linguaggi potrebbe essere necessario il valore dell'opzione deve essere abbreviato per adattarla a controllo dell'interfaccia utente, mentre la completa parola (tradotta) può essere visualizzato nell'etichetta.
+- In alternativa, per alcune lingue potrebbe essere il rendering del commutatore usano "I" e "O" per acquisire familiarità con relative alla lingua, ma può comunque risultare utile l'etichetta da leggere "On" o "Off".
 
 ### <a name="translation-services"></a>Servizi di traduzione
 

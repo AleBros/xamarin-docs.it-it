@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 6a12d157b3de7c3841f5d69d209c01fbc612f79b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: abd9fe85be412539fd51d0e6164c79ce346377a7
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61279179"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832101"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introduzione alla funzionalità Touch 3D in xamarin. IOS
 
@@ -105,7 +105,7 @@ Questo metodo può essere chiamato prima *o successiva* `ViewDidLoad()`.
 
 ### <a name="handling-peek-and-pop"></a>Visualizza la gestione e POP
 
-In un dispositivo iOS in grado di gestire funzionalità Touch 3D, è possibile usare un'istanza del `UIViewControllerPreviewingDelegate` classe per gestire la visualizzazione dei **Peek** e **Pop** dettagli elemento. Ad esempio, se avessimo un Controller visualizzazione tabella denominata `MasterViewController ` è possibile usare il codice seguente per supportare **Peek** e **Pop**:
+In un dispositivo iOS in grado di gestire funzionalità Touch 3D, è possibile usare un'istanza del `UIViewControllerPreviewingDelegate` classe per gestire la visualizzazione dei **Peek** e **Pop** dettagli elemento. Ad esempio, se avessimo un Controller visualizzazione tabella denominata `MasterViewController` è possibile usare il codice seguente per supportare **Peek** e **Pop**:
 
 ```csharp
 using System;

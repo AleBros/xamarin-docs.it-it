@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a93de9d60a515b6089b35a64eb8832c456c96557
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 890c11908b11b18d6ca626820f1a835d817870da
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827339"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829869"
 ---
 # <a name="collection-views-in-xamarinios"></a>Visualizzazioni raccolta in xamarin. IOS
 
@@ -739,10 +739,10 @@ public override void ViewDidLoad ()
 
 Qui utilizziamo numerosi nuovi metodi aggiunti alla visualizzazione dell'insieme per implementare e controllare l'operazione di trascinamento:
 
- - `BeginInteractiveMovementForItem` -Contrassegna l'inizio di un'operazione di spostamento.
- - `UpdateInteractiveMovementTargetPosition` -Viene inviato come la posizione dell'elemento è aggiornata.
- - `EndInteractiveMovement` -Contrassegna la fine di spostamento di un elemento.
- - `CancelInteractiveMovement` : Contrassegna l'utente annulla l'operazione di spostamento.
+- `BeginInteractiveMovementForItem` -Contrassegna l'inizio di un'operazione di spostamento.
+- `UpdateInteractiveMovementTargetPosition` -Viene inviato come la posizione dell'elemento è aggiornata.
+- `EndInteractiveMovement` -Contrassegna la fine di spostamento di un elemento.
+- `CancelInteractiveMovement` : Contrassegna l'utente annulla l'operazione di spostamento.
 
 Quando l'applicazione viene eseguita, l'operazione di trascinamento funzionerà esattamente come il valore predefinito trascinare riconoscitore di movimento che viene fornito con la visualizzazione di raccolta.
 
@@ -1217,78 +1217,78 @@ Nelle sezioni seguenti, prenderemo in un quadro dettagliato le modifiche apporta
 
 Le seguenti modifiche o aggiunte sono state apportate per il `UICollectionView` classe per iOS 9:
 
- - `BeginInteractiveMovementForItem` : Contrassegna l'inizio di un'operazione di trascinamento.
- - `CancelInteractiveMovement` : Indica la raccolta Visualizza che l'utente ha annullato un'operazione di trascinamento.
- - `EndInteractiveMovement` : Indica la raccolta Visualizza che l'utente ha terminato un'operazione di trascinamento.
- - `GetIndexPathsForVisibleSupplementaryElements` : Restituisce il `indexPath` di un'intestazione o piè di pagina in una sezione di visualizzazione raccolta.
- - `GetSupplementaryView` : Restituisce l'intestazione specificata o nel piè di pagina.
- - `GetVisibleSupplementaryViews` : Restituisce un elenco di tutti i visibile intestazione e piè di pagina.
- - `UpdateInteractiveMovementTargetPosition` : Indica la raccolta Visualizza che l'utente è stato spostato o si sposta un elemento durante un'operazione di trascinamento.
+- `BeginInteractiveMovementForItem` : Contrassegna l'inizio di un'operazione di trascinamento.
+- `CancelInteractiveMovement` : Indica la raccolta Visualizza che l'utente ha annullato un'operazione di trascinamento.
+- `EndInteractiveMovement` : Indica la raccolta Visualizza che l'utente ha terminato un'operazione di trascinamento.
+- `GetIndexPathsForVisibleSupplementaryElements` : Restituisce il `indexPath` di un'intestazione o piè di pagina in una sezione di visualizzazione raccolta.
+- `GetSupplementaryView` : Restituisce l'intestazione specificata o nel piè di pagina.
+- `GetVisibleSupplementaryViews` : Restituisce un elenco di tutti i visibile intestazione e piè di pagina.
+- `UpdateInteractiveMovementTargetPosition` : Indica la raccolta Visualizza che l'utente è stato spostato o si sposta un elemento durante un'operazione di trascinamento.
 
 ### <a name="uicollectionviewcontroller"></a>UICollectionViewController
 
 Le seguenti modifiche o aggiunte sono state apportate per il `UICollectionViewController` classe in iOS 9:
 
- - `InstallsStandardGestureForInteractiveMovement` -Se `true` verrà usato il nuovo riconoscitore di movimento che supporta automaticamente-trascinare per riordinare.
- - `CanMoveItem` : Indica la visualizzazione di raccolta se un elemento specificato è possibile trascinare riordinati.
- - `GetTargetContentOffset` : Usato per ottenere l'offset di un elemento della visualizzazione raccolta specificata.
- - `GetTargetIndexPathForMove` : Ottiene il `indexPath` di un elemento specificato per un'operazione di trascinamento.
- - `MoveItem` – Sposta l'ordine di un elemento specificato nell'elenco.
+- `InstallsStandardGestureForInteractiveMovement` -Se `true` verrà usato il nuovo riconoscitore di movimento che supporta automaticamente-trascinare per riordinare.
+- `CanMoveItem` : Indica la visualizzazione di raccolta se un elemento specificato è possibile trascinare riordinati.
+- `GetTargetContentOffset` : Usato per ottenere l'offset di un elemento della visualizzazione raccolta specificata.
+- `GetTargetIndexPathForMove` : Ottiene il `indexPath` di un elemento specificato per un'operazione di trascinamento.
+- `MoveItem` – Sposta l'ordine di un elemento specificato nell'elenco.
 
 
 ### <a name="uicollectionviewdatasource"></a>UICollectionViewDataSource
 
 Le seguenti modifiche o aggiunte sono state apportate per il `UICollectionViewDataSource` classe in iOS 9:
 
- - `CanMoveItem` : Indica la visualizzazione di raccolta se un elemento specificato è possibile trascinare riordinati.
- - `MoveItem` – Sposta l'ordine di un elemento specificato nell'elenco.
+- `CanMoveItem` : Indica la visualizzazione di raccolta se un elemento specificato è possibile trascinare riordinati.
+- `MoveItem` – Sposta l'ordine di un elemento specificato nell'elenco.
 
 ### <a name="uicollectionviewdelegate"></a>UICollectionViewDelegate
 
 Le seguenti modifiche o aggiunte sono state apportate per il `UICollectionViewDelegate` classe in iOS 9:
 
- - `GetTargetContentOffset` : Usato per ottenere l'offset di un elemento della visualizzazione raccolta specificata.
- - `GetTargetIndexPathForMove` : Ottiene il `indexPath` di un elemento specificato per un'operazione di trascinamento.
+- `GetTargetContentOffset` : Usato per ottenere l'offset di un elemento della visualizzazione raccolta specificata.
+- `GetTargetIndexPathForMove` : Ottiene il `indexPath` di un elemento specificato per un'operazione di trascinamento.
 
 ### <a name="uicollectionviewflowlayout"></a>UICollectionViewFlowLayout
 
 Le seguenti modifiche o aggiunte sono state apportate per il `UICollectionViewFlowLayout` classe in iOS 9:
 
- - `SectionFootersPinToVisibleBounds` : Non riesco a dimenticare i piè di pagina di sezione per i limiti di visualizzazione raccolta visibile.
- - `SectionHeadersPinToVisibleBounds` : Non riesco a dimenticare le intestazioni di sezione per i limiti di visualizzazione raccolta visibile.
+- `SectionFootersPinToVisibleBounds` : Non riesco a dimenticare i piè di pagina di sezione per i limiti di visualizzazione raccolta visibile.
+- `SectionHeadersPinToVisibleBounds` : Non riesco a dimenticare le intestazioni di sezione per i limiti di visualizzazione raccolta visibile.
 
 ### <a name="uicollectionviewlayout"></a>UICollectionViewLayout
 
 Le seguenti modifiche o aggiunte sono state apportate per il `UICollectionViewLayout` classe in iOS 9:
 
- - `GetInvalidationContextForEndingInteractiveMovementOfItems` : Restituisce il contesto di invalidamento alla fine di un'operazione di trascinamento quando l'utente termina l'operazione di trascinamento o annullarlo.
- - `GetInvalidationContextForInteractivelyMovingItems` : Restituisce il contesto di invalidamento all'inizio di un'operazione di trascinamento.
- - `GetLayoutAttributesForInteractivelyMovingItem` : Ottiene gli attributi di Layout per un determinato elemento mentre si trascina un elemento.
- - `GetTargetIndexPathForInteractivelyMovingItem` : Restituisce il `indexPath` dell'elemento che si trova il punto specificato quando si trascina un elemento.
+- `GetInvalidationContextForEndingInteractiveMovementOfItems` : Restituisce il contesto di invalidamento alla fine di un'operazione di trascinamento quando l'utente termina l'operazione di trascinamento o annullarlo.
+- `GetInvalidationContextForInteractivelyMovingItems` : Restituisce il contesto di invalidamento all'inizio di un'operazione di trascinamento.
+- `GetLayoutAttributesForInteractivelyMovingItem` : Ottiene gli attributi di Layout per un determinato elemento mentre si trascina un elemento.
+- `GetTargetIndexPathForInteractivelyMovingItem` : Restituisce il `indexPath` dell'elemento che si trova il punto specificato quando si trascina un elemento.
 
 ### <a name="uicollectionviewlayoutattributes"></a>UICollectionViewLayoutAttributes
 
 Le seguenti modifiche o aggiunte sono state apportate per il `UICollectionViewLayoutAttributes` classe in iOS 9:
 
- - `CollisionBoundingPath` : Restituisce il percorso di collisione di due elementi durante un'operazione di trascinamento.
- - `CollisionBoundsType` : Restituisce il tipo di collisione (come un `UIDynamicItemCollisionBoundsType`) che si è verificata durante un'operazione di trascinamento.
+- `CollisionBoundingPath` : Restituisce il percorso di collisione di due elementi durante un'operazione di trascinamento.
+- `CollisionBoundsType` : Restituisce il tipo di collisione (come un `UIDynamicItemCollisionBoundsType`) che si è verificata durante un'operazione di trascinamento.
 
 ### <a name="uicollectionviewlayoutinvalidationcontext"></a>UICollectionViewLayoutInvalidationContext
 
 Le seguenti modifiche o aggiunte sono state apportate per il `UICollectionViewLayoutInvalidationContext` classe in iOS 9:
 
- - `InteractiveMovementTarget` : Restituisce l'elemento di destinazione di un'operazione di trascinamento.
- - `PreviousIndexPathsForInteractivelyMovingItems` : Restituisce il `indexPaths` di altri elementi coinvolti in un trascinare per riordinare l'operazione.
- - `TargetIndexPathsForInteractivelyMovingItems` : Restituisce il `indexPaths` degli elementi che verranno riordinati in seguito a un'operazione di trascinamento-a-riordino.
+- `InteractiveMovementTarget` : Restituisce l'elemento di destinazione di un'operazione di trascinamento.
+- `PreviousIndexPathsForInteractivelyMovingItems` : Restituisce il `indexPaths` di altri elementi coinvolti in un trascinare per riordinare l'operazione.
+- `TargetIndexPathsForInteractivelyMovingItems` : Restituisce il `indexPaths` degli elementi che verranno riordinati in seguito a un'operazione di trascinamento-a-riordino.
 
 ### <a name="uicollectionviewsource"></a>UICollectionViewSource
 
 Le seguenti modifiche o aggiunte sono state apportate per il `UICollectionViewSource` classe in iOS 9:
 
- - `CanMoveItem` : Indica la visualizzazione di raccolta se un elemento specificato è possibile trascinare riordinati.
- - `GetTargetContentOffset` : Restituisce l'offset di elementi che verranno spostati tramite un'operazione di trascinamento-a-riordino.
- - `GetTargetIndexPathForMove` : Restituisce il `indexPath` di un elemento che verrà spostato durante un'operazione di trascinamento-a-riordino.
- - `MoveItem` – Sposta l'ordine di un elemento specificato nell'elenco.
+- `CanMoveItem` : Indica la visualizzazione di raccolta se un elemento specificato è possibile trascinare riordinati.
+- `GetTargetContentOffset` : Restituisce l'offset di elementi che verranno spostati tramite un'operazione di trascinamento-a-riordino.
+- `GetTargetIndexPathForMove` : Restituisce il `indexPath` di un elemento che verrà spostato durante un'operazione di trascinamento-a-riordino.
+- `MoveItem` – Sposta l'ordine di un elemento specificato nell'elenco.
 
 ## <a name="summary"></a>Riepilogo
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 3a46b939fa87cd6535c9f86c46981c098542e7c9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a4c58139b0ddbaaedf5769eeac6585bac4c013e4
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61277976"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832117"
 ---
 # <a name="accessing-remote-data"></a>Accesso ai dati remoti
 
@@ -154,7 +154,7 @@ Questo metodo recupera i dati del catalogo dal database SQL di mediante EntityFr
 
 #### <a name="making-a-post-request"></a>Effettua una richiesta POST
 
-Il `BasketService` classe viene utilizzata per gestire il recupero di dati e processo di aggiornamento con il microservizio basket. Nel `RegisterDependencies` metodo nella `ViewModelLocator` (classe), il `BasketService` classe registrata come un mapping dei tipi rispetto il `IBasketService` tipo con il contenitore di inserimento delle dipendenze di Autofac. Quindi, quando un'istanza del `BasketViewModel` accetta il relativo costruttore di classe viene creata, un' `IBasketService` digita, che viene risolto Autofac, restituendo un'istanza del `BasketService `classe. Per altre informazioni sull'inserimento delle dipendenze, vedere [Introduzione all'inserimento delle dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
+Il `BasketService` classe viene utilizzata per gestire il recupero di dati e processo di aggiornamento con il microservizio basket. Nel `RegisterDependencies` metodo nella `ViewModelLocator` (classe), il `BasketService` classe registrata come un mapping dei tipi rispetto il `IBasketService` tipo con il contenitore di inserimento delle dipendenze di Autofac. Quindi, quando un'istanza del `BasketViewModel` accetta il relativo costruttore di classe viene creata, un' `IBasketService` digita, che viene risolto Autofac, restituendo un'istanza del `BasketService` classe. Per altre informazioni sull'inserimento delle dipendenze, vedere [Introduzione all'inserimento delle dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
 
 Figura 10-2 viene illustrata l'interazione delle classi che inviano i dati del carrello visualizzati il `BasketView`, per il microservizio basket.
 

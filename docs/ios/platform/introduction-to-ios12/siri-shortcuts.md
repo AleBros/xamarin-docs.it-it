@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: e37fd88f0d5fcf02ece0ae2f5e3164a507067e29
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 62b577393a498587ee2e2e899d20bfeec7988c4e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61034785"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832379"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Tasti di scelta rapida Siri in xamarin. IOS
 
@@ -218,7 +218,7 @@ Nel **OrderSoup** la definizione di risposta dell'intento, tenere presente quant
 - Una risposta **proprietà** può essere utilizzato per personalizzare il messaggio comunicato all'utente. Il **OrderSoup** intent risposta ha **soup** e **waitTime** proprietà.
 - Il **i modelli di risposta** specificare i vari messaggi di esito positivo e negativo che possono essere utilizzati per indicare lo stato dopo il completamento dell'attività di un intent.
 - Il **Success** casella di controllo deve essere selezionata per le risposte che indicano l'esito positivo.
- - Il **OrderSoupIntent** risposta di esito positivo viene utilizzato il **soup** e **waitTime** proprietà per fornire un messaggio descrittivo e utile che descrive quando l'ordine MINESTRONE potranno essere.
+- Il **OrderSoupIntent** risposta di esito positivo viene utilizzato il **soup** e **waitTime** proprietà per fornire un messaggio descrittivo e utile che descrive quando l'ordine MINESTRONE potranno essere.
 
 ### <a name="generating-code-for-the-custom-intent"></a>Generazione di codice per lo scopo personalizzato
 

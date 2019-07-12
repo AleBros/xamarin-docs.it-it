@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: e3256787c0bc0852275f663772b8a91a6825a0dd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a77ebd8a6c64d2ee44011e8d51977adf88b52be9
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250680"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832433"
 ---
 # <a name="getting-started-with-datapages"></a>Introduzione a DataPages
 
@@ -51,7 +51,8 @@ Nel **app. XAML** , aggiungere una classe personalizzata `xmlns:mytheme` per il 
 </Application>
 ```
 
-**IMPORTANTE:** È anche consigliabile seguire i passaggi necessari per [caricare gli assembly di tema (sotto)](#loadtheme) aggiungendo codice boilerplate per iOS `AppDelegate` e Android `MainActivity`. Questo verrà migliorato in una versione futura versione di anteprima.
+> [!IMPORTANT]
+> È anche consigliabile seguire i passaggi necessari per [caricare gli assembly di tema (sotto)](#loadtheme) aggiungendo codice boilerplate per iOS `AppDelegate` e Android `MainActivity`. Questo verrà migliorato in una versione futura versione di anteprima.
 
 
 ## <a name="3-add-a-xaml-page"></a>3. Aggiungere una pagina XAML
@@ -98,7 +99,8 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 Eliminare il `Content` elemento e sostituirlo con un `p:ListDataPage.DataSource` per popolare la pagina con i dati. Nell'esempio seguente un oggetto Json remoto i file di dati viene caricato da un URL.
 
-**Nota:** l'anteprima *richiede* un `StyleClass` attributo fornire suggerimenti per il rendering per l'origine dati. Il `StyleClass="Events"` fa riferimento a un layout in cui è già definito nell'anteprima e contiene gli stili *hardcoded* in base all'origine dei dati JSON in uso.
+> [!NOTE]
+> L'anteprima *richiede* un `StyleClass` attributo fornire suggerimenti per il rendering per l'origine dati. Il `StyleClass="Events"` fa riferimento a un layout in cui è già definito nell'anteprima e contiene gli stili *hardcoded* in base all'origine dei dati JSON in uso.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>

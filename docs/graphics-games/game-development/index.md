@@ -6,12 +6,12 @@ ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 314bedcb6bb2d7ebf9d8f98428b6a7cad059f73b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0fa4dbbf256e005fe17841f06acf1338197784b0
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382059"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832277"
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Introduzione allo sviluppo di giochi con Xamarin
 
@@ -55,9 +55,9 @@ Tenere presente che molte delle attività elencate in precedenza può modificare
 
 Contenuto manualmente il caricamento e scaricamento (o eliminazione) potrebbe essere necessari in base alla quale tecnologia si usa in fase di sviluppo. Manuale di caricamento e scaricamento di asset possono essere necessarie per una serie di motivi:
 
- - Gli asset possono richiedere molto tempo per caricare relativamente alla lunghezza di un singolo frame. Alcuni asset può anche richiedere secondi per caricare, quale risulterebbe notevolmente l'esperienza se caricato la modalità di gioco mid. Se il tempo di caricamento è particolarmente lungo (ad esempio più di uno o due secondi) desiderato visualizzare una schermata o indicatori di stato di caricamento.
- - Asset possono utilizzare una grande quantità di RAM, che richiedono la gestione attiva della cosa viene caricato in modo da adattarlo quello fornito dalle piattaforme di destinazione del gioco.
- - Giochi potrebbe essere necessario visualizzare più asset di quanto possono adattarsi alla memoria RAM. Giochi "Apri World" includono spesso ambienti di grandi dimensioni, quali i lettori possono spostarsi senza problemi: si tratta delle schermate alcun caricamento. In questo caso occorre creare un sistema personalizzato per il contenuto in streaming e la gestione dell'utilizzo della memoria.
+- Gli asset possono richiedere molto tempo per caricare relativamente alla lunghezza di un singolo frame. Alcuni asset può anche richiedere secondi per caricare, quale risulterebbe notevolmente l'esperienza se caricato la modalità di gioco mid. Se il tempo di caricamento è particolarmente lungo (ad esempio più di uno o due secondi) desiderato visualizzare una schermata o indicatori di stato di caricamento.
+- Asset possono utilizzare una grande quantità di RAM, che richiedono la gestione attiva della cosa viene caricato in modo da adattarlo quello fornito dalle piattaforme di destinazione del gioco.
+- Giochi potrebbe essere necessario visualizzare più asset di quanto possono adattarsi alla memoria RAM. Giochi "Apri World" includono spesso ambienti di grandi dimensioni, quali i lettori possono spostarsi senza problemi: si tratta delle schermate alcun caricamento. In questo caso occorre creare un sistema personalizzato per il contenuto in streaming e la gestione dell'utilizzo della memoria.
 
 Formati di file personalizzato potrebbe essere necessario l'elaborazione in fase di caricamento, che richiedono il caricamento personalizzato codice.
 
@@ -109,25 +109,11 @@ Per rieseguire giochi esistenti è anche un'esperienza di apprendimento, anche s
 
 Gli sviluppatori che usano xamarin. Android e xamarin. IOS hanno una vasta gamma di tecnologie disponibili per facilitare lo sviluppo di giochi. In questa sezione verrà illustrate alcune delle più diffuse soluzioni multipiattaforma.
 
-### <a name="cocossharp"></a>CocosSharp
-
-CocosSharp è una versione open source e multipiattaforma del motore di gioco 2D Cocos. Il modulo di gestione fornisce l'accesso per Android, iOS, Mac OS X, Windows Desktop, Windows RT e Windows Phone.
-
-CocosSharp è incentrato su un programmatore semplice API per lo sviluppo di giochi 2D. L'aumento delle dimensioni in modalità di gioco sui dispositivi mobili ha contribuito a reignite la popolarità di sviluppo di giochi 2D rendendo CocosSharp tecnologia produttiva per progetti commerciali simili e hobby. Viene fornito come file di codice o con estensione DLL di origine (che possono essere ottenuti tramite NuGet), ma non offre un editor visivo; Pertanto, qualsiasi interazione con il motore di CocosSharp richiede una conoscenza della programmazione.
-
-Per iniziare a usare CocosSharp, consultare il [Guide CocosSharp](~/graphics-games/cocossharp/index.md).
-
-Il gioco Ninjas pecora viene creato con CocosSharp e può essere un buon punto di partenza se si sta cercando un gioco già in esecuzione per più piattaforme:
-
-![](images/image3.png "Il gioco Ninjas pecora è stato creato con CocosSharp")
-
-È possibile scaricarlo e ottenere altre informazioni, vedere la [pagina AngryNinjas Github](https://github.com/xamarin/AngryNinjas).
-
 ### <a name="monogame"></a>MonoGame
 
 MonoGame è un open-source, multipiattaforma versione della piattaforma dell'API di Microsoft XNA. MonoGame è utilizzabile per creare giochi per iOS, Android, Mac OS X, Linux, Windows, Windows RT, PS4, PSVita, Xbox One e commutatore.
 
-A differenza di CocosSharp, MonoGame è tecnicamente non un motore gioco, ma piuttosto un sviluppo di giochi API. Ciò significa che l'utilizzo con MonoGame richiede direttamente la gestione degli oggetti giochi manualmente oggetti disegno e implementazione di oggetti comuni quali fotocamere e *grafici scena* (gerarchia padre-figlio tra gli oggetti gioco). Per comprendere la differenza, prendere in considerazione che CocosSharp si basa su MonoGame. MonoGame generalizza alcune delle tecnologie specifiche della piattaforma, ad esempio grafici, rendering e audio, mentre CocosSharp fornisce il codice per l'organizzazione e implementazione della logica del gioco.
+MonoGame è tecnicamente non un motore gioco, ma piuttosto un sviluppo di giochi API. Ciò significa che l'utilizzo con MonoGame richiede direttamente la gestione degli oggetti giochi manualmente oggetti disegno e implementazione di oggetti comuni quali fotocamere e *grafici scena* (gerarchia padre-figlio tra gli oggetti gioco).
 
 MonoGame non offre un ambiente di sviluppo visivo standard, in modo che l'utilizzo con MonoGame richiede la conoscenza di programmazione.
 
@@ -161,6 +147,5 @@ Le tecnologie evidenziate sopra è solo un esempio delle tecnologie disponibili.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Guide di CocosSharp](~/graphics-games/cocossharp/index.md)
 - [Guide MonoGame](~/graphics-games/monogame/index.md)
 - [Guide di UrhoSharp](~/graphics-games/urhosharp/index.md)

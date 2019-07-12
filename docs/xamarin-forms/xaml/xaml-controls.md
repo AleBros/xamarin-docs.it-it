@@ -7,19 +7,19 @@ ms.assetid: 639BD392-1496-41BB-BB09-7652273AC9D8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/03/2019
-ms.openlocfilehash: 8217c6436cc8cfe8f4b9c6cc3445157319e8c0bf
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.date: 07/10/2019
+ms.openlocfilehash: dc903cf4ff8eaced18df3271e5e4dbdde6845b6a
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741107"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832627"
 ---
 # <a name="xaml-controls"></a>Controlli XAML
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 
-Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio i dispositivi di scorrimento che sono comunemente noti come, pulsanti ed etichette *controlli* oppure *widget* in altri ambienti di programmazione grafiche. Le visualizzazioni supportate da xamarin. Forms derivano da tutte le [ `View` ](xref:Xamarin.Forms.View) classe.
+Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio i dispositivi di scorrimento che sono comunemente noti come, pulsanti ed etichette *controlli* oppure *widget* in altri ambienti di programmazione grafiche. Le visualizzazioni supportate da xamarin. Forms derivano da tutte le [`View`](xref:Xamarin.Forms.View) classe.
 
 Tutte le viste definite in xamarin. Forms possono farvi riferimento dai file XAML.
 
@@ -47,9 +47,10 @@ Tutte le viste definite in xamarin. Forms possono farvi riferimento dai file XAM
 
 |     |     |
 | --- | --- |
+| <h3>CheckBox</h3>Consente di selezionare un `boolean` valore.<p align="center">![Screenshot di un controllo CheckBox](xaml-controls-images/CheckBox.png "casella di controllo")</p> [Guida](~/xamarin-forms/user-interface/checkbox.md) | <p valign="center"><pre>&lt;CheckBox IsChecked="true"<br />          HorizontalOptions="Center"<br />          VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>Slider</h3>Consente di selezionare un `double` valore dall'intervallo continuo.<p align="center">![Screenshot di un dispositivo di scorrimento](xaml-controls-images/Slider.png "dispositivo di scorrimento")</p>[API](xref:Xamarin.Forms.Slider) / [Guida](~/xamarin-forms/user-interface/slider.md) | <p valign="center"><pre>&lt;Slider Minimum="0"<br />        Maximum="100"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>Gestore di istruzioni</h3>Consente di selezionare un `double` valore da un intervallo incrementale.<p align="center">![Screenshot di un gestore di istruzioni](xaml-controls-images/Stepper.png "gestore di istruzioni")</p>[API](xref:Xamarin.Forms.Stepper) / [Guida](~/xamarin-forms/user-interface/stepper.md) | <p valign="center"><pre>&lt;Stepper Minimum="0"<br />         Maximum="10"<br />         Increment="0.1"<br />         HorizontalOptions="Center"<br />         VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
-| <h3>Opzione</h3>Consente di selezionare un `boolean` valore.<p align="center">![Screenshot di un commutatore](xaml-controls-images/Switch.png "commutatore")</p>[API](xref:Xamarin.Forms.Switch) | <p valign="center"><pre>&lt;Switch IsToggled="false"<br />        HorizontalOptions="Center"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
+| <h3>Opzione</h3>Consente di selezionare un `boolean` valore.<p align="center">![Screenshot di un commutatore](xaml-controls-images/Switch.png "commutatore")</p>[API](xref:Xamarin.Forms.Switch) / [Guida](~/xamarin-forms/user-interface/switch.md)| <p valign="center"><pre>&lt;Switch IsToggled="false"<br />        HorizontalOptions="Center"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>DatePicker</h3>Consente di selezionare una data.<p align="center">![Screenshot di un controllo DatePicker](xaml-controls-images/DatePicker.png "DatePicker")</p>[API](xref:Xamarin.Forms.DatePicker) / [Guida](~/xamarin-forms/user-interface/datepicker.md) | <p valign="center"><pre>&lt;DatePicker Format="D"<br/>            VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>TimePicker</h3>Consente di selezionare un'ora.<p align="center">![Screenshot di un controllo TimePicker](xaml-controls-images/TimePicker.png "TimePicker")</p>[API](xref:Xamarin.Forms.TimePicker) / [Guida](~/xamarin-forms/user-interface/timepicker.md) | <p valign="center"><pre>&lt;TimePicker Format="T"<br />            VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 |     |     |

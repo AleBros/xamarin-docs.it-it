@@ -6,12 +6,12 @@ ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 2bd68def0a29d4bb94f8cc66c8cbfa00add1700d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2def0a01bdd28af5eefb76afc19a0e49fd1df355
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60948155"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831558"
 ---
 # <a name="inspecting-live-applications"></a>Ispezione delle applicazioni in tempo reale
 
@@ -46,8 +46,8 @@ Sono molto utili anche l'albero elementi visivi attivi. Rappresenta lo snapshot 
 
 ## <a name="known-limitations"></a>Limitazioni note
 
- - Selezione della visualizzazione è supportata solo sullo schermo principale.
- - La modifica della griglia delle proprietà non è disponibile per Mac e in Windows è limitata per alcuni tipi di dati. Usare la replica per la modifica più potente.
- - Purché l'estensione o un componente aggiuntivo di Inspector è installata e abilitata nell'IDE, si inseriscono codice nell'app ogni volta che viene avviato in modalità di Debug. Se si nota un comportamento strano nell'app,, provare a disattivare o disinstallazione di Inspector addin/estensione, riavviare l'IDE e Ricontrollando le. E. [Segnala bug nei file](~/tools/inspector/install.md#reporting-bugs) per farci sapere!
- - Esaminare un elemento dell'interfaccia utente comporta un cambiamento ogni caso, consultare [segnalarlo](~/tools/inspector/install.md#reporting-bugs), come questo può indicare un bug.
+- Selezione della visualizzazione è supportata solo sullo schermo principale.
+- La modifica della griglia delle proprietà non è disponibile per Mac e in Windows è limitata per alcuni tipi di dati. Usare la replica per la modifica più potente.
+- Purché l'estensione o un componente aggiuntivo di Inspector è installata e abilitata nell'IDE, si inseriscono codice nell'app ogni volta che viene avviato in modalità di Debug. Se si nota un comportamento strano nell'app,, provare a disattivare o disinstallazione di Inspector addin/estensione, riavviare l'IDE e Ricontrollando le. E. [Segnala bug nei file](~/tools/inspector/install.md#reporting-bugs) per farci sapere!
+- Esaminare un elemento dell'interfaccia utente comporta un cambiamento ogni caso, consultare [segnalarlo](~/tools/inspector/install.md#reporting-bugs), come questo può indicare un bug.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: b853bd3bc55a2d4cb613a9f0079aebae9f57027b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a3a8872ae54d7b1efb55ee71286ca5ea479616e0
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61357042"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830159"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Ricerca con NSUserActivity in xamarin. IOS
 
@@ -27,14 +27,14 @@ Se l'utente seleziona un risultato di ricerca che appartiene a un'attività dall
 
 Le proprietà seguenti di `NSUserActivity` vengono utilizzati per supportare la ricerca di App:
 
- - `EligibleForHandoff` -Se `true`, questa attività può essere utilizzata in un'operazione di passaggio di consegne.
- - `EligibleForSearch` -Se `true`, questa attività verrà aggiunta all'indice sul dispositivo e verrà visualizzata nei risultati della ricerca.
- - `EligibleForPublicIndexing` -Se `true`, questa attività verrà aggiunta all'indice basato sul cloud di Apple e verrà visualizzata agli utenti (tramite la ricerca) che non è installato l'app nel proprio dispositivo iOS. Vedere la [indicizzazione della ricerca pubblico](#public-search-indexing) sezione di seguito per altri dettagli.
- - `Title` : Fornisce un titolo per l'attività e viene visualizzato nei risultati della ricerca. Gli utenti possono inoltre cercare il testo del titolo della stessa.
- - `Keywords` – È una matrice di stringhe utilizzato per descrivere l'attività che verrà indicizzato e rese disponibili per la ricerca dall'utente finale.
- - `ContentAttributeSet` – È un `CSSearchableItemAttributeSet` usato per un'ulteriore descrivono in dettaglio le attività e fornire contenuto avanzato nei risultati della ricerca.
- - `ExpirationDate` : Se si desidera un'attività da visualizzare solo per una determinata data, è possibile fornire qui tale data.
- - `WebpageURL` -Se l'attività può essere visualizzato nel web o se l'app supporta collegamenti diretti di Safari, è possibile impostare il collegamento a visitare questa pagina.
+- `EligibleForHandoff` -Se `true`, questa attività può essere utilizzata in un'operazione di passaggio di consegne.
+- `EligibleForSearch` -Se `true`, questa attività verrà aggiunta all'indice sul dispositivo e verrà visualizzata nei risultati della ricerca.
+- `EligibleForPublicIndexing` -Se `true`, questa attività verrà aggiunta all'indice basato sul cloud di Apple e verrà visualizzata agli utenti (tramite la ricerca) che non è installato l'app nel proprio dispositivo iOS. Vedere la [indicizzazione della ricerca pubblico](#public-search-indexing) sezione di seguito per altri dettagli.
+- `Title` : Fornisce un titolo per l'attività e viene visualizzato nei risultati della ricerca. Gli utenti possono inoltre cercare il testo del titolo della stessa.
+- `Keywords` – È una matrice di stringhe utilizzato per descrivere l'attività che verrà indicizzato e rese disponibili per la ricerca dall'utente finale.
+- `ContentAttributeSet` – È un `CSSearchableItemAttributeSet` usato per un'ulteriore descrivono in dettaglio le attività e fornire contenuto avanzato nei risultati della ricerca.
+- `ExpirationDate` : Se si desidera un'attività da visualizzare solo per una determinata data, è possibile fornire qui tale data.
+- `WebpageURL` -Se l'attività può essere visualizzato nel web o se l'app supporta collegamenti diretti di Safari, è possibile impostare il collegamento a visitare questa pagina.
 
 ## <a name="nsuseractivity-quickstart"></a>NSUserActivity Quickstart
 

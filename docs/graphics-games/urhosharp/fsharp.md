@@ -6,12 +6,12 @@ ms.assetid: F976AB09-0697-4408-999A-633977FEFF64
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 99e8f8bf04465d0d61086139ba9889eae141207e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6269a7f2fa097136f492657d0ba7c6a1f056c38c
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61160596"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832325"
 ---
 # <a name="programming-urhosharp-with-f"></a>Programmazione di UrhoSharp conF#
 
@@ -97,20 +97,13 @@ type AppDelegate () =
         true
 ```
 
-Il `ApplicationOptions.Default` fornisce le opzioni predefinite per un'applicazione in modalità orizzontale. Passarli `ApplicationOptions` al costruttore predefinito per il `Application` sottoclasse (si noti che al momento della definizione di `HelloWorld` classe, la riga `inherit Application(o)` chiama il costruttore di classe di base). 
+Il `ApplicationOptions.Default` fornisce le opzioni predefinite per un'applicazione in modalità orizzontale. Passarli `ApplicationOptions` al costruttore predefinito per il `Application` sottoclasse (si noti che al momento della definizione di `HelloWorld` classe, la riga `inherit Application(o)` chiama il costruttore di classe di base).
 
-Il `Run` metodo di `Application` avvia il programma. Viene definito come restituzione di un `int`, che può essere inviato tramite pipe a `ignore`. 
+Il `Run` metodo di `Application` avvia il programma. Viene definito come restituzione di un `int`, che può essere inviato tramite pipe a `ignore`.
 
-Il programma risulta dovrebbe essere simile:
+Il programma risulta dovrebbe essere simile allo screenshot:
 
-![](fsharp-images/helloworldfsharp.png "Il programma risulta dovrebbe essere simile")
-
-
-
-
-
-
-
+![Screenshot del programma risulta](fsharp-images/helloworldfsharp.png)
 
 ## <a name="related-links"></a>Collegamenti correlati
 

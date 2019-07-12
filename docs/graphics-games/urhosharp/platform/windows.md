@@ -6,12 +6,12 @@ ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 471029375d8a61a6c48d94a66d7836807e0da22f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 46a028da577a4c49e18cccb681351d7614bb196b
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61386318"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832648"
 ---
 # <a name="urhosharp-windows-support"></a>Supporto di Windows di UrhoSharp
 
@@ -97,33 +97,33 @@ Creare un progetto UWP, fare riferimento a Urho NuGet e quindi assicurarsi che s
 Creare una sottoclasse di `Window` e configurare gli asset simile al seguente:
 
 ```csharp
-{
-            InitializeComponent();
-            GameTypes = typeof(Sample).GetTypeInfo().Assembly.GetTypes()
-                .Where(t => t.GetTypeInfo().IsSubclassOf(typeof(Application)) && t != typeof(Sample))
-                .Select((t, i) => new TypeInfo(t, $"{i + 1}. {t.Name}", ""))
-                .ToArray();
-            DataContext = this;
-            Loaded += (s, e) => RunGame (new MyGame ());
-        }
-
-        public void RunGame(TypeInfo value)
-        {
-            //at this moment, UWP supports assets only in pak files (see PackageTool)
-            currentApplication = UrhoSurface.Run(value.Type, "Data.pak");
-        }
+    {
+        InitializeComponent();
+        GameTypes = typeof(Sample).GetTypeInfo().Assembly.GetTypes()
+            .Where(t => t.GetTypeInfo().IsSubclassOf(typeof(Application)) && t != typeof(Sample))
+            .Select((t, i) => new TypeInfo(t, $"{i + 1}. {t.Name}", ""))
+            .ToArray();
+        DataContext = this;
+        Loaded += (s, e) => RunGame (new MyGame ());
     }
+
+    public void RunGame(TypeInfo value)
+    {
+        //at this moment, UWP supports assets only in pak files (see PackageTool)
+        currentApplication = UrhoSurface.Run(value.Type, "Data.pak");
+    }
+}
 ```
 
 ### <a name="example"></a>Esempio
 
 [Esempio completo](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/UWP)
 
-## <a name="integrated-with-windowsforms"></a>Integrato con Windows. Forms
+## <a name="integrated-with-windows-forms"></a>Integrato con Windows Form
 
 ### <a name="creating-a-project"></a>Creazione di un progetto
 
-Creare un progetto di Windows. Forms, fanno riferimento a Urho NuGet e quindi assicurarsi che sia possibile individuare gli asset (la directory che contiene la directory dati).
+Creare un progetto Windows Form, fare riferimento a Urho NuGet e quindi assicurarsi che sia possibile individuare gli asset (la directory che contiene la directory dati).
 
 ### <a name="configuring-and-launching-urho-from-windowsforms"></a>Configurando e avviando Urho da Windows. Forms
 

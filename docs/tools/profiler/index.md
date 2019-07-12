@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: 327070f723aabf8d5d07f4f86580b69ffb5917a7
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: d80363cd339d5d3177ae063df2a20d7938f59169
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675289"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832393"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -67,7 +67,7 @@ Attualmente, il Profiler Xamarin è utilizzabile per testare le app xamarin. And
 
 Supporto per il Profiler Xamarin è disponibile nelle piattaforme seguenti:
 
- - Visual Studio per Mac (con licenza Enterprise, macOS)
+- Visual Studio per Mac (con licenza Enterprise, macOS)
     - Android
         - Dispositivo e l'emulatore
     - iOS
@@ -76,7 +76,7 @@ Supporto per il Profiler Xamarin è disponibile nelle piattaforme seguenti:
         - Dispositivo e del simulatore
     - Mac
 
- - Visual Studio (solo **Enterprise** versione)
+- Visual Studio (solo **Enterprise** versione)
     - Android
         - Dispositivo e l'emulatore
     - iOS [sperimentale]
@@ -94,7 +94,7 @@ In questa sezione vengono illustrate le parti del Profiler Xamarin e indirizzate
 
 Prima è stato possibile profilare l'app, è necessario consentire la profilatura nelle opzioni di progetto dell'app.
 
- - iOS:
+- iOS:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -110,7 +110,7 @@ Prima è stato possibile profilare l'app, è necessario consentire la profilatur
 
 -----
 
- - Android:
+- Android:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -216,7 +216,7 @@ Nella parte superiore del profiler è il grafico di allocazioni, che consente di
 
 Sono disponibili viste di dati diverso nell'atto di allocazioni, che consentono agli sviluppatori di analizzare come le applicazioni vengono usando e liberare la memoria. Queste viste sono descritti di seguito:
 
- -   **Le allocazioni** : consente di visualizzare un elenco di tutte le allocazioni e li raggruppa in base al nome di classe. Ciò offre una panoramica completa di classi e metodi in uso, con quale frequenza vengono usati e le dimensioni collettive delle classi usate. Facendo doppio clic su una classe mostrerà la memoria allocata: 
+- **Le allocazioni** : consente di visualizzare un elenco di tutte le allocazioni e li raggruppa in base al nome di classe. Ciò offre una panoramica completa di classi e metodi in uso, con quale frequenza vengono usati e le dimensioni collettive delle classi usate. Facendo doppio clic su una classe mostrerà la memoria allocata: 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -230,7 +230,7 @@ Sono disponibili viste di dati diverso nell'atto di allocazioni, che consentono 
 
 La vista di controllo per le allocazioni fornisce opzioni per il filtro e raggruppamento di oggetti, che fornisce le statistiche di memoria allocata e i principali allocazioni, nonché le visualizzazioni per analisi dello Stack e il percorso radice.
 
- -   **Albero delle chiamate** – consente di visualizzare l'intera struttura delle chiamate di tutti i thread nell'applicazione e include informazioni sulla quantità di memoria allocato in ogni nodo. Quando viene selezionato un elemento nell'elenco, tutti i nodi di pari livello verranno visualizzati in grigio. È possibile espandere l'albero o doppio clic sull'elemento per il drill-down al suo interno. Quando si visualizzano questa vista dati, la visualizzazione di controllo di impostazioni è utilizzabile per modificare il modo in cui che viene presentato. Attualmente sono disponibili due opzioni:
+- **Albero delle chiamate** – consente di visualizzare l'intera struttura delle chiamate di tutti i thread nell'applicazione e include informazioni sulla quantità di memoria allocato in ogni nodo. Quando viene selezionato un elemento nell'elenco, tutti i nodi di pari livello verranno visualizzati in grigio. È possibile espandere l'albero o doppio clic sull'elemento per il drill-down al suo interno. Quando si visualizzano questa vista dati, la visualizzazione di controllo di impostazioni è utilizzabile per modificare il modo in cui che viene presentato. Attualmente sono disponibili due opzioni:
     1.  **Albero delle chiamate invertito** – ciò prende in considerazione l'analisi dello stack dall'alto verso il basso. Questa è un'opzione comoda visualizzazione poiché indica i metodi più in basso in cui la CPU ha stato trascorre il tempo.
     2.  **Separato da thread** : questa opzione consente di organizzare l'albero delle chiamate dal thread.
 
@@ -244,7 +244,7 @@ La vista di controllo per le allocazioni fornisce opzioni per il filtro e raggru
 
 -----
 
- -   **Gli snapshot** : questo riquadro vengono visualizzate informazioni sugli snapshot di memoria. Per generare questi criteri durante la profilatura di un'applicazione in tempo reale, scegliere il _fotocamera_ pulsante sulla barra degli strumenti in ogni punto che si desidera vedere quali memoria viene mantenuta e rilasciata. È quindi possibile fare clic su ogni snapshot per esaminare ciò che accade dietro le quinte. Si noti che gli snapshot possono essere eseguiti solo quando è attiva la profilatura di un'app. 
+- **Gli snapshot** : questo riquadro vengono visualizzate informazioni sugli snapshot di memoria. Per generare questi criteri durante la profilatura di un'applicazione in tempo reale, scegliere il _fotocamera_ pulsante sulla barra degli strumenti in ogni punto che si desidera vedere quali memoria viene mantenuta e rilasciata. È quindi possibile fare clic su ogni snapshot per esaminare ciò che accade dietro le quinte. Si noti che gli snapshot possono essere eseguiti solo quando è attiva la profilatura di un'app. 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
-ms.openlocfilehash: 13fd84d8e23c18606696532b1c6e8db301b52f3c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cb8aabb3649da3818c1b020508b78a03f513963b
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218489"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830688"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Installazione e uso watchOS in Xamarin
 
@@ -144,7 +144,7 @@ Un progetto che include un'app viene compilato come altri progetti iOS. Il proce
 
 Sono disponibili due modalità per l'avvio di un'app WatchKit:
 
- - modalità app normale (impostazione predefinita), e
+- modalità app normale (impostazione predefinita), e
 - [Le notifiche](~/ios/watchos/platform/notifications.md) (che richiede un payload di notifica di test in formato JSON).
 
 ### <a name="xcode-8-support"></a>Supporto per Xcode 8
@@ -178,8 +178,9 @@ Per impostazione predefinita un'app viene avviata in modalità normale **app** m
 
 Quando si usa Xcode 6, solo l'iPhone 5, 5S iPhone, iPhone 6 e iPhone 6 Plus possono attivare il monitor esterno per uno **Apple Watch - 38mm** oppure **Apple Watch - 42mm** in cui le applicazioni di espressioni di controllo sarà visualizzato.
 
-**Nota:** Tenere presente che le espressioni di controllo non viene automaticamente visualizzata nel simulatore iOS quando si usa Xcode 6.
-Usare la **Hardware > Visualizza esterno** menu per visualizzare la schermata di espressioni di controllo.
+> [!NOTE]
+> Tenere presente che le espressioni di controllo non viene automaticamente visualizzata nel simulatore iOS quando si usa Xcode 6.
+> Usare la **Hardware > Visualizza esterno** menu per visualizzare la schermata di espressioni di controllo.
 
 <a name="custommodes" />
 
@@ -212,8 +213,8 @@ Il debug è supportato in Visual Studio per Mac e Visual Studio.
 
 ![](installation-images/debug-sml.png "In questo screenshot appare un punto di interruzione di debug che colpiscono in un'app watch")
 
-Dopo aver seguito le istruzioni di avvio finirà con l'app watch in esecuzione sul **iOS Simulator (Guarda)**.
-Per la modalità di notifica è possibile selezionare **Debug > Apri Log di sistema** (**CMD + /**) e usare `Console.WriteLine` nel codice.
+Dopo aver seguito le istruzioni di avvio finirà con l'app watch in esecuzione sul **iOS Simulator (Guarda)** .
+Per la modalità di notifica è possibile selezionare **Debug > Apri Log di sistema** (**CMD + /** ) e usare `Console.WriteLine` nel codice.
 
 ### <a name="debugging-lifecycle-event-handlers"></a>I gestori eventi del ciclo di vita di debug
 

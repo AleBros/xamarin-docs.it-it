@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: d59cac9403a244ce553d84e0590b8a9c3d4d2f30
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 78646a0a420820218a8c61ea34ecc5db4438a91d
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61365879"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832733"
 ---
 # <a name="photokit-in-xamarinios"></a>PhotoKit in xamarin. IOS
 
@@ -71,9 +71,9 @@ Questo è il modo gestire l'esecuzione di query e la lettura dei dati. È anche 
     
 Per scrivere effettivamente le modifiche nuovamente dall'applicazione, si crea una richiesta di modifica. Ognuna delle classi del modello a dispone di una classe richiesta di modifica associata. Per modificare un PHAsset, ad esempio, si crea un PHAssetChangeRequest. I passaggi per eseguire modifiche di writeback per la raccolta di foto e inviate agli Observer, come quello riportato sopra sono:
 
--   Eseguire l'operazione di modifica.
--   Salvare i dati dell'immagine filtrato a un'istanza di PHContentEditingOutput.
--   Effettuare una richiesta di modifica per pubblicare il modulo di modifica l'output di modifica.
+- Eseguire l'operazione di modifica.
+- Salvare i dati dell'immagine filtrato a un'istanza di PHContentEditingOutput.
+- Effettuare una richiesta di modifica per pubblicare il modulo di modifica l'output di modifica.
 
 Di seguito è riportato un esempio che esegue il writeback di una modifica di un'immagine che viene applicato un filtro di asiatici immagine Core:
 

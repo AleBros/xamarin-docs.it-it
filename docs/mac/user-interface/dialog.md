@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 329984d44318b2204f2f5ee253402eb158c85b9f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a3bb6674baed293f95eb50fbca5792b288aa9239
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61283465"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832511"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Finestre di dialogo in xamarin. Mac
 
@@ -413,7 +413,7 @@ Se è eseguire l'applicazione e aprire la finestra, si verrà collegato alla fin
 
 ## <a name="creating-a-preferences-dialog"></a>Creazione di una finestra di dialogo Preferenze
 
-Prima è il layout di visualizzazione delle preferenze in Interface Builder, è necessario aggiungere un tipo di elemento segue personalizzata per gestire le preferenze per la disattivazione. Aggiungere una nuova classe al progetto e denominarlo `ReplaceViewSeque `. Modificare la classe e renderlo simile al seguente:
+Prima è il layout di visualizzazione delle preferenze in Interface Builder, è necessario aggiungere un tipo di elemento segue personalizzata per gestire le preferenze per la disattivazione. Aggiungere una nuova classe al progetto e denominarlo `ReplaceViewSeque`. Modificare la classe e renderlo simile al seguente:
 
 ```csharp
 using System;

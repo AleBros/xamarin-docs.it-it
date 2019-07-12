@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 9deb685c92092ceb0e1c775a1e53ac1bce5a4a57
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fbb4047b95fd70f829cd79e4ea26b2958273297
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61299980"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831171"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introduzione allo sviluppo di App aziendali
 
@@ -72,7 +72,7 @@ L'applicazione di esempio sono disponibili tre App client:
 -   Un applicazione a pagina singola (SPA) sviluppato con Typescript e Angular 2. Questo approccio per le applicazioni web consente di evitare l'esecuzione di un round trip al server con ogni operazione.
 -   Un'app per dispositivi mobili sviluppate con xamarin. Forms, che supporta iOS, Android e Universal Windows Platform (UWP).
 
-Per informazioni sulle applicazioni web, vedere [Architecting e lo sviluppo di applicazioni Web moderne con ASP.NET Core e Microsoft Azure](http://aka.ms/WebAppEbook).
+Per informazioni sulle applicazioni web, vedere [Architecting e lo sviluppo di applicazioni Web moderne con ASP.NET Core e Microsoft Azure](https://aka.ms/WebAppEbook).
 
 L'applicazione di esempio include i seguenti servizi di back-end:
 
@@ -119,7 +119,7 @@ Inoltre, gli unit test vengono forniti per alcune delle classi nell'app per disp
 
 La soluzione di app per dispositivi mobili di eShopOnContainers consente di organizzare il codice sorgente e altre risorse in progetti. Tutti i progetti utilizzare cartelle per organizzare il codice sorgente e altre risorse in categorie. Nella tabella seguente vengono illustrati i progetti che costituiscono l'app per dispositivi mobili di eShopOnContainers:
 
-|Progetto|Descrizione|
+|Progetto|DESCRIZIONE|
 |--- |--- |
 |eShopOnContainers.Core|Questo progetto è il progetto di libreria (PCL) di classi portabile che contiene il codice condiviso e l'interfaccia utente condivisa.|
 |eShopOnContainers.Droid|Questo progetto contiene codice specifico di Android ed è il punto di ingresso per l'app Android.|
@@ -147,7 +147,7 @@ Il progetto di libreria di classi Portabile eShopOnContainers.Core contiene le c
 |Estensioni|Contiene metodi di estensione per il `VisualElement` e `IEnumerable` classi.|
 |Helper|Contiene le classi helper per l'app.|
 |Modelli|Contiene le classi di modello per l'app.|
-|Proprietà|Contiene `AssemblyInfo.cs`, un file di metadati di assembly .NET.|
+|Properties|Contiene `AssemblyInfo.cs`, un file di metadati di assembly .NET.|
 |Servizi|Contiene le interfacce e classi che implementano i servizi forniti all'app.|
 |Trigger|Contiene il `BeginAnimation` trigger, che viene utilizzato per richiamare un'animazione in XAML.|
 |Convalide|Contiene le classi coinvolte nella convalida dell'input di dati.|

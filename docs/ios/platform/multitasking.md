@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 6a9c66720aeb97c5b894cbea42c6cc0c5285c67d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 888e00fbdbf30b5b2842bc30822a55f57372eb34
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978620"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831819"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitasking per iPad in xamarin. IOS
 
@@ -48,10 +48,10 @@ Questo articolo illustra i passaggi necessari per garantire che l'app xamarin. I
 
 Per supportare **far scorrere tramite** oppure **doppia visualizzazione** l'app deve eseguire le operazioni seguenti:
 
- - Per la generazione iOS 9 (o versione successiva).
- - Utilizzare uno Storyboard per la schermata di avvio (e non gli asset delle immagini).
- - Utilizzare uno Storyboard con layout automatico e le classi di dimensioni per la relativa interfaccia utente.
- - Supporta tutti i 4 iOS orientamenti del dispositivo (verticale, verticale capovolto, orizzontale sinistra e destra orizzontale).
+- Per la generazione iOS 9 (o versione successiva).
+- Utilizzare uno Storyboard per la schermata di avvio (e non gli asset delle immagini).
+- Utilizzare uno Storyboard con layout automatico e le classi di dimensioni per la relativa interfaccia utente.
+- Supporta tutti i 4 iOS orientamenti del dispositivo (verticale, verticale capovolto, orizzontale sinistra e destra orizzontale).
 
 <a name="Multitasking" />
 
@@ -242,9 +242,9 @@ Nella maggior parte dei casi, l'app deve consentire all'utente per riprodurre co
 
 Per rifiutare esplicitamente la riproduzione di video di PIP, eseguire le operazioni seguenti nell'app:
 
- - Se si usa un' `AVPlayerViewController` per visualizzare video, impostare il `AllowsPictureInPicturePlayback` proprietà `false`.
- - Se si usa la `AVPlayerLayer` per visualizzare video, non creare un'istanza di un `AVPictureInPictureController`.
- - Se si usa un' `WKWebView` per visualizzare video, impostare il `AllowsPictureInPictureMediaPlayback` proprietà `false`.
+- Se si usa un' `AVPlayerViewController` per visualizzare video, impostare il `AllowsPictureInPicturePlayback` proprietà `false`.
+- Se si usa la `AVPlayerLayer` per visualizzare video, non creare un'istanza di un `AVPictureInPictureController`.
+- Se si usa un' `WKWebView` per visualizzare video, impostare il `AllowsPictureInPictureMediaPlayback` proprietà `false`.
 
 <a name="Summary" />
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 4ee07e4b47ed9e1bdca0efc814ad44e513f68e80
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a9cf3dab9c112bf7ff99cbc0dd9541c3c1e35142
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61076578"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830131"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Ricerca con Markup Web in xamarin. IOS
 
@@ -158,14 +158,14 @@ Di seguito illustra un esempio dei metadati dal sito Web che fornisce i risultat
 
 Apple supporta attualmente i seguenti tipi di schema schema.org:
 
- - AggregateRating
- - ImageObject
- - InteractionCount
- - Offerte
- - Organizzazione
- - PriceRange
- - File recipe
- - SearchAction
+- AggregateRating
+- ImageObject
+- InteractionCount
+- Offerte
+- Organizzazione
+- PriceRange
+- File recipe
+- SearchAction
 
 Per altre informazioni su questi tipi di schema, vedere [schema.org](http://schema.org).
 
@@ -173,9 +173,9 @@ Per altre informazioni su questi tipi di schema, vedere [schema.org](http://sche
 
 Tipi specifici di dati strutturati consentirà un risultato della ricerca per essere utilizzabili dall'utente finale. Attualmente sono supportate le azioni seguenti:
 
- - Comporre il numero di telefono.
- - Ottiene la direzione della mappa su un determinato indirizzo.
- - Riproduzione di un file audio o video.
+- Comporre il numero di telefono.
+- Ottiene la direzione della mappa su un determinato indirizzo.
+- Riproduzione di un file audio o video.
 
 Definizione di un'azione per comporre un numero di telefono, ad esempio, potrebbe essere simile al seguente:
 

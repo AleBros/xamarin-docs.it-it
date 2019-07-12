@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
-ms.openlocfilehash: bf135755f64e4d17db2c187d58572c525dfee559
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bc9396a8cb667b8170c4b3511b9fe8423741e6b1
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61420880"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829931"
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>È possibile aggiungere file a o rimuovere i file da un file IPA dopo la compilazione in Visual Studio?
 
@@ -32,7 +32,7 @@ Questo esempio presuppone che il nome del progetto xamarin. IOS sia `iPhoneApp1`
 
 4.  Aprire una nuova `Terminal.app` finestra.
 
-5.  Tipo `cd ` nella finestra del terminal e quindi trascina selezione il `generated session id` nella cartella di `Terminal.app` finestra:
+5.  Tipo `cd` nella finestra del terminal e quindi trascina selezione il `generated session id` nella cartella di `Terminal.app` finestra:
 
     ![](modify-ipa-images/session-id-folder.png "Individuare la cartella con l'id sessione generato in Finder")
 
@@ -52,7 +52,7 @@ Questo esempio presuppone che il nome del progetto xamarin. IOS sia `iPhoneApp1`
 
 12.  Trovare la riga che include `tool /usr/bin/codesign execution started with arguments: -v --force --sign`.
 
-13.  Tipo `/usr/bin/codesign ` nella finestra terminal dal passaggio 8.
+13.  Tipo `/usr/bin/codesign` nella finestra terminal dal passaggio 8.
 
 14.  Copiare tutti gli argomenti a partire da `-v` dalla riga di nel passaggio 12 e incollarli nella finestra terminal.
 

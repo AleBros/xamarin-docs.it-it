@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: a837d680a21b9cdbc39e42f5fa3520622e0b49aa
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 60b450cba73166462747de41176575da27190e0a
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827193"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832380"
 ---
 # <a name="images-and-icons-in-xamarinios"></a>Immagini e icone in xamarin. IOS
 
@@ -46,10 +46,10 @@ Questo articolo viene illustrato come inclusi e la gestione di un asset di immag
 
 Apple ha aggiunti numerosi miglioramenti a iOS 10.3 che consentono a un'app gestire la relativa icona:
 
- - `ApplicationIconBadgeNumber` : Ottiene o imposta il badge dell'icona dell'app in Springboard.
- - `SupportsAlternateIcons` -Se `true` l'app ha un set alternativo di icone.
- - `AlternateIconName` : Restituisce il nome dell'icona alternativa attualmente selezionata o `null` se si usa l'icona principale.
- - `SetAlternameIconName` -Usare questo metodo per cambiare l'icona dell'app per l'icona alternativo specificato.
+- `ApplicationIconBadgeNumber` : Ottiene o imposta il badge dell'icona dell'app in Springboard.
+- `SupportsAlternateIcons` -Se `true` l'app ha un set alternativo di icone.
+- `AlternateIconName` : Restituisce il nome dell'icona alternativa attualmente selezionata o `null` se si usa l'icona principale.
+- `SetAlternameIconName` -Usare questo metodo per cambiare l'icona dell'app per l'icona alternativo specificato.
 
 
 ## <a name="launch-screensiosapp-fundamentalsimages-iconslaunch-screensmd"></a>[Schermate di avvio](~/ios/app-fundamentals/images-icons/launch-screens.md)

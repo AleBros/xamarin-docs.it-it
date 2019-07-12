@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 260d01d6aa8344dd3cf107f1ffc34167c457a491
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6bad05f62fa9168818aa9a2e73cc1e2830af03b3
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61269312"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830028"
 ---
 # <a name="introduction-to-tvos-10"></a>Introduzione a tvOS 10
 
@@ -56,10 +56,10 @@ tvOS 10 estende il supporto per formati pixel intervalli estesi e gli spazi colo
 
 Apple offre le seguenti procedure ottimali quando si lavora con i colori wide:
 
- - `UIColor` a questo punto viene utilizzato il sRGB spazio colore e non sarà più limitare i valori per il `0.0` a `1.0` intervallo. Se l'app si basa sul comportamento del clamp precedente, devono essere modificate per tvOS 10.
- - Se l'app esegue il rendering personalizzato della `UIImages`, usare le nuove [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) classe per specificare l'utilizzo dei formati estesi-range o standard-range.
- - Quando si usa un'API di basso livello, ad esempio Core Graphics o bare Metal per fornire l'elaborazione di immagini, l'app deve usare un intervallo esteso colore pixel e spazio di formato che supporta valori a virgola mobile a 16 bit. Se necessario, l'app dovrà limitare manualmente i valori dei componenti di colore.
- - Grafica di base, immagine di base e gli shader di Metal prestazioni offrono nuovi metodi per la conversione tra gli spazi due colore.
+- `UIColor` a questo punto viene utilizzato il sRGB spazio colore e non sarà più limitare i valori per il `0.0` a `1.0` intervallo. Se l'app si basa sul comportamento del clamp precedente, devono essere modificate per tvOS 10.
+- Se l'app esegue il rendering personalizzato della `UIImages`, usare le nuove [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) classe per specificare l'utilizzo dei formati estesi-range o standard-range.
+- Quando si usa un'API di basso livello, ad esempio Core Graphics o bare Metal per fornire l'elaborazione di immagini, l'app deve usare un intervallo esteso colore pixel e spazio di formato che supporta valori a virgola mobile a 16 bit. Se necessario, l'app dovrà limitare manualmente i valori dei componenti di colore.
+- Grafica di base, immagine di base e gli shader di Metal prestazioni offrono nuovi metodi per la conversione tra gli spazi due colore.
 
 Per altre informazioni, vedere la [Introduzione a ampia gamma di colori](~/ios/platform/wide-color.md) Guida.
 
@@ -67,12 +67,12 @@ Per altre informazioni, vedere la [Introduzione a ampia gamma di colori](~/ios/p
 
 Diversi Framework che non erano disponibili in iOS (e tvOS non), sono stati resi disponibili per tvOS 10, ad esempio:
 
- - ExternalAccessory
- - HomeKit
- - MultipeerConnectivity
- - Foto
- - ReplayKit
- - UserNotification
+- ExternalAccessory
+- HomeKit
+- MultipeerConnectivity
+- Foto
+- ReplayKit
+- UserNotification
 
 ## <a name="additional-framework-changes"></a>Modifiche di altri Framework
 

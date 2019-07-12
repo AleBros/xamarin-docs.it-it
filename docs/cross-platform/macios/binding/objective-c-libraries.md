@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 306cce581eb1506e770222ea10e160c4fdbe1b29
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 206379b162c7778663ee2baf64dfeb1d33666ab4
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827493"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831460"
 ---
 # <a name="binding-objective-c-libraries"></a>Associazione di librerie Objective-C
 
@@ -32,7 +32,7 @@ Questa pagina descrive come usare in un'associazione, tuttavia le associazioni M
 
 <a name="Getting_Started" />
 
-## <a name="getting-started"></a>Per iniziare
+## <a name="getting-started"></a>Introduzione
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -169,7 +169,7 @@ Tuttavia, poiché si sta usando l'interfaccia come una struttura per generare un
 
 L'associazione più semplice che è possibile eseguire consiste nell'associare un metodo. Dichiarando un metodo nell'interfaccia con il C# convenzioni di denominazione e decorare il metodo con il [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)
 Attributo. Il [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) attributo è ciò che collega il C# nome con il nome di Objective-C nel runtime di xamarin. IOS. Il parametro del [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 
-attributo è il nome del selettore di Objective-C. Ecco alcuni esempi:
+attributo è il nome del selettore di Objective-C. Di seguito sono riportati alcuni esempi:
 
 ```csharp
 // A method, that takes no arguments
@@ -267,7 +267,7 @@ string Text { get; [NullAllowed] set; }
 Quando si configura l'associazione per un controllo personalizzato, è necessario considerare le avvertenze seguenti:
 
 1. **Le proprietà di associazione devono essere statiche** : quando si definisce l'associazione delle proprietà, il [ `[Static]` ](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute) attributo deve essere usato.
- 2. **I nomi delle proprietà deve corrispondere esattamente** -il nome utilizzato per associare la proprietà deve corrispondere esattamente al nome della proprietà del controllo personalizzato.
+2. **I nomi delle proprietà deve corrispondere esattamente** -il nome utilizzato per associare la proprietà deve corrispondere esattamente al nome della proprietà del controllo personalizzato.
 3. **Tipi di proprietà devono corrispondere esattamente** -il tipo di variabile utilizzato per associare la proprietà deve corrispondere esattamente al tipo della proprietà del controllo personalizzato.
 4. **I punti di interruzione e il getter/setter** : posizionati i punti di interruzione nel getter o metodi di impostazione della proprietà non verranno mai attivati.
 5. **Osservare i callback** -sarà necessario usare i callback di osservazione per ricevere una notifica delle modifiche nei valori delle proprietà di controlli personalizzati.

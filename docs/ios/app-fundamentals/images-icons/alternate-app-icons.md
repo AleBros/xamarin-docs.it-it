@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: cc5052c8988a27605cf7680a3853f80e7afd38b7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fc4ef6eb16893cc1df0d980d27af8589a280e933
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61171011"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832419"
 ---
 # <a name="alternate-app-icons-in-xamarinios"></a>Icone dell'App alternativo in xamarin. IOS
 
@@ -20,10 +20,10 @@ _Questo articolo illustra l'uso di icone dell'app alternativo in xamarin. IOS._
 
 Apple ha aggiunti numerosi miglioramenti a iOS 10.3 che consentono a un'app gestire la relativa icona:
 
- - `ApplicationIconBadgeNumber` : Ottiene o imposta il badge dell'icona dell'app in Springboard.
- - `SupportsAlternateIcons` -Se `true` l'app ha un set alternativo di icone.
- - `AlternateIconName` : Restituisce il nome dell'icona alternativa attualmente selezionata o `null` se si usa l'icona principale.
- - `SetAlternameIconName` -Usare questo metodo per cambiare l'icona dell'app per l'icona alternativo specificato.
+- `ApplicationIconBadgeNumber` : Ottiene o imposta il badge dell'icona dell'app in Springboard.
+- `SupportsAlternateIcons` -Se `true` l'app ha un set alternativo di icone.
+- `AlternateIconName` : Restituisce il nome dell'icona alternativa attualmente selezionata o `null` se si usa l'icona principale.
+- `SetAlternameIconName` -Usare questo metodo per cambiare l'icona dell'app per l'icona alternativo specificato.
 
 ![](alternate-app-icons-images/icons04.png "Un esempio di avviso quando un'app per la relativa icona viene modificato")
 

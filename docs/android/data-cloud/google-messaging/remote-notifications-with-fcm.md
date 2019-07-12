@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 0c84f530f759285c2cfc71f60d7b6f80fba6a03d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a50a2014e28becacb2c9f4965b7f3377be57ab16
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61018942"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830315"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notifiche remote con Firebase Cloud Messaging
 
@@ -682,6 +682,7 @@ using System.Collections.Generic;
 Aggiungere il metodo seguente alla `MyFirebaseMessagingService`:
 
 <a name="sendnotification-method"></a>
+
 ```csharp
 void SendNotification(string messageBody, IDictionary<string, string> data)
 {
@@ -711,7 +712,7 @@ void SendNotification(string messageBody, IDictionary<string, string> data)
 
 Per distinguere questa notifica dalle notifiche in background, questo codice contrassegna le notifiche con un'icona che è diversa dall'icona dell'applicazione. Aggiungere il file [ic\_stat\_ic\_notification.png](remote-notifications-with-fcm-images/ic-stat-ic-notification.png) alla **risorse/drawable** e includerlo nel **FCMClient** progetto .
 
-Il `SendNotification` metodo viene utilizzato ` NotificationCompat.Builder` per creare la notifica e `NotificationManagerCompat` viene usato per avviare la notifica. La notifica contiene un `PendingIntent` che consentirà all'utente di aprire l'app e visualizzare il contenuto della stringa passati `messageBody`. Per altre informazioni sulle `NotificationCompat.Builder`, vedere [le notifiche locali](~/android/app-fundamentals/notifications/local-notifications.md).
+Il `SendNotification` metodo viene utilizzato `NotificationCompat.Builder` per creare la notifica e `NotificationManagerCompat` viene usato per avviare la notifica. La notifica contiene un `PendingIntent` che consentirà all'utente di aprire l'app e visualizzare il contenuto della stringa passati `messageBody`. Per altre informazioni sulle `NotificationCompat.Builder`, vedere [le notifiche locali](~/android/app-fundamentals/notifications/local-notifications.md).
 
 Chiamare il `SendNotification` metodo NA konci il `OnMessageReceived` metodo:
 
@@ -780,7 +781,7 @@ FirebaseInstanceId.Instance.DeleteInstanceId();
 Questa chiamata al metodo elimina l'ID dell'istanza e i dati associati. Di conseguenza, si interrompe l'invio periodico dei dati FCM al dispositivo.
 
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>risoluzione dei problemi
 
 Il seguente sono descritti problemi e soluzioni alternative che possono verificarsi durante l'uso di Firebase Cloud Messaging con xamarin. Android.
 

@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 15b4154ad6e95aabb5e88784660a93bb53c0b252
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 7bea80c22f6931858d0629382f6882203dfd374f
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650199"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829943"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Case Study di App multipiattaforma con: Tasky
 
@@ -29,9 +29,9 @@ ms.locfileid: "67650199"
 
 Il primo passaggio nella progettazione di un'applicazione consiste nell'identificare le funzionalità desiderate. Può trattarsi di obiettivi di alto livello o casi d'uso descritti in dettaglio. Tasky presenta i requisiti funzionali semplice:
 
- -  Visualizzare un elenco di attività
- -  Aggiungere, modificare ed eliminare le attività
- -  Impostare lo stato dell'attività su 'done'
+-  Visualizzare un elenco di attività
+-  Aggiungere, modificare ed eliminare le attività
+-  Impostare lo stato dell'attività su 'done'
 
 È necessario considerare l'uso di funzionalità specifiche della piattaforma.  Tasky trarre vantaggio dalle geofencing iOS o Windows Phone Live Tile? Anche se non si utilizza funzionalità specifiche della piattaforma nella prima versione, è consigliabile pianificare, assicurarsi che la vostra azienda e i livelli di dati in grado di gestirli.
 
@@ -52,9 +52,9 @@ Sapere quali dati devono essere archiviati per determinare quale meccanismo di p
 
 Tasky deve archiviare tre proprietà per ogni 'TaskItem':
 
- -  **Nome** : stringa
- -  **Note sulla** : stringa
- -  **Operazione eseguita** : booleano
+- **Nome** : stringa
+- **Note sulla** : stringa
+- **Operazione eseguita** : booleano
 
  <a name="Core_Functionality" />
 
@@ -62,11 +62,11 @@ Tasky deve archiviare tre proprietà per ogni 'TaskItem':
 
 Si consideri l'API dell'interfaccia utente da utilizzare per soddisfare i requisiti. Un elenco di attività richiede le seguenti funzioni:
 
- -   **Elenca tutte le attività** : consente di visualizzare l'elenco di schermata principale di tutte le attività disponibili
- -  **Ottenere una sola attività** : quando una riga dell'attività modificata
- -  **Salvare un'attività** : quando un'attività viene modificata
- -  **Eliminare un'attività** : quando un'attività viene eliminata
- -  **Creazione di attività vuoto** : quando viene creata una nuova attività
+- **Elenca tutte le attività** : consente di visualizzare l'elenco di schermata principale di tutte le attività disponibili
+- **Ottenere una sola attività** : quando una riga dell'attività modificata
+- **Salvare un'attività** : quando un'attività viene modificata
+- **Eliminare un'attività** : quando un'attività viene eliminata
+- **Creazione di attività vuoto** : quando viene creata una nuova attività
 
 Per ottenere il riutilizzo del codice, questa API deve essere implementata una volta nel *libreria di classi portabile*.
 
@@ -76,10 +76,10 @@ Per ottenere il riutilizzo del codice, questa API deve essere implementata una v
 
 Dopo che stata concordata la progettazione dell'applicazione, prendere in considerazione la modalità può essere implementata come un'applicazione multi-piattaforma. Che diventerà l'architettura dell'applicazione. Seguire le istruzioni disponibili nel [Building Cross-Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) documento, il codice dell'applicazione deve essere interrotto down nelle parti seguenti:
 
- -   **Il codice comune** : un progetto comune che contiene il codice generiche riutilizzabili per archiviare i dati di attività; espone una classe di modello e un'API per gestire il salvataggio e caricamento dei dati.
- -   **Codice specifico della piattaforma** – progetti specifici delle piattaforme che implementano un'interfaccia utente nativa per ogni sistema operativo, che usano il codice comune come 'back-end'.
+- **Il codice comune** : un progetto comune che contiene il codice generiche riutilizzabili per archiviare i dati di attività; espone una classe di modello e un'API per gestire il salvataggio e caricamento dei dati.
+- **Codice specifico della piattaforma** – progetti specifici delle piattaforme che implementano un'interfaccia utente nativa per ogni sistema operativo, che usano il codice comune come 'back-end'.
 
- [![](case-study-tasky-images/taskypro-architecture.png "Progetti specifici delle piattaforme implementano un'interfaccia utente nativa per ogni sistema operativo, che usano il codice comune come back-end")](case-study-tasky-images/taskypro-architecture.png#lightbox)
+[![](case-study-tasky-images/taskypro-architecture.png "Progetti specifici delle piattaforme implementano un'interfaccia utente nativa per ogni sistema operativo, che usano il codice comune come back-end")](case-study-tasky-images/taskypro-architecture.png#lightbox)
 
 Queste due parti sono descritte nelle sezioni seguenti.
 
@@ -280,8 +280,8 @@ Il livello dell'applicazione e il livello dell'interfaccia utente vengono implem
 
 Il livello dell'applicazione contiene le classi specifiche della piattaforma necessarie per associare gli oggetti esposti dalla libreria di classi Portabile per l'interfaccia utente. L'applicazione iOS specifico ha due classi per consentire di visualizzare le attività:
 
- -   **EditingSource** : questa classe viene utilizzata per associare gli elenchi di attività per l'interfaccia utente. In quanto `MonoTouch.Dialog` è stato usato per l'elenco di attività, è necessario implementare questo helper per abilitare la funzionalità di scorrimento rapido-a-delete nel `UITableView` . Scorrere rapidamente-a-delete è comune in iOS, ma non Android o Windows Phone, in modo che il progetto specifico di iOS è l'unico che lo implementa.
- -   **TaskDialog** : questa classe viene utilizzata per associare una singola attività nell'interfaccia utente. Usa il `MonoTouch.Dialog` API di Reflection a 'wrap' il `TaskItem` oggetto con una classe che contiene gli attributi corretti per consentire la schermata di input da formattare correttamente.
+- **EditingSource** : questa classe viene utilizzata per associare gli elenchi di attività per l'interfaccia utente. In quanto `MonoTouch.Dialog` è stato usato per l'elenco di attività, è necessario implementare questo helper per abilitare la funzionalità di scorrimento rapido-a-delete nel `UITableView` . Scorrere rapidamente-a-delete è comune in iOS, ma non Android o Windows Phone, in modo che il progetto specifico di iOS è l'unico che lo implementa.
+- **TaskDialog** : questa classe viene utilizzata per associare una singola attività nell'interfaccia utente. Usa il `MonoTouch.Dialog` API di Reflection a 'wrap' il `TaskItem` oggetto con una classe che contiene gli attributi corretti per consentire la schermata di input da formattare correttamente.
 
 Il `TaskDialog` utilizzato dalla classe `MonoTouch.Dialog` attributi per creare una schermata in base alle proprietà della classe. La classe è simile alla seguente:
 
@@ -389,9 +389,9 @@ Analogamente alla versione iOS che è stato esaminato in precedenza, il livello 
 
 Livello dell'interfaccia utente dell'app per Android è una combinazione di codice e markup XML.
 
- -   **Le risorse/Layout** – progettazione implementati come file AXML delle celle layout dello schermo e della riga. Il AXML può essere scritto manualmente o disposto in modo visivo mediante la finestra di progettazione dell'interfaccia utente di Xamarin per Android.
- -   **Le risorse/Drawable** – immagini (icone) e un pulsante personalizzato.
- -   **Le schermate** – sottoclassi di attività che definiscono ogni schermata e il relativo comportamento. Collega l'interfaccia utente con le classi di livello applicazione e l'API comune (`TaskItemManager`).
+- **Le risorse/Layout** – progettazione implementati come file AXML delle celle layout dello schermo e della riga. Il AXML può essere scritto manualmente o disposto in modo visivo mediante la finestra di progettazione dell'interfaccia utente di Xamarin per Android.
+- **Le risorse/Drawable** – immagini (icone) e un pulsante personalizzato.
+- **Le schermate** – sottoclassi di attività che definiscono ogni schermata e il relativo comportamento. Collega l'interfaccia utente con le classi di livello applicazione e l'API comune (`TaskItemManager`).
 
  <a name="Home_Screen" />
 

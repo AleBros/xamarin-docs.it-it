@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: a0efc30fd9814e4da858c4e3e4e99990eccf102e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7ac4d0effc1067b065bad114160dc8648e998dad
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61164294"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830789"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Utilizzo di controller di barra della scheda in Xamarin tvOS
 
@@ -111,7 +111,7 @@ Il modo più semplice per lavorare con barre schede in un'app xamarin. tvos è p
 -----
 
 > [!IMPORTANT]
-> Sebbene sia possibile assegnare gli eventi, ad esempio `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio un `UIButton`) in iOS Designer, non verrà mai chiamato perché non dispone di un tocco Apple TV a schermo intero o supportare gli eventi di tocco. È consigliabile usare sempre la `Primary Action ` eventi durante la creazione di gestori eventi per tvOS elementi dell'interfaccia utente.
+> Sebbene sia possibile assegnare gli eventi, ad esempio `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio un `UIButton`) in iOS Designer, non verrà mai chiamato perché non dispone di un tocco Apple TV a schermo intero o supportare gli eventi di tocco. È consigliabile usare sempre la `Primary Action` eventi durante la creazione di gestori eventi per tvOS elementi dell'interfaccia utente.
 
 Per altre informazioni sull'utilizzo degli storyboard, vedere la [App Tvos Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). 
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 841a11f9cb48786a046802288ce05e7ae186688a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a22d274feb5539164663ac0c48e5a84bdf5d2c66
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61042167"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830233"
 ---
 # <a name="togglebutton"></a>ToggleButton
 
@@ -47,9 +47,10 @@ Si noti che il [ `ToggleButton` ](https://developer.xamarin.com/api/type/Android
 Eseguire l'applicazione.
 
 
-**Suggerimento:** Se è necessario modificare manualmente lo stato (ad esempio, quando il caricamento di un salvata [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), usare il [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
-setter di proprietà o [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
-ProcessOnStatus.
+> [!TIP]
+> Se è necessario modificare manualmente lo stato (ad esempio, quando il caricamento di un salvata [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), usare il [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
+> setter di proprietà o [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
+> ProcessOnStatus.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

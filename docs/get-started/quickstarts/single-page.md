@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
-ms.openlocfilehash: 7b13ab5a4cc0d8e66e260329b5a53397778cb179
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 83c71962ceb4a30c2e05d44fffe4d64b54e4883d
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61194364"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831976"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Creare un'applicazione xamarin. Forms pagina singola
 
@@ -38,7 +38,7 @@ La Guida introduttiva illustra come creare un'applicazione xamarin. Forms multip
 - Conoscenza di C#.
 - (facoltativo) Un Mac associato per compilare l'applicazione in iOS.
 
-Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin](~/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2019 per un host di compilazione Mac, vedere [associa a Mac per lo sviluppo di xamarin. IOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin](~/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2019 a un host di compilazione Mac, vedere [Associa a Mac per lo sviluppo di Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 ## <a name="get-started-with-visual-studio-2019"></a>Introduzione a Visual Studio 2019
 
@@ -65,7 +65,7 @@ Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin]
 
 5. Fare doppio clic su **MainPage.xaml** nel progetto **Notes** in **Esplora soluzioni** per aprire il file:
 
-    ![](single-page-images/vs/open-mainpage-xaml.png "Aprire MainPage.xaml")
+    ![](single-page-images/vs/open-mainpage-xaml-2019.png "Aprire MainPage.xaml")
 
 6. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
@@ -102,7 +102,7 @@ Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin]
 
 7. In **Esplora soluzioni** espandere **MainPage.xaml** nel progetto **Notes** e fare doppio clic su **MainPage.xaml.cs** per aprirlo:
 
-    ![](single-page-images/vs/open-mainpage-codebehind.png "Aprire MainPage.xaml.cs")
+    ![](single-page-images/vs/open-mainpage-codebehind-2019.png "Aprire MainPage.xaml.cs")
 
 8. In **MainPage.xaml.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
@@ -192,7 +192,7 @@ Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin]
 - Conoscenza di C#.
 - (facoltativo) Un Mac associato per compilare l'applicazione in iOS.
 
-Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin](~/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2019 per un host di compilazione Mac, vedere [associa a Mac per lo sviluppo di xamarin. IOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin](~/get-started/installation/index.md). Per informazioni sulla connessione di Visual Studio 2019 a un host di compilazione Mac, vedere [Associa a Mac per lo sviluppo di Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 ## <a name="get-started-with-visual-studio-2017"></a>Introduzione a Visual Studio 2017
 
@@ -200,7 +200,7 @@ Per altre informazioni su questi prerequisiti, vedere [installazione di Xamarin]
 
     ![](single-page-images/vs/new-solution.png "Nuovo progetto")
 
-2. Nella finestra di dialogo **Nuovo progetto** fare clic su **Multipiattaforma**, selezionare il modello **App per dispositivi mobili (Xamarin.Forms)**, impostare il nome su **Notes**, scegliere un percorso adatto per il progetto e fare clic sul pulsante **OK**:
+2. Nella finestra di dialogo **Nuovo progetto** fare clic su **Multipiattaforma**, selezionare il modello **App per dispositivi mobili (Xamarin.Forms)** , impostare il nome su **Notes**, scegliere un percorso adatto per il progetto e fare clic sul pulsante **OK**:
 
     ![](single-page-images/vs/new-project.png "Modelli di progetto multipiattaforma")
 

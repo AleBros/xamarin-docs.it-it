@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
-ms.openlocfilehash: c2f727b55b21dc3bd976f0b41c71b794841cfca4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b894c245a4391064746a08816dfa63a1148d436d
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61421996"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831257"
 ---
 # <a name="ibtool-error-the-operation-couldnt-be-completed"></a>Errore IBTool: Non è stato possibile completare l'operazione.
 
@@ -48,7 +48,7 @@ Ad esempio supponga originale `.csproj` file contiene la voce seguente:
 
 `<BundleResource Include="Resources\Images\image.png" />`
 
-È possibile modificare questo elemento e aggiungere una `LogicalName` in modo che l'immagine verrà copiata invece nel livello superiore del `.app `bundle:
+È possibile modificare questo elemento e aggiungere una `LogicalName` in modo che l'immagine verrà copiata invece nel livello superiore del `.app` bundle:
 
 ```xml
 <BundleResource Include="Resources\Images\image.png">
@@ -60,7 +60,7 @@ In Visual Studio per Mac la `LogicalName` possono essere impostate anche usando 
 
 Dopo questa modifica, sarà necessario aggiornare lo storyboard e `.xib` file da utilizzare i nuovi percorsi di primo livello immagine. Visual Studio per Mac verrà automaticamente aggiornato l'elenco di autocompletions per il `Image` proprietà in iOS Designer. In Visual Studio, è necessario modificare manualmente il percorso. IOS Designer, verrà visualizzato ciò come un'immagine manca, ma il progetto viene compilato ed eseguito correttamente.
 
-### <a name="next-steps"></a>Passaggi successivi
+### <a name="next-steps"></a>Fasi successive
 
 Per ulteriore assistenza, contattare il supporto tecnico o se il problema rimane anche dopo che usano le informazioni sopra riportate, vedi [le opzioni di supporto sono disponibili per Xamarin?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché come archiviare un nuovo bug se necessario. 
 

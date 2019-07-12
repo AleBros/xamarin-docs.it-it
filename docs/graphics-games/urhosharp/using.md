@@ -6,12 +6,12 @@ ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 5e5c4f1545d39befde6574338ec4c1ca4037ad8b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7307f7dcfcc6b5e2576ce4b425879ae05c5a6056
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61352122"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832677"
 ---
 # <a name="using-urhosharp-to-build-a-3d-game"></a>Uso di UrhoSharp per creare un gioco 3D
 
@@ -21,11 +21,11 @@ Prima di scrivere il tuo primo gioco, si desidera acquisire familiarità con le 
 
 ## <a name="scenes-nodes-components-and-cameras"></a>Le scene, nodi, i componenti e videocamere
 
-Il modello di scena può essere descritta come un grafico della scena in base al componente. La scena è costituito da una gerarchia di nodi della scena, a partire dal nodo radice, che rappresenta anche dell'intera scena. Ciascuna [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node/) dispone di una trasformazione 3D (posizione, scala e rotazione), un nome, un ID, oltre a un numero arbitrario di componenti.  Componenti di portare un nodo di ciclo di vita, rendono possibile aggiungere una rappresentazione visiva ([`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)), possono generare file audio ([`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource)), forniscono un limite di conflitto e così via.
+Il modello di scena può essere descritta come un grafico della scena in base al componente. La scena è costituito da una gerarchia di nodi della scena, a partire dal nodo radice, che rappresenta anche dell'intera scena. Ogni `Node` dispone di una trasformazione 3D (posizione, scala e rotazione), un nome, un ID, oltre a un numero arbitrario di componenti.  Componenti di portare un nodo di ciclo di vita, rendono possibile aggiungere una rappresentazione visiva (`StaticModel`), possono generare file audio (`SoundSource`), forniscono un limite di conflitto e così via.
 
 È possibile creare scene e nodi di programma di installazione tramite il [Urho Editor](#urhoeditor), oppure è possibile eseguire operazioni dal codice c#.  In questo documento verranno analizzati aspetti impostazione usando il codice, come illustrano gli elementi necessari per svolgere il proprio compaia sullo schermo
 
-Oltre a configurare la scena, è necessario configurare un [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera/), questo è ciò che determina ciò che verrà ottenere visualizzato all'utente.
+Oltre a configurare la scena, è necessario configurare un `Camera`, questo è ciò che determina ciò che verrà ottenere visualizzato all'utente.
 
 ### <a name="setting-up-your-scene"></a>Configurazione di scena
 
@@ -53,7 +53,7 @@ planeObject.SetMaterial(ResourceCache.GetMaterial("Materials/StoneTiled.xml"));
 
 ### <a name="components"></a>Componenti
 
-Il rendering di oggetti 3D, la riproduzione audio, fisica e logica di script aggiornamenti tutti abilitata per la creazione di componenti diversi nei nodi chiamando [ `CreateComponent<T>()` ](https://developer.xamarin.com/api/member/Urho.Node.CreateComponent%3CT%3E/p/Urho.CreateMode/System.UInt32/).  Ad esempio, configurare il nodo e dei componenti leggeri simile al seguente:
+Il rendering di oggetti 3D, la riproduzione audio, fisica e logica di script aggiornamenti tutti abilitata per la creazione di componenti diversi nei nodi chiamando `CreateComponent<T>()`.  Ad esempio, configurare il nodo e dei componenti leggeri simile al seguente:
 
 ```csharp
 // Create a directional light to the world so that we can see something. The
@@ -65,7 +65,7 @@ var lightNode = scene.CreateChild("DirectionalLight");
 lightNode.SetDirection (new Vector3(0.6f, -1.0f, 0.8f));
 ```
 
-È stata creata di sopra di un nodo con il nome "`DirectionalLight`" e impostare una direzione per, ma nessun altro elemento.  È possibile tornare a questo punto, il nodo precedente in un nodo illuminante, collegando un [ `Light` ](https://developer.xamarin.com/api/type/Urho.Light/) componente, con `CreateComponent`:
+È stata creata di sopra di un nodo con il nome "`DirectionalLight`" e impostare una direzione per, ma nessun altro elemento.  È possibile tornare a questo punto, il nodo precedente in un nodo illuminante, collegando un `Light` componente, con `CreateComponent`:
 
 ```csharp
 var light = lightNode.CreateComponent<Light>();
@@ -73,12 +73,12 @@ var light = lightNode.CreateComponent<Light>();
 
 I componenti creati nel `Scene` può avere un ruolo speciale: per implementare la funzionalità a livello di scena. Essi devono essere creati prima di tutti gli altri componenti e includono quanto segue:
 
-* [`Octree`](https://developer.xamarin.com/api/type/Urho.Octree/): implementa il partizionamento spaziali e con accelerazione delle query di visibilità. Senza questo 3D non possono essere rendering degli oggetti.
-* [`PhysicsWorld`](https://developer.xamarin.com/api/type/Urho.Physics.PhysicsWorld/): implementa simulazione fisica. I componenti di fisica, ad esempio [ `RigidBody` ](https://developer.xamarin.com/api/type/Urho.Physics.RigidBody/) oppure [ `CollisionShape` ](https://developer.xamarin.com/api/type/Urho.Physics.CollisionShape/) possono non funzionare correttamente senza questa opzione.
-* [`DebugRenderer`](https://developer.xamarin.com/api/type/Urho.DebugRenderer/): implementa il debug per il rendering della geometria.
+ `Octree`: implementa il partizionamento spaziali e con accelerazione delle query di visibilità. Senza questo 3D non possono essere rendering degli oggetti.
+ `PhysicsWorld`: implementa simulazione fisica. Ad esempio i componenti di fisica `RigidBody` o `CollisionShape` possono non funzionare correttamente senza questa opzione.
+ `DebugRenderer`: implementa il debug per il rendering della geometria.
 
-Componenti comuni, come [ `Light` ](https://developer.xamarin.com/api/type/Urho.Light), [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera) o [`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)
-non devono essere create direttamente nel [ `Scene` ](https://developer.xamarin.com/api/type/Urho.Scene), ma piuttosto in nodi figlio.
+Componenti comuni, come `Light`, `Camera` o `StaticModel`
+non devono essere create direttamente nel `Scene`, ma piuttosto in nodi figlio.
 
 La libreria viene fornito con un'ampia gamma di componenti che è possibile collegare ai nodi per dare loro vita: visibile all'utente elementi (modelli), suoni, corpi rigidi, le forme di conflitti, fotocamere, sorgenti di luce, istanze di emissione FixIt particella e altro ancora.
 
@@ -86,9 +86,9 @@ La libreria viene fornito con un'ampia gamma di componenti che è possibile coll
 
 Per maggiore praticità, sono disponibili come nodi semplici nello spazio dei nomi Urho.Shapes varie forme.  Sono inclusi finestre, sfere, coni, cilindri e piani.
 
-### <a name="camera-and-viewport"></a>Fotocamere e Viewport
+### <a name="camera-and-viewport"></a>Fotocamere e viewport
 
-Esattamente come la luce, fotocamere sono componenti, pertanto sarà necessario collegare il componente a un nodo, questa operazione viene eseguita come segue:
+Esattamente come la luce, fotocamere sono componenti, pertanto sarà necessario collegare il componente a un nodo, simile al seguente:
 
 ```csharp
 var CameraNode = scene.CreateChild ("camera");
@@ -106,33 +106,33 @@ E a questo punto dovrebbe essere in grado di visualizzare i risultati della crea
 
 ### <a name="identification-and-scene-hierarchy"></a>Identificazione e la scena gerarchia
 
-A differenza dei nodi, i componenti non hanno nomi; i componenti all'interno dello stesso nodo vengono identificati solo per il tipo e indice nell'elenco dei componenti del nodo, che viene compilato in ordine di creazione, ad esempio, è possibile recuperare il [ `Light` ](https://developer.xamarin.com/api/type/Urho.Light) componente fuori il `lightNode` oggetto precedenza simile al seguente:
+A differenza dei nodi, i componenti non hanno nomi; i componenti all'interno dello stesso nodo vengono identificati solo per il tipo e indice nell'elenco dei componenti del nodo, che viene compilato in ordine di creazione, ad esempio, è possibile recuperare il `Light` componente fuori il `lightNode` di sopra dell'oggetto simile al seguente:
 
 ```csharp
 var myLight = lightNode.GetComponent<Light>();
 ```
 
-È anche possibile ottenere un elenco di tutti i componenti recuperando il [ `Components` ](https://developer.xamarin.com/api/property/Urho.Node.Components/) che restituisce un `IList<Component>` che è possibile usare.
+È anche possibile ottenere un elenco di tutti i componenti recuperando il `Components` che restituisce un `IList<Component>` che è possibile usare.
 
-Quando si crea, i nodi e i componenti ottengono ID di tipo integer globale di scena. È possibile eseguire query dalla scena usando le funzioni [ `GetNode(uint id)` ](https://developer.xamarin.com/api/member/Urho.Scene.GetNode/p/System.UInt32/) e [ `GetComponent(uint id)` ](https://developer.xamarin.com/api/member/Urho.Scene.GetComponent/p/System.UInt32/). Ciò è molto più veloce rispetto all'utilizzo di ricorsiva, ad esempio le query di scena in base al nome del nodo.
+Quando si crea, i nodi e i componenti ottengono ID di tipo integer globale di scena. È possibile eseguire query dalla scena usando le funzioni `GetNode(uint id)` e `GetComponent(uint id)`. Ciò è molto più veloce rispetto all'utilizzo di ricorsiva, ad esempio le query di scena in base al nome del nodo.
 
-Non è previsto predefinito di un'entità o un oggetto del gioco. è piuttosto fino al programmatore di decidere la gerarchia dei nodi e in quali nodi inserire qualsiasi logica di script. In genere, liberare-lo spostamento di oggetti nel mondo 3D verranno creati come elementi figlio del nodo radice. I nodi possono essere creati con o senza un nome usando [ `CreateChild()` ](https://developer.xamarin.com/api/member/Urho.Node.CreateChild/p/System.String/Urho.CreateMode/System.UInt32/). Non viene applicata l'univocità dei nomi di nodo.
+Non è previsto predefinito di un'entità o un oggetto del gioco. è piuttosto fino al programmatore di decidere la gerarchia dei nodi e in quali nodi inserire qualsiasi logica di script. In genere, liberare-lo spostamento di oggetti nel mondo 3D verranno creati come elementi figlio del nodo radice. I nodi possono essere creati con o senza un nome con `CreateChild`. Non viene applicata l'univocità dei nomi di nodo.
 
 Ogni volta che si verifica alcuni composizione gerarchici, è consigliata (e in realtà necessaria, perché i componenti non hanno i propri trasformazioni 3D) per creare un nodo figlio.
 
-Ad esempio se un carattere è stato premuto un oggetto a sua disposizione, l'oggetto deve avere un proprio nodo, che potrebbe essere associato a ossa mano del carattere (anche un [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node/)).  L'eccezione è rappresentata la fisica [ `CollisionShape` ](https://developer.xamarin.com/api/type/Urho.Physics.CollisionShape), che può essere offsetted e viene ruotato singolarmente in relazione al nodo.
+Ad esempio se un carattere è stato premuto un oggetto a sua disposizione, l'oggetto deve avere un proprio nodo, che potrebbe essere associato a ossa mano del carattere (anche un `Node`).  L'eccezione è rappresentata la fisica `CollisionShape`, che può essere offsetted e viene ruotato singolarmente in relazione al nodo.
 
-Si noti che [ `Scene` ](https://developer.xamarin.com/api/type/Urho.Node/)di proprietari transform viene intenzionalmente ignorata come ottimizzazione durante il calcolo world derivato trasformazioni dei nodi figlio, pertanto la modifica non ha alcun effetto e deve essere lasciato invariato (posizione in corrispondenza dell'origine, nessuna rotazione di senza scalabilità.)
+Si noti che `Scene`del proprietario di trasformazione viene intenzionalmente ignorata come ottimizzazione durante il calcolo world derivato trasformazioni dei nodi figlio, pertanto la modifica non ha alcun effetto e deve essere lasciato invariato (posizione in corrispondenza dell'origine, nessuna rotazione, senza scalabilità).
 
-[`Scene`](https://developer.xamarin.com/api/type/Urho.Node/) i nodi possono essere liberamente riassociate come elementi padre. Al contrario componenti sempre appartengono al nodo collegato a e non possono essere spostati tra i nodi. I nodi e i componenti forniscono un [ `Remove()` ](https://developer.xamarin.com/api/member/Urho.Node.Remove()/) funzione per eseguire questa operazione senza dover passare attraverso l'elemento padre. Una volta che il nodo viene rimosso, dopo la chiamata di funzione non sono sicure operazioni del nodo o del componente in questione.
+`Scene` i nodi possono essere liberamente riassociate come elementi padre. Al contrario componenti sempre appartengono al nodo collegato a e non possono essere spostati tra i nodi. I nodi e i componenti forniscono un `Remove` funzione per eseguire questa operazione senza dover passare attraverso l'elemento padre. Una volta che il nodo viene rimosso, dopo la chiamata di funzione non sono sicure operazioni del nodo o del componente in questione.
 
 È anche possibile creare un `Node` che non appartiene a una scena. Ciò è utile, ad esempio con una fotocamera lo spostamento in una scena che possa essere caricata o salvata, perché quindi non verrà salvata con la scena effettiva della fotocamera e verrà eliminata quando viene caricata la scena. Tuttavia, se si utilizza la creazione di componenti di geometria, fisica o dello script a un nodo scollegato e quindi spostarli in una scena in un secondo momento, tali componenti non funzionino correttamente.
 
 ### <a name="scene-updates"></a>Aggiornamenti di scena
 
-Una scena sono abilitati in cui gli aggiornamenti (impostazione predefinita) verrà aggiornata automaticamente a ogni iterazione del ciclo principale.  L'applicazione [ `SceneUpdate` ](https://developer.xamarin.com/api/event/Urho.Scene.SceneUpdate/) gestore eventi viene richiamato su di esso.
+Una scena sono abilitati in cui gli aggiornamenti (impostazione predefinita) verrà aggiornata automaticamente a ogni iterazione del ciclo principale.  L'applicazione `SceneUpdate` gestore eventi viene richiamato su di esso.
 
-I nodi e i componenti possono essere esclusi dall'aggiornamento scena disabilitandole, vedere [ `Enabled` ](https://developer.xamarin.com/api/member/Urho.Node.Enabled).  Il comportamento dipende il componente specifico, ma, ad esempio la disabilitazione di un componente drawable anche lo rende invisibile, mentre la disabilitazione di un componente di origine audio viene disattivato. Se un nodo è disabilitato, tutti i relativi componenti vengono trattati come disabilitata indipendentemente dal fatto il proprio stato di attivazione/disattivazione.
+I nodi e i componenti possono essere esclusi dall'aggiornamento scena disabilitandole, vedere `Enabled`.  Il comportamento dipende il componente specifico, ma, ad esempio la disabilitazione di un componente drawable anche lo rende invisibile, mentre la disabilitazione di un componente di origine audio viene disattivato. Se un nodo è disabilitato, tutti i relativi componenti vengono trattati come disabilitata indipendentemente dal fatto il proprio stato di attivazione/disattivazione.
 
 ## <a name="adding-behavior-to-your-components"></a>Aggiunta del comportamento per i componenti
 
@@ -180,25 +180,25 @@ Se si desidera che entrambe le azioni da eseguire sul posto allo stesso tempo, �
 
 Nell'esempio precedente il cloud verrà spostata e dissolvenza nello stesso momento.
 
-Si noterà che si usa c# await, che consente di considerare il comportamento che si desidera ottenere in modo lineare.
+Si noterà che si stia usando C# `await`, che consente di considerare il comportamento che si desidera ottenere in modo lineare.
 
 ### <a name="basic-actions"></a>Azioni di base
 
 Queste sono le azioni supportate di UrhoSharp:
 
-* Lo spostamento di nodi: [ `MoveTo` ](https://developer.xamarin.com/api/type/Urho.Actions.MoveTo), [ `MoveBy` ](https://developer.xamarin.com/api/type/Urho.Actions.MoveBy), [ `Place` ](https://developer.xamarin.com/api/type/Urho.Actions.Place), [ `BezierTo` ](https://developer.xamarin.com/api/type/Urho.Actions.BezierTo), [ `BezierBy` ](https://developer.xamarin.com/api/type/Urho.Actions.BezierBy) , [`JumpTo`](https://developer.xamarin.com/api/type/Urho.Actions.JumpTo), [`JumpBy`](https://developer.xamarin.com/api/type/Urho.Actions.JumpBy)
-* Rotazione di nodi: [ `RotateTo` ](https://developer.xamarin.com/api/type/Urho.Actions.RotateTo), [`RotateBy`](https://developer.xamarin.com/api/type/Urho.Actions.RotateBy)
-* Il ridimensionamento dei nodi: [ `ScaleTo` ](https://developer.xamarin.com/api/type/Urho.Actions.ScaleTo), [`ScaleBy`](https://developer.xamarin.com/api/type/Urho.Actions.ScaleBy)
-* A dissolvenza nodi: [ `FadeIn` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeIn), [ `FadeTo` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeTo), [ `FadeOut` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeOut), [ `Hide` ](https://developer.xamarin.com/api/type/Urho.Actions.Hide), [`Blink`](https://developer.xamarin.com/api/type/Urho.Actions.Blink)
-* Tinte: [ `TintTo` ](https://developer.xamarin.com/api/type/Urho.Actions.TintTo), [`TintBy`](https://developer.xamarin.com/api/type/Urho.Actions.TintBy)
-* Istanti: [ `Hide` ](https://developer.xamarin.com/api/type/Urho.Actions.Hide), [ `Show` ](https://developer.xamarin.com/api/type/Urho.Actions.Show), [ `Place` ](https://developer.xamarin.com/api/type/Urho.Actions.Place), [ `RemoveSelf` ](https://developer.xamarin.com/api/type/Urho.Actions.RemoveSelf), [`ToggleVisibility`](https://developer.xamarin.com/api/type/Urho.Actions.ToggleVisibility)
-* Looping: [`Repeat`](https://developer.xamarin.com/api/type/Urho.Actions.Repeat), [`RepeatForever`](https://developer.xamarin.com/api/type/Urho.Actions.RepeatForever), [`ReverseTime`](https://developer.xamarin.com/api/type/Urho.Actions.ReverseTime)
+- Lo spostamento di nodi: `MoveTo`, `MoveBy`, `Place`, `BezierTo`, `BezierBy`, `JumpTo`, `JumpBy`
+- Rotazione di nodi: `RotateTo`, `RotateBy`
+- Il ridimensionamento dei nodi: `ScaleTo`, `ScaleBy`
+- A dissolvenza nodi: `FadeIn`, `FadeTo`, `FadeOut`, `Hide`, `Blink`
+- Tinte: `TintTo`, `TintBy`
+- Istanti: `Hide`, `Show`, `Place`, `RemoveSelf`, `ToggleVisibility`
+- Looping: `Repeat`, `RepeatForever`, `ReverseTime`
 
-Altre funzionalità avanzate includono la combinazione dei [ `Spawn` ](https://developer.xamarin.com/api/type/Urho.Actions.Spawn) e [ `Sequence` ](https://developer.xamarin.com/api/type/Urho.Actions.Sequence) azioni.
+Altre funzionalità avanzate includono la combinazione dei `Spawn` e `Sequence` azioni.
 
 ### <a name="easing---controlling-the-speed-of-your-actions"></a>Interpolazione - controllare la velocità delle azioni
 
-Interpolazione è un modo che indirizza il modo in cui verrà Espandi l'animazione e animazioni può risultare molto più piacevole.  Per impostazione predefinita le azioni avrà un comportamento lineare, ad esempio un [ `MoveTo` ](https://developer.xamarin.com/api/type/Urho.Actions.MoveTo) azione sarebbe necessario uno spostamento molto robotico.  È possibile eseguire il wrapping di azioni in un'azione di interpolazione per modificare il comportamento, ad esempio, quella più lentamente iniziare lo spostamento, accelerare e lenta raggiunge la fine ([`EasyInOut`](https://developer.xamarin.com/api/type/Urho.Actions.EasyInOut)).
+Interpolazione è un modo che indirizza il modo in cui verrà Espandi l'animazione e animazioni può risultare molto più piacevole.  Per impostazione predefinita le azioni avrà un comportamento lineare, ad esempio un `MoveTo` azione sarebbe necessario uno spostamento molto robotico.  È possibile eseguire il wrapping di azioni in un'azione di interpolazione per modificare il comportamento, ad esempio, quella più lentamente iniziare lo spostamento, accelerare e lenta raggiunge la fine (`EasyInOut`).
 
 Eseguire questa operazione eseguendo il wrapping di un'azione esistente in un'azione di interpolazione, ad esempio:
 
@@ -212,9 +212,9 @@ Esistono molti modalità di interpolazione, il grafico seguente illustra i vari 
 
 ![Modalità di interpolazione](using-images/easing.png "questo grafico illustra i vari tipi di interpolazione e il relativo comportamento sul valore dell'oggetto che controlla il periodo di tempo")
 
-### <a name="using-actions-and-async-code"></a>Usando le azioni e il codice asincrono
+### <a name="using-actions-and-async-code"></a>Usando il codice asincrono e azioni
 
-Nel [ `Component` ](https://developer.xamarin.com/api/type/Urho.Component/) sottoclasse, è consigliabile introdurre un metodo asincrono che prepara il comportamento del componente e indirizza la funzionalità per tale.
+Nel `Component` sottoclasse, è consigliabile introdurre un metodo asincrono che prepara il comportamento del componente e indirizza la funzionalità per tale.
 Quindi è possibile chiamare questo metodo usando il linguaggio c# `await` parola chiave da un'altra parte del programma, entrambi i `Application.Start` (metodo) o in risposta a una storia utente o un punto all'interno dell'applicazione.
 
 Ad esempio:
@@ -269,7 +269,7 @@ Nel `Launch` metodo sopra tre azioni siano avviati: il robot entra in scena, que
 
 ### <a name="frame-based-behavior-programming"></a>Programmazione di comportamenti basati su frame
 
-Se si desidera controllare il comportamento del componente in una base di ciascun frame singolarmente invece di usare le azioni, le operazioni consiste nel sostituire la [ `OnUpdate` ](https://developer.xamarin.com/api/member/Urho.Component.OnUpdate) metodo per il [ `Component` ](https://developer.xamarin.com/api/type/Urho.Component) sottoclasse.  Questo metodo viene richiamato una volta per ogni fotogramma e viene richiamato solo se si imposta la proprietà ReceiveSceneUpdates su true.
+Se si desidera controllare il comportamento del componente in una base di ciascun frame singolarmente invece di usare le azioni, le operazioni consiste nel sostituire il `OnUpdate` metodo di `Component` sottoclasse.  Questo metodo viene richiamato una volta per ogni fotogramma e viene richiamato solo se si imposta la proprietà ReceiveSceneUpdates su true.
 
 Di seguito viene illustrato come creare un `Rotator` componente, che viene quindi collegato a un nodo che fa sì che il nodo ruotare:
 
@@ -283,9 +283,9 @@ class Rotator : Component {
     protected override void OnUpdate(float timeStep)
     {
         Node.Rotate(new Quaternion(
-            RotationSpeed.X * timeStep,
-            RotationSpeed.Y * timeStep,
-            RotationSpeed.Z * timeStep),
+            RotationSpeed.X  timeStep,
+            RotationSpeed.Y  timeStep,
+            RotationSpeed.Z  timeStep),
             TransformSpace.Local);
     }
 }
@@ -318,11 +318,11 @@ Ad esempio, nella demo SamplyGame viene utilizzato nel `Enemy` classe consente d
 
 ## <a name="loading-and-saving-scenes"></a>Il caricamento e salvataggio scene
 
-In background possono essere caricati e salvati in formato XML; vedere le funzioni [ `LoadXml` ](https://developer.xamarin.com/api/member/Urho.Scene.LoadXml) e [ `SaveXML()` ](https://developer.xamarin.com/api/member/Urho.Scene.SaveXml). Quando viene caricata una scena, viene innanzitutto rimosso tutto il contenuto esistente in esso (nodi figlio e i componenti). I nodi e i componenti contrassegnati temporanei con il `Temporary` proprietà non verrà salvata. Il serializzatore gestisce tutti i componenti predefiniti e le proprietà ma non è in grado di gestire le proprietà personalizzate e dei campi definiti nelle sottoclassi del componente. Tuttavia fornisce due metodi virtuali per questo:
+In background possono essere caricati e salvati in formato XML; vedere le funzioni `LoadXml` e `SaveXML`. Quando viene caricata una scena, viene innanzitutto rimosso tutto il contenuto esistente in esso (nodi figlio e i componenti). I nodi e i componenti contrassegnati temporanei con il `Temporary` proprietà non verrà salvata. Il serializzatore gestisce tutti i componenti predefiniti e le proprietà ma non è in grado di gestire le proprietà personalizzate e dei campi definiti nelle sottoclassi del componente. Tuttavia fornisce due metodi virtuali per questo:
 
-* [`OnSerialize`](https://developer.xamarin.com/api/member/Urho.Component.OnSerialize) in cui è possibile registrare è stati personalizzati per la serializzazione
+ `OnSerialize` in cui è possibile registrare è stati personalizzati per la serializzazione
 
-* [`OnDeserialized`](https://developer.xamarin.com/api/member/Urho.Component.OnDeserialize) in cui è possibile ottenere gli stati di personalizzato salvati.
+ `OnDeserialized` in cui è possibile ottenere gli stati di personalizzato salvati.
 
 In genere, un componente personalizzato avrà un aspetto simile al seguente:
 
@@ -355,15 +355,15 @@ class MyComponent : Component {
 }
 ```
 
-### <a name="object-prefabs"></a>Oggetto Prefabs
+### <a name="object-prefabs"></a>Oggetto prefabs
 
 Solo il caricamento o salvataggio intere scene non è sufficientemente flessibile per i giochi in cui devono essere creati dinamicamente nuovi oggetti. D'altra parte, la creazione di oggetti complessi e impostando le proprietà nel codice sarà anche noiose. Per questo motivo, è anche possibile salvare un nodo di scena che includerà i relativi nodi figlio, i componenti e gli attributi. Questi possono essere caricati in un secondo momento per praticità come gruppo.  Un oggetto salvato di questo tipo è noto anche come un prefab. A questo scopo, è possibile eseguire tre operazioni:
 
-- Nel codice chiamando [ `Node.SaveXml` ](https://developer.xamarin.com/api/member/Urho.Node.SaveXml) nel nodo
+- Nel codice chiamando `Node.SaveXml` nel nodo
 - Nell'editor, selezionando il nodo nella finestra della gerarchia e scegliere "Salva il nodo come" dal menu "File".
 - Usando il comando "nodo" in `AssetImporter`, che verrà salvata la gerarchia della scena nodo e tutti i modelli contenuti nell'asset di input (ad es. file Collada)
 
-Per creare un'istanza del nodo salvato in una scena, chiamare [ `InstantiateXml()` ](https://developer.xamarin.com/api/member/Urho.Scene.InstantiateXml). Il nodo verrà creato come elemento figlio della scena, ma può essere liberamente riassociate come elementi padre in seguito. Posizione e la rotazione per l'inserimento del nodo deve essere specificato. Il codice seguente viene illustrato come creare un'istanza di un prefab `Ninja.xm` a una scena con posizione desiderata e la rotazione:
+Per creare un'istanza del nodo salvato in una scena, chiamare `InstantiateXml`. Il nodo verrà creato come elemento figlio della scena, ma può essere liberamente riassociate come elementi padre in seguito. Posizione e la rotazione per l'inserimento del nodo deve essere specificato. Il codice seguente viene illustrato come creare un'istanza di un prefab `Ninja.xm` a una scena con posizione desiderata e la rotazione:
 
 ```csharp
 var prefabPath = Path.Combine (FileSystem.ProgramDir,"Data/Objects/Ninja.xml");
@@ -421,7 +421,7 @@ public void override Start ()
 
 Il parametro ricevuto dal gestore dell'evento è una classe di argomenti evento fortemente tipizzato che sarà specifiche per ogni evento e contiene il payload dell'evento.
 
-## <a name="responding-to-user-input"></a>Risponde all'Input dell'utente
+## <a name="responding-to-user-input"></a>Risponde all'input dell'utente
 
 È possibile sottoscrivere eventi diversi, ad esempio le sequenze di tasti verso il basso per la sottoscrizione all'evento e risponde all'input inviati:
 
@@ -449,13 +449,13 @@ protected override void OnUpdate(float timeStep)
     // Read WASD keys and move the camera scene node to the
     // corresponding direction if they are pressed
     if (input.GetKeyDown(Key.W))
-        CameraNode.Translate(Vector3.UnitY * moveSpeed * timeStep, TransformSpace.Local);
+        CameraNode.Translate(Vector3.UnitY  moveSpeed  timeStep, TransformSpace.Local);
     if (input.GetKeyDown(Key.S))
-        CameraNode.Translate(new Vector3(0.0f, -1.0f, 0.0f) * moveSpeed * timeStep, TransformSpace.Local);
+        CameraNode.Translate(new Vector3(0.0f, -1.0f, 0.0f)  moveSpeed  timeStep, TransformSpace.Local);
     if (input.GetKeyDown(Key.A))
-        CameraNode.Translate(new Vector3(-1.0f, 0.0f, 0.0f) * moveSpeed * timeStep, TransformSpace.Local);
+        CameraNode.Translate(new Vector3(-1.0f, 0.0f, 0.0f)  moveSpeed  timeStep, TransformSpace.Local);
     if (input.GetKeyDown(Key.D))
-        CameraNode.Translate(Vector3.UnitX * moveSpeed * timeStep, TransformSpace.Local);
+        CameraNode.Translate(Vector3.UnitX  moveSpeed  timeStep, TransformSpace.Local);
 }
 ```
 
@@ -463,20 +463,20 @@ protected override void OnUpdate(float timeStep)
 
 Le risorse includono la maggior parte delle operazioni di UrhoSharp caricati da archiviazione di massa durante l'inizializzazione o di runtime:
 
-- [`Animation`](https://developer.xamarin.com/api/type/Urho.Animation/) -usato per le animazioni di base
-- [`Image`](https://developer.xamarin.com/api/type/Urho.Resources.Image) -rappresenta immagini archiviate in un'ampia gamma di formati di immagini
-- [`Model`](https://developer.xamarin.com/api/type/Urho.Model/) -Modelli 3D
-- [`Material`](https://developer.xamarin.com/api/type/Urho.Material) -i materiali utilizzati per eseguire il rendering di modelli.
-- [`ParticleEffect`](https://developer.xamarin.com/api/type/Urho.ParticleEffect)- [descrive](http://urho3d.github.io/documentation/1.4/_particles.html) funzionamento di una funzione di emissione di particelle, vedere "[particelle](#particles)" di seguito.
-- [`Shader`](https://developer.xamarin.com/api/type/Urho.Shader) -shader personalizzati
-- [`Sound`](https://developer.xamarin.com/api/type/Urho.Audio.Sound) -suoni per la riproduzione, vedere "[suono](#sound)" di seguito.
-- [`Technique`](https://developer.xamarin.com/api/type/Urho.Technique/) -le tecniche per il rendering material
-- [`Texture2D`](https://developer.xamarin.com/api/type/Urho.Urho2D.Texture2D/) -Trama 2D
-- [`Texture3D`](https://developer.xamarin.com/api/type/Urho.Texture3D/) -Trama 3D
-- [`TextureCube`](https://developer.xamarin.com/api/type/Urho.TextureCube/) -Trama cubo
+- `Animation` -usato per le animazioni di base
+- `Image` -rappresenta immagini archiviate in un'ampia gamma di formati di immagini
+- `Model` -Modelli 3D
+- `Material` -i materiali utilizzati per eseguire il rendering di modelli.
+- `ParticleEffect`- [descrive](http://urho3d.github.io/documentation/1.4/_particles.html) funzionamento di una funzione di emissione di particelle, vedere "[particelle](#particles)" di seguito.
+- `Shader` -shader personalizzati
+- `Sound` -suoni per la riproduzione, vedere "[suono](#sound)" di seguito.
+- `Technique` -le tecniche per il rendering material
+- `Texture2D` -Trama 2D
+- `Texture3D` -Trama 3D
+- `TextureCube` -Trama cubo
 - `XmlFile`
 
-Sono gestiti e caricati per la [ `ResourceCache` ](https://developer.xamarin.com/api/type/Urho.Resources.ResourceCache/) sottosistema (disponibile come [ `Application.ResourceCache` ](https://developer.xamarin.com/api/property/Urho.Application.ResourceCache/)).
+Sono gestiti e caricati per la `ResourceCache` sottosistema (disponibile come `Application.ResourceCache`).
 
 Le risorse stesse vengono identificate mediante i relativi percorsi di file, relativo alla directory di risorse registrati o file del pacchetto. Per impostazione predefinita, il motore registra la directory di risorse `Data` e `CoreData`, o i pacchetti `Data.pak` e `CoreData.pak` se presenti.
 
@@ -494,7 +494,7 @@ I budget di memoria possono essere impostati per ogni tipo di risorsa: se le ris
 
 ### <a name="bringing-3d-models-and-images"></a>Portare le immagini e modelli 3D
 
-Urho3D tenta di usare formati di file esistente quando possibile e definire formati di file personalizzati solo se assolutamente necessario, ad esempio per i modelli (*.mdl) e per le animazioni (* ANI). Per questi tipi di asset, Urho fornisce un convertitore - [AssetImporter](http://urho3d.github.io/documentation/1.4/_tools.html) che possono usare molti formati 3D più diffusi, ad esempio fbx, dae, 3ds e obj e così via.
+Urho3D prova a usare i formati di file esistente quando possibile e definire formati di file personalizzati solo se assolutamente necessario, ad esempio, per i modelli (.mdl) e per le animazioni (ANI). Per questi tipi di asset, Urho fornisce un convertitore - [AssetImporter](http://urho3d.github.io/documentation/1.4/_tools.html) che possono usare molti formati 3D più diffusi, ad esempio fbx, dae, 3ds e obj e così via.
 
 È inoltre disponibile un componente aggiuntivo utile per Blender [ https://github.com/reattiva/Urho3D-Blender ](https://github.com/reattiva/Urho3D-Blender) che possono esportare gli asset di Blender in formato adatto per Urho3D.
 
@@ -502,9 +502,9 @@ Urho3D tenta di usare formati di file esistente quando possibile e definire form
 
 In genere, la richiesta di risorse usando uno dei `ResourceCache`del `Get` metodo vengano caricate immediatamente nel thread principale, che potrebbero essere necessari alcuni millisecondi per tutti i passaggi necessari (caricare file dal disco, analizzare i dati, carica GPU se necessario ) e può pertanto comportare la frequenza dei fotogrammi scende.
 
-Se si conosce in anticipo le risorse a cui è necessario, è possibile richiedere loro di essere caricati in un thread in background chiamando `BackgroundLoadResource()`. È possibile sottoscrivere l'evento caricato in Background di risorse usando il `SubscribeToResourceBackgroundLoaded` (metodo). Questo cmdlet indicherà se il caricamento è stato effettivamente un esito positivo o un errore. A seconda della risorsa, solo una parte del processo di caricamento può essere spostato in un thread in background, ad esempio la fase di caricamento GPU terminando deve sempre essere eseguita nel thread principale. Si noti che se si chiama uno dei metodi per una risorsa che viene accodato per il caricamento in background di caricamento risorsa, il thread principale richiederà fino a quando il caricamento è completo.
+Se si conosce in anticipo le risorse a cui è necessario, è possibile richiedere loro di essere caricati in un thread in background chiamando `BackgroundLoadResource`. È possibile sottoscrivere l'evento caricato in Background di risorse usando il `SubscribeToResourceBackgroundLoaded` (metodo). Questo cmdlet indicherà se il caricamento è stato effettivamente un esito positivo o un errore. A seconda della risorsa, solo una parte del processo di caricamento può essere spostato in un thread in background, ad esempio la fase di caricamento GPU terminando deve sempre essere eseguita nel thread principale. Si noti che se si chiama uno dei metodi per una risorsa che viene accodato per il caricamento in background di caricamento risorsa, il thread principale richiederà fino a quando il caricamento è completo.
 
-Funzionalità di caricamento asincrona scena `LoadAsync()` e `LoadAsyncXML()` prevede l'opzione di caricamento in background le risorse prima di passare al caricamento del contenuto di scena. È anche utilizzabile per caricare solo le risorse senza modificare la scena, specificando il `LoadMode.ResourcesOnly`. Ciò consente di preparare un file prefab scena o dell'oggetto per la creazione di istanze veloce.
+Funzionalità di caricamento asincrona scena `LoadAsync` e `LoadAsyncXML` prevede l'opzione di caricamento in background le risorse prima di passare al caricamento del contenuto di scena. È anche utilizzabile per caricare solo le risorse senza modificare la scena, specificando il `LoadMode.ResourcesOnly`. Ciò consente di preparare un file prefab scena o dell'oggetto per la creazione di istanze veloce.
 
 Infine il tempo massimo (in millisecondi) impiegato per ogni fotogramma su completato in background le risorse caricate possono essere configurate impostando il `FinishBackgroundResourcesMs` proprietà il `ResourceCache`.
 
@@ -512,8 +512,8 @@ Infine il tempo massimo (in millisecondi) impiegato per ogni fotogramma su compl
 
 ## <a name="sound"></a>File audio
 
-File audio è una parte importante del gioco e il framework di UrhoSharp offre un modo per la riproduzione di suoni nel gioco.  Riprodurre suoni mediante l'aggiunta di un [`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource/)
-componente a un [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node) e quindi la riproduzione di un file denominato provenienti dalle risorse.
+File audio è una parte importante del gioco e il framework di UrhoSharp offre un modo per la riproduzione di suoni nel gioco.  Riprodurre suoni mediante l'aggiunta di un `SoundSource`
+componente un `Node` e quindi la riproduzione di un file denominato provenienti dalle risorse.
 
 Si tratta di come farlo:
 
@@ -562,11 +562,11 @@ E questo è il risultato se si usa una trama del:
 
 ![Le particelle con una trama di casella](using-images/image-2.png "e questo è il risultato se si usa una trama del")
 
-## <a name="multithreading-support"></a>Supporto del multithreading
+## <a name="multi-threading-support"></a>Supporto multi-threading
 
 UrhoSharp è una libreria a thread singola.  Ciò significa che è consigliabile evitare di richiamare i metodi di UrhoSharp da un thread in background, o si rischia di danneggiare lo stato dell'applicazione e probabilmente di arresto anomalo dell'applicazione.
 
-Se si desidera eseguire il codice in background e quindi aggiornare i componenti Urho nell'interfaccia utente principale, è possibile usare il [`Application.InvokeOnMain(Action)`](https://developer.xamarin.com/api/member/Urho.Application.InvokeOnMain)
+Se si desidera eseguire il codice in background e quindi aggiornare i componenti Urho nell'interfaccia utente principale, è possibile usare il `Application.InvokeOnMain(Action)`
 ProcessOnStatus.  Inoltre, è possibile usare await c# e .NET API per garantire che il codice venga eseguito sul thread appropriato di attività.
 
 ## <a name="urhoeditor"></a>UrhoEditor

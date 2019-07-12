@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 6793190fa3278455a00d7ea08ab52a643c369a35
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a5402bb3b10387644282301075f63644149fcdc6
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61371542"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831537"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit in xamarin. IOS
 
@@ -384,77 +384,77 @@ Ciascuna `HMService` oggetto può contenere una raccolta di `HMCharacteristic` g
 
 Il `HMCharacteristicType` enum fornisce un set di valori di metadati caratteristica può essere definita o modificata come segue:
 
- - AdminOnlyAccess
- - AirParticulateDensity
- - AirParticulateSize
- - AirQuality
- - AudioFeedback
- - BatteryLevel
- - Luminosità
- - CarbonDioxideDetected
- - CarbonDioxideLevel
- - CarbonDioxidePeakLevel
- - CarbonMonoxideDetected
- - CarbonMonoxideLevel
- - CarbonMonoxidePeakLevel
- - ChargingState
- - ContactType
- - CoolingThreshold
- - CurrentDoorState
- - CurrentHeatingCooling
- - CurrentHorizontalTilt
- - CurrentLightLevel
- - CurrentLockMechanismState
- - currentPosition
- - CurrentRelativeHumidity
- - CurrentSecuritySystemState
- - CurrentTemperature
- - CurrentVerticalTilt
- - FirmwareVersion
- - HardwareVersion
- - HeatingCoolingStatus
- - HeatingThreshold
- - HoldPosition
- - Tonalità
- - Identify
- - InputEvent
- - LeakDetected
- - LockManagementAutoSecureTimeout
- - LockManagementControlPoint
- - LockMechanismLastKnownAction
- - Log
- - Produttore
- - Modello
- - MotionDetected
- - Nome
- - ObstructionDetected
- - OccupancyDetected
- - OutletInUse
- - OutputState
- - PositionState
- - PowerState
- - RotationDirection
- - RotationSpeed
- - Saturazione
- - Numero di serie
- - SmokeDetected
- - SoftwareVersion
- - StatusActive
- - StatusFault
- - StatusJammed
- - StatusLowBattery
- - StatusTampered
- - TargetDoorState
- - TargetHeatingCooling
- - TargetHorizontalTilt
- - TargetLockMechanismState
- - TargetPosition
- - TargetRelativeHumidity
- - TargetSecuritySystemState
- - TargetTemperature
- - TargetVerticalTilt
- - TemperatureUnits
- - Versione
+- AdminOnlyAccess
+- AirParticulateDensity
+- AirParticulateSize
+- AirQuality
+- AudioFeedback
+- BatteryLevel
+- Luminosità
+- CarbonDioxideDetected
+- CarbonDioxideLevel
+- CarbonDioxidePeakLevel
+- CarbonMonoxideDetected
+- CarbonMonoxideLevel
+- CarbonMonoxidePeakLevel
+- ChargingState
+- ContactType
+- CoolingThreshold
+- CurrentDoorState
+- CurrentHeatingCooling
+- CurrentHorizontalTilt
+- CurrentLightLevel
+- CurrentLockMechanismState
+- currentPosition
+- CurrentRelativeHumidity
+- CurrentSecuritySystemState
+- CurrentTemperature
+- CurrentVerticalTilt
+- FirmwareVersion
+- HardwareVersion
+- HeatingCoolingStatus
+- HeatingThreshold
+- HoldPosition
+- Tonalità
+- Identify
+- InputEvent
+- LeakDetected
+- LockManagementAutoSecureTimeout
+- LockManagementControlPoint
+- LockMechanismLastKnownAction
+- Log
+- Produttore
+- Modello
+- MotionDetected
+- Name
+- ObstructionDetected
+- OccupancyDetected
+- OutletInUse
+- OutputState
+- PositionState
+- PowerState
+- RotationDirection
+- RotationSpeed
+- Saturazione
+- Numero di serie
+- SmokeDetected
+- SoftwareVersion
+- StatusActive
+- StatusFault
+- StatusJammed
+- StatusLowBattery
+- StatusTampered
+- TargetDoorState
+- TargetHeatingCooling
+- TargetHorizontalTilt
+- TargetLockMechanismState
+- TargetPosition
+- TargetRelativeHumidity
+- TargetSecuritySystemState
+- TargetTemperature
+- TargetVerticalTilt
+- TemperatureUnits
+- Version
 
 ### <a name="working-with-a-characteristics-value"></a>Utilizza valore di una caratteristica
 
@@ -667,7 +667,7 @@ Devono modificare lo stato della luce nel simulatore accessori HomeKit. Se il va
 Questo articolo ha illustrato le funzionalità di base necessarie per l'utilizzo con accessori HomeKit in un'app xamarin. IOS. Esistono tuttavia alcune funzionalità avanzate di HomeKit che non sono illustrate in questa introduzione:
 
 - **Le chat** -accessori HomeKit abilitata possono facoltativamente organizzati in chat dall'utente finale. In questo modo HomeKit accessori presente in un modo semplice per l'utente a comprendere e utilizzare. Per altre informazioni sulla creazione e gestione di chat, vedere di Apple [HMRoom](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/cl/HMRoom) documentazione.
-- **Le zone** -chat possono facoltativamente essere organizzate in zone dall'utente finale. Una zona si intende una raccolta di stanze di cui l'utente può gestire come singola unità. Ad esempio: Installare, magazzino o al piano. Anche in questo caso, in questo modo HomeKit presentare e lavorare con accessori in modo significativo per l'utente finale. Per altre informazioni sulla creazione e gestione di zone, vedere di Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) documentazione.
+- **Le zone** -chat possono facoltativamente essere organizzate in zone dall'utente finale. Una zona si intende una raccolta di stanze di cui l'utente può gestire come singola unità. Ad esempio:  Installare, magazzino o al piano. Anche in questo caso, in questo modo HomeKit presentare e lavorare con accessori in modo significativo per l'utente finale. Per altre informazioni sulla creazione e gestione di zone, vedere di Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) documentazione.
 - **Set di azioni e azioni** -azioni modificare caratteristiche del servizio degli accessori e possono essere raggruppate in set. Set di azioni fungono da script per controllare un gruppo di accessori e coordinare le azioni. Ad esempio, uno script "Watch TV" potrebbe chiudere l'entrata abbassare le luci e attivare la televisione e del relativo sistema audio. Per altre informazioni sulla creazione e gestione di set di azioni e azioni, vedere di Apple [HMAction](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMAction_Class/index.html#//apple_ref/occ/cl/HMAction) e [HMActionSet](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/cl/HMActionSet) documentazione.
 - **I trigger** : un trigger può attivare uno o più azione impostata quando un determinato set di condizioni siano stati soddisfatti. Ad esempio, attivare la luce portch e bloccare tutte le porte esterne quando rileva scuro all'esterno. Per altre informazioni sulla creazione e gestione di trigger, vedere di Apple [HMTrigger](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMTrigger_Class/index.html#//apple_ref/occ/cl/HMTrigger) documentazione.
 
@@ -677,9 +677,9 @@ Poiché queste funzioni usano le stesse tecniche presentate nell'esempio precede
 
 Prima di inviare un HomeKit abilitata app xamarin. IOS in iTunes Connect per il rilascio in iTunes App Store, assicurarsi di seguire le linee guida di Apple per le app HomeKit abilitata:
 
- - Lo scopo principale dell'app _necessario_ da automazione domestica se si usa il framework HomeKit.
- - Testo marketing SQL dell'app deve informare gli utenti che viene usato HomeKit e devono fornire un'informativa sulla privacy.
- - Raccolta delle informazioni utente o l'uso di HomeKit per scopi di pubblicità rigorosamente è vietata.
+- Lo scopo principale dell'app _necessario_ da automazione domestica se si usa il framework HomeKit.
+- Testo marketing SQL dell'app deve informare gli utenti che viene usato HomeKit e devono fornire un'informativa sulla privacy.
+- Raccolta delle informazioni utente o l'uso di HomeKit per scopi di pubblicità rigorosamente è vietata.
 
 Rivedere le linee guida per la versione completa, vedere di Apple [linee guida revisione di App Store](https://developer.apple.com/app-store/review/guidelines/).
 

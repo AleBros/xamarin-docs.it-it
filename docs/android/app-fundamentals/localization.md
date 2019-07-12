@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 1f3e6dcc81c75d12a1dbba8fefc62a85178c8c24
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f6a7f8859340dcc8e48b6a4e6f56847168f4b71e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61019236"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829757"
 ---
 # <a name="android-localization"></a>Localizzazione di Android
 
@@ -212,7 +212,7 @@ Ha introdotto il supporto per Android 4.2 [lingue destra-sinistra (RTL)](http://
 Per ulteriori informazioni sulla denominazione directory delle risorse e del fallback, vedere la documentazione di Android [offrire risorse alternative](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
 
-### <a name="app-name"></a>Nome dell'App
+### <a name="app-name"></a>Nome app
 
 Il nome dell'applicazione è semplice da localizzare utilizzando un `@string/id` in per il `MainLauncher` attività:
 
@@ -252,7 +252,9 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 ### <a name="device-testing"></a>Test del dispositivo
 
 Per eseguire il test in un dispositivo, modificare la lingua nel **impostazioni** app.
-**Suggerimento:** Prendere nota delle icone e del percorso delle voci di menu in modo che è possibile ripristinare la lingua per l'impostazione originale.
+
+> [!TIP]
+> Prendere nota delle icone e del percorso delle voci di menu in modo che è possibile ripristinare la lingua per l'impostazione originale.
 
 
 ## <a name="summary"></a>Riepilogo

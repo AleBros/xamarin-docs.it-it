@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: be473580b24dba6b4f08384771e2097d368f8dc8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ea8af3c84bb53434489d230d159a27b6b9d500d8
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61276608"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830249"
 ---
 # <a name="radiobutton"></a>RadioButton
 
@@ -70,9 +70,10 @@ Ognuna delle acquisisce il [ `RadioButton` ](https://developer.xamarin.com/api/t
 
 Eseguire l'applicazione.
 
-**Suggerimento:** Se è necessario modificare manualmente lo stato (ad esempio, quando il caricamento di un salvata [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), usare il [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
-setter di proprietà o [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
-ProcessOnStatus.
+> [!TIP]
+> Se è necessario modificare manualmente lo stato (ad esempio, quando il caricamento di un salvata [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), usare il [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
+> setter di proprietà o [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
+> ProcessOnStatus.
 
 *Parti di questa pagina sono modifiche basate sul lavoro creato e condiviso da Android Open Source Project e usate in base a condizioni descritte nel*
 [*licenza Creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/). 

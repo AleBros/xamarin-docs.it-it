@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4b301c18ea0e69c818cf65b3b7df1cc8351350f5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b4165f9e6c3088a41d6bd746b1912a64570c553a
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61402455"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832552"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>In xamarin. IOS di acquisto in-App
 
@@ -34,17 +34,17 @@ Per supportare acquisti In-App è necessario usare xamarin. IOS 5.0 o versione s
 
 ## <a name="contents"></a>Sommario
 
- * [Nozioni di base e configurazione degli acquisti in-app](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
+* [Nozioni di base e configurazione degli acquisti in-app](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
- * [Panoramica di StoreKit e durante il recupero delle informazioni sul prodotto](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+* [Panoramica di StoreKit e durante il recupero delle informazioni sul prodotto](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
- * [Acquisto di prodotti di consumo](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
+* [Acquisto di prodotti di consumo](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
- * [Acquisto di prodotti non di consumo](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
+* [Acquisto di prodotti non di consumo](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
 
- * [Transazioni e verifica](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
+* [Transazioni e verifica](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
 
- * [Sottoscrizioni e report](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
+* [Sottoscrizioni e report](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
 
 ## <a name="summary"></a>Riepilogo
 

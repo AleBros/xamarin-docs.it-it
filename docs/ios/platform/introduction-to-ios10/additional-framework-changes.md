@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: a7b029aad69e65192d48d969dba2b9bb9a0d7a50
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ac255baf44951518b29112d2903950039a80ee53
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61364300"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831215"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>Modifiche aggiuntive iOS 10 Framework
 
@@ -132,10 +132,10 @@ Per altre informazioni, vedere di Apple [Guida per programmatori Metal](https://
 
 I miglioramenti seguenti sono stato apportati a framework ModelIO in iOS 10:
 
- - È ora supportato il formato di file USD.
- - Accesso automatico a distanza campo è stato aggiunto il supporto per la [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) classe.
- - Usare il nuovo `MDLLightProbeIrradianceDataSource` classe per assistere nella selezione host per il Probe di luce.
- - Usare il nuovo `MDLMaterialPropertyGraph` classe per agevolare il supporto runtime modifiche ai modelli.
+- È ora supportato il formato di file USD.
+- Accesso automatico a distanza campo è stato aggiunto il supporto per la [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) classe.
+- Usare il nuovo `MDLLightProbeIrradianceDataSource` classe per assistere nella selezione host per il Probe di luce.
+- Usare il nuovo `MDLMaterialPropertyGraph` classe per agevolare il supporto runtime modifiche ai modelli.
 
 ## <a name="photos-enhancements"></a>Miglioramenti della foto
 

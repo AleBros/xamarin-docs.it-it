@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: c900ab714fed2bb1e02367ba39ad3c5a0a76121e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 60eaad98e2d5469e9c43e6b4ad889080e1aa63ba
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61408349"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832056"
 ---
 # <a name="watchos-project-references-in-xamarin"></a>riferimenti al progetto in Xamarin watchOS
 
@@ -26,16 +26,16 @@ Visualizzare i riferimenti facendo doppio clic sui nodi riferimenti per ogni pro
 
 - **app iPhone** riferimenti **App Watch**
 
-![](project-references-images/catalog-reference1.png "app iPhone fa riferimento all'App Watch")
+  ![](project-references-images/catalog-reference1.png "app iPhone fa riferimento all'App Watch")
 
 - **App di guardare** riferimenti **estensione dell'App Watch**
 
-![](project-references-images/catalog-reference2.png "app iPhone fa riferimento all'App Watch")
+  ![](project-references-images/catalog-reference2.png "app iPhone fa riferimento all'App Watch")
 
 
- - Il **estensione dell'App Watch** non fa riferimento a uno degli altri progetti
+- Il **estensione dell'App Watch** non fa riferimento a uno degli altri progetti
 
-![](project-references-images/catalog-reference3.png "Estensione dell'App Watch non fa riferimento ad altri progetti")
+  ![](project-references-images/catalog-reference3.png "Estensione dell'App Watch non fa riferimento ad altri progetti")
 
 
 
@@ -44,17 +44,17 @@ Visualizzare i riferimenti facendo doppio clic sui nodi riferimenti per ogni pro
 È anche necessario assicurarsi che il **identificatori di Bundle** siano corretti.
 Tutti e tre i progetti devono avere la *stessa* prefisso identificatore, con i progetti di due espressioni di controllo con predefinito delle estensioni di `watchkitextension` e `watchkitapp`, come indicato di seguito (per il **WatchKitCatalog** ad esempio):
 
- - Progetto unificata di xamarin. ios: `com.xamarin.WatchKitCatalog`
+- Progetto unificata di xamarin. ios: `com.xamarin.WatchKitCatalog`
 
- - Progetto estensione WatchKit: `com.xamarin.WatchKitCatalog.watchkitextension`
+- Progetto estensione WatchKit: `com.xamarin.WatchKitCatalog.watchkitextension`
 
- - Progetto di App Watch- `com.xamarin.WatchKitCatalog.watchkitapp`
+- Progetto di App Watch- `com.xamarin.WatchKitCatalog.watchkitapp`
 
 Assicurarsi anche che questi **Info. plist** impostazioni siano corrette:
 
- - Il progetto di App Watch `WKCompanionAppBundleIdentifier` corrisponda all'ID Bundle dell'app/contenitore padre (ad esempio. è in esecuzione su iPhone);
+- Il progetto di App Watch `WKCompanionAppBundleIdentifier` corrisponda all'ID Bundle dell'app/contenitore padre (ad esempio. è in esecuzione su iPhone);
 
- - Il progetto di estensione di Kit Watch **ID Bundle di WKApp** corrisponde l'ID Bundle del progetto App Watch
+- Il progetto di estensione di Kit Watch **ID Bundle di WKApp** corrisponde l'ID Bundle del progetto App Watch
 
 È possibile modificare gli identificatori facendo doppio clic sui **Info. plist** file in ogni progetto.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 1c5b2635dca6aa74fd0dfb92d7e62e6da3140538
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9a34cfab0c3ed045968f48ac6c67b2f4b66990cc
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60902838"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832447"
 ---
 # <a name="xamarinforms-themes"></a>Temi di xamarin. Forms
 
@@ -26,7 +26,8 @@ Un tema viene aggiunto a un'applicazione xamarin. Forms, includendo il **Xamarin
 
 Fare riferimento al [tema chiaro](light.md) e [tema scuro](dark.md) pagine per istruzioni su come aggiungerli a un'app o consultare la [tema personalizzato di esempio](custom.md).
 
-**IMPORTANTE:** È anche consigliabile seguire i passaggi necessari per [caricare gli assembly di tema (sotto)](#loadtheme) aggiungendo codice boilerplate per iOS `AppDelegate` e Android `MainActivity`. Questo verrà migliorato in una versione futura versione di anteprima.
+> [!IMPORTANT]
+> È anche consigliabile seguire i passaggi necessari per [caricare gli assembly di tema (sotto)](#loadtheme) aggiungendo codice boilerplate per iOS `AppDelegate` e Android `MainActivity`. Questo verrà migliorato in una versione futura versione di anteprima.
 
 
 ## <a name="control-appearance"></a>Controllare l'aspetto

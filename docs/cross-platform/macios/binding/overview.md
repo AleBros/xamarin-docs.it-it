@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
 ms.date: 11/25/2015
-ms.openlocfilehash: ec173c0ed7881439ecbe2b5cf83c8f5484c7e5aa
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 93f90d2dad140f021c7e575afed44da1c5351eda
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977620"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830508"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Panoramica dei binding di Objective-C
 
@@ -24,9 +24,10 @@ Associazione di una libreria Objective-C per l'uso con Xamarin richiede tre pass
 2. Dopo aver scritto la definizione dell'API"" in C#, si compila in modo da produrre un assembly "associazione". Questa operazione può essere eseguita sul [ **della riga di comando** ](#commandline) o mediante un [ **progetto di associazione** ](#bindingproject) in Visual Studio per Mac o Visual Studio.
 
 3. Assembly "binding" viene quindi aggiunto al progetto di applicazione di Xamarin, pertanto è possibile accedere alla funzionalità native usando l'API è definito.
-  Il progetto di associazione è completamente separato dai progetti di applicazione.
+   Il progetto di associazione è completamente separato dai progetti di applicazione.
 
-**NOTA:** Passaggio 1 può essere automatizzato con l'assistenza degli [ **obiettivo Sharpie**](#objectivesharpie). Esamina le API Objective-C e genera una proposta C# "Definizione API". È possibile personalizzare i file creati da Sharpie obiettivo e usarli in un progetto di associazione (o nella riga di comando) per creare l'assembly di binding. Obiettivo Sharpie non crea associazioni di per sé, ma è semplicemente una parte facoltativa del più ampio del processo.
+   > [!NOTE]
+   > Passaggio 1 può essere automatizzato con l'assistenza degli [ **obiettivo Sharpie**](#objectivesharpie). Esamina le API Objective-C e genera una proposta C# "Definizione API". È possibile personalizzare i file creati da Sharpie obiettivo e usarli in un progetto di associazione (o nella riga di comando) per creare l'assembly di binding. Obiettivo Sharpie non crea associazioni di per sé, ma è semplicemente una parte facoltativa del più ampio del processo.
 
 È anche possibile leggere informazioni tecniche più dettagliate dei [funzionamento](#howitworks), che consente di scrivere le associazioni.
 
