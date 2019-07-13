@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: a3bb6674baed293f95eb50fbca5792b288aa9239
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: f53c1afd7c3f835bff2aae507b9937067bde4bec
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832511"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865742"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Finestre di dialogo in xamarin. Mac
 
@@ -127,10 +127,10 @@ Per aggiungere una nuova finestra, eseguire le operazioni seguenti:
 6. Creare un **Segue modale** dalla finestra principale dell'app nel nuovo controller di visualizzazione mediante il trascinamento di controllo dall'elemento dell'interfaccia utente che verrà aperta la finestra di dialogo alla finestra della finestra di dialogo. Assegnare il **Identifier** `ModalSegue`: 
 
     [![](dialog-images/new06.png "Un elemento segue modale")](dialog-images/new06.png#lightbox)
-6. Wireup eventuali **azioni** e **Outlet**: 
+7. Wireup eventuali **azioni** e **Outlet**: 
 
     [![](dialog-images/new04.png "Configurazione di un'azione")](dialog-images/new04.png#lightbox)
-6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
+8. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
 Rendere il `CustomDialogController.cs` file aspetto simile al seguente:
 
@@ -265,19 +265,19 @@ Per creare un foglio personalizzata in xamarin. Mac, è possibile eseguire le op
 2. Trascinare una nuova **Controller visualizzazione** nell'area di progettazione:
 
     [![](dialog-images/new01.png "Quando si seleziona un Controller di visualizzazione dalla libreria")](dialog-images/new01.png#lightbox)
-2. Progettare l'interfaccia utente:
+3. Progettare l'interfaccia utente:
 
     [![](dialog-images/sheet01.png "La progettazione dell'interfaccia utente")](dialog-images/sheet01.png#lightbox)
-3. Creare un **foglio Segue** dalla finestra del principale per il nuovo Controller di visualizzazione: 
+4. Creare un **foglio Segue** dalla finestra del principale per il nuovo Controller di visualizzazione: 
 
     [![](dialog-images/sheet02.png "Selezione del tipo di elemento segue foglio")](dialog-images/sheet02.png#lightbox)
-4. Nel **Identity Inspector**, assegnare un nome del Controller visualizzazione **classe** `SheetViewController`: 
+5. Nel **Identity Inspector**, assegnare un nome del Controller visualizzazione **classe** `SheetViewController`: 
 
     [![](dialog-images/sheet03.png "Impostazione del nome di classe")](dialog-images/sheet03.png#lightbox)
-5. Definire alcuna necessità **Outlet** e **azioni**: 
+6. Definire alcuna necessità **Outlet** e **azioni**: 
 
     [![](dialog-images/sheet04.png "La definizione di Outlet e azioni necessari")](dialog-images/sheet04.png#lightbox)
-6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione.
+7. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione.
 
 Modificare quindi il `SheetViewController.cs` file e renderlo simile al seguente:
 

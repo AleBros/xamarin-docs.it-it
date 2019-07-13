@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 22ac6a3776e5fa5de2fc238efe90c435190e8005
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: f6d059e5a30e7e3dac92a2c4e0e6079222e66b22
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832078"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865197"
 ---
 # <a name="push-notifications-in-ios"></a>Notifiche push in iOS
 
@@ -55,36 +55,36 @@ Ogni ambiente menzionati nella sezione precedente richiedono il proprio certific
 
 4. Assicurarsi di selezionare **Explicit App ID** e che l'identificatore del Bundle non termina con un `*` . Verrà creato un identificatore valido per più applicazioni e i certificati di notifica push necessario per una singola applicazione.
 
-1. In servizi App, selezionare **notifiche Push**:
+5. In servizi App, selezionare **notifiche Push**:
 
     [![](remote-notifications-in-ios-images/image8new.png "Selezionare le notifiche Push")](remote-notifications-in-ios-images/image8new.png#lightbox)
 
-2. E premere **Submit** per confermare la registrazione del nuovo ID App:
+6. E premere **Submit** per confermare la registrazione del nuovo ID App:
 
     [![](remote-notifications-in-ios-images/image9new.png "Confermare la registrazione del nuovo ID App")](remote-notifications-in-ios-images/image9new.png#lightbox)
 
-3.  Successivamente, è necessario creare il certificato per l'ID dell'app. Nel riquadro di spostamento a sinistra, passare a **certificati > tutti** e selezionare il `+` pulsante, come illustrato nello screenshot seguente:
+7.  Successivamente, è necessario creare il certificato per l'ID dell'app. Nel riquadro di spostamento a sinistra, passare a **certificati > tutti** e selezionare il `+` pulsante, come illustrato nello screenshot seguente:
 
     [![](remote-notifications-in-ios-images/image10new.png "Creare il certificato per l'ID app")](remote-notifications-in-ios-images/image8.png#lightbox)
 
-4. Selezionare se si desidera usare un certificato di sviluppo o produzione:
+8. Selezionare se si desidera usare un certificato di sviluppo o produzione:
 
     [![](remote-notifications-in-ios-images/image11new.png "Selezionare un certificato di sviluppo o produzione")](remote-notifications-in-ios-images/image11new.png#lightbox)
 
-5. E quindi selezionare il nuovo ID App appena creato:
+9. E quindi selezionare il nuovo ID App appena creato:
 
     [![](remote-notifications-in-ios-images/image12new.png "Selezionare il nuovo ID App appena creato")](remote-notifications-in-ios-images/image12new.png#lightbox)
 
-6.  Verranno visualizzate le istruzioni che illustra in dettaglio il processo di creazione di un *richiesta di certificato di firma* usando la **accesso portachiavi** dell'applicazione in Mac.
+10.  Verranno visualizzate le istruzioni che illustra in dettaglio il processo di creazione di un *richiesta di certificato di firma* usando la **accesso portachiavi** dell'applicazione in Mac.
 
-7.  Ora che il certificato è stato creato, deve essere utilizzata come parte del processo di compilazione per firmare l'applicazione in modo che possono registrare con il servizio APN. Ciò richiede la creazione e installazione di un profilo di provisioning che utilizza il certificato.
+11.  Ora che il certificato è stato creato, deve essere utilizzata come parte del processo di compilazione per firmare l'applicazione in modo che possono registrare con il servizio APN. Ciò richiede la creazione e installazione di un profilo di provisioning che utilizza il certificato.
 
-8.  Per creare un profilo di provisioning di sviluppo, passare al **profili di Provisioning** sezione e seguire i passaggi per crearla, usando l'App Id appena create.
+12.  Per creare un profilo di provisioning di sviluppo, passare al **profili di Provisioning** sezione e seguire i passaggi per crearla, usando l'App Id appena create.
 
-9.  Dopo aver creato il profilo di provisioning, apriamo **Xcode Organizer** e aggiornarlo. Se il profilo di provisioning è stato creato non viene visualizzata, potrebbe essere necessario scaricare il profilo dal portale di Provisioning iOS e importarlo manualmente. Lo screenshot seguente mostra un esempio della libreria con il profilo di provisioning aggiunto:  
+13.  Dopo aver creato il profilo di provisioning, apriamo **Xcode Organizer** e aggiornarlo. Se il profilo di provisioning è stato creato non viene visualizzata, potrebbe essere necessario scaricare il profilo dal portale di Provisioning iOS e importarlo manualmente. Lo screenshot seguente mostra un esempio della libreria con il profilo di provisioning aggiunto:  
     [![](remote-notifications-in-ios-images/image13new.png "Questo screenshot Mostra un esempio della libreria con il profilo di provisioning aggiunto")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
-10.  A questo punto è necessario configurare il progetto xamarin. IOS per usare questo profilo di provisioning appena creato. Questa operazione viene eseguita dal **opzioni progetto** finestra di dialogo, sotto **firma del Bundle iOS** scheda, come illustrato nello screenshot seguente:  
+14.  A questo punto è necessario configurare il progetto xamarin. IOS per usare questo profilo di provisioning appena creato. Questa operazione viene eseguita dal **opzioni progetto** finestra di dialogo, sotto **firma del Bundle iOS** scheda, come illustrato nello screenshot seguente:  
     [![](remote-notifications-in-ios-images/image11.png "Configurare il progetto xamarin. IOS per usare questo profilo di provisioning appena creato")](remote-notifications-in-ios-images/image11.png#lightbox)
 
 A questo punto l'applicazione è configurata per l'uso delle notifiche push. Tuttavia, esistono ancora pochi altri passaggi richiesti con il certificato. Questo certificato è in formato DER che non è compatibile con PushSharp, che richiede un certificato Personal Information Exchange (PKCS12). Per convertire il certificato in modo che sia utilizzabile da PushSharp, seguire questi passaggi finali:

@@ -9,16 +9,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: 53d2a0aae3398ea31676fbc3dab95d500dfe2104
-ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
+ms.openlocfilehash: 1b68afc1f3d3c57a5c336e9d30c97ce2375acb9f
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67309496"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864340"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Applicare uno stile a un'applicazione xamarin. Forms multipiattaforma
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Styled/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Styled/)
 
 In questa Guida introduttiva si apprenderà come:
 
@@ -120,7 +120,7 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](data
 
     Salvare le modifiche apportate a **NotesPage.xaml** premendo **CTRL + S**e chiudere il file.
 
-5. In **Esplora soluzioni**, nella **note** del progetto, fare doppio clic su **NoteEntryPage.xaml** per aprirlo. Sostituire quindi il codice esistente con il codice seguente:
+4. In **Esplora soluzioni**, nella **note** del progetto, fare doppio clic su **NoteEntryPage.xaml** per aprirlo. Sostituire quindi il codice esistente con il codice seguente:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -169,7 +169,7 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](data
 
     Salvare le modifiche apportate a **NoteEntryPage.xaml** premendo **CTRL + S**e chiudere il file.
 
-6. Compilare ed eseguire il progetto in ciascuna piattaforma. Per altre informazioni, vedere [compilazione la Guida introduttiva](single-page.md#building-the-quickstart).
+5. Compilare ed eseguire il progetto in ciascuna piattaforma. Per altre informazioni, vedere [compilazione la Guida introduttiva](single-page.md#building-the-quickstart).
 
     Nel **NotesPage** premere il **+** pulsante per passare alla **NoteEntryPage** e immettere una nota. In ogni pagina di osservare come lo stile è stata modificata dalla Guida introduttiva precedente.
 
@@ -261,7 +261,7 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](data
 
     Salvare le modifiche apportate a **NotesPage.xaml** scegliendo **File > Salva** (o premendo  **&#8984; + S**) e chiudere il file.
 
-5. Nel **riquadro della soluzione**, nella **note** del progetto, fare doppio clic su **NoteEntryPage.xaml** per aprirlo. Sostituire quindi il codice esistente con il codice seguente:
+4. Nel **riquadro della soluzione**, nella **note** del progetto, fare doppio clic su **NoteEntryPage.xaml** per aprirlo. Sostituire quindi il codice esistente con il codice seguente:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -310,7 +310,7 @@ Si consiglia di completare correttamente il [Guida introduttiva precedente](data
 
     Salvare le modifiche apportate a **NoteEntryPage.xaml** scegliendo **File > Salva** (o premendo  **&#8984; + S**) e chiudere il file.
 
-6. Compilare ed eseguire il progetto in ciascuna piattaforma. Per altre informazioni, vedere [compilazione la Guida introduttiva](single-page.md#building-the-quickstart).
+5. Compilare ed eseguire il progetto in ciascuna piattaforma. Per altre informazioni, vedere [compilazione la Guida introduttiva](single-page.md#building-the-quickstart).
 
     Nel **NotesPage** premere il **+** pulsante per passare alla **NoteEntryPage** e immettere una nota. In ogni pagina di osservare come lo stile è stata modificata dalla Guida introduttiva precedente.
 

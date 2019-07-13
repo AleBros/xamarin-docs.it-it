@@ -6,27 +6,27 @@ ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: bdf284d66539da3eca35e79d761712012674de0d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 923ec41443feff67d851a0c2f3cba1b948aed580
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978452"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864404"
 ---
 # <a name="binding-objective-c"></a>Binding di Objective-C
 
 In questa sezione include una vasta gamma di documenti che illustrano la creazione di associazioni alle librerie Objective-C, in modo che possono essere chiamati da C# le applicazioni create con xamarin. IOS o xamarin. Mac.
 
-##  <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Panoramica](~/cross-platform/macios/binding/overview.md)
+## <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Panoramica](~/cross-platform/macios/binding/overview.md)
 
 Questo documento è riportati alcuni dei componenti interni del modo in cui un'associazione viene eseguita. È un documento con alcune informazioni tecniche avanzato.
 
-##  <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Binding di librerie Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
+## <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Binding di librerie Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 
 Questo documento descrive il processo usato per creare C# binding di Objective-C API e il mapping tra i linguaggi in Objective-C e gli idiomi usati in .NET.
 Se si esegue il binding solo le API C, si deve usare il meccanismo di .NET standard per questa operazione, il framework di P/Invoke.
 
-##  <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[Guida di riferimento di definizione di associazione](~/cross-platform/macios/binding/binding-types-reference.md)
+## <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[Guida di riferimento di definizione di associazione](~/cross-platform/macios/binding/binding-types-reference.md)
 
 Si tratta della Guida di riferimento che descrive tutti gli attributi disponibili per gli autori delle associazioni per guidare il processo di generazione dell'associazione.
 

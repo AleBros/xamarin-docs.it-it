@@ -6,18 +6,18 @@ ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 715f63a0be54ba3342bd63c1c76d89656313359a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6c0b8e6de0c414fb708c4027f4c536a21b6b011a
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035909"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864369"
 ---
 # <a name="programming-language-support-in-xamarin"></a>Supporto delle lingue in Xamarin di programmazione
 
 ## <a name="c"></a>C# 
 
-###  <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Panoramica del supporto asincrono](~/cross-platform/platform/async.md)
+### <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Panoramica del supporto asincrono](~/cross-platform/platform/async.md)
 
 Versione 5 di C# introdotte due nuove parole chiave per l'espressione di operazioni asincrone: async e await. Queste parole chiave consentono di scrivere codice semplice che utilizza la Task Parallel Library per l'esecuzione di operazioni a esecuzione prolungata (ad esempio l'accesso di rete) in un altro thread e accedere con facilità i risultati al completamento. Le ultime versioni di xamarin. IOS e xamarin. Android supportano async e await: questo documento vengono fornite spiegazioni e un esempio dell'uso della nuova sintassi con Xamarin.
 
@@ -29,11 +29,11 @@ La versione più recente del C# language – versione 6 – continua ad evolvere
 
 Creazione di App per dispositivi mobili con F# e Xamarin.
 
-##  <a name="portable-visual-basicnetcross-platformplatformvisual-basicindexmd"></a>[Portabile Visual Basic.NET](~/cross-platform/platform/visual-basic/index.md)
+## <a name="portable-visual-basicnetcross-platformplatformvisual-basicindexmd"></a>[Portabile Visual Basic.NET](~/cross-platform/platform/visual-basic/index.md)
 
 Visual Studio supporta la creazione di librerie di classi portabili con Visual Basic.NET che può quindi essere incorporato nelle applicazioni Xamarin. Questo articolo illustra come creare una nuova libreria di classi Portabile Visual Basic e quindi usarlo in un'applicazione di esempio xamarin. IOS, xamarin. Android e Windows Phone.
 
-##  <a name="building-html-views-using-razor-templatescross-platformplatformrazor-html-templatesindexmd"></a>[Visualizzazioni HTML predefiniti con i modelli Razor](~/cross-platform/platform/razor-html-templates/index.md)
+## <a name="building-html-views-using-razor-templatescross-platformplatformrazor-html-templatesindexmd"></a>[Visualizzazioni HTML predefiniti con i modelli Razor](~/cross-platform/platform/razor-html-templates/index.md)
 
 Xamarin consente agli sviluppatori di sfruttare il motore di creazione modello Razor, funzionalità originariamente introdotto con ASP.NET MVC, insieme a C# per combinare facilmente i dati con HTML, Javascript e CSS senza il fastidioso uso di costruzione manuale di stringhe HTML nel codice.
 Questo articolo illustra come usare i modelli Razor con Xamarin per Android e iOS.

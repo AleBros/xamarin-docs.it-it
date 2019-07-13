@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: ec907e71074a97bd5d1714e79dd504013f5c8a4b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f23a506acda385b53942661244bcd7a8510c8c7f
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61240839"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865990"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows in xamarin. Mac
 
@@ -221,13 +221,13 @@ Per altre informazioni sull'uso di **Outlet** e **azioni**, vedere il [Outlet e 
 Per qualsiasi finestra che creano e si lavora in un'applicazione xamarin. Mac, il processo è fondamentalmente uguale quanto è stato appena fatto in precedenza:
 
 1. Per la nuova finestra in cui non è il valore predefinito aggiunto automaticamente al progetto, aggiungere una nuova definizione di finestra per il progetto. Questo argomento verrà discusso in dettaglio di seguito.
-2. Fare doppio clic il `Main.storyboard` file da aprire la progettazione della finestra per la modifica in Interface Builder di Xcode.
-3. Trascinare una nuova finestra di progettazione dell'interfaccia utente e la finestra di hook in usando la finestra principale _segue_ (per altre informazioni vedere la [segue](~/mac/platform/storyboards/indepth.md#Segues) sezione del nostro [utilizzo degli storyboard](~/mac/platform/storyboards/indepth.md) documentazione).
-3. Impostare qualsiasi proprietà della finestra richiesto nel **attributo Inspector** e il **Size Inspector**.
-4. Trascinare i controlli necessari per compilare l'interfaccia e configurarle nel **Inspector attributo**.
-5. Usare la **controllo dimensioni** per gestire il ridimensionamento di elementi dell'interfaccia utente.
-6. Esporre gli elementi dell'interfaccia utente della finestra al codice c# tramite **Outlet** e **azioni**.
-7. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
+1. Fare doppio clic il `Main.storyboard` file da aprire la progettazione della finestra per la modifica in Interface Builder di Xcode.
+1. Trascinare una nuova finestra di progettazione dell'interfaccia utente e la finestra di hook in usando la finestra principale _segue_ (per altre informazioni vedere la [segue](~/mac/platform/storyboards/indepth.md#Segues) sezione del nostro [utilizzo degli storyboard](~/mac/platform/storyboards/indepth.md) documentazione).
+1. Impostare qualsiasi proprietà della finestra richiesto nel **attributo Inspector** e il **Size Inspector**.
+1. Trascinare i controlli necessari per compilare l'interfaccia e configurarle nel **Inspector attributo**.
+1. Usare la **controllo dimensioni** per gestire il ridimensionamento di elementi dell'interfaccia utente.
+1. Esporre gli elementi dell'interfaccia utente della finestra al codice c# tramite **Outlet** e **azioni**.
+1. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
 Ora che abbiamo una finestra di base creata, esamineremo i processi tipiche un xamarin. Mac applicazione esegue quando si lavora con windows. 
 
@@ -259,7 +259,7 @@ public override void ViewWillAppear ()
     // Set Window Title
     this.View.Window.Title = "untitled";
 }
-``` 
+```    
 
 > [!NOTE]
 > Viene impostato il valore della finestra `Title` proprietà nel `ViewWillAppear` invece del metodo di `ViewDidLoad` metodo perché, anche se la vista può essere caricata in memoria, ne non viene ancora completamente creata un'istanza. Se abbiamo tentato di accedere il `Title` proprietà nel `ViewDidLoad` metodo si otterrebbe un `null` eccezione poiché la finestra non è stata costruita e reti cablate-fino alla proprietà ancora.
@@ -711,14 +711,14 @@ Per aggiungere una nuova finestra, eseguire le operazioni seguenti:
 3. Nel **Identity Inspector**, immettere `PreferencesWindow` per il **ID Storyboard**: 
 
     [![](window-images/new02.png "Impostazione dell'ID di storyboard")](window-images/new02.png#lightbox)
-5. Progettare l'interfaccia: 
+4. Progettare l'interfaccia: 
 
     [![](window-images/new03.png "Progettazione dell'interfaccia utente")](window-images/new03.png#lightbox)
-6. Aprire il Menu dell'App (`MacWindows`), selezionare **preferenze...** , CTRL + clic e trascinare la nuova finestra: 
+5. Aprire il Menu dell'App (`MacWindows`), selezionare **preferenze...** , CTRL + clic e trascinare la nuova finestra: 
 
     [![](window-images/new05.png "Creazione di un elemento segue")](window-images/new05.png#lightbox)
-7. Selezionare **mostrare** dal menu a comparsa.
-6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
+6. Selezionare **mostrare** dal menu a comparsa.
+7. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
 Se si esegue il codice e selezionare il **preferenze...**  dal **Menu applicazione**, verrà visualizzata la finestra:
 
@@ -734,7 +734,7 @@ Proprio come qualsiasi altro tipo di finestra in cui si crea e usare l'applicazi
 
 1. Aggiungere una nuova definizione di finestra per il progetto.
 2. Fare doppio clic il `.xib` file da aprire la progettazione della finestra per la modifica in Interface Builder di Xcode.
-2. Impostare qualsiasi proprietà della finestra richiesto nel **attributo Inspector** e il **Size Inspector**.
+3. Impostare qualsiasi proprietà della finestra richiesto nel **attributo Inspector** e il **Size Inspector**.
 4. Trascinare i controlli necessari per compilare l'interfaccia e configurarle nel **Inspector attributo**.
 5. Usare la **controllo dimensioni** per gestire il ridimensionamento di elementi dell'interfaccia utente.
 6. Esporre gli elementi dell'interfaccia utente della finestra al codice c# tramite **Outlet** e **azioni**.
@@ -768,11 +768,11 @@ Per aggiungere un nuovo pannello, eseguire le operazioni seguenti:
 7. Passare al **Identity Inspector** e impostare la classe del pannello `DocumentPanel`: 
 
     [![](window-images/panels03.png "Classe del Pannello di configurazione")](window-images/panels03.png#lightbox)
-6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
-7. Modificare il `DocumentPanel.cs` file e modificare la definizione di classe al seguente: 
+8. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
+9. Modificare il `DocumentPanel.cs` file e modificare la definizione di classe al seguente: 
 
     `public partial class DocumentPanel : NSPanel`
-8. Salvare le modifiche apportate al file.
+10. Salvare le modifiche apportate al file.
 
 Modificare il `AppDelegate.cs` file e apportare le `DidFinishLaunching` metodo aspetto simile al seguente:
 

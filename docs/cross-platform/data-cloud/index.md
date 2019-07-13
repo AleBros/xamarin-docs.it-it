@@ -6,12 +6,12 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: dd211fecad0bff58cb9ff6c6a99ae6a15c60eb7b
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 723970a4ad7e2ced85147dbcc6c22f9a45519121
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674980"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864610"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure e Xamarin
 
@@ -41,7 +41,7 @@ API Web di Microsoft espone un'interfaccia simile a REST che può essere facilme
 È possibile facilmente spin-up un' [sito Web di Azure](https://trywebsites.azurewebsites.net/) e creare un'app basata su WebAPI per connettersi all'App Xamarin.
 
 
-###  <a name="introduction-to-web-servicescross-platformdata-cloudweb-servicesindexmd"></a>[Introduzione a servizi Web](~/cross-platform/data-cloud/web-services/index.md)
+### <a name="introduction-to-web-servicescross-platformdata-cloudweb-servicesindexmd"></a>[Introduzione a servizi Web](~/cross-platform/data-cloud/web-services/index.md)
 
 Questa esercitazione descrive come integrare REST, SOAP e WCF web tecnologie del servizio con le applicazioni per dispositivi mobili Xamarin. Esamina le diverse implementazioni del servizio, valuta gli strumenti disponibili e le librerie di integrazione e fornisce modelli di esempio per l'utilizzo del servizio dati. Infine, fornisce una panoramica di base della creazione di un servizio web RESTful per l'utilizzo con un'applicazione per dispositivi mobili Xamarin.
 

@@ -6,12 +6,12 @@ ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2017
-ms.openlocfilehash: 7f407b22d1793d585ae40aeae8c2d9b7616784e6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6e043334d3ca45a573423ebdfdf1ec9149167b55
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61267817"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864698"
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>Creazione pacchetto NuGet da progetti di libreria esistenti
 
@@ -21,13 +21,13 @@ Le librerie .NET Standard o libreria di classi Portabile esistente possono esser
 
 2. Passare al **pacchetto NuGet > metadati** della sezione e immettere tutte le [informazioni necessarie](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) nel **generale** scheda:
 
-  [![](existing-library-images/existing-metadata-sml.png "Immettere i metadati obbligatori")](existing-library-images/existing-metadata.png#lightbox)
+   [![](existing-library-images/existing-metadata-sml.png "Immettere i metadati obbligatori")](existing-library-images/existing-metadata.png#lightbox)
 
 3. Facoltativamente [aggiungere i metadati aggiuntivi](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) nel **dettagli** scheda.
 
 4. Dopo aver configurato i metadati, è possibile fare doppio clic sul progetto e scegliere **creazione di pacchetti NuGet** e il **pacchetto. nupkg** verrà salvata nel file del pacchetto NuGet il **/bin/** cartella (Debug o Release, a seconda della configurazione).
 
-  ![](existing-library-images/create-nuget-package.png "Scegliere di creare pacchetti NuGet dal menu di scelta rapida")
+   ![](existing-library-images/create-nuget-package.png "Scegliere di creare pacchetti NuGet dal menu di scelta rapida")
 
 5. Per creare il pacchetto NuGet nel _ogni_ compilare o distribuire, andare alla **pacchetto NuGet > compilare** sezione e segni di graduazione **creare un pacchetto NuGet durante la compilazione del progetto**:
 

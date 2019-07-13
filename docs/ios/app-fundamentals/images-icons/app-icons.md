@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: 1eb3ec77dd478744906625dcfcd9fb843e74577c
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: cf2da9f7fe8d90c52517118cc3b4aa0e046d1f69
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827477"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864555"
 ---
 # <a name="application-icons-in-xamarinios"></a>Icone dell'applicazione xamarin. IOS
 
@@ -134,16 +134,16 @@ Per usare un catalogo Asset, eseguire le operazioni seguenti:
 2. Fare clic sui **asset visivi** scheda e fare clic sui **Usa catalogo Asset** pulsante sotto **icone dell'App**: 
 
     ![](app-icons-images/icon02w.png "Selezionare la scheda asset visivi")
-4. Dal **Esplora soluzioni**, espandere il **catalogo Asset** cartella: 
+3. Dal **Esplora soluzioni**, espandere il **catalogo Asset** cartella: 
 
     ![](app-icons-images/image009.png "Espandere la cartella catalogo Asset")
-5. Fare doppio clic il **supporti** file per aprirlo nell'editor: 
+4. Fare doppio clic il **supporti** file per aprirlo nell'editor: 
 
     ![](app-icons-images/image010.png "Aprire il file multimediale nell'editor")
-6. Sotto il **riquadro delle proprietà** lo sviluppatore può selezionare i diversi tipi e dimensioni delle icone necessarie.
-7. Fare clic sul tipo di icona specificato e selezionare un file di immagine per la dimensione del testo obbligatorio.
-8. Scegliere il **Open** per includere l'immagine nel progetto e impostarla di xcasset.
-9. Ripetere per tutte le immagini necessarie.
+5. Sotto il **riquadro delle proprietà** lo sviluppatore può selezionare i diversi tipi e dimensioni delle icone necessarie.
+6. Fare clic sul tipo di icona specificato e selezionare un file di immagine per la dimensione del testo obbligatorio.
+7. Scegliere il **Open** per includere l'immagine nel progetto e impostarla di xcasset.
+8. Ripetere per tutte le immagini necessarie.
 
 -----
 
@@ -203,8 +203,8 @@ Per specificare l'illustrazione di iTunes, seguire questa procedura:
 2. Fare clic sui **asset visivi** scheda ed espandere le **illustrazione di iTunes**: 
 
     ![](app-icons-images/itunes01w.png "Modifica in Visual Studio illustrazione di iTunes")
-4. Per un'immagine mancante, fare clic sull'anteprima nell'editor, selezionare il file di immagine per l'illustrazione di iTunes desiderata dalla finestra di dialogo Apri File e fare clic sui **aperto** pulsante.
-5. Ripetere questo passaggio finché non restituiscono tutti necessari immagini sono state specificate per l'app.
+3. Per un'immagine mancante, fare clic sull'anteprima nell'editor, selezionare il file di immagine per l'illustrazione di iTunes desiderata dalla finestra di dialogo Apri File e fare clic sui **aperto** pulsante.
+4. Ripetere questo passaggio finché non restituiscono tutti necessari immagini sono state specificate per l'app.
 
 -----
 

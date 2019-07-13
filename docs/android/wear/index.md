@@ -7,38 +7,38 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: dda00760399572d714300f1487391212c6fa0998
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: fca72291dd726d4f2a6635d26390baa103ee0d2d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740861"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864909"
 ---
 # <a name="android-wear"></a>Android Wear
 
 Android Wear è una versione di Android progettata per indossabile dispositivi quali smart espressioni di controllo. In questa sezione include istruzioni su come installare e configurare gli strumenti necessari per lo sviluppo Wear, una procedura dettagliata per la creazione del primo dispositivo Wear e un elenco di esempi che è possibile fare riferimento per Wear le App per la creazione di propri.
 
-##  <a name="getting-startedandroidwearget-startedindexmd"></a>[Introduzione](~/android/wear/get-started/index.md)
+## <a name="getting-startedandroidwearget-startedindexmd"></a>[Introduzione](~/android/wear/get-started/index.md)
 
 Introduce Android Wear, viene descritto come installare e configurare il computer per lo sviluppo di usura e vengono descritti i passaggi che consentono di creare ed eseguire la prima app Android Wear in un emulatore o un dispositivo Wear.
 
-##  <a name="user-interfaceandroidwearuser-interfaceindexmd"></a>[Interfaccia utente](~/android/wear/user-interface/index.md)
+## <a name="user-interfaceandroidwearuser-interfaceindexmd"></a>[Interfaccia utente](~/android/wear/user-interface/index.md)
 
 Viene spiegato Android Wear specifici controlli e fornisce collegamenti a esempi che illustrano come usare questi controlli.
 
-##  <a name="platform-featuresandroidwearplatformindexmd"></a>[Funzionalità della piattaforma](~/android/wear/platform/index.md)
+## <a name="platform-featuresandroidwearplatformindexmd"></a>[Funzionalità della piattaforma](~/android/wear/platform/index.md)
 
 I documenti in questa sezione illustrano funzionalità specifiche di Android Wear. Qui troverai un argomento che descrive come creare un WatchFace.
 
-##  <a name="screen-sizesandroidwearscreen-sizesmd"></a>[Dimensioni dello schermo](~/android/wear/screen-sizes.md)
+## <a name="screen-sizesandroidwearscreen-sizesmd"></a>[Dimensioni dello schermo](~/android/wear/screen-sizes.md)
 
 Visualizzare in anteprima e ottimizzare l'interfaccia utente per le dimensioni disponibile sullo schermo.
 
-##  <a name="deployment--testingandroidweardeploy-testindexmd"></a>[Distribuzione e test](~/android/wear/deploy-test/index.md)
+## <a name="deployment--testingandroidweardeploy-testindexmd"></a>[Distribuzione e test](~/android/wear/deploy-test/index.md)
 
 Viene illustrato come distribuire l'app Android Wear a un dispositivo Android Wear o all'emulatore Android configurato per Wear. Include anche il debug di suggerimenti e le informazioni su come configurare una connessione Bluetooth tra il computer di sviluppo e un dispositivo Android.
 
-##  <a name="wear-apishttpsdeveloperandroidcomreferenceandroidsupportwearable"></a>[Usare le API](https://developer.android.com/reference/android/support/wearable)
+## <a name="wear-apishttpsdeveloperandroidcomreferenceandroidsupportwearable"></a>[Usare le API](https://developer.android.com/reference/android/support/wearable)
 
 Il sito per sviluppatori Android fornisce informazioni dettagliate sulla chiave, usare le API, ad esempio [attività indossabile](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), [Intent](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html), [Authentication](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), [ Complicazioni](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), [complicazioni Rendering](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), [notifiche](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html), [visualizzazioni](https://developer.android.com/reference/android/support/wearable/view/package-summary.html), e [WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
 
@@ -58,7 +58,7 @@ Il sito per sviluppatori Android fornisce informazioni dettagliate sulla chiave,
 |[WatchFace](https://developer.xamarin.com/samples/monodroid/wear/WatchFace)|WatchFace è un viso di verifica personalizzato con stile analogico ora, minuto e secondo mani. Questo esempio viene illustrato come creare un servizio di volti espressioni di controllo che disegna l'ora corrente e la visibilità e la modalità ambiente gestisce gli eventi di modifica. Include un ricevitore di trasmissioni che ascolta le modifiche del fuso orario e aggiorna automaticamente il tempo di conseguenza.|![Screenshot of WatchFace](images/gridviewpager.png)|
 
 
-##  <a name="videos"></a>Video
+## <a name="videos"></a>Video
 
 Consultare questi video i collegamenti che trattano di xamarin. Android con Wear supportano:
 

@@ -6,12 +6,12 @@ ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 6d695df9c59a5f95441092d6d7b44d5feda941bd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6371c2af15eab9c5124212eefd9cf70d07b945d4
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61267753"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864728"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>Creazione di una nuova libreria multipiattaforma per NuGet
 
@@ -30,25 +30,25 @@ Se è necessario in un secondo momento funzionalità specifiche della piattaform
 
 2. Scegli **libreria multipiattaforma** dal **multipiattaforma > libreria** sezione:
 
-  [![](single-codebase-images/mulitplatform-library-sml.png "Configurare multi-piattaforma raccolta per una singola codebase")](single-codebase-images/mulitplatform-library.png#lightbox)
+   [![](single-codebase-images/mulitplatform-library-sml.png "Configurare multi-piattaforma raccolta per una singola codebase")](single-codebase-images/mulitplatform-library.png#lightbox)
 
 3. Immettere un **Name** e **descrizione**, quindi scegliere **singolo per tutte le piattaforme**:
 
-  [![](single-codebase-images/single-configure-sml.png "Configurare multi-piattaforma raccolta per una singola codebase")](single-codebase-images/single-configure.png#lightbox)
+   [![](single-codebase-images/single-configure-sml.png "Configurare multi-piattaforma raccolta per una singola codebase")](single-codebase-images/single-configure.png#lightbox)
 
 4. Completare la procedura guidata. Viene creato un progetto di libreria singola nella soluzione.
 
 5. Fare doppio clic sul nuovo progetto di libreria e quindi selezionare **opzioni**. Il **compilazione > Generale** sezione consente il **Framework di destinazione** da impostare – scegliere un profilo Portabile .NET o una versione di .NET Standard:
 
-  [![](single-codebase-images/single-choose-type-sml.png "Scegliere una libreria di classi Portabile o .NET Standard per il tipo di libreria")](single-codebase-images/single-choose-type.png#lightbox)
+   [![](single-codebase-images/single-choose-type-sml.png "Scegliere una libreria di classi Portabile o .NET Standard per il tipo di libreria")](single-codebase-images/single-choose-type.png#lightbox)
 
 6. Anche nel **opzioni progetto** finestra, aprire il **pacchetto NuGet > metadati** sezione e immettere il [i metadati necessari](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) (nonché tutti i metadati facoltativi):
 
-  [![](single-codebase-images/single-metadata-sml.png "Immettere i metadati obbligatori")](single-codebase-images/single-metadata.png#lightbox)
+   [![](single-codebase-images/single-metadata-sml.png "Immettere i metadati obbligatori")](single-codebase-images/single-metadata.png#lightbox)
 
 7. Pulsante destro del mouse sul progetto di libreria e scegliere **creazione di pacchetti NuGet** (o compilare o distribuire la soluzione) e il **pacchetto. nupkg** verrà salvata nel file del pacchetto NuGet il **/bin/** cartella (Debug o Release, a seconda della configurazione):
 
-  ![](single-codebase-images/create-nuget-package.png "Il file del pacchetto NuGet verrà essere salvato nella cartella bin Debug o Release, a seconda della configurazione")
+   ![](single-codebase-images/create-nuget-package.png "Il file del pacchetto NuGet verrà essere salvato nella cartella bin Debug o Release, a seconda della configurazione")
 
 
 ## <a name="verifying-the-output"></a>Verifica per determinare se l'Output

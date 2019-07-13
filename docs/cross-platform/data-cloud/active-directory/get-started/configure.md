@@ -6,12 +6,12 @@ ms.assetid: 8A14A457-F72E-4B08-B4B6-801F7619F893
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 6135740095395d5cd7bde9abc1cbbab1e1072161
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: e0015316b7be3462982ee0959862250c0c27dc74
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832248"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864654"
 ---
 # <a name="step-2-configure-service-access-for-mobile-application"></a>Passaggio 2. Configurare l'accesso al servizio per applicazioni per dispositivi mobili
 
@@ -19,15 +19,15 @@ Ogni volta che qualsiasi risorsa, ad esempio l'applicazione web, servizio web, e
 
 1. Nel **Configure** scheda, individuare **autorizzazioni per altre applicazioni** sezione:
 
-  ![](configure-images/2.1-configure.png "Nella scheda Configura, individuare sezione autorizzazioni per altre applicazioni")
+   ![](configure-images/2.1-configure.png "Nella scheda Configura, individuare sezione autorizzazioni per altre applicazioni")
 
 2. Fare clic su **aggiungere l'applicazione** pulsante. Nella schermata successiva popup verrà visualizzato l'elenco di tutte le applicazioni che sono protetti da Azure Active Directory. Selezionare le applicazioni che deve essere accessibile dall'applicazione per dispositivi mobili.
 
-  ![](configure-images/2.2-add-application.png "Selezionare le applicazioni che deve essere accessibile dall'applicazione per dispositivi mobili")
+   ![](configure-images/2.2-add-application.png "Selezionare le applicazioni che deve essere accessibile dall'applicazione per dispositivi mobili")
 
 3. Dopo aver selezionato l'applicazione, anche in questo caso selezionare l'applicazione appena aggiunto in **autorizzazioni per altre applicazioni** sezione e assegnare i diritti appropriati.
 
-  ![](configure-images/2.3-permissions.png "Dopo aver selezionato l'applicazione, anche in questo caso selezionare l'applicazione appena aggiunto nella sezione autorizzazioni per altre applicazioni e concedere i diritti appropriati")
+   ![](configure-images/2.3-permissions.png "Dopo aver selezionato l'applicazione, anche in questo caso selezionare l'applicazione appena aggiunto nella sezione autorizzazioni per altre applicazioni e concedere i diritti appropriati")
 
 4. Infine **salvare** la configurazione. Questi servizi dovrebbero ora essere disponibili nelle applicazioni per dispositivi mobili.
 

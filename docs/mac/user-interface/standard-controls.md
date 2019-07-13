@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 26ab7880b3c4b6176c806783fec7a499d68511c3
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 696432fb51060a236780eedee0b60661e3a86712
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831899"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865184"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Controlli standard in xamarin. Mac
 
@@ -603,16 +603,16 @@ Per creare nel popover, eseguire le operazioni seguenti:
 2. Trascinare un **visualizzare Controller** dalle **Library Inspector** nel **Editor dell'interfaccia**: 
 
     [![](standard-controls-images/content02.png "Quando si seleziona un Controller di visualizzazione dalla libreria")](standard-controls-images/content02.png#lightbox)
-4. Definire le dimensioni e il layout dei **vista personalizzata**: 
+3. Definire le dimensioni e il layout dei **vista personalizzata**: 
 
     [![](standard-controls-images/content04.png "Modifica del layout")](standard-controls-images/content04.png#lightbox)
-5. CTRL + clic e trascinare l'origine della finestra popup nel **Controller visualizzazione**: 
+4. CTRL + clic e trascinare l'origine della finestra popup nel **Controller visualizzazione**: 
 
     [![](standard-controls-images/content05.png "Trascinamento per la creazione di un elemento segue")](standard-controls-images/content05.png#lightbox)
-6. Selezionare **nel Popover** dal menu a comparsa: 
+5. Selezionare **nel Popover** dal menu a comparsa: 
 
     [![](standard-controls-images/content06.png "Impostare il tipo di elemento segue")](standard-controls-images/content06.png#lightbox)
-7. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
+6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
 <a name="Tab_Views" />
 

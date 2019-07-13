@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: bff4d46ac9d5fe893cbb0a2dfa032e1b9f6daa0e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: abcd89a6c4547680df0b96d235531312d3b21c52
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61407766"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864337"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Procedura dettagliata: Uso del tocco in xamarin. IOS
 
@@ -176,7 +176,7 @@ In questo esempio viene illustrato alcune delle API il tocco. Seguire questi pas
 
 <a name="Gesture_Recognizer_Samples" />
 
-##  <a name="gesture-recognizer-samples"></a>Esempi di riconoscitore di movimento
+## <a name="gesture-recognizer-samples"></a>Esempi di riconoscitore di movimento
 
 Il [sezione precedente](#Touch_Samples) è stato illustrato come trascinare un oggetto attorno alla schermata tramite gli eventi di tocco.
 In questa sezione si verrà eliminare gli eventi di tocco e Mostra come usare i riconoscitori di movimento seguenti:

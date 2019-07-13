@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 5c3c9714cb4d6cd077f898778f4388d63018fa00
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 79c1d7852cdde9b557965931706fcd24e43954f7
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831691"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865212"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in xamarin. IOS
 
@@ -327,7 +327,7 @@ Prima di iniziare, seguire i passaggi da 1-8. In questi passaggi è creare nostr
         - Colore: Rosso
         - Allineamento: Center
         - Righe: 2
-        - Casella di controllo 'Hidden' selezionata 
+        - Casella di controllo 'Hidden' selezionata    
         
     [![](images/passwordvc.png "Righe di Center")](images/passwordvc.png#lightbox)
     
@@ -424,25 +424,25 @@ Per aggiungere un riferimento a una scena specifico uno Storyboard esterno e non
 
     [![](images/ref08.png "Immettere un ID di Storyboard per il nuovo Controller di visualizzazione in background")](images/ref08.png#lightbox)
     
-3. Aprire lo Storyboard che si sta per essere aggiunto il riferimento in iOS Designer.
+4. Aprire lo Storyboard che si sta per essere aggiunto il riferimento in iOS Designer.
 
-4. Trascinare un **riferimento di Storyboard** dalle **della casella degli strumenti** nell'area di progettazione: 
+5. Trascinare un **riferimento di Storyboard** dalle **della casella degli strumenti** nell'area di progettazione: 
 
     [![](images/ref03.png "Un riferimento di Storyboard")](images/ref03.png#lightbox)
     
-5. Nel **Widget** scheda della finestra di **Esplora proprietà**, selezionare il nome del **Storyboard** e il **ID riferimento** (ID di Storyboard) del Scena 3D che creato in precedenza: 
+6. Nel **Widget** scheda della finestra di **Esplora proprietà**, selezionare il nome del **Storyboard** e il **ID riferimento** (ID di Storyboard) del Scena 3D che creato in precedenza: 
 
     [![](images/ref09.png "La scheda di Widget ")](images/ref09.png#lightbox)
     
-6. CTRL + clic su un Widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo elemento Segue per il **Storyboard riferimento** appena creato: 
+7. CTRL + clic su un Widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo elemento Segue per il **Storyboard riferimento** appena creato: 
 
     [![](images/ref10.png "Creazione di un elemento segue")](images/ref10.png#lightbox) 
     
-7. Scegliere dal menu a comparsa **mostrare** per completare l'elemento Segue: 
+8. Scegliere dal menu a comparsa **mostrare** per completare l'elemento Segue: 
 
     [![](images/ref06.png "Selezionare Mostra per completare l'elemento Segue")](images/ref06.png#lightbox) 
     
-8. Salvare le modifiche allo Storyboard.
+9. Salvare le modifiche allo Storyboard.
 
 Quando l'app viene eseguita e l'utente fa clic sull'elemento dell'interfaccia utente che è stato creato l'elemento Segue da, scena con la determinata **ID di Storyboard** dallo Storyboard esterno specificati nel riferimento Storyboard verranno visualizzati.
 
@@ -462,9 +462,9 @@ Per aggiungere un riferimento a una scena specifica lo stesso Storyboard, esegui
 
     [![](images/ref12.png "La scheda di Widget")](images/ref12.png#lightbox)
     
-3. Trascinare un **riferimento di Storyboard** dalle **della casella degli strumenti** nell'area di progettazione: 
+4. Trascinare un **riferimento di Storyboard** dalle **della casella degli strumenti** nell'area di progettazione: 
 
-    [![](images/ref03.png "Un riferimento di Storyboard")](images/ref03.png#lightbox)
+   [![](images/ref03.png "Un riferimento di Storyboard")](images/ref03.png#lightbox)
     
 5. Nel **Widget** scheda della finestra di **riquadro delle proprietà**, selezionare **ID riferimento** (ID di Storyboard) della scena creata in precedenza: 
 

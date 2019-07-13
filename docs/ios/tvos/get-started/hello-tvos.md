@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: 6b404d7c27fba38c53ff07207003849445d51118
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 859bbd22640ba3d09324fcd3853cda26e563a1cd
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832471"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865285"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>App tvos Guida introduttiva
 
@@ -298,20 +298,20 @@ Seguire questa procedura:
 9. Al termine, i vincoli dovrebbero essere simili a quelle nella scheda Layout del riquadro delle proprietà:
 
     [![](hello-tvos-images/designer11.png "Vincoli di esempio")](hello-tvos-images/designer11.png#lightbox)
-8. Trascinare un **sul pulsante** dalle **della casella degli strumenti** e posizionarlo sotto l'etichetta.
-9. Fare clic sui **Title** proprietà nel **riquadro della proprietà** e modificare il titolo del pulsante in `Click Me`:
+10. Trascinare un **sul pulsante** dalle **della casella degli strumenti** e posizionarlo sotto l'etichetta.
+11. Fare clic sui **Title** proprietà nel **riquadro della proprietà** e modificare il titolo del pulsante in `Click Me`:
 
     [![](hello-tvos-images/designer12.png "Modificare il titolo di pulsanti in fare clic qui")](hello-tvos-images/designer12.png#lightbox)
-10. Ripetere i passaggi da 5 a 8 precedenti per vincolare il pulsante nella finestra di tvOS. Tuttavia, invece di trascinare il quadratino di T nella parte superiore della finestra (come nel passaggio #7), trascinarlo nella parte inferiore dell'etichetta:
+12. Ripetere i passaggi da 5 a 8 precedenti per vincolare il pulsante nella finestra di tvOS. Tuttavia, invece di trascinare il quadratino di T nella parte superiore della finestra (come nel passaggio #7), trascinarlo nella parte inferiore dell'etichetta:
 
     [![](hello-tvos-images/designer14.png "Vincolare il pulsante")](hello-tvos-images/designer14.png#lightbox)
-11. Trascinare un'altra etichetta sotto il pulsante, in modo che sia la stessa larghezza come prima etichetta e impostare le dimensioni relative **allineamento** al **Center**:
+13. Trascinare un'altra etichetta sotto il pulsante, in modo che sia la stessa larghezza come prima etichetta e impostare le dimensioni relative **allineamento** al **Center**:
 
     [![](hello-tvos-images/designer15.png "Trascinare un'altra etichetta sotto il pulsante, ridimensionare in modo da essere della stessa larghezza alla prima etichetta e impostare l'allineamento al centro")](hello-tvos-images/designer15.png#lightbox)
-12. Ad esempio la prima etichetta e il pulsante, impostare questa etichetta da allineare al centro e bloccarlo nella posizione e dimensioni:
+14. Ad esempio la prima etichetta e il pulsante, impostare questa etichetta da allineare al centro e bloccarlo nella posizione e dimensioni:
 
     [![](hello-tvos-images/designer16.png "Aggiungere l'etichetta nella posizione e dimensioni")](hello-tvos-images/designer16.png#lightbox)
-13. Salvare le modifiche all'interfaccia utente.
+15. Salvare le modifiche all'interfaccia utente.
 
 Durante il ridimensionamento e lo spostamenti dei comandi, si dovrebbe notare che la finestra di progettazione ti offre gli hint snap utili basati su [Human Interface Guidelines di Apple TV](https://developer.apple.com/tvos/human-interface-guidelines/). Queste linee guida consentono di creare applicazioni di qualità elevata che avranno un aspetto famigliare per gli utenti di Apple TV.
 

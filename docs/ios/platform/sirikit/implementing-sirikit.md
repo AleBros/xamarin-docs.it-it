@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 2c3bddc89348b46c9bba277580071cb8ac3d6943
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7fc675b69132ac41ffa9d87f4b3264de431b11bd
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61434756"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865669"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementazione di SiriKit in xamarin. IOS
 
@@ -181,12 +181,12 @@ Seguire questa procedura:
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Fare doppio clic il `Entitlements.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo.
-3. Aggiungere il `com.apple.developer.siri` **proprietà**, impostare il **tipo** a `Boolean` e il **valore** a `Yes`: 
+2. Aggiungere il `com.apple.developer.siri` **proprietà**, impostare il **tipo** a `Boolean` e il **valore** a `Yes`: 
 
     [![](implementing-sirikit-images/setup01w.png "Aggiungere la proprietà com.apple.developer.siri")](implementing-sirikit-images/setup01w.png#lightbox)
-4. Salvare le modifiche apportate al file.
-5. Fare doppio clic il **File di progetto** nel **Esplora soluzioni** per aprirlo e modificarlo.
-6. Selezionare **firma del Bundle iOS** e assicurarsi che le `Entitlements.plist` Seleziona file nei **Entitlement personalizzati** campo.
+3. Salvare le modifiche apportate al file.
+4. Fare doppio clic il **File di progetto** nel **Esplora soluzioni** per aprirlo e modificarlo.
+5. Selezionare **firma del Bundle iOS** e assicurarsi che le `Entitlements.plist` Seleziona file nei **Entitlement personalizzati** campo.
 
 -----
 
@@ -233,15 +233,15 @@ Eseguire le operazioni seguenti nel computer Mac:
 16. Verificare che il **profilo di Provisioning** creato sopra è stato installato in Xcode.
 17. Aprire il progetto per aggiungere il supporto di SiriKit per Visual Studio per Mac.
 18. Fare doppio clic il `Info.plist` del file nei **Esplora soluzioni**.
-18. Verificare che il **identificatore del Bundle** corrisponde a quello creato nel portale per sviluppatori Apple sopra: 
+19. Verificare che il **identificatore del Bundle** corrisponde a quello creato nel portale per sviluppatori Apple sopra: 
 
     [![](implementing-sirikit-images/setup06.png "L'identificatore del Bundle")](implementing-sirikit-images/setup06.png#lightbox)
-18. Nel **Esplora soluzioni**, selezionare la **progetto**.
-19. Fare clic sul progetto e selezionare **opzioni**.
-21. Selezionare **firma del Bundle iOS**, selezionare la **identità di firma** e **profilo di Provisioning** creato in precedenza: 
+20. Nel **Esplora soluzioni**, selezionare la **progetto**.
+21. Fare clic sul progetto e selezionare **opzioni**.
+22. Selezionare **firma del Bundle iOS**, selezionare la **identità di firma** e **profilo di Provisioning** creato in precedenza: 
 
     [![](implementing-sirikit-images/setup07.png "Selezionare l'identità di firma e profilo di Provisioning")](implementing-sirikit-images/setup07.png#lightbox)
-22. Fare clic su **OK** per salvare le modifiche.
+23. Fare clic su **OK** per salvare le modifiche.
 
 > [!IMPORTANT]
 > Test SiriKit funziona solo su un reale iOS 10 dispositivi Hardware e non in iOS 10 simulatore. Se verificano problemi di installazione di un SiriKit abilitato app xamarin. IOS sulll'hardware effettivo, verificare che l'Entitlement necessari, l'ID App, identificatore firma e profilo di Provisioning siano state configurate correttamente in Apple Developer Portal e Visual Studio per Mac.
@@ -629,7 +629,7 @@ Per aggiungere un'estensione per Intent alla soluzione, eseguire le operazioni s
 
     [![](implementing-sirikit-images/intents05.w157-sml.png "Selezionare l'estensione per Intent")](implementing-sirikit-images/intents05.w157.png#lightbox)
 3. Immettere quindi un' **Name** per l'estensione per Intent e fare clic sulla **OK** pulsante.
-1. Nel **Esplora soluzioni**, fare clic sui **riferimenti** cartella dell'estensione per Intent appena creato e scegliere **Aggiungi > riferimento**. Controllare il nome del progetto di libreria il codice condiviso comune (che l'app creata in precedenza) e scegliere il **OK** pulsante:
+4. Nel **Esplora soluzioni**, fare clic sui **riferimenti** cartella dell'estensione per Intent appena creato e scegliere **Aggiungi > riferimento**. Controllare il nome del progetto di libreria il codice condiviso comune (che l'app creata in precedenza) e scegliere il **OK** pulsante:
 
     [![](implementing-sirikit-images/intents08w.png "Selezionare il nome del progetto di libreria di codice condiviso comune")](implementing-sirikit-images/intents08w.png#lightbox)
     
@@ -891,7 +891,7 @@ Per aggiungere un'estensione per interfaccia utente Intent per la soluzione, ese
 1. Fare clic sui **Nome soluzione** nel **Esplora soluzioni** e selezionare **Add** > **Aggiungi nuovo progetto...**
 2. Nella finestra di dialogo selezionare **iOS** > **estensioni** > **estensione dell'interfaccia utente Intent** e fare clic su di **successivo** pulsante.
 3. Immettere quindi un' **Name** per l'estensione per Intent e fare clic sulla **OK** pulsante.
-5. Nel **Esplora soluzioni**, fare clic sui **riferimenti** cartella dell'estensione per Intent appena creato. Controllare il nome del progetto di libreria il codice condiviso comune (che l'app creata in precedenza) e scegliere il **OK** pulsante.
+4. Nel **Esplora soluzioni**, fare clic sui **riferimenti** cartella dell'estensione per Intent appena creato. Controllare il nome del progetto di libreria il codice condiviso comune (che l'app creata in precedenza) e scegliere il **OK** pulsante.
     
 -----
 

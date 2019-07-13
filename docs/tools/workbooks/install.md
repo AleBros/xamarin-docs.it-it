@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: a1001163d89a9a9cda16a7ee5e644307fcc9875c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cb79323c416c107c35c465bc2a8815ab267cc451
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218590"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865945"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Requisiti e installazione di cartelle di lavoro
 
@@ -111,9 +111,9 @@ Se si verificano problemi di connessione cartella di lavoro di Android o iOS e s
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
 
-## <a name="uninstall"></a>Disinstalla
+## <a name="uninstall"></a>Disinstallare
 
-### <a name="windows"></a>WINDOWS
+### <a name="windows"></a>Windows
 
 A seconda del modo in cui è stato acquistato le cartelle di lavoro, potrebbe essere necessario eseguire due procedure di disinstallazione. Controllare entrambi a disinstallare completamente il software.
 
@@ -149,8 +149,8 @@ Per le versioni precedenti, è necessario rimuovere manualmente quanto segue:
 
 1. Eliminare l'app Workbooks all'indirizzo `"/Applications/Xamarin Workbooks.app"`
 2. Eliminare l'app Inspector `"Applications/Xamarin Inspector.app"`
-2. Eliminare i componenti aggiuntivi: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` e `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-3. Eliminare Inspector e i file di supporto qui: `/Library/Frameworks/Xamarin.Interactive.framework` e `/Library/Frameworks/Xamarin.Inspector.framework`
+3. Eliminare i componenti aggiuntivi: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` e `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+4. Eliminare Inspector e i file di supporto qui: `/Library/Frameworks/Xamarin.Interactive.framework` e `/Library/Frameworks/Xamarin.Inspector.framework`
 
 ## <a name="downgrading"></a>Il downgrade
 

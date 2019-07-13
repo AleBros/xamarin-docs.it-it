@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 1362767bf9a80af1eac37d316bd99a6ab364063f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bed8180c513eefd5765be767a5dca7cecefa6101
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61413998"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865954"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Utilizzo di watchOS localizzazione in Xamarin
 
@@ -127,19 +127,19 @@ Le immagini che vengono popolate dal codice possono essere impostate in due modi
 
 1. È possibile modificare un `Image` controllo impostandone il valore per il nome della stringa di un'immagine che già esiste nell'App Watch, ad esempio
 
-  ```csharp
-  displayImage.SetImage("gradient"); // image in Watch App (as shown above)
-  ```
+    ```csharp
+    displayImage.SetImage("gradient"); // image in Watch App (as shown above)
+    ```
 
 2. È possibile spostare un'immagine dall'estensione per l'espressione di controllo usando `FromBundle` e l'app verrà scelto automaticamente l'immagine corretta per la selezione della lingua dell'utente. Nella soluzione di esempio è disponibile un'immagine **language@2x.png** in ogni lingua cartella che viene visualizzato in `DetailController` usando il codice seguente:
 
-  ```csharp
-  using (var image = UIImage.FromBundle ("language")) {
-    displayImage.SetImage (image);
-  }
-  ```
+    ```csharp
+    using (var image = UIImage.FromBundle ("language")) {
+        displayImage.SetImage (image);
+    }
+    ```
 
-  Si noti che non è necessario specificare il **@2x** quando si fa riferimento al nome file dell'immagine.
+    Si noti che non è necessario specificare il **@2x** quando si fa riferimento al nome file dell'immagine.
 
 Il secondo metodo è applicabile se si scarica un'immagine da un server remoto per eseguire il rendering in watch; anche Tuttavia in questo caso è necessario assicurarsi che l'immagine che è scaricare è localizzato correttamente in base alle preferenze dell'utente.
 

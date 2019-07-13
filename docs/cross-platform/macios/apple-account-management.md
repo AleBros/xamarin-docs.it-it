@@ -6,12 +6,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 8617d6e0c0930f581c45dbb461dfcb5d85a2becc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 28a7d299e78a7fa6837ba9285795d380760f13b7
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61206228"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864640"
 ---
 # <a name="apple-account-management"></a>Gestione degli account Apple
 
@@ -54,17 +54,17 @@ Gestione degli account Apple è disponibile in Visual Studio per Mac, Visual Stu
 
     ![finestra di dialogo di FastLane.](apple-account-management-images/image2.png)
 
-4. Immettere l'ID Apple e la Password, quindi scegliere il **Accedi** pulsante. Le credenziali verranno salvate nel Keychain sicura su questo computer. [FastLane](~/ios/deploy-test/provisioning/fastlane/index.md) consente di gestire in modo sicuro le credenziali e passarle al portale per sviluppatori di Apple.
+3. Immettere l'ID Apple e la Password, quindi scegliere il **Accedi** pulsante. Le credenziali verranno salvate nel Keychain sicura su questo computer. [FastLane](~/ios/deploy-test/provisioning/fastlane/index.md) consente di gestire in modo sicuro le credenziali e passarle al portale per sviluppatori di Apple.
  
-5. Selezionare **Consenti sempre** nella finestra di dialogo di avviso per consentire a Visual Studio usare le credenziali:
+4. Selezionare **Consenti sempre** nella finestra di dialogo di avviso per consentire a Visual Studio usare le credenziali:
 
     ![Consenti sempre la finestra di dialogo Avviso](apple-account-management-images/image4.png)
 
-6. Dopo l'account è stato aggiunto correttamente, verrà visualizzato il proprio ID Apple e tutti i team che il proprio ID Apple fa parte di.
+5. Dopo l'account è stato aggiunto correttamente, verrà visualizzato il proprio ID Apple e tutti i team che il proprio ID Apple fa parte di.
 
     ![Finestra con gli account aggiunti account sviluppatore Apple](apple-account-management-images/image5.png)
 
-7. Selezionare qualsiasi team e premere il **Visualizza i dettagli...** immagini (...). Verrà visualizzato un elenco di tutte le identità di firma e i profili di Provisioning installati nel computer:
+6. Selezionare qualsiasi team e premere il **Visualizza i dettagli...** immagini (...). Verrà visualizzato un elenco di tutte le identità di firma e i profili di Provisioning installati nel computer:
 
     ![Visualizzazione dei dettagli nella schermata identità di firma e i profili nel computer di provisioning](apple-account-management-images/image6.png)
 
@@ -137,7 +137,7 @@ La finestra di dialogo Dettagli team visualizza inoltre un elenco di tutti i pro
 
 Per informazioni sulla distribuzione dell'app in un dispositivo, vedere la [device provisioning in](~/ios/get-started/installation/device-provisioning/index.md) Guida.
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>risoluzione dei problemi
 
 ### <a name="view-details-dialog-is-empty"></a>Finestra di dialogo visualizzazione dettagli è vuoto
 

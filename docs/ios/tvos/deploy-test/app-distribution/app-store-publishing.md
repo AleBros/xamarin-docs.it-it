@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: b941bcc8588e7fb0377430cca2829ad72ecbc8c6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 73ee7fc3c28fc7a8476010e8bf7567b3e5ef590d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61416677"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865082"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Pubblicazione in Apple TV App Store
 
@@ -192,19 +192,19 @@ Dopo aver completato la compilazione di distribuzione, è possibile inviare l'ap
 
 Il flusso di lavoro di archivio in Visual Studio per Mac aprirà Application Loader automaticamente, dopo aver salvato il `.ipa`:
 
-2. Selezionare *Deliver Your App* (Invia l'app) e fare clic sul pulsante *Choose* (Scegli):
+1. Selezionare *Deliver Your App* (Invia l'app) e fare clic sul pulsante *Choose* (Scegli):
 
     [![](app-store-publishing-images/publishvs01.png "Selezionare l'invio dell'app")](app-store-publishing-images/publishvs01.png#lightbox)
 
-3. Selezionare il file ZIP o il file IPA creato in precedenza e fare clic sul pulsante **OK**.
-4. Application Loader convaliderà il file:
+2. Selezionare il file ZIP o il file IPA creato in precedenza e fare clic sul pulsante **OK**.
+3. Application Loader convaliderà il file:
 
     [![](app-store-publishing-images/publishvs02.png "Schermata di convalida Application Loader")](app-store-publishing-images/publishvs02.png#lightbox)
-5. Fare clic sul pulsante *Next* (Avanti). L'applicazione sarà convalidati per l'App Store:
+4. Fare clic sul pulsante *Next* (Avanti). L'applicazione sarà convalidati per l'App Store:
 
     [![](app-store-publishing-images/publishvs03.png "L'applicazione viene convalidato in base l'App Store")](app-store-publishing-images/publishvs03.png#lightbox)
-6. Fare clic sul pulsante **Send** (Invia) per inviare l'applicazione ad Apple per la revisione.
-7. Application Loader indicherà quando il file è stato caricato.
+5. Fare clic sul pulsante **Send** (Invia) per inviare l'applicazione ad Apple per la revisione.
+6. Application Loader indicherà quando il file è stato caricato.
 
 <a name="iTunes_Connect_Status" />
 
@@ -216,7 +216,7 @@ Se si accede in iTunes Connect e seleziona l'app nell'elenco delle App disponibi
 
 <a name="Troubleshooting" />
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>risoluzione dei problemi
 
 Se si sono verificati problemi di invio dell'app xamarin. tvos ad la Store di App Apple TV, vedere la [Troubleshooting](~/ios/tvos/troubleshooting.md) Guida. Contiene alcuni problemi noti che possono verificarsi e come risolverli in di xamarin. tvos.
 

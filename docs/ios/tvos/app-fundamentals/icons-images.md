@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 96af7fab366c3fd3493cf5adbf183d80b7c1ee26
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dab1b0f7bf7aabb4dfcfbfdcb5e202baa48e664d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61418195"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865159"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Utilizzo di tvOS icone e immagini in Xamarin
 
@@ -181,7 +181,7 @@ Per impostare le icone dell'App obbligatorio per il progetto tvOS, attenersi all
 5. Fare clic sui **1x voce Apple TV** e selezionare un file di immagine.
 6. Ripetere i passaggi precedenti per il `Front` e `Middle` asset.
 7. Ripetere gli stessi passaggi per definire il `App Icon - Large` asset.
-4. Salvare le modifiche.
+8. Salvare le modifiche.
 
 <a name="Top-Shelf-Image" />
 
@@ -218,8 +218,8 @@ Per impostare l'immagine in evidenza necessari per il progetto tvOS, attenersi a
 3. Fare clic su di `Top Shelf Image` asset: 
 
     [![](icons-images-images/asset07.png "L'asset di immagine in evidenza")](icons-images-images/asset07.png#lightbox)
-5. Fare clic sui **1x voce Apple TV** e selezionare un file di immagine.
-6. Salvare le modifiche.
+4. Fare clic sui **1x voce Apple TV** e selezionare un file di immagine.
+5. Salvare le modifiche.
 
 <a name="Dynamic-Top-Shelf-Content" />
 
@@ -287,11 +287,11 @@ Se l'app xamarin. tvos è un gioco e sia incluso il supporto di Game Center, son
 
 ||Icone di realizzazione|Oggetto grafico del dashboard|Disegno di Leaderboard|
 |---|---|---|---|
-|Dimensioni visibile|200x200px|923x150px|N/D|
-|Dimensioni effettive|320x320px|N/D|659x371px|
-|L'area di sicurezza delle dimensioni|N/D|N/D|618x348px|
-|Dimensione con stato non attivo|N/D|N/D|548x309px|
-|Dimensione con lo stato attivo|N/D|N/D|618x348px|
+|Dimensioni visibile|200x200px|923x150px|n/d|
+|Dimensioni effettive|320x320px|n/d|659x371px|
+|L'area di sicurezza delle dimensioni|n/d|n/d|618x348px|
+|Dimensione con stato non attivo|n/d|n/d|548x309px|
+|Dimensione con lo stato attivo|n/d|n/d|618x348px|
 
 Per altre informazioni sull'utilizzo di Game Center, vedere di Apple [Guida alla programmazione di Game Center](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html).
 

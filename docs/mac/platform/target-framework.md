@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 11/10/2017
-ms.openlocfilehash: 15c93126f80917df45a5b80fb84397dc6ef0d5fd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e9e20b4966e9e6cb8a4ce3ad6724cf0ba2565c33
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075628"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865870"
 ---
 # <a name="target-framework-for-xamarinmac"></a>Framework di destinazione per xamarin. Mac
 
@@ -44,7 +44,7 @@ Per modificare il tipo di Framework di destinazione per un progetto xamarin. Mac
 2. In **Esplora soluzioni** fare doppio clic sul file di progetto per aprire la finestra di dialogo **Opzioni progetto**.
 3. Dal **generali** scheda, selezionare il tipo di **Framework di destinazione** che si adatta alle esigenze dell'applicazione:
 
-  [![Usa finestra di dialogo Opzioni progetto per scegliere un framework di destinazione](target-framework-images/select-target-full.png "Usa finestra di dialogo Opzioni progetto per scegliere un framework di destinazione")](target-framework-images/select-target-full-large.png#lightbox)
+    [![Usa finestra di dialogo Opzioni progetto per scegliere un framework di destinazione](target-framework-images/select-target-full.png "Usa finestra di dialogo Opzioni progetto per scegliere un framework di destinazione")](target-framework-images/select-target-full-large.png#lightbox)
 
 4. Fare clic sul pulsante **OK** per salvare le modifiche.
 

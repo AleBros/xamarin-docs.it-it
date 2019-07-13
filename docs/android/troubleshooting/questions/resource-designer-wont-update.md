@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2017
-ms.openlocfilehash: ba3c2b07e7f35bf9fd84d10b74d034a02ca6a73d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 65f7c6d8a573501ffec4aa1b8eaf28ff1e6479e8
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153288"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864229"
 ---
 # <a name="my-android-resourcedesignercs-file-will-not-update"></a>Il file Android Resource.designer.cs non verrà aggiornato
 
@@ -24,13 +24,13 @@ Un bug nella versione 5.1 di xamarin Studio in precedenza danneggiato file con e
 
 ## <a name="two-possible-approaches-to-fixing-up-the-project-file"></a>Due possibili approcci per correggere il file di progetto
 
-### <a name="either"></a>È possibile procedere in due modi:
+**Entrambi:**
 
-1) Creare un nuovo progetto di applicazione xamarin. Android, è possibile impostare tutte le proprietà di progetto in modo che corrisponda il progetto precedente e aggiungere tutte le risorse, eseguire il file di origine e così via nel progetto.
+1. Creare un nuovo progetto di applicazione xamarin. Android, è possibile impostare tutte le proprietà di progetto in modo che corrisponda il progetto precedente e aggiungere tutte le risorse, eseguire il file di origine e così via nel progetto.
 
-### <a name="or"></a>OR
+   **OPPURE**
 
-2) Creare una copia di backup di file con estensione csproj del progetto originale, quindi aprirlo in un editor di testo e aggiungere di nuovo gli elementi mancanti da un file con estensione csproj normalmente generato.
+2. Creare una copia di backup di file con estensione csproj del progetto originale, quindi aprirlo in un editor di testo e aggiungere di nuovo gli elementi mancanti da un file con estensione csproj normalmente generato.
 
 ### <a name="if-this-does-not-solve-the-problem"></a>Se non viene risolto il problema
 

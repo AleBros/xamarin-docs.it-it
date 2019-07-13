@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 61d598f90747cf47b613012328f77b4bd8953a41
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e24b448bedc60a537bfcd4a5bfbdbe9562163818
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61033110"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865925"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Utilizzo degli storyboard in xamarin. Mac
 
@@ -273,17 +273,17 @@ Per aggiungere un riferimento a uno Storyboard esterno, eseguire le operazioni s
 
     [![](indepth-images/ref01.png "Aggiunta di un nuovo Storyboard")](indepth-images/ref01.png#lightbox)
 2. Nel **Esplora soluzioni**, fare doppio clic il nuovo nome di uno Storyboard per aprirlo e modificarlo in Interface Builder di Xcode.
-2. Progettare il layout delle scene dello Storyboard di nuovo normalmente verrebbe e salvare le modifiche: 
+3. Progettare il layout delle scene dello Storyboard di nuovo normalmente verrebbe e salvare le modifiche: 
 
     [![](indepth-images/ref02.png "Progettazione dell'interfaccia")](indepth-images/ref02.png#lightbox)
-3. Passare allo Storyboard che si sta per essere aggiunto il riferimento a in Interface Builder.
-4. Trascinare un **riferimento di Storyboard** dalle **oggetto libreria** nell'area di progettazione: 
+4. Passare allo Storyboard che si sta per essere aggiunto il riferimento a in Interface Builder.
+5. Trascinare un **riferimento di Storyboard** dalle **oggetto libreria** nell'area di progettazione: 
 
     [![](indepth-images/ref03.png "Selezione di un riferimento di Storyboard nella libreria")](indepth-images/ref03.png#lightbox)
-5. Nel **attributo Inspector**, selezionare il nome del **Storyboard** creata in precedenza: 
+6. Nel **attributo Inspector**, selezionare il nome del **Storyboard** creata in precedenza: 
 
     [![](indepth-images/ref04.png "Configurazione di riferimento")](indepth-images/ref04.png#lightbox)
-6. CTRL + clic su un Widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo elemento Segue per il **Storyboard riferimento** appena creato.  Scegliere dal menu a comparsa **mostrare** per completare l'elemento Segue: 
+7. CTRL + clic su un Widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo elemento Segue per il **Storyboard riferimento** appena creato.  Scegliere dal menu a comparsa **mostrare** per completare l'elemento Segue: 
 
     [![](indepth-images/ref06.png "Impostare il tipo di elemento Segue")](indepth-images/ref06.png#lightbox) 
 8. Salvare le modifiche allo Storyboard.
@@ -304,14 +304,14 @@ Per aggiungere un riferimento a una scena specifico uno Storyboard esterno e non
 3. Nel **Identity Inspector**, immettere una **ID Storyboard** per finestra del Controller della scena nuova: 
 
     [![](indepth-images/ref08.png "Impostazione dell'ID di Storyboard")](indepth-images/ref08.png#lightbox)
-3. Aprire lo Storyboard che si sta per essere aggiunto il riferimento a in Interface Builder.
-4. Trascinare un **riferimento di Storyboard** dalle **oggetto libreria** nell'area di progettazione: 
+4. Aprire lo Storyboard che si sta per essere aggiunto il riferimento a in Interface Builder.
+5. Trascinare un **riferimento di Storyboard** dalle **oggetto libreria** nell'area di progettazione: 
 
     [![](indepth-images/ref03.png "Selezione di un riferimento di Storyboard dalla libreria")](indepth-images/ref03.png#lightbox)
-5. Nel **Identity Inspector**, selezionare il nome del **Storyboard** e il **ID riferimento** (ID di Storyboard) della scena creata in precedenza: 
+6. Nel **Identity Inspector**, selezionare il nome del **Storyboard** e il **ID riferimento** (ID di Storyboard) della scena creata in precedenza: 
 
     [![](indepth-images/ref09.png "Impostazione dell'ID di riferimento")](indepth-images/ref09.png#lightbox)
-6. CTRL + clic su un Widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo elemento Segue per il **Storyboard riferimento** appena creato. Scegliere dal menu a comparsa **mostrare** per completare l'elemento Segue: 
+7. CTRL + clic su un Widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo elemento Segue per il **Storyboard riferimento** appena creato. Scegliere dal menu a comparsa **mostrare** per completare l'elemento Segue: 
 
     [![](indepth-images/ref06.png "Impostare il tipo di elemento Segue")](indepth-images/ref06.png#lightbox) 
 8. Salvare le modifiche allo Storyboard.
@@ -332,7 +332,7 @@ Per aggiungere un riferimento a una scena specifica lo stesso Storyboard, esegui
 3. Nel **Identity Inspector**, immettere una **ID Storyboard** per finestra del Controller della scena nuova: 
 
     [![](indepth-images/ref12.png "Impostazione dell'ID di Storyboard")](indepth-images/ref12.png#lightbox)
-3. Trascinare un **riferimento di Storyboard** dalle **della casella degli strumenti** nell'area di progettazione: 
+4. Trascinare un **riferimento di Storyboard** dalle **della casella degli strumenti** nell'area di progettazione: 
 
     [![](indepth-images/ref03.png "Selezione di un riferimento di Storyboard dalla libreria")](indepth-images/ref03.png#lightbox)
 5. Nelle **attributo Inspector**, selezionare **ID riferimento** (ID di Storyboard) della scena creata in precedenza: 
@@ -341,8 +341,8 @@ Per aggiungere un riferimento a una scena specifica lo stesso Storyboard, esegui
 6. CTRL + clic su un Widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo elemento Segue per il **Storyboard riferimento** appena creato. Scegliere dal menu a comparsa **mostrare** per completare l'elemento Segue: 
 
     [![](indepth-images/ref06.png "Selezione del tipo di elemento Segue")](indepth-images/ref06.png#lightbox) 
-8. Salvare le modifiche allo Storyboard.
-9. Tornare a Visual Studio per Mac sincronizzare le modifiche.
+7. Salvare le modifiche allo Storyboard.
+8. Tornare a Visual Studio per Mac sincronizzare le modifiche.
 
 Quando l'app viene eseguita e l'utente fa clic sull'elemento dell'interfaccia utente che è stato creato l'elemento Segue da, scena con la determinata **ID di Storyboard** nello Storyboard stesso specificati nel riferimento Storyboard verranno visualizzati.
 

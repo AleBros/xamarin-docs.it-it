@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: bf86759832a1aba0ccc1c144981af6ea4eae8670
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 58e3593dc09c76439a3e128e51f354c169d7e72e
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61343707"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865969"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>Distribuzione di App watchOS per l'App Store
 
@@ -89,15 +89,15 @@ Devono essere 312 x 390 pixel e dimostrare l'App Watch in azione.
 
 1. Assicurarsi che l'app per iOS è il progetto di avvio. In caso contrario, fare doppio clic per impostare le ore:
 
-  ![](appstore-images/xs-startup.png "Impostazione del progetto di avvio")
+   ![](appstore-images/xs-startup.png "Impostazione del progetto di avvio")
 
 2. Scegliere il **dall'App Store** configurazione compilazione:
 
-  ![](appstore-images/xs-appstore.png "La configurazione della build dall'App Store")
+   ![](appstore-images/xs-appstore.png "La configurazione della build dall'App Store")
 
 3. Scegliere il **compilazione > archivio** voce di menu per avviare il processo di archiviazione:
 
-  ![](appstore-images/xs-archive.png "Dal menu Compila")
+   ![](appstore-images/xs-archive.png "Dal menu Compila")
 
 È anche possibile scegliere di **visualizzazione > archivi...**  voce di menu per visualizzare gli archivi che sono stati creati in precedenza.
 
@@ -111,26 +111,26 @@ Xcode visualizzerà automaticamente gli archivi creati in Visual Studio per Mac.
 
 1. Avviare Xcode e scegliere **finestra > organizzatore**:
 
-  ![](appstore-images/xc-organizer.png "Menu finestra")
+   ![](appstore-images/xc-organizer.png "Menu finestra")
 
 2. Passare al **archivi** scheda e selezionare l'archivio che è stato creato con Visual Studio per Mac:
 
-  ![](appstore-images/xc-archives.png "Nella scheda archivi")
+   ![](appstore-images/xc-archives.png "Nella scheda archivi")
 
 3. Facoltativamente **convalida...**  archivio, quindi scegliere **Submit...**  per caricare l'app a iTunes Connect.
 
 4. Scegliere il team di sviluppo (se si appartiene a più di uno) e quindi confermare l'invio:
 
-  ![](appstore-images/xc-submit1.png "La sezione del team di sviluppo")
+   ![](appstore-images/xc-submit1.png "La sezione del team di sviluppo")
 
 5. Visitare iTunes Connect nuovamente per visualizzare il file binario caricato. Passare alla pagina di configurazione dell'app e scegli **Prerelease** dal menu in alto per visualizzare i **Compila** elenco:
 
-  [![](appstore-images/itc-prerelease-sml.png "La pagina di configurazione delle App in iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
+   [![](appstore-images/itc-prerelease-sml.png "La pagina di configurazione delle App in iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
 
 È quindi possibile inviare l'app per l'approvazione nel **versioni** pagina. Vedere le [Cenni preliminari sulla distribuzione di app iOS](~/ios/deploy-test/app-distribution/index.md) per altre informazioni.
 
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>risoluzione dei problemi
 
 Ecco alcuni errori che possono verificarsi durante l'invio per l'App Store e i passaggi da eseguire per correggerli.
 

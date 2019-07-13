@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: c1f488213f9b3be945fd98e09f630c243d0b0d62
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8af7474036eb0fd6e2236cf52e96b8d12c8bc44e
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382838"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865712"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Riconoscimento vocale in xamarin. IOS
 
@@ -111,15 +111,15 @@ Per fornire la necessaria `NSSpeechRecognitionUsageDescription` chiavi nel `Info
 4. Se l'applicazione gestirà la trascrizione audio in tempo reale, sarà inoltre necessario specificare una descrizione utilizzo microfono. Fare clic su **aggiungere una nuova voce**, immettere `NSMicrophoneUsageDescription` per il **proprietà**, `String` per il **tipo** e un **descrizione utilizzo** come le **valore**. Ad esempio: 
 
     [![](speech-images/speech04.png "Aggiunta di NSMicrophoneUsageDescription")](speech-images/speech04.png#lightbox)
-4. Salvare le modifiche apportate al file.
+5. Salvare le modifiche apportate al file.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Fare doppio clic il `Info.plist` file per aprirlo e modificarlo.
-3. Fare clic su **aggiungere una nuova voce**, immettere `NSSpeechRecognitionUsageDescription` per il **proprietà**, `String` per il **tipo** e un **descrizione utilizzo** come le **valore**. Ad esempio: 
+2. Fare clic su **aggiungere una nuova voce**, immettere `NSSpeechRecognitionUsageDescription` per il **proprietà**, `String` per il **tipo** e un **descrizione utilizzo** come le **valore**. Ad esempio: 
 
     [![](speech-images/speech03w.png "Aggiunta di NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png#lightbox)
-4. Se l'applicazione gestirà la trascrizione audio in tempo reale, sarà inoltre necessario specificare una descrizione utilizzo microfono. Fare clic su **aggiungere una nuova voce**, immettere `NSMicrophoneUsageDescription` per il **proprietà**, `String` per il **tipo** e un **descrizione utilizzo** come le **valore**. Ad esempio: 
+3. Se l'applicazione gestirà la trascrizione audio in tempo reale, sarà inoltre necessario specificare una descrizione utilizzo microfono. Fare clic su **aggiungere una nuova voce**, immettere `NSMicrophoneUsageDescription` per il **proprietà**, `String` per il **tipo** e un **descrizione utilizzo** come le **valore**. Ad esempio: 
 
     [![](speech-images/speech04w.png "Aggiunta di NSMicrophoneUsageDescription")](speech-images/speech04w.png#lightbox)
 4. Salvare le modifiche apportate al file.

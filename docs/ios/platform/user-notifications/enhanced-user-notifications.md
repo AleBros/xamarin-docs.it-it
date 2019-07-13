@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 0f77f9014cf7bfad510927f0f12a3e70b387036f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: afa20a264e2509a5658cd0d8f90da3148315e803
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61424380"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865717"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Notifiche utente migliorate in xamarin. IOS
 
@@ -150,7 +150,7 @@ Inoltre, un utente può sempre modificare i privilegi di notifica per un'app in 
 // Get current notification settings
 UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
     var alertsAllowed = (settings.AlertSetting == UNNotificationSetting.Enabled);
-}); 
+});    
 ``` 
 
 ### <a name="configuring-the-remote-notifications-environment"></a>Configurazione dell'ambiente notifiche Remote
@@ -176,11 +176,11 @@ Per fornire i diritti necessari, procedere come segue:
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Fare doppio clic il `Entitlements.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo.
-3. Scegliere il **+** pulsante per aggiungere una nuova chiave.
-4. Immettere `aps-environment` per il **proprietà**, lasciare il **tipo** come `String` e immettere uno `development` oppure `production` per il **valore**: 
+2. Scegliere il **+** pulsante per aggiungere una nuova chiave.
+3. Immettere `aps-environment` per il **proprietà**, lasciare il **tipo** come `String` e immettere uno `development` oppure `production` per il **valore**: 
 
     [![](enhanced-user-notifications-images/setup02w.png "La proprietà aps-environment")](enhanced-user-notifications-images/setup02.png#lightbox)
-5. Salvare le modifiche apportate al file.
+4. Salvare le modifiche apportate al file.
 
 -----
 
