@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
-ms.openlocfilehash: b298ee24633e4098a6db8cf47d8e5355d72d7c34
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 41e8d073982bf7963b3a77a939bf28e52e86feaa
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970897"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675186"
 ---
 # <a name="xamarinforms-app-lifecycle"></a>Ciclo di vita delle app Xamarin.Forms
 
@@ -53,7 +53,7 @@ protected override void OnResume()
 ```
 
 > [!IMPORTANT]
-> In Android, il metodo `OnStart` verrà chiamato a rotazione oltre che al primo avvio dell'applicazione, se l'attività principale non include `ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation` nell'attributo `[Activity()]`.
+> In Android il metodo `OnStart` verrà chiamato a rotazione oltre che al primo avvio dell'applicazione, se l'attività principale non include `ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation` nell'attributo `[Activity()]`.
 
 <a name="page" />
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: b34ac82cf240b892e60707d76c82da64ff232a20
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 8c79075c9e01ef5da73255b152b4cbbd676b4f4e
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827420"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674738"
 ---
 # <a name="building-abi-specific-apks"></a>Compilazione di APK specifici di ABI
 
@@ -174,7 +174,7 @@ Al termine dell'attività di Rake, saranno disponibili tre cartelle `bin` con il
 
 
 > [!NOTE]
-> Il processo di compilazione illustrato in questa guida può essere implementato in uno dei numerosi sistemi di compilazione. Anche se non è disponibile un esempio già scritto, dovrebbe essere possibile eseguirlo anche con [Powershell](http://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) o [Fake](http://fsharp.github.io/FAKE/).
+> Il processo di compilazione illustrato in questa guida può essere implementato in uno dei numerosi sistemi di compilazione. Anche se non è disponibile un esempio già scritto, dovrebbe essere possibile eseguirlo anche con [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) o [Fake](http://fsharp.github.io/FAKE/).
 
 
 ## <a name="summary"></a>Riepilogo

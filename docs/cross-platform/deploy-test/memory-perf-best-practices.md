@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 7f03df796c338380a776f9af26563af2e60e59a1
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 9377dcca1cd72b68a0e5b6a5ac5ac4d12d25d50c
+ms.sourcegitcommit: 41b44f2e9bde3b174e7c08605bff65aff594dcd6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672651"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690912"
 ---
 # <a name="cross-platform-performance"></a>Prestazioni multipiattaforma
 
@@ -275,7 +275,7 @@ Quando SGen avvia un'operazione di Garbage Collection, interrompe i thread dell'
 1. **Frequenza**: la frequenza con cui si verifica l'operazione di Garbage Collection. La frequenza di questa operazione aumenta man mano che viene allocata una maggiore quantità di memoria tra le raccolte.
 1. **Durata**: il tempo necessario per ogni singola operazione di Garbage Collection. È approssimativamente proporzionale al numero di oggetti attivi che vengono raccolti.
 
-Nel complesso, ciò significa che se molti oggetti vengono allocati ma non restano attivi, vengono eseguite molte operazioni di Garbage Collection brevi. Al contrario, se l'allocazione di nuovi oggetti è lenta e gli oggetti restano attivi, vengono eseguite meno operazioni di Garbage Collection, ma più lunghe.
+Nel complesso ciò significa che se molti oggetti vengono allocati ma non restano attivi, vengono eseguite molte operazioni di Garbage Collection brevi. Al contrario, se l'allocazione di nuovi oggetti è lenta e gli oggetti restano attivi, vengono eseguite meno operazioni di Garbage Collection, ma più lunghe.
 
 Per ridurre la pressione sul Garbage Collector, attenersi alle indicazioni seguenti:
 
