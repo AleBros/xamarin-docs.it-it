@@ -5,7 +5,7 @@ metadata:
   description: 'Grafica multipiattaforma, grafica 2D e giochi 3D per le piattaforme desktop e per dispositivi mobili.'
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 07/10/2018
   ms.topic: landing-page
 abstract:
   description: 'Grafica multipiattaforma, grafica 2D e giochi 3D per le piattaforme desktop e per dispositivi mobili.'
@@ -13,8 +13,6 @@ abstract:
     items:
       - href: 'https://developer.xamarin.com/samples/'
         text: Esempi
-      - href: 'https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/'
-        text: Note sulla versione
 sections:
   - title: null
     items:
@@ -34,19 +32,13 @@ sections:
               href: ~/graphics-games/urhosharp/index.md
             title: UrhoSharp
             html: Grafica e giochi 3D multipiattaforma.
-          - href: ~/graphics-games/cocossharp/index.md
-            image:
-              src: ~/media/index/xamarin-graphics-cocos.svg
-              href: ~/graphics-games/cocossharp/index.md
-            title: CocosSharp
-            html: Creare giochi 2D multipiattaforma per dispositivi mobili.
           - href: ~/graphics-games/monogame/index.md
             image:
               src: ~/media/index/xamarin-graphics-monogame.svg
               href: ~/graphics-games/monogame/index.md
             title: MonoGame
             html: 'Creare giochi per desktop, dispositivi mobili e console con C#.'
-  - title: Piattaforme
+  - title: Sviluppo di applicazioni mobili Xamarin con .NET
     items:
       - type: list
         style: cards
