@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/03/2019
-ms.openlocfilehash: f0ad4e3271ac8c1f8d30a0440b38d8a46c57783e
-ms.sourcegitcommit: b4a12607ca944de10fd166139765241a4501831c
+ms.openlocfilehash: 9c427dc48f6fe19098c312bad16d9630bb480264
+ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66687070"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290153"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin. Forms in progetti Xamarin Native
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/Native2Forms/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/Native2Forms/)
 
 In genere, un'applicazione xamarin. Forms include una o più pagine da cui deriva [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), e queste pagine sono condivise da tutte le piattaforme in un progetto condiviso o un progetto di libreria .NET Standard. Tuttavia, consente ai moduli nativi `ContentPage`-derivato pagine per essere aggiunti direttamente alle applicazioni native di xamarin. IOS, xamarin. Android e UWP. Rispetto alla presenza di utilizzare il progetto nativo `ContentPage`-pagine derivate da un progetto di libreria .NET Standard o un progetto condiviso, il vantaggio dell'aggiunta di pagine direttamente a progetti nativi è che le pagine possono essere estese con le visualizzazioni native. Visualizzazioni native possono quindi essere denominate in XAML con `x:Name` e con riferimenti dal code-behind. Per altre informazioni sulle visualizzazioni native, vedere [le visualizzazioni Native](~/xamarin-forms/platform/native-views/index.md).
 
@@ -119,6 +119,9 @@ Il `NavigateToNoteEntryPage` metodo converte xamarin. Forms [ `ContentPage` ](xr
 [![Schermata di un'applicazione xamarin. IOS che usa un'interfaccia utente definiti in XAML](native-forms-images/ios-noteentrypage.png "app xamarin. IOS con una UI XAML")](native-forms-images/ios-noteentrypage-large.png#lightbox "app xamarin. IOS con una UI XAML")
 
 Quando il `NoteEntryPage` viene visualizzata, toccando la parte posteriore freccia viene visualizzata la `UIViewController` per il `NoteEntryPage` classe il `UINavigationController`, restituzione all'utente del `UIViewController` per il `NotesPage` classe.
+
+> [!WARNING]
+> Il Popping di una `UIViewController` da iOS Native navigazione dello stack non elimina automaticamente di `UIViewController`s. È responsabilità dello sviluppatore per assicurarsi che tutti `UIViewController` che non è più necessario è relativa `Dispose()` metodo chiamato, altrimenti il `UIViewController` e collegati `Page` saranno rese orfane e non verranno raccolti dal Garbage Collector, causando una perdita di memoria.
 
 ## <a name="android"></a>Android
 

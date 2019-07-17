@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 1c3c3a63de40a63f040870505b086d67fe160773
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8b0686a91f18b41aa8e2e7db071123c0d96723a0
+ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61421195"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290111"
 ---
 # <a name="can-i-change-the-output-path-of-the-ipa-file"></a>È possibile modificare il percorso di output del file IPA?
 
@@ -45,7 +45,7 @@ Questa procedura è indicata per qualsiasi progetto iOS che usa il motore di com
 2. Impostare il Cartelladestinazione nella cartella di output desiderato. Normalmente è possibile usare le proprietà di MSBuild (ad esempio $(OutputPath)) all'interno di questo argomento se si desidera.
 
 ## <a name="notes"></a>Note
-- Il `CreateIpaDependsOn` proprietà definita nel `Xamarin.iOS.Common.targets` file che è parte di xamarin. IOS. Si comporta come descritto in *delle proprietà 'DependsOn' override* sul [ https://msdn.microsoft.com/library/ms366724.aspx ](https://msdn.microsoft.com/library/ms366724.aspx).
+- Il `CreateIpaDependsOn` proprietà definita nel `Xamarin.iOS.Common.targets` file che è parte di xamarin. IOS. Si comporta come descritto nel [eseguendo l'override di destinazioni predefinite](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) sezione dell'articolo [come: Estendere il processo di compilazione di Visual Studio](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
 
 - È possibile usare una **spostare** attività anziché un **copia** attività se si preferisce. Se si sceglie se l'opzione e si sta generando su Windows, è necessario usare il nome completo attività `<Microsoft.Build.Tasks.Move>` per evitare ambiguità con la XamarinVS attività di compilazione.
 
@@ -79,6 +79,6 @@ Questa procedura è indicata per qualsiasi progetto iOS che usa il motore di com
 2. Impostare il `DestinationFolder` nella cartella di output desiderato. Normalmente è possibile usare le proprietà di MSBuild (ad esempio `$(OutputPath)`) all'interno di questo argomento se si desidera.
 
 ## <a name="notes"></a>Note
-- Il `CreateIpaDependsOn` proprietà definita nel `Xamarin.iOS.Common.targets` file che è parte di xamarin. IOS. Si comporta come descritto in *delle proprietà "DependsOn" override* sul [ https://msdn.microsoft.com/library/ms366724.aspx ](https://msdn.microsoft.com/library/ms366724.aspx).
+- Il `CreateIpaDependsOn` proprietà definita nel `Xamarin.iOS.Common.targets` file che è parte di xamarin. IOS. t si comporta come descritto nel [eseguendo l'override di destinazioni predefinite](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) sezione dell'articolo [come: Estendere il processo di compilazione di Visual Studio](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
 
 - È possibile usare una **spostare** attività anziché un **copia** attività se si preferisce. Se si sceglie se l'opzione e si sta generando su Windows, è necessario usare il nome completo attività `<Microsoft.Build.Tasks.Move>` per evitare ambiguità con la XamarinVS attività di compilazione.
