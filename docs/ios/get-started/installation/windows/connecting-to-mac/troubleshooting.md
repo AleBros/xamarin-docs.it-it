@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: f56f2c58195e51e9294948dad85a475e181f99b2
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 864c801597f251940e55232e8c59d3a6ea19c392
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978529"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865796"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Risoluzione dei problemi di connessione per un host di compilazione Xamarin.iOS
 
@@ -35,8 +35,8 @@ L'host di compilazione Xamarin delle versioni precedenti di Xamarin.iOS non è p
 
 > [!IMPORTANT]
 > Questa procedura di risoluzione dei problemi è destinata principalmente ai problemi che si verificano durante la configurazione iniziale in un nuovo sistema.  Se una connessione che in precedenza funzionava correttamente in un ambiente specifico smette di funzionare improvvisamente o funziona in modo intermittente, è possibile nella maggior parte dei casi passare direttamente al controllo se una delle seguenti procedure è utile: 
->   * Terminare i processi rimanenti come descritto di seguito in [Errori dovuti a processi host di compilazione esistenti nel Mac](#errors). 
->   * Cancellare gli agenti, come descritto in [Cancellazione degli agenti Broker, IDB, di compilazione e Designer](#clearing) e quindi con una connessione Internet cablata connettersi direttamente tramite l'indirizzo IP come descritto in [Non è stato possibile connettersi a MacBuildHost.local. Riprovare.](#tryagain).  
+> * Terminare i processi rimanenti come descritto di seguito in [Errori dovuti a processi host di compilazione esistenti nel Mac](#errors). 
+> * Cancellare gli agenti, come descritto in [Cancellazione degli agenti Broker, IDB, di compilazione e Designer](#clearing) e quindi con una connessione Internet cablata connettersi direttamente tramite l'indirizzo IP come descritto in [Non è stato possibile connettersi a MacBuildHost.local. Riprovare.](#tryagain).  
 > Se nessuna di queste opzioni consente di risolvere il problema, seguire le istruzioni al [passaggio 9](#stepnine) per inviare un nuovo report sui bug.
 
 1. Controllare che le versioni di Xamarin.iOS installate nel Mac siano compatibili. Per eseguire questa operazione con Visual Studio 2017, assicurarsi di trovarsi nel canale di distribuzione **Stabile** in Visual Studio per Mac. In Visual Studio 2015 e versioni precedenti assicurarsi di trovarsi nello stesso canale di distribuzione in entrambi gli ambienti IDE.
@@ -103,7 +103,7 @@ L'host di compilazione Xamarin delle versioni precedenti di Xamarin.iOS non è p
 
     - Le impostazioni del firewall di OS X non consentono la connessione. Ricontrollare il passaggio 3.
 
-        In alcuni casi può anche succedere che lo stato della configurazione per app del firewall di OS X non sia valido e che le impostazioni di Preferenze di Sistema non riflettano il comportamento effettivo. Per ripristinare il comportamento predefinito può essere utile eliminare il file di configurazione (**/Library/Preferences/com.apple.alf.plist**) e riavviare il computer. Un modo per eliminare il file è immettere **/Library/Preferences** in **Vai &gt; Vai alla cartella** in Finder e quindi spostare il file **com.apple.alf.plist** nel Cestino.
+        In alcuni casi può anche succedere che lo stato della configurazione per app del firewall di OS X non sia valido e che le impostazioni di Preferenze di Sistema non riflettano il comportamento effettivo. Per ripristinare il comportamento predefinito può essere utile eliminare il file di configurazione ( **/Library/Preferences/com.apple.alf.plist**) e riavviare il computer. Un modo per eliminare il file è immettere **/Library/Preferences** in **Vai &gt; Vai alla cartella** in Finder e quindi spostare il file **com.apple.alf.plist** nel Cestino.
 
     - Le impostazioni del firewall di uno dei router tra il Mac e il computer Windows bloccano la connessione.
 
@@ -134,7 +134,7 @@ Causa nota:
 
 #### <a name="trying-to-connect-never-completes"></a>"Tentativo di connessione..." non giunge mai a completamento
 
-- **Bug[ n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: questo problema può verificarsi in Xamarin 4.1 se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema &gt; Utenti &amp; Gruppi** è impostata su un valore diverso da **/bin/bash**. A partire da Xamarin 4.2, questo scenario comporta invece la visualizzazione del messaggio di errore "Non è stato possibile connettersi". **Soluzione temporanea**: modificare la **shell di accesso** impostando di nuovo il valore predefinito originale **/bin/bash**.
+- **Bug[ n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** : questo problema può verificarsi in Xamarin 4.1 se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema &gt; Utenti &amp; Gruppi** è impostata su un valore diverso da **/bin/bash**. A partire da Xamarin 4.2, questo scenario comporta invece la visualizzazione del messaggio di errore "Non è stato possibile connettersi". **Soluzione temporanea**: modificare la **shell di accesso** impostando di nuovo il valore predefinito originale **/bin/bash**.
 
 <a name="tryagain" />
 
@@ -150,7 +150,7 @@ Cause segnalate:
 
 - **Bug [n. 36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)** : questo messaggio viene visualizzato in Xamarin 4.0 ogni volta che il file **$HOME/.bashrc** nel Mac contiene un errore. A partire da Xamarin 4.1, gli errori del file con estensione **bashrc** non influiscono più sul processo di connessione. **Soluzione alternativa**: spostare il file con estensione **bashrc** in un percorso di backup o eliminare il file se non è necessario.
 
-- **Bug [n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: questo errore può essere visualizzato se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema > Utenti e Gruppi** è impostata su un valore diverso da **/bin/bash**. **Soluzione temporanea**: modificare la **shell di accesso** impostando di nuovo il valore predefinito originale **/bin/bash**.
+- **Bug [n. 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** : questo errore può essere visualizzato se la **shell di accesso** nel menu di scelta rapida **Opzioni avanzate** per l'utente Mac in **Preferenze di Sistema > Utenti e Gruppi** è impostata su un valore diverso da **/bin/bash**. **Soluzione temporanea**: modificare la **shell di accesso** impostando di nuovo il valore predefinito originale **/bin/bash**.
 
 - **Limitazione**: l'errore può verificarsi se l'host di compilazione Mac è connesso a un router che non ha accesso a Internet o se il Mac usa un server DNS nel quale si verifica un timeout a seguito di una ricerca di DNS inverso del computer Windows. Visual Studio impiega circa 30 secondi per recuperare l'impronta digitale SSH e infine non riesce a connettersi.
 
@@ -162,23 +162,23 @@ Cause segnalate:
 
         [![](troubleshooting-images/troubleshooting-image18.png "Esecuzione di `ls /etc/ssh/sshd_config` e `ls /etc/sshd_config` nel terminale")](troubleshooting-images/troubleshooting-image18.png#lightbox)
 
-    3. Eseguire `cp /etc/ssh/sshd_config "$HOME/Desktop/"` nel terminale per copiare il file sul desktop.
+    2. Eseguire `cp /etc/ssh/sshd_config "$HOME/Desktop/"` nel terminale per copiare il file sul desktop.
 
-    4. Aprire il file dal desktop in un editor di testo. È ad esempio possibile eseguire `open -a TextEdit "$HOME/Desktop/sshd_config"` nel terminale.
+    3. Aprire il file dal desktop in un editor di testo. È ad esempio possibile eseguire `open -a TextEdit "$HOME/Desktop/sshd_config"` nel terminale.
 
-    5. Aggiungere la riga seguente nella parte inferiore del file:
+    4. Aggiungere la riga seguente nella parte inferiore del file:
 
         ```
         UseDNS no
         ```
-        
-    6. Rimuovere tutte le righe `UseDNS yes` per assicurarsi che la nuova impostazione sia effettiva.
 
-    7. Salvare il file.
+    5. Rimuovere tutte le righe `UseDNS yes` per assicurarsi che la nuova impostazione sia effettiva.
 
-    8. Eseguire `sudo cp "$HOME/Desktop/sshd_config" /etc/ssh/sshd_config` nel terminale per copiare il file modificato nella posizione originaria. Immettere la password, se richiesto.
+    6. Salvare il file.
 
-    9. Disabilitare e riabilitare **Login remoto** in **Preferenze di Sistema &gt; Condivisione &gt; Login remoto** per riavviare il server SSH.
+    7. Eseguire `sudo cp "$HOME/Desktop/sshd_config" /etc/ssh/sshd_config` nel terminale per copiare il file modificato nella posizione originaria. Immettere la password, se richiesto.
+
+    8. Disabilitare e riabilitare **Login remoto** in **Preferenze di Sistema &gt; Condivisione &gt; Login remoto** per riavviare il server SSH.
 
 <a name="clearing" />
 

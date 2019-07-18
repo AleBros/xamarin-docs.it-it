@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
-ms.openlocfilehash: 66cd9f9de712583ea4e8fb9304a9f1642e7e3ee1
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 7f469dab92793eeaa38bd2b73e9d94b138495379
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971272"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830342"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Accessibilità tramite tastiera in Xamarin.Forms
 
@@ -66,10 +66,10 @@ La proprietà `VisualElement.TabIndex` viene usata per indicare l'ordine in cui 
 
 Le regole seguenti si applicano per l'uso dell'ordine di tabulazione predefinito o per l'impostazione della proprietà `TabIndex`:
 
- - Le istanze di [`VisualElement`](xref:Xamarin.Forms.VisualElement) con `TabIndex` uguale a 0 vengono aggiunte all'ordine di tabulazione in base all'ordine di dichiarazione in XAML o nelle raccolte figlio.
- - Le istanze di [`VisualElement`](xref:Xamarin.Forms.VisualElement) con `TabIndex` maggiore di 0 vengono aggiunte all'ordine di tabulazione in base al rispettivo valore di `TabIndex`.
- - Le istanze di [`VisualElement`](xref:Xamarin.Forms.VisualElement) con `TabIndex` minore di 0 vengono aggiunte all'ordine di tabulazione e vengono visualizzate prima di qualsiasi valore zero.
- - I conflitti per `TabIndex` vengono risolti in base all'ordine di dichiarazione.
+- Le istanze di [`VisualElement`](xref:Xamarin.Forms.VisualElement) con `TabIndex` uguale a 0 vengono aggiunte all'ordine di tabulazione in base all'ordine di dichiarazione in XAML o nelle raccolte figlio.
+- Le istanze di [`VisualElement`](xref:Xamarin.Forms.VisualElement) con `TabIndex` maggiore di 0 vengono aggiunte all'ordine di tabulazione in base al rispettivo valore di `TabIndex`.
+- Le istanze di [`VisualElement`](xref:Xamarin.Forms.VisualElement) con `TabIndex` minore di 0 vengono aggiunte all'ordine di tabulazione e vengono visualizzate prima di qualsiasi valore zero.
+- I conflitti per `TabIndex` vengono risolti in base all'ordine di dichiarazione.
 
 Dopo aver definito un ordine di tabulazione, premendo TAB lo stato attivo viene spostato in sequenza tra i controlli in ordine crescente di `TabIndex`, ritornando all'inizio dopo aver raggiunto il controllo finale.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 11/10/2017
-ms.openlocfilehash: 73f652be32c72ef51170f44c28ce1590e6a0e92b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dd42de4dda4b5d5b09156898fd7a8bab331adf88
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106846"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865901"
 ---
 # <a name="xamarinmac-linker-options"></a>Opzioni del linker Xamarin.Mac
 
@@ -49,7 +49,7 @@ Per passare alla configurazione del linker per un progetto Xamarin.Mac, eseguire
 2. In **Esplora soluzioni** fare doppio clic sul file di progetto per aprire la finestra di dialogo **Opzioni progetto**.
 3. Nella scheda **Compilazione Mac** selezionare il tipo di comportamento più adatto per le esigenze dell'applicazione in **Comportamento del linker**:
 
-  ![Scegliere il comportamento del linker da usare](linker-images/link-behavior.png "Scegliere il comportamento del linker da usare")
+    ![Scegliere il comportamento del linker da usare](linker-images/link-behavior.png "Scegliere il comportamento del linker da usare")
 
 4. Il collegamento della piattaforma per framework di destinazione completi non viene visualizzato nell'IDE fino a un aggiornamento successivo. Fino a quel momento, aggiungere invece `--linkplatform` in **Argomenti aggiuntivi di mmp**.
 5. Fare clic sul pulsante **OK** per salvare le modifiche.

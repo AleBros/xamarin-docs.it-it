@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/28/2019
 ms.custom: video
-ms.openlocfilehash: 8aa1062c7948a57a21d59a785d6359056351245d
-ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
+ms.openlocfilehash: d2aef2c32b3fe2815f1176779a8c28ae8d421ed1
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354050"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832588"
 ---
 # <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Rileva scuotimento
 
@@ -29,7 +29,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-Per rilevare uno scuotimento del dispositivo è necessario usare la funzionalità Accelerometer chiamando i metodi `Start` e `Stop` per ascoltare i cambi di accelerazione e rilevare lo scuotimento. Ogni volta che viene rilevato uno scuotimento, viene generato l'evento `ShakeDetected `. È consigliabile usare `Game` o un valore superiore per `SensorSpeed`. Utilizzo di esempio:
+Per rilevare uno scuotimento del dispositivo è necessario usare la funzionalità Accelerometer chiamando i metodi `Start` e `Stop` per ascoltare i cambi di accelerazione e rilevare lo scuotimento. Ogni volta che viene rilevato uno scuotimento, viene generato l'evento `ShakeDetected`. È consigliabile usare `Game` o un valore superiore per `SensorSpeed`. Utilizzo di esempio:
 
 ```csharp
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 3dc68d0879d3ce4d5dd9b658a3bce7a00c348c09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0ae5dd86341912354938a8509668c843d412367b
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121243"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832587"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Funzionalità Portafoglio in Xamarin.iOS
 
@@ -32,21 +32,21 @@ Gli sviluppatori possono operare con Portafoglio in diversi modi:
 
 Per creare un nuovo profilo di provisioning per l'uso con Portafoglio, seguire questa procedura:
 
-1.  Passare alla sezione [Certificates, Identifiers & Profiles](https://developer.apple.com/account/ios/certificate/) (Certificati, identificatori e profili) del portale per sviluppatori Apple.
-2.  In **Identifiers** (Identificatori) passare a **App IDs** (ID app): 
+1. Passare alla sezione [Certificates, Identifiers & Profiles](https://developer.apple.com/account/ios/certificate/) (Certificati, identificatori e profili) del portale per sviluppatori Apple.
+2. In **Identifiers** (Identificatori) passare a **App IDs** (ID app): 
     
     ![Selezione di un ID app](wallet-capabilities-images/image17.png)
 
-3.  Fare clic sull'icona **+** nell'angolo superiore destro della pagina.
-4.  Registrare un nuovo ID app assegnandogli un valore nel campo **Name** (Nome) e un identificatore del bundle. Si noti che questo identificatore del bundle deve corrispondere all'ID bundle presente nel progetto:
+3. Fare clic sull'icona **+** nell'angolo superiore destro della pagina.
+4. Registrare un nuovo ID app assegnandogli un valore nel campo **Name** (Nome) e un identificatore del bundle. Si noti che questo identificatore del bundle deve corrispondere all'ID bundle presente nel progetto:
    
     ![Aggiungere i dettagli dell'ID app](wallet-capabilities-images/image18.png)
 
-5.  Selezionare il servizio app **Wallet** (Portafoglio) dall'elenco dei servizi:
+5. Selezionare il servizio app **Wallet** (Portafoglio) dall'elenco dei servizi:
     
     ![Schermata di selezione del servizio](wallet-capabilities-images/image19.png)
 
-6.  Premere **Continue** (Continua) e quindi **Register** (Registra) per creare l'ID app.
+6. Premere **Continue** (Continua) e quindi **Register** (Registra) per creare l'ID app.
 
 Se necessario, è possibile modificare gli ID app esistenti per aggiungere la funzionalità Portafoglio.
 

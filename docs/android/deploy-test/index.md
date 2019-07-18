@@ -7,27 +7,27 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 4c9ab8c14db131427329cef51e7b74e982a1c7b8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 86447c2338b8dd43e37170fa547883e47cbf6b4c
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103686"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864217"
 ---
 # <a name="deployment-and-testing"></a>Distribuzione e test
 
 Questa sezione include guide che illustrano come testare un'applicazione, ottimizzarne le prestazioni, prepararla per il rilascio, firmarla con un certificato e pubblicarla in un app store.
 
 
-##  <a name="application-package-sizesapp-package-sizemd"></a>[Dimensioni del pacchetto dell'applicazione](app-package-size.md)
+## <a name="application-package-sizesapp-package-sizemd"></a>[Dimensioni del pacchetto dell'applicazione](app-package-size.md)
 
 Questo articolo esamina le parti costituenti di un pacchetto dell'applicazione Xamarin.Android e le strategie associate che possono essere usate per una distribuzione efficiente del pacchetto durante le fasi di debug e rilascio dello sviluppo.
 
-##  <a name="building-appsbuilding-appsindexmd"></a>[Creazione di app](building-apps/index.md)
+## <a name="building-appsbuilding-appsindexmd"></a>[Creazione di app](building-apps/index.md)
 
 Questa sezione descrive il funzionamento del processo di compilazione e illustra come compilare APK specifici di ABI.
 
-##  <a name="command-line-emulatorcommand-line-emulatormd"></a>[Emulatore della riga di comando](command-line-emulator.md)
+## <a name="command-line-emulatorcommand-line-emulatormd"></a>[Emulatore della riga di comando](command-line-emulator.md)
 
 Questo articolo illustra brevemente l'avvio dell'emulatore tramite la riga di comando.
 
@@ -35,23 +35,23 @@ Questo articolo illustra brevemente l'avvio dell'emulatore tramite la riga di co
 
 Le guide nella sezione consentono di eseguire il debug di un'applicazione con emulatori Android, dispositivi Android reali e il registro di debug.
 
-##  <a name="setting-the-debuggable-attributeandroiddeploy-testdebuggable-attributemd"></a>[Impostazione dell'attributo Debuggable](~/android/deploy-test/debuggable-attribute.md)
+## <a name="setting-the-debuggable-attributeandroiddeploy-testdebuggable-attributemd"></a>[Impostazione dell'attributo Debuggable](~/android/deploy-test/debuggable-attribute.md)
 
 Questo articolo illustra come impostare l'attributo debuggable in modo che strumenti come `adb` possano comunicare con JVM.
 
-##  <a name="environmentenvironmentmd"></a>[Ambiente](environment.md)
+## <a name="environmentenvironmentmd"></a>[Ambiente](environment.md)
 
 Questo articolo descrive l'ambiente di esecuzione Xamarin.Android e le proprietà di sistema Android che hanno effetto sull'esecuzione del programma.
 
-##  <a name="gdbgdbmd"></a>[GDB](gdb.md)
+## <a name="gdbgdbmd"></a>[GDB](gdb.md)
 
 Questo articolo illustra come usare `gdb` per il debug di un'applicazione Xamarin.Android.
 
-##  <a name="installing-a-system-appinstall-system-appmd"></a>[Installazione di un'app di sistema](install-system-app.md)
+## <a name="installing-a-system-appinstall-system-appmd"></a>[Installazione di un'app di sistema](install-system-app.md)
 
 Questa guida illustra come installare un'app Xamarin.Android come applicazione di sistema in un dispositivo Android o come parte di una ROM personalizzata.
 
-##  <a name="linking-on-androidlinkermd"></a>[Collegamento in Android](linker.md)
+## <a name="linking-on-androidlinkermd"></a>[Collegamento in Android](linker.md)
 
 Questo articolo illustra il processo di collegamento usato da Xamarin.Android per ridurre le dimensioni finali di un'applicazione. Descrive i diversi livelli di collegamento che possono essere eseguiti e fornisce indicazioni e suggerimenti per la risoluzione dei problemi per poter limitare gli errori che potrebbero derivare dall'uso del linker.
 

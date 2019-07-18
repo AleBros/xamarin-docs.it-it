@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: ff4c72eaaf856083ab8e2e240ac8ce3eff37470c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 24cf255d5cf9269a7d0d485ad8a88abe6842b07a
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669638"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865600"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configurazione di un'app in iTunes Connect
 
@@ -136,7 +136,7 @@ Per la scelta del nome di un'applicazione, attenersi alle linee guida seguenti s
 - Verificare che sia adatto alle funzionalità dell'applicazione.
 - Localizzare i nomi per i mercati esteri quando opportuno.
 
-### <a name="description"></a>Description
+### <a name="description"></a>DESCRIZIONE
 
 Scrivere una descrizione chiara, concisa e informativa dell'applicazione e delle sue funzionalità. Le prime righe sono le più importanti, devono dare una buona impressione e attirare l'utente. Descrivere ciò che rende speciale l'applicazione e la distingue da altre app simili.
 
@@ -254,7 +254,7 @@ Eseguire le operazioni seguenti [iTunes Connect](https://itunesconnect.apple.com
 6. Fare clic sul pulsante **Edit** (Modifica) in **Rating** (Classificazione) per impostare le informazioni sulla classificazione:
 
     [![](itunesconnect-images/general02.png "Modifica della classificazione")](itunesconnect-images/general02.png#lightbox)
-6. Fare clic sul pulsante **Save** (Salva) nella parte superiore dello schermo per salvare le modifiche.
+7. Fare clic sul pulsante **Save** (Salva) nella parte superiore dello schermo per salvare le modifiche.
 
 > [!NOTE]
 > Nota: Apple rifiuterà l'invio se le categorie o le classificazioni non corrispondono all'effettiva funzionalità dell'applicazione.
@@ -274,10 +274,10 @@ Eseguire le operazioni seguenti [iTunes Connect](https://itunesconnect.apple.com
 3. Selezionare la scheda **Version** (Versioni).
 4. Passare alla sezione **Game Center**.
 5. Posizionare il comando nella sezione **Game Center** nella posizione **On** (Attivato).
-5. Immettere tutte le informazioni necessarie:
+6. Immettere tutte le informazioni necessarie:
 
     [![](itunesconnect-images/gamecenter01.png "Modifica delle informazioni generali di Game Center in iTunes Connect")](itunesconnect-images/gamecenter01.png#lightbox)
-6. Fare clic sul pulsante **Save** (Salva) nella parte superiore dello schermo per salvare le modifiche.
+7. Fare clic sul pulsante **Save** (Salva) nella parte superiore dello schermo per salvare le modifiche.
 
 Usare la scheda **Game Center** per attivare Game Center e gestire le **classifiche** o gli **obiettivi** di questa applicazione:
 
@@ -303,7 +303,7 @@ Eseguire le operazioni seguenti [iTunes Connect](https://itunesconnect.apple.com
 6. Selezionare la modalità di rilascio dell'applicazione nell'App Store dopo che è stata revisionata:
 
     [![](itunesconnect-images/review02.png "Modifica delle informazioni sul rilascio in iTunes Connect")](itunesconnect-images/review02.png#lightbox)
-6. Fare clic sul pulsante **Save** (Salva) nella parte superiore dello schermo per salvare le modifiche.
+7. Fare clic sul pulsante **Save** (Salva) nella parte superiore dello schermo per salvare le modifiche.
 
 
 ## <a name="maintaining-pricing-information"></a>Gestione delle informazioni sui prezzi
@@ -333,9 +333,9 @@ Eseguire le operazioni seguenti [iTunes Connect](https://itunesconnect.apple.com
     [![](itunesconnect-images/price02.png "Modifica delle informazioni sui prezzi in iTunes Connect")](itunesconnect-images/price02.png#lightbox)
 4. Selezionare **Availability Date** (Data disponibilità).
 5. Selezionare il prezzo desiderato dall'elenco a discesa **Price Tier** (livello di prezzo).
-5. Abilitare facoltativamente l'opzione **Educational Discounts** (Sconti per uso didattico).
-6. Eventualmente definire l'applicazione come **Custom Business to Business Application** (Applicazione Business to Business personalizzata).
-6. Fare clic sul pulsante **Save** (Salva) per salvare le modifiche.
+6. Abilitare facoltativamente l'opzione **Educational Discounts** (Sconti per uso didattico).
+7. Eventualmente definire l'applicazione come **Custom Business to Business Application** (Applicazione Business to Business personalizzata).
+8. Fare clic sul pulsante **Save** (Salva) per salvare le modifiche.
 
 <a name="iap" />
 

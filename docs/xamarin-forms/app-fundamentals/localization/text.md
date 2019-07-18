@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 31992c7d9219289847ebc3e9c8af755d54dc18ab
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 39e641d5e911b179ca8da9fc6c1b7685a9644364
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672716"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831489"
 ---
 # <a name="localization"></a>Localizzazione
 
@@ -561,8 +561,8 @@ namespace UsingResxLocalization.Android
 
 Dopo aver aggiunto questo codice al progetto dell'applicazione Android, sarà possibile visualizzare automaticamente le stringhe tradotte.
 
-> [!NOTE]
->️ **AVVISO:** Se le stringhe tradotte vengono usate nelle compilazioni VERSIONE di Android, ma non durante il debug, fare clic con il pulsante destro del mouse sul **progetto Android** e selezionare **Opzioni > Compilazione > Compilazione Android** e assicurarsi che l'opzione **Distribuzione rapida di assembly** non sia selezionata. Questa opzione può causare problemi con il caricamento delle risorse e non deve essere usata se si stanno testando app localizzate.
+> [!WARNING]
+> Se le stringhe tradotte vengono usate nelle compilazioni VERSIONE di Android, ma non durante il debug, fare clic con il pulsante destro del mouse sul **progetto Android** e selezionare **Opzioni > Compilazione > Compilazione Android** e assicurarsi che l'opzione **Distribuzione rapida di assembly** non sia selezionata. Questa opzione può causare problemi con il caricamento delle risorse e non deve essere usata se si stanno testando app localizzate.
 
 Per altre informazioni sulla localizzazione in Android, vedere [Localizzazione in Android](~/android/app-fundamentals/localization.md).
 

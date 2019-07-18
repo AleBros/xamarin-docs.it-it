@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 5fbe711cb8ad4902da047a2027fc05e9956de863
-ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
+ms.openlocfilehash: f7319a2c3dd4c3f77873d9b3d2cba74a77f14ae0
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67039724"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865588"
 ---
 # <a name="hello-ios--quickstart"></a>Hello, iOS - Guida introduttiva
 
@@ -84,56 +84,56 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
     Si noti che le _classi di dimensioni_ sono abilitate per impostazione predefinita. Per altre informazioni su di esse, fare riferimento alla guida [Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) (Storyboard unificati).
 
-8. Nel **riquadro Casella degli strumenti** digitare "etichetta" nella barra di ricerca e trascinare un elemento **Etichetta** nell'area di progettazione (l'area al centro):
+7. Nel **riquadro Casella degli strumenti** digitare "etichetta" nella barra di ricerca e trascinare un elemento **Etichetta** nell'area di progettazione (l'area al centro):
 
     ![](hello-ios-quickstart-images/image8new.png "Trascinare un elemento Etichetta nell'area di progettazione al centro")
 
     > [!NOTE]
     > È possibile visualizzare il **riquadro delle proprietà** o la **casella degli strumenti** in qualsiasi momento passando a **Visualizza > Riquadri**.
 
-9. Afferrare i punti di controllo dei *controlli di trascinamento* (i cerchi intorno al controllo) e ingrandire l'elemento:
+8. Afferrare i punti di controllo dei *controlli di trascinamento* (i cerchi intorno al controllo) e ingrandire l'elemento:
 
     ![](hello-ios-quickstart-images/image9.png "Ingrandire l'elemento Etichetta")
 
-10. Dopo aver selezionato l'elemento **Etichetta** nell'area di progettazione, usare il **riquadro delle proprietà** per modificare la proprietà **Testo** dell'elemento **Etichetta** in "Enter a Phoneword:" (Immettere una Phoneword)
+9. Dopo aver selezionato l'elemento **Etichetta** nell'area di progettazione, usare il **riquadro delle proprietà** per modificare la proprietà **Testo** dell'elemento **Etichetta** in "Enter a Phoneword:" (Immettere una Phoneword)
 
     ![](hello-ios-quickstart-images/image10.png "Impostare l'etichetta su Enter a Phoneword (Immettere una Phoneword)")
 
-11. Cercare "campo di testo" all'interno della casella degli strumenti e trascinare un **Campo di testo** dalla **casella degli strumenti** nell'area di progettazione e posizionarlo sotto l'elemento **Etichetta**. Regolare la larghezza in modo che il **Campo di testo** sia della stessa larghezza dell'**Etichetta**:
+10. Cercare "campo di testo" all'interno della casella degli strumenti e trascinare un **Campo di testo** dalla **casella degli strumenti** nell'area di progettazione e posizionarlo sotto l'elemento **Etichetta**. Regolare la larghezza in modo che il **Campo di testo** sia della stessa larghezza dell'**Etichetta**:
 
     ![](hello-ios-quickstart-images/image12new.png "Impostare per il Campo di testo la stessa larghezza dell'Etichetta")
 
-12. Dopo aver selezionato il **Campo di testo** nell'area di progettazione, modificare la proprietà **Nome**del **Campo di testo** nella sezione Identità del **riquadro Proprietà** in `PhoneNumberText` e modificare la proprietà **Testo** in "1-855-XAMARIN":
+11. Dopo aver selezionato il **Campo di testo** nell'area di progettazione, modificare la proprietà **Nome**del **Campo di testo** nella sezione Identità del **riquadro Proprietà** in `PhoneNumberText` e modificare la proprietà **Testo** in "1-855-XAMARIN":
 
     ![](hello-ios-quickstart-images/image13new.png "Modificare la proprietà Titolo in 1-855-XAMARIN")
 
-13. Trascinare un oggetto **Pulsante** dalla **casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Campo di testo**. Regolare la larghezza in modo che il **Pulsante** sia largo come il **Campo di testo** e l'**Etichetta**:
+12. Trascinare un oggetto **Pulsante** dalla **casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Campo di testo**. Regolare la larghezza in modo che il **Pulsante** sia largo come il **Campo di testo** e l'**Etichetta**:
 
     ![](hello-ios-quickstart-images/image14new.png "Regolare la larghezza in modo che il Pulsante sia largo come il Campo di testo e l'Etichetta")
 
-14. Dopo aver selezionato il **Pulsante** nell'area di progettazione, modificare la proprietà **Nome** nella sezione **Identità** del **riquadro delle proprietà** in `TranslateButton`. Modificare la proprietà **Titolo** in "Translate" (Converti):
+13. Dopo aver selezionato il **Pulsante** nell'area di progettazione, modificare la proprietà **Nome** nella sezione **Identità** del **riquadro delle proprietà** in `TranslateButton`. Modificare la proprietà **Titolo** in "Translate" (Converti):
 
     ![](hello-ios-quickstart-images/image15new.png "Modificare la proprietà Titolo in Translate (Converti)")
 
-15. Ripetere i due passaggi precedenti e trascinare un oggetto **Pulsante** dalla **casella degli strumenti** all'area di progettazione e inserirlo sotto il primo **Pulsante**. Regolare la larghezza in modo che il **Pulsante** sia largo come il primo **Pulsante**:
+14. Ripetere i due passaggi precedenti e trascinare un oggetto **Pulsante** dalla **casella degli strumenti** all'area di progettazione e inserirlo sotto il primo **Pulsante**. Regolare la larghezza in modo che il **Pulsante** sia largo come il primo **Pulsante**:
 
     ![](hello-ios-quickstart-images/image16new.png "Regolare la larghezza in modo che il Pulsante sia largo come il primo Pulsante")
 
-16. Dopo aver selezionato il secondo **Pulsante** nell'area di progettazione, modificare la proprietà **Nome** nella sezione **Identità** del **riquadro delle proprietà** in `CallButton`. Modificare la proprietà **Titolo** in "Call" (Chiama):
+15. Dopo aver selezionato il secondo **Pulsante** nell'area di progettazione, modificare la proprietà **Nome** nella sezione **Identità** del **riquadro delle proprietà** in `CallButton`. Modificare la proprietà **Titolo** in "Call" (Chiama):
 
     ![](hello-ios-quickstart-images/image17new.png "Modificare la proprietà Titolo in \"Call\" (Chiama)")
 
     Salvare le modifiche passando a **File > Salva** o premendo **⌘ + s**.
 
-17. È necessario aggiungere della logica all'app per convertire i numeri di telefono da alfanumerici a numerici. Aggiungere un nuovo file al progetto facendo clic con il pulsante destro del mouse sul progetto **Phoneword_iOS** nel **riquadro della soluzione** e scegliendo **Aggiungi > Nuovo file...**  o premendo **⌘ + n**:
+16. È necessario aggiungere della logica all'app per convertire i numeri di telefono da alfanumerici a numerici. Aggiungere un nuovo file al progetto facendo clic con il pulsante destro del mouse sul progetto **Phoneword_iOS** nel **riquadro della soluzione** e scegliendo **Aggiungi > Nuovo file...**  o premendo **⌘ + n**:
 
     ![](hello-ios-quickstart-images/image18.png "Aggiungere un nuovo file al progetto")
 
-18. Nella finestra di dialogo **Nuovo file** selezionare **Generale > Classe vuota** e assegnare al nuovo file il nome `PhoneTranslator`:
+17. Nella finestra di dialogo **Nuovo file** selezionare **Generale > Classe vuota** e assegnare al nuovo file il nome `PhoneTranslator`:
 
     ![](hello-ios-quickstart-images/image19.png "Selezionare Classe vuota e assegnare al nuovo file il nome PhoneTranslator")
 
-19. Viene creata una nuova classe C# vuota. Rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+18. Viene creata una nuova classe C# vuota. Rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System.Text;
@@ -199,11 +199,11 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
     Salvare il file **PhoneTranslator.cs** e chiuderlo.
 
-20. Aggiungere codice per associare l'interfaccia utente. A tale scopo, fare doppio clic su **ViewController.cs** nel **riquadro della soluzione** per aprirlo:
+19. Aggiungere codice per associare l'interfaccia utente. A tale scopo, fare doppio clic su **ViewController.cs** nel **riquadro della soluzione** per aprirlo:
 
     ![](hello-ios-quickstart-images/image20new.png "Aggiungere codice per associare l'interfaccia utente")
 
-21. Iniziare associando `TranslateButton`. Nella classe **ViewController** trovare il metodo `ViewDidLoad` e aggiungere il codice seguente sotto la chiamata di `base.ViewDidLoad()`:
+20. Iniziare associando `TranslateButton`. Nella classe **ViewController** trovare il metodo `ViewDidLoad` e aggiungere il codice seguente sotto la chiamata di `base.ViewDidLoad()`:
 
     ```csharp
     string translatedNumber = "";
@@ -230,7 +230,7 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
     Includere `using Phoneword_iOS;` se lo spazio dei nomi del file è diverso.
 
-22. Aggiungere il codice relativo alla pressione dell'utente sul secondo pulsante, denominato `CallButton`. Inserire il codice seguente sotto il codice per `TranslateButton` e aggiungere `using Foundation;` all'inizio del file:
+21. Aggiungere il codice relativo alla pressione dell'utente sul secondo pulsante, denominato `CallButton`. Inserire il codice seguente sotto il codice per `TranslateButton` e aggiungere `using Foundation;` all'inizio del file:
 
     ```csharp
         CallButton.TouchUpInside += (object sender, EventArgs e) => {
@@ -246,20 +246,20 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
         };
     ```
 
-23. Salvare le modifiche e quindi compilare l'applicazione scegliendo **Compila > Compila tutto** o premendo **⌘ + B**.  Se la compilazione viene completata, nella parte superiore dell'IDE verrà visualizzato un messaggio che comunica la riuscita dell'operazione:
+22. Salvare le modifiche e quindi compilare l'applicazione scegliendo **Compila > Compila tutto** o premendo **⌘ + B**.  Se la compilazione viene completata, nella parte superiore dell'IDE verrà visualizzato un messaggio che comunica la riuscita dell'operazione:
 
     ![](hello-ios-quickstart-images/image21.png "Nella parte superiore dell'IDE verrà visualizzato un messaggio che comunica la riuscita dell'operazione")
 
     Se sono presenti errori, rivedere i passaggi precedenti e correggere gli errori fino a quando l'applicazione non viene compilata correttamente.
 
-27. Testare infine l'applicazione nel **simulatore iOS**. Nella parte superiore sinistra dell'IDE scegliere **Debug** dal primo elenco a discesa e **iPhone XR iOS 12.0** (o un altro simulatore disponibile) dal secondo elenco a discesa e premere **Avvia** (il pulsante triangolare simile al pulsante Riproduci):
+23. Testare infine l'applicazione nel **simulatore iOS**. Nella parte superiore sinistra dell'IDE scegliere **Debug** dal primo elenco a discesa e **iPhone XR iOS 12.0** (o un altro simulatore disponibile) dal secondo elenco a discesa e premere **Avvia** (il pulsante triangolare simile al pulsante Riproduci):
 
     ![](hello-ios-quickstart-images/image27.png "Selezionare un simulatore, quindi premere Avvia")
 
     > [!NOTE]
     > Al momento, a causa di un requisito Apple, per compilare codice per un dispositivo o un simulatore potrebbe essere necessario un certificato di sviluppo o un'*identità di firma*. Per soddisfare questo requisito, seguire i passaggi nella [guida Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
 
-28. Verrà avviata l'applicazione all'interno del simulatore iOS:
+24. Verrà avviata l'applicazione all'interno del simulatore iOS:
 
     ![](hello-ios-quickstart-images/image28.png "Applicazione in esecuzione all'interno del simulatore iOS")
 
@@ -274,7 +274,8 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
 Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, che converte un numero di telefono alfanumerico in un numero di telefono numerico.
 
-**Nota**: questa procedura dettagliata usa Visual Studio Enterprise 2017 in una macchina virtuale Windows 10. La configurazione usata può essere diversa da quella usata qui, purché i requisiti sopra riportati siano soddisfatti. Tenere presente tuttavia che alcune schermate potrebbero essere diverse.
+> [!NOTE]
+> questa procedura dettagliata usa Visual Studio Enterprise 2017 in una macchina virtuale Windows 10. La configurazione usata può essere diversa da quella usata qui, purché i requisiti sopra riportati siano soddisfatti. Tenere presente tuttavia che alcune schermate potrebbero essere diverse.
 
 > [!NOTE]
 > Prima di procedere con questa procedura dettagliata, è necessario connettersi al Mac da Visual Studio. Xamarin.iOS, infatti, si basa su alcuni strumenti Apple per compilare e avviare iOS Designer e le applicazioni. Per eseguire la configurazione, seguire i passaggi nella guida [Associazione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
@@ -320,41 +321,41 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
     ![](hello-ios-quickstart-images/vs-image12.png "Regolare la larghezza in modo che il Campo di testo sia della stessa larghezza dell'Etichetta")
 
-10. Dopo aver selezionato il **Campo di testo** nell'area di progettazione, modificare la proprietà **Nome**del **Campo di testo** nella sezione Identità di **Proprietà** in `PhoneNumberText` e modificare la proprietà **Testo** in "1-855-XAMARIN":
+1. Dopo aver selezionato il **Campo di testo** nell'area di progettazione, modificare la proprietà **Nome**del **Campo di testo** nella sezione Identità di **Proprietà** in `PhoneNumberText` e modificare la proprietà **Testo** in "1-855-XAMARIN":
 
     ![](hello-ios-quickstart-images/vs-image13.png "Modificare la proprietà Testo in 1-855-XAMARIN")
 
-11. Trascinare un oggetto **Pulsante** dalla **casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Campo di testo**. Regolare la larghezza in modo che il **Pulsante** sia largo come il **Campo di testo** e l'**Etichetta**:
+1. Trascinare un oggetto **Pulsante** dalla **casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Campo di testo**. Regolare la larghezza in modo che il **Pulsante** sia largo come il **Campo di testo** e l'**Etichetta**:
 
     ![](hello-ios-quickstart-images/vs-image14.png "Regolare la larghezza in modo che il Pulsante sia largo come il Campo di testo e l'Etichetta")
 
 
-12. Dopo aver selezionato il **Pulsante** nell'area di progettazione, modificare la proprietà **Nome** nella sezione **Identità** di **Proprietà** in `TranslateButton`. Modificare la proprietà **Titolo** in "Translate" (Converti):
+1. Dopo aver selezionato il **Pulsante** nell'area di progettazione, modificare la proprietà **Nome** nella sezione **Identità** di **Proprietà** in `TranslateButton`. Modificare la proprietà **Titolo** in "Translate" (Converti):
 
     ![](hello-ios-quickstart-images/vs-image15.png "Modificare la proprietà Titolo in Translate (Converti)")
 
-13. Ripetere i due passaggi precedenti e trascinare un oggetto **Pulsante** dalla **casella degli strumenti** all'area di progettazione e inserirlo sotto il primo **Pulsante**. Regolare la larghezza in modo che il **Pulsante** sia largo come il primo **Pulsante**:
+1. Ripetere i due passaggi precedenti e trascinare un oggetto **Pulsante** dalla **casella degli strumenti** all'area di progettazione e inserirlo sotto il primo **Pulsante**. Regolare la larghezza in modo che il **Pulsante** sia largo come il primo **Pulsante**:
 
     ![](hello-ios-quickstart-images/vs-image16.png "Regolare la larghezza in modo che il Pulsante sia largo come il primo Pulsante")
 
-14. Dopo aver selezionato il secondo **Pulsante** nell'area di progettazione, modificare la proprietà **Nome** nella sezione **Identità** di **Proprietà** in `CallButton`. Modificare la proprietà **Titolo** in "Call" (Chiama):
+1. Dopo aver selezionato il secondo **Pulsante** nell'area di progettazione, modificare la proprietà **Nome** nella sezione **Identità** di **Proprietà** in `CallButton`. Modificare la proprietà **Titolo** in "Call" (Chiama):
 
     ![](hello-ios-quickstart-images/vs-image17.png "Modificare la proprietà Titolo in \"Call\" (Chiama)")
 
     Salvare le modifiche passando a **File > Salva tutto** o premendo **Ctrl + s**.
 
-15. Aggiungere codice per convertire i numeri di telefono da alfanumerici a numerici. A tale scopo, aggiungere prima un nuovo file al progetto facendo clic con il pulsante destro del mouse sul progetto **Phoneword** in **Esplora soluzioni** e scegliendo **Aggiungi > Nuovo elemento...**  o premendo **Ctrl + Maiusc + A**:
+1. Aggiungere codice per convertire i numeri di telefono da alfanumerici a numerici. A tale scopo, aggiungere prima un nuovo file al progetto facendo clic con il pulsante destro del mouse sul progetto **Phoneword** in **Esplora soluzioni** e scegliendo **Aggiungi > Nuovo elemento...**  o premendo **Ctrl + Maiusc + A**:
 
     ![](hello-ios-quickstart-images/vs-image18.png "Aggiungere codice per convertire i numeri di telefono da alfanumerici a numerici")
 
-16. Nella finestra di dialogo **Aggiungi nuovo elemento** (fare clic con il pulsante destro del mouse sul progetto, scegliere Aggiungi > Nuovo elemento) selezionare **Apple > Classe** e denominare il nuovo file `PhoneTranslator`:
+1. Nella finestra di dialogo **Aggiungi nuovo elemento** (fare clic con il pulsante destro del mouse sul progetto, scegliere Aggiungi > Nuovo elemento) selezionare **Apple > Classe** e denominare il nuovo file `PhoneTranslator`:
 
     ![](hello-ios-quickstart-images/vs-image19.w157.png "Aggiungere una nuova classe denominata PhoneTranslator")
 
     > [!IMPORTANT]
     > Assicurarsi di selezionare il modello "Classe" con C# nell'icona. In caso contrario non è possibile fare riferimento a questa nuova classe.
 
-17. Viene creata una nuova classe C#. Rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
+1. Viene creata una nuova classe C#. Rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
     ```csharp
     using System.Text;
@@ -420,12 +421,12 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
     Salvare il file **PhoneTranslator.cs** e chiuderlo.
 
-18. Fare doppio clic su **ViewController.cs** in **Esplora soluzioni** per aprirlo e aggiungere la logica per la gestione delle interazioni con i pulsanti:
+1. Fare doppio clic su **ViewController.cs** in **Esplora soluzioni** per aprirlo e aggiungere la logica per la gestione delle interazioni con i pulsanti:
 
     ![](hello-ios-quickstart-images/vs-image20.png "Logica aggiunta per gestire le interazioni con i pulsanti")
 
 
-19. Iniziare associando `TranslateButton`. Nella classe **ViewController** trovare il metodo `ViewDidLoad`. Aggiungere il codice seguente per il pulsante all'interno di `ViewDidLoad`, sotto la chiamata a `base.ViewDidLoad()`:
+1. Iniziare associando `TranslateButton`. Nella classe **ViewController** trovare il metodo `ViewDidLoad`. Aggiungere il codice seguente per il pulsante all'interno di `ViewDidLoad`, sotto la chiamata a `base.ViewDidLoad()`:
 
     ```csharp
     string translatedNumber = "";
@@ -451,7 +452,7 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
     ```
     Includere `using Phoneword;` se lo spazio dei nomi del file è diverso.
 
-20. Aggiungere il codice relativo alla pressione dell'utente sul secondo pulsante, denominato `CallButton`. Inserire il codice seguente sotto il codice per `TranslateButton` e aggiungere `using Foundation;` all'inizio del file:
+1. Aggiungere il codice relativo alla pressione dell'utente sul secondo pulsante, denominato `CallButton`. Inserire il codice seguente sotto il codice per `TranslateButton` e aggiungere `using Foundation;` all'inizio del file:
 
     ```csharp
     CallButton.TouchUpInside += (object sender, EventArgs e) => {
@@ -468,17 +469,17 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
     };
     ```
 
-21. Salvare le modifiche e quindi compilare l'applicazione scegliendo **Compila > Compila soluzione** o premendo **Ctrl + Maiusc + B**.  Se la compilazione viene completata, nella parte inferiore dell'IDE verrà visualizzato un messaggio che comunica la riuscita dell'operazione:
+1. Salvare le modifiche e quindi compilare l'applicazione scegliendo **Compila > Compila soluzione** o premendo **Ctrl + Maiusc + B**.  Se la compilazione viene completata, nella parte inferiore dell'IDE verrà visualizzato un messaggio che comunica la riuscita dell'operazione:
 
     ![](hello-ios-quickstart-images/vs-image21.png "Nella parte inferiore dell'IDE verrà visualizzato un messaggio che comunica la riuscita dell'operazione")
 
     Se sono presenti errori, rivedere i passaggi precedenti e correggere gli errori fino a quando l'applicazione non viene compilata correttamente.
 
-22. Testare infine l'applicazione nel **simulatore iOS remoto**. Sulla barra degli strumenti dell'IDE scegliere **Debug** e **iPhone 8 Plus iOS x.x** dai menu a discesa e premere **Avvia** (il triangolo verde simile al pulsante Riproduci):
+1. Testare infine l'applicazione nel **simulatore iOS remoto**. Sulla barra degli strumenti dell'IDE scegliere **Debug** e **iPhone 8 Plus iOS x.x** dai menu a discesa e premere **Avvia** (il triangolo verde simile al pulsante Riproduci):
 
     ![](hello-ios-quickstart-images/vs-image27.png "Premere Avvia")
 
-23. Verrà avviata l'applicazione all'interno del simulatore iOS:
+1. Verrà avviata l'applicazione all'interno del simulatore iOS:
 
     ![](hello-ios-quickstart-images/vs-image28.png "Applicazione in esecuzione all'interno del simulatore iOS")
 

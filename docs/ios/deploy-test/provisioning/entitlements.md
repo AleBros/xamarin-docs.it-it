@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/13/2018
-ms.openlocfilehash: 5ce778d0e6c2d023362ca5c9c691d77548dd7383
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 0314ec958b2c38e702c56ef64d1cc2bba1383060
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672599"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865835"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Uso degli entitlement in Xamarin.iOS
 
@@ -44,7 +44,7 @@ Per configurare gli entitlement in Visual Studio per Mac, seguire questa procedu
 1. In **Esplora soluzioni** fare doppio clic sul file **Info.plist** per aprirlo e modificarlo.
 2. Nella sezione **Destinazione applicazione iOS** immettere un nome per l'applicazione e l'**Identificatore del bundle** creato in fase di definizione dell'ID app:
 
-  ![](entitlements-images/servicexs01.png "Immettere un identificatore del bundle")
+    ![](entitlements-images/servicexs01.png "Immettere un identificatore del bundle")
 
 3. Salvare le modifiche apportate al file **Info.plist**.
 4. In **Esplora soluzioni** fare doppio clic sul file **Entitlements.plist** per aprirlo e modificarlo:
@@ -61,7 +61,7 @@ Per configurare gli entitlement in Visual Studio, seguire questa procedura:
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Info.plist**, scegliere **Apri con** ed **Editor elenco proprietà** per aprirlo e modificarlo.
 2. Nella sezione **Destinazione applicazione iOS** immettere un nome per l'applicazione e l'**Identificatore del bundle** creato in fase di definizione dell'ID app:
 
-  ![](entitlements-images/servicevs01.png "Impostazione dell'identificatore del bundle")
+    ![](entitlements-images/servicevs01.png "Impostazione dell'identificatore del bundle")
 
 3. Salvare le modifiche apportate al file **Info.plist**.
 4. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file **Entitlements.plist**, scegliere **Apri con** ed **Editor elenco proprietà** per aprirlo e modificarlo:
@@ -81,10 +81,10 @@ Gli entitlement vengono aggiunti a un'app tramite il file Entitlements.plist. Qu
 
 Per aggiungere un file Entitlements.plist a Xamarin.iOS, seguire questa procedura:
 
-1.  Fare clic con il pulsante destro del mouse sul file di progetto e passare ad **Aggiungi > Nuovo file**:
+1. Fare clic con il pulsante destro del mouse sul file di progetto e passare ad **Aggiungi > Nuovo file**:
 
     ![Menu di scelta rapida per l'aggiunta di file](entitlements-images/image1.png)
-2.  Nella finestra di dialogo Nuovo file selezionare **iOS > Elenco proprietà** e assegnargli il nome Entitlements:
+2. Nella finestra di dialogo Nuovo file selezionare **iOS > Elenco proprietà** e assegnargli il nome Entitlements:
 
     ![Finestra di dialogo Nuovo file](entitlements-images/image2.png)
 

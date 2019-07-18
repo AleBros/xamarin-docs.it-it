@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: 4fc3f0d98d1ead29b450763b7c260af7c40af7b5
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: dfff2c22c17fddb4bbd1feb79e08949e62d8f9bc
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650489"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832214"
 ---
 # <a name="xamarinforms-dependencyservice-introduction"></a>Introduzione a DependencyService di Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/DependencyServiceDemos)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
 
 La classe [`DependencyService`](xref:Xamarin.Forms.DependencyService) è un localizzatore di servizi che consente alle applicazioni Xamarin.Forms di richiamare la funzionalità della piattaforma nativa dal codice condiviso.
 
@@ -156,5 +156,5 @@ Per altre informazioni sulla risoluzione delle implementazioni della piattaforma
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo di DependencyService (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DependencyServiceDemos)
+- [Demo di DependencyService (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
 - [Registrazione e risoluzione di DependencyService di Xamarin.Forms](registration-and-resolution.md)

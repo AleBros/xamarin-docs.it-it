@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 2536e123cb4bdfd194c573802a91cba7a8c1208d
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.openlocfilehash: 7249b699a5f692269d124550a9e7d291f4315903
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66178130"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832172"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Uso delle funzionalità in Xamarin.iOS
 
@@ -122,30 +122,30 @@ L'uso del centro sviluppatori è un processo in due passaggi che richiede la cre
 
 ### <a name="creating-an-app-id-with-an-app-service"></a>Creazione di un ID app con un servizio app
 
-1.  Passare al [centro sviluppatori Apple](https://developer.apple.com/account) su un Mac (il computer host di compilazione se si usa un computer Windows) ed eseguire l'accesso.
-2.  Selezionare **Certificates, Identifiers, and Profiles** (Certificati, identificatori e profili):
+1. Passare al [centro sviluppatori Apple](https://developer.apple.com/account) su un Mac (il computer host di compilazione se si usa un computer Windows) ed eseguire l'accesso.
+2. Selezionare **Certificates, Identifiers, and Profiles** (Certificati, identificatori e profili):
 
     ![Centro sviluppatori Apple](images/image5.png)
 
-3.  In **Identifiers** (Identificatori) selezionare **App IDs** (ID app):
+3. In **Identifiers** (Identificatori) selezionare **App IDs** (ID app):
 
     ![Sezione degli ID app nel centro sviluppatori](images/image6.png)
 
-4.  Fare clic sul pulsante **+** nell'angolo in alto a destra per creare un nuovo ID app.
-5.  Immettere una descrizione dell'ID app e immettere un ID bundle nel formato `com.domain.appname`. Questo ID bundle deve corrispondere all'ID bundle nel progetto:
+4. Fare clic sul pulsante **+** nell'angolo in alto a destra per creare un nuovo ID app.
+5. Immettere una descrizione dell'ID app e immettere un ID bundle nel formato `com.domain.appname`. Questo ID bundle deve corrispondere all'ID bundle nel progetto:
 
     ![Aggiunta dei dettagli dell'ID app](images/image7.png)
 
-6.  In **App Services** (Servizi app) selezionare il servizio o i servizi necessari nell'app:
+6. In **App Services** (Servizi app) selezionare il servizio o i servizi necessari nell'app:
 
     ![Pagina di selezione dei servizi app](images/image8.png)
 
-7.  Fare clic su **Continue** (Continua).
-8.  Confermare l'ID app. Ogni servizio può essere in uno dei seguenti stati: **Enabled** (Abilitato), **Disabled** (Disabilitato) o **Configurable** (Configurabile), come illustrato di seguito. Se è **Enabled** (Abilitato), è possibile usarlo in un profilo di provisioning. Se è **Configurable** (Configurabile), è necessaria un'ulteriore configurazione per questa funzionalità. Questi passaggi aggiuntivi sono descritti più dettagliatamente nelle sezioni successive.
+7. Fare clic su **Continue** (Continua).
+8. Confermare l'ID app. Ogni servizio può essere in uno dei seguenti stati: **Enabled** (Abilitato), **Disabled** (Disabilitato) o **Configurable** (Configurabile), come illustrato di seguito. Se è **Enabled** (Abilitato), è possibile usarlo in un profilo di provisioning. Se è **Configurable** (Configurabile), è necessaria un'ulteriore configurazione per questa funzionalità. Questi passaggi aggiuntivi sono descritti più dettagliatamente nelle sezioni successive.
 
     ![Conferma dell'ID app](images/image9.png)
 
-9.  Fare clic su **Register** (Registra) e quindi su **Done** (Fine). Il nuovo ID app creato verrà visualizzato nell'elenco di ID app iOS.
+9. Fare clic su **Register** (Registra) e quindi su **Done** (Fine). Il nuovo ID app creato verrà visualizzato nell'elenco di ID app iOS.
 
 
 <a name="provisioningprofile" />
@@ -154,32 +154,32 @@ L'uso del centro sviluppatori è un processo in due passaggi che richiede la cre
 
 Creare ora un profilo di provisioning contenente tale ID app. Attenersi ai passi riportati di seguito.
 
-1.  Nel centro sviluppatori Apple passare a **Provisioning Profiles > All** (Profili di provisioning > Tutti):
+1. Nel centro sviluppatori Apple passare a **Provisioning Profiles > All** (Profili di provisioning > Tutti):
 
     ![Sezione dei profili di provisioning](images/image10.png)
 
-2.  Fare clic sul pulsante **+** nell'angolo in alto a destra per creare un nuovo profilo di provisioning.
-3.  Selezionare il tipo di profilo di provisioning necessario e fare clic su **Continue** (Continua):
+2. Fare clic sul pulsante **+** nell'angolo in alto a destra per creare un nuovo profilo di provisioning.
+3. Selezionare il tipo di profilo di provisioning necessario e fare clic su **Continue** (Continua):
 
     ![Selezione del profilo di provisioning](images/image11.png)
 
-4.  Dall'elenco a discesa selezionare l'ID app creato nei passaggi precedenti e fare clic su **Continue** (Continua):
+4. Dall'elenco a discesa selezionare l'ID app creato nei passaggi precedenti e fare clic su **Continue** (Continua):
 
     ![Selezione di un ID app](images/image12.png)
 
-5.  Selezionare i certificati usati per firmare l'app e fare clic su **Continue** (Continua):
+5. Selezionare i certificati usati per firmare l'app e fare clic su **Continue** (Continua):
 
     ![Selezione dei certificati](images/image13.png)
 
-6.  Selezionare i dispositivi da includere in questo profilo e fare clic su **Continue** (Continua):
+6. Selezionare i dispositivi da includere in questo profilo e fare clic su **Continue** (Continua):
 
     ![Selezionare i dispositivi per il profilo di provisioning](images/image14.png)
 
-7.  Assegnare un nome al profilo per poterlo identificare e fare clic su **Continue** (Continua) per generare il profilo:
+7. Assegnare un nome al profilo per poterlo identificare e fare clic su **Continue** (Continua) per generare il profilo:
 
     ![Assegnare un nome al profilo di provisioning](images/image15.png)
 
-8.  Fare clic sul pulsante **Download** (Scarica) per scaricarlo e fare doppio clic sul file in Finder per installare il profilo di provisioning.
+8. Fare clic sul pulsante **Download** (Scarica) per scaricarlo e fare doppio clic sul file in Finder per installare il profilo di provisioning.
 
 9. Se si usa Visual Studio, verificare che sia selezionata l'opzione **Provisioning manuale**.
 
@@ -205,12 +205,12 @@ Dopo che una funzionalità è stata abilitata sul lato server, sono necessarie a
 
 Il seguente è un elenco dettagliato di alcuni dei problemi più comuni che possono costituire un ostacolo quando si sviluppa un'app con un servizio app abilitato.
 
--   Assicurarsi che l'ID corretto sia stato creato e registrato accuratamente nella sezione **Certificates, IDs & Profiles** (Certificati, ID e profili) del portale per sviluppatori di Apple.
--   Assicurarsi che il servizio sia stato aggiunto all'ID dell'app (o dell'estensione) e che il servizio sia configurato per usare il gruppo di app/ID esercente/contenitore creato sopra in **Certificates, IDs & Profiles** (Certificati, ID e profili) del portale per sviluppatori di Apple.
--   Assicurarsi che i profili di provisioning e gli ID delle app siano stati installati e che il file **Info.plist** dell'app (nel progetto Xamarin) usi uno degli ID app configurati sopra.
--   Assicurarsi che il file **Entitlements.plist** dell'app (nel progetto Xamarin) abbia il servizio corretto abilitato.
--   Assicurarsi che in info.plist siano impostate le chiavi per la privacy appropriate
--   In **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
+- Assicurarsi che l'ID corretto sia stato creato e registrato accuratamente nella sezione **Certificates, IDs & Profiles** (Certificati, ID e profili) del portale per sviluppatori di Apple.
+- Assicurarsi che il servizio sia stato aggiunto all'ID dell'app (o dell'estensione) e che il servizio sia configurato per usare il gruppo di app/ID esercente/contenitore creato sopra in **Certificates, IDs & Profiles** (Certificati, ID e profili) del portale per sviluppatori di Apple.
+- Assicurarsi che i profili di provisioning e gli ID delle app siano stati installati e che il file **Info.plist** dell'app (nel progetto Xamarin) usi uno degli ID app configurati sopra.
+- Assicurarsi che il file **Entitlements.plist** dell'app (nel progetto Xamarin) abbia il servizio corretto abilitato.
+- Assicurarsi che in info.plist siano impostate le chiavi per la privacy appropriate
+- In **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
 
 <a name="summary" />
 

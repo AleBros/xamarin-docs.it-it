@@ -8,12 +8,12 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 4d4c9980dd4c7be4ed18f1b6ce015d73b3caf836
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: d4bb117273e669cc3c520c42451296e16b6023eb
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855172"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865315"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisioning automatico per Xamarin.iOS
 
@@ -67,7 +67,7 @@ Per firmare automaticamente l'app per la distribuzione in un dispositivo iOS, se
 
 4. Selezionare il team nell'elenco a discesa **Team**.
 
-6. Dopo alcuni secondi verranno creati un certificato di firma e un profilo di provisioning:
+5. Dopo alcuni secondi verranno creati un certificato di firma e un profilo di provisioning:
 
     ![Certificato e profilo creati correttamente](automatic-provisioning-images/image5.png)
 
@@ -87,7 +87,7 @@ Per firmare automaticamente l'app per la distribuzione in un dispositivo iOS, se
 
     ![Selezione del team](automatic-provisioning-images/prov3.png)
 
-4. Viene avviato il processo di firma automatica. Visual Studio tenta di generare un ID dell'app, un profilo di provisioning e un'identità di firma da usare per la firma. È possibile visualizzare il processo di generazione nell'output di compilazione:
+5. Viene avviato il processo di firma automatica. Visual Studio tenta di generare un ID dell'app, un profilo di provisioning e un'identità di firma da usare per la firma. È possibile visualizzare il processo di generazione nell'output di compilazione:
 
     ![Output di compilazione che mostra la generazione di elementi](automatic-provisioning-images/prov5.png)
 

@@ -8,12 +8,12 @@ author: lobrien
 ms.author: laobri
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 82bdd2c160572b0d813fb87d81b09c00996cef18
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 0e7516f030955c9b0f89db6db11b93afd9b358de
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854834"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865496"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Distribuzione wireless per app Xamarin.iOS e tvOS
 
@@ -85,7 +85,7 @@ Per eseguire la distribuzione in un dispositivo iOS o tvOS, attenersi alla proce
 
 2. Selezionare il dispositivo dall'elenco delle destinazioni dei dispositivi ed eseguire l'applicazione.
 
-2. Se il dispositivo è bloccato, verrà richiesto di sbloccare il dispositivo. Dopo aver sbloccato il dispositivo, l'app viene distribuita al dispositivo.
+3. Se il dispositivo è bloccato, verrà richiesto di sbloccare il dispositivo. Dopo aver sbloccato il dispositivo, l'app viene distribuita al dispositivo.
 
 Il debug wireless viene abilitato automaticamente dopo la distribuzione wireless, pertanto è possibile usare i punti di interruzione impostati precedentemente e continuare il flusso di lavoro di debug come di consueto.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 87be250bdc425558a8e386a8209596e18f13b3ed
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 27fd8cac85cdf139278d3824ebf71e54cdc7d140
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120520"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865586"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso di TestFlight per distribuire app Xamarin.iOS
 
@@ -77,7 +77,7 @@ Per altre informazioni sulla creazione di un nuovo record iTunes Connect, vedere
 
 
 
-###  <a name="completing-the-new-ios-app-submission-form"></a>Completamento del modulo d'invio di una nuova app iOS
+### <a name="completing-the-new-ios-app-submission-form"></a>Completamento del modulo d'invio di una nuova app iOS
 
 Il modulo deve contenere esattamente le informazioni specificate nel file Info.plist dell'app, come illustrato di seguito:
 
@@ -100,7 +100,7 @@ Prima compilare il [file distribuibile finale](~/ios/deploy-test/app-distributio
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-###  <a name="create-an-archive"></a>Creare un archivio
+### <a name="create-an-archive"></a>Creare un archivio
 
  Per compilare un file binario in Visual Studio per Mac, è necessario usare la funzione _Archivia_. Fare clic con il pulsante destro del mouse sul progetto e selezionare **Archivia per la pubblicazione** come illustrato di seguito:
 
@@ -109,9 +109,9 @@ Prima compilare il [file distribuibile finale](~/ios/deploy-test/app-distributio
 
  Fare riferimento alla guida [Building the Distributable](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) (Compilazione del file distribuibile).
 
-###  <a name="sign-and-distribute-your-app"></a>Firmare e distribuire l'app
+### <a name="sign-and-distribute-your-app"></a>Firmare e distribuire l'app
 
- Dopo aver creato un archivio, si aprirà automaticamente la visualizzazione **Archivi**, in cui vengono visualizzati tutti i progetti archiviati, raggruppati per soluzione. Per firmare l'app e prepararla per la distribuzione, selezionare **Firma e distribuisci...**, come illustrato di seguito:
+ Dopo aver creato un archivio, si aprirà automaticamente la visualizzazione **Archivi**, in cui vengono visualizzati tutti i progetti archiviati, raggruppati per soluzione. Per firmare l'app e prepararla per la distribuzione, selezionare **Firma e distribuisci...** , come illustrato di seguito:
 
 [![](testflight-images/archive-view.png "La creazione di un archivio apre automaticamente la visualizzazione Archivi")](testflight-images/archive-view.png#lightbox)
 
@@ -121,14 +121,14 @@ Prima compilare il [file distribuibile finale](~/ios/deploy-test/app-distributio
 
  Fare riferimento alla sezione [Invio dell'app ad Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) per altre informazioni su questi passaggi.
 
-###  <a name="submitting-your-build"></a>Invio della compilazione
+### <a name="submitting-your-build"></a>Invio della compilazione
  La pubblicazione guidata apre il programma Application Loader che consente di caricare la compilazione in iTunes Connect. Selezionare l'opzione **Deliver Your App** (Invia l'app) e caricare il file `.ipa` creato in precedenza. Application Loader convaliderà e caricherà la compilazione in iTunes Connect.
 
  Fare riferimento alla sezione [Invio dell'app ad Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) per altre informazioni su questi passaggi.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-###  <a name="building-your-final-distributable"></a>Compilazione del file distribuibile finale
+### <a name="building-your-final-distributable"></a>Compilazione del file distribuibile finale
  Il plug-in di Xamarin per Visual Studio non supporta l'archiviazione di app Xamarin.iOS per la pubblicazione nell'App Store. Esistono però due opzioni per pubblicare un'applicazione iOS da Visual Studio. Questi sono:
 
 1. Caricare un pacchetto IPA creato con il comando di compilazione del pacchetto ad-hoc.
@@ -136,7 +136,7 @@ Prima compilare il [file distribuibile finale](~/ios/deploy-test/app-distributio
 
  La guida [Building the Distributable](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) (Compilazione del file distribuibile) contiene istruzioni su entrambe le opzioni.
 
-###  <a name="submitting-your-build"></a>Invio della compilazione
+### <a name="submitting-your-build"></a>Invio della compilazione
  Per inviare l'app ad Apple, è necessario spostare l'host di compilazione e usare il programma Application Loader che viene installato come parte di Xcode. Per altre informazioni sull'accesso ad Application Loader, vedere la guida di Apple [Access Application Loader](http://help.apple.com/itc/apploader/#/apdATD1E927-D1E1A1303-D1E927A1126) (Accedere ad Application Loader).
 
 Dopo aver aperto il programma, selezionare l'opzione **Deliver Your App** (Invia l'app) e caricare il file ZIP o il file `.ipa` creato in precedenza. Application Loader convaliderà e caricherà la compilazione in iTunes Connect.
