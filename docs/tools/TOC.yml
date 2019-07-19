@@ -44,11 +44,6 @@
           href: workbooks/workbook.md
         - name: Tasti di scelta rapida per l'editor
           href: workbooks/keybindings.md
-        - name: Cartelle di lavoro di esempio
-          href: workbooks/samples/index.md
-          items:
-            - name: TinyRenderer
-              href: workbooks/samples/tinyrenderer.md
         - name: Risoluzione dei problemi
           href: workbooks/troubleshooting/index.md
           items:
