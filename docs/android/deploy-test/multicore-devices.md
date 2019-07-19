@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2019
-ms.openlocfilehash: bb1b615bc922b19c50435218dfee51f9e19d1259
-ms.sourcegitcommit: dd73477b1bccbd7ca45c1fb4e794da6b36ca163d
+ms.openlocfilehash: 49370813f50e3b5f1a9193c542b9f5f13d65a8e1
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66394718"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829949"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Dispositivi multi-core e Xamarin.Android
 
@@ -53,13 +53,15 @@ Ogni interfaccia ABI supportata da Android è identificata da un nome univoco.
 
 Questo è il nome di un'interfaccia EABI per le CPU basate su ARM che supportano almeno il set di istruzioni ARMv5TE. Android segue l'interfaccia ABI GNU/Linux ARM little-endian. Questa interfaccia ABI non supporta i calcoli a virgola mobile assistiti mediante hardware. Tutte le operazioni a virgola mobile vengono eseguite dalle funzioni helper del software che provengono dalla libreria statica `libgcc.a` del compilatore. I dispositivi SMP non sono supportati da `armeabi`.
 
-**Nota**: il codice `armeabi` di Xamarin.Android non è thread-safe e non deve essere usato su dispositivi `armeabi-v7a` con più CPU (descritti di seguito). L'uso del codice `armeabi` su un dispositivo `armeabi-v7a` a singolo core è sicuro.
+> [!IMPORTANT]
+> il codice `armeabi` di Xamarin.Android non è thread-safe e non deve essere usato su dispositivi `armeabi-v7a` con più CPU (descritti di seguito). L'uso del codice `armeabi` su un dispositivo `armeabi-v7a` a singolo core è sicuro.
 
 #### <a name="armeabi-v7a"></a>armeabi-v7a
 
 Questo è un altro set di istruzioni CPU basato su ARM che estende l'interfaccia EABI `armeabi` descritta in precedenza. L'interfaccia EABI `armeabi-v7a` fornisce il supporto per le operazioni a virgola mobile hardware e i dispositivi con più CPU (SMP). Un'applicazione che usa l'interfaccia EABI `armeabi-v7a` può ottenere miglioramenti sostanziali delle prestazioni rispetto a un'applicazione che usa `armeabi`.
 
-**Nota:** il codice macchina `armeabi-v7a` non verrà eseguito sui dispositivi ARMv5.
+> [!NOTE]
+> Il codice macchina `armeabi-v7a` non verrà eseguito sui dispositivi ARMv5.
 
 #### <a name="arm64-v8a"></a>arm64-v8a
 
@@ -74,7 +76,8 @@ Questo è il nome di un'interfaccia ABI per le CPU che supportano il set di istr
 - L'estensione Supplemental SSE3 (SSSE3).
 - Qualsiasi variante di SSE4.
 
-**Nota:** la piattaforma Google TV, nonostante sia in esecuzione su x86, non è supportata da Android NDK.
+> [!NOTE]
+> la piattaforma Google TV, nonostante sia in esecuzione su x86, non è supportata da Android NDK.
 
 #### <a name="x8664"></a>x86_64
 

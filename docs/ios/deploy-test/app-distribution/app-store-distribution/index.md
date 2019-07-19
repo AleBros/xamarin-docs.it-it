@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: 14cf2910767e9c205e5ddc8f580020505f54ef46
-ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
+ms.openlocfilehash: 8b3782554615c5ce3350294fc3300e3c369f8af7
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "55832028"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831516"
 ---
 # <a name="app-store-distribution"></a>Distribuzione tramite l'App Store
 
@@ -25,7 +25,7 @@ Dopo che un'app Xamarin.iOS è stata sviluppata, il passaggio successivo del cic
 Per distribuire un'applicazione, come per sviluppare un'applicazione, è necessario effettuare il provisioning dell'applicazione con il *profilo di provisioning* appropriato. I profili di provisioning sono file che contengono le informazioni sulla firma del codice, oltre all'identità dell'applicazione e al meccanismo di distribuzione previsto. Contengono anche informazioni sui dispositivi in cui l'app può essere distribuita per la distribuzione senza App Store.
 
 > [!IMPORTANT]
-> È **importante** ricordare che, per usare iTunes Connect e quindi per pubblicare un'app nell'App Store, **è necessario** fare parte di un programma Apple Developer per singoli utenti o per organizzazioni. Non sarà possibile eseguire i passaggi di questa pagina se si è membri di un programma Apple Developer **Enterprise**.
+> Per usare iTunes Connect e quindi per pubblicare un'app nell'App Store, è **necessario** fare parte di un programma Apple Developer per singoli utenti o per organizzazioni. Non sarà possibile eseguire i passaggi di questa pagina se si è membri di un programma Apple Developer **Enterprise**.
 
 <a name="provisioning" />
 

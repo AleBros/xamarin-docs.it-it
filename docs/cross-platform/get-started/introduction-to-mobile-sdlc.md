@@ -1,30 +1,30 @@
 ---
-title: Introduzione al ciclo di vita di sviluppo del software per dispositivi mobili
+title: Ciclo di vita di sviluppo del software per dispositivi mobili
 description: Questo documento descrive il ciclo di vita di sviluppo del software per dispositivi mobili, prendendo in esame la progettazione dell'esperienza utente, la progettazione dell'interfaccia utente, lo sviluppo, la stabilizzazione, la distribuzione e altro ancora.
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 11/22/2016
-ms.openlocfilehash: 74a9fc59b395d68db9b116106cc9fa63d3969c3b
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 99be69abb11640418917d4d2cb9738a0a843d6d0
+ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855237"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290146"
 ---
-# <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introduzione al ciclo di vita di sviluppo del software per dispositivi mobili
+# <a name="mobile-software-development-lifecycle"></a>Ciclo di vita di sviluppo del software per dispositivi mobili
 
-La compilazione di applicazioni per dispositivi mobili può essere un'operazione semplice e rapida come aprire l'IDE, assemblare una serie di componenti, eseguire un breve test e caricare il tutto in App Store. Oppure può essere un processo estremamente complesso che richiede un rigoroso design up-front, un test di usabilità, il controllo qualità su migliaia di dispositivi, un ciclo di vita completo della versione beta e quindi la distribuzione in numerosi modi diversi.
+La compilazione di applicazioni per dispositivi mobili può essere un'operazione semplice e rapida come aprire Visual Studio, assemblare una serie di componenti, eseguire un breve test e caricare il tutto in App Store. Oppure può essere un processo estremamente complesso che richiede una progettazione preliminare rigorosa, un test di usabilità, il controllo qualità su migliaia di dispositivi, un ciclo di vita completo della versione beta e quindi la distribuzione in numerosi modi diversi.
 
 In questo documento vengono fornite informazioni introduttive dettagliate sulla creazione di applicazioni per dispositivi mobili che includono:
 
-1.   **Processo**: il processo di sviluppo del software è chiamato ciclo di vita di sviluppo del software (SDLC, Software Development Lifecycle). Verranno esaminate tutte le fasi del ciclo di vita di sviluppo del software relative allo sviluppo di applicazioni per dispositivi mobili, tra cui ispirazione, progettazione, sviluppo, stabilizzazione, distribuzione e manutenzione.
+1.   **Processo**: il processo di sviluppo del software è chiamato ciclo di vita di sviluppo del software (SDLC, Software Development Lifecycle). Verranno esaminate tutte le fasi del ciclo di vita di sviluppo del software relative allo sviluppo di applicazioni per dispositivi mobili, tra cui concepimento, progettazione, sviluppo, stabilizzazione, distribuzione e manutenzione.
 1.   **Considerazioni**: sono numerose le considerazioni da tenere presente durante la creazione di applicazioni per dispositivi mobili, che si distingue in particolare da quella di applicazioni Web o desktop tradizionali. Queste considerazioni verranno prese in esame e ne verrà descritto l'effetto sullo sviluppo per applicazioni mobili.
 
 Questo documento si propone di rispondere alle domande fondamentali sullo sviluppo di app per dispositivi mobili degli sviluppatori di ogni livello. La maggior parte dei concetti relativi all'intero ciclo di vita di sviluppo del software (SDLC) sono descritti con un approccio sostanzialmente completo. È possibile tuttavia che questo documento non sia adatto a tutti. Coloro che sono impazienti di iniziare possono passare direttamente alla guida [Introduzione allo sviluppo per dispositivi mobili](~/cross-platform/get-started/introduction-to-mobile-development.md) e tornare più tardi a questo documento.
 
-## <a name="mobile-development-sdlc"></a>Ciclo di vita di sviluppo del software per dispositivi mobili
+## <a name="mobile-development-software-lifecycle"></a>Ciclo di vita di sviluppo del software per dispositivi mobili
 
 Il ciclo di vita di sviluppo del software per dispositivi mobili non è totalmente diverso dal ciclo di vita di sviluppo del software per applicazioni Web o desktop. In entrambi si distinguono 5 fasi principali del processo:
 
@@ -172,7 +172,7 @@ Di seguito viene descritto come ogni piattaforma gestisce il multitasking in mod
 La maggior parte dei dispositivi mobili può essere suddivisa in due categorie, ovvero telefoni e tablet, con poche eccezioni. Sebbene lo sviluppo per questi fattori di forma sia in generale molto simile, la progettazione di applicazioni può variare notevolmente.
 I telefoni hanno uno spazio sulla schermata molto limitato e i tablet, sebbene più grandi, rimangono comunque dispositivi mobili con meno spazio sulla schermata anche rispetto alla maggior parte dei laptop. Per questa ragione, i controlli dell'interfaccia utente delle piattaforme per dispositivi mobili sono progettati specificatamente per essere efficaci su fattori di forma più piccoli.
 
-#### <a name="device-and-os-fragmentation"></a>Frammentazione dei dispositivi e del sistema operativo
+#### <a name="device-and-operating-system-fragmentation"></a>Frammentazione di dispositivi e sistemi operativi
 
 È importante prendere in considerazione dispositivi diversi durante l'intero ciclo di vita di sviluppo del software:
 
@@ -235,7 +235,7 @@ A causa del modello di Store delle applicazioni aperto, questo è un passaggio e
 
 Anche nella piattaforma UWP il multitasking è suddiviso in due parti: il ciclo di vita per le pagine e le applicazioni e i processi in background. Ogni schermata di un'applicazione è un'istanza di una classe Page che include eventi associati all'attivazione o alla disattivazione (con regole speciali per la gestione dello stato inattivo o il contrassegno per la rimozione).
 
-La seconda parte consiste nella specifica di agenti in background per l'elaborazione delle attività anche quando l'applicazione non è in esecuzione in primo piano. 
+La seconda parte consiste nella specifica di agenti in background per l'elaborazione delle attività anche quando l'applicazione non è in esecuzione in primo piano.
 
 #### <a name="device-capabilities"></a>Funzionalità del dispositivo
 
@@ -251,6 +251,6 @@ Questa guida ha offerto un'introduzione al ciclo di vita di sviluppo del softwar
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Introduzione allo sviluppo per dispositivi mobili](~/cross-platform/get-started/introduction-to-mobile-development.md)
+- [Che cos'è Xamarin?](~/cross-platform/get-started/introduction-to-mobile-development.md)
 - [Introduzione a Xamarin](~/get-started/index.yml)
 - [Condivisione del codice tra piattaforme diverse](~/cross-platform/app-fundamentals/index.md)

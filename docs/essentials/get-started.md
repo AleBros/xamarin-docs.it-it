@@ -5,35 +5,28 @@ ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
-ms.date: 11/04/2018
-ms.openlocfilehash: 7aa918a1aa70910cd05b17916e060e65ca5404bd
-ms.sourcegitcommit: 17376f0e54467d826b8928a11965fd0c879704f2
+ms.date: 07/10/2019
+ms.openlocfilehash: fd4c51714cea370f1d62457931a5820d5f1a5b97
+ms.sourcegitcommit: 0845ed2daa65468b6fe12ac4e9386f3315d72f4d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67131974"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67850931"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Introduzione a Xamarin.Essentials
 
-Xamarin.Essentials offre una singola API multipiattaforma supportata da qualsiasi applicazione iOS, Android o UWP accessibile da codice condiviso, indipendentemente dal modo in cui viene creata l'interfaccia utente.
-
-## <a name="platform-support"></a>Supporto per piattaforme
-
-Xamarin.Essentials supporta le piattaforme e i sistemi operativi seguenti:
-
-| Piattaforma | Versione |
-| --- | --- |
-| Android | 4.4 (API 19) o versione successiva |
-| iOS |10.0 o versione successiva |
-| UWP | 10.0.16299.0 o versione successiva |
+Xamarin.Essentials offre una singola API multipiattaforma supportata da qualsiasi applicazione iOS, Android o UWP accessibile da codice condiviso, indipendentemente dal modo in cui viene creata l'interfaccia utente. Per altre informazioni sui sistemi operativi supportati, vedere la [guida al supporto delle piattaforme e delle funzionalità](platform-feature-support.md).
 
 ## <a name="installation"></a>Installazione
 
 Xamarin.Essentials è disponibile come pacchetto NuGet che può essere aggiunto a qualsiasi progetto nuovo o esistente con Visual Studio.
 
-1. Scaricare e installare [Visual Studio](http://visualstudio.com) con [Visual Studio Tools per Xamarin](~/get-started/installation/index.md).
+1. Scaricare e installare [Visual Studio](https://visualstudio.microsoft.com/) con [Visual Studio Tools per Xamarin](~/get-started/installation/index.md).
 
-2. Aprire un progetto esistente o creare un nuovo progetto usando il modello Applicazione vuota in **Visual Studio C#**  (Android, iPhone e iPad o multipiattaforma). **Importante**: in caso di aggiunta a un progetto della piattaforma UWP assicurarsi che nelle proprietà del progetto sia impostata la build 16299 o versione successiva.
+2. Aprire un progetto esistente o creare un nuovo progetto usando il modello Applicazione vuota in **Visual Studio C#**  (Android, iPhone e iPad o multipiattaforma).
+
+    > [!IMPORTANT]
+    > in caso di aggiunta a un progetto della piattaforma UWP assicurarsi che nelle proprietà del progetto sia impostata la build 16299 o versione successiva.
 
 3. Aggiungere il pacchetto NuGet [**Xamarin.Essentials**](https://www.nuget.org/packages/Xamarin.Essentials/) a ogni progetto:
 

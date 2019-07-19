@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: c1e1b2d7bfb43c256c71abb62e7d85a05b096419
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a2dc974fba7beb70f1caecf8198181193d32e4c2
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103582"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865524"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribuzione interna per le app Xamarin.iOS
 
@@ -74,13 +74,13 @@ In alternativa, è possibile richiedere un certificato tramite la finestra di di
 
 1. Selezionare il proprio team e fare clic su *View Details...* (Visualizza dettagli):
 
-    [![](in-house-distribution-images/selectteam.png "Selezionare il team")](in-house-distribution-images/selectteam.png#lightbox)
+   [![](in-house-distribution-images/selectteam.png "Selezionare il team")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Fare quindi clic sul pulsante **Create** (Crea) accanto a **iOS Distribution Certificate** (Certificato di distribuzione iOS):
 
    [![](in-house-distribution-images/selectcert.png "Creare il certificato di distribuzione iOS")](in-house-distribution-images/selectcert.png#lightbox)
 
-2.   Fare quindi clic sul pulsante con il segno **più (+)** e selezionare **iOS App Store** (App Store iOS):
+3. Fare quindi clic sul pulsante con il segno **più (+)** e selezionare **iOS App Store** (App Store iOS):
 
    [![](in-house-distribution-images/selectcert.png "Selezionare iOS App Store (App Store iOS)")](in-house-distribution-images/selectcert.png#lightbox)
 
@@ -97,7 +97,7 @@ Come per qualsiasi altro profilo di provisioning creato, sarà necessario un ID 
 
 1. Nel [centro sviluppatori Apple](https://developer.apple.com/account/overview.action) passare alla sezione *Certificate, Identifiers and Profiles* (Certificati, identificatori e profili). Selezionare **App IDs** (ID app) in **Identifiers** (Identificatori).
 2. Fare clic sul pulsante **+** e specificare un **nome** lo identificherà nel portale.
-3. Il prefisso App sarà già impostato come ID del team e non può essere modificato. Selezionare un ID app esplicito o con caratteri jolly e immettere un ID bundle in un formato DNS inverso, ad esempio: **Esplicito**: com.[NomeDominio].[NomeApp] **Con caratteri jolly**: com.[NomeDominio].*
+3. Il prefisso App sarà già impostato come ID del team e non può essere modificato. Selezionare un ID app esplicito o con caratteri jolly e immettere un ID bundle in un formato DNS inverso, ad esempio: **Esplicito**: com.[NomeDominio].[NomeApp] **CarattereJolly**:com.[NomeDominio].*
 4. Selezionare il [servizio app](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services) richiesto dall'app.
 5. Fare clic sul pulsante **Continue** (Continua) e seguire le istruzioni visualizzate sullo schermo per creare il nuovo ID app.
 
@@ -119,11 +119,11 @@ Quando i componenti necessari per la creazione di un profilo di distribuzione so
 
    [![](in-house-distribution-images/distribute04.png "Selezionare il certificato di distribuzione necessario per firmare l'applicazione")](in-house-distribution-images/distribute04.png#lightbox)
 
-6. Fare clic sul pulsante **Continue** (Continua) e immettere un **nome** per il nuovo profilo di distribuzione:
+5. Fare clic sul pulsante **Continue** (Continua) e immettere un **nome** per il nuovo profilo di distribuzione:
 
    [![](in-house-distribution-images/distribute06.png "Immettere un nome per il nuovo profilo di distribuzione")](in-house-distribution-images/distribute06.png#lightbox)
 
-7. Fare clic sul pulsante **Generate** (Genera) per creare il nuovo profilo e finalizzare il processo.
+6. Fare clic sul pulsante **Generate** (Genera) per creare il nuovo profilo e finalizzare il processo.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 602a530e1c185ffeda2c6ac80a96f7795cec4cae
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dbf8f85192f9052041fc65367eb2f6c57603b440
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104843"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831430"
 ---
 # <a name="ios-build-mechanics"></a>Meccanismi di compilazione per iOS
 
@@ -33,7 +33,7 @@ Per abilitare l'output di MSBuild di diagnostica in Visual Studio per Mac:
 
 1. Fare clic su **Visual Studio per Mac > Preferenze...**
 2. Nella visualizzazione albero a sinistra selezionare **Progetti > Compila**
-3. Nel pannello a destra impostare l'elenco a discesa del livello di dettaglio dei log su **Diagnostica**: [![](ios-build-mechanics-images/image2.png "Impostazione del livello di dettaglio dei log")](ios-build-mechanics-images/image2.png#lightbox)
+3. Nel pannello a destra impostare l'elenco a discesa del livello di dettaglio dei log su **Diagnostica**:  [![](ios-build-mechanics-images/image2.png "Impostazione del livello di dettaglio del log")](ios-build-mechanics-images/image2.png#lightbox)
 4. Fare clic su **OK**
 5. Riavviare Visual Studio per Mac
 6. Pulire e ricompilare il pacchetto
@@ -46,7 +46,7 @@ Per abilitare l'output di MSBuild di diagnostica in Visual Studio:
 
 1. Fare clic su **Strumenti > Opzioni...**
 2. Nella visualizzazione albero a sinistra selezionare **Progetti e soluzioni > Compila ed esegui**
-3. Nel pannello a destra impostare l'*elenco a discesa del livello di dettaglio dell'output di compilazione di MSBuild* su **Diagnostica**: [![](ios-build-mechanics-images/image2-vs.png "Impostazione del livello di dettaglio dell'output di compilazione di MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox)
+3. Nel pannello a destra impostare l'*elenco a discesa del livello di dettaglio dell'output di compilazione di MSBuild* su **Diagnostica**:  [![](ios-build-mechanics-images/image2-vs.png "Impostazione del livello di dettaglio dell'output di compilazione di MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox)
 4. Fare clic su **OK**
 5. Pulire e ricompilare il pacchetto.
 6. L'output di diagnostica viene visualizzato nel pannello Output.
@@ -111,9 +111,9 @@ La distribuzione nel dispositivo è simile alla distribuzione nel simulatore, in
 
 Sono disponibili diverse configurazioni di compilazione per la distribuzione di app iOS. È importante comprendere al meglio ogni configurazione, per stabilire quando e perché ottimizzare il progetto.
 
- - Debug
+- Debug
   - Questa è la configurazione principale da usare quando un'app è in fase di sviluppo e, di conseguenza, la velocità deve essere maggiore possibile.
- - Rilascio
+- Versione
   - Le compilazioni di rilascio sono quelle fornite agli utenti e in cui le prestazioni sono un aspetto essenziale. Quando si usa la configurazione di rilascio, potrebbe essere utile usare il compilatore ottimizzatore LLVM e ottimizzare i file PNG.
 
  
