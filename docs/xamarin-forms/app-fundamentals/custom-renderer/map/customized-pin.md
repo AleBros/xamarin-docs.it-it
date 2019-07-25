@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 0ed4d86054ada0918feccb123ac3a0de8ccf899b
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 8e80016e33e8bebba715be4f02060e76086884fc
+ms.sourcegitcommit: 4b6e832d1db5616b657dc8540da67c509b28dc1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926710"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68386203"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizzazione di un segnaposto per la mappa
 
@@ -112,7 +112,7 @@ public MapPage ()
     Position = new Position (37.79752, -122.40183),
     Label = "Xamarin San Francisco Office",
     Address = "394 Pacific Ave, San Francisco CA",
-    Id = "Xamarin",
+    MarkerId = "Xamarin",
     Url = "http://xamarin.com/about/"
   };
 
@@ -155,7 +155,7 @@ La personalizzazione del controllo nativo deve essere eseguita in una versione s
 Prestare attenzione quando si sottoscrivono i gestori degli eventi nel metodo `OnElementChanged`, come illustrato nell'esempio di codice seguente:
 
 ```csharp
-protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.ListView> e)
+protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.View> e)
 {
   base.OnElementChanged (e);
 
@@ -254,14 +254,14 @@ protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKA
         throw new Exception("Custom pin not found");
     }
 
-    annotationView = mapView.DequeueReusableAnnotation(customPin.Id.ToString());
+    annotationView = mapView.DequeueReusableAnnotation(customPin.MarkerId.ToString());
     if (annotationView == null) {
-        annotationView = new CustomMKAnnotationView(annotation, customPin.Id.ToString());
+        annotationView = new CustomMKAnnotationView(annotation, customPin.MarkerId.ToString());
         annotationView.Image = UIImage.FromFile("pin.png");
         annotationView.CalloutOffset = new CGPoint(0, 0);
         annotationView.LeftCalloutAccessoryView = new UIImageView(UIImage.FromFile("monkey.png"));
         annotationView.RightCalloutAccessoryView = UIButton.FromType(UIButtonType.DetailDisclosure);
-        ((CustomMKAnnotationView)annotationView).Id = customPin.Id.ToString();
+        ((CustomMKAnnotationView)annotationView).MarkerId = customPin.MarkerId.ToString();
         ((CustomMKAnnotationView)annotationView).Url = customPin.Url;
     }
     annotationView.CanShowCallout = true;
@@ -274,12 +274,12 @@ Questo metodo assicura che l'annotazione venga visualizzata come immagine person
 
 1. Il metodo `GetCustomPin` viene chiamato per restituire i dati del segnaposto personalizzato per l'annotazione.
 1. Per risparmiare memoria, la visualizzazione dell'annotazione è in pool per essere riutilizzata con la chiamata a [`DequeueReusableAnnotation`](xref:MapKit.MKMapView.DequeueReusableAnnotation*).
-1. La classe `CustomMKAnnotationView` estende la classe `MKAnnotationView` con le proprietà `Id` e `Url` che corrispondono alle stesse proprietà nell'istanza `CustomPin`. Viene creata una nuova istanza di `CustomMKAnnotationView`, a condizione che l'annotazione sia `null`:
+1. La classe `CustomMKAnnotationView` estende la classe `MKAnnotationView` con le proprietà `MarkerId` e `Url` che corrispondono alle stesse proprietà nell'istanza `CustomPin`. Viene creata una nuova istanza di `CustomMKAnnotationView`, a condizione che l'annotazione sia `null`:
     - La proprietà `CustomMKAnnotationView.Image` viene impostata sull'immagine che rappresenterà l'annotazione nella mappa.
     - La proprietà `CustomMKAnnotationView.CalloutOffset` è impostata su `CGPoint` che specifica che il callout verrà centrato sopra l'annotazione.
     - La proprietà `CustomMKAnnotationView.LeftCalloutAccessoryView` è impostata su un'immagine di una chiave inglese che verrà visualizzata a sinistra del titolo dell'annotazione e dell'indirizzo.
     - La proprietà `CustomMKAnnotationView.RightCalloutAccessoryView` è impostata su un pulsante *Informazioni* che verrà visualizzato a destra del titolo dell'annotazione e dell'indirizzo.
-    - La proprietà `CustomMKAnnotationView.Id` è impostata sulla proprietà `CustomPin.Id` restituita dal metodo `GetCustomPin`. Ciò consente l'identificazione dell'annotazione in modo che sia possibile [personalizzare ulteriormente il relativo callout](#Selecting_the_Annotation), se necessario.
+    - La proprietà `CustomMKAnnotationView.MarkerId` è impostata sulla proprietà `CustomPin.MarkerId` restituita dal metodo `GetCustomPin`. Ciò consente l'identificazione dell'annotazione in modo che sia possibile [personalizzare ulteriormente il relativo callout](#Selecting_the_Annotation), se necessario.
     - La proprietà `CustomMKAnnotationView.Url` è impostata sulla proprietà `CustomPin.Url` restituita dal metodo `GetCustomPin`. L'URL verrà aperto quando l'utente [tocca il pulsante visualizzato nella visualizzazione accessorio callout destra](#Tapping_on_the_Right_Callout_Accessory_View).
 1. La proprietà [`MKAnnotationView.CanShowCallout`](xref:MapKit.MKAnnotationView.CanShowCallout*) è impostata su `true` in modo che venga visualizzato il callout quando viene toccata l'annotazione.
 1. L'annotazione viene restituita per la visualizzazione nella mappa.
@@ -296,7 +296,7 @@ void OnDidSelectAnnotationView (object sender, MKAnnotationViewEventArgs e)
   var customView = e.View as CustomMKAnnotationView;
   customPinView = new UIView ();
 
-  if (customView.Id == "Xamarin") {
+  if (customView.MarkerId == "Xamarin") {
     customPinView.Frame = new CGRect (0, 0, 200, 84);
     var image = new UIImageView (new CGRect (0, 0, 200, 84));
     image.Image = UIImage.FromFile ("xamarin.png");
@@ -307,7 +307,7 @@ void OnDidSelectAnnotationView (object sender, MKAnnotationViewEventArgs e)
 }
 ```
 
-Questo metodo estende il callout esistente (contenente le visualizzazioni accessorio destra e sinistra) aggiungendo un'istanza `UIView` che contiene un'immagine del logo Xamarin, a condizione che la proprietà `Id` dell'annotazione selezionata sia impostata su `Xamarin`. Ciò rende possibili scenari in cui vengono visualizzati callout diversi per le diverse annotazioni. L'istanza `UIView` verrà visualizzata al centro sopra il callout esistente.
+Questo metodo estende il callout esistente (contenente le visualizzazioni accessorio destra e sinistra) aggiungendo un'istanza `UIView` che contiene un'immagine del logo Xamarin, a condizione che la proprietà `MarkerId` dell'annotazione selezionata sia impostata su `Xamarin`. Ciò rende possibili scenari in cui vengono visualizzati callout diversi per le diverse annotazioni. L'istanza `UIView` verrà visualizzata al centro sopra il callout esistente.
 
 <a name="Tapping_on_the_Right_Callout_Accessory_View" />
 
@@ -447,7 +447,7 @@ public Android.Views.View GetInfoContents (Marker marker)
       throw new Exception ("Custom pin not found");
     }
 
-    if (customPin.Id.ToString() == "Xamarin") {
+    if (customPin.MarkerId.ToString() == "Xamarin") {
       view = inflater.Inflate (Resource.Layout.XamarinMapInfoWindow, null);
     } else {
       view = inflater.Inflate (Resource.Layout.MapInfoWindow, null);
@@ -473,7 +473,7 @@ Questo metodo restituisce `View` con il contenuto della finestra informazioni. Q
 
 - Viene recuperata un'istanza `LayoutInflater` che viene usata per creare l'istanza di un file XML di layout nel valore `View` corrispondente.
 - Il metodo `GetCustomPin` viene chiamato per restituire i dati del segnaposto personalizzato per la finestra informazioni.
-- Il layout `XamarinMapInfoWindow` viene espanso se la proprietà `CustomPin.Id` è uguale a `Xamarin`. In caso contrario, viene espanso il layout `MapInfoWindow`. Ciò rende possibili scenari in cui possono essere visualizzati layout diversi della finestra informazioni per i diversi indicatori.
+- Il layout `XamarinMapInfoWindow` viene espanso se la proprietà `CustomPin.MarkerId` è uguale a `Xamarin`. In caso contrario, viene espanso il layout `MapInfoWindow`. Ciò rende possibili scenari in cui possono essere visualizzati layout diversi della finestra informazioni per i diversi indicatori.
 - Le risorse `InfoWindowTitle` e `InfoWindowSubtitle` vengono recuperate dal layout espanso e le relative proprietà `Text` vengono impostate sui dati corrispondenti dell'istanza `Marker`, a condizione che le risorse non siano `null`.
 - L'istanza `View` viene restituita per la visualizzazione nella mappa.
 
@@ -601,7 +601,7 @@ private void OnMapElementClick(MapControl sender, MapElementClickEventArgs args)
                 throw new Exception("Custom pin not found");
             }
 
-            if (customPin.Id.ToString() == "Xamarin")
+            if (customPin.MarkerId.ToString() == "Xamarin")
             {
                 if (mapOverlay == null)
                 {
@@ -652,11 +652,6 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 Questo metodo apre un Web browser e passa all'indirizzo memorizzato nella proprietà `Url` dell'istanza `CustomPin`. Si noti che l'indirizzo è stato definito durante la creazione della raccolta `CustomPin` nel progetto della libreria .NET Standard.
 
 Per altre informazioni sulla personalizzazione di un'istanza `MapControl`, vedere [Panoramica su mappe e posizione](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx) in MSDN.
-
-## <a name="summary"></a>Riepilogo
-
-In questo articolo è stato illustrato come creare un renderer personalizzato per il controllo `Map` che consente agli sviluppatori di eseguire l'override del rendering nativo predefinito usando la propria personalizzazione specifica della piattaforma. Xamarin.Forms.Maps offre un'astrazione multipiattaforma per la visualizzazione delle mappe che usano le API di mapping native in ogni piattaforma, per consentire agli utenti di usufruire di un'esperienza di mapping veloce e intuitiva.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
