@@ -1,48 +1,38 @@
 ---
-title: Notifiche in xamarin. Android
+title: Notifiche in Novell. Android
 ms.prod: xamarin
 ms.assetid: 2E54F1D0-45F4-43A7-B3A3-4F483B7150CB
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b98ee5afbd65d5cf32bc6e3151284678e248cf47
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e4d7901e703544d52bb0e4a377875847b9af0c0a
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61014251"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509346"
 ---
-# <a name="notifications-in-xamarinandroid"></a>Notifiche in xamarin. Android
+# <a name="notifications-in-xamarinandroid"></a>Notifiche in Novell. Android
 
+Questa sezione illustra come implementare le notifiche in Novell. Android. Vengono descritti i vari elementi dell'interfaccia utente di una notifica Android e viene illustrata la creazione e la visualizzazione di una notifica da parte dell'API.
 
-## <a name="overview"></a>Panoramica
+## <a name="local-notifications-in-androidlocal-notificationsmd"></a>[Notifiche locali in Android](local-notifications.md)
 
-Questa sezione viene illustrato come implementare le notifiche in xamarin. Android. Vengono descritti i vari elementi dell'interfaccia utente di una notifica di Android e descrive l'API di coinvolti con la creazione e visualizzazione di una notifica.
+Questa sezione illustra come implementare le notifiche locali in Novell. Android. Vengono descritti i vari elementi dell'interfaccia utente di una notifica Android e vengono illustrate le API necessarie per la creazione e la visualizzazione di una notifica.
 
-
-## <a name="sections"></a>Sezioni
-
-### <a name="local-notifications-in-androidlocal-notificationsmd"></a>[Notifiche locali In Android](local-notifications.md)
-
-Questa sezione viene illustrato come implementare le notifiche locali in xamarin. Android. Vengono descritti i vari elementi dell'interfaccia utente di una notifica di Android e illustrano l'API di coinvolti con la creazione e visualizzazione di una notifica. 
-
-### <a name="walkthrough---using-local-notifications-in-xamarinandroidlocal-notifications-walkthroughmd"></a>[Procedura dettagliata - uso delle notifiche locali in xamarin. Android](local-notifications-walkthrough.md)  
+## <a name="walkthrough---using-local-notifications-in-xamarinandroidlocal-notifications-walkthroughmd"></a>[Procedura dettagliata: uso delle notifiche locali in Novell. Android](local-notifications-walkthrough.md)  
  
-Questa procedura dettagliata illustra come usare le notifiche locali in un'applicazione xamarin. Android. Vengono illustrate le nozioni di base di creazione e pubblicazione di una notifica. Quando l'utente fa clic sulla notifica nel menu informazioni di notifica avvia una seconda attività. 
+Questa procedura dettagliata illustra come usare le notifiche locali in un'applicazione Novell. Android. Vengono illustrati i concetti di base per la creazione e la pubblicazione di una notifica. Quando l'utente fa clic sulla notifica nel cassetto delle notifiche, avvia una seconda attività. 
 
+## <a name="further-reading"></a>Ulteriori informazioni
 
-## <a name="for-further-reading"></a>Ulteriori informazioni
+[Messaggistica cloud Firebase](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; Firebase Cloud Messaging (FCM) è un servizio che facilita la messaggistica tra le app per dispositivi mobili e le applicazioni server. La messaggistica cloud Firebase può essere usata per implementare notifiche remote (dette anche notifiche push) nelle applicazioni Novell. Android.
 
-[Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; Firebase Cloud Messaging (FCM) è un servizio che semplifica la messaggistica tra App per dispositivi mobili e applicazioni server. Firebase Cloud Messaging è utilizzabile per implementare le notifiche remote (detta anche le notifiche push) nelle applicazioni xamarin. Android.
+[Notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) di &ndash; Questo argomento per sviluppatori Android è la guida definitiva per le notifiche Android. Include una sezione relativa alle considerazioni sulla progettazione che consente di progettare le notifiche in modo che siano conformi alle linee guida dell'interfaccia utente di Android. Vengono fornite ulteriori informazioni di base sulla navigazione preliminare all'avvio di un'attività e viene illustrato come visualizzare lo stato di avanzamento in una notifica e controllare la riproduzione dei supporti nella schermata di blocco.
 
-[Le notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; per sviluppatori Android questo argomento è la Guida definitiva per le notifiche di Android. Include una progettazione sezione considerazioni che consente di progettare le notifiche in modo che siano conformi alle linee guida dell'interfaccia utente di Android. Fornisce informazioni complementari sulla navigazione preserviing quando si avvia un'attività e viene descritto come visualizzare lo stato di avanzamento della riproduzione multimediale una notifica e il controllo nella schermata di blocco. 
-
-[NotificationListenerService](https://developer.xamarin.com/api/type/Android.Service.Notification.NotificationListenerService/) &ndash; Android questo servizio rende possibile all'app di ascolto (e interagire con) registrate tutte le notifiche sul dispositivo Android, non solo le notifiche all'app registrata in ricezione. Si noti che l'utente in modo esplicito debba concedere l'autorizzazione per l'app per poter essere in grado di restare in ascolto per le notifiche sul dispositivo.
-
-
-
-
+[NotificationListenerService](xref:Android.Service.Notification.NotificationListenerService) &ndash; Questo servizio Android consente all'app di restare in ascolto e interagire con tutte le notifiche pubblicate sul dispositivo Android, non solo le notifiche che l'app è registrata per la ricezione.
+Si noti che l'utente deve concedere in modo esplicito l'autorizzazione all'app affinché possa restare in ascolto delle notifiche sul dispositivo.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

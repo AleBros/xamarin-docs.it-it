@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: a38249236e758728452ff25fd0c486c3d03ce8fc
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 2c218b030739dee8d3e49fab4e5c2a70ff5e71e0
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970994"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511820"
 ---
 # <a name="device-orientation"></a>Orientamento del dispositivo
 
@@ -71,7 +71,7 @@ Xamarin. Android supporta diverse opzioni per specificare l'orientamento:
 - **Panorama applicativo** &ndash; forza l'orientamento dell'applicazione in orizzontale, indipendentemente dal fatto i dati del sensore.
 - **Verticale** &ndash; forza l'orientamento dell'applicazione in verticale, indipendentemente dal fatto i dati del sensore.
 - **Utente** &ndash; , l'applicazione verrà visualizzato con orientamento preferito dell'utente.
-- **Dietro** &ndash; provoca l'orientamento dell'applicazione sia lo stesso come l'orientamento del [attività](https://developer.xamarin.com/api/type/Android.App.Activity/) dietro di essa.
+- **Dietro** &ndash; provoca l'orientamento dell'applicazione sia lo stesso come l'orientamento del [attività](xref:Android.App.Activity) dietro di essa.
 - **Sensore** &ndash; determina l'orientamento dell'applicazione deve essere determinato dal sensore, anche se l'utente ha disabilitato la rotazione automatica.
 - **SensorLandscape** &ndash; fa sì che l'applicazione da usare con orientamento orizzontale quando si usa i dati dei sensori per modificare la direzione è rivolta verso la schermata (in modo che la schermata non viene considerata dall'alto in basso).
 - **SensorPortrait** &ndash; fa sì che l'applicazione da usare con orientamento verticale quando si usa i dati dei sensori per modificare la direzione è rivolta verso la schermata (in modo che la schermata non viene considerata dall'alto in basso).
@@ -98,7 +98,7 @@ Xamarin. Forms non offre tutti gli eventi nativi per inviare la notifica delle m
 > [!NOTE]
 > È un pacchetto NuGet esistente, gratuito per la ricezione di notifiche delle modifiche apportate orientamento nel codice condiviso. Vedere le [repository GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) per altre informazioni.
 
-In alternativa, è possibile eseguire l'override di [ `OnSizeAllocated` ](xref:Xamarin.Forms.Page.OnSizeAllocated*) metodo su un `Page`, inserimento di qualsiasi layout modificare qui la logica. Il `OnSizeAllocated` viene chiamato ogni volta che un `Page` viene allocata una nuova dimensione, che si verifica ogni volta che il dispositivo viene ruotato. Si noti che l'implementazione di base di `OnSizeAllocated` esegue funzioni layout importante, pertanto è importante chiamare l'implementazione di base nell'override:
+In alternativa, è possibile eseguire l'override di [`OnSizeAllocated`](xref:Xamarin.Forms.Page.OnSizeAllocated*) metodo su un `Page`, inserimento di qualsiasi layout modificare qui la logica. Il `OnSizeAllocated` viene chiamato ogni volta che un `Page` viene allocata una nuova dimensione, che si verifica ogni volta che il dispositivo viene ruotato. Si noti che l'implementazione di base di `OnSizeAllocated` esegue funzioni layout importante, pertanto è importante chiamare l'implementazione di base nell'override:
 
 ```csharp
 protected override void OnSizeAllocated(double width, double height)

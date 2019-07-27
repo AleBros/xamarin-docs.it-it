@@ -1,30 +1,30 @@
 ---
-title: Introduzione all'API unificata
-description: API unificata di Xamarin consente di condividere codice tra iOS e Mac e il supporto applicazioni a 32 e 64 bit con lo stesso binario.
+title: Panoramica di API unificata
+description: Il API unificata di Novell consente di condividere il codice tra Mac e iOS e di supportare le applicazioni 32 e 64 bit con lo stesso file binario.
 ms.prod: xamarin
 ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 1d159d280bd3b8855c32e3e437dfdefcbe0463cb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9d36101c1416ea8ddf451f5677258972c4f34990
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261129"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511138"
 ---
-# <a name="unified-api-overview"></a>Introduzione all'API unificata
+# <a name="unified-api-overview"></a>Panoramica di API unificata
 
-API unificata di Xamarin consente di condividere codice tra iOS e Mac e il supporto applicazioni a 32 e 64 bit con lo stesso binario. L'API unificata viene usata per impostazione predefinita nei nuovi progetti xamarin. IOS e xamarin. Mac.
+Il API unificata di Novell consente di condividere il codice tra Mac e iOS e di supportare le applicazioni 32 e 64 bit con lo stesso file binario. Il API unificata viene usato per impostazione predefinita nei nuovi progetti Novell. iOS e Novell. Mac.
 
 > [!IMPORTANT]
-> L'API classica Xamarin, che è preceduto l'API unificata, è stato deprecato. 
-> - L'ultima versione di xamarin. IOS per supportare l'API classica (monotouch) era 9.10 di xamarin. IOS.
-> - Xamarin. Mac supporta ancora l'API classica, ma non verrà più aggiornata. Poiché è deprecato, gli sviluppatori devono spostare le proprie applicazioni per l'API unificata.
+> Il API classica Novell, che precedeva il API unificata, è stato deprecato. 
+> - L'ultima versione di Novell. iOS per supportare il API classica (MonoTouch. dll) era Novell. iOS 9,10.
+> - Novell. Mac supporta ancora la API classica, ma non viene più aggiornata. Poiché è deprecato, gli sviluppatori devono spostare le applicazioni nel API unificata.
 
-## <a name="updating-classic-api-based-apps"></a>L'aggiornamento di App basate su API classica
+## <a name="updating-classic-api-based-apps"></a>Aggiornamento di app basate su API classica
 
-Seguire le istruzioni rilevanti per la tua piattaforma:
+Seguire le istruzioni pertinenti per la piattaforma:
 
 - [Aggiornare app esistenti](updating-apps.md)
 - [Aggiornare app iOS esistenti](updating-ios-apps.md)
@@ -34,41 +34,41 @@ Seguire le istruzioni rilevanti per la tua piattaforma:
 
 ## <a name="tips-for-updating-code-to-the-unified-apiupdating-tipsmd"></a>[Suggerimenti per l'aggiornamento del codice per l'API unificata](updating-tips.md)
 
-Indipendentemente dal fatto che le applicazioni si esegue la migrazione, consultare [questi suggerimenti](updating-tips.md) che consentono di aggiornare correttamente all'API unificata.
+Indipendentemente dalle applicazioni di cui si esegue la migrazione, consultare [questi suggerimenti](updating-tips.md) per eseguire correttamente l'aggiornamento al API unificata.
 
-## <a name="library-split"></a>Suddivisione di libreria
+## <a name="library-split"></a>Suddivisione libreria
 
-Da questo momento, le nostre API verranno visualizzate in due modi:
+Da questo punto in poi, le nostre API verranno riportate in due modi:
 
--  **API classica:** Limitato a 32-bit (solo) ed esposti nel `monotouch.dll` e `XamMac.dll` assembly.
--  **API unificata:** Supporta lo sviluppo di sia 32 e 64 bit con una singola API disponibile nel `Xamarin.iOS.dll` e `Xamarin.Mac.dll` assembly.
+-  **API classica:** Limitato a 32 bit (solo) ed esposto negli `monotouch.dll` assembly e. `XamMac.dll`
+-  **API unificata:** Supporta lo sviluppo di bit 32 e 64 con una singola API disponibile negli `Xamarin.iOS.dll` assembly `Xamarin.Mac.dll` e.
 
-Ciò significa che per Enterprise gli sviluppatori (non destinata l'App Store), puoi continuare a usare le API classiche esistenti, come abbiamo mantenere mantenendo li all'infinito, oppure è possano eseguire l'aggiornamento alle nuove API.
+Ciò significa che per gli sviluppatori aziendali (non destinazione l'App Store), è possibile continuare a usare le API classiche esistenti, perché continueranno a essere mantenute per sempre, oppure è possibile eseguire l'aggiornamento alle nuove API.
 
 <a name="namespace-changes" />
 
-## <a name="namespace-changes"></a>Modifiche di Namespace
+## <a name="namespace-changes"></a>Modifiche dello spazio dei nomi
 
-Per ridurre l'attrito per condividere codice tra i prodotti Mac e iOS, si stanno modificando gli spazi dei nomi per le API nei prodotti.
+Per ridurre la frizione per condividere il codice tra i prodotti Mac e iOS, si modificano gli spazi dei nomi per le API nei prodotti.
 
-Si sta eliminando "MonoTouch" il prefisso dalla prodotto iOS e da "MonoMac" dal nostro prodotto Mac sui tipi di dati.
+Il prefisso "MonoTouch" viene eliminato dal prodotto iOS e da "MonoMac" dal prodotto Mac sui tipi di dati.
 
-Questo rende più semplice condividere codice tra le piattaforme Mac e iOS senza ricorrere alla compilazione condizionale e consente di ridurre il rumore nella parte superiore del file del codice sorgente.
+In questo modo è più semplice condividere il codice tra le piattaforme Mac e iOS senza ricorrere alla compilazione condizionale e ridurrà il rumore all'inizio dei file di codice sorgente.
 
--  **API classica:** Usare gli spazi dei nomi `MonoTouch.` o `MonoMac.` prefisso.
+-  **API classica:** Gli spazi dei `MonoTouch.` nomi `MonoMac.` usano il prefisso o.
 -  **API unificata:** Nessun prefisso dello spazio dei nomi
 
-## <a name="runtime-defaults"></a>Impostazioni predefinite di runtime
+## <a name="runtime-defaults"></a>Impostazioni predefinite runtime
 
-L'API unificata per impostazione predefinita Usa la **SGen** garbage collector e il [nuovo conteggio dei riferimenti](~/ios/internals/newrefcount.md) system per tenere traccia delle proprietà degli oggetti. Questa stessa funzionalità è stata portata a xamarin. Mac.
+Per impostazione predefinita, il API unificata utilizza l'Garbage Collector **SGen** e il nuovo sistema di [conteggio dei riferimenti](~/ios/internals/newrefcount.md) per tenere traccia della proprietà dell'oggetto. Questa stessa funzionalità è stata portata in Novell. Mac.
 
-Ciò consente di risolvere alcuni dei problemi che gli sviluppatori di affrontare il vecchio sistema e semplificano [gestione della memoria](~/cross-platform/deploy-test/memory-perf-best-practices.md).
+Questo consente di risolvere una serie di problemi che gli sviluppatori affrontano con il vecchio sistema e semplificano anche la [gestione della memoria](~/cross-platform/deploy-test/memory-perf-best-practices.md).
 
-Si noti che è possibile abilitare il nuovo conteggio dei riferimenti anche per l'API classica, ma il valore predefinito è conservativo e non richiede agli utenti di apportare modifiche. Con l'API unificata, si ha avuto l'opportunità di modificare l'impostazione predefinita e offrire agli sviluppatori di tutti i miglioramenti allo stesso tempo che il refactoring e testare nuovamente il proprio codice.
+Si noti che è possibile abilitare nuovi refcount anche per il API classica, ma il valore predefinito è conservativo e non richiede che gli utenti effettuino alcuna modifica. Grazie alla API unificata, abbiamo avuto la possibilità di modificare l'impostazione predefinita e offrire agli sviluppatori tutti i miglioramenti che hanno fatto per effettuare il refactoring e testare nuovamente il codice.
 
-## <a name="api-changes"></a>Modifiche apportate all'API
+## <a name="api-changes"></a>Modifiche API
 
-L'API unificata rimuove metodi deprecati e sono presenti poche istanze in cui sono presenti errori di digitazione nei nomi delle API quando sono stati associati per l'originale MonoTouch MonoMac spazi dei nomi e nelle API classica. Queste istanze sono state corrette le nuove API unificata e dovranno essere aggiornata nel componente, iOS e le applicazioni Mac. Ecco un elenco di quelle più comuni che riscontrabili:
+Il API unificata rimuove i metodi deprecati e sono presenti alcuni casi in cui si sono verificati errori di ortografia nei nomi delle API quando sono stati associati agli spazi dei nomi MonoTouch e MonoMac originali nelle API classiche. Queste istanze sono state corrette nelle nuove API unificate e devono essere aggiornate nelle applicazioni del componente, iOS e Mac. Di seguito è riportato un elenco di quelli più comuni che è possibile eseguire:
 
 |Nome del metodo API classica|Nome del metodo API unificata|
 |--- |--- |
@@ -79,47 +79,47 @@ L'API unificata rimuove metodi deprecati e sono presenti poche istanze in cui so
 |`CGContext.SetShadowWithColor`|`CGContext.SetShadow`|
 |`UIView.StringSize`|`UIKit.UIStringDrawing.StringSize`|
 
-Per un elenco competo delle modifiche quando si passa dalla distribuzione classica all'API unificata di, vedere la [modello di distribuzione classica (monotouch) vs differenze tra API unificata (DLL)](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) documentazione.
+Per un elenco completo delle modifiche apportate quando si passa dal modello classico al API unificata, vedere la documentazione relativa alle [differenze tra API (MonoTouch. dll) e unificata (Novell. iOS. dll)](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md) .
 
-## <a name="updating-to-unified"></a>L'aggiornamento a unificato
+## <a name="updating-to-unified"></a>Aggiornamento a Unified
 
-Diverse API/interrotti/obsoleta in **classiche** non sono disponibili nel **unificato** API. Può essere più semplice risolvere il `CS0616` poiché è possibile eseguire l'aggiornamento avvisi prima di avviare il (manuali o automatizzati) il `[Obsolete]` attributo messaggio (incluso il messaggio di avviso) per ottenere istruzioni utili per l'API a destra.
+Diverse API obsolete/obsolete o deprecate nel **modello classico** non sono  disponibili nell'API unificata. Può essere più facile correggere gli `CS0616` avvisi prima di avviare l'aggiornamento (manuale o automatizzato), perché il `[Obsolete]` messaggio di attributo (parte dell'avviso) verrà visualizzato come guida all'API corretta.
 
-Si noti che viene pubblicata una [ *diff* ](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) unificata modifiche all'API che possono essere utilizzate prima o dopo l'aggiornamento del progetto di Visual Studio classico. Ancora la correzione di obsoletes spesso chiamate faranno classico un risparmio di tempo (meno ricerche documentazione).
+Si noti che si sta pubblicando una [*differenza*](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md) tra le modifiche alle API di Visual Studio classico e quelle unificate che possono essere usate prima o dopo gli aggiornamenti del progetto. Tuttavia, la correzione delle chiamate obsolete nel modello di distribuzione classica sarà spesso un risparmio di tempo (meno ricerche nella documentazione).
 
-Per seguire queste istruzioni [aggiornare le app iOS esistenti](~/cross-platform/macios/unified/updating-ios-apps.md), o [App Mac](~/cross-platform/macios/unified/updating-mac-apps.md) all'API unificata.
-Esaminare la restante parte di questa pagina, e [questi suggerimenti](~/cross-platform/macios/unified/updating-tips.md) per altre informazioni sulla migrazione del codice.
+Seguire queste istruzioni per [aggiornare le app iOS](~/cross-platform/macios/unified/updating-ios-apps.md)o [Mac](~/cross-platform/macios/unified/updating-mac-apps.md) esistenti al API unificata.
+Esaminare il resto della pagina e [questi suggerimenti](~/cross-platform/macios/unified/updating-tips.md) per ulteriori informazioni sulla migrazione del codice.
 
 ### <a name="nuget"></a>NuGet
 
-I pacchetti NuGet che supportavano in precedenza xamarin. IOS tramite l'API classica pubblicati i relativi assembly utilizzando il **Monotouch10** moniker di piattaforma.
+I pacchetti NuGet che in precedenza supportano Novell. iOS tramite il API classica pubblicato i relativi assembly usando il moniker della piattaforma **Monotouch10** .
 
-API unificata di introduce un nuovo identificatore di piattaforma per i pacchetti compatibili - **Xamarin.iOS10**. I pacchetti NuGet esistenti dovrà essere aggiornata per aggiungere il supporto per questa piattaforma, in base all'API unificata di.
+Il API unificata introduce un nuovo identificatore di piattaforma per i pacchetti compatibili, **Novell. iOS10**. I pacchetti NuGet esistenti dovranno essere aggiornati per aggiungere il supporto per questa piattaforma, compilando il API unificata.
 
 > [!IMPORTANT]
-> Se si dispone di un errore nel modulo _"errore 3 non può includere sia 'monotouch' e 'Dll' nello stesso progetto xamarin. ios: 'Dll' viene fatto riferimento in modo esplicito, mentre 'monotouch' fa riferimento ' xxx ', versione = 0.0.000, Culture = neutral, PublicKeyToken = null'"_ dopo avere convertito l'applicazione per le API unificata, si tratta in genere con un componente o pacchetto NuGet nel progetto che non è stato aggiornato all'API unificata. È necessario rimuovere il componente/NuGet esistenti, aggiornare a una versione che supporta le API unificata ed eseguire una compilazione pulita.
+> Se è presente un errore nel formato _"errore 3: non è possibile includere sia ' MonoTouch. dll ' che ' Novell. iOS. dll ' nello stesso progetto Novell. iOS. viene fatto riferimento in modo esplicito a' Novell. iOS. dll ', mentre a' MonoTouch. dll ' fa riferimento ' xxx, Version = 0.0.000, culture = neutral, PublicKeyToken = null ' "_ dopo la conversione dell'applicazione nelle API unificate, è in genere dovuto alla presenza di un componente o di un pacchetto NuGet nel progetto che non è stato aggiornato al API unificata. È necessario rimuovere il componente/NuGet esistente, eseguire l'aggiornamento a una versione che supporta le API unificate ed eseguire una compilazione pulita.
 
-### <a name="the-road-to-64-bits"></a>Il passaggio a 64 bit
+### <a name="the-road-to-64-bits"></a>La strada a 64 bit
 
-Per informazioni generali sul supporto di 32 e 64 bit delle applicazioni e informazioni sui Framework per vedere le [32 e 64 bit considerazioni relative alla piattaforma](~/cross-platform/macios/32-and-64/index.md).
+Per informazioni di base su come supportare le applicazioni di bit 32 e 64 e informazioni sui Framework, vedere le [considerazioni sulla piattaforma di bit 32 e 64](~/cross-platform/macios/32-and-64/index.md).
 
  <a name="new-data-types" />
 
 #### <a name="new-data-types"></a>Nuovi tipi di dati
 
-Alla base della differenza, API iOS e Mac Usa un tipi di dati specifici dell'architettura sono sempre a 32 bit su piattaforme a 32 bit e 64 bit su piattaforme a 64 bit.
+Alla base della differenza, le API Mac e iOS utilizzano i tipi di dati specifici dell'architettura sempre 32 bit sulle piattaforme a 32 bit e 64 bit su piattaforme a 64 bit.
 
-Ad esempio, Objective-C esegue il mapping di `NSInteger` tipo di dati `int32_t` nei sistemi a 32 bit e a `int64_t` nei sistemi a 64 bit.
+In Objective-C, ad esempio, `NSInteger` viene eseguito il `int32_t` mapping del tipo di dati a `int64_t` nei sistemi a 32 bit e nei sistemi a 64 bit.
 
-In modo che corrisponda a questo comportamento, nella nostra API unificata, si sta sostituendo l'utilizzi precedenti del `int` (che in .NET viene definito come devono essere sempre `System.Int32`) in un nuovo tipo di dati: `System.nint`.  È possibile pensare "n" con il significato "nativa", quindi digitare il valore integer nativo della piattaforma.
+Per trovare la corrispondenza con questo comportamento, nel API unificata si sostituiscono gli utilizzi precedenti `int` di (che in .NET è definito come `System.Int32`sempre) in un nuovo tipo di dati `System.nint`:.  È possibile pensare a "n" come significato "native", quindi al tipo Integer nativo della piattaforma.
 
-Sono state introdotte `nint`, `nuint` e `nfloat` nonché fornendo i tipi di dati basato su essi laddove necessario.
+Stiamo introducendo `nint`e `nuint` `nfloat` fornendo i tipi di dati basati su di essi, ove necessario.
 
-Per altre informazioni su queste modifiche ai tipi di dati, vedere la [i tipi nativi](~/cross-platform/macios/nativetypes.md) documento.
+Per ulteriori informazioni su queste modifiche ai tipi di dati, vedere il documento [tipi nativi](~/cross-platform/macios/nativetypes.md) .
 
-### <a name="how-to-detect-the-architecture-of-ios-apps"></a>Come rilevare l'architettura delle App iOS
+### <a name="how-to-detect-the-architecture-of-ios-apps"></a>Come rilevare l'architettura delle app iOS
 
-Potrebbero esserci situazioni in cui l'applicazione deve sapere se è in esecuzione in un a 32 bit o un sistema iOS a 64 bit. Il codice seguente è utilizzabile per controllare l'architettura:
+Potrebbero essere presenti situazioni in cui l'applicazione deve essere in esecuzione su un sistema iOS a 32 bit o a 64 bit. Il codice seguente può essere usato per controllare l'architettura:
 
 ```csharp
 if (IntPtr.Size == 4) {
@@ -131,9 +131,9 @@ if (IntPtr.Size == 4) {
 
 <a name="deprecated-apis" />
 
-### <a name="arrays-and-systemcollectionsgeneric"></a>Matrici e System.Collections.Generic
+### <a name="arrays-and-systemcollectionsgeneric"></a>Matrici e System. Collections. Generic
 
-Poiché C# indicizzatori prevedono un tipo di `int`, è possibile eseguire il cast esplicito `nint` valori `int` accedere agli elementi di una matrice o raccolta. Ad esempio:
+Poiché C# gli indicizzatori prevedono `int`un tipo di, sarà necessario eseguire il `nint` cast esplicito dei valori a `int` per accedere agli elementi in una raccolta o in una matrice. Ad esempio:
 
 ```csharp
 public List<string> Names = new List<string>();
@@ -145,11 +145,11 @@ public string GetName(nint index) {
 
 ```
 
-Questo comportamento è previsto, perché il cast da `int` a `nint` è perdita di dati a 64 bit, una conversione implicita non viene eseguita.
+Si tratta di un comportamento previsto, perché il `int` Cast `nint` da a ha un valore Losso di 64 bit, non viene eseguita una conversione implicita.
 
-### <a name="converting-datetime-to-nsdate"></a>Conversione di DateTime a NSDate
+### <a name="converting-datetime-to-nsdate"></a>Conversione di DateTime in NSDate
 
-Quando si usano le API unificata, la conversione implicita dei `DateTime` a `NSDate` valori non viene più eseguito. Questi valori dovrà essere convertito in modo esplicito da un tipo a altro. I seguenti metodi di estensione sono utilizzabile per automatizzare questo processo:
+Quando si usano le API unificate, la conversione implicita `NSDate` di `DateTime` in valori non viene più eseguita. Questi valori dovranno essere convertiti in modo esplicito da un tipo a un altro. Per automatizzare il processo, è possibile usare i metodi di estensione seguenti:
 
 ```csharp
 public static DateTime NSDateToDateTime(this NSDate date)
@@ -175,136 +175,136 @@ public static NSDate DateTimeToNSDate(this DateTime date)
 
 <a name="deprecated-typos" />
 
-### <a name="deprecated-apis-and-typos"></a>Errori di digitazione e le API deprecate
+### <a name="deprecated-apis-and-typos"></a>API e digitazioni deprecate
 
-API classica xamarin. IOS interna (monotouch) il `[Obsolete]` attributo è stato usato in due modi diversi:
+All'interno dell'API classica Novell. iOS (MonoTouch. dll `[Obsolete]` ) l'attributo è stato usato in due modi diversi:
 
--  **API iOS deprecate:** Questo è quando gli hint di Apple per è possibile interrompere l'uso di un'API perché si è progressivamente sostituito da una versione più recente. L'API classica sia corretto e spesso obbligatorio (se si supporta la versione precedente di iOS).
- Tali API (e `[Obsolete]` attributo) sono inclusi nei nuovi assembly xamarin. IOS.
--  **API non corretta** alcune API sono stati rilevati errori di digitazione nei relativi nomi.
+-  **API iOS deprecata:** Questo è il momento in cui Apple suggerisce di smettere di usare un'API perché viene sostituita da una versione più recente. Il API classica è ancora corretto e spesso obbligatorio (se si supporta la versione precedente di iOS).
+ Tali API (e l' `[Obsolete]` attributo) sono incluse nei nuovi assembly Novell. iOS.
+-  **API non corretta** In alcune API erano presenti errori di digitazione sui rispettivi nomi.
 
-Per gli assembly originali (monotouch. dll e XamMac.dll) viene mantenuto il vecchio codice disponibile per la compatibilità, ma sono state rimosse dagli assembly di API unificata (DLL e xamarin. Mac)
+Per gli assembly originali (MonoTouch. dll e XamMac. dll) abbiamo mantenuto il vecchio codice disponibile per la compatibilità, ma sono stati rimossi dagli assembly API unificata (Novell. iOS. dll e Novell. Mac)
 
 <a name="NSObject_ctor" />
 
-### <a name="nsobject-subclasses-ctorintptr"></a>.Ctor(IntPtr) sottoclassi di NSObject
+### <a name="nsobject-subclasses-ctorintptr"></a>Sottoclassi NSObject. ctor (IntPtr)
 
-Ogni `NSObject` sottoclasse ha un costruttore che accetta un `IntPtr`. Si tratta di come è possibile creare una nuova istanza gestita da un handle nativo ObjC.
+Ogni `NSObject` sottoclasse dispone di un costruttore che `IntPtr`accetta un oggetto. Questo è il modo in cui è possibile creare un'istanza di una nuova istanza gestita da un handle ObjC nativo.
 
-In modalità classica questo era un `public` costruttore. Tuttavia, era facile in modo improprio di questa funzionalità nel codice utente, ad esempio, creare diverse istanze gestite di per una singola istanza ObjC *o* la creazione di un'istanza gestita che potrebbe non dispongono di stato previsto gestito (per sottoclassi).
+Nel modello classico era un `public` costruttore. Tuttavia è facile usare questa funzionalità nel codice utente, ad esempio creando diverse istanze gestite per una singola istanza di ObjC *o* creando un'istanza gestita che non avrebbe lo stato gestito previsto (per le sottoclassi).
 
-Per evitare questi tipi di problemi il `IntPtr` costruttori sono ora `protected` nelle **unificata** API, per essere usato solo per la creazione di sottoclassi. In questo modo che il correggere/safe API viene utilizzata per creare, ovvero istanza gestita dagli handle,
+Per evitare questi tipi di problemi, `IntPtr` i costruttori sono ora `protected` in  un'API unificata, da usare solo per la sottoclasse. In questo modo verrà utilizzata l'API corretta/sicura per creare un'istanza gestita dagli handle, ad esempio
 
     var label = Runtime.GetNSObject<UILabel> (handle);
 
-Questa API restituirà un'istanza gestita esistente (se esiste già) o ne creerà uno nuovo (se necessario). È già disponibile nell'API unificata tanto classica.
+Questa API restituirà un'istanza gestita esistente (se già esistente) o ne creerà una nuova (quando necessario). È già disponibile nell'API classica e unificata.
 
-Si noti che il `.ctor(NSObjectFlag)` sono ora configurabili anche `protected` ma questo veniva raramente utilizzato di fuori di creazione di una sottoclasse.
+Si noti che `.ctor(NSObjectFlag)` è ora anche `protected` , ma questo è stato usato raramente al di fuori della sottoclasse.
 
 <a name="NSAction" />
 
-### <a name="nsaction-replaced-with-action"></a>NSAction sostituiti con azione
+### <a name="nsaction-replaced-with-action"></a>NSAction sostituito con azione
 
-Con le API unificata `NSAction` è stato rimosso a favore di .NET standard `Action`. Questo è un importante miglioramento perché `Action` è un tipo .NET comune, mentre `NSAction` era specifico per xamarin. IOS. Avviene esattamente la stessa operazione, ma erano tipi distinti e non compatibili e ha restituito il codice più la necessità di essere scritti per ottenere lo stesso risultato.
+Con le API unificate, `NSAction` è stato rimosso a favore di .NET `Action`standard. Si tratta di un grande miglioramento `Action` perché è un tipo .NET comune, `NSAction` mentre era specifico di Novell. iOS. Entrambi eseguono esattamente la stessa operazione, ma sono tipi distinti e incompatibili e hanno comportato la scrittura di più codice per ottenere lo stesso risultato.
 
-Ad esempio, se l'applicazione esistente di Xamarin inclusa nel codice seguente:
+Ad esempio, se l'applicazione Novell esistente include il codice seguente:
 
 ```csharp
 UITapGestureRecognizer singleTap = new UITapGestureRecognizer (new NSAction (delegate() {
     ShowDropDownAnimated (tblDataView);
 }));
 ```
-A questo punto, può essere sostituito con una semplice lambda:
+Ora può essere sostituito con una semplice espressione lambda:
 
 ```csharp
 UITapGestureRecognizer singleTap = new UITapGestureRecognizer (() => ShowDropDownAnimated(tblDataView));
 ```
 
-In precedenza sarebbe un errore del compilatore perché un `Action` non può essere assegnato a `NSAction`, tuttavia, poiché `UITapGestureRecognizer` accetta ora un `Action` anziché un `NSAction` è valido nelle API unificata.
+In precedenza sarebbe stato un errore del compilatore perché `Action` non è possibile assegnare `NSAction`un oggetto a `UITapGestureRecognizer` , ma poiché `Action` ora accetta un `NSAction` anziché un è valido nelle API unificate.
 
 ### <a name="custom-delegates-replaced-with-actiont"></a>Delegati personalizzati sostituiti con azione<T>
 
-Nelle **unificata** alcune semplici (ad esempio, un parametro) i delegati di .net sono stati sostituiti con `Action<T>`. Ad esempio,
+In **Unified** alcuni delegati .NET semplici (ad esempio, un parametro) sono `Action<T>`stati sostituiti con. ad esempio
 
     public delegate void NSNotificationHandler (NSNotification notification);
 
-è ora possibile usare come un `Action<NSNotification>`. Questo codice Alza di livello riutilizzare e ridurre la duplicazione del codice all'interno di xamarin. IOS sia le proprie applicazioni.
+ora può essere usato come `Action<NSNotification>`. Questa operazione promuove il riutilizzo del codice e riduce la duplicazione del codice all'interno di Novell. iOS e delle proprie applicazioni.
 
-### <a name="taskbool-replaced-with-taskbooleannserror"></a>Attività<bool> sostituito con attività < Boolean, NSError >>
+### <a name="taskbool-replaced-with-taskbooleannserror"></a>Attività<bool> sostituita con attività < valore booleano, nserror > >
 
-Nelle **classiche** esistevano alcune API asincrone restituzione `Task<bool>`. Tuttavia alcune di esse in cui sono da utilizzare quando un `NSError` faceva parte della firma, vale a dire la `bool` era già `true` ed era necessario intercettare un'eccezione per ottenere il `NSError`.
+Nel **modello classico** erano presenti alcune API asincrone `Task<bool>`che restituivano. Tuttavia, in alcuni casi è necessario utilizzare quando un `NSError` oggetto era parte della firma, ovvero `bool` era già `true` ed era necessario intercettare un'eccezione per ottenere `NSError`.
 
-Poiché alcuni errori sono molto comuni e il valore restituito non è stato utile questo modello è stato modificato **unificata** per restituire un `Task<Tuple<Boolean,NSError>>`. In questo modo è possibile controllare l'esito positivo e qualsiasi errore che potrebbe essersi verificato durante la chiamata asincrona.
+Poiché alcuni errori sono molto comuni e il valore restituito non è stato utile, questo modello è stato modificato in **Unified** per `Task<Tuple<Boolean,NSError>>`restituire un oggetto. In questo modo è possibile verificare l'esito positivo e gli eventuali errori che si sono verificati durante la chiamata asincrona.
 
-### <a name="nsstring-vs-string"></a>Stringa di Visual Studio NSString
+### <a name="nsstring-vs-string"></a>Confronto tra NSString e stringa
 
-In alcuni casi dovevano essere modificato da alcune costanti `string` a `NSString`, ad esempio `UITableViewCell`
+In alcuni casi alcune costanti devono essere modificate da `string` a `NSString`, ad esempio`UITableViewCell`
 
-**modello di distribuzione classica**
+**Classico**
 
     public virtual string ReuseIdentifier { get; }
 
-**Unified**
+**Unificata**
 
     public virtual NSString ReuseIdentifier { get; }
 
-In generale è preferibile .NET `System.String` tipo. Tuttavia, nonostante le linee guida di Apple, alcune API native confrontano i puntatori costanti (non la stringa stessa) e questo approccio può funzionare solo quando si espongono le costanti come `NSString`.
+In generale è preferibile `System.String` il tipo .NET. Tuttavia, nonostante le linee guida di Apple, alcune API native confrontano i puntatori costanti (non la stringa stessa) e questo può funzionare solo quando si `NSString`espongono le costanti come.
 
  <a name="protocols" />
 
-### <a name="objective-c-protocols"></a>Protocolli di Objective-C
+### <a name="objective-c-protocols"></a>Protocolli Objective-C
 
-API di MonoTouch originale non aveva un supporto completo per i protocolli ObjC e alcuni non ottimale, sono stati aggiunti per supportare lo scenario più comune. Questa limitazione non esiste più, ma, per compatibilità con le varie API vengono mantenute intorno all'interno `monotouch.dll` e `XamMac.dll`.
+Il MonoTouch originale non dispone del supporto completo per i protocolli ObjC e alcune API non ottimali sono state aggiunte per supportare lo scenario più comune. Questa limitazione non esiste più ma, per compatibilità con le versioni precedenti, diverse API vengono mantenute `XamMac.dll`all'interno `monotouch.dll` di e.
 
-Queste limitazioni sono stati rimosse e la pulizia sulle API unificata. La maggior parte delle modifiche avrà un aspetto simile al seguente:
+Queste limitazioni sono state rimosse e pulite sulle API unificate. La maggior parte delle modifiche apparirà come segue:
 
-**modello di distribuzione classica**
+**Classico**
 
     public virtual AVAssetResourceLoaderDelegate Delegate { get; }
 
-**Unified**
+**Unificata**
 
     public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
 
-Il `I` prefisso significa **unificata** esporre un'interfaccia, anziché un tipo specifico, per il protocollo ObjC. Ciò semplificherà casi in cui non desiderate per creare una sottoclasse al tipo specifico fornito di xamarin. IOS.
+Il `I` prefisso significa che **Unified** espone un'interfaccia, anziché un tipo specifico, per il protocollo objc. In questo modo si semplificano i casi in cui non si vuole creare una sottoclasse del tipo specifico fornito da Novell. iOS.
 
-È consentito anche alcune API per essere più precise e facile da usare, ad esempio:
+È anche possibile che alcune API siano più precise e facili da usare, ad esempio:
 
-**modello di distribuzione classica**
+**Classico**
 
     public virtual void SelectionDidChange (NSObject uiTextInput);
 
-**Unified**
+**Unificata**
 
     public virtual void SelectionDidChange (IUITextInput uiTextInput);
 
-Queste API sono ora più facile da noi, senza fare riferimento alla documentazione e il completamento del codice IDE fornirà suggerimenti più utili in base il protocollo o interfaccia.
+Questa API è ora più semplice, senza fare riferimento alla documentazione e il completamento del codice IDE fornirà suggerimenti più utili basati sul protocollo/interfaccia.
 
 #### <a name="nscoding-protocol"></a>Protocollo NSCoding
 
-L'associazione originale incluso un .ctor(NSCoder) per ogni tipo - anche se non supportava la `NSCoding` protocollo.  Un unico `Encode(NSCoder)` era presente nel metodo il `NSObject` per codificare l'oggetto.
-Ma questo metodo funziona solo se l'istanza è conforme a NSCoding protocollo.
+L'associazione originale includeva un. ctor (NSCoder) per ogni tipo, anche se non supportava il `NSCoding` protocollo.  Un singolo `Encode(NSCoder)` metodo era presente `NSObject` in per codificare l'oggetto.
+Questo metodo, tuttavia, funziona solo se l'istanza è conforme al protocollo NSCoding.
 
-L'API unificata è stato risolto in questo.  I nuovi assembly avrà solo il `.ctor(NSCoder)` se il tipo è conforme a `NSCoding`. Anche questi tipi ora dispongono un' `Encode(NSCoder)` metodo che è conforme al `INSCoding` interfaccia.
+Il API unificata è stato risolto.  I nuovi assembly avranno solo `.ctor(NSCoder)` se il tipo è conforme a. `NSCoding` Inoltre, tali tipi dispongono ora `Encode(NSCoder)` `INSCoding` di un metodo che è conforme all'interfaccia.
 
-Impatto basso: Nella maggior parte dei casi questa modifica non influisce sulle applicazioni come i costruttori precedenti, rimossi, non può essere usati.
+Basso effetto: Nella maggior parte dei casi questa modifica non influisce sulle applicazioni come il vecchio, rimosso, non è possibile usare costruttori.
 
 ## <a name="further-tips"></a>Ulteriori suggerimenti
 
-Modifiche aggiuntive da tenere presenti sono elencati nel [suggerimenti per l'aggiornamento di App all'API unificata di](~/cross-platform/macios/unified/updating-tips.md).
+Le ulteriori modifiche da tenere presenti sono elencate nei [Suggerimenti per l'aggiornamento delle app al API unificata](~/cross-platform/macios/unified/updating-tips.md).
 
 ## <a name="sample-code"></a>Codice di esempio
 
-A partire da luglio 31, abbiamo pubblicato le porte degli esempi iOS per questa nuova API nel `magic-types` suddiviso [monotouch-samples](https://github.com/xamarin/monotouch-samples/commits/magic-types).
+A partire dal 31 luglio sono state pubblicate le porte degli esempi iOS per questa nuova API nel `magic-types` ramo in MonoTouch [-Samples](https://github.com/xamarin/monotouch-samples/commits/magic-types).
 
-Per Mac, corso un controllo negli esempi inclusi in entrambi i [mac-samples](https://github.com/xamarin/mac-samples) repository (rappresentato da nuove API in Mavericks o Yosemite), nonché esempi 32/64 bit nel ramo di magic-types [esempi di mac](https://github.com/xamarin/monotouch-samples/commits/magic-types).
+Per Mac, è possibile controllare gli esempi sia nel repository [Mac-Samples](https://github.com/xamarin/mac-samples) (che mostra le nuove API in Mavericks/Yosemite), sia negli esempi di 32/64 bit nel ramo "Magic-types" [Mac-Samples](https://github.com/xamarin/monotouch-samples/commits/magic-types).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [L'aggiornamento delle App iOS](updating-ios-apps.md)
-- [L'aggiornamento di App Mac](updating-mac-apps.md)
-- [L'aggiornamento di App xamarin. Forms](updating-xamarin-forms-apps.md)
-- [Aggiornamento delle associazioni](update-binding.md)
-- [L'aggiornamento di suggerimenti](updating-tips.md)
-- [Visual Studio classico differenze API unificata](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Aggiornamento di app iOS](updating-ios-apps.md)
+- [Aggiornamento di app Mac](updating-mac-apps.md)
+- [Aggiornamento delle app Novell. Forms](updating-xamarin-forms-apps.md)
+- [Aggiornamento di binding](update-binding.md)
+- [Aggiornamento suggerimenti](updating-tips.md)
+- [Differenze rispetto a API unificata classiche](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)
 - [Utilizzo di tipi nativi nelle app multipiattaforma](~/cross-platform/macios/native-types-cross-platform.md)

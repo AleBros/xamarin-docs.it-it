@@ -1,6 +1,6 @@
 ---
 title: Come si aggiorna la versione di Java Development Kit (JDK)?
-description: Questo articolo viene illustrato come aggiornare la versione di Java Development Kit (JDK) in Windows e Mac.
+description: Questo articolo illustra come aggiornare la versione di Java Development Kit (JDK) in Windows e Mac.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4b3ac51d-18dd-4034-87b4-4365194e4ece
@@ -8,56 +8,56 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 290a7deef4fdc10163bdb09881382f011b0dcd32
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 02768bfcae9da06d8fd86ada63dd2d463245d254
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61154142"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510456"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>Come si aggiorna la versione di Java Development Kit (JDK)?
 
-_Questo articolo viene illustrato come aggiornare la versione di Java Development Kit (JDK) in Windows e Mac._
+_Questo articolo illustra come aggiornare la versione di Java Development Kit (JDK) in Windows e Mac._
 
 ## <a name="overview"></a>Panoramica
 
-Xamarin. Android Usa Java Development Kit (JDK) per l'integrazione con Android SDK per compilare le app Android ed eseguire Android designer. Le versioni più recenti di Android SDK (API 24 e versioni successive) richiedono JDK 8 (1.8). In alternativa, è possibile installare il [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md). OpenJDK per dispositivi mobili Microsoft sostituirà JDK 8 per lo sviluppo di xamarin. Android.
+Novell. Android usa Java Development Kit (JDK) per l'integrazione con i Android SDK per la creazione di app Android e l'esecuzione di Android designer. Le versioni più recenti del Android SDK (API 24 e versioni successive) richiedono JDK 8 (1,8). In alternativa, è possibile installare [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md). Microsoft Mobile OpenJDK sostituirà infine JDK 8 per lo sviluppo di Novell. Android.
 
-Per aggiornare a OpenJDK per dispositivi mobili Microsoft, vedere [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md). Per aggiornare JDK 8, seguire questa procedura:
+Per eseguire l'aggiornamento a Microsoft Mobile OpenJDK, vedere [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md). Per eseguire l'aggiornamento a JDK 8, seguire questa procedura:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1.  Download di JDK 8 (1.8) dal [sito Web Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1.  Scaricare JDK 8 (1,8) dal [sito Web Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
-    ![Screenshot del JDK download nel sito Web Oracle](update-jdk-images/image1.png)
+    ![Screenshot della pagina di download di JDK nel sito Web Oracle](update-jdk-images/image1.png)
 
-2.  Selezionare la versione a 64 bit per consentire il rendering dei [controlli personalizzati](https://developer.xamarin.com/releases/vs/xamarin.vs_4/xamarin.vs_4.2/#androiddesignercustomcontrols) nella finestra di progettazione di Xamarin. Android:
+2.  Selezionare la versione a 64 bit per consentire il rendering di [controlli personalizzati](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/vs/xamarin.vs_4/xamarin.vs_4.2/index.md#androiddesignercustomcontrols) in Novell Android designer:
 
-    ![Selezionare il pacchetto JDK di Windows x64 da scaricare dalla pagina di download del JDK](update-jdk-images/image2.png)
+    ![Selezione del pacchetto JDK Windows x64 da scaricare dalla pagina di download di JDK](update-jdk-images/image2.png)
 
-3.  Eseguire il .exe e installare il **strumenti di sviluppo**:
+3.  Eseguire il file con estensione exe e installare gli **strumenti di sviluppo**:
 
-    ![Installare gli strumenti di sviluppo nel programma di installazione JDK](update-jdk-images/image3.png)
+    ![Installazione degli strumenti di sviluppo nel programma di installazione di JDK](update-jdk-images/image3.png)
 
-4.  Aprire Visual Studio e aggiornare il **percorso di Java Development Kit** in modo che punti al nuovo JDK in **strumenti > Opzioni > Xamarin > Impostazioni Android > percorso di Java Development Kit**:
+4.  Aprire Visual Studio e aggiornare il **percorso di Java Development Kit** in modo che punti al nuovo JDK in **strumenti > opzioni > Novell > Android Settings > percorso di Java Development Kit**:
 
-    [![Impostazione del percorso per il JDK nella pagina Impostazioni Android](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
+    [![Impostazione del percorso per il JDK nella pagina delle impostazioni di Android](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
 
-Assicurarsi di riavviare Visual Studio dopo avere aggiornato la posizione.
+Assicurarsi di riavviare Visual Studio dopo aver aggiornato il percorso.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1.  Download di JDK 8 (1.8) dal [sito Web Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1.  Scaricare JDK 8 (1,8) dal [sito Web Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
-    ![Screenshot del JDK download nel sito Web Oracle](update-jdk-images/image1.png)
+    ![Screenshot della pagina di download di JDK nel sito Web Oracle](update-jdk-images/image1.png)
 
-2.  Aprire il file. dmg ed eseguire il programma di installazione con estensione pkg:
+2.  Aprire il file con estensione DMG ed eseguire il programma di installazione con estensione pkg:
 
-    ![Esegue il programma di installazione JDK in macOS](update-jdk-images/image5.png)
+    ![Esecuzione del programma di installazione di JDK in macOS](update-jdk-images/image5.png)
 
-Mac OS imposterà automaticamente la nuova versione JDK come impostazione predefinita, aggiornando **/System/Library/Frameworks/JavaVM.framework/Versions/Current**. È quindi possibile verificare che il **Java SDK (JDK)** percorso viene impostato sul valore predefinito previsto **/usr** sotto **Visual Studio per Mac > Preferenze > progetti > percorsi SDK > Android > percorsi > percorso di Java SDK (JDK)**:
+Mac OS imposterà automaticamente la nuova versione JDK come impostazione predefinita tramite l'aggiornamento di **/System/Library/Frameworks/JavaVM.framework/Versions/Current**. È quindi possibile verificare che il percorso **Java SDK (JDK)** sia impostato sul valore predefinito previsto di **/usr** in **Visual Studio per Mac > Preferenze > Progetti > percorsi sdk > percorso di Android > > Java SDK (JDK)** :
 
-[![Impostazione della posizione di JDK nella scheda percorsi di Android](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
+[![Impostazione del percorso JDK nella scheda percorsi Android](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
 
 -----
 

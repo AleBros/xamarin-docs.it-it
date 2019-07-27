@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 1d445e3ef8869c74f052eb1153774dfab51ffd45
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 78a84fd8d4f380739a9f080a1a5aad7c5942d0c9
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649590"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511873"
 ---
 # <a name="xamarinforms-grid"></a>Griglia di xamarin. Forms
 
@@ -47,14 +47,14 @@ A differenza delle tabelle tradizionali, `Grid` non deduce il numero e dimension
 
 ### <a name="rows-and-columns"></a>Le righe e colonne
 
-Informazioni sulla riga e colonna viene archiviati `Grid`del `RowDefinitions`  &  `ColumnDefinitions` le proprietà, ovvero ogni raccolte di [ `RowDefinition` ](xref:Xamarin.Forms.RowDefinition) e [ `ColumnDefinition` ](xref:Xamarin.Forms.ColumnDefinition)oggetti, rispettivamente. `RowDefinition` dispone di una proprietà singola `Height`, e `ColumnDefinition` ha una singola proprietà `Width`. Le opzioni per l'altezza e larghezza sono come segue:
+Informazioni sulla riga e colonna viene archiviati `Grid`del `RowDefinitions` & `ColumnDefinitions` le proprietà, ovvero ogni raccolte di [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) e [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition)oggetti, rispettivamente. `RowDefinition` dispone di una proprietà singola `Height`, e `ColumnDefinition` ha una singola proprietà `Width`. Le opzioni per l'altezza e larghezza sono come segue:
 
-- **Auto** &ndash; automaticamente le dimensioni in base al contenuto nella riga o colonna. Specificato come [ `GridUnitType.Auto` ](xref:Xamarin.Forms.GridUnitType) in C# o come `Auto` in XAML.
+- **Auto** &ndash; automaticamente le dimensioni in base al contenuto nella riga o colonna. Specificato come [`GridUnitType.Auto`](xref:Xamarin.Forms.GridUnitType) in C# o come `Auto` in XAML.
 - **Proportional(*)** &ndash; alle dimensioni delle righe e colonne come una percentuale dello spazio rimanente. Specifica un valore e `GridUnitType.Star` in C# e come `#*` in XAML, con `#` in corso sul valore desiderato. Specifica una riga o colonna con `*` causerà per riempire lo spazio disponibile.
 - **Assoluto** &ndash; alle dimensioni delle colonne e righe con valori di altezza e larghezza fissi di specifici. Specifica un valore e `GridUnitType.Absolute` in C# e come `#` in XAML, con `#` in corso sul valore desiderato.
 
 > [!NOTE]
-> I valori di larghezza per le colonne vengono impostati come `*` per impostazione predefinita in xamarin. Forms, che assicura che la colonna di tipo esaurisca lo spazio disponibile. I valori di altezza delle righe vengono inoltre impostati come `*` per impostazione predefinita.
+> I valori di larghezza per le colonne vengono `*` impostati come per impostazione predefinita in Novell. Forms, in modo da garantire che la colonna riempia lo spazio disponibile. Anche i valori di altezza per le righe vengono `*` impostati come per impostazione predefinita.
 
 Si consideri un'applicazione che richiede tre righe e due colonne. La riga inferiore deve essere esattamente 200px estesa in altezza e la riga superiore deve essere due volte la stessa altezza alla riga centrale. Nella colonna sinistra deve essere sufficientemente ampio per adattarle al contenuto e la colonna a destra deve riempire lo spazio rimanente.
 
@@ -137,7 +137,7 @@ grid.Children.Add(bottomRight, 1, 1);
 
 Il codice riportato sopra crea griglia con quattro etichette, due colonne e due righe. Si noti che ogni etichetta avrà le stesse dimensioni e che le righe si espandono per utilizzare tutto lo spazio disponibile.
 
-Nell'esempio precedente, le visualizzazioni vengono aggiunte al [ `Grid.Children` ](xref:Xamarin.Forms.Grid.Children) raccolta utilizzando la [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/) overload che specifichi l'argomento a sinistra e superiore. Quando si usa la [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) overload che specifichi a sinistra, destra, superiore e inferiore argomenti, mentre il left e top argomenti farà sempre riferimento alle celle all'interno di [ `Grid` ](xref:Xamarin.Forms.Grid), destra e possono sembrare argomenti inferiore fanno riferimento alle celle che si trovano all'esterno di `Grid`. Infatti, l'argomento a destra deve essere sempre superiore l'argomento a sinistra e l'argomento di fine deve essere sempre minore dell'argomento principale. L'esempio seguente illustra codice equivalente utilizzando entrambi `Add` Overload:
+Nell'esempio precedente, le visualizzazioni vengono aggiunte al [`Grid.Children`](xref:Xamarin.Forms.Grid.Children) raccolta utilizzando la [`Add`](xref:Xamarin.Forms.Grid.IGridList`1.Add*) overload che specifichi l'argomento a sinistra e superiore. Quando si usa la [`Add`](xref:Xamarin.Forms.Grid.IGridList`1.Add*) overload che specifichi a sinistra, destra, superiore e inferiore argomenti, mentre il left e top argomenti farà sempre riferimento alle celle all'interno di [`Grid`](xref:Xamarin.Forms.Grid), destra e possono sembrare argomenti inferiore fanno riferimento alle celle che si trovano all'esterno di `Grid`. Infatti, l'argomento a destra deve essere sempre superiore l'argomento a sinistra e l'argomento di fine deve essere sempre minore dell'argomento principale. L'esempio seguente illustra codice equivalente utilizzando entrambi `Add` Overload:
 
 ```csharp
 // left, top
@@ -293,7 +293,7 @@ BackgroundColor="#404040">
 </ContentPage>
 ```
 
-Si noti che l'etichetta nella parte superiore della griglia sia zero pulsante occuping più di una colonna. Anche se è stato possibile ottenere un layout simile utilizzando griglie nidificate, il `ColumnSpan`  &  `RowSpan` approccio è più semplice.
+Si noti che l'etichetta nella parte superiore della griglia sia zero pulsante occuping più di una colonna. Anche se è stato possibile ottenere un layout simile utilizzando griglie nidificate, il `ColumnSpan` & `RowSpan` approccio è più semplice.
 
 L'implementazione C#:
 

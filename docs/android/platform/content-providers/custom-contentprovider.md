@@ -1,70 +1,70 @@
 ---
 title: Creazione di un ContentProvider personalizzato
-description: La sezione precedente è stato illustrato come utilizzare dati da un'implementazione ContentProvider incorporata. In questa sezione verrà illustrate le procedure compilare un ContentProvider personalizzato e quindi utilizzare i dati.
+description: Nella sezione precedente è stato illustrato come utilizzare i dati di un'implementazione di ContentProvider incorporata. In questa sezione viene illustrato come creare un ContentProvider personalizzato e quindi utilizzarne i dati.
 ms.prod: xamarin
 ms.assetid: 36742B59-607E-070E-5D0E-B9C18917D3F4
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: da8aacac1f282fefb6b8d0e84cae168cf3a7148b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 61f74e54d4760bb3a85084371fa8e2a62dc06dfd
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60953361"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510665"
 ---
 # <a name="creating-a-custom-contentprovider"></a>Creazione di un ContentProvider personalizzato
 
-_La sezione precedente è stato illustrato come utilizzare dati da un'implementazione ContentProvider incorporata. In questa sezione verrà illustrate le procedure compilare un ContentProvider personalizzato e quindi utilizzare i dati._
+_Nella sezione precedente è stato illustrato come utilizzare i dati di un'implementazione di ContentProvider incorporata. In questa sezione viene illustrato come creare un ContentProvider personalizzato e quindi utilizzarne i dati._
 
-## <a name="about-contentproviders"></a>Sulle ContentProviders
+## <a name="about-contentproviders"></a>Informazioni su ContentProviders
 
-È necessario ereditare una classe di provider di contenuti `ContentProvider`. Deve essere costituito un archivio dati interno usato per rispondere alle query e deve esporre gli URI e i tipi MIME come costanti di codice viene usato per effettuare richieste valide per i dati.
+Una classe del provider di contenuti deve `ContentProvider`ereditare da. Deve essere costituito da un archivio dati interno utilizzato per rispondere alle query ed esporre gli URI e i tipi MIME come costanti per consentire l'utilizzo del codice per eseguire richieste valide per i dati.
 
 ### <a name="uri-authority"></a>URI (autorità)
 
-`ContentProviders` sono accessibili in Android tramite un Uri. Un'applicazione che espone un `ContentProvider` imposta gli URI di risposta nel relativo **androidmanifest. XML** file. Quando l'applicazione è installata, questi URI sono registrato in modo che altre applicazioni possono accedervi.
+`ContentProviders`è possibile accedervi in Android usando un URI. Un'applicazione che espone un `ContentProvider` oggetto imposta gli URI a cui risponderà nel file **file AndroidManifest. XML** . Quando l'applicazione viene installata, questi URI vengono registrati in modo che le altre applicazioni possano accedervi.
 
-In Mono per Android, la classe di provider di contenuto deve avere una `[ContentProvider]` attributo per specificare l'Uri (o URI) che deve essere aggiunto al **androidmanifest. XML**.
+In mono per Android la classe del provider di contenuti deve avere `[ContentProvider]` un attributo per specificare l'URI (o gli URI) che devono essere aggiunti a **file AndroidManifest. XML**.
 
 
 ### <a name="mime-type"></a>Tipo MIME
 
-Il formato tipico per i tipi MIME è costituito da due parti. Android `ContentProviders` utilizzano in genere questi due stringhe per la prima parte del tipo MIME:
+Il formato tipico per i tipi MIME è costituito da due parti. Android `ContentProviders` usa comunemente queste due stringhe per la prima parte del tipo MIME:
 
-1. `vnd.android.cursor.item` &ndash; per rappresentare una singola riga, utilizzare il `ContentResolver.CursorItemBaseType` costante nel codice.
+1. `vnd.android.cursor.item`per rappresentare una singola riga, usare la `ContentResolver.CursorItemBaseType` costante nel codice. &ndash;
 
-1. `vnd.android.cursor.dir` &ndash; per più righe, usare il `ContentResolver.CursorDirBaseType` costante nel codice.
+1. `vnd.android.cursor.dir`per più righe, usare la `ContentResolver.CursorDirBaseType` costante nel codice. &ndash;
 
-La seconda parte del tipo MIME è specifica dell'applicazione e deve usare uno standard di DNS inverso con un `vnd.` prefisso. Il codice di esempio Usa `vnd.com.xamarin.sample.Vegetables`.
+La seconda parte del tipo MIME è specifica dell'applicazione e deve usare uno standard DNS inverso con un `vnd.` prefisso. Il codice di esempio `vnd.com.xamarin.sample.Vegetables`USA.
 
 
-### <a name="data-model-metadata"></a>Metadati del modello dati
+### <a name="data-model-metadata"></a>Metadati del modello di dati
 
-Utilizzo di applicazioni necessario costruire le query dell'Uri per accedere a diversi tipi di dati. L'Uri di base può essere espanso per fare riferimento a una determinata tabella di dati e può includere parametri per filtrare i risultati. Devono essere dichiarate anche le colonne e le clausole utilizzate con il cursore risulta per visualizzare i dati.
+Per l'utilizzo di applicazioni è necessario creare query URI per accedere a tipi di dati diversi. L'URI di base può essere espanso per fare riferimento a una particolare tabella di dati e può includere anche parametri per filtrare i risultati. Anche le colonne e le clausole utilizzate con il cursore risultante per la visualizzazione dei dati devono essere dichiarate.
 
-Per garantire che solo le query dell'Uri valide vengono costruite, è facoltativa per fornire le stringhe come valori di costante valide. Questo rende più semplice per l'accesso di `ContentProvider` perché rende individuabili tramite completamento di codice i valori e impedisce che gli errori di battitura nelle stringhe.
+Per assicurarsi che vengano costruite solo query URI valide, è consuetudine fornire le stringhe valide come valori costanti. In questo modo è più semplice accedere `ContentProvider` a perché rende individuabili i valori tramite il completamento del codice e impedisce la digitazione nelle stringhe.
 
-Nell'esempio precedente il `android.provider.ContactsContract` classe esposti i metadati per i dati dei contatti. Per profilo `ContentProvider` si esporrà solo le costanti sulla classe stessa.
+Nell'esempio precedente la `android.provider.ContactsContract` classe ha esposto i metadati per i dati dei contatti. Per la nostra `ContentProvider` personalizzata, esporrà solo le costanti sulla classe stessa.
 
 
 ## <a name="implementation"></a>Implementazione
 
-Esistono tre passaggi per la creazione e l'utilizzo di un oggetto personalizzato `ContentProvider`:
+Sono disponibili tre passaggi per la creazione e l'utilizzo di `ContentProvider`un oggetto personalizzato:
 
-1. **Creare una classe di database** &ndash; implementare `SQLiteOpenHelper`.
+1. **Creare una classe di database** &ndash; Implementare .`SQLiteOpenHelper`
 
-2. **Creare un `ContentProvider` classe** &ndash; implementare `ContentProvider` con un'istanza del database, i metadati esposti come valori costanti e metodi per accedere ai dati.
+2. **Creare una `ContentProvider` classe** &ndash; implementata`ContentProvider` con un'istanza del database, i metadati esposti come valori costanti e metodi per accedere ai dati.
 
-3. **Accesso di `ContentProvider` tramite un Uri** &ndash; popola una `CursorAdapter` usando il `ContentProvider`, a cui si accede tramite un Uri.
+3. **Accedere al `ContentProvider` tramite il relativo URI** &ndash; popolare `CursorAdapter` un oggetto `ContentProvider`utilizzando l'oggetto, a cui si accede tramite il relativo URI.
 
-Come illustrato in precedenza, `ContentProviders` possono essere utilizzati dalle applicazioni diverso da in cui sono definiti. In questo esempio i dati vengono utilizzati nella stessa applicazione, ma tenere presente che altre applicazioni possono inoltre accedervi purché si conosca l'Uri e informazioni sullo schema (che in genere viene esposta come valori costanti).
+Come descritto in precedenza `ContentProviders` , può essere utilizzato da applicazioni diverse da quelle in cui sono definite. In questo esempio i dati vengono utilizzati nella stessa applicazione, ma tenere presente che anche altre applicazioni possono accedervi purché conoscano l'URI e le informazioni sullo schema, che in genere viene esposto come valori costanti.
 
 
 ## <a name="create-a-database"></a>Creare un database
 
-La maggior parte degli `ContentProvider` implementazioni si baseranno su una `SQLite` database. Il codice di database di esempio nella **SimpleContentProvider/VegetableDatabase.cs** crea un database molto semplice di due colonne, come illustrato:
+La `ContentProvider` maggior parte delle implementazioni sarà basata `SQLite` su un database. Il codice del database di esempio in **SimpleContentProvider/VegetableDatabase. cs** crea un database con due colonne molto semplice, come illustrato di seguito:
 
 ```csharp
 class VegetableDatabase  : SQLiteOpenHelper {
@@ -92,17 +92,17 @@ class VegetableDatabase  : SQLiteOpenHelper {
 }
 ```
 
-L'implementazione del database stesso non è necessario considerazioni speciali da esporre con un `ContentProvider`, tuttavia se si prevede di eseguire l'associazione il `ContentProvider's` dati a un `ListView` controllare quindi una colonna di tipo integer univoco denominata `_id` deve far parte del set di risultati. Vedere le [ListView e adapter](~/android/user-interface/layouts/list-view/index.md) documento per altri dettagli sull'uso di `ListView` controllo.
+Per l'implementazione del database non è necessaria alcuna considerazione speciale da esporre con un `ContentProvider`, tuttavia se si intende associare i `ContentProvider's` dati a un `ListView` controllo, una colonna integer univoca denominata `_id` deve essere parte del set di risultati. Per ulteriori informazioni sull'utilizzo del `ListView` controllo, vedere il documento listviews [and Adapters](~/android/user-interface/layouts/list-view/index.md) .
 
 
-## <a name="create-the-contentprovider"></a>Creare il provider di contenuti
+## <a name="create-the-contentprovider"></a>Creare il ContentProvider
 
-La parte restante di questa sezione vengono fornite istruzioni dettagliate sul modo in cui il **SimpleContentProvider/VegetableProvider.cs** è stato compilato l'esempio di classe.
+Nella parte restante di questa sezione vengono fornite istruzioni dettagliate su come è stata compilata la classe di esempio **SimpleContentProvider/VegetableProvider. cs** .
 
 
-### <a name="initialize-the-database"></a>Inizializzare il Database
+### <a name="initialize-the-database"></a>Inizializzare il database
 
-Il primo passaggio consiste nel sottoclasse `ContentProvider` e aggiungere il database che utilizza.
+Il primo passaggio consiste nella sottoclasse `ContentProvider` e nell'aggiunta del database che verrà utilizzato.
 
 ```csharp
 public class VegetableProvider : ContentProvider 
@@ -116,23 +116,23 @@ public class VegetableProvider : ContentProvider
 }
 ```
 
-Il resto del codice costituirà l'implementazione del provider contenuto effettivo che consente di essere individuati e sottoposti a query i dati.
+Il resto del codice formerà l'effettiva implementazione del provider di contenuti che consente l'individuazione e la query dei dati.
 
 
 
-## <a name="add-metadata-for-consumers"></a>Aggiungere i metadati per gli utenti
+## <a name="add-metadata-for-consumers"></a>Aggiungere metadati per i consumer
 
-Esistono quattro tipi diversi di metadati che si intende esporre nel `ContentProvider` classe. Solo l'autorità è obbligatoria, per convenzione vengono eseguiti il resto.
+Sono disponibili quattro tipi diversi di metadati che verranno esposti `ContentProvider` alla classe. Solo l'autorità è obbligatoria, il resto viene eseguito per convenzione.
 
-- **Autorità** &ndash; le `ContentProvider` attributo *necessario* da aggiungere alla classe in modo che è registrato con l'Android quando l'applicazione viene installata.
+- **Autorità** di certificazione L'attributo deve essere aggiunto alla classe in modo che sia registrato con Android quando viene installata l'applicazione.  &ndash; `ContentProvider`
 
-- **URI** &ndash; il `CONTENT_URI` viene esposto come una costante in modo che sia facile da usare nel codice. Deve corrispondere l'autorità, ma includono lo schema e il percorso di base.
+- **URI** di &ndash; Il`CONTENT_URI` viene esposto come costante in modo che sia facile da usare nel codice. Deve corrispondere all'autorità, ma includere lo schema e il percorso di base.
 
-- **Tipi MIME** &ndash; gli elenchi di risultati singoli e i risultati vengono considerati diversi tipi di contenuto, in modo che si definiscono due tipi MIME per li rappresenta.
+- **Tipi MIME** &ndash; Gli elenchi dei risultati e dei singoli risultati vengono considerati tipi di contenuto diversi, quindi vengono definiti due tipi MIME per rappresentarli.
 
-- **InterfaceConsts** &ndash; fornire un valore costante per ogni nome di colonna di dati, in modo che l'utilizzo di codice e trovare facilmente vi fanno riferimento senza rischiare errori tipografici.
+- **InterfaceConsts** &ndash; Fornire un valore costante per ogni nome di colonna di dati, in modo che il codice consumer possa facilmente individuarlo e farvi riferimento senza rischiare errori tipografici.
 
-Questo codice viene illustrato come ognuno di questi elementi viene implementata, aggiungendo alla definizione del database nel passaggio precedente:
+Questo codice Mostra come ognuno di questi elementi viene implementato, aggiungendo alla definizione del database dal passaggio precedente:
 
 ```csharp
 [ContentProvider(new string[] { CursorTableAdapter.VegetableProvider.AUTHORITY })]
@@ -159,17 +159,17 @@ public class VegetableProvider : ContentProvider
 ```
 
 
-## <a name="implement-the-uri-parsing-helper"></a>Implementare il supporto di analisi URI
+## <a name="implement-the-uri-parsing-helper"></a>Implementare l'helper di analisi URI
 
-Poiché utilizza codice utilizza gli URI per effettuare richieste di un `ContentProvider`, dobbiamo essere in grado di analizzare le richieste per determinare i dati da restituire. Il `UriMatcher` classe può rivelarsi utile per analizzare gli URI, dopo che è stato inizializzato con l'Uri pattern che il `ContentProvider` supporta.
+Poiché l'utilizzo di codice utilizza URI per eseguire richieste di `ContentProvider`un, è necessario essere in grado di analizzare tali richieste per determinare quali dati restituire. La `UriMatcher` classe può essere utile per analizzare gli URI, una volta che è stata inizializzata con i `ContentProvider` modelli URI supportati da.
 
-Il `UriMatcher` nell'esempio verrà inizializzato con due URI:
+`UriMatcher` Nell'esempio verrà inizializzato con due URI:
 
-1. *"com.xamarin.sample.VegetableProvider/vegetables"* &ndash; richiesta per restituire l'elenco completo di verdure.
+1. *"com. Novell. Sample. VegetableProvider/ortaggi"* &ndash; richiesta di restituire l'elenco completo di ortaggi.
 
-2. *"com.xamarin.sample.VegetableProvider/vegetables/\#"* &ndash; in cui il \# è un segnaposto per un parametro numerico (il `_id` della riga nel database). Un segnaposto dell'asterisco ("\*") è anche utilizzabile per corrispondere a un parametro di testo.
+2. *"com. Novell. Sample. VegetableProvider/vegetables\#/"* &ndash; dove \# è un segnaposto per un parametro numerico ( `_id` la proprietà della riga nel database). Un segnaposto asterisco (\*"") può essere usato anche per trovare la corrispondenza con un parametro di testo.
 
-Nel codice è utilizzare le costanti per fare riferimento a valori di metadati, ad esempio l'autorità e BASE\_percorso. I codici restituiti da utilizzare nei metodi che eseguono l'analisi, per determinare i dati da restituire Uri.
+Nel codice vengono usate le costanti per fare riferimento ai valori dei metadati, ad esempio l'autorità\_e il percorso di base. I codici restituiti verranno utilizzati nei metodi che eseguono l'analisi URI per determinare quali dati restituire.
 
 ```csharp
 const int GET_ALL = 0; // return code when list of Vegetables requested
@@ -185,12 +185,12 @@ static UriMatcher BuildUriMatcher()
 }
 ```
 
-Questo codice è tutti privato per il `ContentProvider` classe. Fare riferimento a [documentazione di Google UriMatcher](https://developer.xamarin.com/api/type/Android.Content.UriMatcher/) per altre informazioni.
+Questo codice è completamente privato per la `ContentProvider` classe. Per ulteriori informazioni, fare riferimento alla [documentazione di UriMatcher di Google](xref:Android.Content.UriMatcher) .
 
 
-## <a name="implement-the-querymethod"></a>Implementare il QueryMethod
+## <a name="implement-the-querymethod"></a>Implementare QueryMethod
 
-La più semplice `ContentProvider` metodo da implementare è il `Query` (metodo). L'implementazione seguente usa il `UriMatcher` analizzare il `uri` parametro e chiamare il metodo di database corretto. Se il `uri` contiene un parametro ID out viene analizzato il valore integer (usando `LastPathSegment`) e utilizzato nella query del database.
+Il `ContentProvider` metodo più semplice da implementare è il `Query` metodo. Nell'implementazione seguente viene utilizzato `UriMatcher` per analizzare il `uri` parametro e chiamare il metodo di database corretto. Se contiene un parametro ID, il valore integer verrà analizzato (utilizzando `LastPathSegment`) e utilizzato nella query di database. `uri`
 
 ```csharp
 public override Android.Database.ICursor Query(Android.Net.Uri uri, string[] projection, string selection, string[] selectionArgs, string sortOrder)
@@ -215,8 +215,8 @@ Android.Database.ICursor GetFromDatabase(string id)
 }
 ```
 
-Il `GetType` deve anche eseguire l'override di metodo. Questo metodo può essere chiamato per determinare il tipo di contenuto che verrà restituito per un Uri specificato.
-Ciò potrebbe indicare all'applicazione dispendiosa in termini di come gestire i dati.
+Anche `GetType` il metodo deve essere sottoposto a override. Questo metodo può essere chiamato per determinare il tipo di contenuto che verrà restituito per un URI specificato.
+Questo potrebbe indicare all'applicazione che utilizza come gestire i dati.
 
 ```csharp
 public override String GetType(Android.Net.Uri uri)
@@ -235,7 +235,7 @@ public override String GetType(Android.Net.Uri uri)
 
 ## <a name="implement-the-other-overrides"></a>Implementare le altre sostituzioni
 
-L'esempio non consente la modifica o eliminazione di dati, ma devono essere implementati i metodi Insert, Update e Delete quindi aggiungerli senza un'implementazione:
+Questo semplice esempio non consente la modifica o l'eliminazione dei dati, ma è necessario implementare i metodi Insert, Update e DELETE, quindi aggiungerli senza implementare:
 
 ```csharp
 public override int Delete(Android.Net.Uri uri, string selection, string[] selectionArgs)
@@ -252,19 +252,19 @@ public override int Update(Android.Net.Uri uri, ContentValues values, string sel
 }
 ```
 
-È stata completata la basic `ContentProvider` implementazione. Dopo aver installata l'applicazione, i dati che espone sarà disponibili sia all'interno dell'applicazione, ma anche a qualsiasi altra applicazione che riconosce l'Uri per farvi riferimento.
+Viene completata l'implementazione di `ContentProvider` base. Una volta installata l'applicazione, i dati esposti saranno disponibili sia all'interno dell'applicazione, ma anche a qualsiasi altra applicazione che conosce l'URI a cui fa riferimento.
 
 
-## <a name="access-the-contentprovider"></a>Accesso il provider di contenuti
+## <a name="access-the-contentprovider"></a>Accedere a ContentProvider
 
-Una volta il `VegetableProvider` è stato implementato, accede a tale operazione viene eseguita esattamente come il provider di contatti all'inizio di questo documento: ottenere un cursore utilizzando l'Uri specificato e quindi usare un adattatore per accedere ai dati.
+`VegetableProvider` Una volta implementato, l'accesso viene eseguito in modo analogo al provider Contacts all'inizio del documento: ottenere un cursore utilizzando l'URI specificato e quindi utilizzare un adapter per accedere ai dati.
 
 
-## <a name="bind-a-listview-to-a-contentprovider"></a>Associare un ListView di un ContentProvider
+## <a name="bind-a-listview-to-a-contentprovider"></a>Associare un controllo ListView a un ContentProvider
 
-Per popolare un `ListView` con i dati è usare l'Uri che corrisponde all'elenco filtrato di verdura. Nel codice viene usato il valore costante `VegetableProvider.CONTENT_URI`, che sappiamo che viene risolta in `com.xamarin.sample.vegetableprovider/vegetables`. Nostri `VegetableProvider.Query` implementazione restituirà un cursore che può quindi essere associato ai `ListView`.
+Per popolare un `ListView` oggetto con i dati, viene usato l'URI che corrisponde all'elenco non filtrato di ortaggi. Nel codice viene usato il valore `VegetableProvider.CONTENT_URI`costante, che è noto come `com.xamarin.sample.vegetableprovider/vegetables`risolto. L'implementazione restituirà un cursore che può quindi essere associato `ListView`a. `VegetableProvider.Query`
 
-Il codice nel `SimpleContentProvider/HomeScreen.cs` mostra quanto sia semplice per visualizzare i dati da un `ContentProvider`:
+Il codice in `SimpleContentProvider/HomeScreen.cs` Mostra la semplicità di visualizzazione dei dati da un: `ContentProvider`
 
 ```csharp
 listView = FindViewById<ListView>(Resource.Id.List);
@@ -282,23 +282,23 @@ adapter = new SimpleCursorAdapter(this, Android.Resource.Layout.SimpleListItem1,
 listView.Adapter = adapter;
 ```
 
-L'applicazione risultante è simile alla seguente:
+L'applicazione risultante ha un aspetto simile al seguente:
 
-[![Screenshot dell'app listato verdura, frutti, in silicone in fiore, legumi, Bulbs, tuberi](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png#lightbox)
+[![Screenshot dell'app che elenca verdure, frutti, boccioli fiori, legumi, lampadine, tuberi](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png#lightbox)
 
 
 
-## <a name="retrieve-a-single-item-from-a-contentprovider"></a>Recuperare un singolo elemento di un ContentProvider
+## <a name="retrieve-a-single-item-from-a-contentprovider"></a>Recuperare un singolo elemento da un ContentProvider
 
-Un'applicazione consumer potrebbe essere necessario anche accedere alle singole righe di dati, che possono essere eseguiti mediante la costruzione di un Uri diverso che fa riferimento a una riga specifica (ad esempio).
+Un'applicazione consumer può anche voler accedere a singole righe di dati, operazione che può essere eseguita costruendo un URI diverso che fa riferimento a una riga specifica (ad esempio).
 
-Uso `ContentResolver` direttamente per accedere a un singolo elemento, tramite la compilazione di un Uri con la necessaria `Id`.
+Utilizzare `ContentResolver` direttamente per accedere a un singolo elemento, creando un URI con l'oggetto obbligatorio `Id`.
 
 ```csharp
 Uri.WithAppendedPath(VegetableProvider.CONTENT_URI, id.ToString());
 ```
 
-Il metodo completo è simile alla seguente:
+Il metodo completo ha un aspetto simile al seguente:
 
 ```csharp
 protected void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)

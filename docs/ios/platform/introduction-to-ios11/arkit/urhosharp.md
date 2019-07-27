@@ -1,66 +1,63 @@
 ---
-title: Uso di ARKit con UrhoSharp in xamarin. IOS
-description: Questo documento descrive come configurare un'app ARKit in xamarin. IOS, quindi esamina la modalità di rendering frame, come regolare la fotocamera, come rilevare i piani, come lavorare con illuminazione e altro ancora. Viene inoltre illustrato UrhoSharp e scrittura di codice per HoloLens.
+title: Uso di ARKit con UrhoSharp in Novell. iOS
+description: Questo documento descrive come configurare un'app ARKit in Novell. iOS, quindi esamina come viene eseguito il rendering dei frame, come modificare la fotocamera, come rilevare i piani, come usare l'illuminazione e altro ancora. Viene inoltre illustrato UrhoSharp e la scrittura di codice per HoloLens.
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/01/2017
-ms.openlocfilehash: b02ecc8a40f6ff8a1862d50202439d369003a53d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 69ddb42f6bf51ec78d9735346c44efa94fb9c418
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61262438"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68508768"
 ---
-# <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Uso di ARKit con UrhoSharp in xamarin. IOS
+# <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Uso di ARKit con UrhoSharp in Novell. iOS
 
-Con l'introduzione del [ARKit](https://developer.apple.com/arkit/), Apple ha reso semplice per gli sviluppatori di creare applicazioni di realtà aumentata. ARKit può tenere traccia della posizione esatta del dispositivo e rilevare diverse superfici in tutto il mondo, e quindi spetta allo sviluppatore di unire i dati risultanti dal ARKit nel codice.
+Con l'introduzione di [ARKit](https://developer.apple.com/arkit/), Apple ha reso semplice per gli sviluppatori la creazione di applicazioni di realtà aumentata. ARKit è in grado di tenere traccia della posizione esatta del dispositivo e di rilevare le varie superfici del mondo ed è quindi lo sviluppatore a fondere i dati provenienti da ARKit nel codice.
 
-[UrhoSharp](~/graphics-games/urhosharp/index.md) fornisce una API 3D completa e facile da usare che è possibile usare per creare applicazioni 3D.   Entrambi questi possono essere combinati insieme, ARKit per fornire le informazioni sul mondo fisiche e Urho per eseguire il rendering dei risultati.
+[UrhoSharp](~/graphics-games/urhosharp/index.md) fornisce un'API 3D completa e facile da usare per la creazione di applicazioni 3D.   Entrambi possono essere combinati, ARKit per fornire le informazioni fisiche sul mondo e Urho per eseguire il rendering dei risultati.
 
-Questa pagina illustra come connettere questi due mondi insieme per creare applicazioni eccezionali realtà aumentata.
-
+In questa pagina viene illustrato come connettere questi due mondi per creare applicazioni di realtà potenziate.
 
 ## <a name="the-basics"></a>Nozioni di base
 
-Ciò che si desidera effettuare è presentano contenuto 3D nella parte superiore del mondo, come illustrato dall'iPhone/iPad.   L'idea consiste nell'unire il contenuto proveniente dalla fotocamera del dispositivo con il contenuto 3D e l'utente del dispositivo viene spostato nella stanza per assicurarsi che l'oggetto 3D è quello fa parte di tale spazio a posteriori, questa operazione viene eseguita mediante l'ancoraggio gli oggetti in questo mondo.
+Si tratta di un contenuto 3D presente in tutto il mondo, come visto da iPhone/iPad.   L'idea è quella di combinare il contenuto proveniente dalla fotocamera del dispositivo con il contenuto 3D e, quando l'utente del dispositivo si sposta nella stanza, per garantire che l'oggetto 3D si comporti come se facesse parte di tale spazio. questa operazione viene eseguita mediante l'ancoraggio degli oggetti in questo mondo.
 
 ![Figura animata in ARKit](urhosharp-images/image1.gif)
 
+Utilizzeremo la libreria Urho per caricare le risorse 3D e inserirle nel mondo e utilizzeremo ARKit per ottenere il flusso video proveniente dalla fotocamera, oltre alla posizione del telefono nel mondo.   Quando l'utente si sposta con il proprio telefono, verranno usate le modifiche apportate al percorso per aggiornare il sistema di coordinate visualizzato dal motore Urho.
 
-La libreria Urho verranno usati per caricare l'asset 3D e inserirli in tutto il mondo e ARKit verranno usati per ottenere il flusso video provenienti dalla fotocamera oltre la posizione del telefono in tutto il mondo.   Quando l'utente passa con il suo telefono, si userà le modifiche nel percorso per aggiornare il sistema di coordinate che il motore Urho è visualizzata.
-
-In questo modo, quando si posiziona un oggetto nello spazio 3D e l'utente si sposta, la posizione dell'oggetto 3D riflette la posizione e il percorso in cui è stato inserito.
+In questo modo, quando si inserisce un oggetto nello spazio 3D e si sposta l'utente, la posizione dell'oggetto 3D riflette la posizione e la posizione in cui è stata posizionata.
 
 ## <a name="setting-up-your-application"></a>Configurazione dell'applicazione
 
-### <a name="ios-application-launch"></a>Avvio applicazione iOS
+### <a name="ios-application-launch"></a>Avvio dell'applicazione iOS
 
-L'applicazione iOS deve creare e avviare il contenuto 3D, eseguire questa operazione tramite la creazione di un'implementazione di una sottoclasse del [ `Urho.Application` ](https://developer.xamarin.com/api/type/Urho.Application/) e fornire il codice di programma di installazione eseguendo l'override di `Start` (metodo).  Si tratta di dove scena Ottiene popolata con dati, evento gestori sono di installazione e così via.
+L'applicazione iOS deve creare e avviare il contenuto 3D. a tale scopo, creare un'implementazione di una sottoclasse di `Urho.Application` e fornire il codice di configurazione eseguendo l'override `Start` del metodo.  Questa è la posizione in cui la scena viene popolata con i dati, i gestori eventi sono impostati e così via.
 
-È stata introdotta un' `Urho.ArkitApp` classe che rappresenti le sottoclassi `Urho.Application` e nella relativa `Start` metodo svolge il grosso.   È sufficiente eseguire il Urho esistente dell'applicazione è modificare la classe base sia di tipo `Urho.ArkitApp` e si dispone di un'applicazione che eseguirà il urho scena in tutto il mondo.
+È stata introdotta `Urho.ArkitApp` una classe che le `Urho.Application` sottoclassi e il `Start` relativo metodo esegue il grosso carico.   È sufficiente fare in modo che l'applicazione Urho esistente modifichi la classe di base in modo che sia `Urho.ArkitApp` di tipo e che si disponga di un'applicazione che eseguirà la scena Urho nel mondo.
 
-### <a name="the-arkitapp-class"></a>La classe ArkitApp
+### <a name="the-arkitapp-class"></a>Classe ArkitApp
 
-Questa classe fornisce un set di pratiche impostazioni predefinite, entrambi una scena con alcuni oggetti chiave, l'elaborazione di eventi ARKit nonché come vengono recapitate dal sistema operativo.
+Questa classe fornisce un set di valori predefiniti pratici, sia una scena con alcuni oggetti chiave che l'elaborazione degli eventi ARKit così come vengono recapitati dal sistema operativo.
 
-Il programma di installazione viene eseguita `Start` metodo virtuale.   Quando si esegue l'override di questo metodo in una sottoclasse, è necessario assicurarsi che alla catena per l'elemento padre tramite `base.Start()` nella propria implementazione.
+Il programma di installazione viene svolto `Start` nel metodo virtuale.   Quando si esegue l'override di questo metodo nella sottoclasse, è necessario assicurarsi di concatenare al padre `base.Start()` usando nella propria implementazione.
 
-Il `Start` metodo consente di impostare la scena, viewport, fotocamera e una luce direzionale ed evidenzia quelli come proprietà pubbliche:
+Il `Start` metodo imposta la scena, il viewport, la fotocamera e una luce direzionale e li presenta come proprietà pubbliche:
 
-- una [ `Scene` ](https://developer.xamarin.com/api/type/Urho.Scene/) per contenere gli oggetti,
-- un direzionale [ `Light` ](https://developer.xamarin.com/api/type/Urho.Light/) con ombreggiature e il cui percorso è disponibile tramite il `LightNode` proprietà
-- una [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera/) i cui componenti vengono aggiornati quando ARKit offre un aggiornamento per l'applicazione e
-- una [ `ViewPort` ](https://developer.xamarin.com/api/type/Urho.Viewport/) visualizzano i risultati.
+- oggetto `Scene` che consente di conservare gli oggetti.
+- direzionale `Light` con ombreggiature e la cui posizione è disponibile tramite la `LightNode` proprietà
+- oggetto `Camera` i cui componenti vengono aggiornati quando ARKit recapita un aggiornamento all'applicazione e
+- oggetto `ViewPort` che Visualizza i risultati.
 
+### <a name="your-code"></a>Codice
 
-### <a name="your-code"></a>Il codice
+È quindi necessario sottoclassare `ArkitApp` la classe ed eseguire `Start` l'override del metodo.   La prima cosa che il metodo deve eseguire è concatenare a `ArkitApp.Start` `base.Start()`chiamando.  Successivamente, è possibile usare una qualsiasi delle proprietà impostate da ArkitApp per aggiungere gli oggetti alla scena, personalizzare le luci, le ombre o gli eventi che si vuole gestire.
 
-È quindi necessario per creare una sottoclasse di `ArkitApp` classe ed eseguire l'override di `Start` (metodo).   Prima di tutto necessario eseguire il metodo è catena fino al `ArkitApp.Start` chiamando `base.Start()`.  Successivamente, è possibile usare qualsiasi dell'impostazione della proprietà da ArkitApp per aggiungere gli oggetti nella scena, è possibile personalizzare le luci, shadows o eventi che si desidera gestire.
-
-L'esempio ARKit/UrhoSharp carica un personaggio con trame e riproduce l'animazione, con l'implementazione seguente:
+L'esempio ARKit/UrhoSharp carica un carattere animato con trame e riproduce l'animazione, con l'implementazione seguente:
 
     ```csharp
     public class MutantDemo : ArkitApp
@@ -90,43 +87,43 @@ L'esempio ARKit/UrhoSharp carica un personaggio con trame e riproduce l'animazio
     }
     ```
 
-E questo è davvero che tutto questo è necessario eseguire a questo punto per disporre il contenuto 3D visualizzato in realtà aumentata.
+Questo è tutto ciò che è necessario fare a questo punto per visualizzare il contenuto 3D in realtà aumentata.
 
-Urho utilizza formati personalizzati per i modelli 3D e le animazioni, pertanto è necessario esportare le risorse in tale formato.   È possibile usare strumenti come il [componente aggiuntivo Blender Urho3D](https://github.com/reattiva/Urho3D-Blender) e [UrhoAssetImporter](https://github.com/EgorBo/UrhoAssetImporter) in grado di convertire questi asset da formati comuni, ad esempio DBX, DAE, OBJ, Blend, 3D-Max nel formato richiesto dal Urho.
+Urho usa formati personalizzati per le animazioni e i modelli 3D, quindi è necessario esportare gli asset in questo formato.   È possibile usare strumenti come il [componente aggiuntivo Urho3D Blender](https://github.com/reattiva/Urho3D-Blender) e [UrhoAssetImporter](https://github.com/EgorBo/UrhoAssetImporter) che possono convertire questi asset da formati diffusi come dbx, DAE, obj, Blend, 3D-Max nel formato richiesto da Urho.
 
-Per altre informazioni sulla creazione di applicazioni 3D tramite Urho, visitare il [Introduzione a UrhoSharp](~/graphics-games/urhosharp/introduction.md) Guida.
+Per altre informazioni sulla creazione di applicazioni 3D con Urho, vedere la Guida [introduttiva a UrhoSharp](~/graphics-games/urhosharp/introduction.md) .
 
 ## <a name="arkitapp-in-depth"></a>ArkitApp in profondità
 
 > [!NOTE]
-> In questa sezione è destinata agli sviluppatori che vogliono personalizzare il comportamento predefinito di UrhoSharp e ARKit oppure da un Acquisisci informazioni dettagliate sul funzionamento dell'integrazione.   Non è necessario leggere questa sezione.
+> Questa sezione è destinata agli sviluppatori che vogliono personalizzare l'esperienza predefinita di UrhoSharp e ARKit o vogliono ottenere informazioni più dettagliate sul funzionamento dell'integrazione.   Non è necessario leggere questa sezione.
 
-L'API ARKit è piuttosto semplice, si crea e configura un [ARSession](https://developer.apple.com/documentation/arkit/arsession) dell'oggetto che quindi inizia a distribuire [ARFrame](https://developer.apple.com/documentation/arkit/arframe) oggetti.   Contengono entrambi l'immagine acquisita dalla fotocamera oltre la posizione del mondo reale stimata del dispositivo.
+L'API ARKit è piuttosto semplice. si crea e si configura un oggetto [ARSession](https://developer.apple.com/documentation/arkit/arsession) che quindi inizia a consegnare oggetti [ARFrame](https://developer.apple.com/documentation/arkit/arframe) .   Questi contengono sia l'immagine acquisita dalla fotocamera che la posizione reale stimata del dispositivo.
 
-Si verrà comporre le immagini vengono recapitate dalla fotocamera a noi con i nostri materiali 3D e regolare la fotocamera nel UrhoSharp in modo che corrisponda le probabilità che la posizione del dispositivo e posizione.
+Verranno comunicate le immagini recapitate dalla fotocamera a Microsoft con il contenuto 3D e si modificherà la fotocamera in UrhoSharp in modo che corrisponda alle probabilità nella posizione e nella posizione del dispositivo.
 
-Il diagramma seguente illustra che cosa ha luogo `ArkitApp` classe:
+Il diagramma seguente Mostra gli elementi che avvengono nella `ArkitApp` classe:
 
-[![Diagramma di classi e le schermate di ArkitApp](urhosharp-images/image2.png)](urhosharp-images/image2.png#lightbox)
+[![Diagramma delle classi e delle schermate in ArkitApp](urhosharp-images/image2.png)](urhosharp-images/image2.png#lightbox)
 
-### <a name="rendering-the-frames"></a>I fotogrammi di rendering
+### <a name="rendering-the-frames"></a>Rendering dei frame
 
-L'idea è semplice, combinare il video provenienti dalla fotocamera con la grafica 3D per produrre l'immagine combinato.     Si otterrà una serie di queste immagini acquisite nella sequenza e si verrà combinare questo input con la scena Urho.
+L'idea è semplice, combinando il video proveniente dalla fotocamera con la grafica 3D per produrre l'immagine combinata.     Si otterrà una serie di queste immagini acquisite in sequenza e si mescolerà questo input con la scena Urho.
 
-Il modo più semplice per farlo consiste nell'inserire un [ `RenderPathCommand` ](https://developer.xamarin.com/api/type/Urho.RenderPathCommand/) in principale [ `RenderPath` ](https://developer.xamarin.com/api/type/Urho.RenderPath/).  Si tratta di un set di comandi che vengono eseguiti per disegnare un singolo frame.  Questo comando verrà compilati il riquadro di visualizzazione con qualsiasi trama che viene passato ad esso.    Impostiamo questa sul primo frame che è processo e della definizione effettiva viene eseguita in th **ARRenderPath.xml** file che viene caricato in questa fase.
+Il modo più semplice per eseguire questa operazione consiste nell'inserire `RenderPathCommand` un oggetto nella `RenderPath`principale.  Si tratta di un set di comandi eseguiti per creare un singolo frame.  Questo comando consente di riempire il viewport con qualsiasi trama passata.    Questa operazione viene configurata sul primo frame che viene elaborato e la definizione effettiva viene eseguita nel file **ARRenderPath. XML** caricato a questo punto.
 
-Tuttavia, stiamo affrontare due problemi per fondere insieme questi due mondi:
-
-
-1. In iOS, le trame GPU deve avere una risoluzione che è una potenza di due, ma i frame che otteniamo dalla fotocamera non è risoluzione che sono una potenza di due, ad esempio: 1280x720.
-2. I frame sono codificati nel [YUV](https://en.wikipedia.org/wiki/YUV) formato, rappresentato da due immagini - luminanza e croma.
-
-I frame YUV possono essere di due risoluzioni diverse.  un'immagine di 1280 x 720 che rappresenta la luminanza (fondamentalmente un'immagine in scala di grigi) e molto altro 640x360 inferiori per il componente di cromatura:
-
-![Immagine che illustra combinazione Y e i componenti UV](urhosharp-images/image3.png)
+Tuttavia, sono stati affrontati due problemi per unire questi due mondi:
 
 
-Per disegnare un'immagine colorata completa con OpenGL ES è necessario scrivere un piccolo shader che accetta gli slot di trama luminanza (componente Y) e crominanza (UV piani).  In UrhoSharp abbiano nomi - "sDiffMap" e "sNormalMap" e convertirli in formato RGB:
+1. In iOS, le trame GPU devono avere una risoluzione che è una potenza di due, ma i frame che verranno riportati dalla fotocamera non hanno una risoluzione che è una potenza di due, ad esempio: 1280x720.
+2. I frame sono codificati in formato [YUV](https://en.wikipedia.org/wiki/YUV) , rappresentati da due immagini: luma e Chroma.
+
+I frame YUV sono disponibili in due risoluzioni diverse.  un'immagine 1280x720 che rappresenta la luminanza (fondamentalmente un'immagine di scala grigia) e un 640x360 molto più piccolo per il componente cromatura:
+
+![Immagine che illustra la combinazione di componenti Y e UV](urhosharp-images/image3.png)
+
+
+Per creare un'immagine colorata completa usando OpenGL ES è necessario scrivere un piccolo shader che accetta la luminanza (componente Y) e cromatura (piani UV) dagli slot di trama.  In UrhoSharp i nomi sono "sDiffMap" e "sNormalMap" e vengono convertiti in formato RGB:
 
 ```csharp
 mat4 ycbcrToRGBTransform = mat4(
@@ -140,7 +137,7 @@ vec4 ycbcr = vec4(texture2D(sDiffMap, vTexCoord).r,
 gl_FragColor = ycbcrToRGBTransform * ycbcr;
 ```
 
-Per eseguire il rendering la trama non è una potenza di due risoluzione è necessario definire Texture2D con i parametri seguenti:
+Per eseguire il rendering della trama che non ha una potenza di due soluzioni, è necessario definire Texture2D con i parametri seguenti:
 
 ```chsarp
 // texture for UV-plane;
@@ -152,27 +149,27 @@ cameraUVtexture.SetAddressMode(TextureCoordinate.U, TextureAddressMode.Clamp);
 cameraUVtexture.SetAddressMode(TextureCoordinate.V, TextureAddressMode.Clamp);
 ```
 
-In questo modo siamo in grado di eseguire il rendering di immagini acquisite come sfondo ed eseguire il rendering di qualsiasi scena sopra di esso come quello scary mutanti.
+In questo modo, possiamo eseguire il rendering delle immagini acquisite come sfondo ed eseguire il rendering di qualsiasi scena al di sopra del mutatore spaventoso.
 
 ### <a name="adjusting-the-camera"></a>Regolazione della fotocamera
 
-Il `ARFrame` oggetti contengono anche la posizione del dispositivo stimato.  È a questo punto, occorre spostare fotocamera gioco ARFrame - prima ARKit non era un grande vantaggio track orientamento del dispositivo (esegue il rollup, passo e rotazione) e rendering ologramma aggiunto sopra il video -, ma se si sposta il dispositivo un po' - vntana verrà dello sfasamento.
+Gli `ARFrame` oggetti contengono anche la posizione stimata del dispositivo.  A questo punto è necessario spostare la fotocamera del gioco ARFrame, prima di ARKit, non è stato un grosso problema per tenere traccia dell'orientamento del dispositivo (Roll, pitch e imbardata) ed eseguire il rendering di un ologramma aggiunto sopra il video, ma se si sposta il dispositivo gli ologrammi a bit verranno spostati.
 
-In questo caso poiché non sono in grado di tenere traccia dei movimenti sensori incorporati, ad esempio il Giroscopio, questi possono solo l'accelerazione.  Analisi ARKit ogni funzionalità frame ed estrae i punti per tenere traccia ed è pertanto in grado di fornire un'accurata trasformano matrice contenente i dati di spostamento e rotazione.
+Ciò accade perché i sensori incorporati, ad esempio giroscopio, non sono in grado di tenere traccia dei movimenti, ma possono solo accelerare.  ARKit analizza ogni frame ed estrae i punti di funzionalità da rilevare e quindi è in grado di fornire una matrice di trasformazione accurata contenente i dati di spostamento e rotazione.
 
-Ad esempio, si tratta come è possibile ottenere la posizione corrente:
+Ad esempio, questo è il modo in cui è possibile ottenere la posizione corrente:
 
 ```csharp
 var row = arCamera.Transform.Row3;
 CameraNode.Position = new Vector3(row.X, row.Y, -row.Z);
 ```
 
-Usiamo `-row.Z` perché ARKit utilizza un sistema di coordinate di destra.
+`-row.Z` Usiamo perché ARKit usa un sistema di coordinate di destra.
 
 
-### <a name="plane-detection"></a>Rilevamento di piano
+### <a name="plane-detection"></a>Rilevamento del piano
 
-È in grado di rilevare i piani orizzontali ARKit e questa possibilità consente di interagire con il mondo reale, ad esempio, non è possibile inserire il mutante in una tabella reale o un piano. Il modo più semplice per eseguire questa operazione è usare il metodo di HitTest (raycasting). Converte le coordinate dello schermo (0,5, 0,5 corrisponde al punto centrale) nelle coordinate reali (0, 0; 0 indica la posizione del primo frame).
+ARKit è in grado di rilevare i piani orizzontali e questa possibilità consente di interagire con il mondo reale. ad esempio, è possibile inserire il mutatore in una tabella reale o in un piano. Il modo più semplice per eseguire questa operazione consiste nell'usare il metodo HitTest (Raycasting). Converte le coordinate dello schermo (0,5; 0,5 è il centro) nelle coordinate del mondo reale (0; 0; 0 è la posizione del primo frame).
 
 ```chsarp
 protected Vector3? HitTest(float screenX = 0.5f, float screenY = 0.5f)
@@ -188,7 +185,7 @@ protected Vector3? HitTest(float screenX = 0.5f, float screenY = 0.5f)
 }
 ```
 
-a questo punto possiamo inseriamo il mutante su una superficie orizzontale a seconda di dove sullo schermo del dispositivo che toccare è:
+a questo punto è possibile posizionare il mutatore su una superficie orizzontale a seconda della posizione in cui si tocca la schermata del dispositivo:
 
 ```chsarp
 void OnTouchEnd(TouchEndEventArgs e)
@@ -201,11 +198,11 @@ void OnTouchEnd(TouchEndEventArgs e)
 }
 ```
 
-![Figura animata la modifica piani durante la migrazione di visualizzazione](urhosharp-images/image4.gif)
+![Figura animata modifica di piani come spostamento di visualizzazione](urhosharp-images/image4.gif)
 
-### <a name="realistic-lighting"></a>Illuminazione realistico
+### <a name="realistic-lighting"></a>Illuminazione realistica
 
-A seconda delle condizioni di illuminazione reale, la scena virtuale deve essere più chiaro o scuro per adattarlo meglio dell'ambiente circostante. ARFrame contiene una proprietà LightEstimate che è possibile usare per regolare l'illuminazione ambientale Urho, questa operazione viene eseguita come segue:
+A seconda delle condizioni di illuminazione del mondo reale, la scena virtuale dovrebbe essere più leggera o più scura per una migliore corrispondenza con l'ambiente. ARFrame contiene una proprietà LightEstimate che è possibile usare per modificare la luce di ambiente Urho. questa operazione viene eseguita in questo modo:
 
 ```csharp
 var ambientIntensity = (float) frame.LightEstimate.AmbientIntensity / 1000f;
@@ -213,16 +210,16 @@ var zone = Scene.GetComponent<Zone>();
 zone.AmbientColor = Color.White * ambientIntensity;
 ```
 
-### <a name="beyond-ios---hololens"></a>Oltre a iOS - HoloLens
+### <a name="beyond-ios---hololens"></a>Oltre iOS-HoloLens
 
-UrhoSharp [viene eseguito in tutti i sistemi operativi principali](~/graphics-games/urhosharp/platform/index.md), pertanto è possibile riutilizzare il codice esistente in un' posizione.
+UrhoSharp [viene eseguito in tutti i principali sistemi operativi](~/graphics-games/urhosharp/platform/index.md), quindi è possibile riutilizzare il codice esistente altrove.
 
-HoloLens è una delle piattaforme più interessanti di che cui è in esecuzione.   Ciò significa che è possibile passare facilmente tra iOS e HoloLens per creare fantastiche applicazioni di realtà aumentata uso di UrhoSharp.
+HoloLens è una delle piattaforme più interessanti su cui è in esecuzione.   Ciò significa che è possibile passare agevolmente tra iOS e HoloLens per creare applicazioni di realtà aumentata straordinarie usando UrhoSharp.
 
-È possibile trovare l'origine MutantDemo alla [github.com/EgorBo/ARKitXamarinDemo](https://github.com/EgorBo/ARKitXamarinDemo).
+È possibile trovare l'origine MutantDemo in [github.com/EgorBo/ARKitXamarinDemo](https://github.com/EgorBo/ARKitXamarinDemo).
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [UrhoSharp](~/graphics-games/urhosharp/index.md)
-- [ARKitXamarinDemo (con UrhoSharp) (esempio)](https://github.com/EgorBo/ARKitXamarinDemo)
+- [ARKitXamarinDemo (with UrhoSharp) (esempio)](https://github.com/EgorBo/ARKitXamarinDemo)

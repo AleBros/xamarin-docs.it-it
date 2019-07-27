@@ -1,32 +1,32 @@
 ---
-title: Servizi avviati con xamarin. Android
+title: Avvio dei servizi con Novell. Android
 ms.prod: xamarin
 ms.assetid: 8CC3A850-4CD2-4F93-98EE-AF3470794000
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: df3d1bba57c1caf23c615410a184bc5458fc848b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3dd2add9d8cbc719623c8229778dc0ffe49aaa8f
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013295"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509151"
 ---
-# <a name="started-services-with-xamarinandroid"></a>Servizi avviati con xamarin. Android
+# <a name="started-services-with-xamarinandroid"></a>Avvio dei servizi con Novell. Android
 
-## <a name="started-services-overview"></a>Panoramica di servizi avviati
+## <a name="started-services-overview"></a>Panoramica dei servizi avviati
 
-Servizi avviati eseguono in genere un'unità di lavoro senza fornire commenti diretti o dei risultati al client. Un esempio di un'unità di lavoro è un servizio che carica un file in un server. Il client verrà effettuare una richiesta a un servizio per caricare un file dal dispositivo a un sito Web. Il servizio caricherà il file in modalità non interattiva (anche se l'app è associata alcuna attività in primo piano) e terminare se stessa quando viene completato il caricamento. È importante tenere presente che un servizio avviato verrà eseguito sul thread dell'interfaccia utente di un'applicazione. Ciò significa che se un servizio deve eseguire le operazioni che bloccano il thread dell'interfaccia utente, è necessario creare ed eliminare dei thread in base alle esigenze.
+I servizi avviati eseguono in genere un'unità di lavoro senza fornire feedback diretto o risultati al client. Un esempio di unità di lavoro è un servizio che carica un file in un server. Il client effettuerà una richiesta a un servizio per caricare un file dal dispositivo a un sito Web. Il servizio caricherà tranquillamente il file (anche se l'app non ha attività in primo piano) e termina se stessa al termine del caricamento. È importante tenere presente che un servizio avviato verrà eseguito sul thread UI di un'applicazione. Ciò significa che se un servizio è in grado di eseguire operazioni che bloccano il thread dell'interfaccia utente, deve creare ed eliminare i thread in modo necessario.
 
-A differenza di un servizio associato, non vi è alcun canale di comunicazione tra un servizio avviato "puro" e i relativi client. Ciò significa che un servizio avviato implementerà alcuni metodi del ciclo di vita diverso rispetto a un servizio associato. Nell'elenco seguente illustra i metodi del ciclo di vita comune in un servizio avviato:
+A differenza di un servizio associato, non esiste alcun canale di comunicazione tra un servizio avviato "pure" e i relativi client. Questo significa che un servizio avviato implementerà alcuni metodi del ciclo di vita diversi rispetto a un servizio associato. Nell'elenco seguente vengono evidenziati i metodi del ciclo di vita comuni in un servizio avviato:
 
-* `OnCreate` &ndash; Chiamato una volta al primo avvio al servizio. Si tratta in cui il codice di inizializzazione deve essere implementato.
-* `OnBind` &ndash; Questo metodo deve essere implementato da tutte le classi di servizio, tuttavia un servizio avviato tipicamente non hanno un client a esso associati. Per questo motivo, un servizio avviato restituisce semplicemente `null`. Al contrario, un servizio ibrido, ovvero la combinazione di un servizio associato e un servizio avviato, dispone implementare e restituire un `Binder` per il client.
-* `OnStartCommand` &ndash; Chiamato per ogni richiesta per avviare il servizio, in risposta a una chiamata a `StartService` o il riavvio dal sistema. Si tratta in cui il servizio può iniziare qualsiasi attività a esecuzione prolungata. Il metodo restituisce un `StartCommandResult` valore che indica come o se il sistema deve gestire il riavvio del servizio dopo un arresto a causa di memoria insufficiente. Questa chiamata viene eseguita sul thread principale. Questo metodo viene descritto in dettaglio più avanti.
-* `OnDestroy` &ndash; Questo metodo viene chiamato quando il servizio viene eliminata definitivamente. Viene usato per eseguire qualsiasi finale pulizia necessaria.
+- `OnCreate`&ndash; Chiamato una volta quando il servizio viene avviato per la prima volta. Questo è il punto in cui deve essere implementato il codice di inizializzazione.
+- `OnBind`&ndash; Questo metodo deve essere implementato da tutte le classi del servizio, ma in genere un servizio avviato non dispone di un client associato. Per questo motivo, un servizio avviato restituisce `null`semplicemente. Al contrario, un servizio ibrido (ovvero la combinazione di un servizio associato e di un servizio avviato) deve implementare e restituire un `Binder` per il client.
+- `OnStartCommand`Chiamato per ogni richiesta di avvio del servizio, in risposta a una chiamata a `StartService` o a un riavvio dal sistema. &ndash; Questo è il punto in cui il servizio può iniziare qualsiasi attività a esecuzione prolungata. Il metodo restituisce un `StartCommandResult` valore che indica come o se il sistema deve gestire il riavvio del servizio dopo un arresto a causa di memoria insufficiente. Questa chiamata si verifica nel thread principale. Questo metodo viene descritto in dettaglio di seguito.
+- `OnDestroy`&ndash; Questo metodo viene chiamato quando il servizio viene eliminato definitivamente. Viene usato per eseguire la pulizia finale richiesta.
 
-Il metodo importante per un servizio avviato è il `OnStartCommand` (metodo). Verrà richiamato ogni volta che il servizio riceve una richiesta di eseguire alcune operazioni. Il frammento di codice seguente è riportato un esempio di `OnStartCommand`: 
+Il metodo importante per un servizio avviato è il `OnStartCommand` metodo. Verrà richiamato ogni volta che il servizio riceve una richiesta per eseguire alcune operazioni. Il frammento di codice seguente è un `OnStartCommand`esempio di: 
 
 ```csharp
 public override StartCommandResult OnStartCommand (Android.Content.Intent intent, StartCommandFlags flags, int startId)
@@ -38,57 +38,55 @@ public override StartCommandResult OnStartCommand (Android.Content.Intent intent
 }
 ```
 
-Il primo parametro è un `Intent` oggetto contenente i metadati sulle operazioni da eseguire. Il secondo parametro contiene un `StartCommandFlags` valore che fornisce alcune informazioni sulla chiamata al metodo. Questo parametro è uno dei due valori possibili:
+Il primo parametro è un `Intent` oggetto che contiene i metadati relativi al lavoro da eseguire. Il secondo parametro contiene un `StartCommandFlags` valore che fornisce alcune informazioni sulla chiamata al metodo. Questo parametro ha uno dei due valori possibili:
 
-* `StartCommandFlag.Redelivery` &ndash; Ciò significa che il `Intent` è un re-recapito di una precedente `Intent`. Questo valore viene fornito quando il servizio ha restituito `StartCommandResult.RedeliverIntent` ma è stata interrotta prima che può essere arrestato correttamente.
-* `StartCommandFlag.Retry` &dash; Questo valore viene ricevuto quando una precedente `OnStartCommand` chiamata non riuscita e Android sta tentando di avviare nuovamente il servizio con lo stesso scopo come il precedente tentativo non riuscito.
+- `StartCommandFlag.Redelivery`Ciò significa che è un nuovo recapito di un precedente `Intent`. `Intent` &ndash; Questo valore viene fornito quando il servizio ha restituito `StartCommandResult.RedeliverIntent` ma è stato interrotto prima di essere arrestato correttamente.
+-`StartCommandFlag.Retry`Questo valore viene ricevuto quando una chiamata `OnStartCommand` precedente non è riuscita e Android sta provando ad avviare di nuovo il servizio con la stessa finalità del precedente tentativo non riuscito. &dash;
  
-Infine, il terzo parametro è un valore integer univoco per l'applicazione che identifica la richiesta. È possibile che i chiamanti più possono richiamare lo stesso oggetto servizio. Questo valore viene utilizzato per associare una richiesta per arrestare un servizio con una determinata richiesta per avviare un servizio. Verrà illustrata più dettagliatamente nella sezione [arrestando il servizio](#Stopping_the_Service). 
+Infine, il terzo parametro è un valore intero univoco per l'applicazione che identifica la richiesta. È possibile che più chiamanti possano richiamare lo stesso oggetto servizio. Questo valore viene utilizzato per associare una richiesta di arresto di un servizio con una determinata richiesta di avvio di un servizio. Questo argomento verrà discusso più dettagliatamente nella sezione [arresto del servizio](#Stopping_the_Service). 
 
-Il valore `StartCommandResult` viene restituito dal servizio come un suggerimento per Android sulle operazioni da eseguire se il servizio viene terminato a causa dei vincoli di risorse. Esistono tre possibili valori per `StartCommandResult`:
+Il valore `StartCommandResult` viene restituito dal servizio come suggerimento per Android sulle operazioni da eseguire se il servizio viene terminato a causa di vincoli di risorse. Esistono tre possibili valori per `StartCommandResult`:
 
-* **[StartCommandResult.NotSticky](https://developer.xamarin.com/api/field/Android.App.StartCommandResult.NotSticky/)**  &ndash; questo valore indica a Android che non è necessario riavviare il servizio che è terminato. Ad esempio di questo, si consideri un servizio che genera le anteprime per una raccolta in un'app. Se il servizio viene terminato, non è fondamentale per ricreare l'anteprima immediatamente &ndash; l'anteprima può essere ricreato alla successiva esecuzione dell'app.
-* **[StartCommandResult.Sticky](https://developer.xamarin.com/api/field/Android.App.StartCommandResult.Sticky/)**  &ndash; si chiede ad Android per riavviare il servizio, ma non per offrire l'ultimo Intent che ha avviato il servizio. Se non esistono alcuna finalità in sospeso per gestire, quindi un `null` verrà fornito per il parametro Intent. Un esempio di questo potrebbe essere un'app lettore musicale; il servizio verrà riavviato pronto per la riproduzione di brani musicali, ma verrà riprodotta l'ultimo brano. 
-* **[StartCommandResult.RedeliverIntent](https://developer.xamarin.com/api/field/Android.App.StartCommandResult.RedeliverIntent/)**  &ndash; questo valore è will comunicare ad Android per riavviare il servizio e inviare di nuovo l'ultimo `Intent`. Un esempio di questo è un servizio che consente di scaricare un file di dati per un'app. Se il servizio viene terminato, il file di dati deve ancora essere scaricato. Restituendo `StartCommandResult.RedeliverIntent`quando Android riavvia il servizio fornirà anche la finalità (che contiene l'URL del file da scaricare) al servizio. Ciò consentirà il download riavviare o riprendere (a seconda dell'implementazione esatta del codice).
+- **[StartCommandResult. NotSticky](xref:Android.App.StartCommandResult.NotSticky)** &ndash; questo valore indica a Android che non è necessario riavviare il servizio che ha terminato. Come esempio, si consideri un servizio che genera anteprime per una raccolta in un'app. Se il servizio viene terminato, non è fondamentale ricreare immediatamente &ndash; l'anteprima. l'anteprima può essere ricreata al successivo avvio dell'app.
+- **[StartCommandResult. Sticky](xref:Android.App.StartCommandResult.Sticky)** &ndash; indica a Android di riavviare il servizio, ma non di fornire l'ultimo intento che ha avviato il servizio. Se non sono presenti Intent in sospeso da gestire, verrà fornito un `null` oggetto per il parametro Intent. Un esempio potrebbe essere un'app Music Player; il servizio verrà riavviato pronto per riprodurre musica, ma l'ultimo brano verrà riprodotto.
+- **[StartCommandResult. RedeliverIntent](xref:Android.App.StartCommandResult.RedeliverIntent)** &ndash; questo valore indica a Android di riavviare il servizio e recapitare l'ultimo `Intent`. Un esempio è un servizio che Scarica un file di dati per un'app. Se il servizio viene interrotto, è comunque necessario scaricare il file di dati. Restituendo `StartCommandResult.RedeliverIntent`, quando Android riavvia il servizio, verrà fornito anche lo scopo (che include l'URL del file da scaricare) al servizio. In questo modo il download verrà riavviato o ripreso (a seconda dell'implementazione esatta del codice).
 
-È disponibile un quarto valore per `StartCommandResult` &ndash; `StartCommandResult.ContinuationMask`. Questo valore viene restituito da `OnStartCommand` e descrive come Android continuerà il servizio è terminato. Questo valore non è in genere usato per avviare un servizio.
+Per `StartCommandResult` &ndash; è disponibile un quartovalore.`StartCommandResult.ContinuationMask` Questo valore viene restituito da `OnStartCommand` e descrive in che modo Android continuerà il servizio che ha terminato. Questo valore non viene in genere utilizzato per avviare un servizio.
 
-In questo diagramma vengono visualizzati gli eventi del ciclo di vita di chiavi di un servizio avviato: 
+In questo diagramma vengono illustrati gli eventi del ciclo di vita delle chiavi di un servizio avviato: 
 
-![Diagramma che mostra l'ordine in cui vengono chiamati i metodi del ciclo di vita](started-services-images/started-service-01.png "diagramma che mostra l'ordine in cui vengono chiamati i metodi del ciclo di vita.")
-
+![Diagramma che mostra l'ordine in cui vengono chiamati i metodi del ciclo di] vita (started-services-images/started-service-01.png "Diagramma che mostra l'ordine in cui vengono chiamati i metodi del ciclo di vita.")
 
 <a name="Stopping_the_Service" />
 
-## <a name="stopping-the-service"></a>L'arresto del servizio
+## <a name="stopping-the-service"></a>Arresto del servizio
 
-Un servizio avviato esecuzione continuerà indefinitamente. Android consente di mantenere il servizio in esecuzione fino a quando sono disponibili risorse di sistema sufficienti. Il client è necessario arrestare il servizio o il servizio può arrestare se stesso al termine il proprio lavoro. Esistono due modi per arrestare un servizio: 
- 
-* **[Android.Content.Context.StopService()](https://developer.xamarin.com/api/member/Android.Content.Context.StopService/p/Android.Content.Intent/)**  &ndash; un client (ad esempio, un'attività) può richiedere un servizio venga arrestato la chiamata di `StopService` metodo: 
+Un servizio avviato continuerà a funzionare per un periodo illimitato; Android manterrà il servizio in esecuzione fino a quando sono disponibili risorse di sistema sufficienti. Il client deve arrestare il servizio oppure il servizio potrebbe arrestarsi automaticamente al termine del lavoro. Esistono due modi per arrestare un servizio: 
+
+- **[Android. Content. Context. StopService ()](xref:Android.Content.Context.StopService*)** Un client, ad esempio un'attività, può richiedere l'arresto di un servizio chiamando `StopService` il metodo: &ndash;
 
     ```csharp
     StopService(new Intent(this, typeof(DemoService));
     ```
 
-* **[Android.App.Service.StopSelf()](https://developer.xamarin.com/api/member/Android.App.Service.StopSelf()/)**  &ndash; un servizio potrebbe arrestarsi richiamando il `StopSelf`:
+- **[Android. app. Service. StopSelf ()](xref:Android.App.Service.StopSelf*)** Un servizio potrebbe arrestarsi richiamando `StopSelf`: &ndash;
 
     ```csharp
     StopSelf();
     ```
-    
-### <a name="using-startid-to-stop-a-service"></a>Utilizza startId per arrestare un servizio
 
-Ai chiamanti più possono richiedere che un servizio di essere avviato. Se è presente una richiesta di avvio in sospeso, il servizio può usare la `startId` che viene passata `OnStartCommand` per impedire che il servizio viene interrotto in modo anomalo. Il `startId` corrisponderà alla chiamata più recente a `StartService`e viene incrementato ogni volta che viene chiamato. Pertanto, se una richiesta successiva al `StartService` non hanno ancora in una chiamata a `OnStartCommand`, il servizio può chiamare `StopSelfResult`, passandogli il valore più recente del `startId` ha ricevuto (anziché semplicemente chiamare `StopSelf`). Se una chiamata a `StartService` non hanno ancora in una chiamata corrispondente a `OnStartCommand`, il sistema non arresterà il servizio, in quanto il `startId` usato nel `StopSelf` chiamata non corrisponderà alla versione più recente `StartService` chiamare.
+### <a name="using-startid-to-stop-a-service"></a>Uso di startId per arrestare un servizio
 
+Più chiamanti possono richiedere l'avvio di un servizio. Se è presente una richiesta di avvio in sospeso, il servizio può `startId` utilizzare l'oggetto passato `OnStartCommand` a per impedire che il servizio venga arrestato in modo anomalo. La `startId` funzione corrisponderà alla chiamata più recente `StartService`a e verrà incrementata ogni volta che viene chiamata. Pertanto, se una richiesta successiva a `StartService` non ha ancora generato una chiamata a `OnStartCommand`, il servizio può chiamare `StopSelfResult`, passandogli il valore `startId` più recente che ha ricevuto, anziché semplicemente chiamare `StopSelf`. Se una chiamata a `StartService` non ha ancora generato una chiamata corrispondente a `OnStartCommand`, il sistema non arresterà il servizio, `StopSelf` perché l'oggetto `startId` utilizzato nella chiamata non corrisponderà alla chiamata più recente `StartService` .
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [StartedServicesDemo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/StartedServicesDemo/)
-- [Android.App.Service](https://developer.xamarin.com/api/type/Android.App.Service)
-- [Android.App.StartCommandFlags](https://developer.xamarin.com/api/type/Android.App.StartCommandFlags)
-- [Android.App.StartCommandResult](https://developer.xamarin.com/api/type/Android.App.StartCommandResult)
-- [Android.Content.BroadcastReceiver](https://developer.xamarin.com/api/type/Android.Content.BroadcastReceiver/)
-- [Android.Content.Intent](https://developer.xamarin.com/api/type/Android.Content.Intent)
-- [Android.OS.Handler](https://developer.xamarin.com/api/type/Android.OS.Handler/)
-- [Android.Widget.Toast](https://developer.xamarin.com/api/type/Android.Widget.Toast/)
+- [StartedServicesDemo (esempio)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/StartedServicesDemo/)
+- [Android.App.Service](xref:Android.App.Service)
+- [Android.App.StartCommandFlags](xref:Android.App.StartCommandFlags)
+- [Android.App.StartCommandResult](xref:Android.App.StartCommandResult)
+- [Android.Content.BroadcastReceiver](xref:Android.Content.BroadcastReceiver)
+- [Android.Content.Intent](xref:Android.Content.Intent)
+- [Android.OS.Handler](xref:Android.OS.Handler)
+- [Android.Widget.Toast](xref:Android.Widget.Toast)
 - [Icone della barra di stato](https://developer.android.com/guide/practices/ui_guidelines/icon_design_status_bar.html)

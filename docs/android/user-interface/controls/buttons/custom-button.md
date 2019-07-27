@@ -6,22 +6,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: b5ccefa1eb7e659584c1c82481bbd4473a3a8abc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ecb745f2f50b5aa0e22e331a4def0be9d8f86aa5
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61076247"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510391"
 ---
 # <a name="custom-button"></a>Pulsante personalizzato
 
-In questa sezione si creerà un pulsante con un'immagine personalizzata anziché di testo, usando il [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) widget e un file XML che definisce tre diverse immagini da utilizzare per i diversi stati. Quando viene premuto il pulsante, verrà visualizzato un messaggio breve.
+In questa sezione si creerà un pulsante con un'immagine personalizzata anziché un testo, usando il [`Button`](xref:Android.Widget.Button) widget e un file XML che definisce tre diverse immagini da usare per i diversi stati dei pulsanti. Quando si preme il pulsante, viene visualizzato un breve messaggio.
 
-Fare doppio clic e scaricare le tre immagini seguenti, quindi copiarli nel **risorse/drawable** del progetto. Questi verrà utilizzati per i diversi stati.
+Fare clic con il pulsante destro del mouse e scaricare le tre immagini seguenti, quindi copiarle nella directory Resources **/** di cui è possibile eseguire il progetto. Questi verranno usati per i diversi stati dei pulsanti.
 
- [![Icona verde Android per lo stato normale](custom-button-images/android-normal.png)](custom-button-images/android-normal.png#lightbox) [ ![icona arancione Android per lo stato attivo](custom-button-images/android-focused.png)](custom-button-images/android-focused.png#lightbox) [ ![icona gialla Android per lo stato di premuto](custom-button-images/android-pressed.png)](custom-button-images/android-pressed.png#lightbox)
+ Icona Android [ ![](custom-button-images/android-pressed.png)](custom-button-images/android-pressed.png#lightbox) [verde per lo stato normale icona Android arancione per lo stato attivo icona Android per lo stato premuto ![](custom-button-images/android-normal.png)](custom-button-images/android-normal.png#lightbox) [ ![](custom-button-images/android-focused.png)](custom-button-images/android-focused.png#lightbox)
 
-Creare un nuovo file nei **risorse/drawable** directory denominata **android_button.xml**. Inserire il codice XML seguente:
+Creare un nuovo file nella directory **Resources/** di cui è stato creato il nome **android_button. XML**. Inserire il codice XML seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -34,14 +34,14 @@ Creare un nuovo file nei **risorse/drawable** directory denominata **android_but
 </selector>
 ```
 
-Definisce una singola risorsa drawable, che modificherà l'immagine basata allo stato corrente del pulsante. Il primo `<item>` definisce **android_pressed.png** come l'immagine quando viene premuto il pulsante (è stato attivato); il secondo `<item>` definisce **android_focused.png** come immagine di quando il pulsante è con stato attivo (quando il pulsante è evidenziato usando il trackball o tasto direzionale); e il terzo `<item>` definisce **android_normal.png** come immagine per lo stato normale (quando non premuto né con stato attivo). Questo file XML ora rappresenta una singola risorsa drawable e quando si fa riferimento una [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) per lo sfondo, l'immagine visualizzata cambieranno in base questi tre stati.
+Definisce una singola risorsa che può essere disegnato, che modifica l'immagine in base allo stato corrente del pulsante. Il primo `<item>` definisce **android_pressed. png** come immagine quando viene premuto il pulsante (è stato attivato); il secondo `<item>` definisce **android_focused. png** come immagine quando il pulsante è attivo (quando il pulsante è evidenziato utilizzando la trackball o il riquadro direzionale); il terzo `<item>` definisce **android_normal. png** come immagine per lo stato normale, quando non viene premuto né lo stato attivo. Questo file XML rappresenta ora una singola risorsa che può essere disegnato e, quando viene [`Button`](xref:Android.Widget.Button) fatto riferimento da un oggetto per lo sfondo, l'immagine visualizzata cambierà in base a questi tre stati.
 
 
 > [!NOTE]
-> L'ordine dei `<item>` elementi è importante. Quando questo drawable viene fatto riferimento, il `<item>`s vengono attraversati in ordine per determinare quale sia appropriato per lo stato del pulsante corrente.
-> Poiché sia l'ultimo elemento dell'immagine "normale", viene applicata solo quando le condizioni `android:state_pressed` e `android:state_focused` hanno valutato false.
+> L'ordine degli `<item>` elementi è importante. Quando si fa riferimento a questo oggetto, le `<item>`istanze di vengono attraversate nell'ordine per determinare quale è appropriato per lo stato del pulsante corrente.
+> Poiché l'immagine "normale" è l'ultima, viene applicata solo quando le condizioni `android:state_pressed` e `android:state_focused` hanno entrambe valutato false.
 
-Aprire il **Resources/layout/Main.axml** file e aggiungere il [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) elemento:
+Aprire il file resources **/layout/Main. aXML** e [`Button`](xref:Android.Widget.Button) aggiungere l'elemento:
 
 ```xml
 <Button
@@ -52,10 +52,10 @@ Aprire il **Resources/layout/Main.axml** file e aggiungere il [ `Button` ](https
         android:background="@drawable/android_button" />
 ```
 
-Il `android:background` attributo specifica la risorsa drawable da usare per lo sfondo del pulsante (che, quando salvato in **Resources/drawable/android.xml**, viene fatto riferimento come `@drawable/android`). Questa impostazione sostituisce l'immagine di sfondo normale usato per i pulsanti nell'intero sistema. Affinché il drawable modificare l'immagine basata allo stato del pulsante, è necessario applicare l'immagine di sfondo.
+L' `android:background` attributo specifica la risorsa che è possibile utilizzare per lo sfondo del pulsante (che, quando viene salvata nel file resources/definible **/Android. XML**, viene fatto riferimento come `@drawable/android`). Viene sostituita l'immagine di sfondo normale utilizzata per i pulsanti nel sistema. Affinché il disegnatore modifichi la propria immagine in base allo stato del pulsante, l'immagine deve essere applicata allo sfondo.
 
-Per rendere il pulsante di eseguire un'operazione quando premuto, aggiungere il codice seguente alla fine del [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle/)
-metodo:
+Per fare in modo che il pulsante esegua una pressione, aggiungere il codice seguente alla fine del[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Metodo
 
 ```csharp
 Button button = FindViewById<Button>(Resource.Id.button);
@@ -65,10 +65,10 @@ button.Click += (o, e) => {
 };
 ```
 
-Acquisisce il [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) del layout, quindi aggiunge un [ `Toast` ](https://developer.xamarin.com/api/type/Android.Widget.Toast/) messaggio da visualizzare quando il [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) si fa clic.
+Questa operazione acquisisce [`Button`](xref:Android.Widget.Button) dal layout e quindi aggiunge un [`Toast`](xref:Android.Widget.Toast) messaggio [`Button`](xref:Android.Widget.Button) da visualizzare quando si fa clic su.
 
-Ora eseguire l'applicazione.
+A questo punto, eseguire l'applicazione.
 
 
-*Parti di questa pagina sono modifiche basate sul lavoro creato e condiviso da Android Open Source Project e usate in base a condizioni descritte nel*
-[*licenza Creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/).
+*Parti di questa pagina sono modifiche basate sul lavoro creato e condivise dal progetto open source Android e usate in base alle condizioni descritte nella*
+[*licenza Creative Commons 2,5 Attribution*](http://creativecommons.org/licenses/by/2.5/).

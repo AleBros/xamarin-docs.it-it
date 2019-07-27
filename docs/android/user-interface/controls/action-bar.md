@@ -1,40 +1,37 @@
 ---
-title: ActionBar
+title: ActionBar per Novell. Android
 ms.prod: xamarin
 ms.assetid: 84A79F1F-9E73-4E3E-80FA-B72E5686900B
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 95ebcc8ef436c90e807045bd009b35ff1c3e9c1f
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: 7717e247ca3b3ecf82e1814ab43e8351b4f75ba6
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740818"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510447"
 ---
-# <a name="actionbar"></a>ActionBar
+# <a name="actionbar-for-xamarinandroid"></a>ActionBar per Novell. Android
+
+Quando si `TabActivity`USA, il codice per creare le icone di tabulazione non ha alcun effetto quando viene eseguito sul Framework Android 4,0. Anche se funziona come nelle versioni di Android precedenti alla 2,3, la `TabActivity` classe stessa è stata deprecata in 4,0. È stato introdotto un nuovo modo per creare un'interfaccia a schede che usa il Barra delle azioni, che verrà illustrato di seguito.
 
 
-## <a name="overview"></a>Panoramica
+## <a name="action-bar-tabs"></a>Schede Barra delle azioni
 
-Quando si usa `TabActivity`, il codice per creare le icone di scheda non ha alcun effetto quando vengono eseguito su framework Android 4.0. Anche se a livello funzionale funziona come accadeva nelle versioni di Android precedenti la 2.3, il `TabActivity` classe stessa è stata deprecata in 4.0. È stato introdotto un nuovo modo per creare un'interfaccia a schede che usa la barra delle azioni, che verranno illustrati di seguito.
-
-
-## <a name="action-bar-tabs"></a>Schede della barra delle azioni
-
-Barra delle azioni include il supporto per l'aggiunta di interfacce a schede in Android 4.0.
+Il Barra delle azioni include il supporto per l'aggiunta di interfacce a schede in Android 4,0.
 Lo screenshot seguente mostra un esempio di tale interfaccia.
 
-[![Screenshot dell'app in esecuzione in un emulatore. vengono visualizzate due schede](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
+[![Screenshot dell'app in esecuzione in un emulatore; vengono visualizzate due schede](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
 
-Per creare le schede nella barra delle azioni, è necessario innanzitutto impostare relativo `NavigationMode` proprietà per supportare le schede. In Android 4, un' `ActionBar` proprietà è disponibile nella classe di attività, è possibile usare per impostare il `NavigationMode` simile al seguente:
+Per creare schede nella barra delle azioni, è prima di tutto necessario impostare la `NavigationMode` proprietà per supportare le schede. In Android 4 è disponibile `ActionBar` una proprietà nella classe Activity, che è possibile usare per `NavigationMode` impostare come segue:
 
 ```csharp
 this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 ```
 
-Al termine, è possibile creare una scheda tramite una chiamata di `NewTab` (metodo) sulla barra delle azioni. Con questa istanza di scheda, possiamo chiamare il `SetText` e `SetIcon` metodi per impostare un'icona e il testo dell'etichetta della scheda tali chiamate vengono eseguite nell'ordine nel codice riportato di seguito:
+Al termine di questa operazione, è possibile creare una scheda chiamando il `NewTab` metodo sul barra delle azioni. Con questa istanza di scheda è possibile chiamare i `SetText` metodi `SetIcon` e per impostare il testo e l'icona dell'etichetta della scheda. queste chiamate vengono eseguite nell'ordine indicato nel codice riportato di seguito:
 
 ```csharp
 var tab = this.ActionBar.NewTab ();
@@ -42,7 +39,7 @@ tab.SetText (tabText);
 tab.SetIcon (Resource.Drawable.ic_tab_white);
 ```
 
-Prima di poter aggiungere la scheda, tuttavia, è necessario gestire il `TabSelected` evento. In questo gestore, è possibile creare il contenuto della scheda. Le schede della barra delle azioni sono progettate per funzionare con *frammenti*, che sono classi che rappresentano una parte dell'interfaccia utente in un'attività. Per questo esempio, la visualizzazione del frammento contiene un unico `TextView`, che sono l'aumento nel nostro `Fragment` sottoclasse simile al seguente:
+Prima di poter aggiungere la scheda, tuttavia, è necessario gestire l' `TabSelected` evento. In questo gestore, è possibile creare il contenuto per la scheda. Barra delle azioni schede sono progettate per funzionare con i *frammenti*, ovvero classi che rappresentano una parte dell'interfaccia utente in un'attività. Per questo esempio, la visualizzazione del frammento contiene un `TextView`singolo oggetto, che viene ingrandito `Fragment` nella sottoclasse come indicato di seguito:
 
 ```csharp
 class SampleTabFragment: Fragment
@@ -65,7 +62,7 @@ class SampleTabFragment: Fragment
 }
 ```
 
-L'argomento dell'evento passato il `TabSelected` evento è di tipo `TabEventArgs`, che include un `FragmentTransaction` proprietà che è possibile usare per aggiungere il frammento come illustrato di seguito:
+L'argomento dell'evento passato nell' `TabSelected` evento è di tipo `TabEventArgs`, che include una `FragmentTransaction` proprietà che è possibile usare per aggiungere il frammento, come illustrato di seguito:
 
 ```csharp
 tab.TabSelected += delegate(object sender, ActionBar.TabEventArgs e) {             
@@ -74,35 +71,35 @@ tab.TabSelected += delegate(object sender, ActionBar.TabEventArgs e) {
 };
 ```
 
-Infine, è possibile aggiungere la scheda alla barra delle azioni tramite una chiamata di `AddTab` metodo come illustrato nel codice seguente:
+Infine, è possibile aggiungere la scheda al barra delle azioni chiamando il `AddTab` metodo come illustrato nel codice seguente:
 
 ```csharp
 this.ActionBar.AddTab (tab);
 ```
 
-Per un esempio completo, vedere la *HelloTabsICS* progetto nel codice di esempio per questo documento.
+Per l'esempio completo, vedere il progetto *HelloTabsICS* nel codice di esempio per questo documento.
 
 
 ## <a name="shareactionprovider"></a>ShareActionProvider
 
-Il `ShareActionProvider` classe consente a un'azione di condivisione in modo da una barra delle azioni. Si occupa della creazione di una vista di azione con un elenco di App che può gestire un programma di condivisione e mantiene una cronologia delle applicazioni usate in precedenza per facilitare l'accesso ad essi in un secondo momento dalla barra delle azioni. Ciò consente alle applicazioni di condividere i dati tramite un'esperienza utente che sia coerenza in Android.
+La `ShareActionProvider` classe consente di eseguire un'azione di condivisione da un barra delle azioni. Si occupa della creazione di una visualizzazione azione con un elenco di app in grado di gestire uno scopo di condivisione e mantiene una cronologia delle applicazioni utilizzate in precedenza per facilitarne l'accesso in un secondo momento dalla Barra delle azioni. Questo consente alle applicazioni di condividere i dati attraverso un'esperienza utente coerente in Android.
 
 
-### <a name="image-sharing-example"></a>Esempio di condivisione dell'immagine
+### <a name="image-sharing-example"></a>Esempio di condivisione immagini
 
-Ad esempio, di seguito è riportata una schermata di una barra delle azioni con una voce di menu per condividere un'immagine (ricavare il [ShareActionProvider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/) esempio). Quando l'utente tocca la voce di menu sulla barra delle azioni, di ShareActionProvider carica l'applicazione debba gestire un Intent che è associato il `ShareActionProvider`. In questo esempio, l'applicazione di messaggistica è stato utilizzato in precedenza, in modo che viene presentato sulla barra delle azioni.
+Ad esempio, di seguito è riportata una schermata di un Barra delle azioni con una voce di menu per condividere un'immagine (tratto dall'esempio [ShareActionProvider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/) ). Quando l'utente tocca la voce di menu nella Barra delle azioni, ShareActionProvider carica l'applicazione per gestire uno scopo associato a `ShareActionProvider`. In questo esempio, l'applicazione di messaggistica è stata usata in precedenza, quindi viene presentata nel Barra delle azioni.
 
-[![Screenshot dell'icona nella barra delle azioni di messaggistica](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
-
-
-Quando l'utente fa clic sull'elemento nella barra delle azioni, viene avviata l'app di messaggistica che contiene l'immagine condiviso, come illustrato di seguito:
-
-[![Schermata di visualizzazione immagine monkey app di messaggistica](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
+[![Screenshot dell'icona dell'applicazione di messaggistica nell'Barra delle azioni](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
 
-### <a name="specifying-the-action-provider-class"></a>Specifica l'azione di classe del Provider
+Quando l'utente fa clic sull'elemento nel Barra delle azioni, viene avviata l'app di messaggistica che contiene l'immagine condivisa, come illustrato di seguito:
 
-Usare la `ShareActionProvider`, impostare il `android:actionProviderClass` attributo su una voce di menu nel codice XML per il menu della barra delle azioni, come indicato di seguito:
+[![Screenshot dell'app di messaggistica che Visualizza l'immagine Monkey](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
+
+
+### <a name="specifying-the-action-provider-class"></a>Specifica della classe del provider di azioni
+
+Per utilizzare `ShareActionProvider`, impostare l' `android:actionProviderClass` attributo su una voce di menu nel codice XML per il menu barra delle azioni come indicato di seguito:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -115,9 +112,9 @@ Usare la `ShareActionProvider`, impostare il `android:actionProviderClass` attri
 ```
 
 
-### <a name="inflating-the-menu"></a>Ciò fa aumentare erroneamente il menu di scelta
+### <a name="inflating-the-menu"></a>Gonfiaggio del menu
 
-Per aumento il menu di scelta, viene eseguito l'override `OnCreateOptionsMenu` nella sottoclasse attività. Dopo aver ottenuto un riferimento al menu di scelta, è possibile ottenere il `ShareActionProvider` dal `ActionProvider` proprietà della voce di menu e quindi usare il metodo SetShareIntent per impostare il `ShareActionProvider`dell'intento, come illustrato di seguito:
+Per ingrandire il menu, viene eseguito `OnCreateOptionsMenu` l'override nella sottoclasse Activity. Una volta ottenuto un riferimento al menu, è possibile ottenere `ShareActionProvider` `ActionProvider` dalla proprietà della voce di menu e quindi usare il metodo SetShareIntent per impostare lo `ShareActionProvider`scopo di, come illustrato di seguito:
 
 ```csharp
 public override bool OnCreateOptionsMenu (IMenu menu)
@@ -132,9 +129,9 @@ public override bool OnCreateOptionsMenu (IMenu menu)
 ```
 
 
-### <a name="creating-the-intent"></a>Lo scopo di creazione
+### <a name="creating-the-intent"></a>Creazione della finalità
 
-Il `ShareActionProvider` userà la finalità, passata per il `SetShareIntent` metodo nel codice precedente, per avviare l'attività appropriata. In questo caso si crea un Intent per inviare un'immagine usando il codice seguente:
+Utilizzerà lo scopo, passato `SetShareIntent` al metodo nel codice precedente, per avviare l'attività appropriata. `ShareActionProvider` In questo caso viene creata una finalità per inviare un'immagine usando il codice seguente:
 
 ```csharp
 Intent CreateIntent ()
@@ -147,13 +144,13 @@ Intent CreateIntent ()
 }
 ```
 
-L'immagine nell'esempio di codice precedente è incluso come un asset con l'applicazione e copiato in una posizione accessibile pubblicamente quando viene creata l'attività, in modo che sia accessibile ad altre applicazioni, ad esempio le app di messaggistica. Il codice di esempio che accompagna questo articolo contiene il codice sorgente completo di questo esempio, che illustra l'uso.
+L'immagine nell'esempio di codice precedente viene inclusa come asset con l'applicazione e copiata in una posizione accessibile pubblicamente quando viene creata l'attività, quindi sarà accessibile ad altre applicazioni, ad esempio l'app di messaggistica. Il codice di esempio che accompagna questo articolo contiene l'origine completa di questo esempio, ne illustra l'uso.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Hello schede ICS (esempio)](https://developer.xamarin.com/samples/monodroid/HelloTabsICS/)
-- [ShareActionProvider Demo (esempio)](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)
+- [Scheda Hello ICS (esempio)](https://developer.xamarin.com/samples/monodroid/HelloTabsICS/)
+- [Demo di ShareActionProvider (esempio)](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)
 - [Introduzione a Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Piattaforma Android 4.0](https://developer.android.com/sdk/android-4.0.html)
+- [Piattaforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

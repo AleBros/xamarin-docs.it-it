@@ -6,46 +6,46 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 1e9a71de7725c8382e133d85977407bcc859fc58
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f8a542b58fa891b63f43d1c87dea911b83e01949
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013662"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509312"
 ---
 # <a name="using-android-assets"></a>Uso di asset Android
 
-_Gli asset_ offrono un modo per includere file arbitrari, ad esempio testo, xml, i tipi di carattere, musica e video nell'applicazione. Se si tenta di includere tali file come "resources", Android li elabora in un sistema di risorse e non sarà in grado di ottenere i dati non elaborati. Se si desidera accedere ai dati invariati, gli asset sono un modo per eseguire questa operazione.
+Gli _Asset_ forniscono un modo per includere file arbitrari come testo, XML, caratteri, musica e video nell'applicazione. Se si tenta di includere questi file come "risorse", verranno elaborati dal sistema di risorse di Android e non sarà possibile ottenere i dati non elaborati. Se si desidera accedere ai dati invariati, le risorse sono un modo per eseguire questa operazione.
 
-Asset aggiunti al progetto verrà visualizzato esattamente come un file system in grado di leggere dall'applicazione usando [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/).
-Questo semplice esempio, si intende aggiungere un asset di file di testo per il progetto, lo legge con `AssetManager`e visualizzarli in un controllo TextView.
+Gli asset aggiunti al progetto vengono visualizzati come un file system in grado di leggere dall'applicazione usando [AssetManager](xref:Android.Content.Res.AssetManager).
+In questa semplice demo, verrà aggiunto un asset di file di testo al progetto, verrà letto usando `AssetManager`e visualizzato in un oggetto TextView.
 
 
-## <a name="add-asset-to-project"></a>Aggiungi Asset al progetto
+## <a name="add-asset-to-project"></a>Aggiungi asset al progetto
 
-Gli asset di andare `Assets` cartella del progetto. Aggiungere un nuovo file di testo in questa cartella denominata `read_asset.txt`. Inserire del testo, ad esempio "Leggevo da un asset!".
+Gli `Assets` asset vengono inseriti nella cartella del progetto. Aggiungere un nuovo file di testo a questa cartella `read_asset.txt`denominata. Inserire del testo come "I provenienti da un asset!".
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Visual Studio dovrebbe avere impostato il **Build Action** per questo file per **AndroidAsset**:
+In Visual Studio è necessario impostare l' **azione di compilazione** per questo file su **AndroidAsset**:
 
-![Impostazione azione di compilazione su AndroidAsset](android-assets-images/asset-properties-vs.png) 
+![Impostazione dell'azione di compilazione su AndroidAsset](android-assets-images/asset-properties-vs.png) 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Visual Studio per Mac deve avere impostato il **Build Action** per questo file per **AndroidAsset**:
+Visual Studio per Mac necessario impostare l' **azione di compilazione** per questo file su **AndroidAsset**:
 
-[![Impostazione azione di compilazione su AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
+[![Impostazione dell'azione di compilazione su AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
 
 -----
 
-Selezionando i valori corretti **BuildAction** assicura che i file verrà inserito in file APK in fase di compilazione.
+Selezionando il **BuildAction** corretto si garantisce che il file venga incluso nel file apk in fase di compilazione.
 
 
-## <a name="reading-assets"></a>La lettura di asset
+## <a name="reading-assets"></a>Lettura degli asset
 
-Gli asset vengono letti utilizzando un [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/). Un'istanza del `AssetManager` è disponibile tramite l'accesso il [asset](https://developer.xamarin.com/api/property/Android.Content.Context.Assets/) proprietà in un `Android.Content.Context`, ad esempio un'attività.
-Nel codice seguente, apriamo nostri **read_asset.txt** asset, leggere il contenuto e visualizzarlo utilizzando un TextView.
+Gli asset vengono letti usando un [AssetManager](xref:Android.Content.Res.AssetManager). Un'istanza del `AssetManager` è disponibile accedendo alla proprietà [assets](xref:Android.Content.Context.Assets) su un oggetto `Android.Content.Context`, ad esempio un'attività.
+Nel codice seguente si apre l'asset **read_asset. txt** , si legge il contenuto e lo si visualizza usando un oggetto TextView.
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -72,12 +72,12 @@ protected override void OnCreate (Bundle bundle)
 
 ## <a name="running-the-application"></a>Esecuzione dell'applicazione
 
-Eseguire l'applicazione e si dovrebbe vedere gli argomenti seguenti:
+Eseguire l'applicazione e dovrebbe essere visualizzato quanto segue:
 
-![Screenshot di esempio](android-assets-images/screenshot.png)
+![Schermata di esempio](android-assets-images/screenshot.png)
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/)
-- [Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
+- [AssetManager](xref:Android.Content.Res.AssetManager)
+- [Contesto](xref:Android.Content.Context)

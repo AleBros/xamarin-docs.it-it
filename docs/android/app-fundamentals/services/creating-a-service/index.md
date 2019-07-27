@@ -6,23 +6,23 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 8c2086025ccb5fe41b3ffddc9cd650c1e0c81fbc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c5348ab754139dbd4012f6bfe9d22068ac16d12b
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013480"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509249"
 ---
 # <a name="creating-a-service"></a>Creazione di un servizio
 
-Servizi di xamarin. Android devono rispettare due regole inviolabili dei servizi Android:
+I servizi Novell. Android devono rispettare due regole inviolabili dei servizi Android:
 
-* È necessario estendere la [ `Android.App.Service` ](https://developer.xamarin.com/api/type/Android.App.Service/).
-* Deve essere decorate con il [ `Android.App.ServiceAttribute` ](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute/).
+* Devono estendere [`Android.App.Service`](xref:Android.App.Service).
+* Devono essere decorati con [`Android.App.ServiceAttribute`](xref:Android.App.ServiceAttribute).
 
-Un altro requisito dei servizi Android è che deve essere registrati nel **androidmanifest. XML** viene assegnato un nome univoco. Xamarin. Android registrerà automaticamente il servizio nel manifesto in fase di compilazione con l'attributo XML necessario.
+Un altro requisito dei servizi Android è che devono essere registrati in **file AndroidManifest. XML** e dato un nome univoco. Novell. Android registrerà automaticamente il servizio nel manifesto in fase di compilazione con l'attributo XML necessario.
 
-Questo frammento di codice è un esempio più semplice di creazione di un servizio in xamarin. Android che soddisfi questi due requisiti:  
+Questo frammento di codice è il più semplice esempio di creazione di un servizio in Novell. Android che soddisfi questi due requisiti:  
 
 ```csharp
 [Service]
@@ -32,13 +32,13 @@ public class DemoService : Service
 }
 ```
 
-In fase di compilazione xamarin. Android verrà registrato il servizio inserendo l'elemento XML seguente nel **androidmanifest. XML** (si noti che xamarin. Android generato un nome casuale per il servizio):
+In fase di compilazione, Novell. Android registrerà il servizio inserendo l'elemento XML seguente in **file AndroidManifest. XML** (si noti che Novell. Android ha generato un nome casuale per il servizio):
 
 ```xml
 <service android:name="md5a0cbbf8da641ae5a4c781aaf35e00a86.DemoService" />
 ```
 
-È possibile condividere un servizio con altre applicazioni per Android _esportazione_ è. Questa operazione viene eseguita impostando il `Exported` proprietà di `ServiceAttribute`. Quando si esporta un servizio, il `ServiceAttribute.Name` proprietà deve essere impostata anche per fornire un nome significativo pubblico per il servizio. Questo frammento di codice viene illustrato come esportare e assegnare un nome servizio:
+È possibile condividere un servizio con altre applicazioni Android esportandolo  . Questa operazione viene eseguita impostando `Exported` la proprietà nell' `ServiceAttribute`oggetto. Quando si esporta un servizio, `ServiceAttribute.Name` la proprietà deve essere impostata anche per fornire un nome pubblico significativo per il servizio. Questo frammento di codice illustra come esportare e denominare un servizio:
 
 ```csharp
 [Service(Exported=true, Name="com.xamarin.example.DemoService")]
@@ -48,15 +48,15 @@ public class DemoService : Service
 }
 ```
 
-Il **androidmanifest. XML** (elemento) per questo servizio sarà quindi simile a:
+L'elemento **file AndroidManifest. XML** per questo servizio sarà simile al seguente:
 
 ```xml
 <service android:exported="true" android:name="com.xamarin.example.DemoService" />
 ```
 
-I servizi è proprio ciclo di vita con i metodi di callback richiamati quando viene creato il servizio. Esattamente quali metodi vengono richiamati dipende dal tipo di servizio. Un servizio avviato deve implementare i metodi del ciclo di vita diverso rispetto a un servizio associato, mentre un servizio ibrido deve implementare i metodi di callback per un servizio avviato e un servizio associato. Questi metodi sono tutti i membri del `Service` classe; la modalità in cui viene avviato il servizio determina quali metodi del ciclo di vita verranno richiamati. Questi metodi del ciclo di vita verranno descritte in dettaglio in un secondo momento.
+I servizi hanno il proprio ciclo di vita con metodi di callback che vengono richiamati durante la creazione del servizio. I metodi richiamati variano in base al tipo di servizio. Un servizio avviato deve implementare metodi del ciclo di vita diversi rispetto a un servizio associato, mentre un servizio ibrido deve implementare i metodi di callback sia per un servizio avviato che per un servizio associato. Questi metodi sono tutti membri della `Service` classe. il modo in cui il servizio viene avviato determinerà i metodi del ciclo di vita che verranno richiamati. Questi metodi del ciclo di vita verranno descritti in dettaglio più avanti.
 
-Per impostazione predefinita, un servizio verrà avviato nello stesso processo come un'applicazione Android. È possibile avviare un servizio in un proprio processo impostando il `ServiceAttribute.IsolatedProcess` proprietà su true:
+Per impostazione predefinita, un servizio viene avviato nello stesso processo di un'applicazione Android. È possibile avviare un servizio in un processo autonomo impostando la `ServiceAttribute.IsolatedProcess` proprietà su true:
 
 ```csharp
 [Service(IsolatedProcess=true)]
@@ -66,16 +66,16 @@ public class DemoService : Service
 }
 ```
 
-Il passaggio successivo è esaminare come avviare un servizio e quindi passare a esaminare come implementare i tre diversi tipi di servizi.
+Il passaggio successivo consiste nell'esaminare come avviare un servizio e quindi passare a esaminare come implementare i tre diversi tipi di servizi.
 
 > [!NOTE]
-> Un servizio viene eseguito sul thread dell'interfaccia utente, in modo che se tutte le operazioni da eseguire che bloccano l'interfaccia utente, il servizio deve usare i thread per eseguire il lavoro.
+> Un servizio viene eseguito nel thread dell'interfaccia utente, pertanto se è necessario eseguire un lavoro che blocca l'interfaccia utente, è necessario che il servizio utilizzi thread per eseguire il lavoro.
 
 ## <a name="starting-a-service"></a>Avvio di un servizio
 
-È il modo più semplice per avviare un servizio in Android per inviare un `Intent` che contiene i metadati per consentire di identificare il servizio che deve essere avviato. Esistono due diversi stili di Intent che può essere usato per avviare un servizio:
+Il modo più semplice per avviare un servizio in Android è inviare un oggetto `Intent` che contiene i metadati per identificare il servizio da avviare. Per avviare un servizio, è possibile usare due stili diversi di Intent:
 
--   **Intent esplicito** &ndash; un' _intento esplicito_ identificherà esattamente quali servizio deve essere usato per completare una determinata azione. Un Intent esplicito può essere considerato una lettera che ha un indirizzo specifico. Android indirizzerà l'intento al servizio in cui viene identificato in modo esplicito. Questo frammento di codice è un esempio dell'uso di un Intent esplicito per avviare un servizio denominato `DownloadService`:
+-   **Finalità esplicita** Una finalità esplicita identificherà esattamente il servizio da usare per completare una determinata azione.  &ndash; Una finalità esplicita può essere considerata come una lettera con un indirizzo specifico. Android instraderà l'intento al servizio identificato in modo esplicito. Questo frammento di codice è un esempio dell'uso di un'intenzione esplicita `DownloadService`per avviare un servizio denominato:
 
     ```csharp
     // Example of creating an explicit Intent in an Android Activity
@@ -83,31 +83,31 @@ Il passaggio successivo è esaminare come avviare un servizio e quindi passare a
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
--   **Intent implicito** &ndash; identifica regime di controllo libero delle finalità di questo tipo i di azione che l'utente desidera eseguire, ma il servizio esatto per completare l'operazione è sconosciuto. Un Intent implicito può essere considerato come una lettera che viene risolto "To Whom It May interesse in corso".
-    Android verrà esaminarne il contenuto delle finalità e determinare se c'è un servizio esistente che corrisponde alla finalità.
+-   **Finalità implicita** &ndash; Questo tipo di finalità identifica in modo generico l'azione che l'utente desidera eseguire, ma il servizio esatto per completare l'azione è sconosciuto. Un intento implicito può essere considerato come una lettera "a chi potrebbe preoccuparsi...".
+    Android analizzerà il contenuto della finalità e determinerà se esiste già un servizio che corrisponde allo scopo.
 
-    Un' _filtro intent_ consente di far corrispondere l'intent implicito con un servizio registrato. Un filtro intent è un elemento XML che viene aggiunto alla **androidmanifest. XML** che contiene i metadati necessari per ottenere una corrispondenza con un servizio con un intent implicito.
+    Viene utilizzato un _filtro preventivo_ per trovare una corrispondenza tra finalità implicita e un servizio registrato. Un filtro preventivo è un elemento XML aggiunto a **file AndroidManifest. XML** che contiene i metadati necessari per consentire la corrispondenza di un servizio con finalità implicite.
 
     ```csharp
     Intent sendIntent = new Intent("common.xamarin.DemoService");
     sendIntent.Data = Uri.Parse(fileToDownload);
     ```
 
-Se Android ha più di una corrispondenza possibile per un intent implicito, potrebbe chiedere all'utente di selezionare il componente per gestire l'azione:
+Se Android ha più di una corrispondenza possibile per uno scopo implicito, potrebbe richiedere all'utente di selezionare il componente per gestire l'azione:
 
-![Screenshot di una finestra di dialogo di disambiguazione](images/creating-a-service-01.png "Screenshot di una finestra di dialogo di disambiguazione")
+![Screenshot della finestra di dialogo di risoluzione dell'ambiguità](images/creating-a-service-01.png "Screenshot della finestra di dialogo di risoluzione dell'ambiguità")
 
 > [!IMPORTANT]
-> A partire da Android 5.0 (livello AP 21) un intent implicito non può essere utilizzato per avviare un servizio.
+> A partire da Android 5,0 (AP Level 21) non è possibile usare un preventivo implicito per avviare un servizio.
 
-Dove possibile, le applicazioni devono utilizzare Intent esplicito per avviare un servizio. Un Intent implicito non richiede un servizio specifico per l'avvio &ndash; è una richiesta per alcuni servizi installata nel dispositivo per gestire la richiesta. Questa richiesta ambigua può comportare servizio errato che gestisce la richiesta o un'altra app inutilmente avvio (che aumenta la pressione per le risorse nel dispositivo).
+Laddove possibile, le applicazioni devono usare gli Intent espliciti per avviare un servizio. Un intento implicito non richiede che un servizio specifico venga &ndash; avviato. si tratta di una richiesta per il servizio installato sul dispositivo per gestire la richiesta. Questa richiesta ambigua può causare un servizio errato che gestisce la richiesta o un'altra app avviata in modo inutilmente (che aumenta la pressione delle risorse sul dispositivo).
 
-Modo in cui viene inviato l'intento dipende dal tipo di servizio e verrà descritte in dettaglio in un secondo momento nelle guide specifiche per ogni tipo di servizio.
+Il modo in cui viene inviato lo scopo dipende dal tipo di servizio e verrà illustrato in dettaglio più avanti nelle guide specifiche per ogni tipo di servizio.
 
 
-### <a name="creating-an-intent-filter-for-implicit-intents"></a>Creazione di un filtro Intent per Intent implicito
+### <a name="creating-an-intent-filter-for-implicit-intents"></a>Creazione di un filtro preventivo per gli Intent impliciti
 
-Per associare un servizio con un Intent implicito, un'app per Android è necessario fornire alcuni metadati per identificare le funzionalità del servizio. Questi metadati viene fornito da _filtri di intent_. Filtri di Intent contengono alcune informazioni, ad esempio un'azione o un tipo di dati, che devono essere presenti in un Intent per avviare un servizio. In xamarin. Android, il filtro intent viene registrato nel **androidmanifest. XML** tramite la decorazione di un servizio con il [ `IntentFilterAttribute` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/). Ad esempio, il codice seguente aggiunge un filtro intent associata a un'azione di `com.xamarin.DemoService`:
+Per associare un servizio a uno scopo implicito, un'app Android deve fornire alcuni metadati per identificare le funzionalità del servizio. Questi metadati sono forniti dai filtri per _finalità_. I filtri per finalità contengono alcune informazioni, ad esempio un'azione o un tipo di dati, che devono essere presenti nello scopo di avviare un servizio. In Novell. Android il filtro preventivo è registrato in **file AndroidManifest. XML** , decorando un servizio con [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute). Il codice seguente, ad esempio, aggiunge un filtro preventivo con un'azione associata `com.xamarin.DemoService`di:
 
 ```csharp
 [Service]
@@ -117,7 +117,7 @@ public class DemoService : Service
 }
 ```
 
-Il risultato è una voce che verrà inclusa nel **androidmanifest. XML** file &ndash; una voce in un pacchetto con l'applicazione in modo analogo all'esempio seguente:
+In questo modo viene inclusa una voce nel &ndash; file **file AndroidManifest. XML** , una voce che viene inclusa in un pacchetto con l'applicazione in modo analogo all'esempio seguente:
 
 ```xml
 <service android:name="demoservice.DemoService">
@@ -127,12 +127,12 @@ Il risultato è una voce che verrà inclusa nel **androidmanifest. XML** file &n
 </service>
 ```
 
-Con le nozioni di base di un servizio di xamarin. Android dall'area di lavoro, esaminiamo i diversi sottotipi dei servizi in modo più dettagliato.
+Con le nozioni di base di un servizio Novell. Android, esaminiamo i diversi sottotipi di servizi in modo più dettagliato.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Android.App.Service](https://developer.xamarin.com/api/type/Android.App.Service/)
-- [Android.App.ServiceAttribute](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute/)
-- [Android.App.Intent](https://developer.xamarin.com/api/type/Android.Content.Intent/)
-- [Android.App.IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/)
+- [Android.App.Service](xref:Android.App.Service)
+- [Android.App.ServiceAttribute](xref:Android.App.ServiceAttribute)
+- [Android.App.Intent](xref:Android.Content.Intent)
+- [Android.App.IntentFilterAttribute](xref:Android.App.IntentFilterAttribute)

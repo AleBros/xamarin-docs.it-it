@@ -1,5 +1,5 @@
 ---
-title: AuthenticateUsers con un Provider di identità
+title: AuthenticateUsers con un provider di identità
 description: Questo articolo illustra come usare AUTH per gestire il processo di autenticazione in un'applicazione xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 006e403b50a452265a40a0e95d17769fa0446a1a
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 294483e8b831aa085fc338eb05147ced1098c1c5
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650410"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68508254"
 ---
-# <a name="authenticate-users-with-an-identity-provider"></a>Autenticare gli utenti con un Provider di identità
+# <a name="authenticate-users-with-an-identity-provider"></a>Autenticare gli utenti con un provider di identità
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
 
 _AUTH è una versione di SDK multipiattaforma per l'autenticazione degli utenti e i propri account di archiviazione. Include gli autenticatori di OAuth che forniscono il supporto per l'utilizzo del provider di identità, ad esempio Google, Microsoft, Facebook e Twitter. Questo articolo illustra come usare AUTH per gestire il processo di autenticazione in un'applicazione xamarin. Forms._
 
@@ -171,7 +171,7 @@ Il `OpenUrl` metodo converte l'URL ricevuto da un' `NSUrl` per .NET `Uri`, prima
 
 #### <a name="android"></a>Android
 
-In Android, viene registrato uno schema URL personalizzato specificando un' [ `IntentFilter` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) attributo di `Activity` che consente di gestire lo schema. Al termine di richiesta di autorizzazione, il provider di identità reindirizza all'URL di reindirizzamento dell'applicazione. Come l'URL viene utilizzato uno schema personalizzato comporta l'avvio dell'applicazione Android, passando in URL come parametro di avvio, in cui viene elaborato dal `OnCreate` metodo di `Activity` registrato per gestire lo schema URL personalizzato. Esempio di codice seguente viene illustrata la classe dall'applicazione di esempio che gestisce lo schema URL personalizzato:
+In Android, viene registrato uno schema URL personalizzato specificando un' [ `IntentFilter` ](xref:Android.App.IntentFilterAttribute) attributo di `Activity` che consente di gestire lo schema. Al termine di richiesta di autorizzazione, il provider di identità reindirizza all'URL di reindirizzamento dell'applicazione. Come l'URL viene utilizzato uno schema personalizzato comporta l'avvio dell'applicazione Android, passando in URL come parametro di avvio, in cui viene elaborato dal `OnCreate` metodo di `Activity` registrato per gestire lo schema URL personalizzato. Esempio di codice seguente viene illustrata la classe dall'applicazione di esempio che gestisce lo schema URL personalizzato:
 
 ```csharp
 [Activity(Label = "CustomUrlSchemeInterceptorActivity", NoHistory = true, LaunchMode = LaunchMode.SingleTop )]
@@ -197,7 +197,7 @@ public class CustomUrlSchemeInterceptorActivity : Activity
 }
 ```
 
-Il `DataSchemes` proprietà del [ `IntentFilter` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) deve essere impostata all'identificatore del client invertito viene ottenuto dall'id client Android per il progetto sul [Console API Google](http://console.developers.google.com).
+Il `DataSchemes` proprietà del [ `IntentFilter` ](xref:Android.App.IntentFilterAttribute) deve essere impostata all'identificatore del client invertito viene ottenuto dall'id client Android per il progetto sul [Console API Google](http://console.developers.google.com).
 
 Il `OnCreate` metodo converte l'URL ricevuto da un' `Android.Net.Url` per .NET `Uri`, prima di elaborare l'URL di reindirizzamento con il `OnPageLoading` metodo pubblico `OAuth2Authenticator` oggetto. In questo modo AUTH chiudere la scheda del browser web e analizzare i dati ricevuti OAuth.
 

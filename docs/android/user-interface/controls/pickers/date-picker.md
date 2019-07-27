@@ -1,58 +1,56 @@
 ---
 title: Selezione data
-description: Selezione di date del calendario utilizzando il DatePickerDialog e DialogFragment
+description: Selezione delle date del calendario tramite DatePickerDialog e DialogFragment
 ms.prod: xamarin
 ms.assetid: F2BCD8D4-8957-EA53-C5A8-6BB603ADB47B
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2018
-ms.openlocfilehash: 9f82317f6041de3952d11b391afffafe6fbd8761
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ef9abbd60fc83622631b916c50f4993c1c848b00
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153504"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510248"
 ---
-# <a name="date-picker"></a>Selezione data
+# <a name="android-date-picker"></a>Selezione data Android
 
 ## <a name="overview"></a>Panoramica
 
-Esistono alcuni casi quando un utente deve immettere dati in un'applicazione Android. Per semplificare questo, il framework Android offre il [ `DatePicker` ](https://developer.xamarin.com/api/type/Android.Widget.DatePicker/) widget e il [ `DatePickerDialog` ](https://developer.xamarin.com/api/type/Android.App.DatePickerDialog/) . Il `DatePicker` consente agli utenti di selezionare l'anno, mese e giorno in un'interfaccia coerente tra dispositivi e applicazioni. Il `DatePickerDialog` è una classe helper che incapsula il `DatePicker` in una finestra di dialogo.
+In alcuni casi è necessario che un utente immetta i dati in un'applicazione Android. Per semplificare questa operazione, il Framework Android fornisce il [`DatePicker`](xref:Android.Widget.DatePicker) widget e il [`DatePickerDialog`](xref:Android.App.DatePickerDialog) . `DatePicker` Consente agli utenti di selezionare l'anno, il mese e il giorno in un'interfaccia coerente tra dispositivi e applicazioni. È una classe helper che incapsula `DatePicker` in una finestra di dialogo. `DatePickerDialog`
 
-Le applicazioni Android moderni dovrebbero visualizzare le `DatePickerDialog` in un [ `DialogFragment` ](https://developer.xamarin.com/api/type/Android.App.DialogFragment/). Ciò consentirà a un'applicazione visualizzare il controllo DatePicker come una finestra di dialogo popup o incorporato in un'attività. Inoltre, il `DialogFragment` gestiranno i ciclo di vita e la visualizzazione della finestra di dialogo, riducendo la quantità di codice che deve essere implementata.
+Le `DatePickerDialog` applicazioni Android moderne dovrebbero visualizzare in un [`DialogFragment`](xref:Android.App.DialogFragment). Ciò consentirà a un'applicazione di visualizzare il controllo DatePicker come finestra popup o incorporata in un'attività. Inoltre, `DialogFragment` gestirà il ciclo di vita e la visualizzazione della finestra di dialogo, riducendo la quantità di codice che deve essere implementato.
 
-Questa guida illustra come usare il `DatePickerDialog`, inserito in un `DialogFragment`. L'applicazione di esempio visualizzerà il `DatePickerDialog` come una finestra di dialogo modale quando l'utente fa clic su un pulsante in un'attività. Quando la data viene impostata dall'utente, un `TextView` verrà aggiornato con la data in cui è stata selezionata.
+In questa guida viene illustrato come utilizzare l' `DatePickerDialog`oggetto, incluso in `DialogFragment`un oggetto. L'applicazione `DatePickerDialog` di esempio visualizzerà come finestra di dialogo modale quando l'utente fa clic su un pulsante in un'attività. Quando la data viene impostata dall'utente, un `TextView` verrà aggiornato con la data selezionata.
 
-[![Pulsante schermata di prelievo data seguito dalla finestra di dialogo di selezione data](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png#lightbox)
+[![Screenshot del pulsante pick date seguito dalla finestra di dialogo di selezione data](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png#lightbox)
 
 ## <a name="requirements"></a>Requisiti
 
-L'applicazione di esempio in questa guida ha come destinazione (livello API di Android 4.1
-16) o versione successiva, ma è applicabile a 3.0 Android (livello API 11 o versione successiva). È possibile supportare versioni precedenti di Android con l'aggiunta della libreria di supporto Android v4 al progetto e alcune modifiche al codice.
+L'applicazione di esempio per questa guida è destinata a Android 4,1 (livello API
+16) o versione successiva, ma applicabile a Android 3,0 (livello API 11 o superiore). È possibile supportare le versioni precedenti di Android con l'aggiunta della libreria del supporto Android V4 al progetto e alcune modifiche al codice.
 
-## <a name="using-the-datepicker"></a>Tramite il controllo DatePicker
+## <a name="using-the-datepicker"></a>Uso di DatePicker
 
-In questo esempio verrà estesa `DialogFragment`. Sottoclasse ospitare e verrà visualizzato un `DatePickerDialog`:
+Questo esempio si estenderà `DialogFragment`. La sottoclasse ospiterà e visualizzerà una `DatePickerDialog`:
 
-![Finestra di dialogo di primo piano del controllo selezione data](date-picker-images/image-02.png)
+![Primo piano della finestra di dialogo di selezione data](date-picker-images/image-02.png)
 
-Quando l'utente seleziona una data e fa clic il **OK** pulsante, il `DatePickerDialog` chiamerà il metodo [ `IOnDateSetListener.OnDateSet` ](https://developer.xamarin.com/api/member/Android.App.DatePickerDialog+IOnDateSetListener.OnDateSet/p/Android.Widget.DatePicker/System.Int32/System.Int32/System.Int32/).
-Questa interfaccia viene implementata per l'hosting `DialogFragment`. Se l'utente fa clic il **annullare** pulsante frammento e finestra di dialogo se si preme autonomamente.
+Quando l'utente seleziona una data e fa clic sul pulsante **OK** , `DatePickerDialog` il chiamerà il metodo [`IOnDateSetListener.OnDateSet`](xref:Android.App.DatePickerDialog.IOnDateSetListener.OnDateSet*).
+Questa interfaccia viene implementata dall'host `DialogFragment`. Se l'utente fa clic sul pulsante **Annulla** , il frammento e la finestra di dialogo si chiuderanno autonomamente.
 
-Esistono diversi modi di `DialogFragment` può restituire la data selezionata per l'attività di hosting:
+Esistono diversi modi `DialogFragment` in cui può restituire la data selezionata all'attività di hosting:
 
-1. **Richiamare un metodo o una proprietà impostata** &ndash; l'attività può fornire una proprietà o metodo in modo specifico per l'impostazione di questo valore.
+1. **Richiamare un metodo o impostare una proprietà** &ndash; L'attività può fornire una proprietà o un metodo specifico per l'impostazione di questo valore.
 
-2. **Generare un evento** &ndash; le `DialogFragment` possibile definire un evento che verrà generato quando `OnDateSet` viene richiamato.
+2. **Genera un evento** Può definire un evento che verrà generato quando `OnDateSet` viene richiamato. &ndash; `DialogFragment`
 
-3. **Usa un' `Action`**  &ndash; il `DialogFragment` può richiamare un `Action<DateTime>` per visualizzare la data dell'attività. L'attività fornirà il `Action<DateTime` quando si creano istanze il `DialogFragment`. In questo esempio verrà usata la terza tecnica e richiedono che l'attività di fornire un' `Action<DateTime>` per il `DialogFragment`.
+3. **Usare un `Action`**  &ndash; `Action<DateTime>` oggetto che puòrichiamareunoggettopervisualizzareladatanell'attività.`DialogFragment` L'attività fornirà l' `Action<DateTime` oggetto quando si crea `DialogFragment`un'istanza di. In questo esempio viene utilizzata la terza tecnica e viene richiesto che l'attività fornisca `Action<DateTime>` un oggetto a. `DialogFragment`
 
+### <a name="extending-dialogfragment"></a>Estensione di DialogFragment
 
-
-### <a name="extending-dialogfragment"></a>Estensione DialogFragment
-
-Il primo passaggio nella visualizzazione di un `DatePickerDialog` consiste nella sottoclasse `DialogFragment` e che implementi il `IOnDateSetListener` interfaccia:
+Il primo passaggio per la visualizzazione `DatePickerDialog` di un oggetto `DialogFragment` consiste nella sottoclasse e `IOnDateSetListener` nell'implementare l'interfaccia:
 
 ```csharp
 public class DatePickerFragment : DialogFragment, 
@@ -92,19 +90,16 @@ public class DatePickerFragment : DialogFragment,
 }
 ```
 
-Il `NewInstance` metodo viene richiamato per creare un'istanza di un nuovo `DatePickerFragment`. Questo metodo accetta un `Action<DateTime>` che verrà richiamato quando l'utente fa clic sui **OK** pulsante il `DatePickerDialog`.
+Il `NewInstance` metodo viene richiamato per creare un'istanza `DatePickerFragment`di un nuovo oggetto. Questo metodo accetta un `Action<DateTime>` che verrà richiamato quando l'utente fa clic sul pulsante **OK** in `DatePickerDialog`.
 
-Quando il frammento deve essere visualizzato, Android chiama il metodo `OnCreateDialog`. Questo metodo creerà una nuova `DatePickerDialog` dell'oggetto e inizializzarla con la data corrente e l'oggetto di callback (ovvero l'istanza corrente del `DatePickerFragment`).
-
+Quando il frammento deve essere visualizzato, Android chiamerà il metodo `OnCreateDialog`. Questo metodo creerà un nuovo `DatePickerDialog` oggetto e lo inizializza con la data corrente e l'oggetto callback (ovvero l'istanza corrente `DatePickerFragment`di).
 
 > [!NOTE]
-> Tenere presente che il valore del mese quando `IOnDateSetListener.OnDateSet` viene richiamata è compreso nell'intervallo da 0 a 11 e non da 1 a 12. Il giorno del mese sarà compreso nell'intervallo da 1 a 31 (a seconda di quale è stato selezionato mese).
+> Tenere presente che il valore del mese quando `IOnDateSetListener.OnDateSet` viene richiamato è compreso nell'intervallo da 0 a 11 e non da 1 a 12. Il giorno del mese sarà compreso tra 1 e 31 (a seconda del mese selezionato).
 
+### <a name="showing-the-datepickerfragment"></a>Visualizzazione di DatePickerFragment
 
-
-### <a name="showing-the-datepickerfragment"></a>Che mostra il DatePickerFragment
-
-Ora che il `DialogFragment` è stata implementata, questa sezione verrà esaminate come usare il frammento in un'attività. Nell'app di esempio che accompagna questa Guida, l'attività verrà creata un'istanza di `DialogFragment` usando il `NewInstance` metodo factory e quindi la visualizzazione, verrà richiamata `DialogFragment.Show`. Come parte di un'istanza di `DialogFragment`, l'attività passa un' `Action<DateTime>`, che consentirà di visualizzare la data in un `TextView` ospitato dall'attività:
+Ora che `DialogFragment` è stato implementato, in questa sezione verrà esaminato come utilizzare il frammento in un'attività. Nell'app di esempio che accompagna questa guida, l'attività creerà un'istanza `DialogFragment` di usando il `NewInstance` Metodo Factory e quindi la visualizzerà Invoke `DialogFragment.Show`. Nell'ambito della creazione di un'istanza `DialogFragment`di, l'attività passa `Action<DateTime>`un oggetto, che visualizza la data in `TextView` un oggetto ospitato dall'attività:
 
 ```csharp
 [Activity(Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/icon")]
@@ -134,16 +129,14 @@ public class MainActivity : Activity
 }
 ```
 
-
 ## <a name="summary"></a>Riepilogo
 
-In questo esempio è stato illustrato come visualizzare un `DatePicker` widget come finestra di dialogo modale popup come parte di un'attività Android. Fornito un esempio di implementazione DialogFragment e illustrate la `IOnDateSetListener` interfaccia. In questo esempio è illustrato anche come il DialogFragment può interagire con l'host di attività per visualizzare la data selezionata.
-
+Questo esempio illustra come visualizzare un `DatePicker` widget come finestra di dialogo modale popup come parte di un'attività Android. Fornisce un'implementazione di esempio di DialogFragment e ne `IOnDateSetListener` illustra l'interfaccia. Questo esempio illustra anche come DialogFragment può interagire con l'attività host per visualizzare la data selezionata.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [DialogFragment](https://developer.xamarin.com/api/type/Android.App.DialogFragment/)
-- [DatePicker](https://developer.xamarin.com/api/type/Android.Widget.DatePicker/)
-- [DatePickerDialog](https://developer.xamarin.com/api/type/Android.App.DatePickerDialog/)
-- [DatePickerDialog.IOnDateSetListener](https://developer.xamarin.com/api/type/Android.App.DatePickerDialog+IOnDateSetListener/)
+- [DialogFragment](xref:Android.App.DialogFragment)
+- [DatePicker](xref:Android.Widget.DatePicker)
+- [DatePickerDialog](xref:Android.App.DatePickerDialog)
+- [DatePickerDialog.IOnDateSetListener](xref:Android.App.DatePickerDialog.IOnDateSetListener)
 - [Selezionare una data](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/datepicker/select_a_date)

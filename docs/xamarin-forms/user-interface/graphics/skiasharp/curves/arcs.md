@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: cfa96273b6c23d755925b08c9daec22c94627be7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c93441bff02322fb938a67806ba7f5163c8c969e
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61088792"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511899"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Tre modi per disegnare un arco
 
@@ -38,7 +38,7 @@ public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
 public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean forceMoveTo)
 ```
 
-Questi metodi sono identici per Android [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) e [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) metodi. IOS [ `AddArc` ](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) metodo è simile, ma è limitato agli archi sulla circonferenza del cerchio anziché generalizzata da un'ellisse.
+Questi metodi sono identici ai metodi [`AddArc`](xref:Android.Graphics.Path.AddArc*) Android e`ArcTo`[] xrif: Android. graphics. Path. ArcTo *). IOS [ `AddArc` ](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) metodo è simile, ma è limitato agli archi sulla circonferenza del cerchio anziché generalizzata da un'ellisse.
 
 Entrambi i metodi iniziano con un `SKRect` valore che definisce la posizione e dimensioni di un'ellisse:
 
@@ -58,7 +58,7 @@ La curva aggiunta al percorso con il `AddArc` o `ArcTo` metodo è semplicemente 
 
 ![](arcs-images/anglearc.png "L'arco angolo da solo")
 
-Il `startAngle` o `sweepAngle` gli argomenti possono essere negativi: È in senso orario per i valori positivi dell'arco `sweepAngle` e antiorario per i valori negativi.
+Gli `startAngle` argomenti `sweepAngle` o possono essere negativi: L'arco è in senso orario per i `sweepAngle` valori positivi e in senso antiorario per i valori negativi.
 
 Tuttavia `AddArc` viene *non* definiscono un contorno chiuso. Se si chiama `LineTo` dopo aver `AddArc`, viene tracciata una linea dalla fine dell'arco al punto nel `LineTo` metodo e lo stesso vale per `ArcTo`.
 
@@ -521,7 +521,7 @@ Se questa ellisse inclinata quindi viene posizionata in modo che interessa i due
 
 ![](arcs-images/ellipticalarcellipse1.png "Il primo set di archi ellittici")
 
-Questi due archi possono essere distinte in due modi: Punto finale dell'arco superiore è maggiore di arco nella parte inferiore e come l'arco viene disegnato da sinistra a destra, viene disegnato l'arco superiore in senso orario mentre viene disegnato l'arco in basso in senso antiorario.
+Questi due archi possono essere distinti in due modi: L'arco superiore è maggiore dell'arco inferiore e, quando l'arco viene disegnato da sinistra a destra, l'arco superiore viene disegnato in senso orario mentre l'arco inferiore viene disegnato in senso antiorario.
 
 È anche possibile adattare i puntini di sospensione tra i due punti in un altro modo:
 
@@ -535,10 +535,10 @@ Questi due punti possono quindi essere collegati da un arco definito dai puntini
 
 Questi quattro archi si distinguono dalle quattro combinazioni dei [ `SKPathArcSize` ](xref:SkiaSharp.SKPathArcSize) e [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection) argomenti di tipo di enumerazione per il `ArcTo` metodo:
 
-- rosso: SKPathArcSize.Large e SKPathDirection.Clockwise
-- verde: SKPathArcSize.Small e SKPathDirection.Clockwise
-- blu: SKPathArcSize.Small e SKPathDirection.CounterClockwise
-- magenta: SKPathArcSize.Large e SKPathDirection.CounterClockwise
+- Red SKPathArcSize. Large e SKPathDirection. senso orario
+- verde SKPathArcSize. Small e SKPathDirection. senso orario
+- blu SKPathArcSize. Small e SKPathDirection. in senso antiorario
+- Magenta SKPathArcSize. Large e SKPathDirection. in senso antiorario
 
 Se l'ellisse inclinato non è sufficientemente grande da posizionarla tra i due punti, quindi viene ridimensionato in modo uniforme fino a quando non è sufficientemente grande. Solo due archi univoci connettono in questo caso i due punti. Questi possono essere distinti con il `SKPathDirection` parametro.
 

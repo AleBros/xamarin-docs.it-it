@@ -6,27 +6,27 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: a22d274feb5539164663ac0c48e5a84bdf5d2c66
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 91003f9a23c667b38028a9852b28dba656ba13db
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830233"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510328"
 ---
 # <a name="togglebutton"></a>ToggleButton
 
-In questa sezione si creerà un pulsante utilizzato in particolare per la disattivazione/attivazione tra due stati, usando il [ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/) widget. Questo widget è un'alternativa eccellente ai pulsanti di opzione se si dispongono di due stati semplici che si escludono a vicenda ("on" e "off", ad esempio). Android 4.0 (livello API 14) è stata introdotta un'alternativa all'interruttore noto come un [ `Switch` ](https://developer.xamarin.com/api/type/Android.Widget.Switch/).
+In questa sezione verrà creato un pulsante usato in modo specifico per l'alternanza tra due Stati, usando [`ToggleButton`](xref:Android.Widget.ToggleButton) il widget. Questo widget rappresenta un'ottima alternativa ai pulsanti di opzione se si dispone di due semplici Stati che si escludono a vicenda (ad esempio "on" e "off"). Android 4,0 (API level 14) ha introdotto un'alternativa all'interruttore noto come [`Switch`](xref:Android.Widget.Switch).
 
-Un esempio di un **ToggleButton** può essere visualizzato nella coppia a sinistra delle immagini, anche se la coppia a destra delle immagini viene presentato un esempio di un **commutatore**:
+Un esempio di **ToggleButton** può essere visualizzato nella coppia di immagini a sinistra, mentre la coppia di immagini a destra presenta un esempio di un compasso **:**
 
-![Esempi di commutatori e ToggleButton in entrambe di attivare e disattivare gli Stati](toggle-button-images/togglebutton-switch.png)  
+![Esempi di opzioni e ToggleButtons negli Stati on e off](toggle-button-images/togglebutton-switch.png)  
 
-Controllo che usa un'applicazione è una questione di stile. Entrambi i widget sono funzionalmente equivalenti.
+Il controllo usato da un'applicazione è una cosa di stile. Entrambi i widget sono funzionalmente equivalenti.
 
-Aprire il **Resources/layout/Main.axml** file e aggiungere il [ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/) elemento (all'interno di [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)):
+Aprire il file resources **/layout/Main. aXML** e [`ToggleButton`](xref:Android.Widget.ToggleButton) aggiungere l'elemento ( [`LinearLayout`](xref:Android.Widget.LinearLayout)all'interno di):
 
-Per eseguire un'operazione quando viene modificato lo stato, aggiungere il codice seguente alla fine del [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle)
-metodo:
+Per eseguire un'operazione quando lo stato viene modificato, aggiungere il codice seguente alla fine del[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Metodo
 
 ```csharp
 ToggleButton togglebutton = FindViewById<ToggleButton>(Resource.Id.togglebutton);
@@ -40,16 +40,16 @@ togglebutton.Click += (o, e) => {
 };
 ```
 
-Ciò consente di acquisire il [ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/) elemento dal layout e gestisce l'evento Click, che definisce l'azione da eseguire quando si fa clic sul pulsante. In questo esempio, il metodo controlla il nuovo stato del pulsante, quindi viene illustrata una [ `Toast` ](https://developer.xamarin.com/api/type/Android.Widget.Toast/) messaggio che indica lo stato corrente.
+Acquisisce l' [`ToggleButton`](xref:Android.Widget.ToggleButton) elemento dal layout e gestisce l'evento click, che definisce l'azione da eseguire quando si fa clic sul pulsante. In questo esempio, il metodo controlla il nuovo stato del pulsante, quindi Visualizza un [`Toast`](xref:Android.Widget.Toast) messaggio che indica lo stato corrente.
 
-Si noti che il [ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/) gestisce il proprio stato cambiare tra checked e unchecked, in modo da cui è basta chiedere.
+Si noti che [`ToggleButton`](xref:Android.Widget.ToggleButton) il gestisce il proprio cambiamento di stato tra checked e unchecked, quindi è sufficiente chiedersi quale sia.
 
 Eseguire l'applicazione.
 
 
 > [!TIP]
-> Se è necessario modificare manualmente lo stato (ad esempio, quando il caricamento di un salvata [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), usare il [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
-> setter di proprietà o [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
+> Se è necessario modificare autonomamente lo stato, ad esempio quando si carica un [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference)oggetto salvato, usare il[`Checked`](xref:Android.Widget.CompoundButton.Checked)
+> Setter proprietà o[`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
 > ProcessOnStatus.
 
 

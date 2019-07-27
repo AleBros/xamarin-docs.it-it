@@ -1,66 +1,66 @@
 ---
-title: Raccolta
+title: Controllo raccolta Android
 ms.prod: xamarin
 ms.assetid: 3112E68A-7853-B147-90A6-6295CA2C4CB5
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: f9b73428531deeacc7bdea271cdc0c2872038e99
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6fe6b5a11473827eb716b0adf0fb0f3ae28a3538
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218534"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510273"
 ---
-# <a name="gallery"></a>Raccolta
+# <a name="xamarinandroid-gallery-control"></a>Controllo raccolta Novell. Android
 
-[`Gallery`](https://developer.xamarin.com/api/type/Android.Widget.Gallery/) è un widget di layout utilizzato per visualizzare gli elementi in un elenco di scorrimento orizzontale e posiziona la selezione corrente al centro della visualizzazione.
+[`Gallery`](xref:Android.Widget.Gallery)è un widget di layout usato per visualizzare gli elementi in un elenco a scorrimento orizzontale e posiziona la selezione corrente al centro della visualizzazione.
 
 > [!IMPORTANT]
-> Questo widget è stato deprecato in Android 4.1 (livello API 16). 
+> Questo widget è stato deprecato in Android 4,1 (livello API 16). 
 
-In questa esercitazione, è creata una raccolta di foto e quindi visualizzare un messaggio di tipo avviso popup ogni volta che viene selezionato un elemento della raccolta.
+In questa esercitazione verrà creata una raccolta di foto e quindi verrà visualizzato un messaggio di avviso popup ogni volta che viene selezionato un elemento della raccolta.
 
-Dopo il `Main.axml` layout è impostato per la visualizzazione contenuto, il `Gallery` viene acquisita dal layout con [ `FindViewById` ](https://developer.xamarin.com/api/member/Android.App.Activity.FindViewById/p/System.Int32/).
-Il [`Adapter`](https://developer.xamarin.com/api/property/Android.Widget.AdapterView.RawAdapter/)
-proprietà viene quindi utilizzata per impostare un adapter personalizzato ( `ImageAdapter`) come origine per tutti gli elementi da visualizzare nella finestra di dallery. Il `ImageAdapter` viene creato nel passaggio successivo.
+[`FindViewById`](xref:Android.App.Activity.FindViewById*)Una `Main.axml` voltaimpostatoillayoutperlavisualizzazionecontenuto,vieneacquisitodallayoutcon.`Gallery`
+Il[`Adapter`](xref:Android.Widget.AdapterView.RawAdapter)
+la proprietà viene quindi utilizzata per impostare un adapter personalizzato `ImageAdapter`() come origine per tutti gli elementi da visualizzare nella proprietà. Il `ImageAdapter` viene creato nel passaggio successivo.
 
-Per eseguire un'operazione quando si fa clic su un elemento nella raccolta, un delegato anonimo ha sottoscritto il [`ItemClick`](https://developer.xamarin.com/api/event/Android.Widget.AdapterView.ItemClick/)
-. Viene illustrato un [`Toast`](https://developer.xamarin.com/api/type/Android.Widget.Toast/)
-che visualizza la posizione di indice (in base zero) dell'elemento selezionati (in uno scenario reale, la posizione potrebbe essere usata per ottenere l'immagine con dimensione completa per un'altra attività).
+Per eseguire un'operazione quando si fa clic su un elemento della raccolta, un delegato anonimo viene sottoscritto al[`ItemClick`](xref:Android.Widget.AdapterView.ItemClick)
+. Mostra un[`Toast`](xref:Android.Widget.Toast)
+che visualizza la posizione di indice (in base zero) dell'elemento theselected (in uno scenario reale, la posizione può essere usata per ottenere l'immagine con dimensioni complete per un'altra attività).
 
-In primo luogo, esistono alcune variabili di membro, inclusa un'ampia gamma di ID che fanno riferimento le immagini salvate nella directory delle risorse drawable (**risorse/drawable**).
+In primo luogo, sono disponibili alcune variabili membro, tra cui una matrice di ID che fanno riferimento alle immagini salvate nella directory delle risorse che è stato disegnato (**risorse/disegnatore**).
 
-Di seguito è il costruttore della classe, in cui il [`Context`](https://developer.xamarin.com/api/type/Android.Content.Context/)
-per un `ImageAdapter` istanza viene definita e salvata un campo locale.
-Successivamente, si implementa alcuni metodi necessari ereditati dalla [ `BaseAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/).
-Il costruttore e il [`Count`](https://developer.xamarin.com/api/property/Android.Widget.BaseAdapter.Count/)
-proprietà sono di chiara interpretazione. In genere, [`GetItem(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItem/p/System.Int32/)
-deve restituire l'oggetto effettivo in corrispondenza della posizione specificata nell'adapter, ma viene ignorata per questo esempio. Likewise, [`GetItemId(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItemId/p/System.Int32/)
-dovrebbe restituire l'id di riga dell'elemento, ma non è necessaria in questo caso.
+Next è il costruttore della classe, in cui[`Context`](xref:Android.Content.Context)
+per un' `ImageAdapter` istanza di viene definita e salvata in un campo locale.
+Successivamente, implementa alcuni metodi obbligatori ereditati [`BaseAdapter`](xref:Android.Widget.BaseAdapter)da.
+Il costruttore e il[`Count`](xref:Android.Widget.BaseAdapter.Count)
+le proprietà sono di chiara interpretazione. In genere[`GetItem(int)`](xref:Android.Widget.BaseAdapter.GetItem*)
+deve restituire l'oggetto effettivo in corrispondenza della posizione specificata nell'adapter, ma viene ignorato per questo esempio. Likewise, [`GetItemId(int)`](xref:Android.Widget.BaseAdapter.GetItemId*)
+deve restituire l'ID di riga dell'elemento, ma non è necessario.
 
-Il metodo esegue il lavoro per applicare un'immagine a un [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)
-che verrà incorporato di [`Gallery`](https://developer.xamarin.com/api/type/Android.Widget.Gallery/)
-In questo metodo, il membro [`Context`](https://developer.xamarin.com/api/type/Android.Content.Context/)
-è possibile creare una nuova [ `ImageView` ](https://developer.xamarin.com/api/type/Android.Widget.ImageView/).
-Il [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)
-viene preparata applicando un'immagine dalla matrice locale delle risorse drawable, impostando il [`Gallery.LayoutParams`](https://developer.xamarin.com/api/type/Android.Widget.Gallery+LayoutParams/)
-altezza e la larghezza dell'immagine, l'impostazione di scalabilità per adattare il [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)
-le dimensioni e quindi impostando infine lo sfondo per usare l'attributo API acquisito nel costruttore.
+Il metodo esegue il lavoro per applicare un'immagine a un oggetto[`ImageView`](xref:Android.Widget.ImageView)
+che verrà incorporato nel[`Gallery`](xref:Android.Widget.Gallery)
+In questo metodo, il membro[`Context`](xref:Android.Content.Context)
+viene usato per creare un nuovo [`ImageView`](xref:Android.Widget.ImageView)oggetto.
+Il[`ImageView`](xref:Android.Widget.ImageView)
+viene preparato applicando un'immagine dall'array locale di risorse che è necessario creare, impostando[`Gallery.LayoutParams`](xref:Android.Widget.Gallery.LayoutParams)
+altezza e larghezza per l'immagine, impostando la scala per adattarla[`ImageView`](xref:Android.Widget.ImageView)
+dimensioni e infine l'impostazione dello sfondo per l'utilizzo dell'attributo con stile acquisito nel costruttore.
 
-Visualizzare [ `ImageView.ScaleType` ](https://developer.xamarin.com/api/type/Android.Widget.ImageView+ScaleType/) per altre opzioni di ridimensionamento dell'immagine.
+Per [`ImageView.ScaleType`](xref:Android.Widget.ImageView.ScaleType) altre opzioni di ridimensionamento delle immagini, vedere.
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
 Avviare un nuovo progetto denominato *HelloGallery*.
 
-[![Schermata del nuovo progetto Android nella finestra di dialogo nuova soluzione](gallery-images/hellogallery1-sml.png)](gallery-images/hellogallery1.png#lightbox)
+[![Screenshot del nuovo progetto Android nella finestra di dialogo nuova soluzione](gallery-images/hellogallery1-sml.png)](gallery-images/hellogallery1.png#lightbox)
 
-Trovare alcuni foto da usare, oppure [scaricare queste immagini di esempio](https://developer.android.com/shareables/sample_images.zip).
-Aggiungere i file di immagine al progetto **risorse/Drawable** directory. Nel **delle proprietà** finestra, impostare l'azione di compilazione per ognuno di essi al **AndroidResource**.
+Trovare alcune foto che si vuole usare o [scaricare queste immagini di esempio](https://developer.android.com/shareables/sample_images.zip).
+Aggiungere i file di immagine alla directory Resources **/disegnator** del progetto. Nella finestra **Proprietà** impostare l'azione di compilazione per ogni su **AndroidResource**.
 
-Aprire **Resources/Layout/Main.axml** e inserire il codice seguente:
+Aprire **risorse/layout/Main. aXML** e inserire quanto segue:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -71,8 +71,8 @@ Aprire **Resources/Layout/Main.axml** e inserire il codice seguente:
 />
 ```
 
-Apri `MainActivity.cs` e inserire il codice seguente per il [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
-metodo:
+Aprire `MainActivity.cs` e inserire il codice seguente per[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Metodo
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -92,7 +92,7 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-Creare una nuova classe denominata `ImageAdapter` che rappresenta una sottoclasse [ `BaseAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/):
+Creare una nuova classe denominata `ImageAdapter` [`BaseAdapter`](xref:Android.Widget.BaseAdapter)sottoclassi:
 
 ```csharp
 public class ImageAdapter : BaseAdapter
@@ -142,19 +142,15 @@ public class ImageAdapter : BaseAdapter
 
 ```
 
-Eseguire l'applicazione. Dovrebbe essere simile allo screenshot seguente:
+Eseguire l'applicazione. Dovrebbe essere simile alla schermata seguente:
 
-![Schermata di HelloGallery visualizzano le immagini di esempio](gallery-images/hellogallery3.png)
-
-
+![Screenshot di HelloGallery che visualizza le immagini di esempio](gallery-images/hellogallery3.png)
 
 ## <a name="references"></a>Riferimenti
 
--   [`BaseAdapter`](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/)
--   [`Gallery`](https://developer.xamarin.com/api/type/Android.Widget.Gallery/)
--   [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)
+- [`BaseAdapter`](xref:Android.Widget.BaseAdapter)
+- [`Gallery`](xref:Android.Widget.Gallery)
+- [`ImageView`](xref:Android.Widget.ImageView)
 
-*Parti di questa pagina sono modifiche basate sul lavoro creato e condiviso da Android Open Source Project e usate in base a condizioni descritte nel*
-[*licenza Creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/).
-
-
+*Parti di questa pagina sono modifiche basate sul lavoro creato e condivise dal progetto open source Android e usate in base alle condizioni descritte nella*
+[*licenza Creative Commons 2,5 Attribution*](http://creativecommons.org/licenses/by/2.5/).

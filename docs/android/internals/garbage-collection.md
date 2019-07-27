@@ -6,174 +6,174 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 09466cc9eed4899ef0aa1198ff0aee5cd420e110
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 3b89f63d42b01140d73cd1551c75211d2fea8e27
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674639"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510722"
 ---
 # <a name="garbage-collection"></a>Garbage Collection
 
-Xamarin. Android Usa Mono [Simple Generational garbage collector](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/). Si tratta di un garbage collector di mark-and-sweep con due generazioni e un *dello spazio di oggetti di grandi dimensioni*, con due tipi di raccolte: 
+Novell. Android usa il [Garbage Collector generazionale semplice](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/)di mono. Si tratta di un Garbage Collector Mark-and-sweep con due generazioni e uno *spazio di oggetti di grandi dimensioni*, con due tipi di raccolte: 
 
--   Raccolte secondarie (raccoglie Gen0 heap) 
--   Raccolte principali (raccoglie Gen1 e oggetti di grandi dimensioni spazio heap). 
+-   Raccolte secondarie (raccoglie l'heap Gen0) 
+-   Raccolte principali (raccoglie Gen1 e heap dello spazio degli oggetti grandi). 
 
 > [!NOTE]
-> In assenza di una raccolta esplicita tramite [GC. Collect ()](xref:System.GC.Collect) le raccolte sono *su richiesta*, in base al momento le allocazioni di heap. *Non è un sistema di conteggio dei riferimenti*; gli oggetti *, non appena non sono presenti riferimenti in sospeso non verranno raccolti*, o quando è stato terminato un ambito. Il Garbage Collector verrà eseguito quando l'heap secondaria ha esaurito la memoria per le nuove allocazioni. Se non sono presenti allocazioni, non verrà eseguito.
+> In assenza di una raccolta esplicita tramite [GC. Le raccolte Collect ()](xref:System.GC.Collect) sono *su richiesta, in base alle*allocazioni di heap. *Non si tratta di un sistema di conteggio dei riferimenti*. gli oggetti *non verranno raccolti nel momento in*cui non sono presenti riferimenti in attesa o quando un ambito è terminato. Il GC viene eseguito quando l'heap secondario esaurisce la memoria per le nuove allocazioni. Se non sono presenti allocazioni, non verrà eseguita.
 
 
-Raccolte secondarie e frequenti disponibili e vengono usate per raccogliere gli oggetti inutilizzati e allocati di recente. Raccolte secondarie vengono eseguite dopo ogni pochi MB degli oggetti allocati. Raccolte secondarie possono essere eseguite manualmente tramite la chiamata [GC. Raccogliere (0)](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_) 
+Le raccolte secondarie sono a basso costo e frequenti e vengono utilizzate per raccogliere gli oggetti allocati e non recapitati di recente. Le raccolte secondarie vengono eseguite dopo ogni MB di oggetti allocati. Le raccolte secondarie possono essere eseguite manualmente chiamando [GC. Raccogli (0)](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_) 
 
-Raccolte di principali sono meno frequenti e dispendiosi e vengono usate per recuperare tutti gli oggetti inutilizzati. Raccolte principali vengono eseguite dopo l'esaurimento della memoria per le dimensioni dell'heap correnti (prima di ridimensionare l'heap). Raccolte principale possono essere eseguite manualmente tramite la chiamata [GC. Raccogliere ()](xref:System.GC.Collect) o chiamando [GC. (Int) di raccogliere](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_) con l'argomento [GC. MaxGeneration](xref:System.GC.MaxGeneration). 
-
-
-
-## <a name="cross-vm-object-collections"></a>Raccolte di oggetti tra VM
-
-Esistono tre categorie di tipi di oggetto.
-
--   **Oggetti gestiti**: i tipi che eseguono *non* ereditare [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) , ad esempio [System. String](xref:System.String). 
-    Questi vengono raccolti in genere dal GC. 
-
--   **Gli oggetti Java**: Tipi di Java che sono presenti all'interno del runtime Android VM ma non visibili alla macchina virtuale di Mono. Si tratta di un'operazione noiosa e non verranno illustrate ulteriormente. Questi vengono raccolti in genere dal runtime di Android della macchina virtuale. 
-
--   **Eseguire il peering di oggetti**: i tipi che implementano [IJavaObject](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) , ad esempio, tutti [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) e [Throwable](https://developer.xamarin.com/api/type/Java.Lang.Throwable/) sottoclassi. Le istanze di questi tipi hanno due "halfs" una *peer gestito* e una *peer native*. Il peer gestito è un'istanza del C# classe. Il peer nativo è un'istanza di una classe Java all'interno del runtime Android macchina virtuale e il C# [IJavaObject.Handle](https://developer.xamarin.com/api/property/Android.Runtime.IJavaObject.Handle/) proprietà contiene un riferimento globale JNI al peer nativa. 
+Le raccolte principali sono costose e meno frequenti e vengono utilizzate per recuperare tutti gli oggetti non recapitabili. Le raccolte principali vengono eseguite una volta esaurita la memoria per le dimensioni dell'heap corrente (prima del ridimensionamento dell'heap). Le raccolte principali possono essere eseguite manualmente chiamando [GC. Collect ()](xref:System.GC.Collect) o chiamando [GC. Collect (int)](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_) con l'argomento [GC. MaxGeneration](xref:System.GC.MaxGeneration). 
 
 
-Esistono due tipi di pari livello nativo:
 
--   **I peer Framework** : "Normale" tipi di Java che conoscono nulla di xamarin. Android, ad esempio [android.content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/).
+## <a name="cross-vm-object-collections"></a>Raccolte di oggetti tra macchine virtuali
 
--   **I peer utente** : [Android Callable Wrapper](~/android/platform/java-integration/working-with-jni.md) che vengono generati in fase di compilazione per ogni sottoclasse Java.Lang.Object presente all'interno dell'applicazione.
+Sono disponibili tre categorie di tipi di oggetti.
 
+-   **Oggetti gestiti**: tipi che *non* ereditano da [java. lang. Object](xref:Java.Lang.Object) , ad esempio [System. String](xref:System.String). 
+    Questi vengono raccolti normalmente dal GC. 
 
-Poiché sono presenti due macchine virtuali all'interno di un processo di xamarin. Android, esistono due tipi di operazioni di garbage collection:
+-   **Oggetti Java**: Tipi Java presenti all'interno della VM di Runtime Android ma non esposti alla VM mono. Questi sono noiosi e non verranno discussi ulteriormente. Questi vengono raccolti normalmente dalla VM di runtime di Android. 
 
--   Raccolte di runtime di Android 
--   Raccolte di mono 
-
-Runtime Android raccolte operano in genere, ma con una sola avvertenza: un riferimento globale JNI viene considerato come una radice di Garbage Collection. Di conseguenza, se è presente un JNI globali di riferimento mantiene un runtime di Android della macchina virtuale, l'oggetto *non è possibile* raccolti, anche se è idoneo per la raccolta.
-
-Le raccolte di mono sono in cui si verifica il divertimento. In genere vengono raccolti gli oggetti gestiti. Gli oggetti peer vengono raccolti eseguendo il processo seguente:
-
-1.  Tutti gli oggetti Peer idonei per la raccolta Mono hanno i riferimenti globali JNI sostituito con un riferimento di global debole JNI. 
-
-2.  Un runtime di Android che viene richiamato Garbage Collector della macchina virtuale. Qualsiasi istanza nativa peer può essere raccolti. 
-
-3.  Vengono controllati i riferimenti globali deboli JNI creati in (1). Se il riferimento debole siano stati raccolti, l'oggetto Peer verrà raccolti. Se il riferimento debole dispone *non* stati raccolti, quindi il riferimento debole viene sostituito con un riferimento globale JNI e l'oggetto Peer non verrà raccolti. Nota: nella API 14 +, ciò significa che il valore restituito da `IJavaObject.Handle` possono essere modificati dopo un catalogo globale. 
-
-Il risultato finale di tutto ciò è che un'istanza di un oggetto Peer risiederanno, purché vi fanno riferimento sia codice gestito (ad esempio, archiviati in un `static` variabile) o a cui viene fatto riferimento dal codice Java. Inoltre, la durata di pari livello nativo verrà estesa oltre ciò che accade in caso contrario, in tempo reale, come il peer Native non sarà ritirabile fino a quando sia il peer nativo e gestito peer sono ritirabile.
+-   **Oggetti peer**: tipi che implementano [IJavaObject](xref:Android.Runtime.IJavaObject) , ad esempio tutte le sottoclassi [java. lang. Object](xref:Java.Lang.Object) e [java. lang. Throwable](xref:Java.Lang.Throwable) . Le istanze di questi tipi hanno due "mezze" un *peer gestito* e un *peer nativo*. Il peer gestito è un'istanza della C# classe. Il peer nativo è un'istanza di una classe Java all'interno della VM del runtime di Android C# e la proprietà [IJavaObject. handle](xref:Android.Runtime.IJavaObject.Handle) contiene un riferimento globale JNI al peer nativo. 
 
 
-## <a name="object-cycles"></a>Cicli di oggetti
+Esistono due tipi di peer nativi:
 
-Gli oggetti peer sono logicamente presenti all'interno della macchina virtuale di Mono sia il runtime di Android. Ad esempio, un' [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) disporrà di una corrispondente istanza gestita di peer [android.app.Activity](https://developer.android.com/reference/android/app/Activity.html) l'istanza di Java peer framework. Tutti gli oggetti da cui ereditare [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) si può prevedere hanno rappresentazioni in entrambe le macchine virtuali. 
+-   **Peer del Framework** : Tipi Java "normali" che non conoscono Novell. Android, ad esempio [Android. Content. Context](xref:Android.Content.Context).
 
-Tutti gli oggetti con rappresentazione in entrambe le macchine virtuali avranno durate cui vengono estese rispetto agli oggetti che sono presenti solo all'interno di una singola macchina virtuale (ad esempio un [ `System.Collections.Generic.List<int>` ](xref:System.Collections.Generic.List%601)). La chiamata a [GC. Raccogliere](xref:System.GC.Collect) non sarà necessariamente raccogliere questi oggetti, quando sono necessari per il Garbage Collector di xamarin. Android per assicurarsi che l'oggetto non viene fatto riferimento da una macchina virtuale prima della raccolta degli stessi dati. 
-
-Per abbreviare la durata degli oggetti, [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/) deve essere richiamato. Questo verrà manualmente "server" la connessione per l'oggetto tra le due macchine virtuali con la liberazione di riferimento globale, consentendo in tal modo gli oggetti da raccogliere più velocemente. 
+-   **Peer utente** : [Android Callable Wrapper](~/android/platform/java-integration/working-with-jni.md) generati in fase di compilazione per ogni sottoclasse Java. lang. Object presente nell'applicazione.
 
 
-## <a name="automatic-collections"></a>Raccolte automatica
+Poiché sono presenti due macchine virtuali all'interno di un processo Novell. Android, esistono due tipi di Garbage Collection:
 
-A partire [versione 4.1.0](https://developer.xamarin.com/releases/android/mono_for_android_4/mono_for_android_4.1.0), xamarin. Android esegue automaticamente una Garbage Collection completo quando viene superata una soglia di gref. Questa soglia è 90% dei noti grefs massimo per la piattaforma: 1800 grefs nell'emulatore (massimo 2000) e 46800 grefs su hardware (52000 massima). *Nota:* Xamarin. Android vengono conteggiati solo i grefs creato da [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/)e non riconoscerà su qualsiasi altro grefs creato nel processo. Si tratta di un'euristica *solo*. 
+-   Raccolte di Runtime Android 
+-   Raccolte mono 
 
-Quando viene eseguita una raccolta automatica, nel log di debug verrà stampato un messaggio simile al seguente:
+Le raccolte di runtime di Android funzionano normalmente, ma con un avvertimento: un riferimento globale JNI viene considerato come una radice GC. Di conseguenza, se è presente un riferimento globale JNI che contiene un oggetto VM di runtime di Android, *non è possibile* raccogliere l'oggetto, neanche se è altrimenti idoneo per la raccolta.
+
+Le raccolte mono sono il luogo in cui si verifica il divertimento. Gli oggetti gestiti vengono raccolti normalmente. Gli oggetti peer vengono raccolti eseguendo il processo seguente:
+
+1.  Tutti gli oggetti peer idonei per la raccolta mono hanno il riferimento globale JNI sostituito con un riferimento globale debole JNI. 
+
+2.  Viene richiamato un GC della VM di runtime di Android. Qualsiasi istanza peer nativa può essere raccolta. 
+
+3.  I riferimenti globali vulnerabili JNI creati in (1) vengono controllati. Se il riferimento debole è stato raccolto, viene raccolto l'oggetto peer. Se il riferimento debole *non* è stato raccolto, il riferimento debole viene sostituito con un riferimento globale JNI e l'oggetto peer non viene raccolto. Nota: nell'API 14 +, ciò significa che il valore restituito da `IJavaObject.Handle` può variare dopo un GC. 
+
+Il risultato finale è che un'istanza di un oggetto peer sarà disponibile fino a quando vi viene fatto riferimento da codice gestito, ad esempio archiviato in una `static` variabile, o a cui viene fatto riferimento dal codice Java. Inoltre, la durata dei peer nativi verrà estesa oltre a quella che altrimenti vivrebbe, perché il peer nativo non sarà ritirabile fino a quando non saranno ritirati sia il peer nativo che il peer gestito.
+
+
+## <a name="object-cycles"></a>Cicli oggetto
+
+Gli oggetti peer sono presenti logicamente nel runtime di Android e nelle VM mono. Ad esempio, un'istanza peer gestita di [Android. app. Activity](xref:Android.App.Activity) avrà un'istanza java peer di [Android. app. Activity](https://developer.android.com/reference/android/app/Activity.html) Framework corrispondente. Tutti gli oggetti che ereditano da [java. lang. Object](xref:Java.Lang.Object) possono prevedere rappresentazioni all'interno di entrambe le macchine virtuali. 
+
+Tutti gli oggetti con rappresentazione in entrambe le macchine virtuali avranno durate che vengono estese rispetto agli oggetti presenti solo all'interno di una singola macchina virtuale ( [`System.Collections.Generic.List<int>`](xref:System.Collections.Generic.List%601)ad esempio,). Chiamata a [GC. Collect](xref:System.GC.Collect) non raccoglierà necessariamente questi oggetti, perché il GC Novell. Android deve assicurarsi che l'oggetto non faccia riferimento a una macchina virtuale prima di raccoglierla. 
+
+Per abbreviare la durata degli oggetti, è necessario richiamare [java. lang. Object. Dispose ()](xref:Java.Lang.Object.Dispose) . Questa operazione consentirà di eseguire manualmente il "Sever" della connessione nell'oggetto tra le due VM liberando il riferimento globale, consentendo così la raccolta più veloce degli oggetti. 
+
+
+## <a name="automatic-collections"></a>Raccolte automatiche
+
+A partire dalla [versione 4.1.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/mono_for_android_4/mono_for_android_4.1.0/index.md), Novell. Android esegue automaticamente un catalogo globale completo quando viene superata una soglia di Gref. Questa soglia è pari al 90% del numero massimo noto di Grefs per la piattaforma: 1800 Grefs nell'emulatore (2000 max) e 46800 Grefs su hardware (massimo 52000). *Nota:* Novell. Android conta solo il Grefs creato da [Android. Runtime. JNIEnv](xref:Android.Runtime.JNIEnv)e non è in grado di conoscere altri Grefs creati nel processo. Si tratta di un *approccio*euristico. 
+
+Quando viene eseguita una raccolta automatica, nel log di debug viene stampato un messaggio simile al seguente:
 
 ```shell
 I/monodroid-gc(PID): 46800 outstanding GREFs. Performing a full GC!
 ```
 
-L'occorrenza di questo oggetto è non deterministico e può verificarsi in viaggio (ad esempio, al centro per il rendering della grafica). Se viene visualizzato questo messaggio, è possibile eseguire una raccolta esplicita in un' posizione oppure è possibile tentare [ridurre la durata degli oggetti peer](#Helping_the_GC). 
+L'occorrenza di questo oggetto non è deterministica e può verificarsi in momenti inopportuni, ad esempio durante il rendering della grafica. Se viene visualizzato questo messaggio, potrebbe essere necessario eseguire una raccolta esplicita altrove oppure provare a [ridurre la durata degli oggetti peer](#Helping_the_GC). 
 
-## <a name="gc-bridge-options"></a>Opzioni di Bridge GC
+## <a name="gc-bridge-options"></a>Opzioni del Bridge GC
 
-Xamarin. Android offre la gestione della memoria trasparente con il runtime di Android e Android. Viene implementato come un'estensione per il garbage collector Mono denominato il *Bridge GC*. 
+Novell. Android offre una gestione trasparente della memoria con Android e il runtime di Android. Viene implementato come un'estensione del Garbage Collector mono denominato *GC Bridge*. 
 
-Il Bridge di Garbage Collection funziona durante un'operazione Mono garbage collection e figure out il peer che ha gli oggetti deve le "attività" verificato con l'heap del runtime Android. Il Bridge di GC rende questo aspetto eseguendo le operazioni seguenti (nell'ordine indicato):
+Il Bridge GC funziona durante una Garbage Collection mono e rileva quali oggetti peer necessitano di una "dinamicità" verificata con l'heap di runtime di Android. Il Bridge GC esegue questa determinazione eseguendo i passaggi seguenti (in ordine):
 
-1.  Indurre il grafico di riferimento di mono di oggetti peer non raggiungibile negli oggetti Java che rappresentano. 
+1.  Indurre il grafico di riferimento mono degli oggetti peer non raggiungibili negli oggetti Java che rappresentano. 
 
-2.  Eseguire un Garbage Collector Java.
+2.  Eseguire un catalogo globale Java.
 
-3.  Verificare quali oggetti siano davvero inattivi. 
+3.  Verificare quali oggetti sono effettivamente inattivi. 
 
-Questo processo complicato è quello che consente alle sottoclassi della `Java.Lang.Object` per riferimento liberamente uno qualsiasi degli oggetti, ma rimuove le eventuali restrizioni su quali Java oggetti possono essere associati a C#. A causa di questa complessità, il processo di bridge possa essere molto costoso e comporta un notevole mette in pausa in un'applicazione. Se l'applicazione ha riscontrato significativi mette in pausa, è utile esaminare una delle implementazioni di Garbage Collection Bridge tre seguenti: 
+Questo processo complicato consente alle sottoclassi di `Java.Lang.Object` di fare riferimento liberamente a qualsiasi oggetto; rimuove tutte le restrizioni a cui è possibile associare oggetti Java. C# A causa di questa complessità, il processo Bridge può essere molto costoso e può causare pause evidenti in un'applicazione. Se l'applicazione sta riscontrando pause significative, vale la pena esaminare una delle tre implementazioni di Bridge GC seguenti: 
 
--   **Tarjan** -base una completamente nuova progettazione del Bridge di Garbage Collection [algoritmo di Robert Tarjan e con le versioni precedenti fare riferimento a propagazione](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm).
-    Ha le migliori prestazioni con i carichi di lavoro simulati, ma include anche la condivisione di dimensioni maggiori di codice sperimentale. 
+-   **Tarjan** : progettazione completamente nuova del Bridge GC basata sull'algoritmo di [Robert Tarjan e](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm)sulla propagazione dei riferimenti alle versioni precedenti.
+    Offre prestazioni ottimali nei carichi di lavoro simulati, ma ha anche la maggior parte del codice sperimentale. 
 
--   **Nuove** -rivoluzionati del codice originale, correzione di due istanze di comportamento quadratica ma mantenendo l'algoritmo principale (in base [algoritmo del Kosaraju](https://en.wikipedia.org/wiki/Kosaraju's_algorithm) per ricerca fortemente connessi i componenti). 
+-   **Novità** : revisione principale del codice originale, correzione di due istanze di comportamento quadratico mantenendo l'algoritmo di base (basato sull' [algoritmo di Kosaraju](https://en.wikipedia.org/wiki/Kosaraju's_algorithm) per la ricerca di componenti fortemente connessi). 
 
--   **Vecchio** -implementazione originale (considerata più stabile di tre). Il bridge che un'applicazione deve usare se si tratta di `GC_BRIDGE` pause sono accettabili. 
-
-
-L'unico modo per capire meglio il cui funzionamento del Bridge di Garbage Collection è la sperimentazione in un'applicazione e analizzando l'output. Esistono due modi per raccogliere i dati di benchmark: 
-
--   **Abilitare la registrazione** -abilitare la registrazione (come descritto nel [Configuration](~/android/internals/garbage-collection.md) sezione) per ogni opzione di Bridge di catalogo globale, quindi acquisire e confrontare gli output di log da ogni impostazione. Esaminare i `GC` messaggi per ogni opzione, in particolare il `GC_BRIDGE` messaggi. Mette in pausa fino a 150 ms per le applicazioni non interattive sono tollerabile, ma mette in pausa di sopra di 60 ms per le applicazioni molto interattive (ad esempio i giochi) costituiscono un problema. 
-
--   **Attivare l'accounting di bridge** -accounting Bridge mostrerà il costo medio degli oggetti coinvolti nel processo di bridge ogni oggetto cui punta. Ordinamento di queste informazioni in base a dimensioni fornirà suggerimento in merito a ciò che contiene la quantità maggiore di oggetti aggiuntivi. 
+-   **Precedente** : l'implementazione originale (considerata la più stabile tra le tre). Si tratta del Bridge che un'applicazione deve usare se le `GC_BRIDGE` pause sono accettabili. 
 
 
-Per specificare quali `GC_BRIDGE` opzione di un'applicazione deve usare, passare `bridge-implementation=old`, `bridge-implementation=new` oppure `bridge-implementation=tarjan` per il `MONO_GC_PARAMS` variabile di ambiente, ad esempio: 
+L'unico modo per determinare quale Bridge GC funziona meglio è sperimentare in un'applicazione e analizzare l'output. Esistono due modi per raccogliere i dati per il benchmarking: 
+
+-   **Abilitare la registrazione** : abilitare la registrazione (come descritto nella sezione [configurazione](~/android/internals/garbage-collection.md) ) per ogni opzione del Bridge GC, quindi acquisire e confrontare gli output di log di ogni impostazione. Esaminare i `GC` messaggi per ogni opzione. in particolare, i `GC_BRIDGE` messaggi. Le pause fino a 150ms per le applicazioni non interattive sono tollerabili, ma le pause sopra 60 ms per le applicazioni molto interattive, ad esempio i giochi, rappresentano un problema. 
+
+-   **Abilita Bridge** Accounting: l'accounting Bridge Visualizza il costo medio degli oggetti a cui fa riferimento ogni oggetto del processo Bridge. L'ordinamento di queste informazioni in base alle dimensioni fornirà suggerimenti sugli elementi che contengono la maggiore quantità di oggetti aggiuntivi. 
+
+
+Per specificare l' `GC_BRIDGE` `bridge-implementation=new` `bridge-implementation=tarjan` `bridge-implementation=old` opzionecheun'applicazionedeveeseguire,passareoallavariabilediambiente,adesempio:`MONO_GC_PARAMS` 
 
 ```shell
 MONO_GC_PARAMS=bridge-implementation=tarjan
 ```
 
-L'impostazione predefinita è **Tarjan**. Se si trova una regressione, si potrebbe essere necessario impostare questa opzione su **vecchio**. Inoltre, è possibile scegliere di usare la maggiore stabilità **vecchio** opzione se **Tarjan** non consente di produrre un miglioramento delle prestazioni. 
+L'impostazione predefinita è **Tarjan**. Se si rileva una regressione, potrebbe essere necessario impostare questa opzione su obsoleto. Inoltre, è possibile scegliere di utilizzare l'opzione **precedente** più stabile se **Tarjan** non produce un miglioramento delle prestazioni. 
 
 <a name="Helping_the_GC" />
 
-## <a name="helping-the-gc"></a>Aiutare il Garbage Collector
+## <a name="helping-the-gc"></a>Supporto del GC
 
-Esistono diversi modi per consentire il Garbage Collector per ridurre i tempi di raccolta e utilizzo di memoria.
+Sono disponibili diversi modi per aiutare il Garbage Collector a ridurre l'utilizzo della memoria e i tempi di raccolta.
 
 
 
-### <a name="disposing-of-peer-instances"></a>Eliminazione di istanze di Peer
+### <a name="disposing-of-peer-instances"></a>Eliminazione di istanze peer
 
-Il Garbage Collector ha una visualizzazione completa del processo e potrebbe non essere eseguita in memoria è insufficiente perché il Garbage Collector non sa che la memoria è insufficiente. 
+Il Garbage Collector presenta una visualizzazione incompleta del processo e potrebbe non essere eseguito quando la memoria è insufficiente perché il Garbage Collector non sa che la memoria è insufficiente. 
 
-Ad esempio, un'istanza di un [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) tipo o tipo derivato è di almeno 20 byte (soggetto a modifiche senza preavviso e così via, e così via.). 
-[Managed Callable Wrapper](~/android/internals/architecture.md) non vengono aggiunti i membri di istanza aggiuntivo, quindi, quando si dispone di un [Android.Graphics.Bitmap](https://developer.xamarin.com/api/type/Android.Graphics.Bitmap/) istanza che fa riferimento a un blob di 10MB di memoria, Garbage Collection di xamarin. Android non sa che &ndash; il Garbage Collector verrà visualizzato un oggetto di 20 byte e sarà in grado di determinare ciò che è collegato agli oggetti allocati al runtime di Android che mantiene i 10MB di memoria attiva. 
+Ad esempio, un'istanza di un tipo [java. lang. Object](xref:Java.Lang.Object) o un tipo derivato ha una dimensione di almeno 20 byte (soggetto a modifiche senza preavviso, ecc.). 
+I [wrapper richiamabili gestiti](~/android/internals/architecture.md) non aggiungono membri di istanza aggiuntivi, pertanto quando si dispone di un'istanza di [Android. graphics. bitmap](xref:Android.Graphics.Bitmap) che fa riferimento a un BLOB di 10 MB di memoria, &ndash; GC di Novell. Android non saprà che il GC visualizzerà un oggetto a 20 byte e non sarà in grado di determinare che è collegato a oggetti allocati per il runtime di Android che mantiene 10 MB di memoria attiva. 
 
-Spesso è necessario per il Garbage Collector. Sfortunatamente, *GC. AddMemoryPressure()* e *GC. RemoveMemoryPressure()* non sono supportati, pertanto, se si *conoscere* liberata un grafico di oggetti grandi allocati Java potrebbe essere necessario chiamare manualmente [GC. Collect ()](xref:System.GC.Collect) al prompt dei comandi una Garbage Collection per rilasciare il lato Java memoria oppure è possibile in modo esplicito smaltire *Java.Lang.Object* sottoclassi, interrompere il mapping tra il wrapper chiamabile gestito e l'istanza di Java. Ad esempio, vedere [1084 Bug](http://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
+Spesso è necessario aiutare il GC. Sfortunatamente, *GC. AddMemoryPressure ()* e *GC. RemoveMemoryPressure ()* non sono supportati, pertanto se si è *certi* di aver appena liberato un oggetto grafico di grandi dimensioni allocato da Java, potrebbe essere necessario chiamare manualmente [GC. Collect ()](xref:System.GC.Collect) per richiedere a un catalogo globale di rilasciare la memoria sul lato Java oppure è possibile eliminare in modo esplicito le sottoclassi *java. lang. Object* , suddividendo il mapping tra l'istanza gestita Callable Wrapper e l'istanza java. Vedere ad esempio il [Bug 1084](http://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
 
 
 > [!NOTE]
-> È necessario essere *estremamente* attenzione durante l'eliminazione di `Java.Lang.Object` istanze sottoclasse.
+> Quando si eliminano istanze di `Java.Lang.Object` sottoclasse, è necessario prestare molta attenzione.
 
-Per ridurre al minimo la possibilità di danneggiamento della memoria, osservare le linee guida seguenti quando si chiama `Dispose()`.
-
-
-#### <a name="sharing-between-multiple-threads"></a>La condivisione tra più thread
-
-Se il *Java o gestite* istanza può essere condivisi tra più thread, *non deve essere `Dispose()`1!d*, **mai**. Per esempio [`Typeface.Create()`](https://developer.xamarin.com/api/member/Android.Graphics.Typeface.Create/(System.String%2cAndroid.Graphics.TypefaceStyle)) 
-può restituire un *istanza memorizzata nella cache*. Se più thread forniscono gli stessi argomenti, si otterrà il *stesso* istanza. Di conseguenza, `Dispose()`ing del `Typeface` istanza da un thread potrebbe invalidare altri thread, che può comportare `ArgumentException`s dalla `JNIEnv.CallVoidMethod()` (tra gli altri) perché l'istanza è stata eliminata da un altro thread. 
+Per ridurre al minimo la possibilità di danneggiamento della memoria, osservare le linee `Dispose()`guida seguenti quando si chiama.
 
 
-#### <a name="disposing-bound-java-types"></a>Eliminazione di tipi associato Java
+#### <a name="sharing-between-multiple-threads"></a>Condivisione tra più thread
 
-Se l'istanza è di un tipo di linguaggio associato, l'istanza può essere eliminato *purché* l'istanza non può essere riutilizzato da codice gestito *e* l'istanza di Java non può essere condivisa tra thread (vedere la precedente `Typeface.Create()` discussione). (Stabilito questo aspetto può essere difficile). La volta successiva che l'istanza di Java entra in codice gestito, un *nuovo* wrapper verrà creato appositamente. 
+Se l'istanza di *Java o gestita* può essere condivisa tra più thread, *non dovrebbe essere `Dispose()`d*, **mai**. Per esempio[`Typeface.Create()`](xref:Android.Graphics.Typeface.Create*) 
+può restituire un' *istanza memorizzata nella cache*. Se più thread forniscono gli stessi argomenti, otterranno la *stessa* istanza. Di conseguenza `Dispose()`, l'esecuzione dell' `ArgumentException` `JNIEnv.CallVoidMethod()` istanza da un thread può invalidare altri thread, il che può comportare l'esecuzione di da, tra gli altri, perché l'istanza è stata eliminata da un altro thread. `Typeface` 
 
-Ciò è spesso utile se si desidera Drawable e altre istanze elevati in termini di risorse:
+
+#### <a name="disposing-bound-java-types"></a>Eliminazione di tipi Java associati
+
+Se l'istanza è di un tipo Java associato, l'istanza può essere eliminata *finché l'istanza* non verrà riutilizzata dal codice gestito *e* l'istanza Java non può essere condivisa tra i thread (vedere la discussione `Typeface.Create()` precedente). Questa decisione potrebbe essere difficile. Alla successiva immissione del codice gestito da parte dell'istanza di Java verrà creato un *nuovo* wrapper. 
+
+Questa operazione è spesso utile quando si tratta di drawables e altre istanze con utilizzo intensivo di risorse:
 
 ```csharp
 using (var d = Drawable.CreateFromPath ("path/to/filename"))
     imageView.SetImageDrawable (d);
 ```
 
-Il codice precedente è sicura perché il Peer che [Drawable.CreateFromPath()](https://developer.xamarin.com/api/member/Android.Graphics.Drawables.Drawable.CreateFromPath/) restituisce farà riferimento a un peer di Framework, *non* un peer dell'utente. Il `Dispose()` chiamare alla fine del `using` blocco interromperà la relazione tra managed [Drawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.Drawable/) e framework [Drawable](https://developer.android.com/reference/android/graphics/drawable/Drawable.html) istanze, consentendo l'istanza di Java sia raccolte, non appena il runtime di Android. Questo sarebbe *non* sicuri se l'istanza di Peer fa riferimento a un peer dell'utente; in questo caso usiamo le informazioni di "external" per *sapere* che il `Drawable` non possono fare riferimento a un peer di utente e pertanto il `Dispose()` chiamare è sicuro. 
+Il valore precedente è sicuro perché il peer che può essere restituito da [CreateFromPath ()](xref:Android.Graphics.Drawables.Drawable.CreateFromPath*) si riferisce a un peer del Framework, *non* a un peer utente. La `Dispose()` chiamata alla fine `using` del blocco interromperà la relazione tra [le istanze di](https://developer.android.com/reference/android/graphics/drawable/Drawable.html) disegnatore [gestito e](xref:Android.Graphics.Drawables.Drawable) di .NET Framework, consentendo la raccolta dell'istanza di Java non appena il runtime di Android deve essere eseguito. Questo *non* è sicuro se l'istanza peer fa riferimento a un peer utente; Qui vengono usate informazioni "esterne" per *capire* che `Drawable` non può fare riferimento a un peer utente e pertanto la `Dispose()` chiamata è sicura. 
 
 
 #### <a name="disposing-other-types"></a>Eliminazione di altri tipi 
 
-Se l'istanza fa riferimento a un tipo che non è un'associazione di un tipo di Java (ad esempio un oggetto personalizzato `Activity`), **non viene** chiamare `Dispose()` a meno che non si *sapere* che nessun codice Java chiamerà i metodi sottoposti a override su esso istanza. In caso contrario, restituisce [ `NotSupportedException`s](~/android/internals/architecture.md#Premature_Dispose_Calls). 
+Se l'istanza fa riferimento a un tipo che non è un'associazione di un tipo Java (ad esempio `Activity`un oggetto personalizzato), `Dispose()` **non** chiamare a meno che non si sia *certi* che nessun codice Java chiamerà metodi sottoposti a override su tale istanza. In caso [ `NotSupportedException`contrario, i](~/android/internals/architecture.md#Premature_Dispose_Calls)risultati vengono restituiti in. 
 
-Ad esempio, se si dispone di una classe personalizzata fare clic su listener:
+Ad esempio, se si dispone di un listener di clic personalizzato:
 
 ```csharp
 partial class MyClickListener : Java.Lang.Object, View.IOnClickListener {
@@ -181,7 +181,7 @@ partial class MyClickListener : Java.Lang.Object, View.IOnClickListener {
 }
 ```
 
-Si *non deve* dispose di questa istanza, come Java proverà a richiamare metodi su di esso in futuro:
+*Non è consigliabile* eliminare questa istanza perché Java tenterà di richiamare i metodi in futuro:
 
 ```csharp
 // BAD CODE; DO NOT USE
@@ -191,9 +191,9 @@ using (var listener = new MyClickListener ())
 ```
 
 
-#### <a name="using-explicit-checks-to-avoid-exceptions"></a>Usando i controlli espliciti per evitare eccezioni
+#### <a name="using-explicit-checks-to-avoid-exceptions"></a>Uso di controlli espliciti per evitare eccezioni
 
-Se è stato implementato un [Java.Lang.Object.Dispose](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose(System.Boolean)/) overload di metodo, evitare di modificare gli oggetti che coinvolgono JNI. In questo modo è possibile creare un *doppia dispose* situazione che rende possibile il codice (preoccupantemente) tenta di accedere a un oggetto sottostante di Java che è già stato sottoposto a garbage collection. Questa operazione genera un'eccezione simile alla seguente: 
+Se è stato implementato un metodo di overload [java. lang. Object. Dispose](xref:Java.Lang.Object.Dispose*) , evitare di toccare oggetti che coinvolgono JNI. In questo modo è possibile creare una situazione a *doppia eliminazione* che consente al codice di provare (fatalmente) ad accedere a un oggetto Java sottostante che è già stato sottoposta a Garbage Collection. Questa operazione genera un'eccezione simile alla seguente: 
 
 ```shell
 System.ArgumentException: 'jobject' must not be IntPtr.Zero.
@@ -201,9 +201,9 @@ Parameter name: jobject
 at Android.Runtime.JNIEnv.CallVoidMethod
 ```
 
-Spesso questa situazione si verifica quando il primo metodo dispose di un oggetto fa sì che un membro a diventare null e un tentativo di accesso successivi per questo membro null causa un'eccezione generata. In particolare, dell'oggetto `Handle` (un'istanza gestita che collega all'istanza di Java sottostante) viene invalidato per il prima dispose, ma il codice gestito tenta comunque accedere a questa istanza di Java sottostante anche se non è più disponibile (vedere [ Wrapper richiamabili gestiti](~/android/internals/architecture.md#Managed_Callable_Wrappers) per altre informazioni sul mapping tra le istanze di Java e le istanze gestite). 
+Questa situazione si verifica spesso quando il primo Dispose di un oggetto fa sì che un membro diventi null e quindi un successivo tentativo di accesso su questo membro NULL causa la generazione di un'eccezione. In particolare, l'oggetto `Handle` , che collega un'istanza gestita alla relativa istanza java sottostante, viene invalidato alla prima eliminazione, ma il codice gestito tenta comunque di accedere a questa istanza di Java sottostante anche se non è più disponibile (vedere [ Wrapper richiamabili gestiti](~/android/internals/architecture.md#Managed_Callable_Wrappers) per ulteriori informazioni sul mapping tra istanze Java e istanze gestite. 
 
-Un buon metodo per impedire questa eccezione consiste nel verificare in modo esplicito nel `Dispose` metodo che il mapping tra l'istanza gestita e l'istanza di Java sottostante è ancora valido; ovvero, verificare se l'oggetto `Handle` è null (`IntPtr.Zero`) prima di accedere ai relativi membri. Ad esempio, il seguente `Dispose` metodo accessi un `childViews` oggetto: 
+Un modo efficace per evitare questa eccezione consiste nel verificare in modo esplicito `Dispose` nel metodo che il mapping tra l'istanza gestita e l'istanza java sottostante sia ancora valido, ovvero controllare se l' `Handle` oggetto è null (`IntPtr.Zero`) prima di accedere ai relativi membri. Ad esempio, il metodo `Dispose` seguente accede a un `childViews` oggetto: 
 
 ```csharp
 class MyClass : Java.Lang.Object, ISomeInterface 
@@ -219,7 +219,7 @@ class MyClass : Java.Lang.Object, ISomeInterface
 }
 ```
 
-Se un metodo dispose iniziale passa cause `childViews` per avere un valore non valido `Handle`, il `for` accesso ciclo genererà un `ArgumentException`. Aggiungendo l'impostazione esplicita `Handle` null controllo prima del primo `childViews` accedere, seguenti `Dispose` metodo consente di evitare l'eccezione che si verifichi: 
+Se un passaggio di eliminazione iniziale `childViews` causa la presenza di `Handle`un valore `for` non valido, l'accesso `ArgumentException`al ciclo genererà un'operazione. Con l'aggiunta di `Handle` un controllo Null esplicito `childViews` prima del primo accesso `Dispose` , il metodo seguente impedisce che si verifichi l'eccezione: 
 
 ```csharp
 class MyClass : Java.Lang.Object, ISomeInterface 
@@ -241,9 +241,9 @@ class MyClass : Java.Lang.Object, ISomeInterface
 ```
 
 
-### <a name="reduce-referenced-instances"></a>Ridurre le istanze di cui si fa riferimento
+### <a name="reduce-referenced-instances"></a>Ridurre le istanze a cui si fa riferimento
 
-Ogni volta che un'istanza di un `Java.Lang.Object` tipo o una sottoclasse viene analizzato durante il Garbage Collector, l'intera *oggetto grafico* che l'istanza fa riferimento a deve anche essere analizzato. L'oggetto grafico è il set di istanze dell'oggetto che fa riferimento l'istanza"radice", *plus* tutto quello che fa riferimento quali l'istanza radice fa riferimento, in modo ricorsivo. 
+Ogni volta che viene eseguita `Java.Lang.Object` l'analisi di un'istanza di un tipo o di una sottoclasse durante il Garbage Collector, deve essere analizzato anche l'intero *oggetto grafico* a cui fa riferimento l'istanza. L'oggetto grafico è il set di istanze dell'oggetto a cui fa riferimento la "istanza radice", *più* tutti gli elementi a cui fa riferimento l'istanza radice, in modo ricorsivo. 
 
 Si consideri la classe seguente:
 
@@ -263,11 +263,11 @@ class BadActivity : Activity {
 }
 ```
 
-Quando `BadActivity` viene costruito, l'oggetto grafico conterrà 10004 istanze (1x `BadActivity`, 1x `strings`, 1x `string[]` contenute `strings`, 10000 x istanze di stringa), *tutti i* di cui dovrà essere analisi ogni volta che il `BadActivity` istanza viene analizzata. 
+Quando `BadActivity` viene costruito, l'oggetto grafico conterrà le istanze 10004 ( `BadActivity`1x, `strings`1x, `string[]` 1x detenute da, istanze di `strings`stringa 10000x *), che* dovranno essere analizzate ogni volta che il `BadActivity` viene eseguita l'analisi dell'istanza. 
 
-Ciò può avere effetti negativi sui tempi di raccolta, determinando un miglioramento tempi di pausa GC. 
+Ciò può avere effetti negativi sui tempi di raccolta, con conseguente aumento dei tempi di sospensione GC. 
 
-È possibile aiutare il Garbage Collector dal *riducendo* le dimensioni degli oggetti grafici che contengono una radice da istanze utente di peer. Nell'esempio precedente, questa operazione può essere eseguita tramite lo spostamento `BadActivity.strings` in una classe separata che non eredita da Java.Lang.Object: 
+È possibile semplificare il Garbage Collector *riducendo* le dimensioni degli oggetti grafici che hanno radice da istanze peer utente. Nell'esempio precedente questa operazione può essere eseguita spostando `BadActivity.strings` in una classe separata che non eredita da Java. lang. Object: 
 
 ```csharp
 class HiddenReference<T> {
@@ -315,54 +315,54 @@ class BetterActivity : Activity {
 
 ## <a name="minor-collections"></a>Raccolte secondarie
 
-Raccolte secondarie possono essere eseguite manualmente tramite la chiamata [GC. Collect(0)](xref:System.GC.Collect). Le raccolte di minori sono economiche (quando rispetto alle raccolte principale), ma è necessario un notevole costo, fisso, in modo che non si vuole attivare tali troppo spesso e deve avere una pausa di pochi millisecondi. 
+Le raccolte secondarie possono essere eseguite manualmente chiamando [GC. Collect (0)](xref:System.GC.Collect). Le raccolte secondarie sono economiche (rispetto alle raccolte principali), ma hanno un costo fisso significativo, quindi non è necessario attivarle troppo spesso e devono avere un tempo di pausa di pochi millisecondi. 
 
-Se l'applicazione presenta un "ciclo di servizio" in cui la stessa operazione viene eseguita ripetutamente, potrebbe essere consigliabile eseguire manualmente una raccolta secondaria dopo il ciclo è terminato. Ciclo di lavoro di esempio include: 
+Se l'applicazione ha un "ciclo di lavoro" in cui la stessa operazione viene eseguita più volte, potrebbe essere consigliabile eseguire manualmente una raccolta secondaria al termine del ciclo di lavoro. I cicli Duty di esempio includono: 
 
--  Il ciclo di rendering di un singolo frame del gioco.
--  L'intera interazione con una finestra di dialogo app specificata (apertura, la compilazione di chiusura) 
--  Un gruppo di richieste di rete per l'aggiornamento/sincronizzazione dei dati delle app.
+-  Ciclo di rendering di un singolo frame di gioco.
+-  L'intera interazione con una determinata finestra di dialogo dell'app (apertura, riempimento, chiusura) 
+-  Gruppo di richieste di rete per aggiornare/sincronizzare i dati dell'app.
 
 
 
 ## <a name="major-collections"></a>Raccolte principali
 
-Raccolte principale possono essere eseguite manualmente tramite la chiamata [GC. Collect ()](xref:System.GC.Collect) o `GC.Collect(GC.MaxGeneration)`. 
+Le raccolte principali possono essere eseguite manualmente chiamando [GC. Collect ()](xref:System.GC.Collect) o `GC.Collect(GC.MaxGeneration)`. 
 
-Sono devono essere eseguite raramente e possono avere una pausa di secondo in un dispositivo Android in stile quando la raccolta di un heap 512MB. 
+Devono essere eseguite raramente e possono avere un tempo di pausa di un secondo in un dispositivo di tipo Android quando si raccoglie un heap 512MB. 
 
-Raccolte principali devono solo essere richiamate manualmente, se dovesse: 
+Le raccolte principali devono essere richiamate manualmente, se mai: 
 
--   Alla fine dei compiti lunghi cicli e quando una lunga pausa non costituire un problema all'utente. 
+-   Alla fine dei cicli di lavoro lunghi e quando una pausa lunga non presenta un problema per l'utente. 
 
--   Within an overridden [Android.App.Activity.OnLowMemory()](https://developer.xamarin.com/api/member/Android.App.Activity.OnLowMemory/) method. 
+-   All'interno di un metodo [Android. app. Activity. OnLowMemory ()](xref:Android.App.Activity.OnLowMemory) sottoposto a override. 
 
 
 
 ## <a name="diagnostics"></a>Diagnostica
 
-Per rilevare quando i riferimenti globali vengono creati ed eliminati, è possibile impostare il [debug.mono.log](~/android/troubleshooting/index.md) proprietà di sistema per contenere [ *gref* ](~/android/troubleshooting/index.md) e/o [ *gc*](~/android/troubleshooting/index.md). 
+Per tenere traccia del momento in cui i riferimenti globali vengono creati ed eliminati, è possibile impostare la proprietà di sistema [debug. mono. log](~/android/troubleshooting/index.md) in modo che contenga [*Gref*](~/android/troubleshooting/index.md) e/o [*GC*](~/android/troubleshooting/index.md). 
 
 
 
 ## <a name="configuration"></a>Configurazione
 
-Il garbage collector di xamarin. Android può essere configurato impostando la `MONO_GC_PARAMS` variabile di ambiente. Le variabili di ambiente possono essere impostate con un'azione di compilazione [AndroidEnvironment](~/android/deploy-test/environment.md).
+Il Garbage Collector Novell. Android può essere configurato impostando la `MONO_GC_PARAMS` variabile di ambiente. Le variabili di ambiente possono essere impostate con un'azione di compilazione di [AndroidEnvironment](~/android/deploy-test/environment.md).
 
-Il `MONO_GC_PARAMS` variabile di ambiente è un elenco delimitato da virgole dei parametri seguenti: 
+La `MONO_GC_PARAMS` variabile di ambiente è un elenco delimitato da virgole dei parametri seguenti: 
 
--   `nursery-size` = *dimensioni* : Imposta le dimensioni di nursery. Le dimensioni vengono specificate in byte e devono essere una potenza di due. I suffissi `k` , `m` e `g` può essere utilizzato per specificare chilogrammo, mega e gigabyte, rispettivamente. Nursery è la prima generazione (di due). Un nursery più grandi sarà in genere più veloce del programma, ma ovviamente utilizzerà più memoria. Nursery predefinita dimensioni di 512 kb. 
+-   `nursery-size` = *dimensioni* : Imposta la dimensione della nursery. La dimensione è specificata in byte e deve essere una potenza di due. I suffissi `k` `m` e`g` possono essere usati per specificare rispettivamente kilo, Mega e Gigabyte. La nursery è la prima generazione (di due). Una nursery più grande in genere accelererà il programma, ma userà ovviamente una maggiore quantità di memoria. Dimensioni predefinite della nursery 512 KB. 
 
--   `soft-heap-limit` = *dimensioni* : Il numero massimo di destinazione gestiti il consumo di memoria per l'app. Quando l'utilizzo della memoria è inferiore al valore specificato, il Garbage Collector è ottimizzato per il tempo di esecuzione (raccolte di un numero inferiore). 
-    Oltre questo limite, il Garbage Collector è ottimizzato per l'utilizzo della memoria (altre raccolte). 
+-   `soft-heap-limit` = *dimensioni* : Il consumo massimo managed memory di destinazione per l'app. Quando l'utilizzo della memoria è inferiore al valore specificato, il GC viene ottimizzato per il tempo di esecuzione (un minor numero di raccolte). 
+    Al di sopra di questo limite, il GC è ottimizzato per l'utilizzo della memoria (altre raccolte). 
 
--   `evacuation-threshold` = *soglia* : Imposta la soglia di evacuazione espresse come percentuale. Il valore deve essere un numero intero compreso nell'intervallo da 0 a 100. Il valore predefinito è 66. Se la fase di apertura della raccolta rileva che l'occupazione di un tipo di blocco dell'heap specifico è minore di questa percentuale, lo farà un insieme di copia per quel tipo di blocco nella raccolta principale successiva, ripristinando in questo modo l'occupazione al prossimo al 100%. Il valore 0 disattiva lo spostamento. 
+-   `evacuation-threshold` = *soglia* : Imposta la soglia di evacuazione in percentuale. Il valore deve essere un numero intero compreso tra 0 e 100. Il valore predefinito è 66. Se la fase di sweep della raccolta rileva che l'occupazione di un tipo di blocco heap specifico è inferiore a questa percentuale, effettuerà una raccolta di copia per quel tipo di blocco nella raccolta principale successiva, ripristinando in tal modo l'occupazione fino al 100%. Il valore 0 disattiva l'evacuazione. 
 
--   `bridge-implementation` = *implementazione di colmare* : Questo verrà impostato l'opzione di Bridge di Garbage Collection per consentire di risolvere i problemi di prestazioni di Garbage Collection. Esistono tre possibili valori: *vecchio* , *nuove* , *tarjan*.
+-   `bridge-implementation` = *implementazione del Bridge* : In questo modo verrà impostata l'opzione GC Bridge per risolvere i problemi di prestazioni GC. Esistono tre possibili valori: *Old* , *New* , *Tarjan*.
 
--   `bridge-require-precise-merge`: Il Tarjan bridge contiene un'ottimizzazione che, in rare occasioni, potrebbe essere un oggetto di essere raccolti una Garbage Collection dopo il primo rilascio garbage. Tra cui questa opzione Disabilita che l'ottimizzazione, rendendo più prevedibili ma potenzialmente più lente cataloghi globali.
+-   `bridge-require-precise-merge`: Il Bridge Tarjan contiene un'ottimizzazione che può, in rari casi, causare la raccolta di un oggetto GC dopo che è stato innanzitutto sottoposta a Garbage Collection. Questa opzione consente di disabilitare l'ottimizzazione, rendendo i cataloghi globali più prevedibili ma potenzialmente più lenti.
 
-Ad esempio, per configurare il catalogo globale per un limite di dimensioni dell'heap di 128MB, aggiungere un nuovo file al progetto con un **azione di compilazione** di `AndroidEnvironment` con il contenuto: 
+Ad esempio, per configurare il GC in modo da avere un limite di dimensioni dell'heap di 128 MB, aggiungere un nuovo file al progetto con `AndroidEnvironment` un' **azione di compilazione** con il contenuto: 
 
 ```shell
 MONO_GC_PARAMS=soft-heap-limit=128m
