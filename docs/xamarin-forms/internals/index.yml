@@ -1,0 +1,39 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Concetti avanzati e meccanismi interni
+metadata:
+  title: Concetti avanzati e meccanismi interni
+  description: Informazioni sui concetti avanzati e i meccanismi interni di Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 07/23/2019
+abstract:
+  description: Informazioni sui concetti avanzati e i meccanismi interni di Xamarin.Forms.
+sections:
+  - title: null
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: dependency-resolution.md
+            html: 'Informazioni su come inserire un metodo di risoluzione delle dipendenze in Xamarin.Forms, in modo che un''applicazione abbia il controllo sulla creazione e sulla durata di renderer personalizzati, effetti e implementazioni di DependencyService.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
+              href: dependency-resolution.md
+            title: Risoluzione delle dipendenze
+          - href: fast-renderers.md
+            html: Informazioni sui renderer veloci che riducono i costi di ingrandimento e rendering dei controlli di Xamarin.Forms in Android appiattendo la gerarchia dei controlli nativi risultante.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-performance.svg'
+              href: fast-renderers.md
+            title: Renderer veloci
+          - href: net-standard.md
+            html: Informazioni su come convertire un'applicazione Xamarin.Forms in modo da usare .NET Standard 2.0.
+            image:
+              src: 'https://docs.microsoft.com/media/logos/logo_NETstandard.svg'
+              href: net-standard.md
+            title: .NET Standard
