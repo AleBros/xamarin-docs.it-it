@@ -1,28 +1,25 @@
 ---
-title: Mappe e posizione
-description: Uso di mappe con xamarin. Android
+title: Mappe e località in Android
+description: Uso di Maps con Novell. Android
 ms.prod: xamarin
 ms.assetid: B45211C5-D377-4A55-8C8E-95D4BF470AE3
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/03/2016
-ms.openlocfilehash: f3c058d898bca17264374cf253345babd3a65072
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 57a1e4ecab83d86752a362dd4e2c427665ec1c64
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864232"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510532"
 ---
-# <a name="maps-and-location"></a>Mappe e posizione
-
+# <a name="maps-and-location-on-android"></a>Mappe e località in Android
 
 ## <a name="location-servicesandroidplatformmaps-and-locationlocationmd"></a>[Servizi di posizione](~/android/platform/maps-and-location/location.md)
 
-Questa guida presenta riconoscimento presenza in applicazioni Android e viene illustrato come ottenere la posizione dell'utente usando l'API del servizio percorso di Android, nonché l'istruzione Fused Provider di posizione disponibili con l'API di servizi di posizione di Google.
-
+Questa guida introduce la conoscenza della posizione nelle applicazioni Android e illustra come ottenere la posizione dell'utente usando l'API del servizio di localizzazione Android, nonché il provider di percorsi con fuso disponibile con Google API Servizi in base alla località.
 
 ## <a name="mapsandroidplatformmaps-and-locationmapsindexmd"></a>[Mappe](~/android/platform/maps-and-location/maps/index.md)
 
-Questo articolo illustra come usare le mappe e posizione con xamarin. Android. Viene descritto come tutti i dati da sfruttando l'applicazione mappe predefinite per mediante direttamente viene eseguito il mapping API V2 Android di Google. Inoltre, viene spiegato come usare un'unica API per lavorare con i servizi di posizione, che consente a un'applicazione ottenere le correzioni di posizione tramite percorso tower cella, Wi-Fi o GPS.
-
+Questo articolo illustra come usare le mappe e il percorso con Novell. Android. Si tratta di qualsiasi cosa, dall'uso dell'applicazione Maps incorporata all'uso diretto di Google Maps Android API v2. Viene anche illustrato come usare una singola API per lavorare con i servizi di posizione, che consente a un'applicazione di ottenere correzioni di posizione tramite la posizione della Torre della cella, Wi-Fi o GPS.

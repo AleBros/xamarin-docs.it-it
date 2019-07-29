@@ -1,186 +1,186 @@
 ---
 title: Funzionalità marshmallow
-description: Questo articolo illustra come iniziare a usare con xamarin. Android per sviluppare App per Android Marshmallow 6.0.
+description: Questo articolo è utile per iniziare a usare Novell. Android per sviluppare app per Android 6,0 marshmallow.
 ms.prod: xamarin
 ms.assetid: E4D6F183-98D2-460A-9D65-937639A899E0
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a396f4fe59db36b134843d2538bcb470a452a85b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1048d954656152f47509887ed6acf21962a787b2
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61158030"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510470"
 ---
 # <a name="marshmallow-features"></a>Funzionalità marshmallow
 
-_Questo articolo illustra come iniziare a usare con xamarin. Android per sviluppare App per Android Marshmallow 6.0._
+_Questo articolo è utile per iniziare a usare Novell. Android per sviluppare app per Android 6,0 marshmallow._
 
-Questo articolo riporta un riepilogo delle nuove funzionalità in Android Marshmallow 6.0, spiega come preparare xamarin. Android per lo sviluppo di Android Marshmallow e vengono forniti collegamenti ad applicazioni di esempio che illustrano come utilizzare di nuovo Android Marshmallow funzionalità nelle App xamarin. Android. 
+Questo articolo fornisce una descrizione delle nuove funzionalità di Android 6,0 marshmallow, spiega come preparare Novell. Android per lo sviluppo di marshmallow Android e fornisce collegamenti ad applicazioni di esempio che illustrano come usare il nuovo Android marshmallow funzionalità delle app Novell. Android. 
 
 
 ## <a name="overview"></a>Panoramica
 
-[Android Marshmallow 6.0](https://developer.android.com/about/versions/marshmallow/index.html), è il successivo Android principali release dopo Android Lollipop.
-Xamarin. Android supporta Android Marshmallow e include:
+[Android 6,0 marshmallow](https://developer.android.com/about/versions/marshmallow/index.html), la prossima versione principale di Android dopo Android Lollipop.
+Novell. Android supporta i dispositivi Android marshmallow e include:
 
--   **Associazioni API 23/Android 6.0** &ndash; Android 6.0 aggiunge molte nuove API per le nuove funzionalità descritte di seguito, queste API sono disponibili per le app xamarin. Android quando si destina livello API 23. Per altre informazioni sulle API di Android 6.0, vedere [API di Android 6.0](https://developer.android.com/preview/api-overview.html). 
+-   **Binding API 23/Android 6,0** &ndash; Android 6,0 aggiunge molte nuove API per le nuove funzionalità descritte di seguito. queste API sono disponibili per le app Novell. Android quando si usa il livello API 23 di destinazione. Per altre informazioni sulle API Android 6,0, vedere [API android 6,0](https://developer.android.com/preview/api-overview.html). 
 
-[![Immagini di logo alto dei Tablet e telefoni esecuzione Marshmallow](marshmallow-images/android-m-hero-sml.png)](marshmallow-images/android-m-hero.png#lightbox)
+[![Immagini Hero di Tablet e telefoni che eseguono marshmallow](marshmallow-images/android-m-hero-sml.png)](marshmallow-images/android-m-hero.png#lightbox)
 
-Anche se il rilascio Marshmallow è incentrato principalmente su "per il polacco e qualità", fornisce inoltre numerose nuove funzionalità di interesse per gli sviluppatori di xamarin. Android. Queste funzionalità comprendono: 
+Sebbene la versione marshmallow sia principalmente dedicata alla "Polonia e alla qualità", offre anche molte nuove funzionalità interessanti per gli sviluppatori Novell. Android. Queste funzionalità comprendono: 
 
--   **Autorizzazioni di runtime** &ndash; questa funzionalità avanzata consente agli utenti di approvare le autorizzazioni di sicurezza caso per caso fase di esecuzione. 
+-   **Autorizzazioni di runtime** &ndash; Questo miglioramento consente agli utenti di approvare le autorizzazioni di sicurezza caso per caso in fase di esecuzione. 
 
--   **Miglioramenti di autenticazione** &ndash; a partire da Android Marshmallow, le app possono ora usare sensori di impronte digitali per autenticare gli utenti e un nuovo *conferma delle credenziali* funzionalità riduce al minimo la necessità per l'immissione password. 
+-   **Miglioramenti dell'autenticazione** A partire da Android marshmallow, le app possono ora usare i sensori di impronta digitale per autenticare gli utenti e una nuova funzionalità *Confirm Credential* riduce al minimo la necessità di immettere le password. &ndash; 
 
--   **Collegamento di app** &ndash; questa funzionalità consente di eliminare la necessità del **selezione App** popup associando automaticamente le app con domini web. 
+-   **Collegamento app** Questa funzionalità consente di eliminare la necessità di visualizzare la **selezione delle app** associando automaticamente le app ai domini Web. &ndash; 
 
--   **Condivisione di indirizzare** &ndash; è possibile definire *indirizzare le destinazioni di condivisione* che rendono la condivisione rapida e intuitiva per gli utenti, mentre questa funzionalità da parte degli utenti a condividere contenuto con altre app. 
+-   **Condivisione diretta** È possibile definire *destinazioni di condivisione diretta* che rendono la condivisione rapida e intuitiva per gli utenti. questa funzionalità consente a uers di condividere il contenuto con altre app. &ndash; 
 
--   **Le interazioni vocali** &ndash; questa nuova API consente di integrare le funzionalità vocali discorsive nella tua app. 
+-   **Interazioni vocali** &ndash; Questa nuova API consente di creare funzionalità vocali in conversazione nell'app. 
 
--   **Modalità di visualizzazione 4 K** &ndash; In Android Marshmallow, l'app può richiedere un 4K risoluzione dello schermo su hardware che la supporta. 
+-   **modalità di visualizzazione 4K** &ndash; In Android marshmallow l'app può richiedere una risoluzione dello schermo 4K sull'hardware che la supporta. 
 
--   **Nuove funzionalità Audio** &ndash; partire Marshmallow, Android supporta ora il protocollo MIDI. Fornisce inoltre nuove classi per creare oggetti di riproduzione e acquisizione audio digitale, e offre nuove API hook per associare i dispositivi audio e inpui. 
+-   **Nuove funzionalità audio** &ndash; A partire da marshmallow, Android supporta ora il protocollo MIDI. Fornisce inoltre nuove classi per la creazione di oggetti digitali per l'acquisizione e la riproduzione di audio e offre nuovi hook API per l'associazione di dispositivi audio e di input. 
 
--   **Nuove funzionalità Video** &ndash; Marshmallow fornisce una nuova classe che le app possono eseguire il rendering di flussi audio e video sincronizzati, questa classe fornisce inoltre supporto per la velocità di riproduzione dinamica. 
+-   **Nuove funzionalità video** &ndash; Marshmallow fornisce una nuova classe che consente alle app di eseguire il rendering di flussi audio e video sincronizzati. questa classe fornisce anche il supporto per la velocità di riproduzione dinamica. 
 
--   **Android for Work** &ndash; Marshmallow include controlli avanzati per i dispositivi di proprietà aziendale, l'utente singolo. Supporta l'installazione invisibile all'utente e la disinstallazione dell'App dal proprietario del dispositivo, accettazione automatica di aggiornamenti del sistema, gestione migliorata dei certificati, il rilevamento dell'utilizzo di dati, la gestione delle autorizzazioni e le notifiche dello stato del lavoro. 
+-   **Android for Work** &ndash; Marshmallow include controlli avanzati per i dispositivi di proprietà dell'azienda e utenti singoli. Supporta l'installazione e la disinstallazione invisibile all'utente del proprietario del dispositivo, l'accettazione automatica degli aggiornamenti del sistema, la gestione dei certificati migliorata, il monitoraggio dell'utilizzo dei dati, la gestione delle autorizzazioni e le notifiche dello stato del lavoro. 
 
--   **Material Design Library di supporto** &ndash; nuova *libreria di supporto di progettazione* fornisce componenti di progettazione e modelli che rende più semplice per poter integrare Material Design aspetto nella tua app. 
+-   **Libreria di supporto della progettazione materiale** La nuova *libreria di supporto della progettazione* fornisce componenti e modelli di progettazione che semplificano la creazione di un aspetto di progettazione del materiale nell'app. &ndash; 
 
-Inoltre, sono stati rilasciati numerosi aggiornamenti di core della libreria Android con Android M e questi aggiornamenti offrono nuove funzionalità per Android M e versioni precedenti di Android.
+Sono stati inoltre rilasciati molti aggiornamenti della libreria Android core con Android M e questi aggiornamenti forniscono nuove funzionalità per Android M e per le versioni precedenti di Android.
 
-Inoltre, sono stati rilasciati numerosi aggiornamenti di core della libreria Android con Android Marshmallow, e gli aggiornamenti offrono nuove funzionalità per Android Marshmallow e versioni precedenti di Android. Questo articolo illustra come iniziare a creare App con Android Marshmallow, e fornisce che una panoramica della nuova funzionalità di evidenziazione in Android 6.0. 
+Sono stati inoltre rilasciati molti aggiornamenti della libreria Android core con Android marshmallow e questi aggiornamenti forniscono nuove funzionalità per Android marshmallow e per le versioni precedenti di Android. Questo articolo illustra come iniziare a creare app con Android marshmallow e fornisce una panoramica delle nuove funzionalità in Android 6,0. 
 
 ## <a name="requirements"></a>Requisiti
 
-Per utilizzare le nuove funzionalità di Android Marshmallow nelle App basate su Xamarin è necessario quanto segue: 
+Di seguito sono riportate le funzionalità necessarie per usare le nuove funzionalità di Android marshmallow nelle app basate su Novell: 
 
--   **Xamarin. Android** &ndash; xamarin. Android 5.1.7.12 o versioni successive deve essere installato e configurato con Visual Studio o Xamarin Studio.
+-   **Novell. Android** &ndash; Novell. Android 5.1.7.12 o versione successiva deve essere installato e configurato con Visual Studio o Xamarin Studio.
 
--   **Visual Studio per Mac** oppure **Visual Studio** &ndash; se si usa Visual Studio per Mac, versione 5.9.7.22 o versione successiva è richiesto. Se si usa Visual Studio, versione 3.11.1537 o versione successiva degli strumenti di Xamarin per Visual Studio è necessaria. 
+-   **Visual Studio per Mac** o **Visual Studio** &ndash; se si usa Visual Studio per Mac, è richiesta la versione 5.9.7.22 o successiva. Se si usa Visual Studio, è necessaria la versione 3.11.1537 o successiva di Novell Tools per Visual Studio. 
 
--   **Android SDK** &ndash; Android 6.0 SDK (API 23) o versione successiva deve essere installato tramite Android SDK Manager.
+-   **Android SDK** &ndash; Android SDK 6,0 (API 23) o versione successiva deve essere installato tramite gestione Android SDK.
 
--   **Java Developer Kit** &ndash; xamarin. Android richiede [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sviluppa per il livello API 24 o versione successiva (JDK 1.8 supporta anche i livelli API precedenti a 24, tra cui Marshmallow). Se si usa il Visualizzatore anteprima del form o controlli personalizzati, è necessaria la versione a 64 bit di JDK 1.8.
+-   **Java Developer Kit** Novell. Android richiede [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per il livello API 24 o superiore (JDK 1,8 supporta anche i livelli API precedenti a 24, incluso marshmallow). &ndash; La versione a 64 bit di JDK 1,8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
 
-È possibile continuare a usare [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se si è lo sviluppo in modo specifico per il livello API 23 o versioni precedenti. 
+È possibile continuare a usare [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se si sta sviluppando in modo specifico per il livello API 23 o versioni precedenti. 
 
 
 ## <a name="getting-started"></a>Introduzione
 
-Per iniziare a usare Android Marshmallow con xamarin. Android, è necessario scaricare e installare gli strumenti più recenti e i pacchetti SDK prima di poter creare un progetto Android Marshmallow: 
+Per iniziare a usare Android marshmallow con Novell. Android, è necessario scaricare e installare gli strumenti e i pacchetti SDK più recenti prima di poter creare un progetto Android marshmallow: 
 
-1.  Installare gli ultimi aggiornamenti di Xamarin dal **stabile** canale. 
+1.  Installare gli aggiornamenti più recenti di Novell dal canale **stabile** . 
 
-2.  Installare i pacchetti Android 6.0 Marshmallow SDK e strumenti.
+2.  Installare gli strumenti e i pacchetti di Android 6,0 marshmallow SDK.
 
-3.  Creare un nuovo progetto xamarin. Android destinata a Android 6.0 Marshmallow (API livello 23). 
+3.  Creare un nuovo progetto Novell. Android destinato a Android 6,0 marshmallow (livello API 23). 
 
-4.  Configurare un dispositivo o emulatore per Android Marshmallow.
+4.  Configurare un emulatore o un dispositivo per Android marshmallow.
 
-Ognuno di questi passaggi è illustrato nelle sezioni seguenti:
-
-
-### <a name="install-xamarin-updates"></a>Installare gli aggiornamenti di Xamarin
-
-Per aggiornare Xamarin in modo che includa il supporto per Android Marshmallow 6.0, modificare il canale di aggiornamento **stabile** e installare tutti gli aggiornamenti. Per altre informazioni sull'installazione degli aggiornamenti dal canale degli aggiornamenti, vedere [modificare il canale aggiornamenti](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel). 
+Ognuno di questi passaggi è descritto nelle sezioni seguenti:
 
 
-### <a name="install-the-android-60-sdk"></a>Installare il SDK Android 6.0
+### <a name="install-xamarin-updates"></a>Installare gli aggiornamenti di Novell
 
-Per creare un progetto xamarin. Android per Android Marshmallow, è necessario innanzitutto di Android SDK Manager per installare Android SDK 6.0:
-
--   Avviare Android SDK Manager (in Visual Studio per Mac, usare **strumenti > SDK Manager**; in Visual Studio, utilizzano **strumenti > Android > Android SDK Manager**) e installare il più recente di Android SDK Tools:
-
-    [![Selezione di Android SDK tools di Android SDK Manager](marshmallow-images/mnc-preview-tools.png)](marshmallow-images/mnc-preview-tools.png#lightbox)
-
--   Inoltre, installare la versione più recente **Android 6.0** pacchetti SDK:
-
-    [![Selezione pacchetti Android 6.0 SDK in Android SDK Manager](marshmallow-images/mnc-preview-packages.png)](marshmallow-images/mnc-preview-packages.png#lightbox)
-
-È necessario installare la revisione di Android SDK Tools 24.3.4 o versione successiva.
-Per altre informazioni sull'uso di Android SDK Manager per installare Android SDK 6.0, vedere [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html).
+Per aggiornare Novell in modo che includa il supporto per Android 6,0 marshmallow, modificare il canale di aggiornamento in **stabile** e installare tutti gli aggiornamenti. Per ulteriori informazioni sull'installazione degli aggiornamenti dal canale degli aggiornamenti, vedere [Change the Updates Channel](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel). 
 
 
+### <a name="install-the-android-60-sdk"></a>Installare Android 6,0 SDK
 
-### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto xamarin. Android
+Per creare un progetto Novell. Android per marshmallow Android, è necessario prima di tutto usare gestione Android SDK per installare Android 6,0 SDK:
 
-Creare un nuovo progetto xamarin. Android. Se si ha familiarità con lo sviluppo di Android con Xamarin, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti di Android. 
+-   Avviare Gestione Android SDK (in Visual Studio per Mac usare **gli strumenti > SDK Manager**. in Visual Studio usare **gli strumenti > Android > Android SDK Manager**) e installare la versione più recente di Android SDK Tools:
 
-Quando si crea un progetto Android, è necessario configurare le impostazioni di versione di destinazione Android MarshMallow 6.0. Per impostare come destinazione del progetto per Marshmallow, è necessario configurare il progetto per la **livello API 23 (xamarin. Android versione 6.0 supporto)**. Per altre informazioni sulla configurazione dei livelli a livello API Android, vedere [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).
+    [![Selezione di strumenti Android SDK in gestione Android SDK](marshmallow-images/mnc-preview-tools.png)](marshmallow-images/mnc-preview-tools.png#lightbox)
+
+-   Installare anche i pacchetti più recenti di **Android 6,0** SDK:
+
+    [![Selezione dei pacchetti SDK per Android 6,0 in gestione Android SDK](marshmallow-images/mnc-preview-packages.png)](marshmallow-images/mnc-preview-packages.png#lightbox)
+
+È necessario installare Android SDK Tools revisione 24.3.4 o versione successiva.
+Per ulteriori informazioni sull'utilizzo di gestione Android SDK per installare Android 6,0 SDK, vedere [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html).
 
 
 
-### <a name="configure-an-emulator-or-device"></a>Configurare un emulatore o dispositivo
+### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto Novell. Android
+
+Creare un nuovo progetto Novell. Android. Se non si ha familiarità con lo sviluppo per Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Android. 
+
+Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione di Android 6,0 MarshMallow. Per fare riferimento al progetto per marshmallow, è necessario configurare il progetto per il **livello API 23 (supporto per Novell. Android v 6.0)** . Per altre informazioni sulla configurazione dei livelli a livello di API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
+
+
+
+### <a name="configure-an-emulator-or-device"></a>Configurare un emulatore o un dispositivo
 
 Se si usa un emulatore, avviare Android AVD Manager e creare un nuovo dispositivo usando le impostazioni seguenti:
 
 -   Device: Nexus 5, 6 o 9.
--   Destinazione: Android 6.0 - livello 23 dell'API
+-   Destinazione: Android 6,0-livello API 23
 -   ABI: x86
 
-Ad esempio, il dispositivo virtuale è configurato per emulare un Nexus 5:
+Ad esempio, questo dispositivo virtuale è configurato per emulare un Nexus 5:
 
-[![Configurazione di un dispositivo virtuale Android usando dispositivi Nexus 5, destinazione di Android 6.0 e Intel Atom (x86)](marshmallow-images/android-m-avd.png)](marshmallow-images/android-m-avd.png#lightbox)
+[![Configurazione di un AVD usando il dispositivo Nexus 5, la destinazione Android 6,0 e Intel Atom (x86)](marshmallow-images/android-m-avd.png)](marshmallow-images/android-m-avd.png#lightbox)
 
-Se si usa un dispositivo fisico, ad esempio un Nexus 5, 6 e 9, è possibile installare un'immagine di anteprima di Android Marshmallow. Per altre informazioni sull'aggiornamento del dispositivo per Android Marshmallow, vedere [immagini del sistema Hardware](https://developer.android.com/preview/download.html#images).
+Se si usa un dispositivo fisico, ad esempio Nexus 5, 6 o 9, è possibile installare un'immagine di anteprima di Android marshmallow. Per ulteriori informazioni sull'aggiornamento del dispositivo ad Android marshmallow, vedere [hardware System images](https://developer.android.com/preview/download.html#images).
 
 
 
 ## <a name="new-features"></a>Nuove funzionalità
 
-Molte delle modifiche introdotte in Android Marshmallow sono incentrate sul miglioramento dell'esperienza utente di Android, aumentando le prestazioni e correggendo i bug. Tuttavia, Marshmallow introdotte anche alcune modifiche estese ai concetti fondamentali della piattaforma Android. Le sezioni seguenti evidenziare questi miglioramenti e forniscono i collegamenti che consentono di iniziare subito a usare le nuove funzionalità di Android Marshmallow nell'app. 
+Molte delle modifiche introdotte in Android marshmallow si concentrano sul miglioramento dell'esperienza utente Android, sull'aumento delle prestazioni e sulla correzione dei bug. Tuttavia, in marshmallow sono state introdotte anche alcune modifiche apportate alle nozioni di base della piattaforma Android. Le sezioni seguenti evidenziano questi miglioramenti e forniscono collegamenti che consentono di iniziare a usare le nuove funzionalità di Android marshmallow nell'app. 
 
 
 
 ### <a name="runtime-permissions"></a>Autorizzazioni di runtime
 
-Ottimizzato e semplificato poiché Android Lollipop il sistema di autorizzazioni di Android in modo significativo. In Android Marshmallow, gli utenti concedere le autorizzazioni su una base dal caso in fase di esecuzione anziché in fase di installazione. Per supportare questa funzionalità in Android Marshmallow e versioni successive, si progetta la tua app per richiedere all'utente le autorizzazioni in fase di esecuzione (nel contesto di in cui sono necessarie le autorizzazioni). Questa modifica rende più semplice per gli utenti iniziare a usare l'app immediatamente perché semplifica il processo di installazione e l'aggiornamento all'app. 
+Il sistema di autorizzazioni Android è stato significativamente ottimizzato e semplificato da Android Lollipop. In Android marshmallow gli utenti concedono le autorizzazioni caso per caso in fase di esecuzione anziché in fase di installazione. Per supportare questa funzionalità in Android marshmallow e versioni successive, è necessario progettare l'applicazione in modo da richiedere all'utente le autorizzazioni in fase di esecuzione (nel contesto in cui sono necessarie le autorizzazioni). Questa modifica rende più semplice per gli utenti iniziare a usare immediatamente l'app perché semplifica il processo di installazione e aggiornamento dell'app. 
 
-Visualizzare [richiesta di autorizzazioni di Runtime in Android Marshmallow](https://blog.xamarin.com/requesting-runtime-permissions-in-android-marshmallow/) per altri dettagli (inclusi gli esempi di codice) sull'implementazione di autorizzazioni di Runtime nelle App xamarin. Android.
-Xamarin offre inoltre un'app di esempio che illustra il funzionano delle autorizzazioni di runtime in Android Marshmallow (e versioni successive): [RuntimePermissions](https://developer.xamarin.com/samples/monodroid/android-m/RuntimePermissions).
+Vedere [richiesta di autorizzazioni di runtime in Android marshmallow](https://blog.xamarin.com/requesting-runtime-permissions-in-android-marshmallow/) per altri dettagli, inclusi esempi di codice, sull'implementazione delle autorizzazioni di runtime nelle app Novell. Android.
+Novell fornisce anche un'app di esempio che illustra il funzionamento delle autorizzazioni di runtime in Android marshmallow (e versioni successive): [RuntimePermissions](https://developer.xamarin.com/samples/monodroid/android-m/RuntimePermissions).
 
-Questa app di esempio viene illustrato quanto segue:
+Questa app di esempio illustra quanto segue:
 
 -   Come controllare e richiedere le autorizzazioni in fase di esecuzione.
--   Viene descritto come dichiarare le autorizzazioni per i dispositivi Android M.
+-   Come dichiarare le autorizzazioni per i dispositivi Android M.
 
 Per usare questa app di esempio:
 
-1.  Toccare il **fotocamera** oppure **contatti** pulsanti da visualizzare le autorizzazioni di un dialogo di richiesta.
-2.  Concedere l'autorizzazione per visualizzare i frammenti della fotocamera o i contatti.
+1.  Toccare la **fotocamera** o i pulsanti **contatti** per visualizzare una finestra di dialogo di richiesta delle autorizzazioni.
+2.  Concedere l'autorizzazione per visualizzare frammenti di fotocamera o di contatti.
 
-Per altre informazioni sulle nuove funzionalità di autorizzazioni di runtime in Android Marshmallow, vedere [utilizzo delle autorizzazioni di sistema](https://developer.android.com/preview/features/runtime-permissions.html).
+Per ulteriori informazioni sulle nuove funzionalità per le autorizzazioni di runtime in Android marshmallow, vedere [utilizzo delle autorizzazioni di sistema](https://developer.android.com/preview/features/runtime-permissions.html).
 
 
 
-### <a name="authentication-enhancements"></a>Miglioramenti di autenticazione
+### <a name="authentication-enhancements"></a>Miglioramenti dell'autenticazione
 
-Android Marshmallow include due miglioramenti di autenticazione che consentono di eliminare la necessità di password:
+Android marshmallow include due miglioramenti dell'autenticazione che consentono di eliminare la necessità di password:
 
--   **L'autenticazione di impronte digitali** &ndash; Usa un'analisi di impronte digitali per autenticare gli utenti.
+-   **Autenticazione con impronta digitale** &ndash; Usa un'analisi delle impronte digitali per autenticare gli utenti.
 
--   **Conferma delle credenziali** &ndash; autentica gli utenti basati su quanto tempo il dispositivo è stato sbloccato.
+-   **Conferma credenziali** &ndash; Autentica gli utenti in base al tempo di sblocco del dispositivo.
 
-I collegamenti e le app di esempio descritte di seguito consente di acquisire familiarità con queste nuove funzionalità.
+I collegamenti e le app di esempio descritte di seguito possono essere utili per acquisire familiarità con le nuove funzionalità.
 
 
 #### <a name="fingerprint-authentication"></a>Autenticazione con impronta digitale
 
-Nei dispositivi che supportano analisi hardware delle impronte digitali, è possibile usare il nuovo `FingerPrintManager` classe per autenticare un utente.
-Per altre informazioni sulla funzionalità per l'autenticazione tramite impronta digitale in Android Marshmallow, vedere [autenticazione tramite impronta digitale](https://developer.android.com/preview/api-overview.html#fingerprint-authentication).
+Nei dispositivi che supportano l'hardware di analisi delle impronte digitali, è `FingerPrintManager` possibile usare la nuova classe per autenticare un utente.
+Per altre informazioni sulla funzionalità di autenticazione con impronta digitale in Android marshmallow, vedere [l'autenticazione con impronta digitale](https://developer.android.com/preview/api-overview.html#fingerprint-authentication).
 
-Xamarin offre un'app di esempio che illustra come usare le impronte digitali registrate per autenticare un utente nell'app: [FingerprintDialog](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog).
+Novell fornisce un'app di esempio che illustra come usare le impronte digitali registrate per autenticare un utente nell'app: [FingerprintDialog](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog).
 
 Per usare questa app di esempio:
 
-1.  Toccare il **acquisto** pulsante per aprire una finestra di dialogo di autenticazione tramite impronta digitale.
-2.  Analizzare nella propria impronta digitale registrata per l'autenticazione.
+1.  Toccare il pulsante **Acquista** per aprire una finestra di dialogo di autenticazione con impronta digitale.
+2.  Eseguire l'analisi nell'impronta digitale registrata per l'autenticazione.
 
 Si noti che questa app di esempio richiede un dispositivo con un lettore di impronte digitali.
 Questa app non archivia l'impronta digitale (o la password).
@@ -189,102 +189,102 @@ Questa app non archivia l'impronta digitale (o la password).
 
 #### <a name="voice-interactions"></a>Interazioni vocali
 
-La nuova funzionalità di interazioni vocali introdotte in Android Marshmallow consente agli utenti dell'app di usare comandi vocali per verificare le azioni e selezionare un elenco di opzioni. Per altre informazioni sulle interazioni vocali, vedere [panoramica dell'API di interazioni vocali](https://developers.google.com/voice-actions/interaction/). 
+La nuova funzionalità di interazione vocale introdotta in Android marshmallow consente agli utenti dell'app di usare la propria voce per confermare le azioni e selezionare da un elenco di opzioni. Per altre informazioni sulle interazioni vocali, vedere [Panoramica dell'API di interazione vocale](https://developers.google.com/voice-actions/interaction/). 
 
-Visualizzare [aggiungere una conversazione all'App Android con le interazioni vocali](https://blog.xamarin.com/add-a-conversation-to-your-android-app-with-voice-interactions/) per altri dettagli (inclusi gli esempi di codice) sull'implementazione di interazioni vocali nelle App xamarin. Android.
-È disponibile un'app di esempio che illustra come usare l'API di interazioni vocali in un'app xamarin. Android: [Le interazioni vocali](https://github.com/jamesmontemagno/MarshmallowSamples/tree/master/VoiceInteractions).
+Vedere [aggiungere una conversazione all'app Android con interazioni vocali](https://blog.xamarin.com/add-a-conversation-to-your-android-app-with-voice-interactions/) per altri dettagli, inclusi esempi di codice, sull'implementazione di interazioni vocali nelle app Novell. Android.
+È disponibile un'app di esempio che illustra come usare l'API di interazione vocale in un'app Novell. Android: [Interazioni vocali](https://github.com/jamesmontemagno/MarshmallowSamples/tree/master/VoiceInteractions).
 
 
 
-#### <a name="confirm-credential"></a>Conferma delle credenziali
+#### <a name="confirm-credential"></a>Conferma credenziali
 
-Usando le nuove *confermare le credenziali* funzionalità di Android Marshmallow, è possibile liberare agli utenti di dover ricordare e immettere le password di app mediante l'autenticazione in base a quanto tempo il dispositivo è stato sbloccato.
-A tale scopo, si utilizza la nuova `SetUserAuthenticationValidityDurationSeconds` metodo di `KeyGenerator`. Usare la `KeyGuardManager`del `CreateConfirmDeviceCredentialIntent` metodo autenticare nuovamente l'utente dall'interno dell'app. Per altre informazioni su questa nuova funzionalità di Android Marshmallow, vedere [confermare le credenziali](https://developer.android.com/preview/api-overview.html#confirm-credential).
+Con la nuova funzionalità *Confirm Credentials* di Android marshmallow è possibile liberare gli utenti dal dover ricordare e immettere le password specifiche dell'app eseguendone l'autenticazione in base al tempo di sblocco del dispositivo.
+A tale scopo, utilizzare il nuovo `SetUserAuthenticationValidityDurationSeconds` metodo `KeyGenerator`di. Usare il `KeyGuardManager`metodo `CreateConfirmDeviceCredentialIntent` di per autenticare di nuovo l'utente dall'interno dell'app. Per ulteriori informazioni su questa nuova funzionalità di Android marshmallow, vedere [Confirm Credential](https://developer.android.com/preview/api-overview.html#confirm-credential).
 
-Xamarin offre un'app di esempio che illustra come usare le credenziali del dispositivo (ad esempio, PIN, modello o password) nell'app: [ConfirmCredential](https://developer.xamarin.com/samples/monodroid/android-m/ConfirmCredential/)
+Novell fornisce un'app di esempio che illustra come usare le credenziali del dispositivo (ad esempio PIN, pattern o password) nell'app: [ConfirmCredential](https://developer.xamarin.com/samples/monodroid/android-m/ConfirmCredential/)
 
 Per usare questa app di esempio:
 
-1.  Configurare una schermata di blocco protetta nel dispositivo (**sicura > sicurezza > Screenlock**).
-2.  Toccare il **acquisto** pulsante e verificare le credenziali di schermata di blocco protetta.
+1.  Configurare una schermata di blocco sicura nel dispositivo (**secure > Security > ScreenLock**).
+2.  Toccare il pulsante **Acquista** e confermare le credenziali della schermata di blocco sicura.
 
 
 
-### <a name="chrome-custom-tabs"></a>Schede personalizzate di Chrome
+### <a name="chrome-custom-tabs"></a>Schede personalizzate Chrome
 
-Gli sviluppatori di App devono affrontare una scelta quando un utente tocca un URL: l'app può avviare un browser oppure usare un browser in-app basate su un `WebView`. Entrambe le opzioni presentano sfide &ndash; avvia il browser è un cambio di contesto eccessivo che non è personalizzabile, mentre `WebView`non condividano lo stato con il browser. Inoltre, usare di `WebView`s è possibile aggiungere un sovraccarico di manutenzione aggiuntive. 
+Gli sviluppatori di app hanno la possibilità di scegliere quando un utente tocca un URL: l'app può avviare un browser o usare un browser in-app `WebView`basato su un. Entrambe le opzioni presentano &ndash; problemi che avviano il browser è un cambio di contesto molto elevato che `WebView`non è personalizzabile, mentre s non condivide lo stato con il browser. Inoltre, l'utilizzo `WebView`di s può aggiungere ulteriore overhead di manutenzione. 
 
-*Chrome schede personalizzate* consente di visualizzare in modo elegante e facilmente siti Web con la potenza di Chrome senza lasciare l'app agli utenti. Questa funzionalità offre l'app più controllo sull'esperienza web dell'utente; rende le transizioni tra native e web più semplice il contenuto senza dover ricorrere a un `WebView`. L'app può incidere sulle modalità Chrome struttura e l'aspetto personalizzando il seguente: 
+Le *schede personalizzate Chrome* consentono di visualizzare in modo semplice ed elegante i siti Web con la potenza di Chrome senza che gli utenti lascino l'app. Questa funzionalità consente all'app di avere un maggiore controllo sull'esperienza Web dell'utente. consente di eseguire transizioni tra contenuto nativo e Web in modo più trasparente senza dover ricorrere a un `WebView`. L'app può anche influire sul modo in cui Chrome si presenta, personalizzando gli elementi seguenti: 
 
 -   Colore della barra degli strumenti
 
--   Attivare e disattivare le animazioni
+-   Animazioni di immissione e uscita
 
--   Azioni personalizzate nel menu della barra degli strumenti e l'overflow di Chrome
+-   Azioni personalizzate nella barra degli strumenti e nel menu di overflow di Chrome
 
--   Chrome pre-avvio e il contenuto pre-recupero (per il caricamento più veloce)
+-   Pre-avvio e prelettura del contenuto di Chrome (per un caricamento più rapido)
 
-Per sfruttare i vantaggi di questa funzionalità nell'app xamarin. Android, scaricare e installare il [schede libreria personalizzata di Android supporto](https://www.nuget.org/packages/Xamarin.Android.Support.CustomTabs/).
+Per sfruttare i vantaggi di questa funzionalità nell'app Novell. Android, scaricare e installare la [libreria di schede personalizzate del supporto Android](https://www.nuget.org/packages/Xamarin.Android.Support.CustomTabs/).
 Per altre informazioni su questa funzionalità, vedere [schede personalizzate Chrome](https://developer.chrome.com/multidevice/android/customtabs).
 
 
 
-### <a name="material-design-support-library"></a>Libreria di supporto di Material Design
+### <a name="material-design-support-library"></a>Libreria di supporto della progettazione materiale
 
-Android Lollipop introdotte [Material Design](http://www.google.com/design/spec/material-design/introduction.html) come un nuovo linguaggio di progettazione per aggiornare l'esperienza di Android (vedere [tema Material](~/android/user-interface/material-theme.md) per informazioni sull'utilizzo di progettazione dei materiali nelle App xamarin. Android). Con Android Marshmallow, Google introduce il *libreria di supporto di progettazione Android* per renderne più semplice per l'app che gli sviluppatori adottino materiale di progettano l'aspetto. Questa libreria include i componenti seguenti:
+Android Lollipop ha introdotto la [progettazione del materiale](http://www.google.com/design/spec/material-design/introduction.html) come nuovo linguaggio di progettazione per aggiornare l'esperienza Android. per informazioni sull'uso della progettazione materiale nelle app Novell. Android, vedere [tema](~/android/user-interface/material-theme.md) del materiale. Con Android marshmallow, Google ha introdotto la libreria di supporto per la *progettazione Android* per semplificare l'adozione dell'aspetto della progettazione del materiale da parte degli sviluppatori di app. Questa libreria include i componenti seguenti:
 
--   **CoordinatorLayout** &ndash; nuova `CoordinatorLayout` widget è simile ma più potente di un `FrameLayout`. È possibile usare `CoordinatorLayout` come un contenitore per le visualizzazioni figlio o come un layout di primo livello che fornisce un `layout_anchor` attributo che può essere utilizzato per le visualizzazioni di ancoraggio rispetto alla altre viste.
+-   **CoordinatorLayout** Il nuovo `CoordinatorLayout` widget è simile a ma più potente di un `FrameLayout`. &ndash; È possibile usare `CoordinatorLayout` come contenitore per le visualizzazioni figlio o come layout di primo livello e fornisce un `layout_anchor` attributo che può essere usato per ancorare le visualizzazioni rispetto ad altre viste.
 
--   **Le barre degli strumenti di compressione** &ndash; nuova `CollapsingToolbarLayout` è una barra app compressione che è un wrapper per `Toolbar`. (Si noti che il *barra dell'app* è il era precedentemente noto come il *sulla barra delle azioni*.)
+-   **Compressione delle barre degli strumenti** Il nuovo `CollapsingToolbarLayout` è una barra dell'app in compressione che è un wrapper `Toolbar`per. &ndash; Si noti che la *barra dell'app* è quella che in precedenza era denominata *barra delle azioni*.
 
--   **Pulsante di azione mobile** &ndash; un pulsante circolare che denota l'azione principale nell'interfaccia dell'app.
+-   **Pulsante azione mobile** &ndash; Pulsante rotondo che indica l'azione principale sull'interfaccia dell'app.
 
--   **Mobile etichette per la modifica del testo** &ndash; Usa un nuovo `TextInputLayout` widget (che esegue il wrapping `EditText`) per visualizzare un'etichetta a virgola mobile quando un hint viene nascosto quando un utente immette un testo.
+-   **Etichette mobili per la modifica del testo** Usa un `TextInputLayout` nuovo`EditText`widget (che esegue il wrapping) per visualizzare un'etichetta mobile quando un suggerimento viene nascosto quando un utente immette testo. &ndash;
 
--   **Vista di navigazione** &ndash; nuovo `NavigationView` widget illustra come usare il menu di spostamento in un modo più semplice agli utenti di spostarsi.
+-   **Visualizzazione di navigazione** &ndash; Il nuovo`NavigationView` widget consente di usare il pannello di navigazione in modo da semplificare la navigazione degli utenti.
 
--   **Snackbar** &ndash; nuovo `SnackBar` widget è un meccanismo di feedback leggeri (simile a un avviso popup) che viene visualizzato un messaggio breve nella parte inferiore della schermata, visualizzati sopra tutti gli altri elementi sullo schermo.
+-   **Snackbar** &ndash; Il nuovo`SnackBar` widget è un meccanismo di feedback leggero (simile a un avviso popup) che visualizza un breve messaggio nella parte inferiore dello schermo, visualizzato sopra tutti gli altri elementi sullo schermo.
 
--   **Schede materiale** &ndash; nuovo `TabLayout` widget offre un layout orizzontale per la visualizzazione di schede come modo per implementare l'esplorazione di livello principale nell'app.
+-   **Schede materiale** &ndash; Il nuovo`TabLayout` widget fornisce un layout orizzontale per visualizzare le schede in modo da implementare l'esplorazione di primo livello nell'app.
 
-Per sfruttare il [Design Library di supporto](https://developer.android.com/tools/support-library/features.html#design) nell'app xamarin. Android, scaricare e installare il Xamarin [progettazione di librerie di supporto di Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.Design/) pacchetto NuGet.
+Per sfruttare i vantaggi della [libreria di supporto della progettazione](https://developer.android.com/tools/support-library/features.html#design) nell'app Novell. Android, scaricare e installare il pacchetto NuGet di [progettazione della libreria di supporto Novell Novell](https://www.nuget.org/packages/Xamarin.Android.Support.Design/) .
 
-Visualizzare [accattivanti Material Design con la libreria di progettazione di supporto Android](https://blog.xamarin.com/add-beautiful-material-design-with-the-android-support-design-library/) per altri dettagli (inclusi gli esempi di codice) sull'uso della libreria di supporto di materiale di progettazione nelle App xamarin. Android.
-Xamarin offre un'app di esempio che dimostra la nuova libreria di progettazione per Android in xamarin. Android &ndash; [Cheesesquare](https://developer.xamarin.com/samples/monodroid/android5.0/Cheesesquare).
-Questo esempio illustra le funzionalità della libreria di progettazione seguenti:
+Per altri dettagli (inclusi esempi di codice) sull'uso della libreria di supporto della progettazione materiale nelle app Novell. Android, vedere la pagina relativa alla [progettazione di materiali accattivanti con la libreria di progettazione del supporto Android](https://blog.xamarin.com/add-beautiful-material-design-with-the-android-support-design-library/) .
+Novell fornisce un'app di esempio che illustra la nuova libreria di progettazione Android in Novell &ndash; . Android [Cheesesquare](https://developer.xamarin.com/samples/monodroid/android5.0/Cheesesquare).
+In questo esempio vengono illustrate le seguenti funzionalità della libreria di progettazione:
 
 
--   Compressione della barra degli strumenti
--   Pulsante di azione mobile
+-   Barra degli strumenti con compressione
+-   Pulsante azione mobile
 -   Visualizzazione ancoraggio
 -   NavigationView
 -   Snackbar
 
-Per altre informazioni sulla libreria di progettazione, vedere [libreria di supporto di progettazione Android](http://android-developers.blogspot.co.at/2015/05/android-design-support-library.html) nel blog per gli sviluppatori di Android.
+Per ulteriori informazioni sulla libreria di progettazione, vedere la pagina relativa alla [libreria di supporto della progettazione Android](http://android-developers.blogspot.co.at/2015/05/android-design-support-library.html) nel Blog per sviluppatori Android.
 
 
-### <a name="additional-library-updates"></a>Aggiornamenti di librerie aggiuntive
+### <a name="additional-library-updates"></a>Aggiornamenti aggiuntivi della libreria
 
-Oltre a Android Marshmallow, Google ha annunciato aggiornamenti correlati alle diverse librerie di Android core. Xamarin offre il supporto di xamarin. Android per gli aggiornamenti tramite diversi pacchetti NuGet versione di anteprima: 
+Oltre ad Android marshmallow, Google ha annunciato aggiornamenti correlati a diverse librerie Android di base. Novell fornisce il supporto di Novell. Android per questi aggiornamenti tramite diversi pacchetti NuGet di versione di anteprima: 
 
--   [Google Play Services](https://www.nuget.org/packages?q=Xamarin+Google+Play+Services) &ndash; la versione più recente di Google Play Services include la nuova *App Invites* funzionalità che consente agli utenti di condividere le app con gli amici. Per altre informazioni su questa funzionalità, vedere [Reach espandere dell'applicazione con Google App Invites](https://blog.xamarin.com/expand-your-apps-reach-with-googles-app-invites/). 
+-   [Google Play Services](https://www.nuget.org/packages?q=Xamarin+Google+Play+Services) La versione più recente di Google Play Services include la nuova funzionalità invita l'app, che consente agli utenti di condividere l'app con gli amici.  &ndash; Per altre informazioni su questa funzionalità, vedere [espandere la portata dell'app con gli inviti dell'app di Google](https://blog.xamarin.com/expand-your-apps-reach-with-googles-app-invites/). 
 
--   [Librerie di supporto Android](https://www.nuget.org/packages?q=xamarin+support+library) &ndash; questi pacchetti NuGet sono disponibili caratteristiche sono disponibili solo per API della libreria, fornendo versioni compatibili dell'API del framework Android. 
+-   [Librerie di supporto Android](https://www.nuget.org/packages?q=xamarin+support+library) &ndash; Questi NuGet offrono funzionalità disponibili solo per le API della libreria, fornendo versioni compatibili con le versioni precedenti delle API del Framework Android. 
 
--   [Libreria Android indossabile](https://www.nuget.org/packages/Xamarin.Android.Wear) &ndash; questo NuGet include associazioni di Google Play Services. La versione più recente della libreria indossabile offre nuove funzionalità (ad esempio una navigazione più semplice per le app personalizzate) per la piattaforma Android Wear. 
+-   [Libreria indossabile Android](https://www.nuget.org/packages/Xamarin.Android.Wear) &ndash; questo NuGet include Google Play Services associazioni. La versione più recente della libreria indossabile offre nuove funzionalità, inclusa la navigazione più semplice per le app personalizzate, alla piattaforma Android Wear. 
 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo introdotto Android Marshmallow ed è stato spiegato come installare e configurare gli strumenti e i pacchetti per lo sviluppo di xamarin. Android più recente in Marshmallow. Anche fornita una panoramica delle nuove funzionalità di Android Marshmallow più interessanti per lo sviluppo di xamarin. Android.
+Questo articolo ha presentato Android marshmallow e spiega come installare e configurare gli strumenti e i pacchetti più recenti per lo sviluppo di Novell. Android in marshmallow. Viene inoltre fornita una panoramica delle nuove funzionalità più interessanti di Android marshmallow per lo sviluppo di Novell. Android.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Android Marshmallow 6.0](https://developer.android.com/about/versions/marshmallow/index.html)
-- [Ottenere Android SDK](https://developer.android.com/sdk/index.html#Other)
+- [Android 6,0 marshmallow](https://developer.android.com/about/versions/marshmallow/index.html)
+- [Ottenere il Android SDK](https://developer.android.com/sdk/index.html#Other)
 - [Panoramica delle funzionalità](https://developer.android.com/preview/api-overview.html)
-- [Note sulla versione](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1.99/)
+- [Note sulla versione](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1.99/index.md)
 - [RuntimePermissions (esempio)](https://developer.xamarin.com/samples/monodroid/android-m/RuntimePermissions)
 - [ConfirmCredential (esempio)](https://developer.xamarin.com/samples/monodroid/android-m/ConfirmCredential)
 - [FingerprintDialog (esempio)](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog)

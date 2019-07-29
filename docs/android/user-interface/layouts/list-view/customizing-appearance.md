@@ -6,64 +6,61 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: c8a6e7a9abf9e8430253b9402d69f43744bf93c0
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 64210bc18532a5260bd31ff1c20e8ffaf92d0df2
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827663"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510557"
 ---
-# <a name="customizing-a-listviews-appearance"></a>Personalizzazione dell'aspetto di un controllo ListView
+# <a name="customizing-a-listviews-appearance-with-xamarinandroid"></a>Personalizzazione dell'aspetto di un controllo ListView con Novell. Android
+
+L'aspetto di un controllo ListView è determinato dal layout delle righe visualizzate. Per modificare l'aspetto di un `ListView`oggetto, usare un layout di riga diverso.
 
 
-## <a name="overview"></a>Panoramica
+## <a name="built-in-row-views"></a>Visualizzazioni di righe predefinite
 
-L'aspetto di un ListView dipende dal layout delle righe viene visualizzato. Per modificare l'aspetto di un `ListView`, usare un layout di riga diversi.
+Sono disponibili dodici viste predefinite a cui è possibile fare riferimento usando **Android. Resource. layout**:
 
+- **TestListItem** &ndash; Riga di testo singola con formattazione minima.
 
-## <a name="built-in-row-views"></a>Visualizzazioni delle righe incorporato
+- **SimpleListItem1** &ndash; Riga di testo singola.
 
-Sono disponibili dodici visualizzazioni predefinite che è possibile farvi riferimento usando **Android.Resource.Layout**:
+- **SimpleListItem2** &ndash; Due righe di testo.
 
-- **TestListItem** &ndash; singola riga di testo con formattazione minimo.
+- **SimpleSelectableListItem** &ndash; Riga di testo singola che supporta la selezione di uno o più elementi (aggiunti a livello API 11).
 
-- **SimpleListItem1** &ndash; singola riga di testo.
+- **SimpleListItemActivated1** &ndash; Simile a SimpleListItem1, ma il colore di sfondo indica quando viene selezionata una riga (aggiunta nel livello API 11).
 
-- **SimpleListItem2** &ndash; due righe di testo.
+- **SimpleListItemActivated2** &ndash; Simile a SimpleListItem2, ma il colore di sfondo indica quando viene selezionata una riga (aggiunta nel livello API 11).
 
-- **SimpleSelectableListItem** &ndash; singola riga di testo che supporta la selezione di uno o più elementi (aggiunta nel livello API 11).
+- **SimpleListItemChecked** &ndash; Visualizza i segni di spunta per indicare la selezione.
 
-- **SimpleListItemActivated1** &ndash; SimpleListItem1 è simile, ma il colore di sfondo indica quando è selezionata una riga (aggiunto nel livello API 11).
+- **SimpleListItemMultipleChoice** &ndash; Consente di visualizzare le caselle di controllo per indicare la selezione a scelta multipla.
 
-- **SimpleListItemActivated2** &ndash; SimpleListItem2 è simile, ma il colore di sfondo indica quando è selezionata una riga (aggiunto nel livello API 11).
+- **SimpleListItemSingleChoice** &ndash; Visualizza i pulsanti di opzione per indicare la selezione che si escludono a vicenda.
 
-- **SimpleListItemChecked** &ndash; vengono visualizzati segni di spunta per indicare la selezione.
+- **TwoLineListItem** &ndash; Due righe di testo.
 
-- **SimpleListItemMultipleChoice** &ndash; consente di visualizzare le caselle di controllo per indicare a selezione multipla.
+- **ActivityListItem** &ndash; Riga di testo singola con un'immagine.
 
-- **SimpleListItemSingleChoice** &ndash; consente di visualizzare i pulsanti per indicare la selezione si escludono a vicenda di opzione.
+- **SimpleExpandableListItem** &ndash; Raggruppa le righe in base alle categorie e ogni gruppo può essere espanso o compresso.
 
-- **TwoLineListItem** &ndash; due righe di testo.
+Ogni visualizzazione di riga predefinita ha uno stile incorporato associato. Queste schermate mostrano come viene visualizzata ogni visualizzazione:
 
-- **ActivityListItem** &ndash; singola riga di testo con un'immagine.
+[![Schermate di TestListItem, SimpleSelectableListItem, SimpleListitem1 e SimpleListItem2](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png#lightbox)
 
-- **SimpleExpandableListItem** &ndash; Raggruppa le righe per le categorie e ogni gruppo possono essere espansi o compressi.
+[![Schermate di SimpleListItemActivated1, SimpleListItemActivated2, SimpleListItemChecked e SimpleListItemMultipleChecked](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png#lightbox)
 
-Ogni vista di riga predefinito con uno stile predefinito associato. Questi screenshot mostrano come viene visualizzato ogni visualizzazione:
+[![Schermate di SimpleListItemSingleChoice, TwoLineListItem, ActivityListItem e SimpleExpandableListItem](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png#lightbox)
 
-[![Screenshot del TestListItem SimpleSelectableListItem, SimpleListitem1 e SimpleListItem2](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png#lightbox)
-
-[![Screenshot del SimpleListItemActivated1 SimpleListItemActivated2, SimpleListItemChecked e SimpleListItemMultipleChecked](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png#lightbox)
-
-[![Screenshot del SimpleListItemSingleChoice TwoLineListItem, ActivityListItem e SimpleExpandableListItem](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png#lightbox)
-
-Il **BuiltInViews/HomeScreenAdapter.cs** file di esempio (nelle **BuiltInViews** soluzione) contiene il codice per produrre le schermate di elemento di elenco non espandibili. La visualizzazione è impostata `GetView` metodo simile al seguente:
+Il file di esempio **BuiltInViews/HomeScreenAdapter. cs** (nella soluzione **BuiltInViews** ) contiene il codice per produrre le schermate degli elementi elenco non espandibili. La vista viene impostata nel `GetView` metodo come segue:
 
 ```csharp
 view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem1, null);
 ```
 
-Le proprietà della vista possono quindi essere impostate facendo riferimento gli identificatori di controllo standard `Text1`, `Text2` e `Icon` sotto `Android.Resource.Id` (non impostare le proprietà che non contiene la visualizzazione o verrà generata un'eccezione):
+Le proprietà della visualizzazione possono quindi essere impostate facendo riferimento agli identificatori `Text1` `Text2` di controllo standard e `Icon` in `Android.Resource.Id` (non impostare le proprietà che la vista non contiene o verrà generata un'eccezione):
 
 ```csharp
 view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Heading;
@@ -71,50 +68,50 @@ view.FindViewById<TextView>(Android.Resource.Id.Text2).Text = item.SubHeading;
 view.FindViewById<ImageView>(Android.Resource.Id.Icon).SetImageResource(item.ImageResourceId); // only use with ActivityListItem
 ```
 
-Il **BuiltInExpandableViews/ExpandableScreenAdapter.cs** file di esempio (nelle **BuiltInViews** soluzione) contiene il codice per produrre la schermata SimpleExpandableListItem. La visualizzazione del gruppo è impostata `GetGroupView` metodo simile al seguente:
+Il file di esempio **BuiltInExpandableViews/ExpandableScreenAdapter. cs** (nella soluzione **BuiltInViews** ) contiene il codice per produrre la schermata SimpleExpandableListItem. La visualizzazione gruppo è impostata nel `GetGroupView` metodo come segue:
 
 ```csharp
 view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableListItem1, null);
 ```
 
-La visualizzazione figlio è impostata `GetChildView` metodo simile al seguente:
+La visualizzazione figlio viene impostata nel `GetChildView` metodo come segue:
 
 ```csharp
 view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableListItem2, null);
 ```
 
-Le proprietà per la visualizzazione del gruppo e della visualizzazione figlio possono quindi essere impostate facendo riferimento allo standard `Text1` e `Text2` controllano gli identificatori, come illustrato in precedenza. Lo screenshot SimpleExpandableListItem (illustrato in precedenza) viene fornito un esempio di una vista gruppo una sola riga (SimpleExpandableListItem1) e una visualizzazione di due righe figlio (SimpleExpandableListItem2). In alternativa, la visualizzazione del gruppo può essere configurata per due righe (SimpleExpandableListItem2) e della visualizzazione figlio può essere configurata per una sola riga (SimpleExpandableListItem1), o entrambe di gruppo Vista e visualizzazione figlio può avere lo stesso numero di righe. 
+Le proprietà per la visualizzazione del gruppo e la visualizzazione figlio possono essere impostate facendo riferimento agli identificatori `Text2` standard `Text1` e di controllo, come illustrato in precedenza. Lo screenshot SimpleExpandableListItem (illustrato in precedenza) fornisce un esempio di visualizzazione di un gruppo a una riga (SimpleExpandableListItem1) e di una visualizzazione figlio a due righe (SimpleExpandableListItem2). In alternativa, la visualizzazione gruppo può essere configurata per due righe (SimpleExpandableListItem2) e la visualizzazione figlio può essere configurata per una riga (SimpleExpandableListItem1) oppure sia la visualizzazione gruppo che la visualizzazione figlio possono avere lo stesso numero di righe. 
 
 
 
 ## <a name="accessories"></a>Accessori
 
-Le righe possono avere Accessori aggiunti a destra della visualizzazione per indicare lo stato di selezione:
+Le righe possono avere accessori aggiunti a destra della visualizzazione per indicare lo stato di selezione:
 
-- **SimpleListItemChecked** &ndash; crea un elenco di selezione singola con un controllo dell'indicatore.
+- **SimpleListItemChecked** &ndash; Crea un elenco a selezione singola con un segno di spunta come indicatore.
 
-- **SimpleListItemSingleChoice** &ndash; crea in cui è possibile solo scegliere gli elenchi di tipo di pulsante di opzione.
+- **SimpleListItemSingleChoice** &ndash; Crea gli elenchi di tipo pulsante di opzione in cui è possibile solo una scelta.
 
-- **SimpleListItemMultipleChoice** &ndash; Crea elenchi di tipo casella di controllo in cui sono possibili più scelte.
+- **SimpleListItemMultipleChoice** &ndash; Crea gli elenchi di tipo casella di controllo in cui sono possibili più opzioni.
 
-Nelle schermate seguenti, in base all'ordine corrispondente sono illustrati gli accessori menzionati in precedenza:
+Gli accessori menzionati sopra sono illustrati nelle schermate seguenti, nel rispettivo ordine:
 
-[![Screenshot di SimpleListItemChecked SimpleListItemSingleChoice e SimpleListItemMultipleChoice con accessori](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png#lightbox)
+[![Schermate di SimpleListItemChecked, SimpleListItemSingleChoice e SimpleListItemMultipleChoice con accessori](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png#lightbox)
 
-Per visualizzare uno di questi pass accessori l'ID di risorsa di layout obbligatorie per l'adapter quindi manualmente imposta lo stato di selezione per le righe necessarie. Questa riga di codice viene illustrato come creare e assegnare un `Adapter` usando uno di questi layout:
+Per visualizzare uno di questi accessori, passare l'ID della risorsa di layout richiesto alla scheda, quindi impostare manualmente lo stato di selezione per le righe richieste. Questa riga di codice Mostra come creare e assegnare un `Adapter` usando uno di questi layout:
 
 ```csharp
 ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItemChecked, items);
 ```
 
-Il `ListView` stesso supporta diverse modalità di selezione, indipendentemente dalla funzione di accesso viene visualizzato. Per evitare confusione, usare `Single` con la modalità di selezione `SingleChoice` accessori e il `Checked` o `Multiple` modalità con la `MultipleChoice` stile. La modalità di selezione è controllata dal `ChoiceMode` proprietà del `ListView`.
+`ListView` Supporta modalità di selezione diverse, indipendentemente dall'accessorio visualizzato. Per evitare confusione, utilizzare `Single` la modalità di `SingleChoice` selezione con accessori `Checked` e `Multiple` la modalità o `MultipleChoice` con lo stile. La modalità di selezione è controllata dalla `ChoiceMode` proprietà dell'oggetto `ListView`.
 
 
-### <a name="handling-api-level"></a>Livello API di gestione
+### <a name="handling-api-level"></a>Gestione del livello API
 
-Le versioni precedenti di xamarin. Android implementate le enumerazioni come proprietà integer. La versione più recente ha introdotto i tipi di enumerazione appropriati .NET che rende molto più semplice individuare le possibili opzioni.
+Le versioni precedenti di Novell. Android implementavano le enumerazioni come proprietà Integer. La versione più recente ha introdotto i tipi di enumerazione .NET appropriati, semplificando l'individuazione delle possibili opzioni.
 
-A seconda di quale livello di API di destinazione, `ChoiceMode` è un numero intero o un'enumerazione. Il file di esempio **AccessoryViews/HomeScreen.cs** è un blocco di commento per l'API Gingerbread di destinazione:
+A seconda del livello API di destinazione, `ChoiceMode` può essere un numero intero o un'enumerazione. Il file di esempio **AccessoryViews/homescreen. cs** presenta un blocco impostato come commento se si vuole fare riferimento all'API Gingerbread:
 
 ```csharp
 // For targeting Gingerbread the ChoiceMode is an int, otherwise it is an
@@ -136,20 +133,20 @@ lv.ChoiceMode = 1; // Single
 
 ### <a name="selecting-items-programmatically"></a>Selezione di elementi a livello di codice
 
-Impostare manualmente gli elementi che sono 'selezionate' operazione viene eseguita con il `SetItemChecked` metodo (può essere chiamato più volte per la selezione multipla):
+L'impostazione manuale degli elementi ' selezionati ' viene eseguita con il `SetItemChecked` metodo (può essere chiamato più volte per la selezione multipla):
 
 ```csharp
 // Set the initially checked row ("Fruits")
 lv.SetItemChecked(1, true);
 ```
 
-Il codice deve inoltre rilevare selezioni singole in modo diverso dai più selezioni. Per determinare quale riga è stata selezionata nel `Single` uso della modalità di `CheckedItemPosition` proprietà a valore integer:
+Il codice deve inoltre rilevare selezioni singole in modo diverso rispetto a selezioni multiple. Per determinare quale riga è stata selezionata in `Single` modalità, utilizzare `CheckedItemPosition` la proprietà Integer:
 
 ```csharp
 FindViewById<ListView>(Android.Resource.Id.List).CheckedItemPosition
 ```
 
-Per determinare quali righe sono state selezionate nel `Multiple` modalità è necessario scorrere in ciclo il `CheckedItemPositions` `SparseBooleanArray`. Una matrice di tipo sparse è simile a un dizionario che contiene solo le voci in cui è stato modificato il valore, pertanto è necessario scorrere l'intera matrice cercando `true` valori sapere cosa è stata selezionata nell'elenco, come illustrato nel frammento di codice seguente:
+Per determinare quali righe sono state selezionate in `Multiple` modalità, è necessario scorrere il. `CheckedItemPositions` `SparseBooleanArray` Una matrice di tipo sparse è simile a un dizionario che contiene solo le voci in cui il valore è stato modificato, quindi è necessario attraversare `true` l'intera matrice cercando i valori per sapere cosa è stato selezionato nell'elenco, come illustrato nel frammento di codice seguente:
 
 ```csharp
 var sparseArray = FindViewById<ListView>(Android.Resource.Id.List).CheckedItemPositions;
@@ -161,31 +158,31 @@ Console.WriteLine();
 ```
 
 
-## <a name="creating-custom-row-layouts"></a>Creazione di layout di riga personalizzato
+## <a name="creating-custom-row-layouts"></a>Creazione di layout di riga personalizzati
 
-Le quattro viste di riga predefinito sono molto semplici. Per visualizzare i layout più complessi (ad esempio un elenco di messaggi di posta elettronica, TWEET o le informazioni di contatto) è necessaria una visualizzazione personalizzata. Visualizzazioni personalizzate vengono dichiarate in genere sotto forma di file AXML il **risorse/Layout** directory e quindi caricate usando la risorsa Id da un adapter personalizzato. La vista può contenere qualsiasi numero di classi di visualizzazione, come oggetti TextViews, ImageViews e altri controlli, layout, i tipi di carattere e colori personalizzati.
+Le quattro visualizzazioni di righe predefinite sono molto semplici. Per visualizzare layout più complessi, ad esempio un elenco di messaggi di posta elettronica o tweet o informazioni di contatto, è necessaria una visualizzazione personalizzata. Le visualizzazioni personalizzate vengono in genere dichiarate come file AXML nella directory Resources **/layout** e quindi caricate usando il relativo ID risorsa da un adapter personalizzato. La vista può contenere un numero qualsiasi di classi di visualizzazione (ad esempio TextViews, ImageViews e altri controlli) con colori, tipi di carattere e layout personalizzati.
 
-In questo esempio è diverso dagli esempi precedenti in diversi modi:
+Questo esempio è diverso rispetto agli esempi precedenti in diversi modi:
 
--  Eredita da `Activity` , non `ListActivity` . È possibile personalizzare le righe per qualsiasi `ListView` , ma anche altri controlli possono essere inclusi un `Activity` layout (ad esempio un titolo, i pulsanti o altri elementi dell'interfaccia utente). Questo esempio si aggiunge un'intestazione sopra le `ListView` per illustrare.
+-  Eredita da `Activity` e non `ListActivity` da. È possibile personalizzare le righe per `ListView` qualsiasi, ma anche altri controlli possono essere inclusi in `Activity` un layout, ad esempio un'intestazione, pulsanti o altri elementi dell'interfaccia utente. Questo esempio aggiunge un'intestazione sopra `ListView` a per illustrare.
 
--  Richiede un file di layout AXML della schermata; Negli esempi precedenti il `ListActivity` non richiede un file di layout. Questo AXML contiene un `ListView` dichiarazione del controllo.
+-  Richiede un file di layout AXML per la schermata. Negli esempi `ListActivity` precedenti non è necessario un file di layout. Questo AXML contiene una `ListView` dichiarazione del controllo.
 
--  Richiede un file di layout AXML per eseguire il rendering di ogni riga. Questo file AXML contiene i controlli text e image con tipo di carattere personalizzato e le impostazioni dei colori.
+-  Richiede un file di layout AXML per eseguire il rendering di ogni riga. Il file AXML contiene i controlli Text e image con impostazioni del tipo di carattere e del colore personalizzate.
 
--  Usa un file XML facoltativo selettore personalizzato per impostare l'aspetto della riga quando viene selezionato.
+-  Usa un file XML selettore personalizzato facoltativo per impostare l'aspetto della riga quando viene selezionato.
 
--  Il `Adapter` implementazione restituisce un layout personalizzato dal `GetView` eseguire l'override.
+-  L' `Adapter` implementazione restituisce un layout personalizzato `GetView` dalla sostituzione.
 
--  `ItemClick` deve essere dichiarato in modo diverso (un gestore di evento è associato a `ListView.ItemClick` anziché un override `OnListItemClick` in `ListActivity`).
-
-
-Queste modifiche sono descritte di seguito, a partire dalla creazione di visualizzazione dell'attività e la visualizzazione di righe personalizzato e quindi illustrando le modifiche per l'Adapter e l'attività per eseguirne il rendering.
+-  `ItemClick`deve essere dichiarata in modo diverso (un gestore `ListView.ItemClick` eventi è associato a anziché `OnListItemClick` a `ListActivity`un oggetto che esegue l'override in).
 
 
-### <a name="adding-a-listview-to-an-activity-layout"></a>Aggiunta di un ListView a un Layout di attività
+Queste modifiche sono descritte in dettaglio di seguito, a partire dalla creazione della visualizzazione dell'attività e della visualizzazione riga personalizzata, oltre a coprire le modifiche apportate alla scheda e all'attività per eseguirne il rendering.
 
-In quanto `HomeScreen` non erediti più da `ListActivity` non dispone di una visualizzazione predefinita, pertanto è necessario creare un file di layout AXML per la visualizzazione della schermata iniziale. Per questo esempio, la visualizzazione avrà un'intestazione (usando un `TextView`) e un `ListView` per visualizzare i dati. Il layout è definito nel **Resources/Layout/HomeScreen.axml** file illustrata di seguito:
+
+### <a name="adding-a-listview-to-an-activity-layout"></a>Aggiunta di un controllo ListView a un layout di attività
+
+Poiché `HomeScreen` non eredita più da `ListActivity` esso non dispone di una visualizzazione predefinita, è necessario creare un file AXML di layout per la visualizzazione dell'homescreen. Per questo esempio, la vista avrà un'intestazione (usando `TextView`) e una `ListView` per visualizzare i dati. Il layout viene definito nel file **Resources/layout/homescreen. aXML** , illustrato di seguito:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -211,12 +208,12 @@ In quanto `HomeScreen` non erediti più da `ListActivity` non dispone di una vis
 </LinearLayout>
 ```
 
-Il vantaggio dell'uso di un' `Activity` con un layout personalizzato (invece di un `ListActivity`) è la possibilità di aggiungere altri controlli nella schermata, ad esempio l'intestazione di `TextView` in questo esempio.
+Il vantaggio derivante `Activity` dall'utilizzo di un oggetto con un layout `ListActivity`personalizzato, anziché un, consiste nella possibilità di aggiungere ulteriori controlli allo schermo, ad esempio `TextView` l'intestazione di questo esempio.
 
 
-### <a name="creating-a-custom-row-layout"></a>Creazione di un Layout di riga personalizzato
+### <a name="creating-a-custom-row-layout"></a>Creazione di un layout di riga personalizzato
 
-Un altro file di layout AXML è necessario per contenere il layout personalizzato per ogni riga che verrà visualizzato nella visualizzazione elenco. In questo esempio la riga avrà uno sfondo verde, marrone testo e immagine allineato a destra. Il markup XML Android per dichiarare questo layout è descritto nella **Resources/Layout/CustomView.axml**:
+È necessario un altro file di layout AXML per contenere il layout personalizzato per ogni riga che verrà visualizzata nella visualizzazione elenco. In questo esempio la riga avrà uno sfondo verde, un testo marrone e un'immagine allineata a destra. Il markup XML di Android per dichiarare questo layout è descritto in Resources **/layout/CustomView. aXML**:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -257,12 +254,12 @@ Un altro file di layout AXML è necessario per contenere il layout personalizzat
 </RelativeLayout >
 ```
 
-Mentre un layout di riga personalizzato può contenere molti diversi controlli, lo scorrimento delle prestazioni può essere influenzato da strutture complesse e utilizzo di immagini (in particolare se devono essere caricati in rete). Vedere l'articolo di Google per altre informazioni su risoluzione dei problemi di prestazioni dello scorrimento.
+Mentre un layout di riga personalizzato può contenere molti controlli diversi, le prestazioni di scorrimento possono essere influenzate da progettazioni complesse e dall'uso di immagini, soprattutto se devono essere caricate in rete. Per ulteriori informazioni sull'indirizzamento dei problemi di prestazioni di scorrimento, vedere l'articolo di Google.
 
 
-### <a name="referencing-a-custom-row-view"></a>Riferimento a una vista personalizzata riga
+### <a name="referencing-a-custom-row-view"></a>Riferimento a una visualizzazione riga personalizzata
 
-L'implementazione dell'esempio di adapter personalizzato è `HomeScreenAdapter.cs`. Il metodo chiave è `GetView` in cui viene caricato il AXML personalizzato Usa l'ID risorsa `Resource.Layout.CustomView`e quindi imposta le proprietà per ognuno dei controlli nella visualizzazione prima di restituirlo. La classe dell'adattatore completo è illustrata:
+L'implementazione dell'esempio di adapter personalizzato è in `HomeScreenAdapter.cs`. Il metodo chiave è `GetView` il punto in cui carica il AXML personalizzato usando l' `Resource.Layout.CustomView`ID risorsa e quindi imposta le proprietà in ogni controllo nella visualizzazione prima di restituirlo. Viene visualizzata la classe completa dell'adapter:
 
 ```csharp
 public class HomeScreenAdapter : BaseAdapter<TableItem> {
@@ -301,15 +298,15 @@ public class HomeScreenAdapter : BaseAdapter<TableItem> {
 ```
 
 
-### <a name="referencing-the-custom-listview-in-the-activity"></a>Il ListView personalizzato nell'attività di riferimento
+### <a name="referencing-the-custom-listview-in-the-activity"></a>Riferimento al controllo ListView personalizzato nell'attività
 
-Poiché il `HomeScreen` classe ora eredita da `Activity`, un `ListView` campo viene dichiarato nella classe che contiene un riferimento al controllo dichiarato nel AXML:
+Poiché la `HomeScreen` classe eredita ora da `Activity`, un `ListView` campo viene dichiarato nella classe per mantenere un riferimento al controllo dichiarato in AXML:
 
 ```csharp
 ListView listView;
 ```
 
-La classe deve quindi caricare il layout personalizzato dell'attività AXML usando la `SetContentView` (metodo). Quindi possibile trovare il `ListView` nel layout del controllo quindi crea e assegna l'adapter e assegna il gestore di clic. Di seguito è riportato il codice per il metodo OnCreate:
+La classe deve quindi caricare il layout personalizzato dell'attività AXML usando il `SetContentView` metodo. Può quindi trovare il `ListView` controllo nel layout e quindi crea e assegna la scheda e assegna il gestore di clic. Il codice per il metodo OnCreate è illustrato di seguito:
 
 ```csharp
 SetContentView(Resource.Layout.HomeScreen); // loads the HomeScreen.axml as this activity's view
@@ -320,7 +317,7 @@ listView.Adapter = new HomeScreenAdapter(this, tableItems);
 listView.ItemClick += OnListItemClick;  // to be defined
 ```
 
-Infine il `ItemClick` gestore deve essere definito; in questo caso visualizza semplicemente una `Toast` messaggio:
+Infine, `ItemClick` è necessario definire il gestore, in questo caso viene semplicemente visualizzato `Toast` un messaggio:
 
 ```csharp
 void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
@@ -331,21 +328,21 @@ void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 }
 ```
 
-La schermata risulta sarà simile al seguente:
+La schermata risultante ha un aspetto simile al seguente:
 
-[![Screenshot della finestra di CustomRowView risultante](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png#lightbox)
+[![Screenshot del CustomRowView risultante](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png#lightbox)
 
 
 
-### <a name="customizing-the-row-selector-color"></a>Personalizzare il colore del selettore di riga
+### <a name="customizing-the-row-selector-color"></a>Personalizzazione del colore del selettore di riga
 
-Quando una riga viene manipolata dovrebbe essere evidenziata per commenti degli utenti. Quando una visualizzazione personalizzata specifica come colore di sfondo **CustomView.axml** affermativo, esegue l'override anche l'evidenziazione della selezione. Questa riga di codice nel **CustomView.axml** lo sfondo a verde chiaro, ma significa anche che non vi è alcun indicatore visivo quando la riga è interessata dal set:
+Quando viene toccato, una riga deve essere evidenziata per i commenti degli utenti. Quando una visualizzazione personalizzata specifica come colore di sfondo come **CustomView. aXML** , sostituisce anche l'evidenziazione della selezione. Questa riga di codice in **CustomView. aXML** imposta lo sfondo su verde chiaro, ma significa anche che non è presente alcun indicatore visivo quando viene toccata la riga:
 
 ```xml
 android:background="#FFDAFF7F"
 ```
 
-Per riabilitare il comportamento dell'evidenziazione e anche per personalizzare il colore che viene usato, impostare l'attributo background a un selettore personalizzato. Il selettore dichiarano entrambi il colore di sfondo predefinito nonché il colore di evidenziazione. Il file **Resources/Drawable/CustomSelector.xml** contiene la dichiarazione seguente:
+Per riabilitare il comportamento dell'evidenziazione e anche per personalizzare il colore utilizzato, impostare l'attributo background su un selettore personalizzato. Il selettore dimostrerà sia il colore di sfondo predefinito che il colore di evidenziazione. Il file **Resources/disegnator/CustomSelector. XML** contiene la dichiarazione seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -367,21 +364,21 @@ Per riabilitare il comportamento dell'evidenziazione e anche per personalizzare 
 </selector>
 ```
 
-Per fare riferimento il selettore personalizzato, modificare l'attributo in background nel **CustomView.axml** per:
+Per fare riferimento al selettore personalizzato, modificare l'attributo background in **CustomView. aXML** in:
 
 ```xml
 android:background="@drawable/CustomSelector"
 ```
 
-Una riga selezionata e le corrispondenti `Toast` messaggio avrà l'aspetto seguente:
+Una riga selezionata e il messaggio `Toast` corrispondente hanno ora un aspetto simile al seguente:
 
-[![Una riga selezionata in arancione, con messaggio di tipo avviso popup visualizzazione nome della riga selezionata](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png#lightbox)
+[![Una riga selezionata in arancione, con messaggio popup che Visualizza il nome della riga selezionata](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png#lightbox)
 
 
 
-### <a name="preventing-flickering-on-custom-layouts"></a>Impedisce lo sfarfallio in layout personalizzati
+### <a name="preventing-flickering-on-custom-layouts"></a>Prevenzione dello sfarfallio nei layout personalizzati
 
-Tenta di Android migliorare le prestazioni di `ListView` lo scorrimento della memorizzazione nella cache le informazioni sul layout. Se hai tempo lo scorrimento elenchi di dati è necessario impostare anche il `android:cacheColorHint` proprietà di `ListView` dichiarazione nella definizione di AXML dell'attività (per lo stesso valore di colore di sfondo del layout di riga personalizzato). Mancata per includere questo hint può comportare un 'lo sfarfallio' come l'utente scorre un elenco con i colori di sfondo di righe personalizzato.
+Android tenta di migliorare le prestazioni dello `ListView` scorrimento memorizzando nella cache le informazioni di layout. Se sono presenti elenchi di dati a scorrimento prolunghi, è necessario impostare `android:cacheColorHint` anche la proprietà `ListView` nella dichiarazione nella definizione AXML dell'attività (allo stesso valore di colore dello sfondo del layout di riga personalizzato). La mancata inclusione di questo hint può comportare un'sfarfallio ' quando l'utente scorre un elenco con colori di sfondo della riga personalizzati.
 
 
 
