@@ -5,12 +5,12 @@ ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 07/10/2019
-ms.openlocfilehash: 7db848c01879510969f690cb49c5ead32cb3f0eb
-ms.sourcegitcommit: 0845ed2daa65468b6fe12ac4e9386f3315d72f4d
+ms.openlocfilehash: 8bdd5c0d40cfdac0dadbc6bab1c538ab1b27946e
+ms.sourcegitcommit: 4b6e832d1db5616b657dc8540da67c509b28dc1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67850991"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68386175"
 ---
 # <a name="platform-support"></a>Supporto per piattaforme
 
@@ -29,6 +29,7 @@ Xamarin.Essentials supporta le piattaforme e i sistemi operativi seguenti:
 
 * Tizen è ufficialmente supportato dal team di sviluppo Samsung.
 * tvOS e watchOS hanno una copertura limitata delle API. Per altre informazioni, vedere la guida alle funzionalità.
+* Tizen, tvOS e watchOS sono attualmente in anteprima e sono disponibili in Xamarin.Essentials 1.3-pre
 
 ## <a name="feature-support"></a>Supporto delle funzionalità
 
